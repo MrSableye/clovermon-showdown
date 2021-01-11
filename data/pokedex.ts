@@ -16959,4 +16959,10762 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 5,
 	},
+	/* Clovermons */
+	grasshole: {
+		num: 69001,
+		name: "Grasshole",
+		types: [
+			"Grass"
+		],
+		baseStats: {
+			hp: 56,
+			atk: 60,
+			def: 55,
+			spa: 47,
+			spd: 50,
+			spe: 50
+		},
+		abilities: {
+			0: "Overgrow",
+			H: "Cheek Pouch",
+			S: "Analytic"
+		},
+		heightm: 0.7,
+		weightkg: 6.9,
+		color: "Gray",
+		eggGroups: [
+			"Grass",
+			"Monster"
+		],
+	},
+	analgae: {
+		num: 69002,
+		name: "Analgae",
+		types: [
+			"Grass",
+			"Ground"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 80,
+			def: 80,
+			spa: 55,
+			spd: 60,
+			spe: 60
+		},
+		abilities: {
+			0: "Overgrow",
+			H: "Cheek Pouch",
+			S: "Analytic"
+		},
+		heightm: 1,
+		weightkg: 28,
+		color: "Gray",
+		eggGroups: [
+			"Grass",
+			"Monster"
+		],
+	},
+	rectreem: {
+		num: 69003,
+		name: "Rectreem",
+		types: [
+			"Grass",
+			"Ground"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 120,
+			def: 95,
+			spa: 70,
+			spd: 70,
+			spe: 80
+		},
+		abilities: {
+			0: "Overgrow",
+			H: "Cheek Pouch",
+			S: "Analytic"
+		},
+		heightm: 2,
+		weightkg: 100,
+		color: "Gray",
+		eggGroups: [
+			"Grass",
+			"Monster"
+		],
+	},
+	arabomb: {
+		num: 69004,
+		name: "Arabomb",
+		types: [
+			"Fire"
+		],
+		baseStats: {
+			hp: 47,
+			atk: 49,
+			def: 50,
+			spa: 65,
+			spd: 45,
+			spe: 62
+		},
+		abilities: {
+			0: "Blaze",
+			H: "Aftermath",
+			S: "Sand Veil"
+		},
+		heightm: 0.6,
+		weightkg: 8.5,
+		color: "Gray",
+		eggGroups: [
+			"Dragon",
+			"Monster"
+		],
+	},
+	iguallah: {
+		num: 69005,
+		name: "Iguallah",
+		types: [
+			"Fire",
+			"Dark"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 75,
+			def: 55,
+			spa: 85,
+			spd: 50,
+			spe: 75
+		},
+		abilities: {
+			0: "Blaze",
+			H: "Aftermath",
+			S: "Sand Veil"
+		},
+		heightm: 1.1,
+		weightkg: 19,
+		color: "Gray",
+		eggGroups: [
+			"Dragon",
+			"Monster"
+		],
+	},
+	lizakbar: {
+		num: 69006,
+		name: "Lizakbar",
+		types: [
+			"Fire",
+			"Dark"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 90,
+			def: 65,
+			spa: 120,
+			spd: 65,
+			spe: 100
+		},
+		abilities: {
+			0: "Blaze",
+			H: "Aftermath",
+			S: "Sand Veil"
+		},
+		heightm: 1.7,
+		weightkg: 90.5,
+		color: "Gray",
+		eggGroups: [
+			"Dragon",
+			"Monster"
+		],
+	},
+	ejacasm: {
+		num: 69007,
+		name: "Ejacasm",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 50,
+			def: 50,
+			spa: 50,
+			spd: 63,
+			spe: 45
+		},
+		abilities: {
+			0: "Torrent",
+			H: "Water Veil",
+			S: "Unaware"
+		},
+		heightm: 0.5,
+		weightkg: 9,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Monster"
+		],
+	},
+	hosajack: {
+		num: 69008,
+		name: "Hosajack",
+		types: [
+			"Water",
+			"Poison"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 55,
+			def: 60,
+			spa: 64,
+			spd: 77,
+			spe: 64
+		},
+		abilities: {
+			0: "Torrent",
+			H: "Water Veil",
+			S: "Unaware"
+		},
+		heightm: 1,
+		weightkg: 22.5,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Monster"
+		],
+	},
+	condoom: {
+		num: 69009,
+		name: "Condoom",
+		types: [
+			"Water",
+			"Poison"
+		],
+		baseStats: {
+			hp: 120,
+			atk: 60,
+			def: 85,
+			spa: 85,
+			spd: 100,
+			spe: 75
+		},
+		abilities: {
+			0: "Torrent",
+			H: "Water Veil",
+			S: "Unaware"
+		},
+		heightm: 1.6,
+		weightkg: 85.5,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Monster"
+		],
+	},
+	squirrap: {
+		num: 69010,
+		name: "Squirrap",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 53,
+			def: 39,
+			spa: 43,
+			spd: 44,
+			spe: 58
+		},
+		abilities: {
+			0: "Soundproof",
+			H: "Boombox",
+			S: "Moxie"
+		},
+		heightm: 0.3,
+		weightkg: 3.5,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+	},
+	gampster: {
+		num: 69011,
+		name: "Gampster",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 89,
+			atk: 85,
+			def: 51,
+			spa: 79,
+			spd: 54,
+			spe: 87
+		},
+		abilities: {
+			0: "Soundproof",
+			H: "Boombox",
+			S: "Moxie"
+		},
+		heightm: 1,
+		weightkg: 25.2,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+	},
+	kengeon: {
+		num: 69012,
+		name: "Kengeon",
+		types: [
+			"Normal",
+			"Flying"
+		],
+		baseStats: {
+			hp: 37,
+			atk: 53,
+			def: 45,
+			spa: 36,
+			spd: 48,
+			spe: 55
+		},
+		abilities: {
+			0: "Early Bird",
+			1: "Shed Skin",
+			H: "Aroma Veil",
+			S: "Flame Body"
+		},
+		heightm: 0.3,
+		weightkg: 1.8,
+		color: "Brown",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	frieden: {
+		num: 69013,
+		name: "Frieden",
+		types: [
+			"Normal",
+			"Flying"
+		],
+		baseStats: {
+			hp: 58,
+			atk: 65,
+			def: 59,
+			spa: 55,
+			spd: 65,
+			spe: 65
+		},
+		abilities: {
+			0: "Gale Wings",
+			1: "Rough Skin",
+			H: "Aroma Veil",
+			S: "Flame Body"
+		},
+		heightm: 1.1,
+		weightkg: 30,
+		color: "Brown",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	corooster: {
+		num: 69014,
+		name: "Corooster",
+		types: [
+			"Normal",
+			"Flying"
+		],
+		baseStats: {
+			hp: 77,
+			atk: 87,
+			def: 77,
+			spa: 67,
+			spd: 77,
+			spe: 87
+		},
+		abilities: {
+			0: "Gale Wings",
+			1: "Rough Skin",
+			H: "Aroma Veil",
+			S: "Flame Body"
+		},
+		heightm: 1.5,
+		weightkg: 39.5,
+		color: "Brown",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	curicrawl: {
+		num: 69015,
+		name: "Curicrawl",
+		types: [
+			"Bug"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 35,
+			def: 45,
+			spa: 10,
+			spd: 20,
+			spe: 20
+		},
+		abilities: {
+			0: "Shield Dust",
+			1: "Prankster",
+			H: "Guts",
+			S: "Friend Guard"
+		},
+		heightm: 1,
+		weightkg: 29.4,
+		color: "Yellow",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	gutsicoon: {
+		num: 69016,
+		name: "Gutsicoon",
+		types: [
+			"Bug"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 40,
+			def: 70,
+			spa: 25,
+			spd: 30,
+			spe: 20
+		},
+		abilities: {
+			0: "Shield Dust",
+			1: "Prankster",
+			H: "Guts",
+			S: "Friend Guard"
+		},
+		heightm: 1,
+		weightkg: 29.9,
+		color: "Green",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	gutsifly: {
+		num: 69017,
+		name: "Gutsifly",
+		types: [
+			"Bug",
+			"Flying"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 100,
+			def: 110,
+			spa: 25,
+			spd: 40,
+			spe: 30
+		},
+		abilities: {
+			0: "Shield Dust",
+			1: "Prankster",
+			H: "Guts",
+			S: "Friend Guard"
+		},
+		heightm: 1.1,
+		weightkg: 30,
+		color: "Yellow",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	larvades: {
+		num: 69018,
+		name: "Larvades",
+		types: [
+			"Bug"
+		],
+		baseStats: {
+			hp: 35,
+			atk: 30,
+			def: 35,
+			spa: 55,
+			spd: 50,
+			spe: 55
+		},
+		abilities: {
+			0: "Compoundeyes",
+			1: "Shield Dust",
+			H: "Poison Point",
+			S: "Immunity"
+		},
+		heightm: 0.3,
+		weightkg: 2.9,
+		color: "Gray",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	proboskito: {
+		num: 69019,
+		name: "Proboskito",
+		types: [
+			"Bug",
+			"Electric"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 85,
+			def: 40,
+			spa: 85,
+			spd: 55,
+			spe: 125
+		},
+		abilities: {
+			0: "Compoundeyes",
+			1: "Static",
+			H: "Poison Point",
+			S: "Toxic Boost"
+		},
+		heightm: 1,
+		weightkg: 30,
+		color: "Gray",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	clovour: {
+		num: 69020,
+		name: "Clovour",
+		types: [
+			"Grass"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 60,
+			def: 52,
+			spa: 20,
+			spd: 52,
+			spe: 71
+		},
+		abilities: {
+			0: "Natural Cure",
+			1: "Sap Sipper",
+			H: "Super Luck",
+			S: "Serene Grace"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Green",
+		eggGroups: [
+			"Fairy",
+			"Grass"
+		],
+	},
+	chanolour: {
+		num: 69021,
+		name: "Chanolour",
+		types: [
+			"Grass",
+			"Steel"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 120,
+			def: 85,
+			spa: 40,
+			spd: 85,
+			spe: 110
+		},
+		abilities: {
+			0: "Natural Cure",
+			1: "Sap Sipper",
+			H: "Super Luck",
+			S: "Serene Grace"
+		},
+		heightm: 1.2,
+		weightkg: 22.5,
+		color: "Green",
+		eggGroups: [
+			"Fairy",
+			"Grass"
+		],
+	},
+	nauseon: {
+		num: 69022,
+		name: "Nauseon",
+		types: [
+			"Poison"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 55,
+			def: 55,
+			spa: 55,
+			spd: 55,
+			spe: 55
+		},
+		abilities: {
+			0: "Poison Point",
+			H: "Poison Touch",
+			S: "Healer"
+		},
+		heightm: 0.3,
+		weightkg: 0.6,
+		color: "Blue",
+		eggGroups: [
+			"Monster",
+			"Amorphous"
+		],
+	},
+	hazmate: {
+		num: 69023,
+		name: "Hazmate",
+		types: [
+			"Poison",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 120,
+			def: 90,
+			spa: 55,
+			spd: 70,
+			spe: 70
+		},
+		abilities: {
+			0: "Overcoat",
+			H: "Poison Touch",
+			S: "Healer"
+		},
+		heightm: 0.7,
+		weightkg: 33.4,
+		color: "Yellow",
+		eggGroups: [
+			"Monster",
+			"Amorphous"
+		],
+	},
+	ebolable: {
+		num: 69024,
+		name: "Ebolable",
+		types: [
+			"Poison",
+			"Dark"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 55,
+			def: 70,
+			spa: 120,
+			spd: 90,
+			spe: 95
+		},
+		abilities: {
+			0: "Liquid Ooze",
+			H: "Poison Touch",
+			S: "Healer"
+		},
+		heightm: 1,
+		weightkg: 14.5,
+		color: "Pink",
+		eggGroups: [
+			"Monster",
+			"Amorphous"
+		],
+	},
+	pikotton: {
+		num: 69025,
+		name: "Pikotton",
+		types: [
+			"Electric",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 40,
+			def: 85,
+			spa: 90,
+			spd: 75,
+			spe: 75
+		},
+		abilities: {
+			0: "Static",
+			1: "Sweet Veil",
+			H: "Lightningrod",
+			S: "Fluffy"
+		},
+		heightm: 0.4,
+		weightkg: 3.5,
+		color: "Yellow",
+		eggGroups: [
+			"Fairy",
+			"Field"
+		],
+	},
+	birdhouse: {
+		num: 69026,
+		name: "Birdhouse",
+		types: [
+			"Normal",
+			"Flying"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 77,
+			def: 105,
+			spa: 50,
+			spd: 105,
+			spe: 70
+		},
+		abilities: {
+			0: "Sturdy",
+			H: "Rattled",
+			S: "Wooden Guard"
+		},
+		heightm: 1.4,
+		weightkg: 29.5,
+		color: "Brown",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	lanshil: {
+		num: 69027,
+		name: "Lanshil",
+		types: [
+			"Rock"
+		],
+		baseStats: {
+			hp: 48,
+			atk: 50,
+			def: 75,
+			spa: 40,
+			spd: 62,
+			spe: 50
+		},
+		abilities: {
+			0: "Rock Head",
+			1: "Sturdy",
+			H: "Sand Force",
+			S: "Sand Veil"
+		},
+		heightm: 0.4,
+		weightkg: 20,
+		color: "Black",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	middril: {
+		num: 69028,
+		name: "Middril",
+		types: [
+			"Rock"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 75,
+			def: 87,
+			spa: 45,
+			spd: 75,
+			spe: 60
+		},
+		abilities: {
+			0: "Rock Head",
+			1: "Sturdy",
+			H: "Sand Force",
+			S: "Sand Veil"
+		},
+		heightm: 1,
+		weightkg: 44.2,
+		color: "Black",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	shurismash: {
+		num: 69029,
+		name: "Shurismash",
+		types: [
+			"Rock",
+			"Steel"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 100,
+			def: 110,
+			spa: 48,
+			spd: 95,
+			spe: 77
+		},
+		abilities: {
+			0: "Rock Head",
+			1: "Sturdy",
+			H: "Sand Force",
+			S: "Victory Star"
+		},
+		heightm: 1.4,
+		weightkg: 64.5,
+		color: "Black",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	maymay: {
+		num: 69030,
+		name: "Maymay",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 48,
+			def: 52,
+			spa: 37,
+			spd: 40,
+			spe: 52
+		},
+		abilities: {
+			0: "Hustle",
+			1: "Normalize",
+			H: "Sheer Force",
+			S: "Steadfast"
+		},
+		heightm: 0.6,
+		weightkg: 11,
+		color: "Brown",
+		eggGroups: [
+			"Amorphous",
+			"Field"
+		],
+	},
+	memenace: {
+		num: 69031,
+		name: "Memenace",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 106,
+			atk: 83,
+			def: 87,
+			spa: 72,
+			spd: 85,
+			spe: 69
+		},
+		abilities: {
+			0: "Hustle",
+			1: "Normalize",
+			H: "Sheer Force",
+			S: "Steadfast"
+		},
+		heightm: 1.1,
+		weightkg: 32.6,
+		color: "Brown",
+		eggGroups: [
+			"Amorphous",
+			"Field"
+		],
+	},
+	piguson: {
+		num: 69033,
+		name: "Piguson",
+		types: [
+			"Fighting",
+			"Normal"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 95,
+			def: 95,
+			spa: 50,
+			spd: 55,
+			spe: 50
+		},
+		abilities: {
+			0: "Guts",
+			1: "Scrappy",
+			H: "Frisk",
+			S: "Stakeout"
+		},
+		heightm: 1.3,
+		weightkg: 110.4,
+		color: "White",
+		eggGroups: [
+			"Monster"
+		],
+	},
+	armando: {
+		num: 69034,
+		name: "Armando",
+		types: [
+			"Fighting"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 80,
+			def: 43,
+			spa: 20,
+			spd: 33,
+			spe: 70
+		},
+		abilities: {
+			0: "Inner Focus",
+			1: "Iron Fist",
+			H: "Skill Link",
+			S: "Sticky Hold"
+		},
+		heightm: 0.8,
+		weightkg: 19.5,
+		color: "Red",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	muscledude: {
+		num: 69035,
+		name: "Muscledude",
+		types: [
+			"Fighting"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 110,
+			def: 55,
+			spa: 36,
+			spd: 55,
+			spe: 80
+		},
+		abilities: {
+			0: "Inner Focus",
+			1: "Iron Fist",
+			H: "Skill Link",
+			S: "Sticky Hold"
+		},
+		heightm: 0.8,
+		weightkg: 41.8,
+		color: "Red",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	tripecs: {
+		num: 69036,
+		name: "Tripecs",
+		types: [
+			"Fighting"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 130,
+			def: 70,
+			spa: 43,
+			spd: 70,
+			spe: 90
+		},
+		abilities: {
+			0: "Inner Focus",
+			1: "Iron Fist",
+			H: "Skill Link",
+			S: "Sticky Hold"
+		},
+		heightm: 1.7,
+		weightkg: 95,
+		color: "Red",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	semdrop: {
+		num: 69037,
+		name: "Semdrop",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 35,
+			def: 65,
+			spa: 50,
+			spd: 75,
+			spe: 40
+		},
+		abilities: {
+			0: "Insomnia",
+			1: "Immunity",
+			H: "Dry Skin",
+			S: "Liquid Ooze"
+		},
+		heightm: 0.9,
+		weightkg: 30,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous",
+			"Monster"
+		],
+	},
+	semrust: {
+		num: 69038,
+		name: "Semrust",
+		types: [
+			"Normal",
+			"Ground"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 50,
+			def: 90,
+			spa: 70,
+			spd: 105,
+			spe: 40
+		},
+		abilities: {
+			0: "Insomnia",
+			1: "Immunity",
+			H: "Dry Skin",
+			S: "Liquid Ooze"
+		},
+		heightm: 0.9,
+		weightkg: 40.5,
+		color: "Yellow",
+		eggGroups: [
+			"Amorphous",
+			"Monster"
+		],
+	},
+	furnazi: {
+		num: 69039,
+		name: "Furnazi",
+		types: [
+			"Fire",
+			"Rock"
+		],
+		baseStats: {
+			hp: 35,
+			atk: 40,
+			def: 100,
+			spa: 80,
+			spd: 75,
+			spe: 20
+		},
+		abilities: {
+			0: "Flame Body",
+			1: "Solid Rock",
+			H: "White Smoke",
+			S: "Justified"
+		},
+		heightm: 0.9,
+		weightkg: 51.2,
+		color: "Red",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	finasoven: {
+		num: 69040,
+		name: "Finasoven",
+		types: [
+			"Fire",
+			"Rock"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 75,
+			def: 130,
+			spa: 125,
+			spd: 105,
+			spe: 35
+		},
+		abilities: {
+			0: "Flame Body",
+			1: "Solid Rock",
+			H: "White Smoke",
+			S: "Justified"
+		},
+		heightm: 1.7,
+		weightkg: 130,
+		color: "Red",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	troubait: {
+		num: 69041,
+		name: "Troubait",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 50,
+			def: 50,
+			spa: 40,
+			spd: 60,
+			spe: 45
+		},
+		abilities: {
+			0: "Water Veil",
+			H: "Prankster",
+			S: "Hustle"
+		},
+		heightm: 0.4,
+		weightkg: 7,
+		color: "Blue",
+		eggGroups: [
+			"Monster",
+			"Water 2"
+		],
+	},
+	tulure: {
+		num: 69042,
+		name: "Tulure",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 70,
+			def: 70,
+			spa: 58,
+			spd: 62,
+			spe: 70
+		},
+		abilities: {
+			0: "Water Veil",
+			H: "Prankster",
+			S: "Hustle"
+		},
+		heightm: 1.2,
+		weightkg: 24,
+		color: "Blue",
+		eggGroups: [
+			"Monster",
+			"Water 2"
+		],
+	},
+	monstrap: {
+		num: 69043,
+		name: "Monstrap",
+		types: [
+			"Water",
+			"Dark"
+		],
+		baseStats: {
+			hp: 115,
+			atk: 105,
+			def: 85,
+			spa: 69,
+			spd: 83,
+			spe: 70
+		},
+		abilities: {
+			0: "Intimidate",
+			H: "Oblivious",
+			S: "Defiant"
+		},
+		heightm: 2.3,
+		weightkg: 93.7,
+		color: "Blue",
+		eggGroups: [
+			"Monster",
+			"Water 2"
+		],
+	},
+	pixila: {
+		num: 69044,
+		name: "Pixila",
+		types: [
+			"Bug",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 55,
+			def: 50,
+			spa: 45,
+			spd: 65,
+			spe: 55
+		},
+		abilities: {
+			0: "Natural Cure",
+			1: "Cute Charm",
+			H: "Sap Sipper",
+			S: "Regenerator"
+		},
+		heightm: 0.6,
+		weightkg: 13.6,
+		color: "Green",
+		eggGroups: [
+			"Fairy",
+			"Bug"
+		],
+	},
+	fairileon: {
+		num: 69045,
+		name: "Fairileon",
+		types: [
+			"Bug",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 65,
+			def: 65,
+			spa: 95,
+			spd: 130,
+			spe: 60
+		},
+		abilities: {
+			0: "Natural Cure",
+			1: "Shield Dust",
+			H: "Sap Sipper",
+			S: "Regenerator"
+		},
+		heightm: 0.9,
+		weightkg: 22.6,
+		color: "Green",
+		eggGroups: [
+			"Fairy",
+			"Bug"
+		],
+	},
+	wedgard: {
+		num: 69046,
+		name: "Wedgard",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 80,
+			def: 60,
+			spa: 10,
+			spd: 50,
+			spe: 75
+		},
+		abilities: {
+			0: "Arena Trap",
+			1: "Sand Veil",
+			H: "Rough Skin",
+			S: "Tough Claws"
+		},
+		heightm: 0.7,
+		weightkg: 20.5,
+		color: "Brown",
+		eggGroups: [
+			"Monster"
+		],
+	},
+	knokedge: {
+		num: 69047,
+		name: "Knokedge",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 112,
+			def: 95,
+			spa: 20,
+			spd: 50,
+			spe: 98
+		},
+		abilities: {
+			0: "Arena Trap",
+			1: "Sand Veil",
+			H: "Rough Skin",
+			S: "Tough Claws"
+		},
+		heightm: 1.4,
+		weightkg: 56,
+		color: "Brown",
+		eggGroups: [
+			"Monster"
+		],
+	},
+	ribbizap: {
+		num: 69048,
+		name: "Ribbizap",
+		types: [
+			"Electric"
+		],
+		baseStats: {
+			hp: 66,
+			atk: 50,
+			def: 57,
+			spa: 112,
+			spd: 73,
+			spe: 102
+		},
+		abilities: {
+			0: "Lightningrod",
+			1: "Dry Skin",
+			H: "Motor Drive",
+			S: "Liquid Voice"
+		},
+		heightm: 0.3,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Water 1"
+		],
+	},
+	elephas: {
+		num: 69049,
+		name: "Elephas",
+		types: [
+			"Psychic",
+			"Normal"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 45,
+			def: 105,
+			spa: 90,
+			spd: 115,
+			spe: 60
+		},
+		abilities: {
+			0: "Telepathy",
+			1: "Shed Skin",
+			H: "Levitate",
+			S: "Thick Fat"
+		},
+		heightm: 1.1,
+		weightkg: 120,
+		color: "Pink",
+		eggGroups: [
+			"Field"
+		],
+	},
+	seamapan: {
+		num: 69050,
+		name: "Seamapan",
+		types: [
+			"Water",
+			"Normal"
+		],
+		baseStats: {
+			hp: 51,
+			atk: 31,
+			def: 70,
+			spa: 60,
+			spd: 81,
+			spe: 106
+		},
+		abilities: {
+			0: "Thick Fat",
+			1: "Huge Power",
+			H: "Cute Charm",
+			S: "Water Bubble"
+		},
+		heightm: 0.6,
+		weightkg: 9,
+		color: "Pink",
+		eggGroups: [
+			"Water 2"
+		],
+	},
+	caroline: {
+		num: 69051,
+		name: "Caroline",
+		types: [
+			"Ground",
+			"Flying"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 80,
+			def: 65,
+			spa: 95,
+			spd: 70,
+			spe: 100
+		},
+		abilities: {
+			0: "Super Luck",
+			H: "Justified",
+			S: "Aerilate"
+		},
+		heightm: 1.7,
+		weightkg: 55,
+		color: "Brown",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	chompest: {
+		num: 69052,
+		name: "Chompest",
+		types: [
+			"Rock",
+			"Dark"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 100,
+			def: 85,
+			spa: 50,
+			spd: 70,
+			spe: 40
+		},
+		abilities: {
+			0: "Intimidate",
+			H: "Pickup",
+			S: "Jewelry"
+		},
+		heightm: 1,
+		weightkg: 100,
+		color: "Brown",
+		eggGroups: [
+			"Amorphous",
+			"Mineral"
+		],
+	},
+	masdawg: {
+		num: 69053,
+		name: "Masdawg",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 60,
+			def: 65,
+			spa: 55,
+			spd: 65,
+			spe: 112
+		},
+		abilities: {
+			0: "Ball Fetch",
+			1: "Cute Charm",
+			H: "Sand Veil",
+			S: "Swift Swim"
+		},
+		heightm: 0.6,
+		weightkg: 31.8,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+	},
+	pasdawg: {
+		num: 69054,
+		name: "Pasdawg",
+		types: [
+			"Normal",
+			"Steel"
+		],
+		baseStats: {
+			hp: 112,
+			atk: 90,
+			def: 105,
+			spa: 55,
+			spd: 85,
+			spe: 60
+		},
+		abilities: {
+			0: "Ball Fetch",
+			1: "Intimidate",
+			H: "Sand Force",
+			S: "Swift Swim"
+		},
+		heightm: 1.4,
+		weightkg: 63.6,
+		color: "Gray",
+		eggGroups: [
+			"Field"
+		],
+	},
+	spanke: {
+		num: 69055,
+		name: "Spanke",
+		types: [
+			"Grass",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 91,
+			def: 73,
+			spa: 16,
+			spd: 34,
+			spe: 42
+		},
+		abilities: {
+			0: "Shed Skin",
+			1: "Oblivious",
+			H: "Skill Link",
+			S: "Iron Fist"
+		},
+		heightm: 1.7,
+		weightkg: 6.8,
+		color: "Green",
+		eggGroups: [
+			"Field",
+			"Dragon"
+		],
+	},
+	anaconduke: {
+		num: 69056,
+		name: "Anaconduke",
+		types: [
+			"Grass",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 112,
+			def: 91,
+			spa: 20,
+			spd: 50,
+			spe: 100
+		},
+		abilities: {
+			0: "Shed Skin",
+			1: "Oblivious",
+			H: "Skill Link",
+			S: "Limber"
+		},
+		heightm: 3.1,
+		weightkg: 62.3,
+		color: "Green",
+		eggGroups: [
+			"Field",
+			"Dragon"
+		],
+	},
+	fishnism: {
+		num: 69057,
+		name: "Fishnism",
+		types: [
+			"Water",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 55,
+			def: 75,
+			spa: 40,
+			spd: 80,
+			spe: 85
+		},
+		abilities: {
+			0: "Rivalry",
+			1: "Synchronize",
+			H: "Gluttony",
+			S: "Rattled"
+		},
+		heightm: 0.4,
+		weightkg: 1.9,
+		color: "Pink",
+		eggGroups: [
+			"Water 2"
+		],
+	},
+	sjwhale: {
+		num: 69058,
+		name: "Sjwhale",
+		types: [
+			"Water",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 115,
+			atk: 65,
+			def: 95,
+			spa: 50,
+			spd: 100,
+			spe: 90
+		},
+		abilities: {
+			0: "Rivalry",
+			1: "Synchronize",
+			H: "Gluttony",
+			S: "Thick Fat"
+		},
+		heightm: 2,
+		weightkg: 352,
+		color: "Blue",
+		eggGroups: [
+			"Water 2"
+		],
+	},
+	chezetta: {
+		num: 69059,
+		name: "Chezetta",
+		types: [
+			"Fairy",
+			"Fire"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 40,
+			def: 70,
+			spa: 69,
+			spd: 70,
+			spe: 30
+		},
+		abilities: {
+			0: "Gooey",
+			1: "Sticky Hold",
+			H: "Cute Charm",
+			S: "Water Absorb"
+		},
+		heightm: 1.5,
+		weightkg: 40,
+		color: "Brown",
+		eggGroups: [
+			"Amorphous",
+			"Human-Like"
+		],
+	},
+	mozzamazel: {
+		num: 69060,
+		name: "Mozzamazel",
+		types: [
+			"Fairy",
+			"Fire"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 69,
+			def: 105,
+			spa: 95,
+			spd: 105,
+			spe: 40
+		},
+		abilities: {
+			0: "Gooey",
+			1: "Sticky Hold",
+			H: "Cute Charm",
+			S: "Water Absorb"
+		},
+		heightm: 1.9,
+		weightkg: 80,
+		color: "Brown",
+		eggGroups: [
+			"Amorphous",
+			"Human-Like"
+		],
+	},
+	krokling: {
+		num: 69061,
+		name: "Krokoling",
+		types: [
+			"Ground",
+			"Grass"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 90,
+			def: 60,
+			spa: 35,
+			spd: 35,
+			spe: 30
+		},
+		abilities: {
+			0: "Rock Head",
+			1: "Thick Fat",
+			H: "Reckless",
+			S: "Rivalry"
+		},
+		heightm: 0.9,
+		weightkg: 128.3,
+		color: "Green",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+	},
+	krokizon: {
+		num: 69062,
+		name: "Krokizon",
+		types: [
+			"Ground",
+			"Grass"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 130,
+			def: 100,
+			spa: 65,
+			spd: 65,
+			spe: 50
+		},
+		abilities: {
+			0: "Rock Head",
+			1: "Thick Fat",
+			H: "Reckless",
+			S: "Rivalry"
+		},
+		heightm: 2.6,
+		weightkg: 283.9,
+		color: "Green",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+	},
+	conchilla: {
+		num: 69063,
+		name: "Conchilla",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 45,
+			def: 80,
+			spa: 40,
+			spd: 60,
+			spe: 45
+		},
+		abilities: {
+			0: "Cute Charm",
+			1: "Serene Grace",
+			H: "Compaction",
+			S: "Hydrophile"
+		},
+		heightm: 0.3,
+		weightkg: 4,
+		color: "Brown",
+		eggGroups: [
+			"Water 3",
+			"Field"
+		],
+	},
+	haremit: {
+		num: 69064,
+		name: "Haremit",
+		types: [
+			"Normal",
+			"Rock"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 85,
+			def: 110,
+			spa: 60,
+			spd: 90,
+			spe: 75
+		},
+		abilities: {
+			0: "Shell Armor",
+			1: "Serene Grace",
+			H: "Compaction",
+			S: "Hydrophile"
+		},
+		heightm: 0.4,
+		weightkg: 45.5,
+		color: "Brown",
+		eggGroups: [
+			"Water 3",
+			"Field"
+		],
+	},
+	coolcube: {
+		num: 69065,
+		name: "Coolcube",
+		types: [
+			"Ice"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 30,
+			def: 64,
+			spa: 58,
+			spd: 67,
+			spe: 20
+		},
+		abilities: {
+			0: "Snow Cloak",
+			1: "Ice Body",
+			H: "Clear Body",
+			S: "Weak Armor"
+		},
+		heightm: 0.6,
+		weightkg: 10.4,
+		color: "Blue",
+		eggGroups: [
+			"Amorphous",
+			"Fairy"
+		],
+	},
+	tankube: {
+		num: 69066,
+		name: "Tankube",
+		types: [
+			"Ice"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 50,
+			def: 94,
+			spa: 110,
+			spd: 106,
+			spe: 58
+		},
+		abilities: {
+			0: "Swift Swim",
+			1: "Ice Body",
+			H: "Clear Body",
+			S: "Weak Armor"
+		},
+		heightm: 1.4,
+		weightkg: 100,
+		color: "Blue",
+		eggGroups: [
+			"Amorphous",
+			"Fairy"
+		],
+	},
+	fabkube: {
+		num: 69067,
+		name: "Fabkube",
+		types: [
+			"Ice",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 40,
+			def: 79,
+			spa: 125,
+			spd: 96,
+			spe: 105
+		},
+		abilities: {
+			0: "Levitate",
+			1: "Ice Body",
+			H: "Clear Body",
+			S: "Dazzling"
+		},
+		heightm: 2.5,
+		weightkg: 80,
+		color: "Blue",
+		eggGroups: [
+			"Amorphous",
+			"Fairy"
+		],
+	},
+	smogaroben: {
+		num: 69068,
+		name: "Smogaroben",
+		types: [
+			"Poison",
+			"Flying"
+		],
+		baseStats: {
+			hp: 68,
+			atk: 65,
+			def: 41,
+			spa: 48,
+			spd: 43,
+			spe: 86
+		},
+		abilities: {
+			0: "Poison Point",
+			1: "White Smoke",
+			H: "Technician",
+			S: "Regenerator"
+		},
+		heightm: 0.6,
+		weightkg: 9,
+		color: "Purple",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	smoxilon: {
+		num: 69069,
+		name: "Smoxilon",
+		types: [
+			"Poison",
+			"Flying"
+		],
+		baseStats: {
+			hp: 78,
+			atk: 85,
+			def: 71,
+			spa: 78,
+			spd: 73,
+			spe: 116
+		},
+		abilities: {
+			0: "Poison Point",
+			1: "White Smoke",
+			H: "Technician",
+			S: "Regenerator"
+		},
+		heightm: 1.6,
+		weightkg: 40.5,
+		color: "Purple",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	machmona: {
+		num: 69070,
+		name: "Machmona",
+		types: [
+			"Fighting",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 120,
+			def: 80,
+			spa: 60,
+			spd: 80,
+			spe: 100
+		},
+		abilities: {
+			0: "Pressure",
+			1: "Vital Spirit",
+			H: "Iron Fist",
+			S: "Moxie"
+		},
+		heightm: 0.9,
+		weightkg: 4.4,
+		color: "Purple",
+		eggGroups: [
+			"Amorphous",
+			"Human-Like"
+		],
+	},
+	bacub: {
+		num: 69071,
+		name: "Bacub",
+		types: [
+			"Normal",
+			"Fire"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 50,
+			def: 60,
+			spa: 40,
+			spd: 55,
+			spe: 40
+		},
+		abilities: {
+			0: "Thick Fat",
+			1: "Guts",
+			H: "Flash Fire",
+			S: "Aroma Veil"
+		},
+		heightm: 0.6,
+		weightkg: 8.8,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+	},
+	urswine: {
+		num: 69072,
+		name: "Urswine",
+		types: [
+			"Normal",
+			"Fire"
+		],
+		baseStats: {
+			hp: 130,
+			atk: 90,
+			def: 80,
+			spa: 60,
+			spd: 60,
+			spe: 50
+		},
+		abilities: {
+			0: "Thick Fat",
+			1: "Guts",
+			H: "Flash Fire",
+			S: "Aroma Veil"
+		},
+		heightm: 1.8,
+		weightkg: 113.4,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+	},
+	moostatic: {
+		num: 69073,
+		name: "Moostatic",
+		types: [
+			"Electric"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 60,
+			def: 40,
+			spa: 50,
+			spd: 40,
+			spe: 50
+		},
+		abilities: {
+			0: "Static",
+			1: "Volt Absorb",
+			H: "Sap Sipper",
+			S: "Illuminate"
+		},
+		heightm: 0.6,
+		weightkg: 19.5,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+	},
+	mooshock: {
+		num: 69074,
+		name: "Mooshock",
+		types: [
+			"Electric"
+		],
+		baseStats: {
+			hp: 120,
+			atk: 110,
+			def: 80,
+			spa: 100,
+			spd: 90,
+			spe: 30
+		},
+		abilities: {
+			0: "Static",
+			1: "Volt Absorb",
+			H: "Sap Sipper",
+			S: "Battery"
+		},
+		heightm: 1.9,
+		weightkg: 92.5,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+	},
+	pretzely: {
+		num: 69075,
+		name: "Pretzely",
+		types: [
+			"Rock",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 62,
+			def: 85,
+			spa: 105,
+			spd: 50,
+			spe: 65
+		},
+		abilities: {
+			0: "Soundproof",
+			H: "Prankster",
+			S: "Ghost Note"
+		},
+		heightm: 1.3,
+		weightkg: 2.9,
+		color: "White",
+		eggGroups: [
+			"Human-Like",
+			"Mineral"
+		],
+	},
+	deemdow: {
+		num: 69076,
+		name: "Deemdow",
+		types: [
+			"Ghost",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 75,
+			def: 40,
+			spa: 85,
+			spd: 60,
+			spe: 50
+		},
+		abilities: {
+			0: "Shadow Tag",
+			1: "Cursed Body",
+			H: "Bad Dreams",
+			S: "Color Change"
+		},
+		heightm: 0.5,
+		weightkg: 11,
+		color: "Black",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	dowster: {
+		num: 69077,
+		name: "Dowster",
+		types: [
+			"Ghost",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 125,
+			def: 50,
+			spa: 135,
+			spd: 90,
+			spe: 70
+		},
+		abilities: {
+			0: "Shadow Tag",
+			1: "Cursed Body",
+			H: "Bad Dreams",
+			S: "Color Change"
+		},
+		heightm: 1.7,
+		weightkg: 76.6,
+		color: "Black",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	cheerly: {
+		num: 69078,
+		name: "Cheerly",
+		types: [
+			"Fairy"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 55,
+			def: 40,
+			spa: 35,
+			spd: 50,
+			spe: 60
+		},
+		abilities: {
+			0: "Cute Charm",
+			1: "Healer",
+			H: "Serene Grace",
+			S: "Friend Guard"
+		},
+		heightm: 0.8,
+		weightkg: 5.4,
+		color: "Pink",
+		eggGroups: [
+			"Fairy",
+			"Human-Like"
+		],
+	},
+	cheerific: {
+		num: 69079,
+		name: "Cheerific",
+		types: [
+			"Fairy"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 72,
+			def: 68,
+			spa: 52,
+			spd: 88,
+			spe: 95
+		},
+		abilities: {
+			0: "Cute Charm",
+			1: "Healer",
+			H: "Serene Grace",
+			S: "Friend Guard"
+		},
+		heightm: 1.2,
+		weightkg: 18.6,
+		color: "Pink",
+		eggGroups: [
+			"Fairy",
+			"Human-Like"
+		],
+	},
+	mennopaws: {
+		num: 69080,
+		name: "Mennopaws",
+		types: [
+			"Fairy",
+			"Ground"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 124,
+			def: 76,
+			spa: 62,
+			spd: 92,
+			spe: 70
+		},
+		abilities: {
+			0: "Intimidate",
+			1: "Moody",
+			H: "Anger Point",
+			S: "Rivalry"
+		},
+		heightm: 1.4,
+		weightkg: 118,
+		color: "Green",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	caracold: {
+		num: 69081,
+		name: "Caracold",
+		types: [
+			"Ice",
+			"Electric"
+		],
+		baseStats: {
+			hp: 35,
+			atk: 20,
+			def: 30,
+			spa: 75,
+			spd: 40,
+			spe: 80
+		},
+		abilities: {
+			0: "Pickup",
+			1: "Run Away",
+			H: "Frisk",
+			S: "Fur Coat"
+		},
+		heightm: 0.4,
+		weightkg: 4.2,
+		color: "Blue",
+		eggGroups: [
+			"Field"
+		],
+	},
+	glacialynx: {
+		num: 69082,
+		name: "Glacialynx",
+		types: [
+			"Ice",
+			"Electric"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 55,
+			def: 50,
+			spa: 110,
+			spd: 70,
+			spe: 101
+		},
+		abilities: {
+			0: "Adaptability",
+			1: "Volt Absorb",
+			H: "Frisk",
+			S: "Fur Coat"
+		},
+		heightm: 1,
+		weightkg: 32,
+		color: "Blue",
+		eggGroups: [
+			"Field"
+		],
+	},
+	pengas: {
+		num: 69083,
+		name: "Pengas",
+		types: [
+			"Ice",
+			"Fire"
+		],
+		baseStats: {
+			hp: 111,
+			atk: 50,
+			def: 76,
+			spa: 95,
+			spd: 76,
+			spe: 92
+		},
+		abilities: {
+			0: "Berserk",
+			1: "Intimidate",
+			H: "Refrigerate",
+			S: "Magic Guard"
+		},
+		heightm: 0.9,
+		weightkg: 16,
+		color: "Red",
+		eggGroups: [
+			"Water 1",
+			"Flying"
+		],
+	},
+	praeteur: {
+		num: 69084,
+		name: "Praeteur",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 30,
+			atk: 55,
+			def: 70,
+			spa: 45,
+			spd: 80,
+			spe: 20
+		},
+		abilities: {
+			0: "Intimidate",
+			1: "Cursed Body",
+			H: "Unnerve",
+			S: "Pressure"
+		},
+		heightm: 0.6,
+		weightkg: 15,
+		color: "Red",
+		eggGroups: [
+			"Water 2"
+		],
+	},
+	praestish: {
+		num: 69085,
+		name: "Praestish",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 69,
+			atk: 98,
+			def: 111,
+			spa: 88,
+			spd: 121,
+			spe: 40
+		},
+		abilities: {
+			0: "Intimidate",
+			1: "Cursed Body",
+			H: "Unnerve",
+			S: "Pressure"
+		},
+		heightm: 1.3,
+		weightkg: 39,
+		color: "Red",
+		eggGroups: [
+			"Water 2"
+		],
+	},
+	flowre: {
+		num: 69086,
+		name: "Flowre",
+		types: [
+			"Poison",
+			"Dark"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 50,
+			def: 60,
+			spa: 85,
+			spd: 85,
+			spe: 79
+		},
+		abilities: {
+			0: "Levitate",
+			H: "Levitate",
+			S: "Levitate"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Green",
+		eggGroups: [
+			"Grass",
+			"Amorphous"
+		],
+	},
+	florious: {
+		num: 69087,
+		name: "Florious",
+		types: [
+			"Poison",
+			"Dark"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 80,
+			def: 70,
+			spa: 115,
+			spd: 105,
+			spe: 99
+		},
+		abilities: {
+			0: "Vital Spirit",
+			H: "Insomnia",
+			S: "Vital Spirit"
+		},
+		heightm: 1.9,
+		weightkg: 69.8,
+		color: "Black",
+		eggGroups: [
+			"Grass",
+			"Amorphous"
+		],
+	},
+	juarecito: {
+		num: 69088,
+		name: "Juarecito",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 65,
+			def: 45,
+			spa: 30,
+			spd: 35,
+			spe: 65
+		},
+		abilities: {
+			0: "Keen Eye",
+			1: "Sand Stream",
+			H: "Comatose",
+			S: "Sand Veil"
+		},
+		heightm: 0.6,
+		weightkg: 21,
+		color: "Brown",
+		eggGroups: [
+			"Human-Like"
+		],
+	},
+	ponchito: {
+		num: 69089,
+		name: "Ponchito",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 90,
+			def: 60,
+			spa: 40,
+			spd: 50,
+			spe: 80
+		},
+		abilities: {
+			0: "Keen Eye",
+			1: "Sand Stream",
+			H: "Comatose",
+			S: "Sand Veil"
+		},
+		heightm: 1,
+		weightkg: 36,
+		color: "Brown",
+		eggGroups: [
+			"Human-Like"
+		],
+	},
+	somboludo: {
+		num: 69090,
+		name: "Somboludo",
+		types: [
+			"Ground",
+			"Steel"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 115,
+			def: 75,
+			spa: 65,
+			spd: 70,
+			spe: 100
+		},
+		abilities: {
+			0: "Sniper",
+			1: "Sand Stream",
+			H: "Comatose",
+			S: "Sand Veil"
+		},
+		heightm: 1.4,
+		weightkg: 105.5,
+		color: "Brown",
+		eggGroups: [
+			"Human-Like"
+		],
+	},
+	puppacti: {
+		num: 69091,
+		name: "Puppacti",
+		types: [
+			"Grass",
+			"Bug"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 75,
+			def: 40,
+			spa: 50,
+			spd: 40,
+			spe: 70
+		},
+		abilities: {
+			0: "Rough Skin",
+			1: "Puppeteer",
+			H: "Intimidate",
+			S: "Water Absorb"
+		},
+		heightm: 0.8,
+		weightkg: 14.2,
+		color: "Green",
+		eggGroups: [
+			"Grass",
+			"Water 1"
+		],
+	},
+	marionettl: {
+		num: 69092,
+		name: "Marionettl",
+		types: [
+			"Grass",
+			"Water"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 115,
+			def: 70,
+			spa: 75,
+			spd: 70,
+			spe: 110
+		},
+		abilities: {
+			0: "Rough Skin",
+			1: "Puppeteer",
+			H: "Intimidate",
+			S: "Water Absorb"
+		},
+		heightm: 1.3,
+		weightkg: 64,
+		color: "Green",
+		eggGroups: [
+			"Grass",
+			"Water 1"
+		],
+	},
+	tittai: {
+		num: 69093,
+		name: "Tittai",
+		types: [
+			"Water",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 20,
+			def: 54,
+			spa: 77,
+			spd: 64,
+			spe: 33
+		},
+		abilities: {
+			0: "Suction Cups",
+			1: "Water Absorb",
+			H: "Regenerator",
+			S: "Misty Surge"
+		},
+		heightm: 0.3,
+		weightkg: 10,
+		color: "Purple",
+		eggGroups: [
+			"Water 1",
+			"Water 2"
+		],
+	},
+	octai: {
+		num: 69094,
+		name: "Octai",
+		types: [
+			"Water",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 40,
+			def: 85,
+			spa: 107,
+			spd: 95,
+			spe: 43
+		},
+		abilities: {
+			0: "Suction Cups",
+			1: "Water Absorb",
+			H: "Regenerator",
+			S: "Misty Surge"
+		},
+		heightm: 1.2,
+		weightkg: 100,
+		color: "Purple",
+		eggGroups: [
+			"Water 1",
+			"Water 2"
+		],
+	},
+	charagon: {
+		num: 69095,
+		name: "Charagon",
+		types: [
+			"Steel",
+			"Fire"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 61,
+			def: 62,
+			spa: 41,
+			spd: 40,
+			spe: 71
+		},
+		abilities: {
+			0: "Speed Boost",
+			1: "Steam Engine",
+			H: "Moxie",
+			S: "Mold Breaker"
+		},
+		heightm: 2.8,
+		weightkg: 330,
+		color: "Gray",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	hyletrack: {
+		num: 69096,
+		name: "Hyletrack",
+		types: [
+			"Steel",
+			"Fire"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 90,
+			def: 90,
+			spa: 70,
+			spd: 70,
+			spe: 125
+		},
+		abilities: {
+			0: "Speed Boost",
+			1: "Steam Engine",
+			H: "Moxie",
+			S: "Mold Breaker"
+		},
+		heightm: 4.1,
+		weightkg: 735,
+		color: "Gray",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	euphoreal: {
+		num: 69097,
+		name: "Euphoreal",
+		types: [
+			"Dark"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 70,
+			def: 70,
+			spa: 40,
+			spd: 60,
+			spe: 76
+		},
+		abilities: {
+			0: "Oblivious",
+			H: "Rivalry",
+			S: "Insomnia"
+		},
+		heightm: 0.5,
+		weightkg: 9,
+		color: "Black",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	armowite: {
+		num: 69098,
+		name: "Armowite",
+		types: [
+			"Dark"
+		],
+		baseStats: {
+			hp: 87,
+			atk: 98,
+			def: 92,
+			spa: 60,
+			spd: 87,
+			spe: 96
+		},
+		abilities: {
+			0: "Oblivious",
+			H: "Overcoat",
+			S: "Blademaster"
+		},
+		heightm: 1.2,
+		weightkg: 39.5,
+		color: "Black",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	praunch: {
+		num: 69099,
+		name: "Praunch",
+		types: [
+			"Water",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 30,
+			atk: 70,
+			def: 70,
+			spa: 40,
+			spd: 25,
+			spe: 60
+		},
+		abilities: {
+			0: "Technician",
+			1: "Swift Swim",
+			H: "Shell Armor",
+			S: "Hydration"
+		},
+		heightm: 0.4,
+		weightkg: 2,
+		color: "Red",
+		eggGroups: [
+			"Water 3 "
+		],
+	},
+	karawn: {
+		num: 69100,
+		name: "Karawn",
+		types: [
+			"Water",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 85,
+			def: 85,
+			spa: 65,
+			spd: 65,
+			spe: 85
+		},
+		abilities: {
+			0: "Technician",
+			1: "Swift Swim",
+			H: "Shell Armor",
+			S: "Hydration"
+		},
+		heightm: 0.8,
+		weightkg: 8.5,
+		color: "Red",
+		eggGroups: [
+			"Water 3 "
+		],
+	},
+	mabster: {
+		num: 69101,
+		name: "Mabster",
+		types: [
+			"Water",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 115,
+			def: 85,
+			spa: 85,
+			spd: 85,
+			spe: 95
+		},
+		abilities: {
+			0: "Iron Fist",
+			1: "Swift Swim",
+			H: "Shell Armor",
+			S: "Hydration"
+		},
+		heightm: 1.1,
+		weightkg: 30.5,
+		color: "Red",
+		eggGroups: [
+			"Water 3 "
+		],
+	},
+	tricient: {
+		num: 69102,
+		name: "Tricient",
+		types: [
+			"Rock",
+			"Steel"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 80,
+			def: 80,
+			spa: 20,
+			spd: 70,
+			spe: 20
+		},
+		abilities: {
+			0: "Guts",
+			1: "Rock Head",
+			H: "Battle Armor",
+			S: "Solid Rock"
+		},
+		heightm: 0.4,
+		weightkg: 100,
+		color: "Brown",
+		eggGroups: [
+			"Monster",
+			"Mineral"
+		],
+	},
+	tricillion: {
+		num: 69103,
+		name: "Tricillion",
+		types: [
+			"Rock",
+			"Steel"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 130,
+			def: 130,
+			spa: 20,
+			spd: 110,
+			spe: 21
+		},
+		abilities: {
+			0: "Guts",
+			1: "Rock Head",
+			H: "Battle Armor",
+			S: "Solid Rock"
+		},
+		heightm: 1.6,
+		weightkg: 508,
+		color: "Brown",
+		eggGroups: [
+			"Monster",
+			"Mineral"
+		],
+	},
+	poizookie: {
+		num: 69104,
+		name: "Poizookie",
+		types: [
+			"Rock",
+			"Poison"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 72,
+			def: 35,
+			spa: 63,
+			spd: 40,
+			spe: 85
+		},
+		abilities: {
+			0: "Poison Point",
+			H: "Merciless",
+			S: "Corrosion"
+		},
+		heightm: 0.8,
+		weightkg: 29.6,
+		color: "Purple",
+		eggGroups: [
+			"Dragon",
+			"Mineral"
+		],
+	},
+	toxiraptor: {
+		num: 69105,
+		name: "Toxiraptor",
+		types: [
+			"Rock",
+			"Poison"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 113,
+			def: 65,
+			spa: 103,
+			spd: 50,
+			spe: 125
+		},
+		abilities: {
+			0: "Poison Point",
+			H: "Merciless",
+			S: "Corrosion"
+		},
+		heightm: 1.5,
+		weightkg: 77.9,
+		color: "Purple",
+		eggGroups: [
+			"Dragon",
+			"Mineral"
+		],
+	},
+	sabreck: {
+		num: 69106,
+		name: "Sabreck",
+		types: [
+			"Rock",
+			"Normal"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 85,
+			def: 45,
+			spa: 33,
+			spd: 47,
+			spe: 75
+		},
+		abilities: {
+			0: "Super Luck",
+			1: "Strong Jaw",
+			H: "Tough Claws",
+			S: "Sand Rush"
+		},
+		heightm: 0.6,
+		weightkg: 9,
+		color: "Brown",
+		eggGroups: [
+			"Field",
+			"Mineral"
+		],
+	},
+	huntabre: {
+		num: 69107,
+		name: "Huntabre",
+		types: [
+			"Rock",
+			"Normal"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 118,
+			def: 70,
+			spa: 62,
+			spd: 66,
+			spe: 125
+		},
+		abilities: {
+			0: "Super Luck",
+			1: "Strong Jaw",
+			H: "Tough Claws",
+			S: "Sand Rush"
+		},
+		heightm: 1.1,
+		weightkg: 125.8,
+		color: "Brown",
+		eggGroups: [
+			"Field",
+			"Mineral"
+		],
+	},
+	pyralink: {
+		num: 69108,
+		name: "Pyralink",
+		types: [
+			"Dragon",
+			"Fire"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 111,
+			def: 83,
+			spa: 106,
+			spd: 54,
+			spe: 52
+		},
+		abilities: {
+			0: "Magma Armor",
+			1: "Intimidate",
+			H: "Multiscale",
+			S: "Levitate"
+		},
+		heightm: 2.2,
+		weightkg: 111.1,
+		color: "Red",
+		eggGroups: [
+			"Dragon"
+		],
+	},
+	singlets: {
+		num: 69109,
+		name: "Singlets",
+		types: [
+			"Psychic",
+			"Electric"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 50,
+			def: 50,
+			spa: 50,
+			spd: 50,
+			spe: 51
+		},
+		abilities: {
+			0: "Skill Link",
+			1: "Analytic",
+			H: "Competitive",
+			S: "Klutz"
+		},
+		heightm: 0.6,
+		weightkg: 20.1,
+		color: "Red",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	dubus: {
+		num: 69110,
+		name: "Dubus",
+		types: [
+			"Psychic",
+			"Electric"
+		],
+		baseStats: {
+			hp: 69,
+			atk: 69,
+			def: 69,
+			spa: 69,
+			spd: 69,
+			spe: 66
+		},
+		abilities: {
+			0: "Skill Link",
+			1: "Analytic",
+			H: "Competitive",
+			S: "Super Luck"
+		},
+		heightm: 0.9,
+		weightkg: 25.5,
+		color: "Red",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	tripsius: {
+		num: 69111,
+		name: "Tripsius",
+		types: [
+			"Psychic",
+			"Electric"
+		],
+		baseStats: {
+			hp: 88,
+			atk: 89,
+			def: 99,
+			spa: 88,
+			spd: 80,
+			spe: 111
+		},
+		abilities: {
+			0: "Skill Link",
+			1: "Analytic",
+			H: "Competitive",
+			S: "Super Luck"
+		},
+		heightm: 1.5,
+		weightkg: 111,
+		color: "Red",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	miasmer: {
+		num: 69112,
+		name: "Miasmer",
+		types: [
+			"Poison",
+			"Steel"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 75,
+			def: 50,
+			spa: 65,
+			spd: 60,
+			spe: 70
+		},
+		abilities: {
+			0: "Levitate",
+			1: "Prankster",
+			H: "Poison Point",
+			S: "Light Metal"
+		},
+		heightm: 0.5,
+		weightkg: 0.3,
+		color: "Purple",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	miasmortor: {
+		num: 69113,
+		name: "Miasmortor",
+		types: [
+			"Poison",
+			"Steel"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 110,
+			def: 70,
+			spa: 90,
+			spd: 70,
+			spe: 110
+		},
+		abilities: {
+			0: "Effect Spore",
+			1: "Prankster",
+			H: "Poison Point",
+			S: "Light Metal"
+		},
+		heightm: 1.1,
+		weightkg: 34.6,
+		color: "Purple",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	cacademon: {
+		num: 69114,
+		name: "Cacademon",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 150,
+			atk: 101,
+			def: 79,
+			spa: 101,
+			spd: 79,
+			spe: 30
+		},
+		abilities: {
+			0: "Stench",
+			H: "Poison Touch",
+			S: "Alchemy"
+		},
+		heightm: 1.2,
+		weightkg: 30,
+		color: "Brown",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	hanginy: {
+		num: 69115,
+		name: "Hanginy",
+		types: [
+			"Ghost"
+		],
+		baseStats: {
+			hp: 120,
+			atk: 5,
+			def: 5,
+			spa: 20,
+			spd: 85,
+			spe: 45
+		},
+		abilities: {
+			0: "Aftermath",
+			1: "Cute Charm",
+			H: "Unnerve",
+			S: "Levitate"
+		},
+		heightm: 0.6,
+		weightkg: 24.4,
+		color: "Pink",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	chancer: {
+		num: 69116,
+		name: "Chancer",
+		types: [
+			"Ghost"
+		],
+		baseStats: {
+			hp: 250,
+			atk: 5,
+			def: 5,
+			spa: 35,
+			spd: 105,
+			spe: 50
+		},
+		abilities: {
+			0: "Aftermath",
+			1: "Cute Charm",
+			H: "Unnerve",
+			S: "Cursed Body"
+		},
+		heightm: 1.1,
+		weightkg: 34.6,
+		color: "Pink",
+		eggGroups: [
+			"Fairy",
+			"Amorphous"
+		],
+	},
+	unjoy: {
+		num: 69117,
+		name: "Unjoy",
+		types: [
+			"Ghost"
+		],
+		baseStats: {
+			hp: 255,
+			atk: 10,
+			def: 10,
+			spa: 75,
+			spd: 135,
+			spe: 55
+		},
+		abilities: {
+			0: "Aftermath",
+			1: "Cute Charm",
+			H: "Unnerve",
+			S: "Cursed Body"
+		},
+		heightm: 1.5,
+		weightkg: 46.8,
+		color: "Pink",
+		eggGroups: [
+			"Fairy",
+			"Amorphous"
+		],
+	},
+	frosowl: {
+		num: 69118,
+		name: "Frosowl",
+		types: [
+			"Ice",
+			"Flying"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 60,
+			def: 20,
+			spa: 73,
+			spd: 30,
+			spe: 95
+		},
+		abilities: {
+			0: "Insomnia",
+			1: "Snow Warning",
+			H: "Forewarn",
+			S: "Snow Cloak"
+		},
+		heightm: 0.5,
+		weightkg: 2.1,
+		color: "White",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	whizzard: {
+		num: 69119,
+		name: "Whizzard",
+		types: [
+			"Ice",
+			"Flying"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 80,
+			def: 40,
+			spa: 103,
+			spd: 60,
+			spe: 115
+		},
+		abilities: {
+			0: "Insomnia",
+			1: "Snow Warning",
+			H: "Forewarn",
+			S: "Snow Cloak"
+		},
+		heightm: 1.6,
+		weightkg: 40.8,
+		color: "White",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	drapillar: {
+		num: 69120,
+		name: "Drapillar",
+		types: [
+			"Bug",
+			"Dragon"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 80,
+			def: 50,
+			spa: 30,
+			spd: 45,
+			spe: 45
+		},
+		abilities: {
+			0: "Shield Dust",
+			1: "Marvel Scale",
+			H: "Shed Skin",
+			S: "Overcoat"
+		},
+		heightm: 1.1,
+		weightkg: 28.8,
+		color: "Green",
+		eggGroups: [
+			"Bug",
+			"Dragon"
+		],
+	},
+	caparagon: {
+		num: 69121,
+		name: "Caparagon",
+		types: [
+			"Bug",
+			"Dragon"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 81,
+			def: 100,
+			spa: 31,
+			spd: 95,
+			spe: 15
+		},
+		abilities: {
+			0: "Shield Dust",
+			1: "Marvel Scale",
+			H: "Shed Skin",
+			S: "Overcoat"
+		},
+		heightm: 1.1,
+		weightkg: 55.1,
+		color: "Green",
+		eggGroups: [
+			"Bug",
+			"Dragon"
+		],
+	},
+	mantrake: {
+		num: 69122,
+		name: "Mantrake",
+		types: [
+			"Bug",
+			"Dragon"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 140,
+			def: 85,
+			spa: 50,
+			spd: 80,
+			spe: 75
+		},
+		abilities: {
+			0: "Compoundeyes",
+			1: "Tinted Lens",
+			H: "Shed Skin",
+			S: "Overcoat"
+		},
+		heightm: 1.5,
+		weightkg: 112.6,
+		color: "Green",
+		eggGroups: [
+			"Bug",
+			"Dragon"
+		],
+	},
+	ogrelord: {
+		num: 69123,
+		name: "Ogrelord",
+		types: [
+			"Dark"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 130,
+			def: 80,
+			spa: 65,
+			spd: 81,
+			spe: 70
+		},
+		abilities: {
+			0: "Victory Star",
+			1: "Mold Breaker",
+			H: "Sturdy",
+			S: "Stench"
+		},
+		heightm: 2.1,
+		weightkg: 432.3,
+		color: "Green",
+		eggGroups: [
+			"Human-Like"
+		],
+	},
+	chantruth: {
+		num: 69124,
+		name: "Chantruth",
+		types: [
+			"Dark"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 61,
+			def: 94,
+			spa: 106,
+			spd: 95,
+			spe: 70
+		},
+		abilities: {
+			0: "Keen Eye",
+			1: "Jewelry",
+			H: "Magnet Pull",
+			S: "Infiltrator"
+		},
+		heightm: 1.3,
+		weightkg: 208.2,
+		color: "Black",
+		eggGroups: [
+			"Human-Like"
+		],
+	},
+	inbitween: {
+		num: 69125,
+		name: "Inbitween",
+		types: [
+			"Fairy"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 55,
+			def: 55,
+			spa: 65,
+			spd: 60,
+			spe: 70
+		},
+		abilities: {
+			0: "Moody",
+			1: "Serene Grace",
+			H: "Magic Bounce",
+			S: "Receiver"
+		},
+		heightm: 0.4,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+	},
+	geigh: {
+		num: 69126,
+		name: "Geigh",
+		types: [
+			"Fairy",
+			"Flying"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 80,
+			def: 70,
+			spa: 100,
+			spd: 75,
+			spe: 110
+		},
+		abilities: {
+			0: "Oblivious",
+			1: "Serene Grace",
+			H: "Magic Bounce",
+			S: "Receiver"
+		},
+		heightm: 1.7,
+		weightkg: 95,
+		color: "Purple",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+	},
+	jarape: {
+		num: 69127,
+		name: "Jarape",
+		types: [
+			"Electric",
+			"Rock"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 30,
+			def: 85,
+			spa: 40,
+			spd: 85,
+			spe: 10
+		},
+		abilities: {
+			0: "Cursed Body",
+			1: "Solid Rock",
+			H: "Prankster",
+			S: "Volt Absorb"
+		},
+		heightm: 0.7,
+		weightkg: 92,
+		color: "Yellow",
+		eggGroups: [
+			"Amorphous",
+			"Mineral"
+		],
+	},
+	spilefree: {
+		num: 69128,
+		name: "Spilefree",
+		types: [
+			"Electric",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 45,
+			def: 45,
+			spa: 125,
+			spd: 125,
+			spe: 125
+		},
+		abilities: {
+			0: "Clear Body",
+			1: "Prankster",
+			H: "Levitate",
+			S: "Volt Absorb"
+		},
+		heightm: 1.5,
+		weightkg: 1.2,
+		color: "Yellow",
+		eggGroups: [
+			"Amorphous",
+			"Mineral"
+		],
+	},
+	bongecko: {
+		num: 69129,
+		name: "Bongecko",
+		types: [
+			"Grass",
+			"Fire"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 40,
+			def: 45,
+			spa: 60,
+			spd: 45,
+			spe: 10
+		},
+		abilities: {
+			0: "Blaze",
+			1: "White Smoke",
+			H: "Turboblaze",
+			S: "Leaf Guard"
+		},
+		heightm: 0.6,
+		weightkg: 8.5,
+		color: "Green",
+		eggGroups: [
+			"Grass",
+			"Dragon"
+		],
+	},
+	mariguana: {
+		num: 69130,
+		name: "Mariguana",
+		types: [
+			"Grass",
+			"Fire"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 50,
+			def: 85,
+			spa: 75,
+			spd: 85,
+			spe: 20
+		},
+		abilities: {
+			0: "Blaze",
+			1: "White Smoke",
+			H: "Turboblaze",
+			S: "Leaf Guard"
+		},
+		heightm: 1.1,
+		weightkg: 19,
+		color: "Green",
+		eggGroups: [
+			"Grass",
+			"Dragon"
+		],
+	},
+	marleyzard: {
+		num: 69131,
+		name: "Marleyzard",
+		types: [
+			"Grass",
+			"Fire"
+		],
+		baseStats: {
+			hp: 130,
+			atk: 60,
+			def: 110,
+			spa: 100,
+			spd: 110,
+			spe: 30
+		},
+		abilities: {
+			0: "Blaze",
+			1: "White Smoke",
+			H: "Turboblaze",
+			S: "Leaf Guard"
+		},
+		heightm: 1.7,
+		weightkg: 90.5,
+		color: "Green",
+		eggGroups: [
+			"Grass",
+			"Dragon"
+		],
+	},
+	ayylamo: {
+		num: 69133,
+		name: "Ayylamo",
+		types: [
+			"Psychic"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 50,
+			def: 65,
+			spa: 90,
+			spd: 80,
+			spe: 90
+		},
+		abilities: {
+			0: "Compoundeyes",
+			1: "Synchronize",
+			H: "Tinted Lens",
+			S: "Levitate"
+		},
+		heightm: 0.6,
+		weightkg: 13,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous",
+			"Human-Like"
+		],
+	},
+	smellox: {
+		num: 69134,
+		name: "Smellox",
+		types: [
+			"Poison"
+		],
+		baseStats: {
+			hp: 92,
+			atk: 87,
+			def: 71,
+			spa: 63,
+			spd: 71,
+			spe: 66
+		},
+		abilities: {
+			0: "Stench",
+			1: "No Guard",
+			H: "Static",
+			S: "Aroma Veil"
+		},
+		heightm: 1.2,
+		weightkg: 59.2,
+		color: "Red",
+		eggGroups: [
+			"Amorphous",
+			"Field"
+		],
+	},
+	chasumo: {
+		num: 69135,
+		name: "Chasumo",
+		types: [
+			"Fighting"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 110,
+			def: 95,
+			spa: 45,
+			spd: 62,
+			spe: 67
+		},
+		abilities: {
+			0: "Hyper Cutter",
+			1: "Anger Point",
+			H: "Defiant",
+			S: "Gluttony"
+		},
+		heightm: 1.5,
+		weightkg: 70.5,
+		color: "White",
+		eggGroups: [
+			"Human-Like"
+		],
+	},
+	oilslam: {
+		num: 69136,
+		name: "Oilslam",
+		types: [
+			"Poison",
+			"Dark"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 80,
+			def: 50,
+			spa: 40,
+			spd: 50,
+			spe: 25
+		},
+		abilities: {
+			0: "Poison Point",
+			1: "Flare Boost",
+			H: "Merciless",
+			S: "Blademaster"
+		},
+		heightm: 0.9,
+		weightkg: 30,
+		color: "Black",
+		eggGroups: [
+			"Amorphous",
+			"Monster"
+		],
+	},
+	isissin: {
+		num: 69137,
+		name: "Isissin",
+		types: [
+			"Poison",
+			"Dark"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 105,
+			def: 75,
+			spa: 95,
+			spd: 100,
+			spe: 50
+		},
+		abilities: {
+			0: "Poison Point",
+			1: "Flare Boost",
+			H: "Merciless",
+			S: "Blademaster"
+		},
+		heightm: 1.7,
+		weightkg: 63.9,
+		color: "Black",
+		eggGroups: [
+			"Amorphous",
+			"Monster"
+		],
+	},
+	stuffowl: {
+		num: 69138,
+		name: "Stuffowl",
+		types: [
+			"Normal",
+			"Flying"
+		],
+		baseStats: {
+			hp: 62,
+			atk: 65,
+			def: 55,
+			spa: 55,
+			spd: 48,
+			spe: 65
+		},
+		abilities: {
+			0: "Early Bird",
+			H: "Big Pecks",
+			S: "Keen Eye"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Brown",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	durkey: {
+		num: 69139,
+		name: "Durkey",
+		types: [
+			"Normal",
+			"Flying"
+		],
+		baseStats: {
+			hp: 72,
+			atk: 85,
+			def: 73,
+			spa: 72,
+			spd: 68,
+			spe: 85
+		},
+		abilities: {
+			0: "Early Bird",
+			H: "Innards Out",
+			S: "Keen Eye"
+		},
+		heightm: 1.1,
+		weightkg: 30,
+		color: "Brown",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	upchucken: {
+		num: 69140,
+		name: "Upchucken",
+		types: [
+			"Normal",
+			"Flying"
+		],
+		baseStats: {
+			hp: 87,
+			atk: 105,
+			def: 81,
+			spa: 102,
+			spd: 81,
+			spe: 103
+		},
+		abilities: {
+			0: "Drought",
+			H: "Innards Out",
+			S: "Flare Boost"
+		},
+		heightm: 1.5,
+		weightkg: 86.7,
+		color: "Brown",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	dragun: {
+		num: 69141,
+		name: "Dragun",
+		types: [
+			"Dragon",
+			"Steel"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 25,
+			def: 65,
+			spa: 100,
+			spd: 45,
+			spe: 20
+		},
+		abilities: {
+			0: "Sniper",
+			1: "Megalauncher",
+			H: "Keen Eye",
+			S: "No Guard"
+		},
+		heightm: 0.4,
+		weightkg: 21.4,
+		color: "Gray",
+		eggGroups: [
+			"Dragon"
+		],
+	},
+	triggedon: {
+		num: 69142,
+		name: "Triggedon",
+		types: [
+			"Dragon",
+			"Steel"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 50,
+			def: 85,
+			spa: 120,
+			spd: 70,
+			spe: 30
+		},
+		abilities: {
+			0: "Sniper",
+			1: "Megalauncher",
+			H: "Keen Eye",
+			S: "No Guard"
+		},
+		heightm: 0.7,
+		weightkg: 51,
+		color: "Gray",
+		eggGroups: [
+			"Dragon"
+		],
+	},
+	cannonance: {
+		num: 69143,
+		name: "Cannonance",
+		types: [
+			"Dragon",
+			"Steel"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 95,
+			def: 115,
+			spa: 145,
+			spd: 105,
+			spe: 45
+		},
+		abilities: {
+			0: "Sniper",
+			1: "Megalauncher",
+			H: "Keen Eye",
+			S: "No Guard"
+		},
+		heightm: 1.4,
+		weightkg: 101.1,
+		color: "Gray",
+		eggGroups: [
+			"Dragon"
+		],
+	},
+	evacycle: {
+		num: 69144,
+		name: "Evacycle",
+		types: [
+			"Steel",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 150,
+			atk: 90,
+			def: 90,
+			spa: 90,
+			spd: 90,
+			spe: 90
+		},
+		abilities: {
+			0: "Flame Body",
+			H: "Run Away",
+			S: "Unburden"
+		},
+		heightm: 4.3,
+		weightkg: 431.4,
+		color: "Purple",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	foryu: {
+		num: 69145,
+		name: "Foryu",
+		types: [
+			"Steel",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 150,
+			def: 125,
+			spa: 65,
+			spd: 100,
+			spe: 80
+		},
+		abilities: {
+			0: "Magnet Pull",
+			H: "Heavy Metal",
+			S: "Big Guy"
+		},
+		heightm: 4.9,
+		weightkg: 489,
+		color: "Gray",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	scytill: {
+		num: 69146,
+		name: "Scytill",
+		types: [
+			"Steel",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 135,
+			def: 80,
+			spa: 85,
+			spd: 50,
+			spe: 150
+		},
+		abilities: {
+			0: "Levitate",
+			H: "Air Lock",
+			S: "Hyper Cutter"
+		},
+		heightm: 4,
+		weightkg: 392,
+		color: "Purple",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	baddon: {
+		num: 69147,
+		name: "Baddon",
+		types: [
+			"Dragon"
+		],
+		baseStats: {
+			hp: 73,
+			atk: 136,
+			def: 148,
+			spa: 121,
+			spd: 112,
+			spe: 50
+		},
+		abilities: {
+			0: "Rough Skin",
+			1: "Skill Link",
+			H: "Infiltrator",
+			S: "Suction Cups"
+		},
+		heightm: 0.7,
+		weightkg: 50,
+		color: "Brown",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	endranther: {
+		num: 69148,
+		name: "Endranther",
+		types: [
+			"Poison"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 150,
+			def: 100,
+			spa: 100,
+			spd: 105,
+			spe: 95
+		},
+		abilities: {
+			0: "Poison Point",
+			H: "Pressure",
+			S: "Aftermath"
+		},
+		heightm: 2.5,
+		weightkg: 650,
+		color: "Purple",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	notridley: {
+		num: 69149,
+		name: "Notridley",
+		types: [
+			"Dragon",
+			"Flying"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 120,
+			def: 97,
+			spa: 105,
+			spd: 95,
+			spe: 115
+		},
+		abilities: {
+			0: "Pressure",
+			H: "Keen Eye",
+			S: "Steadfast"
+		},
+		heightm: 8,
+		weightkg: 1113.7,
+		color: "Purple",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	demiwaifu: {
+		num: 69150,
+		name: "Demiwaifu",
+		types: [
+			"Fairy"
+		],
+		baseStats: {
+			hp: 112,
+			atk: 87,
+			def: 104,
+			spa: 131,
+			spd: 131,
+			spe: 115
+		},
+		abilities: {
+			0: "Serene Grace",
+			H: "Majestic",
+			S: "Triage"
+		},
+		heightm: 2,
+		weightkg: 122,
+		color: "Green",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	reptyke: {
+		num: 69152,
+		name: "Reptyke",
+		types: [
+			"Fighting"
+		],
+		baseStats: {
+			hp: 63,
+			atk: 80,
+			def: 60,
+			spa: 30,
+			spd: 40,
+			spe: 45
+		},
+		abilities: {
+			0: "Iron Fist",
+			H: "Inner Focus",
+			S: "Regenerator"
+		},
+		heightm: 0.6,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+	},
+	rasclobber: {
+		num: 69153,
+		name: "Rasclobber",
+		types: [
+			"Fighting",
+			"Dragon"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 95,
+			def: 80,
+			spa: 40,
+			spd: 60,
+			spe: 55
+		},
+		abilities: {
+			0: "Iron Fist",
+			H: "Inner Focus",
+			S: "Regenerator"
+		},
+		heightm: 1.2,
+		weightkg: 41.7,
+		color: "Blue",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+	},
+	batterex: {
+		num: 69154,
+		name: "Batterex",
+		types: [
+			"Fighting",
+			"Dragon"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 125,
+			def: 100,
+			spa: 60,
+			spd: 70,
+			spe: 80
+		},
+		abilities: {
+			0: "Iron Fist",
+			H: "Inner Focus",
+			S: "Regenerator"
+		},
+		heightm: 2.5,
+		weightkg: 135,
+		color: "Blue",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+	},
+	faeriock: {
+		num: 69155,
+		name: "Faeriock",
+		types: [
+			"Rock"
+		],
+		baseStats: {
+			hp: 53,
+			atk: 50,
+			def: 65,
+			spa: 50,
+			spd: 80,
+			spe: 20
+		},
+		abilities: {
+			0: "Solid Rock",
+			H: "Magic Guard",
+			S: "Telepathy"
+		},
+		heightm: 0.5,
+		weightkg: 15.9,
+		color: "Brown",
+		eggGroups: [
+			"Mineral",
+			"Fairy"
+		],
+	},
+	sylvuin: {
+		num: 69156,
+		name: "Sylvuin",
+		types: [
+			"Rock",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 60,
+			def: 80,
+			spa: 70,
+			spd: 95,
+			spe: 40
+		},
+		abilities: {
+			0: "Solid Rock",
+			H: "Magic Guard",
+			S: "Telepathy"
+		},
+		heightm: 1.1,
+		weightkg: 71.2,
+		color: "Brown",
+		eggGroups: [
+			"Mineral",
+			"Fairy"
+		],
+	},
+	oburonyxo: {
+		num: 69157,
+		name: "Oburonyxo",
+		types: [
+			"Rock",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 70,
+			def: 100,
+			spa: 90,
+			spd: 125,
+			spe: 60
+		},
+		abilities: {
+			0: "Solid Rock",
+			H: "Magic Guard",
+			S: "Telepathy"
+		},
+		heightm: 2.4,
+		weightkg: 189.5,
+		color: "Brown",
+		eggGroups: [
+			"Mineral",
+			"Fairy"
+		],
+	},
+	cloucat: {
+		num: 69158,
+		name: "Cloucat",
+		types: [
+			"Flying"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 64,
+			def: 35,
+			spa: 64,
+			spd: 35,
+			spe: 80
+		},
+		abilities: {
+			0: "Tough Claws",
+			H: "Cloud Nine",
+			S: "Shower Power"
+		},
+		heightm: 0.3,
+		weightkg: 0.1,
+		color: "White",
+		eggGroups: [
+			"Flying",
+			"Amorphous"
+		],
+	},
+	felimbus: {
+		num: 69159,
+		name: "Felimbus",
+		types: [
+			"Flying",
+			"Dark"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 80,
+			def: 50,
+			spa: 80,
+			spd: 50,
+			spe: 95
+		},
+		abilities: {
+			0: "Tough Claws",
+			H: "Cloud Nine",
+			S: "Shower Power"
+		},
+		heightm: 1.2,
+		weightkg: 9,
+		color: "Gray",
+		eggGroups: [
+			"Flying",
+			"Amorphous"
+		],
+	},
+	deathorus: {
+		num: 69160,
+		name: "Deathorus",
+		types: [
+			"Flying",
+			"Dark"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 95,
+			def: 70,
+			spa: 90,
+			spd: 70,
+			spe: 125
+		},
+		abilities: {
+			0: "Tough Claws",
+			H: "Cloud Nine",
+			S: "Shower Power"
+		},
+		heightm: 2,
+		weightkg: 30.2,
+		color: "Gray",
+		eggGroups: [
+			"Flying",
+			"Amorphous"
+		],
+	},
+	knogoat: {
+		num: 69161,
+		name: "Knogoat",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 85,
+			def: 55,
+			spa: 30,
+			spd: 50,
+			spe: 55
+		},
+		abilities: {
+			0: "Own Tempo",
+			1: "Reckless",
+			H: "Mold Breaker",
+			S: "Sap Sipper"
+		},
+		heightm: 1,
+		weightkg: 42.4,
+		color: "White",
+		eggGroups: [
+			"Field"
+		],
+	},
+	knogrinyu: {
+		num: 69162,
+		name: "Knogrinyu",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 170,
+			atk: 120,
+			def: 70,
+			spa: 40,
+			spd: 70,
+			spe: 75
+		},
+		abilities: {
+			0: "Own Tempo",
+			1: "Reckless",
+			H: "Mold Breaker",
+			S: "Sap Sipper"
+		},
+		heightm: 2,
+		weightkg: 198,
+		color: "White",
+		eggGroups: [
+			"Field"
+		],
+	},
+	glasshot: {
+		num: 69163,
+		name: "Glasshot",
+		types: [
+			"Ice",
+			"Steel"
+		],
+		baseStats: {
+			hp: 31,
+			atk: 74,
+			def: 40,
+			spa: 74,
+			spd: 40,
+			spe: 73
+		},
+		abilities: {
+			0: "Keen Eye",
+			1: "Bulletproof",
+			H: "Clear Body",
+			S: "Motor Drive"
+		},
+		heightm: 0.7,
+		weightkg: 52.5,
+		color: "Blue",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	glassannon: {
+		num: 69164,
+		name: "Glassannon",
+		types: [
+			"Ice",
+			"Steel"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 139,
+			def: 40,
+			spa: 139,
+			spd: 40,
+			spe: 135
+		},
+		abilities: {
+			0: "Speed Boost",
+			1: "Bulletproof",
+			H: "Clear Body",
+			S: "Motor Drive"
+		},
+		heightm: 1.9,
+		weightkg: 305.4,
+		color: "Blue",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	fluffyeti: {
+		num: 69165,
+		name: "Fluffyeti",
+		types: [
+			"Ice"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 75,
+			def: 65,
+			spa: 30,
+			spd: 65,
+			spe: 60
+		},
+		abilities: {
+			0: "Snow Cloak",
+			1: "Ice Body",
+			H: "Fluffy",
+			S: "Cute Charm"
+		},
+		heightm: 0.8,
+		weightkg: 13.3,
+		color: "White",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+	},
+	yedoom: {
+		num: 69166,
+		name: "Yedoom",
+		types: [
+			"Ice",
+			"Dark"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 115,
+			def: 90,
+			spa: 60,
+			spd: 95,
+			spe: 95
+		},
+		abilities: {
+			0: "Pressure",
+			1: "Tough Claws",
+			H: "Fluffy",
+			S: "Intimidate"
+		},
+		heightm: 1.3,
+		weightkg: 77.1,
+		color: "White",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+	},
+	mirrostine: {
+		num: 69167,
+		name: "Mirrostine",
+		types: [
+			"Steel",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 68,
+			atk: 59,
+			def: 79,
+			spa: 97,
+			spd: 95,
+			spe: 86
+		},
+		abilities: {
+			0: "Lightningrod",
+			1: "Trace",
+			H: "Inversion",
+			S: "Imposter"
+		},
+		heightm: 1.1,
+		weightkg: 6.8,
+		color: "Gray",
+		eggGroups: [
+			"Mineral",
+			"Amorphous"
+		],
+	},
+	mudpants: {
+		num: 69168,
+		name: "Mudpants",
+		types: [
+			"Ground",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 85,
+			def: 75,
+			spa: 30,
+			spd: 50,
+			spe: 40
+		},
+		abilities: {
+			0: "Sand Rush",
+			1: "Stench",
+			H: "Sand Stream",
+			S: "Steadfast"
+		},
+		heightm: 0.6,
+		weightkg: 9,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+	},
+	mudslacks: {
+		num: 69169,
+		name: "Mudslacks",
+		types: [
+			"Ground",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 110,
+			def: 100,
+			spa: 50,
+			spd: 70,
+			spe: 65
+		},
+		abilities: {
+			0: "Sand Rush",
+			1: "Stench",
+			H: "Sand Stream",
+			S: "Steadfast"
+		},
+		heightm: 1,
+		weightkg: 29.5,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+	},
+	bukitlee: {
+		num: 69170,
+		name: "Bukitlee",
+		types: [
+			"Steel"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 30,
+			def: 95,
+			spa: 20,
+			spd: 90,
+			spe: 20
+		},
+		abilities: {
+			0: "Own Tempo",
+			H: "Aftermath",
+			S: "Light Metal"
+		},
+		heightm: 0.3,
+		weightkg: 15,
+		color: "Gray",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	lossolith: {
+		num: 69171,
+		name: "Lossolith",
+		types: [
+			"Steel",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 60,
+			def: 200,
+			spa: 60,
+			spd: 140,
+			spe: 30
+		},
+		abilities: {
+			0: "Levitate",
+			H: "Aftermath",
+			S: "Heavy Metal"
+		},
+		heightm: 5.8,
+		weightkg: 950,
+		color: "Black",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	mimimie: {
+		num: 69172,
+		name: "Mimimie",
+		types: [
+			"Water",
+			"Dark"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 70,
+			def: 80,
+			spa: 115,
+			spd: 85,
+			spe: 90
+		},
+		abilities: {
+			0: "Suction Cups",
+			1: "Degenerate",
+			H: "Serene Grace",
+			S: "Misty Surge"
+		},
+		heightm: 1,
+		weightkg: 35,
+		color: "Pink",
+		eggGroups: [
+			"Water 2",
+			"Water 3"
+		],
+	},
+	sprucifix: {
+		num: 69173,
+		name: "Sprucifix",
+		types: [
+			"Grass",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 89,
+			atk: 108,
+			def: 122,
+			spa: 49,
+			spd: 75,
+			spe: 50
+		},
+		abilities: {
+			0: "Wonder Guard",
+			1: "Regenerator",
+			H: "Rain Dish",
+			S: "Grass pelt"
+		},
+		heightm: 1.7,
+		weightkg: 55.2,
+		color: "Brown",
+		eggGroups: [
+			"Grass",
+			"Human-Like"
+		],
+	},
+	hulkan: {
+		num: 69174,
+		name: "Hulkan",
+		types: [
+			"Fighting"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 150,
+			def: 100,
+			spa: 20,
+			spd: 90,
+			spe: 50
+		},
+		abilities: {
+			0: "Guts",
+			1: "Hustle",
+			H: "Steadfast",
+			S: "Reckless"
+		},
+		heightm: 2,
+		weightkg: 130,
+		color: "Green",
+		eggGroups: [
+			"Human-Like"
+		],
+	},
+	nonite: {
+		num: 69175,
+		name: "Nonite",
+		types: [
+			"Fairy"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 40,
+			def: 45,
+			spa: 55,
+			spd: 50,
+			spe: 55
+		},
+		abilities: {
+			0: "Soundproof",
+			1: "Boombox",
+			H: "Cute Charm",
+			S: "Pixilate"
+		},
+		heightm: 0.8,
+		weightkg: 15.2,
+		color: "Pink",
+		eggGroups: [
+			"Flying",
+			"Fairy"
+		],
+	},
+	nonegative: {
+		num: 69176,
+		name: "Nonegative",
+		types: [
+			"Fairy"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 40,
+			def: 45,
+			spa: 95,
+			spd: 80,
+			spe: 85
+		},
+		abilities: {
+			0: "Soundproof",
+			1: "Boombox",
+			H: "Cute Charm",
+			S: "Pixilate"
+		},
+		heightm: 1.5,
+		weightkg: 44.5,
+		color: "Pink",
+		eggGroups: [
+			"Flying",
+			"Fairy"
+		],
+	},
+	nomaestro: {
+		num: 69177,
+		name: "Nomaestro",
+		types: [
+			"Fairy",
+			"Flying"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 105,
+			def: 90,
+			spa: 95,
+			spd: 80,
+			spe: 75
+		},
+		abilities: {
+			0: "Soundproof",
+			1: "Boombox",
+			H: "Cute Charm",
+			S: "Pixilate"
+		},
+		heightm: 1.9,
+		weightkg: 120,
+		color: "Pink",
+		eggGroups: [
+			"Flying",
+			"Fairy"
+		],
+	},
+	dunkypea: {
+		num: 69178,
+		name: "Dunkypea",
+		types: [
+			"Poison",
+			"Flying"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 45,
+			def: 45,
+			spa: 45,
+			spd: 50,
+			spe: 60
+		},
+		abilities: {
+			0: "Big Pecks",
+			H: "Unburden",
+			S: "Soundproof"
+		},
+		heightm: 0.6,
+		weightkg: 9,
+		color: "Purple",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	burdmen: {
+		num: 69179,
+		name: "Burdmen",
+		types: [
+			"Poison",
+			"Flying"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 60,
+			def: 60,
+			spa: 65,
+			spd: 65,
+			spe: 95
+		},
+		abilities: {
+			0: "Big Pecks",
+			H: "Unburden",
+			S: "Soundproof"
+		},
+		heightm: 1.4,
+		weightkg: 39.2,
+		color: "Purple",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	nutzboltz: {
+		num: 69180,
+		name: "Nutzboltz",
+		types: [
+			"Poison",
+			"Flying"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 70,
+			def: 80,
+			spa: 85,
+			spd: 95,
+			spe: 80
+		},
+		abilities: {
+			0: "Big Pecks",
+			H: "Unburden",
+			S: "Soundproof"
+		},
+		heightm: 1.8,
+		weightkg: 85.2,
+		color: "Purple",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	kuklux: {
+		num: 69181,
+		name: "Kuklux",
+		types: [
+			"Fire"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 45,
+			def: 50,
+			spa: 60,
+			spd: 50,
+			spe: 55
+		},
+		abilities: {
+			0: "Flash Fire",
+			1: "Levitate",
+			H: "Justified",
+			S: "Overcoat"
+		},
+		heightm: 0.7,
+		weightkg: 1,
+		color: "White",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	kuklan: {
+		num: 69182,
+		name: "Kuklan",
+		types: [
+			"Fire"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 60,
+			def: 60,
+			spa: 115,
+			spd: 115,
+			spe: 105
+		},
+		abilities: {
+			0: "Flash Fire",
+			1: "Levitate",
+			H: "Justified",
+			S: "Overcoat"
+		},
+		heightm: 1.5,
+		weightkg: 4.4,
+		color: "White",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	flameboyan: {
+		num: 69183,
+		name: "Flameboyan",
+		types: [
+			"Fire",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 62,
+			def: 78,
+			spa: 92,
+			spd: 118,
+			spe: 25
+		},
+		abilities: {
+			0: "Rivalry",
+			1: "Solar Power",
+			H: "Flame Body",
+			S: "Fairy Aura"
+		},
+		heightm: 0.7,
+		weightkg: 9.5,
+		color: "Purple",
+		eggGroups: [
+			"Fairy",
+			"Amorphous "
+		],
+	},
+	piicee: {
+		num: 69184,
+		name: "Piicee",
+		types: [
+			"Psychic",
+			"Poison"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 60,
+			def: 75,
+			spa: 95,
+			spd: 110,
+			spe: 80
+		},
+		abilities: {
+			0: "Synchronize",
+			1: "Triage",
+			H: "Regenerator",
+			S: "Healer"
+		},
+		heightm: 1.3,
+		weightkg: 40,
+		color: "Green",
+		eggGroups: [
+			"Amorphous",
+			"Monster"
+		],
+	},
+	sonnanos: {
+		num: 69185,
+		name: "Sonnanos",
+		types: [
+			"Steel",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 115,
+			def: 105,
+			spa: 60,
+			spd: 60,
+			spe: 70
+		},
+		abilities: {
+			0: "Sheer Force",
+			H: "Stamina",
+			S: "Iron Fist"
+		},
+		heightm: 1.6,
+		weightkg: 139,
+		color: "Gray",
+		eggGroups: [
+			"Mineral",
+			"Human-Like"
+		],
+	},
+	plebbles: {
+		num: 69186,
+		name: "Plebbles",
+		types: [
+			"Rock"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 80,
+			def: 160,
+			spa: 50,
+			spd: 70,
+			spe: 70
+		},
+		abilities: {
+			0: "Sturdy",
+			1: "Levitate",
+			H: "Infiltrator",
+			S: "Mold Breaker"
+		},
+		heightm: 0.4,
+		weightkg: 4.5,
+		color: "Brown",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	sapleaf: {
+		num: 69187,
+		name: "Sapleaf",
+		types: [
+			"Grass"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 60,
+			def: 45,
+			spa: 65,
+			spd: 40,
+			spe: 75
+		},
+		abilities: {
+			0: "Solar Power",
+			H: "Leaf Guard",
+			S: "Overgrow"
+		},
+		heightm: 1,
+		weightkg: 31,
+		color: "Green",
+		eggGroups: [
+			"Grass",
+			"Mineral"
+		],
+	},
+	ignut: {
+		num: 69188,
+		name: "Ignut",
+		types: [
+			"Fire"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 70,
+			def: 80,
+			spa: 85,
+			spd: 55,
+			spe: 90
+		},
+		abilities: {
+			0: "Flame Body",
+			H: "Flash Fire",
+			S: "Blaze"
+		},
+		heightm: 1.4,
+		weightkg: 45.8,
+		color: "Red",
+		eggGroups: [
+			"Grass",
+			"Mineral"
+		],
+	},
+	phantash: {
+		num: 69189,
+		name: "Phantash",
+		types: [
+			"Ghost"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 85,
+			def: 65,
+			spa: 110,
+			spd: 110,
+			spe: 60
+		},
+		abilities: {
+			0: "White Smoke",
+			H: "Air Lock",
+			S: "Cursed Body"
+		},
+		heightm: 1.5,
+		weightkg: 0.2,
+		color: "Gray",
+		eggGroups: [
+			"Grass",
+			"Mineral"
+		],
+	},
+	polossus: {
+		num: 69190,
+		name: "Polossus",
+		types: [
+			"Poison"
+		],
+		baseStats: {
+			hp: 140,
+			atk: 105,
+			def: 70,
+			spa: 65,
+			spd: 70,
+			spe: 65
+		},
+		abilities: {
+			0: "Pollution",
+			1: "Poison Point",
+			H: "Weak Armor",
+			S: "Shield Dust"
+		},
+		heightm: 4.2,
+		weightkg: 336,
+		color: "Black",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	hitmonana: {
+		num: 69191,
+		name: "Hitmonana",
+		types: [
+			"Grass",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 90,
+			def: 110,
+			spa: 85,
+			spd: 110,
+			spe: 60
+		},
+		abilities: {
+			0: "Shed Skin",
+			1: "Harvest",
+			H: "Unburden",
+			S: "Sweet Veil"
+		},
+		heightm: 0.8,
+		weightkg: 15,
+		color: "Yellow",
+		eggGroups: [
+			"Grass"
+		],
+	},
+	ballacle: {
+		num: 69192,
+		name: "Ballacle",
+		types: [
+			"Rock"
+		],
+		baseStats: {
+			hp: 62,
+			atk: 52,
+			def: 65,
+			spa: 40,
+			spd: 56,
+			spe: 75
+		},
+		abilities: {
+			0: "Pickup",
+			H: "Shell Armor",
+			S: "Suction Cups"
+		},
+		heightm: 0.5,
+		weightkg: 31,
+		color: "Brown",
+		eggGroups: [
+			"Mineral",
+			"Human-Like"
+		],
+	},
+	barbarkley: {
+		num: 69193,
+		name: "Barbarkley",
+		types: [
+			"Rock",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 96,
+			atk: 105,
+			def: 80,
+			spa: 54,
+			spd: 70,
+			spe: 115
+		},
+		abilities: {
+			0: "Quick Feet",
+			H: "Steadfast",
+			S: "Magic Bounce"
+		},
+		heightm: 1.3,
+		weightkg: 96,
+		color: "Brown",
+		eggGroups: [
+			"Mineral",
+			"Human-Like"
+		],
+	},
+	kekroach: {
+		num: 69194,
+		name: "Kekroach",
+		types: [
+			"Dark",
+			"Bug"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 65,
+			def: 65,
+			spa: 40,
+			spd: 45,
+			spe: 55
+		},
+		abilities: {
+			0: "Swarm",
+			1: "Prankster",
+			H: "Sturdy",
+			S: "Wimp Out"
+		},
+		heightm: 0.5,
+		weightkg: 1.7,
+		color: "Gray",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	rekroach: {
+		num: 69195,
+		name: "Rekroach",
+		types: [
+			"Dark",
+			"Bug"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 110,
+			def: 115,
+			spa: 50,
+			spd: 70,
+			spe: 80
+		},
+		abilities: {
+			0: "Swarm",
+			1: "Iron Fist",
+			H: "Sturdy",
+			S: "Fire Exit"
+		},
+		heightm: 1.3,
+		weightkg: 44.4,
+		color: "Gray",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	ricosheep: {
+		num: 69196,
+		name: "Ricosheep",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 55,
+			def: 50,
+			spa: 38,
+			spd: 50,
+			spe: 70
+		},
+		abilities: {
+			0: "Speed Boost",
+			1: "Magic Bounce",
+			H: "Bulletproof",
+			S: "Aerilate"
+		},
+		heightm: 0.5,
+		weightkg: 5.5,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+	},
+	ricosuave: {
+		num: 69197,
+		name: "Ricosuave",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 130,
+			atk: 70,
+			def: 80,
+			spa: 60,
+			spd: 70,
+			spe: 115
+		},
+		abilities: {
+			0: "Speed Boost",
+			1: "Magic Bounce",
+			H: "Bulletproof",
+			S: "Aerilate"
+		},
+		heightm: 1,
+		weightkg: 12,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+	},
+	spaghefant: {
+		num: 69198,
+		name: "Spaghefant",
+		types: [
+			"Ground",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 60,
+			def: 100,
+			spa: 100,
+			spd: 85,
+			spe: 35
+		},
+		abilities: {
+			0: "Water Absorb",
+			1: "Intimidate",
+			H: "Compaction",
+			S: "Rattled"
+		},
+		heightm: 2.9,
+		weightkg: 300,
+		color: "White",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+	},
+	crystaquil: {
+		num: 69199,
+		name: "Crystaquil",
+		types: [
+			"Ice",
+			"Poison"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 70,
+			def: 75,
+			spa: 67,
+			spd: 50,
+			spe: 60
+		},
+		abilities: {
+			0: "Rough Skin",
+			1: "Poison Point",
+			H: "Slush Rush",
+			S: "Ice Body"
+		},
+		heightm: 1.1,
+		weightkg: 48.2,
+		color: "Blue",
+		eggGroups: [
+			"Monster"
+		],
+	},
+	crystaking: {
+		num: 69200,
+		name: "Crystaking",
+		types: [
+			"Ice",
+			"Poison"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 120,
+			def: 96,
+			spa: 75,
+			spd: 85,
+			spe: 80
+		},
+		abilities: {
+			0: "Rough Skin",
+			1: "Poison Point",
+			H: "Slush Rush",
+			S: "Ice Body"
+		},
+		heightm: 2.1,
+		weightkg: 100,
+		color: "Blue",
+		eggGroups: [
+			"Monster"
+		],
+	},
+	fontaba: {
+		num: 69201,
+		name: "Futabafont",
+		types: [
+			"Psychic"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 80,
+			def: 91,
+			spa: 80,
+			spd: 91,
+			spe: 75
+		},
+		abilities: {
+			0: "Prankster",
+			H: "Technician",
+			S: "Levitate"
+		},
+		heightm: 1,
+		weightkg: 10,
+		color: "Black",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	floconut: {
+		num: 69202,
+		name: "Floconut",
+		types: [
+			"Grass"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 40,
+			def: 60,
+			spa: 40,
+			spd: 50,
+			spe: 20
+		},
+		abilities: {
+			0: "Chlorophyll",
+			1: "Shell Armor",
+			H: "Solar Power",
+			S: "Leaf Guard"
+		},
+		heightm: 0.6,
+		weightkg: 8.9,
+		color: "Brown",
+		eggGroups: [
+			"Grass"
+		],
+	},
+	sappalm: {
+		num: 69203,
+		name: "Sappalm",
+		types: [
+			"Grass"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 70,
+			def: 85,
+			spa: 75,
+			spd: 70,
+			spe: 55
+		},
+		abilities: {
+			0: "Chlorophyll",
+			1: "Shell Armor",
+			H: "Solar Power",
+			S: "Leaf Guard"
+		},
+		heightm: 1.3,
+		weightkg: 41.5,
+		color: "Brown",
+		eggGroups: [
+			"Grass"
+		],
+	},
+	roynapalm: {
+		num: 69204,
+		name: "Roynapalm",
+		types: [
+			"Grass"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 50,
+			def: 100,
+			spa: 143,
+			spd: 80,
+			spe: 70
+		},
+		abilities: {
+			0: "Chlorophyll",
+			1: "Flash Fire",
+			H: "Solar Power",
+			S: "Leaf Guard"
+		},
+		heightm: 2.5,
+		weightkg: 199.9,
+		color: "Brown",
+		eggGroups: [
+			"Grass"
+		],
+	},
+	manateet: {
+		num: 69205,
+		name: "Manateet",
+		types: [
+			"Water",
+			"Ice"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 43,
+			def: 70,
+			spa: 50,
+			spd: 65,
+			spe: 25
+		},
+		abilities: {
+			0: "Thick Fat",
+			1: "Torrent",
+			H: "Gluttony",
+			S: "Iron Barbs"
+		},
+		heightm: 1.1,
+		weightkg: 90,
+		color: "Blue",
+		eggGroups: [
+			"Monster",
+			"Water 2"
+		],
+	},
+	manatorque: {
+		num: 69206,
+		name: "Manatorque",
+		types: [
+			"Water",
+			"Ice"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 56,
+			def: 90,
+			spa: 70,
+			spd: 85,
+			spe: 40
+		},
+		abilities: {
+			0: "Thick Fat",
+			1: "Torrent",
+			H: "Gluttony",
+			S: "Iron Barbs"
+		},
+		heightm: 1.4,
+		weightkg: 150.6,
+		color: "Blue",
+		eggGroups: [
+			"Monster",
+			"Water 2"
+		],
+	},
+	manatank: {
+		num: 69207,
+		name: "Manatank",
+		types: [
+			"Water",
+			"Ice"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 60,
+			def: 120,
+			spa: 85,
+			spd: 127,
+			spe: 50
+		},
+		abilities: {
+			0: "Pure Power",
+			1: "Torrent",
+			H: "Gluttony",
+			S: "Iron Barbs"
+		},
+		heightm: 2.8,
+		weightkg: 300,
+		color: "Blue",
+		eggGroups: [
+			"Monster",
+			"Water 2"
+		],
+	},
+	anonymouse: {
+		num: 69208,
+		name: "Anonymouse",
+		types: [
+			"Dark",
+			"Electric"
+		],
+		baseStats: {
+			hp: 66,
+			atk: 76,
+			def: 66,
+			spa: 76,
+			spd: 66,
+			spe: 86
+		},
+		abilities: {
+			0: "Infiltrator",
+			H: "Telepathy",
+			S: "Electrosurge"
+		},
+		heightm: 0.4,
+		weightkg: 3.9,
+		color: "Black",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+	},
+	motherfuck: {
+		num: 69209,
+		name: "Motherfuck",
+		types: [
+			"Ground",
+			"Flying"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 95,
+			def: 115,
+			spa: 45,
+			spd: 100,
+			spe: 90
+		},
+		abilities: {
+			0: "Shadow Tag",
+			H: "Aftermath",
+			S: "Inversion"
+		},
+		heightm: 1.4,
+		weightkg: 106.5,
+		color: "Brown",
+		eggGroups: [
+			"Mineral",
+			"Flying"
+		],
+	},
+	ninoop: {
+		num: 69210,
+		name: "Ninoop",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 40,
+			def: 55,
+			spa: 70,
+			spd: 60,
+			spe: 40
+		},
+		abilities: {
+			0: "Huge Power",
+			H: "Natural Cure",
+			S: "Cute Charm"
+		},
+		heightm: 0.5,
+		weightkg: 10,
+		color: "Brown",
+		eggGroups: [
+			"Fairy",
+			"Dragon"
+		],
+	},
+	draconius: {
+		num: 69211,
+		name: "Draconius",
+		types: [
+			"Normal",
+			"Dragon"
+		],
+		baseStats: {
+			hp: 130,
+			atk: 65,
+			def: 100,
+			spa: 110,
+			spd: 90,
+			spe: 60
+		},
+		abilities: {
+			0: "Huge Power",
+			H: "Natural Cure",
+			S: "Intimidate"
+		},
+		heightm: 2.4,
+		weightkg: 454,
+		color: "Brown",
+		eggGroups: [
+			"Fairy",
+			"Dragon"
+		],
+	},
+	ticktac: {
+		num: 69212,
+		name: "Ticktac",
+		types: [
+			"Bug"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 55,
+			def: 75,
+			spa: 50,
+			spd: 65,
+			spe: 45
+		},
+		abilities: {
+			0: "Compoundeyes",
+			1: "Hyper Cutter",
+			H: "Infiltrator",
+			S: "Sheer Force"
+		},
+		heightm: 0.3,
+		weightkg: 33,
+		color: "Blue",
+		eggGroups: [
+			"Bug",
+			"Monster"
+		],
+	},
+	eareticle: {
+		num: 69213,
+		name: "Eareticle",
+		types: [
+			"Bug",
+			"Steel"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 80,
+			def: 65,
+			spa: 55,
+			spd: 60,
+			spe: 75
+		},
+		abilities: {
+			0: "Compoundeyes",
+			1: "Hyper Cutter",
+			H: "Infiltrator",
+			S: "Sheer Force"
+		},
+		heightm: 0.2,
+		weightkg: 0.8,
+		color: "Blue",
+		eggGroups: [
+			"Bug",
+			"Monster"
+		],
+	},
+	scythear: {
+		num: 69214,
+		name: "Scythear",
+		types: [
+			"Bug",
+			"Steel"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 135,
+			def: 85,
+			spa: 60,
+			spd: 70,
+			spe: 115
+		},
+		abilities: {
+			0: "Compoundeyes",
+			1: "Hyper Cutter",
+			H: "Infiltrator",
+			S: "Sheer Force"
+		},
+		heightm: 2.1,
+		weightkg: 79,
+		color: "Blue",
+		eggGroups: [
+			"Bug",
+			"Monster"
+		],
+	},
+	cozload: {
+		num: 69215,
+		name: "Cozload",
+		types: [
+			"Electric",
+			"Bug"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 65,
+			def: 75,
+			spa: 40,
+			spd: 50,
+			spe: 55
+		},
+		abilities: {
+			0: "Download",
+			1: "Thick Fat",
+			H: "Simple",
+			S: "Battery"
+		},
+		heightm: 0.2,
+		weightkg: 1.4,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous",
+			"Bug"
+		],
+	},
+	snugware: {
+		num: 69216,
+		name: "Snugware",
+		types: [
+			"Electric",
+			"Bug"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 105,
+			def: 110,
+			spa: 75,
+			spd: 80,
+			spe: 75
+		},
+		abilities: {
+			0: "Download",
+			1: "Thick Fat",
+			H: "Filter",
+			S: "Overcoat"
+		},
+		heightm: 1.1,
+		weightkg: 22.5,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous",
+			"Bug"
+		],
+	},
+	fleespecs: {
+		num: 69217,
+		name: "Fleespecs",
+		types: [
+			"Electric",
+			"Bug"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 75,
+			def: 75,
+			spa: 105,
+			spd: 80,
+			spe: 110
+		},
+		abilities: {
+			0: "Download",
+			1: "Motor Drive",
+			H: "Analytic",
+			S: "Surge Surfer"
+		},
+		heightm: 1.1,
+		weightkg: 19,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous",
+			"Bug"
+		],
+	},
+	honrade: {
+		num: 69218,
+		name: "Honrade",
+		types: [
+			"Fairy",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 130,
+			def: 70,
+			spa: 45,
+			spd: 75,
+			spe: 90
+		},
+		abilities: {
+			0: "Blademaster",
+			1: "Justified",
+			H: "Hyper Cutter",
+			S: "No Guard"
+		},
+		heightm: 1,
+		weightkg: 28,
+		color: "Blue",
+		eggGroups: [
+			"Fairy",
+			"Field"
+		],
+	},
+	embortion: {
+		num: 69219,
+		name: "Embortion",
+		types: [
+			"Dark",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 45,
+			def: 90,
+			spa: 50,
+			spd: 105,
+			spe: 55
+		},
+		abilities: {
+			0: "Pressure",
+			H: "Unnerve",
+			S: "Insomnia"
+		},
+		heightm: 0.5,
+		weightkg: 6.6,
+		color: "Red",
+		eggGroups: [
+			"Amorphous",
+			"Human-Like"
+		],
+	},
+	premantom: {
+		num: 69220,
+		name: "Premantom",
+		types: [
+			"Dark",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 75,
+			def: 110,
+			spa: 85,
+			spd: 120,
+			spe: 85
+		},
+		abilities: {
+			0: "Pressure",
+			H: "Unnerve",
+			S: "Insomnia"
+		},
+		heightm: 1.3,
+		weightkg: 31,
+		color: "Red",
+		eggGroups: [
+			"Amorphous",
+			"Human-Like"
+		],
+	},
+	galavik: {
+		num: 69221,
+		name: "Galavik",
+		types: [
+			"Steel"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 40,
+			def: 70,
+			spa: 40,
+			spd: 65,
+			spe: 35
+		},
+		abilities: {
+			0: "Liquid Ooze",
+			H: "Heavy Metal",
+			S: "Battery"
+		},
+		heightm: 0.9,
+		weightkg: 30,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous",
+			"Mineral"
+		],
+	},
+	galavire: {
+		num: 69222,
+		name: "Galavire",
+		types: [
+			"Steel",
+			"Electric"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 60,
+			def: 95,
+			spa: 130,
+			spd: 90,
+			spe: 105
+		},
+		abilities: {
+			0: "Levitate",
+			H: "Heavy Metal",
+			S: "Teravolt"
+		},
+		heightm: 2.3,
+		weightkg: 105.5,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous",
+			"Mineral"
+		],
+	},
+	galaviste: {
+		num: 69223,
+		name: "Galaviste",
+		types: [
+			"Steel",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 130,
+			def: 95,
+			spa: 60,
+			spd: 90,
+			spe: 65
+		},
+		abilities: {
+			0: "Intimidate",
+			H: "Heavy Metal",
+			S: "Motor Drive"
+		},
+		heightm: 2.8,
+		weightkg: 345,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous",
+			"Mineral"
+		],
+	},
+	pollefin: {
+		num: 69224,
+		name: "Pollefin",
+		types: [
+			"Water",
+			"Grass"
+		],
+		baseStats: {
+			hp: 30,
+			atk: 20,
+			def: 20,
+			spa: 40,
+			spd: 50,
+			spe: 80
+		},
+		abilities: {
+			0: "Effect Spore",
+			1: "Flower Veil",
+			H: "Shield Dust",
+			S: "Swift Swim"
+		},
+		heightm: 0.4,
+		weightkg: 4.2,
+		color: "Green",
+		eggGroups: [
+			"Water 2",
+			"Grass"
+		],
+	},
+	florigrace: {
+		num: 69225,
+		name: "Florigrace",
+		types: [
+			"Water",
+			"Grass"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 50,
+			def: 70,
+			spa: 90,
+			spd: 90,
+			spe: 85
+		},
+		abilities: {
+			0: "Effect Spore",
+			1: "Flower Veil",
+			H: "Shield Dust",
+			S: "Swift Swim"
+		},
+		heightm: 0.9,
+		weightkg: 22.6,
+		color: "Green",
+		eggGroups: [
+			"Water 2",
+			"Grass"
+		],
+	},
+	lasslee: {
+		num: 69226,
+		name: "Lasslee",
+		types: [
+			"Psychic"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 40,
+			def: 70,
+			spa: 80,
+			spd: 75,
+			spe: 30
+		},
+		abilities: {
+			0: "Synchronize",
+			1: "Cute Charm",
+			H: "Infiltrator",
+			S: "Limber"
+		},
+		heightm: 0.8,
+		weightkg: 9.4,
+		color: "Blue",
+		eggGroups: [
+			"Amorphous",
+			"Human-Like"
+		],
+	},
+	wifemin: {
+		num: 69227,
+		name: "Wifemin",
+		types: [
+			"Psychic"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 60,
+			def: 110,
+			spa: 90,
+			spd: 115,
+			spe: 50
+		},
+		abilities: {
+			0: "Synchronize",
+			1: "Cute Charm",
+			H: "Infiltrator",
+			S: "Thick Fat"
+		},
+		heightm: 1.6,
+		weightkg: 49.6,
+		color: "Blue",
+		eggGroups: [
+			"Amorphous",
+			"Human-Like"
+		],
+	},
+	uwotto: {
+		num: 69228,
+		name: "Uwotto",
+		types: [
+			"Psychic",
+			"Steel"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 110,
+			def: 105,
+			spa: 90,
+			spd: 100,
+			spe: 80
+		},
+		abilities: {
+			0: "Compoundeyes",
+			1: "Intimidate",
+			H: "Heavy Metal",
+			S: "Bulletproof"
+		},
+		heightm: 1.6,
+		weightkg: 84.5,
+		color: "Black",
+		eggGroups: [
+			"Amorphous",
+			"Human-Like"
+		],
+	},
+	venowatt: {
+		num: 69229,
+		name: "Venowatt",
+		types: [
+			"Electric",
+			"Poison"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 60,
+			def: 115,
+			spa: 110,
+			spd: 95,
+			spe: 75
+		},
+		abilities: {
+			0: "Illuminate",
+			1: "Illuminate",
+			H: "Swarm",
+			S: "Levitate"
+		},
+		heightm: 1.7,
+		weightkg: 51.5,
+		color: "Gray",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	vaultevour: {
+		num: 69230,
+		name: "Vaultevour",
+		types: [
+			"Steel",
+			"Dark"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 140,
+			def: 105,
+			spa: 50,
+			spd: 110,
+			spe: 40
+		},
+		abilities: {
+			0: "Strong Jaw",
+			H: "Pickup",
+			S: "Jewelry"
+		},
+		heightm: 1.4,
+		weightkg: 250,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous",
+			"Mineral"
+		],
+	},
+	semdemen: {
+		num: 69231,
+		name: "Semdemen",
+		types: [
+			"Water",
+			"Ground"
+		],
+		baseStats: {
+			hp: 130,
+			atk: 55,
+			def: 100,
+			spa: 90,
+			spd: 120,
+			spe: 60
+		},
+		abilities: {
+			0: "Insomnia",
+			1: "Immunity",
+			H: "Damp",
+			S: "Liquid Ooze"
+		},
+		heightm: 1.6,
+		weightkg: 90.5,
+		color: "White",
+		eggGroups: [
+			"Amorphous",
+			"Monster"
+		],
+	},
+	dragking: {
+		num: 69232,
+		name: "Dragking",
+		types: [
+			"Fairy"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 100,
+			def: 75,
+			spa: 80,
+			spd: 70,
+			spe: 110
+		},
+		abilities: {
+			0: "Oblivious",
+			1: "Serene Grace",
+			H: "Pozzed",
+			S: "Receiver"
+		},
+		heightm: 1.7,
+		weightkg: 95,
+		color: "Purple",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+	},
+	kuuroba: {
+		num: 69233,
+		name: "Kuuroba",
+		types: [
+			"Grass",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 105,
+			def: 90,
+			spa: 80,
+			spd: 90,
+			spe: 75
+		},
+		abilities: {
+			0: "Huge Power",
+			1: "Huge Power",
+			H: "Super Luck",
+			S: "Pure Power"
+		},
+		heightm: 1.9,
+		weightkg: 102,
+		color: "Green",
+		eggGroups: [
+			"Fairy",
+			"Grass"
+		],
+	},
+	baitmaster: {
+		num: 69234,
+		name: "Baitmaster",
+		types: [
+			"Water",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 69,
+			def: 70,
+			spa: 105,
+			spd: 83,
+			spe: 115
+		},
+		abilities: {
+			0: "Regenerator",
+			H: "Dazzling",
+			S: "Competitive"
+		},
+		heightm: 2,
+		weightkg: 80.5,
+		color: "Blue",
+		eggGroups: [
+			"Monster",
+			"Water 2"
+		],
+	},
+	spookster: {
+		num: 69235,
+		name: "Spookster",
+		types: [
+			"Ghost"
+		],
+		baseStats: {
+			hp: 30,
+			atk: 80,
+			def: 50,
+			spa: 30,
+			spd: 40,
+			spe: 70
+		},
+		abilities: {
+			0: "Cursed Body",
+			1: "Levitate",
+			H: "Insomnia",
+			S: "Bone Zone"
+		},
+		heightm: 0.9,
+		weightkg: 1,
+		color: "Purple",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	spookeer: {
+		num: 69236,
+		name: "Spookeer",
+		types: [
+			"Ghost"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 105,
+			def: 70,
+			spa: 40,
+			spd: 55,
+			spe: 95
+		},
+		abilities: {
+			0: "Cursed Body",
+			1: "Intimidate",
+			H: "Insomnia",
+			S: "Bone Zone"
+		},
+		heightm: 1.2,
+		weightkg: 7,
+		color: "Purple",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	spookzilla: {
+		num: 69237,
+		name: "Spookzilla",
+		types: [
+			"Ghost"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 137,
+			def: 105,
+			spa: 73,
+			spd: 85,
+			spe: 110
+		},
+		abilities: {
+			0: "Cursed Body",
+			1: "Intimidate",
+			H: "Insomnia",
+			S: "Bone Zone"
+		},
+		heightm: 1.6,
+		weightkg: 15.5,
+		color: "Purple",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	derpato: {
+		num: 69238,
+		name: "Derpato",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 68,
+			atk: 52,
+			def: 50,
+			spa: 45,
+			spd: 40,
+			spe: 20
+		},
+		abilities: {
+			0: "Oblivious",
+			1: "Klutz",
+			H: "Unaware",
+			S: "Simple"
+		},
+		heightm: 0.3,
+		weightkg: 1.2,
+		color: "Brown",
+		eggGroups: [
+			"Fairy",
+			"Grass"
+		],
+	},
+	retater: {
+		num: 69239,
+		name: "Retater",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 108,
+			def: 92,
+			spa: 67,
+			spd: 63,
+			spe: 50
+		},
+		abilities: {
+			0: "Oblivious",
+			1: "Klutz",
+			H: "Unaware",
+			S: "Simple"
+		},
+		heightm: 0.8,
+		weightkg: 10.3,
+		color: "Brown",
+		eggGroups: [
+			"Fairy",
+			"Grass"
+		],
+	},
+	potarded: {
+		num: 69240,
+		name: "Potarded",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 145,
+			def: 116,
+			spa: 80,
+			spd: 79,
+			spe: 70
+		},
+		abilities: {
+			0: "Oblivious",
+			1: "Klutz",
+			H: "Unaware",
+			S: "Rock Head"
+		},
+		heightm: 1.2,
+		weightkg: 40,
+		color: "Brown",
+		eggGroups: [
+			"Fairy",
+			"Grass"
+		],
+	},
+	sadfish: {
+		num: 69241,
+		name: "Sadfish",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 115,
+			atk: 60,
+			def: 75,
+			spa: 70,
+			spd: 75,
+			spe: 40
+		},
+		abilities: {
+			0: "Drizzle",
+			H: "Defeatist",
+			S: "Defeatist"
+		},
+		heightm: 1,
+		weightkg: 18,
+		color: "Blue",
+		eggGroups: [
+			"Water 2"
+		],
+	},
+	deloris: {
+		num: 69242,
+		name: "Deloris",
+		types: [
+			"Grass",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 90,
+			def: 75,
+			spa: 90,
+			spd: 90,
+			spe: 80
+		},
+		abilities: {
+			0: "Own Tempo",
+			H: "Wonder Skin",
+			S: "Hair Tangle"
+		},
+		heightm: 2.4,
+		weightkg: 122.5,
+		color: "Pink",
+		eggGroups: [
+			"Fairy",
+			"Grass"
+		],
+	},
+	oreon: {
+		num: 69243,
+		name: "Oreon",
+		types: [
+			"Fairy",
+			"Dark"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 60,
+			def: 65,
+			spa: 130,
+			spd: 65,
+			spe: 110
+		},
+		abilities: {
+			0: "Super Luck",
+			H: "Run Away",
+			S: "Sweet Veil"
+		},
+		heightm: 1,
+		weightkg: 27,
+		color: "Black",
+		eggGroups: [
+			"Field"
+		],
+	},
+	farfigtron: {
+		num: 69244,
+		name: "Farfigtron",
+		types: [
+			"Fire",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 127,
+			def: 73,
+			spa: 107,
+			spd: 63,
+			spe: 102
+		},
+		abilities: {
+			0: "No Guard",
+			H: "Anger Point",
+			S: "Mold Breaker"
+		},
+		heightm: 2.6,
+		weightkg: 106.5,
+		color: "Red",
+		eggGroups: [
+			"Field",
+			"Monster"
+		],
+	},
+	regirode: {
+		num: 69245,
+		name: "Regirode",
+		types: [
+			"Rock",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 50,
+			def: 75,
+			spa: 125,
+			spd: 150,
+			spe: 100
+		},
+		abilities: {
+			0: "Weak Armor",
+			H: "Cursed Body",
+			S: "Shadow Guard"
+		},
+		heightm: 1.7,
+		weightkg: 148.4,
+		color: "Brown",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	regimelt: {
+		num: 69246,
+		name: "Regimelt",
+		types: [
+			"Ice",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 125,
+			def: 150,
+			spa: 50,
+			spd: 75,
+			spe: 100
+		},
+		abilities: {
+			0: "Weak Armor",
+			H: "Cursed Body",
+			S: "Shadow Guard"
+		},
+		heightm: 1.8,
+		weightkg: 86.3,
+		color: "Blue",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	regirust: {
+		num: 69247,
+		name: "Regirust",
+		types: [
+			"Steel",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 85,
+			def: 115,
+			spa: 85,
+			spd: 115,
+			spe: 100
+		},
+		abilities: {
+			0: "Weak Armor",
+			H: "Cursed Body",
+			S: "Shadow Guard"
+		},
+		heightm: 1.9,
+		weightkg: 182.1,
+		color: "Red",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	vivaiger: {
+		num: 69249,
+		name: "Vivaiger",
+		types: [
+			"Electric"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 100,
+			def: 105,
+			spa: 150,
+			spd: 100,
+			spe: 100
+		},
+		abilities: {
+			0: "Flame Body",
+			H: "Regenerator",
+			S: "Flare Heal"
+		},
+		heightm: 2.5,
+		weightkg: 650,
+		color: "Brown",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	heliofug: {
+		num: 69250,
+		name: "Heliofug",
+		types: [
+			"Dragon",
+			"Fire"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 140,
+			def: 90,
+			spa: 140,
+			spd: 90,
+			spe: 95
+		},
+		abilities: {
+			0: "Drought",
+			H: "Air Lock",
+			S: "Drizzle"
+		},
+		heightm: 7,
+		weightkg: 260,
+		color: "Green",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	sadrog: {
+		num: 69252,
+		name: "Sadrog",
+		types: [
+			"Grass"
+		],
+		baseStats: {
+			hp: 44,
+			atk: 55,
+			def: 75,
+			spa: 40,
+			spd: 69,
+			spe: 35
+		},
+		abilities: {
+			0: "Overgrow",
+			H: "Defeatist",
+			S: "Oblivious"
+		},
+		heightm: 0.5,
+		weightkg: 6.9,
+		color: "GREEEN",
+		eggGroups: [
+			"Grass",
+			"Monster"
+		],
+	},
+	smugrok: {
+		num: 69253,
+		name: "Smugrok",
+		types: [
+			"Grass"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 70,
+			def: 90,
+			spa: 50,
+			spd: 75,
+			spe: 45
+		},
+		abilities: {
+			0: "Overgrow",
+			H: "Unaware",
+			S: "Oblivious"
+		},
+		heightm: 0.9,
+		weightkg: 21.6,
+		color: "GREEEEEN",
+		eggGroups: [
+			"Grass",
+			"Monster"
+		],
+	},
+	peperee: {
+		num: 69254,
+		name: "Peperee",
+		types: [
+			"Grass",
+			"Rock"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 90,
+			def: 120,
+			spa: 55,
+			spd: 95,
+			spe: 65
+		},
+		abilities: {
+			0: "Overgrow",
+			H: "Anger Point",
+			S: "Soundproof"
+		},
+		heightm: 1.7,
+		weightkg: 155.5,
+		color: "GREEEEEEEN",
+		eggGroups: [
+			"Grass",
+			"Monster"
+		],
+	},
+	hodtog: {
+		num: 69255,
+		name: "Hodtog",
+		types: [
+			"Fire"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 55,
+			def: 43,
+			spa: 60,
+			spd: 50,
+			spe: 65
+		},
+		abilities: {
+			0: "Blaze",
+			H: "Wonder Skin",
+			S: "Skill Link"
+		},
+		heightm: 0.6,
+		weightkg: 15.1,
+		color: "Red",
+		eggGroups: [
+			"Field",
+			"Dragon"
+		],
+	},
+	wienebark: {
+		num: 69256,
+		name: "Wienebark",
+		types: [
+			"Fire"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 65,
+			def: 55,
+			spa: 85,
+			spd: 60,
+			spe: 80
+		},
+		abilities: {
+			0: "Blaze",
+			H: "Wonder Skin",
+			S: "Skill Link"
+		},
+		heightm: 1.3,
+		weightkg: 46.5,
+		color: "Red",
+		eggGroups: [
+			"Field",
+			"Dragon"
+		],
+	},
+	saudoge: {
+		num: 69257,
+		name: "Saudoge",
+		types: [
+			"Fire",
+			"Flying"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 80,
+			def: 65,
+			spa: 120,
+			spd: 80,
+			spe: 100
+		},
+		abilities: {
+			0: "Blaze",
+			H: "Wonder Skin",
+			S: "Skill Link"
+		},
+		heightm: 3.2,
+		weightkg: 130.1,
+		color: "Red",
+		eggGroups: [
+			"Field",
+			"Dragon"
+		],
+	},
+	gnarrk: {
+		num: 69258,
+		name: "Gnarrk",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 49,
+			atk: 70,
+			def: 50,
+			spa: 45,
+			spd: 49,
+			spe: 55
+		},
+		abilities: {
+			0: "Torrent",
+			H: "Download",
+			S: "Mold Breaker"
+		},
+		heightm: 0.7,
+		weightkg: 21.2,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Water 2"
+		],
+	},
+	corsharrk: {
+		num: 69259,
+		name: "Corsharrk",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 80,
+			def: 70,
+			spa: 55,
+			spd: 65,
+			spe: 65
+		},
+		abilities: {
+			0: "Torrent",
+			H: "Download",
+			S: "Mold Breaker"
+		},
+		heightm: 1.1,
+		weightkg: 30,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Water 2"
+		],
+	},
+	davyjaws: {
+		num: 69260,
+		name: "Davyjaws",
+		types: [
+			"Water",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 120,
+			def: 85,
+			spa: 65,
+			spd: 85,
+			spe: 80
+		},
+		abilities: {
+			0: "Torrent",
+			H: "Download",
+			S: "Mold Breaker"
+		},
+		heightm: 1.7,
+		weightkg: 140,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Water 2"
+		],
+	},
+	humpunny: {
+		num: 69261,
+		name: "Humpunny",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 43,
+			def: 57,
+			spa: 29,
+			spd: 35,
+			spe: 50
+		},
+		abilities: {
+			0: "Run Away",
+			1: "Quick Feet",
+			H: "Fur Coat",
+			S: "Huge Power"
+		},
+		heightm: 0.8,
+		weightkg: 11,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+	},
+	bunnorgy: {
+		num: 69262,
+		name: "Bunnorgy",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 73,
+			def: 77,
+			spa: 45,
+			spd: 69,
+			spe: 90
+		},
+		abilities: {
+			0: "Hustle",
+			1: "Speed Boost",
+			H: "Fur Coat",
+			S: "Huge Power"
+		},
+		heightm: 2.2,
+		weightkg: 120,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+	},
+	emelgy: {
+		num: 69263,
+		name: "Emelgy",
+		types: [
+			"Normal",
+			"Flying"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 45,
+			def: 35,
+			spa: 40,
+			spd: 30,
+			spe: 60
+		},
+		abilities: {
+			0: "Sniper",
+			1: "Keen Eye",
+			H: "Competitive",
+			S: "Rivalry"
+		},
+		heightm: 0.3,
+		weightkg: 7.5,
+		color: "White",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	fedorawk: {
+		num: 69264,
+		name: "Fedorawk",
+		types: [
+			"Fire",
+			"Flying"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 65,
+			def: 50,
+			spa: 60,
+			spd: 45,
+			spe: 90
+		},
+		abilities: {
+			0: "Sniper",
+			1: "Keen Eye",
+			H: "Competitive",
+			S: "Rivalry"
+		},
+		heightm: 1.1,
+		weightkg: 24.5,
+		color: "White",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	fazeagle: {
+		num: 69265,
+		name: "FaZeagle",
+		types: [
+			"Fire",
+			"Flying"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 90,
+			def: 60,
+			spa: 85,
+			spd: 60,
+			spe: 110
+		},
+		abilities: {
+			0: "Sniper",
+			1: "Keen Eye",
+			H: "Competitive",
+			S: "Rivalry"
+		},
+		heightm: 1.7,
+		weightkg: 75.5,
+		color: "Red",
+		eggGroups: [
+			"Flying"
+		],
+	},
+	catikillar: {
+		num: 69266,
+		name: "Catikillar",
+		types: [
+			"Bug"
+		],
+		baseStats: {
+			hp: 30,
+			atk: 41,
+			def: 50,
+			spa: 31,
+			spd: 40,
+			spe: 25
+		},
+		abilities: {
+			0: "Shield Dust",
+			1: "Swarm",
+			H: "Compoundeyes",
+			S: "Dark Aura"
+		},
+		heightm: 0.2,
+		weightkg: 0.9,
+		color: "Brown",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	tikoon: {
+		num: 69267,
+		name: "Tikoon",
+		types: [
+			"Bug"
+		],
+		baseStats: {
+			hp: 57,
+			atk: 42,
+			def: 90,
+			spa: 32,
+			spd: 80,
+			spe: 20
+		},
+		abilities: {
+			0: "Shell Armor",
+			1: "Swarm",
+			H: "Compoundeyes",
+			S: "Dark Aura"
+		},
+		heightm: 0.6,
+		weightkg: 9,
+		color: "Brown",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	oogabuga: {
+		num: 69268,
+		name: "Oogabuga",
+		types: [
+			"Bug"
+		],
+		baseStats: {
+			hp: 77,
+			atk: 62,
+			def: 110,
+			spa: 92,
+			spd: 90,
+			spe: 65
+		},
+		abilities: {
+			0: "Intimidate",
+			1: "Swarm",
+			H: "Grassy Surge",
+			S: "Dark Aura"
+		},
+		heightm: 1.2,
+		weightkg: 27.2,
+		color: "Brown",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	ebining: {
+		num: 69269,
+		name: "Ebining",
+		types: [
+			"Dark"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 80,
+			def: 55,
+			spa: 55,
+			spd: 40,
+			spe: 65
+		},
+		abilities: {
+			0: "Prankster",
+			1: "Defiant",
+			H: "Contrary",
+			S: "Degradation"
+		},
+		heightm: 0.9,
+		weightkg: 10,
+		color: "Green",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	emplyin: {
+		num: 69270,
+		name: "Emplyin",
+		types: [
+			"Dark"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 117,
+			def: 60,
+			spa: 75,
+			spd: 55,
+			spe: 93
+		},
+		abilities: {
+			0: "Prankster",
+			1: "Defiant",
+			H: "Contrary",
+			S: "Degradation"
+		},
+		heightm: 1,
+		weightkg: 31.5,
+		color: "Green",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	upbote: {
+		num: 69271,
+		name: "Upbote",
+		types: [
+			"Psychic"
+		],
+		baseStats: {
+			hp: 81,
+			atk: 35,
+			def: 41,
+			spa: 71,
+			spd: 82,
+			spe: 40
+		},
+		abilities: {
+			0: "Plus",
+			1: "Minus",
+			H: "Trace",
+			S: "Fire Exit"
+		},
+		heightm: 0.6,
+		weightkg: 8,
+		color: "White",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	upbeddit: {
+		num: 69272,
+		name: "Upbeddit",
+		types: [
+			"Psychic"
+		],
+		baseStats: {
+			hp: 82,
+			atk: 50,
+			def: 72,
+			spa: 92,
+			spd: 117,
+			spe: 57
+		},
+		abilities: {
+			0: "Plus",
+			1: "Minus",
+			H: "Trace",
+			S: "Fire Exit"
+		},
+		heightm: 1.1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	flipbird: {
+		num: 69273,
+		name: "Flipbird",
+		types: [
+			"Normal",
+			"Flying"
+		],
+		baseStats: {
+			hp: 32,
+			atk: 40,
+			def: 33,
+			spa: 30,
+			spd: 30,
+			spe: 72
+		},
+		abilities: {
+			0: "Defeatist",
+			1: "Keen Eye",
+			H: "Early Bird",
+			S: "Wimp Out"
+		},
+		heightm: 0.3,
+		weightkg: 1.5,
+		color: "White",
+		eggGroups: [
+			"Flying",
+			"Human-Like"
+		],
+	},
+	wheygle: {
+		num: 69274,
+		name: "Wheygle",
+		types: [
+			"Fighting",
+			"Flying"
+		],
+		baseStats: {
+			hp: 82,
+			atk: 125,
+			def: 77,
+			spa: 45,
+			spd: 65,
+			spe: 93
+		},
+		abilities: {
+			0: "Big Pecks",
+			1: "No Guard",
+			H: "Steelworker",
+			S: "Unburden"
+		},
+		heightm: 1.5,
+		weightkg: 50.5,
+		color: "Brown",
+		eggGroups: [
+			"Flying",
+			"Human-Like"
+		],
+	},
+	gangnome: {
+		num: 69275,
+		name: "Gangnome",
+		types: [
+			"Fairy"
+		],
+		baseStats: {
+			hp: 120,
+			atk: 50,
+			def: 115,
+			spa: 55,
+			spd: 125,
+			spe: 40
+		},
+		abilities: {
+			0: "Soundproof",
+			1: "Concert",
+			H: "Tangled Feet",
+			S: "Natural Cure"
+		},
+		heightm: 1,
+		weightkg: 22.5,
+		color: "Green",
+		eggGroups: [
+			"Human-Like"
+		],
+	},
+	pyongnome: {
+		num: 69276,
+		name: "Pyongnome",
+		types: [
+			"Steel"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 135,
+			def: 60,
+			spa: 115,
+			spd: 45,
+			spe: 80
+		},
+		abilities: {
+			0: "Intimidate",
+			H: "Bulletproof",
+			S: "Sheer Force"
+		},
+		heightm: 1,
+		weightkg: 22.5,
+		color: "Green",
+		eggGroups: [
+			"Human-Like"
+		],
+	},
+	bruhkid: {
+		num: 69277,
+		name: "Bruhkid",
+		types: [
+			"Ground",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 75,
+			def: 60,
+			spa: 50,
+			spd: 60,
+			spe: 35
+		},
+		abilities: {
+			0: "Stamina",
+			1: "Sturdy",
+			H: "Sand Force",
+			S: "Moxie"
+		},
+		heightm: 0.7,
+		weightkg: 21.5,
+		color: "Brown",
+		eggGroups: [
+			"Mineral",
+			"Human-Like"
+		],
+	},
+	ubruh: {
+		num: 69278,
+		name: "Ubruh",
+		types: [
+			"Ground",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 120,
+			def: 90,
+			spa: 70,
+			spd: 80,
+			spe: 65
+		},
+		abilities: {
+			0: "Stamina",
+			1: "Sturdy",
+			H: "Sand Force",
+			S: "Moxie"
+		},
+		heightm: 2,
+		weightkg: 90,
+		color: "Brown",
+		eggGroups: [
+			"Mineral",
+			"Human-Like"
+		],
+	},
+	walruse: {
+		num: 69279,
+		name: "Walruse",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 65,
+			def: 43,
+			spa: 50,
+			spd: 40,
+			spe: 50
+		},
+		abilities: {
+			0: "Hydration",
+			1: "Oblivious",
+			H: "Defiant",
+			S: "Rain Dish"
+		},
+		heightm: 1.1,
+		weightkg: 90,
+		color: "Blue",
+		eggGroups: [
+			"Water 1"
+		],
+	},
+	walruskie: {
+		num: 69280,
+		name: "Walruskie",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 120,
+			atk: 95,
+			def: 83,
+			spa: 60,
+			spd: 70,
+			spe: 80
+		},
+		abilities: {
+			0: "Hydration",
+			1: "Oblivious",
+			H: "Defiant",
+			S: "Steelworker"
+		},
+		heightm: 1.4,
+		weightkg: 150.6,
+		color: "Blue",
+		eggGroups: [
+			"Water 1"
+		],
+	},
+	diobat: {
+		num: 69281,
+		name: "Diobat",
+		types: [
+			"Dark",
+			"Flying"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 75,
+			def: 45,
+			spa: 65,
+			spd: 45,
+			spe: 90
+		},
+		abilities: {
+			0: "Regenerator",
+			H: "Forewarn",
+			S: "Frisk"
+		},
+		heightm: 0.5,
+		weightkg: 8,
+		color: "Yellow",
+		eggGroups: [
+			"Human-Like",
+			"Flying"
+		],
+	},
+	warudio: {
+		num: 69282,
+		name: "Warudio",
+		types: [
+			"Dark",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 105,
+			def: 80,
+			spa: 85,
+			spd: 80,
+			spe: 120
+		},
+		abilities: {
+			0: "Regenerator",
+			H: "Forewarn",
+			S: "Frisk"
+		},
+		heightm: 1.9,
+		weightkg: 105,
+		color: "Yellow",
+		eggGroups: [
+			"Human-Like",
+			"Flying"
+		],
+	},
+	docee: {
+		num: 69283,
+		name: "Docee",
+		types: [
+			"Steel"
+		],
+		baseStats: {
+			hp: 37,
+			atk: 60,
+			def: 73,
+			spa: 20,
+			spd: 65,
+			spe: 85
+		},
+		abilities: {
+			0: "Trace",
+			1: "Color Change",
+			H: "Metal Body",
+			S: "Neuroforce"
+		},
+		heightm: 0.4,
+		weightkg: 5,
+		color: "Gray",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	donutsteel: {
+		num: 69284,
+		name: "Donutsteel",
+		types: [
+			"Steel"
+		],
+		baseStats: {
+			hp: 67,
+			atk: 80,
+			def: 113,
+			spa: 48,
+			spd: 85,
+			spe: 112
+		},
+		abilities: {
+			0: "Trace",
+			1: "Color Change",
+			H: "Metal Body",
+			S: "Neuroforce"
+		},
+		heightm: 1,
+		weightkg: 35,
+		color: "Gray",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	cakupple: {
+		num: 69285,
+		name: "Cakupple",
+		types: [
+			"Grass",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 59,
+			atk: 75,
+			def: 60,
+			spa: 45,
+			spd: 70,
+			spe: 31
+		},
+		abilities: {
+			0: "Sweet Veil",
+			1: "Aroma Veil",
+			H: "Cute Charm",
+			S: "Klutz"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "White",
+		eggGroups: [
+			"Grass",
+			"Fairy"
+		],
+	},
+	fondupple: {
+		num: 69286,
+		name: "Fondupple",
+		types: [
+			"Grass",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 89,
+			atk: 115,
+			def: 90,
+			spa: 50,
+			spd: 110,
+			spe: 51
+		},
+		abilities: {
+			0: "Sweet Veil",
+			1: "Aroma Veil",
+			H: "Intimidate",
+			S: "Klutz"
+		},
+		heightm: 1.1,
+		weightkg: 20.4,
+		color: "White",
+		eggGroups: [
+			"Grass",
+			"Fairy"
+		],
+	},
+	baloofang: {
+		num: 69287,
+		name: "Baloofang",
+		types: [
+			"Ghost"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 61,
+			def: 85,
+			spa: 80,
+			spd: 105,
+			spe: 64
+		},
+		abilities: {
+			0: "Aftermath",
+			1: "Unaware",
+			H: "Sheer Force",
+			S: "Simple"
+		},
+		heightm: 1.5,
+		weightkg: 9,
+		color: "Purple",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	socckat: {
+		num: 69288,
+		name: "Socckat",
+		types: [
+			"Normal",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 105,
+			def: 75,
+			spa: 55,
+			spd: 65,
+			spe: 115
+		},
+		abilities: {
+			0: "Quick Feet",
+			1: "Striker",
+			H: "Unburden",
+			S: "Scrappy"
+		},
+		heightm: 1,
+		weightkg: 32,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+	},
+	egylamp: {
+		num: 69289,
+		name: "Egylamp",
+		types: [
+			"Psychic",
+			"Fire"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 40,
+			def: 60,
+			spa: 70,
+			spd: 60,
+			spe: 50
+		},
+		abilities: {
+			0: "Flame Body",
+			1: "Synchronize",
+			H: "Dazzling",
+			S: "Lightningrod"
+		},
+		heightm: 0.3,
+		weightkg: 4.5,
+		color: "Yellow",
+		eggGroups: [
+			"Mineral",
+			"Fairy"
+		],
+	},
+	ruselamp: {
+		num: 69290,
+		name: "Ruselamp",
+		types: [
+			"Psychic",
+			"Electric"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 65,
+			def: 85,
+			spa: 125,
+			spd: 90,
+			spe: 90
+		},
+		abilities: {
+			0: "Illuminate",
+			1: "Synchronize",
+			H: "Dazzling",
+			S: "Flash Fire"
+		},
+		heightm: 1.5,
+		weightkg: 72,
+		color: "Yellow",
+		eggGroups: [
+			"Mineral",
+			"Fairy"
+		],
+	},
+	mehndior: {
+		num: 69291,
+		name: "Mehndior",
+		types: [
+			"Fire",
+			"Rock"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 60,
+			def: 65,
+			spa: 25,
+			spd: 65,
+			spe: 50
+		},
+		abilities: {
+			0: "Speed Boost",
+			H: "Competitive",
+			S: "Telepathy"
+		},
+		heightm: 1.2,
+		weightkg: 52,
+		color: "Red",
+		eggGroups: [
+			"Mineral",
+			"Human-Like"
+		],
+	},
+	tunakking: {
+		num: 69292,
+		name: "Tunakking",
+		types: [
+			"Fire",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 50,
+			def: 75,
+			spa: 111,
+			spd: 85,
+			spe: 111
+		},
+		abilities: {
+			0: "Levitate",
+			H: "Competitive",
+			S: "Telepathy"
+		},
+		heightm: 1.5,
+		weightkg: 65,
+		color: "Red",
+		eggGroups: [
+			"Mineral",
+			"Human-Like"
+		],
+	},
+	missletoe: {
+		num: 69293,
+		name: "Missiletoe",
+		types: [
+			"Ice"
+		],
+		baseStats: {
+			hp: 41,
+			atk: 10,
+			def: 40,
+			spa: 85,
+			spd: 50,
+			spe: 71
+		},
+		abilities: {
+			0: "Levitate",
+			1: "Sniper",
+			H: "Technician",
+			S: "Slush Rush"
+		},
+		heightm: 0.6,
+		weightkg: 12,
+		color: "Blue",
+		eggGroups: [
+			"Mineral",
+			"Field"
+		],
+	},
+	hohohoming: {
+		num: 69294,
+		name: "Hohohoming",
+		types: [
+			"Ice"
+		],
+		baseStats: {
+			hp: 81,
+			atk: 40,
+			def: 71,
+			spa: 126,
+			spd: 81,
+			spe: 91
+		},
+		abilities: {
+			0: "Levitate",
+			1: "Sniper",
+			H: "Technician",
+			S: "Slush Rush"
+		},
+		heightm: 1.5,
+		weightkg: 118,
+		color: "Blue",
+		eggGroups: [
+			"Mineral",
+			"Field"
+		],
+	},
+	flaa: {
+		num: 69295,
+		name: "Flaa",
+		types: [
+			"Bug"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 55,
+			def: 70,
+			spa: 35,
+			spd: 60,
+			spe: 85
+		},
+		abilities: {
+			0: "Run Away",
+			1: "Pickup",
+			H: "Justified",
+			S: "Striker"
+		},
+		heightm: 0.7,
+		weightkg: 12.5,
+		color: "Brown",
+		eggGroups: [
+			"Bug",
+			"Human-Like"
+		],
+	},
+	hopault: {
+		num: 69296,
+		name: "Hopault",
+		types: [
+			"Bug",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 115,
+			def: 80,
+			spa: 65,
+			spd: 70,
+			spe: 115
+		},
+		abilities: {
+			0: "Reckless",
+			1: "Guts",
+			H: "Justified",
+			S: "Striker"
+		},
+		heightm: 1.9,
+		weightkg: 90,
+		color: "Brown",
+		eggGroups: [
+			"Bug",
+			"Human-Like"
+		],
+	},
+	araketsu: {
+		num: 69297,
+		name: "Araketsu",
+		types: [
+			"Bug",
+			"Dark"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 60,
+			def: 60,
+			spa: 30,
+			spd: 60,
+			spe: 30
+		},
+		abilities: {
+			0: "Hyper Cutter",
+			1: "Intimidate",
+			H: "Blademaster",
+			S: "Unburden"
+		},
+		heightm: 0.6,
+		weightkg: 15,
+		color: "Black",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	senketula: {
+		num: 69298,
+		name: "Senketula",
+		types: [
+			"Bug",
+			"Dark"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 100,
+			def: 100,
+			spa: 55,
+			spd: 100,
+			spe: 55
+		},
+		abilities: {
+			0: "Hyper Cutter",
+			1: "Intimidate",
+			H: "Blademaster",
+			S: "Unburden"
+		},
+		heightm: 1.2,
+		weightkg: 30,
+		color: "Black",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	falcaptain: {
+		num: 69299,
+		name: "Falcaptain",
+		types: [
+			"Fighting",
+			"Flying"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 115,
+			def: 55,
+			spa: 85,
+			spd: 50,
+			spe: 130
+		},
+		abilities: {
+			0: "Big Pecks",
+			1: "Iron Fist",
+			H: "Guts",
+			S: "Flash Fire"
+		},
+		heightm: 1.9,
+		weightkg: 77.1,
+		color: "Blue",
+		eggGroups: [
+			"Field",
+			"Flying"
+		],
+	},
+	cirpent: {
+		num: 69300,
+		name: "Cirpent",
+		types: [
+			"Poison",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 51,
+			atk: 51,
+			def: 61,
+			spa: 71,
+			spd: 51,
+			spe: 81
+		},
+		abilities: {
+			0: "Prankster",
+			1: "Magic Bounce",
+			H: "Unnerve",
+			S: "Bad Dreams"
+		},
+		heightm: 0.3,
+		weightkg: 4.5,
+		color: "White",
+		eggGroups: [
+			"Dragon",
+			"Monster"
+		],
+	},
+	traumobra: {
+		num: 69301,
+		name: "Traumobra",
+		types: [
+			"Poison",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 71,
+			atk: 71,
+			def: 91,
+			spa: 101,
+			spd: 81,
+			spe: 111
+		},
+		abilities: {
+			0: "Prankster",
+			1: "Magic Bounce",
+			H: "Unnerve",
+			S: "Bad Dreams"
+		},
+		heightm: 1.5,
+		weightkg: 9,
+		color: "White",
+		eggGroups: [
+			"Dragon",
+			"Monster"
+		],
+	},
+	lizascoop: {
+		num: 69302,
+		name: "Lizascoop",
+		types: [
+			"Ground",
+			"Steel"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 70,
+			def: 70,
+			spa: 30,
+			spd: 40,
+			spe: 25
+		},
+		abilities: {
+			0: "Strong Jaw",
+			1: "Sheer Force",
+			H: "Battle Armor",
+			S: "Anger Point"
+		},
+		heightm: 0.8,
+		weightkg: 33,
+		color: "Yellow",
+		eggGroups: [
+			"Mineral",
+			"Dragon"
+		],
+	},
+	reptrill: {
+		num: 69303,
+		name: "Reptrill",
+		types: [
+			"Ground",
+			"Steel"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 120,
+			def: 105,
+			spa: 50,
+			spd: 80,
+			spe: 50
+		},
+		abilities: {
+			0: "Strong Jaw",
+			1: "Sheer Force",
+			H: "Battle Armor",
+			S: "Anger Point"
+		},
+		heightm: 1.3,
+		weightkg: 56,
+		color: "Yellow",
+		eggGroups: [
+			"Mineral",
+			"Dragon"
+		],
+	},
+	fefeion: {
+		num: 69304,
+		name: "Fefeion",
+		types: [
+			"Bug",
+			"Ground"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 55,
+			def: 60,
+			spa: 85,
+			spd: 50,
+			spe: 55
+		},
+		abilities: {
+			0: "Heatproof",
+			1: "Sand Veil",
+			H: "Flare Boost",
+			S: "Flare Heal"
+		},
+		heightm: 0.6,
+		weightkg: 20.5,
+		color: "Red",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	feferun: {
+		num: 69305,
+		name: "Feferun",
+		types: [
+			"Bug",
+			"Ground"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 75,
+			def: 100,
+			spa: 125,
+			spd: 80,
+			spe: 70
+		},
+		abilities: {
+			0: "Flash Fire",
+			1: "Sand Force",
+			H: "Flare Boost",
+			S: "Flare Heal"
+		},
+		heightm: 1.8,
+		weightkg: 79.2,
+		color: "Red",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	jerkle: {
+		num: 69306,
+		name: "Jerkle",
+		types: [
+			"Rock",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 96,
+			atk: 60,
+			def: 90,
+			spa: 110,
+			spd: 60,
+			spe: 63
+		},
+		abilities: {
+			0: "Aftermath",
+			1: "Sticky Hold",
+			H: "Gooey",
+			S: "Psycho Surge"
+		},
+		heightm: 0.7,
+		weightkg: 75,
+		color: "Black",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	faptime: {
+		num: 69307,
+		name: "Faptime",
+		types: [
+			"Rock",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 110,
+			def: 90,
+			spa: 60,
+			spd: 90,
+			spe: 69
+		},
+		abilities: {
+			0: "Speed Boost",
+			1: "Own Tempo",
+			H: "Sticky Hold",
+			S: "Stamina"
+		},
+		heightm: 1.5,
+		weightkg: 71,
+		color: "Brown",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	shiriman: {
+		num: 69308,
+		name: "Shiriman",
+		types: [
+			"Psychic",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 109,
+			atk: 88,
+			def: 87,
+			spa: 86,
+			spd: 85,
+			spe: 64
+		},
+		abilities: {
+			0: "Prankster",
+			1: "Keen Eye",
+			H: "Intimidate",
+			S: "Receiver"
+		},
+		heightm: 0.9,
+		weightkg: 31.6,
+		color: "Purple",
+		eggGroups: [
+			"Fairy",
+			"Human-Like"
+		],
+	},
+	fresrye: {
+		num: 69309,
+		name: "Fresrye",
+		types: [
+			"Grass"
+		],
+		baseStats: {
+			hp: 30,
+			atk: 35,
+			def: 20,
+			spa: 35,
+			spd: 20,
+			spe: 80
+		},
+		abilities: {
+			0: "Truant",
+			1: "Cloud Nine",
+			H: "Forewarn",
+			S: "Anticipation"
+		},
+		heightm: 0.3,
+		weightkg: 0.9,
+		color: "Brown",
+		eggGroups: [
+			"Grass",
+			"Amorphous"
+		],
+	},
+	dedwheat: {
+		num: 69310,
+		name: "Dedwheat",
+		types: [
+			"Grass",
+			"Poison"
+		],
+		baseStats: {
+			hp: 190,
+			atk: 55,
+			def: 60,
+			spa: 85,
+			spd: 60,
+			spe: 50
+		},
+		abilities: {
+			0: "Truant",
+			1: "Effect Spore",
+			H: "Forewarn",
+			S: "Anticipation"
+		},
+		heightm: 1.5,
+		weightkg: 9,
+		color: "Gray",
+		eggGroups: [
+			"Grass",
+			"Amorphous"
+		],
+	},
+	spargle: {
+		num: 69313,
+		name: "Spargle",
+		types: [
+			"Fairy"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 55,
+			def: 50,
+			spa: 50,
+			spd: 50,
+			spe: 60
+		},
+		abilities: {
+			0: "Vital Spirit",
+			1: "Insomnia",
+			H: "Unnerve",
+			S: "Frisk"
+		},
+		heightm: 1,
+		weightkg: 40.5,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+	},
+	spedo: {
+		num: 69314,
+		name: "Spedo",
+		types: [
+			"Fairy"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 100,
+			def: 75,
+			spa: 70,
+			spd: 70,
+			spe: 80
+		},
+		abilities: {
+			0: "Arena Trap",
+			1: "Sheer Force",
+			H: "Unnerve",
+			S: "Frisk"
+		},
+		heightm: 2.1,
+		weightkg: 156.5,
+		color: "Pink",
+		eggGroups: [
+			"Field"
+		],
+	},
+	housant: {
+		num: 69315,
+		name: "Housant",
+		types: [
+			"Bug",
+			"Rock"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 70,
+			def: 80,
+			spa: 30,
+			spd: 40,
+			spe: 50
+		},
+		abilities: {
+			0: "More Room",
+			1: "Shell Armor",
+			H: "Unburden",
+			S: "Fire Exit"
+		},
+		heightm: 0.2,
+		weightkg: 1.5,
+		color: "Brown",
+		eggGroups: [
+			"Bug",
+			"Mineral"
+		],
+	},
+	apartmant: {
+		num: 69316,
+		name: "Apartmant",
+		types: [
+			"Bug",
+			"Rock"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 110,
+			def: 120,
+			spa: 50,
+			spd: 60,
+			spe: 70
+		},
+		abilities: {
+			0: "More Room",
+			1: "Shell Armor",
+			H: "Unburden",
+			S: "Fire Exit"
+		},
+		heightm: 0.3,
+		weightkg: 4.5,
+		color: "Brown",
+		eggGroups: [
+			"Bug",
+			"Mineral"
+		],
+	},
+	fuermiga: {
+		num: 69317,
+		name: "Fuermiga",
+		types: [
+			"Bug",
+			"Fire"
+		],
+		baseStats: {
+			hp: 30,
+			atk: 75,
+			def: 20,
+			spa: 65,
+			spd: 30,
+			spe: 85
+		},
+		abilities: {
+			0: "Compoundeyes",
+			1: "Gooey",
+			H: "Aroma Veil",
+			S: "Sticky Hold"
+		},
+		heightm: 0.6,
+		weightkg: 33,
+		color: "Yellow",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	maripyro: {
+		num: 69318,
+		name: "Maripyro",
+		types: [
+			"Bug",
+			"Fire"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 125,
+			def: 75,
+			spa: 75,
+			spd: 90,
+			spe: 95
+		},
+		abilities: {
+			0: "Magic Guard",
+			1: "Gooey",
+			H: "Aroma Veil",
+			S: "Sticky Hold"
+		},
+		heightm: 3.2,
+		weightkg: 92,
+		color: "Yellow",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	confirmabi: {
+		num: 69319,
+		name: "Confirmabi",
+		types: [
+			"Grass",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 60,
+			def: 70,
+			spa: 95,
+			spd: 70,
+			spe: 135
+		},
+		abilities: {
+			0: "Quick Feet",
+			H: "Chlorophyll",
+			S: "Dazzling"
+		},
+		heightm: 0.6,
+		weightkg: 5,
+		color: "Green",
+		eggGroups: [
+			"Grass"
+		],
+	},
+	bulbapedo: {
+		num: 69320,
+		name: "Bulbapedo",
+		types: [
+			"Grass",
+			"Poison"
+		],
+		baseStats: {
+			hp: 145,
+			atk: 75,
+			def: 90,
+			spa: 70,
+			spd: 90,
+			spe: 40
+		},
+		abilities: {
+			0: "Rivalry",
+			H: "Frisk",
+			S: "Analytic"
+		},
+		heightm: 0.7,
+		weightkg: 25,
+		color: "Green",
+		eggGroups: [
+			"Grass"
+		],
+	},
+	wastenaut: {
+		num: 69321,
+		name: "Wastenaut",
+		types: [
+			"Steel",
+			"Poison"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 80,
+			def: 50,
+			spa: 20,
+			spd: 80,
+			spe: 20
+		},
+		abilities: {
+			0: "Battle Armor",
+			1: "Iron Barbs",
+			H: "Stench",
+			S: "Heavy Metal"
+		},
+		heightm: 1,
+		weightkg: 60,
+		color: "Gray",
+		eggGroups: [
+			"Minreal",
+			"Field"
+		],
+	},
+	wantnaut: {
+		num: 69322,
+		name: "Wantnaut",
+		types: [
+			"Steel",
+			"Poison"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 125,
+			def: 90,
+			spa: 30,
+			spd: 120,
+			spe: 50
+		},
+		abilities: {
+			0: "Battle Armor",
+			1: "Iron Barbs",
+			H: "Stench",
+			S: "Heavy Metal"
+		},
+		heightm: 1.9,
+		weightkg: 392,
+		color: "Green",
+		eggGroups: [
+			"Minreal",
+			"Field"
+		],
+	},
+	cansumor: {
+		num: 69323,
+		name: "Cansumor",
+		types: [
+			"Poison"
+		],
+		baseStats: {
+			hp: 135,
+			atk: 80,
+			def: 90,
+			spa: 65,
+			spd: 90,
+			spe: 35
+		},
+		abilities: {
+			0: "Liquid Ooze",
+			H: "Shed Skin",
+			S: "Corrosion"
+		},
+		heightm: 1,
+		weightkg: 27.2,
+		color: "Brown",
+		eggGroups: [
+			"Amorphous",
+			"Field"
+		],
+	},
+	snuffant: {
+		num: 69324,
+		name: "Snuffant",
+		types: [
+			"Ice"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 85,
+			def: 35,
+			spa: 60,
+			spd: 40,
+			spe: 20
+		},
+		abilities: {
+			0: "Snow Cloak",
+			1: "Slush Rush",
+			H: "Overcoat",
+			S: "Snow Warning"
+		},
+		heightm: 1,
+		weightkg: 58.5,
+		color: "Blue",
+		eggGroups: [
+			"Field",
+			"Human-Like"
+		],
+	},
+	cokemmoth: {
+		num: 69325,
+		name: "Cokemmoth",
+		types: [
+			"Ice"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 110,
+			def: 75,
+			spa: 115,
+			spd: 80,
+			spe: 45
+		},
+		abilities: {
+			0: "Speed Boost",
+			1: "Slush Rush",
+			H: "Overcoat",
+			S: "Snow Warning"
+		},
+		heightm: 2,
+		weightkg: 120,
+		color: "Blue",
+		eggGroups: [
+			"Field",
+			"Human-Like"
+		],
+	},
+	grimdak: {
+		num: 69326,
+		name: "Grimdak",
+		types: [
+			"Dark",
+			"Steel"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 115,
+			def: 70,
+			spa: 110,
+			spd: 70,
+			spe: 90
+		},
+		abilities: {
+			0: "Moody",
+			1: "Cursed Body",
+			H: "Soul-Heart",
+			S: "Dark Aura"
+		},
+		heightm: 1.7,
+		weightkg: 90.7,
+		color: "Black",
+		eggGroups: [
+			"Human-Like",
+			"Mineral"
+		],
+	},
+	shroofle: {
+		num: 69327,
+		name: "Shroofle",
+		types: [
+			"Dark"
+		],
+		baseStats: {
+			hp: 101,
+			atk: 76,
+			def: 101,
+			spa: 56,
+			spd: 92,
+			spe: 50
+		},
+		abilities: {
+			0: "Immunity",
+			1: "Poison Heal",
+			H: "Toxic Boost",
+			S: "Effect Spore"
+		},
+		heightm: 0.6,
+		weightkg: 9,
+		color: "Black",
+		eggGroups: [
+			"Grass"
+		],
+	},
+	betacluck: {
+		num: 69328,
+		name: "Betacluck",
+		types: [
+			"Electric",
+			"Flying"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 20,
+			def: 50,
+			spa: 75,
+			spd: 50,
+			spe: 40
+		},
+		abilities: {
+			0: "Technician",
+			H: "Run Away",
+			S: "Rattled"
+		},
+		heightm: 0.3,
+		weightkg: 1.7,
+		color: "Gray",
+		eggGroups: [
+			"Flying",
+			"Human-Like"
+		],
+	},
+	thundacock: {
+		num: 69329,
+		name: "Thundacock",
+		types: [
+			"Electric",
+			"Flying"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 115,
+			def: 80,
+			spa: 80,
+			spd: 70,
+			spe: 115
+		},
+		abilities: {
+			0: "Adaptability",
+			H: "Mold Breaker",
+			S: "Guts"
+		},
+		heightm: 1.9,
+		weightkg: 97.5,
+		color: "Yellow",
+		eggGroups: [
+			"Flying",
+			"Human-Like"
+		],
+	},
+	twinfowl: {
+		num: 69330,
+		name: "Twinfowl",
+		types: [
+			"Steel",
+			"Flying"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 75,
+			def: 40,
+			spa: 20,
+			spd: 40,
+			spe: 70
+		},
+		abilities: {
+			0: "Big Pecks",
+			H: "Weak Armor",
+			S: "Flare Heal"
+		},
+		heightm: 3,
+		weightkg: 413.2,
+		color: "Grey",
+		eggGroups: [
+			"Flying",
+			"Mineral"
+		],
+	},
+	avianjoin: {
+		num: 69331,
+		name: "Avianjoin",
+		types: [
+			"Steel",
+			"Flying"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 135,
+			def: 70,
+			spa: 80,
+			spd: 70,
+			spe: 75
+		},
+		abilities: {
+			0: "Heatproof",
+			H: "Weak Armor",
+			S: "Flare Heal"
+		},
+		heightm: 9.1,
+		weightkg: 911,
+		color: "Grey",
+		eggGroups: [
+			"Flying",
+			"Mineral"
+		],
+	},
+	illuminowl: {
+		num: 69332,
+		name: "Illuminowl",
+		types: [
+			"Psychic",
+			"Flying"
+		],
+		baseStats: {
+			hp: 62,
+			atk: 30,
+			def: 65,
+			spa: 93,
+			spd: 70,
+			spe: 58
+		},
+		abilities: {
+			0: "Illuminate",
+			1: "Forewarn",
+			H: "Analytic",
+			S: "Solar Power"
+		},
+		heightm: 1.8,
+		weightkg: 15,
+		color: "Brown",
+		eggGroups: [
+			"Flying",
+			"Amorphous"
+		],
+	},
+	illumatrix: {
+		num: 69333,
+		name: "Illumatrix",
+		types: [
+			"Psychic",
+			"Flying"
+		],
+		baseStats: {
+			hp: 92,
+			atk: 65,
+			def: 95,
+			spa: 113,
+			spd: 100,
+			spe: 70
+		},
+		abilities: {
+			0: "Illuminate",
+			1: "Forewarn",
+			H: "Analytic",
+			S: "Solar Power"
+		},
+		heightm: 2.8,
+		weightkg: 28,
+		color: "Brown",
+		eggGroups: [
+			"Flying",
+			"Amorphous"
+		],
+	},
+	typobop: {
+		num: 69334,
+		name: "Typobop",
+		types: [
+			"Rock",
+			"Dark"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 81,
+			def: 74,
+			spa: 40,
+			spd: 40,
+			spe: 60
+		},
+		abilities: {
+			0: "Sheer Force",
+			1: "Run Away",
+			H: "Rattled",
+			S: "Rivalry"
+		},
+		heightm: 0.3,
+		weightkg: 4.5,
+		color: "Green",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+	},
+	yeerex: {
+		num: 69335,
+		name: "Yeerex",
+		types: [
+			"Rock",
+			"Dark"
+		],
+		baseStats: {
+			hp: 81,
+			atk: 130,
+			def: 90,
+			spa: 60,
+			spd: 70,
+			spe: 90
+		},
+		abilities: {
+			0: "Sheer Force",
+			1: "Intimidate",
+			H: "Moxie",
+			S: "Rivalry"
+		},
+		heightm: 1.5,
+		weightkg: 190,
+		color: "Green",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+	},
+	randomix: {
+		num: 69336,
+		name: "Randomix",
+		types: [
+			"Rock",
+			"Water"
+		],
+		baseStats: {
+			hp: 51,
+			atk: 52,
+			def: 95,
+			spa: 64,
+			spd: 58,
+			spe: 25
+		},
+		abilities: {
+			0: "Regenerator",
+			1: "Shell Armor",
+			H: "Rattled",
+			S: "Moody"
+		},
+		heightm: 0.4,
+		weightkg: 7.5,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Water 3"
+		],
+	},
+	cthullord: {
+		num: 69337,
+		name: "Cthullord",
+		types: [
+			"Rock",
+			"Water"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 116,
+			def: 90,
+			spa: 95,
+			spd: 70,
+			spe: 55
+		},
+		abilities: {
+			0: "Regenerator",
+			1: "Shell Armor",
+			H: "Pressure",
+			S: "Swift Swim"
+		},
+		heightm: 2.1,
+		weightkg: 226.8,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Water 3"
+		],
+	},
+	quiboom: {
+		num: 69338,
+		name: "Quiboom",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 49,
+			atk: 54,
+			def: 45,
+			spa: 54,
+			spd: 45,
+			spe: 74
+		},
+		abilities: {
+			0: "Aftermath",
+			H: "Damp",
+			S: "Storm Drain"
+		},
+		heightm: 0.7,
+		weightkg: 10.9,
+		color: "Pink",
+		eggGroups: [
+			"Water 1"
+		],
+	},
+	gynuke: {
+		num: 69339,
+		name: "Gynuke",
+		types: [
+			"Water",
+			"Fire"
+		],
+		baseStats: {
+			hp: 79,
+			atk: 94,
+			def: 65,
+			spa: 94,
+			spd: 65,
+			spe: 124
+		},
+		abilities: {
+			0: "Aftermath",
+			H: "Damp",
+			S: "Storm Drain"
+		},
+		heightm: 2.3,
+		weightkg: 84.3,
+		color: "Pink",
+		eggGroups: [
+			"Water 1"
+		],
+	},
+	rainglock: {
+		num: 69340,
+		name: "Rainglock",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 70,
+			def: 70,
+			spa: 140,
+			spd: 70,
+			spe: 70
+		},
+		abilities: {
+			0: "Rain Dish",
+			H: "Sniper",
+			S: "Megalauncher"
+		},
+		heightm: 0.5,
+		weightkg: 0.7,
+		color: "Blue",
+		eggGroups: [
+			"Amorphous"
+		],
+	},
+	beatmarine: {
+		num: 69341,
+		name: "Beatmarine",
+		types: [
+			"Water",
+			"Electric"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 40,
+			def: 70,
+			spa: 30,
+			spd: 40,
+			spe: 50
+		},
+		abilities: {
+			0: "Liquid Voice",
+			1: "Storm Drain",
+			H: "Galvanize",
+			S: "Water Bubble"
+		},
+		heightm: 0.5,
+		weightkg: 32.5,
+		color: "Yellow",
+		eggGroups: [
+			"Water 2"
+		],
+	},
+	substarr: {
+		num: 69342,
+		name: "Substarr",
+		types: [
+			"Water",
+			"Electric"
+		],
+		baseStats: {
+			hp: 120,
+			atk: 60,
+			def: 90,
+			spa: 65,
+			spd: 70,
+			spe: 80
+		},
+		abilities: {
+			0: "Liquid Voice",
+			1: "Storm Drain",
+			H: "Galvanize",
+			S: "Water Bubble"
+		},
+		heightm: 1.7,
+		weightkg: 81.5,
+		color: "Yellow",
+		eggGroups: [
+			"Water 2"
+		],
+	},
+	hofucno: {
+		num: 69343,
+		name: "Hofucno",
+		types: [
+			"Water",
+			"Flying"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 40,
+			def: 95,
+			spa: 90,
+			spd: 110,
+			spe: 115
+		},
+		abilities: {
+			0: "Shadow Tag",
+			H: "Aftermath",
+			S: "Soundproof"
+		},
+		heightm: 0.4,
+		weightkg: 1.8,
+		color: "Yellow",
+		eggGroups: [
+			"Water 2",
+			"Flying"
+		],
+	},
+	hornigiri: {
+		num: 69344,
+		name: "Hornigiri",
+		types: [
+			"Ice"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 65,
+			def: 75,
+			spa: 30,
+			spd: 50,
+			spe: 65
+		},
+		abilities: {
+			0: "Ice Body",
+			1: "Clear Body",
+			H: "Infiltrator",
+			S: "Friend Guard"
+		},
+		heightm: 0.6,
+		weightkg: 12,
+		color: "White",
+		eggGroups: [
+			"Mineral",
+			"Human-Like"
+		],
+	},
+	hornicier: {
+		num: 69345,
+		name: "Hornicier",
+		types: [
+			"Ice"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 90,
+			def: 100,
+			spa: 40,
+			spd: 75,
+			spe: 60
+		},
+		abilities: {
+			0: "Ice Body",
+			1: "Clear Body",
+			H: "Infiltrator",
+			S: "Friend Guard"
+		},
+		heightm: 1.1,
+		weightkg: 31.7,
+		color: "White",
+		eggGroups: [
+			"Mineral",
+			"Human-Like"
+		],
+	},
+	hornititan: {
+		num: 69346,
+		name: "Hornititan",
+		types: [
+			"Ice",
+			"Ground"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 115,
+			def: 130,
+			spa: 45,
+			spd: 100,
+			spe: 55
+		},
+		abilities: {
+			0: "Refrigerate",
+			1: "Filter",
+			H: "Infiltrator",
+			S: "Friend Guard"
+		},
+		heightm: 2.4,
+		weightkg: 250.5,
+		color: "White",
+		eggGroups: [
+			"Mineral",
+			"Human-Like"
+		],
+	},
+	preasu: {
+		num: 69347,
+		name: "Preasu",
+		types: [
+			"Electric"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 50,
+			def: 55,
+			spa: 50,
+			spd: 60,
+			spe: 47
+		},
+		abilities: {
+			0: "Static",
+			1: "Cursed Body",
+			H: "Analytic",
+			S: "Wait For It"
+		},
+		heightm: 1,
+		weightkg: 29.5,
+		color: "Yellow",
+		eggGroups: [
+			"Monster",
+			"Field"
+		],
+	},
+	undastand: {
+		num: 69348,
+		name: "Undastand",
+		types: [
+			"Electric"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 100,
+			def: 90,
+			spa: 110,
+			spd: 79,
+			spe: 74
+		},
+		abilities: {
+			0: "Static",
+			1: "Cursed Body",
+			H: "Analytic",
+			S: "Wait For It"
+		},
+		heightm: 1.7,
+		weightkg: 80,
+		color: "Yellow",
+		eggGroups: [
+			"Monster",
+			"Field"
+		],
+	},
+	warney: {
+		num: 69349,
+		name: "Warney",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 50,
+			def: 60,
+			spa: 60,
+			spd: 60,
+			spe: 40
+		},
+		abilities: {
+			0: "Damp",
+			1: "Intimidate",
+			H: "Rattled",
+			S: "Oblivious"
+		},
+		heightm: 0.6,
+		weightkg: 25.5,
+		color: "Gray",
+		eggGroups: [
+			"Monster"
+		],
+	},
+	banageddon: {
+		num: 69350,
+		name: "Banageddon",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 150,
+			def: 80,
+			spa: 70,
+			spd: 80,
+			spe: 60
+		},
+		abilities: {
+			0: "Admin Abuse",
+			1: "Intimidate",
+			H: "Mold Breaker",
+			S: "Oblivious"
+		},
+		heightm: 2,
+		weightkg: 300,
+		color: "Gray",
+		eggGroups: [
+			"Monster"
+		],
+	},
+	acufront: {
+		num: 69351,
+		name: "Acufront",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 50,
+			def: 85,
+			spa: 110,
+			spd: 95,
+			spe: 70
+		},
+		abilities: {
+			0: "Forecast"
+		},
+		heightm: 0.6,
+		weightkg: 1.6,
+		color: "White",
+		eggGroups: [
+			"Amorphous",
+			"Fairy"
+		],
+	},
+	militant: {
+		num: 69352,
+		name: "Militant",
+		types: [
+			"Bug",
+			"Poison"
+		],
+		baseStats: {
+			hp: 20,
+			atk: 155,
+			def: 15,
+			spa: 10,
+			spd: 15,
+			spe: 130
+		},
+		abilities: {
+			0: "Steelworker",
+			H: "Infiltrator",
+			S: "Strong Jaw"
+		},
+		heightm: 0.1,
+		weightkg: 0.1,
+		color: "Gray",
+		eggGroups: [
+			"Bug"
+		],
+	},
+	shiggydig: {
+		num: 69353,
+		name: "Shiggydig",
+		types: [
+			"Normal",
+			"Ground"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 95,
+			def: 130,
+			spa: 50,
+			spd: 85,
+			spe: 60
+		},
+		abilities: {
+			0: "Damp",
+			1: "Limber",
+			H: "Defiant",
+			S: "Inner Focus"
+		},
+		heightm: 1,
+		weightkg: 50,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+	},
+	signot: {
+		num: 69354,
+		name: "Signot",
+		types: [
+			"Ground",
+			"Dark"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 35,
+			def: 80,
+			spa: 40,
+			spd: 60,
+			spe: 25
+		},
+		abilities: {
+			0: "Dry Skin",
+			H: "Arena Trap",
+			S: "Sand Rush"
+		},
+		heightm: 2,
+		weightkg: 6.9,
+		color: "Pink",
+		eggGroups: [
+			"Bug",
+			"Field"
+		],
+	},
+	reagain: {
+		num: 69355,
+		name: "Reagain",
+		types: [
+			"Ground",
+			"Dark"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 70,
+			def: 110,
+			spa: 80,
+			spd: 90,
+			spe: 45
+		},
+		abilities: {
+			0: "Dry Skin",
+			1: "Shell Armor",
+			H: "Arena Trap",
+			S: "Sand Rush"
+		},
+		heightm: 3.5,
+		weightkg: 65,
+		color: "Pink",
+		eggGroups: [
+			"Bug",
+			"Field"
+		],
+	},
+	ormite: {
+		num: 69356,
+		name: "Ormite",
+		types: [
+			"Rock",
+			"Electric"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 35,
+			def: 45,
+			spa: 85,
+			spd: 70,
+			spe: 20
+		},
+		abilities: {
+			0: "Jewelry",
+			1: "Lightningrod",
+			H: "Protean",
+			S: "Prism Armor"
+		},
+		heightm: 0.3,
+		weightkg: 11.3,
+		color: "Blue",
+		eggGroups: [
+			"Mineral",
+			"Amorphous"
+		],
+	},
+	viristal: {
+		num: 69357,
+		name: "Viristal",
+		types: [
+			"Rock",
+			"Electric"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 50,
+			def: 75,
+			spa: 136,
+			spd: 100,
+			spe: 40
+		},
+		abilities: {
+			0: "Jewelry",
+			1: "Lightningrod",
+			H: "Protean",
+			S: "Prism Armor"
+		},
+		heightm: 1.6,
+		weightkg: 102,
+		color: "Blue",
+		eggGroups: [
+			"Mineral",
+			"Amorphous"
+		],
+	},
+	rolango: {
+		num: 69358,
+		name: "Rolango",
+		types: [
+			"Dragon",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 72,
+			atk: 35,
+			def: 72,
+			spa: 40,
+			spd: 60,
+			spe: 18
+		},
+		abilities: {
+			0: "Trace",
+			H: "Natural Cure",
+			S: "Multiscale"
+		},
+		heightm: 0.3,
+		weightkg: 5.5,
+		color: "Green",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+	},
+	dreameme: {
+		num: 69359,
+		name: "Dreameme",
+		types: [
+			"Dragon",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 102,
+			atk: 85,
+			def: 90,
+			spa: 90,
+			spd: 100,
+			spe: 32
+		},
+		abilities: {
+			0: "Trace",
+			H: "Natural Cure",
+			S: "Multiscale"
+		},
+		heightm: 1.2,
+		weightkg: 65.5,
+		color: "Green",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+	},
+	pearchie: {
+		num: 69360,
+		name: "Pearchie",
+		types: [
+			"Grass",
+			"Normal"
+		],
+		baseStats: {
+			hp: 111,
+			atk: 91,
+			def: 79,
+			spa: 66,
+			spd: 81,
+			spe: 102
+		},
+		abilities: {
+			0: "Moody",
+			1: "Reckless",
+			H: "Oblivious",
+			S: "Unaware"
+		},
+		heightm: 2.1,
+		weightkg: 145,
+		color: "Green",
+		eggGroups: [
+			"Grass",
+			"Field"
+		],
+	},
+	tarditank: {
+		num: 69361,
+		name: "Tarditank",
+		types: [
+			"Bug",
+			"Water"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 10,
+			def: 200,
+			spa: 5,
+			spd: 200,
+			spe: 5
+		},
+		abilities: {
+			0: "Sturdy",
+			H: "Anticipation",
+			S: "Friend Guard"
+		},
+		heightm: 0.2,
+		weightkg: 0.2,
+		color: "Green",
+		eggGroups: [
+			"Bug",
+			"Water 1"
+		],
+	},
+	iplora: {
+		num: 69362,
+		name: "Iplora",
+		types: [
+			"Bug",
+			"Steel"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 45,
+			def: 45,
+			spa: 55,
+			spd: 45,
+			spe: 5
+		},
+		abilities: {
+			0: "Slow Start",
+			H: "Stall",
+			S: "Truant"
+		},
+		heightm: 0.6,
+		weightkg: 17.5,
+		color: "Blue",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	chromox: {
+		num: 69363,
+		name: "Chromox",
+		types: [
+			"Fire",
+			"Steel"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 60,
+			def: 60,
+			spa: 115,
+			spd: 60,
+			spe: 145
+		},
+		abilities: {
+			0: "Speed Boost",
+			H: "Download",
+			S: "Surge Surfer"
+		},
+		heightm: 1.6,
+		weightkg: 102,
+		color: "Red",
+		eggGroups: [
+			"Mineral"
+		],
+	},
+	pitayen: {
+		num: 69364,
+		name: "Pitayen",
+		types: [
+			"Grass",
+			"Dragon"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 60,
+			def: 50,
+			spa: 40,
+			spd: 50,
+			spe: 30
+		},
+		abilities: {
+			0: "Tough Claws",
+			1: "Rough Skin",
+			H: "Chlorophyll",
+			S: "Flower Gift"
+		},
+		heightm: 0.7,
+		weightkg: 6.9,
+		color: "Pink",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+	},
+	dragaya: {
+		num: 69365,
+		name: "Dragaya",
+		types: [
+			"Grass",
+			"Dragon"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 80,
+			def: 70,
+			spa: 60,
+			spd: 70,
+			spe: 50
+		},
+		abilities: {
+			0: "Tough Claws",
+			1: "Rough Skin",
+			H: "Chlorophyll",
+			S: "Flower Gift"
+		},
+		heightm: 1.5,
+		weightkg: 95,
+		color: "Pink",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+	},
+	frutagon: {
+		num: 69366,
+		name: "Frutagon",
+		types: [
+			"Grass",
+			"Dragon"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 120,
+			def: 80,
+			spa: 100,
+			spd: 80,
+			spe: 90
+		},
+		abilities: {
+			0: "Tough Claws",
+			1: "Rough Skin",
+			H: "Chlorophyll",
+			S: "Flower Gift"
+		},
+		heightm: 2,
+		weightkg: 118,
+		color: "Pink",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+	},
+	biteki: {
+		num: 69367,
+		name: "Biteki",
+		types: [
+			"Ice",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 30,
+			def: 50,
+			spa: 125,
+			spd: 125,
+			spe: 95
+		},
+		abilities: {
+			0: "Cacophony",
+			1: "Filter",
+			H: "Gradient",
+			S: "Snow Cloak"
+		},
+		heightm: 1.3,
+		weightkg: 25.2,
+		color: "Pink",
+		eggGroups: [
+			"Mineral",
+			"Amorphous"
+		],
+	},
+	sesquatch: {
+		num: 69368,
+		name: "Sesquatch",
+		types: [
+			"Normal",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 90,
+			def: 105,
+			spa: 55,
+			spd: 95,
+			spe: 70
+		},
+		abilities: {
+			0: "Suddenly",
+			H: "Snow Cloak",
+			S: "Mummy"
+		},
+		heightm: 2.4,
+		weightkg: 80,
+		color: "White",
+		eggGroups: [
+			"Human-Like"
+		],
+	},
+	fireshi: {
+		num: 69369,
+		name: "Fireshi",
+		types: [
+			"Fire",
+			"Poison"
+		],
+		baseStats: {
+			hp: 30,
+			atk: 30,
+			def: 50,
+			spa: 80,
+			spd: 60,
+			spe: 30
+		},
+		abilities: {
+			0: "Flame Body",
+			1: "Levitate",
+			H: "White Smoke",
+			S: "Stench"
+		},
+		heightm: 0.3,
+		weightkg: 0.1,
+		color: "Yellow",
+		eggGroups: [
+			"Amorphous",
+			"Field"
+		],
+	},
+	fireshitwi: {
+		num: 69370,
+		name: "Fireshitwi",
+		types: [
+			"Fire",
+			"Poison"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 40,
+			def: 70,
+			spa: 100,
+			spd: 80,
+			spe: 60
+		},
+		abilities: {
+			0: "Flame Body",
+			1: "Levitate",
+			H: "White Smoke",
+			S: "Stench"
+		},
+		heightm: 0.6,
+		weightkg: 0.2,
+		color: "Yellow",
+		eggGroups: [
+			"Amorphous",
+			"Field"
+		],
+	},
+	fireshitre: {
+		num: 69371,
+		name: "Fireshitre",
+		types: [
+			"Fire",
+			"Poison"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 50,
+			def: 95,
+			spa: 120,
+			spd: 105,
+			spe: 100
+		},
+		abilities: {
+			0: "Flame Body",
+			1: "Levitate",
+			H: "White Smoke",
+			S: "Stench"
+		},
+		heightm: 0.9,
+		weightkg: 0.3,
+		color: "Yellow",
+		eggGroups: [
+			"Amorphous",
+			"Field"
+		],
+	},
+	slugbud: {
+		num: 69372,
+		name: "Slugbud",
+		types: [
+			"Water",
+			"Poison"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 60,
+			def: 65,
+			spa: 35,
+			spd: 45,
+			spe: 20
+		},
+		abilities: {
+			0: "Hydration",
+			1: "Sap Sipper",
+			H: "Rain Dish",
+			S: "Gooey"
+		},
+		heightm: 0.4,
+		weightkg: 6,
+		color: "Green",
+		eggGroups: [
+			"Dragon"
+		],
+	},
+	slughug: {
+		num: 69373,
+		name: "Slughug",
+		types: [
+			"Water",
+			"Poison"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 85,
+			def: 95,
+			spa: 50,
+			spd: 60,
+			spe: 35
+		},
+		abilities: {
+			0: "Hydration",
+			1: "Sap Sipper",
+			H: "Rain Dish",
+			S: "Gooey"
+		},
+		heightm: 0.9,
+		weightkg: 18,
+		color: "Green",
+		eggGroups: [
+			"Dragon"
+		],
+	},
+	slugfugg: {
+		num: 69374,
+		name: "Slugfugg",
+		types: [
+			"Water ",
+			"Poison"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 100,
+			def: 135,
+			spa: 75,
+			spd: 95,
+			spe: 40
+		},
+		abilities: {
+			0: "Hydration",
+			1: "Sap Sipper",
+			H: "Rain Dish",
+			S: "Gooey"
+		},
+		heightm: 2,
+		weightkg: 150.5,
+		color: "Green",
+		eggGroups: [
+			"Dragon"
+		],
+	},
+	skeletroll: {
+		num: 69375,
+		name: "Skeletroll",
+		types: [
+			"Ground",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 60,
+			def: 80,
+			spa: 60,
+			spd: 80,
+			spe: 30
+		},
+		abilities: {
+			0: "Battle Armor",
+			H: "Shell Armor",
+			S: "Sturdy"
+		},
+		heightm: 0.7,
+		weightkg: 7.7,
+		color: "White",
+		eggGroups: [
+			"Mineral",
+			"Amorphous"
+		],
+	},
+	spookscare: {
+		num: 69376,
+		name: "Spookscare",
+		types: [
+			"Ground",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 35,
+			def: 120,
+			spa: 90,
+			spd: 130,
+			spe: 50
+		},
+		abilities: {
+			0: "Pressure",
+			H: "Cursed Body",
+			S: "Magician"
+		},
+		heightm: 1.4,
+		weightkg: 15.3,
+		color: "White",
+		eggGroups: [
+			"Mineral",
+			"Amorphous"
+		],
+	},
+	goryannus: {
+		num: 69377,
+		name: "Goryrannus",
+		types: [
+			"Ground",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 130,
+			def: 85,
+			spa: 35,
+			spd: 85,
+			spe: 105
+		},
+		abilities: {
+			0: "Sheer Force",
+			H: "Mummy",
+			S: "Unnerve"
+		},
+		heightm: 1.8,
+		weightkg: 30,
+		color: "White",
+		eggGroups: [
+			"Mineral",
+			"Amorphous"
+		],
+	},
+	lankong: {
+		num: 69378,
+		name: "Lankong",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 75,
+			def: 40,
+			spa: 35,
+			spd: 40,
+			spe: 60
+		},
+		abilities: {
+			0: "Long Reach",
+			1: "Own Tempo",
+			H: "Frisk",
+			S: "Scrappy"
+		},
+		heightm: 0.9,
+		weightkg: 19,
+		color: "Brown",
+		eggGroups: [
+			"Field",
+			"Human-Like"
+		],
+	},
+	ballankey: {
+		num: 69379,
+		name: "Ballankey",
+		types: [
+			"Normal",
+			"Flying"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 85,
+			def: 60,
+			spa: 60,
+			spd: 60,
+			spe: 70
+		},
+		abilities: {
+			0: "Long Reach",
+			1: "Own Tempo",
+			H: "Frisk",
+			S: "Scrappy"
+		},
+		heightm: 1.2,
+		weightkg: 32.5,
+		color: "Brown",
+		eggGroups: [
+			"Field",
+			"Human-Like"
+		],
+	},
+	funnedong: {
+		num: 69380,
+		name: "Funnedong",
+		types: [
+			"Normal",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 130,
+			def: 90,
+			spa: 70,
+			spd: 90,
+			spe: 120
+		},
+		abilities: {
+			0: "Long Reach",
+			1: "Own Tempo",
+			H: "Frisk",
+			S: "Scrappy"
+		},
+		heightm: 1.7,
+		weightkg: 90.5,
+		color: "Brown",
+		eggGroups: [
+			"Field",
+			"Human-Like"
+		],
+	},
+	narwhiz: {
+		num: 69381,
+		name: "Narwhiz",
+		types: [
+			"Water",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 101,
+			atk: 70,
+			def: 121,
+			spa: 86,
+			spd: 121,
+			spe: 121
+		},
+		abilities: {
+			0: "Magician",
+			H: "Healer",
+			S: "Magic Bounce"
+		},
+		heightm: 6,
+		weightkg: 132,
+		color: "Blue",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	niterpent: {
+		num: 69382,
+		name: "Niterpent",
+		types: [
+			"Electric",
+			"Fire"
+		],
+		baseStats: {
+			hp: 81,
+			atk: 141,
+			def: 85,
+			spa: 141,
+			spd: 71,
+			spe: 101
+		},
+		abilities: {
+			0: "Technician",
+			H: "Turboblaze",
+			S: "Teravolt"
+		},
+		heightm: 5.8,
+		weightkg: 180,
+		color: "Yellow",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	griffawork: {
+		num: 69383,
+		name: "Griffawork",
+		types: [
+			"Psychic",
+			"Flying"
+		],
+		baseStats: {
+			hp: 130,
+			atk: 85,
+			def: 95,
+			spa: 160,
+			spd: 125,
+			spe: 105
+		},
+		abilities: {
+			0: "Natural Cure",
+			H: "Marvel Scale",
+			S: "Beast Boost"
+		},
+		heightm: 3.4,
+		weightkg: 216,
+		color: "Blue",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	boarnograf: {
+		num: 69384,
+		name: "Boarnograf",
+		types: [
+			"Dark",
+			"Ground"
+		],
+		baseStats: {
+			hp: 130,
+			atk: 160,
+			def: 125,
+			spa: 85,
+			spd: 95,
+			spe: 105
+		},
+		abilities: {
+			0: "Guts",
+			H: "Mold Breaker",
+			S: "Beast Boost"
+		},
+		heightm: 3.5,
+		weightkg: 454,
+		color: "Red",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	admoot: {
+		num: 69385,
+		name: "Admoot",
+		types: [
+			"Fairy"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 100,
+			def: 100,
+			spa: 100,
+			spd: 100,
+			spe: 100
+		},
+		abilities: {
+			0: "Admin Abuse",
+			H: "Berserk",
+			S: "Serene Grace"
+		},
+		heightm: 1.1,
+		weightkg: 6,
+		color: "White",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	tentaquil: {
+		num: 69386,
+		name: "Tentaquil",
+		types: [
+			"Bug",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 100,
+			def: 100,
+			spa: 100,
+			spd: 100,
+			spe: 100
+		},
+		abilities: {
+			0: "Immunity"
+		},
+		heightm: 0.7,
+		weightkg: 51.9,
+		color: "Blue",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	blobbos: {
+		num: 69132,
+		name: "Blobbos",
+		types: [
+			"Ice",
+			"Rock"
+		],
+		baseStats: {
+			hp: 42,
+			atk: 17,
+			def: 36,
+			spa: 15,
+			spd: 25,
+			spe: 15
+		},
+		abilities: {
+			0: "Pure Power",
+			1: "Huge Power",
+			H: "Comatose",
+			S: "Comatose"
+		},
+		heightm: 0.4,
+		weightkg: 5.7,
+		color: "Blue",
+		eggGroups: [
+			"Ditto"
+		],
+	},
+	vandash: {
+		num: 69032,
+		name: "Vandash",
+		types: [
+			"Dark",
+			"Grass"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 95,
+			def: 55,
+			spa: 70,
+			spd: 55,
+			spe: 95
+		},
+		abilities: {
+			0: "Guts",
+			1: "Quick Feet",
+			H: "Pickpocket",
+			S: "Stakeout"
+		},
+		heightm: 1.7,
+		weightkg: 55.6,
+		color: "Black",
+		eggGroups: [
+			"Human-Like"
+		],
+	},
+	nutjobber: {
+		num: 69311,
+		name: "Nutjobber",
+		types: [
+			"Ghost",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 60,
+			def: 85,
+			spa: 30,
+			spd: 75,
+			spe: 20
+		},
+		abilities: {
+			0: "Madman",
+			1: "Strong Jaw",
+			H: "Shell Armor",
+			S: "Prankster"
+		},
+		heightm: 1,
+		weightkg: 27.2,
+		color: "Brown",
+		eggGroups: [
+			"Grass",
+			"Amorphous"
+		],
+	},
+	deisnutz: {
+		num: 69312,
+		name: "Deisnutz",
+		types: [
+			"Ghost",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 90,
+			def: 110,
+			spa: 90,
+			spd: 90,
+			spe: 40
+		},
+		abilities: {
+			0: "Madman",
+			1: "Strong Jaw",
+			H: "Shell Armor",
+			S: "Prankster"
+		},
+		heightm: 1.5,
+		weightkg: 27.2,
+		color: "Yellow",
+		eggGroups: [
+			"Grass",
+			"Amorphous"
+		],
+	},
+	adesign: {
+		num: 69251,
+		name: "Adesign",
+		types: [
+			"???"
+		],
+		baseStats: {
+			hp: 115,
+			atk: 115,
+			def: 115,
+			spa: 115,
+			spd: 115,
+			spe: 115
+		},
+		abilities: {
+			0: "An Ability",
+			H: "Any Ability"
+		},
+		heightm: 2,
+		weightkg: 0.5,
+		color: "White",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	clovenix: {
+		num: 69151,
+		name: "Clovenix",
+		types: [
+			"Grass",
+			"Fire"
+		],
+		baseStats: {
+			hp: 120,
+			atk: 125,
+			def: 100,
+			spa: 125,
+			spd: 100,
+			spe: 150
+		},
+		abilities: {
+			0: "Regenerator",
+			H: "Anticipation",
+			S: "Super Luck"
+		},
+		heightm: 7.6,
+		weightkg: 999.9,
+		color: "Green",
+		eggGroups: [
+			"Undiscovered"
+		],
+	},
+	jewipede: {
+		num: 69248,
+		name: "Jewipede",
+		types: [
+			"Bug",
+			"Normal"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 90,
+			def: 150,
+			spa: 90,
+			spd: 150,
+			spe: 95
+		},
+		abilities: {
+			0: "Pressure",
+			H: "Pickpocket",
+			S: "Jewelry"
+		},
+		heightm: 21,
+		weightkg: 206.5,
+		color: "Green",
+		eggGroups: [
+			"Undiscovered"
+		],
+	}
 };

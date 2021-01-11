@@ -1,4 +1,4 @@
-export const FormatsData: {[k: string]: SpeciesFormatsData} = {
+export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 	bulbasaur: {
 		tier: "LC",
 	},
@@ -6420,4 +6420,1552 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
+	/*
+		Clovermons
+		"Future" isn't used by anything else, so we'll use it to mark Clovermons :^)
+	*/
+	grasshole: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	analgae: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	rectreem: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	arabomb: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	iguallah: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	lizakbar: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ejacasm: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	hosajack: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	condoom: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	squirrap: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	gampster: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	kengeon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	frieden: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	corooster: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	curicrawl: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	gutsicoon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	gutsifly: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	larvades: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	proboskito: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	clovour: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	chanolour: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	nauseon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	hazmate: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ebolable: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	pikotton: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	birdhouse: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	lanshil: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	middril: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	shurismash: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	maymay: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	memenace: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	piguson: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	armando: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	muscledude: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	tripecs: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	semdrop: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	semrust: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	furnazi: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	finasoven: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	troubait: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	tulure: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	monstrap: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	pixila: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	fairileon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	wedgard: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	knokedge: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ribbizap: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	elephas: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	seamapan: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	caroline: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	chompest: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	masdawg: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	pasdawg: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	spanke: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	anaconduke: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	fishnism: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	sjwhale: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	chezetta: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	mozzamazel: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	krokling: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	krokizon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	conchilla: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	haremit: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	coolcube: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	tankube: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	fabkube: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	smogaroben: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	smoxilon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	machmona: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	bacub: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	urswine: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	moostatic: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	mooshock: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	pretzely: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	deemdow: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	dowster: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	cheerly: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	cheerific: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	mennopaws: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	caracold: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	glacialynx: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	pengas: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	praeteur: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	praestish: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	flowre: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	florious: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	juarecito: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ponchito: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	somboludo: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	puppacti: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	marionettl: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	tittai: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	octai: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	charagon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	hyletrack: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	euphoreal: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	armowite: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	praunch: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	karawn: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	mabster: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	tricient: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	tricillion: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	poizookie: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	toxiraptor: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	sabreck: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	huntabre: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	pyralink: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	singlets: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	dubus: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	tripsius: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	miasmer: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	miasmortor: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	cacademon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	hanginy: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	chancer: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	unjoy: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	frosowl: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	whizzard: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	drapillar: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	caparagon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	mantrake: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ogrelord: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	chantruth: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	inbitween: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	geigh: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	jarape: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	spilefree: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	bongecko: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	mariguana: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	marleyzard: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ayylamo: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	smellox: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	chasumo: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	oilslam: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	isissin: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	stuffowl: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	durkey: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	upchucken: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	dragun: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	triggedon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	cannonance: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	evacycle: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	foryu: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	scytill: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	baddon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	endranther: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	notridley: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	demiwaifu: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	reptyke: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	rasclobber: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	batterex: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	faeriock: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	sylvuin: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	oburonyxo: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	cloucat: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	felimbus: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	deathorus: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	knogoat: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	knogrinyu: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	glasshot: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	glassannon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	fluffyeti: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	yedoom: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	mirrostine: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	mudpants: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	mudslacks: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	bukitlee: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	lossolith: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	mimimie: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	sprucifix: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	hulkan: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	nonite: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	nonegative: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	nomaestro: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	dunkypea: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	burdmen: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	nutzboltz: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	kuklux: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	kuklan: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	flameboyan: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	piicee: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	sonnanos: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	plebbles: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	sapleaf: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ignut: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	phantash: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	polossus: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	hitmonana: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ballacle: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	barbarkley: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	kekroach: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	rekroach: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ricosheep: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ricosuave: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	spaghefant: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	crystaquil: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	crystaking: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	fontaba: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	floconut: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	sappalm: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	roynapalm: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	manateet: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	manatorque: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	manatank: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	anonymouse: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	motherfuck: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ninoop: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	draconius: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ticktac: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	eareticle: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	scythear: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	cozload: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	snugware: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	fleespecs: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	honrade: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	embortion: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	premantom: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	galavik: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	galavire: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	galaviste: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	pollefin: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	florigrace: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	lasslee: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	wifemin: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	uwotto: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	venowatt: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	vaultevour: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	semdemen: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	dragking: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	kuuroba: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	baitmaster: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	spookster: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	spookeer: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	spookzilla: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	derpato: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	retater: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	potarded: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	sadfish: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	deloris: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	oreon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	farfigtron: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	regirode: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	regimelt: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	regirust: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	vivaiger: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	heliofug: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	sadrog: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	smugrok: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	peperee: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	hodtog: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	wienebark: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	saudoge: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	gnarrk: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	corsharrk: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	davyjaws: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	humpunny: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	bunnorgy: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	emelgy: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	fedorawk: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	fazeagle: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	catikillar: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	tikoon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	oogabuga: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ebining: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	emplyin: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	upbote: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	upbeddit: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	flipbird: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	wheygle: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	gangnome: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	pyongnome: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	bruhkid: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ubruh: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	walruse: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	walruskie: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	diobat: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	warudio: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	docee: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	donutsteel: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	cakupple: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	fondupple: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	baloofang: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	socckat: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	egylamp: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ruselamp: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	mehndior: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	tunakking: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	missletoe: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	hohohoming: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	flaa: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	hopault: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	araketsu: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	senketula: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	falcaptain: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	cirpent: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	traumobra: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	lizascoop: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	reptrill: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	fefeion: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	feferun: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	jerkle: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	faptime: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	shiriman: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	fresrye: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	dedwheat: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	spargle: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	spedo: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	housant: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	apartmant: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	fuermiga: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	maripyro: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	confirmabi: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	bulbapedo: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	wastenaut: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	wantnaut: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	cansumor: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	snuffant: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	cokemmoth: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	grimdak: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	shroofle: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	betacluck: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	thundacock: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	twinfowl: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	avianjoin: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	illuminowl: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	illumatrix: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	typobop: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	yeerex: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	randomix: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	cthullord: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	quiboom: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	gynuke: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	rainglock: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	beatmarine: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	substarr: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	hofucno: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	hornigiri: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	hornicier: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	hornititan: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	preasu: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	undastand: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	warney: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	banageddon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	acufront: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	militant: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	shiggydig: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	signot: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	reagain: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ormite: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	viristal: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	rolango: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	dreameme: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	pearchie: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	tarditank: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	iplora: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	chromox: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	pitayen: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	dragaya: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	frutagon: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	biteki: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	sesquatch: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	fireshi: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	fireshitwi: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	fireshitre: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	slugbud: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	slughug: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	slugfugg: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	skeletroll: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	spookscare: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	goryannus: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	lankong: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	ballankey: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	funnedong: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	narwhiz: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	niterpent: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	griffawork: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	boarnograf: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	admoot: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	tentaquil: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	blobbos: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	vandash: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	nutjobber: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	deisnutz: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	adesign: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	clovenix: {
+		tier: "OU",
+		isNonstandard: "Future",
+	},
+	jewipede: {
+		tier: "OU",
+		isNonstandard: "Future",
+	}
 };

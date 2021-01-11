@@ -7145,4 +7145,81 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 6,
 		isNonstandard: "CAP",
 	},
+	/* Clovermons */
+	suedeshoes: {
+    name: "Suede Shoes",
+    onModifySpe(spe, pokemon) {
+      if (pokemon.baseSpecies.baseSpecies === 'Pretzely') {
+        return this.chainModify(2);
+      }
+    },
+    itemUser: ["Pretzely"],
+  },
+  bigfaggot: {
+    name: "Big Faggot",
+    onModifySpAPriority: 1,
+    onModifySpA(spa, pokemon) {
+      if (pokemon.baseSpecies.baseSpecies === 'Flameboyan') {
+        return this.chainModify(2);
+      }
+    },
+    itemUser: ["Flameboyan"],
+  },
+  baconstrip: {
+    name: "Bacon Strip",
+    onModifySpDPriority: 2,
+    onModifySpD(spd, pokemon) {
+      if (pokemon.baseSpecies.baseSpecies === 'Urswine') {
+        return this.chainModify(2);
+      }
+    },
+    itemUser: ["Urswine"],
+  },
+  katana: {
+    name: "Katana",
+    onBasePowerPriority: 15,
+    onBasePower(basePower, user, target, move) {
+      if (move.type === 'Steel') {
+        return this.chainModify([0x1333, 0x1000]);
+      }
+    },
+  },
+  cutebow: {
+    name: "Cute Bow",
+    onBasePowerPriority: 15,
+    onBasePower(basePower, user, target, move) {
+      if (move.type === 'Fairy') {
+        return this.chainModify([0x1333, 0x1000]);
+      }
+    },
+  },
+  bible: {
+    name: "Bible",
+    onModifyCritRatio(critRatio, pokemon) {
+      if (pokemon.baseSpecies.baseSpecies === 'Caroline') {
+        return critRatio + 2;
+      }
+    },
+    itemUser: ["Caroline"],
+  },
+  taco: {
+    name: "Taco",
+    onUpdate(pokemon) {
+      if (pokemon.hp <= pokemon.maxhp / 2) {
+        if (this.runEvent('TryHeal', pokemon) && pokemon.useItem()) {
+          this.heal(50);
+        }
+      }
+    },
+  },
+  thiccbone: {
+    name: "Thicc Bone",
+    onModifyAtkPriority: 1,
+    onModifyAtk(atk, pokemon) {
+      if (pokemon.baseSpecies.baseSpecies === 'Masdawg' || pokemon.baseSpecies.baseSpecies === 'Pasdawg') {
+        return this.chainModify(2);
+      }
+    },
+    itemUser: ["Masdawg", "Pasdawg"],
+  },
 };
