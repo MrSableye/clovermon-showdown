@@ -962,7 +962,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	barrage: {
 		num: 140,
 		accuracy: 85,
-		basePower: 15,
+		basePower: 25,
 		category: "Physical",
 		isNonstandard: "Past",
 		name: "Barrage",
@@ -972,7 +972,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
-		type: "Normal",
+		type: "Steel",
 		contestType: "Cute",
 	},
 	barrier: {
@@ -2381,7 +2381,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	constrict: {
 		num: 132,
 		accuracy: 100,
-		basePower: 10,
+		basePower: 20,
 		category: "Physical",
 		isNonstandard: "Past",
 		name: "Constrict",
@@ -2922,8 +2922,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	cut: {
 		num: 15,
-		accuracy: 95,
-		basePower: 50,
+		accuracy: 100,
+		basePower: 60,
 		category: "Physical",
 		name: "Cut",
 		pp: 30,
@@ -2931,7 +2931,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
-		type: "Normal",
+		type: "Steel",
 		contestType: "Cool",
 	},
 	darkestlariat: {
@@ -3355,7 +3355,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	dive: {
 		num: 291,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 100,
 		category: "Physical",
 		name: "Dive",
 		pp: 10,
@@ -4020,8 +4020,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	eggbomb: {
 		num: 121,
-		accuracy: 75,
-		basePower: 100,
+		accuracy: 85,
+		basePower: 110,
 		category: "Physical",
 		isNonstandard: "Past",
 		name: "Egg Bomb",
@@ -5133,23 +5133,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	flash: {
-		num: 148,
+		num: 189,
 		accuracy: 100,
-		basePower: 0,
-		category: "Status",
-		isNonstandard: "Past",
+		basePower: 20,
+		category: "Special",
 		name: "Flash",
-		pp: 20,
+		pp: 10,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1},
-		boosts: {
-			accuracy: -1,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				accuracy: -1,
+			},
 		},
-		secondary: null,
 		target: "normal",
-		type: "Normal",
-		zMove: {boost: {evasion: 1}},
-		contestType: "Beautiful",
+		type: "Electric",
+		contestType: "Cute",
 	},
 	flashcannon: {
 		num: 430,
@@ -5353,7 +5353,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	fly: {
 		num: 19,
-		accuracy: 95,
+		accuracy: 100,
 		basePower: 90,
 		category: "Physical",
 		name: "Fly",
@@ -5801,7 +5801,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	furyswipes: {
 		num: 154,
 		accuracy: 80,
-		basePower: 18,
+		basePower: 20,
 		category: "Physical",
 		name: "Fury Swipes",
 		pp: 15,
@@ -9125,7 +9125,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	irontail: {
 		num: 231,
-		accuracy: 75,
+		accuracy: 80,
 		basePower: 100,
 		category: "Physical",
 		name: "Iron Tail",
@@ -11027,7 +11027,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Metronome",
-		pp: 10,
+		pp: 30,
 		priority: 0,
 		flags: {},
 		noMetronome: [
@@ -14176,7 +14176,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			volatileStatus: 'confusion',
 		},
 		target: "normal",
-		type: "Normal",
+		type: "Rock",
 		contestType: "Tough",
 	},
 	rockpolish: {
@@ -14217,7 +14217,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	rocksmash: {
 		num: 249,
 		accuracy: 100,
-		basePower: 40,
+		basePower: 60,
 		category: "Physical",
 		name: "Rock Smash",
 		pp: 15,
@@ -15668,7 +15668,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	slam: {
 		num: 21,
-		accuracy: 75,
+		accuracy: 85,
 		basePower: 80,
 		category: "Physical",
 		name: "Slam",
@@ -16943,7 +16943,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
-		type: "Normal",
+		type: "Fighting",
 		contestType: "Tough",
 	},
 	strengthsap: {
@@ -17065,8 +17065,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	submission: {
 		num: 66,
-		accuracy: 80,
-		basePower: 80,
+		accuracy: 90,
+		basePower: 90,
 		category: "Physical",
 		name: "Submission",
 		pp: 20,
