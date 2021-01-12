@@ -318,6 +318,9 @@ const avatarTable = new Set([
 	'youngcouple-gen3', 'youngcouple-gen3rs', 'youngcouple-gen4dp', 'youngcouple',
 	'youngster-gen1', 'youngster-gen1rb', 'youngster-gen2', 'youngster-gen3', 'youngster-gen3rs', 'youngster-gen4', 'youngster',
 	'zinzolin',
+	/* Clover Avatars */
+	'bouncer', 'deadlyseven', 'edgie', 'engineer', 'keksandra', 'kymmi', 'kymmi-battle', 'lilbro', 'neckbeard', 'painter', 'private',
+	'rocker', 'skeleton', 'skinhead', 'smogoon', 'stoner', 'stump', 'supernerd', 'swimmer', 'swimmer-f', 'terry', 'tyrone', 'viol', 'youngster', 
 ]);
 
 const avatarTableBeliot419 = new Set([
