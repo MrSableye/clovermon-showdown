@@ -84482,7 +84482,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			naturepower: [
@@ -84828,7 +84828,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8L45",
 				"8T"
 			],
@@ -85090,7 +85090,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gravity: [
@@ -85355,7 +85355,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			growth: [
@@ -85776,7 +85776,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			overheat: [
@@ -85972,7 +85972,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			haze: [
@@ -86011,7 +86011,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			overheat: [
@@ -86184,7 +86184,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			growth: [
@@ -86601,7 +86601,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			growth: [
@@ -86822,7 +86822,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grasswhistle: [
 				"8L19"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			growth: [
@@ -87199,7 +87199,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			growth: [
@@ -87426,7 +87426,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleedge: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			energyball: [
@@ -88050,7 +88050,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			protect: [
 				"8M"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8L1",
 				"8T"
 			],
@@ -88384,7 +88384,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			psybeam: [
 				"8L20"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8L1",
 				"8T"
 			],
@@ -88903,7 +88903,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gravity: [
@@ -90590,7 +90590,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleedge: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			electroweb: [
@@ -92482,7 +92482,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 				"8L63",
 				"8M"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			explosion: [
@@ -92512,7 +92512,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			gigadrain: [
 				"8M"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gunkshot: [
@@ -92556,7 +92556,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			outrage: [
@@ -92580,7 +92580,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			protect: [
 				"8M"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psyshock: [
@@ -92771,7 +92771,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleedge: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			electroweb: [
@@ -93289,7 +93289,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			earthpower: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			energyball: [
@@ -93319,7 +93319,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			frustration: [
 				"8M"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gravity: [
@@ -93374,7 +93374,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			mist: [
 				"8L5"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			nightshade: [
@@ -93399,7 +93399,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			psybeam: [
 				"8L25"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -94285,7 +94285,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			mist: [
 				"8L9"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -95021,7 +95021,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -96841,7 +96841,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			muddywater: [
@@ -97067,7 +97067,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			muddywater: [
@@ -97310,7 +97310,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			outrage: [
@@ -97729,7 +97729,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			growth: [
@@ -100566,7 +100566,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			nastyplot: [
@@ -100593,7 +100593,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			psybeam: [
 				"8L20"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -100908,7 +100908,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			mist: [
 				"8E"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -100950,7 +100950,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			psybeam: [
 				"8L27"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -101260,7 +101260,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			mist: [
 				"8L40"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -101508,7 +101508,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			echoedvoice: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			endeavor: [
@@ -101568,7 +101568,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gravity: [
@@ -101646,7 +101646,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			mop: [
@@ -101676,7 +101676,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			protect: [
 				"8M"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -102078,7 +102078,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			milkdrink: [
 				"8L50"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -102876,7 +102876,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			mop: [
@@ -103124,7 +103124,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			mop: [
@@ -105160,7 +105160,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			protect: [
 				"8M"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -107866,7 +107866,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			payday: [
@@ -109592,7 +109592,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -111044,7 +111044,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grasswhistle: [
 				"8L20"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			hail: [
@@ -111299,7 +111299,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			eerieimpulse: [
 				"8L1"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			electroball: [
@@ -111863,7 +111863,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			echoedvoice: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			endeavor: [
@@ -111937,7 +111937,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gravity: [
@@ -112018,7 +112018,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			mop: [
@@ -112048,7 +112048,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			protect: [
 				"8M"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -112354,7 +112354,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			echoedvoice: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			facade: [
@@ -112929,7 +112929,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 				"8T",
 				"8E"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gunkshot: [
@@ -114482,7 +114482,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			growth: [
@@ -116298,7 +116298,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -117256,7 +117256,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grasswhistle: [
 				"8L7"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			growl: [
@@ -117782,7 +117782,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gravity: [
@@ -118075,7 +118075,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gravity: [
@@ -118129,7 +118129,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			psybeam: [
 				"8L18"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -118922,7 +118922,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gravity: [
@@ -118973,7 +118973,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -119572,7 +119572,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -120118,7 +120118,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			mist: [
 				"8L11"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -120634,7 +120634,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			growth: [
@@ -120683,7 +120683,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			milkdrink: [
 				"8L1"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			mop: [
@@ -121203,7 +121203,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			mist: [
 				"8L39"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			nastyplot: [
@@ -121331,7 +121331,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleedge: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			electroball: [
@@ -121939,7 +121939,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -122489,7 +122489,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			mistball: [
 				"8L1"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			mop: [
@@ -122507,7 +122507,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			protect: [
 				"8M"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychup: [
@@ -124072,7 +124072,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			mistball: [
 				"8L27"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			nastyplot: [
@@ -124100,7 +124100,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			psybeam: [
 				"8L20"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychup: [
@@ -124386,7 +124386,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			mistball: [
 				"8L27"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			nastyplot: [
@@ -124414,7 +124414,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			psybeam: [
 				"8L20"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychup: [
@@ -126245,7 +126245,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			mudsport: [
@@ -126525,7 +126525,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			nightshade: [
@@ -127762,7 +127762,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			mist: [
 				"8L40"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8L65",
 				"8T"
 			],
@@ -128191,7 +128191,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dragontail: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8L65",
 				"8T"
 			],
@@ -128838,7 +128838,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gunkshot: [
@@ -129153,7 +129153,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			growth: [
@@ -129522,7 +129522,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			nastyplot: [
@@ -133433,7 +133433,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			protect: [
 				"8M"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -134466,7 +134466,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			mist: [
 				"8L41"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			nastyplot: [
@@ -135598,7 +135598,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleedge: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			electroweb: [
@@ -136657,7 +136657,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleedge: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			endeavor: [
@@ -137671,7 +137671,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			nightshade: [
@@ -139099,7 +139099,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grasswhistle: [
 				"8L15"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			hiddenpower: [
@@ -139430,7 +139430,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			psybeam: [
 				"8L28"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8L57",
 				"8T"
 			],
@@ -141462,7 +141462,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			earthpower: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			energyball: [
@@ -141496,7 +141496,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			hail: [
@@ -141557,7 +141557,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			morningsun: [
@@ -141578,7 +141578,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			protect: [
 				"8M"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			raindance: [
@@ -142874,7 +142874,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			nightshade: [
@@ -143964,7 +143964,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			protect: [
 				"8M"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -144892,7 +144892,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			eerieimpulse: [
 				"8L1"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			electroball: [
@@ -145141,7 +145141,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grasswhistle: [
 				"8L7"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			growl: [
@@ -145684,7 +145684,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			protect: [
 				"8M"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -145953,7 +145953,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -147920,7 +147920,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			earthpower: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			electroweb: [
@@ -150106,7 +150106,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			nightshade: [
@@ -150124,7 +150124,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			protect: [
 				"8M"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -150397,7 +150397,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			milkdrink: [
 				"8L25"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			muddywater: [
@@ -151054,7 +151054,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			milkdrink: [
 				"8L25"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8L1",
 				"8T"
 			],
@@ -151319,7 +151319,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			milkdrink: [
 				"8L58"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -151564,7 +151564,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			mist: [
 				"8L39"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8L16",
 				"8T"
 			],
@@ -151797,7 +151797,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gravity: [
@@ -151839,7 +151839,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			naturesmad: [
@@ -152985,7 +152985,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			hammerarm: [
@@ -153665,7 +153665,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			echoedvoice: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			endeavor: [
@@ -153749,7 +153749,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			psybeam: [
 				"8L15"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -154169,7 +154169,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gravity: [
@@ -154922,7 +154922,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleedge: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			electroball: [
@@ -155830,7 +155830,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -156046,7 +156046,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			echoedvoice: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			encore: [
@@ -156789,7 +156789,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			psybeam: [
 				"8L17"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -157467,7 +157467,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grasswhistle: [
 				"8L10"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gravity: [
@@ -157506,7 +157506,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -157835,7 +157835,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			protect: [
 				"8M"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -159061,7 +159061,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grasswhistle: [
 				"8L8"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gravity: [
@@ -159097,7 +159097,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -159373,7 +159373,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			nastyplot: [
@@ -161015,7 +161015,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleedge: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8L50"
 			],
 			endeavor: [
@@ -163407,7 +163407,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			naturesmad: [
@@ -164444,7 +164444,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -165583,7 +165583,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -166241,7 +166241,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			mirrormove: [
 				"8E"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			moonblast: [
@@ -168500,7 +168500,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			headsmash: [
@@ -170671,7 +170671,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			drainingkiss: [
 				"8L17"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			encore: [
@@ -170737,7 +170737,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			mistyfield: [
+			mistyterrain: [
 				"8T"
 			],
 			mop: [
@@ -171666,7 +171666,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			growl: [
@@ -172617,7 +172617,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleedge: [
 				"8T"
 			],
-			elecfield: [
+			electricterrain: [
 				"8T"
 			],
 			energyball: [
@@ -172716,7 +172716,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			psybeam: [
 				"8L24"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -174946,7 +174946,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			psybeam: [
 				"8L15"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychup: [
@@ -175231,7 +175231,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			psybeam: [
 				"8L15"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychup: [
@@ -176583,7 +176583,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			psybeam: [
 				"8L29"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -177153,7 +177153,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			psybeam: [
 				"8L17"
 			],
-			psychfield: [
+			psychicterrain: [
 				"8T"
 			],
 			psychic: [
@@ -178325,7 +178325,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			grassknot: [
 				"8T"
 			],
-			grassyfield: [
+			grassyterrain: [
 				"8T"
 			],
 			gunkshot: [

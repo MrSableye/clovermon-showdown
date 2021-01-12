@@ -10052,8 +10052,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasAbility('persistent')) {
-					this.add('-activate', source, 'ability: Persistent', effect);
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
 					return 7;
 				}
 				return 5;
@@ -18514,8 +18514,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasAbility('persistent')) {
-					this.add('-activate', source, 'ability: Persistent', effect);
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
 					return 7;
 				}
 				return 5;
@@ -19383,8 +19383,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasAbility('persistent')) {
-					this.add('-activate', source, 'ability: Persistent', effect);
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
 					return 7;
 				}
 				return 5;
@@ -19947,58 +19947,6 @@ export const Moves: {[moveid: string]: MoveData} = {
     type: "Grass",
     flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
   },
-  elecfield: {
-    desc: "IMPLEMENT THIS",
-    num: 6999,
-    accuracy: 100,
-    basePower: 60,
-    category: "Physical",
-    name: 'Sneed',
-    pp: 0,
-    priority: 0,
-    target: "normal",
-    type: "Grass",
-    flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-  },
-  grassyfield: {
-    desc: "IMPLEMENT THIS",
-    num: 6999,
-    accuracy: 100,
-    basePower: 60,
-    category: "Physical",
-    name: 'Sneed',
-    pp: 0,
-    priority: 0,
-    target: "normal",
-    type: "Grass",
-    flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-  },
-  mistyfield: {
-    desc: "IMPLEMENT THIS",
-    num: 6999,
-    accuracy: 100,
-    basePower: 60,
-    category: "Physical",
-    name: 'Sneed',
-    pp: 0,
-    priority: 0,
-    target: "normal",
-    type: "Grass",
-    flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-  },
-  psychfield: {
-    desc: "IMPLEMENT THIS",
-    num: 6999,
-    accuracy: 100,
-    basePower: 60,
-    category: "Physical",
-    name: 'Sneed',
-    pp: 0,
-    priority: 0,
-    target: "normal",
-    type: "Grass",
-    flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-  },
   inverseroom: {
     desc: "IMPLEMENT THIS",
     num: 6999,
@@ -20468,148 +20416,6 @@ export const Moves: {[moveid: string]: MoveData} = {
     flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
   },
   // UNIMPLEMENTED MOVES END
-  doubleironbash2: {
-    num: 742,
-    accuracy: 100,
-    basePower: 60,
-    category: "Physical",
-    desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. Has a 30% chance to flinch the target.",
-    shortDesc: "Hits twice. 30% chance to flinch.",
-    name: "Double Iron Bash",
-    pp: 5,
-    priority: 0,
-    flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-    multihit: 2,
-    secondary: {
-      chance: 30,
-      volatileStatus: 'flinch',
-    },
-    target: "normal",
-    type: "Steel",
-    zMove: { basePower: 180 },
-    contestType: "Clever",
-  },
-  
-  //Implement More Room
-  
-  magicroom2: {
-    num: 478,
-    accuracy: true,
-    basePower: 0,
-    category: "Status",
-    desc: "For 5 turns, the held items of all active Pokemon have no effect. An item's effect of causing forme changes is unaffected, but any other effects from such items are negated. During the effect, Fling and Natural Gift are prevented from being used by all active Pokemon. If this move is used during the effect, the effect ends.",
-    shortDesc: "For 5 turns, all held items have no effect.",
-    name: "Magic Room",
-    pp: 10,
-    priority: 0,
-    flags: {mirror: 1},
-    pseudoWeather: 'magicroom',
-    condition: {
-      duration: 5,
-      durationCallback(source, effect) {
-        if (source && source.hasAbility(['persistent', 'moreroom'])) {
-          this.add('-activate', source, 'ability: More Room', effect);
-          return 7;
-        }
-        return 5;
-      },
-      onStart(target, source) {
-        this.add('-fieldstart', 'move: Magic Room', '[of] ' + source);
-      },
-      onRestart(target, source) {
-        this.field.removePseudoWeather('magicroom');
-      },
-      // Item suppression implemented in Pokemon.ignoringItem() within sim/pokemon.js
-      onResidualOrder: 25,
-      onEnd() {
-        this.add('-fieldend', 'move: Magic Room', '[of] ' + this.effectData.source);
-      },
-    },
-    secondary: null,
-    target: "all",
-    type: "Psychic",
-    zMove: { boost: { spd: 1 }},
-    contestType: "Clever",
-  },
-  trickroom2: {
-    num: 433,
-    accuracy: true,
-    basePower: 0,
-    category: "Status",
-    desc: "For 5 turns, the Speed of every Pokemon is recalculated for the purposes of determining turn order. During the effect, each Pokemon's Speed is considered to be (10000 - its normal Speed), and if this value is greater than 8191, 8192 is subtracted from it. If this move is used during the effect, the effect ends.",
-    shortDesc: "Goes last. For 5 turns, turn order is reversed.",
-    name: "Trick Room",
-    pp: 5,
-    priority: -7,
-    flags: {mirror: 1},
-    pseudoWeather: 'trickroom',
-    condition: {
-      duration: 5,
-      durationCallback(source, effect) {
-        if (source && source.hasAbility(['persistent', 'moreroom'])) {
-          this.add('-activate', source, 'ability: More Room', effect);
-          return 7;
-        }
-        return 5;
-      },
-      onStart(target, source) {
-        this.add('-fieldstart', 'move: Trick Room', '[of] ' + source);
-      },
-      onRestart(target, source) {
-        this.field.removePseudoWeather('trickroom');
-      },
-      // Speed modification is changed in Pokemon.getActionSpeed() in sim/pokemon.js
-      onResidualOrder: 23,
-      onEnd() {
-        this.add('-fieldend', 'move: Trick Room');
-      },
-    },
-    secondary: null,
-    target: "all",
-    type: "Psychic",
-    zMove: { boost: { accuracy: 1 }},
-    contestType: "Clever",
-  },
-  wonderroom2: {
-    num: 472,
-    accuracy: true,
-    basePower: 0,
-    category: "Status",
-    desc: "For 5 turns, all active Pokemon have their Defense and Special Defense stats swapped. Stat stage changes are unaffected. If this move is used during the effect, the effect ends.",
-    shortDesc: "For 5 turns, all Defense and Sp. Def stats switch.",
-    name: "Wonder Room",
-    pp: 10,
-    priority: 0,
-    flags: {mirror: 1},
-    pseudoWeather: 'wonderroom',
-    condition: {
-      duration: 5,
-      durationCallback(source, effect) {
-        if (source && source.hasAbility(['persistent', 'moreroom'])) {
-          this.add('-activate', source, 'ability: More Room', effect);
-          return 7;
-        }
-        return 5;
-      },
-      onStart(side, source) {
-        this.add('-fieldstart', 'move: Wonder Room', '[of] ' + source);
-      },
-      onRestart(target, source) {
-        this.field.removePseudoWeather('wonderroom');
-      },
-      // Swapping defenses implemented in sim/pokemon.js:Pokemon#calculateStat and Pokemon#getStat
-      onResidualOrder: 24,
-      onEnd() {
-        this.add('-fieldend', 'move: Wonder Room');
-      },
-    },
-    secondary: null,
-    target: "all",
-    type: "Psychic",
-    zMove: {boost: {spd: 1}},
-    contestType: "Clever",
-  },
-  
   //New Moves
   
   anattack: {
@@ -21019,7 +20825,7 @@ export const Moves: {[moveid: string]: MoveData} = {
     category: "Physical",
     desc: "The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pokemon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
     shortDesc: "Lasts 2-3 turns. Confuses the user afterwards.",
-    name: "Thrash",
+    name: "Shitpost",
     pp: 10,
     priority: 0,
     flags: {contact: 1, protect: 1, mirror: 1},
