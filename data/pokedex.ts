@@ -26546,6 +26546,83 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Amorphous",
 			"Fairy"
 		],
+		otherFormes: ["Acufront-F", "Acufront-W", "Acufront-I"],
+		formeOrder: ["Acufront", "Acufront-F", "Acufront-W", "Acufront-I"],
+	},
+	acufrontf: {
+		num: 69351,
+		name: "Acufront-F",
+		baseSpecies: "Acufront",
+		forme: "F",
+		types: ["Fire"],
+		baseStats: {
+			hp: 100,
+			atk: 50,
+			def: 85,
+			spa: 110,
+			spd: 95,
+			spe: 70
+		},
+		abilities: {0: "Forecast"},
+		heightm: 0.6,
+		weightkg: 1.6,
+		color: "Yellow",
+		eggGroups: [
+			"Amorphous",
+			"Fairy"
+		],
+		requiredAbility: "Forecast",
+		battleOnly: "Acufront",
+	},
+	acufrontw: {
+		num: 69351,
+		name: "Acufront-W",
+		baseSpecies: "Acufront",
+		forme: "W",
+		types: ["Water"],
+		baseStats: {
+			hp: 100,
+			atk: 50,
+			def: 85,
+			spa: 110,
+			spd: 95,
+			spe: 70
+		},
+		abilities: {0: "Forecast"},
+		heightm: 0.6,
+		weightkg: 1.6,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous",
+			"Fairy"
+		],
+		requiredAbility: "Forecast",
+		battleOnly: "Acufront",
+	},
+	acufronti: {
+		num: 69351,
+		name: "Acufront-I",
+		baseSpecies: "Acufront",
+		forme: "I",
+		types: ["Ice"],
+		baseStats: {
+			hp: 100,
+			atk: 50,
+			def: 85,
+			spa: 110,
+			spd: 95,
+			spe: 70
+		},
+		abilities: {0: "Forecast"},
+		heightm: 0.6,
+		weightkg: 1.6,
+		color: "Blue",
+		eggGroups: [
+			"Amorphous",
+			"Fairy"
+		],
+		requiredAbility: "Forecast",
+		battleOnly: "Acufront",
 	},
 	militant: {
 		num: 69352,
