@@ -18599,7 +18599,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	krokling: {
 		num: 69061,
-		name: "Krokoling",
+		name: "Krokling",
 		types: [
 			"Ground",
 			"Grass"
@@ -22446,7 +22446,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	fontaba: {
 		num: 69201,
-		name: "Futabafont",
+		name: "Fontaba",
 		types: [
 			"Psychic"
 		],
@@ -24948,7 +24948,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	missletoe: {
 		num: 69293,
-		name: "Missiletoe",
+		name: "Missletoe",
 		types: [
 			"Ice"
 		],
@@ -27255,7 +27255,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	goryannus: {
 		num: 69377,
-		name: "Goryrannus",
+		name: "Goryannus",
 		types: [
 			"Ground",
 			"Ghost"
