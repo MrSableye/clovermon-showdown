@@ -7130,7 +7130,8 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	/* Clovermons */
 	suedeshoes: {
-    name: "Suede Shoes",
+		name: "Suede Shoes",
+		desc: "A pair of shoes to be held by Pretzely. They raise its Speed, as long as you stay off of them.",
     onModifySpe(spe, pokemon) {
       if (pokemon.baseSpecies.baseSpecies === 'Pretzely') {
         return this.chainModify(2);
@@ -7139,7 +7140,8 @@ export const Items: {[itemid: string]: ItemData} = {
     itemUser: ["Pretzely"],
   },
   bigfaggot: {
-    name: "Big Faggot",
+		name: "Big Faggot",
+		desc: "A bundle of sticks to be held by Flameboyan. It fuels the fire, raising its Special Attack.",
     onModifySpAPriority: 1,
     onModifySpA(spa, pokemon) {
       if (pokemon.baseSpecies.baseSpecies === 'Flameboyan') {
@@ -7149,7 +7151,8 @@ export const Items: {[itemid: string]: ItemData} = {
     itemUser: ["Flameboyan"],
   },
   baconstrip: {
-    name: "Bacon Strip",
+		name: "Bacon Strip",
+		desc: "A synthetic piece of bacon to be held by Urswine . It adds a protective layer that raises Special Defense.",
     onModifySpDPriority: 2,
     onModifySpD(spd, pokemon) {
       if (pokemon.baseSpecies.baseSpecies === 'Urswine') {
@@ -7159,7 +7162,8 @@ export const Items: {[itemid: string]: ItemData} = {
     itemUser: ["Urswine"],
   },
   katana: {
-    name: "Katana",
+		name: "Katana",
+		desc: "An item to be held by a Pokémon. An unsheathed katana that boosts the power of Steel-type moves.",
     onBasePowerPriority: 15,
     onBasePower(basePower, user, target, move) {
       if (move.type === 'Steel') {
@@ -7168,7 +7172,8 @@ export const Items: {[itemid: string]: ItemData} = {
     },
   },
   cutebow: {
-    name: "Cute Bow",
+		name: "Cute Bow",
+		desc: "An item to be held by a Pokémon. A cutesy pink bow that boosts the power of Fairy-type moves.",
     onBasePowerPriority: 15,
     onBasePower(basePower, user, target, move) {
       if (move.type === 'Fairy') {
@@ -7177,7 +7182,8 @@ export const Items: {[itemid: string]: ItemData} = {
     },
   },
   bible: {
-    name: "Bible",
+		name: "Bible",
+		desc: "A holy bible to be held by Caroline. It raises her Critical-hit ratio.",
     onModifyCritRatio(critRatio, pokemon) {
       if (pokemon.baseSpecies.baseSpecies === 'Caroline') {
         return critRatio + 2;
@@ -7186,7 +7192,8 @@ export const Items: {[itemid: string]: ItemData} = {
     itemUser: ["Caroline"],
   },
   taco: {
-    name: "Taco",
+		name: "Taco",
+		desc: "A delicious taco. When held by a Pokémon, it will be used in battle to restore 50 HP.",
     onUpdate(pokemon) {
       if (pokemon.hp <= pokemon.maxhp / 2) {
         if (this.runEvent('TryHeal', pokemon) && pokemon.useItem()) {
@@ -7196,7 +7203,8 @@ export const Items: {[itemid: string]: ItemData} = {
     },
   },
   thiccbone: {
-    name: "Thicc Bone",
+		name: "Thicc Bone",
+		desc: "A hard bone of some sort to be held by Masdawg or Pasdawg. It raises the Attack stat.",
     onModifyAtkPriority: 1,
     onModifyAtk(atk, pokemon) {
       if (pokemon.baseSpecies.baseSpecies === 'Masdawg' || pokemon.baseSpecies.baseSpecies === 'Pasdawg') {
@@ -7204,5 +7212,27 @@ export const Items: {[itemid: string]: ItemData} = {
       }
     },
     itemUser: ["Masdawg", "Pasdawg"],
-  },
+	},
+	manifesto: {
+		name: "Manifesto",
+		desc: "A book of lies used by Walruskie that boosts the power of its Steel-type and Ice-type moves.",
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move && user.baseSpecies.baseSpecies === 'Walruskie' && (move.type === 'Steel' || move.type === 'Ice')) {
+				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
+    itemUser: ["Walruskie"],
+	},
+	piratesjug: {
+		name: "Pirate's Jug",
+		desc: "A jug filled wit' Octai milk 'n rum. When held by Octai, it increases th' power o' its Lactose Shot.",
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move && user.baseSpecies.baseSpecies === 'Octai' && move.id === 'lactoseshot') {
+				return this.chainModify([2, 1]);
+			}
+		},
+    itemUser: ["Octai"],
+	}
 };
