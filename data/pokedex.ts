@@ -17442,7 +17442,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 55
 		},
 		abilities: {
-			0: "Compoundeyes",
+			0: "Compound Eyes",
 			1: "Shield Dust",
 			H: "Poison Point",
 			S: "Immunity"
@@ -17470,7 +17470,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 125
 		},
 		abilities: {
-			0: "Compoundeyes",
+			0: "Compound Eyes",
 			1: "Static",
 			H: "Poison Point",
 			S: "Toxic Boost"
@@ -20324,7 +20324,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 75
 		},
 		abilities: {
-			0: "Compoundeyes",
+			0: "Compound Eyes",
 			1: "Tinted Lens",
 			H: "Shed Skin",
 			S: "Overcoat"
@@ -20608,7 +20608,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 90
 		},
 		abilities: {
-			0: "Compoundeyes",
+			0: "Compound Eyes",
 			1: "Synchronize",
 			H: "Tinted Lens",
 			S: "Levitate"
@@ -22447,6 +22447,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	fontaba: {
 		num: 69201,
 		name: "Fontaba",
+		baseForme: "VP",
 		types: [
 			"Psychic"
 		],
@@ -22766,7 +22767,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 45
 		},
 		abilities: {
-			0: "Compoundeyes",
+			0: "Compound Eyes",
 			1: "Hyper Cutter",
 			H: "Infiltrator",
 			S: "Sheer Force"
@@ -22795,7 +22796,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 75
 		},
 		abilities: {
-			0: "Compoundeyes",
+			0: "Compound Eyes",
 			1: "Hyper Cutter",
 			H: "Infiltrator",
 			S: "Sheer Force"
@@ -22824,7 +22825,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 115
 		},
 		abilities: {
-			0: "Compoundeyes",
+			0: "Compound Eyes",
 			1: "Hyper Cutter",
 			H: "Infiltrator",
 			S: "Sheer Force"
@@ -23222,7 +23223,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 80
 		},
 		abilities: {
-			0: "Compoundeyes",
+			0: "Compound Eyes",
 			1: "Intimidate",
 			H: "Heavy Metal",
 			S: "Bulletproof"
@@ -24214,7 +24215,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Shield Dust",
 			1: "Swarm",
-			H: "Compoundeyes",
+			H: "Compound Eyes",
 			S: "Dark Aura"
 		},
 		heightm: 0.2,
@@ -24241,7 +24242,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Shell Armor",
 			1: "Swarm",
-			H: "Compoundeyes",
+			H: "Compound Eyes",
 			S: "Dark Aura"
 		},
 		heightm: 0.6,
@@ -25586,7 +25587,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 85
 		},
 		abilities: {
-			0: "Compoundeyes",
+			0: "Compound Eyes",
 			1: "Gooey",
 			H: "Aroma Veil",
 			S: "Sticky Hold"
