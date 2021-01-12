@@ -17277,7 +17277,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 25.2,
 		color: "Brown",
 		evoLevel: 17,
-		evos: ["Squirrap"],
+		prevo: "Squirrap",
 		eggGroups: [
 			"Field"
 		],
