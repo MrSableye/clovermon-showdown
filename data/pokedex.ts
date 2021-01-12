@@ -22447,7 +22447,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	fontaba: {
 		num: 69201,
 		name: "Fontaba",
-		baseForme: "VP",
+		// baseForme: "VP",
 		types: [
 			"Psychic"
 		],
@@ -22470,8 +22470,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		cosmeticFormes: ["Fontaba-A", "Fontaba-B", "Fontaba-C", "Fontaba-CO", "Fontaba-D", "Fontaba-F", "Fontaba-FA", "Fontaba-FIT", "Fontaba-G", "Fontaba-H", "Fontaba-INT", "Fontaba-JP", "Fontaba-K", "Fontaba-OUT", "Fontaba-POL", "Fontaba-R9K", "Fontaba-S", "Fontaba-S", "Fontaba-S4S", "Fontaba-SOC", "Fontaba-SP", "Fontaba-TRV", "Fontaba-TV", "Fontaba-V", "Fontaba-VG", "Fontaba-VP", "Fontaba-VR", "Fontaba-X", "Fontaba-Z"],
-		formeOrder: ["Fontaba", "Fontaba-A", "Fontaba-B", "Fontaba-C", "Fontaba-CO", "Fontaba-D", "Fontaba-F", "Fontaba-FA", "Fontaba-FIT", "Fontaba-G", "Fontaba-H", "Fontaba-INT", "Fontaba-JP", "Fontaba-K", "Fontaba-OUT", "Fontaba-POL", "Fontaba-R9K", "Fontaba-S", "Fontaba-S", "Fontaba-S4S", "Fontaba-SOC", "Fontaba-SP", "Fontaba-TRV", "Fontaba-TV", "Fontaba-V", "Fontaba-VG", "Fontaba-VP", "Fontaba-VR", "Fontaba-X", "Fontaba-Z"],
+		// cosmeticFormes: ["Fontaba-A", "Fontaba-B", "Fontaba-C", "Fontaba-CO", "Fontaba-D", "Fontaba-F", "Fontaba-FA", "Fontaba-FIT", "Fontaba-G", "Fontaba-H", "Fontaba-INT", "Fontaba-JP", "Fontaba-K", "Fontaba-OUT", "Fontaba-POL", "Fontaba-R9K", "Fontaba-S", "Fontaba-S", "Fontaba-S4S", "Fontaba-SOC", "Fontaba-SP", "Fontaba-TRV", "Fontaba-TV", "Fontaba-V", "Fontaba-VG", "Fontaba-VP", "Fontaba-VR", "Fontaba-X", "Fontaba-Z"],
+		// formeOrder: ["Fontaba", "Fontaba-A", "Fontaba-B", "Fontaba-C", "Fontaba-CO", "Fontaba-D", "Fontaba-F", "Fontaba-FA", "Fontaba-FIT", "Fontaba-G", "Fontaba-H", "Fontaba-INT", "Fontaba-JP", "Fontaba-K", "Fontaba-OUT", "Fontaba-POL", "Fontaba-R9K", "Fontaba-S", "Fontaba-S", "Fontaba-S4S", "Fontaba-SOC", "Fontaba-SP", "Fontaba-TRV", "Fontaba-TV", "Fontaba-V", "Fontaba-VG", "Fontaba-VP", "Fontaba-VR", "Fontaba-X", "Fontaba-Z"],
 	},
 	floconut: {
 		num: 69202,
