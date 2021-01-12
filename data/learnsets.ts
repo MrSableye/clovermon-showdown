@@ -120923,7 +120923,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			hyperbeam: [
 				"8M"
 			],
-			ironbash: [
+			doubleironbash: [
 				"8L55"
 			],
 			ironhead: [
@@ -173889,7 +173889,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 				"8T",
 				"8E"
 			],
-			ironbash: [
+			doubleironbash: [
 				"8L72"
 			],
 			irondefense: [
@@ -177699,7 +177699,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			hyperbeam: [
 				"8M"
 			],
-			ironbash: [
+			doubleironbash: [
 				"8L77"
 			],
 			irondefense: [
