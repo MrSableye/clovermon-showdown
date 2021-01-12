@@ -20832,7 +20832,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		},
 		abilities: {
 			0: "Sniper",
-			1: "Megalauncher",
+			1: "Mega Launcher",
 			H: "Keen Eye",
 			S: "No Guard"
 		},
@@ -20860,7 +20860,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		},
 		abilities: {
 			0: "Sniper",
-			1: "Megalauncher",
+			1: "Mega Launcher",
 			H: "Keen Eye",
 			S: "No Guard"
 		},
@@ -20888,7 +20888,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		},
 		abilities: {
 			0: "Sniper",
-			1: "Megalauncher",
+			1: "Mega Launcher",
 			H: "Keen Eye",
 			S: "No Guard"
 		},
@@ -22469,6 +22469,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: [
 			"Undiscovered"
 		],
+		cosmeticFormes: ["Fontaba-A", "Fontaba-B", "Fontaba-C", "Fontaba-CO", "Fontaba-D", "Fontaba-F", "Fontaba-FA", "Fontaba-FIT", "Fontaba-G", "Fontaba-H", "Fontaba-INT", "Fontaba-JP", "Fontaba-K", "Fontaba-OUT", "Fontaba-POL", "Fontaba-R9K", "Fontaba-S", "Fontaba-S", "Fontaba-S4S", "Fontaba-SOC", "Fontaba-SP", "Fontaba-TRV", "Fontaba-TV", "Fontaba-V", "Fontaba-VG", "Fontaba-VP", "Fontaba-VR", "Fontaba-X", "Fontaba-Z"],
+		formeOrder: ["Fontaba", "Fontaba-A", "Fontaba-B", "Fontaba-C", "Fontaba-CO", "Fontaba-D", "Fontaba-F", "Fontaba-FA", "Fontaba-FIT", "Fontaba-G", "Fontaba-H", "Fontaba-INT", "Fontaba-JP", "Fontaba-K", "Fontaba-OUT", "Fontaba-POL", "Fontaba-R9K", "Fontaba-S", "Fontaba-S", "Fontaba-S4S", "Fontaba-SOC", "Fontaba-SP", "Fontaba-TRV", "Fontaba-TV", "Fontaba-V", "Fontaba-VG", "Fontaba-VP", "Fontaba-VR", "Fontaba-X", "Fontaba-Z"],
 	},
 	floconut: {
 		num: 69202,
@@ -26231,7 +26233,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Rain Dish",
 			H: "Sniper",
-			S: "Megalauncher"
+			S: "Mega Launcher"
 		},
 		heightm: 0.5,
 		weightkg: 0.7,
