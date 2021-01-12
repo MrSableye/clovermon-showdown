@@ -28,11 +28,11 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 8 Clover Only] AG",
 		mod: 'gen8',
-		ruleset: ['Standard', '+Future', 'Fochun Pokedex', 'Fochun Items'],
+		ruleset: ['Standard NatDex', 'Dynamax Clause', '+Future', 'Fochun Pokedex', 'Fochun Items'],
 	},
 	{
 		name: "[Gen 8 National Dex] AG",
 		mod: 'gen8',
-		ruleset: ['Standard NatDex', '+Future'],
+		ruleset: ['Standard NatDex', 'Dynamax Clause', '+Future'],
 	},
 ];
