@@ -27699,7 +27699,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	fireshitre: {
 		num: 69371,
-		name: "Fireshitwi",
+		name: "Fireshitre",
 		types: [
 			"Fire",
 			"Poison"
