@@ -4441,8 +4441,31 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Concert",
 	},
 	waitforit: {
-		shortDesc: "It's an ability.",
+		shortDesc: "Boosts all stats after 5 turns.",
 		name: "Wait For It",
+		onStart(pokemon) {
+			pokemon.addVolatile('waitforit');
+		},
+		onEnd(pokemon) {
+			delete pokemon.volatiles['waitforit'];
+			this.add('-end', pokemon, 'Wait For It', '[silent]');
+		},
+		condition: {
+			duration: 5,
+			onStart(target) {
+				this.add('-start', target, 'ability: Wait For It');
+			},
+			onEnd(target) {
+				target.boostBy({
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				});
+				this.add('-end', target, 'Wait For It');
+			},
+		},
 	},
 	gradient: {
 		shortDesc: "It's an ability.",
