@@ -4409,18 +4409,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -4,
 	},
 	/* Clovermons */
-	shadowguard: {
-		shortDesc: "It's an ability.",
-		name: "Shadow Guard",
-	},
-	hairtangle: {
-		shortDesc: "It's an ability.",
-		name: "Hair Tangle",
-	},
-	artificial: {
-		shortDesc: "It's an ability.",
-		name: "Artificial",
-	},
 	showerpower: {
 		onModifySpAPriority: 5,
 		onModifySpA(spa, pokemon) {
@@ -4437,8 +4425,19 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Shower Power",
 	},
 	concert: {
-		shortDesc: "It's an ability.",
+		desc: "All Pokemon on the field lose 1/16 HP per turn if they're not immune to sound effects.",
 		name: "Concert",
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			for (const target of [...pokemon.side.active, ...pokemon.side.foe.active]) {
+				if (!target || !target.hp || pokemon === target) continue;
+				if (!target.hasAbility('soundproof')) {
+					this.damage(target.baseMaxhp / 16, target, pokemon);
+				}
+			}
+		},
 	},
 	waitforit: {
 		shortDesc: "Boosts all stats after 5 turns.",
@@ -4468,8 +4467,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 	},
 	gradient: {
-		shortDesc: "It's an ability.",
-		name: "Gradienty",
+		desc: "Gains an extra type in battle.",
+		name: "Gradient (IN-PROGRESS)",
 	},
 	anyability: {
 		shortDesc: "It's an ability.",

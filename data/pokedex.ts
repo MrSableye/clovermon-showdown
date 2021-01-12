@@ -23615,7 +23615,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Own Tempo",
 			H: "Wonder Skin",
-			S: "Hair Tangle"
+			S: "Tangling Hair"
 		},
 		heightm: 2.4,
 		weightkg: 122.5,
@@ -23698,7 +23698,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Weak Armor",
 			H: "Cursed Body",
-			S: "Shadow Guard"
+			S: "Shadow Shield"
 		},
 		heightm: 1.7,
 		weightkg: 148.4,
@@ -23725,7 +23725,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Weak Armor",
 			H: "Cursed Body",
-			S: "Shadow Guard"
+			S: "Shadow Shield"
 		},
 		heightm: 1.8,
 		weightkg: 86.3,
@@ -23752,7 +23752,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Weak Armor",
 			H: "Cursed Body",
-			S: "Shadow Guard"
+			S: "Shadow Shield"
 		},
 		heightm: 1.9,
 		weightkg: 182.1,
