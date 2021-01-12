@@ -4409,22 +4409,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -4,
 	},
 	/* Clovermons */
-	cacophony: {
-		shortDesc: "It's an ability.",
-		name: "Cacophony",
-	},
-	majestic: {
-		shortDesc: "It's an ability.",
-		name: "Majestic",
-	},
-	electrosurge: {
-		shortDesc: "It's an ability.",
-		name: "Electrosurge",
-	},
-	psychosurge: {
-		shortDesc: "It's an ability.",
-		name: "Psycho Surge",
-	},
 	shadowguard: {
 		shortDesc: "It's an ability.",
 		name: "Shadow Guard",
@@ -4433,29 +4417,24 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		shortDesc: "It's an ability.",
 		name: "Hair Tangle",
 	},
-	compaction: {
-		shortDesc: "It's an ability.",
-		name: "Compaction",
-	},
 	artificial: {
 		shortDesc: "It's an ability.",
 		name: "Artificial",
 	},
 	showerpower: {
-		shortDesc: "It's an ability.",
+		onModifySpAPriority: 5,
+		onModifySpA(spa, pokemon) {
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
+		onWeather(target, source, effect) {
+			if (target.hasItem('utilityumbrella')) return;
+			if (effect.id === 'raindance' || effect.id === 'primordialsea') {
+				this.damage(target.baseMaxhp / 8, target, target);
+			}
+		},
 		name: "Shower Power",
-	},
-	fireexit: {
-		shortDesc: "It's an ability.",
-		name: "Fire Exit",
-	},
-	alchemy: {
-		shortDesc: "It's an ability.",
-		name: "Alchemyy",
-	},
-	metalbody: {
-		shortDesc: "It's an ability.",
-		name: "Metal Body",
 	},
 	concert: {
 		shortDesc: "It's an ability.",
@@ -4471,7 +4450,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	anyability: {
 		shortDesc: "It's an ability.",
-		name: "Any Abilityy",
+		name: "Any Ability",
 	},
 	// End of unimplemented
 	adminabuse: {
@@ -4654,7 +4633,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		desc: "The duration of Inverse Room, Magic Room, Trick Room, and Wonder Room is increased by 2 turns if the effect is started by this Pokemon.",
 		shortDesc: "When used, Room effects last 2 more turns.",
 		name: "More Room",
-		// implemented in the corresponding move
+		// Only need to implement inverse room
 	},
   pollution: {
     desc: "This Pokemon's Poison-type attacks are super-effective against the Water type.",

@@ -18672,7 +18672,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Cute Charm",
 			1: "Serene Grace",
-			H: "Compaction",
+			H: "Water Compaction",
 			S: "Hydrophile"
 		},
 		heightm: 0.3,
@@ -18701,7 +18701,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Shell Armor",
 			1: "Serene Grace",
-			H: "Compaction",
+			H: "Water Compaction",
 			S: "Hydrophile"
 		},
 		heightm: 0.4,
@@ -20102,7 +20102,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Stench",
 			H: "Poison Touch",
-			S: "Alchemy"
+			S: "Power of Alchemy"
 		},
 		heightm: 1.2,
 		weightkg: 30,
@@ -21076,7 +21076,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		},
 		abilities: {
 			0: "Serene Grace",
-			H: "Majestic",
+			H: "Queenly Majesty",
 			S: "Triage"
 		},
 		heightm: 2,
@@ -22296,7 +22296,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			0: "Swarm",
 			1: "Iron Fist",
 			H: "Sturdy",
-			S: "Fire Exit"
+			S: "Emergency Exit"
 		},
 		heightm: 1.3,
 		weightkg: 44.4,
@@ -22377,7 +22377,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Water Absorb",
 			1: "Intimidate",
-			H: "Compaction",
+			H: "Water Compaction",
 			S: "Rattled"
 		},
 		heightm: 2.9,
@@ -22659,7 +22659,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Infiltrator",
 			H: "Telepathy",
-			S: "Electrosurge"
+			S: "Electric Surge"
 		},
 		heightm: 0.4,
 		weightkg: 3.9,
@@ -24351,7 +24351,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			0: "Plus",
 			1: "Minus",
 			H: "Trace",
-			S: "Fire Exit"
+			S: "Emergency Exit"
 		},
 		heightm: 0.6,
 		weightkg: 8,
@@ -24378,7 +24378,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			0: "Plus",
 			1: "Minus",
 			H: "Trace",
-			S: "Fire Exit"
+			S: "Emergency Exit"
 		},
 		heightm: 1.1,
 		weightkg: 20,
@@ -24683,7 +24683,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Trace",
 			1: "Color Change",
-			H: "Metal Body",
+			H: "Full Metal Body",
 			S: "Neuroforce"
 		},
 		heightm: 0.4,
@@ -24710,7 +24710,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Trace",
 			1: "Color Change",
-			H: "Metal Body",
+			H: "Full Metal Body",
 			S: "Neuroforce"
 		},
 		heightm: 1,
@@ -25336,7 +25336,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			0: "Aftermath",
 			1: "Sticky Hold",
 			H: "Gooey",
-			S: "Psycho Surge"
+			S: "Psychic Surge"
 		},
 		heightm: 0.7,
 		weightkg: 75,
@@ -25532,7 +25532,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			0: "More Room",
 			1: "Shell Armor",
 			H: "Unburden",
-			S: "Fire Exit"
+			S: "Emergency Exit"
 		},
 		heightm: 0.2,
 		weightkg: 1.5,
@@ -25561,7 +25561,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			0: "More Room",
 			1: "Shell Armor",
 			H: "Unburden",
-			S: "Fire Exit"
+			S: "Emergency Exit"
 		},
 		heightm: 0.3,
 		weightkg: 4.5,
@@ -26987,7 +26987,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 95
 		},
 		abilities: {
-			0: "Cacophony",
+			0: "Soundproof",
 			1: "Filter",
 			H: "Gradient",
 			S: "Snow Cloak"
