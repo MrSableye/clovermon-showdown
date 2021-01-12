@@ -82878,7 +82878,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			precipiceblades: [
 				"8L75"
 			],
-			coreenforce: [
+			coreenforcer: [
 				"8L1"
 			],
 			cut: [
@@ -83123,7 +83123,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			sunnyday: [
 				"8M"
 			],
-			sunsteelram: [
+			sunsteelstrike: [
 				"8L86"
 			],
 			superpower: [
@@ -84063,7 +84063,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 	},
 	ubruh: {
 		learnset: {
-			"1000waves": [
+			thousandwaves: [
 				"8L71"
 			],
 			attract: [
@@ -92065,7 +92065,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			zenheadbutt: [
 				"8T"
 			],
-			clangscales: [
+			clangingscales: [
 				"8E"
 			]
 		}
@@ -101076,7 +101076,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 				"8L41",
 				"8T"
 			],
-			firstpress: [
+			firstimpression: [
 				"8E"
 			]
 		}
@@ -101954,7 +101954,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleedge: [
 				"8T"
 			],
-			dracohammer: [
+			dragonhammer: [
 				"8L85"
 			],
 			dragonclaw: [
@@ -114438,7 +114438,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleedge: [
 				"8T"
 			],
-			dracohammer: [
+			dragonhammer: [
 				"8L61"
 			],
 			dracometeor: [
@@ -118053,7 +118053,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			facade: [
 				"8M"
 			],
-			firstpress: [
+			firstimpression: [
 				"8L60"
 			],
 			flash: [
@@ -124882,7 +124882,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			firefang: [
 				"8T"
 			],
-			firstpress: [
+			firstimpression: [
 				"8L100"
 			],
 			flashcannon: [
@@ -128811,7 +128811,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			firefang: [
 				"8T"
 			],
-			firstpress: [
+			firstimpression: [
 				"8L1"
 			],
 			flash: [
@@ -148007,7 +148007,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			present: [
 				"8T"
 			],
-			prismlaser: [
+			prismaticlaser: [
 				"8L76"
 			],
 			protect: [
@@ -159334,7 +159334,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			frustration: [
 				"8M"
 			],
-			geistbeam: [
+			moongeistbeam: [
 				"8L65"
 			],
 			gravity: [
@@ -162109,7 +162109,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleslap: [
 				"8L17"
 			],
-			dracohammer: [
+			dragonhammer: [
 				"8L65"
 			],
 			earthquake: [
@@ -177353,7 +177353,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			camouflage: [
 				"8L5"
 			],
-			clangscales: [
+			clangingscales: [
 				"8L90"
 			],
 			coil: [
