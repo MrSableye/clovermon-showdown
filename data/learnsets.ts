@@ -82264,7 +82264,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 	/* Clovermons */
 	emplyin: {
 		learnset: {
-			"1000arrows": [
+			thousandarrows: [
 				"8L70"
 			],
 			aerialace: [
@@ -82875,7 +82875,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			circlethrow: [
 				"8L22"
 			],
-			cliffblades: [
+			precipiceblades: [
 				"8L75"
 			],
 			coreenforce: [
@@ -83567,7 +83567,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dig: [
 				"8M"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L14"
 			],
 			doubleteam: [
@@ -84812,10 +84812,10 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			facade: [
 				"8M"
 			],
-			floralheal: [
+			floralhealing: [
 				"8L48"
 			],
-			flowerguard: [
+			flowershield: [
 				"8L1"
 			],
 			frustration: [
@@ -84886,7 +84886,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			petaldance: [
 				"8L48"
 			],
-			petalstorm: [
+			petalblizzard: [
 				"8L24"
 			],
 			poisonpowder: [
@@ -86169,10 +86169,10 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			flail: [
 				"8E"
 			],
-			floralheal: [
+			floralhealing: [
 				"8L45"
 			],
-			flowerguard: [
+			flowershield: [
 				"8L1"
 			],
 			frustration: [
@@ -86239,7 +86239,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 				"8L45",
 				"8E"
 			],
-			petalstorm: [
+			petalblizzard: [
 				"8L26"
 			],
 			pollenpuff: [
@@ -88191,7 +88191,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			trick: [
 				"8T"
 			],
-			vicegrip: [
+			visegrip: [
 				"8L1"
 			],
 			watersport: [
@@ -88569,7 +88569,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			bulkup: [
 				"8M"
 			],
-			cliffblades: [
+			precipiceblades: [
 				"8L70"
 			],
 			crunch: [
@@ -88954,7 +88954,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			muddywater: [
 				"8L50"
 			],
-			naturesmad: [
+			naturesmadness: [
 				"8L1",
 				"8L45"
 			],
@@ -94558,7 +94558,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			splash: [
 				"8L1"
 			],
-			steamerupt: [
+			steameruption: [
 				"8L1"
 			],
 			substitute: [
@@ -99410,7 +99410,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			uturn: [
 				"8T"
 			],
-			vicegrip: [
+			visegrip: [
 				"8L1"
 			],
 			willowisp: [
@@ -99663,7 +99663,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			uturn: [
 				"8T"
 			],
-			vicegrip: [
+			visegrip: [
 				"8L1"
 			],
 			waterpulse: [
@@ -101020,7 +101020,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			solarbeam: [
 				"8M"
 			],
-			spacehole: [
+			hyperspacehole: [
 				"8L64"
 			],
 			substitute: [
@@ -103056,7 +103056,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dazzlinggleam: [
 				"8T"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L1"
 			],
 			doubleteam: [
@@ -109506,7 +109506,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dig: [
 				"8M"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L9"
 			],
 			doubleteam: [
@@ -109760,7 +109760,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dig: [
 				"8M"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L9"
 			],
 			doubleteam: [
@@ -109962,7 +109962,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			disable: [
 				"8E"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L9"
 			],
 			doubleteam: [
@@ -112989,7 +112989,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			payday: [
 				"8T"
 			],
-			petalstorm: [
+			petalblizzard: [
 				"8L54"
 			],
 			pound: [
@@ -116928,7 +116928,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			bulldoze: [
 				"8L20"
 			],
-			cliffblades: [
+			precipiceblades: [
 				"8L70"
 			],
 			confuseray: [
@@ -116937,7 +116937,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			cut: [
 				"8M"
 			],
-			darklariat: [
+			darkestlariat: [
 				"8L65"
 			],
 			darkpulse: [
@@ -117315,7 +117315,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			payday: [
 				"8T"
 			],
-			petalstorm: [
+			petalblizzard: [
 				"8L31"
 			],
 			poweruppunch: [
@@ -117471,7 +117471,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			crosschop: [
 				"8L52"
 			],
-			darklariat: [
+			darkestlariat: [
 				"8L55"
 			],
 			detect: [
@@ -117854,7 +117854,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			payday: [
 				"8T"
 			],
-			petalstorm: [
+			petalblizzard: [
 				"8L55"
 			],
 			present: [
@@ -118855,7 +118855,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			diamondstorm: [
 				"8L25"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L1"
 			],
 			doubleteam: [
@@ -120058,7 +120058,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			flash: [
 				"8M"
 			],
-			floralheal: [
+			floralhealing: [
 				"8L1"
 			],
 			fly: [
@@ -121906,7 +121906,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			horndrill: [
 				"8L69"
 			],
-			horsepower: [
+			highhorsepower: [
 				"8L1"
 			],
 			hurricane: [
@@ -122682,7 +122682,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleedge: [
 				"8T"
 			],
-			dracoascent: [
+			dragonascent: [
 				"8L75"
 			],
 			dracometeor: [
@@ -128823,7 +128823,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			focusblast: [
 				"8T"
 			],
-			forestcurse: [
+			forestscurse: [
 				"8L48"
 			],
 			foulplay: [
@@ -128892,7 +128892,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			naturesmad: [
+			naturesmadness: [
 				"8L51"
 			],
 			nightshade: [
@@ -130312,7 +130312,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			muddywater: [
 				"8L42"
 			],
-			naturesmad: [
+			naturesmadness: [
 				"8L1"
 			],
 			nightshade: [
@@ -130506,7 +130506,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleedge: [
 				"8T"
 			],
-			dracoascent: [
+			dragonascent: [
 				"8L40"
 			],
 			dracometeor: [
@@ -130978,7 +130978,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			toxic: [
 				"8M"
 			],
-			vicegrip: [
+			visegrip: [
 				"8L1"
 			],
 			xscissor: [
@@ -131669,7 +131669,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			muddywater: [
 				"8L46"
 			],
-			naturesmad: [
+			naturesmadness: [
 				"8L1"
 			],
 			nightshade: [
@@ -132039,7 +132039,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			toxic: [
 				"8M"
 			],
-			trickotreat: [
+			trickortreat: [
 				"8L1"
 			],
 			willowisp: [
@@ -132275,7 +132275,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			trick: [
 				"8E"
 			],
-			trickotreat: [
+			trickortreat: [
 				"8L1"
 			],
 			willowisp: [
@@ -132557,7 +132557,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			triattack: [
 				"8L1"
 			],
-			trickotreat: [
+			trickortreat: [
 				"8L1"
 			],
 			willowisp: [
@@ -133014,7 +133014,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			stealthrock: [
 				"8T"
 			],
-			stomptantrum: [
+			stompingtantrum: [
 				"8L66"
 			],
 			stoneedge: [
@@ -133092,7 +133092,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			cut: [
 				"8M"
 			],
-			darklariat: [
+			darkestlariat: [
 				"8L62"
 			],
 			dig: [
@@ -137542,7 +137542,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			stealthrock: [
 				"8T"
 			],
-			stomptantrum: [
+			stompingtantrum: [
 				"8L63"
 			],
 			stoneedge: [
@@ -141162,7 +141162,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			toxic: [
 				"8M"
 			],
-			trickotreat: [
+			trickortreat: [
 				"8L1"
 			],
 			willowisp: [
@@ -142374,7 +142374,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			payday: [
 				"8T"
 			],
-			petalstorm: [
+			petalblizzard: [
 				"8L31"
 			],
 			present: [
@@ -144435,7 +144435,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			hiddenpower: [
 				"8M"
 			],
-			horsepower: [
+			highhorsepower: [
 				"8L40"
 			],
 			ingrain: [
@@ -145189,7 +145189,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			payday: [
 				"8T"
 			],
-			petalstorm: [
+			petalblizzard: [
 				"8L31"
 			],
 			poisonjab: [
@@ -147214,7 +147214,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 				"8T",
 				"8E"
 			],
-			horsepower: [
+			highhorsepower: [
 				"8E"
 			]
 		}
@@ -147449,7 +147449,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			zenheadbutt: [
 				"8T"
 			],
-			horsepower: [
+			highhorsepower: [
 				"8E"
 			]
 		}
@@ -147675,7 +147675,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dig: [
 				"8M"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L13"
 			],
 			doubleteam: [
@@ -148418,7 +148418,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dig: [
 				"8M"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L15"
 			],
 			doubleteam: [
@@ -150193,7 +150193,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			snore: [
 				"8L1"
 			],
-			steamerupt: [
+			steameruption: [
 				"8L72"
 			],
 			stomp: [
@@ -151229,7 +151229,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dig: [
 				"8M"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L1"
 			],
 			doubleteam: [
@@ -151391,7 +151391,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			snatch: [
 				"8M"
 			],
-			spacefury: [
+			hyperspacefury: [
 				"8L65"
 			],
 			substitute: [
@@ -151592,7 +151592,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			naturepower: [
 				"8L24"
 			],
-			naturesmad: [
+			naturesmadness: [
 				"8L57"
 			],
 			overheat: [
@@ -151785,7 +151785,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			followme: [
 				"8L1"
 			],
-			forestcurse: [
+			forestscurse: [
 				"8L16"
 			],
 			frustration: [
@@ -151842,7 +151842,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			mistyterrain: [
 				"8T"
 			],
-			naturesmad: [
+			naturesmadness: [
 				"8L73"
 			],
 			needlearm: [
@@ -154211,7 +154211,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			metronome: [
 				"8T"
 			],
-			naturesmad: [
+			naturesmadness: [
 				"8L49"
 			],
 			nightshade: [
@@ -154227,7 +154227,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			petaldance: [
 				"8L52"
 			],
-			petalstorm: [
+			petalblizzard: [
 				"8L42"
 			],
 			phantomforce: [
@@ -155449,7 +155449,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dig: [
 				"8M"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L4"
 			],
 			doubleteam: [
@@ -155733,7 +155733,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dig: [
 				"8M"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L4"
 			],
 			doubleteam: [
@@ -157419,7 +157419,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dig: [
 				"8M"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L1"
 			],
 			doubleteam: [
@@ -158480,7 +158480,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			toxic: [
 				"8M"
 			],
-			trickotreat: [
+			trickortreat: [
 				"8L1"
 			],
 			willowisp: [
@@ -159013,7 +159013,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dig: [
 				"8M"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L1"
 			],
 			doubleteam: [
@@ -160046,7 +160046,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			trickroom: [
 				"8T"
 			],
-			trickotreat: [
+			trickortreat: [
 				"8L1"
 			],
 			willowisp: [
@@ -160508,7 +160508,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			uturn: [
 				"8T"
 			],
-			vicegrip: [
+			visegrip: [
 				"8L9"
 			],
 			withdraw: [
@@ -160745,7 +160745,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			uturn: [
 				"8T"
 			],
-			vicegrip: [
+			visegrip: [
 				"8L9"
 			],
 			withdraw: [
@@ -160839,7 +160839,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			hiddenpower: [
 				"8M"
 			],
-			horsepower: [
+			highhorsepower: [
 				"8L43"
 			],
 			ingrain: [
@@ -163110,7 +163110,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dazzlinggleam: [
 				"8T"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L1"
 			],
 			doubleteam: [
@@ -163410,7 +163410,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			mistyterrain: [
 				"8T"
 			],
-			naturesmad: [
+			naturesmadness: [
 				"8L1"
 			],
 			outrage: [
@@ -164334,7 +164334,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dig: [
 				"8M"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L1"
 			],
 			doubleteam: [
@@ -164823,7 +164823,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			toxic: [
 				"8M"
 			],
-			vicegrip: [
+			visegrip: [
 				"8L1"
 			],
 			xscissor: [
@@ -165746,7 +165746,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dig: [
 				"8M"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L10"
 			],
 			doubleteam: [
@@ -165914,7 +165914,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			zenheadbutt: [
 				"8T"
 			],
-			darklariat: [
+			darkestlariat: [
 				"8E"
 			]
 		}
@@ -166153,7 +166153,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			disable: [
 				"8E"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L1"
 			],
 			doubleteam: [
@@ -167616,7 +167616,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			hiddenpower: [
 				"8M"
 			],
-			horsepower: [
+			highhorsepower: [
 				"8L33"
 			],
 			infestation: [
@@ -168166,7 +168166,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 				"8L43",
 				"8T"
 			],
-			horsepower: [
+			highhorsepower: [
 				"8E"
 			]
 		}
@@ -168347,7 +168347,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			sleeptalk: [
 				"8T"
 			],
-			stomptantrum: [
+			stompingtantrum: [
 				"8L59"
 			],
 			stoneedge: [
@@ -168397,7 +168397,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 				"8L45",
 				"8T"
 			],
-			horsepower: [
+			highhorsepower: [
 				"8E"
 			]
 		}
@@ -169893,7 +169893,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			stealthrock: [
 				"8T"
 			],
-			stomptantrum: [
+			stompingtantrum: [
 				"8L51"
 			],
 			stoneedge: [
@@ -170205,7 +170205,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dig: [
 				"8M"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L1"
 			],
 			doubleteam: [
@@ -170372,7 +170372,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			smackdown: [
 				"8T"
 			],
-			stomptantrum: [
+			stompingtantrum: [
 				"8L42"
 			],
 			stoneedge: [
@@ -170919,7 +170919,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			hiddenpower: [
 				"8M"
 			],
-			horsepower: [
+			highhorsepower: [
 				"8L35"
 			],
 			infestation: [
@@ -171681,7 +171681,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			hornleech: [
 				"8L36"
 			],
-			horsepower: [
+			highhorsepower: [
 				"8L45"
 			],
 			hyperbeam: [
@@ -171857,7 +171857,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			confide: [
 				"8L1"
 			],
-			darklariat: [
+			darkestlariat: [
 				"8L62"
 			],
 			darkpulse: [
@@ -172235,7 +172235,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			stealthrock: [
 				"8T"
 			],
-			stomptantrum: [
+			stompingtantrum: [
 				"8L55"
 			],
 			stoneedge: [
@@ -172333,7 +172333,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			dig: [
 				"8M"
 			],
-			disarmercry: [
+			disarmingvoice: [
 				"8L1"
 			],
 			doubleteam: [
@@ -173607,7 +173607,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			hiddenpower: [
 				"8M"
 			],
-			horsepower: [
+			highhorsepower: [
 				"8L35"
 			],
 			infestation: [
@@ -174522,7 +174522,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			toxic: [
 				"8M"
 			],
-			vicegrip: [
+			visegrip: [
 				"8L1"
 			],
 			xscissor: [
@@ -175680,7 +175680,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			hiddenpower: [
 				"8M"
 			],
-			horsepower: [
+			highhorsepower: [
 				"8L51"
 			],
 			hyperbeam: [
@@ -176201,7 +176201,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			hiddenpower: [
 				"8M"
 			],
-			horsepower: [
+			highhorsepower: [
 				"8L48"
 			],
 			hyperbeam: [
@@ -176957,7 +176957,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			zenheadbutt: [
 				"8T"
 			],
-			darklariat: [
+			darkestlariat: [
 				"8E"
 			]
 		}
@@ -178274,7 +178274,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 				"8L35",
 				"8T"
 			],
-			horsepower: [
+			highhorsepower: [
 				"8E"
 			]
 		}
@@ -178689,7 +178689,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 				"8L37",
 				"8T"
 			],
-			horsepower: [
+			highhorsepower: [
 				"8E"
 			]
 		}
