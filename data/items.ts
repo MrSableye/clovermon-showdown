@@ -583,7 +583,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 558,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	bugmemory: {
 		name: "Bug Memory",
@@ -1061,7 +1060,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 562,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	darkmemory: {
 		name: "Dark Memory",
@@ -1251,7 +1249,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 561,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	dragonmemory: {
 		name: "Dragon Memory",
@@ -1461,7 +1458,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 550,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	electricmemory: {
 		name: "Electric Memory",
@@ -1603,7 +1599,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 715,
 		gen: 6,
-		isNonstandard: "Past",
 	},
 	fairymemory: {
 		name: "Fairy Memory",
@@ -1639,7 +1634,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 553,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	fightingmemory: {
 		name: "Fighting Memory",
@@ -1706,7 +1700,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 548,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	firememory: {
 		name: "Fire Memory",
@@ -1834,7 +1827,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 556,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	flyingmemory: {
 		name: "Flying Memory",
@@ -2054,7 +2046,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 560,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	ghostmemory: {
 		name: "Ghost Memory",
@@ -2119,7 +2110,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 551,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	grassmemory: {
 		name: "Grass Memory",
@@ -2235,7 +2225,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 555,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	groundmemory: {
 		name: "Ground Memory",
@@ -2437,7 +2426,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 552,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	icememory: {
 		name: "Ice Memory",
@@ -4001,7 +3989,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 554,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	poisonmemory: {
 		name: "Poison Memory",
@@ -4243,7 +4230,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 557,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	psychicmemory: {
 		name: "Psychic Memory",
@@ -4550,7 +4536,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 559,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	rockincense: {
 		name: "Rock Incense",
@@ -5295,7 +5280,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 563,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	steelmemory: {
 		name: "Steel Memory",
@@ -6590,7 +6574,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 549,
 		gen: 5,
-		isNonstandard: "Past",
 	},
 	watermemory: {
 		name: "Water Memory",
