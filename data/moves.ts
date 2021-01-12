@@ -890,7 +890,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 95,
 		basePower: 80,
 		category: "Special",
-		isNonstandard: "LGPE",
 		name: "Baddy Bad",
 		pp: 15,
 		priority: 0,
