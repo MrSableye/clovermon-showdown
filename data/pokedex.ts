@@ -17640,7 +17640,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Static",
 			1: "Sweet Veil",
-			H: "Lightningrod",
+			H: "Lightning Rod",
 			S: "Fluffy"
 		},
 		heightm: 0.4,
@@ -18247,7 +18247,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 102
 		},
 		abilities: {
-			0: "Lightningrod",
+			0: "Lightning Rod",
 			1: "Dry Skin",
 			H: "Motor Drive",
 			S: "Liquid Voice"
@@ -21518,7 +21518,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 86
 		},
 		abilities: {
-			0: "Lightningrod",
+			0: "Lightning Rod",
 			1: "Trace",
 			H: "Inversion",
 			S: "Imposter"
@@ -24852,7 +24852,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			0: "Flame Body",
 			1: "Synchronize",
 			H: "Dazzling",
-			S: "Lightningrod"
+			S: "Lightning Rod"
 		},
 		heightm: 0.3,
 		weightkg: 4.5,
@@ -26753,7 +26753,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		},
 		abilities: {
 			0: "Jewelry",
-			1: "Lightningrod",
+			1: "Lightning Rod",
 			H: "Protean",
 			S: "Prism Armor"
 		},
@@ -26782,7 +26782,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		},
 		abilities: {
 			0: "Jewelry",
-			1: "Lightningrod",
+			1: "Lightning Rod",
 			H: "Protean",
 			S: "Prism Armor"
 		},
@@ -27251,7 +27251,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: 69374,
 		name: "Slugfugg",
 		types: [
-			"Water ",
+			"Water",
 			"Poison"
 		],
 		baseStats: {
