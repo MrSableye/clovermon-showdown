@@ -7800,6 +7800,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "OU",
 		isNonstandard: "Future",
 	},
+	acufrontf: {
+		isNonstandard: "Future",
+	},
+	acufrontw: {
+		isNonstandard: "Future",
+	},
+	acufronti: {
+		isNonstandard: "Future",
+	},
 	militant: {
 		tier: "OU",
 		isNonstandard: "Future",
