@@ -4923,17 +4923,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onResidualSubOrder: 1,
 		onResidual(pokemon) {
 			if (pokemon.item) return;
-			let possibleTypes = [];
-			for (const moveSlot of pokemon.moveSlots) {
+			let possibleMoves = pokemon.moveSlots.filter((moveSlot) => {
 				const move = this.dex.getMove(moveSlot.move);
-				const moveType = move.id === 'hiddenpower' ? pokemon.hpType : move.type;
-				possibleTypes.push(moveType);
+
+				return move.category === 'Physical' || move.category === 'Special';
+			});
+
+			if (possibleMoves.length < 1) {
+				possibleMoves = pokemon.moveSlots;
 			}
-			if (!possibleTypes.length) return;
-			let randomType = this.sample(possibleTypes);
-			pokemon.setItem(randomType.toLowerCase() + "gem");
-			let item = pokemon.getItem();
-			this.add('-item', pokemon, item, '[from] ability: Jewelry');
+
+			const randomMoveSlot = this.sample(possibleMoves);
+
+			if (randomMoveSlot) {
+				const randomMove = this.dex.getMove(randomMoveSlot.move);
+				const item = `${this.toID(randomMove.type)}gem`;
+				if (pokemon.setItem(item)) {
+					this.add('-item', pokemon, item, '[from] ability: Jewelry');
+				}
+				pokemon.setItem(randomMove.type)
+			}
 		},
 		name: "Jewelry",
 	},
