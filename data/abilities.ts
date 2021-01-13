@@ -4516,7 +4516,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		}
 	},
 	anyability: {
-		shortDesc: "It's an ability.",
+		shortDesc: "It's any ability. Becomes a random ability on switch-in.",
 		name: "Any Ability",
 		onStart(pokemon) {
 			const validAbilityList = [
