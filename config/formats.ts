@@ -30,11 +30,7 @@ export const Formats: FormatList = [
 		threads: [],
 		mod: 'gen8',
 		ruleset: [
-			'Obtainable',
-			'Team Preview',
-			'HP Percentage Mod',
-			'Cancel Mod',
-			'Endless Battle Clause',
+			'Standard NatDex',
 			'Dynamax Clause',
 			'+Future',
 			'Fochun Pokedex',
