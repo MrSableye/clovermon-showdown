@@ -19587,7 +19587,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Puppacti",
 		types: [
 			"Grass",
-			"Bug"
 		],
 		baseStats: {
 			hp: 50,
