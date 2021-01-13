@@ -27659,7 +27659,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 0.3,
 		weightkg: 0.1,
 		color: "Yellow",
-		prevo: "Fireshitwi",
+		evo: ["Fireshitwi"],
 		eggGroups: [
 			"Amorphous",
 			"Field"
