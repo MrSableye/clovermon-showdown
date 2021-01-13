@@ -1862,7 +1862,7 @@ export class TeamValidator {
 			} else if (lsetData.learnset['sketch']) {
 				if (move.noSketch || move.isZ || move.isMax) {
 					cantLearnReason = `can't be Sketched.`;
-				} else if (move.gen > 7 && !this.format.id.includes('nationaldex')) {
+				} else if (move.gen > 7 && !(this.format.id.includes('nationaldex') || this.format.id.includes('cloveronly'))) {
 					cantLearnReason = `can't be Sketched because it's a Gen 8 move and Sketch isn't available in Gen 8.`;
 				} else {
 					if (!lset) sketch = true;
