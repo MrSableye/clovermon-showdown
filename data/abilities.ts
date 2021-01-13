@@ -4501,7 +4501,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	gradient: {
 		desc: "Gains an extra type in battle.",
-		name: "Gradient (IN-PROGRESS)",
+		name: "Gradient",
 		onStart(pokemon) {
 			const possibleTargets = pokemon.side.foe.active.filter(foeActive => foeActive && this.isAdjacent(pokemon, foeActive));
 			let rand = 0;
@@ -4781,7 +4781,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			return false;
 		}
 	},
-	// End of unimplemented
 	adminabuse: {
 		desc: "This Pokemon's hammer-based attacks have their power multiplied by 1.2 and have any adverse effects to the user removed.",
 		shortDesc: "This Pokemon's hammer-based attacks have 1.2x power and have their negative effects removed.",

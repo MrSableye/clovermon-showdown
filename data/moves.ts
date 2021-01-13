@@ -19647,32 +19647,6 @@ export const Moves: {[moveid: string]: MoveData} = {
     type: "Grass",
     flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
   },
-  reveldance: {
-    desc: "IMPLEMENT THIS",
-    num: 6999,
-    accuracy: 100,
-    basePower: 60,
-    category: "Physical",
-    name: 'reveldance (placeholder)',
-    pp: 0,
-    priority: 0,
-    target: "normal",
-    type: "Grass",
-    flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-  },
-  soulshackle: {
-    desc: "IMPLEMENT THIS",
-    num: 6999,
-    accuracy: 100,
-    basePower: 60,
-    category: "Physical",
-    name: 'soulshackle (placeholder)',
-    pp: 0,
-    priority: 0,
-    target: "normal",
-    type: "Grass",
-    flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-  },
   slimegulp: {
     desc: "IMPLEMENT THIS",
     num: 6999,
@@ -19687,17 +19661,39 @@ export const Moves: {[moveid: string]: MoveData} = {
     flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
   },
   inverseroom: {
-    desc: "IMPLEMENT THIS",
-    num: 6999,
-    accuracy: 100,
-    basePower: 60,
-    category: "Physical",
-    name: 'inverseroom (placeholder)',
-    pp: 0,
+    num: 69032,
+    accuracy: true,
+    basePower: 0,
+    category: "Status",
+		name: "Inverse Room",
+		shortDesc: "Summons Inverse Room upon switch-in.",
+		desc: "Creates a bizarre area where type matchups are swapped for five turns.",
+    pp: 15,
     priority: 0,
-    target: "normal",
-    type: "Grass",
-    flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+    target: "all",
+    type: "???",
+		flags: {mirror: 1},
+		pseudoWeather: 'inverseroom',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 7;
+				}
+				return 5;
+			},
+			onStart(target, source) {
+				this.add('-fieldstart', 'move: Inverse Room', '[of] ' + source);
+			},
+			onRestart(target, source) {
+				this.field.removePseudoWeather('inverseroom');
+			},
+			onResidualOrder: 23,
+			onEnd() {
+				this.add('-fieldend', 'move: Inverse Room');
+			},
+		},
   },
   fruitpunch: {
     num: 69031,
@@ -19793,19 +19789,6 @@ export const Moves: {[moveid: string]: MoveData} = {
     type: "Grass",
     flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
   },
-  lightoruin: {
-    desc: "IMPLEMENT THIS",
-    num: 6999,
-    accuracy: 100,
-    basePower: 60,
-    category: "Physical",
-    name: 'lightoruin (placeholder)',
-    pp: 0,
-    priority: 0,
-    target: "normal",
-    type: "Grass",
-    flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-  },
   warhead: {
     num: 69042,
     accuracy: 80,
@@ -19820,30 +19803,67 @@ export const Moves: {[moveid: string]: MoveData} = {
     flags: {protect: 1, mirror: 1},
   },
   weirdflex: {
-    desc: "IMPLEMENT THIS",
-    num: 6999,
-    accuracy: 100,
-    basePower: 60,
-    category: "Physical",
-    name: 'weirdflex (placeholder)',
-    pp: 0,
+    num: 69043,
+    accuracy: true,
+    basePower: 0,
+    category: "Status",
+		name: "Weird Flex",
+		desc: "Uses Bulk Up, Scary Face, Endure, and Follow Me targeted all at itself.",
+    pp: 15,
     priority: 0,
-    target: "normal",
-    type: "Grass",
-    flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+    target: "self",
+    type: "Fighting",
+    flags: {snatch: 1},
+		boosts: {
+			atk: 1,
+			def: 1,
+			spe: -2,
+		},
+		volatileStatus: 'weirdflex',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'move: Weird Flex');
+			},
+			onDamagePriority: -10,
+			onDamage(damage, target, source, effect) {
+				if (effect?.effectType === 'Move' && damage >= target.hp) {
+					this.add('-activate', target, 'move: Weird Flex');
+					return target.hp - 1;
+				}
+			},
+			onFoeRedirectTargetPriority: 1,
+			onFoeRedirectTarget(target, source, source2, move) {
+				if (!this.effectData.target.isSkyDropped() && this.validTarget(this.effectData.target, source, move.target)) {
+					if (move.smartTarget) move.smartTarget = false;
+					this.debug("Weird Flex redirected target of move");
+					return this.effectData.target;
+				}
+			},
+		},
   },
   scorchearth: {
-    desc: "IMPLEMENT THIS",
-    num: 6999,
+    num: 69046,
     accuracy: 100,
-    basePower: 60,
-    category: "Physical",
-    name: 'scorchearth (placeholder)',
-    pp: 0,
+    basePower: 20,
+    category: "Special",
+		name: "Scorched Earth",
+		desc: "Burn every Pokémon on field.",
+    pp: 10,
     priority: 0,
     target: "normal",
-    type: "Grass",
-    flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+    type: "Ground",
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
   },
   hulkup: {
     num: 69051,

@@ -118952,7 +118952,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			lactoseshot: [
 				"8L95"
 			],
-			lightoruin: [
+			lightofruin: [
 				"8L100"
 			],
 			lightscreen: [
@@ -131468,7 +131468,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			snatch: [
 				"8M"
 			],
-			soulshackle: [
+			spiritshackle: [
 				"8L64"
 			],
 			splash: [
@@ -133449,7 +133449,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			return: [
 				"8M"
 			],
-			reveldance: [
+			revelationdance: [
 				"8L75"
 			],
 			roar: [
@@ -146568,7 +146568,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			snatch: [
 				"8M"
 			],
-			soulshackle: [
+			spiritshackle: [
 				"8L66"
 			],
 			spikes: [
@@ -153161,7 +153161,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			woodhammer: [
 				"8L70"
 			],
-			reveldance: [
+			revelationdance: [
 				"8E"
 			]
 		}
@@ -157622,7 +157622,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			solarbeam: [
 				"8M"
 			],
-			soulshackle: [
+			spiritshackle: [
 				"8L66"
 			],
 			spookout: [
@@ -165705,7 +165705,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			woodhammer: [
 				"8L62"
 			],
-			lightoruin: [
+			lightofruin: [
 				"8E"
 			]
 		}
