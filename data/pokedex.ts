@@ -20269,7 +20269,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: 69114,
 		name: "Cacademon",
 		types: [
-			"Ground"
+			"Ground",
+			"Poison"
 		],
 		baseStats: {
 			hp: 150,
