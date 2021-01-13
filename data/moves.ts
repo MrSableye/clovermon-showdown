@@ -20602,7 +20602,7 @@ export const Moves: {[moveid: string]: MoveData} = {
   spookout: {
     accuracy: 100,
     basePower: 60,
-    category: "Special",
+    category: "Physical",
     desc: "Has a 100% chance to flinch the target. Fails unless it is the user's first turn on the field.",
     shortDesc: "Hits first. First turn out only. 100% flinch chance.",
     name: "Spook Out",
