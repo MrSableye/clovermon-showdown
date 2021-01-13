@@ -1568,8 +1568,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	illuminate: {
 		name: "Illuminate",
-		rating: 0,
+		rating: 3,
 		num: 35,
+		onSourceModifyAccuracyPriority: -1,
+		onSourceModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			this.debug('compoundeyes - enhancing accuracy');
+			return this.chainModify([0x14CD, 0x1000]);
+		},
 	},
 	illusion: {
 		onBeforeSwitchIn(pokemon) {
@@ -4452,6 +4458,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Concert",
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Concert');
+		},
 		onResidual(pokemon) {
 			if (!pokemon.hp) return;
 			for (const target of [...pokemon.side.active, ...pokemon.side.foe.active]) {
@@ -4467,6 +4476,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Wait For It",
 		onStart(pokemon) {
 			pokemon.addVolatile('waitforit');
+			this.add('-ability', pokemon, 'Wait For It');
 		},
 		onEnd(pokemon) {
 			delete pokemon.volatiles['waitforit'];
@@ -4830,6 +4840,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	bonezone: {
 		shortDesc: "This Pokemon's Bone-based moves ignore immunities.",
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Bone Zone');
+		},
 		onModifyMovePriority: -5,
 		onModifyMove(move) {
 			if (['bonemerang', 'boneclub', 'shadowbone', 'bonerush'].includes(move.id)) move.ignoreImmunity = true;
