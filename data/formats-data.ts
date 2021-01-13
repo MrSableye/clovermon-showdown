@@ -7974,7 +7974,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	jewipede: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	}
 };
