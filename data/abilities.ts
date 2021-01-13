@@ -4488,7 +4488,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.add('-start', target, 'ability: Wait For It');
 			},
 			onEnd(target) {
-				target.boostBy({
+				this.boost({
 					atk: 1,
 					def: 1,
 					spa: 1,
