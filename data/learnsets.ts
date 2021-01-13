@@ -154295,7 +154295,6 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 				"8L8"
 			],
 			sketch: [
-				"8T",
 				"8E"
 			],
 			skillswap: [
