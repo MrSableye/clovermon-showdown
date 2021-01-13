@@ -21031,7 +21031,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 86.7,
 		color: "Brown",
 		prevo: "Durkey",
-		voType: "useItem",
+		evoType: "useItem",
 		evoItem: "Tor Doll",
 		eggGroups: [
 			"Flying"
@@ -26706,7 +26706,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 84.3,
 		color: "Pink",
 		prevo: "Quiboom",
-		eevoType: "useItem",
+		evoType: "useItem",
 		evoItem: "Fire Stone",
 		eggGroups: [
 			"Water 1"
@@ -27658,7 +27658,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 0.3,
 		weightkg: 0.1,
 		color: "Yellow",
-		evo: ["Fireshitwi"],
+		evos: ["Fireshitwi"],
 		eggGroups: [
 			"Amorphous",
 			"Field"
@@ -28269,7 +28269,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 27.2,
 		color: "Yellow",
 		prevo: "Nutjobber",
-		voType: "levelFriendship",
+		evoType: "levelFriendship",
 		eggGroups: [
 			"Grass",
 			"Amorphous"
