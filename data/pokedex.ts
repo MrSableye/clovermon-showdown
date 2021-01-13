@@ -20703,7 +20703,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		prevo: "Jarape",
 		evoType: "useItem",
 		evoItem: "Thunder Stone",
-		evos: ["Lizakbar"],
 		eggGroups: [
 			"Amorphous",
 			"Mineral"
