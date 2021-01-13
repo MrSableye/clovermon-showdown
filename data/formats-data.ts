@@ -6425,11 +6425,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		"Future" isn't used by anything else, so we'll use it to mark Clovermons :^)
 	*/
 	grasshole: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	analgae: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	rectreem: {
@@ -6437,11 +6437,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	arabomb: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	iguallah: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	lizakbar: {
@@ -6449,11 +6449,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	ejacasm: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	hosajack: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	condoom: {
@@ -6461,7 +6461,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	squirrap: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	gampster: {
@@ -6469,11 +6469,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	kengeon: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	frieden: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	corooster: {
@@ -6481,11 +6481,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	curicrawl: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	gutsicoon: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	gutsifly: {
@@ -6493,15 +6493,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	larvades: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	proboskito: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	clovour: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	chanolour: {
@@ -6509,7 +6509,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	nauseon: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	hazmate: {
@@ -6529,11 +6529,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	lanshil: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	middril: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	shurismash: {
@@ -6541,7 +6541,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	maymay: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	memenace: {
@@ -6553,11 +6553,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	armando: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	muscledude: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	tripecs: {
@@ -6565,15 +6565,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	semdrop: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	semrust: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	furnazi: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	finasoven: {
@@ -6581,11 +6581,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	troubait: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	tulure: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	monstrap: {
@@ -6593,7 +6593,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	pixila: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	fairileon: {
@@ -6601,7 +6601,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	wedgard: {
-		tier: "OU",
+		tier: "LC Uber",
 		isNonstandard: "Future",
 	},
 	knokedge: {
@@ -6625,11 +6625,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	chompest: {
-		tier: "OU",
+		tier: "LC Uber",
 		isNonstandard: "Future",
 	},
 	masdawg: {
-		tier: "OU",
+		tier: "LC Uber",
 		isNonstandard: "Future",
 	},
 	pasdawg: {
@@ -6637,7 +6637,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	spanke: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	anaconduke: {
@@ -6645,7 +6645,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	fishnism: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	sjwhale: {
@@ -6653,7 +6653,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	chezetta: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	mozzamazel: {
@@ -6661,7 +6661,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	krokling: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	krokizon: {
@@ -6669,7 +6669,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	conchilla: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	haremit: {
@@ -6677,11 +6677,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	coolcube: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	tankube: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	fabkube: {
@@ -6689,7 +6689,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	smogaroben: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	smoxilon: {
@@ -6701,7 +6701,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	bacub: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	urswine: {
@@ -6709,7 +6709,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	moostatic: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	mooshock: {
@@ -6721,7 +6721,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	deemdow: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	dowster: {
@@ -6729,11 +6729,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	cheerly: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	cheerific: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	mennopaws: {
@@ -6741,7 +6741,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	caracold: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	glacialynx: {
@@ -6753,7 +6753,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	praeteur: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	praestish: {
@@ -6761,7 +6761,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	flowre: {
-		tier: "OU",
+		tier: "LC Uber",
 		isNonstandard: "Future",
 	},
 	florious: {
@@ -6769,11 +6769,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	juarecito: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	ponchito: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	somboludo: {
@@ -6781,7 +6781,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	puppacti: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	marionettl: {
@@ -6789,7 +6789,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	tittai: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	octai: {
@@ -6797,7 +6797,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	charagon: {
-		tier: "OU",
+		tier: "LC Uber",
 		isNonstandard: "Future",
 	},
 	hyletrack: {
@@ -6805,7 +6805,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	euphoreal: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	armowite: {
@@ -6813,11 +6813,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	praunch: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	karawn: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	mabster: {
@@ -6825,7 +6825,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	tricient: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	tricillion: {
@@ -6833,7 +6833,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	poizookie: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	toxiraptor: {
@@ -6841,7 +6841,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	sabreck: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	huntabre: {
@@ -6853,11 +6853,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	singlets: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	dubus: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	tripsius: {
@@ -6865,7 +6865,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	miasmer: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	miasmortor: {
@@ -6877,11 +6877,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	hanginy: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	chancer: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	unjoy: {
@@ -6889,7 +6889,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	frosowl: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	whizzard: {
@@ -6897,11 +6897,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	drapillar: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	caparagon: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	mantrake: {
@@ -6917,7 +6917,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	inbitween: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	geigh: {
@@ -6925,19 +6925,19 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	jarape: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	spilefree: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	bongecko: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	mariguana: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	marleyzard: {
@@ -6945,7 +6945,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	ayylamo: {
-		tier: "OU",
+		tier: "LC Uber",
 		isNonstandard: "Future",
 	},
 	smellox: {
@@ -6957,7 +6957,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	oilslam: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	isissin: {
@@ -6965,11 +6965,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	stuffowl: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	durkey: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	upchucken: {
@@ -6977,11 +6977,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	dragun: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	triggedon: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	cannonance: {
@@ -7017,11 +7017,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	reptyke: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	rasclobber: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	batterex: {
@@ -7029,11 +7029,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	faeriock: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	sylvuin: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	oburonyxo: {
@@ -7041,11 +7041,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	cloucat: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	felimbus: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	deathorus: {
@@ -7053,7 +7053,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	knogoat: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	knogrinyu: {
@@ -7061,7 +7061,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	glasshot: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	glassannon: {
@@ -7069,7 +7069,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	fluffyeti: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	yedoom: {
@@ -7081,7 +7081,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	mudpants: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	mudslacks: {
@@ -7089,7 +7089,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	bukitlee: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	lossolith: {
@@ -7109,11 +7109,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	nonite: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	nonegative: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	nomaestro: {
@@ -7121,11 +7121,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	dunkypea: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	burdmen: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	nutzboltz: {
@@ -7133,7 +7133,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	kuklux: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	kuklan: {
@@ -7157,11 +7157,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	sapleaf: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	ignut: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	phantash: {
@@ -7177,7 +7177,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	ballacle: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	barbarkley: {
@@ -7185,7 +7185,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	kekroach: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	rekroach: {
@@ -7193,7 +7193,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	ricosheep: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	ricosuave: {
@@ -7205,7 +7205,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	crystaquil: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	crystaking: {
@@ -7217,11 +7217,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	floconut: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	sappalm: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	roynapalm: {
@@ -7229,11 +7229,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	manateet: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	manatorque: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	manatank: {
@@ -7249,7 +7249,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	ninoop: {
-		tier: "OU",
+		tier: "LC Uber",
 		isNonstandard: "Future",
 	},
 	draconius: {
@@ -7257,11 +7257,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	ticktac: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	eareticle: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	scythear: {
@@ -7269,7 +7269,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	cozload: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	snugware: {
@@ -7285,7 +7285,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	embortion: {
-		tier: "OU",
+		tier: "LC Uber",
 		isNonstandard: "Future",
 	},
 	premantom: {
@@ -7293,7 +7293,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	galavik: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	galavire: {
@@ -7305,7 +7305,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	pollefin: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	florigrace: {
@@ -7313,7 +7313,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	lasslee: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	wifemin: {
@@ -7349,11 +7349,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	spookster: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	spookeer: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	spookzilla: {
@@ -7361,11 +7361,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	derpato: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	retater: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	potarded: {
@@ -7409,11 +7409,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	sadrog: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	smugrok: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	peperee: {
@@ -7421,11 +7421,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	hodtog: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	wienebark: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	saudoge: {
@@ -7433,11 +7433,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	gnarrk: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	corsharrk: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	davyjaws: {
@@ -7445,7 +7445,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	humpunny: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	bunnorgy: {
@@ -7453,11 +7453,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	emelgy: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	fedorawk: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	fazeagle: {
@@ -7465,11 +7465,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	catikillar: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	tikoon: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	oogabuga: {
@@ -7477,7 +7477,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	ebining: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	emplyin: {
@@ -7485,7 +7485,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	upbote: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	upbeddit: {
@@ -7493,7 +7493,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	flipbird: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	wheygle: {
@@ -7509,7 +7509,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	bruhkid: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	ubruh: {
@@ -7517,7 +7517,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	walruse: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	walruskie: {
@@ -7525,7 +7525,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	diobat: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	warudio: {
@@ -7533,7 +7533,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	docee: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	donutsteel: {
@@ -7541,7 +7541,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	cakupple: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	fondupple: {
@@ -7557,7 +7557,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	egylamp: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	ruselamp: {
@@ -7565,7 +7565,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	mehndior: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	tunakking: {
@@ -7573,7 +7573,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	missletoe: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	hohohoming: {
@@ -7581,7 +7581,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	flaa: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	hopault: {
@@ -7589,7 +7589,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	araketsu: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	senketula: {
@@ -7601,7 +7601,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	cirpent: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	traumobra: {
@@ -7609,7 +7609,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	lizascoop: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	reptrill: {
@@ -7617,7 +7617,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	fefeion: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	feferun: {
@@ -7637,7 +7637,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	fresrye: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	dedwheat: {
@@ -7645,7 +7645,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	spargle: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	spedo: {
@@ -7653,7 +7653,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	housant: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	apartmant: {
@@ -7661,7 +7661,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	fuermiga: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	maripyro: {
@@ -7677,7 +7677,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	wastenaut: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	wantnaut: {
@@ -7689,7 +7689,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	snuffant: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	cokemmoth: {
@@ -7705,7 +7705,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	betacluck: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	thundacock: {
@@ -7713,7 +7713,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	twinfowl: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	avianjoin: {
@@ -7721,7 +7721,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	illuminowl: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	illumatrix: {
@@ -7729,7 +7729,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	typobop: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	yeerex: {
@@ -7737,7 +7737,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	randomix: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	cthullord: {
@@ -7745,7 +7745,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	quiboom: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	gynuke: {
@@ -7757,7 +7757,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	beatmarine: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	substarr: {
@@ -7769,11 +7769,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	hornigiri: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	hornicier: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	hornititan: {
@@ -7781,7 +7781,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	preasu: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	undastand: {
@@ -7789,7 +7789,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	warney: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	banageddon: {
@@ -7818,7 +7818,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	signot: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	reagain: {
@@ -7826,7 +7826,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	ormite: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	viristal: {
@@ -7834,7 +7834,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	rolango: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	dreameme: {
@@ -7850,7 +7850,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	iplora: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	chromox: {
@@ -7858,11 +7858,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	pitayen: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	dragaya: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	frutagon: {
@@ -7882,7 +7882,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	fireshitwi: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	fireshitre: {
@@ -7890,11 +7890,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	slugbud: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	slughug: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	slugfugg: {
@@ -7902,7 +7902,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	skeletroll: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	spookscare: {
@@ -7914,11 +7914,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	lankong: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	ballankey: {
-		tier: "OU",
+		tier: "NFE",
 		isNonstandard: "Future",
 	},
 	funnedong: {
@@ -7958,7 +7958,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	nutjobber: {
-		tier: "OU",
+		tier: "LC Uber",
 		isNonstandard: "Future",
 	},
 	deisnutz: {

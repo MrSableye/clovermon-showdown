@@ -70,6 +70,23 @@ export const Formats: FormatList = [
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	{
+		name: "[Gen 8 Clover Only] LC",
+		threads: [],
+		mod: 'gen8',
+		ruleset: [
+			'Little Cup',
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Species Clause',
+			'OHKO Clause',
+			'+Future',
+			'Fochun Pokedex',
+			'Fochun Items',
+		],
+		banlist: ['LC Uber', 'Moody', 'Baton Pass'],
+	},
+	{
 		section: "Clover x Pokemon Singles"
 	},
 	{
