@@ -6993,27 +6993,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	foryu: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	scytill: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	baddon: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	endranther: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	notridley: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	demiwaifu: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	reptyke: {
@@ -7333,7 +7333,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	semdemen: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	dragking: {
@@ -7401,11 +7401,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	vivaiger: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	heliofug: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	sadrog: {
@@ -7854,7 +7854,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	chromox: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	pitayen: {
@@ -7922,23 +7922,23 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	funnedong: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	narwhiz: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	niterpent: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	griffawork: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	boarnograf: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	admoot: {
@@ -7966,11 +7966,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	adesign: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	clovenix: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	jewipede: {

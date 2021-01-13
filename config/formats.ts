@@ -23,16 +23,52 @@ export const Formats: FormatList = [
 	///////////////////////////////////////////////////////////////////
 
 	{
-		section: "Clovermon Singles",
+		section: "Clover Only Singles",
 	},
 	{
-		name: "[Gen 8 Clover Only] AG",
+		name: "[Gen 8 Clover Only] Anything Goes",
+		threads: [],
+		mod: 'gen8',
+		ruleset: [
+			'Obtainable',
+			'Team Preview',
+			'HP Percentage Mod',
+			'Cancel Mod',
+			'Endless Battle Clause',
+			'Dynamax Clause',
+			'+Future',
+			'Fochun Pokedex',
+			'Fochun Items',
+		],
+	},
+	{
+		name: "[Gen 8 Clover Only] Ubers",
+		threads: [],
 		mod: 'gen8',
 		ruleset: ['Standard NatDex', 'Dynamax Clause', '+Future', 'Fochun Pokedex', 'Fochun Items'],
+		banlist: ['Baton Pass'],
+	},
+	{
+		name: "[Gen 8 Clover Only] OU",
+		threads: [],
+		mod: 'gen8',
+		ruleset: ['Standard NatDex', 'Dynamax Clause', '+Future', 'Fochun Pokedex', 'Fochun Items'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+	},
+	{
+		section: "Clover x Pokemon Singles"
 	},
 	{
 		name: "[Gen 8 National Dex] AG",
 		mod: 'gen8',
-		ruleset: ['Standard NatDex', 'Dynamax Clause', '+Future'],
+		ruleset: [
+			'Obtainable',
+			'Team Preview',
+			'HP Percentage Mod',
+			'Cancel Mod',
+			'Endless Battle Clause',
+			'Dynamax Clause',
+			'+Future',
+		],
 	},
 ];
