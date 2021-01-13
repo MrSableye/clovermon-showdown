@@ -6929,7 +6929,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	spilefree: {
-		tier: "NFE",
+		tier: "OU",
 		isNonstandard: "Future",
 	},
 	bongecko: {
