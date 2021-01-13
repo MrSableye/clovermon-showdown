@@ -4492,6 +4492,28 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	gradient: {
 		desc: "Gains an extra type in battle.",
 		name: "Gradient (IN-PROGRESS)",
+		onStart(pokemon) {
+			const possibleTargets = pokemon.side.foe.active.filter(foeActive => foeActive && this.isAdjacent(pokemon, foeActive));
+			let rand = 0;
+			if (possibleTargets.length > 1) rand = this.random(possibleTargets.length);
+			const target = possibleTargets[rand];
+			const color = target.species.color;
+			const colorType: Record<string, string> = {
+				red: 'Fire',
+				blue: 'Water',
+				yellow: 'Electric',
+				green: 'Grass',
+				black: 'Dark',
+				brown: 'Ground',
+				purple: 'Poison',
+				gray: 'Steel',
+				white: 'Flying',
+				pink: 'Fairy',
+			};
+			const type = colorType[this.toID(color)];
+			if (!target.setType(type)) return false;
+			this.add('-start', target, 'typeadd', 'Grass', '[from] ability: Gradient');
+		}
 	},
 	anyability: {
 		shortDesc: "It's an ability.",
