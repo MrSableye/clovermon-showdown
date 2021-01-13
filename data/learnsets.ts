@@ -89763,7 +89763,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			sleeptalk: [
 				"8T"
 			],
-			sparklearia: [
+			sparklingaria: [
 				"8L59"
 			],
 			strength: [
@@ -91266,7 +91266,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			snatch: [
 				"8M"
 			],
-			sparklearia: [
+			sparklingaria: [
 				"8L50"
 			],
 			substitute: [
@@ -93182,7 +93182,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			sleeptalk: [
 				"8T"
 			],
-			sparklearia: [
+			sparklingaria: [
 				"8L63"
 			],
 			strength: [
@@ -127855,7 +127855,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			solarbeam: [
 				"8M"
 			],
-			sparklearia: [
+			sparklingaria: [
 				"8L70"
 			],
 			steelwing: [
@@ -145830,7 +145830,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			cosmicpower: [
 				"8L61"
 			],
-			craftyguard: [
+			craftyshield: [
 				"8L1"
 			],
 			cut: [
@@ -165458,7 +165458,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			copycat: [
 				"8E"
 			],
-			craftyguard: [
+			craftyshield: [
 				"8L1"
 			],
 			dazzlinggleam: [
