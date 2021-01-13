@@ -7946,7 +7946,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	tentaquil: {
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: "Future",
 	},
 	blobbos: {
