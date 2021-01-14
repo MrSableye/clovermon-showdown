@@ -17939,7 +17939,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -20114,7 +20114,7 @@ export const Moves: {[moveid: string]: MoveData} = {
     type: "Water",
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
