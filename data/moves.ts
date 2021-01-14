@@ -19650,6 +19650,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onSwitchIn(pokemon) {
 				if (!pokemon.isGrounded()) return;
+				if (pokemon.runStatusImmunity('powder')) return;
 				if (pokemon.hasType('Grass')) {
 					this.add('-sideend', pokemon.side, 'move: Sleazy Spores', '[of] ' + pokemon);
 					pokemon.side.removeSideCondition('sleazyspores');
