@@ -26,6 +26,23 @@ export const Formats: FormatList = [
 		section: "Clover Only Singles",
 	},
 	{
+		name: "[Gen 8 Clover Only] Random Battle",
+		desc: `Randomized teams of level-balanced Pok&eacute;mon with sets that are generated to be competitively viable.`,
+		threads: [],
+		mod: 'gen8',
+		team: 'random',
+		ruleset: [
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Species Clause',
+			'OHKO Clause',
+			'+Future',
+			'Fochun Pokedex',
+			'Fochun Items',
+		],
+	},
+	{
 		name: "[Gen 8 Clover Only] Anything Goes",
 		threads: [],
 		mod: 'gen8',

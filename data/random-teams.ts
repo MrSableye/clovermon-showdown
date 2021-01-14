@@ -259,7 +259,8 @@ export class RandomTeams {
 		// Pick six random pokemon--no repeats, even among formes
 		// Also need to either normalize for formes or select formes at random
 		// Unreleased are okay but no CAP
-		const last = [0, 151, 251, 386, 493, 649, 721, 807, 890][this.gen];
+		const isClovermons = this.format.id.includes('cloveronly') || this.format.id.includes('nationaldex');
+		const last = isClovermons ? 69386 : [0, 151, 251, 386, 493, 649, 721, 807, 890][this.gen];
 
 		const pool: number[] = [];
 		for (const id in this.dex.data.FormatsData) {
