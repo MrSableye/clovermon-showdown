@@ -1458,6 +1458,7 @@ export class RandomTeams {
 					if (!species.types.includes(type)) continue;
 				}
 			}
+			if (this.format.id.includes('cloveronly') && (species.num <= 69000 || species.num > 69386)) continue;
 			pokemonPool.push(id);
 		}
 		return pokemonPool;
