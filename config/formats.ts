@@ -91,12 +91,7 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 8 Clover Only] Doubles OU",
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3672010/">Doubles OU Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3658826/">Doubles OU Sample Teams</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3673519/">Doubles OU Viability Rankings</a>`,
-		],
-
+		threads: [],
 		mod: 'gen8',
 		gameType: 'doubles',
 		ruleset: [
