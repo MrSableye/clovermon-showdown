@@ -1964,7 +1964,9 @@ export class TeamValidator {
 						if (learned.charAt(1) === 'R') {
 							moveSources.restrictedMove = moveid;
 						}
-						limit1 = false;
+						if (!sketch) {
+							limit1 = false;
+						}
 						moveSources.addGen(learnedGen);
 					} else if (learned.charAt(1) === 'E') {
 						// egg moves:
