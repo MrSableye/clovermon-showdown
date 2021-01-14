@@ -6954,8 +6954,7 @@ export const MovesText: {[k: string]: MoveText} = {
   },
   banhammer: {
 		name: "Ban Hammer",
-		shortDesc: "This Pokemon's hammer-based attacks have 1.2x power and have their negative effects removed.",
-		desc: "This Pokemon's hammer-based attacks have their power multiplied by 1.2 and have any adverse effects to the user removed.",
+		shortDesc: "Torments the foe.",
   },
   homerunbat: {
 		name: "Homerun Bat",
