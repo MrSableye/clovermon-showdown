@@ -19653,6 +19653,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (pokemon.hasType('Grass')) {
 					this.add('-sideend', pokemon.side, 'move: Sleazy Spores', '[of] ' + pokemon);
 					pokemon.side.removeSideCondition('sleazyspores');
+					return;
 				}
 				if (pokemon.hasItem('heavydutyboots')) return;
 				this.add('-activate', pokemon, 'move: Sleazy Spores');
