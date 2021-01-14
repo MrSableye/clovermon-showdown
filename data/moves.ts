@@ -20633,7 +20633,7 @@ export const Moves: {[moveid: string]: MoveData} = {
       if (pokemon.activeTurns > 1) {
         this.attrLastMove('[still]');
         this.add('-fail', pokemon);
-        this.hint("Fake Out only works on your first turn out.");
+        this.hint("Spook Out only works on your first turn out.");
         return null;
       }
     },
