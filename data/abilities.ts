@@ -4926,7 +4926,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
 			if (randomMoveSlot) {
 				const randomMove = this.dex.getMove(randomMoveSlot.move);
-				const item = `${this.toID(randomMove.type)}gem`;
+				const item = `${randomMove.type} Gem`;
 				if (pokemon.setItem(item)) {
 					this.add('-item', pokemon, item, '[from] ability: Jewelry');
 				}
