@@ -16992,7 +16992,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	analgae: {
 		num: 69002,
@@ -17029,7 +17030,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	rectreem: {
 		num: 69003,
@@ -17063,7 +17065,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	arabomb: {
 		num: 69004,
@@ -17097,7 +17100,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	iguallah: {
 		num: 69005,
@@ -17134,7 +17138,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	lizakbar: {
 		num: 69006,
@@ -17168,7 +17173,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	ejacasm: {
 		num: 69007,
@@ -17202,7 +17208,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	hosajack: {
 		num: 69008,
@@ -17239,7 +17246,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	condoom: {
 		num: 69009,
@@ -17273,7 +17281,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	squirrap: {
 		num: 69010,
@@ -17306,7 +17315,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	gampster: {
 		num: 69011,
@@ -17338,7 +17348,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	kengeon: {
 		num: 69012,
@@ -17373,7 +17384,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	frieden: {
 		num: 69013,
@@ -17410,7 +17422,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	corooster: {
 		num: 69014,
@@ -17444,7 +17457,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	curicrawl: {
 		num: 69015,
@@ -17478,7 +17492,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	gutsicoon: {
 		num: 69016,
@@ -17514,7 +17529,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	gutsifly: {
 		num: 69017,
@@ -17548,7 +17564,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	larvades: {
 		num: 69018,
@@ -17582,7 +17599,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	proboskito: {
 		num: 69019,
@@ -17619,7 +17637,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	clovour: {
 		num: 69020,
@@ -17655,7 +17674,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	chanolour: {
 		num: 69021,
@@ -17691,7 +17711,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	nauseon: {
 		num: 69022,
@@ -17726,7 +17747,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	hazmate: {
 		num: 69023,
@@ -17761,7 +17783,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	ebolable: {
 		num: 69024,
@@ -17796,7 +17819,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	pikotton: {
 		num: 69025,
@@ -17829,7 +17853,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	birdhouse: {
 		num: 69026,
@@ -17857,7 +17882,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Flying"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	lanshil: {
 		num: 69027,
@@ -17891,7 +17917,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	middril: {
 		num: 69028,
@@ -17927,7 +17954,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	shurismash: {
 		num: 69029,
@@ -17961,7 +17989,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	maymay: {
 		num: 69030,
@@ -17996,7 +18025,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	memenace: {
 		num: 69031,
@@ -18030,7 +18060,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	piguson: {
 		num: 69033,
@@ -18059,7 +18090,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Monster"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	armando: {
 		num: 69034,
@@ -18093,7 +18125,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	muscledude: {
 		num: 69035,
@@ -18129,7 +18162,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	tripecs: {
 		num: 69036,
@@ -18162,7 +18196,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	semdrop: {
 		num: 69037,
@@ -18197,7 +18232,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	semrust: {
 		num: 69038,
@@ -18235,7 +18271,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	furnazi: {
 		num: 69039,
@@ -18270,7 +18307,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	finasoven: {
 		num: 69040,
@@ -18305,7 +18343,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	troubait: {
 		num: 69041,
@@ -18339,7 +18378,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	tulure: {
 		num: 69042,
@@ -18376,7 +18416,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	monstrap: {
 		num: 69043,
@@ -18411,7 +18452,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	pixila: {
 		num: 69044,
@@ -18447,7 +18489,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	fairileon: {
 		num: 69045,
@@ -18482,7 +18525,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	wedgard: {
 		num: 69046,
@@ -18516,7 +18560,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	knokedge: {
 		num: 69047,
@@ -18549,7 +18594,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	ribbizap: {
 		num: 69048,
@@ -18580,7 +18626,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	elephas: {
 		num: 69049,
@@ -18612,7 +18659,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	seamapan: {
 		num: 69050,
@@ -18644,7 +18692,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.125,
 			F: 0.875
-		}
+		},
+		gen: 8
 	},
 	caroline: {
 		num: 69051,
@@ -18672,7 +18721,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Flying"
 		],
-		gender: "F"
+		gender: "F",
+		gen: 8
 	},
 	chompest: {
 		num: 69052,
@@ -18707,7 +18757,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	masdawg: {
 		num: 69053,
@@ -18741,7 +18792,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	pasdawg: {
 		num: 69054,
@@ -18775,7 +18827,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	spanke: {
 		num: 69055,
@@ -18811,7 +18864,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	anaconduke: {
 		num: 69056,
@@ -18846,7 +18900,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	fishnism: {
 		num: 69057,
@@ -18881,7 +18936,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.125,
 			F: 0.875
-		}
+		},
+		gen: 8
 	},
 	sjwhale: {
 		num: 69058,
@@ -18915,7 +18971,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.125,
 			F: 0.875
-		}
+		},
+		gen: 8
 	},
 	chezetta: {
 		num: 69059,
@@ -18951,7 +19008,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.125,
 			F: 0.875
-		}
+		},
+		gen: 8
 	},
 	mozzamazel: {
 		num: 69060,
@@ -18986,7 +19044,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.125,
 			F: 0.875
-		}
+		},
+		gen: 8
 	},
 	krokling: {
 		num: 69061,
@@ -19022,7 +19081,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	krokizon: {
 		num: 69062,
@@ -19057,7 +19117,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	conchilla: {
 		num: 69063,
@@ -19092,7 +19153,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	haremit: {
 		num: 69064,
@@ -19127,7 +19189,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	coolcube: {
 		num: 69065,
@@ -19159,7 +19222,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Amorphous",
 			"Fairy"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	tankube: {
 		num: 69066,
@@ -19193,7 +19257,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Amorphous",
 			"Fairy"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	fabkube: {
 		num: 69067,
@@ -19226,7 +19291,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Amorphous",
 			"Fairy"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	smogaroben: {
 		num: 69068,
@@ -19261,7 +19327,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	smoxilon: {
 		num: 69069,
@@ -19295,7 +19362,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	machmona: {
 		num: 69070,
@@ -19328,7 +19396,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	bacub: {
 		num: 69071,
@@ -19363,7 +19432,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	urswine: {
 		num: 69072,
@@ -19397,7 +19467,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	moostatic: {
 		num: 69073,
@@ -19431,7 +19502,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	mooshock: {
 		num: 69074,
@@ -19464,7 +19536,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	pretzely: {
 		num: 69075,
@@ -19496,7 +19569,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	deemdow: {
 		num: 69076,
@@ -19531,7 +19605,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	dowster: {
 		num: 69077,
@@ -19566,7 +19641,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	cheerly: {
 		num: 69078,
@@ -19598,7 +19674,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Fairy",
 			"Human-Like"
 		],
-		gender: "F"
+		gender: "F",
+		gen: 8
 	},
 	cheerific: {
 		num: 69079,
@@ -19632,7 +19709,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Fairy",
 			"Human-Like"
 		],
-		gender: "F"
+		gender: "F",
+		gen: 8
 	},
 	mennopaws: {
 		num: 69080,
@@ -19663,7 +19741,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "F"
+		gender: "F",
+		gen: 8
 	},
 	caracold: {
 		num: 69081,
@@ -19698,7 +19777,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	glacialynx: {
 		num: 69082,
@@ -19732,7 +19812,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	pengas: {
 		num: 69083,
@@ -19765,7 +19846,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	praeteur: {
 		num: 69084,
@@ -19799,7 +19881,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	praestish: {
 		num: 69085,
@@ -19832,7 +19915,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	flowre: {
 		num: 69086,
@@ -19867,7 +19951,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.125,
 			F: 0.875
-		}
+		},
+		gen: 8
 	},
 	florious: {
 		num: 69087,
@@ -19902,7 +19987,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	juarecito: {
 		num: 69088,
@@ -19936,7 +20022,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	ponchito: {
 		num: 69089,
@@ -19972,7 +20059,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	somboludo: {
 		num: 69090,
@@ -20006,7 +20094,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	puppacti: {
 		num: 69091,
@@ -20041,7 +20130,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	marionettl: {
 		num: 69092,
@@ -20076,7 +20166,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	tittai: {
 		num: 69093,
@@ -20112,7 +20203,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	octai: {
 		num: 69094,
@@ -20147,7 +20239,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	charagon: {
 		num: 69095,
@@ -20179,7 +20272,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Mineral"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	hyletrack: {
 		num: 69096,
@@ -20210,7 +20304,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Mineral"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	euphoreal: {
 		num: 69097,
@@ -20243,7 +20338,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	armowite: {
 		num: 69098,
@@ -20275,7 +20371,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	praunch: {
 		num: 69099,
@@ -20310,7 +20407,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	karawn: {
 		num: 69100,
@@ -20347,7 +20445,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	mabster: {
 		num: 69101,
@@ -20381,7 +20480,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	tricient: {
 		num: 69102,
@@ -20417,7 +20517,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	tricillion: {
 		num: 69103,
@@ -20452,7 +20553,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	poizookie: {
 		num: 69104,
@@ -20487,7 +20589,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	toxiraptor: {
 		num: 69105,
@@ -20521,7 +20624,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	sabreck: {
 		num: 69106,
@@ -20557,7 +20661,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	huntabre: {
 		num: 69107,
@@ -20592,7 +20697,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	pyralink: {
 		num: 69108,
@@ -20624,7 +20730,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	singlets: {
 		num: 69109,
@@ -20656,7 +20763,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Amorphous"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	dubus: {
 		num: 69110,
@@ -20690,7 +20798,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Amorphous"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	tripsius: {
 		num: 69111,
@@ -20721,7 +20830,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Amorphous"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	miasmer: {
 		num: 69112,
@@ -20756,7 +20866,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	miasmortor: {
 		num: 69113,
@@ -20790,7 +20901,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	cacademon: {
 		num: 69114,
@@ -20821,7 +20933,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	hanginy: {
 		num: 69115,
@@ -20852,7 +20965,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "F"
+		gender: "F",
+		gen: 8
 	},
 	chancer: {
 		num: 69116,
@@ -20886,7 +21000,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Fairy",
 			"Amorphous"
 		],
-		gender: "F"
+		gender: "F",
+		gen: 8
 	},
 	unjoy: {
 		num: 69117,
@@ -20917,7 +21032,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Fairy",
 			"Amorphous"
 		],
-		gender: "F"
+		gender: "F",
+		gen: 8
 	},
 	frosowl: {
 		num: 69118,
@@ -20952,7 +21068,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	whizzard: {
 		num: 69119,
@@ -20986,7 +21103,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	drapillar: {
 		num: 69120,
@@ -21022,7 +21140,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	caparagon: {
 		num: 69121,
@@ -21060,7 +21179,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	mantrake: {
 		num: 69122,
@@ -21095,7 +21215,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	ogrelord: {
 		num: 69123,
@@ -21126,7 +21247,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	chantruth: {
 		num: 69124,
@@ -21157,7 +21279,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	inbitween: {
 		num: 69125,
@@ -21193,7 +21316,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	geigh: {
 		num: 69126,
@@ -21225,7 +21349,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Field",
 			"Fairy"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	jarape: {
 		num: 69127,
@@ -21258,7 +21383,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Amorphous",
 			"Mineral"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	spilefree: {
 		num: 69128,
@@ -21291,7 +21417,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Amorphous",
 			"Mineral"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	bongecko: {
 		num: 69129,
@@ -21327,7 +21454,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	mariguana: {
 		num: 69130,
@@ -21365,7 +21493,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	marleyzard: {
 		num: 69131,
@@ -21401,7 +21530,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	ayylamo: {
 		num: 69133,
@@ -21436,7 +21566,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	smellox: {
 		num: 69134,
@@ -21468,7 +21599,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	chasumo: {
 		num: 69135,
@@ -21499,7 +21631,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	oilslam: {
 		num: 69136,
@@ -21535,7 +21668,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	isissin: {
 		num: 69137,
@@ -21570,7 +21704,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	stuffowl: {
 		num: 69138,
@@ -21604,7 +21739,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	durkey: {
 		num: 69139,
@@ -21641,7 +21777,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	upchucken: {
 		num: 69140,
@@ -21675,7 +21812,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	dragun: {
 		num: 69141,
@@ -21710,7 +21848,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	triggedon: {
 		num: 69142,
@@ -21747,7 +21886,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	cannonance: {
 		num: 69143,
@@ -21781,7 +21921,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	evacycle: {
 		num: 69144,
@@ -21809,7 +21950,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	foryu: {
 		num: 69145,
@@ -21837,7 +21979,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	scytill: {
 		num: 69146,
@@ -21865,7 +22008,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	baddon: {
 		num: 69147,
@@ -21893,7 +22037,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	endranther: {
 		num: 69148,
@@ -21920,7 +22065,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	notridley: {
 		num: 69149,
@@ -21948,7 +22094,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	demiwaifu: {
 		num: 69150,
@@ -21975,7 +22122,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "F"
+		gender: "F",
+		gen: 8
 	},
 	reptyke: {
 		num: 69152,
@@ -22009,7 +22157,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	rasclobber: {
 		num: 69153,
@@ -22046,7 +22195,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	batterex: {
 		num: 69154,
@@ -22080,7 +22230,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	faeriock: {
 		num: 69155,
@@ -22114,7 +22265,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	sylvuin: {
 		num: 69156,
@@ -22151,7 +22303,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	oburonyxo: {
 		num: 69157,
@@ -22185,7 +22338,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	cloucat: {
 		num: 69158,
@@ -22219,7 +22373,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	felimbus: {
 		num: 69159,
@@ -22256,7 +22411,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	deathorus: {
 		num: 69160,
@@ -22290,7 +22446,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	knogoat: {
 		num: 69161,
@@ -22324,7 +22481,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	knogrinyu: {
 		num: 69162,
@@ -22357,7 +22515,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	glasshot: {
 		num: 69163,
@@ -22392,7 +22551,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	glassannon: {
 		num: 69164,
@@ -22426,7 +22586,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	fluffyeti: {
 		num: 69165,
@@ -22461,7 +22622,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	yedoom: {
 		num: 69166,
@@ -22496,7 +22658,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	mirrostine: {
 		num: 69167,
@@ -22529,7 +22692,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	mudpants: {
 		num: 69168,
@@ -22564,7 +22728,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	mudslacks: {
 		num: 69169,
@@ -22598,7 +22763,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	bukitlee: {
 		num: 69170,
@@ -22628,7 +22794,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Mineral"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	lossolith: {
 		num: 69171,
@@ -22659,7 +22826,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Mineral"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	mimimie: {
 		num: 69172,
@@ -22692,7 +22860,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	sprucifix: {
 		num: 69173,
@@ -22722,7 +22891,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Grass",
 			"Human-Like"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	hulkan: {
 		num: 69174,
@@ -22753,7 +22923,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	nonite: {
 		num: 69175,
@@ -22785,7 +22956,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Flying",
 			"Fairy"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	nonegative: {
 		num: 69176,
@@ -22819,7 +22991,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Flying",
 			"Fairy"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	nomaestro: {
 		num: 69177,
@@ -22851,7 +23024,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Flying",
 			"Fairy"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	dunkypea: {
 		num: 69178,
@@ -22885,7 +23059,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	burdmen: {
 		num: 69179,
@@ -22921,7 +23096,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	nutzboltz: {
 		num: 69180,
@@ -22954,7 +23130,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	kuklux: {
 		num: 69181,
@@ -22988,7 +23165,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	kuklan: {
 		num: 69182,
@@ -23021,7 +23199,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	flameboyan: {
 		num: 69183,
@@ -23054,7 +23233,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	piicee: {
 		num: 69184,
@@ -23087,7 +23267,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	sonnanos: {
 		num: 69185,
@@ -23119,7 +23300,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	plebbles: {
 		num: 69186,
@@ -23150,7 +23332,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	sapleaf: {
 		num: 69187,
@@ -23184,7 +23367,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	ignut: {
 		num: 69188,
@@ -23220,7 +23404,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	phantash: {
 		num: 69189,
@@ -23253,7 +23438,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	polossus: {
 		num: 69190,
@@ -23281,7 +23467,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Amorphous"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	hitmonana: {
 		num: 69191,
@@ -23313,7 +23500,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	ballacle: {
 		num: 69192,
@@ -23344,7 +23532,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Mineral",
 			"Human-Like"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	barbarkley: {
 		num: 69193,
@@ -23375,7 +23564,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Mineral",
 			"Human-Like"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	kekroach: {
 		num: 69194,
@@ -23410,7 +23600,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	rekroach: {
 		num: 69195,
@@ -23444,7 +23635,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	ricosheep: {
 		num: 69196,
@@ -23478,7 +23670,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	ricosuave: {
 		num: 69197,
@@ -23511,7 +23704,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	spaghefant: {
 		num: 69198,
@@ -23544,7 +23738,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	crystaquil: {
 		num: 69199,
@@ -23579,7 +23774,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	crystaking: {
 		num: 69200,
@@ -23613,7 +23809,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	fontaba: {
 		num: 69201,
@@ -23640,7 +23837,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	floconut: {
 		num: 69202,
@@ -23674,7 +23872,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	sappalm: {
 		num: 69203,
@@ -23710,7 +23909,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	roynapalm: {
 		num: 69204,
@@ -23744,7 +23944,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	manateet: {
 		num: 69205,
@@ -23780,7 +23981,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	manatorque: {
 		num: 69206,
@@ -23818,7 +24020,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	manatank: {
 		num: 69207,
@@ -23853,7 +24056,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	anonymouse: {
 		num: 69208,
@@ -23885,7 +24089,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	motherfuck: {
 		num: 69209,
@@ -23917,7 +24122,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	ninoop: {
 		num: 69210,
@@ -23951,7 +24157,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	draconius: {
 		num: 69211,
@@ -23985,7 +24192,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	ticktac: {
 		num: 69212,
@@ -24020,7 +24228,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	eareticle: {
 		num: 69213,
@@ -24058,7 +24267,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	scythear: {
 		num: 69214,
@@ -24093,7 +24303,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	cozload: {
 		num: 69215,
@@ -24127,7 +24338,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Amorphous",
 			"Bug"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	snugware: {
 		num: 69216,
@@ -24160,7 +24372,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Amorphous",
 			"Bug"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	fleespecs: {
 		num: 69217,
@@ -24193,7 +24406,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Amorphous",
 			"Bug"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	honrade: {
 		num: 69218,
@@ -24226,7 +24440,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	embortion: {
 		num: 69219,
@@ -24261,7 +24476,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	premantom: {
 		num: 69220,
@@ -24295,7 +24511,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	galavik: {
 		num: 69221,
@@ -24327,7 +24544,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Amorphous",
 			"Mineral"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	galavire: {
 		num: 69222,
@@ -24359,7 +24577,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Amorphous",
 			"Mineral"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	galaviste: {
 		num: 69223,
@@ -24391,7 +24610,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Amorphous",
 			"Mineral"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	pollefin: {
 		num: 69224,
@@ -24427,7 +24647,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	florigrace: {
 		num: 69225,
@@ -24462,7 +24683,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	lasslee: {
 		num: 69226,
@@ -24497,7 +24719,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	wifemin: {
 		num: 69227,
@@ -24531,7 +24754,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	uwotto: {
 		num: 69228,
@@ -24567,7 +24791,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	venowatt: {
 		num: 69229,
@@ -24602,7 +24827,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	vaultevour: {
 		num: 69230,
@@ -24637,7 +24863,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	semdemen: {
 		num: 69231,
@@ -24673,7 +24900,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	dragking: {
 		num: 69232,
@@ -24705,7 +24933,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Field",
 			"Fairy"
 		],
-		gender: "F"
+		gender: "F",
+		gen: 8
 	},
 	kuuroba: {
 		num: 69233,
@@ -24740,7 +24969,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	baitmaster: {
 		num: 69234,
@@ -24775,7 +25005,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	spookster: {
 		num: 69235,
@@ -24809,7 +25040,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	spookeer: {
 		num: 69236,
@@ -24845,7 +25077,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	spookzilla: {
 		num: 69237,
@@ -24878,7 +25111,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	derpato: {
 		num: 69238,
@@ -24913,7 +25147,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	retater: {
 		num: 69239,
@@ -24950,7 +25185,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	potarded: {
 		num: 69240,
@@ -24984,7 +25220,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	sadfish: {
 		num: 69241,
@@ -25014,7 +25251,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	deloris: {
 		num: 69242,
@@ -25043,7 +25281,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Fairy",
 			"Grass"
 		],
-		gender: "F"
+		gender: "F",
+		gen: 8
 	},
 	oreon: {
 		num: 69243,
@@ -25074,7 +25313,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	farfigtron: {
 		num: 69244,
@@ -25106,7 +25346,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	regirode: {
 		num: 69245,
@@ -25134,7 +25375,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	regimelt: {
 		num: 69246,
@@ -25162,7 +25404,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	regirust: {
 		num: 69247,
@@ -25190,7 +25433,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	vivaiger: {
 		num: 69249,
@@ -25217,7 +25461,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	heliofug: {
 		num: 69250,
@@ -25245,7 +25490,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	sadrog: {
 		num: 69252,
@@ -25279,7 +25525,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	smugrok: {
 		num: 69253,
@@ -25315,7 +25562,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	peperee: {
 		num: 69254,
@@ -25349,7 +25597,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	hodtog: {
 		num: 69255,
@@ -25383,7 +25632,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	wienebark: {
 		num: 69256,
@@ -25419,7 +25669,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	saudoge: {
 		num: 69257,
@@ -25453,7 +25704,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	gnarrk: {
 		num: 69258,
@@ -25487,7 +25739,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	corsharrk: {
 		num: 69259,
@@ -25523,7 +25776,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	davyjaws: {
 		num: 69260,
@@ -25557,7 +25811,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	humpunny: {
 		num: 69261,
@@ -25591,7 +25846,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	bunnorgy: {
 		num: 69262,
@@ -25624,7 +25880,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	emelgy: {
 		num: 69263,
@@ -25659,7 +25916,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	fedorawk: {
 		num: 69264,
@@ -25696,7 +25954,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	fazeagle: {
 		num: 69265,
@@ -25730,7 +25989,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	catikillar: {
 		num: 69266,
@@ -25764,7 +26024,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	tikoon: {
 		num: 69267,
@@ -25800,7 +26061,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	oogabuga: {
 		num: 69268,
@@ -25833,7 +26095,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	ebining: {
 		num: 69269,
@@ -25867,7 +26130,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	emplyin: {
 		num: 69270,
@@ -25900,7 +26164,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	upbote: {
 		num: 69271,
@@ -25934,7 +26199,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	upbeddit: {
 		num: 69272,
@@ -25967,7 +26233,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	flipbird: {
 		num: 69273,
@@ -26003,7 +26270,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	wheygle: {
 		num: 69274,
@@ -26038,7 +26306,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	gangnome: {
 		num: 69275,
@@ -26069,7 +26338,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	pyongnome: {
 		num: 69276,
@@ -26099,7 +26369,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	bruhkid: {
 		num: 69277,
@@ -26135,7 +26406,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	ubruh: {
 		num: 69278,
@@ -26170,7 +26442,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	walruse: {
 		num: 69279,
@@ -26204,7 +26477,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	walruskie: {
 		num: 69280,
@@ -26237,7 +26511,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	diobat: {
 		num: 69281,
@@ -26272,7 +26547,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	warudio: {
 		num: 69282,
@@ -26307,7 +26583,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	docee: {
 		num: 69283,
@@ -26338,7 +26615,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Mineral"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	donutsteel: {
 		num: 69284,
@@ -26368,7 +26646,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Mineral"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	cakupple: {
 		num: 69285,
@@ -26404,7 +26683,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	fondupple: {
 		num: 69286,
@@ -26439,7 +26719,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	baloofang: {
 		num: 69287,
@@ -26470,7 +26751,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	socckat: {
 		num: 69288,
@@ -26502,7 +26784,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	egylamp: {
 		num: 69289,
@@ -26538,7 +26821,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	ruselamp: {
 		num: 69290,
@@ -26574,7 +26858,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	mehndior: {
 		num: 69291,
@@ -26609,7 +26894,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	tunakking: {
 		num: 69292,
@@ -26644,7 +26930,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	missletoe: {
 		num: 69293,
@@ -26679,7 +26966,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	hohohoming: {
 		num: 69294,
@@ -26713,7 +27001,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	flaa: {
 		num: 69295,
@@ -26748,7 +27037,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	hopault: {
 		num: 69296,
@@ -26783,7 +27073,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	araketsu: {
 		num: 69297,
@@ -26818,7 +27109,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	senketula: {
 		num: 69298,
@@ -26852,7 +27144,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	falcaptain: {
 		num: 69299,
@@ -26882,7 +27175,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Field",
 			"Flying"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	cirpent: {
 		num: 69300,
@@ -26918,7 +27212,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	traumobra: {
 		num: 69301,
@@ -26953,7 +27248,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	lizascoop: {
 		num: 69302,
@@ -26989,7 +27285,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	reptrill: {
 		num: 69303,
@@ -27024,7 +27321,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	fefeion: {
 		num: 69304,
@@ -27059,7 +27357,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	feferun: {
 		num: 69305,
@@ -27093,7 +27392,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	jerkle: {
 		num: 69306,
@@ -27122,7 +27422,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Mineral"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	faptime: {
 		num: 69307,
@@ -27151,7 +27452,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Mineral"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	shiriman: {
 		num: 69308,
@@ -27184,7 +27486,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	fresrye: {
 		num: 69309,
@@ -27216,7 +27519,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Grass",
 			"Amorphous"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	dedwheat: {
 		num: 69310,
@@ -27248,7 +27552,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Grass",
 			"Amorphous"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	spargle: {
 		num: 69313,
@@ -27282,7 +27587,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	spedo: {
 		num: 69314,
@@ -27315,7 +27621,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	housant: {
 		num: 69315,
@@ -27351,7 +27658,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	apartmant: {
 		num: 69316,
@@ -27386,7 +27694,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	fuermiga: {
 		num: 69317,
@@ -27421,7 +27730,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	maripyro: {
 		num: 69318,
@@ -27455,7 +27765,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	confirmabi: {
 		num: 69319,
@@ -27483,7 +27794,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Grass"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	bulbapedo: {
 		num: 69320,
@@ -27514,7 +27826,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.875,
 			F: 0.125
-		}
+		},
+		gen: 8
 	},
 	wastenaut: {
 		num: 69321,
@@ -27550,7 +27863,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	wantnaut: {
 		num: 69322,
@@ -27585,7 +27899,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	cansumor: {
 		num: 69323,
@@ -27616,7 +27931,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	snuffant: {
 		num: 69324,
@@ -27651,7 +27967,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	cokemmoth: {
 		num: 69325,
@@ -27685,7 +28002,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	grimdak: {
 		num: 69326,
@@ -27718,7 +28036,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	shroofle: {
 		num: 69327,
@@ -27749,7 +28068,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	betacluck: {
 		num: 69328,
@@ -27781,7 +28101,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Flying",
 			"Human-Like"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	thundacock: {
 		num: 69329,
@@ -27812,7 +28133,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Flying",
 			"Human-Like"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	twinfowl: {
 		num: 69330,
@@ -27847,7 +28169,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	avianjoin: {
 		num: 69331,
@@ -27881,7 +28204,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	illuminowl: {
 		num: 69332,
@@ -27917,7 +28241,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	illumatrix: {
 		num: 69333,
@@ -27952,7 +28277,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	typobop: {
 		num: 69334,
@@ -27988,7 +28314,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	yeerex: {
 		num: 69335,
@@ -28024,7 +28351,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	randomix: {
 		num: 69336,
@@ -28060,7 +28388,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	cthullord: {
 		num: 69337,
@@ -28096,7 +28425,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.75,
 			F: 0.25
-		}
+		},
+		gen: 8
 	},
 	quiboom: {
 		num: 69338,
@@ -28129,7 +28459,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	gynuke: {
 		num: 69339,
@@ -28163,7 +28494,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	rainglock: {
 		num: 69340,
@@ -28190,7 +28522,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Amorphous"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	beatmarine: {
 		num: 69341,
@@ -28225,7 +28558,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	substarr: {
 		num: 69342,
@@ -28259,7 +28593,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	hofucno: {
 		num: 69343,
@@ -28291,7 +28626,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	hornigiri: {
 		num: 69344,
@@ -28326,7 +28662,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	hornicier: {
 		num: 69345,
@@ -28363,7 +28700,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	hornititan: {
 		num: 69346,
@@ -28398,7 +28736,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.25,
 			F: 0.75
-		}
+		},
+		gen: 8
 	},
 	preasu: {
 		num: 69347,
@@ -28433,7 +28772,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	undastand: {
 		num: 69348,
@@ -28467,7 +28807,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	warney: {
 		num: 69349,
@@ -28501,7 +28842,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	banageddon: {
 		num: 69350,
@@ -28534,7 +28876,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	acufront: {
 		num: 69351,
@@ -28574,7 +28917,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	acufrontf: {
 		num: 69351,
@@ -28603,7 +28947,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Fairy"
 		],
 		requiredAbility: "Forecast",
-		battleOnly: "Acufront"
+		battleOnly: "Acufront",
+		gen: 8
 	},
 	acufrontw: {
 		num: 69351,
@@ -28632,7 +28977,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Fairy"
 		],
 		requiredAbility: "Forecast",
-		battleOnly: "Acufront"
+		battleOnly: "Acufront",
+		gen: 8
 	},
 	acufronti: {
 		num: 69351,
@@ -28661,7 +29007,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Fairy"
 		],
 		requiredAbility: "Forecast",
-		battleOnly: "Acufront"
+		battleOnly: "Acufront",
+		gen: 8
 	},
 	militant: {
 		num: 69352,
@@ -28692,7 +29039,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	shiggydig: {
 		num: 69353,
@@ -28724,7 +29072,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	signot: {
 		num: 69354,
@@ -28759,7 +29108,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	reagain: {
 		num: 69355,
@@ -28794,7 +29144,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	ormite: {
 		num: 69356,
@@ -28827,7 +29178,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Mineral",
 			"Amorphous"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	viristal: {
 		num: 69357,
@@ -28860,7 +29212,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Mineral",
 			"Amorphous"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	rolango: {
 		num: 69358,
@@ -28895,7 +29248,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	dreameme: {
 		num: 69359,
@@ -28929,7 +29283,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	pearchie: {
 		num: 69360,
@@ -28962,7 +29317,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	tarditank: {
 		num: 69361,
@@ -28994,7 +29350,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	iplora: {
 		num: 69362,
@@ -29025,7 +29382,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Mineral"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	chromox: {
 		num: 69363,
@@ -29056,7 +29414,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Mineral"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	pitayen: {
 		num: 69364,
@@ -29092,7 +29451,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	dragaya: {
 		num: 69365,
@@ -29130,7 +29490,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	frutagon: {
 		num: 69366,
@@ -29165,7 +29526,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	biteki: {
 		num: 69367,
@@ -29195,7 +29557,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Mineral",
 			"Amorphous"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	sesquatch: {
 		num: 69368,
@@ -29226,7 +29589,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	fireshi: {
 		num: 69369,
@@ -29262,7 +29626,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	fireshitwi: {
 		num: 69370,
@@ -29300,7 +29665,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	fireshitre: {
 		num: 69371,
@@ -29335,7 +29701,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	slugbud: {
 		num: 69372,
@@ -29367,7 +29734,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Dragon"
 		],
-		gender: "F"
+		gender: "F",
+		gen: 8
 	},
 	slughug: {
 		num: 69373,
@@ -29401,7 +29769,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Dragon"
 		],
-		gender: "F"
+		gender: "F",
+		gen: 8
 	},
 	slugfugg: {
 		num: 69374,
@@ -29432,7 +29801,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Dragon"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	skeletroll: {
 		num: 69375,
@@ -29468,7 +29838,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	spookscare: {
 		num: 69376,
@@ -29502,7 +29873,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	goryannus: {
 		num: 69377,
@@ -29537,7 +29909,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	lankong: {
 		num: 69378,
@@ -29569,7 +29942,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Field",
 			"Human-Like"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	ballankey: {
 		num: 69379,
@@ -29604,7 +29978,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Field",
 			"Human-Like"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	funnedong: {
 		num: 69380,
@@ -29636,7 +30011,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			"Field",
 			"Human-Like"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	narwhiz: {
 		num: 69381,
@@ -29664,7 +30040,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	niterpent: {
 		num: 69382,
@@ -29692,7 +30069,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	griffawork: {
 		num: 69383,
@@ -29720,7 +30098,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	boarnograf: {
 		num: 69384,
@@ -29748,7 +30127,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	admoot: {
 		num: 69385,
@@ -29775,7 +30155,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	},
 	tentaquil: {
 		num: 69386,
@@ -29801,7 +30182,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	blobbos: {
 		num: 69132,
@@ -29830,7 +30212,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Ditto"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	vandash: {
 		num: 69032,
@@ -29862,7 +30245,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	nutjobber: {
 		num: 69311,
@@ -29898,7 +30282,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	deisnutz: {
 		num: 69312,
@@ -29933,7 +30318,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		genderRatio: {
 			M: 0.5,
 			F: 0.5
-		}
+		},
+		gen: 8
 	},
 	adesign: {
 		num: 69251,
@@ -29959,7 +30345,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	clovenix: {
 		num: 69151,
@@ -29987,7 +30374,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "N"
+		gender: "N",
+		gen: 8
 	},
 	jewipede: {
 		num: 69248,
@@ -30015,6 +30403,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		eggGroups: [
 			"Undiscovered"
 		],
-		gender: "M"
+		gender: "M",
+		gen: 8
 	}
 };
