@@ -19767,17 +19767,34 @@ export const Moves: {[moveid: string]: MoveData} = {
     flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
   },
   lickclean: {
-    desc: "IMPLEMENT THIS",
-    num: 6999,
+    num: 69045,
     accuracy: 100,
-    basePower: 60,
+    basePower: 40,
     category: "Physical",
-    name: 'lickclean (placeholder)',
-    pp: 0,
+    name: "Lick Clean",
+    pp: 20,
     priority: 0,
     target: "normal",
-    type: "Grass",
-    flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+    type: "Water",
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target, source) {
+			const positiveBoosts = target.positiveBoosts();
+			const adjustedBoosts: SparseBoostsTable = {};
+			for (let statName in target.boosts) {
+				const stage = target.boosts[statName as BoostName];
+				adjustedBoosts[statName as BoostName] = target.boosts[statName as BoostName];
+				if (stage > 0) {
+					adjustedBoosts[statName as BoostName] = 0;
+				}
+			}
+
+			if (positiveBoosts > 0) {
+				let factor = 12.5 * Math.pow(2, Math.max(4, positiveBoosts));
+				target.setBoost(adjustedBoosts);
+				this.add('-clearpositiveboost', target, source, 'move: Lick Clean');
+				return !!this.heal(this.modify(source.maxhp, factor));
+			}
+		},
   },
   speedweed: {
     num: 69041,
@@ -19975,7 +19992,7 @@ export const Moves: {[moveid: string]: MoveData} = {
     priority: 0,
     target: "self",
     type: "Fairy",
-		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		flags: {},
 		onHit(pokemon) {
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'sleazyspores', 'gmaxsteelsurge', 'sleazyspores'];
 			const removedConditions = [];

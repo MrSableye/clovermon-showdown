@@ -6861,7 +6861,7 @@ export const MovesText: {[k: string]: MoveText} = {
   },
   lickclean: {
 		name: "Lick Clean",
-    shortDesc: "Unimplemented",
+		shortDesc: "Resets all of the target's positive stat stages to 0. Heals for each boost removed.",
   },
   speedweed: {
 		name: "Speed Weed",
