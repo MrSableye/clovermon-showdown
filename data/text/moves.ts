@@ -6833,11 +6833,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	/* Clovermons */
 	sleazyspores: {
 		name: "Sleazy Spores",
-		shortDesc: "Lowers Speed of grounded foes by 1 on switch-in.",
-		desc: "Sets up a hazard on the opposing side of the field, lowering the Speed by 1 stage of each opposing Pokemon that switches in, unless it is a Flying-type Pokemon or has the Levitate Ability. Fails if the effect is already active on the opposing side. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin or Defog successfully, is hit by Defog, or a grounded Grass-type Pokemon switches in",
-		start: "  A puff of sleazy spores have been released on the ground around [TEAM]!",
-		end: "  The puff of sleazy spores have disappeared from the ground around [TEAM]!",
-		activate: "  [POKEMON] was caught in a puff of sleazy spores!",
+		shortDesc: "Lowers Speed of foes by 1 on switch-in.",
+		desc: "Sets up a hazard on the opposing side of the field, lowering the Speed by 1 stage of each opposing Pokemon that switches in, unless it is immune to powder moves. Fails if the effect is already active on the opposing side. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin or Defog successfully, is hit by Defog, or a Grass-type Pokemon switches in",
+		start: "  Sleazy spores float in the air around [TEAM]!",
+		end: "  The sleazy spores disappeared from around [TEAM]!",
+		activate: "  Sleazy spores sedated [POKEMON]!",
   },
   slimegulp: {
 		name: "Slime Gulp",
