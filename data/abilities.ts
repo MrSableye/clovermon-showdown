@@ -4852,7 +4852,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
   degradation: {
     name: "Degradation",
-		onSourceEffectiveness(typeMod, target, type, move) {
+		onEffectiveness(typeMod, target, type, move) {
 		   if (move && type === 'Normal' && move.type === 'Dark') return 1;
 			 return typeMod;
 		},
@@ -4947,8 +4947,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "More Room",
 	},
   pollution: {
-    name: "Pollution",
-		onSourceEffectiveness(typeMod, target, type, move) {
+		name: "Pollution",
+		onEffectiveness(typeMod, target, type, move) {
 		   if (move && type === 'Water' && move.type === 'Poison') return 1;
 			 return typeMod;
 		},
