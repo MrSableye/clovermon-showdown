@@ -37,7 +37,6 @@ export const Formats: FormatList = [
 			'Sleep Clause Mod',
 			'Species Clause',
 			'OHKO Clause',
-			'+Future',
 			'Fochun Pokedex',
 			'Fochun Items',
 		],
