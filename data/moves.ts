@@ -19789,7 +19789,7 @@ export const Moves: {[moveid: string]: MoveData} = {
     type: "Steel",
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
-			if (type === 'Steel') return 1;
+			if (type === 'Steel') return 0;
 		},
 		breaksProtect: true,
 		infiltrates: true,
