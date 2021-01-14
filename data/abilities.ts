@@ -4439,6 +4439,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	/* Clovermons */
 	showerpower: {
+		name: "Shower Power",
 		onModifySpAPriority: 5,
 		onModifySpA(spa, pokemon) {
 			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
@@ -4451,10 +4452,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.damage(target.baseMaxhp / 8, target, target);
 			}
 		},
-		name: "Shower Power",
 	},
 	concert: {
-		desc: "All Pokemon on the field lose 1/16 HP per turn if they're not immune to sound effects.",
 		name: "Concert",
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
@@ -4472,7 +4471,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 	},
 	waitforit: {
-		shortDesc: "Boosts all stats after 5 turns.",
 		name: "Wait For It",
 		onStart(pokemon) {
 			pokemon.addVolatile('waitforit');
@@ -4500,7 +4498,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 	},
 	gradient: {
-		desc: "Gains an extra type in battle.",
 		name: "Gradient",
 		onStart(pokemon) {
 			const possibleTargets = pokemon.side.foe.active.filter(foeActive => foeActive && this.isAdjacent(pokemon, foeActive));
@@ -4522,11 +4519,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			};
 			const type = colorType[this.toID(color)];
 			if (!target.setType(type)) return false;
-			this.add('-start', target, 'typeadd', 'Grass', '[from] ability: Gradient');
+			this.add('-start', target, 'typeadd', type, '[from] ability: Gradient');
 		}
 	},
 	anyability: {
-		shortDesc: "It's any ability. Becomes a random ability on switch-in.",
 		name: "Any Ability",
 		onStart(pokemon) {
 			const validAbilityList = [
@@ -4782,8 +4778,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		}
 	},
 	adminabuse: {
-		desc: "This Pokemon's hammer-based attacks have their power multiplied by 1.2 and have any adverse effects to the user removed.",
-		shortDesc: "This Pokemon's hammer-based attacks have 1.2x power and have their negative effects removed.",
+		name: "Admin Abuse",
 		onModifyMove(move, pokemon) {
 			if (['hammerarm', 'dragonhammer', 'woodhammer', 'icehammer', 'crabhammer', 'banhammer'].includes(move.id)) {
 				if (move.recoil) delete move.recoil;
@@ -4797,22 +4792,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		  	}
 			}
 		},
-		name: "Admin Abuse",
 	},
 	anability: {
-		shortDesc: "It's an ability.",
 		name: "An Ability",
 	},
 	bigguy: {
-		shortDesc: "Summons Gravity upon switch-in.",
+		name: "Big Guy",
 		onStart() {
 			this.field.addPseudoWeather('gravity');
 		},
-		name: "Big Guy",
 	},
 	blademaster: {
-		desc: "This Pokemon's sword- or cutting-based attacks have their power multiplied by 1.2 and have +1 to their crit ratio.",
-		shortDesc: "This Pokemon's sword- or cutting-based attacks have 1.2x power and have +1 crit ratio.",
+		name: "Blademaster",
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
 			if (['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust'].includes(move.id)) {
@@ -4823,11 +4814,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyCritRatio(critRatio, target, source, move) {
 			if (target && ['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust'].includes(move.id)) return critRatio + 1;
 		},
-		name: "Blademaster",
 	},
 	boombox: {
-		desc: "This Pokemon's sound-based attacks have their power multiplied by 1.2.",
-		shortDesc: "This Pokemon's sound-based attacks have 1.2x power.",
+		name: "Boombox",
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['sound']) {
@@ -4835,10 +4824,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify([0x1333, 0x1000]);
 			}
 		},
-		name: "Boombox",
 	},
 	bonezone: {
-		shortDesc: "This Pokemon's Bone-based moves ignore immunities.",
+		name: "Bone Zone",
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Bone Zone');
 		},
@@ -4846,11 +4834,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyMove(move) {
 			if (['bonemerang', 'boneclub', 'shadowbone', 'bonerush'].includes(move.id)) move.ignoreImmunity = true;
 		},
-		name: "Bone Zone",
 	},
 	degenerate: {
-		desc: "This Pokemon's Normal-type moves become Dark-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
-		shortDesc: "This Pokemon's Normal-type moves become Dark type and have 1.2x power.",
+		name: "Degenerate",
 		onModifyMovePriority: -1,
 		onModifyMove(move) {
 			if (move.type === 'Normal' && !['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'weatherball'].includes(move.id) && !(move.isZ && move.category !== 'Status')) {
@@ -4863,21 +4849,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify([0x1333, 0x1000]);
 			}
 		},
-		name: "Degenerate",
 		rating: 4,
 	},
   degradation: {
-    desc: "This Pokemon's Dark-type attacks are super-effective against the Normal type.",
-    shortDesc: "This Pokemon's Dark-type attacks are super-effective against Normal-types.",
+    name: "Degradation",
 		onSourceEffectiveness(typeMod, target, type, move) {
 		   if (move && type === 'Normal' && move.type === 'Dark') return 1;
 			 return typeMod;
 		},
-    name: "Degradation",
   },
 	flareheal: {
-		desc: "If this Pokemon is burned, it restores 1/8 of its maximum HP, rounded down, at the end of each turn instead of losing HP; burn's physical damage halving is ignored.",
-		shortDesc: "This Pokemon is healed by 1/8 of its max HP each turn when burned; no HP loss or reduction to the power of its physical moves.",
+		name: "Flare Heal",
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
 			if (attacker.status === 'brn' && move.id !== 'facade') {
@@ -4891,21 +4873,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return false;
 			}
 		},
-		name: "Flare Heal",
 	},
 	ghostnote: {
-		desc: "This Pokemon's sound-based moves become Ghost-type moves. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
-		shortDesc: "This Pokemon's sound-based moves become Ghost type.",
+		name: "Ghost Note",
 		onModifyMovePriority: -1,
 		onModifyMove(move) {
 			if (move.flags['sound']) {
 				move.type = 'Ghost';
 			}
 		},
-		name: "Ghost Note",
 	},
 	hydrophile: {
-		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack.",
+		name: "Hydrophile",
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Water') {
@@ -4920,17 +4899,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(1.5);
 			}
 		},
-		name: "Hydrophile",
 	},
 	inversion: {
-		shortDesc: "Summons Inverse Room upon switch-in.",
+		name: "Inverse Room",
 		onStart(source) {
 			this.field.addPseudoWeather('inverseroom');
 		},
-		name: "Inverse Room",
 	},
 	jewelry: {
-		shortDesc: "If this Pokemon has no item, it finds a gem matching the type of one of its moves at the end of this turn.",
+		name: "Jewelry",
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
 		onResidual(pokemon) {
@@ -4956,10 +4933,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				pokemon.setItem(randomMove.type)
 			}
 		},
-		name: "Jewelry",
 	},
 	madman: {
-		shortDesc: "This Pokemon's contact moves have a 30% chance of confusing.",
+		name: "Madman",
 		onDamagingHit(damage, target, source, move) {
 			if (move.flags['contact']) {
 				if (this.randomChance(3, 10)) {
@@ -4967,26 +4943,19 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
-		name: "Madman",
 	},
 	moreroom: {
-		desc: "The duration of Inverse Room, Magic Room, Trick Room, and Wonder Room is increased by 2 turns if the effect is started by this Pokemon.",
-		shortDesc: "When used, Room effects last 2 more turns.",
 		name: "More Room",
-		// Only need to implement inverse room
 	},
   pollution: {
-    desc: "This Pokemon's Poison-type attacks are super-effective against the Water type.",
-    shortDesc: "This Pokemon's Poison-type attacks are super-effective against Water-types.",
+    name: "Pollution",
 		onSourceEffectiveness(typeMod, target, type, move) {
 		   if (move && type === 'Water' && move.type === 'Poison') return 1;
 			 return typeMod;
 		},
-    name: "Pollution",
   },
 	pozzed: {
-		desc: "This Pokemon is immune to Poison-type moves and restores 1/4 of its maximum HP, rounded down, when hit by a Poison-type move.",
-		shortDesc: "This Pokemon heals 1/4 of its max HP when hit by Poison moves; Poison immunity. Toxic Orb, Toxic Spikes, etc. and non-Poison-type moves can still Poison this Pokemon.",
+		name: "Pozzed",
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Poison') {
 				if (!this.heal(target.maxhp / 4)) {
@@ -4995,10 +4964,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 		},
-		name: "Pozzed",
 	},
 	puppeteer: {
-		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Bug-type attack.",
+		name: "Puppeteer",
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Bug') {
@@ -5013,27 +4981,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(1.5);
 			}
 		},
-		name: "Puppeteer",
-	},
-	rainpower: {
-		desc: "If Rain Dance is active, this Pokemon's Special Attack is multiplied by 1.5 and it loses 1/8 of its maximum HP, rounded down, at the end of each turn.",
-		shortDesc: "If Rain Dance is active, this Pokemon's Sp. Atk is 1.5x; loses 1/8 max HP per turn.",
-		onModifySpAPriority: 5,
-		onModifySpA(spa, pokemon) {
-			if (this.field.isWeather(['raindance', 'primordialsea'])) {
-				return this.chainModify(1.5);
-			}
-		},
-		onWeather(target, source, effect) {
-			if (effect.id === 'raindance' || effect.id === 'primordialsea') {
-				this.damage(target.maxhp / 8, target, target);
-			}
-		},
-		name: "Rain Power",
 	},
 	striker: {
-		desc: "This Pokemon's kick-based attacks have their power multiplied by 1.2 and ignore accuracy checks to always hit.",
-		shortDesc: "This Pokemon's kick-based attacks have 1.2x power and always hit.",
+		name: "Striker",
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
 			if (['jumpkick', 'highjumpkick', 'blazekick', 'doublekick', 'lowkick', 'triplekick', 'rollingkick', 'shadowkick', 'megakick', 'thunderouskick', 'tropkick'].includes(move.id)) {
@@ -5048,21 +4998,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			return accuracy;
 		},
-		name: "Striker",
 	},
 	suddenly: {
-    shortDesc: "This Pokemon's two-turn moves complete in one turn (except Sky Drop).",
+    name: "Suddenly",
 		onChargeMove(pokemon, target, move) {
 				this.debug('suddenly - remove charge turn for ' + move.id);
 				this.attrLastMove('[still]');
 				this.addMove('-anim', pokemon, move.name, target);
 				return false; // skip charge turn
 		},
-		name: "Suddenly",
 	},
 	woke: {
-		desc: "Pokemon making contact with this Pokemon have their Ability changed to Woke. Does not affect the Battle Bond, Comatose, Disguise, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, and Zen Mode Abilities.",
-		shortDesc: "Pokemon making contact with this Pokemon have their Ability changed to Woke.",
 		name: "Woke",
 		onDamagingHit(damage, target, source, move) {
 			const sourceAbility = source.getAbility();
@@ -5081,11 +5027,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 	},
 	woodenguard: {
-		shortDesc: "This Pokemon recieves 1.5x damage from Fire moves, 0.75x from other moves.",
+		name: "Wooden Guard",
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Fire') return this.chainModify(1.5);
 			return this.chainModify(0.75);
 		},
-		name: "Wooden Guard",
 	},
 };

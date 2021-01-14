@@ -1706,4 +1706,128 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		activate: "  [POKEMON] extends [MOVE] by 2 turns!",
 	},
+
+	/* Clovermons */
+	showerpower: {
+		name: "Shower Power",
+		desc: "If Rain Dance is active, this Pokemon's Special Attack is multiplied by 1.5 and it loses 1/8 of its maximum HP, rounded down, at the end of each turn. If this Pokemon is holding Utility Umbrella, its Special Attack remains the same and it does not lose any HP.",
+		shortDesc: "If Rain Dance is active, this Pokemon's Sp. Atk is 1.5x; loses 1/8 max HP per turn.",
+	},
+	concert: {
+		name: "Concert",
+		shortDesc: "All Pokemon on the field lose 1/16 HP per turn if they're not immune to sound effects.",
+		start: "  [POKEMON] is getting ready to throw a concert!",
+	},
+	waitforit: {
+		shortDesc: "Boosts all stats after 5 turns.",
+		name: "Wait For It",
+		start: "  [POKEMON] is asking you kindly to wait!",
+		end: " [POKEMON]'s announcement came true!"
+	},
+	gradient: {
+		name: "Gradient",
+		shortDesc: "Gains an extra type in battle based on the foe's color.",
+		desc: "TODO"
+	},
+	anyability: {
+		name: "Any Ability",
+		shortDesc: "It's any ability. Becomes a random ability available in Clover on switch-in.",
+		changeAbility: "  [POKEMON] acquired [ABILITY] :^)",
+	},
+	adminabuse: {
+		name: "Admin Abuse",
+		shortDesc: "This Pokemon's hammer-based attacks have 1.2x power and have their negative effects removed.",
+	},
+	anability: {
+		name: "An Ability",
+		shortDesc: "No competitive use :^)",
+	},
+	bigguy: {
+		name: "Big Guy",
+		shortDesc: "Summons Gravity upon switch-in.",
+	},
+	blademaster: {
+		name: "Blademaster",
+		shortDesc: "This Pokemon's sword- or cutting-based attacks have 1.2x power and have +1 crit ratio.",
+	},
+	boombox: {
+		name: "Boombox",
+		shortDesc: "This Pokemon's sound-based attacks have their power multiplied by 1.2.",
+	},
+	bonezone: {
+		name: "Bone Zone",
+		shortDesc: "This Pokemon's Bone-based moves ignore immunities.",
+		start: "  [POKEMON] has entered the Bone Zone!"
+	},
+	degenerate: {
+		name: "Degenerate",
+		shortDesc: "This Pokemon's Normal-type moves become Dark type and have 1.2x power.",
+		desc: "This Pokemon's Normal-type moves become Dark-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+	},
+  degradation: {
+		name: "Degradation",
+    shortDesc: "This Pokemon's Dark-type attacks are super-effective against Normal-types.",
+  },
+	flareheal: {
+		name: "Flare Heal",
+		shortDesc: "This Pokemon is healed by 1/8 of its max HP each turn when burned; no HP loss or reduction to the power of its physical moves.",
+		desc: "If this Pokemon is burned, it restores 1/8 of its maximum HP, rounded down, at the end of each turn instead of losing HP; burn's physical damage halving is ignored.",
+	},
+	ghostnote: {
+		name: "Ghost Note",
+		shortDesc: "This Pokemon's sound-based moves become Ghost type.",
+		desc: "This Pokemon's sound-based moves become Ghost-type moves. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+	},
+	hydrophile: {
+		name: "Hydrophile",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack.",
+	},
+	inversion: {
+		name: "Inverse Room",
+		shortDesc: "Summons Inverse Room upon switch-in.",
+	},
+	jewelry: {
+		name: "Jewelry",
+		shortDesc: "If this Pokemon has no item, it finds a gem matching the type of one of its moves at the end of this turn.",
+		desc: "If this Pokemon has no item, it finds a gem matching the type of one of its moves, prioritizing attacking moves, at the end of this turn.",
+	},
+	madman: {
+		name: "Madman",
+		shortDesc: "This Pokemon's contact moves have a 30% chance of confusing.",
+	},
+	moreroom: {
+		name: "More Room",
+		shortDesc: "When used, Room effects last 2 more turns.",
+		desc: "The duration of Inverse Room, Magic Room, Trick Room, and Wonder Room is increased by 2 turns if the effect is started by this Pokemon.",
+	},
+  pollution: {
+		name: "Pollution",
+    shortDesc: "This Pokemon's Poison-type attacks are super-effective against Water-types.",
+  },
+	pozzed: {
+		name: "Pozzed",
+		shortDesc: "This Pokemon is immune to Poison-type moves and restores 1/4 of its maximum HP, rounded down, when hit by a Poison-type move.",
+		desc: "This Pokemon heals 1/4 of its max HP when hit by Poison moves; Poison immunity. Toxic Orb, Toxic Spikes, etc. and non-Poison-type moves can still Poison this Pokemon.",
+	},
+	puppeteer: {
+		name: "Puppeteer",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Bug-type attack.",
+	},
+	striker: {
+		name: "Striker",
+		shortDesc: "This Pokemon's kick-based attacks have 1.2x power and always hit.",
+	},
+	suddenly: {
+		name: "Suddenly",
+    shortDesc: "This Pokemon's two-turn moves complete in one turn (except Sky Drop).",
+	},
+	woke: {
+		name: "Woke",
+		shortDesc: "Pokemon making contact with this Pokemon have their Ability changed to Woke.",
+		desc: "Pokemon making contact with this Pokemon have their Ability changed to Woke. Does not affect the Battle Bond, Comatose, Disguise, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, and Zen Mode Abilities.",
+	},
+	woodenguard: {
+		name: "Wooden Guard",
+		shortDesc: "This Pokemon recieves 1.5x damage from Fire moves, 0.75x from other moves.",
+	},
 };
