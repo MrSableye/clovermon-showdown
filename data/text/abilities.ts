@@ -1719,8 +1719,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		start: "  [POKEMON] is getting ready to throw a concert!",
 	},
 	waitforit: {
-		shortDesc: "Boosts all stats after 5 turns.",
 		name: "Wait For It",
+		shortDesc: "Boosts all stats after 5 turns.",
 		start: "  [POKEMON] is asking you kindly to wait!",
 		end: "  [POKEMON]'s announcement came true!"
 	},
