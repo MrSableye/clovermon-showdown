@@ -32,6 +32,7 @@ Ratings and how they work:
 
 */
 
+
 export const Abilities: {[abilityid: string]: AbilityData} = {
 	noability: {
 		isNonstandard: "Past",
@@ -4852,7 +4853,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
   degradation: {
     name: "Degradation",
-		onEffectiveness(typeMod, target, type, move) {
+		onSourceEffectiveness(typeMod, target, type, move) {
 		   if (move && type === 'Normal' && move.type === 'Dark') return 1;
 			 return typeMod;
 		},
@@ -4900,7 +4901,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 	},
 	inversion: {
-		name: "Inverse Room",
+		name: "Inversion",
 		onStart(source) {
 			this.field.addPseudoWeather('inverseroom');
 		},
@@ -4948,7 +4949,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
   pollution: {
 		name: "Pollution",
-		onEffectiveness(typeMod, target, type, move) {
+		onSourceEffectiveness(typeMod, target, type, move) {
 		   if (move && type === 'Water' && move.type === 'Poison') return 1;
 			 return typeMod;
 		},
