@@ -5036,13 +5036,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		shortDesc: "This Pokemon's kick-based attacks have 1.2x power and always hit.",
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
-			if (['jumpkick', 'highjumpkick', 'blazekick', 'doublekick', 'lowkick', 'triplekick', 'rollingkick', 'shadowkick'].includes(move.id)) {
+			if (['jumpkick', 'highjumpkick', 'blazekick', 'doublekick', 'lowkick', 'triplekick', 'rollingkick', 'shadowkick', 'megakick', 'thunderouskick', 'tropkick'].includes(move.id)) {
 				this.debug('Striker boost');
 				return this.chainModify([0x1333, 0x1000]);
 			}
 		},
 		onAnyAccuracy(accuracy, target, source, move) {
-			if (['jumpkick', 'highjumpkick', 'blazekick', 'doublekick', 'lowkick', 'triplekick', 'rollingkick', 'shadowkick'].includes(move.id)) {
+			if (['jumpkick', 'highjumpkick', 'blazekick', 'doublekick', 'lowkick', 'triplekick', 'rollingkick', 'shadowkick', 'megakick', 'thunderouskick', 'tropkick'].includes(move.id)) {
 				this.debug('Striker - ensuring perfect accuracy');
 				return true;
 			}
