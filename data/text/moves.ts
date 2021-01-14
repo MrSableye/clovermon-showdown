@@ -6902,7 +6902,8 @@ export const MovesText: {[k: string]: MoveText} = {
   },
   mop: {
 		name: "Mop",
-		shortDesc: "Unimplemented",
+		shortDesc: "Free user from hazards; +1 Acc if any hazards were removed.",
+		desc: "If this move is successful and the user has not fainted, all hazards are removed from the user's side of the field. Has a 100% chance to raise the user's Speed by 1 stage if any hazards were removed.",
   },
   quicksand: {
 		name: "Quick Sand",
