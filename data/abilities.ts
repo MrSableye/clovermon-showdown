@@ -4931,7 +4931,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (pokemon.setItem(item)) {
 					this.add('-item', pokemon, item, '[from] ability: Jewelry');
 				}
-				pokemon.setItem(randomMove.type)
 			}
 		},
 	},
