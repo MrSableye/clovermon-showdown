@@ -97,7 +97,6 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Standard NatDex',
 			'Dynamax Clause',
-			'Nickname Clause',
 			'Species Clause',
 			'OHKO Clause',
 			'Swagger Clause',
