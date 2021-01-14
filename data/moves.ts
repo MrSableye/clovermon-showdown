@@ -19688,8 +19688,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 				return 5;
 			},
-			onStart(target, source) {
-				this.add('-fieldstart', 'move: Inverse Room', '[of] ' + source);
+			onNegateImmunity: false,
+			onEffectivenessPriority: 1,
+			onEffectiveness(typeMod, target, type, move) {
+				// The effectiveness of Freeze Dry on Water isn't reverted
+				if (move && move.id === 'freezedry' && type === 'Water') return;
+				if (move && move.id === '1000folds' && type === 'Steel') return;
+				if (move && !this.dex.getImmunity(move, type)) return 1;
+				return -typeMod;
+			},
+			onStart(target, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Inverse Room', '[from] ability: ' + effect, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Inverse Room');
+				}
+				this.add('-message', 'The battlefield became upside down!');
 			},
 			onRestart(target, source) {
 				this.field.removePseudoWeather('inverseroom');
