@@ -87,6 +87,34 @@ export const Formats: FormatList = [
 		banlist: ['LC Uber', 'Moody', 'Baton Pass'],
 	},
 	{
+		section: "Clover Only Doubles",
+	},
+	{
+		name: "[Gen 8 Clover Only] Doubles OU",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3672010/">Doubles OU Metagame Discussion</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3658826/">Doubles OU Sample Teams</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3673519/">Doubles OU Viability Rankings</a>`,
+		],
+
+		mod: 'gen8',
+		gameType: 'doubles',
+		ruleset: [
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Nickname Clause',
+			'Species Clause',
+			'OHKO Clause',
+			'Swagger Clause',
+			'Gravity Sleep Clause',
+			'Evasion Moves Clause',
+			'+Future',
+			'Fochun Pokedex',
+			'Fochun Items',
+		],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+	},
+	{
 		section: "Clover x Pokemon Singles"
 	},
 	{
