@@ -179057,4 +179057,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			]
 		}
 	},
+	megablobbos: {
+		learnset: {},
+	},
 };

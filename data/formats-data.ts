@@ -7950,7 +7950,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	blobbos: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	vandash: {
@@ -7976,5 +7976,9 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 	jewipede: {
 		tier: "Uber",
 		isNonstandard: "Future",
-	}
+	},
+	megablobbos: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };

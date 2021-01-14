@@ -1167,6 +1167,16 @@ export const Formats: {[k: string]: FormatData} = {
 		},
 	},
 	/* Clovermons */
+	blobbosclause: {
+		effectType: 'ValidatorRule',
+		name: 'Blobbos Clause',
+		desc: "Blobbos cannot use Eviolite. It does not need Eviolite.",
+		onValidateSet(set) {
+			if (this.toID(set.item) === 'eviolite' && this.toID(set.species || set.name) === 'blobbos') {
+				return ['Blobbos cannot use Eviolite. It is far too powerful for such an item.'];
+			}
+		},
+	},
 	beoriginalplease: {
 		effectType: 'ValidatorRule',
 		name: 'Be Original Please',

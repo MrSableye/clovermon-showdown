@@ -83,6 +83,7 @@ export const Formats: FormatList = [
 			'+Future',
 			'Fochun Pokedex',
 			'Fochun Items',
+			'Blobbos Clause',
 		],
 		banlist: ['LC Uber', 'Moody', 'Baton Pass'],
 	},

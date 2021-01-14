@@ -30209,6 +30209,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		heightm: 0.4,
 		weightkg: 5.7,
 		color: "Blue",
+		evos: ["Mega Blobbos"],
 		eggGroups: [
 			"Ditto"
 		],
@@ -30405,5 +30406,37 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		],
 		gender: "M",
 		gen: 8
-	}
+	},
+	megablobbos: {
+		num: 69387,
+		name: "Mega Blobbos",
+		types: [
+			"???"
+		],
+		baseStats: {
+			hp: 1,
+			atk: 1,
+			def: 1,
+			spa: 1,
+			spd: 1,
+			spe: 1
+		},
+		abilities: {
+			0: "Truant",
+			1: "Truant",
+			H: "Truant",
+			S: "Truant"
+		},
+		heightm: 9999,
+		weightkg: 9999,
+		color: "Blue",
+		prevo: "Blobbos",
+		evoType: "other",
+		evoCondition: "Hack",
+		eggGroups: [
+			"Ditto"
+		],
+		gender: "N",
+		gen: 8
+	},
 };
