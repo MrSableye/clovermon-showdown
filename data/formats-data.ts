@@ -7878,7 +7878,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	fireshi: {
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: "Future",
 	},
 	fireshitwi: {
