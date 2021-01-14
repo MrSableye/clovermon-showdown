@@ -19820,7 +19820,7 @@ export const Moves: {[moveid: string]: MoveData} = {
     category: "Status",
 		name: "Weird Flex",
     pp: 15,
-    priority: 0,
+    priority: 4,
     target: "self",
     type: "Fighting",
     flags: {snatch: 1},
