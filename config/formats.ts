@@ -115,13 +115,17 @@ export const Formats: FormatList = [
 		name: "[Gen 8 National Dex] AG",
 		mod: 'gen8',
 		ruleset: [
+			'Be Original Please',
 			'Obtainable',
+			'+Unobtainable',
+			'+Past',
+			'+Future',
 			'Team Preview',
+			'Nickname Clause',
 			'HP Percentage Mod',
 			'Cancel Mod',
 			'Endless Battle Clause',
 			'Dynamax Clause',
-			'+Future',
 		],
 	},
 ];

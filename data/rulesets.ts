@@ -1167,6 +1167,29 @@ export const Formats: {[k: string]: FormatData} = {
 		},
 	},
 	/* Clovermons */
+	beoriginalplease: {
+		effectType: 'ValidatorRule',
+		name: 'Be Original Please',
+		desc: "Requires at least 1 Clovermon and at least 1 Pokémon",
+		onValidateTeam(team) {
+			let hasClovermon = false;
+			let hasPokemon = false;
+
+			team.forEach((set) => {
+				const species = this.dex.getSpecies(set.species || set.name);
+
+				if (species.num > 69000) {
+					hasClovermon = true;
+				} else {
+					hasPokemon = true;
+				}
+			});
+
+			if (!(hasClovermon && hasPokemon)) {
+				return ["Your team must have at least one Clovermon and 1 Pokémon"];
+			}
+		},
+	},
 	fochunpokedex: {
 		effectType: 'ValidatorRule',
 		name: 'Fochun Pokedex',
