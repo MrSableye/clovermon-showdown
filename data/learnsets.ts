@@ -84937,7 +84937,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			seedflare: [
 				"8L67"
 			],
-			sleazyspore: [
+			sleazyspores: [
 				"8L56"
 			],
 			sleeppowder: [

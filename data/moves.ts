@@ -19634,19 +19634,36 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	/* Clovermons */
-  sleazyspore: {
-    desc: "IMPLEMENT THIS",
-    num: 6999,
-    accuracy: 100,
-    basePower: 60,
-    category: "Physical",
-    name: 'sleazyspore (placeholder)',
-    pp: 0,
-    priority: 0,
-    target: "normal",
-    type: "Grass",
-    flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-  },
+	sleazyspores: {
+		num: 69056,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sleazy Spores",
+		pp: 10,
+		priority: 0,
+		flags: {reflectable: 1, powder: 1},
+		sideCondition: 'sleazyspores',
+		condition: {
+			onStart(side) {
+				this.add('-sidestart', side, 'move: Sleazy Spores');
+			},
+			onSwitchIn(pokemon) {
+				if (!pokemon.isGrounded()) return;
+				if (pokemon.hasType('Grass')) {
+					this.add('-sideend', pokemon.side, 'move: Sleazy Spores', '[of] ' + pokemon);
+					pokemon.side.removeSideCondition('sleazyspores');
+				}
+				if (pokemon.hasItem('heavydutyboots')) return;
+				this.add('-activate', pokemon, 'move: Sleazy Spores');
+				this.boost({spe: -1}, pokemon, this.effectData.source, this.dex.getActiveMove('sleazyspores'));
+			},
+		},
+		secondary: null,
+		pressureTarget: "self",
+		target: "foeSide",
+		type: "Grass",
+	},
   slimegulp: {
     num: 69044,
     accuracy: 100,
