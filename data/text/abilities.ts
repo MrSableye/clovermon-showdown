@@ -1722,12 +1722,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Boosts all stats after 5 turns.",
 		name: "Wait For It",
 		start: "  [POKEMON] is asking you kindly to wait!",
-		end: " [POKEMON]'s announcement came true!"
+		end: "  [POKEMON]'s announcement came true!"
 	},
 	gradient: {
 		name: "Gradient",
 		shortDesc: "Gains an extra type in battle based on the foe's color.",
-		desc: "TODO"
+		desc: "Gains an extra type in battle based on the foe's color. Red = Fire, Blue = Water, Yellow = Electric, Green = Grass, Black = Dark, Brown = Ground, Purple = Poison, Gray = Steel, White = Flying, Pink = Fairy."
 	},
 	anyability: {
 		name: "Any Ability",

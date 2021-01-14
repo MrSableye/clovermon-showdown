@@ -4474,7 +4474,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Wait For It",
 		onStart(pokemon) {
 			pokemon.addVolatile('waitforit');
-			this.add('-ability', pokemon, 'Wait For It');
 		},
 		onEnd(pokemon) {
 			delete pokemon.volatiles['waitforit'];
