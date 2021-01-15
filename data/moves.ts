@@ -19935,12 +19935,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 		onHit(target) {
 			if (target.hp <= target.maxhp / 2) {
-				target.boostBy({
+				this.boost({
 					atk: 2,
 					def: 2,
 				});
 			} else {
-				target.boostBy({
+				this.boost({
 					atk: 1,
 					def: 1,
 				});
