@@ -19907,7 +19907,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
   },
-  scorchearth: {
+  scorchedearth: {
     num: 69046,
     accuracy: 100,
     basePower: 20,

@@ -94893,7 +94893,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			xscissor: [
 				"8L41"
 			],
-			scorchearth: [
+			scorchedearth: [
 				"8E"
 			]
 		}
@@ -95372,7 +95372,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			xscissor: [
 				"8L40"
 			],
-			scorchearth: [
+			scorchedearth: [
 				"8E"
 			]
 		}
@@ -99593,7 +99593,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			sandstorm: [
 				"8M"
 			],
-			scorchearth: [
+			scorchedearth: [
 				"8L62"
 			],
 			screech: [
@@ -134031,7 +134031,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			scald: [
 				"8T"
 			],
-			scorchearth: [
+			scorchedearth: [
 				"8L71"
 			],
 			secretpower: [
@@ -143773,7 +143773,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			scald: [
 				"8T"
 			],
-			scorchearth: [
+			scorchedearth: [
 				"8L1"
 			],
 			secretpower: [

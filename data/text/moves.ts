@@ -6886,7 +6886,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Weird Flex",
 		shortDesc: "Uses Bulk Up, Scary Face, Endure, and Follow Me targeted all at itself.",
   },
-  scorchearth: {
+  scorchedearth: {
 		name: "Scorched Earth",
 		desc: "Hits adjacent Pokemon. Has a 100% to burn adjacent Pokemon and itself."
   },
