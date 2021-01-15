@@ -398,8 +398,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	flowergift: {
 		name: "Flower Gift",
-		desc: "If this Pokemon is a Cherrim and Sunny Day is active, it changes to Sunshine Form and the Attack and Special Defense of it and its allies are multiplied by 1.5. If this Pokemon is a Cherrim and it is holding Utility Umbrella, it remains in its regular form and the Attack and Special Defense stats of it and its allies are not boosted. If this Pokemon is a Cherrim in its Sunshine form and is given Utility Umbrella, it will immediately switch back to its regular form. If this Pokemon is a Cherrim holding Utility Umbrella and its item is removed while Sunny Day is active, it will transform into its Sunshine Form. If an ally is holding Utility Umbrella while Cherrim is in its Sunshine Form, they will not receive the Attack and Special Defense boosts.",
-		shortDesc: "If user is Cherrim and Sunny Day is active, it and allies' Attack and Sp. Def are 1.5x.",
+		desc: "If Sunny Day is active, the Attack and Special Defense of it and its allies are multiplied by 1.5. If this Pokemon is holding Utility Umbrella, the Attack and Special Defense stats of it and its allies are not boosted. If an ally is holding Utility Umbrella, they will not receive the Attack and Special Defense boosts. If this Pokemon is a Cherim and is not holding Utility Umrella, it transforms into its Sunshine Form",
+    shortDesc: "If Sunny Day is active, it and allies' Attack and Sp. Def are 1.5x and if it is a Cherrim, it transforms into its Sunshine Form.",
 		gen7: {
 			desc: "If this Pokemon is a Cherrim and Sunny Day is active, it changes to Sunshine Form and the Attack and Special Defense of it and its allies are multiplied by 1.5.",
 		},
