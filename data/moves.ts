@@ -20082,7 +20082,7 @@ export const Moves: {[moveid: string]: MoveData} = {
     target: "normal",
     type: "Fairy",
 		flags: {protect: 1, reflectable: 1, mirror: 1, authentic: 1},
-		volatileStatus: 'attract',
+		volatileStatus: 'gayagenda',
 		condition: {
 			noCopy: true, // doesn't get copied by Baton Pass
 			onStart(pokemon, source, effect) {
@@ -20090,35 +20090,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 					this.debug('incompatible gender');
 					return false;
 				}
-				if (!this.runEvent('Attract', pokemon, source)) {
-					this.debug('Attract event failed');
+				if (!this.runEvent('Gay Agenda', pokemon, source)) {
+					this.debug('Gay Agenda event failed');
 					return false;
 				}
 
-				if (effect.id === 'cutecharm') {
-					this.add('-start', pokemon, 'Attract', '[from] ability: Cute Charm', '[of] ' + source);
-				} else if (effect.id === 'destinyknot') {
-					this.add('-start', pokemon, 'Attract', '[from] item: Destiny Knot', '[of] ' + source);
+				if (effect.id === 'destinyknot') {
+					this.add('-start', pokemon, 'Gay Agenda', '[from] item: Destiny Knot', '[of] ' + source);
 				} else {
-					this.add('-start', pokemon, 'Attract');
+					this.add('-start', pokemon, 'Gay Agenda');
 				}
 			},
 			onUpdate(pokemon) {
-				if (this.effectData.source && !this.effectData.source.isActive && pokemon.volatiles['attract']) {
-					this.debug('Removing Attract volatile on ' + pokemon);
-					pokemon.removeVolatile('attract');
+				if (this.effectData.source && !this.effectData.source.isActive && pokemon.volatiles['gayagenda']) {
+					this.debug('Removing Gay Agenda volatile on ' + pokemon);
+					pokemon.removeVolatile('gayagenda');
 				}
 			},
 			onBeforeMovePriority: 2,
 			onBeforeMove(pokemon, target, move) {
-				this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectData.source);
+				this.add('-activate', pokemon, 'move: Gay Agenda', '[of] ' + this.effectData.source);
 				if (this.randomChance(1, 2)) {
-					this.add('cant', pokemon, 'Attract');
+					this.add('cant', pokemon, 'Gay Agenda');
 					return false;
 				}
 			},
 			onEnd(pokemon) {
-				this.add('-end', pokemon, 'Attract', '[silent]');
+				this.add('-end', pokemon, 'Gay Agenda', '[silent]');
 			},
 		},
 		zMove: {effect: 'clearnegativeboost'},
