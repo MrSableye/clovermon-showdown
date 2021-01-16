@@ -402,6 +402,10 @@ const avatarTable = new Set([
 	'clover-burglar',
 	'clover-barafag',
 	'clover-masuda',
+	'clover-youngsters',
+	'clover-fetishists',
+	'clover-guitarist',
+	'clover-randy',
 ]);
 
 const avatarTableBeliot419 = new Set([
