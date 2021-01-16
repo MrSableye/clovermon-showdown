@@ -19915,9 +19915,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Scorched Earth",
     pp: 10,
     priority: 0,
-    target: "normal",
+    target: "allAdjacent",
     type: "Ground",
 		flags: {protect: 1, mirror: 1},
+		onHit(target, source) {
+			source.trySetStatus('brn');
+		},
 		secondary: {
 			chance: 100,
 			status: 'brn',
