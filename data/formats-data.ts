@@ -6425,1560 +6425,4604 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		"Future" isn't used by anything else, so we'll use it to mark Clovermons :^)
 	*/
 	grasshole: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	analgae: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	rectreem: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	arabomb: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	iguallah: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	lizakbar: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	ejacasm: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	hosajack: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	condoom: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	squirrap: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	gampster: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	kengeon: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	frieden: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	corooster: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	curicrawl: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	gutsicoon: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	gutsifly: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	larvades: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	proboskito: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	clovour: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	chanolour: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	nauseon: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	hazmate: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	ebolable: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	pikotton: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	birdhouse: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	lanshil: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	middril: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	shurismash: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	maymay: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	memenace: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	piguson: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	armando: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	muscledude: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	tripecs: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	semdrop: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	semrust: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	furnazi: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	finasoven: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	troubait: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	tulure: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	monstrap: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	pixila: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	fairileon: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	wedgard: {
-		tier: "LC Uber",
-		isNonstandard: "Future",
-	},
-	knokedge: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	ribbizap: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	elephas: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	seamapan: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	caroline: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	chompest: {
-		tier: "LC Uber",
-		isNonstandard: "Future",
-	},
-	masdawg: {
-		tier: "LC Uber",
-		isNonstandard: "Future",
-	},
-	pasdawg: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	spanke: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	anaconduke: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	fishnism: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	sjwhale: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	chezetta: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	mozzamazel: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	krokling: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	krokizon: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	conchilla: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	haremit: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	coolcube: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	tankube: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	fabkube: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	smogaroben: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	smoxilon: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	machmona: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	bacub: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	urswine: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	moostatic: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	mooshock: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	pretzely: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	deemdow: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	dowster: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	cheerly: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	cheerific: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	mennopaws: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	caracold: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	glacialynx: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	pengas: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	praeteur: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	praestish: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	flowre: {
-		tier: "LC Uber",
-		isNonstandard: "Future",
-	},
-	florious: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	juarecito: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	ponchito: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	somboludo: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	puppacti: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	marionettl: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	tittai: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	octai: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	charagon: {
-		tier: "LC Uber",
-		isNonstandard: "Future",
-	},
-	hyletrack: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	euphoreal: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	armowite: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	praunch: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	karawn: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	mabster: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	tricient: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	tricillion: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	poizookie: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	toxiraptor: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	sabreck: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	huntabre: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	pyralink: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	singlets: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	dubus: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	tripsius: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	miasmer: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	miasmortor: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	cacademon: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	hanginy: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	chancer: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	unjoy: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	frosowl: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	whizzard: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	drapillar: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	caparagon: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	mantrake: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	ogrelord: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	chantruth: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	inbitween: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	geigh: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	jarape: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	spilefree: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	bongecko: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	mariguana: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	marleyzard: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	ayylamo: {
-		tier: "LC Uber",
-		isNonstandard: "Future",
-	},
-	smellox: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	chasumo: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	oilslam: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	isissin: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	stuffowl: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	durkey: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	upchucken: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	dragun: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	triggedon: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	cannonance: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	evacycle: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	foryu: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	scytill: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	baddon: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	endranther: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	notridley: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	demiwaifu: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	reptyke: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	rasclobber: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	batterex: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	faeriock: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	sylvuin: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	oburonyxo: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	cloucat: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	felimbus: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	deathorus: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	knogoat: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	knogrinyu: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	glasshot: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	glassannon: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	fluffyeti: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	yedoom: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	mirrostine: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	mudpants: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	mudslacks: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	bukitlee: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	lossolith: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	mimimie: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	sprucifix: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	hulkan: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	nonite: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	nonegative: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	nomaestro: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	dunkypea: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	burdmen: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	nutzboltz: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	kuklux: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	kuklan: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	flameboyan: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	piicee: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	sonnanos: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	plebbles: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	sapleaf: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	ignut: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	phantash: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	polossus: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	hitmonana: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	ballacle: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	barbarkley: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	kekroach: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	rekroach: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	ricosheep: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	ricosuave: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	spaghefant: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	crystaquil: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	crystaking: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	fontaba: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	floconut: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	sappalm: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	roynapalm: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	manateet: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	manatorque: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	manatank: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	anonymouse: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	motherfuck: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	ninoop: {
-		tier: "LC Uber",
-		isNonstandard: "Future",
-	},
-	draconius: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	ticktac: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	eareticle: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	scythear: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	cozload: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	snugware: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	fleespecs: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	honrade: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	embortion: {
-		tier: "LC Uber",
-		isNonstandard: "Future",
-	},
-	premantom: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	galavik: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	galavire: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	galaviste: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	pollefin: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	florigrace: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	lasslee: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	wifemin: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	uwotto: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	venowatt: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	vaultevour: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	semdemen: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	dragking: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	kuuroba: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	baitmaster: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	spookster: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	spookeer: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	spookzilla: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	derpato: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	retater: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	potarded: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	sadfish: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	deloris: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	oreon: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	farfigtron: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	regirode: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	regimelt: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	regirust: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	vivaiger: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	heliofug: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	sadrog: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	smugrok: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	peperee: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	hodtog: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	wienebark: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	saudoge: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	gnarrk: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	corsharrk: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	davyjaws: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	humpunny: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	bunnorgy: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	emelgy: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	fedorawk: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	fazeagle: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	catikillar: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	tikoon: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	oogabuga: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	ebining: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	emplyin: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	upbote: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	upbeddit: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	flipbird: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	wheygle: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	gangnome: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	pyongnome: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	bruhkid: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	ubruh: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	walruse: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	walruskie: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	diobat: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	warudio: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	docee: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	donutsteel: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	cakupple: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	fondupple: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	baloofang: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	socckat: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	egylamp: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	ruselamp: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	mehndior: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	tunakking: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	missletoe: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	hohohoming: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	flaa: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	hopault: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	araketsu: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	senketula: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	falcaptain: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	cirpent: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	traumobra: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	lizascoop: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	reptrill: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	fefeion: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	feferun: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	jerkle: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	faptime: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	shiriman: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	fresrye: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	dedwheat: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	spargle: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	spedo: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	housant: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	apartmant: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	fuermiga: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	maripyro: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	confirmabi: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	bulbapedo: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	wastenaut: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	wantnaut: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	cansumor: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	snuffant: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	cokemmoth: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	grimdak: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	shroofle: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	betacluck: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	thundacock: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	twinfowl: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	avianjoin: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	illuminowl: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	illumatrix: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	typobop: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	yeerex: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	randomix: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	cthullord: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	quiboom: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	gynuke: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	rainglock: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	beatmarine: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	substarr: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	hofucno: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	hornigiri: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	hornicier: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	hornititan: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	preasu: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	undastand: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	warney: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	banageddon: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	acufront: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	acufrontf: {
-		isNonstandard: "Future",
-	},
-	acufrontw: {
-		isNonstandard: "Future",
-	},
-	acufronti: {
-		isNonstandard: "Future",
-	},
-	militant: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	shiggydig: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	signot: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	reagain: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	ormite: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	viristal: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	rolango: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	dreameme: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	pearchie: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	tarditank: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	iplora: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	chromox: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	pitayen: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	dragaya: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	frutagon: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	biteki: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	sesquatch: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	fireshi: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	fireshitwi: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	fireshitre: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	slugbud: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	slughug: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	slugfugg: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	skeletroll: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	spookscare: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	goryannus: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	lankong: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	ballankey: {
-		tier: "NFE",
-		isNonstandard: "Future",
-	},
-	funnedong: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	narwhiz: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	niterpent: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	griffawork: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	boarnograf: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	admoot: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	tentaquil: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	blobbos: {
-		tier: "LC",
-		isNonstandard: "Future",
-	},
-	vandash: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	nutjobber: {
-		tier: "LC Uber",
-		isNonstandard: "Future",
-	},
-	deisnutz: {
-		tier: "OU",
-		isNonstandard: "Future",
-	},
-	adesign: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	clovenix: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	jewipede: {
-		tier: "Uber",
-		isNonstandard: "Future",
-	},
-	megablobbos: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  analgae: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  rectreem: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "quicksand",
+      "substitute",
+      "taunt",
+      "enema",
+      "synthesis",
+      "swordsdance",
+      "stoneedge",
+      "woodhammer",
+      "strengthsap",
+      "earthquake",
+      "bellydrum",
+      "leechseed",
+      "stealthrock"
+    ]
+  },
+  arabomb: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  iguallah: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  lizakbar: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "substitute",
+      "aeroblast",
+      "taunt",
+      "nastyplot",
+      "mindblown",
+      "toxic",
+      "flamethrower",
+      "memento",
+      "willowisp",
+      "holyduty",
+      "darkpulse",
+      "fireblast"
+    ]
+  },
+  ejacasm: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  hosajack: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  condoom: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "roar",
+      "knockoff",
+      "surf",
+      "lightscreen",
+      "scald",
+      "taunt",
+      "reflect",
+      "softboiled",
+      "toxic",
+      "stickyweb",
+      "whirlpool",
+      "calmmind",
+      "rapidspin"
+    ]
+  },
+  squirrap: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  gampster: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "grassknot",
+      "firepunch",
+      "owtheedge",
+      "nastyplot",
+      "suckerpunch",
+      "boomburst",
+      "doubleedge",
+      "uturn",
+      "swordsdance",
+      "flamethrower",
+      "psychicfangs",
+      "return"
+    ]
+  },
+  kengeon: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  frieden: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  corooster: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bravebird",
+      "bulkup",
+      "acrobatics",
+      "beakblast",
+      "roost",
+      "doubleedge",
+      "uturn",
+      "closecombat",
+      "return",
+      "defog"
+    ]
+  },
+  curicrawl: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  gutsicoon: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  gutsifly: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bulkup",
+      "lightscreen",
+      "acrobatics",
+      "taunt",
+      "reflect",
+      "sleeppowder",
+      "batonpass",
+      "roost",
+      "stickyweb",
+      "uturn",
+      "copycat",
+      "quiverdance"
+    ]
+  },
+  larvades: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  proboskito: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  clovour: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  chanolour: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "spiderweb",
+      "aromatherapy",
+      "rockslide",
+      "toxic",
+      "futababreak",
+      "lightscreen",
+      "taunt",
+      "uturn",
+      "leafblade",
+      "ironhead",
+      "meteormash",
+      "reflect",
+      "synthesis",
+      "swordsdance",
+      "encore",
+      "bulletpunch",
+      "screech",
+      "bodyslam",
+      "stealthrock",
+      "defog"
+    ]
+  },
+  nauseon: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  hazmate: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "poisonjab",
+      "painsplit",
+      "earthquake",
+      "crosschop",
+      "superpower",
+      "drainpunch",
+      "explosion",
+      "haze",
+      "mop",
+      "clearsmog",
+      "stoneedge",
+      "willowisp",
+      "seismictoss",
+      "gunkshot"
+    ]
+  },
+  ebolable: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "scald",
+      "nastyplot",
+      "flamethrower",
+      "switcheroo",
+      "focusblast",
+      "darkpulse",
+      "destinybond"
+    ]
+  },
+  pikotton: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "lactoseshot",
+      "surf",
+      "energyball",
+      "dazzlinggleam",
+      "voltswitch",
+      "thunderbolt",
+    ]
+  },
+  birdhouse: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bravebird",
+      "lightscreen",
+      "encore",
+      "reflect",
+      "softboiled",
+      "toxic",
+      "explosion",
+      "uturn",
+      "trickroom",
+      "stealthrock",
+      "defog",
+      "foulplay"
+    ]
+  },
+  lanshil: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  middril: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  shurismash: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "accelerock",
+      "toxic",
+      "explosion",
+      "shellsmash",
+      "doubleedge",
+      "rapidspin",
+      "earthquake",
+      "ironhead",
+      "meteormash",
+      "headsmash"
+    ]
+  },
+  maymay: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  memenace: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "earthquake",
+      "fakeout",
+      "nastyplot",
+      "toxic",
+      "zenheadbutt",
+      "lickclean",
+      "crunch",
+      "icebeam",
+      "doubleedge",
+      "honeclaws",
+      "hypnosis",
+      "superfang",
+      "milkdrink",
+      "return",
+      "thunderbolt",
+      "fireblast",
+      "foulplay"
+    ]
+  },
+  piguson: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "knockoff",
+      "earthquake",
+      "riotshield",
+      "machpunch",
+      "toxic",
+      "doubleedge",
+      "closecombat",
+      "swordsdance",
+      "bodyslam",
+      "rapidspin",
+      "irontail",
+      "return",
+      "glare",
+      "slackoff"
+    ]
+  },
+  armando: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  muscledude: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  tripecs: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "knockoff",
+      "firepunch",
+      "machpunch",
+      "drainpunch",
+      "uturn",
+      "swordsdance",
+      "rapidspin",
+      "thunderpunch",
+      "icepunch",
+      "earthquake"
+    ]
+  },
+  semdrop: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  semrust: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  furnazi: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  finasoven: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "powergem",
+      "burnup",
+      "roar",
+      "earthpower",
+      "thunder",
+      "toxic",
+      "trickroom",
+      "clearsmog",
+      "sacredfire",
+      "thunderbolt",
+      "defog",
+      "fireblast",
+      "lavaplume",
+      "morningsun"
+    ]
+  },
+  troubait: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  tulure: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  monstrap: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "knockoff",
+      "scald",
+      "toxic",
+      "aquatail",
+      "haze",
+      "trickroom",
+      "memento",
+      "sleeptalk",
+      "foulplay",
+      "powertrip",
+      "uturn",
+      "firefang",
+      "endeavor",
+      "rocktomb",
+      "rest",
+      "aquajet",
+      "waterfall",
+      "swordsdance",
+      "bulkup",
+      "crunch",
+      "earthquake",
+      "stealthrock"
+    ]
+  },
+  pixila: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  fairileon: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "aromatherapy",
+      "earthpower",
+      "substitute",
+      "teleport",
+      "roost",
+      "toxic",
+      "lickclean",
+      "batonpass",
+      "uturn",
+      "trickroom",
+      "moonblast",
+      "gigadrain",
+      "defog",
+      "quiverdance"
+    ]
+  },
+  wedgard: {
+    tier: "LC Uber",
+    isNonstandard: "Future"
+  },
+  knokedge: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bulkup",
+      "knockoff",
+      "rockslide",
+      "taunt",
+      "rest",
+      "zenheadbutt",
+      "doubleedge",
+      "spikes",
+      "rapidspin",
+      "stoneedge",
+      "sleeptalk",
+      "earthquake",
+      "stealthrock"
+    ]
+  },
+  ribbizap: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "tailglow",
+      "substitute",
+      "boomburst",
+      "icebeam",
+      "voltswitch",
+      "thunderbolt"
+    ]
+  },
+  elephas: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "hypervoice",
+      "teleport",
+      "thinkfast",
+      "nastyplot",
+      "psychic",
+      "calmmind",
+      "haze",
+      "healbell",
+      "trickroom",
+      "willowisp",
+      "psyshock",
+      "shadowball"
+    ]
+  },
+  seamapan: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "surf",
+      "waterspout",
+      "scald",
+      "toxic",
+      "lovelykiss",
+      "hydropump"
+    ]
+  },
+  caroline: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bravebird",
+      "earthpower",
+      "agility",
+      "airslash",
+      "roost",
+      "nastyplot",
+      "closecombat",
+      "swordsdance",
+      "hurricane",
+      "earthquake",
+      "darkpulse"
+    ]
+  },
+  chompest: {
+    tier: "LC Uber",
+    isNonstandard: "Future"
+  },
+  masdawg: {
+    tier: "LC Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "closecombat",
+      "knockoff",
+      "psychicfangs",
+      "doubleedge"
+    ]
+  },
+  pasdawg: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "earthquake",
+      "agility",
+      "lickclean",
+      "doubleedge",
+      "closecombat",
+      "swordsdance",
+      "playrough",
+      "uturn",
+      "bodyslam",
+      "healbell",
+      "return",
+      "ironhead",
+      "stealthrock"
+    ]
+  },
+  spanke: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  anaconduke: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "substitute",
+      "firepunch",
+      "coil",
+      "machpunch",
+      "toxic",
+      "drainpunch",
+      "powerwhip",
+      "closecombat",
+      "superfang",
+      "leafblade",
+      "earthquake",
+      "glare",
+      "leechseed",
+      "focuspunch"
+    ]
+  },
+  fishnism: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  sjwhale: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "taunt",
+      "liquidation",
+      "toxic",
+      "suckerpunch",
+      "aquajet",
+      "haze",
+      "psychicfangs",
+      "steameruption",
+      "earthquake",
+      "bellydrum",
+      "slackoff",
+      "foulplay"
+    ]
+  },
+  chezetta: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  mozzamazel: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "knockoff",
+      "toxic",
+      "flamethrower",
+      "lovelykiss",
+      "moonblast",
+      "willowisp"
+    ]
+  },
+  krokling: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  krokizon: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "roar",
+      "knockoff",
+      "firepunch",
+      "rockslide",
+      "toxic",
+      "swordsdance",
+      "woodhammer",
+      "icepunch",
+      "earthquake",
+      "headsmash",
+      "thunderpunch",
+      "hornleech",
+      "stealthrock",
+      "slackoff"
+    ]
+  },
+  conchilla: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  haremit: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "crabhammer",
+      "earthquake",
+      "rockslide",
+      "shoreup",
+      "shellsmash",
+      "bodyslam",
+      "rapidspin",
+      "stoneedge",
+      "return",
+      "stealthrock"
+    ]
+  },
+  coolcube: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  tankube: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  fabkube: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "energyball",
+      "taunt",
+      "icebeam",
+      "trick",
+      "calmmind",
+      "hydropump",
+      "moonblast",
+      "defog"
+    ]
+  },
+  smogaroben: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  smoxilon: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bravebird",
+      "knockoff",
+      "earthquake",
+      "acrobatics",
+      "taunt",
+      "toxicspikes",
+      "icebeam",
+      "uturn",
+      "swordsdance",
+      "closecombat",
+      "spikes",
+      "spore",
+      "rapidspin",
+      "shellsmash",
+      "gunkshot",
+      "stealthrock",
+      "defog"
+    ]
+  },
+  machmona: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "knockoff",
+      "finalgambit",
+      "flyingpress",
+      "firepunch",
+      "machpunch",
+      "shadowpunch",
+      "superpower",
+      "drainpunch",
+      "swordsdance",
+      "elbowdrop",
+      "icepunch",
+      "partingshot",
+      "spookout"
+    ]
+  },
+  bacub: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  urswine: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "aromatherapy",
+      "bulkup",
+      "return",
+      "firelash",
+      "softboiled",
+      "willowisp",
+      "bodyslam"
+    ]
+  },
+  moostatic: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  mooshock: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "quickattack",
+      "rockslide",
+      "volttackle",
+      "toxic",
+      "lickclean",
+      "flamethrower",
+      "calmmind",
+      "milkdrink",
+      "voltswitch",
+      "ironhead",
+      "fireblast",
+      "thunderbolt"
+    ]
+  },
+  pretzely: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "powergem",
+      "recover",
+      "substitute",
+      "earthpower",
+      "destinybond",
+      "protect",
+      "meanlook",
+      "perishsong",
+      "kingsshield",
+      "nastyplot",
+      "boomburst",
+      "icebeam",
+      "stealthrock"
+    ]
+  },
+  deemdow: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  dowster: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "substitute",
+      "icebeam",
+      "psychic",
+      "calmmind",
+      "trickroom",
+      "moonblast",
+      "shadowball"
+    ]
+  },
+  cheerly: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  cheerific: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  mennopaws: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "pixiepummel",
+      "bulkup",
+      "substitute",
+      "rest",
+      "rockslide",
+      "taunt",
+      "batonpass",
+      "toxic",
+      "wish",
+      "closecombat",
+      "swordsdance",
+      "healbell",
+      "mop",
+      "sleeptalk",
+      "playrough",
+      "thunderpunch",
+      "earthquake"
+    ]
+  },
+  caracold: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  glacialynx: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "grassknot",
+      "icebeam",
+      "voltswitch",
+      "thunderbolt"
+    ]
+  },
+  pengas: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "roost",
+      "boomburst",
+      "flamethrower",
+      "freezedry",
+      "trick",
+      "thunderbolt",
+      "fireblast",
+      "defog"
+    ]
+  },
+  praeteur: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  praestish: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "painsplit",
+      "scald",
+      "curse",
+      "rest",
+      "toxic",
+      "uturn",
+      "waterfall",
+      "haze",
+      "aquatail",
+      "trickroom",
+      "superfang",
+      "sleeptalk",
+      "destinybond"
+    ]
+  },
+  flowre: {
+    tier: "LC Uber",
+    isNonstandard: "Future"
+  },
+  florious: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "protect",
+      "substitute",
+      "taunt",
+      "nastyplot",
+      "sleeppowder",
+      "leechseed",
+      "darkpulse",
+      "gigadrain",
+      "aurasphere"
+    ]
+  },
+  juarecito: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  ponchito: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  somboludo: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "gravity",
+      "quicksand",
+      "taunt",
+      "rockslide",
+      "bulletpunch",
+      "toxic",
+      "swordsdance",
+      "mop",
+      "rapidspin",
+      "earthquake",
+      "meteormash",
+      "stealthrock",
+      "slackoff"
+    ]
+  },
+  puppacti: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  marionettl: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "crabhammer",
+      "knockoff",
+      "spikyshield",
+      "substitute",
+      "toxicspikes",
+      "liquidation",
+      "seedbomb",
+      "powerwhip",
+      "swordsdance",
+      "spikes",
+      "counter",
+      "leechseed"
+    ]
+  },
+  tittai: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  octai: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "lactoseshot",
+      "surf",
+      "scald",
+      "taunt",
+      "dazzlinggleam",
+      "icebeam",
+      "calmmind",
+      "hydropump",
+      "milkdrink",
+      "moonblast"
+    ]
+  },
+  charagon: {
+    tier: "LC Uber",
+    isNonstandard: "Future"
+  },
+  hyletrack: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "extremespeed",
+      "imprison",
+      "shiftgear",
+      "toxic",
+      "heavyslam",
+      "superpower",
+      "heatcrash",
+      "earthquake",
+      "stealthrock"
+    ]
+  },
+  euphoreal: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  armowite: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bulkup",
+      "knockoff",
+      "teleport",
+      "encore",
+      "hammerarm",
+      "owtheedge",
+      "taunt",
+      "batonpass",
+      "suckerpunch",
+      "1000folds",
+      "swordsdance",
+      "trickroom",
+      "strengthsap",
+      "seismictoss",
+      "earthquake",
+      "pursuit",
+      "inverseroom",
+      "topsyturvy"
+    ]
+  },
+  praunch: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  karawn: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  mabster: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "vacuumwave",
+      "crabhammer",
+      "surf",
+      "rockslide",
+      "machpunch",
+      "aquajet",
+      "shellsmash",
+      "closecombat",
+      "icebeam",
+      "swordsdance",
+      "hydropump",
+      "icepunch",
+      "earthquake",
+      "focusblast",
+      "aurasphere"
+    ]
+  },
+  tricient: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  tricillion: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "earthquake",
+      "headsmash",
+      "trickroom",
+      "gyroball"
+    ]
+  },
+  poizookie: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  toxiraptor: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "powergem",
+      "sludgebomb",
+      "earthpower",
+      "toxiravage",
+      "rockslide",
+      "nastyplot",
+      "swordsdance",
+      "stoneedge",
+      "irontail",
+      "sludgewave",
+      "shitpost"
+    ]
+  },
+  sabreck: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  huntabre: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "earthquake",
+      "doubleedge",
+      "firefang",
+      "swordsdance",
+      "psychicfangs",
+      "overbite",
+      "stoneedge",
+      "rockclimb",
+      "return",
+      "hyperfang"
+    ]
+  },
+  pyralink: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "fusionflare",
+      "dracometeor",
+      "earthpower",
+      "dragondance",
+      "outrage",
+      "dragontail",
+      "roost",
+      "toxic",
+      "flareblitz",
+      "dragonclaw",
+      "toke",
+      "clangingscales",
+      "thunderbolt",
+      "earthquake",
+      "glare",
+      "fireblast",
+      "lavaplume",
+      "defog"
+    ]
+  },
+  singlets: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  dubus: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  tripsius: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bulletseed",
+      "iciclespear",
+      "volttackle",
+      "icebeam",
+      "checkem",
+      "voltswitch",
+      "rockblast",
+      "thunderbolt",
+      "bonerush"
+    ]
+  },
+  miasmer: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  miasmortor: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "substitute",
+      "toxicspikes",
+      "coil",
+      "haze",
+      "willowisp",
+      "irontail",
+      "lightscreen",
+      "taunt",
+      "ironhead",
+      "recover",
+      "extremespeed",
+      "earthpower",
+      "reflect",
+      "spikes",
+      "gunkshot",
+      "explosion",
+      "voltswitch",
+      "magnetrise",
+      "defog"
+    ]
+  },
+  cacademon: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "coil",
+      "toxic",
+      "earthquake",
+      "whirlwind",
+      "stealthrock",
+      "slackoff",
+      "gunkshot"
+    ]
+  },
+  hanginy: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  chancer: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  unjoy: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "softboiled",
+      "icebeam",
+      "calmmind",
+      "flamethrower",
+      "healbell",
+      "willowisp",
+      "nightshade",
+      "shadowball",
+      "stealthrock",
+      "foulplay"
+    ]
+  },
+  frosowl: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  whizzard: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "auroraveil",
+      "airslash",
+      "nastyplot",
+      "roost",
+      "uturn",
+      "psychic",
+      "hurricane",
+      "blizzard",
+      "shadowball"
+    ]
+  },
+  drapillar: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  caparagon: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  mantrake: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "substitute",
+      "furycutter",
+      "dragondance",
+      "uturn",
+      "dragonclaw",
+      "swordsdance",
+      "leechlife",
+      "megahorn",
+      "earthquake",
+      "outrage"
+    ]
+  },
+  ogrelord: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "knockoff",
+      "earthquake",
+      "hammerarm",
+      "suckerpunch",
+      "crunch",
+      "swordsdance",
+      "icepunch",
+      "gunkshot"
+    ]
+  },
+  chantruth: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "substitute",
+      "swindle",
+      "stealthrock",
+      "taunt",
+      "rest",
+      "nastyplot",
+      "icebeam",
+      "calmmind",
+      "trick",
+      "trickroom",
+      "focusblast",
+      "darkpulse",
+      "partingshot",
+      "baddybad"
+    ]
+  },
+  inbitween: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  geigh: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "lactoseshot",
+      "airslash",
+      "roost",
+      "trick",
+      "calmmind",
+      "moonblast",
+      "defog"
+    ]
+  },
+  jarape: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  spilefree: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "hex",
+      "substitute",
+      "earthpower",
+      "energyball",
+      "destinybond",
+      "foulplay",
+      "taunt",
+      "thunderwave",
+      "swagger",
+      "flamethrower",
+      "haze",
+      "calmmind",
+      "willowisp",
+      "voltswitch",
+      "thunderbolt",
+      "shadowball",
+      "stealthrock",
+      "aurasphere"
+    ]
+  },
+  bongecko: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  mariguana: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  marleyzard: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "substitute",
+      "earthpower",
+      "toxic",
+      "synthesis",
+      "flamethrower",
+      "calmmind",
+      "willowisp",
+      "toke",
+      "defog",
+      "leechseed",
+      "fireblast",
+      "gigadrain"
+    ]
+  },
+  ayylamo: {
+    tier: "LC Uber",
+    isNonstandard: "Future"
+  },
+  smellox: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "highjumpkick",
+      "earthquake",
+      "horndrill",
+      "uturn",
+      "gunkshot"
+    ]
+  },
+  chasumo: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bulkup",
+      "knockoff",
+      "highjumpkick",
+      "machpunch",
+      "stormthrow",
+      "swordsdance",
+      "earthquake",
+      "circlethrow",
+      "slackoff"
+    ]
+  },
+  oilslam: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  isissin: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "knockoff",
+      "crosspoison",
+      "toxic",
+      "pursuit",
+      "whirlwind",
+      "darkpulse",
+      "sacredsword",
+      "owtheedge",
+      "powertrip",
+      "suckerpunch",
+      "fireblast",
+      "recover",
+      "earthpower",
+      "swordsdance",
+      "gunkshot",
+      "poisonjab",
+      "bulkup",
+      "calmmind",
+      "slimegulp"
+    ]
+  },
+  stuffowl: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  durkey: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  upchucken: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bravebird",
+      "hypervoice",
+      "aeroblast",
+      "beakblast",
+      "roost",
+      "doubleedge",
+      "flamethrower",
+      "uturn",
+      "flareblitz",
+      "swordsdance",
+      "gunkshot",
+      "return",
+      "fireblast",
+      "defog",
+      "foulplay"
+    ]
+  },
+  dragun: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  triggedon: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  cannonance: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "dracometeor",
+      "substitute",
+      "dragonpulse",
+      "rest",
+      "flashcannon",
+      "zapcannon",
+      "icebeam",
+      "haze",
+      "hydropump",
+      "sleeptalk",
+      "willowisp",
+      "thunderbolt",
+      "defog",
+      "focusblast",
+      "darkpulse",
+      "fireblast",
+      "aurasphere"
+    ]
+  },
+  evacycle: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "substitute",
+      "bulkup",
+      "rest",
+      "shiftgear",
+      "zenheadbutt",
+      "flashcannon",
+      "flareblitz",
+      "ironhead",
+      "meteormash",
+      "fireblast",
+      "cosmicpower",
+      "thunderbolt",
+      "storedpower"
+    ]
+  },
+  foryu: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "knockoff",
+      "taunt",
+      "rockslide",
+      "closecombat",
+      "swordsdance",
+      "earthquake",
+      "ironhead",
+      "meteormash",
+      "foryou"
+    ]
+  },
+  scytill: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "roost",
+      "shadowclaw",
+      "swordsdance",
+      "rapidspin",
+      "willowisp",
+      "shadowsneak",
+      "earthquake",
+      "ironhead",
+      "spookout",
+      "defog",
+      "stratoblade"
+    ]
+  },
+  baddon: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "dracometeor",
+      "recover",
+      "bulletseed",
+      "coil",
+      "toxic",
+      "explosion",
+      "suckerpunch",
+      "dildocannon",
+      "flamethrower",
+      "firefang",
+      "dragonclaw",
+      "haze",
+      "gunkshot",
+      "glare",
+      "fireblast",
+      "stealthrock",
+      "bonerush"
+    ]
+  },
+  endranther: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "bulkup",
+      "knockoff",
+      "substitute",
+      "rockslide",
+      "toxic",
+      "decaydrain",
+      "swordsdance",
+      "bodyslam",
+      "memento",
+      "strengthsap",
+      "earthquake",
+      "fireblast",
+      "defog"
+    ]
+  },
+  notridley: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "dracometeor",
+      "extremespeed",
+      "acrobatics",
+      "dragondance",
+      "dragonascent",
+      "uturn",
+      "dragonclaw",
+      "swordsdance",
+      "earthquake",
+      "fireblast",
+      "outrage"
+    ]
+  },
+  demiwaifu: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "substitute",
+      "earthpower",
+      "drainingkiss",
+      "fleurcannon",
+      "icebeam",
+      "flamethrower",
+      "calmmind",
+      "wish",
+      "moonblast",
+      "willowisp",
+      "thunderbolt",
+      "defog",
+      "gigadrain"
+    ]
+  },
+  reptyke: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  rasclobber: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  batterex: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "",
+      "dragonfist",
+      "dragondance",
+      "firepunch",
+      "icepunch",
+      "machpunch",
+      "drainpunch",
+      "closecombat",
+      "punchout",
+      "thunderpunch",
+      "dragonhammer",
+      "earthquake",
+      "meteormash",
+      "outrage"
+    ]
+  },
+  faeriock: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  sylvuin: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  oburonyxo: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "pixiepummel",
+      "earthpower",
+      "earthquake",
+      "psychoshift",
+      "curse",
+      "toxic",
+      "calmmind",
+      "trickroom",
+      "moonblast",
+      "stoneedge",
+      "erosionwave",
+      "glare",
+      "stealthrock",
+      "defog",
+      "storedpower"
+    ]
+  },
+  cloucat: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  felimbus: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  deathorus: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "",
+      "substitute",
+      "knockoff",
+      "thunderbolt",
+      "darkpulse",
+      "stratoblade",
+      "surf",
+      "sacredsword",
+      "owtheedge",
+      "nastyplot",
+      "thunder",
+      "suckerpunch",
+      "growth",
+      "acrobatics",
+      "volttackle",
+      "waterfall",
+      "swordsdance",
+      "hurricane",
+      "batonpass",
+      "crunch"
+    ]
+  },
+  knogoat: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  knogrinyu: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "roar",
+      "highjumpkick",
+      "earthquake",
+      "bulkup",
+      "toxic",
+      "wish",
+      "flareblitz",
+      "healbell",
+      "milkdrink",
+      "bodyslam",
+      "headcharge"
+    ]
+  },
+  glasshot: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  glassannon: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "shiftgear",
+      "flashcannon",
+      "explosion",
+      "icebeam",
+      "iciclecrash",
+      "earthquake",
+      "thunderbolt",
+      "ironhead"
+    ]
+  },
+  fluffyeti: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  yedoom: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bulkup",
+      "knockoff",
+      "machpunch",
+      "suckerpunch",
+      "iciclecrash",
+      "closecombat",
+      "swordsdance",
+      "moonlight",
+      "punishment",
+      "icepunch",
+      "pursuit",
+      "iceshard"
+    ]
+  },
+  mirrostine: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "substitute",
+      "toxic",
+      "trickroom",
+      "willowisp",
+      "thunderbolt",
+      "lightscreen",
+      "teleport",
+      "taunt",
+      "mirrorcoat",
+      "recover",
+      "hex",
+      "curse",
+      "reflect",
+      "flashcannon",
+      "trick",
+      "shadowball",
+      "icebeam",
+      "calmmind",
+      "nightshade",
+      "defog",
+      "torment"
+    ]
+  },
+  mudpants: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  mudslacks: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "extremespeed",
+      "highjumpkick",
+      "swordsdance",
+      "precipiceblades",
+      "stoneedge",
+      "gunkshot"
+    ]
+  },
+  bukitlee: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  lossolith: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "teleport",
+      "toxic",
+      "heavyslam",
+      "wish",
+      "haze",
+      "trickroom",
+      "stealthrock",
+      "torment"
+    ]
+  },
+  mimimie: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "waterspout",
+      "scald",
+      "taunt",
+      "nastyplot",
+      "icebeam",
+      "lovelykiss",
+      "haze",
+      "hydropump",
+      "calmmind",
+      "darkpulse",
+      "foulplay"
+    ]
+  },
+  sprucifix: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "aromatherapy",
+      "healingwish",
+      "hammerarm",
+      "toxic",
+      "shadowclaw",
+      "powerwhip",
+      "phantomforce",
+      "spikes",
+      "trickroom",
+      "woodhammer",
+      "bodyslam",
+      "nightshade",
+      "destinybond"
+    ]
+  },
+  hulkan: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "substitute",
+      "facade",
+      "firepunch",
+      "hammerarm",
+      "focusmunch",
+      "hulkup",
+      "closecombat",
+      "thunderpunch",
+      "icepunch",
+      "earthquake",
+      "focuspunch"
+    ]
+  },
+  nonite: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  nonegative: {
+    tier: "NFE",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "batonpass",
+      "boomburst",
+      "thunderbolt"
+    ]
+  },
+  nomaestro: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "protect",
+      "pixiepummel",
+      "perishsong",
+      "thunderwave",
+      "toxic",
+      "boomburst",
+      "wish",
+      "thunderbolt",
+      "airslash",
+      "doubleedge",
+      "hurricane",
+      "encore",
+      "batonpass",
+      "healbell",
+      "earthquake",
+      "block",
+      "defog"
+    ]
+  },
+  dunkypea: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  burdmen: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  nutzboltz: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "oblivionwing",
+      "scald",
+      "roost",
+      "softboiled",
+      "nastyplot",
+      "icebeam",
+      "calmmind",
+      "flamethrower",
+      "haze",
+      "thunderbolt",
+      "whirlwind",
+      "fireblast",
+      "defog"
+    ]
+  },
+  kuklux: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  kuklan: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "earthpower",
+      "energyball",
+      "nastyplot",
+      "flamethrower",
+      "fireblast"
+    ]
+  },
+  flameboyan: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "earthpower",
+      "energyball",
+      "fierydance",
+      "flamethrower",
+      "moonlight",
+      "moonblast",
+      "willowisp",
+      "defog"
+    ]
+  },
+  piicee: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "protect",
+      "thinkfast",
+      "teleport",
+      "healingwish",
+      "nastyplot",
+      "softboiled",
+      "dailydose",
+      "psychic",
+      "wish",
+      "healbell",
+      "trickroom",
+      "clearsmog",
+      "willowisp",
+      "sludgewave",
+      "focusblast",
+      "fireblast",
+      "gigadrain"
+    ]
+  },
+  sonnanos: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "doubleironbash",
+      "forcepalm",
+      "firepunch",
+      "machpunch",
+      "bulletpunch",
+      "superpower",
+      "swordsdance",
+      "thunderpunch",
+      "icepunch"
+    ]
+  },
+  plebbles: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "rockslide",
+      "taunt",
+      "toxicspikes",
+      "toxic",
+      "explosion",
+      "spikes",
+      "memento",
+      "stoneedge",
+      "glare",
+      "stealthrock"
+    ]
+  },
+  sapleaf: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  ignut: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  phantash: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "hex",
+      "recover",
+      "nastyplot",
+      "moongeistbeam",
+      "haze",
+      "spore",
+      "trickroom",
+      "strengthsap",
+      "willowisp",
+      "focusblast",
+      "fireblast",
+      "lavaplume",
+      "gigadrain"
+    ]
+  },
+  polossus: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "poisonjab",
+      "recover",
+      "roar",
+      "bulkup",
+      "earthquake",
+      "knockoff",
+      "hammerarm",
+      "toxicspikes",
+      "explosion",
+      "superpower",
+      "haze",
+      "stoneedge",
+      "gunkshot"
+    ]
+  },
+  hitmonana: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "substitute",
+      "knockoff",
+      "toxic",
+      "focusblast",
+      "nastyplot",
+      "woodhammer",
+      "vacuumwave",
+      "earthpower",
+      "rest",
+      "curse",
+      "closecombat",
+      "synthesis",
+      "spikes",
+      "gigadrain",
+      "aurasphere",
+      "bulkup",
+      "earthquake",
+      "stealthrock"
+    ]
+  },
+  ballacle: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  barbarkley: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "accelerock",
+      "taunt",
+      "explosion",
+      "closecombat",
+      "swordsdance",
+      "rapidspin",
+      "rockpolish",
+      "earthquake",
+      "stealthrock",
+      "chaosdunk"
+    ]
+  },
+  kekroach: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  rekroach: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "knockoff",
+      "firstimpression",
+      "drainpunch",
+      "suckerpunch",
+      "uturn",
+      "closecombat",
+      "swordsdance",
+      "leechlife",
+      "thunderpunch",
+      "icepunch"
+    ]
+  },
+  ricosheep: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  ricosuave: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "earthquake",
+      "firepunch",
+      "rest",
+      "cottonguard",
+      "toxic",
+      "swordsdance",
+      "healbell",
+      "stoneedge",
+      "thunderpunch",
+      "icepunch",
+      "bodyslam",
+      "headcharge",
+      "inverseroom"
+    ]
+  },
+  spaghefant: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "gravity",
+      "aromatherapy",
+      "earthpower",
+      "knockoff",
+      "energyball",
+      "toxic",
+      "softboiled",
+      "calmmind",
+      "haze",
+      "mop",
+      "moonblast"
+    ]
+  },
+  crystaquil: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  crystaking: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "painsplit",
+      "icehammer",
+      "earthquake",
+      "toxicspikes",
+      "iciclecrash",
+      "swordsdance",
+      "rapidspin",
+      "punishment",
+      "gunkshot",
+      "iceshard"
+    ]
+  },
+  fontaba: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "substitute",
+      "thinkfast",
+      "thunderwave",
+      "foulplay",
+      "lightscreen",
+      "taunt",
+      "nastyplot",
+      "recover",
+      "earthpower",
+      "reflect",
+      "swagger",
+      "grass]",
+      "naturepower",
+      "psyshock",
+      "shadowball",
+      "storedpower",
+      "psychic",
+      "calmmind",
+      "topsyturvy"
+    ]
+  },
+  floconut: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  sappalm: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  roynapalm: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "aromatherapy",
+      "earthpower",
+      "softboiled",
+      "leafstorm",
+      "psychic",
+      "growth",
+      "defog",
+      "leechseed",
+      "fireblast",
+      "lavaplume",
+      "gigadrain",
+    ]
+  },
+  manateet: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  manatorque: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  manatank: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bulkup",
+      "hammerarm",
+      "liquidation",
+      "iciclecrash",
+      "icebeam",
+      "seismictoss",
+      "spikes",
+      "superfang",
+      "milkdrink",
+      "icepunch",
+      "brine",
+      "iceshard"
+    ]
+  },
+  anonymouse: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "quickattack",
+      "taunt",
+      "nastyplot",
+      "mop",
+      "superfang",
+      "memento",
+      "nuzzle",
+      "voltswitch",
+      "endeavor",
+      "thunderbolt",
+      "darkpulse",
+    ]
+  },
+  motherfuck: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "substitute",
+      "bulkup",
+      "aerialace",
+      "perishsong",
+      "toxicspikes",
+      "explosion",
+      "uturn",
+      "swordsdance",
+      "spikes",
+      "spore",
+      "earthquake",
+      "stealthrock"
+    ]
+  },
+  ninoop: {
+    tier: "LC Uber",
+    isNonstandard: "Future"
+  },
+  draconius: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "quickattack",
+      "dracometeor",
+      "bulkup",
+      "earthquake",
+      "facade",
+      "firepunch",
+      "fakeout",
+      "roost",
+      "boomburst",
+      "doubleedge",
+      "feint",
+      "dragonclaw",
+      "calmmind",
+      "return",
+      "bellydrum",
+      "fireblast",
+      "outrage",
+      "defog"
+    ]
+  },
+  ticktac: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  eareticle: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  scythear: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "zenheadbutt",
+      "swordsdance",
+      "thunderfang",
+      "fellstinger",
+      "rockclimb",
+      "leechlife",
+      "irontail",
+      "earthquake",
+      "ironhead"
+    ]
+  },
+  cozload: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  snugware: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "curse",
+      "hammerarm",
+      "thunderwave",
+      "toxic",
+      "superpower",
+      "plasmafists",
+      "seedbomb",
+      "uturn",
+      "zenheadbutt",
+      "swordsdance",
+      "healbell",
+      "trickroom",
+      "leechlife"
+    ]
+  },
+  fleespecs: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "nastyplot",
+      "bugbuzz",
+      "voltswitch",
+      "thunderbolt",
+      "focusblast",
+      "gigadrain",
+    ]
+  },
+  honrade: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "pixiepummel",
+      "substitute",
+      "sacredsword",
+      "owtheedge",
+      "1000folds",
+      "swordsdance",
+      "leafblade",
+      "earthquake",
+      "reversal"
+    ]
+  },
+  embortion: {
+    tier: "LC Uber",
+    isNonstandard: "Future"
+  },
+  premantom: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "hex",
+      "recover",
+      "snarl",
+      "substitute",
+      "nastyplot",
+      "calmmind",
+      "trickroom",
+      "willowisp",
+      "spite",
+      "focusblast",
+      "thunderbolt",
+      "shadowball",
+      "darkpulse",
+      "topsyturvy",
+      "fireblast",
+      "foulplay"
+    ]
+  },
+  galavik: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  galavire: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "substitute",
+      "energyball",
+      "overheat",
+      "nastyplot",
+      "toxic",
+      "flashcannon",
+      "autotomize",
+      "voltswitch",
+      "thunderbolt",
+      "disable",
+    ]
+  },
+  galaviste: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "doubleironbash",
+      "roar",
+      "substitute",
+      "focuspunch",
+      "hammerarm",
+      "thunderwave",
+      "volttackle",
+      "toxic",
+      "drainpunch",
+      "punchout",
+      "disable"
+    ]
+  },
+  pollefin: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  florigrace: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "surf",
+      "earthpower",
+      "scald",
+      "softboiled",
+      "icebeam",
+      "calmmind",
+      "hydropump",
+      "spore",
+      "seedflare",
+      "sleazyspores",
+      "leechseed"
+    ]
+  },
+  lasslee: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  wifemin: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "teleport",
+      "healingwish",
+      "aurasphere",
+      "psychic",
+      "calmmind",
+      "haze",
+      "healbell",
+      "trickroom",
+      "lovelykiss",
+      "seismictoss",
+      "storedpower"
+    ]
+  },
+  uwotto: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "thinkfast",
+      "thunderwave",
+      "shiftgear",
+      "toxic",
+      "trickroom",
+      "moonblast",
+      "thunderbolt",
+      "focusblast",
+      "teleport",
+      "taunt",
+      "nastyplot",
+      "ironhead",
+      "meteormash",
+      "rest",
+      "flashcannon",
+      "cosmicpower",
+      "storedpower",
+      "batonpass",
+      "psychic",
+      "calmmind",
+      "icebeam",
+      "psychicfangs",
+      "irondefense",
+      "earthquake",
+      "stealthrock",
+      "defog"
+    ]
+  },
+  venowatt: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "tailglow",
+      "sludgebomb",
+      "substitute",
+      "protect",
+      "discharge",
+      "toxicspikes",
+      "roost",
+      "toxic",
+      "torment",
+      "sludgewave",
+      "paraboliccharge",
+      "voltswitch",
+      "gigadrain",
+      "thunderbolt",
+      "defog",
+      "disable"
+    ]
+  },
+  vaultevour: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bulkup",
+      "rest",
+      "suckerpunch",
+      "crunch",
+      "pursuit",
+      "icefang",
+      "firefang",
+      "thunderfang",
+      "swordsdance",
+      "overbite",
+      "sleeptalk",
+      "ironhead"
+    ]
+  },
+  semdemen: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "roar",
+      "earthpower",
+      "scald",
+      "encore",
+      "softboiled",
+      "toxic",
+      "stickyweb",
+      "calmmind",
+      "haze",
+      "earthquake",
+      "stealthrock"
+    ]
+  },
+  dragking: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bravebird",
+      "pixiepummel",
+      "highjumpkick",
+      "blazekick",
+      "uturn",
+      "lovelykiss",
+      "swordsdance",
+      "earthquake"
+    ]
+  },
+  kuuroba: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "poisonjab",
+      "spiderweb",
+      "throatchop",
+      "aromatherapy",
+      "bulkup",
+      "rockslide",
+      "taunt",
+      "screech",
+      "zenheadbutt",
+      "closecombat",
+      "synthesis",
+      "futababreak",
+      "leafblade",
+      "stoneedge",
+      "speedweed",
+      "return",
+      "meteormash"
+    ]
+  },
+  baitmaster: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "surf",
+      "knockoff",
+      "scald",
+      "taunt",
+      "nastyplot",
+      "icebeam",
+      "trick",
+      "uturn",
+      "hydropump",
+      "superfang",
+      "moonblast",
+      "stealthrock",
+      "defog",
+      "foulplay"
+    ]
+  },
+  spookster: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  spookeer: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  spookzilla: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "painsplit",
+      "knockoff",
+      "brickbreak",
+      "earthquake",
+      "suckerpunch",
+      "shadowbone",
+      "swordsdance",
+      "haze",
+      "willowisp",
+      "shadowsneak",
+      "bonemerang",
+      "spookout"
+    ]
+  },
+  derpato: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  retater: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  potarded: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "gravity",
+      "bulkup",
+      "knockoff",
+      "brickbreak",
+      "substitute",
+      "rockslide",
+      "softboiled",
+      "zenheadbutt",
+      "toxic",
+      "powerwhip",
+      "playrough",
+      "stoneedge",
+      "earthquake",
+      "ironhead",
+      "ingrain",
+      "stealthrock",
+      "focuspunch"
+    ]
+  },
+  sadfish: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "scald",
+      "rest",
+      "toxic",
+      "hydropump",
+      "mop",
+      "memento",
+      "icywind"
+    ]
+  },
+  deloris: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "geomancy",
+      "softboiled",
+      "dazzlinggleam",
+      "fizzbitch",
+      "psychic",
+      "shadowball"
+    ]
+  },
+  oreon: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "lactoseshot",
+      "surf",
+      "energyball",
+      "calmmind",
+      "moonblast",
+      "milkdrink",
+      "gigadrain",
+      "thunderbolt",
+      "focusenergy",
+      "baddybad"
+    ]
+  },
+  farfigtron: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "highjumpkick",
+      "machpunch",
+      "thunder",
+      "nastyplot",
+      "firebomb",
+      "flareblitz",
+      "closecombat",
+      "uturn",
+      "swordsdance",
+      "thunderpunch",
+      "earthquake",
+      "focusblast",
+      "fireblast"
+    ]
+  },
+  regirode: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "painsplit",
+      "earthpower",
+      "calmmind",
+      "willowisp",
+      "rockpolish",
+      "spooperpower",
+      "erosionwave",
+      "stealthrock",
+      "aurasphere"
+    ]
+  },
+  regimelt: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "agility",
+      "liquidation",
+      "superpower",
+      "shadowsneak",
+      "explosion",
+      "iciclecrash",
+      "spooperpower",
+      "earthquake",
+      "iceshard"
+    ]
+  },
+  regirust: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "painsplit",
+      "protect",
+      "flashcannon",
+      "seismictoss",
+      "calmmind",
+      "willowisp",
+      "spooperpower",
+      "nightshade",
+      "stealthrock"
+    ]
+  },
+  vivaiger: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "substitute",
+      "roar",
+      "toxic",
+      "flamethrower",
+      "calmmind",
+      "willowisp",
+      "voltswitch",
+      "thunderbolt",
+      "fireblast",
+      "lavaplume",
+      "defog",
+    ]
+  },
+  heliofug: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "extremespeed",
+      "earthquake",
+      "dragondance",
+      "flareblitz",
+      "dragonclaw",
+      "vcreate",
+      "outrage"
+    ]
+  },
+  sadrog: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  smugrok: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  peperee: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "accelerock",
+      "bulkup",
+      "rockslide",
+      "greatrage",
+      "stoneedge",
+      "earthquake",
+      "bellydrum",
+      "slackoff"
+    ]
+  },
+  hodtog: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  wienebark: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  saudoge: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "substitute",
+      "earthpower",
+      "grassknot",
+      "aeroblast",
+      "nastyplot",
+      "wowwiener",
+      "flamethrower",
+      "psychic",
+      "uturn",
+      "fireblast"
+    ]
+  },
+  gnarrk: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  corsharrk: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  davyjaws: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "substitute",
+      "knockoff",
+      "aquajet",
+      "closecombat",
+      "swordsdance",
+      "plunder",
+      "iciclecrash",
+      "earthquake"
+    ]
+  },
+  humpunny: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  bunnorgy: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "quickattack",
+      "protect",
+      "substitute",
+      "highjumpkick",
+      "knockoff",
+      "earthquake",
+      "fakeout",
+      "encore",
+      "batonpass",
+      "doubleedge",
+      "return",
+      "workup",
+      "switcheroo"
+    ]
+  },
+  emelgy: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  fedorawk: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  fazeagle: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "overheat",
+      "aeroblast",
+      "flashcannon",
+      "grass]",
+      "flamethrower",
+      "toke",
+      "darkpulse",
+      "shadowball",
+      "fireblast",
+      "focusenergy"
+    ]
+  },
+  catikillar: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  tikoon: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  oogabuga: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "roost",
+      "stickyweb",
+      "thunderbolt",
+      "defog",
+      "gigadrain",
+      "quiverdance"
+    ]
+  },
+  ebining: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  emplyin: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "knockoff",
+      "earthquake",
+      "encore",
+      "taunt",
+      "thunderwave",
+      "toxic",
+      "suckerpunch",
+      "uturn",
+      "closecombat",
+      "moonlight",
+      "gunkshot",
+      "pursuit",
+      "switcheroo",
+      "thousandarrows"
+    ]
+  },
+  upbote: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  upbeddit: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "teleport",
+      "barrier",
+      "rest",
+      "icebeam",
+      "calmmind",
+      "psystrike",
+      "psychic",
+      "trickroom",
+      "magiccoat",
+      "thunderbolt",
+      "cosmicpower",
+      "metronome",
+      "workup",
+      "storedpower"
+    ]
+  },
+  flipbird: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  wheygle: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bravebird",
+      "substitute",
+      "knockoff",
+      "flyingpress",
+      "acrobatics",
+      "dynamicpunch",
+      "machpunch",
+      "roost",
+      "weirdflex",
+      "explosion",
+      "drainpunch",
+      "anchorshot",
+      "uturn",
+      "swordsdance",
+      "earthquake",
+      "bellydrum"
+    ]
+  },
+  gangnome: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "substitute",
+      "teleport",
+      "rest",
+      "toxic",
+      "lunardance",
+      "mop",
+      "trickroom",
+      "moonblast",
+      "defog",
+      "foulplay"
+    ]
+  },
+  pyongnome: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "knockoff",
+      "finalgambit",
+      "explosion",
+      "seedbomb",
+      "zenheadbutt",
+      "flashcannon",
+      "trick",
+      "firefang",
+      "sludgewave",
+      "gunkshot",
+      "ironhead",
+      "meteormash",
+      "focusblast",
+      "thunderbolt",
+      "baddybad"
+    ]
+  },
+  bruhkid: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  ubruh: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bulkup",
+      "knockoff",
+      "destinybond",
+      "firepunch",
+      "shoreup",
+      "machpunch",
+      "drainpunch",
+      "closecombat",
+      "stoneedge",
+      "rockpolish",
+      "icepunch",
+      "earthquake",
+      "thunderpunch",
+      "counter",
+      "reversal",
+      "stealthrock",
+      "mirrorcoat"
+    ]
+  },
+  walruse: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  walruskie: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "roar",
+      "encore",
+      "bulletpunch",
+      "liquidation",
+      "toxic",
+      "iciclecrash",
+      "waterfall",
+      "aquajet",
+      "superfang",
+      "milkdrink",
+      "meteormash"
+    ]
+  },
+  diobat: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  warudio: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "extremespeed",
+      "knockoff",
+      "nastyplot",
+      "suckerpunch",
+      "crunch",
+      "lunardance",
+      "closecombat",
+      "uturn",
+      "pursuit",
+      "focusblast",
+      "darkpulse",
+      "defog"
+    ]
+  },
+  docee: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  donutsteel: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "extremespeed",
+      "geomancy",
+      "rest",
+      "shiftgear",
+      "flashcannon",
+      "sunsteelstrike",
+      "swordsdance",
+      "sleeptalk",
+      "precipiceblades"
+    ]
+  },
+  cakupple: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  fondupple: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "pixiepummel",
+      "knockoff",
+      "bulkup",
+      "sacredsword",
+      "healingwish",
+      "sleeppowder",
+      "toxic",
+      "powerwhip",
+      "swordsdance",
+      "milkdrink",
+      "speedweed",
+      "defog"
+    ]
+  },
+  baloofang: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "spectralthief",
+      "hex",
+      "taunt",
+      "roost",
+      "nastyplot",
+      "toxic",
+      "willowisp",
+      "focusblast",
+      "shadowball",
+      "defog"
+    ]
+  },
+  socckat: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "highjumpkick",
+      "volttackle",
+      "blazekick",
+      "doubleedge",
+      "flareblitz",
+      "swordsdance",
+      "megakick",
+      "return"
+    ]
+  },
+  egylamp: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  ruselamp: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "discharge",
+      "nastyplot",
+      "psychic",
+      "healbell",
+      "willowisp",
+      "voltswitch",
+      "thunderbolt",
+      "fireblast",
+      "lavaplume",
+    ]
+  },
+  mehndior: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  tunakking: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "earthpower",
+      "energyball",
+      "thinkfast",
+      "agility",
+      "fierydance",
+      "psychic",
+      "flamethrower",
+      "thunderbolt",
+      "fireblast",
+      "defog"
+    ]
+  },
+  missletoe: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  hohohoming: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "earthpower",
+      "aeroblast",
+      "roost",
+      "waterpulse",
+      "frostbreath",
+      "uturn",
+      "trick",
+      "icebeam",
+      "fire]",
+      "rockpolish",
+      "focusenergy",
+      "blizzard",
+      "defog"
+    ]
+  },
+  flaa: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  hopault: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "highjumpkick",
+      "facade",
+      "owtheedge",
+      "machpunch",
+      "blazekick",
+      "uturn",
+      "doubleedge",
+      "megakick"
+    ]
+  },
+  araketsu: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  senketula: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "knockoff",
+      "crosspoison",
+      "toxicspikes",
+      "owtheedge",
+      "toxic",
+      "stickyweb",
+      "xscissor",
+      "uturn",
+      "swordsdance",
+      "spikes",
+      "megahorn",
+      "earthquake",
+      "pursuit",
+      "gunkshot"
+    ]
+  },
+  falcaptain: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bravebird",
+      "highjumpkick",
+      "firepunch",
+      "falconpunch",
+      "flareblitz",
+      "closecombat",
+      "swordsdance",
+      "uturn",
+      "thunderpunch",
+      "icepunch"
+    ]
+  },
+  cirpent: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  traumobra: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "substitute",
+      "toxic",
+      "lovelykiss",
+      "haze",
+      "memento",
+      "moonblast",
+      "willowisp",
+      "glare",
+      "focusblast",
+      "foulplay",
+      "lightscreen",
+      "energyball",
+      "taunt",
+      "nastyplot",
+      "reflect",
+      "swagger",
+      "mop",
+      "psyshock",
+      "encore",
+      "calmmind",
+      "moonlight",
+      "sludgewave",
+      "defog"
+    ]
+  },
+  lizascoop: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  reptrill: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "quicksand",
+      "rockslide",
+      "icefang",
+      "firefang",
+      "thunderfang",
+      "irontail",
+      "earthquake",
+      "ironhead"
+    ]
+  },
+  fefeion: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  feferun: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "sludgebomb",
+      "substitute",
+      "toxicspikes",
+      "bugbuzz",
+      "thunderbolt",
+      "glare",
+      "disable",
+      "taunt",
+      "scorchedearth",
+      "fireblast",
+      "morningsun",
+      "earthpower",
+      "overheat",
+      "fierydance",
+      "spikes",
+      "gigadrain",
+      "agility",
+      "calmmind",
+      "stealthrock"
+    ]
+  },
+  jerkle: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "thunderbolt",
+      "prismaticlaser",
+      "psychic"
+    ]
+  },
+  faptime: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "zenheadbutt",
+      "swordsdance",
+      "stoneedge",
+      "earthquake"
+    ]
+  },
+  shiriman: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "aromatherapy",
+      "lightscreen",
+      "teleport",
+      "taunt",
+      "reflect",
+      "rest",
+      "softboiled",
+      "lunardance",
+      "psychic",
+      "flamethrower",
+      "haze",
+      "calmmind",
+      "trickroom",
+      "sleeptalk",
+      "moonblast",
+      "willowisp",
+      "glare",
+      "defog"
+    ]
+  },
+  fresrye: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  dedwheat: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "protect",
+      "skillswap",
+      "slackoff",
+      "spore",
+      "leechseed",
+      "gigadrain"
+    ]
+  },
+  spargle: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  spedo: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "hammerarm",
+      "taunt",
+      "rockslide",
+      "nastyplot",
+      "rest",
+      "suckerpunch",
+      "crunch",
+      "icebeam",
+      "flamethrower",
+      "swordsdance",
+      "playrough",
+      "calmmind",
+      "moonblast",
+      "earthquake",
+      "thunderbolt",
+      "fireblast",
+      "storedpower"
+    ]
+  },
+  housant: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  apartmant: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "shellsmash",
+      "uturn",
+      "trickroom",
+      "leechlife",
+      "stoneedge",
+      "earthquake",
+      "healorder",
+      "stealthrock"
+    ]
+  },
+  fuermiga: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  maripyro: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "roost",
+      "flareblitz",
+      "doubleedge",
+      "uturn",
+      "flamethrower",
+      "psychic",
+      "overbite",
+      "leechlife",
+      "bugbuzz",
+      "willowisp",
+      "gunkshot",
+      "thunderbolt",
+      "defog",
+      "fireblast",
+      "gigadrain",
+      "quiverdance"
+    ]
+  },
+  confirmabi: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "ground]",
+      "leafstorm",
+      "psychic",
+      "calmmind",
+      "trick",
+      "psyshock",
+      "gigadrain"
+    ]
+  },
+  bulbapedo: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "aromatherapy",
+      "earthpower",
+      "teleport",
+      "sleeppowder",
+      "softboiled",
+      "toxic",
+      "nastyplot",
+      "trickroom",
+      "clearsmog",
+      "leechseed",
+      "gigadrain",
+      "foulplay"
+    ]
+  },
+  wastenaut: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  wantnaut: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "earthquake",
+      "taunt",
+      "toxicspikes",
+      "rest",
+      "recycle",
+      "toxic",
+      "heavyslam",
+      "explosion",
+      "spikes",
+      "stoneedge",
+      "block",
+      "gunkshot",
+      "stockpile",
+      "stealthrock",
+      "slackoff",
+      "mirrorcoat"
+    ]
+  },
+  cansumor: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "poisonjab",
+      "recover",
+      "bulkup",
+      "crabhammer",
+      "roar",
+      "teleport",
+      "knockoff",
+      "toxic",
+      "crunch",
+      "banefulbunker",
+      "gunkshot",
+      "nightshade"
+    ]
+  },
+  snuffant: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  cokemmoth: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "hail",
+      "auroraveil",
+      "sleeppowder",
+      "nastyplot",
+      "iciclecrash",
+      "swordsdance",
+      "blizzard",
+      "earthquake",
+      "focusblast"
+    ]
+  },
+  grimdak: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "substitute",
+      "knockoff",
+      "owtheedge",
+      "bulletpunch",
+      "nastyplot",
+      "flashcannon",
+      "suckerpunch",
+      "swordsdance",
+      "memento",
+      "stoneedge",
+      "earthquake",
+      "pursuit",
+      "meteormash",
+      "darkpulse",
+      "aurasphere"
+    ]
+  },
+  shroofle: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "aromatherapy",
+      "roar",
+      "knockoff",
+      "bulkup",
+      "substitute",
+      "toxicspikes",
+      "toxic",
+      "softboiled",
+      "spore",
+      "foulplay"
+    ]
+  },
+  betacluck: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  thundacock: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bravebird",
+      "volttackle",
+      "uturn",
+      "closecombat",
+      "swordsdance",
+      "defog"
+    ]
+  },
+  twinfowl: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  avianjoin: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "bravebird",
+      "bulkup",
+      "substitute",
+      "knockoff",
+      "acrobatics",
+      "roost",
+      "drillpeck",
+      "heavyslam",
+      "uturn",
+      "swordsdance",
+      "heatcrash",
+      "willowisp",
+      "whirlwind",
+      "stealthrock",
+      "defog"
+    ]
+  },
+  illuminowl: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  illumatrix: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "earthpower",
+      "heatwave",
+      "aeroblast",
+      "airslash",
+      "nastyplot",
+      "roost",
+      "psychic",
+      "calmmind",
+      "trick",
+      "whirlwind",
+      "defog",
+      "storedpower"
+    ]
+  },
+  typobop: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  yeerex: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "dragondance",
+      "rockslide",
+      "crunch",
+      "icefang",
+      "firefang",
+      "thunderfang",
+      "stoneedge",
+      "irontail",
+      "earthquake",
+      "pursuit"
+    ]
+  },
+  randomix: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  cthullord: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "knockoff",
+      "scald",
+      "rockslide",
+      "icepunch",
+      "rest",
+      "acupressure",
+      "shellsmash",
+      "waterfall",
+      "aquatail",
+      "seismictoss",
+      "sleeptalk",
+      "stoneedge",
+      "rockblast",
+      "earthquake"
+    ]
+  },
+  quiboom: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  gynuke: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "earthpower",
+      "explosion",
+      "icebeam",
+      "waterfall",
+      "uturn",
+      "steameruption",
+      "vcreate",
+      "holyduty",
+      "fireblast",
+      "gigadrain"
+    ]
+  },
+  rainglock: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "originpulse",
+      "waterspout",
+      "icebeam",
+      "darkpulse",
+      "aurasphere"
+    ]
+  },
+  beatmarine: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  substarr: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "surf",
+      "substitute",
+      "scald",
+      "perishsong",
+      "toxic",
+      "whirlpool",
+      "boomburst",
+      "hydropump",
+      "voltswitch",
+      "slackoff"
+    ]
+  },
+  hofucno: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "substitute",
+      "earthpower",
+      "surf",
+      "perishsong",
+      "scald",
+      "roost",
+      "icebeam",
+      "calmmind",
+      "uturn",
+      "hydropump",
+      "spore",
+      "hurricane",
+      "gigadrain",
+      "trick",
+      "defog"
+    ]
+  },
+  hornigiri: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  hornicier: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  hornititan: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "return",
+      "bulkup",
+      "toxic",
+      "explosion",
+      "doubleedge",
+      "iciclecrash",
+      "lovelykiss",
+      "rapidspin",
+      "rockpolish",
+      "earthquake",
+      "glare",
+      "iceshard"
+    ]
+  },
+  preasu: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  undastand: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "substitute",
+      "roar",
+      "toxic",
+      "trickroom",
+      "thunderbolt",
+      "boltstrike",
+      "slackoff",
+      "baddybad",
+      "nastyplot",
+      "flamethrower",
+      "discharge",
+      "storedpower",
+      "bulkup",
+      "agility",
+      "encore",
+      "batonpass",
+      "calmmind",
+      "earthquake"
+    ]
+  },
+  warney: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  banageddon: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "crabhammer",
+      "knockoff",
+      "icehammer",
+      "teleport",
+      "return",
+      "hammerarm",
+      "firepunch",
+      "toxic",
+      "doubleedge",
+      "bodyslam",
+      "swordsdance",
+      "mop",
+      "woodhammer",
+      "icepunch",
+      "earthquake",
+      "thunderpunch",
+      "banhammer"
+    ]
+  },
+  acufront: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "scald",
+      "thunder",
+      "morningsun",
+      "boomburst",
+      "haze",
+      "hydropump",
+      "hurricane",
+      "defog"
+    ]
+  },
+  acufrontf: {
+    isNonstandard: "Future"
+  },
+  acufrontw: {
+    isNonstandard: "Future"
+  },
+  acufronti: {
+    isNonstandard: "Future"
+  },
+  militant: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "extremespeed",
+      "bulletpunch",
+      "crunch",
+      "uturn",
+      "icefang",
+      "swordsdance",
+      "firefang",
+      "thunderfang",
+      "psychicfangs",
+      "overbite",
+      "gunkshot",
+      "ironhead",
+      "meteormash"
+    ]
+  },
+  shiggydig: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "knockoff",
+      "toxic",
+      "uturn",
+      "bodyslam",
+      "swordsdance",
+      "earthquake",
+      "stealthrock",
+      "slackoff",
+      "homerunbat"
+    ]
+  },
+  signot: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  reagain: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "surf",
+      "earthpower",
+      "topsyturvy",
+      "nastyplot",
+      "toxic",
+      "spikes",
+      "darkpulse",
+      "stealthrock",
+      "gigadrain"
+    ]
+  },
+  ormite: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  viristal: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "tailglow",
+      "recover",
+      "earthpower",
+      "energyball",
+      "teleport",
+      "discharge",
+      "stickyweb",
+      "healbell",
+      "trickroom",
+      "voltswitch",
+      "thunderbolt",
+      "sludgewave",
+      "fireblast",
+      "stealthrock",
+    ]
+  },
+  rolango: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  dreameme: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "knockoff",
+      "teleport",
+      "softboiled",
+      "mop",
+      "spikes",
+      "moonlight",
+      "moonblast",
+      "trickroom",
+      "defog"
+    ]
+  },
+  pearchie: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "extremespeed",
+      "highjumpkick",
+      "substitute",
+      "dragondance",
+      "volttackle",
+      "softboiled",
+      "toxic",
+      "flareblitz",
+      "superfang",
+      "woodhammer",
+      "headcharge",
+      "hornleech"
+    ]
+  },
+  tarditank: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "scald",
+      "rest",
+      "powersplit",
+      "infestation",
+      "toxic",
+      "whirlpool",
+      "sleeptalk"
+    ]
+  },
+  iplora: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  chromox: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "overheat",
+      "flashcannon",
+      "stickyweb",
+      "voltswitch",
+      "thunderbolt",
+      "fireblast",
+      "eruption"
+    ]
+  },
+  pitayen: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  dragaya: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  frutagon: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "spikyshield",
+      "dragondance",
+      "stunspore",
+      "earthquake",
+      "dragontail",
+      "solarblade",
+      "toxic",
+      "synthesis",
+      "spikes",
+      "leafblade",
+      "psychicfangs",
+      "woodhammer",
+      "dragonhammer",
+      "growth",
+      "leechseed",
+      "drillrun"
+    ]
+  },
+  biteki: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "psychic",
+      "icebeam",
+      "psychoboost",
+      "thunderbolt",
+      "heatwave"
+    ]
+  },
+  sesquatch: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "roar",
+      "bulkup",
+      "skullbash",
+      "closecombat",
+      "willowisp",
+      "shadowforce",
+      "shadowsneak",
+      "spookout",
+      "slackoff"
+    ]
+  },
+  fireshi: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  fireshitwi: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  fireshitre: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "sludgebomb",
+      "substitute",
+      "firespin",
+      "taunt",
+      "toxic",
+      "psychic",
+      "calmmind",
+      "flamethrower",
+      "haze",
+      "clearsmog",
+      "willowisp",
+      "thunderbolt",
+      "sludgewave",
+      "fireblast",
+      "lavaplume",
+      "morningsun"
+    ]
+  },
+  slugbud: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  slughug: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  slugfugg: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "knockoff",
+      "scald",
+      "liquidation",
+      "shellsmash",
+      "waterfall",
+      "powerwhip",
+      "gunkshot",
+      "slimegulp"
+    ]
+  },
+  skeletroll: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  spookscare: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "earthpower",
+      "wish",
+      "healbell",
+      "spikes",
+      "willowisp",
+      "counter",
+      "shadowball",
+      "stealthrock",
+      "mirrorcoat"
+    ]
+  },
+  goryannus: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "recover",
+      "substitute",
+      "earthquake",
+      "taunt",
+      "spookout",
+      "iciclecrash",
+      "shadowbone",
+      "swordsdance",
+      "playrough",
+      "rockclimb",
+      "shadowsneak",
+      "bonemerang",
+      "stealthrock"
+    ]
+  },
+  lankong: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  ballankey: {
+    tier: "NFE",
+    isNonstandard: "Future"
+  },
+  funnedong: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "quickattack",
+      "substitute",
+      "flail",
+      "machpunch",
+      "explosion",
+      "doubleedge",
+      "closecombat",
+      "swordsdance",
+      "uturn",
+      "return",
+      "reversal"
+    ]
+  },
+  narwhiz: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "pixiepummel",
+      "scald",
+      "coil",
+      "toxic",
+      "softboiled",
+      "calmmind",
+      "waterfall",
+      "mop",
+      "playrough",
+      "moonblast",
+      "defog"
+    ]
+  },
+  niterpent: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "knockoff",
+      "explosion",
+      "seedbomb",
+      "uturn",
+      "firefang",
+      "swordsdance",
+      "blueflare",
+      "voltswitch",
+      "gunkshot",
+      "thunderbolt",
+      "boltstrike",
+      "eruption"
+    ]
+  },
+  griffawork: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "roar",
+      "earthpower",
+      "energyball",
+      "aeroblast",
+      "roost",
+      "airslash",
+      "icebeam",
+      "psychic",
+      "calmmind",
+      "healbell",
+      "hurricane",
+      "psystrike",
+      "thunderbolt",
+      "heatwave",
+      "defog"
+    ]
+  },
+  boarnograf: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "knockoff",
+      "facade",
+      "suckerpunch",
+      "flareblitz",
+      "swordsdance",
+      "precipiceblades",
+      "stoneedge",
+      "earthquake",
+      "bellydrum",
+      "switcheroo"
+    ]
+  },
+  admoot: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "pixiepummel",
+      "knockoff",
+      "icehammer",
+      "thunderwave",
+      "moonblast",
+      "crabhammer",
+      "nastyplot",
+      "uturn",
+      "flamethrower",
+      "woodhammer",
+      "banhammer",
+      "earthpower",
+      "hammerarm",
+      "trick",
+      "mop",
+      "explosion",
+      "healbell",
+      "milkdrink",
+      "defog"
+    ]
+  },
+  tentaquil: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "substitute",
+      "toxic",
+      "wish",
+      "rapidspin",
+      "willowisp",
+      "glare",
+      "geomancy",
+      "teleport",
+      "stickyweb",
+      "uturn",
+      "psystrike",
+      "spore",
+      "pukeblood",
+      "mop",
+      "blueflare",
+      "steameruption",
+      "sleazyspores",
+      "batonpass",
+      "fizzbitch",
+      "shellsmash",
+      "regenerate",
+      "nuzzle",
+      "voltswitch",
+      "stealthrock",
+      "defog"
+    ]
+  },
+  blobbos: {
+    tier: "LC",
+    isNonstandard: "Future"
+  },
+  vandash: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "sludgebomb",
+      "surf",
+      "knockoff",
+      "energyball",
+      "nastyplot",
+      "suckerpunch",
+      "swordsdance",
+      "leafblade",
+      "toke",
+      "earthquake",
+      "darkpulse",
+      "gigadrain",
+      "gunkshot"
+    ]
+  },
+  nutjobber: {
+    tier: "LC Uber",
+    isNonstandard: "Future"
+  },
+  deisnutz: {
+    tier: "OU",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "protect",
+      "substitute",
+      "pixiepummel",
+      "taunt",
+      "softboiled",
+      "toxic",
+      "crunch",
+      "shellsmash",
+      "icefang",
+      "firefang",
+      "thunderfang",
+      "willowisp",
+      "moonblast",
+      "spiritshackle",
+      "nightshade",
+      "leechseed",
+      "shadowball",
+      "aurasphere"
+    ]
+  },
+  adesign: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "knockoff",
+      "softboiled",
+      "toxic",
+      "uturn",
+      "swordsdance",
+      "healbell",
+      "willowisp",
+      "earthquake",
+      "anattack",
+      "stealthrock",
+      "defog"
+    ]
+  },
+  clovenix: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "earthpower",
+      "energyball",
+      "taunt",
+      "toxic",
+      "uturn",
+      "flamethrower",
+      "swordsdance",
+      "regenerate",
+      "futababreak",
+      "willowisp",
+      "sacredfire",
+      "earthquake",
+      "defog",
+      "fireblast",
+      "gigadrain",
+      "quiverdance"
+    ]
+  },
+  jewipede: {
+    tier: "Uber",
+    isNonstandard: "Future",
+    randomBattleMoves: [
+      "spectralthief",
+      "extremespeed",
+      "substitute",
+      "fakeout",
+      "bulkup",
+      "rest",
+      "doubleedge",
+      "lovelykiss",
+      "swordsdance",
+      "uturn",
+      "leechlife",
+      "megahorn",
+      "earthquake"
+    ]
+  },
+  megablobbos: {
+    tier: "Illegal",
+    isNonstandard: "Future"
+  }
 };
