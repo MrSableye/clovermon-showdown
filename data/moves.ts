@@ -887,8 +887,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	baddybad: {
 		num: 737,
-		accuracy: 95,
-		basePower: 80,
+		accuracy: 100,
+		basePower: 90,
 		category: "Special",
 		name: "Baddy Bad",
 		pp: 15,
