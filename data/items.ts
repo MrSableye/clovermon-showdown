@@ -2913,7 +2913,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.baseSpecies.baseSpecies === 'Pikotton') {
+			if (pokemon.baseSpecies.baseSpecies === 'Pikachu') {
 				return this.chainModify(2);
 			}
 		},
@@ -7204,6 +7204,7 @@ export const Items: {[itemid: string]: ItemData} = {
   },
   thiccbone: {
 		name: "Thicc Bone",
+		spritenum: 379,
 		desc: "A hard bone of some sort to be held by Masdawg or Pasdawg. It raises the Attack stat.",
     onModifyAtkPriority: 1,
     onModifyAtk(atk, pokemon) {
