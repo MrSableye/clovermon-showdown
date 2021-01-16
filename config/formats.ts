@@ -37,6 +37,7 @@ export const Formats: FormatList = [
 			'Fochun Items',
 			'Blobbos Clause',
 		],
+		banlist: ['Deloris', 'Tentaquil'],
 	},
 	{
 		name: "[Gen 8 Clover Only] Ubers",
@@ -53,7 +54,7 @@ export const Formats: FormatList = [
 			'Fochun Items',
 			'Blobbos Clause',
 		],
-		banlist: ['Baton Pass'],
+		banlist: ['Baton Pass', 'Deloris', 'Tentaquil'],
 	},
 	{
 		name: "[Gen 8 Clover Only] OU",
@@ -70,7 +71,7 @@ export const Formats: FormatList = [
 			'Fochun Items',
 			'Blobbos Clause',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+		banlist: ['Deloris', 'Tentaquil', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	{
 		name: "[Gen 8 Clover Only] LC",
@@ -111,7 +112,7 @@ export const Formats: FormatList = [
 			'Fochun Items',
 			'Blobbos Clause',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+		banlist: ['Deloris', 'Tentaquil', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	{
 		section: "Clover x Pokemon Singles"
