@@ -4937,7 +4937,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onDamagingHit(damage, target, source, move) {
 			if (move.flags['contact']) {
 				if (this.randomChance(3, 10)) {
-					source.trySetStatus('confusion', target);
+					source.addVolatile('confusion');
 				}
 			}
 		},
