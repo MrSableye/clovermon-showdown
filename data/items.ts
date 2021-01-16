@@ -7131,6 +7131,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	/* Clovermons */
 	suedeshoes: {
 		name: "Suede Shoes",
+		spritenum: 746,
 		desc: "A pair of shoes to be held by Pretzely. They raise its Speed, as long as you stay off of them.",
     onModifySpe(spe, pokemon) {
       if (pokemon.baseSpecies.baseSpecies === 'Pretzely') {
@@ -7141,6 +7142,7 @@ export const Items: {[itemid: string]: ItemData} = {
   },
   bigfaggot: {
 		name: "Big Faggot",
+		spritenum: 741,
 		desc: "A bundle of sticks to be held by Flameboyan. It fuels the fire, raising its Special Attack.",
     onModifySpAPriority: 1,
     onModifySpA(spa, pokemon) {
@@ -7152,6 +7154,7 @@ export const Items: {[itemid: string]: ItemData} = {
   },
   baconstrip: {
 		name: "Bacon Strip",
+		spritenum: 749,
 		desc: "A synthetic piece of bacon to be held by Urswine . It adds a protective layer that raises Special Defense.",
     onModifySpDPriority: 2,
     onModifySpD(spd, pokemon) {
@@ -7163,6 +7166,7 @@ export const Items: {[itemid: string]: ItemData} = {
   },
   katana: {
 		name: "Katana",
+		spritenum: 743,
 		desc: "An item to be held by a Pokémon. An unsheathed katana that boosts the power of Steel-type moves.",
     onBasePowerPriority: 15,
     onBasePower(basePower, user, target, move) {
@@ -7173,6 +7177,7 @@ export const Items: {[itemid: string]: ItemData} = {
   },
   cutebow: {
 		name: "Cute Bow",
+		spritenum: 742,
 		desc: "An item to be held by a Pokémon. A cutesy pink bow that boosts the power of Fairy-type moves.",
     onBasePowerPriority: 15,
     onBasePower(basePower, user, target, move) {
@@ -7183,6 +7188,7 @@ export const Items: {[itemid: string]: ItemData} = {
   },
   bible: {
 		name: "Bible",
+		spritenum: 748,
 		desc: "A holy bible to be held by Caroline. It raises her Critical-hit ratio.",
     onModifyCritRatio(critRatio, pokemon) {
       if (pokemon.baseSpecies.baseSpecies === 'Caroline') {
@@ -7193,6 +7199,7 @@ export const Items: {[itemid: string]: ItemData} = {
   },
   taco: {
 		name: "Taco",
+		spritenum: 747,
 		desc: "A delicious taco. When held by a Pokémon, it will be used in battle to restore 50 HP.",
     onUpdate(pokemon) {
       if (pokemon.hp <= pokemon.maxhp / 2) {
@@ -7216,6 +7223,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	manifesto: {
 		name: "Manifesto",
+		spritenum: 744,
 		desc: "A book of lies used by Walruskie that boosts the power of its Steel-type and Ice-type moves.",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
@@ -7227,6 +7235,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	piratesjug: {
 		name: "Pirate's Jug",
+		spritenum: 745,
 		desc: "A jug filled wit' Octai milk 'n rum. When held by Octai, it increases th' power o' its Lactose Shot.",
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
