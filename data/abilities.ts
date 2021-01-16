@@ -4851,12 +4851,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
   degradation: {
 		name: "Degradation",
-		onSourceEffectiveness(typeMod, target, type, move) {
-			if (move.type === 'Dark' && target?.types.includes('Normal')) {
-				return 1;
-			}
-
-			return typeMod;
+		onEffectiveness(typeMod, target, type, move) {
+		   if (move && type === 'Normal' && move.type === 'Dark') return 1;
+			 return typeMod;
 		},
   },
 	flareheal: {
@@ -4950,12 +4947,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
   pollution: {
 		name: "Pollution",
-		onSourceEffectiveness(typeMod, target, type, move) {
-			if (move.type === 'Poison' && target?.types.includes('Water')) {
-				return 1;
-			}
-
-			return typeMod;
+		onEffectiveness(typeMod, target, type, move) {
+		   if (move && type === 'Water' && move.type === 'Poison') return 1;
+			 return typeMod;
 		},
   },
 	pozzed: {
