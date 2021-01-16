@@ -406,6 +406,12 @@ const avatarTable = new Set([
 	'clover-fetishists',
 	'clover-guitarist',
 	'clover-randy',
+	'clover-van',
+	'clover-snoop',
+	'clover-moot',
+	'clover-imakuni',
+	'clover-evilleader',
+	'clover-chris',
 ]);
 
 const avatarTableBeliot419 = new Set([
