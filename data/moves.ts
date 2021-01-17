@@ -2978,14 +2978,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		status: 'slp',
-		onTry(source, target, move) {
-			if (source.species.name === 'Darkrai' || move.hasBounced) {
-				return;
-			}
-			this.add('-fail', source, 'move: Dark Void');
-			this.hint("Only a Pokemon whose form is Darkrai can use this move.");
-			return null;
-		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Dark",
@@ -8601,18 +8593,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {mirror: 1, authentic: 1},
 		breaksProtect: true,
 		onTry(source) {
-			if (source.species.name === 'Hoopa-Unbound') {
-				return;
-			}
-			this.hint("Only a Pokemon whose form is Hoopa Unbound can use this move.");
-			if (source.species.name === 'Hoopa') {
+			if (source.species.baseSpecies === 'Hoopa') {
+				if (source.species.name === 'Hoopa-Unbound') {
+					return;
+				}
+
 				this.attrLastMove('[still]');
 				this.add('-fail', source, 'move: Hyperspace Fury', '[forme]');
 				return null;
 			}
-			this.attrLastMove('[still]');
-			this.add('-fail', source, 'move: Hyperspace Fury');
-			return null;
 		},
 		self: {
 			boosts: {
