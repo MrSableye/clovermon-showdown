@@ -7228,7 +7228,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (move && user.baseSpecies.baseSpecies === 'Walruskie' && (move.type === 'Steel' || move.type === 'Ice')) {
-				return this.chainModify([0x1333, 0x1000]);
+				return this.chainModify(1.5);
 			}
 		},
     itemUser: ["Walruskie"],
