@@ -19918,8 +19918,8 @@ export const Moves: {[moveid: string]: MoveData} = {
     target: "allAdjacent",
     type: "Ground",
 		flags: {protect: 1, mirror: 1},
-		onHit(target, source) {
-			if (!source.isGrounded()) {
+		onAfterMove(source) {
+			if (source.isGrounded()) {
 				source.trySetStatus('brn');
 			}
 		},
