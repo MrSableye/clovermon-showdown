@@ -1804,7 +1804,7 @@ export class TeamValidator {
 
 		let cantLearnReason = null;
 
-		let limit1 = false;
+		let limit1 = true;
 		let sketch = false;
 		let blockedHM = false;
 
@@ -1964,7 +1964,7 @@ export class TeamValidator {
 						if (learned.charAt(1) === 'R') {
 							moveSources.restrictedMove = moveid;
 						}
-						if (sketch) {
+						if (sketch && learned === '8E') {
 							limit1 = true;
 						}
 						moveSources.addGen(learnedGen);
