@@ -4516,8 +4516,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				pink: 'Fairy',
 			};
 			const type = colorType[this.toID(color)];
-			if (!target.setType(type)) return false;
-			this.add('-start', target, 'typeadd', type, '[from] ability: Gradient');
+			if (!pokemon.addType(type)) return false;
+			this.add('-start', pokemon, 'typeadd', type, '[from] ability: Gradient');
 		}
 	},
 	anyability: {
