@@ -1804,7 +1804,7 @@ export class TeamValidator {
 
 		let cantLearnReason = null;
 
-		let limit1 = true;
+		let limit1 = false;
 		let sketch = false;
 		let blockedHM = false;
 
