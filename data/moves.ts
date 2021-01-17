@@ -19919,7 +19919,9 @@ export const Moves: {[moveid: string]: MoveData} = {
     type: "Ground",
 		flags: {protect: 1, mirror: 1},
 		onHit(target, source) {
-			source.trySetStatus('brn');
+			if (!source.isGrounded()) {
+				source.trySetStatus('brn');
+			}
 		},
 		secondary: {
 			chance: 100,
