@@ -1964,8 +1964,8 @@ export class TeamValidator {
 						if (learned.charAt(1) === 'R') {
 							moveSources.restrictedMove = moveid;
 						}
-						if (!sketch) {
-							limit1 = false;
+						if (sketch) {
+							limit1 = true;
 						}
 						moveSources.addGen(learnedGen);
 					} else if (learned.charAt(1) === 'E') {
