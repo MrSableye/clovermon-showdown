@@ -7234,5 +7234,27 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
     itemUser: ["Octai"],
+	},
+	blobbosinite: {
+		name: "Blobbosinite",
+		spritenum: 617,
+		onStart(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Blobbos') {
+				pokemon.setBoost({
+					accuracy: 6,
+					evasion: 6,
+					atk: 6,
+					def: 6,
+					spa: 6,
+					spd: 6,
+					spe: 6,
+				});
+				pokemon.formeChange('megablobbos', this.effect, true);
+				pokemon.faint();
+			} else {
+				this.hint('Blobbosinite can only be used by Blobbos... idiot...');
+			}
+		},
+    itemUser: ["Blobbos"],
 	}
 };

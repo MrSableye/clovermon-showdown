@@ -2373,5 +2373,9 @@ export const ItemsText: {[k: string]: ItemText} = {
 	piratesjug: {
 		name: "Pirate's Jug",
 		desc: "If held by an Octai, it doubles the power of Lactose Shot.",
+	},
+	blobbosinite: {
+		name: "Blobbosinite",
+		desc: "On switch-in, gives Blobbos max boosts.",
 	}
 };
