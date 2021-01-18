@@ -1957,7 +1957,6 @@ export class TeamValidator {
 							// current-gen level-up, TM or tutor moves:
 							//   always available
 							if (learned !== '8E' && babyOnly) setSources.babyOnly = babyOnly;
-							if (!moveSources.moveEvoCarryCount) return null;
 						}
 						// past-gen level-up, TM, or tutor moves:
 						//   available as long as the source gen was or was before this gen
