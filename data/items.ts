@@ -7240,15 +7240,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 617,
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies === 'Blobbos') {
-				pokemon.setBoost({
-					accuracy: 6,
-					evasion: 6,
-					atk: 6,
-					def: 6,
-					spa: 6,
-					spd: 6,
-					spe: 6,
-				});
+				this.add('-anim', pokemon, 'Clangorous Soul', pokemon);
+				this.add('-anim', pokemon, 'Extreme Evoboost', pokemon);
+				this.add('-anim', pokemon, 'Bulk Up', pokemon);
+				this.add('-anim', pokemon, 'Nasty Plot', pokemon);
+				this.add('-anim', pokemon, 'Swords Dance', pokemon);
+				this.add('-anim', pokemon, 'Acupressure', pokemon);
+				this.add('-anim', pokemon, 'Minimize', pokemon);
 				pokemon.formeChange('megablobbos', this.effect, true);
 				pokemon.faint();
 			} else {
