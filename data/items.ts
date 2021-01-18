@@ -7242,7 +7242,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (pokemon.baseSpecies.baseSpecies === 'Blobbos') {
 				pokemon.formeChange('megablobbos', this.effect, true);
 
-				this.add('-message', 'Blobbos unleashing his true power!');
+				this.add('-message', 'Blobbos is unleashing its true power!');
 
 				const moves = Object.values(this.dex.data.Moves);
 				let animationsRemaining = 20;
