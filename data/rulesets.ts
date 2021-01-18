@@ -2303,6 +2303,7 @@ export const Formats: {[k: string]: FormatData} = {
 				"Powder Jar",
 				"Big Root",
 				"Jar of Pee",
+				"Blobbosinite",
 			].map(this.toID);
 
 			const errors = [];
