@@ -2333,4 +2333,45 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Crucibellite",
 		desc: "If held by a Crucibelle, this item allows it to Mega Evolve in battle.",
 	},
+	/* Clovermons */
+	suedeshoes: {
+		name: "Suede Shoes",
+		desc: "If held by a Pretzely, its Speed is doubled.",
+  },
+  bigfaggot: {
+		name: "Big Faggot",
+		desc: "If held by a Flameboyan, its Special Attack is doubled.",
+  },
+  baconstrip: {
+		name: "Bacon Strip",
+		desc: "If held by a Urswine, its Special Defense is doubled.",
+  },
+  katana: {
+		name: "Katana",
+		desc: "Holder's Steel-type attacks have 1.2x power.",
+  },
+  cutebow: {
+		name: "Cute Bow",
+		desc: "Holder's Fairy-type attacks have 1.2x power.",
+  },
+  bible: {
+		name: "Bible",
+		desc: "If held by a Caroline, its critical hit ratio is raised by 2 stages.",
+  },
+  taco: {
+		name: "Taco",
+		desc: "Restores 50 HP when at 1/2 max HP or less. Single use.",
+  },
+  thiccbone: {
+		name: "Thicc Bone",
+		desc: "If held by a Masdawg or a Pasdawg, its Attack is doubled.",
+	},
+	manifesto: {
+		name: "Manifesto",
+		desc: "If held by a Walruskie, its Steel- and Ice-type attacks have 1.5x power.",
+	},
+	piratesjug: {
+		name: "Pirate's Jug",
+		desc: "If held by an Octai, it doubles the power of Lactose Shot.",
+	}
 };
