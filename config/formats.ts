@@ -123,7 +123,7 @@ export const Formats: FormatList = [
 			'Fochun Only',
 			'Blobbos Clause',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+		banlist: ['Blobbosinite', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	{
 		section: "Clover x Pokemon Singles"
