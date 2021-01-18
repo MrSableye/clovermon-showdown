@@ -7240,14 +7240,17 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 617,
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies === 'Blobbos') {
-				this.add('-anim', pokemon, 'Clangorous Soul', pokemon);
-				this.add('-anim', pokemon, 'Extreme Evoboost', pokemon);
-				this.add('-anim', pokemon, 'Bulk Up', pokemon);
-				this.add('-anim', pokemon, 'Nasty Plot', pokemon);
-				this.add('-anim', pokemon, 'Swords Dance', pokemon);
-				this.add('-anim', pokemon, 'Acupressure', pokemon);
-				this.add('-anim', pokemon, 'Minimize', pokemon);
 				pokemon.formeChange('megablobbos', this.effect, true);
+
+				this.add('-message', 'Blobbos unleashing his true power!');
+
+				const moves = Object.values(this.dex.data.Moves);
+				let animationsRemaining = 20;
+				while (animationsRemaining > 0 && moves.length > 0) {
+					this.add('-anim', pokemon, this.sample(moves).name, pokemon);
+					animationsRemaining--;
+				}
+
 				pokemon.faint();
 			} else {
 				this.hint('Blobbosinite can only be used by Blobbos... idiot...');
