@@ -26,16 +26,20 @@ export const Formats: FormatList = [
 		section: "Clover Only Singles",
 	},
 	{
-		name: "[Gen 8 Clover Only] Anything Goes",
+		name: "[Gen 8 Clover Only] OU",
 		threads: [],
 		mod: 'gen8',
 		ruleset: [
 			'Standard NatDex',
 			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Species Clause',
+			'OHKO Clause',
 			'+Future',
 			'Fochun Only',
 			'Blobbos Clause',
 		],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	{
 		name: "[Gen 8 Clover Only] Ubers",
@@ -54,10 +58,11 @@ export const Formats: FormatList = [
 		banlist: ['Baton Pass'],
 	},
 	{
-		name: "[Gen 8 Clover Only] OU",
+		name: "[Gen 8 Clover Only] LC",
 		threads: [],
 		mod: 'gen8',
 		ruleset: [
+			'Little Cup',
 			'Standard NatDex',
 			'Dynamax Clause',
 			'Sleep Clause Mod',
@@ -67,7 +72,7 @@ export const Formats: FormatList = [
 			'Fochun Only',
 			'Blobbos Clause',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+		banlist: ['LC Uber', 'Moody', 'Baton Pass'],
 	},
 	{
 		name: "[Gen 8 Clover Only] Monotype",
@@ -87,21 +92,16 @@ export const Formats: FormatList = [
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	{
-		name: "[Gen 8 Clover Only] LC",
+		name: "[Gen 8 Clover Only] Anything Goes",
 		threads: [],
 		mod: 'gen8',
 		ruleset: [
-			'Little Cup',
 			'Standard NatDex',
 			'Dynamax Clause',
-			'Sleep Clause Mod',
-			'Species Clause',
-			'OHKO Clause',
 			'+Future',
 			'Fochun Only',
 			'Blobbos Clause',
 		],
-		banlist: ['LC Uber', 'Moody', 'Baton Pass'],
 	},
 	{
 		section: "Clover Only Doubles",
