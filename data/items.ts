@@ -7245,13 +7245,15 @@ export const Items: {[itemid: string]: ItemData} = {
 				this.add('-message', 'Blobbos is unleashing its true power!');
 
 				const moves = Object.values(this.dex.data.Moves);
-				let animationsRemaining = 20;
+				let animationsRemaining = 30;
 				while (animationsRemaining > 0 && moves.length > 0) {
 					this.add('-anim', pokemon, this.sample(moves).name, pokemon);
 					animationsRemaining--;
 				}
 
-				pokemon.faint();
+				pokemon.formeChange('blobbos', this.effect, true);
+
+				pokemon.eatItem(true, pokemon);
 			} else {
 				this.hint('Blobbosinite can only be used by Blobbos... idiot...');
 			}

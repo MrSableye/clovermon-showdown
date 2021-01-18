@@ -2376,6 +2376,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	blobbosinite: {
 		name: "Blobbosinite",
-		desc: "On switch-in, gives Blobbos max boosts.",
+		desc: "On switch-in, causes the user to win the game. Single use.",
 	}
 };
