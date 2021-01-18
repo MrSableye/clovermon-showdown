@@ -10042,7 +10042,6 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "ground]",
       "leafstorm",
       "psychic",
       "calmmind",
