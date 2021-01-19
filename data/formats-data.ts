@@ -8414,7 +8414,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "wowweiner",
+      "wowwiener",
       "aeroblast",
       "uturn",
       "earthpower",
