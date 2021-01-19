@@ -26,11 +26,10 @@ export const Formats: FormatList = [
 		section: "Clover Only Singles",
 	},
 	{
-		name: "[Gen 8 Clover Only] Unrated Random Battle",
+		name: "[Gen 8 Clover Only] Random Battle",
 		threads: [],
 		mod: 'gen8',
 		team: 'random',
-		rated: false,
 		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
