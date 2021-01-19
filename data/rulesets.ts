@@ -2318,7 +2318,7 @@ export const Formats: {[k: string]: FormatData} = {
 			}
 
 			set.moves.forEach((move) => {
-				if (!fochunMoves.includes(this.toID(move))) {
+				if (!fochunMoves.includes(this.toID(move)) && !this.toID(move).startsWith('hiddenpower')) {
 					errors.push(`${set.name || set.species} has ${move}, which is unavailable in Fochun or the Ebin Isles.`);
 				}
 			});
