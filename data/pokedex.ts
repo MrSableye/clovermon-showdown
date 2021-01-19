@@ -26219,7 +26219,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 69268,
 		name: "Oogabuga",
 		types: [
-			"Bug"
+			"Bug",
+			"Grass"
 		],
 		genderRatio: {
 			M: 0.5,
