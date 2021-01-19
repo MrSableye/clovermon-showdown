@@ -6962,12 +6962,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
   masdawg: {
     tier: "LC Uber",
     isNonstandard: "Future",
-    randomBattleMoves: [
-      "closecombat",
-      "knockoff",
-      "psychicfangs",
-      "doubleedge"
-    ]
+    // randomBattleMoves: [
+    //   "closecombat",
+    //   "knockoff",
+    //   "psychicfangs",
+    //   "doubleedge"
+    // ]
   },
   pasdawg: {
     tier: "OU",
@@ -8335,12 +8335,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
   nonegative: {
     tier: "NFE",
     isNonstandard: "Future",
-    randomBattleMoves: [
-      "sludgebomb",
-      "batonpass",
-      "boomburst",
-      "thunderbolt"
-    ]
+    // randomBattleMoves: [
+    //   "sludgebomb",
+    //   "batonpass",
+    //   "boomburst",
+    //   "thunderbolt"
+    // ]
   },
   nomaestro: {
     tier: "OU",
