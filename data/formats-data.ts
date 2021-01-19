@@ -6436,19 +6436,13 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "quicksand",
-      "substitute",
-      "taunt",
       "enema",
-      "synthesis",
-      "swordsdance",
-      "stoneedge",
-      "woodhammer",
-      "strengthsap",
       "earthquake",
-      "bellydrum",
-      "leechseed",
-      "stealthrock"
+      "bulkup",
+      "stealthrock",
+      "rockslide",
+      "woodhammer",
+      "superpower"
     ]
   },
   arabomb: {
@@ -6463,19 +6457,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "substitute",
-      "aeroblast",
-      "taunt",
-      "nastyplot",
-      "mindblown",
-      "toxic",
-      "flamethrower",
-      "memento",
-      "willowisp",
       "holyduty",
+      "fireblast",
       "darkpulse",
-      "fireblast"
+      "nastyplot",
+      "focusblast",
+      "willowisp"
     ]
   },
   ejacasm: {
@@ -6490,20 +6477,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "roar",
-      "knockoff",
-      "surf",
-      "lightscreen",
       "scald",
-      "taunt",
-      "reflect",
       "softboiled",
-      "toxic",
       "stickyweb",
-      "whirlpool",
-      "calmmind",
-      "rapidspin"
+      "rapidspin",
+      "sludgebomb",
+      "calmmind"
     ]
   },
   squirrap: {
@@ -6514,18 +6493,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "grassknot",
-      "firepunch",
-      "owtheedge",
-      "nastyplot",
-      "suckerpunch",
       "boomburst",
-      "doubleedge",
-      "uturn",
-      "swordsdance",
       "flamethrower",
-      "psychicfangs",
-      "return"
+      "foulplay",
+      "uturn",
+      "nastyplot"
     ]
   },
   kengeon: {
@@ -6541,15 +6513,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "bravebird",
-      "bulkup",
-      "acrobatics",
-      "beakblast",
       "roost",
-      "doubleedge",
-      "uturn",
+      "defog",
       "closecombat",
-      "return",
-      "defog"
+      "bulkup"
     ]
   },
   curicrawl: {
@@ -6564,18 +6531,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bulkup",
-      "lightscreen",
-      "acrobatics",
-      "taunt",
-      "reflect",
-      "sleeppowder",
-      "batonpass",
-      "roost",
       "stickyweb",
+      "sleeppowder",
       "uturn",
-      "copycat",
-      "quiverdance"
+      "defog",
+      "taunt",
+      "roost"
     ]
   },
   larvades: {
@@ -6594,26 +6555,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "spiderweb",
-      "aromatherapy",
-      "rockslide",
-      "toxic",
-      "futababreak",
-      "lightscreen",
-      "taunt",
-      "uturn",
-      "leafblade",
       "ironhead",
-      "meteormash",
-      "reflect",
-      "synthesis",
-      "swordsdance",
-      "encore",
-      "bulletpunch",
-      "screech",
-      "bodyslam",
-      "stealthrock",
-      "defog"
+      "futababreak",
+      "superpower",
+      "uturn",
+      "rockslide"
     ]
   },
   nauseon: {
@@ -6624,64 +6570,47 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "poisonjab",
-      "painsplit",
-      "earthquake",
-      "crosschop",
-      "superpower",
-      "drainpunch",
-      "explosion",
-      "haze",
-      "mop",
-      "clearsmog",
-      "stoneedge",
-      "willowisp",
-      "seismictoss",
-      "gunkshot"
+      "glare",
+      "gunkshot",
+      "bulkup",
+      "knockoff",
+      "drainpunch"
     ]
   },
   ebolable: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "scald",
-      "nastyplot",
-      "flamethrower",
-      "switcheroo",
-      "focusblast",
+      "sludgewave",
       "darkpulse",
-      "destinybond"
+      "focusblast",
+      "trick",
+      "flamethrower"
     ]
   },
   pikotton: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "lactoseshot",
-      "surf",
-      "energyball",
-      "dazzlinggleam",
-      "voltswitch",
       "thunderbolt",
+      "voltswitch",
+      "lactoseshot",
+      "stickyweb",
+      "surf",
+      "wish",
+      "protect"
     ]
   },
   birdhouse: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bravebird",
-      "lightscreen",
-      "encore",
-      "reflect",
       "softboiled",
-      "toxic",
-      "explosion",
-      "uturn",
-      "trickroom",
-      "stealthrock",
+      "leechseed",
+      "bravebird",
       "defog",
-      "foulplay"
+      "stealthrock",
+      "uturn"
     ]
   },
   lanshil: {
@@ -6696,16 +6625,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "accelerock",
-      "toxic",
-      "explosion",
       "shellsmash",
-      "doubleedge",
-      "rapidspin",
-      "earthquake",
-      "ironhead",
+      "headsmash",
       "meteormash",
-      "headsmash"
+      "earthquake"
     ]
   },
   maymay: {
@@ -6716,44 +6639,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "earthquake",
-      "fakeout",
-      "nastyplot",
-      "toxic",
-      "zenheadbutt",
-      "lickclean",
-      "crunch",
-      "icebeam",
-      "doubleedge",
-      "honeclaws",
-      "hypnosis",
-      "superfang",
       "milkdrink",
-      "return",
-      "thunderbolt",
-      "fireblast",
-      "foulplay"
+      "meme",
+      "bodyslam",
+      "earthquake",
+      "bulkup"
     ]
   },
   piguson: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "knockoff",
-      "earthquake",
       "riotshield",
-      "machpunch",
-      "toxic",
-      "doubleedge",
-      "closecombat",
-      "swordsdance",
-      "bodyslam",
       "rapidspin",
-      "irontail",
-      "return",
       "glare",
-      "slackoff"
+      "slackoff",
+      "return"
     ]
   },
   armando: {
@@ -6768,16 +6669,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
+      "closecombat",
       "knockoff",
-      "firepunch",
-      "machpunch",
-      "drainpunch",
       "uturn",
-      "swordsdance",
-      "rapidspin",
-      "thunderpunch",
       "icepunch",
-      "earthquake"
+      "thunderpunch"
     ]
   },
   semdrop: {
@@ -6796,20 +6692,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "powergem",
-      "burnup",
-      "roar",
-      "earthpower",
-      "thunder",
-      "toxic",
       "trickroom",
-      "clearsmog",
-      "sacredfire",
-      "thunderbolt",
-      "defog",
       "fireblast",
-      "lavaplume",
-      "morningsun"
+      "powergem",
+      "earthpower",
+      "scald"
     ]
   },
   troubait: {
@@ -6825,27 +6712,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "knockoff",
-      "scald",
-      "toxic",
-      "aquatail",
-      "haze",
-      "trickroom",
-      "memento",
-      "sleeptalk",
-      "foulplay",
-      "powertrip",
       "uturn",
-      "firefang",
-      "endeavor",
-      "rocktomb",
-      "rest",
-      "aquajet",
-      "waterfall",
-      "swordsdance",
-      "bulkup",
-      "crunch",
-      "earthquake",
-      "stealthrock"
+      "stealthrock",
+      "liquidation",
+      "aquajet"
     ]
   },
   pixila: {
@@ -6856,20 +6726,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "aromatherapy",
-      "earthpower",
-      "substitute",
-      "teleport",
-      "roost",
-      "toxic",
-      "lickclean",
-      "batonpass",
-      "uturn",
-      "trickroom",
+      "quiverdance",
       "moonblast",
-      "gigadrain",
-      "defog",
-      "quiverdance"
+      "bugbuzz",
+      "earthpower",
+      "roost"
     ]
   },
   wedgard: {
@@ -6880,19 +6741,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bulkup",
-      "knockoff",
-      "rockslide",
-      "taunt",
-      "rest",
-      "zenheadbutt",
-      "doubleedge",
-      "spikes",
       "rapidspin",
-      "stoneedge",
-      "sleeptalk",
+      "stealthrock",
       "earthquake",
-      "stealthrock"
+      "knockoff",
+      "stoneedge",
+      "spikes"
     ]
   },
   ribbizap: {
@@ -6900,42 +6754,33 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "tailglow",
-      "substitute",
-      "boomburst",
+      "thunderbolt",
       "icebeam",
-      "voltswitch",
-      "thunderbolt"
+      "boomburst",
+      "energyball"
     ]
   },
   elephas: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "recover",
-      "hypervoice",
-      "teleport",
-      "thinkfast",
-      "nastyplot",
-      "psychic",
       "calmmind",
-      "haze",
-      "healbell",
-      "trickroom",
+      "psychic",
+      "earthpower",
       "willowisp",
-      "psyshock",
-      "shadowball"
+      "recover"
     ]
   },
   seamapan: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "surf",
-      "waterspout",
-      "scald",
-      "toxic",
       "lovelykiss",
-      "hydropump"
+      "scald",
+      "waterspout",
+      "healbell",
+      "calmmind",
+      "icebeam"
     ]
   },
   caroline: {
@@ -6943,16 +6788,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "bravebird",
-      "earthpower",
-      "agility",
-      "airslash",
-      "roost",
-      "nastyplot",
-      "closecombat",
-      "swordsdance",
-      "hurricane",
       "earthquake",
-      "darkpulse"
+      "swordsdance",
+      "closecombat",
+      "stoneedge"
     ]
   },
   chompest: {
@@ -6961,30 +6800,17 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
   },
   masdawg: {
     tier: "LC Uber",
-    isNonstandard: "Future",
-    // randomBattleMoves: [
-    //   "closecombat",
-    //   "knockoff",
-    //   "psychicfangs",
-    //   "doubleedge"
-    // ]
+    isNonstandard: "Future"
   },
   pasdawg: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "earthquake",
-      "agility",
-      "lickclean",
-      "doubleedge",
-      "closecombat",
-      "swordsdance",
-      "playrough",
-      "uturn",
       "bodyslam",
-      "healbell",
-      "return",
       "ironhead",
+      "closecombat",
+      "uturn",
+      "earthquake",
       "stealthrock"
     ]
   },
@@ -6996,21 +6822,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "substitute",
-      "firepunch",
-      "coil",
-      "machpunch",
-      "toxic",
-      "drainpunch",
       "powerwhip",
-      "closecombat",
-      "superfang",
-      "leafblade",
-      "earthquake",
-      "glare",
-      "leechseed",
-      "focuspunch"
+      "crosschop",
+      "coil",
+      "grasswhistle",
+      "rockslide"
     ]
   },
   fishnism: {
@@ -7021,18 +6837,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "taunt",
-      "liquidation",
-      "toxic",
-      "suckerpunch",
-      "aquajet",
-      "haze",
-      "psychicfangs",
-      "steameruption",
-      "earthquake",
-      "bellydrum",
       "slackoff",
-      "foulplay"
+      "steameruption",
+      "psychicfangs",
+      "teleport",
+      "toxic"
     ]
   },
   chezetta: {
@@ -7043,12 +6852,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "recover",
-      "knockoff",
-      "toxic",
-      "flamethrower",
-      "lovelykiss",
+      "calmmind",
+      "softboiled",
       "moonblast",
+      "flamethrower",
       "willowisp"
     ]
   },
@@ -7060,20 +6867,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "roar",
-      "knockoff",
-      "firepunch",
-      "rockslide",
-      "toxic",
-      "swordsdance",
-      "woodhammer",
-      "icepunch",
-      "earthquake",
-      "headsmash",
-      "thunderpunch",
-      "hornleech",
       "stealthrock",
-      "slackoff"
+      "earthquake",
+      "woodhammer",
+      "slackoff",
+      "headsmash",
+      "dragondance"
     ]
   },
   conchilla: {
@@ -7084,16 +6883,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "crabhammer",
-      "earthquake",
-      "rockslide",
-      "shoreup",
       "shellsmash",
+      "rockslide",
       "bodyslam",
-      "rapidspin",
-      "stoneedge",
-      "return",
-      "stealthrock"
+      "earthquake",
+      "shoreup",
+      "crabhammer"
     ]
   },
   coolcube: {
@@ -7108,15 +6903,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "recover",
-      "energyball",
-      "taunt",
-      "icebeam",
-      "trick",
       "calmmind",
-      "hydropump",
+      "freezedry",
+      "icebeam",
+      "lactoseshot",
       "moonblast",
-      "defog"
+      "focusblast"
     ]
   },
   smogaroben: {
@@ -7127,42 +6919,23 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bravebird",
-      "knockoff",
-      "earthquake",
-      "acrobatics",
-      "taunt",
-      "toxicspikes",
-      "icebeam",
-      "uturn",
-      "swordsdance",
-      "closecombat",
-      "spikes",
       "spore",
       "rapidspin",
-      "shellsmash",
-      "gunkshot",
+      "stickyweb",
       "stealthrock",
-      "defog"
+      "bravebird",
+      "taunt"
     ]
   },
   machmona: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "knockoff",
-      "finalgambit",
-      "flyingpress",
-      "firepunch",
-      "machpunch",
-      "shadowpunch",
-      "superpower",
-      "drainpunch",
       "swordsdance",
       "elbowdrop",
-      "icepunch",
-      "partingshot",
-      "spookout"
+      "superpower",
+      "spookout",
+      "machpunch"
     ]
   },
   bacub: {
@@ -7173,13 +6946,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "aromatherapy",
       "bulkup",
-      "return",
       "firelash",
       "softboiled",
-      "willowisp",
-      "bodyslam"
+      "bodyslam",
+      "earthquake"
     ]
   },
   moostatic: {
@@ -7190,37 +6961,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "quickattack",
-      "rockslide",
       "volttackle",
-      "toxic",
-      "lickclean",
-      "flamethrower",
-      "calmmind",
-      "milkdrink",
+      "flareblitz",
       "voltswitch",
-      "ironhead",
-      "fireblast",
-      "thunderbolt"
+      "milkdrink",
+      "outrage"
     ]
   },
   pretzely: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "powergem",
-      "recover",
-      "substitute",
-      "earthpower",
-      "destinybond",
-      "protect",
-      "meanlook",
-      "perishsong",
-      "kingsshield",
-      "nastyplot",
       "boomburst",
-      "icebeam",
-      "stealthrock"
+      "focusblast",
+      "nastyplot",
+      "powergem"
     ]
   },
   deemdow: {
@@ -7231,13 +6986,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "substitute",
-      "icebeam",
+      "spookout",
+      "shadowball",
       "psychic",
-      "calmmind",
-      "trickroom",
-      "moonblast",
-      "shadowball"
+      "focusblast",
+      "trick"
     ]
   },
   cheerly: {
@@ -7252,24 +7005,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
       "pixiepummel",
-      "bulkup",
-      "substitute",
-      "rest",
-      "rockslide",
-      "taunt",
-      "batonpass",
-      "toxic",
+      "earthquake",
       "wish",
-      "closecombat",
-      "swordsdance",
-      "healbell",
-      "mop",
-      "sleeptalk",
-      "playrough",
-      "thunderpunch",
-      "earthquake"
+      "protect",
+      "substitute"
     ]
   },
   caracold: {
@@ -7280,24 +7020,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "grassknot",
       "icebeam",
+      "thunderbolt",
       "voltswitch",
-      "thunderbolt"
+      "grassknot",
+      "boltbeam"
     ]
   },
   pengas: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "roost",
       "boomburst",
-      "flamethrower",
       "freezedry",
-      "trick",
-      "thunderbolt",
       "fireblast",
-      "defog"
+      "earthpower",
+      "trick"
     ]
   },
   praeteur: {
@@ -7308,19 +7046,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "painsplit",
-      "scald",
-      "curse",
-      "rest",
-      "toxic",
       "uturn",
-      "waterfall",
-      "haze",
-      "aquatail",
-      "trickroom",
-      "superfang",
-      "sleeptalk",
-      "destinybond"
+      "scald",
+      "painsplit",
+      "toxic",
+      "icebeam"
     ]
   },
   flowre: {
@@ -7331,16 +7061,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "protect",
-      "substitute",
-      "taunt",
-      "nastyplot",
-      "sleeppowder",
-      "leechseed",
       "darkpulse",
-      "gigadrain",
-      "aurasphere"
+      "sludgewave",
+      "focusblast",
+      "sleeppowder",
+      "calmmind"
     ]
   },
   juarecito: {
@@ -7355,18 +7080,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "gravity",
-      "quicksand",
-      "taunt",
-      "rockslide",
-      "bulletpunch",
-      "toxic",
-      "swordsdance",
-      "mop",
       "rapidspin",
+      "stealthrock",
       "earthquake",
       "meteormash",
-      "stealthrock",
+      "bulletpunch",
       "slackoff"
     ]
   },
@@ -7378,17 +7096,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "crabhammer",
-      "knockoff",
-      "spikyshield",
-      "substitute",
-      "toxicspikes",
-      "liquidation",
-      "seedbomb",
       "powerwhip",
-      "swordsdance",
-      "spikes",
-      "counter",
+      "crabhammer",
+      "coil",
+      "leechlife",
       "leechseed"
     ]
   },
@@ -7401,15 +7112,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "lactoseshot",
-      "surf",
-      "scald",
-      "taunt",
-      "dazzlinggleam",
-      "icebeam",
-      "calmmind",
-      "hydropump",
       "milkdrink",
-      "moonblast"
+      "scald",
+      "flamethrower",
+      "toxic"
     ]
   },
   charagon: {
@@ -7420,15 +7126,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "extremespeed",
-      "imprison",
       "shiftgear",
-      "toxic",
-      "heavyslam",
-      "superpower",
       "heatcrash",
+      "heavyslam",
       "earthquake",
-      "stealthrock"
+      "extremespeed"
     ]
   },
   euphoreal: {
@@ -7439,24 +7141,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bulkup",
-      "knockoff",
-      "teleport",
-      "encore",
-      "hammerarm",
       "owtheedge",
-      "taunt",
-      "batonpass",
-      "suckerpunch",
       "1000folds",
-      "swordsdance",
-      "trickroom",
       "strengthsap",
-      "seismictoss",
-      "earthquake",
-      "pursuit",
-      "inverseroom",
-      "topsyturvy"
+      "swordsdance",
+      "suckerpunch"
     ]
   },
   praunch: {
@@ -7471,21 +7160,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "vacuumwave",
-      "crabhammer",
-      "surf",
-      "rockslide",
-      "machpunch",
-      "aquajet",
       "shellsmash",
+      "crabhammer",
       "closecombat",
-      "icebeam",
-      "swordsdance",
-      "hydropump",
-      "icepunch",
       "earthquake",
-      "focusblast",
-      "aurasphere"
+      "aquajet"
     ]
   },
   tricient: {
@@ -7496,10 +7175,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "earthquake",
-      "headsmash",
       "trickroom",
-      "gyroball"
+      "headsmash",
+      "gyroball",
+      "earthquake",
+      "superpower"
     ]
   },
   poizookie: {
@@ -7510,17 +7190,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "powergem",
-      "sludgebomb",
-      "earthpower",
       "toxiravage",
-      "rockslide",
-      "nastyplot",
-      "swordsdance",
       "stoneedge",
-      "irontail",
-      "sludgewave",
-      "shitpost"
+      "swordsdance",
+      "stompingtantrum",
+      "toxic"
     ]
   },
   sabreck: {
@@ -7531,40 +7205,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "earthquake",
-      "doubleedge",
-      "firefang",
-      "swordsdance",
-      "psychicfangs",
-      "overbite",
-      "stoneedge",
-      "rockclimb",
       "return",
-      "hyperfang"
+      "stoneedge",
+      "earthquake",
+      "stealthrock",
+      "knockoff"
     ]
   },
   pyralink: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "fusionflare",
-      "dracometeor",
-      "earthpower",
-      "dragondance",
-      "outrage",
-      "dragontail",
-      "roost",
-      "toxic",
-      "flareblitz",
-      "dragonclaw",
       "toke",
+      "flareblitz",
       "clangingscales",
-      "thunderbolt",
-      "earthquake",
-      "glare",
-      "fireblast",
-      "lavaplume",
-      "defog"
+      "earthquake"
     ]
   },
   singlets: {
@@ -7579,15 +7234,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bulletseed",
-      "iciclespear",
-      "volttackle",
-      "icebeam",
       "checkem",
+      "volttackle",
+      "iciclespear",
       "voltswitch",
-      "rockblast",
-      "thunderbolt",
-      "bonerush"
+      "watershurkien"
     ]
   },
   miasmer: {
@@ -7598,38 +7249,24 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "substitute",
-      "toxicspikes",
-      "coil",
-      "haze",
-      "willowisp",
-      "irontail",
+      "reflect",
       "lightscreen",
       "taunt",
-      "ironhead",
-      "recover",
-      "extremespeed",
-      "earthpower",
-      "reflect",
-      "spikes",
-      "gunkshot",
-      "explosion",
       "voltswitch",
-      "magnetrise",
-      "defog"
+      "spikes",
+      "gunkshot"
     ]
   },
   cacademon: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "coil",
-      "toxic",
       "earthquake",
-      "whirlwind",
+      "poisonjab",
       "stealthrock",
       "slackoff",
-      "gunkshot"
+      "toxic",
+      "clearsmog"
     ]
   },
   hanginy: {
@@ -7644,16 +7281,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "softboiled",
-      "icebeam",
-      "calmmind",
-      "flamethrower",
-      "healbell",
       "willowisp",
       "nightshade",
-      "shadowball",
+      "softboiled",
       "stealthrock",
-      "foulplay"
+      "teleport"
     ]
   },
   frosowl: {
@@ -7665,14 +7297,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "auroraveil",
-      "airslash",
-      "nastyplot",
-      "roost",
-      "uturn",
-      "psychic",
-      "hurricane",
       "blizzard",
-      "shadowball"
+      "uturn",
+      "roost",
+      "defog"
     ]
   },
   drapillar: {
@@ -7687,50 +7315,35 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "substitute",
-      "furycutter",
       "dragondance",
-      "uturn",
-      "dragonclaw",
-      "swordsdance",
-      "leechlife",
       "megahorn",
+      "outrage",
       "earthquake",
-      "outrage"
+      "leech life"
     ]
   },
   ogrelord: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
+      "dragondance",
       "knockoff",
-      "earthquake",
-      "hammerarm",
+      "gunkshot",
       "suckerpunch",
-      "crunch",
-      "swordsdance",
-      "icepunch",
-      "gunkshot"
+      "earthquake"
     ]
   },
   chantruth: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "substitute",
       "swindle",
-      "stealthrock",
-      "taunt",
-      "rest",
-      "nastyplot",
-      "icebeam",
-      "calmmind",
-      "trick",
-      "trickroom",
       "focusblast",
-      "darkpulse",
-      "partingshot",
-      "baddybad"
+      "earthpower",
+      "teleport",
+      "baddybad",
+      "sludgebomb",
+      "stealthrock"
     ]
   },
   inbitween: {
@@ -7741,13 +7354,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "lactoseshot",
+      "aeroblast",
       "airslash",
-      "roost",
-      "trick",
-      "calmmind",
       "moonblast",
-      "defog"
+      "uturn",
+      "focusblast",
+      "heatwave"
     ]
   },
   jarape: {
@@ -7758,24 +7370,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "hex",
-      "substitute",
-      "earthpower",
-      "energyball",
-      "destinybond",
-      "foulplay",
-      "taunt",
-      "thunderwave",
-      "swagger",
-      "flamethrower",
-      "haze",
-      "calmmind",
-      "willowisp",
       "voltswitch",
-      "thunderbolt",
       "shadowball",
-      "stealthrock",
-      "aurasphere"
+      "focusblast",
+      "thunderwave",
+      "destinybond",
+      "thunderbolt"
     ]
   },
   bongecko: {
@@ -7790,18 +7390,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "substitute",
-      "earthpower",
-      "toxic",
-      "synthesis",
-      "flamethrower",
-      "calmmind",
-      "willowisp",
       "toke",
-      "defog",
-      "leechseed",
+      "gigadrain",
       "fireblast",
-      "gigadrain"
+      "earthpower",
+      "roost"
     ]
   },
   ayylamo: {
@@ -7812,26 +7405,25 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "highjumpkick",
-      "earthquake",
-      "horndrill",
+      "gunkshot",
+      "sing",
       "uturn",
-      "gunkshot"
+      "highjumpkick",
+      "knockoff",
+      "toxic"
     ]
   },
   chasumo: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bulkup",
-      "knockoff",
       "highjumpkick",
+      "knockoff",
+      "ironhead",
+      "uturn",
       "machpunch",
-      "stormthrow",
-      "swordsdance",
-      "earthquake",
-      "circlethrow",
-      "slackoff"
+      "slackoff",
+      "rapidspin"
     ]
   },
   oilslam: {
@@ -7842,26 +7434,13 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "knockoff",
-      "crosspoison",
-      "toxic",
-      "pursuit",
-      "whirlwind",
-      "darkpulse",
-      "sacredsword",
+      "softboiled",
       "owtheedge",
-      "powertrip",
-      "suckerpunch",
-      "fireblast",
-      "recover",
-      "earthpower",
-      "swordsdance",
       "gunkshot",
-      "poisonjab",
-      "bulkup",
-      "calmmind",
-      "slimegulp"
+      "banefulbunker",
+      "earthquake",
+      "swordsdance",
+      "suckerpunch"
     ]
   },
   stuffowl: {
@@ -7876,21 +7455,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bravebird",
-      "hypervoice",
-      "aeroblast",
-      "beakblast",
-      "roost",
-      "doubleedge",
-      "flamethrower",
       "uturn",
-      "flareblitz",
-      "swordsdance",
-      "gunkshot",
-      "return",
+      "aeroblast",
       "fireblast",
+      "roost",
       "defog",
-      "foulplay"
+      "hypervoice"
     ]
   },
   dragun: {
@@ -7905,134 +7475,79 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "dracometeor",
-      "substitute",
       "dragonpulse",
-      "rest",
       "flashcannon",
-      "zapcannon",
-      "icebeam",
-      "haze",
-      "hydropump",
-      "sleeptalk",
-      "willowisp",
-      "thunderbolt",
-      "defog",
-      "focusblast",
-      "darkpulse",
+      "aurasphere",
       "fireblast",
-      "aurasphere"
+      "darkpulse"
     ]
   },
   evacycle: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "substitute",
-      "bulkup",
-      "rest",
       "shiftgear",
+      "heavyslam",
       "zenheadbutt",
-      "flashcannon",
       "flareblitz",
-      "ironhead",
-      "meteormash",
-      "fireblast",
-      "cosmicpower",
-      "thunderbolt",
-      "storedpower"
+      "earthquake"
     ]
   },
   foryu: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
+      "foryou",
+      "doubleironbash",
       "knockoff",
-      "taunt",
-      "rockslide",
-      "closecombat",
-      "swordsdance",
-      "earthquake",
-      "ironhead",
-      "meteormash",
-      "foryou"
+      "heatcrash",
+      "autotomize",
+      "closecombat"
     ]
   },
   scytill: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "roost",
-      "shadowclaw",
-      "swordsdance",
-      "rapidspin",
-      "willowisp",
-      "shadowsneak",
-      "earthquake",
-      "ironhead",
       "spookout",
-      "defog",
-      "stratoblade"
+      "shadowsneak",
+      "heavyslam",
+      "uturn",
+      "earthquake"
     ]
   },
   baddon: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "dracometeor",
       "recover",
-      "bulletseed",
-      "coil",
-      "toxic",
-      "explosion",
-      "suckerpunch",
       "dildocannon",
-      "flamethrower",
-      "firefang",
-      "dragonclaw",
-      "haze",
-      "gunkshot",
+      "coil",
       "glare",
-      "fireblast",
-      "stealthrock",
-      "bonerush"
+      "gunkshot",
+      "earthquake"
     ]
   },
   endranther: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "recover",
-      "bulkup",
-      "knockoff",
-      "substitute",
-      "rockslide",
-      "toxic",
       "decaydrain",
-      "swordsdance",
-      "bodyslam",
-      "memento",
-      "strengthsap",
       "earthquake",
-      "fireblast",
-      "defog"
+      "bulkup",
+      "strengthsap",
+      "knockoff"
     ]
   },
   notridley: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "dracometeor",
-      "extremespeed",
-      "acrobatics",
       "dragondance",
-      "dragonascent",
-      "uturn",
-      "dragonclaw",
-      "swordsdance",
+      "acrobatics",
       "earthquake",
-      "fireblast",
+      "overheat",
+      "extremespeed",
       "outrage"
     ]
   },
@@ -8040,20 +7555,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "substitute",
-      "earthpower",
-      "drainingkiss",
-      "fleurcannon",
-      "icebeam",
-      "flamethrower",
       "calmmind",
-      "wish",
       "moonblast",
-      "willowisp",
-      "thunderbolt",
-      "defog",
-      "gigadrain"
+      "drainingkiss",
+      "earthpower",
+      "fireblast",
+      "willowisp"
     ]
   },
   reptyke: {
@@ -8068,20 +7575,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "",
-      "dragonfist",
       "dragondance",
-      "firepunch",
-      "icepunch",
-      "machpunch",
-      "drainpunch",
-      "closecombat",
-      "punchout",
-      "thunderpunch",
       "dragonhammer",
-      "earthquake",
-      "meteormash",
-      "outrage"
+      "closecombat",
+      "meteormash"
     ]
   },
   faeriock: {
@@ -8096,22 +7593,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "recover",
-      "pixiepummel",
-      "earthpower",
-      "earthquake",
-      "psychoshift",
-      "curse",
-      "toxic",
-      "calmmind",
-      "trickroom",
-      "moonblast",
-      "stoneedge",
       "erosionwave",
-      "glare",
+      "earthpower",
+      "recover",
       "stealthrock",
-      "defog",
-      "storedpower"
+      "teleport",
+      "glare"
     ]
   },
   cloucat: {
@@ -8126,26 +7613,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "",
-      "substitute",
       "knockoff",
-      "thunderbolt",
-      "darkpulse",
-      "stratoblade",
-      "surf",
-      "sacredsword",
-      "owtheedge",
-      "nastyplot",
-      "thunder",
       "suckerpunch",
-      "growth",
-      "acrobatics",
-      "volttackle",
-      "waterfall",
+      "stratoblade",
       "swordsdance",
-      "hurricane",
-      "batonpass",
-      "crunch"
+      "sacredsword"
     ]
   },
   knogoat: {
@@ -8156,17 +7628,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "roar",
-      "highjumpkick",
-      "earthquake",
       "bulkup",
-      "toxic",
-      "wish",
-      "flareblitz",
-      "healbell",
       "milkdrink",
-      "bodyslam",
-      "headcharge"
+      "return",
+      "earthquake"
     ]
   },
   glasshot: {
@@ -8177,15 +7642,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "shiftgear",
-      "flashcannon",
-      "explosion",
       "icebeam",
-      "iciclecrash",
-      "earthquake",
+      "ironhead",
       "thunderbolt",
-      "ironhead"
+      "fireblast",
+      "earthquake"
     ]
   },
   fluffyeti: {
@@ -8196,46 +7657,23 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bulkup",
-      "knockoff",
-      "machpunch",
+      "swordsdance",
       "suckerpunch",
+      "iceshard",
       "iciclecrash",
       "closecombat",
-      "swordsdance",
-      "moonlight",
-      "punishment",
-      "icepunch",
-      "pursuit",
-      "iceshard"
+      "knockoff"
     ]
   },
   mirrostine: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "substitute",
-      "toxic",
-      "trickroom",
-      "willowisp",
-      "thunderbolt",
-      "lightscreen",
-      "teleport",
-      "taunt",
-      "mirrorcoat",
       "recover",
+      "willowisp",
       "hex",
-      "curse",
-      "reflect",
-      "flashcannon",
-      "trick",
-      "shadowball",
-      "icebeam",
-      "calmmind",
-      "nightshade",
-      "defog",
-      "torment"
+      "focusblast",
+      "teleport"
     ]
   },
   mudpants: {
@@ -8246,12 +7684,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "extremespeed",
-      "highjumpkick",
       "swordsdance",
+      "highjumpkick",
       "precipiceblades",
-      "stoneedge",
-      "gunkshot"
+      "volttackle",
+      "rapidspin"
     ]
   },
   bukitlee: {
@@ -8262,33 +7699,24 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "teleport",
-      "toxic",
-      "heavyslam",
       "wish",
-      "haze",
-      "trickroom",
+      "protect",
+      "toxic",
+      "psywave",
       "stealthrock",
-      "torment"
+      "teleport"
     ]
   },
   mimimie: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "recover",
       "waterspout",
-      "scald",
-      "taunt",
-      "nastyplot",
-      "icebeam",
-      "lovelykiss",
-      "haze",
-      "hydropump",
-      "calmmind",
       "darkpulse",
-      "foulplay"
+      "sludgebomb",
+      "icebeam",
+      "scald",
+      "lactoseshot"
     ]
   },
   sprucifix: {
@@ -8296,36 +7724,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "recover",
-      "aromatherapy",
-      "healingwish",
-      "hammerarm",
-      "toxic",
-      "shadowclaw",
       "powerwhip",
-      "phantomforce",
+      "spikyshield",
       "spikes",
-      "trickroom",
-      "woodhammer",
-      "bodyslam",
-      "nightshade",
-      "destinybond"
+      "toxic"
     ]
   },
   hulkan: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "substitute",
-      "facade",
-      "firepunch",
-      "hammerarm",
-      "focusmunch",
       "hulkup",
       "closecombat",
-      "thunderpunch",
-      "icepunch",
-      "earthquake",
-      "focuspunch"
+      "knockoff",
+      "facade",
+      "ironhead"
     ]
   },
   nonite: {
@@ -8334,36 +7747,17 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
   },
   nonegative: {
     tier: "NFE",
-    isNonstandard: "Future",
-    // randomBattleMoves: [
-    //   "sludgebomb",
-    //   "batonpass",
-    //   "boomburst",
-    //   "thunderbolt"
-    // ]
+    isNonstandard: "Future"
   },
   nomaestro: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "protect",
-      "pixiepummel",
-      "perishsong",
-      "thunderwave",
-      "toxic",
       "boomburst",
-      "wish",
-      "thunderbolt",
-      "airslash",
-      "doubleedge",
       "hurricane",
-      "encore",
-      "batonpass",
-      "healbell",
       "earthquake",
-      "block",
-      "defog"
+      "uturn",
+      "trick"
     ]
   },
   dunkypea: {
@@ -8378,20 +7772,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
       "oblivionwing",
-      "scald",
-      "roost",
-      "softboiled",
-      "nastyplot",
-      "icebeam",
       "calmmind",
+      "roost",
       "flamethrower",
-      "haze",
-      "thunderbolt",
-      "whirlwind",
-      "fireblast",
-      "defog"
+      "taunt"
     ]
   },
   kuklux: {
@@ -8402,49 +7787,34 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "earthpower",
-      "energyball",
+      "blueflare",
       "nastyplot",
-      "flamethrower",
-      "fireblast"
+      "earthpower",
+      "willowisp",
+      "fierydance",
+      "grassknot"
     ]
   },
   flameboyan: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "earthpower",
-      "energyball",
-      "fierydance",
-      "flamethrower",
-      "moonlight",
       "moonblast",
-      "willowisp",
-      "defog"
+      "fierydance",
+      "earthpower",
+      "toke",
+      "moonlight"
     ]
   },
   piicee: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "protect",
-      "thinkfast",
-      "teleport",
-      "healingwish",
-      "nastyplot",
-      "softboiled",
       "dailydose",
-      "psychic",
       "wish",
-      "healbell",
-      "trickroom",
-      "clearsmog",
-      "willowisp",
-      "sludgewave",
-      "focusblast",
-      "fireblast",
-      "gigadrain"
+      "protect",
+      "teleport",
+      "psychoboost"
     ]
   },
   sonnanos: {
@@ -8452,30 +7822,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "doubleironbash",
-      "forcepalm",
-      "firepunch",
-      "machpunch",
-      "bulletpunch",
       "superpower",
-      "swordsdance",
       "thunderpunch",
-      "icepunch"
+      "teleport",
+      "knockoff"
     ]
   },
   plebbles: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "rockslide",
-      "taunt",
-      "toxicspikes",
-      "toxic",
-      "explosion",
-      "spikes",
-      "memento",
-      "stoneedge",
+      "stealthrock",
       "glare",
-      "stealthrock"
+      "spikes",
+      "rockslide",
+      "earthquake"
     ]
   },
   sapleaf: {
@@ -8490,63 +7851,34 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "hex",
-      "recover",
-      "nastyplot",
-      "moongeistbeam",
-      "haze",
-      "spore",
       "trickroom",
-      "strengthsap",
-      "willowisp",
+      "moongeistbeam",
       "focusblast",
-      "fireblast",
-      "lavaplume",
-      "gigadrain"
+      "spore",
+      "nastyplot"
     ]
   },
   polossus: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "poisonjab",
       "recover",
-      "roar",
-      "bulkup",
-      "earthquake",
-      "knockoff",
-      "hammerarm",
+      "gunkshot",
       "toxicspikes",
-      "explosion",
-      "superpower",
-      "haze",
-      "stoneedge",
-      "gunkshot"
+      "earthquake",
+      "clearsmog"
     ]
   },
   hitmonana: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "substitute",
-      "knockoff",
-      "toxic",
-      "focusblast",
-      "nastyplot",
-      "woodhammer",
-      "vacuumwave",
-      "earthpower",
-      "rest",
-      "curse",
+      "stealthrock",
+      "partingshot",
       "closecombat",
+      "woodhammer",
       "synthesis",
-      "spikes",
-      "gigadrain",
-      "aurasphere",
-      "bulkup",
-      "earthquake",
-      "stealthrock"
+      "spikes"
     ]
   },
   ballacle: {
@@ -8557,16 +7889,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "accelerock",
-      "taunt",
-      "explosion",
+      "chaosdunk",
       "closecombat",
-      "swordsdance",
-      "rapidspin",
-      "rockpolish",
-      "earthquake",
       "stealthrock",
-      "chaosdunk"
+      "rapidspin",
+      "knockoff"
     ]
   },
   kekroach: {
@@ -8577,16 +7904,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "knockoff",
-      "firstimpression",
-      "drainpunch",
+      "partingshot",
       "suckerpunch",
+      "firstimpression",
       "uturn",
       "closecombat",
-      "swordsdance",
-      "leechlife",
-      "thunderpunch",
-      "icepunch"
+      "knockoff"
     ]
   },
   ricosheep: {
@@ -8597,36 +7920,23 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "earthquake",
-      "firepunch",
-      "rest",
-      "cottonguard",
-      "toxic",
-      "swordsdance",
-      "healbell",
-      "stoneedge",
-      "thunderpunch",
-      "icepunch",
-      "bodyslam",
+      "uturn",
       "headcharge",
-      "inverseroom"
+      "rapidspin",
+      "thunderwave",
+      "healingwish",
+      "taunt"
     ]
   },
   spaghefant: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "gravity",
-      "aromatherapy",
+      "moonblast",
       "earthpower",
-      "knockoff",
-      "energyball",
-      "toxic",
       "softboiled",
-      "calmmind",
-      "haze",
-      "mop",
-      "moonblast"
+      "stealthrock",
+      "mop"
     ]
   },
   crystaquil: {
@@ -8637,40 +7947,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "painsplit",
-      "icehammer",
-      "earthquake",
-      "toxicspikes",
-      "iciclecrash",
-      "swordsdance",
-      "rapidspin",
-      "punishment",
       "gunkshot",
-      "iceshard"
+      "iciclecrash",
+      "earthquake",
+      "swordsdance",
+      "rapidspin"
     ]
   },
   fontaba: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "substitute",
-      "thinkfast",
-      "thunderwave",
-      "foulplay",
       "lightscreen",
-      "taunt",
-      "nastyplot",
-      "recover",
-      "earthpower",
       "reflect",
-      "swagger",
-      "naturepower",
-      "psyshock",
-      "shadowball",
-      "storedpower",
-      "psychic",
-      "calmmind",
-      "topsyturvy"
+      "teleport",
+      "taunt",
+      "psychoboost"
     ]
   },
   floconut: {
@@ -8685,17 +7977,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "aromatherapy",
-      "earthpower",
-      "softboiled",
-      "leafstorm",
-      "psychic",
-      "growth",
-      "defog",
-      "leechseed",
-      "fireblast",
-      "lavaplume",
+      "sunnyday",
       "gigadrain",
+      "fireblast",
+      "earthpower",
+      "growth"
     ]
   },
   manateet: {
@@ -8710,54 +7996,34 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bulkup",
-      "hammerarm",
+      "milkdrink",
       "liquidation",
       "iciclecrash",
-      "icebeam",
-      "seismictoss",
-      "spikes",
-      "superfang",
-      "milkdrink",
-      "icepunch",
-      "brine",
-      "iceshard"
+      "earthquake",
+      "aquajet",
+      "spikes"
     ]
   },
   anonymouse: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "quickattack",
-      "taunt",
-      "nastyplot",
-      "mop",
-      "superfang",
-      "memento",
-      "nuzzle",
       "voltswitch",
-      "endeavor",
-      "thunderbolt",
-      "darkpulse",
+      "volttackle",
+      "owtheedge",
+      "suckerpunch",
+      "swordsdance"
     ]
   },
   motherfuck: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "substitute",
-      "bulkup",
-      "aerialace",
-      "perishsong",
-      "toxicspikes",
-      "explosion",
-      "uturn",
-      "swordsdance",
-      "spikes",
       "spore",
-      "earthquake",
-      "stealthrock"
+      "stealthrock",
+      "uturn",
+      "roost",
+      "earthquake"
     ]
   },
   ninoop: {
@@ -8768,24 +8034,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "quickattack",
-      "dracometeor",
-      "bulkup",
-      "earthquake",
-      "facade",
-      "firepunch",
-      "fakeout",
-      "roost",
-      "boomburst",
-      "doubleedge",
-      "feint",
-      "dragonclaw",
-      "calmmind",
+      "dragondance",
       "return",
-      "bellydrum",
-      "fireblast",
-      "outrage",
-      "defog"
+      "earthquake",
+      "roost",
+      "dragonclaw"
     ]
   },
   ticktac: {
@@ -8800,15 +8053,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "zenheadbutt",
       "swordsdance",
-      "thunderfang",
-      "fellstinger",
-      "rockclimb",
-      "leechlife",
-      "irontail",
+      "ironhead",
+      "rockslide",
       "earthquake",
-      "ironhead"
+      "uturn"
     ]
   },
   cozload: {
@@ -8819,33 +8068,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "recover",
-      "curse",
-      "hammerarm",
-      "thunderwave",
-      "toxic",
-      "superpower",
+      "nuzzle",
       "plasmafists",
-      "seedbomb",
-      "uturn",
-      "zenheadbutt",
-      "swordsdance",
-      "healbell",
-      "trickroom",
-      "leechlife"
+      "recover",
+      "uturn"
     ]
   },
   fleespecs: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "nastyplot",
-      "bugbuzz",
       "voltswitch",
       "thunderbolt",
-      "focusblast",
-      "gigadrain",
+      "bugbuzz",
+      "energyball",
+      "trick"
     ]
   },
   honrade: {
@@ -8853,14 +8090,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "pixiepummel",
-      "substitute",
       "sacredsword",
-      "owtheedge",
-      "1000folds",
-      "swordsdance",
-      "leafblade",
       "earthquake",
-      "reversal"
+      "teleport",
+      "1000folds"
     ]
   },
   embortion: {
@@ -8871,23 +8104,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "hex",
-      "recover",
-      "snarl",
-      "substitute",
-      "nastyplot",
       "calmmind",
-      "trickroom",
-      "willowisp",
-      "spite",
-      "focusblast",
-      "thunderbolt",
-      "shadowball",
       "darkpulse",
-      "topsyturvy",
-      "fireblast",
-      "foulplay"
+      "willowisp",
+      "softboiled"
     ]
   },
   galavik: {
@@ -8898,34 +8118,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "substitute",
-      "energyball",
-      "overheat",
-      "nastyplot",
-      "toxic",
-      "flashcannon",
-      "autotomize",
-      "voltswitch",
       "thunderbolt",
-      "disable",
+      "flashcannon",
+      "overheat",
+      "voltswitch",
+      "energyball"
     ]
   },
   galaviste: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "doubleironbash",
-      "roar",
-      "substitute",
-      "focuspunch",
-      "hammerarm",
-      "thunderwave",
-      "volttackle",
-      "toxic",
-      "drainpunch",
       "punchout",
-      "disable"
+      "doubleironbash",
+      "superpower",
+      "plasmafists",
+      "thunderwave"
     ]
   },
   pollefin: {
@@ -8936,17 +8144,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "surf",
-      "earthpower",
-      "scald",
-      "softboiled",
-      "icebeam",
-      "calmmind",
-      "hydropump",
       "spore",
-      "seedflare",
       "sleazyspores",
-      "leechseed"
+      "mop",
+      "seedflare",
+      "scald",
+      "softboiled"
     ]
   },
   lasslee: {
@@ -8957,164 +8160,90 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "recover",
       "teleport",
-      "healingwish",
-      "aurasphere",
       "psychic",
-      "calmmind",
-      "haze",
-      "healbell",
-      "trickroom",
-      "lovelykiss",
-      "seismictoss",
-      "storedpower"
+      "mop",
+      "softboiled",
+      "lovelykiss"
     ]
   },
   uwotto: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "thinkfast",
-      "thunderwave",
       "shiftgear",
-      "toxic",
-      "trickroom",
-      "moonblast",
-      "thunderbolt",
-      "focusblast",
-      "teleport",
-      "taunt",
-      "nastyplot",
-      "ironhead",
       "meteormash",
-      "rest",
-      "flashcannon",
-      "cosmicpower",
-      "storedpower",
-      "batonpass",
-      "psychic",
-      "calmmind",
-      "icebeam",
       "psychicfangs",
-      "irondefense",
       "earthquake",
-      "stealthrock",
-      "defog"
+      "hypnosis"
     ]
   },
   venowatt: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
+      "roost",
+      "paraboliccharge",
       "tailglow",
       "sludgebomb",
-      "substitute",
-      "protect",
-      "discharge",
-      "toxicspikes",
-      "roost",
-      "toxic",
-      "torment",
-      "sludgewave",
-      "paraboliccharge",
-      "voltswitch",
-      "gigadrain",
-      "thunderbolt",
-      "defog",
-      "disable"
+      "gigadrain"
     ]
   },
   vaultevour: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bulkup",
-      "rest",
-      "suckerpunch",
       "crunch",
-      "pursuit",
-      "icefang",
-      "firefang",
-      "thunderfang",
-      "swordsdance",
-      "overbite",
-      "sleeptalk",
-      "ironhead"
+      "ironhead",
+      "stealthrock",
+      "suckerpunch",
+      "swordsdance"
     ]
   },
   semdemen: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "roar",
-      "earthpower",
       "scald",
-      "encore",
-      "softboiled",
-      "toxic",
-      "stickyweb",
-      "calmmind",
-      "haze",
       "earthquake",
-      "stealthrock"
+      "softboiled",
+      "stealthrock",
+      "stickyweb"
     ]
   },
   dragking: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bravebird",
       "pixiepummel",
       "highjumpkick",
-      "blazekick",
+      "earthquake",
       "uturn",
-      "lovelykiss",
-      "swordsdance",
-      "earthquake"
+      "trick",
+      "blazekick"
     ]
   },
   kuuroba: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "poisonjab",
-      "spiderweb",
-      "throatchop",
-      "aromatherapy",
-      "bulkup",
-      "rockslide",
-      "taunt",
-      "screech",
-      "zenheadbutt",
       "closecombat",
-      "synthesis",
       "futababreak",
-      "leafblade",
       "stoneedge",
       "speedweed",
-      "return",
-      "meteormash"
+      "zenheadbutt"
     ]
   },
   baitmaster: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "surf",
-      "knockoff",
       "scald",
-      "taunt",
-      "nastyplot",
-      "icebeam",
-      "trick",
-      "uturn",
-      "hydropump",
-      "superfang",
       "moonblast",
+      "nastyplot",
       "stealthrock",
-      "defog",
-      "foulplay"
+      "psychic",
+      "uturn"
     ]
   },
   spookster: {
@@ -9129,18 +8258,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "painsplit",
-      "knockoff",
-      "brickbreak",
-      "earthquake",
-      "suckerpunch",
-      "shadowbone",
-      "swordsdance",
-      "haze",
-      "willowisp",
+      "spookout",
       "shadowsneak",
-      "bonemerang",
-      "spookout"
+      "shadowbone",
+      "superpower",
+      "glare"
     ]
   },
   derpato: {
@@ -9155,36 +8277,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "gravity",
-      "bulkup",
-      "knockoff",
-      "brickbreak",
-      "substitute",
-      "rockslide",
-      "softboiled",
-      "zenheadbutt",
-      "toxic",
-      "powerwhip",
-      "playrough",
-      "stoneedge",
       "earthquake",
-      "ironhead",
-      "ingrain",
+      "toxic",
+      "softboiled",
       "stealthrock",
-      "focuspunch"
+      "stoneedge"
     ]
   },
   sadfish: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
+      "sudoku",
       "scald",
-      "rest",
-      "toxic",
-      "hydropump",
       "mop",
-      "memento",
-      "icywind"
+      "foulplay",
+      "magiccoat"
     ]
   },
   deloris: {
@@ -9192,122 +8300,87 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "geomancy",
-      "softboiled",
-      "dazzlinggleam",
       "fizzbitch",
-      "psychic",
-      "shadowball"
+      "shadowball",
+      "hiddenpowerfighting",
+      "softboiled"
     ]
   },
   oreon: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "lactoseshot",
-      "surf",
-      "energyball",
-      "calmmind",
+      "baddybad",
       "moonblast",
-      "milkdrink",
-      "gigadrain",
-      "thunderbolt",
-      "focusenergy",
-      "baddybad"
+      "lightscreen",
+      "calmmind",
+      "milkdrink"
     ]
   },
   farfigtron: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "highjumpkick",
-      "machpunch",
-      "thunder",
-      "nastyplot",
       "firebomb",
-      "flareblitz",
       "closecombat",
-      "uturn",
-      "swordsdance",
-      "thunderpunch",
       "earthquake",
-      "focusblast",
-      "fireblast"
+      "partingshot",
+      "swordsdance"
     ]
   },
   regirode: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "painsplit",
-      "earthpower",
-      "calmmind",
-      "willowisp",
       "rockpolish",
+      "calmmind",
       "spooperpower",
-      "erosionwave",
-      "stealthrock",
-      "aurasphere"
+      "focusblast",
+      "erosionwave"
     ]
   },
   regimelt: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "agility",
-      "liquidation",
+      "spooperpower",
+      "iciclecrash",
       "superpower",
       "shadowsneak",
-      "explosion",
-      "iciclecrash",
-      "spooperpower",
-      "earthquake",
-      "iceshard"
+      "earthquake"
     ]
   },
   regirust: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "painsplit",
-      "protect",
-      "flashcannon",
-      "seismictoss",
-      "calmmind",
-      "willowisp",
       "spooperpower",
-      "nightshade",
-      "stealthrock"
+      "closecombat",
+      "ironhead",
+      "stealthrock",
+      "willowisp"
     ]
   },
   vivaiger: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "recover",
-      "substitute",
-      "roar",
-      "toxic",
-      "flamethrower",
-      "calmmind",
-      "willowisp",
+      "overenergize",
+      "overheat",
       "voltswitch",
-      "thunderbolt",
-      "fireblast",
-      "lavaplume",
-      "defog",
+      "earthpower",
+      "hiddenpowerice"
     ]
   },
   heliofug: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "extremespeed",
-      "earthquake",
       "dragondance",
-      "flareblitz",
       "dragonclaw",
       "vcreate",
-      "outrage"
+      "extremespeed",
+      "earthquake"
     ]
   },
   sadrog: {
@@ -9322,14 +8395,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "accelerock",
-      "bulkup",
-      "rockslide",
       "greatrage",
+      "stealthrock",
+      "slackoff",
       "stoneedge",
-      "earthquake",
-      "bellydrum",
-      "slackoff"
+      "earthquake"
     ]
   },
   hodtog: {
@@ -9344,16 +8414,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "substitute",
-      "earthpower",
-      "grassknot",
+      "wowweiner",
       "aeroblast",
-      "nastyplot",
-      "wowwiener",
-      "flamethrower",
-      "psychic",
       "uturn",
-      "fireblast"
+      "earthpower",
+      "focusblast"
     ]
   },
   gnarrk: {
@@ -9368,14 +8433,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "substitute",
-      "knockoff",
-      "aquajet",
       "closecombat",
-      "swordsdance",
       "plunder",
-      "iciclecrash",
-      "earthquake"
+      "partingshot",
+      "earthquake",
+      "trick"
     ]
   },
   humpunny: {
@@ -9386,19 +8448,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "quickattack",
-      "protect",
-      "substitute",
-      "highjumpkick",
-      "knockoff",
-      "earthquake",
       "fakeout",
-      "encore",
-      "batonpass",
-      "doubleedge",
+      "quickattack",
       "return",
-      "workup",
-      "switcheroo"
+      "knockoff",
+      "highjumpkick"
     ]
   },
   emelgy: {
@@ -9413,16 +8467,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "overheat",
-      "aeroblast",
-      "flashcannon",
-      "flamethrower",
       "toke",
-      "darkpulse",
-      "shadowball",
-      "fireblast",
-      "focusenergy"
+      "aeroblast",
+      "searingshot",
+      "focusblast"
     ]
   },
   catikillar: {
@@ -9437,12 +8485,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "roost",
-      "stickyweb",
-      "thunderbolt",
-      "defog",
-      "gigadrain",
-      "quiverdance"
+      "quiverdance",
+      "seedflare",
+      "bugbuzz",
+      "focusblast",
+      "roost"
     ]
   },
   ebining: {
@@ -9454,19 +8501,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "knockoff",
-      "earthquake",
-      "encore",
-      "taunt",
-      "thunderwave",
-      "toxic",
-      "suckerpunch",
-      "uturn",
       "closecombat",
-      "moonlight",
       "gunkshot",
-      "pursuit",
-      "switcheroo",
-      "thousandarrows"
+      "suckerpunch",
+      "pursuit"
     ]
   },
   upbote: {
@@ -9477,21 +8515,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
+      "mop",
       "recover",
-      "teleport",
-      "barrier",
-      "rest",
-      "icebeam",
-      "calmmind",
       "psystrike",
-      "psychic",
-      "trickroom",
-      "magiccoat",
-      "thunderbolt",
-      "cosmicpower",
-      "metronome",
-      "workup",
-      "storedpower"
+      "teleport",
+      "toxic"
     ]
   },
   flipbird: {
@@ -9502,60 +8530,32 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bravebird",
-      "substitute",
-      "knockoff",
-      "flyingpress",
+      "bellydrum",
       "acrobatics",
-      "dynamicpunch",
-      "machpunch",
-      "roost",
-      "weirdflex",
-      "explosion",
       "drainpunch",
-      "anchorshot",
-      "uturn",
-      "swordsdance",
-      "earthquake",
-      "bellydrum"
+      "substitute"
     ]
   },
   gangnome: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "substitute",
-      "teleport",
-      "rest",
       "toxic",
+      "protect",
       "lunardance",
-      "mop",
-      "trickroom",
-      "moonblast",
-      "defog",
-      "foulplay"
+      "foulplay",
+      "teleport"
     ]
   },
   pyongnome: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "knockoff",
-      "finalgambit",
-      "explosion",
-      "seedbomb",
-      "zenheadbutt",
-      "flashcannon",
-      "trick",
-      "firefang",
-      "sludgewave",
-      "gunkshot",
-      "ironhead",
       "meteormash",
-      "focusblast",
+      "superpower",
+      "baddybad",
       "thunderbolt",
-      "baddybad"
+      "trick"
     ]
   },
   bruhkid: {
@@ -9566,23 +8566,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bulkup",
-      "knockoff",
-      "destinybond",
-      "firepunch",
       "shoreup",
-      "machpunch",
+      "bulkup",
+      "thousandwaves",
       "drainpunch",
-      "closecombat",
-      "stoneedge",
-      "rockpolish",
-      "icepunch",
-      "earthquake",
-      "thunderpunch",
-      "counter",
-      "reversal",
-      "stealthrock",
-      "mirrorcoat"
+      "stoneedge"
     ]
   },
   walruse: {
@@ -9593,17 +8581,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "roar",
-      "encore",
-      "bulletpunch",
       "liquidation",
-      "toxic",
-      "iciclecrash",
-      "waterfall",
-      "aquajet",
-      "superfang",
+      "meteormash",
+      "icehammer",
+      "bulletpunch",
       "milkdrink",
-      "meteormash"
+      "earthquake"
     ]
   },
   diobat: {
@@ -9614,19 +8597,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "extremespeed",
       "knockoff",
-      "nastyplot",
-      "suckerpunch",
-      "crunch",
-      "lunardance",
       "closecombat",
       "uturn",
       "pursuit",
-      "focusblast",
-      "darkpulse",
-      "defog"
+      "suckerpunch"
     ]
   },
   docee: {
@@ -9637,15 +8612,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "extremespeed",
       "geomancy",
-      "rest",
-      "shiftgear",
       "flashcannon",
-      "sunsteelstrike",
-      "swordsdance",
-      "sleeptalk",
-      "precipiceblades"
+      "focusblast",
+      "baddybad"
     ]
   },
   cakupple: {
@@ -9656,34 +8626,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "pixiepummel",
-      "knockoff",
-      "bulkup",
-      "sacredsword",
-      "healingwish",
-      "sleeppowder",
-      "toxic",
-      "powerwhip",
-      "swordsdance",
       "milkdrink",
-      "speedweed",
-      "defog"
+      "pixiepummel",
+      "powerwhip",
+      "leechseed",
+      "aromatherapy"
     ]
   },
   baloofang: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "spectralthief",
       "hex",
-      "taunt",
-      "roost",
-      "nastyplot",
-      "toxic",
       "willowisp",
-      "focusblast",
-      "shadowball",
-      "defog"
+      "roost",
+      "spectralthief",
+      "focusblast"
     ]
   },
   socckat: {
@@ -9691,13 +8649,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "highjumpkick",
-      "volttackle",
-      "blazekick",
-      "doubleedge",
-      "flareblitz",
-      "swordsdance",
-      "megakick",
-      "return"
+      "return",
+      "uturn",
+      "fakeout",
+      "swordsdance"
     ]
   },
   egylamp: {
@@ -9708,16 +8663,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "recover",
-      "discharge",
-      "nastyplot",
-      "psychic",
-      "healbell",
-      "willowisp",
-      "voltswitch",
       "thunderbolt",
+      "psychic",
       "fireblast",
-      "lavaplume",
+      "voltswitch",
+      "trick"
     ]
   },
   mehndior: {
@@ -9728,16 +8678,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "earthpower",
-      "energyball",
-      "thinkfast",
-      "agility",
       "fierydance",
-      "psychic",
-      "flamethrower",
-      "thunderbolt",
-      "fireblast",
-      "defog"
+      "psyshock",
+      "uturn",
+      "trick",
+      "earthpower"
     ]
   },
   missletoe: {
@@ -9748,18 +8693,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "earthpower",
-      "aeroblast",
-      "roost",
-      "waterpulse",
       "frostbreath",
+      "earthpower",
+      "focusblast",
       "uturn",
-      "trick",
-      "icebeam",
-      "rockpolish",
-      "focusenergy",
-      "blizzard",
-      "defog"
+      "freezedry"
     ]
   },
   flaa: {
@@ -9771,13 +8709,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "highjumpkick",
-      "facade",
-      "owtheedge",
-      "machpunch",
-      "blazekick",
       "uturn",
-      "doubleedge",
-      "megakick"
+      "megakick",
+      "knockoff",
+      "rapidspin"
     ]
   },
   araketsu: {
@@ -9788,19 +8723,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "knockoff",
-      "crosspoison",
-      "toxicspikes",
-      "owtheedge",
-      "toxic",
       "stickyweb",
-      "xscissor",
+      "knockoff",
       "uturn",
-      "swordsdance",
-      "spikes",
-      "megahorn",
-      "earthquake",
       "pursuit",
+      "spikes",
       "gunkshot"
     ]
   },
@@ -9808,16 +8735,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bravebird",
-      "highjumpkick",
-      "firepunch",
       "falconpunch",
-      "flareblitz",
       "closecombat",
-      "swordsdance",
-      "uturn",
-      "thunderpunch",
-      "icepunch"
+      "knockoff",
+      "bulkup",
+      "roost"
     ]
   },
   cirpent: {
@@ -9828,30 +8750,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "substitute",
-      "toxic",
-      "lovelykiss",
-      "haze",
-      "memento",
-      "moonblast",
-      "willowisp",
       "glare",
-      "focusblast",
-      "foulplay",
-      "lightscreen",
-      "energyball",
-      "taunt",
-      "nastyplot",
-      "reflect",
-      "swagger",
-      "mop",
-      "psyshock",
       "encore",
-      "calmmind",
-      "moonlight",
-      "sludgewave",
-      "defog"
+      "moonblast",
+      "sludgebomb",
+      "lovelykiss"
     ]
   },
   lizascoop: {
@@ -9862,14 +8765,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "quicksand",
-      "rockslide",
-      "icefang",
-      "firefang",
-      "thunderfang",
-      "irontail",
+      "ironhead",
       "earthquake",
-      "ironhead"
+      "stoneedge",
+      "stealthrock",
+      "quicksand"
     ]
   },
   fefeion: {
@@ -9880,71 +8780,44 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "sludgebomb",
-      "substitute",
-      "toxicspikes",
-      "bugbuzz",
-      "thunderbolt",
-      "glare",
-      "disable",
-      "taunt",
-      "scorchedearth",
-      "fireblast",
-      "morningsun",
       "earthpower",
-      "overheat",
       "fierydance",
-      "spikes",
-      "gigadrain",
-      "agility",
-      "calmmind",
-      "stealthrock"
+      "morningsun",
+      "thunderbolt",
+      "scorched earth"
     ]
   },
   jerkle: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "thunderbolt",
-      "prismaticlaser",
-      "psychic"
+      "trickroom",
+      "photongeyser",
+      "earthpower",
+      "powergem",
+      "nastyplot"
     ]
   },
   faptime: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "zenheadbutt",
       "swordsdance",
+      "photongeyser",
       "stoneedge",
-      "earthquake"
+      "earthquake",
+      "accelerock"
     ]
   },
   shiriman: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "aromatherapy",
-      "lightscreen",
-      "teleport",
-      "taunt",
-      "reflect",
-      "rest",
-      "softboiled",
-      "lunardance",
-      "psychic",
-      "flamethrower",
-      "haze",
-      "calmmind",
-      "trickroom",
-      "sleeptalk",
-      "moonblast",
-      "willowisp",
       "glare",
-      "defog"
+      "softboiled",
+      "pixiepummel",
+      "teleport",
+      "willowisp"
     ]
   },
   fresrye: {
@@ -9955,13 +8828,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "protect",
       "skillswap",
-      "slackoff",
-      "spore",
       "leechseed",
-      "gigadrain"
+      "protect",
+      "spore",
+      "sludgebomb"
     ]
   },
   spargle: {
@@ -9972,23 +8843,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "hammerarm",
-      "taunt",
-      "rockslide",
-      "nastyplot",
-      "rest",
-      "suckerpunch",
-      "crunch",
-      "icebeam",
-      "flamethrower",
-      "swordsdance",
+      "bulkup",
       "playrough",
-      "calmmind",
-      "moonblast",
-      "earthquake",
-      "thunderbolt",
-      "fireblast",
-      "storedpower"
+      "suckerpunch",
+      "slackoff",
+      "earthquake"
     ]
   },
   housant: {
@@ -10000,13 +8859,9 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "shellsmash",
-      "uturn",
-      "trickroom",
-      "leechlife",
+      "attackorder",
       "stoneedge",
-      "earthquake",
-      "healorder",
-      "stealthrock"
+      "earthquake"
     ]
   },
   fuermiga: {
@@ -10017,53 +8872,33 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "roost",
       "flareblitz",
-      "doubleedge",
-      "uturn",
-      "flamethrower",
-      "psychic",
       "overbite",
-      "leechlife",
-      "bugbuzz",
-      "willowisp",
-      "gunkshot",
-      "thunderbolt",
-      "defog",
-      "fireblast",
-      "gigadrain",
-      "quiverdance"
+      "uturn",
+      "roost",
+      "willowisp"
     ]
   },
   confirmabi: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
+      "nastyplot",
       "leafstorm",
+      "earthpower",
       "psychic",
-      "calmmind",
-      "trick",
-      "psyshock",
-      "gigadrain"
+      "recover"
     ]
   },
   bulbapedo: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "aromatherapy",
-      "earthpower",
-      "teleport",
-      "sleeppowder",
-      "softboiled",
-      "toxic",
-      "nastyplot",
-      "trickroom",
-      "clearsmog",
       "leechseed",
-      "gigadrain",
-      "foulplay"
+      "gunkshot",
+      "softboiled",
+      "clearsmog",
+      "gigadrain"
     ]
   },
   wastenaut: {
@@ -10074,40 +8909,23 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "earthquake",
-      "taunt",
-      "toxicspikes",
-      "rest",
-      "recycle",
-      "toxic",
-      "heavyslam",
-      "explosion",
-      "spikes",
-      "stoneedge",
-      "block",
-      "gunkshot",
-      "stockpile",
       "stealthrock",
       "slackoff",
-      "mirrorcoat"
+      "toxicspikes",
+      "gunkshot",
+      "earthquake",
+      "heavyslam"
     ]
   },
   cansumor: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "poisonjab",
-      "recover",
-      "bulkup",
-      "crabhammer",
-      "roar",
-      "teleport",
-      "knockoff",
       "toxic",
-      "crunch",
-      "banefulbunker",
-      "gunkshot",
-      "nightshade"
+      "softboiled",
+      "nightshade",
+      "teleport",
+      "gunkshot"
     ]
   },
   snuffant: {
@@ -10118,54 +8936,33 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "hail",
       "auroraveil",
-      "sleeppowder",
-      "nastyplot",
       "iciclecrash",
-      "swordsdance",
-      "blizzard",
       "earthquake",
-      "focusblast"
+      "swordsdance",
+      "sleeppowder"
     ]
   },
   grimdak: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "substitute",
-      "knockoff",
       "owtheedge",
-      "bulletpunch",
-      "nastyplot",
-      "flashcannon",
+      "1000folds",
       "suckerpunch",
-      "swordsdance",
-      "memento",
-      "stoneedge",
-      "earthquake",
-      "pursuit",
-      "meteormash",
-      "darkpulse",
-      "aurasphere"
+      "protect",
+      "substitute"
     ]
   },
   shroofle: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "aromatherapy",
-      "roar",
-      "knockoff",
-      "bulkup",
-      "substitute",
-      "toxicspikes",
-      "toxic",
-      "softboiled",
+      "foulplay",
       "spore",
-      "foulplay"
+      "softboiled",
+      "toxicspikes",
+      "protect"
     ]
   },
   betacluck: {
@@ -10176,11 +8973,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bravebird",
       "volttackle",
-      "uturn",
+      "bravebird",
       "closecombat",
-      "swordsdance",
+      "voltswitch",
       "defog"
     ]
   },
@@ -10192,21 +8988,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "bravebird",
-      "bulkup",
-      "substitute",
-      "knockoff",
-      "acrobatics",
-      "roost",
-      "drillpeck",
       "heavyslam",
-      "uturn",
-      "swordsdance",
       "heatcrash",
-      "willowisp",
-      "whirlwind",
-      "stealthrock",
-      "defog"
+      "roost",
+      "defog",
+      "bulkup"
     ]
   },
   illuminowl: {
@@ -10217,19 +9003,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "recover",
-      "earthpower",
-      "heatwave",
+      "psychoboost",
       "aeroblast",
-      "airslash",
-      "nastyplot",
-      "roost",
-      "psychic",
-      "calmmind",
-      "trick",
-      "whirlwind",
-      "defog",
-      "storedpower"
+      "heatwave",
+      "earthpower",
+      "uturn"
     ]
   },
   typobop: {
@@ -10241,15 +9019,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "dragondance",
-      "rockslide",
-      "crunch",
-      "icefang",
-      "firefang",
-      "thunderfang",
+      "knockoff",
       "stoneedge",
-      "irontail",
-      "earthquake",
-      "pursuit"
+      "zenheadbutt",
+      "suckerpunch"
     ]
   },
   randomix: {
@@ -10260,20 +9033,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "knockoff",
-      "scald",
-      "rockslide",
-      "icepunch",
-      "rest",
-      "acupressure",
       "shellsmash",
-      "waterfall",
-      "aquatail",
-      "seismictoss",
-      "sleeptalk",
+      "originpulse",
       "stoneedge",
-      "rockblast",
-      "earthquake"
+      "zenheadbutt"
     ]
   },
   quiboom: {
@@ -10284,17 +9047,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "earthpower",
-      "explosion",
-      "icebeam",
+      "vcreate",
       "waterfall",
       "uturn",
-      "steameruption",
-      "vcreate",
-      "holyduty",
-      "fireblast",
-      "gigadrain"
+      "explosion"
     ]
   },
   rainglock: {
@@ -10302,10 +9058,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "originpulse",
-      "waterspout",
       "icebeam",
       "darkpulse",
-      "aurasphere"
+      "aurasphere",
+      "waterspout"
     ]
   },
   beatmarine: {
@@ -10316,39 +9072,23 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "surf",
-      "substitute",
-      "scald",
-      "perishsong",
-      "toxic",
-      "whirlpool",
       "boomburst",
-      "hydropump",
-      "voltswitch",
-      "slackoff"
+      "scald",
+      "discharge",
+      "calmmind",
+      "slackoff",
+      "icebeam"
     ]
   },
   hofucno: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "substitute",
-      "earthpower",
-      "surf",
-      "perishsong",
-      "scald",
-      "roost",
-      "icebeam",
-      "calmmind",
-      "uturn",
-      "hydropump",
       "spore",
-      "hurricane",
-      "gigadrain",
-      "trick",
-      "defog"
+      "calmmind",
+      "airslash",
+      "roost",
+      "scald"
     ]
   },
   hornigiri: {
@@ -10363,19 +9103,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "recover",
-      "return",
-      "bulkup",
-      "toxic",
-      "explosion",
-      "doubleedge",
       "iciclecrash",
-      "lovelykiss",
-      "rapidspin",
-      "rockpolish",
       "earthquake",
+      "stealthrock",
+      "rapidspin",
       "glare",
-      "iceshard"
+      "recover"
     ]
   },
   preasu: {
@@ -10386,25 +9119,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "substitute",
-      "roar",
-      "toxic",
-      "trickroom",
-      "thunderbolt",
       "boltstrike",
-      "slackoff",
-      "baddybad",
-      "nastyplot",
-      "flamethrower",
-      "discharge",
-      "storedpower",
-      "bulkup",
-      "agility",
-      "encore",
-      "batonpass",
-      "calmmind",
-      "earthquake"
+      "icepunch",
+      "thunderwave",
+      "substitute",
+      "slackoff"
     ]
   },
   warney: {
@@ -10415,38 +9134,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "crabhammer",
-      "knockoff",
-      "icehammer",
-      "teleport",
-      "return",
+      "banhammer",
       "hammerarm",
-      "firepunch",
-      "toxic",
-      "doubleedge",
-      "bodyslam",
-      "swordsdance",
-      "mop",
-      "woodhammer",
-      "icepunch",
-      "earthquake",
-      "thunderpunch",
-      "banhammer"
+      "knockoff",
+      "partingshot",
+      "earthquake"
     ]
   },
   acufront: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "scald",
-      "thunder",
-      "morningsun",
       "boomburst",
-      "haze",
-      "hydropump",
-      "hurricane",
-      "defog"
+      "voltswitch",
+      "fireblast",
+      "earthpower",
+      "hydropump"
     ]
   },
   acufrontf: {
@@ -10462,34 +9165,23 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "extremespeed",
-      "bulletpunch",
-      "crunch",
-      "uturn",
-      "icefang",
-      "swordsdance",
-      "firefang",
-      "thunderfang",
-      "psychicfangs",
       "overbite",
       "gunkshot",
-      "ironhead",
-      "meteormash"
+      "uturn",
+      "extremespeed",
+      "knockoff"
     ]
   },
   shiggydig: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "knockoff",
-      "toxic",
-      "uturn",
-      "bodyslam",
-      "swordsdance",
-      "earthquake",
+      "homerunbat",
       "stealthrock",
       "slackoff",
-      "homerunbat"
+      "earthquake",
+      "knockoff",
+      "stoneedge"
     ]
   },
   signot: {
@@ -10501,15 +9193,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "recover",
-      "surf",
-      "earthpower",
-      "topsyturvy",
-      "nastyplot",
+      "knockoff",
+      "earthquake",
       "toxic",
-      "spikes",
-      "darkpulse",
-      "stealthrock",
-      "gigadrain"
+      "stealthrock"
     ]
   },
   ormite: {
@@ -10520,20 +9207,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "tailglow",
-      "recover",
-      "earthpower",
-      "energyball",
-      "teleport",
-      "discharge",
-      "stickyweb",
-      "healbell",
       "trickroom",
-      "voltswitch",
+      "powergem",
+      "earthpower",
       "thunderbolt",
-      "sludgewave",
-      "fireblast",
-      "stealthrock",
+      "tailglow"
     ]
   },
   rolango: {
@@ -10544,47 +9222,33 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "knockoff",
-      "teleport",
       "softboiled",
-      "mop",
       "spikes",
-      "moonlight",
+      "defog",
       "moonblast",
-      "trickroom",
-      "defog"
+      "teleport"
     ]
   },
   pearchie: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "extremespeed",
-      "highjumpkick",
-      "substitute",
-      "dragondance",
-      "volttackle",
       "softboiled",
-      "toxic",
-      "flareblitz",
-      "superfang",
+      "substitute",
+      "extremespeed",
       "woodhammer",
-      "headcharge",
-      "hornleech"
+      "earthquake"
     ]
   },
   tarditank: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "scald",
       "rest",
-      "powersplit",
+      "scald",
       "infestation",
       "toxic",
-      "whirlpool",
-      "sleeptalk"
+      "powersplit"
     ]
   },
   iplora: {
@@ -10595,14 +9259,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "overheat",
-      "flashcannon",
-      "stickyweb",
+      "eruption",
       "voltswitch",
-      "thunderbolt",
       "fireblast",
-      "eruption"
+      "flashcannon",
+      "protect"
     ]
   },
   pitayen: {
@@ -10617,32 +9278,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "spikyshield",
       "dragondance",
-      "stunspore",
-      "earthquake",
-      "dragontail",
-      "solarblade",
-      "toxic",
-      "synthesis",
-      "spikes",
-      "leafblade",
-      "psychicfangs",
-      "woodhammer",
       "dragonhammer",
-      "growth",
-      "leechseed",
-      "drillrun"
+      "leafblade",
+      "earthquake",
+      "synthesis"
     ]
   },
   biteki: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "psychic",
-      "icebeam",
+      "voltswitch",
+      "freezedry",
+      "earthpower",
       "psychoboost",
-      "thunderbolt",
+      "icebeam",
       "heatwave"
     ]
   },
@@ -10650,15 +9301,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "roar",
       "bulkup",
       "skullbash",
-      "closecombat",
-      "willowisp",
       "shadowforce",
-      "shadowsneak",
-      "spookout",
-      "slackoff"
+      "slackoff",
+      "closecombat",
+      "spookout"
     ]
   },
   fireshi: {
@@ -10673,22 +9321,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "sludgebomb",
-      "substitute",
-      "firespin",
-      "taunt",
-      "toxic",
-      "psychic",
       "calmmind",
-      "flamethrower",
-      "haze",
-      "clearsmog",
-      "willowisp",
-      "thunderbolt",
-      "sludgewave",
-      "fireblast",
       "lavaplume",
-      "morningsun"
+      "sludgebomb",
+      "morningsun",
+      "thunderbolt"
     ]
   },
   slugbud: {
@@ -10703,15 +9340,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "recover",
-      "knockoff",
-      "scald",
+      "softboiled",
       "liquidation",
-      "shellsmash",
-      "waterfall",
-      "powerwhip",
-      "gunkshot",
-      "slimegulp"
+      "knockoff",
+      "toxic",
+      "haze",
+      "gunkshot"
     ]
   },
   skeletroll: {
@@ -10722,35 +9356,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "recover",
-      "earthpower",
-      "wish",
-      "healbell",
-      "spikes",
-      "willowisp",
-      "counter",
-      "shadowball",
       "stealthrock",
-      "mirrorcoat"
+      "earthpower",
+      "willowisp",
+      "recover",
+      "shadowball"
     ]
   },
   goryannus: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "recover",
-      "substitute",
-      "earthquake",
-      "taunt",
-      "spookout",
-      "iciclecrash",
       "shadowbone",
-      "swordsdance",
-      "playrough",
-      "rockclimb",
+      "earthquake",
+      "spookout",
       "shadowsneak",
-      "bonemerang",
-      "stealthrock"
+      "playrough"
     ]
   },
   lankong: {
@@ -10765,146 +9386,76 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "quickattack",
-      "substitute",
-      "flail",
-      "machpunch",
-      "explosion",
-      "doubleedge",
-      "closecombat",
-      "swordsdance",
-      "uturn",
       "return",
-      "reversal"
+      "closecombat",
+      "uturn",
+      "bulkup",
+      "knockoff"
     ]
   },
   narwhiz: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "pixiepummel",
-      "scald",
-      "coil",
-      "toxic",
       "softboiled",
-      "calmmind",
-      "waterfall",
-      "mop",
-      "playrough",
+      "haze",
       "moonblast",
-      "defog"
+      "scald",
+      "calmmind"
     ]
   },
   niterpent: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "knockoff",
-      "explosion",
-      "seedbomb",
-      "uturn",
-      "firefang",
-      "swordsdance",
       "blueflare",
-      "voltswitch",
-      "gunkshot",
       "thunderbolt",
-      "boltstrike",
-      "eruption"
+      "hiddenpowerice",
+      "voltswitch",
+      "boltstrike"
     ]
   },
   griffawork: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "roar",
-      "earthpower",
-      "energyball",
-      "aeroblast",
-      "roost",
-      "airslash",
-      "icebeam",
-      "psychic",
       "calmmind",
-      "healbell",
-      "hurricane",
+      "roost",
+      "aeroblast",
       "psystrike",
-      "thunderbolt",
-      "heatwave",
-      "defog"
+      "focusblast"
     ]
   },
   boarnograf: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "knockoff",
-      "facade",
-      "suckerpunch",
-      "flareblitz",
       "swordsdance",
       "precipiceblades",
-      "stoneedge",
-      "earthquake",
-      "bellydrum",
-      "switcheroo"
+      "knockoff",
+      "suckerpunch"
     ]
   },
   admoot: {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "pixiepummel",
-      "knockoff",
-      "icehammer",
-      "thunderwave",
-      "moonblast",
-      "crabhammer",
-      "nastyplot",
-      "uturn",
-      "flamethrower",
-      "woodhammer",
-      "banhammer",
-      "earthpower",
-      "hammerarm",
-      "trick",
-      "mop",
-      "explosion",
-      "healbell",
       "milkdrink",
-      "defog"
+      "moonblast",
+      "flamethrower",
+      "earthpower",
+      "nastyplot"
     ]
   },
   tentaquil: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "substitute",
-      "toxic",
-      "wish",
-      "rapidspin",
-      "willowisp",
-      "glare",
-      "geomancy",
-      "teleport",
-      "stickyweb",
-      "uturn",
-      "psystrike",
+      "shellsmash",
       "spore",
       "pukeblood",
-      "mop",
-      "blueflare",
-      "steameruption",
-      "sleazyspores",
-      "batonpass",
-      "fizzbitch",
-      "shellsmash",
-      "regenerate",
-      "nuzzle",
-      "voltswitch",
-      "stealthrock",
-      "defog"
+      "psystrike",
+      "vcreate"
     ]
   },
   blobbos: {
@@ -10915,20 +9466,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
-      "sludgebomb",
-      "surf",
-      "knockoff",
-      "energyball",
-      "nastyplot",
-      "suckerpunch",
-      "swordsdance",
-      "leafblade",
       "toke",
-      "earthquake",
-      "darkpulse",
-      "gigadrain",
-      "gunkshot"
+      "knockoff",
+      "petalblizzard",
+      "gunkshot",
+      "suckerpunch"
     ]
   },
   nutjobber: {
@@ -10939,82 +9481,44 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "protect",
+      "leechseed",
       "substitute",
       "pixiepummel",
       "taunt",
-      "softboiled",
-      "toxic",
-      "crunch",
-      "shellsmash",
-      "icefang",
-      "firefang",
-      "thunderfang",
-      "willowisp",
-      "moonblast",
-      "spiritshackle",
-      "nightshade",
-      "leechseed",
-      "shadowball",
-      "aurasphere"
+      "softboiled"
     ]
   },
   adesign: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "knockoff",
-      "softboiled",
-      "toxic",
-      "uturn",
-      "swordsdance",
-      "healbell",
-      "willowisp",
-      "earthquake",
       "anattack",
-      "stealthrock",
-      "defog"
+      "teleport",
+      "softboiled",
+      "defog",
+      "stealthrock"
     ]
   },
   clovenix: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "earthpower",
+      "quiverdance",
       "energyball",
-      "taunt",
-      "toxic",
-      "uturn",
-      "flamethrower",
-      "swordsdance",
-      "regenerate",
-      "futababreak",
-      "willowisp",
-      "sacredfire",
-      "earthquake",
-      "defog",
       "fireblast",
-      "gigadrain",
-      "quiverdance"
+      "regenerate",
+      "earthpower"
     ]
   },
   jewipede: {
     tier: "Uber",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "spectralthief",
-      "extremespeed",
-      "substitute",
-      "fakeout",
-      "bulkup",
-      "rest",
-      "doubleedge",
-      "lovelykiss",
       "swordsdance",
-      "uturn",
-      "leechlife",
-      "megahorn",
-      "earthquake"
+      "extremespeed",
+      "spectralthief",
+      "lovelykiss",
+      "uturn"
     ]
   },
   megablobbos: {
