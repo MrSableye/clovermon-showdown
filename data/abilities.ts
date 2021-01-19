@@ -4451,6 +4451,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.damage(target.baseMaxhp / 8, target, target);
 			}
 		},
+		rating: 2,
 	},
 	concert: {
 		name: "Concert",
@@ -4468,6 +4469,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
+		rating: 3,
 	},
 	waitforit: {
 		name: "Wait For It",
@@ -4494,6 +4496,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.add('-end', target, 'Wait For It');
 			},
 		},
+		rating: 2,
 	},
 	gradient: {
 		name: "Gradient",
@@ -4521,7 +4524,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (!typeAdded) return false;
 				this.add('-start', pokemon, 'typeadd', type, '[from] ability: Gradient');
 			}
-		}
+		},
+		rating: 2,
 	},
 	anyability: {
 		name: "Any Ability",
@@ -4776,7 +4780,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 
 			return false;
-		}
+		},
+		rating: 4,
 	},
 	adminabuse: {
 		name: "Admin Abuse",
@@ -4793,15 +4798,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		  	}
 			}
 		},
+		rating: 4,
 	},
 	anability: {
 		name: "An Ability",
+		rating: 0,
 	},
 	bigguy: {
 		name: "Big Guy",
 		onStart() {
 			this.field.addPseudoWeather('gravity');
 		},
+		rating: 4,
 	},
 	blademaster: {
 		name: "Blademaster",
@@ -4815,6 +4823,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyCritRatio(critRatio, target, source, move) {
 			if (target && ['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust'].includes(move.id)) return critRatio + 1;
 		},
+		rating: 4,
 	},
 	boombox: {
 		name: "Boombox",
@@ -4825,6 +4834,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify([0x1333, 0x1000]);
 			}
 		},
+		rating: 3,
 	},
 	bonezone: {
 		name: "Bone Zone",
@@ -4835,6 +4845,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyMove(move) {
 			if (['bonemerang', 'boneclub', 'shadowbone', 'bonerush'].includes(move.id)) move.ignoreImmunity = true;
 		},
+		rating: 3.5,
 	},
 	degenerate: {
 		name: "Degenerate",
@@ -4858,6 +4869,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		   if (move && type === 'Normal' && move.type === 'Dark') return 1;
 			 return typeMod;
 		},
+		rating: 3,
   },
 	flareheal: {
 		name: "Flare Heal",
@@ -4874,6 +4886,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return false;
 			}
 		},
+		rating: 4,
 	},
 	ghostnote: {
 		name: "Ghost Note",
@@ -4883,6 +4896,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				move.type = 'Ghost';
 			}
 		},
+		rating: 2,
 	},
 	hydrophile: {
 		name: "Hydrophile",
@@ -4900,12 +4914,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(1.5);
 			}
 		},
+		rating: 3.5,
 	},
 	inversion: {
 		name: "Inversion",
 		onStart(source) {
 			this.field.addPseudoWeather('inverseroom');
 		},
+		rating: 2.5,
 	},
 	jewelry: {
 		name: "Jewelry",
@@ -4934,6 +4950,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
+		rating: 3.5,
 	},
 	madman: {
 		name: "Madman",
@@ -4944,9 +4961,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
+		rating: 3,
 	},
 	moreroom: {
 		name: "More Room",
+		rating: 2.5,
 	},
   pollution: {
 		name: "Pollution",
@@ -4954,6 +4973,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		   if (move && type === 'Water' && move.type === 'Poison') return 1;
 			 return typeMod;
 		},
+		rating: 3,
   },
 	pozzed: {
 		name: "Pozzed",
@@ -4965,6 +4985,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 		},
+		rating: 3.5,
 	},
 	puppeteer: {
 		name: "Puppeteer",
@@ -4982,6 +5003,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(1.5);
 			}
 		},
+		rating: 3.5,
 	},
 	striker: {
 		name: "Striker",
@@ -4999,6 +5021,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			return accuracy;
 		},
+		rating: 3,
 	},
 	suddenly: {
     name: "Suddenly",
@@ -5008,6 +5031,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.addMove('-anim', pokemon, move.name, target);
 				return false; // skip charge turn
 		},
+		rating: 4,
 	},
 	woke: {
 		name: "Woke",
@@ -5026,6 +5050,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePower(basePower, pokemon, target, move) {
 			if (move.multihitType === 'parentalbond' && move.hit > 1) return this.chainModify(0.25);
 		},
+		rating: 2,
 	},
 	woodenguard: {
 		name: "Wooden Guard",
@@ -5033,5 +5058,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.type === 'Fire') return this.chainModify(1.5);
 			return this.chainModify(0.75);
 		},
+		rating: 3,
 	},
 };
