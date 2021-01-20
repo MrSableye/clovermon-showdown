@@ -1787,7 +1787,12 @@ export class RandomTeams {
 			item = 'Leftovers';
 		}
 
-		const level: number = (!isDoubles ? species.randomBattleLevel : species.randomDoubleBattleLevel) || 80;
+		let level: number = (!isDoubles ? species.randomBattleLevel : species.randomDoubleBattleLevel) || 80;
+
+		// Weaken mons with strong abilities
+		if (['shadowtag', 'arenatrap', 'moody', 'wonderguard'].includes(toID(ability))) {
+			level -= 8;
+		}
 
 		// Prepare optimal HP
 		const srWeakness = (ability === 'Magic Guard' || item === 'Heavy-Duty Boots' ? 0 : this.dex.getEffectiveness('Rock', species));
