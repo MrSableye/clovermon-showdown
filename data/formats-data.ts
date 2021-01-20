@@ -7613,7 +7613,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     randomBattleLevel: 72
   },
   notridley: {
-    tier: "Uber",
+    tier: "OU",
     isNonstandard: "Future",
     randomBattleMoves: [
       "dragondance",
@@ -7623,7 +7623,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
       "extremespeed",
       "outrage"
     ],
-    randomBattleLevel: 72
+    randomBattleLevel: 76
   },
   demiwaifu: {
     tier: "Uber",
