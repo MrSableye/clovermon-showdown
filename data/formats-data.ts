@@ -9677,13 +9677,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     tier: "RU",
     isNonstandard: "Future",
     randomBattleMoves: [
-      "toke",
-      "knockoff",
-      "petalblizzard",
-      "gunkshot",
-      "suckerpunch"
+      "kingsshield",
+      "leechseed",
+      "substitute",
+      "metronome"
     ],
-    randomBattleLevel: 84
+    randomBattleLevel: 100
   },
   nutjobber: {
     tier: "LC Uber",
