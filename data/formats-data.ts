@@ -7651,7 +7651,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
     isNonstandard: "Future",
     randomBattleMoves: [
       "dragondance",
-      "dragonhammer",
+      "dragonfist",
       "closecombat",
       "meteormash"
     ],
