@@ -593,6 +593,11 @@ export class RandomTeams {
 			gmax = true;
 		}
 
+		let nickname: string;
+		if (species.randomBattleNicknames) {
+			nickname = this.sample(species.randomBattleNicknames);
+		}
+
 		const randMoves = !isDoubles ? species.randomBattleMoves : (species.randomDoubleBattleMoves || species.randomBattleMoves);
 		const movePool = (randMoves || Object.keys(this.dex.data.Learnsets[species.id]!.learnset!)).slice();
 		const rejectedPool = [];
@@ -1828,7 +1833,7 @@ export class RandomTeams {
 		}
 
 		return {
-			name: species.baseSpecies,
+			name: nickname || species.baseSpecies,
 			species: forme,
 			gender: species.gender,
 			moves: moves,

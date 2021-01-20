@@ -28,6 +28,7 @@ export interface SpeciesFormatsData {
 	exclusiveMoves?: readonly string[];
 	gmaxUnreleased?: boolean;
 	isNonstandard?: Nonstandard | null;
+	randomBattleNicknames?: readonly string[];
 	randomBattleMoves?: readonly string[];
 	randomBattleLevel?: number;
 	randomDoubleBattleMoves?: readonly string[];
