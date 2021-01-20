@@ -22,6 +22,7 @@ export interface SpeciesData extends Partial<Species> {
 export type ModdedSpeciesData = SpeciesData | Partial<Omit<SpeciesData, 'name'>> & {inherit: true};
 
 interface RandomBattleSet {
+	lockedMoves?: readonly string[];
 	abilities?: readonly string[];
 	items?: readonly string[];
 	moves?: readonly string[];

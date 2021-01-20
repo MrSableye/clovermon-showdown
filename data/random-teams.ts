@@ -602,7 +602,9 @@ export class RandomTeams {
 
 		const singlesMoves = randomBattleSet.moves || species.randomBattleMoves;
 		const randMoves = !isDoubles ? singlesMoves : (species.randomDoubleBattleMoves || singlesMoves);
+		const lockedMoves = randomBattleSet.lockedMoves || [];
 		const movePool = (randMoves || Object.keys(this.dex.data.Learnsets[species.id]!.learnset!)).slice();
+		const lockedMovePool = lockedMoves.slice();
 		const rejectedPool = [];
 		const moves: string[] = [];
 		let ability = '';
@@ -638,7 +640,7 @@ export class RandomTeams {
 			}
 
 			// Choose next 4 moves from learnset/viable moves and add them to moves list:
-			const pool = (movePool.length ? movePool : rejectedPool);
+			const pool = (lockedMovePool.length ? lockedMovePool : movePool.length ? movePool : rejectedPool);
 			while (moves.length < 4 && pool.length) {
 				const moveid = this.sampleNoReplace(pool);
 				hasMove[moveid] = true;
@@ -1071,7 +1073,7 @@ export class RandomTeams {
 					break;
 				}
 			}
-		} while (moves.length < 4 && (movePool.length || rejectedPool.length));
+		} while (moves.length < 4 && (lockedMovePool.length || movePool.length || rejectedPool.length));
 
 		if (randomBattleSet.abilities && randomBattleSet.abilities.length > 0) {
 			ability = this.sample(randomBattleSet.abilities);
