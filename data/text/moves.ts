@@ -6838,288 +6838,288 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  Sleazy spores float in the air around [TEAM]!",
 		end: "  The sleazy spores disappeared from around [TEAM]!",
 		activate: "  Sleazy spores sedated [POKEMON]!",
-  },
-  slimegulp: {
+	},
+	slimegulp: {
 		name: "Slime Gulp",
 		desc: "The target's Ability is rendered ineffective as long as it remains active.",
 		shortDesc: "Nullifies the foe(s) Ability.",
-  },
-  inverseroom: {
+	},
+	inverseroom: {
 		name: "Inverse Room",
 		shortDesc: "Summons Inverse Room upon switch-in.",
 		desc: "Creates a bizarre area where type matchups are swapped for five turns.",
-  },
-  fruitpunch: {
+	},
+	fruitpunch: {
 		name: "Fruit Punch",
 		shortDesc: "20% chance to lower the target's Def by 1.",
 		desc: "Has a 20% chance to lower the target's Defense by 1 stage.",
-  },
-  dragonfist: {
+	},
+	dragonfist: {
 		name: "Dragon Fist",
 		shortDesc: "10% chance to paralyze the target.",
 		desc: "Has a 10% chance to paralyze the target.",
-  },
-  lickclean: {
+	},
+	lickclean: {
 		name: "Lick Clean",
 		shortDesc: "Resets all of the target's positive stat stages to 0. Heals for each boost removed.",
-  },
-  speedweed: {
+	},
+	speedweed: {
 		name: "Speed Weed",
 		shortDesc: "Usually goes first.",
 		desc: "No additional effect.",
-  },
-  overbite: {
+	},
+	overbite: {
 		name: "Overbite",
 		shortDesc: "User loses 50% max HP. Hits adjacent Pokemon.",
 		desc: "Whether or not this move is successful and even if it would cause fainting, the user loses 1/2 of its maximum HP, rounded up, unless the user has the Magic Guard Ability.",
 		damage: "  ([POKEMON] cut its own HP to power up its move!)",
-  },
-  "1000folds": {
+	},
+	"1000folds": {
 		name: "1000 Folds",
 		shortDesc: "Not resisted by Steel. Ignore substitutes. Destroys screens. Hits through protection.",
-  },
-  warhead: {
+	},
+	warhead: {
 		name: "Warhead",
 		shortDesc: "No additional effect.",
-  },
-  weirdflex: {
+	},
+	weirdflex: {
 		name: "Weird Flex",
 		shortDesc: "Uses Bulk Up, Scary Face, Endure, and Follow Me targeted all at itself.",
-  },
-  scorchedearth: {
+	},
+	scorchedearth: {
 		name: "Scorched Earth",
-		desc: "Hits adjacent Pokemon. Has a 100% to burn adjacent Pokemon and itself."
-  },
-  hulkup: {
+		desc: "Hits adjacent Pokemon. Has a 100% to burn adjacent Pokemon and itself.",
+	},
+	hulkup: {
 		name: "Hulk Up",
 		shortDesc: "Raises Atk and Def by 1. Raises by 2 if this has 1/2 of less of its max HP.",
 		desc: "Raises the user's Attack and Defense by 1 stage. If this Pokemon has 1/2 or less of its maximum HP, it boosts Attack and Defense an additional stage.",
-  },
-  focusmunch: {
+	},
+	focusmunch: {
 		name: "Focus Munch",
 		shortDesc: "Heals the user by 50% of its max HP and raises Acc by 1. Fails if the user takes damage before it hits.",
 		desc: "The user restores 1/2 of its maximum HP, rounded half up. The user loses its focus and does nothing if it is hit by a damaging attack this turn before it can execute the move.",
-  },
-  mop: {
+	},
+	mop: {
 		name: "Mop",
 		shortDesc: "Free user from hazards; +1 Acc if any hazards were removed.",
 		desc: "If this move is successful and the user has not fainted, all hazards are removed from the user's side of the field. Has a 100% chance to raise the user's Accuracy by 1 stage if any hazards were removed.",
-  },
-  quicksand: {
+	},
+	quicksand: {
 		name: "Quick Sand",
 		shortDesc: "Usually goes first.",
 		desc: "No additional effect.",
-  },
-  thinkfast: {
+	},
+	thinkfast: {
 		name: "Think Fast",
 		shortDesc: "Usually goes first.",
 		desc: "No additional effect.",
-  },
-  boltbeam: {
+	},
+	boltbeam: {
 		name: "Boltbeam",
 		shortDesc: "Combines Ice in its type effectiveness.",
 		desc: "This move combines Ice in its type effectiveness against the target.",
-  },
-  checkem: {
+	},
+	checkem: {
 		name: "Check 'Em",
 		shortDesc: "Hits 2-5 times in one turn. Physical if user's Atk > Sp. Atk.",
 		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times. This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes.",
-  },
-  pixiepummel: {
+	},
+	pixiepummel: {
 		name: "Pixie Pummel",
 		shortDesc: "No additional effect.",
-  },
-  gayagenda: {
+	},
+	gayagenda: {
 		name: "Gay Agenda",
 		shortDesc: "A target of the same gender gets infatuated.",
 		desc: "Causes the target to become infatuated, making it unable to attack 50% of the time. Fails if both the user and the target are not the same gender, if either is genderless, or if the target is already infatuated. The effect ends when either the user or the target is no longer active. Pokemon with the Oblivious Ability or protected by the Aroma Veil Ability are immune.",
-  },
-  spooperpower: {
+	},
+	spooperpower: {
 		name: "Spooperpower",
 		shortDesc: "Physical if user's Atk > Sp. Atk.",
 		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes.",
-  },
-  greatrage: {
+	},
+	greatrage: {
 		name: "Great Rage",
 		shortDesc: "No additional effect.",
-  },
-  wowwiener: {
+	},
+	wowwiener: {
 		name: "Wow Wiener",
 		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
 		shortDesc: "Hits 2-5 times in one turn.",
-  },
-  plunder: {
+	},
+	plunder: {
 		name: "Plunder",
 		desc: "If this attack was successful and the user has not fainted, it steals the target's held item if the user is not holding one. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
 		shortDesc: "If the user has no item, it steals the target's.",
-  },
-  blobbybop: {
+	},
+	blobbybop: {
 		name: "Blobby Bop",
 		shortDesc: "This move does not check accuracy.",
-  },
-  banhammer: {
+	},
+	banhammer: {
 		name: "Ban Hammer",
 		shortDesc: "Torments the foe.",
-  },
-  homerunbat: {
+	},
+	homerunbat: {
 		name: "Homerun Bat",
 		shortDesc: "Forces the target to switch to a random ally.",
 		desc: "If both the user and the target have not fainted, the target is forced to switch out and be replaced with a random unfainted ally. This effect fails if the target used Ingrain previously, has the Suction Cups Ability, or this move hit a substitute.",
-  },
-  elbowdrop: {
+	},
+	elbowdrop: {
 		name: "Elbow Drop",
 		shortDesc: "No additional effect.",
-  },
-  anattack: {
-    name: "An Attack",
-    shortDesc: "No additional effect.",
-  },
-  chaosdunk: {
-    name: "Chaos Dunk",
-    shortDesc: "No additional effect.",
-  },
-  comengo: {
+	},
+	anattack: {
+		name: "An Attack",
+		shortDesc: "No additional effect.",
+	},
+	chaosdunk: {
+		name: "Chaos Dunk",
+		shortDesc: "No additional effect.",
+	},
+	comengo: {
 		name: "Come n' Go",
 		shortDesc: "Hits 2-5 times in one turn.",
-    desc: "Hits two to five times. Has a 1/3 chance to hit two or three times, and a 1/6 chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
-  },
-  dailydose: {
+		desc: "Hits two to five times. Has a 1/3 chance to hit two or three times, and a 1/6 chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+	},
+	dailydose: {
 		name: "Daily Dose",
 		shortDesc: "20% chance to poison or badly poison or put the target to sleep.",
-    desc: "Has a 20% chance to either poison, badly poison, or inflict sleep on the target.",
-  },
-  decaydrain: {
+		desc: "Has a 20% chance to either poison, badly poison, or inflict sleep on the target.",
+	},
+	decaydrain: {
 		name: "Decay Drain",
 		shortDesc: "User recovers 50% of the damage dealt.",
-    desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
-  },
-  dildocannon: {
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+	},
+	dildocannon: {
 		name: "Dildo Cannon",
 		shortDesc: "Hits 2-5 times in one turn.",
-    desc: "Hits two to five times. Has a 1/3 chance to hit two or three times, and a 1/6 chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
-  },
-  enema: {
+		desc: "Hits two to five times. Has a 1/3 chance to hit two or three times, and a 1/6 chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+	},
+	enema: {
 		name: "Enema",
 		shortDesc: "User recovers 50% of the damage dealt.",
-    desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
-  },
-  erosionwave: {
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+	},
+	erosionwave: {
 		name: "Erosion Wave",
 		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
-    desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
-  },
-  falconpunch: {
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
+	},
+	falconpunch: {
 		name: "Falcon Punch",
 		shortDesc: "10% chance to burn the target.",
-    desc: "Has a 10% chance to burn the target.",
-  },
-  firebomb: {
-    name: "Fire Bomb",
-    shortDesc: "No additional effect.",
-  },
-  fizzbitch: {
+		desc: "Has a 10% chance to burn the target.",
+	},
+	firebomb: {
+		name: "Fire Bomb",
+		shortDesc: "No additional effect.",
+	},
+	fizzbitch: {
 		name: "Fizzbitch",
 		shortDesc: "10% chance to paralyze the target.",
-    desc: "Has a 10% chance to paralyze the target.",
-  },
-  foryou: {
-    name: "For You",
-    desc: "Has a 100% chance to lower the target's Defense by 1 stage.",
-    shortDesc: "100% chance to lower the target's Defense by 1.",
-  },
-  futababreak: {
+		desc: "Has a 10% chance to paralyze the target.",
+	},
+	foryou: {
+		name: "For You",
+		desc: "Has a 100% chance to lower the target's Defense by 1 stage.",
+		shortDesc: "100% chance to lower the target's Defense by 1.",
+	},
+	futababreak: {
 		name: "Futaba Break",
 		shortDesc: "Destroys screens, unless the target is immune.",
-    desc: "If this attack does not miss, the effects of Reflect, Light Screen, and Aurora Veil end for the target's side of the field before damage is calculated.",
-  },
-  holyduty: {
+		desc: "If this attack does not miss, the effects of Reflect, Light Screen, and Aurora Veil end for the target's side of the field before damage is calculated.",
+	},
+	holyduty: {
 		name: "Holy Duty",
 		shortDesc: "Hits adjacent Pokemon. The user faints.",
-    desc: "The user faints after using this move, even if this move fails for having no target. This move is prevented from executing if any active Pokemon has the Damp Ability.",
-  },
-  lactoseshot: {
+		desc: "The user faints after using this move, even if this move fails for having no target. This move is prevented from executing if any active Pokemon has the Damp Ability.",
+	},
+	lactoseshot: {
 		name: "Lactose Shot",
 		shortDesc: "Lowers the user's Sp. Atk by 2.",
-    desc: "Lowers the user's Special Attack by 2 stages.",
-  },
-  meme: {
+		desc: "Lowers the user's Special Attack by 2 stages.",
+	},
+	meme: {
 		name: "Meme",
 		shortDesc: "10% chance to raise all stats by 1 (not acc/eva).",
-    desc: "Has a 10% chance to raise the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
-  },
-  overenergize: {
+		desc: "Has a 10% chance to raise the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
+	},
+	overenergize: {
 		name: "Overenergize",
 		shortDesc: "Lowers the user's Sp. Atk by 2.",
-    desc: "Lowers the user's Special Attack by 2 stages.",
-  },
-  owtheedge: {
+		desc: "Lowers the user's Special Attack by 2 stages.",
+	},
+	owtheedge: {
 		name: "Ow The Edge",
 		shortDesc: "Has 25% recoil.",
-    desc: "If the target lost HP, the user takes recoil damage equal to 25% the HP lost by the target, rounded half up, but not less than 1 HP.",
-  },
-  pukeblood: {
+		desc: "If the target lost HP, the user takes recoil damage equal to 25% the HP lost by the target, rounded half up, but not less than 1 HP.",
+	},
+	pukeblood: {
 		name: "Puke Blood",
 		shortDesc: "Has 25% recoil.",
-    desc: "If the target lost HP, the user takes recoil damage equal to 25% the HP lost by the target, rounded half up, but not less than 1 HP.",
-  },
-  punchout: {
+		desc: "If the target lost HP, the user takes recoil damage equal to 25% the HP lost by the target, rounded half up, but not less than 1 HP.",
+	},
+	punchout: {
 		name: "Punch Out",
 		shortDesc: "User switches out after damaging the target.",
-    desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
-  },
-  regenerate: {
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+	},
+	regenerate: {
 		name: "Regenerate",
 		shortDesc: "Heals the user by 50% of its max HP. User cures its burn, poison, or paralysis.",
-    desc: "The user restores 1/2 of its maximum HP, rounded half up, and cures its burn, poison, or paralysis.",
-  },
-  riotshield: {
+		desc: "The user restores 1/2 of its maximum HP, rounded half up, and cures its burn, poison, or paralysis.",
+	},
+	riotshield: {
 		name: "Riot Shield",
 		shortDesc: "Summons Safeguard.",
-    desc: "This move summons Safeguard for 5 turns upon use.",
-  },
-  shitpost: {
+		desc: "This move summons Safeguard for 5 turns upon use.",
+	},
+	shitpost: {
 		name: "Shitpost",
 		shortDesc: "Lasts 2-3 turns. Confuses the user afterwards.",
-    desc: "The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pokemon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
-  },
-  spookout: {
-    name: "Spook Out",
-    desc: "Has a 100% chance to flinch the target. Fails unless it is the user's first turn on the field.",
-    shortDesc: "Hits first. First turn out only. 100% flinch chance.",
-  },
-  stratoblade: {
+		desc: "The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pokemon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
+	},
+	spookout: {
+		name: "Spook Out",
+		desc: "Has a 100% chance to flinch the target. Fails unless it is the user's first turn on the field.",
+		shortDesc: "Hits first. First turn out only. 100% flinch chance.",
+	},
+	stratoblade: {
 		name: "Strato Blade",
 		shortDesc: "High critical hit ratio.",
-    desc: "Has a higher chance for a critical hit.",
-  },
-  supersnore: {
+		desc: "Has a higher chance for a critical hit.",
+	},
+	supersnore: {
 		name: "Super Snore",
 		shortDesc: "User must be asleep.",
-    desc: "Fails if the user is not asleep.",
-  },
-  swindle: {
+		desc: "Fails if the user is not asleep.",
+	},
+	swindle: {
 		name: "Swindle",
 		shortDesc: "If the user has no item, it steals the target's.",
-    desc: "If this attack was successful and the user has not fainted, it steals the target's held item if the user is not holding one. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
-  },
-  toke: {
+		desc: "If this attack was successful and the user has not fainted, it steals the target's held item if the user is not holding one. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
+	},
+	toke: {
 		name: "Toke",
 		shortDesc: "Lowers Def, SpD by 1; raises Atk, SpA, Spe by 2.",
-    desc: "Lowers the user's Defense and Special Defense by 1 stage. Raises the user's Attack, Special Attack, and Speed by 2 stages.",
-  },
-  toxiravage: {
+		desc: "Lowers the user's Defense and Special Defense by 1 stage. Raises the user's Attack, Special Attack, and Speed by 2 stages.",
+	},
+	toxiravage: {
 		name: "Toxiravage",
 		shortDesc: "Usually goes first.",
-    desc: "No additional effect.",
-  },
-  trigger: {
+		desc: "No additional effect.",
+	},
+	trigger: {
 		name: "Trigger",
 		shortDesc: "Power doubles with each hit, up to 160.",
 		desc: "Power doubles with each successful hit, up to a maximum of 160 power. The power is reset if this move misses or another move is used.",
-  },
-  sudoku: {
+	},
+	sudoku: {
 		name: "Sudoku",
 		shortDesc: "User faints.",
-    desc: "The user faints.",
-  },
+		desc: "The user faints.",
+	},
 };

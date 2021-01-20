@@ -21,6 +21,13 @@ export interface SpeciesData extends Partial<Species> {
 
 export type ModdedSpeciesData = SpeciesData | Partial<Omit<SpeciesData, 'name'>> & {inherit: true};
 
+interface RandomBattleSet {
+	abilities?: readonly string[];
+	items?: readonly string[];
+	moves?: readonly string[];
+	level?: number;
+}
+
 export interface SpeciesFormatsData {
 	comboMoves?: readonly string[];
 	doublesTier?: TierTypes.Doubles | TierTypes.Other;
@@ -33,6 +40,7 @@ export interface SpeciesFormatsData {
 	randomBattleLevel?: number;
 	randomDoubleBattleMoves?: readonly string[];
 	randomDoubleBattleLevel?: number;
+	randomBattleSets?: RandomBattleSet[];
 	tier?: TierTypes.Singles | TierTypes.Other;
 }
 
@@ -205,10 +213,12 @@ export class Species extends BasicEffect implements Readonly<BasicEffect & Speci
 	 * Do not use for LC bans (usage tier will override LC Uber).
 	 */
 	readonly doublesTier: TierTypes.Doubles | TierTypes.Other;
+	readonly randomBattleNicknames?: string[];
 	readonly randomBattleMoves?: readonly ID[];
 	readonly randomBattleLevel?: number;
 	readonly randomDoubleBattleMoves?: readonly ID[];
 	readonly randomDoubleBattleLevel?: number;
+	readonly randomBattleSets?: RandomBattleSet[];
 	readonly exclusiveMoves?: readonly ID[];
 	readonly comboMoves?: readonly ID[];
 	readonly essentialMove?: ID;

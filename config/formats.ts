@@ -140,7 +140,7 @@ export const Formats: FormatList = [
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	{
-		section: "Clover x Pokemon Singles"
+		section: "Clover x Pokemon Singles",
 	},
 	{
 		name: "[Gen 8 National Dex] AG",

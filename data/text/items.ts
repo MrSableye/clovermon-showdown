@@ -2337,32 +2337,32 @@ export const ItemsText: {[k: string]: ItemText} = {
 	suedeshoes: {
 		name: "Suede Shoes",
 		desc: "If held by a Pretzely, its Speed is doubled.",
-  },
-  bigfaggot: {
+	},
+	bigfaggot: {
 		name: "Big Faggot",
 		desc: "If held by a Flameboyan, its Special Attack is doubled.",
-  },
-  baconstrip: {
+	},
+	baconstrip: {
 		name: "Bacon Strip",
 		desc: "If held by a Urswine, its Special Defense is doubled.",
-  },
-  katana: {
+	},
+	katana: {
 		name: "Katana",
 		desc: "Holder's Steel-type attacks have 1.2x power.",
-  },
-  cutebow: {
+	},
+	cutebow: {
 		name: "Cute Bow",
 		desc: "Holder's Fairy-type attacks have 1.2x power.",
-  },
-  bible: {
+	},
+	bible: {
 		name: "Bible",
 		desc: "If held by a Caroline, its critical hit ratio is raised by 2 stages.",
-  },
-  taco: {
+	},
+	taco: {
 		name: "Taco",
 		desc: "Restores 50 HP when at 1/2 max HP or less. Single use.",
-  },
-  thiccbone: {
+	},
+	thiccbone: {
 		name: "Thicc Bone",
 		desc: "If held by a Masdawg or a Pasdawg, its Attack is doubled.",
 	},
@@ -2377,5 +2377,5 @@ export const ItemsText: {[k: string]: ItemText} = {
 	blobbosinite: {
 		name: "Blobbosinite",
 		desc: "On switch-in, causes the user to win the game. Single use.",
-	}
+	},
 };

@@ -1,6 +1,6 @@
 // Note: These are the rules that formats use
 
-import { consoleips } from "../config/config-example";
+import {consoleips} from "../config/config-example";
 
 // The list of formats is stored in config/formats.js
 export const Formats: {[k: string]: FormatData} = {
@@ -1924,7 +1924,7 @@ export const Formats: {[k: string]: FormatData} = {
 				"banhammer",
 				"homerunbat",
 				"sudoku",
-				"elbowdrop"
+				"elbowdrop",
 			].map(this.toID);
 
 			const fochunItems = [
@@ -2326,6 +2326,6 @@ export const Formats: {[k: string]: FormatData} = {
 			if (errors.length > 0) {
 				return errors;
 			}
-		}
+		},
 	},
 };

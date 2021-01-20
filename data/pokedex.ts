@@ -1,11 +1,11 @@
-export const Pokedex: { [speciesid: string]: SpeciesData; } = {
+export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	bulbasaur: {
 		num: 1,
 		name: "Bulbasaur",
 		types: ["Grass", "Poison"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 45, atk: 49, def: 49, spa: 65, spd: 65, spe: 45 },
-		abilities: { 0: "Overgrow", H: "Chlorophyll" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 45, atk: 49, def: 49, spa: 65, spd: 65, spe: 45},
+		abilities: {0: "Overgrow", H: "Chlorophyll"},
 		heightm: 0.7,
 		weightkg: 6.9,
 		color: "Green",
@@ -16,9 +16,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 2,
 		name: "Ivysaur",
 		types: ["Grass", "Poison"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 60, atk: 62, def: 63, spa: 80, spd: 80, spe: 60 },
-		abilities: { 0: "Overgrow", H: "Chlorophyll" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 60, atk: 62, def: 63, spa: 80, spd: 80, spe: 60},
+		abilities: {0: "Overgrow", H: "Chlorophyll"},
 		heightm: 1,
 		weightkg: 13,
 		color: "Green",
@@ -31,9 +31,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 3,
 		name: "Venusaur",
 		types: ["Grass", "Poison"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 80, atk: 82, def: 83, spa: 100, spd: 100, spe: 80 },
-		abilities: { 0: "Overgrow", H: "Chlorophyll" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 80, atk: 82, def: 83, spa: 100, spd: 100, spe: 80},
+		abilities: {0: "Overgrow", H: "Chlorophyll"},
 		heightm: 2,
 		weightkg: 100,
 		color: "Green",
@@ -50,9 +50,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Venusaur",
 		forme: "Mega",
 		types: ["Grass", "Poison"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 80, atk: 100, def: 123, spa: 122, spd: 120, spe: 80 },
-		abilities: { 0: "Thick Fat" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 80, atk: 100, def: 123, spa: 122, spd: 120, spe: 80},
+		abilities: {0: "Thick Fat"},
 		heightm: 2.4,
 		weightkg: 155.5,
 		color: "Green",
@@ -65,9 +65,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Venusaur",
 		forme: "Gmax",
 		types: ["Grass", "Poison"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 80, atk: 82, def: 83, spa: 100, spd: 100, spe: 80 },
-		abilities: { 0: "Overgrow", H: "Chlorophyll" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 80, atk: 82, def: 83, spa: 100, spd: 100, spe: 80},
+		abilities: {0: "Overgrow", H: "Chlorophyll"},
 		heightm: 2,
 		weightkg: 0,
 		color: "Green",
@@ -78,9 +78,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 4,
 		name: "Charmander",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 39, atk: 52, def: 43, spa: 60, spd: 50, spe: 65 },
-		abilities: { 0: "Blaze", H: "Solar Power" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 39, atk: 52, def: 43, spa: 60, spd: 50, spe: 65},
+		abilities: {0: "Blaze", H: "Solar Power"},
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
@@ -91,9 +91,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 5,
 		name: "Charmeleon",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 58, atk: 64, def: 58, spa: 80, spd: 65, spe: 80 },
-		abilities: { 0: "Blaze", H: "Solar Power" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 58, atk: 64, def: 58, spa: 80, spd: 65, spe: 80},
+		abilities: {0: "Blaze", H: "Solar Power"},
 		heightm: 1.1,
 		weightkg: 19,
 		color: "Red",
@@ -106,9 +106,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 6,
 		name: "Charizard",
 		types: ["Fire", "Flying"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100 },
-		abilities: { 0: "Blaze", H: "Solar Power" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100},
+		abilities: {0: "Blaze", H: "Solar Power"},
 		heightm: 1.7,
 		weightkg: 90.5,
 		color: "Red",
@@ -125,9 +125,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Charizard",
 		forme: "Mega-X",
 		types: ["Fire", "Dragon"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 78, atk: 130, def: 111, spa: 130, spd: 85, spe: 100 },
-		abilities: { 0: "Tough Claws" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 78, atk: 130, def: 111, spa: 130, spd: 85, spe: 100},
+		abilities: {0: "Tough Claws"},
 		heightm: 1.7,
 		weightkg: 110.5,
 		color: "Black",
@@ -140,9 +140,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Charizard",
 		forme: "Mega-Y",
 		types: ["Fire", "Flying"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 78, atk: 104, def: 78, spa: 159, spd: 115, spe: 100 },
-		abilities: { 0: "Drought" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 78, atk: 104, def: 78, spa: 159, spd: 115, spe: 100},
+		abilities: {0: "Drought"},
 		heightm: 1.7,
 		weightkg: 100.5,
 		color: "Red",
@@ -155,9 +155,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Charizard",
 		forme: "Gmax",
 		types: ["Fire", "Flying"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100 },
-		abilities: { 0: "Blaze", H: "Solar Power" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100},
+		abilities: {0: "Blaze", H: "Solar Power"},
 		heightm: 28,
 		weightkg: 0,
 		color: "Red",
@@ -168,9 +168,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 7,
 		name: "Squirtle",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 44, atk: 48, def: 65, spa: 50, spd: 64, spe: 43 },
-		abilities: { 0: "Torrent", H: "Rain Dish" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 44, atk: 48, def: 65, spa: 50, spd: 64, spe: 43},
+		abilities: {0: "Torrent", H: "Rain Dish"},
 		heightm: 0.5,
 		weightkg: 9,
 		color: "Blue",
@@ -181,9 +181,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 8,
 		name: "Wartortle",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 59, atk: 63, def: 80, spa: 65, spd: 80, spe: 58 },
-		abilities: { 0: "Torrent", H: "Rain Dish" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 59, atk: 63, def: 80, spa: 65, spd: 80, spe: 58},
+		abilities: {0: "Torrent", H: "Rain Dish"},
 		heightm: 1,
 		weightkg: 22.5,
 		color: "Blue",
@@ -196,9 +196,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 9,
 		name: "Blastoise",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 79, atk: 83, def: 100, spa: 85, spd: 105, spe: 78 },
-		abilities: { 0: "Torrent", H: "Rain Dish" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 79, atk: 83, def: 100, spa: 85, spd: 105, spe: 78},
+		abilities: {0: "Torrent", H: "Rain Dish"},
 		heightm: 1.6,
 		weightkg: 85.5,
 		color: "Blue",
@@ -215,9 +215,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Blastoise",
 		forme: "Mega",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 79, atk: 103, def: 120, spa: 135, spd: 115, spe: 78 },
-		abilities: { 0: "Mega Launcher" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 79, atk: 103, def: 120, spa: 135, spd: 115, spe: 78},
+		abilities: {0: "Mega Launcher"},
 		heightm: 1.6,
 		weightkg: 101.1,
 		color: "Blue",
@@ -230,9 +230,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Blastoise",
 		forme: "Gmax",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 79, atk: 83, def: 100, spa: 85, spd: 105, spe: 78 },
-		abilities: { 0: "Torrent", H: "Rain Dish" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 79, atk: 83, def: 100, spa: 85, spd: 105, spe: 78},
+		abilities: {0: "Torrent", H: "Rain Dish"},
 		heightm: 1.6,
 		weightkg: 0,
 		color: "Blue",
@@ -243,8 +243,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 10,
 		name: "Caterpie",
 		types: ["Bug"],
-		baseStats: { hp: 45, atk: 30, def: 35, spa: 20, spd: 20, spe: 45 },
-		abilities: { 0: "Shield Dust", H: "Run Away" },
+		baseStats: {hp: 45, atk: 30, def: 35, spa: 20, spd: 20, spe: 45},
+		abilities: {0: "Shield Dust", H: "Run Away"},
 		heightm: 0.3,
 		weightkg: 2.9,
 		color: "Green",
@@ -255,8 +255,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 11,
 		name: "Metapod",
 		types: ["Bug"],
-		baseStats: { hp: 50, atk: 20, def: 55, spa: 25, spd: 25, spe: 30 },
-		abilities: { 0: "Shed Skin" },
+		baseStats: {hp: 50, atk: 20, def: 55, spa: 25, spd: 25, spe: 30},
+		abilities: {0: "Shed Skin"},
 		heightm: 0.7,
 		weightkg: 9.9,
 		color: "Green",
@@ -269,8 +269,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 12,
 		name: "Butterfree",
 		types: ["Bug", "Flying"],
-		baseStats: { hp: 60, atk: 45, def: 50, spa: 90, spd: 80, spe: 70 },
-		abilities: { 0: "Compound Eyes", H: "Tinted Lens" },
+		baseStats: {hp: 60, atk: 45, def: 50, spa: 90, spd: 80, spe: 70},
+		abilities: {0: "Compound Eyes", H: "Tinted Lens"},
 		heightm: 1.1,
 		weightkg: 32,
 		color: "White",
@@ -285,8 +285,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Butterfree",
 		forme: "Gmax",
 		types: ["Bug", "Flying"],
-		baseStats: { hp: 60, atk: 45, def: 50, spa: 90, spd: 80, spe: 70 },
-		abilities: { 0: "Compound Eyes", H: "Tinted Lens" },
+		baseStats: {hp: 60, atk: 45, def: 50, spa: 90, spd: 80, spe: 70},
+		abilities: {0: "Compound Eyes", H: "Tinted Lens"},
 		heightm: 17,
 		weightkg: 0,
 		color: "White",
@@ -297,8 +297,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 13,
 		name: "Weedle",
 		types: ["Bug", "Poison"],
-		baseStats: { hp: 40, atk: 35, def: 30, spa: 20, spd: 20, spe: 50 },
-		abilities: { 0: "Shield Dust", H: "Run Away" },
+		baseStats: {hp: 40, atk: 35, def: 30, spa: 20, spd: 20, spe: 50},
+		abilities: {0: "Shield Dust", H: "Run Away"},
 		heightm: 0.3,
 		weightkg: 3.2,
 		color: "Brown",
@@ -309,8 +309,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 14,
 		name: "Kakuna",
 		types: ["Bug", "Poison"],
-		baseStats: { hp: 45, atk: 25, def: 50, spa: 25, spd: 25, spe: 35 },
-		abilities: { 0: "Shed Skin" },
+		baseStats: {hp: 45, atk: 25, def: 50, spa: 25, spd: 25, spe: 35},
+		abilities: {0: "Shed Skin"},
 		heightm: 0.6,
 		weightkg: 10,
 		color: "Yellow",
@@ -323,8 +323,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 15,
 		name: "Beedrill",
 		types: ["Bug", "Poison"],
-		baseStats: { hp: 65, atk: 90, def: 40, spa: 45, spd: 80, spe: 75 },
-		abilities: { 0: "Swarm", H: "Sniper" },
+		baseStats: {hp: 65, atk: 90, def: 40, spa: 45, spd: 80, spe: 75},
+		abilities: {0: "Swarm", H: "Sniper"},
 		heightm: 1,
 		weightkg: 29.5,
 		color: "Yellow",
@@ -340,8 +340,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Beedrill",
 		forme: "Mega",
 		types: ["Bug", "Poison"],
-		baseStats: { hp: 65, atk: 150, def: 40, spa: 15, spd: 80, spe: 145 },
-		abilities: { 0: "Adaptability" },
+		baseStats: {hp: 65, atk: 150, def: 40, spa: 15, spd: 80, spe: 145},
+		abilities: {0: "Adaptability"},
 		heightm: 1.4,
 		weightkg: 40.5,
 		color: "Yellow",
@@ -352,8 +352,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 16,
 		name: "Pidgey",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 40, atk: 45, def: 40, spa: 35, spd: 35, spe: 56 },
-		abilities: { 0: "Keen Eye", 1: "Tangled Feet", H: "Big Pecks" },
+		baseStats: {hp: 40, atk: 45, def: 40, spa: 35, spd: 35, spe: 56},
+		abilities: {0: "Keen Eye", 1: "Tangled Feet", H: "Big Pecks"},
 		heightm: 0.3,
 		weightkg: 1.8,
 		color: "Brown",
@@ -364,8 +364,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 17,
 		name: "Pidgeotto",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 63, atk: 60, def: 55, spa: 50, spd: 50, spe: 71 },
-		abilities: { 0: "Keen Eye", 1: "Tangled Feet", H: "Big Pecks" },
+		baseStats: {hp: 63, atk: 60, def: 55, spa: 50, spd: 50, spe: 71},
+		abilities: {0: "Keen Eye", 1: "Tangled Feet", H: "Big Pecks"},
 		heightm: 1.1,
 		weightkg: 30,
 		color: "Brown",
@@ -378,8 +378,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 18,
 		name: "Pidgeot",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 83, atk: 80, def: 75, spa: 70, spd: 70, spe: 101 },
-		abilities: { 0: "Keen Eye", 1: "Tangled Feet", H: "Big Pecks" },
+		baseStats: {hp: 83, atk: 80, def: 75, spa: 70, spd: 70, spe: 101},
+		abilities: {0: "Keen Eye", 1: "Tangled Feet", H: "Big Pecks"},
 		heightm: 1.5,
 		weightkg: 39.5,
 		color: "Brown",
@@ -395,8 +395,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Pidgeot",
 		forme: "Mega",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 83, atk: 80, def: 80, spa: 135, spd: 80, spe: 121 },
-		abilities: { 0: "No Guard" },
+		baseStats: {hp: 83, atk: 80, def: 80, spa: 135, spd: 80, spe: 121},
+		abilities: {0: "No Guard"},
 		heightm: 2.2,
 		weightkg: 50.5,
 		color: "Brown",
@@ -407,8 +407,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 19,
 		name: "Rattata",
 		types: ["Normal"],
-		baseStats: { hp: 30, atk: 56, def: 35, spa: 25, spd: 35, spe: 72 },
-		abilities: { 0: "Run Away", 1: "Guts", H: "Hustle" },
+		baseStats: {hp: 30, atk: 56, def: 35, spa: 25, spd: 35, spe: 72},
+		abilities: {0: "Run Away", 1: "Guts", H: "Hustle"},
 		heightm: 0.3,
 		weightkg: 3.5,
 		color: "Purple",
@@ -423,8 +423,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Rattata",
 		forme: "Alola",
 		types: ["Dark", "Normal"],
-		baseStats: { hp: 30, atk: 56, def: 35, spa: 25, spd: 35, spe: 72 },
-		abilities: { 0: "Gluttony", 1: "Hustle", H: "Thick Fat" },
+		baseStats: {hp: 30, atk: 56, def: 35, spa: 25, spd: 35, spe: 72},
+		abilities: {0: "Gluttony", 1: "Hustle", H: "Thick Fat"},
 		heightm: 0.3,
 		weightkg: 3.8,
 		color: "Black",
@@ -435,8 +435,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 20,
 		name: "Raticate",
 		types: ["Normal"],
-		baseStats: { hp: 55, atk: 81, def: 60, spa: 50, spd: 70, spe: 97 },
-		abilities: { 0: "Run Away", 1: "Guts", H: "Hustle" },
+		baseStats: {hp: 55, atk: 81, def: 60, spa: 50, spd: 70, spe: 97},
+		abilities: {0: "Run Away", 1: "Guts", H: "Hustle"},
 		heightm: 0.7,
 		weightkg: 18.5,
 		color: "Brown",
@@ -452,8 +452,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Raticate",
 		forme: "Alola",
 		types: ["Dark", "Normal"],
-		baseStats: { hp: 75, atk: 71, def: 70, spa: 40, spd: 80, spe: 77 },
-		abilities: { 0: "Gluttony", 1: "Hustle", H: "Thick Fat" },
+		baseStats: {hp: 75, atk: 71, def: 70, spa: 40, spd: 80, spe: 77},
+		abilities: {0: "Gluttony", 1: "Hustle", H: "Thick Fat"},
 		heightm: 0.7,
 		weightkg: 25.5,
 		color: "Black",
@@ -467,8 +467,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Raticate",
 		forme: "Alola-Totem",
 		types: ["Dark", "Normal"],
-		baseStats: { hp: 75, atk: 71, def: 70, spa: 40, spd: 80, spe: 77 },
-		abilities: { 0: "Thick Fat" },
+		baseStats: {hp: 75, atk: 71, def: 70, spa: 40, spd: 80, spe: 77},
+		abilities: {0: "Thick Fat"},
 		heightm: 1.4,
 		weightkg: 105,
 		color: "Black",
@@ -478,8 +478,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 21,
 		name: "Spearow",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 40, atk: 60, def: 30, spa: 31, spd: 31, spe: 70 },
-		abilities: { 0: "Keen Eye", H: "Sniper" },
+		baseStats: {hp: 40, atk: 60, def: 30, spa: 31, spd: 31, spe: 70},
+		abilities: {0: "Keen Eye", H: "Sniper"},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Brown",
@@ -490,8 +490,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 22,
 		name: "Fearow",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 65, atk: 90, def: 65, spa: 61, spd: 61, spe: 100 },
-		abilities: { 0: "Keen Eye", H: "Sniper" },
+		baseStats: {hp: 65, atk: 90, def: 65, spa: 61, spd: 61, spe: 100},
+		abilities: {0: "Keen Eye", H: "Sniper"},
 		heightm: 1.2,
 		weightkg: 38,
 		color: "Brown",
@@ -503,8 +503,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 23,
 		name: "Ekans",
 		types: ["Poison"],
-		baseStats: { hp: 35, atk: 60, def: 44, spa: 40, spd: 54, spe: 55 },
-		abilities: { 0: "Intimidate", 1: "Shed Skin", H: "Unnerve" },
+		baseStats: {hp: 35, atk: 60, def: 44, spa: 40, spd: 54, spe: 55},
+		abilities: {0: "Intimidate", 1: "Shed Skin", H: "Unnerve"},
 		heightm: 2,
 		weightkg: 6.9,
 		color: "Purple",
@@ -515,8 +515,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 24,
 		name: "Arbok",
 		types: ["Poison"],
-		baseStats: { hp: 60, atk: 95, def: 69, spa: 65, spd: 79, spe: 80 },
-		abilities: { 0: "Intimidate", 1: "Shed Skin", H: "Unnerve" },
+		baseStats: {hp: 60, atk: 95, def: 69, spa: 65, spd: 79, spe: 80},
+		abilities: {0: "Intimidate", 1: "Shed Skin", H: "Unnerve"},
 		heightm: 3.5,
 		weightkg: 65,
 		color: "Purple",
@@ -528,8 +528,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 25,
 		name: "Pikachu",
 		types: ["Electric"],
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Static", H: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Static", H: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -554,8 +554,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Cosplay",
 		types: ["Electric"],
 		gender: "F",
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -569,8 +569,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Rock-Star",
 		types: ["Electric"],
 		gender: "F",
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -585,8 +585,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Belle",
 		types: ["Electric"],
 		gender: "F",
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -601,8 +601,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Pop-Star",
 		types: ["Electric"],
 		gender: "F",
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -617,8 +617,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "PhD",
 		types: ["Electric"],
 		gender: "F",
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -633,8 +633,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Libre",
 		types: ["Electric"],
 		gender: "F",
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -649,8 +649,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Original",
 		types: ["Electric"],
 		gender: "M",
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Static", H: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Static", H: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -664,8 +664,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Hoenn",
 		types: ["Electric"],
 		gender: "M",
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Static", H: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Static", H: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -679,8 +679,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Sinnoh",
 		types: ["Electric"],
 		gender: "M",
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Static", H: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Static", H: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -694,8 +694,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Unova",
 		types: ["Electric"],
 		gender: "M",
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Static", H: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Static", H: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -709,8 +709,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Kalos",
 		types: ["Electric"],
 		gender: "M",
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Static", H: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Static", H: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -724,8 +724,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Alola",
 		types: ["Electric"],
 		gender: "M",
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Static", H: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Static", H: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -739,8 +739,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Partner",
 		types: ["Electric"],
 		gender: "M",
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Static", H: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Static", H: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -753,8 +753,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Pikachu",
 		forme: "Starter",
 		types: ["Electric"],
-		baseStats: { hp: 45, atk: 80, def: 50, spa: 75, spd: 60, spe: 120 },
-		abilities: { 0: "Static", H: "Lightning Rod" },
+		baseStats: {hp: 45, atk: 80, def: 50, spa: 75, spd: 60, spe: 120},
+		abilities: {0: "Static", H: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -766,8 +766,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Pikachu",
 		forme: "Gmax",
 		types: ["Electric"],
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Static", H: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Static", H: "Lightning Rod"},
 		heightm: 21,
 		weightkg: 0,
 		color: "Yellow",
@@ -781,8 +781,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "World",
 		types: ["Electric"],
 		gender: "M",
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Static", H: "Lightning Rod" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Static", H: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Yellow",
@@ -793,8 +793,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 26,
 		name: "Raichu",
 		types: ["Electric"],
-		baseStats: { hp: 60, atk: 90, def: 55, spa: 90, spd: 80, spe: 110 },
-		abilities: { 0: "Static", H: "Lightning Rod" },
+		baseStats: {hp: 60, atk: 90, def: 55, spa: 90, spd: 80, spe: 110},
+		abilities: {0: "Static", H: "Lightning Rod"},
 		heightm: 0.8,
 		weightkg: 30,
 		color: "Yellow",
@@ -811,8 +811,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Raichu",
 		forme: "Alola",
 		types: ["Electric", "Psychic"],
-		baseStats: { hp: 60, atk: 85, def: 50, spa: 95, spd: 85, spe: 110 },
-		abilities: { 0: "Surge Surfer" },
+		baseStats: {hp: 60, atk: 85, def: 50, spa: 95, spd: 85, spe: 110},
+		abilities: {0: "Surge Surfer"},
 		heightm: 0.7,
 		weightkg: 21,
 		color: "Brown",
@@ -825,8 +825,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 27,
 		name: "Sandshrew",
 		types: ["Ground"],
-		baseStats: { hp: 50, atk: 75, def: 85, spa: 20, spd: 30, spe: 40 },
-		abilities: { 0: "Sand Veil", H: "Sand Rush" },
+		baseStats: {hp: 50, atk: 75, def: 85, spa: 20, spd: 30, spe: 40},
+		abilities: {0: "Sand Veil", H: "Sand Rush"},
 		heightm: 0.6,
 		weightkg: 12,
 		color: "Yellow",
@@ -841,8 +841,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Sandshrew",
 		forme: "Alola",
 		types: ["Ice", "Steel"],
-		baseStats: { hp: 50, atk: 75, def: 90, spa: 10, spd: 35, spe: 40 },
-		abilities: { 0: "Snow Cloak", H: "Slush Rush" },
+		baseStats: {hp: 50, atk: 75, def: 90, spa: 10, spd: 35, spe: 40},
+		abilities: {0: "Snow Cloak", H: "Slush Rush"},
 		heightm: 0.7,
 		weightkg: 40,
 		color: "White",
@@ -853,8 +853,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 28,
 		name: "Sandslash",
 		types: ["Ground"],
-		baseStats: { hp: 75, atk: 100, def: 110, spa: 45, spd: 55, spe: 65 },
-		abilities: { 0: "Sand Veil", H: "Sand Rush" },
+		baseStats: {hp: 75, atk: 100, def: 110, spa: 45, spd: 55, spe: 65},
+		abilities: {0: "Sand Veil", H: "Sand Rush"},
 		heightm: 1,
 		weightkg: 29.5,
 		color: "Yellow",
@@ -870,8 +870,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Sandslash",
 		forme: "Alola",
 		types: ["Ice", "Steel"],
-		baseStats: { hp: 75, atk: 100, def: 120, spa: 25, spd: 65, spe: 65 },
-		abilities: { 0: "Snow Cloak", H: "Slush Rush" },
+		baseStats: {hp: 75, atk: 100, def: 120, spa: 25, spd: 65, spe: 65},
+		abilities: {0: "Snow Cloak", H: "Slush Rush"},
 		heightm: 1.2,
 		weightkg: 55,
 		color: "Blue",
@@ -885,8 +885,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Nidoran-F",
 		types: ["Poison"],
 		gender: "F",
-		baseStats: { hp: 55, atk: 47, def: 52, spa: 40, spd: 40, spe: 41 },
-		abilities: { 0: "Poison Point", 1: "Rivalry", H: "Hustle" },
+		baseStats: {hp: 55, atk: 47, def: 52, spa: 40, spd: 40, spe: 41},
+		abilities: {0: "Poison Point", 1: "Rivalry", H: "Hustle"},
 		heightm: 0.4,
 		weightkg: 7,
 		color: "Blue",
@@ -898,8 +898,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Nidorina",
 		types: ["Poison"],
 		gender: "F",
-		baseStats: { hp: 70, atk: 62, def: 67, spa: 55, spd: 55, spe: 56 },
-		abilities: { 0: "Poison Point", 1: "Rivalry", H: "Hustle" },
+		baseStats: {hp: 70, atk: 62, def: 67, spa: 55, spd: 55, spe: 56},
+		abilities: {0: "Poison Point", 1: "Rivalry", H: "Hustle"},
 		heightm: 0.8,
 		weightkg: 20,
 		color: "Blue",
@@ -913,8 +913,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Nidoqueen",
 		types: ["Poison", "Ground"],
 		gender: "F",
-		baseStats: { hp: 90, atk: 92, def: 87, spa: 75, spd: 85, spe: 76 },
-		abilities: { 0: "Poison Point", 1: "Rivalry", H: "Sheer Force" },
+		baseStats: {hp: 90, atk: 92, def: 87, spa: 75, spd: 85, spe: 76},
+		abilities: {0: "Poison Point", 1: "Rivalry", H: "Sheer Force"},
 		heightm: 1.3,
 		weightkg: 60,
 		color: "Blue",
@@ -928,8 +928,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Nidoran-M",
 		types: ["Poison"],
 		gender: "M",
-		baseStats: { hp: 46, atk: 57, def: 40, spa: 40, spd: 40, spe: 50 },
-		abilities: { 0: "Poison Point", 1: "Rivalry", H: "Hustle" },
+		baseStats: {hp: 46, atk: 57, def: 40, spa: 40, spd: 40, spe: 50},
+		abilities: {0: "Poison Point", 1: "Rivalry", H: "Hustle"},
 		heightm: 0.5,
 		weightkg: 9,
 		color: "Purple",
@@ -941,8 +941,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Nidorino",
 		types: ["Poison"],
 		gender: "M",
-		baseStats: { hp: 61, atk: 72, def: 57, spa: 55, spd: 55, spe: 65 },
-		abilities: { 0: "Poison Point", 1: "Rivalry", H: "Hustle" },
+		baseStats: {hp: 61, atk: 72, def: 57, spa: 55, spd: 55, spe: 65},
+		abilities: {0: "Poison Point", 1: "Rivalry", H: "Hustle"},
 		heightm: 0.9,
 		weightkg: 19.5,
 		color: "Purple",
@@ -956,8 +956,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Nidoking",
 		types: ["Poison", "Ground"],
 		gender: "M",
-		baseStats: { hp: 81, atk: 102, def: 77, spa: 85, spd: 75, spe: 85 },
-		abilities: { 0: "Poison Point", 1: "Rivalry", H: "Sheer Force" },
+		baseStats: {hp: 81, atk: 102, def: 77, spa: 85, spd: 75, spe: 85},
+		abilities: {0: "Poison Point", 1: "Rivalry", H: "Sheer Force"},
 		heightm: 1.4,
 		weightkg: 62,
 		color: "Purple",
@@ -970,9 +970,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 35,
 		name: "Clefairy",
 		types: ["Fairy"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 70, atk: 45, def: 48, spa: 60, spd: 65, spe: 35 },
-		abilities: { 0: "Cute Charm", 1: "Magic Guard", H: "Friend Guard" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 70, atk: 45, def: 48, spa: 60, spd: 65, spe: 35},
+		abilities: {0: "Cute Charm", 1: "Magic Guard", H: "Friend Guard"},
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
@@ -985,9 +985,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 36,
 		name: "Clefable",
 		types: ["Fairy"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 95, atk: 70, def: 73, spa: 95, spd: 90, spe: 60 },
-		abilities: { 0: "Cute Charm", 1: "Magic Guard", H: "Unaware" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 95, atk: 70, def: 73, spa: 95, spd: 90, spe: 60},
+		abilities: {0: "Cute Charm", 1: "Magic Guard", H: "Unaware"},
 		heightm: 1.3,
 		weightkg: 40,
 		color: "Pink",
@@ -1000,9 +1000,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 37,
 		name: "Vulpix",
 		types: ["Fire"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 38, atk: 41, def: 40, spa: 50, spd: 65, spe: 65 },
-		abilities: { 0: "Flash Fire", H: "Drought" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 38, atk: 41, def: 40, spa: 50, spd: 65, spe: 65},
+		abilities: {0: "Flash Fire", H: "Drought"},
 		heightm: 0.6,
 		weightkg: 9.9,
 		color: "Brown",
@@ -1017,9 +1017,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Vulpix",
 		forme: "Alola",
 		types: ["Ice"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 38, atk: 41, def: 40, spa: 50, spd: 65, spe: 65 },
-		abilities: { 0: "Snow Cloak", H: "Snow Warning" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 38, atk: 41, def: 40, spa: 50, spd: 65, spe: 65},
+		abilities: {0: "Snow Cloak", H: "Snow Warning"},
 		heightm: 0.6,
 		weightkg: 9.9,
 		color: "White",
@@ -1030,9 +1030,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 38,
 		name: "Ninetales",
 		types: ["Fire"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 73, atk: 76, def: 75, spa: 81, spd: 100, spe: 100 },
-		abilities: { 0: "Flash Fire", H: "Drought" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 73, atk: 76, def: 75, spa: 81, spd: 100, spe: 100},
+		abilities: {0: "Flash Fire", H: "Drought"},
 		heightm: 1.1,
 		weightkg: 19.9,
 		color: "Yellow",
@@ -1049,9 +1049,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Ninetales",
 		forme: "Alola",
 		types: ["Ice", "Fairy"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 73, atk: 67, def: 75, spa: 81, spd: 100, spe: 109 },
-		abilities: { 0: "Snow Cloak", H: "Snow Warning" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 73, atk: 67, def: 75, spa: 81, spd: 100, spe: 109},
+		abilities: {0: "Snow Cloak", H: "Snow Warning"},
 		heightm: 1.1,
 		weightkg: 19.9,
 		color: "Blue",
@@ -1064,9 +1064,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 39,
 		name: "Jigglypuff",
 		types: ["Normal", "Fairy"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 115, atk: 45, def: 20, spa: 45, spd: 25, spe: 20 },
-		abilities: { 0: "Cute Charm", 1: "Competitive", H: "Friend Guard" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 115, atk: 45, def: 20, spa: 45, spd: 25, spe: 20},
+		abilities: {0: "Cute Charm", 1: "Competitive", H: "Friend Guard"},
 		heightm: 0.5,
 		weightkg: 5.5,
 		color: "Pink",
@@ -1079,9 +1079,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 40,
 		name: "Wigglytuff",
 		types: ["Normal", "Fairy"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 140, atk: 70, def: 45, spa: 85, spd: 50, spe: 45 },
-		abilities: { 0: "Cute Charm", 1: "Competitive", H: "Frisk" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 140, atk: 70, def: 45, spa: 85, spd: 50, spe: 45},
+		abilities: {0: "Cute Charm", 1: "Competitive", H: "Frisk"},
 		heightm: 1,
 		weightkg: 12,
 		color: "Pink",
@@ -1094,8 +1094,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 41,
 		name: "Zubat",
 		types: ["Poison", "Flying"],
-		baseStats: { hp: 40, atk: 45, def: 35, spa: 30, spd: 40, spe: 55 },
-		abilities: { 0: "Inner Focus", H: "Infiltrator" },
+		baseStats: {hp: 40, atk: 45, def: 35, spa: 30, spd: 40, spe: 55},
+		abilities: {0: "Inner Focus", H: "Infiltrator"},
 		heightm: 0.8,
 		weightkg: 7.5,
 		color: "Purple",
@@ -1106,8 +1106,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 42,
 		name: "Golbat",
 		types: ["Poison", "Flying"],
-		baseStats: { hp: 75, atk: 80, def: 70, spa: 65, spd: 75, spe: 90 },
-		abilities: { 0: "Inner Focus", H: "Infiltrator" },
+		baseStats: {hp: 75, atk: 80, def: 70, spa: 65, spd: 75, spe: 90},
+		abilities: {0: "Inner Focus", H: "Infiltrator"},
 		heightm: 1.6,
 		weightkg: 55,
 		color: "Purple",
@@ -1120,8 +1120,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 43,
 		name: "Oddish",
 		types: ["Grass", "Poison"],
-		baseStats: { hp: 45, atk: 50, def: 55, spa: 75, spd: 65, spe: 30 },
-		abilities: { 0: "Chlorophyll", H: "Run Away" },
+		baseStats: {hp: 45, atk: 50, def: 55, spa: 75, spd: 65, spe: 30},
+		abilities: {0: "Chlorophyll", H: "Run Away"},
 		heightm: 0.5,
 		weightkg: 5.4,
 		color: "Blue",
@@ -1132,8 +1132,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 44,
 		name: "Gloom",
 		types: ["Grass", "Poison"],
-		baseStats: { hp: 60, atk: 65, def: 70, spa: 85, spd: 75, spe: 40 },
-		abilities: { 0: "Chlorophyll", H: "Stench" },
+		baseStats: {hp: 60, atk: 65, def: 70, spa: 85, spd: 75, spe: 40},
+		abilities: {0: "Chlorophyll", H: "Stench"},
 		heightm: 0.8,
 		weightkg: 8.6,
 		color: "Blue",
@@ -1146,8 +1146,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 45,
 		name: "Vileplume",
 		types: ["Grass", "Poison"],
-		baseStats: { hp: 75, atk: 80, def: 85, spa: 110, spd: 90, spe: 50 },
-		abilities: { 0: "Chlorophyll", H: "Effect Spore" },
+		baseStats: {hp: 75, atk: 80, def: 85, spa: 110, spd: 90, spe: 50},
+		abilities: {0: "Chlorophyll", H: "Effect Spore"},
 		heightm: 1.2,
 		weightkg: 18.6,
 		color: "Red",
@@ -1160,8 +1160,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 46,
 		name: "Paras",
 		types: ["Bug", "Grass"],
-		baseStats: { hp: 35, atk: 70, def: 55, spa: 45, spd: 55, spe: 25 },
-		abilities: { 0: "Effect Spore", 1: "Dry Skin", H: "Damp" },
+		baseStats: {hp: 35, atk: 70, def: 55, spa: 45, spd: 55, spe: 25},
+		abilities: {0: "Effect Spore", 1: "Dry Skin", H: "Damp"},
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
@@ -1172,8 +1172,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 47,
 		name: "Parasect",
 		types: ["Bug", "Grass"],
-		baseStats: { hp: 60, atk: 95, def: 80, spa: 60, spd: 80, spe: 30 },
-		abilities: { 0: "Effect Spore", 1: "Dry Skin", H: "Damp" },
+		baseStats: {hp: 60, atk: 95, def: 80, spa: 60, spd: 80, spe: 30},
+		abilities: {0: "Effect Spore", 1: "Dry Skin", H: "Damp"},
 		heightm: 1,
 		weightkg: 29.5,
 		color: "Red",
@@ -1185,8 +1185,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 48,
 		name: "Venonat",
 		types: ["Bug", "Poison"],
-		baseStats: { hp: 60, atk: 55, def: 50, spa: 40, spd: 55, spe: 45 },
-		abilities: { 0: "Compound Eyes", 1: "Tinted Lens", H: "Run Away" },
+		baseStats: {hp: 60, atk: 55, def: 50, spa: 40, spd: 55, spe: 45},
+		abilities: {0: "Compound Eyes", 1: "Tinted Lens", H: "Run Away"},
 		heightm: 1,
 		weightkg: 30,
 		color: "Purple",
@@ -1197,8 +1197,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 49,
 		name: "Venomoth",
 		types: ["Bug", "Poison"],
-		baseStats: { hp: 70, atk: 65, def: 60, spa: 90, spd: 75, spe: 90 },
-		abilities: { 0: "Shield Dust", 1: "Tinted Lens", H: "Wonder Skin" },
+		baseStats: {hp: 70, atk: 65, def: 60, spa: 90, spd: 75, spe: 90},
+		abilities: {0: "Shield Dust", 1: "Tinted Lens", H: "Wonder Skin"},
 		heightm: 1.5,
 		weightkg: 12.5,
 		color: "Purple",
@@ -1210,8 +1210,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 50,
 		name: "Diglett",
 		types: ["Ground"],
-		baseStats: { hp: 10, atk: 55, def: 25, spa: 35, spd: 45, spe: 95 },
-		abilities: { 0: "Sand Veil", 1: "Arena Trap", H: "Sand Force" },
+		baseStats: {hp: 10, atk: 55, def: 25, spa: 35, spd: 45, spe: 95},
+		abilities: {0: "Sand Veil", 1: "Arena Trap", H: "Sand Force"},
 		heightm: 0.2,
 		weightkg: 0.8,
 		color: "Brown",
@@ -1226,8 +1226,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Diglett",
 		forme: "Alola",
 		types: ["Ground", "Steel"],
-		baseStats: { hp: 10, atk: 55, def: 30, spa: 35, spd: 45, spe: 90 },
-		abilities: { 0: "Sand Veil", 1: "Tangling Hair", H: "Sand Force" },
+		baseStats: {hp: 10, atk: 55, def: 30, spa: 35, spd: 45, spe: 90},
+		abilities: {0: "Sand Veil", 1: "Tangling Hair", H: "Sand Force"},
 		heightm: 0.2,
 		weightkg: 1,
 		color: "Brown",
@@ -1238,8 +1238,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 51,
 		name: "Dugtrio",
 		types: ["Ground"],
-		baseStats: { hp: 35, atk: 100, def: 50, spa: 50, spd: 70, spe: 120 },
-		abilities: { 0: "Sand Veil", 1: "Arena Trap", H: "Sand Force" },
+		baseStats: {hp: 35, atk: 100, def: 50, spa: 50, spd: 70, spe: 120},
+		abilities: {0: "Sand Veil", 1: "Arena Trap", H: "Sand Force"},
 		heightm: 0.7,
 		weightkg: 33.3,
 		color: "Brown",
@@ -1255,8 +1255,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Dugtrio",
 		forme: "Alola",
 		types: ["Ground", "Steel"],
-		baseStats: { hp: 35, atk: 100, def: 60, spa: 50, spd: 70, spe: 110 },
-		abilities: { 0: "Sand Veil", 1: "Tangling Hair", H: "Sand Force" },
+		baseStats: {hp: 35, atk: 100, def: 60, spa: 50, spd: 70, spe: 110},
+		abilities: {0: "Sand Veil", 1: "Tangling Hair", H: "Sand Force"},
 		heightm: 0.7,
 		weightkg: 66.6,
 		color: "Brown",
@@ -1268,8 +1268,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 52,
 		name: "Meowth",
 		types: ["Normal"],
-		baseStats: { hp: 40, atk: 45, def: 35, spa: 40, spd: 40, spe: 90 },
-		abilities: { 0: "Pickup", 1: "Technician", H: "Unnerve" },
+		baseStats: {hp: 40, atk: 45, def: 35, spa: 40, spd: 40, spe: 90},
+		abilities: {0: "Pickup", 1: "Technician", H: "Unnerve"},
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Yellow",
@@ -1285,8 +1285,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Meowth",
 		forme: "Alola",
 		types: ["Dark"],
-		baseStats: { hp: 40, atk: 35, def: 35, spa: 50, spd: 40, spe: 90 },
-		abilities: { 0: "Pickup", 1: "Technician", H: "Rattled" },
+		baseStats: {hp: 40, atk: 35, def: 35, spa: 50, spd: 40, spe: 90},
+		abilities: {0: "Pickup", 1: "Technician", H: "Rattled"},
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Blue",
@@ -1299,8 +1299,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Meowth",
 		forme: "Galar",
 		types: ["Steel"],
-		baseStats: { hp: 50, atk: 65, def: 55, spa: 40, spd: 40, spe: 40 },
-		abilities: { 0: "Pickup", 1: "Tough Claws", H: "Unnerve" },
+		baseStats: {hp: 50, atk: 65, def: 55, spa: 40, spd: 40, spe: 40},
+		abilities: {0: "Pickup", 1: "Tough Claws", H: "Unnerve"},
 		heightm: 0.4,
 		weightkg: 7.5,
 		color: "Brown",
@@ -1313,8 +1313,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Meowth",
 		forme: "Gmax",
 		types: ["Normal"],
-		baseStats: { hp: 40, atk: 45, def: 35, spa: 40, spd: 40, spe: 90 },
-		abilities: { 0: "Pickup", 1: "Technician", H: "Unnerve" },
+		baseStats: {hp: 40, atk: 45, def: 35, spa: 40, spd: 40, spe: 90},
+		abilities: {0: "Pickup", 1: "Technician", H: "Unnerve"},
 		heightm: 33,
 		weightkg: 0,
 		color: "Yellow",
@@ -1325,8 +1325,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 53,
 		name: "Persian",
 		types: ["Normal"],
-		baseStats: { hp: 65, atk: 70, def: 60, spa: 65, spd: 65, spe: 115 },
-		abilities: { 0: "Limber", 1: "Technician", H: "Unnerve" },
+		baseStats: {hp: 65, atk: 70, def: 60, spa: 65, spd: 65, spe: 115},
+		abilities: {0: "Limber", 1: "Technician", H: "Unnerve"},
 		heightm: 1,
 		weightkg: 32,
 		color: "Yellow",
@@ -1342,8 +1342,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Persian",
 		forme: "Alola",
 		types: ["Dark"],
-		baseStats: { hp: 65, atk: 60, def: 60, spa: 75, spd: 65, spe: 115 },
-		abilities: { 0: "Fur Coat", 1: "Technician", H: "Rattled" },
+		baseStats: {hp: 65, atk: 60, def: 60, spa: 75, spd: 65, spe: 115},
+		abilities: {0: "Fur Coat", 1: "Technician", H: "Rattled"},
 		heightm: 1.1,
 		weightkg: 33,
 		color: "Blue",
@@ -1355,8 +1355,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 54,
 		name: "Psyduck",
 		types: ["Water"],
-		baseStats: { hp: 50, atk: 52, def: 48, spa: 65, spd: 50, spe: 55 },
-		abilities: { 0: "Damp", 1: "Cloud Nine", H: "Swift Swim" },
+		baseStats: {hp: 50, atk: 52, def: 48, spa: 65, spd: 50, spe: 55},
+		abilities: {0: "Damp", 1: "Cloud Nine", H: "Swift Swim"},
 		heightm: 0.8,
 		weightkg: 19.6,
 		color: "Yellow",
@@ -1367,8 +1367,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 55,
 		name: "Golduck",
 		types: ["Water"],
-		baseStats: { hp: 80, atk: 82, def: 78, spa: 95, spd: 80, spe: 85 },
-		abilities: { 0: "Damp", 1: "Cloud Nine", H: "Swift Swim" },
+		baseStats: {hp: 80, atk: 82, def: 78, spa: 95, spd: 80, spe: 85},
+		abilities: {0: "Damp", 1: "Cloud Nine", H: "Swift Swim"},
 		heightm: 1.7,
 		weightkg: 76.6,
 		color: "Blue",
@@ -1380,8 +1380,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 56,
 		name: "Mankey",
 		types: ["Fighting"],
-		baseStats: { hp: 40, atk: 80, def: 35, spa: 35, spd: 45, spe: 70 },
-		abilities: { 0: "Vital Spirit", 1: "Anger Point", H: "Defiant" },
+		baseStats: {hp: 40, atk: 80, def: 35, spa: 35, spd: 45, spe: 70},
+		abilities: {0: "Vital Spirit", 1: "Anger Point", H: "Defiant"},
 		heightm: 0.5,
 		weightkg: 28,
 		color: "Brown",
@@ -1392,8 +1392,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 57,
 		name: "Primeape",
 		types: ["Fighting"],
-		baseStats: { hp: 65, atk: 105, def: 60, spa: 60, spd: 70, spe: 95 },
-		abilities: { 0: "Vital Spirit", 1: "Anger Point", H: "Defiant" },
+		baseStats: {hp: 65, atk: 105, def: 60, spa: 60, spd: 70, spe: 95},
+		abilities: {0: "Vital Spirit", 1: "Anger Point", H: "Defiant"},
 		heightm: 1,
 		weightkg: 32,
 		color: "Brown",
@@ -1405,9 +1405,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 58,
 		name: "Growlithe",
 		types: ["Fire"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 55, atk: 70, def: 45, spa: 70, spd: 50, spe: 60 },
-		abilities: { 0: "Intimidate", 1: "Flash Fire", H: "Justified" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 55, atk: 70, def: 45, spa: 70, spd: 50, spe: 60},
+		abilities: {0: "Intimidate", 1: "Flash Fire", H: "Justified"},
 		heightm: 0.7,
 		weightkg: 19,
 		color: "Brown",
@@ -1418,9 +1418,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 59,
 		name: "Arcanine",
 		types: ["Fire"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 90, atk: 110, def: 80, spa: 100, spd: 80, spe: 95 },
-		abilities: { 0: "Intimidate", 1: "Flash Fire", H: "Justified" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 90, atk: 110, def: 80, spa: 100, spd: 80, spe: 95},
+		abilities: {0: "Intimidate", 1: "Flash Fire", H: "Justified"},
 		heightm: 1.9,
 		weightkg: 155,
 		color: "Brown",
@@ -1433,8 +1433,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 60,
 		name: "Poliwag",
 		types: ["Water"],
-		baseStats: { hp: 40, atk: 50, def: 40, spa: 40, spd: 40, spe: 90 },
-		abilities: { 0: "Water Absorb", 1: "Damp", H: "Swift Swim" },
+		baseStats: {hp: 40, atk: 50, def: 40, spa: 40, spd: 40, spe: 90},
+		abilities: {0: "Water Absorb", 1: "Damp", H: "Swift Swim"},
 		heightm: 0.6,
 		weightkg: 12.4,
 		color: "Blue",
@@ -1445,8 +1445,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 61,
 		name: "Poliwhirl",
 		types: ["Water"],
-		baseStats: { hp: 65, atk: 65, def: 65, spa: 50, spd: 50, spe: 90 },
-		abilities: { 0: "Water Absorb", 1: "Damp", H: "Swift Swim" },
+		baseStats: {hp: 65, atk: 65, def: 65, spa: 50, spd: 50, spe: 90},
+		abilities: {0: "Water Absorb", 1: "Damp", H: "Swift Swim"},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -1459,8 +1459,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 62,
 		name: "Poliwrath",
 		types: ["Water", "Fighting"],
-		baseStats: { hp: 90, atk: 95, def: 95, spa: 70, spd: 90, spe: 70 },
-		abilities: { 0: "Water Absorb", 1: "Damp", H: "Swift Swim" },
+		baseStats: {hp: 90, atk: 95, def: 95, spa: 70, spd: 90, spe: 70},
+		abilities: {0: "Water Absorb", 1: "Damp", H: "Swift Swim"},
 		heightm: 1.3,
 		weightkg: 54,
 		color: "Blue",
@@ -1473,9 +1473,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 63,
 		name: "Abra",
 		types: ["Psychic"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 25, atk: 20, def: 15, spa: 105, spd: 55, spe: 90 },
-		abilities: { 0: "Synchronize", 1: "Inner Focus", H: "Magic Guard" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 25, atk: 20, def: 15, spa: 105, spd: 55, spe: 90},
+		abilities: {0: "Synchronize", 1: "Inner Focus", H: "Magic Guard"},
 		heightm: 0.9,
 		weightkg: 19.5,
 		color: "Brown",
@@ -1486,9 +1486,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 64,
 		name: "Kadabra",
 		types: ["Psychic"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 40, atk: 35, def: 30, spa: 120, spd: 70, spe: 105 },
-		abilities: { 0: "Synchronize", 1: "Inner Focus", H: "Magic Guard" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 40, atk: 35, def: 30, spa: 120, spd: 70, spe: 105},
+		abilities: {0: "Synchronize", 1: "Inner Focus", H: "Magic Guard"},
 		heightm: 1.3,
 		weightkg: 56.5,
 		color: "Brown",
@@ -1501,9 +1501,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 65,
 		name: "Alakazam",
 		types: ["Psychic"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 55, atk: 50, def: 45, spa: 135, spd: 95, spe: 120 },
-		abilities: { 0: "Synchronize", 1: "Inner Focus", H: "Magic Guard" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 55, atk: 50, def: 45, spa: 135, spd: 95, spe: 120},
+		abilities: {0: "Synchronize", 1: "Inner Focus", H: "Magic Guard"},
 		heightm: 1.5,
 		weightkg: 48,
 		color: "Brown",
@@ -1519,9 +1519,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Alakazam",
 		forme: "Mega",
 		types: ["Psychic"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 55, atk: 50, def: 65, spa: 175, spd: 105, spe: 150 },
-		abilities: { 0: "Trace" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 55, atk: 50, def: 65, spa: 175, spd: 105, spe: 150},
+		abilities: {0: "Trace"},
 		heightm: 1.2,
 		weightkg: 48,
 		color: "Brown",
@@ -1532,9 +1532,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 66,
 		name: "Machop",
 		types: ["Fighting"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 70, atk: 80, def: 50, spa: 35, spd: 35, spe: 35 },
-		abilities: { 0: "Guts", 1: "No Guard", H: "Steadfast" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 70, atk: 80, def: 50, spa: 35, spd: 35, spe: 35},
+		abilities: {0: "Guts", 1: "No Guard", H: "Steadfast"},
 		heightm: 0.8,
 		weightkg: 19.5,
 		color: "Gray",
@@ -1545,9 +1545,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 67,
 		name: "Machoke",
 		types: ["Fighting"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 80, atk: 100, def: 70, spa: 50, spd: 60, spe: 45 },
-		abilities: { 0: "Guts", 1: "No Guard", H: "Steadfast" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 80, atk: 100, def: 70, spa: 50, spd: 60, spe: 45},
+		abilities: {0: "Guts", 1: "No Guard", H: "Steadfast"},
 		heightm: 1.5,
 		weightkg: 70.5,
 		color: "Gray",
@@ -1560,9 +1560,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 68,
 		name: "Machamp",
 		types: ["Fighting"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 90, atk: 130, def: 80, spa: 65, spd: 85, spe: 55 },
-		abilities: { 0: "Guts", 1: "No Guard", H: "Steadfast" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 90, atk: 130, def: 80, spa: 65, spd: 85, spe: 55},
+		abilities: {0: "Guts", 1: "No Guard", H: "Steadfast"},
 		heightm: 1.6,
 		weightkg: 130,
 		color: "Gray",
@@ -1577,9 +1577,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Machamp",
 		forme: "Gmax",
 		types: ["Fighting"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 90, atk: 130, def: 80, spa: 65, spd: 85, spe: 55 },
-		abilities: { 0: "Guts", 1: "No Guard", H: "Steadfast" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 90, atk: 130, def: 80, spa: 65, spd: 85, spe: 55},
+		abilities: {0: "Guts", 1: "No Guard", H: "Steadfast"},
 		heightm: 25,
 		weightkg: 0,
 		color: "Gray",
@@ -1590,8 +1590,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 69,
 		name: "Bellsprout",
 		types: ["Grass", "Poison"],
-		baseStats: { hp: 50, atk: 75, def: 35, spa: 70, spd: 30, spe: 40 },
-		abilities: { 0: "Chlorophyll", H: "Gluttony" },
+		baseStats: {hp: 50, atk: 75, def: 35, spa: 70, spd: 30, spe: 40},
+		abilities: {0: "Chlorophyll", H: "Gluttony"},
 		heightm: 0.7,
 		weightkg: 4,
 		color: "Green",
@@ -1602,8 +1602,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 70,
 		name: "Weepinbell",
 		types: ["Grass", "Poison"],
-		baseStats: { hp: 65, atk: 90, def: 50, spa: 85, spd: 45, spe: 55 },
-		abilities: { 0: "Chlorophyll", H: "Gluttony" },
+		baseStats: {hp: 65, atk: 90, def: 50, spa: 85, spd: 45, spe: 55},
+		abilities: {0: "Chlorophyll", H: "Gluttony"},
 		heightm: 1,
 		weightkg: 6.4,
 		color: "Green",
@@ -1616,8 +1616,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 71,
 		name: "Victreebel",
 		types: ["Grass", "Poison"],
-		baseStats: { hp: 80, atk: 105, def: 65, spa: 100, spd: 70, spe: 70 },
-		abilities: { 0: "Chlorophyll", H: "Gluttony" },
+		baseStats: {hp: 80, atk: 105, def: 65, spa: 100, spd: 70, spe: 70},
+		abilities: {0: "Chlorophyll", H: "Gluttony"},
 		heightm: 1.7,
 		weightkg: 15.5,
 		color: "Green",
@@ -1630,8 +1630,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 72,
 		name: "Tentacool",
 		types: ["Water", "Poison"],
-		baseStats: { hp: 40, atk: 40, def: 35, spa: 50, spd: 100, spe: 70 },
-		abilities: { 0: "Clear Body", 1: "Liquid Ooze", H: "Rain Dish" },
+		baseStats: {hp: 40, atk: 40, def: 35, spa: 50, spd: 100, spe: 70},
+		abilities: {0: "Clear Body", 1: "Liquid Ooze", H: "Rain Dish"},
 		heightm: 0.9,
 		weightkg: 45.5,
 		color: "Blue",
@@ -1642,8 +1642,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 73,
 		name: "Tentacruel",
 		types: ["Water", "Poison"],
-		baseStats: { hp: 80, atk: 70, def: 65, spa: 80, spd: 120, spe: 100 },
-		abilities: { 0: "Clear Body", 1: "Liquid Ooze", H: "Rain Dish" },
+		baseStats: {hp: 80, atk: 70, def: 65, spa: 80, spd: 120, spe: 100},
+		abilities: {0: "Clear Body", 1: "Liquid Ooze", H: "Rain Dish"},
 		heightm: 1.6,
 		weightkg: 55,
 		color: "Blue",
@@ -1655,8 +1655,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 74,
 		name: "Geodude",
 		types: ["Rock", "Ground"],
-		baseStats: { hp: 40, atk: 80, def: 100, spa: 30, spd: 30, spe: 20 },
-		abilities: { 0: "Rock Head", 1: "Sturdy", H: "Sand Veil" },
+		baseStats: {hp: 40, atk: 80, def: 100, spa: 30, spd: 30, spe: 20},
+		abilities: {0: "Rock Head", 1: "Sturdy", H: "Sand Veil"},
 		heightm: 0.4,
 		weightkg: 20,
 		color: "Brown",
@@ -1671,8 +1671,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Geodude",
 		forme: "Alola",
 		types: ["Rock", "Electric"],
-		baseStats: { hp: 40, atk: 80, def: 100, spa: 30, spd: 30, spe: 20 },
-		abilities: { 0: "Magnet Pull", 1: "Sturdy", H: "Galvanize" },
+		baseStats: {hp: 40, atk: 80, def: 100, spa: 30, spd: 30, spe: 20},
+		abilities: {0: "Magnet Pull", 1: "Sturdy", H: "Galvanize"},
 		heightm: 0.4,
 		weightkg: 20.3,
 		color: "Gray",
@@ -1683,8 +1683,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 75,
 		name: "Graveler",
 		types: ["Rock", "Ground"],
-		baseStats: { hp: 55, atk: 95, def: 115, spa: 45, spd: 45, spe: 35 },
-		abilities: { 0: "Rock Head", 1: "Sturdy", H: "Sand Veil" },
+		baseStats: {hp: 55, atk: 95, def: 115, spa: 45, spd: 45, spe: 35},
+		abilities: {0: "Rock Head", 1: "Sturdy", H: "Sand Veil"},
 		heightm: 1,
 		weightkg: 105,
 		color: "Brown",
@@ -1701,8 +1701,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Graveler",
 		forme: "Alola",
 		types: ["Rock", "Electric"],
-		baseStats: { hp: 55, atk: 95, def: 115, spa: 45, spd: 45, spe: 35 },
-		abilities: { 0: "Magnet Pull", 1: "Sturdy", H: "Galvanize" },
+		baseStats: {hp: 55, atk: 95, def: 115, spa: 45, spd: 45, spe: 35},
+		abilities: {0: "Magnet Pull", 1: "Sturdy", H: "Galvanize"},
 		heightm: 1,
 		weightkg: 110,
 		color: "Gray",
@@ -1715,8 +1715,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 76,
 		name: "Golem",
 		types: ["Rock", "Ground"],
-		baseStats: { hp: 80, atk: 120, def: 130, spa: 55, spd: 65, spe: 45 },
-		abilities: { 0: "Rock Head", 1: "Sturdy", H: "Sand Veil" },
+		baseStats: {hp: 80, atk: 120, def: 130, spa: 55, spd: 65, spe: 45},
+		abilities: {0: "Rock Head", 1: "Sturdy", H: "Sand Veil"},
 		heightm: 1.4,
 		weightkg: 300,
 		color: "Brown",
@@ -1732,8 +1732,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Golem",
 		forme: "Alola",
 		types: ["Rock", "Electric"],
-		baseStats: { hp: 80, atk: 120, def: 130, spa: 55, spd: 65, spe: 45 },
-		abilities: { 0: "Magnet Pull", 1: "Sturdy", H: "Galvanize" },
+		baseStats: {hp: 80, atk: 120, def: 130, spa: 55, spd: 65, spe: 45},
+		abilities: {0: "Magnet Pull", 1: "Sturdy", H: "Galvanize"},
 		heightm: 1.7,
 		weightkg: 316,
 		color: "Gray",
@@ -1745,8 +1745,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 77,
 		name: "Ponyta",
 		types: ["Fire"],
-		baseStats: { hp: 50, atk: 85, def: 55, spa: 65, spd: 65, spe: 90 },
-		abilities: { 0: "Run Away", 1: "Flash Fire", H: "Flame Body" },
+		baseStats: {hp: 50, atk: 85, def: 55, spa: 65, spd: 65, spe: 90},
+		abilities: {0: "Run Away", 1: "Flash Fire", H: "Flame Body"},
 		heightm: 1,
 		weightkg: 30,
 		color: "Yellow",
@@ -1761,8 +1761,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Ponyta",
 		forme: "Galar",
 		types: ["Psychic"],
-		baseStats: { hp: 50, atk: 85, def: 55, spa: 65, spd: 65, spe: 90 },
-		abilities: { 0: "Run Away", 1: "Pastel Veil", H: "Anticipation" },
+		baseStats: {hp: 50, atk: 85, def: 55, spa: 65, spd: 65, spe: 90},
+		abilities: {0: "Run Away", 1: "Pastel Veil", H: "Anticipation"},
 		heightm: 0.8,
 		weightkg: 24,
 		color: "White",
@@ -1773,8 +1773,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 78,
 		name: "Rapidash",
 		types: ["Fire"],
-		baseStats: { hp: 65, atk: 100, def: 70, spa: 80, spd: 80, spe: 105 },
-		abilities: { 0: "Run Away", 1: "Flash Fire", H: "Flame Body" },
+		baseStats: {hp: 65, atk: 100, def: 70, spa: 80, spd: 80, spe: 105},
+		abilities: {0: "Run Away", 1: "Flash Fire", H: "Flame Body"},
 		heightm: 1.7,
 		weightkg: 95,
 		color: "Yellow",
@@ -1790,8 +1790,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Rapidash",
 		forme: "Galar",
 		types: ["Psychic", "Fairy"],
-		baseStats: { hp: 65, atk: 100, def: 70, spa: 80, spd: 80, spe: 105 },
-		abilities: { 0: "Run Away", 1: "Pastel Veil", H: "Anticipation" },
+		baseStats: {hp: 65, atk: 100, def: 70, spa: 80, spd: 80, spe: 105},
+		abilities: {0: "Run Away", 1: "Pastel Veil", H: "Anticipation"},
 		heightm: 1.7,
 		weightkg: 80,
 		color: "White",
@@ -1803,8 +1803,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 79,
 		name: "Slowpoke",
 		types: ["Water", "Psychic"],
-		baseStats: { hp: 90, atk: 65, def: 65, spa: 40, spd: 40, spe: 15 },
-		abilities: { 0: "Oblivious", 1: "Own Tempo", H: "Regenerator" },
+		baseStats: {hp: 90, atk: 65, def: 65, spa: 40, spd: 40, spe: 15},
+		abilities: {0: "Oblivious", 1: "Own Tempo", H: "Regenerator"},
 		heightm: 1.2,
 		weightkg: 36,
 		color: "Pink",
@@ -1819,8 +1819,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Slowpoke",
 		forme: "Galar",
 		types: ["Psychic"],
-		baseStats: { hp: 90, atk: 65, def: 65, spa: 40, spd: 40, spe: 15 },
-		abilities: { 0: "Gluttony", 1: "Own Tempo", H: "Regenerator" },
+		baseStats: {hp: 90, atk: 65, def: 65, spa: 40, spd: 40, spe: 15},
+		abilities: {0: "Gluttony", 1: "Own Tempo", H: "Regenerator"},
 		heightm: 1.2,
 		weightkg: 36,
 		color: "Pink",
@@ -1831,8 +1831,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 80,
 		name: "Slowbro",
 		types: ["Water", "Psychic"],
-		baseStats: { hp: 95, atk: 75, def: 110, spa: 100, spd: 80, spe: 30 },
-		abilities: { 0: "Oblivious", 1: "Own Tempo", H: "Regenerator" },
+		baseStats: {hp: 95, atk: 75, def: 110, spa: 100, spd: 80, spe: 30},
+		abilities: {0: "Oblivious", 1: "Own Tempo", H: "Regenerator"},
 		heightm: 1.6,
 		weightkg: 78.5,
 		color: "Pink",
@@ -1848,8 +1848,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Slowbro",
 		forme: "Mega",
 		types: ["Water", "Psychic"],
-		baseStats: { hp: 95, atk: 75, def: 180, spa: 130, spd: 80, spe: 30 },
-		abilities: { 0: "Shell Armor" },
+		baseStats: {hp: 95, atk: 75, def: 180, spa: 130, spd: 80, spe: 30},
+		abilities: {0: "Shell Armor"},
 		heightm: 2,
 		weightkg: 120,
 		color: "Pink",
@@ -1862,8 +1862,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Slowbro",
 		forme: "Galar",
 		types: ["Poison", "Psychic"],
-		baseStats: { hp: 95, atk: 100, def: 95, spa: 100, spd: 70, spe: 30 },
-		abilities: { 0: "Quick Draw", 1: "Own Tempo", H: "Regenerator" },
+		baseStats: {hp: 95, atk: 100, def: 95, spa: 100, spd: 70, spe: 30},
+		abilities: {0: "Quick Draw", 1: "Own Tempo", H: "Regenerator"},
 		heightm: 1.6,
 		weightkg: 70.5,
 		color: "Pink",
@@ -1877,8 +1877,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Magnemite",
 		types: ["Electric", "Steel"],
 		gender: "N",
-		baseStats: { hp: 25, atk: 35, def: 70, spa: 95, spd: 55, spe: 45 },
-		abilities: { 0: "Magnet Pull", 1: "Sturdy", H: "Analytic" },
+		baseStats: {hp: 25, atk: 35, def: 70, spa: 95, spd: 55, spe: 45},
+		abilities: {0: "Magnet Pull", 1: "Sturdy", H: "Analytic"},
 		heightm: 0.3,
 		weightkg: 6,
 		color: "Gray",
@@ -1890,8 +1890,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Magneton",
 		types: ["Electric", "Steel"],
 		gender: "N",
-		baseStats: { hp: 50, atk: 60, def: 95, spa: 120, spd: 70, spe: 70 },
-		abilities: { 0: "Magnet Pull", 1: "Sturdy", H: "Analytic" },
+		baseStats: {hp: 50, atk: 60, def: 95, spa: 120, spd: 70, spe: 70},
+		abilities: {0: "Magnet Pull", 1: "Sturdy", H: "Analytic"},
 		heightm: 1,
 		weightkg: 60,
 		color: "Gray",
@@ -1904,8 +1904,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 83,
 		name: "Farfetch\u2019d",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 52, atk: 90, def: 55, spa: 58, spd: 62, spe: 60 },
-		abilities: { 0: "Keen Eye", 1: "Inner Focus", H: "Defiant" },
+		baseStats: {hp: 52, atk: 90, def: 55, spa: 58, spd: 62, spe: 60},
+		abilities: {0: "Keen Eye", 1: "Inner Focus", H: "Defiant"},
 		heightm: 0.8,
 		weightkg: 15,
 		color: "Brown",
@@ -1919,8 +1919,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Farfetch\u2019d",
 		forme: "Galar",
 		types: ["Fighting"],
-		baseStats: { hp: 52, atk: 95, def: 55, spa: 58, spd: 62, spe: 55 },
-		abilities: { 0: "Steadfast", H: "Scrappy" },
+		baseStats: {hp: 52, atk: 95, def: 55, spa: 58, spd: 62, spe: 55},
+		abilities: {0: "Steadfast", H: "Scrappy"},
 		heightm: 0.8,
 		weightkg: 15,
 		color: "Brown",
@@ -1931,8 +1931,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 84,
 		name: "Doduo",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 35, atk: 85, def: 45, spa: 35, spd: 35, spe: 75 },
-		abilities: { 0: "Run Away", 1: "Early Bird", H: "Tangled Feet" },
+		baseStats: {hp: 35, atk: 85, def: 45, spa: 35, spd: 35, spe: 75},
+		abilities: {0: "Run Away", 1: "Early Bird", H: "Tangled Feet"},
 		heightm: 1.4,
 		weightkg: 39.2,
 		color: "Brown",
@@ -1943,8 +1943,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 85,
 		name: "Dodrio",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 60, atk: 110, def: 70, spa: 60, spd: 60, spe: 110 },
-		abilities: { 0: "Run Away", 1: "Early Bird", H: "Tangled Feet" },
+		baseStats: {hp: 60, atk: 110, def: 70, spa: 60, spd: 60, spe: 110},
+		abilities: {0: "Run Away", 1: "Early Bird", H: "Tangled Feet"},
 		heightm: 1.8,
 		weightkg: 85.2,
 		color: "Brown",
@@ -1956,8 +1956,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 86,
 		name: "Seel",
 		types: ["Water"],
-		baseStats: { hp: 65, atk: 45, def: 55, spa: 45, spd: 70, spe: 45 },
-		abilities: { 0: "Thick Fat", 1: "Hydration", H: "Ice Body" },
+		baseStats: {hp: 65, atk: 45, def: 55, spa: 45, spd: 70, spe: 45},
+		abilities: {0: "Thick Fat", 1: "Hydration", H: "Ice Body"},
 		heightm: 1.1,
 		weightkg: 90,
 		color: "White",
@@ -1968,8 +1968,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 87,
 		name: "Dewgong",
 		types: ["Water", "Ice"],
-		baseStats: { hp: 90, atk: 70, def: 80, spa: 70, spd: 95, spe: 70 },
-		abilities: { 0: "Thick Fat", 1: "Hydration", H: "Ice Body" },
+		baseStats: {hp: 90, atk: 70, def: 80, spa: 70, spd: 95, spe: 70},
+		abilities: {0: "Thick Fat", 1: "Hydration", H: "Ice Body"},
 		heightm: 1.7,
 		weightkg: 120,
 		color: "White",
@@ -1981,8 +1981,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 88,
 		name: "Grimer",
 		types: ["Poison"],
-		baseStats: { hp: 80, atk: 80, def: 50, spa: 40, spd: 50, spe: 25 },
-		abilities: { 0: "Stench", 1: "Sticky Hold", H: "Poison Touch" },
+		baseStats: {hp: 80, atk: 80, def: 50, spa: 40, spd: 50, spe: 25},
+		abilities: {0: "Stench", 1: "Sticky Hold", H: "Poison Touch"},
 		heightm: 0.9,
 		weightkg: 30,
 		color: "Purple",
@@ -1997,8 +1997,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Grimer",
 		forme: "Alola",
 		types: ["Poison", "Dark"],
-		baseStats: { hp: 80, atk: 80, def: 50, spa: 40, spd: 50, spe: 25 },
-		abilities: { 0: "Poison Touch", 1: "Gluttony", H: "Power of Alchemy" },
+		baseStats: {hp: 80, atk: 80, def: 50, spa: 40, spd: 50, spe: 25},
+		abilities: {0: "Poison Touch", 1: "Gluttony", H: "Power of Alchemy"},
 		heightm: 0.7,
 		weightkg: 42,
 		color: "Green",
@@ -2009,8 +2009,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 89,
 		name: "Muk",
 		types: ["Poison"],
-		baseStats: { hp: 105, atk: 105, def: 75, spa: 65, spd: 100, spe: 50 },
-		abilities: { 0: "Stench", 1: "Sticky Hold", H: "Poison Touch" },
+		baseStats: {hp: 105, atk: 105, def: 75, spa: 65, spd: 100, spe: 50},
+		abilities: {0: "Stench", 1: "Sticky Hold", H: "Poison Touch"},
 		heightm: 1.2,
 		weightkg: 30,
 		color: "Purple",
@@ -2026,8 +2026,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Muk",
 		forme: "Alola",
 		types: ["Poison", "Dark"],
-		baseStats: { hp: 105, atk: 105, def: 75, spa: 65, spd: 100, spe: 50 },
-		abilities: { 0: "Poison Touch", 1: "Gluttony", H: "Power of Alchemy" },
+		baseStats: {hp: 105, atk: 105, def: 75, spa: 65, spd: 100, spe: 50},
+		abilities: {0: "Poison Touch", 1: "Gluttony", H: "Power of Alchemy"},
 		heightm: 1,
 		weightkg: 52,
 		color: "Green",
@@ -2039,8 +2039,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 90,
 		name: "Shellder",
 		types: ["Water"],
-		baseStats: { hp: 30, atk: 65, def: 100, spa: 45, spd: 25, spe: 40 },
-		abilities: { 0: "Shell Armor", 1: "Skill Link", H: "Overcoat" },
+		baseStats: {hp: 30, atk: 65, def: 100, spa: 45, spd: 25, spe: 40},
+		abilities: {0: "Shell Armor", 1: "Skill Link", H: "Overcoat"},
 		heightm: 0.3,
 		weightkg: 4,
 		color: "Purple",
@@ -2051,8 +2051,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 91,
 		name: "Cloyster",
 		types: ["Water", "Ice"],
-		baseStats: { hp: 50, atk: 95, def: 180, spa: 85, spd: 45, spe: 70 },
-		abilities: { 0: "Shell Armor", 1: "Skill Link", H: "Overcoat" },
+		baseStats: {hp: 50, atk: 95, def: 180, spa: 85, spd: 45, spe: 70},
+		abilities: {0: "Shell Armor", 1: "Skill Link", H: "Overcoat"},
 		heightm: 1.5,
 		weightkg: 132.5,
 		color: "Purple",
@@ -2065,8 +2065,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 92,
 		name: "Gastly",
 		types: ["Ghost", "Poison"],
-		baseStats: { hp: 30, atk: 35, def: 30, spa: 100, spd: 35, spe: 80 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 30, atk: 35, def: 30, spa: 100, spd: 35, spe: 80},
+		abilities: {0: "Levitate"},
 		heightm: 1.3,
 		weightkg: 0.1,
 		color: "Purple",
@@ -2077,8 +2077,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 93,
 		name: "Haunter",
 		types: ["Ghost", "Poison"],
-		baseStats: { hp: 45, atk: 50, def: 45, spa: 115, spd: 55, spe: 95 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 45, atk: 50, def: 45, spa: 115, spd: 55, spe: 95},
+		abilities: {0: "Levitate"},
 		heightm: 1.6,
 		weightkg: 0.1,
 		color: "Purple",
@@ -2091,8 +2091,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 94,
 		name: "Gengar",
 		types: ["Ghost", "Poison"],
-		baseStats: { hp: 60, atk: 65, def: 60, spa: 130, spd: 75, spe: 110 },
-		abilities: { 0: "Cursed Body" },
+		baseStats: {hp: 60, atk: 65, def: 60, spa: 130, spd: 75, spe: 110},
+		abilities: {0: "Cursed Body"},
 		heightm: 1.5,
 		weightkg: 40.5,
 		color: "Purple",
@@ -2109,8 +2109,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Gengar",
 		forme: "Mega",
 		types: ["Ghost", "Poison"],
-		baseStats: { hp: 60, atk: 65, def: 80, spa: 170, spd: 95, spe: 130 },
-		abilities: { 0: "Shadow Tag" },
+		baseStats: {hp: 60, atk: 65, def: 80, spa: 170, spd: 95, spe: 130},
+		abilities: {0: "Shadow Tag"},
 		heightm: 1.4,
 		weightkg: 40.5,
 		color: "Purple",
@@ -2123,8 +2123,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Gengar",
 		forme: "Gmax",
 		types: ["Ghost", "Poison"],
-		baseStats: { hp: 60, atk: 65, def: 60, spa: 130, spd: 75, spe: 110 },
-		abilities: { 0: "Cursed Body" },
+		baseStats: {hp: 60, atk: 65, def: 60, spa: 130, spd: 75, spe: 110},
+		abilities: {0: "Cursed Body"},
 		heightm: 20,
 		weightkg: 0,
 		color: "Purple",
@@ -2135,8 +2135,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 95,
 		name: "Onix",
 		types: ["Rock", "Ground"],
-		baseStats: { hp: 35, atk: 45, def: 160, spa: 30, spd: 45, spe: 70 },
-		abilities: { 0: "Rock Head", 1: "Sturdy", H: "Weak Armor" },
+		baseStats: {hp: 35, atk: 45, def: 160, spa: 30, spd: 45, spe: 70},
+		abilities: {0: "Rock Head", 1: "Sturdy", H: "Weak Armor"},
 		heightm: 8.8,
 		weightkg: 210,
 		color: "Gray",
@@ -2147,8 +2147,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 96,
 		name: "Drowzee",
 		types: ["Psychic"],
-		baseStats: { hp: 60, atk: 48, def: 45, spa: 43, spd: 90, spe: 42 },
-		abilities: { 0: "Insomnia", 1: "Forewarn", H: "Inner Focus" },
+		baseStats: {hp: 60, atk: 48, def: 45, spa: 43, spd: 90, spe: 42},
+		abilities: {0: "Insomnia", 1: "Forewarn", H: "Inner Focus"},
 		heightm: 1,
 		weightkg: 32.4,
 		color: "Yellow",
@@ -2159,8 +2159,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 97,
 		name: "Hypno",
 		types: ["Psychic"],
-		baseStats: { hp: 85, atk: 73, def: 70, spa: 73, spd: 115, spe: 67 },
-		abilities: { 0: "Insomnia", 1: "Forewarn", H: "Inner Focus" },
+		baseStats: {hp: 85, atk: 73, def: 70, spa: 73, spd: 115, spe: 67},
+		abilities: {0: "Insomnia", 1: "Forewarn", H: "Inner Focus"},
 		heightm: 1.6,
 		weightkg: 75.6,
 		color: "Yellow",
@@ -2172,8 +2172,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 98,
 		name: "Krabby",
 		types: ["Water"],
-		baseStats: { hp: 30, atk: 105, def: 90, spa: 25, spd: 25, spe: 50 },
-		abilities: { 0: "Hyper Cutter", 1: "Shell Armor", H: "Sheer Force" },
+		baseStats: {hp: 30, atk: 105, def: 90, spa: 25, spd: 25, spe: 50},
+		abilities: {0: "Hyper Cutter", 1: "Shell Armor", H: "Sheer Force"},
 		heightm: 0.4,
 		weightkg: 6.5,
 		color: "Red",
@@ -2184,8 +2184,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 99,
 		name: "Kingler",
 		types: ["Water"],
-		baseStats: { hp: 55, atk: 130, def: 115, spa: 50, spd: 50, spe: 75 },
-		abilities: { 0: "Hyper Cutter", 1: "Shell Armor", H: "Sheer Force" },
+		baseStats: {hp: 55, atk: 130, def: 115, spa: 50, spd: 50, spe: 75},
+		abilities: {0: "Hyper Cutter", 1: "Shell Armor", H: "Sheer Force"},
 		heightm: 1.3,
 		weightkg: 60,
 		color: "Red",
@@ -2200,8 +2200,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Kingler",
 		forme: "Gmax",
 		types: ["Water"],
-		baseStats: { hp: 55, atk: 130, def: 115, spa: 50, spd: 50, spe: 75 },
-		abilities: { 0: "Hyper Cutter", 1: "Shell Armor", H: "Sheer Force" },
+		baseStats: {hp: 55, atk: 130, def: 115, spa: 50, spd: 50, spe: 75},
+		abilities: {0: "Hyper Cutter", 1: "Shell Armor", H: "Sheer Force"},
 		heightm: 19,
 		weightkg: 0,
 		color: "Red",
@@ -2213,8 +2213,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Voltorb",
 		types: ["Electric"],
 		gender: "N",
-		baseStats: { hp: 40, atk: 30, def: 50, spa: 55, spd: 55, spe: 100 },
-		abilities: { 0: "Soundproof", 1: "Static", H: "Aftermath" },
+		baseStats: {hp: 40, atk: 30, def: 50, spa: 55, spd: 55, spe: 100},
+		abilities: {0: "Soundproof", 1: "Static", H: "Aftermath"},
 		heightm: 0.5,
 		weightkg: 10.4,
 		color: "Red",
@@ -2226,8 +2226,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Electrode",
 		types: ["Electric"],
 		gender: "N",
-		baseStats: { hp: 60, atk: 50, def: 70, spa: 80, spd: 80, spe: 150 },
-		abilities: { 0: "Soundproof", 1: "Static", H: "Aftermath" },
+		baseStats: {hp: 60, atk: 50, def: 70, spa: 80, spd: 80, spe: 150},
+		abilities: {0: "Soundproof", 1: "Static", H: "Aftermath"},
 		heightm: 1.2,
 		weightkg: 66.6,
 		color: "Red",
@@ -2239,8 +2239,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 102,
 		name: "Exeggcute",
 		types: ["Grass", "Psychic"],
-		baseStats: { hp: 60, atk: 40, def: 80, spa: 60, spd: 45, spe: 40 },
-		abilities: { 0: "Chlorophyll", H: "Harvest" },
+		baseStats: {hp: 60, atk: 40, def: 80, spa: 60, spd: 45, spe: 40},
+		abilities: {0: "Chlorophyll", H: "Harvest"},
 		heightm: 0.4,
 		weightkg: 2.5,
 		color: "Pink",
@@ -2251,8 +2251,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 103,
 		name: "Exeggutor",
 		types: ["Grass", "Psychic"],
-		baseStats: { hp: 95, atk: 95, def: 85, spa: 125, spd: 75, spe: 55 },
-		abilities: { 0: "Chlorophyll", H: "Harvest" },
+		baseStats: {hp: 95, atk: 95, def: 85, spa: 125, spd: 75, spe: 55},
+		abilities: {0: "Chlorophyll", H: "Harvest"},
 		heightm: 2,
 		weightkg: 120,
 		color: "Yellow",
@@ -2269,8 +2269,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Exeggutor",
 		forme: "Alola",
 		types: ["Grass", "Dragon"],
-		baseStats: { hp: 95, atk: 105, def: 85, spa: 125, spd: 75, spe: 45 },
-		abilities: { 0: "Frisk", H: "Harvest" },
+		baseStats: {hp: 95, atk: 105, def: 85, spa: 125, spd: 75, spe: 45},
+		abilities: {0: "Frisk", H: "Harvest"},
 		heightm: 10.9,
 		weightkg: 415.6,
 		color: "Yellow",
@@ -2283,8 +2283,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 104,
 		name: "Cubone",
 		types: ["Ground"],
-		baseStats: { hp: 50, atk: 50, def: 95, spa: 40, spd: 50, spe: 35 },
-		abilities: { 0: "Rock Head", 1: "Lightning Rod", H: "Battle Armor" },
+		baseStats: {hp: 50, atk: 50, def: 95, spa: 40, spd: 50, spe: 35},
+		abilities: {0: "Rock Head", 1: "Lightning Rod", H: "Battle Armor"},
 		heightm: 0.4,
 		weightkg: 6.5,
 		color: "Brown",
@@ -2295,8 +2295,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 105,
 		name: "Marowak",
 		types: ["Ground"],
-		baseStats: { hp: 60, atk: 80, def: 110, spa: 50, spd: 80, spe: 45 },
-		abilities: { 0: "Rock Head", 1: "Lightning Rod", H: "Battle Armor" },
+		baseStats: {hp: 60, atk: 80, def: 110, spa: 50, spd: 80, spe: 45},
+		abilities: {0: "Rock Head", 1: "Lightning Rod", H: "Battle Armor"},
 		heightm: 1,
 		weightkg: 45,
 		color: "Brown",
@@ -2312,8 +2312,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Marowak",
 		forme: "Alola",
 		types: ["Fire", "Ghost"],
-		baseStats: { hp: 60, atk: 80, def: 110, spa: 50, spd: 80, spe: 45 },
-		abilities: { 0: "Cursed Body", 1: "Lightning Rod", H: "Rock Head" },
+		baseStats: {hp: 60, atk: 80, def: 110, spa: 50, spd: 80, spe: 45},
+		abilities: {0: "Cursed Body", 1: "Lightning Rod", H: "Rock Head"},
 		heightm: 1,
 		weightkg: 34,
 		color: "Purple",
@@ -2327,8 +2327,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Marowak",
 		forme: "Alola-Totem",
 		types: ["Fire", "Ghost"],
-		baseStats: { hp: 60, atk: 80, def: 110, spa: 50, spd: 80, spe: 45 },
-		abilities: { 0: "Rock Head" },
+		baseStats: {hp: 60, atk: 80, def: 110, spa: 50, spd: 80, spe: 45},
+		abilities: {0: "Rock Head"},
 		heightm: 1.7,
 		weightkg: 98,
 		color: "Purple",
@@ -2339,8 +2339,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Hitmonlee",
 		types: ["Fighting"],
 		gender: "M",
-		baseStats: { hp: 50, atk: 120, def: 53, spa: 35, spd: 110, spe: 87 },
-		abilities: { 0: "Limber", 1: "Reckless", H: "Unburden" },
+		baseStats: {hp: 50, atk: 120, def: 53, spa: 35, spd: 110, spe: 87},
+		abilities: {0: "Limber", 1: "Reckless", H: "Unburden"},
 		heightm: 1.5,
 		weightkg: 49.8,
 		color: "Brown",
@@ -2354,8 +2354,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Hitmonchan",
 		types: ["Fighting"],
 		gender: "M",
-		baseStats: { hp: 50, atk: 105, def: 79, spa: 35, spd: 110, spe: 76 },
-		abilities: { 0: "Keen Eye", 1: "Iron Fist", H: "Inner Focus" },
+		baseStats: {hp: 50, atk: 105, def: 79, spa: 35, spd: 110, spe: 76},
+		abilities: {0: "Keen Eye", 1: "Iron Fist", H: "Inner Focus"},
 		heightm: 1.4,
 		weightkg: 50.2,
 		color: "Brown",
@@ -2368,8 +2368,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 108,
 		name: "Lickitung",
 		types: ["Normal"],
-		baseStats: { hp: 90, atk: 55, def: 75, spa: 60, spd: 75, spe: 30 },
-		abilities: { 0: "Own Tempo", 1: "Oblivious", H: "Cloud Nine" },
+		baseStats: {hp: 90, atk: 55, def: 75, spa: 60, spd: 75, spe: 30},
+		abilities: {0: "Own Tempo", 1: "Oblivious", H: "Cloud Nine"},
 		heightm: 1.2,
 		weightkg: 65.5,
 		color: "Pink",
@@ -2380,8 +2380,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 109,
 		name: "Koffing",
 		types: ["Poison"],
-		baseStats: { hp: 40, atk: 65, def: 95, spa: 60, spd: 45, spe: 35 },
-		abilities: { 0: "Levitate", 1: "Neutralizing Gas", H: "Stench" },
+		baseStats: {hp: 40, atk: 65, def: 95, spa: 60, spd: 45, spe: 35},
+		abilities: {0: "Levitate", 1: "Neutralizing Gas", H: "Stench"},
 		heightm: 0.6,
 		weightkg: 1,
 		color: "Purple",
@@ -2392,8 +2392,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 110,
 		name: "Weezing",
 		types: ["Poison"],
-		baseStats: { hp: 65, atk: 90, def: 120, spa: 85, spd: 70, spe: 60 },
-		abilities: { 0: "Levitate", 1: "Neutralizing Gas", H: "Stench" },
+		baseStats: {hp: 65, atk: 90, def: 120, spa: 85, spd: 70, spe: 60},
+		abilities: {0: "Levitate", 1: "Neutralizing Gas", H: "Stench"},
 		heightm: 1.2,
 		weightkg: 9.5,
 		color: "Purple",
@@ -2409,8 +2409,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Weezing",
 		forme: "Galar",
 		types: ["Poison", "Fairy"],
-		baseStats: { hp: 65, atk: 90, def: 120, spa: 85, spd: 70, spe: 60 },
-		abilities: { 0: "Levitate", 1: "Neutralizing Gas", H: "Misty Surge" },
+		baseStats: {hp: 65, atk: 90, def: 120, spa: 85, spd: 70, spe: 60},
+		abilities: {0: "Levitate", 1: "Neutralizing Gas", H: "Misty Surge"},
 		heightm: 3,
 		weightkg: 16,
 		color: "Gray",
@@ -2422,8 +2422,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 111,
 		name: "Rhyhorn",
 		types: ["Ground", "Rock"],
-		baseStats: { hp: 80, atk: 85, def: 95, spa: 30, spd: 30, spe: 25 },
-		abilities: { 0: "Lightning Rod", 1: "Rock Head", H: "Reckless" },
+		baseStats: {hp: 80, atk: 85, def: 95, spa: 30, spd: 30, spe: 25},
+		abilities: {0: "Lightning Rod", 1: "Rock Head", H: "Reckless"},
 		heightm: 1,
 		weightkg: 115,
 		color: "Gray",
@@ -2434,8 +2434,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 112,
 		name: "Rhydon",
 		types: ["Ground", "Rock"],
-		baseStats: { hp: 105, atk: 130, def: 120, spa: 45, spd: 45, spe: 40 },
-		abilities: { 0: "Lightning Rod", 1: "Rock Head", H: "Reckless" },
+		baseStats: {hp: 105, atk: 130, def: 120, spa: 45, spd: 45, spe: 40},
+		abilities: {0: "Lightning Rod", 1: "Rock Head", H: "Reckless"},
 		heightm: 1.9,
 		weightkg: 120,
 		color: "Gray",
@@ -2449,8 +2449,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Chansey",
 		types: ["Normal"],
 		gender: "F",
-		baseStats: { hp: 250, atk: 5, def: 5, spa: 35, spd: 105, spe: 50 },
-		abilities: { 0: "Natural Cure", 1: "Serene Grace", H: "Healer" },
+		baseStats: {hp: 250, atk: 5, def: 5, spa: 35, spd: 105, spe: 50},
+		abilities: {0: "Natural Cure", 1: "Serene Grace", H: "Healer"},
 		heightm: 1.1,
 		weightkg: 34.6,
 		color: "Pink",
@@ -2466,8 +2466,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 114,
 		name: "Tangela",
 		types: ["Grass"],
-		baseStats: { hp: 65, atk: 55, def: 115, spa: 100, spd: 40, spe: 60 },
-		abilities: { 0: "Chlorophyll", 1: "Leaf Guard", H: "Regenerator" },
+		baseStats: {hp: 65, atk: 55, def: 115, spa: 100, spd: 40, spe: 60},
+		abilities: {0: "Chlorophyll", 1: "Leaf Guard", H: "Regenerator"},
 		heightm: 1,
 		weightkg: 35,
 		color: "Blue",
@@ -2479,8 +2479,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Kangaskhan",
 		types: ["Normal"],
 		gender: "F",
-		baseStats: { hp: 105, atk: 95, def: 80, spa: 40, spd: 80, spe: 90 },
-		abilities: { 0: "Early Bird", 1: "Scrappy", H: "Inner Focus" },
+		baseStats: {hp: 105, atk: 95, def: 80, spa: 40, spd: 80, spe: 90},
+		abilities: {0: "Early Bird", 1: "Scrappy", H: "Inner Focus"},
 		heightm: 2.2,
 		weightkg: 80,
 		color: "Brown",
@@ -2495,8 +2495,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Mega",
 		types: ["Normal"],
 		gender: "F",
-		baseStats: { hp: 105, atk: 125, def: 100, spa: 60, spd: 100, spe: 100 },
-		abilities: { 0: "Parental Bond" },
+		baseStats: {hp: 105, atk: 125, def: 100, spa: 60, spd: 100, spe: 100},
+		abilities: {0: "Parental Bond"},
 		heightm: 2.2,
 		weightkg: 100,
 		color: "Brown",
@@ -2507,8 +2507,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 116,
 		name: "Horsea",
 		types: ["Water"],
-		baseStats: { hp: 30, atk: 40, def: 70, spa: 70, spd: 25, spe: 60 },
-		abilities: { 0: "Swift Swim", 1: "Sniper", H: "Damp" },
+		baseStats: {hp: 30, atk: 40, def: 70, spa: 70, spd: 25, spe: 60},
+		abilities: {0: "Swift Swim", 1: "Sniper", H: "Damp"},
 		heightm: 0.4,
 		weightkg: 8,
 		color: "Blue",
@@ -2519,8 +2519,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 117,
 		name: "Seadra",
 		types: ["Water"],
-		baseStats: { hp: 55, atk: 65, def: 95, spa: 95, spd: 45, spe: 85 },
-		abilities: { 0: "Poison Point", 1: "Sniper", H: "Damp" },
+		baseStats: {hp: 55, atk: 65, def: 95, spa: 95, spd: 45, spe: 85},
+		abilities: {0: "Poison Point", 1: "Sniper", H: "Damp"},
 		heightm: 1.2,
 		weightkg: 25,
 		color: "Blue",
@@ -2533,8 +2533,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 118,
 		name: "Goldeen",
 		types: ["Water"],
-		baseStats: { hp: 45, atk: 67, def: 60, spa: 35, spd: 50, spe: 63 },
-		abilities: { 0: "Swift Swim", 1: "Water Veil", H: "Lightning Rod" },
+		baseStats: {hp: 45, atk: 67, def: 60, spa: 35, spd: 50, spe: 63},
+		abilities: {0: "Swift Swim", 1: "Water Veil", H: "Lightning Rod"},
 		heightm: 0.6,
 		weightkg: 15,
 		color: "Red",
@@ -2545,8 +2545,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 119,
 		name: "Seaking",
 		types: ["Water"],
-		baseStats: { hp: 80, atk: 92, def: 65, spa: 65, spd: 80, spe: 68 },
-		abilities: { 0: "Swift Swim", 1: "Water Veil", H: "Lightning Rod" },
+		baseStats: {hp: 80, atk: 92, def: 65, spa: 65, spd: 80, spe: 68},
+		abilities: {0: "Swift Swim", 1: "Water Veil", H: "Lightning Rod"},
 		heightm: 1.3,
 		weightkg: 39,
 		color: "Red",
@@ -2559,8 +2559,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Staryu",
 		types: ["Water"],
 		gender: "N",
-		baseStats: { hp: 30, atk: 45, def: 55, spa: 70, spd: 55, spe: 85 },
-		abilities: { 0: "Illuminate", 1: "Natural Cure", H: "Analytic" },
+		baseStats: {hp: 30, atk: 45, def: 55, spa: 70, spd: 55, spe: 85},
+		abilities: {0: "Illuminate", 1: "Natural Cure", H: "Analytic"},
 		heightm: 0.8,
 		weightkg: 34.5,
 		color: "Brown",
@@ -2572,8 +2572,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Starmie",
 		types: ["Water", "Psychic"],
 		gender: "N",
-		baseStats: { hp: 60, atk: 75, def: 85, spa: 100, spd: 85, spe: 115 },
-		abilities: { 0: "Illuminate", 1: "Natural Cure", H: "Analytic" },
+		baseStats: {hp: 60, atk: 75, def: 85, spa: 100, spd: 85, spe: 115},
+		abilities: {0: "Illuminate", 1: "Natural Cure", H: "Analytic"},
 		heightm: 1.1,
 		weightkg: 80,
 		color: "Purple",
@@ -2586,8 +2586,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 122,
 		name: "Mr. Mime",
 		types: ["Psychic", "Fairy"],
-		baseStats: { hp: 40, atk: 45, def: 65, spa: 100, spd: 120, spe: 90 },
-		abilities: { 0: "Soundproof", 1: "Filter", H: "Technician" },
+		baseStats: {hp: 40, atk: 45, def: 65, spa: 100, spd: 120, spe: 90},
+		abilities: {0: "Soundproof", 1: "Filter", H: "Technician"},
 		heightm: 1.3,
 		weightkg: 54.5,
 		color: "Pink",
@@ -2605,8 +2605,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Mr. Mime",
 		forme: "Galar",
 		types: ["Ice", "Psychic"],
-		baseStats: { hp: 50, atk: 65, def: 65, spa: 90, spd: 90, spe: 100 },
-		abilities: { 0: "Vital Spirit", 1: "Screen Cleaner", H: "Ice Body" },
+		baseStats: {hp: 50, atk: 65, def: 65, spa: 90, spd: 90, spe: 100},
+		abilities: {0: "Vital Spirit", 1: "Screen Cleaner", H: "Ice Body"},
 		heightm: 1.4,
 		weightkg: 56.8,
 		color: "White",
@@ -2621,8 +2621,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 123,
 		name: "Scyther",
 		types: ["Bug", "Flying"],
-		baseStats: { hp: 70, atk: 110, def: 80, spa: 55, spd: 80, spe: 105 },
-		abilities: { 0: "Swarm", 1: "Technician", H: "Steadfast" },
+		baseStats: {hp: 70, atk: 110, def: 80, spa: 55, spd: 80, spe: 105},
+		abilities: {0: "Swarm", 1: "Technician", H: "Steadfast"},
 		heightm: 1.5,
 		weightkg: 56,
 		color: "Green",
@@ -2634,8 +2634,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Jynx",
 		types: ["Ice", "Psychic"],
 		gender: "F",
-		baseStats: { hp: 65, atk: 50, def: 35, spa: 115, spd: 95, spe: 95 },
-		abilities: { 0: "Oblivious", 1: "Forewarn", H: "Dry Skin" },
+		baseStats: {hp: 65, atk: 50, def: 35, spa: 115, spd: 95, spe: 95},
+		abilities: {0: "Oblivious", 1: "Forewarn", H: "Dry Skin"},
 		heightm: 1.4,
 		weightkg: 40.6,
 		color: "Red",
@@ -2647,9 +2647,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 125,
 		name: "Electabuzz",
 		types: ["Electric"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 65, atk: 83, def: 57, spa: 95, spd: 85, spe: 105 },
-		abilities: { 0: "Static", H: "Vital Spirit" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 65, atk: 83, def: 57, spa: 95, spd: 85, spe: 105},
+		abilities: {0: "Static", H: "Vital Spirit"},
 		heightm: 1.1,
 		weightkg: 30,
 		color: "Yellow",
@@ -2662,9 +2662,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 126,
 		name: "Magmar",
 		types: ["Fire"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 65, atk: 95, def: 57, spa: 100, spd: 85, spe: 93 },
-		abilities: { 0: "Flame Body", H: "Vital Spirit" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 65, atk: 95, def: 57, spa: 100, spd: 85, spe: 93},
+		abilities: {0: "Flame Body", H: "Vital Spirit"},
 		heightm: 1.3,
 		weightkg: 44.5,
 		color: "Red",
@@ -2677,8 +2677,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 127,
 		name: "Pinsir",
 		types: ["Bug"],
-		baseStats: { hp: 65, atk: 125, def: 100, spa: 55, spd: 70, spe: 85 },
-		abilities: { 0: "Hyper Cutter", 1: "Mold Breaker", H: "Moxie" },
+		baseStats: {hp: 65, atk: 125, def: 100, spa: 55, spd: 70, spe: 85},
+		abilities: {0: "Hyper Cutter", 1: "Mold Breaker", H: "Moxie"},
 		heightm: 1.5,
 		weightkg: 55,
 		color: "Brown",
@@ -2692,8 +2692,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Pinsir",
 		forme: "Mega",
 		types: ["Bug", "Flying"],
-		baseStats: { hp: 65, atk: 155, def: 120, spa: 65, spd: 90, spe: 105 },
-		abilities: { 0: "Aerilate" },
+		baseStats: {hp: 65, atk: 155, def: 120, spa: 65, spd: 90, spe: 105},
+		abilities: {0: "Aerilate"},
 		heightm: 1.7,
 		weightkg: 59,
 		color: "Brown",
@@ -2705,8 +2705,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Tauros",
 		types: ["Normal"],
 		gender: "M",
-		baseStats: { hp: 75, atk: 100, def: 95, spa: 40, spd: 70, spe: 110 },
-		abilities: { 0: "Intimidate", 1: "Anger Point", H: "Sheer Force" },
+		baseStats: {hp: 75, atk: 100, def: 95, spa: 40, spd: 70, spe: 110},
+		abilities: {0: "Intimidate", 1: "Anger Point", H: "Sheer Force"},
 		heightm: 1.4,
 		weightkg: 88.4,
 		color: "Brown",
@@ -2716,8 +2716,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 129,
 		name: "Magikarp",
 		types: ["Water"],
-		baseStats: { hp: 20, atk: 10, def: 55, spa: 15, spd: 20, spe: 80 },
-		abilities: { 0: "Swift Swim", H: "Rattled" },
+		baseStats: {hp: 20, atk: 10, def: 55, spa: 15, spd: 20, spe: 80},
+		abilities: {0: "Swift Swim", H: "Rattled"},
 		heightm: 0.9,
 		weightkg: 10,
 		color: "Red",
@@ -2728,8 +2728,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 130,
 		name: "Gyarados",
 		types: ["Water", "Flying"],
-		baseStats: { hp: 95, atk: 125, def: 79, spa: 60, spd: 100, spe: 81 },
-		abilities: { 0: "Intimidate", H: "Moxie" },
+		baseStats: {hp: 95, atk: 125, def: 79, spa: 60, spd: 100, spe: 81},
+		abilities: {0: "Intimidate", H: "Moxie"},
 		heightm: 6.5,
 		weightkg: 235,
 		color: "Blue",
@@ -2745,8 +2745,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Gyarados",
 		forme: "Mega",
 		types: ["Water", "Dark"],
-		baseStats: { hp: 95, atk: 155, def: 109, spa: 70, spd: 130, spe: 81 },
-		abilities: { 0: "Mold Breaker" },
+		baseStats: {hp: 95, atk: 155, def: 109, spa: 70, spd: 130, spe: 81},
+		abilities: {0: "Mold Breaker"},
 		heightm: 6.5,
 		weightkg: 305,
 		color: "Blue",
@@ -2757,8 +2757,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 131,
 		name: "Lapras",
 		types: ["Water", "Ice"],
-		baseStats: { hp: 130, atk: 85, def: 80, spa: 85, spd: 95, spe: 60 },
-		abilities: { 0: "Water Absorb", 1: "Shell Armor", H: "Hydration" },
+		baseStats: {hp: 130, atk: 85, def: 80, spa: 85, spd: 95, spe: 60},
+		abilities: {0: "Water Absorb", 1: "Shell Armor", H: "Hydration"},
 		heightm: 2.5,
 		weightkg: 220,
 		color: "Blue",
@@ -2771,8 +2771,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Lapras",
 		forme: "Gmax",
 		types: ["Water", "Ice"],
-		baseStats: { hp: 130, atk: 85, def: 80, spa: 85, spd: 95, spe: 60 },
-		abilities: { 0: "Water Absorb", 1: "Shell Armor", H: "Hydration" },
+		baseStats: {hp: 130, atk: 85, def: 80, spa: 85, spd: 95, spe: 60},
+		abilities: {0: "Water Absorb", 1: "Shell Armor", H: "Hydration"},
 		heightm: 24,
 		weightkg: 0,
 		color: "Blue",
@@ -2784,8 +2784,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Ditto",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: { hp: 48, atk: 48, def: 48, spa: 48, spd: 48, spe: 48 },
-		abilities: { 0: "Limber", H: "Imposter" },
+		baseStats: {hp: 48, atk: 48, def: 48, spa: 48, spd: 48, spe: 48},
+		abilities: {0: "Limber", H: "Imposter"},
 		heightm: 0.3,
 		weightkg: 4,
 		color: "Purple",
@@ -2795,9 +2795,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 133,
 		name: "Eevee",
 		types: ["Normal"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 55, atk: 55, def: 50, spa: 45, spd: 65, spe: 55 },
-		abilities: { 0: "Run Away", 1: "Adaptability", H: "Anticipation" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 55, atk: 55, def: 50, spa: 45, spd: 65, spe: 55},
+		abilities: {0: "Run Away", 1: "Adaptability", H: "Anticipation"},
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
@@ -2813,9 +2813,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Eevee",
 		forme: "Starter",
 		types: ["Normal"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 65, atk: 75, def: 70, spa: 65, spd: 85, spe: 75 },
-		abilities: { 0: "Run Away", 1: "Adaptability", H: "Anticipation" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 65, atk: 75, def: 70, spa: 65, spd: 85, spe: 75},
+		abilities: {0: "Run Away", 1: "Adaptability", H: "Anticipation"},
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
@@ -2827,9 +2827,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Eevee",
 		forme: "Gmax",
 		types: ["Normal"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 55, atk: 55, def: 50, spa: 45, spd: 65, spe: 55 },
-		abilities: { 0: "Run Away", 1: "Adaptability", H: "Anticipation" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 55, atk: 55, def: 50, spa: 45, spd: 65, spe: 55},
+		abilities: {0: "Run Away", 1: "Adaptability", H: "Anticipation"},
 		heightm: 18,
 		weightkg: 0,
 		color: "Brown",
@@ -2840,9 +2840,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 134,
 		name: "Vaporeon",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 130, atk: 65, def: 60, spa: 110, spd: 95, spe: 65 },
-		abilities: { 0: "Water Absorb", H: "Hydration" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 130, atk: 65, def: 60, spa: 110, spd: 95, spe: 65},
+		abilities: {0: "Water Absorb", H: "Hydration"},
 		heightm: 1,
 		weightkg: 29,
 		color: "Blue",
@@ -2855,9 +2855,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 135,
 		name: "Jolteon",
 		types: ["Electric"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 65, atk: 65, def: 60, spa: 110, spd: 95, spe: 130 },
-		abilities: { 0: "Volt Absorb", H: "Quick Feet" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 65, atk: 65, def: 60, spa: 110, spd: 95, spe: 130},
+		abilities: {0: "Volt Absorb", H: "Quick Feet"},
 		heightm: 0.8,
 		weightkg: 24.5,
 		color: "Yellow",
@@ -2870,9 +2870,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 136,
 		name: "Flareon",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 65, atk: 130, def: 60, spa: 95, spd: 110, spe: 65 },
-		abilities: { 0: "Flash Fire", H: "Guts" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 65, atk: 130, def: 60, spa: 95, spd: 110, spe: 65},
+		abilities: {0: "Flash Fire", H: "Guts"},
 		heightm: 0.9,
 		weightkg: 25,
 		color: "Red",
@@ -2886,8 +2886,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Porygon",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: { hp: 65, atk: 60, def: 70, spa: 85, spd: 75, spe: 40 },
-		abilities: { 0: "Trace", 1: "Download", H: "Analytic" },
+		baseStats: {hp: 65, atk: 60, def: 70, spa: 85, spd: 75, spe: 40},
+		abilities: {0: "Trace", 1: "Download", H: "Analytic"},
 		heightm: 0.8,
 		weightkg: 36.5,
 		color: "Pink",
@@ -2898,9 +2898,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 138,
 		name: "Omanyte",
 		types: ["Rock", "Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 35, atk: 40, def: 100, spa: 90, spd: 55, spe: 35 },
-		abilities: { 0: "Swift Swim", 1: "Shell Armor", H: "Weak Armor" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 35, atk: 40, def: 100, spa: 90, spd: 55, spe: 35},
+		abilities: {0: "Swift Swim", 1: "Shell Armor", H: "Weak Armor"},
 		heightm: 0.4,
 		weightkg: 7.5,
 		color: "Blue",
@@ -2911,9 +2911,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 139,
 		name: "Omastar",
 		types: ["Rock", "Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 70, atk: 60, def: 125, spa: 115, spd: 70, spe: 55 },
-		abilities: { 0: "Swift Swim", 1: "Shell Armor", H: "Weak Armor" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 70, atk: 60, def: 125, spa: 115, spd: 70, spe: 55},
+		abilities: {0: "Swift Swim", 1: "Shell Armor", H: "Weak Armor"},
 		heightm: 1,
 		weightkg: 35,
 		color: "Blue",
@@ -2925,9 +2925,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 140,
 		name: "Kabuto",
 		types: ["Rock", "Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 30, atk: 80, def: 90, spa: 55, spd: 45, spe: 55 },
-		abilities: { 0: "Swift Swim", 1: "Battle Armor", H: "Weak Armor" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 30, atk: 80, def: 90, spa: 55, spd: 45, spe: 55},
+		abilities: {0: "Swift Swim", 1: "Battle Armor", H: "Weak Armor"},
 		heightm: 0.5,
 		weightkg: 11.5,
 		color: "Brown",
@@ -2938,9 +2938,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 141,
 		name: "Kabutops",
 		types: ["Rock", "Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 60, atk: 115, def: 105, spa: 65, spd: 70, spe: 80 },
-		abilities: { 0: "Swift Swim", 1: "Battle Armor", H: "Weak Armor" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 60, atk: 115, def: 105, spa: 65, spd: 70, spe: 80},
+		abilities: {0: "Swift Swim", 1: "Battle Armor", H: "Weak Armor"},
 		heightm: 1.3,
 		weightkg: 40.5,
 		color: "Brown",
@@ -2952,9 +2952,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 142,
 		name: "Aerodactyl",
 		types: ["Rock", "Flying"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 80, atk: 105, def: 65, spa: 60, spd: 75, spe: 130 },
-		abilities: { 0: "Rock Head", 1: "Pressure", H: "Unnerve" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 80, atk: 105, def: 65, spa: 60, spd: 75, spe: 130},
+		abilities: {0: "Rock Head", 1: "Pressure", H: "Unnerve"},
 		heightm: 1.8,
 		weightkg: 59,
 		color: "Purple",
@@ -2968,9 +2968,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Aerodactyl",
 		forme: "Mega",
 		types: ["Rock", "Flying"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 80, atk: 135, def: 85, spa: 70, spd: 95, spe: 150 },
-		abilities: { 0: "Tough Claws" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 80, atk: 135, def: 85, spa: 70, spd: 95, spe: 150},
+		abilities: {0: "Tough Claws"},
 		heightm: 2.1,
 		weightkg: 79,
 		color: "Purple",
@@ -2981,9 +2981,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 143,
 		name: "Snorlax",
 		types: ["Normal"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 160, atk: 110, def: 65, spa: 65, spd: 110, spe: 30 },
-		abilities: { 0: "Immunity", 1: "Thick Fat", H: "Gluttony" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 160, atk: 110, def: 65, spa: 65, spd: 110, spe: 30},
+		abilities: {0: "Immunity", 1: "Thick Fat", H: "Gluttony"},
 		heightm: 2.1,
 		weightkg: 460,
 		color: "Black",
@@ -2999,9 +2999,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Snorlax",
 		forme: "Gmax",
 		types: ["Normal"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 160, atk: 110, def: 65, spa: 65, spd: 110, spe: 30 },
-		abilities: { 0: "Immunity", 1: "Thick Fat", H: "Gluttony" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 160, atk: 110, def: 65, spa: 65, spd: 110, spe: 30},
+		abilities: {0: "Immunity", 1: "Thick Fat", H: "Gluttony"},
 		heightm: 35,
 		weightkg: 0,
 		color: "Black",
@@ -3013,8 +3013,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Articuno",
 		types: ["Ice", "Flying"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 85, def: 100, spa: 95, spd: 125, spe: 85 },
-		abilities: { 0: "Pressure", H: "Snow Cloak" },
+		baseStats: {hp: 90, atk: 85, def: 100, spa: 95, spd: 125, spe: 85},
+		abilities: {0: "Pressure", H: "Snow Cloak"},
 		heightm: 1.7,
 		weightkg: 55.4,
 		color: "Blue",
@@ -3029,8 +3029,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Galar",
 		types: ["Psychic", "Flying"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 85, def: 85, spa: 125, spd: 100, spe: 95 },
-		abilities: { 0: "Competitive" },
+		baseStats: {hp: 90, atk: 85, def: 85, spa: 125, spd: 100, spe: 95},
+		abilities: {0: "Competitive"},
 		heightm: 1.7,
 		weightkg: 50.9,
 		color: "Purple",
@@ -3041,8 +3041,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Zapdos",
 		types: ["Electric", "Flying"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 90, def: 85, spa: 125, spd: 90, spe: 100 },
-		abilities: { 0: "Pressure", H: "Static" },
+		baseStats: {hp: 90, atk: 90, def: 85, spa: 125, spd: 90, spe: 100},
+		abilities: {0: "Pressure", H: "Static"},
 		heightm: 1.6,
 		weightkg: 52.6,
 		color: "Yellow",
@@ -3057,8 +3057,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Galar",
 		types: ["Fighting", "Flying"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 125, def: 90, spa: 85, spd: 90, spe: 100 },
-		abilities: { 0: "Defiant" },
+		baseStats: {hp: 90, atk: 125, def: 90, spa: 85, spd: 90, spe: 100},
+		abilities: {0: "Defiant"},
 		heightm: 1.6,
 		weightkg: 58.2,
 		color: "Yellow",
@@ -3069,8 +3069,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Moltres",
 		types: ["Fire", "Flying"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 100, def: 90, spa: 125, spd: 85, spe: 90 },
-		abilities: { 0: "Pressure", H: "Flame Body" },
+		baseStats: {hp: 90, atk: 100, def: 90, spa: 125, spd: 85, spe: 90},
+		abilities: {0: "Pressure", H: "Flame Body"},
 		heightm: 2,
 		weightkg: 60,
 		color: "Yellow",
@@ -3085,8 +3085,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Galar",
 		types: ["Dark", "Flying"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 85, def: 90, spa: 100, spd: 125, spe: 90 },
-		abilities: { 0: "Berserk" },
+		baseStats: {hp: 90, atk: 85, def: 90, spa: 100, spd: 125, spe: 90},
+		abilities: {0: "Berserk"},
 		heightm: 2,
 		weightkg: 66,
 		color: "Red",
@@ -3096,8 +3096,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 147,
 		name: "Dratini",
 		types: ["Dragon"],
-		baseStats: { hp: 41, atk: 64, def: 45, spa: 50, spd: 50, spe: 50 },
-		abilities: { 0: "Shed Skin", H: "Marvel Scale" },
+		baseStats: {hp: 41, atk: 64, def: 45, spa: 50, spd: 50, spe: 50},
+		abilities: {0: "Shed Skin", H: "Marvel Scale"},
 		heightm: 1.8,
 		weightkg: 3.3,
 		color: "Blue",
@@ -3108,8 +3108,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 148,
 		name: "Dragonair",
 		types: ["Dragon"],
-		baseStats: { hp: 61, atk: 84, def: 65, spa: 70, spd: 70, spe: 70 },
-		abilities: { 0: "Shed Skin", H: "Marvel Scale" },
+		baseStats: {hp: 61, atk: 84, def: 65, spa: 70, spd: 70, spe: 70},
+		abilities: {0: "Shed Skin", H: "Marvel Scale"},
 		heightm: 4,
 		weightkg: 16.5,
 		color: "Blue",
@@ -3122,8 +3122,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 149,
 		name: "Dragonite",
 		types: ["Dragon", "Flying"],
-		baseStats: { hp: 91, atk: 134, def: 95, spa: 100, spd: 100, spe: 80 },
-		abilities: { 0: "Inner Focus", H: "Multiscale" },
+		baseStats: {hp: 91, atk: 134, def: 95, spa: 100, spd: 100, spe: 80},
+		abilities: {0: "Inner Focus", H: "Multiscale"},
 		heightm: 2.2,
 		weightkg: 210,
 		color: "Brown",
@@ -3136,8 +3136,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Mewtwo",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 106, atk: 110, def: 90, spa: 154, spd: 90, spe: 130 },
-		abilities: { 0: "Pressure", H: "Unnerve" },
+		baseStats: {hp: 106, atk: 110, def: 90, spa: 154, spd: 90, spe: 130},
+		abilities: {0: "Pressure", H: "Unnerve"},
 		heightm: 2,
 		weightkg: 122,
 		color: "Purple",
@@ -3152,8 +3152,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Mega-X",
 		types: ["Psychic", "Fighting"],
 		gender: "N",
-		baseStats: { hp: 106, atk: 190, def: 100, spa: 154, spd: 100, spe: 130 },
-		abilities: { 0: "Steadfast" },
+		baseStats: {hp: 106, atk: 190, def: 100, spa: 154, spd: 100, spe: 130},
+		abilities: {0: "Steadfast"},
 		heightm: 2.3,
 		weightkg: 127,
 		color: "Purple",
@@ -3167,8 +3167,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Mega-Y",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 106, atk: 150, def: 70, spa: 194, spd: 120, spe: 140 },
-		abilities: { 0: "Insomnia" },
+		baseStats: {hp: 106, atk: 150, def: 70, spa: 194, spd: 120, spe: 140},
+		abilities: {0: "Insomnia"},
 		heightm: 1.5,
 		weightkg: 33,
 		color: "Purple",
@@ -3180,8 +3180,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Mew",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Synchronize" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Synchronize"},
 		heightm: 0.4,
 		weightkg: 4,
 		color: "Pink",
@@ -3191,9 +3191,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 152,
 		name: "Chikorita",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 45, atk: 49, def: 65, spa: 49, spd: 65, spe: 45 },
-		abilities: { 0: "Overgrow", H: "Leaf Guard" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 45, atk: 49, def: 65, spa: 49, spd: 65, spe: 45},
+		abilities: {0: "Overgrow", H: "Leaf Guard"},
 		heightm: 0.9,
 		weightkg: 6.4,
 		color: "Green",
@@ -3204,9 +3204,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 153,
 		name: "Bayleef",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 60, atk: 62, def: 80, spa: 63, spd: 80, spe: 60 },
-		abilities: { 0: "Overgrow", H: "Leaf Guard" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 60, atk: 62, def: 80, spa: 63, spd: 80, spe: 60},
+		abilities: {0: "Overgrow", H: "Leaf Guard"},
 		heightm: 1.2,
 		weightkg: 15.8,
 		color: "Green",
@@ -3219,9 +3219,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 154,
 		name: "Meganium",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 80, atk: 82, def: 100, spa: 83, spd: 100, spe: 80 },
-		abilities: { 0: "Overgrow", H: "Leaf Guard" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 80, atk: 82, def: 100, spa: 83, spd: 100, spe: 80},
+		abilities: {0: "Overgrow", H: "Leaf Guard"},
 		heightm: 1.8,
 		weightkg: 100.5,
 		color: "Green",
@@ -3233,9 +3233,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 155,
 		name: "Cyndaquil",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 39, atk: 52, def: 43, spa: 60, spd: 50, spe: 65 },
-		abilities: { 0: "Blaze", H: "Flash Fire" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 39, atk: 52, def: 43, spa: 60, spd: 50, spe: 65},
+		abilities: {0: "Blaze", H: "Flash Fire"},
 		heightm: 0.5,
 		weightkg: 7.9,
 		color: "Yellow",
@@ -3246,9 +3246,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 156,
 		name: "Quilava",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 58, atk: 64, def: 58, spa: 80, spd: 65, spe: 80 },
-		abilities: { 0: "Blaze", H: "Flash Fire" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 58, atk: 64, def: 58, spa: 80, spd: 65, spe: 80},
+		abilities: {0: "Blaze", H: "Flash Fire"},
 		heightm: 0.9,
 		weightkg: 19,
 		color: "Yellow",
@@ -3261,9 +3261,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 157,
 		name: "Typhlosion",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100 },
-		abilities: { 0: "Blaze", H: "Flash Fire" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100},
+		abilities: {0: "Blaze", H: "Flash Fire"},
 		heightm: 1.7,
 		weightkg: 79.5,
 		color: "Yellow",
@@ -3275,9 +3275,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 158,
 		name: "Totodile",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 50, atk: 65, def: 64, spa: 44, spd: 48, spe: 43 },
-		abilities: { 0: "Torrent", H: "Sheer Force" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 50, atk: 65, def: 64, spa: 44, spd: 48, spe: 43},
+		abilities: {0: "Torrent", H: "Sheer Force"},
 		heightm: 0.6,
 		weightkg: 9.5,
 		color: "Blue",
@@ -3288,9 +3288,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 159,
 		name: "Croconaw",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 65, atk: 80, def: 80, spa: 59, spd: 63, spe: 58 },
-		abilities: { 0: "Torrent", H: "Sheer Force" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 65, atk: 80, def: 80, spa: 59, spd: 63, spe: 58},
+		abilities: {0: "Torrent", H: "Sheer Force"},
 		heightm: 1.1,
 		weightkg: 25,
 		color: "Blue",
@@ -3303,9 +3303,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 160,
 		name: "Feraligatr",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 85, atk: 105, def: 100, spa: 79, spd: 83, spe: 78 },
-		abilities: { 0: "Torrent", H: "Sheer Force" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 85, atk: 105, def: 100, spa: 79, spd: 83, spe: 78},
+		abilities: {0: "Torrent", H: "Sheer Force"},
 		heightm: 2.3,
 		weightkg: 88.8,
 		color: "Blue",
@@ -3317,8 +3317,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 161,
 		name: "Sentret",
 		types: ["Normal"],
-		baseStats: { hp: 35, atk: 46, def: 34, spa: 35, spd: 45, spe: 20 },
-		abilities: { 0: "Run Away", 1: "Keen Eye", H: "Frisk" },
+		baseStats: {hp: 35, atk: 46, def: 34, spa: 35, spd: 45, spe: 20},
+		abilities: {0: "Run Away", 1: "Keen Eye", H: "Frisk"},
 		heightm: 0.8,
 		weightkg: 6,
 		color: "Brown",
@@ -3329,8 +3329,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 162,
 		name: "Furret",
 		types: ["Normal"],
-		baseStats: { hp: 85, atk: 76, def: 64, spa: 45, spd: 55, spe: 90 },
-		abilities: { 0: "Run Away", 1: "Keen Eye", H: "Frisk" },
+		baseStats: {hp: 85, atk: 76, def: 64, spa: 45, spd: 55, spe: 90},
+		abilities: {0: "Run Away", 1: "Keen Eye", H: "Frisk"},
 		heightm: 1.8,
 		weightkg: 32.5,
 		color: "Brown",
@@ -3342,8 +3342,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 163,
 		name: "Hoothoot",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 60, atk: 30, def: 30, spa: 36, spd: 56, spe: 50 },
-		abilities: { 0: "Insomnia", 1: "Keen Eye", H: "Tinted Lens" },
+		baseStats: {hp: 60, atk: 30, def: 30, spa: 36, spd: 56, spe: 50},
+		abilities: {0: "Insomnia", 1: "Keen Eye", H: "Tinted Lens"},
 		heightm: 0.7,
 		weightkg: 21.2,
 		color: "Brown",
@@ -3354,8 +3354,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 164,
 		name: "Noctowl",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 100, atk: 50, def: 50, spa: 86, spd: 96, spe: 70 },
-		abilities: { 0: "Insomnia", 1: "Keen Eye", H: "Tinted Lens" },
+		baseStats: {hp: 100, atk: 50, def: 50, spa: 86, spd: 96, spe: 70},
+		abilities: {0: "Insomnia", 1: "Keen Eye", H: "Tinted Lens"},
 		heightm: 1.6,
 		weightkg: 40.8,
 		color: "Brown",
@@ -3367,8 +3367,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 165,
 		name: "Ledyba",
 		types: ["Bug", "Flying"],
-		baseStats: { hp: 40, atk: 20, def: 30, spa: 40, spd: 80, spe: 55 },
-		abilities: { 0: "Swarm", 1: "Early Bird", H: "Rattled" },
+		baseStats: {hp: 40, atk: 20, def: 30, spa: 40, spd: 80, spe: 55},
+		abilities: {0: "Swarm", 1: "Early Bird", H: "Rattled"},
 		heightm: 1,
 		weightkg: 10.8,
 		color: "Red",
@@ -3379,8 +3379,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 166,
 		name: "Ledian",
 		types: ["Bug", "Flying"],
-		baseStats: { hp: 55, atk: 35, def: 50, spa: 55, spd: 110, spe: 85 },
-		abilities: { 0: "Swarm", 1: "Early Bird", H: "Iron Fist" },
+		baseStats: {hp: 55, atk: 35, def: 50, spa: 55, spd: 110, spe: 85},
+		abilities: {0: "Swarm", 1: "Early Bird", H: "Iron Fist"},
 		heightm: 1.4,
 		weightkg: 35.6,
 		color: "Red",
@@ -3392,8 +3392,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 167,
 		name: "Spinarak",
 		types: ["Bug", "Poison"],
-		baseStats: { hp: 40, atk: 60, def: 40, spa: 40, spd: 40, spe: 30 },
-		abilities: { 0: "Swarm", 1: "Insomnia", H: "Sniper" },
+		baseStats: {hp: 40, atk: 60, def: 40, spa: 40, spd: 40, spe: 30},
+		abilities: {0: "Swarm", 1: "Insomnia", H: "Sniper"},
 		heightm: 0.5,
 		weightkg: 8.5,
 		color: "Green",
@@ -3404,8 +3404,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 168,
 		name: "Ariados",
 		types: ["Bug", "Poison"],
-		baseStats: { hp: 70, atk: 90, def: 70, spa: 60, spd: 70, spe: 40 },
-		abilities: { 0: "Swarm", 1: "Insomnia", H: "Sniper" },
+		baseStats: {hp: 70, atk: 90, def: 70, spa: 60, spd: 70, spe: 40},
+		abilities: {0: "Swarm", 1: "Insomnia", H: "Sniper"},
 		heightm: 1.1,
 		weightkg: 33.5,
 		color: "Red",
@@ -3417,8 +3417,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 169,
 		name: "Crobat",
 		types: ["Poison", "Flying"],
-		baseStats: { hp: 85, atk: 90, def: 80, spa: 70, spd: 80, spe: 130 },
-		abilities: { 0: "Inner Focus", H: "Infiltrator" },
+		baseStats: {hp: 85, atk: 90, def: 80, spa: 70, spd: 80, spe: 130},
+		abilities: {0: "Inner Focus", H: "Infiltrator"},
 		heightm: 1.8,
 		weightkg: 75,
 		color: "Purple",
@@ -3430,8 +3430,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 170,
 		name: "Chinchou",
 		types: ["Water", "Electric"],
-		baseStats: { hp: 75, atk: 38, def: 38, spa: 56, spd: 56, spe: 67 },
-		abilities: { 0: "Volt Absorb", 1: "Illuminate", H: "Water Absorb" },
+		baseStats: {hp: 75, atk: 38, def: 38, spa: 56, spd: 56, spe: 67},
+		abilities: {0: "Volt Absorb", 1: "Illuminate", H: "Water Absorb"},
 		heightm: 0.5,
 		weightkg: 12,
 		color: "Blue",
@@ -3442,8 +3442,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 171,
 		name: "Lanturn",
 		types: ["Water", "Electric"],
-		baseStats: { hp: 125, atk: 58, def: 58, spa: 76, spd: 76, spe: 67 },
-		abilities: { 0: "Volt Absorb", 1: "Illuminate", H: "Water Absorb" },
+		baseStats: {hp: 125, atk: 58, def: 58, spa: 76, spd: 76, spe: 67},
+		abilities: {0: "Volt Absorb", 1: "Illuminate", H: "Water Absorb"},
 		heightm: 1.2,
 		weightkg: 22.5,
 		color: "Blue",
@@ -3455,8 +3455,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 172,
 		name: "Pichu",
 		types: ["Electric"],
-		baseStats: { hp: 20, atk: 40, def: 15, spa: 35, spd: 35, spe: 60 },
-		abilities: { 0: "Static", H: "Lightning Rod" },
+		baseStats: {hp: 20, atk: 40, def: 15, spa: 35, spd: 35, spe: 60},
+		abilities: {0: "Static", H: "Lightning Rod"},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Yellow",
@@ -3472,8 +3472,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Pichu",
 		forme: "Spiky-eared",
 		types: ["Electric"],
-		baseStats: { hp: 20, atk: 40, def: 15, spa: 35, spd: 35, spe: 60 },
-		abilities: { 0: "Static" },
+		baseStats: {hp: 20, atk: 40, def: 15, spa: 35, spd: 35, spe: 60},
+		abilities: {0: "Static"},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Yellow",
@@ -3484,9 +3484,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 173,
 		name: "Cleffa",
 		types: ["Fairy"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 50, atk: 25, def: 28, spa: 45, spd: 55, spe: 15 },
-		abilities: { 0: "Cute Charm", 1: "Magic Guard", H: "Friend Guard" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 50, atk: 25, def: 28, spa: 45, spd: 55, spe: 15},
+		abilities: {0: "Cute Charm", 1: "Magic Guard", H: "Friend Guard"},
 		heightm: 0.3,
 		weightkg: 3,
 		color: "Pink",
@@ -3498,9 +3498,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 174,
 		name: "Igglybuff",
 		types: ["Normal", "Fairy"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 90, atk: 30, def: 15, spa: 40, spd: 20, spe: 15 },
-		abilities: { 0: "Cute Charm", 1: "Competitive", H: "Friend Guard" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 90, atk: 30, def: 15, spa: 40, spd: 20, spe: 15},
+		abilities: {0: "Cute Charm", 1: "Competitive", H: "Friend Guard"},
 		heightm: 0.3,
 		weightkg: 1,
 		color: "Pink",
@@ -3512,9 +3512,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 175,
 		name: "Togepi",
 		types: ["Fairy"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 35, atk: 20, def: 65, spa: 40, spd: 65, spe: 20 },
-		abilities: { 0: "Hustle", 1: "Serene Grace", H: "Super Luck" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 35, atk: 20, def: 65, spa: 40, spd: 65, spe: 20},
+		abilities: {0: "Hustle", 1: "Serene Grace", H: "Super Luck"},
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "White",
@@ -3526,9 +3526,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 176,
 		name: "Togetic",
 		types: ["Fairy", "Flying"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 55, atk: 40, def: 85, spa: 80, spd: 105, spe: 40 },
-		abilities: { 0: "Hustle", 1: "Serene Grace", H: "Super Luck" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 55, atk: 40, def: 85, spa: 80, spd: 105, spe: 40},
+		abilities: {0: "Hustle", 1: "Serene Grace", H: "Super Luck"},
 		heightm: 0.6,
 		weightkg: 3.2,
 		color: "White",
@@ -3541,8 +3541,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 177,
 		name: "Natu",
 		types: ["Psychic", "Flying"],
-		baseStats: { hp: 40, atk: 50, def: 45, spa: 70, spd: 45, spe: 70 },
-		abilities: { 0: "Synchronize", 1: "Early Bird", H: "Magic Bounce" },
+		baseStats: {hp: 40, atk: 50, def: 45, spa: 70, spd: 45, spe: 70},
+		abilities: {0: "Synchronize", 1: "Early Bird", H: "Magic Bounce"},
 		heightm: 0.2,
 		weightkg: 2,
 		color: "Green",
@@ -3553,8 +3553,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 178,
 		name: "Xatu",
 		types: ["Psychic", "Flying"],
-		baseStats: { hp: 65, atk: 75, def: 70, spa: 95, spd: 70, spe: 95 },
-		abilities: { 0: "Synchronize", 1: "Early Bird", H: "Magic Bounce" },
+		baseStats: {hp: 65, atk: 75, def: 70, spa: 95, spd: 70, spe: 95},
+		abilities: {0: "Synchronize", 1: "Early Bird", H: "Magic Bounce"},
 		heightm: 1.5,
 		weightkg: 15,
 		color: "Green",
@@ -3566,8 +3566,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 179,
 		name: "Mareep",
 		types: ["Electric"],
-		baseStats: { hp: 55, atk: 40, def: 40, spa: 65, spd: 45, spe: 35 },
-		abilities: { 0: "Static", H: "Plus" },
+		baseStats: {hp: 55, atk: 40, def: 40, spa: 65, spd: 45, spe: 35},
+		abilities: {0: "Static", H: "Plus"},
 		heightm: 0.6,
 		weightkg: 7.8,
 		color: "White",
@@ -3578,8 +3578,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 180,
 		name: "Flaaffy",
 		types: ["Electric"],
-		baseStats: { hp: 70, atk: 55, def: 55, spa: 80, spd: 60, spe: 45 },
-		abilities: { 0: "Static", H: "Plus" },
+		baseStats: {hp: 70, atk: 55, def: 55, spa: 80, spd: 60, spe: 45},
+		abilities: {0: "Static", H: "Plus"},
 		heightm: 0.8,
 		weightkg: 13.3,
 		color: "Pink",
@@ -3592,8 +3592,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 181,
 		name: "Ampharos",
 		types: ["Electric"],
-		baseStats: { hp: 90, atk: 75, def: 85, spa: 115, spd: 90, spe: 55 },
-		abilities: { 0: "Static", H: "Plus" },
+		baseStats: {hp: 90, atk: 75, def: 85, spa: 115, spd: 90, spe: 55},
+		abilities: {0: "Static", H: "Plus"},
 		heightm: 1.4,
 		weightkg: 61.5,
 		color: "Yellow",
@@ -3609,8 +3609,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Ampharos",
 		forme: "Mega",
 		types: ["Electric", "Dragon"],
-		baseStats: { hp: 90, atk: 95, def: 105, spa: 165, spd: 110, spe: 45 },
-		abilities: { 0: "Mold Breaker" },
+		baseStats: {hp: 90, atk: 95, def: 105, spa: 165, spd: 110, spe: 45},
+		abilities: {0: "Mold Breaker"},
 		heightm: 1.4,
 		weightkg: 61.5,
 		color: "Yellow",
@@ -3621,8 +3621,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 182,
 		name: "Bellossom",
 		types: ["Grass"],
-		baseStats: { hp: 75, atk: 80, def: 95, spa: 90, spd: 100, spe: 50 },
-		abilities: { 0: "Chlorophyll", H: "Healer" },
+		baseStats: {hp: 75, atk: 80, def: 95, spa: 90, spd: 100, spe: 50},
+		abilities: {0: "Chlorophyll", H: "Healer"},
 		heightm: 0.4,
 		weightkg: 5.8,
 		color: "Green",
@@ -3635,8 +3635,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 183,
 		name: "Marill",
 		types: ["Water", "Fairy"],
-		baseStats: { hp: 70, atk: 20, def: 50, spa: 20, spd: 50, spe: 40 },
-		abilities: { 0: "Thick Fat", 1: "Huge Power", H: "Sap Sipper" },
+		baseStats: {hp: 70, atk: 20, def: 50, spa: 20, spd: 50, spe: 40},
+		abilities: {0: "Thick Fat", 1: "Huge Power", H: "Sap Sipper"},
 		heightm: 0.4,
 		weightkg: 8.5,
 		color: "Blue",
@@ -3650,8 +3650,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 184,
 		name: "Azumarill",
 		types: ["Water", "Fairy"],
-		baseStats: { hp: 100, atk: 50, def: 80, spa: 60, spd: 80, spe: 50 },
-		abilities: { 0: "Thick Fat", 1: "Huge Power", H: "Sap Sipper" },
+		baseStats: {hp: 100, atk: 50, def: 80, spa: 60, spd: 80, spe: 50},
+		abilities: {0: "Thick Fat", 1: "Huge Power", H: "Sap Sipper"},
 		heightm: 0.8,
 		weightkg: 28.5,
 		color: "Blue",
@@ -3663,8 +3663,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 185,
 		name: "Sudowoodo",
 		types: ["Rock"],
-		baseStats: { hp: 70, atk: 100, def: 115, spa: 30, spd: 65, spe: 30 },
-		abilities: { 0: "Sturdy", 1: "Rock Head", H: "Rattled" },
+		baseStats: {hp: 70, atk: 100, def: 115, spa: 30, spd: 65, spe: 30},
+		abilities: {0: "Sturdy", 1: "Rock Head", H: "Rattled"},
 		heightm: 1.2,
 		weightkg: 38,
 		color: "Brown",
@@ -3678,8 +3678,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 186,
 		name: "Politoed",
 		types: ["Water"],
-		baseStats: { hp: 90, atk: 75, def: 75, spa: 90, spd: 100, spe: 70 },
-		abilities: { 0: "Water Absorb", 1: "Damp", H: "Drizzle" },
+		baseStats: {hp: 90, atk: 75, def: 75, spa: 90, spd: 100, spe: 70},
+		abilities: {0: "Water Absorb", 1: "Damp", H: "Drizzle"},
 		heightm: 1.1,
 		weightkg: 33.9,
 		color: "Green",
@@ -3692,8 +3692,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 187,
 		name: "Hoppip",
 		types: ["Grass", "Flying"],
-		baseStats: { hp: 35, atk: 35, def: 40, spa: 35, spd: 55, spe: 50 },
-		abilities: { 0: "Chlorophyll", 1: "Leaf Guard", H: "Infiltrator" },
+		baseStats: {hp: 35, atk: 35, def: 40, spa: 35, spd: 55, spe: 50},
+		abilities: {0: "Chlorophyll", 1: "Leaf Guard", H: "Infiltrator"},
 		heightm: 0.4,
 		weightkg: 0.5,
 		color: "Pink",
@@ -3704,8 +3704,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 188,
 		name: "Skiploom",
 		types: ["Grass", "Flying"],
-		baseStats: { hp: 55, atk: 45, def: 50, spa: 45, spd: 65, spe: 80 },
-		abilities: { 0: "Chlorophyll", 1: "Leaf Guard", H: "Infiltrator" },
+		baseStats: {hp: 55, atk: 45, def: 50, spa: 45, spd: 65, spe: 80},
+		abilities: {0: "Chlorophyll", 1: "Leaf Guard", H: "Infiltrator"},
 		heightm: 0.6,
 		weightkg: 1,
 		color: "Green",
@@ -3718,8 +3718,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 189,
 		name: "Jumpluff",
 		types: ["Grass", "Flying"],
-		baseStats: { hp: 75, atk: 55, def: 70, spa: 55, spd: 95, spe: 110 },
-		abilities: { 0: "Chlorophyll", 1: "Leaf Guard", H: "Infiltrator" },
+		baseStats: {hp: 75, atk: 55, def: 70, spa: 55, spd: 95, spe: 110},
+		abilities: {0: "Chlorophyll", 1: "Leaf Guard", H: "Infiltrator"},
 		heightm: 0.8,
 		weightkg: 3,
 		color: "Blue",
@@ -3731,8 +3731,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 190,
 		name: "Aipom",
 		types: ["Normal"],
-		baseStats: { hp: 55, atk: 70, def: 55, spa: 40, spd: 55, spe: 85 },
-		abilities: { 0: "Run Away", 1: "Pickup", H: "Skill Link" },
+		baseStats: {hp: 55, atk: 70, def: 55, spa: 40, spd: 55, spe: 85},
+		abilities: {0: "Run Away", 1: "Pickup", H: "Skill Link"},
 		heightm: 0.8,
 		weightkg: 11.5,
 		color: "Purple",
@@ -3743,8 +3743,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 191,
 		name: "Sunkern",
 		types: ["Grass"],
-		baseStats: { hp: 30, atk: 30, def: 30, spa: 30, spd: 30, spe: 30 },
-		abilities: { 0: "Chlorophyll", 1: "Solar Power", H: "Early Bird" },
+		baseStats: {hp: 30, atk: 30, def: 30, spa: 30, spd: 30, spe: 30},
+		abilities: {0: "Chlorophyll", 1: "Solar Power", H: "Early Bird"},
 		heightm: 0.3,
 		weightkg: 1.8,
 		color: "Yellow",
@@ -3755,8 +3755,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 192,
 		name: "Sunflora",
 		types: ["Grass"],
-		baseStats: { hp: 75, atk: 75, def: 55, spa: 105, spd: 85, spe: 30 },
-		abilities: { 0: "Chlorophyll", 1: "Solar Power", H: "Early Bird" },
+		baseStats: {hp: 75, atk: 75, def: 55, spa: 105, spd: 85, spe: 30},
+		abilities: {0: "Chlorophyll", 1: "Solar Power", H: "Early Bird"},
 		heightm: 0.8,
 		weightkg: 8.5,
 		color: "Yellow",
@@ -3769,8 +3769,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 193,
 		name: "Yanma",
 		types: ["Bug", "Flying"],
-		baseStats: { hp: 65, atk: 65, def: 45, spa: 75, spd: 45, spe: 95 },
-		abilities: { 0: "Speed Boost", 1: "Compound Eyes", H: "Frisk" },
+		baseStats: {hp: 65, atk: 65, def: 45, spa: 75, spd: 45, spe: 95},
+		abilities: {0: "Speed Boost", 1: "Compound Eyes", H: "Frisk"},
 		heightm: 1.2,
 		weightkg: 38,
 		color: "Red",
@@ -3781,8 +3781,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 194,
 		name: "Wooper",
 		types: ["Water", "Ground"],
-		baseStats: { hp: 55, atk: 45, def: 45, spa: 25, spd: 25, spe: 15 },
-		abilities: { 0: "Damp", 1: "Water Absorb", H: "Unaware" },
+		baseStats: {hp: 55, atk: 45, def: 45, spa: 25, spd: 25, spe: 15},
+		abilities: {0: "Damp", 1: "Water Absorb", H: "Unaware"},
 		heightm: 0.4,
 		weightkg: 8.5,
 		color: "Blue",
@@ -3793,8 +3793,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 195,
 		name: "Quagsire",
 		types: ["Water", "Ground"],
-		baseStats: { hp: 95, atk: 85, def: 85, spa: 65, spd: 65, spe: 35 },
-		abilities: { 0: "Damp", 1: "Water Absorb", H: "Unaware" },
+		baseStats: {hp: 95, atk: 85, def: 85, spa: 65, spd: 65, spe: 35},
+		abilities: {0: "Damp", 1: "Water Absorb", H: "Unaware"},
 		heightm: 1.4,
 		weightkg: 75,
 		color: "Blue",
@@ -3806,9 +3806,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 196,
 		name: "Espeon",
 		types: ["Psychic"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 65, atk: 65, def: 60, spa: 130, spd: 95, spe: 110 },
-		abilities: { 0: "Synchronize", H: "Magic Bounce" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 65, atk: 65, def: 60, spa: 130, spd: 95, spe: 110},
+		abilities: {0: "Synchronize", H: "Magic Bounce"},
 		heightm: 0.9,
 		weightkg: 26.5,
 		color: "Purple",
@@ -3821,9 +3821,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 197,
 		name: "Umbreon",
 		types: ["Dark"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 95, atk: 65, def: 110, spa: 60, spd: 130, spe: 65 },
-		abilities: { 0: "Synchronize", H: "Inner Focus" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 95, atk: 65, def: 110, spa: 60, spd: 130, spe: 65},
+		abilities: {0: "Synchronize", H: "Inner Focus"},
 		heightm: 1,
 		weightkg: 27,
 		color: "Black",
@@ -3836,8 +3836,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 198,
 		name: "Murkrow",
 		types: ["Dark", "Flying"],
-		baseStats: { hp: 60, atk: 85, def: 42, spa: 85, spd: 42, spe: 91 },
-		abilities: { 0: "Insomnia", 1: "Super Luck", H: "Prankster" },
+		baseStats: {hp: 60, atk: 85, def: 42, spa: 85, spd: 42, spe: 91},
+		abilities: {0: "Insomnia", 1: "Super Luck", H: "Prankster"},
 		heightm: 0.5,
 		weightkg: 2.1,
 		color: "Black",
@@ -3848,8 +3848,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 199,
 		name: "Slowking",
 		types: ["Water", "Psychic"],
-		baseStats: { hp: 95, atk: 75, def: 80, spa: 100, spd: 110, spe: 30 },
-		abilities: { 0: "Oblivious", 1: "Own Tempo", H: "Regenerator" },
+		baseStats: {hp: 95, atk: 75, def: 80, spa: 100, spd: 110, spe: 30},
+		abilities: {0: "Oblivious", 1: "Own Tempo", H: "Regenerator"},
 		heightm: 2,
 		weightkg: 79.5,
 		color: "Pink",
@@ -3866,8 +3866,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Slowking",
 		forme: "Galar",
 		types: ["Poison", "Psychic"],
-		baseStats: { hp: 95, atk: 65, def: 80, spa: 110, spd: 110, spe: 30 },
-		abilities: { 0: "Curious Medicine", 1: "Own Tempo", H: "Regenerator" },
+		baseStats: {hp: 95, atk: 65, def: 80, spa: 110, spd: 110, spe: 30},
+		abilities: {0: "Curious Medicine", 1: "Own Tempo", H: "Regenerator"},
 		heightm: 1.8,
 		weightkg: 79.5,
 		color: "Pink",
@@ -3880,8 +3880,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 200,
 		name: "Misdreavus",
 		types: ["Ghost"],
-		baseStats: { hp: 60, atk: 60, def: 60, spa: 85, spd: 85, spe: 85 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 60, atk: 60, def: 60, spa: 85, spd: 85, spe: 85},
+		abilities: {0: "Levitate"},
 		heightm: 0.7,
 		weightkg: 1,
 		color: "Gray",
@@ -3894,8 +3894,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "A",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 48, atk: 72, def: 48, spa: 72, spd: 48, spe: 48 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 48, atk: 72, def: 48, spa: 72, spd: 48, spe: 48},
+		abilities: {0: "Levitate"},
 		heightm: 0.5,
 		weightkg: 5,
 		color: "Black",
@@ -3907,8 +3907,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 202,
 		name: "Wobbuffet",
 		types: ["Psychic"],
-		baseStats: { hp: 190, atk: 33, def: 58, spa: 33, spd: 58, spe: 33 },
-		abilities: { 0: "Shadow Tag", H: "Telepathy" },
+		baseStats: {hp: 190, atk: 33, def: 58, spa: 33, spd: 58, spe: 33},
+		abilities: {0: "Shadow Tag", H: "Telepathy"},
 		heightm: 1.3,
 		weightkg: 28.5,
 		color: "Blue",
@@ -3921,8 +3921,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 203,
 		name: "Girafarig",
 		types: ["Normal", "Psychic"],
-		baseStats: { hp: 70, atk: 80, def: 65, spa: 90, spd: 65, spe: 85 },
-		abilities: { 0: "Inner Focus", 1: "Early Bird", H: "Sap Sipper" },
+		baseStats: {hp: 70, atk: 80, def: 65, spa: 90, spd: 65, spe: 85},
+		abilities: {0: "Inner Focus", 1: "Early Bird", H: "Sap Sipper"},
 		heightm: 1.5,
 		weightkg: 41.5,
 		color: "Yellow",
@@ -3932,8 +3932,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 204,
 		name: "Pineco",
 		types: ["Bug"],
-		baseStats: { hp: 50, atk: 65, def: 90, spa: 35, spd: 35, spe: 15 },
-		abilities: { 0: "Sturdy", H: "Overcoat" },
+		baseStats: {hp: 50, atk: 65, def: 90, spa: 35, spd: 35, spe: 15},
+		abilities: {0: "Sturdy", H: "Overcoat"},
 		heightm: 0.6,
 		weightkg: 7.2,
 		color: "Gray",
@@ -3944,8 +3944,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 205,
 		name: "Forretress",
 		types: ["Bug", "Steel"],
-		baseStats: { hp: 75, atk: 90, def: 140, spa: 60, spd: 60, spe: 40 },
-		abilities: { 0: "Sturdy", H: "Overcoat" },
+		baseStats: {hp: 75, atk: 90, def: 140, spa: 60, spd: 60, spe: 40},
+		abilities: {0: "Sturdy", H: "Overcoat"},
 		heightm: 1.2,
 		weightkg: 125.8,
 		color: "Purple",
@@ -3957,8 +3957,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 206,
 		name: "Dunsparce",
 		types: ["Normal"],
-		baseStats: { hp: 100, atk: 70, def: 70, spa: 65, spd: 65, spe: 45 },
-		abilities: { 0: "Serene Grace", 1: "Run Away", H: "Rattled" },
+		baseStats: {hp: 100, atk: 70, def: 70, spa: 65, spd: 65, spe: 45},
+		abilities: {0: "Serene Grace", 1: "Run Away", H: "Rattled"},
 		heightm: 1.5,
 		weightkg: 14,
 		color: "Yellow",
@@ -3968,8 +3968,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 207,
 		name: "Gligar",
 		types: ["Ground", "Flying"],
-		baseStats: { hp: 65, atk: 75, def: 105, spa: 35, spd: 65, spe: 85 },
-		abilities: { 0: "Hyper Cutter", 1: "Sand Veil", H: "Immunity" },
+		baseStats: {hp: 65, atk: 75, def: 105, spa: 35, spd: 65, spe: 85},
+		abilities: {0: "Hyper Cutter", 1: "Sand Veil", H: "Immunity"},
 		heightm: 1.1,
 		weightkg: 64.8,
 		color: "Purple",
@@ -3980,8 +3980,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 208,
 		name: "Steelix",
 		types: ["Steel", "Ground"],
-		baseStats: { hp: 75, atk: 85, def: 200, spa: 55, spd: 65, spe: 30 },
-		abilities: { 0: "Rock Head", 1: "Sturdy", H: "Sheer Force" },
+		baseStats: {hp: 75, atk: 85, def: 200, spa: 55, spd: 65, spe: 30},
+		abilities: {0: "Rock Head", 1: "Sturdy", H: "Sheer Force"},
 		heightm: 9.2,
 		weightkg: 400,
 		color: "Gray",
@@ -3998,8 +3998,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Steelix",
 		forme: "Mega",
 		types: ["Steel", "Ground"],
-		baseStats: { hp: 75, atk: 125, def: 230, spa: 55, spd: 95, spe: 30 },
-		abilities: { 0: "Sand Force" },
+		baseStats: {hp: 75, atk: 125, def: 230, spa: 55, spd: 95, spe: 30},
+		abilities: {0: "Sand Force"},
 		heightm: 10.5,
 		weightkg: 740,
 		color: "Gray",
@@ -4010,9 +4010,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 209,
 		name: "Snubbull",
 		types: ["Fairy"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 60, atk: 80, def: 50, spa: 40, spd: 40, spe: 30 },
-		abilities: { 0: "Intimidate", 1: "Run Away", H: "Rattled" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 60, atk: 80, def: 50, spa: 40, spd: 40, spe: 30},
+		abilities: {0: "Intimidate", 1: "Run Away", H: "Rattled"},
 		heightm: 0.6,
 		weightkg: 7.8,
 		color: "Pink",
@@ -4023,9 +4023,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 210,
 		name: "Granbull",
 		types: ["Fairy"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 90, atk: 120, def: 75, spa: 60, spd: 60, spe: 45 },
-		abilities: { 0: "Intimidate", 1: "Quick Feet", H: "Rattled" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 90, atk: 120, def: 75, spa: 60, spd: 60, spe: 45},
+		abilities: {0: "Intimidate", 1: "Quick Feet", H: "Rattled"},
 		heightm: 1.4,
 		weightkg: 48.7,
 		color: "Purple",
@@ -4037,8 +4037,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 211,
 		name: "Qwilfish",
 		types: ["Water", "Poison"],
-		baseStats: { hp: 65, atk: 95, def: 85, spa: 55, spd: 55, spe: 85 },
-		abilities: { 0: "Poison Point", 1: "Swift Swim", H: "Intimidate" },
+		baseStats: {hp: 65, atk: 95, def: 85, spa: 55, spd: 55, spe: 85},
+		abilities: {0: "Poison Point", 1: "Swift Swim", H: "Intimidate"},
 		heightm: 0.5,
 		weightkg: 3.9,
 		color: "Gray",
@@ -4048,8 +4048,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 212,
 		name: "Scizor",
 		types: ["Bug", "Steel"],
-		baseStats: { hp: 70, atk: 130, def: 100, spa: 55, spd: 80, spe: 65 },
-		abilities: { 0: "Swarm", 1: "Technician", H: "Light Metal" },
+		baseStats: {hp: 70, atk: 130, def: 100, spa: 55, spd: 80, spe: 65},
+		abilities: {0: "Swarm", 1: "Technician", H: "Light Metal"},
 		heightm: 1.8,
 		weightkg: 118,
 		color: "Red",
@@ -4066,8 +4066,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Scizor",
 		forme: "Mega",
 		types: ["Bug", "Steel"],
-		baseStats: { hp: 70, atk: 150, def: 140, spa: 65, spd: 100, spe: 75 },
-		abilities: { 0: "Technician" },
+		baseStats: {hp: 70, atk: 150, def: 140, spa: 65, spd: 100, spe: 75},
+		abilities: {0: "Technician"},
 		heightm: 2,
 		weightkg: 125,
 		color: "Red",
@@ -4078,8 +4078,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 213,
 		name: "Shuckle",
 		types: ["Bug", "Rock"],
-		baseStats: { hp: 20, atk: 10, def: 230, spa: 10, spd: 230, spe: 5 },
-		abilities: { 0: "Sturdy", 1: "Gluttony", H: "Contrary" },
+		baseStats: {hp: 20, atk: 10, def: 230, spa: 10, spd: 230, spe: 5},
+		abilities: {0: "Sturdy", 1: "Gluttony", H: "Contrary"},
 		heightm: 0.6,
 		weightkg: 20.5,
 		color: "Yellow",
@@ -4089,8 +4089,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 214,
 		name: "Heracross",
 		types: ["Bug", "Fighting"],
-		baseStats: { hp: 80, atk: 125, def: 75, spa: 40, spd: 95, spe: 85 },
-		abilities: { 0: "Swarm", 1: "Guts", H: "Moxie" },
+		baseStats: {hp: 80, atk: 125, def: 75, spa: 40, spd: 95, spe: 85},
+		abilities: {0: "Swarm", 1: "Guts", H: "Moxie"},
 		heightm: 1.5,
 		weightkg: 54,
 		color: "Blue",
@@ -4104,8 +4104,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Heracross",
 		forme: "Mega",
 		types: ["Bug", "Fighting"],
-		baseStats: { hp: 80, atk: 185, def: 115, spa: 40, spd: 105, spe: 75 },
-		abilities: { 0: "Skill Link" },
+		baseStats: {hp: 80, atk: 185, def: 115, spa: 40, spd: 105, spe: 75},
+		abilities: {0: "Skill Link"},
 		heightm: 1.7,
 		weightkg: 62.5,
 		color: "Blue",
@@ -4116,8 +4116,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 215,
 		name: "Sneasel",
 		types: ["Dark", "Ice"],
-		baseStats: { hp: 55, atk: 95, def: 55, spa: 35, spd: 75, spe: 115 },
-		abilities: { 0: "Inner Focus", 1: "Keen Eye", H: "Pickpocket" },
+		baseStats: {hp: 55, atk: 95, def: 55, spa: 35, spd: 75, spe: 115},
+		abilities: {0: "Inner Focus", 1: "Keen Eye", H: "Pickpocket"},
 		heightm: 0.9,
 		weightkg: 28,
 		color: "Black",
@@ -4128,8 +4128,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 216,
 		name: "Teddiursa",
 		types: ["Normal"],
-		baseStats: { hp: 60, atk: 80, def: 50, spa: 50, spd: 50, spe: 40 },
-		abilities: { 0: "Pickup", 1: "Quick Feet", H: "Honey Gather" },
+		baseStats: {hp: 60, atk: 80, def: 50, spa: 50, spd: 50, spe: 40},
+		abilities: {0: "Pickup", 1: "Quick Feet", H: "Honey Gather"},
 		heightm: 0.6,
 		weightkg: 8.8,
 		color: "Brown",
@@ -4140,8 +4140,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 217,
 		name: "Ursaring",
 		types: ["Normal"],
-		baseStats: { hp: 90, atk: 130, def: 75, spa: 75, spd: 75, spe: 55 },
-		abilities: { 0: "Guts", 1: "Quick Feet", H: "Unnerve" },
+		baseStats: {hp: 90, atk: 130, def: 75, spa: 75, spd: 75, spe: 55},
+		abilities: {0: "Guts", 1: "Quick Feet", H: "Unnerve"},
 		heightm: 1.8,
 		weightkg: 125.8,
 		color: "Brown",
@@ -4153,8 +4153,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 218,
 		name: "Slugma",
 		types: ["Fire"],
-		baseStats: { hp: 40, atk: 40, def: 40, spa: 70, spd: 40, spe: 20 },
-		abilities: { 0: "Magma Armor", 1: "Flame Body", H: "Weak Armor" },
+		baseStats: {hp: 40, atk: 40, def: 40, spa: 70, spd: 40, spe: 20},
+		abilities: {0: "Magma Armor", 1: "Flame Body", H: "Weak Armor"},
 		heightm: 0.7,
 		weightkg: 35,
 		color: "Red",
@@ -4165,8 +4165,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 219,
 		name: "Magcargo",
 		types: ["Fire", "Rock"],
-		baseStats: { hp: 60, atk: 50, def: 120, spa: 90, spd: 80, spe: 30 },
-		abilities: { 0: "Magma Armor", 1: "Flame Body", H: "Weak Armor" },
+		baseStats: {hp: 60, atk: 50, def: 120, spa: 90, spd: 80, spe: 30},
+		abilities: {0: "Magma Armor", 1: "Flame Body", H: "Weak Armor"},
 		heightm: 0.8,
 		weightkg: 55,
 		color: "Red",
@@ -4178,8 +4178,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 220,
 		name: "Swinub",
 		types: ["Ice", "Ground"],
-		baseStats: { hp: 50, atk: 50, def: 40, spa: 30, spd: 30, spe: 50 },
-		abilities: { 0: "Oblivious", 1: "Snow Cloak", H: "Thick Fat" },
+		baseStats: {hp: 50, atk: 50, def: 40, spa: 30, spd: 30, spe: 50},
+		abilities: {0: "Oblivious", 1: "Snow Cloak", H: "Thick Fat"},
 		heightm: 0.4,
 		weightkg: 6.5,
 		color: "Brown",
@@ -4190,8 +4190,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 221,
 		name: "Piloswine",
 		types: ["Ice", "Ground"],
-		baseStats: { hp: 100, atk: 100, def: 80, spa: 60, spd: 60, spe: 50 },
-		abilities: { 0: "Oblivious", 1: "Snow Cloak", H: "Thick Fat" },
+		baseStats: {hp: 100, atk: 100, def: 80, spa: 60, spd: 60, spe: 50},
+		abilities: {0: "Oblivious", 1: "Snow Cloak", H: "Thick Fat"},
 		heightm: 1.1,
 		weightkg: 55.8,
 		color: "Brown",
@@ -4204,9 +4204,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 222,
 		name: "Corsola",
 		types: ["Water", "Rock"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 65, atk: 55, def: 95, spa: 65, spd: 95, spe: 35 },
-		abilities: { 0: "Hustle", 1: "Natural Cure", H: "Regenerator" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 65, atk: 55, def: 95, spa: 65, spd: 95, spe: 35},
+		abilities: {0: "Hustle", 1: "Natural Cure", H: "Regenerator"},
 		heightm: 0.6,
 		weightkg: 5,
 		color: "Pink",
@@ -4220,9 +4220,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Corsola",
 		forme: "Galar",
 		types: ["Ghost"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 60, atk: 55, def: 100, spa: 65, spd: 100, spe: 30 },
-		abilities: { 0: "Weak Armor", H: "Cursed Body" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 60, atk: 55, def: 100, spa: 65, spd: 100, spe: 30},
+		abilities: {0: "Weak Armor", H: "Cursed Body"},
 		heightm: 0.6,
 		weightkg: 0.5,
 		color: "White",
@@ -4233,8 +4233,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 223,
 		name: "Remoraid",
 		types: ["Water"],
-		baseStats: { hp: 35, atk: 65, def: 35, spa: 65, spd: 35, spe: 65 },
-		abilities: { 0: "Hustle", 1: "Sniper", H: "Moody" },
+		baseStats: {hp: 35, atk: 65, def: 35, spa: 65, spd: 35, spe: 65},
+		abilities: {0: "Hustle", 1: "Sniper", H: "Moody"},
 		heightm: 0.6,
 		weightkg: 12,
 		color: "Gray",
@@ -4245,8 +4245,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 224,
 		name: "Octillery",
 		types: ["Water"],
-		baseStats: { hp: 75, atk: 105, def: 75, spa: 105, spd: 75, spe: 45 },
-		abilities: { 0: "Suction Cups", 1: "Sniper", H: "Moody" },
+		baseStats: {hp: 75, atk: 105, def: 75, spa: 105, spd: 75, spe: 45},
+		abilities: {0: "Suction Cups", 1: "Sniper", H: "Moody"},
 		heightm: 0.9,
 		weightkg: 28.5,
 		color: "Red",
@@ -4258,8 +4258,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 225,
 		name: "Delibird",
 		types: ["Ice", "Flying"],
-		baseStats: { hp: 45, atk: 55, def: 45, spa: 65, spd: 45, spe: 75 },
-		abilities: { 0: "Vital Spirit", 1: "Hustle", H: "Insomnia" },
+		baseStats: {hp: 45, atk: 55, def: 45, spa: 65, spd: 45, spe: 75},
+		abilities: {0: "Vital Spirit", 1: "Hustle", H: "Insomnia"},
 		heightm: 0.9,
 		weightkg: 16,
 		color: "Red",
@@ -4269,8 +4269,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 226,
 		name: "Mantine",
 		types: ["Water", "Flying"],
-		baseStats: { hp: 85, atk: 40, def: 70, spa: 80, spd: 140, spe: 70 },
-		abilities: { 0: "Swift Swim", 1: "Water Absorb", H: "Water Veil" },
+		baseStats: {hp: 85, atk: 40, def: 70, spa: 80, spd: 140, spe: 70},
+		abilities: {0: "Swift Swim", 1: "Water Absorb", H: "Water Veil"},
 		heightm: 2.1,
 		weightkg: 220,
 		color: "Purple",
@@ -4284,8 +4284,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 227,
 		name: "Skarmory",
 		types: ["Steel", "Flying"],
-		baseStats: { hp: 65, atk: 80, def: 140, spa: 40, spd: 70, spe: 70 },
-		abilities: { 0: "Keen Eye", 1: "Sturdy", H: "Weak Armor" },
+		baseStats: {hp: 65, atk: 80, def: 140, spa: 40, spd: 70, spe: 70},
+		abilities: {0: "Keen Eye", 1: "Sturdy", H: "Weak Armor"},
 		heightm: 1.7,
 		weightkg: 50.5,
 		color: "Gray",
@@ -4295,8 +4295,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 228,
 		name: "Houndour",
 		types: ["Dark", "Fire"],
-		baseStats: { hp: 45, atk: 60, def: 30, spa: 80, spd: 50, spe: 65 },
-		abilities: { 0: "Early Bird", 1: "Flash Fire", H: "Unnerve" },
+		baseStats: {hp: 45, atk: 60, def: 30, spa: 80, spd: 50, spe: 65},
+		abilities: {0: "Early Bird", 1: "Flash Fire", H: "Unnerve"},
 		heightm: 0.6,
 		weightkg: 10.8,
 		color: "Black",
@@ -4307,8 +4307,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 229,
 		name: "Houndoom",
 		types: ["Dark", "Fire"],
-		baseStats: { hp: 75, atk: 90, def: 50, spa: 110, spd: 80, spe: 95 },
-		abilities: { 0: "Early Bird", 1: "Flash Fire", H: "Unnerve" },
+		baseStats: {hp: 75, atk: 90, def: 50, spa: 110, spd: 80, spe: 95},
+		abilities: {0: "Early Bird", 1: "Flash Fire", H: "Unnerve"},
 		heightm: 1.4,
 		weightkg: 35,
 		color: "Black",
@@ -4324,8 +4324,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Houndoom",
 		forme: "Mega",
 		types: ["Dark", "Fire"],
-		baseStats: { hp: 75, atk: 90, def: 90, spa: 140, spd: 90, spe: 115 },
-		abilities: { 0: "Solar Power" },
+		baseStats: {hp: 75, atk: 90, def: 90, spa: 140, spd: 90, spe: 115},
+		abilities: {0: "Solar Power"},
 		heightm: 1.9,
 		weightkg: 49.5,
 		color: "Black",
@@ -4336,8 +4336,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 230,
 		name: "Kingdra",
 		types: ["Water", "Dragon"],
-		baseStats: { hp: 75, atk: 95, def: 95, spa: 95, spd: 95, spe: 85 },
-		abilities: { 0: "Swift Swim", 1: "Sniper", H: "Damp" },
+		baseStats: {hp: 75, atk: 95, def: 95, spa: 95, spd: 95, spe: 85},
+		abilities: {0: "Swift Swim", 1: "Sniper", H: "Damp"},
 		heightm: 1.8,
 		weightkg: 152,
 		color: "Blue",
@@ -4350,8 +4350,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 231,
 		name: "Phanpy",
 		types: ["Ground"],
-		baseStats: { hp: 90, atk: 60, def: 60, spa: 40, spd: 40, spe: 40 },
-		abilities: { 0: "Pickup", H: "Sand Veil" },
+		baseStats: {hp: 90, atk: 60, def: 60, spa: 40, spd: 40, spe: 40},
+		abilities: {0: "Pickup", H: "Sand Veil"},
 		heightm: 0.5,
 		weightkg: 33.5,
 		color: "Blue",
@@ -4362,8 +4362,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 232,
 		name: "Donphan",
 		types: ["Ground"],
-		baseStats: { hp: 90, atk: 120, def: 120, spa: 60, spd: 60, spe: 50 },
-		abilities: { 0: "Sturdy", H: "Sand Veil" },
+		baseStats: {hp: 90, atk: 120, def: 120, spa: 60, spd: 60, spe: 50},
+		abilities: {0: "Sturdy", H: "Sand Veil"},
 		heightm: 1.1,
 		weightkg: 120,
 		color: "Gray",
@@ -4376,8 +4376,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Porygon2",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: { hp: 85, atk: 80, def: 90, spa: 105, spd: 95, spe: 60 },
-		abilities: { 0: "Trace", 1: "Download", H: "Analytic" },
+		baseStats: {hp: 85, atk: 80, def: 90, spa: 105, spd: 95, spe: 60},
+		abilities: {0: "Trace", 1: "Download", H: "Analytic"},
 		heightm: 0.6,
 		weightkg: 32.5,
 		color: "Red",
@@ -4391,8 +4391,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 234,
 		name: "Stantler",
 		types: ["Normal"],
-		baseStats: { hp: 73, atk: 95, def: 62, spa: 85, spd: 65, spe: 85 },
-		abilities: { 0: "Intimidate", 1: "Frisk", H: "Sap Sipper" },
+		baseStats: {hp: 73, atk: 95, def: 62, spa: 85, spd: 65, spe: 85},
+		abilities: {0: "Intimidate", 1: "Frisk", H: "Sap Sipper"},
 		heightm: 1.4,
 		weightkg: 71.2,
 		color: "Brown",
@@ -4402,8 +4402,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 235,
 		name: "Smeargle",
 		types: ["Normal"],
-		baseStats: { hp: 55, atk: 20, def: 35, spa: 20, spd: 45, spe: 75 },
-		abilities: { 0: "Own Tempo", 1: "Technician", H: "Moody" },
+		baseStats: {hp: 55, atk: 20, def: 35, spa: 20, spd: 45, spe: 75},
+		abilities: {0: "Own Tempo", 1: "Technician", H: "Moody"},
 		heightm: 1.2,
 		weightkg: 58,
 		color: "White",
@@ -4414,8 +4414,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Tyrogue",
 		types: ["Fighting"],
 		gender: "M",
-		baseStats: { hp: 35, atk: 35, def: 35, spa: 35, spd: 35, spe: 35 },
-		abilities: { 0: "Guts", 1: "Steadfast", H: "Vital Spirit" },
+		baseStats: {hp: 35, atk: 35, def: 35, spa: 35, spd: 35, spe: 35},
+		abilities: {0: "Guts", 1: "Steadfast", H: "Vital Spirit"},
 		heightm: 0.7,
 		weightkg: 21,
 		color: "Purple",
@@ -4428,8 +4428,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Hitmontop",
 		types: ["Fighting"],
 		gender: "M",
-		baseStats: { hp: 50, atk: 95, def: 95, spa: 35, spd: 110, spe: 70 },
-		abilities: { 0: "Intimidate", 1: "Technician", H: "Steadfast" },
+		baseStats: {hp: 50, atk: 95, def: 95, spa: 35, spd: 110, spe: 70},
+		abilities: {0: "Intimidate", 1: "Technician", H: "Steadfast"},
 		heightm: 1.4,
 		weightkg: 48,
 		color: "Brown",
@@ -4443,8 +4443,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Smoochum",
 		types: ["Ice", "Psychic"],
 		gender: "F",
-		baseStats: { hp: 45, atk: 30, def: 15, spa: 85, spd: 65, spe: 65 },
-		abilities: { 0: "Oblivious", 1: "Forewarn", H: "Hydration" },
+		baseStats: {hp: 45, atk: 30, def: 15, spa: 85, spd: 65, spe: 65},
+		abilities: {0: "Oblivious", 1: "Forewarn", H: "Hydration"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Pink",
@@ -4456,9 +4456,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 239,
 		name: "Elekid",
 		types: ["Electric"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 45, atk: 63, def: 37, spa: 65, spd: 55, spe: 95 },
-		abilities: { 0: "Static", H: "Vital Spirit" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 45, atk: 63, def: 37, spa: 65, spd: 55, spe: 95},
+		abilities: {0: "Static", H: "Vital Spirit"},
 		heightm: 0.6,
 		weightkg: 23.5,
 		color: "Yellow",
@@ -4470,9 +4470,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 240,
 		name: "Magby",
 		types: ["Fire"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 45, atk: 75, def: 37, spa: 70, spd: 55, spe: 83 },
-		abilities: { 0: "Flame Body", H: "Vital Spirit" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 45, atk: 75, def: 37, spa: 70, spd: 55, spe: 83},
+		abilities: {0: "Flame Body", H: "Vital Spirit"},
 		heightm: 0.7,
 		weightkg: 21.4,
 		color: "Red",
@@ -4485,8 +4485,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Miltank",
 		types: ["Normal"],
 		gender: "F",
-		baseStats: { hp: 95, atk: 80, def: 105, spa: 40, spd: 70, spe: 100 },
-		abilities: { 0: "Thick Fat", 1: "Scrappy", H: "Sap Sipper" },
+		baseStats: {hp: 95, atk: 80, def: 105, spa: 40, spd: 70, spe: 100},
+		abilities: {0: "Thick Fat", 1: "Scrappy", H: "Sap Sipper"},
 		heightm: 1.2,
 		weightkg: 75.5,
 		color: "Pink",
@@ -4497,8 +4497,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Blissey",
 		types: ["Normal"],
 		gender: "F",
-		baseStats: { hp: 255, atk: 10, def: 10, spa: 75, spd: 135, spe: 55 },
-		abilities: { 0: "Natural Cure", 1: "Serene Grace", H: "Healer" },
+		baseStats: {hp: 255, atk: 10, def: 10, spa: 75, spd: 135, spe: 55},
+		abilities: {0: "Natural Cure", 1: "Serene Grace", H: "Healer"},
 		heightm: 1.5,
 		weightkg: 46.8,
 		color: "Pink",
@@ -4511,8 +4511,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Raikou",
 		types: ["Electric"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 85, def: 75, spa: 115, spd: 100, spe: 115 },
-		abilities: { 0: "Pressure", H: "Inner Focus" },
+		baseStats: {hp: 90, atk: 85, def: 75, spa: 115, spd: 100, spe: 115},
+		abilities: {0: "Pressure", H: "Inner Focus"},
 		heightm: 1.9,
 		weightkg: 178,
 		color: "Yellow",
@@ -4523,8 +4523,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Entei",
 		types: ["Fire"],
 		gender: "N",
-		baseStats: { hp: 115, atk: 115, def: 85, spa: 90, spd: 75, spe: 100 },
-		abilities: { 0: "Pressure", H: "Inner Focus" },
+		baseStats: {hp: 115, atk: 115, def: 85, spa: 90, spd: 75, spe: 100},
+		abilities: {0: "Pressure", H: "Inner Focus"},
 		heightm: 2.1,
 		weightkg: 198,
 		color: "Brown",
@@ -4535,8 +4535,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Suicune",
 		types: ["Water"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 75, def: 115, spa: 90, spd: 115, spe: 85 },
-		abilities: { 0: "Pressure", H: "Inner Focus" },
+		baseStats: {hp: 100, atk: 75, def: 115, spa: 90, spd: 115, spe: 85},
+		abilities: {0: "Pressure", H: "Inner Focus"},
 		heightm: 2,
 		weightkg: 187,
 		color: "Blue",
@@ -4546,8 +4546,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 246,
 		name: "Larvitar",
 		types: ["Rock", "Ground"],
-		baseStats: { hp: 50, atk: 64, def: 50, spa: 45, spd: 50, spe: 41 },
-		abilities: { 0: "Guts", H: "Sand Veil" },
+		baseStats: {hp: 50, atk: 64, def: 50, spa: 45, spd: 50, spe: 41},
+		abilities: {0: "Guts", H: "Sand Veil"},
 		heightm: 0.6,
 		weightkg: 72,
 		color: "Green",
@@ -4558,8 +4558,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 247,
 		name: "Pupitar",
 		types: ["Rock", "Ground"],
-		baseStats: { hp: 70, atk: 84, def: 70, spa: 65, spd: 70, spe: 51 },
-		abilities: { 0: "Shed Skin" },
+		baseStats: {hp: 70, atk: 84, def: 70, spa: 65, spd: 70, spe: 51},
+		abilities: {0: "Shed Skin"},
 		heightm: 1.2,
 		weightkg: 152,
 		color: "Gray",
@@ -4572,8 +4572,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 248,
 		name: "Tyranitar",
 		types: ["Rock", "Dark"],
-		baseStats: { hp: 100, atk: 134, def: 110, spa: 95, spd: 100, spe: 61 },
-		abilities: { 0: "Sand Stream", H: "Unnerve" },
+		baseStats: {hp: 100, atk: 134, def: 110, spa: 95, spd: 100, spe: 61},
+		abilities: {0: "Sand Stream", H: "Unnerve"},
 		heightm: 2,
 		weightkg: 202,
 		color: "Green",
@@ -4589,8 +4589,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Tyranitar",
 		forme: "Mega",
 		types: ["Rock", "Dark"],
-		baseStats: { hp: 100, atk: 164, def: 150, spa: 95, spd: 120, spe: 71 },
-		abilities: { 0: "Sand Stream" },
+		baseStats: {hp: 100, atk: 164, def: 150, spa: 95, spd: 120, spe: 71},
+		abilities: {0: "Sand Stream"},
 		heightm: 2.5,
 		weightkg: 255,
 		color: "Green",
@@ -4602,8 +4602,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Lugia",
 		types: ["Psychic", "Flying"],
 		gender: "N",
-		baseStats: { hp: 106, atk: 90, def: 130, spa: 90, spd: 154, spe: 110 },
-		abilities: { 0: "Pressure", H: "Multiscale" },
+		baseStats: {hp: 106, atk: 90, def: 130, spa: 90, spd: 154, spe: 110},
+		abilities: {0: "Pressure", H: "Multiscale"},
 		heightm: 5.2,
 		weightkg: 216,
 		color: "White",
@@ -4614,8 +4614,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Ho-Oh",
 		types: ["Fire", "Flying"],
 		gender: "N",
-		baseStats: { hp: 106, atk: 130, def: 90, spa: 110, spd: 154, spe: 90 },
-		abilities: { 0: "Pressure", H: "Regenerator" },
+		baseStats: {hp: 106, atk: 130, def: 90, spa: 110, spd: 154, spe: 90},
+		abilities: {0: "Pressure", H: "Regenerator"},
 		heightm: 3.8,
 		weightkg: 199,
 		color: "Red",
@@ -4626,8 +4626,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Celebi",
 		types: ["Psychic", "Grass"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Natural Cure" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Natural Cure"},
 		heightm: 0.6,
 		weightkg: 5,
 		color: "Green",
@@ -4637,9 +4637,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 252,
 		name: "Treecko",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 40, atk: 45, def: 35, spa: 65, spd: 55, spe: 70 },
-		abilities: { 0: "Overgrow", H: "Unburden" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 40, atk: 45, def: 35, spa: 65, spd: 55, spe: 70},
+		abilities: {0: "Overgrow", H: "Unburden"},
 		heightm: 0.5,
 		weightkg: 5,
 		color: "Green",
@@ -4650,9 +4650,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 253,
 		name: "Grovyle",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 50, atk: 65, def: 45, spa: 85, spd: 65, spe: 95 },
-		abilities: { 0: "Overgrow", H: "Unburden" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 50, atk: 65, def: 45, spa: 85, spd: 65, spe: 95},
+		abilities: {0: "Overgrow", H: "Unburden"},
 		heightm: 0.9,
 		weightkg: 21.6,
 		color: "Green",
@@ -4665,9 +4665,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 254,
 		name: "Sceptile",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 70, atk: 85, def: 65, spa: 105, spd: 85, spe: 120 },
-		abilities: { 0: "Overgrow", H: "Unburden" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 70, atk: 85, def: 65, spa: 105, spd: 85, spe: 120},
+		abilities: {0: "Overgrow", H: "Unburden"},
 		heightm: 1.7,
 		weightkg: 52.2,
 		color: "Green",
@@ -4683,9 +4683,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Sceptile",
 		forme: "Mega",
 		types: ["Grass", "Dragon"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 70, atk: 110, def: 75, spa: 145, spd: 85, spe: 145 },
-		abilities: { 0: "Lightning Rod" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 70, atk: 110, def: 75, spa: 145, spd: 85, spe: 145},
+		abilities: {0: "Lightning Rod"},
 		heightm: 1.9,
 		weightkg: 55.2,
 		color: "Green",
@@ -4696,9 +4696,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 255,
 		name: "Torchic",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 45, atk: 60, def: 40, spa: 70, spd: 50, spe: 45 },
-		abilities: { 0: "Blaze", H: "Speed Boost" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 45, atk: 60, def: 40, spa: 70, spd: 50, spe: 45},
+		abilities: {0: "Blaze", H: "Speed Boost"},
 		heightm: 0.4,
 		weightkg: 2.5,
 		color: "Red",
@@ -4709,9 +4709,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 256,
 		name: "Combusken",
 		types: ["Fire", "Fighting"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 60, atk: 85, def: 60, spa: 85, spd: 60, spe: 55 },
-		abilities: { 0: "Blaze", H: "Speed Boost" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 60, atk: 85, def: 60, spa: 85, spd: 60, spe: 55},
+		abilities: {0: "Blaze", H: "Speed Boost"},
 		heightm: 0.9,
 		weightkg: 19.5,
 		color: "Red",
@@ -4724,9 +4724,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 257,
 		name: "Blaziken",
 		types: ["Fire", "Fighting"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 80, atk: 120, def: 70, spa: 110, spd: 70, spe: 80 },
-		abilities: { 0: "Blaze", H: "Speed Boost" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 80, atk: 120, def: 70, spa: 110, spd: 70, spe: 80},
+		abilities: {0: "Blaze", H: "Speed Boost"},
 		heightm: 1.9,
 		weightkg: 52,
 		color: "Red",
@@ -4742,9 +4742,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Blaziken",
 		forme: "Mega",
 		types: ["Fire", "Fighting"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 80, atk: 160, def: 80, spa: 130, spd: 80, spe: 100 },
-		abilities: { 0: "Speed Boost" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 80, atk: 160, def: 80, spa: 130, spd: 80, spe: 100},
+		abilities: {0: "Speed Boost"},
 		heightm: 1.9,
 		weightkg: 52,
 		color: "Red",
@@ -4755,9 +4755,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 258,
 		name: "Mudkip",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 50, atk: 70, def: 50, spa: 50, spd: 50, spe: 40 },
-		abilities: { 0: "Torrent", H: "Damp" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 50, atk: 70, def: 50, spa: 50, spd: 50, spe: 40},
+		abilities: {0: "Torrent", H: "Damp"},
 		heightm: 0.4,
 		weightkg: 7.6,
 		color: "Blue",
@@ -4768,9 +4768,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 259,
 		name: "Marshtomp",
 		types: ["Water", "Ground"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 70, atk: 85, def: 70, spa: 60, spd: 70, spe: 50 },
-		abilities: { 0: "Torrent", H: "Damp" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 70, atk: 85, def: 70, spa: 60, spd: 70, spe: 50},
+		abilities: {0: "Torrent", H: "Damp"},
 		heightm: 0.7,
 		weightkg: 28,
 		color: "Blue",
@@ -4783,9 +4783,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 260,
 		name: "Swampert",
 		types: ["Water", "Ground"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 100, atk: 110, def: 90, spa: 85, spd: 90, spe: 60 },
-		abilities: { 0: "Torrent", H: "Damp" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 100, atk: 110, def: 90, spa: 85, spd: 90, spe: 60},
+		abilities: {0: "Torrent", H: "Damp"},
 		heightm: 1.5,
 		weightkg: 81.9,
 		color: "Blue",
@@ -4801,9 +4801,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Swampert",
 		forme: "Mega",
 		types: ["Water", "Ground"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 100, atk: 150, def: 110, spa: 95, spd: 110, spe: 70 },
-		abilities: { 0: "Swift Swim" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 100, atk: 150, def: 110, spa: 95, spd: 110, spe: 70},
+		abilities: {0: "Swift Swim"},
 		heightm: 1.9,
 		weightkg: 102,
 		color: "Blue",
@@ -4814,8 +4814,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 261,
 		name: "Poochyena",
 		types: ["Dark"],
-		baseStats: { hp: 35, atk: 55, def: 35, spa: 30, spd: 30, spe: 35 },
-		abilities: { 0: "Run Away", 1: "Quick Feet", H: "Rattled" },
+		baseStats: {hp: 35, atk: 55, def: 35, spa: 30, spd: 30, spe: 35},
+		abilities: {0: "Run Away", 1: "Quick Feet", H: "Rattled"},
 		heightm: 0.5,
 		weightkg: 13.6,
 		color: "Gray",
@@ -4826,8 +4826,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 262,
 		name: "Mightyena",
 		types: ["Dark"],
-		baseStats: { hp: 70, atk: 90, def: 70, spa: 60, spd: 60, spe: 70 },
-		abilities: { 0: "Intimidate", 1: "Quick Feet", H: "Moxie" },
+		baseStats: {hp: 70, atk: 90, def: 70, spa: 60, spd: 60, spe: 70},
+		abilities: {0: "Intimidate", 1: "Quick Feet", H: "Moxie"},
 		heightm: 1,
 		weightkg: 37,
 		color: "Gray",
@@ -4839,8 +4839,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 263,
 		name: "Zigzagoon",
 		types: ["Normal"],
-		baseStats: { hp: 38, atk: 30, def: 41, spa: 30, spd: 41, spe: 60 },
-		abilities: { 0: "Pickup", 1: "Gluttony", H: "Quick Feet" },
+		baseStats: {hp: 38, atk: 30, def: 41, spa: 30, spd: 41, spe: 60},
+		abilities: {0: "Pickup", 1: "Gluttony", H: "Quick Feet"},
 		heightm: 0.4,
 		weightkg: 17.5,
 		color: "Brown",
@@ -4855,8 +4855,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Zigzagoon",
 		forme: "Galar",
 		types: ["Dark", "Normal"],
-		baseStats: { hp: 38, atk: 30, def: 41, spa: 30, spd: 41, spe: 60 },
-		abilities: { 0: "Pickup", 1: "Gluttony", H: "Quick Feet" },
+		baseStats: {hp: 38, atk: 30, def: 41, spa: 30, spd: 41, spe: 60},
+		abilities: {0: "Pickup", 1: "Gluttony", H: "Quick Feet"},
 		heightm: 0.4,
 		weightkg: 17.5,
 		color: "White",
@@ -4867,8 +4867,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 264,
 		name: "Linoone",
 		types: ["Normal"],
-		baseStats: { hp: 78, atk: 70, def: 61, spa: 50, spd: 61, spe: 100 },
-		abilities: { 0: "Pickup", 1: "Gluttony", H: "Quick Feet" },
+		baseStats: {hp: 78, atk: 70, def: 61, spa: 50, spd: 61, spe: 100},
+		abilities: {0: "Pickup", 1: "Gluttony", H: "Quick Feet"},
 		heightm: 0.5,
 		weightkg: 32.5,
 		color: "White",
@@ -4884,8 +4884,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Linoone",
 		forme: "Galar",
 		types: ["Dark", "Normal"],
-		baseStats: { hp: 78, atk: 70, def: 61, spa: 50, spd: 61, spe: 100 },
-		abilities: { 0: "Pickup", 1: "Gluttony", H: "Quick Feet" },
+		baseStats: {hp: 78, atk: 70, def: 61, spa: 50, spd: 61, spe: 100},
+		abilities: {0: "Pickup", 1: "Gluttony", H: "Quick Feet"},
 		heightm: 0.5,
 		weightkg: 32.5,
 		color: "White",
@@ -4898,8 +4898,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 265,
 		name: "Wurmple",
 		types: ["Bug"],
-		baseStats: { hp: 45, atk: 45, def: 35, spa: 20, spd: 30, spe: 20 },
-		abilities: { 0: "Shield Dust", H: "Run Away" },
+		baseStats: {hp: 45, atk: 45, def: 35, spa: 20, spd: 30, spe: 20},
+		abilities: {0: "Shield Dust", H: "Run Away"},
 		heightm: 0.3,
 		weightkg: 3.6,
 		color: "Red",
@@ -4910,8 +4910,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 266,
 		name: "Silcoon",
 		types: ["Bug"],
-		baseStats: { hp: 50, atk: 35, def: 55, spa: 25, spd: 25, spe: 15 },
-		abilities: { 0: "Shed Skin" },
+		baseStats: {hp: 50, atk: 35, def: 55, spa: 25, spd: 25, spe: 15},
+		abilities: {0: "Shed Skin"},
 		heightm: 0.6,
 		weightkg: 10,
 		color: "White",
@@ -4924,8 +4924,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 267,
 		name: "Beautifly",
 		types: ["Bug", "Flying"],
-		baseStats: { hp: 60, atk: 70, def: 50, spa: 100, spd: 50, spe: 65 },
-		abilities: { 0: "Swarm", H: "Rivalry" },
+		baseStats: {hp: 60, atk: 70, def: 50, spa: 100, spd: 50, spe: 65},
+		abilities: {0: "Swarm", H: "Rivalry"},
 		heightm: 1,
 		weightkg: 28.4,
 		color: "Yellow",
@@ -4937,8 +4937,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 268,
 		name: "Cascoon",
 		types: ["Bug"],
-		baseStats: { hp: 50, atk: 35, def: 55, spa: 25, spd: 25, spe: 15 },
-		abilities: { 0: "Shed Skin" },
+		baseStats: {hp: 50, atk: 35, def: 55, spa: 25, spd: 25, spe: 15},
+		abilities: {0: "Shed Skin"},
 		heightm: 0.7,
 		weightkg: 11.5,
 		color: "Purple",
@@ -4951,8 +4951,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 269,
 		name: "Dustox",
 		types: ["Bug", "Poison"],
-		baseStats: { hp: 60, atk: 50, def: 70, spa: 50, spd: 90, spe: 65 },
-		abilities: { 0: "Shield Dust", H: "Compound Eyes" },
+		baseStats: {hp: 60, atk: 50, def: 70, spa: 50, spd: 90, spe: 65},
+		abilities: {0: "Shield Dust", H: "Compound Eyes"},
 		heightm: 1.2,
 		weightkg: 31.6,
 		color: "Green",
@@ -4964,8 +4964,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 270,
 		name: "Lotad",
 		types: ["Water", "Grass"],
-		baseStats: { hp: 40, atk: 30, def: 30, spa: 40, spd: 50, spe: 30 },
-		abilities: { 0: "Swift Swim", 1: "Rain Dish", H: "Own Tempo" },
+		baseStats: {hp: 40, atk: 30, def: 30, spa: 40, spd: 50, spe: 30},
+		abilities: {0: "Swift Swim", 1: "Rain Dish", H: "Own Tempo"},
 		heightm: 0.5,
 		weightkg: 2.6,
 		color: "Green",
@@ -4976,8 +4976,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 271,
 		name: "Lombre",
 		types: ["Water", "Grass"],
-		baseStats: { hp: 60, atk: 50, def: 50, spa: 60, spd: 70, spe: 50 },
-		abilities: { 0: "Swift Swim", 1: "Rain Dish", H: "Own Tempo" },
+		baseStats: {hp: 60, atk: 50, def: 50, spa: 60, spd: 70, spe: 50},
+		abilities: {0: "Swift Swim", 1: "Rain Dish", H: "Own Tempo"},
 		heightm: 1.2,
 		weightkg: 32.5,
 		color: "Green",
@@ -4990,8 +4990,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 272,
 		name: "Ludicolo",
 		types: ["Water", "Grass"],
-		baseStats: { hp: 80, atk: 70, def: 70, spa: 90, spd: 100, spe: 70 },
-		abilities: { 0: "Swift Swim", 1: "Rain Dish", H: "Own Tempo" },
+		baseStats: {hp: 80, atk: 70, def: 70, spa: 90, spd: 100, spe: 70},
+		abilities: {0: "Swift Swim", 1: "Rain Dish", H: "Own Tempo"},
 		heightm: 1.5,
 		weightkg: 55,
 		color: "Green",
@@ -5004,8 +5004,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 273,
 		name: "Seedot",
 		types: ["Grass"],
-		baseStats: { hp: 40, atk: 40, def: 50, spa: 30, spd: 30, spe: 30 },
-		abilities: { 0: "Chlorophyll", 1: "Early Bird", H: "Pickpocket" },
+		baseStats: {hp: 40, atk: 40, def: 50, spa: 30, spd: 30, spe: 30},
+		abilities: {0: "Chlorophyll", 1: "Early Bird", H: "Pickpocket"},
 		heightm: 0.5,
 		weightkg: 4,
 		color: "Brown",
@@ -5016,8 +5016,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 274,
 		name: "Nuzleaf",
 		types: ["Grass", "Dark"],
-		baseStats: { hp: 70, atk: 70, def: 40, spa: 60, spd: 40, spe: 60 },
-		abilities: { 0: "Chlorophyll", 1: "Early Bird", H: "Pickpocket" },
+		baseStats: {hp: 70, atk: 70, def: 40, spa: 60, spd: 40, spe: 60},
+		abilities: {0: "Chlorophyll", 1: "Early Bird", H: "Pickpocket"},
 		heightm: 1,
 		weightkg: 28,
 		color: "Brown",
@@ -5030,8 +5030,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 275,
 		name: "Shiftry",
 		types: ["Grass", "Dark"],
-		baseStats: { hp: 90, atk: 100, def: 60, spa: 90, spd: 60, spe: 80 },
-		abilities: { 0: "Chlorophyll", 1: "Early Bird", H: "Pickpocket" },
+		baseStats: {hp: 90, atk: 100, def: 60, spa: 90, spd: 60, spe: 80},
+		abilities: {0: "Chlorophyll", 1: "Early Bird", H: "Pickpocket"},
 		heightm: 1.3,
 		weightkg: 59.6,
 		color: "Brown",
@@ -5044,8 +5044,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 276,
 		name: "Taillow",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 40, atk: 55, def: 30, spa: 30, spd: 30, spe: 85 },
-		abilities: { 0: "Guts", H: "Scrappy" },
+		baseStats: {hp: 40, atk: 55, def: 30, spa: 30, spd: 30, spe: 85},
+		abilities: {0: "Guts", H: "Scrappy"},
 		heightm: 0.3,
 		weightkg: 2.3,
 		color: "Blue",
@@ -5056,8 +5056,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 277,
 		name: "Swellow",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 60, atk: 85, def: 60, spa: 75, spd: 50, spe: 125 },
-		abilities: { 0: "Guts", H: "Scrappy" },
+		baseStats: {hp: 60, atk: 85, def: 60, spa: 75, spd: 50, spe: 125},
+		abilities: {0: "Guts", H: "Scrappy"},
 		heightm: 0.7,
 		weightkg: 19.8,
 		color: "Blue",
@@ -5069,8 +5069,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 278,
 		name: "Wingull",
 		types: ["Water", "Flying"],
-		baseStats: { hp: 40, atk: 30, def: 30, spa: 55, spd: 30, spe: 85 },
-		abilities: { 0: "Keen Eye", 1: "Hydration", H: "Rain Dish" },
+		baseStats: {hp: 40, atk: 30, def: 30, spa: 55, spd: 30, spe: 85},
+		abilities: {0: "Keen Eye", 1: "Hydration", H: "Rain Dish"},
 		heightm: 0.6,
 		weightkg: 9.5,
 		color: "White",
@@ -5081,8 +5081,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 279,
 		name: "Pelipper",
 		types: ["Water", "Flying"],
-		baseStats: { hp: 60, atk: 50, def: 100, spa: 95, spd: 70, spe: 65 },
-		abilities: { 0: "Keen Eye", 1: "Drizzle", H: "Rain Dish" },
+		baseStats: {hp: 60, atk: 50, def: 100, spa: 95, spd: 70, spe: 65},
+		abilities: {0: "Keen Eye", 1: "Drizzle", H: "Rain Dish"},
 		heightm: 1.2,
 		weightkg: 28,
 		color: "Yellow",
@@ -5094,8 +5094,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 280,
 		name: "Ralts",
 		types: ["Psychic", "Fairy"],
-		baseStats: { hp: 28, atk: 25, def: 25, spa: 45, spd: 35, spe: 40 },
-		abilities: { 0: "Synchronize", 1: "Trace", H: "Telepathy" },
+		baseStats: {hp: 28, atk: 25, def: 25, spa: 45, spd: 35, spe: 40},
+		abilities: {0: "Synchronize", 1: "Trace", H: "Telepathy"},
 		heightm: 0.4,
 		weightkg: 6.6,
 		color: "White",
@@ -5106,8 +5106,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 281,
 		name: "Kirlia",
 		types: ["Psychic", "Fairy"],
-		baseStats: { hp: 38, atk: 35, def: 35, spa: 65, spd: 55, spe: 50 },
-		abilities: { 0: "Synchronize", 1: "Trace", H: "Telepathy" },
+		baseStats: {hp: 38, atk: 35, def: 35, spa: 65, spd: 55, spe: 50},
+		abilities: {0: "Synchronize", 1: "Trace", H: "Telepathy"},
 		heightm: 0.8,
 		weightkg: 20.2,
 		color: "White",
@@ -5120,8 +5120,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 282,
 		name: "Gardevoir",
 		types: ["Psychic", "Fairy"],
-		baseStats: { hp: 68, atk: 65, def: 65, spa: 125, spd: 115, spe: 80 },
-		abilities: { 0: "Synchronize", 1: "Trace", H: "Telepathy" },
+		baseStats: {hp: 68, atk: 65, def: 65, spa: 125, spd: 115, spe: 80},
+		abilities: {0: "Synchronize", 1: "Trace", H: "Telepathy"},
 		heightm: 1.6,
 		weightkg: 48.4,
 		color: "White",
@@ -5137,8 +5137,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Gardevoir",
 		forme: "Mega",
 		types: ["Psychic", "Fairy"],
-		baseStats: { hp: 68, atk: 85, def: 65, spa: 165, spd: 135, spe: 100 },
-		abilities: { 0: "Pixilate" },
+		baseStats: {hp: 68, atk: 85, def: 65, spa: 165, spd: 135, spe: 100},
+		abilities: {0: "Pixilate"},
 		heightm: 1.6,
 		weightkg: 48.4,
 		color: "White",
@@ -5149,8 +5149,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 283,
 		name: "Surskit",
 		types: ["Bug", "Water"],
-		baseStats: { hp: 40, atk: 30, def: 32, spa: 50, spd: 52, spe: 65 },
-		abilities: { 0: "Swift Swim", H: "Rain Dish" },
+		baseStats: {hp: 40, atk: 30, def: 32, spa: 50, spd: 52, spe: 65},
+		abilities: {0: "Swift Swim", H: "Rain Dish"},
 		heightm: 0.5,
 		weightkg: 1.7,
 		color: "Blue",
@@ -5161,8 +5161,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 284,
 		name: "Masquerain",
 		types: ["Bug", "Flying"],
-		baseStats: { hp: 70, atk: 60, def: 62, spa: 100, spd: 82, spe: 80 },
-		abilities: { 0: "Intimidate", H: "Unnerve" },
+		baseStats: {hp: 70, atk: 60, def: 62, spa: 100, spd: 82, spe: 80},
+		abilities: {0: "Intimidate", H: "Unnerve"},
 		heightm: 0.8,
 		weightkg: 3.6,
 		color: "Blue",
@@ -5174,8 +5174,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 285,
 		name: "Shroomish",
 		types: ["Grass"],
-		baseStats: { hp: 60, atk: 40, def: 60, spa: 40, spd: 60, spe: 35 },
-		abilities: { 0: "Effect Spore", 1: "Poison Heal", H: "Quick Feet" },
+		baseStats: {hp: 60, atk: 40, def: 60, spa: 40, spd: 60, spe: 35},
+		abilities: {0: "Effect Spore", 1: "Poison Heal", H: "Quick Feet"},
 		heightm: 0.4,
 		weightkg: 4.5,
 		color: "Brown",
@@ -5186,8 +5186,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 286,
 		name: "Breloom",
 		types: ["Grass", "Fighting"],
-		baseStats: { hp: 60, atk: 130, def: 80, spa: 60, spd: 60, spe: 70 },
-		abilities: { 0: "Effect Spore", 1: "Poison Heal", H: "Technician" },
+		baseStats: {hp: 60, atk: 130, def: 80, spa: 60, spd: 60, spe: 70},
+		abilities: {0: "Effect Spore", 1: "Poison Heal", H: "Technician"},
 		heightm: 1.2,
 		weightkg: 39.2,
 		color: "Green",
@@ -5199,8 +5199,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 287,
 		name: "Slakoth",
 		types: ["Normal"],
-		baseStats: { hp: 60, atk: 60, def: 60, spa: 35, spd: 35, spe: 30 },
-		abilities: { 0: "Truant" },
+		baseStats: {hp: 60, atk: 60, def: 60, spa: 35, spd: 35, spe: 30},
+		abilities: {0: "Truant"},
 		heightm: 0.8,
 		weightkg: 24,
 		color: "Brown",
@@ -5211,8 +5211,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 288,
 		name: "Vigoroth",
 		types: ["Normal"],
-		baseStats: { hp: 80, atk: 80, def: 80, spa: 55, spd: 55, spe: 90 },
-		abilities: { 0: "Vital Spirit" },
+		baseStats: {hp: 80, atk: 80, def: 80, spa: 55, spd: 55, spe: 90},
+		abilities: {0: "Vital Spirit"},
 		heightm: 1.4,
 		weightkg: 46.5,
 		color: "White",
@@ -5225,8 +5225,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 289,
 		name: "Slaking",
 		types: ["Normal"],
-		baseStats: { hp: 150, atk: 160, def: 100, spa: 95, spd: 65, spe: 100 },
-		abilities: { 0: "Truant" },
+		baseStats: {hp: 150, atk: 160, def: 100, spa: 95, spd: 65, spe: 100},
+		abilities: {0: "Truant"},
 		heightm: 2,
 		weightkg: 130.5,
 		color: "Brown",
@@ -5238,8 +5238,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 290,
 		name: "Nincada",
 		types: ["Bug", "Ground"],
-		baseStats: { hp: 31, atk: 45, def: 90, spa: 30, spd: 30, spe: 40 },
-		abilities: { 0: "Compound Eyes", H: "Run Away" },
+		baseStats: {hp: 31, atk: 45, def: 90, spa: 30, spd: 30, spe: 40},
+		abilities: {0: "Compound Eyes", H: "Run Away"},
 		heightm: 0.5,
 		weightkg: 5.5,
 		color: "Gray",
@@ -5250,8 +5250,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 291,
 		name: "Ninjask",
 		types: ["Bug", "Flying"],
-		baseStats: { hp: 61, atk: 90, def: 45, spa: 50, spd: 50, spe: 160 },
-		abilities: { 0: "Speed Boost", H: "Infiltrator" },
+		baseStats: {hp: 61, atk: 90, def: 45, spa: 50, spd: 50, spe: 160},
+		abilities: {0: "Speed Boost", H: "Infiltrator"},
 		heightm: 0.8,
 		weightkg: 12,
 		color: "Yellow",
@@ -5264,9 +5264,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Shedinja",
 		types: ["Bug", "Ghost"],
 		gender: "N",
-		baseStats: { hp: 1, atk: 90, def: 45, spa: 30, spd: 30, spe: 40 },
+		baseStats: {hp: 1, atk: 90, def: 45, spa: 30, spd: 30, spe: 40},
 		maxHP: 1,
-		abilities: { 0: "Wonder Guard" },
+		abilities: {0: "Wonder Guard"},
 		heightm: 0.8,
 		weightkg: 1.2,
 		color: "Brown",
@@ -5278,8 +5278,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 293,
 		name: "Whismur",
 		types: ["Normal"],
-		baseStats: { hp: 64, atk: 51, def: 23, spa: 51, spd: 23, spe: 28 },
-		abilities: { 0: "Soundproof", H: "Rattled" },
+		baseStats: {hp: 64, atk: 51, def: 23, spa: 51, spd: 23, spe: 28},
+		abilities: {0: "Soundproof", H: "Rattled"},
 		heightm: 0.6,
 		weightkg: 16.3,
 		color: "Pink",
@@ -5290,8 +5290,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 294,
 		name: "Loudred",
 		types: ["Normal"],
-		baseStats: { hp: 84, atk: 71, def: 43, spa: 71, spd: 43, spe: 48 },
-		abilities: { 0: "Soundproof", H: "Scrappy" },
+		baseStats: {hp: 84, atk: 71, def: 43, spa: 71, spd: 43, spe: 48},
+		abilities: {0: "Soundproof", H: "Scrappy"},
 		heightm: 1,
 		weightkg: 40.5,
 		color: "Blue",
@@ -5304,8 +5304,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 295,
 		name: "Exploud",
 		types: ["Normal"],
-		baseStats: { hp: 104, atk: 91, def: 63, spa: 91, spd: 73, spe: 68 },
-		abilities: { 0: "Soundproof", H: "Scrappy" },
+		baseStats: {hp: 104, atk: 91, def: 63, spa: 91, spd: 73, spe: 68},
+		abilities: {0: "Soundproof", H: "Scrappy"},
 		heightm: 1.5,
 		weightkg: 84,
 		color: "Blue",
@@ -5317,9 +5317,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 296,
 		name: "Makuhita",
 		types: ["Fighting"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 72, atk: 60, def: 30, spa: 20, spd: 30, spe: 25 },
-		abilities: { 0: "Thick Fat", 1: "Guts", H: "Sheer Force" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 72, atk: 60, def: 30, spa: 20, spd: 30, spe: 25},
+		abilities: {0: "Thick Fat", 1: "Guts", H: "Sheer Force"},
 		heightm: 1,
 		weightkg: 86.4,
 		color: "Yellow",
@@ -5330,9 +5330,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 297,
 		name: "Hariyama",
 		types: ["Fighting"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 144, atk: 120, def: 60, spa: 40, spd: 60, spe: 50 },
-		abilities: { 0: "Thick Fat", 1: "Guts", H: "Sheer Force" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 144, atk: 120, def: 60, spa: 40, spd: 60, spe: 50},
+		abilities: {0: "Thick Fat", 1: "Guts", H: "Sheer Force"},
 		heightm: 2.3,
 		weightkg: 253.8,
 		color: "Brown",
@@ -5344,9 +5344,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 298,
 		name: "Azurill",
 		types: ["Normal", "Fairy"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 50, atk: 20, def: 40, spa: 20, spd: 40, spe: 20 },
-		abilities: { 0: "Thick Fat", 1: "Huge Power", H: "Sap Sipper" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 50, atk: 20, def: 40, spa: 20, spd: 40, spe: 20},
+		abilities: {0: "Thick Fat", 1: "Huge Power", H: "Sap Sipper"},
 		heightm: 0.2,
 		weightkg: 2,
 		color: "Blue",
@@ -5358,8 +5358,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 299,
 		name: "Nosepass",
 		types: ["Rock"],
-		baseStats: { hp: 30, atk: 45, def: 135, spa: 45, spd: 90, spe: 30 },
-		abilities: { 0: "Sturdy", 1: "Magnet Pull", H: "Sand Force" },
+		baseStats: {hp: 30, atk: 45, def: 135, spa: 45, spd: 90, spe: 30},
+		abilities: {0: "Sturdy", 1: "Magnet Pull", H: "Sand Force"},
 		heightm: 1,
 		weightkg: 97,
 		color: "Gray",
@@ -5370,9 +5370,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 300,
 		name: "Skitty",
 		types: ["Normal"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 50, atk: 45, def: 45, spa: 35, spd: 35, spe: 50 },
-		abilities: { 0: "Cute Charm", 1: "Normalize", H: "Wonder Skin" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 50, atk: 45, def: 45, spa: 35, spd: 35, spe: 50},
+		abilities: {0: "Cute Charm", 1: "Normalize", H: "Wonder Skin"},
 		heightm: 0.6,
 		weightkg: 11,
 		color: "Pink",
@@ -5383,9 +5383,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 301,
 		name: "Delcatty",
 		types: ["Normal"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 70, atk: 65, def: 65, spa: 55, spd: 55, spe: 90 },
-		abilities: { 0: "Cute Charm", 1: "Normalize", H: "Wonder Skin" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 70, atk: 65, def: 65, spa: 55, spd: 55, spe: 90},
+		abilities: {0: "Cute Charm", 1: "Normalize", H: "Wonder Skin"},
 		heightm: 1.1,
 		weightkg: 32.6,
 		color: "Purple",
@@ -5398,8 +5398,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 302,
 		name: "Sableye",
 		types: ["Dark", "Ghost"],
-		baseStats: { hp: 50, atk: 75, def: 75, spa: 65, spd: 65, spe: 50 },
-		abilities: { 0: "Keen Eye", 1: "Stall", H: "Prankster" },
+		baseStats: {hp: 50, atk: 75, def: 75, spa: 65, spd: 65, spe: 50},
+		abilities: {0: "Keen Eye", 1: "Stall", H: "Prankster"},
 		heightm: 0.5,
 		weightkg: 11,
 		color: "Purple",
@@ -5413,8 +5413,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Sableye",
 		forme: "Mega",
 		types: ["Dark", "Ghost"],
-		baseStats: { hp: 50, atk: 85, def: 125, spa: 85, spd: 115, spe: 20 },
-		abilities: { 0: "Magic Bounce" },
+		baseStats: {hp: 50, atk: 85, def: 125, spa: 85, spd: 115, spe: 20},
+		abilities: {0: "Magic Bounce"},
 		heightm: 0.5,
 		weightkg: 161,
 		color: "Purple",
@@ -5425,8 +5425,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 303,
 		name: "Mawile",
 		types: ["Steel", "Fairy"],
-		baseStats: { hp: 50, atk: 85, def: 85, spa: 55, spd: 55, spe: 50 },
-		abilities: { 0: "Hyper Cutter", 1: "Intimidate", H: "Sheer Force" },
+		baseStats: {hp: 50, atk: 85, def: 85, spa: 55, spd: 55, spe: 50},
+		abilities: {0: "Hyper Cutter", 1: "Intimidate", H: "Sheer Force"},
 		heightm: 0.6,
 		weightkg: 11.5,
 		color: "Black",
@@ -5440,8 +5440,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Mawile",
 		forme: "Mega",
 		types: ["Steel", "Fairy"],
-		baseStats: { hp: 50, atk: 105, def: 125, spa: 55, spd: 95, spe: 50 },
-		abilities: { 0: "Huge Power" },
+		baseStats: {hp: 50, atk: 105, def: 125, spa: 55, spd: 95, spe: 50},
+		abilities: {0: "Huge Power"},
 		heightm: 1,
 		weightkg: 23.5,
 		color: "Black",
@@ -5452,8 +5452,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 304,
 		name: "Aron",
 		types: ["Steel", "Rock"],
-		baseStats: { hp: 50, atk: 70, def: 100, spa: 40, spd: 40, spe: 30 },
-		abilities: { 0: "Sturdy", 1: "Rock Head", H: "Heavy Metal" },
+		baseStats: {hp: 50, atk: 70, def: 100, spa: 40, spd: 40, spe: 30},
+		abilities: {0: "Sturdy", 1: "Rock Head", H: "Heavy Metal"},
 		heightm: 0.4,
 		weightkg: 60,
 		color: "Gray",
@@ -5464,8 +5464,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 305,
 		name: "Lairon",
 		types: ["Steel", "Rock"],
-		baseStats: { hp: 60, atk: 90, def: 140, spa: 50, spd: 50, spe: 40 },
-		abilities: { 0: "Sturdy", 1: "Rock Head", H: "Heavy Metal" },
+		baseStats: {hp: 60, atk: 90, def: 140, spa: 50, spd: 50, spe: 40},
+		abilities: {0: "Sturdy", 1: "Rock Head", H: "Heavy Metal"},
 		heightm: 0.9,
 		weightkg: 120,
 		color: "Gray",
@@ -5478,8 +5478,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 306,
 		name: "Aggron",
 		types: ["Steel", "Rock"],
-		baseStats: { hp: 70, atk: 110, def: 180, spa: 60, spd: 60, spe: 50 },
-		abilities: { 0: "Sturdy", 1: "Rock Head", H: "Heavy Metal" },
+		baseStats: {hp: 70, atk: 110, def: 180, spa: 60, spd: 60, spe: 50},
+		abilities: {0: "Sturdy", 1: "Rock Head", H: "Heavy Metal"},
 		heightm: 2.1,
 		weightkg: 360,
 		color: "Gray",
@@ -5495,8 +5495,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Aggron",
 		forme: "Mega",
 		types: ["Steel"],
-		baseStats: { hp: 70, atk: 140, def: 230, spa: 60, spd: 80, spe: 50 },
-		abilities: { 0: "Filter" },
+		baseStats: {hp: 70, atk: 140, def: 230, spa: 60, spd: 80, spe: 50},
+		abilities: {0: "Filter"},
 		heightm: 2.2,
 		weightkg: 395,
 		color: "Gray",
@@ -5507,8 +5507,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 307,
 		name: "Meditite",
 		types: ["Fighting", "Psychic"],
-		baseStats: { hp: 30, atk: 40, def: 55, spa: 40, spd: 55, spe: 60 },
-		abilities: { 0: "Pure Power", H: "Telepathy" },
+		baseStats: {hp: 30, atk: 40, def: 55, spa: 40, spd: 55, spe: 60},
+		abilities: {0: "Pure Power", H: "Telepathy"},
 		heightm: 0.6,
 		weightkg: 11.2,
 		color: "Blue",
@@ -5519,8 +5519,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 308,
 		name: "Medicham",
 		types: ["Fighting", "Psychic"],
-		baseStats: { hp: 60, atk: 60, def: 75, spa: 60, spd: 75, spe: 80 },
-		abilities: { 0: "Pure Power", H: "Telepathy" },
+		baseStats: {hp: 60, atk: 60, def: 75, spa: 60, spd: 75, spe: 80},
+		abilities: {0: "Pure Power", H: "Telepathy"},
 		heightm: 1.3,
 		weightkg: 31.5,
 		color: "Red",
@@ -5536,8 +5536,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Medicham",
 		forme: "Mega",
 		types: ["Fighting", "Psychic"],
-		baseStats: { hp: 60, atk: 100, def: 85, spa: 80, spd: 85, spe: 100 },
-		abilities: { 0: "Pure Power" },
+		baseStats: {hp: 60, atk: 100, def: 85, spa: 80, spd: 85, spe: 100},
+		abilities: {0: "Pure Power"},
 		heightm: 1.3,
 		weightkg: 31.5,
 		color: "Red",
@@ -5548,8 +5548,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 309,
 		name: "Electrike",
 		types: ["Electric"],
-		baseStats: { hp: 40, atk: 45, def: 40, spa: 65, spd: 40, spe: 65 },
-		abilities: { 0: "Static", 1: "Lightning Rod", H: "Minus" },
+		baseStats: {hp: 40, atk: 45, def: 40, spa: 65, spd: 40, spe: 65},
+		abilities: {0: "Static", 1: "Lightning Rod", H: "Minus"},
 		heightm: 0.6,
 		weightkg: 15.2,
 		color: "Green",
@@ -5560,8 +5560,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 310,
 		name: "Manectric",
 		types: ["Electric"],
-		baseStats: { hp: 70, atk: 75, def: 60, spa: 105, spd: 60, spe: 105 },
-		abilities: { 0: "Static", 1: "Lightning Rod", H: "Minus" },
+		baseStats: {hp: 70, atk: 75, def: 60, spa: 105, spd: 60, spe: 105},
+		abilities: {0: "Static", 1: "Lightning Rod", H: "Minus"},
 		heightm: 1.5,
 		weightkg: 40.2,
 		color: "Yellow",
@@ -5577,8 +5577,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Manectric",
 		forme: "Mega",
 		types: ["Electric"],
-		baseStats: { hp: 70, atk: 75, def: 80, spa: 135, spd: 80, spe: 135 },
-		abilities: { 0: "Intimidate" },
+		baseStats: {hp: 70, atk: 75, def: 80, spa: 135, spd: 80, spe: 135},
+		abilities: {0: "Intimidate"},
 		heightm: 1.8,
 		weightkg: 44,
 		color: "Yellow",
@@ -5589,8 +5589,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 311,
 		name: "Plusle",
 		types: ["Electric"],
-		baseStats: { hp: 60, atk: 50, def: 40, spa: 85, spd: 75, spe: 95 },
-		abilities: { 0: "Plus", H: "Lightning Rod" },
+		baseStats: {hp: 60, atk: 50, def: 40, spa: 85, spd: 75, spe: 95},
+		abilities: {0: "Plus", H: "Lightning Rod"},
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Yellow",
@@ -5600,8 +5600,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 312,
 		name: "Minun",
 		types: ["Electric"],
-		baseStats: { hp: 60, atk: 40, def: 50, spa: 75, spd: 85, spe: 95 },
-		abilities: { 0: "Minus", H: "Volt Absorb" },
+		baseStats: {hp: 60, atk: 40, def: 50, spa: 75, spd: 85, spe: 95},
+		abilities: {0: "Minus", H: "Volt Absorb"},
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Yellow",
@@ -5612,8 +5612,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Volbeat",
 		types: ["Bug"],
 		gender: "M",
-		baseStats: { hp: 65, atk: 73, def: 75, spa: 47, spd: 85, spe: 85 },
-		abilities: { 0: "Illuminate", 1: "Swarm", H: "Prankster" },
+		baseStats: {hp: 65, atk: 73, def: 75, spa: 47, spd: 85, spe: 85},
+		abilities: {0: "Illuminate", 1: "Swarm", H: "Prankster"},
 		heightm: 0.7,
 		weightkg: 17.7,
 		color: "Gray",
@@ -5624,8 +5624,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Illumise",
 		types: ["Bug"],
 		gender: "F",
-		baseStats: { hp: 65, atk: 47, def: 75, spa: 73, spd: 85, spe: 85 },
-		abilities: { 0: "Oblivious", 1: "Tinted Lens", H: "Prankster" },
+		baseStats: {hp: 65, atk: 47, def: 75, spa: 73, spd: 85, spe: 85},
+		abilities: {0: "Oblivious", 1: "Tinted Lens", H: "Prankster"},
 		heightm: 0.6,
 		weightkg: 17.7,
 		color: "Purple",
@@ -5635,8 +5635,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 315,
 		name: "Roselia",
 		types: ["Grass", "Poison"],
-		baseStats: { hp: 50, atk: 60, def: 45, spa: 100, spd: 80, spe: 65 },
-		abilities: { 0: "Natural Cure", 1: "Poison Point", H: "Leaf Guard" },
+		baseStats: {hp: 50, atk: 60, def: 45, spa: 100, spd: 80, spe: 65},
+		abilities: {0: "Natural Cure", 1: "Poison Point", H: "Leaf Guard"},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Green",
@@ -5651,8 +5651,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 316,
 		name: "Gulpin",
 		types: ["Poison"],
-		baseStats: { hp: 70, atk: 43, def: 53, spa: 43, spd: 53, spe: 40 },
-		abilities: { 0: "Liquid Ooze", 1: "Sticky Hold", H: "Gluttony" },
+		baseStats: {hp: 70, atk: 43, def: 53, spa: 43, spd: 53, spe: 40},
+		abilities: {0: "Liquid Ooze", 1: "Sticky Hold", H: "Gluttony"},
 		heightm: 0.4,
 		weightkg: 10.3,
 		color: "Green",
@@ -5663,8 +5663,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 317,
 		name: "Swalot",
 		types: ["Poison"],
-		baseStats: { hp: 100, atk: 73, def: 83, spa: 73, spd: 83, spe: 55 },
-		abilities: { 0: "Liquid Ooze", 1: "Sticky Hold", H: "Gluttony" },
+		baseStats: {hp: 100, atk: 73, def: 83, spa: 73, spd: 83, spe: 55},
+		abilities: {0: "Liquid Ooze", 1: "Sticky Hold", H: "Gluttony"},
 		heightm: 1.7,
 		weightkg: 80,
 		color: "Purple",
@@ -5676,8 +5676,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 318,
 		name: "Carvanha",
 		types: ["Water", "Dark"],
-		baseStats: { hp: 45, atk: 90, def: 20, spa: 65, spd: 20, spe: 65 },
-		abilities: { 0: "Rough Skin", H: "Speed Boost" },
+		baseStats: {hp: 45, atk: 90, def: 20, spa: 65, spd: 20, spe: 65},
+		abilities: {0: "Rough Skin", H: "Speed Boost"},
 		heightm: 0.8,
 		weightkg: 20.8,
 		color: "Red",
@@ -5688,8 +5688,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 319,
 		name: "Sharpedo",
 		types: ["Water", "Dark"],
-		baseStats: { hp: 70, atk: 120, def: 40, spa: 95, spd: 40, spe: 95 },
-		abilities: { 0: "Rough Skin", H: "Speed Boost" },
+		baseStats: {hp: 70, atk: 120, def: 40, spa: 95, spd: 40, spe: 95},
+		abilities: {0: "Rough Skin", H: "Speed Boost"},
 		heightm: 1.8,
 		weightkg: 88.8,
 		color: "Blue",
@@ -5705,8 +5705,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Sharpedo",
 		forme: "Mega",
 		types: ["Water", "Dark"],
-		baseStats: { hp: 70, atk: 140, def: 70, spa: 110, spd: 65, spe: 105 },
-		abilities: { 0: "Strong Jaw" },
+		baseStats: {hp: 70, atk: 140, def: 70, spa: 110, spd: 65, spe: 105},
+		abilities: {0: "Strong Jaw"},
 		heightm: 2.5,
 		weightkg: 130.3,
 		color: "Blue",
@@ -5717,8 +5717,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 320,
 		name: "Wailmer",
 		types: ["Water"],
-		baseStats: { hp: 130, atk: 70, def: 35, spa: 70, spd: 35, spe: 60 },
-		abilities: { 0: "Water Veil", 1: "Oblivious", H: "Pressure" },
+		baseStats: {hp: 130, atk: 70, def: 35, spa: 70, spd: 35, spe: 60},
+		abilities: {0: "Water Veil", 1: "Oblivious", H: "Pressure"},
 		heightm: 2,
 		weightkg: 130,
 		color: "Blue",
@@ -5729,8 +5729,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 321,
 		name: "Wailord",
 		types: ["Water"],
-		baseStats: { hp: 170, atk: 90, def: 45, spa: 90, spd: 45, spe: 60 },
-		abilities: { 0: "Water Veil", 1: "Oblivious", H: "Pressure" },
+		baseStats: {hp: 170, atk: 90, def: 45, spa: 90, spd: 45, spe: 60},
+		abilities: {0: "Water Veil", 1: "Oblivious", H: "Pressure"},
 		heightm: 14.5,
 		weightkg: 398,
 		color: "Blue",
@@ -5742,8 +5742,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 322,
 		name: "Numel",
 		types: ["Fire", "Ground"],
-		baseStats: { hp: 60, atk: 60, def: 40, spa: 65, spd: 45, spe: 35 },
-		abilities: { 0: "Oblivious", 1: "Simple", H: "Own Tempo" },
+		baseStats: {hp: 60, atk: 60, def: 40, spa: 65, spd: 45, spe: 35},
+		abilities: {0: "Oblivious", 1: "Simple", H: "Own Tempo"},
 		heightm: 0.7,
 		weightkg: 24,
 		color: "Yellow",
@@ -5754,8 +5754,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 323,
 		name: "Camerupt",
 		types: ["Fire", "Ground"],
-		baseStats: { hp: 70, atk: 100, def: 70, spa: 105, spd: 75, spe: 40 },
-		abilities: { 0: "Magma Armor", 1: "Solid Rock", H: "Anger Point" },
+		baseStats: {hp: 70, atk: 100, def: 70, spa: 105, spd: 75, spe: 40},
+		abilities: {0: "Magma Armor", 1: "Solid Rock", H: "Anger Point"},
 		heightm: 1.9,
 		weightkg: 220,
 		color: "Red",
@@ -5771,8 +5771,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Camerupt",
 		forme: "Mega",
 		types: ["Fire", "Ground"],
-		baseStats: { hp: 70, atk: 120, def: 100, spa: 145, spd: 105, spe: 20 },
-		abilities: { 0: "Sheer Force" },
+		baseStats: {hp: 70, atk: 120, def: 100, spa: 145, spd: 105, spe: 20},
+		abilities: {0: "Sheer Force"},
 		heightm: 2.5,
 		weightkg: 320.5,
 		color: "Red",
@@ -5783,8 +5783,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 324,
 		name: "Torkoal",
 		types: ["Fire"],
-		baseStats: { hp: 70, atk: 85, def: 140, spa: 85, spd: 70, spe: 20 },
-		abilities: { 0: "White Smoke", 1: "Drought", H: "Shell Armor" },
+		baseStats: {hp: 70, atk: 85, def: 140, spa: 85, spd: 70, spe: 20},
+		abilities: {0: "White Smoke", 1: "Drought", H: "Shell Armor"},
 		heightm: 0.5,
 		weightkg: 80.4,
 		color: "Brown",
@@ -5794,8 +5794,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 325,
 		name: "Spoink",
 		types: ["Psychic"],
-		baseStats: { hp: 60, atk: 25, def: 35, spa: 70, spd: 80, spe: 60 },
-		abilities: { 0: "Thick Fat", 1: "Own Tempo", H: "Gluttony" },
+		baseStats: {hp: 60, atk: 25, def: 35, spa: 70, spd: 80, spe: 60},
+		abilities: {0: "Thick Fat", 1: "Own Tempo", H: "Gluttony"},
 		heightm: 0.7,
 		weightkg: 30.6,
 		color: "Black",
@@ -5806,8 +5806,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 326,
 		name: "Grumpig",
 		types: ["Psychic"],
-		baseStats: { hp: 80, atk: 45, def: 65, spa: 90, spd: 110, spe: 80 },
-		abilities: { 0: "Thick Fat", 1: "Own Tempo", H: "Gluttony" },
+		baseStats: {hp: 80, atk: 45, def: 65, spa: 90, spd: 110, spe: 80},
+		abilities: {0: "Thick Fat", 1: "Own Tempo", H: "Gluttony"},
 		heightm: 0.9,
 		weightkg: 71.5,
 		color: "Purple",
@@ -5819,8 +5819,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 327,
 		name: "Spinda",
 		types: ["Normal"],
-		baseStats: { hp: 60, atk: 60, def: 60, spa: 60, spd: 60, spe: 60 },
-		abilities: { 0: "Own Tempo", 1: "Tangled Feet", H: "Contrary" },
+		baseStats: {hp: 60, atk: 60, def: 60, spa: 60, spd: 60, spe: 60},
+		abilities: {0: "Own Tempo", 1: "Tangled Feet", H: "Contrary"},
 		heightm: 1.1,
 		weightkg: 5,
 		color: "Brown",
@@ -5830,8 +5830,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 328,
 		name: "Trapinch",
 		types: ["Ground"],
-		baseStats: { hp: 45, atk: 100, def: 45, spa: 45, spd: 45, spe: 10 },
-		abilities: { 0: "Hyper Cutter", 1: "Arena Trap", H: "Sheer Force" },
+		baseStats: {hp: 45, atk: 100, def: 45, spa: 45, spd: 45, spe: 10},
+		abilities: {0: "Hyper Cutter", 1: "Arena Trap", H: "Sheer Force"},
 		heightm: 0.7,
 		weightkg: 15,
 		color: "Brown",
@@ -5842,8 +5842,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 329,
 		name: "Vibrava",
 		types: ["Ground", "Dragon"],
-		baseStats: { hp: 50, atk: 70, def: 50, spa: 50, spd: 50, spe: 70 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 50, atk: 70, def: 50, spa: 50, spd: 50, spe: 70},
+		abilities: {0: "Levitate"},
 		heightm: 1.1,
 		weightkg: 15.3,
 		color: "Green",
@@ -5856,8 +5856,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 330,
 		name: "Flygon",
 		types: ["Ground", "Dragon"],
-		baseStats: { hp: 80, atk: 100, def: 80, spa: 80, spd: 80, spe: 100 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 80, atk: 100, def: 80, spa: 80, spd: 80, spe: 100},
+		abilities: {0: "Levitate"},
 		heightm: 2,
 		weightkg: 82,
 		color: "Green",
@@ -5869,8 +5869,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 331,
 		name: "Cacnea",
 		types: ["Grass"],
-		baseStats: { hp: 50, atk: 85, def: 40, spa: 85, spd: 40, spe: 35 },
-		abilities: { 0: "Sand Veil", H: "Water Absorb" },
+		baseStats: {hp: 50, atk: 85, def: 40, spa: 85, spd: 40, spe: 35},
+		abilities: {0: "Sand Veil", H: "Water Absorb"},
 		heightm: 0.4,
 		weightkg: 51.3,
 		color: "Green",
@@ -5881,8 +5881,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 332,
 		name: "Cacturne",
 		types: ["Grass", "Dark"],
-		baseStats: { hp: 70, atk: 115, def: 60, spa: 115, spd: 60, spe: 55 },
-		abilities: { 0: "Sand Veil", H: "Water Absorb" },
+		baseStats: {hp: 70, atk: 115, def: 60, spa: 115, spd: 60, spe: 55},
+		abilities: {0: "Sand Veil", H: "Water Absorb"},
 		heightm: 1.3,
 		weightkg: 77.4,
 		color: "Green",
@@ -5894,8 +5894,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 333,
 		name: "Swablu",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 45, atk: 40, def: 60, spa: 40, spd: 75, spe: 50 },
-		abilities: { 0: "Natural Cure", H: "Cloud Nine" },
+		baseStats: {hp: 45, atk: 40, def: 60, spa: 40, spd: 75, spe: 50},
+		abilities: {0: "Natural Cure", H: "Cloud Nine"},
 		heightm: 0.4,
 		weightkg: 1.2,
 		color: "Blue",
@@ -5906,8 +5906,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 334,
 		name: "Altaria",
 		types: ["Dragon", "Flying"],
-		baseStats: { hp: 75, atk: 70, def: 90, spa: 70, spd: 105, spe: 80 },
-		abilities: { 0: "Natural Cure", H: "Cloud Nine" },
+		baseStats: {hp: 75, atk: 70, def: 90, spa: 70, spd: 105, spe: 80},
+		abilities: {0: "Natural Cure", H: "Cloud Nine"},
 		heightm: 1.1,
 		weightkg: 20.6,
 		color: "Blue",
@@ -5923,8 +5923,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Altaria",
 		forme: "Mega",
 		types: ["Dragon", "Fairy"],
-		baseStats: { hp: 75, atk: 110, def: 110, spa: 110, spd: 105, spe: 80 },
-		abilities: { 0: "Pixilate" },
+		baseStats: {hp: 75, atk: 110, def: 110, spa: 110, spd: 105, spe: 80},
+		abilities: {0: "Pixilate"},
 		heightm: 1.5,
 		weightkg: 20.6,
 		color: "Blue",
@@ -5935,8 +5935,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 335,
 		name: "Zangoose",
 		types: ["Normal"],
-		baseStats: { hp: 73, atk: 115, def: 60, spa: 60, spd: 60, spe: 90 },
-		abilities: { 0: "Immunity", H: "Toxic Boost" },
+		baseStats: {hp: 73, atk: 115, def: 60, spa: 60, spd: 60, spe: 90},
+		abilities: {0: "Immunity", H: "Toxic Boost"},
 		heightm: 1.3,
 		weightkg: 40.3,
 		color: "White",
@@ -5946,8 +5946,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 336,
 		name: "Seviper",
 		types: ["Poison"],
-		baseStats: { hp: 73, atk: 100, def: 60, spa: 100, spd: 60, spe: 65 },
-		abilities: { 0: "Shed Skin", H: "Infiltrator" },
+		baseStats: {hp: 73, atk: 100, def: 60, spa: 100, spd: 60, spe: 65},
+		abilities: {0: "Shed Skin", H: "Infiltrator"},
 		heightm: 2.7,
 		weightkg: 52.5,
 		color: "Black",
@@ -5958,8 +5958,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Lunatone",
 		types: ["Rock", "Psychic"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 55, def: 65, spa: 95, spd: 85, spe: 70 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 90, atk: 55, def: 65, spa: 95, spd: 85, spe: 70},
+		abilities: {0: "Levitate"},
 		heightm: 1,
 		weightkg: 168,
 		color: "Yellow",
@@ -5970,8 +5970,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Solrock",
 		types: ["Rock", "Psychic"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 95, def: 85, spa: 55, spd: 65, spe: 70 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 90, atk: 95, def: 85, spa: 55, spd: 65, spe: 70},
+		abilities: {0: "Levitate"},
 		heightm: 1.2,
 		weightkg: 154,
 		color: "Red",
@@ -5981,8 +5981,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 339,
 		name: "Barboach",
 		types: ["Water", "Ground"],
-		baseStats: { hp: 50, atk: 48, def: 43, spa: 46, spd: 41, spe: 60 },
-		abilities: { 0: "Oblivious", 1: "Anticipation", H: "Hydration" },
+		baseStats: {hp: 50, atk: 48, def: 43, spa: 46, spd: 41, spe: 60},
+		abilities: {0: "Oblivious", 1: "Anticipation", H: "Hydration"},
 		heightm: 0.4,
 		weightkg: 1.9,
 		color: "Gray",
@@ -5993,8 +5993,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 340,
 		name: "Whiscash",
 		types: ["Water", "Ground"],
-		baseStats: { hp: 110, atk: 78, def: 73, spa: 76, spd: 71, spe: 60 },
-		abilities: { 0: "Oblivious", 1: "Anticipation", H: "Hydration" },
+		baseStats: {hp: 110, atk: 78, def: 73, spa: 76, spd: 71, spe: 60},
+		abilities: {0: "Oblivious", 1: "Anticipation", H: "Hydration"},
 		heightm: 0.9,
 		weightkg: 23.6,
 		color: "Blue",
@@ -6006,8 +6006,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 341,
 		name: "Corphish",
 		types: ["Water"],
-		baseStats: { hp: 43, atk: 80, def: 65, spa: 50, spd: 35, spe: 35 },
-		abilities: { 0: "Hyper Cutter", 1: "Shell Armor", H: "Adaptability" },
+		baseStats: {hp: 43, atk: 80, def: 65, spa: 50, spd: 35, spe: 35},
+		abilities: {0: "Hyper Cutter", 1: "Shell Armor", H: "Adaptability"},
 		heightm: 0.6,
 		weightkg: 11.5,
 		color: "Red",
@@ -6018,8 +6018,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 342,
 		name: "Crawdaunt",
 		types: ["Water", "Dark"],
-		baseStats: { hp: 63, atk: 120, def: 85, spa: 90, spd: 55, spe: 55 },
-		abilities: { 0: "Hyper Cutter", 1: "Shell Armor", H: "Adaptability" },
+		baseStats: {hp: 63, atk: 120, def: 85, spa: 90, spd: 55, spe: 55},
+		abilities: {0: "Hyper Cutter", 1: "Shell Armor", H: "Adaptability"},
 		heightm: 1.1,
 		weightkg: 32.8,
 		color: "Red",
@@ -6032,8 +6032,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Baltoy",
 		types: ["Ground", "Psychic"],
 		gender: "N",
-		baseStats: { hp: 40, atk: 40, def: 55, spa: 40, spd: 70, spe: 55 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 40, atk: 40, def: 55, spa: 40, spd: 70, spe: 55},
+		abilities: {0: "Levitate"},
 		heightm: 0.5,
 		weightkg: 21.5,
 		color: "Brown",
@@ -6045,8 +6045,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Claydol",
 		types: ["Ground", "Psychic"],
 		gender: "N",
-		baseStats: { hp: 60, atk: 70, def: 105, spa: 70, spd: 120, spe: 75 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 60, atk: 70, def: 105, spa: 70, spd: 120, spe: 75},
+		abilities: {0: "Levitate"},
 		heightm: 1.5,
 		weightkg: 108,
 		color: "Black",
@@ -6058,9 +6058,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 345,
 		name: "Lileep",
 		types: ["Rock", "Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 66, atk: 41, def: 77, spa: 61, spd: 87, spe: 23 },
-		abilities: { 0: "Suction Cups", H: "Storm Drain" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 66, atk: 41, def: 77, spa: 61, spd: 87, spe: 23},
+		abilities: {0: "Suction Cups", H: "Storm Drain"},
 		heightm: 1,
 		weightkg: 23.8,
 		color: "Purple",
@@ -6071,9 +6071,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 346,
 		name: "Cradily",
 		types: ["Rock", "Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 86, atk: 81, def: 97, spa: 81, spd: 107, spe: 43 },
-		abilities: { 0: "Suction Cups", H: "Storm Drain" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 86, atk: 81, def: 97, spa: 81, spd: 107, spe: 43},
+		abilities: {0: "Suction Cups", H: "Storm Drain"},
 		heightm: 1.5,
 		weightkg: 60.4,
 		color: "Green",
@@ -6085,9 +6085,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 347,
 		name: "Anorith",
 		types: ["Rock", "Bug"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 45, atk: 95, def: 50, spa: 40, spd: 50, spe: 75 },
-		abilities: { 0: "Battle Armor", H: "Swift Swim" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 45, atk: 95, def: 50, spa: 40, spd: 50, spe: 75},
+		abilities: {0: "Battle Armor", H: "Swift Swim"},
 		heightm: 0.7,
 		weightkg: 12.5,
 		color: "Gray",
@@ -6098,9 +6098,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 348,
 		name: "Armaldo",
 		types: ["Rock", "Bug"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 75, atk: 125, def: 100, spa: 70, spd: 80, spe: 45 },
-		abilities: { 0: "Battle Armor", H: "Swift Swim" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 75, atk: 125, def: 100, spa: 70, spd: 80, spe: 45},
+		abilities: {0: "Battle Armor", H: "Swift Swim"},
 		heightm: 1.5,
 		weightkg: 68.2,
 		color: "Gray",
@@ -6112,8 +6112,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 349,
 		name: "Feebas",
 		types: ["Water"],
-		baseStats: { hp: 20, atk: 15, def: 20, spa: 10, spd: 55, spe: 80 },
-		abilities: { 0: "Swift Swim", 1: "Oblivious", H: "Adaptability" },
+		baseStats: {hp: 20, atk: 15, def: 20, spa: 10, spd: 55, spe: 80},
+		abilities: {0: "Swift Swim", 1: "Oblivious", H: "Adaptability"},
 		heightm: 0.6,
 		weightkg: 7.4,
 		color: "Brown",
@@ -6124,8 +6124,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 350,
 		name: "Milotic",
 		types: ["Water"],
-		baseStats: { hp: 95, atk: 60, def: 79, spa: 100, spd: 125, spe: 81 },
-		abilities: { 0: "Marvel Scale", 1: "Competitive", H: "Cute Charm" },
+		baseStats: {hp: 95, atk: 60, def: 79, spa: 100, spd: 125, spe: 81},
+		abilities: {0: "Marvel Scale", 1: "Competitive", H: "Cute Charm"},
 		heightm: 6.2,
 		weightkg: 162,
 		color: "Pink",
@@ -6138,8 +6138,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 351,
 		name: "Castform",
 		types: ["Normal"],
-		baseStats: { hp: 70, atk: 70, def: 70, spa: 70, spd: 70, spe: 70 },
-		abilities: { 0: "Forecast" },
+		baseStats: {hp: 70, atk: 70, def: 70, spa: 70, spd: 70, spe: 70},
+		abilities: {0: "Forecast"},
 		heightm: 0.3,
 		weightkg: 0.8,
 		color: "Gray",
@@ -6153,8 +6153,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Castform",
 		forme: "Sunny",
 		types: ["Fire"],
-		baseStats: { hp: 70, atk: 70, def: 70, spa: 70, spd: 70, spe: 70 },
-		abilities: { 0: "Forecast" },
+		baseStats: {hp: 70, atk: 70, def: 70, spa: 70, spd: 70, spe: 70},
+		abilities: {0: "Forecast"},
 		heightm: 0.3,
 		weightkg: 0.8,
 		color: "Red",
@@ -6168,8 +6168,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Castform",
 		forme: "Rainy",
 		types: ["Water"],
-		baseStats: { hp: 70, atk: 70, def: 70, spa: 70, spd: 70, spe: 70 },
-		abilities: { 0: "Forecast" },
+		baseStats: {hp: 70, atk: 70, def: 70, spa: 70, spd: 70, spe: 70},
+		abilities: {0: "Forecast"},
 		heightm: 0.3,
 		weightkg: 0.8,
 		color: "Blue",
@@ -6183,8 +6183,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Castform",
 		forme: "Snowy",
 		types: ["Ice"],
-		baseStats: { hp: 70, atk: 70, def: 70, spa: 70, spd: 70, spe: 70 },
-		abilities: { 0: "Forecast" },
+		baseStats: {hp: 70, atk: 70, def: 70, spa: 70, spd: 70, spe: 70},
+		abilities: {0: "Forecast"},
 		heightm: 0.3,
 		weightkg: 0.8,
 		color: "White",
@@ -6196,8 +6196,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 352,
 		name: "Kecleon",
 		types: ["Normal"],
-		baseStats: { hp: 60, atk: 90, def: 70, spa: 60, spd: 120, spe: 40 },
-		abilities: { 0: "Color Change", H: "Protean" },
+		baseStats: {hp: 60, atk: 90, def: 70, spa: 60, spd: 120, spe: 40},
+		abilities: {0: "Color Change", H: "Protean"},
 		heightm: 1,
 		weightkg: 22,
 		color: "Green",
@@ -6207,8 +6207,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 353,
 		name: "Shuppet",
 		types: ["Ghost"],
-		baseStats: { hp: 44, atk: 75, def: 35, spa: 63, spd: 33, spe: 45 },
-		abilities: { 0: "Insomnia", 1: "Frisk", H: "Cursed Body" },
+		baseStats: {hp: 44, atk: 75, def: 35, spa: 63, spd: 33, spe: 45},
+		abilities: {0: "Insomnia", 1: "Frisk", H: "Cursed Body"},
 		heightm: 0.6,
 		weightkg: 2.3,
 		color: "Black",
@@ -6219,8 +6219,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 354,
 		name: "Banette",
 		types: ["Ghost"],
-		baseStats: { hp: 64, atk: 115, def: 65, spa: 83, spd: 63, spe: 65 },
-		abilities: { 0: "Insomnia", 1: "Frisk", H: "Cursed Body" },
+		baseStats: {hp: 64, atk: 115, def: 65, spa: 83, spd: 63, spe: 65},
+		abilities: {0: "Insomnia", 1: "Frisk", H: "Cursed Body"},
 		heightm: 1.1,
 		weightkg: 12.5,
 		color: "Black",
@@ -6236,8 +6236,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Banette",
 		forme: "Mega",
 		types: ["Ghost"],
-		baseStats: { hp: 64, atk: 165, def: 75, spa: 93, spd: 83, spe: 75 },
-		abilities: { 0: "Prankster" },
+		baseStats: {hp: 64, atk: 165, def: 75, spa: 93, spd: 83, spe: 75},
+		abilities: {0: "Prankster"},
 		heightm: 1.2,
 		weightkg: 13,
 		color: "Black",
@@ -6248,8 +6248,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 355,
 		name: "Duskull",
 		types: ["Ghost"],
-		baseStats: { hp: 20, atk: 40, def: 90, spa: 30, spd: 90, spe: 25 },
-		abilities: { 0: "Levitate", H: "Frisk" },
+		baseStats: {hp: 20, atk: 40, def: 90, spa: 30, spd: 90, spe: 25},
+		abilities: {0: "Levitate", H: "Frisk"},
 		heightm: 0.8,
 		weightkg: 15,
 		color: "Black",
@@ -6260,8 +6260,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 356,
 		name: "Dusclops",
 		types: ["Ghost"],
-		baseStats: { hp: 40, atk: 70, def: 130, spa: 60, spd: 130, spe: 25 },
-		abilities: { 0: "Pressure", H: "Frisk" },
+		baseStats: {hp: 40, atk: 70, def: 130, spa: 60, spd: 130, spe: 25},
+		abilities: {0: "Pressure", H: "Frisk"},
 		heightm: 1.6,
 		weightkg: 30.6,
 		color: "Black",
@@ -6274,8 +6274,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 357,
 		name: "Tropius",
 		types: ["Grass", "Flying"],
-		baseStats: { hp: 99, atk: 68, def: 83, spa: 72, spd: 87, spe: 51 },
-		abilities: { 0: "Chlorophyll", 1: "Solar Power", H: "Harvest" },
+		baseStats: {hp: 99, atk: 68, def: 83, spa: 72, spd: 87, spe: 51},
+		abilities: {0: "Chlorophyll", 1: "Solar Power", H: "Harvest"},
 		heightm: 2,
 		weightkg: 100,
 		color: "Green",
@@ -6285,8 +6285,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 358,
 		name: "Chimecho",
 		types: ["Psychic"],
-		baseStats: { hp: 75, atk: 50, def: 80, spa: 95, spd: 90, spe: 65 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 75, atk: 50, def: 80, spa: 95, spd: 90, spe: 65},
+		abilities: {0: "Levitate"},
 		heightm: 0.6,
 		weightkg: 1,
 		color: "Blue",
@@ -6300,8 +6300,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 359,
 		name: "Absol",
 		types: ["Dark"],
-		baseStats: { hp: 65, atk: 130, def: 60, spa: 75, spd: 60, spe: 75 },
-		abilities: { 0: "Pressure", 1: "Super Luck", H: "Justified" },
+		baseStats: {hp: 65, atk: 130, def: 60, spa: 75, spd: 60, spe: 75},
+		abilities: {0: "Pressure", 1: "Super Luck", H: "Justified"},
 		heightm: 1.2,
 		weightkg: 47,
 		color: "White",
@@ -6315,8 +6315,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Absol",
 		forme: "Mega",
 		types: ["Dark"],
-		baseStats: { hp: 65, atk: 150, def: 60, spa: 115, spd: 60, spe: 115 },
-		abilities: { 0: "Magic Bounce" },
+		baseStats: {hp: 65, atk: 150, def: 60, spa: 115, spd: 60, spe: 115},
+		abilities: {0: "Magic Bounce"},
 		heightm: 1.2,
 		weightkg: 49,
 		color: "White",
@@ -6327,8 +6327,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 360,
 		name: "Wynaut",
 		types: ["Psychic"],
-		baseStats: { hp: 95, atk: 23, def: 48, spa: 23, spd: 48, spe: 23 },
-		abilities: { 0: "Shadow Tag", H: "Telepathy" },
+		baseStats: {hp: 95, atk: 23, def: 48, spa: 23, spd: 48, spe: 23},
+		abilities: {0: "Shadow Tag", H: "Telepathy"},
 		heightm: 0.6,
 		weightkg: 14,
 		color: "Blue",
@@ -6340,8 +6340,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 361,
 		name: "Snorunt",
 		types: ["Ice"],
-		baseStats: { hp: 50, atk: 50, def: 50, spa: 50, spd: 50, spe: 50 },
-		abilities: { 0: "Inner Focus", 1: "Ice Body", H: "Moody" },
+		baseStats: {hp: 50, atk: 50, def: 50, spa: 50, spd: 50, spe: 50},
+		abilities: {0: "Inner Focus", 1: "Ice Body", H: "Moody"},
 		heightm: 0.7,
 		weightkg: 16.8,
 		color: "Gray",
@@ -6352,8 +6352,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 362,
 		name: "Glalie",
 		types: ["Ice"],
-		baseStats: { hp: 80, atk: 80, def: 80, spa: 80, spd: 80, spe: 80 },
-		abilities: { 0: "Inner Focus", 1: "Ice Body", H: "Moody" },
+		baseStats: {hp: 80, atk: 80, def: 80, spa: 80, spd: 80, spe: 80},
+		abilities: {0: "Inner Focus", 1: "Ice Body", H: "Moody"},
 		heightm: 1.5,
 		weightkg: 256.5,
 		color: "Gray",
@@ -6369,8 +6369,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Glalie",
 		forme: "Mega",
 		types: ["Ice"],
-		baseStats: { hp: 80, atk: 120, def: 80, spa: 120, spd: 80, spe: 100 },
-		abilities: { 0: "Refrigerate" },
+		baseStats: {hp: 80, atk: 120, def: 80, spa: 120, spd: 80, spe: 100},
+		abilities: {0: "Refrigerate"},
 		heightm: 2.1,
 		weightkg: 350.2,
 		color: "Gray",
@@ -6381,8 +6381,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 363,
 		name: "Spheal",
 		types: ["Ice", "Water"],
-		baseStats: { hp: 70, atk: 40, def: 50, spa: 55, spd: 50, spe: 25 },
-		abilities: { 0: "Thick Fat", 1: "Ice Body", H: "Oblivious" },
+		baseStats: {hp: 70, atk: 40, def: 50, spa: 55, spd: 50, spe: 25},
+		abilities: {0: "Thick Fat", 1: "Ice Body", H: "Oblivious"},
 		heightm: 0.8,
 		weightkg: 39.5,
 		color: "Blue",
@@ -6393,8 +6393,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 364,
 		name: "Sealeo",
 		types: ["Ice", "Water"],
-		baseStats: { hp: 90, atk: 60, def: 70, spa: 75, spd: 70, spe: 45 },
-		abilities: { 0: "Thick Fat", 1: "Ice Body", H: "Oblivious" },
+		baseStats: {hp: 90, atk: 60, def: 70, spa: 75, spd: 70, spe: 45},
+		abilities: {0: "Thick Fat", 1: "Ice Body", H: "Oblivious"},
 		heightm: 1.1,
 		weightkg: 87.6,
 		color: "Blue",
@@ -6407,8 +6407,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 365,
 		name: "Walrein",
 		types: ["Ice", "Water"],
-		baseStats: { hp: 110, atk: 80, def: 90, spa: 95, spd: 90, spe: 65 },
-		abilities: { 0: "Thick Fat", 1: "Ice Body", H: "Oblivious" },
+		baseStats: {hp: 110, atk: 80, def: 90, spa: 95, spd: 90, spe: 65},
+		abilities: {0: "Thick Fat", 1: "Ice Body", H: "Oblivious"},
 		heightm: 1.4,
 		weightkg: 150.6,
 		color: "Blue",
@@ -6420,8 +6420,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 366,
 		name: "Clamperl",
 		types: ["Water"],
-		baseStats: { hp: 35, atk: 64, def: 85, spa: 74, spd: 55, spe: 32 },
-		abilities: { 0: "Shell Armor", H: "Rattled" },
+		baseStats: {hp: 35, atk: 64, def: 85, spa: 74, spd: 55, spe: 32},
+		abilities: {0: "Shell Armor", H: "Rattled"},
 		heightm: 0.4,
 		weightkg: 52.5,
 		color: "Blue",
@@ -6432,8 +6432,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 367,
 		name: "Huntail",
 		types: ["Water"],
-		baseStats: { hp: 55, atk: 104, def: 105, spa: 94, spd: 75, spe: 52 },
-		abilities: { 0: "Swift Swim", H: "Water Veil" },
+		baseStats: {hp: 55, atk: 104, def: 105, spa: 94, spd: 75, spe: 52},
+		abilities: {0: "Swift Swim", H: "Water Veil"},
 		heightm: 1.7,
 		weightkg: 27,
 		color: "Blue",
@@ -6446,8 +6446,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 368,
 		name: "Gorebyss",
 		types: ["Water"],
-		baseStats: { hp: 55, atk: 84, def: 105, spa: 114, spd: 75, spe: 52 },
-		abilities: { 0: "Swift Swim", H: "Hydration" },
+		baseStats: {hp: 55, atk: 84, def: 105, spa: 114, spd: 75, spe: 52},
+		abilities: {0: "Swift Swim", H: "Hydration"},
 		heightm: 1.8,
 		weightkg: 22.6,
 		color: "Pink",
@@ -6460,9 +6460,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 369,
 		name: "Relicanth",
 		types: ["Water", "Rock"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 100, atk: 90, def: 130, spa: 45, spd: 65, spe: 55 },
-		abilities: { 0: "Swift Swim", 1: "Rock Head", H: "Sturdy" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 100, atk: 90, def: 130, spa: 45, spd: 65, spe: 55},
+		abilities: {0: "Swift Swim", 1: "Rock Head", H: "Sturdy"},
 		heightm: 1,
 		weightkg: 23.4,
 		color: "Gray",
@@ -6472,9 +6472,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 370,
 		name: "Luvdisc",
 		types: ["Water"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 43, atk: 30, def: 55, spa: 40, spd: 65, spe: 97 },
-		abilities: { 0: "Swift Swim", H: "Hydration" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 43, atk: 30, def: 55, spa: 40, spd: 65, spe: 97},
+		abilities: {0: "Swift Swim", H: "Hydration"},
 		heightm: 0.6,
 		weightkg: 8.7,
 		color: "Pink",
@@ -6484,8 +6484,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 371,
 		name: "Bagon",
 		types: ["Dragon"],
-		baseStats: { hp: 45, atk: 75, def: 60, spa: 40, spd: 30, spe: 50 },
-		abilities: { 0: "Rock Head", H: "Sheer Force" },
+		baseStats: {hp: 45, atk: 75, def: 60, spa: 40, spd: 30, spe: 50},
+		abilities: {0: "Rock Head", H: "Sheer Force"},
 		heightm: 0.6,
 		weightkg: 42.1,
 		color: "Blue",
@@ -6496,8 +6496,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 372,
 		name: "Shelgon",
 		types: ["Dragon"],
-		baseStats: { hp: 65, atk: 95, def: 100, spa: 60, spd: 50, spe: 50 },
-		abilities: { 0: "Rock Head", H: "Overcoat" },
+		baseStats: {hp: 65, atk: 95, def: 100, spa: 60, spd: 50, spe: 50},
+		abilities: {0: "Rock Head", H: "Overcoat"},
 		heightm: 1.1,
 		weightkg: 110.5,
 		color: "White",
@@ -6510,8 +6510,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 373,
 		name: "Salamence",
 		types: ["Dragon", "Flying"],
-		baseStats: { hp: 95, atk: 135, def: 80, spa: 110, spd: 80, spe: 100 },
-		abilities: { 0: "Intimidate", H: "Moxie" },
+		baseStats: {hp: 95, atk: 135, def: 80, spa: 110, spd: 80, spe: 100},
+		abilities: {0: "Intimidate", H: "Moxie"},
 		heightm: 1.5,
 		weightkg: 102.6,
 		color: "Blue",
@@ -6527,8 +6527,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Salamence",
 		forme: "Mega",
 		types: ["Dragon", "Flying"],
-		baseStats: { hp: 95, atk: 145, def: 130, spa: 120, spd: 90, spe: 120 },
-		abilities: { 0: "Aerilate" },
+		baseStats: {hp: 95, atk: 145, def: 130, spa: 120, spd: 90, spe: 120},
+		abilities: {0: "Aerilate"},
 		heightm: 1.8,
 		weightkg: 112.6,
 		color: "Blue",
@@ -6540,8 +6540,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Beldum",
 		types: ["Steel", "Psychic"],
 		gender: "N",
-		baseStats: { hp: 40, atk: 55, def: 80, spa: 35, spd: 60, spe: 30 },
-		abilities: { 0: "Clear Body", H: "Light Metal" },
+		baseStats: {hp: 40, atk: 55, def: 80, spa: 35, spd: 60, spe: 30},
+		abilities: {0: "Clear Body", H: "Light Metal"},
 		heightm: 0.6,
 		weightkg: 95.2,
 		color: "Blue",
@@ -6553,8 +6553,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Metang",
 		types: ["Steel", "Psychic"],
 		gender: "N",
-		baseStats: { hp: 60, atk: 75, def: 100, spa: 55, spd: 80, spe: 50 },
-		abilities: { 0: "Clear Body", H: "Light Metal" },
+		baseStats: {hp: 60, atk: 75, def: 100, spa: 55, spd: 80, spe: 50},
+		abilities: {0: "Clear Body", H: "Light Metal"},
 		heightm: 1.2,
 		weightkg: 202.5,
 		color: "Blue",
@@ -6568,8 +6568,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Metagross",
 		types: ["Steel", "Psychic"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 135, def: 130, spa: 95, spd: 90, spe: 70 },
-		abilities: { 0: "Clear Body", H: "Light Metal" },
+		baseStats: {hp: 80, atk: 135, def: 130, spa: 95, spd: 90, spe: 70},
+		abilities: {0: "Clear Body", H: "Light Metal"},
 		heightm: 1.6,
 		weightkg: 550,
 		color: "Blue",
@@ -6586,8 +6586,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Mega",
 		types: ["Steel", "Psychic"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 145, def: 150, spa: 105, spd: 110, spe: 110 },
-		abilities: { 0: "Tough Claws" },
+		baseStats: {hp: 80, atk: 145, def: 150, spa: 105, spd: 110, spe: 110},
+		abilities: {0: "Tough Claws"},
 		heightm: 2.5,
 		weightkg: 942.9,
 		color: "Blue",
@@ -6599,8 +6599,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Regirock",
 		types: ["Rock"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 100, def: 200, spa: 50, spd: 100, spe: 50 },
-		abilities: { 0: "Clear Body", H: "Sturdy" },
+		baseStats: {hp: 80, atk: 100, def: 200, spa: 50, spd: 100, spe: 50},
+		abilities: {0: "Clear Body", H: "Sturdy"},
 		heightm: 1.7,
 		weightkg: 230,
 		color: "Brown",
@@ -6611,8 +6611,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Regice",
 		types: ["Ice"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 50, def: 100, spa: 100, spd: 200, spe: 50 },
-		abilities: { 0: "Clear Body", H: "Ice Body" },
+		baseStats: {hp: 80, atk: 50, def: 100, spa: 100, spd: 200, spe: 50},
+		abilities: {0: "Clear Body", H: "Ice Body"},
 		heightm: 1.8,
 		weightkg: 175,
 		color: "Blue",
@@ -6623,8 +6623,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Registeel",
 		types: ["Steel"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 75, def: 150, spa: 75, spd: 150, spe: 50 },
-		abilities: { 0: "Clear Body", H: "Light Metal" },
+		baseStats: {hp: 80, atk: 75, def: 150, spa: 75, spd: 150, spe: 50},
+		abilities: {0: "Clear Body", H: "Light Metal"},
 		heightm: 1.9,
 		weightkg: 205,
 		color: "Gray",
@@ -6635,8 +6635,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Latias",
 		types: ["Dragon", "Psychic"],
 		gender: "F",
-		baseStats: { hp: 80, atk: 80, def: 90, spa: 110, spd: 130, spe: 110 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 80, atk: 80, def: 90, spa: 110, spd: 130, spe: 110},
+		abilities: {0: "Levitate"},
 		heightm: 1.4,
 		weightkg: 40,
 		color: "Red",
@@ -6651,8 +6651,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Mega",
 		types: ["Dragon", "Psychic"],
 		gender: "F",
-		baseStats: { hp: 80, atk: 100, def: 120, spa: 140, spd: 150, spe: 110 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 80, atk: 100, def: 120, spa: 140, spd: 150, spe: 110},
+		abilities: {0: "Levitate"},
 		heightm: 1.8,
 		weightkg: 52,
 		color: "Purple",
@@ -6664,8 +6664,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Latios",
 		types: ["Dragon", "Psychic"],
 		gender: "M",
-		baseStats: { hp: 80, atk: 90, def: 80, spa: 130, spd: 110, spe: 110 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 80, atk: 90, def: 80, spa: 130, spd: 110, spe: 110},
+		abilities: {0: "Levitate"},
 		heightm: 2,
 		weightkg: 60,
 		color: "Blue",
@@ -6680,8 +6680,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Mega",
 		types: ["Dragon", "Psychic"],
 		gender: "M",
-		baseStats: { hp: 80, atk: 130, def: 100, spa: 160, spd: 120, spe: 110 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 80, atk: 130, def: 100, spa: 160, spd: 120, spe: 110},
+		abilities: {0: "Levitate"},
 		heightm: 2.3,
 		weightkg: 70,
 		color: "Purple",
@@ -6693,8 +6693,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Kyogre",
 		types: ["Water"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 100, def: 90, spa: 150, spd: 140, spe: 90 },
-		abilities: { 0: "Drizzle" },
+		baseStats: {hp: 100, atk: 100, def: 90, spa: 150, spd: 140, spe: 90},
+		abilities: {0: "Drizzle"},
 		heightm: 4.5,
 		weightkg: 352,
 		color: "Blue",
@@ -6709,8 +6709,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Primal",
 		types: ["Water"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 150, def: 90, spa: 180, spd: 160, spe: 90 },
-		abilities: { 0: "Primordial Sea" },
+		baseStats: {hp: 100, atk: 150, def: 90, spa: 180, spd: 160, spe: 90},
+		abilities: {0: "Primordial Sea"},
 		heightm: 9.8,
 		weightkg: 430,
 		color: "Blue",
@@ -6722,8 +6722,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Groudon",
 		types: ["Ground"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 150, def: 140, spa: 100, spd: 90, spe: 90 },
-		abilities: { 0: "Drought" },
+		baseStats: {hp: 100, atk: 150, def: 140, spa: 100, spd: 90, spe: 90},
+		abilities: {0: "Drought"},
 		heightm: 3.5,
 		weightkg: 950,
 		color: "Red",
@@ -6738,8 +6738,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Primal",
 		types: ["Ground", "Fire"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 180, def: 160, spa: 150, spd: 90, spe: 90 },
-		abilities: { 0: "Desolate Land" },
+		baseStats: {hp: 100, atk: 180, def: 160, spa: 150, spd: 90, spe: 90},
+		abilities: {0: "Desolate Land"},
 		heightm: 5,
 		weightkg: 999.7,
 		color: "Red",
@@ -6751,8 +6751,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Rayquaza",
 		types: ["Dragon", "Flying"],
 		gender: "N",
-		baseStats: { hp: 105, atk: 150, def: 90, spa: 150, spd: 90, spe: 95 },
-		abilities: { 0: "Air Lock" },
+		baseStats: {hp: 105, atk: 150, def: 90, spa: 150, spd: 90, spe: 95},
+		abilities: {0: "Air Lock"},
 		heightm: 7,
 		weightkg: 206.5,
 		color: "Green",
@@ -6767,8 +6767,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Mega",
 		types: ["Dragon", "Flying"],
 		gender: "N",
-		baseStats: { hp: 105, atk: 180, def: 100, spa: 180, spd: 100, spe: 115 },
-		abilities: { 0: "Delta Stream" },
+		baseStats: {hp: 105, atk: 180, def: 100, spa: 180, spd: 100, spe: 115},
+		abilities: {0: "Delta Stream"},
 		heightm: 10.8,
 		weightkg: 392,
 		color: "Green",
@@ -6780,8 +6780,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Jirachi",
 		types: ["Steel", "Psychic"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Serene Grace" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Serene Grace"},
 		heightm: 0.3,
 		weightkg: 1.1,
 		color: "Yellow",
@@ -6793,8 +6793,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Normal",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 50, atk: 150, def: 50, spa: 150, spd: 50, spe: 150 },
-		abilities: { 0: "Pressure" },
+		baseStats: {hp: 50, atk: 150, def: 50, spa: 150, spd: 50, spe: 150},
+		abilities: {0: "Pressure"},
 		heightm: 1.7,
 		weightkg: 60.8,
 		color: "Red",
@@ -6809,8 +6809,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Attack",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 50, atk: 180, def: 20, spa: 180, spd: 20, spe: 150 },
-		abilities: { 0: "Pressure" },
+		baseStats: {hp: 50, atk: 180, def: 20, spa: 180, spd: 20, spe: 150},
+		abilities: {0: "Pressure"},
 		heightm: 1.7,
 		weightkg: 60.8,
 		color: "Red",
@@ -6824,8 +6824,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Defense",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 50, atk: 70, def: 160, spa: 70, spd: 160, spe: 90 },
-		abilities: { 0: "Pressure" },
+		baseStats: {hp: 50, atk: 70, def: 160, spa: 70, spd: 160, spe: 90},
+		abilities: {0: "Pressure"},
 		heightm: 1.7,
 		weightkg: 60.8,
 		color: "Red",
@@ -6839,8 +6839,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Speed",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 50, atk: 95, def: 90, spa: 95, spd: 90, spe: 180 },
-		abilities: { 0: "Pressure" },
+		baseStats: {hp: 50, atk: 95, def: 90, spa: 95, spd: 90, spe: 180},
+		abilities: {0: "Pressure"},
 		heightm: 1.7,
 		weightkg: 60.8,
 		color: "Red",
@@ -6851,9 +6851,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 387,
 		name: "Turtwig",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 55, atk: 68, def: 64, spa: 45, spd: 55, spe: 31 },
-		abilities: { 0: "Overgrow", H: "Shell Armor" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 55, atk: 68, def: 64, spa: 45, spd: 55, spe: 31},
+		abilities: {0: "Overgrow", H: "Shell Armor"},
 		heightm: 0.4,
 		weightkg: 10.2,
 		color: "Green",
@@ -6864,9 +6864,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 388,
 		name: "Grotle",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 75, atk: 89, def: 85, spa: 55, spd: 65, spe: 36 },
-		abilities: { 0: "Overgrow", H: "Shell Armor" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 75, atk: 89, def: 85, spa: 55, spd: 65, spe: 36},
+		abilities: {0: "Overgrow", H: "Shell Armor"},
 		heightm: 1.1,
 		weightkg: 97,
 		color: "Green",
@@ -6879,9 +6879,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 389,
 		name: "Torterra",
 		types: ["Grass", "Ground"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 95, atk: 109, def: 105, spa: 75, spd: 85, spe: 56 },
-		abilities: { 0: "Overgrow", H: "Shell Armor" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 95, atk: 109, def: 105, spa: 75, spd: 85, spe: 56},
+		abilities: {0: "Overgrow", H: "Shell Armor"},
 		heightm: 2.2,
 		weightkg: 310,
 		color: "Green",
@@ -6893,9 +6893,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 390,
 		name: "Chimchar",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 44, atk: 58, def: 44, spa: 58, spd: 44, spe: 61 },
-		abilities: { 0: "Blaze", H: "Iron Fist" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 44, atk: 58, def: 44, spa: 58, spd: 44, spe: 61},
+		abilities: {0: "Blaze", H: "Iron Fist"},
 		heightm: 0.5,
 		weightkg: 6.2,
 		color: "Brown",
@@ -6906,9 +6906,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 391,
 		name: "Monferno",
 		types: ["Fire", "Fighting"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 64, atk: 78, def: 52, spa: 78, spd: 52, spe: 81 },
-		abilities: { 0: "Blaze", H: "Iron Fist" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 64, atk: 78, def: 52, spa: 78, spd: 52, spe: 81},
+		abilities: {0: "Blaze", H: "Iron Fist"},
 		heightm: 0.9,
 		weightkg: 22,
 		color: "Brown",
@@ -6921,9 +6921,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 392,
 		name: "Infernape",
 		types: ["Fire", "Fighting"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 76, atk: 104, def: 71, spa: 104, spd: 71, spe: 108 },
-		abilities: { 0: "Blaze", H: "Iron Fist" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 76, atk: 104, def: 71, spa: 104, spd: 71, spe: 108},
+		abilities: {0: "Blaze", H: "Iron Fist"},
 		heightm: 1.2,
 		weightkg: 55,
 		color: "Brown",
@@ -6935,9 +6935,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 393,
 		name: "Piplup",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 53, atk: 51, def: 53, spa: 61, spd: 56, spe: 40 },
-		abilities: { 0: "Torrent", H: "Defiant" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 53, atk: 51, def: 53, spa: 61, spd: 56, spe: 40},
+		abilities: {0: "Torrent", H: "Defiant"},
 		heightm: 0.4,
 		weightkg: 5.2,
 		color: "Blue",
@@ -6948,9 +6948,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 394,
 		name: "Prinplup",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 64, atk: 66, def: 68, spa: 81, spd: 76, spe: 50 },
-		abilities: { 0: "Torrent", H: "Defiant" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 64, atk: 66, def: 68, spa: 81, spd: 76, spe: 50},
+		abilities: {0: "Torrent", H: "Defiant"},
 		heightm: 0.8,
 		weightkg: 23,
 		color: "Blue",
@@ -6963,9 +6963,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 395,
 		name: "Empoleon",
 		types: ["Water", "Steel"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 84, atk: 86, def: 88, spa: 111, spd: 101, spe: 60 },
-		abilities: { 0: "Torrent", H: "Defiant" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 84, atk: 86, def: 88, spa: 111, spd: 101, spe: 60},
+		abilities: {0: "Torrent", H: "Defiant"},
 		heightm: 1.7,
 		weightkg: 84.5,
 		color: "Blue",
@@ -6977,8 +6977,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 396,
 		name: "Starly",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 40, atk: 55, def: 30, spa: 30, spd: 30, spe: 60 },
-		abilities: { 0: "Keen Eye", H: "Reckless" },
+		baseStats: {hp: 40, atk: 55, def: 30, spa: 30, spd: 30, spe: 60},
+		abilities: {0: "Keen Eye", H: "Reckless"},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Brown",
@@ -6989,8 +6989,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 397,
 		name: "Staravia",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 55, atk: 75, def: 50, spa: 40, spd: 40, spe: 80 },
-		abilities: { 0: "Intimidate", H: "Reckless" },
+		baseStats: {hp: 55, atk: 75, def: 50, spa: 40, spd: 40, spe: 80},
+		abilities: {0: "Intimidate", H: "Reckless"},
 		heightm: 0.6,
 		weightkg: 15.5,
 		color: "Brown",
@@ -7003,8 +7003,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 398,
 		name: "Staraptor",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 85, atk: 120, def: 70, spa: 50, spd: 60, spe: 100 },
-		abilities: { 0: "Intimidate", H: "Reckless" },
+		baseStats: {hp: 85, atk: 120, def: 70, spa: 50, spd: 60, spe: 100},
+		abilities: {0: "Intimidate", H: "Reckless"},
 		heightm: 1.2,
 		weightkg: 24.9,
 		color: "Brown",
@@ -7016,8 +7016,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 399,
 		name: "Bidoof",
 		types: ["Normal"],
-		baseStats: { hp: 59, atk: 45, def: 40, spa: 35, spd: 40, spe: 31 },
-		abilities: { 0: "Simple", 1: "Unaware", H: "Moody" },
+		baseStats: {hp: 59, atk: 45, def: 40, spa: 35, spd: 40, spe: 31},
+		abilities: {0: "Simple", 1: "Unaware", H: "Moody"},
 		heightm: 0.5,
 		weightkg: 20,
 		color: "Brown",
@@ -7028,8 +7028,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 400,
 		name: "Bibarel",
 		types: ["Normal", "Water"],
-		baseStats: { hp: 79, atk: 85, def: 60, spa: 55, spd: 60, spe: 71 },
-		abilities: { 0: "Simple", 1: "Unaware", H: "Moody" },
+		baseStats: {hp: 79, atk: 85, def: 60, spa: 55, spd: 60, spe: 71},
+		abilities: {0: "Simple", 1: "Unaware", H: "Moody"},
 		heightm: 1,
 		weightkg: 31.5,
 		color: "Brown",
@@ -7041,8 +7041,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 401,
 		name: "Kricketot",
 		types: ["Bug"],
-		baseStats: { hp: 37, atk: 25, def: 41, spa: 25, spd: 41, spe: 25 },
-		abilities: { 0: "Shed Skin", H: "Run Away" },
+		baseStats: {hp: 37, atk: 25, def: 41, spa: 25, spd: 41, spe: 25},
+		abilities: {0: "Shed Skin", H: "Run Away"},
 		heightm: 0.3,
 		weightkg: 2.2,
 		color: "Red",
@@ -7053,8 +7053,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 402,
 		name: "Kricketune",
 		types: ["Bug"],
-		baseStats: { hp: 77, atk: 85, def: 51, spa: 55, spd: 51, spe: 65 },
-		abilities: { 0: "Swarm", H: "Technician" },
+		baseStats: {hp: 77, atk: 85, def: 51, spa: 55, spd: 51, spe: 65},
+		abilities: {0: "Swarm", H: "Technician"},
 		heightm: 1,
 		weightkg: 25.5,
 		color: "Red",
@@ -7066,8 +7066,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 403,
 		name: "Shinx",
 		types: ["Electric"],
-		baseStats: { hp: 45, atk: 65, def: 34, spa: 40, spd: 34, spe: 45 },
-		abilities: { 0: "Rivalry", 1: "Intimidate", H: "Guts" },
+		baseStats: {hp: 45, atk: 65, def: 34, spa: 40, spd: 34, spe: 45},
+		abilities: {0: "Rivalry", 1: "Intimidate", H: "Guts"},
 		heightm: 0.5,
 		weightkg: 9.5,
 		color: "Blue",
@@ -7078,8 +7078,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 404,
 		name: "Luxio",
 		types: ["Electric"],
-		baseStats: { hp: 60, atk: 85, def: 49, spa: 60, spd: 49, spe: 60 },
-		abilities: { 0: "Rivalry", 1: "Intimidate", H: "Guts" },
+		baseStats: {hp: 60, atk: 85, def: 49, spa: 60, spd: 49, spe: 60},
+		abilities: {0: "Rivalry", 1: "Intimidate", H: "Guts"},
 		heightm: 0.9,
 		weightkg: 30.5,
 		color: "Blue",
@@ -7092,8 +7092,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 405,
 		name: "Luxray",
 		types: ["Electric"],
-		baseStats: { hp: 80, atk: 120, def: 79, spa: 95, spd: 79, spe: 70 },
-		abilities: { 0: "Rivalry", 1: "Intimidate", H: "Guts" },
+		baseStats: {hp: 80, atk: 120, def: 79, spa: 95, spd: 79, spe: 70},
+		abilities: {0: "Rivalry", 1: "Intimidate", H: "Guts"},
 		heightm: 1.4,
 		weightkg: 42,
 		color: "Blue",
@@ -7105,8 +7105,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 406,
 		name: "Budew",
 		types: ["Grass", "Poison"],
-		baseStats: { hp: 40, atk: 30, def: 35, spa: 50, spd: 70, spe: 55 },
-		abilities: { 0: "Natural Cure", 1: "Poison Point", H: "Leaf Guard" },
+		baseStats: {hp: 40, atk: 30, def: 35, spa: 50, spd: 70, spe: 55},
+		abilities: {0: "Natural Cure", 1: "Poison Point", H: "Leaf Guard"},
 		heightm: 0.2,
 		weightkg: 1.2,
 		color: "Green",
@@ -7118,8 +7118,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 407,
 		name: "Roserade",
 		types: ["Grass", "Poison"],
-		baseStats: { hp: 60, atk: 70, def: 65, spa: 125, spd: 105, spe: 90 },
-		abilities: { 0: "Natural Cure", 1: "Poison Point", H: "Technician" },
+		baseStats: {hp: 60, atk: 70, def: 65, spa: 125, spd: 105, spe: 90},
+		abilities: {0: "Natural Cure", 1: "Poison Point", H: "Technician"},
 		heightm: 0.9,
 		weightkg: 14.5,
 		color: "Green",
@@ -7132,9 +7132,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 408,
 		name: "Cranidos",
 		types: ["Rock"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 67, atk: 125, def: 40, spa: 30, spd: 30, spe: 58 },
-		abilities: { 0: "Mold Breaker", H: "Sheer Force" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 67, atk: 125, def: 40, spa: 30, spd: 30, spe: 58},
+		abilities: {0: "Mold Breaker", H: "Sheer Force"},
 		heightm: 0.9,
 		weightkg: 31.5,
 		color: "Blue",
@@ -7145,9 +7145,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 409,
 		name: "Rampardos",
 		types: ["Rock"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 97, atk: 165, def: 60, spa: 65, spd: 50, spe: 58 },
-		abilities: { 0: "Mold Breaker", H: "Sheer Force" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 97, atk: 165, def: 60, spa: 65, spd: 50, spe: 58},
+		abilities: {0: "Mold Breaker", H: "Sheer Force"},
 		heightm: 1.6,
 		weightkg: 102.5,
 		color: "Blue",
@@ -7159,9 +7159,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 410,
 		name: "Shieldon",
 		types: ["Rock", "Steel"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 30, atk: 42, def: 118, spa: 42, spd: 88, spe: 30 },
-		abilities: { 0: "Sturdy", H: "Soundproof" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 30, atk: 42, def: 118, spa: 42, spd: 88, spe: 30},
+		abilities: {0: "Sturdy", H: "Soundproof"},
 		heightm: 0.5,
 		weightkg: 57,
 		color: "Gray",
@@ -7172,9 +7172,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 411,
 		name: "Bastiodon",
 		types: ["Rock", "Steel"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 60, atk: 52, def: 168, spa: 47, spd: 138, spe: 30 },
-		abilities: { 0: "Sturdy", H: "Soundproof" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 60, atk: 52, def: 168, spa: 47, spd: 138, spe: 30},
+		abilities: {0: "Sturdy", H: "Soundproof"},
 		heightm: 1.3,
 		weightkg: 149.5,
 		color: "Gray",
@@ -7187,8 +7187,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Burmy",
 		baseForme: "Plant",
 		types: ["Bug"],
-		baseStats: { hp: 40, atk: 29, def: 45, spa: 29, spd: 45, spe: 36 },
-		abilities: { 0: "Shed Skin", H: "Overcoat" },
+		baseStats: {hp: 40, atk: 29, def: 45, spa: 29, spd: 45, spe: 36},
+		abilities: {0: "Shed Skin", H: "Overcoat"},
 		heightm: 0.2,
 		weightkg: 3.4,
 		color: "Green",
@@ -7203,8 +7203,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Plant",
 		types: ["Bug", "Grass"],
 		gender: "F",
-		baseStats: { hp: 60, atk: 59, def: 85, spa: 79, spd: 105, spe: 36 },
-		abilities: { 0: "Anticipation", H: "Overcoat" },
+		baseStats: {hp: 60, atk: 59, def: 85, spa: 79, spd: 105, spe: 36},
+		abilities: {0: "Anticipation", H: "Overcoat"},
 		heightm: 0.5,
 		weightkg: 6.5,
 		color: "Green",
@@ -7221,8 +7221,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Sandy",
 		types: ["Bug", "Ground"],
 		gender: "F",
-		baseStats: { hp: 60, atk: 79, def: 105, spa: 59, spd: 85, spe: 36 },
-		abilities: { 0: "Anticipation", H: "Overcoat" },
+		baseStats: {hp: 60, atk: 79, def: 105, spa: 59, spd: 85, spe: 36},
+		abilities: {0: "Anticipation", H: "Overcoat"},
 		heightm: 0.5,
 		weightkg: 6.5,
 		color: "Brown",
@@ -7237,8 +7237,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Trash",
 		types: ["Bug", "Steel"],
 		gender: "F",
-		baseStats: { hp: 60, atk: 69, def: 95, spa: 69, spd: 95, spe: 36 },
-		abilities: { 0: "Anticipation", H: "Overcoat" },
+		baseStats: {hp: 60, atk: 69, def: 95, spa: 69, spd: 95, spe: 36},
+		abilities: {0: "Anticipation", H: "Overcoat"},
 		heightm: 0.5,
 		weightkg: 6.5,
 		color: "Red",
@@ -7251,8 +7251,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Mothim",
 		types: ["Bug", "Flying"],
 		gender: "M",
-		baseStats: { hp: 70, atk: 94, def: 50, spa: 94, spd: 50, spe: 66 },
-		abilities: { 0: "Swarm", H: "Tinted Lens" },
+		baseStats: {hp: 70, atk: 94, def: 50, spa: 94, spd: 50, spe: 66},
+		abilities: {0: "Swarm", H: "Tinted Lens"},
 		heightm: 0.9,
 		weightkg: 23.3,
 		color: "Yellow",
@@ -7264,9 +7264,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 415,
 		name: "Combee",
 		types: ["Bug", "Flying"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 30, atk: 30, def: 42, spa: 30, spd: 42, spe: 70 },
-		abilities: { 0: "Honey Gather", H: "Hustle" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 30, atk: 30, def: 42, spa: 30, spd: 42, spe: 70},
+		abilities: {0: "Honey Gather", H: "Hustle"},
 		heightm: 0.3,
 		weightkg: 5.5,
 		color: "Yellow",
@@ -7278,8 +7278,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Vespiquen",
 		types: ["Bug", "Flying"],
 		gender: "F",
-		baseStats: { hp: 70, atk: 80, def: 102, spa: 80, spd: 102, spe: 40 },
-		abilities: { 0: "Pressure", H: "Unnerve" },
+		baseStats: {hp: 70, atk: 80, def: 102, spa: 80, spd: 102, spe: 40},
+		abilities: {0: "Pressure", H: "Unnerve"},
 		heightm: 1.2,
 		weightkg: 38.5,
 		color: "Yellow",
@@ -7291,8 +7291,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 417,
 		name: "Pachirisu",
 		types: ["Electric"],
-		baseStats: { hp: 60, atk: 45, def: 70, spa: 45, spd: 90, spe: 95 },
-		abilities: { 0: "Run Away", 1: "Pickup", H: "Volt Absorb" },
+		baseStats: {hp: 60, atk: 45, def: 70, spa: 45, spd: 90, spe: 95},
+		abilities: {0: "Run Away", 1: "Pickup", H: "Volt Absorb"},
 		heightm: 0.4,
 		weightkg: 3.9,
 		color: "White",
@@ -7302,8 +7302,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 418,
 		name: "Buizel",
 		types: ["Water"],
-		baseStats: { hp: 55, atk: 65, def: 35, spa: 60, spd: 30, spe: 85 },
-		abilities: { 0: "Swift Swim", H: "Water Veil" },
+		baseStats: {hp: 55, atk: 65, def: 35, spa: 60, spd: 30, spe: 85},
+		abilities: {0: "Swift Swim", H: "Water Veil"},
 		heightm: 0.7,
 		weightkg: 29.5,
 		color: "Brown",
@@ -7314,8 +7314,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 419,
 		name: "Floatzel",
 		types: ["Water"],
-		baseStats: { hp: 85, atk: 105, def: 55, spa: 85, spd: 50, spe: 115 },
-		abilities: { 0: "Swift Swim", H: "Water Veil" },
+		baseStats: {hp: 85, atk: 105, def: 55, spa: 85, spd: 50, spe: 115},
+		abilities: {0: "Swift Swim", H: "Water Veil"},
 		heightm: 1.1,
 		weightkg: 33.5,
 		color: "Brown",
@@ -7327,8 +7327,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 420,
 		name: "Cherubi",
 		types: ["Grass"],
-		baseStats: { hp: 45, atk: 35, def: 45, spa: 62, spd: 53, spe: 35 },
-		abilities: { 0: "Chlorophyll" },
+		baseStats: {hp: 45, atk: 35, def: 45, spa: 62, spd: 53, spe: 35},
+		abilities: {0: "Chlorophyll"},
 		heightm: 0.4,
 		weightkg: 3.3,
 		color: "Pink",
@@ -7340,8 +7340,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Cherrim",
 		baseForme: "Overcast",
 		types: ["Grass"],
-		baseStats: { hp: 70, atk: 60, def: 70, spa: 87, spd: 78, spe: 85 },
-		abilities: { 0: "Flower Gift" },
+		baseStats: {hp: 70, atk: 60, def: 70, spa: 87, spd: 78, spe: 85},
+		abilities: {0: "Flower Gift"},
 		heightm: 0.5,
 		weightkg: 9.3,
 		color: "Purple",
@@ -7357,8 +7357,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Cherrim",
 		forme: "Sunshine",
 		types: ["Grass"],
-		baseStats: { hp: 70, atk: 60, def: 70, spa: 87, spd: 78, spe: 85 },
-		abilities: { 0: "Flower Gift" },
+		baseStats: {hp: 70, atk: 60, def: 70, spa: 87, spd: 78, spe: 85},
+		abilities: {0: "Flower Gift"},
 		heightm: 0.5,
 		weightkg: 9.3,
 		color: "Pink",
@@ -7371,8 +7371,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Shellos",
 		baseForme: "West",
 		types: ["Water"],
-		baseStats: { hp: 76, atk: 48, def: 48, spa: 57, spd: 62, spe: 34 },
-		abilities: { 0: "Sticky Hold", 1: "Storm Drain", H: "Sand Force" },
+		baseStats: {hp: 76, atk: 48, def: 48, spa: 57, spd: 62, spe: 34},
+		abilities: {0: "Sticky Hold", 1: "Storm Drain", H: "Sand Force"},
 		heightm: 0.3,
 		weightkg: 6.3,
 		color: "Purple",
@@ -7386,8 +7386,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Gastrodon",
 		baseForme: "West",
 		types: ["Water", "Ground"],
-		baseStats: { hp: 111, atk: 83, def: 68, spa: 92, spd: 82, spe: 39 },
-		abilities: { 0: "Sticky Hold", 1: "Storm Drain", H: "Sand Force" },
+		baseStats: {hp: 111, atk: 83, def: 68, spa: 92, spd: 82, spe: 39},
+		abilities: {0: "Sticky Hold", 1: "Storm Drain", H: "Sand Force"},
 		heightm: 0.9,
 		weightkg: 29.9,
 		color: "Purple",
@@ -7401,8 +7401,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 424,
 		name: "Ambipom",
 		types: ["Normal"],
-		baseStats: { hp: 75, atk: 100, def: 66, spa: 60, spd: 66, spe: 115 },
-		abilities: { 0: "Technician", 1: "Pickup", H: "Skill Link" },
+		baseStats: {hp: 75, atk: 100, def: 66, spa: 60, spd: 66, spe: 115},
+		abilities: {0: "Technician", 1: "Pickup", H: "Skill Link"},
 		heightm: 1.2,
 		weightkg: 20.3,
 		color: "Purple",
@@ -7415,8 +7415,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 425,
 		name: "Drifloon",
 		types: ["Ghost", "Flying"],
-		baseStats: { hp: 90, atk: 50, def: 34, spa: 60, spd: 44, spe: 70 },
-		abilities: { 0: "Aftermath", 1: "Unburden", H: "Flare Boost" },
+		baseStats: {hp: 90, atk: 50, def: 34, spa: 60, spd: 44, spe: 70},
+		abilities: {0: "Aftermath", 1: "Unburden", H: "Flare Boost"},
 		heightm: 0.4,
 		weightkg: 1.2,
 		color: "Purple",
@@ -7427,8 +7427,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 426,
 		name: "Drifblim",
 		types: ["Ghost", "Flying"],
-		baseStats: { hp: 150, atk: 80, def: 44, spa: 90, spd: 54, spe: 80 },
-		abilities: { 0: "Aftermath", 1: "Unburden", H: "Flare Boost" },
+		baseStats: {hp: 150, atk: 80, def: 44, spa: 90, spd: 54, spe: 80},
+		abilities: {0: "Aftermath", 1: "Unburden", H: "Flare Boost"},
 		heightm: 1.2,
 		weightkg: 15,
 		color: "Purple",
@@ -7440,8 +7440,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 427,
 		name: "Buneary",
 		types: ["Normal"],
-		baseStats: { hp: 55, atk: 66, def: 44, spa: 44, spd: 56, spe: 85 },
-		abilities: { 0: "Run Away", 1: "Klutz", H: "Limber" },
+		baseStats: {hp: 55, atk: 66, def: 44, spa: 44, spd: 56, spe: 85},
+		abilities: {0: "Run Away", 1: "Klutz", H: "Limber"},
 		heightm: 0.4,
 		weightkg: 5.5,
 		color: "Brown",
@@ -7452,8 +7452,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 428,
 		name: "Lopunny",
 		types: ["Normal"],
-		baseStats: { hp: 65, atk: 76, def: 84, spa: 54, spd: 96, spe: 105 },
-		abilities: { 0: "Cute Charm", 1: "Klutz", H: "Limber" },
+		baseStats: {hp: 65, atk: 76, def: 84, spa: 54, spd: 96, spe: 105},
+		abilities: {0: "Cute Charm", 1: "Klutz", H: "Limber"},
 		heightm: 1.2,
 		weightkg: 33.3,
 		color: "Brown",
@@ -7469,8 +7469,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Lopunny",
 		forme: "Mega",
 		types: ["Normal", "Fighting"],
-		baseStats: { hp: 65, atk: 136, def: 94, spa: 54, spd: 96, spe: 135 },
-		abilities: { 0: "Scrappy" },
+		baseStats: {hp: 65, atk: 136, def: 94, spa: 54, spd: 96, spe: 135},
+		abilities: {0: "Scrappy"},
 		heightm: 1.3,
 		weightkg: 28.3,
 		color: "Brown",
@@ -7481,8 +7481,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 429,
 		name: "Mismagius",
 		types: ["Ghost"],
-		baseStats: { hp: 60, atk: 60, def: 60, spa: 105, spd: 105, spe: 105 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 60, atk: 60, def: 60, spa: 105, spd: 105, spe: 105},
+		abilities: {0: "Levitate"},
 		heightm: 0.9,
 		weightkg: 4.4,
 		color: "Purple",
@@ -7495,8 +7495,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 430,
 		name: "Honchkrow",
 		types: ["Dark", "Flying"],
-		baseStats: { hp: 100, atk: 125, def: 52, spa: 105, spd: 52, spe: 71 },
-		abilities: { 0: "Insomnia", 1: "Super Luck", H: "Moxie" },
+		baseStats: {hp: 100, atk: 125, def: 52, spa: 105, spd: 52, spe: 71},
+		abilities: {0: "Insomnia", 1: "Super Luck", H: "Moxie"},
 		heightm: 0.9,
 		weightkg: 27.3,
 		color: "Black",
@@ -7509,9 +7509,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 431,
 		name: "Glameow",
 		types: ["Normal"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 49, atk: 55, def: 42, spa: 42, spd: 37, spe: 85 },
-		abilities: { 0: "Limber", 1: "Own Tempo", H: "Keen Eye" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 49, atk: 55, def: 42, spa: 42, spd: 37, spe: 85},
+		abilities: {0: "Limber", 1: "Own Tempo", H: "Keen Eye"},
 		heightm: 0.5,
 		weightkg: 3.9,
 		color: "Gray",
@@ -7522,9 +7522,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 432,
 		name: "Purugly",
 		types: ["Normal"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 71, atk: 82, def: 64, spa: 64, spd: 59, spe: 112 },
-		abilities: { 0: "Thick Fat", 1: "Own Tempo", H: "Defiant" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 71, atk: 82, def: 64, spa: 64, spd: 59, spe: 112},
+		abilities: {0: "Thick Fat", 1: "Own Tempo", H: "Defiant"},
 		heightm: 1,
 		weightkg: 43.8,
 		color: "Gray",
@@ -7536,8 +7536,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 433,
 		name: "Chingling",
 		types: ["Psychic"],
-		baseStats: { hp: 45, atk: 30, def: 50, spa: 65, spd: 50, spe: 45 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 45, atk: 30, def: 50, spa: 65, spd: 50, spe: 45},
+		abilities: {0: "Levitate"},
 		heightm: 0.2,
 		weightkg: 0.6,
 		color: "Yellow",
@@ -7549,8 +7549,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 434,
 		name: "Stunky",
 		types: ["Poison", "Dark"],
-		baseStats: { hp: 63, atk: 63, def: 47, spa: 41, spd: 41, spe: 74 },
-		abilities: { 0: "Stench", 1: "Aftermath", H: "Keen Eye" },
+		baseStats: {hp: 63, atk: 63, def: 47, spa: 41, spd: 41, spe: 74},
+		abilities: {0: "Stench", 1: "Aftermath", H: "Keen Eye"},
 		heightm: 0.4,
 		weightkg: 19.2,
 		color: "Purple",
@@ -7561,8 +7561,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 435,
 		name: "Skuntank",
 		types: ["Poison", "Dark"],
-		baseStats: { hp: 103, atk: 93, def: 67, spa: 71, spd: 61, spe: 84 },
-		abilities: { 0: "Stench", 1: "Aftermath", H: "Keen Eye" },
+		baseStats: {hp: 103, atk: 93, def: 67, spa: 71, spd: 61, spe: 84},
+		abilities: {0: "Stench", 1: "Aftermath", H: "Keen Eye"},
 		heightm: 1,
 		weightkg: 38,
 		color: "Purple",
@@ -7575,8 +7575,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Bronzor",
 		types: ["Steel", "Psychic"],
 		gender: "N",
-		baseStats: { hp: 57, atk: 24, def: 86, spa: 24, spd: 86, spe: 23 },
-		abilities: { 0: "Levitate", 1: "Heatproof", H: "Heavy Metal" },
+		baseStats: {hp: 57, atk: 24, def: 86, spa: 24, spd: 86, spe: 23},
+		abilities: {0: "Levitate", 1: "Heatproof", H: "Heavy Metal"},
 		heightm: 0.5,
 		weightkg: 60.5,
 		color: "Green",
@@ -7588,8 +7588,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Bronzong",
 		types: ["Steel", "Psychic"],
 		gender: "N",
-		baseStats: { hp: 67, atk: 89, def: 116, spa: 79, spd: 116, spe: 33 },
-		abilities: { 0: "Levitate", 1: "Heatproof", H: "Heavy Metal" },
+		baseStats: {hp: 67, atk: 89, def: 116, spa: 79, spd: 116, spe: 33},
+		abilities: {0: "Levitate", 1: "Heatproof", H: "Heavy Metal"},
 		heightm: 1.3,
 		weightkg: 187,
 		color: "Green",
@@ -7601,8 +7601,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 438,
 		name: "Bonsly",
 		types: ["Rock"],
-		baseStats: { hp: 50, atk: 80, def: 95, spa: 10, spd: 45, spe: 10 },
-		abilities: { 0: "Sturdy", 1: "Rock Head", H: "Rattled" },
+		baseStats: {hp: 50, atk: 80, def: 95, spa: 10, spd: 45, spe: 10},
+		abilities: {0: "Sturdy", 1: "Rock Head", H: "Rattled"},
 		heightm: 0.5,
 		weightkg: 15,
 		color: "Brown",
@@ -7614,8 +7614,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 439,
 		name: "Mime Jr.",
 		types: ["Psychic", "Fairy"],
-		baseStats: { hp: 20, atk: 25, def: 45, spa: 70, spd: 90, spe: 60 },
-		abilities: { 0: "Soundproof", 1: "Filter", H: "Technician" },
+		baseStats: {hp: 20, atk: 25, def: 45, spa: 70, spd: 90, spe: 60},
+		abilities: {0: "Soundproof", 1: "Filter", H: "Technician"},
 		heightm: 0.6,
 		weightkg: 13,
 		color: "Pink",
@@ -7628,8 +7628,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Happiny",
 		types: ["Normal"],
 		gender: "F",
-		baseStats: { hp: 100, atk: 5, def: 5, spa: 15, spd: 65, spe: 30 },
-		abilities: { 0: "Natural Cure", 1: "Serene Grace", H: "Friend Guard" },
+		baseStats: {hp: 100, atk: 5, def: 5, spa: 15, spd: 65, spe: 30},
+		abilities: {0: "Natural Cure", 1: "Serene Grace", H: "Friend Guard"},
 		heightm: 0.6,
 		weightkg: 24.4,
 		color: "Pink",
@@ -7641,8 +7641,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 441,
 		name: "Chatot",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 76, atk: 65, def: 45, spa: 92, spd: 42, spe: 91 },
-		abilities: { 0: "Keen Eye", 1: "Tangled Feet", H: "Big Pecks" },
+		baseStats: {hp: 76, atk: 65, def: 45, spa: 92, spd: 42, spe: 91},
+		abilities: {0: "Keen Eye", 1: "Tangled Feet", H: "Big Pecks"},
 		heightm: 0.5,
 		weightkg: 1.9,
 		color: "Black",
@@ -7652,8 +7652,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 442,
 		name: "Spiritomb",
 		types: ["Ghost", "Dark"],
-		baseStats: { hp: 50, atk: 92, def: 108, spa: 92, spd: 108, spe: 35 },
-		abilities: { 0: "Pressure", H: "Infiltrator" },
+		baseStats: {hp: 50, atk: 92, def: 108, spa: 92, spd: 108, spe: 35},
+		abilities: {0: "Pressure", H: "Infiltrator"},
 		heightm: 1,
 		weightkg: 108,
 		color: "Purple",
@@ -7663,8 +7663,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 443,
 		name: "Gible",
 		types: ["Dragon", "Ground"],
-		baseStats: { hp: 58, atk: 70, def: 45, spa: 40, spd: 45, spe: 42 },
-		abilities: { 0: "Sand Veil", H: "Rough Skin" },
+		baseStats: {hp: 58, atk: 70, def: 45, spa: 40, spd: 45, spe: 42},
+		abilities: {0: "Sand Veil", H: "Rough Skin"},
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Blue",
@@ -7675,8 +7675,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 444,
 		name: "Gabite",
 		types: ["Dragon", "Ground"],
-		baseStats: { hp: 68, atk: 90, def: 65, spa: 50, spd: 55, spe: 82 },
-		abilities: { 0: "Sand Veil", H: "Rough Skin" },
+		baseStats: {hp: 68, atk: 90, def: 65, spa: 50, spd: 55, spe: 82},
+		abilities: {0: "Sand Veil", H: "Rough Skin"},
 		heightm: 1.4,
 		weightkg: 56,
 		color: "Blue",
@@ -7689,8 +7689,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 445,
 		name: "Garchomp",
 		types: ["Dragon", "Ground"],
-		baseStats: { hp: 108, atk: 130, def: 95, spa: 80, spd: 85, spe: 102 },
-		abilities: { 0: "Sand Veil", H: "Rough Skin" },
+		baseStats: {hp: 108, atk: 130, def: 95, spa: 80, spd: 85, spe: 102},
+		abilities: {0: "Sand Veil", H: "Rough Skin"},
 		heightm: 1.9,
 		weightkg: 95,
 		color: "Blue",
@@ -7706,8 +7706,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Garchomp",
 		forme: "Mega",
 		types: ["Dragon", "Ground"],
-		baseStats: { hp: 108, atk: 170, def: 115, spa: 120, spd: 95, spe: 92 },
-		abilities: { 0: "Sand Force" },
+		baseStats: {hp: 108, atk: 170, def: 115, spa: 120, spd: 95, spe: 92},
+		abilities: {0: "Sand Force"},
 		heightm: 1.9,
 		weightkg: 95,
 		color: "Blue",
@@ -7718,9 +7718,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 446,
 		name: "Munchlax",
 		types: ["Normal"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 135, atk: 85, def: 40, spa: 40, spd: 85, spe: 5 },
-		abilities: { 0: "Pickup", 1: "Thick Fat", H: "Gluttony" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 135, atk: 85, def: 40, spa: 40, spd: 85, spe: 5},
+		abilities: {0: "Pickup", 1: "Thick Fat", H: "Gluttony"},
 		heightm: 0.6,
 		weightkg: 105,
 		color: "Black",
@@ -7732,9 +7732,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 447,
 		name: "Riolu",
 		types: ["Fighting"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 40, atk: 70, def: 40, spa: 35, spd: 40, spe: 60 },
-		abilities: { 0: "Steadfast", 1: "Inner Focus", H: "Prankster" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 40, atk: 70, def: 40, spa: 35, spd: 40, spe: 60},
+		abilities: {0: "Steadfast", 1: "Inner Focus", H: "Prankster"},
 		heightm: 0.7,
 		weightkg: 20.2,
 		color: "Blue",
@@ -7746,9 +7746,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 448,
 		name: "Lucario",
 		types: ["Fighting", "Steel"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 70, atk: 110, def: 70, spa: 115, spd: 70, spe: 90 },
-		abilities: { 0: "Steadfast", 1: "Inner Focus", H: "Justified" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 70, atk: 110, def: 70, spa: 115, spd: 70, spe: 90},
+		abilities: {0: "Steadfast", 1: "Inner Focus", H: "Justified"},
 		heightm: 1.2,
 		weightkg: 54,
 		color: "Blue",
@@ -7765,9 +7765,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Lucario",
 		forme: "Mega",
 		types: ["Fighting", "Steel"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 70, atk: 145, def: 88, spa: 140, spd: 70, spe: 112 },
-		abilities: { 0: "Adaptability" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 70, atk: 145, def: 88, spa: 140, spd: 70, spe: 112},
+		abilities: {0: "Adaptability"},
 		heightm: 1.3,
 		weightkg: 57.5,
 		color: "Blue",
@@ -7778,8 +7778,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 449,
 		name: "Hippopotas",
 		types: ["Ground"],
-		baseStats: { hp: 68, atk: 72, def: 78, spa: 38, spd: 42, spe: 32 },
-		abilities: { 0: "Sand Stream", H: "Sand Force" },
+		baseStats: {hp: 68, atk: 72, def: 78, spa: 38, spd: 42, spe: 32},
+		abilities: {0: "Sand Stream", H: "Sand Force"},
 		heightm: 0.8,
 		weightkg: 49.5,
 		color: "Brown",
@@ -7790,8 +7790,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 450,
 		name: "Hippowdon",
 		types: ["Ground"],
-		baseStats: { hp: 108, atk: 112, def: 118, spa: 68, spd: 72, spe: 47 },
-		abilities: { 0: "Sand Stream", H: "Sand Force" },
+		baseStats: {hp: 108, atk: 112, def: 118, spa: 68, spd: 72, spe: 47},
+		abilities: {0: "Sand Stream", H: "Sand Force"},
 		heightm: 2,
 		weightkg: 300,
 		color: "Brown",
@@ -7803,8 +7803,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 451,
 		name: "Skorupi",
 		types: ["Poison", "Bug"],
-		baseStats: { hp: 40, atk: 50, def: 90, spa: 30, spd: 55, spe: 65 },
-		abilities: { 0: "Battle Armor", 1: "Sniper", H: "Keen Eye" },
+		baseStats: {hp: 40, atk: 50, def: 90, spa: 30, spd: 55, spe: 65},
+		abilities: {0: "Battle Armor", 1: "Sniper", H: "Keen Eye"},
 		heightm: 0.8,
 		weightkg: 12,
 		color: "Purple",
@@ -7815,8 +7815,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 452,
 		name: "Drapion",
 		types: ["Poison", "Dark"],
-		baseStats: { hp: 70, atk: 90, def: 110, spa: 60, spd: 75, spe: 95 },
-		abilities: { 0: "Battle Armor", 1: "Sniper", H: "Keen Eye" },
+		baseStats: {hp: 70, atk: 90, def: 110, spa: 60, spd: 75, spe: 95},
+		abilities: {0: "Battle Armor", 1: "Sniper", H: "Keen Eye"},
 		heightm: 1.3,
 		weightkg: 61.5,
 		color: "Purple",
@@ -7828,8 +7828,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 453,
 		name: "Croagunk",
 		types: ["Poison", "Fighting"],
-		baseStats: { hp: 48, atk: 61, def: 40, spa: 61, spd: 40, spe: 50 },
-		abilities: { 0: "Anticipation", 1: "Dry Skin", H: "Poison Touch" },
+		baseStats: {hp: 48, atk: 61, def: 40, spa: 61, spd: 40, spe: 50},
+		abilities: {0: "Anticipation", 1: "Dry Skin", H: "Poison Touch"},
 		heightm: 0.7,
 		weightkg: 23,
 		color: "Blue",
@@ -7840,8 +7840,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 454,
 		name: "Toxicroak",
 		types: ["Poison", "Fighting"],
-		baseStats: { hp: 83, atk: 106, def: 65, spa: 86, spd: 65, spe: 85 },
-		abilities: { 0: "Anticipation", 1: "Dry Skin", H: "Poison Touch" },
+		baseStats: {hp: 83, atk: 106, def: 65, spa: 86, spd: 65, spe: 85},
+		abilities: {0: "Anticipation", 1: "Dry Skin", H: "Poison Touch"},
 		heightm: 1.3,
 		weightkg: 44.4,
 		color: "Blue",
@@ -7853,8 +7853,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 455,
 		name: "Carnivine",
 		types: ["Grass"],
-		baseStats: { hp: 74, atk: 100, def: 72, spa: 90, spd: 72, spe: 46 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 74, atk: 100, def: 72, spa: 90, spd: 72, spe: 46},
+		abilities: {0: "Levitate"},
 		heightm: 1.4,
 		weightkg: 27,
 		color: "Green",
@@ -7864,8 +7864,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 456,
 		name: "Finneon",
 		types: ["Water"],
-		baseStats: { hp: 49, atk: 49, def: 56, spa: 49, spd: 61, spe: 66 },
-		abilities: { 0: "Swift Swim", 1: "Storm Drain", H: "Water Veil" },
+		baseStats: {hp: 49, atk: 49, def: 56, spa: 49, spd: 61, spe: 66},
+		abilities: {0: "Swift Swim", 1: "Storm Drain", H: "Water Veil"},
 		heightm: 0.4,
 		weightkg: 7,
 		color: "Blue",
@@ -7876,8 +7876,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 457,
 		name: "Lumineon",
 		types: ["Water"],
-		baseStats: { hp: 69, atk: 69, def: 76, spa: 69, spd: 86, spe: 91 },
-		abilities: { 0: "Swift Swim", 1: "Storm Drain", H: "Water Veil" },
+		baseStats: {hp: 69, atk: 69, def: 76, spa: 69, spd: 86, spe: 91},
+		abilities: {0: "Swift Swim", 1: "Storm Drain", H: "Water Veil"},
 		heightm: 1.2,
 		weightkg: 24,
 		color: "Blue",
@@ -7889,8 +7889,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 458,
 		name: "Mantyke",
 		types: ["Water", "Flying"],
-		baseStats: { hp: 45, atk: 20, def: 50, spa: 60, spd: 120, spe: 50 },
-		abilities: { 0: "Swift Swim", 1: "Water Absorb", H: "Water Veil" },
+		baseStats: {hp: 45, atk: 20, def: 50, spa: 60, spd: 120, spe: 50},
+		abilities: {0: "Swift Swim", 1: "Water Absorb", H: "Water Veil"},
 		heightm: 1,
 		weightkg: 65,
 		color: "Blue",
@@ -7902,8 +7902,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 459,
 		name: "Snover",
 		types: ["Grass", "Ice"],
-		baseStats: { hp: 60, atk: 62, def: 50, spa: 62, spd: 60, spe: 40 },
-		abilities: { 0: "Snow Warning", H: "Soundproof" },
+		baseStats: {hp: 60, atk: 62, def: 50, spa: 62, spd: 60, spe: 40},
+		abilities: {0: "Snow Warning", H: "Soundproof"},
 		heightm: 1,
 		weightkg: 50.5,
 		color: "White",
@@ -7914,8 +7914,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 460,
 		name: "Abomasnow",
 		types: ["Grass", "Ice"],
-		baseStats: { hp: 90, atk: 92, def: 75, spa: 92, spd: 85, spe: 60 },
-		abilities: { 0: "Snow Warning", H: "Soundproof" },
+		baseStats: {hp: 90, atk: 92, def: 75, spa: 92, spd: 85, spe: 60},
+		abilities: {0: "Snow Warning", H: "Soundproof"},
 		heightm: 2.2,
 		weightkg: 135.5,
 		color: "White",
@@ -7931,8 +7931,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Abomasnow",
 		forme: "Mega",
 		types: ["Grass", "Ice"],
-		baseStats: { hp: 90, atk: 132, def: 105, spa: 132, spd: 105, spe: 30 },
-		abilities: { 0: "Snow Warning" },
+		baseStats: {hp: 90, atk: 132, def: 105, spa: 132, spd: 105, spe: 30},
+		abilities: {0: "Snow Warning"},
 		heightm: 2.7,
 		weightkg: 185,
 		color: "White",
@@ -7943,8 +7943,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 461,
 		name: "Weavile",
 		types: ["Dark", "Ice"],
-		baseStats: { hp: 70, atk: 120, def: 65, spa: 45, spd: 85, spe: 125 },
-		abilities: { 0: "Pressure", H: "Pickpocket" },
+		baseStats: {hp: 70, atk: 120, def: 65, spa: 45, spd: 85, spe: 125},
+		abilities: {0: "Pressure", H: "Pickpocket"},
 		heightm: 1.1,
 		weightkg: 34,
 		color: "Black",
@@ -7958,8 +7958,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Magnezone",
 		types: ["Electric", "Steel"],
 		gender: "N",
-		baseStats: { hp: 70, atk: 70, def: 115, spa: 130, spd: 90, spe: 60 },
-		abilities: { 0: "Magnet Pull", 1: "Sturdy", H: "Analytic" },
+		baseStats: {hp: 70, atk: 70, def: 115, spa: 130, spd: 90, spe: 60},
+		abilities: {0: "Magnet Pull", 1: "Sturdy", H: "Analytic"},
 		heightm: 1.2,
 		weightkg: 180,
 		color: "Gray",
@@ -7972,8 +7972,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 463,
 		name: "Lickilicky",
 		types: ["Normal"],
-		baseStats: { hp: 110, atk: 85, def: 95, spa: 80, spd: 95, spe: 50 },
-		abilities: { 0: "Own Tempo", 1: "Oblivious", H: "Cloud Nine" },
+		baseStats: {hp: 110, atk: 85, def: 95, spa: 80, spd: 95, spe: 50},
+		abilities: {0: "Own Tempo", 1: "Oblivious", H: "Cloud Nine"},
 		heightm: 1.7,
 		weightkg: 140,
 		color: "Pink",
@@ -7986,8 +7986,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 464,
 		name: "Rhyperior",
 		types: ["Ground", "Rock"],
-		baseStats: { hp: 115, atk: 140, def: 130, spa: 55, spd: 55, spe: 40 },
-		abilities: { 0: "Lightning Rod", 1: "Solid Rock", H: "Reckless" },
+		baseStats: {hp: 115, atk: 140, def: 130, spa: 55, spd: 55, spe: 40},
+		abilities: {0: "Lightning Rod", 1: "Solid Rock", H: "Reckless"},
 		heightm: 2.4,
 		weightkg: 282.8,
 		color: "Gray",
@@ -8000,8 +8000,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 465,
 		name: "Tangrowth",
 		types: ["Grass"],
-		baseStats: { hp: 100, atk: 100, def: 125, spa: 110, spd: 50, spe: 50 },
-		abilities: { 0: "Chlorophyll", 1: "Leaf Guard", H: "Regenerator" },
+		baseStats: {hp: 100, atk: 100, def: 125, spa: 110, spd: 50, spe: 50},
+		abilities: {0: "Chlorophyll", 1: "Leaf Guard", H: "Regenerator"},
 		heightm: 2,
 		weightkg: 128.6,
 		color: "Blue",
@@ -8014,9 +8014,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 466,
 		name: "Electivire",
 		types: ["Electric"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 75, atk: 123, def: 67, spa: 95, spd: 85, spe: 95 },
-		abilities: { 0: "Motor Drive", H: "Vital Spirit" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 75, atk: 123, def: 67, spa: 95, spd: 85, spe: 95},
+		abilities: {0: "Motor Drive", H: "Vital Spirit"},
 		heightm: 1.8,
 		weightkg: 138.6,
 		color: "Yellow",
@@ -8029,9 +8029,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 467,
 		name: "Magmortar",
 		types: ["Fire"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 75, atk: 95, def: 67, spa: 125, spd: 95, spe: 83 },
-		abilities: { 0: "Flame Body", H: "Vital Spirit" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 75, atk: 95, def: 67, spa: 125, spd: 95, spe: 83},
+		abilities: {0: "Flame Body", H: "Vital Spirit"},
 		heightm: 1.6,
 		weightkg: 68,
 		color: "Red",
@@ -8044,9 +8044,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 468,
 		name: "Togekiss",
 		types: ["Fairy", "Flying"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 85, atk: 50, def: 95, spa: 120, spd: 115, spe: 80 },
-		abilities: { 0: "Hustle", 1: "Serene Grace", H: "Super Luck" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 85, atk: 50, def: 95, spa: 120, spd: 115, spe: 80},
+		abilities: {0: "Hustle", 1: "Serene Grace", H: "Super Luck"},
 		heightm: 1.5,
 		weightkg: 38,
 		color: "White",
@@ -8059,8 +8059,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 469,
 		name: "Yanmega",
 		types: ["Bug", "Flying"],
-		baseStats: { hp: 86, atk: 76, def: 86, spa: 116, spd: 56, spe: 95 },
-		abilities: { 0: "Speed Boost", 1: "Tinted Lens", H: "Frisk" },
+		baseStats: {hp: 86, atk: 76, def: 86, spa: 116, spd: 56, spe: 95},
+		abilities: {0: "Speed Boost", 1: "Tinted Lens", H: "Frisk"},
 		heightm: 1.9,
 		weightkg: 51.5,
 		color: "Green",
@@ -8073,9 +8073,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 470,
 		name: "Leafeon",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 65, atk: 110, def: 130, spa: 60, spd: 65, spe: 95 },
-		abilities: { 0: "Leaf Guard", H: "Chlorophyll" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 65, atk: 110, def: 130, spa: 60, spd: 65, spe: 95},
+		abilities: {0: "Leaf Guard", H: "Chlorophyll"},
 		heightm: 1,
 		weightkg: 25.5,
 		color: "Green",
@@ -8088,9 +8088,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 471,
 		name: "Glaceon",
 		types: ["Ice"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 65, atk: 60, def: 110, spa: 130, spd: 95, spe: 65 },
-		abilities: { 0: "Snow Cloak", H: "Ice Body" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 65, atk: 60, def: 110, spa: 130, spd: 95, spe: 65},
+		abilities: {0: "Snow Cloak", H: "Ice Body"},
 		heightm: 0.8,
 		weightkg: 25.9,
 		color: "Blue",
@@ -8103,8 +8103,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 472,
 		name: "Gliscor",
 		types: ["Ground", "Flying"],
-		baseStats: { hp: 75, atk: 95, def: 125, spa: 45, spd: 75, spe: 95 },
-		abilities: { 0: "Hyper Cutter", 1: "Sand Veil", H: "Poison Heal" },
+		baseStats: {hp: 75, atk: 95, def: 125, spa: 45, spd: 75, spe: 95},
+		abilities: {0: "Hyper Cutter", 1: "Sand Veil", H: "Poison Heal"},
 		heightm: 2,
 		weightkg: 42.5,
 		color: "Purple",
@@ -8118,8 +8118,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 473,
 		name: "Mamoswine",
 		types: ["Ice", "Ground"],
-		baseStats: { hp: 110, atk: 130, def: 80, spa: 70, spd: 60, spe: 80 },
-		abilities: { 0: "Oblivious", 1: "Snow Cloak", H: "Thick Fat" },
+		baseStats: {hp: 110, atk: 130, def: 80, spa: 70, spd: 60, spe: 80},
+		abilities: {0: "Oblivious", 1: "Snow Cloak", H: "Thick Fat"},
 		heightm: 2.5,
 		weightkg: 291,
 		color: "Brown",
@@ -8133,8 +8133,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Porygon-Z",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: { hp: 85, atk: 80, def: 70, spa: 135, spd: 75, spe: 90 },
-		abilities: { 0: "Adaptability", 1: "Download", H: "Analytic" },
+		baseStats: {hp: 85, atk: 80, def: 70, spa: 135, spd: 75, spe: 90},
+		abilities: {0: "Adaptability", 1: "Download", H: "Analytic"},
 		heightm: 0.9,
 		weightkg: 34,
 		color: "Red",
@@ -8148,8 +8148,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Gallade",
 		types: ["Psychic", "Fighting"],
 		gender: "M",
-		baseStats: { hp: 68, atk: 125, def: 65, spa: 65, spd: 115, spe: 80 },
-		abilities: { 0: "Steadfast", H: "Justified" },
+		baseStats: {hp: 68, atk: 125, def: 65, spa: 65, spd: 115, spe: 80},
+		abilities: {0: "Steadfast", H: "Justified"},
 		heightm: 1.6,
 		weightkg: 52,
 		color: "White",
@@ -8167,8 +8167,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Mega",
 		types: ["Psychic", "Fighting"],
 		gender: "M",
-		baseStats: { hp: 68, atk: 165, def: 95, spa: 65, spd: 115, spe: 110 },
-		abilities: { 0: "Inner Focus" },
+		baseStats: {hp: 68, atk: 165, def: 95, spa: 65, spd: 115, spe: 110},
+		abilities: {0: "Inner Focus"},
 		heightm: 1.6,
 		weightkg: 56.4,
 		color: "White",
@@ -8179,8 +8179,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 476,
 		name: "Probopass",
 		types: ["Rock", "Steel"],
-		baseStats: { hp: 60, atk: 55, def: 145, spa: 75, spd: 150, spe: 40 },
-		abilities: { 0: "Sturdy", 1: "Magnet Pull", H: "Sand Force" },
+		baseStats: {hp: 60, atk: 55, def: 145, spa: 75, spd: 150, spe: 40},
+		abilities: {0: "Sturdy", 1: "Magnet Pull", H: "Sand Force"},
 		heightm: 1.4,
 		weightkg: 340,
 		color: "Gray",
@@ -8193,8 +8193,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 477,
 		name: "Dusknoir",
 		types: ["Ghost"],
-		baseStats: { hp: 45, atk: 100, def: 135, spa: 65, spd: 135, spe: 45 },
-		abilities: { 0: "Pressure", H: "Frisk" },
+		baseStats: {hp: 45, atk: 100, def: 135, spa: 65, spd: 135, spe: 45},
+		abilities: {0: "Pressure", H: "Frisk"},
 		heightm: 2.2,
 		weightkg: 106.6,
 		color: "Black",
@@ -8208,8 +8208,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Froslass",
 		types: ["Ice", "Ghost"],
 		gender: "F",
-		baseStats: { hp: 70, atk: 80, def: 70, spa: 80, spd: 70, spe: 110 },
-		abilities: { 0: "Snow Cloak", H: "Cursed Body" },
+		baseStats: {hp: 70, atk: 80, def: 70, spa: 80, spd: 70, spe: 110},
+		abilities: {0: "Snow Cloak", H: "Cursed Body"},
 		heightm: 1.3,
 		weightkg: 26.6,
 		color: "White",
@@ -8223,8 +8223,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Rotom",
 		types: ["Electric", "Ghost"],
 		gender: "N",
-		baseStats: { hp: 50, atk: 50, def: 77, spa: 95, spd: 77, spe: 91 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 50, atk: 50, def: 77, spa: 95, spd: 77, spe: 91},
+		abilities: {0: "Levitate"},
 		heightm: 0.3,
 		weightkg: 0.3,
 		color: "Red",
@@ -8239,8 +8239,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Heat",
 		types: ["Electric", "Fire"],
 		gender: "N",
-		baseStats: { hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
+		abilities: {0: "Levitate"},
 		heightm: 0.3,
 		weightkg: 0.3,
 		color: "Red",
@@ -8254,8 +8254,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Wash",
 		types: ["Electric", "Water"],
 		gender: "N",
-		baseStats: { hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
+		abilities: {0: "Levitate"},
 		heightm: 0.3,
 		weightkg: 0.3,
 		color: "Red",
@@ -8269,8 +8269,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Frost",
 		types: ["Electric", "Ice"],
 		gender: "N",
-		baseStats: { hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
+		abilities: {0: "Levitate"},
 		heightm: 0.3,
 		weightkg: 0.3,
 		color: "Red",
@@ -8284,8 +8284,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Fan",
 		types: ["Electric", "Flying"],
 		gender: "N",
-		baseStats: { hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
+		abilities: {0: "Levitate"},
 		heightm: 0.3,
 		weightkg: 0.3,
 		color: "Red",
@@ -8299,8 +8299,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Mow",
 		types: ["Electric", "Grass"],
 		gender: "N",
-		baseStats: { hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 50, atk: 65, def: 107, spa: 105, spd: 107, spe: 86},
+		abilities: {0: "Levitate"},
 		heightm: 0.3,
 		weightkg: 0.3,
 		color: "Red",
@@ -8312,8 +8312,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Uxie",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 75, atk: 75, def: 130, spa: 75, spd: 130, spe: 95 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 75, atk: 75, def: 130, spa: 75, spd: 130, spe: 95},
+		abilities: {0: "Levitate"},
 		heightm: 0.3,
 		weightkg: 0.3,
 		color: "Yellow",
@@ -8324,8 +8324,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Mesprit",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 105, def: 105, spa: 105, spd: 105, spe: 80 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 80, atk: 105, def: 105, spa: 105, spd: 105, spe: 80},
+		abilities: {0: "Levitate"},
 		heightm: 0.3,
 		weightkg: 0.3,
 		color: "Pink",
@@ -8336,8 +8336,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Azelf",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 75, atk: 125, def: 70, spa: 125, spd: 70, spe: 115 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 75, atk: 125, def: 70, spa: 125, spd: 70, spe: 115},
+		abilities: {0: "Levitate"},
 		heightm: 0.3,
 		weightkg: 0.3,
 		color: "Blue",
@@ -8348,8 +8348,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Dialga",
 		types: ["Steel", "Dragon"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 120, def: 120, spa: 150, spd: 100, spe: 90 },
-		abilities: { 0: "Pressure", H: "Telepathy" },
+		baseStats: {hp: 100, atk: 120, def: 120, spa: 150, spd: 100, spe: 90},
+		abilities: {0: "Pressure", H: "Telepathy"},
 		heightm: 5.4,
 		weightkg: 683,
 		color: "White",
@@ -8360,8 +8360,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Palkia",
 		types: ["Water", "Dragon"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 120, def: 100, spa: 150, spd: 120, spe: 100 },
-		abilities: { 0: "Pressure", H: "Telepathy" },
+		baseStats: {hp: 90, atk: 120, def: 100, spa: 150, spd: 120, spe: 100},
+		abilities: {0: "Pressure", H: "Telepathy"},
 		heightm: 4.2,
 		weightkg: 336,
 		color: "Purple",
@@ -8371,8 +8371,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 485,
 		name: "Heatran",
 		types: ["Fire", "Steel"],
-		baseStats: { hp: 91, atk: 90, def: 106, spa: 130, spd: 106, spe: 77 },
-		abilities: { 0: "Flash Fire", H: "Flame Body" },
+		baseStats: {hp: 91, atk: 90, def: 106, spa: 130, spd: 106, spe: 77},
+		abilities: {0: "Flash Fire", H: "Flame Body"},
 		heightm: 1.7,
 		weightkg: 430,
 		color: "Brown",
@@ -8383,8 +8383,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Regigigas",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: { hp: 110, atk: 160, def: 110, spa: 80, spd: 110, spe: 100 },
-		abilities: { 0: "Slow Start" },
+		baseStats: {hp: 110, atk: 160, def: 110, spa: 80, spd: 110, spe: 100},
+		abilities: {0: "Slow Start"},
 		heightm: 3.7,
 		weightkg: 420,
 		color: "White",
@@ -8396,8 +8396,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Altered",
 		types: ["Ghost", "Dragon"],
 		gender: "N",
-		baseStats: { hp: 150, atk: 100, def: 120, spa: 100, spd: 120, spe: 90 },
-		abilities: { 0: "Pressure", H: "Telepathy" },
+		baseStats: {hp: 150, atk: 100, def: 120, spa: 100, spd: 120, spe: 90},
+		abilities: {0: "Pressure", H: "Telepathy"},
 		heightm: 4.5,
 		weightkg: 750,
 		color: "Black",
@@ -8412,8 +8412,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Origin",
 		types: ["Ghost", "Dragon"],
 		gender: "N",
-		baseStats: { hp: 150, atk: 120, def: 100, spa: 120, spd: 100, spe: 90 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 150, atk: 120, def: 100, spa: 120, spd: 100, spe: 90},
+		abilities: {0: "Levitate"},
 		heightm: 6.9,
 		weightkg: 650,
 		color: "Black",
@@ -8426,8 +8426,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Cresselia",
 		types: ["Psychic"],
 		gender: "F",
-		baseStats: { hp: 120, atk: 70, def: 120, spa: 75, spd: 130, spe: 85 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 120, atk: 70, def: 120, spa: 75, spd: 130, spe: 85},
+		abilities: {0: "Levitate"},
 		heightm: 1.5,
 		weightkg: 85.6,
 		color: "Yellow",
@@ -8438,8 +8438,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Phione",
 		types: ["Water"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 80, def: 80, spa: 80, spd: 80, spe: 80 },
-		abilities: { 0: "Hydration" },
+		baseStats: {hp: 80, atk: 80, def: 80, spa: 80, spd: 80, spe: 80},
+		abilities: {0: "Hydration"},
 		heightm: 0.4,
 		weightkg: 3.1,
 		color: "Blue",
@@ -8450,8 +8450,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Manaphy",
 		types: ["Water"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Hydration" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Hydration"},
 		heightm: 0.3,
 		weightkg: 1.4,
 		color: "Blue",
@@ -8462,8 +8462,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Darkrai",
 		types: ["Dark"],
 		gender: "N",
-		baseStats: { hp: 70, atk: 90, def: 90, spa: 135, spd: 90, spe: 125 },
-		abilities: { 0: "Bad Dreams" },
+		baseStats: {hp: 70, atk: 90, def: 90, spa: 135, spd: 90, spe: 125},
+		abilities: {0: "Bad Dreams"},
 		heightm: 1.5,
 		weightkg: 50.5,
 		color: "Black",
@@ -8475,8 +8475,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Land",
 		types: ["Grass"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Natural Cure" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Natural Cure"},
 		heightm: 0.2,
 		weightkg: 2.1,
 		color: "Green",
@@ -8491,8 +8491,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Sky",
 		types: ["Grass", "Flying"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 103, def: 75, spa: 120, spd: 75, spe: 127 },
-		abilities: { 0: "Serene Grace" },
+		baseStats: {hp: 100, atk: 103, def: 75, spa: 120, spd: 75, spe: 127},
+		abilities: {0: "Serene Grace"},
 		heightm: 0.4,
 		weightkg: 5.2,
 		color: "Green",
@@ -8505,8 +8505,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Normal",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8524,8 +8524,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Bug",
 		types: ["Bug"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8540,8 +8540,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Dark",
 		types: ["Dark"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8556,8 +8556,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Dragon",
 		types: ["Dragon"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8572,8 +8572,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Electric",
 		types: ["Electric"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8588,8 +8588,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Fairy",
 		types: ["Fairy"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8605,8 +8605,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Fighting",
 		types: ["Fighting"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8621,8 +8621,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Fire",
 		types: ["Fire"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8637,8 +8637,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Flying",
 		types: ["Flying"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8653,8 +8653,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Ghost",
 		types: ["Ghost"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8669,8 +8669,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Grass",
 		types: ["Grass"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8685,8 +8685,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Ground",
 		types: ["Ground"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8701,8 +8701,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Ice",
 		types: ["Ice"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8717,8 +8717,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Poison",
 		types: ["Poison"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8733,8 +8733,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Psychic",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8749,8 +8749,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Rock",
 		types: ["Rock"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8765,8 +8765,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Steel",
 		types: ["Steel"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8781,8 +8781,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Water",
 		types: ["Water"],
 		gender: "N",
-		baseStats: { hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120 },
-		abilities: { 0: "Multitype" },
+		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
+		abilities: {0: "Multitype"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -8795,8 +8795,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Victini",
 		types: ["Psychic", "Fire"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Victory Star" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Victory Star"},
 		heightm: 0.4,
 		weightkg: 4,
 		color: "Yellow",
@@ -8806,9 +8806,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 495,
 		name: "Snivy",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 45, atk: 45, def: 55, spa: 45, spd: 55, spe: 63 },
-		abilities: { 0: "Overgrow", H: "Contrary" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 45, atk: 45, def: 55, spa: 45, spd: 55, spe: 63},
+		abilities: {0: "Overgrow", H: "Contrary"},
 		heightm: 0.6,
 		weightkg: 8.1,
 		color: "Green",
@@ -8819,9 +8819,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 496,
 		name: "Servine",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 60, atk: 60, def: 75, spa: 60, spd: 75, spe: 83 },
-		abilities: { 0: "Overgrow", H: "Contrary" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 60, atk: 60, def: 75, spa: 60, spd: 75, spe: 83},
+		abilities: {0: "Overgrow", H: "Contrary"},
 		heightm: 0.8,
 		weightkg: 16,
 		color: "Green",
@@ -8834,9 +8834,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 497,
 		name: "Serperior",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 75, atk: 75, def: 95, spa: 75, spd: 95, spe: 113 },
-		abilities: { 0: "Overgrow", H: "Contrary" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 75, atk: 75, def: 95, spa: 75, spd: 95, spe: 113},
+		abilities: {0: "Overgrow", H: "Contrary"},
 		heightm: 3.3,
 		weightkg: 63,
 		color: "Green",
@@ -8848,9 +8848,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 498,
 		name: "Tepig",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 65, atk: 63, def: 45, spa: 45, spd: 45, spe: 45 },
-		abilities: { 0: "Blaze", H: "Thick Fat" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 65, atk: 63, def: 45, spa: 45, spd: 45, spe: 45},
+		abilities: {0: "Blaze", H: "Thick Fat"},
 		heightm: 0.5,
 		weightkg: 9.9,
 		color: "Red",
@@ -8861,9 +8861,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 499,
 		name: "Pignite",
 		types: ["Fire", "Fighting"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 90, atk: 93, def: 55, spa: 70, spd: 55, spe: 55 },
-		abilities: { 0: "Blaze", H: "Thick Fat" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 90, atk: 93, def: 55, spa: 70, spd: 55, spe: 55},
+		abilities: {0: "Blaze", H: "Thick Fat"},
 		heightm: 1,
 		weightkg: 55.5,
 		color: "Red",
@@ -8876,9 +8876,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 500,
 		name: "Emboar",
 		types: ["Fire", "Fighting"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 110, atk: 123, def: 65, spa: 100, spd: 65, spe: 65 },
-		abilities: { 0: "Blaze", H: "Reckless" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 110, atk: 123, def: 65, spa: 100, spd: 65, spe: 65},
+		abilities: {0: "Blaze", H: "Reckless"},
 		heightm: 1.6,
 		weightkg: 150,
 		color: "Red",
@@ -8890,9 +8890,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 501,
 		name: "Oshawott",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 55, atk: 55, def: 45, spa: 63, spd: 45, spe: 45 },
-		abilities: { 0: "Torrent", H: "Shell Armor" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 55, atk: 55, def: 45, spa: 63, spd: 45, spe: 45},
+		abilities: {0: "Torrent", H: "Shell Armor"},
 		heightm: 0.5,
 		weightkg: 5.9,
 		color: "Blue",
@@ -8903,9 +8903,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 502,
 		name: "Dewott",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 75, atk: 75, def: 60, spa: 83, spd: 60, spe: 60 },
-		abilities: { 0: "Torrent", H: "Shell Armor" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 75, atk: 75, def: 60, spa: 83, spd: 60, spe: 60},
+		abilities: {0: "Torrent", H: "Shell Armor"},
 		heightm: 0.8,
 		weightkg: 24.5,
 		color: "Blue",
@@ -8918,9 +8918,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 503,
 		name: "Samurott",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 95, atk: 100, def: 85, spa: 108, spd: 70, spe: 70 },
-		abilities: { 0: "Torrent", H: "Shell Armor" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 95, atk: 100, def: 85, spa: 108, spd: 70, spe: 70},
+		abilities: {0: "Torrent", H: "Shell Armor"},
 		heightm: 1.5,
 		weightkg: 94.6,
 		color: "Blue",
@@ -8932,8 +8932,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 504,
 		name: "Patrat",
 		types: ["Normal"],
-		baseStats: { hp: 45, atk: 55, def: 39, spa: 35, spd: 39, spe: 42 },
-		abilities: { 0: "Run Away", 1: "Keen Eye", H: "Analytic" },
+		baseStats: {hp: 45, atk: 55, def: 39, spa: 35, spd: 39, spe: 42},
+		abilities: {0: "Run Away", 1: "Keen Eye", H: "Analytic"},
 		heightm: 0.5,
 		weightkg: 11.6,
 		color: "Brown",
@@ -8944,8 +8944,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 505,
 		name: "Watchog",
 		types: ["Normal"],
-		baseStats: { hp: 60, atk: 85, def: 69, spa: 60, spd: 69, spe: 77 },
-		abilities: { 0: "Illuminate", 1: "Keen Eye", H: "Analytic" },
+		baseStats: {hp: 60, atk: 85, def: 69, spa: 60, spd: 69, spe: 77},
+		abilities: {0: "Illuminate", 1: "Keen Eye", H: "Analytic"},
 		heightm: 1.1,
 		weightkg: 27,
 		color: "Brown",
@@ -8957,8 +8957,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 506,
 		name: "Lillipup",
 		types: ["Normal"],
-		baseStats: { hp: 45, atk: 60, def: 45, spa: 25, spd: 45, spe: 55 },
-		abilities: { 0: "Vital Spirit", 1: "Pickup", H: "Run Away" },
+		baseStats: {hp: 45, atk: 60, def: 45, spa: 25, spd: 45, spe: 55},
+		abilities: {0: "Vital Spirit", 1: "Pickup", H: "Run Away"},
 		heightm: 0.4,
 		weightkg: 4.1,
 		color: "Brown",
@@ -8969,8 +8969,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 507,
 		name: "Herdier",
 		types: ["Normal"],
-		baseStats: { hp: 65, atk: 80, def: 65, spa: 35, spd: 65, spe: 60 },
-		abilities: { 0: "Intimidate", 1: "Sand Rush", H: "Scrappy" },
+		baseStats: {hp: 65, atk: 80, def: 65, spa: 35, spd: 65, spe: 60},
+		abilities: {0: "Intimidate", 1: "Sand Rush", H: "Scrappy"},
 		heightm: 0.9,
 		weightkg: 14.7,
 		color: "Gray",
@@ -8983,8 +8983,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 508,
 		name: "Stoutland",
 		types: ["Normal"],
-		baseStats: { hp: 85, atk: 110, def: 90, spa: 45, spd: 90, spe: 80 },
-		abilities: { 0: "Intimidate", 1: "Sand Rush", H: "Scrappy" },
+		baseStats: {hp: 85, atk: 110, def: 90, spa: 45, spd: 90, spe: 80},
+		abilities: {0: "Intimidate", 1: "Sand Rush", H: "Scrappy"},
 		heightm: 1.2,
 		weightkg: 61,
 		color: "Gray",
@@ -8996,8 +8996,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 509,
 		name: "Purrloin",
 		types: ["Dark"],
-		baseStats: { hp: 41, atk: 50, def: 37, spa: 50, spd: 37, spe: 66 },
-		abilities: { 0: "Limber", 1: "Unburden", H: "Prankster" },
+		baseStats: {hp: 41, atk: 50, def: 37, spa: 50, spd: 37, spe: 66},
+		abilities: {0: "Limber", 1: "Unburden", H: "Prankster"},
 		heightm: 0.4,
 		weightkg: 10.1,
 		color: "Purple",
@@ -9008,8 +9008,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 510,
 		name: "Liepard",
 		types: ["Dark"],
-		baseStats: { hp: 64, atk: 88, def: 50, spa: 88, spd: 50, spe: 106 },
-		abilities: { 0: "Limber", 1: "Unburden", H: "Prankster" },
+		baseStats: {hp: 64, atk: 88, def: 50, spa: 88, spd: 50, spe: 106},
+		abilities: {0: "Limber", 1: "Unburden", H: "Prankster"},
 		heightm: 1.1,
 		weightkg: 37.5,
 		color: "Purple",
@@ -9021,9 +9021,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 511,
 		name: "Pansage",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 50, atk: 53, def: 48, spa: 53, spd: 48, spe: 64 },
-		abilities: { 0: "Gluttony", H: "Overgrow" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 50, atk: 53, def: 48, spa: 53, spd: 48, spe: 64},
+		abilities: {0: "Gluttony", H: "Overgrow"},
 		heightm: 0.6,
 		weightkg: 10.5,
 		color: "Green",
@@ -9034,9 +9034,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 512,
 		name: "Simisage",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 75, atk: 98, def: 63, spa: 98, spd: 63, spe: 101 },
-		abilities: { 0: "Gluttony", H: "Overgrow" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 75, atk: 98, def: 63, spa: 98, spd: 63, spe: 101},
+		abilities: {0: "Gluttony", H: "Overgrow"},
 		heightm: 1.1,
 		weightkg: 30.5,
 		color: "Green",
@@ -9049,9 +9049,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 513,
 		name: "Pansear",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 50, atk: 53, def: 48, spa: 53, spd: 48, spe: 64 },
-		abilities: { 0: "Gluttony", H: "Blaze" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 50, atk: 53, def: 48, spa: 53, spd: 48, spe: 64},
+		abilities: {0: "Gluttony", H: "Blaze"},
 		heightm: 0.6,
 		weightkg: 11,
 		color: "Red",
@@ -9062,9 +9062,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 514,
 		name: "Simisear",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 75, atk: 98, def: 63, spa: 98, spd: 63, spe: 101 },
-		abilities: { 0: "Gluttony", H: "Blaze" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 75, atk: 98, def: 63, spa: 98, spd: 63, spe: 101},
+		abilities: {0: "Gluttony", H: "Blaze"},
 		heightm: 1,
 		weightkg: 28,
 		color: "Red",
@@ -9077,9 +9077,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 515,
 		name: "Panpour",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 50, atk: 53, def: 48, spa: 53, spd: 48, spe: 64 },
-		abilities: { 0: "Gluttony", H: "Torrent" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 50, atk: 53, def: 48, spa: 53, spd: 48, spe: 64},
+		abilities: {0: "Gluttony", H: "Torrent"},
 		heightm: 0.6,
 		weightkg: 13.5,
 		color: "Blue",
@@ -9090,9 +9090,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 516,
 		name: "Simipour",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 75, atk: 98, def: 63, spa: 98, spd: 63, spe: 101 },
-		abilities: { 0: "Gluttony", H: "Torrent" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 75, atk: 98, def: 63, spa: 98, spd: 63, spe: 101},
+		abilities: {0: "Gluttony", H: "Torrent"},
 		heightm: 1,
 		weightkg: 29,
 		color: "Blue",
@@ -9105,8 +9105,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 517,
 		name: "Munna",
 		types: ["Psychic"],
-		baseStats: { hp: 76, atk: 25, def: 45, spa: 67, spd: 55, spe: 24 },
-		abilities: { 0: "Forewarn", 1: "Synchronize", H: "Telepathy" },
+		baseStats: {hp: 76, atk: 25, def: 45, spa: 67, spd: 55, spe: 24},
+		abilities: {0: "Forewarn", 1: "Synchronize", H: "Telepathy"},
 		heightm: 0.6,
 		weightkg: 23.3,
 		color: "Pink",
@@ -9117,8 +9117,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 518,
 		name: "Musharna",
 		types: ["Psychic"],
-		baseStats: { hp: 116, atk: 55, def: 85, spa: 107, spd: 95, spe: 29 },
-		abilities: { 0: "Forewarn", 1: "Synchronize", H: "Telepathy" },
+		baseStats: {hp: 116, atk: 55, def: 85, spa: 107, spd: 95, spe: 29},
+		abilities: {0: "Forewarn", 1: "Synchronize", H: "Telepathy"},
 		heightm: 1.1,
 		weightkg: 60.5,
 		color: "Pink",
@@ -9131,8 +9131,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 519,
 		name: "Pidove",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 50, atk: 55, def: 50, spa: 36, spd: 30, spe: 43 },
-		abilities: { 0: "Big Pecks", 1: "Super Luck", H: "Rivalry" },
+		baseStats: {hp: 50, atk: 55, def: 50, spa: 36, spd: 30, spe: 43},
+		abilities: {0: "Big Pecks", 1: "Super Luck", H: "Rivalry"},
 		heightm: 0.3,
 		weightkg: 2.1,
 		color: "Gray",
@@ -9143,8 +9143,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 520,
 		name: "Tranquill",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 62, atk: 77, def: 62, spa: 50, spd: 42, spe: 65 },
-		abilities: { 0: "Big Pecks", 1: "Super Luck", H: "Rivalry" },
+		baseStats: {hp: 62, atk: 77, def: 62, spa: 50, spd: 42, spe: 65},
+		abilities: {0: "Big Pecks", 1: "Super Luck", H: "Rivalry"},
 		heightm: 0.6,
 		weightkg: 15,
 		color: "Gray",
@@ -9157,8 +9157,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 521,
 		name: "Unfezant",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 80, atk: 115, def: 80, spa: 65, spd: 55, spe: 93 },
-		abilities: { 0: "Big Pecks", 1: "Super Luck", H: "Rivalry" },
+		baseStats: {hp: 80, atk: 115, def: 80, spa: 65, spd: 55, spe: 93},
+		abilities: {0: "Big Pecks", 1: "Super Luck", H: "Rivalry"},
 		heightm: 1.2,
 		weightkg: 29,
 		color: "Gray",
@@ -9170,8 +9170,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 522,
 		name: "Blitzle",
 		types: ["Electric"],
-		baseStats: { hp: 45, atk: 60, def: 32, spa: 50, spd: 32, spe: 76 },
-		abilities: { 0: "Lightning Rod", 1: "Motor Drive", H: "Sap Sipper" },
+		baseStats: {hp: 45, atk: 60, def: 32, spa: 50, spd: 32, spe: 76},
+		abilities: {0: "Lightning Rod", 1: "Motor Drive", H: "Sap Sipper"},
 		heightm: 0.8,
 		weightkg: 29.8,
 		color: "Black",
@@ -9182,8 +9182,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 523,
 		name: "Zebstrika",
 		types: ["Electric"],
-		baseStats: { hp: 75, atk: 100, def: 63, spa: 80, spd: 63, spe: 116 },
-		abilities: { 0: "Lightning Rod", 1: "Motor Drive", H: "Sap Sipper" },
+		baseStats: {hp: 75, atk: 100, def: 63, spa: 80, spd: 63, spe: 116},
+		abilities: {0: "Lightning Rod", 1: "Motor Drive", H: "Sap Sipper"},
 		heightm: 1.6,
 		weightkg: 79.5,
 		color: "Black",
@@ -9195,8 +9195,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 524,
 		name: "Roggenrola",
 		types: ["Rock"],
-		baseStats: { hp: 55, atk: 75, def: 85, spa: 25, spd: 25, spe: 15 },
-		abilities: { 0: "Sturdy", 1: "Weak Armor", H: "Sand Force" },
+		baseStats: {hp: 55, atk: 75, def: 85, spa: 25, spd: 25, spe: 15},
+		abilities: {0: "Sturdy", 1: "Weak Armor", H: "Sand Force"},
 		heightm: 0.4,
 		weightkg: 18,
 		color: "Blue",
@@ -9207,8 +9207,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 525,
 		name: "Boldore",
 		types: ["Rock"],
-		baseStats: { hp: 70, atk: 105, def: 105, spa: 50, spd: 40, spe: 20 },
-		abilities: { 0: "Sturdy", 1: "Weak Armor", H: "Sand Force" },
+		baseStats: {hp: 70, atk: 105, def: 105, spa: 50, spd: 40, spe: 20},
+		abilities: {0: "Sturdy", 1: "Weak Armor", H: "Sand Force"},
 		heightm: 0.9,
 		weightkg: 102,
 		color: "Blue",
@@ -9221,8 +9221,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 526,
 		name: "Gigalith",
 		types: ["Rock"],
-		baseStats: { hp: 85, atk: 135, def: 130, spa: 60, spd: 80, spe: 25 },
-		abilities: { 0: "Sturdy", 1: "Sand Stream", H: "Sand Force" },
+		baseStats: {hp: 85, atk: 135, def: 130, spa: 60, spd: 80, spe: 25},
+		abilities: {0: "Sturdy", 1: "Sand Stream", H: "Sand Force"},
 		heightm: 1.7,
 		weightkg: 260,
 		color: "Blue",
@@ -9234,8 +9234,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 527,
 		name: "Woobat",
 		types: ["Psychic", "Flying"],
-		baseStats: { hp: 65, atk: 45, def: 43, spa: 55, spd: 43, spe: 72 },
-		abilities: { 0: "Unaware", 1: "Klutz", H: "Simple" },
+		baseStats: {hp: 65, atk: 45, def: 43, spa: 55, spd: 43, spe: 72},
+		abilities: {0: "Unaware", 1: "Klutz", H: "Simple"},
 		heightm: 0.4,
 		weightkg: 2.1,
 		color: "Blue",
@@ -9246,8 +9246,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 528,
 		name: "Swoobat",
 		types: ["Psychic", "Flying"],
-		baseStats: { hp: 67, atk: 57, def: 55, spa: 77, spd: 55, spe: 114 },
-		abilities: { 0: "Unaware", 1: "Klutz", H: "Simple" },
+		baseStats: {hp: 67, atk: 57, def: 55, spa: 77, spd: 55, spe: 114},
+		abilities: {0: "Unaware", 1: "Klutz", H: "Simple"},
 		heightm: 0.9,
 		weightkg: 10.5,
 		color: "Blue",
@@ -9259,8 +9259,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 529,
 		name: "Drilbur",
 		types: ["Ground"],
-		baseStats: { hp: 60, atk: 85, def: 40, spa: 30, spd: 45, spe: 68 },
-		abilities: { 0: "Sand Rush", 1: "Sand Force", H: "Mold Breaker" },
+		baseStats: {hp: 60, atk: 85, def: 40, spa: 30, spd: 45, spe: 68},
+		abilities: {0: "Sand Rush", 1: "Sand Force", H: "Mold Breaker"},
 		heightm: 0.3,
 		weightkg: 8.5,
 		color: "Gray",
@@ -9271,8 +9271,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 530,
 		name: "Excadrill",
 		types: ["Ground", "Steel"],
-		baseStats: { hp: 110, atk: 135, def: 60, spa: 50, spd: 65, spe: 88 },
-		abilities: { 0: "Sand Rush", 1: "Sand Force", H: "Mold Breaker" },
+		baseStats: {hp: 110, atk: 135, def: 60, spa: 50, spd: 65, spe: 88},
+		abilities: {0: "Sand Rush", 1: "Sand Force", H: "Mold Breaker"},
 		heightm: 0.7,
 		weightkg: 40.4,
 		color: "Gray",
@@ -9284,8 +9284,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 531,
 		name: "Audino",
 		types: ["Normal"],
-		baseStats: { hp: 103, atk: 60, def: 86, spa: 60, spd: 86, spe: 50 },
-		abilities: { 0: "Healer", 1: "Regenerator", H: "Klutz" },
+		baseStats: {hp: 103, atk: 60, def: 86, spa: 60, spd: 86, spe: 50},
+		abilities: {0: "Healer", 1: "Regenerator", H: "Klutz"},
 		heightm: 1.1,
 		weightkg: 31,
 		color: "Pink",
@@ -9299,8 +9299,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Audino",
 		forme: "Mega",
 		types: ["Normal", "Fairy"],
-		baseStats: { hp: 103, atk: 60, def: 126, spa: 80, spd: 126, spe: 50 },
-		abilities: { 0: "Healer" },
+		baseStats: {hp: 103, atk: 60, def: 126, spa: 80, spd: 126, spe: 50},
+		abilities: {0: "Healer"},
 		heightm: 1.5,
 		weightkg: 32,
 		color: "White",
@@ -9311,9 +9311,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 532,
 		name: "Timburr",
 		types: ["Fighting"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 75, atk: 80, def: 55, spa: 25, spd: 35, spe: 35 },
-		abilities: { 0: "Guts", 1: "Sheer Force", H: "Iron Fist" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 75, atk: 80, def: 55, spa: 25, spd: 35, spe: 35},
+		abilities: {0: "Guts", 1: "Sheer Force", H: "Iron Fist"},
 		heightm: 0.6,
 		weightkg: 12.5,
 		color: "Gray",
@@ -9324,9 +9324,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 533,
 		name: "Gurdurr",
 		types: ["Fighting"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 85, atk: 105, def: 85, spa: 40, spd: 50, spe: 40 },
-		abilities: { 0: "Guts", 1: "Sheer Force", H: "Iron Fist" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 85, atk: 105, def: 85, spa: 40, spd: 50, spe: 40},
+		abilities: {0: "Guts", 1: "Sheer Force", H: "Iron Fist"},
 		heightm: 1.2,
 		weightkg: 40,
 		color: "Gray",
@@ -9339,9 +9339,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 534,
 		name: "Conkeldurr",
 		types: ["Fighting"],
-		genderRatio: { M: 0.75, F: 0.25 },
-		baseStats: { hp: 105, atk: 140, def: 95, spa: 55, spd: 65, spe: 45 },
-		abilities: { 0: "Guts", 1: "Sheer Force", H: "Iron Fist" },
+		genderRatio: {M: 0.75, F: 0.25},
+		baseStats: {hp: 105, atk: 140, def: 95, spa: 55, spd: 65, spe: 45},
+		abilities: {0: "Guts", 1: "Sheer Force", H: "Iron Fist"},
 		heightm: 1.4,
 		weightkg: 87,
 		color: "Brown",
@@ -9353,8 +9353,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 535,
 		name: "Tympole",
 		types: ["Water"],
-		baseStats: { hp: 50, atk: 50, def: 40, spa: 50, spd: 40, spe: 64 },
-		abilities: { 0: "Swift Swim", 1: "Hydration", H: "Water Absorb" },
+		baseStats: {hp: 50, atk: 50, def: 40, spa: 50, spd: 40, spe: 64},
+		abilities: {0: "Swift Swim", 1: "Hydration", H: "Water Absorb"},
 		heightm: 0.5,
 		weightkg: 4.5,
 		color: "Blue",
@@ -9365,8 +9365,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 536,
 		name: "Palpitoad",
 		types: ["Water", "Ground"],
-		baseStats: { hp: 75, atk: 65, def: 55, spa: 65, spd: 55, spe: 69 },
-		abilities: { 0: "Swift Swim", 1: "Hydration", H: "Water Absorb" },
+		baseStats: {hp: 75, atk: 65, def: 55, spa: 65, spd: 55, spe: 69},
+		abilities: {0: "Swift Swim", 1: "Hydration", H: "Water Absorb"},
 		heightm: 0.8,
 		weightkg: 17,
 		color: "Blue",
@@ -9379,8 +9379,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 537,
 		name: "Seismitoad",
 		types: ["Water", "Ground"],
-		baseStats: { hp: 105, atk: 95, def: 75, spa: 85, spd: 75, spe: 74 },
-		abilities: { 0: "Swift Swim", 1: "Poison Touch", H: "Water Absorb" },
+		baseStats: {hp: 105, atk: 95, def: 75, spa: 85, spd: 75, spe: 74},
+		abilities: {0: "Swift Swim", 1: "Poison Touch", H: "Water Absorb"},
 		heightm: 1.5,
 		weightkg: 62,
 		color: "Blue",
@@ -9393,8 +9393,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Throh",
 		types: ["Fighting"],
 		gender: "M",
-		baseStats: { hp: 120, atk: 100, def: 85, spa: 30, spd: 85, spe: 45 },
-		abilities: { 0: "Guts", 1: "Inner Focus", H: "Mold Breaker" },
+		baseStats: {hp: 120, atk: 100, def: 85, spa: 30, spd: 85, spe: 45},
+		abilities: {0: "Guts", 1: "Inner Focus", H: "Mold Breaker"},
 		heightm: 1.3,
 		weightkg: 55.5,
 		color: "Red",
@@ -9405,8 +9405,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Sawk",
 		types: ["Fighting"],
 		gender: "M",
-		baseStats: { hp: 75, atk: 125, def: 75, spa: 30, spd: 75, spe: 85 },
-		abilities: { 0: "Sturdy", 1: "Inner Focus", H: "Mold Breaker" },
+		baseStats: {hp: 75, atk: 125, def: 75, spa: 30, spd: 75, spe: 85},
+		abilities: {0: "Sturdy", 1: "Inner Focus", H: "Mold Breaker"},
 		heightm: 1.4,
 		weightkg: 51,
 		color: "Blue",
@@ -9416,8 +9416,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 540,
 		name: "Sewaddle",
 		types: ["Bug", "Grass"],
-		baseStats: { hp: 45, atk: 53, def: 70, spa: 40, spd: 60, spe: 42 },
-		abilities: { 0: "Swarm", 1: "Chlorophyll", H: "Overcoat" },
+		baseStats: {hp: 45, atk: 53, def: 70, spa: 40, spd: 60, spe: 42},
+		abilities: {0: "Swarm", 1: "Chlorophyll", H: "Overcoat"},
 		heightm: 0.3,
 		weightkg: 2.5,
 		color: "Yellow",
@@ -9428,8 +9428,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 541,
 		name: "Swadloon",
 		types: ["Bug", "Grass"],
-		baseStats: { hp: 55, atk: 63, def: 90, spa: 50, spd: 80, spe: 42 },
-		abilities: { 0: "Leaf Guard", 1: "Chlorophyll", H: "Overcoat" },
+		baseStats: {hp: 55, atk: 63, def: 90, spa: 50, spd: 80, spe: 42},
+		abilities: {0: "Leaf Guard", 1: "Chlorophyll", H: "Overcoat"},
 		heightm: 0.5,
 		weightkg: 7.3,
 		color: "Green",
@@ -9442,8 +9442,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 542,
 		name: "Leavanny",
 		types: ["Bug", "Grass"],
-		baseStats: { hp: 75, atk: 103, def: 80, spa: 70, spd: 80, spe: 92 },
-		abilities: { 0: "Swarm", 1: "Chlorophyll", H: "Overcoat" },
+		baseStats: {hp: 75, atk: 103, def: 80, spa: 70, spd: 80, spe: 92},
+		abilities: {0: "Swarm", 1: "Chlorophyll", H: "Overcoat"},
 		heightm: 1.2,
 		weightkg: 20.5,
 		color: "Yellow",
@@ -9455,8 +9455,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 543,
 		name: "Venipede",
 		types: ["Bug", "Poison"],
-		baseStats: { hp: 30, atk: 45, def: 59, spa: 30, spd: 39, spe: 57 },
-		abilities: { 0: "Poison Point", 1: "Swarm", H: "Speed Boost" },
+		baseStats: {hp: 30, atk: 45, def: 59, spa: 30, spd: 39, spe: 57},
+		abilities: {0: "Poison Point", 1: "Swarm", H: "Speed Boost"},
 		heightm: 0.4,
 		weightkg: 5.3,
 		color: "Red",
@@ -9467,8 +9467,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 544,
 		name: "Whirlipede",
 		types: ["Bug", "Poison"],
-		baseStats: { hp: 40, atk: 55, def: 99, spa: 40, spd: 79, spe: 47 },
-		abilities: { 0: "Poison Point", 1: "Swarm", H: "Speed Boost" },
+		baseStats: {hp: 40, atk: 55, def: 99, spa: 40, spd: 79, spe: 47},
+		abilities: {0: "Poison Point", 1: "Swarm", H: "Speed Boost"},
 		heightm: 1.2,
 		weightkg: 58.5,
 		color: "Gray",
@@ -9481,8 +9481,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 545,
 		name: "Scolipede",
 		types: ["Bug", "Poison"],
-		baseStats: { hp: 60, atk: 100, def: 89, spa: 55, spd: 69, spe: 112 },
-		abilities: { 0: "Poison Point", 1: "Swarm", H: "Speed Boost" },
+		baseStats: {hp: 60, atk: 100, def: 89, spa: 55, spd: 69, spe: 112},
+		abilities: {0: "Poison Point", 1: "Swarm", H: "Speed Boost"},
 		heightm: 2.5,
 		weightkg: 200.5,
 		color: "Red",
@@ -9494,8 +9494,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 546,
 		name: "Cottonee",
 		types: ["Grass", "Fairy"],
-		baseStats: { hp: 40, atk: 27, def: 60, spa: 37, spd: 50, spe: 66 },
-		abilities: { 0: "Prankster", 1: "Infiltrator", H: "Chlorophyll" },
+		baseStats: {hp: 40, atk: 27, def: 60, spa: 37, spd: 50, spe: 66},
+		abilities: {0: "Prankster", 1: "Infiltrator", H: "Chlorophyll"},
 		heightm: 0.3,
 		weightkg: 0.6,
 		color: "Green",
@@ -9506,8 +9506,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 547,
 		name: "Whimsicott",
 		types: ["Grass", "Fairy"],
-		baseStats: { hp: 60, atk: 67, def: 85, spa: 77, spd: 75, spe: 116 },
-		abilities: { 0: "Prankster", 1: "Infiltrator", H: "Chlorophyll" },
+		baseStats: {hp: 60, atk: 67, def: 85, spa: 77, spd: 75, spe: 116},
+		abilities: {0: "Prankster", 1: "Infiltrator", H: "Chlorophyll"},
 		heightm: 0.7,
 		weightkg: 6.6,
 		color: "Green",
@@ -9521,8 +9521,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Petilil",
 		types: ["Grass"],
 		gender: "F",
-		baseStats: { hp: 45, atk: 35, def: 50, spa: 70, spd: 50, spe: 30 },
-		abilities: { 0: "Chlorophyll", 1: "Own Tempo", H: "Leaf Guard" },
+		baseStats: {hp: 45, atk: 35, def: 50, spa: 70, spd: 50, spe: 30},
+		abilities: {0: "Chlorophyll", 1: "Own Tempo", H: "Leaf Guard"},
 		heightm: 0.5,
 		weightkg: 6.6,
 		color: "Green",
@@ -9534,8 +9534,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Lilligant",
 		types: ["Grass"],
 		gender: "F",
-		baseStats: { hp: 70, atk: 60, def: 75, spa: 110, spd: 75, spe: 90 },
-		abilities: { 0: "Chlorophyll", 1: "Own Tempo", H: "Leaf Guard" },
+		baseStats: {hp: 70, atk: 60, def: 75, spa: 110, spd: 75, spe: 90},
+		abilities: {0: "Chlorophyll", 1: "Own Tempo", H: "Leaf Guard"},
 		heightm: 1.1,
 		weightkg: 16.3,
 		color: "Green",
@@ -9549,8 +9549,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Basculin",
 		baseForme: "Red-Striped",
 		types: ["Water"],
-		baseStats: { hp: 70, atk: 92, def: 65, spa: 80, spd: 55, spe: 98 },
-		abilities: { 0: "Reckless", 1: "Adaptability", H: "Mold Breaker" },
+		baseStats: {hp: 70, atk: 92, def: 65, spa: 80, spd: 55, spe: 98},
+		abilities: {0: "Reckless", 1: "Adaptability", H: "Mold Breaker"},
 		heightm: 1,
 		weightkg: 18,
 		color: "Green",
@@ -9564,8 +9564,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Basculin",
 		forme: "Blue-Striped",
 		types: ["Water"],
-		baseStats: { hp: 70, atk: 92, def: 65, spa: 80, spd: 55, spe: 98 },
-		abilities: { 0: "Rock Head", 1: "Adaptability", H: "Mold Breaker" },
+		baseStats: {hp: 70, atk: 92, def: 65, spa: 80, spd: 55, spe: 98},
+		abilities: {0: "Rock Head", 1: "Adaptability", H: "Mold Breaker"},
 		heightm: 1,
 		weightkg: 18,
 		color: "Green",
@@ -9575,8 +9575,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 551,
 		name: "Sandile",
 		types: ["Ground", "Dark"],
-		baseStats: { hp: 50, atk: 72, def: 35, spa: 35, spd: 35, spe: 65 },
-		abilities: { 0: "Intimidate", 1: "Moxie", H: "Anger Point" },
+		baseStats: {hp: 50, atk: 72, def: 35, spa: 35, spd: 35, spe: 65},
+		abilities: {0: "Intimidate", 1: "Moxie", H: "Anger Point"},
 		heightm: 0.7,
 		weightkg: 15.2,
 		color: "Brown",
@@ -9587,8 +9587,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 552,
 		name: "Krokorok",
 		types: ["Ground", "Dark"],
-		baseStats: { hp: 60, atk: 82, def: 45, spa: 45, spd: 45, spe: 74 },
-		abilities: { 0: "Intimidate", 1: "Moxie", H: "Anger Point" },
+		baseStats: {hp: 60, atk: 82, def: 45, spa: 45, spd: 45, spe: 74},
+		abilities: {0: "Intimidate", 1: "Moxie", H: "Anger Point"},
 		heightm: 1,
 		weightkg: 33.4,
 		color: "Brown",
@@ -9601,8 +9601,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 553,
 		name: "Krookodile",
 		types: ["Ground", "Dark"],
-		baseStats: { hp: 95, atk: 117, def: 80, spa: 65, spd: 70, spe: 92 },
-		abilities: { 0: "Intimidate", 1: "Moxie", H: "Anger Point" },
+		baseStats: {hp: 95, atk: 117, def: 80, spa: 65, spd: 70, spe: 92},
+		abilities: {0: "Intimidate", 1: "Moxie", H: "Anger Point"},
 		heightm: 1.5,
 		weightkg: 96.3,
 		color: "Red",
@@ -9614,8 +9614,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 554,
 		name: "Darumaka",
 		types: ["Fire"],
-		baseStats: { hp: 70, atk: 90, def: 45, spa: 15, spd: 45, spe: 50 },
-		abilities: { 0: "Hustle", H: "Inner Focus" },
+		baseStats: {hp: 70, atk: 90, def: 45, spa: 15, spd: 45, spe: 50},
+		abilities: {0: "Hustle", H: "Inner Focus"},
 		heightm: 0.6,
 		weightkg: 37.5,
 		color: "Red",
@@ -9630,8 +9630,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Darumaka",
 		forme: "Galar",
 		types: ["Ice"],
-		baseStats: { hp: 70, atk: 90, def: 45, spa: 15, spd: 45, spe: 50 },
-		abilities: { 0: "Hustle", H: "Inner Focus" },
+		baseStats: {hp: 70, atk: 90, def: 45, spa: 15, spd: 45, spe: 50},
+		abilities: {0: "Hustle", H: "Inner Focus"},
 		heightm: 0.7,
 		weightkg: 40,
 		color: "White",
@@ -9643,8 +9643,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Darmanitan",
 		baseForme: "Standard",
 		types: ["Fire"],
-		baseStats: { hp: 105, atk: 140, def: 55, spa: 30, spd: 55, spe: 95 },
-		abilities: { 0: "Sheer Force", H: "Zen Mode" },
+		baseStats: {hp: 105, atk: 140, def: 55, spa: 30, spd: 55, spe: 95},
+		abilities: {0: "Sheer Force", H: "Zen Mode"},
 		heightm: 1.3,
 		weightkg: 92.9,
 		color: "Red",
@@ -9660,8 +9660,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Darmanitan",
 		forme: "Zen",
 		types: ["Fire", "Psychic"],
-		baseStats: { hp: 105, atk: 30, def: 105, spa: 140, spd: 105, spe: 55 },
-		abilities: { 0: "Zen Mode" },
+		baseStats: {hp: 105, atk: 30, def: 105, spa: 140, spd: 105, spe: 55},
+		abilities: {0: "Zen Mode"},
 		heightm: 1.3,
 		weightkg: 92.9,
 		color: "Blue",
@@ -9675,8 +9675,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Darmanitan",
 		forme: "Galar",
 		types: ["Ice"],
-		baseStats: { hp: 105, atk: 140, def: 55, spa: 30, spd: 55, spe: 95 },
-		abilities: { 0: "Gorilla Tactics", H: "Zen Mode" },
+		baseStats: {hp: 105, atk: 140, def: 55, spa: 30, spd: 55, spe: 95},
+		abilities: {0: "Gorilla Tactics", H: "Zen Mode"},
 		heightm: 1.7,
 		weightkg: 120,
 		color: "White",
@@ -9691,8 +9691,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Darmanitan",
 		forme: "Galar-Zen",
 		types: ["Ice", "Fire"],
-		baseStats: { hp: 105, atk: 160, def: 55, spa: 30, spd: 55, spe: 135 },
-		abilities: { 0: "Zen Mode" },
+		baseStats: {hp: 105, atk: 160, def: 55, spa: 30, spd: 55, spe: 135},
+		abilities: {0: "Zen Mode"},
 		heightm: 1.7,
 		weightkg: 120,
 		color: "White",
@@ -9704,8 +9704,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 556,
 		name: "Maractus",
 		types: ["Grass"],
-		baseStats: { hp: 75, atk: 86, def: 67, spa: 106, spd: 67, spe: 60 },
-		abilities: { 0: "Water Absorb", 1: "Chlorophyll", H: "Storm Drain" },
+		baseStats: {hp: 75, atk: 86, def: 67, spa: 106, spd: 67, spe: 60},
+		abilities: {0: "Water Absorb", 1: "Chlorophyll", H: "Storm Drain"},
 		heightm: 1,
 		weightkg: 28,
 		color: "Green",
@@ -9715,8 +9715,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 557,
 		name: "Dwebble",
 		types: ["Bug", "Rock"],
-		baseStats: { hp: 50, atk: 65, def: 85, spa: 35, spd: 35, spe: 55 },
-		abilities: { 0: "Sturdy", 1: "Shell Armor", H: "Weak Armor" },
+		baseStats: {hp: 50, atk: 65, def: 85, spa: 35, spd: 35, spe: 55},
+		abilities: {0: "Sturdy", 1: "Shell Armor", H: "Weak Armor"},
 		heightm: 0.3,
 		weightkg: 14.5,
 		color: "Red",
@@ -9727,8 +9727,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 558,
 		name: "Crustle",
 		types: ["Bug", "Rock"],
-		baseStats: { hp: 70, atk: 105, def: 125, spa: 65, spd: 75, spe: 45 },
-		abilities: { 0: "Sturdy", 1: "Shell Armor", H: "Weak Armor" },
+		baseStats: {hp: 70, atk: 105, def: 125, spa: 65, spd: 75, spe: 45},
+		abilities: {0: "Sturdy", 1: "Shell Armor", H: "Weak Armor"},
 		heightm: 1.4,
 		weightkg: 200,
 		color: "Red",
@@ -9740,8 +9740,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 559,
 		name: "Scraggy",
 		types: ["Dark", "Fighting"],
-		baseStats: { hp: 50, atk: 75, def: 70, spa: 35, spd: 70, spe: 48 },
-		abilities: { 0: "Shed Skin", 1: "Moxie", H: "Intimidate" },
+		baseStats: {hp: 50, atk: 75, def: 70, spa: 35, spd: 70, spe: 48},
+		abilities: {0: "Shed Skin", 1: "Moxie", H: "Intimidate"},
 		heightm: 0.6,
 		weightkg: 11.8,
 		color: "Yellow",
@@ -9752,8 +9752,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 560,
 		name: "Scrafty",
 		types: ["Dark", "Fighting"],
-		baseStats: { hp: 65, atk: 90, def: 115, spa: 45, spd: 115, spe: 58 },
-		abilities: { 0: "Shed Skin", 1: "Moxie", H: "Intimidate" },
+		baseStats: {hp: 65, atk: 90, def: 115, spa: 45, spd: 115, spe: 58},
+		abilities: {0: "Shed Skin", 1: "Moxie", H: "Intimidate"},
 		heightm: 1.1,
 		weightkg: 30,
 		color: "Red",
@@ -9765,8 +9765,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 561,
 		name: "Sigilyph",
 		types: ["Psychic", "Flying"],
-		baseStats: { hp: 72, atk: 58, def: 80, spa: 103, spd: 80, spe: 97 },
-		abilities: { 0: "Wonder Skin", 1: "Magic Guard", H: "Tinted Lens" },
+		baseStats: {hp: 72, atk: 58, def: 80, spa: 103, spd: 80, spe: 97},
+		abilities: {0: "Wonder Skin", 1: "Magic Guard", H: "Tinted Lens"},
 		heightm: 1.4,
 		weightkg: 14,
 		color: "Black",
@@ -9776,8 +9776,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 562,
 		name: "Yamask",
 		types: ["Ghost"],
-		baseStats: { hp: 38, atk: 30, def: 85, spa: 55, spd: 65, spe: 30 },
-		abilities: { 0: "Mummy" },
+		baseStats: {hp: 38, atk: 30, def: 85, spa: 55, spd: 65, spe: 30},
+		abilities: {0: "Mummy"},
 		heightm: 0.5,
 		weightkg: 1.5,
 		color: "Black",
@@ -9792,8 +9792,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Yamask",
 		forme: "Galar",
 		types: ["Ground", "Ghost"],
-		baseStats: { hp: 38, atk: 55, def: 85, spa: 30, spd: 65, spe: 30 },
-		abilities: { 0: "Wandering Spirit" },
+		baseStats: {hp: 38, atk: 55, def: 85, spa: 30, spd: 65, spe: 30},
+		abilities: {0: "Wandering Spirit"},
 		heightm: 0.5,
 		weightkg: 1.5,
 		color: "Black",
@@ -9804,8 +9804,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 563,
 		name: "Cofagrigus",
 		types: ["Ghost"],
-		baseStats: { hp: 58, atk: 50, def: 145, spa: 95, spd: 105, spe: 30 },
-		abilities: { 0: "Mummy" },
+		baseStats: {hp: 58, atk: 50, def: 145, spa: 95, spd: 105, spe: 30},
+		abilities: {0: "Mummy"},
 		heightm: 1.7,
 		weightkg: 76.5,
 		color: "Yellow",
@@ -9817,9 +9817,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 564,
 		name: "Tirtouga",
 		types: ["Water", "Rock"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 54, atk: 78, def: 103, spa: 53, spd: 45, spe: 22 },
-		abilities: { 0: "Solid Rock", 1: "Sturdy", H: "Swift Swim" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 54, atk: 78, def: 103, spa: 53, spd: 45, spe: 22},
+		abilities: {0: "Solid Rock", 1: "Sturdy", H: "Swift Swim"},
 		heightm: 0.7,
 		weightkg: 16.5,
 		color: "Blue",
@@ -9830,9 +9830,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 565,
 		name: "Carracosta",
 		types: ["Water", "Rock"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 74, atk: 108, def: 133, spa: 83, spd: 65, spe: 32 },
-		abilities: { 0: "Solid Rock", 1: "Sturdy", H: "Swift Swim" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 74, atk: 108, def: 133, spa: 83, spd: 65, spe: 32},
+		abilities: {0: "Solid Rock", 1: "Sturdy", H: "Swift Swim"},
 		heightm: 1.2,
 		weightkg: 81,
 		color: "Blue",
@@ -9844,9 +9844,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 566,
 		name: "Archen",
 		types: ["Rock", "Flying"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 55, atk: 112, def: 45, spa: 74, spd: 45, spe: 70 },
-		abilities: { 0: "Defeatist" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 55, atk: 112, def: 45, spa: 74, spd: 45, spe: 70},
+		abilities: {0: "Defeatist"},
 		heightm: 0.5,
 		weightkg: 9.5,
 		color: "Yellow",
@@ -9857,9 +9857,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 567,
 		name: "Archeops",
 		types: ["Rock", "Flying"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 75, atk: 140, def: 65, spa: 112, spd: 65, spe: 110 },
-		abilities: { 0: "Defeatist" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 75, atk: 140, def: 65, spa: 112, spd: 65, spe: 110},
+		abilities: {0: "Defeatist"},
 		heightm: 1.4,
 		weightkg: 32,
 		color: "Yellow",
@@ -9871,8 +9871,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 568,
 		name: "Trubbish",
 		types: ["Poison"],
-		baseStats: { hp: 50, atk: 50, def: 62, spa: 40, spd: 62, spe: 65 },
-		abilities: { 0: "Stench", 1: "Sticky Hold", H: "Aftermath" },
+		baseStats: {hp: 50, atk: 50, def: 62, spa: 40, spd: 62, spe: 65},
+		abilities: {0: "Stench", 1: "Sticky Hold", H: "Aftermath"},
 		heightm: 0.6,
 		weightkg: 31,
 		color: "Green",
@@ -9883,8 +9883,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 569,
 		name: "Garbodor",
 		types: ["Poison"],
-		baseStats: { hp: 80, atk: 95, def: 82, spa: 60, spd: 82, spe: 75 },
-		abilities: { 0: "Stench", 1: "Weak Armor", H: "Aftermath" },
+		baseStats: {hp: 80, atk: 95, def: 82, spa: 60, spd: 82, spe: 75},
+		abilities: {0: "Stench", 1: "Weak Armor", H: "Aftermath"},
 		heightm: 1.9,
 		weightkg: 107.3,
 		color: "Green",
@@ -9899,8 +9899,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Garbodor",
 		forme: "Gmax",
 		types: ["Poison"],
-		baseStats: { hp: 80, atk: 95, def: 82, spa: 60, spd: 82, spe: 75 },
-		abilities: { 0: "Stench", 1: "Weak Armor", H: "Aftermath" },
+		baseStats: {hp: 80, atk: 95, def: 82, spa: 60, spd: 82, spe: 75},
+		abilities: {0: "Stench", 1: "Weak Armor", H: "Aftermath"},
 		heightm: 21,
 		weightkg: 0,
 		color: "Green",
@@ -9911,9 +9911,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 570,
 		name: "Zorua",
 		types: ["Dark"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 40, atk: 65, def: 40, spa: 80, spd: 40, spe: 65 },
-		abilities: { 0: "Illusion" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 40, atk: 65, def: 40, spa: 80, spd: 40, spe: 65},
+		abilities: {0: "Illusion"},
 		heightm: 0.7,
 		weightkg: 12.5,
 		color: "Gray",
@@ -9924,9 +9924,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 571,
 		name: "Zoroark",
 		types: ["Dark"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 60, atk: 105, def: 60, spa: 120, spd: 60, spe: 105 },
-		abilities: { 0: "Illusion" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 60, atk: 105, def: 60, spa: 120, spd: 60, spe: 105},
+		abilities: {0: "Illusion"},
 		heightm: 1.6,
 		weightkg: 81.1,
 		color: "Gray",
@@ -9938,9 +9938,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 572,
 		name: "Minccino",
 		types: ["Normal"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 55, atk: 50, def: 40, spa: 40, spd: 40, spe: 75 },
-		abilities: { 0: "Cute Charm", 1: "Technician", H: "Skill Link" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 55, atk: 50, def: 40, spa: 40, spd: 40, spe: 75},
+		abilities: {0: "Cute Charm", 1: "Technician", H: "Skill Link"},
 		heightm: 0.4,
 		weightkg: 5.8,
 		color: "Gray",
@@ -9951,9 +9951,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 573,
 		name: "Cinccino",
 		types: ["Normal"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 75, atk: 95, def: 60, spa: 65, spd: 60, spe: 115 },
-		abilities: { 0: "Cute Charm", 1: "Technician", H: "Skill Link" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 75, atk: 95, def: 60, spa: 65, spd: 60, spe: 115},
+		abilities: {0: "Cute Charm", 1: "Technician", H: "Skill Link"},
 		heightm: 0.5,
 		weightkg: 7.5,
 		color: "Gray",
@@ -9966,9 +9966,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 574,
 		name: "Gothita",
 		types: ["Psychic"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 45, atk: 30, def: 50, spa: 55, spd: 65, spe: 45 },
-		abilities: { 0: "Frisk", 1: "Competitive", H: "Shadow Tag" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 45, atk: 30, def: 50, spa: 55, spd: 65, spe: 45},
+		abilities: {0: "Frisk", 1: "Competitive", H: "Shadow Tag"},
 		heightm: 0.4,
 		weightkg: 5.8,
 		color: "Purple",
@@ -9979,9 +9979,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 575,
 		name: "Gothorita",
 		types: ["Psychic"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 60, atk: 45, def: 70, spa: 75, spd: 85, spe: 55 },
-		abilities: { 0: "Frisk", 1: "Competitive", H: "Shadow Tag" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 60, atk: 45, def: 70, spa: 75, spd: 85, spe: 55},
+		abilities: {0: "Frisk", 1: "Competitive", H: "Shadow Tag"},
 		heightm: 0.7,
 		weightkg: 18,
 		color: "Purple",
@@ -9994,9 +9994,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 576,
 		name: "Gothitelle",
 		types: ["Psychic"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 70, atk: 55, def: 95, spa: 95, spd: 110, spe: 65 },
-		abilities: { 0: "Frisk", 1: "Competitive", H: "Shadow Tag" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 70, atk: 55, def: 95, spa: 95, spd: 110, spe: 65},
+		abilities: {0: "Frisk", 1: "Competitive", H: "Shadow Tag"},
 		heightm: 1.5,
 		weightkg: 44,
 		color: "Purple",
@@ -10008,8 +10008,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 577,
 		name: "Solosis",
 		types: ["Psychic"],
-		baseStats: { hp: 45, atk: 30, def: 40, spa: 105, spd: 50, spe: 20 },
-		abilities: { 0: "Overcoat", 1: "Magic Guard", H: "Regenerator" },
+		baseStats: {hp: 45, atk: 30, def: 40, spa: 105, spd: 50, spe: 20},
+		abilities: {0: "Overcoat", 1: "Magic Guard", H: "Regenerator"},
 		heightm: 0.3,
 		weightkg: 1,
 		color: "Green",
@@ -10020,8 +10020,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 578,
 		name: "Duosion",
 		types: ["Psychic"],
-		baseStats: { hp: 65, atk: 40, def: 50, spa: 125, spd: 60, spe: 30 },
-		abilities: { 0: "Overcoat", 1: "Magic Guard", H: "Regenerator" },
+		baseStats: {hp: 65, atk: 40, def: 50, spa: 125, spd: 60, spe: 30},
+		abilities: {0: "Overcoat", 1: "Magic Guard", H: "Regenerator"},
 		heightm: 0.6,
 		weightkg: 8,
 		color: "Green",
@@ -10034,8 +10034,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 579,
 		name: "Reuniclus",
 		types: ["Psychic"],
-		baseStats: { hp: 110, atk: 65, def: 75, spa: 125, spd: 85, spe: 30 },
-		abilities: { 0: "Overcoat", 1: "Magic Guard", H: "Regenerator" },
+		baseStats: {hp: 110, atk: 65, def: 75, spa: 125, spd: 85, spe: 30},
+		abilities: {0: "Overcoat", 1: "Magic Guard", H: "Regenerator"},
 		heightm: 1,
 		weightkg: 20.1,
 		color: "Green",
@@ -10047,8 +10047,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 580,
 		name: "Ducklett",
 		types: ["Water", "Flying"],
-		baseStats: { hp: 62, atk: 44, def: 50, spa: 44, spd: 50, spe: 55 },
-		abilities: { 0: "Keen Eye", 1: "Big Pecks", H: "Hydration" },
+		baseStats: {hp: 62, atk: 44, def: 50, spa: 44, spd: 50, spe: 55},
+		abilities: {0: "Keen Eye", 1: "Big Pecks", H: "Hydration"},
 		heightm: 0.5,
 		weightkg: 5.5,
 		color: "Blue",
@@ -10059,8 +10059,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 581,
 		name: "Swanna",
 		types: ["Water", "Flying"],
-		baseStats: { hp: 75, atk: 87, def: 63, spa: 87, spd: 63, spe: 98 },
-		abilities: { 0: "Keen Eye", 1: "Big Pecks", H: "Hydration" },
+		baseStats: {hp: 75, atk: 87, def: 63, spa: 87, spd: 63, spe: 98},
+		abilities: {0: "Keen Eye", 1: "Big Pecks", H: "Hydration"},
 		heightm: 1.3,
 		weightkg: 24.2,
 		color: "White",
@@ -10072,8 +10072,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 582,
 		name: "Vanillite",
 		types: ["Ice"],
-		baseStats: { hp: 36, atk: 50, def: 50, spa: 65, spd: 60, spe: 44 },
-		abilities: { 0: "Ice Body", 1: "Snow Cloak", H: "Weak Armor" },
+		baseStats: {hp: 36, atk: 50, def: 50, spa: 65, spd: 60, spe: 44},
+		abilities: {0: "Ice Body", 1: "Snow Cloak", H: "Weak Armor"},
 		heightm: 0.4,
 		weightkg: 5.7,
 		color: "White",
@@ -10084,8 +10084,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 583,
 		name: "Vanillish",
 		types: ["Ice"],
-		baseStats: { hp: 51, atk: 65, def: 65, spa: 80, spd: 75, spe: 59 },
-		abilities: { 0: "Ice Body", 1: "Snow Cloak", H: "Weak Armor" },
+		baseStats: {hp: 51, atk: 65, def: 65, spa: 80, spd: 75, spe: 59},
+		abilities: {0: "Ice Body", 1: "Snow Cloak", H: "Weak Armor"},
 		heightm: 1.1,
 		weightkg: 41,
 		color: "White",
@@ -10098,8 +10098,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 584,
 		name: "Vanilluxe",
 		types: ["Ice"],
-		baseStats: { hp: 71, atk: 95, def: 85, spa: 110, spd: 95, spe: 79 },
-		abilities: { 0: "Ice Body", 1: "Snow Warning", H: "Weak Armor" },
+		baseStats: {hp: 71, atk: 95, def: 85, spa: 110, spd: 95, spe: 79},
+		abilities: {0: "Ice Body", 1: "Snow Warning", H: "Weak Armor"},
 		heightm: 1.3,
 		weightkg: 57.5,
 		color: "White",
@@ -10112,8 +10112,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Deerling",
 		baseForme: "Spring",
 		types: ["Normal", "Grass"],
-		baseStats: { hp: 60, atk: 60, def: 50, spa: 40, spd: 50, spe: 75 },
-		abilities: { 0: "Chlorophyll", 1: "Sap Sipper", H: "Serene Grace" },
+		baseStats: {hp: 60, atk: 60, def: 50, spa: 40, spd: 50, spe: 75},
+		abilities: {0: "Chlorophyll", 1: "Sap Sipper", H: "Serene Grace"},
 		heightm: 0.6,
 		weightkg: 19.5,
 		color: "Pink",
@@ -10127,8 +10127,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Sawsbuck",
 		baseForme: "Spring",
 		types: ["Normal", "Grass"],
-		baseStats: { hp: 80, atk: 100, def: 70, spa: 60, spd: 70, spe: 95 },
-		abilities: { 0: "Chlorophyll", 1: "Sap Sipper", H: "Serene Grace" },
+		baseStats: {hp: 80, atk: 100, def: 70, spa: 60, spd: 70, spe: 95},
+		abilities: {0: "Chlorophyll", 1: "Sap Sipper", H: "Serene Grace"},
 		heightm: 1.9,
 		weightkg: 92.5,
 		color: "Brown",
@@ -10142,8 +10142,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 587,
 		name: "Emolga",
 		types: ["Electric", "Flying"],
-		baseStats: { hp: 55, atk: 75, def: 60, spa: 75, spd: 60, spe: 103 },
-		abilities: { 0: "Static", H: "Motor Drive" },
+		baseStats: {hp: 55, atk: 75, def: 60, spa: 75, spd: 60, spe: 103},
+		abilities: {0: "Static", H: "Motor Drive"},
 		heightm: 0.4,
 		weightkg: 5,
 		color: "White",
@@ -10153,8 +10153,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 588,
 		name: "Karrablast",
 		types: ["Bug"],
-		baseStats: { hp: 50, atk: 75, def: 45, spa: 40, spd: 45, spe: 60 },
-		abilities: { 0: "Swarm", 1: "Shed Skin", H: "No Guard" },
+		baseStats: {hp: 50, atk: 75, def: 45, spa: 40, spd: 45, spe: 60},
+		abilities: {0: "Swarm", 1: "Shed Skin", H: "No Guard"},
 		heightm: 0.5,
 		weightkg: 5.9,
 		color: "Blue",
@@ -10165,8 +10165,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 589,
 		name: "Escavalier",
 		types: ["Bug", "Steel"],
-		baseStats: { hp: 70, atk: 135, def: 105, spa: 60, spd: 105, spe: 20 },
-		abilities: { 0: "Swarm", 1: "Shell Armor", H: "Overcoat" },
+		baseStats: {hp: 70, atk: 135, def: 105, spa: 60, spd: 105, spe: 20},
+		abilities: {0: "Swarm", 1: "Shell Armor", H: "Overcoat"},
 		heightm: 1,
 		weightkg: 33,
 		color: "Gray",
@@ -10179,8 +10179,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 590,
 		name: "Foongus",
 		types: ["Grass", "Poison"],
-		baseStats: { hp: 69, atk: 55, def: 45, spa: 55, spd: 55, spe: 15 },
-		abilities: { 0: "Effect Spore", H: "Regenerator" },
+		baseStats: {hp: 69, atk: 55, def: 45, spa: 55, spd: 55, spe: 15},
+		abilities: {0: "Effect Spore", H: "Regenerator"},
 		heightm: 0.2,
 		weightkg: 1,
 		color: "White",
@@ -10191,8 +10191,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 591,
 		name: "Amoonguss",
 		types: ["Grass", "Poison"],
-		baseStats: { hp: 114, atk: 85, def: 70, spa: 85, spd: 80, spe: 30 },
-		abilities: { 0: "Effect Spore", H: "Regenerator" },
+		baseStats: {hp: 114, atk: 85, def: 70, spa: 85, spd: 80, spe: 30},
+		abilities: {0: "Effect Spore", H: "Regenerator"},
 		heightm: 0.6,
 		weightkg: 10.5,
 		color: "White",
@@ -10204,8 +10204,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 592,
 		name: "Frillish",
 		types: ["Water", "Ghost"],
-		baseStats: { hp: 55, atk: 40, def: 50, spa: 65, spd: 85, spe: 40 },
-		abilities: { 0: "Water Absorb", 1: "Cursed Body", H: "Damp" },
+		baseStats: {hp: 55, atk: 40, def: 50, spa: 65, spd: 85, spe: 40},
+		abilities: {0: "Water Absorb", 1: "Cursed Body", H: "Damp"},
 		heightm: 1.2,
 		weightkg: 33,
 		color: "White",
@@ -10216,8 +10216,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 593,
 		name: "Jellicent",
 		types: ["Water", "Ghost"],
-		baseStats: { hp: 100, atk: 60, def: 70, spa: 85, spd: 105, spe: 60 },
-		abilities: { 0: "Water Absorb", 1: "Cursed Body", H: "Damp" },
+		baseStats: {hp: 100, atk: 60, def: 70, spa: 85, spd: 105, spe: 60},
+		abilities: {0: "Water Absorb", 1: "Cursed Body", H: "Damp"},
 		heightm: 2.2,
 		weightkg: 135,
 		color: "White",
@@ -10229,8 +10229,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 594,
 		name: "Alomomola",
 		types: ["Water"],
-		baseStats: { hp: 165, atk: 75, def: 80, spa: 40, spd: 45, spe: 65 },
-		abilities: { 0: "Healer", 1: "Hydration", H: "Regenerator" },
+		baseStats: {hp: 165, atk: 75, def: 80, spa: 40, spd: 45, spe: 65},
+		abilities: {0: "Healer", 1: "Hydration", H: "Regenerator"},
 		heightm: 1.2,
 		weightkg: 31.6,
 		color: "Pink",
@@ -10240,8 +10240,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 595,
 		name: "Joltik",
 		types: ["Bug", "Electric"],
-		baseStats: { hp: 50, atk: 47, def: 50, spa: 57, spd: 50, spe: 65 },
-		abilities: { 0: "Compound Eyes", 1: "Unnerve", H: "Swarm" },
+		baseStats: {hp: 50, atk: 47, def: 50, spa: 57, spd: 50, spe: 65},
+		abilities: {0: "Compound Eyes", 1: "Unnerve", H: "Swarm"},
 		heightm: 0.1,
 		weightkg: 0.6,
 		color: "Yellow",
@@ -10252,8 +10252,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 596,
 		name: "Galvantula",
 		types: ["Bug", "Electric"],
-		baseStats: { hp: 70, atk: 77, def: 60, spa: 97, spd: 60, spe: 108 },
-		abilities: { 0: "Compound Eyes", 1: "Unnerve", H: "Swarm" },
+		baseStats: {hp: 70, atk: 77, def: 60, spa: 97, spd: 60, spe: 108},
+		abilities: {0: "Compound Eyes", 1: "Unnerve", H: "Swarm"},
 		heightm: 0.8,
 		weightkg: 14.3,
 		color: "Yellow",
@@ -10265,8 +10265,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 597,
 		name: "Ferroseed",
 		types: ["Grass", "Steel"],
-		baseStats: { hp: 44, atk: 50, def: 91, spa: 24, spd: 86, spe: 10 },
-		abilities: { 0: "Iron Barbs" },
+		baseStats: {hp: 44, atk: 50, def: 91, spa: 24, spd: 86, spe: 10},
+		abilities: {0: "Iron Barbs"},
 		heightm: 0.6,
 		weightkg: 18.8,
 		color: "Gray",
@@ -10277,8 +10277,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 598,
 		name: "Ferrothorn",
 		types: ["Grass", "Steel"],
-		baseStats: { hp: 74, atk: 94, def: 131, spa: 54, spd: 116, spe: 20 },
-		abilities: { 0: "Iron Barbs", H: "Anticipation" },
+		baseStats: {hp: 74, atk: 94, def: 131, spa: 54, spd: 116, spe: 20},
+		abilities: {0: "Iron Barbs", H: "Anticipation"},
 		heightm: 1,
 		weightkg: 110,
 		color: "Gray",
@@ -10291,8 +10291,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Klink",
 		types: ["Steel"],
 		gender: "N",
-		baseStats: { hp: 40, atk: 55, def: 70, spa: 45, spd: 60, spe: 30 },
-		abilities: { 0: "Plus", 1: "Minus", H: "Clear Body" },
+		baseStats: {hp: 40, atk: 55, def: 70, spa: 45, spd: 60, spe: 30},
+		abilities: {0: "Plus", 1: "Minus", H: "Clear Body"},
 		heightm: 0.3,
 		weightkg: 21,
 		color: "Gray",
@@ -10304,8 +10304,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Klang",
 		types: ["Steel"],
 		gender: "N",
-		baseStats: { hp: 60, atk: 80, def: 95, spa: 70, spd: 85, spe: 50 },
-		abilities: { 0: "Plus", 1: "Minus", H: "Clear Body" },
+		baseStats: {hp: 60, atk: 80, def: 95, spa: 70, spd: 85, spe: 50},
+		abilities: {0: "Plus", 1: "Minus", H: "Clear Body"},
 		heightm: 0.6,
 		weightkg: 51,
 		color: "Gray",
@@ -10319,8 +10319,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Klinklang",
 		types: ["Steel"],
 		gender: "N",
-		baseStats: { hp: 60, atk: 100, def: 115, spa: 70, spd: 85, spe: 90 },
-		abilities: { 0: "Plus", 1: "Minus", H: "Clear Body" },
+		baseStats: {hp: 60, atk: 100, def: 115, spa: 70, spd: 85, spe: 90},
+		abilities: {0: "Plus", 1: "Minus", H: "Clear Body"},
 		heightm: 0.6,
 		weightkg: 81,
 		color: "Gray",
@@ -10332,8 +10332,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 602,
 		name: "Tynamo",
 		types: ["Electric"],
-		baseStats: { hp: 35, atk: 55, def: 40, spa: 45, spd: 40, spe: 60 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 35, atk: 55, def: 40, spa: 45, spd: 40, spe: 60},
+		abilities: {0: "Levitate"},
 		heightm: 0.2,
 		weightkg: 0.3,
 		color: "White",
@@ -10344,8 +10344,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 603,
 		name: "Eelektrik",
 		types: ["Electric"],
-		baseStats: { hp: 65, atk: 85, def: 70, spa: 75, spd: 70, spe: 40 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 65, atk: 85, def: 70, spa: 75, spd: 70, spe: 40},
+		abilities: {0: "Levitate"},
 		heightm: 1.2,
 		weightkg: 22,
 		color: "Blue",
@@ -10358,8 +10358,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 604,
 		name: "Eelektross",
 		types: ["Electric"],
-		baseStats: { hp: 85, atk: 115, def: 80, spa: 105, spd: 80, spe: 50 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 85, atk: 115, def: 80, spa: 105, spd: 80, spe: 50},
+		abilities: {0: "Levitate"},
 		heightm: 2.1,
 		weightkg: 80.5,
 		color: "Blue",
@@ -10372,8 +10372,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 605,
 		name: "Elgyem",
 		types: ["Psychic"],
-		baseStats: { hp: 55, atk: 55, def: 55, spa: 85, spd: 55, spe: 30 },
-		abilities: { 0: "Telepathy", 1: "Synchronize", H: "Analytic" },
+		baseStats: {hp: 55, atk: 55, def: 55, spa: 85, spd: 55, spe: 30},
+		abilities: {0: "Telepathy", 1: "Synchronize", H: "Analytic"},
 		heightm: 0.5,
 		weightkg: 9,
 		color: "Blue",
@@ -10384,8 +10384,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 606,
 		name: "Beheeyem",
 		types: ["Psychic"],
-		baseStats: { hp: 75, atk: 75, def: 75, spa: 125, spd: 95, spe: 40 },
-		abilities: { 0: "Telepathy", 1: "Synchronize", H: "Analytic" },
+		baseStats: {hp: 75, atk: 75, def: 75, spa: 125, spd: 95, spe: 40},
+		abilities: {0: "Telepathy", 1: "Synchronize", H: "Analytic"},
 		heightm: 1,
 		weightkg: 34.5,
 		color: "Brown",
@@ -10397,8 +10397,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 607,
 		name: "Litwick",
 		types: ["Ghost", "Fire"],
-		baseStats: { hp: 50, atk: 30, def: 55, spa: 65, spd: 55, spe: 20 },
-		abilities: { 0: "Flash Fire", 1: "Flame Body", H: "Infiltrator" },
+		baseStats: {hp: 50, atk: 30, def: 55, spa: 65, spd: 55, spe: 20},
+		abilities: {0: "Flash Fire", 1: "Flame Body", H: "Infiltrator"},
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "White",
@@ -10409,8 +10409,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 608,
 		name: "Lampent",
 		types: ["Ghost", "Fire"],
-		baseStats: { hp: 60, atk: 40, def: 60, spa: 95, spd: 60, spe: 55 },
-		abilities: { 0: "Flash Fire", 1: "Flame Body", H: "Infiltrator" },
+		baseStats: {hp: 60, atk: 40, def: 60, spa: 95, spd: 60, spe: 55},
+		abilities: {0: "Flash Fire", 1: "Flame Body", H: "Infiltrator"},
 		heightm: 0.6,
 		weightkg: 13,
 		color: "Black",
@@ -10423,8 +10423,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 609,
 		name: "Chandelure",
 		types: ["Ghost", "Fire"],
-		baseStats: { hp: 60, atk: 55, def: 90, spa: 145, spd: 90, spe: 80 },
-		abilities: { 0: "Flash Fire", 1: "Flame Body", H: "Infiltrator" },
+		baseStats: {hp: 60, atk: 55, def: 90, spa: 145, spd: 90, spe: 80},
+		abilities: {0: "Flash Fire", 1: "Flame Body", H: "Infiltrator"},
 		heightm: 1,
 		weightkg: 34.3,
 		color: "Black",
@@ -10437,8 +10437,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 610,
 		name: "Axew",
 		types: ["Dragon"],
-		baseStats: { hp: 46, atk: 87, def: 60, spa: 30, spd: 40, spe: 57 },
-		abilities: { 0: "Rivalry", 1: "Mold Breaker", H: "Unnerve" },
+		baseStats: {hp: 46, atk: 87, def: 60, spa: 30, spd: 40, spe: 57},
+		abilities: {0: "Rivalry", 1: "Mold Breaker", H: "Unnerve"},
 		heightm: 0.6,
 		weightkg: 18,
 		color: "Green",
@@ -10449,8 +10449,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 611,
 		name: "Fraxure",
 		types: ["Dragon"],
-		baseStats: { hp: 66, atk: 117, def: 70, spa: 40, spd: 50, spe: 67 },
-		abilities: { 0: "Rivalry", 1: "Mold Breaker", H: "Unnerve" },
+		baseStats: {hp: 66, atk: 117, def: 70, spa: 40, spd: 50, spe: 67},
+		abilities: {0: "Rivalry", 1: "Mold Breaker", H: "Unnerve"},
 		heightm: 1,
 		weightkg: 36,
 		color: "Green",
@@ -10463,8 +10463,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 612,
 		name: "Haxorus",
 		types: ["Dragon"],
-		baseStats: { hp: 76, atk: 147, def: 90, spa: 60, spd: 70, spe: 97 },
-		abilities: { 0: "Rivalry", 1: "Mold Breaker", H: "Unnerve" },
+		baseStats: {hp: 76, atk: 147, def: 90, spa: 60, spd: 70, spe: 97},
+		abilities: {0: "Rivalry", 1: "Mold Breaker", H: "Unnerve"},
 		heightm: 1.8,
 		weightkg: 105.5,
 		color: "Yellow",
@@ -10476,8 +10476,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 613,
 		name: "Cubchoo",
 		types: ["Ice"],
-		baseStats: { hp: 55, atk: 70, def: 40, spa: 60, spd: 40, spe: 40 },
-		abilities: { 0: "Snow Cloak", 1: "Slush Rush", H: "Rattled" },
+		baseStats: {hp: 55, atk: 70, def: 40, spa: 60, spd: 40, spe: 40},
+		abilities: {0: "Snow Cloak", 1: "Slush Rush", H: "Rattled"},
 		heightm: 0.5,
 		weightkg: 8.5,
 		color: "White",
@@ -10488,8 +10488,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 614,
 		name: "Beartic",
 		types: ["Ice"],
-		baseStats: { hp: 95, atk: 130, def: 80, spa: 70, spd: 80, spe: 50 },
-		abilities: { 0: "Snow Cloak", 1: "Slush Rush", H: "Swift Swim" },
+		baseStats: {hp: 95, atk: 130, def: 80, spa: 70, spd: 80, spe: 50},
+		abilities: {0: "Snow Cloak", 1: "Slush Rush", H: "Swift Swim"},
 		heightm: 2.6,
 		weightkg: 260,
 		color: "White",
@@ -10502,8 +10502,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Cryogonal",
 		types: ["Ice"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 50, def: 50, spa: 95, spd: 135, spe: 105 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 80, atk: 50, def: 50, spa: 95, spd: 135, spe: 105},
+		abilities: {0: "Levitate"},
 		heightm: 1.1,
 		weightkg: 148,
 		color: "Blue",
@@ -10513,8 +10513,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 616,
 		name: "Shelmet",
 		types: ["Bug"],
-		baseStats: { hp: 50, atk: 40, def: 85, spa: 40, spd: 65, spe: 25 },
-		abilities: { 0: "Hydration", 1: "Shell Armor", H: "Overcoat" },
+		baseStats: {hp: 50, atk: 40, def: 85, spa: 40, spd: 65, spe: 25},
+		abilities: {0: "Hydration", 1: "Shell Armor", H: "Overcoat"},
 		heightm: 0.4,
 		weightkg: 7.7,
 		color: "Red",
@@ -10525,8 +10525,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 617,
 		name: "Accelgor",
 		types: ["Bug"],
-		baseStats: { hp: 80, atk: 70, def: 40, spa: 100, spd: 60, spe: 145 },
-		abilities: { 0: "Hydration", 1: "Sticky Hold", H: "Unburden" },
+		baseStats: {hp: 80, atk: 70, def: 40, spa: 100, spd: 60, spe: 145},
+		abilities: {0: "Hydration", 1: "Sticky Hold", H: "Unburden"},
 		heightm: 0.8,
 		weightkg: 25.3,
 		color: "Red",
@@ -10539,8 +10539,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 618,
 		name: "Stunfisk",
 		types: ["Ground", "Electric"],
-		baseStats: { hp: 109, atk: 66, def: 84, spa: 81, spd: 99, spe: 32 },
-		abilities: { 0: "Static", 1: "Limber", H: "Sand Veil" },
+		baseStats: {hp: 109, atk: 66, def: 84, spa: 81, spd: 99, spe: 32},
+		abilities: {0: "Static", 1: "Limber", H: "Sand Veil"},
 		heightm: 0.7,
 		weightkg: 11,
 		color: "Brown",
@@ -10554,8 +10554,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Stunfisk",
 		forme: "Galar",
 		types: ["Ground", "Steel"],
-		baseStats: { hp: 109, atk: 81, def: 99, spa: 66, spd: 84, spe: 32 },
-		abilities: { 0: "Mimicry" },
+		baseStats: {hp: 109, atk: 81, def: 99, spa: 66, spd: 84, spe: 32},
+		abilities: {0: "Mimicry"},
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Green",
@@ -10565,8 +10565,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 619,
 		name: "Mienfoo",
 		types: ["Fighting"],
-		baseStats: { hp: 45, atk: 85, def: 50, spa: 55, spd: 50, spe: 65 },
-		abilities: { 0: "Inner Focus", 1: "Regenerator", H: "Reckless" },
+		baseStats: {hp: 45, atk: 85, def: 50, spa: 55, spd: 50, spe: 65},
+		abilities: {0: "Inner Focus", 1: "Regenerator", H: "Reckless"},
 		heightm: 0.9,
 		weightkg: 20,
 		color: "Yellow",
@@ -10577,8 +10577,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 620,
 		name: "Mienshao",
 		types: ["Fighting"],
-		baseStats: { hp: 65, atk: 125, def: 60, spa: 95, spd: 60, spe: 105 },
-		abilities: { 0: "Inner Focus", 1: "Regenerator", H: "Reckless" },
+		baseStats: {hp: 65, atk: 125, def: 60, spa: 95, spd: 60, spe: 105},
+		abilities: {0: "Inner Focus", 1: "Regenerator", H: "Reckless"},
 		heightm: 1.4,
 		weightkg: 35.5,
 		color: "Purple",
@@ -10590,8 +10590,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 621,
 		name: "Druddigon",
 		types: ["Dragon"],
-		baseStats: { hp: 77, atk: 120, def: 90, spa: 60, spd: 90, spe: 48 },
-		abilities: { 0: "Rough Skin", 1: "Sheer Force", H: "Mold Breaker" },
+		baseStats: {hp: 77, atk: 120, def: 90, spa: 60, spd: 90, spe: 48},
+		abilities: {0: "Rough Skin", 1: "Sheer Force", H: "Mold Breaker"},
 		heightm: 1.6,
 		weightkg: 139,
 		color: "Red",
@@ -10602,8 +10602,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Golett",
 		types: ["Ground", "Ghost"],
 		gender: "N",
-		baseStats: { hp: 59, atk: 74, def: 50, spa: 35, spd: 50, spe: 35 },
-		abilities: { 0: "Iron Fist", 1: "Klutz", H: "No Guard" },
+		baseStats: {hp: 59, atk: 74, def: 50, spa: 35, spd: 50, spe: 35},
+		abilities: {0: "Iron Fist", 1: "Klutz", H: "No Guard"},
 		heightm: 1,
 		weightkg: 92,
 		color: "Green",
@@ -10615,8 +10615,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Golurk",
 		types: ["Ground", "Ghost"],
 		gender: "N",
-		baseStats: { hp: 89, atk: 124, def: 80, spa: 55, spd: 80, spe: 55 },
-		abilities: { 0: "Iron Fist", 1: "Klutz", H: "No Guard" },
+		baseStats: {hp: 89, atk: 124, def: 80, spa: 55, spd: 80, spe: 55},
+		abilities: {0: "Iron Fist", 1: "Klutz", H: "No Guard"},
 		heightm: 2.8,
 		weightkg: 330,
 		color: "Green",
@@ -10628,8 +10628,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 624,
 		name: "Pawniard",
 		types: ["Dark", "Steel"],
-		baseStats: { hp: 45, atk: 85, def: 70, spa: 40, spd: 40, spe: 60 },
-		abilities: { 0: "Defiant", 1: "Inner Focus", H: "Pressure" },
+		baseStats: {hp: 45, atk: 85, def: 70, spa: 40, spd: 40, spe: 60},
+		abilities: {0: "Defiant", 1: "Inner Focus", H: "Pressure"},
 		heightm: 0.5,
 		weightkg: 10.2,
 		color: "Red",
@@ -10640,8 +10640,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 625,
 		name: "Bisharp",
 		types: ["Dark", "Steel"],
-		baseStats: { hp: 65, atk: 125, def: 100, spa: 60, spd: 70, spe: 70 },
-		abilities: { 0: "Defiant", 1: "Inner Focus", H: "Pressure" },
+		baseStats: {hp: 65, atk: 125, def: 100, spa: 60, spd: 70, spe: 70},
+		abilities: {0: "Defiant", 1: "Inner Focus", H: "Pressure"},
 		heightm: 1.6,
 		weightkg: 70,
 		color: "Red",
@@ -10653,8 +10653,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 626,
 		name: "Bouffalant",
 		types: ["Normal"],
-		baseStats: { hp: 95, atk: 110, def: 95, spa: 40, spd: 95, spe: 55 },
-		abilities: { 0: "Reckless", 1: "Sap Sipper", H: "Soundproof" },
+		baseStats: {hp: 95, atk: 110, def: 95, spa: 40, spd: 95, spe: 55},
+		abilities: {0: "Reckless", 1: "Sap Sipper", H: "Soundproof"},
 		heightm: 1.6,
 		weightkg: 94.6,
 		color: "Brown",
@@ -10665,8 +10665,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Rufflet",
 		types: ["Normal", "Flying"],
 		gender: "M",
-		baseStats: { hp: 70, atk: 83, def: 50, spa: 37, spd: 50, spe: 60 },
-		abilities: { 0: "Keen Eye", 1: "Sheer Force", H: "Hustle" },
+		baseStats: {hp: 70, atk: 83, def: 50, spa: 37, spd: 50, spe: 60},
+		abilities: {0: "Keen Eye", 1: "Sheer Force", H: "Hustle"},
 		heightm: 0.5,
 		weightkg: 10.5,
 		color: "White",
@@ -10678,8 +10678,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Braviary",
 		types: ["Normal", "Flying"],
 		gender: "M",
-		baseStats: { hp: 100, atk: 123, def: 75, spa: 57, spd: 75, spe: 80 },
-		abilities: { 0: "Keen Eye", 1: "Sheer Force", H: "Defiant" },
+		baseStats: {hp: 100, atk: 123, def: 75, spa: 57, spd: 75, spe: 80},
+		abilities: {0: "Keen Eye", 1: "Sheer Force", H: "Defiant"},
 		heightm: 1.5,
 		weightkg: 41,
 		color: "Red",
@@ -10692,8 +10692,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Vullaby",
 		types: ["Dark", "Flying"],
 		gender: "F",
-		baseStats: { hp: 70, atk: 55, def: 75, spa: 45, spd: 65, spe: 60 },
-		abilities: { 0: "Big Pecks", 1: "Overcoat", H: "Weak Armor" },
+		baseStats: {hp: 70, atk: 55, def: 75, spa: 45, spd: 65, spe: 60},
+		abilities: {0: "Big Pecks", 1: "Overcoat", H: "Weak Armor"},
 		heightm: 0.5,
 		weightkg: 9,
 		color: "Brown",
@@ -10705,8 +10705,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Mandibuzz",
 		types: ["Dark", "Flying"],
 		gender: "F",
-		baseStats: { hp: 110, atk: 65, def: 105, spa: 55, spd: 95, spe: 80 },
-		abilities: { 0: "Big Pecks", 1: "Overcoat", H: "Weak Armor" },
+		baseStats: {hp: 110, atk: 65, def: 105, spa: 55, spd: 95, spe: 80},
+		abilities: {0: "Big Pecks", 1: "Overcoat", H: "Weak Armor"},
 		heightm: 1.2,
 		weightkg: 39.5,
 		color: "Brown",
@@ -10718,8 +10718,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 631,
 		name: "Heatmor",
 		types: ["Fire"],
-		baseStats: { hp: 85, atk: 97, def: 66, spa: 105, spd: 66, spe: 65 },
-		abilities: { 0: "Gluttony", 1: "Flash Fire", H: "White Smoke" },
+		baseStats: {hp: 85, atk: 97, def: 66, spa: 105, spd: 66, spe: 65},
+		abilities: {0: "Gluttony", 1: "Flash Fire", H: "White Smoke"},
 		heightm: 1.4,
 		weightkg: 58,
 		color: "Red",
@@ -10729,8 +10729,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 632,
 		name: "Durant",
 		types: ["Bug", "Steel"],
-		baseStats: { hp: 58, atk: 109, def: 112, spa: 48, spd: 48, spe: 109 },
-		abilities: { 0: "Swarm", 1: "Hustle", H: "Truant" },
+		baseStats: {hp: 58, atk: 109, def: 112, spa: 48, spd: 48, spe: 109},
+		abilities: {0: "Swarm", 1: "Hustle", H: "Truant"},
 		heightm: 0.3,
 		weightkg: 33,
 		color: "Gray",
@@ -10740,8 +10740,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 633,
 		name: "Deino",
 		types: ["Dark", "Dragon"],
-		baseStats: { hp: 52, atk: 65, def: 50, spa: 45, spd: 50, spe: 38 },
-		abilities: { 0: "Hustle" },
+		baseStats: {hp: 52, atk: 65, def: 50, spa: 45, spd: 50, spe: 38},
+		abilities: {0: "Hustle"},
 		heightm: 0.8,
 		weightkg: 17.3,
 		color: "Blue",
@@ -10752,8 +10752,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 634,
 		name: "Zweilous",
 		types: ["Dark", "Dragon"],
-		baseStats: { hp: 72, atk: 85, def: 70, spa: 65, spd: 70, spe: 58 },
-		abilities: { 0: "Hustle" },
+		baseStats: {hp: 72, atk: 85, def: 70, spa: 65, spd: 70, spe: 58},
+		abilities: {0: "Hustle"},
 		heightm: 1.4,
 		weightkg: 50,
 		color: "Blue",
@@ -10766,8 +10766,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 635,
 		name: "Hydreigon",
 		types: ["Dark", "Dragon"],
-		baseStats: { hp: 92, atk: 105, def: 90, spa: 125, spd: 90, spe: 98 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 92, atk: 105, def: 90, spa: 125, spd: 90, spe: 98},
+		abilities: {0: "Levitate"},
 		heightm: 1.8,
 		weightkg: 160,
 		color: "Blue",
@@ -10779,8 +10779,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 636,
 		name: "Larvesta",
 		types: ["Bug", "Fire"],
-		baseStats: { hp: 55, atk: 85, def: 55, spa: 50, spd: 55, spe: 60 },
-		abilities: { 0: "Flame Body", H: "Swarm" },
+		baseStats: {hp: 55, atk: 85, def: 55, spa: 50, spd: 55, spe: 60},
+		abilities: {0: "Flame Body", H: "Swarm"},
 		heightm: 1.1,
 		weightkg: 28.8,
 		color: "White",
@@ -10791,8 +10791,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 637,
 		name: "Volcarona",
 		types: ["Bug", "Fire"],
-		baseStats: { hp: 85, atk: 60, def: 65, spa: 135, spd: 105, spe: 100 },
-		abilities: { 0: "Flame Body", H: "Swarm" },
+		baseStats: {hp: 85, atk: 60, def: 65, spa: 135, spd: 105, spe: 100},
+		abilities: {0: "Flame Body", H: "Swarm"},
 		heightm: 1.6,
 		weightkg: 46,
 		color: "White",
@@ -10805,8 +10805,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Cobalion",
 		types: ["Steel", "Fighting"],
 		gender: "N",
-		baseStats: { hp: 91, atk: 90, def: 129, spa: 90, spd: 72, spe: 108 },
-		abilities: { 0: "Justified" },
+		baseStats: {hp: 91, atk: 90, def: 129, spa: 90, spd: 72, spe: 108},
+		abilities: {0: "Justified"},
 		heightm: 2.1,
 		weightkg: 250,
 		color: "Blue",
@@ -10817,8 +10817,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Terrakion",
 		types: ["Rock", "Fighting"],
 		gender: "N",
-		baseStats: { hp: 91, atk: 129, def: 90, spa: 72, spd: 90, spe: 108 },
-		abilities: { 0: "Justified" },
+		baseStats: {hp: 91, atk: 129, def: 90, spa: 72, spd: 90, spe: 108},
+		abilities: {0: "Justified"},
 		heightm: 1.9,
 		weightkg: 260,
 		color: "Gray",
@@ -10829,8 +10829,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Virizion",
 		types: ["Grass", "Fighting"],
 		gender: "N",
-		baseStats: { hp: 91, atk: 90, def: 72, spa: 90, spd: 129, spe: 108 },
-		abilities: { 0: "Justified" },
+		baseStats: {hp: 91, atk: 90, def: 72, spa: 90, spd: 129, spe: 108},
+		abilities: {0: "Justified"},
 		heightm: 2,
 		weightkg: 200,
 		color: "Green",
@@ -10842,8 +10842,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Incarnate",
 		types: ["Flying"],
 		gender: "M",
-		baseStats: { hp: 79, atk: 115, def: 70, spa: 125, spd: 80, spe: 111 },
-		abilities: { 0: "Prankster", H: "Defiant" },
+		baseStats: {hp: 79, atk: 115, def: 70, spa: 125, spd: 80, spe: 111},
+		abilities: {0: "Prankster", H: "Defiant"},
 		heightm: 1.5,
 		weightkg: 63,
 		color: "Green",
@@ -10858,8 +10858,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Therian",
 		types: ["Flying"],
 		gender: "M",
-		baseStats: { hp: 79, atk: 100, def: 80, spa: 110, spd: 90, spe: 121 },
-		abilities: { 0: "Regenerator" },
+		baseStats: {hp: 79, atk: 100, def: 80, spa: 110, spd: 90, spe: 121},
+		abilities: {0: "Regenerator"},
 		heightm: 1.4,
 		weightkg: 63,
 		color: "Green",
@@ -10872,8 +10872,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Incarnate",
 		types: ["Electric", "Flying"],
 		gender: "M",
-		baseStats: { hp: 79, atk: 115, def: 70, spa: 125, spd: 80, spe: 111 },
-		abilities: { 0: "Prankster", H: "Defiant" },
+		baseStats: {hp: 79, atk: 115, def: 70, spa: 125, spd: 80, spe: 111},
+		abilities: {0: "Prankster", H: "Defiant"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "Blue",
@@ -10888,8 +10888,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Therian",
 		types: ["Electric", "Flying"],
 		gender: "M",
-		baseStats: { hp: 79, atk: 105, def: 70, spa: 145, spd: 80, spe: 101 },
-		abilities: { 0: "Volt Absorb" },
+		baseStats: {hp: 79, atk: 105, def: 70, spa: 145, spd: 80, spe: 101},
+		abilities: {0: "Volt Absorb"},
 		heightm: 3,
 		weightkg: 61,
 		color: "Blue",
@@ -10901,8 +10901,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Reshiram",
 		types: ["Dragon", "Fire"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 120, def: 100, spa: 150, spd: 120, spe: 90 },
-		abilities: { 0: "Turboblaze" },
+		baseStats: {hp: 100, atk: 120, def: 100, spa: 150, spd: 120, spe: 90},
+		abilities: {0: "Turboblaze"},
 		heightm: 3.2,
 		weightkg: 330,
 		color: "White",
@@ -10913,8 +10913,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Zekrom",
 		types: ["Dragon", "Electric"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 150, def: 120, spa: 120, spd: 100, spe: 90 },
-		abilities: { 0: "Teravolt" },
+		baseStats: {hp: 100, atk: 150, def: 120, spa: 120, spd: 100, spe: 90},
+		abilities: {0: "Teravolt"},
 		heightm: 2.9,
 		weightkg: 345,
 		color: "Black",
@@ -10926,8 +10926,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Incarnate",
 		types: ["Ground", "Flying"],
 		gender: "M",
-		baseStats: { hp: 89, atk: 125, def: 90, spa: 115, spd: 80, spe: 101 },
-		abilities: { 0: "Sand Force", H: "Sheer Force" },
+		baseStats: {hp: 89, atk: 125, def: 90, spa: 115, spd: 80, spe: 101},
+		abilities: {0: "Sand Force", H: "Sheer Force"},
 		heightm: 1.5,
 		weightkg: 68,
 		color: "Brown",
@@ -10942,8 +10942,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Therian",
 		types: ["Ground", "Flying"],
 		gender: "M",
-		baseStats: { hp: 89, atk: 145, def: 90, spa: 105, spd: 80, spe: 91 },
-		abilities: { 0: "Intimidate" },
+		baseStats: {hp: 89, atk: 145, def: 90, spa: 105, spd: 80, spe: 91},
+		abilities: {0: "Intimidate"},
 		heightm: 1.3,
 		weightkg: 68,
 		color: "Brown",
@@ -10955,8 +10955,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Kyurem",
 		types: ["Dragon", "Ice"],
 		gender: "N",
-		baseStats: { hp: 125, atk: 130, def: 90, spa: 130, spd: 90, spe: 95 },
-		abilities: { 0: "Pressure" },
+		baseStats: {hp: 125, atk: 130, def: 90, spa: 130, spd: 90, spe: 95},
+		abilities: {0: "Pressure"},
 		heightm: 3,
 		weightkg: 325,
 		color: "Gray",
@@ -10971,8 +10971,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Black",
 		types: ["Dragon", "Ice"],
 		gender: "N",
-		baseStats: { hp: 125, atk: 170, def: 100, spa: 120, spd: 90, spe: 95 },
-		abilities: { 0: "Teravolt" },
+		baseStats: {hp: 125, atk: 170, def: 100, spa: 120, spd: 90, spe: 95},
+		abilities: {0: "Teravolt"},
 		heightm: 3.3,
 		weightkg: 325,
 		color: "Gray",
@@ -10986,8 +10986,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "White",
 		types: ["Dragon", "Ice"],
 		gender: "N",
-		baseStats: { hp: 125, atk: 120, def: 90, spa: 170, spd: 100, spe: 95 },
-		abilities: { 0: "Turboblaze" },
+		baseStats: {hp: 125, atk: 120, def: 90, spa: 170, spd: 100, spe: 95},
+		abilities: {0: "Turboblaze"},
 		heightm: 3.6,
 		weightkg: 325,
 		color: "Gray",
@@ -11000,8 +11000,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Ordinary",
 		types: ["Water", "Fighting"],
 		gender: "N",
-		baseStats: { hp: 91, atk: 72, def: 90, spa: 129, spd: 90, spe: 108 },
-		abilities: { 0: "Justified" },
+		baseStats: {hp: 91, atk: 72, def: 90, spa: 129, spd: 90, spe: 108},
+		abilities: {0: "Justified"},
 		heightm: 1.4,
 		weightkg: 48.5,
 		color: "Yellow",
@@ -11016,8 +11016,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Resolute",
 		types: ["Water", "Fighting"],
 		gender: "N",
-		baseStats: { hp: 91, atk: 72, def: 90, spa: 129, spd: 90, spe: 108 },
-		abilities: { 0: "Justified" },
+		baseStats: {hp: 91, atk: 72, def: 90, spa: 129, spd: 90, spe: 108},
+		abilities: {0: "Justified"},
 		heightm: 1.4,
 		weightkg: 48.5,
 		color: "Yellow",
@@ -11031,8 +11031,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Aria",
 		types: ["Normal", "Psychic"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 77, def: 77, spa: 128, spd: 128, spe: 90 },
-		abilities: { 0: "Serene Grace" },
+		baseStats: {hp: 100, atk: 77, def: 77, spa: 128, spd: 128, spe: 90},
+		abilities: {0: "Serene Grace"},
 		heightm: 0.6,
 		weightkg: 6.5,
 		color: "White",
@@ -11047,8 +11047,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Pirouette",
 		types: ["Normal", "Fighting"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 128, def: 90, spa: 77, spd: 77, spe: 128 },
-		abilities: { 0: "Serene Grace" },
+		baseStats: {hp: 100, atk: 128, def: 90, spa: 77, spd: 77, spe: 128},
+		abilities: {0: "Serene Grace"},
 		heightm: 0.6,
 		weightkg: 6.5,
 		color: "White",
@@ -11061,8 +11061,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Genesect",
 		types: ["Bug", "Steel"],
 		gender: "N",
-		baseStats: { hp: 71, atk: 120, def: 95, spa: 120, spd: 95, spe: 99 },
-		abilities: { 0: "Download" },
+		baseStats: {hp: 71, atk: 120, def: 95, spa: 120, spd: 95, spe: 99},
+		abilities: {0: "Download"},
 		heightm: 1.5,
 		weightkg: 82.5,
 		color: "Purple",
@@ -11077,8 +11077,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Douse",
 		types: ["Bug", "Steel"],
 		gender: "N",
-		baseStats: { hp: 71, atk: 120, def: 95, spa: 120, spd: 95, spe: 99 },
-		abilities: { 0: "Download" },
+		baseStats: {hp: 71, atk: 120, def: 95, spa: 120, spd: 95, spe: 99},
+		abilities: {0: "Download"},
 		heightm: 1.5,
 		weightkg: 82.5,
 		color: "Purple",
@@ -11093,8 +11093,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Shock",
 		types: ["Bug", "Steel"],
 		gender: "N",
-		baseStats: { hp: 71, atk: 120, def: 95, spa: 120, spd: 95, spe: 99 },
-		abilities: { 0: "Download" },
+		baseStats: {hp: 71, atk: 120, def: 95, spa: 120, spd: 95, spe: 99},
+		abilities: {0: "Download"},
 		heightm: 1.5,
 		weightkg: 82.5,
 		color: "Purple",
@@ -11109,8 +11109,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Burn",
 		types: ["Bug", "Steel"],
 		gender: "N",
-		baseStats: { hp: 71, atk: 120, def: 95, spa: 120, spd: 95, spe: 99 },
-		abilities: { 0: "Download" },
+		baseStats: {hp: 71, atk: 120, def: 95, spa: 120, spd: 95, spe: 99},
+		abilities: {0: "Download"},
 		heightm: 1.5,
 		weightkg: 82.5,
 		color: "Purple",
@@ -11125,8 +11125,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Chill",
 		types: ["Bug", "Steel"],
 		gender: "N",
-		baseStats: { hp: 71, atk: 120, def: 95, spa: 120, spd: 95, spe: 99 },
-		abilities: { 0: "Download" },
+		baseStats: {hp: 71, atk: 120, def: 95, spa: 120, spd: 95, spe: 99},
+		abilities: {0: "Download"},
 		heightm: 1.5,
 		weightkg: 82.5,
 		color: "Purple",
@@ -11138,9 +11138,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 650,
 		name: "Chespin",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 56, atk: 61, def: 65, spa: 48, spd: 45, spe: 38 },
-		abilities: { 0: "Overgrow", H: "Bulletproof" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 56, atk: 61, def: 65, spa: 48, spd: 45, spe: 38},
+		abilities: {0: "Overgrow", H: "Bulletproof"},
 		heightm: 0.4,
 		weightkg: 9,
 		color: "Green",
@@ -11151,9 +11151,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 651,
 		name: "Quilladin",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 61, atk: 78, def: 95, spa: 56, spd: 58, spe: 57 },
-		abilities: { 0: "Overgrow", H: "Bulletproof" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 61, atk: 78, def: 95, spa: 56, spd: 58, spe: 57},
+		abilities: {0: "Overgrow", H: "Bulletproof"},
 		heightm: 0.7,
 		weightkg: 29,
 		color: "Green",
@@ -11166,9 +11166,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 652,
 		name: "Chesnaught",
 		types: ["Grass", "Fighting"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 88, atk: 107, def: 122, spa: 74, spd: 75, spe: 64 },
-		abilities: { 0: "Overgrow", H: "Bulletproof" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 88, atk: 107, def: 122, spa: 74, spd: 75, spe: 64},
+		abilities: {0: "Overgrow", H: "Bulletproof"},
 		heightm: 1.6,
 		weightkg: 90,
 		color: "Green",
@@ -11180,9 +11180,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 653,
 		name: "Fennekin",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 40, atk: 45, def: 40, spa: 62, spd: 60, spe: 60 },
-		abilities: { 0: "Blaze", H: "Magician" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 40, atk: 45, def: 40, spa: 62, spd: 60, spe: 60},
+		abilities: {0: "Blaze", H: "Magician"},
 		heightm: 0.4,
 		weightkg: 9.4,
 		color: "Red",
@@ -11193,9 +11193,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 654,
 		name: "Braixen",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 59, atk: 59, def: 58, spa: 90, spd: 70, spe: 73 },
-		abilities: { 0: "Blaze", H: "Magician" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 59, atk: 59, def: 58, spa: 90, spd: 70, spe: 73},
+		abilities: {0: "Blaze", H: "Magician"},
 		heightm: 1,
 		weightkg: 14.5,
 		color: "Red",
@@ -11208,9 +11208,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 655,
 		name: "Delphox",
 		types: ["Fire", "Psychic"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 75, atk: 69, def: 72, spa: 114, spd: 100, spe: 104 },
-		abilities: { 0: "Blaze", H: "Magician" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 75, atk: 69, def: 72, spa: 114, spd: 100, spe: 104},
+		abilities: {0: "Blaze", H: "Magician"},
 		heightm: 1.5,
 		weightkg: 39,
 		color: "Red",
@@ -11222,9 +11222,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 656,
 		name: "Froakie",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 41, atk: 56, def: 40, spa: 62, spd: 44, spe: 71 },
-		abilities: { 0: "Torrent", H: "Protean" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 41, atk: 56, def: 40, spa: 62, spd: 44, spe: 71},
+		abilities: {0: "Torrent", H: "Protean"},
 		heightm: 0.3,
 		weightkg: 7,
 		color: "Blue",
@@ -11235,9 +11235,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 657,
 		name: "Frogadier",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 54, atk: 63, def: 52, spa: 83, spd: 56, spe: 97 },
-		abilities: { 0: "Torrent", H: "Protean" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 54, atk: 63, def: 52, spa: 83, spd: 56, spe: 97},
+		abilities: {0: "Torrent", H: "Protean"},
 		heightm: 0.6,
 		weightkg: 10.9,
 		color: "Blue",
@@ -11250,9 +11250,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 658,
 		name: "Greninja",
 		types: ["Water", "Dark"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 72, atk: 95, def: 67, spa: 103, spd: 71, spe: 122 },
-		abilities: { 0: "Torrent", H: "Protean", S: "Battle Bond" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 72, atk: 95, def: 67, spa: 103, spd: 71, spe: 122},
+		abilities: {0: "Torrent", H: "Protean", S: "Battle Bond"},
 		heightm: 1.5,
 		weightkg: 40,
 		color: "Blue",
@@ -11270,8 +11270,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Ash",
 		types: ["Water", "Dark"],
 		gender: "M",
-		baseStats: { hp: 72, atk: 145, def: 67, spa: 153, spd: 71, spe: 132 },
-		abilities: { 0: "Battle Bond" },
+		baseStats: {hp: 72, atk: 145, def: 67, spa: 153, spd: 71, spe: 132},
+		abilities: {0: "Battle Bond"},
 		heightm: 1.5,
 		weightkg: 40,
 		color: "Blue",
@@ -11284,8 +11284,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 659,
 		name: "Bunnelby",
 		types: ["Normal"],
-		baseStats: { hp: 38, atk: 36, def: 38, spa: 32, spd: 36, spe: 57 },
-		abilities: { 0: "Pickup", 1: "Cheek Pouch", H: "Huge Power" },
+		baseStats: {hp: 38, atk: 36, def: 38, spa: 32, spd: 36, spe: 57},
+		abilities: {0: "Pickup", 1: "Cheek Pouch", H: "Huge Power"},
 		heightm: 0.4,
 		weightkg: 5,
 		color: "Brown",
@@ -11296,8 +11296,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 660,
 		name: "Diggersby",
 		types: ["Normal", "Ground"],
-		baseStats: { hp: 85, atk: 56, def: 77, spa: 50, spd: 77, spe: 78 },
-		abilities: { 0: "Pickup", 1: "Cheek Pouch", H: "Huge Power" },
+		baseStats: {hp: 85, atk: 56, def: 77, spa: 50, spd: 77, spe: 78},
+		abilities: {0: "Pickup", 1: "Cheek Pouch", H: "Huge Power"},
 		heightm: 1,
 		weightkg: 42.4,
 		color: "Brown",
@@ -11309,8 +11309,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 661,
 		name: "Fletchling",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 45, atk: 50, def: 43, spa: 40, spd: 38, spe: 62 },
-		abilities: { 0: "Big Pecks", H: "Gale Wings" },
+		baseStats: {hp: 45, atk: 50, def: 43, spa: 40, spd: 38, spe: 62},
+		abilities: {0: "Big Pecks", H: "Gale Wings"},
 		heightm: 0.3,
 		weightkg: 1.7,
 		color: "Red",
@@ -11321,8 +11321,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 662,
 		name: "Fletchinder",
 		types: ["Fire", "Flying"],
-		baseStats: { hp: 62, atk: 73, def: 55, spa: 56, spd: 52, spe: 84 },
-		abilities: { 0: "Flame Body", H: "Gale Wings" },
+		baseStats: {hp: 62, atk: 73, def: 55, spa: 56, spd: 52, spe: 84},
+		abilities: {0: "Flame Body", H: "Gale Wings"},
 		heightm: 0.7,
 		weightkg: 16,
 		color: "Red",
@@ -11335,8 +11335,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 663,
 		name: "Talonflame",
 		types: ["Fire", "Flying"],
-		baseStats: { hp: 78, atk: 81, def: 71, spa: 74, spd: 69, spe: 126 },
-		abilities: { 0: "Flame Body", H: "Gale Wings" },
+		baseStats: {hp: 78, atk: 81, def: 71, spa: 74, spd: 69, spe: 126},
+		abilities: {0: "Flame Body", H: "Gale Wings"},
 		heightm: 1.2,
 		weightkg: 24.5,
 		color: "Red",
@@ -11348,8 +11348,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 664,
 		name: "Scatterbug",
 		types: ["Bug"],
-		baseStats: { hp: 38, atk: 35, def: 40, spa: 27, spd: 25, spe: 35 },
-		abilities: { 0: "Shield Dust", 1: "Compound Eyes", H: "Friend Guard" },
+		baseStats: {hp: 38, atk: 35, def: 40, spa: 27, spd: 25, spe: 35},
+		abilities: {0: "Shield Dust", 1: "Compound Eyes", H: "Friend Guard"},
 		heightm: 0.3,
 		weightkg: 2.5,
 		color: "Black",
@@ -11361,8 +11361,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 665,
 		name: "Spewpa",
 		types: ["Bug"],
-		baseStats: { hp: 45, atk: 22, def: 60, spa: 27, spd: 30, spe: 29 },
-		abilities: { 0: "Shed Skin", H: "Friend Guard" },
+		baseStats: {hp: 45, atk: 22, def: 60, spa: 27, spd: 30, spe: 29},
+		abilities: {0: "Shed Skin", H: "Friend Guard"},
 		heightm: 0.3,
 		weightkg: 8.4,
 		color: "Black",
@@ -11377,8 +11377,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Vivillon",
 		baseForme: "Meadow", // TODO: actual base forme is Icy Snow, not Meadow
 		types: ["Bug", "Flying"],
-		baseStats: { hp: 80, atk: 52, def: 50, spa: 90, spd: 50, spe: 89 },
-		abilities: { 0: "Shield Dust", 1: "Compound Eyes", H: "Friend Guard" },
+		baseStats: {hp: 80, atk: 52, def: 50, spa: 90, spd: 50, spe: 89},
+		abilities: {0: "Shield Dust", 1: "Compound Eyes", H: "Friend Guard"},
 		heightm: 1.2,
 		weightkg: 17,
 		color: "White",
@@ -11416,8 +11416,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Vivillon",
 		forme: "Fancy",
 		types: ["Bug", "Flying"],
-		baseStats: { hp: 80, atk: 52, def: 50, spa: 90, spd: 50, spe: 89 },
-		abilities: { 0: "Shield Dust", 1: "Compound Eyes" },
+		baseStats: {hp: 80, atk: 52, def: 50, spa: 90, spd: 50, spe: 89},
+		abilities: {0: "Shield Dust", 1: "Compound Eyes"},
 		heightm: 1.2,
 		weightkg: 17,
 		color: "Black",
@@ -11429,8 +11429,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Vivillon",
 		forme: "Pokeball",
 		types: ["Bug", "Flying"],
-		baseStats: { hp: 80, atk: 52, def: 50, spa: 90, spd: 50, spe: 89 },
-		abilities: { 0: "Shield Dust", 1: "Compound Eyes" },
+		baseStats: {hp: 80, atk: 52, def: 50, spa: 90, spd: 50, spe: 89},
+		abilities: {0: "Shield Dust", 1: "Compound Eyes"},
 		heightm: 1.2,
 		weightkg: 17,
 		color: "Black",
@@ -11440,9 +11440,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 667,
 		name: "Litleo",
 		types: ["Fire", "Normal"],
-		genderRatio: { M: 0.125, F: 0.875 },
-		baseStats: { hp: 62, atk: 50, def: 58, spa: 73, spd: 54, spe: 72 },
-		abilities: { 0: "Rivalry", 1: "Unnerve", H: "Moxie" },
+		genderRatio: {M: 0.125, F: 0.875},
+		baseStats: {hp: 62, atk: 50, def: 58, spa: 73, spd: 54, spe: 72},
+		abilities: {0: "Rivalry", 1: "Unnerve", H: "Moxie"},
 		heightm: 0.6,
 		weightkg: 13.5,
 		color: "Brown",
@@ -11453,9 +11453,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 668,
 		name: "Pyroar",
 		types: ["Fire", "Normal"],
-		genderRatio: { M: 0.125, F: 0.875 },
-		baseStats: { hp: 86, atk: 68, def: 72, spa: 109, spd: 66, spe: 106 },
-		abilities: { 0: "Rivalry", 1: "Unnerve", H: "Moxie" },
+		genderRatio: {M: 0.125, F: 0.875},
+		baseStats: {hp: 86, atk: 68, def: 72, spa: 109, spd: 66, spe: 106},
+		abilities: {0: "Rivalry", 1: "Unnerve", H: "Moxie"},
 		heightm: 1.5,
 		weightkg: 81.5,
 		color: "Brown",
@@ -11469,8 +11469,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Red",
 		types: ["Fairy"],
 		gender: "F",
-		baseStats: { hp: 44, atk: 38, def: 39, spa: 61, spd: 79, spe: 42 },
-		abilities: { 0: "Flower Veil", H: "Symbiosis" },
+		baseStats: {hp: 44, atk: 38, def: 39, spa: 61, spd: 79, spe: 42},
+		abilities: {0: "Flower Veil", H: "Symbiosis"},
 		heightm: 0.1,
 		weightkg: 0.1,
 		color: "White",
@@ -11485,8 +11485,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Red",
 		types: ["Fairy"],
 		gender: "F",
-		baseStats: { hp: 54, atk: 45, def: 47, spa: 75, spd: 98, spe: 52 },
-		abilities: { 0: "Flower Veil", H: "Symbiosis" },
+		baseStats: {hp: 54, atk: 45, def: 47, spa: 75, spd: 98, spe: 52},
+		abilities: {0: "Flower Veil", H: "Symbiosis"},
 		heightm: 0.2,
 		weightkg: 0.9,
 		color: "White",
@@ -11505,8 +11505,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Eternal",
 		types: ["Fairy"],
 		gender: "F",
-		baseStats: { hp: 74, atk: 65, def: 67, spa: 125, spd: 128, spe: 92 },
-		abilities: { 0: "Flower Veil" },
+		baseStats: {hp: 74, atk: 65, def: 67, spa: 125, spd: 128, spe: 92},
+		abilities: {0: "Flower Veil"},
 		heightm: 0.2,
 		weightkg: 0.9,
 		color: "White",
@@ -11518,8 +11518,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Red",
 		types: ["Fairy"],
 		gender: "F",
-		baseStats: { hp: 78, atk: 65, def: 68, spa: 112, spd: 154, spe: 75 },
-		abilities: { 0: "Flower Veil", H: "Symbiosis" },
+		baseStats: {hp: 78, atk: 65, def: 68, spa: 112, spd: 154, spe: 75},
+		abilities: {0: "Flower Veil", H: "Symbiosis"},
 		heightm: 1.1,
 		weightkg: 10,
 		color: "White",
@@ -11534,8 +11534,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 672,
 		name: "Skiddo",
 		types: ["Grass"],
-		baseStats: { hp: 66, atk: 65, def: 48, spa: 62, spd: 57, spe: 52 },
-		abilities: { 0: "Sap Sipper", H: "Grass Pelt" },
+		baseStats: {hp: 66, atk: 65, def: 48, spa: 62, spd: 57, spe: 52},
+		abilities: {0: "Sap Sipper", H: "Grass Pelt"},
 		heightm: 0.9,
 		weightkg: 31,
 		color: "Brown",
@@ -11546,8 +11546,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 673,
 		name: "Gogoat",
 		types: ["Grass"],
-		baseStats: { hp: 123, atk: 100, def: 62, spa: 97, spd: 81, spe: 68 },
-		abilities: { 0: "Sap Sipper", H: "Grass Pelt" },
+		baseStats: {hp: 123, atk: 100, def: 62, spa: 97, spd: 81, spe: 68},
+		abilities: {0: "Sap Sipper", H: "Grass Pelt"},
 		heightm: 1.7,
 		weightkg: 91,
 		color: "Brown",
@@ -11559,8 +11559,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 674,
 		name: "Pancham",
 		types: ["Fighting"],
-		baseStats: { hp: 67, atk: 82, def: 62, spa: 46, spd: 48, spe: 43 },
-		abilities: { 0: "Iron Fist", 1: "Mold Breaker", H: "Scrappy" },
+		baseStats: {hp: 67, atk: 82, def: 62, spa: 46, spd: 48, spe: 43},
+		abilities: {0: "Iron Fist", 1: "Mold Breaker", H: "Scrappy"},
 		heightm: 0.6,
 		weightkg: 8,
 		color: "White",
@@ -11571,8 +11571,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 675,
 		name: "Pangoro",
 		types: ["Fighting", "Dark"],
-		baseStats: { hp: 95, atk: 124, def: 78, spa: 69, spd: 71, spe: 58 },
-		abilities: { 0: "Iron Fist", 1: "Mold Breaker", H: "Scrappy" },
+		baseStats: {hp: 95, atk: 124, def: 78, spa: 69, spd: 71, spe: 58},
+		abilities: {0: "Iron Fist", 1: "Mold Breaker", H: "Scrappy"},
 		heightm: 2.1,
 		weightkg: 136,
 		color: "White",
@@ -11586,8 +11586,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Furfrou",
 		baseForme: "Natural",
 		types: ["Normal"],
-		baseStats: { hp: 75, atk: 80, def: 60, spa: 65, spd: 90, spe: 102 },
-		abilities: { 0: "Fur Coat" },
+		baseStats: {hp: 75, atk: 80, def: 60, spa: 65, spd: 90, spe: 102},
+		abilities: {0: "Fur Coat"},
 		heightm: 1.2,
 		weightkg: 28,
 		color: "White",
@@ -11610,8 +11610,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 677,
 		name: "Espurr",
 		types: ["Psychic"],
-		baseStats: { hp: 62, atk: 48, def: 54, spa: 63, spd: 60, spe: 68 },
-		abilities: { 0: "Keen Eye", 1: "Infiltrator", H: "Own Tempo" },
+		baseStats: {hp: 62, atk: 48, def: 54, spa: 63, spd: 60, spe: 68},
+		abilities: {0: "Keen Eye", 1: "Infiltrator", H: "Own Tempo"},
 		heightm: 0.3,
 		weightkg: 3.5,
 		color: "Gray",
@@ -11624,8 +11624,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "M",
 		types: ["Psychic"],
 		gender: "M",
-		baseStats: { hp: 74, atk: 48, def: 76, spa: 83, spd: 81, spe: 104 },
-		abilities: { 0: "Keen Eye", 1: "Infiltrator", H: "Prankster" },
+		baseStats: {hp: 74, atk: 48, def: 76, spa: 83, spd: 81, spe: 104},
+		abilities: {0: "Keen Eye", 1: "Infiltrator", H: "Prankster"},
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Blue",
@@ -11642,8 +11642,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "F",
 		types: ["Psychic"],
 		gender: "F",
-		baseStats: { hp: 74, atk: 48, def: 76, spa: 83, spd: 81, spe: 104 },
-		abilities: { 0: "Keen Eye", 1: "Infiltrator", H: "Competitive" },
+		baseStats: {hp: 74, atk: 48, def: 76, spa: 83, spd: 81, spe: 104},
+		abilities: {0: "Keen Eye", 1: "Infiltrator", H: "Competitive"},
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "White",
@@ -11655,8 +11655,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 679,
 		name: "Honedge",
 		types: ["Steel", "Ghost"],
-		baseStats: { hp: 45, atk: 80, def: 100, spa: 35, spd: 37, spe: 28 },
-		abilities: { 0: "No Guard" },
+		baseStats: {hp: 45, atk: 80, def: 100, spa: 35, spd: 37, spe: 28},
+		abilities: {0: "No Guard"},
 		heightm: 0.8,
 		weightkg: 2,
 		color: "Brown",
@@ -11667,8 +11667,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 680,
 		name: "Doublade",
 		types: ["Steel", "Ghost"],
-		baseStats: { hp: 59, atk: 110, def: 150, spa: 45, spd: 49, spe: 35 },
-		abilities: { 0: "No Guard" },
+		baseStats: {hp: 59, atk: 110, def: 150, spa: 45, spd: 49, spe: 35},
+		abilities: {0: "No Guard"},
 		heightm: 0.8,
 		weightkg: 4.5,
 		color: "Brown",
@@ -11682,8 +11682,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Aegislash",
 		baseForme: "Shield",
 		types: ["Steel", "Ghost"],
-		baseStats: { hp: 60, atk: 50, def: 140, spa: 50, spd: 140, spe: 60 },
-		abilities: { 0: "Stance Change" },
+		baseStats: {hp: 60, atk: 50, def: 140, spa: 50, spd: 140, spe: 60},
+		abilities: {0: "Stance Change"},
 		heightm: 1.7,
 		weightkg: 53,
 		color: "Brown",
@@ -11700,8 +11700,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Aegislash",
 		forme: "Blade",
 		types: ["Steel", "Ghost"],
-		baseStats: { hp: 60, atk: 140, def: 50, spa: 140, spd: 50, spe: 60 },
-		abilities: { 0: "Stance Change" },
+		baseStats: {hp: 60, atk: 140, def: 50, spa: 140, spd: 50, spe: 60},
+		abilities: {0: "Stance Change"},
 		heightm: 1.7,
 		weightkg: 53,
 		color: "Brown",
@@ -11713,8 +11713,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 682,
 		name: "Spritzee",
 		types: ["Fairy"],
-		baseStats: { hp: 78, atk: 52, def: 60, spa: 63, spd: 65, spe: 23 },
-		abilities: { 0: "Healer", H: "Aroma Veil" },
+		baseStats: {hp: 78, atk: 52, def: 60, spa: 63, spd: 65, spe: 23},
+		abilities: {0: "Healer", H: "Aroma Veil"},
 		heightm: 0.2,
 		weightkg: 0.5,
 		color: "Pink",
@@ -11725,8 +11725,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 683,
 		name: "Aromatisse",
 		types: ["Fairy"],
-		baseStats: { hp: 101, atk: 72, def: 72, spa: 99, spd: 89, spe: 29 },
-		abilities: { 0: "Healer", H: "Aroma Veil" },
+		baseStats: {hp: 101, atk: 72, def: 72, spa: 99, spd: 89, spe: 29},
+		abilities: {0: "Healer", H: "Aroma Veil"},
 		heightm: 0.8,
 		weightkg: 15.5,
 		color: "Pink",
@@ -11739,8 +11739,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 684,
 		name: "Swirlix",
 		types: ["Fairy"],
-		baseStats: { hp: 62, atk: 48, def: 66, spa: 59, spd: 57, spe: 49 },
-		abilities: { 0: "Sweet Veil", H: "Unburden" },
+		baseStats: {hp: 62, atk: 48, def: 66, spa: 59, spd: 57, spe: 49},
+		abilities: {0: "Sweet Veil", H: "Unburden"},
 		heightm: 0.4,
 		weightkg: 3.5,
 		color: "White",
@@ -11751,8 +11751,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 685,
 		name: "Slurpuff",
 		types: ["Fairy"],
-		baseStats: { hp: 82, atk: 80, def: 86, spa: 85, spd: 75, spe: 72 },
-		abilities: { 0: "Sweet Veil", H: "Unburden" },
+		baseStats: {hp: 82, atk: 80, def: 86, spa: 85, spd: 75, spe: 72},
+		abilities: {0: "Sweet Veil", H: "Unburden"},
 		heightm: 0.8,
 		weightkg: 5,
 		color: "White",
@@ -11765,8 +11765,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 686,
 		name: "Inkay",
 		types: ["Dark", "Psychic"],
-		baseStats: { hp: 53, atk: 54, def: 53, spa: 37, spd: 46, spe: 45 },
-		abilities: { 0: "Contrary", 1: "Suction Cups", H: "Infiltrator" },
+		baseStats: {hp: 53, atk: 54, def: 53, spa: 37, spd: 46, spe: 45},
+		abilities: {0: "Contrary", 1: "Suction Cups", H: "Infiltrator"},
 		heightm: 0.4,
 		weightkg: 3.5,
 		color: "Blue",
@@ -11777,8 +11777,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 687,
 		name: "Malamar",
 		types: ["Dark", "Psychic"],
-		baseStats: { hp: 86, atk: 92, def: 88, spa: 68, spd: 75, spe: 73 },
-		abilities: { 0: "Contrary", 1: "Suction Cups", H: "Infiltrator" },
+		baseStats: {hp: 86, atk: 92, def: 88, spa: 68, spd: 75, spe: 73},
+		abilities: {0: "Contrary", 1: "Suction Cups", H: "Infiltrator"},
 		heightm: 1.5,
 		weightkg: 47,
 		color: "Blue",
@@ -11791,8 +11791,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 688,
 		name: "Binacle",
 		types: ["Rock", "Water"],
-		baseStats: { hp: 42, atk: 52, def: 67, spa: 39, spd: 56, spe: 50 },
-		abilities: { 0: "Tough Claws", 1: "Sniper", H: "Pickpocket" },
+		baseStats: {hp: 42, atk: 52, def: 67, spa: 39, spd: 56, spe: 50},
+		abilities: {0: "Tough Claws", 1: "Sniper", H: "Pickpocket"},
 		heightm: 0.5,
 		weightkg: 31,
 		color: "Brown",
@@ -11803,8 +11803,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 689,
 		name: "Barbaracle",
 		types: ["Rock", "Water"],
-		baseStats: { hp: 72, atk: 105, def: 115, spa: 54, spd: 86, spe: 68 },
-		abilities: { 0: "Tough Claws", 1: "Sniper", H: "Pickpocket" },
+		baseStats: {hp: 72, atk: 105, def: 115, spa: 54, spd: 86, spe: 68},
+		abilities: {0: "Tough Claws", 1: "Sniper", H: "Pickpocket"},
 		heightm: 1.3,
 		weightkg: 96,
 		color: "Brown",
@@ -11816,8 +11816,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 690,
 		name: "Skrelp",
 		types: ["Poison", "Water"],
-		baseStats: { hp: 50, atk: 60, def: 60, spa: 60, spd: 60, spe: 30 },
-		abilities: { 0: "Poison Point", 1: "Poison Touch", H: "Adaptability" },
+		baseStats: {hp: 50, atk: 60, def: 60, spa: 60, spd: 60, spe: 30},
+		abilities: {0: "Poison Point", 1: "Poison Touch", H: "Adaptability"},
 		heightm: 0.5,
 		weightkg: 7.3,
 		color: "Brown",
@@ -11828,8 +11828,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 691,
 		name: "Dragalge",
 		types: ["Poison", "Dragon"],
-		baseStats: { hp: 65, atk: 75, def: 90, spa: 97, spd: 123, spe: 44 },
-		abilities: { 0: "Poison Point", 1: "Poison Touch", H: "Adaptability" },
+		baseStats: {hp: 65, atk: 75, def: 90, spa: 97, spd: 123, spe: 44},
+		abilities: {0: "Poison Point", 1: "Poison Touch", H: "Adaptability"},
 		heightm: 1.8,
 		weightkg: 81.5,
 		color: "Brown",
@@ -11841,8 +11841,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 692,
 		name: "Clauncher",
 		types: ["Water"],
-		baseStats: { hp: 50, atk: 53, def: 62, spa: 58, spd: 63, spe: 44 },
-		abilities: { 0: "Mega Launcher" },
+		baseStats: {hp: 50, atk: 53, def: 62, spa: 58, spd: 63, spe: 44},
+		abilities: {0: "Mega Launcher"},
 		heightm: 0.5,
 		weightkg: 8.3,
 		color: "Blue",
@@ -11853,8 +11853,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 693,
 		name: "Clawitzer",
 		types: ["Water"],
-		baseStats: { hp: 71, atk: 73, def: 88, spa: 120, spd: 89, spe: 59 },
-		abilities: { 0: "Mega Launcher" },
+		baseStats: {hp: 71, atk: 73, def: 88, spa: 120, spd: 89, spe: 59},
+		abilities: {0: "Mega Launcher"},
 		heightm: 1.3,
 		weightkg: 35.3,
 		color: "Blue",
@@ -11866,8 +11866,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 694,
 		name: "Helioptile",
 		types: ["Electric", "Normal"],
-		baseStats: { hp: 44, atk: 38, def: 33, spa: 61, spd: 43, spe: 70 },
-		abilities: { 0: "Dry Skin", 1: "Sand Veil", H: "Solar Power" },
+		baseStats: {hp: 44, atk: 38, def: 33, spa: 61, spd: 43, spe: 70},
+		abilities: {0: "Dry Skin", 1: "Sand Veil", H: "Solar Power"},
 		heightm: 0.5,
 		weightkg: 6,
 		color: "Yellow",
@@ -11878,8 +11878,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 695,
 		name: "Heliolisk",
 		types: ["Electric", "Normal"],
-		baseStats: { hp: 62, atk: 55, def: 52, spa: 109, spd: 94, spe: 109 },
-		abilities: { 0: "Dry Skin", 1: "Sand Veil", H: "Solar Power" },
+		baseStats: {hp: 62, atk: 55, def: 52, spa: 109, spd: 94, spe: 109},
+		abilities: {0: "Dry Skin", 1: "Sand Veil", H: "Solar Power"},
 		heightm: 1,
 		weightkg: 21,
 		color: "Yellow",
@@ -11892,9 +11892,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 696,
 		name: "Tyrunt",
 		types: ["Rock", "Dragon"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 58, atk: 89, def: 77, spa: 45, spd: 45, spe: 48 },
-		abilities: { 0: "Strong Jaw", H: "Sturdy" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 58, atk: 89, def: 77, spa: 45, spd: 45, spe: 48},
+		abilities: {0: "Strong Jaw", H: "Sturdy"},
 		heightm: 0.8,
 		weightkg: 26,
 		color: "Brown",
@@ -11905,9 +11905,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 697,
 		name: "Tyrantrum",
 		types: ["Rock", "Dragon"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 82, atk: 121, def: 119, spa: 69, spd: 59, spe: 71 },
-		abilities: { 0: "Strong Jaw", H: "Rock Head" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 82, atk: 121, def: 119, spa: 69, spd: 59, spe: 71},
+		abilities: {0: "Strong Jaw", H: "Rock Head"},
 		heightm: 2.5,
 		weightkg: 270,
 		color: "Red",
@@ -11919,9 +11919,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 698,
 		name: "Amaura",
 		types: ["Rock", "Ice"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 77, atk: 59, def: 50, spa: 67, spd: 63, spe: 46 },
-		abilities: { 0: "Refrigerate", H: "Snow Warning" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 77, atk: 59, def: 50, spa: 67, spd: 63, spe: 46},
+		abilities: {0: "Refrigerate", H: "Snow Warning"},
 		heightm: 1.3,
 		weightkg: 25.2,
 		color: "Blue",
@@ -11932,9 +11932,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 699,
 		name: "Aurorus",
 		types: ["Rock", "Ice"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 123, atk: 77, def: 72, spa: 99, spd: 92, spe: 58 },
-		abilities: { 0: "Refrigerate", H: "Snow Warning" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 123, atk: 77, def: 72, spa: 99, spd: 92, spe: 58},
+		abilities: {0: "Refrigerate", H: "Snow Warning"},
 		heightm: 2.7,
 		weightkg: 225,
 		color: "Blue",
@@ -11946,9 +11946,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 700,
 		name: "Sylveon",
 		types: ["Fairy"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 95, atk: 65, def: 65, spa: 110, spd: 130, spe: 60 },
-		abilities: { 0: "Cute Charm", H: "Pixilate" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 95, atk: 65, def: 65, spa: 110, spd: 130, spe: 60},
+		abilities: {0: "Cute Charm", H: "Pixilate"},
 		heightm: 1,
 		weightkg: 23.5,
 		color: "Pink",
@@ -11961,8 +11961,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 701,
 		name: "Hawlucha",
 		types: ["Fighting", "Flying"],
-		baseStats: { hp: 78, atk: 92, def: 75, spa: 74, spd: 63, spe: 118 },
-		abilities: { 0: "Limber", 1: "Unburden", H: "Mold Breaker" },
+		baseStats: {hp: 78, atk: 92, def: 75, spa: 74, spd: 63, spe: 118},
+		abilities: {0: "Limber", 1: "Unburden", H: "Mold Breaker"},
 		heightm: 0.8,
 		weightkg: 21.5,
 		color: "Green",
@@ -11972,8 +11972,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 702,
 		name: "Dedenne",
 		types: ["Electric", "Fairy"],
-		baseStats: { hp: 67, atk: 58, def: 57, spa: 81, spd: 67, spe: 101 },
-		abilities: { 0: "Cheek Pouch", 1: "Pickup", H: "Plus" },
+		baseStats: {hp: 67, atk: 58, def: 57, spa: 81, spd: 67, spe: 101},
+		abilities: {0: "Cheek Pouch", 1: "Pickup", H: "Plus"},
 		heightm: 0.2,
 		weightkg: 2.2,
 		color: "Yellow",
@@ -11984,8 +11984,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Carbink",
 		types: ["Rock", "Fairy"],
 		gender: "N",
-		baseStats: { hp: 50, atk: 50, def: 150, spa: 50, spd: 150, spe: 50 },
-		abilities: { 0: "Clear Body", H: "Sturdy" },
+		baseStats: {hp: 50, atk: 50, def: 150, spa: 50, spd: 150, spe: 50},
+		abilities: {0: "Clear Body", H: "Sturdy"},
 		heightm: 0.3,
 		weightkg: 5.7,
 		color: "Gray",
@@ -11995,8 +11995,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 704,
 		name: "Goomy",
 		types: ["Dragon"],
-		baseStats: { hp: 45, atk: 50, def: 35, spa: 55, spd: 75, spe: 40 },
-		abilities: { 0: "Sap Sipper", 1: "Hydration", H: "Gooey" },
+		baseStats: {hp: 45, atk: 50, def: 35, spa: 55, spd: 75, spe: 40},
+		abilities: {0: "Sap Sipper", 1: "Hydration", H: "Gooey"},
 		heightm: 0.3,
 		weightkg: 2.8,
 		color: "Purple",
@@ -12007,8 +12007,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 705,
 		name: "Sliggoo",
 		types: ["Dragon"],
-		baseStats: { hp: 68, atk: 75, def: 53, spa: 83, spd: 113, spe: 60 },
-		abilities: { 0: "Sap Sipper", 1: "Hydration", H: "Gooey" },
+		baseStats: {hp: 68, atk: 75, def: 53, spa: 83, spd: 113, spe: 60},
+		abilities: {0: "Sap Sipper", 1: "Hydration", H: "Gooey"},
 		heightm: 0.8,
 		weightkg: 17.5,
 		color: "Purple",
@@ -12021,8 +12021,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 706,
 		name: "Goodra",
 		types: ["Dragon"],
-		baseStats: { hp: 90, atk: 100, def: 70, spa: 110, spd: 150, spe: 80 },
-		abilities: { 0: "Sap Sipper", 1: "Hydration", H: "Gooey" },
+		baseStats: {hp: 90, atk: 100, def: 70, spa: 110, spd: 150, spe: 80},
+		abilities: {0: "Sap Sipper", 1: "Hydration", H: "Gooey"},
 		heightm: 2,
 		weightkg: 150.5,
 		color: "Purple",
@@ -12034,8 +12034,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 707,
 		name: "Klefki",
 		types: ["Steel", "Fairy"],
-		baseStats: { hp: 57, atk: 80, def: 91, spa: 80, spd: 87, spe: 75 },
-		abilities: { 0: "Prankster", H: "Magician" },
+		baseStats: {hp: 57, atk: 80, def: 91, spa: 80, spd: 87, spe: 75},
+		abilities: {0: "Prankster", H: "Magician"},
 		heightm: 0.2,
 		weightkg: 3,
 		color: "Gray",
@@ -12045,8 +12045,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 708,
 		name: "Phantump",
 		types: ["Ghost", "Grass"],
-		baseStats: { hp: 43, atk: 70, def: 48, spa: 50, spd: 60, spe: 38 },
-		abilities: { 0: "Natural Cure", 1: "Frisk", H: "Harvest" },
+		baseStats: {hp: 43, atk: 70, def: 48, spa: 50, spd: 60, spe: 38},
+		abilities: {0: "Natural Cure", 1: "Frisk", H: "Harvest"},
 		heightm: 0.4,
 		weightkg: 7,
 		color: "Brown",
@@ -12057,8 +12057,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 709,
 		name: "Trevenant",
 		types: ["Ghost", "Grass"],
-		baseStats: { hp: 85, atk: 110, def: 76, spa: 65, spd: 82, spe: 56 },
-		abilities: { 0: "Natural Cure", 1: "Frisk", H: "Harvest" },
+		baseStats: {hp: 85, atk: 110, def: 76, spa: 65, spd: 82, spe: 56},
+		abilities: {0: "Natural Cure", 1: "Frisk", H: "Harvest"},
 		heightm: 1.5,
 		weightkg: 71,
 		color: "Brown",
@@ -12071,8 +12071,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Pumpkaboo",
 		baseForme: "Average",
 		types: ["Ghost", "Grass"],
-		baseStats: { hp: 49, atk: 66, def: 70, spa: 44, spd: 55, spe: 51 },
-		abilities: { 0: "Pickup", 1: "Frisk", H: "Insomnia" },
+		baseStats: {hp: 49, atk: 66, def: 70, spa: 44, spd: 55, spe: 51},
+		abilities: {0: "Pickup", 1: "Frisk", H: "Insomnia"},
 		heightm: 0.4,
 		weightkg: 5,
 		color: "Brown",
@@ -12087,8 +12087,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Pumpkaboo",
 		forme: "Small",
 		types: ["Ghost", "Grass"],
-		baseStats: { hp: 44, atk: 66, def: 70, spa: 44, spd: 55, spe: 56 },
-		abilities: { 0: "Pickup", 1: "Frisk", H: "Insomnia" },
+		baseStats: {hp: 44, atk: 66, def: 70, spa: 44, spd: 55, spe: 56},
+		abilities: {0: "Pickup", 1: "Frisk", H: "Insomnia"},
 		heightm: 0.3,
 		weightkg: 3.5,
 		color: "Brown",
@@ -12101,8 +12101,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Pumpkaboo",
 		forme: "Large",
 		types: ["Ghost", "Grass"],
-		baseStats: { hp: 54, atk: 66, def: 70, spa: 44, spd: 55, spe: 46 },
-		abilities: { 0: "Pickup", 1: "Frisk", H: "Insomnia" },
+		baseStats: {hp: 54, atk: 66, def: 70, spa: 44, spd: 55, spe: 46},
+		abilities: {0: "Pickup", 1: "Frisk", H: "Insomnia"},
 		heightm: 0.5,
 		weightkg: 7.5,
 		color: "Brown",
@@ -12115,8 +12115,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Pumpkaboo",
 		forme: "Super",
 		types: ["Ghost", "Grass"],
-		baseStats: { hp: 59, atk: 66, def: 70, spa: 44, spd: 55, spe: 41 },
-		abilities: { 0: "Pickup", 1: "Frisk", H: "Insomnia" },
+		baseStats: {hp: 59, atk: 66, def: 70, spa: 44, spd: 55, spe: 41},
+		abilities: {0: "Pickup", 1: "Frisk", H: "Insomnia"},
 		heightm: 0.8,
 		weightkg: 15,
 		color: "Brown",
@@ -12128,8 +12128,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Gourgeist",
 		baseForme: "Average",
 		types: ["Ghost", "Grass"],
-		baseStats: { hp: 65, atk: 90, def: 122, spa: 58, spd: 75, spe: 84 },
-		abilities: { 0: "Pickup", 1: "Frisk", H: "Insomnia" },
+		baseStats: {hp: 65, atk: 90, def: 122, spa: 58, spd: 75, spe: 84},
+		abilities: {0: "Pickup", 1: "Frisk", H: "Insomnia"},
 		heightm: 0.9,
 		weightkg: 12.5,
 		color: "Brown",
@@ -12145,8 +12145,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Gourgeist",
 		forme: "Small",
 		types: ["Ghost", "Grass"],
-		baseStats: { hp: 55, atk: 85, def: 122, spa: 58, spd: 75, spe: 99 },
-		abilities: { 0: "Pickup", 1: "Frisk", H: "Insomnia" },
+		baseStats: {hp: 55, atk: 85, def: 122, spa: 58, spd: 75, spe: 99},
+		abilities: {0: "Pickup", 1: "Frisk", H: "Insomnia"},
 		heightm: 0.7,
 		weightkg: 9.5,
 		color: "Brown",
@@ -12160,8 +12160,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Gourgeist",
 		forme: "Large",
 		types: ["Ghost", "Grass"],
-		baseStats: { hp: 75, atk: 95, def: 122, spa: 58, spd: 75, spe: 69 },
-		abilities: { 0: "Pickup", 1: "Frisk", H: "Insomnia" },
+		baseStats: {hp: 75, atk: 95, def: 122, spa: 58, spd: 75, spe: 69},
+		abilities: {0: "Pickup", 1: "Frisk", H: "Insomnia"},
 		heightm: 1.1,
 		weightkg: 14,
 		color: "Brown",
@@ -12175,8 +12175,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Gourgeist",
 		forme: "Super",
 		types: ["Ghost", "Grass"],
-		baseStats: { hp: 85, atk: 100, def: 122, spa: 58, spd: 75, spe: 54 },
-		abilities: { 0: "Pickup", 1: "Frisk", H: "Insomnia" },
+		baseStats: {hp: 85, atk: 100, def: 122, spa: 58, spd: 75, spe: 54},
+		abilities: {0: "Pickup", 1: "Frisk", H: "Insomnia"},
 		heightm: 1.7,
 		weightkg: 39,
 		color: "Brown",
@@ -12188,8 +12188,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 712,
 		name: "Bergmite",
 		types: ["Ice"],
-		baseStats: { hp: 55, atk: 69, def: 85, spa: 32, spd: 35, spe: 28 },
-		abilities: { 0: "Own Tempo", 1: "Ice Body", H: "Sturdy" },
+		baseStats: {hp: 55, atk: 69, def: 85, spa: 32, spd: 35, spe: 28},
+		abilities: {0: "Own Tempo", 1: "Ice Body", H: "Sturdy"},
 		heightm: 1,
 		weightkg: 99.5,
 		color: "Blue",
@@ -12200,8 +12200,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 713,
 		name: "Avalugg",
 		types: ["Ice"],
-		baseStats: { hp: 95, atk: 117, def: 184, spa: 44, spd: 46, spe: 28 },
-		abilities: { 0: "Own Tempo", 1: "Ice Body", H: "Sturdy" },
+		baseStats: {hp: 95, atk: 117, def: 184, spa: 44, spd: 46, spe: 28},
+		abilities: {0: "Own Tempo", 1: "Ice Body", H: "Sturdy"},
 		heightm: 2,
 		weightkg: 505,
 		color: "Blue",
@@ -12213,8 +12213,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 714,
 		name: "Noibat",
 		types: ["Flying", "Dragon"],
-		baseStats: { hp: 40, atk: 30, def: 35, spa: 45, spd: 40, spe: 55 },
-		abilities: { 0: "Frisk", 1: "Infiltrator", H: "Telepathy" },
+		baseStats: {hp: 40, atk: 30, def: 35, spa: 45, spd: 40, spe: 55},
+		abilities: {0: "Frisk", 1: "Infiltrator", H: "Telepathy"},
 		heightm: 0.5,
 		weightkg: 8,
 		color: "Purple",
@@ -12225,8 +12225,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 715,
 		name: "Noivern",
 		types: ["Flying", "Dragon"],
-		baseStats: { hp: 85, atk: 70, def: 80, spa: 97, spd: 80, spe: 123 },
-		abilities: { 0: "Frisk", 1: "Infiltrator", H: "Telepathy" },
+		baseStats: {hp: 85, atk: 70, def: 80, spa: 97, spd: 80, spe: 123},
+		abilities: {0: "Frisk", 1: "Infiltrator", H: "Telepathy"},
 		heightm: 1.5,
 		weightkg: 85,
 		color: "Purple",
@@ -12240,8 +12240,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Active", // Neutral is technically the base, but it can't be used in battle
 		types: ["Fairy"],
 		gender: "N",
-		baseStats: { hp: 126, atk: 131, def: 95, spa: 131, spd: 98, spe: 99 },
-		abilities: { 0: "Fairy Aura" },
+		baseStats: {hp: 126, atk: 131, def: 95, spa: 131, spd: 98, spe: 99},
+		abilities: {0: "Fairy Aura"},
 		heightm: 3,
 		weightkg: 215,
 		color: "Blue",
@@ -12256,8 +12256,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Neutral",
 		types: ["Fairy"],
 		gender: "N",
-		baseStats: { hp: 126, atk: 131, def: 95, spa: 131, spd: 98, spe: 99 },
-		abilities: { 0: "Fairy Aura" },
+		baseStats: {hp: 126, atk: 131, def: 95, spa: 131, spd: 98, spe: 99},
+		abilities: {0: "Fairy Aura"},
 		heightm: 3,
 		weightkg: 215,
 		color: "Blue",
@@ -12268,8 +12268,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Yveltal",
 		types: ["Dark", "Flying"],
 		gender: "N",
-		baseStats: { hp: 126, atk: 131, def: 95, spa: 131, spd: 98, spe: 99 },
-		abilities: { 0: "Dark Aura" },
+		baseStats: {hp: 126, atk: 131, def: 95, spa: 131, spd: 98, spe: 99},
+		abilities: {0: "Dark Aura"},
 		heightm: 5.8,
 		weightkg: 203,
 		color: "Red",
@@ -12281,8 +12281,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "50%",
 		types: ["Dragon", "Ground"],
 		gender: "N",
-		baseStats: { hp: 108, atk: 100, def: 121, spa: 81, spd: 95, spe: 95 },
-		abilities: { 0: "Aura Break", S: "Power Construct" },
+		baseStats: {hp: 108, atk: 100, def: 121, spa: 81, spd: 95, spe: 95},
+		abilities: {0: "Aura Break", S: "Power Construct"},
 		heightm: 5,
 		weightkg: 305,
 		color: "Green",
@@ -12298,8 +12298,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "10%",
 		types: ["Dragon", "Ground"],
 		gender: "N",
-		baseStats: { hp: 54, atk: 100, def: 71, spa: 61, spd: 85, spe: 115 },
-		abilities: { 0: "Aura Break", S: "Power Construct" },
+		baseStats: {hp: 54, atk: 100, def: 71, spa: 61, spd: 85, spe: 115},
+		abilities: {0: "Aura Break", S: "Power Construct"},
 		heightm: 1.2,
 		weightkg: 33.5,
 		color: "Black",
@@ -12314,8 +12314,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Complete",
 		types: ["Dragon", "Ground"],
 		gender: "N",
-		baseStats: { hp: 216, atk: 100, def: 121, spa: 91, spd: 95, spe: 85 },
-		abilities: { 0: "Power Construct" },
+		baseStats: {hp: 216, atk: 100, def: 121, spa: 91, spd: 95, spe: 85},
+		abilities: {0: "Power Construct"},
 		heightm: 4.5,
 		weightkg: 610,
 		color: "Black",
@@ -12329,8 +12329,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Diancie",
 		types: ["Rock", "Fairy"],
 		gender: "N",
-		baseStats: { hp: 50, atk: 100, def: 150, spa: 100, spd: 150, spe: 50 },
-		abilities: { 0: "Clear Body" },
+		baseStats: {hp: 50, atk: 100, def: 150, spa: 100, spd: 150, spe: 50},
+		abilities: {0: "Clear Body"},
 		heightm: 0.7,
 		weightkg: 8.8,
 		color: "Pink",
@@ -12345,8 +12345,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Mega",
 		types: ["Rock", "Fairy"],
 		gender: "N",
-		baseStats: { hp: 50, atk: 160, def: 110, spa: 160, spd: 110, spe: 110 },
-		abilities: { 0: "Magic Bounce" },
+		baseStats: {hp: 50, atk: 160, def: 110, spa: 160, spd: 110, spe: 110},
+		abilities: {0: "Magic Bounce"},
 		heightm: 1.1,
 		weightkg: 27.8,
 		color: "Pink",
@@ -12359,8 +12359,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Confined",
 		types: ["Psychic", "Ghost"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 110, def: 60, spa: 150, spd: 130, spe: 70 },
-		abilities: { 0: "Magician" },
+		baseStats: {hp: 80, atk: 110, def: 60, spa: 150, spd: 130, spe: 70},
+		abilities: {0: "Magician"},
 		heightm: 0.5,
 		weightkg: 9,
 		color: "Purple",
@@ -12375,8 +12375,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Unbound",
 		types: ["Psychic", "Dark"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 160, def: 60, spa: 170, spd: 130, spe: 80 },
-		abilities: { 0: "Magician" },
+		baseStats: {hp: 80, atk: 160, def: 60, spa: 170, spd: 130, spe: 80},
+		abilities: {0: "Magician"},
 		heightm: 6.5,
 		weightkg: 490,
 		color: "Purple",
@@ -12388,8 +12388,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Volcanion",
 		types: ["Fire", "Water"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 110, def: 120, spa: 130, spd: 90, spe: 70 },
-		abilities: { 0: "Water Absorb" },
+		baseStats: {hp: 80, atk: 110, def: 120, spa: 130, spd: 90, spe: 70},
+		abilities: {0: "Water Absorb"},
 		heightm: 1.7,
 		weightkg: 195,
 		color: "Brown",
@@ -12399,9 +12399,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 722,
 		name: "Rowlet",
 		types: ["Grass", "Flying"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 68, atk: 55, def: 55, spa: 50, spd: 50, spe: 42 },
-		abilities: { 0: "Overgrow", H: "Long Reach" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 68, atk: 55, def: 55, spa: 50, spd: 50, spe: 42},
+		abilities: {0: "Overgrow", H: "Long Reach"},
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "Brown",
@@ -12412,9 +12412,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 723,
 		name: "Dartrix",
 		types: ["Grass", "Flying"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 78, atk: 75, def: 75, spa: 70, spd: 70, spe: 52 },
-		abilities: { 0: "Overgrow", H: "Long Reach" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 78, atk: 75, def: 75, spa: 70, spd: 70, spe: 52},
+		abilities: {0: "Overgrow", H: "Long Reach"},
 		heightm: 0.7,
 		weightkg: 16,
 		color: "Brown",
@@ -12427,9 +12427,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 724,
 		name: "Decidueye",
 		types: ["Grass", "Ghost"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 78, atk: 107, def: 75, spa: 100, spd: 100, spe: 70 },
-		abilities: { 0: "Overgrow", H: "Long Reach" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 78, atk: 107, def: 75, spa: 100, spd: 100, spe: 70},
+		abilities: {0: "Overgrow", H: "Long Reach"},
 		heightm: 1.6,
 		weightkg: 36.6,
 		color: "Brown",
@@ -12441,9 +12441,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 725,
 		name: "Litten",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 45, atk: 65, def: 40, spa: 60, spd: 40, spe: 70 },
-		abilities: { 0: "Blaze", H: "Intimidate" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 45, atk: 65, def: 40, spa: 60, spd: 40, spe: 70},
+		abilities: {0: "Blaze", H: "Intimidate"},
 		heightm: 0.4,
 		weightkg: 4.3,
 		color: "Red",
@@ -12454,9 +12454,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 726,
 		name: "Torracat",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 65, atk: 85, def: 50, spa: 80, spd: 50, spe: 90 },
-		abilities: { 0: "Blaze", H: "Intimidate" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 65, atk: 85, def: 50, spa: 80, spd: 50, spe: 90},
+		abilities: {0: "Blaze", H: "Intimidate"},
 		heightm: 0.7,
 		weightkg: 25,
 		color: "Red",
@@ -12469,9 +12469,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 727,
 		name: "Incineroar",
 		types: ["Fire", "Dark"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 95, atk: 115, def: 90, spa: 80, spd: 90, spe: 60 },
-		abilities: { 0: "Blaze", H: "Intimidate" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 95, atk: 115, def: 90, spa: 80, spd: 90, spe: 60},
+		abilities: {0: "Blaze", H: "Intimidate"},
 		heightm: 1.8,
 		weightkg: 83,
 		color: "Red",
@@ -12483,9 +12483,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 728,
 		name: "Popplio",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 50, atk: 54, def: 54, spa: 66, spd: 56, spe: 40 },
-		abilities: { 0: "Torrent", H: "Liquid Voice" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 50, atk: 54, def: 54, spa: 66, spd: 56, spe: 40},
+		abilities: {0: "Torrent", H: "Liquid Voice"},
 		heightm: 0.4,
 		weightkg: 7.5,
 		color: "Blue",
@@ -12496,9 +12496,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 729,
 		name: "Brionne",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 60, atk: 69, def: 69, spa: 91, spd: 81, spe: 50 },
-		abilities: { 0: "Torrent", H: "Liquid Voice" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 60, atk: 69, def: 69, spa: 91, spd: 81, spe: 50},
+		abilities: {0: "Torrent", H: "Liquid Voice"},
 		heightm: 0.6,
 		weightkg: 17.5,
 		color: "Blue",
@@ -12511,9 +12511,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 730,
 		name: "Primarina",
 		types: ["Water", "Fairy"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 80, atk: 74, def: 74, spa: 126, spd: 116, spe: 60 },
-		abilities: { 0: "Torrent", H: "Liquid Voice" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 80, atk: 74, def: 74, spa: 126, spd: 116, spe: 60},
+		abilities: {0: "Torrent", H: "Liquid Voice"},
 		heightm: 1.8,
 		weightkg: 44,
 		color: "Blue",
@@ -12525,8 +12525,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 731,
 		name: "Pikipek",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 35, atk: 75, def: 30, spa: 30, spd: 30, spe: 65 },
-		abilities: { 0: "Keen Eye", 1: "Skill Link", H: "Pickup" },
+		baseStats: {hp: 35, atk: 75, def: 30, spa: 30, spd: 30, spe: 65},
+		abilities: {0: "Keen Eye", 1: "Skill Link", H: "Pickup"},
 		heightm: 0.3,
 		weightkg: 1.2,
 		color: "Black",
@@ -12537,8 +12537,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 732,
 		name: "Trumbeak",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 55, atk: 85, def: 50, spa: 40, spd: 50, spe: 75 },
-		abilities: { 0: "Keen Eye", 1: "Skill Link", H: "Pickup" },
+		baseStats: {hp: 55, atk: 85, def: 50, spa: 40, spd: 50, spe: 75},
+		abilities: {0: "Keen Eye", 1: "Skill Link", H: "Pickup"},
 		heightm: 0.6,
 		weightkg: 14.8,
 		color: "Black",
@@ -12551,8 +12551,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 733,
 		name: "Toucannon",
 		types: ["Normal", "Flying"],
-		baseStats: { hp: 80, atk: 120, def: 75, spa: 75, spd: 75, spe: 60 },
-		abilities: { 0: "Keen Eye", 1: "Skill Link", H: "Sheer Force" },
+		baseStats: {hp: 80, atk: 120, def: 75, spa: 75, spd: 75, spe: 60},
+		abilities: {0: "Keen Eye", 1: "Skill Link", H: "Sheer Force"},
 		heightm: 1.1,
 		weightkg: 26,
 		color: "Black",
@@ -12564,8 +12564,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 734,
 		name: "Yungoos",
 		types: ["Normal"],
-		baseStats: { hp: 48, atk: 70, def: 30, spa: 30, spd: 30, spe: 45 },
-		abilities: { 0: "Stakeout", 1: "Strong Jaw", H: "Adaptability" },
+		baseStats: {hp: 48, atk: 70, def: 30, spa: 30, spd: 30, spe: 45},
+		abilities: {0: "Stakeout", 1: "Strong Jaw", H: "Adaptability"},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Brown",
@@ -12576,8 +12576,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 735,
 		name: "Gumshoos",
 		types: ["Normal"],
-		baseStats: { hp: 88, atk: 110, def: 60, spa: 55, spd: 60, spe: 45 },
-		abilities: { 0: "Stakeout", 1: "Strong Jaw", H: "Adaptability" },
+		baseStats: {hp: 88, atk: 110, def: 60, spa: 55, spd: 60, spe: 45},
+		abilities: {0: "Stakeout", 1: "Strong Jaw", H: "Adaptability"},
 		heightm: 0.7,
 		weightkg: 14.2,
 		color: "Brown",
@@ -12593,8 +12593,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Gumshoos",
 		forme: "Totem",
 		types: ["Normal"],
-		baseStats: { hp: 88, atk: 110, def: 60, spa: 55, spd: 60, spe: 45 },
-		abilities: { 0: "Adaptability" },
+		baseStats: {hp: 88, atk: 110, def: 60, spa: 55, spd: 60, spe: 45},
+		abilities: {0: "Adaptability"},
 		heightm: 1.4,
 		weightkg: 60,
 		color: "Brown",
@@ -12604,8 +12604,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 736,
 		name: "Grubbin",
 		types: ["Bug"],
-		baseStats: { hp: 47, atk: 62, def: 45, spa: 55, spd: 45, spe: 46 },
-		abilities: { 0: "Swarm" },
+		baseStats: {hp: 47, atk: 62, def: 45, spa: 55, spd: 45, spe: 46},
+		abilities: {0: "Swarm"},
 		heightm: 0.4,
 		weightkg: 4.4,
 		color: "Gray",
@@ -12616,8 +12616,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 737,
 		name: "Charjabug",
 		types: ["Bug", "Electric"],
-		baseStats: { hp: 57, atk: 82, def: 95, spa: 55, spd: 75, spe: 36 },
-		abilities: { 0: "Battery" },
+		baseStats: {hp: 57, atk: 82, def: 95, spa: 55, spd: 75, spe: 36},
+		abilities: {0: "Battery"},
 		heightm: 0.5,
 		weightkg: 10.5,
 		color: "Green",
@@ -12630,8 +12630,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 738,
 		name: "Vikavolt",
 		types: ["Bug", "Electric"],
-		baseStats: { hp: 77, atk: 70, def: 90, spa: 145, spd: 75, spe: 43 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 77, atk: 70, def: 90, spa: 145, spd: 75, spe: 43},
+		abilities: {0: "Levitate"},
 		heightm: 1.5,
 		weightkg: 45,
 		color: "Blue",
@@ -12648,8 +12648,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Vikavolt",
 		forme: "Totem",
 		types: ["Bug", "Electric"],
-		baseStats: { hp: 77, atk: 70, def: 90, spa: 145, spd: 75, spe: 43 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 77, atk: 70, def: 90, spa: 145, spd: 75, spe: 43},
+		abilities: {0: "Levitate"},
 		heightm: 2.6,
 		weightkg: 147.5,
 		color: "Blue",
@@ -12659,8 +12659,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 739,
 		name: "Crabrawler",
 		types: ["Fighting"],
-		baseStats: { hp: 47, atk: 82, def: 57, spa: 42, spd: 47, spe: 63 },
-		abilities: { 0: "Hyper Cutter", 1: "Iron Fist", H: "Anger Point" },
+		baseStats: {hp: 47, atk: 82, def: 57, spa: 42, spd: 47, spe: 63},
+		abilities: {0: "Hyper Cutter", 1: "Iron Fist", H: "Anger Point"},
 		heightm: 0.6,
 		weightkg: 7,
 		color: "Purple",
@@ -12671,8 +12671,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 740,
 		name: "Crabominable",
 		types: ["Fighting", "Ice"],
-		baseStats: { hp: 97, atk: 132, def: 77, spa: 62, spd: 67, spe: 43 },
-		abilities: { 0: "Hyper Cutter", 1: "Iron Fist", H: "Anger Point" },
+		baseStats: {hp: 97, atk: 132, def: 77, spa: 62, spd: 67, spe: 43},
+		abilities: {0: "Hyper Cutter", 1: "Iron Fist", H: "Anger Point"},
 		heightm: 1.7,
 		weightkg: 180,
 		color: "White",
@@ -12686,9 +12686,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Oricorio",
 		baseForme: "Baile",
 		types: ["Fire", "Flying"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 75, atk: 70, def: 70, spa: 98, spd: 70, spe: 93 },
-		abilities: { 0: "Dancer" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 75, atk: 70, def: 70, spa: 98, spd: 70, spe: 93},
+		abilities: {0: "Dancer"},
 		heightm: 0.6,
 		weightkg: 3.4,
 		color: "Red",
@@ -12702,9 +12702,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Oricorio",
 		forme: "Pom-Pom",
 		types: ["Electric", "Flying"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 75, atk: 70, def: 70, spa: 98, spd: 70, spe: 93 },
-		abilities: { 0: "Dancer" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 75, atk: 70, def: 70, spa: 98, spd: 70, spe: 93},
+		abilities: {0: "Dancer"},
 		heightm: 0.6,
 		weightkg: 3.4,
 		color: "Yellow",
@@ -12717,9 +12717,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Oricorio",
 		forme: "Pa'u",
 		types: ["Psychic", "Flying"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 75, atk: 70, def: 70, spa: 98, spd: 70, spe: 93 },
-		abilities: { 0: "Dancer" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 75, atk: 70, def: 70, spa: 98, spd: 70, spe: 93},
+		abilities: {0: "Dancer"},
 		heightm: 0.6,
 		weightkg: 3.4,
 		color: "Pink",
@@ -12732,9 +12732,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Oricorio",
 		forme: "Sensu",
 		types: ["Ghost", "Flying"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 75, atk: 70, def: 70, spa: 98, spd: 70, spe: 93 },
-		abilities: { 0: "Dancer" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 75, atk: 70, def: 70, spa: 98, spd: 70, spe: 93},
+		abilities: {0: "Dancer"},
 		heightm: 0.6,
 		weightkg: 3.4,
 		color: "Purple",
@@ -12745,8 +12745,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 742,
 		name: "Cutiefly",
 		types: ["Bug", "Fairy"],
-		baseStats: { hp: 40, atk: 45, def: 40, spa: 55, spd: 40, spe: 84 },
-		abilities: { 0: "Honey Gather", 1: "Shield Dust", H: "Sweet Veil" },
+		baseStats: {hp: 40, atk: 45, def: 40, spa: 55, spd: 40, spe: 84},
+		abilities: {0: "Honey Gather", 1: "Shield Dust", H: "Sweet Veil"},
 		heightm: 0.1,
 		weightkg: 0.2,
 		color: "Yellow",
@@ -12757,8 +12757,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 743,
 		name: "Ribombee",
 		types: ["Bug", "Fairy"],
-		baseStats: { hp: 60, atk: 55, def: 60, spa: 95, spd: 70, spe: 124 },
-		abilities: { 0: "Honey Gather", 1: "Shield Dust", H: "Sweet Veil" },
+		baseStats: {hp: 60, atk: 55, def: 60, spa: 95, spd: 70, spe: 124},
+		abilities: {0: "Honey Gather", 1: "Shield Dust", H: "Sweet Veil"},
 		heightm: 0.2,
 		weightkg: 0.5,
 		color: "Yellow",
@@ -12774,8 +12774,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Ribombee",
 		forme: "Totem",
 		types: ["Bug", "Fairy"],
-		baseStats: { hp: 60, atk: 55, def: 60, spa: 95, spd: 70, spe: 124 },
-		abilities: { 0: "Sweet Veil" },
+		baseStats: {hp: 60, atk: 55, def: 60, spa: 95, spd: 70, spe: 124},
+		abilities: {0: "Sweet Veil"},
 		heightm: 0.4,
 		weightkg: 2,
 		color: "Yellow",
@@ -12786,8 +12786,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Rockruff",
 		baseForme: "Midday",
 		types: ["Rock"],
-		baseStats: { hp: 45, atk: 65, def: 40, spa: 30, spd: 40, spe: 60 },
-		abilities: { 0: "Keen Eye", 1: "Vital Spirit", H: "Steadfast", S: "Own Tempo" },
+		baseStats: {hp: 45, atk: 65, def: 40, spa: 30, spd: 40, spe: 60},
+		abilities: {0: "Keen Eye", 1: "Vital Spirit", H: "Steadfast", S: "Own Tempo"},
 		heightm: 0.5,
 		weightkg: 9.2,
 		color: "Brown",
@@ -12800,8 +12800,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Lycanroc",
 		baseForme: "Midday",
 		types: ["Rock"],
-		baseStats: { hp: 75, atk: 115, def: 65, spa: 55, spd: 65, spe: 112 },
-		abilities: { 0: "Keen Eye", 1: "Sand Rush", H: "Steadfast" },
+		baseStats: {hp: 75, atk: 115, def: 65, spa: 55, spd: 65, spe: 112},
+		abilities: {0: "Keen Eye", 1: "Sand Rush", H: "Steadfast"},
 		heightm: 0.8,
 		weightkg: 25,
 		color: "Brown",
@@ -12818,8 +12818,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Lycanroc",
 		forme: "Midnight",
 		types: ["Rock"],
-		baseStats: { hp: 85, atk: 115, def: 75, spa: 55, spd: 75, spe: 82 },
-		abilities: { 0: "Keen Eye", 1: "Vital Spirit", H: "No Guard" },
+		baseStats: {hp: 85, atk: 115, def: 75, spa: 55, spd: 75, spe: 82},
+		abilities: {0: "Keen Eye", 1: "Vital Spirit", H: "No Guard"},
 		heightm: 1.1,
 		weightkg: 25,
 		color: "Red",
@@ -12834,8 +12834,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Lycanroc",
 		forme: "Dusk",
 		types: ["Rock"],
-		baseStats: { hp: 75, atk: 117, def: 65, spa: 55, spd: 65, spe: 110 },
-		abilities: { 0: "Tough Claws" },
+		baseStats: {hp: 75, atk: 117, def: 65, spa: 55, spd: 65, spe: 110},
+		abilities: {0: "Tough Claws"},
 		heightm: 0.8,
 		weightkg: 25,
 		color: "Brown",
@@ -12849,8 +12849,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Wishiwashi",
 		baseForme: "Solo",
 		types: ["Water"],
-		baseStats: { hp: 45, atk: 20, def: 20, spa: 25, spd: 25, spe: 40 },
-		abilities: { 0: "Schooling" },
+		baseStats: {hp: 45, atk: 20, def: 20, spa: 25, spd: 25, spe: 40},
+		abilities: {0: "Schooling"},
 		heightm: 0.2,
 		weightkg: 0.3,
 		color: "Blue",
@@ -12864,8 +12864,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Wishiwashi",
 		forme: "School",
 		types: ["Water"],
-		baseStats: { hp: 45, atk: 140, def: 130, spa: 140, spd: 135, spe: 30 },
-		abilities: { 0: "Schooling" },
+		baseStats: {hp: 45, atk: 140, def: 130, spa: 140, spd: 135, spe: 30},
+		abilities: {0: "Schooling"},
 		heightm: 8.2,
 		weightkg: 78.6,
 		color: "Blue",
@@ -12877,8 +12877,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 747,
 		name: "Mareanie",
 		types: ["Poison", "Water"],
-		baseStats: { hp: 50, atk: 53, def: 62, spa: 43, spd: 52, spe: 45 },
-		abilities: { 0: "Merciless", 1: "Limber", H: "Regenerator" },
+		baseStats: {hp: 50, atk: 53, def: 62, spa: 43, spd: 52, spe: 45},
+		abilities: {0: "Merciless", 1: "Limber", H: "Regenerator"},
 		heightm: 0.4,
 		weightkg: 8,
 		color: "Blue",
@@ -12889,8 +12889,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 748,
 		name: "Toxapex",
 		types: ["Poison", "Water"],
-		baseStats: { hp: 50, atk: 63, def: 152, spa: 53, spd: 142, spe: 35 },
-		abilities: { 0: "Merciless", 1: "Limber", H: "Regenerator" },
+		baseStats: {hp: 50, atk: 63, def: 152, spa: 53, spd: 142, spe: 35},
+		abilities: {0: "Merciless", 1: "Limber", H: "Regenerator"},
 		heightm: 0.7,
 		weightkg: 14.5,
 		color: "Blue",
@@ -12902,8 +12902,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 749,
 		name: "Mudbray",
 		types: ["Ground"],
-		baseStats: { hp: 70, atk: 100, def: 70, spa: 45, spd: 55, spe: 45 },
-		abilities: { 0: "Own Tempo", 1: "Stamina", H: "Inner Focus" },
+		baseStats: {hp: 70, atk: 100, def: 70, spa: 45, spd: 55, spe: 45},
+		abilities: {0: "Own Tempo", 1: "Stamina", H: "Inner Focus"},
 		heightm: 1,
 		weightkg: 110,
 		color: "Brown",
@@ -12914,8 +12914,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 750,
 		name: "Mudsdale",
 		types: ["Ground"],
-		baseStats: { hp: 100, atk: 125, def: 100, spa: 55, spd: 85, spe: 35 },
-		abilities: { 0: "Own Tempo", 1: "Stamina", H: "Inner Focus" },
+		baseStats: {hp: 100, atk: 125, def: 100, spa: 55, spd: 85, spe: 35},
+		abilities: {0: "Own Tempo", 1: "Stamina", H: "Inner Focus"},
 		heightm: 2.5,
 		weightkg: 920,
 		color: "Brown",
@@ -12927,8 +12927,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 751,
 		name: "Dewpider",
 		types: ["Water", "Bug"],
-		baseStats: { hp: 38, atk: 40, def: 52, spa: 40, spd: 72, spe: 27 },
-		abilities: { 0: "Water Bubble", H: "Water Absorb" },
+		baseStats: {hp: 38, atk: 40, def: 52, spa: 40, spd: 72, spe: 27},
+		abilities: {0: "Water Bubble", H: "Water Absorb"},
 		heightm: 0.3,
 		weightkg: 4,
 		color: "Green",
@@ -12939,8 +12939,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 752,
 		name: "Araquanid",
 		types: ["Water", "Bug"],
-		baseStats: { hp: 68, atk: 70, def: 92, spa: 50, spd: 132, spe: 42 },
-		abilities: { 0: "Water Bubble", H: "Water Absorb" },
+		baseStats: {hp: 68, atk: 70, def: 92, spa: 50, spd: 132, spe: 42},
+		abilities: {0: "Water Bubble", H: "Water Absorb"},
 		heightm: 1.8,
 		weightkg: 82,
 		color: "Green",
@@ -12956,8 +12956,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Araquanid",
 		forme: "Totem",
 		types: ["Water", "Bug"],
-		baseStats: { hp: 68, atk: 70, def: 92, spa: 50, spd: 132, spe: 42 },
-		abilities: { 0: "Water Bubble" },
+		baseStats: {hp: 68, atk: 70, def: 92, spa: 50, spd: 132, spe: 42},
+		abilities: {0: "Water Bubble"},
 		heightm: 3.1,
 		weightkg: 217.5,
 		color: "Green",
@@ -12967,8 +12967,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 753,
 		name: "Fomantis",
 		types: ["Grass"],
-		baseStats: { hp: 40, atk: 55, def: 35, spa: 50, spd: 35, spe: 35 },
-		abilities: { 0: "Leaf Guard", H: "Contrary" },
+		baseStats: {hp: 40, atk: 55, def: 35, spa: 50, spd: 35, spe: 35},
+		abilities: {0: "Leaf Guard", H: "Contrary"},
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "Pink",
@@ -12979,8 +12979,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 754,
 		name: "Lurantis",
 		types: ["Grass"],
-		baseStats: { hp: 70, atk: 105, def: 90, spa: 80, spd: 90, spe: 45 },
-		abilities: { 0: "Leaf Guard", H: "Contrary" },
+		baseStats: {hp: 70, atk: 105, def: 90, spa: 80, spd: 90, spe: 45},
+		abilities: {0: "Leaf Guard", H: "Contrary"},
 		heightm: 0.9,
 		weightkg: 18.5,
 		color: "Pink",
@@ -12996,8 +12996,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Lurantis",
 		forme: "Totem",
 		types: ["Grass"],
-		baseStats: { hp: 70, atk: 105, def: 90, spa: 80, spd: 90, spe: 45 },
-		abilities: { 0: "Leaf Guard" },
+		baseStats: {hp: 70, atk: 105, def: 90, spa: 80, spd: 90, spe: 45},
+		abilities: {0: "Leaf Guard"},
 		heightm: 1.5,
 		weightkg: 58,
 		color: "Pink",
@@ -13007,8 +13007,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 755,
 		name: "Morelull",
 		types: ["Grass", "Fairy"],
-		baseStats: { hp: 40, atk: 35, def: 55, spa: 65, spd: 75, spe: 15 },
-		abilities: { 0: "Illuminate", 1: "Effect Spore", H: "Rain Dish" },
+		baseStats: {hp: 40, atk: 35, def: 55, spa: 65, spd: 75, spe: 15},
+		abilities: {0: "Illuminate", 1: "Effect Spore", H: "Rain Dish"},
 		heightm: 0.2,
 		weightkg: 1.5,
 		color: "Purple",
@@ -13019,8 +13019,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 756,
 		name: "Shiinotic",
 		types: ["Grass", "Fairy"],
-		baseStats: { hp: 60, atk: 45, def: 80, spa: 90, spd: 100, spe: 30 },
-		abilities: { 0: "Illuminate", 1: "Effect Spore", H: "Rain Dish" },
+		baseStats: {hp: 60, atk: 45, def: 80, spa: 90, spd: 100, spe: 30},
+		abilities: {0: "Illuminate", 1: "Effect Spore", H: "Rain Dish"},
 		heightm: 1,
 		weightkg: 11.5,
 		color: "Purple",
@@ -13032,9 +13032,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 757,
 		name: "Salandit",
 		types: ["Poison", "Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 48, atk: 44, def: 40, spa: 71, spd: 40, spe: 77 },
-		abilities: { 0: "Corrosion", H: "Oblivious" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 48, atk: 44, def: 40, spa: 71, spd: 40, spe: 77},
+		abilities: {0: "Corrosion", H: "Oblivious"},
 		heightm: 0.6,
 		weightkg: 4.8,
 		color: "Black",
@@ -13046,8 +13046,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Salazzle",
 		types: ["Poison", "Fire"],
 		gender: "F",
-		baseStats: { hp: 68, atk: 64, def: 60, spa: 111, spd: 60, spe: 117 },
-		abilities: { 0: "Corrosion", H: "Oblivious" },
+		baseStats: {hp: 68, atk: 64, def: 60, spa: 111, spd: 60, spe: 117},
+		abilities: {0: "Corrosion", H: "Oblivious"},
 		heightm: 1.2,
 		weightkg: 22.2,
 		color: "Black",
@@ -13064,8 +13064,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Totem",
 		types: ["Poison", "Fire"],
 		gender: "F",
-		baseStats: { hp: 68, atk: 64, def: 60, spa: 111, spd: 60, spe: 117 },
-		abilities: { 0: "Corrosion" },
+		baseStats: {hp: 68, atk: 64, def: 60, spa: 111, spd: 60, spe: 117},
+		abilities: {0: "Corrosion"},
 		heightm: 2.1,
 		weightkg: 81,
 		color: "Black",
@@ -13075,8 +13075,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 759,
 		name: "Stufful",
 		types: ["Normal", "Fighting"],
-		baseStats: { hp: 70, atk: 75, def: 50, spa: 45, spd: 50, spe: 50 },
-		abilities: { 0: "Fluffy", 1: "Klutz", H: "Cute Charm" },
+		baseStats: {hp: 70, atk: 75, def: 50, spa: 45, spd: 50, spe: 50},
+		abilities: {0: "Fluffy", 1: "Klutz", H: "Cute Charm"},
 		heightm: 0.5,
 		weightkg: 6.8,
 		color: "Pink",
@@ -13087,8 +13087,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 760,
 		name: "Bewear",
 		types: ["Normal", "Fighting"],
-		baseStats: { hp: 120, atk: 125, def: 80, spa: 55, spd: 60, spe: 60 },
-		abilities: { 0: "Fluffy", 1: "Klutz", H: "Unnerve" },
+		baseStats: {hp: 120, atk: 125, def: 80, spa: 55, spd: 60, spe: 60},
+		abilities: {0: "Fluffy", 1: "Klutz", H: "Unnerve"},
 		heightm: 2.1,
 		weightkg: 135,
 		color: "Pink",
@@ -13101,8 +13101,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Bounsweet",
 		types: ["Grass"],
 		gender: "F",
-		baseStats: { hp: 42, atk: 30, def: 38, spa: 30, spd: 38, spe: 32 },
-		abilities: { 0: "Leaf Guard", 1: "Oblivious", H: "Sweet Veil" },
+		baseStats: {hp: 42, atk: 30, def: 38, spa: 30, spd: 38, spe: 32},
+		abilities: {0: "Leaf Guard", 1: "Oblivious", H: "Sweet Veil"},
 		heightm: 0.3,
 		weightkg: 3.2,
 		color: "Purple",
@@ -13114,8 +13114,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Steenee",
 		types: ["Grass"],
 		gender: "F",
-		baseStats: { hp: 52, atk: 40, def: 48, spa: 40, spd: 48, spe: 62 },
-		abilities: { 0: "Leaf Guard", 1: "Oblivious", H: "Sweet Veil" },
+		baseStats: {hp: 52, atk: 40, def: 48, spa: 40, spd: 48, spe: 62},
+		abilities: {0: "Leaf Guard", 1: "Oblivious", H: "Sweet Veil"},
 		heightm: 0.7,
 		weightkg: 8.2,
 		color: "Purple",
@@ -13129,8 +13129,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Tsareena",
 		types: ["Grass"],
 		gender: "F",
-		baseStats: { hp: 72, atk: 120, def: 98, spa: 50, spd: 98, spe: 72 },
-		abilities: { 0: "Leaf Guard", 1: "Queenly Majesty", H: "Sweet Veil" },
+		baseStats: {hp: 72, atk: 120, def: 98, spa: 50, spd: 98, spe: 72},
+		abilities: {0: "Leaf Guard", 1: "Queenly Majesty", H: "Sweet Veil"},
 		heightm: 1.2,
 		weightkg: 21.4,
 		color: "Purple",
@@ -13143,9 +13143,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 764,
 		name: "Comfey",
 		types: ["Fairy"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 51, atk: 52, def: 90, spa: 82, spd: 110, spe: 100 },
-		abilities: { 0: "Flower Veil", 1: "Triage", H: "Natural Cure" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 51, atk: 52, def: 90, spa: 82, spd: 110, spe: 100},
+		abilities: {0: "Flower Veil", 1: "Triage", H: "Natural Cure"},
 		heightm: 0.1,
 		weightkg: 0.3,
 		color: "Green",
@@ -13155,8 +13155,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 765,
 		name: "Oranguru",
 		types: ["Normal", "Psychic"],
-		baseStats: { hp: 90, atk: 60, def: 80, spa: 90, spd: 110, spe: 60 },
-		abilities: { 0: "Inner Focus", 1: "Telepathy", H: "Symbiosis" },
+		baseStats: {hp: 90, atk: 60, def: 80, spa: 90, spd: 110, spe: 60},
+		abilities: {0: "Inner Focus", 1: "Telepathy", H: "Symbiosis"},
 		heightm: 1.5,
 		weightkg: 76,
 		color: "White",
@@ -13166,8 +13166,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 766,
 		name: "Passimian",
 		types: ["Fighting"],
-		baseStats: { hp: 100, atk: 120, def: 90, spa: 40, spd: 60, spe: 80 },
-		abilities: { 0: "Receiver", H: "Defiant" },
+		baseStats: {hp: 100, atk: 120, def: 90, spa: 40, spd: 60, spe: 80},
+		abilities: {0: "Receiver", H: "Defiant"},
 		heightm: 2,
 		weightkg: 82.8,
 		color: "White",
@@ -13177,8 +13177,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 767,
 		name: "Wimpod",
 		types: ["Bug", "Water"],
-		baseStats: { hp: 25, atk: 35, def: 40, spa: 20, spd: 30, spe: 80 },
-		abilities: { 0: "Wimp Out" },
+		baseStats: {hp: 25, atk: 35, def: 40, spa: 20, spd: 30, spe: 80},
+		abilities: {0: "Wimp Out"},
 		heightm: 0.5,
 		weightkg: 12,
 		color: "Gray",
@@ -13189,8 +13189,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 768,
 		name: "Golisopod",
 		types: ["Bug", "Water"],
-		baseStats: { hp: 75, atk: 125, def: 140, spa: 60, spd: 90, spe: 40 },
-		abilities: { 0: "Emergency Exit" },
+		baseStats: {hp: 75, atk: 125, def: 140, spa: 60, spd: 90, spe: 40},
+		abilities: {0: "Emergency Exit"},
 		heightm: 2,
 		weightkg: 108,
 		color: "Gray",
@@ -13202,8 +13202,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 769,
 		name: "Sandygast",
 		types: ["Ghost", "Ground"],
-		baseStats: { hp: 55, atk: 55, def: 80, spa: 70, spd: 45, spe: 15 },
-		abilities: { 0: "Water Compaction", H: "Sand Veil" },
+		baseStats: {hp: 55, atk: 55, def: 80, spa: 70, spd: 45, spe: 15},
+		abilities: {0: "Water Compaction", H: "Sand Veil"},
 		heightm: 0.5,
 		weightkg: 70,
 		color: "Brown",
@@ -13214,8 +13214,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 770,
 		name: "Palossand",
 		types: ["Ghost", "Ground"],
-		baseStats: { hp: 85, atk: 75, def: 110, spa: 100, spd: 75, spe: 35 },
-		abilities: { 0: "Water Compaction", H: "Sand Veil" },
+		baseStats: {hp: 85, atk: 75, def: 110, spa: 100, spd: 75, spe: 35},
+		abilities: {0: "Water Compaction", H: "Sand Veil"},
 		heightm: 1.3,
 		weightkg: 250,
 		color: "Brown",
@@ -13227,8 +13227,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 771,
 		name: "Pyukumuku",
 		types: ["Water"],
-		baseStats: { hp: 55, atk: 60, def: 130, spa: 30, spd: 130, spe: 5 },
-		abilities: { 0: "Innards Out", H: "Unaware" },
+		baseStats: {hp: 55, atk: 60, def: 130, spa: 30, spd: 130, spe: 5},
+		abilities: {0: "Innards Out", H: "Unaware"},
 		heightm: 0.3,
 		weightkg: 1.2,
 		color: "Black",
@@ -13239,8 +13239,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Type: Null",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 59 },
-		abilities: { 0: "Battle Armor" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 59},
+		abilities: {0: "Battle Armor"},
 		heightm: 1.9,
 		weightkg: 120.5,
 		color: "Gray",
@@ -13252,8 +13252,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Silvally",
 		types: ["Normal"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13273,8 +13273,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Bug",
 		types: ["Bug"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13289,8 +13289,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Dark",
 		types: ["Dark"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13305,8 +13305,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Dragon",
 		types: ["Dragon"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13321,8 +13321,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Electric",
 		types: ["Electric"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13337,8 +13337,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Fairy",
 		types: ["Fairy"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13353,8 +13353,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Fighting",
 		types: ["Fighting"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13369,8 +13369,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Fire",
 		types: ["Fire"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13385,8 +13385,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Flying",
 		types: ["Flying"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13401,8 +13401,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Ghost",
 		types: ["Ghost"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13417,8 +13417,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Grass",
 		types: ["Grass"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13433,8 +13433,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Ground",
 		types: ["Ground"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13449,8 +13449,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Ice",
 		types: ["Ice"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13465,8 +13465,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Poison",
 		types: ["Poison"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13481,8 +13481,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Psychic",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13497,8 +13497,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Rock",
 		types: ["Rock"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13513,8 +13513,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Steel",
 		types: ["Steel"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13529,8 +13529,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Water",
 		types: ["Water"],
 		gender: "N",
-		baseStats: { hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95 },
-		abilities: { 0: "RKS System" },
+		baseStats: {hp: 95, atk: 95, def: 95, spa: 95, spd: 95, spe: 95},
+		abilities: {0: "RKS System"},
 		heightm: 2.3,
 		weightkg: 100.5,
 		color: "Gray",
@@ -13544,8 +13544,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Red",
 		types: ["Rock", "Flying"],
 		gender: "N",
-		baseStats: { hp: 60, atk: 100, def: 60, spa: 100, spd: 60, spe: 120 },
-		abilities: { 0: "Shields Down" },
+		baseStats: {hp: 60, atk: 100, def: 60, spa: 100, spd: 60, spe: 120},
+		abilities: {0: "Shields Down"},
 		heightm: 0.3,
 		weightkg: 0.3,
 		color: "Red",
@@ -13565,8 +13565,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Meteor",
 		types: ["Rock", "Flying"],
 		gender: "N",
-		baseStats: { hp: 60, atk: 60, def: 100, spa: 60, spd: 100, spe: 60 },
-		abilities: { 0: "Shields Down" },
+		baseStats: {hp: 60, atk: 60, def: 100, spa: 60, spd: 100, spe: 60},
+		abilities: {0: "Shields Down"},
 		heightm: 0.3,
 		weightkg: 40,
 		color: "Brown",
@@ -13578,8 +13578,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 775,
 		name: "Komala",
 		types: ["Normal"],
-		baseStats: { hp: 65, atk: 115, def: 65, spa: 75, spd: 95, spe: 65 },
-		abilities: { 0: "Comatose" },
+		baseStats: {hp: 65, atk: 115, def: 65, spa: 75, spd: 95, spe: 65},
+		abilities: {0: "Comatose"},
 		heightm: 0.4,
 		weightkg: 19.9,
 		color: "Blue",
@@ -13589,8 +13589,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 776,
 		name: "Turtonator",
 		types: ["Fire", "Dragon"],
-		baseStats: { hp: 60, atk: 78, def: 135, spa: 91, spd: 85, spe: 36 },
-		abilities: { 0: "Shell Armor" },
+		baseStats: {hp: 60, atk: 78, def: 135, spa: 91, spd: 85, spe: 36},
+		abilities: {0: "Shell Armor"},
 		heightm: 2,
 		weightkg: 212,
 		color: "Red",
@@ -13600,8 +13600,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 777,
 		name: "Togedemaru",
 		types: ["Electric", "Steel"],
-		baseStats: { hp: 65, atk: 98, def: 63, spa: 40, spd: 73, spe: 96 },
-		abilities: { 0: "Iron Barbs", 1: "Lightning Rod", H: "Sturdy" },
+		baseStats: {hp: 65, atk: 98, def: 63, spa: 40, spd: 73, spe: 96},
+		abilities: {0: "Iron Barbs", 1: "Lightning Rod", H: "Sturdy"},
 		heightm: 0.3,
 		weightkg: 3.3,
 		color: "Gray",
@@ -13615,8 +13615,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Togedemaru",
 		forme: "Totem",
 		types: ["Electric", "Steel"],
-		baseStats: { hp: 65, atk: 98, def: 63, spa: 40, spd: 73, spe: 96 },
-		abilities: { 0: "Sturdy" },
+		baseStats: {hp: 65, atk: 98, def: 63, spa: 40, spd: 73, spe: 96},
+		abilities: {0: "Sturdy"},
 		heightm: 0.6,
 		weightkg: 13,
 		color: "Gray",
@@ -13627,8 +13627,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Mimikyu",
 		baseForme: "Disguised",
 		types: ["Ghost", "Fairy"],
-		baseStats: { hp: 55, atk: 90, def: 80, spa: 50, spd: 105, spe: 96 },
-		abilities: { 0: "Disguise" },
+		baseStats: {hp: 55, atk: 90, def: 80, spa: 50, spd: 105, spe: 96},
+		abilities: {0: "Disguise"},
 		heightm: 0.2,
 		weightkg: 0.7,
 		color: "Yellow",
@@ -13642,8 +13642,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Mimikyu",
 		forme: "Busted",
 		types: ["Ghost", "Fairy"],
-		baseStats: { hp: 55, atk: 90, def: 80, spa: 50, spd: 105, spe: 96 },
-		abilities: { 0: "Disguise" },
+		baseStats: {hp: 55, atk: 90, def: 80, spa: 50, spd: 105, spe: 96},
+		abilities: {0: "Disguise"},
 		heightm: 0.2,
 		weightkg: 0.7,
 		color: "Yellow",
@@ -13657,8 +13657,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Mimikyu",
 		forme: "Totem",
 		types: ["Ghost", "Fairy"],
-		baseStats: { hp: 55, atk: 90, def: 80, spa: 50, spd: 105, spe: 96 },
-		abilities: { 0: "Disguise" },
+		baseStats: {hp: 55, atk: 90, def: 80, spa: 50, spd: 105, spe: 96},
+		abilities: {0: "Disguise"},
 		heightm: 0.4,
 		weightkg: 2.8,
 		color: "Yellow",
@@ -13670,8 +13670,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Mimikyu",
 		forme: "Busted-Totem",
 		types: ["Ghost", "Fairy"],
-		baseStats: { hp: 55, atk: 90, def: 80, spa: 50, spd: 105, spe: 96 },
-		abilities: { 0: "Disguise" },
+		baseStats: {hp: 55, atk: 90, def: 80, spa: 50, spd: 105, spe: 96},
+		abilities: {0: "Disguise"},
 		heightm: 0.4,
 		weightkg: 2.8,
 		color: "Yellow",
@@ -13683,8 +13683,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 779,
 		name: "Bruxish",
 		types: ["Water", "Psychic"],
-		baseStats: { hp: 68, atk: 105, def: 70, spa: 70, spd: 70, spe: 92 },
-		abilities: { 0: "Dazzling", 1: "Strong Jaw", H: "Wonder Skin" },
+		baseStats: {hp: 68, atk: 105, def: 70, spa: 70, spd: 70, spe: 92},
+		abilities: {0: "Dazzling", 1: "Strong Jaw", H: "Wonder Skin"},
 		heightm: 0.9,
 		weightkg: 19,
 		color: "Pink",
@@ -13694,8 +13694,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 780,
 		name: "Drampa",
 		types: ["Normal", "Dragon"],
-		baseStats: { hp: 78, atk: 60, def: 85, spa: 135, spd: 91, spe: 36 },
-		abilities: { 0: "Berserk", 1: "Sap Sipper", H: "Cloud Nine" },
+		baseStats: {hp: 78, atk: 60, def: 85, spa: 135, spd: 91, spe: 36},
+		abilities: {0: "Berserk", 1: "Sap Sipper", H: "Cloud Nine"},
 		heightm: 3,
 		weightkg: 185,
 		color: "White",
@@ -13706,8 +13706,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Dhelmise",
 		types: ["Ghost", "Grass"],
 		gender: "N",
-		baseStats: { hp: 70, atk: 131, def: 100, spa: 86, spd: 90, spe: 40 },
-		abilities: { 0: "Steelworker" },
+		baseStats: {hp: 70, atk: 131, def: 100, spa: 86, spd: 90, spe: 40},
+		abilities: {0: "Steelworker"},
 		heightm: 3.9,
 		weightkg: 210,
 		color: "Green",
@@ -13717,8 +13717,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 782,
 		name: "Jangmo-o",
 		types: ["Dragon"],
-		baseStats: { hp: 45, atk: 55, def: 65, spa: 45, spd: 45, spe: 45 },
-		abilities: { 0: "Bulletproof", 1: "Soundproof", H: "Overcoat" },
+		baseStats: {hp: 45, atk: 55, def: 65, spa: 45, spd: 45, spe: 45},
+		abilities: {0: "Bulletproof", 1: "Soundproof", H: "Overcoat"},
 		heightm: 0.6,
 		weightkg: 29.7,
 		color: "Gray",
@@ -13729,8 +13729,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 783,
 		name: "Hakamo-o",
 		types: ["Dragon", "Fighting"],
-		baseStats: { hp: 55, atk: 75, def: 90, spa: 65, spd: 70, spe: 65 },
-		abilities: { 0: "Bulletproof", 1: "Soundproof", H: "Overcoat" },
+		baseStats: {hp: 55, atk: 75, def: 90, spa: 65, spd: 70, spe: 65},
+		abilities: {0: "Bulletproof", 1: "Soundproof", H: "Overcoat"},
 		heightm: 1.2,
 		weightkg: 47,
 		color: "Gray",
@@ -13743,8 +13743,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 784,
 		name: "Kommo-o",
 		types: ["Dragon", "Fighting"],
-		baseStats: { hp: 75, atk: 110, def: 125, spa: 100, spd: 105, spe: 85 },
-		abilities: { 0: "Bulletproof", 1: "Soundproof", H: "Overcoat" },
+		baseStats: {hp: 75, atk: 110, def: 125, spa: 100, spd: 105, spe: 85},
+		abilities: {0: "Bulletproof", 1: "Soundproof", H: "Overcoat"},
 		heightm: 1.6,
 		weightkg: 78.2,
 		color: "Gray",
@@ -13760,8 +13760,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Kommo-o",
 		forme: "Totem",
 		types: ["Dragon", "Fighting"],
-		baseStats: { hp: 75, atk: 110, def: 125, spa: 100, spd: 105, spe: 85 },
-		abilities: { 0: "Overcoat" },
+		baseStats: {hp: 75, atk: 110, def: 125, spa: 100, spd: 105, spe: 85},
+		abilities: {0: "Overcoat"},
 		heightm: 2.4,
 		weightkg: 207.5,
 		color: "Gray",
@@ -13772,8 +13772,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Tapu Koko",
 		types: ["Electric", "Fairy"],
 		gender: "N",
-		baseStats: { hp: 70, atk: 115, def: 85, spa: 95, spd: 75, spe: 130 },
-		abilities: { 0: "Electric Surge", H: "Telepathy" },
+		baseStats: {hp: 70, atk: 115, def: 85, spa: 95, spd: 75, spe: 130},
+		abilities: {0: "Electric Surge", H: "Telepathy"},
 		heightm: 1.8,
 		weightkg: 20.5,
 		color: "Yellow",
@@ -13784,8 +13784,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Tapu Lele",
 		types: ["Psychic", "Fairy"],
 		gender: "N",
-		baseStats: { hp: 70, atk: 85, def: 75, spa: 130, spd: 115, spe: 95 },
-		abilities: { 0: "Psychic Surge", H: "Telepathy" },
+		baseStats: {hp: 70, atk: 85, def: 75, spa: 130, spd: 115, spe: 95},
+		abilities: {0: "Psychic Surge", H: "Telepathy"},
 		heightm: 1.2,
 		weightkg: 18.6,
 		color: "Pink",
@@ -13796,8 +13796,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Tapu Bulu",
 		types: ["Grass", "Fairy"],
 		gender: "N",
-		baseStats: { hp: 70, atk: 130, def: 115, spa: 85, spd: 95, spe: 75 },
-		abilities: { 0: "Grassy Surge", H: "Telepathy" },
+		baseStats: {hp: 70, atk: 130, def: 115, spa: 85, spd: 95, spe: 75},
+		abilities: {0: "Grassy Surge", H: "Telepathy"},
 		heightm: 1.9,
 		weightkg: 45.5,
 		color: "Red",
@@ -13808,8 +13808,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Tapu Fini",
 		types: ["Water", "Fairy"],
 		gender: "N",
-		baseStats: { hp: 70, atk: 75, def: 115, spa: 95, spd: 130, spe: 85 },
-		abilities: { 0: "Misty Surge", H: "Telepathy" },
+		baseStats: {hp: 70, atk: 75, def: 115, spa: 95, spd: 130, spe: 85},
+		abilities: {0: "Misty Surge", H: "Telepathy"},
 		heightm: 1.3,
 		weightkg: 21.2,
 		color: "Purple",
@@ -13820,8 +13820,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Cosmog",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 43, atk: 29, def: 31, spa: 29, spd: 31, spe: 37 },
-		abilities: { 0: "Unaware" },
+		baseStats: {hp: 43, atk: 29, def: 31, spa: 29, spd: 31, spe: 37},
+		abilities: {0: "Unaware"},
 		heightm: 0.2,
 		weightkg: 0.1,
 		color: "Blue",
@@ -13833,8 +13833,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Cosmoem",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 43, atk: 29, def: 131, spa: 29, spd: 131, spe: 37 },
-		abilities: { 0: "Sturdy" },
+		baseStats: {hp: 43, atk: 29, def: 131, spa: 29, spd: 131, spe: 37},
+		abilities: {0: "Sturdy"},
 		heightm: 0.1,
 		weightkg: 999.9,
 		color: "Blue",
@@ -13848,8 +13848,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Solgaleo",
 		types: ["Psychic", "Steel"],
 		gender: "N",
-		baseStats: { hp: 137, atk: 137, def: 107, spa: 113, spd: 89, spe: 97 },
-		abilities: { 0: "Full Metal Body" },
+		baseStats: {hp: 137, atk: 137, def: 107, spa: 113, spd: 89, spe: 97},
+		abilities: {0: "Full Metal Body"},
 		heightm: 3.4,
 		weightkg: 230,
 		color: "White",
@@ -13862,8 +13862,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Lunala",
 		types: ["Psychic", "Ghost"],
 		gender: "N",
-		baseStats: { hp: 137, atk: 113, def: 89, spa: 137, spd: 107, spe: 97 },
-		abilities: { 0: "Shadow Shield" },
+		baseStats: {hp: 137, atk: 113, def: 89, spa: 137, spd: 107, spe: 97},
+		abilities: {0: "Shadow Shield"},
 		heightm: 4,
 		weightkg: 120,
 		color: "Purple",
@@ -13876,8 +13876,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Nihilego",
 		types: ["Rock", "Poison"],
 		gender: "N",
-		baseStats: { hp: 109, atk: 53, def: 47, spa: 127, spd: 131, spe: 103 },
-		abilities: { 0: "Beast Boost" },
+		baseStats: {hp: 109, atk: 53, def: 47, spa: 127, spd: 131, spe: 103},
+		abilities: {0: "Beast Boost"},
 		heightm: 1.2,
 		weightkg: 55.5,
 		color: "White",
@@ -13888,8 +13888,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Buzzwole",
 		types: ["Bug", "Fighting"],
 		gender: "N",
-		baseStats: { hp: 107, atk: 139, def: 139, spa: 53, spd: 53, spe: 79 },
-		abilities: { 0: "Beast Boost" },
+		baseStats: {hp: 107, atk: 139, def: 139, spa: 53, spd: 53, spe: 79},
+		abilities: {0: "Beast Boost"},
 		heightm: 2.4,
 		weightkg: 333.6,
 		color: "Red",
@@ -13900,8 +13900,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Pheromosa",
 		types: ["Bug", "Fighting"],
 		gender: "N",
-		baseStats: { hp: 71, atk: 137, def: 37, spa: 137, spd: 37, spe: 151 },
-		abilities: { 0: "Beast Boost" },
+		baseStats: {hp: 71, atk: 137, def: 37, spa: 137, spd: 37, spe: 151},
+		abilities: {0: "Beast Boost"},
 		heightm: 1.8,
 		weightkg: 25,
 		color: "White",
@@ -13912,8 +13912,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Xurkitree",
 		types: ["Electric"],
 		gender: "N",
-		baseStats: { hp: 83, atk: 89, def: 71, spa: 173, spd: 71, spe: 83 },
-		abilities: { 0: "Beast Boost" },
+		baseStats: {hp: 83, atk: 89, def: 71, spa: 173, spd: 71, spe: 83},
+		abilities: {0: "Beast Boost"},
 		heightm: 3.8,
 		weightkg: 100,
 		color: "Black",
@@ -13924,8 +13924,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Celesteela",
 		types: ["Steel", "Flying"],
 		gender: "N",
-		baseStats: { hp: 97, atk: 101, def: 103, spa: 107, spd: 101, spe: 61 },
-		abilities: { 0: "Beast Boost" },
+		baseStats: {hp: 97, atk: 101, def: 103, spa: 107, spd: 101, spe: 61},
+		abilities: {0: "Beast Boost"},
 		heightm: 9.2,
 		weightkg: 999.9,
 		color: "Green",
@@ -13936,8 +13936,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Kartana",
 		types: ["Grass", "Steel"],
 		gender: "N",
-		baseStats: { hp: 59, atk: 181, def: 131, spa: 59, spd: 31, spe: 109 },
-		abilities: { 0: "Beast Boost" },
+		baseStats: {hp: 59, atk: 181, def: 131, spa: 59, spd: 31, spe: 109},
+		abilities: {0: "Beast Boost"},
 		heightm: 0.3,
 		weightkg: 0.1,
 		color: "White",
@@ -13948,8 +13948,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Guzzlord",
 		types: ["Dark", "Dragon"],
 		gender: "N",
-		baseStats: { hp: 223, atk: 101, def: 53, spa: 97, spd: 53, spe: 43 },
-		abilities: { 0: "Beast Boost" },
+		baseStats: {hp: 223, atk: 101, def: 53, spa: 97, spd: 53, spe: 43},
+		abilities: {0: "Beast Boost"},
 		heightm: 5.5,
 		weightkg: 888,
 		color: "Black",
@@ -13960,8 +13960,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Necrozma",
 		types: ["Psychic"],
 		gender: "N",
-		baseStats: { hp: 97, atk: 107, def: 101, spa: 127, spd: 89, spe: 79 },
-		abilities: { 0: "Prism Armor" },
+		baseStats: {hp: 97, atk: 107, def: 101, spa: 127, spd: 89, spe: 79},
+		abilities: {0: "Prism Armor"},
 		heightm: 2.4,
 		weightkg: 230,
 		color: "Black",
@@ -13976,8 +13976,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Dusk-Mane",
 		types: ["Psychic", "Steel"],
 		gender: "N",
-		baseStats: { hp: 97, atk: 157, def: 127, spa: 113, spd: 109, spe: 77 },
-		abilities: { 0: "Prism Armor" },
+		baseStats: {hp: 97, atk: 157, def: 127, spa: 113, spd: 109, spe: 77},
+		abilities: {0: "Prism Armor"},
 		heightm: 3.8,
 		weightkg: 460,
 		color: "Yellow",
@@ -13991,8 +13991,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Dawn-Wings",
 		types: ["Psychic", "Ghost"],
 		gender: "N",
-		baseStats: { hp: 97, atk: 113, def: 109, spa: 157, spd: 127, spe: 77 },
-		abilities: { 0: "Prism Armor" },
+		baseStats: {hp: 97, atk: 113, def: 109, spa: 157, spd: 127, spe: 77},
+		abilities: {0: "Prism Armor"},
 		heightm: 4.2,
 		weightkg: 350,
 		color: "Blue",
@@ -14006,8 +14006,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Ultra",
 		types: ["Psychic", "Dragon"],
 		gender: "N",
-		baseStats: { hp: 97, atk: 167, def: 97, spa: 167, spd: 97, spe: 129 },
-		abilities: { 0: "Neuroforce" },
+		baseStats: {hp: 97, atk: 167, def: 97, spa: 167, spd: 97, spe: 129},
+		abilities: {0: "Neuroforce"},
 		heightm: 7.5,
 		weightkg: 230,
 		color: "Yellow",
@@ -14020,8 +14020,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Magearna",
 		types: ["Steel", "Fairy"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 95, def: 115, spa: 130, spd: 115, spe: 65 },
-		abilities: { 0: "Soul-Heart" },
+		baseStats: {hp: 80, atk: 95, def: 115, spa: 130, spd: 115, spe: 65},
+		abilities: {0: "Soul-Heart"},
 		heightm: 1,
 		weightkg: 80.5,
 		color: "Gray",
@@ -14036,8 +14036,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Original",
 		types: ["Steel", "Fairy"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 95, def: 115, spa: 130, spd: 115, spe: 65 },
-		abilities: { 0: "Soul-Heart" },
+		baseStats: {hp: 80, atk: 95, def: 115, spa: 130, spd: 115, spe: 65},
+		abilities: {0: "Soul-Heart"},
 		heightm: 1,
 		weightkg: 80.5,
 		color: "Red",
@@ -14048,8 +14048,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Marshadow",
 		types: ["Fighting", "Ghost"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 125, def: 80, spa: 90, spd: 90, spe: 125 },
-		abilities: { 0: "Technician" },
+		baseStats: {hp: 90, atk: 125, def: 80, spa: 90, spd: 90, spe: 125},
+		abilities: {0: "Technician"},
 		heightm: 0.7,
 		weightkg: 22.2,
 		color: "Gray",
@@ -14060,8 +14060,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Poipole",
 		types: ["Poison"],
 		gender: "N",
-		baseStats: { hp: 67, atk: 73, def: 67, spa: 73, spd: 67, spe: 73 },
-		abilities: { 0: "Beast Boost" },
+		baseStats: {hp: 67, atk: 73, def: 67, spa: 73, spd: 67, spe: 73},
+		abilities: {0: "Beast Boost"},
 		heightm: 0.6,
 		weightkg: 1.8,
 		color: "Purple",
@@ -14073,8 +14073,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Naganadel",
 		types: ["Poison", "Dragon"],
 		gender: "N",
-		baseStats: { hp: 73, atk: 73, def: 73, spa: 127, spd: 73, spe: 121 },
-		abilities: { 0: "Beast Boost" },
+		baseStats: {hp: 73, atk: 73, def: 73, spa: 127, spd: 73, spe: 121},
+		abilities: {0: "Beast Boost"},
 		heightm: 3.6,
 		weightkg: 150,
 		color: "Purple",
@@ -14088,8 +14088,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Stakataka",
 		types: ["Rock", "Steel"],
 		gender: "N",
-		baseStats: { hp: 61, atk: 131, def: 211, spa: 53, spd: 101, spe: 13 },
-		abilities: { 0: "Beast Boost" },
+		baseStats: {hp: 61, atk: 131, def: 211, spa: 53, spd: 101, spe: 13},
+		abilities: {0: "Beast Boost"},
 		heightm: 5.5,
 		weightkg: 820,
 		color: "Gray",
@@ -14100,8 +14100,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Blacephalon",
 		types: ["Fire", "Ghost"],
 		gender: "N",
-		baseStats: { hp: 53, atk: 127, def: 53, spa: 151, spd: 79, spe: 107 },
-		abilities: { 0: "Beast Boost" },
+		baseStats: {hp: 53, atk: 127, def: 53, spa: 151, spd: 79, spe: 107},
+		abilities: {0: "Beast Boost"},
 		heightm: 1.8,
 		weightkg: 13,
 		color: "White",
@@ -14112,8 +14112,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Zeraora",
 		types: ["Electric"],
 		gender: "N",
-		baseStats: { hp: 88, atk: 112, def: 75, spa: 102, spd: 80, spe: 143 },
-		abilities: { 0: "Volt Absorb" },
+		baseStats: {hp: 88, atk: 112, def: 75, spa: 102, spd: 80, spe: 143},
+		abilities: {0: "Volt Absorb"},
 		heightm: 1.5,
 		weightkg: 44.5,
 		color: "Yellow",
@@ -14124,8 +14124,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Meltan",
 		types: ["Steel"],
 		gender: "N",
-		baseStats: { hp: 46, atk: 65, def: 65, spa: 55, spd: 35, spe: 34 },
-		abilities: { 0: "Magnet Pull" },
+		baseStats: {hp: 46, atk: 65, def: 65, spa: 55, spd: 35, spe: 34},
+		abilities: {0: "Magnet Pull"},
 		heightm: 0.2,
 		weightkg: 8,
 		color: "Gray",
@@ -14136,8 +14136,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Melmetal",
 		types: ["Steel"],
 		gender: "N",
-		baseStats: { hp: 135, atk: 143, def: 143, spa: 80, spd: 65, spe: 34 },
-		abilities: { 0: "Iron Fist" },
+		baseStats: {hp: 135, atk: 143, def: 143, spa: 80, spd: 65, spe: 34},
+		abilities: {0: "Iron Fist"},
 		heightm: 2.5,
 		weightkg: 800,
 		color: "Gray",
@@ -14151,8 +14151,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Gmax",
 		types: ["Steel"],
 		gender: "N",
-		baseStats: { hp: 135, atk: 143, def: 143, spa: 80, spd: 65, spe: 34 },
-		abilities: { 0: "Iron Fist" },
+		baseStats: {hp: 135, atk: 143, def: 143, spa: 80, spd: 65, spe: 34},
+		abilities: {0: "Iron Fist"},
 		heightm: 25,
 		weightkg: 0,
 		color: "Gray",
@@ -14163,9 +14163,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 810,
 		name: "Grookey",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 50, atk: 65, def: 50, spa: 40, spd: 40, spe: 65 },
-		abilities: { 0: "Overgrow", H: "Grassy Surge" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 50, atk: 65, def: 50, spa: 40, spd: 40, spe: 65},
+		abilities: {0: "Overgrow", H: "Grassy Surge"},
 		heightm: 0.3,
 		weightkg: 5,
 		color: "Green",
@@ -14176,9 +14176,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 811,
 		name: "Thwackey",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 70, atk: 85, def: 70, spa: 55, spd: 60, spe: 80 },
-		abilities: { 0: "Overgrow", H: "Grassy Surge" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 70, atk: 85, def: 70, spa: 55, spd: 60, spe: 80},
+		abilities: {0: "Overgrow", H: "Grassy Surge"},
 		heightm: 0.7,
 		weightkg: 14,
 		color: "Green",
@@ -14191,9 +14191,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 812,
 		name: "Rillaboom",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 100, atk: 125, def: 90, spa: 60, spd: 70, spe: 85 },
-		abilities: { 0: "Overgrow", H: "Grassy Surge" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 100, atk: 125, def: 90, spa: 60, spd: 70, spe: 85},
+		abilities: {0: "Overgrow", H: "Grassy Surge"},
 		heightm: 2.1,
 		weightkg: 90,
 		color: "Green",
@@ -14208,9 +14208,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Rillaboom",
 		forme: "Gmax",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 100, atk: 125, def: 90, spa: 60, spd: 70, spe: 85 },
-		abilities: { 0: "Overgrow", H: "Grassy Surge" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 100, atk: 125, def: 90, spa: 60, spd: 70, spe: 85},
+		abilities: {0: "Overgrow", H: "Grassy Surge"},
 		heightm: 3,
 		weightkg: 0,
 		color: "Green",
@@ -14221,9 +14221,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 813,
 		name: "Scorbunny",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 50, atk: 71, def: 40, spa: 40, spd: 40, spe: 69 },
-		abilities: { 0: "Blaze", H: "Libero" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 50, atk: 71, def: 40, spa: 40, spd: 40, spe: 69},
+		abilities: {0: "Blaze", H: "Libero"},
 		heightm: 0.3,
 		weightkg: 4.5,
 		color: "White",
@@ -14234,9 +14234,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 814,
 		name: "Raboot",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 65, atk: 86, def: 60, spa: 55, spd: 60, spe: 94 },
-		abilities: { 0: "Blaze", H: "Libero" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 65, atk: 86, def: 60, spa: 55, spd: 60, spe: 94},
+		abilities: {0: "Blaze", H: "Libero"},
 		heightm: 0.6,
 		weightkg: 9,
 		color: "Gray",
@@ -14249,9 +14249,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 815,
 		name: "Cinderace",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 80, atk: 116, def: 75, spa: 65, spd: 75, spe: 119 },
-		abilities: { 0: "Blaze", H: "Libero" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 80, atk: 116, def: 75, spa: 65, spd: 75, spe: 119},
+		abilities: {0: "Blaze", H: "Libero"},
 		heightm: 1.4,
 		weightkg: 33,
 		color: "White",
@@ -14266,9 +14266,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Cinderace",
 		forme: "Gmax",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 80, atk: 116, def: 75, spa: 65, spd: 75, spe: 119 },
-		abilities: { 0: "Blaze", H: "Libero" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 80, atk: 116, def: 75, spa: 65, spd: 75, spe: 119},
+		abilities: {0: "Blaze", H: "Libero"},
 		heightm: 3,
 		weightkg: 0,
 		color: "White",
@@ -14279,9 +14279,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 816,
 		name: "Sobble",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 50, atk: 40, def: 40, spa: 70, spd: 40, spe: 70 },
-		abilities: { 0: "Torrent", H: "Sniper" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 50, atk: 40, def: 40, spa: 70, spd: 40, spe: 70},
+		abilities: {0: "Torrent", H: "Sniper"},
 		heightm: 0.3,
 		weightkg: 4,
 		color: "Blue",
@@ -14292,9 +14292,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 817,
 		name: "Drizzile",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 65, atk: 60, def: 55, spa: 95, spd: 55, spe: 90 },
-		abilities: { 0: "Torrent", H: "Sniper" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 65, atk: 60, def: 55, spa: 95, spd: 55, spe: 90},
+		abilities: {0: "Torrent", H: "Sniper"},
 		heightm: 0.7,
 		weightkg: 11.5,
 		color: "Blue",
@@ -14307,9 +14307,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 818,
 		name: "Inteleon",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 70, atk: 85, def: 65, spa: 125, spd: 65, spe: 120 },
-		abilities: { 0: "Torrent", H: "Sniper" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 70, atk: 85, def: 65, spa: 125, spd: 65, spe: 120},
+		abilities: {0: "Torrent", H: "Sniper"},
 		heightm: 1.9,
 		weightkg: 45.2,
 		color: "Blue",
@@ -14324,9 +14324,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Inteleon",
 		forme: "Gmax",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 70, atk: 85, def: 65, spa: 125, spd: 65, spe: 120 },
-		abilities: { 0: "Torrent", H: "Sniper" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 70, atk: 85, def: 65, spa: 125, spd: 65, spe: 120},
+		abilities: {0: "Torrent", H: "Sniper"},
 		heightm: 3,
 		weightkg: 0,
 		color: "Blue",
@@ -14337,8 +14337,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 819,
 		name: "Skwovet",
 		types: ["Normal"],
-		baseStats: { hp: 70, atk: 55, def: 55, spa: 35, spd: 35, spe: 25 },
-		abilities: { 0: "Cheek Pouch", H: "Gluttony" },
+		baseStats: {hp: 70, atk: 55, def: 55, spa: 35, spd: 35, spe: 25},
+		abilities: {0: "Cheek Pouch", H: "Gluttony"},
 		heightm: 0.3,
 		weightkg: 2.5,
 		color: "Brown",
@@ -14349,8 +14349,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 820,
 		name: "Greedent",
 		types: ["Normal"],
-		baseStats: { hp: 120, atk: 95, def: 95, spa: 55, spd: 75, spe: 20 },
-		abilities: { 0: "Cheek Pouch", H: "Gluttony" },
+		baseStats: {hp: 120, atk: 95, def: 95, spa: 55, spd: 75, spe: 20},
+		abilities: {0: "Cheek Pouch", H: "Gluttony"},
 		heightm: 0.6,
 		weightkg: 6,
 		color: "Brown",
@@ -14362,8 +14362,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 821,
 		name: "Rookidee",
 		types: ["Flying"],
-		baseStats: { hp: 38, atk: 47, def: 35, spa: 33, spd: 35, spe: 57 },
-		abilities: { 0: "Keen Eye", 1: "Unnerve", H: "Big Pecks" },
+		baseStats: {hp: 38, atk: 47, def: 35, spa: 33, spd: 35, spe: 57},
+		abilities: {0: "Keen Eye", 1: "Unnerve", H: "Big Pecks"},
 		heightm: 0.2,
 		weightkg: 1.8,
 		color: "Blue",
@@ -14374,8 +14374,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 822,
 		name: "Corvisquire",
 		types: ["Flying"],
-		baseStats: { hp: 68, atk: 67, def: 55, spa: 43, spd: 55, spe: 77 },
-		abilities: { 0: "Keen Eye", 1: "Unnerve", H: "Big Pecks" },
+		baseStats: {hp: 68, atk: 67, def: 55, spa: 43, spd: 55, spe: 77},
+		abilities: {0: "Keen Eye", 1: "Unnerve", H: "Big Pecks"},
 		heightm: 0.8,
 		weightkg: 16,
 		color: "Blue",
@@ -14388,8 +14388,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 823,
 		name: "Corviknight",
 		types: ["Flying", "Steel"],
-		baseStats: { hp: 98, atk: 87, def: 105, spa: 53, spd: 85, spe: 67 },
-		abilities: { 0: "Pressure", 1: "Unnerve", H: "Mirror Armor" },
+		baseStats: {hp: 98, atk: 87, def: 105, spa: 53, spd: 85, spe: 67},
+		abilities: {0: "Pressure", 1: "Unnerve", H: "Mirror Armor"},
 		heightm: 2.2,
 		weightkg: 75,
 		color: "Purple",
@@ -14404,8 +14404,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Corviknight",
 		forme: "Gmax",
 		types: ["Flying", "Steel"],
-		baseStats: { hp: 98, atk: 87, def: 105, spa: 53, spd: 85, spe: 67 },
-		abilities: { 0: "Pressure", 1: "Unnerve", H: "Mirror Armor" },
+		baseStats: {hp: 98, atk: 87, def: 105, spa: 53, spd: 85, spe: 67},
+		abilities: {0: "Pressure", 1: "Unnerve", H: "Mirror Armor"},
 		heightm: 14,
 		weightkg: 0,
 		color: "Purple",
@@ -14416,8 +14416,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 824,
 		name: "Blipbug",
 		types: ["Bug"],
-		baseStats: { hp: 25, atk: 20, def: 20, spa: 25, spd: 45, spe: 45 },
-		abilities: { 0: "Swarm", 1: "Compound Eyes", H: "Telepathy" },
+		baseStats: {hp: 25, atk: 20, def: 20, spa: 25, spd: 45, spe: 45},
+		abilities: {0: "Swarm", 1: "Compound Eyes", H: "Telepathy"},
 		heightm: 0.4,
 		weightkg: 8,
 		color: "Blue",
@@ -14428,8 +14428,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 825,
 		name: "Dottler",
 		types: ["Bug", "Psychic"],
-		baseStats: { hp: 50, atk: 35, def: 80, spa: 50, spd: 90, spe: 30 },
-		abilities: { 0: "Swarm", 1: "Compound Eyes", H: "Telepathy" },
+		baseStats: {hp: 50, atk: 35, def: 80, spa: 50, spd: 90, spe: 30},
+		abilities: {0: "Swarm", 1: "Compound Eyes", H: "Telepathy"},
 		heightm: 0.4,
 		weightkg: 19.5,
 		color: "Yellow",
@@ -14442,8 +14442,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 826,
 		name: "Orbeetle",
 		types: ["Bug", "Psychic"],
-		baseStats: { hp: 60, atk: 45, def: 110, spa: 80, spd: 120, spe: 90 },
-		abilities: { 0: "Swarm", 1: "Frisk", H: "Telepathy" },
+		baseStats: {hp: 60, atk: 45, def: 110, spa: 80, spd: 120, spe: 90},
+		abilities: {0: "Swarm", 1: "Frisk", H: "Telepathy"},
 		heightm: 0.4,
 		weightkg: 40.8,
 		color: "Red",
@@ -14458,8 +14458,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Orbeetle",
 		forme: "Gmax",
 		types: ["Bug", "Psychic"],
-		baseStats: { hp: 60, atk: 45, def: 110, spa: 80, spd: 120, spe: 90 },
-		abilities: { 0: "Swarm", 1: "Frisk", H: "Telepathy" },
+		baseStats: {hp: 60, atk: 45, def: 110, spa: 80, spd: 120, spe: 90},
+		abilities: {0: "Swarm", 1: "Frisk", H: "Telepathy"},
 		heightm: 14,
 		weightkg: 0,
 		color: "Red",
@@ -14470,8 +14470,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 827,
 		name: "Nickit",
 		types: ["Dark"],
-		baseStats: { hp: 40, atk: 28, def: 28, spa: 47, spd: 52, spe: 50 },
-		abilities: { 0: "Run Away", 1: "Unburden", H: "Stakeout" },
+		baseStats: {hp: 40, atk: 28, def: 28, spa: 47, spd: 52, spe: 50},
+		abilities: {0: "Run Away", 1: "Unburden", H: "Stakeout"},
 		heightm: 0.6,
 		weightkg: 8.9,
 		color: "Brown",
@@ -14482,8 +14482,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 828,
 		name: "Thievul",
 		types: ["Dark"],
-		baseStats: { hp: 70, atk: 58, def: 58, spa: 87, spd: 92, spe: 90 },
-		abilities: { 0: "Run Away", 1: "Unburden", H: "Stakeout" },
+		baseStats: {hp: 70, atk: 58, def: 58, spa: 87, spd: 92, spe: 90},
+		abilities: {0: "Run Away", 1: "Unburden", H: "Stakeout"},
 		heightm: 1.2,
 		weightkg: 19.9,
 		color: "Brown",
@@ -14495,8 +14495,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 829,
 		name: "Gossifleur",
 		types: ["Grass"],
-		baseStats: { hp: 40, atk: 40, def: 60, spa: 40, spd: 60, spe: 10 },
-		abilities: { 0: "Cotton Down", 1: "Regenerator", H: "Effect Spore" },
+		baseStats: {hp: 40, atk: 40, def: 60, spa: 40, spd: 60, spe: 10},
+		abilities: {0: "Cotton Down", 1: "Regenerator", H: "Effect Spore"},
 		heightm: 0.4,
 		weightkg: 2.2,
 		color: "Green",
@@ -14507,8 +14507,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 830,
 		name: "Eldegoss",
 		types: ["Grass"],
-		baseStats: { hp: 60, atk: 50, def: 90, spa: 80, spd: 120, spe: 60 },
-		abilities: { 0: "Cotton Down", 1: "Regenerator", H: "Effect Spore" },
+		baseStats: {hp: 60, atk: 50, def: 90, spa: 80, spd: 120, spe: 60},
+		abilities: {0: "Cotton Down", 1: "Regenerator", H: "Effect Spore"},
 		heightm: 0.5,
 		weightkg: 2.5,
 		color: "Green",
@@ -14520,8 +14520,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 831,
 		name: "Wooloo",
 		types: ["Normal"],
-		baseStats: { hp: 42, atk: 40, def: 55, spa: 40, spd: 45, spe: 48 },
-		abilities: { 0: "Fluffy", 1: "Run Away", H: "Bulletproof" },
+		baseStats: {hp: 42, atk: 40, def: 55, spa: 40, spd: 45, spe: 48},
+		abilities: {0: "Fluffy", 1: "Run Away", H: "Bulletproof"},
 		heightm: 0.6,
 		weightkg: 6,
 		color: "White",
@@ -14532,8 +14532,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 832,
 		name: "Dubwool",
 		types: ["Normal"],
-		baseStats: { hp: 72, atk: 80, def: 100, spa: 60, spd: 90, spe: 88 },
-		abilities: { 0: "Fluffy", 1: "Steadfast", H: "Bulletproof" },
+		baseStats: {hp: 72, atk: 80, def: 100, spa: 60, spd: 90, spe: 88},
+		abilities: {0: "Fluffy", 1: "Steadfast", H: "Bulletproof"},
 		heightm: 1.3,
 		weightkg: 43,
 		color: "White",
@@ -14545,8 +14545,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 833,
 		name: "Chewtle",
 		types: ["Water"],
-		baseStats: { hp: 50, atk: 64, def: 50, spa: 38, spd: 38, spe: 44 },
-		abilities: { 0: "Strong Jaw", 1: "Shell Armor", H: "Swift Swim" },
+		baseStats: {hp: 50, atk: 64, def: 50, spa: 38, spd: 38, spe: 44},
+		abilities: {0: "Strong Jaw", 1: "Shell Armor", H: "Swift Swim"},
 		heightm: 0.3,
 		weightkg: 8.5,
 		color: "Green",
@@ -14557,8 +14557,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 834,
 		name: "Drednaw",
 		types: ["Water", "Rock"],
-		baseStats: { hp: 90, atk: 115, def: 90, spa: 48, spd: 68, spe: 74 },
-		abilities: { 0: "Strong Jaw", 1: "Shell Armor", H: "Swift Swim" },
+		baseStats: {hp: 90, atk: 115, def: 90, spa: 48, spd: 68, spe: 74},
+		abilities: {0: "Strong Jaw", 1: "Shell Armor", H: "Swift Swim"},
 		heightm: 1,
 		weightkg: 115.5,
 		color: "Green",
@@ -14573,8 +14573,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Drednaw",
 		forme: "Gmax",
 		types: ["Water", "Rock"],
-		baseStats: { hp: 90, atk: 115, def: 90, spa: 48, spd: 68, spe: 74 },
-		abilities: { 0: "Strong Jaw", 1: "Shell Armor", H: "Swift Swim" },
+		baseStats: {hp: 90, atk: 115, def: 90, spa: 48, spd: 68, spe: 74},
+		abilities: {0: "Strong Jaw", 1: "Shell Armor", H: "Swift Swim"},
 		heightm: 24,
 		weightkg: 0,
 		color: "Green",
@@ -14585,8 +14585,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 835,
 		name: "Yamper",
 		types: ["Electric"],
-		baseStats: { hp: 59, atk: 45, def: 50, spa: 40, spd: 50, spe: 26 },
-		abilities: { 0: "Ball Fetch", H: "Rattled" },
+		baseStats: {hp: 59, atk: 45, def: 50, spa: 40, spd: 50, spe: 26},
+		abilities: {0: "Ball Fetch", H: "Rattled"},
 		heightm: 0.3,
 		weightkg: 13.5,
 		color: "Yellow",
@@ -14597,8 +14597,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 836,
 		name: "Boltund",
 		types: ["Electric"],
-		baseStats: { hp: 69, atk: 90, def: 60, spa: 90, spd: 60, spe: 121 },
-		abilities: { 0: "Strong Jaw", H: "Competitive" },
+		baseStats: {hp: 69, atk: 90, def: 60, spa: 90, spd: 60, spe: 121},
+		abilities: {0: "Strong Jaw", H: "Competitive"},
 		heightm: 1,
 		weightkg: 34,
 		color: "Yellow",
@@ -14610,8 +14610,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 837,
 		name: "Rolycoly",
 		types: ["Rock"],
-		baseStats: { hp: 30, atk: 40, def: 50, spa: 40, spd: 50, spe: 30 },
-		abilities: { 0: "Steam Engine", 1: "Heatproof", H: "Flash Fire" },
+		baseStats: {hp: 30, atk: 40, def: 50, spa: 40, spd: 50, spe: 30},
+		abilities: {0: "Steam Engine", 1: "Heatproof", H: "Flash Fire"},
 		heightm: 0.3,
 		weightkg: 12,
 		color: "Black",
@@ -14622,8 +14622,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 838,
 		name: "Carkol",
 		types: ["Rock", "Fire"],
-		baseStats: { hp: 80, atk: 60, def: 90, spa: 60, spd: 70, spe: 50 },
-		abilities: { 0: "Steam Engine", 1: "Flame Body", H: "Flash Fire" },
+		baseStats: {hp: 80, atk: 60, def: 90, spa: 60, spd: 70, spe: 50},
+		abilities: {0: "Steam Engine", 1: "Flame Body", H: "Flash Fire"},
 		heightm: 1.1,
 		weightkg: 78,
 		color: "Black",
@@ -14636,8 +14636,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 839,
 		name: "Coalossal",
 		types: ["Rock", "Fire"],
-		baseStats: { hp: 110, atk: 80, def: 120, spa: 80, spd: 90, spe: 30 },
-		abilities: { 0: "Steam Engine", 1: "Flame Body", H: "Flash Fire" },
+		baseStats: {hp: 110, atk: 80, def: 120, spa: 80, spd: 90, spe: 30},
+		abilities: {0: "Steam Engine", 1: "Flame Body", H: "Flash Fire"},
 		heightm: 2.8,
 		weightkg: 310.5,
 		color: "Black",
@@ -14652,8 +14652,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Coalossal",
 		forme: "Gmax",
 		types: ["Rock", "Fire"],
-		baseStats: { hp: 110, atk: 80, def: 120, spa: 80, spd: 90, spe: 30 },
-		abilities: { 0: "Steam Engine", 1: "Flame Body", H: "Flash Fire" },
+		baseStats: {hp: 110, atk: 80, def: 120, spa: 80, spd: 90, spe: 30},
+		abilities: {0: "Steam Engine", 1: "Flame Body", H: "Flash Fire"},
 		heightm: 42,
 		weightkg: 0,
 		color: "Black",
@@ -14664,8 +14664,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 840,
 		name: "Applin",
 		types: ["Grass", "Dragon"],
-		baseStats: { hp: 40, atk: 40, def: 80, spa: 40, spd: 40, spe: 20 },
-		abilities: { 0: "Ripen", 1: "Gluttony", H: "Bulletproof" },
+		baseStats: {hp: 40, atk: 40, def: 80, spa: 40, spd: 40, spe: 20},
+		abilities: {0: "Ripen", 1: "Gluttony", H: "Bulletproof"},
 		heightm: 0.2,
 		weightkg: 0.5,
 		color: "Green",
@@ -14676,8 +14676,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 841,
 		name: "Flapple",
 		types: ["Grass", "Dragon"],
-		baseStats: { hp: 70, atk: 110, def: 80, spa: 95, spd: 60, spe: 70 },
-		abilities: { 0: "Ripen", 1: "Gluttony", H: "Hustle" },
+		baseStats: {hp: 70, atk: 110, def: 80, spa: 95, spd: 60, spe: 70},
+		abilities: {0: "Ripen", 1: "Gluttony", H: "Hustle"},
 		heightm: 0.3,
 		weightkg: 1,
 		color: "Green",
@@ -14693,8 +14693,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Flapple",
 		forme: "Gmax",
 		types: ["Grass", "Dragon"],
-		baseStats: { hp: 70, atk: 110, def: 80, spa: 95, spd: 60, spe: 70 },
-		abilities: { 0: "Ripen", 1: "Gluttony", H: "Hustle" },
+		baseStats: {hp: 70, atk: 110, def: 80, spa: 95, spd: 60, spe: 70},
+		abilities: {0: "Ripen", 1: "Gluttony", H: "Hustle"},
 		heightm: 24,
 		weightkg: 0,
 		color: "Green",
@@ -14705,8 +14705,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 842,
 		name: "Appletun",
 		types: ["Grass", "Dragon"],
-		baseStats: { hp: 110, atk: 85, def: 80, spa: 100, spd: 80, spe: 30 },
-		abilities: { 0: "Ripen", 1: "Gluttony", H: "Thick Fat" },
+		baseStats: {hp: 110, atk: 85, def: 80, spa: 100, spd: 80, spe: 30},
+		abilities: {0: "Ripen", 1: "Gluttony", H: "Thick Fat"},
 		heightm: 0.4,
 		weightkg: 13,
 		color: "Green",
@@ -14722,8 +14722,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Appletun",
 		forme: "Gmax",
 		types: ["Grass", "Dragon"],
-		baseStats: { hp: 110, atk: 85, def: 80, spa: 100, spd: 80, spe: 30 },
-		abilities: { 0: "Ripen", 1: "Gluttony", H: "Thick Fat" },
+		baseStats: {hp: 110, atk: 85, def: 80, spa: 100, spd: 80, spe: 30},
+		abilities: {0: "Ripen", 1: "Gluttony", H: "Thick Fat"},
 		heightm: 24,
 		weightkg: 0,
 		color: "Green",
@@ -14734,8 +14734,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 843,
 		name: "Silicobra",
 		types: ["Ground"],
-		baseStats: { hp: 52, atk: 57, def: 75, spa: 35, spd: 50, spe: 46 },
-		abilities: { 0: "Sand Spit", 1: "Shed Skin", H: "Sand Veil" },
+		baseStats: {hp: 52, atk: 57, def: 75, spa: 35, spd: 50, spe: 46},
+		abilities: {0: "Sand Spit", 1: "Shed Skin", H: "Sand Veil"},
 		heightm: 2.2,
 		weightkg: 7.6,
 		color: "Green",
@@ -14746,8 +14746,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 844,
 		name: "Sandaconda",
 		types: ["Ground"],
-		baseStats: { hp: 72, atk: 107, def: 125, spa: 65, spd: 70, spe: 71 },
-		abilities: { 0: "Sand Spit", 1: "Shed Skin", H: "Sand Veil" },
+		baseStats: {hp: 72, atk: 107, def: 125, spa: 65, spd: 70, spe: 71},
+		abilities: {0: "Sand Spit", 1: "Shed Skin", H: "Sand Veil"},
 		heightm: 3.8,
 		weightkg: 65.5,
 		color: "Green",
@@ -14762,8 +14762,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Sandaconda",
 		forme: "Gmax",
 		types: ["Ground"],
-		baseStats: { hp: 72, atk: 107, def: 125, spa: 65, spd: 70, spe: 71 },
-		abilities: { 0: "Sand Spit", 1: "Shed Skin", H: "Sand Veil" },
+		baseStats: {hp: 72, atk: 107, def: 125, spa: 65, spd: 70, spe: 71},
+		abilities: {0: "Sand Spit", 1: "Shed Skin", H: "Sand Veil"},
 		heightm: 22,
 		weightkg: 0,
 		color: "Green",
@@ -14774,8 +14774,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 845,
 		name: "Cramorant",
 		types: ["Flying", "Water"],
-		baseStats: { hp: 70, atk: 85, def: 55, spa: 85, spd: 95, spe: 85 },
-		abilities: { 0: "Gulp Missile" },
+		baseStats: {hp: 70, atk: 85, def: 55, spa: 85, spd: 95, spe: 85},
+		abilities: {0: "Gulp Missile"},
 		heightm: 0.8,
 		weightkg: 18,
 		color: "Blue",
@@ -14789,8 +14789,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Cramorant",
 		forme: "Gulping",
 		types: ["Flying", "Water"],
-		baseStats: { hp: 70, atk: 85, def: 55, spa: 85, spd: 95, spe: 85 },
-		abilities: { 0: "Gulp Missile" },
+		baseStats: {hp: 70, atk: 85, def: 55, spa: 85, spd: 95, spe: 85},
+		abilities: {0: "Gulp Missile"},
 		heightm: 0.8,
 		weightkg: 18,
 		color: "Blue",
@@ -14804,8 +14804,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Cramorant",
 		forme: "Gorging",
 		types: ["Flying", "Water"],
-		baseStats: { hp: 70, atk: 85, def: 55, spa: 85, spd: 95, spe: 85 },
-		abilities: { 0: "Gulp Missile" },
+		baseStats: {hp: 70, atk: 85, def: 55, spa: 85, spd: 95, spe: 85},
+		abilities: {0: "Gulp Missile"},
 		heightm: 0.8,
 		weightkg: 18,
 		color: "Blue",
@@ -14817,8 +14817,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 846,
 		name: "Arrokuda",
 		types: ["Water"],
-		baseStats: { hp: 41, atk: 63, def: 40, spa: 40, spd: 30, spe: 66 },
-		abilities: { 0: "Swift Swim", H: "Propeller Tail" },
+		baseStats: {hp: 41, atk: 63, def: 40, spa: 40, spd: 30, spe: 66},
+		abilities: {0: "Swift Swim", H: "Propeller Tail"},
 		heightm: 0.5,
 		weightkg: 1,
 		color: "Brown",
@@ -14829,8 +14829,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 847,
 		name: "Barraskewda",
 		types: ["Water"],
-		baseStats: { hp: 61, atk: 123, def: 60, spa: 60, spd: 50, spe: 136 },
-		abilities: { 0: "Swift Swim", H: "Propeller Tail" },
+		baseStats: {hp: 61, atk: 123, def: 60, spa: 60, spd: 50, spe: 136},
+		abilities: {0: "Swift Swim", H: "Propeller Tail"},
 		heightm: 1.3,
 		weightkg: 30,
 		color: "Brown",
@@ -14842,8 +14842,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 848,
 		name: "Toxel",
 		types: ["Electric", "Poison"],
-		baseStats: { hp: 40, atk: 38, def: 35, spa: 54, spd: 35, spe: 40 },
-		abilities: { 0: "Rattled", 1: "Static", H: "Klutz" },
+		baseStats: {hp: 40, atk: 38, def: 35, spa: 54, spd: 35, spe: 40},
+		abilities: {0: "Rattled", 1: "Static", H: "Klutz"},
 		heightm: 0.4,
 		weightkg: 11,
 		color: "Purple",
@@ -14856,8 +14856,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Toxtricity",
 		baseForme: "Amped",
 		types: ["Electric", "Poison"],
-		baseStats: { hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75 },
-		abilities: { 0: "Punk Rock", 1: "Plus", H: "Technician" },
+		baseStats: {hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75},
+		abilities: {0: "Punk Rock", 1: "Plus", H: "Technician"},
 		heightm: 1.6,
 		weightkg: 40,
 		color: "Purple",
@@ -14874,8 +14874,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Toxtricity",
 		forme: "Low-Key",
 		types: ["Electric", "Poison"],
-		baseStats: { hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75 },
-		abilities: { 0: "Punk Rock", 1: "Minus", H: "Technician" },
+		baseStats: {hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75},
+		abilities: {0: "Punk Rock", 1: "Minus", H: "Technician"},
 		heightm: 1.6,
 		weightkg: 40,
 		color: "Purple",
@@ -14890,8 +14890,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Toxtricity",
 		forme: "Gmax",
 		types: ["Electric", "Poison"],
-		baseStats: { hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75 },
-		abilities: { 0: "Punk Rock", 1: "Plus", H: "Technician" },
+		baseStats: {hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75},
+		abilities: {0: "Punk Rock", 1: "Plus", H: "Technician"},
 		heightm: 24,
 		weightkg: 0,
 		color: "Purple",
@@ -14904,8 +14904,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Toxtricity",
 		forme: "Low-Key-Gmax",
 		types: ["Electric", "Poison"],
-		baseStats: { hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75 },
-		abilities: { 0: "Punk Rock", 1: "Minus", H: "Technician" },
+		baseStats: {hp: 75, atk: 98, def: 70, spa: 114, spd: 70, spe: 75},
+		abilities: {0: "Punk Rock", 1: "Minus", H: "Technician"},
 		heightm: 24,
 		weightkg: 0,
 		color: "Purple",
@@ -14917,8 +14917,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 850,
 		name: "Sizzlipede",
 		types: ["Fire", "Bug"],
-		baseStats: { hp: 50, atk: 65, def: 45, spa: 50, spd: 50, spe: 45 },
-		abilities: { 0: "Flash Fire", 1: "White Smoke", H: "Flame Body" },
+		baseStats: {hp: 50, atk: 65, def: 45, spa: 50, spd: 50, spe: 45},
+		abilities: {0: "Flash Fire", 1: "White Smoke", H: "Flame Body"},
 		heightm: 0.7,
 		weightkg: 1,
 		color: "Red",
@@ -14929,8 +14929,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 851,
 		name: "Centiskorch",
 		types: ["Fire", "Bug"],
-		baseStats: { hp: 100, atk: 115, def: 65, spa: 90, spd: 90, spe: 65 },
-		abilities: { 0: "Flash Fire", 1: "White Smoke", H: "Flame Body" },
+		baseStats: {hp: 100, atk: 115, def: 65, spa: 90, spd: 90, spe: 65},
+		abilities: {0: "Flash Fire", 1: "White Smoke", H: "Flame Body"},
 		heightm: 3,
 		weightkg: 120,
 		color: "Red",
@@ -14945,8 +14945,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Centiskorch",
 		forme: "Gmax",
 		types: ["Fire", "Bug"],
-		baseStats: { hp: 100, atk: 115, def: 65, spa: 90, spd: 90, spe: 65 },
-		abilities: { 0: "Flash Fire", 1: "White Smoke", H: "Flame Body" },
+		baseStats: {hp: 100, atk: 115, def: 65, spa: 90, spd: 90, spe: 65},
+		abilities: {0: "Flash Fire", 1: "White Smoke", H: "Flame Body"},
 		heightm: 75,
 		weightkg: 0,
 		color: "Red",
@@ -14957,8 +14957,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 852,
 		name: "Clobbopus",
 		types: ["Fighting"],
-		baseStats: { hp: 50, atk: 68, def: 60, spa: 50, spd: 50, spe: 32 },
-		abilities: { 0: "Limber", H: "Technician" },
+		baseStats: {hp: 50, atk: 68, def: 60, spa: 50, spd: 50, spe: 32},
+		abilities: {0: "Limber", H: "Technician"},
 		heightm: 0.6,
 		weightkg: 4,
 		color: "Brown",
@@ -14969,8 +14969,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 853,
 		name: "Grapploct",
 		types: ["Fighting"],
-		baseStats: { hp: 80, atk: 118, def: 90, spa: 70, spd: 80, spe: 42 },
-		abilities: { 0: "Limber", H: "Technician" },
+		baseStats: {hp: 80, atk: 118, def: 90, spa: 70, spd: 80, spe: 42},
+		abilities: {0: "Limber", H: "Technician"},
 		heightm: 1.6,
 		weightkg: 39,
 		color: "Blue",
@@ -14985,8 +14985,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Phony",
 		types: ["Ghost"],
 		gender: "N",
-		baseStats: { hp: 40, atk: 45, def: 45, spa: 74, spd: 54, spe: 50 },
-		abilities: { 0: "Weak Armor", H: "Cursed Body" },
+		baseStats: {hp: 40, atk: 45, def: 45, spa: 74, spd: 54, spe: 50},
+		abilities: {0: "Weak Armor", H: "Cursed Body"},
 		heightm: 0.1,
 		weightkg: 0.2,
 		color: "Purple",
@@ -15002,8 +15002,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Antique",
 		types: ["Ghost"],
 		gender: "N",
-		baseStats: { hp: 40, atk: 45, def: 45, spa: 74, spd: 54, spe: 50 },
-		abilities: { 0: "Weak Armor", H: "Cursed Body" },
+		baseStats: {hp: 40, atk: 45, def: 45, spa: 74, spd: 54, spe: 50},
+		abilities: {0: "Weak Armor", H: "Cursed Body"},
 		heightm: 0.1,
 		weightkg: 0.2,
 		color: "Purple",
@@ -15016,8 +15016,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Phony",
 		types: ["Ghost"],
 		gender: "N",
-		baseStats: { hp: 60, atk: 65, def: 65, spa: 134, spd: 114, spe: 70 },
-		abilities: { 0: "Weak Armor", H: "Cursed Body" },
+		baseStats: {hp: 60, atk: 65, def: 65, spa: 134, spd: 114, spe: 70},
+		abilities: {0: "Weak Armor", H: "Cursed Body"},
 		heightm: 0.2,
 		weightkg: 0.4,
 		color: "Purple",
@@ -15035,8 +15035,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Antique",
 		types: ["Ghost"],
 		gender: "N",
-		baseStats: { hp: 60, atk: 65, def: 65, spa: 134, spd: 114, spe: 70 },
-		abilities: { 0: "Weak Armor", H: "Cursed Body" },
+		baseStats: {hp: 60, atk: 65, def: 65, spa: 134, spd: 114, spe: 70},
+		abilities: {0: "Weak Armor", H: "Cursed Body"},
 		heightm: 0.2,
 		weightkg: 0.4,
 		color: "Purple",
@@ -15050,8 +15050,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Hatenna",
 		types: ["Psychic"],
 		gender: "F",
-		baseStats: { hp: 42, atk: 30, def: 45, spa: 56, spd: 53, spe: 39 },
-		abilities: { 0: "Healer", 1: "Anticipation", H: "Magic Bounce" },
+		baseStats: {hp: 42, atk: 30, def: 45, spa: 56, spd: 53, spe: 39},
+		abilities: {0: "Healer", 1: "Anticipation", H: "Magic Bounce"},
 		heightm: 0.4,
 		weightkg: 3.4,
 		color: "Pink",
@@ -15063,8 +15063,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Hattrem",
 		types: ["Psychic"],
 		gender: "F",
-		baseStats: { hp: 57, atk: 40, def: 65, spa: 86, spd: 73, spe: 49 },
-		abilities: { 0: "Healer", 1: "Anticipation", H: "Magic Bounce" },
+		baseStats: {hp: 57, atk: 40, def: 65, spa: 86, spd: 73, spe: 49},
+		abilities: {0: "Healer", 1: "Anticipation", H: "Magic Bounce"},
 		heightm: 0.6,
 		weightkg: 4.8,
 		color: "Pink",
@@ -15078,8 +15078,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Hatterene",
 		types: ["Psychic", "Fairy"],
 		gender: "F",
-		baseStats: { hp: 57, atk: 90, def: 95, spa: 136, spd: 103, spe: 29 },
-		abilities: { 0: "Healer", 1: "Anticipation", H: "Magic Bounce" },
+		baseStats: {hp: 57, atk: 90, def: 95, spa: 136, spd: 103, spe: 29},
+		abilities: {0: "Healer", 1: "Anticipation", H: "Magic Bounce"},
 		heightm: 2.1,
 		weightkg: 5.1,
 		color: "Pink",
@@ -15095,8 +15095,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Gmax",
 		types: ["Psychic", "Fairy"],
 		gender: "F",
-		baseStats: { hp: 57, atk: 90, def: 95, spa: 136, spd: 103, spe: 29 },
-		abilities: { 0: "Healer", 1: "Anticipation", H: "Magic Bounce" },
+		baseStats: {hp: 57, atk: 90, def: 95, spa: 136, spd: 103, spe: 29},
+		abilities: {0: "Healer", 1: "Anticipation", H: "Magic Bounce"},
 		heightm: 26,
 		weightkg: 0,
 		color: "Pink",
@@ -15108,8 +15108,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Impidimp",
 		types: ["Dark", "Fairy"],
 		gender: "M",
-		baseStats: { hp: 45, atk: 45, def: 30, spa: 55, spd: 40, spe: 50 },
-		abilities: { 0: "Prankster", 1: "Frisk", H: "Pickpocket" },
+		baseStats: {hp: 45, atk: 45, def: 30, spa: 55, spd: 40, spe: 50},
+		abilities: {0: "Prankster", 1: "Frisk", H: "Pickpocket"},
 		heightm: 0.4,
 		weightkg: 5.5,
 		color: "Pink",
@@ -15121,8 +15121,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Morgrem",
 		types: ["Dark", "Fairy"],
 		gender: "M",
-		baseStats: { hp: 65, atk: 60, def: 45, spa: 75, spd: 55, spe: 70 },
-		abilities: { 0: "Prankster", 1: "Frisk", H: "Pickpocket" },
+		baseStats: {hp: 65, atk: 60, def: 45, spa: 75, spd: 55, spe: 70},
+		abilities: {0: "Prankster", 1: "Frisk", H: "Pickpocket"},
 		heightm: 0.8,
 		weightkg: 12.5,
 		color: "Pink",
@@ -15136,8 +15136,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Grimmsnarl",
 		types: ["Dark", "Fairy"],
 		gender: "M",
-		baseStats: { hp: 95, atk: 120, def: 65, spa: 95, spd: 75, spe: 60 },
-		abilities: { 0: "Prankster", 1: "Frisk", H: "Pickpocket" },
+		baseStats: {hp: 95, atk: 120, def: 65, spa: 95, spd: 75, spe: 60},
+		abilities: {0: "Prankster", 1: "Frisk", H: "Pickpocket"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "Purple",
@@ -15153,8 +15153,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Gmax",
 		types: ["Dark", "Fairy"],
 		gender: "M",
-		baseStats: { hp: 95, atk: 120, def: 65, spa: 95, spd: 75, spe: 60 },
-		abilities: { 0: "Prankster", 1: "Frisk", H: "Pickpocket" },
+		baseStats: {hp: 95, atk: 120, def: 65, spa: 95, spd: 75, spe: 60},
+		abilities: {0: "Prankster", 1: "Frisk", H: "Pickpocket"},
 		heightm: 32,
 		weightkg: 0,
 		color: "Purple",
@@ -15165,8 +15165,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 862,
 		name: "Obstagoon",
 		types: ["Dark", "Normal"],
-		baseStats: { hp: 93, atk: 90, def: 101, spa: 60, spd: 81, spe: 95 },
-		abilities: { 0: "Reckless", 1: "Guts", H: "Defiant" },
+		baseStats: {hp: 93, atk: 90, def: 101, spa: 60, spd: 81, spe: 95},
+		abilities: {0: "Reckless", 1: "Guts", H: "Defiant"},
 		heightm: 1.6,
 		weightkg: 46,
 		color: "Gray",
@@ -15179,8 +15179,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 863,
 		name: "Perrserker",
 		types: ["Steel"],
-		baseStats: { hp: 70, atk: 110, def: 100, spa: 50, spd: 60, spe: 50 },
-		abilities: { 0: "Battle Armor", 1: "Tough Claws", H: "Steely Spirit" },
+		baseStats: {hp: 70, atk: 110, def: 100, spa: 50, spd: 60, spe: 50},
+		abilities: {0: "Battle Armor", 1: "Tough Claws", H: "Steely Spirit"},
 		heightm: 0.8,
 		weightkg: 28,
 		color: "Brown",
@@ -15192,9 +15192,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 864,
 		name: "Cursola",
 		types: ["Ghost"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 60, atk: 95, def: 50, spa: 145, spd: 130, spe: 30 },
-		abilities: { 0: "Weak Armor", H: "Perish Body" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 60, atk: 95, def: 50, spa: 145, spd: 130, spe: 30},
+		abilities: {0: "Weak Armor", H: "Perish Body"},
 		heightm: 1,
 		weightkg: 0.4,
 		color: "White",
@@ -15206,8 +15206,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 865,
 		name: "Sirfetch\u2019d",
 		types: ["Fighting"],
-		baseStats: { hp: 62, atk: 135, def: 95, spa: 68, spd: 82, spe: 65 },
-		abilities: { 0: "Steadfast", H: "Scrappy" },
+		baseStats: {hp: 62, atk: 135, def: 95, spa: 68, spd: 82, spe: 65},
+		abilities: {0: "Steadfast", H: "Scrappy"},
 		heightm: 0.8,
 		weightkg: 117,
 		color: "White",
@@ -15220,8 +15220,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 866,
 		name: "Mr. Rime",
 		types: ["Ice", "Psychic"],
-		baseStats: { hp: 80, atk: 85, def: 75, spa: 110, spd: 100, spe: 70 },
-		abilities: { 0: "Tangled Feet", 1: "Screen Cleaner", H: "Ice Body" },
+		baseStats: {hp: 80, atk: 85, def: 75, spa: 110, spd: 100, spe: 70},
+		abilities: {0: "Tangled Feet", 1: "Screen Cleaner", H: "Ice Body"},
 		heightm: 1.5,
 		weightkg: 58.2,
 		color: "Purple",
@@ -15233,8 +15233,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 867,
 		name: "Runerigus",
 		types: ["Ground", "Ghost"],
-		baseStats: { hp: 58, atk: 95, def: 145, spa: 50, spd: 105, spe: 30 },
-		abilities: { 0: "Wandering Spirit" },
+		baseStats: {hp: 58, atk: 95, def: 145, spa: 50, spd: 105, spe: 30},
+		abilities: {0: "Wandering Spirit"},
 		heightm: 1.6,
 		weightkg: 66.6,
 		color: "Gray",
@@ -15248,8 +15248,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Milcery",
 		types: ["Fairy"],
 		gender: "F",
-		baseStats: { hp: 45, atk: 40, def: 40, spa: 50, spd: 61, spe: 34 },
-		abilities: { 0: "Sweet Veil", H: "Aroma Veil" },
+		baseStats: {hp: 45, atk: 40, def: 40, spa: 50, spd: 61, spe: 34},
+		abilities: {0: "Sweet Veil", H: "Aroma Veil"},
 		heightm: 0.2,
 		weightkg: 0.3,
 		color: "White",
@@ -15262,8 +15262,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "Vanilla Cream",
 		types: ["Fairy"],
 		gender: "F",
-		baseStats: { hp: 65, atk: 60, def: 75, spa: 110, spd: 121, spe: 64 },
-		abilities: { 0: "Sweet Veil", H: "Aroma Veil" },
+		baseStats: {hp: 65, atk: 60, def: 75, spa: 110, spd: 121, spe: 64},
+		abilities: {0: "Sweet Veil", H: "Aroma Veil"},
 		heightm: 0.3,
 		weightkg: 0.5,
 		color: "White",
@@ -15282,8 +15282,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Gmax",
 		types: ["Fairy"],
 		gender: "F",
-		baseStats: { hp: 65, atk: 60, def: 75, spa: 110, spd: 121, spe: 64 },
-		abilities: { 0: "Sweet Veil", H: "Aroma Veil" },
+		baseStats: {hp: 65, atk: 60, def: 75, spa: 110, spd: 121, spe: 64},
+		abilities: {0: "Sweet Veil", H: "Aroma Veil"},
 		heightm: 30,
 		weightkg: 0,
 		color: "White",
@@ -15295,8 +15295,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Falinks",
 		types: ["Fighting"],
 		gender: "N",
-		baseStats: { hp: 65, atk: 100, def: 100, spa: 70, spd: 60, spe: 75 },
-		abilities: { 0: "Battle Armor", H: "Defiant" },
+		baseStats: {hp: 65, atk: 100, def: 100, spa: 70, spd: 60, spe: 75},
+		abilities: {0: "Battle Armor", H: "Defiant"},
 		heightm: 3,
 		weightkg: 62,
 		color: "Yellow",
@@ -15306,8 +15306,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 871,
 		name: "Pincurchin",
 		types: ["Electric"],
-		baseStats: { hp: 48, atk: 101, def: 95, spa: 91, spd: 85, spe: 15 },
-		abilities: { 0: "Lightning Rod", H: "Electric Surge" },
+		baseStats: {hp: 48, atk: 101, def: 95, spa: 91, spd: 85, spe: 15},
+		abilities: {0: "Lightning Rod", H: "Electric Surge"},
 		heightm: 0.3,
 		weightkg: 1,
 		color: "Purple",
@@ -15317,8 +15317,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 872,
 		name: "Snom",
 		types: ["Ice", "Bug"],
-		baseStats: { hp: 30, atk: 25, def: 35, spa: 45, spd: 30, spe: 20 },
-		abilities: { 0: "Shield Dust", H: "Ice Scales" },
+		baseStats: {hp: 30, atk: 25, def: 35, spa: 45, spd: 30, spe: 20},
+		abilities: {0: "Shield Dust", H: "Ice Scales"},
 		heightm: 0.3,
 		weightkg: 3.8,
 		color: "White",
@@ -15329,8 +15329,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 873,
 		name: "Frosmoth",
 		types: ["Ice", "Bug"],
-		baseStats: { hp: 70, atk: 65, def: 60, spa: 125, spd: 90, spe: 65 },
-		abilities: { 0: "Shield Dust", H: "Ice Scales" },
+		baseStats: {hp: 70, atk: 65, def: 60, spa: 125, spd: 90, spe: 65},
+		abilities: {0: "Shield Dust", H: "Ice Scales"},
 		heightm: 1.3,
 		weightkg: 42,
 		color: "White",
@@ -15343,8 +15343,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 874,
 		name: "Stonjourner",
 		types: ["Rock"],
-		baseStats: { hp: 100, atk: 125, def: 135, spa: 20, spd: 20, spe: 70 },
-		abilities: { 0: "Power Spot" },
+		baseStats: {hp: 100, atk: 125, def: 135, spa: 20, spd: 20, spe: 70},
+		abilities: {0: "Power Spot"},
 		heightm: 2.5,
 		weightkg: 520,
 		color: "Gray",
@@ -15354,8 +15354,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 875,
 		name: "Eiscue",
 		types: ["Ice"],
-		baseStats: { hp: 75, atk: 80, def: 110, spa: 65, spd: 90, spe: 50 },
-		abilities: { 0: "Ice Face" },
+		baseStats: {hp: 75, atk: 80, def: 110, spa: 65, spd: 90, spe: 50},
+		abilities: {0: "Ice Face"},
 		heightm: 1.4,
 		weightkg: 89,
 		color: "Blue",
@@ -15369,8 +15369,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Eiscue",
 		forme: "Noice",
 		types: ["Ice"],
-		baseStats: { hp: 75, atk: 80, def: 70, spa: 65, spd: 50, spe: 130 },
-		abilities: { 0: "Ice Face" },
+		baseStats: {hp: 75, atk: 80, def: 70, spa: 65, spd: 50, spe: 130},
+		abilities: {0: "Ice Face"},
 		heightm: 1.4,
 		weightkg: 89,
 		color: "Blue",
@@ -15384,8 +15384,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseForme: "M",
 		types: ["Psychic", "Normal"],
 		gender: "M",
-		baseStats: { hp: 60, atk: 65, def: 55, spa: 105, spd: 95, spe: 95 },
-		abilities: { 0: "Inner Focus", 1: "Synchronize", H: "Psychic Surge" },
+		baseStats: {hp: 60, atk: 65, def: 55, spa: 105, spd: 95, spe: 95},
+		abilities: {0: "Inner Focus", 1: "Synchronize", H: "Psychic Surge"},
 		heightm: 0.9,
 		weightkg: 28,
 		color: "Purple",
@@ -15400,8 +15400,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "F",
 		types: ["Psychic", "Normal"],
 		gender: "F",
-		baseStats: { hp: 70, atk: 55, def: 65, spa: 95, spd: 105, spe: 85 },
-		abilities: { 0: "Own Tempo", 1: "Synchronize", H: "Psychic Surge" },
+		baseStats: {hp: 70, atk: 55, def: 65, spa: 95, spd: 105, spe: 85},
+		abilities: {0: "Own Tempo", 1: "Synchronize", H: "Psychic Surge"},
 		heightm: 0.9,
 		weightkg: 28,
 		color: "Purple",
@@ -15411,8 +15411,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 877,
 		name: "Morpeko",
 		types: ["Electric", "Dark"],
-		baseStats: { hp: 58, atk: 95, def: 58, spa: 70, spd: 58, spe: 97 },
-		abilities: { 0: "Hunger Switch" },
+		baseStats: {hp: 58, atk: 95, def: 58, spa: 70, spd: 58, spe: 97},
+		abilities: {0: "Hunger Switch"},
 		heightm: 0.3,
 		weightkg: 3,
 		color: "Yellow",
@@ -15426,8 +15426,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Morpeko",
 		forme: "Hangry",
 		types: ["Electric", "Dark"],
-		baseStats: { hp: 58, atk: 95, def: 58, spa: 70, spd: 58, spe: 97 },
-		abilities: { 0: "Hunger Switch" },
+		baseStats: {hp: 58, atk: 95, def: 58, spa: 70, spd: 58, spe: 97},
+		abilities: {0: "Hunger Switch"},
 		heightm: 0.3,
 		weightkg: 3,
 		color: "Yellow",
@@ -15439,8 +15439,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 878,
 		name: "Cufant",
 		types: ["Steel"],
-		baseStats: { hp: 72, atk: 80, def: 49, spa: 40, spd: 49, spe: 40 },
-		abilities: { 0: "Sheer Force", H: "Heavy Metal" },
+		baseStats: {hp: 72, atk: 80, def: 49, spa: 40, spd: 49, spe: 40},
+		abilities: {0: "Sheer Force", H: "Heavy Metal"},
 		heightm: 1.2,
 		weightkg: 100,
 		color: "Yellow",
@@ -15451,8 +15451,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 879,
 		name: "Copperajah",
 		types: ["Steel"],
-		baseStats: { hp: 122, atk: 130, def: 69, spa: 80, spd: 69, spe: 30 },
-		abilities: { 0: "Sheer Force", H: "Heavy Metal" },
+		baseStats: {hp: 122, atk: 130, def: 69, spa: 80, spd: 69, spe: 30},
+		abilities: {0: "Sheer Force", H: "Heavy Metal"},
 		heightm: 3,
 		weightkg: 650,
 		color: "Green",
@@ -15467,8 +15467,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Copperajah",
 		forme: "Gmax",
 		types: ["Steel"],
-		baseStats: { hp: 122, atk: 130, def: 69, spa: 80, spd: 69, spe: 30 },
-		abilities: { 0: "Sheer Force", H: "Heavy Metal" },
+		baseStats: {hp: 122, atk: 130, def: 69, spa: 80, spd: 69, spe: 30},
+		abilities: {0: "Sheer Force", H: "Heavy Metal"},
 		heightm: 23,
 		weightkg: 0,
 		color: "Green",
@@ -15480,8 +15480,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Dracozolt",
 		types: ["Electric", "Dragon"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 100, def: 90, spa: 80, spd: 70, spe: 75 },
-		abilities: { 0: "Volt Absorb", 1: "Hustle", H: "Sand Rush" },
+		baseStats: {hp: 90, atk: 100, def: 90, spa: 80, spd: 70, spe: 75},
+		abilities: {0: "Volt Absorb", 1: "Hustle", H: "Sand Rush"},
 		heightm: 1.8,
 		weightkg: 190,
 		color: "Green",
@@ -15492,8 +15492,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Arctozolt",
 		types: ["Electric", "Ice"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 100, def: 90, spa: 90, spd: 80, spe: 55 },
-		abilities: { 0: "Volt Absorb", 1: "Static", H: "Slush Rush" },
+		baseStats: {hp: 90, atk: 100, def: 90, spa: 90, spd: 80, spe: 55},
+		abilities: {0: "Volt Absorb", 1: "Static", H: "Slush Rush"},
 		heightm: 2.3,
 		weightkg: 150,
 		color: "Blue",
@@ -15504,8 +15504,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Dracovish",
 		types: ["Water", "Dragon"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 90, def: 100, spa: 70, spd: 80, spe: 75 },
-		abilities: { 0: "Water Absorb", 1: "Strong Jaw", H: "Sand Rush" },
+		baseStats: {hp: 90, atk: 90, def: 100, spa: 70, spd: 80, spe: 75},
+		abilities: {0: "Water Absorb", 1: "Strong Jaw", H: "Sand Rush"},
 		heightm: 2.3,
 		weightkg: 215,
 		color: "Green",
@@ -15516,8 +15516,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Arctovish",
 		types: ["Water", "Ice"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 90, def: 100, spa: 80, spd: 90, spe: 55 },
-		abilities: { 0: "Water Absorb", 1: "Ice Body", H: "Slush Rush" },
+		baseStats: {hp: 90, atk: 90, def: 100, spa: 80, spd: 90, spe: 55},
+		abilities: {0: "Water Absorb", 1: "Ice Body", H: "Slush Rush"},
 		heightm: 2,
 		weightkg: 175,
 		color: "Blue",
@@ -15527,8 +15527,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 884,
 		name: "Duraludon",
 		types: ["Steel", "Dragon"],
-		baseStats: { hp: 70, atk: 95, def: 115, spa: 120, spd: 50, spe: 85 },
-		abilities: { 0: "Light Metal", 1: "Heavy Metal", H: "Stalwart" },
+		baseStats: {hp: 70, atk: 95, def: 115, spa: 120, spd: 50, spe: 85},
+		abilities: {0: "Light Metal", 1: "Heavy Metal", H: "Stalwart"},
 		heightm: 1.8,
 		weightkg: 40,
 		color: "White",
@@ -15541,8 +15541,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Duraludon",
 		forme: "Gmax",
 		types: ["Steel", "Dragon"],
-		baseStats: { hp: 70, atk: 95, def: 115, spa: 120, spd: 50, spe: 85 },
-		abilities: { 0: "Light Metal", 1: "Heavy Metal", H: "Stalwart" },
+		baseStats: {hp: 70, atk: 95, def: 115, spa: 120, spd: 50, spe: 85},
+		abilities: {0: "Light Metal", 1: "Heavy Metal", H: "Stalwart"},
 		heightm: 43,
 		weightkg: 0,
 		color: "White",
@@ -15553,8 +15553,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 885,
 		name: "Dreepy",
 		types: ["Dragon", "Ghost"],
-		baseStats: { hp: 28, atk: 60, def: 30, spa: 40, spd: 30, spe: 82 },
-		abilities: { 0: "Clear Body", 1: "Infiltrator", H: "Cursed Body" },
+		baseStats: {hp: 28, atk: 60, def: 30, spa: 40, spd: 30, spe: 82},
+		abilities: {0: "Clear Body", 1: "Infiltrator", H: "Cursed Body"},
 		heightm: 0.5,
 		weightkg: 2,
 		color: "Green",
@@ -15565,8 +15565,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 886,
 		name: "Drakloak",
 		types: ["Dragon", "Ghost"],
-		baseStats: { hp: 68, atk: 80, def: 50, spa: 60, spd: 50, spe: 102 },
-		abilities: { 0: "Clear Body", 1: "Infiltrator", H: "Cursed Body" },
+		baseStats: {hp: 68, atk: 80, def: 50, spa: 60, spd: 50, spe: 102},
+		abilities: {0: "Clear Body", 1: "Infiltrator", H: "Cursed Body"},
 		heightm: 1.4,
 		weightkg: 11,
 		color: "Green",
@@ -15579,8 +15579,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 887,
 		name: "Dragapult",
 		types: ["Dragon", "Ghost"],
-		baseStats: { hp: 88, atk: 120, def: 75, spa: 100, spd: 75, spe: 142 },
-		abilities: { 0: "Clear Body", 1: "Infiltrator", H: "Cursed Body" },
+		baseStats: {hp: 88, atk: 120, def: 75, spa: 100, spd: 75, spe: 142},
+		abilities: {0: "Clear Body", 1: "Infiltrator", H: "Cursed Body"},
 		heightm: 3,
 		weightkg: 50,
 		color: "Green",
@@ -15593,8 +15593,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Zacian",
 		types: ["Fairy"],
 		gender: "N",
-		baseStats: { hp: 92, atk: 130, def: 115, spa: 80, spd: 115, spe: 138 },
-		abilities: { 0: "Intrepid Sword" },
+		baseStats: {hp: 92, atk: 130, def: 115, spa: 80, spd: 115, spe: 138},
+		abilities: {0: "Intrepid Sword"},
 		heightm: 2.8,
 		weightkg: 110,
 		color: "Blue",
@@ -15610,8 +15610,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Crowned",
 		types: ["Fairy", "Steel"],
 		gender: "N",
-		baseStats: { hp: 92, atk: 170, def: 115, spa: 80, spd: 115, spe: 148 },
-		abilities: { 0: "Intrepid Sword" },
+		baseStats: {hp: 92, atk: 170, def: 115, spa: 80, spd: 115, spe: 148},
+		abilities: {0: "Intrepid Sword"},
 		heightm: 2.8,
 		weightkg: 355,
 		color: "Blue",
@@ -15625,8 +15625,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Zamazenta",
 		types: ["Fighting"],
 		gender: "N",
-		baseStats: { hp: 92, atk: 130, def: 115, spa: 80, spd: 115, spe: 138 },
-		abilities: { 0: "Dauntless Shield" },
+		baseStats: {hp: 92, atk: 130, def: 115, spa: 80, spd: 115, spe: 138},
+		abilities: {0: "Dauntless Shield"},
 		heightm: 2.9,
 		weightkg: 210,
 		color: "Red",
@@ -15642,8 +15642,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Crowned",
 		types: ["Fighting", "Steel"],
 		gender: "N",
-		baseStats: { hp: 92, atk: 130, def: 145, spa: 80, spd: 145, spe: 128 },
-		abilities: { 0: "Dauntless Shield" },
+		baseStats: {hp: 92, atk: 130, def: 145, spa: 80, spd: 145, spe: 128},
+		abilities: {0: "Dauntless Shield"},
 		heightm: 2.9,
 		weightkg: 785,
 		color: "Red",
@@ -15657,8 +15657,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Eternatus",
 		types: ["Poison", "Dragon"],
 		gender: "N",
-		baseStats: { hp: 140, atk: 85, def: 95, spa: 145, spd: 95, spe: 130 },
-		abilities: { 0: "Pressure" },
+		baseStats: {hp: 140, atk: 85, def: 95, spa: 145, spd: 95, spe: 130},
+		abilities: {0: "Pressure"},
 		heightm: 20,
 		weightkg: 950,
 		color: "Purple",
@@ -15674,8 +15674,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Eternamax",
 		types: ["Poison", "Dragon"],
 		gender: "N",
-		baseStats: { hp: 255, atk: 115, def: 250, spa: 125, spd: 250, spe: 130 },
-		abilities: { 0: "Pressure" },
+		baseStats: {hp: 255, atk: 115, def: 250, spa: 125, spd: 250, spe: 130},
+		abilities: {0: "Pressure"},
 		heightm: 100,
 		weightkg: 0,
 		color: "Purple",
@@ -15686,9 +15686,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 891,
 		name: "Kubfu",
 		types: ["Fighting"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 60, atk: 90, def: 60, spa: 53, spd: 50, spe: 72 },
-		abilities: { 0: "Inner Focus" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 60, atk: 90, def: 60, spa: 53, spd: 50, spe: 72},
+		abilities: {0: "Inner Focus"},
 		heightm: 0.6,
 		weightkg: 12,
 		color: "Gray",
@@ -15700,9 +15700,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Urshifu",
 		baseForme: "Single-Strike",
 		types: ["Fighting", "Dark"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97 },
-		abilities: { 0: "Unseen Fist" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97},
+		abilities: {0: "Unseen Fist"},
 		heightm: 1.9,
 		weightkg: 105,
 		color: "Gray",
@@ -15720,9 +15720,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Urshifu",
 		forme: "Rapid-Strike",
 		types: ["Fighting", "Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97 },
-		abilities: { 0: "Unseen Fist" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97},
+		abilities: {0: "Unseen Fist"},
 		heightm: 1.9,
 		weightkg: 105,
 		color: "Gray",
@@ -15738,9 +15738,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Urshifu",
 		forme: "Gmax",
 		types: ["Fighting", "Dark"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97 },
-		abilities: { 0: "Unseen Fist" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97},
+		abilities: {0: "Unseen Fist"},
 		heightm: 3,
 		weightkg: 0,
 		color: "Gray",
@@ -15753,9 +15753,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Urshifu",
 		forme: "Rapid-Strike-Gmax",
 		types: ["Fighting", "Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97 },
-		abilities: { 0: "Unseen Fist" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97},
+		abilities: {0: "Unseen Fist"},
 		heightm: 1.9,
 		weightkg: 105,
 		color: "Gray",
@@ -15768,8 +15768,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Zarude",
 		types: ["Dark", "Grass"],
 		gender: "N",
-		baseStats: { hp: 105, atk: 120, def: 105, spa: 70, spd: 95, spe: 105 },
-		abilities: { 0: "Leaf Guard" },
+		baseStats: {hp: 105, atk: 120, def: 105, spa: 70, spd: 95, spe: 105},
+		abilities: {0: "Leaf Guard"},
 		heightm: 1.8,
 		weightkg: 70,
 		color: "Black",
@@ -15784,8 +15784,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Dada",
 		types: ["Dark", "Grass"],
 		gender: "N",
-		baseStats: { hp: 105, atk: 120, def: 105, spa: 70, spd: 95, spe: 105 },
-		abilities: { 0: "Leaf Guard" },
+		baseStats: {hp: 105, atk: 120, def: 105, spa: 70, spd: 95, spe: 105},
+		abilities: {0: "Leaf Guard"},
 		heightm: 1.8,
 		weightkg: 70,
 		color: "Black",
@@ -15796,8 +15796,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Regieleki",
 		types: ["Electric"],
 		gender: "N",
-		baseStats: { hp: 80, atk: 100, def: 50, spa: 100, spd: 50, spe: 200 },
-		abilities: { 0: "Transistor" },
+		baseStats: {hp: 80, atk: 100, def: 50, spa: 100, spd: 50, spe: 200},
+		abilities: {0: "Transistor"},
 		heightm: 1.2,
 		weightkg: 145,
 		color: "Yellow",
@@ -15808,8 +15808,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Regidrago",
 		types: ["Dragon"],
 		gender: "N",
-		baseStats: { hp: 200, atk: 100, def: 50, spa: 100, spd: 50, spe: 80 },
-		abilities: { 0: "Dragon's Maw" },
+		baseStats: {hp: 200, atk: 100, def: 50, spa: 100, spd: 50, spe: 80},
+		abilities: {0: "Dragon's Maw"},
 		heightm: 2.1,
 		weightkg: 200,
 		color: "Green",
@@ -15820,8 +15820,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Glastrier",
 		types: ["Ice"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 145, def: 130, spa: 65, spd: 110, spe: 30 },
-		abilities: { 0: "Chilling Neigh" },
+		baseStats: {hp: 100, atk: 145, def: 130, spa: 65, spd: 110, spe: 30},
+		abilities: {0: "Chilling Neigh"},
 		heightm: 2.2,
 		weightkg: 800,
 		color: "White",
@@ -15832,8 +15832,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Spectrier",
 		types: ["Ghost"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 65, def: 60, spa: 145, spd: 80, spe: 130 },
-		abilities: { 0: "Grim Neigh" },
+		baseStats: {hp: 100, atk: 65, def: 60, spa: 145, spd: 80, spe: 130},
+		abilities: {0: "Grim Neigh"},
 		heightm: 2,
 		weightkg: 44.5,
 		color: "Black",
@@ -15844,8 +15844,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Calyrex",
 		types: ["Psychic", "Grass"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 80, def: 80, spa: 80, spd: 80, spe: 80 },
-		abilities: { 0: "Unnerve" },
+		baseStats: {hp: 100, atk: 80, def: 80, spa: 80, spd: 80, spe: 80},
+		abilities: {0: "Unnerve"},
 		heightm: 1.1,
 		weightkg: 7.7,
 		color: "Green",
@@ -15860,8 +15860,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Ice",
 		types: ["Psychic", "Ice"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 165, def: 150, spa: 85, spd: 130, spe: 50 },
-		abilities: { 0: "As One (Glastrier)" },
+		baseStats: {hp: 100, atk: 165, def: 150, spa: 85, spd: 130, spe: 50},
+		abilities: {0: "As One (Glastrier)"},
 		heightm: 2.4,
 		weightkg: 809.1,
 		color: "White",
@@ -15875,8 +15875,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "Shadow",
 		types: ["Psychic", "Ghost"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 85, def: 80, spa: 165, spd: 100, spe: 150 },
-		abilities: { 0: "As One (Spectrier)" },
+		baseStats: {hp: 100, atk: 85, def: 80, spa: 165, spd: 100, spe: 150},
+		abilities: {0: "As One (Spectrier)"},
 		heightm: 2.4,
 		weightkg: 53.6,
 		color: "Black",
@@ -15887,8 +15887,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 0,
 		name: "MissingNo.",
 		types: ["Bird", "Normal"],
-		baseStats: { hp: 33, atk: 136, def: 0, spa: 6, spd: 6, spe: 29 },
-		abilities: { 0: "" },
+		baseStats: {hp: 33, atk: 136, def: 0, spa: 6, spd: 6, spe: 29},
+		abilities: {0: ""},
 		heightm: 3,
 		weightkg: 1590.8,
 		color: "Gray",
@@ -15898,8 +15898,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -1,
 		name: "Syclar",
 		types: ["Ice", "Bug"],
-		baseStats: { hp: 40, atk: 76, def: 45, spa: 74, spd: 39, spe: 91 },
-		abilities: { 0: "Compound Eyes", 1: "Snow Cloak", H: "Ice Body" },
+		baseStats: {hp: 40, atk: 76, def: 45, spa: 74, spd: 39, spe: 91},
+		abilities: {0: "Compound Eyes", 1: "Snow Cloak", H: "Ice Body"},
 		heightm: 0.2,
 		weightkg: 4,
 		color: "Blue",
@@ -15911,8 +15911,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -2,
 		name: "Syclant",
 		types: ["Ice", "Bug"],
-		baseStats: { hp: 70, atk: 116, def: 70, spa: 114, spd: 64, spe: 121 },
-		abilities: { 0: "Compound Eyes", 1: "Mountaineer", H: "Ice Body" },
+		baseStats: {hp: 70, atk: 116, def: 70, spa: 114, spd: 64, spe: 121},
+		abilities: {0: "Compound Eyes", 1: "Mountaineer", H: "Ice Body"},
 		heightm: 1.7,
 		weightkg: 52,
 		color: "Blue",
@@ -15925,8 +15925,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -3,
 		name: "Revenankh",
 		types: ["Ghost", "Fighting"],
-		baseStats: { hp: 90, atk: 105, def: 90, spa: 65, spd: 110, spe: 65 },
-		abilities: { 0: "Shed Skin", 1: "Air Lock", H: "Triage" },
+		baseStats: {hp: 90, atk: 105, def: 90, spa: 65, spd: 110, spe: 65},
+		abilities: {0: "Shed Skin", 1: "Air Lock", H: "Triage"},
 		heightm: 1.8,
 		weightkg: 44,
 		color: "White",
@@ -15937,8 +15937,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -4,
 		name: "Embirch",
 		types: ["Fire", "Grass"],
-		baseStats: { hp: 60, atk: 40, def: 55, spa: 65, spd: 40, spe: 60 },
-		abilities: { 0: "Reckless", 1: "Leaf Guard", H: "Chlorophyll" },
+		baseStats: {hp: 60, atk: 40, def: 55, spa: 65, spd: 40, spe: 60},
+		abilities: {0: "Reckless", 1: "Leaf Guard", H: "Chlorophyll"},
 		heightm: 0.6,
 		weightkg: 15,
 		color: "Brown",
@@ -15950,8 +15950,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -5,
 		name: "Flarelm",
 		types: ["Fire", "Grass"],
-		baseStats: { hp: 90, atk: 50, def: 95, spa: 75, spd: 70, spe: 40 },
-		abilities: { 0: "Rock Head", 1: "Battle Armor", H: "White Smoke" },
+		baseStats: {hp: 90, atk: 50, def: 95, spa: 75, spd: 70, spe: 40},
+		abilities: {0: "Rock Head", 1: "Battle Armor", H: "White Smoke"},
 		heightm: 1.4,
 		weightkg: 73,
 		color: "Brown",
@@ -15965,8 +15965,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -6,
 		name: "Pyroak",
 		types: ["Fire", "Grass"],
-		baseStats: { hp: 120, atk: 70, def: 105, spa: 95, spd: 90, spe: 60 },
-		abilities: { 0: "Rock Head", 1: "Battle Armor", H: "White Smoke" },
+		baseStats: {hp: 120, atk: 70, def: 105, spa: 95, spd: 90, spe: 60},
+		abilities: {0: "Rock Head", 1: "Battle Armor", H: "White Smoke"},
 		heightm: 2.1,
 		weightkg: 168,
 		color: "Brown",
@@ -15979,8 +15979,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -7,
 		name: "Breezi",
 		types: ["Poison", "Flying"],
-		baseStats: { hp: 50, atk: 46, def: 69, spa: 60, spd: 50, spe: 75 },
-		abilities: { 0: "Unburden", 1: "Own Tempo", H: "Frisk" },
+		baseStats: {hp: 50, atk: 46, def: 69, spa: 60, spd: 50, spe: 75},
+		abilities: {0: "Unburden", 1: "Own Tempo", H: "Frisk"},
 		heightm: 0.4,
 		weightkg: 0.6,
 		color: "Purple",
@@ -15992,8 +15992,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -8,
 		name: "Fidgit",
 		types: ["Poison", "Ground"],
-		baseStats: { hp: 95, atk: 76, def: 109, spa: 90, spd: 80, spe: 105 },
-		abilities: { 0: "Persistent", 1: "Vital Spirit", H: "Frisk" },
+		baseStats: {hp: 95, atk: 76, def: 109, spa: 90, spd: 80, spe: 105},
+		abilities: {0: "Persistent", 1: "Vital Spirit", H: "Frisk"},
 		heightm: 0.9,
 		weightkg: 53,
 		color: "Purple",
@@ -16007,8 +16007,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Rebble",
 		types: ["Rock"],
 		gender: "N",
-		baseStats: { hp: 45, atk: 25, def: 65, spa: 75, spd: 55, spe: 80 },
-		abilities: { 0: "Levitate", 1: "Solid Rock", H: "Sniper" },
+		baseStats: {hp: 45, atk: 25, def: 65, spa: 75, spd: 55, spe: 80},
+		abilities: {0: "Levitate", 1: "Solid Rock", H: "Sniper"},
 		heightm: 0.3,
 		weightkg: 7,
 		color: "Gray",
@@ -16021,8 +16021,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Tactite",
 		types: ["Rock"],
 		gender: "N",
-		baseStats: { hp: 70, atk: 40, def: 65, spa: 100, spd: 65, spe: 95 },
-		abilities: { 0: "Levitate", 1: "Technician", H: "Sniper" },
+		baseStats: {hp: 70, atk: 40, def: 65, spa: 100, spd: 65, spe: 95},
+		abilities: {0: "Levitate", 1: "Technician", H: "Sniper"},
 		heightm: 0.6,
 		weightkg: 16,
 		color: "Gray",
@@ -16037,8 +16037,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Stratagem",
 		types: ["Rock"],
 		gender: "N",
-		baseStats: { hp: 90, atk: 60, def: 65, spa: 120, spd: 70, spe: 130 },
-		abilities: { 0: "Levitate", 1: "Technician", H: "Sniper" },
+		baseStats: {hp: 90, atk: 60, def: 65, spa: 120, spd: 70, spe: 130},
+		abilities: {0: "Levitate", 1: "Technician", H: "Sniper"},
 		heightm: 0.9,
 		weightkg: 45,
 		color: "Gray",
@@ -16051,8 +16051,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -12,
 		name: "Privatyke",
 		types: ["Water", "Fighting"],
-		baseStats: { hp: 65, atk: 75, def: 65, spa: 40, spd: 60, spe: 45 },
-		abilities: { 0: "Unaware", H: "Technician" },
+		baseStats: {hp: 65, atk: 75, def: 65, spa: 40, spd: 60, spe: 45},
+		abilities: {0: "Unaware", H: "Technician"},
 		heightm: 1,
 		weightkg: 35,
 		color: "Green",
@@ -16064,8 +16064,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -13,
 		name: "Arghonaut",
 		types: ["Water", "Fighting"],
-		baseStats: { hp: 105, atk: 110, def: 95, spa: 70, spd: 100, spe: 75 },
-		abilities: { 0: "Unaware", H: "Technician" },
+		baseStats: {hp: 105, atk: 110, def: 95, spa: 70, spd: 100, spe: 75},
+		abilities: {0: "Unaware", H: "Technician"},
 		heightm: 1.7,
 		weightkg: 151,
 		color: "Green",
@@ -16078,8 +16078,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -14,
 		name: "Kitsunoh",
 		types: ["Ghost", "Steel"],
-		baseStats: { hp: 80, atk: 103, def: 85, spa: 55, spd: 80, spe: 110 },
-		abilities: { 0: "Frisk", 1: "Limber", H: "Iron Fist" },
+		baseStats: {hp: 80, atk: 103, def: 85, spa: 55, spd: 80, spe: 110},
+		abilities: {0: "Frisk", 1: "Limber", H: "Iron Fist"},
 		heightm: 1.1,
 		weightkg: 51,
 		color: "Gray",
@@ -16090,8 +16090,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -15,
 		name: "Cyclohm",
 		types: ["Electric", "Dragon"],
-		baseStats: { hp: 108, atk: 60, def: 118, spa: 112, spd: 70, spe: 80 },
-		abilities: { 0: "Shield Dust", 1: "Static", H: "Damp" },
+		baseStats: {hp: 108, atk: 60, def: 118, spa: 112, spd: 70, spe: 80},
+		abilities: {0: "Shield Dust", 1: "Static", H: "Damp"},
 		heightm: 1.6,
 		weightkg: 59,
 		color: "Yellow",
@@ -16102,8 +16102,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -16,
 		name: "Colossoil",
 		types: ["Dark", "Ground"],
-		baseStats: { hp: 133, atk: 122, def: 72, spa: 71, spd: 72, spe: 95 },
-		abilities: { 0: "Rebound", 1: "Guts", H: "Unnerve" },
+		baseStats: {hp: 133, atk: 122, def: 72, spa: 71, spd: 72, spe: 95},
+		abilities: {0: "Rebound", 1: "Guts", H: "Unnerve"},
 		heightm: 2.6,
 		weightkg: 683.6,
 		color: "Brown",
@@ -16114,8 +16114,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -17,
 		name: "Krilowatt",
 		types: ["Electric", "Water"],
-		baseStats: { hp: 151, atk: 84, def: 73, spa: 83, spd: 74, spe: 105 },
-		abilities: { 0: "Trace", 1: "Magic Guard", H: "Minus" },
+		baseStats: {hp: 151, atk: 84, def: 73, spa: 83, spd: 74, spe: 105},
+		abilities: {0: "Trace", 1: "Magic Guard", H: "Minus"},
 		heightm: 0.7,
 		weightkg: 10.6,
 		color: "Red",
@@ -16126,8 +16126,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -18,
 		name: "Voodoll",
 		types: ["Normal", "Dark"],
-		baseStats: { hp: 55, atk: 40, def: 55, spa: 75, spd: 50, spe: 70 },
-		abilities: { 0: "Volt Absorb", 1: "Lightning Rod", H: "Cursed Body" },
+		baseStats: {hp: 55, atk: 40, def: 55, spa: 75, spd: 50, spe: 70},
+		abilities: {0: "Volt Absorb", 1: "Lightning Rod", H: "Cursed Body"},
 		heightm: 1,
 		weightkg: 25,
 		color: "Brown",
@@ -16139,8 +16139,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -19,
 		name: "Voodoom",
 		types: ["Fighting", "Dark"],
-		baseStats: { hp: 90, atk: 85, def: 80, spa: 105, spd: 80, spe: 110 },
-		abilities: { 0: "Volt Absorb", 1: "Lightning Rod", H: "Cursed Body" },
+		baseStats: {hp: 90, atk: 85, def: 80, spa: 105, spd: 80, spe: 110},
+		abilities: {0: "Volt Absorb", 1: "Lightning Rod", H: "Cursed Body"},
 		heightm: 2,
 		weightkg: 75.5,
 		color: "Brown",
@@ -16153,8 +16153,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -20,
 		name: "Scratchet",
 		types: ["Normal", "Fighting"],
-		baseStats: { hp: 55, atk: 85, def: 80, spa: 20, spd: 70, spe: 40 },
-		abilities: { 0: "Scrappy", 1: "Prankster", H: "Vital Spirit" },
+		baseStats: {hp: 55, atk: 85, def: 80, spa: 20, spd: 70, spe: 40},
+		abilities: {0: "Scrappy", 1: "Prankster", H: "Vital Spirit"},
 		heightm: 0.5,
 		weightkg: 20,
 		color: "Brown",
@@ -16166,8 +16166,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -21,
 		name: "Tomohawk",
 		types: ["Flying", "Fighting"],
-		baseStats: { hp: 105, atk: 60, def: 90, spa: 115, spd: 80, spe: 85 },
-		abilities: { 0: "Intimidate", 1: "Prankster", H: "Justified" },
+		baseStats: {hp: 105, atk: 60, def: 90, spa: 115, spd: 80, spe: 85},
+		abilities: {0: "Intimidate", 1: "Prankster", H: "Justified"},
 		heightm: 1.27,
 		weightkg: 37.2,
 		color: "Red",
@@ -16181,8 +16181,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Necturine",
 		types: ["Grass", "Ghost"],
 		gender: "F",
-		baseStats: { hp: 49, atk: 55, def: 60, spa: 50, spd: 75, spe: 51 },
-		abilities: { 0: "Anticipation", H: "Telepathy" },
+		baseStats: {hp: 49, atk: 55, def: 60, spa: 50, spd: 75, spe: 51},
+		abilities: {0: "Anticipation", H: "Telepathy"},
 		heightm: 0.3,
 		weightkg: 1.8,
 		color: "White",
@@ -16195,8 +16195,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Necturna",
 		types: ["Grass", "Ghost"],
 		gender: "F",
-		baseStats: { hp: 64, atk: 120, def: 100, spa: 85, spd: 120, spe: 58 },
-		abilities: { 0: "Forewarn", H: "Telepathy" },
+		baseStats: {hp: 64, atk: 120, def: 100, spa: 85, spd: 120, spe: 58},
+		abilities: {0: "Forewarn", H: "Telepathy"},
 		heightm: 1.65,
 		weightkg: 49.6,
 		color: "Black",
@@ -16209,8 +16209,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -24,
 		name: "Mollux",
 		types: ["Fire", "Poison"],
-		baseStats: { hp: 95, atk: 45, def: 83, spa: 131, spd: 105, spe: 76 },
-		abilities: { 0: "Dry Skin", H: "Illuminate" },
+		baseStats: {hp: 95, atk: 45, def: 83, spa: 131, spd: 105, spe: 76},
+		abilities: {0: "Dry Skin", H: "Illuminate"},
 		heightm: 1.2,
 		weightkg: 41,
 		color: "Pink",
@@ -16221,8 +16221,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -25,
 		name: "Cupra",
 		types: ["Bug", "Psychic"],
-		baseStats: { hp: 50, atk: 60, def: 49, spa: 67, spd: 30, spe: 44 },
-		abilities: { 0: "Shield Dust", 1: "Keen Eye", H: "Magic Guard" },
+		baseStats: {hp: 50, atk: 60, def: 49, spa: 67, spd: 30, spe: 44},
+		abilities: {0: "Shield Dust", 1: "Keen Eye", H: "Magic Guard"},
 		heightm: 0.5,
 		weightkg: 4.8,
 		color: "Brown",
@@ -16234,8 +16234,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -26,
 		name: "Argalis",
 		types: ["Bug", "Psychic"],
-		baseStats: { hp: 60, atk: 90, def: 89, spa: 87, spd: 40, spe: 54 },
-		abilities: { 0: "Shed Skin", 1: "Compound Eyes", H: "Overcoat" },
+		baseStats: {hp: 60, atk: 90, def: 89, spa: 87, spd: 40, spe: 54},
+		abilities: {0: "Shed Skin", 1: "Compound Eyes", H: "Overcoat"},
 		heightm: 1.3,
 		weightkg: 341.4,
 		color: "Gray",
@@ -16249,8 +16249,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -27,
 		name: "Aurumoth",
 		types: ["Bug", "Psychic"],
-		baseStats: { hp: 110, atk: 120, def: 99, spa: 117, spd: 60, spe: 94 },
-		abilities: { 0: "Weak Armor", 1: "No Guard", H: "Light Metal" },
+		baseStats: {hp: 110, atk: 120, def: 99, spa: 117, spd: 60, spe: 94},
+		abilities: {0: "Weak Armor", 1: "No Guard", H: "Light Metal"},
 		heightm: 2.1,
 		weightkg: 193,
 		color: "Purple",
@@ -16263,8 +16263,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -28,
 		name: "Brattler",
 		types: ["Dark", "Grass"],
-		baseStats: { hp: 80, atk: 70, def: 40, spa: 20, spd: 90, spe: 30 },
-		abilities: { 0: "Harvest", 1: "Infiltrator", H: "Rattled" },
+		baseStats: {hp: 80, atk: 70, def: 40, spa: 20, spd: 90, spe: 30},
+		abilities: {0: "Harvest", 1: "Infiltrator", H: "Rattled"},
 		heightm: 1.8,
 		weightkg: 11.5,
 		color: "Brown",
@@ -16276,8 +16276,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -29,
 		name: "Malaconda",
 		types: ["Dark", "Grass"],
-		baseStats: { hp: 115, atk: 100, def: 60, spa: 40, spd: 130, spe: 55 },
-		abilities: { 0: "Harvest", 1: "Infiltrator", H: "Drought" },
+		baseStats: {hp: 115, atk: 100, def: 60, spa: 40, spd: 130, spe: 55},
+		abilities: {0: "Harvest", 1: "Infiltrator", H: "Drought"},
 		heightm: 5.5,
 		weightkg: 108.8,
 		color: "Brown",
@@ -16290,8 +16290,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -30,
 		name: "Cawdet",
 		types: ["Steel", "Flying"],
-		baseStats: { hp: 35, atk: 72, def: 85, spa: 40, spd: 55, spe: 88 },
-		abilities: { 0: "Keen Eye", 1: "Volt Absorb", H: "Big Pecks" },
+		baseStats: {hp: 35, atk: 72, def: 85, spa: 40, spd: 55, spe: 88},
+		abilities: {0: "Keen Eye", 1: "Volt Absorb", H: "Big Pecks"},
 		heightm: 0.76,
 		weightkg: 25,
 		color: "Gray",
@@ -16303,8 +16303,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -31,
 		name: "Cawmodore",
 		types: ["Steel", "Flying"],
-		baseStats: { hp: 50, atk: 92, def: 130, spa: 65, spd: 75, spe: 118 },
-		abilities: { 0: "Intimidate", 1: "Volt Absorb", H: "Big Pecks" },
+		baseStats: {hp: 50, atk: 92, def: 130, spa: 65, spd: 75, spe: 118},
+		abilities: {0: "Intimidate", 1: "Volt Absorb", H: "Big Pecks"},
 		heightm: 1.7,
 		weightkg: 37,
 		color: "Black",
@@ -16317,8 +16317,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -32,
 		name: "Volkritter",
 		types: ["Water", "Fire"],
-		baseStats: { hp: 60, atk: 30, def: 50, spa: 80, spd: 60, spe: 70 },
-		abilities: { 0: "Anticipation", 1: "Infiltrator", H: "Unnerve" },
+		baseStats: {hp: 60, atk: 30, def: 50, spa: 80, spd: 60, spe: 70},
+		abilities: {0: "Anticipation", 1: "Infiltrator", H: "Unnerve"},
 		heightm: 0.3,
 		weightkg: 15,
 		color: "Red",
@@ -16330,8 +16330,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -33,
 		name: "Volkraken",
 		types: ["Water", "Fire"],
-		baseStats: { hp: 100, atk: 45, def: 80, spa: 135, spd: 100, spe: 95 },
-		abilities: { 0: "Analytic", 1: "Infiltrator", H: "Pressure" },
+		baseStats: {hp: 100, atk: 45, def: 80, spa: 135, spd: 100, spe: 95},
+		abilities: {0: "Analytic", 1: "Infiltrator", H: "Pressure"},
 		heightm: 1.3,
 		weightkg: 44.5,
 		color: "Red",
@@ -16344,8 +16344,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -34,
 		name: "Snugglow",
 		types: ["Electric", "Poison"],
-		baseStats: { hp: 40, atk: 37, def: 79, spa: 91, spd: 68, spe: 70 },
-		abilities: { 0: "Storm Drain", 1: "Vital Spirit", H: "Telepathy" },
+		baseStats: {hp: 40, atk: 37, def: 79, spa: 91, spd: 68, spe: 70},
+		abilities: {0: "Storm Drain", 1: "Vital Spirit", H: "Telepathy"},
 		heightm: 1.2,
 		weightkg: 6,
 		color: "Purple",
@@ -16357,8 +16357,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -35,
 		name: "Plasmanta",
 		types: ["Electric", "Poison"],
-		baseStats: { hp: 60, atk: 57, def: 119, spa: 131, spd: 98, spe: 100 },
-		abilities: { 0: "Storm Drain", 1: "Vital Spirit", H: "Telepathy" },
+		baseStats: {hp: 60, atk: 57, def: 119, spa: 131, spd: 98, spe: 100},
+		abilities: {0: "Storm Drain", 1: "Vital Spirit", H: "Telepathy"},
 		heightm: 7,
 		weightkg: 460,
 		color: "Purple",
@@ -16371,8 +16371,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -36,
 		name: "Floatoy",
 		types: ["Water"],
-		baseStats: { hp: 48, atk: 70, def: 40, spa: 70, spd: 30, spe: 77 },
-		abilities: { 0: "Water Veil", 1: "Heatproof", H: "Swift Swim" },
+		baseStats: {hp: 48, atk: 70, def: 40, spa: 70, spd: 30, spe: 77},
+		abilities: {0: "Water Veil", 1: "Heatproof", H: "Swift Swim"},
 		heightm: 0.8,
 		weightkg: 1.9,
 		color: "White",
@@ -16384,8 +16384,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -37,
 		name: "Caimanoe",
 		types: ["Water", "Steel"],
-		baseStats: { hp: 73, atk: 85, def: 65, spa: 80, spd: 40, spe: 87 },
-		abilities: { 0: "Water Veil", 1: "Heatproof", H: "Light Metal" },
+		baseStats: {hp: 73, atk: 85, def: 65, spa: 80, spd: 40, spe: 87},
+		abilities: {0: "Water Veil", 1: "Heatproof", H: "Light Metal"},
 		heightm: 1.4,
 		weightkg: 72.5,
 		color: "Gray",
@@ -16399,8 +16399,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -38,
 		name: "Naviathan",
 		types: ["Water", "Steel"],
-		baseStats: { hp: 103, atk: 110, def: 90, spa: 95, spd: 65, spe: 97 },
-		abilities: { 0: "Guts", 1: "Heatproof", H: "Light Metal" },
+		baseStats: {hp: 103, atk: 110, def: 90, spa: 95, spd: 65, spe: 97},
+		abilities: {0: "Guts", 1: "Heatproof", H: "Light Metal"},
 		heightm: 3,
 		weightkg: 510,
 		color: "Gray",
@@ -16413,9 +16413,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -39,
 		name: "Crucibelle",
 		types: ["Rock", "Poison"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 106, atk: 105, def: 65, spa: 75, spd: 85, spe: 104 },
-		abilities: { 0: "Regenerator", 1: "Mold Breaker", H: "Liquid Ooze" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 106, atk: 105, def: 65, spa: 75, spd: 85, spe: 104},
+		abilities: {0: "Regenerator", 1: "Mold Breaker", H: "Liquid Ooze"},
 		heightm: 1.3,
 		weightkg: 23.6,
 		color: "Purple",
@@ -16430,9 +16430,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Crucibelle",
 		forme: "Mega",
 		types: ["Rock", "Poison"],
-		genderRatio: { M: 0.25, F: 0.75 },
-		baseStats: { hp: 106, atk: 135, def: 75, spa: 91, spd: 125, spe: 108 },
-		abilities: { 0: "Magic Guard" },
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 106, atk: 135, def: 75, spa: 91, spd: 125, spe: 108},
+		abilities: {0: "Magic Guard"},
 		heightm: 1.4,
 		weightkg: 22.5,
 		color: "Purple",
@@ -16444,8 +16444,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -40,
 		name: "Pluffle",
 		types: ["Fairy"],
-		baseStats: { hp: 74, atk: 38, def: 51, spa: 65, spd: 78, spe: 49 },
-		abilities: { 0: "Natural Cure", 1: "Aroma Veil", H: "Friend Guard" },
+		baseStats: {hp: 74, atk: 38, def: 51, spa: 65, spd: 78, spe: 49},
+		abilities: {0: "Natural Cure", 1: "Aroma Veil", H: "Friend Guard"},
 		heightm: 0.8,
 		weightkg: 1.8,
 		color: "Pink",
@@ -16457,8 +16457,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -41,
 		name: "Kerfluffle",
 		types: ["Fairy", "Fighting"],
-		baseStats: { hp: 84, atk: 78, def: 86, spa: 115, spd: 88, spe: 119 },
-		abilities: { 0: "Natural Cure", 1: "Aroma Veil", H: "Friend Guard" },
+		baseStats: {hp: 84, atk: 78, def: 86, spa: 115, spd: 88, spe: 119},
+		abilities: {0: "Natural Cure", 1: "Aroma Veil", H: "Friend Guard"},
 		heightm: 2.1,
 		weightkg: 24.2,
 		color: "Pink",
@@ -16471,8 +16471,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -42,
 		name: "Pajantom",
 		types: ["Dragon", "Ghost"],
-		baseStats: { hp: 84, atk: 133, def: 71, spa: 51, spd: 111, spe: 101 },
-		abilities: { 0: "Comatose" },
+		baseStats: {hp: 84, atk: 133, def: 71, spa: 51, spd: 111, spe: 101},
+		abilities: {0: "Comatose"},
 		heightm: 1.1,
 		weightkg: 3.1,
 		color: "Purple",
@@ -16483,8 +16483,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -43,
 		name: "Mumbao",
 		types: ["Grass", "Fairy"],
-		baseStats: { hp: 55, atk: 30, def: 64, spa: 87, spd: 73, spe: 66 },
-		abilities: { 0: "Solar Power", 1: "Trace", H: "Overcoat" },
+		baseStats: {hp: 55, atk: 30, def: 64, spa: 87, spd: 73, spe: 66},
+		abilities: {0: "Solar Power", 1: "Trace", H: "Overcoat"},
 		heightm: 1,
 		weightkg: 250,
 		color: "Brown",
@@ -16496,8 +16496,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -44,
 		name: "Jumbao",
 		types: ["Grass", "Fairy"],
-		baseStats: { hp: 92, atk: 63, def: 97, spa: 124, spd: 104, spe: 96 },
-		abilities: { 0: "Drought", 1: "Trace", H: "Overcoat" },
+		baseStats: {hp: 92, atk: 63, def: 97, spa: 124, spd: 104, spe: 96},
+		abilities: {0: "Drought", 1: "Trace", H: "Overcoat"},
 		heightm: 2.4,
 		weightkg: 600,
 		color: "Brown",
@@ -16510,9 +16510,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -45,
 		name: "Fawnifer",
 		types: ["Grass"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 49, atk: 61, def: 42, spa: 52, spd: 40, spe: 76 },
-		abilities: { 0: "Overgrow", H: "Lightning Rod" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 49, atk: 61, def: 42, spa: 52, spd: 40, spe: 76},
+		abilities: {0: "Overgrow", H: "Lightning Rod"},
 		heightm: 0.7,
 		weightkg: 6.9,
 		color: "Green",
@@ -16524,9 +16524,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -46,
 		name: "Electrelk",
 		types: ["Grass", "Electric"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 59, atk: 81, def: 67, spa: 57, spd: 55, spe: 101 },
-		abilities: { 0: "Overgrow", H: "Galvanize" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 59, atk: 81, def: 67, spa: 57, spd: 55, spe: 101},
+		abilities: {0: "Overgrow", H: "Galvanize"},
 		heightm: 1.4,
 		weightkg: 41.5,
 		color: "Green",
@@ -16540,9 +16540,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -47,
 		name: "Caribolt",
 		types: ["Grass", "Electric"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 84, atk: 106, def: 82, spa: 77, spd: 80, spe: 106 },
-		abilities: { 0: "Overgrow", H: "Galvanize" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 84, atk: 106, def: 82, spa: 77, spd: 80, spe: 106},
+		abilities: {0: "Overgrow", H: "Galvanize"},
 		heightm: 2.5,
 		weightkg: 140,
 		color: "Green",
@@ -16555,9 +16555,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -48,
 		name: "Smogecko",
 		types: ["Fire"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 48, atk: 66, def: 43, spa: 58, spd: 48, spe: 56 },
-		abilities: { 0: "Blaze", H: "Technician" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 48, atk: 66, def: 43, spa: 58, spd: 48, spe: 56},
+		abilities: {0: "Blaze", H: "Technician"},
 		heightm: 0.5,
 		weightkg: 8.5,
 		color: "Red",
@@ -16569,9 +16569,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -49,
 		name: "Smoguana",
 		types: ["Fire", "Ground"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 68, atk: 86, def: 53, spa: 68, spd: 68, spe: 76 },
-		abilities: { 0: "Blaze", H: "Technician" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 68, atk: 86, def: 53, spa: 68, spd: 68, spe: 76},
+		abilities: {0: "Blaze", H: "Technician"},
 		heightm: 1.5,
 		weightkg: 22.2,
 		color: "Red",
@@ -16585,9 +16585,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -50,
 		name: "Smokomodo",
 		types: ["Fire", "Ground"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 88, atk: 116, def: 67, spa: 88, spd: 78, spe: 97 },
-		abilities: { 0: "Blaze", H: "Technician" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 88, atk: 116, def: 67, spa: 88, spd: 78, spe: 97},
+		abilities: {0: "Blaze", H: "Technician"},
 		heightm: 2.2,
 		weightkg: 205,
 		color: "Red",
@@ -16600,9 +16600,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -51,
 		name: "Swirlpool",
 		types: ["Water"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 61, atk: 49, def: 70, spa: 50, spd: 62, spe: 28 },
-		abilities: { 0: "Torrent", H: "Poison Heal" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 61, atk: 49, def: 70, spa: 50, spd: 62, spe: 28},
+		abilities: {0: "Torrent", H: "Poison Heal"},
 		heightm: 0.5,
 		weightkg: 7,
 		color: "Blue",
@@ -16614,9 +16614,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -52,
 		name: "Coribalis",
 		types: ["Water", "Bug"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 76, atk: 69, def: 90, spa: 65, spd: 77, spe: 43 },
-		abilities: { 0: "Torrent", H: "Poison Heal" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 76, atk: 69, def: 90, spa: 65, spd: 77, spe: 43},
+		abilities: {0: "Torrent", H: "Poison Heal"},
 		heightm: 1.4,
 		weightkg: 24.5,
 		color: "Blue",
@@ -16630,9 +16630,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -53,
 		name: "Snaelstrom",
 		types: ["Water", "Bug"],
-		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 91, atk: 94, def: 110, spa: 80, spd: 97, spe: 63 },
-		abilities: { 0: "Torrent", H: "Poison Heal" },
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 91, atk: 94, def: 110, spa: 80, spd: 97, spe: 63},
+		abilities: {0: "Torrent", H: "Poison Heal"},
 		heightm: 2,
 		weightkg: 120,
 		color: "Blue",
@@ -16646,8 +16646,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Justyke",
 		types: ["Steel", "Ground"],
 		gender: "N",
-		baseStats: { hp: 72, atk: 70, def: 56, spa: 83, spd: 68, spe: 30 },
-		abilities: { 0: "Levitate", 1: "Stalwart", H: "Justified" },
+		baseStats: {hp: 72, atk: 70, def: 56, spa: 83, spd: 68, spe: 30},
+		abilities: {0: "Levitate", 1: "Stalwart", H: "Justified"},
 		heightm: 0.4,
 		weightkg: 36.5,
 		color: "Brown",
@@ -16660,8 +16660,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Equilibra",
 		types: ["Steel", "Ground"],
 		gender: "N",
-		baseStats: { hp: 102, atk: 50, def: 96, spa: 121, spd: 118, spe: 60 },
-		abilities: { 0: "Levitate", 1: "Stalwart", H: "Justified" },
+		baseStats: {hp: 102, atk: 50, def: 96, spa: 121, spd: 118, spe: 60},
+		abilities: {0: "Levitate", 1: "Stalwart", H: "Justified"},
 		heightm: 0.8,
 		weightkg: 51.3,
 		color: "Brown",
@@ -16674,8 +16674,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -56,
 		name: "Solotl",
 		types: ["Fire", "Dragon"],
-		baseStats: { hp: 68, atk: 48, def: 34, spa: 72, spd: 24, spe: 84 },
-		abilities: { 0: "Regenerator", 1: "Vital Spirit", H: "Magician" },
+		baseStats: {hp: 68, atk: 48, def: 34, spa: 72, spd: 24, spe: 84},
+		abilities: {0: "Regenerator", 1: "Vital Spirit", H: "Magician"},
 		heightm: 0.6,
 		weightkg: 11.8,
 		color: "Red",
@@ -16687,8 +16687,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -57,
 		name: "Astrolotl",
 		types: ["Fire", "Dragon"],
-		baseStats: { hp: 108, atk: 108, def: 74, spa: 92, spd: 64, spe: 114 },
-		abilities: { 0: "Regenerator", 1: "Vital Spirit", H: "Magician" },
+		baseStats: {hp: 108, atk: 108, def: 74, spa: 92, spd: 64, spe: 114},
+		abilities: {0: "Regenerator", 1: "Vital Spirit", H: "Magician"},
 		heightm: 1.9,
 		weightkg: 50,
 		color: "Red",
@@ -16701,8 +16701,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -58,
 		name: "Miasmite",
 		types: ["Bug", "Dragon"],
-		baseStats: { hp: 40, atk: 85, def: 60, spa: 52, spd: 52, spe: 44 },
-		abilities: { 0: "Neutralizing Gas", 1: "Hyper Cutter", H: "Compound Eyes" },
+		baseStats: {hp: 40, atk: 85, def: 60, spa: 52, spd: 52, spe: 44},
+		abilities: {0: "Neutralizing Gas", 1: "Hyper Cutter", H: "Compound Eyes"},
 		heightm: 0.6,
 		weightkg: 10.1,
 		color: "Green",
@@ -16714,8 +16714,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -59,
 		name: "Miasmaw",
 		types: ["Bug", "Dragon"],
-		baseStats: { hp: 85, atk: 135, def: 60, spa: 115, spd: 85, spe: 92 },
-		abilities: { 0: "Neutralizing Gas", 1: "Hyper Cutter", H: "Compound Eyes" },
+		baseStats: {hp: 85, atk: 135, def: 60, spa: 115, spd: 85, spe: 92},
+		abilities: {0: "Neutralizing Gas", 1: "Hyper Cutter", H: "Compound Eyes"},
 		heightm: 1.2,
 		weightkg: 57,
 		color: "Green",
@@ -16729,8 +16729,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -5000,
 		name: "Pokestar Smeargle",
 		types: ["Normal"],
-		baseStats: { hp: 55, atk: 20, def: 35, spa: 20, spd: 45, spe: 75 },
-		abilities: { 0: "Own Tempo", 1: "Technician", H: "Moody" },
+		baseStats: {hp: 55, atk: 20, def: 35, spa: 20, spd: 45, spe: 75},
+		abilities: {0: "Own Tempo", 1: "Technician", H: "Moody"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16742,8 +16742,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Pokestar UFO",
 		types: ["Flying", "Electric"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Levitate"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16759,8 +16759,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "2",
 		types: ["Psychic", "Electric"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Levitate"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16772,8 +16772,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Pokestar Brycen-Man",
 		types: ["Dark", "Psychic"],
 		gender: "M",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Levitate"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16786,8 +16786,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Pokestar MT",
 		types: ["Steel"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Analytic" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Analytic"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16800,8 +16800,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Pokestar MT2",
 		types: ["Steel", "Electric"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Flash Fire" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Flash Fire"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16814,8 +16814,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Pokestar Transport",
 		types: ["Steel"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Motor Drive" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Motor Drive"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16828,8 +16828,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Pokestar Giant",
 		types: ["Normal"],
 		gender: "F",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Huge Power" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Huge Power"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16841,8 +16841,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -5007,
 		name: "Pokestar Humanoid",
 		types: ["Normal"],
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Insomnia" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Insomnia"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16854,8 +16854,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -5008,
 		name: "Pokestar Monster",
 		types: ["Dark"],
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Pressure" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Pressure"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16867,8 +16867,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -5009,
 		name: "Pokestar F-00",
 		types: ["Steel", "Normal"],
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Volt Absorb" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Volt Absorb"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16880,8 +16880,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -5010,
 		name: "Pokestar F-002",
 		types: ["Steel", "Normal"],
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Reckless" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Reckless"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16893,8 +16893,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: -5011,
 		name: "Pokestar Spirit",
 		types: ["Dark", "Ghost"],
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Wonder Guard" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Wonder Guard"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16907,8 +16907,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Pokestar Black Door",
 		types: ["Grass"],
 		gender: "F",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Early Bird" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Early Bird"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16921,8 +16921,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Pokestar White Door",
 		types: ["Fire"],
 		gender: "M",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Blaze" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Blaze"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16935,8 +16935,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		name: "Pokestar Black Belt",
 		types: ["Fighting"],
 		gender: "M",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Huge Power" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Huge Power"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16951,8 +16951,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		forme: "PropU2",
 		types: ["Psychic", "Electric"],
 		gender: "N",
-		baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
-		abilities: { 0: "Levitate" },
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Levitate"},
 		heightm: 1.5,
 		weightkg: 61,
 		color: "White",
@@ -16964,11 +16964,11 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		num: 69001,
 		name: "Grasshole",
 		types: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 56,
@@ -16976,35 +16976,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 55,
 			spa: 47,
 			spd: 50,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Overgrow",
 			H: "Cheek Pouch",
-			S: "Analytic"
+			S: "Analytic",
 		},
 		heightm: 0.7,
 		weightkg: 6.9,
 		color: "Gray",
 		evos: [
-			"Analgae"
+			"Analgae",
 		],
 		eggGroups: [
 			"Grass",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	analgae: {
 		num: 69002,
 		name: "Analgae",
 		types: [
 			"Grass",
-			"Ground"
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 70,
@@ -17012,12 +17012,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 55,
 			spd: 60,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Overgrow",
 			H: "Cheek Pouch",
-			S: "Analytic"
+			S: "Analytic",
 		},
 		heightm: 1,
 		weightkg: 28,
@@ -17025,24 +17025,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Grasshole",
 		evoLevel: 16,
 		evos: [
-			"Rectreem"
+			"Rectreem",
 		],
 		eggGroups: [
 			"Grass",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	rectreem: {
 		num: 69003,
 		name: "Rectreem",
 		types: [
 			"Grass",
-			"Ground"
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 90,
@@ -17050,12 +17050,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 95,
 			spa: 70,
 			spd: 70,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Overgrow",
 			H: "Cheek Pouch",
-			S: "Analytic"
+			S: "Analytic",
 		},
 		heightm: 2,
 		weightkg: 100,
@@ -17064,19 +17064,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 36,
 		eggGroups: [
 			"Grass",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	arabomb: {
 		num: 69004,
 		name: "Arabomb",
 		types: [
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 47,
@@ -17084,35 +17084,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 65,
 			spd: 45,
-			spe: 62
+			spe: 62,
 		},
 		abilities: {
 			0: "Blaze",
 			H: "Aftermath",
-			S: "Sand Veil"
+			S: "Sand Veil",
 		},
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Gray",
 		evos: [
-			"Iguallah"
+			"Iguallah",
 		],
 		eggGroups: [
 			"Dragon",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	iguallah: {
 		num: 69005,
 		name: "Iguallah",
 		types: [
 			"Fire",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 65,
@@ -17120,12 +17120,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 55,
 			spa: 85,
 			spd: 50,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Blaze",
 			H: "Aftermath",
-			S: "Sand Veil"
+			S: "Sand Veil",
 		},
 		heightm: 1.1,
 		weightkg: 19,
@@ -17133,24 +17133,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Arabomb",
 		evoLevel: 16,
 		evos: [
-			"Lizakbar"
+			"Lizakbar",
 		],
 		eggGroups: [
 			"Dragon",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	lizakbar: {
 		num: 69006,
 		name: "Lizakbar",
 		types: [
 			"Fire",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 85,
@@ -17158,12 +17158,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 120,
 			spd: 65,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Blaze",
 			H: "Aftermath",
-			S: "Sand Veil"
+			S: "Sand Veil",
 		},
 		heightm: 1.7,
 		weightkg: 90.5,
@@ -17172,19 +17172,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 36,
 		eggGroups: [
 			"Dragon",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ejacasm: {
 		num: 69007,
 		name: "Ejacasm",
 		types: [
-			"Water"
+			"Water",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 60,
@@ -17192,35 +17192,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 50,
 			spd: 63,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Torrent",
 			H: "Water Veil",
-			S: "Unaware"
+			S: "Unaware",
 		},
 		heightm: 0.5,
 		weightkg: 9,
 		color: "Blue",
 		evos: [
-			"Hosajack"
+			"Hosajack",
 		],
 		eggGroups: [
 			"Water 1",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	hosajack: {
 		num: 69008,
 		name: "Hosajack",
 		types: [
 			"Water",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 85,
@@ -17228,12 +17228,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 64,
 			spd: 77,
-			spe: 64
+			spe: 64,
 		},
 		abilities: {
 			0: "Torrent",
 			H: "Water Veil",
-			S: "Unaware"
+			S: "Unaware",
 		},
 		heightm: 1,
 		weightkg: 22.5,
@@ -17241,24 +17241,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Ejacasm",
 		evoLevel: 16,
 		evos: [
-			"Condoom"
+			"Condoom",
 		],
 		eggGroups: [
 			"Water 1",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	condoom: {
 		num: 69009,
 		name: "Condoom",
 		types: [
 			"Water",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 120,
@@ -17266,12 +17266,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 85,
 			spd: 100,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Torrent",
 			H: "Water Veil",
-			S: "Unaware"
+			S: "Unaware",
 		},
 		heightm: 1.6,
 		weightkg: 85.5,
@@ -17280,19 +17280,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 36,
 		eggGroups: [
 			"Water 1",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	squirrap: {
 		num: 69010,
 		name: "Squirrap",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 40,
@@ -17300,33 +17300,33 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 39,
 			spa: 43,
 			spd: 44,
-			spe: 58
+			spe: 58,
 		},
 		abilities: {
 			0: "Soundproof",
 			H: "Boombox",
-			S: "Moxie"
+			S: "Moxie",
 		},
 		heightm: 0.3,
 		weightkg: 3.5,
 		color: "Brown",
 		evos: [
-			"Gampster"
+			"Gampster",
 		],
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	gampster: {
 		num: 69011,
 		name: "Gampster",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 89,
@@ -17334,12 +17334,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 51,
 			spa: 79,
 			spd: 54,
-			spe: 87
+			spe: 87,
 		},
 		abilities: {
 			0: "Soundproof",
 			H: "Boombox",
-			S: "Moxie"
+			S: "Moxie",
 		},
 		heightm: 1,
 		weightkg: 25.2,
@@ -17347,20 +17347,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Squirrap",
 		evoLevel: 17,
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	kengeon: {
 		num: 69012,
 		name: "Kengeon",
 		types: [
 			"Normal",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 37,
@@ -17368,35 +17368,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 45,
 			spa: 36,
 			spd: 48,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Early Bird",
 			1: "Shed Skin",
 			H: "Aroma Veil",
-			S: "Flame Body"
+			S: "Flame Body",
 		},
 		heightm: 0.3,
 		weightkg: 1.8,
 		color: "Brown",
 		evos: [
-			"Frieden"
+			"Frieden",
 		],
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	frieden: {
 		num: 69013,
 		name: "Frieden",
 		types: [
 			"Normal",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 58,
@@ -17404,13 +17404,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 59,
 			spa: 55,
 			spd: 65,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Gale Wings",
 			1: "Rough Skin",
 			H: "Aroma Veil",
-			S: "Flame Body"
+			S: "Flame Body",
 		},
 		heightm: 1.1,
 		weightkg: 30,
@@ -17418,23 +17418,23 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Kengeon",
 		evoLevel: 15,
 		evos: [
-			"Corooster"
+			"Corooster",
 		],
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	corooster: {
 		num: 69014,
 		name: "Corooster",
 		types: [
 			"Normal",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 77,
@@ -17442,13 +17442,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 77,
 			spa: 67,
 			spd: 77,
-			spe: 87
+			spe: 87,
 		},
 		abilities: {
 			0: "Gale Wings",
 			1: "Rough Skin",
 			H: "Aroma Veil",
-			S: "Flame Body"
+			S: "Flame Body",
 		},
 		heightm: 1.5,
 		weightkg: 39.5,
@@ -17456,19 +17456,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Frieden",
 		evoLevel: 30,
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	curicrawl: {
 		num: 69015,
 		name: "Curicrawl",
 		types: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 60,
@@ -17476,34 +17476,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 45,
 			spa: 10,
 			spd: 20,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Shield Dust",
 			1: "Prankster",
 			H: "Guts",
-			S: "Friend Guard"
+			S: "Friend Guard",
 		},
 		heightm: 1,
 		weightkg: 29.4,
 		color: "Yellow",
 		evos: [
-			"Gutsicoon"
+			"Gutsicoon",
 		],
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	gutsicoon: {
 		num: 69016,
 		name: "Gutsicoon",
 		types: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -17511,13 +17511,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 25,
 			spd: 30,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Shield Dust",
 			1: "Prankster",
 			H: "Guts",
-			S: "Friend Guard"
+			S: "Friend Guard",
 		},
 		heightm: 1,
 		weightkg: 29.9,
@@ -17525,23 +17525,23 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Curicrawl",
 		evoLevel: 8,
 		evos: [
-			"Gutsifly"
+			"Gutsifly",
 		],
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	gutsifly: {
 		num: 69017,
 		name: "Gutsifly",
 		types: [
 			"Bug",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 105,
@@ -17549,13 +17549,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 110,
 			spa: 25,
 			spd: 40,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Shield Dust",
 			1: "Prankster",
 			H: "Guts",
-			S: "Friend Guard"
+			S: "Friend Guard",
 		},
 		heightm: 1.1,
 		weightkg: 30,
@@ -17563,19 +17563,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Gutsicoon",
 		evoLevel: 12,
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	larvades: {
 		num: 69018,
 		name: "Larvades",
 		types: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 35,
@@ -17583,35 +17583,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 35,
 			spa: 55,
 			spd: 50,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Compound Eyes",
 			1: "Shield Dust",
 			H: "Poison Point",
-			S: "Immunity"
+			S: "Immunity",
 		},
 		heightm: 0.3,
 		weightkg: 2.9,
 		color: "Gray",
 		evos: [
-			"Proboskito"
+			"Proboskito",
 		],
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	proboskito: {
 		num: 69019,
 		name: "Proboskito",
 		types: [
 			"Bug",
-			"Electric"
+			"Electric",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 55,
@@ -17619,13 +17619,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 40,
 			spa: 85,
 			spd: 55,
-			spe: 125
+			spe: 125,
 		},
 		abilities: {
 			0: "Compound Eyes",
 			1: "Static",
 			H: "Poison Point",
-			S: "Toxic Boost"
+			S: "Toxic Boost",
 		},
 		heightm: 1,
 		weightkg: 30,
@@ -17633,22 +17633,22 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Larvades",
 		evoLevel: 12,
 		evos: [
-			"Venowatt"
+			"Venowatt",
 		],
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	clovour: {
 		num: 69020,
 		name: "Clovour",
 		types: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 60,
@@ -17656,37 +17656,37 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 52,
 			spa: 20,
 			spd: 52,
-			spe: 71
+			spe: 71,
 		},
 		abilities: {
 			0: "Natural Cure",
 			1: "Sap Sipper",
 			H: "Super Luck",
-			S: "Serene Grace"
+			S: "Serene Grace",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Green",
 		evos: [
 			"Chanolour",
-			"Kuuroba"
+			"Kuuroba",
 		],
 		eggGroups: [
 			"Fairy",
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	chanolour: {
 		num: 69021,
 		name: "Chanolour",
 		types: [
 			"Grass",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 90,
@@ -17694,13 +17694,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 40,
 			spd: 85,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Natural Cure",
 			1: "Sap Sipper",
 			H: "Super Luck",
-			S: "Serene Grace"
+			S: "Serene Grace",
 		},
 		heightm: 1.2,
 		weightkg: 22.5,
@@ -17710,19 +17710,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Leaf Stone",
 		eggGroups: [
 			"Fairy",
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	nauseon: {
 		num: 69022,
 		name: "Nauseon",
 		types: [
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 55,
@@ -17730,36 +17730,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 55,
 			spa: 55,
 			spd: 55,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Poison Point",
 			H: "Poison Touch",
-			S: "Healer"
+			S: "Healer",
 		},
 		heightm: 0.3,
 		weightkg: 0.6,
 		color: "Blue",
 		evos: [
 			"Hazmate",
-			"Ebolable"
+			"Ebolable",
 		],
 		eggGroups: [
 			"Monster",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	hazmate: {
 		num: 69023,
 		name: "Hazmate",
 		types: [
 			"Poison",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 95,
@@ -17767,12 +17767,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 55,
 			spd: 70,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Overcoat",
 			H: "Poison Touch",
-			S: "Healer"
+			S: "Healer",
 		},
 		heightm: 0.7,
 		weightkg: 33.4,
@@ -17782,20 +17782,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoCondition: "with an Atk stat > its SpAtt",
 		eggGroups: [
 			"Monster",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ebolable: {
 		num: 69024,
 		name: "Ebolable",
 		types: [
 			"Poison",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -17803,12 +17803,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 120,
 			spd: 90,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Liquid Ooze",
 			H: "Poison Touch",
-			S: "Healer"
+			S: "Healer",
 		},
 		heightm: 1,
 		weightkg: 14.5,
@@ -17818,20 +17818,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoCondition: "with an Atk stat < its SpAtt",
 		eggGroups: [
 			"Monster",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	pikotton: {
 		num: 69025,
 		name: "Pikotton",
 		types: [
 			"Electric",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 55,
@@ -17839,29 +17839,29 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 90,
 			spd: 75,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Static",
 			1: "Sweet Veil",
 			H: "Lightning Rod",
-			S: "Fluffy"
+			S: "Fluffy",
 		},
 		heightm: 0.4,
 		weightkg: 3.5,
 		color: "Yellow",
 		eggGroups: [
 			"Fairy",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	birdhouse: {
 		num: 69026,
 		name: "Birdhouse",
 		types: [
 			"Normal",
-			"Flying"
+			"Flying",
 		],
 		gender: "N",
 		baseStats: {
@@ -17870,30 +17870,30 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 105,
 			spa: 50,
 			spd: 105,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Sturdy",
 			H: "Rattled",
-			S: "Wooden Guard"
+			S: "Wooden Guard",
 		},
 		heightm: 1.4,
 		weightkg: 29.5,
 		color: "Brown",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	lanshil: {
 		num: 69027,
 		name: "Lanshil",
 		types: [
-			"Rock"
+			"Rock",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 48,
@@ -17901,34 +17901,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 40,
 			spd: 62,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Rock Head",
 			1: "Sturdy",
 			H: "Sand Force",
-			S: "Sand Veil"
+			S: "Sand Veil",
 		},
 		heightm: 0.4,
 		weightkg: 20,
 		color: "Black",
 		evos: [
-			"Middril"
+			"Middril",
 		],
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	middril: {
 		num: 69028,
 		name: "Middril",
 		types: [
-			"Rock"
+			"Rock",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 65,
@@ -17936,13 +17936,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 87,
 			spa: 45,
 			spd: 75,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Rock Head",
 			1: "Sturdy",
 			H: "Sand Force",
-			S: "Sand Veil"
+			S: "Sand Veil",
 		},
 		heightm: 1,
 		weightkg: 44.2,
@@ -17950,23 +17950,23 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Lanshil",
 		evoLevel: 19,
 		evos: [
-			"Shurismash"
+			"Shurismash",
 		],
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	shurismash: {
 		num: 69029,
 		name: "Shurismash",
 		types: [
 			"Rock",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 85,
@@ -17974,13 +17974,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 110,
 			spa: 48,
 			spd: 95,
-			spe: 77
+			spe: 77,
 		},
 		abilities: {
 			0: "Rock Head",
 			1: "Sturdy",
 			H: "Sand Force",
-			S: "Victory Star"
+			S: "Victory Star",
 		},
 		heightm: 1.4,
 		weightkg: 64.5,
@@ -17988,19 +17988,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Middril",
 		evoLevel: 36,
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	maymay: {
 		num: 69030,
 		name: "Maymay",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -18008,35 +18008,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 52,
 			spa: 37,
 			spd: 40,
-			spe: 52
+			spe: 52,
 		},
 		abilities: {
 			0: "Hustle",
 			1: "Normalize",
 			H: "Sheer Force",
-			S: "Steadfast"
+			S: "Steadfast",
 		},
 		heightm: 0.6,
 		weightkg: 11,
 		color: "Brown",
 		evos: [
-			"Memenace"
+			"Memenace",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	memenace: {
 		num: 69031,
 		name: "Memenace",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 106,
@@ -18044,13 +18044,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 87,
 			spa: 72,
 			spd: 85,
-			spe: 69
+			spe: 69,
 		},
 		abilities: {
 			0: "Hustle",
 			1: "Normalize",
 			H: "Sheer Force",
-			S: "Steadfast"
+			S: "Steadfast",
 		},
 		heightm: 1.1,
 		weightkg: 32.6,
@@ -18059,20 +18059,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 23,
 		eggGroups: [
 			"Amorphous",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	vandash: {
 		num: 69032,
 		name: "Vandash",
 		types: [
 			"Dark",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -18080,28 +18080,28 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 55,
 			spa: 70,
 			spd: 55,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Guts",
 			1: "Quick Feet",
 			H: "Pickpocket",
-			S: "Stakeout"
+			S: "Stakeout",
 		},
 		heightm: 1.7,
 		weightkg: 55.6,
 		color: "Black",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	piguson: {
 		num: 69033,
 		name: "Piguson",
 		types: [
 			"Fighting",
-			"Normal"
+			"Normal",
 		],
 		gender: "M",
 		baseStats: {
@@ -18110,31 +18110,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 95,
 			spa: 50,
 			spd: 55,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Guts",
 			1: "Scrappy",
 			H: "Frisk",
-			S: "Stakeout"
+			S: "Stakeout",
 		},
 		heightm: 1.3,
 		weightkg: 110.4,
 		color: "White",
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	armando: {
 		num: 69034,
 		name: "Armando",
 		types: [
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 45,
@@ -18142,34 +18142,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 43,
 			spa: 20,
 			spd: 33,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Inner Focus",
 			1: "Iron Fist",
 			H: "Skill Link",
-			S: "Sticky Hold"
+			S: "Sticky Hold",
 		},
 		heightm: 0.8,
 		weightkg: 19.5,
 		color: "Red",
 		evos: [
-			"Muscledude"
+			"Muscledude",
 		],
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	muscledude: {
 		num: 69035,
 		name: "Muscledude",
 		types: [
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 60,
@@ -18177,13 +18177,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 55,
 			spa: 36,
 			spd: 55,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Inner Focus",
 			1: "Iron Fist",
 			H: "Skill Link",
-			S: "Sticky Hold"
+			S: "Sticky Hold",
 		},
 		heightm: 0.8,
 		weightkg: 41.8,
@@ -18191,22 +18191,22 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Armando",
 		evoLevel: 18,
 		evos: [
-			"Tripecs"
+			"Tripecs",
 		],
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	tripecs: {
 		num: 69036,
 		name: "Tripecs",
 		types: [
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 80,
@@ -18214,13 +18214,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 43,
 			spd: 70,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Inner Focus",
 			1: "Iron Fist",
 			H: "Skill Link",
-			S: "Sticky Hold"
+			S: "Sticky Hold",
 		},
 		heightm: 1.7,
 		weightkg: 95,
@@ -18228,19 +18228,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Muscledude",
 		evoLevel: 36,
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	semdrop: {
 		num: 69037,
 		name: "Semdrop",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 80,
@@ -18248,36 +18248,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 50,
 			spd: 75,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Insomnia",
 			1: "Immunity",
 			H: "Dry Skin",
-			S: "Liquid Ooze"
+			S: "Liquid Ooze",
 		},
 		heightm: 0.9,
 		weightkg: 30,
 		color: "Gray",
 		evos: [
-			"Semrust"
+			"Semrust",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	semrust: {
 		num: 69038,
 		name: "Semrust",
 		types: [
 			"Normal",
-			"Ground"
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 110,
@@ -18285,13 +18285,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 70,
 			spd: 105,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Insomnia",
 			1: "Immunity",
 			H: "Dry Skin",
-			S: "Liquid Ooze"
+			S: "Liquid Ooze",
 		},
 		heightm: 0.9,
 		weightkg: 40.5,
@@ -18299,24 +18299,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Semdrop",
 		evoLevel: 30,
 		evos: [
-			"Semdemen"
+			"Semdemen",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	furnazi: {
 		num: 69039,
 		name: "Furnazi",
 		types: [
 			"Fire",
-			"Rock"
+			"Rock",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 35,
@@ -18324,35 +18324,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 80,
 			spd: 75,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Flame Body",
 			1: "Solid Rock",
 			H: "White Smoke",
-			S: "Justified"
+			S: "Justified",
 		},
 		heightm: 0.9,
 		weightkg: 51.2,
 		color: "Red",
 		evos: [
-			"Finasoven"
+			"Finasoven",
 		],
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	finasoven: {
 		num: 69040,
 		name: "Finasoven",
 		types: [
 			"Fire",
-			"Rock"
+			"Rock",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 75,
@@ -18360,13 +18360,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 130,
 			spa: 125,
 			spd: 105,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Flame Body",
 			1: "Solid Rock",
 			H: "White Smoke",
-			S: "Justified"
+			S: "Justified",
 		},
 		heightm: 1.7,
 		weightkg: 130,
@@ -18375,19 +18375,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "useItem",
 		evoItem: "Fire Stone",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	troubait: {
 		num: 69041,
 		name: "Troubait",
 		types: [
-			"Water"
+			"Water",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 45,
@@ -18395,34 +18395,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 40,
 			spd: 60,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Water Veil",
 			H: "Prankster",
-			S: "Hustle"
+			S: "Hustle",
 		},
 		heightm: 0.4,
 		weightkg: 7,
 		color: "Blue",
 		evos: [
-			"Tulure"
+			"Tulure",
 		],
 		eggGroups: [
 			"Monster",
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	tulure: {
 		num: 69042,
 		name: "Tulure",
 		types: [
-			"Water"
+			"Water",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 65,
@@ -18430,12 +18430,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 58,
 			spd: 62,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Water Veil",
 			H: "Prankster",
-			S: "Hustle"
+			S: "Hustle",
 		},
 		heightm: 1.2,
 		weightkg: 24,
@@ -18444,24 +18444,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 15,
 		evos: [
 			"Monstrap",
-			"Baitmaster"
+			"Baitmaster",
 		],
 		eggGroups: [
 			"Monster",
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	monstrap: {
 		num: 69043,
 		name: "Monstrap",
 		types: [
 			"Water",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 115,
@@ -18469,12 +18469,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 69,
 			spd: 83,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Intimidate",
 			H: "Oblivious",
-			S: "Defiant"
+			S: "Defiant",
 		},
 		heightm: 2.3,
 		weightkg: 93.7,
@@ -18484,20 +18484,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Water Stone",
 		eggGroups: [
 			"Monster",
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	pixila: {
 		num: 69044,
 		name: "Pixila",
 		types: [
 			"Bug",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 55,
@@ -18505,36 +18505,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 45,
 			spd: 65,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Natural Cure",
 			1: "Cute Charm",
 			H: "Sap Sipper",
-			S: "Regenerator"
+			S: "Regenerator",
 		},
 		heightm: 0.6,
 		weightkg: 13.6,
 		color: "Green",
 		evos: [
-			"Fairileon"
+			"Fairileon",
 		],
 		eggGroups: [
 			"Fairy",
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	fairileon: {
 		num: 69045,
 		name: "Fairileon",
 		types: [
 			"Bug",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 110,
@@ -18542,13 +18542,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 95,
 			spd: 130,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Natural Cure",
 			1: "Shield Dust",
 			H: "Sap Sipper",
-			S: "Regenerator"
+			S: "Regenerator",
 		},
 		heightm: 0.9,
 		weightkg: 22.6,
@@ -18557,19 +18557,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 26,
 		eggGroups: [
 			"Fairy",
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	wedgard: {
 		num: 69046,
 		name: "Wedgard",
 		types: [
-			"Ground"
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -18577,34 +18577,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 10,
 			spd: 50,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Arena Trap",
 			1: "Sand Veil",
 			H: "Rough Skin",
-			S: "Tough Claws"
+			S: "Tough Claws",
 		},
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Brown",
 		evos: [
-			"Knokedge"
+			"Knokedge",
 		],
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	knokedge: {
 		num: 69047,
 		name: "Knokedge",
 		types: [
-			"Ground"
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 110,
@@ -18612,13 +18612,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 95,
 			spa: 20,
 			spd: 50,
-			spe: 98
+			spe: 98,
 		},
 		abilities: {
 			0: "Arena Trap",
 			1: "Sand Veil",
 			H: "Rough Skin",
-			S: "Tough Claws"
+			S: "Tough Claws",
 		},
 		heightm: 1.4,
 		weightkg: 56,
@@ -18626,19 +18626,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Wedgard",
 		evoLevel: 29,
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ribbizap: {
 		num: 69048,
 		name: "Ribbizap",
 		types: [
-			"Electric"
+			"Electric",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 66,
@@ -18646,32 +18646,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 57,
 			spa: 112,
 			spd: 73,
-			spe: 102
+			spe: 102,
 		},
 		abilities: {
 			0: "Lightning Rod",
 			1: "Dry Skin",
 			H: "Motor Drive",
-			S: "Liquid Voice"
+			S: "Liquid Voice",
 		},
 		heightm: 0.3,
 		weightkg: 20,
 		color: "Green",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
-		gen: 8
+		gen: 8,
 	},
 	elephas: {
 		num: 69049,
 		name: "Elephas",
 		types: [
 			"Psychic",
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 85,
@@ -18679,32 +18679,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 105,
 			spa: 90,
 			spd: 115,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Telepathy",
 			1: "Shed Skin",
 			H: "Levitate",
-			S: "Thick Fat"
+			S: "Thick Fat",
 		},
 		heightm: 1.1,
 		weightkg: 120,
 		color: "Pink",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	seamapan: {
 		num: 69050,
 		name: "Seamapan",
 		types: [
 			"Water",
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.125,
-			F: 0.875
+			F: 0.875,
 		},
 		baseStats: {
 			hp: 51,
@@ -18712,28 +18712,28 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 60,
 			spd: 81,
-			spe: 106
+			spe: 106,
 		},
 		abilities: {
 			0: "Thick Fat",
 			1: "Huge Power",
 			H: "Cute Charm",
-			S: "Water Bubble"
+			S: "Water Bubble",
 		},
 		heightm: 0.6,
 		weightkg: 9,
 		color: "Pink",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	caroline: {
 		num: 69051,
 		name: "Caroline",
 		types: [
 			"Ground",
-			"Flying"
+			"Flying",
 		],
 		gender: "F",
 		baseStats: {
@@ -18742,31 +18742,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 95,
 			spd: 70,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Super Luck",
 			H: "Justified",
-			S: "Aerilate"
+			S: "Aerilate",
 		},
 		heightm: 1.7,
 		weightkg: 55,
 		color: "Brown",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	chompest: {
 		num: 69052,
 		name: "Chompest",
 		types: [
 			"Rock",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -18774,34 +18774,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 50,
 			spd: 70,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Intimidate",
 			H: "Pickup",
-			S: "Jewelry"
+			S: "Jewelry",
 		},
 		heightm: 1,
 		weightkg: 100,
 		color: "Brown",
 		evos: [
-			"Vaultevour"
+			"Vaultevour",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	masdawg: {
 		num: 69053,
 		name: "Masdawg",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -18809,35 +18809,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 55,
 			spd: 65,
-			spe: 112
+			spe: 112,
 		},
 		abilities: {
 			0: "Ball Fetch",
 			1: "Cute Charm",
 			H: "Sand Veil",
-			S: "Swift Swim"
+			S: "Swift Swim",
 		},
 		heightm: 0.6,
 		weightkg: 31.8,
 		color: "Yellow",
 		evos: [
-			"Pasdawg"
+			"Pasdawg",
 		],
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	pasdawg: {
 		num: 69054,
 		name: "Pasdawg",
 		types: [
 			"Normal",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 112,
@@ -18845,13 +18845,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 105,
 			spa: 55,
 			spd: 85,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Ball Fetch",
 			1: "Intimidate",
 			H: "Sand Force",
-			S: "Swift Swim"
+			S: "Swift Swim",
 		},
 		heightm: 1.4,
 		weightkg: 63.6,
@@ -18859,20 +18859,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Masdawg",
 		evoLevel: 35,
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	spanke: {
 		num: 69055,
 		name: "Spanke",
 		types: [
 			"Grass",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -18880,36 +18880,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 73,
 			spa: 16,
 			spd: 34,
-			spe: 42
+			spe: 42,
 		},
 		abilities: {
 			0: "Shed Skin",
 			1: "Oblivious",
 			H: "Skill Link",
-			S: "Iron Fist"
+			S: "Iron Fist",
 		},
 		heightm: 1.7,
 		weightkg: 6.8,
 		color: "Green",
 		evos: [
-			"Anaconduke"
+			"Anaconduke",
 		],
 		eggGroups: [
 			"Field",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	anaconduke: {
 		num: 69056,
 		name: "Anaconduke",
 		types: [
 			"Grass",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 110,
@@ -18917,13 +18917,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 91,
 			spa: 20,
 			spd: 50,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Shed Skin",
 			1: "Oblivious",
 			H: "Skill Link",
-			S: "Limber"
+			S: "Limber",
 		},
 		heightm: 3.1,
 		weightkg: 62.3,
@@ -18932,20 +18932,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 28,
 		eggGroups: [
 			"Field",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	fishnism: {
 		num: 69057,
 		name: "Fishnism",
 		types: [
 			"Water",
-			"Psychic"
+			"Psychic",
 		],
 		genderRatio: {
 			M: 0.125,
-			F: 0.875
+			F: 0.875,
 		},
 		baseStats: {
 			hp: 60,
@@ -18953,35 +18953,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 40,
 			spd: 80,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Rivalry",
 			1: "Synchronize",
 			H: "Gluttony",
-			S: "Rattled"
+			S: "Rattled",
 		},
 		heightm: 0.4,
 		weightkg: 1.9,
 		color: "Pink",
 		evos: [
-			"Sjwhale"
+			"Sjwhale",
 		],
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	sjwhale: {
 		num: 69058,
 		name: "Sjwhale",
 		types: [
 			"Water",
-			"Psychic"
+			"Psychic",
 		],
 		genderRatio: {
 			M: 0.125,
-			F: 0.875
+			F: 0.875,
 		},
 		baseStats: {
 			hp: 115,
@@ -18989,13 +18989,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 95,
 			spa: 50,
 			spd: 100,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Rivalry",
 			1: "Synchronize",
 			H: "Gluttony",
-			S: "Thick Fat"
+			S: "Thick Fat",
 		},
 		heightm: 2,
 		weightkg: 352,
@@ -19003,20 +19003,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Fishnism",
 		evoLevel: 35,
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	chezetta: {
 		num: 69059,
 		name: "Chezetta",
 		types: [
 			"Fairy",
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.125,
-			F: 0.875
+			F: 0.875,
 		},
 		baseStats: {
 			hp: 60,
@@ -19024,36 +19024,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 69,
 			spd: 70,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Gooey",
 			1: "Sticky Hold",
 			H: "Cute Charm",
-			S: "Water Absorb"
+			S: "Water Absorb",
 		},
 		heightm: 1.5,
 		weightkg: 40,
 		color: "Brown",
 		evos: [
-			"Mozzamazel"
+			"Mozzamazel",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	mozzamazel: {
 		num: 69060,
 		name: "Mozzamazel",
 		types: [
 			"Fairy",
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.125,
-			F: 0.875
+			F: 0.875,
 		},
 		baseStats: {
 			hp: 105,
@@ -19061,13 +19061,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 105,
 			spa: 95,
 			spd: 105,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Gooey",
 			1: "Sticky Hold",
 			H: "Cute Charm",
-			S: "Water Absorb"
+			S: "Water Absorb",
 		},
 		heightm: 1.9,
 		weightkg: 80,
@@ -19076,20 +19076,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "levelFriendship",
 		eggGroups: [
 			"Amorphous",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	krokling: {
 		num: 69061,
 		name: "Krokling",
 		types: [
 			"Ground",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -19097,36 +19097,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 35,
 			spd: 35,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Rock Head",
 			1: "Thick Fat",
 			H: "Reckless",
-			S: "Rivalry"
+			S: "Rivalry",
 		},
 		heightm: 0.9,
 		weightkg: 128.3,
 		color: "Green",
 		evos: [
-			"Krokizon"
+			"Krokizon",
 		],
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	krokizon: {
 		num: 69062,
 		name: "Krokizon",
 		types: [
 			"Ground",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 110,
@@ -19134,13 +19134,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 65,
 			spd: 65,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Rock Head",
 			1: "Thick Fat",
 			H: "Reckless",
-			S: "Rivalry"
+			S: "Rivalry",
 		},
 		heightm: 2.6,
 		weightkg: 283.9,
@@ -19149,19 +19149,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 39,
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	conchilla: {
 		num: 69063,
 		name: "Conchilla",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 65,
@@ -19169,36 +19169,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 40,
 			spd: 60,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Cute Charm",
 			1: "Serene Grace",
 			H: "Water Compaction",
-			S: "Hydrophile"
+			S: "Hydrophile",
 		},
 		heightm: 0.3,
 		weightkg: 4,
 		color: "Brown",
 		evos: [
-			"Haremit"
+			"Haremit",
 		],
 		eggGroups: [
 			"Water 3",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	haremit: {
 		num: 69064,
 		name: "Haremit",
 		types: [
 			"Normal",
-			"Rock"
+			"Rock",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 105,
@@ -19206,13 +19206,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 110,
 			spa: 60,
 			spd: 90,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Shell Armor",
 			1: "Serene Grace",
 			H: "Water Compaction",
-			S: "Hydrophile"
+			S: "Hydrophile",
 		},
 		heightm: 0.4,
 		weightkg: 45.5,
@@ -19221,15 +19221,15 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 29,
 		eggGroups: [
 			"Water 3",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	coolcube: {
 		num: 69065,
 		name: "Coolcube",
 		types: [
-			"Ice"
+			"Ice",
 		],
 		gender: "N",
 		baseStats: {
@@ -19238,31 +19238,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 64,
 			spa: 58,
 			spd: 67,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Snow Cloak",
 			1: "Ice Body",
 			H: "Clear Body",
-			S: "Weak Armor"
+			S: "Weak Armor",
 		},
 		heightm: 0.6,
 		weightkg: 10.4,
 		color: "Blue",
 		evos: [
-			"Tankube"
+			"Tankube",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	tankube: {
 		num: 69066,
 		name: "Tankube",
 		types: [
-			"Ice"
+			"Ice",
 		],
 		gender: "N",
 		baseStats: {
@@ -19271,13 +19271,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 94,
 			spa: 110,
 			spd: 106,
-			spe: 58
+			spe: 58,
 		},
 		abilities: {
 			0: "Swift Swim",
 			1: "Ice Body",
 			H: "Clear Body",
-			S: "Weak Armor"
+			S: "Weak Armor",
 		},
 		heightm: 1.4,
 		weightkg: 100,
@@ -19285,20 +19285,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Coolcube",
 		evoLevel: 27,
 		evos: [
-			"Fabkube"
+			"Fabkube",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	fabkube: {
 		num: 69067,
 		name: "Fabkube",
 		types: [
 			"Ice",
-			"Fairy"
+			"Fairy",
 		],
 		gender: "N",
 		baseStats: {
@@ -19307,13 +19307,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 79,
 			spa: 125,
 			spd: 96,
-			spe: 105
+			spe: 105,
 		},
 		abilities: {
 			0: "Levitate",
 			1: "Ice Body",
 			H: "Clear Body",
-			S: "Dazzling"
+			S: "Dazzling",
 		},
 		heightm: 2.5,
 		weightkg: 80,
@@ -19323,20 +19323,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Sun Stone",
 		eggGroups: [
 			"Amorphous",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	smogaroben: {
 		num: 69068,
 		name: "Smogaroben",
 		types: [
 			"Poison",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 68,
@@ -19344,35 +19344,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 41,
 			spa: 48,
 			spd: 43,
-			spe: 86
+			spe: 86,
 		},
 		abilities: {
 			0: "Poison Point",
 			1: "White Smoke",
 			H: "Technician",
-			S: "Regenerator"
+			S: "Regenerator",
 		},
 		heightm: 0.6,
 		weightkg: 9,
 		color: "Purple",
 		evos: [
-			"Smoxilon"
+			"Smoxilon",
 		],
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	smoxilon: {
 		num: 69069,
 		name: "Smoxilon",
 		types: [
 			"Poison",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 78,
@@ -19380,13 +19380,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 71,
 			spa: 78,
 			spd: 73,
-			spe: 116
+			spe: 116,
 		},
 		abilities: {
 			0: "Poison Point",
 			1: "White Smoke",
 			H: "Technician",
-			S: "Regenerator"
+			S: "Regenerator",
 		},
 		heightm: 1.6,
 		weightkg: 40.5,
@@ -19394,20 +19394,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Smogaroben",
 		evoLevel: 30,
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	machmona: {
 		num: 69070,
 		name: "Machmona",
 		types: [
 			"Fighting",
-			"Ghost"
+			"Ghost",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -19415,33 +19415,33 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 60,
 			spd: 80,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Pressure",
 			1: "Vital Spirit",
 			H: "Iron Fist",
-			S: "Moxie"
+			S: "Moxie",
 		},
 		heightm: 0.9,
 		weightkg: 4.4,
 		color: "Purple",
 		eggGroups: [
 			"Amorphous",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	bacub: {
 		num: 69071,
 		name: "Bacub",
 		types: [
 			"Normal",
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 90,
@@ -19449,35 +19449,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 40,
 			spd: 55,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Thick Fat",
 			1: "Guts",
 			H: "Flash Fire",
-			S: "Aroma Veil"
+			S: "Aroma Veil",
 		},
 		heightm: 0.6,
 		weightkg: 8.8,
 		color: "Brown",
 		evos: [
-			"Urswine"
+			"Urswine",
 		],
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	urswine: {
 		num: 69072,
 		name: "Urswine",
 		types: [
 			"Normal",
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 130,
@@ -19485,13 +19485,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 60,
 			spd: 60,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Thick Fat",
 			1: "Guts",
 			H: "Flash Fire",
-			S: "Aroma Veil"
+			S: "Aroma Veil",
 		},
 		heightm: 1.8,
 		weightkg: 113.4,
@@ -19499,19 +19499,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Bacub",
 		evoLevel: 32,
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	moostatic: {
 		num: 69073,
 		name: "Moostatic",
 		types: [
-			"Electric"
+			"Electric",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -19519,34 +19519,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 40,
 			spa: 50,
 			spd: 40,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Static",
 			1: "Volt Absorb",
 			H: "Sap Sipper",
-			S: "Illuminate"
+			S: "Illuminate",
 		},
 		heightm: 0.6,
 		weightkg: 19.5,
 		color: "Yellow",
 		evos: [
-			"Mooshock"
+			"Mooshock",
 		],
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	mooshock: {
 		num: 69074,
 		name: "Mooshock",
 		types: [
-			"Electric"
+			"Electric",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 120,
@@ -19554,13 +19554,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 100,
 			spd: 90,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Static",
 			1: "Volt Absorb",
 			H: "Sap Sipper",
-			S: "Battery"
+			S: "Battery",
 		},
 		heightm: 1.9,
 		weightkg: 92.5,
@@ -19568,20 +19568,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Moostatic",
 		evoLevel: 28,
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	pretzely: {
 		num: 69075,
 		name: "Pretzely",
 		types: [
 			"Rock",
-			"Ghost"
+			"Ghost",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 70,
@@ -19589,32 +19589,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 105,
 			spd: 50,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Soundproof",
 			H: "Prankster",
-			S: "Ghost Note"
+			S: "Ghost Note",
 		},
 		heightm: 1.3,
 		weightkg: 2.9,
 		color: "White",
 		eggGroups: [
 			"Human-Like",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	deemdow: {
 		num: 69076,
 		name: "Deemdow",
 		types: [
 			"Ghost",
-			"Psychic"
+			"Psychic",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -19622,35 +19622,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 40,
 			spa: 85,
 			spd: 60,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Shadow Tag",
 			1: "Cursed Body",
 			H: "Bad Dreams",
-			S: "Color Change"
+			S: "Color Change",
 		},
 		heightm: 0.5,
 		weightkg: 11,
 		color: "Black",
 		evos: [
-			"Dowster"
+			"Dowster",
 		],
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	dowster: {
 		num: 69077,
 		name: "Dowster",
 		types: [
 			"Ghost",
-			"Psychic"
+			"Psychic",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -19658,13 +19658,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 135,
 			spd: 90,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Shadow Tag",
 			1: "Cursed Body",
 			H: "Bad Dreams",
-			S: "Color Change"
+			S: "Color Change",
 		},
 		heightm: 1.7,
 		weightkg: 76.6,
@@ -19673,15 +19673,15 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "useItem",
 		evoItem: "Moon Stone",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	cheerly: {
 		num: 69078,
 		name: "Cheerly",
 		types: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "F",
 		baseStats: {
@@ -19690,31 +19690,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 40,
 			spa: 35,
 			spd: 50,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Cute Charm",
 			1: "Healer",
 			H: "Serene Grace",
-			S: "Friend Guard"
+			S: "Friend Guard",
 		},
 		heightm: 0.8,
 		weightkg: 5.4,
 		color: "Pink",
 		evos: [
-			"Cheerific"
+			"Cheerific",
 		],
 		eggGroups: [
 			"Fairy",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	cheerific: {
 		num: 69079,
 		name: "Cheerific",
 		types: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "F",
 		baseStats: {
@@ -19723,13 +19723,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 68,
 			spa: 52,
 			spd: 88,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Cute Charm",
 			1: "Healer",
 			H: "Serene Grace",
-			S: "Friend Guard"
+			S: "Friend Guard",
 		},
 		heightm: 1.2,
 		weightkg: 18.6,
@@ -19737,20 +19737,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Cheerly",
 		evoLevel: 19,
 		evos: [
-			"Mennopaws"
+			"Mennopaws",
 		],
 		eggGroups: [
 			"Fairy",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	mennopaws: {
 		num: 69080,
 		name: "Mennopaws",
 		types: [
 			"Fairy",
-			"Ground"
+			"Ground",
 		],
 		gender: "F",
 		baseStats: {
@@ -19759,13 +19759,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 76,
 			spa: 62,
 			spd: 92,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Intimidate",
 			1: "Moody",
 			H: "Anger Point",
-			S: "Rivalry"
+			S: "Rivalry",
 		},
 		heightm: 1.4,
 		weightkg: 118,
@@ -19773,20 +19773,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Cheerific",
 		evoLevel: 42,
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	caracold: {
 		num: 69081,
 		name: "Caracold",
 		types: [
 			"Ice",
-			"Electric"
+			"Electric",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 35,
@@ -19794,35 +19794,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 30,
 			spa: 75,
 			spd: 40,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Pickup",
 			1: "Run Away",
 			H: "Frisk",
-			S: "Fur Coat"
+			S: "Fur Coat",
 		},
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Blue",
 		evos: [
-			"Glacialynx"
+			"Glacialynx",
 		],
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	glacialynx: {
 		num: 69082,
 		name: "Glacialynx",
 		types: [
 			"Ice",
-			"Electric"
+			"Electric",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 60,
@@ -19830,13 +19830,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 110,
 			spd: 70,
-			spe: 101
+			spe: 101,
 		},
 		abilities: {
 			0: "Adaptability",
 			1: "Volt Absorb",
 			H: "Frisk",
-			S: "Fur Coat"
+			S: "Fur Coat",
 		},
 		heightm: 1,
 		weightkg: 32,
@@ -19844,20 +19844,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Caracold",
 		evoLevel: 31,
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	pengas: {
 		num: 69083,
 		name: "Pengas",
 		types: [
 			"Ice",
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 111,
@@ -19865,32 +19865,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 76,
 			spa: 95,
 			spd: 76,
-			spe: 92
+			spe: 92,
 		},
 		abilities: {
 			0: "Berserk",
 			1: "Intimidate",
 			H: "Refrigerate",
-			S: "Magic Guard"
+			S: "Magic Guard",
 		},
 		heightm: 0.9,
 		weightkg: 16,
 		color: "Red",
 		eggGroups: [
 			"Water 1",
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	praeteur: {
 		num: 69084,
 		name: "Praeteur",
 		types: [
-			"Water"
+			"Water",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 30,
@@ -19898,34 +19898,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 45,
 			spd: 80,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Intimidate",
 			1: "Cursed Body",
 			H: "Unnerve",
-			S: "Pressure"
+			S: "Pressure",
 		},
 		heightm: 0.6,
 		weightkg: 15,
 		color: "Red",
 		evos: [
-			"Praestish"
+			"Praestish",
 		],
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	praestish: {
 		num: 69085,
 		name: "Praestish",
 		types: [
-			"Water"
+			"Water",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 69,
@@ -19933,13 +19933,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 111,
 			spa: 88,
 			spd: 121,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Intimidate",
 			1: "Cursed Body",
 			H: "Unnerve",
-			S: "Pressure"
+			S: "Pressure",
 		},
 		heightm: 1.3,
 		weightkg: 39,
@@ -19947,20 +19947,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Praeteur",
 		evoLevel: 27,
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	flowre: {
 		num: 69086,
 		name: "Flowre",
 		types: [
 			"Poison",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.125,
-			F: 0.875
+			F: 0.875,
 		},
 		baseStats: {
 			hp: 55,
@@ -19968,35 +19968,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 85,
 			spd: 85,
-			spe: 79
+			spe: 79,
 		},
 		abilities: {
 			0: "Levitate",
 			H: "Levitate",
-			S: "Levitate"
+			S: "Levitate",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Green",
 		evos: [
-			"Florious"
+			"Florious",
 		],
 		eggGroups: [
 			"Grass",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	florious: {
 		num: 69087,
 		name: "Florious",
 		types: [
 			"Poison",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 75,
@@ -20004,12 +20004,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 115,
 			spd: 105,
-			spe: 99
+			spe: 99,
 		},
 		abilities: {
 			0: "Vital Spirit",
 			H: "Insomnia",
-			S: "Vital Spirit"
+			S: "Vital Spirit",
 		},
 		heightm: 1.9,
 		weightkg: 69.8,
@@ -20019,19 +20019,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Moon Stone",
 		eggGroups: [
 			"Grass",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	juarecito: {
 		num: 69088,
 		name: "Juarecito",
 		types: [
-			"Ground"
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -20039,34 +20039,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 45,
 			spa: 30,
 			spd: 35,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Keen Eye",
 			1: "Sand Stream",
 			H: "Comatose",
-			S: "Sand Veil"
+			S: "Sand Veil",
 		},
 		heightm: 0.6,
 		weightkg: 21,
 		color: "Brown",
 		evos: [
-			"Ponchito"
+			"Ponchito",
 		],
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ponchito: {
 		num: 69089,
 		name: "Ponchito",
 		types: [
-			"Ground"
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 60,
@@ -20074,13 +20074,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 40,
 			spd: 50,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Keen Eye",
 			1: "Sand Stream",
 			H: "Comatose",
-			S: "Sand Veil"
+			S: "Sand Veil",
 		},
 		heightm: 1,
 		weightkg: 36,
@@ -20088,23 +20088,23 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Juarecito",
 		evoLevel: 22,
 		evos: [
-			"Somboludo"
+			"Somboludo",
 		],
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	somboludo: {
 		num: 69090,
 		name: "Somboludo",
 		types: [
 			"Ground",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 110,
@@ -20112,13 +20112,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 65,
 			spd: 70,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Sniper",
 			1: "Sand Stream",
 			H: "Comatose",
-			S: "Sand Veil"
+			S: "Sand Veil",
 		},
 		heightm: 1.4,
 		weightkg: 105.5,
@@ -20126,19 +20126,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Ponchito",
 		evoLevel: 40,
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	puppacti: {
 		num: 69091,
 		name: "Puppacti",
 		types: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -20146,36 +20146,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 40,
 			spa: 50,
 			spd: 40,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Rough Skin",
 			1: "Puppeteer",
 			H: "Intimidate",
-			S: "Water Absorb"
+			S: "Water Absorb",
 		},
 		heightm: 0.8,
 		weightkg: 14.2,
 		color: "Green",
 		evos: [
-			"Marionettl"
+			"Marionettl",
 		],
 		eggGroups: [
 			"Grass",
-			"Water 1"
+			"Water 1",
 		],
-		gen: 8
+		gen: 8,
 	},
 	marionettl: {
 		num: 69092,
 		name: "Marionettl",
 		types: [
 			"Grass",
-			"Water"
+			"Water",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -20183,13 +20183,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 75,
 			spd: 70,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Rough Skin",
 			1: "Puppeteer",
 			H: "Intimidate",
-			S: "Water Absorb"
+			S: "Water Absorb",
 		},
 		heightm: 1.3,
 		weightkg: 64,
@@ -20198,20 +20198,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 36,
 		eggGroups: [
 			"Grass",
-			"Water 1"
+			"Water 1",
 		],
-		gen: 8
+		gen: 8,
 	},
 	tittai: {
 		num: 69093,
 		name: "Tittai",
 		types: [
 			"Water",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 40,
@@ -20219,36 +20219,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 54,
 			spa: 77,
 			spd: 64,
-			spe: 33
+			spe: 33,
 		},
 		abilities: {
 			0: "Suction Cups",
 			1: "Water Absorb",
 			H: "Regenerator",
-			S: "Misty Surge"
+			S: "Misty Surge",
 		},
 		heightm: 0.3,
 		weightkg: 10,
 		color: "Purple",
 		evos: [
-			"Octai"
+			"Octai",
 		],
 		eggGroups: [
 			"Water 1",
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	octai: {
 		num: 69094,
 		name: "Octai",
 		types: [
 			"Water",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 80,
@@ -20256,13 +20256,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 107,
 			spd: 95,
-			spe: 43
+			spe: 43,
 		},
 		abilities: {
 			0: "Suction Cups",
 			1: "Water Absorb",
 			H: "Regenerator",
-			S: "Misty Surge"
+			S: "Misty Surge",
 		},
 		heightm: 1.2,
 		weightkg: 100,
@@ -20271,16 +20271,16 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 25,
 		eggGroups: [
 			"Water 1",
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	charagon: {
 		num: 69095,
 		name: "Charagon",
 		types: [
 			"Steel",
-			"Fire"
+			"Fire",
 		],
 		gender: "N",
 		baseStats: {
@@ -20289,31 +20289,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 62,
 			spa: 41,
 			spd: 40,
-			spe: 71
+			spe: 71,
 		},
 		abilities: {
 			0: "Speed Boost",
 			1: "Steam Engine",
 			H: "Moxie",
-			S: "Mold Breaker"
+			S: "Mold Breaker",
 		},
 		heightm: 2.8,
 		weightkg: 330,
 		color: "Gray",
 		evos: [
-			"Hyletrack"
+			"Hyletrack",
 		],
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	hyletrack: {
 		num: 69096,
 		name: "Hyletrack",
 		types: [
 			"Steel",
-			"Fire"
+			"Fire",
 		],
 		gender: "N",
 		baseStats: {
@@ -20322,13 +20322,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 70,
 			spd: 70,
-			spe: 125
+			spe: 125,
 		},
 		abilities: {
 			0: "Speed Boost",
 			1: "Steam Engine",
 			H: "Moxie",
-			S: "Mold Breaker"
+			S: "Mold Breaker",
 		},
 		heightm: 4.1,
 		weightkg: 735,
@@ -20336,19 +20336,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Charagon",
 		evoLevel: 30,
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	euphoreal: {
 		num: 69097,
 		name: "Euphoreal",
 		types: [
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 55,
@@ -20356,33 +20356,33 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 40,
 			spd: 60,
-			spe: 76
+			spe: 76,
 		},
 		abilities: {
 			0: "Oblivious",
 			H: "Rivalry",
-			S: "Insomnia"
+			S: "Insomnia",
 		},
 		heightm: 0.5,
 		weightkg: 9,
 		color: "Black",
 		evos: [
-			"Armowite"
+			"Armowite",
 		],
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	armowite: {
 		num: 69098,
 		name: "Armowite",
 		types: [
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 87,
@@ -20390,12 +20390,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 92,
 			spa: 60,
 			spd: 87,
-			spe: 96
+			spe: 96,
 		},
 		abilities: {
 			0: "Oblivious",
 			H: "Overcoat",
-			S: "Blademaster"
+			S: "Blademaster",
 		},
 		heightm: 1.2,
 		weightkg: 39.5,
@@ -20403,20 +20403,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Euphoreal",
 		evoLevel: 29,
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	praunch: {
 		num: 69099,
 		name: "Praunch",
 		types: [
 			"Water",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 30,
@@ -20424,35 +20424,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 40,
 			spd: 25,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Technician",
 			1: "Swift Swim",
 			H: "Shell Armor",
-			S: "Hydration"
+			S: "Hydration",
 		},
 		heightm: 0.4,
 		weightkg: 2,
 		color: "Red",
 		evos: [
-			"Karawn"
+			"Karawn",
 		],
 		eggGroups: [
-			"Water 3 "
+			"Water 3 ",
 		],
-		gen: 8
+		gen: 8,
 	},
 	karawn: {
 		num: 69100,
 		name: "Karawn",
 		types: [
 			"Water",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 55,
@@ -20460,13 +20460,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 65,
 			spd: 65,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Technician",
 			1: "Swift Swim",
 			H: "Shell Armor",
-			S: "Hydration"
+			S: "Hydration",
 		},
 		heightm: 0.8,
 		weightkg: 8.5,
@@ -20474,23 +20474,23 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Praunch",
 		evoLevel: 23,
 		evos: [
-			"Mabster"
+			"Mabster",
 		],
 		eggGroups: [
-			"Water 3 "
+			"Water 3 ",
 		],
-		gen: 8
+		gen: 8,
 	},
 	mabster: {
 		num: 69101,
 		name: "Mabster",
 		types: [
 			"Water",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 75,
@@ -20498,13 +20498,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 85,
 			spd: 85,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Iron Fist",
 			1: "Swift Swim",
 			H: "Shell Armor",
-			S: "Hydration"
+			S: "Hydration",
 		},
 		heightm: 1.1,
 		weightkg: 30.5,
@@ -20512,20 +20512,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Karawn",
 		evoLevel: 40,
 		eggGroups: [
-			"Water 3 "
+			"Water 3 ",
 		],
-		gen: 8
+		gen: 8,
 	},
 	tricient: {
 		num: 69102,
 		name: "Tricient",
 		types: [
 			"Rock",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 75,
@@ -20533,36 +20533,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 20,
 			spd: 70,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Guts",
 			1: "Rock Head",
 			H: "Battle Armor",
-			S: "Solid Rock"
+			S: "Solid Rock",
 		},
 		heightm: 0.4,
 		weightkg: 100,
 		color: "Brown",
 		evos: [
-			"Tricillion"
+			"Tricillion",
 		],
 		eggGroups: [
 			"Monster",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	tricillion: {
 		num: 69103,
 		name: "Tricillion",
 		types: [
 			"Rock",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 110,
@@ -20570,13 +20570,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 130,
 			spa: 20,
 			spd: 110,
-			spe: 21
+			spe: 21,
 		},
 		abilities: {
 			0: "Guts",
 			1: "Rock Head",
 			H: "Battle Armor",
-			S: "Solid Rock"
+			S: "Solid Rock",
 		},
 		heightm: 1.6,
 		weightkg: 508,
@@ -20585,20 +20585,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 37,
 		eggGroups: [
 			"Monster",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	poizookie: {
 		num: 69104,
 		name: "Poizookie",
 		types: [
 			"Rock",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -20606,35 +20606,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 35,
 			spa: 63,
 			spd: 40,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Poison Point",
 			H: "Merciless",
-			S: "Corrosion"
+			S: "Corrosion",
 		},
 		heightm: 0.8,
 		weightkg: 29.6,
 		color: "Purple",
 		evos: [
-			"Toxiraptor"
+			"Toxiraptor",
 		],
 		eggGroups: [
 			"Dragon",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	toxiraptor: {
 		num: 69105,
 		name: "Toxiraptor",
 		types: [
 			"Rock",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 65,
@@ -20642,12 +20642,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 103,
 			spd: 50,
-			spe: 125
+			spe: 125,
 		},
 		abilities: {
 			0: "Poison Point",
 			H: "Merciless",
-			S: "Corrosion"
+			S: "Corrosion",
 		},
 		heightm: 1.5,
 		weightkg: 77.9,
@@ -20656,20 +20656,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 37,
 		eggGroups: [
 			"Dragon",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	sabreck: {
 		num: 69106,
 		name: "Sabreck",
 		types: [
 			"Rock",
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 60,
@@ -20677,36 +20677,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 45,
 			spa: 33,
 			spd: 47,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Super Luck",
 			1: "Strong Jaw",
 			H: "Tough Claws",
-			S: "Sand Rush"
+			S: "Sand Rush",
 		},
 		heightm: 0.6,
 		weightkg: 9,
 		color: "Brown",
 		evos: [
-			"Huntabre"
+			"Huntabre",
 		],
 		eggGroups: [
 			"Field",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	huntabre: {
 		num: 69107,
 		name: "Huntabre",
 		types: [
 			"Rock",
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -20714,13 +20714,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 62,
 			spd: 66,
-			spe: 125
+			spe: 125,
 		},
 		abilities: {
 			0: "Super Luck",
 			1: "Strong Jaw",
 			H: "Tough Claws",
-			S: "Sand Rush"
+			S: "Sand Rush",
 		},
 		heightm: 1.1,
 		weightkg: 125.8,
@@ -20729,20 +20729,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 37,
 		eggGroups: [
 			"Field",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	pyralink: {
 		num: 69108,
 		name: "Pyralink",
 		types: [
 			"Dragon",
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 100,
@@ -20750,28 +20750,28 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 83,
 			spa: 106,
 			spd: 54,
-			spe: 52
+			spe: 52,
 		},
 		abilities: {
 			0: "Magma Armor",
 			1: "Intimidate",
 			H: "Multiscale",
-			S: "Levitate"
+			S: "Levitate",
 		},
 		heightm: 2.2,
 		weightkg: 111.1,
 		color: "Red",
 		eggGroups: [
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	singlets: {
 		num: 69109,
 		name: "Singlets",
 		types: [
 			"Psychic",
-			"Electric"
+			"Electric",
 		],
 		gender: "N",
 		baseStats: {
@@ -20780,31 +20780,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 50,
 			spd: 50,
-			spe: 51
+			spe: 51,
 		},
 		abilities: {
 			0: "Skill Link",
 			1: "Analytic",
 			H: "Competitive",
-			S: "Klutz"
+			S: "Klutz",
 		},
 		heightm: 0.6,
 		weightkg: 20.1,
 		color: "Red",
 		evos: [
-			"Dubus"
+			"Dubus",
 		],
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	dubus: {
 		num: 69110,
 		name: "Dubus",
 		types: [
 			"Psychic",
-			"Electric"
+			"Electric",
 		],
 		gender: "N",
 		baseStats: {
@@ -20813,13 +20813,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 69,
 			spa: 69,
 			spd: 69,
-			spe: 66
+			spe: 66,
 		},
 		abilities: {
 			0: "Skill Link",
 			1: "Analytic",
 			H: "Competitive",
-			S: "Super Luck"
+			S: "Super Luck",
 		},
 		heightm: 0.9,
 		weightkg: 25.5,
@@ -20827,19 +20827,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Singlets",
 		evoLevel: 22,
 		evos: [
-			"Tripsius"
+			"Tripsius",
 		],
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	tripsius: {
 		num: 69111,
 		name: "Tripsius",
 		types: [
 			"Psychic",
-			"Electric"
+			"Electric",
 		],
 		gender: "N",
 		baseStats: {
@@ -20848,13 +20848,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 99,
 			spa: 88,
 			spd: 80,
-			spe: 111
+			spe: 111,
 		},
 		abilities: {
 			0: "Skill Link",
 			1: "Analytic",
 			H: "Competitive",
-			S: "Super Luck"
+			S: "Super Luck",
 		},
 		heightm: 1.5,
 		weightkg: 111,
@@ -20862,20 +20862,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Dubus",
 		evoLevel: 33,
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	miasmer: {
 		num: 69112,
 		name: "Miasmer",
 		types: [
 			"Poison",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 55,
@@ -20883,35 +20883,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 65,
 			spd: 60,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Levitate",
 			1: "Prankster",
 			H: "Poison Point",
-			S: "Light Metal"
+			S: "Light Metal",
 		},
 		heightm: 0.5,
 		weightkg: 0.3,
 		color: "Purple",
 		evos: [
-			"Miasmortor"
+			"Miasmortor",
 		],
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	miasmortor: {
 		num: 69113,
 		name: "Miasmortor",
 		types: [
 			"Poison",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -20919,13 +20919,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 90,
 			spd: 70,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Effect Spore",
 			1: "Prankster",
 			H: "Poison Point",
-			S: "Light Metal"
+			S: "Light Metal",
 		},
 		heightm: 1.1,
 		weightkg: 34.6,
@@ -20933,20 +20933,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Miasmer",
 		evoLevel: 42,
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	cacademon: {
 		num: 69114,
 		name: "Cacademon",
 		types: [
 			"Ground",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 150,
@@ -20954,26 +20954,26 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 79,
 			spa: 101,
 			spd: 79,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Stench",
 			H: "Poison Touch",
-			S: "Power of Alchemy"
+			S: "Power of Alchemy",
 		},
 		heightm: 1.2,
 		weightkg: 30,
 		color: "Brown",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	hanginy: {
 		num: 69115,
 		name: "Hanginy",
 		types: [
-			"Ghost"
+			"Ghost",
 		],
 		gender: "F",
 		baseStats: {
@@ -20982,30 +20982,30 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 5,
 			spa: 20,
 			spd: 85,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Aftermath",
 			1: "Cute Charm",
 			H: "Unnerve",
-			S: "Levitate"
+			S: "Levitate",
 		},
 		heightm: 0.6,
 		weightkg: 24.4,
 		color: "Pink",
 		evos: [
-			"Chancer"
+			"Chancer",
 		],
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	chancer: {
 		num: 69116,
 		name: "Chancer",
 		types: [
-			"Ghost"
+			"Ghost",
 		],
 		gender: "F",
 		baseStats: {
@@ -21014,13 +21014,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 5,
 			spa: 35,
 			spd: 105,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Aftermath",
 			1: "Cute Charm",
 			H: "Unnerve",
-			S: "Cursed Body"
+			S: "Cursed Body",
 		},
 		heightm: 1.1,
 		weightkg: 34.6,
@@ -21028,19 +21028,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Hanginy",
 		evoLevel: 20,
 		evos: [
-			"Unjoy"
+			"Unjoy",
 		],
 		eggGroups: [
 			"Fairy",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	unjoy: {
 		num: 69117,
 		name: "Unjoy",
 		types: [
-			"Ghost"
+			"Ghost",
 		],
 		gender: "F",
 		baseStats: {
@@ -21049,13 +21049,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 10,
 			spa: 75,
 			spd: 135,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Aftermath",
 			1: "Cute Charm",
 			H: "Unnerve",
-			S: "Cursed Body"
+			S: "Cursed Body",
 		},
 		heightm: 1.5,
 		weightkg: 46.8,
@@ -21064,20 +21064,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "levelFriendship",
 		eggGroups: [
 			"Fairy",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	frosowl: {
 		num: 69118,
 		name: "Frosowl",
 		types: [
 			"Ice",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -21085,35 +21085,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 20,
 			spa: 73,
 			spd: 30,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Insomnia",
 			1: "Snow Warning",
 			H: "Forewarn",
-			S: "Snow Cloak"
+			S: "Snow Cloak",
 		},
 		heightm: 0.5,
 		weightkg: 2.1,
 		color: "White",
 		evos: [
-			"Whizzard"
+			"Whizzard",
 		],
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	whizzard: {
 		num: 69119,
 		name: "Whizzard",
 		types: [
 			"Ice",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 75,
@@ -21121,13 +21121,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 40,
 			spa: 103,
 			spd: 60,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
 			0: "Insomnia",
 			1: "Snow Warning",
 			H: "Forewarn",
-			S: "Snow Cloak"
+			S: "Snow Cloak",
 		},
 		heightm: 1.6,
 		weightkg: 40.8,
@@ -21135,20 +21135,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Frosowl",
 		evoLevel: 30,
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	drapillar: {
 		num: 69120,
 		name: "Drapillar",
 		types: [
 			"Bug",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 60,
@@ -21156,36 +21156,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 30,
 			spd: 45,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Shield Dust",
 			1: "Marvel Scale",
 			H: "Shed Skin",
-			S: "Overcoat"
+			S: "Overcoat",
 		},
 		heightm: 1.1,
 		weightkg: 28.8,
 		color: "Green",
 		evos: [
-			"Caparagon"
+			"Caparagon",
 		],
 		eggGroups: [
 			"Bug",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	caparagon: {
 		num: 69121,
 		name: "Caparagon",
 		types: [
 			"Bug",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 90,
@@ -21193,13 +21193,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 31,
 			spd: 95,
-			spe: 15
+			spe: 15,
 		},
 		abilities: {
 			0: "Shield Dust",
 			1: "Marvel Scale",
 			H: "Shed Skin",
-			S: "Overcoat"
+			S: "Overcoat",
 		},
 		heightm: 1.1,
 		weightkg: 55.1,
@@ -21207,24 +21207,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Drapillar",
 		evoLevel: 40,
 		evos: [
-			"Mantrake"
+			"Mantrake",
 		],
 		eggGroups: [
 			"Bug",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	mantrake: {
 		num: 69122,
 		name: "Mantrake",
 		types: [
 			"Bug",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 110,
@@ -21232,13 +21232,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 50,
 			spd: 80,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Compound Eyes",
 			1: "Tinted Lens",
 			H: "Shed Skin",
-			S: "Overcoat"
+			S: "Overcoat",
 		},
 		heightm: 1.5,
 		weightkg: 112.6,
@@ -21247,19 +21247,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 50,
 		eggGroups: [
 			"Bug",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ogrelord: {
 		num: 69123,
 		name: "Ogrelord",
 		types: [
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 100,
@@ -21267,31 +21267,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 65,
 			spd: 81,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Victory Star",
 			1: "Mold Breaker",
 			H: "Sturdy",
-			S: "Stench"
+			S: "Stench",
 		},
 		heightm: 2.1,
 		weightkg: 432.3,
 		color: "Green",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	chantruth: {
 		num: 69124,
 		name: "Chantruth",
 		types: [
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 100,
@@ -21299,31 +21299,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 94,
 			spa: 106,
 			spd: 95,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Keen Eye",
 			1: "Jewelry",
 			H: "Magnet Pull",
-			S: "Infiltrator"
+			S: "Infiltrator",
 		},
 		heightm: 1.3,
 		weightkg: 208.2,
 		color: "Black",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	inbitween: {
 		num: 69125,
 		name: "Inbitween",
 		types: [
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -21331,33 +21331,33 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 55,
 			spa: 65,
 			spd: 60,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Moody",
 			1: "Serene Grace",
 			H: "Magic Bounce",
-			S: "Receiver"
+			S: "Receiver",
 		},
 		heightm: 0.4,
 		weightkg: 20,
 		color: "Pink",
 		evos: [
 			"Geigh",
-			"Dragking"
+			"Dragking",
 		],
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	geigh: {
 		num: 69126,
 		name: "Geigh",
 		types: [
 			"Fairy",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		baseStats: {
@@ -21366,13 +21366,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 100,
 			spd: 75,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Oblivious",
 			1: "Serene Grace",
 			H: "Magic Bounce",
-			S: "Receiver"
+			S: "Receiver",
 		},
 		heightm: 1.7,
 		weightkg: 95,
@@ -21381,16 +21381,16 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 40,
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	jarape: {
 		num: 69127,
 		name: "Jarape",
 		types: [
 			"Electric",
-			"Rock"
+			"Rock",
 		],
 		gender: "N",
 		baseStats: {
@@ -21399,32 +21399,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 40,
 			spd: 85,
-			spe: 10
+			spe: 10,
 		},
 		abilities: {
 			0: "Cursed Body",
 			1: "Solid Rock",
 			H: "Prankster",
-			S: "Volt Absorb"
+			S: "Volt Absorb",
 		},
 		heightm: 0.7,
 		weightkg: 92,
 		color: "Yellow",
 		evos: [
-			"Spilefree"
+			"Spilefree",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	spilefree: {
 		num: 69128,
 		name: "Spilefree",
 		types: [
 			"Electric",
-			"Ghost"
+			"Ghost",
 		],
 		gender: "N",
 		baseStats: {
@@ -21433,13 +21433,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 45,
 			spa: 125,
 			spd: 125,
-			spe: 125
+			spe: 125,
 		},
 		abilities: {
 			0: "Clear Body",
 			1: "Prankster",
 			H: "Levitate",
-			S: "Volt Absorb"
+			S: "Volt Absorb",
 		},
 		heightm: 1.5,
 		weightkg: 1.2,
@@ -21449,20 +21449,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Thunder Stone",
 		eggGroups: [
 			"Amorphous",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	bongecko: {
 		num: 69129,
 		name: "Bongecko",
 		types: [
 			"Grass",
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 55,
@@ -21470,36 +21470,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 45,
 			spa: 60,
 			spd: 45,
-			spe: 10
+			spe: 10,
 		},
 		abilities: {
 			0: "Blaze",
 			1: "White Smoke",
 			H: "Turboblaze",
-			S: "Leaf Guard"
+			S: "Leaf Guard",
 		},
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Green",
 		evos: [
-			"Mariguana"
+			"Mariguana",
 		],
 		eggGroups: [
 			"Grass",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	mariguana: {
 		num: 69130,
 		name: "Mariguana",
 		types: [
 			"Grass",
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 105,
@@ -21507,13 +21507,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 75,
 			spd: 85,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Blaze",
 			1: "White Smoke",
 			H: "Turboblaze",
-			S: "Leaf Guard"
+			S: "Leaf Guard",
 		},
 		heightm: 1.1,
 		weightkg: 19,
@@ -21521,24 +21521,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Bongecko",
 		evoLevel: 24,
 		evos: [
-			"Marleyzard"
+			"Marleyzard",
 		],
 		eggGroups: [
 			"Grass",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	marleyzard: {
 		num: 69131,
 		name: "Marleyzard",
 		types: [
 			"Grass",
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 130,
@@ -21546,13 +21546,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 110,
 			spa: 100,
 			spd: 110,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Blaze",
 			1: "White Smoke",
 			H: "Turboblaze",
-			S: "Leaf Guard"
+			S: "Leaf Guard",
 		},
 		heightm: 1.7,
 		weightkg: 90.5,
@@ -21562,16 +21562,16 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Leaf Stone",
 		eggGroups: [
 			"Grass",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	blobbos: {
 		num: 69132,
 		name: "Blobbos",
 		types: [
 			"Ice",
-			"Rock"
+			"Rock",
 		],
 		gender: "N",
 		baseStats: {
@@ -21580,34 +21580,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 36,
 			spa: 15,
 			spd: 25,
-			spe: 15
+			spe: 15,
 		},
 		abilities: {
 			0: "Pure Power",
 			1: "Huge Power",
 			H: "Comatose",
-			S: "Comatose"
+			S: "Comatose",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
 		color: "Blue",
 		evos: [
-			"Mega Blobbos"
+			"Mega Blobbos",
 		],
 		eggGroups: [
-			"Ditto"
+			"Ditto",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ayylamo: {
 		num: 69133,
 		name: "Ayylamo",
 		types: [
-			"Psychic"
+			"Psychic",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -21615,35 +21615,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 90,
 			spd: 80,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Compound Eyes",
 			1: "Synchronize",
 			H: "Tinted Lens",
-			S: "Levitate"
+			S: "Levitate",
 		},
 		heightm: 0.6,
 		weightkg: 13,
 		color: "Gray",
 		evos: [
-			"Uwotto"
+			"Uwotto",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	smellox: {
 		num: 69134,
 		name: "Smellox",
 		types: [
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 92,
@@ -21651,32 +21651,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 71,
 			spa: 63,
 			spd: 71,
-			spe: 66
+			spe: 66,
 		},
 		abilities: {
 			0: "Stench",
 			1: "No Guard",
 			H: "Static",
-			S: "Aroma Veil"
+			S: "Aroma Veil",
 		},
 		heightm: 1.2,
 		weightkg: 59.2,
 		color: "Red",
 		eggGroups: [
 			"Amorphous",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	chasumo: {
 		num: 69135,
 		name: "Chasumo",
 		types: [
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 110,
@@ -21684,32 +21684,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 95,
 			spa: 45,
 			spd: 62,
-			spe: 67
+			spe: 67,
 		},
 		abilities: {
 			0: "Hyper Cutter",
 			1: "Anger Point",
 			H: "Defiant",
-			S: "Gluttony"
+			S: "Gluttony",
 		},
 		heightm: 1.5,
 		weightkg: 70.5,
 		color: "White",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	oilslam: {
 		num: 69136,
 		name: "Oilslam",
 		types: [
 			"Poison",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 80,
@@ -21717,36 +21717,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 40,
 			spd: 50,
-			spe: 25
+			spe: 25,
 		},
 		abilities: {
 			0: "Poison Point",
 			1: "Flare Boost",
 			H: "Merciless",
-			S: "Blademaster"
+			S: "Blademaster",
 		},
 		heightm: 0.9,
 		weightkg: 30,
 		color: "Black",
 		evos: [
-			"Isissin"
+			"Isissin",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	isissin: {
 		num: 69137,
 		name: "Isissin",
 		types: [
 			"Poison",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 105,
@@ -21754,13 +21754,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 95,
 			spd: 100,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Poison Point",
 			1: "Flare Boost",
 			H: "Merciless",
-			S: "Blademaster"
+			S: "Blademaster",
 		},
 		heightm: 1.7,
 		weightkg: 63.9,
@@ -21769,20 +21769,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 38,
 		eggGroups: [
 			"Amorphous",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	stuffowl: {
 		num: 69138,
 		name: "Stuffowl",
 		types: [
 			"Normal",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 62,
@@ -21790,34 +21790,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 55,
 			spa: 55,
 			spd: 48,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Early Bird",
 			H: "Big Pecks",
-			S: "Keen Eye"
+			S: "Keen Eye",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "Brown",
 		evos: [
-			"Durkey"
+			"Durkey",
 		],
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	durkey: {
 		num: 69139,
 		name: "Durkey",
 		types: [
 			"Normal",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 72,
@@ -21825,12 +21825,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 73,
 			spa: 72,
 			spd: 68,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Early Bird",
 			H: "Innards Out",
-			S: "Keen Eye"
+			S: "Keen Eye",
 		},
 		heightm: 1.1,
 		weightkg: 30,
@@ -21839,23 +21839,23 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "useItem",
 		evoItem: "Far Doll",
 		evos: [
-			"Upchucken"
+			"Upchucken",
 		],
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	upchucken: {
 		num: 69140,
 		name: "Upchucken",
 		types: [
 			"Normal",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 87,
@@ -21863,12 +21863,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 81,
 			spa: 102,
 			spd: 81,
-			spe: 103
+			spe: 103,
 		},
 		abilities: {
 			0: "Drought",
 			H: "Innards Out",
-			S: "Flare Boost"
+			S: "Flare Boost",
 		},
 		heightm: 1.5,
 		weightkg: 86.7,
@@ -21877,20 +21877,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "useItem",
 		evoItem: "Tor Doll",
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	dragun: {
 		num: 69141,
 		name: "Dragun",
 		types: [
 			"Dragon",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 45,
@@ -21898,35 +21898,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 100,
 			spd: 45,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Sniper",
 			1: "Mega Launcher",
 			H: "Keen Eye",
-			S: "No Guard"
+			S: "No Guard",
 		},
 		heightm: 0.4,
 		weightkg: 21.4,
 		color: "Gray",
 		evos: [
-			"Triggedon"
+			"Triggedon",
 		],
 		eggGroups: [
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	triggedon: {
 		num: 69142,
 		name: "Triggedon",
 		types: [
 			"Dragon",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 65,
@@ -21934,13 +21934,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 120,
 			spd: 70,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Sniper",
 			1: "Mega Launcher",
 			H: "Keen Eye",
-			S: "No Guard"
+			S: "No Guard",
 		},
 		heightm: 0.7,
 		weightkg: 51,
@@ -21948,23 +21948,23 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Dragun",
 		evoLevel: 40,
 		evos: [
-			"Cannonance"
+			"Cannonance",
 		],
 		eggGroups: [
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	cannonance: {
 		num: 69143,
 		name: "Cannonance",
 		types: [
 			"Dragon",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 95,
@@ -21972,13 +21972,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 115,
 			spa: 145,
 			spd: 105,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Sniper",
 			1: "Mega Launcher",
 			H: "Keen Eye",
-			S: "No Guard"
+			S: "No Guard",
 		},
 		heightm: 1.4,
 		weightkg: 101.1,
@@ -21986,16 +21986,16 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Triggedon",
 		evoLevel: 65,
 		eggGroups: [
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	evacycle: {
 		num: 69144,
 		name: "Evacycle",
 		types: [
 			"Steel",
-			"Psychic"
+			"Psychic",
 		],
 		gender: "N",
 		baseStats: {
@@ -22004,27 +22004,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 90,
 			spd: 90,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Flame Body",
 			H: "Run Away",
-			S: "Unburden"
+			S: "Unburden",
 		},
 		heightm: 4.3,
 		weightkg: 431.4,
 		color: "Purple",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	foryu: {
 		num: 69145,
 		name: "Foryu",
 		types: [
 			"Steel",
-			"Fighting"
+			"Fighting",
 		],
 		gender: "M",
 		baseStats: {
@@ -22033,27 +22033,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 125,
 			spa: 65,
 			spd: 100,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Magnet Pull",
 			H: "Heavy Metal",
-			S: "Big Guy"
+			S: "Big Guy",
 		},
 		heightm: 4.9,
 		weightkg: 489,
 		color: "Gray",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	scytill: {
 		num: 69146,
 		name: "Scytill",
 		types: [
 			"Steel",
-			"Ghost"
+			"Ghost",
 		],
 		gender: "N",
 		baseStats: {
@@ -22062,26 +22062,26 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 85,
 			spd: 50,
-			spe: 150
+			spe: 150,
 		},
 		abilities: {
 			0: "Levitate",
 			H: "Air Lock",
-			S: "Hyper Cutter"
+			S: "Hyper Cutter",
 		},
 		heightm: 4,
 		weightkg: 392,
 		color: "Purple",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	baddon: {
 		num: 69147,
 		name: "Baddon",
 		types: [
-			"Dragon"
+			"Dragon",
 		],
 		gender: "M",
 		baseStats: {
@@ -22090,27 +22090,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 148,
 			spa: 121,
 			spd: 112,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Rough Skin",
 			1: "Skill Link",
 			H: "Infiltrator",
-			S: "Suction Cups"
+			S: "Suction Cups",
 		},
 		heightm: 0.7,
 		weightkg: 50,
 		color: "Brown",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	endranther: {
 		num: 69148,
 		name: "Endranther",
 		types: [
-			"Poison"
+			"Poison",
 		],
 		gender: "N",
 		baseStats: {
@@ -22119,27 +22119,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 100,
 			spd: 105,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Poison Point",
 			H: "Pressure",
-			S: "Aftermath"
+			S: "Aftermath",
 		},
 		heightm: 2.5,
 		weightkg: 650,
 		color: "Purple",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	notridley: {
 		num: 69149,
 		name: "Notridley",
 		types: [
 			"Dragon",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		baseStats: {
@@ -22148,26 +22148,26 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 97,
 			spa: 105,
 			spd: 95,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
 			0: "Pressure",
 			H: "Keen Eye",
-			S: "Steadfast"
+			S: "Steadfast",
 		},
 		heightm: 8,
 		weightkg: 1113.7,
 		color: "Purple",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	demiwaifu: {
 		num: 69150,
 		name: "Demiwaifu",
 		types: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "F",
 		baseStats: {
@@ -22176,27 +22176,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 104,
 			spa: 131,
 			spd: 131,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
 			0: "Serene Grace",
 			H: "Queenly Majesty",
-			S: "Triage"
+			S: "Triage",
 		},
 		heightm: 2,
 		weightkg: 122,
 		color: "Green",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	clovenix: {
 		num: 69151,
 		name: "Clovenix",
 		types: [
 			"Grass",
-			"Fire"
+			"Fire",
 		],
 		gender: "N",
 		baseStats: {
@@ -22205,30 +22205,30 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 125,
 			spd: 100,
-			spe: 150
+			spe: 150,
 		},
 		abilities: {
 			0: "Regenerator",
 			H: "Anticipation",
-			S: "Super Luck"
+			S: "Super Luck",
 		},
 		heightm: 7.6,
 		weightkg: 999.9,
 		color: "Green",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	reptyke: {
 		num: 69152,
 		name: "Reptyke",
 		types: [
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 63,
@@ -22236,35 +22236,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 30,
 			spd: 40,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Iron Fist",
 			H: "Inner Focus",
-			S: "Regenerator"
+			S: "Regenerator",
 		},
 		heightm: 0.6,
 		weightkg: 20,
 		color: "Blue",
 		evos: [
-			"Rasclobber"
+			"Rasclobber",
 		],
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	rasclobber: {
 		num: 69153,
 		name: "Rasclobber",
 		types: [
 			"Fighting",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 75,
@@ -22272,12 +22272,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 40,
 			spd: 60,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Iron Fist",
 			H: "Inner Focus",
-			S: "Regenerator"
+			S: "Regenerator",
 		},
 		heightm: 1.2,
 		weightkg: 41.7,
@@ -22285,24 +22285,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Reptyke",
 		evoLevel: 16,
 		evos: [
-			"Batterex"
+			"Batterex",
 		],
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	batterex: {
 		num: 69154,
 		name: "Batterex",
 		types: [
 			"Fighting",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 90,
@@ -22310,12 +22310,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 60,
 			spd: 70,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Iron Fist",
 			H: "Inner Focus",
-			S: "Regenerator"
+			S: "Regenerator",
 		},
 		heightm: 2.5,
 		weightkg: 135,
@@ -22324,19 +22324,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 36,
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	faeriock: {
 		num: 69155,
 		name: "Faeriock",
 		types: [
-			"Rock"
+			"Rock",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 53,
@@ -22344,35 +22344,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 50,
 			spd: 80,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Solid Rock",
 			H: "Magic Guard",
-			S: "Telepathy"
+			S: "Telepathy",
 		},
 		heightm: 0.5,
 		weightkg: 15.9,
 		color: "Brown",
 		evos: [
-			"Sylvuin"
+			"Sylvuin",
 		],
 		eggGroups: [
 			"Mineral",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	sylvuin: {
 		num: 69156,
 		name: "Sylvuin",
 		types: [
 			"Rock",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 60,
@@ -22380,12 +22380,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 70,
 			spd: 95,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Solid Rock",
 			H: "Magic Guard",
-			S: "Telepathy"
+			S: "Telepathy",
 		},
 		heightm: 1.1,
 		weightkg: 71.2,
@@ -22393,24 +22393,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Faeriock",
 		evoLevel: 16,
 		evos: [
-			"Oburonyxo"
+			"Oburonyxo",
 		],
 		eggGroups: [
 			"Mineral",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	oburonyxo: {
 		num: 69157,
 		name: "Oburonyxo",
 		types: [
 			"Rock",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 80,
@@ -22418,12 +22418,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 90,
 			spd: 125,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Solid Rock",
 			H: "Magic Guard",
-			S: "Telepathy"
+			S: "Telepathy",
 		},
 		heightm: 2.4,
 		weightkg: 189.5,
@@ -22432,19 +22432,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 36,
 		eggGroups: [
 			"Mineral",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	cloucat: {
 		num: 69158,
 		name: "Cloucat",
 		types: [
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 40,
@@ -22452,35 +22452,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 35,
 			spa: 64,
 			spd: 35,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Tough Claws",
 			H: "Cloud Nine",
-			S: "Shower Power"
+			S: "Shower Power",
 		},
 		heightm: 0.3,
 		weightkg: 0.1,
 		color: "White",
 		evos: [
-			"Felimbus"
+			"Felimbus",
 		],
 		eggGroups: [
 			"Flying",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	felimbus: {
 		num: 69159,
 		name: "Felimbus",
 		types: [
 			"Flying",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 50,
@@ -22488,12 +22488,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 80,
 			spd: 50,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Tough Claws",
 			H: "Cloud Nine",
-			S: "Shower Power"
+			S: "Shower Power",
 		},
 		heightm: 1.2,
 		weightkg: 9,
@@ -22501,24 +22501,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Cloucat",
 		evoLevel: 16,
 		evos: [
-			"Deathorus"
+			"Deathorus",
 		],
 		eggGroups: [
 			"Flying",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	deathorus: {
 		num: 69160,
 		name: "Deathorus",
 		types: [
 			"Flying",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 75,
@@ -22526,12 +22526,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 90,
 			spd: 70,
-			spe: 125
+			spe: 125,
 		},
 		abilities: {
 			0: "Tough Claws",
 			H: "Cloud Nine",
-			S: "Shower Power"
+			S: "Shower Power",
 		},
 		heightm: 2,
 		weightkg: 30.2,
@@ -22540,19 +22540,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 36,
 		eggGroups: [
 			"Flying",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	knogoat: {
 		num: 69161,
 		name: "Knogoat",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 95,
@@ -22560,34 +22560,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 55,
 			spa: 30,
 			spd: 50,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Own Tempo",
 			1: "Reckless",
 			H: "Mold Breaker",
-			S: "Sap Sipper"
+			S: "Sap Sipper",
 		},
 		heightm: 1,
 		weightkg: 42.4,
 		color: "White",
 		evos: [
-			"Knogrinyu"
+			"Knogrinyu",
 		],
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	knogrinyu: {
 		num: 69162,
 		name: "Knogrinyu",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 170,
@@ -22595,13 +22595,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 40,
 			spd: 70,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Own Tempo",
 			1: "Reckless",
 			H: "Mold Breaker",
-			S: "Sap Sipper"
+			S: "Sap Sipper",
 		},
 		heightm: 2,
 		weightkg: 198,
@@ -22609,20 +22609,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Knogoat",
 		evoLevel: 38,
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	glasshot: {
 		num: 69163,
 		name: "Glasshot",
 		types: [
 			"Ice",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 31,
@@ -22630,35 +22630,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 40,
 			spa: 74,
 			spd: 40,
-			spe: 73
+			spe: 73,
 		},
 		abilities: {
 			0: "Keen Eye",
 			1: "Bulletproof",
 			H: "Clear Body",
-			S: "Motor Drive"
+			S: "Motor Drive",
 		},
 		heightm: 0.7,
 		weightkg: 52.5,
 		color: "Blue",
 		evos: [
-			"Glassannon"
+			"Glassannon",
 		],
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	glassannon: {
 		num: 69164,
 		name: "Glassannon",
 		types: [
 			"Ice",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 45,
@@ -22666,13 +22666,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 40,
 			spa: 139,
 			spd: 40,
-			spe: 135
+			spe: 135,
 		},
 		abilities: {
 			0: "Speed Boost",
 			1: "Bulletproof",
 			H: "Clear Body",
-			S: "Motor Drive"
+			S: "Motor Drive",
 		},
 		heightm: 1.9,
 		weightkg: 305.4,
@@ -22680,19 +22680,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Glasshot",
 		evoLevel: 30,
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	fluffyeti: {
 		num: 69165,
 		name: "Fluffyeti",
 		types: [
-			"Ice"
+			"Ice",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 60,
@@ -22700,36 +22700,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 30,
 			spd: 65,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Snow Cloak",
 			1: "Ice Body",
 			H: "Fluffy",
-			S: "Cute Charm"
+			S: "Cute Charm",
 		},
 		heightm: 0.8,
 		weightkg: 13.3,
 		color: "White",
 		evos: [
-			"Yedoom"
+			"Yedoom",
 		],
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	yedoom: {
 		num: 69166,
 		name: "Yedoom",
 		types: [
 			"Ice",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 80,
@@ -22737,13 +22737,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 60,
 			spd: 95,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Pressure",
 			1: "Tough Claws",
 			H: "Fluffy",
-			S: "Intimidate"
+			S: "Intimidate",
 		},
 		heightm: 1.3,
 		weightkg: 77.1,
@@ -22752,20 +22752,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 35,
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	mirrostine: {
 		num: 69167,
 		name: "Mirrostine",
 		types: [
 			"Steel",
-			"Ghost"
+			"Ghost",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 68,
@@ -22773,33 +22773,33 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 79,
 			spa: 97,
 			spd: 95,
-			spe: 86
+			spe: 86,
 		},
 		abilities: {
 			0: "Lightning Rod",
 			1: "Trace",
 			H: "Inversion",
-			S: "Imposter"
+			S: "Imposter",
 		},
 		heightm: 1.1,
 		weightkg: 6.8,
 		color: "Gray",
 		eggGroups: [
 			"Mineral",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	mudpants: {
 		num: 69168,
 		name: "Mudpants",
 		types: [
 			"Ground",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -22807,35 +22807,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 30,
 			spd: 50,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Sand Rush",
 			1: "Stench",
 			H: "Sand Stream",
-			S: "Steadfast"
+			S: "Steadfast",
 		},
 		heightm: 0.6,
 		weightkg: 9,
 		color: "Brown",
 		evos: [
-			"Mudslacks"
+			"Mudslacks",
 		],
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	mudslacks: {
 		num: 69169,
 		name: "Mudslacks",
 		types: [
 			"Ground",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 85,
@@ -22843,13 +22843,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 50,
 			spd: 70,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Sand Rush",
 			1: "Stench",
 			H: "Sand Stream",
-			S: "Steadfast"
+			S: "Steadfast",
 		},
 		heightm: 1,
 		weightkg: 29.5,
@@ -22857,15 +22857,15 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Mudpants",
 		evoLevel: 29,
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	bukitlee: {
 		num: 69170,
 		name: "Bukitlee",
 		types: [
-			"Steel"
+			"Steel",
 		],
 		gender: "N",
 		baseStats: {
@@ -22874,30 +22874,30 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 95,
 			spa: 20,
 			spd: 90,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Own Tempo",
 			H: "Aftermath",
-			S: "Light Metal"
+			S: "Light Metal",
 		},
 		heightm: 0.3,
 		weightkg: 15,
 		color: "Gray",
 		evos: [
-			"Lossolith"
+			"Lossolith",
 		],
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	lossolith: {
 		num: 69171,
 		name: "Lossolith",
 		types: [
 			"Steel",
-			"Psychic"
+			"Psychic",
 		],
 		gender: "N",
 		baseStats: {
@@ -22906,12 +22906,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 200,
 			spa: 60,
 			spd: 140,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Levitate",
 			H: "Aftermath",
-			S: "Heavy Metal"
+			S: "Heavy Metal",
 		},
 		heightm: 5.8,
 		weightkg: 950,
@@ -22920,20 +22920,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "useItem",
 		evoItem: "Moon Stone",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	mimimie: {
 		num: 69172,
 		name: "Mimimie",
 		types: [
 			"Water",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 75,
@@ -22941,29 +22941,29 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 115,
 			spd: 85,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Suction Cups",
 			1: "Degenerate",
 			H: "Serene Grace",
-			S: "Misty Surge"
+			S: "Misty Surge",
 		},
 		heightm: 1,
 		weightkg: 35,
 		color: "Pink",
 		eggGroups: [
 			"Water 2",
-			"Water 3"
+			"Water 3",
 		],
-		gen: 8
+		gen: 8,
 	},
 	sprucifix: {
 		num: 69173,
 		name: "Sprucifix",
 		types: [
 			"Grass",
-			"Ghost"
+			"Ghost",
 		],
 		gender: "M",
 		baseStats: {
@@ -22972,32 +22972,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 122,
 			spa: 49,
 			spd: 75,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Wonder Guard",
 			1: "Regenerator",
 			H: "Rain Dish",
-			S: "Grass pelt"
+			S: "Grass pelt",
 		},
 		heightm: 1.7,
 		weightkg: 55.2,
 		color: "Brown",
 		eggGroups: [
 			"Grass",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	hulkan: {
 		num: 69174,
 		name: "Hulkan",
 		types: [
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 110,
@@ -23005,27 +23005,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 20,
 			spd: 90,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Guts",
 			1: "Hustle",
 			H: "Steadfast",
-			S: "Reckless"
+			S: "Reckless",
 		},
 		heightm: 2,
 		weightkg: 130,
 		color: "Green",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	nonite: {
 		num: 69175,
 		name: "Nonite",
 		types: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "N",
 		baseStats: {
@@ -23034,31 +23034,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 45,
 			spa: 55,
 			spd: 50,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Soundproof",
 			1: "Boombox",
 			H: "Cute Charm",
-			S: "Pixilate"
+			S: "Pixilate",
 		},
 		heightm: 0.8,
 		weightkg: 15.2,
 		color: "Pink",
 		evos: [
-			"Nonegative"
+			"Nonegative",
 		],
 		eggGroups: [
 			"Flying",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	nonegative: {
 		num: 69176,
 		name: "Nonegative",
 		types: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "N",
 		baseStats: {
@@ -23067,13 +23067,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 45,
 			spa: 95,
 			spd: 80,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Soundproof",
 			1: "Boombox",
 			H: "Cute Charm",
-			S: "Pixilate"
+			S: "Pixilate",
 		},
 		heightm: 1.5,
 		weightkg: 44.5,
@@ -23081,20 +23081,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Nonite",
 		evoLevel: 26,
 		evos: [
-			"Nomaestro"
+			"Nomaestro",
 		],
 		eggGroups: [
 			"Flying",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	nomaestro: {
 		num: 69177,
 		name: "Nomaestro",
 		types: [
 			"Fairy",
-			"Flying"
+			"Flying",
 		],
 		gender: "N",
 		baseStats: {
@@ -23103,13 +23103,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 95,
 			spd: 80,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Soundproof",
 			1: "Boombox",
 			H: "Cute Charm",
-			S: "Pixilate"
+			S: "Pixilate",
 		},
 		heightm: 1.9,
 		weightkg: 120,
@@ -23118,20 +23118,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "levelFriendship",
 		eggGroups: [
 			"Flying",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	dunkypea: {
 		num: 69178,
 		name: "Dunkypea",
 		types: [
 			"Poison",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 55,
@@ -23139,34 +23139,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 45,
 			spa: 45,
 			spd: 50,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Big Pecks",
 			H: "Unburden",
-			S: "Soundproof"
+			S: "Soundproof",
 		},
 		heightm: 0.6,
 		weightkg: 9,
 		color: "Purple",
 		evos: [
-			"Burdmen"
+			"Burdmen",
 		],
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	burdmen: {
 		num: 69179,
 		name: "Burdmen",
 		types: [
 			"Poison",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -23174,12 +23174,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 65,
 			spd: 65,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Big Pecks",
 			H: "Unburden",
-			S: "Soundproof"
+			S: "Soundproof",
 		},
 		heightm: 1.4,
 		weightkg: 39.2,
@@ -23187,23 +23187,23 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Dunkypea",
 		evoLevel: 14,
 		evos: [
-			"Nutzboltz"
+			"Nutzboltz",
 		],
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	nutzboltz: {
 		num: 69180,
 		name: "Nutzboltz",
 		types: [
 			"Poison",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 105,
@@ -23211,12 +23211,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 85,
 			spd: 95,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Big Pecks",
 			H: "Unburden",
-			S: "Soundproof"
+			S: "Soundproof",
 		},
 		heightm: 1.8,
 		weightkg: 85.2,
@@ -23224,19 +23224,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Burdmen",
 		evoLevel: 32,
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	kuklux: {
 		num: 69181,
 		name: "Kuklux",
 		types: [
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 40,
@@ -23244,34 +23244,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 60,
 			spd: 50,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Flash Fire",
 			1: "Levitate",
 			H: "Justified",
-			S: "Overcoat"
+			S: "Overcoat",
 		},
 		heightm: 0.7,
 		weightkg: 1,
 		color: "White",
 		evos: [
-			"Kuklan"
+			"Kuklan",
 		],
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	kuklan: {
 		num: 69182,
 		name: "Kuklan",
 		types: [
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 60,
@@ -23279,13 +23279,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 115,
 			spd: 115,
-			spe: 105
+			spe: 105,
 		},
 		abilities: {
 			0: "Flash Fire",
 			1: "Levitate",
 			H: "Justified",
-			S: "Overcoat"
+			S: "Overcoat",
 		},
 		heightm: 1.5,
 		weightkg: 4.4,
@@ -23293,20 +23293,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Kuklux",
 		evoLevel: 35,
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	flameboyan: {
 		num: 69183,
 		name: "Flameboyan",
 		types: [
 			"Fire",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 85,
@@ -23314,33 +23314,33 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 78,
 			spa: 92,
 			spd: 118,
-			spe: 25
+			spe: 25,
 		},
 		abilities: {
 			0: "Rivalry",
 			1: "Solar Power",
 			H: "Flame Body",
-			S: "Fairy Aura"
+			S: "Fairy Aura",
 		},
 		heightm: 0.7,
 		weightkg: 9.5,
 		color: "Purple",
 		eggGroups: [
 			"Fairy",
-			"Amorphous "
+			"Amorphous ",
 		],
-		gen: 8
+		gen: 8,
 	},
 	piicee: {
 		num: 69184,
 		name: "Piicee",
 		types: [
 			"Psychic",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 80,
@@ -23348,33 +23348,33 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 95,
 			spd: 110,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Synchronize",
 			1: "Triage",
 			H: "Regenerator",
-			S: "Healer"
+			S: "Healer",
 		},
 		heightm: 1.3,
 		weightkg: 40,
 		color: "Green",
 		eggGroups: [
 			"Amorphous",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	sonnanos: {
 		num: 69185,
 		name: "Sonnanos",
 		types: [
 			"Steel",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 105,
@@ -23382,31 +23382,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 105,
 			spa: 60,
 			spd: 60,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Sheer Force",
 			H: "Stamina",
-			S: "Iron Fist"
+			S: "Iron Fist",
 		},
 		heightm: 1.6,
 		weightkg: 139,
 		color: "Gray",
 		eggGroups: [
 			"Mineral",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	plebbles: {
 		num: 69186,
 		name: "Plebbles",
 		types: [
-			"Rock"
+			"Rock",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 60,
@@ -23414,31 +23414,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 160,
 			spa: 50,
 			spd: 70,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Sturdy",
 			1: "Levitate",
 			H: "Infiltrator",
-			S: "Mold Breaker"
+			S: "Mold Breaker",
 		},
 		heightm: 0.4,
 		weightkg: 4.5,
 		color: "Brown",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	sapleaf: {
 		num: 69187,
 		name: "Sapleaf",
 		types: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -23446,34 +23446,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 45,
 			spa: 65,
 			spd: 40,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Solar Power",
 			H: "Leaf Guard",
-			S: "Overgrow"
+			S: "Overgrow",
 		},
 		heightm: 1,
 		weightkg: 31,
 		color: "Green",
 		evos: [
-			"Ignut"
+			"Ignut",
 		],
 		eggGroups: [
 			"Grass",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ignut: {
 		num: 69188,
 		name: "Ignut",
 		types: [
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -23481,12 +23481,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 85,
 			spd: 55,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Flame Body",
 			H: "Flash Fire",
-			S: "Blaze"
+			S: "Blaze",
 		},
 		heightm: 1.4,
 		weightkg: 45.8,
@@ -23494,23 +23494,23 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Sapleaf",
 		evoLevel: 15,
 		evos: [
-			"Phantash"
+			"Phantash",
 		],
 		eggGroups: [
 			"Grass",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	phantash: {
 		num: 69189,
 		name: "Phantash",
 		types: [
-			"Ghost"
+			"Ghost",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 90,
@@ -23518,12 +23518,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 110,
 			spd: 110,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "White Smoke",
 			H: "Air Lock",
-			S: "Cursed Body"
+			S: "Cursed Body",
 		},
 		heightm: 1.5,
 		weightkg: 0.2,
@@ -23532,15 +23532,15 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 34,
 		eggGroups: [
 			"Grass",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	polossus: {
 		num: 69190,
 		name: "Polossus",
 		types: [
-			"Poison"
+			"Poison",
 		],
 		gender: "N",
 		baseStats: {
@@ -23549,32 +23549,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 65,
 			spd: 70,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Pollution",
 			1: "Poison Point",
 			H: "Weak Armor",
-			S: "Shield Dust"
+			S: "Shield Dust",
 		},
 		heightm: 4.2,
 		weightkg: 336,
 		color: "Black",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	hitmonana: {
 		num: 69191,
 		name: "Hitmonana",
 		types: [
 			"Grass",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 60,
@@ -23582,27 +23582,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 110,
 			spa: 85,
 			spd: 110,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Shed Skin",
 			1: "Harvest",
 			H: "Unburden",
-			S: "Sweet Veil"
+			S: "Sweet Veil",
 		},
 		heightm: 0.8,
 		weightkg: 15,
 		color: "Yellow",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ballacle: {
 		num: 69192,
 		name: "Ballacle",
 		types: [
-			"Rock"
+			"Rock",
 		],
 		gender: "M",
 		baseStats: {
@@ -23611,31 +23611,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 40,
 			spd: 56,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Pickup",
 			H: "Shell Armor",
-			S: "Suction Cups"
+			S: "Suction Cups",
 		},
 		heightm: 0.5,
 		weightkg: 31,
 		color: "Brown",
 		evos: [
-			"Barbarkley"
+			"Barbarkley",
 		],
 		eggGroups: [
 			"Mineral",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	barbarkley: {
 		num: 69193,
 		name: "Barbarkley",
 		types: [
 			"Rock",
-			"Fighting"
+			"Fighting",
 		],
 		gender: "M",
 		baseStats: {
@@ -23644,12 +23644,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 54,
 			spd: 70,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
 			0: "Quick Feet",
 			H: "Steadfast",
-			S: "Magic Bounce"
+			S: "Magic Bounce",
 		},
 		heightm: 1.3,
 		weightkg: 96,
@@ -23658,20 +23658,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 38,
 		eggGroups: [
 			"Mineral",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	kekroach: {
 		num: 69194,
 		name: "Kekroach",
 		types: [
 			"Dark",
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 55,
@@ -23679,35 +23679,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 40,
 			spd: 45,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Swarm",
 			1: "Prankster",
 			H: "Sturdy",
-			S: "Wimp Out"
+			S: "Wimp Out",
 		},
 		heightm: 0.5,
 		weightkg: 1.7,
 		color: "Gray",
 		evos: [
-			"Rekroach"
+			"Rekroach",
 		],
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	rekroach: {
 		num: 69195,
 		name: "Rekroach",
 		types: [
 			"Dark",
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 90,
@@ -23715,13 +23715,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 115,
 			spa: 50,
 			spd: 70,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Swarm",
 			1: "Iron Fist",
 			H: "Sturdy",
-			S: "Emergency Exit"
+			S: "Emergency Exit",
 		},
 		heightm: 1.3,
 		weightkg: 44.4,
@@ -23729,19 +23729,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Kekroach",
 		evoLevel: 30,
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ricosheep: {
 		num: 69196,
 		name: "Ricosheep",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -23749,34 +23749,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 38,
 			spd: 50,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Speed Boost",
 			1: "Magic Bounce",
 			H: "Bulletproof",
-			S: "Aerilate"
+			S: "Aerilate",
 		},
 		heightm: 0.5,
 		weightkg: 5.5,
 		color: "Yellow",
 		evos: [
-			"Ricosuave"
+			"Ricosuave",
 		],
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ricosuave: {
 		num: 69197,
 		name: "Ricosuave",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 130,
@@ -23784,13 +23784,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 60,
 			spd: 70,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
 			0: "Speed Boost",
 			1: "Magic Bounce",
 			H: "Bulletproof",
-			S: "Aerilate"
+			S: "Aerilate",
 		},
 		heightm: 1,
 		weightkg: 12,
@@ -23798,20 +23798,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Ricosheep",
 		evoLevel: 35,
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	spaghefant: {
 		num: 69198,
 		name: "Spaghefant",
 		types: [
 			"Ground",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 100,
@@ -23819,33 +23819,33 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 100,
 			spd: 85,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Water Absorb",
 			1: "Intimidate",
 			H: "Water Compaction",
-			S: "Rattled"
+			S: "Rattled",
 		},
 		heightm: 2.9,
 		weightkg: 300,
 		color: "White",
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	crystaquil: {
 		num: 69199,
 		name: "Crystaquil",
 		types: [
 			"Ice",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 65,
@@ -23853,35 +23853,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 67,
 			spd: 50,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Rough Skin",
 			1: "Poison Point",
 			H: "Slush Rush",
-			S: "Ice Body"
+			S: "Ice Body",
 		},
 		heightm: 1.1,
 		weightkg: 48.2,
 		color: "Blue",
 		evos: [
-			"Crystaking"
+			"Crystaking",
 		],
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	crystaking: {
 		num: 69200,
 		name: "Crystaking",
 		types: [
 			"Ice",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 90,
@@ -23889,13 +23889,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 96,
 			spa: 75,
 			spd: 85,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Rough Skin",
 			1: "Poison Point",
 			H: "Slush Rush",
-			S: "Ice Body"
+			S: "Ice Body",
 		},
 		heightm: 2.1,
 		weightkg: 100,
@@ -23903,15 +23903,15 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Crystaquil",
 		evoLevel: 42,
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	fontaba: {
 		num: 69201,
 		name: "Fontaba",
 		types: [
-			"Psychic"
+			"Psychic",
 		],
 		gender: "N",
 		baseStats: {
@@ -23920,30 +23920,30 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 91,
 			spa: 80,
 			spd: 91,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Prankster",
 			H: "Technician",
-			S: "Levitate"
+			S: "Levitate",
 		},
 		heightm: 1,
 		weightkg: 10,
 		color: "Black",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	floconut: {
 		num: 69202,
 		name: "Floconut",
 		types: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 40,
@@ -23951,34 +23951,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 40,
 			spd: 50,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Chlorophyll",
 			1: "Shell Armor",
 			H: "Solar Power",
-			S: "Leaf Guard"
+			S: "Leaf Guard",
 		},
 		heightm: 0.6,
 		weightkg: 8.9,
 		color: "Brown",
 		evos: [
-			"Sappalm"
+			"Sappalm",
 		],
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	sappalm: {
 		num: 69203,
 		name: "Sappalm",
 		types: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -23986,13 +23986,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 75,
 			spd: 70,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Chlorophyll",
 			1: "Shell Armor",
 			H: "Solar Power",
-			S: "Leaf Guard"
+			S: "Leaf Guard",
 		},
 		heightm: 1.3,
 		weightkg: 41.5,
@@ -24000,22 +24000,22 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Floconut",
 		evoLevel: 24,
 		evos: [
-			"Roynapalm"
+			"Roynapalm",
 		],
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	roynapalm: {
 		num: 69204,
 		name: "Roynapalm",
 		types: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 90,
@@ -24023,13 +24023,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 143,
 			spd: 80,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Chlorophyll",
 			1: "Flash Fire",
 			H: "Solar Power",
-			S: "Leaf Guard"
+			S: "Leaf Guard",
 		},
 		heightm: 2.5,
 		weightkg: 199.9,
@@ -24038,20 +24038,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "useItem",
 		evoItem: "Sun Stone",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	manateet: {
 		num: 69205,
 		name: "Manateet",
 		types: [
 			"Water",
-			"Ice"
+			"Ice",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 65,
@@ -24059,36 +24059,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 50,
 			spd: 65,
-			spe: 25
+			spe: 25,
 		},
 		abilities: {
 			0: "Thick Fat",
 			1: "Torrent",
 			H: "Gluttony",
-			S: "Iron Barbs"
+			S: "Iron Barbs",
 		},
 		heightm: 1.1,
 		weightkg: 90,
 		color: "Blue",
 		evos: [
-			"Manatorque"
+			"Manatorque",
 		],
 		eggGroups: [
 			"Monster",
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	manatorque: {
 		num: 69206,
 		name: "Manatorque",
 		types: [
 			"Water",
-			"Ice"
+			"Ice",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 90,
@@ -24096,13 +24096,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 70,
 			spd: 85,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Thick Fat",
 			1: "Torrent",
 			H: "Gluttony",
-			S: "Iron Barbs"
+			S: "Iron Barbs",
 		},
 		heightm: 1.4,
 		weightkg: 150.6,
@@ -24110,24 +24110,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Manateet",
 		evoLevel: 24,
 		evos: [
-			"Manatank"
+			"Manatank",
 		],
 		eggGroups: [
 			"Monster",
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	manatank: {
 		num: 69207,
 		name: "Manatank",
 		types: [
 			"Water",
-			"Ice"
+			"Ice",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 110,
@@ -24135,13 +24135,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 120,
 			spa: 85,
 			spd: 127,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Pure Power",
 			1: "Torrent",
 			H: "Gluttony",
-			S: "Iron Barbs"
+			S: "Iron Barbs",
 		},
 		heightm: 2.8,
 		weightkg: 300,
@@ -24150,20 +24150,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 50,
 		eggGroups: [
 			"Monster",
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	anonymouse: {
 		num: 69208,
 		name: "Anonymouse",
 		types: [
 			"Dark",
-			"Electric"
+			"Electric",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 66,
@@ -24171,32 +24171,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 66,
 			spa: 76,
 			spd: 66,
-			spe: 86
+			spe: 86,
 		},
 		abilities: {
 			0: "Infiltrator",
 			H: "Telepathy",
-			S: "Electric Surge"
+			S: "Electric Surge",
 		},
 		heightm: 0.4,
 		weightkg: 3.9,
 		color: "Black",
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	motherfuck: {
 		num: 69209,
 		name: "Motherfuck",
 		types: [
 			"Ground",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 55,
@@ -24204,31 +24204,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 115,
 			spa: 45,
 			spd: 100,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Shadow Tag",
 			H: "Aftermath",
-			S: "Inversion"
+			S: "Inversion",
 		},
 		heightm: 1.4,
 		weightkg: 106.5,
 		color: "Brown",
 		eggGroups: [
 			"Mineral",
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ninoop: {
 		num: 69210,
 		name: "Ninoop",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 60,
@@ -24236,35 +24236,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 55,
 			spa: 70,
 			spd: 60,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Huge Power",
 			H: "Natural Cure",
-			S: "Cute Charm"
+			S: "Cute Charm",
 		},
 		heightm: 0.5,
 		weightkg: 10,
 		color: "Brown",
 		evos: [
-			"Draconius"
+			"Draconius",
 		],
 		eggGroups: [
 			"Fairy",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	draconius: {
 		num: 69211,
 		name: "Draconius",
 		types: [
 			"Normal",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 130,
@@ -24272,12 +24272,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 110,
 			spd: 90,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Huge Power",
 			H: "Natural Cure",
-			S: "Intimidate"
+			S: "Intimidate",
 		},
 		heightm: 2.4,
 		weightkg: 454,
@@ -24286,19 +24286,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "levelFriendship",
 		eggGroups: [
 			"Fairy",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ticktac: {
 		num: 69212,
 		name: "Ticktac",
 		types: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 65,
@@ -24306,36 +24306,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 50,
 			spd: 65,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Compound Eyes",
 			1: "Hyper Cutter",
 			H: "Infiltrator",
-			S: "Sheer Force"
+			S: "Sheer Force",
 		},
 		heightm: 0.3,
 		weightkg: 33,
 		color: "Blue",
 		evos: [
-			"Eareticle"
+			"Eareticle",
 		],
 		eggGroups: [
 			"Bug",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	eareticle: {
 		num: 69213,
 		name: "Eareticle",
 		types: [
 			"Bug",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -24343,13 +24343,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 55,
 			spd: 60,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Compound Eyes",
 			1: "Hyper Cutter",
 			H: "Infiltrator",
-			S: "Sheer Force"
+			S: "Sheer Force",
 		},
 		heightm: 0.2,
 		weightkg: 0.8,
@@ -24357,24 +24357,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Ticktac",
 		evoLevel: 44,
 		evos: [
-			"Scythear"
+			"Scythear",
 		],
 		eggGroups: [
 			"Bug",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	scythear: {
 		num: 69214,
 		name: "Scythear",
 		types: [
 			"Bug",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 85,
@@ -24382,13 +24382,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 60,
 			spd: 70,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
 			0: "Compound Eyes",
 			1: "Hyper Cutter",
 			H: "Infiltrator",
-			S: "Sheer Force"
+			S: "Sheer Force",
 		},
 		heightm: 2.1,
 		weightkg: 79,
@@ -24397,16 +24397,16 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 59,
 		eggGroups: [
 			"Bug",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	cozload: {
 		num: 69215,
 		name: "Cozload",
 		types: [
 			"Electric",
-			"Bug"
+			"Bug",
 		],
 		gender: "N",
 		baseStats: {
@@ -24415,33 +24415,33 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 40,
 			spd: 50,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Download",
 			1: "Thick Fat",
 			H: "Simple",
-			S: "Battery"
+			S: "Battery",
 		},
 		heightm: 0.2,
 		weightkg: 1.4,
 		color: "Gray",
 		evos: [
 			"Snugware",
-			"Fleespecs"
+			"Fleespecs",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	snugware: {
 		num: 69216,
 		name: "Snugware",
 		types: [
 			"Electric",
-			"Bug"
+			"Bug",
 		],
 		gender: "N",
 		baseStats: {
@@ -24450,13 +24450,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 110,
 			spa: 75,
 			spd: 80,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Download",
 			1: "Thick Fat",
 			H: "Filter",
-			S: "Overcoat"
+			S: "Overcoat",
 		},
 		heightm: 1.1,
 		weightkg: 22.5,
@@ -24466,16 +24466,16 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Up-Grade",
 		eggGroups: [
 			"Amorphous",
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	fleespecs: {
 		num: 69217,
 		name: "Fleespecs",
 		types: [
 			"Electric",
-			"Bug"
+			"Bug",
 		],
 		gender: "N",
 		baseStats: {
@@ -24484,13 +24484,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 105,
 			spd: 80,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Download",
 			1: "Motor Drive",
 			H: "Analytic",
-			S: "Surge Surfer"
+			S: "Surge Surfer",
 		},
 		heightm: 1.1,
 		weightkg: 19,
@@ -24500,20 +24500,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Thunder Stone",
 		eggGroups: [
 			"Amorphous",
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	honrade: {
 		num: 69218,
 		name: "Honrade",
 		types: [
 			"Fairy",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 80,
@@ -24521,33 +24521,33 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 45,
 			spd: 75,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Blademaster",
 			1: "Justified",
 			H: "Hyper Cutter",
-			S: "No Guard"
+			S: "No Guard",
 		},
 		heightm: 1,
 		weightkg: 28,
 		color: "Blue",
 		eggGroups: [
 			"Fairy",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	embortion: {
 		num: 69219,
 		name: "Embortion",
 		types: [
 			"Dark",
-			"Ghost"
+			"Ghost",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -24555,35 +24555,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 50,
 			spd: 105,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Pressure",
 			H: "Unnerve",
-			S: "Insomnia"
+			S: "Insomnia",
 		},
 		heightm: 0.5,
 		weightkg: 6.6,
 		color: "Red",
 		evos: [
-			"Premantom"
+			"Premantom",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	premantom: {
 		num: 69220,
 		name: "Premantom",
 		types: [
 			"Dark",
-			"Ghost"
+			"Ghost",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -24591,12 +24591,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 110,
 			spa: 85,
 			spd: 120,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Pressure",
 			H: "Unnerve",
-			S: "Insomnia"
+			S: "Insomnia",
 		},
 		heightm: 1.3,
 		weightkg: 31,
@@ -24605,15 +24605,15 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 37,
 		eggGroups: [
 			"Amorphous",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	galavik: {
 		num: 69221,
 		name: "Galavik",
 		types: [
-			"Steel"
+			"Steel",
 		],
 		gender: "N",
 		baseStats: {
@@ -24622,32 +24622,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 40,
 			spd: 65,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Liquid Ooze",
 			H: "Heavy Metal",
-			S: "Battery"
+			S: "Battery",
 		},
 		heightm: 0.9,
 		weightkg: 30,
 		color: "Gray",
 		evos: [
 			"Galavire",
-			"Galaviste"
+			"Galaviste",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	galavire: {
 		num: 69222,
 		name: "Galavire",
 		types: [
 			"Steel",
-			"Electric"
+			"Electric",
 		],
 		gender: "N",
 		baseStats: {
@@ -24656,12 +24656,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 95,
 			spa: 130,
 			spd: 90,
-			spe: 105
+			spe: 105,
 		},
 		abilities: {
 			0: "Levitate",
 			H: "Heavy Metal",
-			S: "Teravolt"
+			S: "Teravolt",
 		},
 		heightm: 2.3,
 		weightkg: 105.5,
@@ -24671,16 +24671,16 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoCondition: "with an Atk stat > its SpAtk stat",
 		eggGroups: [
 			"Amorphous",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	galaviste: {
 		num: 69223,
 		name: "Galaviste",
 		types: [
 			"Steel",
-			"Fighting"
+			"Fighting",
 		],
 		gender: "N",
 		baseStats: {
@@ -24689,12 +24689,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 95,
 			spa: 60,
 			spd: 90,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Intimidate",
 			H: "Heavy Metal",
-			S: "Motor Drive"
+			S: "Motor Drive",
 		},
 		heightm: 2.8,
 		weightkg: 345,
@@ -24704,20 +24704,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoCondition: "with an Atk stat < its SpAtk stat",
 		eggGroups: [
 			"Amorphous",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	pollefin: {
 		num: 69224,
 		name: "Pollefin",
 		types: [
 			"Water",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 30,
@@ -24725,36 +24725,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 20,
 			spa: 40,
 			spd: 50,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Effect Spore",
 			1: "Flower Veil",
 			H: "Shield Dust",
-			S: "Swift Swim"
+			S: "Swift Swim",
 		},
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Green",
 		evos: [
-			"Florigrace"
+			"Florigrace",
 		],
 		eggGroups: [
 			"Water 2",
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	florigrace: {
 		num: 69225,
 		name: "Florigrace",
 		types: [
 			"Water",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 105,
@@ -24762,13 +24762,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 90,
 			spd: 90,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Effect Spore",
 			1: "Flower Veil",
 			H: "Shield Dust",
-			S: "Swift Swim"
+			S: "Swift Swim",
 		},
 		heightm: 0.9,
 		weightkg: 22.6,
@@ -24777,19 +24777,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 26,
 		eggGroups: [
 			"Water 2",
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	lasslee: {
 		num: 69226,
 		name: "Lasslee",
 		types: [
-			"Psychic"
+			"Psychic",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 70,
@@ -24797,35 +24797,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 80,
 			spd: 75,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Synchronize",
 			1: "Cute Charm",
 			H: "Infiltrator",
-			S: "Limber"
+			S: "Limber",
 		},
 		heightm: 0.8,
 		weightkg: 9.4,
 		color: "Blue",
 		evos: [
-			"Wifemin"
+			"Wifemin",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	wifemin: {
 		num: 69227,
 		name: "Wifemin",
 		types: [
-			"Psychic"
+			"Psychic",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 110,
@@ -24833,13 +24833,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 110,
 			spa: 90,
 			spd: 115,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Synchronize",
 			1: "Cute Charm",
 			H: "Infiltrator",
-			S: "Thick Fat"
+			S: "Thick Fat",
 		},
 		heightm: 1.6,
 		weightkg: 49.6,
@@ -24848,20 +24848,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 39,
 		eggGroups: [
 			"Amorphous",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	uwotto: {
 		num: 69228,
 		name: "Uwotto",
 		types: [
 			"Psychic",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -24869,13 +24869,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 105,
 			spa: 90,
 			spd: 100,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Compound Eyes",
 			1: "Intimidate",
 			H: "Heavy Metal",
-			S: "Bulletproof"
+			S: "Bulletproof",
 		},
 		heightm: 1.6,
 		weightkg: 84.5,
@@ -24885,20 +24885,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Metal Coat",
 		eggGroups: [
 			"Amorphous",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	venowatt: {
 		num: 69229,
 		name: "Venowatt",
 		types: [
 			"Electric",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 85,
@@ -24906,13 +24906,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 115,
 			spa: 110,
 			spd: 95,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Illuminate",
 			1: "Illuminate",
 			H: "Swarm",
-			S: "Levitate"
+			S: "Levitate",
 		},
 		heightm: 1.7,
 		weightkg: 51.5,
@@ -24921,20 +24921,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "useItem",
 		evoItem: "Thunder Stone",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	vaultevour: {
 		num: 69230,
 		name: "Vaultevour",
 		types: [
 			"Steel",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -24942,12 +24942,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 105,
 			spa: 50,
 			spd: 110,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Strong Jaw",
 			H: "Pickup",
-			S: "Jewelry"
+			S: "Jewelry",
 		},
 		heightm: 1.4,
 		weightkg: 250,
@@ -24957,20 +24957,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Metal Coat",
 		eggGroups: [
 			"Amorphous",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	semdemen: {
 		num: 69231,
 		name: "Semdemen",
 		types: [
 			"Water",
-			"Ground"
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 130,
@@ -24978,13 +24978,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 90,
 			spd: 120,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Insomnia",
 			1: "Immunity",
 			H: "Damp",
-			S: "Liquid Ooze"
+			S: "Liquid Ooze",
 		},
 		heightm: 1.6,
 		weightkg: 90.5,
@@ -24994,15 +24994,15 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Water Stone",
 		eggGroups: [
 			"Amorphous",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	dragking: {
 		num: 69232,
 		name: "Dragking",
 		types: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "F",
 		baseStats: {
@@ -25011,13 +25011,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 80,
 			spd: 70,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Oblivious",
 			1: "Serene Grace",
 			H: "Pozzed",
-			S: "Receiver"
+			S: "Receiver",
 		},
 		heightm: 1.7,
 		weightkg: 95,
@@ -25027,20 +25027,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Sun Stone",
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	kuuroba: {
 		num: 69233,
 		name: "Kuuroba",
 		types: [
 			"Grass",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 90,
@@ -25048,13 +25048,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 80,
 			spd: 90,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Huge Power",
 			1: "Huge Power",
 			H: "Super Luck",
-			S: "Pure Power"
+			S: "Pure Power",
 		},
 		heightm: 1.9,
 		weightkg: 102,
@@ -25063,20 +25063,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 60,
 		eggGroups: [
 			"Fairy",
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	baitmaster: {
 		num: 69234,
 		name: "Baitmaster",
 		types: [
 			"Water",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 85,
@@ -25084,12 +25084,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 105,
 			spd: 83,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
 			0: "Regenerator",
 			H: "Dazzling",
-			S: "Competitive"
+			S: "Competitive",
 		},
 		heightm: 2,
 		weightkg: 80.5,
@@ -25099,19 +25099,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Sun Stone",
 		eggGroups: [
 			"Monster",
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	spookster: {
 		num: 69235,
 		name: "Spookster",
 		types: [
-			"Ghost"
+			"Ghost",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 30,
@@ -25119,34 +25119,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 30,
 			spd: 40,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Cursed Body",
 			1: "Levitate",
 			H: "Insomnia",
-			S: "Bone Zone"
+			S: "Bone Zone",
 		},
 		heightm: 0.9,
 		weightkg: 1,
 		color: "Purple",
 		evos: [
-			"Spookeer"
+			"Spookeer",
 		],
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	spookeer: {
 		num: 69236,
 		name: "Spookeer",
 		types: [
-			"Ghost"
+			"Ghost",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 55,
@@ -25154,13 +25154,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 40,
 			spd: 55,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Cursed Body",
 			1: "Intimidate",
 			H: "Insomnia",
-			S: "Bone Zone"
+			S: "Bone Zone",
 		},
 		heightm: 1.2,
 		weightkg: 7,
@@ -25168,22 +25168,22 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Spookster",
 		evoLevel: 35,
 		evos: [
-			"Spookzilla"
+			"Spookzilla",
 		],
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	spookzilla: {
 		num: 69237,
 		name: "Spookzilla",
 		types: [
-			"Ghost"
+			"Ghost",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 90,
@@ -25191,13 +25191,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 105,
 			spa: 73,
 			spd: 85,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Cursed Body",
 			1: "Intimidate",
 			H: "Insomnia",
-			S: "Bone Zone"
+			S: "Bone Zone",
 		},
 		heightm: 1.6,
 		weightkg: 15.5,
@@ -25205,19 +25205,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Spookeer",
 		evoLevel: 55,
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	derpato: {
 		num: 69238,
 		name: "Derpato",
 		types: [
-			"Ground"
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 68,
@@ -25225,35 +25225,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 45,
 			spd: 40,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Oblivious",
 			1: "Klutz",
 			H: "Unaware",
-			S: "Simple"
+			S: "Simple",
 		},
 		heightm: 0.3,
 		weightkg: 1.2,
 		color: "Brown",
 		evos: [
-			"Retater"
+			"Retater",
 		],
 		eggGroups: [
 			"Fairy",
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	retater: {
 		num: 69239,
 		name: "Retater",
 		types: [
-			"Ground"
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 85,
@@ -25261,13 +25261,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 92,
 			spa: 67,
 			spd: 63,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Oblivious",
 			1: "Klutz",
 			H: "Unaware",
-			S: "Simple"
+			S: "Simple",
 		},
 		heightm: 0.8,
 		weightkg: 10.3,
@@ -25275,23 +25275,23 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Derpato",
 		evoLevel: 40,
 		evos: [
-			"Potarded"
+			"Potarded",
 		],
 		eggGroups: [
 			"Fairy",
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	potarded: {
 		num: 69240,
 		name: "Potarded",
 		types: [
-			"Ground"
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 110,
@@ -25299,13 +25299,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 116,
 			spa: 80,
 			spd: 79,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Oblivious",
 			1: "Klutz",
 			H: "Unaware",
-			S: "Rock Head"
+			S: "Rock Head",
 		},
 		heightm: 1.2,
 		weightkg: 40,
@@ -25314,19 +25314,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 60,
 		eggGroups: [
 			"Fairy",
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	sadfish: {
 		num: 69241,
 		name: "Sadfish",
 		types: [
-			"Water"
+			"Water",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 115,
@@ -25334,27 +25334,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 70,
 			spd: 75,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Drizzle",
 			H: "Defeatist",
-			S: "Defeatist"
+			S: "Defeatist",
 		},
 		heightm: 1,
 		weightkg: 18,
 		color: "Blue",
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	deloris: {
 		num: 69242,
 		name: "Deloris",
 		types: [
 			"Grass",
-			"Ghost"
+			"Ghost",
 		],
 		gender: "F",
 		baseStats: {
@@ -25363,32 +25363,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 90,
 			spd: 90,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Own Tempo",
 			H: "Wonder Skin",
-			S: "Tangling Hair"
+			S: "Tangling Hair",
 		},
 		heightm: 2.4,
 		weightkg: 122.5,
 		color: "Pink",
 		eggGroups: [
 			"Fairy",
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	oreon: {
 		num: 69243,
 		name: "Oreon",
 		types: [
 			"Fairy",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 95,
@@ -25396,31 +25396,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 130,
 			spd: 65,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Super Luck",
 			H: "Run Away",
-			S: "Sweet Veil"
+			S: "Sweet Veil",
 		},
 		heightm: 1,
 		weightkg: 27,
 		color: "Black",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	farfigtron: {
 		num: 69244,
 		name: "Farfigtron",
 		types: [
 			"Fire",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -25428,28 +25428,28 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 73,
 			spa: 107,
 			spd: 63,
-			spe: 102
+			spe: 102,
 		},
 		abilities: {
 			0: "No Guard",
 			H: "Anger Point",
-			S: "Mold Breaker"
+			S: "Mold Breaker",
 		},
 		heightm: 2.6,
 		weightkg: 106.5,
 		color: "Red",
 		eggGroups: [
 			"Field",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	regirode: {
 		num: 69245,
 		name: "Regirode",
 		types: [
 			"Rock",
-			"Ghost"
+			"Ghost",
 		],
 		gender: "N",
 		baseStats: {
@@ -25458,27 +25458,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 125,
 			spd: 150,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Weak Armor",
 			H: "Cursed Body",
-			S: "Shadow Shield"
+			S: "Shadow Shield",
 		},
 		heightm: 1.7,
 		weightkg: 148.4,
 		color: "Brown",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	regimelt: {
 		num: 69246,
 		name: "Regimelt",
 		types: [
 			"Ice",
-			"Ghost"
+			"Ghost",
 		],
 		gender: "N",
 		baseStats: {
@@ -25487,27 +25487,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 150,
 			spa: 50,
 			spd: 75,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Weak Armor",
 			H: "Cursed Body",
-			S: "Shadow Shield"
+			S: "Shadow Shield",
 		},
 		heightm: 1.8,
 		weightkg: 86.3,
 		color: "Blue",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	regirust: {
 		num: 69247,
 		name: "Regirust",
 		types: [
 			"Steel",
-			"Ghost"
+			"Ghost",
 		],
 		gender: "N",
 		baseStats: {
@@ -25516,27 +25516,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 115,
 			spa: 85,
 			spd: 115,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Weak Armor",
 			H: "Cursed Body",
-			S: "Shadow Shield"
+			S: "Shadow Shield",
 		},
 		heightm: 1.9,
 		weightkg: 182.1,
 		color: "Red",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	jewipede: {
 		num: 69248,
 		name: "Jewipede",
 		types: [
 			"Bug",
-			"Normal"
+			"Normal",
 		],
 		gender: "M",
 		baseStats: {
@@ -25545,26 +25545,26 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 150,
 			spa: 90,
 			spd: 150,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Pressure",
 			H: "Pickpocket",
-			S: "Jewelry"
+			S: "Jewelry",
 		},
 		heightm: 21,
 		weightkg: 206.5,
 		color: "Green",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	vivaiger: {
 		num: 69249,
 		name: "Vivaiger",
 		types: [
-			"Electric"
+			"Electric",
 		],
 		gender: "N",
 		baseStats: {
@@ -25573,27 +25573,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 105,
 			spa: 150,
 			spd: 100,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Flame Body",
 			H: "Regenerator",
-			S: "Flare Heal"
+			S: "Flare Heal",
 		},
 		heightm: 2.5,
 		weightkg: 650,
 		color: "Brown",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	heliofug: {
 		num: 69250,
 		name: "Heliofug",
 		types: [
 			"Dragon",
-			"Fire"
+			"Fire",
 		],
 		gender: "N",
 		baseStats: {
@@ -25602,26 +25602,26 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 140,
 			spd: 90,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Drought",
 			H: "Air Lock",
-			S: "Drizzle"
+			S: "Drizzle",
 		},
 		heightm: 7,
 		weightkg: 260,
 		color: "Green",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	adesign: {
 		num: 69251,
 		name: "Adesign",
 		types: [
-			"???"
+			"???",
 		],
 		gender: "N",
 		baseStats: {
@@ -25630,29 +25630,29 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 115,
 			spa: 115,
 			spd: 115,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
 			0: "An Ability",
-			H: "Any Ability"
+			H: "Any Ability",
 		},
 		heightm: 2,
 		weightkg: 0.5,
 		color: "White",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	sadrog: {
 		num: 69252,
 		name: "Sadrog",
 		types: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 44,
@@ -25660,34 +25660,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 40,
 			spd: 69,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Overgrow",
 			H: "Defeatist",
-			S: "Oblivious"
+			S: "Oblivious",
 		},
 		heightm: 0.5,
 		weightkg: 6.9,
 		color: "Green",
 		evos: [
-			"Smugrok"
+			"Smugrok",
 		],
 		eggGroups: [
 			"Grass",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	smugrok: {
 		num: 69253,
 		name: "Smugrok",
 		types: [
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 75,
@@ -25695,12 +25695,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 50,
 			spd: 75,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Overgrow",
 			H: "Unaware",
-			S: "Oblivious"
+			S: "Oblivious",
 		},
 		heightm: 0.9,
 		weightkg: 21.6,
@@ -25708,24 +25708,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Sadrog",
 		evoLevel: 17,
 		evos: [
-			"Peperee"
+			"Peperee",
 		],
 		eggGroups: [
 			"Grass",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	peperee: {
 		num: 69254,
 		name: "Peperee",
 		types: [
 			"Grass",
-			"Rock"
+			"Rock",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 100,
@@ -25733,12 +25733,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 120,
 			spa: 55,
 			spd: 95,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Overgrow",
 			H: "Anger Point",
-			S: "Soundproof"
+			S: "Soundproof",
 		},
 		heightm: 1.7,
 		weightkg: 155.5,
@@ -25747,19 +25747,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 38,
 		eggGroups: [
 			"Grass",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	hodtog: {
 		num: 69255,
 		name: "Hodtog",
 		types: [
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 45,
@@ -25767,34 +25767,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 43,
 			spa: 60,
 			spd: 50,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Blaze",
 			H: "Wonder Skin",
-			S: "Skill Link"
+			S: "Skill Link",
 		},
 		heightm: 0.6,
 		weightkg: 15.1,
 		color: "Red",
 		evos: [
-			"Wienebark"
+			"Wienebark",
 		],
 		eggGroups: [
 			"Field",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	wienebark: {
 		num: 69256,
 		name: "Wienebark",
 		types: [
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 60,
@@ -25802,12 +25802,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 55,
 			spa: 85,
 			spd: 60,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Blaze",
 			H: "Wonder Skin",
-			S: "Skill Link"
+			S: "Skill Link",
 		},
 		heightm: 1.3,
 		weightkg: 46.5,
@@ -25815,24 +25815,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Hodtog",
 		evoLevel: 17,
 		evos: [
-			"Saudoge"
+			"Saudoge",
 		],
 		eggGroups: [
 			"Field",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	saudoge: {
 		num: 69257,
 		name: "Saudoge",
 		types: [
 			"Fire",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 80,
@@ -25840,12 +25840,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 120,
 			spd: 80,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Blaze",
 			H: "Wonder Skin",
-			S: "Skill Link"
+			S: "Skill Link",
 		},
 		heightm: 3.2,
 		weightkg: 130.1,
@@ -25854,19 +25854,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 38,
 		eggGroups: [
 			"Field",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	gnarrk: {
 		num: 69258,
 		name: "Gnarrk",
 		types: [
-			"Water"
+			"Water",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 49,
@@ -25874,34 +25874,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 45,
 			spd: 49,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Torrent",
 			H: "Download",
-			S: "Mold Breaker"
+			S: "Mold Breaker",
 		},
 		heightm: 0.7,
 		weightkg: 21.2,
 		color: "Blue",
 		evos: [
-			"Corsharrk"
+			"Corsharrk",
 		],
 		eggGroups: [
 			"Water 1",
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	corsharrk: {
 		num: 69259,
 		name: "Corsharrk",
 		types: [
-			"Water"
+			"Water",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 70,
@@ -25909,12 +25909,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 55,
 			spd: 65,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Torrent",
 			H: "Download",
-			S: "Mold Breaker"
+			S: "Mold Breaker",
 		},
 		heightm: 1.1,
 		weightkg: 30,
@@ -25922,24 +25922,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Gnarrk",
 		evoLevel: 17,
 		evos: [
-			"Davyjaws"
+			"Davyjaws",
 		],
 		eggGroups: [
 			"Water 1",
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	davyjaws: {
 		num: 69260,
 		name: "Davyjaws",
 		types: [
 			"Water",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 90,
@@ -25947,12 +25947,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 65,
 			spd: 85,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Torrent",
 			H: "Download",
-			S: "Mold Breaker"
+			S: "Mold Breaker",
 		},
 		heightm: 1.7,
 		weightkg: 140,
@@ -25961,19 +25961,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 38,
 		eggGroups: [
 			"Water 1",
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	humpunny: {
 		num: 69261,
 		name: "Humpunny",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 60,
@@ -25981,34 +25981,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 57,
 			spa: 29,
 			spd: 35,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Run Away",
 			1: "Quick Feet",
 			H: "Fur Coat",
-			S: "Huge Power"
+			S: "Huge Power",
 		},
 		heightm: 0.8,
 		weightkg: 11,
 		color: "Yellow",
 		evos: [
-			"Bunnorgy"
+			"Bunnorgy",
 		],
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	bunnorgy: {
 		num: 69262,
 		name: "Bunnorgy",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -26016,13 +26016,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 77,
 			spa: 45,
 			spd: 69,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Hustle",
 			1: "Speed Boost",
 			H: "Fur Coat",
-			S: "Huge Power"
+			S: "Huge Power",
 		},
 		heightm: 2.2,
 		weightkg: 120,
@@ -26030,20 +26030,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Humpunny",
 		evoLevel: 17,
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	emelgy: {
 		num: 69263,
 		name: "Emelgy",
 		types: [
 			"Normal",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 40,
@@ -26051,35 +26051,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 35,
 			spa: 40,
 			spd: 30,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Sniper",
 			1: "Keen Eye",
 			H: "Competitive",
-			S: "Rivalry"
+			S: "Rivalry",
 		},
 		heightm: 0.3,
 		weightkg: 7.5,
 		color: "White",
 		evos: [
-			"Fedorawk"
+			"Fedorawk",
 		],
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	fedorawk: {
 		num: 69264,
 		name: "Fedorawk",
 		types: [
 			"Fire",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 55,
@@ -26087,13 +26087,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 60,
 			spd: 45,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Sniper",
 			1: "Keen Eye",
 			H: "Competitive",
-			S: "Rivalry"
+			S: "Rivalry",
 		},
 		heightm: 1.1,
 		weightkg: 24.5,
@@ -26101,23 +26101,23 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Emelgy",
 		evoLevel: 16,
 		evos: [
-			"FaZeagle"
+			"FaZeagle",
 		],
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	fazeagle: {
 		num: 69265,
 		name: "FaZeagle",
 		types: [
 			"Fire",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 75,
@@ -26125,13 +26125,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 85,
 			spd: 60,
-			spe: 110
+			spe: 110,
 		},
 		abilities: {
 			0: "Sniper",
 			1: "Keen Eye",
 			H: "Competitive",
-			S: "Rivalry"
+			S: "Rivalry",
 		},
 		heightm: 1.7,
 		weightkg: 75.5,
@@ -26139,19 +26139,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Fedorawk",
 		evoLevel: 32,
 		eggGroups: [
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	catikillar: {
 		num: 69266,
 		name: "Catikillar",
 		types: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 30,
@@ -26159,34 +26159,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 31,
 			spd: 40,
-			spe: 25
+			spe: 25,
 		},
 		abilities: {
 			0: "Shield Dust",
 			1: "Swarm",
 			H: "Compound Eyes",
-			S: "Dark Aura"
+			S: "Dark Aura",
 		},
 		heightm: 0.2,
 		weightkg: 0.9,
 		color: "Brown",
 		evos: [
-			"Tikoon"
+			"Tikoon",
 		],
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	tikoon: {
 		num: 69267,
 		name: "Tikoon",
 		types: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 57,
@@ -26194,13 +26194,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 32,
 			spd: 80,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Shell Armor",
 			1: "Swarm",
 			H: "Compound Eyes",
-			S: "Dark Aura"
+			S: "Dark Aura",
 		},
 		heightm: 0.6,
 		weightkg: 9,
@@ -26208,23 +26208,23 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Catikillar",
 		evoLevel: 15,
 		evos: [
-			"Oogabuga"
+			"Oogabuga",
 		],
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	oogabuga: {
 		num: 69268,
 		name: "Oogabuga",
 		types: [
 			"Bug",
-			"Grass"
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 77,
@@ -26232,13 +26232,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 110,
 			spa: 92,
 			spd: 90,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Intimidate",
 			1: "Swarm",
 			H: "Grassy Surge",
-			S: "Dark Aura"
+			S: "Dark Aura",
 		},
 		heightm: 1.2,
 		weightkg: 27.2,
@@ -26246,19 +26246,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Tikoon",
 		evoLevel: 30,
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ebining: {
 		num: 69269,
 		name: "Ebining",
 		types: [
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 55,
@@ -26266,34 +26266,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 55,
 			spa: 55,
 			spd: 40,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Prankster",
 			1: "Defiant",
 			H: "Contrary",
-			S: "Degradation"
+			S: "Degradation",
 		},
 		heightm: 0.9,
 		weightkg: 10,
 		color: "Green",
 		evos: [
-			"Emplyin"
+			"Emplyin",
 		],
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	emplyin: {
 		num: 69270,
 		name: "Emplyin",
 		types: [
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -26301,13 +26301,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 75,
 			spd: 55,
-			spe: 93
+			spe: 93,
 		},
 		abilities: {
 			0: "Prankster",
 			1: "Defiant",
 			H: "Contrary",
-			S: "Degradation"
+			S: "Degradation",
 		},
 		heightm: 1,
 		weightkg: 31.5,
@@ -26315,19 +26315,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Ebining",
 		evoLevel: 24,
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	upbote: {
 		num: 69271,
 		name: "Upbote",
 		types: [
-			"Psychic"
+			"Psychic",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 81,
@@ -26335,34 +26335,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 41,
 			spa: 71,
 			spd: 82,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Plus",
 			1: "Minus",
 			H: "Trace",
-			S: "Emergency Exit"
+			S: "Emergency Exit",
 		},
 		heightm: 0.6,
 		weightkg: 8,
 		color: "White",
 		evos: [
-			"Upbeddit"
+			"Upbeddit",
 		],
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	upbeddit: {
 		num: 69272,
 		name: "Upbeddit",
 		types: [
-			"Psychic"
+			"Psychic",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 82,
@@ -26370,13 +26370,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 72,
 			spa: 92,
 			spd: 117,
-			spe: 57
+			spe: 57,
 		},
 		abilities: {
 			0: "Plus",
 			1: "Minus",
 			H: "Trace",
-			S: "Emergency Exit"
+			S: "Emergency Exit",
 		},
 		heightm: 1.1,
 		weightkg: 20,
@@ -26384,20 +26384,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Upbote",
 		evoLevel: 24,
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	flipbird: {
 		num: 69273,
 		name: "Flipbird",
 		types: [
 			"Normal",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 32,
@@ -26405,36 +26405,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 33,
 			spa: 30,
 			spd: 30,
-			spe: 72
+			spe: 72,
 		},
 		abilities: {
 			0: "Defeatist",
 			1: "Keen Eye",
 			H: "Early Bird",
-			S: "Wimp Out"
+			S: "Wimp Out",
 		},
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "White",
 		evos: [
-			"Wheygle"
+			"Wheygle",
 		],
 		eggGroups: [
 			"Flying",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	wheygle: {
 		num: 69274,
 		name: "Wheygle",
 		types: [
 			"Fighting",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 82,
@@ -26442,13 +26442,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 77,
 			spa: 45,
 			spd: 65,
-			spe: 93
+			spe: 93,
 		},
 		abilities: {
 			0: "Big Pecks",
 			1: "No Guard",
 			H: "Steelworker",
-			S: "Unburden"
+			S: "Unburden",
 		},
 		heightm: 1.5,
 		weightkg: 50.5,
@@ -26457,19 +26457,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 27,
 		eggGroups: [
 			"Flying",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	gangnome: {
 		num: 69275,
 		name: "Gangnome",
 		types: [
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 120,
@@ -26477,31 +26477,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 115,
 			spa: 55,
 			spd: 125,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Soundproof",
 			1: "Concert",
 			H: "Tangled Feet",
-			S: "Natural Cure"
+			S: "Natural Cure",
 		},
 		heightm: 1,
 		weightkg: 22.5,
 		color: "Green",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	pyongnome: {
 		num: 69276,
 		name: "Pyongnome",
 		types: [
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -26509,31 +26509,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 115,
 			spd: 45,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Intimidate",
 			H: "Bulletproof",
-			S: "Sheer Force"
+			S: "Sheer Force",
 		},
 		heightm: 1,
 		weightkg: 22.5,
 		color: "Green",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	bruhkid: {
 		num: 69277,
 		name: "Bruhkid",
 		types: [
 			"Ground",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 60,
@@ -26541,36 +26541,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 50,
 			spd: 60,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Stamina",
 			1: "Sturdy",
 			H: "Sand Force",
-			S: "Moxie"
+			S: "Moxie",
 		},
 		heightm: 0.7,
 		weightkg: 21.5,
 		color: "Brown",
 		evos: [
-			"Ubruh"
+			"Ubruh",
 		],
 		eggGroups: [
 			"Mineral",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ubruh: {
 		num: 69278,
 		name: "Ubruh",
 		types: [
 			"Ground",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 90,
@@ -26578,13 +26578,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 70,
 			spd: 80,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Stamina",
 			1: "Sturdy",
 			H: "Sand Force",
-			S: "Moxie"
+			S: "Moxie",
 		},
 		heightm: 2,
 		weightkg: 90,
@@ -26593,19 +26593,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 30,
 		eggGroups: [
 			"Mineral",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	walruse: {
 		num: 69279,
 		name: "Walruse",
 		types: [
-			"Water"
+			"Water",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 60,
@@ -26613,34 +26613,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 43,
 			spa: 50,
 			spd: 40,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Hydration",
 			1: "Oblivious",
 			H: "Defiant",
-			S: "Rain Dish"
+			S: "Rain Dish",
 		},
 		heightm: 1.1,
 		weightkg: 90,
 		color: "Blue",
 		evos: [
-			"Walruskie"
+			"Walruskie",
 		],
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
-		gen: 8
+		gen: 8,
 	},
 	walruskie: {
 		num: 69280,
 		name: "Walruskie",
 		types: [
-			"Water"
+			"Water",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 120,
@@ -26648,13 +26648,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 83,
 			spa: 60,
 			spd: 70,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Hydration",
 			1: "Oblivious",
 			H: "Defiant",
-			S: "Steelworker"
+			S: "Steelworker",
 		},
 		heightm: 1.4,
 		weightkg: 150.6,
@@ -26662,20 +26662,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Walruse",
 		evoLevel: 30,
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
-		gen: 8
+		gen: 8,
 	},
 	diobat: {
 		num: 69281,
 		name: "Diobat",
 		types: [
 			"Dark",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 50,
@@ -26683,35 +26683,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 45,
 			spa: 65,
 			spd: 45,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Regenerator",
 			H: "Forewarn",
-			S: "Frisk"
+			S: "Frisk",
 		},
 		heightm: 0.5,
 		weightkg: 8,
 		color: "Yellow",
 		evos: [
-			"warudio"
+			"warudio",
 		],
 		eggGroups: [
 			"Human-Like",
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	warudio: {
 		num: 69282,
 		name: "Warudio",
 		types: [
 			"Dark",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 80,
@@ -26719,12 +26719,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 85,
 			spd: 80,
-			spe: 120
+			spe: 120,
 		},
 		abilities: {
 			0: "Regenerator",
 			H: "Forewarn",
-			S: "Frisk"
+			S: "Frisk",
 		},
 		heightm: 1.9,
 		weightkg: 105,
@@ -26734,15 +26734,15 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Moon Stone",
 		eggGroups: [
 			"Human-Like",
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	docee: {
 		num: 69283,
 		name: "Docee",
 		types: [
-			"Steel"
+			"Steel",
 		],
 		gender: "N",
 		baseStats: {
@@ -26751,30 +26751,30 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 73,
 			spa: 20,
 			spd: 65,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Trace",
 			1: "Color Change",
 			H: "Full Metal Body",
-			S: "Neuroforce"
+			S: "Neuroforce",
 		},
 		heightm: 0.4,
 		weightkg: 5,
 		color: "Gray",
 		evos: [
-			"Donutsteel"
+			"Donutsteel",
 		],
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	donutsteel: {
 		num: 69284,
 		name: "Donutsteel",
 		types: [
-			"Steel"
+			"Steel",
 		],
 		gender: "N",
 		baseStats: {
@@ -26783,13 +26783,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 113,
 			spa: 48,
 			spd: 85,
-			spe: 112
+			spe: 112,
 		},
 		abilities: {
 			0: "Trace",
 			1: "Color Change",
 			H: "Full Metal Body",
-			S: "Neuroforce"
+			S: "Neuroforce",
 		},
 		heightm: 1,
 		weightkg: 35,
@@ -26797,20 +26797,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Docee",
 		evoType: "levelFriendship",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	cakupple: {
 		num: 69285,
 		name: "Cakupple",
 		types: [
 			"Grass",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 59,
@@ -26818,36 +26818,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 45,
 			spd: 70,
-			spe: 31
+			spe: 31,
 		},
 		abilities: {
 			0: "Sweet Veil",
 			1: "Aroma Veil",
 			H: "Cute Charm",
-			S: "Klutz"
+			S: "Klutz",
 		},
 		heightm: 0.3,
 		weightkg: 2,
 		color: "White",
 		evos: [
-			"Fondupple"
+			"Fondupple",
 		],
 		eggGroups: [
 			"Grass",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	fondupple: {
 		num: 69286,
 		name: "Fondupple",
 		types: [
 			"Grass",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 89,
@@ -26855,13 +26855,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 50,
 			spd: 110,
-			spe: 51
+			spe: 51,
 		},
 		abilities: {
 			0: "Sweet Veil",
 			1: "Aroma Veil",
 			H: "Intimidate",
-			S: "Klutz"
+			S: "Klutz",
 		},
 		heightm: 1.1,
 		weightkg: 20.4,
@@ -26870,19 +26870,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 30,
 		eggGroups: [
 			"Grass",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	baloofang: {
 		num: 69287,
 		name: "Baloofang",
 		types: [
-			"Ghost"
+			"Ghost",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 100,
@@ -26890,32 +26890,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 80,
 			spd: 105,
-			spe: 64
+			spe: 64,
 		},
 		abilities: {
 			0: "Aftermath",
 			1: "Unaware",
 			H: "Sheer Force",
-			S: "Simple"
+			S: "Simple",
 		},
 		heightm: 1.5,
 		weightkg: 9,
 		color: "Purple",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	socckat: {
 		num: 69288,
 		name: "Socckat",
 		types: [
 			"Normal",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -26923,32 +26923,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 55,
 			spd: 65,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
 			0: "Quick Feet",
 			1: "Striker",
 			H: "Unburden",
-			S: "Scrappy"
+			S: "Scrappy",
 		},
 		heightm: 1,
 		weightkg: 32,
 		color: "Brown",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	egylamp: {
 		num: 69289,
 		name: "Egylamp",
 		types: [
 			"Psychic",
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -26956,36 +26956,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 70,
 			spd: 60,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Flame Body",
 			1: "Synchronize",
 			H: "Dazzling",
-			S: "Lightning Rod"
+			S: "Lightning Rod",
 		},
 		heightm: 0.3,
 		weightkg: 4.5,
 		color: "Yellow",
 		evos: [
-			"Ruselamp"
+			"Ruselamp",
 		],
 		eggGroups: [
 			"Mineral",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ruselamp: {
 		num: 69290,
 		name: "Ruselamp",
 		types: [
 			"Psychic",
-			"Electric"
+			"Electric",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -26993,13 +26993,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 125,
 			spd: 90,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Illuminate",
 			1: "Synchronize",
 			H: "Dazzling",
-			S: "Flash Fire"
+			S: "Flash Fire",
 		},
 		heightm: 1.5,
 		weightkg: 72,
@@ -27009,20 +27009,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Thunder Stone",
 		eggGroups: [
 			"Mineral",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	mehndior: {
 		num: 69291,
 		name: "Mehndior",
 		types: [
 			"Fire",
-			"Rock"
+			"Rock",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -27030,35 +27030,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 25,
 			spd: 65,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Speed Boost",
 			H: "Competitive",
-			S: "Telepathy"
+			S: "Telepathy",
 		},
 		heightm: 1.2,
 		weightkg: 52,
 		color: "Red",
 		evos: [
-			"Tunakking"
+			"Tunakking",
 		],
 		eggGroups: [
 			"Mineral",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	tunakking: {
 		num: 69292,
 		name: "Tunakking",
 		types: [
 			"Fire",
-			"Psychic"
+			"Psychic",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -27066,12 +27066,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 111,
 			spd: 85,
-			spe: 111
+			spe: 111,
 		},
 		abilities: {
 			0: "Levitate",
 			H: "Competitive",
-			S: "Telepathy"
+			S: "Telepathy",
 		},
 		heightm: 1.5,
 		weightkg: 65,
@@ -27081,19 +27081,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Fire Stone",
 		eggGroups: [
 			"Mineral",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	missletoe: {
 		num: 69293,
 		name: "Missletoe",
 		types: [
-			"Ice"
+			"Ice",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 41,
@@ -27101,35 +27101,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 40,
 			spa: 85,
 			spd: 50,
-			spe: 71
+			spe: 71,
 		},
 		abilities: {
 			0: "Levitate",
 			1: "Sniper",
 			H: "Technician",
-			S: "Slush Rush"
+			S: "Slush Rush",
 		},
 		heightm: 0.6,
 		weightkg: 12,
 		color: "Blue",
 		evos: [
-			"Hohohoming"
+			"Hohohoming",
 		],
 		eggGroups: [
 			"Mineral",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	hohohoming: {
 		num: 69294,
 		name: "Hohohoming",
 		types: [
-			"Ice"
+			"Ice",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 81,
@@ -27137,13 +27137,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 71,
 			spa: 126,
 			spd: 81,
-			spe: 91
+			spe: 91,
 		},
 		abilities: {
 			0: "Levitate",
 			1: "Sniper",
 			H: "Technician",
-			S: "Slush Rush"
+			S: "Slush Rush",
 		},
 		heightm: 1.5,
 		weightkg: 118,
@@ -27152,19 +27152,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 24,
 		eggGroups: [
 			"Mineral",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	flaa: {
 		num: 69295,
 		name: "Flaa",
 		types: [
-			"Bug"
+			"Bug",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 40,
@@ -27172,36 +27172,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 35,
 			spd: 60,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Run Away",
 			1: "Pickup",
 			H: "Justified",
-			S: "Striker"
+			S: "Striker",
 		},
 		heightm: 0.7,
 		weightkg: 12.5,
 		color: "Brown",
 		evos: [
-			"Hopault"
+			"Hopault",
 		],
 		eggGroups: [
 			"Bug",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	hopault: {
 		num: 69296,
 		name: "Hopault",
 		types: [
 			"Bug",
-			"Fighting"
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -27209,13 +27209,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 65,
 			spd: 70,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
 			0: "Reckless",
 			1: "Guts",
 			H: "Justified",
-			S: "Striker"
+			S: "Striker",
 		},
 		heightm: 1.9,
 		weightkg: 90,
@@ -27224,20 +27224,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 23,
 		eggGroups: [
 			"Bug",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	araketsu: {
 		num: 69297,
 		name: "Araketsu",
 		types: [
 			"Bug",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 60,
@@ -27245,35 +27245,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 30,
 			spd: 60,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Hyper Cutter",
 			1: "Intimidate",
 			H: "Blademaster",
-			S: "Unburden"
+			S: "Unburden",
 		},
 		heightm: 0.6,
 		weightkg: 15,
 		color: "Black",
 		evos: [
-			"Senketula"
+			"Senketula",
 		],
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	senketula: {
 		num: 69298,
 		name: "Senketula",
 		types: [
 			"Bug",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 100,
@@ -27281,13 +27281,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 55,
 			spd: 100,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Hyper Cutter",
 			1: "Intimidate",
 			H: "Blademaster",
-			S: "Unburden"
+			S: "Unburden",
 		},
 		heightm: 1.2,
 		weightkg: 30,
@@ -27295,16 +27295,16 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Araketsu",
 		evoLevel: 21,
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	falcaptain: {
 		num: 69299,
 		name: "Falcaptain",
 		types: [
 			"Fighting",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		baseStats: {
@@ -27313,33 +27313,33 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 55,
 			spa: 85,
 			spd: 50,
-			spe: 130
+			spe: 130,
 		},
 		abilities: {
 			0: "Big Pecks",
 			1: "Iron Fist",
 			H: "Guts",
-			S: "Flash Fire"
+			S: "Flash Fire",
 		},
 		heightm: 1.9,
 		weightkg: 77.1,
 		color: "Blue",
 		eggGroups: [
 			"Field",
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	cirpent: {
 		num: 69300,
 		name: "Cirpent",
 		types: [
 			"Poison",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 51,
@@ -27347,36 +27347,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 61,
 			spa: 71,
 			spd: 51,
-			spe: 81
+			spe: 81,
 		},
 		abilities: {
 			0: "Prankster",
 			1: "Magic Bounce",
 			H: "Unnerve",
-			S: "Bad Dreams"
+			S: "Bad Dreams",
 		},
 		heightm: 0.3,
 		weightkg: 4.5,
 		color: "White",
 		evos: [
-			"Traumobra"
+			"Traumobra",
 		],
 		eggGroups: [
 			"Dragon",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	traumobra: {
 		num: 69301,
 		name: "Traumobra",
 		types: [
 			"Poison",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 71,
@@ -27384,13 +27384,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 91,
 			spa: 101,
 			spd: 81,
-			spe: 111
+			spe: 111,
 		},
 		abilities: {
 			0: "Prankster",
 			1: "Magic Bounce",
 			H: "Unnerve",
-			S: "Bad Dreams"
+			S: "Bad Dreams",
 		},
 		heightm: 1.5,
 		weightkg: 9,
@@ -27399,20 +27399,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "levelFriendship",
 		eggGroups: [
 			"Dragon",
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	lizascoop: {
 		num: 69302,
 		name: "Lizascoop",
 		types: [
 			"Ground",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 55,
@@ -27420,36 +27420,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 30,
 			spd: 40,
-			spe: 25
+			spe: 25,
 		},
 		abilities: {
 			0: "Strong Jaw",
 			1: "Sheer Force",
 			H: "Battle Armor",
-			S: "Anger Point"
+			S: "Anger Point",
 		},
 		heightm: 0.8,
 		weightkg: 33,
 		color: "Yellow",
 		evos: [
-			"Reptrill"
+			"Reptrill",
 		],
 		eggGroups: [
 			"Mineral",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	reptrill: {
 		num: 69303,
 		name: "Reptrill",
 		types: [
 			"Ground",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 85,
@@ -27457,13 +27457,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 105,
 			spa: 50,
 			spd: 80,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Strong Jaw",
 			1: "Sheer Force",
 			H: "Battle Armor",
-			S: "Anger Point"
+			S: "Anger Point",
 		},
 		heightm: 1.3,
 		weightkg: 56,
@@ -27472,20 +27472,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 28,
 		eggGroups: [
 			"Mineral",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	fefeion: {
 		num: 69304,
 		name: "Fefeion",
 		types: [
 			"Bug",
-			"Ground"
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 65,
@@ -27493,35 +27493,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 85,
 			spd: 50,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Heatproof",
 			1: "Sand Veil",
 			H: "Flare Boost",
-			S: "Flare Heal"
+			S: "Flare Heal",
 		},
 		heightm: 0.6,
 		weightkg: 20.5,
 		color: "Red",
 		evos: [
-			"Feferun"
+			"Feferun",
 		],
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	feferun: {
 		num: 69305,
 		name: "Feferun",
 		types: [
 			"Bug",
-			"Ground"
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 80,
@@ -27529,13 +27529,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 125,
 			spd: 80,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Flash Fire",
 			1: "Sand Force",
 			H: "Flare Boost",
-			S: "Flare Heal"
+			S: "Flare Heal",
 		},
 		heightm: 1.8,
 		weightkg: 79.2,
@@ -27543,16 +27543,16 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Fefeion",
 		evoLevel: 34,
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	jerkle: {
 		num: 69306,
 		name: "Jerkle",
 		types: [
 			"Rock",
-			"Psychic"
+			"Psychic",
 		],
 		gender: "N",
 		baseStats: {
@@ -27561,28 +27561,28 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 110,
 			spd: 60,
-			spe: 63
+			spe: 63,
 		},
 		abilities: {
 			0: "Aftermath",
 			1: "Sticky Hold",
 			H: "Gooey",
-			S: "Psychic Surge"
+			S: "Psychic Surge",
 		},
 		heightm: 0.7,
 		weightkg: 75,
 		color: "Black",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	faptime: {
 		num: 69307,
 		name: "Faptime",
 		types: [
 			"Rock",
-			"Psychic"
+			"Psychic",
 		],
 		gender: "N",
 		baseStats: {
@@ -27591,32 +27591,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 60,
 			spd: 90,
-			spe: 69
+			spe: 69,
 		},
 		abilities: {
 			0: "Speed Boost",
 			1: "Own Tempo",
 			H: "Sticky Hold",
-			S: "Stamina"
+			S: "Stamina",
 		},
 		heightm: 1.5,
 		weightkg: 71,
 		color: "Brown",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	shiriman: {
 		num: 69308,
 		name: "Shiriman",
 		types: [
 			"Psychic",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 109,
@@ -27624,28 +27624,28 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 87,
 			spa: 86,
 			spd: 85,
-			spe: 64
+			spe: 64,
 		},
 		abilities: {
 			0: "Prankster",
 			1: "Keen Eye",
 			H: "Intimidate",
-			S: "Receiver"
+			S: "Receiver",
 		},
 		heightm: 0.9,
 		weightkg: 31.6,
 		color: "Purple",
 		eggGroups: [
 			"Fairy",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	fresrye: {
 		num: 69309,
 		name: "Fresrye",
 		types: [
-			"Grass"
+			"Grass",
 		],
 		gender: "N",
 		baseStats: {
@@ -27654,32 +27654,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 20,
 			spa: 35,
 			spd: 20,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Truant",
 			1: "Cloud Nine",
 			H: "Forewarn",
-			S: "Anticipation"
+			S: "Anticipation",
 		},
 		heightm: 0.3,
 		weightkg: 0.9,
 		color: "Brown",
 		evos: [
-			"Dedwheat"
+			"Dedwheat",
 		],
 		eggGroups: [
 			"Grass",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	dedwheat: {
 		num: 69310,
 		name: "Dedwheat",
 		types: [
 			"Grass",
-			"Poison"
+			"Poison",
 		],
 		gender: "N",
 		baseStats: {
@@ -27688,13 +27688,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 85,
 			spd: 60,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Truant",
 			1: "Effect Spore",
 			H: "Forewarn",
-			S: "Anticipation"
+			S: "Anticipation",
 		},
 		heightm: 1.5,
 		weightkg: 9,
@@ -27703,20 +27703,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 30,
 		eggGroups: [
 			"Grass",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	nutjobber: {
 		num: 69311,
 		name: "Nutjobber",
 		types: [
 			"Ghost",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 75,
@@ -27724,36 +27724,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 30,
 			spd: 75,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Madman",
 			1: "Strong Jaw",
 			H: "Shell Armor",
-			S: "Prankster"
+			S: "Prankster",
 		},
 		heightm: 1,
 		weightkg: 27.2,
 		color: "Brown",
 		evos: [
-			"Deisnutz"
+			"Deisnutz",
 		],
 		eggGroups: [
 			"Grass",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	deisnutz: {
 		num: 69312,
 		name: "Deisnutz",
 		types: [
 			"Ghost",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -27761,13 +27761,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 110,
 			spa: 90,
 			spd: 90,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Madman",
 			1: "Strong Jaw",
 			H: "Shell Armor",
-			S: "Prankster"
+			S: "Prankster",
 		},
 		heightm: 1.5,
 		weightkg: 27.2,
@@ -27776,19 +27776,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "levelFriendship",
 		eggGroups: [
 			"Grass",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	spargle: {
 		num: 69313,
 		name: "Spargle",
 		types: [
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 60,
@@ -27796,34 +27796,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 50,
 			spd: 50,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Vital Spirit",
 			1: "Insomnia",
 			H: "Unnerve",
-			S: "Frisk"
+			S: "Frisk",
 		},
 		heightm: 1,
 		weightkg: 40.5,
 		color: "Brown",
 		evos: [
-			"Spedo"
+			"Spedo",
 		],
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	spedo: {
 		num: 69314,
 		name: "Spedo",
 		types: [
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 105,
@@ -27831,13 +27831,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 70,
 			spd: 70,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Arena Trap",
 			1: "Sheer Force",
 			H: "Unnerve",
-			S: "Frisk"
+			S: "Frisk",
 		},
 		heightm: 2.1,
 		weightkg: 156.5,
@@ -27845,20 +27845,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Spargle",
 		evoLevel: 27,
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	housant: {
 		num: 69315,
 		name: "Housant",
 		types: [
 			"Bug",
-			"Rock"
+			"Rock",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 60,
@@ -27866,36 +27866,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 30,
 			spd: 40,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "More Room",
 			1: "Shell Armor",
 			H: "Unburden",
-			S: "Emergency Exit"
+			S: "Emergency Exit",
 		},
 		heightm: 0.2,
 		weightkg: 1.5,
 		color: "Brown",
 		evos: [
-			"Apartmant"
+			"Apartmant",
 		],
 		eggGroups: [
 			"Bug",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	apartmant: {
 		num: 69316,
 		name: "Apartmant",
 		types: [
 			"Bug",
-			"Rock"
+			"Rock",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 90,
@@ -27903,13 +27903,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 120,
 			spa: 50,
 			spd: 60,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "More Room",
 			1: "Shell Armor",
 			H: "Unburden",
-			S: "Emergency Exit"
+			S: "Emergency Exit",
 		},
 		heightm: 0.3,
 		weightkg: 4.5,
@@ -27918,20 +27918,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 29,
 		eggGroups: [
 			"Bug",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	fuermiga: {
 		num: 69317,
 		name: "Fuermiga",
 		types: [
 			"Bug",
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 30,
@@ -27939,35 +27939,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 20,
 			spa: 65,
 			spd: 30,
-			spe: 85
+			spe: 85,
 		},
 		abilities: {
 			0: "Compound Eyes",
 			1: "Gooey",
 			H: "Aroma Veil",
-			S: "Sticky Hold"
+			S: "Sticky Hold",
 		},
 		heightm: 0.6,
 		weightkg: 33,
 		color: "Yellow",
 		evos: [
-			"Maripyro"
+			"Maripyro",
 		],
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	maripyro: {
 		num: 69318,
 		name: "Maripyro",
 		types: [
 			"Bug",
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -27975,13 +27975,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 75,
 			spd: 90,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Magic Guard",
 			1: "Gooey",
 			H: "Aroma Veil",
-			S: "Sticky Hold"
+			S: "Sticky Hold",
 		},
 		heightm: 3.2,
 		weightkg: 92,
@@ -27989,16 +27989,16 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Fuermiga",
 		evoLevel: 40,
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	confirmabi: {
 		num: 69319,
 		name: "Confirmabi",
 		types: [
 			"Grass",
-			"Psychic"
+			"Psychic",
 		],
 		gender: "N",
 		baseStats: {
@@ -28007,31 +28007,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 95,
 			spd: 70,
-			spe: 135
+			spe: 135,
 		},
 		abilities: {
 			0: "Quick Feet",
 			H: "Chlorophyll",
-			S: "Dazzling"
+			S: "Dazzling",
 		},
 		heightm: 0.6,
 		weightkg: 5,
 		color: "Green",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	bulbapedo: {
 		num: 69320,
 		name: "Bulbapedo",
 		types: [
 			"Grass",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.875,
-			F: 0.125
+			F: 0.125,
 		},
 		baseStats: {
 			hp: 145,
@@ -28039,31 +28039,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 70,
 			spd: 90,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Rivalry",
 			H: "Frisk",
-			S: "Analytic"
+			S: "Analytic",
 		},
 		heightm: 0.7,
 		weightkg: 25,
 		color: "Green",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	wastenaut: {
 		num: 69321,
 		name: "Wastenaut",
 		types: [
 			"Steel",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -28071,36 +28071,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 20,
 			spd: 80,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Battle Armor",
 			1: "Iron Barbs",
 			H: "Stench",
-			S: "Heavy Metal"
+			S: "Heavy Metal",
 		},
 		heightm: 1,
 		weightkg: 60,
 		color: "Gray",
 		evos: [
-			"Wantnaut"
+			"Wantnaut",
 		],
 		eggGroups: [
 			"Minreal",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	wantnaut: {
 		num: 69322,
 		name: "Wantnaut",
 		types: [
 			"Steel",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 100,
@@ -28108,13 +28108,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 30,
 			spd: 120,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Battle Armor",
 			1: "Iron Barbs",
 			H: "Stench",
-			S: "Heavy Metal"
+			S: "Heavy Metal",
 		},
 		heightm: 1.9,
 		weightkg: 392,
@@ -28123,19 +28123,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 30,
 		eggGroups: [
 			"Minreal",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	cansumor: {
 		num: 69323,
 		name: "Cansumor",
 		types: [
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 135,
@@ -28143,31 +28143,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 65,
 			spd: 90,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Liquid Ooze",
 			H: "Shed Skin",
-			S: "Corrosion"
+			S: "Corrosion",
 		},
 		heightm: 1,
 		weightkg: 27.2,
 		color: "Brown",
 		eggGroups: [
 			"Amorphous",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	snuffant: {
 		num: 69324,
 		name: "Snuffant",
 		types: [
-			"Ice"
+			"Ice",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -28175,35 +28175,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 35,
 			spa: 60,
 			spd: 40,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Snow Cloak",
 			1: "Slush Rush",
 			H: "Overcoat",
-			S: "Snow Warning"
+			S: "Snow Warning",
 		},
 		heightm: 1,
 		weightkg: 58.5,
 		color: "Blue",
 		evos: [
-			"Cokemmoth"
+			"Cokemmoth",
 		],
 		eggGroups: [
 			"Field",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	cokemmoth: {
 		num: 69325,
 		name: "Cokemmoth",
 		types: [
-			"Ice"
+			"Ice",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 105,
@@ -28211,13 +28211,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 115,
 			spd: 80,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Speed Boost",
 			1: "Slush Rush",
 			H: "Overcoat",
-			S: "Snow Warning"
+			S: "Snow Warning",
 		},
 		heightm: 2,
 		weightkg: 120,
@@ -28226,20 +28226,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 32,
 		eggGroups: [
 			"Field",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	grimdak: {
 		num: 69326,
 		name: "Grimdak",
 		types: [
 			"Dark",
-			"Steel"
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -28247,32 +28247,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 110,
 			spd: 70,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Moody",
 			1: "Cursed Body",
 			H: "Soul-Heart",
-			S: "Dark Aura"
+			S: "Dark Aura",
 		},
 		heightm: 1.7,
 		weightkg: 90.7,
 		color: "Black",
 		eggGroups: [
 			"Human-Like",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	shroofle: {
 		num: 69327,
 		name: "Shroofle",
 		types: [
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 101,
@@ -28280,28 +28280,28 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 101,
 			spa: 56,
 			spd: 92,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Immunity",
 			1: "Poison Heal",
 			H: "Toxic Boost",
-			S: "Effect Spore"
+			S: "Effect Spore",
 		},
 		heightm: 0.6,
 		weightkg: 9,
 		color: "Black",
 		eggGroups: [
-			"Grass"
+			"Grass",
 		],
-		gen: 8
+		gen: 8,
 	},
 	betacluck: {
 		num: 69328,
 		name: "Betacluck",
 		types: [
 			"Electric",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		baseStats: {
@@ -28310,31 +28310,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 75,
 			spd: 50,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Technician",
 			H: "Run Away",
-			S: "Rattled"
+			S: "Rattled",
 		},
 		heightm: 0.3,
 		weightkg: 1.7,
 		color: "Gray",
 		evos: [
-			"Thundacock"
+			"Thundacock",
 		],
 		eggGroups: [
 			"Flying",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	thundacock: {
 		num: 69329,
 		name: "Thundacock",
 		types: [
 			"Electric",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		baseStats: {
@@ -28343,12 +28343,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 80,
 			spd: 70,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
 			0: "Adaptability",
 			H: "Mold Breaker",
-			S: "Guts"
+			S: "Guts",
 		},
 		heightm: 1.9,
 		weightkg: 97.5,
@@ -28357,20 +28357,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 31,
 		eggGroups: [
 			"Flying",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	twinfowl: {
 		num: 69330,
 		name: "Twinfowl",
 		types: [
 			"Steel",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 40,
@@ -28378,35 +28378,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 40,
 			spa: 20,
 			spd: 40,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Big Pecks",
 			H: "Weak Armor",
-			S: "Flare Heal"
+			S: "Flare Heal",
 		},
 		heightm: 3,
 		weightkg: 413.2,
 		color: "Grey",
 		evos: [
-			"Avianjoin"
+			"Avianjoin",
 		],
 		eggGroups: [
 			"Flying",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	avianjoin: {
 		num: 69331,
 		name: "Avianjoin",
 		types: [
 			"Steel",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 100,
@@ -28414,12 +28414,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 80,
 			spd: 70,
-			spe: 75
+			spe: 75,
 		},
 		abilities: {
 			0: "Heatproof",
 			H: "Weak Armor",
-			S: "Flare Heal"
+			S: "Flare Heal",
 		},
 		heightm: 9.1,
 		weightkg: 911,
@@ -28428,20 +28428,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 31,
 		eggGroups: [
 			"Flying",
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	illuminowl: {
 		num: 69332,
 		name: "Illuminowl",
 		types: [
 			"Psychic",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 62,
@@ -28449,36 +28449,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 93,
 			spd: 70,
-			spe: 58
+			spe: 58,
 		},
 		abilities: {
 			0: "Illuminate",
 			1: "Forewarn",
 			H: "Analytic",
-			S: "Solar Power"
+			S: "Solar Power",
 		},
 		heightm: 1.8,
 		weightkg: 15,
 		color: "Brown",
 		evos: [
-			"Illumatrix"
+			"Illumatrix",
 		],
 		eggGroups: [
 			"Flying",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	illumatrix: {
 		num: 69333,
 		name: "Illumatrix",
 		types: [
 			"Psychic",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 92,
@@ -28486,13 +28486,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 95,
 			spa: 113,
 			spd: 100,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Illuminate",
 			1: "Forewarn",
 			H: "Analytic",
-			S: "Solar Power"
+			S: "Solar Power",
 		},
 		heightm: 2.8,
 		weightkg: 28,
@@ -28501,20 +28501,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 42,
 		eggGroups: [
 			"Flying",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	typobop: {
 		num: 69334,
 		name: "Typobop",
 		types: [
 			"Rock",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -28522,36 +28522,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 74,
 			spa: 40,
 			spd: 40,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Sheer Force",
 			1: "Run Away",
 			H: "Rattled",
-			S: "Rivalry"
+			S: "Rivalry",
 		},
 		heightm: 0.3,
 		weightkg: 4.5,
 		color: "Green",
 		evos: [
-			"Yeerex"
+			"Yeerex",
 		],
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	yeerex: {
 		num: 69335,
 		name: "Yeerex",
 		types: [
 			"Rock",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 81,
@@ -28559,13 +28559,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 60,
 			spd: 70,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Sheer Force",
 			1: "Intimidate",
 			H: "Moxie",
-			S: "Rivalry"
+			S: "Rivalry",
 		},
 		heightm: 1.5,
 		weightkg: 190,
@@ -28575,20 +28575,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Moon Stone",
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	randomix: {
 		num: 69336,
 		name: "Randomix",
 		types: [
 			"Rock",
-			"Water"
+			"Water",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 51,
@@ -28596,36 +28596,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 95,
 			spa: 64,
 			spd: 58,
-			spe: 25
+			spe: 25,
 		},
 		abilities: {
 			0: "Regenerator",
 			1: "Shell Armor",
 			H: "Rattled",
-			S: "Moody"
+			S: "Moody",
 		},
 		heightm: 0.4,
 		weightkg: 7.5,
 		color: "Blue",
 		evos: [
-			"Cthullord"
+			"Cthullord",
 		],
 		eggGroups: [
 			"Water 1",
-			"Water 3"
+			"Water 3",
 		],
-		gen: 8
+		gen: 8,
 	},
 	cthullord: {
 		num: 69337,
 		name: "Cthullord",
 		types: [
 			"Rock",
-			"Water"
+			"Water",
 		],
 		genderRatio: {
 			M: 0.75,
-			F: 0.25
+			F: 0.25,
 		},
 		baseStats: {
 			hp: 110,
@@ -28633,13 +28633,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 95,
 			spd: 70,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Regenerator",
 			1: "Shell Armor",
 			H: "Pressure",
-			S: "Swift Swim"
+			S: "Swift Swim",
 		},
 		heightm: 2.1,
 		weightkg: 226.8,
@@ -28649,19 +28649,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Water Stone",
 		eggGroups: [
 			"Water 1",
-			"Water 3"
+			"Water 3",
 		],
-		gen: 8
+		gen: 8,
 	},
 	quiboom: {
 		num: 69338,
 		name: "Quiboom",
 		types: [
-			"Water"
+			"Water",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 49,
@@ -28669,34 +28669,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 45,
 			spa: 54,
 			spd: 45,
-			spe: 74
+			spe: 74,
 		},
 		abilities: {
 			0: "Aftermath",
 			H: "Damp",
-			S: "Storm Drain"
+			S: "Storm Drain",
 		},
 		heightm: 0.7,
 		weightkg: 10.9,
 		color: "Pink",
 		evos: [
-			"Gynuke"
+			"Gynuke",
 		],
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
-		gen: 8
+		gen: 8,
 	},
 	gynuke: {
 		num: 69339,
 		name: "Gynuke",
 		types: [
 			"Water",
-			"Fire"
+			"Fire",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 79,
@@ -28704,12 +28704,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 94,
 			spd: 65,
-			spe: 124
+			spe: 124,
 		},
 		abilities: {
 			0: "Aftermath",
 			H: "Damp",
-			S: "Storm Drain"
+			S: "Storm Drain",
 		},
 		heightm: 2.3,
 		weightkg: 84.3,
@@ -28718,15 +28718,15 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "useItem",
 		evoItem: "Fire Stone",
 		eggGroups: [
-			"Water 1"
+			"Water 1",
 		],
-		gen: 8
+		gen: 8,
 	},
 	rainglock: {
 		num: 69340,
 		name: "Rainglock",
 		types: [
-			"Water"
+			"Water",
 		],
 		gender: "N",
 		baseStats: {
@@ -28735,31 +28735,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 140,
 			spd: 70,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Rain Dish",
 			H: "Sniper",
-			S: "Mega Launcher"
+			S: "Mega Launcher",
 		},
 		heightm: 0.5,
 		weightkg: 0.7,
 		color: "Blue",
 		eggGroups: [
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	beatmarine: {
 		num: 69341,
 		name: "Beatmarine",
 		types: [
 			"Water",
-			"Electric"
+			"Electric",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -28767,35 +28767,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 30,
 			spd: 40,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Liquid Voice",
 			1: "Storm Drain",
 			H: "Galvanize",
-			S: "Water Bubble"
+			S: "Water Bubble",
 		},
 		heightm: 0.5,
 		weightkg: 32.5,
 		color: "Yellow",
 		evos: [
-			"Substarr"
+			"Substarr",
 		],
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	substarr: {
 		num: 69342,
 		name: "Substarr",
 		types: [
 			"Water",
-			"Electric"
+			"Electric",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 120,
@@ -28803,13 +28803,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 65,
 			spd: 70,
-			spe: 80
+			spe: 80,
 		},
 		abilities: {
 			0: "Liquid Voice",
 			1: "Storm Drain",
 			H: "Galvanize",
-			S: "Water Bubble"
+			S: "Water Bubble",
 		},
 		heightm: 1.7,
 		weightkg: 81.5,
@@ -28817,20 +28817,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Beatmarine",
 		evoLevel: 27,
 		eggGroups: [
-			"Water 2"
+			"Water 2",
 		],
-		gen: 8
+		gen: 8,
 	},
 	hofucno: {
 		num: 69343,
 		name: "Hofucno",
 		types: [
 			"Water",
-			"Flying"
+			"Flying",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -28838,31 +28838,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 95,
 			spa: 90,
 			spd: 110,
-			spe: 115
+			spe: 115,
 		},
 		abilities: {
 			0: "Shadow Tag",
 			H: "Aftermath",
-			S: "Soundproof"
+			S: "Soundproof",
 		},
 		heightm: 0.4,
 		weightkg: 1.8,
 		color: "Yellow",
 		eggGroups: [
 			"Water 2",
-			"Flying"
+			"Flying",
 		],
-		gen: 8
+		gen: 8,
 	},
 	hornigiri: {
 		num: 69344,
 		name: "Hornigiri",
 		types: [
-			"Ice"
+			"Ice",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 50,
@@ -28870,35 +28870,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 30,
 			spd: 50,
-			spe: 65
+			spe: 65,
 		},
 		abilities: {
 			0: "Ice Body",
 			1: "Clear Body",
 			H: "Infiltrator",
-			S: "Friend Guard"
+			S: "Friend Guard",
 		},
 		heightm: 0.6,
 		weightkg: 12,
 		color: "White",
 		evos: [
-			"Hornicier"
+			"Hornicier",
 		],
 		eggGroups: [
 			"Mineral",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	hornicier: {
 		num: 69345,
 		name: "Hornicier",
 		types: [
-			"Ice"
+			"Ice",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 70,
@@ -28906,13 +28906,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 40,
 			spd: 75,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Ice Body",
 			1: "Clear Body",
 			H: "Infiltrator",
-			S: "Friend Guard"
+			S: "Friend Guard",
 		},
 		heightm: 1.1,
 		weightkg: 31.7,
@@ -28920,24 +28920,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Hornigiri",
 		evoLevel: 28,
 		evos: [
-			"Hornititan"
+			"Hornititan",
 		],
 		eggGroups: [
 			"Mineral",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	hornititan: {
 		num: 69346,
 		name: "Hornititan",
 		types: [
 			"Ice",
-			"Ground"
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.25,
-			F: 0.75
+			F: 0.75,
 		},
 		baseStats: {
 			hp: 90,
@@ -28945,13 +28945,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 130,
 			spa: 45,
 			spd: 100,
-			spe: 55
+			spe: 55,
 		},
 		abilities: {
 			0: "Refrigerate",
 			1: "Filter",
 			H: "Infiltrator",
-			S: "Friend Guard"
+			S: "Friend Guard",
 		},
 		heightm: 2.4,
 		weightkg: 250.5,
@@ -28960,19 +28960,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 43,
 		eggGroups: [
 			"Mineral",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	preasu: {
 		num: 69347,
 		name: "Preasu",
 		types: [
-			"Electric"
+			"Electric",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 65,
@@ -28980,35 +28980,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 55,
 			spa: 50,
 			spd: 60,
-			spe: 47
+			spe: 47,
 		},
 		abilities: {
 			0: "Static",
 			1: "Cursed Body",
 			H: "Analytic",
-			S: "Wait For It"
+			S: "Wait For It",
 		},
 		heightm: 1,
 		weightkg: 29.5,
 		color: "Yellow",
 		evos: [
-			"Undastand"
+			"Undastand",
 		],
 		eggGroups: [
 			"Monster",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	undastand: {
 		num: 69348,
 		name: "Undastand",
 		types: [
-			"Electric"
+			"Electric",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 95,
@@ -29016,13 +29016,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 110,
 			spd: 79,
-			spe: 74
+			spe: 74,
 		},
 		abilities: {
 			0: "Static",
 			1: "Cursed Body",
 			H: "Analytic",
-			S: "Wait For It"
+			S: "Wait For It",
 		},
 		heightm: 1.7,
 		weightkg: 80,
@@ -29031,19 +29031,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 34,
 		eggGroups: [
 			"Monster",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	warney: {
 		num: 69349,
 		name: "Warney",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 75,
@@ -29051,34 +29051,34 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 60,
 			spd: 60,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Damp",
 			1: "Intimidate",
 			H: "Rattled",
-			S: "Oblivious"
+			S: "Oblivious",
 		},
 		heightm: 0.6,
 		weightkg: 25.5,
 		color: "Gray",
 		evos: [
-			"Banageddon"
+			"Banageddon",
 		],
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	banageddon: {
 		num: 69350,
 		name: "Banageddon",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 90,
@@ -29086,13 +29086,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 70,
 			spd: 80,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Admin Abuse",
 			1: "Intimidate",
 			H: "Mold Breaker",
-			S: "Oblivious"
+			S: "Oblivious",
 		},
 		heightm: 2,
 		weightkg: 300,
@@ -29100,19 +29100,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Warney",
 		evoLevel: 40,
 		eggGroups: [
-			"Monster"
+			"Monster",
 		],
-		gen: 8
+		gen: 8,
 	},
 	acufront: {
 		num: 69351,
 		name: "Acufront",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 100,
@@ -29120,30 +29120,30 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 110,
 			spd: 95,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Forecast"
+			0: "Forecast",
 		},
 		heightm: 0.6,
 		weightkg: 1.6,
 		color: "White",
 		eggGroups: [
 			"Amorphous",
-			"Fairy"
+			"Fairy",
 		],
 		otherFormes: [
 			"Acufront-F",
 			"Acufront-W",
-			"Acufront-I"
+			"Acufront-I",
 		],
 		formeOrder: [
 			"Acufront",
 			"Acufront-F",
 			"Acufront-W",
-			"Acufront-I"
+			"Acufront-I",
 		],
-		gen: 8
+		gen: 8,
 	},
 	acufrontf: {
 		num: 69351,
@@ -29151,7 +29151,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Acufront",
 		forme: "F",
 		types: [
-			"Fire"
+			"Fire",
 		],
 		baseStats: {
 			hp: 100,
@@ -29159,21 +29159,21 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 110,
 			spd: 95,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Forecast"
+			0: "Forecast",
 		},
 		heightm: 0.6,
 		weightkg: 1.6,
 		color: "Yellow",
 		eggGroups: [
 			"Amorphous",
-			"Fairy"
+			"Fairy",
 		],
 		requiredAbility: "Forecast",
 		battleOnly: "Acufront",
-		gen: 8
+		gen: 8,
 	},
 	acufrontw: {
 		num: 69351,
@@ -29181,7 +29181,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Acufront",
 		forme: "W",
 		types: [
-			"Water"
+			"Water",
 		],
 		baseStats: {
 			hp: 100,
@@ -29189,21 +29189,21 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 110,
 			spd: 95,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Forecast"
+			0: "Forecast",
 		},
 		heightm: 0.6,
 		weightkg: 1.6,
 		color: "Gray",
 		eggGroups: [
 			"Amorphous",
-			"Fairy"
+			"Fairy",
 		],
 		requiredAbility: "Forecast",
 		battleOnly: "Acufront",
-		gen: 8
+		gen: 8,
 	},
 	acufronti: {
 		num: 69351,
@@ -29211,7 +29211,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		baseSpecies: "Acufront",
 		forme: "I",
 		types: [
-			"Ice"
+			"Ice",
 		],
 		baseStats: {
 			hp: 100,
@@ -29219,32 +29219,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 110,
 			spd: 95,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
-			0: "Forecast"
+			0: "Forecast",
 		},
 		heightm: 0.6,
 		weightkg: 1.6,
 		color: "Blue",
 		eggGroups: [
 			"Amorphous",
-			"Fairy"
+			"Fairy",
 		],
 		requiredAbility: "Forecast",
 		battleOnly: "Acufront",
-		gen: 8
+		gen: 8,
 	},
 	militant: {
 		num: 69352,
 		name: "Militant",
 		types: [
 			"Bug",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 20,
@@ -29252,31 +29252,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 15,
 			spa: 10,
 			spd: 15,
-			spe: 130
+			spe: 130,
 		},
 		abilities: {
 			0: "Steelworker",
 			H: "Infiltrator",
-			S: "Strong Jaw"
+			S: "Strong Jaw",
 		},
 		heightm: 0.1,
 		weightkg: 0.1,
 		color: "Gray",
 		eggGroups: [
-			"Bug"
+			"Bug",
 		],
-		gen: 8
+		gen: 8,
 	},
 	shiggydig: {
 		num: 69353,
 		name: "Shiggydig",
 		types: [
 			"Normal",
-			"Ground"
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 95,
@@ -29284,32 +29284,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 130,
 			spa: 50,
 			spd: 85,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Damp",
 			1: "Limber",
 			H: "Defiant",
-			S: "Inner Focus"
+			S: "Inner Focus",
 		},
 		heightm: 1,
 		weightkg: 50,
 		color: "Yellow",
 		eggGroups: [
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	signot: {
 		num: 69354,
 		name: "Signot",
 		types: [
 			"Ground",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 65,
@@ -29317,35 +29317,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 40,
 			spd: 60,
-			spe: 25
+			spe: 25,
 		},
 		abilities: {
 			0: "Dry Skin",
 			H: "Arena Trap",
-			S: "Sand Rush"
+			S: "Sand Rush",
 		},
 		heightm: 2,
 		weightkg: 6.9,
 		color: "Pink",
 		evos: [
-			"Reagain"
+			"Reagain",
 		],
 		eggGroups: [
 			"Bug",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	reagain: {
 		num: 69355,
 		name: "Reagain",
 		types: [
 			"Ground",
-			"Dark"
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 100,
@@ -29353,13 +29353,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 110,
 			spa: 80,
 			spd: 90,
-			spe: 45
+			spe: 45,
 		},
 		abilities: {
 			0: "Dry Skin",
 			1: "Shell Armor",
 			H: "Arena Trap",
-			S: "Sand Rush"
+			S: "Sand Rush",
 		},
 		heightm: 3.5,
 		weightkg: 65,
@@ -29368,16 +29368,16 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 30,
 		eggGroups: [
 			"Bug",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ormite: {
 		num: 69356,
 		name: "Ormite",
 		types: [
 			"Rock",
-			"Electric"
+			"Electric",
 		],
 		gender: "N",
 		baseStats: {
@@ -29386,32 +29386,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 45,
 			spa: 85,
 			spd: 70,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Jewelry",
 			1: "Lightning Rod",
 			H: "Protean",
-			S: "Prism Armor"
+			S: "Prism Armor",
 		},
 		heightm: 0.3,
 		weightkg: 11.3,
 		color: "Blue",
 		evos: [
-			"Viristal"
+			"Viristal",
 		],
 		eggGroups: [
 			"Mineral",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	viristal: {
 		num: 69357,
 		name: "Viristal",
 		types: [
 			"Rock",
-			"Electric"
+			"Electric",
 		],
 		gender: "N",
 		baseStats: {
@@ -29420,13 +29420,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 75,
 			spa: 136,
 			spd: 100,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Jewelry",
 			1: "Lightning Rod",
 			H: "Protean",
-			S: "Prism Armor"
+			S: "Prism Armor",
 		},
 		heightm: 1.6,
 		weightkg: 102,
@@ -29436,20 +29436,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Thunder Stone",
 		eggGroups: [
 			"Mineral",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	rolango: {
 		num: 69358,
 		name: "Rolango",
 		types: [
 			"Dragon",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 72,
@@ -29457,35 +29457,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 72,
 			spa: 40,
 			spd: 60,
-			spe: 18
+			spe: 18,
 		},
 		abilities: {
 			0: "Trace",
 			H: "Natural Cure",
-			S: "Multiscale"
+			S: "Multiscale",
 		},
 		heightm: 0.3,
 		weightkg: 5.5,
 		color: "Green",
 		evos: [
-			"Dreameme"
+			"Dreameme",
 		],
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	dreameme: {
 		num: 69359,
 		name: "Dreameme",
 		types: [
 			"Dragon",
-			"Fairy"
+			"Fairy",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 102,
@@ -29493,12 +29493,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 90,
 			spd: 100,
-			spe: 32
+			spe: 32,
 		},
 		abilities: {
 			0: "Trace",
 			H: "Natural Cure",
-			S: "Multiscale"
+			S: "Multiscale",
 		},
 		heightm: 1.2,
 		weightkg: 65.5,
@@ -29507,20 +29507,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 28,
 		eggGroups: [
 			"Field",
-			"Fairy"
+			"Fairy",
 		],
-		gen: 8
+		gen: 8,
 	},
 	pearchie: {
 		num: 69360,
 		name: "Pearchie",
 		types: [
 			"Grass",
-			"Normal"
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 111,
@@ -29528,33 +29528,33 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 79,
 			spa: 66,
 			spd: 81,
-			spe: 102
+			spe: 102,
 		},
 		abilities: {
 			0: "Moody",
 			1: "Reckless",
 			H: "Oblivious",
-			S: "Unaware"
+			S: "Unaware",
 		},
 		heightm: 2.1,
 		weightkg: 145,
 		color: "Green",
 		eggGroups: [
 			"Grass",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	tarditank: {
 		num: 69361,
 		name: "Tarditank",
 		types: [
 			"Bug",
-			"Water"
+			"Water",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 110,
@@ -29562,28 +29562,28 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 200,
 			spa: 5,
 			spd: 200,
-			spe: 5
+			spe: 5,
 		},
 		abilities: {
 			0: "Sturdy",
 			H: "Anticipation",
-			S: "Friend Guard"
+			S: "Friend Guard",
 		},
 		heightm: 0.2,
 		weightkg: 0.2,
 		color: "Green",
 		eggGroups: [
 			"Bug",
-			"Water 1"
+			"Water 1",
 		],
-		gen: 8
+		gen: 8,
 	},
 	iplora: {
 		num: 69362,
 		name: "Iplora",
 		types: [
 			"Bug",
-			"Steel"
+			"Steel",
 		],
 		gender: "N",
 		baseStats: {
@@ -29592,30 +29592,30 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 45,
 			spa: 55,
 			spd: 45,
-			spe: 5
+			spe: 5,
 		},
 		abilities: {
 			0: "Slow Start",
 			H: "Stall",
-			S: "Truant"
+			S: "Truant",
 		},
 		heightm: 0.6,
 		weightkg: 17.5,
 		color: "Blue",
 		evos: [
-			"Chromox"
+			"Chromox",
 		],
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	chromox: {
 		num: 69363,
 		name: "Chromox",
 		types: [
 			"Fire",
-			"Steel"
+			"Steel",
 		],
 		gender: "N",
 		baseStats: {
@@ -29624,12 +29624,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 115,
 			spd: 60,
-			spe: 145
+			spe: 145,
 		},
 		abilities: {
 			0: "Speed Boost",
 			H: "Download",
-			S: "Surge Surfer"
+			S: "Surge Surfer",
 		},
 		heightm: 1.6,
 		weightkg: 102,
@@ -29638,20 +29638,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "useItem",
 		evoItem: "Up-Grade",
 		eggGroups: [
-			"Mineral"
+			"Mineral",
 		],
-		gen: 8
+		gen: 8,
 	},
 	pitayen: {
 		num: 69364,
 		name: "Pitayen",
 		types: [
 			"Grass",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -29659,36 +29659,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 40,
 			spd: 50,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Tough Claws",
 			1: "Rough Skin",
 			H: "Chlorophyll",
-			S: "Flower Gift"
+			S: "Flower Gift",
 		},
 		heightm: 0.7,
 		weightkg: 6.9,
 		color: "Pink",
 		evos: [
-			"Dragaya"
+			"Dragaya",
 		],
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	dragaya: {
 		num: 69365,
 		name: "Dragaya",
 		types: [
 			"Grass",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 70,
@@ -29696,13 +29696,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 60,
 			spd: 70,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Tough Claws",
 			1: "Rough Skin",
 			H: "Chlorophyll",
-			S: "Flower Gift"
+			S: "Flower Gift",
 		},
 		heightm: 1.5,
 		weightkg: 95,
@@ -29710,24 +29710,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Pitayen",
 		evoLevel: 30,
 		evos: [
-			"Frutagon"
+			"Frutagon",
 		],
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	frutagon: {
 		num: 69366,
 		name: "Frutagon",
 		types: [
 			"Grass",
-			"Dragon"
+			"Dragon",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -29735,13 +29735,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 100,
 			spd: 80,
-			spe: 90
+			spe: 90,
 		},
 		abilities: {
 			0: "Tough Claws",
 			1: "Rough Skin",
 			H: "Chlorophyll",
-			S: "Flower Gift"
+			S: "Flower Gift",
 		},
 		heightm: 2,
 		weightkg: 118,
@@ -29750,16 +29750,16 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 48,
 		eggGroups: [
 			"Monster",
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	biteki: {
 		num: 69367,
 		name: "Biteki",
 		types: [
 			"Ice",
-			"Psychic"
+			"Psychic",
 		],
 		gender: "N",
 		baseStats: {
@@ -29768,33 +29768,33 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 125,
 			spd: 125,
-			spe: 95
+			spe: 95,
 		},
 		abilities: {
 			0: "Soundproof",
 			1: "Filter",
 			H: "Gradient",
-			S: "Snow Cloak"
+			S: "Snow Cloak",
 		},
 		heightm: 1.3,
 		weightkg: 25.2,
 		color: "Pink",
 		eggGroups: [
 			"Mineral",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	sesquatch: {
 		num: 69368,
 		name: "Sesquatch",
 		types: [
 			"Normal",
-			"Ghost"
+			"Ghost",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 95,
@@ -29802,31 +29802,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 105,
 			spa: 55,
 			spd: 95,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Suddenly",
 			H: "Snow Cloak",
-			S: "Mummy"
+			S: "Mummy",
 		},
 		heightm: 2.4,
 		weightkg: 80,
 		color: "White",
 		eggGroups: [
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	fireshi: {
 		num: 69369,
 		name: "Fireshi",
 		types: [
 			"Fire",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 30,
@@ -29834,36 +29834,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 50,
 			spa: 80,
 			spd: 60,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Flame Body",
 			1: "Levitate",
 			H: "White Smoke",
-			S: "Stench"
+			S: "Stench",
 		},
 		heightm: 0.3,
 		weightkg: 0.1,
 		color: "Yellow",
 		evos: [
-			"Fireshitwi"
+			"Fireshitwi",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	fireshitwi: {
 		num: 69370,
 		name: "Fireshitwi",
 		types: [
 			"Fire",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -29871,13 +29871,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 70,
 			spa: 100,
 			spd: 80,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Flame Body",
 			1: "Levitate",
 			H: "White Smoke",
-			S: "Stench"
+			S: "Stench",
 		},
 		heightm: 0.6,
 		weightkg: 0.2,
@@ -29885,24 +29885,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Fireshi",
 		evoLevel: 30,
 		evos: [
-			"Fireshitre"
+			"Fireshitre",
 		],
 		eggGroups: [
 			"Amorphous",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	fireshitre: {
 		num: 69371,
 		name: "Fireshitre",
 		types: [
 			"Fire",
-			"Poison"
+			"Poison",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 80,
@@ -29910,13 +29910,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 95,
 			spa: 120,
 			spd: 105,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Flame Body",
 			1: "Levitate",
 			H: "White Smoke",
-			S: "Stench"
+			S: "Stench",
 		},
 		heightm: 0.9,
 		weightkg: 0.3,
@@ -29925,16 +29925,16 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 48,
 		eggGroups: [
 			"Amorphous",
-			"Field"
+			"Field",
 		],
-		gen: 8
+		gen: 8,
 	},
 	slugbud: {
 		num: 69372,
 		name: "Slugbud",
 		types: [
 			"Water",
-			"Poison"
+			"Poison",
 		],
 		gender: "F",
 		baseStats: {
@@ -29943,31 +29943,31 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 65,
 			spa: 35,
 			spd: 45,
-			spe: 20
+			spe: 20,
 		},
 		abilities: {
 			0: "Hydration",
 			1: "Sap Sipper",
 			H: "Rain Dish",
-			S: "Gooey"
+			S: "Gooey",
 		},
 		heightm: 0.4,
 		weightkg: 6,
 		color: "Green",
 		evos: [
-			"Slughug"
+			"Slughug",
 		],
 		eggGroups: [
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	slughug: {
 		num: 69373,
 		name: "Slughug",
 		types: [
 			"Water",
-			"Poison"
+			"Poison",
 		],
 		gender: "F",
 		baseStats: {
@@ -29976,13 +29976,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 95,
 			spa: 50,
 			spd: 60,
-			spe: 35
+			spe: 35,
 		},
 		abilities: {
 			0: "Hydration",
 			1: "Sap Sipper",
 			H: "Rain Dish",
-			S: "Gooey"
+			S: "Gooey",
 		},
 		heightm: 0.9,
 		weightkg: 18,
@@ -29990,19 +29990,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Slugbud",
 		evoLevel: 30,
 		evos: [
-			"Slugfugg"
+			"Slugfugg",
 		],
 		eggGroups: [
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	slugfugg: {
 		num: 69374,
 		name: "Slugfugg",
 		types: [
 			"Water",
-			"Poison"
+			"Poison",
 		],
 		gender: "M",
 		baseStats: {
@@ -30011,13 +30011,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 135,
 			spa: 75,
 			spd: 95,
-			spe: 40
+			spe: 40,
 		},
 		abilities: {
 			0: "Hydration",
 			1: "Sap Sipper",
 			H: "Rain Dish",
-			S: "Gooey"
+			S: "Gooey",
 		},
 		heightm: 2,
 		weightkg: 150.5,
@@ -30025,20 +30025,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Slughug",
 		evoLevel: 48,
 		eggGroups: [
-			"Dragon"
+			"Dragon",
 		],
-		gen: 8
+		gen: 8,
 	},
 	skeletroll: {
 		num: 69375,
 		name: "Skeletroll",
 		types: [
 			"Ground",
-			"Ghost"
+			"Ghost",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 50,
@@ -30046,36 +30046,36 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 80,
 			spa: 60,
 			spd: 80,
-			spe: 30
+			spe: 30,
 		},
 		abilities: {
 			0: "Battle Armor",
 			H: "Shell Armor",
-			S: "Sturdy"
+			S: "Sturdy",
 		},
 		heightm: 0.7,
 		weightkg: 7.7,
 		color: "White",
 		evos: [
 			"Spookscare",
-			"Goryannus"
+			"Goryannus",
 		],
 		eggGroups: [
 			"Mineral",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	spookscare: {
 		num: 69376,
 		name: "Spookscare",
 		types: [
 			"Ground",
-			"Ghost"
+			"Ghost",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 105,
@@ -30083,12 +30083,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 120,
 			spa: 90,
 			spd: 130,
-			spe: 50
+			spe: 50,
 		},
 		abilities: {
 			0: "Pressure",
 			H: "Cursed Body",
-			S: "Magician"
+			S: "Magician",
 		},
 		heightm: 1.4,
 		weightkg: 15.3,
@@ -30097,20 +30097,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoType: "levelFriendship",
 		eggGroups: [
 			"Mineral",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	goryannus: {
 		num: 69377,
 		name: "Goryannus",
 		types: [
 			"Ground",
-			"Ghost"
+			"Ghost",
 		],
 		genderRatio: {
 			M: 0.5,
-			F: 0.5
+			F: 0.5,
 		},
 		baseStats: {
 			hp: 90,
@@ -30118,12 +30118,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 35,
 			spd: 85,
-			spe: 105
+			spe: 105,
 		},
 		abilities: {
 			0: "Sheer Force",
 			H: "Mummy",
-			S: "Unnerve"
+			S: "Unnerve",
 		},
 		heightm: 1.8,
 		weightkg: 30,
@@ -30133,15 +30133,15 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoItem: "Moon Stone",
 		eggGroups: [
 			"Mineral",
-			"Amorphous"
+			"Amorphous",
 		],
-		gen: 8
+		gen: 8,
 	},
 	lankong: {
 		num: 69378,
 		name: "Lankong",
 		types: [
-			"Normal"
+			"Normal",
 		],
 		gender: "M",
 		baseStats: {
@@ -30150,32 +30150,32 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 40,
 			spa: 35,
 			spd: 40,
-			spe: 60
+			spe: 60,
 		},
 		abilities: {
 			0: "Long Reach",
 			1: "Own Tempo",
 			H: "Frisk",
-			S: "Scrappy"
+			S: "Scrappy",
 		},
 		heightm: 0.9,
 		weightkg: 19,
 		color: "Brown",
 		evos: [
-			"Ballankey"
+			"Ballankey",
 		],
 		eggGroups: [
 			"Field",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	ballankey: {
 		num: 69379,
 		name: "Ballankey",
 		types: [
 			"Normal",
-			"Flying"
+			"Flying",
 		],
 		gender: "M",
 		baseStats: {
@@ -30184,13 +30184,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 60,
 			spa: 60,
 			spd: 60,
-			spe: 70
+			spe: 70,
 		},
 		abilities: {
 			0: "Long Reach",
 			1: "Own Tempo",
 			H: "Frisk",
-			S: "Scrappy"
+			S: "Scrappy",
 		},
 		heightm: 1.2,
 		weightkg: 32.5,
@@ -30198,20 +30198,20 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		prevo: "Lankong",
 		evoLevel: 50,
 		evos: [
-			"Funnedong"
+			"Funnedong",
 		],
 		eggGroups: [
 			"Field",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	funnedong: {
 		num: 69380,
 		name: "Funnedong",
 		types: [
 			"Normal",
-			"Fighting"
+			"Fighting",
 		],
 		gender: "M",
 		baseStats: {
@@ -30220,13 +30220,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 90,
 			spa: 70,
 			spd: 90,
-			spe: 120
+			spe: 120,
 		},
 		abilities: {
 			0: "Long Reach",
 			1: "Own Tempo",
 			H: "Frisk",
-			S: "Scrappy"
+			S: "Scrappy",
 		},
 		heightm: 1.7,
 		weightkg: 90.5,
@@ -30235,16 +30235,16 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoLevel: 65,
 		eggGroups: [
 			"Field",
-			"Human-Like"
+			"Human-Like",
 		],
-		gen: 8
+		gen: 8,
 	},
 	narwhiz: {
 		num: 69381,
 		name: "Narwhiz",
 		types: [
 			"Water",
-			"Fairy"
+			"Fairy",
 		],
 		gender: "N",
 		baseStats: {
@@ -30253,27 +30253,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 121,
 			spa: 86,
 			spd: 121,
-			spe: 121
+			spe: 121,
 		},
 		abilities: {
 			0: "Magician",
 			H: "Healer",
-			S: "Magic Bounce"
+			S: "Magic Bounce",
 		},
 		heightm: 6,
 		weightkg: 132,
 		color: "Blue",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	niterpent: {
 		num: 69382,
 		name: "Niterpent",
 		types: [
 			"Electric",
-			"Fire"
+			"Fire",
 		],
 		gender: "N",
 		baseStats: {
@@ -30282,27 +30282,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 85,
 			spa: 141,
 			spd: 71,
-			spe: 101
+			spe: 101,
 		},
 		abilities: {
 			0: "Technician",
 			H: "Turboblaze",
-			S: "Teravolt"
+			S: "Teravolt",
 		},
 		heightm: 5.8,
 		weightkg: 180,
 		color: "Yellow",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	griffawork: {
 		num: 69383,
 		name: "Griffawork",
 		types: [
 			"Psychic",
-			"Flying"
+			"Flying",
 		],
 		gender: "N",
 		baseStats: {
@@ -30311,27 +30311,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 95,
 			spa: 160,
 			spd: 125,
-			spe: 105
+			spe: 105,
 		},
 		abilities: {
 			0: "Natural Cure",
 			H: "Marvel Scale",
-			S: "Beast Boost"
+			S: "Beast Boost",
 		},
 		heightm: 3.4,
 		weightkg: 216,
 		color: "Blue",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	boarnograf: {
 		num: 69384,
 		name: "Boarnograf",
 		types: [
 			"Dark",
-			"Ground"
+			"Ground",
 		],
 		gender: "N",
 		baseStats: {
@@ -30340,26 +30340,26 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 125,
 			spa: 85,
 			spd: 95,
-			spe: 105
+			spe: 105,
 		},
 		abilities: {
 			0: "Guts",
 			H: "Mold Breaker",
-			S: "Beast Boost"
+			S: "Beast Boost",
 		},
 		heightm: 3.5,
 		weightkg: 454,
 		color: "Red",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	admoot: {
 		num: 69385,
 		name: "Admoot",
 		types: [
-			"Fairy"
+			"Fairy",
 		],
 		gender: "M",
 		baseStats: {
@@ -30368,27 +30368,27 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 100,
 			spd: 100,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
 			0: "Admin Abuse",
 			H: "Berserk",
-			S: "Serene Grace"
+			S: "Serene Grace",
 		},
 		heightm: 1.1,
 		weightkg: 6,
 		color: "White",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	tentaquil: {
 		num: 69386,
 		name: "Tentaquil",
 		types: [
 			"Bug",
-			"Psychic"
+			"Psychic",
 		],
 		gender: "N",
 		baseStats: {
@@ -30397,24 +30397,24 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 100,
 			spa: 100,
 			spd: 100,
-			spe: 100
+			spe: 100,
 		},
 		abilities: {
-			0: "Immunity"
+			0: "Immunity",
 		},
 		heightm: 0.7,
 		weightkg: 51.9,
 		color: "Blue",
 		eggGroups: [
-			"Undiscovered"
+			"Undiscovered",
 		],
-		gen: 8
+		gen: 8,
 	},
 	megablobbos: {
 		num: 69387,
 		name: "Mega Blobbos",
 		types: [
-			"???"
+			"???",
 		],
 		gender: "N",
 		baseStats: {
@@ -30423,13 +30423,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 			def: 1,
 			spa: 1,
 			spd: 1,
-			spe: 1
+			spe: 1,
 		},
 		abilities: {
 			0: "Truant",
 			1: "Truant",
 			H: "Truant",
-			S: "Truant"
+			S: "Truant",
 		},
 		heightm: 9999,
 		weightkg: 9999,
@@ -30438,8 +30438,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData; } = {
 		evoCondition: "Hack",
 		evoType: "other",
 		eggGroups: [
-			"Ditto"
+			"Ditto",
 		],
-		gen: 8
+		gen: 8,
 	},
 };

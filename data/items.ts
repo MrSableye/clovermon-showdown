@@ -7132,86 +7132,86 @@ export const Items: {[itemid: string]: ItemData} = {
 	suedeshoes: {
 		name: "Suede Shoes",
 		spritenum: 746,
-    onModifySpe(spe, pokemon) {
-      if (pokemon.baseSpecies.baseSpecies === 'Pretzely') {
-        return this.chainModify(2);
-      }
-    },
-    itemUser: ["Pretzely"],
-  },
-  bigfaggot: {
+		onModifySpe(spe, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Pretzely') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Pretzely"],
+	},
+	bigfaggot: {
 		name: "Big Faggot",
 		spritenum: 741,
-    onModifySpAPriority: 1,
-    onModifySpA(spa, pokemon) {
-      if (pokemon.baseSpecies.baseSpecies === 'Flameboyan') {
-        return this.chainModify(2);
-      }
-    },
-    itemUser: ["Flameboyan"],
-  },
-  baconstrip: {
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Flameboyan') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Flameboyan"],
+	},
+	baconstrip: {
 		name: "Bacon Strip",
 		spritenum: 749,
-    onModifySpDPriority: 2,
-    onModifySpD(spd, pokemon) {
-      if (pokemon.baseSpecies.baseSpecies === 'Urswine') {
-        return this.chainModify(2);
-      }
-    },
-    itemUser: ["Urswine"],
-  },
-  katana: {
+		onModifySpDPriority: 2,
+		onModifySpD(spd, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Urswine') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Urswine"],
+	},
+	katana: {
 		name: "Katana",
 		spritenum: 743,
-    onBasePowerPriority: 15,
-    onBasePower(basePower, user, target, move) {
-      if (move.type === 'Steel') {
-        return this.chainModify([0x1333, 0x1000]);
-      }
-    },
-  },
-  cutebow: {
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Steel') {
+				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
+	},
+	cutebow: {
 		name: "Cute Bow",
 		spritenum: 742,
-    onBasePowerPriority: 15,
-    onBasePower(basePower, user, target, move) {
-      if (move.type === 'Fairy') {
-        return this.chainModify([0x1333, 0x1000]);
-      }
-    },
-  },
-  bible: {
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Fairy') {
+				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
+	},
+	bible: {
 		name: "Bible",
 		spritenum: 748,
-    onModifyCritRatio(critRatio, pokemon) {
-      if (pokemon.baseSpecies.baseSpecies === 'Caroline') {
-        return critRatio + 2;
-      }
-    },
-    itemUser: ["Caroline"],
-  },
-  taco: {
+		onModifyCritRatio(critRatio, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Caroline') {
+				return critRatio + 2;
+			}
+		},
+		itemUser: ["Caroline"],
+	},
+	taco: {
 		name: "Taco",
 		spritenum: 747,
-    onUpdate(pokemon) {
-      if (pokemon.hp <= pokemon.maxhp / 2) {
-        if (this.runEvent('TryHeal', pokemon) && pokemon.useItem()) {
-          this.heal(50);
-        }
-      }
-    },
-  },
-  thiccbone: {
+		onUpdate(pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 2) {
+				if (this.runEvent('TryHeal', pokemon) && pokemon.useItem()) {
+					this.heal(50);
+				}
+			}
+		},
+	},
+	thiccbone: {
 		name: "Thicc Bone",
 		spritenum: 379,
-    onModifyAtkPriority: 1,
-    onModifyAtk(atk, pokemon) {
-      if (pokemon.baseSpecies.baseSpecies === 'Masdawg' || pokemon.baseSpecies.baseSpecies === 'Pasdawg') {
-        return this.chainModify(2);
-      }
-    },
-    itemUser: ["Masdawg", "Pasdawg"],
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Masdawg' || pokemon.baseSpecies.baseSpecies === 'Pasdawg') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Masdawg", "Pasdawg"],
 	},
 	manifesto: {
 		name: "Manifesto",
@@ -7222,7 +7222,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				return this.chainModify(1.5);
 			}
 		},
-    itemUser: ["Walruskie"],
+		itemUser: ["Walruskie"],
 	},
 	piratesjug: {
 		name: "Pirate's Jug",
@@ -7233,7 +7233,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				return this.chainModify([2, 1]);
 			}
 		},
-    itemUser: ["Octai"],
+		itemUser: ["Octai"],
 	},
 	blobbosinite: {
 		name: "Blobbosinite",
@@ -7258,6 +7258,6 @@ export const Items: {[itemid: string]: ItemData} = {
 				this.hint('Blobbosinite can only be used by Blobbos... idiot...');
 			}
 		},
-    itemUser: ["Blobbos"],
-	}
+		itemUser: ["Blobbos"],
+	},
 };

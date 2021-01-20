@@ -399,7 +399,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	flowergift: {
 		name: "Flower Gift",
 		desc: "If Sunny Day is active, the Attack and Special Defense of it and its allies are multiplied by 1.5. If this Pokemon is holding Utility Umbrella, the Attack and Special Defense stats of it and its allies are not boosted. If an ally is holding Utility Umbrella, they will not receive the Attack and Special Defense boosts. If this Pokemon is a Cherim and is not holding Utility Umrella, it transforms into its Sunshine Form",
-    shortDesc: "If Sunny Day is active, it and allies' Attack and Sp. Def are 1.5x and if it is a Cherrim, it transforms into its Sunshine Form.",
+		shortDesc: "If Sunny Day is active, it and allies' Attack and Sp. Def are 1.5x and if it is a Cherrim, it transforms into its Sunshine Form.",
 		gen7: {
 			desc: "If this Pokemon is a Cherrim and Sunny Day is active, it changes to Sunshine Form and the Attack and Special Defense of it and its allies are multiplied by 1.5.",
 		},
@@ -1722,12 +1722,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Wait For It",
 		shortDesc: "Boosts all stats after 5 turns.",
 		start: "  [POKEMON] is asking you kindly to wait!",
-		end: "  [POKEMON]'s announcement came true!"
+		end: "  [POKEMON]'s announcement came true!",
 	},
 	gradient: {
 		name: "Gradient",
 		shortDesc: "Gains an extra type in battle based on the foe's color.",
-		desc: "Gains an extra type in battle based on the foe's color. Red = Fire, Blue = Water, Yellow = Electric, Green = Grass, Black = Dark, Brown = Ground, Purple = Poison, Gray = Steel, White = Flying, Pink = Fairy."
+		desc: "Gains an extra type in battle based on the foe's color. Red = Fire, Blue = Water, Yellow = Electric, Green = Grass, Black = Dark, Brown = Ground, Purple = Poison, Gray = Steel, White = Flying, Pink = Fairy.",
 	},
 	anyability: {
 		name: "Any Ability",
@@ -1757,17 +1757,17 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	bonezone: {
 		name: "Bone Zone",
 		shortDesc: "This Pokemon's Bone-based moves ignore immunities.",
-		start: "  [POKEMON] has entered the Bone Zone!"
+		start: "  [POKEMON] has entered the Bone Zone!",
 	},
 	degenerate: {
 		name: "Degenerate",
 		shortDesc: "This Pokemon's Normal-type moves become Dark type and have 1.2x power.",
 		desc: "This Pokemon's Normal-type moves become Dark-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
 	},
-  degradation: {
+	degradation: {
 		name: "Degradation",
-    shortDesc: "This Pokemon's Dark-type attacks are super-effective against Normal-types.",
-  },
+		shortDesc: "This Pokemon's Dark-type attacks are super-effective against Normal-types.",
+	},
 	flareheal: {
 		name: "Flare Heal",
 		shortDesc: "This Pokemon is healed by 1/8 of its max HP each turn when burned; no HP loss or reduction to the power of its physical moves.",
@@ -1800,10 +1800,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "When used, Room effects last 2 more turns.",
 		desc: "The duration of Inverse Room, Magic Room, Trick Room, and Wonder Room is increased by 2 turns if the effect is started by this Pokemon.",
 	},
-  pollution: {
+	pollution: {
 		name: "Pollution",
-    shortDesc: "This Pokemon's Poison-type attacks are super-effective against Water-types.",
-  },
+		shortDesc: "This Pokemon's Poison-type attacks are super-effective against Water-types.",
+	},
 	pozzed: {
 		name: "Pozzed",
 		shortDesc: "This Pokemon is immune to Poison-type moves and restores 1/4 of its maximum HP, rounded down, when hit by a Poison-type move.",
@@ -1819,7 +1819,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	suddenly: {
 		name: "Suddenly",
-    shortDesc: "This Pokemon's two-turn moves complete in one turn (except Sky Drop).",
+		shortDesc: "This Pokemon's two-turn moves complete in one turn (except Sky Drop).",
 	},
 	woke: {
 		name: "Woke",

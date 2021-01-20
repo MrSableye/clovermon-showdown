@@ -4788,14 +4788,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyMove(move, pokemon) {
 			if (['hammerarm', 'dragonhammer', 'woodhammer', 'icehammer', 'crabhammer', 'banhammer'].includes(move.id)) {
 				if (move.recoil) delete move.recoil;
-		  	if (move.self && move.self.boosts) {
+				if (move.self && move.self.boosts) {
 					this.debug('eliminating possible stat drops on the user');
 					Object.entries(move.self.boosts).forEach(([key, value]) => {
 						if (value && value < 0 && move?.self?.boosts) {
 							delete (move.self.boosts as any)[key];
 						}
 					});
-		  	}
+				}
 			}
 		},
 		rating: 4,
@@ -4863,14 +4863,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		rating: 4,
 	},
-  degradation: {
+	degradation: {
 		name: "Degradation",
 		onEffectiveness(typeMod, target, type, move) {
 		   if (move && type === 'Normal' && move.type === 'Dark') return 1;
 			 return typeMod;
 		},
 		rating: 3,
-  },
+	},
 	flareheal: {
 		name: "Flare Heal",
 		onModifyAtkPriority: 5,
@@ -4967,14 +4967,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "More Room",
 		rating: 2.5,
 	},
-  pollution: {
+	pollution: {
 		name: "Pollution",
 		onEffectiveness(typeMod, target, type, move) {
 		   if (move && type === 'Water' && move.type === 'Poison') return 1;
 			 return typeMod;
 		},
 		rating: 3,
-  },
+	},
 	pozzed: {
 		name: "Pozzed",
 		onTryHit(target, source, move) {
@@ -5024,12 +5024,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 	},
 	suddenly: {
-    name: "Suddenly",
+		name: "Suddenly",
 		onChargeMove(pokemon, target, move) {
-				this.debug('suddenly - remove charge turn for ' + move.id);
-				this.attrLastMove('[still]');
-				this.addMove('-anim', pokemon, move.name, target);
-				return false; // skip charge turn
+			this.debug('suddenly - remove charge turn for ' + move.id);
+			this.attrLastMove('[still]');
+			this.addMove('-anim', pokemon, move.name, target);
+			return false; // skip charge turn
 		},
 		rating: 4,
 	},
