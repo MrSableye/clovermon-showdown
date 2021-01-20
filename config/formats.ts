@@ -65,6 +65,13 @@ export const Formats: FormatList = [
 		banlist: ['Baton Pass'],
 	},
 	{
+		name: "[Gen 8 Clover Only] UU",
+		threads: [],
+		mod: 'gen8',
+		ruleset: ['[Gen 8 Clover Only] OU'],
+		banlist: ['OU'],
+	},
+	{
 		name: "[Gen 8 Clover Only] LC",
 		threads: [],
 		mod: 'gen8',
