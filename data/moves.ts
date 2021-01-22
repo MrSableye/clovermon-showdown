@@ -19638,12 +19638,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-sidestart', side, 'move: Sleazy Spores');
 			},
 			onSwitchIn(pokemon) {
-				if (!pokemon.runStatusImmunity('powder')) return;
 				if (pokemon.hasType('Grass')) {
 					this.add('-sideend', pokemon.side, 'move: Sleazy Spores', '[of] ' + pokemon);
 					pokemon.side.removeSideCondition('sleazyspores');
 					return;
 				}
+				if (!pokemon.runStatusImmunity('powder')) return;
 				if (pokemon.hasItem('heavydutyboots')) return;
 				this.add('-activate', pokemon, 'move: Sleazy Spores');
 				this.boost({spe: -1}, pokemon, this.effectData.source, this.dex.getActiveMove('sleazyspores'));
