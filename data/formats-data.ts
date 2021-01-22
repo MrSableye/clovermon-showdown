@@ -7289,7 +7289,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"volttackle",
 			"iciclespear",
 			"voltswitch",
-			"watershurkien",
+			"watershuriken",
 		],
 		randomBattleLevel: 84,
 	},
