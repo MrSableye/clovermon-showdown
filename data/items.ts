@@ -7299,8 +7299,14 @@ export const Items: {[itemid: string]: ItemData} = {
 										});
 										pokemon.addType('Steel');
 									} else {
-										this.add('-message', 'The Blobbosinite was delicious and Blobbos saved some for later!');
-										pokemon.setItem('Leftovers', undefined, this.effect);
+										if (this.randomChance(1, 2)) {
+											this.add('-message', "The Blobbosinite ruptured Blobbos's intestines... but turned it into a cute trap!");
+											this.directDamage(pokemon.maxhp / 2);
+											pokemon.formeChange('pikachubelle');
+										} else {
+											this.add('-message', 'The Blobbosinite was delicious and Blobbos saved some for later!');
+											pokemon.setItem('Leftovers', undefined, this.effect);
+										}
 									}
 								}
 							}
