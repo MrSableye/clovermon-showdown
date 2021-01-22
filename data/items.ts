@@ -7258,8 +7258,8 @@ export const Items: {[itemid: string]: ItemData} = {
 				if (this.format.id.includes('ultimateblobbos')) {
 					this.random();
 					if (this.randomChance(1, 2)) {
-						this.add('-message', 'The Blobbosinite gave Blobbos a tummy ache... but raised its stats!');
-						this.directDamage(pokemon.maxhp / 2);
+						this.add('-message', 'The Blobbosinite gave Blobbos an ulcer... but raised its stats!');
+						this.directDamage(pokemon.maxhp / 3);
 						this.boost({
 							atk: 1,
 							def: 1,
@@ -7269,20 +7269,17 @@ export const Items: {[itemid: string]: ItemData} = {
 						});
 					} else {
 						if (this.randomChance(1, 2)) {
-							this.add('-message', "The Blobbosinite burned Blobbos's tongue... but gave it special power!");
-							pokemon.setStatus('brn', null, this.effect);
+							this.add('-message', "The Blobbosinite was highly toxic... but gave it special power!");
+							pokemon.setStatus('tox', null, this.effect);
 							this.boost({
 								spa: 12,
 							});
 						} else {
 							if (this.randomChance(1, 2)) {
-								this.add('-message', 'The Blobbosinite weakened it greatly... but gave it a wonderful ability!');
+								this.add('-message', 'The Blobbosinite weakened its defenses... but gave it a wonderful ability!');
 								this.boost({
-									atk: -2,
-									def: -3,
-									spa: -2,
-									spd: -3,
-									spe: -2,
+									def: -6,
+									spd: -6,
 								});
 								pokemon.setAbility('Wonder Guard');
 							} else {
