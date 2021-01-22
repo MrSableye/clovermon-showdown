@@ -7282,7 +7282,7 @@ export const Items: {[itemid: string]: ItemData} = {
 									spd: -6,
 								});
 								pokemon.setAbility('Wonder Guard');
-								this.add('-ability', this.effect, 'Wonder Guard', '[from] item: Blobbosinite');
+								this.add('-ability', pokemon, 'Wonder Guard', '[from] item: Blobbosinite');
 							} else {
 								if (this.randomChance(1, 2)) {
 									this.add('-message', 'The Blobbosinite turned Blobbos gay... but increased its strength!');
