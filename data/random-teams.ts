@@ -2283,6 +2283,48 @@ export class RandomTeams {
 
 		return pokemon;
 	}
+
+	randomBlobbosMetronomeTeam(): RandomTeamsTypes.RandomSet[] {
+		const sets: RandomTeamsTypes.RandomSet[] = [];
+
+		const blobbosNicknames = [
+			'Oboma',
+			'Bolbi',
+			'Bobbo',
+			'Boob',
+			'Blebebe',
+			'Casanova',
+			'Cumslut',
+			'Breedwhore',
+			'Semen Dumpster',
+			'Breed Me',
+			'Cum',
+			'Zoombini',
+			'Not Ditto',
+			'Dragon Quest',
+			'Digimon',
+			'Periwinkle',
+			'Bloober',
+			'Zoloft',
+		];
+
+		while (sets.length < 6) {
+			sets.push({
+				name: this.sampleNoReplace(blobbosNicknames),
+				species: 'Blobbos',
+				gender: 'N',
+				moves: ['Metronome'],
+				ability: 'Huge Power',
+				evs: {hp: 4, atk: 252, spa: 252},
+				ivs: {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31},
+				item: 'Blobbosinite',
+				level: 100,
+				shiny: this.randomChance(1, 12),
+			});
+		}
+
+		return sets;
+	}
 }
 
 export default RandomTeams;
