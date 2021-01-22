@@ -7282,10 +7282,12 @@ export const Items: {[itemid: string]: ItemData} = {
 									spd: -6,
 								});
 								pokemon.setAbility('Wonder Guard');
+								this.add('-ability', this.effect, 'Wonder Guard', '[from] item: Blobbosinite');
 							} else {
 								if (this.randomChance(1, 2)) {
 									this.add('-message', 'The Blobbosinite turned Blobbos gay... but increased its strength!');
 									pokemon.setType('Fairy');
+									this.add('-start', pokemon, 'typechange', 'Fairy', '[from] item: Blobbosinite');
 									this.boost({
 										atk: 1,
 										spa: 1,
@@ -7298,14 +7300,17 @@ export const Items: {[itemid: string]: ItemData} = {
 											def: 2,
 										});
 										pokemon.addType('Steel');
+										this.add('-start', pokemon, 'typeadd', 'Steel', '[from] item: Blobbosinite');
 									} else {
 										if (this.randomChance(1, 2)) {
 											this.add('-message', "The Blobbosinite ruptured Blobbos's intestines... but turned it into a cute trap!");
 											this.directDamage(pokemon.maxhp / 2);
 											pokemon.formeChange('pikachubelle');
+											this.add('-formechange', pokemon, pokemon.name, undefined, `[from] item: Blobbosinite`);
 										} else {
 											this.add('-message', 'The Blobbosinite was delicious and Blobbos saved some for later!');
 											pokemon.setItem('Leftovers', undefined, this.effect);
+											this.add('-item', pokemon, 'Leftovers', '[from] item: Blobbosinite');
 										}
 									}
 								}
