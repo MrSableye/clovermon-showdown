@@ -7254,6 +7254,62 @@ export const Items: {[itemid: string]: ItemData} = {
 				pokemon.formeChange('blobbos', this.effect, true);
 
 				pokemon.eatItem(true, pokemon);
+
+				if (this.format.id.includes('ultimateblobbos')) {
+					this.random();
+					if (this.randomChance(1, 2)) {
+						this.add('-message', 'The Blobbosinite gave Blobbos a tummy ache... but raised its stats!');
+						this.directDamage(pokemon.maxhp / 2);
+						this.boost({
+							atk: 1,
+							def: 1,
+							spa: 1,
+							spd: 1,
+							spe: 1,
+						});
+					} else {
+						if (this.randomChance(1, 2)) {
+							this.add('-message', "The Blobbosinite burned Blobbos's tongue... but gave it special power!");
+							pokemon.setStatus('brn', null, this.effect);
+							this.boost({
+								spa: 12,
+							});
+						} else {
+							if (this.randomChance(1, 2)) {
+								this.add('-message', 'The Blobbosinite weakened it greatly... but gave it a wonderful ability!');
+								this.boost({
+									atk: -2,
+									def: -3,
+									spa: -2,
+									spd: -3,
+									spe: -2,
+								});
+								pokemon.setAbility('Wonder Guard');
+							} else {
+								if (this.randomChance(1, 2)) {
+									this.add('-message', 'The Blobbosinite turned Blobbos gay... but increased its strength!');
+									pokemon.setType('Fairy');
+									this.boost({
+										atk: 1,
+										spa: 1,
+									});
+								} else {
+									if (this.randomChance(1, 2)) {
+										this.add('-message', 'The Blobbosinite gave Blobbos polio... but made it hard as iron!');
+										pokemon.setStatus('par', null, this.effect);
+										this.boost({
+											def: 2,
+										});
+										pokemon.addType('Steel');
+									} else {
+										this.add('-message', 'The Blobbosinite was delicious and Blobbos saved some for later!');
+										pokemon.setItem('Leftovers', undefined, this.effect);
+									}
+								}
+							}
+						}
+					}
+				}
 			} else {
 				this.hint('Blobbosinite can only be used by Blobbos... idiot...');
 			}
