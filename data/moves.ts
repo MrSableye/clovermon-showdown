@@ -20052,6 +20052,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 		flags: {protect: 1, mirror: 1},
 		multihit: [2, 5],
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 	},
 	pixiepummel: {
 		num: 69039,
