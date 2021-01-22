@@ -5346,7 +5346,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	fly: {
 		num: 19,
 		accuracy: 100,
-		basePower: 90,
+		basePower: 95,
 		category: "Physical",
 		name: "Fly",
 		pp: 15,
@@ -19568,7 +19568,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	zenheadbutt: {
 		num: 428,
-		accuracy: 90,
+		accuracy: 95,
 		basePower: 80,
 		category: "Physical",
 		name: "Zen Headbutt",
