@@ -4843,7 +4843,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onModifyMovePriority: -5,
 		onModifyMove(move) {
-			if (['bonemerang', 'boneclub', 'shadowbone', 'bonerush'].includes(move.id)) move.ignoreImmunity = true;
+			if (['bonemerang', 'boneclub', 'shadowbone', 'bonerush'].includes(move.id)) {
+				Object.keys(this.dex.data.TypeChart).forEach((type) => {
+					if (!move.ignoreImmunity) move.ignoreImmunity = {};
+					if (move.ignoreImmunity !== true) {
+						move.ignoreImmunity[type] = true;
+					}
+				});
+			}
 		},
 		rating: 3.5,
 	},
