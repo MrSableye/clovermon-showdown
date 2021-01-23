@@ -6846,8 +6846,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	inverseroom: {
 		name: "Inverse Room",
-		shortDesc: "Summons Inverse Room upon switch-in.",
-		desc: "Creates a bizarre area where type matchups are swapped for five turns.",
+		shortDesc: "Creates a bizarre area where type matchups are swapped for five turns.",
 	},
 	fruitpunch: {
 		name: "Fruit Punch",
