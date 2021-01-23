@@ -9611,7 +9611,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 72,
 	},
 	niterpent: {
-		tier: "Uber",
+		tier: "OU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"blueflare",
@@ -9620,7 +9620,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"voltswitch",
 			"boltstrike",
 		],
-		randomBattleLevel: 72,
+		randomBattleLevel: 76,
 	},
 	griffawork: {
 		tier: "Uber",
