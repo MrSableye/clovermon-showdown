@@ -4785,6 +4785,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	adminabuse: {
 		name: "Admin Abuse",
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			if (['hammerarm', 'dragonhammer', 'woodhammer', 'icehammer', 'crabhammer', 'banhammer'].includes(move.id)) {
+				this.debug('Admin Abuse boost');
+				return this.chainModify(1.2);
+			}
+		},
 		onModifyMove(move, pokemon) {
 			if (['hammerarm', 'dragonhammer', 'woodhammer', 'icehammer', 'crabhammer', 'banhammer'].includes(move.id)) {
 				if (move.recoil) delete move.recoil;
