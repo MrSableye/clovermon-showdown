@@ -1086,7 +1086,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	darkvoid: {
 		name: "Dark Void",
 		desc: "Causes the target to fall asleep.",
-		shortDesc: "Darkrai: Causes the foe(s) to fall asleep.",
+		shortDesc: "Causes the foe(s) to fall asleep.",
 		gen6: {
 			desc: "Causes the target to fall asleep.",
 			shortDesc: "Causes the foe(s) to fall asleep.",

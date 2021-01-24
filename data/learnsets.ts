@@ -89741,9 +89741,6 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 				"8E",
 				"8L21",
 			],
-			closecombat: [
-				"8E",
-			],
 			counter: [
 				"8E",
 				"8L45",
