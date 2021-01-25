@@ -148058,6 +148058,9 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			doubleedge: [
 				"8T",
 			],
+			earthpower: [
+				"8L1",
+			],
 			echoedvoice: [
 				"8T",
 			],
