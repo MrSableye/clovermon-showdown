@@ -6433,7 +6433,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	rectreem: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"enema",
@@ -6558,7 +6558,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	chanolour: {
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"ironhead",
@@ -6612,7 +6612,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 80,
 	},
 	birdhouse: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"softboiled",
@@ -6793,7 +6793,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 84,
 	},
 	seamapan: {
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"lovelykiss",
@@ -7054,7 +7054,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	glacialynx: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"icebeam",
@@ -7066,7 +7066,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 80,
 	},
 	pengas: {
-		tier: "RU",
+		tier: "OU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"boomburst",
@@ -7203,7 +7203,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	mabster: {
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"shellsmash",
@@ -7333,7 +7333,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 80,
 	},
 	unjoy: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"willowisp",
@@ -7551,7 +7551,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 76,
 	},
 	evacycle: {
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"shiftgear",
@@ -7647,7 +7647,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	batterex: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"dragondance",
@@ -7734,7 +7734,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	yedoom: {
-		tier: "RU",
+		tier: "OU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"swordsdance",
@@ -7747,7 +7747,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 84,
 	},
 	mirrostine: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"recover",
@@ -7779,7 +7779,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	lossolith: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"wish",
@@ -7792,7 +7792,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 80,
 	},
 	mimimie: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"waterspout",
@@ -7805,7 +7805,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 80,
 	},
 	sprucifix: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"recover",
@@ -7886,7 +7886,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 84,
 	},
 	flameboyan: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"moonblast",
@@ -7922,7 +7922,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 84,
 	},
 	plebbles: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"stealthrock",
@@ -8016,7 +8016,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	ricosuave: {
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"uturn",
@@ -8077,7 +8077,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	roynapalm: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"sunnyday",
@@ -8122,7 +8122,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 84,
 	},
 	motherfuck: {
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"spore",
@@ -8158,7 +8158,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	scythear: {
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"swordsdance",
@@ -8197,7 +8197,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 80,
 	},
 	honrade: {
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"pixiepummel",
@@ -8213,7 +8213,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	premantom: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"calmmind",
@@ -8273,7 +8273,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	wifemin: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"teleport",
@@ -8309,7 +8309,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 80,
 	},
 	vaultevour: {
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"crunch",
@@ -8358,7 +8358,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 76,
 	},
 	baitmaster: {
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"scald",
@@ -8471,7 +8471,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 84,
 	},
 	regimelt: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"spooperpower",
@@ -8483,7 +8483,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 80,
 	},
 	regirust: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"spooperpower",
@@ -8681,7 +8681,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 80,
 	},
 	gangnome: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"toxic",
@@ -8785,7 +8785,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 84,
 	},
 	baloofang: {
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"hex",
@@ -8797,7 +8797,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 84,
 	},
 	socckat: {
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"highjumpkick",
@@ -8938,7 +8938,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	feferun: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"earthpower",
@@ -9022,7 +9022,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	apartmant: {
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"shellsmash",
@@ -9049,7 +9049,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 76,
 	},
 	confirmabi: {
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"nastyplot",
@@ -9090,7 +9090,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 84,
 	},
 	cansumor: {
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"toxic",
@@ -9210,7 +9210,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	cthullord: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"shellsmash",
@@ -9225,7 +9225,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	gynuke: {
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"vcreate",
@@ -9285,7 +9285,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	hornititan: {
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"iciclecrash",
@@ -9318,7 +9318,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	banageddon: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"banhammer",
@@ -9396,7 +9396,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	viristal: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"trickroom",
@@ -9436,7 +9436,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		randomBattleLevel: 84,
 	},
 	tarditank: {
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
 			"rest",
