@@ -29,7 +29,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	aguavberry: {
 		name: "Aguav Berry",
-		desc: "Restores 33% max HP at 1/4 max HP or less; confuses if -SpD Nature. Single use.",
+		desc: "Restores 50% max HP at 1/4 max HP or less; confuses if -SpD Nature. Single use.",
 		gen7: {
 			desc: "Restores 1/2 max HP at 1/4 max HP or less; confuses if -SpD Nature. Single use.",
 		},
@@ -508,7 +508,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	figyberry: {
 		name: "Figy Berry",
-		desc: "Restores 33% max HP at 1/4 max HP or less; confuses if -Atk Nature. Single use.",
+		desc: "Restores 50% max HP at 1/4 max HP or less; confuses if -Atk Nature. Single use.",
 		gen7: {
 			desc: "Restores 1/2 max HP at 1/4 max HP or less; confuses if -Atk Nature. Single use.",
 		},
@@ -766,7 +766,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	iapapaberry: {
 		name: "Iapapa Berry",
-		desc: "Restores 33% max HP at 1/4 max HP or less; confuses if -Def Nature. Single use.",
+		desc: "Restores 50% max HP at 1/4 max HP or less; confuses if -Def Nature. Single use.",
 		gen7: {
 			desc: "Restores 1/2 max HP at 1/4 max HP or less; confuses if -Def Nature. Single use.",
 		},
@@ -1004,7 +1004,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	magoberry: {
 		name: "Mago Berry",
-		desc: "Restores 33% max HP at 1/4 max HP or less; confuses if -Spe Nature. Single use.",
+		desc: "Restores 50% max HP at 1/4 max HP or less; confuses if -Spe Nature. Single use.",
 		gen7: {
 			desc: "Restores 1/2 max HP at 1/4 max HP or less; confuses if -Spe Nature. Single use.",
 		},
@@ -2245,7 +2245,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	wikiberry: {
 		name: "Wiki Berry",
-		desc: "Restores 33% max HP at 1/4 max HP or less; confuses if -SpA Nature. Single use.",
+		desc: "Restores 50% max HP at 1/4 max HP or less; confuses if -SpA Nature. Single use.",
 		gen7: {
 			desc: "Restores 1/2 max HP at 1/4 max HP or less; confuses if -SpA Nature. Single use.",
 		},
