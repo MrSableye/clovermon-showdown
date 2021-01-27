@@ -110218,9 +110218,6 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 				"8E",
 				"8T",
 			],
-			heatwave: [
-				"8E",
-			],
 			hiddenpower: [
 				"8M",
 			],
