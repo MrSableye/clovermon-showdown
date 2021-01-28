@@ -28387,7 +28387,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		},
 		heightm: 3,
 		weightkg: 413.2,
-		color: "Grey",
+		color: "Gray",
 		evos: [
 			"Avianjoin",
 		],
@@ -28423,7 +28423,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		},
 		heightm: 9.1,
 		weightkg: 911,
-		color: "Grey",
+		color: "Gray",
 		prevo: "Twinfowl",
 		evoLevel: 31,
 		eggGroups: [
