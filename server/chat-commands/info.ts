@@ -2669,7 +2669,7 @@ export const commands: ChatCommands = {
 		if (!target) target = user.id;
 		let rawResult;
 		try {
-			rawResult = await Net(`https://${Config.routes.root}/users/${target}.json`).get();
+			rawResult = await Net(`https://pokemonshowdown.com/users/${target}.json`).get();
 		} catch (e) {
 			if (e.message.includes('Not found')) throw new Chat.ErrorMessage(`User '${target}' is unregistered.`);
 			throw new Chat.ErrorMessage(e.message);
