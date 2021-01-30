@@ -6435,6 +6435,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	rectreem: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['cheekpouch'],
+		  items: ['sitrusberry', 'salacberry'],
+		  moves: ['enema', 'earthquake', 'rockclimb', 'crunch'],
+		  lockedMoves: ['bellydrum'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['cheekpouch'],
+		  items: ['starfberry'],
+		  moves: ['substitute', 'recycle', 'earthquake', 'rockclimb'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['analytic'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'earthquake', 'woodhammer', 'superpower', 'rockclimb'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"enema",
 			"earthquake",
@@ -6444,7 +6465,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"woodhammer",
 			"superpower",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	arabomb: {
 		tier: "LC",
@@ -6457,6 +6478,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	lizakbar: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  items: ['choicespecs', 'choicescarf'],
+		  moves: ['holyduty', 'darkpulse', 'focusblast', 'warhead', 'fireblast'],
+		  level: 84,
+		  },
+		  {
+		  items: ['lifeorb'],
+		  moves: ['nastyplot', 'darkpulse', 'flamethrower', 'aeroblast', 'psychic'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"holyduty",
 			"fireblast",
@@ -6478,6 +6511,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	condoom: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['unaware'],
+		  items: ['blacksludge'],
+		  moves: ['stickyweb', 'rapidspin', 'scald', 'softboiled', 'sludgebomb'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['unaware'],
+		  items: ['blacksludge'],
+		  moves: ['calmmind', 'softboiled', 'scald', 'sludgebomb', 'seedflare'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"scald",
 			"softboiled",
@@ -6495,6 +6542,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	gampster: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['boombox'],
+		  items: ['leftovers'],
+		  moves: ['nastyplot', 'boomburst', 'flamethrower', 'vacuumwave'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['moxie'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'suckerpunch', 'return', 'superpower', 'owtheedge'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"boomburst",
 			"flamethrower",
@@ -6515,6 +6576,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	corooster: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['galewings'],
+		  items: ['choiceband'],
+		  moves: ['bravebird', 'closecombat', 'flareblitz', 'uturn'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['galewings'],
+		  items: ['leftovers'],
+		  moves: ['beakblast', 'defog', 'roost', 'uturn'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['galewings'],
+		  items: ['flyinggem'],
+		  moves: ['bulkup', 'acrobatics', 'closecombat', 'roost'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"bravebird",
 			"roost",
@@ -6535,6 +6616,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	gutsifly: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['prankster'],
+		  items: ['leftovers'],
+		  moves: ['stickyweb', 'uturn', 'sleeppowder', 'taunt', 'copycat'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['leftovers'],
+		  moves: ['weirdflex', 'leechlife', 'copycat', 'roost'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"stickyweb",
 			"sleeppowder",
@@ -6560,6 +6655,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	chanolour: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['serenegrace'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'ironhead', 'bodyslam', 'encore', 'uturn', 'futababreak'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['serenegrace'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'ironhead', 'futababreak', 'superpower', 'zenheadbutt'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"ironhead",
 			"futababreak",
@@ -6567,7 +6676,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"uturn",
 			"rockslide",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 76,
 	},
 	nauseon: {
 		tier: "LC",
@@ -6576,6 +6685,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	hazmate: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['overcoat'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'drainpunch', 'gunkshot', 'earthquake', 'throatchop'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['overcoat'],
+		  items: ['blacksludge'],
+		  moves: ['glare', 'knockoff', 'poisonjab', 'drainpunch', 'mop'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"glare",
 			"gunkshot",
@@ -6588,6 +6711,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	ebolable: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['liquidooze'],
+		  items: ['lifeorb'],
+		  moves: ['nastyplot', 'flamethrower', 'darkpulse', 'sludgewave', 'focusblast'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['liquidooze'],
+		  items: ['blacksludge'],
+		  moves: ['toxicspikes', 'willowisp', 'sludgebomb', 'darkpulse', 'taunt'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"sludgewave",
 			"darkpulse",
@@ -6600,6 +6737,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	pikotton: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['fluffy'],
+		  items: ['lightball'],
+		  moves: ['voltswitch', 'surf', 'lactoseshot', 'stickyweb', 'energyball'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['fluffy'],
+		  items: ['lightball'],
+		  moves: ['thunderbolt', 'dazzlinggleam', 'wish', 'protect'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"thunderbolt",
 			"voltswitch",
@@ -6614,6 +6765,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	birdhouse: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['woodenguard'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'uturn', 'bravebird', 'roost', 'defog'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['woodenguard'],
+		  items: ['leftovers'],
+		  moves: ['leechseed', 'substitute', 'bravebird', 'roost', 'protect'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['woodenguard'],
+		  items: ['lightclay'],
+		  moves: ['reflect', 'lightscreen', 'explosion', 'encore'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"softboiled",
 			"leechseed",
@@ -6622,7 +6793,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"stealthrock",
 			"uturn",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	lanshil: {
 		tier: "LC",
@@ -6635,6 +6806,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	shurismash: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['rockhead'],
+		  items: ['whiteherb'],
+		  moves: ['shellsmash', 'headsmash', 'meteormash', 'earthquake'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['rockhead', 'sturdy'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'headsmash', 'ironhead', 'accelerock', 'earthquake'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"shellsmash",
 			"headsmash",
@@ -6650,6 +6835,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	memenace: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['hustle'],
+		  items: ['leftovers'],
+		  moves: ['honeclaws', 'return', 'earthquake', 'milkdrink', 'crunch'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['sheerforce'],
+		  items: ['lifeorb'],
+		  moves: ['fakeout', 'bodyslam', 'crunch', 'earthquake', 'superpower'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"milkdrink",
 			"meme",
@@ -6662,6 +6861,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	piguson: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['scrappy'],
+		  items: ['leftovers'],
+		  moves: ['riotshield', 'rapidspin', 'slackoff', 'glare', 'return'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"riotshield",
 			"rapidspin",
@@ -6682,8 +6889,28 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	tripecs: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['innerfocus'],
+		  items: ['lifeorb', 'choicescarf'],
+		  moves: ['superpower', 'uturn', 'earthquake', 'knockoff', 'stoneedge'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['ironfist'],
+		  items: ['lifeorb', 'choicescarf'],
+		  moves: ['superpower', 'uturn', 'icepunch', 'thunderpunch', 'firepunch'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['ironfist'],
+		  items: ['leftovers'],
+		  moves: ['substitute', 'encore', 'focuspunch', 'knockoff'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
-			"closecombat",
+			"superpower",
 			"knockoff",
 			"uturn",
 			"icepunch",
@@ -6706,6 +6933,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	finasoven: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['solidrock'],
+		  items: ['airballoon'],
+		  moves: ['trickroom', 'fireblast', 'powergem', 'earthpower', 'scald'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"trickroom",
 			"fireblast",
@@ -6726,6 +6961,19 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	monstrap: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['intimidate'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'knockoff', 'toxic', 'liquidation', 'uturn'],
+		  level: 84,
+		  },
+		  {
+		  items: ['lifeorb'],
+		  moves: ['dragondance', 'liquidation', 'knockoff', 'earthquake', 'psychicfangs'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"knockoff",
 			"uturn",
@@ -6742,6 +6990,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	fairileon: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['regenerator'],
+		  items: ['assaultvest', 'lifeorb'],
+		  moves: ['uturn', 'moonblast', 'focusblast', 'earthpower', 'bugbuzz'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['regenerator'],
+		  items: ['leftovers'],
+		  moves: ['defog', 'roost', 'moonblast', 'earthpower', 'aromatherapy'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['sapsipper', 'shielddust'],
+		  items: ['leftovers'],
+		  moves: ['quiverdance', 'roost', 'moonblast', 'earthpower', 'bugbuzz'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"quiverdance",
 			"moonblast",
@@ -6758,6 +7026,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	knokedge: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['arenatrap'],
+		  items: ['leftovers'],
+		  moves: ['earthquake', 'stealthrock', 'rapidspin', 'spikes', 'knockoff'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['arenatrap'],
+		  items: ['lifeorb'],
+		  moves: ['honeclaws', 'earthquake', 'stoneedge', 'submission'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"rapidspin",
 			"stealthrock",
@@ -6771,6 +7053,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	ribbizap: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['liquidvoice'],
+		  items: ['choicespecs'],
+		  moves: ['voltswitch', 'icebeam', 'focusblast', 'thunderbolt'],
+		  lockedMoves: ['boomburst'],
+		  level: 84,
+		  },
+		  {
+		  items: ['focussash', 'lifeorb'],
+		  moves: ['tailglow', 'thunderbolt', 'icebeam', 'boomburst', 'energyball'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"tailglow",
 			"thunderbolt",
@@ -6783,6 +7079,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	elephas: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['levitate'],
+		  items: ['leftovers'],
+		  moves: ['recover', 'calmmind', 'psychic', 'earthpower', 'willowisp'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['levitate'],
+		  items: ['lifeorb'],
+		  moves: ['nastyplot', 'psyshock', 'earthpower', 'shadowball', 'hypervoice'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"calmmind",
 			"psychic",
@@ -6795,6 +7105,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	seamapan: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['waterbubble'],
+		  items: ['choicespecs'],
+		  moves: ['waterspout', 'hydropump', 'icebeam', 'hyperbeam'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['waterbubble'],
+		  items: ['leftovers'],
+		  moves: ['calmmind', 'substitute', 'lovelykiss', 'surf'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"lovelykiss",
 			"scald",
@@ -6803,11 +7127,31 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"calmmind",
 			"icebeam",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	caroline: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['superluck'],
+		  items: ['bible'],
+		  moves: ['nastyplot', 'earthpower', 'airslash', 'darkpulse', 'heatwave'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['superluck'],
+		  items: ['bible'],
+		  moves: ['swordsdance', 'earthquake', 'closecombat', 'bravebird'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['superluck'],
+		  items: ['bible'],
+		  moves: ['uturn', 'pursuit', 'earthpower', 'bravebird', 'closecombat'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"bravebird",
 			"earthquake",
@@ -6828,6 +7172,13 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	pasdawg: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  items: ['thiccbone'],
+		  moves: ['swordsdance', 'return', 'closecombat', 'knockoff', 'earthquake', 'ironhead'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"bodyslam",
 			"ironhead",
@@ -6845,6 +7196,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	anaconduke: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['skilllink'],
+		  items: ['lifeorb'],
+		  moves: ['closecombat', 'taunt', 'crunch', 'earthquake'],
+		  lockedMoves: ['bulletseed'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['limber', 'shedskin'],
+		  items: ['leftovers'],
+		  moves: ['powerwhip', 'closecombat', 'irontail', 'crunch'],
+		  lockedMoves: ['coil'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"powerwhip",
 			"crosschop",
@@ -6861,6 +7228,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	sjwhale: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['gluttony'],
+		  items: ['figyberry'],
+		  moves: ['bellydrum', 'aquajet', 'psychicfangs', 'crunch'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['thickfat'],
+		  items: ['leftovers'],
+		  moves: ['slackoff', 'steameruption', 'toxic', 'teleport', 'psychicfangs'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"slackoff",
 			"steameruption",
@@ -6877,6 +7258,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	mozzamazel: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['waterabsorb'],
+		  items: ['leftovers'],
+		  moves: ['softboiled', 'calmmind', 'moonblast', 'surf', 'flamethrower'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['waterabsorb'],
+		  items: ['leftovers'],
+		  moves: ['softboiled', 'lovelykiss', 'moonblast', 'toxic', 'flamethrower'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"calmmind",
 			"softboiled",
@@ -6893,6 +7288,25 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	krokizon: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['rockhead', 'reckless'],
+		  items: ['choiceband'],
+		  moves: ['woodhammer', 'headsmash', 'earthquake', 'superpower', 'doubleedge'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['rockhead'],
+		  items: ['leftovers'],
+		  moves: ['dragondance', 'earthquake', 'woodhammer', 'headsmash'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['thickfat'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'slackoff', 'woodhammer', 'earthquake'],
+		  }
+		],
 		randomBattleMoves: [
 			"stealthrock",
 			"earthquake",
@@ -6910,6 +7324,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	haremit: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['hydrophile'],
+		  items: ['whiteherb'],
+		  moves: ['earthquake', 'stoneedge', 'return'],
+		  lockedMoves: ['shellsmash', 'crabhammer'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['watercompaction'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'shoreup', 'bodyslam', 'spikes', 'scald'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"shellsmash",
 			"rockslide",
@@ -6931,6 +7360,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	fabkube: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['dazzling', 'levitate'],
+		  items: ['choicespecs'],
+		  moves: ['moonblast', 'icebeam', 'focusblast', 'freezedry', 'psychic'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['dazzling'],
+		  items: ['leftovers'],
+		  moves: ['calmmind', 'icebeam', 'moonblast', 'recover', 'focusblast'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"calmmind",
 			"freezedry",
@@ -6948,6 +7391,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	smoxilon: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['regenerator'],
+		  items: ['blacksludge'],
+		  moves: ['spore', 'stealthrock', 'stickyweb', 'bravebird', 'uturn', 'taunt'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['whitesmoke'],
+		  items: ['whiteherb'],
+		  moves: ['earthquake', 'closecombat', 'gunkshot'],
+		  lockedMoves: ['shellsmash', 'acrobatics'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"spore",
 			"rapidspin",
@@ -6961,6 +7419,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	machmona: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['moxie'],
+		  items: ['lifeorb'],
+		  moves: ['spookout', 'elbowdrop', 'drainpunch', 'suckerpunch', 'machpunch'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"swordsdance",
 			"elbowdrop",
@@ -6978,6 +7444,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: "Future",
 		randomBattleMoves: [
+		  {
+		  abilities: ['thickfat'],
+		  items: ['baconstrip'],
+		  moves: ['softboiled', 'aromatherapy', 'firelash', 'earthquake', 'bodyslam'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['thickfat'],
+		  items: ['baconstrip'],
+		  moves: ['softboiled', 'bulkup', 'firelash', 'bodyslam'],
+		  level: 84,
+		  }
+		],
+		randomBattleMoves: [
 			"bulkup",
 			"firelash",
 			"softboiled",
@@ -6993,6 +7473,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	mooshock: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['sapsipper'],
+		  items: ['leftovers'],
+		  moves: ['milkdrink', 'voltswitch', 'flareblitz', 'volttackle', 'lickclean'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['sapsipper'],
+		  items: ['leftovers'],
+		  moves: ['discharge', 'flamethrower', 'grassknot'],
+		  lockedMoves: ['milkdrink', 'calmmind'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"volttackle",
 			"flareblitz",
@@ -7005,6 +7500,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	pretzely: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['ghostnote'],
+		  items: ['suedeshoes'],
+		  moves: ['nastyplot', 'powergem', 'focusblast', 'taunt'],
+		  lockedMoves: ['boomburst'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"boomburst",
 			"focusblast",
@@ -7020,6 +7524,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	dowster: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['shadowtag'],
+		  items: ['lifeorb'],
+		  moves: ['spookout', 'shadowball', 'psychic', 'sludgebomb', 'focusblast'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['shadowtag'],
+		  items: ['choicescarf'],
+		  moves: ['moonblast', 'shadowball', 'psychic', 'psychicfangs', 'focusblast'],
+		  lockedMoves: ['trick'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"spookout",
 			"shadowball",
@@ -7040,6 +7559,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	mennopaws: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['intimidate'],
+		  items: ['leftovers'],
+		  moves: ['mop', 'wish', 'protect', 'earthquake', 'pixiepummel'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['moody'],
+		  items: ['leftovers'],
+		  moves: ['substitute', 'protect', 'earthquake', 'pixiepummel', 'wish'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['intimidate'],
+		  items: ['leftovers'],
+		  moves: ['honeclaws', 'earthquake', 'pixiepummel', 'stoneedge', 'closecombat'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"pixiepummel",
 			"earthquake",
@@ -7056,6 +7595,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	glacialynx: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['adaptability'],
+		  items: ['choicespecs', 'choicescarf'],
+		  moves: ['voltswitch', 'icebeam', 'thunderbolt', 'grassknot'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['adaptability'],
+		  items: ['lifeorb', 'focussash'],
+		  moves: ['calmmind', 'thunderbolt', 'icebeam', 'grassknot'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['furcoat'],
+		  items: ['leftovers'],
+		  moves: ['encore', 'voltswitch', 'icebeam', 'taunt'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"icebeam",
 			"thunderbolt",
@@ -7063,11 +7622,32 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"grassknot",
 			"boltbeam",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	pengas: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['refrigerate'],
+		  items: ['choicespecs', 'choicescarf'],
+		  moves: ['freezedry', 'fireblast', 'earthpower', 'focusblast', 'trick'],
+		  lockedMoves: ['boomburst'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['magicguard'],
+		  items: ['lifeorb'],
+		  moves: ['nastyplot', 'freezedry', 'fireblast', 'earthpower', 'boomburst'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['magicguard'],
+		  items: ['leftovers'],
+		  moves: ['defog', 'roost', 'freezedry', 'lavaplume', 'thunderwave'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"boomburst",
 			"freezedry",
@@ -7075,7 +7655,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"earthpower",
 			"trick",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 76,
 	},
 	praeteur: {
 		tier: "LC",
@@ -7084,6 +7664,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	praestish: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['intimidate'],
+		  items: ['leftovers'],
+		  moves: ['teleport', 'scald', 'painsplit', 'toxic', 'trickroom'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['pressure'],
+		  items: ['leftovers'],
+		  moves: ['spite', 'rest', 'sleeptalk', 'block'], // :^)
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"uturn",
 			"scald",
@@ -7100,6 +7694,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	florious: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['vitalspirit'],
+		  items: ['blacksludge'],
+		  moves: ['sleeppowder', 'nastyplot', 'sludgewave', 'darkpulse', 'aurasphere'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['vitalspirit'],
+		  items: ['lifeorb'],
+		  moves: ['nastyplot', 'sludgewave', 'aurasphere', 'darkpulse', 'psychic'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['vitalspirit'],
+		  items: ['blacksludge'],
+		  moves: ['substitute', 'leechseed', 'sleeppower', 'darkpulse', 'sludgebomb'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"darkpulse",
 			"sludgewave",
@@ -7120,6 +7734,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	somboludo: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['comatose'],
+		  items: ['leftovers'],
+		  moves: ['rapidspin', 'stealthrock', 'earthquake', 'ironhead', 'slackoff'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['sandstream'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'earthquake', 'bulletpunch', 'meteormash', 'gunkshot'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"rapidspin",
 			"stealthrock",
@@ -7137,6 +7765,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	marionettl: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['puppeteer'],
+		  items: ['lifeorb'],
+		  moves: ['coil', 'crabhammer', 'powerwhip', 'earthquake'],
+		  lockedMoves: ['leechlife'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['intimidate'],
+		  items: ['leftovers'],
+		  moves: ['spikes', 'liquidation', 'powerwhip', 'leechseed', 'substitute'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"powerwhip",
 			"crabhammer",
@@ -7153,6 +7796,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	octai: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['regenerator'],
+		  items: ['piratesjug'],
+		  moves: ['scald', 'toxic', 'milkdrink', 'flamethrower'],
+		  lockedMoves: ['lactoseshot'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['mistysurge'],
+		  items: ['piratesjug'],
+		  moves: ['milkdrink', 'calmmind', 'scald'],
+		  lockedMoves: ['lactoseshot'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"lactoseshot",
 			"milkdrink",
@@ -7169,6 +7828,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	hyletrack: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['moxie'],
+		  items: ['lifeorb'],
+		  moves: ['heavyslam', 'heatcrash', 'earthquake', 'superpower', 'extremespeed'],
+		  lockedMoves: ['shiftgear'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['speedboost'],
+		  items: ['lifeorb'],
+		  moves: ['ironhead', 'heatcrash', 'earthquake', 'zenheadbutt'],
+		  lockedMoves: ['protect'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"shiftgear",
 			"heatcrash",
@@ -7185,6 +7860,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	armowite: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['overcoat'],
+		  items: ['leftovers'],
+		  moves: ['strengthsap', 'knockoff', 'uturn', '1000folds', 'pursuit'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['blademaster'],
+		  items: ['lifeorb'],
+		  moves: ['strengthsap', 'hammerarm', 'owtheedge', '1000folds', 'swordsdance'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"owtheedge",
 			"1000folds",
@@ -7205,6 +7894,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	mabster: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['swiftswim'],
+		  items: ['whiteherb'],
+		  moves: ['closecombat', 'crabhammer', 'earthquake', 'icebeam'],
+		  lockedMoves: ['shellsmash'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"shellsmash",
 			"crabhammer",
@@ -7212,7 +7910,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"earthquake",
 			"aquajet",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 80,
 	},
 	tricient: {
 		tier: "LC",
@@ -7221,6 +7919,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	tricillion: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['guts'],
+		  items: ['flameorb'],
+		  moves: ['rockclimb', 'earthquake', 'gyroball', 'knockoff'],
+		  lockedMoves: ['trickroom'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['rockhead'],
+		  items: ['airballoon'],
+		  moves: ['stealthrock', 'headsmash', 'superpower', 'earthquake', 'gyroball'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"trickroom",
 			"headsmash",
@@ -7237,6 +7950,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	toxiraptor: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['merciless'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'toxiravage', 'stoneedge', 'stompingtantrum'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['merciless'],
+		  items: ['lifeorb'],
+		  moves: ['nastyplot', 'sludgewave', 'fireblast', 'powergem', 'earthpower'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['corrosion'],
+		  items: ['focussash'],
+		  moves: ['stealthrock', 'toxiravage', 'stoneedge', 'taunt'],
+		  lockedMoves: ['toxic'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"toxiravage",
 			"stoneedge",
@@ -7253,6 +7987,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	huntabre: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['toughclaws'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'return', 'knockoff', 'stoneedge', 'earthquake'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['strongjaw'],
+		  items: ['focussash'],
+		  moves: ['stoneedge', 'earthquake'],
+		  lockedMoves: ['overbite', 'explosion', 'stealthrock'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"return",
 			"stoneedge",
@@ -7265,6 +8014,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	pyralink: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['levitate'],
+		  items: ['leftovers'],
+		  moves: ['defog', 'roost', 'lavaplume', 'uturn', 'glare'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['multiscale'],
+		  items: ['whiteherb'],
+		  moves: ['flareblitz', 'clangingscales', 'earthquake'],
+		  lockedMoves: ['toke'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"toke",
 			"flareblitz",
@@ -7284,6 +8048,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	tripsius: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['skilllink'],
+		  items: ['choiceband'],
+		  moves: ['checkem', 'volttackle', 'iciclespear', 'bulletseed', 'rockblast'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['competitive'],
+		  items: ['lifeorb'],
+		  moves: ['calmmind', 'thunderbolt', 'icebeam', 'psychic', 'focusblast'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['skilllink'],
+		  items: ['choicespecs'],
+		  moves: ['checkem', 'voltswitch', 'watershuriken', 'icebeam', 'thunderbolt'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"checkem",
 			"volttackle",
@@ -7300,6 +8084,32 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	miasmortor: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['prankster'],
+		  items: ['blacksludge'],
+		  moves: ['spikes', 'toxicspikes', 'gunkshot', 'willowisp', 'voltswitch'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['lifeorb'],
+		  moves: ['coil', 'recover', 'gunkshot', 'irontail'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['lightclay'],
+		  moves: ['reflect', 'lightscreen', 'taunt', 'gunkshot', 'voltswitch'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['lifeorb'],
+		  moves: ['magnetrise', 'recover', 'flashcannon', 'earthpower'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"reflect",
 			"lightscreen",
@@ -7313,6 +8123,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	cacademon: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['poisontouch', 'stench'],
+		  items: ['blacksludge'],
+		  moves: ['slackoff', 'stealthrock', 'earthpower', 'slimegulp', 'fireblast'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['poisontouch', 'stench'],
+		  items: ['blacksludge'],
+		  moves: ['coil', 'slackoff', 'gunkshot', 'earthquake', 'strength'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"earthquake",
 			"poisonjab",
@@ -7330,11 +8154,33 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	chancer: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['cursedbody'],
+		  items: ['eviolite'],
+		  moves: ['willowisp', 'teleport', 'stealthrock', 'softboiled', 'nightshade'],
+		  level: 80,
+		  }
+		],
 		randomBattleLevel: 80,
 	},
 	unjoy: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['cursedbody'],
+		  items: ['leftovers'],
+		  moves: ['willowisp', 'shadowball', 'softboiled', 'stealthrock', 'teleport'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['cursedbody'],
+		  items: ['leftovers'],
+		  moves: ['softboiled', 'calmmind', 'shadowball', 'fireblast', 'focusblast'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"willowisp",
 			"nightshade",
@@ -7342,7 +8188,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"stealthrock",
 			"teleport",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	frosowl: {
 		tier: "LC",
@@ -7351,6 +8197,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	whizzard: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['snowwarning'],
+		  items: ['lightclay'],
+		  moves: ['blizzard', 'uturn', 'spikes', 'destinybond'],
+		  lockedMoves: ['auroraveil'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['snowwarning'],
+		  items: ['lifeorb'],
+		  moves: ['nastyplot', 'blizzard', 'airslash, 'darkpulse'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"auroraveil",
 			"blizzard",
@@ -7371,6 +8232,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	mantrake: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['tintedlens'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['dragondance', 'leechlife', 'earthquake', 'outrage', 'psychicfangs'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['tintedlens'],
+		  items: ['choiceband', 'choicescarf'],
+		  moves: ['megahorn', 'outrage', 'earthquake', 'uturn', 'psychicfangs'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['shedskin'],
+		  items: ['leftovers'],
+		  moves: ['roost', 'dragontail', 'toxic', 'earthquake'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"dragondance",
 			"megahorn",
@@ -7383,6 +8264,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	ogrelord: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['moldbreaker'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['dragondance', 'darkestlariat', 'woodhammer', 'earthquake', 'gunkshot'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['moldbreaker'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['suckerpunch', 'swordsdance', 'earthquake', 'superpower', 'gunkshot'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"dragondance",
 			"knockoff",
@@ -7395,6 +8290,35 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	chantruth: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['jewelry'],
+		  items: ['darkgem'],
+		  moves: ['earthpower', 'sludgebomb', 'calmmind', 'icebeam'],
+		  lockedMoves: ['baddybad'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['jewelry'],
+		  items: ['darkgem'],
+		  moves: ['taunt', 'partingshot', 'thunderwave', 'stealthrock'],
+		  lockedMoves: ['baddybad'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['magnetpull'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'baddybad', 'partingshot', 'thunderwave', 'painsplit'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['magnetpull', 'infiltrator'],
+		  items: ['darkgem'],
+		  moves: ['partingshot', 'focusblast', 'sludgebomb', 'earthpower],
+		  lockedMoves: ['swindle'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"swindle",
 			"focusblast",
@@ -7413,6 +8337,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	geigh: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['serenegrace'],
+		  items: ['leftovers'],
+		  moves: ['airslash', 'roost', 'substitute', 'moonblast', 'heatwave'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['magicbounce'],
+		  items: ['leftovers'],
+		  moves: ['calmmind', 'roost', 'aeroblast', 'heatwave', 'moonblast'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['serenegrace'],
+		  items: ['choicescarf'],
+		  moves: ['airslash', 'moonblast', 'heatwave', 'uturn', 'trick'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"aeroblast",
 			"airslash",
@@ -7430,6 +8374,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	spilefree: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['levitate'],
+		  items: ['choicespecs'],
+		  moves: ['voltswitch', 'thunderbolt', 'shadowball', 'dazzlinggleam', 'aurasphere', 'flamethrower'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['focussash', 'lifeorb'],
+		  moves: ['thunderbolt', 'shadowball', 'flamethrower', 'earthpower'],
+		  lockedMoves: ['destinybond'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['leftovers'],
+		  moves: ['willowisp', 'destinybond', 'voltswitch', 'shadowball'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"voltswitch",
 			"shadowball",
@@ -7451,6 +8416,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	marleyzard: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['turboblaze'],
+		  items: ['whiteherb'],
+		  moves: ['gigadrain', 'fireblast', 'earthpower', 'roost'],
+		  lockedMoves: ['toke'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['turboblaze'],
+		  items: ['leftovers'],
+		  moves: ['calmmind', 'roost', 'lavaplume', 'earthpower', 'gigadrain'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['turboblaze'],
+		  items: ['leftovers'],
+		  moves: ['substitute', 'leechseed', 'lavaplume', 'toxic', 'gigadrain'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"toke",
 			"gigadrain",
@@ -7467,6 +8453,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	smellox: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['noguard'],
+		  items: ['blacksludge'],
+		  moves: ['sing', 'substitute', 'gunkshot', 'fireblast'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['noguard'],
+		  items: ['choicescarf'],
+		  moves: ['uturn', 'gunkshot', 'highjumpkick', 'earthquake', 'knockoff'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"gunkshot",
 			"sing",
@@ -7480,6 +8480,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	chasumo: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['defiant'],
+		  items: ['leftovers'],
+		  moves: ['circlethrow', 'slackoff', 'substitute', 'earthquake', 'knockoff'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"highjumpkick",
 			"knockoff",
@@ -7498,6 +8506,34 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	isissin: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['merciless'],
+		  items: ['blacksludge'],
+		  moves: ['suckerpunch', 'softboiled', 'owtheedge', 'gunkshot'],
+		  lockedMoves: ['banefulbunker'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['flareboost'],
+		  items: ['lifeorb'],
+		  moves: ['fireblast', 'sludgewave', 'softboiled', 'nightdaze'],
+		  lockedMoves: ['scorchedearth'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['flareboost'],
+		  items: ['flameorb'],
+		  moves: ['softboiled', 'nightdaze', 'nastyplot', 'sludgewave', 'secretsword'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['blademaster'],
+		  items: ['blacksludge'],
+		  moves: ['owtheedge', 'sacredsword', 'suckerpunch', 'swordsdance', 'slimegulp'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"softboiled",
 			"owtheedge",
@@ -7520,6 +8556,32 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	upchucken: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['drought'],
+		  items: ['heatrock'],
+		  moves: ['uturn', 'bravebird', 'flareblitz', 'willowisp', 'roost'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['drought'],
+		  items: ['lifeorb'],
+		  moves: ['fireblast', 'aeroblast', 'roost', 'superpower', 'hypervoice'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['flareboost'],
+		  items: ['flameorb'],
+		  moves: ['aeroblast', 'fireblast', 'hypervoice', 'roost', 'uturn'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['innardsout'],
+		  items: ['choiceband'],
+		  moves: ['superpower', 'bravebird', 'uturn', 'flareblitz', 'doubleedge'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"uturn",
 			"aeroblast",
@@ -7541,6 +8603,33 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	cannonance: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['megalauncher'],
+		  items: ['assaultvest', 'choicespecs', 'lifeorb'],
+		  moves: ['dragonpulse', 'flashcannon', 'aurasphere', 'darkpulse'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['noguard'],
+		  items: ['assaultvest', 'lifeorb'],
+		  moves: ['dracometeor', 'fireblast', 'hydropump'],
+		  lockedMoves: ['zapcannon', 'focusblast'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['megalauncher'],
+		  items: ['leftovers'],
+		  moves: ['defog', 'willowisp', 'dragonpulse', 'flashcannon'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['megalauncher'],
+		  items: ['leftovers'],
+		  moves: ['rest', 'sleeptalk', 'dragonpulse', 'flashcannon'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"dragonpulse",
 			"flashcannon",
@@ -7553,6 +8642,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	evacycle: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['unburden'],
+		  items: ['weaknesspolicy'],
+		  moves: ['cosmicpower', 'storedpower', 'substitute', 'heatwave'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['unburden'],
+		  items: ['flyinggem'],
+		  moves: ['ironhead', 'zenheadbutt'],
+		  lockedMoves: ['acrobatics', 'shiftgear', 'flareblitz'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['flamebody'],
+		  items: ['leftovers'],
+		  moves: ['doomdesire', 'willowisp', 'teleport', 'zenheadbutt', 'defog'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"shiftgear",
 			"heavyslam",
@@ -7560,11 +8670,31 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"flareblitz",
 			"earthquake",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	foryu: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['bigguy'],
+		  items: ['lifeorb'],
+		  moves: ['foryou', 'doubleironbash', 'earthquake', 'autotomize', 'heatcrash'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['magnetpull'],
+		  items: ['choiceband', 'choicescarf'],
+		  moves: ['foryou', 'heatcrash', 'doubleironbash', 'earthquake'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['bigguy'],
+		  items: ['leftovers'],
+		  moves: ['banefulbunker', 'foryou', 'doubleironbash', 'earthquake', 'taunt'],
+		  level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"foryou",
 			"doubleironbash",
@@ -7578,6 +8708,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	scytill: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['levitate'],
+		  items: ['lifeorb'],
+		  moves: ['spookout', 'uturn', 'ironhead', 'earthquake', 'stratoblade'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['levitate'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'ironhead', 'earthquake', 'shadowsneak', 'shadowclaw'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['levitate'],
+		  items: ['leftovers'],
+		  moves: ['substitute', 'ironhead', 'earthquake', 'shadowforce'],
+		  lockedMoves: ['roost', 'willowisp'],
+		  level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"spookout",
 			"shadowsneak",
@@ -7590,6 +8741,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	baddon: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['skilllink'],
+		  items: ['leftovers'],
+		  moves: ['dildocannon', 'coil', 'gunkshot', 'earthquake', 'recover'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['roughskin'],
+		  items: ['rockyhelmet', 'leftovers'],
+		  moves: ['recover', 'stealthrock', 'dracometeor', 'fireblast', 'glare'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['infiltrator'],
+		  items: ['leftovers'],
+		  moves: ['nastyplot', 'clangingscales', 'fireblast', 'sludgewave', 'recover'],
+		  level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"recover",
 			"dildocannon",
@@ -7603,6 +8774,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	endranther: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['poisonpoint'],
+		  items: ['blacksludge', 'lifeorb'],
+		  moves: ['bulkup', 'decaydrain', 'earthquake', 'knockoff', 'strengthsap'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['poisonpoint'],
+		  items: ['blacksludge'],
+		  moves: ['calmmind', 'sludgewave', 'strengthsap', 'flamethrower'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['poisonpoint', 'aftermath'],
+		  items: ['choicescarf', 'choiceband'],
+		  moves: ['decaydrain', 'superpower', 'earthquake', 'stoneedge', 'explosion'],
+		  level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"decaydrain",
 			"earthquake",
@@ -7615,6 +8806,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	notridley: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['steadfast'],
+		  items: ['flyinggem'],
+		  moves: ['dragondance', 'outrage', 'earthquake', 'extremespeed'],
+		  lockedMoves: ['acrobatics'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['steadfast'],
+		  items: ['lifeorb'],
+		  moves: ['dracometeor', 'roost', 'oblivionwing', 'earthquake', 'fireblast'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"dragondance",
 			"acrobatics",
@@ -7628,6 +8834,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	demiwaifu: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['triage'],
+		  items: ['lifeorb'],
+		  moves: ['calmmind', 'drainingkiss', 'aurasphere', 'diamondstorm', 'earthpower'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['queenlymajesty', 'triage'],
+		  items: ['leftovers'],
+		  moves: ['wish', 'protect', 'moonblast', 'teleport', 'willowisp'],
+		  level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"calmmind",
 			"moonblast",
@@ -7649,13 +8869,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	batterex: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['regenerator'],
+		  items: ['assaultvest', 'lifeorb'],
+		  moves: ['punchout', 'ironhead', 'earthquake', 'dragonclaw', 'throatchop'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['ironfist'],
+		  items: ['lifeorb'],
+		  moves: ['dragondance', 'meteormash', 'dragonfist', 'drainpunch', 'firepunch'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"dragondance",
 			"dragonfist",
 			"closecombat",
 			"meteormash",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	faeriock: {
 		tier: "LC",
@@ -7668,6 +8902,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	oburonyxo: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['magicguard'],
+		  items: ['leftovers']
+		  moves: ['stealthrock', 'defog', 'moonblast', recover', 'glare', 'erosionwave'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['magicguard'],
+		  items: ['lifeorb'],
+		  moves: ['calmmind', 'recover', 'moonblast', 'earthpower', 'erosionwave'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['magicguard'],
+		  items: ['flameorb'],
+		  moves: ['psychoshift', 'recover', 'calmmind', 'moonblast'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"erosionwave",
 			"earthpower",
@@ -7689,6 +8943,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	deathorus: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['toughclaws'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'stratoblade', 'suckerpunch', 'owtheedge', 'sacredsword'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['showerpower'],
+		  items: ['lifeorb'],
+		  moves: ['hurricane', 'thunder', 'darkpulse', 'nastyplot', 'focusblast'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"knockoff",
 			"suckerpunch",
@@ -7705,6 +8973,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	knogrinyu: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['reckless'],
+		  items: ['leftovers'],
+		  moves: ['headcharge', 'highjumpkick', 'flareblitz', 'milkdrink', 'earthquake'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['moldbreaker'],
+		  items: ['leftovers'],
+		  moves: ['bulkup', 'milkdrink', 'earthquake', 'bodyslam'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['sapsipper'],
+		  items: ['leftovers'],
+		  moves: ['wish', 'milkdrink', 'healbell', 'bodyslam'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"bulkup",
 			"milkdrink",
@@ -7720,6 +9008,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	glassannon: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['speedboost', 'motordrive', 'bulletproof'],
+		  items: ['lifeorb'],
+		  moves: ['icebeam', 'fireblast', 'thunderbolt', 'ironhead', 'earthquake', 'iceshard'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"icebeam",
 			"ironhead",
@@ -7736,6 +9032,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	yedoom: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['toughclaws'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'iceshard', 'knockoff', 'closecombat', 'iciclecrash', 'suckerpunch'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['fluffy'],
+		  items: ['leftovers'],
+		  moves: ['cottonguard', 'moonlight', 'toxic', 'knockoff', 'iciclecrash'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"swordsdance",
 			"suckerpunch",
@@ -7749,6 +9059,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	mirrostine: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['imposter'],
+		  items: ['choicescarf'],
+		  moves: ['spookout', 'skillswap', 'flashcannon', 'shadowball'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['lightningrod'],
+		  items: ['leftovers'],
+		  moves: ['willowisp', 'hex', 'recover', 'teleport', 'defog'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"recover",
 			"willowisp",
@@ -7756,7 +9080,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"focusblast",
 			"teleport",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	mudpants: {
 		tier: "LC",
@@ -7765,6 +9089,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	mudslacks: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['sandstream'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'extremespeed', 'precipiceblades', 'highjumpkick', 'volttackle'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['sandstream'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'spikes', 'earthquake', 'rapidspin', 'knockoff', 'uturn'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"swordsdance",
 			"highjumpkick",
@@ -7781,6 +9119,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	lossolith: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['levitate'],
+		  items: ['leftovers'],
+		  moves: ['wish', 'protect', 'teleport', 'stealthrock', 'toxic', 'psywave'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['levitate'],
+		  items: ['leftovers'],
+		  moves: ['trickroom', 'teleport', 'stealthrock', 'heavyslam'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"wish",
 			"protect",
@@ -7789,11 +9141,31 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"stealthrock",
 			"teleport",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	mimimie: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['serenegrace'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['nastyplot', 'scald', 'nightdaze', 'recover', 'icebeam'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['serenegrace'],
+		  items: ['leftovers'],
+		  moves: ['substitute', 'nightdaze', 'recover', 'scald'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['mistysurge'],
+		  items: ['choicespecs', 'choicescarf'],
+		  moves: ['lactoseshot', 'waterspout', 'hydropump', 'darkpulse', 'icebeam'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"waterspout",
 			"darkpulse",
@@ -7807,6 +9179,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	sprucifix: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['regenerator'],
+		  items: ['leftovers'],
+		  moves: ['spikes', 'spikyshield', 'woodhammer', 'aromatherapy', 'hammerarm'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['wonderguard'],
+		  items: ['leftovers'],
+		  moves: ['substitute', 'recover', 'metronome', 'refresh'], // :^)
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"recover",
 			"powerwhip",
@@ -7814,11 +9200,32 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"spikes",
 			"toxic",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	hulkan: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['guts']
+		  items: ['flameorb'],
+		  moves: ['hulkup', 'closecombat', 'earthquake', 'darkestlariat', 'facade'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['hustle'],
+		  items: ['leftovers'],
+		  moves: ['hulkup', 'closecombat', 'earthquake', 'darkestlariat'],
+		  lockedMoves: ['substitute', 'focusmunch'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['steadfast'],
+		  items: ['salacberry'],
+		  moves: ['hulkup', 'substitute', 'closecombat', 'earthquake', 'darkestlariat'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"hulkup",
 			"closecombat",
@@ -7839,6 +9246,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	nomaestro: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['pixilate'],
+		  items: ['choicescarf'],
+		  moves: ['boomburst', 'uturn', 'trick', 'hurricane', 'earthquake'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['soundproof'],
+		  items: ['leftovers'],
+		  moves: ['protect', 'substitute', 'wish', 'moonblast'],
+		  lockedMoves: ['perishsong'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"boomburst",
 			"hurricane",
@@ -7859,6 +9281,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	nutzboltz: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['soundproof'],
+		  items: ['blacksludge'],
+		  moves: ['chatter', 'substitute', 'roost', 'flamethrower', 'acidspray'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['soundproof'],
+		  items: ['blacksludge'],
+		  moves: ['oblivionwing', 'calmmind', 'flamethrower', 'sludgebomb', 'roost'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['unburden'],
+		  items: ['sitrusberry'],
+		  moves: ['nastyplot', 'oblivionwing', 'fireblast', 'belch', 'surf'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"oblivionwing",
 			"calmmind",
@@ -7875,6 +9317,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	kuklan: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['levitate'],
+		  items: ['lifeorb'],
+		  moves: ['blueflare', 'nastyplot', 'earthpower', 'energyball', 'psychic'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['levitate'],
+		  items: ['leftovers'],
+		  moves: ['willowisp', 'taunt', 'fierydance', 'earthpower', 'substitute'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"blueflare",
 			"nastyplot",
@@ -7888,6 +9344,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	flameboyan: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['fairyaura'],
+		  items: ['bigfaggot'],
+		  moves: ['moonblast', 'fierydance', 'earthpower', 'psychic', 'lightofruin'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['flamebody'],
+		  items: ['bigfaggot'],
+		  moves: ['moonlight', 'moonblast', 'fierydance', 'substitute', 'earthpower'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"moonblast",
 			"fierydance",
@@ -7895,11 +9365,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"toke",
 			"moonlight",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	piicee: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['triage'],
+		  items: ['lifeorb'],
+		  moves: ['softboiled', 'nastyplot', 'psychoboost', 'substitute', 'gigadrain'],
+		  lockedMoves: ['drainingkiss'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['regenerator'],
+		  items: ['blacksludge'],
+		  moves: ['teleport', 'dailydose', 'psychoboost', 'willowisp', 'fireblast'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"dailydose",
 			"wish",
@@ -7912,6 +9397,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	sonnanos: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['ironfist'],
+		  items: ['leftovers'],
+		  moves: ['doubleironbash', 'machpunch', 'substitute', 'focuspunch'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['ironfist'],
+		  items: ['lifeorb'],
+		  moves: ['machpunch', 'doubleironbash', 'firepunch', 'swordsdance', 'thunderpunch', 'icepunch'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['ironfist'],
+		  items: ['choicescarf'],
+		  moves: ['doubleironbash', 'firepunch', 'superpower', 'thunderpunch', 'icepunch'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"doubleironbash",
 			"superpower",
@@ -7924,6 +9429,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	plebbles: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['sturdy', 'levitate', 'moldbreaker'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'spikes', 'glare', 'rockslide', 'earthquake'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['sturdy'],
+		  items: ['shellbell'],
+		  moves: ['endeavor', 'accelerock', 'toxic', 'protect'], // :^)
+		  level: 1,
+		  }
+		],
 		randomBattleMoves: [
 			"stealthrock",
 			"glare",
@@ -7931,7 +9450,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"rockslide",
 			"earthquake",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	sapleaf: {
 		tier: "LC",
@@ -7944,6 +9463,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	phantash: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['cursedbody'],
+		  items: ['leftovers'],
+		  moves: ['spore', 'moongeistbeam', 'recover', 'lavaplume', 'leechseed'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['whitesmoke'],
+		  items: ['leftovers'],
+		  moves: ['cottonguard', 'calmmind', 'recover', 'shadowball'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['cursedbody', 'whitesmoke'],
+		  items: ['leftovers'],
+		  moves: ['strengthsap', 'calmmind', 'shadowball', 'aurasphere'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"trickroom",
 			"moongeistbeam",
@@ -7956,6 +9495,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	polossus: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['shielddust', 'poisonpoint'],
+		  items: ['blacksludge'],
+		  moves: ['recover', 'toxicspikes', 'knockoff', 'haze', 'poisonjab'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['pollution'],
+		  items: ['blacksludge'],
+		  moves: ['recover', 'bulkup', 'poisonjab', 'knockoff'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"recover",
 			"gunkshot",
@@ -7968,6 +9521,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	hitmonana: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['harvest'],
+		  items: ['sitrusberry'],
+		  moves: ['protect', 'woodhammer', 'aurasphere'],
+		  lockedMoves: ['substitute', 'toxic'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"stealthrock",
 			"partingshot",
@@ -7985,6 +9547,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	barbarkley: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['magicbounce'],
+		  items: ['focussash'],
+		  moves: ['stealthrock', 'rapidspin', 'closecombat', 'chaosdunk', 'knockoff'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['magicbounce'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'chaosdunk', 'closecombat', 'earthquake', 'accelerock'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"chaosdunk",
 			"closecombat",
@@ -8001,6 +9577,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	rekroach: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['ironfist'],
+		  items: ['lifeorb'],
+		  moves: ['firstimpression', 'drainpunch', 'knockoff', 'suckerpunch', 'uturn'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['ironfist'],
+		  items: ['lifeorb', 'leftovers'],
+		  moves: ['bulkup', 'drainpunch', 'suckerpunch', 'leechlife', 'darkestlariat'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"partingshot",
 			"suckerpunch",
@@ -8018,6 +9608,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	ricosuave: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['magicbounce'],
+		  items: ['leftovers'],
+		  moves: ['uturn', 'healbell', 'thunderwave', 'taunt', 'rapidspin'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['speedboost'],
+		  items: ['lifeorb'],
+		  moves: ['headcharge', 'earthquake', 'strength', 'throatchop'],
+		  lockedMoves: ['swordsdance'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"uturn",
 			"headcharge",
@@ -8026,11 +9631,25 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"healingwish",
 			"taunt",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	spaghefant: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['waterabsorb', 'intimidate'],
+		  items: ['leftovers'],
+		  moves: ['mop', 'stealthrock', 'softboiled', 'moonblast', 'earthpower'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['waterabsorb'],
+		  items: ['leftovers'],
+		  moves: ['calmmind', 'softboiled', 'earthpower', 'moonblast'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"moonblast",
 			"earthpower",
@@ -8047,6 +9666,25 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	crystaking: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['roughskin'],
+		  items: ['rockyhelmet', 'blacksludge'],
+		  moves: ['toxicspikes', 'iciclecrash', 'poisonjab', 'earthquake', 'rapidspin'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['slushrush'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'iciclecrash', 'earthquake', 'gunkshot', 'superpower'],
+		  level: 84,
+		  },
+		  {
+		  items: ['lifeorb'],
+		  moves: ['honeclaws', 'iceshard', 'gunkshot', 'earthquake', 'iciclecrash'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"gunkshot",
 			"iciclecrash",
@@ -8059,6 +9697,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	fontaba: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['prankster'],
+		  items: ['leftovers'],
+		  moves: ['topsyturvy', 'teleport', 'psychoboost', 'inverseroom', 'taunt'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['lightclay'],
+		  moves: ['reflect', 'lightscreen', 'teleport', 'psychoboost'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['lifeorb'],
+		  moves: ['calmmind', 'naturepower', 'darkpulse', 'recover'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"lightscreen",
 			"reflect",
@@ -8079,6 +9737,33 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	roynapalm: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['chlorophyll'],
+		  items: ['lifeorb'],
+		  moves: ['energyball', 'fireblast', 'earthpower', 'psychic'],
+		  lockedMoves: ['sunnyday'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['flashfire'],
+		  items: ['leftovers'],
+		  moves: ['softboiled', 'lavaplume', 'gigadrain', 'earthpower', 'leechseed'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['solarpower'],
+		  items: ['choicescarf'],
+		  moves: ['fireblast', 'energyball', 'earthpower', 'psychic'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['flashfire'],
+		  items: ['custapberry'],
+		  moves: ['psychic', 'gigadrain', 'substitute', 'earthpower', 'lavaplume'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"sunnyday",
 			"gigadrain",
@@ -8086,7 +9771,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"earthpower",
 			"growth",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	manateet: {
 		tier: "LC",
@@ -8099,6 +9784,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	manatank: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['purepower'],
+		  items: ['weaknesspolicy', 'leftovers'],
+		  moves: ['iceshard', 'liquidation', 'earthquake', 'milkdrink', 'aquajet', 'iciclecrash'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['purepower'],
+		  items: ['leftovers'],
+		  moves: ['bulkup', 'milkdrink', 'liquidation', 'iciclecrash', 'earthquake'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['ironbarbs'],
+		  items: ['rockyhelmet'],
+		  moves: ['milkdrink', 'whirlpool', 'toxic', 'haze'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"milkdrink",
 			"liquidation",
@@ -8112,6 +9817,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	anonymouse: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['electricsurge'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'suckerpunch', 'volttackle', 'owtheedge', 'psychicfangs'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['electricsurge'],
+		  items: ['terrainextender', 'leftovers'],
+		  moves: ['fakeout', 'voltswitch', 'nuzzle', 'superfang', 'owtheedge'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"voltswitch",
 			"volttackle",
@@ -8124,6 +9843,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	motherfuck: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['shadowtag'],
+		  items: ['leftovers'],
+		  moves: ['spore', 'substitute', 'earthquake', 'aerialace', 'bulkup'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['inversion'],
+		  items: ['normalgem'],
+		  moves: ['spore', 'stealthrock', 'uturn', 'earthquake'],
+		  lockedMoves: ['explosion'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"spore",
 			"stealthrock",
@@ -8131,7 +9865,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"roost",
 			"earthquake",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	ninoop: {
 		tier: "LC Uber",
@@ -8140,6 +9874,39 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	draconius: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['hugepower'],
+		  items: ['lifeorb'],
+		  moves: ['dragondance', 'return', 'outrage', 'earthquake', 'superpower'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['hugepower'],
+		  items: ['leftovers'],
+		  moves: ['roost', 'fakeout', 'dragontail', 'bodyslam', 'earthquake'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['intimidate'],
+		  items: ['leftovers'],
+		  moves: ['roost', 'healbell', 'boomburst', 'defog', 'dragontail'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['intimidate'],
+		  items: ['choicespecs'],
+		  moves: ['boomburst', 'dracometeor', 'fireblast', 'icebeam'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['hugepower'],
+		  items: ['sitrusberry'],
+		  moves: ['dragonclaw', 'earthquake', 'firepunch'],
+		  lockedMoves: ['bellydrum', 'quickattack'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"dragondance",
 			"return",
@@ -8160,6 +9927,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	scythear: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['sheerforce'],
+		  items: ['lifeorb'],
+		  moves: ['ironhead', 'honeclaws', 'leechlife', 'earthquake', 'rockclimb'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['compoundeyes'],
+		  items: ['lifeorb'],
+		  moves: ['irontail', 'stoneedge', 'leechlife', 'psychicfangs', 'earthquake'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"swordsdance",
 			"ironhead",
@@ -8167,7 +9948,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"earthquake",
 			"uturn",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 80,
 	},
 	cozload: {
 		tier: "LC",
@@ -8176,6 +9957,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	snugware: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['thickfat', 'overcoat'],
+		  items: ['leftovers'],
+		  moves: ['uturn', 'recover', 'plasmafists', 'nuzzle', 'seedbomb'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['thickfat', 'overcoat'],
+		  items: ['leftovers'],
+		  moves: ['poweruppunch', 'recover', 'lunge', 'plasmafists', 'seedbomb'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"nuzzle",
 			"plasmafists",
@@ -8187,6 +9982,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	fleespecs: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['download'],
+		  items: ['choicespecs'],
+		  moves: ['voltswitch', 'uturn', 'bugbuzz', 'energyball', 'focusblast'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['motordrive'],
+		  items: ['lifeorb'],
+		  moves: ['nastyplot', 'thunderbolt', 'bugbuzz', 'energyball', 'focusblast'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"voltswitch",
 			"thunderbolt",
@@ -8199,14 +10008,28 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	honrade: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['blademaster'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'pixiepummel', 'sacredsword', 'owtheedge', 'leafblade'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['noguard'],
+		  items: ['choiceband', 'choicescarf'],
+		  moves: ['pixiepummel', 'crosschop', 'owtheedge', 'stoneedge', 'earthquake'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"pixiepummel",
 			"sacredsword",
 			"earthquake",
-			"teleport",
+			"swordsdance",
 			"1000folds",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 80,
 	},
 	embortion: {
 		tier: "LC Uber",
@@ -8215,13 +10038,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	premantom: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['pressure', 'insomnia'],
+		  items: ['leftovers'],
+		  moves: ['willowisp', 'calmmind', 'darkpulse', 'softboiled', 'hex'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"calmmind",
 			"darkpulse",
 			"willowisp",
 			"softboiled",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	galavik: {
 		tier: "LC",
@@ -8230,6 +10061,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	galavire: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['levitate'],
+		  items: ['choicespecs'],
+		  moves: ['voltswitch', 'flashcannon', 'overheat', 'thunderbolt', 'psychic'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['levitate'],
+		  items: ['lifeorb'],
+		  moves: ['nastyplot', 'thunderbolt', 'flashcannon', 'energyball', 'overheat'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"thunderbolt",
 			"flashcannon",
@@ -8242,6 +10087,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	galaviste: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['intimidate'],
+		  items: ['assaultvest', 'choicescarf'],
+		  moves: ['punchout', 'doubleironbash', 'plasmafists', 'zenheadbutt', 'earthquake'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['motordrive'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['drainpunch', 'doubleironbash', 'plasmafists', 'earthquake', 'bulkup'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"punchout",
 			"doubleironbash",
@@ -8258,6 +10117,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	florigrace: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['shielddust', 'effectspore'],
+		  items: ['leftovers'],
+		  moves: ['sleazyspores', 'scald', 'spore', 'leechseed', 'icebeam'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['shielddust', 'effectspore'],
+		  items: ['leftovers'],
+		  moves: ['calmmind', 'cottonguard', 'softboiled', 'scald'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['swiftswim'],
+		  items: ['lifeorb'],
+		  moves: ['seedflare', 'earthpower', 'hydropump', 'icebeam', 'calmmind'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"spore",
 			"sleazyspores",
@@ -8275,6 +10154,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	wifemin: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['thickfat'],
+		  items: ['leftovers'],
+		  moves: ['mop', 'softboiled', 'teleport', 'psychic', 'toxic'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['thickfat'],
+		  items: ['leftovers'],
+		  moves: ['calmmind', 'psyshock', 'aurasphere', 'shadowball', 'softboiled'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"teleport",
 			"psychic",
@@ -8282,11 +10175,37 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"softboiled",
 			"lovelykiss",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	uwotto: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['compoundeyes'],
+		  items: ['lifeorb'],
+		  moves: ['hypnosis', 'shiftgear', 'psychicfangs', 'meteormash', 'earthquake'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['compoundeyes'],
+		  items: ['lifeorb'],
+		  moves: ['nastyplot', 'focusblast', 'fireblast', 'flashcannon', 'psychic', 'thunder', 'blizzard'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['intimidate', 'bulletproof'],
+		  items: ['leftovers'],
+		  moves: ['taunt', 'psychicfangs', 'encore', 'icebeam', 'uturn'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['bulletproof'],
+		  items: ['chestoberry'],
+		  moves: ['irondefense', 'calmmind', 'storedpower', 'rest'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"shiftgear",
 			"meteormash",
@@ -8299,6 +10218,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	venowatt: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['levitate'],
+		  items: ['blacksludge', 'rockyhelmet'],
+		  moves: ['roost', 'voltswitch', 'sludgebomb', 'acidspray', 'energyball'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['levitate'],
+		  items: ['blacksludge'],
+		  moves: ['tailglow', 'paraboliccharge', 'sludgebomb', 'gigadrain', 'roost'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"roost",
 			"paraboliccharge",
@@ -8311,6 +10244,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	vaultevour: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['jewelry'],
+		  items: ['darkgem'],
+		  moves: ['pursuit', 'suckerpunch', 'crunch', 'swordsdance', 'ironhead'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['strongjaw'],
+		  items: ['assaultvest'],
+		  moves: ['crunch', 'suckerpunch', 'superpower', 'ironhead', 'psychicfangs'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"crunch",
 			"ironhead",
@@ -8318,11 +10265,19 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"suckerpunch",
 			"swordsdance",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	semdemen: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['immunity', 'insomnia'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'softboiled', 'scald', 'earthpower', 'stickyweb'],
+		  level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"scald",
 			"earthquake",
@@ -8335,6 +10290,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	dragking: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['pozzed'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'pixiepummel', 'earthquake', 'highjumpkick', 'bravebird'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['pozzed'],
+		  items: ['leftovers'],
+		  moves: ['defog', 'pixiepummel', 'moonlight', 'uturn', 'earthquake'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['pozzed'],
+		  items: ['choicescarf', 'choiceband'],
+		  moves: ['uturn', 'pixiepummel', 'highjumpkick', 'bravebird', 'earthquake', 'blazekick'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"pixiepummel",
 			"highjumpkick",
@@ -8348,6 +10323,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	kuuroba: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['hugepower'],
+		  items: ['choicescarf', 'choiceband'],
+		  moves: ['futababreak', 'closecombat', 'zenheadbutt', 'speedweed', 'stoneedge', 'poisonjab'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['hugepower'],
+		  items: ['lifeorb', 'leftovers'],
+		  moves: ['substitute', 'closecombat', 'futababreak', 'zenheadbutt', 'stoneedge', 'speedweed'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"closecombat",
 			"futababreak",
@@ -8360,6 +10349,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	baitmaster: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['regenerator'],
+		  items: ['lifeorb'],
+		  moves: ['scald', 'moonblast', 'uturn', 'icebeam', 'focusblast'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['dazzling'],
+		  items: ['lifeorb'],
+		  moves: ['moonblast', 'icebeam', 'hydropump', 'focusblast'],
+		  lockedMoves: ['nastyplot'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['regenerator'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'uturn', 'scald', 'moonblast', 'taunt'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"scald",
 			"moonblast",
@@ -8368,7 +10378,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"psychic",
 			"uturn",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 80,
 	},
 	spookster: {
 		tier: "LC",
@@ -8381,6 +10391,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	spookzilla: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['bonezone'],
+		  items: ['lifeorb'],
+		  moves: ['spookout', 'shadowbone', 'bonemerang', 'suckerpunch', 'shadowsneak'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['intimidate'],
+		  items: ['lifeorb'],
+		  moves: ['spookout', 'shadowbone', 'earthquake', 'superpower', 'shadowsneak'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['intimidate'],
+		  items: ['leftovers'],
+		  moves: ['willowisp', 'taunt', 'shadowbone', 'earthquake', 'painsplit'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"spookout",
 			"shadowsneak",
@@ -8401,6 +10431,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	potarded: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['unaware'],
+		  items: ['leftovers'],
+		  moves: ['softboiled', 'earthquake', 'stealthrock', 'toxic', 'knockoff'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['rockhead'],
+		  items: ['lifeorb', 'leftovers'],
+		  moves: ['headsmash', 'earthquake', 'powerwhip', 'doubleedge', 'softboiled'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"earthquake",
 			"toxic",
@@ -8413,6 +10457,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	sadfish: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['drizzle'],
+		  items: ['damprock'],
+		  moves: ['scald', 'mop', 'haze', 'foulplay', 'toxic'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"sudoku",
 			"scald",
@@ -8425,6 +10477,29 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	deloris: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['wonderskin'],
+		  items: ['powerherb'],
+		  moves: ['fizzbitch', 'shadowball', 'dazzlinggleam', 'softboiled'],
+		  lockedMoves: ['geomancy'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['wonderskin', 'tanglinghair'],
+		  items: ['leftovers'],
+		  moves: ['softboiled', 'shadowball', 'willowisp', 'fizzbitch'],
+		  lockedMoves: ['sleazyspores'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['wonderskin'],
+		  items: ['lifeorb', 'leftovers'],
+		  moves: ['fizzbitch', 'shadowball', 'softboiled', 'calmmind'],
+		  lockedMoves: ['blueflare'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"geomancy",
 			"fizzbitch",
@@ -8437,6 +10512,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	oreon: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['sweetveil'],
+		  items: ['leftovers'],
+		  moves: ['baddybad', 'calmmind', 'moonblast', 'surf', 'energyball', 'substitute'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['superluck'],
+		  items: ['focussash'],
+		  moves: ['darkpulse', 'energyball', 'psychic'],
+		  lockedMoves: ['focusenergy', 'lactoseshot'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"baddybad",
 			"moonblast",
@@ -8449,6 +10539,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	farfigtron: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['moldbreaker'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'machpunch', 'earthquake', 'firebomb', 'closecombat'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['noguard'],
+		  items: ['lifeorb', 'choicescarf'],
+		  moves: ['fireblast', 'focusblast', 'thunder', 'highjumpkick', 'irontail'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['noguard'],
+		  items: ['lifeorb'],
+		  moves: ['focusblast', 'fireblast', 'thunder', 'vacuumwave'],
+		  lockedMoves: ['nastyplot'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"firebomb",
 			"closecombat",
@@ -8461,6 +10572,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	regirode: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['shadowshield'],
+		  items: ['weaknesspolicy'],
+		  moves: ['spooperpower', 'erosionwave', 'aurasphere', 'earthpower'],
+		  lockedMoves: ['rockpolish'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"rockpolish",
 			"calmmind",
@@ -8473,6 +10593,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	regimelt: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['weakarmor'],
+		  items: ['weaknesspolicy'],
+		  moves: ['spooperpower', 'iciclecrash', 'iceshard', 'liquidation', 'strength'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['shadowshield'],
+		  items: ['weaknesspolicy'],
+		  moves: ['spooperpower', 'iciclecrash', 'liquidation', 'strength'],
+		  lockedMoves: ['agility'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"spooperpower",
 			"iciclecrash",
@@ -8480,11 +10615,19 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"shadowsneak",
 			"earthquake",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	regirust: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['shadowshield],
+		  items: ['leftovers'],
+		  moves: ['willowisp', 'stealthrock', 'flashcannon', 'earthpower', 'painsplit'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"spooperpower",
 			"closecombat",
@@ -8492,11 +10635,25 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"stealthrock",
 			"willowisp",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	vivaiger: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['flareheal'],
+		  items: ['flameorb'],
+		  moves: ['calmmind', 'discharge', 'energyball', 'recover', 'earthpower'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['regenerator'],
+		  items: ['assaultvest', 'choicespecs'],
+		  moves: ['voltswitch', 'aurasphere', 'overenergize', 'energyball', 'fireblast'],
+		  level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"overenergize",
 			"overheat",
@@ -8509,6 +10666,19 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	heliofug: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['drought'],
+		  items: ['lifeorb'],
+		  moves: ['dragondance', 'vcreate', 'dragonclaw', 'earthquake', 'extremespeed'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['drizzle'],
+		  items: ['lifeorb'],
+		  moves: ['thunder', 'weatherball', 'spacialrend', 'dragonascent', 'extremespeed'],
+		  }
+		],
 		randomBattleMoves: [
 			"dragondance",
 			"dragonclaw",
@@ -8529,6 +10699,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	peperee: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['soundproof'],
+		  items: ['sitrusberry'],
+		  moves: ['greatrage', 'earthquake', 'stoneedge'],
+		  lockedMoves: ['bellydrum', 'accelerock'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['soundproof'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'greatrage', 'slackoff', 'toxic', 'stoneedge'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['soundproof'],
+		  items: ['leftovers'],
+		  moves: ['bulkup', 'greatrage', 'slackoff', 'earthquake', 'stoneedge'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"greatrage",
 			"stealthrock",
@@ -8549,6 +10740,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	saudoge: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['skilllink'],
+		  items: ['choicespecs', 'choicescarf'],
+		  moves: ['aeroblast', 'dracometeor', 'uturn', 'earthpower'],
+		  lockedMoves: ['wowwiener'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['skilllink'],
+		  items: ['lifeorb', 'leftovers'],
+		  moves: ['nastyplot', 'aeroblast', 'earthpower', 'glare'],
+		  lockedMoves: ['wowwiener'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"wowwiener",
 			"aeroblast",
@@ -8569,6 +10776,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	davyjaws: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['download'],
+		  items: ['choicescarf'],
+		  moves: ['plunder', 'closecombat', 'earthquake', 'owtheedge', 'anchorshot'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['moldbreaker'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'earthquake', 'plunder', 'closecombat', 'suckerpunch'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['download', 'moldbreaker'],
+		  items: ['watergem'],
+		  moves: ['closecombat', 'swordsdance', 'suckerpunch', 'earthquake'],
+		  lockedMoves: ['plunder'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"closecombat",
 			"plunder",
@@ -8585,6 +10813,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	bunnorgy: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['hugepower'],
+		  items: ['lifeorb'],
+		  moves: ['fakeout', 'earthquake', 'flamecharge', 'return', 'highjumpkick', 'knockoff'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['furcoat'],
+		  items: ['leftovers'],
+		  moves: ['softboiled', 'encore', 'superfang', 'toxic', 'knockoff'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"fakeout",
 			"quickattack",
@@ -8605,6 +10847,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	fazeagle: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['competitive'],
+		  items: ['focussash'],
+		  moves: ['searingshot', 'aeroblast', 'energyball', 'boomburst'],
+		  lockedMoves: ['toke'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['sniper'],
+		  items: ['razorclaw'],
+		  moves: ['aeroblast', 'overheat', 'irontail', 'energyball'],
+		  lockedMoves: ['focusenergy'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"toke",
 			"aeroblast",
@@ -8624,6 +10882,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	oogabuga: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['intimidate'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['seedflare', 'bugbuzz', 'earthpower', 'focusblast'],
+		  lockedMoves: ['quiverdance'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['grassysurge'],
+		  items: ['leftovers'],
+		  moves: ['roost', 'seedflare', 'defog', 'bugbuzz', 'earthpower'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"quiverdance",
 			"seedflare",
@@ -8640,6 +10913,34 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	emplyin: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['contrary'],
+		  items: ['lifeorb', 'leftovers'],
+		  moves: ['knockoff', 'thousandarrows', 'copycat'],
+		  lockedMoves: ['closecombat', 'moonlight'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['leftovers'],
+		  moves: ['encore', 'copycat', 'knockoff', 'uturn', 'playrough', 'thunderwave'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['ironball'],
+		  moves: ['copycat', 'dig', 'suckerpunch', 'encore'], // :^)
+		  level: 84,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['lifeorb'],
+		  moves: ['substitute', 'encore', 'knockoff', 'thousandarrows'],
+		  lockedMoves: ['disable'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"knockoff",
 			"closecombat",
@@ -8656,6 +10957,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	upbeddit: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['trace'],
+		  items: ['leftovers'],
+		  moves: ['calmmind', 'recover', 'focusblast', 'shadowball', 'fireblast'],
+		  lockedMoves: ['psystrike'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['trace'],
+		  items: ['leftovers'],
+		  moves: ['calmmind', 'bulkup', 'recover', 'storedpower'], // :^)
+		  level: 84,
+		  },
+		  {
+		  abilities: ['trace'],
+		  items: ['choicespecs'],
+		  moves: ['psystrike', 'voltswitch', 'fireblast', 'icebeam', 'focusblast'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"mop",
 			"recover",
@@ -8672,6 +10994,35 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	wheygle: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['unburden'],
+		  items: ['sitrusberry'],
+		  moves: ['acrobatics', 'drainpunch', 'suckerpunch', 'anchorshot'],
+		  lockedMoves: ['bellydrum'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['noguard'],
+		  items: ['lifeorb'],
+		  moves: ['dynamicpunch', 'stoneedge', 'irontail', 'bravebird', 'suckerpunch'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['unburden'],
+		  items: ['flyinggem'],
+		  moves: ['drainpunch', 'swordsdance', 'knockoff', 'anchorshot'],
+		  lockedMoves: ['acrobatics'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['steelworker'],
+		  items: ['choicescarf', 'choiceband'],
+		  moves: ['bravebird', 'superpower', 'machpunch', 'uturn'],
+		  lockedMoves: ['anchorshot'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"bellydrum",
 			"acrobatics",
@@ -8683,6 +11034,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	gangnome: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['concert'],
+		  items: ['leftovers'],
+		  moves: ['rest', 'protect', 'substitute', 'foulplay', 'toxic'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['naturalcure'],
+		  items: ['leftovers'],
+		  moves: ['mop', 'teleport', 'toxic', 'foulplay', 'healbell'],
+		  lockedMoves: ['rest'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"toxic",
 			"protect",
@@ -8690,11 +11056,31 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"foulplay",
 			"teleport",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	pyongnome: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['sheerforce'],
+		  items: ['lifeorb'],
+		  moves: ['baddybad', 'ironhead', 'thunderbolt', 'zenheadbutt', 'focusblast'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['intimidate', 'bulletproof'],
+		  items: ['leftovers'],
+		  moves: ['willowisp', 'substitute', 'thunderbolt', 'baddybad', 'meteormash'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['sheerforce'],
+		  items: ['choicescarf'],
+		  moves: ['trick', 'ironhead', 'thunderbolt', 'superpower', 'baddybad'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"meteormash",
 			"superpower",
@@ -8711,6 +11097,28 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	ubruh: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['stamina'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'shoreup', 'knockoff', 'smackdown'],
+		  lockedMoves: ['thousandwaves'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['moxie'],
+		  items: ['lifeorb'],
+		  moves: ['earthquake', 'closecombat', 'stoneedge', 'blazekick'],
+		  lockedMoves: ['rockpolish'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['stamina', 'moxie'],
+		  items: ['leftovers'],
+		  moves: ['bulkup', 'shoreup', 'thousandwaves', 'drainpunch', 'rockclimb'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"shoreup",
 			"bulkup",
@@ -8727,6 +11135,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	walruskie: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['defiant', 'steelworker'],
+		  items: ['manifesto'],
+		  moves: ['bulletpunch', 'liquidation', 'bulkup', 'iciclecrash', 'closecombat'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"liquidation",
 			"meteormash",
@@ -8744,6 +11160,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	warudio: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['regenerator'],
+		  items: ['lifeorb'],
+		  moves: ['pursuit', 'knockoff', 'suckerpunch', 'uturn', 'closecombat', 'taunt'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['regenerator'],
+		  items: ['lifeorb'],
+		  moves: ['aurasphere', 'darkpulse', 'icebeam', 'sludgebomb'],
+		  lockedMoves: ['nastyplot'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['regenerator'],
+		  items: ['lifeorb'],
+		  moves: ['uturn', 'lovelykiss', 'closecombat', 'suckerpunch', 'knockoff'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"knockoff",
 			"closecombat",
@@ -8760,6 +11197,29 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	donutsteel: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['neuroforce', 'trace'],
+		  items: ['powerherb'],
+		  moves: ['baddybad', 'flashcannon', 'focusblast', 'thunderbolt'],
+		  lockedMoves: ['geomancy'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['neuroforce', 'trace'],
+		  items: ['lifeorb'],
+		  moves: ['precipiceblades', 'sunsteelstrike', 'falconpunch', 'owtheedge'],
+		  lockedMoves: ['shiftgear'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['neuroforce', 'trace'],
+		  items: ['lifeorb'],
+		  moves: ['sunsteelstrike', precipiceblades', extremespeed', 'owtheedge'],
+		  lockedMoves: ['swordsdance'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"geomancy",
 			"flashcannon",
@@ -8775,6 +11235,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	fondupple: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['intimidate'],
+		  items: ['leftovers', 'rockyhelmet'],
+		  moves: ['milkdrink', 'leechseed', 'playrough', 'aromatherapy', 'powerwhip'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['intimidate'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['milkdrink', 'bulkup', 'pixiepummel', 'powerwhip', 'owtheedge'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"milkdrink",
 			"pixiepummel",
@@ -8787,6 +11261,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	baloofang: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['unaware'],
+		  items: ['leftovers'],
+		  moves: ['roost', 'willowisp', 'dazzlinggleam', 'hex'],
+		  lockedMoves: ['spectralthief'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['simple'],
+		  items: ['leftovers'],
+		  moves: ['stockpile', 'nastyplot', 'roost', 'shadowball', 'dazzlinglgeam'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"hex",
 			"willowisp",
@@ -8794,11 +11283,32 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"spectralthief",
 			"focusblast",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	socckat: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['scrappy'],
+		  items: ['salacberry'],
+		  moves: ['swordsdance', 'taunt'],
+		  lockedMoves: ['endure', 'reversal', 'flail'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['striker'],
+		  items: ['lifeorb'],
+		  moves: ['fakeout', 'highjumpkick', 'megakick', 'uturn', 'blazekick'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['scrappy'],
+		  items: ['lifeorb'],
+		  moves: ['fakeout', 'closecombat', 'return', 'swordsdance', 'substitute'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"highjumpkick",
 			"return",
@@ -8806,7 +11316,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"fakeout",
 			"swordsdance",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	egylamp: {
 		tier: "LC",
@@ -8815,6 +11325,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	ruselamp: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['dazzling'],
+		  items: ['choicescarf'],
+		  moves: ['voltswitch', 'fireblast', 'psychic', 'thunderbolt', 'trick'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['illuminate'],
+		  items: ['lifeorb'],
+		  moves: ['thunder', 'focusblast', 'fireblast', 'psychic', 'nastyplot'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['flashfire'],
+		  items: ['leftovers'],
+		  moves: ['voltswitch', 'fireblast', 'recover', 'willowisp', 'psychic'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"thunderbolt",
 			"psychic",
@@ -8831,6 +11361,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	tunakking: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['levitate'],
+		  items: ['choicescarf', 'choicespecs'],
+		  moves: ['trick', 'fierydance', 'psyshock', 'earthpower', 'boomburst'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['levitate'],
+		  items: ['lifeorb'],
+		  moves: ['taunt', 'fierydance', 'psyshock', 'earthpower', 'uturn'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"fierydance",
 			"psyshock",
@@ -8847,6 +11391,28 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	hohohoming: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['technician'],
+		  items: ['lifeorb'],
+		  moves: ['waterpulse', 'vacuumwave', 'aircutter', 'earthpower'],
+		  lockedMoves: ['frostbreath'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['sniper'],
+		  items: ['razorclaw'],
+		  moves: ['freezedry', 'aeroblast', 'earthpower', 'focusblast'],
+		  lockedMoves: ['focusenergy'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['technician'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['roost', 'taunt', 'frostbreath', 'uturn', 'waterpulse'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"frostbreath",
 			"earthpower",
@@ -8863,6 +11429,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	hopault: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['striker'],
+		  items: ['lifeorb'],
+		  moves: ['highjumpkick', 'megakick', 'uturn', 'blazekick', 'knockoff', 'rapidspin'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['guts'],
+		  items: ['flameorb'],
+		  moves: ['uturn', 'highjumpkick', 'knockoff', 'rapidspin', 'earthquake'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"highjumpkick",
 			"uturn",
@@ -8879,6 +11459,33 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	senketula: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['intimidate'],
+		  items: ['leftovers'],
+		  moves: ['pursuit', 'stickyweb', 'uturn', 'spikes', 'knockoff'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['intimidate'],
+		  items: ['assaultvest'],
+		  moves: ['uturn', 'knockoff', 'gunkshot', 'superpower', 'earthquake'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['unburden'],
+		  items: ['sitrusberry'],
+		  moves: ['leechlife', 'owtheedge', 'gunkshot', 'earthquake'],
+		  lockedMoves: ['swordsdance'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['blademaster'],
+		  items: ['choiceband'],
+		  moves: ['uturn', 'owtheedge', '1000folds', 'psychocut', 'earthquake'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"stickyweb",
 			"knockoff",
@@ -8892,6 +11499,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	falcaptain: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['ironfist'],
+		  items: ['choiceband', 'choicescarf'],
+		  moves: ['uturn', 'closecombat', 'flareblitz', 'icepunch'],
+		  lockedMoves: ['falconpunch'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['guts'],
+		  items: ['flameorb'],
+		  moves: ['falconpunch', 'closecombat', 'bulkup', 'knockoff', 'flareblitz'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['flashfire'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['encore', 'roost', 'falconpunch', 'closecombat', 'flareblitz'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"falconpunch",
 			"closecombat",
@@ -8908,6 +11536,33 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	traumobra: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['prankster'],
+		  items: ['blacksludge'],
+		  moves: ['encore', 'moonblast', 'lovelykiss', 'teleport', 'sludgebomb'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['magicbounce'],
+		  items: ['lifeorb'],
+		  moves: ['nastyplot', 'moonblast', 'sludgewave', 'focusblast', 'shadowball'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['prankster', 'magicbounce'],
+		  items: ['blacksludge'],
+		  moves: ['glare', 'moonblast', 'moonlight', 'toxicspikes', 'encore'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['magicbounce'],
+		  items: ['blacksludge', 'lifeorb'],
+		  moves: ['gunkshot', 'pixiepummel', 'firefang', 'knockoff'],
+		  lockedMoves: ['coil'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"glare",
 			"encore",
@@ -8924,6 +11579,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	reptrill: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['sheerforce'],
+		  items: ['lifeorb'],
+		  moves: ['irontail', 'rockclimb', 'zenheadbutt', 'earthquake', 'honeclaws', 'quicksand'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['sheerforce'],
+		  items: ['lifeorb', 'leftovers'],
+		  moves: ['stealthrock', 'earthquake', 'ironhead', 'rockclimb', 'quicksand'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"ironhead",
 			"earthquake",
@@ -8940,18 +11609,48 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	feferun: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['flareheal', 'flareboost'],
+		  items: ['flameorb'],
+		  moves: ['fierydance', 'bugbuzz', 'earthpower', 'icebeam', 'protect'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['flareheal'],
+		  items: ['leftovers'],
+		  moves: ['protect', 'fierydance', 'earthpower', 'calmmind'],
+		  lockedMoves: ['scorchedearth'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"earthpower",
 			"fierydance",
 			"morningsun",
 			"thunderbolt",
-			"scorched earth",
+			"scorchedearth",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	jerkle: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['psychicsurge'],
+		  items: ['leftovers', 'terrainextender'],
+		  moves: ['stealthrock', 'teleport', 'photongeyser', 'powergem', 'moonlight'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['psychicsurge'],
+		  items: ['lifeorb'],
+		  moves: ['photongeyser', 'nastyplot', 'earthpower', 'powergem'],
+		  lockedMoves: ['rockpolish'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"trickroom",
 			"photongeyser",
@@ -8964,6 +11663,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	faptime: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['speedboost'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'photongeyser', 'earthquake', 'stoneedge', 'protect'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"swordsdance",
 			"photongeyser",
@@ -8976,6 +11683,42 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	shiriman: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['prankster'],
+		  items: ['leftovers'],
+		  moves: ['yawn', 'teleport', 'moonblast', 'hyperspacehole'],
+		  lockedMoves: ['lunardance'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['leftovers'],
+		  moves: ['glare', 'teleport', 'pixiepummel', 'softboiled', 'taunt'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['lightclay'],
+		  moves: ['willowisp', 'moonblast', 'hyperspacehole'],
+		  lockedMoves: ['reflect', 'lightscreen'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['softboiled', 'pixiepummel', 'enema', 'zenheadbutt'],
+		  lockedMoves: ['bulkup'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['leftovers'],
+		  moves: ['softboiled', 'moonblast', 'psyshock', 'flamethrower'],
+		  lockedMoves: ['calmmind', 'willowisp'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"glare",
 			"softboiled",
@@ -8992,6 +11735,28 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	dedwheat: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['truant'],
+		  items: ['blacksludge'],
+		  moves: ['protect', 'sludgebomb', 'leechseed', 'softboiled'],
+		  lockedMoves: ['skillswap'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['effectspore'],
+		  items: ['blacksludge'],
+		  moves: ['sludgebomb', 'substitute', 'softboiled', 'spore', 'energyball'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['effectspore'],
+		  items: ['blacksludge'],
+		  moves: ['softboiled', 'gigadrain', 'protect'],
+		  lockedMoves: ['toxic', 'venoshock'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"skillswap",
 			"leechseed",
@@ -9008,6 +11773,40 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	spedo: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['arenatrap'],
+		  items: ['choicescarf', 'choiceband'],
+		  moves: ['trick', 'pixiepummel', 'earthquake', 'superpower', 'psychicfangs'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['arenatrap'],
+		  items: ['leftovers'],
+		  moves: ['slackoff', 'bulkup', 'playrough', 'suckerpunch', 'earthquake'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['sheerforce'],
+		  items: ['lifeorb'],
+		  moves: ['playrough', 'fireblast', 'thunderbolt', 'suckerpunch', 'zenheadbutt', 'earthquake', 'rockclimb'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['arenatrap', 'sheerforce'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['moonblast', 'fireblast', 'thunderbolt', 'focusblast', 'sludgebomb'],
+		  lockedMoves: ['nastyplot'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['arenatrap'],
+		  items: ['leftovers'],
+		  moves: ['substitute', 'bulkup', 'playrough', 'earthquake'],
+		  lockedMoves: ['encore'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"bulkup",
 			"playrough",
@@ -9024,13 +11823,35 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	apartmant: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['unburden'],
+		  items: ['whiteherb'],
+		  moves: ['earthquake', 'stoneedge', 'attackorder', 'psychicfangs'],
+		  lockedMoves: ['shellsmash'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['shellarmor'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'healorder', 'uturn', 'rockclimb', 'earthquake'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['moreroom'],
+		  items: ['mentalherb', 'lifeorb'],
+		  moves: ['stoneedge', 'earthquake', 'crunch'],
+		  lockedMoves: ['trickroom', 'uturn'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"shellsmash",
 			"attackorder",
 			"stoneedge",
 			"earthquake",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 80,
 	},
 	fuermiga: {
 		tier: "LC",
@@ -9039,6 +11860,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	maripyro: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['magicguard'],
+		  items: ['choicescarf'],
+		  moves: ['uturn', 'flareblitz', 'overbite', 'psychicfangs', 'gunkshot'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['magicguard'],
+		  items: ['lifeorb', 'leftovers'],
+		  moves: ['flareblitz', 'roost', 'willowisp', 'overbite', 'uturn'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"flareblitz",
 			"overbite",
@@ -9051,6 +11886,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	confirmabi: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['dazzling'],
+		  items: ['lifeorb'],
+		  moves: ['nastyplot', 'gigadrain', 'earthpower', 'psyshock', 'shadowball'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['dazzling'],
+		  items: ['choicespecs'],
+		  moves: ['trick', 'uturn', 'leafstorm', 'psychic', 'earthpower'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"nastyplot",
 			"leafstorm",
@@ -9058,11 +11907,25 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"psychic",
 			"recover",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	bulbapedo: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['analytic'],
+		  items: ['blacksludge'],
+		  moves: ['substitute', 'leechseed', 'clearsmog', 'gigadrain', 'gunkshot'],
+		  level: 84,
+		  }
+		  {
+		  abilities: ['analytic'],
+		  items: ['blacksludge', 'lifeorb'],
+		  moves: ['nastyplot', 'gigadrain', 'sludgebomb', 'earthpower', 'softboiled'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"leechseed",
 			"gunkshot",
@@ -9079,6 +11942,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	wantnaut: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['ironbarbs'],
+		  items: ['airballoon'],
+		  moves: ['stealthrock', 'spikes', 'toxicspikes', 'heavyslam', 'gunkshot', 'earthquake'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['ironbarbs'],
+		  items: ['blacksludge', 'rockyhelmet', 'lifeorb'],
+		  moves: ['slackoff', 'gunkshot', 'earthquake', 'ironhead', 'autotomize', 'crunch'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"stealthrock",
 			"slackoff",
@@ -9092,6 +11969,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	cansumor: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['corrosion'],
+		  items: ['blacksludge'],
+		  moves: ['toxic', recover', 'knockoff', 'teleport', 'banefulbunker'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['shedskin'],
+		  items: ['blacksludge'],
+		  moves: ['superpower', 'poisonjab', 'crunch'],
+		  lockedMoves: ['rest', 'bulkup'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"toxic",
 			"softboiled",
@@ -9099,7 +11991,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"teleport",
 			"gunkshot",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 76,
 	},
 	snuffant: {
 		tier: "LC",
@@ -9108,6 +12000,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	cokemmoth: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['snowwarning'],
+		  items: ['icyrock'],
+		  moves: ['auroraveil', 'blizzard', 'sleeppowder', 'stealthrock', 'knockoff'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['speedboost'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'protect', 'earthquake', 'sleeppowder', 'icehammer', 'rockclimb'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"auroraveil",
 			"iciclecrash",
@@ -9120,6 +12026,33 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	grimdak: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['darkaura'],
+		  items: ['lifeorb'],
+		  moves: ['suckerpunch', 'owtheedge', 'pursuit', 'swordsdance', '1000folds'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['darkaura'],
+		  items: ['choicescarf'],
+		  moves: ['owtheedge', '1000folds', 'aurasphere', 'darkpulse', 'trick'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['soulheart'],
+		  items: ['choicescarf'],
+		  moves: ['darkpulse', 'flashcannon', 'earthpower', 'aurasphere', 'trick'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['moody'],
+		  items: ['leftovers'],
+		  moves: ['darkvoid', '1000folds', 'darkpulse', 'aurasphere'],
+		  lockedMoves: ['substitute'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"owtheedge",
 			"1000folds",
@@ -9132,6 +12065,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	shroofle: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['poisonheal'],
+		  items: ['toxicorb'],
+		  moves: ['spore', 'foulplay', 'knockoff', 'toxicspikes', 'softboiled'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['poisonheal'],
+		  items: ['toxicorb'],
+		  moves: ['darkpulse', 'protect', 'sludgebomb', 'thunderbolt'],
+		  lockedMoves: ['calmmind'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"foulplay",
 			"spore",
@@ -9148,6 +12096,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	thundacock: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['adaptability'],
+		  items: ['lifeorb'],
+		  moves: ['roost', 'airslash', 'fireblast', 'thunderbolt', 'voltswitch'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['adaptability'],
+		  items: ['leftovers'],
+		  moves: ['swordsdance', 'volttackle', 'bravebird', 'closecombat', 'substitute'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"volttackle",
 			"bravebird",
@@ -9164,11 +12126,25 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	avianjoin: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['flareheal'],
+		  items: ['flameorb'],
+		  moves: ['heavyslam', 'bravebird', 'roost', 'substitute', 'heatcrash', 'taunt'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['flareheal'],
+		  items: ['flameorb'],
+		  moves: ['bulkup', 'bravebird', 'protect', heavyslam', 'heatcrash', 'roost'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"heavyslam",
 			"heatcrash",
 			"roost",
-			"defog",
+			"bravebird",
 			"bulkup",
 		],
 		randomBattleLevel: 80,
@@ -9180,6 +12156,19 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	illumatrix: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['illuminate'],
+		  items: ['lifeorb'],
+		  moves: ['hurricane', 'roost', 'calmmind', 'heatwave', 'psyshock'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['analytic'],
+		  items: ['choicespecs'],
+		  moves: ['aeroblast', 'psychoboost', 'uturn', 'earthpower', 'heatwave'],
+		  }
+		],
 		randomBattleMoves: [
 			"psychoboost",
 			"aeroblast",
@@ -9196,6 +12185,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	yeerex: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['sheerforce', 'moxie'],
+		  items: ['lifeorb'],
+		  moves: ['dragondance', 'knockoff', 'rockclimb', 'earthquake', 'zenheadbutt', 'suckerpunch'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"dragondance",
 			"knockoff",
@@ -9212,13 +12209,34 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	cthullord: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['shellarmor'],
+		  items: ['leftovers'],
+		  moves: ['acupressure', 'rest', 'sleeptalk', 'rockclimb'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['swiftswim'],
+		  items: ['whiteherb'],
+		  moves: ['stoneedge', 'originpulse', 'earthquake', 'icebeam'],
+		  lockedMoves: ['shellsmash'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['regenerator'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'spikes', 'toxicspikes', 'scald', 'rockclimb', 'knockoff'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"shellsmash",
 			"originpulse",
 			"stoneedge",
 			"zenheadbutt",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	quiboom: {
 		tier: "LC",
@@ -9227,17 +12245,47 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	gynuke: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['stormdrain'],
+		  items: ['choiceband'],
+		  moves: ['vcreate', 'uturn', 'waterfall', 'gunkshot', 'psychicfangs'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['stormdrain'],
+		  items: ['lifeorb'],
+		  moves: ['steameruption', 'uturn', 'vcreate', 'earthpower', 'overheat'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['stormdrain'],
+		  items: ['choicespecs'],
+		  moves: ['steameruption', 'uturn', 'sludgebomb', 'icebeam'],
+		  lockedMoves: ['holyduty'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"vcreate",
 			"waterfall",
 			"uturn",
 			"explosion",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	rainglock: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['megalauncher'],
+		  items: ['choicescarf'],
+		  moves: ['originpulse', 'aurasphere', 'darkpulse', 'energyball', 'trick'],
+		  level: 80,
+		  },
+		  }
+		],
 		randomBattleMoves: [
 			"originpulse",
 			"icebeam",
@@ -9254,6 +12302,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	substarr: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['galvanize'],
+		  items: ['leftovers'],
+		  moves: ['calmmind', 'scald', 'slackoff', 'icebeam'],
+		  lockedMoves: ['boomburst'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['stormdrain'],
+		  items: ['leftovers'],
+		  moves: ['voltswitch', 'scald', 'healbell', 'toxic'],
+		  lockedMoves: ['slackoff'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"boomburst",
 			"scald",
@@ -9267,6 +12331,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	hofucno: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['shadowtag'],
+		  items: ['leftovers'],
+		  moves: ['spore', 'substitute', 'calmmind', 'scald, 'airslash'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['shadowtag'],
+		  items: ['choicespecs'],
+		  moves: ['roost', 'hydropump', 'hurricane', 'icebeam'],
+		  lockedMoves: ['trick'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"spore",
 			"calmmind",
@@ -9287,6 +12366,28 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	hornititan: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['refrigerate'],
+		  items: ['leftovers'],
+		  moves: ['return', 'earthquake', 'glare', 'recover'],
+		  lockedMoves: ['rapidspin'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['filter'],
+		  items: ['leftovers', 'rockyhelmet'],
+		  moves: ['stealthrock', 'recover', 'earthquake', 'icehammer', 'lovelykiss', 'rapidspin'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['refrigerate'],
+		  items: ['choiceband'],
+		  moves: ['earthquake', 'woodhammer', 'return', 'iceshard'],
+		  lockedMoves: ['explosion'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"iciclecrash",
 			"earthquake",
@@ -9295,7 +12396,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"glare",
 			"recover",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 76,
 	},
 	preasu: {
 		tier: "LC",
@@ -9304,6 +12405,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	undastand: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['waitforit'],
+		  items: ['leftovers'],
+		  moves: ['protect', 'substitute', 'slackoff', 'baddybad', 'flamethrower'],
+		  lockedMoves: ['boltstrike'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['analytic, waitforit'],
+		  items: ['leftovers'],
+		  moves: ['thunderbolt', 'fireblast', 'baddybad', 'energyball'],
+		  lockedMoves: ['calmmind'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"boltstrike",
 			"icepunch",
@@ -9320,6 +12437,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	banageddon: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['adminabuse'],
+		  items: ['choiceband', 'lifeorb'],
+		  moves: ['banhammer', 'woodhammer', 'icehammer', 'hammerarm', 'crabhammer'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['intimidate'],
+		  items: ['normalgem'],
+		  moves: ['inverseroom', 'lastresort'], // :^)
+		  level: 84,
+		  },
+		  {
+		  abilities: ['intimidate', 'adminabuse', 'moldbreaker'],
+		  items: ['assaultvest'],
+		  moves: ['poweruppunch', 'banhammer', 'earthquake', 'knockoff', 'crabhammer', 'icehammer'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"banhammer",
 			"hammerarm",
@@ -9327,11 +12464,41 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"partingshot",
 			"earthquake",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	acufront: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['forecast'],
+		  items: ['choicescarf'],
+		  moves: ['voltswitch', 'shadowball', 'focusblast', 'fireblast'],
+		  lockedMoves: ['boomburst'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['forecast'],
+		  items: ['damprock'],
+		  moves: ['hurricane', 'thunder', 'weatherball', 'boomburst'],
+		  lockedMoves: ['raindance'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['forecast'],
+		  items: ['heatrock'],
+		  moves: ['solarbeam', 'weatherball', 'icebeam', 'thunderbolt', 'boomburst'],
+		  lockedMoves: ['sunnyday'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['forecast'],
+		  items: ['icyrock'],
+		  moves: ['thunderbolt', 'fireblast', 'boomburst', 'focusblast'],
+		  lockedMoves: ['hail', 'blizzard'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"boomburst",
 			"voltswitch",
@@ -9353,6 +12520,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	militant: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['infiltrator'],
+		  items: ['choiceband'],
+		  moves: ['uturn', 'gunkshot', 'psychicfangs', 'extremespeed', 'superpower'], 
+		  level: 76,
+		  },
+		  {
+		  abilities: ['strongjaw'],
+		  items: ['focussash', 'lifeorb'],
+		  moves: ['overbite', 'leechlife', 'swordsdance', 'psychicfangs', 'firefang', 'icefang', 'thunderfang'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['infiltrator'],
+		  items: ['lifeorb'],
+		  moves: ['leechlife', 'gunkshot', 'knockoff', 'psychicfangs', 'superpower'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"overbite",
 			"gunkshot",
@@ -9365,6 +12552,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	shiggydig: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['defiant'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'homerunbat', 'slackoff', 'earthquake', 'knockoff'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"homerunbat",
 			"stealthrock",
@@ -9382,6 +12577,28 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	reagain: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['arenatrap', 'dryskin'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['recover', 'earthpower', 'darkpulse', 'nastyplot', 'sludgebomb'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['arenatrap', 'dryskin'],
+		  items: ['leftovers'],
+		  moves: ['spikes', 'recover', 'earthquake', 'uturn', 'darkpulse'],
+		  lockedMoves: ['stealthrock'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['arenatrap', 'dryskin'],
+		  items: ['leftovers'],
+		  moves: ['gunkshot', 'stoneedge', 'earthquake'],
+		  lockedMoves: ['coil', 'suckerpunch'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"recover",
 			"knockoff",
@@ -9398,6 +12615,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	viristal: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['protean'],
+		  items: ['lifeorb'],
+		  moves: ['trickroom', 'thunderbolt', 'energyball', 'powergem', 'earthpower'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['protean'],
+		  items: ['leftovers', 'custapberry'],
+		  moves: ['tailglow', 'powergem', 'earthpower', 'flamethrower', 'psyshock'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"trickroom",
 			"powergem",
@@ -9405,7 +12636,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"thunderbolt",
 			"tailglow",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	rolango: {
 		tier: "LC",
@@ -9414,6 +12645,28 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	dreameme: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['multiscale', 'naturalcure'],
+		  items: ['leftovers'],
+		  moves: ['softboiled', 'mop', 'teleport', 'moonblast', 'spikes'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['multiscale'],
+		  items: ['leftovers']
+		  moves: ['dragontail', 'thunderwave', 'moonblast'],
+		  lockedMoves: ['rest', 'sleeptalk'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['multiscale', 'naturalcure', 'trace'],
+		  items: ['leftovers'],
+		  moves: ['moonblast', 'knockoff', 'softboiled'],
+		  lockedMoves: ['trickroom', 'teleport'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"softboiled",
 			"spikes",
@@ -9426,6 +12679,33 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	pearchie: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['moody'],
+		  items: ['leftovers'],
+		  moves: ['substitute', 'hornleech', 'softboiled', 'earthquake', 'boomburst'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['reckless'],
+		  items: ['leftovers'],
+		  moves: ['dragondance', doubleedge', 'woodhammer', 'flareblitz', 'highjumpkick', 'volttackle'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['reckless'],
+		  items: ['choiceband'],
+		  moves: ['woodhammer', 'highjumpkick', 'flareblitz', 'volttackle', 'headmsash'],
+		  lockedMoves: ['extremespeed'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['unaware'],
+		  items: ['lifeorb'],
+		  moves: ['bulkup', 'extremespeed', 'synthesis', 'earthquake', 'crunch'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"softboiled",
 			"substitute",
@@ -9438,6 +12718,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	tarditank: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['sturdy'],
+		  items: ['leftovers', 'rockyhelmet', 'chestoberry'],
+		  moves: ['toxic', 'infestation', 'scald', 'powersplit'],
+		  lockedMoves: ['rest'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['sturdy'],
+		  items: ['leftovers'],
+		  moves: ['rest', 'sleeptalk', 'metronome', 'substitute'], // :^)
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"rest",
 			"scald",
@@ -9445,7 +12740,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 			"toxic",
 			"powersplit",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	iplora: {
 		tier: "LC",
@@ -9454,6 +12749,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	chromox: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['download'],
+		  items: ['choicespecs'],
+		  moves: ['voltswitch', 'flashcannon', 'energyball', 'thunderbolt'],
+		  lockedMoves: ['fireblast'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['download'],
+		  items: ['chilldrive'],
+		  moves: ['voltswitch', 'fireblast', 'flashcannon', 'thunderbolt'],
+		  lockedMoves: ['technoblast'],
+		  level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"eruption",
 			"voltswitch",
@@ -9474,6 +12785,36 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	frutagon: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['roughskin'],
+		  items: ['rockyhelmet'],
+		  moves: ['synthesis', 'substitute', 'knockoff', 'spikyshield', 'leafblade'],
+		  lockedMoves: ['leechseed'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['chlorophyll', 'flowergift'],
+		  items: ['lifeorb']
+		  moves: ['solarblade', 'earthquake', 'dragonhammer', 'superpower'],
+		  lockedMoves: ['sunnyday'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['toughclaws'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['leafblade', 'dragonhammer', 'headsmash', 'earthquake'],
+		  lockedMoves: ['dragondance'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['toughclaws', 'roughskin'],
+		  items: ['leftovers', 'rockyhelmet'],
+		  moves: ['leafblade', 'toxicspikes', 'dragonhammer', 'earthquake'],
+		  lockedMoves: ['spikes'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"dragondance",
 			"dragonhammer",
@@ -9486,6 +12827,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	biteki: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['soundproof', 'gradient'],
+		  items: ['choicescarf'],
+		  moves: ['voltswitch', 'psychoboost', 'icebeam', 'erosionwave', 'dazzlinggleam', 'heatwave'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['soundproof', 'gradient'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['calmmind', 'icebeam', 'psychic', 'heatwave', 'earthpower', 'thunderbolt'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"voltswitch",
 			"freezedry",
@@ -9499,6 +12854,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	sesquatch: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['suddenly'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['spookout', 'slackoff', 'bulkup', 'dive'],
+		  lockedMoves: ['shadowforce', 'skullbash'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['suddenly'],
+		  items: ['leftovers', 'colburberry'],
+		  moves: ['skullbash', 'willowisp', 'shadowforce', 'slackoff', 'teleport'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"bulkup",
 			"skullbash",
@@ -9520,6 +12890,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	fireshitre: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['levitate'],
+		  items: ['blacksludge'],
+		  moves: ['calmmind', 'lavaplume', 'morningsun', 'sludgebomb', 'clearsmog'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['levitate'],
+		  items: ['blacksludge'],
+		  moves: ['toxic', 'lavaplume', 'morningsun', 'taunt', 'thunderbolt', 'sludgebomb'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['levitate'],
+		  items: ['sitrusberry', 'salacberry', 'petayaberry'],
+		  moves: ['morningsun', 'thunderbolt', 'psychic'],
+		  lockedMoves: ['burnup', 'belch', 'substitute'], // :^)
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"calmmind",
 			"lavaplume",
@@ -9540,6 +12931,35 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	slugfugg: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['sapsipper'],
+		  items: ['whiteherb'],
+		  moves: ['liquidation', 'gunkshot', 'powerwhip', 'shitpost'],
+		  lockedMoves: ['shellsmash'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['sapsipper'],
+		  items: ['blacksludge'],
+		  moves: ['recover', 'liquidation', 'toxic', 'clearsmog', 'knockoff']
+		  level: 76,
+		  },
+		  {
+		  abilities: ['hydration'],
+		  items: ['lifeorb'],
+		  moves: ['poisonjab', 'powerwhip', 'knockoff'],
+		  lockedMoves: ['raindance', 'rest', 'liquidation'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['sapsipper'],
+		  items: ['blacksludge']
+		  moves: ['liquidation', 'powerwhip', 'recover'],
+		  lockedMoves: ['honeclaws', 'gunkshot'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"softboiled",
 			"liquidation",
@@ -9557,6 +12977,34 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	spookscare: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['magician'],
+		  items: ['weaknesspolicy'],
+		  moves: ['earthpower', 'shadowball', 'fireblast', 'focusblast'],
+		  lockedMoves: ['trickroom'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['magician'],
+		  items: ['whiteherb'],
+		  moves: ['earthpower', 'shadowball', 'fireblast', 'focusblast'],
+		  lockedMoves: ['shellsmash'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['cursedbody', 'pressure'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'recover', 'earthpower', 'shadowball', 'spikes'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['pressure'],
+		  items: ['leftovers'],
+		  moves: ['block', 'recover', 'spite', 'substitute'], // :^)
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"stealthrock",
 			"earthpower",
@@ -9569,6 +13017,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	goryannus: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['sheerforce'],
+		  items: ['lifeorb'],
+		  moves: ['spookout', 'shadowbone', 'earthquake', 'playrough', 'iciclecrash', 'shadowsneak'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['sheerforce'],
+		  items: ['choicescarf'],
+		  moves: ['iciclecrash', 'playrough', 'psychicfangs'],
+		  lockedMoves: ['shadowbone', 'earthquake'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"shadowbone",
 			"earthquake",
@@ -9589,6 +13052,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	funnedong: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['scrappy'],
+		  items: ['lifeorb'],
+		  moves: ['closecombat', 'bulkup', 'doubleedge', 'knockoff', 'machpunch', 'quickattack'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['scrappy'],
+		  items: ['choiceband'],
+		  moves: ['explosion', 'uturn', 'closecombat', 'quickattack', 'doubleedge'],
+		  level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"return",
 			"closecombat",
@@ -9601,6 +13078,33 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	narwhiz: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['magicbounce'],
+		  items: ['leftovers'],
+		  moves: ['softboiled', 'scald', 'mop', 'uturn', 'moonblast'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['magicbounce'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['calmmind', 'softboiled', 'scald', 'moonblast', 'icebeam'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['magicbounce'],
+		  items: ['choicescarf', 'choicespecs'],
+		  moves: ['waterspout', 'moonblast', 'icebeam', 'uturn', 'hydropump', 'focusblast'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['magicbounce'],
+		  items: ['leftovers'],
+		  moves: ['waterfall', 'megahorn', 'focusblast', 'irontail'],
+		  lockedMoves: ['coil', 'pixiepummel'],
+		  level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"softboiled",
 			"haze",
@@ -9613,6 +13117,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	niterpent: {
 		tier: "OU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['turboblaze', 'teravolt'],
+		  items: ['choicescarf'],
+		  moves: ['blueflare', 'boltstrike', 'voltswitch', 'eruption', 'gunkshot'],
+		  level: 76,
+		  },
+		  {
+		  abilities: ['turboblaze', 'teravolt'],
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['substitute', 'blueflare', 'boltstrike', 'gunkshot'],
+		  lockedMoves: ['coil'],
+		  level: 76,
+		  }
+		],
 		randomBattleMoves: [
 			"blueflare",
 			"thunderbolt",
@@ -9625,6 +13144,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	griffawork: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  items: ['leftovers', 'lifeorb'],
+		  moves: ['calmmind', 'roost', 'focusblast'],
+		  lockedMoves: ['psystrike', 'aeroblast'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['beastboost'],
+		  items: ['choicescarf', 'choicespecs'],
+		  moves: ['trick', 'focusblast', 'earthpower', 'dazzlinggleam'],
+		  lockedMoves: ['psystrike', 'aeroblast'],
+		  level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"calmmind",
 			"roost",
@@ -9637,6 +13171,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	boarnograf: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['guts'],
+		  items: ['flameorb'],
+		  moves: ['knockoff', 'suckerpunch', 'stoneedge', 'swordsdance'],
+		  lockedMoves: ['precipiceblades'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['beastboost', 'moldbreaker'],
+		  items: ['choicescarf', 'choiceband'],
+		  moves: ['darkestlariat', 'stoneedge', 'suckerpunch', 'flareblitz', 'superpower'],
+		  lockedMoves: ['precipiceblades'],
+		  level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"swordsdance",
 			"precipiceblades",
@@ -9648,6 +13198,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	admoot: {
 		tier: "UU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['berserk'],
+		  items: ['leftovers'],
+		  moves: ['moonblast', 'toxic', 'teleport', 'healbell'],
+		  lockedMoves: ['mop', 'milkdrink'],
+		  level: 80,
+		  },
+		  {
+		  abilities: ['berserk', 'serenegrace'],
+		  items: ['lifeorb'],
+		  moves: ['moonblast', 'nastyplot', 'flamethrower', 'earthpower', 'aurasphere', 'shadowball'],
+		  level: 80,
+		  }
+		],
 		randomBattleMoves: [
 			"milkdrink",
 			"moonblast",
@@ -9660,6 +13225,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	tentaquil: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		    abilities: ['immunity'],
+		    items: ['whiteherb'],
+		    moves: ['psystrike', 'blueflare', 'pukeblood', 'spore'],
+		    lockedMoves: ['shellsmash'],
+		    level: 72,
+		  },
+		  {
+		    abilities: ['immunity'],
+		    items: ['leftovers'],
+		    moves: ['psystrike', 'spore', 'uturn', 'stealthrock', 'mop', 'sacredfire'],
+		    level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"shellsmash",
 			"spore",
@@ -9676,6 +13256,28 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	vandash: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleNicknames: ['Jamal', 'Tyrone', 'Token', 'LazyAfrican'],
+		randomBattleSets: [
+		  {
+		    abilities: ['stakeout'],
+		    items: ['leftovers'],
+		    moves: ['kingsshield', 'leechseed', 'substitute', 'metronome'], // :^)
+		    level: 100,
+		  },
+		  {
+		    abilities: ['guts'],
+		    items: ['flameorb'],
+		    moves: ['fakeout', 'petalblizzard', 'facade', 'knockoff', 'suckerpunch', 'earthquake', 'gunkshot'],
+		    level: 84,
+		  },
+		  {
+		    abilities: ['stakeout'],
+		    items: ['whiteherb', 'lifeorb', 'focussash'],
+		    moves: ['earthquake', 'surf', 'knockoff', 'petalblizzard', 'darkpulse', 'firepunch', 'icepunch', 'thunderpunch'],
+		    lockedMoves: ['toke'],
+		    level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"kingsshield",
 			"leechseed",
@@ -9691,6 +13293,29 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	deisnutz: {
 		tier: "RU",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['prankster'],
+		  items: ['leftovers'],
+		  moves: ['leechseed', 'spiritshackle', 'willowisp', 'softboiled', 'moonblast'],
+		  lockedMoves: ['substitute'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['madman', 'strongjaw'],
+		  items: ['whiteherb']
+		  moves: ['pixiepummel', 'aurasphere', 'psychicfangs', 'crunch', 'shadowball'],
+		  lockedMoves: ['shellsmash'],
+		  level: 84,
+		  },
+		  {
+		  abilities: ['prankster'],
+		  items: ['leftovers'],
+		  moves: ['lactoseshot', 'teleport', 'leechseed', 'taunt', 'superpower'],
+		  lockedMoves: ['destinybond'],
+		  level: 84,
+		  }
+		],
 		randomBattleMoves: [
 			"leechseed",
 			"substitute",
@@ -9703,6 +13328,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	adesign: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['anyability'],
+		  items: ['lifeorb'],
+		  moves: ['swordsdance', 'roost', 'substitute', 'taunt'],
+		  lockedMoves: ['anattack'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['anyability'],
+		  items: ['leftovers'],
+		  moves: ['stealthrock', 'mop', 'uturn', 'roost', 'dragontail']
+		  lockedMoves: ['anattack'],
+		  level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"anattack",
 			"teleport",
@@ -9715,6 +13356,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	clovenix: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['regenerator'],
+		  items: ['lifeorb', 'leftovers', 'expertbelt']
+		  moves: ['energyball', 'fireblast', 'earthpower', 'regenerate', 'quiverdance'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['regenerator'],
+		  items: ['assaultvest'],
+		  moves: ['uturn', 'sacredfire', 'futababreak', 'earthpower', 'bravebird'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['regenerator'],
+		  items: ['lifeorb', 'leftovers', 'expertbelt'],
+		  moves: ['flareblitz', 'futababreak', 'earthquake', 'bravebird', 'regenerate', 'dragondance'],
+		  level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"quiverdance",
 			"energyball",
@@ -9727,6 +13388,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 	jewipede: {
 		tier: "Uber",
 		isNonstandard: "Future",
+		randomBattleSets: [
+		  {
+		  abilities: ['jewelry'],
+		  items: ['normalgem'],
+		  moves: ['fakeout', 'leechlife', 'earthquake', 'spectralthief', 'swordsdance'],
+		  lockedMoves: ['extremespeed'],
+		  level: 72,
+		  },
+		  {
+		  abilities: ['pressure'],
+		  items: ['lifeorb', 'assaultvest']
+		  moves: ['uturn', 'spectralthief', 'icebeam', 'lunge', 'extremespeed', 'knockoff', 'fakeout']
+		  level: 72,
+		  },
+		  {
+		  abilities: ['pressure'],
+		  items: ['leftovers']
+		  moves: ['spectralthief', 'dragontail', 'substitute', 'lovelykiss', 'extremespeed', 'leechlife'],
+		  level: 72,
+		  }
+		],
 		randomBattleMoves: [
 			"swordsdance",
 			"extremespeed",
