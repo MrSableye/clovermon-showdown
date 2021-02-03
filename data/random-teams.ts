@@ -1077,10 +1077,16 @@ export class RandomTeams {
 
 		let lockedMovesSelected = 0;
 		while (lockedMovePool.length && lockedMovesSelected < 4) {
-			const lockedMove = this.sampleNoReplace(lockedMovePool);
-			moves[lockedMovesSelected] = lockedMove;
-			lockedMovesSelected++;
+			if (moves.length < 4) {
+				moves.push(this.sampleNoReplace(lockedMovePool));
+			} else {
+				const lockedMove = this.sampleNoReplace(lockedMovePool);
+				moves[lockedMovesSelected] = lockedMove;
+				lockedMovesSelected++;
+			}
 		}
+
+		counter = this.queryMoves(moves, hasType, hasAbility, movePool);
 
 		if (randomBattleSet.abilities && randomBattleSet.abilities.length > 0) {
 			ability = this.sample(randomBattleSet.abilities);
