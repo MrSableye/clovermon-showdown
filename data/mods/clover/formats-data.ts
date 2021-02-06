@@ -10907,7 +10907,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			},
 			{
 				abilities: [
-					"analytic, waitforit",
+					"analytic", "waitforit",
 				],
 				items: [
 					"leftovers",
