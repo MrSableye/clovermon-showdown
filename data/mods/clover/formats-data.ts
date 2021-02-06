@@ -2245,7 +2245,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				moves: [
 					"substitute",
 					"leechseed",
-					"sleeppower",
+					"sleeppowder",
 					"darkpulse",
 					"sludgebomb",
 				],
@@ -8772,7 +8772,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"nastyplot",
 					"roost",
 					"shadowball",
-					"dazzlinglgeam",
+					"dazzlinggleam",
 				],
 				level: 80,
 			},
