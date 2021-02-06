@@ -461,7 +461,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	galewings: {
 		name: "Gale Wings",
-		shortDesc: "This Pokemon's Flying-type moves have their priority increased by 1.",
+		shortDesc: "If this Pokemon is at full HP, its Flying-type moves have their priority increased by 1.",
 		gen6: {
 			shortDesc: "This Pokemon's Flying-type moves have their priority increased by 1.",
 		},
@@ -572,7 +572,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	illuminate: {
 		name: "Illuminate",
-		shortDesc: "This Pokemon's moves have their accuracy multiplied by 1.3.",
+		shortDesc: "No competitive use.",
 	},
 	illusion: {
 		name: "Illusion",

@@ -43,6 +43,7 @@ export interface SpeciesFormatsData {
 	randomDoubleBattleLevel?: number;
 	randomBattleSets?: RandomBattleSet[];
 	tier?: TierTypes.Singles | TierTypes.Other;
+	availability?: AnyObject;
 }
 
 export type ModdedSpeciesFormatsData = SpeciesFormatsData & {inherit?: true};
@@ -223,6 +224,8 @@ export class Species extends BasicEffect implements Readonly<BasicEffect & Speci
 	readonly exclusiveMoves?: readonly ID[];
 	readonly comboMoves?: readonly ID[];
 	readonly essentialMove?: ID;
+
+	readonly availability?: AnyObject;
 
 	constructor(data: AnyObject, ...moreData: (AnyObject | null)[]) {
 		super(data, ...moreData);

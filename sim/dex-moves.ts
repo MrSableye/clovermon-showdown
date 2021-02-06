@@ -242,6 +242,8 @@ export interface MoveData extends EffectData, MoveEventMethods, HitEffect {
 	noSketch?: boolean;
 	stallingMove?: boolean;
 	baseMove?: string;
+
+	availability?: AnyObject;
 }
 
 export type ModdedMoveData = MoveData | Partial<Omit<MoveData, 'name'>> & {
@@ -426,6 +428,8 @@ export class DataMove extends BasicEffect implements Readonly<BasicEffect & Move
 	readonly stab?: number;
 
 	readonly volatileStatus?: ID;
+
+	readonly availability?: AnyObject;
 
 	constructor(data: AnyObject, ...moreData: (AnyObject | null)[]) {
 		super(data, ...moreData);

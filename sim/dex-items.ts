@@ -100,6 +100,8 @@ export class Item extends BasicEffect implements Readonly<BasicEffect> {
 	readonly onPrimal?: (this: Battle, pokemon: Pokemon) => void;
 	readonly onStart?: (this: Battle, target: Pokemon) => void;
 
+	readonly availability?: AnyObject;
+
 	constructor(data: AnyObject, ...moreData: (AnyObject | null)[]) {
 		super(data, ...moreData);
 		data = this;

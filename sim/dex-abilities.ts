@@ -24,6 +24,8 @@ export class Ability extends BasicEffect implements Readonly<BasicEffect> {
 	readonly isPermanent?: boolean;
 	readonly isUnbreakable?: boolean;
 
+	readonly availability?: AnyObject;
+
 	constructor(data: AnyObject, ...moreData: (AnyObject | null)[]) {
 		super(data, ...moreData);
 		data = this;
