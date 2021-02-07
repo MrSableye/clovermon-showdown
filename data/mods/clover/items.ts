@@ -120,4 +120,49 @@ export const Items: {[k: string]: ModdedItemData} = {
 			}
 		},
 	},
+	/* Clover Exclusive Items */
+	suedeshoes: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bigfaggot: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	baconstrip: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	katana: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cutebow: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bible: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	taco: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	thiccbone: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	manifesto: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	piratesjug: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	blobbosinite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

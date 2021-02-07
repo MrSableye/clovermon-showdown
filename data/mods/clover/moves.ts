@@ -131,4 +131,245 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		accuracy: 95,
 	},
+	/* Clover Exclusive Moves */
+	sleazyspores: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	slimegulp: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	inverseroom: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fruitpunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dragonfist: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lickclean: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	speedweed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	overbite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	"1000folds": {
+		inherit: true,
+		isNonstandard: null,
+	},
+	warhead: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	weirdflex: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	scorchedearth: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hulkup: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	focusmunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mop: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	quicksand: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	thinkfast: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boltbeam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	checkem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pixiepummel: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	gayagenda: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	spooperpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	greatrage: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wowwiener: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	plunder: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	blobbybop: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	banhammer: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	homerunbat: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	elbowdrop: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	anattack: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	chaosdunk: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	comengo: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dailydose: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	decaydrain: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dildocannon: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	enema: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	erosionwave: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	falconpunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	firebomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fizzbitch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	foryou: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	futababreak: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	holyduty: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lactoseshot: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	meme: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	overenergize: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	owtheedge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pukeblood: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	punchout: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	regenerate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	riotshield: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shitpost: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	spookout: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	stratoblade: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	supersnore: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	swindle: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	toke: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	toxiravage: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	trigger: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sudoku: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

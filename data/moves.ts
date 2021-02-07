@@ -20518,6 +20518,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	"1000folds": {
+		availability: {clover: 1},
 		num: 69047,
 		accuracy: 100,
 		basePower: 80,
