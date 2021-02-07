@@ -412,6 +412,17 @@ const avatarTable = new Set([
 	'clover-imakuni',
 	'clover-evilleader',
 	'clover-chris',
+	'clover-bavi2',
+	'clover-dan',
+	'clover-mom2',
+	/* Periwinkle Avatars */
+	'periwinkle-coldsteel',
+	'periwinkle-coldsteel2',
+	'periwinkle-deadlysev',
+	'periwinkle-mom',
+	'periwinkle-oboma',
+	'periwinkle-sage',
+	'periwinkle-stump',
 ]);
 
 const avatarTableBeliot419 = new Set([
