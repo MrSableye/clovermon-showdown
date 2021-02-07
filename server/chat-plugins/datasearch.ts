@@ -873,7 +873,9 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 				continue;
 			}
 			if (Config.validMods && Config.validMods.includes(target)) {
+				nationalSearch = true;
 				modName = target;
+				orGroup.skip = true;
 				continue;
 			}
 			return {error: `'${escapeHTML(target)}' could not be found in any of the search categories.`};
@@ -1577,7 +1579,9 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 			}
 
 			if (Config.validMods && Config.validMods.includes(target)) {
+				nationalSearch = true;
 				modName = target;
+				orGroup.skip = true;
 				continue;
 			}
 
