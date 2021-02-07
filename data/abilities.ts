@@ -4749,12 +4749,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart(pokemon) {
 			const bannedAbilities = ['wonderguard', 'trace', 'forecast', 'comatose', 'artificial', 'anability', 'anyability'];
 			const abilityList = Object.values(this.dex.data.Abilities)
-				.filter((ability) => ability.availability?.['clover'] !== undefined)
+				.filter((ability) => ability.availability?.clover !== undefined)
 				.filter((ability) => !bannedAbilities.includes(ability.id))
 				.map((ability) => ability.id);
 			const randomAbility = this.sample(abilityList);
-
-			this.debug(Object.values(this.dex.data.Abilities).filter((ability) => ability.availability?.['clover'] !== undefined).join(','));
 
 			if (randomAbility) {
 				const oldAbility = pokemon.setAbility(randomAbility);

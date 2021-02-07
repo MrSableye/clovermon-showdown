@@ -122,6 +122,7 @@ export class Item extends BasicEffect implements Readonly<BasicEffect> {
 		this.onPlate = data.onPlate || undefined;
 		this.isGem = !!data.isGem;
 		this.isPokeball = !!data.isPokeball;
+		this.availability = data.availability || {};
 
 		if (!this.gen) {
 			if (this.num >= 689) {
