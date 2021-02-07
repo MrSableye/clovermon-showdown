@@ -487,6 +487,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 	let singleTypeSearch = null;
 	let randomOutput = 0;
 	let maxGen = 0;
+	let modName = null;
 	const validParameter = (cat: string, param: string, isNotSearch: boolean, input: string) => {
 		const uniqueTraits = ['colors', 'gens'];
 		for (const group of searches) {
@@ -871,6 +872,9 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 				}
 				continue;
 			}
+			if (Config.validMods && Config.validMods.contains(target)) {
+				modName = target;
+			}
 			return {error: `'${escapeHTML(target)}' could not be found in any of the search categories.`};
 		}
 		if (!orGroup.skip) {
@@ -887,7 +891,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 	}
 
 	if (!maxGen) maxGen = 8;
-	const mod = Dex.mod('gen' + maxGen);
+	const mod = modName ? Dex.mod(modName) : Dex.mod('gen' + maxGen);
 	const dex: {[k: string]: Species} = {};
 	for (const pokemon in mod.data.Pokedex) {
 		const species = mod.getSpecies(pokemon);
@@ -1212,6 +1216,7 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 	let nationalSearch = null;
 	let randomOutput = 0;
 	let maxGen = 0;
+	let modName = null;
 	for (const arg of target.split(',')) {
 		const orGroup: MoveOrGroup = {
 			types: {}, categories: {}, contestTypes: {}, flags: {}, gens: {}, recovery: {}, mon: {}, property: {},
@@ -1570,6 +1575,10 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 				continue;
 			}
 
+			if (Config.validMods && Config.validMods.contains(target)) {
+				modName = target;
+			}
+
 			return {error: `'${escapeHTML(oldTarget)}' could not be found in any of the search categories.`};
 		}
 		if (!orGroup.skip) {
@@ -1583,7 +1592,7 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 	}
 
 	if (!maxGen) maxGen = 8;
-	const mod = Dex.mod('gen' + maxGen);
+	const mod = modName ? Dex.mod(modName) : Dex.mod('gen' + maxGen);
 
 	const getFullLearnsetOfPokemon = (species: Species) => {
 		let usedSpecies: Species = Utils.deepClone(species);
