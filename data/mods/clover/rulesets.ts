@@ -29,7 +29,7 @@ export const Formats: {[k: string]: ModdedFormatData} = {
 			set.moves.forEach((moveName) => {
 				const move = this.dex.getMove(this.toID(moveName));
 
-				if (!move.availability?.clover) {
+				if (!this.toID(moveName).startsWith('hiddenPower') && !move.availability?.clover) {
 					errors.push(`${set.name || set.species} has ${move}, which is unavailable in Pokémon Clover.`);
 				}
 			});
