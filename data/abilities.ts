@@ -4750,8 +4750,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const bannedAbilities = ['wonderguard', 'trace', 'forecast', 'comatose', 'artificial', 'anability', 'anyability'];
 			const abilityList = Object.values(this.dex.data.Abilities)
 				.filter((ability) => ability.availability?.clover !== undefined)
-				.filter((ability) => !bannedAbilities.includes(ability.id))
-				.map((ability) => ability.id);
+				.filter((ability) => !bannedAbilities.includes(this.toID(ability.name)))
+				.map((ability) => this.toID(ability.name));
 			const randomAbility = this.sample(abilityList);
 
 			if (randomAbility) {
