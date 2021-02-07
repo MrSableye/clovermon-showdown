@@ -26074,7 +26074,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		num: 69264,
 		name: "Fedorawk",
 		types: [
-			"Fire",
+			"Normal",
 			"Flying",
 		],
 		genderRatio: {
