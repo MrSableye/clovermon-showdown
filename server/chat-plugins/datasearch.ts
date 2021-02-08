@@ -25,6 +25,7 @@ interface DexOrGroup {
 	resists: {[k: string]: boolean};
 	weak: {[k: string]: boolean};
 	stats: {[k: string]: {[k in Direction]: number}};
+	mods: {[k: string]: boolean};
 	skip: boolean;
 }
 
@@ -47,6 +48,7 @@ interface MoveOrGroup {
 	skip: boolean;
 	pivot: boolean;
 	multihit: boolean;
+	mods: {[k: string]: boolean};
 }
 
 type Direction = 'less' | 'greater' | 'equal';
@@ -513,7 +515,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 	for (const andGroup of target.split(',')) {
 		const orGroup: DexOrGroup = {
 			abilities: {}, tiers: {}, doublesTiers: {}, colors: {}, 'egg groups': {}, formes: {},
-			gens: {}, moves: {}, types: {}, resists: {}, weak: {}, stats: {}, skip: false,
+			gens: {}, moves: {}, types: {}, resists: {}, weak: {}, stats: {}, mods: {}, skip: false,
 		};
 		const parameters = andGroup.split("|");
 		if (parameters.length > 3) return {error: "No more than 3 alternatives for each parameter may be used."};
@@ -873,9 +875,8 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 				continue;
 			}
 			if (Config.validMods && Config.validMods.includes(target)) {
-				nationalSearch = true;
 				modName = target;
-				orGroup.skip = true;
+				orGroup.mods[target] = true;
 				continue;
 			}
 			return {error: `'${escapeHTML(target)}' could not be found in any of the search categories.`};
@@ -1110,6 +1111,11 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 			}
 			if (matched) continue;
 
+			for (const altMod in alts.mods) {
+				if (alts.mods[altMod]) matched = true;
+			}
+			if (matched) continue;
+
 			delete dex[mon];
 		}
 	}
@@ -1224,7 +1230,7 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 		const orGroup: MoveOrGroup = {
 			types: {}, categories: {}, contestTypes: {}, flags: {}, gens: {}, recovery: {}, mon: {}, property: {},
 			boost: {}, lower: {}, zboost: {}, status: {}, volatileStatus: {}, targets: {}, recoil: false, skip: false,
-			pivot: false, multihit: false,
+			pivot: false, multihit: false, mods: {},
 		};
 		const parameters = arg.split("|");
 		if (parameters.length > 3) return {error: "No more than 3 alternatives for each parameter may be used."};
@@ -1579,9 +1585,8 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 			}
 
 			if (Config.validMods && Config.validMods.includes(target)) {
-				nationalSearch = true;
 				modName = target;
-				orGroup.skip = true;
+				orGroup.mods[target] = true;
 				continue;
 			}
 
@@ -1863,6 +1868,10 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 			if (matched) continue;
 			if (alts.pivot) {
 				if (move.selfSwitch && move.id !== 'batonpass') matched = true;
+			}
+			if (matched) continue;
+			for (const altMod in alts.mods) {
+				if (alts.mods[altMod]) matched = true;
 			}
 			if (matched) continue;
 
