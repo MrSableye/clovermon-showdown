@@ -1112,7 +1112,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 			if (matched) continue;
 
 			for (const altMod in alts.mods) {
-				if (alts.mods[altMod]) matched = true;
+				if (dex[mon].availability?.[altMod]) matched = true;
 			}
 			if (matched) continue;
 
@@ -1871,7 +1871,7 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 			}
 			if (matched) continue;
 			for (const altMod in alts.mods) {
-				if (alts.mods[altMod]) matched = true;
+				if (move.availability?.[altMod]) matched = true;
 			}
 			if (matched) continue;
 
