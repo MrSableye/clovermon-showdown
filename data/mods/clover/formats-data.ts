@@ -12873,4 +12873,100 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Unobtainable",
 	},
+	/* Clover CAP Pokémon */
+	oogabugamega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	wifeminmega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	bitekimega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	fondupplemega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	ebolablemega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	somboludomega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	floriousmega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	illumatrixmega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	grimdakmega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	hazmatemega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	krokizonmega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	spookzillamega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	lizakbarmega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	rectreemmega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	unjoymega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	emplyinmega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	upbedditmega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	smelloxmega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	pigusonmega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 };

@@ -27,7 +27,6 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 8 Clover Only] Random Battle",
-		threads: [],
 		mod: 'clover',
 		team: 'random',
 		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
@@ -40,7 +39,6 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 8 Clover Only] OU",
-		threads: [],
 		mod: 'clover',
 		ruleset: [
 			'Standard NatDex',
@@ -56,7 +54,6 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 8 Clover Only] Ubers",
-		threads: [],
 		mod: 'clover',
 		ruleset: [
 			'Standard NatDex',
@@ -72,21 +69,18 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 8 Clover Only] UU",
-		threads: [],
 		mod: 'clover',
 		ruleset: ['[Gen 8 Clover Only] OU'],
 		banlist: ['OU'],
 	},
 	{
 		name: "[Gen 8 Clover Only] RU",
-		threads: [],
 		mod: 'clover',
 		ruleset: ['[Gen 8 Clover Only] UU'],
 		banlist: ['UU'],
 	},
 	{
 		name: "[Gen 8 Clover Only] LC",
-		threads: [],
 		mod: 'clover',
 		ruleset: [
 			'Little Cup',
@@ -103,7 +97,6 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 8 Clover Only] Monotype",
-		threads: [],
 		mod: 'clover',
 		ruleset: [
 			'Same Type Clause',
@@ -120,7 +113,6 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 8 Clover Only] Anything Goes",
-		threads: [],
 		mod: 'clover',
 		ruleset: [
 			'Standard NatDex',
@@ -130,11 +122,16 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: "[Gen 8 Clover Only] CAP",
+		searchShow: false,
+		mod: 'clover',
+		ruleset: ['[Gen 8 Clover Only] OU', '+CAP'],
+	},
+	{
 		section: "Clover Only Doubles",
 	},
 	{
 		name: "[Gen 8 Clover Only] Doubles OU",
-		threads: [],
 		mod: 'clover',
 		gameType: 'doubles',
 		ruleset: [

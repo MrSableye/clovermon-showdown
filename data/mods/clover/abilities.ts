@@ -17,4 +17,25 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (move?.type === 'Flying') return priority + 1;
 		},
 	},
+	/* Clover CAP Abilities */
+	cakeveil: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	rusepower: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	omniscience: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	oldschool: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	wholesome100: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

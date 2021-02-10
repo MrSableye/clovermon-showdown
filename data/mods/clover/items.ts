@@ -165,4 +165,81 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	/* Clover CAP Mega Stones */
+	ooganite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	wifeminite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	bitekinite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	fonduppite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	ebolabite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	somboludite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	floriousite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	illumatrixite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	grimdakite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	hazmatite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	krokizonite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	spookzillite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	lizakbarite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	rectreemite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	unjoyite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	emplyinite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	upbeddite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	smelloxite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	pigusonite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
