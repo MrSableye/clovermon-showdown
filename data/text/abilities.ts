@@ -1830,4 +1830,25 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Wooden Guard",
 		shortDesc: "This Pokemon recieves 1.5x damage from Fire moves, 0.75x from other moves.",
 	},
+	/* Clover CAP Abilities */
+	cakeveil: {
+		name: "Cake Veil",
+		desc: "At the end of every turn, this Pokemon restores 1/16 of its max HP.",
+	},
+	rusepower: {
+		name: "Ruse Power",
+		desc: "The power of this Pokemon's special attacks is multiplied by 1.2.",
+	},
+	omniscience: {
+		name: "Omniscience",
+		desc: "This Pokemon can hit Dark types with Psychic-type moves.",
+	},
+	oldschool: {
+		name: "Old School",
+		desc: "This Pokemon's critical hits deal double damage instead of 1.5x; High crit ratio moves always crit.",
+	},
+	wholesome100: {
+		name: "Wholesome 100",
+		desc: "This Pokemon is immune to Dark-type attacks.",
+	},
 };

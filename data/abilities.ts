@@ -3,37 +3,37 @@
 Ratings and how they work:
 
 -1: Detrimental
-	  An ability that severely harms the user.
+		An ability that severely harms the user.
 	ex. Defeatist, Slow Start
 
  0: Useless
-	  An ability with no overall benefit in a singles battle.
+		An ability with no overall benefit in a singles battle.
 	ex. Color Change, Plus
 
  1: Ineffective
-	  An ability that has minimal effect or is only useful in niche situations.
+		An ability that has minimal effect or is only useful in niche situations.
 	ex. Light Metal, Suction Cups
 
  2: Useful
-	  An ability that can be generally useful.
+		An ability that can be generally useful.
 	ex. Flame Body, Overcoat
 
  3: Effective
-	  An ability with a strong effect on the user or foe.
+		An ability with a strong effect on the user or foe.
 	ex. Chlorophyll, Sturdy
 
  4: Very useful
-	  One of the more popular abilities. It requires minimal support to be effective.
+		One of the more popular abilities. It requires minimal support to be effective.
 	ex. Adaptability, Magic Bounce
 
  5: Essential
-	  The sort of ability that defines metagames.
+		The sort of ability that defines metagames.
 	ex. Imposter, Shadow Tag
 
 */
 
 
-export const Abilities: {[abilityid: string]: AbilityData} = {
+export const Abilities: { [abilityid: string]: AbilityData } = {
 	noability: {
 		isNonstandard: "Past",
 		name: "No Ability",
@@ -4872,8 +4872,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		availability: {clover: 1},
 		name: "Degradation",
 		onEffectiveness(typeMod, target, type, move) {
-		   if (move && type === 'Normal' && move.type === 'Dark') return 1;
-			 return typeMod;
+			if (move && type === 'Normal' && move.type === 'Dark') return 1;
+			return typeMod;
 		},
 		rating: 3,
 	},
@@ -4989,8 +4989,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		availability: {clover: 1},
 		name: "Pollution",
 		onEffectiveness(typeMod, target, type, move) {
-		   if (move && type === 'Water' && move.type === 'Poison') return 1;
-			 return typeMod;
+			if (move && type === 'Water' && move.type === 'Poison') return 1;
+			return typeMod;
 		},
 		rating: 3,
 	},
@@ -5084,5 +5084,68 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			return this.chainModify(0.75);
 		},
 		rating: 3,
+	},
+	/* Clover CAP Abilities */
+	cakeveil: {
+		availability: {clover: 1},
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onResidual(pokemon) {
+			this.heal(pokemon.baseMaxhp / 16);
+		},
+		name: "Cake Veil",
+		rating: 4,
+		isNonstandard: "Future",
+	},
+	rusepower: {
+		availability: {clover: 1},
+		onModifySpAPriority: 5,
+		onModifySpA() {
+			return this.chainModify(1.2);
+		},
+		name: "Ruse Power",
+		rating: 5,
+		isNonstandard: "Future",
+	},
+	omniscience: {
+		availability: {clover: 1},
+		onModifyMovePriority: -5,
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity['Dark'] = true;
+			}
+		},
+		name: "Omniscience",
+		rating: 3,
+		isNonstandard: "Future",
+	},
+	oldschool: {
+		availability: {clover: 1},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move?.effectType === 'Move' && target.getMoveHitData(move).crit) {
+				return this.chainModify([4, 3]);
+			}
+		},
+		onModifyCritRatio(critRatio, user, target, move) {
+			if (move.critRatio && move.critRatio >= 2) {
+				return 5;
+			}
+		},
+		name: "Old School",
+		rating: 3,
+		isNonstandard: "Future",
+	},
+	wholesome100: {
+		availability: {clover: 1},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Dark') {
+				return null;
+			}
+		},
+		name: "Wholesome 100",
+		rating: 3.5,
+		isNonstandard: "Future",
 	},
 };

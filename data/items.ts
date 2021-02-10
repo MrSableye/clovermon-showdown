@@ -1,4 +1,4 @@
-export const Items: {[itemid: string]: ItemData} = {
+export const Items: { [itemid: string]: ItemData } = {
 	abomasite: {
 		name: "Abomasite",
 		spritenum: 575,
@@ -7527,6 +7527,292 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		itemUser: ["Blobbos"],
+		isNonstandard: "Future",
+	},
+	/* Clover CAP Mega Stones */
+	ooganite: {
+		availability: {clover: 1},
+		name: "Ooganite",
+		spritenum: 577,
+		megaStone: "Oogabuga-Mega",
+		megaEvolves: "Oogabuga",
+		itemUser: ["Oogabuga"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	wifeminite: {
+		availability: {clover: 1},
+		name: "Wifeminite",
+		spritenum: 577,
+		megaStone: "Wifemin-Mega",
+		megaEvolves: "Wifemin",
+		itemUser: ["Wifemin"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	bitekinite: {
+		availability: {clover: 1},
+		name: "Bitekinite",
+		spritenum: 577,
+		megaStone: "Biteki-Mega",
+		megaEvolves: "Biteki",
+		itemUser: ["Biteki"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	fonduppite: {
+		availability: {clover: 1},
+		name: "Fonduppite",
+		spritenum: 577,
+		megaStone: "Fondupple-Mega",
+		megaEvolves: "Fondupple",
+		itemUser: ["Fondupple"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	ebolabite: {
+		availability: {clover: 1},
+		name: "Ebolabite",
+		spritenum: 577,
+		megaStone: "Ebolable-Mega",
+		megaEvolves: "Ebolable",
+		itemUser: ["Ebolable"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	somboludite: {
+		availability: {clover: 1},
+		name: "Somboludite",
+		spritenum: 577,
+		megaStone: "Somboludo-Mega",
+		megaEvolves: "Somboludo",
+		itemUser: ["Somboludo"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	floriousite: {
+		availability: {clover: 1},
+		name: "Floriousite",
+		spritenum: 577,
+		megaStone: "Florious-Mega",
+		megaEvolves: "Florious",
+		itemUser: ["Florious"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	illumatrixite: {
+		availability: {clover: 1},
+		name: "Illumatrixite",
+		spritenum: 577,
+		megaStone: "Illumatrix-Mega",
+		megaEvolves: "Illumatrix",
+		itemUser: ["Illumatrix"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	grimdakite: {
+		availability: {clover: 1},
+		name: "Grimdakite",
+		spritenum: 577,
+		megaStone: "Grimdak-Mega",
+		megaEvolves: "Grimdak",
+		itemUser: ["Grimdak"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	hazmatite: {
+		availability: {clover: 1},
+		name: "Hazmatite",
+		spritenum: 577,
+		megaStone: "Hazmate-Mega",
+		megaEvolves: "Hazmate",
+		itemUser: ["Hazmate"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	krokizonite: {
+		availability: {clover: 1},
+		name: "Krokizonite",
+		spritenum: 577,
+		megaStone: "Krokizon-Mega",
+		megaEvolves: "Krokizon",
+		itemUser: ["Krokizon"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	spookzillite: {
+		availability: {clover: 1},
+		name: "Spookzillite",
+		spritenum: 577,
+		megaStone: "Spookzilla-Mega",
+		megaEvolves: "Spookzilla",
+		itemUser: ["Spookzilla"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	lizakbarite: {
+		availability: {clover: 1},
+		name: "Lizakbarite",
+		spritenum: 577,
+		megaStone: "Lizakbar-Mega",
+		megaEvolves: "Lizakbar",
+		itemUser: ["Lizakbar"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	rectreemite: {
+		availability: {clover: 1},
+		name: "Rectreemite",
+		spritenum: 577,
+		megaStone: "Rectreem-Mega",
+		megaEvolves: "Rectreem",
+		itemUser: ["Rectreem"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	unjoyite: {
+		availability: {clover: 1},
+		name: "Unjoyite",
+		spritenum: 577,
+		megaStone: "Unjoy-Mega",
+		megaEvolves: "Unjoy",
+		itemUser: ["Unjoy"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	emplyinite: {
+		availability: {clover: 1},
+		name: "Emplyinite",
+		spritenum: 577,
+		megaStone: "Emplyin-Mega",
+		megaEvolves: "Emplyin",
+		itemUser: ["Emplyin"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	upbeddite: {
+		availability: {clover: 1},
+		name: "Upbeddite",
+		spritenum: 577,
+		megaStone: "Upbeddit-Mega",
+		megaEvolves: "Upbeddit",
+		itemUser: ["Upbeddit"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	smelloxite: {
+		availability: {clover: 1},
+		name: "Smelloxite",
+		spritenum: 577,
+		megaStone: "Smellox-Mega",
+		megaEvolves: "Smellox",
+		itemUser: ["Smellox"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	pigusonite: {
+		availability: {clover: 1},
+		name: "Pigusonite",
+		spritenum: 577,
+		megaStone: "Piguson-Mega",
+		megaEvolves: "Piguson",
+		itemUser: ["Piguson"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
 		isNonstandard: "Future",
 	},
 };

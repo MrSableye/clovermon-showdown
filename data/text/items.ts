@@ -1,4 +1,4 @@
-export const ItemsText: {[k: string]: ItemText} = {
+export const ItemsText: { [k: string]: ItemText } = {
 	abomasite: {
 		name: "Abomasite",
 		desc: "If held by an Abomasnow, this item allows it to Mega Evolve in battle.",
@@ -2377,5 +2377,82 @@ export const ItemsText: {[k: string]: ItemText} = {
 	blobbosinite: {
 		name: "Blobbosinite",
 		desc: "On switch-in, causes the user to win the game. Single use.",
+	},
+	/* Clover CAP Mega Stones */
+	ooganite: {
+		name: "Ooganite",
+		desc: "If held by an Oogabuga, this item allows it to Mega Evolve in battle.",
+	},
+	wifeminite: {
+		name: "Wifeminite",
+		desc: "If held by an Wifemin, this item allows it to Mega Evolve in battle.",
+	},
+	bitekinite: {
+		name: "Bitekinite",
+		desc: "If held by an Biteki, this item allows it to Mega Evolve in battle.",
+	},
+	fonduppite: {
+		name: "Fonduppite",
+		desc: "If held by an Fondupple, this item allows it to Mega Evolve in battle.",
+	},
+	ebolabite: {
+		name: "Ebolabite",
+		desc: "If held by an Ebolable, this item allows it to Mega Evolve in battle.",
+	},
+	somboludite: {
+		name: "Somboludite",
+		desc: "If held by an Somboludo, this item allows it to Mega Evolve in battle.",
+	},
+	floriousite: {
+		name: "Floriousite",
+		desc: "If held by an Florious, this item allows it to Mega Evolve in battle.",
+	},
+	illumatrixite: {
+		name: "Illumatrixite",
+		desc: "If held by an Illumatrix, this item allows it to Mega Evolve in battle.",
+	},
+	grimdakite: {
+		name: "Grimdakite",
+		desc: "If held by an Grimdak, this item allows it to Mega Evolve in battle.",
+	},
+	hazmatite: {
+		name: "Hazmatite",
+		desc: "If held by an Hazmate, this item allows it to Mega Evolve in battle.",
+	},
+	krokizonite: {
+		name: "Krokizonite",
+		desc: "If held by an Krokizon, this item allows it to Mega Evolve in battle.",
+	},
+	spookzillite: {
+		name: "Spookzillite",
+		desc: "If held by an Spookzilla, this item allows it to Mega Evolve in battle.",
+	},
+	lizakbarite: {
+		name: "Lizakbarite",
+		desc: "If held by an Lizakbar, this item allows it to Mega Evolve in battle.",
+	},
+	rectreemite: {
+		name: "Rectreemite",
+		desc: "If held by an Rectreem, this item allows it to Mega Evolve in battle.",
+	},
+	unjoyite: {
+		name: "Unjoyite",
+		desc: "If held by an Unjoy, this item allows it to Mega Evolve in battle.",
+	},
+	emplyinite: {
+		name: "Emplyinite",
+		desc: "If held by an Emplyin, this item allows it to Mega Evolve in battle.",
+	},
+	upbeddite: {
+		name: "Upbeddite",
+		desc: "If held by an Upbeddit, this item allows it to Mega Evolve in battle.",
+	},
+	smelloxite: {
+		name: "Smelloxite",
+		desc: "If held by an Smellox, this item allows it to Mega Evolve in battle.",
+	},
+	pigusonite: {
+		name: "Pigusonite",
+		desc: "If held by an Piguson, this item allows it to Mega Evolve in battle.",
 	},
 };
