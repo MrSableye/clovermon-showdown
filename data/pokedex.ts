@@ -19362,6 +19362,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 			"Undiscovered",
 		],
 		gen: 8,
+		canHatch: true,
 	},
 	smoxilon: {
 		num: 69069,
@@ -21000,6 +21001,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 			"Undiscovered",
 		],
 		gen: 8,
+		canHatch: true,
 	},
 	chancer: {
 		num: 69116,
