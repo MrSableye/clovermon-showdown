@@ -30449,8 +30449,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		baseSpecies: "Oogabuga",
 		forme: "Mega",
 		types: [
-			"Bug",
 			"Grass",
+			"Dark",
 		],
 		genderRatio: {
 			M: 0.5,
@@ -30647,8 +30647,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		baseSpecies: "Florious",
 		forme: "Mega",
 		types: [
-			"Poison",
-			"Dark",
+			"Grass",
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.5,
@@ -30818,6 +30818,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		forme: "Mega",
 		types: [
 			"Ghost",
+			"Dragon",
 		],
 		genderRatio: {
 			M: 0.5,
@@ -30948,6 +30949,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		forme: "Mega",
 		types: [
 			"Dark",
+			"Ground",
 		],
 		genderRatio: {
 			M: 0.5,
@@ -30980,6 +30982,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		forme: "Mega",
 		types: [
 			"Psychic",
+			"Normal",
 		],
 		genderRatio: {
 			M: 0.5,
@@ -31012,6 +31015,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		forme: "Mega",
 		types: [
 			"Poison",
+			"Fighting",
 		],
 		genderRatio: {
 			M: 0.875,
