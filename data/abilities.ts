@@ -4839,12 +4839,14 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			this.add('-ability', pokemon, 'Bone Zone');
 		},
 		onModifyMovePriority: -5,
-		onModifyMove(move) {
+		onModifyMove(move, attacker, defender) {
 			if (['bonemerang', 'boneclub', 'shadowbone', 'bonerush'].includes(move.id)) {
 				Object.keys(this.dex.data.TypeChart).forEach((type) => {
 					if (!move.ignoreImmunity) move.ignoreImmunity = {};
 					if (move.ignoreImmunity !== true) {
-						move.ignoreImmunity[type] = true;
+						if (!(this.toID(type) === 'ground' && defender && this.toID(defender.ability) === 'levitate')) {
+							move.ignoreImmunity[type] = true;
+						}
 					}
 				});
 			}
