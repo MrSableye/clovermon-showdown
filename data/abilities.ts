@@ -4723,24 +4723,26 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			let rand = 0;
 			if (possibleTargets.length > 1) rand = this.random(possibleTargets.length);
 			const target = possibleTargets[rand];
-			const color = target.species.color;
-			const colorType: Record<string, string> = {
-				red: 'Fire',
-				blue: 'Water',
-				yellow: 'Electric',
-				green: 'Grass',
-				black: 'Dark',
-				brown: 'Ground',
-				purple: 'Poison',
-				gray: 'Steel',
-				white: 'Flying',
-				pink: 'Fairy',
-			};
-			const type = colorType[this.toID(color)];
-			if (type) {
-				const typeAdded = pokemon.addType(type);
-				if (!typeAdded) return false;
-				this.add('-start', pokemon, 'typeadd', type, '[from] ability: Gradient');
+			if (target.species) {
+				const color = target.species.color;
+				const colorType: Record<string, string> = {
+					red: 'Fire',
+					blue: 'Water',
+					yellow: 'Electric',
+					green: 'Grass',
+					black: 'Dark',
+					brown: 'Ground',
+					purple: 'Poison',
+					gray: 'Steel',
+					white: 'Flying',
+					pink: 'Fairy',
+				};
+				const type = colorType[this.toID(color)];
+				if (type) {
+					const typeAdded = pokemon.addType(type);
+					if (!typeAdded) return false;
+					this.add('-start', pokemon, 'typeadd', type, '[from] ability: Gradient');
+				}
 			}
 		},
 		rating: 2,
