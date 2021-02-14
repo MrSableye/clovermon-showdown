@@ -7121,4 +7121,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "User faints.",
 		desc: "The user faints.",
 	},
+	/* Clover CAP */
+	crusadercrash: {
+		name: "Crusader Crash",
+		desc: "This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
+		shortDesc: "Always results in a critical hit.",
+	},
 };
