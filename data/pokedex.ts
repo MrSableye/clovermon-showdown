@@ -32209,7 +32209,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 			spe: 55,
 		},
 		abilities: {
-			0: "Overgrown",
+			0: "Overgrow",
 			H: "Battle Armor",
 		},
 		heightm: 0.8,
