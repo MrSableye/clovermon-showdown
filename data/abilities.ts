@@ -796,7 +796,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			if (['mimikyu', 'mimikyutotem', 'sabsute'].includes(pokemon.species.id) && this.effectData.busted) {
 				const speciesid = pokemon.species.id === 'mimikyutotem' ?
 					'Mimikyu-Busted-Totem' :
-					pokemon.species.id === 'sabsutebusted' ? 'Sabsute-Busted' : 'Mimikyu-Busted';
+					pokemon.species.id === 'sabsute' ? 'Sabsute-Busted' : 'Mimikyu-Busted';
 				pokemon.formeChange(speciesid, this.effect, true);
 				this.damage(pokemon.baseMaxhp / 8, pokemon, pokemon, this.dex.getSpecies(speciesid));
 			}
