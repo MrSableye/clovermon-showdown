@@ -26,7 +26,7 @@ sound: Has no effect on Pokemon with the Soundproof Ability.
 
 */
 
-export const Moves: {[moveid: string]: MoveData} = {
+export const Moves: { [moveid: string]: MoveData } = {
 	"10000000voltthunderbolt": {
 		num: 719,
 		accuracy: true,
@@ -526,7 +526,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			let success = false;
 			for (const ally of pokemon.side.pokemon) {
 				if (ally !== source && ((ally.hasAbility('sapsipper')) ||
-						(ally.volatiles['substitute'] && !move.infiltrates))) {
+					(ally.volatiles['substitute'] && !move.infiltrates))) {
 					continue;
 				}
 				if (ally.cureStatus()) success = true;
@@ -819,7 +819,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onAnyModifyDamage(damage, source, target, move) {
 				if (target !== source && target.side === this.effectData.target) {
 					if ((target.side.getSideCondition('reflect') && this.getCategory(move) === 'Physical') ||
-							(target.side.getSideCondition('lightscreen') && this.getCategory(move) === 'Special')) {
+						(target.side.getSideCondition('lightscreen') && this.getCategory(move) === 'Special')) {
 						return;
 					}
 					if (!target.getMoveHitData(move).crit && !move.infiltrates) {
@@ -5534,11 +5534,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (
 					pokemon.hasType('Grass') &&
 					(!pokemon.volatiles['maxguard'] ||
-					  this.runEvent('TryHit', pokemon, source, move))
-				  ) {
+						this.runEvent('TryHit', pokemon, source, move))
+				) {
 					// This move affects every Grass-type Pokemon in play.
 					targets.push(pokemon);
-				  }
+				}
 			}
 			let success = false;
 			for (const target of targets) {
@@ -6182,10 +6182,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (
 					pokemon.hasAbility(['plus', 'minus']) &&
 					(!pokemon.volatiles['maxguard'] ||
-					  this.runEvent('TryHit', pokemon, source, move))
-				  ) {
+						this.runEvent('TryHit', pokemon, source, move))
+				) {
 					targets.push(pokemon);
-				  }
+				}
 			}
 			if (!targets.length) return false;
 			let didSomething = false;
@@ -10458,10 +10458,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (
 					pokemon.hasAbility(['plus', 'minus']) &&
 					(!pokemon.volatiles['maxguard'] ||
-					  this.runEvent('TryHit', pokemon, source, move))
-				  ) {
+						this.runEvent('TryHit', pokemon, source, move))
+				) {
 					targets.push(pokemon);
-				  }
+				}
 			}
 			if (!targets.length) return false;
 			let didSomething = false;
@@ -10762,7 +10762,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					'block', 'flowershield', 'gearup', 'magneticflux', 'phantomforce', 'psychup', 'shadowforce', 'teatime', 'transform',
 				];
 				const blockedByMaxGuard = (this.dex.getMove(move.id).flags['protect'] ||
-						move.isZ || move.isMax || overrideBypassProtect.includes(move.id));
+					move.isZ || move.isMax || overrideBypassProtect.includes(move.id));
 				if (!blockedByMaxGuard) {
 					return;
 				}
@@ -18452,7 +18452,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			duration: 3,
 			onStart(target) {
 				if (['Diglett', 'Dugtrio', 'Palossand', 'Sandygast'].includes(target.baseSpecies.baseSpecies) ||
-						target.baseSpecies.name === 'Gengar-Mega') {
+					target.baseSpecies.name === 'Gengar-Mega') {
 					this.add('-immune', target);
 					return null;
 				}
@@ -21622,5 +21622,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {effect: 'healreplacement'},
 		contestType: "Beautiful",
 		isNonstandard: "Future",
+	},
+	/* Clover CAP Moves */
+	crusadercrash: {
+		availability: {clover: 1},
+		num: 42001,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Crusader Crash",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		willCrit: true,
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
 	},
 };

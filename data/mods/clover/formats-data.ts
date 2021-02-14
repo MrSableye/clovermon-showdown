@@ -12873,6 +12873,80 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Unobtainable",
 	},
+	/* Clover CAP */
+	// TODO: Triple bois
+	// TODO: Two wolves
+	bearedaze: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	kumataro: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	// TODO: Bulbfrog
+	sabsute: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	regishort: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	regicide: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	// TODO: Ballboa
+	turturret: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	// TODO: Semmush
+	// TODO: Husbin
+	ranruu: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	loituma: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	ignifatu: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	spenjbab: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	gigapuddi: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	empidae: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	phantorney: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	// TODO: UB Powder
+	// TODO: UB Ellipse
 	/* Clover CAP Pokémon */
 	oogabugamega: {
 		inherit: true,
