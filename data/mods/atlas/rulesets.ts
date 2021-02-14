@@ -1,7 +1,7 @@
 export const Formats: {[k: string]: ModdedFormatData} = {
 	atlasonly: {
 		effectType: 'ValidatorRule',
-		name: 'Atlas',
+		name: 'Atlas Only',
 		desc: "Only allows Pokémon, items, and moves available in Pokémon Atlas.",
 		onValidateSet(set) {
 			const errors = [];
