@@ -242,4 +242,8 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	condoomite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

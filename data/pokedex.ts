@@ -31274,4 +31274,37 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 		requiredItem: "Pigusonite",
 	},
+	condoommega: {
+		num: 69009,
+		name: "Condoom-Mega",
+		baseSpecies: "Condoom",
+		forme: "Mega",
+		types: [
+			"???",
+		],
+		genderRatio: {
+			M: 0.875,
+			F: 0.125,
+		},
+		baseStats: {
+			hp: 1,
+			atk: 1,
+			def: 1,
+			spa: 1,
+			spd: 1,
+			spe: 1,
+		},
+		abilities: {
+			0: "Truant",
+		},
+		heightm: 69,
+		weightkg: 420,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Monster",
+		],
+		gen: 8,
+		requiredItem: "Condoomite",
+	},
 };

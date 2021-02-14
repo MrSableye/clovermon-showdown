@@ -13043,4 +13043,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	condoommega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 };

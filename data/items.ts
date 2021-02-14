@@ -7815,4 +7815,19 @@ export const Items: { [itemid: string]: ItemData } = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	condoomite: {
+		availability: {clover: 1},
+		name: "Condoomite",
+		spritenum: 577,
+		megaStone: "Condoom-Mega",
+		megaEvolves: "Condoom",
+		itemUser: ["Condoom"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
 };
