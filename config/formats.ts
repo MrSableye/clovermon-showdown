@@ -166,4 +166,16 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 		],
 	},
+	{
+		section: 'Atlas Only Singles',
+	},
+	{
+		name: "[Gen 8 Clover Only] Anything Goes",
+		mod: 'atlas',
+		ruleset: [
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Atlas Only',
+		],
+	},
 ];
