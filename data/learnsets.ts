@@ -179983,7 +179983,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			assurance: [
 				"8L1",
 			],
-			astronish: [
+			astonish: [
 				"8L1",
 			],
 			bodyslam: [
@@ -180007,7 +180007,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			eerieimpulse: [
 				"8L1",
 			],
-			elecroweb: [
+			electroweb: [
 				"8L1",
 			],
 			electricterrain: [
@@ -180293,7 +180293,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			twister: [
 				"8L1",
 			],
-			vicegrip: [
+			visegrip: [
 				"8L1",
 			],
 			willowisp: [
@@ -180319,7 +180319,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			aurasphere: [
 				"8L1",
 			],
-			autotomise: [
+			autotomize: [
 				"8L1",
 			],
 			barrage: [
@@ -180448,7 +180448,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			spikes: [
 				"8L1",
 			],
-			stealthrocks: [
+			stealthrock: [
 				"8L1",
 			],
 			stompingtantrum: [
@@ -180532,6 +180532,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			calmmind: ['8M'],
 			celebrate: ['8L29'],
 			confusion: ['8L1'],
+			cut: ['8M'],
 			darkpulse: ['8T'],
 			dazzlinggleam: ['8T'],
 			disarmingvoice: ['8L13'],
@@ -180595,7 +180596,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			rest: ['8M'],
 			retaliate: ['8T'],
 			return: ['8M'],
-			revalationdance: ['8L74'],
+			revelationdance: ['8L74'],
 			rockclimb: ['8M'],
 			rocksmash: ['8M'],
 			roleplay: ['8L56'],
@@ -180610,7 +180611,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			skillswap: ['8M'],
 			sleeptalk: ['8T'],
 			snarl: ['8L24'],
-			snatchcut: ['8M'],
+			snatch: ['8M'],
 			spookout: ['8L62'],
 			storedpower: ['8L60'],
 			substitute: ['8T'],
@@ -180637,7 +180638,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			aeroblast: ['8L49'],
 			aircutter: ['8L14'],
 			airslash: ['8L22'],
-			attractyes: ['8M'],
+			Attract: ['8M'],
 			beatup: ['8T'],
 			bind: ['8L1'],
 			bodyslam: ['8T'],
@@ -180646,6 +180647,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			bulletseed: ['8M'],
 			calmmind: ['8M'],
 			charm: ['8L30'],
+			cut: ['8M'],
 			dazzlinggleam: ['8T'],
 			defog: ['8T'],
 			detect: ['8L33'],
@@ -180694,7 +180696,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			recycle: ['8T'],
 			reflect: ['8M'],
 			rest: ['8M'],
-			retailate: ['8T'],
+			retaliate: ['8T'],
 			return: ['8M'],
 			roost: ['8T'],
 			safeguard: ['8M'],
@@ -180702,7 +180704,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			seedbomb: ['8T'],
 			signalbeam: ['8T'],
 			skillswap: ['8M'],
-			snatchcut: ['8M'],
+			snatch: ['8M'],
 			solarbeam: ['8M'],
 			solarblade: ['8L72'],
 			steelwing: ['8M'],
