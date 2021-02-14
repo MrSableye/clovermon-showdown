@@ -795,4 +795,13 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	/* Clover CAP Moves */
+	crusadercrash: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	moregun: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

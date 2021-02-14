@@ -180394,6 +180394,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			ironhead: [
 				"8L1",
 			],
+			moregun: ["8L1"],
 			powergem: [
 				"8L1",
 			],
