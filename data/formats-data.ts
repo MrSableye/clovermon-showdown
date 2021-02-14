@@ -6420,9 +6420,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
-	/*
-		Clover Exclusive Pokémon
-	*/
+	/* Clover Exclusive Pokémon */
 	grasshole: {
 		availability: {clover: 1},
 		tier: "Illegal",
@@ -8547,5 +8545,176 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",
+	},
+	/* Atlas Exclusive Pokémon */
+	meowshroom: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	felifungi: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	garfungus: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	rizard: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ruckagon: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	chinglong: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	hippaloon: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cratoe: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	hipobesity: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	marsourais: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	merlaid: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	erosiren: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	wornymph: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	paratsien: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	chanto: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	doodawl: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	dwawlin: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	skwibuwl: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	dragazine: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	wojeevee: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	doomjac: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	zoomjac: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cuckjac: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	mammiff: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	chromihomi: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	juggertard: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bubean: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bubanned: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bubyamites: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bloomjac: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	boomjac: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	funkoon: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	utensavage: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	inspooney: {
+		availability: {atlas: 1},
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 };

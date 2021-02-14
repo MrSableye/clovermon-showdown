@@ -21655,4 +21655,562 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Normal",
 		isNonstandard: "Future",
 	},
+	/* Atlas Exclusive Moves */
+	mondayz: {
+		availability: {atlas: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Mondayz",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1},
+		onTry(source) {
+			if (source.status === 'slp' || source.hasAbility('comatose')) return false;
+			if (source.hasAbility(['insomnia', 'vitalspirit'])) {
+				this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
+				return null;
+			}
+		},
+		onHit(target, source, move) {
+			if (!target.setStatus('slp', source, move)) return false;
+			target.statusData.time = 3;
+			target.statusData.startTime = 3;
+		},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					atk: 12,
+					spd: -2,
+				},
+			},
+		},
+		target: "self",
+		type: "Grass",
+		zMove: {effect: 'heal'},
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	fortunatesun: {
+		availability: {atlas: 1},
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Fortunate Sun",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, defrost: 1},
+		secondary: {
+			weather: 'sunnyday',
+		},
+		target: "normal",
+		type: "Fire",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	cosmiccrunch: {
+		availability: {atlas: 1},
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Cosmic Crunch",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, heal: 1},
+		drain: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	breadclub: {
+		availability: {atlas: 1},
+		accuracy: 95,
+		basePower: 65,
+		category: "Physical",
+		name: "Bread Club",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Fighting",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	breadmerang: {
+		availability: {atlas: 1},
+		accuracy: 90,
+		basePower: 55,
+		category: "Physical",
+		name: "Breadmerang",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: 2,
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		maxMove: {basePower: 130},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	sentaiblade: {
+		availability: {atlas: 1},
+		accuracy: 100,
+		basePower: 150,
+		category: "Physical",
+		name: "Sentai Blade",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
+		boosts: {
+			accuracy: -1,
+		},
+		secondary: null,
+		target: "randomNormal",
+		type: "Fighting",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	bigshock: {
+		availability: {atlas: 1},
+		accuracy: 80,
+		basePower: 150,
+		category: "Physical",
+		name: "Big Shock",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	kingsvoice: {
+		availability: {atlas: 1},
+		accuracy: 90,
+		basePower: 120,
+		category: "Special",
+		name: "King's Voice",
+		pp: 10,
+		priority: 0,
+		flags: {charge: 1, protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			this.boost({spd: 1}, attacker, attacker, move);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		secondary: {
+			chance: 30,
+			boosts: {
+				atk: -1,
+			},
+		},
+		target: "normal",
+		type: "Ground",
+		isNonstandard: "Future",
+	},
+	psychocrusher: {
+		availability: {atlas: 1},
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Psycho Crusher",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [33, 100],
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	bordercontrol: {
+		availability: {atlas: 1},
+		accuracy: 90,
+		basePower: 70,
+		category: "Physical",
+		name: "Border Control",
+		pp: 10,
+		priority: -1,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		forceSwitch: true,
+		target: "normal",
+		type: "Fire",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	kegerdance: {
+		availability: {atlas: 1},
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Keger Dance",
+		pp: 15,
+		priority: 0,
+		flags: {dance: 1, snatch: 1},
+		volatileStatus: 'confusion',
+		self: {
+			boosts: {
+				spa: 3,
+				spe: -1,
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Water",
+		zMove: {boost: {spa: 4}},
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	canslam: {
+		availability: {atlas: 1},
+		accuracy: 100,
+		basePower: 50,
+		category: "Physical",
+		name: "Can Slam",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, nonsky: 1},
+		volatileStatus: 'smackdown',
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				let applies = false;
+				if (pokemon.hasType('Flying') || pokemon.hasAbility('levitate')) applies = true;
+				if (pokemon.hasItem('ironball') || pokemon.volatiles['ingrain'] ||
+					this.field.getPseudoWeather('gravity')) applies = false;
+				if (pokemon.removeVolatile('fly') || pokemon.removeVolatile('bounce')) {
+					applies = true;
+					this.queue.cancelMove(pokemon);
+					pokemon.removeVolatile('twoturnmove');
+				}
+				if (pokemon.volatiles['magnetrise']) {
+					applies = true;
+					delete pokemon.volatiles['magnetrise'];
+				}
+				if (pokemon.volatiles['telekinesis']) {
+					applies = true;
+					delete pokemon.volatiles['telekinesis'];
+				}
+				if (!applies) return false;
+				this.add('-start', pokemon, 'Smack Down');
+			},
+			onRestart(pokemon) {
+				if (pokemon.removeVolatile('fly') || pokemon.removeVolatile('bounce')) {
+					this.queue.cancelMove(pokemon);
+					this.add('-start', pokemon, 'Smack Down');
+				}
+			},
+			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
+		},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	thunderousdrumming: {
+		availability: {atlas: 1},
+		accuracy: 75,
+		basePower: 100,
+		category: "Special",
+		name: "Thunderous Drumming",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1},
+		secondary: {
+			chance: 60,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Electric",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	timebomb: {
+		availability: {atlas: 1},
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Time Bomb",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		ignoreImmunity: true,
+		isFutureMove: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 3,
+				move: 'futuresight',
+				source: source,
+				moveData: {
+					id: 'timebomb',
+					name: "Time Bomb",
+					accuracy: 100,
+					basePower: 120,
+					category: "Special",
+					priority: 0,
+					flags: {},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					isFutureMove: true,
+					type: 'Fire',
+				},
+			});
+			this.add('-start', source, 'move: Time Bomb');
+			return this.NOT_FAIL;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	stonehenge: {
+		availability: {atlas: 1},
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Stonehenge",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.getEffect(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.getEffect(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		target: "normal",
+		type: "Rock",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	jaksmack: {
+		availability: {atlas: 1},
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Jak Smack",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	brainblast: {
+		availability: {atlas: 1},
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Brain Blast",
+		pp: 10,
+		priority: 0,
+		flags: {authentic: 1, protect: 1, mirror: 1},
+		boosts: {
+			def: -1,
+			spd: -1,
+		},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	serpentskiss: {
+		availability: {atlas: 1},
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		name: "Serpents Kiss",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, heal: 1},
+		drain: [2, 3],
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	wunderbeam: {
+		availability: {atlas: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Wunder Beam",
+		desc: "Not yet implemented.",
+		shortDesc: "Not yet implemented.",
+		pp: 30,
+		priority: 0,
+		flags: {},
+		secondary: null,
+		target: "allySide",
+		type: "Normal",
+		contestType: "Cute",
+	},
+	thornshot: {
+		availability: {atlas: 1},
+		accuracy: 95,
+		basePower: 80,
+		category: "Physical",
+		name: "Thorn Shot",
+		pp: 15,
+		priority: 0,
+		flags: {bullet: 1, contact: 1, protect: 1, mirror: 1},
+		secondaries: [
+			{
+				chance: 30,
+				volatileStatus: 'flinch',
+			},
+		],
+		target: "normal",
+		type: "Grass",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	cometrain: {
+		availability: {atlas: 1},
+		accuracy: 90,
+		basePower: 90,
+		category: "Physical",
+		name: "Comet Rain",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary:
+		{
+			weather: 'hail',
+		},
+		target: "normal",
+		type: "Ice",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	overthewall: {
+		availability: {atlas: 1},
+		accuracy: 90,
+		basePower: 130,
+		category: "Physical",
+		name: "Over The Wall",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, nosky: 1},
+		volatileStatus: 'smackdown',
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				let applies = false;
+				if (pokemon.hasType('Flying') || pokemon.hasAbility('levitate')) applies = true;
+				if (pokemon.hasItem('ironball') || pokemon.volatiles['ingrain'] ||
+					this.field.getPseudoWeather('gravity')) applies = false;
+				if (pokemon.removeVolatile('fly') || pokemon.removeVolatile('bounce')) {
+					applies = true;
+					this.queue.cancelMove(pokemon);
+					pokemon.removeVolatile('twoturnmove');
+				}
+				if (pokemon.volatiles['magnetrise']) {
+					applies = true;
+					delete pokemon.volatiles['magnetrise'];
+				}
+				if (pokemon.volatiles['telekinesis']) {
+					applies = true;
+					delete pokemon.volatiles['telekinesis'];
+				}
+				if (!applies) return false;
+				this.add('-start', pokemon, 'Over The Wall');
+			},
+			onRestart(pokemon) {
+				if (pokemon.removeVolatile('fly') || pokemon.removeVolatile('bounce')) {
+					this.queue.cancelMove(pokemon);
+					this.add('-start', pokemon, 'Over The Wall');
+				}
+			},
+			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
+		},
+		hasCrashDamage: true,
+		onMoveFail(target, source, move) {
+			this.damage(source.baseMaxhp / 2, source, source, this.dex.getEffect('Over The Wall'));
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	acidrain: {
+		availability: {atlas: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Acid Rain",
+		desc: "Not yet implemented.",
+		shortDesc: "Not yet implemented.",
+		pp: 30,
+		priority: 0,
+		flags: {},
+		secondary: null,
+		target: "allySide",
+		type: "Normal",
+		contestType: "Cute",
+	},
 };

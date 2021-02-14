@@ -5152,4 +5152,36 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3.5,
 		isNonstandard: "Future",
 	},
+	/* Atlas Exclusive Abilities */
+	tardrage: {
+		availability: {atlas: 1},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.recoil || move.hasCrashDamage) {
+				this.debug('Reckless boost');
+				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'recoil') {
+				if (!this.activeMove) throw new Error("Battle.activeMove is null");
+				if (this.activeMove.id !== 'struggle') return null;
+			}
+		},
+		name: "Tard Rage",
+		rating: 3,
+	},
+	kantonaut: {
+		availability: {atlas: 1},
+		onSourceModifyDamage(damage, source, target, move) {
+			let mod = 1;
+			if (move.type === 'Water') mod *= 2;
+			if (move.type === 'Dark') mod /= 2;
+			if (move.type === 'Steel') mod /= 2;
+			if (move.type === 'Fairy') mod /= 2;
+			return this.chainModify(mod);
+		},
+		name: "Kantonaut",
+		rating: 3.5,
+	},
 };

@@ -2406,6 +2406,7 @@ export const Items: { [itemid: string]: ItemData } = {
 		isPokeball: true,
 	},
 	heavydutyboots: {
+		availability: {atlas: 1},
 		name: "Heavy-Duty Boots",
 		spritenum: 715,
 		fling: {
@@ -7827,6 +7828,28 @@ export const Items: { [itemid: string]: ItemData } = {
 			return true;
 		},
 		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	/* Atlas Exclusive Items */
+	eviomite: {
+		name: "Eviomite",
+		spritenum: 130,
+		fling: {
+			basePower: 40,
+		},
+		onModifyAtkPriority: 2,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.nfe) {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 2,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.baseSpecies.nfe) {
+				return this.chainModify(1.5);
+			}
+		},
 		gen: 8,
 		isNonstandard: "Future",
 	},
