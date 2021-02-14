@@ -30506,7 +30506,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	},
 	regicide: {
 		num: 42008,
-		name: "Regcide",
+		name: "Regicide",
 		types: ["Dragon", "Ghost"],
 		gender: "N",
 		baseStats: {hp: 50, atk: 100, def: 75, spa: 125, spd: 80, spe: 150},
