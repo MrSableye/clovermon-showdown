@@ -170,7 +170,7 @@ export const Formats: FormatList = [
 		section: 'Atlas Only Singles',
 	},
 	{
-		name: "[Gen 8 Clover Only] Anything Goes",
+		name: "[Gen 8 Atlas Only] Anything Goes",
 		mod: 'atlas',
 		ruleset: [
 			'Standard NatDex',
