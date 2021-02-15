@@ -687,6 +687,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	cometrain: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	overthewall: {
 		inherit: true,
 		isNonstandard: null,
