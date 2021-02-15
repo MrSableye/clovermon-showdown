@@ -13,7 +13,7 @@ export const Formats: {[k: string]: ModdedFormatData} = {
 
 			const item = this.dex.getItem(set.item);
 			// TODO: Remove Clover check
-			if (item && item.id && item.id !== '' && (item.availability?.atlas !== 1 && item.availability?.clover !== 1)) {
+			if (item && item.id && item.id !== '' && item.availability?.atlas !== 1) {
 				errors.push(`${set.name || set.species} has ${item.name}, which is unavailable in Pokémon Atlas.`);
 			}
 
