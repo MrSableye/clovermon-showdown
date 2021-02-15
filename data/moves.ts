@@ -22066,9 +22066,11 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 10,
 		priority: 0,
 		flags: {authentic: 1, protect: 1, mirror: 1},
-		boosts: {
-			def: -1,
-			spd: -1,
+		self: {
+			boosts: {
+				def: -1,
+				spd: -1,
+			},
 		},
 		secondary: null,
 		target: "normal",
