@@ -7833,6 +7833,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	/* Atlas Exclusive Items */
 	eviomite: {
+		availability: {atlas: 1},
 		name: "Eviomite",
 		spritenum: 130,
 		fling: {

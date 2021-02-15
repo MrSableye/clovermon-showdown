@@ -20,7 +20,7 @@ export const Formats: {[k: string]: ModdedFormatData} = {
 			set.moves.forEach((moveName) => {
 				const move = this.dex.getMove(this.toID(moveName));
 				// TODO: Remove Clover check
-				if (!this.toID(moveName).startsWith('hiddenpower') && (item.availability?.atlas !== 1 && item.availability?.clover !== 1)) {
+				if (!this.toID(moveName).startsWith('hiddenpower') && (move.availability?.atlas !== 1 && move.availability?.clover !== 1)) {
 					errors.push(`${set.name || set.species} has ${move}, which is unavailable in Pokémon Atlas.`);
 				}
 			});
