@@ -242,4 +242,9 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	/* Atlas Exclusive Items */
+	eviomite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

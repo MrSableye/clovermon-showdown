@@ -795,4 +795,93 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	/* Atlas Exclusive Moves */
+	mondayz: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fortunatesun: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cosmiccrunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	breadclub: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	breadmerang: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sentaiblade: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bigshock: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	kingsvoice: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psychocrusher: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bordercontrol: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	kegerdance: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	canslam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	thunderousdrumming: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	timebomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	stonehenge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	jacsmack: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	brainblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	serpentskiss: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wunderbeam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	thornshot: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	overthewall: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	acidrain: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
