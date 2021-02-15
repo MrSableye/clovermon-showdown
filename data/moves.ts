@@ -22163,6 +22163,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "allySide",
 		type: "Normal",
 		contestType: "Cute",
+		isNonstandard: "Future",
 	},
 	thornshot: {
 		availability: {atlas: 1},
@@ -22268,5 +22269,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "allySide",
 		type: "Normal",
 		contestType: "Cute",
+		isNonstandard: "Future",
 	},
 };
