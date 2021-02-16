@@ -26,6 +26,11 @@ export const Formats: {[k: string]: ModdedFormatData} = {
 				errors.push(`${set.name || set.species} has ${item.name}, which is unavailable in Pokémon Clover.`);
 			}
 
+			const ability = this.dex.getAbility(set.ability);
+			if (ability && !ability.availability?.clover) {
+				errors.push(`${set.name || set.species} has ${ability.name}, which is unavailable in Pokémon Clover.`);
+			}
+
 			set.moves.forEach((moveName) => {
 				const move = this.dex.getMove(this.toID(moveName));
 
