@@ -20928,7 +20928,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		target: "normal",
 		type: "Grass",
-		flags: {sound: 1, protect: 1, mirror: 1},
+		flags: {sound: 1, protect: 1, mirror: 1, authentic: 1},
 		isNonstandard: "Future",
 	},
 	wowwiener: {
