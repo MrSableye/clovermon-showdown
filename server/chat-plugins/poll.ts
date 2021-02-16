@@ -23,6 +23,7 @@ export interface PollOptions {
 	timerEnd?: number;
 	isQuiz?: boolean;
 	answers: string[] | PollAnswer[];
+	voterAuth?: AuthLevel;
 }
 
 export interface PollData extends PollOptions {
@@ -103,6 +104,7 @@ export class Poll extends MinorActivity {
 	totalVotes: number;
 	isQuiz: boolean;
 	answers: Map<number, PollAnswer>;
+	voterAuth?: AuthLevel;
 	constructor(room: Room, options: PollOptions) {
 		super(room);
 		this.activityId = 'poll';
@@ -114,6 +116,7 @@ export class Poll extends MinorActivity {
 		this.voters = options.voters || {};
 		this.voterIps = options.voterIps || {};
 		this.totalVotes = options.totalVotes || 0;
+		this.voterAuth = options.voterAuth;
 
 		// backwards compatibility
 		if (!options.answers) options.answers = (options as any).questions;
@@ -153,6 +156,14 @@ export class Poll extends MinorActivity {
 	submit(user: User) {
 		const ip = user.latestIp;
 		const userid = user.id;
+
+		if (!user.can('bypassall') && this.voterAuth && !this.room.auth.atLeast(user, this.voterAuth)) {
+			const groupName = Config.groups[this.voterAuth] && Config.groups[this.voterAuth].name || this.voterAuth;
+			return user.sendTo(
+				this.room,
+				this.room.tr`You must be of rank ${groupName} or higher to vote in this poll.`,
+			);
+		}
 
 		if (userid in this.voters || ip in this.voterIps) {
 			delete this.pendingVotes[userid];
@@ -413,6 +424,14 @@ export const commands: ChatCommands = {
 		queuehtml: 'new',
 		queuemulti: 'new',
 		htmlqueuemulti: 'new',
+		authhtmlcreate: 'new',
+		authcreate: 'new',
+		authcreatemulti: 'new',
+		authhtmlcreatemulti: 'new',
+		authqueue: 'new',
+		authqueuehtml: 'new',
+		authqueuemulti: 'new',
+		authhtmlqueuemulti: 'new',
 		new(target, room, user, connection, cmd, message) {
 			room = this.requireRoom();
 			if (!target) return this.parse('/help poll new');
@@ -426,6 +445,7 @@ export const commands: ChatCommands = {
 			const supportHTML = cmd.includes('html');
 			const multiPoll = cmd.includes('multi');
 			const queue = cmd.includes('queue');
+			const requiresAuth = cmd.includes('auth');
 			let separator = '';
 			if (text.includes('\n')) {
 				separator = '\n';
@@ -437,6 +457,16 @@ export const commands: ChatCommands = {
 				return this.errorReply(this.tr`Not enough arguments for /poll new.`);
 			}
 			let params = text.split(separator).map(param => param.trim());
+
+			let voterAuth;
+			if (params.length && requiresAuth) {
+				const authParam = params[0].toLowerCase().trim();
+				if (!Users.Auth.isAuthLevel(authParam) || ['‽', '!'].includes(target)) {
+					return this.errorReply(this.tr`The rank '${authParam}' was unrecognized as a auth level for /poll new`);
+				}
+				voterAuth = authParam;
+				params = params.slice(1);
+			}
 
 			this.checkCan('minigame', null, room);
 			if (supportHTML) this.checkCan('declare', null, room);
@@ -469,7 +499,7 @@ export const commands: ChatCommands = {
 				return this.privateModAction(room.tr`${user.name} queued a poll.`);
 			}
 			room.minorActivity = new Poll(room, {
-				question: params[0], supportHTML, answers: questions, multiPoll,
+				question: params[0], supportHTML, answers: questions, multiPoll, voterAuth,
 			});
 			room.minorActivity.display();
 			room.minorActivity.save();
