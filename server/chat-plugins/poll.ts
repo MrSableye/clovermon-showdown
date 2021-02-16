@@ -202,7 +202,7 @@ export class Poll extends MinorActivity {
 			`<i class="fa fa-question"></i> ${this.room.tr`Quiz`}` :
 			`<i class="fa fa-bar-chart"></i> ${this.room.tr`Poll`}`;
 		let output = `<div class="infobox"><p style="margin: 2px 0 5px 0"><span style="border:1px solid #6A6;color:#484;border-radius:4px;padding:0 3px">${iconText}</span>`;
-		output += ` <strong style="font-size:11pt">${Poll.getQuestionMarkup(this.question, this.supportHTML)}</strong></p>`;
+		output += ` <strong style="font-size:11pt">${Poll.getQuestionMarkup(this.question, this.supportHTML, this.voterAuth)}</strong></p>`;
 
 		if (this.multiPoll) {
 			const empty = `<i class="fa fa-square-o" aria-hidden="true"></i>`;
@@ -238,7 +238,7 @@ export class Poll extends MinorActivity {
 			`<i class="fa fa-question"></i> ${room.tr`Quiz`}` :
 			`<i class="fa fa-bar-chart"></i> ${room.tr`Poll`}`;
 		const icon = `<span style="border:1px solid #${ended ? '777;color:#555' : '6A6;color:#484'};border-radius:4px;padding:0 3px">${iconText}${ended ? ' ' + room.tr`ended` : ""}</span> <small>${options.totalVotes} ${room.tr`votes`}</small>`;
-		let output = `<div class="infobox"><p style="margin: 2px 0 5px 0">${icon} <strong style="font-size:11pt">${this.getQuestionMarkup(options.question, options.supportHTML)}</strong></p>`;
+		let output = `<div class="infobox"><p style="margin: 2px 0 5px 0">${icon} <strong style="font-size:11pt">${this.getQuestionMarkup(options.question, options.supportHTML, options.voterAuth)}</strong></p>`;
 		const answers = Poll.getAnswers(options.answers);
 
 		// indigo, blue, green
@@ -260,9 +260,9 @@ export class Poll extends MinorActivity {
 		return output;
 	}
 
-	static getQuestionMarkup(question: string, supportHTML = false) {
+	static getQuestionMarkup(question: string, supportHTML = false, rank?: AuthLevel) {
 		if (supportHTML) return question;
-		return Chat.formatText(question);
+		return Chat.formatText(`${question}${(rank && ` (Rank ${rank} or above)`) || ''}`);
 	}
 
 	static getAnswerMarkup(answer: PollAnswer, supportHTML = false) {
