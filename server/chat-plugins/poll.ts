@@ -386,6 +386,7 @@ export class Poll extends MinorActivity {
 			timerEnd: this.timerEnd,
 			isQuiz: this.isQuiz,
 			answers: [...this.answers.values()],
+			voterAuth: this.voterAuth,
 		};
 	}
 	save() {
