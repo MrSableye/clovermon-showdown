@@ -1,7 +1,7 @@
 
 import {Elimination} from './generator-elimination';
 import {RoundRobin} from './generator-round-robin';
-import {Utils} from '../../lib/utils';
+import {Utils} from '../../lib';
 
 export interface TournamentRoomSettings {
 	allowModjoin?: boolean;
@@ -1437,7 +1437,7 @@ const commands: ChatCommands = {
 				return;
 			}
 			const result = await TeamValidatorAsync.get(tournament.fullFormat).validateTeam(user.battleSettings.team);
-			if (result.charAt(0) === '1') {
+			if (result.startsWith('1')) {
 				connection.popup("Your team is valid for this tournament.");
 			} else {
 				const formatName = Dex.getFormat(tournament.baseFormat).name;
@@ -2055,7 +2055,7 @@ const commands: ChatCommands = {
 				room = this.requireRoom();
 				this.checkCan('announce', null, room);
 				const num = parseInt(target);
-				if (!target || !this.meansNo(target) || isNaN(num)) return this.parse(`/help tour settings`);
+				if (!target || (!this.meansNo(target) && isNaN(num))) return this.parse(`/help tour settings`);
 				const tour = room.getGame(Tournament);
 				if (!room.settings.tournaments) room.settings.tournaments = {};
 				if (this.meansNo(target)) {

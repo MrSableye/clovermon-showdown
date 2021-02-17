@@ -39,7 +39,7 @@ import {Ability} from './dex-abilities';
 import {Species} from './dex-species';
 import {Format, RuleTable, mergeFormatLists, ComplexBan, ComplexTeamBan} from './dex-formats';
 import {PRNG, PRNGSeed} from './prng';
-import {Utils} from '../lib/utils';
+import {Utils} from '../lib';
 
 const BASE_MOD = 'gen8' as ID;
 const DEFAULT_MOD = BASE_MOD;
@@ -978,7 +978,7 @@ export class ModdedDex {
 				// valid pokemontags
 				const validTags = [
 					// singles tiers
-					'uber', 'ou', 'uubl', 'uu', 'rubl', 'ru', 'nubl', 'nu', 'publ', 'pu', 'zu', 'nfe', 'lcuber', 'lc', 'cap', 'caplc', 'capnfe', 'ag',
+					'uber', 'ou', 'uubl', 'uu', 'rubl', 'ru', 'nubl', 'nu', 'publ', 'pu', 'zu', 'nfe', 'lc', 'cap', 'caplc', 'capnfe', 'ag',
 					// doubles tiers
 					'duber', 'dou', 'dbl', 'duu', 'dnu',
 					// custom tags -- nduubl is used for national dex teambuilder formatting
