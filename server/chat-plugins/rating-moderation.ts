@@ -1,4 +1,5 @@
 import {runPromote} from '../chat-commands/moderation';
+import {Auth} from '../user-groups';
 
 export const commands: ChatCommands = {
 	async ratingroompromote(target, room, user, connection, cmd) {
@@ -28,9 +29,9 @@ export const commands: ChatCommands = {
 		const promotedUsers = [];
 		for (const roomUser of Object.values(room.users)) {
 			const roomUserRating = await formatLadder.getRating(roomUser.id);
-
-			if (!room.auth.atLeast(roomUser, groupSymbol as GroupSymbol)) {
-				let promotionSymbol = roomUserRating >= minimumRating ? groupSymbol : Users.Auth.defaultSymbol();
+			const shouldModifyRank = Auth.atLeast(groupSymbol as GroupSymbol, room.auth.get(roomUser.id));
+			if (shouldModifyRank) {
+				const promotionSymbol = roomUserRating >= minimumRating ? groupSymbol : Users.Auth.defaultSymbol();
 				try {
 					runPromote(user, room, roomUser.id, promotionSymbol as GroupSymbol, roomUser.name);
 					promotedUsers.push(roomUser.id);
