@@ -31309,7 +31309,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	},
 	/* Atlas Exclusive Pokémon */
 	meowshroom: {
-		num: 1,
+		num: 34001,
 		name: "Meowshroom",
 		types: [
 			"Grass",
@@ -31338,7 +31338,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	felifungi: {
-		num: 2,
+		num: 34002,
 		name: "Felifungi",
 		types: [
 			"Grass",
@@ -31373,7 +31373,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	garfungus: {
-		num: 3,
+		num: 34003,
 		name: "Garfungus",
 		types: [
 			"Grass",
@@ -31406,7 +31406,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	rizard: {
-		num: 4,
+		num: 34004,
 		name: "Rizard",
 		types: [
 			"Fire",
@@ -31439,7 +31439,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	ruckagon: {
-		num: 5,
+		num: 34005,
 		name: "Ruckagon",
 		types: [
 			"Fire",
@@ -31474,7 +31474,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	chinglong: {
-		num: 6,
+		num: 34006,
 		name: "Chinglong",
 		types: [
 			"Fire",
@@ -31507,7 +31507,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	hippaloon: {
-		num: 7,
+		num: 34007,
 		name: "Hippaloon",
 		types: [
 			"Water",
@@ -31540,7 +31540,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	cratoe: {
-		num: 8,
+		num: 34008,
 		name: "Cratoe",
 		types: [
 			"Water",
@@ -31575,7 +31575,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	hipobesity: {
-		num: 9,
+		num: 34009,
 		name: "Hipobesity",
 		types: [
 			"Water",
@@ -31608,7 +31608,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	marsourais: {
-		num: 10,
+		num: 34010,
 		name: "Marsourais",
 		types: [
 			"Fighting",
@@ -31638,7 +31638,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	merlaid: {
-		num: 15,
+		num: 34015,
 		name: "Merlaid",
 		types: [
 			"Water",
@@ -31669,7 +31669,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	erosiren: {
-		num: 16,
+		num: 34016,
 		name: "Erosiren",
 		types: [
 			"Water",
@@ -31702,7 +31702,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	wornymph: {
-		num: 16,
+		num: 34016,
 		name: "Wornymph",
 		types: [
 			"Water",
@@ -31732,7 +31732,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	paratsien: {
-		num: 20,
+		num: 34020,
 		name: "Paratsien",
 		types: [
 			"Fighting",
@@ -31761,7 +31761,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	chanto: {
-		num: 25,
+		num: 34025,
 		name: "Chanto",
 		types: [
 			"Electric",
@@ -31788,7 +31788,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	doodawl: {
-		num: 69,
+		num: 34069,
 		name: "Doodawl",
 		types: [
 			"Normal",
@@ -31818,7 +31818,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	dwawlin: {
-		num: 70,
+		num: 34070,
 		name: "Dwawlin",
 		types: [
 			"Normal",
@@ -31850,7 +31850,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	skwibuwl: {
-		num: 71,
+		num: 34071,
 		name: "Skwibuwl",
 		types: [
 			"Normal",
@@ -31879,7 +31879,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	dragazine: {
-		num: 128,
+		num: 34128,
 		name: "Dragazine",
 		types: [
 			"Dragon",
@@ -31909,7 +31909,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	wojeevee: {
-		num: 133,
+		num: 34133,
 		name: "Wojeevee",
 		types: [
 			"Normal",
@@ -31946,7 +31946,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	doomjac: {
-		num: 134,
+		num: 34134,
 		name: "Doomjac",
 		types: [
 			"Ice",
@@ -31978,7 +31978,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	zoomjac: {
-		num: 135,
+		num: 34135,
 		name: "Zoomjac",
 		types: [
 			"Electric",
@@ -32010,7 +32010,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	cuckjac: {
-		num: 136,
+		num: 34136,
 		name: "Cuckjac",
 		types: [
 			"Fire",
@@ -32042,7 +32042,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	mammiff: {
-		num: 142,
+		num: 34142,
 		name: "Mammiff",
 		types: [
 			"Rock",
@@ -32073,7 +32073,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	chromihomi: {
-		num: 177,
+		num: 34177,
 		name: "Chromihomi",
 		types: [
 			"Psychic",
@@ -32103,7 +32103,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	juggertard: {
-		num: 178,
+		num: 34178,
 		name: "Juggertard",
 		types: [
 			"Psychic",
@@ -32133,7 +32133,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	bubean: {
-		num: 187,
+		num: 34187,
 		name: "Bubean",
 		types: [
 			"Grass",
@@ -32162,7 +32162,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	bubanned: {
-		num: 188,
+		num: 34188,
 		name: "Bubanned",
 		types: [
 			"Grass",
@@ -32194,7 +32194,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	bubyamites: {
-		num: 189,
+		num: 34189,
 		name: "Bubyamites",
 		types: [
 			"Grass",
@@ -32223,7 +32223,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	bloomjac: {
-		num: 196,
+		num: 34196,
 		name: "Bloomjac",
 		types: [
 			"Grass",
@@ -32255,7 +32255,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	boomjac: {
-		num: 197,
+		num: 34197,
 		name: "Boomjac",
 		types: [
 			"Steel",
@@ -32287,7 +32287,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	funkoon: {
-		num: 280,
+		num: 34280,
 		name: "Funkoon",
 		types: [
 			"Psychic",
@@ -32318,7 +32318,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	utensavage: {
-		num: 281,
+		num: 34281,
 		name: "Utensavage",
 		types: [
 			"Psychic",
@@ -32351,7 +32351,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 	},
 	inspooney: {
-		num: 282,
+		num: 34282,
 		name: "Inspooney",
 		types: [
 			"Psychic",
