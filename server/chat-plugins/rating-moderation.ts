@@ -29,7 +29,7 @@ export const commands: ChatCommands = {
 		for (const roomUser of Object.values(room.users)) {
 			const roomUserRating = await formatLadder.getRating(roomUser.id);
 
-			if (!room.auth.atLeast(user, groupSymbol as GroupSymbol)) {
+			if (!room.auth.atLeast(roomUser, groupSymbol as GroupSymbol)) {
 				let promotionSymbol = roomUserRating >= minimumRating ? groupSymbol : Users.Auth.defaultSymbol();
 				try {
 					runPromote(user, room, roomUser.id, promotionSymbol as GroupSymbol, roomUser.name);
