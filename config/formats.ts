@@ -93,7 +93,10 @@ export const Formats: FormatList = [
 			'Clover Only',
 			'Blobbos Clause',
 		],
-		banlist: ['LC Uber', 'Moody', 'Baton Pass', 'Dragon Rage', 'Sonic Boom'],
+		banlist: [
+			'Moody', 'Baton Pass', 'Dragon Rage', 'Sonic Boom',
+			'Wedgard', 'Chompest', 'Masdawg', 'Flowre', 'Charagon', 'Ayylamo', 'Ninoop', 'Embortion', 'Nutjobber',
+		],
 	},
 	{
 		name: "[Gen 8 Clover Only] Monotype",

@@ -1023,7 +1023,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	wedgard: {
 		inherit: true,
-		tier: "LC Uber",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	knokedge: {
@@ -1277,12 +1277,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	chompest: {
 		inherit: true,
-		tier: "LC Uber",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	masdawg: {
 		inherit: true,
-		tier: "LC Uber",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	pasdawg: {
@@ -2195,7 +2195,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	flowre: {
 		inherit: true,
-		tier: "LC Uber",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	florious: {
@@ -2430,7 +2430,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	charagon: {
 		inherit: true,
-		tier: "LC Uber",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	hyletrack: {
@@ -3568,7 +3568,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	ayylamo: {
 		inherit: true,
-		tier: "LC Uber",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	smellox: {
@@ -6165,7 +6165,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	ninoop: {
 		inherit: true,
-		tier: "LC Uber",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	draconius: {
@@ -6471,7 +6471,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	embortion: {
 		inherit: true,
-		tier: "LC Uber",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	premantom: {
@@ -12602,7 +12602,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	nutjobber: {
 		inherit: true,
-		tier: "LC Uber",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	deisnutz: {
