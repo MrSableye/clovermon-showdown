@@ -22982,7 +22982,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 			0: "Wonder Guard",
 			1: "Regenerator",
 			H: "Rain Dish",
-			S: "Grass pelt",
+			S: "Grass Pelt",
 		},
 		heightm: 1.7,
 		weightkg: 55.2,
