@@ -21497,7 +21497,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Spook Out",
 		pp: 10,
 		priority: 3,
-		flags: {sound: 1, protect: 1, mirror: 1},
+		flags: {sound: 1, protect: 1, mirror: 1, authentic: 1},
 		onTry(pokemon, target) {
 			if (pokemon.activeTurns > 1) {
 				this.attrLastMove('[still]');
