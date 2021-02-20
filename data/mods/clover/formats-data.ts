@@ -141,7 +141,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	condoom: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -158,7 +158,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"softboiled",
 					"sludgebomb",
 				],
-				level: 76,
+				level: 72,
 			},
 			{
 				abilities: [
@@ -174,7 +174,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"sludgebomb",
 					"seedflare",
 				],
-				level: 76,
+				level: 72,
 			},
 		],
 		randomBattleMoves: [
@@ -185,7 +185,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"sludgebomb",
 			"calmmind",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 72,
 	},
 	squirrap: {
 		inherit: true,
@@ -7004,7 +7004,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	kuuroba: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -7023,7 +7023,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"stoneedge",
 					"poisonjab",
 				],
-				level: 76,
+				level: 72,
 			},
 			{
 				abilities: [
@@ -7041,7 +7041,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"stoneedge",
 					"speedweed",
 				],
-				level: 76,
+				level: 72,
 			},
 		],
 		randomBattleMoves: [
@@ -7051,7 +7051,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"speedweed",
 			"zenheadbutt",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 72,
 	},
 	baitmaster: {
 		inherit: true,
