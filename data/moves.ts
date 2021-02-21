@@ -20408,7 +20408,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		target: "normal",
 		type: "Poison",
-		flags: {protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1},
 		onHit(target) {
 			if (target.getAbility().isPermanent) return;
 			target.addVolatile('gastroacid');
