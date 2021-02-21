@@ -165,18 +165,18 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 8 Clover National Dex] AG",
-		mod: 'gen8',
+		mod: 'clover',
 		ruleset: [
 			'Obtainable',
 			'+Unobtainable',
 			'+Past',
-			'+Future',
 			'Team Preview',
 			'Nickname Clause',
 			'HP Percentage Mod',
 			'Cancel Mod',
 			'Endless Battle Clause',
 			'Dynamax Clause',
+			'Originality Clause',
 		],
 	},
 	{

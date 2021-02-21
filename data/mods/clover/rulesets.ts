@@ -44,4 +44,19 @@ export const Formats: {[k: string]: ModdedFormatData} = {
 			}
 		},
 	},
+	originalityclause: {
+		effectType: 'ValidatorRule',
+		name: 'Originality Clause',
+		desc: "Requires 3 Clovermons and 3 non-Clovermons.",
+		onValidateTeam(team) {
+			const totalClovermons = team.reduce((total, set) => {
+				const species = this.dex.getSpecies(set.species || set.name);
+				return total + species.availability?.clover ? 1 : 0;
+			}, 0);
+
+			if ((team.length - totalClovermons) === totalClovermons) {
+				return ['Your team requires equal number of Clovermons and non-Clovermons.'];
+			}
+		},
+	},
 };
