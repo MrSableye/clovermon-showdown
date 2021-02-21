@@ -21678,6 +21678,19 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},
+	maxmemeitude: {
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "Max Memeitude",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		isMax: true,
+		target: "adjacentFoe",
+		type: "???",
+		contestType: "Cool",
+	},
 	/* Clover CAP Moves */
 	crusadercrash: {
 		availability: {clover: 1},

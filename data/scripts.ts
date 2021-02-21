@@ -1214,6 +1214,7 @@ export const Scripts: BattleScriptsData = {
 		Steel: 'Max Steelspike',
 		Normal: 'Max Strike',
 		Dragon: 'Max Wyrmwind',
+		'???': 'Max Memeitude',
 	},
 
 	getMaxMove(move, pokemon) {

@@ -175,7 +175,6 @@ export const Formats: FormatList = [
 			'HP Percentage Mod',
 			'Cancel Mod',
 			'Endless Battle Clause',
-			'Dynamax Clause',
 			'Originality Clause',
 		],
 	},
