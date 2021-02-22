@@ -51,7 +51,7 @@ export const Formats: {[k: string]: ModdedFormatData} = {
 		onValidateTeam(team) {
 			const totalClovermons = team.reduce((total, set) => {
 				const species = this.dex.getSpecies(set.species || set.name);
-				return total + species.availability?.clover ? 1 : 0;
+				return total + (species.availability?.clover ? 1 : 0);
 			}, 0);
 
 			if (Math.floor(team.length / 2) !== totalClovermons) {
