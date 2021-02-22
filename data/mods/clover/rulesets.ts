@@ -54,8 +54,8 @@ export const Formats: {[k: string]: ModdedFormatData} = {
 				return total + species.availability?.clover ? 1 : 0;
 			}, 0);
 
-			if ((team.length - totalClovermons) !== totalClovermons) {
-				// return ['Your team requires equal number of Clovermons and non-Clovermons.'];
+			if (Math.floor(team.length / 2) !== totalClovermons) {
+				return ['Your team requires equal number of Clovermons and non-Clovermons.'];
 			}
 		},
 	},
