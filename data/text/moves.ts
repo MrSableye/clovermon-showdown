@@ -6873,8 +6873,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	overbite: {
 		name: "Overbite",
-		shortDesc: "User loses 50% max HP. Hits adjacent Pokemon.",
-		desc: "Whether or not this move is successful and even if it would cause fainting, the user loses 1/2 of its maximum HP, rounded up, unless the user has the Magic Guard Ability.",
+		shortDesc: "User loses 50% max HP on hit. Hits adjacent Pokemon.",
+		desc: "If this move is successful, the user loses 1/2 of its maximum HP, rounded up, unless the user has the Magic Guard Ability.",
 		damage: "  ([POKEMON] cut its own HP to power up its move!)",
 	},
 	"1000folds": {

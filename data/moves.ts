@@ -20411,10 +20411,12 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onHit(target) {
 			if (target.getAbility().isPermanent) return;
+			if (target.newlySwitched || this.queue.willMove(target)) return;
 			target.addVolatile('gastroacid');
 		},
 		onAfterSubDamage(damage, target) {
 			if (target.getAbility().isPermanent) return;
+			if (target.newlySwitched || this.queue.willMove(target)) return;
 			target.addVolatile('gastroacid');
 		},
 		isNonstandard: "Future",
@@ -20563,9 +20565,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		target: "normal",
 		type: "Dark",
-		mindBlownRecoil: true,
-		onAfterMove(pokemon, target, move) {
-			if (move.mindBlownRecoil && !move.multihit) {
+		onAfterHit(pokemon, target, move) {
+			if (!move.multihit) {
 				this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.getEffect('Overbite'), true);
 			}
 		},
@@ -21628,14 +21629,14 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 69024,
 		accuracy: 100,
-		basePower: 30,
+		basePower: 40,
 		basePowerCallback(pokemon, target, move) {
 			if (!pokemon.volatiles.trigger || move.hit === 1) {
 				pokemon.addVolatile('trigger');
 			}
 			return this.clampIntRange(move.basePower * pokemon.volatiles.trigger.multiplier, 1, 160);
 		},
-		category: "Physical",
+		category: "Special",
 		name: "Trigger",
 
 		pp: 15,
