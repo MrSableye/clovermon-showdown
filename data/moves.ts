@@ -20565,10 +20565,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		target: "normal",
 		type: "Dark",
-		onAfterHit(pokemon, target, move) {
-			if (!move.multihit) {
-				this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.getEffect('Overbite'), true);
-			}
+		onAfterHit(pokemon) {
+			this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.getEffect('Overbite'), true);
 		},
 		flags: {contact: 1, protect: 1, mirror: 1},
 		isNonstandard: "Future",
