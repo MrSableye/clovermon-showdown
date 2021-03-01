@@ -12263,6 +12263,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	niterpent: {
 		inherit: true,
 		tier: "OU",
+		doublesTier: "DUber",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
