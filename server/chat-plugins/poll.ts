@@ -224,7 +224,7 @@ export class Poll extends Rooms.MinorActivity {
 	static getQuestionMarkup(question: string, supportHTML = false, rank?: AuthLevel, ratingRequiredment?: {format: string, minimumRating: number}) {
 		if (supportHTML) return question;
 		const rankText = (rank && ` (Rank ${rank} or above)`) || '';
-		const ratingText = (ratingRequiredment && ` (Rating of ${ratingRequiredment.minimumRating} in ${ratingRequiredment.minimumRating} or above)`);
+		const ratingText = (ratingRequiredment && ` (Rating of ${ratingRequiredment.minimumRating} in ${ratingRequiredment.format} or above)`);
 		return Chat.formatText(`${question}${rankText}${ratingText}`);
 	}
 
@@ -451,6 +451,7 @@ export const commands: ChatCommands = {
 				const rating = +(params[1].toLowerCase().trim());
 
 				ratingRequirement = {format, minimumRating: rating};
+				params = params.slice(2);
 			}
 
 			this.checkCan('minigame', null, room);
