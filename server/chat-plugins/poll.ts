@@ -355,6 +355,7 @@ export class Poll extends Rooms.MinorActivity {
 			isQuiz: this.isQuiz,
 			answers: [...this.answers.values()],
 			voterAuth: this.voterAuth,
+			ratingRequirement: this.ratingRequirement,
 		};
 	}
 
