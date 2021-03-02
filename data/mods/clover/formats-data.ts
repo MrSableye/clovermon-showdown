@@ -320,7 +320,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	gutsifly: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -337,7 +337,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"taunt",
 					"copycat",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -352,7 +352,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"copycat",
 					"roost",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -363,7 +363,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"taunt",
 			"roost",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	larvades: {
 		inherit: true,
@@ -748,7 +748,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	piguson: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -765,7 +765,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"glare",
 					"return",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -775,7 +775,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"slackoff",
 			"return",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	armando: {
 		inherit: true,
@@ -909,7 +909,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	monstrap: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -926,7 +926,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"liquidation",
 					"uturn",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				items: [
@@ -939,7 +939,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"earthquake",
 					"psychicfangs",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -949,7 +949,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"liquidation",
 			"aquajet",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	pixila: {
 		inherit: true,
@@ -1075,7 +1075,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	ribbizap: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -1094,7 +1094,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"boomburst",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				items: [
@@ -1108,7 +1108,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"boomburst",
 					"energyball",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -1118,7 +1118,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"boomburst",
 			"energyball",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	elephas: {
 		inherit: true,
@@ -1887,7 +1887,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	dowster: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -1904,7 +1904,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"sludgebomb",
 					"focusblast",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -1923,7 +1923,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"trick",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -1933,7 +1933,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"focusblast",
 			"trick",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	cheerly: {
 		inherit: true,
@@ -2380,7 +2380,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	octai: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -2399,7 +2399,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"lactoseshot",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -2416,7 +2416,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"lactoseshot",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -2426,7 +2426,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"flamethrower",
 			"toxic",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	charagon: {
 		inherit: true,
@@ -2759,7 +2759,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	pyralink: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -2776,7 +2776,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"uturn",
 					"glare",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -2793,7 +2793,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"toke",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -2802,7 +2802,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"clangingscales",
 			"earthquake",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	singlets: {
 		inherit: true,
@@ -4910,7 +4910,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	sprucifix: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -4927,7 +4927,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"aromatherapy",
 					"hammerarm",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -4942,7 +4942,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"metronome",
 					"refresh",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -4952,11 +4952,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"spikes",
 			"toxic",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	hulkan: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -4973,7 +4973,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"darkestlariat",
 					"facade",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -4992,7 +4992,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"substitute",
 					"focusmunch",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -5008,7 +5008,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"earthquake",
 					"darkestlariat",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -5018,7 +5018,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"facade",
 			"ironhead",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	nonite: {
 		inherit: true,
@@ -6476,7 +6476,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	premantom: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -6494,7 +6494,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"softboiled",
 					"hex",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -6503,7 +6503,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"willowisp",
 			"softboiled",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	galavik: {
 		inherit: true,
@@ -6559,7 +6559,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	galaviste: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -6577,7 +6577,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"zenheadbutt",
 					"earthquake",
 				],
-				level: 80,
+				level: 76,
 			},
 			{
 				abilities: [
@@ -6594,7 +6594,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"earthquake",
 					"bulkup",
 				],
-				level: 80,
+				level: 76,
 			},
 		],
 		randomBattleMoves: [
@@ -6604,7 +6604,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"plasmafists",
 			"thunderwave",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 76,
 	},
 	pollefin: {
 		inherit: true,
@@ -6811,7 +6811,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	venowatt: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -6829,7 +6829,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"acidspray",
 					"energyball",
 				],
-				level: 80,
+				level: 76,
 			},
 			{
 				abilities: [
@@ -6845,7 +6845,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"gigadrain",
 					"roost",
 				],
-				level: 80,
+				level: 76,
 			},
 		],
 		randomBattleMoves: [
@@ -6855,7 +6855,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"sludgebomb",
 			"gigadrain",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 76,
 	},
 	vaultevour: {
 		inherit: true,
@@ -6938,7 +6938,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	dragking: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -6955,7 +6955,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"highjumpkick",
 					"bravebird",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -6971,7 +6971,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"uturn",
 					"earthquake",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -6989,7 +6989,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"earthquake",
 					"blazekick",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -7055,7 +7055,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	baitmaster: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -7072,7 +7072,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"icebeam",
 					"focusblast",
 				],
-				level: 80,
+				level: 76,
 			},
 			{
 				abilities: [
@@ -7090,7 +7090,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"nastyplot",
 				],
-				level: 80,
+				level: 76,
 			},
 			{
 				abilities: [
@@ -7106,7 +7106,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"moonblast",
 					"taunt",
 				],
-				level: 80,
+				level: 76,
 			},
 		],
 		randomBattleMoves: [
@@ -7117,7 +7117,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"psychic",
 			"uturn",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 76,
 	},
 	spookster: {
 		inherit: true,
@@ -7687,7 +7687,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	peperee: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -7706,7 +7706,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"bellydrum",
 					"accelerock",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -7722,7 +7722,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"toxic",
 					"stoneedge",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -7738,7 +7738,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"earthquake",
 					"stoneedge",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -7748,7 +7748,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"stoneedge",
 			"earthquake",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	hodtog: {
 		inherit: true,
@@ -8614,7 +8614,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	donutsteel: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -8634,7 +8634,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"geomancy",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -8653,7 +8653,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"shiftgear",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -8672,7 +8672,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"swordsdance",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -8681,7 +8681,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"focusblast",
 			"baddybad",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	cakupple: {
 		inherit: true,
@@ -8926,7 +8926,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	tunakking: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -8944,7 +8944,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"earthpower",
 					"boomburst",
 				],
-				level: 80,
+				level: 84,
 			},
 			{
 				abilities: [
@@ -8960,7 +8960,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"earthpower",
 					"uturn",
 				],
-				level: 80,
+				level: 84,
 			},
 		],
 		randomBattleMoves: [
@@ -8970,7 +8970,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"trick",
 			"earthpower",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 84,
 	},
 	missletoe: {
 		inherit: true,
@@ -8979,7 +8979,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	hohohoming: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -8998,7 +8998,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"frostbreath",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -9016,7 +9016,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"focusenergy",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -9033,7 +9033,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"uturn",
 					"waterpulse",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -9043,7 +9043,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"uturn",
 			"freezedry",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	flaa: {
 		inherit: true,
@@ -9642,7 +9642,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	dedwheat: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -9661,7 +9661,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"skillswap",
 				],
-				level: 76,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -9677,7 +9677,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"spore",
 					"energyball",
 				],
-				level: 76,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -9695,7 +9695,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"toxic",
 					"venoshock",
 				],
-				level: 76,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -9705,7 +9705,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"spore",
 			"sludgebomb",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 80,
 	},
 	spargle: {
 		inherit: true,
@@ -9944,7 +9944,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	confirmabi: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -9961,7 +9961,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"psyshock",
 					"shadowball",
 				],
-				level: 80,
+				level: 76,
 			},
 			{
 				abilities: [
@@ -9977,7 +9977,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"psychic",
 					"earthpower",
 				],
-				level: 80,
+				level: 76,
 			},
 		],
 		randomBattleMoves: [
@@ -9987,7 +9987,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"psychic",
 			"recover",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 76,
 	},
 	bulbapedo: {
 		inherit: true,
@@ -10279,7 +10279,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	shroofle: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -10296,7 +10296,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"toxicspikes",
 					"softboiled",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -10314,7 +10314,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"calmmind",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -10324,7 +10324,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"toxicspikes",
 			"protect",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	betacluck: {
 		inherit: true,
@@ -10333,7 +10333,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	thundacock: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -10350,7 +10350,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"thunderbolt",
 					"voltswitch",
 				],
-				level: 76,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -10366,7 +10366,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"closecombat",
 					"substitute",
 				],
-				level: 76,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -10376,7 +10376,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"voltswitch",
 			"defog",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 80,
 	},
 	twinfowl: {
 		inherit: true,
@@ -10439,7 +10439,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	illumatrix: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -10456,7 +10456,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"heatwave",
 					"psyshock",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -10481,7 +10481,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"earthpower",
 			"uturn",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	typobop: {
 		inherit: true,
@@ -10528,7 +10528,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	cthullord: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -10544,7 +10544,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"sleeptalk",
 					"rockclimb",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -10562,7 +10562,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"shellsmash",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -10579,7 +10579,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"rockclimb",
 					"knockoff",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -10588,7 +10588,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"stoneedge",
 			"zenheadbutt",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	quiboom: {
 		inherit: true,
@@ -10808,7 +10808,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	hornititan: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -10827,7 +10827,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"rapidspin",
 				],
-				level: 76,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -10845,7 +10845,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"lovelykiss",
 					"rapidspin",
 				],
-				level: 76,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -10863,7 +10863,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"explosion",
 				],
-				level: 76,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -10874,7 +10874,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"glare",
 			"recover",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 80,
 	},
 	preasu: {
 		inherit: true,
@@ -10940,7 +10940,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	banageddon: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -10958,7 +10958,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"hammerarm",
 					"crabhammer",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -10971,7 +10971,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"inverseroom",
 					"lastresort",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -10990,7 +10990,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"crabhammer",
 					"icehammer",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -11000,7 +11000,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"partingshot",
 			"earthquake",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	acufront: {
 		inherit: true,
@@ -11105,7 +11105,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	militant: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -11122,7 +11122,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"extremespeed",
 					"superpower",
 				],
-				level: 76,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -11141,7 +11141,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"icefang",
 					"thunderfang",
 				],
-				level: 76,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -11157,7 +11157,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"psychicfangs",
 					"superpower",
 				],
-				level: 76,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -11167,7 +11167,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"extremespeed",
 			"knockoff",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 80,
 	},
 	shiggydig: {
 		inherit: true,
@@ -11338,7 +11338,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	dreameme: {
 		inherit: true,
-		tier: "RU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -11356,7 +11356,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"moonblast",
 					"spikes",
 				],
-				level: 84,
+				level: 76,
 			},
 			{
 				abilities: [
@@ -11374,7 +11374,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"rest",
 					"sleeptalk",
 				],
-				level: 84,
+				level: 76,
 			},
 			{
 				abilities: [
@@ -11394,7 +11394,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"trickroom",
 					"teleport",
 				],
-				level: 84,
+				level: 76,
 			},
 		],
 		randomBattleMoves: [
@@ -11404,11 +11404,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"moonblast",
 			"teleport",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 76,
 	},
 	pearchie: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -11425,7 +11425,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"earthquake",
 					"boomburst",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -11442,7 +11442,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"highjumpkick",
 					"volttackle",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -11461,7 +11461,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"extremespeed",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -11477,7 +11477,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"earthquake",
 					"crunch",
 				],
-				level: 84,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -11487,7 +11487,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"woodhammer",
 			"earthquake",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 80,
 	},
 	tarditank: {
 		inherit: true,
@@ -11607,7 +11607,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	frutagon: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -11627,7 +11627,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"leechseed",
 				],
-				level: 76,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -11646,7 +11646,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"sunnyday",
 				],
-				level: 76,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -11665,7 +11665,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"dragondance",
 				],
-				level: 76,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -11685,7 +11685,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				lockedMoves: [
 					"spikes",
 				],
-				level: 76,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -11695,7 +11695,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"earthquake",
 			"synthesis",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 80,
 	},
 	biteki: {
 		inherit: true,
@@ -11752,7 +11752,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	sesquatch: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -11773,7 +11773,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"shadowforce",
 					"skullbash",
 				],
-				level: 76,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -11790,7 +11790,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"slackoff",
 					"teleport",
 				],
-				level: 76,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -11801,7 +11801,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"closecombat",
 			"spookout",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 80,
 	},
 	fireshi: {
 		inherit: true,
@@ -11815,7 +11815,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fireshitre: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -11832,7 +11832,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"sludgebomb",
 					"clearsmog",
 				],
-				level: 76,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -11849,7 +11849,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"thunderbolt",
 					"sludgebomb",
 				],
-				level: 76,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -11870,7 +11870,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"belch",
 					"substitute",
 				],
-				level: 76,
+				level: 80,
 			},
 		],
 		randomBattleMoves: [
@@ -11880,7 +11880,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"morningsun",
 			"thunderbolt",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 80,
 	},
 	slugbud: {
 		inherit: true,
