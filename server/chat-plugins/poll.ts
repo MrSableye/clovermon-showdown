@@ -118,7 +118,7 @@ export class Poll extends Rooms.MinorActivity {
 			if (userRating < minimumRating) {
 				return user.sendTo(
 					this.room,
-					this.room.tr`You must have a rating of ${minimumRating} in ${format} to vote in this poll.`,
+					this.room.tr`You must have a rating of ${minimumRating} in ${format} to vote in this poll (Your rating: ${userRating})`,
 				);
 			}
 		}
