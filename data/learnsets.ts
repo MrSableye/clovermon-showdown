@@ -181584,7 +181584,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			magicroom: ['8L1'],
 			meteormash: ['8L1'],
 			milkdrink: ['8L1'],
-			miracleye: ['8L1'],
+			miracleeye: ['8L1'],
 			mirrorcoat: ['8L1'],
 			mistball: ['8L1'],
 			moonlight: ['8L1'],
