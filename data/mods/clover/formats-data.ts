@@ -12910,7 +12910,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "CAP",
 	},
 	// TODO: Semmush
-	// TODO: Husbin
+	husbin: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	ranruu: {
 		inherit: true,
 		isNonstandard: "CAP",
@@ -12946,8 +12950,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
-	// TODO: UB Powder
-	// TODO: UB Ellipse
+	cirnumiru: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	seraphill: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	shiribiko: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	/* Clover CAP Pokémon */
 	oogabugamega: {
 		inherit: true,

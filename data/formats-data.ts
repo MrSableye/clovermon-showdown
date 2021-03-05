@@ -8407,7 +8407,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 	},
 	// TODO: Semmush
-	// TODO: Husbin
+	husbin: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	ranruu: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
@@ -8443,8 +8447,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	// TODO: UB Powder
-	// TODO: UB Ellipse
+	cirnumiru: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	seraphill: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	shiribiko: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	/* Clover CAP Pokémon */
 	oogabugamega: {
 		availability: {clover: 1},

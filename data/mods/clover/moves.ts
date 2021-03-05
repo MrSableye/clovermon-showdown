@@ -804,4 +804,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	psychofists: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
