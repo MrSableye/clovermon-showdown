@@ -21722,6 +21722,28 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Normal",
 		isNonstandard: "Future",
 	},
+	psychofists: {
+		availability: {clover: 1},
+		num: 42003,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Psycho Fists",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.setTerrain('psychicterrain');
+				},
+			},
+		},
+		target: "normal",
+		type: "Psychic",
+		isNonstandard: "Future",
+	},
 	/* Atlas Exclusive Moves */
 	mondayz: {
 		availability: {atlas: 1},

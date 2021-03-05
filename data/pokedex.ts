@@ -30552,7 +30552,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	// TODO: Semmush, want to make sure adding an evo doesn't fuck shit
-	// TODO: Husbin, want to make sure adding an evo doesn't fuck shit
+	husbin: {
+		num: 42012,
+		name: "Husbin",
+		types: ["Fighting", "Psychic"],
+		genderRatio: {M: 0.25, F: 0.75},
+		baseStats: {hp: 90, atk: 110, def: 60, spa: 110, spd: 50, spe: 115},
+		abilities: {0: "Justified", 1: "Iron Fist", H: "Infiltrator", S: "No Guard"},
+		heightm: 1.6,
+		weightkg: 59,
+		color: "Blue",
+		eggGroups: ["Amorphous", "Human-Like"],
+		gen: 8,
+	},
 	ranruu: {
 		num: 42013,
 		name: "Ranruu",
@@ -30644,8 +30656,45 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 	},
-	// TODO: UB Powder
-	// TODO: UB Ellipse
+	cirnumiru: {
+		num: 42020,
+		name: "Cirnumiru",
+		types: ["Ice", "Fairy"],
+		gender: "N",
+		baseStats: {hp: 61, atk: 67, def: 61, spa: 127, spd: 127, spe: 127},
+		abilities: {0: "Beast Boost", H: "Refrigerate", S: "Liquid Voice"},
+		heightm: 1.1,
+		weightkg: 0.6,
+		color: "White",
+		eggGroups: ["Undiscovered"],
+		gen: 8,
+	},
+	seraphill: {
+		num: 42021,
+		name: "Seraphill",
+		types: ["Electric", "Flying"],
+		gender: "N",
+		baseStats: {hp: 103, atk: 97, def: 107, spa: 97, spd: 107, spe: 59},
+		abilities: {0: "Beast Boost", H: "Motor Drive", S: "Magic Guard"},
+		heightm: 5.4,
+		weightkg: 4.3,
+		color: "Yellow",
+		eggGroups: ["Undiscovered"],
+		gen: 8,
+	},
+	shiribiko: {
+		num: 42022,
+		name: "Shiribiko",
+		types: ["Psychic", "Dragon"],
+		gender: "N",
+		baseStats: {hp: 113, atk: 101, def: 89, spa: 127, spd: 97, spe: 73},
+		abilities: {0: "Beast Boost", H: "Limber", S: "Infiltrator"},
+		heightm: 9999.99,
+		weightkg: 771,
+		color: "White",
+		eggGroups: ["Undiscovered"],
+		gen: 8,
+	},
 	/* Clover CAP Megas */
 	oogabugamega: {
 		num: 69268,
