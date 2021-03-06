@@ -180881,6 +180881,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			protect: ['8L1'],
 			psybeam: ['8L1'],
 			psychic: ['8L1'],
+			psychofists: ['8L1'],
 			psyshock: ['8L1'],
 			psywave: ['8L1'],
 			quickguard: ['8L1'],
