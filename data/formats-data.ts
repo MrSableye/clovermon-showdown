@@ -8384,7 +8384,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	// TODO: Bulbfrog
+	bulbfrog: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	sabsute: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
@@ -8400,13 +8404,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	// TODO: Ballboa
+	ballboa: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	turturret: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	// TODO: Semmush
+	semmush: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	husbin: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
@@ -8559,6 +8571,31 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 	},
 	condoommega: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	hohohomingmega: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	faptimemega: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	jerklemega: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	dowstermega: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	reptrillmega: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",

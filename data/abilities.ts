@@ -5129,11 +5129,6 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	oldschool: {
 		availability: {clover: 1},
 		onBasePowerPriority: 23,
-		onBasePower(basePower, pokemon, target, move) {
-			if (move?.effectType === 'Move' && target.getMoveHitData(move).crit) {
-				return this.chainModify([4, 3]);
-			}
-		},
 		onModifyCritRatio(critRatio, user, target, move) {
 			if (move.critRatio && move.critRatio >= 2) {
 				return 5;
@@ -5153,6 +5148,23 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Wholesome 100",
 		rating: 3.5,
 		isNonstandard: "Future",
+	},
+	spookyaura: {
+		availability: {clover: 1},
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Spooky Aura');
+		},
+		onAnyBasePowerPriority: 20,
+		onAnyBasePower(basePower, source, target, move) {
+			if (target === source || move.category === 'Status' || move.type !== 'Ghost') return;
+			if (!move.auraBooster) move.auraBooster = this.effectData.target;
+			if (move.auraBooster !== this.effectData.target) return;
+			return this.chainModify([move.hasAuraBreak ? 3072 : 5448, 4096]);
+		},
+		isUnbreakable: true,
+		name: "Spooky Aura",
+		rating: 3,
+		num: 186,
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {
