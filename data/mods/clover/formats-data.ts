@@ -12887,7 +12887,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
-	// TODO: Bulbfrog
+	bulbfrog: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	sabsute: {
 		inherit: true,
 		isNonstandard: "CAP",
@@ -12903,13 +12907,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
-	// TODO: Ballboa
+	ballboa: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	turturret: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
-	// TODO: Semmush
+	semmush: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	husbin: {
 		inherit: true,
 		isNonstandard: "CAP",
@@ -13063,6 +13075,31 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	condoommega: {
 		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	hohohomingmega: {
+		availability: {clover: 1},
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	faptimemega: {
+		availability: {clover: 1},
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	jerklemega: {
+		availability: {clover: 1},
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	dowstermega: {
+		availability: {clover: 1},
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	reptrillmega: {
+		availability: {clover: 1},
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},

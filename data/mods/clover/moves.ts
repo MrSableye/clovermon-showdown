@@ -808,4 +808,16 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	livewire: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	dragonburst: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	rockclock: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
