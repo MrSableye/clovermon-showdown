@@ -181710,7 +181710,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			crosschop: ['8L1'],
 			cut: ['8L1'],
 			defog: ['8L1'],
-			discarge: ['8L1'],
+			discharge: ['8L1'],
 			dizzypunch: ['8L1'],
 			doubleedge: ['8L1'],
 			doubleteam: ['8L1'],
