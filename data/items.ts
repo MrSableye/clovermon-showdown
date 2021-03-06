@@ -7835,6 +7835,81 @@ export const Items: { [itemid: string]: ItemData } = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	hohohomite: {
+		availability: {clover: 1},
+		name: "Hohohomite",
+		spritenum: 577,
+		megaStone: "Hohohoming-Mega",
+		megaEvolves: "Hohohoming",
+		itemUser: ["Hohohoming"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	faptite: {
+		availability: {clover: 1},
+		name: "Faptite",
+		spritenum: 577,
+		megaStone: "Faptime-Mega",
+		megaEvolves: "Faptime",
+		itemUser: ["Faptime"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	jerklite: {
+		availability: {clover: 1},
+		name: "Jerklite",
+		spritenum: 577,
+		megaStone: "Jerkle-Mega",
+		megaEvolves: "Jerkle",
+		itemUser: ["Jerkle"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	dowsterite: {
+		availability: {clover: 1},
+		name: "Dowsterite",
+		spritenum: 577,
+		megaStone: "Dowster-Mega",
+		megaEvolves: "Dowster",
+		itemUser: ["Dowster"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	reptrillite: {
+		availability: {clover: 1},
+		name: "Reptrillite",
+		spritenum: 577,
+		megaStone: "Reptrill-Mega",
+		megaEvolves: "Reptrille",
+		itemUser: ["Reptrill"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
 	/* Atlas Exclusive Items */
 	eviomite: {
 		availability: {atlas: 1},

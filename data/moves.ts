@@ -21744,6 +21744,100 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Psychic",
 		isNonstandard: "Future",
 	},
+	livewire: {
+		availability: {clover: 1},
+		num: 42004,
+		accuracy: 90,
+		basePower: 0,
+		category: "Status",
+		name: "Livewire",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		volatileStatus: 'leechseed',
+		condition: {
+			onStart(target) {
+				this.add('-start', target, 'move: Leech Seed');
+			},
+			onResidualOrder: 8,
+			onResidual(pokemon) {
+				const target = this.effectData.source.side.active[pokemon.volatiles['leechseed'].sourcePosition];
+				if (!target || target.fainted || target.hp <= 0) {
+					this.debug('Nothing to leech into');
+					return;
+				}
+				const damage = this.damage(pokemon.baseMaxhp / 8, pokemon, target);
+				if (damage) {
+					this.heal(damage, target, pokemon);
+				}
+			},
+		},
+		onTryImmunity(target) {
+			return !target.hasType('Ground');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		isNonstandard: "Future",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Clever",
+	},
+	dragonburst: {
+		availability: {clover: 1},
+		num: 42005,
+		accuracy: 100,
+		basePower: 0,
+		basePowerCallback(pokemon, target) {
+			const ratio = pokemon.hp * 48 / pokemon.maxhp;
+			if (ratio < 2) {
+				return 200;
+			}
+			if (ratio < 5) {
+				return 150;
+			}
+			if (ratio < 10) {
+				return 100;
+			}
+			if (ratio < 17) {
+				return 80;
+			}
+			if (ratio < 33) {
+				return 40;
+			}
+			return 20;
+		},
+		category: "Special",
+		name: "Dragon Burst",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Dragon",
+		isNonstandard: "Future",
+		zMove: {basePower: 160},
+		maxMove: {basePower: 130},
+		contestType: "Cute",
+	},
+	rockclock: {
+		availability: {clover: 1},
+		num: 42006,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Rock Clock",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Rock",
+		contestType: "Tough",
+	},
 	/* Atlas Exclusive Moves */
 	mondayz: {
 		availability: {atlas: 1},
