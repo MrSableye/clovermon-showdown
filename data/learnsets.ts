@@ -179705,7 +179705,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 		},
 	},
 	bulbfrog: {
-		learnset:{
+		learnset: {
 			agility: ['8L1'],
 			aquaring: ['8L1'],
 			attract: ['8L1'],
@@ -179796,7 +179796,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			whirlpool: ['8L1'],
 			zapcannon: ['8L1'],
 			zingzap: ['8L1'],
-		}
+		},
 	},
 	sabsute: {
 		learnset: {
@@ -180492,7 +180492,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			wakeupslap: ['8L1'],
 			wideguard: ['8L1'],
 			wrap: ['8L1'],
-		}
+		},
 	},
 	turturret: {
 		learnset: {
@@ -180794,7 +180794,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData } = {
 			watergun: ['8L1'],
 			waterpulse: ['8L1'],
 			waterfall: ['8L1'],
-		}
+		},
 	},
 	husbin: {
 		learnset: {

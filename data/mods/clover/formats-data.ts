@@ -11456,7 +11456,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"highjumpkick",
 					"flareblitz",
 					"volttackle",
-					"headmsash",
+					"headsmash",
 				],
 				lockedMoves: [
 					"extremespeed",

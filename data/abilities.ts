@@ -4723,7 +4723,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			let rand = 0;
 			if (possibleTargets.length > 1) rand = this.random(possibleTargets.length);
 			const target = possibleTargets[rand];
-			if (target.species) {
+			if (target && target.species) {
 				const color = target.species.color;
 				const colorType: Record<string, string> = {
 					red: 'Fire',
