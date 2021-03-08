@@ -71,13 +71,13 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] UU",
 		mod: 'clover',
 		ruleset: ['[Gen 8 Clover Only] OU'],
-		banlist: ['OU'],
+		banlist: ['OU', 'UUBL'],
 	},
 	{
 		name: "[Gen 8 Clover Only] RU",
 		mod: 'clover',
 		ruleset: ['[Gen 8 Clover Only] UU'],
-		banlist: ['UU'],
+		banlist: ['UU', 'RUBL'],
 	},
 	{
 		name: "[Gen 8 Clover Only] LC",

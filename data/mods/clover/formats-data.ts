@@ -5159,7 +5159,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	kuklan: {
 		inherit: true,
-		tier: "RU",
+		tier: "RUBL",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -5176,7 +5176,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"energyball",
 					"psychic",
 				],
-				level: 84,
+				level: 82,
 			},
 			{
 				abilities: [
@@ -5192,7 +5192,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"earthpower",
 					"substitute",
 				],
-				level: 84,
+				level: 82,
 			},
 		],
 		randomBattleMoves: [
@@ -5203,7 +5203,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"fierydance",
 			"grassknot",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 82,
 	},
 	flameboyan: {
 		inherit: true,
