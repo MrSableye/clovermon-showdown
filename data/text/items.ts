@@ -2455,4 +2455,24 @@ export const ItemsText: { [k: string]: ItemText } = {
 		name: "Pigusonite",
 		desc: "If held by an Piguson, this item allows it to Mega Evolve in battle.",
 	},
+	hohohomite: {
+		name: "Hohohomite",
+		desc: "If held by an Hohohoming, this item allows it to Mega Evolve in battle.",
+	},
+	faptite: {
+		name: "Faptite",
+		desc: "If held by an Faptime, this item allows it to Mega Evolve in battle.",
+	},
+	jerklite: {
+		name: "Jerklite",
+		desc: "If held by an Jerkle, this item allows it to Mega Evolve in battle.",
+	},
+	dowsterite: {
+		name: "Dowsterite",
+		desc: "If held by an Dowster, this item allows it to Mega Evolve in battle.",
+	},
+	reptrillite: {
+		name: "Reptrillite",
+		desc: "If held by an Reptrill, this item allows it to Mega Evolve in battle.",
+	},
 };
