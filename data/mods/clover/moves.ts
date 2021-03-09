@@ -47,6 +47,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		category: "Special",
 		pp: 10,
 		flags: {protect: 1, mirror: 1},
+		boosts: null,
 		secondary: {
 			chance: 100,
 			boosts: {
