@@ -699,4 +699,56 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	beetdown: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wingswing: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	raindestruction: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	supernova: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shattershard: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	runewrecker: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	flamenco: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	coomdoom: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	uhoh: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	raizehell: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	plasmaslasher: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sloth: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wisecrack: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

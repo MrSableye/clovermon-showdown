@@ -5198,4 +5198,43 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Kantonaut",
 		rating: 3.5,
 	},
+	swallowwhole: {
+		availability: {atlas: 1},
+		onStart(pokemon) {
+			let activated = false;
+			for (const sideCondition of ['reflect', 'lightscreen', 'auroraveil']) {
+				if (pokemon.side.getSideCondition(sideCondition)) {
+					if (!activated) {
+						this.add('-activate', pokemon, 'ability: Swallow Whole');
+						activated = true;
+					}
+					pokemon.side.removeSideCondition(sideCondition);
+				}
+				if (pokemon.side.foe.getSideCondition(sideCondition)) {
+					if (!activated) {
+						this.add('-activate', pokemon, 'ability: Swallow Whole');
+						activated = true;
+						pokemon.heal(pokemon.baseMaxhp / 5);
+					}
+					pokemon.side.foe.removeSideCondition(sideCondition);
+				}
+			}
+		},
+		name: "Swallow Whole",
+		rating: 2,
+	},
+	mattedhair: {
+		availability: {atlas: 1},
+		onDamagingHit(damage, target, source, move) {
+			if (move.flags['contact']) {
+				this.add('-ability', target, 'Tangling Hair');
+				this.boost({spe: -1}, source, target, null, true);
+			}
+		},
+		onModifyDef(def) {
+			return this.chainModify(2);
+		},
+		name: "Matted Hair",
+		rating: 2,
+	},
 };

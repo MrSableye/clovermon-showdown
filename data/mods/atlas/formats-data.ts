@@ -74,6 +74,41 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	boobird: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	hoonkah: {
+		inherit: true,
+		tier: "NFE",
+		isNonstandard: null,
+	},
+	awoogans: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	calstein: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	beeraffee: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	taclet: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	dragotilla: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	doodawl: {
 		inherit: true,
 		tier: "LC",
@@ -85,6 +120,66 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	skwibuwl: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	calfidol: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	maniphet: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	archangy: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	seraphanim: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	ragejin: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	tundastruk: {
+		inherit: true,
+		tier: "NFE",
+		isNonstandard: null,
+	},
+	brilectric: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	loniwa: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	hanifap: {
+		inherit: true,
+		tier: "NFE",
+		isNonstandard: null,
+	},
+	cloomior: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	buzzlite: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	buzzkill: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
@@ -115,6 +210,66 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	mammiff: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	mahboar: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	lilfella: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	bigfella: {
+		inherit: true,
+		tier: "NFE",
+		isNonstandard: null,
+	},
+	biggrfella: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	scavspectr: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	subspecter: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	wallace: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	walltar: {
+		inherit: true,
+		tier: "NFE",
+		isNonstandard: null,
+	},
+	oswalled: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	chicktoon: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	thicken: {
+		inherit: true,
+		tier: "NFE",
+		isNonstandard: null,
+	},
+	shenisqua: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
@@ -154,6 +309,71 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	macjunior: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	macmoon: {
+		inherit: true,
+		tier: "NFE",
+		isNonstandard: null,
+	},
+	mrgrime: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	uhorb: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	stinkner: {
+		inherit: true,
+		tier: "NFE",
+		isNonstandard: null,
+	},
+	stinkannon: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	tikpoint: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	slapolock: {
+		inherit: true,
+		tier: "NFE",
+		isNonstandard: null,
+	},
+	brawnotime: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	skulfocker: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	skolfucker: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	rottegg: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	crakrab: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	funkoon: {
 		inherit: true,
 		tier: "LC",
@@ -165,6 +385,31 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	inspooney: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	fone: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	beegfone: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	frosbit: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	heehare: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	bunleashed: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
