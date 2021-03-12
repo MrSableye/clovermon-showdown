@@ -94,7 +94,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
-	beeraffee: {
+	beeraffe: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
