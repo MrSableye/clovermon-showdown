@@ -249,7 +249,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
-	walltar: {
+	wallter: {
 		inherit: true,
 		tier: "NFE",
 		isNonstandard: null,
@@ -329,7 +329,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
-	stinkner: {
+	stinkney: {
 		inherit: true,
 		tier: "NFE",
 		isNonstandard: null,

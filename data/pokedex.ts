@@ -32055,13 +32055,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		weightkg: 3.4,
 		color: "Brown",
 		evoLevel: 15,
-		evos: ["Hoonkah"],
+		evos: ["Honkah"],
 		eggGroups: [
 			"Field",
 			"Flying",
 		],
 	},
-	hoonkah: {
+	honkah: {
 		num: 34027,
 		name: "Honkah",
 		types: [
@@ -32468,7 +32468,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		weightkg: 3.5,
 		color: "Orange",
 		evoLevel: 23,
-		evos: ["Tundastruck"],
+		evos: ["Tundastruk"],
 		eggGroups: [
 			"Human-like",
 			"Monster",
@@ -32476,7 +32476,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	},
 	tundastruk: {
 		num: 34095,
-		name: "Tundastruck",
+		name: "Tundastruk",
 		types: [
 			"Electric",
 		],
@@ -33075,7 +33075,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 			"Human-like",
 		],
 	},
-	walltar: {
+	wallter: {
 		num: 34165,
 		name: "Wallter",
 		types: [
@@ -33124,7 +33124,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		heightm: 3.5,
 		weightkg: 269,
 		color: "White",
-		prevo: "Walltar",
+		prevo: "Wallter",
 		eggGroups: [
 			"Human-like",
 		],
@@ -33551,7 +33551,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 			"Monster",
 		],
 	},
-	stinkner: {
+	stinkney: {
 		num: 34211,
 		name: "Stinkney",
 		types: [

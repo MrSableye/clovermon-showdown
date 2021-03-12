@@ -8951,7 +8951,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	walltar: {
+	wallter: {
 		availability: {
 			atlas: 1,
 		},
@@ -9063,7 +9063,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	stinkner: {
+	stinkney: {
 		availability: {
 			atlas: 1,
 		},
