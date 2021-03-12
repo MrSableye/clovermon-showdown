@@ -79,7 +79,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
-	hoonkah: {
+	honkah: {
 		inherit: true,
 		tier: "NFE",
 		isNonstandard: null,

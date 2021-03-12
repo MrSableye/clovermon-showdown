@@ -8713,7 +8713,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	hoonkah: {
+	honkah: {
 		availability: {
 			atlas: 1,
 		},

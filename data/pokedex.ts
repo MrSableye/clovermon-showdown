@@ -32113,7 +32113,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		heightm: 3.5,
 		weightkg: 6.2,
 		color: "Brown",
-		prevo: "Hoonkah",
+		prevo: "Honkah",
 		eggGroups: [
 			"Field",
 			"Flying",
