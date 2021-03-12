@@ -32200,14 +32200,14 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		weightkg: 0.4,
 		color: "Brown",
 		evoLevel: 30,
-		evos: ["Dragótilla"],
+		evos: ["Dragotilla"],
 		eggGroups: [
 			"Amorphous",
 		],
 	},
 	dragotilla: {
 		num: 34059,
-		name: "Dragótilla",
+		name: "Dragotilla",
 		types: [
 			"Grass",
 			"Dragon",
@@ -32596,7 +32596,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	},
 	cloomior: {
 		num: 34101,
-		name: "Cloomir",
+		name: "Cloomior",
 		types: [
 			"Ground",
 			"Water",
@@ -32962,7 +32962,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	},
 	biggrfella: {
 		num: 34145,
-		name: "Bigfella",
+		name: "Biggrfella",
 		types: [
 			"Ground",
 			"Flying",
