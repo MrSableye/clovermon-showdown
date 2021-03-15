@@ -175,6 +175,34 @@ export const Formats: FormatList = [
 		section: 'Atlas Only Singles',
 	},
 	{
+		name: "[Gen 8 Atlas Only] OU",
+		mod: 'atlas',
+		ruleset: [
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Evasion Moves Clause',
+			'Species Clause',
+			'OHKO Clause',
+			'Clover Only',
+		],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+	},
+	{
+		name: "[Gen 8 Atlas Only] Ubers",
+		mod: 'atlas',
+		ruleset: [
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Evasion Moves Clause',
+			'Species Clause',
+			'OHKO Clause',
+			'Clover Only',
+		],
+		banlist: ['Baton Pass'],
+	},
+	{
 		name: "[Gen 8 Atlas Only] Anything Goes",
 		mod: 'atlas',
 		ruleset: [
