@@ -186,7 +186,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Atlas Only',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass'],
 	},
 	{
 		name: "[Gen 8 Atlas Only] Ubers",
