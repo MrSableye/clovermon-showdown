@@ -222,10 +222,18 @@ export class Poll extends Rooms.MinorActivity {
 	}
 
 	static getQuestionMarkup(question: string, supportHTML = false, rank?: AuthLevel, ratingRequiredment?: {format: string, minimumRating: number}) {
-		if (supportHTML) return question;
-		const rankText = (rank && ` (Rank ${rank} or above)`) || '';
-		const ratingText = (ratingRequiredment && ` (Rating of ${ratingRequiredment.minimumRating} in ${ratingRequiredment.format} or above)`);
-		return Chat.formatText(`${question}${rankText}${ratingText}`);
+		let questionText = question;
+
+		if (rank) {
+			questionText += ` (Rank ${rank} or above)`;
+		}
+
+		if (ratingRequiredment) {
+			questionText += ` (Rating of ${ratingRequiredment.minimumRating} in ${ratingRequiredment.format} or above)`;
+		}
+
+		if (supportHTML) return questionText;
+		return Chat.formatText(questionText);
 	}
 
 	static getAnswerMarkup(answer: PollAnswer, supportHTML = false) {
