@@ -141,6 +141,22 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: "[Gen 8 Clover Only] Multi-Tier",
+		mod: 'clover',
+		ruleset: [
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Evasion Moves Clause',
+			'Species Clause',
+			'OHKO Clause',
+			'Clover Only',
+			'Blobbos Clause',
+			'Multi Tier',
+		],
+		banlist: ['Baton Pass'],
+	},
+	{
 		section: "Clover Only Doubles",
 	},
 	{

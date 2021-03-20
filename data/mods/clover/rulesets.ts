@@ -1,3 +1,5 @@
+import {Species} from "../../../sim/dex-species";
+
 export const Formats: {[k: string]: ModdedFormatData} = {
 	blobbosclause: {
 		effectType: 'ValidatorRule',
@@ -57,6 +59,54 @@ export const Formats: {[k: string]: ModdedFormatData} = {
 			if (Math.floor(team.length / 2) !== totalClovermons) {
 				return ['Your team requires equal number of Clovermons and non-Clovermons.'];
 			}
+		},
+	},
+	multitier: {
+		effectType: 'ValidatorRule',
+		name: 'Multi-Tier',
+		desc: "Requires 1 Uber, 1 OU mon, 2 UU mons, and 2 RU mons.",
+		onValidateTeam(team) {
+			let uber = 0;
+			let ou = 0;
+			let uu = 0;
+			let ru = 0;
+
+			team.forEach((set) => {
+				const species = this.dex.getSpecies(set.species || set.name);
+				if (species.tier === 'Uber') {
+					uber++;
+				} else if (species.tier === 'OU') {
+					ou++;
+				} else if ((species.tier === 'UU') || (species.tier === 'RUBL')) {
+					uu++;
+				} else if ((species.tier === 'RU') || (species.tier === 'LC') || (species.tier === 'NFE')) {
+					ru++;
+				}
+			});
+
+			const errors = [];
+
+			if (uber + ou + uu + ru !== 6) {
+				errors.push('This format requires teams of 6.');
+			}
+
+			if (uber !== 1) {
+				errors.push('This format requires exactly 1 Uber per team.');
+			}
+
+			if (ou !== 1) {
+				errors.push('This format requires exactly 1 OU mon per team.');
+			}
+
+			if (uu !== 2) {
+				errors.push('This format requires exactly 2 UU mons per team.');
+			}
+
+			if (ru !== 2) {
+				errors.push('This format requires exactly 2 RU (or equivalent) mons per team.');
+			}
+
+			return errors;
 		},
 	},
 };
