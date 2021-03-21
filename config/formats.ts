@@ -80,6 +80,25 @@ export const Formats: FormatList = [
 		banlist: ['UU', 'RUBL'],
 	},
 	{
+		name: "[Gen 8 Clover Only] NFE",
+		mod: 'clover',
+		ruleset: [
+			'Not Fully Evolved',
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Evasion Moves Clause',
+			'Species Clause',
+			'OHKO Clause',
+			'Clover Only',
+			'Blobbos Clause',
+		],
+		banlist: [
+			'Chancer',
+			'Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
+		],
+	},
+	{
 		name: "[Gen 8 Clover Only] LC",
 		mod: 'clover',
 		ruleset: [
