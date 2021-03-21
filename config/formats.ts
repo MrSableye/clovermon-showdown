@@ -95,7 +95,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Chancer',
-			'Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
+			'Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Wonder Guard',
 		],
 	},
 	{
