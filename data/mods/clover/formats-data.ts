@@ -12874,9 +12874,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Unobtainable",
 	},
-	/* Clover CAP */
-	// TODO: Triple bois
-	// TODO: Two wolves
 	bearedaze: {
 		inherit: true,
 		isNonstandard: "CAP",
@@ -12973,6 +12970,67 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "CAP",
 	},
 	shiribiko: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	simionach: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	krissy: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	krackodemon: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	dubsnake: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	hydroil: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	/*buges here*/
+	cubtex: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	purfurr: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	dinomight: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	cocken: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	cockenmega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	regigigone: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	spycrab: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",
