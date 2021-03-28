@@ -12987,7 +12987,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	krackodemon: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP LC",
+		tier: "CAP",
 	},
 	dubsnake: {
 		inherit: true,
