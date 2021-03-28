@@ -189,7 +189,7 @@ export const Formats: FormatList = [
 			'Clover Only',
 			'Blobbos Clause',
 		],
-		banlist: ['Baton Pass'],
+		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Eviolite'],
 	},
 	{
 		section: "Clover Only Doubles",
