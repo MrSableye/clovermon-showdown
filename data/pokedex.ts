@@ -30797,9 +30797,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Dragon", "Monster"],
 		gen: 8,
 	},
-/* 42028 Reserved for Glaciun*/
-/* 42029 Reserved for Galvadeux*/
-/* 42030 Reserved for Pyrotrois*/
+	/* 42028 Reserved for Glaciun*/
+	/* 42029 Reserved for Galvadeux*/
+	/* 42030 Reserved for Pyrotrois*/
 	cheesetah: {
 		num: 42031,
 		name: "Cheesetah",
@@ -30882,19 +30882,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 		requiredMove: "Ancient Power",
 	},
-    regigigone: {
-        num: 42036,
-        name: "Regigigone",
-        types: ["Normal", "Ghost"],
-        gender: "N",
-        baseStats: {hp: 110, atk: 110, def: 100, spa: 160, spd: 110, spe: 80},
-        abilities: {0: "Defeatist"},
-        heightm: 3.7,
-        weightkg: 153,
-        color: "White",
-        eggGroups: ["Undiscovered"],
-        gen: 8,
-    },
+	regigigone: {
+		num: 42036,
+		name: "Regigigone",
+		types: ["Normal", "Ghost"],
+		gender: "N",
+		baseStats: {hp: 110, atk: 110, def: 100, spa: 160, spd: 110, spe: 80},
+		abilities: {0: "Defeatist"},
+		heightm: 3.7,
+		weightkg: 153,
+		color: "White",
+		eggGroups: ["Undiscovered"],
+		gen: 8,
+	},
 	spycrab: {
 		num: 42034,
 		name: "Spycrab",
