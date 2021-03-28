@@ -21996,7 +21996,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Fighting",
 		zMove: {basePower: 180},
-		isNonstandard: "Future",
 	},
 	avianrush: {
 		availability: {clover: 1},

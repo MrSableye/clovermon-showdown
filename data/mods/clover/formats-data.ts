@@ -12999,6 +12999,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	cheesetah: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	/* buges here*/
 	cubtex: {
 		inherit: true,

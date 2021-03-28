@@ -8499,6 +8499,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
+	cheesetah: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	/* buges here*/
 	cubtex: {
 		availability: {clover: 1},
