@@ -5097,7 +5097,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
 		onResidual(pokemon) {
-			this.heal(pokemon.baseMaxhp / 16);
+			this.heal(pokemon.baseMaxhp / 10);
 		},
 		name: "Cake Veil",
 		rating: 4,
@@ -5142,6 +5142,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		availability: {clover: 1},
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Dark') {
+				this.add('-immune', target, '[from] ability: Wholesome 100');
 				return null;
 			}
 		},
@@ -5165,6 +5166,26 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Spooky Aura",
 		rating: 3,
 		num: 186,
+	},
+	flaminhot: {
+		availability: {clover: 1},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Steelworker boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Steelworker boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Flamin Hot",
+		rating: 3.5,
+		num: 200,
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {

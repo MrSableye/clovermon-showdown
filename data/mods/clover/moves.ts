@@ -821,4 +821,28 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	awaken: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	voltaiccyclone: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	boilover: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	soulcrusher: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	cheeseclaw: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	avianrush: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

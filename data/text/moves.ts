@@ -7136,6 +7136,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Hits six times.",
 		shortDesc: "Hits 6 times.",
 	},
+	psychofists: {
+		name: "Psycho Fists",
+		desc: "If this move is successful, the terrain becomes Psychic Terrain.",
+		shortDesc: "Summons Psychic Terrain.",
+	},
 	dragonburst: {
 		name: "Dragon Burst",
 		desc: "The power of this move is 20 if X is 33 to 48, 40 if X is 17 to 32, 80 if X is 10 to 16, 100 if X is 5 to 9, 150 if X is 2 to 4, and 200 if X is 0 or 1, where X is equal to (user's current HP * 48 / user's maximum HP), rounded down.",
@@ -7160,5 +7165,38 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Rock Clock",
 		desc: "Has a 30% chance to confuse the target.",
 		shortDesc: "30% chance to confuse the target.",
+	},
+	awaken: {
+		name: "Awaken",
+		desc: "Raises the user's Attack, Defense, and Special Defense by 2 stages. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
+		shortDesc: "Charges, then raises Atk, Def, SpD by 2 turn 2.",
+
+		prepare: "[POKEMON] is channeling energy!",
+	},
+	voltaiccyclone: {
+		name: "Voltaic Cyclone",
+		desc: "If this move is successful and the user has not fainted, the effects of Leech Seed and binding moves end for the user, and all hazards are removed from the user's side of the field.",
+		shortDesc: "Free user from hazards/bind/Leech Seed",
+	},
+	boilover: {
+		name: "Boil Over",
+		desc: "Power doubles if Rain Dance or Sunny Day is active, and this move's type changes to match the other. Fire type during Primordial Sea or Rain Dance and Water type during Desolate Land or Sunny Day.",
+		shortDesc: "Power doubles and type varies in rain or sun.",
+		move: "Breakneck Blitz turned into [MOVE] due to the weather!",
+	},
+	soulcrusher: {
+		name: "Soul Crusher",
+		desc: "Power is multiplied by 999 times if the target has less than or equal to half of its maximum HP remaining.",
+		shortDesc: "Power is multiplied by 999x if the target's HP is 50% or less.",
+	},
+	cheeseclaw: {
+		name: "Cheese Claw",
+		desc: "Has a 20% chance to burn the target.",
+		shortDesc: "20% chance to burn the target.",
+	},
+	avianrush: {
+		name: "Avian Rush",
+		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 33% recoil.",
 	},
 };

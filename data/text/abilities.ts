@@ -1833,7 +1833,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	/* Clover CAP Abilities */
 	cakeveil: {
 		name: "Cake Veil",
-		desc: "At the end of every turn, this Pokemon restores 1/16 of its max HP.",
+		desc: "At the end of every turn, this Pokemon restores 1/10 of its max HP.",
 	},
 	rusepower: {
 		name: "Ruse Power",
@@ -1845,10 +1845,21 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	oldschool: {
 		name: "Old School",
-		desc: "This Pokemon's critical hits deal double damage instead of 1.5x; High crit ratio moves always crit.",
+		desc: "High crit ratio moves always crit.",
 	},
 	wholesome100: {
 		name: "Wholesome 100",
-		desc: "This Pokemon is immune to Dark-type attacks.",
+		desc: "This Pokemon is immune to Dark-type moves.",
+	},
+	flaminhot: {
+		name: "Flamin Hot",
+		desc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fire-type attack.",
+	},
+	spookyaura: {
+		name: "Spooky Aura",
+		desc: "While this Pokemon is active, the power of Ghost-type moves used by active Pokemon is multiplied by 1.33.",
+		shortDesc: "While this Pokemon is active, a Ghost move used by any Pokemon has 1.33x power.",
+
+		start: "  [POKEMON] is radiating a spooky aura!",
 	},
 };

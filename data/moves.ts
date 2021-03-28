@@ -21838,6 +21838,183 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Rock",
 		contestType: "Tough",
 	},
+	awaken: {
+		availability: {clover: 1},
+		num: 42007,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Future",
+		name: "Awaken",
+		pp: 10,
+		priority: 0,
+		flags: {charge: 1, nonsky: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		boosts: {
+			atk: 2,
+			def: 2,
+			spd: 2,
+		},
+		secondary: null,
+		target: "self",
+		type: "Fighting",
+		zMove: {boost: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1}},
+		contestType: "Smart",
+	},
+	voltaiccyclone: {
+		availability: {clover: 1, atlas: 1},
+		num: 42008,
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Voltaic Cyclone",
+		pp: 40,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.getEffect(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.getEffect(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		target: "normal",
+		type: "Electric",
+		contestType: "Cool",
+	},
+	boilover: {
+		availability: {clover: 1, atlas: 1},
+		num: 42009,
+		accuracy: 100,
+		basePower: 95,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Boil Over",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyType(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+				move.type = 'Water';
+				break;
+			case 'raindance':
+			case 'primordialsea':
+				move.type = 'Fire';
+				break;
+			}
+		},
+		onModifyMove(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+				move.basePower *= 2;
+				break;
+			case 'raindance':
+			case 'primordialsea':
+				move.basePower *= 2;
+				break;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		zMove: {basePower: 200},
+		maxMove: {basePower: 149},
+		contestType: "Beautiful",
+	},
+	soulcrusher: {
+		availability: {clover: 1},
+		num: 42010,
+		accuracy: 90,
+		basePower: 10,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Soul Crusher",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		/* lol */
+		onBasePower(basePower, pokemon, target) {
+			if (target.hp * 2 <= target.maxhp) {
+				return this.chainModify(999);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+		contestType: "Tough",
+	},
+	cheeseclaw: {
+		availability: {clover: 1},
+		num: 42011,
+		accuracy: 90,
+		basePower: 95,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Cheese Claw",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Fighting",
+		zMove: {basePower: 180},
+		isNonstandard: "Future",
+	},
+	avianrush: {
+		availability: {clover: 1},
+		num: 42012,
+		accuracy: 95,
+		basePower: 120,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Avian Rush",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [33, 100],
+		secondary: null,
+		target: "normal",
+		type: "???",
+		contestType: "Tough",
+	},
 	/* Atlas Exclusive Moves */
 	mondayz: {
 		availability: {atlas: 1},
