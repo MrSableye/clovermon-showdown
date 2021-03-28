@@ -12999,7 +12999,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
-	/*buges here*/
+	/* buges here*/
 	cubtex: {
 		inherit: true,
 		isNonstandard: "CAP",
