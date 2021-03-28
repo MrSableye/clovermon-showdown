@@ -30896,7 +30896,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
         gen: 8,
     },
 	spycrab: {
-		num: 42034,
+		num: 42037,
 		name: "Spycrab",
 		types: ["Water", "Dark"],
 		genderRatio: {M: 0.5, F: 0.5},
