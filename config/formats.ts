@@ -176,6 +176,22 @@ export const Formats: FormatList = [
 		banlist: ['Baton Pass'],
 	},
 	{
+		name: "[Gen 8 Clover Only] 350 Cup",
+		mod: 'clover',
+		ruleset: [
+			'350 Cup Mod',
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Evasion Moves Clause',
+			'Species Clause',
+			'OHKO Clause',
+			'Clover Only',
+			'Blobbos Clause',
+		],
+		banlist: ['Baton Pass'],
+	},
+	{
 		section: "Clover Only Doubles",
 	},
 	{
