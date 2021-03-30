@@ -1648,6 +1648,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		num: 35,
 	},
 	illusion: {
+		availability: {clover: 1},
 		onBeforeSwitchIn(pokemon) {
 			pokemon.illusion = null;
 			let i;
@@ -4814,13 +4815,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Blademaster",
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
-			if (['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust'].includes(move.id)) {
+			if (['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab'].includes(move.id)) {
 				this.debug('Blademaster boost');
 				return this.chainModify([0x1333, 0x1000]);
 			}
 		},
 		onModifyCritRatio(critRatio, target, source, move) {
-			if (target && ['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust'].includes(move.id)) return critRatio + 1;
+			if (target && ['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab'].includes(move.id)) return critRatio + 1;
 		},
 		rating: 4,
 	},

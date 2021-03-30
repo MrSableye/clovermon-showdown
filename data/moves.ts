@@ -22014,6 +22014,25 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "???",
 		contestType: "Tough",
 	},
+	trickstab: {
+		availability: {clover: 1},
+		num: 42013,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Trick Stab",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		beforeMoveCallback(source, target, move) {
+			if (source.illusion) move.willCrit = true;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		contestType: "Cute",
+	},
 	/* Atlas Exclusive Moves */
 	mondayz: {
 		availability: {atlas: 1},
