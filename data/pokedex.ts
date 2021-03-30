@@ -30871,6 +30871,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	cockenmega: {
 		num: 42035,
 		name: "Cocken-Mega",
+		baseSpecies: "Cocken",
+		forme: "Mega",
 		types: ["???", "Dragon"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 130, atk: 120, def: 10, spa: 5, spd: 5, spe: 200},
