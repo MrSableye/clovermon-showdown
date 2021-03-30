@@ -845,4 +845,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	trickstab: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
