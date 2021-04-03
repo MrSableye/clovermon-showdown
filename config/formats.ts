@@ -209,7 +209,7 @@ export const Formats: FormatList = [
 			'Clover Only',
 			'Blobbos Clause',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	{
 		section: "Clover National Dex Singles",
