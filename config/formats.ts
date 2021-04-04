@@ -204,7 +204,7 @@ export const Formats: FormatList = [
 			'Species Clause',
 			'OHKO Clause',
 			'Swagger Clause',
-			'Gravity Sleep Clause',
+			'Sleep Clause',
 			'Evasion Moves Clause',
 			'Clover Only',
 			'Blobbos Clause',
