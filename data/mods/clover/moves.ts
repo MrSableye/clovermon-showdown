@@ -849,4 +849,16 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	moredakka: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	tombstoner: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	fruitjuice: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
