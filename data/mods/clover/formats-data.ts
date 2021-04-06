@@ -13043,7 +13043,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	ankhira: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP LC",
 	},
 	ankhpu: {
 		inherit: true,
@@ -13058,7 +13058,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	squithee: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP LC",
 	},
 	goblazer: {
 		inherit: true,
@@ -13073,7 +13073,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	bandicute: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP LC",
 	},
 	naughtycoot: {
 		inherit: true,
