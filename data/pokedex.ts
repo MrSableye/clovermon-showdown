@@ -30950,7 +30950,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	},
 	ankhira: {
 		num: 42038,
-		name: "Ankhpu",
+		name: "Ankhira",
 		types: ["Ground", "Psychic"],
 		gender: "N",
 		baseStats: {hp: 65, atk: 25, def: 61, spa: 42, spd: 74, spe: 34},
@@ -30976,7 +30976,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	},
 	ankhurah: {
 		num: 42040,
-		name: "Ankhpu",
+		name: "Ankhurah",
 		types: ["Ground", "Psychic"],
 		gender: "N",
 		baseStats: {hp: 115, atk: 65, def: 103, spa: 127, spd: 139, spe: 51},
