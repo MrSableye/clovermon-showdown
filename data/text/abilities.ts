@@ -1862,4 +1862,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  [POKEMON] is radiating a spooky aura!",
 	},
+	tetanus: {
+		name: "Tetanus",
+		shortDesc: "A Pokemon making contact with this Pokemon will be Toxic poisoned.",
+	},
 };

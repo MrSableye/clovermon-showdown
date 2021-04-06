@@ -7199,4 +7199,19 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
 		shortDesc: "Has 33% recoil.",
 	},
+	moredakka: {
+		name: "More Dakka",
+		desc: "Hits three times. This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
+		shortDesc: "Always results in a critical hit. Hits 3 times.",
+	},
+	tombstoner: {
+		name: "Tombstoner",
+		desc: "The user faints after using this move, Damage is calculated using the user's Defense stat as its Attack. This move is prevented from executing if any active Pokemon has the Damp Ability. ",
+		shortDesc: "Hits adjacent Pokemon. The user faints, Uses user's Def stat as Atk in damage calculation.",
+	},
+	fruitjuice: {
+		name: "Fruit Juice",
+		desc: "Power is equal to 100 times the user's Stockpile count plus 80. Whether or not this move is successful, the user's Defense and Special Defense decrease by as many stages as Stockpile had increased them, and the user's Stockpile count resets to 0.",
+		shortDesc: "More power with more uses of Stockpile.",
+	},
 };

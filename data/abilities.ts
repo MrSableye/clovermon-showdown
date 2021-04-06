@@ -5166,7 +5166,6 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		isUnbreakable: true,
 		name: "Spooky Aura",
 		rating: 3,
-		num: 186,
 	},
 	flaminhot: {
 		availability: {clover: 1},
@@ -5186,7 +5185,16 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Flamin Hot",
 		rating: 3.5,
-		num: 200,
+	},
+	tetanus: {
+		availability: {clover: 1},
+		onDamagingHit(damage, target, source, move) {
+			if (move.flags['contact']) {
+				source.trySetStatus('tox', target);
+			}
+		},
+		name: "Tetanus",
+		rating: 1.5,
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {

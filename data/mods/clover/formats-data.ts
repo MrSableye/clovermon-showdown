@@ -13040,6 +13040,76 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	ankhira: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	ankhpu: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	ankhurah: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	squithee: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	goblazer: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	warghork: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	bandicute: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	naughtycoot: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	moyalith: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	vulkancer: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	junkgeist: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	indignifly: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	bungaloon: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	sableven: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	/* Clover CAP Pokémon */
 	oogabugamega: {
 		inherit: true,
