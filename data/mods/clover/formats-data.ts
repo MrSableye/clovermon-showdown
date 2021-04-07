@@ -13004,7 +13004,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
-	/* buges here*/
+	glaciun: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	galvadeux: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	pyrotrois: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	cubtex: {
 		inherit: true,
 		isNonstandard: "CAP",

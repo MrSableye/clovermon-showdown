@@ -31073,7 +31073,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Vulkancer",
 		types: ["Fire", "Ground"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 80, atk: 60, def: 90, spa: 140, spd: 50, spe: 70},
+		baseStats: {hp: 80, atk: 90, def: 90, spa: 140, spd: 60, spe: 30},
 		abilities: {0: "Flame Body", 1: "Magma Armor", H: "Speed Boost"},
 		heightm: 1,
 		weightkg: 40,
