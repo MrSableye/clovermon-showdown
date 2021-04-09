@@ -32841,7 +32841,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		heightm: 6.7,
 		weightkg: 99.9,
 		color: "Yellow",
-		prevo: "Archangry",
+		prevo: "Archangy",
 		eggGroups: [
 			"Monster",
 			"Fairy",

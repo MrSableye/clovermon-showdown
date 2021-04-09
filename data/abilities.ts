@@ -5244,9 +5244,10 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 					if (!activated) {
 						this.add('-activate', pokemon, 'ability: Swallow Whole');
 						activated = true;
-						pokemon.heal(pokemon.baseMaxhp / 5);
 					}
+
 					pokemon.side.foe.removeSideCondition(sideCondition);
+					pokemon.heal(pokemon.level);
 				}
 			}
 		},
