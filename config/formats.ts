@@ -94,7 +94,7 @@ export const Formats: FormatList = [
 			'Blobbos Clause',
 		],
 		banlist: [
-			'Chancer',
+			'Chancer', 'Semrust',
 			'Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Wonder Guard',
 		],
 	},
