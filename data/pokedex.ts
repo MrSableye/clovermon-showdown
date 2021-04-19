@@ -31485,7 +31485,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
     },
 	noxilium: {
         num: 42079,
-        name: "Placeholder",
+        name: "Noxilium",
         types: ["Ghost", "Flying"],
         gender: "N",
         baseStats: {hp: 89, atk: 72, def: 80, spa: 121, spd: 78, spe: 100},
@@ -31542,7 +31542,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
     },
 	wawho: {
         num: 42098,
-        name: "Placeholder",
+        name: "Wawho",
         types: ["???"],
         gender: "N",
         baseStats: {hp: 85, atk: 90, def: 70, spa: 75, spd: 70, spe: 90},
@@ -32388,7 +32388,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		requiredItem: "Reptrillite",
 	},
 	kuklanmega: {
-		num: 69272,
+		num: 69182,
 		name: "Kuklan-Mega",
 		baseSpecies: "Kuklan",
 		forme: "Mega",

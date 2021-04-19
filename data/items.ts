@@ -7538,16 +7538,20 @@ export const Items: { [itemid: string]: ItemData } = {
 	moluganion: {
 		name: "Moluganion",
 		availability: {clover: 1},
-		spritenum: 747,
+		spritenum: 748,
 		onAfterSetStatusPriority: -1,
 		onAfterSetStatus(status, pokemon) {
-			pokemon.cureStatus();
-			pokemon.removeVolatile('confusion');
+			if (pokemon.baseSpecies.baseSpecies === 'Noxilium') {
+				pokemon.cureStatus();
+				pokemon.removeVolatile('confusion');
+			}
 		},
 		onUpdate(pokemon) {
 			if (pokemon.status || pokemon.volatiles['confusion']) {
-				pokemon.cureStatus();
-				pokemon.removeVolatile('confusion');
+				if (pokemon.baseSpecies.baseSpecies === 'Noxilium') {
+					pokemon.cureStatus();
+					pokemon.removeVolatile('confusion');
+				}
 			}
 		},
 		itemUser: ["Noxilium"],

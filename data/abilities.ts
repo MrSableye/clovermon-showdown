@@ -5198,7 +5198,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	},
 	colonoscopy: {
 		availability: {clover: 1},
-		onModifyPriority(priority, pokemon, target, move) {
+		onModifyAtk(atk, pokemon, target, move) {
 			if (move?.flags['heal']) return this.chainModify(1.5);
 		},
 		name: "Colonoscopy",

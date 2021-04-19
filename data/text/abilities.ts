@@ -1875,4 +1875,17 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Temperamental",
 		shortDesc: "If Despairy, it changes between Nice and Ebil Mode at the end of each turn.",
 	},
+	hewillbedragon: {
+		name: "He Will Be Dragon",
+		desc: "This Pokemon's Normal-type moves become Dragon-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's Normal-type moves become Dragon type and have 1.2x power.",
+	},
+	blueblood: {
+		name: "Blue Blood",
+		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",
+	},
+	colonoscopy: {
+		name: "Colonoscopy",
+		shortDesc: "This Pokemon's draining moves have 1.5x power.",
+	},
 };

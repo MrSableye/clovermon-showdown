@@ -13224,7 +13224,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	canamaple: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP LC",
 	},
 	frozweed: {
 		inherit: true,

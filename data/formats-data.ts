@@ -8739,6 +8739,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
+	strollge: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	eccosmic: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
