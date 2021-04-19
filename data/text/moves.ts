@@ -7214,4 +7214,34 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power is equal to 100 times the user's Stockpile count plus 80. Whether or not this move is successful, the user's Defense and Special Defense decrease by as many stages as Stockpile had increased them, and the user's Stockpile count resets to 0.",
 		shortDesc: "More power with more uses of Stockpile.",
 	},
+	phantomfang: {
+		name: "Phantom Fang",
+		desc: "Has a 30% chance to burn the target.",
+		shortDesc: "30% chance to burn the target.",
+	},
+	phasethrough: {
+		name: "Phase Through",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+		shortDesc: "User switches out after damaging the target.",
+		switchOut: "[POKEMON] went back to [TRAINER]!",
+	},
+	coldcutter: {
+		name: "Cold Cutter",
+		shortDesc: "No additional effect.",
+	},
+	shadowscales: {
+		name: "Shadow Scales",
+		desc: "Has a 20% chance to lower the target's accuracy by 1 stage.",
+		shortDesc: "20% chance to lower the target's accuracy by 1.",
+	},
+	wingsofcorrection: {
+		name: "Wings Of Correction",
+		desc: "If this move is successful and whether or not the target's evasiveness was affected, the effects of Reflect, Light Screen, Aurora Veil, Safeguard, Mist, Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the target's side, and the effects of Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the user's side. If there is a terrain active and this move is successful, the terrain will be cleared. Has -6 priority and switches the opponent out to a random member.",
+		shortDesc: "Clears terrain and hazards, switches out opponent",
+	},
+	brutalpunishment: {
+		name: "Brutal Punishment",
+		desc: "Has a 100% chance to raise the user's Attack and Special Attack by 1 stage. If the user is a Despairy in Nice Mode, this move is Fairy type. If the user is a Despairy in Ebil Mode, this move is Dark type. This move cannot be used successfully unless the user's current form, while considering Transform, is Nice or Ebil Mode Despairy.",
+		shortDesc: "Despairy: Fairy; Ebil: Dark; 100% +1 Atk and SpA.",
+	},
 };

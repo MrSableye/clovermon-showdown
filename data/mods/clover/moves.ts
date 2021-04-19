@@ -861,4 +861,28 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	phantomfang: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	phasethrough: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	coldcutter: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	shadowscales: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	wingsofcorrection: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	brutalpunishment: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

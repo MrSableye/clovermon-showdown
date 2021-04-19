@@ -13064,7 +13064,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	ankhpu: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP NFE",
 	},
 	ankhurah: {
 		inherit: true,
@@ -13079,7 +13079,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	goblazer: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP NFE",
 	},
 	warghork: {
 		inherit: true,
@@ -13117,6 +13117,141 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "CAP",
 	},
 	bungaloon: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	skubapro: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	skubaanti: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	dollghost: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	pegui: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	pechit: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP NFE",
+	},
+	copolar: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	magghost: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	coccurn: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP NFE",
+	},
+	phamothom: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	spiranha: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	selaghast: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	karkutlass: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	mafiadon: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	fungnet: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	mamini: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	mammount: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	vriskeleton: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	pedestone: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	erochre: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	pillaia: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	canamaple: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	frozweed: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	noxilium: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	strollge: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	despairy: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	eccosmic: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	wawho: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",
@@ -13255,6 +13390,20 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "CAP",
 	},
 	reptrillmega: {
+		availability: {
+			clover: 1,
+		},
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	kuklanmega: {
+		availability: {
+			clover: 1,
+		},
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	ricosuavemega: {
 		availability: {
 			clover: 1,
 		},

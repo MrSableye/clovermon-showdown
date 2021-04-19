@@ -2378,6 +2378,11 @@ export const ItemsText: { [k: string]: ItemText } = {
 		name: "Blobbosinite",
 		desc: "On switch-in, causes the user to win the game. Single use.",
 	},
+	/* Clover CAP */
+	moluganion: {
+		name: "Moluganion",
+		desc: "If held by Noxilium, it is immune to status effects and confusion.",
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",
@@ -2474,5 +2479,13 @@ export const ItemsText: { [k: string]: ItemText } = {
 	reptrillite: {
 		name: "Reptrillite",
 		desc: "If held by an Reptrill, this item allows it to Mega Evolve in battle.",
+	},
+	kuklanite: {
+		name: "kuklanite",
+		desc: "If held by an Kuklan, this item allows it to Mega Evolve in battle.",
+	},
+	ricosuavite: {
+		name: "Ricosuavite",
+		desc: "If held by an Ricosuave, this item allows it to Mega Evolve in battle.",
 	},
 };

@@ -4815,13 +4815,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Blademaster",
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
-			if (['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab'].includes(move.id)) {
+			if (['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab', 'phasethrough', 'coldcutter'].includes(move.id)) {
 				this.debug('Blademaster boost');
 				return this.chainModify([0x1333, 0x1000]);
 			}
 		},
 		onModifyCritRatio(critRatio, target, source, move) {
-			if (target && ['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab'].includes(move.id)) return critRatio + 1;
+			if (target && ['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab', 'phasethrough', 'coldcutter'].includes(move.id)) return critRatio + 1;
 		},
 		rating: 4,
 	},
@@ -5195,6 +5195,63 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Tetanus",
 		rating: 1.5,
+	},
+	colonoscopy: {
+		availability: {clover: 1},
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.flags['heal']) return this.chainModify(1.5);
+		},
+		name: "Colonoscopy",
+		rating: 3.5,
+	},
+	hewillbedragon: {
+		availability: {clover: 1},
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
+				move.type = 'Dragon';
+				move.aerilateBoosted = true;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.aerilateBoosted) return this.chainModify([4915, 4096]);
+		},
+		name: "He Will Be Dragon",
+		rating: 4,
+	},
+	blueblood: {
+		availability: {clover: 1},
+		onDamagingHit(damage, target, source, move) {
+			if (move.type === 'Dark') {
+				this.boost({atk: 12});
+			}
+		},
+		name: "Blue Blood",
+	},
+	shavedice: {
+		availability: {clover: 1},
+		onSourceBasePowerPriority: 18,
+		onSourceBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Fire', 'Steel', 'Fighting', 'Rock') {
+				return this.chainModify(0.5);
+			}
+		},
+		name: "Shaved Ice",
+		rating: 2,
+	},
+	temperamental: {
+		availability: {clover: 1},
+		onResidual(pokemon) {
+			if (pokemon.species.baseSpecies !== 'Despairy' || pokemon.transformed) return;
+			const targetForme = pokemon.species.name === 'Despairy' ? 'Despairy-Ebil' : 'Despairy';
+			pokemon.formeChange(targetForme);
+		},
+		name: "Temperamental",
+		rating: 1,
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {

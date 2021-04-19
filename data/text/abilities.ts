@@ -1866,4 +1866,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Tetanus",
 		shortDesc: "A Pokemon making contact with this Pokemon will be Toxic poisoned.",
 	},
+	shavedice: {
+		name: "Shaved Ice",
+		desc: "The power of Fire, Steel, Rock and Fighting-type attacks against this Pokemon is halved.",
+		shortDesc: "Removes all of Ice-Type's weaknesses.",
+	},
+	temperamental: {
+		name: "Temperamental",
+		shortDesc: "If Despairy, it changes between Nice and Ebil Mode at the end of each turn.",
+	},
 };

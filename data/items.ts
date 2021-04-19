@@ -7534,6 +7534,25 @@ export const Items: { [itemid: string]: ItemData } = {
 		itemUser: ["Blobbos"],
 		isNonstandard: "Future",
 	},
+	/* Clover CAP */
+	moluganion: {
+		name: "Moluganion",
+		availability: {clover: 1},
+		spritenum: 747,
+		onAfterSetStatusPriority: -1,
+		onAfterSetStatus(status, pokemon) {
+			pokemon.cureStatus();
+			pokemon.removeVolatile('confusion');
+		},
+		onUpdate(pokemon) {
+			if (pokemon.status || pokemon.volatiles['confusion']) {
+				pokemon.cureStatus();
+				pokemon.removeVolatile('confusion');
+			}
+		},
+		itemUser: ["Noxilium"],
+		isNonstandard: "Future",
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		availability: {clover: 1},
@@ -7902,6 +7921,36 @@ export const Items: { [itemid: string]: ItemData } = {
 		megaStone: "Reptrill-Mega",
 		megaEvolves: "Reptrill",
 		itemUser: ["Reptrill"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	kuklanite: {
+		availability: {clover: 1},
+		name: "Kuklanite",
+		spritenum: 577,
+		megaStone: "Kuklan-Mega",
+		megaEvolves: "Kuklan",
+		itemUser: ["Kuklan"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	ricosuavite: {
+		availability: {clover: 1},
+		name: "Ricosuavite",
+		spritenum: 577,
+		megaStone: "Ricosuave-Mega",
+		megaEvolves: "Ricosuave",
+		itemUser: ["Ricosuave"],
 		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
