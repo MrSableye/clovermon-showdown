@@ -30572,7 +30572,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Turturret",
 		types: ["Ground", "Electric"],
 		genderRatio: {M: 0.50, F: 0.50},
-		baseStats: {hp: 85, atk: 55, def: 105, spa: 120, spd: 95, spe: 40},
+		baseStats: {hp: 85, atk: 40, def: 105, spa: 120, spd: 95, spe: 55},
 		abilities: {0: "Shell Armor", 1: "Steelworker", H: "Galvanize"},
 		heightm: 0.8,
 		weightkg: 80.4,
