@@ -22156,7 +22156,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	wingsofcorrection: {
 		availability: {clover: 1},
 		accuracy: true,
-		basePower: 20,
+		basePower: 100,
 		category: "Special",
 		name: "Wings Of Correction",
 		pp: 15,
