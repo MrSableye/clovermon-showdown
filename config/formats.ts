@@ -192,12 +192,29 @@ export const Formats: FormatList = [
 		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Eviolite'],
 	},
 	{
-		section: "Clover Only Doubles",
+		section: "Clover Only Doubles/Triples",
 	},
 	{
 		name: "[Gen 8 Clover Only] Doubles OU",
 		mod: 'clover',
 		gameType: 'doubles',
+		ruleset: [
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Species Clause',
+			'OHKO Clause',
+			'Swagger Clause',
+			'Sleep Clause Mod',
+			'Evasion Moves Clause',
+			'Clover Only',
+			'Blobbos Clause',
+		],
+		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+	},
+	{
+		name: "[Gen 8 Clover Only] Triples OU",
+		mod: 'clover',
+		gameType: 'triples',
 		ruleset: [
 			'Standard NatDex',
 			'Dynamax Clause',
