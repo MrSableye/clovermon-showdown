@@ -5236,7 +5236,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		availability: {clover: 1},
 		onSourceBasePowerPriority: 18,
 		onSourceBasePower(basePower, attacker, defender, move) {
-			if (move.type === 'Fire', 'Steel', 'Fighting', 'Rock') {
+			if (['Fire', 'Steel', 'Fighting', 'Rock'].includes(move.type)) {
 				return this.chainModify(0.5);
 			}
 		},
