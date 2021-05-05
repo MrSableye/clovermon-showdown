@@ -172,7 +172,7 @@ export const Formats: FormatList = [
 		rated: false,
 		mod: 'clover',
 		gameType: 'doubles',
-		ruleset: ['[Gen 8 Clover Only] CAP', '+CAP'],
+		ruleset: ['[Gen 8 Clover Only] CAP'],
 	},
 	{
 		section: "Other Clover Metagames",
