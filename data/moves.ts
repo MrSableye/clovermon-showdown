@@ -22428,7 +22428,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		category: "Physical",
 		name: "Border Control",
 		pp: 10,
-		priority: -1,
+		priority: -6,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		forceSwitch: true,
 		target: "normal",
@@ -22625,25 +22625,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Normal",
 		contestType: "Beautiful",
-		isNonstandard: "Future",
-	},
-	brainblast: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 120,
-		category: "Special",
-		name: "Brain Blast",
-		pp: 10,
-		priority: 0,
-		flags: {authentic: 1, protect: 1, mirror: 1},
-		boosts: {
-			def: -1,
-			spd: -1,
-		},
-		secondary: null,
-		target: "normal",
-		type: "Psychic",
-		contestType: "Clever",
 		isNonstandard: "Future",
 	},
 	serpentskiss: {
@@ -22907,14 +22888,12 @@ export const Moves: { [moveid: string]: MoveData } = {
 		multihit: 2,
 		secondary: {
 			chance: 20,
-			self: {
-				boosts: {
-					spa: -2,
-				},
+			boosts: {
+				spe: -1,
 			},
 		},
 		target: "normal",
-		type: "Dragon",
+		type: "Flying",
 		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},
@@ -23094,17 +23073,16 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	sloth: {
-		availability: {atlas: 1},
+		num: 203,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
 		name: "Sloth",
-		pp: 10,
-		priority: 4,
-		flags: {},
-		heal: [1, 2],
+		pp: 8,
+		priority: 1,
+		flags: {heal: 1},
 		stallingMove: true,
-		volatileStatus: 'protect',
+		volatileStatus: 'endure',
 		onPrepareHit(pokemon) {
 			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
 		},
@@ -23114,35 +23092,22 @@ export const Moves: { [moveid: string]: MoveData } = {
 		condition: {
 			duration: 1,
 			onStart(target) {
-				this.add('-singleturn', target, 'Protect');
+				this.add('-singleturn', target, 'move: Endure');
 			},
-			onTryHitPriority: 3,
-			onTryHit(target, source, move) {
-				if (!move.flags['protect']) {
-					if (move.isZ || (move.isMax && !move.breaksProtect)) target.getMoveHitData(move).zBrokeProtect = true;
-					return;
+			onDamagePriority: -10,
+			onDamage(damage, target, source, effect) {
+				if (effect?.effectType === 'Move' && damage >= target.hp) {
+					this.add('-activate', target, 'move: Endure');
+					return target.hp - 1;
 				}
-				if (move.smartTarget) {
-					move.smartTarget = false;
-				} else {
-					this.add('-activate', target, 'move: Protect');
-				}
-				const lockedmove = source.getVolatile('lockedmove');
-				if (lockedmove) {
-					// Outrage counter is reset
-					if (source.volatiles['lockedmove'].duration === 2) {
-						delete source.volatiles['lockedmove'];
-					}
-				}
-				return this.NOT_FAIL;
 			},
 		},
+		heal: [1, 2],
 		secondary: null,
 		target: "self",
 		type: "Normal",
 		zMove: {effect: 'clearnegativeboost'},
-		contestType: "clever",
-		isNonstandard: "Future",
+		contestType: "Tough",
 	},
 	beetdown: {
 		availability: {atlas: 1},
@@ -23184,5 +23149,173 @@ export const Moves: { [moveid: string]: MoveData } = {
 		zMove: {effect: 'healreplacement'},
 		contestType: "Cool",
 		isNonstandard: "Future",
+	},
+	brainblast: {
+		num: 370,
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Brain Blast",
+		pp: 10,
+		priority: 0,
+		flags: {authentic: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				def: -1,
+				spd: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+		contestType: "Clever",
+	},
+	slamburger: {
+		num: 804,
+		accuracy: 95,
+		basePower: 100,
+		category: "Physical",
+		name: "Slamburger",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onHit(target) {
+			const stats: BoostName[] = [];
+			let stat: BoostName;
+			for (stat in target.boosts) {
+				if (target.boosts[stat] < 6) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				const randomStat = this.sample(stats);
+				const boost: SparseBoostsTable = {};
+				boost[randomStat] = -2;
+				this.boost(boost);
+			} else {
+				return false;
+			}
+		},
+		target: "normal",
+		type: "???",
+		contestType: "Cool",
+	},
+	leechsneed: {
+		num: 821,
+		accuracy: 85,
+		basePower: 110,
+		category: "Physical",
+		name: "Leech Sneed",
+		pp: 8,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1},
+		onHit(target, source) {
+			if (target.hasType('Grass')) return null;
+			target.addVolatile('leechseed', source);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		contestType: "Clever",
+	},
+	poundcake: {
+		num: 324,
+		accuracy: 100,
+		basePower: 95,
+		category: "Physical",
+		name: "Pound Cake",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+		contestType: "Beautiful",
+	},
+	fragments: {
+		num: 490,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Fragments",
+		pp: 1,
+		priority: 0,
+		flags: {reflectable: 1},
+		sideCondition: 'fragments',
+		condition: {
+			// this is a side condition
+			onStart(side) {
+				this.add('-sidestart', side, 'move: Fragments');
+			},
+			onSwitchIn(pokemon) {
+				if (pokemon.hasItem('heavydutyboots')) return;
+				const typeMod = this.clampIntRange(pokemon.runEffectiveness(this.dex.getActiveMove('fragments')), -6, 6);
+				this.damage(pokemon.maxhp * Math.pow(2, typeMod) / 8);
+			},
+		},
+		secondary: null,
+		target: "foeSide",
+		type: "Steel",
+		zMove: {boost: {def: 1}},
+		contestType: "Cool",
+	},
+	fragbomb: {
+		num: 510,
+		accuracy: 100,
+		basePower: 250,
+		category: "Physical",
+		name: "Frag Bomb",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, reflectable: 1},
+		onHit(target, source) {
+			target.addVolatile('fragments', source);
+		},
+		selfdestruct: "always",
+		secondary: null,
+		target: "allAdjacent",
+		type: "Steel",
+		contestType: "Cool",
+	},
+	warcry: {
+		num: 506,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "War Cry",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
+		target: "allAdjacentFoes",
+		type: "Normal",
+		contestType: "Cool",
+	},
+	soulsteal: {
+		num: 507,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Soul Steal",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+		contestType: "Cool",
 	},
 };

@@ -5325,4 +5325,76 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Matted Hair",
 		rating: 2,
 	},
+	triforce: {
+		name: "Triforce",
+		onChargeMove(pokemon, target, move) {
+			this.debug('triforce - remove charge turn for ' + move.id);
+			this.attrLastMove('[still]');
+			this.addMove('-anim', pokemon, move.name, target);
+			return false; // skip charge turn
+		},
+		rating: 4,
+	},
+	biohazard: {
+		onStart(source) {
+			this.field.setWeather('acidrain');
+		},
+		name: "Acid Rain",
+		rating: 4,
+		num: 45,
+	},
+	siphon: {
+		onModifyMove(move) {
+			if (!move?.flags['contact'] || move.target === 'self') return;
+		},
+		onAfterMoveSecondarySelfPriority: -1,
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (move.totalDamage) {
+				this.heal(move.totalDamage / 8, pokemon);
+			}
+		},
+		name: "Siphon",
+		rating: 3.5,
+	},
+	gastronomic: {
+		onStart(pokemon) {
+			pokemon.addVolatile('gastronomic');
+		},
+		onEnd(pokemon) {
+			delete pokemon.volatiles['gastronomic'];
+			this.add('-end', pokemon, 'Gastronomic', '[silent]');
+		},
+		condition: {
+			duration: 5,
+			onStart(target) {
+				this.add('-start', target, 'ability: Gastronomic');
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, pokemon) {
+				return this.chainModify(0.5);
+			},
+			onModifySpe(spe, pokemon) {
+				return this.chainModify(0.5);
+			},
+			onEnd(target) {
+				this.add('-end', target, 'Gastronomic');
+			},
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (['Fairy', 'Grass', 'Flying'].includes(move.type)) {
+				this.debug('Gastronomic boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (['Fairy', 'Grass', 'Flying'].includes(move.type)) {
+				this.debug('Gastronomic boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Gastronomic",
+		rating: 3.5,
+	},
 };

@@ -1888,4 +1888,31 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Colonoscopy",
 		shortDesc: "This Pokemon's draining moves have 1.5x power.",
 	},
+	/* Atlas Abilities */
+	tardrage: {
+		name: "Tard Rage",
+		desc: "This Pokemon does not take recoil damage besides Struggle, Life Orb, and crash damage. This Pokemon's attacks with recoil or crash damage have their power multiplied by 1.2. Does not affect Struggle",
+		shortDesc: "This Pokemon does not take recoil damage, recoil moves have 1.2x power.",
+	},
+	kantonaut: {
+		name: "Kantonaut",
+		desc: "The power of Dark, Steel and Fairy type attacks against this Pokemon is halved, but Water type attacks have their damage doubled.",
+		shortDesc: "The power of Dark, Steel and Fairy type attacks is halved, but Water is doubled.",
+	},
+	swallowwhole: {
+		name: "Screen Cleaner",
+		shortDesc: "On switch-in, removes Aurora Veil, Reflect and Light Screen, heals for each screen.",
+	},
+	mattedhair: {
+		name: "Matted Hair",
+		shortDesc: "Pokemon making contact have their Speed lowered by 1 stage; Defense stat is doubled.",
+	},
+	triforce: {
+		name: "Triforce",
+		shortDesc: "This Pokemon's two-turn moves complete in one turn (except Sky Drop).",
+	},
+	gastronomic: {
+		name: "Gastronomic",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Flying, Grass or Fairy type attack.",
+	},
 };

@@ -751,4 +751,32 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	slamburger: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	leechsneed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	poundcake: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fragments: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fragbomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	warcry: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	soulsteal: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

@@ -414,4 +414,254 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	vaximate: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	pescivax: {
+		inherit: true,
+		tier: "NFE",
+		isNonstandard: null,
+	},
+	ogredose: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	aspergon: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	autisaur: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	ribbad: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	reebit: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	honklown: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	froglutton: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	kaijustein: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	chuckadee: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	birdsneed: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	wifly: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	parabite: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	drillmite: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	excavant: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	doofish: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	tescalmon: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	pospecter: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	ghoulano: {
+		inherit: true,
+		tier: "NFE",
+		isNonstandard: null,
+	},
+	margoyle: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	succuplant: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	phallion: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	muppy: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	komanitor: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	shelk: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	shelpent: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	katori: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	minamase: {
+		inherit: true,
+		tier: "NFE",
+		isNonstandard: null,
+	},
+	kazeppeku: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	photom: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	pogchomp: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	palekeet: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	reicheagle: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	canvadise: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	glassjabba: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	shockotto: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	brapawn: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	assdeer: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	regibeet: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	regisweet: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	regimeat: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	mcgigas: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	snowzee: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	sleezard: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	gopling: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	slavnik: {
+		inherit: true,
+		tier: "NFE",
+		isNonstandard: null,
+	},
+	slasquattr: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	pajsheet: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	hindoodoo: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 };
