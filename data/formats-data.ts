@@ -9029,7 +9029,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	beeraffee: {
+	beeraffe: {
 		availability: {
 			atlas: 1,
 		},
