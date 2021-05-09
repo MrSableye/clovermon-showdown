@@ -431,7 +431,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	aspergon: {
 		inherit: true,
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: null,
 	},
 	autisaur: {
@@ -444,7 +444,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
-	reebit: {
+	reebbit: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
@@ -479,7 +479,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
-	parabite: {
+	parabyte: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
@@ -559,7 +559,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NFE",
 		isNonstandard: null,
 	},
-	kazeppeku: {
+	kazeppuku: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
@@ -660,6 +660,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	hindoodoo: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	roadcoon: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,

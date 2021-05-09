@@ -9680,7 +9680,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	kazeppeku: {
+	kazeppuku: {
 		availability: {
 			atlas: 1,
 		},

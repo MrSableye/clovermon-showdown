@@ -779,4 +779,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	spookout: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fishiousrend: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

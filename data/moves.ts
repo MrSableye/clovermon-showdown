@@ -23073,6 +23073,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	sloth: {
+		availability: {atlas: 1},
 		num: 203,
 		accuracy: true,
 		basePower: 0,
@@ -23151,6 +23152,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	brainblast: {
+		availability: {atlas: 1},
 		num: 370,
 		accuracy: 100,
 		basePower: 120,
@@ -23171,6 +23173,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	slamburger: {
+		availability: {atlas: 1},
 		num: 804,
 		accuracy: 95,
 		basePower: 100,
@@ -23201,6 +23204,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	leechsneed: {
+		availability: {atlas: 1},
 		num: 821,
 		accuracy: 85,
 		basePower: 110,
@@ -23219,6 +23223,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	poundcake: {
+		availability: {atlas: 1},
 		num: 324,
 		accuracy: 100,
 		basePower: 95,
@@ -23238,6 +23243,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	fragments: {
+		availability: {atlas: 1},
 		num: 490,
 		accuracy: true,
 		basePower: 0,
@@ -23265,6 +23271,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	fragbomb: {
+		availability: {atlas: 1},
 		num: 510,
 		accuracy: 100,
 		basePower: 250,
@@ -23283,6 +23290,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	warcry: {
+		availability: {atlas: 1},
 		num: 506,
 		accuracy: 100,
 		basePower: 80,
@@ -23304,6 +23312,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	soulsteal: {
+		availability: {atlas: 1},
 		num: 507,
 		accuracy: 100,
 		basePower: 70,
