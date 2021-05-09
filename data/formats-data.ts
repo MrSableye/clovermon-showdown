@@ -9519,7 +9519,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	reebit: {
+	reebbit: {
 		availability: {
 			atlas: 1,
 		},
@@ -9568,7 +9568,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	parabite: {
+	parabyte: {
 		availability: {
 			atlas: 1,
 		},
@@ -9828,6 +9828,13 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	hindoodoo: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tumoremlin: {
 		availability: {
 			atlas: 1,
 		},
