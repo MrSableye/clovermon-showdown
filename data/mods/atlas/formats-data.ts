@@ -414,6 +414,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	pupezerker: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	pupezerkerattack: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	vaximate: {
 		inherit: true,
 		tier: "LC",

@@ -9624,6 +9624,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	pupezerker: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pupezerkerattack: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	succuplant: {
 		availability: {
 			atlas: 1,
