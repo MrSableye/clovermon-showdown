@@ -7986,4 +7986,20 @@ export const Items: { [itemid: string]: ItemData } = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	baguette: {
+		availability: {atlas: 1},
+		name: "Baguette",
+		spritenum: 520,
+		fling: {
+			basePower: 90,
+		},
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Marsourais' || pokemon.baseSpecies.baseSpecies === 'Paratsien') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Paratsien", "Marsourais"],
+		gen: 8,
+	},
 };

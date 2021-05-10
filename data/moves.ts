@@ -1476,6 +1476,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	boltbeak: {
+		availability: {atlas: 1},
 		num: 754,
 		accuracy: 100,
 		basePower: 85,
@@ -5157,6 +5158,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	fishiousrend: {
+		availability: {atlas: 1},
 		num: 755,
 		accuracy: 100,
 		basePower: 85,
@@ -23062,10 +23064,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		hasCrashDamage: true,
-		onMoveFail(target, source, move) {
-			this.damage(source.baseMaxhp / 2, source, source, this.dex.getEffect('High Jump Kick'));
-		},
+		critRatio: 2,
 		secondary: null,
 		target: "normal",
 		type: "Electric",
@@ -23158,7 +23157,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		basePower: 120,
 		category: "Special",
 		name: "Brain Blast",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {authentic: 1, protect: 1, mirror: 1},
 		self: {
@@ -23210,7 +23209,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		basePower: 110,
 		category: "Physical",
 		name: "Leech Sneed",
-		pp: 8,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1},
 		onHit(target, source) {
@@ -23325,6 +23324,30 @@ export const Moves: { [moveid: string]: MoveData } = {
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
+		contestType: "Cool",
+	},
+	jumpscare: {
+		availability: {atlas: 1},
+		num: 197,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Jumpscare",
+		pp: 5,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'protect',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		secondary: null,
+		target: "self",
+		type: "Ghost",
+		zMove: {boost: {evasion: 1}},
 		contestType: "Cool",
 	},
 };

@@ -1915,4 +1915,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Gastronomic",
 		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Flying, Grass or Fairy type attack.",
 	},
+	puppetry: {
+		name: "Puppetry",
+		desc: "If this Pokemon is an Pupezerker, it changes to Unleashed Forme before attempting to use an attacking move, and changes to Shield Forme before attempting to use Jumpscare.",
+		shortDesc: "If Pupezerker, changes Forme to Unleashed before attacks and Dormant before Jumpscare.",
+
+		transform: "  [POKEMON] suprised [SOURCE]! [POKEMON] Changed to its Unleashed Forme!",
+		transformEnd: "Changed to its Dormant Forme!",
+	},
 };

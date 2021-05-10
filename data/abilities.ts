@@ -4815,13 +4815,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Blademaster",
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
-			if (['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab', 'phasethrough', 'coldcutter'].includes(move.id)) {
+			if (['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab', 'phasethrough', 'coldcutter', 'sentaiblade', 'plasmaslasher'].includes(move.id)) {
 				this.debug('Blademaster boost');
 				return this.chainModify([0x1333, 0x1000]);
 			}
 		},
 		onModifyCritRatio(critRatio, target, source, move) {
-			if (target && ['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab', 'phasethrough', 'coldcutter'].includes(move.id)) return critRatio + 1;
+			if (target && ['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab', 'phasethrough', 'coldcutter', 'sentaiblade', 'plasmaslasher'].includes(move.id)) return critRatio + 1;
 		},
 		rating: 4,
 	},
@@ -5396,5 +5396,18 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Gastronomic",
 		rating: 3.5,
+	},
+	puppetry: {
+		onModifyMovePriority: 1,
+		onModifyMove(move, attacker, defender) {
+			if (attacker.species.baseSpecies !== 'Pupezerker' || attacker.transformed) return;
+			if (move.category === 'Status' && move.id !== 'jumpscare') return;
+			const targetForme = (move.id === 'jumpscare' ? 'Pupezerker' : 'Pupezerker-Unleashed');
+			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+		},
+		isPermanent: true,
+		name: "Puppetry",
+		rating: 4,
+		num: 176,
 	},
 };

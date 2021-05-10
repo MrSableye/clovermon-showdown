@@ -7367,7 +7367,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	wingswing: {
 		name: "Wing Swing",
 		desc: "Has a 20% chance to lower the target's Speed by 1 stage.",
-		shortDesc: "20% chance lower target's Speed by 1.",
+		shortDesc: "20% chance lower target's Speed; Hits 2 times.",
 	},
 	shattershard: {
 		name: "Stealth Rock",
@@ -7404,10 +7404,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	plasmaslasher: {
 		name: "Plasma Slasher",
-		desc: "If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Magic Guard Ability are unaffected by crash damage.",
-		shortDesc: "User is hurt by 50% of its max HP if it misses.",
-
-		damage: "#crash",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
 	},
 	sloth: {
 		name: "Sloth",
@@ -7434,7 +7432,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	slamburger: {
 		name: "Acupressure",
 		desc: "20% chance to lower a random stat by 2 stages of the target as long as the stat is not already at stage 6.",
-		shortDesc: "20% chance to a random stat of the target by 2.",
+		shortDesc: "20% chance to a lower random stat of the target by 2.",
 	},
 	leechsneed: {
 		name: "Leech Sneed",
@@ -7447,7 +7445,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "100% chance lower target's Speed by 1.",
 	},
 	fragments: {
-		name: "Stealth Rock",
+		name: "Fragments",
 		desc: "Sets up a hazard on the opposing side of the field, damaging each opposing Pokemon that switches in. Fails if the effect is already active on the opposing side. Foes lose 1/32, 1/16, 1/8, 1/4, or 1/2 of their maximum HP, rounded down, based on their weakness to the Steel type; 0.25x, 0.5x, neutral, 2x, or 4x, respectively. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin or Defog successfully, or is hit by Defog.",
 		shortDesc: "Hurts foes on switch-in. Factors Steel weakness.",
 

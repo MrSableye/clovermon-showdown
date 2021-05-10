@@ -514,9 +514,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
-	pospecter: {
+	pospector: {
 		inherit: true,
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: null,
 	},
 	ghoulano: {
