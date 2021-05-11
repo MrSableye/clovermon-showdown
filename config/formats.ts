@@ -126,7 +126,6 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 8 Clover Only] CAP",
-		rated: false,
 		mod: 'clover',
 		ruleset: ['[Gen 8 Clover Only] OU', '+CAP'],
 	},
