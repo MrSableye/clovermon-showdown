@@ -38,4 +38,32 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	spookyaura: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	flaminhot: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	tetanus: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	hewillbedragon: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	blueblood: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	shavedice: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	temperamental: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

@@ -5166,6 +5166,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		isUnbreakable: true,
 		name: "Spooky Aura",
 		rating: 3,
+		isNonstandard: "Future",
 	},
 	flaminhot: {
 		availability: {clover: 1},
@@ -5185,6 +5186,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Flamin Hot",
 		rating: 3.5,
+		isNonstandard: "Future",
 	},
 	tetanus: {
 		availability: {clover: 1},
@@ -5195,6 +5197,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Tetanus",
 		rating: 1.5,
+		isNonstandard: "Future",
 	},
 	colonoscopy: {
 		availability: {clover: 1},
@@ -5203,6 +5206,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Colonoscopy",
 		rating: 3.5,
+		isNonstandard: "Future",
 	},
 	hewillbedragon: {
 		availability: {clover: 1},
@@ -5222,6 +5226,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "He Will Be Dragon",
 		rating: 4,
+		isNonstandard: "Future",
 	},
 	blueblood: {
 		availability: {clover: 1},
@@ -5231,6 +5236,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			}
 		},
 		name: "Blue Blood",
+		isNonstandard: "Future",
 	},
 	shavedice: {
 		availability: {clover: 1},
@@ -5242,6 +5248,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Shaved Ice",
 		rating: 2,
+		isNonstandard: "Future",
 	},
 	temperamental: {
 		availability: {clover: 1},
@@ -5252,6 +5259,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Temperamental",
 		rating: 1,
+		isNonstandard: "Future",
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {
@@ -5271,6 +5279,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Tard Rage",
 		rating: 3,
+		isNonstandard: "Future",
 	},
 	kantonaut: {
 		availability: {atlas: 1},
@@ -5284,6 +5293,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Kantonaut",
 		rating: 3.5,
+		isNonstandard: "Future",
 	},
 	swallowwhole: {
 		availability: {atlas: 1},
@@ -5310,6 +5320,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Swallow Whole",
 		rating: 2,
+		isNonstandard: "Future",
 	},
 	mattedhair: {
 		availability: {atlas: 1},
@@ -5324,6 +5335,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Matted Hair",
 		rating: 2,
+		isNonstandard: "Future",
 	},
 	triforce: {
 		name: "Triforce",
@@ -5334,6 +5346,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			return false; // skip charge turn
 		},
 		rating: 4,
+		isNonstandard: "Future",
 	},
 	biohazard: {
 		onStart(source) {
@@ -5342,6 +5355,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Acid Rain",
 		rating: 4,
 		num: 45,
+		isNonstandard: "Future",
 	},
 	siphon: {
 		onModifyMove(move) {
@@ -5355,6 +5369,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Siphon",
 		rating: 3.5,
+		isNonstandard: "Future",
 	},
 	gastronomic: {
 		onStart(pokemon) {
@@ -5396,6 +5411,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Gastronomic",
 		rating: 3.5,
+		isNonstandard: "Future",
 	},
 	puppetry: {
 		onModifyMovePriority: 1,
@@ -5409,5 +5425,6 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Puppetry",
 		rating: 4,
 		num: 176,
+		isNonstandard: "Future",
 	},
 };
