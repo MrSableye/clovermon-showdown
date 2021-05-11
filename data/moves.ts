@@ -17030,7 +17030,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fairy",
 	},
 	spiritshackle: {
-		availability: {clover: 1},
+		availability: {clover: 1, atlas: 1},
 		num: 662,
 		accuracy: 100,
 		basePower: 80,

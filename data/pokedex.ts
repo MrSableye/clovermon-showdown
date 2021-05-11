@@ -34397,7 +34397,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Froglutton",
 		types: ["Water", "Dark"],
 		baseStats: {hp: 70, atk: 80, def: 125, spa: 80, spd: 125, spe: 35},
-		abilities: {0: "Drizzle", 1: "Sheer Force", H: "Rain Dish"},
+		abilities: {0: "Drizzle", 1: "Gluttony", H: "Rain Dish"},
 		heightm: 10.65,
 		weightkg: 100.42,
 		prevo: "Ribbad",
@@ -35285,7 +35285,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		abilities: {
 			0: "Shell Armor",
 			1: "Infiltrator",
-			H: "Normalize",
+			H: "Compound Eyes",
 		},
 		heightm: 0.056,
 		weightkg: 12.5,
@@ -35314,7 +35314,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		abilities: {
 			0: "Shell Armor",
 			1: "Infiltrator",
-			H: "Normalize",
+			H: "Compound Eyes",
 		},
 		heightm: 1.06,
 		weightkg: 36.5,
