@@ -23152,7 +23152,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 	brainblast: {
 		availability: {atlas: 1},
-		num: 370,
 		accuracy: 100,
 		basePower: 120,
 		category: "Special",
@@ -23173,7 +23172,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 	slamburger: {
 		availability: {atlas: 1},
-		num: 804,
 		accuracy: 95,
 		basePower: 100,
 		category: "Physical",
@@ -23204,7 +23202,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 	leechsneed: {
 		availability: {atlas: 1},
-		num: 821,
 		accuracy: 85,
 		basePower: 110,
 		category: "Physical",
@@ -23223,7 +23220,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 	poundcake: {
 		availability: {atlas: 1},
-		num: 324,
 		accuracy: 100,
 		basePower: 95,
 		category: "Physical",
@@ -23243,7 +23239,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 	fragments: {
 		availability: {atlas: 1},
-		num: 490,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -23271,7 +23266,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 	fragbomb: {
 		availability: {atlas: 1},
-		num: 510,
 		accuracy: 100,
 		basePower: 250,
 		category: "Physical",
@@ -23290,7 +23284,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 	warcry: {
 		availability: {atlas: 1},
-		num: 506,
 		accuracy: 100,
 		basePower: 80,
 		category: "Physical",
@@ -23312,7 +23305,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 	soulsteal: {
 		availability: {atlas: 1},
-		num: 507,
 		accuracy: 100,
 		basePower: 70,
 		category: "Special",
@@ -23328,7 +23320,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 	jumpscare: {
 		availability: {atlas: 1},
-		num: 197,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -23348,6 +23339,21 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "self",
 		type: "Ghost",
 		zMove: {boost: {evasion: 1}},
+		contestType: "Cool",
+	},
+	alternator: {
+		availability: {atlas: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Alternator",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Steel",
 		contestType: "Cool",
 	},
 };
