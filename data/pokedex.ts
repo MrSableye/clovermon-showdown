@@ -33853,32 +33853,14 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	dragazine: {
 		num: 34128,
 		name: "Dragazine",
-		types: [
-			"Dragon",
-		],
-		genderRatio: {
-			M: 0.875,
-			F: 0.125,
-		},
-		baseStats: {
-			hp: 90,
-			atk: 65,
-			def: 80,
-			spa: 90,
-			spd: 75,
-			spe: 90,
-		},
-		abilities: {
-			0: "Stakeout",
-			1: "Wonder Skin",
-			H: "Shed Skin",
-		},
+		types: ["Dragon", ],
+		genderRatio: {M: 0.875, F: 0.125, },
+		baseStats: {hp: 90,	atk: 65, def: 80, spa: 100, spd: 75, spe: 101,},
+		abilities: {0: "Stakeout", 1: "Wonder Skin", H: "Shed Skin"},
 		heightm: 1.4,
 		weightkg: 88.4,
 		color: "Purple",
-		eggGroups: [
-			"Field",
-		],
+		eggGroups: ["Field"],
 	},
 	wojeevee: {
 		num: 34133,

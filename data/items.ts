@@ -3022,7 +3022,7 @@ export const Items: { [itemid: string]: ItemData } = {
 				return this.chainModify(2);
 			}
 		},
-		itemUser: ["Pikachu"],
+		itemUser: ["Pikachu", "Chanto"],
 		num: 236,
 		gen: 2,
 	},
