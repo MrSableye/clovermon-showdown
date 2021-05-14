@@ -9855,4 +9855,32 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	norrit: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	dopltrainer: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tordle: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	boncalibur: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };
