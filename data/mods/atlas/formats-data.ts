@@ -684,4 +684,24 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	norrit: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	dopltrainer: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	tordle: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	boncalibur: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 };
