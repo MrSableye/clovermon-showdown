@@ -116,6 +116,18 @@ export const Items: {[k: string]: ModdedItemData} = {
 			}
 		},
 	},
+	lightball: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wiseglasses: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	muscleband: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	/* Atlas Exclusive Items */
 	eviomite: {
 		inherit: true,
