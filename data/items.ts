@@ -3002,29 +3002,29 @@ export const Items: { [itemid: string]: ItemData } = {
 		num: 270,
 		gen: 4,
 	},
-    lightball: {
-        name: "Light Ball",
-        availability: {clover: 1, atlas: 1},
-        spritenum: 251,
-        fling: {
-            basePower: 30,
-            status: 'par',
-        },
-        onModifyAtkPriority: 1,
-        onModifyAtk(atk, pokemon) {
-            if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.baseSpecies.baseSpecies === 'Chanto') {
-                return this.chainModify(2);
-            }
-        },
-        onModifySpAPriority: 1,
-        onModifySpA(spa, pokemon) {
-            if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.baseSpecies.baseSpecies === 'Pikotton' || pokemon.baseSpecies.baseSpecies === 'Chanto') {
-                return this.chainModify(2);
-            }
-        },
-        itemUser: ["Pikachu"],
-        num: 236,
-        gen: 2,
+	lightball: {
+		name: "Light Ball",
+		availability: {clover: 1, atlas: 1},
+		spritenum: 251,
+		fling: {
+			basePower: 30,
+			status: 'par',
+		},
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.baseSpecies.baseSpecies === 'Chanto') {
+				return this.chainModify(2);
+			}
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.baseSpecies.baseSpecies === 'Pikotton' || pokemon.baseSpecies.baseSpecies === 'Chanto') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Pikachu"],
+		num: 236,
+		gen: 2,
 	},
 	lightclay: {
 		name: "Light Clay",
