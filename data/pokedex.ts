@@ -32922,6 +32922,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		},
 		abilities: {
 			0: "Kantonaut",
+			1: "Flame Body",
 			H: "Blaze",
 		},
 		heightm: 0.4,
@@ -33284,6 +33285,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		},
 		abilities: {
 			0: "Natural Cure",
+			1: "White Smoke",
 			H: "Grassy Surge",
 		},
 		heightm: 0.72,
@@ -33315,6 +33317,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		},
 		abilities: {
 			0: "Natural Cure",
+			1: "White Smoke",
 			H: "Grassy Surge",
 		},
 		heightm: 1,
@@ -34488,7 +34491,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Pogchomp",
 		types: ["Ground", "Bug"],
 		baseStats: {hp: 35, atk: 120, def: 70, spa: 30, spd: 45, spe: 120},
-		abilities: {0: "Arena Trap", H: "Sand Stream"},
+		abilities: {0: "Arena Trap", 1: "Sandforce", H: "Sand Stream"},
 		heightm: 1.0,
 		weightkg: 1.3,
 		color: "Brown",
@@ -34700,6 +34703,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		},
 		abilities: {
 			0: "Overgrow",
+			1: "Analytic",
 			H: "Battle Armor",
 		},
 		heightm: 0.6,
@@ -34732,6 +34736,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		},
 		abilities: {
 			0: "Overgrow",
+			1: "Analytic",
 			H: "Battle Armor",
 		},
 		heightm: 0.8,

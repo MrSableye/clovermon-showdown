@@ -17464,8 +17464,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 	stompingtantrum: {
 		availability: {clover: 1, atlas: 1},
 		num: 707,
-		accuracy: 100,
-		basePower: 75,
+		accuracy: 85,
+		basePower: 95,
 		basePowerCallback(pokemon, target, move) {
 			if (pokemon.moveLastTurnResult === false) {
 				this.debug('doubling Stomping Tantrum BP due to previous move failure');
@@ -22611,7 +22611,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	jacsmack: {
 		availability: {atlas: 1},
 		accuracy: 100,
-		basePower: 90,
+		basePower: 100,
 		category: "Special",
 		name: "Jac Smack",
 		pp: 15,
