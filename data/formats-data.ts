@@ -9883,4 +9883,46 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	weacock: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	weacocksunny: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	weacockrainy: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	weacocksnowy: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	weacocksandy: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	weacockacid: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };
