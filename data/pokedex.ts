@@ -35762,7 +35762,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	},
 	tordle: {
 		num: 34442,
-		name: "Torlde",
+		name: "Tordle",
 		types: ["Rock", "Fire"],
 		baseStats: {hp: 85, atk: 40, def: 95, spa: 55, spd: 100, spe: 45},
 		abilities: {0: "Drought", 1: "Sand Stream", H: "Illuminate"},

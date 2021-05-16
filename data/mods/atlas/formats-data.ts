@@ -734,4 +734,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	tillimp: {
+        inherit: true,
+        tier: "NFE",
+        isNonstandard: null,
+    },
+    bezelburro: {
+        inherit: true,
+        tier: "OU",
+        isNonstandard: null,
+    },
 };
