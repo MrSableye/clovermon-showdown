@@ -709,31 +709,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
-	weacocksunny: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
-	},
-	weacockrainy: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
-	},
-	weacocksnowy: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
-	},
-	weacocksandy: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
-	},
-	weacockacid: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
-	},
 	tillimp: {
 		inherit: true,
 		tier: "NFE",
