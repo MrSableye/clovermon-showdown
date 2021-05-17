@@ -784,4 +784,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	karaojek: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	tauran: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 };
+
