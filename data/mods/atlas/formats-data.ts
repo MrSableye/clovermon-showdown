@@ -739,9 +739,60 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NFE",
 		isNonstandard: null,
 	},
-	bezelburro: {
+	belzeburro: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	spikmon: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	lavostra: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	yoshole: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	dracrime: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	gieugon: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	giyagon: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	gnelf: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	gnolem: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	karaojek: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	tauran: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
 	},
 };
+
