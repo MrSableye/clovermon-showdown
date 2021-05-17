@@ -35882,9 +35882,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		evos: ["Bezelburro"],
 		eggGroups: ["Mineral", "Field"],
 	},
-	bezelburro: {
+	belzeburro: {
 		num: 34448,
-		name: "Bezelburro",
+		name: "Belzeburro",
 		types: ["Ground", "Dark"],
 		baseStats: {hp: 75, atk: 100, def: 90, spa: 90, spd: 90, spe: 80},
 		abilities: {0: "Rough Skin", 1: "Sand Veil", H: "Tough Claws"},
@@ -36046,9 +36046,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		color: "Pink",
 		eggGroups: ["Human-Like", "Fairy"],
 	},
-	karbojek: {
+	karabojek: {
 		num: 34234,
-		name: "Karbojek",
+		name: "Karabojek",
 		types: ["Bug", "Ice"],
 		baseStats: {hp: 30, atk: 70, def: 55, spa: 70, spd: 60, spe: 70},
 		abilities: {0: "Cute Charm", 1: "Swarm", H: "Slush Rush"},
