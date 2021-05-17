@@ -5417,7 +5417,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3.5,
 		isNonstandard: "Future",
 	},
-	Puppetry: {
+	puppetry: {
 		onModifyMovePriority: 1,
 		onModifyMove(move, attacker, defender) {
 			if (attacker.species.baseSpecies !== 'Pupezerker' || attacker.transformed) return;
