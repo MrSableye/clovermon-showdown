@@ -5417,7 +5417,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3.5,
 		isNonstandard: "Future",
 	},
-	puppetry: {
+	Puppetry: {
 		onModifyMovePriority: 1,
 		onModifyMove(move, attacker, defender) {
 			if (attacker.species.baseSpecies !== 'Pupezerker' || attacker.transformed) return;
@@ -5428,7 +5428,27 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		isPermanent: true,
 		name: "Puppetry",
 		rating: 4,
-		num: 176,
-		isNonstandard: "Future",
+		num: 34459,
+	},
+	devilguard: {
+		availability: {atlas: 1},
+		onTryHitPriority: 1,
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Bug', 'Psychic') {
+				if (!this.boost({atk: 1, spa: 1})) {
+					this.add('-immune', target, '[from] ability: Devil Guard');
+				}
+				return null;
+			}
+		},
+		onAllyTryHitSide(target, source, move) {
+			if (target === this.effectData.target || target.side !== source.side) return;
+			if (move.type === 'Bug', 'Psychic') {
+				this.boost({atk: 1, spa: 1}, this.effectData.target);
+			}
+		},
+		name: "Devil Guard",
+		rating: 3,
+		num: 34157,
 	},
 };
