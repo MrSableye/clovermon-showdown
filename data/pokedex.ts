@@ -33261,7 +33261,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		num: 34062,
 		name: "Photom",
 		types: ["Ghost", "Psychic"],
-		baseStats: {hp: 105, atk: 40, def: 160, spa: 80, spd: 160, spe: 75},
+		baseStats: {hp: 100, atk: 40, def: 120, spa: 120, spd: 80, spe: 80},
 		abilities: {0: "Trace", 1: "Pressure", H: "Keen Eye"},
 		heightm: 3.6,
 		weightkg: 78.9,
