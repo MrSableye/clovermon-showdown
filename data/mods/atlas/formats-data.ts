@@ -735,13 +735,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	tillimp: {
-        inherit: true,
-        tier: "NFE",
-        isNonstandard: null,
-    },
-    bezelburro: {
-        inherit: true,
-        tier: "OU",
-        isNonstandard: null,
-    },
+		inherit: true,
+		tier: "NFE",
+		isNonstandard: null,
+	},
+	bezelburro: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 };
