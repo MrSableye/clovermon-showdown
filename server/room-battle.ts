@@ -1196,7 +1196,7 @@ export class RoomBattleStream extends BattleStream {
 		if (this.battle) this.battle.sendUpdates();
 		const deltaTime = Date.now() - startTime;
 		if (deltaTime > 1000) {
-			Monitor.slow(`[slow battle] ${deltaTime}ms - ${chunk}`);
+			// Monitor.slow(`[slow battle] ${deltaTime}ms - ${chunk}`);
 		}
 	}
 }
