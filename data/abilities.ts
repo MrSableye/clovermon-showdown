@@ -793,7 +793,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			return 0;
 		},
 		onUpdate(pokemon) {
-			if (['mimikyu', 'mimikyutotem', 'sabsute'].includes(pokemon.species.id) && this.effectData.busted) {
+			if (['mimikyu', 'mimikyutotem', 'sabsute', 'subspecter'].includes(pokemon.species.id) && this.effectData.busted) {
 				const speciesid = pokemon.species.id === 'mimikyutotem' ?
 					'Mimikyu-Busted-Totem'	:
 					pokemon.species.id === 'sabsute' ?
