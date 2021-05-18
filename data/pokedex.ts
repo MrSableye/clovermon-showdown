@@ -35749,7 +35749,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		num: 34443,
 		name: "Boncalibur",
 		types: ["Rock", "Fire"],
-		baseStats: {hp: 90, atk: 110, def: 100, spa: 30, spd: 115, spe: 95},
+		baseStats: {hp: 85, atk: 85, def: 85, spa: 100, spd: 90, spe: 75},
 		abilities: {0: "Drought", 1: "Sand Stream", H: "Blademaster"},
 		heightm: 5.4,
 		weightkg: 180.0,
