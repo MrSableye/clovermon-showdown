@@ -34491,7 +34491,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Pogchomp",
 		types: ["Ground", "Bug"],
 		baseStats: {hp: 35, atk: 120, def: 70, spa: 30, spd: 45, spe: 120},
-		abilities: {0: "Arena Trap", 1: "Sandforce", H: "Sand Stream"},
+		abilities: {0: "Arena Trap", 1: "Sand Force", H: "Sand Stream"},
 		heightm: 1.0,
 		weightkg: 1.3,
 		color: "Brown",
