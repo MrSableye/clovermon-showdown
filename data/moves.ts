@@ -22268,24 +22268,35 @@ export const Moves: { [moveid: string]: MoveData } = {
 		accuracy: 100,
 		basePower: 75,
 		category: "Physical",
-		name: "Meme Jr",
+		name: "Meme Jr.",
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
 			onHit(target, source) {
-				const stats: BoostName[] = [];
-				for (const stat in target.boosts) {
-					if (source.boosts[stat as BoostName] < 6) {
-						stats.push(stat as BoostName);
+				const boosts: StatsExceptHPTable = {
+					atk: source.boosts.atk,
+					def: source.boosts.def,
+					spa: source.boosts.spa,
+					spd: source.boosts.spd,
+					spe: source.boosts.spe,
+				};
+				let minBoost = Infinity;
+				let minBoosts: StatNameExceptHP[] = [];
+				Object.entries(boosts).forEach(([statName, boostValue]) => {
+					if (boostValue < minBoost) {
+						minBoost = boostValue;
+						minBoosts = [statName as StatNameExceptHP];
+					} else if (boostValue === minBoost) {
+						minBoosts.push(statName as StatNameExceptHP);
 					}
-				}
-				if (stats.length) {
-					const randomStat = this.sample(stats);
+				});
+				if (minBoosts.length) {
+					const randomStat = this.sample(minBoosts);
 					const boost: SparseBoostsTable = {};
 					boost[randomStat] = 1;
-					this.boost(boost);
+					source.boostBy(boost);
 				} else {
 					return false;
 				}
