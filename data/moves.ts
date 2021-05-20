@@ -22296,7 +22296,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 					const randomStat = this.sample(minBoosts);
 					const boost: SparseBoostsTable = {};
 					boost[randomStat] = 1;
-					source.boostBy(boost);
+					this.boost(boost, source);
 				} else {
 					return false;
 				}
