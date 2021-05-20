@@ -22228,7 +22228,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Fairy",
 	},
-	cloudbreaker: {/*this one's gonna need to be done by you, Sableye*/
+	cloudbreaker: {/* this one's gonna need to be done by you, Sableye*/
 		availability: {clover: 1},
 		accuracy: 100,
 		basePower: 90,
@@ -22253,14 +22253,14 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
 			if (type === 'Steel') return 1;
-			},
-			secondary: {
-				chance: 30,
-				status: 'brn',
-			},
-			target: "normal",
-			type: "Steel",
-			contestType: "Cool",
+		},
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Cool",
 	},
 	memejr: {
 		availability: {clover: 1},
@@ -22273,23 +22273,23 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
-				chance: 100,
-				onHit(target, source) {
-						const stats: BoostName[] = [];
-						for (const stat in target.boosts) {
-								if (source.boosts[stat as BoostName] < 6) {
-										stats.push(stat as BoostName);
-								}
-						}
-						if (stats.length) {
-								const randomStat = this.sample(stats);
-								const boost: SparseBoostsTable = {};
-								boost[randomStat] = 1;
-								this.boost(boost);
-						} else {
-								return false;
-						}
-				},
+			chance: 100,
+			onHit(target, source) {
+				const stats: BoostName[] = [];
+				for (const stat in target.boosts) {
+					if (source.boosts[stat as BoostName] < 6) {
+						stats.push(stat as BoostName);
+					}
+				}
+				if (stats.length) {
+					const randomStat = this.sample(stats);
+					const boost: SparseBoostsTable = {};
+					boost[randomStat] = 1;
+					this.boost(boost);
+				} else {
+					return false;
+				}
+			},
 		},
 		target: "normal",
 		type: "???",

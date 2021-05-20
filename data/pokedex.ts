@@ -31653,7 +31653,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Dragon", "Monster"],
 		gen: 8,
 	},
-		fusjahl: {
+	fusjahl: {
 		num: 42090,
 		name: "Fusjahl",
 		types: ["???", "Ground"],
@@ -36240,10 +36240,10 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		types: ["Normal"],
 		baseStats: {hp: 80, atk: 140, def: 60, spa: 95, spd: 60, spe: 101},
 		abilities: {0: "Striker", 1: "Normalize", H: "Water Absorb"},
-		heightm: .35,
-		weightkg: .25,
+		heightm: 0.35,
+		weightkg: 0.25,
 		color: "Green",
 		eggGroups: ["Field", "Amorphous"],
- },
- 
+	},
+
 };

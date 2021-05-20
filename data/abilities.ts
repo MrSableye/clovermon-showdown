@@ -5268,59 +5268,62 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	solarpanels: {
 		availability: {clover: 1},
 		onTryHit(target, source, move) {
-				if (target !== source && move.type === 'Fire') {
-						if (!this.boost({spa: 1})) {
-								this.add('-immune', target, '[from] ability: Solar Panels');
-						}
-						return null;
+			if (target !== source && move.type === 'Fire') {
+				if (!this.boost({spa: 1})) {
+					this.add('-immune', target, '[from] ability: Solar Panels');
 				}
+				return null;
+			}
 		},
 		onAnyRedirectTarget(target, source, source2, move) {
-				if (move.type !== 'Fire' || ['firepledge', 'grasspledge', 'waterpledge'].includes(move.id)) return;
-				const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
-				if (this.validTarget(this.effectData.target, source, redirectTarget)) {
-						if (move.smartTarget) move.smartTarget = false;
-						if (this.effectData.target !== target) {
-								this.add('-activate', this.effectData.target, 'ability: Solar Panels');
-						}
-						return this.effectData.target;
+			if (move.type !== 'Fire' || ['firepledge', 'grasspledge', 'waterpledge'].includes(move.id)) return;
+			const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
+			if (this.validTarget(this.effectData.target, source, redirectTarget)) {
+				if (move.smartTarget) move.smartTarget = false;
+				if (this.effectData.target !== target) {
+					this.add('-activate', this.effectData.target, 'ability: Solar Panels');
 				}
+				return this.effectData.target;
+			}
 		},
 		name: "Solar Panels",
 		rating: 3,
 		isNonstandard: "Future",
-},
-beamboost: {
+	},
+	beamboost: {
 		availability: {clover: 1},
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
-				if (['aurorabeam', 'boltbeam', 'bubblebeam', 'chargebeam', 'eternabeam', 'gazerbeam', 'hyperbeam', 'icebeam', 'meteorbeam', 'moongeistbeam', 'powergem', 'psybeam', 'signalbeam', 'solarbeam', 'solarblade', 'solarblade', 'steelbeam', 'prismaticlaser'].includes(move.id)) {
-						this.debug('Beam Boost boost');
-						return this.chainModify(1.5);
-				}
+			if (['aurorabeam', 'boltbeam', 'bubblebeam', 'chargebeam', 'eternabeam', 'gazerbeam', 'hyperbeam', 'icebeam', 'meteorbeam', 'moongeistbeam', 'powergem', 'psybeam', 'signalbeam', 'solarbeam', 'solarblade', 'solarblade', 'steelbeam', 'prismaticlaser'].includes(move.id)) {
+				this.debug('Beam Boost boost');
+				return this.chainModify(1.5);
+			}
 		},
 		name: "Beam Boost",
-		},
-overeager: {
+		isNonstandard: "Future",
+	},
+	overeager: {
+		availability: {clover: 1},
 		onPrepareHit(source, target, move) {
-				if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
-				if (['endeavor', 'fling', 'iceball', 'rollout'].includes(move.id)) return;
-				if (!move.flags['charge'] && !move.spreadHit && !move.isZ && !move.isMax) {
-						move.multihit = 3;
-						move.multihitType = 'overeager';
-				}
+			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
+			if (['endeavor', 'fling', 'iceball', 'rollout'].includes(move.id)) return;
+			if (!move.flags['charge'] && !move.spreadHit && !move.isZ && !move.isMax) {
+				move.multihit = 3;
+				move.multihitType = 'overeager';
+			}
 		},
 		onBasePowerPriority: 7,
 		onBasePower(basePower, pokemon, target, move) {
-				if (move.multihitType === 'overeager' && move.hit > 1) return this.chainModify(0.25);
+			if (move.multihitType === 'overeager' && move.hit > 1) return this.chainModify(0.25);
 		},
 		onSourceModifySecondaries(secondaries, target, source, move) {
-				if (move.multihitType === 'overeager' && move.id === 'secretpower' && move.hit < 3) {
-						// hack to prevent accidentally suppressing King's Rock/Razor Fang
-						return secondaries.filter(effect => effect.volatileStatus === 'flinch');
-				}
+			if (move.multihitType === 'overeager' && move.id === 'secretpower' && move.hit < 3) {
+				// hack to prevent accidentally suppressing King's Rock/Razor Fang
+				return secondaries.filter(effect => effect.volatileStatus === 'flinch');
+			}
 		},
 		name: "Overeager",
+		isNonstandard: "Future",
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {
