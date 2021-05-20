@@ -885,4 +885,16 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	cloudbreaker: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	gazerbeam: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	memejr: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

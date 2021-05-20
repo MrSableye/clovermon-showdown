@@ -13251,6 +13251,51 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	weatherbane: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	cyclonian: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	frijolero: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	picantero: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	sherifuego: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	voliath: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	wycern: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	bitteragon: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	fusjahl: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	wawho: {
 		inherit: true,
 		isNonstandard: "CAP",

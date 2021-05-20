@@ -8749,6 +8749,51 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
+	weatherbane: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	cyclonian: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	frijolero: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	picantero: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	sherifuego: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	voliath: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	wycern: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	bitteragon: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	fusjahl: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	wawho: {
 		availability: {clover: 1},
 		isNonstandard: "Future",

@@ -21883,7 +21883,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Voltaic Cyclone",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1},
 		onAfterHit(target, pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -22227,6 +22227,73 @@ export const Moves: { [moveid: string]: MoveData } = {
 		},
 		target: "normal",
 		type: "Fairy",
+	},
+	cloudbreaker: {/*this one's gonna need to be done by you, Sableye*/
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Cloud Breaker",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+		contestType: "Beautiful",
+	},
+	gazerbeam: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "Gazer Beam",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel') return 1;
+			},
+			secondary: {
+				chance: 30,
+				status: 'brn',
+			},
+			target: "normal",
+			type: "Steel",
+			contestType: "Cool",
+	},
+	memejr: {
+		availability: {clover: 1},
+		num: 612,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Meme Jr",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+				chance: 100,
+				onHit(target, source) {
+						const stats: BoostName[] = [];
+						for (const stat in target.boosts) {
+								if (source.boosts[stat as BoostName] < 6) {
+										stats.push(stat as BoostName);
+								}
+						}
+						if (stats.length) {
+								const randomStat = this.sample(stats);
+								const boost: SparseBoostsTable = {};
+								boost[randomStat] = 1;
+								this.boost(boost);
+						} else {
+								return false;
+						}
+				},
+		},
+		target: "normal",
+		type: "???",
+		contestType: "Cute",
 	},
 	/* Atlas Exclusive Moves */
 	mondayz: {

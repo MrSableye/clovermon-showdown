@@ -66,4 +66,16 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	solarpanels: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	beamboost: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	overeager: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
