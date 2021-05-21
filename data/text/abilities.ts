@@ -1923,4 +1923,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		transform: "  [POKEMON] suprised [SOURCE]! [POKEMON] Changed to its Unleashed Forme!",
 		transformEnd: "Changed to its Dormant Forme!",
 	},
+	devilguard: {
+			name: "Devil Guard",
+			desc: "This Pokemon consumes bug and psychic energy, raising it's Sp. Atk by 1 stage; bug and psychic immunity.",
+			shortDesc: "Bug and Psychic attacks boost Sp. Atk by 1; bug & psychic immunity.",
+	},
 };

@@ -9676,7 +9676,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	pupezerkerattack: {
+	pupezerkerunleashed: {
 		availability: {
 			atlas: 1,
 		},
@@ -9964,6 +9964,132 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	weacockacid: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tillimp: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	belzeburro: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	explodant: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	spikmon: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	lavostra: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	yoshole: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	dracrime: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	gieugon: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	giyagon: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	gnelf: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	gnolem: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	maamape: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	karabojek: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tauran: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bunchamonk: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	monvulcan: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	monkazaord: {
+		availability: {
+			atlas: 1,
+		},
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	shoe: {
 		availability: {
 			atlas: 1,
 		},
