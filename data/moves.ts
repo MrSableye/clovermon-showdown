@@ -2769,7 +2769,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	courtchange: {
-		availability: {atlas: 1},
+		availability: {clover: 1, atlas: 1},
 		num: 756,
 		accuracy: 100,
 		basePower: 0,

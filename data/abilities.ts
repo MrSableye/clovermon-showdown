@@ -620,6 +620,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		num: 6,
 	},
 	dancer: {
+		availability: {clover: 1},
 		name: "Dancer",
 		// implemented in runMove in scripts.js
 		rating: 1.5,
@@ -713,6 +714,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		num: 128,
 	},
 	deltastream: {
+		availability: {clover: 1},
 		onStart(source) {
 			this.field.setWeather('deltastream');
 		},

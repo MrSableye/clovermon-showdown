@@ -30657,7 +30657,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		types: ["Grass", "Rock"],
 		gender: "N",
 		baseStats: {hp: 151, atk: 97, def: 137, spa: 23, spd: 139, spe: 23},
-		abilities: {0: "Beast Boost", H: "Dry Skin", S: "Harvest"},
+		abilities: {0: "Beast Boost", H: "Dry Skin", S: "Filter"},
 		heightm: 6.01,
 		weightkg: 1857,
 		color: "Yellow",

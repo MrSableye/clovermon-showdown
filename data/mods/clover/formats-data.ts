@@ -13264,12 +13264,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	frijolero: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP LC",
 	},
 	picantero: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP NFE",
 	},
 	sherifuego: {
 		inherit: true,
@@ -13284,7 +13284,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	wycern: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP LC",
 	},
 	bitteragon: {
 		inherit: true,
