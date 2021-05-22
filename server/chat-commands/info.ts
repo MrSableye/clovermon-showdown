@@ -11,7 +11,6 @@
 import * as net from 'net';
 import {YoutubeInterface} from '../chat-plugins/youtube';
 import {Net, Utils} from '../../lib';
-import {getLastCommit} from 'git-last-commit';
 
 const ONLINE_SYMBOL = ` \u25C9 `;
 const OFFLINE_SYMBOL = ` \u25CC `;
@@ -1643,14 +1642,6 @@ export const commands: ChatCommands = {
 		`/opensource - Links to PS's source code repository.`,
 		`!opensource - Show everyone that information. Requires: + % @ # &`,
 	],
-
-	commit() {
-		getLastCommit((error, commit) => {
-			if (!error) {
-				this.sendReplyBox(`Latest commit by ${commit.author.name}: ${commit.subject} (<a href="https://github.com/showderp/clovermon-showdown/commit/${commit.hash}">#${commit.shortHash}</a>)`);
-			}
-		});
-	},
 
 	staff(target, room, user) {
 		if (!this.runBroadcast()) return;
