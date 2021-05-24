@@ -17465,7 +17465,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1, atlas: 1},
 		num: 707,
 		accuracy: 85,
-		basePower: 95,
+		basePower: 75,
 		basePowerCallback(pokemon, target, move) {
 			if (pokemon.moveLastTurnResult === false) {
 				this.debug('doubling Stomping Tantrum BP due to previous move failure');
@@ -22158,7 +22158,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	wingsofcorrection: {
 		availability: {clover: 1},
 		accuracy: true,
-		basePower: 100,
+		basePower: 120,
 		category: "Special",
 		name: "Wings Of Correction",
 		pp: 15,
@@ -22305,6 +22305,23 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "???",
 		contestType: "Cute",
+	},
+	shinestrike: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 20,
+		category: "Physical",
+		name: "Shine Strike",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel') return 1;
+		},
+		multihit: [3, 5],
+		secondary: null,
+		target: "normal",
+		type: "Steel",
 	},
 	/* Atlas Exclusive Moves */
 	mondayz: {

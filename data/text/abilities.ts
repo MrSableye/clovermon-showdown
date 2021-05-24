@@ -1888,6 +1888,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Colonoscopy",
 		shortDesc: "This Pokemon's draining moves have 1.5x power.",
 	},
+	swarming: {
+		name: "Swarming",
+		desc: "On switch-in, if this Pokemon is a Jermin that is level 20 or above and has more than 1/4 of its maximum HP left, it changes to Swarm Form. If it is in Swarm Form and its HP drops to 1/4 of its maximum HP or less, it changes to Solo Form at the end of the turn. If it is in Solo Form and its HP is greater than 1/4 its maximum HP at the end of the turn, it changes to Swarm Form.",
+		shortDesc: "If user is Jermin, changes to Swarm Form if it has > 1/4 max HP, else Solo Form.",
+
+		transform: "[POKEMON] formed a swarm!",
+		transformEnd: "[POKEMON] stopped swarming!",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",

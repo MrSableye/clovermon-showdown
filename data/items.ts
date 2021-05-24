@@ -7544,6 +7544,8 @@ export const Items: { [itemid: string]: ItemData } = {
 			if (pokemon.baseSpecies.baseSpecies === 'Noxilium') {
 				pokemon.cureStatus();
 				pokemon.removeVolatile('confusion');
+			} else {
+				pokemon.addVolatile('confusion');
 			}
 		},
 		onUpdate(pokemon) {

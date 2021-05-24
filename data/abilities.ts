@@ -5327,6 +5327,40 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Overeager",
 		isNonstandard: "Future",
 	},
+	swarming: {
+		onStart(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Jermin' || pokemon.level < 20 || pokemon.transformed) return;
+			if (pokemon.hp > pokemon.maxhp / 4) {
+				if (pokemon.species.id === 'jermin') {
+					pokemon.formeChange('Jermin-Swarm');
+				}
+			} else {
+				if (pokemon.species.id === 'jerminswarm') {
+					pokemon.formeChange('Jermin');
+				}
+			}
+		},
+		onResidualOrder: 27,
+		onResidual(pokemon) {
+			if (
+				pokemon.baseSpecies.baseSpecies !== 'Jermin' || pokemon.level < 20 ||
+				pokemon.transformed || !pokemon.hp
+			) return;
+			if (pokemon.hp > pokemon.maxhp / 4) {
+				if (pokemon.species.id === 'jermin') {
+					pokemon.formeChange('Jermin-Swarm');
+				}
+			} else {
+				if (pokemon.species.id === 'jerminswarm') {
+					pokemon.formeChange('Jermin');
+				}
+			}
+		},
+		isPermanent: true,
+		name: "Swarming",
+		rating: 3,
+		num: 208,
+	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {
 		availability: {atlas: 1},
