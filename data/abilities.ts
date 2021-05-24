@@ -5328,6 +5328,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		isNonstandard: "Future",
 	},
 	swarming: {
+		availability: {clover: 1},
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Jermin' || pokemon.level < 20 || pokemon.transformed) return;
 			if (pokemon.hp > pokemon.maxhp / 4) {

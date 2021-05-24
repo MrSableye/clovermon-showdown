@@ -78,4 +78,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	swarming: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
