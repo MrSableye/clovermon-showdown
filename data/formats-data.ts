@@ -8794,7 +8794,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	cristantium: {
+	cristanium: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",

@@ -1879,6 +1879,7 @@ export const Aliases: {[alias: string]: string} = {
 	perrocaca: "Masdawg",
 	chungus: "Upbeddit",
 	wholesome: "Upbote",
+	honsuke: "Heliofug",
 	megalovania: "Vriskeleton",
 	engi: "Turturret",
 	spy: "Spycrab",

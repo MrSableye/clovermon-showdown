@@ -7248,6 +7248,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Shine Strike",
 		shortDesc: "Not resisted by Steel, Hits 2-5 times in one turn.",
 	},
+	skullcannon: {
+		name: "Skull Cannon",
+		shortDesc: "I AM THE TRUE HERO OF THIS STORY.",
+	},
 	/* Atlas move descs lol */
 	mondayz: {
 		name: "Mondayz",

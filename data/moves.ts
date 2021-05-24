@@ -22323,6 +22323,46 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Steel",
 	},
+	skullcannon: {
+		availability: {clover: 1},
+		accuracy: 75,
+		basePower: 150,
+		category: "Special",
+		name: "Skull Cannon",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		ignoreAbility: true,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				},
+			},
+			boosts: {
+				atk: -1,
+				def: -1,
+				spa: -1,
+				spd: -1,
+				spe: -1,
+			},
+		},
+		onDamagePriority: -20,
+		onDamage(damage, target, source, effect) {
+			if (damage >= target.hp) return target.hp - 1;
+		},
+		target: "normal",
+		type: "Dark",
+		contestType: "Cool",
+	},
 	/* Atlas Exclusive Moves */
 	mondayz: {
 		availability: {atlas: 1},
