@@ -897,4 +897,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	shinestrike: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	skullcannon: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
