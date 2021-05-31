@@ -5367,7 +5367,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		availability: {clover: 1},
 		onModifyMovePriority: 1,
 		onModifyMove(move, attacker, defender) {
-			if (attacker.species.baseSpecies !== 'Gar' || attacker.transformed) return;
+			if (attacker.species.baseSpecies !== 'Gargarramer' || attacker.transformed) return;
 			if (move.category === 'Status' && move.id !== 'petrify') return;
 			const targetForme = (move.id === 'petrify' ? 'Gargarramer' : 'Gargarramer-Awoken');
 			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
