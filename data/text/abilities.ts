@@ -1896,6 +1896,19 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		transform: "[POKEMON] formed a swarm!",
 		transformEnd: "[POKEMON] stopped swarming!",
 	},
+	overeager: {
+		name: "Overeager",
+		desc: "This Pokemon's damaging moves become multi-hit moves that hit thrice. Subsequent hits has its damage quartered. Does not affect multi-hit moves or moves that have multiple targets.",
+		shortDesc: "This Pokemon's moves hit thrice. Hits after the first have their damage quartered.",
+	},
+	stoneflesh: {
+		name: "Stoneflesh",
+		desc: "If this Pokemon is an Gargarramer, it changes to Awoken Forme before attempting to use an attacking move, and changes to Statue Forme before attempting to use Petrify.",
+		shortDesc: "If Gargarramer, changes Forme to Awoken before attacks and Statue before Petrify.",
+
+		transform: "Changed to Awoken Forme!",
+		transformEnd: "Changed to Statue Forme!",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",

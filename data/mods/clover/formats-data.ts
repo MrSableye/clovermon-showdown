@@ -13341,6 +13341,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	gargarramer: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	toastort: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	horntuba: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	equuan: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	oogabugamega: {
 		inherit: true,
 		isNonstandard: "CAP",

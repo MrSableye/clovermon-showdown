@@ -22329,11 +22329,37 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onEffectiveness(typeMod, target, type) {
 			if (type === 'Steel') return 1;
 		},
-		multihit: [3, 5],
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Steel",
 	},
+	petrify: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Petrify",
+		pp: 5,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'protect',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		boosts: {
+			def: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Rock",
+	},
+	/* :^) */
 	skullcannon: {
 		availability: {clover: 1},
 		accuracy: 75,

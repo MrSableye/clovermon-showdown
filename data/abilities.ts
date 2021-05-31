@@ -3004,6 +3004,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		num: 214,
 	},
 	quickdraw: {
+		availability: {clover: 1},
 		onFractionalPriorityPriority: -1,
 		onFractionalPriority(priority, pokemon, target, move) {
 			if (move.category !== "Status" && this.randomChance(3, 10)) {
@@ -5361,6 +5362,30 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Swarming",
 		rating: 3,
 		num: 208,
+	},
+	stoneflesh: {
+		availability: {clover: 1},
+		onModifyMovePriority: 1,
+		onModifyMove(move, attacker, defender) {
+			if (attacker.species.baseSpecies !== 'Gar' || attacker.transformed) return;
+			if (move.category === 'Status' && move.id !== 'petrify') return;
+			const targetForme = (move.id === 'petrify' ? 'Gargarramer' : 'Gargarramer-Awoken');
+			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+		},
+		isPermanent: true,
+		name: "Stoneflesh",
+		rating: 4,
+	},
+	sousaphone: {
+		availability: {clover: 1},
+		name: "Sousaphone",
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.flags['sound']) {
+				move.type = 'Steel';
+			}
+		},
+		rating: 2,
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {

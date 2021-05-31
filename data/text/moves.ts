@@ -7248,6 +7248,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Shine Strike",
 		shortDesc: "Not resisted by Steel, Hits 2-5 times in one turn.",
 	},
+	petrify: {
+		name: "Petrify",
+		desc: "The user is protected from most attacks made by other Pokemon during this turn. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
+		shortDesc: "Protects user this turn, +1 Defense.",
+	},
+	/* :^) */
 	skullcannon: {
 		name: "Skull Cannon",
 		shortDesc: "I AM THE TRUE HERO OF THIS STORY.",
