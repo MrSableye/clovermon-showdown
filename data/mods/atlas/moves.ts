@@ -794,6 +794,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	stompingtantrum: {
 		inherit: true,
 		basePower: 95,
+		accuracy: 85,
 		isNonstandard: null,
 	},
 };

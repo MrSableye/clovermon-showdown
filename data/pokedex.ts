@@ -30655,7 +30655,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		types: ["Grass", "Rock"],
 		gender: "N",
 		baseStats: {hp: 151, atk: 97, def: 137, spa: 23, spd: 139, spe: 23},
-		abilities: {0: "Beast Boost", H: "Dry Skin", S: "Filter"},
+		abilities: {0: "Beast Boost", H: "Dry Skin", S: "Oblivious"},
 		heightm: 6.01,
 		weightkg: 1857,
 		color: "Yellow",
@@ -31818,7 +31818,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	},
 	gargarramerawoken: {
 		num: 42100,
-		name: "Gargarramer",
+		name: "Gargarramer-Awoken",
 		baseSpecies: "Gargarramer",
 		forme: "Awoken",
 		types: ["Rock", "Flying"],

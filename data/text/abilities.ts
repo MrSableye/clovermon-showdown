@@ -1909,6 +1909,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		transform: "Changed to Awoken Forme!",
 		transformEnd: "Changed to Statue Forme!",
 	},
+	sousaphone: {
+		name: "Sousaphone",
+		desc: "This Pokemon's sound-based moves become Steel-type moves. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's sound-based moves become Steel type.",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",

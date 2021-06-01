@@ -17464,7 +17464,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	stompingtantrum: {
 		availability: {clover: 1, atlas: 1},
 		num: 707,
-		accuracy: 85,
+		accuracy: 100,
 		basePower: 75,
 		basePowerCallback(pokemon, target, move) {
 			if (pokemon.moveLastTurnResult === false) {
@@ -21865,7 +21865,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		boosts: {
 			atk: 2,
 			def: 2,
-			spd: 2,
+			spe: 2,
 		},
 		secondary: null,
 		target: "self",
