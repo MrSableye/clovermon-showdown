@@ -1873,7 +1873,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	temperamental: {
 		name: "Temperamental",
-		shortDesc: "If Despairy, it changes between Nice and Ebil Mode at the end of each turn.",
+		shortDesc: "If Disbeary, it changes between Nice and Ebil Mode at the end of each turn.",
 	},
 	hewillbedragon: {
 		name: "He Will Be Dragon",

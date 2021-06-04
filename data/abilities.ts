@@ -1968,7 +1968,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		availability: {clover: 1},
 		onSourceTryHeal(damage, target, source, effect) {
 			this.debug("Heal is occurring: " + target + " <- " + source + " :: " + effect.id);
-			const canOoze = ['drain', 'leechseed', 'strengthsap'];
+			const canOoze = ['drain', 'leechseed', 'strengthsap', 'livewire'];
 			if (canOoze.includes(effect.id)) {
 				this.damage(damage);
 				return 0;
@@ -5260,8 +5260,8 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	temperamental: {
 		availability: {clover: 1},
 		onResidual(pokemon) {
-			if (pokemon.species.baseSpecies !== 'Despairy' || pokemon.transformed) return;
-			const targetForme = pokemon.species.name === 'Despairy' ? 'Despairy-Ebil' : 'Despairy';
+			if (pokemon.species.baseSpecies !== 'Disbeary' || pokemon.transformed) return;
+			const targetForme = pokemon.species.name === 'Disbeary' ? 'Disbeary-Ebil' : 'Disbeary';
 			pokemon.formeChange(targetForme);
 		},
 		name: "Temperamental",
@@ -5386,6 +5386,18 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			}
 		},
 		rating: 2,
+	},
+	spincleaner: {
+		availability: {clover: 1},
+		name: "Spin Cleaner",
+		onStart(pokemon) {
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.getEffect(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+		},
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {

@@ -1887,5 +1887,5 @@ export const Aliases: {[alias: string]: string} = {
 	// citen: "Shiribiko",
 	// cringe: "Sableven",
 	// ronald: "Ranruu",
-	// bury: "Despairy",
+	// bury: "Disbeary",
 };

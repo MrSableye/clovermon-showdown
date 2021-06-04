@@ -8734,7 +8734,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	despairy: {
+	disbeary: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",

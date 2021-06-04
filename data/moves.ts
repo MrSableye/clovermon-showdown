@@ -14179,6 +14179,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
+			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
+				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
@@ -14192,6 +14195,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onAfterSubDamage(damage, target, pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
+				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
 			for (const condition of sideConditions) {
@@ -21756,14 +21762,14 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		volatileStatus: 'leechseed',
+		volatileStatus: 'livewire',
 		condition: {
 			onStart(target) {
-				this.add('-start', target, 'move: Leech Seed');
+				this.add('-start', target, 'move: Livewire');
 			},
 			onResidualOrder: 8,
 			onResidual(pokemon) {
-				const target = this.effectData.source.side.active[pokemon.volatiles['leechseed'].sourcePosition];
+				const target = this.effectData.source.side.active[pokemon.volatiles['livewire'].sourcePosition];
 				if (!target || target.fainted || target.hp <= 0) {
 					this.debug('Nothing to leech into');
 					return;
@@ -21888,6 +21894,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
+			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
+				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
@@ -21901,6 +21910,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onAfterSubDamage(damage, target, pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
+				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores'];
 			for (const condition of sideConditions) {
@@ -22173,24 +22185,23 @@ export const Moves: { [moveid: string]: MoveData } = {
 		forceSwitch: true,
 		onHit(target, source, move) {
 			let success = false;
-			const removeTarget = [
-				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
 			const removeAll = [
-				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
-			for (const targetCondition of removeTarget) {
-				if (target.side.removeSideCondition(targetCondition)) {
-					if (!removeAll.includes(targetCondition)) continue;
-					this.add('-sideend', target.side, this.dex.getEffect(targetCondition).name, '[from] move: Defog', '[of] ' + source);
+				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
+			for (const sideCondition of removeAll) {
+				if (target.side.removeSideCondition(sideCondition)) {
+					if (!removeAll.includes(sideCondition)) continue;
+					this.add('-sideend', target.side, this.dex.getEffect(sideCondition).name, '[from] move: Defog', '[of] ' + source);
 					success = true;
 				}
-			}
-			for (const sideCondition of removeAll) {
+
 				if (source.side.removeSideCondition(sideCondition)) {
 					this.add('-sideend', source.side, this.dex.getEffect(sideCondition).name, '[from] move: Defog', '[of] ' + source);
 					success = true;
 				}
 			}
+
 			this.field.clearTerrain();
+			this.field.clearWeather();
 			return success;
 		},
 		secondary: null,
@@ -22217,16 +22228,16 @@ export const Moves: { [moveid: string]: MoveData } = {
 			},
 		},
 		onTry(source) {
-			if (source.species.baseSpecies === 'Despairy') {
+			if (source.species.baseSpecies === 'Disbeary') {
 				return;
 			}
 			this.attrLastMove('[still]');
 			this.add('-fail', source, 'move: Brutal Punishment');
-			this.hint("Only a Pokemon whose form is Despairy or Despairy-Ebil can use this move.");
+			this.hint("Only a Pokemon whose form is Disbeary or Disbeary-Ebil can use this move.");
 			return null;
 		},
 		onModifyType(move, pokemon) {
-			if (pokemon.species.name === 'Despairy-Ebil') {
+			if (pokemon.species.name === 'Disbeary-Ebil') {
 				move.type = 'Dark';
 			} else {
 				move.type = 'Fairy';
@@ -22235,7 +22246,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Fairy",
 	},
-	cloudbreaker: {/* this one's gonna need to be done by you, Sableye*/
+	cloudbreaker: {
 		availability: {clover: 1},
 		accuracy: 100,
 		basePower: 90,
@@ -22245,6 +22256,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onHit() {
+			this.field.clearWeather();
+		},
 		secondary: null,
 		target: "normal",
 		type: "Flying",
@@ -22750,6 +22764,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Stonehenge', '[of] ' + pokemon);
 			}
+			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
+				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
@@ -22763,6 +22780,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onAfterSubDamage(damage, target, pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Stonehenge', '[of] ' + pokemon);
+			}
+			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
+				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
 			for (const condition of sideConditions) {

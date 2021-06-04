@@ -7241,8 +7241,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	brutalpunishment: {
 		name: "Brutal Punishment",
-		desc: "Has a 100% chance to raise the user's Attack and Special Attack by 1 stage. If the user is a Despairy in Nice Mode, this move is Fairy type. If the user is a Despairy in Ebil Mode, this move is Dark type. This move cannot be used successfully unless the user's current form, while considering Transform, is Nice or Ebil Mode Despairy.",
-		shortDesc: "Despairy: Fairy; Ebil: Dark; 100% +1 Atk and SpA.",
+		desc: "Has a 100% chance to raise the user's Attack and Special Attack by 1 stage. If the user is a Disbeary in Nice Mode, this move is Fairy type. If the user is a Disbeary in Ebil Mode, this move is Dark type. This move cannot be used successfully unless the user's current form, while considering Transform, is Nice or Ebil Mode Disbeary.",
+		shortDesc: "Disbeary: Fairy; Ebil: Dark; 100% +1 Atk and SpA.",
 	},
 	shinestrike: {
 		name: "Shine Strike",
