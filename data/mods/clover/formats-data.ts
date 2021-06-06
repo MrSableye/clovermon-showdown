@@ -13591,4 +13591,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	apocamise: {
+		availability: {clover: 1},
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 };
