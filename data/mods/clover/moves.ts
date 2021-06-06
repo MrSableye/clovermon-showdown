@@ -909,6 +909,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	genesisboost: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	brandingblade: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	mudmaelstrom: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 	finalhour: {
 		inherit: true,
 		isNonstandard: "CAP",

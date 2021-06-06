@@ -22395,6 +22395,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		},
 		target: "adjacentAllyOrSelf",
 		type: "Fairy",
+		isNonstandard: "Future",
 	},
 	brandingblade: {
 		availability: {clover: 1},
@@ -22412,6 +22413,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		},
 		target: "normal",
 		type: "Steel",
+		isNonstandard: "Future",
 	},
 	mudmaelstrom: {
 		availability: {clover: 1},
@@ -22430,6 +22432,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		},
 		target: "allAdjacentFoes",
 		type: "Ground",
+		isNonstandard: "Future",
 	},
 	finalhour: {
 		availability: {clover: 1},
