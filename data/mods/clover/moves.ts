@@ -909,4 +909,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	finalhour: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
