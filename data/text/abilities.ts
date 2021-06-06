@@ -1914,6 +1914,22 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's sound-based moves become Steel-type moves. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
 		shortDesc: "This Pokemon's sound-based moves become Steel type.",
 	},
+	solarpanels: {
+		name: "Solar Panels",
+		desc: "This Pokemon is immune to Fire-type moves and raises its Special Attack by 1 stage when hit by a Fire-type move. If this Pokemon is not the target of a single-target Fire-type move used by another Pokemon, this Pokemon redirects that move to itself if it is within the range of that move.",
+		shortDesc: "This Pokemon draws Fire moves to itself to raise Sp. Atk by 1; Fire immunity.",
+
+		activate: "#lightningrod",
+	},
+	beamboost: {
+		name: "Beam Boost",
+		desc: "This Pokemon's Beam-based attacks have their power multiplied by 1.5; secondary effect chance tripled.",
+		shortDesc: "This Pokemon's beam attacks have 1.5x power, secondary effect chance tripled.",
+	},
+	spincleaner: {
+		name: "Spin Cleaner",
+		shortDesc: "When this Pokemon switches in, entry hazards on this side are removed.",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",

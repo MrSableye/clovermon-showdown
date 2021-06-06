@@ -7965,6 +7965,51 @@ export const Items: { [itemid: string]: ItemData } = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	vandashite: {
+		availability: {clover: 1},
+		name: "Vandashite",
+		spritenum: 577,
+		megaStone: "Vandash-Mega",
+		megaEvolves: "Vandash",
+		itemUser: ["Vandash"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	chasumite: {
+		availability: {clover: 1},
+		name: "Chasumite",
+		spritenum: 577,
+		megaStone: "Chasumo-Mega",
+		megaEvolves: "Chasumo",
+		itemUser: ["Chasumo"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	goryannusite: {
+		availability: {clover: 1},
+		name: "Goryannusite",
+		spritenum: 577,
+		megaStone: "Goryannus-Mega",
+		megaEvolves: "Goryannus",
+		itemUser: ["Goryannus"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
 	/* Atlas Exclusive Items */
 	eviomite: {
 		availability: {atlas: 1},

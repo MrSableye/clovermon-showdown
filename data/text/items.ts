@@ -2488,4 +2488,16 @@ export const ItemsText: { [k: string]: ItemText } = {
 		name: "Ricosuavite",
 		desc: "If held by an Ricosuave, this item allows it to Mega Evolve in battle.",
 	},
+	vandashite: {
+		name: "Vandashite",
+		desc: "If held by an Vandash, this item allows it to Mega Evolve in battle.",
+	},
+	chasumite: {
+		name: "Chasumite",
+		desc: "If held by an Chasumo, this item allows it to Mega Evolve in battle.",
+	},
+	goryannusite: {
+		name: "Goryannusite",
+		desc: "If held by an Goryannus, this item allows it to Mega Evolve in battle.",
+	},
 };

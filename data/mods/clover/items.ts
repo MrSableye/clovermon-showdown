@@ -274,6 +274,18 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	vandashite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	chasumite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	goryannusite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 	moluganion: {
 		inherit: true,
 		isNonstandard: "CAP",

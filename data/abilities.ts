@@ -4822,13 +4822,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Blademaster",
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
-			if (['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab', 'phasethrough', 'coldcutter', 'sentaiblade', 'plasmaslasher'].includes(move.id)) {
+			if (['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab', 'phasethrough', 'coldcutter', 'sentaiblade', 'plasmaslasher', 'berserkerblade'].includes(move.id)) {
 				this.debug('Blademaster boost');
 				return this.chainModify([0x1333, 0x1000]);
 			}
 		},
 		onModifyCritRatio(critRatio, target, source, move) {
-			if (target && ['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab', 'phasethrough', 'coldcutter', 'sentaiblade', 'plasmaslasher'].includes(move.id)) return critRatio + 1;
+			if (target && ['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab', 'phasethrough', 'coldcutter', 'sentaiblade', 'plasmaslasher', 'berserkerblade'].includes(move.id)) return critRatio + 1;
 		},
 		rating: 4,
 	},
@@ -5398,6 +5398,24 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				}
 			}
 		},
+	},
+	kinglymajesty: {
+		availability: {clover: 1},
+		onFoeTryMove(target, source, move) {
+			const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+			if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) {
+				return;
+			}
+
+			const dazzlingHolder = this.effectData.target;
+			if ((source.side === dazzlingHolder.side || move.target === 'all') && move.priority > 0.1) {
+				this.attrLastMove('[still]');
+				this.add('cant', dazzlingHolder, 'ability: Queenly Majesty', move, '[of] ' + target);
+				return false;
+			}
+		},
+		name: "Kingly Majesty",
+		rating: 2.5,
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {

@@ -22057,7 +22057,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "More Dakka",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, bullet: 1,},
 		willCrit: true,
 		multihit: 3,
 		secondary: null,
@@ -22372,6 +22372,103 @@ export const Moves: { [moveid: string]: MoveData } = {
 		secondary: null,
 		target: "self",
 		type: "Rock",
+	},
+	genesisboost: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Genesis Boost",
+		pp: 5,
+		priority: 2,
+		flags: {},
+		onTry(source) {
+			if (source.activeMoveActions > 1) {
+				this.hint("Genesis Boost only works on your first turn out.");
+				return false;
+			}
+		},
+		secondary: null,
+		boosts: {
+			atk: 2,
+			def: 2,
+		},
+		target: "adjacentAllyOrSelf",
+		type: "Fairy",
+	},
+	brandingblade: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Branding Blade",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, defrost: 1},
+		thawsTarget: true,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Steel",
+	},
+	mudmaelstrom: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Mud Maelstrom",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, nonsky: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
+		target: "allAdjacentFoes",
+		type: "Ground",
+	},
+	finalhour: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 200,
+		category: "Special",
+		name: "Final Hour",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		ignoreImmunity: true,
+		isFutureMove: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 3,
+				move: 'finalhour',
+				source: source,
+				moveData: {
+					id: 'finalhour',
+					name: "Final Hour",
+					accuracy: 100,
+					basePower: 200,
+					category: "Special",
+					priority: 0,
+					flags: {},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					isFutureMove: true,
+					type: 'Dark',
+				},
+			});
+			this.add('-start', source, 'move: Final Hour');
+			return this.NOT_FAIL;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
 	},
 	/* :^) */
 	skullcannon: {

@@ -13361,6 +13361,66 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	tarquail: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	maplage: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	hazelnaut: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP NFE",
+	},
+	ginocchio: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	magmata: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	delava: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP NFE",
+	},
+	salezerker: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	frudge: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	chaotark: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP NFE",
+	},
+	lemirethun: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	venireal: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	apocomise: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	oogabugamega: {
 		inherit: true,
 		isNonstandard: "CAP",
@@ -13504,6 +13564,27 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "CAP",
 	},
 	ricosuavemega: {
+		availability: {
+			clover: 1,
+		},
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	vandashmega: {
+		availability: {
+			clover: 1,
+		},
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	chasumomega: {
+		availability: {
+			clover: 1,
+		},
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	goryannusmega: {
 		availability: {
 			clover: 1,
 		},

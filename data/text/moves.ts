@@ -7253,6 +7253,38 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user is protected from most attacks made by other Pokemon during this turn. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
 		shortDesc: "Protects user this turn, +1 Defense.",
 	},
+	gazerbeam: {
+		name: "Gazer Beam",
+		desc: "Has a 10% chance to burn the target. This move's type effectiveness against Steel is changed to be super effective no matter what this move's type is.",
+		shortDesc: "10% chance to burn. Super effective on Steel.",
+	},
+	cloudbreaker: {
+		name: "Cloud Breaker",
+		shortDesc: "Clears the currently active weather.",
+	},
+	genesisboost: {
+		name: "Genesis Boost",
+		desc: "Raises this Pokemon's or ally's Attack and Defense by 2 stages. Fails unless it is the user's first turn on the field.",
+		shortDesc: "+2 Atk, +2 Def; First turn out only.",
+	},
+	berserkerblade: {
+		name: "Berserker Blade",
+		desc: "Has a 30% chance to burn the target. The target thaws out if it is frozen.",
+		shortDesc: "30% chance to burn the target. Thaws target.",
+	},
+	mudmaelstrom: {
+		name: "Mud Maelstrom",
+		desc: "Has a 100% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "100% chance lower adjacent Pkmn Speed by 1.",
+	},
+	finalhour: {
+		name: "Final Hour",
+		desc: "Deals damage two turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if this move or Future Sight is already in effect for the target's position.",
+		shortDesc: "Hits two turns after being used.",
+
+		start: "  [POKEMON] chose Final Hour as its destiny!",
+		activate: "  [TARGET] took the Final Hour attack!",
+	},
 	/* :^) */
 	skullcannon: {
 		name: "Skull Cannon",
@@ -7444,7 +7476,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "Lowers the user's Defense and Sp. Def by 1.",
 	},
 	slamburger: {
-		name: "Acupressure",
+		name: "Slamburger",
 		desc: "20% chance to lower a random stat by 2 stages of the target as long as the stat is not already at stage 6.",
 		shortDesc: "20% chance to a lower random stat of the target by 2.",
 	},
