@@ -22057,7 +22057,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "More Dakka",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, bullet: 1,},
+		flags: {protect: 1, mirror: 1, bullet: 1},
 		willCrit: true,
 		multihit: 3,
 		secondary: null,

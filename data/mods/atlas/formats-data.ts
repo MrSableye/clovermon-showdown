@@ -709,16 +709,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
-    tillimp: {
-        inherit: true,
-        tier: "LC",
-        isNonstandard: null,
-    },
-    bezleburro: {
-        inherit: true,
-        tier: "OU",
-        isNonstandard: null,
-    },
+	tillimp: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	bezleburro: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	spikmon: {
 		inherit: true,
 		tier: "LC",
@@ -759,35 +759,35 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
-    karabojek: {
-        inherit: true,
-        tier: "LC",
-        isNonstandard: null,
-    },
-    explodant: {
-        inherit: true,
-        tier: "OU",
-        isNonstandard: null,
-    },
-    maamape: {
-        inherit: true,
-        tier: "OU",
-        isNonstandard: null,
-    },
-    bunchamonk: {
-        inherit: true,
-        tier: "LC",
-        isNonstandard: null,
-    },
-    monvulcan: {
-        inherit: true,
-        tier: "NFE",
-        isNonstandard: null,
-    },
-    monkazord: {
-        inherit: true,
-        tier: "OU",
-        isNonstandard: null,
+	karabojek: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	explodant: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	maamape: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	bunchamonk: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	monvulcan: {
+		inherit: true,
+		tier: "NFE",
+		isNonstandard: null,
+	},
+	monkazord: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
 	},
 	shoe: {
 		inherit: true,
