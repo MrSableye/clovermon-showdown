@@ -31921,7 +31921,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		types: ["Grass", "Fairy"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 70, atk: 98, def: 65, spa: 105, spd: 62, spe: 125},
-		abilities: {0: "Overgrow", H: "Wooden Guard", S: "Flower Gift"},
+		abilities: {0: "Overgrow", H: "Magic Guard", S: "Flower Gift"},
 		heightm: 1.6,
 		weightkg: 60,
 		color: "Green",
