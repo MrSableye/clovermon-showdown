@@ -7267,8 +7267,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Raises this Pokemon's or ally's Attack and Defense by 2 stages. Fails unless it is the user's first turn on the field.",
 		shortDesc: "+2 Atk, +2 Def; First turn out only.",
 	},
-	berserkerblade: {
-		name: "Berserker Blade",
+	brandingblade: {
+		name: "Branding Blade",
 		desc: "Has a 30% chance to burn the target. The target thaws out if it is frozen.",
 		shortDesc: "30% chance to burn the target. Thaws target.",
 	},
