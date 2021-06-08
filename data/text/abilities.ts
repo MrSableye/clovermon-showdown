@@ -1930,6 +1930,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Spin Cleaner",
 		shortDesc: "When this Pokemon switches in, entry hazards on this side are removed.",
 	},
+	shitbugtactics: {
+		name: "Shitbug Tactics",
+		shortDesc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes.",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",

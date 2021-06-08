@@ -7292,11 +7292,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	memejr: {
 		name: "Meme Jr.",
-		desc: "Raises a random stat by 2 stages as long as the stat is not already at stage 6. The user can choose to use this move on itself or an adjacent ally. Fails if no stat stage can be raised or if used on an ally with a substitute.",
-		shortDesc: "Raises a random stat of the user or an ally by 2.",
-		gen4: {
-			desc: "Raises a random stat by 2 stages as long as the stat is not already at stage 6. The user can choose to use this move on itself or an ally. Fails if no stat stage can be raised or if the user or ally has a substitute.",
-		},
+		shortDesc: "Raises a random stat of the user by 1.",
 	},
 	/* :^) */
 	skullcannon: {

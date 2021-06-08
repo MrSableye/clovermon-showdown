@@ -13416,8 +13416,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP LC",
 	},
-	apocomise: {
+	apocamise: {
 		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	"3dawg": {
+		availability: {clover: 1},
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
@@ -13588,11 +13593,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		availability: {
 			clover: 1,
 		},
-		isNonstandard: "CAP",
-		tier: "CAP",
-	},
-	apocamise: {
-		availability: {clover: 1},
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},

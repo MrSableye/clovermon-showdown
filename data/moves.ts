@@ -22534,7 +22534,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			target.setBoost(sourceBoosts);
 			source.setBoost(targetBoosts);
 
-			this.add('-swapboost', source, target, '[from] move: Heart Swap');
+			this.add('-swapboost', source, target, '[from] move: Turnabout');
 		},
 		secondary: null,
 		target: "normal",
@@ -22591,14 +22591,14 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "It's Over",
 		pp: 40,
 		priority: 0,
-		flags: {gravity: 1},
+		flags: {},
 		onTryHit(target, source) {
 			this.add('-nothing');
 		},
 		secondary: null,
 		target: "self",
 		type: "Bug",
-		zMove: {boost: {atk: 6, def: 6, spa: 6, spd: 6, spe: 6}},
+		zMove: {boost: {atk: 6, def: 6, spa: 6, spd: 6, spe: 6, accuracy: 6, evasion: 6}},
 		contestType: "Cute",
 	},
 	/* Atlas Exclusive Moves */
