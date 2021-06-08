@@ -2434,6 +2434,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		num: 233,
 	},
 	neutralizinggas: {
+		availability: {clover: 1},
 		// Ability suppression implemented in sim/pokemon.ts:Pokemon#ignoringAbility
 		onPreStart(pokemon) {
 			this.add('-ability', pokemon, 'Neutralizing Gas');
@@ -5416,6 +5417,48 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Kingly Majesty",
 		rating: 2.5,
+	},
+	shitbugtactics: {
+		availability: {clover: 1},
+		onStart(pokemon) {
+			pokemon.abilityData.choiceLock = "";
+		},
+		onBeforeMove(pokemon, target, move) {
+			if (move.isZOrMaxPowered || move.id === 'struggle') return;
+			if (pokemon.abilityData.choiceLock && pokemon.abilityData.choiceLock !== move.id) {
+				// Fails unless ability is being ignored (these events will not run), no PP lost.
+				this.addMove('move', pokemon, move.name);
+				this.attrLastMove('[still]');
+				this.debug("Disabled by Shitbug Tactics");
+				this.add('-fail', pokemon);
+				return false;
+			}
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.abilityData.choiceLock || move.isZOrMaxPowered || move.id === 'struggle') return;
+			pokemon.abilityData.choiceLock = move.id;
+		},
+		onModifyAtkPriority: 1,
+		onModifyAtk(spa, pokemon) {
+			if (pokemon.volatiles['dynamax']) return;
+			// PLACEHOLDER
+			this.debug('Shitbug Tactics SpA Boost');
+			return this.chainModify(1.5);
+		},
+		onDisableMove(pokemon) {
+			if (!pokemon.abilityData.choiceLock) return;
+			if (pokemon.volatiles['dynamax']) return;
+			for (const moveSlot of pokemon.moveSlots) {
+				if (moveSlot.id !== pokemon.abilityData.choiceLock) {
+					pokemon.disableMove(moveSlot.id, false, this.effectData.sourceEffect);
+				}
+			}
+		},
+		onEnd(pokemon) {
+			pokemon.abilityData.choiceLock = "";
+		},
+		name: "Shitbug Tactics",
+		rating: 4.5,
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {

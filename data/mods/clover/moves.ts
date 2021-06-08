@@ -925,4 +925,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	turnabout: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

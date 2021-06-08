@@ -21924,7 +21924,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 				pokemon.removeVolatile('partiallytrapped');
 			}
 		},
-		target: "normal",
+		target: "allAdjacent",
 		type: "Electric",
 		contestType: "Cool",
 	},
@@ -22473,10 +22473,78 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Dark",
 		isNonstandard: "Future",
 	},
+	turnabout: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Turnabout",
+		pp: 10,
+		priority: 0,
+		flags: {mirror: 1},
+		onHitField(target, source) {
+			const sourceSide = source.side;
+			const targetSide = source.side.foe;
+			const sideConditions = [
+				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire', 'sleazyspores', 'shattershard',
+			];
+			let success = false;
+			for (const id of sideConditions) {
+				const effectName = this.dex.getEffect(id).name;
+				if (sourceSide.sideConditions[id] && targetSide.sideConditions[id]) {
+					[sourceSide.sideConditions[id], targetSide.sideConditions[id]] = [
+						targetSide.sideConditions[id], sourceSide.sideConditions[id],
+					];
+					this.add('-sideend', sourceSide, effectName, '[silent]');
+					this.add('-sideend', targetSide, effectName, '[silent]');
+				} else if (sourceSide.sideConditions[id] && !targetSide.sideConditions[id]) {
+					targetSide.sideConditions[id] = sourceSide.sideConditions[id];
+					delete sourceSide.sideConditions[id];
+					this.add('-sideend', sourceSide, effectName, '[silent]');
+				} else if (targetSide.sideConditions[id] && !sourceSide.sideConditions[id]) {
+					sourceSide.sideConditions[id] = targetSide.sideConditions[id];
+					delete targetSide.sideConditions[id];
+					this.add('-sideend', targetSide, effectName, '[silent]');
+				} else {
+					continue;
+				}
+				let sourceLayers = sourceSide.sideConditions[id] ? (sourceSide.sideConditions[id].layers || 1) : 0;
+				let targetLayers = targetSide.sideConditions[id] ? (targetSide.sideConditions[id].layers || 1) : 0;
+				for (; sourceLayers > 0; sourceLayers--) {
+					this.add('-sidestart', sourceSide, effectName, '[silent]');
+				}
+				for (; targetLayers > 0; targetLayers--) {
+					this.add('-sidestart', targetSide, effectName, '[silent]');
+				}
+				success = true;
+			}
+			if (!success) return false;
+			this.add('-activate', source, 'move: Turnabout');
+		},
+		onHit(target, source) {
+			const targetBoosts: SparseBoostsTable = {};
+			const sourceBoosts: SparseBoostsTable = {};
+
+			let i: BoostName;
+			for (i in target.boosts) {
+				targetBoosts[i] = target.boosts[i];
+				sourceBoosts[i] = source.boosts[i];
+			}
+
+			target.setBoost(sourceBoosts);
+			source.setBoost(targetBoosts);
+
+			this.add('-swapboost', source, target, '[from] move: Heart Swap');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+		isNonstandard: "Future",
+	},
 	/* :^) */
 	skullcannon: {
 		availability: {clover: 1},
-		accuracy: 75,
+		accuracy: 85,
 		basePower: 150,
 		category: "Special",
 		isNonstandard: "Future",
@@ -22514,6 +22582,24 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Dark",
 		contestType: "Cool",
+	},
+	itsover: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "It's Over",
+		pp: 40,
+		priority: 0,
+		flags: {gravity: 1},
+		onTryHit(target, source) {
+			this.add('-nothing');
+		},
+		secondary: null,
+		target: "self",
+		type: "Bug",
+		zMove: {boost: {atk: 6, def: 6, spa: 6, spd: 6, spe: 6}},
+		contestType: "Cute",
 	},
 	/* Atlas Exclusive Moves */
 	mondayz: {

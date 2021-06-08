@@ -7285,10 +7285,29 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  [POKEMON] chose Final Hour as its destiny!",
 		activate: "  [TARGET] took the Final Hour attack!",
 	},
+	turnabout: {
+		name: "Turnabout",
+		desc: "The user swaps all its stat stage changes with the target.",
+		shortDesc: "Swaps all stat changes and hazards with opponent.",
+	},
+	memejr: {
+		name: "Meme Jr.",
+		desc: "Raises a random stat by 2 stages as long as the stat is not already at stage 6. The user can choose to use this move on itself or an adjacent ally. Fails if no stat stage can be raised or if used on an ally with a substitute.",
+		shortDesc: "Raises a random stat of the user or an ally by 2.",
+		gen4: {
+			desc: "Raises a random stat by 2 stages as long as the stat is not already at stage 6. The user can choose to use this move on itself or an ally. Fails if no stat stage can be raised or if the user or ally has a substitute.",
+		},
+	},
 	/* :^) */
 	skullcannon: {
 		name: "Skull Cannon",
 		shortDesc: "I AM THE TRUE HERO OF THIS STORY.",
+	},
+	itsover: {
+		name: "It's Over",
+		shortDesc: "It's over for Clovermon Showdown.",
+
+		activate: "  It's over!",
 	},
 	/* Atlas move descs lol */
 	mondayz: {
