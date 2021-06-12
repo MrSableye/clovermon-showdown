@@ -22482,7 +22482,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 10,
 		priority: 0,
 		flags: {mirror: 1},
-		onHitField(target, source) {
+		onAfterMove(target, source) {
 			const sourceSide = source.side;
 			const targetSide = source.side.foe;
 			const sideConditions = [
