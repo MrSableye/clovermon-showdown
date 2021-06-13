@@ -82,4 +82,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	amplify: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	bigbrain: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

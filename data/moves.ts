@@ -21726,7 +21726,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		multihit: 6,
-		target: "normal",
+		target: "allAdjacent",
 		type: "Normal",
 		isNonstandard: "Future",
 	},
@@ -21755,7 +21755,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	livewire: {
 		availability: {clover: 1},
 		num: 42004,
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 0,
 		category: "Status",
 		name: "Livewire",
@@ -21831,7 +21831,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 42006,
 		accuracy: 100,
-		basePower: 75,
+		basePower: 85,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Rock Clock",
@@ -21840,7 +21840,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
 		secondary: {
 			chance: 30,
-			volatileStatus: 'confusion',
+			volatileStatus: 'flinch',
 		},
 		target: "normal",
 		type: "Rock",
@@ -22333,11 +22333,11 @@ export const Moves: { [moveid: string]: MoveData } = {
 	shinestrike: {
 		availability: {clover: 1},
 		accuracy: 100,
-		basePower: 20,
+		basePower: 30,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Shine Strike",
-		pp: 20,
+		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
@@ -22380,7 +22380,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		category: "Status",
 		name: "Genesis Boost",
 		pp: 5,
-		priority: 2,
+		priority: 0,
 		flags: {},
 		onTry(source) {
 			if (source.activeMoveActions > 1) {
@@ -22437,7 +22437,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	finalhour: {
 		availability: {clover: 1},
 		accuracy: 100,
-		basePower: 200,
+		basePower: 160,
 		category: "Special",
 		name: "Final Hour",
 		pp: 5,
@@ -22448,7 +22448,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onTry(source, target) {
 			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
 			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
-				duration: 3,
+				duration: 4,
 				move: 'finalhour',
 				source: source,
 				moveData: {
@@ -22541,6 +22541,35 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Ghost",
 		isNonstandard: "Future",
 	},
+	medsnow: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Meds Now",
+		pp: 15,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		onTryHit(target, source, move) {
+			if (source.side === target.side) {
+				move.basePower = 0;
+				move.infiltrates = true;
+			}
+		},
+		onHit(target, source) {
+			if (source.side === target.side) {
+				if (!this.heal(Math.floor(target.baseMaxhp * 0.75))) {
+					this.add('-immune', target);
+				}
+			}
+		},
+		secondary: {
+			chance: 50,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Poison",
+	},
 	/* :^) */
 	skullcannon: {
 		availability: {clover: 1},
@@ -22590,13 +22619,13 @@ export const Moves: { [moveid: string]: MoveData } = {
 		category: "Status",
 		name: "It's Over",
 		pp: 40,
-		priority: 0,
+		priority: 6,
 		flags: {},
 		onTryHit(target, source) {
-			this.add('-nothing');
+			this.add("-activate", target, "move: It's Over");
 		},
 		secondary: null,
-		target: "self",
+		target: "all",
 		type: "Bug",
 		zMove: {boost: {atk: 6, def: 6, spa: 6, spd: 6, spe: 6, accuracy: 6, evasion: 6}},
 		contestType: "Cute",

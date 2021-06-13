@@ -13426,6 +13426,61 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	sokumite: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	serpervent: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP NFE",
+	},
+	tsemani: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	floribel: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	mogeria: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	ampstar: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	hamstatic: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	hyduck: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	bluduck: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	impfection: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	whipsicuffs: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	oogabugamega: {
 		inherit: true,
 		isNonstandard: "CAP",

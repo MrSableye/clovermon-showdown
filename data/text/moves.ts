@@ -7294,6 +7294,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Meme Jr.",
 		shortDesc: "Raises a random stat of the user by 1.",
 	},
+	medsnow: {
+		name: "Meds Now",
+		desc: "If the target is an ally, this move restores 3/4 of its maximum HP, rounded down, instead of dealing damage.",
+		shortDesc: "If the target is an ally, heals 75% of its max HP.",
+	},
 	/* :^) */
 	skullcannon: {
 		name: "Skull Cannon",

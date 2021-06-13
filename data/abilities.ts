@@ -562,6 +562,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		num: 238,
 	},
 	curiousmedicine: {
+		availability: {clover: 1},
 		onStart(pokemon) {
 			for (const ally of pokemon.side.active) {
 				if (ally !== pokemon) {
@@ -5128,12 +5129,12 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onModifyMove(move) {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
-				move.ignoreImmunity['Dark'] = true;
+				move.ignoreImmunity['Psychic'] = true;
 			}
 		},
 		name: "Omniscience",
 		rating: 3,
-		isNonstandard: "Future",
+		num: 113,
 	},
 	oldschool: {
 		availability: {clover: 1},
@@ -5438,8 +5439,8 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			if (pokemon.abilityData.choiceLock || move.isZOrMaxPowered || move.id === 'struggle') return;
 			pokemon.abilityData.choiceLock = move.id;
 		},
-		onModifyAtkPriority: 1,
-		onModifyAtk(spa, pokemon) {
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
 			if (pokemon.volatiles['dynamax']) return;
 			// PLACEHOLDER
 			this.debug('Shitbug Tactics SpA Boost');
@@ -5459,6 +5460,57 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Shitbug Tactics",
 		rating: 4.5,
+	},
+	amplify: {
+		availability: {clover: 1},
+		onSourceModifyAtkPriority: 5,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Flying') {
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Flying') {
+				return this.chainModify(0.5);
+			}
+		},
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				return this.chainModify(2);
+			}
+		},
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				return this.chainModify(2);
+			}
+		},
+		onUpdate(pokemon) {
+			if (pokemon.status === 'slp') {
+				this.add('-activate', pokemon, 'ability: Amplify');
+				pokemon.cureStatus();
+			}
+		},
+		onSetStatus(status, target, source, effect) {
+			if (status.id !== 'slp') return;
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: Amplify');
+			}
+			return false;
+		},
+		name: "Amplify",
+		rating: 4.5,
+		num: 199,
+	},
+	bigbrain: {
+		availability: {clover: 1},
+		onModifySpAPriority: 5,
+		onModifySpA(spa) {
+			return this.chainModify(2);
+		},
+		name: "Big Brain",
+		rating: 5,
+		num: 37,
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {

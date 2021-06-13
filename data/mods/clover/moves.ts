@@ -933,4 +933,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	medsnow: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

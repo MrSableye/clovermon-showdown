@@ -1930,6 +1930,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Spin Cleaner",
 		shortDesc: "When this Pokemon switches in, entry hazards on this side are removed.",
 	},
+	amplify: {
+		name: "Amplify",
+		desc: "This Pokemon's attacking stat is doubled while using a Electric-type attack. If a Pokemon uses a Flying-type attack against this Pokemon, that Pokemon's attacking stat is halved when calculating the damage to this Pokemon. This Pokemon cannot be put to sleep. Gaining this Ability while asleep cures it.",
+		shortDesc: "This Pokemon's Electric power is 2x; can't sleep; Flying power against it is halved.",
+	},
+	bigbrain: {
+		name: "Big Brain",
+		shortDesc: "This Pokemon's Special Attack is doubled.",
+	},
 	shitbugtactics: {
 		name: "Shitbug Tactics",
 		shortDesc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes.",
