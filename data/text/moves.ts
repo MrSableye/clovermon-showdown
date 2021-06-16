@@ -7534,4 +7534,24 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
 		shortDesc: "User recovers 50% of the damage dealt.",
 	},
+	alternator: {
+		name: "Atlernator",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+		shortDesc: "User switches out after damaging the target.",
+
+		switchOut: "#uturn",
+	},
+    lootrun: {
+		name: "Loot Run",
+		desc: "The user swaps its held item with the target's held item on contact. Fails if either the user or the target is holding a Mail or Z-Crystal, if neither is holding an item, if the user is trying to give or take a Mega Stone to or from the species that can Mega Evolve with it, or if the user is trying to give or take a Blue Orb, a Red Orb, a Griseous Orb, a Plate, a Drive, or a Memory to or from a Kyogre, a Groudon, a Giratina, an Arceus, a Genesect, or a Silvally, respectively. The target is immune to this move if it has the Sticky Hold Ability.",
+		shortDesc: "User switches its held item with the target's on contact.",
+
+		activate: "  [POKEMON] switched items with its target!",
+	},
+
+	jumpscare: {
+		name: "Jumpscare",
+		desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon making contact with the user become paralyzed. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
+		shortDesc: "Protects from moves. Contact: paralyzed.",
+	},
 };

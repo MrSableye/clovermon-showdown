@@ -315,4 +315,57 @@ export const Formats: FormatList = [
 			'Atlas Only',
 		],
 	},
+	{
+		name: "[Gen 8 Atlas Only] LC",
+		mod: 'atlas',
+		ruleset: [
+			'Little Cup',
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Evasion Moves Clause',
+			'Species Clause',
+			'OHKO Clause',
+			'Atlas Only',
+		],
+		banlist: [
+			'Moody', 'Baton Pass', 'Dragon Rage', 'Sonic Boom',
+		],
+	},
+	
+	{
+		section: 'Atlas Only Doubles/Triples',
+	},
+	{
+		name: "[Gen 8 Atlas Only] Doubles OU",
+		mod: 'atlas',
+		gameType: 'doubles',
+		ruleset: [
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Evasion Moves Clause',
+			'Species Clause',
+			'Swagger Clause',
+			'OHKO Clause',
+			'Atlas Only',
+		],
+		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass'],
+	},
+	{
+		name: "[Gen 8 Atlas Only] Triples OU",
+		mod: 'atlas',
+		gameType: 'triples',
+		ruleset: [
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Evasion Moves Clause',
+			'Species Clause',
+			'Swagger Clause',
+			'OHKO Clause',
+			'Atlas Only',
+		],
+		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass'],
+	},
 ];

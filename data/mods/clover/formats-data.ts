@@ -13454,7 +13454,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	ampstar: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP LC",
 	},
 	hamstatic: {
 		inherit: true,

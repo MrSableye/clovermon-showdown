@@ -4228,7 +4228,7 @@ export const Items: { [itemid: string]: ItemData } = {
 			}
 		},
 		name: "Power Herb",
-		availability: {clover: 1},
+		availability: {clover: 1, atlas: 1},
 		spritenum: 358,
 		fling: {
 			basePower: 10,
@@ -8047,6 +8047,38 @@ export const Items: { [itemid: string]: ItemData } = {
 			}
 		},
 		itemUser: ["Paratsien", "Marsourais"],
+		gen: 8,
+	},
+	staticorb: {
+		name: "Static Orb",
+		availability: {atlas: 1},
+		spritenum: 145,
+		fling: {
+			basePower: 30,
+			status: 'par',
+		},
+		onResidualOrder: 26,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			pokemon.trySetStatus('par', pokemon);
+		},
+		num: 716,
+		gen: 8,
+	},
+	snoozeorb: {
+		name: "Snooze Orb",
+		availability: {atlas: 1},
+		spritenum: 145,
+		fling: {
+			basePower: 30,
+			status: 'slp',
+		},
+		onResidualOrder: 26,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			pokemon.trySetStatus('slp', pokemon);
+		},
+		num: 716,
 		gen: 8,
 	},
 };

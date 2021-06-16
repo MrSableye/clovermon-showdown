@@ -2500,4 +2500,17 @@ export const ItemsText: { [k: string]: ItemText } = {
 		name: "Goryannusite",
 		desc: "If held by an Goryannus, this item allows it to Mega Evolve in battle.",
 	},
+		/* Atlas Abilities */
+	eviomite: {
+			name: "Eviomite",
+			desc: "If holder's species can evolve, its Atk and Spa. Atk are 1.5x.",
+	},
+	baguette: {
+			name: "Baguette",
+			desc: "If held by a Marsourais or a Paratsien, its Attack is doubled.",
+	},
+	staticorb: {
+			name: "Static Orb",
+			desc: "At the end of every turn, this item attempts to paralyze the holder.",
+	},
 };

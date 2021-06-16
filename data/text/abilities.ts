@@ -1969,6 +1969,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	gastronomic: {
 		name: "Gastronomic",
 		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Flying, Grass or Fairy type attack.",
+		
+		start: "  [POKEMON] is feeling bloated!",
+		end: "  [POKEMON] is feeling better now!",
 	},
 	puppetry: {
 		name: "Puppetry",
@@ -1982,5 +1985,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Devil Guard",
 		desc: "This Pokemon consumes bug and psychic energy, raising it's Sp. Atk by 1 stage; bug and psychic immunity.",
 		shortDesc: "Bug and Psychic attacks boost Sp. Atk by 1; bug & psychic immunity.",
+	},
+	siphon: {
+		name: "Siphon",
+		shortDesc: "This Pokemon recovers 1/8 of its health after using an attack",
 	},
 };

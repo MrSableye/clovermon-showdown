@@ -454,10 +454,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
-	reebbit: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+    reebbit: {
+		availability: {atlas: 1,},
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	honklown: {
 		inherit: true,
@@ -715,9 +715,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	bezleburro: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+		availability: {atlas: 1,},
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	spikmon: {
 		inherit: true,
@@ -784,10 +784,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NFE",
 		isNonstandard: null,
 	},
-	monkazord: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+    monkazord: {
+		availability: {atlas: 1,},
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	shoe: {
 		inherit: true,
