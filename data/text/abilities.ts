@@ -1969,7 +1969,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	gastronomic: {
 		name: "Gastronomic",
 		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Flying, Grass or Fairy type attack.",
-		
+
 		start: "  [POKEMON] is feeling bloated!",
 		end: "  [POKEMON] is feeling better now!",
 	},

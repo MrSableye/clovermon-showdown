@@ -454,8 +454,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
-    reebbit: {
-		availability: {atlas: 1,},
+	reebbit: {
+		availability: {atlas: 1},
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -715,7 +715,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	bezleburro: {
-		availability: {atlas: 1,},
+		availability: {atlas: 1},
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -784,8 +784,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NFE",
 		isNonstandard: null,
 	},
-    monkazord: {
-		availability: {atlas: 1,},
+	monkazord: {
+		availability: {atlas: 1},
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

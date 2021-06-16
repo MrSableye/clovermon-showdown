@@ -7541,7 +7541,7 @@ export const MovesText: {[k: string]: MoveText} = {
 
 		switchOut: "#uturn",
 	},
-    lootrun: {
+	lootrun: {
 		name: "Loot Run",
 		desc: "The user swaps its held item with the target's held item on contact. Fails if either the user or the target is holding a Mail or Z-Crystal, if neither is holding an item, if the user is trying to give or take a Mega Stone to or from the species that can Mega Evolve with it, or if the user is trying to give or take a Blue Orb, a Red Orb, a Griseous Orb, a Plate, a Drive, or a Memory to or from a Kyogre, a Groudon, a Giratina, an Arceus, a Genesect, or a Silvally, respectively. The target is immune to this move if it has the Sticky Hold Ability.",
 		shortDesc: "User switches its held item with the target's on contact.",
