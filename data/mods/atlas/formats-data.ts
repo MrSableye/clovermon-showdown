@@ -716,7 +716,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bezleburro: {
 		availability: {atlas: 1},
-		tier: "Illegal",
+		tier: "OU",
 		isNonstandard: "Future",
 	},
 	spikmon: {
@@ -764,6 +764,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
+	tauran: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	explodant: {
 		inherit: true,
 		tier: "OU",
@@ -786,7 +791,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	monkazord: {
 		availability: {atlas: 1},
-		tier: "Illegal",
+		tier: "OU",
 		isNonstandard: "Future",
 	},
 	shoe: {

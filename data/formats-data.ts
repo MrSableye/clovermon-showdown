@@ -10203,7 +10203,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	belzeburro: {
+	bezleburro: {
 		availability: {
 			atlas: 1,
 		},
@@ -10308,7 +10308,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	monkazaord: {
+	monkazord: {
 		availability: {
 			atlas: 1,
 		},
