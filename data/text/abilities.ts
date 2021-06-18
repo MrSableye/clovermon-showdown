@@ -1943,6 +1943,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Shitbug Tactics",
 		shortDesc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes.",
 	},
+	hydrothermal: {
+		name: "Hydrothermal",
+		shortDesc: "This Pokemon's Water moves have a 30% chance of burning.",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",

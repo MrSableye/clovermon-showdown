@@ -5512,6 +5512,22 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 5,
 		num: 37,
 	},
+	hydrothermal: {
+		availability: {clover: 1},
+		onModifyMove(move) {
+			if (move.type === 'Water' || move.target === 'self') return;
+			if (!move.secondaries) {
+				move.secondaries = [];
+			}
+			move.secondaries.push({
+				chance: 30,
+				status: 'brn',
+				ability: this.dex.getAbility('Hydrothermal'),
+			});
+		},
+		name: "Hydrothermal",
+		rating: 3,
+	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {
 		availability: {atlas: 1},

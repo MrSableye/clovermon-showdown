@@ -90,4 +90,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	hydrothermal: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

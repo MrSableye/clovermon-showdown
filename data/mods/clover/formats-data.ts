@@ -2721,7 +2721,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"lifeorb",
 				],
 				moves: [
-					"swordsdance",
+					"honeclaws",
 					"return",
 					"knockoff",
 					"stoneedge",
@@ -13471,6 +13471,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	platylics: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	impfection: {
 		inherit: true,
 		isNonstandard: "CAP",
@@ -13481,6 +13486,37 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	nyanonite: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	primateve: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	onsenpura: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	trickling: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	draklown: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	arachnote: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,
 		isNonstandard: "CAP",
