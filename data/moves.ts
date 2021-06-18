@@ -20600,7 +20600,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		target: "normal",
 		type: "Steel",
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
 			if (type === 'Steel') return 0;
 		},
