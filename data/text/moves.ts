@@ -7136,6 +7136,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Hits six times.",
 		shortDesc: "Hits 6 times.",
 	},
+	trickstab: {
+		name: "Trick Stab",
+		desc: "This move always crits under illusion.",
+		shortDesc: "Guaranteed crit under illusion.",
+	},
 	psychofists: {
 		name: "Psycho Fists",
 		desc: "If this move is successful, the terrain becomes Psychic Terrain.",
@@ -7163,8 +7168,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	rockclock: {
 		name: "Rock Clock",
-		desc: "Has a 30% chance to confuse the target.",
-		shortDesc: "30% chance to confuse the target.",
+		desc: "Has a 30% chance to make the target flinch.",
+		shortDesc: "30% chance to make the target flinch.",
 	},
 	awaken: {
 		name: "Awaken",
@@ -7279,8 +7284,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	finalhour: {
 		name: "Final Hour",
-		desc: "Deals damage two turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if this move or Future Sight is already in effect for the target's position.",
-		shortDesc: "Hits two turns after being used.",
+		desc: "Deals damage three turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if this move or Future Sight is already in effect for the target's position.",
+		shortDesc: "Hits three turns after being used.",
 
 		start: "  [POKEMON] chose Final Hour as its destiny!",
 		activate: "  [TARGET] took the Final Hour attack!",

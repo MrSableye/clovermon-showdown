@@ -5515,14 +5515,14 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	hydrothermal: {
 		availability: {clover: 1},
 		onModifyMove(move) {
-			if (move.type === 'Water' || move.target === 'self') return;
+			if (!move || move.type === 'Water' || move.target === 'self') return;
 			if (!move.secondaries) {
 				move.secondaries = [];
 			}
 			move.secondaries.push({
 				chance: 30,
 				status: 'brn',
-				ability: this.dex.getAbility('Hydrothermal'),
+				ability: this.dex.getAbility('hydrothermal'),
 			});
 		},
 		name: "Hydrothermal",

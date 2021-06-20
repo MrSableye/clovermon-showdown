@@ -8010,6 +8010,36 @@ export const Items: { [itemid: string]: ItemData } = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	spookscarite: {
+		availability: {clover: 1},
+		name: "Spookscarite",
+		spritenum: 577,
+		megaStone: "Spookscare-Mega",
+		megaEvolves: "Spookscare",
+		itemUser: ["Spookscare"],
+			onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	honradite: {
+		availability: {clover: 1},
+		name: "Honradite",
+		spritenum: 577,
+		megaStone: "Honrade-Mega",
+		megaEvolves: "Honrade",
+		itemUser: ["Honrade"],
+			onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
 	/* Atlas Exclusive Items */
 	eviomite: {
 		availability: {atlas: 1},

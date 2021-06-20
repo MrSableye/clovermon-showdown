@@ -13687,4 +13687,18 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	spookscaremega: {
+		availability: {
+			clover: 1,
+		},
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	honrademega: {
+		availability: {
+			clover: 1,
+		},
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 };
