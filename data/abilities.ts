@@ -5714,4 +5714,21 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3,
 		num: 34157,
 	},
+	junglecover: {
+		availability: {atlas: 1},
+		onImmunity(type, pokemon) {
+			if (type === 'grassysurge') return false;
+		},
+		onModifyAccuracyPriority: -1,
+		onModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			if (this.field.isWeather('grassysurge')) {
+				this.debug('Jungle Cover - decreasing accuracy');
+				return this.chainModify([3277, 4096]);
+			}
+		},
+		name: "Jungle Cover",
+		rating: 1.5,
+		num: 34158,
+	},
 };
