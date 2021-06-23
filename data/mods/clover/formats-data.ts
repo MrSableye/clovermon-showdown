@@ -13121,7 +13121,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
-	skubapro: {
+	skuba: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",
