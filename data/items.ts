@@ -8017,7 +8017,7 @@ export const Items: { [itemid: string]: ItemData } = {
 		megaStone: "Spookscare-Mega",
 		megaEvolves: "Spookscare",
 		itemUser: ["Spookscare"],
-			onTakeItem(item, source) {
+		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
 		},
@@ -8032,7 +8032,7 @@ export const Items: { [itemid: string]: ItemData } = {
 		megaStone: "Honrade-Mega",
 		megaEvolves: "Honrade",
 		itemUser: ["Honrade"],
-			onTakeItem(item, source) {
+		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
 		},
