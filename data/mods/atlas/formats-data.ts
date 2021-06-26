@@ -679,11 +679,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
-	tumoremlin: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
-	},
 	norrit: {
 		inherit: true,
 		tier: "LC",
@@ -798,6 +793,77 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
+	ambigray: {
+		inherit: true,
+		tier: "LC"
+	},
+	montusk : {
+		inherit : true,
+		tier: "OU"
+	},
+	giddimon: {
+		inherit: true,
+		tier: "LC"
+	},
+	kepomon: {
+		inherit: true,
+		tier: "NFE"
+	},
+	yiffimon: {
+		inherit: true,
+		tier: "OU"
+	},
+	toukki: {
+		inherit: true,
+		tier: "OU"
+	},
+	pinecong: {
+		inherit: true,
+		tier: "LC"
+	},
+	femitas: {
+		inherit: true,
+		tier: "OU"
+	},
+	dirtitos: {
+		inherit: true,
+		tier: "Uber"
+	},
+	sweetidols: {
+		inherit: true,
+		tier: "LC"
+	},
+	griefgoyle: {
+		inherit: true,
+		tier: "NFE"
+	},
+	acceptinite: {
+		inhertit: true,
+		tier: "OU"
+	},
+	yelowducky: {
+		inherit: true,
+		tier: "LC"
+	},
+	bluebatty: {
+		inherit: true,
+		tier: "OU"
+	},
+	kilroy: {
+		inherit: true,
+		tier: "OU"
+	},
+	freaxodus: {
+		inherit: true,
+		tier: "OU"
+	},
+	crucifreak: {
+		inherit: true,
+		tier: "OU"
+	},
+	postmodeer: {
+		inherit: true,
+		tier: "OU"
 	},
 };
 
