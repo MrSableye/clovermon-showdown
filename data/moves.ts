@@ -22579,6 +22579,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		},
 		target: "normal",
 		type: "Poison",
+		isNonstandard: "Future",
 	},
 	/* :^) */
 	skullcannon: {
@@ -22639,6 +22640,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Bug",
 		zMove: {boost: {atk: 6, def: 6, spa: 6, spd: 6, spe: 6, accuracy: 6, evasion: 6}},
 		contestType: "Cute",
+		isNonstandard: "Future",
 	},
 	/* Atlas Exclusive Moves */
 	mondayz: {
@@ -22910,6 +22912,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 					this.add('-start', pokemon, 'Smack Down');
 				}
 			},
+			isNonstandard: "Future",
 			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
 		},
 		secondary: null,
@@ -23524,6 +23527,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Normal",
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Tough",
+		isNonstandard: "Future",
 	},
 	beetdown: {
 		availability: {atlas: 1},
@@ -23585,6 +23589,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Psychic",
 		contestType: "Clever",
+		isNonstandard: "Future",
 	},
 	slamburger: {
 		availability: {atlas: 1},
@@ -23615,6 +23620,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "???",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	leechsneed: {
 		availability: {atlas: 1},
@@ -23633,6 +23639,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Grass",
 		contestType: "Clever",
+		isNonstandard: "Future",
 	},
 	poundcake: {
 		availability: {atlas: 1},
@@ -23652,6 +23659,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Fairy",
 		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
 	fragments: {
 		availability: {atlas: 1},
@@ -23679,6 +23687,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Steel",
 		zMove: {boost: {def: 1}},
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	fragbomb: {
 		availability: {atlas: 1},
@@ -23697,6 +23706,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "allAdjacent",
 		type: "Steel",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	warcry: {
 		availability: {atlas: 1},
@@ -23718,6 +23728,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "allAdjacentFoes",
 		type: "Normal",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	soulsteal: {
 		availability: {atlas: 1},
@@ -23733,6 +23744,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Ghost",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	jumpscare: {
 		availability: {atlas: 1},
@@ -23790,6 +23802,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Ghost",
 		zMove: {boost: {evasion: 1}},
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	alternator: {
 		availability: {atlas: 1},
@@ -23805,6 +23818,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Steel",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	lootrun: {
 		availability: {atlas: 1},
@@ -23854,5 +23868,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fairy",
 		zMove: {boost: {spe: 1}},
 		contestType: "Tough",
+		isNonstandard: "Future",
 	},
 };
