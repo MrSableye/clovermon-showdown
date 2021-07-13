@@ -5135,6 +5135,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Omniscience",
 		rating: 3,
 		num: 113,
+		isNonstandard: "Future",
 	},
 	oldschool: {
 		availability: {clover: 1},
@@ -5364,6 +5365,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Swarming",
 		rating: 3,
 		num: 208,
+		isNonstandard: "Future",
 	},
 	stoneflesh: {
 		availability: {clover: 1},
@@ -5377,6 +5379,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		isPermanent: true,
 		name: "Stoneflesh",
 		rating: 4,
+		isNonstandard: "Future",
 	},
 	sousaphone: {
 		availability: {clover: 1},
@@ -5388,6 +5391,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			}
 		},
 		rating: 2,
+		isNonstandard: "Future",
 	},
 	spincleaner: {
 		availability: {clover: 1},
@@ -5400,6 +5404,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				}
 			}
 		},
+		isNonstandard: "Future",
 	},
 	kinglymajesty: {
 		availability: {clover: 1},
@@ -5418,6 +5423,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Kingly Majesty",
 		rating: 2.5,
+		isNonstandard: "Future",
 	},
 	shitbugtactics: {
 		availability: {clover: 1},
@@ -5460,6 +5466,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Shitbug Tactics",
 		rating: 4.5,
+		isNonstandard: "Future",
 	},
 	amplify: {
 		availability: {clover: 1},
@@ -5501,6 +5508,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Amplify",
 		rating: 4.5,
 		num: 199,
+		isNonstandard: "Future",
 	},
 	bigbrain: {
 		availability: {clover: 1},
@@ -5511,6 +5519,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Big Brain",
 		rating: 5,
 		num: 37,
+		isNonstandard: "Future",
 	},
 	hydrothermal: {
 		availability: {clover: 1},
@@ -5527,6 +5536,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Hydrothermal",
 		rating: 3,
+		isNonstandard: "Future",
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {

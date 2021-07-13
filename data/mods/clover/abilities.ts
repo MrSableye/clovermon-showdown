@@ -82,6 +82,26 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	stoneflesh: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	sousaphone: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	spincleaner: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	kinglymajesty: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	shitbugtactics: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 	amplify: {
 		inherit: true,
 		isNonstandard: "CAP",
