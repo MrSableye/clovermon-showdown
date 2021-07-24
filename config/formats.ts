@@ -268,7 +268,6 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		ruleset: [
 			'Standard NatDex',
-			'Originality Clause',
 		],
 	},
 	{
