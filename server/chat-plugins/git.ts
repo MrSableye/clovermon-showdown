@@ -5,8 +5,6 @@ const bash = (command: string, cwd?: string): Promise<[number, string, string]> 
 	child_process.exec(command, {
 		cwd: cwd || `${__dirname}/../..`,
 	}, (error, stdout, stderr) => {
-		let log = `[o] ${stdout}[e] ${stderr}`;
-		if (error) log = `[c] ${error.code}\n${log}`;
 		resolve([error?.code || 0, stdout, stderr]);
 	});
 });

@@ -1841,7 +1841,7 @@ export const commands: ChatCommands = {
 			}
 
 			if (typeof nextNamespace === 'function') break;
-			namespace = nextNamespace as import('../chat').AnnotatedChatCommands;
+			namespace = nextNamespace;
 		}
 
 		if (!currentBestHelp) {

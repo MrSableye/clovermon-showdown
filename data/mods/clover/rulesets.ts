@@ -1,5 +1,3 @@
-import {Species} from "../../../sim/dex-species";
-
 export const Formats: {[k: string]: ModdedFormatData} = {
 	blobbosclause: {
 		effectType: 'ValidatorRule',

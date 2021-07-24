@@ -257,7 +257,7 @@ export class Connection {
 		this.openPages = null;
 	}
 	sendTo(roomid: RoomID | BasicRoom | null, data: string) {
-		if (roomid && typeof roomid !== 'string') roomid = (roomid as BasicRoom).roomid;
+		if (roomid && typeof roomid !== 'string') roomid = roomid.roomid;
 		if (roomid && roomid !== 'lobby') data = `>${roomid}\n${data}`;
 		Sockets.socketSend(this.worker, this.socketid, data);
 		Monitor.countNetworkUse(data.length);
@@ -484,7 +484,7 @@ export class User extends Chat.MessageContext {
 	}
 
 	sendTo(roomid: RoomID | BasicRoom | null, data: string) {
-		if (roomid && typeof roomid !== 'string') roomid = (roomid as BasicRoom).roomid;
+		if (roomid && typeof roomid !== 'string') roomid = roomid.roomid;
 		if (roomid && roomid !== 'lobby') data = `>${roomid}\n${data}`;
 		for (const connection of this.connections) {
 			if (roomid && !connection.inRooms.has(roomid)) continue;
