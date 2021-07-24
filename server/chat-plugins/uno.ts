@@ -599,13 +599,13 @@ class UNOPlayer extends Rooms.RoomGamePlayer {
 	}
 
 	buildHand() {
-		return this.hand.sort((a, b) => a.color.localeCompare(b.color) || a.value.localeCompare(b.value))
-			.map((c, i) => cardHTML(c, i === this.hand.length - 1));
+		return Utils.sortBy(this.hand, card => [card.color, card.value])
+			.map((card, i) => cardHTML(card, i === this.hand.length - 1));
 	}
 
 	sendDisplay() {
 		const hand = this.buildHand().join('');
-		const players = `<p><strong>Players (${this.game.playerCount}):</strong></p>${this.game.getPlayers(true)}`;
+		const players = `<p><strong>Players (${this.game.playerCount}):</strong></p> ${this.game.getPlayers(true)}`;
 		const draw = '<button class="button" style="width: 45%; background: rgba(0, 0, 255, 0.05)" name=send value="/uno draw">Draw a card!</button>';
 		const pass = '<button class="button" style=" width: 45%; background: rgba(255, 0, 0, 0.05)" name=send value="/uno pass">Pass!</button>';
 		const uno = `<button class="button" style=" width: 90%; background: rgba(0, 255, 0, 0.05); height: 60px; margin-top: 2px;" name=send value="/uno uno ${this.game.unoId || '0'}">UNO!</button>`;
@@ -626,7 +626,7 @@ class UNOPlayer extends Rooms.RoomGamePlayer {
 	}
 }
 
-export const commands: ChatCommands = {
+export const commands: Chat.ChatCommands = {
 	uno: {
 		// roomowner commands
 		off: 'disable',
@@ -930,7 +930,7 @@ export const commands: ChatCommands = {
 	],
 };
 
-export const roomSettings: SettingsHandler = room => ({
+export const roomSettings: Chat.SettingsHandler = room => ({
 	label: "UNO",
 	permission: 'editroom',
 	options: [

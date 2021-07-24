@@ -66,7 +66,16 @@ export const Items: { [itemid: string]: ItemData } = {
 		fling: {
 			basePower: 30,
 		},
+		onBoostPriority: 1,
+		onBoost(boost, target) {
+			target.itemState.lastAtk = target.boosts['atk'];
+		},
 		onAfterBoost(boost, target, source, effect) {
+			const noAtkChange = boost.atk! < 0 && target.boosts['atk'] === -6 && target.itemState.lastAtk === -6;
+			const noContraryAtkChange = boost.atk! > 0 && target.boosts['atk'] === 6 && target.itemState.lastAtk === 6;
+			if (target.boosts['spe'] === 6 || noAtkChange || noContraryAtkChange) {
+				return;
+			}
 			if (effect.id === 'intimidate') {
 				target.useItem();
 			}
@@ -147,16 +156,16 @@ export const Items: { [itemid: string]: ItemData } = {
 		onDamagingHit(damage, target, source, move) {
 			this.add('-enditem', target, 'Air Balloon');
 			target.item = '';
-			target.itemData = {id: '', target};
-			this.runEvent('AfterUseItem', target, null, null, this.dex.getItem('airballoon'));
+			target.itemState = {id: '', target};
+			this.runEvent('AfterUseItem', target, null, null, this.dex.items.get('airballoon'));
 		},
 		onAfterSubDamage(damage, target, source, effect) {
 			this.debug('effect: ' + effect.id);
 			if (effect.effectType === 'Move') {
 				this.add('-enditem', target, 'Air Balloon');
 				target.item = '';
-				target.itemData = {id: '', target};
-				this.runEvent('AfterUseItem', target, null, null, this.dex.getItem('airballoon'));
+				target.itemState = {id: '', target};
+				this.runEvent('AfterUseItem', target, null, null, this.dex.items.get('airballoon'));
 			}
 		},
 		num: 541,
@@ -280,7 +289,7 @@ export const Items: { [itemid: string]: ItemData } = {
 		},
 		onDisableMove(pokemon) {
 			for (const moveSlot of pokemon.moveSlots) {
-				if (this.dex.getMove(moveSlot.move).category === 'Status') {
+				if (this.dex.moves.get(moveSlot.move).category === 'Status') {
 					pokemon.disableMove(moveSlot.id);
 				}
 			}
@@ -453,17 +462,8 @@ export const Items: { [itemid: string]: ItemData } = {
 			basePower: 30,
 		},
 		onResidualOrder: 5,
-		onResidualSubOrder: 5,
+		onResidualSubOrder: 4,
 		onResidual(pokemon) {
-			if (this.field.isTerrain('grassyterrain')) return;
-			if (pokemon.hasType('Poison')) {
-				this.heal(pokemon.baseMaxhp / 16);
-			} else {
-				this.damage(pokemon.baseMaxhp / 8);
-			}
-		},
-		onTerrain(pokemon) {
-			if (!this.field.isTerrain('grassyterrain')) return;
 			if (pokemon.hasType('Poison')) {
 				this.heal(pokemon.baseMaxhp / 16);
 			} else {
@@ -1462,7 +1462,7 @@ export const Items: { [itemid: string]: ItemData } = {
 		onAfterBoost(boost, target, source, effect) {
 			if (this.activeMove?.id === 'partingshot') return;
 			let eject = false;
-			let i: BoostName;
+			let i: BoostID;
 			for (i in boost) {
 				if (boost[i]! < 0) {
 					eject = true;
@@ -1533,7 +1533,7 @@ export const Items: { [itemid: string]: ItemData } = {
 			}
 		},
 		onAnyTerrainStart() {
-			const pokemon = this.effectData.target;
+			const pokemon = this.effectState.target;
 			if (this.field.isTerrain('electricterrain')) {
 				pokemon.useItem();
 			}
@@ -1825,8 +1825,8 @@ export const Items: { [itemid: string]: ItemData } = {
 			basePower: 30,
 			status: 'brn',
 		},
-		onResidualOrder: 26,
-		onResidualSubOrder: 2,
+		onResidualOrder: 28,
+		onResidualSubOrder: 3,
 		onResidual(pokemon) {
 			pokemon.trySetStatus('brn', pokemon);
 		},
@@ -2220,7 +2220,7 @@ export const Items: { [itemid: string]: ItemData } = {
 			}
 		},
 		onAnyTerrainStart() {
-			const pokemon = this.effectData.target;
+			const pokemon = this.effectState.target;
 			if (this.field.isTerrain('grassyterrain')) {
 				pokemon.useItem();
 			}
@@ -2659,7 +2659,7 @@ export const Items: { [itemid: string]: ItemData } = {
 			type: "Dragon",
 		},
 		onDamagingHit(damage, target, source, move) {
-			if (move.category === 'Physical') {
+			if (move.category === 'Physical' && source.hp && source.isActive) {
 				if (target.eatItem()) {
 					this.damage(source.baseMaxhp / (target.hasAbility('ripen') ? 4 : 8), source, target);
 				}
@@ -2919,13 +2919,8 @@ export const Items: { [itemid: string]: ItemData } = {
 			basePower: 10,
 		},
 		onResidualOrder: 5,
-		onResidualSubOrder: 5,
+		onResidualSubOrder: 4,
 		onResidual(pokemon) {
-			if (this.field.isTerrain('grassyterrain')) return;
-			this.heal(pokemon.baseMaxhp / 16);
-		},
-		onTerrain(pokemon) {
-			if (!this.field.isTerrain('grassyterrain')) return;
 			this.heal(pokemon.baseMaxhp / 16);
 		},
 		num: 234,
@@ -2996,7 +2991,7 @@ export const Items: { [itemid: string]: ItemData } = {
 		},
 		onAfterMoveSecondarySelf(source, target, move) {
 			if (source && source !== target && move && move.category !== 'Status') {
-				this.damage(source.baseMaxhp / 10, source, source, this.dex.getItem('lifeorb'));
+				this.damage(source.baseMaxhp / 10, source, source, this.dex.items.get('lifeorb'));
 			}
 		},
 		num: 270,
@@ -3479,8 +3474,8 @@ export const Items: { [itemid: string]: ItemData } = {
 		},
 		condition: {
 			onStart(pokemon) {
-				this.effectData.lastMove = '';
-				this.effectData.numConsecutive = 0;
+				this.effectState.lastMove = '';
+				this.effectState.numConsecutive = 0;
 			},
 			onTryMovePriority: -2,
 			onTryMove(pokemon, target, move) {
@@ -3488,18 +3483,19 @@ export const Items: { [itemid: string]: ItemData } = {
 					pokemon.removeVolatile('metronome');
 					return;
 				}
-				if (this.effectData.lastMove === move.id && pokemon.moveLastTurnResult) {
-					this.effectData.numConsecutive++;
-				} else if (pokemon.volatiles['twoturnmove'] && this.effectData.lastMove !== move.id) {
-					this.effectData.numConsecutive = 1;
+				if (this.effectState.lastMove === move.id && pokemon.moveLastTurnResult) {
+					this.effectState.numConsecutive++;
+				} else if (pokemon.volatiles['twoturnmove'] && this.effectState.lastMove !== move.id) {
+					this.effectState.numConsecutive = 1;
 				} else {
-					this.effectData.numConsecutive = 0;
+					this.effectState.numConsecutive = 0;
 				}
-				this.effectData.lastMove = move.id;
+				this.effectState.lastMove = move.id;
 			},
 			onModifyDamage(damage, source, target, move) {
 				const dmgMod = [4096, 4915, 5734, 6553, 7372, 8192];
-				const numConsecutive = this.effectData.numConsecutive > 5 ? 5 : this.effectData.numConsecutive;
+				const numConsecutive = this.effectState.numConsecutive > 5 ? 5 : this.effectState.numConsecutive;
+				this.debug(`Current Metronome boost: ${dmgMod[numConsecutive]}/4096`);
 				return this.chainModify([dmgMod[numConsecutive], 4096]);
 			},
 		},
@@ -3636,7 +3632,7 @@ export const Items: { [itemid: string]: ItemData } = {
 			}
 		},
 		onAnyTerrainStart() {
-			const pokemon = this.effectData.target;
+			const pokemon = this.effectState.target;
 			if (this.field.isTerrain('mistyterrain')) {
 				pokemon.useItem();
 			}
@@ -4296,48 +4292,7 @@ export const Items: { [itemid: string]: ItemData } = {
 		fling: {
 			basePower: 30,
 		},
-		onAttractPriority: -1,
-		onAttract(target, source) {
-			if (
-				target !== source && target === this.activePokemon &&
-				this.activeMove && this.activeMove.flags['contact']
-			) return false;
-		},
-		onBoostPriority: -1,
-		onBoost(boost, target, source, effect) {
-			if (target !== source && target === this.activePokemon && this.activeMove && this.activeMove.flags['contact']) {
-				if (effect && effect.effectType === 'Ability') {
-					// Ability activation always happens for boosts
-					this.add('-activate', target, 'item: Protective Pads');
-				}
-				return false;
-			}
-		},
-		onDamagePriority: -1,
-		onDamage(damage, target, source, effect) {
-			if (target !== source && target === this.activePokemon && this.activeMove && this.activeMove.flags['contact']) {
-				if (effect && effect.effectType === 'Ability') {
-					this.add('-activate', source, effect.fullname);
-					this.add('-activate', target, 'item: Protective Pads');
-				}
-				return false;
-			}
-		},
-		onSetAbility(ability, target, source, effect) {
-			if (target !== source && target === this.activePokemon && this.activeMove && this.activeMove.flags['contact']) {
-				if (effect && effect.effectType === 'Ability' && effect.id !== 'wanderingspirit') {
-					this.add('-activate', source, effect.fullname);
-					this.add('-activate', target, 'item: Protective Pads');
-				}
-				return false;
-			}
-		},
-		onSetStatus(status, target, source, effect) {
-			if (
-				target !== source && target === this.activePokemon &&
-				this.activeMove && this.activeMove.flags['contact']
-			) return false;
-		},
+		// protective effect handled in Battle#checkMoveMakesContact
 		num: 880,
 		gen: 7,
 	},
@@ -4392,7 +4347,7 @@ export const Items: { [itemid: string]: ItemData } = {
 			}
 		},
 		onAnyTerrainStart() {
-			const pokemon = this.effectData.target;
+			const pokemon = this.effectState.target;
 			if (this.field.isTerrain('psychicterrain')) {
 				pokemon.useItem();
 			}
@@ -4732,7 +4687,7 @@ export const Items: { [itemid: string]: ItemData } = {
 		},
 		onDamagingHitOrder: 2,
 		onDamagingHit(damage, target, source, move) {
-			if (move.flags['contact']) {
+			if (this.checkMoveMakesContact(move, source, target)) {
 				this.damage(source.baseMaxhp / 6, source, target);
 			}
 		},
@@ -4815,7 +4770,7 @@ export const Items: { [itemid: string]: ItemData } = {
 			type: "Dark",
 		},
 		onDamagingHit(damage, target, source, move) {
-			if (move.category === 'Special') {
+			if (move.category === 'Special' && source.hp && source.isActive) {
 				if (target.eatItem()) {
 					this.damage(source.baseMaxhp / (target.hasAbility('ripen') ? 4 : 8), source, target);
 				}
@@ -5392,8 +5347,8 @@ export const Items: { [itemid: string]: ItemData } = {
 			}
 		},
 		onEat(pokemon) {
-			const stats: BoostName[] = [];
-			let stat: BoostName;
+			const stats: BoostID[] = [];
+			let stat: BoostID;
 			for (stat in pokemon.boosts) {
 				if (stat !== 'accuracy' && stat !== 'evasion' && pokemon.boosts[stat] < 6) {
 					stats.push(stat);
@@ -5497,13 +5452,13 @@ export const Items: { [itemid: string]: ItemData } = {
 		fling: {
 			basePower: 80,
 		},
-		onResidualOrder: 26,
-		onResidualSubOrder: 2,
+		onResidualOrder: 28,
+		onResidualSubOrder: 3,
 		onResidual(pokemon) {
 			this.damage(pokemon.baseMaxhp / 8);
 		},
 		onHit(target, source, move) {
-			if (source && source !== target && !source.item && move && move.flags['contact']) {
+			if (source && source !== target && !source.item && move && this.checkMoveMakesContact(move, source, target)) {
 				const barb = target.takeItem();
 				if (!barb) return; // Gen 4 Multitype
 				source.setItem(barb);
@@ -5703,8 +5658,8 @@ export const Items: { [itemid: string]: ItemData } = {
 			basePower: 30,
 			status: 'tox',
 		},
-		onResidualOrder: 26,
-		onResidualSubOrder: 2,
+		onResidualOrder: 28,
+		onResidualSubOrder: 3,
 		onResidual(pokemon) {
 			pokemon.trySetStatus('tox', pokemon);
 		},
@@ -6871,7 +6826,7 @@ export const Items: { [itemid: string]: ItemData } = {
 			effect(pokemon) {
 				let activate = false;
 				const boosts: SparseBoostsTable = {};
-				let i: BoostName;
+				let i: BoostID;
 				for (i in pokemon.boosts) {
 					if (pokemon.boosts[i] < 0) {
 						activate = true;
@@ -6887,7 +6842,7 @@ export const Items: { [itemid: string]: ItemData } = {
 		onUpdate(pokemon) {
 			let activate = false;
 			const boosts: SparseBoostsTable = {};
-			let i: BoostName;
+			let i: BoostID;
 			for (i in pokemon.boosts) {
 				if (pokemon.boosts[i] < 0) {
 					activate = true;

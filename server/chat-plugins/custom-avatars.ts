@@ -1,4 +1,4 @@
-export const commands: ChatCommands = {
+export const commands: Chat.ChatCommands = {
 	blobbos(target, room, user) {
 		if (Config.blobbosTournamentWinners && Config.blobbosTournamentWinners.includes(user.id)) {
 			this.user.avatar = '#blobbos';

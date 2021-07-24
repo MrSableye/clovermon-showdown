@@ -1,4 +1,4 @@
-export const Formats: {[k: string]: ModdedFormatData} = {
+export const Rulesets: {[k: string]: ModdedFormatData} = {
 	blobbosclause: {
 		effectType: 'ValidatorRule',
 		name: 'Blobbos Clause',
@@ -16,23 +16,23 @@ export const Formats: {[k: string]: ModdedFormatData} = {
 		onValidateSet(set) {
 			const errors = [];
 
-			const species = this.dex.getSpecies(set.species || set.name);
+			const species = this.dex.species.get(set.species || set.name);
 			if (!species.availability?.clover) {
 				errors.push(`${species.baseSpecies} is not in Pokémon Clover.`);
 			}
 
-			const item = this.dex.getItem(set.item);
+			const item = this.dex.items.get(set.item);
 			if (item && item.id && item.id !== '' && !item.availability?.clover) {
 				errors.push(`${set.name || set.species} has ${item.name}, which is unavailable in Pokémon Clover.`);
 			}
 
-			const ability = this.dex.getAbility(set.ability);
+			const ability = this.dex.abilities.get(set.ability);
 			if (ability && !ability.availability?.clover) {
 				errors.push(`${set.name || set.species} has ${ability.name}, which is unavailable in Pokémon Clover.`);
 			}
 
 			set.moves.forEach((moveName) => {
-				const move = this.dex.getMove(this.toID(moveName));
+				const move = this.dex.moves.get(this.toID(moveName));
 
 				if (!this.toID(moveName).startsWith('hiddenpower') && !move.availability?.clover) {
 					errors.push(`${set.name || set.species} has ${move}, which is unavailable in Pokémon Clover.`);
@@ -50,7 +50,7 @@ export const Formats: {[k: string]: ModdedFormatData} = {
 		desc: "Requires 3 Clovermons and 3 non-Clovermons.",
 		onValidateTeam(team) {
 			const totalClovermons = team.reduce((total, set) => {
-				const species = this.dex.getSpecies(set.species || set.name);
+				const species = this.dex.species.get(set.species || set.name);
 				return total + (species.availability?.clover ? 1 : 0);
 			}, 0);
 
@@ -70,7 +70,7 @@ export const Formats: {[k: string]: ModdedFormatData} = {
 			let ru = 0;
 
 			team.forEach((set) => {
-				const species = this.dex.getSpecies(set.species || set.name);
+				const species = this.dex.species.get(set.species || set.name);
 				if (species.tier === 'Uber') {
 					uber++;
 				} else if (species.tier === 'OU') {

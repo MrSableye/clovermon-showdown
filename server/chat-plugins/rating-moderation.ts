@@ -1,7 +1,7 @@
 import {runPromote} from '../chat-commands/moderation';
 import {Auth} from '../user-groups';
 
-export const commands: ChatCommands = {
+export const commands: Chat.ChatCommands = {
 	async ratingroompromote(target, room, user, connection, cmd) {
 		if (!room) {
 			// this command isn't marked as room-only because it's usable in PMs through /invite

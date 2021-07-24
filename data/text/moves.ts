@@ -603,6 +603,9 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "If this attack does not miss and whether or not the target is immune, the effects of Reflect and Light Screen end for the target's side of the field before damage is calculated.",
 			shortDesc: "Destroys screens, even if the target is immune.",
 		},
+		gen3: {
+			desc: "If this attack does not miss and whether or not the target is immune, the effects of Reflect and Light Screen end for the opponent's side of the field before damage is calculated.",
+		},
 
 		activate: "  [POKEMON] shattered [TEAM]'s protections!",
 	},
@@ -948,6 +951,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The target loses its held item. This move cannot cause Pokemon with the Sticky Hold Ability to lose their held item or cause a Kyogre, a Groudon, a Giratina, an Arceus, a Genesect, a Silvally, a Zacian, or a Zamazenta to lose their Blue Orb, Red Orb, Griseous Orb, Plate, Drive, Memory, Rusted Sword, or Rusted Shield respectively. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
 		shortDesc: "Removes adjacent Pokemon's held items.",
 
+		fail: "#healblock",
 		removeItem: "  [SOURCE] corroded [POKEMON]'s [ITEM]!",
 	},
 	cosmicpower: {
@@ -1181,9 +1185,9 @@ export const MovesText: {[k: string]: MoveText} = {
 	diamondstorm: {
 		name: "Diamond Storm",
 		desc: "Has a 50% chance to raise the user's Defense by 2 stages.",
-		shortDesc: "50% chance to raise user's Def by 2 for each hit.",
+		shortDesc: "50% chance to raise user's Defense by 2.",
 		gen6: {
-			desc: "Has a 50% chance to raise the user's Defense by 1 stage.",
+			desc: "Has a 50% chance to raise the user's Defense by 1 stage for each hit.",
 			shortDesc: "50% chance to raise user's Def by 1 for each hit.",
 		},
 	},
@@ -1608,10 +1612,10 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	entrainment: {
 		name: "Entrainment",
-		desc: "Causes the target's Ability to become the same as the user's. Fails if the target's Ability is As One, Battle Bond, Comatose, Disguise, Gulp Missile, Ice Face, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Truant, or Zen Mode, or the same Ability as the user, or if the user's Ability is As One, Battle Bond, Comatose, Disguise, Flower Gift, Forecast, Gulp Missile, Hunger Switch, Ice Face, Illusion, Imposter, Multitype, Neutralizing Gas, Power Construct, Power of Alchemy, Receiver, RKS System, Schooling, Shields Down, Stance Change, Trace, Wonder Guard, or Zen Mode.",
+		desc: "Causes the target's Ability to become the same as the user's. Fails if the target's Ability is As One, Battle Bond, Comatose, Disguise, Gulp Missile, Ice Face, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Truant, or Zen Mode, or the same Ability as the user, or if the user's Ability is As One, Battle Bond, Comatose, Disguise, Flower Gift, Forecast, Gulp Missile, Hunger Switch, Ice Face, Illusion, Imposter, Multitype, Neutralizing Gas, Power Construct, Power of Alchemy, Receiver, RKS System, Schooling, Shields Down, Stance Change, Trace, or Zen Mode.",
 		shortDesc: "The target's Ability changes to match the user's.",
 		gen7: {
-			desc: "Causes the target's Ability to become the same as the user's. Fails if the target's Ability is Battle Bond, Comatose, Disguise, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Truant, or Zen Mode, or the same Ability as the user, or if the user's Ability is Battle Bond, Comatose, Disguise, Flower Gift, Forecast, Illusion, Imposter, Multitype, Power Construct, Power of Alchemy, Receiver, RKS System, Schooling, Shields Down, Stance Change, Trace, Wonder Guard, or Zen Mode.",
+			desc: "Causes the target's Ability to become the same as the user's. Fails if the target's Ability is Battle Bond, Comatose, Disguise, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Truant, or Zen Mode, or the same Ability as the user, or if the user's Ability is Battle Bond, Comatose, Disguise, Flower Gift, Forecast, Illusion, Imposter, Multitype, Power Construct, Power of Alchemy, Receiver, RKS System, Schooling, Shields Down, Stance Change, Trace, or Zen Mode.",
 		},
 		gen6: {
 			desc: "Causes the target's Ability to become the same as the user's. Fails if the target's Ability is Multitype, Stance Change, Truant, or the same Ability as the user, or if the user's Ability is Flower Gift, Forecast, Illusion, Imposter, Multitype, Stance Change, Trace, or Zen Mode.",
@@ -2266,8 +2270,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	gmaxdrumsolo: {
 		name: "G-Max Drum Solo",
-		desc: "This move will always have 160 Base Power, and it ignores the abilities of opposing Pokemon.",
-		shortDesc: "Stronger than other Max Moves. Ignores abilities.",
+		desc: "Power is 160 regardless of the base move's Max Move power. This move and its effects ignore the Abilities of other Pokemon.",
+		shortDesc: "Always 160 power. Ignores Abilities.",
 	},
 	gmaxfinale: {
 		name: "G-Max Finale",
@@ -2276,8 +2280,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	gmaxfireball: {
 		name: "G-Max Fire Ball",
-		desc: "This move will always have 160 Base Power, and it ignores the abilities of opposing Pokemon.",
-		shortDesc: "Stronger than other Max Moves. Ignores abilities.",
+		desc: "Power is 160 regardless of the base move's Max Move power. This move and its effects ignore the Abilities of other Pokemon.",
+		shortDesc: "Always 160 power. Ignores Abilities.",
 	},
 	gmaxfoamburst: {
 		name: "G-Max Foam Burst",
@@ -2296,8 +2300,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	gmaxhydrosnipe: {
 		name: "G-Max Hydrosnipe",
-		desc: "This move will always have 160 Base Power, and it ignores the abilities of opposing Pokemon.",
-		shortDesc: "Stronger than other Max Moves. Ignores abilities.",
+		desc: "Power is 160 regardless of the base move's Max Move power. This move and its effects ignore the Abilities of other Pokemon.",
+		shortDesc: "Always 160 power. Ignores Abilities.",
 	},
 	gmaxmalodor: {
 		name: "G-Max Malodor",
@@ -2311,13 +2315,13 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	gmaxoneblow: {
 		name: "G-Max One Blow",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful and any Pokemon on the opposing side is using Baneful Bunker, Detect, King's Shield, Mat Block, Max Guard, Obstruct, Protect, or Spiky Shield, this move will fully break the protection.",
-		shortDesc: "Base move affects power. Breaks all protection.",
+		desc: "Power is equal to the base move's Max Move power. This move bypasses all protection effects, including Max Guard.",
+		shortDesc: "Base move affects power. Bypasses Max Guard.",
 	},
 	gmaxrapidflow: {
 		name: "G-Max Rapid Flow",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful and any Pokemon on the opposing side is using Baneful Bunker, Detect, King's Shield, Mat Block, Max Guard, Obstruct, Protect, or Spiky Shield, this move will fully break the protection.",
-		shortDesc: "Base move affects power. Breaks all protection.",
+		desc: "Power is equal to the base move's Max Move power. This move bypasses all protection effects, including Max Guard.",
+		shortDesc: "Base move affects power. Bypasses Max Guard.",
 	},
 	gmaxreplenish: {
 		name: "G-Max Replenish",
@@ -4678,8 +4682,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	recycle: {
 		name: "Recycle",
-		desc: "The user regains the item it last used. Fails if the user is holding an item, if the user has not held an item, if the item was a popped Air Balloon, if the item was picked up by a Pokemon with the Pickup Ability, or if the item was lost to Bug Bite, Covet, Incinerate, Knock Off, Pluck, or Thief. Items thrown with Fling can be regained.",
+		desc: "The user regains the item it last used. Fails if the user is holding an item, if the user has not held an item, if the item was a popped Air Balloon, if the item was picked up by a Pokemon with the Pickup Ability, or if the item was lost to Bug Bite, Corrosive Gas, Covet, Incinerate, Knock Off, Pluck, or Thief. Items thrown with Fling can be regained.",
 		shortDesc: "Restores the item the user last used.",
+		gen7: {
+			desc: "The user regains the item it last used. Fails if the user is holding an item, if the user has not held an item, if the item was a popped Air Balloon, if the item was picked up by a Pokemon with the Pickup Ability, or if the item was lost to Bug Bite, Covet, Incinerate, Knock Off, Pluck, or Thief. Items thrown with Fling can be regained.",
+		},
 		gen4: {
 			desc: "The user regains the item last used by a Pokemon in its current position on the field, even if that Pokemon was not the user. Fails if the user is holding an item, if no items have been used at the user's position, or if the item was lost to Covet, Knock Off, or Thief. Items thrown with Fling can be regained.",
 		},

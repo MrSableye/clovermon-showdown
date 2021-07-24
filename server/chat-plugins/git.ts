@@ -19,7 +19,7 @@ const getCommitMetadata = async (format: string): Promise<string | undefined> =>
 	}
 };
 
-export const commands: ChatCommands = {
+export const commands: Chat.ChatCommands = {
 	async commit() {
 		const author = await getCommitMetadata('%aN');
 		const title = await getCommitMetadata('%s');
