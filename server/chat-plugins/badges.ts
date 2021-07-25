@@ -10,7 +10,7 @@ import {Utils} from '../../lib';
 export const Badges = new class {
 	checkCanCreateOrUpdate(context: Chat.CommandContext | Chat.PageContext) {
 		if (!Config.usesqlitebadges) {
-			throw new Chat.ErrorMessage(`The friends list feature is currently disabled.`);
+			throw new Chat.ErrorMessage(`The friends feature is currently disabled.`);
 		}
 
 		context.checkCan('badge');
@@ -24,7 +24,7 @@ export const Badges = new class {
 			throw new Chat.ErrorMessage(context.tr`You must be autoconfirmed to use the badges feature.`);
 		}
 		if (!Config.usesqlitebadges) {
-			throw new Chat.ErrorMessage(`The badges list feature is currently disabled.`);
+			throw new Chat.ErrorMessage(`The badges feature is currently disabled.`);
 		}
 	}
 	getBadges() {
