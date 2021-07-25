@@ -60,7 +60,7 @@ export const Badges = new class {
 };
 
 const createBadgeHtml = (badge: Badge) => (
-	`<img src=${badge.image_path} width=16 height=16 alt="${Utils.escapeHTML(badge.badge_name)}" title="${Utils.escapeHTML(badge.badge_name)}" /> ` +
+	`<img src="${badge.image_path}" width=16 height=16 alt="${Utils.escapeHTML(badge.badge_name)}" title="${Utils.escapeHTML(badge.badge_name)}" /> ` +
 	`(${badge.badge_id})`
 );
 
