@@ -4,6 +4,8 @@
  * Written by Mr. Sableye.
  * @author MrSableye
  */
+import {Badge} from '../badges';
+import {Utils} from '../../lib';
 
 export const Badges = new class {
 	checkCanCreateOrUpdate(context: Chat.CommandContext | Chat.PageContext) {
@@ -34,6 +36,9 @@ export const Badges = new class {
 	getUserBadges(userID: ID) {
 		return Chat.Badges.getUserBadges(userID);
 	}
+	getVisibleUserBadges(userID: ID) {
+		return Chat.Badges.getVisibleUserBadges(userID);
+	}
 	createBadge(badgeID: ID, badgeName: string, ownerID: ID, isExternal: boolean, imagePath: string) {
 		return Chat.Badges.createBadge(badgeID, badgeName, ownerID, isExternal, imagePath);
 	}
@@ -54,29 +59,57 @@ export const Badges = new class {
 	}
 };
 
+const createBadgeHtml = (badge: Badge) => (
+	`<img src=${badge.image_path} width=16 height=16 alt="${Utils.escapeHTML(badge.badge_name)}" title="${Utils.escapeHTML(badge.badge_name)}" /> ` +
+	`(${badge.badge_id})`
+);
+
+const createBadgeList = (title: string, badges: Badge[]) => {
+	let badgeListString = title === '' ? title : `<span style="color:#999999;">${Utils.escapeHTML(title)}:</span><br />`;
+
+	if (badges.length) {
+		const badgeList = badges.map(createBadgeHtml);
+
+		badgeListString += badgeList.join(', ');
+	} else {
+		badgeListString += 'No badges found.';
+	}
+
+	return badgeListString;
+};
+
 export const commands: Chat.ChatCommands = {
 	badge: {
 		show: {
-			async all() {
+			async all(target, room, user, connection, cmd, message) {
 				Badges.checkCanCreateOrUpdate(this);
 
 				const badges = await Badges.getBadges();
 
-				return this.sendReply(JSON.stringify(badges));
+				return this.sendReplyBox(createBadgeList(message, badges));
 			},
-			async owned(target, room, user) {
+			async owned(target, room, user, connection, cmd, message) {
 				Badges.checkCanUse(this);
+				this.checkBroadcast();
 
 				const badges = await Badges.getOwnedBadges(user.id);
 
-				return this.sendReply(JSON.stringify(badges));
+				return this.sendReplyBox(createBadgeList(message, badges));
 			},
-			async self(target, room, user) {
+			async self(target, room, user, connection, cmd, message) {
 				Badges.checkCanUse(this);
+				this.checkBroadcast();
 
-				const badges = await Badges.getUserBadges(user.id);
+				const targetUser = Users.get(toID(target));
+				if (targetUser) {
+					const badges = await Badges.getVisibleUserBadges(user.id);
 
-				return this.sendReply(JSON.stringify(badges));
+					return this.sendReplyBox(createBadgeList(message, badges));
+				} else {
+					const badges = await Badges.getUserBadges(user.id);
+
+					return this.sendReplyBox(createBadgeList(message, badges));
+				}
 			},
 		},
 		async create(target, room, user) {
@@ -94,7 +127,7 @@ export const commands: Chat.ChatCommands = {
 				return this.errorReply(`Specify a badge name.`);
 			}
 
-			const badgeName = badgeNameText.trim();
+			const badgeName = Utils.escapeHTML(badgeNameText.trim());
 
 			if (!ownerIDText) {
 				return this.errorReply(`Specify an owner.`);
@@ -138,7 +171,7 @@ export const commands: Chat.ChatCommands = {
 				return this.errorReply(`Specify a badge name.`);
 			}
 
-			const badgeName = badgeNameText.trim();
+			const badgeName = Utils.escapeHTML(badgeNameText.trim());
 
 			if (!ownerIDText) {
 				return this.errorReply(`Specify an owner.`);
