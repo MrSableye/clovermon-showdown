@@ -114,11 +114,12 @@ export const commands: Chat.ChatCommands = {
 
 				return this.sendReplyBox(createBadgeList(message, badges));
 			} else {
-				const badges = await Badges.getUserBadges(user.id);
+				const badges = this.broadcasting ? await Badges.getVisibleUserBadges(user.id) : await Badges.getUserBadges(user.id);
 
 				return this.sendReplyBox(createBadgeList(message, badges));
 			}
 		},
+		new: 'create',
 		async create(target, room, user) {
 			Badges.checkCanCreateOrUpdate(this);
 
@@ -198,6 +199,7 @@ export const commands: Chat.ChatCommands = {
 
 			return this.sendReply(`Updated '${badgeID}'.`);
 		},
+		grant: 'add',
 		async add(target, room, user) {
 			Badges.checkCanUse(this);
 			const [userID, badgeID] = target.split(',').map(toID);
@@ -218,6 +220,7 @@ export const commands: Chat.ChatCommands = {
 
 			return this.sendReply(`Granted '${badgeID}' to '${userID}'.`);
 		},
+		revoke: 'remove',
 		async remove(target, room, user) {
 			Badges.checkCanUse(this);
 			const [userID, badgeID] = target.split(',').map(toID);
@@ -238,6 +241,7 @@ export const commands: Chat.ChatCommands = {
 
 			return this.sendReply(`Removed '${badgeID}' from '${userID}'.`);
 		},
+		enable: 'on',
 		async on(target, room, user) {
 			Badges.checkCanUse(this);
 			const badgeID = toID(target);
@@ -253,6 +257,7 @@ export const commands: Chat.ChatCommands = {
 
 			return this.sendReply(`Showing '${badgeID}'.`);
 		},
+		disable: 'off',
 		async off(target, room, user) {
 			Badges.checkCanUse(this);
 			const badgeID = toID(target);
@@ -268,6 +273,22 @@ export const commands: Chat.ChatCommands = {
 
 			return this.sendReply(`Hiding '${badgeID}'.`);
 		},
+	},
+	badgehelp() {
+		this.sendReplyBox(
+			`<code>/badge showall</code>: shows all badges. Requires: &<br />` +
+			`<code>/badge showowned</code>: shows all badges you own<br />` +
+			`<code>/badge showowned [user]</code>: shows all badges the given user owns. Requires: &<br />` +
+			`<code>/badge show</code>: shows all badges you've been granted<br />` +
+			`<code>/badge show [user]</code>: shows all badges the given user has been granted<br />` +
+			`<code>/badge create [badge id], [badge description], [owner], [external], [image url]</code>: creates a new badge with the given parameters. Requires: &<br />` +
+			`<code>/badge update [badge id], [badge description], [owner], [external], [image url]</code>: updates a badge with the given parameters. Requires: & or ownership<br />` +
+			`<code>/badge delete [badge id]</code>: deletes a badge. Requires: & or ownership<br />` +
+			`<code>/badge add [user], [badge id]</code>: grants a user a badge. Requires: & or ownership<br />` +
+			`<code>/badge remove [user], [badge id]</code>: revokes a badge from a user. Requires: & or ownership<br />` +
+			`<code>/badge on [badge id]</code>: displays a badge you own<br />` +
+			`<code>/badge off [badge id]</code>: hides a badge you own<br />`
+		);
 	},
 };
 
