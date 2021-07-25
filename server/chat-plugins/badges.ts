@@ -118,7 +118,8 @@ export const commands: Chat.ChatCommands = {
 
 			const badgeID = toID(target);
 
-			await Badges.deleteBadge(badgeID, user, this.privatelyCheckCan('badge'));
+			const overridePermissions = Users.Auth.hasPermission(user, 'badge', null);
+			await Badges.deleteBadge(badgeID, user, overridePermissions);
 
 			return this.sendReply(`Deleted '${badgeID}'.`);
 		},
@@ -152,7 +153,8 @@ export const commands: Chat.ChatCommands = {
 
 			const imagePath = imagePathText.trim();
 
-			await Badges.updateBadge(badgeID, badgeName, ownerID, isExternal, imagePath, user, this.privatelyCheckCan('badge'));
+			const overridePermissions = Users.Auth.hasPermission(user, 'badge', null);
+			await Badges.updateBadge(badgeID, badgeName, ownerID, isExternal, imagePath, user, overridePermissions);
 
 			return this.sendReply(`Updated '${badgeID}'.`);
 		},
@@ -168,7 +170,8 @@ export const commands: Chat.ChatCommands = {
 				return this.errorReply(`Specify a badge.`);
 			}
 
-			await Badges.addBadgeToUser(userID, badgeID, user, this.privatelyCheckCan('badge'));
+			const overridePermissions = Users.Auth.hasPermission(user, 'badge', null);
+			await Badges.addBadgeToUser(userID, badgeID, user, overridePermissions);
 
 			const targetUser = Users.get(userID);
 			if (targetUser) await Chat.Badges.updateUserCache(targetUser);
@@ -187,7 +190,8 @@ export const commands: Chat.ChatCommands = {
 				return this.errorReply(`Specify a badge.`);
 			}
 
-			await Badges.removeBadgeFromUser(userID, badgeID, user, this.privatelyCheckCan('badge'));
+			const overridePermissions = Users.Auth.hasPermission(user, 'badge', null);
+			await Badges.removeBadgeFromUser(userID, badgeID, user, overridePermissions);
 
 			const targetUser = Users.get(userID);
 			if (targetUser) await Chat.Badges.updateUserCache(targetUser);
