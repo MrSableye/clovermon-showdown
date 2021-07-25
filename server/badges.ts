@@ -163,7 +163,7 @@ const ACTIONS = {
 	getOwnedBadges: `SELECT * FROM badges WHERE owner_id = ? LIMIT ?`,
 	createBadge: `INSERT INTO badges (badge_id, badge_name, owner_id, is_external, image_path, create_date) VALUES (?, ?, ?, ?, ?, ?)`,
 	deleteBadge: `DELETE FROM badges WHERE badge_id = ?`,
-	updateBadge: `INSERT INTO badges (badge_id, badge_name, owner_id, is_external, image_path) VALUES (?, ?, ?, ?, ?)`,
+	updateBadge: `UPDATE badges SET badge_name = ?, owner_id = ?, is_external = ?, image_path = ? WHERE badge_id = ?`,
 	findBadge: `SELECT * FROM badges WHERE badge_id = ?`,
 	countOwnedBadges: `SELECT count(*) as num FROM badges WHERE owner_id = ?`,
 	getUserBadges: (
@@ -234,7 +234,7 @@ const TRANSACTIONS: {[k: string]: (input: any[]) => DatabaseResult} = {
 				throw new FailureMessage(`You do not own '${badgeID}'.`);
 			}
 
-			statements.updateBadge.run(badgeID, badgeName, ownerID, isExternal, imagePath);
+			statements.updateBadge.run(badgeName, ownerID, isExternal ? 1 : 0, imagePath, badgeID);
 		}
 		return {result: []};
 	},
