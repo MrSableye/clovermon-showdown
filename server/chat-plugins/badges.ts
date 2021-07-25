@@ -92,10 +92,10 @@ export const commands: Chat.ChatCommands = {
 			Badges.checkCanUse(this);
 			this.runBroadcast();
 
-			const targetUser = Users.get(toID(target));
-			if (targetUser) {
+			const targetUserID = toID(target);
+			if (targetUserID) {
 				Badges.checkCanCreateOrUpdate(this);
-				const badges = await Badges.getOwnedBadges(targetUser.id);
+				const badges = await Badges.getOwnedBadges(targetUserID);
 
 				return this.sendReplyBox(createBadgeList(message, badges));
 			} else {
