@@ -90,7 +90,7 @@ export const commands: Chat.ChatCommands = {
 			},
 			async owned(target, room, user, connection, cmd, message) {
 				Badges.checkCanUse(this);
-				this.checkBroadcast();
+				this.runBroadcast();
 
 				const badges = await Badges.getOwnedBadges(user.id);
 
@@ -98,7 +98,7 @@ export const commands: Chat.ChatCommands = {
 			},
 			async self(target, room, user, connection, cmd, message) {
 				Badges.checkCanUse(this);
-				this.checkBroadcast();
+				this.runBroadcast();
 
 				const targetUser = Users.get(toID(target));
 				if (targetUser) {
