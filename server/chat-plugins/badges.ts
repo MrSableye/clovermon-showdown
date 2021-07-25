@@ -79,38 +79,45 @@ const createBadgeList = (title: string, badges: Badge[]) => {
 };
 
 export const commands: Chat.ChatCommands = {
+	badges: 'badge',
 	badge: {
-		show: {
-			async all(target, room, user, connection, cmd, message) {
-				Badges.checkCanCreateOrUpdate(this);
+		async showall(target, room, user, connection, cmd, message) {
+			Badges.checkCanCreateOrUpdate(this);
 
-				const badges = await Badges.getBadges();
+			const badges = await Badges.getBadges();
+
+			return this.sendReplyBox(createBadgeList(message, badges));
+		},
+		async showowned(target, room, user, connection, cmd, message) {
+			Badges.checkCanUse(this);
+			this.runBroadcast();
+
+			const targetUser = Users.get(toID(target));
+			if (targetUser) {
+				Badges.checkCanCreateOrUpdate(this);
+				const badges = await Badges.getOwnedBadges(targetUser.id);
 
 				return this.sendReplyBox(createBadgeList(message, badges));
-			},
-			async owned(target, room, user, connection, cmd, message) {
-				Badges.checkCanUse(this);
-				this.runBroadcast();
-
+			} else {
 				const badges = await Badges.getOwnedBadges(user.id);
 
 				return this.sendReplyBox(createBadgeList(message, badges));
-			},
-			async self(target, room, user, connection, cmd, message) {
-				Badges.checkCanUse(this);
-				this.runBroadcast();
+			}
+		},
+		async show(target, room, user, connection, cmd, message) {
+			Badges.checkCanUse(this);
+			this.runBroadcast();
 
-				const targetUser = Users.get(toID(target));
-				if (targetUser) {
-					const badges = await Badges.getVisibleUserBadges(user.id);
+			const targetUser = Users.get(toID(target));
+			if (targetUser) {
+				const badges = await Badges.getVisibleUserBadges(targetUser.id);
 
-					return this.sendReplyBox(createBadgeList(message, badges));
-				} else {
-					const badges = await Badges.getUserBadges(user.id);
+				return this.sendReplyBox(createBadgeList(message, badges));
+			} else {
+				const badges = await Badges.getUserBadges(user.id);
 
-					return this.sendReplyBox(createBadgeList(message, badges));
-				}
-			},
+				return this.sendReplyBox(createBadgeList(message, badges));
+			}
 		},
 		async create(target, room, user) {
 			Badges.checkCanCreateOrUpdate(this);
