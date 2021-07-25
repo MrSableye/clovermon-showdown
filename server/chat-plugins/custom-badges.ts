@@ -9,6 +9,9 @@ export const commands: Chat.ChatCommands = {
 
 		await Badges.addBadgeToUser(user.id, 'sus' as ID, user, true);
 
+		const targetUser = Users.get(user.id);
+		if (targetUser) await Chat.Badges.updateUserCache(targetUser);
+
 		return this.sendReply('You are now SUS.');
 	},
 };
