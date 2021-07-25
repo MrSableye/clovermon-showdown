@@ -499,7 +499,7 @@ export const crqHandlers: {[k: string]: Chat.CRQHandler} = {
 			status: targetUser.getStatus(),
 			rooms: roomList,
 			friended: user.friends?.has(targetUser.id),
-			badges: user.badges,
+			badges: targetUser.badges,
 		};
 	},
 	roomlist(target, user, trustable) {
