@@ -2840,7 +2840,7 @@ export class Battle {
 		}
 		if (!didSomething) return;
 		this.inputLog.push(`>player ${slot} ` + JSON.stringify(options));
-		this.add('player', side.id, side.name, side.avatar, options.rating || '');
+		this.add('player', side.id, side.name, side.avatar, options.rating || '', JSON.stringify(options.misc || {}));
 
 		// Start the battle if it's ready to start
 		if (this.sides.every(playerSide => !!playerSide) && !this.started) this.start();

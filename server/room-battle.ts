@@ -1005,7 +1005,7 @@ export class RoomBattle extends RoomGames.RoomGame {
 		if (player && !player.active) {
 			player.active = true;
 			this.timer.checkActivity();
-			this.room.add(`|player|${player.slot}|${user.name}|${user.avatar}`);
+			this.room.add(`|player|${player.slot}|${user.name}|${user.avatar}||${JSON.stringify({badges: user.badges})}`);
 		}
 	}
 	onLeave(user: User, oldUserid?: ID) {
@@ -1073,6 +1073,7 @@ export class RoomBattle extends RoomGames.RoomGame {
 				avatar: user ? '' + user.avatar : '',
 				team: playerOpts.team || undefined,
 				rating: Math.round(playerOpts.rating || 0),
+				misc: {badges: user?.badges},
 			};
 			void this.stream.write(`>player ${slot} ${JSON.stringify(options)}`);
 			player.hasTeam = true;
@@ -1161,11 +1162,11 @@ export class RoomBattle extends RoomGames.RoomGame {
 				name: player.name,
 				avatar: user.avatar,
 				team: playerOpts?.team,
+				misc: {badges: user.badges},
 			};
 			void this.stream.write(`>player ${slot} ` + JSON.stringify(options));
 			if (playerOpts) player.hasTeam = true;
-
-			this.room.add(`|player|${slot}|${player.name}|${user.avatar}`);
+			this.room.add(`|player|${slot}|${player.name}|${user.avatar}||${JSON.stringify(options.misc)}`);
 		} else {
 			const options = {
 				name: '',

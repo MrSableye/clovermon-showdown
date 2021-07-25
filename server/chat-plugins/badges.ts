@@ -22,7 +22,7 @@ export const Badges = new class {
 			throw new Chat.ErrorMessage(context.tr`You must be autoconfirmed to use the badges feature.`);
 		}
 		if (!Config.usesqlitebadges) {
-			throw new Chat.ErrorMessage(`The friends list feature is currently disabled.`);
+			throw new Chat.ErrorMessage(`The badges list feature is currently disabled.`);
 		}
 	}
 	getBadges() {

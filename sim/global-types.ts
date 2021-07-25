@@ -393,6 +393,7 @@ interface PlayerOptions {
 	rating?: number;
 	team?: PokemonSet[] | string | null;
 	seed?: PRNGSeed;
+	misc?: AnyObject;
 }
 
 interface TextObject {
