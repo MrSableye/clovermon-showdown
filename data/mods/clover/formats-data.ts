@@ -13026,7 +13026,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP LC",
 	},
-	purfurr: {
+	korokami: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",

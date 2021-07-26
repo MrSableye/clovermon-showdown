@@ -30554,9 +30554,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	/* Clover CAP */
-	/* Clover CAP */
 	bearedaze: {
-		num: 42055,
+		num: 42054,
 		name: "Bearedaze",
 		types: ["Normal"],
 		genderRatio: {M: 0.75, F: 0.25},
@@ -30570,7 +30569,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	kumataro: {
-		num: 42056,
+		num: 42055,
 		name: "Kumataro",
 		types: ["Normal", "Fighting"],
 		genderRatio: {M: 0.75, F: 0.25},
@@ -30602,7 +30601,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	sabsute: {
-		num: 42051,
+		num: 42050,
 		name: "Sabsute",
 		types: ["Normal"],
 		genderRatio: {M: 0.50, F: 0.50},
@@ -30656,7 +30655,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	turturret: {
-		num: 42044,
+		num: 42043,
 		name: "Turturret",
 		types: ["Ground", "Electric"],
 		genderRatio: {M: 0.50, F: 0.50},
@@ -30831,7 +30830,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	simionach: {
-		num: 42048,
+		num: 42047,
 		name: "Simionach",
 		types: ["Fighting"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -30956,7 +30955,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	cubtex: {
-		num: 42049,
+		num: 42048,
 		name: "Cubtex",
 		types: ["Dark", "Normal"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -30970,7 +30969,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	korokami: {
-		num: 42050,
+		num: 42049,
 		name: "Korokami",
 		types: ["Dark", "Normal"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -30985,7 +30984,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	dinomight: {
-		num: 42100,
+		num: 42101,
 		name: "Dinomight",
 		types: ["Rock", "Dragon"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -30999,7 +30998,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	cocken: {
-		num: 42101,
+		num: 42102,
 		name: "Cocken",
 		types: ["???"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -31016,7 +31015,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		formeOrder: ["Cocken", "Cocken-Mega"],
 	},
 	cockenmega: {
-		num: 42101,
+		num: 42102,
 		name: "Cocken-Mega",
 		baseSpecies: "Cocken",
 		forme: "Mega",
@@ -31045,7 +31044,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	spycrab: {
-		num: 42045,
+		num: 42044,
 		name: "Spycrab",
 		types: ["Water", "Dark"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -31175,7 +31174,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	moyalith: {
-		num: 42099,
+		num: 42100,
 		name: "Moyalith",
 		types: ["Rock"],
 		gender: "N",
@@ -31227,7 +31226,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	bungaloon: {
-		num: 42110,
+		num: 42087,
 		name: "Bungaloon",
 		types: ["Fairy", "Poison"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -31271,7 +31270,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	dollghost: {
-		num: 42052,
+		num: 42051,
 		name: "Dollghost",
 		types: ["Normal", "Ghost"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -31284,7 +31283,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	pegui: {
-		num: 42029,
+		num: 42074,
 		name: "Pegui",
 		types: ["Ice"],
 		genderRatio: {M: 0.25, F: 0.75},
@@ -31298,7 +31297,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	pechit: {
-		num: 42030,
+		num: 42075,
 		name: "Pechit",
 		types: ["Ice", "Dark"],
 		genderRatio: {M: 0.25, F: 0.75},
@@ -31314,7 +31313,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	copolar: {
-		num: 42031,
+		num: 42076,
 		name: "Copolar",
 		types: ["Ice", "Fighting"],
 		genderRatio: {M: 0.25, F: 0.75},
@@ -31420,7 +31419,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	mafiadon: {
-		num: 42094,
+		num: 42095,
 		name: "Mafiadon",
 		types: ["Dark", "Dragon"],
 		gender: "M",
@@ -31488,7 +31487,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	pedestone: {
-		num: 42038,
+		num: 42037,
 		name: "Pedestone",
 		types: ["Rock"],
 		gender: "N",
@@ -31518,7 +31517,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	pillaia: {
-		num: 42040,
+		num: 42038,
 		name: "Pillaia",
 		types: ["Rock", "Grass"],
 		gender: "N",
@@ -31534,7 +31533,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	canamaple: {
-		num: 42041,
+		num: 42040,
 		name: "Canamaple",
 		types: ["Grass"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -31548,7 +31547,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	frozweed: {
-		num: 42042,
+		num: 42041,
 		name: "Frozweed",
 		types: ["Grass", "Ice"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -31590,7 +31589,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	disbeary: {
-		num: 42033,
+		num: 42032,
 		name: "Disbeary",
 		types: ["Fairy", "Dark"],
 		genderRatio: {M: 0.125, F: 0.875},
@@ -31605,7 +31604,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	disbearyebil: {
-		num: 42033,
+		num: 42032,
 		name: "Disbeary-Ebil",
 		baseSpecies: "Disbeary",
 		types: ["Dark", "Fairy"],
@@ -31621,7 +31620,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	eccosmic: {
-		num: 42054,
+		num: 42053,
 		name: "Eccosmic",
 		types: ["Water", "Psychic"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -31634,7 +31633,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	weatherbane: {
-		num: 42046,
+		num: 42045,
 		name: "Weatherbane",
 		types: ["Steel", "Flying"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -31647,7 +31646,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	cyclonian: {
-		num: 42047,
+		num: 42046,
 		name: "Cyclonian",
 		types: ["Flying", "Steel"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -31705,7 +31704,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	voliath: {
-		num: 42093,
+		num: 42094,
 		name: "Voliath",
 		types: ["Dragon", "Electric"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -31718,7 +31717,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	wycern: {
-		num: 42095,
+		num: 42096,
 		name: "Wycern",
 		types: ["Dragon", "Ice"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -31732,7 +31731,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	bitteragon: {
-		num: 42096,
+		num: 42097,
 		name: "Bitteragon",
 		types: ["Dragon", "Ice"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -31760,7 +31759,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	cristanium: {
-		num: 42071,
+		num: 42070,
 		name: "Cristanium",
 		types: ["Steel", "Grass"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -31831,7 +31830,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	celestare: {
-		num: 42063,
+		num: 42062,
 		name: "Celestare",
 		types: ["Fairy", "Psychic"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -31844,7 +31843,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	haregee: {
-		num: 42064,
+		num: 42063,
 		name: "Haregee",
 		types: ["Fairy", "Psychic"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -31857,7 +31856,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	lunabbit: {
-		num: 42065,
+		num: 42064,
 		name: "Lunabbit",
 		types: ["Fairy", "Psychic"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -31870,7 +31869,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	toxipole: {
-		num: 42061,
+		num: 42059,
 		name: "Toxipole",
 		types: ["Poison"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -31883,7 +31882,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	venoad: {
-		num: 42062,
+		num: 42060,
 		name: "Venoad",
 		types: ["Poison", "Dragon"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -31896,7 +31895,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	berfgoyle: {
-		num: 42063,
+		num: 42061,
 		name: "Berfgoyle",
 		types: ["Poison", "Dragon"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -31909,7 +31908,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	camorogue: {
-		num: 42066,
+		num: 42065,
 		name: "Camorogue",
 		types: ["Ground"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -31922,7 +31921,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	puncheleon: {
-		num: 42067,
+		num: 42066,
 		name: "Puncheleon",
 		types: ["Ground", "Fighting"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -31935,7 +31934,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	chamelee: {
-		num: 42068,
+		num: 42067,
 		name: "Chamelee",
 		types: ["Ground", "Fighting"],
 		genderRatio: {M: 0.875, F: 0.125},
@@ -32007,7 +32006,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	toastort: {
-		num: 42069,
+		num: 42068,
 		name: "Toastort",
 		types: ["Steel", "Ghost"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32020,7 +32019,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	horntuba: {
-		num: 42070,
+		num: 42069,
 		name: "Horntuba",
 		types: ["Steel"],
 		gender: "M",
@@ -32046,7 +32045,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	tarquail: {
-		num: 42053,
+		num: 42052,
 		name: "Tarquail",
 		types: ["Poison", "Ground"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32194,7 +32193,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	venireal: {
-		num: 42091,
+		num: 42092,
 		name: "Venireal",
 		types: ["Psychic", "Dark"],
 		gender: "N",
@@ -32208,7 +32207,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	apocamise: {
-		num: 42092,
+		num: 42093,
 		name: "Apocamise",
 		types: ["Psychic", "Dark"],
 		gender: "N",
@@ -32237,7 +32236,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	sokumite: {
-		num: 42057,
+		num: 42056,
 		name: "Sokumite",
 		types: ["Water", "Dragon"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32251,7 +32250,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	serpervent: {
-		num: 42058,
+		num: 42057,
 		name: "Serpervent",
 		types: ["Water", "Dragon"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32267,7 +32266,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	tsemani: {
-		num: 42059,
+		num: 42058,
 		name: "Tsemani",
 		types: ["Water", "Dragon"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32312,7 +32311,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	ampstar: {
-		num: 42024,
+		num: 42030,
 		name: "Ampstar",
 		types: ["Normal", "Electric"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32326,7 +32325,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	hamstatic: {
-		num: 42025,
+		num: 42031,
 		name: "Hamstatic",
 		types: ["Normal", "Electric"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32341,7 +32340,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	hyduck: {
-		num: 42026,
+		num: 42027,
 		name: "Hyduck",
 		types: ["Psychic"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32355,7 +32354,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	bluduck: {
-		num: 42027,
+		num: 42028,
 		name: "Bluduck",
 		types: ["Psychic"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32370,7 +32369,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	platylics: {
-		num: 42028,
+		num: 42029,
 		name: "Platylics",
 		types: ["Psychic", "Normal"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32386,7 +32385,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	impfection: {
-		num: 42037,
+		num: 42110,
 		name: "Impfection",
 		types: ["Poison"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32399,7 +32398,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	whipsicuffs: {
-		num: 42073,
+		num: 42072,
 		name: "Whipsicuffs",
 		types: ["Bug", "Fighting"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32438,7 +32437,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	tokoyaki: {
-		num: 42133,
+		num: 42104,
 		name: "Tokoyaki",
 		types: ["Water"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32451,7 +32450,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	onsenpura: {
-		num: 42133,
+		num: 42105,
 		name: "Onsenpura",
 		types: ["Rock", "Water"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32464,7 +32463,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	trickling: {
-		num: 42097,
+		num: 42098,
 		name: "Trickling",
 		types: ["Dark", "Fairy"],
 		gender: "M",
@@ -32478,7 +32477,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	draklown: {
-		num: 42098,
+		num: 42099,
 		name: "Draklown",
 		types: ["Dark", "Dragon"],
 		gender: "M",
@@ -32493,7 +32492,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	arachnote: {
-		num: 42043,
+		num: 42042,
 		name: "Arachnote",
 		types: ["Bug", "Normal"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32506,7 +32505,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	flarhea: {
-		num: 42089,
+		num: 42036,
 		name: "Flarhea",
 		types: ["Fire"],
 		genderRatio: {M: 0.5, F: 0.5},
