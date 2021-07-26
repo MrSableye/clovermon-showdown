@@ -32424,7 +32424,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	primateve: {
-		num: 42102,
+		num: 42103,
 		name: "Primateve",
 		types: ["Rock", "Steel"],
 		genderRatio: {M: 0.875, F: 0.125},
