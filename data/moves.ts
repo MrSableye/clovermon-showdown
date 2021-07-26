@@ -20522,7 +20522,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 				if (move && !this.dex.getImmunity(move, type)) return 1;
 				return -typeMod;
 			},
-			onStart(target, source, effect) {
+			onFieldStart(target, source, effect) {
 				if (effect?.effectType === 'Ability') {
 					this.add('-fieldstart', 'move: Inverse Room', '[from] ability: ' + effect, '[of] ' + source);
 				} else {
@@ -20530,11 +20530,11 @@ export const Moves: { [moveid: string]: MoveData } = {
 				}
 				this.add('-message', 'The battlefield became upside down!');
 			},
-			onRestart(target, source) {
+			onFieldRestart(target, source) {
 				this.field.removePseudoWeather('inverseroom');
 			},
-			onResidualOrder: 23,
-			onEnd() {
+			onFieldResidualOrder: 23,
+			onFieldEnd() {
 				this.add('-fieldend', 'move: Inverse Room');
 			},
 		},
