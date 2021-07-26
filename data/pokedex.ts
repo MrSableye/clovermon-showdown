@@ -32519,7 +32519,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	},
 	/* :^) */
 	autumn: {
-		num: -42001,
+		num: -42002,
 		name: "Autumn",
 		types: ["Grass", "Fire"],
 		gender: "F",
@@ -32531,7 +32531,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Human-Like"],
 	},
 	horse: {
-		num: -42002,
+		num: -42004,
 		name: "Horse",
 		types: ["Normal", "Ground"],
 		gender: "N",
@@ -32555,7 +32555,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Monster", "Fairy"],
 	},
 	spweedle: {
-		num: -42004,
+		num: -42005,
 		name: "Spweedle",
 		types: ["Bug", "Poison"],
 		baseStats: {hp: 40, atk: 35, def: 30, spa: 255, spd: 20, spe: 50},
@@ -32566,7 +32566,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Bug"],
 	},
 	francine: {
-		num: -42069,
+		num: -42006,
 		name: "Francine",
 		types: ["Normal", "Fairy"],
 		gender: "F",
