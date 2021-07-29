@@ -20446,7 +20446,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: {reflectable: 1, powder: 1},
 		sideCondition: 'sleazyspores',
 		condition: {
-			onStart(side) {
+			onSideStart(side) {
 				this.add('-sidestart', side, 'move: Sleazy Spores');
 			},
 			onSwitchIn(pokemon) {
@@ -23382,7 +23382,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		sideCondition: 'shattershard',
 		condition: {
 			// this is a side condition
-			onStart(side) {
+			onSideStart(side) {
 				this.add('-sidestart', side, 'move: Shatter Shard');
 			},
 			onSwitchIn(pokemon) {
@@ -23725,7 +23725,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		sideCondition: 'fragments',
 		condition: {
 			// this is a side condition
-			onStart(side) {
+			onSideStart(side) {
 				this.add('-sidestart', side, 'move: Fragments');
 			},
 			onSwitchIn(pokemon) {
