@@ -4966,9 +4966,9 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	degradation: {
 		availability: {clover: 1},
 		name: "Degradation",
-		onEffectiveness(typeMod, target, type, move) {
-			if (move && type === 'Normal' && move.type === 'Dark') return 1;
-			return typeMod;
+		onSourceEffectiveness(typeMod, target, type, move) {
+			if (move && target?.types.includes('Normal') && move.type === 'Dark') return 1;
+			return;
 		},
 		rating: 3,
 	},
@@ -5083,9 +5083,9 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	pollution: {
 		availability: {clover: 1},
 		name: "Pollution",
-		onEffectiveness(typeMod, target, type, move) {
-			if (move && type === 'Water' && move.type === 'Poison') return 1;
-			return typeMod;
+		onSourceEffectiveness(typeMod, target, type, move) {
+			if (move && target?.types.includes('Water') && move.type === 'Poison') return 1;
+			return;
 		},
 		rating: 3,
 	},
