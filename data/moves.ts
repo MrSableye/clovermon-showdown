@@ -423,7 +423,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	appleacid: {
-		availability: {clover: 1, atlas: 1},
+		availability: {atlas: 1},
 		num: 787,
 		accuracy: 100,
 		basePower: 80,
