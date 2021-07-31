@@ -255,11 +255,12 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] STABmons",
 		desc: `Pok&eacute;mon can use any move of their typing, in addition to the moves they can normally learn.`,
 		mod: 'clover',
-		ruleset: ['Standard NatDex', 'STABmons Move Legality', 'Dynamax Clause'],
+		ruleset: ['Clover Only', 'Standard NatDex', 'STABmons Move Legality', 'Dynamax Clause'],
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Baton Pass', 'Wonder Guard'],
 		restricted: [
 			'Acupressure', 'Astral Barrage', 'Belly Drum', 'Bolt Beak', 'Clangorous Soul', 'Double Iron Bash', 'Electrify', 'Extreme Speed', 'Fishious Rend',
 			'Geomancy', 'Glacial Lance', 'Lovely Kiss', 'Precipice Blades', 'Shell Smash', 'Shift Gear', 'Spore', 'Thousand Arrows', 'V-create', 'Wicked Blow',
+			'Toke', 'Dark Void',
 		],
 	},
 	{
