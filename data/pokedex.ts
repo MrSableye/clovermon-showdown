@@ -31178,7 +31178,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Moyalith",
 		types: ["Rock"],
 		gender: "N",
-		baseStats: {hp: 150, atk: 45, def: 180, spa: 30, spd: 90, spe: 5},
+		baseStats: {hp: 160, atk: 65, def: 130, spa: 65, spd: 80, spe: 0},
 		abilities: {0: "Stall", H: "Pressure", S: "Big Guy"},
 		heightm: 30.48,
 		weightkg: 1157321617.52,
