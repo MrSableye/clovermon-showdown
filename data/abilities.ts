@@ -5186,7 +5186,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
 		onResidual(pokemon) {
-			this.heal(pokemon.baseMaxhp / 10);
+			this.heal(pokemon.baseMaxhp / 8);
 		},
 		name: "Cake Veil",
 		rating: 4,
@@ -5622,11 +5622,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
 		onResidual(pokemon) {
-			for (const ally of pokemon.alliesAndSelf()) {
-				this.add('-activate', pokemon, 'ability: Dispenser');
-				ally.cureStatus();
-				this.heal(ally.baseMaxhp / 10);
-			}
+			this.heal(pokemon.baseMaxhp / 10);
 		},
 		name: "Dispenser",
 		rating: 4,
