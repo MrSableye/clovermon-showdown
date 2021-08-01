@@ -22395,7 +22395,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	shinestrike: {
 		availability: {clover: 1},
 		accuracy: 100,
-		basePower: 31,
+		basePower: 30,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Shine Strike",
