@@ -5625,7 +5625,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			for (const ally of pokemon.alliesAndSelf()) {
 				this.add('-activate', pokemon, 'ability: Dispenser');
 				ally.cureStatus();
-				this.heal(ally.baseMaxhp / 10);
+				ally.heal(ally.baseMaxhp / 10);
 			}
 		},
 		name: "Dispenser",
