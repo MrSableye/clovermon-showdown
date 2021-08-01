@@ -423,7 +423,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	appleacid: {
-		availability: {clover: 1, atlas: 1},
+		availability: {atlas: 1},
 		num: 787,
 		accuracy: 100,
 		basePower: 80,
@@ -22237,11 +22237,11 @@ export const Moves: { [moveid: string]: MoveData } = {
 	wingsofcorrection: {
 		availability: {clover: 1},
 		accuracy: true,
-		basePower: 121.69,
+		basePower: 140,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Wings Of Correction",
-		pp: 30,
+		pp: 5,
 		priority: -6,
 		flags: {protect: 1, mirror: 1, authentic: 1},
 		forceSwitch: true,
@@ -22351,7 +22351,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 612,
 		accuracy: 100,
-		basePower: 75,
+		basePower: 80,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Meme Jr.",
@@ -22359,7 +22359,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
-			chance: 100,
+			chance: 50,
 			onHit(target, source) {
 				const boosts: StatsExceptHPTable = {
 					atk: source.boosts.atk,
@@ -22395,7 +22395,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	shinestrike: {
 		availability: {clover: 1},
 		accuracy: 100,
-		basePower: 30,
+		basePower: 35,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Shine Strike",
@@ -22403,7 +22403,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
-			if (type === 'Steel') return 1;
+			if (type === 'Steel') return 0;
 		},
 		multihit: [2, 5],
 		secondary: null,
@@ -22417,7 +22417,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		basePower: 0,
 		category: "Status",
 		name: "Petrify",
-		pp: 5,
+		pp: 10,
 		priority: 4,
 		flags: {},
 		stallingMove: true,

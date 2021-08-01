@@ -5617,6 +5617,21 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3,
 		isNonstandard: "Future",
 	},
+	dispenser: {
+		availability: {clover: 1},
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onResidual(pokemon) {
+			for (const ally of pokemon.alliesAndSelf()) {
+				this.add('-activate', pokemon, 'ability: Dispenser');
+				ally.cureStatus();
+				this.heal(ally.baseMaxhp / 10);
+			}
+		},
+		name: "Dispenser",
+		rating: 4,
+		isNonstandard: "Future",
+	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {
 		availability: {atlas: 1},
