@@ -114,4 +114,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	dispenser: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
