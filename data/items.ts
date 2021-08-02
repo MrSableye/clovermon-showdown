@@ -7497,6 +7497,7 @@ export const Items: { [itemid: string]: ItemData } = {
 		onAfterSetStatusPriority: -1,
 		onAfterSetStatus(status, pokemon) {
 			if (pokemon.baseSpecies.baseSpecies === 'Noxilium') {
+				this.add('-message', 'The power from the Moluganion cured the status!');
 				pokemon.cureStatus();
 				pokemon.removeVolatile('confusion');
 			}
@@ -7504,9 +7505,11 @@ export const Items: { [itemid: string]: ItemData } = {
 		onUpdate(pokemon) {
 			if (pokemon.status || pokemon.volatiles['confusion']) {
 				if (pokemon.baseSpecies.baseSpecies === 'Noxilium') {
+					this.add('-message', 'The power from the Moluganion cured the status!');
 					pokemon.cureStatus();
 					pokemon.removeVolatile('confusion');
 				} else {
+					this.add('-message', 'The holder is unable to comprehend the Moluganion!');
 					pokemon.addVolatile('confusion');
 				}
 			}

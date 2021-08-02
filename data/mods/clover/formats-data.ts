@@ -13516,15 +13516,20 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
-	larvitty: {
+	flarhea: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	larvitty: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
 	grumpoon: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP NFE",
 	},
 	konekoth: {
 		inherit: true,
@@ -13534,7 +13539,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	drattel: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP LC",
 	},
 	zillichina: {
 		inherit: true,

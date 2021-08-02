@@ -30973,7 +30973,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Korokami",
 		types: ["Dark", "Normal"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 105, atk: 95, def: 70, spa: 65, spd: 110, spe: 90},
+		baseStats: {hp: 85, atk: 125, def: 60, spa: 85, spd: 75, spe: 105},
 		abilities: {0: "Fur Coat", 1: "Intimidate", H: "Strong Jaw", S: "Unnerve"},
 		heightm: 1.6,
 		weightkg: 52,
