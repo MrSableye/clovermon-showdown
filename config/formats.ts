@@ -80,6 +80,12 @@ export const Formats: FormatList = [
 		banlist: ['UU', 'RUBL'],
 	},
 	{
+		name: "[Gen 8 Clover Only] NU",
+		mod: 'clover',
+		ruleset: ['[Gen 8 Clover Only] RU'],
+		banlist: ['RU', 'NUBL'],
+	},
+	{
 		name: "[Gen 8 Clover Only] LC",
 		mod: 'clover',
 		ruleset: [
