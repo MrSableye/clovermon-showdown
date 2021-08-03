@@ -11,7 +11,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	rectreem: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -88,7 +88,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	lizakbar: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -136,7 +136,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	hosajack: {
 		inherit: true,
-		tier: "NFE",
+		tier: "RU",
 		isNonstandard: null,
 	},
 	condoom: {
@@ -194,7 +194,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	gampster: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -435,7 +435,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	hazmate: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -482,7 +482,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	ebolable: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -529,7 +529,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	pikotton: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -577,7 +577,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	birdhouse: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -701,7 +701,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	memenace: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -748,7 +748,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	piguson: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -789,7 +789,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	tripecs: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -1028,7 +1028,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	knokedge: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -1122,7 +1122,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	elephas: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -1169,7 +1169,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	seamapan: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -1379,7 +1379,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	sjwhale: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -1425,7 +1425,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	chezetta: {
 		inherit: true,
-		tier: "LC",
+		tier: "RU",
 		isNonstandard: null,
 	},
 	mozzamazel: {
@@ -1482,7 +1482,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	krokizon: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -1604,7 +1604,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	tankube: {
 		inherit: true,
-		tier: "NFE",
+		tier: "RU",
 		isNonstandard: null,
 	},
 	fabkube: {
@@ -1750,7 +1750,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	urswine: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -1801,7 +1801,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	mooshock: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -1887,7 +1887,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	dowster: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -1947,7 +1947,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	mennopaws: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -2149,7 +2149,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	praestish: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -2380,7 +2380,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	octai: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -2587,7 +2587,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	tricillion: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -2641,7 +2641,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	toxiraptor: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -2759,7 +2759,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	pyralink: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -2884,7 +2884,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	miasmortor: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -2962,7 +2962,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	cacademon: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -3017,7 +3017,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	chancer: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -3041,7 +3041,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	unjoy: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -3215,7 +3215,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	ogrelord: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -3573,7 +3573,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	smellox: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -3620,7 +3620,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	chasumo: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -3753,7 +3753,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	upchucken: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -4693,7 +4693,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	mirrostine: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -4744,7 +4744,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	mudslacks: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -4910,7 +4910,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	sprucifix: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -4956,7 +4956,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	hulkan: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -5207,7 +5207,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	flameboyan: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -5254,7 +5254,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	piicee: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -5304,7 +5304,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	sonnanos: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -5367,7 +5367,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	plebbles: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -5425,7 +5425,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	phantash: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -5487,7 +5487,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	polossus: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -5534,7 +5534,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	hitmonana: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -5625,7 +5625,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	rekroach: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -5679,7 +5679,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	ricosuave: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -5729,7 +5729,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	spaghefant: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -5842,7 +5842,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fontaba: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -6068,7 +6068,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	anonymouse: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -6423,7 +6423,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	honrade: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -6476,7 +6476,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	premantom: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -6938,7 +6938,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	dragking: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -7825,7 +7825,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	davyjaws: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -8159,7 +8159,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	upbeddit: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -8433,7 +8433,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	ubruh: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -8506,7 +8506,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	walruskie: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -8615,7 +8615,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	donutsteel: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -8691,7 +8691,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fondupple: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -9053,7 +9053,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	hopault: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -9348,7 +9348,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	reptrill: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -9452,7 +9452,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	jerkle: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -9715,7 +9715,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	spedo: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -9992,7 +9992,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bulbapedo: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -10097,7 +10097,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	cansumor: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -10280,7 +10280,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	shroofle: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -10440,7 +10440,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	illumatrix: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -10491,7 +10491,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	yeerex: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -10809,7 +10809,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	hornititan: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -11107,7 +11107,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	militant: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -11210,7 +11210,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	reagain: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -11410,7 +11410,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	pearchie: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -11493,7 +11493,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	tarditank: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleSets: [
 			{
@@ -12264,7 +12264,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	niterpent: {
 		inherit: true,
-		tier: "UUBL",
+		tier: "OU",
 		doublesTier: "DUber",
 		isNonstandard: null,
 		randomBattleSets: [
