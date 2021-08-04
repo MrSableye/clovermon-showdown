@@ -5621,8 +5621,10 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		availability: {clover: 1},
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
-		onResidual(pokemon) {
-			this.heal(pokemon.baseMaxhp / 10);
+		onResidual(pokemon, source, effect) {
+			for (const ally of pokemon.alliesAndSelf()) {
+				this.heal(ally.baseMaxhp / 10, ally, pokemon, effect);
+			}
 		},
 		name: "Dispenser",
 		rating: 4,
