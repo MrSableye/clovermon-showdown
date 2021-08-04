@@ -5622,15 +5622,15 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
 		onResidual(pokemon, source, effect) {
+			this.add('-ability', pokemon, 'Dispenser');
 			for (const ally of pokemon.alliesAndSelf()) {
-				this.add('-heal', ally, ally.getHealth, '[from] ability: Dispenser', '[of] ' + pokemon);
-				ally.heal(ally.baseMaxhp / 10, pokemon, effect);
+				this.heal(ally.baseMaxhp / 10, ally, pokemon, effect);
 				const moveSlots = ally.moveSlots.filter(move => move.pp < move.maxpp);
 				if (moveSlots.length) {
 					const moveSlot = this.sample(moveSlots);
 					moveSlot.pp += 1;
 					if (moveSlot.pp > moveSlot.maxpp) moveSlot.pp = moveSlot.maxpp;
-					this.add('-activate', ally, 'ability: Dispenser', moveSlot.move, '[of] ' + pokemon);
+					this.add('-activate', ally, 'ability: Dispenser', moveSlot.move);
 				}
 			}
 		},
