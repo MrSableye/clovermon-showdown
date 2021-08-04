@@ -5624,11 +5624,12 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onResidual(pokemon, source, effect) {
 			for (const ally of pokemon.alliesAndSelf()) {
 				this.heal(ally.baseMaxhp / 10, ally, source, effect);
-				const moveSlot = this.sample(pokemon.moveSlots.filter(move => move.pp < move.maxpp));
-				if (moveSlot) {
+				const moveSlots = ally.moveSlots.filter(move => move.pp < move.maxpp);
+				if (moveSlots.length) {
+					const moveSlot = this.sample(moveSlots);
 					moveSlot.pp += 1;
 					if (moveSlot.pp > moveSlot.maxpp) moveSlot.pp = moveSlot.maxpp;
-					this.add('-activate', pokemon, 'ability: Dispenser', moveSlot.move, '[consumed]');
+					this.add('-activate', source, 'ability: Dispenser', moveSlot.move);
 				}
 			}
 		},
