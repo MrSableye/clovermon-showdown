@@ -5623,13 +5623,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onResidualSubOrder: 1,
 		onResidual(pokemon, source, effect) {
 			for (const ally of pokemon.alliesAndSelf()) {
-				this.heal(ally.baseMaxhp / 10, ally, source, effect);
+				this.heal(ally.baseMaxhp / 10, ally, pokemon, effect);
 				const moveSlots = ally.moveSlots.filter(move => move.pp < move.maxpp);
 				if (moveSlots.length) {
 					const moveSlot = this.sample(moveSlots);
 					moveSlot.pp += 1;
 					if (moveSlot.pp > moveSlot.maxpp) moveSlot.pp = moveSlot.maxpp;
-					this.add('-activate', source, 'ability: Dispenser', moveSlot.move);
+					this.add('-activate', ally, 'ability: Dispenser', moveSlot.move);
 				}
 			}
 		},
