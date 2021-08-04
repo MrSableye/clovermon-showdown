@@ -1977,6 +1977,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Hydrothermal",
 		shortDesc: "This Pokemon's Water moves have a 30% chance of burning.",
 	},
+	dispenser: {
+		name: "Dispenser",
+		shortDesc: "At the end of every turn, heals user and allies for 1/10 of their max HP and 1 PP to one of their moves.",
+		activate: "  [POKEMON] restored 1 PP to its move [MOVE] using [SOURCE]'s Dispenser!",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",
