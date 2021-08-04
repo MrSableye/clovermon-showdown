@@ -5628,13 +5628,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 					this.add('-ability', pokemon, 'Dispenser');
 					activated = true;
 				}
-				this.heal(ally.baseMaxhp / 10, ally);
+				this.heal(ally.baseMaxhp / 10, ally, pokemon, null);
 				const moveSlots = ally.moveSlots.filter(move => move.pp < move.maxpp);
 				if (moveSlots.length) {
 					const moveSlot = this.sample(moveSlots);
 					moveSlot.pp += 1;
 					if (moveSlot.pp > moveSlot.maxpp) moveSlot.pp = moveSlot.maxpp;
-					this.add('-activate', ally, '', moveSlot.move, '[of] ' + pokemon);
+					this.add('-activate', ally, 'ability: Dispenser', moveSlot.move, '[of] ' + pokemon);
 				}
 			}
 		},
