@@ -30,16 +30,20 @@ export interface Badge {
 	badge_id: string;
 	badge_name: string;
 	owner_id: string;
-	is_external: number;
-	image_path: string;
+	file_name: string;
 	create_date: number;
-	is_hidden?: number;
 }
 
+export type UpdateableBadgeAttribute = Exclude<keyof Badge, 'badge_id' | 'create_date'>;
+
 export interface UserBadge {
-	userid: string;
-	badgeid: string;
+	user_id: string;
+	badge_id: string;
+	badge_name: string;
+	file_name: string;
+	priority: number;
 	is_hidden: number;
+	create_date: number;
 }
 
 /** Like Chat.ErrorMessage, but made for the subprocess so we can throw errors to the user not using errorMessage
@@ -59,7 +63,11 @@ export class BadgesDatabase {
 		this.file = file === ':memory:' ? file : path.resolve(file);
 	}
 	async updateUserCache(user: User) {
-		const badges = (await this.getVisibleUserBadges(user.id)).sort((badgeA, badgeB) => badgeA.create_date - badgeB.create_date);
+		const badges = (await this.getVisibleUserBadges(user.id)).sort((badgeA, badgeB) => {
+			const priorityComparison = badgeA.priority - badgeB.priority;
+			if (priorityComparison !== 0) return priorityComparison;
+			return badgeA.create_date - badgeB.create_date;
+		});
 		user.badges = badges;
 		return user.badges;
 	}
@@ -116,7 +124,7 @@ export class BadgesDatabase {
 	}
 	private async query(input: DatabaseRequest) {
 		const process = PM.acquire();
-		if (!process) throw new Error(`Missing friends process`);
+		if (!process) throw new Error(`Missing badges process`);
 		const result = await process.query(input);
 		if (result.error) {
 			throw new Chat.ErrorMessage(result.error);
@@ -129,20 +137,23 @@ export class BadgesDatabase {
 	getOwnedBadges(ownerID: ID): Promise<Badge[]> {
 		return this.all('getOwnedBadges', [ownerID, MAX_OWNED_BADGES]);
 	}
-	getUserBadges(userID: ID): Promise<Badge[]> {
+	getUserBadges(userID: ID): Promise<UserBadge[]> {
 		return this.all('getUserBadges', [userID, MAX_USER_BADGES]);
 	}
-	getVisibleUserBadges(userID: ID): Promise<Badge[]> {
+	getVisibleUserBadges(userID: ID): Promise<UserBadge[]> {
 		return this.all('getVisibleUserBadges', [userID, MAX_USER_BADGES]);
 	}
-	createBadge(badgeID: ID, badgeName: string, ownerID: ID, isExternal: boolean, imagePath: string) {
-		return this.transaction('createBadge', [badgeID, badgeName, ownerID, isExternal, imagePath]);
+	async getBadgeOwners(badgeID: ID, requesterID: ID, overridePermissions: boolean): Promise<UserBadge[]> {
+		return (await this.transaction('getBadgeOwners', [badgeID, requesterID, overridePermissions])).result;
+	}
+	createBadge(badgeID: ID, badgeName: string, ownerID: ID, filePath: string) {
+		return this.transaction('createBadge', [badgeID, badgeName, ownerID, filePath]);
 	}
 	deleteBadge(badgeID: ID, requesterID: ID, overridePermissions: boolean) {
 		return this.transaction('deleteBadge', [badgeID, requesterID, overridePermissions]);
 	}
-	updateBadge(badgeID: ID, badgeName: string, ownerID: ID, isExternal: boolean, imagePath: string, requesterID: ID, overridePermissions: boolean) {
-		return this.transaction('updateBadge', [badgeID, badgeName, ownerID, isExternal, imagePath, requesterID, overridePermissions]);
+	updateBadgeAttribute(badgeID: ID, attributeName: UpdateableBadgeAttribute, attributeValue: any, requesterID: ID, overridePermissions: boolean) {
+		return this.transaction('updateBadgeAttribute', [badgeID, attributeName, attributeValue, requesterID, overridePermissions]);
 	}
 	addBadgeToUser(userID: ID, badgeID: ID, requesterID: ID, overridePermissions: boolean) {
 		return this.transaction('addBadgeToUser', [userID, badgeID, requesterID, overridePermissions]);
@@ -150,8 +161,14 @@ export class BadgesDatabase {
 	removeBadgeFromUser(userID: ID, badgeID: ID, requesterID: ID, overridePermissions: boolean) {
 		return this.transaction('removeBadgeFromUser', [userID, badgeID, requesterID, overridePermissions]);
 	}
+	deleteUserBadges(badgeID: ID) {
+		return this.run('deleteUserBadges', [badgeID]);
+	}
 	toggleBadgeVisibility(userID: ID, badgeID: ID, isVisible: boolean) {
 		return this.transaction('toggleBadgeVisibility', [userID, badgeID, isVisible]);
+	}
+	updateBadgePriority(userID: ID, badgeID: ID, priority: number) {
+		return this.transaction('updateBadgePriority', [userID, badgeID, priority]);
 	}
 }
 
@@ -161,24 +178,31 @@ const transactions: {[k: string]: Database.Transaction} = {};
 const ACTIONS = {
 	getBadges: `SELECT * FROM badges`,
 	getOwnedBadges: `SELECT * FROM badges WHERE owner_id = ? LIMIT ?`,
-	createBadge: `INSERT INTO badges (badge_id, badge_name, owner_id, is_external, image_path, create_date) VALUES (?, ?, ?, ?, ?, ?)`,
+	createBadge: `INSERT INTO badges (badge_id, badge_name, owner_id, file_name, create_date) VALUES (?, ?, ?, ?, ?)`,
 	deleteBadge: `DELETE FROM badges WHERE badge_id = ?`,
-	updateBadge: `UPDATE badges SET badge_name = ?, owner_id = ?, is_external = ?, image_path = ? WHERE badge_id = ?`,
+	updateBadgeName: `UPDATE badges SET badge_name = ? WHERE badge_id = ?`,
+	updateBadgeOwner: `UPDATE badges SET owner_id = ? WHERE badge_id = ?`,
+	updateBadgeFileName: `UPDATE badges SET file_name = ? WHERE badge_id = ?`,
 	findBadge: `SELECT * FROM badges WHERE badge_id = ?`,
 	countOwnedBadges: `SELECT count(*) as num FROM badges WHERE owner_id = ?`,
 	getUserBadges: (
-		`SELECT badges.badge_id, badges.badge_name, badges.owner_id, badges.is_external, badges.image_path, badges.create_date, user_badges.is_hidden ` +
+		`SELECT user_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, user_badges.priority, user_badges.is_hidden ` +
 		`FROM badges INNER JOIN user_badges ON badges.badge_id = user_badges.badge WHERE user_badges.user = ? LIMIT ?`
 	),
 	getVisibleUserBadges: (
-		`SELECT badges.badge_id, badges.badge_name, badges.owner_id, badges.is_external, badges.image_path, badges.create_date ` +
+		`SELECT user_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, user_badges.priority, user_badges.is_hidden ` +
 		`FROM badges INNER JOIN user_badges ON badges.badge_id = user_badges.badge WHERE (user_badges.user = ? AND user_badges.is_hidden = 0) LIMIT ?`
 	),
+	getBadgeOwners: (
+		`SELECT user_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, user_badges.priority, user_badges.is_hidden ` +
+		`FROM badges INNER JOIN user_badges ON badges.badge_id = user_badges.badge WHERE (user_badges.badge = ?)`
+	),
 	countUserBadges: `SELECT count(*) as num FROM user_badges WHERE user = ?`,
-	addBadgeToUser: `INSERT INTO user_badges(user, badge, is_hidden) VALUES (?, ?, 0)`,
+	addBadgeToUser: `INSERT INTO user_badges(user, badge, priority, is_hidden, create_date) VALUES (?, ?, 0, 0, ?)`,
 	removeBadgeFromUser: `DELETE FROM user_badges WHERE (user = ? AND badge = ?)`,
 	deleteUserBadges: `DELETE FROM user_badges WHERE (badge = ?)`,
 	toggleBadgeVisibility: `UPDATE user_badges SET is_hidden = ? WHERE (user = ? AND badge = ?)`,
+	updateBadgePriority: `UPDATE user_badges SET priority = ? WHERE (user = ? AND badge = ?)`,
 	findUserBadge: `SELECT * FROM user_badges WHERE (user = ? AND badge = ?)`,
 };
 
@@ -187,7 +211,7 @@ const FUNCTIONS: {[k: string]: (...input: any[]) => any} = {};
 const TRANSACTIONS: {[k: string]: (input: any[]) => DatabaseResult} = {
 	createBadge: requests => {
 		for (const request of requests) {
-			const [badgeID, badgeName, ownerID, isExternal, imagePath] = request;
+			const [badgeID, badgeName, ownerID, filePath] = request;
 
 			const existingBadge = statements.findBadge.all(badgeID);
 			if (existingBadge.length) {
@@ -199,7 +223,7 @@ const TRANSACTIONS: {[k: string]: (input: any[]) => DatabaseResult} = {
 				throw new FailureMessage(`You own the maximum number of badges.`);
 			}
 
-			statements.createBadge.run(badgeID, badgeName, ownerID, isExternal ? 1 : 0, imagePath, Date.now());
+			statements.createBadge.run(badgeID, badgeName, ownerID, filePath, Date.now());
 		}
 		return {result: []};
 	},
@@ -217,13 +241,12 @@ const TRANSACTIONS: {[k: string]: (input: any[]) => DatabaseResult} = {
 			}
 
 			statements.deleteBadge.run(badgeID);
-			statements.deleteUserBadges.run(badgeID);
 		}
 		return {result: []};
 	},
-	updateBadge: requests => {
+	updateBadgeAttribute: requests => {
 		for (const request of requests) {
-			const [badgeID, badgeName, ownerID, isExternal, imagePath, requesterID, overridePermissions] = request;
+			const [badgeID, attributeName, attributeValue, requesterID, overridePermissions] = request;
 
 			const existingBadge = statements.findBadge.all(badgeID);
 			if (!existingBadge.length) {
@@ -234,9 +257,34 @@ const TRANSACTIONS: {[k: string]: (input: any[]) => DatabaseResult} = {
 				throw new FailureMessage(`You do not own '${badgeID}'.`);
 			}
 
-			statements.updateBadge.run(badgeName, ownerID, isExternal ? 1 : 0, imagePath, badgeID);
+			if (attributeName === 'badge_name') {
+				statements.updateBadgeName.run(attributeValue, badgeID);
+			} else if (attributeName === 'owner_id') {
+				statements.updateBadgeOwner.run(attributeValue, badgeID);
+			} else if (attributeName === 'file_name') {
+				statements.updateBadgeFileName.run(attributeValue, badgeID);
+			}
 		}
 		return {result: []};
+	},
+	getBadgeOwners: requests => {
+		const result = [];
+		for (const request of requests) {
+			const [badgeID, requesterID, overridePermissions] = request;
+
+			const existingBadge = statements.findBadge.all(badgeID);
+			if (!existingBadge.length) {
+				throw new FailureMessage(`No badge with id '${badgeID}' exists.`);
+			}
+
+			if (!overridePermissions && (existingBadge[0].owner_id !== requesterID)) {
+				throw new FailureMessage(`You do not own '${badgeID}'.`);
+			}
+
+			const badgeOwners = statements.getBadgeOwners.all(badgeID);
+			result.push(...badgeOwners);
+		}
+		return {result};
 	},
 	addBadgeToUser: requests => {
 		for (const request of requests) {
@@ -261,7 +309,7 @@ const TRANSACTIONS: {[k: string]: (input: any[]) => DatabaseResult} = {
 				throw new FailureMessage(`User '${userID}' already has badge '${badgeID}'.`);
 			}
 
-			statements.addBadgeToUser.run(userID, badgeID);
+			statements.addBadgeToUser.run(userID, badgeID, Date.now());
 		}
 		return {result: []};
 	},
@@ -297,6 +345,19 @@ const TRANSACTIONS: {[k: string]: (input: any[]) => DatabaseResult} = {
 			}
 
 			statements.toggleBadgeVisibility.run(isVisible ? 0 : 1, userID, badgeID);
+		}
+		return {result: []};
+	},
+	updateBadgePriority: requests => {
+		for (const request of requests) {
+			const [userID, badgeID, priority] = request;
+
+			const existingOwnedBadge = statements.findUserBadge.all(userID, badgeID);
+			if (!existingOwnedBadge.length) {
+				throw new FailureMessage(`User '${userID}' does not have badge '${badgeID}'.`);
+			}
+
+			statements.updateBadgePriority.run(priority, userID, badgeID);
 		}
 		return {result: []};
 	},

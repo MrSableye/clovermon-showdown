@@ -47,7 +47,7 @@ import {FS, Utils, ProcessManager} from '../lib';
 import {
 	Auth, GlobalAuth, SECTIONLEADER_SYMBOL, PLAYER_SYMBOL, HOST_SYMBOL, RoomPermission, GlobalPermission,
 } from './user-groups';
-import {Badge} from './badges';
+import {UserBadge} from './badges';
 
 const MINUTES = 60 * 1000;
 const IDLE_TIMER = 60 * MINUTES;
@@ -364,7 +364,7 @@ export class User extends Chat.MessageContext {
 	lastConnected: number;
 	foodfight?: {generatedTeam: string[], dish: string, ingredients: string[], timestamp: number};
 	friends?: Set<string>;
-	badges?: Badge[];
+	badges?: UserBadge[];
 
 	chatQueue: ChatQueueEntry[] | null;
 	chatQueueTimeout: NodeJS.Timeout | null;
