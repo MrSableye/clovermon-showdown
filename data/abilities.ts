@@ -5628,7 +5628,8 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 					this.add('-ability', pokemon, 'Dispenser');
 					activated = true;
 				}
-				this.heal(ally.baseMaxhp / 10, ally, pokemon, null);
+				ally.heal(ally.baseMaxhp / 10);
+				this.add('-heal', ally, ally.getHealth);
 				const moveSlots = ally.moveSlots.filter(move => move.pp < move.maxpp);
 				if (moveSlots.length) {
 					const moveSlot = this.sample(moveSlots);
