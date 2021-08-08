@@ -134,40 +134,40 @@ export class BadgesDatabase {
 	getBadges(): Promise<Badge[]> {
 		return this.all('getBadges', []);
 	}
-	getOwnedBadges(ownerID: ID): Promise<Badge[]> {
+	getOwnedBadges(ownerID: string): Promise<Badge[]> {
 		return this.all('getOwnedBadges', [ownerID, MAX_OWNED_BADGES]);
 	}
-	getUserBadges(userID: ID): Promise<UserBadge[]> {
+	getUserBadges(userID: string): Promise<UserBadge[]> {
 		return this.all('getUserBadges', [userID, MAX_USER_BADGES]);
 	}
-	getVisibleUserBadges(userID: ID): Promise<UserBadge[]> {
+	getVisibleUserBadges(userID: string): Promise<UserBadge[]> {
 		return this.all('getVisibleUserBadges', [userID, MAX_USER_BADGES]);
 	}
-	async getBadgeOwners(badgeID: ID, requesterID: ID, overridePermissions: boolean): Promise<UserBadge[]> {
+	async getBadgeOwners(badgeID: string, requesterID: string, overridePermissions: boolean): Promise<UserBadge[]> {
 		return (await this.transaction('getBadgeOwners', [badgeID, requesterID, overridePermissions])).result;
 	}
-	createBadge(badgeID: ID, badgeName: string, ownerID: ID, filePath: string) {
+	createBadge(badgeID: string, badgeName: string, ownerID: string, filePath: string) {
 		return this.transaction('createBadge', [badgeID, badgeName, ownerID, filePath]);
 	}
-	deleteBadge(badgeID: ID, requesterID: ID, overridePermissions: boolean) {
+	deleteBadge(badgeID: string, requesterID: string, overridePermissions: boolean) {
 		return this.transaction('deleteBadge', [badgeID, requesterID, overridePermissions]);
 	}
-	updateBadgeAttribute(badgeID: ID, attributeName: UpdateableBadgeAttribute, attributeValue: any, requesterID: ID, overridePermissions: boolean) {
+	updateBadgeAttribute(badgeID: string, attributeName: UpdateableBadgeAttribute, attributeValue: any, requesterID: string, overridePermissions: boolean) {
 		return this.transaction('updateBadgeAttribute', [badgeID, attributeName, attributeValue, requesterID, overridePermissions]);
 	}
-	addBadgeToUser(userID: ID, badgeID: ID, requesterID: ID, overridePermissions: boolean) {
+	addBadgeToUser(userID: string, badgeID: string, requesterID: string, overridePermissions: boolean) {
 		return this.transaction('addBadgeToUser', [userID, badgeID, requesterID, overridePermissions]);
 	}
-	removeBadgeFromUser(userID: ID, badgeID: ID, requesterID: ID, overridePermissions: boolean) {
+	removeBadgeFromUser(userID: string, badgeID: string, requesterID: string, overridePermissions: boolean) {
 		return this.transaction('removeBadgeFromUser', [userID, badgeID, requesterID, overridePermissions]);
 	}
-	deleteUserBadges(badgeID: ID) {
+	deleteUserBadges(badgeID: string) {
 		return this.run('deleteUserBadges', [badgeID]);
 	}
-	toggleBadgeVisibility(userID: ID, badgeID: ID, isVisible: boolean) {
+	toggleBadgeVisibility(userID: string, badgeID: string, isVisible: boolean) {
 		return this.transaction('toggleBadgeVisibility', [userID, badgeID, isVisible]);
 	}
-	updateBadgePriority(userID: ID, badgeID: ID, priority: number) {
+	updateBadgePriority(userID: string, badgeID: string, priority: number) {
 		return this.transaction('updateBadgePriority', [userID, badgeID, priority]);
 	}
 }
