@@ -272,7 +272,6 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 8 Clover Only] Custom Game",
 		mod: 'clover',
-		searchShow: false,
 		debug: true,
 		battle: {trunc: Math.trunc},
 		// no restrictions, for serious (other than team preview)
