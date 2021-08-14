@@ -4937,7 +4937,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				Object.keys(this.dex.data.TypeChart).forEach((type) => {
 					if (!move.ignoreImmunity) move.ignoreImmunity = {};
 					if (move.ignoreImmunity !== true) {
-						if (!(this.toID(type) === 'ground' && defender && this.toID(defender.ability) === 'levitate')) {
+						if (!((this.toID(type) === 'ground') && defender && (this.toID(defender.ability) === 'levitate'))) {
 							move.ignoreImmunity[type] = true;
 						}
 					}
@@ -4966,7 +4966,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	degradation: {
 		availability: {clover: 1},
 		name: "Degradation",
-		onSourceEffectiveness(typeMod, target, type, move) {
+		onEffectiveness(typeMod, target, type, move) {
 			if (move && target?.types.includes('Normal') && move.type === 'Dark') return 1;
 			return;
 		},
@@ -5083,7 +5083,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	pollution: {
 		availability: {clover: 1},
 		name: "Pollution",
-		onSourceEffectiveness(typeMod, target, type, move) {
+		onEffectiveness(typeMod, target, type, move) {
 			if (move && target?.types.includes('Water') && move.type === 'Poison') return 1;
 			return;
 		},
