@@ -424,6 +424,9 @@ const avatarTable = new Set([
 	'periwinkle-oboma',
 	'periwinkle-sage',
 	'periwinkle-stump',
+	/* Showderp Avatars */
+	'showderp-showtan',
+	'showderp-showtan2',
 ]);
 
 const avatarTableBeliot419 = new Set([
