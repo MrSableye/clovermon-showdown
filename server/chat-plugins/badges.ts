@@ -41,14 +41,14 @@ export const Badges = new class {
 		}
 	}
 	checkHasBadgePermission(context: Chat.CommandContext | Chat.PageContext) {
-		this.checkBadgesEnabled();
+		Badges.checkBadgesEnabled();
 		context.checkCan('badge');
 	}
 	canOverrideBadgeOwnership(user: User) {
 		return Users.Auth.hasPermission(user, 'badge', null);
 	}
 	checkCanUse(context: Chat.CommandContext | Chat.PageContext) {
-		this.checkBadgesEnabled();
+		Badges.checkBadgesEnabled();
 
 		const user = context.user;
 		if (user.locked || user.namelocked || user.semilocked || user.permalocked) {
@@ -63,7 +63,7 @@ export const Badges = new class {
 	async updateUser(userID: string) {
 		const user = Users.get(userID);
 		if (user) {
-			const badges = (await this.getVisibleUserBadges(user.id)).sort((badgeA, badgeB) => {
+			const badges = (await Badges.getVisibleUserBadges(user.id)).sort((badgeA, badgeB) => {
 				const priorityComparison = badgeA.priority - badgeB.priority;
 				if (priorityComparison !== 0) return priorityComparison;
 				return badgeA.create_date - badgeB.create_date;
@@ -74,10 +74,10 @@ export const Badges = new class {
 		}
 	}
 	async updateBadgeForUsers(badgeID: string, requester: User) {
-		const badgeOwners = await this.getBadgeOwners(badgeID, requester, true);
+		const badgeOwners = await Badges.getBadgeOwners(badgeID, requester, true);
 
 		await Promise.all(badgeOwners.map(async ({user_id}) => {
-			await this.updateUser(user_id);
+			await Badges.updateUser(user_id);
 		}));
 	}
 	// Retrieval
@@ -94,42 +94,42 @@ export const Badges = new class {
 		return Chat.Badges.getVisibleUserBadges(userID);
 	}
 	getBadgeOwners(badgeID: string, requester: User, override = false): Promise<UserBadge[]> {
-		return Chat.Badges.getBadgeOwners(badgeID, requester.id, override || this.canOverrideBadgeOwnership(requester));
+		return Chat.Badges.getBadgeOwners(badgeID, requester.id, override || Badges.canOverrideBadgeOwnership(requester));
 	}
 	// Modification
 	createBadge(badgeID: string, badgeName: string, managerID: string, filePath: string) {
 		return Chat.Badges.createBadge(badgeID, badgeName, managerID, filePath);
 	}
 	async deleteBadge(badgeID: string, requester: User, override = false) {
-		const overridePermissions = override || this.canOverrideBadgeOwnership(requester);
-		await this.deleteUserBadges(badgeID, requester);
+		const overridePermissions = override || Badges.canOverrideBadgeOwnership(requester);
+		await Badges.deleteUserBadges(badgeID, requester);
 		await Chat.Badges.deleteBadge(badgeID, requester.id, overridePermissions);
 	}
 	async updateBadgeAttribute(badgeID: string, attributeName: UpdateableBadgeAttribute, attributeValue: any, requester: User, override = false) {
-		const overridePermissions = override || this.canOverrideBadgeOwnership(requester);
+		const overridePermissions = override || Badges.canOverrideBadgeOwnership(requester);
 		await Chat.Badges.updateBadgeAttribute(badgeID, attributeName, attributeValue, requester.id, overridePermissions);
-		await this.updateBadgeForUsers(badgeID, requester);
+		await Badges.updateBadgeForUsers(badgeID, requester);
 	}
 	async addBadgeToUser(userID: string, badgeID: string, requester: User, override = false) {
-		const overridePermissions = override || this.canOverrideBadgeOwnership(requester);
+		const overridePermissions = override || Badges.canOverrideBadgeOwnership(requester);
 		await Chat.Badges.addBadgeToUser(userID, badgeID, requester.id, overridePermissions);
-		await this.updateUser(userID);
+		await Badges.updateUser(userID);
 	}
 	async removeBadgeFromUser(userID: string, badgeID: string, requester: User, override = false) {
-		const overridePermissions = override || this.canOverrideBadgeOwnership(requester);
+		const overridePermissions = override || Badges.canOverrideBadgeOwnership(requester);
 		return Chat.Badges.removeBadgeFromUser(userID, badgeID, requester.id, overridePermissions);
 	}
 	async deleteUserBadges(badgeID: string, requester: User) {
 		await Chat.Badges.deleteUserBadges(badgeID);
-		await this.updateBadgeForUsers(badgeID, requester);
+		await Badges.updateBadgeForUsers(badgeID, requester);
 	}
 	async toggleBadgeVisibility(userID: string, badgeID: string, isVisible: boolean) {
 		await Chat.Badges.toggleBadgeVisibility(userID, badgeID, isVisible);
-		await this.updateUser(userID);
+		await Badges.updateUser(userID);
 	}
 	async updateBadgePriority(userID: string, badgeID: string, priority: number) {
 		await Chat.Badges.updateBadgePriority(userID, badgeID, priority);
-		await this.updateUser(userID);
+		await Badges.updateUser(userID);
 	}
 	async downloadBadgeImage(badgeID: string, imageUrl: string) {
 		try {
@@ -159,14 +159,14 @@ export const Badges = new class {
 		return `<badge badgename="${Utils.escapeHTML(badgeName)}" badgefilename="${Utils.escapeHTML(badgeFileName)}" />`;
 	}
 	createUserBadgeHtml(userBadge: UserBadge) {
-		return this.createRawBadgeHtml(userBadge.badge_name, userBadge.file_name) +
+		return Badges.createRawBadgeHtml(userBadge.badge_name, userBadge.file_name) +
 			`(${userBadge.badge_id})`;
 	}
 	createUserBadgeListHtml(title: string, userBadges: UserBadge[]) {
 		let badgeListString = title === '' ? title : `<span style="color:#999999;">${Utils.escapeHTML(title)}:</span><br />`;
 
 		if (userBadges.length) {
-			const badgeList = userBadges.map(this.createUserBadgeHtml);
+			const badgeList = userBadges.map(Badges.createUserBadgeHtml);
 
 			badgeListString += badgeList.join(', ');
 		} else {
@@ -176,14 +176,14 @@ export const Badges = new class {
 		return badgeListString;
 	}
 	createBadgeHtml(badge: Badge, showOwner: boolean) {
-		return this.createRawBadgeHtml(badge.badge_name, badge.file_name) +
+		return Badges.createRawBadgeHtml(badge.badge_name, badge.file_name) +
 			`(${badge.badge_id})` + (showOwner ? `[Owned by: ${badge.owner_id}]` : '');
 	}
 	createBadgeListHtml(title: string, badges: Badge[], showOwner = false) {
 		let badgeListString = title === '' ? title : `<span style="color:#999999;">${Utils.escapeHTML(title)}:</span><br />`;
 
 		if (badges.length) {
-			const badgeList = badges.map((badge) => this.createBadgeHtml(badge, showOwner));
+			const badgeList = badges.map((badge) => Badges.createBadgeHtml(badge, showOwner));
 
 			badgeListString += badgeList.join(', ');
 		} else {
@@ -231,7 +231,7 @@ export const Badges = new class {
 		return toLink(`<div style="line-height:25px">${buf.join(' / ')}${refresh}</div><hr />`);
 	}
 	createUserBadgePageElementHtml(userBadge: UserBadge) {
-		let userBadgePageElementHtml = this.createRawBadgeHtml(userBadge.badge_name, userBadge.file_name);
+		let userBadgePageElementHtml = Badges.createRawBadgeHtml(userBadge.badge_name, userBadge.file_name);
 		userBadgePageElementHtml += `<strong>${userBadge.badge_name}</strong> <small>[id: ${userBadge.badge_id}]</small><br />`;
 		userBadgePageElementHtml += `<button class="button${userBadge.is_hidden === 0 ? ' disabled' : ''}" name="send" `;
 		userBadgePageElementHtml += `value="/badge on ${userBadge.badge_id}">Show</button> `;
@@ -245,11 +245,17 @@ export const Badges = new class {
 	}
 	createUserBadgePageHtml(userBadges: UserBadge[]) {
 		let userBadgePageHtml = '<div class="pad">';
-		userBadgePageHtml += this.createBadgeHeaderButtons('owned');
+		userBadgePageHtml += Badges.createBadgeHeaderButtons('owned');
+
+		const visibleBadges = userBadges.filter((userBadge) => userBadge.is_hidden === 0);
+		userBadgePageHtml += '<h3>Your Visible Badges</h3>';
+		userBadgePageHtml += visibleBadges.map((visibleBadge) => Badges.createRawBadgeHtml(visibleBadge.badge_name, visibleBadge.file_name)).join('');
+		userBadgePageHtml += '<br />';
+
 		userBadgePageHtml += '<h3>Your Badges</h3>';
 
 		if (userBadges.length) {
-			userBadgePageHtml += userBadges.map(this.createUserBadgePageElementHtml).join('');
+			userBadgePageHtml += userBadges.map(Badges.createUserBadgePageElementHtml).join('');
 		} else {
 			userBadgePageHtml += '<em>you have no badges on Showdown lol</em>';
 		}
@@ -258,17 +264,17 @@ export const Badges = new class {
 		return userBadgePageHtml;
 	}
 	createManagedBadgePageElementHtml(badge: Badge) {
-		let managedBadgePageElementHtml = this.createRawBadgeHtml(badge.badge_name, badge.file_name);
+		let managedBadgePageElementHtml = Badges.createRawBadgeHtml(badge.badge_name, badge.file_name);
 		managedBadgePageElementHtml += `<strong>${badge.badge_name}</strong> <small>[id: ${badge.badge_id}]</small><br />`;
 		return managedBadgePageElementHtml;
 	}
 	createManagedBadgePageHtml(badges: Badge[]) {
 		let managedBadgePageHtml = '<div class="pad">';
-		managedBadgePageHtml += this.createBadgeHeaderButtons('managed');
+		managedBadgePageHtml += Badges.createBadgeHeaderButtons('managed');
 		managedBadgePageHtml += '<h3>Your Managed Badges</h3>';
 
 		if (badges.length) {
-			managedBadgePageHtml += badges.map(this.createManagedBadgePageElementHtml).join('');
+			managedBadgePageHtml += badges.map(Badges.createManagedBadgePageElementHtml).join('');
 		} else {
 			managedBadgePageHtml += '<em>you manage no badges on Showdown lol</em>';
 		}
