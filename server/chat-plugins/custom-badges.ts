@@ -9,9 +9,6 @@ export const commands: Chat.ChatCommands = {
 
 		await Badges.addBadgeToUser(user.id, 'sus' as ID, user, true);
 
-		const targetUser = Users.get(user.id);
-		if (targetUser) await Chat.Badges.updateUserCache(targetUser);
-
 		return this.sendReply('You are now SUS.');
 	},
 	async teambavi(target, room, user) {
@@ -25,9 +22,6 @@ export const commands: Chat.ChatCommands = {
 			if (userBadges.includes('teambavi')) {
 				await Badges.removeBadgeFromUser(user.id, 'teambavi' as ID, user, true);
 
-				const targetUser = Users.get(user.id);
-				if (targetUser) await Chat.Badges.updateUserCache(targetUser);
-
 				return this.sendReply('You have left Team Bavi.');
 			}
 
@@ -37,9 +31,6 @@ export const commands: Chat.ChatCommands = {
 		}
 
 		await Badges.addBadgeToUser(user.id, 'teambavi' as ID, user, true);
-
-		const targetUser = Users.get(user.id);
-		if (targetUser) await Chat.Badges.updateUserCache(targetUser);
 
 		return this.sendReply('You are now on Team Bavi.');
 	},
@@ -54,9 +45,6 @@ export const commands: Chat.ChatCommands = {
 			if (userBadges.includes('teamkymmi')) {
 				await Badges.removeBadgeFromUser(user.id, 'teamkymmi' as ID, user, true);
 
-				const targetUser = Users.get(user.id);
-				if (targetUser) await Chat.Badges.updateUserCache(targetUser);
-
 				return this.sendReply('You have left Team Kymmi.');
 			}
 
@@ -66,9 +54,6 @@ export const commands: Chat.ChatCommands = {
 		}
 
 		await Badges.addBadgeToUser(user.id, 'teamkymmi' as ID, user, true);
-
-		const targetUser = Users.get(user.id);
-		if (targetUser) await Chat.Badges.updateUserCache(targetUser);
 
 		return this.sendReply('You are now on Team Kymmi.');
 	},
