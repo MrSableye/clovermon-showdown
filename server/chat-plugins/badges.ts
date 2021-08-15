@@ -60,14 +60,17 @@ export const Badges = new class {
 	}
 
 	// User Updates
+	sortUserBadges(userBadges: UserBadge[]) {
+		return userBadges.sort((badgeA, badgeB) => {
+			const priorityComparison = badgeA.priority - badgeB.priority;
+			if (priorityComparison !== 0) return priorityComparison;
+			return badgeA.create_date - badgeB.create_date;
+		});
+	}
 	async updateUser(userID: string) {
 		const user = Users.get(userID);
 		if (user) {
-			const badges = (await Badges.getVisibleUserBadges(user.id)).sort((badgeA, badgeB) => {
-				const priorityComparison = badgeA.priority - badgeB.priority;
-				if (priorityComparison !== 0) return priorityComparison;
-				return badgeA.create_date - badgeB.create_date;
-			});
+			const badges = Badges.sortUserBadges(await Badges.getVisibleUserBadges(user.id));
 
 			user.badges = badges;
 			return user.badges;
@@ -292,7 +295,7 @@ export const pages: Chat.PageTable = {
 
 			this.title = '[Badges] Owned';
 
-			const userBadges = await Badges.getUserBadges(user.id);
+			const userBadges = Badges.sortUserBadges(await Badges.getUserBadges(user.id));
 
 			return Badges.createUserBadgePageHtml(userBadges);
 		},
