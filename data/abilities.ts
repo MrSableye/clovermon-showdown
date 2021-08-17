@@ -5209,8 +5209,8 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			}
 		},
 		name: "Ruse Power",
-		rating: 3.5,
-		num: 200,
+		rating: 5,
+		isNonstandard: "Future",
 	},
 	omniscience: {
 		availability: {clover: 1},
