@@ -1926,7 +1926,7 @@ export class RandomTeams {
 			if (!species.exists) continue;
 
 			// Check if the forme has moves for random battle
-			if (this.format.gameType === 'singles') {
+			if ((this.format.gameType === 'singles') || (this.format.gameType === 'freeforall')) {
 				if (!species.randomBattleMoves) continue;
 			} else {
 				if (!species.randomDoubleBattleMoves) continue;
