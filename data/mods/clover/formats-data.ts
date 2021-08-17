@@ -779,9 +779,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"encore",
 				],
 				lockedMoves: [
-                    "reflect",
+					"reflect",
 					"lightscreen",
-                ],
+				],
 				level: 84,
 			},
 		],
@@ -810,15 +810,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Grounder",
-            "Lizardcrap",
-            "Shurismash",
-            "Shurismash",
+			"Grounder",
+			"Lizardcrap",
 			"Shurismash",
 			"Shurismash",
 			"Shurismash",
 			"Shurismash",
-        ],
+			"Shurismash",
+			"Shurismash",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -870,15 +870,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Shitmon",
-            "Cade",
-            "Nigga",
-            "Memenace",
+			"Shitmon",
+			"Cade",
+			"Nigga",
 			"Memenace",
 			"Memenace",
 			"Memenace",
 			"Memenace",
-        ],
+			"Memenace",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -911,8 +911,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"rockclimb",
 				],
 				lockedMoves: [
-                    "bodyslam",
-                ],
+					"bodyslam",
+				],
 				level: 84,
 			},
 		],
@@ -930,11 +930,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Mall Cop",
-            "Piguson",
-            "Piguson",
-            "Piguson",
-        ],
+			"Mall Cop",
+			"Piguson",
+			"Piguson",
+			"Piguson",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -977,17 +977,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Righty",
-            "Leg XD",
-            "Jill",
-            "Poppa Pump",
-            "Tripecs",
-            "Tripecs",
+			"Righty",
+			"Leg XD",
+			"Jill",
+			"Poppa Pump",
 			"Tripecs",
 			"Tripecs",
 			"Tripecs",
 			"Tripecs",
-        ],
+			"Tripecs",
+			"Tripecs",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -1084,11 +1084,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Burnem",
-            "Finasoven",
-            "Finasoven",
-            "Finasoven",
-        ],
+			"Burnem",
+			"Finasoven",
+			"Finasoven",
+			"Finasoven",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -1162,11 +1162,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Magikrap",
-            "nigger",
-            "Monstrap",
-            "Monstrap",
-        ],
+			"Magikrap",
+			"nigger",
+			"Monstrap",
+			"Monstrap",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -1215,9 +1215,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"earthquake",
 				],
 				lockedMoves: [
-                    "swordsdance",
-					"aquajet"
-                ],
+					"swordsdance",
+					"aquajet",
+				],
 				level: 80,
 			},
 		],
@@ -1240,15 +1240,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "SOUP!!!!!!",
-            ".w.",
-            "Fairileon",
-            "Fairileon",
+			"SOUP!!!!!!",
+			".w.",
 			"Fairileon",
 			"Fairileon",
 			"Fairileon",
 			"Fairileon",
-        ],
+			"Fairileon",
+			"Fairileon",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -1316,7 +1316,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				],
 				lockedMoves: [
 					"tailglow",
-                ],
+				],
 				level: 84,
 			},
 		],
@@ -1339,11 +1339,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Wedgy",
-            "Knokedge",
-            "Knokedge",
-            "Knokedge",
-        ],
+			"Wedgy",
+			"Knokedge",
+			"Knokedge",
+			"Knokedge",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -1375,8 +1375,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"ironhead",
 				],
 				lockedMoves: [
-                    "earthquake",
-                ],
+					"earthquake",
+				],
 				level: 84,
 			},
 			{
@@ -1385,7 +1385,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				],
 				items: [
 					"rockyhelmet",
-					"leftovers"
+					"leftovers",
 				],
 				moves: [
 					"roar",
@@ -1411,15 +1411,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Zap7",
-            "Robo-Pepe",
-            "Ribbizap",
+			"Zap7",
+			"Robo-Pepe",
 			"Ribbizap",
 			"Ribbizap",
 			"Ribbizap",
 			"Ribbizap",
 			"Ribbizap",
-        ],
+			"Ribbizap",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -1468,11 +1468,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Pajeet",
-            "Elephas",
+			"Pajeet",
 			"Elephas",
 			"Elephas",
-        ],
+			"Elephas",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -1504,8 +1504,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"hypervoice",
 				],
 				lockedMoves: [
-                    "psyshock",
-                ],
+					"psyshock",
+				],
 				level: 84,
 			},
 		],
@@ -1522,17 +1522,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "SPAM",
-            "<3",
-            "Panty Raid",
-            "PANTSU",
-            "Seamapan",
-            "Seamapan",
+			"SPAM",
+			"<3",
+			"Panty Raid",
+			"PANTSU",
 			"Seamapan",
 			"Seamapan",
 			"Seamapan",
 			"Seamapan",
-        ],
+			"Seamapan",
+			"Seamapan",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -1580,11 +1580,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Muh Waifu",
-            "Caroline",
-            "Caroline",
-            "Caroline",
-        ],
+			"Muh Waifu",
+			"Caroline",
+			"Caroline",
+			"Caroline",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -1647,8 +1647,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"hurricane",
 				],
 				lockedMoves: [
-                    "earthpower",
-                ],
+					"earthpower",
+				],
 				level: 84,
 			},
 		],
@@ -1676,12 +1676,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Scooby",
-            "Slaughtor",
-            "Perro Caca",
-            "Slaughter",
-            "Nunzio",
-            "Toadagi",
+			"Scooby",
+			"Slaughtor",
+			"Perro Caca",
+			"Slaughter",
+			"Nunzio",
+			"Toadagi",
 			"Pasdawg",
 			"Pasdawg",
 			"Pasdawg",
@@ -1694,7 +1694,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Pasdawg",
 			"Pasdawg",
 			"Pasdawg",
-        ],
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -1710,9 +1710,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"earthquake",
 				],
 				lockedMoves: [
-                    "ironhead",
+					"ironhead",
 					"return",
-                ],
+				],
 				level: 80,
 			},
 		],
@@ -1736,11 +1736,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Ballboa",
-            "Anaconduke",
-            "Anaconduke",
-            "Anaconduke",
-        ],
+			"Ballboa",
+			"Anaconduke",
+			"Anaconduke",
+			"Anaconduke",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -1771,7 +1771,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"crosschop",
 					"irontail",
 					"glare",
-					"rest"
+					"rest",
 				],
 				lockedMoves: [
 					"coil",
@@ -1799,11 +1799,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Your Mom",
-            "Sjwhale",
-            "Sjwhale",
-            "Sjwhale",
-        ],
+			"Your Mom",
+			"Sjwhale",
+			"Sjwhale",
+			"Sjwhale",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -1856,15 +1856,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "OnTheList",
-            "Pizzaifu",
-            "Mozzamazel",
-            "Mozzamazel",
+			"OnTheList",
+			"Pizzaifu",
 			"Mozzamazel",
 			"Mozzamazel",
 			"Mozzamazel",
 			"Mozzamazel",
-        ],
+			"Mozzamazel",
+			"Mozzamazel",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -1986,15 +1986,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "BAZINGA",
-            "Carbuncle",
-            "Haremit",
-            "Haremit",
+			"BAZINGA",
+			"Carbuncle",
 			"Haremit",
 			"Haremit",
 			"Haremit",
 			"Haremit",
-        ],
+			"Haremit",
+			"Haremit",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -2072,15 +2072,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Chill",
-            "Cool Spot",
-            "Fabkube",
-            "Fabkube",
+			"Chill",
+			"Cool Spot",
 			"Fabkube",
 			"Fabkube",
 			"Fabkube",
 			"Fabkube",
-        ],
+			"Fabkube",
+			"Fabkube",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -2136,10 +2136,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Breedject",
-            "Talonflame",
-            "DOGARS",
-            "Smoxilon",
+			"Breedject",
+			"Talonflame",
+			"DOGARS",
 			"Smoxilon",
 			"Smoxilon",
 			"Smoxilon",
@@ -2148,7 +2147,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Smoxilon",
 			"Smoxilon",
 			"Smoxilon",
-        ],
+			"Smoxilon",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -2201,19 +2201,19 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "DELETE",
-            "Slim Jim",
-            "Bonesaw",
-            "Machmona",
-			"Machmona",
-            "Machmona",
+			"DELETE",
+			"Slim Jim",
+			"Bonesaw",
 			"Machmona",
 			"Machmona",
 			"Machmona",
 			"Machmona",
 			"Machmona",
 			"Machmona",
-        ],
+			"Machmona",
+			"Machmona",
+			"Machmona",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -2251,15 +2251,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Roastie",
-            "Mmmmm",
-            "Urswine",
+			"Roastie",
+			"Mmmmm",
 			"Urswine",
 			"Urswine",
 			"Urswine",
 			"Urswine",
 			"Urswine",
-        ],
+			"Urswine",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -2312,11 +2312,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "STRMfrmXMN",
-            "Mooshock",
+			"STRMfrmXMN",
 			"Mooshock",
 			"Mooshock",
-        ],
+			"Mooshock",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -2380,7 +2380,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"focusblast",
 					"kingsshield",
 					"taunt",
-					"fierydance"
+					"fierydance",
 				],
 				lockedMoves: [
 					"boomburst",
@@ -2406,11 +2406,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Voldemort",
-            "Dowster",
+			"Voldemort",
 			"Dowster",
 			"Dowster",
-        ],
+			"Dowster",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -2472,10 +2472,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Annie Mae",
-            "SATAN",
-            "Ex Wife",
-            "Mennopaws",
+			"Annie Mae",
+			"SATAN",
+			"Ex Wife",
 			"Mennopaws",
 			"Mennopaws",
 			"Mennopaws",
@@ -2484,7 +2483,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Mennopaws",
 			"Mennopaws",
 			"Mennopaws",
-        ],
+			"Mennopaws",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -2554,15 +2554,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Cool Cat",
-            "Flycatice",
-            "Glacialynx",
+			"Cool Cat",
+			"Flycatice",
 			"Glacialynx",
 			"Glacialynx",
 			"Glacialynx",
 			"Glacialynx",
 			"Glacialynx",
-        ],
+			"Glacialynx",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -2623,15 +2623,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "d00m",
-            "Robotnik",
-            "Pengas",
+			"d00m",
+			"Robotnik",
 			"Pengas",
 			"Pengas",
 			"Pengas",
 			"Pengas",
 			"Pengas",
-        ],
+			"Pengas",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -2705,15 +2705,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "><>",
-            "Cutey",
-            "Praetish",
+			"><>",
+			"Cutey",
 			"Praetish",
 			"Praetish",
 			"Praetish",
 			"Praetish",
 			"Praetish",
-        ],
+			"Praetish",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -2767,15 +2767,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Flowey",
+			"Flowey",
 			"Rusemaster",
-            "Florious",
 			"Florious",
 			"Florious",
 			"Florious",
 			"Florious",
 			"Florious",
-        ],
+			"Florious",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -2783,7 +2783,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				],
 				items: [
 					"blacksludge",
-					"lifeorb"
+					"lifeorb",
 				],
 				moves: [
 					"sleeppowder",
@@ -2835,16 +2835,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Deportee",
-            "DEPORTED",
-            "El Ogros",
-            "Somboludo",
+			"Deportee",
+			"DEPORTED",
+			"El Ogros",
 			"Somboludo",
 			"Somboludo",
 			"Somboludo",
 			"Somboludo",
 			"Somboludo",
-        ],
+			"Somboludo",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -2877,8 +2877,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"rapidspin",
 				],
 				lockedMoves: [
-                    "earthquake",
-                ],
+					"earthquake",
+				],
 				level: 76,
 			},
 		],
@@ -2902,15 +2902,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "sminem",
-            "Buge",
-            "Marionettl",
+			"sminem",
+			"Buge",
 			"Marionettl",
 			"Marionettl",
 			"Marionettl",
 			"Marionettl",
 			"Marionettl",
-        ],
+			"Marionettl",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -2967,10 +2967,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "sqride",
-            "Onarhune",
-            "Hitomi",
-            "Octai",
+			"sqride",
+			"Onarhune",
+			"Hitomi",
 			"Octai",
 			"Octai",
 			"Octai",
@@ -2978,7 +2977,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Octai",
 			"Octai",
 			"Octai",
-        ],
+			"Octai",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -3009,7 +3009,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"milkdrink",
 					"flamethrower",
 					"scald",
-					"icebeam"
+					"icebeam",
 				],
 				lockedMoves: [
 					"lactoseshot",
@@ -3036,15 +3036,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Thomas",
-            "Ja-Mes",
-            "Hyletrack",
-            "Hyletrack",
+			"Thomas",
+			"Ja-Mes",
 			"Hyletrack",
 			"Hyletrack",
 			"Hyletrack",
 			"Hyletrack",
-        ],
+			"Hyletrack",
+			"Hyletrack",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -3103,17 +3103,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Tipsy",
-            "Blade",
-            "Caffrey",
-            "U4IC",
-            "Armowite",
+			"Tipsy",
+			"Blade",
+			"Caffrey",
+			"U4IC",
 			"Armowite",
 			"Armowite",
 			"Armowite",
 			"Armowite",
 			"Armowite",
-        ],
+			"Armowite",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -3172,15 +3172,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "OnePraunch",
+			"OnePraunch",
 			"Crocker",
-            "Mabster",
 			"Mabster",
 			"Mabster",
 			"Mabster",
 			"Mabster",
 			"Mabster",
-        ],
+			"Mabster",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -3361,11 +3361,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Diego",
-            "Huntabre",
+			"Diego",
 			"Huntabre",
 			"Huntabre",
-        ],
+			"Huntabre",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -3432,11 +3432,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Cryolink",
-            "Pyralink",
+			"Cryolink",
 			"Pyralink",
 			"Pyralink",
-        ],
+			"Pyralink",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -3496,11 +3496,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Checked",
-            "Tripsius",
+			"Checked",
 			"Tripsius",
 			"Tripsius",
-        ],
+			"Tripsius",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -3540,7 +3540,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				],
 				items: [
 					"choicespecs",
-					"kingsrock"
+					"kingsrock",
 				],
 				moves: [
 					"checkem",
@@ -3649,11 +3649,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Mr. Hankey",
-            "Cacademon",
+			"Mr. Hankey",
 			"Cacademon",
 			"Cacademon",
-        ],
+			"Cacademon",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -3734,17 +3734,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Sudoku",
-            "CurrentMood",
-            "Doki Doki",
-            "L O V E",
-            "Unjoy",
+			"Sudoku",
+			"CurrentMood",
+			"Doki Doki",
+			"L O V E",
 			"Unjoy",
 			"Unjoy",
 			"Unjoy",
 			"Unjoy",
 			"Unjoy",
-        ],
+			"Unjoy",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -3798,11 +3798,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Frigo",
-            "Whizzard",
+			"Frigo",
 			"Whizzard",
 			"Whizzard",
-        ],
+			"Whizzard",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -3862,11 +3862,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Slither",
-            "Mantrake",
+			"Slither",
 			"Mantrake",
 			"Mantrake",
-        ],
+			"Mantrake",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -3932,11 +3932,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Fiona",
-            "Ogrelord",
+			"Fiona",
 			"Ogrelord",
 			"Ogrelord",
-        ],
+			"Ogrelord",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -3989,10 +3989,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "(((berg)))",
-            "PKMN Prism",
-            "Jewpiter",
-            "Chantruth",
+			"(((berg)))",
+			"PKMN Prism",
+			"Jewpiter",
 			"Chantruth",
 			"Chantruth",
 			"Chantruth",
@@ -4001,7 +4000,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Chantruth",
 			"Chantruth",
 			"Chantruth",
-        ],
+			"Chantruth",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -4096,15 +4096,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Astolfo",
-            "Str8",
-            "Geigh",
+			"Astolfo",
+			"Str8",
 			"Geigh",
 			"Geigh",
 			"Geigh",
 			"Geigh",
 			"Geigh",
-        ],
+			"Geigh",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -4175,15 +4175,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "SopaMacaco",
-            "Monke?",
-            "Spilefree",
+			"SopaMacaco",
+			"Monke?",
 			"Spilefree",
 			"Spilefree",
 			"Spilefree",
 			"Spilefree",
 			"Spilefree",
-        ],
+			"Spilefree",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -4262,15 +4262,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Munchies",
-            "Cannabis",
-            "Marleyzard",
+			"Munchies",
+			"Cannabis",
 			"Marleyzard",
 			"Marleyzard",
 			"Marleyzard",
 			"Marleyzard",
 			"Marleyzard",
-        ],
+			"Marleyzard",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -4342,15 +4342,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Foot pics",
-            "Stinkbag",
-            "Smellox",
+			"Foot pics",
+			"Stinkbag",
 			"Smellox",
 			"Smellox",
 			"Smellox",
 			"Smellox",
 			"Smellox",
-        ],
+			"Smellox",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -4399,15 +4399,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "HARUUU",
-            "cahd",
-            "Chasumo",
+			"HARUUU",
+			"cahd",
 			"Chasumo",
 			"Chasumo",
 			"Chasumo",
 			"Chasumo",
 			"Chasumo",
-        ],
+			"Chasumo",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -4447,15 +4447,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Invitation",
-            "RofPeace",
-            "Isussin",
-            "Isissin",
+			"Invitation",
+			"RofPeace",
+			"Isussin",
 			"Isissin",
 			"Isissin",
 			"Isissin",
 			"Isissin",
-        ],
+			"Isissin",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -4552,15 +4552,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "BAVI",
-            "Fat Turkey",
-            "Upchucken",
+			"BAVI",
+			"Fat Turkey",
 			"Upchucken",
 			"Upchucken",
 			"Upchucken",
 			"Upchucken",
 			"Upchucken",
-        ],
+			"Upchucken",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -4652,11 +4652,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Columbine",
-            "Cannonance",
+			"Columbine",
 			"Cannonance",
 			"Cannonance",
-        ],
+			"Cannonance",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -4739,11 +4739,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Feliz Jueves",
-            "Evacycle",
+			"Feliz Jueves",
 			"Evacycle",
 			"Evacycle",
-        ],
+			"Evacycle",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -4809,11 +4809,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Uber",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Bane?",
-            "Foryu",
+			"Bane?",
 			"Foryu",
 			"Foryu",
-        ],
+			"Foryu",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -4879,11 +4879,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Uber",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Friendship",
-            "Scytill",
+			"Friendship",
 			"Scytill",
 			"Scytill",
-        ],
+			"Scytill",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -4951,11 +4951,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Uber",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "oenis",
-            "Baddon",
+			"oenis",
 			"Baddon",
 			"Baddon",
-        ],
+			"Baddon",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -5196,15 +5196,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Casual",
-            "zigzagger",
-            "Batterex",
+			"Casual",
+			"zigzagger",
 			"Batterex",
 			"Batterex",
 			"Batterex",
 			"Batterex",
 			"Batterex",
-        ],
+			"Batterex",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -5263,11 +5263,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "rock snek",
-            "Oburonyxo",
+			"rock snek",
 			"Oburonyxo",
 			"Oburonyxo",
-        ],
+			"Oburonyxo",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -5343,11 +5343,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "scy cade",
-            "Deathorus",
+			"scy cade",
 			"Deathorus",
 			"Deathorus",
-        ],
+			"Deathorus",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -5401,15 +5401,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "XDDDD",
-            "G.O.A.T.",
-            "Knogrinyu",
+			"XDDDD",
+			"G.O.A.T.",
 			"Knogrinyu",
 			"Knogrinyu",
 			"Knogrinyu",
 			"Knogrinyu",
 			"Knogrinyu",
-        ],
+			"Knogrinyu",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -5491,10 +5491,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Glass anon",
-            "Glassannon",
+			"Glass anon",
 			"Glassannon",
-        ],
+			"Glassannon",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -5535,15 +5535,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "shenti",
-            "sub-tan",
-            "Yedoom",
+			"shenti",
+			"sub-tan",
 			"Yedoom",
 			"Yedoom",
 			"Yedoom",
 			"Yedoom",
 			"Yedoom",
-        ],
+			"Yedoom",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -5594,11 +5594,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Goosebumps",
-            "hop on among us",
-            "Mirrostine",
-            "Mirrostine",
-        ],
+			"Goosebumps",
+			"hop on among us",
+			"Mirrostine",
+			"Mirrostine",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -5650,11 +5650,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Sonikku",
-            "Mudslacks",
+			"Sonikku",
 			"Mudslacks",
 			"Mudslacks",
-        ],
+			"Mudslacks",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -5709,15 +5709,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "BU",
-            "LOL",
+			"BU",
+			"LOL",
 			"Lossolith",
 			"Lossolith",
 			"Lossolith",
 			"Lossolith",
 			"Lossolith",
 			"Lossolith",
-        ],
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -5767,11 +5767,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Inkling",
-            "Mimimie",
+			"Inkling",
 			"Mimimie",
 			"Mimimie",
-        ],
+			"Mimimie",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -5838,11 +5838,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "thirsty",
-            "jeuse",
-            "Sprucifix",
-            "Sprucifix",
-        ],
+			"thirsty",
+			"jeuse",
+			"Sprucifix",
+			"Sprucifix",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -5890,10 +5890,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "OBSOLETE",
-            "BE A MAN",
-            "Hollywood",
-            "Hulkan",
+			"OBSOLETE",
+			"BE A MAN",
+			"Hollywood",
 			"Hulkan",
 			"Hulkan",
 			"Hulkan",
@@ -5902,7 +5901,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Hulkan",
 			"Hulkan",
 			"Hulkan",
-        ],
+			"Hulkan",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -5980,11 +5980,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Nani Sore",
-            "Nomaestro",
-            "Nomaestro",
-            "Nomaestro",
-        ],
+			"Nani Sore",
+			"Nomaestro",
+			"Nomaestro",
+			"Nomaestro",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -6045,11 +6045,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "BANTI",
-            "deez nutzboltz",
-            "Nutzboltz",
-            "Nutzboltz",
-        ],
+			"BANTI",
+			"deez nutzboltz",
+			"Nutzboltz",
+			"Nutzboltz",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -6119,15 +6119,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Rope Day",
-            "Trump",
-            "Kuklan",
+			"Rope Day",
+			"Trump",
 			"Kuklan",
 			"Kuklan",
 			"Kuklan",
 			"Kuklan",
 			"Kuklan",
-        ],
+			"Kuklan",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -6177,11 +6177,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "ur gay",
-            "Flameboyan",
+			"ur gay",
 			"Flameboyan",
 			"Flameboyan",
-        ],
+			"Flameboyan",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -6230,11 +6230,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Thanks Doc",
-            "Piicee",
+			"Thanks Doc",
 			"Piicee",
 			"Piicee",
-        ],
+			"Piicee",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -6286,11 +6286,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Raidenetti",
-            "Sonnanos",
+			"Raidenetti",
 			"Sonnanos",
 			"Sonnanos",
-        ],
+			"Sonnanos",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -6413,11 +6413,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Impotster",
-            "Sappy",
-            "ThisIsFine",
-            "Phantash",
-            "Phantash",
+			"Impotster",
+			"Sappy",
+			"ThisIsFine",
 			"Phantash",
 			"Phantash",
 			"Phantash",
@@ -6425,7 +6423,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Phantash",
 			"Phantash",
 			"Phantash",
-        ],
+			"Phantash",
+			"Phantash",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -6535,11 +6535,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "YLYL",
-            "Hitmonana",
+			"YLYL",
 			"Hitmonana",
 			"Hitmonana",
-        ],
+			"Hitmonana",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -6650,15 +6650,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Erdogan",
-            "Callum",
-            "Rekroach",
-            "Rekroach",
+			"Erdogan",
+			"Callum",
 			"Rekroach",
 			"Rekroach",
 			"Rekroach",
 			"Rekroach",
-        ],
+			"Rekroach",
+			"Rekroach",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -6877,11 +6877,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "HWNDU",
-            "Fontaba",
+			"HWNDU",
 			"Fontaba",
 			"Fontaba",
-        ],
+			"Fontaba",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -6954,15 +6954,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Coconuts",
-            "MUH PALMS",
-            "Roynapalm",
+			"Coconuts",
+			"MUH PALMS",
 			"Roynapalm",
 			"Roynapalm",
 			"Roynapalm",
 			"Roynapalm",
 			"Roynapalm",
-        ],
+			"Roynapalm",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -7054,11 +7054,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "BulletSeed",
-            "Manatank",
+			"BulletSeed",
 			"Manatank",
 			"Manatank",
-        ],
+			"Manatank",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -7127,11 +7127,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Vendetta",
-            "Anonymouse",
+			"Vendetta",
 			"Anonymouse",
 			"Anonymouse",
-        ],
+			"Anonymouse",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -7181,10 +7181,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "FUCK",
-            "Motherfuck",
+			"FUCK",
 			"Motherfuck",
-        ],
+			"Motherfuck",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -7239,15 +7239,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Noop",
-            "Zoope",
-            "Draconius",
+			"Noop",
+			"Zoope",
 			"Draconius",
 			"Draconius",
 			"Draconius",
 			"Draconius",
 			"Draconius",
-        ],
+			"Draconius",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -7355,15 +7355,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Stingulor",
-            "Scuttlebug",
-            "Scythear",
+			"Stingulor",
+			"Scuttlebug",
 			"Scythear",
 			"Scythear",
 			"Scythear",
 			"Scythear",
 			"Scythear",
-        ],
+			"Scythear",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -7417,15 +7417,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "ClickHere!",
-            "He Screams",
-            "Snugware",
+			"ClickHere!",
+			"He Screams",
 			"Snugware",
 			"Snugware",
 			"Snugware",
 			"Snugware",
 			"Snugware",
-        ],
+			"Snugware",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -7475,15 +7475,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "ClickHere!",
-            "He Screams",
-            "Fleespecs",
+			"ClickHere!",
+			"He Screams",
 			"Fleespecs",
 			"Fleespecs",
 			"Fleespecs",
 			"Fleespecs",
 			"Fleespecs",
-        ],
+			"Fleespecs",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -7532,11 +7532,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "BANKAI",
-            "Honrade",
+			"BANKAI",
 			"Honrade",
 			"Honrade",
-        ],
+			"Honrade",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -7591,15 +7591,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Loss",
-            "Embaby",
-            "Premantom",
+			"Loss",
+			"Embaby",
 			"Premantom",
 			"Premantom",
 			"Premantom",
 			"Premantom",
 			"Premantom",
-        ],
+			"Premantom",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -7637,10 +7637,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "T-100",
-            "T-200",
-            "T-1000",
-            "Galavire",
+			"T-100",
+			"T-200",
+			"T-1000",
 			"Galavire",
 			"Galavire",
 			"Galavire",
@@ -7649,7 +7648,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Galavire",
 			"Galavire",
 			"Galavire",
-        ],
+			"Galavire",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -7698,10 +7698,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "T-100",
-            "T-200",
-            "T-1000",
-            "Galaviste",
+			"T-100",
+			"T-200",
+			"T-1000",
 			"Galaviste",
 			"Galaviste",
 			"Galaviste",
@@ -7710,7 +7709,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Galaviste",
 			"Galaviste",
 			"Galaviste",
-        ],
+			"Galaviste",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -7766,11 +7766,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Flowerz",
-            "Florigrace",
+			"Flowerz",
 			"Florigrace",
 			"Florigrace",
-        ],
+			"Florigrace",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -7842,9 +7842,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "♂♂♂♂♂♂♂♂♂♂",
-            "Pico",
-            "TrpsRntGay",
+			"♂♂♂♂♂♂♂♂♂♂",
+			"Pico",
+			"TrpsRntGay",
 			"Wifemin",
 			"Wifemin",
 			"Wifemin",
@@ -7854,7 +7854,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Wifemin",
 			"Wifemin",
 			"Wifemin",
-        ],
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -7903,10 +7903,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Xenu",
-            "Bogandoff",
-            "Jiren",
-            "Uwotto",
+			"Xenu",
+			"Bogandoff",
+			"Jiren",
 			"Uwotto",
 			"Uwotto",
 			"Uwotto",
@@ -7915,7 +7914,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Uwotto",
 			"Uwotto",
 			"Uwotto",
-        ],
+			"Uwotto",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -7998,11 +7998,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Zinger",
-            "Maggot",
-            "Donut",
-            "Zikavolt",
-            "Squito",
+			"Zinger",
+			"Maggot",
+			"Donut",
+			"Zikavolt",
+			"Squito",
 			"Vicper",
 			"Venowatt",
 			"Venowatt",
@@ -8016,7 +8016,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Venowatt",
 			"Venowatt",
 			"Venowatt",
-        ],
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -8066,11 +8066,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Bitekey",
-            "Vaultevour",
-            "Vaultevour",
+			"Bitekey",
 			"Vaultevour",
-        ],
+			"Vaultevour",
+			"Vaultevour",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -8119,11 +8119,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Uber",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Dicks",
-            "Smegma",
-            "Fanta",
-            "Cornflakes",
-            "Semdemen",
+			"Dicks",
+			"Smegma",
+			"Fanta",
+			"Cornflakes",
 			"Semdemen",
 			"Semdemen",
 			"Semdemen",
@@ -8131,7 +8130,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Semdemen",
 			"Semdemen",
 			"Semdemen",
-        ],
+			"Semdemen",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -8165,15 +8165,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Astolfo",
-            "Str8",
-            "Dragking",
+			"Astolfo",
+			"Str8",
 			"Dragking",
 			"Dragking",
 			"Dragking",
 			"Dragking",
 			"Dragking",
-        ],
+			"Dragking",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -8279,7 +8279,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				],
 				moves: [
 					"substitute",
-					"focuspunch"
+					"focuspunch",
 				],
 				level: 72,
 			},
@@ -8298,11 +8298,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Magikrap",
-            "Baitmaster",
-            "Baitmaster",
-            "Baitmaster",
-        ],
+			"Magikrap",
+			"Baitmaster",
+			"Baitmaster",
+			"Baitmaster",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -8453,11 +8453,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Breckfast",
-            "Potarded",
+			"Breckfast",
 			"Potarded",
 			"Potarded",
-        ],
+			"Potarded",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -8942,10 +8942,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Shadilay",
-            "Groyper",
-            "Feelio",
-            "Peperee",
+			"Shadilay",
+			"Groyper",
+			"Feelio",
 			"Peperee",
 			"Peperee",
 			"Peperee",
@@ -8954,7 +8953,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Peperee",
 			"Peperee",
 			"Peperee",
-        ],
+			"Peperee",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -9031,15 +9031,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Ketchup",
-            "Douflass",
-            "Saudoge",
-            "Saudoge",
+			"Ketchup",
+			"Douflass",
 			"Saudoge",
 			"Saudoge",
 			"Saudoge",
 			"Saudoge",
-        ],
+			"Saudoge",
+			"Saudoge",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -9104,11 +9104,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "RotenBeard",
-            "Davyjaws",
+			"RotenBeard",
 			"Davyjaws",
 			"Davyjaws",
-        ],
+			"Davyjaws",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -9181,11 +9181,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "bunne",
-            "Bunfuggin",
-            "Bunnorgy",
+			"bunne",
+			"Bunfuggin",
 			"Bunnorgy",
-        ],
+			"Bunnorgy",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -9245,15 +9245,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "WAGGLE",
-            "DORITO DEW",
-            "FaZeagle",
+			"WAGGLE",
+			"DORITO DEW",
 			"FaZeagle",
 			"FaZeagle",
 			"FaZeagle",
 			"FaZeagle",
 			"FaZeagle",
-        ],
+			"FaZeagle",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -9315,11 +9315,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "eyy",
-            "Oogabuga",
-            "Oogabuga",
+			"eyy",
 			"Oogabuga",
-        ],
+			"Oogabuga",
+			"Oogabuga",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -9376,11 +9376,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            ">implying",
-            "Emplyin",
+			">implying",
 			"Emplyin",
 			"Emplyin",
-        ],
+			"Emplyin",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -9471,11 +9471,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Epic Post",
-            "Upbeddit",
+			"Epic Post",
 			"Upbeddit",
 			"Upbeddit",
-        ],
+			"Upbeddit",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -9548,12 +9548,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Chad",
-            "Bro Nero",
-            "sneed",
-            "sneed",
-            "chuck",
-        ],
+			"Chad",
+			"Bro Nero",
+			"sneed",
+			"sneed",
+			"chuck",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -9640,11 +9640,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "you e",
-            "oenis",
-            "i love among us",
-            "experiment",
-        ],
+			"you e",
+			"oenis",
+			"i love among us",
+			"experiment",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -9695,11 +9695,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Red Star",
-            "Pyongnome",
+			"Red Star",
 			"Pyongnome",
 			"Pyongnome",
-        ],
+			"Pyongnome",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -9770,15 +9770,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Mozart",
-            "Riches",
-            "Ubruh",
-            "Ubruh",
+			"Mozart",
+			"Riches",
 			"Ubruh",
 			"Ubruh",
 			"Ubruh",
 			"Ubruh",
-        ],
+			"Ubruh",
+			"Ubruh",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -9852,11 +9852,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "cyka blyat",
-            "Walruskie",
+			"cyka blyat",
 			"Walruskie",
 			"Walruskie",
-        ],
+			"Walruskie",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -9896,15 +9896,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "DICKBALL",
-            "Menacing",
-            "Warudio",
-            "Warudio",
+			"DICKBALL",
+			"Menacing",
 			"Warudio",
 			"Warudio",
 			"Warudio",
 			"Warudio",
-        ],
+			"Warudio",
+			"Warudio",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -9977,15 +9977,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Hedgehog",
-            "EdgeGod TM",
-            "Donutsteel",
+			"Hedgehog",
+			"EdgeGod TM",
 			"Donutsteel",
 			"Donutsteel",
 			"Donutsteel",
 			"Donutsteel",
 			"Donutsteel",
-        ],
+			"Donutsteel",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -10063,11 +10063,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Sweetie",
-            "/me cakes",
-            "Fondupple",
+			"Sweetie",
+			"/me cakes",
 			"Fondupple",
-        ],
+			"Fondupple",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -10118,15 +10118,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "HARDCORE",
-            "OH YEAH",
-            "Baloofang",
+			"HARDCORE",
+			"OH YEAH",
 			"Baloofang",
 			"Baloofang",
 			"Baloofang",
 			"Baloofang",
 			"Baloofang",
-        ],
+			"Baloofang",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -10179,15 +10179,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "eoeoeoeoeo",
-            "TSUUUUU",
-            "Socckat",
-            "Socckat",
+			"eoeoeoeoeo",
+			"TSUUUUU",
 			"Socckat",
 			"Socckat",
 			"Socckat",
 			"Socckat",
-        ],
+			"Socckat",
+			"Socckat",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -10259,11 +10259,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            ":v)",
-            "Ruselamp",
-            "Ruselamp",
+			":v)",
 			"Ruselamp",
-        ],
+			"Ruselamp",
+			"Ruselamp",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -10333,11 +10333,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "TunakTunak",
-            "Tunakking",
+			"TunakTunak",
 			"Tunakking",
 			"Tunakking",
-        ],
+			"Tunakking",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -10392,11 +10392,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "CruzCtrl",
-            "Hohohoming",
-            "Hohohoming",
+			"CruzCtrl",
 			"Hohohoming",
-        ],
+			"Hohohoming",
+			"Hohohoming",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -10524,11 +10524,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Rachnera",
-            "Senketula",
-            "Senketula",
+			"Rachnera",
 			"Senketula",
-        ],
+			"Senketula",
+			"Senketula",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -10684,11 +10684,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Clown type",
-            "Traumobra",
-            "Traumobra",
+			"Clown type",
 			"Traumobra",
-        ],
+			"Traumobra",
+			"Traumobra",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -10832,15 +10832,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Es Fefe",
-            "top fef",
+			"Es Fefe",
+			"top fef",
 			"Feferun",
 			"Feferun",
 			"Feferun",
 			"Feferun",
 			"Feferun",
 			"Feferun",
-        ],
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -10892,11 +10892,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "IRC",
-            "Discord",
-            "Skype",
-            "Jerkle",
-            "Jerkle",
+			"IRC",
+			"Discord",
+			"Skype",
 			"Jerkle",
 			"Jerkle",
 			"Jerkle",
@@ -10904,7 +10902,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Jerkle",
 			"Jerkle",
 			"Jerkle",
-        ],
+			"Jerkle",
+			"Jerkle",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -10956,11 +10956,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Benis",
-            "Faptime",
-            "Faptime",
+			"Benis",
 			"Faptime",
-        ],
+			"Faptime",
+			"Faptime",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -10993,11 +10993,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "HELLO.jpg",
-            "Shiriman",
-            "Shiriman",
+			"HELLO.jpg",
 			"Shiriman",
-        ],
+			"Shiriman",
+			"Shiriman",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -11109,11 +11109,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "NuThread",
-            "Dedwheat",
-            "Dedwheat",
+			"NuThread",
 			"Dedwheat",
-        ],
+			"Dedwheat",
+			"Dedwheat",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -11187,17 +11187,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Spurdo",
-            "Srolol",
-            "FUG XDDD",
-            "Benis X--D",
-            "Spedo",
+			"Spurdo",
+			"Srolol",
+			"FUG XDDD",
+			"Benis X--D",
 			"Spedo",
 			"Spedo",
 			"Spedo",
 			"Spedo",
 			"Spedo",
-        ],
+			"Spedo",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -11309,11 +11309,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "TrumpTower",
-            "Apartmant",
-            "Apartmant",
+			"TrumpTower",
 			"Apartmant",
-        ],
+			"Apartmant",
+			"Apartmant",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -11535,15 +11535,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Penn",
-            "Garbage",
-            "Wantnaut",
-            "Wantnaut",
+			"Penn",
+			"Garbage",
 			"Wantnaut",
 			"Wantnaut",
 			"Wantnaut",
 			"Wantnaut",
-        ],
+			"Wantnaut",
+			"Wantnaut",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -11597,11 +11597,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "anime",
-            "Cansumor",
+			"anime",
 			"Cansumor",
 			"Cansumor",
-        ],
+			"Cansumor",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -11657,11 +11657,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Snifit",
-            "Montammoth",
-            "Lil'Friend",
-            "cunk",
-            "Cokemmoth",
+			"Snifit",
+			"Montammoth",
+			"Lil'Friend",
+			"cunk",
 			"Cokemmoth",
 			"Cokemmoth",
 			"Cokemmoth",
@@ -11669,7 +11668,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Cokemmoth",
 			"Cokemmoth",
 			"Cokemmoth",
-        ],
+			"Cokemmoth",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -11719,15 +11719,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "D E A T H",
-            "Light",
-            "Grimdak",
-            "Grimdak",
+			"D E A T H",
+			"Light",
 			"Grimdak",
 			"Grimdak",
 			"Grimdak",
 			"Grimdak",
-        ],
+			"Grimdak",
+			"Grimdak",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -11810,11 +11810,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Oboma",
-            "Shroofle",
-            "Shroofle",
+			"Oboma",
 			"Shroofle",
-        ],
+			"Shroofle",
+			"Shroofle",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -11870,11 +11870,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Beta",
-            "Thundacock",
-            "Thundacock",
+			"Beta",
 			"Thundacock",
-        ],
+			"Thundacock",
+			"Thundacock",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -11928,11 +11928,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            ";-;5'",
-            "Mr. Sableye",
-            "Avianjoin",
-            "Avianjoin",
-        ],
+			";-;5'",
+			"Mr. Sableye",
+			"Avianjoin",
+			"Avianjoin",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -12077,15 +12077,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "LORD HELIX",
-            "Lovecraft",
-            "Cthullord",
-            "Cthullord",
+			"LORD HELIX",
+			"Lovecraft",
 			"Cthullord",
 			"Cthullord",
 			"Cthullord",
 			"Cthullord",
-        ],
+			"Cthullord",
+			"Cthullord",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -12156,15 +12156,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Onahole",
-            "Yeah Pussy",
-            "Gynuke",
-            "Gynuke",
+			"Onahole",
+			"Yeah Pussy",
 			"Gynuke",
 			"Gynuke",
 			"Gynuke",
 			"Gynuke",
-        ],
+			"Gynuke",
+			"Gynuke",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -12230,11 +12230,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Watastarta",
-            "Rainglock",
-            "Rainglock",
+			"Watastarta",
 			"Rainglock",
-        ],
+			"Rainglock",
+			"Rainglock",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -12272,11 +12272,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "paul isded",
-            "Substarr",
-            "Substarr",
+			"paul isded",
 			"Substarr",
-        ],
+			"Substarr",
+			"Substarr",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -12330,11 +12330,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Trumpets",
-            "Hofucno",
-            "Hofucno",
+			"Trumpets",
 			"Hofucno",
-        ],
+			"Hofucno",
+			"Hofucno",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -12397,11 +12397,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            ">captcha:",
-            "Hornititan",
-            "Hornititan",
+			">captcha:",
 			"Hornititan",
-        ],
+			"Hornititan",
+			"Hornititan",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -12478,11 +12478,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "F",
-            "Undastand",
-            "Undastand",
+			"F",
 			"Undastand",
-        ],
+			"Undastand",
+			"Undastand",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -12542,17 +12542,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Emoticons",
-            "BANNED",
-            "SHADOWBANNED",
-            "ProtoMagic",
-            "Banageddon",
+			"Emoticons",
+			"BANNED",
+			"SHADOWBANNED",
+			"ProtoMagic",
 			"Banageddon",
 			"Banageddon",
 			"Banageddon",
 			"Banageddon",
 			"Banageddon",
-        ],
+			"Banageddon",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -12618,11 +12618,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "RiskOfRain",
-            "Acufront",
-            "Acufront",
+			"RiskOfRain",
 			"Acufront",
-        ],
+			"Acufront",
+			"Acufront",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -12725,11 +12725,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Militank",
-            "Militant",
-            "Militant",
+			"Militank",
 			"Militant",
-        ],
+			"Militant",
+			"Militant",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -12834,11 +12834,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "WIIIIIIILD",
-            "Reagain",
-            "Reagain",
+			"WIIIIIIILD",
 			"Reagain",
-        ],
+			"Reagain",
+			"Reagain",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -12917,15 +12917,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "0w0",
-            "MediaFire",
-            "Viristal",
-            "Viristal",
+			"0w0",
+			"MediaFire",
 			"Viristal",
 			"Viristal",
 			"Viristal",
 			"Viristal",
-        ],
+			"Viristal",
+			"Viristal",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -12980,11 +12980,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Meme Dream",
-            "Dreameme",
-            "Dreameme",
+			"Meme Dream",
 			"Dreameme",
-        ],
+			"Dreameme",
+			"Dreameme",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -13056,15 +13056,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "LolWut",
-            "WutPear",
-            "Pearchie",
-            "Pearchie",
+			"LolWut",
+			"WutPear",
 			"Pearchie",
 			"Pearchie",
 			"Pearchie",
 			"Pearchie",
-        ],
+			"Pearchie",
+			"Pearchie",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -13149,11 +13149,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "NU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "ur mom",
-            "Tarditank",
-            "Tarditank",
+			"ur mom",
 			"Tarditank",
-        ],
+			"Tarditank",
+			"Tarditank",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -13210,15 +13210,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Uber",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Edge",
-            "Shiternet",
-            "Chromox",
+			"Edge",
+			"Shiternet",
 			"Chromox",
 			"Chromox",
 			"Chromox",
 			"Chromox",
 			"Chromox",
-        ],
+			"Chromox",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -13281,10 +13281,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Froot",
-            "Dragnfruit",
-            "Macedonia",
-            "Frutagon",
+			"Froot",
+			"Dragnfruit",
+			"Macedonia",
 			"Frutagon",
 			"Frutagon",
 			"Frutagon",
@@ -13293,7 +13292,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"Frutagon",
 			"Frutagon",
 			"Frutagon",
-        ],
+			"Frutagon",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -13387,11 +13387,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Shiteki",
-            "Biteki",
-            "Biteki",
+			"Shiteki",
 			"Biteki",
-        ],
+			"Biteki",
+			"Biteki",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -13446,11 +13446,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Susquatch",
-            "Sesquatch",
+			"Susquatch",
 			"Sesquatch",
 			"Sesquatch",
-        ],
+			"Sesquatch",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -13515,12 +13515,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Firastarta",
-            "sneed",
-            "sneed",
-            "sneed",
-            "chuck",
-        ],
+			"Firastarta",
+			"sneed",
+			"sneed",
+			"sneed",
+			"chuck",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -13601,11 +13601,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "FEMALEONLY",
-            "Slugfugg",
+			"FEMALEONLY",
 			"Slugfugg",
 			"Slugfugg",
-        ],
+			"Slugfugg",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -13699,15 +13699,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Sandertale",
-            "Varg",
-            "Spookscare",
-            "Spookscare",
+			"Sandertale",
+			"Varg",
 			"Spookscare",
 			"Spookscare",
 			"Spookscare",
 			"Spookscare",
-        ],
+			"Spookscare",
+			"Spookscare",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -13792,15 +13792,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "Sandertale",
-            "Varg",
-            "Goryannus",
-            "Goryannus",
+			"Sandertale",
+			"Varg",
 			"Goryannus",
 			"Goryannus",
 			"Goryannus",
 			"Goryannus",
-        ],
+			"Goryannus",
+			"Goryannus",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -13862,11 +13862,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Uber",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "HE",
-            "Funnedong",
+			"HE",
 			"Funnedong",
 			"Funnedong",
-        ],
+			"Funnedong",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
@@ -14406,15 +14406,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
-            "NUT DELUXE",
-            "NUUUUUUTT",
-            "NUTJOBBER",
-            "Deisnutz",
-            "Deisnutz",
+			"NUT DELUXE",
+			"NUUUUUUTT",
+			"NUTJOBBER",
 			"Deisnutz",
 			"Deisnutz",
 			"Deisnutz",
-        ],
+			"Deisnutz",
+			"Deisnutz",
+		],
 		randomBattleSets: [
 			{
 				abilities: [
