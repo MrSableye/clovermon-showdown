@@ -22157,7 +22157,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 42017,
 		accuracy: 100,
-		basePower: 90,
+		basePower: 85,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Phantom Fang",
@@ -22167,6 +22167,11 @@ export const Moves: { [moveid: string]: MoveData } = {
 		secondary: {
 			chance: 30,
 			volatileStatus: 'flinch',
+		},
+		self: {
+			boosts: {
+				spe: -1,
+			},
 		},
 		target: "normal",
 		type: "Ghost",
