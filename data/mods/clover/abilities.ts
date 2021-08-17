@@ -62,10 +62,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
-	solarpanels: {
-		inherit: true,
-		isNonstandard: "CAP",
-	},
 	beamboost: {
 		inherit: true,
 		isNonstandard: "CAP",
@@ -98,15 +94,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
-	amplify: {
-		inherit: true,
-		isNonstandard: "CAP",
-	},
 	bigbrain: {
-		inherit: true,
-		isNonstandard: "CAP",
-	},
-	hydrothermal: {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
