@@ -38,6 +38,15 @@ export const Formats: FormatList = [
 		ruleset: ['Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod'],
 	},
 	{
+		name: "[Gen 8 Clover Only] Free-For-All Random Battle",
+		mod: 'clover',
+		team: 'random',
+		gameType: 'freeforall',
+		tournamentShow: false,
+		rated: false,
+		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
 		name: "[Gen 8 Clover Only] OU",
 		mod: 'clover',
 		ruleset: [
