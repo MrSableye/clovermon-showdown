@@ -42,10 +42,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
-	flaminhot: {
-		inherit: true,
-		isNonstandard: "CAP",
-	},
 	tetanus: {
 		inherit: true,
 		isNonstandard: "CAP",
