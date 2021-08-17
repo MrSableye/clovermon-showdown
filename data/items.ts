@@ -3007,13 +3007,13 @@ export const Items: { [itemid: string]: ItemData } = {
 		},
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.baseSpecies.baseSpecies === 'Chanto') {
+			if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.baseSpecies.baseSpecies === 'Chanto' || pokemon.baseSpecies.baseSpecies === 'Ampstar') {
 				return this.chainModify(2);
 			}
 		},
 		onModifySpAPriority: 1,
 		onModifySpA(spa, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.baseSpecies.baseSpecies === 'Pikotton' || pokemon.baseSpecies.baseSpecies === 'Chanto') {
+			if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.baseSpecies.baseSpecies === 'Pikotton' || pokemon.baseSpecies.baseSpecies === 'Chanto' || pokemon.baseSpecies.baseSpecies === 'Ampstar') {
 				return this.chainModify(2);
 			}
 		},
@@ -7494,6 +7494,9 @@ export const Items: { [itemid: string]: ItemData } = {
 		name: "Moluganion",
 		availability: {clover: 1},
 		spritenum: 748,
+		fling: {
+			basePower: 20,
+		},
 		onAfterSetStatusPriority: -1,
 		onAfterSetStatus(status, pokemon) {
 			if (pokemon.baseSpecies.baseSpecies === 'Noxilium') {
@@ -7516,6 +7519,39 @@ export const Items: { [itemid: string]: ItemData } = {
 		},
 		itemUser: ["Noxilium"],
 		isNonstandard: "Future",
+	},
+	skub: {
+		name: "Skub",
+		availability: {clover: 1},
+		spritenum: 286,
+		fling: {
+			basePower: 20,
+		},
+		onModifyDefPriority: 1,
+		onModifyDef(def, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Skuba') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpDPriority: 1,
+		onModifySpD(spd, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Skuba') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Skuba-Anti') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Skuba-Anti') {
+				return this.chainModify(1.5);
+			}
+		},
+		itemUser: ["Skuba", "Skuba-Anti"],
 	},
 	/* Clover CAP Mega Stones */
 	ooganite: {

@@ -2383,6 +2383,10 @@ export const ItemsText: { [k: string]: ItemText } = {
 		name: "Moluganion",
 		desc: "If held by Noxilium, it is immune to status effects and confusion.",
 	},
+	skub: {
+		name: "Skub",
+		desc: "Skuba-Pro 1.5x Def and SpD; Skuba-Anti 1.5x Atk and SpA.",
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",

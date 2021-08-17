@@ -21765,7 +21765,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 42001,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 85,
 		category: "Physical",
 		name: "Crusader Crash",
 		pp: 5,
@@ -21816,41 +21816,23 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 	livewire: {
 		availability: {clover: 1},
-		num: 42004,
-		accuracy: 100,
+		accuracy: true,
 		basePower: 0,
 		category: "Status",
 		name: "Livewire",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1},
-		volatileStatus: 'livewire',
-		condition: {
-			onStart(target) {
-				this.add('-start', target, 'move: Livewire');
-			},
-			onResidualOrder: 8,
-			onResidual(pokemon) {
-				const target = this.effectState.source.side.active[pokemon.volatiles['livewire'].sourcePosition];
-				if (!target || target.fainted || target.hp <= 0) {
-					this.debug('Nothing to leech into');
-					return;
-				}
-				const damage = this.damage(pokemon.baseMaxhp / 8, pokemon, target);
-				if (damage) {
-					this.heal(damage, target, pokemon);
-				}
-			},
-		},
-		onTryImmunity(target) {
-			return !target.hasType('Ground');
+		flags: {snatch: 1, heal: 1},
+		onHit(pokemon) {
+			let factor = 0.333;
+			if (this.field.isTerrain('electricterrain') && pokemon.isGrounded()) {
+				factor = 0.667;
+			}
+			return !!this.heal(this.modify(pokemon.maxhp, factor));
 		},
 		secondary: null,
-		target: "normal",
+		target: "self",
 		type: "Electric",
-		isNonstandard: "Future",
-		zMove: {effect: 'clearnegativeboost'},
-		contestType: "Clever",
 	},
 	dragonburst: {
 		availability: {clover: 1},
@@ -21994,7 +21976,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1, atlas: 1},
 		num: 42009,
 		accuracy: 100,
-		basePower: 95,
+		basePower: 80,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Boil Over",
@@ -22147,10 +22129,10 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 42016,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 0,
 		basePowerCallback(pokemon) {
 			if (!pokemon.volatiles['stockpile'] || !pokemon.volatiles['stockpile'].layers) return false;
-			return 80 + pokemon.volatiles['stockpile'].layers * 100;
+			return pokemon.volatiles['stockpile'].layers * 120;
 		},
 		category: "Special",
 		isNonstandard: "Future",
@@ -22161,7 +22143,12 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onAfterMove(pokemon) {
 			pokemon.removeVolatile('stockpile');
 		},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -2,
+			},
+		},
 		target: "normal",
 		type: "Fairy",
 	},
@@ -22169,7 +22156,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 42017,
 		accuracy: 100,
-		basePower: 85,
+		basePower: 90,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Phantom Fang",
@@ -22178,7 +22165,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 		secondary: {
 			chance: 30,
-			status: 'brn',
+			volatileStatus: 'flinch',
 		},
 		target: "normal",
 		type: "Ghost",
@@ -22210,6 +22197,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		critRatio: 2,
 		secondary: null,
 		target: "normal",
 		type: "Ice",
@@ -22218,17 +22206,16 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 42020,
 		accuracy: 100,
-		basePower: 90,
+		basePower: 110,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Shadow Scales",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 20,
+		selfBoost: {
 			boosts: {
-				accuracy: -1,
+				def: -1,
 			},
 		},
 		target: "normal",
@@ -22544,6 +22531,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 10,
 		priority: 0,
 		flags: {mirror: 1},
+		volatileStatus: 'endure',
 		onAfterMove(target, source) {
 			const sourceSide = source.side;
 			const targetSide = source.side.foe;
@@ -22598,6 +22586,19 @@ export const Moves: { [moveid: string]: MoveData } = {
 
 			this.add('-swapboost', source, target, '[from] move: Turnabout');
 		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'move: Endure');
+			},
+			onDamagePriority: -10,
+			onDamage(damage, target, source, effect) {
+				if (effect?.effectType === 'Move' && damage >= target.hp) {
+					this.add('-activate', target, 'move: Endure');
+					return target.hp - 1;
+				}
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
@@ -22633,10 +22634,32 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Poison",
 		isNonstandard: "Future",
 	},
+	badeggs: {
+		availability: {clover: 1},
+		accuracy: 85,
+		basePower: 20,
+		basePowerCallback(pokemon, target, move) {
+			return 20 * move.hit;
+		},
+		category: "Physical",
+		name: "Bad Eggs",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 3,
+		multiaccuracy: true,
+		secondary: {
+			chance: 20,
+			status: 'tox',
+		},
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+	},
 	/* :^) */
 	skullcannon: {
 		availability: {clover: 1},
-		accuracy: 85,
+		accuracy: 90,
 		basePower: 150,
 		category: "Special",
 		isNonstandard: "Future",
@@ -22691,6 +22714,30 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "all",
 		type: "Bug",
 		zMove: {boost: {atk: 6, def: 6, spa: 6, spd: 6, spe: 6, accuracy: 6, evasion: 6}},
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	villify: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Villify",
+		pp: 20,
+		priority: 1,
+		flags: {protect: 1, reflectable: 1, mirror: 1, mystery: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Dark' || !target.setType('Dark')) {
+				// Soak should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add('-fail', target);
+				return null;
+			}
+			this.add('-start', target, 'typechange', 'Dark');
+		},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Dark",
 		contestType: "Cute",
 		isNonstandard: "Future",
 	},

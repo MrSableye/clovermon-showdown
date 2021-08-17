@@ -9134,6 +9134,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
+	doomsday: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	/* :^) */
 	dussans: {
 		availability: {clover: 1},
