@@ -5194,9 +5194,19 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	},
 	rusepower: {
 		availability: {clover: 1},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (['Poison', 'Dark'].includes(move.type)) {
+				this.debug('Ruse Power boost');
+				return this.chainModify(1.5);
+			}
+		},
 		onModifySpAPriority: 5,
-		onModifySpA() {
-			return this.chainModify(1.2);
+		onModifySpA(atk, attacker, defender, move) {
+			if (['Poison', 'Dark'].includes(move.type)) {
+				this.debug('Ruse Power boost');
+				return this.chainModify(1.5);
+			}
 		},
 		name: "Ruse Power",
 		rating: 5,
@@ -5255,26 +5265,6 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		isBreakable: false,
 		name: "Spooky Aura",
 		rating: 3,
-		isNonstandard: "Future",
-	},
-	flaminhot: {
-		availability: {clover: 1},
-		onModifyAtkPriority: 5,
-		onModifyAtk(atk, attacker, defender, move) {
-			if (move.type === 'Fire') {
-				this.debug('Steelworker boost');
-				return this.chainModify(1.5);
-			}
-		},
-		onModifySpAPriority: 5,
-		onModifySpA(atk, attacker, defender, move) {
-			if (move.type === 'Fire') {
-				this.debug('Steelworker boost');
-				return this.chainModify(1.5);
-			}
-		},
-		name: "Flamin Hot",
-		rating: 3.5,
 		isNonstandard: "Future",
 	},
 	tetanus: {
@@ -5348,31 +5338,6 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Temperamental",
 		rating: 1,
-		isNonstandard: "Future",
-	},
-	solarpanels: {
-		availability: {clover: 1},
-		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Fire') {
-				if (!this.boost({spa: 1})) {
-					this.add('-immune', target, '[from] ability: Solar Panels');
-				}
-				return null;
-			}
-		},
-		onAnyRedirectTarget(target, source, source2, move) {
-			if (move.type !== 'Fire' || ['firepledge', 'grasspledge', 'waterpledge'].includes(move.id)) return;
-			const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
-			if (this.validTarget(this.effectState.target, source, redirectTarget)) {
-				if (move.smartTarget) move.smartTarget = false;
-				if (this.effectState.target !== target) {
-					this.add('-activate', this.effectState.target, 'ability: Solar Panels');
-				}
-				return this.effectState.target;
-			}
-		},
-		name: "Solar Panels",
-		rating: 3,
 		isNonstandard: "Future",
 	},
 	beamboost: {
@@ -5547,48 +5512,6 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 4.5,
 		isNonstandard: "Future",
 	},
-	amplify: {
-		availability: {clover: 1},
-		onSourceModifyAtkPriority: 5,
-		onSourceModifyAtk(atk, attacker, defender, move) {
-			if (move.type === 'Flying') {
-				return this.chainModify(0.5);
-			}
-		},
-		onSourceModifySpAPriority: 5,
-		onSourceModifySpA(atk, attacker, defender, move) {
-			if (move.type === 'Flying') {
-				return this.chainModify(0.5);
-			}
-		},
-		onModifyAtk(atk, attacker, defender, move) {
-			if (move.type === 'Electric') {
-				return this.chainModify(2);
-			}
-		},
-		onModifySpA(atk, attacker, defender, move) {
-			if (move.type === 'Electric') {
-				return this.chainModify(2);
-			}
-		},
-		onUpdate(pokemon) {
-			if (pokemon.status === 'slp') {
-				this.add('-activate', pokemon, 'ability: Amplify');
-				pokemon.cureStatus();
-			}
-		},
-		onSetStatus(status, target, source, effect) {
-			if (status.id !== 'slp') return;
-			if ((effect as Move)?.status) {
-				this.add('-immune', target, '[from] ability: Amplify');
-			}
-			return false;
-		},
-		name: "Amplify",
-		rating: 4.5,
-		num: 199,
-		isNonstandard: "Future",
-	},
 	bigbrain: {
 		availability: {clover: 1},
 		onModifySpAPriority: 5,
@@ -5598,23 +5521,6 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Big Brain",
 		rating: 5,
 		num: 37,
-		isNonstandard: "Future",
-	},
-	hydrothermal: {
-		availability: {clover: 1},
-		onModifyMove(move) {
-			if (!move || move.type === 'Water' || move.target === 'self') return;
-			if (!move.secondaries) {
-				move.secondaries = [];
-			}
-			move.secondaries.push({
-				chance: 30,
-				status: 'brn',
-				ability: this.dex.abilities.get('hydrothermal'),
-			});
-		},
-		name: "Hydrothermal",
-		rating: 3,
 		isNonstandard: "Future",
 	},
 	dispenser: {
@@ -5641,6 +5547,20 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Dispenser",
 		rating: 4,
+		isNonstandard: "Future",
+	},
+	leech: {
+		onModifyMove(move) {
+			if (!move?.flags['contact'] || move.target === 'self') return;
+		},
+		onAfterMoveSecondarySelfPriority: -1,
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (move.totalDamage) {
+				this.heal(move.totalDamage / 4, pokemon);
+			}
+		},
+		name: "Leech",
+		rating: 3.5,
 		isNonstandard: "Future",
 	},
 	/* Atlas Exclusive Abilities */

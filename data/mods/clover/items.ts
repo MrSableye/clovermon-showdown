@@ -298,4 +298,8 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	skub: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

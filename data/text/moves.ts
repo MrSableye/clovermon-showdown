@@ -7219,17 +7219,17 @@ export const MovesText: {[k: string]: MoveText} = {
 	tombstoner: {
 		name: "Tombstoner",
 		desc: "The user faints after using this move, Damage is calculated using the user's Defense stat as its Attack. This move is prevented from executing if any active Pokemon has the Damp Ability. ",
-		shortDesc: "Hits adjacent Pokemon. The user faints, Uses user's Def stat as Atk in damage calculation.",
+		shortDesc: "The user faints, Uses user's Def stat as Atk.",
 	},
 	fruitjuice: {
 		name: "Fruit Juice",
-		desc: "Power is equal to 100 times the user's Stockpile count plus 80. Whether or not this move is successful, the user's Defense and Special Defense decrease by as many stages as Stockpile had increased them, and the user's Stockpile count resets to 0.",
-		shortDesc: "More power with more uses of Stockpile.",
+		desc: "Power is equal to 120 times the user's Stockpile count. Whether or not this move is successful, the user's Defense and Special Defense decrease by as many stages as Stockpile had increased them, and the user's Stockpile count resets to 0. Lowers the target's Sp.Def by two stages.",
+		shortDesc: "Gets stronger with Stockpile, -2 SpD to the target",
 	},
 	phantomfang: {
 		name: "Phantom Fang",
 		desc: "Has a 30% chance to burn the target.",
-		shortDesc: "30% chance to burn the target.",
+		shortDesc: "30% to flinch, Lowers the user's Speed by 1.",
 	},
 	phasethrough: {
 		name: "Phase Through",
@@ -7239,12 +7239,13 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	coldcutter: {
 		name: "Cold Cutter",
-		shortDesc: "No additional effect.",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
 	},
 	shadowscales: {
 		name: "Shadow Scales",
-		desc: "Has a 20% chance to lower the target's accuracy by 1 stage.",
-		shortDesc: "20% chance to lower the target's accuracy by 1.",
+		desc: "Lowers the user's Defense by 1 stage.",
+		shortDesc: "Lowers the user's Defense by 1.",
 	},
 	wingsofcorrection: {
 		name: "Wings Of Correction",
@@ -7267,8 +7268,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	gazerbeam: {
 		name: "Gazer Beam",
-		desc: "Has a 10% chance to burn the target. This move's type effectiveness against Steel is changed to be super effective no matter what this move's type is.",
-		shortDesc: "10% chance to burn. Super effective on Steel.",
+		desc: "Has a 30% chance to burn the target. This move's type effectiveness against Steel is changed to be super effective no matter what this move's type is.",
+		shortDesc: "30% chance to burn. Super effective on Steel.",
 	},
 	cloudbreaker: {
 		name: "Cloud Breaker",
@@ -7304,12 +7305,17 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	memejr: {
 		name: "Meme Jr.",
-		shortDesc: "Raises a random stat of the user by 1.",
+		shortDesc: "50% chance to raise a random stat by 1.",
 	},
 	medsnow: {
 		name: "Meds Now",
 		desc: "If the target is an ally, this move restores 3/4 of its maximum HP, rounded down, instead of dealing damage.",
 		shortDesc: "If the target is an ally, heals 75% of its max HP.",
+	},
+	villify: {
+		name: "Villify",
+		desc: "Causes the target to become a Dark type. Fails if the target is an Arceus or a Silvally, or if the target is already purely Dark type.",
+		shortDesc: "Changes adjacent Pokemon's types to Dark, +1 Prio.",
 	},
 	/* :^) */
 	skullcannon: {
@@ -7318,7 +7324,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	itsover: {
 		name: "It's Over",
-		shortDesc: "It's over for Clovermon Showdown.",
+		shortDesc: "No competitive use.",
 
 		activate: "  It's over!",
 	},

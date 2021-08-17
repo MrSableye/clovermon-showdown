@@ -1867,7 +1867,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	rusepower: {
 		name: "Ruse Power",
-		desc: "The power of this Pokemon's special attacks is multiplied by 1.2.",
+		desc: "Poison and Dark moves have 1.5x power.",
 	},
 	omniscience: {
 		name: "Omniscience",
@@ -1880,10 +1880,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	wholesome100: {
 		name: "Wholesome 100",
 		desc: "This Pokemon is immune to Dark-type moves.",
-	},
-	flaminhot: {
-		name: "Flamin Hot",
-		desc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fire-type attack.",
 	},
 	spookyaura: {
 		name: "Spooky Aura",
@@ -1944,17 +1940,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's sound-based moves become Steel-type moves. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
 		shortDesc: "This Pokemon's sound-based moves become Steel type.",
 	},
-	solarpanels: {
-		name: "Solar Panels",
-		desc: "This Pokemon is immune to Fire-type moves and raises its Special Attack by 1 stage when hit by a Fire-type move. If this Pokemon is not the target of a single-target Fire-type move used by another Pokemon, this Pokemon redirects that move to itself if it is within the range of that move.",
-		shortDesc: "This Pokemon draws Fire moves to itself to raise Sp. Atk by 1; Fire immunity.",
-
-		activate: "#lightningrod",
-	},
 	beamboost: {
 		name: "Beam Boost",
-		desc: "This Pokemon's Beam-based attacks have their power multiplied by 1.5; secondary effect chance tripled.",
-		shortDesc: "This Pokemon's beam attacks have 1.5x power, secondary effect chance tripled.",
+		desc: "This Pokemon's Beam-based attacks have their power multiplied by 1.5.",
+		shortDesc: "This Pokemon's beam attacks have 1.5x power",
 	},
 	spincleaner: {
 		name: "Spin Cleaner",
@@ -1973,14 +1962,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Shitbug Tactics",
 		shortDesc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes.",
 	},
-	hydrothermal: {
-		name: "Hydrothermal",
-		shortDesc: "This Pokemon's Water moves have a 30% chance of burning.",
-	},
 	dispenser: {
 		name: "Dispenser",
 		shortDesc: "At the end of every turn, heals user and allies for 1/10 of their max HP and 1 PP to one of their moves.",
 		activate: "  [SOURCE]'s Dispenser restored the PP of [TARGET]'s [MOVE] by 1!",
+	},
+	leech: {
+		name: "Leech",
+		shortDesc: "User recovers 25% of damage dealt.",
 	},
 	/* Atlas Abilities */
 	tardrage: {
