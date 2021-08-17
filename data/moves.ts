@@ -20638,7 +20638,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onAfterHit(target, source) {
 			this.damage(Math.round(source.maxhp / 2), source, source, this.dex.conditions.get('Overbite'), true);
 		},
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 		isNonstandard: "Future",
 	},
 	"1000folds": {
@@ -20985,6 +20985,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
+		ignoreAbility: true,
 		isNonstandard: "Future",
 	},
 	greatrage: {

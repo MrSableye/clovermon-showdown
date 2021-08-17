@@ -1926,7 +1926,7 @@ export class RandomTeams {
 			if (!species.exists) continue;
 
 			// Check if the forme has moves for random battle
-			if (this.format.gameType === 'singles') {
+			if ((this.format.gameType === 'singles') || (this.format.gameType === 'freeforall')) {
 				if (!species.randomBattleMoves) continue;
 			} else {
 				if (!species.randomDoubleBattleMoves) continue;
@@ -1985,7 +1985,7 @@ export class RandomTeams {
 			// The Pokemon of the Day
 			if (!!potd && potd.exists && pokemon.length === 1) species = potd;
 
-			const set = this.randomSet(species, teamDetails, pokemon.length === 0, this.format.gameType !== 'singles', isCloveronly);
+			const set = this.randomSet(species, teamDetails, pokemon.length === 0, !['singles', 'multi'].includes(this.format.gameType), isCloveronly);
 
 			// Okay, the set passes, add it to our team
 			pokemon.push(set);

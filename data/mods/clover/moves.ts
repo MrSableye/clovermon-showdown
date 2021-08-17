@@ -91,7 +91,36 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	metronome: {
 		inherit: true,
 		pp: 30,
-		// TODO: More stuff needed
+		noMetronome: [
+			"Assist", "Baneful Bunker", "Beak Blast", "Belech", "Celebrate", "Weird Flex", "Chatter", "Copycat", "Counter", "Covet", "Crafty Shieeld", "Destiny Bond", "Detect", "Diamond Storm", "Endure", "Feint", "Fleur Cannon", "Focus Punch", "Follow Me", "Freeze Shock", "Helping Hand", "Hyperspace Fury", "Hyperspace Hole", "Ice Burn", "King's Shield", "Light of Ruin", "Mat Block", "Me First", "Mimic", "Mind Blown", "Mirror Coat", "Mirror Movee", "Nature Power", "Photon Geyser", "Plasma Fists", "Protect", "Quick Guard", "Rage Powder", "Relic Song", "Secret Sword", "Shell Trap", "Sketch", "Sleep Talk", "Snarl", "Snatch", "Snore", "Spectral Thief", "Spiky Shield", "Steam Eruption", "Struggle", "Switcheroo", "Techno Blast", "Thousand Arrows", "Thousand Waves", "Thief", "Transform", "Trick", "V-Create", "Wide Guard", "Metronome", "Imprison", "Focus Munch",
+		],
+		onHit(target, source, effect) {
+			const isStandard = (move: Move, format: Format) => {
+				if (format.isNonstandard === 'CAP') {
+					return !format.isNonstandard || format.isNonstandard === 'CAP';
+				}
+
+				return !format.isNonstandard;
+			};
+			const moves = this.dex.moves.all().filter(
+				move => move.availability?.clover === 1 &&
+					!move.realMove &&
+					!move.isZ &&
+					!move.isMax &&
+					!effect.noMetronome?.includes(move.name) &&
+					!(this.dex.moves.get(move.id).gen > this.gen) &&
+					isStandard(move, this.format)
+			);
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).name;
+			}
+			if (!randomMove) {
+				return false;
+			}
+			this.actions.useMove(randomMove, target);
+		},
 	},
 	rockclimb: {
 		inherit: true,
