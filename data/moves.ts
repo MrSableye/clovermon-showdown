@@ -21884,8 +21884,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
 		secondary: {
-			chance: 30,
-			volatileStatus: 'flinch',
+			chance: 20,
+			volatileStatus: 'confusion',
 		},
 		target: "normal",
 		type: "Rock",
