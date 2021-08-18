@@ -110,4 +110,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	bonerzoner: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
