@@ -966,4 +966,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	villify: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

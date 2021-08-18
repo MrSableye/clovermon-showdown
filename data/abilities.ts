@@ -4767,7 +4767,8 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		onResidual(pokemon) {
 			if (!pokemon.hp) return;
-			for (const target of [...pokemon.side.active, ...pokemon.side.foe.active]) {
+			const targets = this.sides.flatMap((side) => side.allies(true));
+			for (const target of targets) {
 				if (!target || !target.hp || pokemon === target) continue;
 				if (!target.hasAbility('soundproof')) {
 					this.damage(target.baseMaxhp / 16, target, pokemon);
@@ -4893,7 +4894,8 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	bigguy: {
 		availability: {clover: 1},
 		name: "Big Guy",
-		onStart() {
+		onStart(pokemon) {
+			this.add('-activate', pokemon, 'ability: Big Guy');
 			this.field.addPseudoWeather('gravity');
 		},
 		rating: 4,
