@@ -1985,7 +1985,7 @@ export class RandomTeams {
 			// The Pokemon of the Day
 			if (!!potd && potd.exists && pokemon.length === 1) species = potd;
 
-			const set = this.randomSet(species, teamDetails, pokemon.length === 0, !['singles', 'multi'].includes(this.format.gameType), isCloveronly);
+			const set = this.randomSet(species, teamDetails, pokemon.length === 0, !['singles', 'freeforall'].includes(this.format.gameType), isCloveronly);
 
 			// Okay, the set passes, add it to our team
 			pokemon.push(set);
