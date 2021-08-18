@@ -195,7 +195,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"blacksludge",
 				],
 				moves: [
-					"calmmind",
+					"toxic",
 					"softboiled",
 					"scald",
 					"sludgebomb",
@@ -225,7 +225,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"stickyweb",
 			"rapidspin",
 			"sludgebomb",
-			"calmmind",
+			"icebeam",
 		],
 		randomBattleLevel: 72,
 	},
@@ -2342,13 +2342,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"leftovers",
 				],
 				moves: [
-					"discharge",
+					"voltswitch",
 					"flamethrower",
 					"grassknot",
 				],
 				lockedMoves: [
 					"milkdrink",
-					"calmmind",
+					"discharge",
 				],
 				level: 84,
 			},
@@ -3771,7 +3771,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				],
 				moves: [
 					"softboiled",
-					"calmmind",
+					"toxic",
 					"shadowball",
 					"fireblast",
 					"focusblast",
@@ -4130,7 +4130,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"leftovers",
 				],
 				moves: [
-					"calmmind",
+					"mop",
 					"roost",
 					"aeroblast",
 					"heatwave",
@@ -5049,7 +5049,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				moves: [
 					"calmmind",
 					"sludgewave",
-					"recover",
+					"toxic",
 					"flamethrower",
 				],
 				level: 72,
@@ -5312,7 +5312,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				moves: [
 					"psychoshift",
 					"recover",
-					"calmmind",
+					"erosionwave",
 					"moonblast",
 				],
 				level: 84,
@@ -6789,7 +6789,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"leftovers",
 				],
 				moves: [
-					"calmmind",
+					"mop",
 					"softboiled",
 					"earthpower",
 					"moonblast",
@@ -6922,10 +6922,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"lifeorb",
 				],
 				moves: [
-					"calmmind",
-					"naturepower",
-					"darkpulse",
-					"recover",
+					"nastyplot",
+					"ancientpower",
+					"thinkfast",
+					"substitute",
 				],
 				level: 84,
 			},
@@ -7620,7 +7620,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			},
 		],
 		randomBattleMoves: [
-			"calmmind",
+			"hex",
 			"darkpulse",
 			"willowisp",
 			"softboiled",
@@ -7799,8 +7799,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				],
 				moves: [
 					"calmmind",
+					"seedflare",
 					"cottonguard",
-					"softboiled",
 					"scald",
 				],
 				level: 80,
@@ -8649,7 +8649,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"baddybad",
 			"moonblast",
 			"lightscreen",
-			"calmmind",
+			"trick",
 			"milkdrink",
 		],
 		randomBattleLevel: 76,
@@ -12286,7 +12286,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"leftovers",
 				],
 				moves: [
-					"calmmind",
+					"toxic",
 					"scald",
 					"slackoff",
 					"icebeam",
@@ -12319,7 +12319,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"boomburst",
 			"scald",
 			"discharge",
-			"calmmind",
+			"healbell",
 			"slackoff",
 			"icebeam",
 		],
@@ -12519,6 +12519,24 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				],
 				lockedMoves: [
 					"calmmind",
+				],
+				level: 84,
+			},
+			{
+				abilities: [
+					"waitforit",
+				],
+				items: [
+					"chestoberry",
+				],
+				moves: [
+					"memento",
+					"wish",
+					"voltswitch",
+				],
+				lockedMoves: [
+					"batonpass",
+					"rest",
 				],
 				level: 84,
 			},
@@ -13389,8 +13407,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		randomBattleNicknames: [
 			"Shiteki",
 			"Biteki",
-			"Biteki",
-			"Biteki",
 		],
 		randomBattleSets: [
 			{
@@ -13516,10 +13532,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		randomBattleNicknames: [
 			"Firastarta",
-			"sneed",
-			"sneed",
-			"sneed",
-			"chuck",
+			"Fireshitre",
+			"Fireshitre",
+			"Fireshitre",
 		],
 		randomBattleSets: [
 			{
@@ -13532,7 +13547,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				moves: [
 					"calmmind",
 					"lavaplume",
-					"morningsun",
+					"thunderbolt",
 					"sludgebomb",
 					"clearsmog",
 				],
@@ -14837,7 +14852,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	dinomight: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP LC",
+		tier: "CAP",
 	},
 	cocken: {
 		inherit: true,
@@ -15269,12 +15284,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
-	ampstar: {
+	hamstatic: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP LC",
 	},
-	hamstatic: {
+	ampstar: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",
@@ -15370,6 +15385,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "CAP",
 	},
 	tarantagon: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	yuukiino: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	aquadiiva: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	icehugger: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	xeninter: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",
