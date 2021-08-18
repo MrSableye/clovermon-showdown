@@ -22769,6 +22769,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		},
 		target: "allAdjacentFoes",
 		type: "Ice",
+		isNonstandard: "Future"
 	},
 	/* Atlas Exclusive Moves */
 	mondayz: {
