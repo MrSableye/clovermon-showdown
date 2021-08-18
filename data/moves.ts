@@ -22747,6 +22747,29 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 		isNonstandard: "Future",
 	},
+	nuclearwinter: {
+		availability: {clover: 1},
+		num: 573,
+		accuracy: 70,
+		basePower: 100,
+		category: "Special",
+		name: "Nuclear Winter",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Ice') return 1;
+		},
+		onModifyMove(move) {
+			if (this.field.isWeather('hail')) move.accuracy = true;
+		},
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
+		target: "allAdjacentFoes",
+		type: "Ice",
+	},
 	/* Atlas Exclusive Moves */
 	mondayz: {
 		availability: {atlas: 1},

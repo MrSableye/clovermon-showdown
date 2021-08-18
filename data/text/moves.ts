@@ -7317,6 +7317,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Causes the target to become a Dark type. Fails if the target is an Arceus or a Silvally, or if the target is already purely Dark type.",
 		shortDesc: "Changes adjacent Pokemon's types to Dark, +1 Prio.",
 	},
+	nuclearwinter: {
+		name: "Nuclear Winter",
+		desc: "Has a 10% chance to burn the target. This move's type effectiveness against Ice is changed to be super effective no matter what this move's type is. If the weather is Hail, this move does not check accuracy.",
+		shortDesc: "10% burn. Super effective on Ice, Can't miss in hail.",
+	},
 	/* :^) */
 	skullcannon: {
 		name: "Skull Cannon",

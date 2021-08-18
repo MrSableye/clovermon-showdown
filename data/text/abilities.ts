@@ -1971,6 +1971,20 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Leech",
 		shortDesc: "User recovers 25% of damage dealt.",
 	},
+	supportive: {
+		name: "Supportive",
+		desc: "While this Pokemon is active, moves with recoil and faint the user are prevented from having an effect.",
+		shortDesc: "Prevents self harming moves while active.",
+
+		block: "  [SOURCE] was stopped from using [MOVE]!",
+		
+		start: "  [POKEMON] is being supportive!",
+	},
+	bonerzoner: {
+		name: "Boner Zoner",
+		shortDesc: "This Pokemon's Bone-based and Dragon moves ignore immunities.",
+		start: "  [POKEMON] has descended into the Boner Zoner!",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",
