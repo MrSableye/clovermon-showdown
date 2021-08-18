@@ -120,7 +120,8 @@ export const Badges = new class {
 	}
 	async removeBadgeFromUser(userID: string, badgeID: string, requester: User, override = false) {
 		const overridePermissions = override || Badges.canOverrideBadgeOwnership(requester);
-		return Chat.Badges.removeBadgeFromUser(userID, badgeID, requester.id, overridePermissions);
+		await Chat.Badges.removeBadgeFromUser(userID, badgeID, requester.id, overridePermissions);
+		await Badges.updateUser(userID);
 	}
 	async deleteUserBadges(badgeID: string, requester: User) {
 		await Chat.Badges.deleteUserBadges(badgeID);
