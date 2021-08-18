@@ -5580,7 +5580,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		isBreakable: true,
 		name: "Supportive",
 		rating: 1,
-		num: 6,
+		isNonstandard: "Future"
 	},
 	bonerzoner: {
 		availability: {clover: 1},
@@ -5602,6 +5602,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			}
 		},
 		rating: 3.5,
+		isNonstandard: "Future"
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {

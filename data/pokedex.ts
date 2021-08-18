@@ -31669,7 +31669,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Weatherbane",
 		types: ["Steel", "Flying"],
 		genderRatio: {M: 0.875, F: 0.125},
-		baseStats: {hp: 96, atk: 32, def: 128, spa: 112, spd: 64, spe: 64},
+		baseStats: {hp: 96, atk: 80, def: 112, spa: 128, spd: 64, spe: 48},
 		abilities: {0: "Sturdy", 1: "Lightning Rod", H: "Competitive", S: "Air Lock"},
 		heightm: 2.7,
 		weightkg: 320,
@@ -32859,11 +32859,11 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gender: "N",
 		baseStats: {
 			hp: 70,
-			atk: 50,
-			def: 50,
+			atk: 55,
+			def: 55,
 			spa: 150,
 			spd: 150,
-			spe: 125,
+			spe: 115,
 		},
 		abilities: {
 			0: "Protean",
