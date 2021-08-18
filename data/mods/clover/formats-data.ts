@@ -9545,7 +9545,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	wheygle: {
 		inherit: true,
-		tier: "UU",
+		tier: "UUBL",
 		isNonstandard: null,
 		randomBattleNicknames: [
 			"Chad",
