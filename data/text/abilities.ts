@@ -1977,7 +1977,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Prevents self harming moves while active.",
 
 		block: "  [SOURCE] was stopped from using [MOVE]!",
-		
+
 		start: "  [POKEMON] is being supportive!",
 	},
 	bonerzoner: {

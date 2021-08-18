@@ -32670,7 +32670,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Icehugger",
 		types: ["Ice", "Poison"],
 		gender: "N",
-		baseStats: {hp: 45,atk: 85, def: 20, spa: 95, spd: 20, spe: 41},
+		baseStats: {hp: 45, atk: 85, def: 20, spa: 95, spd: 20, spe: 41},
 		abilities: {0: "Corrosion", 1: "Poison Touch", H: "No Guard", S: "Adaptability"},
 		heightm: 0.7,
 		weightkg: 11.5,

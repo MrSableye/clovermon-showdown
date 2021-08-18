@@ -5571,7 +5571,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			this.add('-ability', pokemon, 'Supportive');
 		},
 		onAnyTryMove(target, source, effect) {
-			if (['bravebird','doubleedge','flareblitz','headcharge','headsmash','lightofruin','submission','takedown','volttackle','wildcharge','woodhammer','avianrush','owtheedge','overbite','mindblown','memento','explosion','finalgambit','healingwish','lunardance','explosion','mistyexplosion','selfdestruct','sudoku',].includes(effect.id)) {
+			if (['bravebird', 'doubleedge', 'flareblitz', 'headcharge', 'headsmash', 'lightofruin', 'submission', 'takedown', 'volttackle', 'wildcharge', 'woodhammer', 'avianrush', 'owtheedge', 'overbite', 'mindblown', 'memento', 'explosion', 'finalgambit', 'healingwish', 'lunardance', 'explosion', 'mistyexplosion', 'selfdestruct', 'sudoku'].includes(effect.id)) {
 				this.attrLastMove('[still]');
 				this.add('cant', this.effectState.target, 'ability: Supportive', effect, '[of] ' + target);
 				return false;
@@ -5580,7 +5580,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		isBreakable: true,
 		name: "Supportive",
 		rating: 1,
-		isNonstandard: "Future"
+		isNonstandard: "Future",
 	},
 	bonerzoner: {
 		availability: {clover: 1},
@@ -5590,7 +5590,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		onModifyMovePriority: -5,
 		onModifyMove(move, attacker, defender) {
-			if (['bonemerang', 'boneclub', 'shadowbone', 'bonerush', 'dragonclaw', 'dragondarts', 'dragonfist', 'dragonhammer', 'dragontail', 'outrage', 'breakingswipe', 'dildocannon', 'dragonrush', 'dualchop', 'scaleshot', 'clangingscales', 'coreenforcer', 'dracometeor', 'dragonenergy', 'dragonpulse', 'dynamaxcannon', 'spacialrend', 'dragonbreath', 'dragonrage', 'eternabeam', 'roaroftime', 'twister', 'dragonburst',].includes(move.id)) {
+			if (['bonemerang', 'boneclub', 'shadowbone', 'bonerush', 'dragonclaw', 'dragondarts', 'dragonfist', 'dragonhammer', 'dragontail', 'outrage', 'breakingswipe', 'dildocannon', 'dragonrush', 'dualchop', 'scaleshot', 'clangingscales', 'coreenforcer', 'dracometeor', 'dragonenergy', 'dragonpulse', 'dynamaxcannon', 'spacialrend', 'dragonbreath', 'dragonrage', 'eternabeam', 'roaroftime', 'twister', 'dragonburst'].includes(move.id)) {
 				Object.keys(this.dex.data.TypeChart).forEach((type) => {
 					if (!move.ignoreImmunity) move.ignoreImmunity = {};
 					if (move.ignoreImmunity !== true) {
@@ -5602,7 +5602,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			}
 		},
 		rating: 3.5,
-		isNonstandard: "Future"
+		isNonstandard: "Future",
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {
