@@ -189,12 +189,13 @@ const ACTIONS = {
 		`FROM badges INNER JOIN user_badges ON badges.badge_id = user_badges.badge WHERE (user_badges.badge = ?)`
 	),
 	countUserBadges: `SELECT count(*) as num FROM user_badges WHERE user = ?`,
-	addBadgeToUser: `INSERT INTO user_badges(user, badge, priority, is_hidden, create_date) VALUES (?, ?, 0, 0, ?)`,
+	addBadgeToUser: `INSERT INTO user_badges(user, badge, priority, is_hidden, create_date) VALUES (?, ?, ?, 0, ?)`,
 	removeBadgeFromUser: `DELETE FROM user_badges WHERE (user = ? AND badge = ?)`,
 	deleteUserBadges: `DELETE FROM user_badges WHERE (badge = ?)`,
 	toggleBadgeVisibility: `UPDATE user_badges SET is_hidden = ? WHERE (user = ? AND badge = ?)`,
 	updateBadgePriority: `UPDATE user_badges SET priority = ? WHERE (user = ? AND badge = ?)`,
 	findUserBadge: `SELECT * FROM user_badges WHERE (user = ? AND badge = ?)`,
+	findMaxPriority: `SELECT MAX(priority) as num FROM user_badges WHERE (user = ?)`,
 };
 
 const FUNCTIONS: {[k: string]: (...input: any[]) => any} = {};
@@ -300,7 +301,9 @@ const TRANSACTIONS: {[k: string]: (input: any[]) => DatabaseResult} = {
 				throw new FailureMessage(`User '${userID}' already has badge '${badgeID}'.`);
 			}
 
-			statements.addBadgeToUser.run(userID, badgeID, Date.now());
+			const maxBadgePriority = statements.findMaxPriority.get(userID)['num'] || 0;
+
+			statements.addBadgeToUser.run(userID, badgeID, maxBadgePriority + 1, Date.now());
 		}
 		return {result: []};
 	},

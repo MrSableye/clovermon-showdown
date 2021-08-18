@@ -234,17 +234,21 @@ export const Badges = new class {
 		return toLink(`<div style="line-height:25px">${buf.join(' / ')}${refresh}</div><hr />`);
 	}
 	createUserBadgePageElementHtml(userBadge: UserBadge) {
-		let userBadgePageElementHtml = Badges.createRawBadgeHtml(userBadge.badge_name, userBadge.file_name);
-		userBadgePageElementHtml += `<strong>${userBadge.badge_name}</strong> <small>[id: ${userBadge.badge_id}]</small><br />`;
+		const isHidden = userBadge.is_hidden === 1;
+		let userBadgePageElementHtml = '<p>';
+		userBadgePageElementHtml += Badges.createRawBadgeHtml(userBadge.badge_name, userBadge.file_name);
+		userBadgePageElementHtml += `<strong>${userBadge.badge_name}</strong> <small>[id: ${userBadge.badge_id}, order: ${userBadge.priority}]</small><br />`;
 		userBadgePageElementHtml += `<button class="button${userBadge.is_hidden === 0 ? ' disabled' : ''}" name="send" `;
 		userBadgePageElementHtml += `value="/badge on ${userBadge.badge_id}">Show</button> `;
 		userBadgePageElementHtml += `<button class="button${userBadge.is_hidden === 1 ? ' disabled' : ''}" name="send" `;
-		userBadgePageElementHtml += `value="/badge off ${userBadge.badge_id}">Hide</button><br />`;
-		userBadgePageElementHtml += `<button class="button" name="send" `;
-		userBadgePageElementHtml += `value="/badge priority ${userBadge.badge_id}, ${userBadge.priority - 1}">&lt;</button>`;
-		userBadgePageElementHtml += `<button class="button" name="send" `;
-		userBadgePageElementHtml += `value="/badge priority ${userBadge.badge_id}, ${userBadge.priority + 1}">&gt;</button><br /><br />`;
-		return userBadgePageElementHtml;
+		userBadgePageElementHtml += `value="/badge off ${userBadge.badge_id}">Hide</button> `;
+		if (!isHidden) {
+			userBadgePageElementHtml += `<button class="button" name="send" `;
+			userBadgePageElementHtml += `value="/badge priority ${userBadge.badge_id}, ${userBadge.priority - 1}">&lt;</button> `;
+			userBadgePageElementHtml += ` <button class="button" name="send" `;
+			userBadgePageElementHtml += `value="/badge priority ${userBadge.badge_id}, ${userBadge.priority + 1}">&gt;</button> `;
+		}
+		return userBadgePageElementHtml + '</p>';
 	}
 	createUserBadgePageHtml(userBadges: UserBadge[]) {
 		let userBadgePageHtml = '<div class="pad">';
@@ -545,7 +549,8 @@ export const commands: Chat.ChatCommands = {
 			this.refreshPage('badge-owned');
 			return this.sendReply(`Hiding Badge '${id}'.`);
 		},
-		async priority(target, room, user) {
+		priority: 'order',
+		async order(target, room, user) {
 			Badges.checkCanUse(this);
 
 			const [rawID, rawPriority] = target.split(',');
@@ -565,6 +570,7 @@ export const commands: Chat.ChatCommands = {
 	},
 	badgehelp() {
 		this.sendReplyBox(
+			`<code>/badge view</code>: opens the badge page<br />` +
 			`<code>/badge showall</code>: shows all badges. Requires: &<br />` +
 			`<code>/badge showowned</code>: shows all badges you own<br />` +
 			`<code>/badge showowned [user]</code>: shows all badges the given user owns. Requires: &<br />` +
@@ -580,7 +586,7 @@ export const commands: Chat.ChatCommands = {
 			`<code>/badge remove [user], [badge id]</code>: revokes a badge from a user. Requires: & or ownership<br />` +
 			`<code>/badge on [badge id]</code>: displays a badge you own<br />` +
 			`<code>/badge off [badge id]</code>: hides a badge you own<br />` +
-			`<code>/badge priority [badge id], [priority]</code>: sets the priority/order of a badge you own<br />`
+			`<code>/badge order [badge id], [priority]</code>: sets the order of a badge you own<br />`
 		);
 	},
 };
