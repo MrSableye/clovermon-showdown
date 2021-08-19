@@ -4939,9 +4939,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				Object.keys(this.dex.data.TypeChart).forEach((type) => {
 					if (!move.ignoreImmunity) move.ignoreImmunity = {};
 					if (move.ignoreImmunity !== true) {
-						if (!((this.toID(type) === 'ground') && defender && (this.toID(defender.ability) === 'levitate'))) {
-							move.ignoreImmunity[type] = true;
-						}
+						move.ignoreImmunity[type] = true;
 					}
 				});
 			}
@@ -5594,9 +5592,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				Object.keys(this.dex.data.TypeChart).forEach((type) => {
 					if (!move.ignoreImmunity) move.ignoreImmunity = {};
 					if (move.ignoreImmunity !== true) {
-						if (!((this.toID(type) === 'ground') && defender && (this.toID(defender.ability) === 'levitate'))) {
-							move.ignoreImmunity[type] = true;
-						}
+						move.ignoreImmunity[type] = true;
 					}
 				});
 			}
