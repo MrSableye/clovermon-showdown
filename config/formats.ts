@@ -286,6 +286,15 @@ export const Formats: FormatList = [
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
 	{
+		name: "[Gen 8 Clover Only] Custom Game (Doubles)",
+		mod: 'clover',
+		gameType: 'doubles',
+		debug: true,
+		battle: {trunc: Math.trunc},
+		// no restrictions, for serious (other than team preview)
+		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
+	},
+	{
 		section: "Clover National Dex Singles",
 	},
 	{
