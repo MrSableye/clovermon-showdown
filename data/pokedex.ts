@@ -32708,6 +32708,19 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 	},
+	katir: {
+		num: 42241,
+		name: "Katir",
+		types: ["Normal"],
+		gender: "F",
+		baseStats: {hp: 100, atk: 110, def: 85, spa: 110, spd: 85, spe: 65},
+		abilities: {0: "Chording", 1: "Serene Grace", S: "Compound Eyes"},
+		heightm: 1.57,
+		weightkg: 48,
+		color: "White",
+		eggGroups: ["Human-Like"],
+		gen: 8,
+	},
 	/* :^) */
 	autumn: {
 		num: -42002,
