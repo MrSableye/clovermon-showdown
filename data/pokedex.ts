@@ -32684,7 +32684,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Xeninter",
 		types: ["Ice", "Poison"],
 		gender: "N",
-		baseStats: {hp: 80, atk: 115, def: 70, spa: 138, spd: 70, spe: 78},
+		baseStats: {hp: 80, atk: 115, def: 70, spa: 138, spd: 70, spe: 35},
 		abilities: {0: "Corrosion", 1: "Poison Touch", H: "No Guard"},
 		heightm: 1.9,
 		weightkg: 121.3,
