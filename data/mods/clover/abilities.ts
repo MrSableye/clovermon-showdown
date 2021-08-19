@@ -17,6 +17,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (move?.type === 'Flying') return priority + 1;
 		},
 	},
+	soundproof: {
+		inherit: true,
+		onTryHit(target, source, move) {
+			if (move.flags['sound']) {
+				this.add('-immune', target, '[from] ability: Soundproof');
+				return null;
+			}
+		},
+	},
 	/* Clover CAP Abilities */
 	cakeveil: {
 		inherit: true,
