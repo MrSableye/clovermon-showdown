@@ -4934,12 +4934,12 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			this.add('-ability', pokemon, 'Bone Zone');
 		},
 		onModifyMovePriority: -5,
-		onModifyMove(move, attacker, defender) {
+		onModifyMove(move) {
 			if (['bonemerang', 'boneclub', 'shadowbone', 'bonerush'].includes(move.id)) {
-				Object.keys(this.dex.data.TypeChart).forEach((type) => {
+				this.dex.types.all().forEach(({name}) => {
 					if (!move.ignoreImmunity) move.ignoreImmunity = {};
 					if (move.ignoreImmunity !== true) {
-						move.ignoreImmunity[type] = true;
+						move.ignoreImmunity[name] = true;
 					}
 				});
 			}
@@ -5589,10 +5589,10 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onModifyMovePriority: -5,
 		onModifyMove(move, attacker, defender) {
 			if (['bonemerang', 'boneclub', 'shadowbone', 'bonerush', 'dragonclaw', 'dragondarts', 'dragonfist', 'dragonhammer', 'dragontail', 'outrage', 'breakingswipe', 'dildocannon', 'dragonrush', 'dualchop', 'scaleshot', 'clangingscales', 'coreenforcer', 'dracometeor', 'dragonenergy', 'dragonpulse', 'dynamaxcannon', 'spacialrend', 'dragonbreath', 'dragonrage', 'eternabeam', 'roaroftime', 'twister', 'dragonburst'].includes(move.id)) {
-				Object.keys(this.dex.data.TypeChart).forEach((type) => {
+				this.dex.types.all().forEach(({name}) => {
 					if (!move.ignoreImmunity) move.ignoreImmunity = {};
 					if (move.ignoreImmunity !== true) {
-						move.ignoreImmunity[type] = true;
+						move.ignoreImmunity[name] = true;
 					}
 				});
 			}
