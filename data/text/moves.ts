@@ -7319,8 +7319,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	nuclearwinter: {
 		name: "Nuclear Winter",
-		desc: "Has a 10% chance to burn the target. This move's type effectiveness against Ice is changed to be super effective no matter what this move's type is. If the weather is Hail, this move does not check accuracy.",
-		shortDesc: "10% burn. Super effective on Ice, Can't miss in hail.",
+		desc: "Has a 10% chance to burn the target. This move's type effectiveness against Ice and Water is changed to be super effective no matter what this move's type is. If the weather is Hail, this move does not check accuracy.",
+		shortDesc: "10% burn. Super effective on Ice and Water, Can't miss in hail.",
 	},
 	/* :^) */
 	skullcannon: {
