@@ -5600,6 +5600,18 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3.5,
 		isNonstandard: "Future",
 	},
+	chording: {
+		availability: {clover: 1},
+		name: "Chording",
+		onAfterMove(source, target, move) {
+			if (move.category === 'Physical') {
+				this.boost({spa: 1});
+			} else if (move.category === 'Special') {
+				this.boost({atk: 1});
+			}
+		},
+		isNonstandard: "Future",
+	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {
 		availability: {atlas: 1},

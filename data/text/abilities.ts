@@ -1985,6 +1985,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "This Pokemon's Bone-based and Dragon moves ignore immunities.",
 		start: "  [POKEMON] has descended into the Boner Zoner!",
 	},
+	chording: {
+		name: "Chording",
+		desc: "After using a Special attack, its Atk is raised by 1 stage. After using a Physical attack, its Sp. Atk is raised by 1 stage.",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",

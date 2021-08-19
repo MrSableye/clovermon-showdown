@@ -7333,6 +7333,11 @@ export const MovesText: {[k: string]: MoveText} = {
 
 		activate: "  It's over!",
 	},
+	strum: {
+		name: "Strum",
+		desc: "Hits four times. Power quadruples on the fourth hit. The fourth hit becomes Physical. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit four times.",
+		shortDesc: "Hits 4 times. Each hit can miss, but power rises on the 4th hit. Last hit is Physical.",
+	},
 	/* Atlas move descs lol */
 	mondayz: {
 		name: "Mondayz",

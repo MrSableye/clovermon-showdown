@@ -22771,6 +22771,30 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Ice",
 		isNonstandard: "Future",
 	},
+	strum: {
+		availability: {clover: 1},
+		num: 813,
+		accuracy: 90,
+		basePower: 15,
+		basePowerCallback(pokemon, target, move) {
+			if (move.hit === 4) return move.basePower * 4;
+			return move.basePower;
+		},
+		onHit(target, source, move) {
+			if (move.hit === 3) move.category = 'Physical';
+		},
+		category: "Special",
+		name: "Strum",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1},
+		multihit: 4,
+		multiaccuracy: true,
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+	},
 	/* Atlas Exclusive Moves */
 	mondayz: {
 		availability: {atlas: 1},
