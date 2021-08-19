@@ -7305,7 +7305,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	memejr: {
 		name: "Meme Jr.",
-		shortDesc: "50% chance to raise a random stat by 1.",
+		shortDesc: "100% chance to evenly raise a random stat by 1.",
 	},
 	medsnow: {
 		name: "Meds Now",
