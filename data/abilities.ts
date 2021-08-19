@@ -5604,9 +5604,10 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		availability: {clover: 1},
 		name: "Chording",
 		onAfterMove(source, target, move) {
-			if (move.category === 'Physical') {
+			const baseMove = this.dex.moves.get(move.id);
+			if (baseMove.category === 'Physical') {
 				this.boost({spa: 1});
-			} else if (move.category === 'Special') {
+			} else if (baseMove.category === 'Special') {
 				this.boost({atk: 1});
 			}
 		},
