@@ -22750,7 +22750,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	nuclearwinter: {
 		availability: {clover: 1},
 		num: 573,
-		accuracy: 70,
+		accuracy: 80,
 		basePower: 100,
 		category: "Special",
 		name: "Nuclear Winter",
@@ -22758,7 +22758,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
-			if (type === 'Ice') return 1;
+			if (['Ice', 'Water'].includes(type)) return 1;
 		},
 		onModifyMove(move) {
 			if (this.field.isWeather('hail')) move.accuracy = true;
