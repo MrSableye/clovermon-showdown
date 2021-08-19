@@ -43,7 +43,6 @@ export const Formats: FormatList = [
 		team: 'random',
 		gameType: 'freeforall',
 		tournamentShow: false,
-		rated: false,
 		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
