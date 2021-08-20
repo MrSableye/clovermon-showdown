@@ -23,7 +23,9 @@ recharge: If this move is successful, the user must recharge on the following tu
 reflectable: Bounced back to the original user by Magic Coat or the Magic Bounce Ability.
 snatch: Can be stolen from the original user and instead used by another Pokemon using Snatch.
 sound: Has no effect on Pokemon with the Soundproof Ability.
-
+kick: Kick-based moves (for Striker)
+blade: Blade-based moves (for Blademaster)
+bone: Bone-based moves (for Bone Zone)
 */
 
 export const Moves: { [moveid: string]: MoveData } = {
@@ -306,7 +308,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Air Slash",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, distance: 1},
+		flags: {protect: 1, mirror: 1, distance: 1, blade: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'flinch',
@@ -1360,7 +1362,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Blaze Kick",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		critRatio: 2,
 		secondary: {
 			chance: 10,
@@ -1527,7 +1529,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Bone Club",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, bone: 1},
 		secondary: {
 			chance: 10,
 			volatileStatus: 'flinch',
@@ -1545,7 +1547,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Bonemerang",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, bone: 1},
 		multihit: 2,
 		secondary: null,
 		target: "normal",
@@ -1562,7 +1564,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Bone Rush",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, bone: 1},
 		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
@@ -2966,7 +2968,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Cross Poison",
 		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		secondary: {
 			chance: 10,
 			status: 'psn',
@@ -3089,7 +3091,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Cut",
 		pp: 30,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -3695,7 +3697,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Double Kick",
 		pp: 30,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		multihit: 2,
 		secondary: null,
 		target: "normal",
@@ -4868,7 +4870,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "False Swipe",
 		pp: 40,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		onDamagePriority: -20,
 		onDamage(damage, target, source, effect) {
 			if (damage >= target.hp) return target.hp - 1;
@@ -6046,7 +6048,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Fury Cutter",
 		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		condition: {
 			duration: 2,
 			onStart() {
@@ -8667,7 +8669,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "High Jump Kick",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1},
 		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
@@ -9545,7 +9547,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Jump Kick",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1},
 		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('Jump Kick'));
@@ -9840,7 +9842,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Leaf Blade",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -10187,7 +10189,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Low Kick",
 		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		onTryHit(target, pokemon, move) {
 			if (target.volatiles['dynamax']) {
 				this.add('-fail', pokemon, 'Dynamax');
@@ -11234,7 +11236,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Mega Kick",
 		pp: 5,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -12348,7 +12350,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Night Slash",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -13768,7 +13770,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Psycho Cut",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, blade: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -14293,7 +14295,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Razor Wind",
 		pp: 10,
 		priority: 0,
-		flags: {charge: 1, protect: 1, mirror: 1},
+		flags: {charge: 1, protect: 1, mirror: 1, blade: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -14883,7 +14885,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Rolling Kick",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'flinch',
@@ -15063,7 +15065,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Sacred Sword",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		ignoreEvasion: true,
 		ignoreDefensive: true,
 		secondary: null,
@@ -15419,7 +15421,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Secret Sword",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, blade: 1},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -15523,7 +15525,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Shadow Bone",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, bone: 1},
 		secondary: {
 			chance: 20,
 			boosts: {
@@ -16302,7 +16304,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Slash",
 		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -16741,7 +16743,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Solar Blade",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, charge: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, blade: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -18886,7 +18888,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Thunderous Kick",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -19309,7 +19311,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Triple Kick",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		multihit: 3,
 		multiaccuracy: true,
 		secondary: null,
@@ -19328,7 +19330,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Trop Kick",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -20317,7 +20319,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "X-Scissor",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		secondary: null,
 		target: "normal",
 		type: "Bug",
@@ -20652,7 +20654,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		target: "normal",
 		type: "Steel",
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, mirror: 1, blade: 1},
 		onEffectiveness(typeMod, target, type) {
 			if (type === 'Steel') return 0;
 		},
@@ -21452,7 +21454,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Ow The Edge",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		recoil: [1, 4],
 		secondary: null,
 		target: "normal",
@@ -21595,7 +21597,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Strato Blade",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -22083,7 +22085,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Trick Stab",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		beforeMoveCallback(source, target, move) {
 			if (source.illusion) move.willCrit = true;
 		},
@@ -22186,7 +22188,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Phase Through",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, blade: 1},
 		selfSwitch: true,
 		secondary: null,
 		target: "normal",
@@ -22202,7 +22204,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Cold Cutter",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -22460,7 +22462,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Branding Blade",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, defrost: 1},
+		flags: {protect: 1, mirror: 1, defrost: 1, blade: 1},
 		thawsTarget: true,
 		secondary: {
 			chance: 30,
@@ -22904,7 +22906,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Sentai Blade",
 		pp: 5,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		self: {
 			volatileStatus: 'lockedmove',
 		},
@@ -23632,7 +23634,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Plasma Slasher",
 		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",

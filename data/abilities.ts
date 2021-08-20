@@ -4905,13 +4905,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Blademaster",
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
-			if (['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab', 'phasethrough', 'coldcutter', 'sentaiblade', 'plasmaslasher', 'brandingblade'].includes(move.id)) {
+			if (move.flags.blade) {
 				this.debug('Blademaster boost');
 				return this.chainModify([0x1333, 0x1000]);
 			}
 		},
 		onModifyCritRatio(critRatio, target, source, move) {
-			if (target && ['sacredsword', 'leafblade', 'cut', 'nightslash', 'crosspoison', 'slash', 'razorwind', 'airslash', 'furycutter', 'falseswipe', 'psychocut', 'secretsword', 'xscissor', 'stratoblade', 'owtheedge', 'solarblade', '1000folds', 'tipthrust', 'trickstab', 'phasethrough', 'coldcutter', 'sentaiblade', 'plasmaslasher', 'brandingblade'].includes(move.id)) return critRatio + 1;
+			if (target && move.flags.blade) return critRatio + 1;
 		},
 		rating: 4,
 	},
@@ -4935,7 +4935,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		onModifyMovePriority: -5,
 		onModifyMove(move) {
-			if (['bonemerang', 'boneclub', 'shadowbone', 'bonerush'].includes(move.id)) {
+			if (move.flags.bone) {
 				this.dex.types.all().forEach(({name}) => {
 					if (!move.ignoreImmunity) move.ignoreImmunity = {};
 					if (move.ignoreImmunity !== true) {
@@ -5126,13 +5126,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Striker",
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
-			if (['jumpkick', 'highjumpkick', 'blazekick', 'doublekick', 'lowkick', 'triplekick', 'rollingkick', 'shadowkick', 'megakick', 'thunderouskick', 'tropkick'].includes(move.id)) {
+			if (move.flags.kick) {
 				this.debug('Striker boost');
 				return this.chainModify([0x1333, 0x1000]);
 			}
 		},
 		onAnyAccuracy(accuracy, target, source, move) {
-			if (['jumpkick', 'highjumpkick', 'blazekick', 'doublekick', 'lowkick', 'triplekick', 'rollingkick', 'shadowkick', 'megakick', 'thunderouskick', 'tropkick'].includes(move.id)) {
+			if (move.flags.kick) {
 				this.debug('Striker - ensuring perfect accuracy');
 				return true;
 			}
@@ -5588,7 +5588,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		onModifyMovePriority: -5,
 		onModifyMove(move, attacker, defender) {
-			if (['bonemerang', 'boneclub', 'shadowbone', 'bonerush', 'dragonclaw', 'dragondarts', 'dragonfist', 'dragonhammer', 'dragontail', 'outrage', 'breakingswipe', 'dildocannon', 'dragonrush', 'dualchop', 'scaleshot', 'clangingscales', 'coreenforcer', 'dracometeor', 'dragonenergy', 'dragonpulse', 'dynamaxcannon', 'spacialrend', 'dragonbreath', 'dragonrage', 'eternabeam', 'roaroftime', 'twister', 'dragonburst'].includes(move.id)) {
+			if (move.flags.bone || (move.type === 'Dragon')) {
 				this.dex.types.all().forEach(({name}) => {
 					if (!move.ignoreImmunity) move.ignoreImmunity = {};
 					if (move.ignoreImmunity !== true) {
