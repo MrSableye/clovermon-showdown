@@ -5568,10 +5568,10 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Supportive');
 		},
-		onAnyTryMove(target, source, effect) {
-			if (['bravebird', 'doubleedge', 'flareblitz', 'headcharge', 'headsmash', 'lightofruin', 'submission', 'takedown', 'volttackle', 'wildcharge', 'woodhammer', 'avianrush', 'owtheedge', 'overbite', 'mindblown', 'memento', 'explosion', 'finalgambit', 'healingwish', 'lunardance', 'explosion', 'mistyexplosion', 'selfdestruct', 'sudoku'].includes(effect.id)) {
+		onAnyTryMove(target, source, move) {
+			if (move.mindBlownRecoil || move.recoil || move.selfdestruct) {
 				this.attrLastMove('[still]');
-				this.add('cant', this.effectState.target, 'ability: Supportive', effect, '[of] ' + target);
+				this.add('cant', this.effectState.target, 'ability: Supportive', move, '[of] ' + target);
 				return false;
 			}
 		},
