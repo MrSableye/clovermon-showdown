@@ -136,6 +136,15 @@ export class LadderStore {
 	}
 
 	/**
+	 * Update the Elo rating for more than 2 players after a battle, and display
+	 * the results in the passed room.
+	 */
+	updateMultiRating(playerResults: [string, number][], room: AnyObject): Promise<[string, number | null][]> {
+		room.addRaw(`Ratings not updated. The ladders are currently disabled.`).update();
+		return Promise.resolve(playerResults.map((playerResult) => [playerResult[0], null]));
+	}
+
+	/**
 	 * Returns a Promise for an array of strings of <tr>s for ladder ratings of the user
 	 */
 	// This requires to be `async` because it must conform with the `LadderStore` interface
@@ -148,6 +157,39 @@ export class LadderStore {
 	 *
 	 */
 	calculateElo(oldElo: number, score: number, foeElo: number): number {
+		// see lib/ntbb-ladder.lib.php in the pokemon-showdown-client repo for the login server implementation
+		// *intentionally* different from calculation in ladders-local, due to the high activity on the main server
+
+		// The K factor determines how much your Elo changes when you win or
+		// lose games. Larger K means more change.
+		// In the "original" Elo, K is constant, but it's common for K to
+		// get smaller as your rating goes up
+		let K = 50;
+
+		// dynamic K-scaling (optional)
+		if (oldElo < 1100) {
+			if (score < 0.5) {
+				K = 20 + (oldElo - 1000) * 30 / 100;
+			} else if (score > 0.5) {
+				K = 80 - (oldElo - 1000) * 30 / 100;
+			}
+		} else if (oldElo > 1300) {
+			K = 40;
+		}
+
+		// main Elo formula
+		const E = 1 / (1 + Math.pow(10, (foeElo - oldElo) / 400));
+
+		const newElo = oldElo + K * (score - E);
+
+		return Math.max(newElo, 1000);
+	}
+
+	/**
+	 * Calculates Elo based on a match result
+	 *
+	 */
+	 calculateMultiElo(oldElo: number, score: number, foeElo: number): number {
 		// see lib/ntbb-ladder.lib.php in the pokemon-showdown-client repo for the login server implementation
 		// *intentionally* different from calculation in ladders-local, due to the high activity on the main server
 

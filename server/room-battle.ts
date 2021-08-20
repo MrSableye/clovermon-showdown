@@ -850,20 +850,37 @@ export class RoomBattle extends RoomGames.RoomGame {
 		const p1id = toID(p1name);
 		const p2id = toID(p2name);
 		if (this.room.rated) {
-			this.room.rated = 0;
-
-			if (winnerid === p1id) {
-				p1score = 1;
-			} else if (winnerid === p2id) {
-				p1score = 0;
-			}
-
 			winner = Users.get(winnerid);
 			if (winner && !winner.registered) {
 				this.room.sendUser(winner, '|askreg|' + winner.id);
 			}
-			const [score, p1rating, p2rating] = await Ladders(this.ladder).updateRating(p1name, p2name, p1score, this.room);
-			void this.logBattle(score, p1rating, p2rating);
+
+			if (this.playerCap > 2) {
+				const players = [this.p1, this.p2, this.p3, this.p4].filter((player) => (player !== null) && (player !== undefined));
+
+				const playerRatings = await Ladders(this.ladder).updateMultiRating(players.map((player) => {
+					const playerId = player.id;
+
+					if (playerId === winnerid) {
+						return [playerId, 1] as [string, number];
+					}
+
+					return [playerId, 0] as [string, number];
+				}), this.room);
+
+				void this.logBattle(0, ...playerRatings);
+			} else {
+				this.room.rated = 0;
+
+				if (winnerid === p1id) {
+					p1score = 1;
+				} else if (winnerid === p2id) {
+					p1score = 0;
+				}
+
+				const [score, p1rating, p2rating] = await Ladders(this.ladder).updateRating(p1name, p2name, p1score, this.room);
+				void this.logBattle(score, p1rating, p2rating);
+			}
 		} else if (Config.logchallenges) {
 			if (winnerid === p1id) {
 				p1score = 1;
