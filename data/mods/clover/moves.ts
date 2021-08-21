@@ -974,4 +974,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	backdraft: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	cope: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

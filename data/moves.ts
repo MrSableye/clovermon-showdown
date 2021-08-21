@@ -22079,7 +22079,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 42013,
 		accuracy: 100,
-		basePower: 90,
+		basePower: 80,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Trick Stab",
@@ -22232,7 +22232,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	wingsofcorrection: {
 		availability: {clover: 1},
 		accuracy: true,
-		basePower: 140,
+		basePower: 150,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Wings Of Correction",
@@ -22618,7 +22618,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		basePower: 100,
 		category: "Special",
 		name: "Meds Now",
-		pp: 15,
+		pp: 10,
 		priority: 0,
 		flags: {bullet: 1, protect: 1, mirror: 1},
 		onTryHit(target, source, move) {
@@ -22653,16 +22653,53 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Bad Eggs",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1},
 		multihit: 3,
 		multiaccuracy: true,
 		secondary: {
 			chance: 20,
-			status: 'tox',
+			status: 'psn',
 		},
 		target: "normal",
 		type: "Dark",
 		isNonstandard: "Future",
+	},
+	backdraft: {
+		availability: {clover: 1},
+		num: 366,
+		accuracy: true,
+		basePower: 65,
+		category: "Status",
+		name: "Backdraft",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'tailwind',
+		condition: {
+			duration: 2,
+			durationCallback(target, source, effect) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-activate', source, 'ability: Persistent', effect);
+					return 3;
+				}
+				return 2;
+			},
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Tailwind');
+			},
+			onModifySpe(spe, pokemon) {
+				return this.chainModify(2);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 5,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'move: Tailwind');
+			},
+		},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Flying",
 	},
 	/* :^) */
 	skullcannon: {
@@ -22716,10 +22753,10 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 6,
 		flags: {},
 		onTryHit(target, source) {
-			this.add("-activate", target, "move: It's Over");
+			this.add('-nothing');
 		},
 		secondary: null,
-		target: "all",
+		target: "self",
 		type: "Bug",
 		zMove: {boost: {atk: 6, def: 6, spa: 6, spd: 6, spe: 6, accuracy: 6, evasion: 6}},
 		contestType: "Cute",
@@ -22792,6 +22829,19 @@ export const Moves: { [moveid: string]: MoveData } = {
 		secondary: null,
 		target: "normal",
 		type: "Normal",
+		isNonstandard: "Future",
+	},
+	cope: {
+		accuracy: true,
+		basePower: 2,
+		category: "Special",
+		name: "Cope",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		multihit: 69,
+		target: "normal",
+		type: "Bug",
 		isNonstandard: "Future",
 	},
 	/* Atlas Exclusive Moves */
