@@ -7322,6 +7322,18 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 10% chance to poison the target. This move's type effectiveness against Ice is changed to be super effective no matter what this move's type is.",
 		shortDesc: "10% poison. Super effective on Ice.",
 	},
+	badeggs: {
+		name: "Bad Eggs",
+		shortDesc: "Hits 3 times, hits can miss, gets stronger, 20% psn.",
+	},
+	backdraft: {
+		name: "Backdraft",
+		shortDesc: "Switches user out, Swapped mon has 2x speed for a turn",
+
+		start: "  The Tailwind blew from behind [TEAM]!",
+		end: "  [TEAM]'s Tailwind petered out!",
+		switchOut: "#uturn",
+	},
 	/* :^) */
 	skullcannon: {
 		name: "Skull Cannon",
@@ -7337,6 +7349,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Strum",
 		desc: "Hits four times. Power quadruples on the fourth hit. The fourth hit becomes Physical. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit four times.",
 		shortDesc: "Hits 4 times. Each hit can miss, but power rises on the 4th hit. Last hit is Physical.",
+	},
+	cope: {
+		name: "Cope",
+		shortDesc: "Hits 69 times.",
 	},
 	/* Atlas move descs lol */
 	mondayz: {

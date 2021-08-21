@@ -15409,6 +15409,36 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	borkosmos: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	skallaxy: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	wattitude: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	monkite: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	konglide: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP NFE",
+	},
+	yokite: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,
