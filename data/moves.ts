@@ -22665,7 +22665,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	backdraft: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 366,
 		accuracy: true,
 		basePower: 65,
