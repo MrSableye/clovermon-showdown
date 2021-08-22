@@ -5630,6 +5630,22 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		isNonstandard: "Future",
 	},
+	loudconcert: {
+		name: "Loud Concert",
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Loud Concert');
+		},
+		onResidual(source) {
+			for (const pokemon of this.getAllPokemon()) {
+				if (pokemon.ability !== 'soundproof') {
+					pokemon.damage(pokemon.baseMaxhp / 16, source, this.effect);
+				}
+			}
+		},
+		rating: 3,
+	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {
 		availability: {atlas: 1},
