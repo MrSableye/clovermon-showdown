@@ -22669,32 +22669,14 @@ export const Moves: { [moveid: string]: MoveData } = {
 		num: 366,
 		accuracy: true,
 		basePower: 65,
-		category: "Status",
+		category: "Physical",
 		name: "Backdraft",
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
-		sideCondition: 'tailwind',
-		condition: {
-			duration: 2,
-			durationCallback(target, source, effect) {
-				if (source?.hasAbility('persistent')) {
-					this.add('-activate', source, 'ability: Persistent', effect);
-					return 3;
-				}
-				return 2;
-			},
-			onSideStart(side) {
-				this.add('-sidestart', side, 'move: Tailwind');
-			},
-			onModifySpe(spe, pokemon) {
-				return this.chainModify(2);
-			},
-			onSideResidualOrder: 26,
-			onSideResidualSubOrder: 5,
-			onSideEnd(side) {
-				this.add('-sideend', side, 'move: Tailwind');
-			},
+		duration: 2,
+		self: {
+			sideCondition: 'tailwind',
 		},
 		selfSwitch: true,
 		secondary: null,
