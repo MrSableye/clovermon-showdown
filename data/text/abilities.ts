@@ -1989,6 +1989,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Chording",
 		desc: "After using a Special attack, its Atk is raised by 1 stage. After using a Physical attack, its Sp. Atk is raised by 1 stage.",
 	},
+	eclipse: {
+		name: "Eclipse",
+		desc: "On switch-in, removes Sunny Day and raises its Atk and SpA 1 stage. On switch-in, removes Desolate Land and raises its Atk, Def, SpA, SpD, and Spe 1 stage.",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",
