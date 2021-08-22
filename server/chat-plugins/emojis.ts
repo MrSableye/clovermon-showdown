@@ -36,13 +36,16 @@ const deleteEmoji = (name: string) => {
 
 const toAlphaNumeric = (text: string) => ('' + text).replace(/[^A-Za-z0-9]+/g, '');
 
-const createEmojiHtml = (name: string, url: string) => `<img src="${url}" title="${name}" height="${EMOJI_SIZE}" width="${EMOJI_SIZE}">`;
+const createEmojiHtml = (name: string, url: string) => `<img src="${url}" title=":${name}:" height="${EMOJI_SIZE}" width="${EMOJI_SIZE}">`;
 
 export const commands: Chat.ChatCommands = {
+	emojis: 'emoji',
 	emoji: {
 		list() {
+			this.runBroadcast();
 			return this.sendReplyBox(Object.entries(emojis).map(([emojiName, emojiUrl]) => createEmojiHtml(emojiName, emojiUrl)).join(', '));
 		},
+		update: 'add',
 		async add(target) {
 			this.checkCan('emoji');
 			const [rawEmojiName, emojiUrl] = target.split(',').map((part) => part.trim());
@@ -85,6 +88,14 @@ export const commands: Chat.ChatCommands = {
 
 			return this.sendReply(`Deleted :${emojiName}:`);
 		},
+	},
+	emojihelp() {
+		this.runBroadcast();
+		return this.sendReplyBox([
+			`<code>/emoji list</code> - Lists all available emojis.`,
+			`<code>/emoji add [name], [image url]</code> - Adds or updates an emoji. Requires: &`,
+			`<code>/emoji remove [name]</code> - Removes an emoji. Requires: &`,
+		].join('<br />'));
 	},
 };
 
