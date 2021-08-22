@@ -5604,11 +5604,11 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		availability: {clover: 1},
 		onStart(source) {
 			if (['sunnyday'].includes(source.effectiveWeather())) {
-				this.boost({atk: 1, spa:1});
+				this.boost({atk: 1, spa: 1});
 				this.field.clearWeather();
 			}
 			if (['desolateland'].includes(source.effectiveWeather())) {
-				this.boost({atk: 1, def:1, spa:1, spd:1, spe:1});
+				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1});
 
 				this.field.clearWeather();
 			}
