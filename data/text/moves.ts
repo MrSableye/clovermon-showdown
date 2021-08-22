@@ -7330,8 +7330,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Backdraft",
 		shortDesc: "Switches user out, Swapped mon has 2x speed for a turn",
 
-		start: "  The Tailwind blew from behind [TEAM]!",
-		end: "  [TEAM]'s Tailwind petered out!",
+		start: "  The Backdraft blew from behind [TEAM]!",
+		end: "  [TEAM]'s Backdraft petered out!",
 		switchOut: "#uturn",
 	},
 	/* :^) */

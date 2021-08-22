@@ -22674,9 +22674,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
-		duration: 2,
 		self: {
-			sideCondition: 'tailwind',
+			sideCondition: 'backdraft',
 		},
 		selfSwitch: true,
 		secondary: null,

@@ -774,4 +774,20 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return [type];
 		},
 	},
+
+	// Clover Conditions
+	backdraft: {
+		duration: 2,
+		onSideStart(side) {
+			this.add('-sidestart', side, 'Backdraft');
+		},
+		onModifySpe(spe, pokemon) {
+			return this.chainModify(2);
+		},
+		onSideResidualOrder: 26,
+		onSideResidualSubOrder: 5,
+		onSideEnd(side) {
+			this.add('-sideend', side, 'Backdraft');
+		},
+	},
 };
