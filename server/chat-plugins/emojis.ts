@@ -101,7 +101,8 @@ export const commands: Chat.ChatCommands = {
 
 export const chatfilter: Chat.ChatFilter = (message, user, room) => {
 	if (Object.keys(emojis).length > 0 && emojiRegex.test(message)) {
-		return '/html ' + message.replace(emojiRegex, (match) => {
+		let prefix = message.startsWith('/html') ? '' : '/html ';
+		return prefix + message.replace(emojiRegex, (match) => {
 			const emojiName = match.slice(1, -1);
 			return createEmojiHtml(emojiName, emojis[emojiName]);
 		});
