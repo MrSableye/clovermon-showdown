@@ -30573,7 +30573,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Kumataro",
 		types: ["Normal", "Fighting"],
 		genderRatio: {M: 0.75, F: 0.25},
-		baseStats: {hp: 105, atk: 120, def: 85, spa: 80, spd: 80, spe: 80},
+		baseStats: {hp: 80, atk: 120, def: 85, spa: 80, spd: 80, spe: 105},
 		abilities: {0: "Defiant", H: "Iron Fist", S: "Unseen Fist"},
 		heightm: 2,
 		weightkg: 142,
