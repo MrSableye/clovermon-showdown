@@ -32666,7 +32666,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	icehugger: {
-		num: 42090,
+		num: 42084,
 		name: "Icehugger",
 		types: ["Ice", "Poison"],
 		gender: "N",
@@ -32680,7 +32680,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	xeninter: {
-		num: 42091,
+		num: 42085,
 		name: "Xeninter",
 		types: ["Ice", "Poison"],
 		gender: "N",
@@ -32696,7 +32696,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	borkosmos: {
-		num: 42090,
+		num: 42082,
 		name: "Borkosmos",
 		types: ["Flying", "Fire"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -32710,7 +32710,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gen: 8,
 	},
 	skallaxy: {
-		num: 42091,
+		num: 42083,
 		name: "Skallaxy",
 		types: ["Flying", "Fire"],
 		genderRatio: {M: 0.5, F: 0.5},
