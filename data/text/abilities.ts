@@ -1991,7 +1991,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	eclipse: {
 		name: "Eclipse",
-		desc: "On switch-in, removes Sunny Day and raises its Atk and SpA 1 stage. On switch-in, removes Desolate Land and raises its Atk, Def, SpA, SpD, and Spe 1 stage.",
+		desc: "On switch-in, removes Sunny Day and Desolate Land for a stat boost.",
 	},
 	/* Atlas Abilities */
 	tardrage: {
