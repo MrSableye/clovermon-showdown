@@ -5640,7 +5640,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onResidual(source) {
 			for (const pokemon of this.getAllPokemon()) {
 				if (pokemon.ability !== 'soundproof') {
-					pokemon.damage(pokemon.baseMaxhp / 16, source, this.effect);
+					this.damage(pokemon.baseMaxhp / 16, pokemon, source, this.effect);
 				}
 			}
 		},
