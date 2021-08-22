@@ -1,8 +1,12 @@
+import probe from 'probe-image-size';
 import {FS} from '../../lib';
 
 const EMOJI_SIZE = 32;
 const ERROR_NO_EMOJI_NAME = 'Specify an emoji name.';
 const ERROR_NO_EMOJI_URL = 'Specify an emoji description.';
+const ERROR_NON_DISCORD_UPLOAD = 'Specify a Discord URL.';
+const ERROR_TOO_LARGE_IMAGE = 'Specify an image under 150x150.';
+const ERROR_NO_VALID_EMOJI_IMAGE = 'Specify a PNG or GIF image.';
 
 type Emojis = Record<string, string>;
 
@@ -39,7 +43,7 @@ export const commands: Chat.ChatCommands = {
 		list() {
 			return this.sendReplyBox(Object.entries(emojis).map(([emojiName, emojiUrl]) => createEmojiHtml(emojiName, emojiUrl)).join(', '));
 		},
-		add(target) {
+		async add(target) {
 			this.checkCan('emoji');
 			const [rawEmojiName, emojiUrl] = target.split(',').map((part) => part.trim());
 
@@ -50,6 +54,19 @@ export const commands: Chat.ChatCommands = {
 
 			if (!emojiUrl) {
 				return this.errorReply(ERROR_NO_EMOJI_URL);
+			}
+
+			if (!emojiUrl.startsWith('https://cdn.discordapp.com')) {
+				return this.errorReply(ERROR_NON_DISCORD_UPLOAD);
+			}
+
+			const probeResult = await probe(emojiUrl);
+			if (!['png', 'gif'].includes(probeResult.type)) {
+				return this.errorReply(ERROR_NO_VALID_EMOJI_IMAGE);
+			}
+
+			if (Math.max(probeResult.width, probeResult.height) > 150) {
+				return this.errorReply(ERROR_TOO_LARGE_IMAGE);
 			}
 
 			addOrUpdateEmoji(emojiName, emojiUrl);
