@@ -1,60 +1,104 @@
+import {Badge} from '../badges';
 import {Badges} from './badges';
 
+interface Team {
+	teamToBadge: Record<string, string>;
+	badges: string[];
+}
+
+const createTeam = (teamToBadge: Record<string, string>): Team => ({
+	teamToBadge,
+	badges: Object.values(teamToBadge),
+});
+
+const teams: Record<string, Team> = {
+	waifu: createTeam({
+		kymmi: 'teamkymmi',
+		bavi: 'teambavi',
+	}),
+	crewmate: createTeam({
+		red: 'redcrewmate',
+		blue: 'bluecrewmate',
+		green: 'greencrewmate',
+		yellow: 'yellowcrewmate',
+		orange: 'orangecrewmate',
+		pink: 'pinkcrewmate',
+		purple: 'purplecrewmate',
+		lime: 'limecrewmate',
+		black: 'blackcrewmate',
+		white: 'whitecrewmate',
+		brown: 'browncrewmate',
+		cyan: 'cyancrewmate',
+		maroon: 'marooncrewmate',
+		rose: 'rosecrewmate',
+		banana: 'bananacrewmate',
+		gray: 'graycrewmate',
+		tan: 'tancrewmate',
+		coral: 'coralcrewmate',
+		rainbow: 'rainbowcrewmate',
+		reverse: 'reversecrewmate',
+		australian: 'australiancrewmate',
+	}),
+};
+
+const joinTeam = async (user: User, teamName: string, teamSide: string): Promise<Badge | undefined> => {
+	const team = teams[teamName];
+
+	if (!team) {
+		throw new Chat.ErrorMessage(`Team ${teamName} does not exist.`);
+	}
+
+	const badgeID = team.teamToBadge[teamSide];
+
+	if (!badgeID) {
+		throw new Chat.ErrorMessage(`Team ${teamName} does not have a side ${teamSide} to join.`);
+	}
+
+	const userBadges = user.badges;
+	if (userBadges) {
+		const existingTeamBadges = userBadges.filter((userBadge) => team.badges.includes(userBadge.badge_id));
+
+		await Promise.all(existingTeamBadges.map((existingTeamBadge) => Badges.removeBadgeFromUser(user.id, existingTeamBadge.badge_id, user, true)));
+	}
+
+	await Badges.addBadgeToUser(user.id, badgeID, user, true);
+
+	return Badges.getBadge(badgeID);
+};
+
 export const commands: Chat.ChatCommands = {
-	amogus: 'sus',
-	async sus(target, room, user) {
-		if (!Config.usesqlitebadges) {
-			throw new Chat.ErrorMessage(`The badges feature is currently disabled.`);
-		}
-
-		await Badges.addBadgeToUser(user.id, 'sus' as ID, user, true);
-
-		return this.sendReply('You are now SUS.');
-	},
-	async teambavi(target, room, user) {
-		if (!Config.usesqlitebadges) {
-			throw new Chat.ErrorMessage(`The badges feature is currently disabled.`);
-		}
-
-		const userBadges = user.badges?.map((badge) => badge.badge_id);
-
-		if (userBadges) {
-			if (userBadges.includes('teambavi')) {
-				await Badges.removeBadgeFromUser(user.id, 'teambavi' as ID, user, true);
-
-				return this.sendReply('You have left Team Bavi.');
+	team: {
+		list() {
+			if (!Config.usesqlitebadges) {
+				throw new Chat.ErrorMessage(`The badges feature is currently disabled.`);
 			}
 
-			if (userBadges.includes('teamkymmi')) {
-				throw new Chat.ErrorMessage('You are already on Team Kymmi. You can type /teamkymmi to leave Team Kymmi.');
-			}
-		}
+			this.runBroadcast();
 
-		await Badges.addBadgeToUser(user.id, 'teambavi' as ID, user, true);
-
-		return this.sendReply('You are now on Team Bavi.');
-	},
-	async teamkymmi(target, room, user) {
-		if (!Config.usesqlitebadges) {
-			throw new Chat.ErrorMessage(`The badges feature is currently disabled.`);
-		}
-
-		const userBadges = user.badges?.map((badge) => badge.badge_id);
-
-		if (userBadges) {
-			if (userBadges.includes('teamkymmi')) {
-				await Badges.removeBadgeFromUser(user.id, 'teamkymmi' as ID, user, true);
-
-				return this.sendReply('You have left Team Kymmi.');
+			return this.sendReplyBox(`<div class="pad">${Object.entries(teams).map(([teamName, team]) => `<div>${teamName}: ${Object.keys(team.teamToBadge).join(',')}</div>`)}</div>`);
+		},
+		async join(target, room, user) {
+			if (!Config.usesqlitebadges) {
+				throw new Chat.ErrorMessage(`The badges feature is currently disabled.`);
 			}
 
-			if (userBadges.includes('teambavi')) {
-				throw new Chat.ErrorMessage('You are already on Team Bavi. You can type /teambavi to leave Team Bavi.');
+			const [teamName, teamSide] = target.split(',').map(toID);
+
+			if (!teamName) {
+				return this.errorReply('Please specify a team name.');
 			}
-		}
 
-		await Badges.addBadgeToUser(user.id, 'teamkymmi' as ID, user, true);
+			if (!teamSide) {
+				return this.errorReply('Please specify a side to join.');
+			}
 
-		return this.sendReply('You are now on Team Kymmi.');
+			const badge = await joinTeam(user, teamName, teamSide);
+
+			if (!badge) {
+				return this.errorReply(`Unable to join ${teamSide} as it does not have an associated badge.`);
+			}
+
+			return this.sendReplyBox(`Successfully joined team ${teamSide}: ${Badges.createBadgeHtml(badge, false)}`);
+		},
 	},
 };

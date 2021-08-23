@@ -122,6 +122,9 @@ export class BadgesDatabase {
 		}
 		return result.result;
 	}
+	getBadge(badgeID: string): Promise<Badge | undefined> {
+		return this.get('getBadge', [badgeID]);
+	}
 	getBadges(): Promise<Badge[]> {
 		return this.all('getBadges', []);
 	}
@@ -167,6 +170,7 @@ const statements: {[k: string]: Database.Statement} = {};
 const transactions: {[k: string]: Database.Transaction} = {};
 
 const ACTIONS = {
+	getBadge: `SELECT * FROM badges WHERE badge_id = ?`,
 	getBadges: `SELECT * FROM badges`,
 	getOwnedBadges: `SELECT * FROM badges WHERE owner_id = ? LIMIT ?`,
 	createBadge: `INSERT INTO badges (badge_id, badge_name, owner_id, file_name, create_date) VALUES (?, ?, ?, ?, ?)`,

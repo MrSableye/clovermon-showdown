@@ -84,6 +84,9 @@ export const Badges = new class {
 		}));
 	}
 	// Retrieval
+	getBadge(badgeID: string): Promise<Badge | undefined> {
+		return Chat.Badges.getBadge(badgeID);
+	}
 	getBadges() {
 		return Chat.Badges.getBadges();
 	}
