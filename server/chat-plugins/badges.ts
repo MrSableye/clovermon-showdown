@@ -563,6 +563,7 @@ export const commands: Chat.ChatCommands = {
 			this.refreshPage('badge-owned');
 			return this.sendReply(`Set Badge '${id}' priority to '${priority}'.`);
 		},
+		'': 'view',
 		view() {
 			Badges.checkCanUse(this);
 
@@ -573,7 +574,8 @@ export const commands: Chat.ChatCommands = {
 		this.sendReplyBox(
 			`<code>/badge view</code>: opens the badge page<br />` +
 			`<code>/badge showall</code>: shows all badges. Requires: &<br />` +
-			`<code>/badge showowned</code>: shows all badges you own<br />` +
+			`<code>/badge showmanaged</code>: shows all badges you manage<br />` +
+			`<code>/badge showmanaged</code>: shows all badges a given user manages. Requires: &<br />` +
 			`<code>/badge showowned [user]</code>: shows all badges the given user owns. Requires: &<br />` +
 			`<code>/badge showowners [badge id]</code>: shows all owners of a badges. Requires: & or ownership<br />` +
 			`<code>/badge show</code>: shows all badges you've been granted<br />` +
