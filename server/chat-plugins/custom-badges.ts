@@ -67,7 +67,7 @@ const joinTeam = async (user: User, teamName: string, teamSide: string): Promise
 };
 
 export const commands: Chat.ChatCommands = {
-	team: {
+	badgeteam: {
 		list() {
 			if (!Config.usesqlitebadges) {
 				throw new Chat.ErrorMessage(`The badges feature is currently disabled.`);
