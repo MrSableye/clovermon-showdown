@@ -982,4 +982,192 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	appleacid: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	bodypress: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	branchpoke: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	breakingswipe: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	burningjealousy: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	coaching: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	courtchange: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	decorate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	dragondarts: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	dualwingbeat: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	eeriespell: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	eternabeam: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	expandingforce: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	falsesurrender: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	fierywrath: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	flipturn: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	freezingglare: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	grassyglide: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	jawlock: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	junglehealing: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	lashout: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	lifedew: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	magicpowder: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	meteorassault: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	meteorbeam: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	mistyexplosion: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	noretreat: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	obstruct: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	octolock: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	overdrive: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	poltergeist: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	pyroball: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	risingvoltage: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	scaleshot: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	scorchingsands: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	skittersmack: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	snaptrap: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	snipeshot: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	spiritbreak: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	steelbeam: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	steelroller: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	tarshot: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	teatime: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	terrainpulse: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	thundercage: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	thunderouskick: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	tripleaxel: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

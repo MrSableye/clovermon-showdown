@@ -31600,7 +31600,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		types: ["Normal", "Fairy"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 95, atk: 95, def: 90, spa: 70, spd: 105, spe: 55},
-		abilities: {0: "Prankster", H: "Levitate", S: "Madman"},
+		abilities: {0: "Prankster", H: "Levitate", S: "Magnet Pull"},
 		heightm: 2.2,
 		weightkg: 72,
 		color: "Green",
