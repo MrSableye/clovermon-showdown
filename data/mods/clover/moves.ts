@@ -97,10 +97,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		onHit(target, source, effect) {
 			const isStandard = (move: Move, format: Format) => {
 				if (format.isNonstandard === 'CAP') {
-					return (format.isNonstandard === null) || format.isNonstandard === 'CAP';
+					return (move.isNonstandard === null) || (move.isNonstandard === 'CAP');
 				}
 
-				return format.isNonstandard === null;
+				return move.isNonstandard === null;
 			};
 			const moves = this.dex.moves.all().filter(
 				move => (move.availability?.clover === 1) &&
