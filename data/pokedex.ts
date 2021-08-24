@@ -30730,7 +30730,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Ignifatu",
 		types: ["Fire"],
 		gender: "N",
-		baseStats: {hp: 109, atk: 167, def: 89, spa: 71, spd: 39, spe: 97},
+		baseStats: {hp: 109, atk: 167, def: 89, spa: 71, spd: 37, spe: 97},
 		abilities: {0: "Beast Boost", H: "Sheer Force", S: "Anger Point"},
 		heightm: 4.21,
 		weightkg: 465,
