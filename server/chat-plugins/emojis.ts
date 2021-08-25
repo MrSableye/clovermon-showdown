@@ -1,6 +1,8 @@
 import probe from 'probe-image-size';
 import {FS} from '../../lib';
+import {Punishments} from '../punishments';
 
+const EMOJI_BAN_DURATION = 7 * 24 * 60 * 60 * 1000; // 1 week
 const EMOJI_SIZE = 32;
 const ERROR_NO_EMOJI_NAME = 'Specify an emoji name.';
 const ERROR_NO_EMOJI_URL = 'Specify an emoji description.';
@@ -88,6 +90,26 @@ export const commands: Chat.ChatCommands = {
 
 			return this.sendReply(`Deleted :${emojiName}:`);
 		},
+		async ban(target) {
+			this.checkCan('lock');
+			const [rawUserID, ...reasons] = target.split(',');
+			const reason = reasons.join(',');
+			const userID = toID(rawUserID);
+			const affectedUsers = await Punishments.punish(userID, {
+				type: 'EMOJI',
+				expireTime: Date.now() + EMOJI_BAN_DURATION,
+				id: userID,
+				reason,
+			}, false);
+			const success = affectedUsers.length > 0;
+			this.sendReply(success ? `Applied a week-long emoji ban to ${userID}.` : `Unable to emoji ban ${userID}.`);
+		},
+		unban(target) {
+			this.checkCan('lock');
+			const userID = toID(target);
+			const success = Punishments.unpunish(userID, 'EMOJI');
+			this.sendReply(success ? `Removed emoji ban from ${userID}.` : `Unable to remove emoji ban from ${userID}.`);
+		},
 	},
 	emojihelp() {
 		this.runBroadcast();
@@ -95,12 +117,14 @@ export const commands: Chat.ChatCommands = {
 			`<code>/emoji list</code> - Lists all available emojis.`,
 			`<code>/emoji add [name], [image url]</code> - Adds or updates an emoji. Requires: &`,
 			`<code>/emoji remove [name]</code> - Removes an emoji. Requires: &`,
+			`<code>/emoji ban [user], [reason]</code> - Bans a user from using emojis. Requires: &, @, %`,
+			`<code>/emoji unban [user]</code> - Removes an emoji ban from a user. Requires: &, @, %`,
 		].join('<br />'));
 	},
 };
 
-export const chatfilter: Chat.ChatFilter = (message, user, room) => {
-	if (Object.keys(emojis).length > 0 && emojiRegex.test(message)) {
+export const chatfilter: Chat.ChatFilter = (message, user) => {
+	if (!Punishments.hasPunishType(user.id, 'EMOJI') && Object.keys(emojis).length > 0 && emojiRegex.test(message)) {
 		const prefix = message.startsWith('/html') ? '' : '/html ';
 		return prefix + message.replace(emojiRegex, (match) => {
 			const emojiName = match.slice(1, -1);
