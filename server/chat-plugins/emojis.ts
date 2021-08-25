@@ -3,6 +3,7 @@ import {FS} from '../../lib';
 import {Punishments} from '../punishments';
 
 const EMOJI_BAN_DURATION = 7 * 24 * 60 * 60 * 1000; // 1 week
+const MAX_REASON_LENGTH = 300;
 const EMOJI_SIZE = 32;
 const ERROR_NO_EMOJI_NAME = 'Specify an emoji name.';
 const ERROR_NO_EMOJI_URL = 'Specify an emoji description.';
@@ -90,25 +91,38 @@ export const commands: Chat.ChatCommands = {
 
 			return this.sendReply(`Deleted :${emojiName}:`);
 		},
-		async ban(target) {
-			this.checkCan('lock');
-			const [rawUserID, ...reasons] = target.split(',');
-			const reason = reasons.join(',');
-			const userID = toID(rawUserID);
-			const affectedUsers = await Punishments.punish(userID, {
-				type: 'EMOJI',
+		async ban(target, room, user) {
+			const {targetUser, targetUsername, rest: reason} = this.splitUser(target);
+
+			if (!targetUser) return this.errorReply(`User '${targetUsername}' not found.`);
+			if (reason.length > MAX_REASON_LENGTH) {
+				return this.errorReply(`The reason is too long. It cannot exceed ${MAX_REASON_LENGTH} characters.`);
+			}
+
+			this.checkCan('lock', targetUser);
+
+			await Punishments.punish(targetUser, {
+				type: 'EMOJIBAN',
 				expireTime: Date.now() + EMOJI_BAN_DURATION,
-				id: userID,
+				id: targetUser.id,
 				reason,
 			}, false);
-			const success = affectedUsers.length > 0;
-			this.sendReply(success ? `Applied a week-long emoji ban to ${userID}.` : `Unable to emoji ban ${userID}.`);
+			targetUser.popup(`|modal|${user.name} has emoji banned you for ${Chat.toDurationString(EMOJI_BAN_DURATION)}. ${reason}`);
+			this.addModAction(`${targetUser.name} was emoji banned by ${user.name} for ${Chat.toDurationString(EMOJI_BAN_DURATION)}.${(reason ? ` (${reason})` : ``)}`);
+			this.modlog(`EMOJI`, targetUser, reason);
 		},
-		unban(target) {
-			this.checkCan('lock');
-			const userID = toID(target);
-			const success = Punishments.unpunish(userID, 'EMOJI');
-			this.sendReply(success ? `Removed emoji ban from ${userID}.` : `Unable to remove emoji ban from ${userID}.`);
+		unban(target, room, user) {
+			const {targetUser, targetUsername} = this.splitUser(target);
+
+			this.checkCan('lock', targetUser);
+
+			const success = Punishments.unpunish(targetUser?.id || toID(targetUsername), 'EMOJIBAN');
+			if (success) {
+				this.addModAction(`${(targetUser ? targetUser.name : toID(targetUsername))}'s emoji banned was lifted by ${user.name}.`);
+				this.modlog('UNEMOJIBAN', (targetUser || toID(targetUsername)), null, {noip: 1, noalts: 1});
+			} else {
+				this.errorReply(`${(targetUser ? targetUser.name : targetUsername)} is not emoji banned.`);
+			}
 		},
 	},
 	emojihelp() {
@@ -124,7 +138,7 @@ export const commands: Chat.ChatCommands = {
 };
 
 export const chatfilter: Chat.ChatFilter = (message, user) => {
-	if (!Punishments.hasPunishType(user.id, 'EMOJI') && Object.keys(emojis).length > 0 && emojiRegex.test(message)) {
+	if (!Punishments.hasPunishType(user.id, 'EMOJIBAN') && Object.keys(emojis).length > 0 && emojiRegex.test(message)) {
 		const prefix = message.startsWith('/html') ? '' : '/html ';
 		return prefix + message.replace(emojiRegex, (match) => {
 			const emojiName = match.slice(1, -1);
