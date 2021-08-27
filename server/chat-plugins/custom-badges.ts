@@ -94,7 +94,7 @@ export const commands: Chat.ChatCommands = {
 
 			this.runBroadcast();
 
-			return this.sendReplyBox('<b><u>Team Badges</u><br />' +
+			return this.sendReplyBox('<b><u>Team Badges</b><br />' +
 				Object.entries(teams).map(([teamName, team]) => createTeamHtml(teamName, team)).join('<br />'));
 		},
 		async join(target, room, user) {
