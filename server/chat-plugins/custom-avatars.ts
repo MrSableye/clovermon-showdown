@@ -22,6 +22,6 @@ export const commands: Chat.ChatCommands = {
 		}
 	},
 	cloveravatars() {
-		this.sendReplyBox(`<b><u>Avatars <i>(hover for name, try <code>/avatar NAME</code>)</i></b><br />${cloverAvatars.map((avatar) => createAvatarHtml(avatar)).join(' ')}`);
+		this.sendReplyBox(`<b><u>Avatars</u> <i>(hover for name, try <code>/avatar NAME</code>)</i></b><br />${cloverAvatars.map((avatar) => createAvatarHtml(avatar)).join(' ')}`);
 	},
 };

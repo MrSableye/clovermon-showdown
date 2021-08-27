@@ -46,7 +46,7 @@ export const commands: Chat.ChatCommands = {
 	emoji: {
 		list() {
 			this.runBroadcast();
-			return this.sendReplyBox(`<b><u>Emojis <i>(hover for name, try <code>:EMOJINAME:</code>)</i></b><br />${Object.entries(emojis).map(([emojiName, emojiUrl]) => createEmojiHtml(emojiName, emojiUrl)).join(' ')}`);
+			return this.sendReplyBox(`<b><u>Emojis</u> <i>(hover for name, try <code>:EMOJINAME:</code>)</i></b><br />${Object.entries(emojis).map(([emojiName, emojiUrl]) => createEmojiHtml(emojiName, emojiUrl)).join(' ')}`);
 		},
 		update: 'add',
 		async add(target) {

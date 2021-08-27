@@ -1,44 +1,65 @@
 import {Badge} from '../badges';
 import {Badges} from './badges';
 
-interface Team {
-	teamToBadge: Record<string, string>;
-	badges: string[];
-}
+type Team = Record<string, Badge>;
 
-const createTeam = (teamToBadge: Record<string, string>): Team => ({
-	teamToBadge,
-	badges: Object.values(teamToBadge),
-});
+const createTeam = async (teamToBadge: Record<string, string>): Promise<Team> => {
+	const team: Team = {};
 
-const teams: Record<string, Team> = {
-	waifu: createTeam({
-		kymmi: 'teamkymmi',
-		bavi: 'teambavi',
-	}),
-	crewmate: createTeam({
-		red: 'redcrewmate',
-		blue: 'bluecrewmate',
-		green: 'greencrewmate',
-		yellow: 'yellowcrewmate',
-		orange: 'orangecrewmate',
-		pink: 'pinkcrewmate',
-		purple: 'purplecrewmate',
-		lime: 'limecrewmate',
-		black: 'blackcrewmate',
-		white: 'whitecrewmate',
-		brown: 'browncrewmate',
-		cyan: 'cyancrewmate',
-		maroon: 'marooncrewmate',
-		rose: 'rosecrewmate',
-		banana: 'bananacrewmate',
-		gray: 'graycrewmate',
-		tan: 'tancrewmate',
-		coral: 'coralcrewmate',
-		rainbow: 'rainbowcrewmate',
-		reverse: 'reversecrewmate',
-		australian: 'australiancrewmate',
-	}),
+	await Promise.all(Object.entries(teamToBadge).map(async ([sideName, badgeID]) => {
+		const badge = await Badges.getBadge(badgeID);
+
+		if (badge) {
+			team[sideName] = badge;
+		}
+	}));
+
+	return team;
+};
+
+let teams: Record<string, Team> = {};
+
+const initializeTeams = async () => {
+	teams = {
+		waifu: await createTeam({
+			kymmi: 'teamkymmi',
+			bavi: 'teambavi',
+		}),
+		crewmate: await createTeam({
+			red: 'redcrewmate',
+			blue: 'bluecrewmate',
+			green: 'greencrewmate',
+			yellow: 'yellowcrewmate',
+			orange: 'orangecrewmate',
+			pink: 'pinkcrewmate',
+			purple: 'purplecrewmate',
+			lime: 'limecrewmate',
+			black: 'blackcrewmate',
+			white: 'whitecrewmate',
+			brown: 'browncrewmate',
+			cyan: 'cyancrewmate',
+			maroon: 'marooncrewmate',
+			rose: 'rosecrewmate',
+			banana: 'bananacrewmate',
+			gray: 'graycrewmate',
+			tan: 'tancrewmate',
+			coral: 'coralcrewmate',
+			rainbow: 'rainbowcrewmate',
+			reverse: 'reversecrewmate',
+			australian: 'australiancrewmate',
+		}),
+	};
+};
+void initializeTeams();
+
+const createTeamHtml = (teamName: string, team: Team) => {
+	let teamHtml = `<b>${teamName} <i>(try <code>/badgeteam join ${teamName}, SIDE)</i></b><br />`;
+
+	Object.entries(team).forEach(([sideName, badge]) => {
+		teamHtml += Badges.createBadgeHtml({...badge, badge_id: sideName}, false);
+	});
+
+	return teamHtml;
 };
 
 const joinTeam = async (user: User, teamName: string, teamSide: string): Promise<Badge | undefined> => {
@@ -48,22 +69,22 @@ const joinTeam = async (user: User, teamName: string, teamSide: string): Promise
 		throw new Chat.ErrorMessage(`Team ${teamName} does not exist.`);
 	}
 
-	const badgeID = team.teamToBadge[teamSide];
+	const badge = team[teamSide];
 
-	if (!badgeID) {
+	if (!badge) {
 		throw new Chat.ErrorMessage(`Team ${teamName} does not have a side ${teamSide} to join.`);
 	}
 
 	const userBadges = user.badges;
 	if (userBadges) {
-		const existingTeamBadges = userBadges.filter((userBadge) => team.badges.includes(userBadge.badge_id));
+		const existingTeamBadges = userBadges.filter((userBadge) => Object.values(team).map((teamBadge) => teamBadge.badge_id).includes(userBadge.badge_id));
 
 		await Promise.all(existingTeamBadges.map((existingTeamBadge) => Badges.removeBadgeFromUser(user.id, existingTeamBadge.badge_id, user, true)));
 	}
 
-	await Badges.addBadgeToUser(user.id, badgeID, user, true);
+	await Badges.addBadgeToUser(user.id, badge.badge_id, user, true);
 
-	return Badges.getBadge(badgeID);
+	return badge;
 };
 
 export const commands: Chat.ChatCommands = {
@@ -75,7 +96,8 @@ export const commands: Chat.ChatCommands = {
 
 			this.runBroadcast();
 
-			return this.sendReplyBox(`<div class="pad">${Object.entries(teams).map(([teamName, team]) => `<div>${teamName}: ${Object.keys(team.teamToBadge).join(',')}</div>`)}</div>`);
+			return this.sendReplyBox('<b><u>Team Badges</u><br />' +
+				Object.entries(teams).map(([teamName, team]) => createTeamHtml(teamName, team)).join('<br />'));
 		},
 		async join(target, room, user) {
 			if (!Config.usesqlitebadges) {
