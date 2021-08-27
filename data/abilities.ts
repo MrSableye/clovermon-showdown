@@ -4841,10 +4841,18 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		availability: {clover: 1},
 		name: "Any Ability",
 		onStart(pokemon) {
+			const isStandard = (ability: AbilityData, format: Format) => {
+				if (format.isNonstandard === 'CAP') {
+					return (ability.isNonstandard === null) || (ability.isNonstandard === 'CAP');
+				}
+
+				return ability.isNonstandard === null;
+			};
 			const bannedAbilities = ['wonderguard', 'trace', 'forecast', 'comatose', 'artificial', 'anability', 'anyability'];
 			const abilityList = Object.values(this.dex.data.Abilities)
 				.filter((ability) => ability.availability?.clover !== undefined)
 				.filter((ability) => !bannedAbilities.includes(this.toID(ability.name)))
+				.filter((ability) => isStandard(ability, this.format))
 				.map((ability) => this.toID(ability.name));
 			const randomAbility = this.sample(abilityList);
 
