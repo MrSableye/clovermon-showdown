@@ -17,7 +17,7 @@
 import {Utils} from '../../lib';
 import type {UserSettings} from '../users';
 
-const avatarTable = new Set([
+export const avatarTable = new Set([
 	'aaron',
 	'acetrainercouple-gen3', 'acetrainercouple',
 	'acetrainerf-gen1', 'acetrainerf-gen1rb', 'acetrainerf-gen2', 'acetrainerf-gen3', 'acetrainerf-gen3rs', 'acetrainerf-gen4dp', 'acetrainerf-gen4', 'acetrainerf',
