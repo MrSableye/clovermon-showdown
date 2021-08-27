@@ -53,11 +53,9 @@ const initializeTeams = async () => {
 void initializeTeams();
 
 const createTeamHtml = (teamName: string, team: Team) => {
-	let teamHtml = `<b>${teamName} <i>(try <code>/badgeteam join ${teamName}, SIDE)</i></b><br />`;
+	let teamHtml = `<b>${teamName} <i>(try <code>/badgeteam join ${teamName}, SIDE</code>)</i></b><br />`;
 
-	Object.entries(team).forEach(([sideName, badge]) => {
-		teamHtml += Badges.createBadgeHtml({...badge, badge_id: sideName}, false);
-	});
+	teamHtml += Object.entries(team).map(([sideName, badge]) => Badges.createBadgeHtml({...badge, badge_id: sideName}, false)).join(' ');
 
 	return teamHtml;
 };
