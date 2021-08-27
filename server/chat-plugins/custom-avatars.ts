@@ -21,7 +21,7 @@ export const commands: Chat.ChatCommands = {
 			this.sendReply(`${this.tr`Avatar changed to:`}\n|raw|${createAvatarHtml('blobbos', true)}`);
 		}
 	},
-	cloverAvatars() {
+	cloveravatars() {
 		this.sendReplyBox(`<b><u>Avatars <i>(try <code>/avatar NAME</code>)</i></b><br />${cloverAvatars.map((avatar) => createAvatarHtml(avatar)).join(' ')}`);
 	},
 };
