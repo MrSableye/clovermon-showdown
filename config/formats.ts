@@ -288,6 +288,19 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: "[Gen 8 Clover Only] Alphabet Cup",
+		desc: `Allows Pok&eacute;mon to use any move that shares the same first letter as their name or a previous evolution's name.`,
+		mod: 'clover',
+		ruleset: ['Clover Only', 'Standard NatDex', 'Dynamax Clause', 'Alphabet Cup Move Legality'],
+		banlist: [
+			'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Acupressure', 'Baton Pass',
+		],
+		restricted: [
+			'Astral Barrage', 'Belly Drum', 'Bolt Beak', 'Double Iron Bash', 'Electrify', 'Geomancy', 'Glacial Lance',
+			'Lovely Kiss', 'Shell Smash', 'Shift Gear', 'Sleep Powder', 'Spore', 'Surging Strikes', 'Thousand Arrows',
+		],
+	},
+	{
 		name: "[Gen 8 Clover Only] Custom Game",
 		mod: 'clover',
 		debug: true,
