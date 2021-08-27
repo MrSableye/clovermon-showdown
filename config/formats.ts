@@ -293,7 +293,7 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		ruleset: ['Clover Only', 'Standard NatDex', 'Dynamax Clause', 'Alphabet Cup Move Legality'],
 		banlist: [
-			'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Acupressure', 'Baton Pass',
+			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Acupressure', 'Baton Pass',
 		],
 		restricted: [
 			'Astral Barrage', 'Belly Drum', 'Bolt Beak', 'Double Iron Bash', 'Electrify', 'Geomancy', 'Glacial Lance',
