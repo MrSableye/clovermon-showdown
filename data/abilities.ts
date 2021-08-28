@@ -4843,10 +4843,10 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onStart(pokemon) {
 			const isStandard = (ability: AbilityData, format: Format) => {
 				if (format.isNonstandard === 'CAP') {
-					return (ability.isNonstandard === null) || (ability.isNonstandard === 'CAP');
+					return (ability.isNonstandard === null) || (ability.isNonstandard === undefined) || (ability.isNonstandard === 'CAP');
 				}
 
-				return ability.isNonstandard === null;
+				return (ability.isNonstandard === null) || (ability.isNonstandard === undefined);
 			};
 			const bannedAbilities = ['wonderguard', 'trace', 'forecast', 'comatose', 'artificial', 'anability', 'anyability'];
 			const abilityList = Object.values(this.dex.data.Abilities)
