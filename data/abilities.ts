@@ -5652,6 +5652,36 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			}
 		},
 		rating: 3,
+		isNonstandard: "Future",
+	},
+	epictestability: {
+		name: "Epic Test Ability",
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Epic Test Ability');
+			const side = pokemon.side;
+			this.setPlayer(side.id, {
+				avatar: side.avatar,
+				name: side.name,
+				seed: this.prngSeed,
+				team: [...side.team, {
+					species: 'Pikachu',
+					ability: 'Pressure',
+					evs: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
+					ivs: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
+					gender: 'F',
+					item: 'Leftovers',
+					level: 69,
+					moves: ['Tackle'],
+					name: 'Sneedachu',
+					shiny: true,
+					nature: 'Quiet',
+				}],
+			});
+		},
+		rating: 3,
+		isNonstandard: "Future",
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {
