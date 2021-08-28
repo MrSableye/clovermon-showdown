@@ -5676,7 +5676,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				shiny: true,
 				nature: 'Quiet',
 			}, side));
-			this.sendUpdates();
+			this.add('poke', side.id, 'Pikachu, L69, F', '');
 		},
 		rating: 3,
 		isNonstandard: "Future",
