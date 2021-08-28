@@ -22843,6 +22843,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			chance: 20,
 			onHit(target, source) {
 				if (!source.speciesState['parent']) {
+					this.add('-activate', source, 'move: Mating Press', '[of] ' + target);
 					const sourceSide = source.side;
 					const targetSet = target.set;
 					const childName = [
@@ -22856,9 +22857,14 @@ export const Moves: { [moveid: string]: MoveData } = {
 						moves: ['Metronome'],
 						item: undefined,
 					}, sourceSide);
-					this.add('poke', sourceSide.id, `${targetSet.species},L${targetSet.level},${targetSet.gender}`, '');
+					baby.position = sourceSide.pokemon.length;
 					sourceSide.pokemon.push(baby);
+					const level = targetSet.level ? `, L${targetSet.level}` : '';
+					const gender = targetSet.gender ? `, ${targetSet.gender}` : '';
+					this.add('poke', sourceSide.id, `${targetSet.species}, ${level}${gender}`, '');
 					source.speciesState['parent'] = true;
+				} else {
+					this.add('-fail', source, 'move: Mating Press');
 				}
 			},
 		},

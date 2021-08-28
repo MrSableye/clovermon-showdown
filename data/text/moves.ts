@@ -7354,6 +7354,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Cope",
 		shortDesc: "Hits 69 times.",
 	},
+	matingpress: {
+		name: "Mating Press",
+		desc: "20% chance to have a child with the opposing mon with no item and only Metronome. Can only occur once for a user.",
+		shortDesc: "20% chance to have a child.",
+
+		activate: "  [SOURCE] had a child with [POKEMON]!",
+		fail: "[POKEMON] had a miscarriage...",
+	},
 	/* Atlas move descs lol */
 	mondayz: {
 		name: "Mondayz",
