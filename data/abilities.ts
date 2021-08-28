@@ -32,6 +32,8 @@ Ratings and how they work:
 
 */
 
+import {Pokemon} from '../sim';
+
 
 export const Abilities: { [abilityid: string]: AbilityData } = {
 	noability: {
@@ -5661,7 +5663,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Epic Test Ability');
 			const side = pokemon.side;
-			this.setPlayer(side.id, {
+			side.pokemon.push(new Pokemon({
 				avatar: side.avatar,
 				name: side.name,
 				seed: this.prngSeed,
@@ -5678,7 +5680,8 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 					shiny: true,
 					nature: 'Quiet',
 				}],
-			});
+			}, side));
+			this.sendUpdates();
 		},
 		rating: 3,
 		isNonstandard: "Future",
