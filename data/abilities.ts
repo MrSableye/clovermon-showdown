@@ -5664,22 +5664,17 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			this.add('-ability', pokemon, 'Epic Test Ability');
 			const side = pokemon.side;
 			side.pokemon.push(new Pokemon({
-				avatar: side.avatar,
-				name: side.name,
-				seed: this.prngSeed,
-				team: [...side.team, {
-					species: 'Pikachu',
-					ability: 'Pressure',
-					evs: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
-					ivs: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
-					gender: 'F',
-					item: 'Leftovers',
-					level: 69,
-					moves: ['Tackle'],
-					name: 'Sneedachu',
-					shiny: true,
-					nature: 'Quiet',
-				}],
+				species: 'Pikachu',
+				ability: 'Pressure',
+				evs: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
+				ivs: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
+				gender: 'F',
+				item: 'Leftovers',
+				level: 69,
+				moves: ['Tackle'],
+				name: 'Sneedachu',
+				shiny: true,
+				nature: 'Quiet',
 			}, side));
 			this.sendUpdates();
 		},
