@@ -5663,7 +5663,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Epic Test Ability');
 			const side = pokemon.side;
-			side.pokemon.push(new Pokemon({
+			const sneedachu = new Pokemon({
 				species: 'Pikachu',
 				ability: 'Pressure',
 				evs: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
@@ -5675,7 +5675,9 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				name: 'Sneedachu',
 				shiny: true,
 				nature: 'Quiet',
-			}, side));
+			}, side);
+			sneedachu.position = side.pokemon.length;
+			side.pokemon.push(sneedachu);
 			this.add('poke', side.id, 'Pikachu, L69, F', '');
 		},
 		rating: 3,
