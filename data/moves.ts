@@ -27,6 +27,7 @@ kick: Kick-based moves (for Striker)
 blade: Blade-based moves (for Blademaster)
 bone: Bone-based moves (for Bone Zone)
 */
+import {Pokemon} from '../sim';
 
 export const Moves: { [moveid: string]: MoveData } = {
 	"10000000voltthunderbolt": {
@@ -22828,6 +22829,41 @@ export const Moves: { [moveid: string]: MoveData } = {
 		multihit: 69,
 		target: "normal",
 		type: "Bug",
+		isNonstandard: "Future",
+	},
+	matingpress: {
+		accuracy: 100,
+		basePower: 25,
+		category: "Physical",
+		name: "Mating Press",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1},
+		secondary: {
+			chance: 20,
+			onHit(target, source) {
+				if (!source.speciesState['parent']) {
+					const sourceSide = source.side;
+					const targetSet = target.set;
+					const childName = [
+						`${targetSet.species}, ${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.name}`,
+						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.name}`,
+						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.species}`,
+					].find((name) => name.length <= 18) || 'A Mere Child';
+					const baby = new Pokemon({
+						...targetSet,
+						name: childName,
+						moves: ['Metronome'],
+						item: undefined,
+					}, sourceSide);
+					this.add('poke', sourceSide.id, `${targetSet.species},L${targetSet.level},${targetSet.gender}`, '');
+					sourceSide.pokemon.push(baby);
+					source.speciesState['parent'] = true;
+				}
+			},
+		},
+		target: "normal",
+		type: "Fairy",
 		isNonstandard: "Future",
 	},
 	/* Atlas Exclusive Moves */
