@@ -20610,9 +20610,11 @@ export const Moves: { [moveid: string]: MoveData } = {
 
 			if (positiveBoosts > 0) {
 				const factor = 12.5 * Math.pow(2, Math.max(4, positiveBoosts));
+				const amount = this.modify(source.maxhp, factor);
 				target.setBoost(adjustedBoosts);
 				this.add('-clearpositiveboost', target, source, 'move: Lick Clean');
-				return !!source.heal(this.modify(source.maxhp, factor));
+				this.add('-heal', source, amount, '[from] move: Lick Clean');
+				return !!source.heal(amount);
 			}
 		},
 		isNonstandard: "Future",
