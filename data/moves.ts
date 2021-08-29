@@ -22859,10 +22859,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 					}, sourceSide);
 					baby.position = sourceSide.pokemon.length;
 					sourceSide.pokemon.push(baby);
-					const level = (targetSet.level && targetSet.level !== 100) ? `, L${targetSet.level}` : '';
-					const gender = (targetSet.gender === 'M' || targetSet.gender === 'F') ? `, ${targetSet.gender}` : '';
-					const shiny = targetSet.shiny ? `, shiny` : '';
-					this.add('poke', sourceSide.id, `${targetSet.species}${level}${gender}${shiny}, spawned`, '');
+					this.add('teamsize', sourceSide.id, sourceSide.pokemon.length);
 					source.speciesState['parent'] = true;
 				} else {
 					this.add('-fail', source, 'move: Mating Press');
