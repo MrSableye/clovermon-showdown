@@ -22861,7 +22861,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 					sourceSide.pokemon.push(baby);
 					const level = targetSet.level ? `, L${targetSet.level}` : '';
 					const gender = targetSet.gender ? `, ${targetSet.gender}` : '';
-					this.add('poke', sourceSide.id, `${targetSet.species}, ${level}${gender}`, '');
+					const shiny = targetSet.shiny ? `, shiny` : '';
+					this.add('poke', sourceSide.id, `${targetSet.species}, ${level}${gender}${shiny}, spawned`, '');
 					source.speciesState['parent'] = true;
 				} else {
 					this.add('-fail', source, 'move: Mating Press');
