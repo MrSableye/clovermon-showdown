@@ -22859,9 +22859,11 @@ export const Moves: { [moveid: string]: MoveData } = {
 					}, sourceSide);
 					baby.position = sourceSide.pokemon.length;
 					sourceSide.pokemon.push(baby);
-					const level = targetSet.level ? `, L${targetSet.level}` : '';
-					const gender = targetSet.gender ? `, ${targetSet.gender}` : '';
+					const level = (targetSet.level && targetSet.level !== 100) ? `, L${targetSet.level}` : '';
+					const gender = (targetSet.gender === 'M' || targetSet.gender === 'F') ? `, ${targetSet.gender}` : '';
 					const shiny = targetSet.shiny ? `, shiny` : '';
+					const details = `${targetSet.species}, ${level}${gender}${shiny}, spawned`;
+					this.debug(`child details: ${details}`);
 					this.add('poke', sourceSide.id, `${targetSet.species}, ${level}${gender}${shiny}, spawned`, '');
 					source.speciesState['parent'] = true;
 				} else {
