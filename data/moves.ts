@@ -22863,7 +22863,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 					const gender = (targetSet.gender === 'M' || targetSet.gender === 'F') ? `, ${targetSet.gender}` : '';
 					const shiny = targetSet.shiny ? `, shiny` : '';
 					const details = `${targetSet.species}, ${level}${gender}${shiny}, spawned`;
-					this.debug(`child details: ${details}`);
+					this.debug(`child details: ${details}, species: ${targetSet.species}, level: ${level}, gender: ${gender}, shiny: ${shiny}`);
 					this.add('poke', sourceSide.id, `${targetSet.species}, ${level}${gender}${shiny}, spawned`, '');
 					source.speciesState['parent'] = true;
 				} else {
