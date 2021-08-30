@@ -31997,7 +31997,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		types: ["Steel", "Ghost"],
 		gender: "M",
 		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
-		abilities: {0: "Stall", H: "Flare Heal", S: "Prankster"},
+		abilities: {0: "Stall", 1: "Admin Abuse", H: "Flare Heal", S: "Prankster"},
 		heightm: 8,
 		weightkg: 911,
 		color: "Purple",
