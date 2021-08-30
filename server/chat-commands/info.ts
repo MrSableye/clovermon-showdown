@@ -724,6 +724,7 @@ export const commands: Chat.ChatCommands = {
 					if (move.flags['blade']) details["&#10003; Blade move"] = "";
 					if (move.flags['kick']) details["&#10003; Kick move"] = "";
 					if (move.flags['bone']) details["&#10003; Bone move"] = "";
+					if (move.flags['hammer']) details["&#10003; Hammer move"] = "";
 
 					if (dex.gen >= 7) {
 						if (move.gen >= 8 && move.isMax) {

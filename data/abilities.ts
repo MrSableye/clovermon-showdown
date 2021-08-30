@@ -4876,13 +4876,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Admin Abuse",
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
-			if (['hammerarm', 'dragonhammer', 'woodhammer', 'icehammer', 'crabhammer', 'banhammer'].includes(move.id)) {
+			if (move.flags.hammer) {
 				this.debug('Admin Abuse boost');
 				return this.chainModify(1.2);
 			}
 		},
 		onModifyMove(move, pokemon) {
-			if (['hammerarm', 'dragonhammer', 'woodhammer', 'icehammer', 'crabhammer', 'banhammer'].includes(move.id)) {
+			if (move.flags.hammer) {
 				if (move.recoil) delete move.recoil;
 				if (move.self && move.self.boosts) {
 					this.debug('eliminating possible stat drops on the user');

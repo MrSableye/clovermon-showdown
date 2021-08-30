@@ -2905,7 +2905,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Crabhammer",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -3878,7 +3878,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Dragon Hammer",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
@@ -7874,7 +7874,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Hammer Arm",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, hammer: 1},
 		self: {
 			boosts: {
 				spe: -1,
@@ -9134,7 +9134,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Ice Hammer",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, hammer: 1},
 		self: {
 			boosts: {
 				spe: -1,
@@ -20212,7 +20212,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Wood Hammer",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
 		recoil: [33, 100],
 		secondary: null,
 		target: "normal",
@@ -21081,7 +21081,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		target: "normal",
 		type: "Normal",
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, hammer: 1},
 		onHit(target) {
 			if (!target.volatiles['dynamax']) {
 				target.addVolatile('torment');
