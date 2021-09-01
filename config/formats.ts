@@ -18,10 +18,46 @@ The column value will be ignored for repeat sections.
 */
 
 export const Formats: FormatList = [
-
+	// Clovermon Core Tiers
+	///////////////////////////////////////////////////////////////////
+	{
+		section: "Clover Only Core Tiers",
+	},
+	{
+		name: "[Gen 8 Clover Only] OU",
+		mod: 'clover',
+		ruleset: [
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Evasion Moves Clause',
+			'Species Clause',
+			'OHKO Clause',
+			'Clover Only',
+			'Blobbos Clause',
+		],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+	},
+	{
+		name: "[Gen 8 Clover Only] UU",
+		mod: 'clover',
+		ruleset: ['[Gen 8 Clover Only] OU'],
+		banlist: ['OU', 'UUBL'],
+	},
+	{
+		name: "[Gen 8 Clover Only] RU",
+		mod: 'clover',
+		ruleset: ['[Gen 8 Clover Only] UU'],
+		banlist: ['UU', 'RUBL'],
+	},
+	{
+		name: "[Gen 8 Clover Only] NU",
+		mod: 'clover',
+		ruleset: ['[Gen 8 Clover Only] RU'],
+		banlist: ['RU', 'NUBL'],
+	},
 	// Clovermon Singles
 	///////////////////////////////////////////////////////////////////
-
 	{
 		section: "Clover Only Singles",
 	},
@@ -46,21 +82,6 @@ export const Formats: FormatList = [
 		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
-		name: "[Gen 8 Clover Only] OU",
-		mod: 'clover',
-		ruleset: [
-			'Standard NatDex',
-			'Dynamax Clause',
-			'Sleep Clause Mod',
-			'Evasion Moves Clause',
-			'Species Clause',
-			'OHKO Clause',
-			'Clover Only',
-			'Blobbos Clause',
-		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
-	},
-	{
 		name: "[Gen 8 Clover Only] Ubers",
 		mod: 'clover',
 		ruleset: [
@@ -74,24 +95,6 @@ export const Formats: FormatList = [
 			'Blobbos Clause',
 		],
 		banlist: ['Baton Pass'],
-	},
-	{
-		name: "[Gen 8 Clover Only] UU",
-		mod: 'clover',
-		ruleset: ['[Gen 8 Clover Only] OU'],
-		banlist: ['OU', 'UUBL'],
-	},
-	{
-		name: "[Gen 8 Clover Only] RU",
-		mod: 'clover',
-		ruleset: ['[Gen 8 Clover Only] UU'],
-		banlist: ['UU', 'RUBL'],
-	},
-	{
-		name: "[Gen 8 Clover Only] NU",
-		mod: 'clover',
-		ruleset: ['[Gen 8 Clover Only] RU'],
-		banlist: ['RU', 'NUBL'],
 	},
 	{
 		name: "[Gen 8 Clover Only] LC",
