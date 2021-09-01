@@ -26,6 +26,7 @@ sound: Has no effect on Pokemon with the Soundproof Ability.
 kick: Kick-based moves (for Striker)
 blade: Blade-based moves (for Blademaster)
 bone: Bone-based moves (for Bone Zone)
+hammer: Hammer-based moves (for Admin Abuse)
 */
 import {Pokemon} from '../sim';
 
@@ -2788,7 +2789,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: {mirror: 1},
 		onHitField(target, source) {
 			const sideConditions = [
-				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire', 'sleazyspores', 'shattershard',
+				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire', 'sleazyspores', 'shattershard', 'pleasedontdothat',
 			];
 			let success = false;
 			if (this.gameType === "freeforall") {
@@ -3252,7 +3253,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard',
 			];
 			const removeAll = [
-				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard',
+				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'pleasedontdothat',
 			];
 			for (const targetCondition of removeTarget) {
 				if (target.side.removeSideCondition(targetCondition)) {
@@ -7262,9 +7263,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 			onHit(source) {
 				let success = false;
 				const removeTarget = [
-					'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'sleazyspores', 'shattershard',
+					'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'sleazyspores', 'shattershard', 'pleasedontdothat',
 				];
-				const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard'];
+				const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'pleasedontdothat'];
 				for (const targetCondition of removeTarget) {
 					if (source.side.foe.removeSideCondition(targetCondition)) {
 						if (!removeAll.includes(targetCondition)) continue;
@@ -14215,7 +14216,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
 				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'pleasedontdothat'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -14232,7 +14233,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
 				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'pleasedontdothat'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -20836,7 +20837,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fairy",
 		flags: {},
 		onHit(pokemon) {
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'sleazyspores', 'gmaxsteelsurge', 'shattershard'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'sleazyspores', 'gmaxsteelsurge', 'shattershard', 'pleasedontdothat'];
 			const removedConditions = [];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
@@ -21951,7 +21952,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
 				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'pleasedontdothat'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -21968,7 +21969,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
 				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'pleasedontdothat'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -22250,7 +22251,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onHit(target, source, move) {
 			let success = false;
 			const removeAll = [
-				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
+				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'pleasedontdothat'];
 			for (const sideCondition of removeAll) {
 				if (target.side.removeSideCondition(sideCondition)) {
 					if (!removeAll.includes(sideCondition)) continue;
@@ -22551,7 +22552,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			const sourceSide = source.side;
 			const targetSide = source.side.foe;
 			const sideConditions = [
-				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire', 'sleazyspores', 'shattershard',
+				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire', 'sleazyspores', 'shattershard', 'pleasedontdothat',
 			];
 			let success = false;
 			for (const id of sideConditions) {
@@ -22871,6 +22872,49 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Fairy",
 		isNonstandard: "Future",
+	},
+	pleasedontdothat: {
+		basePower: 0,
+		accuracy: true,
+		category: "Status",
+		name: "Please Don't Do That",
+		pp: 20,
+		priority: 0,
+		flags: {},
+		sideCondition: 'pleasedontdothat',
+		condition: {
+			onSideStart(side) {
+				this.add('-sidestart', side, "move: Please Don't Do That");
+			},
+			onTryHit(target, source, move) {
+				if (target === source || move.hasBounced || !move.flags['reflectable']) {
+					return;
+				}
+				const newMove = this.dex.getActiveMove(move.id);
+				newMove.hasBounced = true;
+				newMove.pranksterBoosted = false;
+				this.actions.useMove(newMove, target, source);
+				target.side.removeSideCondition('pleasedontdothat');
+				return null;
+			},
+			onAllyTryHitSide(target, source, move) {
+				if (target.isAlly(source) || move.hasBounced || !move.flags['reflectable']) {
+					return;
+				}
+				const newMove = this.dex.getActiveMove(move.id);
+				newMove.hasBounced = true;
+				newMove.pranksterBoosted = false;
+				this.actions.useMove(newMove, this.effectState.target, source);
+				target.side.removeSideCondition('pleasedontdothat');
+				return null;
+			},
+			onSideEnd(side) {
+				this.add('-sideend', side, "move: Please Don't Do That");
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Psychic",
 	},
 	/* Atlas Exclusive Moves */
 	mondayz: {
@@ -23225,7 +23269,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
 				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'pleasedontdothat'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Stonehenge', '[of] ' + pokemon);
@@ -23242,7 +23286,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
 				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'pleasedontdothat'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Stonehenge', '[of] ' + pokemon);
