@@ -22886,6 +22886,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			onSideStart(side) {
 				this.add('-sidestart', side, "move: Please Don't Do That");
 			},
+			onTryHitPriority: 2,
 			onTryHit(target, source, move) {
 				if (target === source || move.hasBounced || !move.flags['reflectable']) {
 					return;
