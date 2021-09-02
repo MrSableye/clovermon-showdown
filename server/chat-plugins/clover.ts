@@ -37,7 +37,7 @@ export const commands: Chat.ChatCommands = {
 			this.sendReplyBox(
 				'<b><u>Contribute to Clovermon Showdown</u></b> <br />' +
 				`<p>Clovermon Showdown is open source! Bug fixes and new features are welcome from community members. If one of your pull requests is merged, you'll receive a unique badge!</p>` +
-				'<p>Repos: <a href="https://github.com/showderp/clovermon-showdown">showderp/clovermon-showdown</a> / <a href="https://github.com/showderp/clovermon-showdown-client">showderp/clovermon-showdown-client</a></p>'
+				'<p>Repos: <a href="https://github.com/MrSableye/clovermon-showdown">MrSableye/clovermon-showdown</a> / <a href="https://github.com/MrSableye/clovermon-showdown-client">MrSableye/clovermon-showdown-client</a></p>'
 			);
 		},
 		usage() {
