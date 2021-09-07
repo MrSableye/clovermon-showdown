@@ -22862,6 +22862,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 					}, sourceSide);
 					baby.position = sourceSide.pokemon.length;
 					sourceSide.pokemon.push(baby);
+					sourceSide.pokemonLeft += 1;
 					this.add('teamsize', sourceSide.id, sourceSide.pokemon.length);
 					source.speciesState['parent'] = true;
 				} else {
