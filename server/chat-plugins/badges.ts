@@ -14,7 +14,7 @@ const nameRegex = /^[A-Za-z0-9 "'()]+$/;
 
 const ERROR_BADGE_FEATURE_DISABLED = 'The badges feature is currently disabled.';
 const ERROR_USER_LOCKED = 'You are locked, and so cannot use the badges feature.';
-const ERROR_USER_NOT_AUTOCONFIRMED = 'You must be autoconfirmed to use the badges feature.';
+const ERROR_USER_NOT_REGISTERED = 'You must be registered to use the badges feature.';
 
 const ERROR_INVALID_IMAGE = 'Invalid image. Please provide a URL linking to a 16x16 GIF or PNG.';
 const ERROR_WRITING_IMAGE = 'Unable to write image. Please try again or contact an administrator.';
@@ -54,8 +54,8 @@ export const Badges = new class {
 		if (user.locked || user.namelocked || user.semilocked || user.permalocked) {
 			throw new Chat.ErrorMessage(ERROR_USER_LOCKED);
 		}
-		if (!user.autoconfirmed) {
-			throw new Chat.ErrorMessage(context.tr(ERROR_USER_NOT_AUTOCONFIRMED));
+		if (!user.registered) {
+			throw new Chat.ErrorMessage(context.tr(ERROR_USER_NOT_REGISTERED));
 		}
 	}
 
