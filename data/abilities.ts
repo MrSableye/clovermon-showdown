@@ -5093,10 +5093,14 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	pollution: {
 		availability: {clover: 1},
 		name: "Pollution",
-		onBeforeMove(source, target, move) {
-			if (move && target?.types.includes('Water') && move.type === 'Poison') {
-				target.getMoveHitData(move).typeMod = 1;
-			};
+		onAnyEffectiveness(typemod, target, type, move) {
+			const pollutionUser = this.effectState.target;
+
+			if (pollutionUser !== this.activePokemon) return;
+
+			if (move.type === 'Poison' && type === 'Water') {
+				return 1;
+			}
 		},
 		rating: 3,
 	},
