@@ -5093,9 +5093,10 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	pollution: {
 		availability: {clover: 1},
 		name: "Pollution",
-		onSourceEffectiveness(typeMod, target, type, move) {
-			if (move && target?.types.includes('Water') && move.type === 'Poison') return 1;
-			return;
+		onBeforeMove(source, target, move) {
+			if (move && target?.types.includes('Water') && move.type === 'Poison') {
+				target.getMoveHitData(move).typeMod = 1;
+			};
 		},
 		rating: 3,
 	},
