@@ -62,46 +62,46 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 	multitier: {
 		effectType: 'ValidatorRule',
 		name: 'Multi-Tier',
-		desc: "Requires 1 Uber, 1 OU mon, 2 UU mons, and 2 RU mons.",
+		desc: "Requires 1 OU mon, 1 UU mons, 2 RU mons, and 2 NU mons.",
 		onValidateTeam(team) {
-			let uber = 0;
 			let ou = 0;
 			let uu = 0;
 			let ru = 0;
+			let nu = 0;
 
 			team.forEach((set) => {
 				const species = this.dex.species.get(set.species || set.name);
-				if (species.tier === 'Uber') {
-					uber++;
-				} else if (species.tier === 'OU') {
+				if (species.tier === 'OU' || species.tier === 'UUBL') {
 					ou++;
 				} else if ((species.tier === 'UU') || (species.tier === 'RUBL')) {
 					uu++;
-				} else if ((species.tier === 'RU') || (species.tier === 'LC') || (species.tier === 'NFE')) {
+				} else if ((species.tier === 'RU') || (species.tier === 'NUBL')) {
 					ru++;
+				} else if ((species.tier === 'NU') || (species.tier === 'LC') || (species.tier === 'NFE')) {
+					nu++;
 				}
 			});
 
 			const errors = [];
 
-			if (uber + ou + uu + ru !== 6) {
+			if (ou + uu + ru + nu !== 6) {
 				errors.push('This format requires teams of 6.');
-			}
-
-			if (uber !== 1) {
-				errors.push('This format requires exactly 1 Uber per team.');
 			}
 
 			if (ou !== 1) {
 				errors.push('This format requires exactly 1 OU mon per team.');
 			}
 
-			if (uu !== 2) {
-				errors.push('This format requires exactly 2 UU mons per team.');
+			if (uu !== 1) {
+				errors.push('This format requires exactly 1 UU mon per team.');
 			}
 
 			if (ru !== 2) {
-				errors.push('This format requires exactly 2 RU (or equivalent) mons per team.');
+				errors.push('This format requires exactly 2 RU mons per team.');
+			}
+
+			if (nu !== 2) {
+				errors.push('This format requires exactly 2 NU (or equivalent) mons per team.');
 			}
 
 			return errors;
