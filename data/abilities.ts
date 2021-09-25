@@ -4976,9 +4976,14 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	degradation: {
 		availability: {clover: 1},
 		name: "Degradation",
-		onEffectiveness(typeMod, target, type, move) {
-			if (move && target?.types.includes('Normal') && move.type === 'Dark') return 1;
-			return;
+		onAnyEffectiveness(typemod, target, type, move) {
+			const degradationUser = this.effectState.target;
+
+			if (degradationUser !== this.activePokemon) return;
+
+			if (move.type === 'Dark' && type === 'Normal') {
+				return 1;
+			}
 		},
 		rating: 3,
 	},
