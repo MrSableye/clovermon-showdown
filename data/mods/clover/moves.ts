@@ -930,10 +930,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
-	skullcannon: {
-		inherit: true,
-		isNonstandard: "CAP",
-	},
 	petrify: {
 		inherit: true,
 		isNonstandard: "CAP",
