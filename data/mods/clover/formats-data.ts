@@ -8238,7 +8238,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	kuuroba: {
 		inherit: true,
-		tier: "Uber",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleNicknames: [
 			"Yotsuba",
