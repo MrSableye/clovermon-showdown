@@ -237,7 +237,7 @@ export const Formats: FormatList = [
 			'Blobbos Clause',
 			'Multi Tier',
 		],
-		banlist: ['Baton Pass'],
+		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Wonder Guard'],
 	},
 	{
 		name: "[Gen 8 Clover Only] 350 Cup",
