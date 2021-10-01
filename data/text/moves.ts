@@ -6995,8 +6995,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	dailydose: {
 		name: "Daily Dose",
-		shortDesc: "20% chance to poison or badly poison or put the target to sleep.",
-		desc: "Has a 20% chance to either poison, badly poison, or inflict sleep on the target.",
+		shortDesc: "30% chance to poison or badly poison or put the target to sleep.",
+		desc: "Has a 30% chance to either poison, badly poison, or inflict sleep on the target.",
 	},
 	decaydrain: {
 		name: "Decay Drain",

@@ -21179,7 +21179,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
-			chance: 20,
+			chance: 30,
 			onHit(target, source) {
 				const result = this.random(3);
 				if (result === 0) {
