@@ -417,6 +417,7 @@ export const avatarTable = new Set([
 	'clover-dan',
 	'clover-mom2',
 	'clover-vyglass2',
+	'clover-viol2',
 	/* Periwinkle Avatars */
 	'periwinkle-coldsteel',
 	'periwinkle-coldsteel2',
