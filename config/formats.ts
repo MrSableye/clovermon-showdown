@@ -68,6 +68,12 @@ export const Formats: FormatList = [
 		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
+		name: "[Gen 8 Clover Only] Random SPOOKY Battle",
+		mod: 'clover',
+		team: 'randomSpooky',
+		ruleset: ['Dynamax Clause', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
 		name: '[Gen 8 Clover Only] Ultimate Blobbos Metronome Showdown DX',
 		mod: 'clover',
 		team: 'randomBlobbosMetronome',
