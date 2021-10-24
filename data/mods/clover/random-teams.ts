@@ -1882,7 +1882,7 @@ export class RandomTeams {
 			let species = this.dex.species.get(id);
 			if (species.gen > this.gen || exclude.includes(species.id)) continue;
 			console.log(species.types);
-			if (!species.types.includes('Ghost')) continue;
+			if (!species.types.includes('Ghost') && !species.types.includes('Dark')) continue;
 			if (isCloveronly) {
 				if (species.num <= 69000 || species.num > 69386) continue;
 			} else {
