@@ -71,6 +71,11 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] Random SPOOKY Battle",
 		mod: 'clover',
 		team: 'randomSpooky',
+		onEffectiveness(typeMod, target, type, move) {
+			if (['Dark', 'Ghost'].includes(type) && ['Dark', 'Ghost'].includes(move.type)) {
+				return 0;
+			}
+		},
 		ruleset: ['Dynamax Clause', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
