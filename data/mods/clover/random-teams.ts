@@ -1879,6 +1879,7 @@ export class RandomTeams {
 		const exclude = pokemon.map(p => toID(p.species));
 		const pokemonPool = [];
 		for (const id in this.dex.data.FormatsData) {
+			if (['shedinja', 'sprucifix'].includes(id)) continue;
 			let species = this.dex.species.get(id);
 			if (species.gen > this.gen || exclude.includes(species.id)) continue;
 			console.log(species.types);
