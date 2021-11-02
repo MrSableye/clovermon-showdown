@@ -94,6 +94,13 @@ export const commands: Chat.ChatCommands = {
 				throw new Chat.ErrorMessage(ERROR_WRITING_IMAGE);
 			}
 		},
+		showrequests() {
+			this.checkCan('avatar');
+
+			const userList = Object.keys(avatars).join('\n');
+
+			return this.sendReplyBox('Current requests:\n' + userList);
+		},
 		showrequest(target) {
 			this.checkCan('avatar');
 
@@ -144,6 +151,16 @@ export const commands: Chat.ChatCommands = {
 			FS(`./config/avatars/requests/${avatarStatus.requestedAvatar}`).unlinkIfExistsSync();
 
 			return this.sendReplyBox(`Denied avatar request of ${targetId}`);
+		},
+		on(target, room, user) {
+			updateAvatarStatus(user.id, {enabled: true});
+
+			return this.sendReplyBox('Enabled custom avatar.');
+		},
+		off(target, room, user) {
+			updateAvatarStatus(user.id, {enabled: false});
+
+			return this.sendReplyBox('Disabled custom avatar.');
 		},
 	},
 };
