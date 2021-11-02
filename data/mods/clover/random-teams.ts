@@ -1880,7 +1880,7 @@ export class RandomTeams {
 		const pokemonPool = [];
 		for (const id in this.dex.data.FormatsData) {
 			if (['shedinja', 'sprucifix'].includes(id)) continue;
-			let species = this.dex.species.get(id);
+			const species = this.dex.species.get(id);
 			if (species.gen > this.gen || exclude.includes(species.id)) continue;
 			console.log(species.types);
 			if (!species.types.includes('Ghost') && !species.types.includes('Dark')) continue;
@@ -1908,7 +1908,7 @@ export class RandomTeams {
 
 		const pokemonPool = this.getSpookyPokemonPool(false);
 		while (pokemonPool.length && pokemon.length < 3) {
-			let species = this.dex.species.get(this.sampleNoReplace(pokemonPool));
+			const species = this.dex.species.get(this.sampleNoReplace(pokemonPool));
 			if (!species.exists) continue;
 
 			// Check if the forme has moves for random battle
@@ -2010,7 +2010,7 @@ export class RandomTeams {
 
 		const clovermonPool = this.getSpookyPokemonPool(true);
 		while (clovermonPool.length && clovermon.length < 3) {
-			let species = this.dex.species.get(this.sampleNoReplace(clovermonPool));
+			const species = this.dex.species.get(this.sampleNoReplace(clovermonPool));
 			if (!species.exists) continue;
 
 			// Check if the forme has moves for random battle
