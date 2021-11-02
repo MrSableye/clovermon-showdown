@@ -1,6 +1,6 @@
 import Axios from 'axios';
 import probe from 'probe-image-size';
-import {FS} from '../../lib';
+import {FS, Utils} from '../../lib';
 
 const ERROR_USER_INELIGIBLE = 'You are not eligble for a custom avatar.';
 const ERROR_INVALID_IMAGE = 'Invalid image. Please provide a URL linking to a 80x80 GIF or PNG.';
@@ -49,6 +49,15 @@ const createAvatarHtml = (
 	isCustom = false,
 ) => `<img src="//${Config.routes.client}/sprites/trainers${isCustom ? '-custom' : ''}/${avatarName}.png" title="${avatarName}" alt="${avatarName}" width="80" height="80" class="pixelated" />`;
 
+const createRawAvatarHtml = (avatarFileName: string, isRequest = false) => `<avatar avatarfilename="${isRequest ? "requests/" : ""}${Utils.escapeHTML(avatarFileName)}" />`;
+
+const createPendingAvatarRequestHtml = (userId: string, avatarFileName: string) => {
+	let pendingAvatarRequestHtml = '<details>';
+	pendingAvatarRequestHtml += `<summary>${userId}</summary>`;
+	pendingAvatarRequestHtml += createRawAvatarHtml(avatarFileName, true);
+	return pendingAvatarRequestHtml + '</details>';
+};
+
 export const commands: Chat.ChatCommands = {
 	blobbos(target, room, user) {
 		if (Config.blobbosTournamentWinners && Config.blobbosTournamentWinners.includes(user.id)) {
@@ -89,7 +98,7 @@ export const commands: Chat.ChatCommands = {
 
 				updateAvatarStatus(user.id, {requestedAvatar: fileName});
 
-				return this.sendReplyBox(`Requested: https://clover.weedl.es:8443/avatars/requests/${fileName}`);
+				return this.sendReplyBox(`Requested: ${createRawAvatarHtml(fileName, true)}`);
 			} catch (error) {
 				throw new Chat.ErrorMessage(ERROR_WRITING_IMAGE);
 			}
@@ -97,22 +106,11 @@ export const commands: Chat.ChatCommands = {
 		showrequests() {
 			this.checkCan('avatar');
 
-			const userList = Object.keys(avatars).join('\n');
+			const requestList = Object.entries(avatars).filter(([userId, avatarStatus]) => avatarStatus.requestedAvatar !== undefined);
 
-			return this.sendReplyBox('Current requests:\n' + userList);
-		},
-		showrequest(target) {
-			this.checkCan('avatar');
+			const requestListHtml = requestList.map(([userId, avatarStatus]) => createPendingAvatarRequestHtml(userId, avatarStatus.requestedAvatar || '')).join('<br />');
 
-			const targetId = toID(target);
-			const avatarStatus = avatars[targetId];
-
-			if (!avatarStatus || !avatarStatus.requestedAvatar) {
-				throw new Chat.ErrorMessage(`No avatar request for ${targetId}`);
-			}
-
-			// TODO: Make this not hard coded
-			return this.sendReplyBox(`Avatar URL: https://clover.weedl.es:8443/avatars/requests/${avatarStatus.requestedAvatar}`);
+			return this.sendReplyBox(requestListHtml);
 		},
 		approve(target) {
 			this.checkCan('avatar');
@@ -132,7 +130,7 @@ export const commands: Chat.ChatCommands = {
 			FS(`./config/avatars/requests/${avatarStatus.requestedAvatar}`)
 				.renameSync(`./config/avatars/${avatarStatus.requestedAvatar}`);
 
-			return this.sendReplyBox(`Approved avatar request of ${targetId}`);
+			return this.sendReplyBox(`<div><div>Approved avatar request of ${targetId}</div><div>${createRawAvatarHtml(avatarStatus.requestedAvatar)}</div></div>`);
 		},
 		deny(target) {
 			this.checkCan('avatar');
@@ -150,12 +148,12 @@ export const commands: Chat.ChatCommands = {
 
 			FS(`./config/avatars/requests/${avatarStatus.requestedAvatar}`).unlinkIfExistsSync();
 
-			return this.sendReplyBox(`Denied avatar request of ${targetId}`);
+			return this.sendReply(`Denied avatar request of ${targetId}`);
 		},
 		on(target, room, user) {
 			updateAvatarStatus(user.id, {enabled: true});
 
-			return this.sendReplyBox('Enabled custom avatar.');
+			return this.sendReplyBox('<div>Enabled custom avatar.<div>');
 		},
 		off(target, room, user) {
 			updateAvatarStatus(user.id, {enabled: false});
