@@ -51,10 +51,15 @@ const createAvatarHtml = (
 
 const createRawAvatarHtml = (avatarFileName: string, isRequest = false) => `<avatar avatarfilename="${isRequest ? "requests/" : ""}${Utils.escapeHTML(avatarFileName)}" />`;
 
+const getUsername = (userId: string) => Users.get(userId)?.name || userId;
+
 const createPendingAvatarRequestHtml = (userId: string, avatarFileName: string) => {
+	const username = getUsername(userId);
 	let pendingAvatarRequestHtml = '<details>';
-	pendingAvatarRequestHtml += `<summary>${userId}</summary>`;
+	pendingAvatarRequestHtml += `<summary><b>${username}</b></summary>`;
 	pendingAvatarRequestHtml += createRawAvatarHtml(avatarFileName, true);
+	pendingAvatarRequestHtml += `<button class="button" name="send" value="/customavatar approve ${userId}">Approve</button>`;
+	pendingAvatarRequestHtml += `<button class="button" name="send" value="/customavatar deny ${userId}">Deny</button>`;
 	return pendingAvatarRequestHtml + '</details>';
 };
 
@@ -103,31 +108,33 @@ export const commands: Chat.ChatCommands = {
 				throw new Chat.ErrorMessage(ERROR_WRITING_IMAGE);
 			}
 		},
+		showall: 'showapproved',
 		showapproved() {
 			this.checkCan('avatar');
 
 			const avatarList = Object.entries(avatars).filter(([userId, avatarStatus]) => avatarStatus.avatar !== undefined);
 
 			if (!avatarList.length) {
-				return this.sendReplyBox('There are no approved avatars.');
+				return this.sendReplyBox('<b><u>Approved Avatars</u></b><br />' + '<div>No approved avatars.</div>');
 			}
 
-			const avatarListHtml = avatarList.map(([userId, avatarStatus]) => `<div><div>${userId}</div><div>${createRawAvatarHtml(avatarStatus.avatar || '')}</div></div>`).join('<br />');
+			const avatarListHtml = avatarList.map(([userId, avatarStatus]) => `<span style="display: inline-block;"><div>${getUsername(userId)}</div><div>${createRawAvatarHtml(avatarStatus.avatar || '')}</div></span>`).join('<br />');
 
-			return this.sendReplyBox(avatarListHtml);
+			return this.sendReplyBox('<b><u>Approved Avatars</u></b><br />' + avatarListHtml);
 		},
-		showrequests() {
+		showrequests: 'requests',
+		requests() {
 			this.checkCan('avatar');
 
 			const requestList = Object.entries(avatars).filter(([userId, avatarStatus]) => avatarStatus.requestedAvatar !== undefined);
 
 			if (!requestList.length) {
-				return this.sendReplyBox('There are no avatar requests.');
+				return this.sendReplyBox('<b><u>Avatar Requests</u></b><br />' + `<div>No requests available.</div>`);
 			}
 
 			const requestListHtml = requestList.map(([userId, avatarStatus]) => createPendingAvatarRequestHtml(userId, avatarStatus.requestedAvatar || '')).join('<br />');
 
-			return this.sendReplyBox(requestListHtml);
+			return this.sendReplyBox('<b><u>Avatar Requests</u></b><br />' + requestListHtml);
 		},
 		approve(target) {
 			this.checkCan('avatar');
@@ -170,13 +177,24 @@ export const commands: Chat.ChatCommands = {
 		on(target, room, user) {
 			updateAvatarStatus(user.id, {enabled: true});
 
-			return this.sendReplyBox('<div>Enabled custom avatar.<div>');
+			return this.sendReplyBox('Enabled custom avatar.');
 		},
 		off(target, room, user) {
 			updateAvatarStatus(user.id, {enabled: false});
 
 			return this.sendReplyBox('Disabled custom avatar.');
 		},
+	},
+	customavatarhelp() {
+		this.sendReplyBox(
+			`<code>/customavatar request [image url]</code>: requests a custom avatar. Requires: custom avatar access<br />` +
+			`<code>/customavatar showall</code>: shows all approved avatars. Requires: @ or above<br />` +
+			`<code>/customavatar showrequests</code>: shows all un-approved avatars. Requires: @ or above<br />` +
+			`<code>/customavatar approve [user]</code>: approves the user's avatar request. Requires: @ or above<br />` +
+			`<code>/customavatar deny [user]</code>: denies the user's avatar request. Requires: @ or above<br />` +
+			`<code>/customavatar on</code>: enables your own custom avatar.<br />` +
+			`<code>/customavatar off</code>: disables your own custom avatar.<br />`
+		);
 	},
 };
 
