@@ -34,7 +34,7 @@ const initializeSeasonalBadges = async (badgesToInitialize: SeasonalBadge[]) => 
 void initializeSeasonalBadges([
 	{
 		badgeId: 'sableyebirthday',
-		message: 'Happy Birthday, Mr. Sableye! Enjoy this badge!',
+		message: 'Happy Birthday, Mr. Sableye! Enjoy a free badge!',
 		seasonStart: '11-01',
 		seasonEnd: '11-14',
 	},
@@ -69,7 +69,7 @@ export const loginfilter: Chat.LoginFilter = async (user) => {
 			const hasBadge = userBadges.some((userBadge) => userBadge.badge_id === seasonalBadge.badgeId);
 			if (!hasBadge) {
 				await Badges.addBadgeToUser(user.id, seasonalBadge.badgeId, user, true);
-				Chat.sendPM(seasonalBadge.message, user, user);
+				user.send(`|pm|&|${user.tempGroup}${user.name}|/raw <div class="broadcast-blue"><b>${seasonalBadge.message}</b></div>`);
 			}
 		}
 	}));
