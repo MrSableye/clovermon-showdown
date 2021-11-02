@@ -57,7 +57,7 @@ const createPendingAvatarRequestHtml = (userId: string, avatarFileName: string) 
 	const username = getUsername(userId);
 	let pendingAvatarRequestHtml = '<details>';
 	pendingAvatarRequestHtml += `<summary><b>${username}</b></summary>`;
-	pendingAvatarRequestHtml += createRawAvatarHtml(avatarFileName, true);
+	pendingAvatarRequestHtml += createRawAvatarHtml(avatarFileName, true) + '<br />';
 	pendingAvatarRequestHtml += `<button class="button" name="send" value="/customavatar approve ${userId}">Approve</button>`;
 	pendingAvatarRequestHtml += `<button class="button" name="send" value="/customavatar deny ${userId}">Deny</button>`;
 	return pendingAvatarRequestHtml + '</details>';
