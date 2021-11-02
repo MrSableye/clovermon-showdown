@@ -18,6 +18,7 @@ The column value will be ignored for repeat sections.
 */
 
 export const Formats: FormatList = [
+	///////////////////////////////////////////////////////////////////
 	// Clovermon Core Tiers
 	///////////////////////////////////////////////////////////////////
 	{
@@ -56,6 +57,7 @@ export const Formats: FormatList = [
 		ruleset: ['[Gen 8 Clover Only] RU'],
 		banlist: ['RU', 'NUBL'],
 	},
+	///////////////////////////////////////////////////////////////////
 	// Clovermon Singles
 	///////////////////////////////////////////////////////////////////
 	{
@@ -66,17 +68,6 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		team: 'random',
 		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
-	},
-	{
-		name: "[Gen 8 Clover Only] Random SPOOKY Battle",
-		mod: 'clover',
-		team: 'randomSpooky',
-		onEffectiveness(typeMod, target, type, move) {
-			if (['Dark', 'Ghost'].includes(type) && ['Dark', 'Ghost'].includes(move.type)) {
-				return 0;
-			}
-		},
-		ruleset: ['Dynamax Clause', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
 		name: '[Gen 8 Clover Only] Ultimate Blobbos Metronome Showdown DX',
@@ -351,97 +342,35 @@ export const Formats: FormatList = [
 			'Standard NatDex',
 		],
 	},
-	// {
-	// 	section: 'Atlas Only Singles',
-	// },
-	// {
-	// 	name: "[Gen 8 Atlas Only] OU",
-	// 	mod: 'atlas',
-	// 	ruleset: [
-	// 		'Standard NatDex',
-	// 		'Dynamax Clause',
-	// 		'Sleep Clause Mod',
-	// 		'Evasion Moves Clause',
-	// 		'Species Clause',
-	// 		'OHKO Clause',
-	// 		'Atlas Only',
-	// 	],
-	// 	banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass'],
-	// },
-	// {
-	// 	name: "[Gen 8 Atlas Only] Ubers",
-	// 	mod: 'atlas',
-	// 	ruleset: [
-	// 		'Standard NatDex',
-	// 		'Dynamax Clause',
-	// 		'Sleep Clause Mod',
-	// 		'Evasion Moves Clause',
-	// 		'Species Clause',
-	// 		'OHKO Clause',
-	// 		'Atlas Only',
-	// 	],
-	// 	banlist: ['Baton Pass'],
-	// },
-	// {
-	// 	name: "[Gen 8 Atlas Only] Anything Goes",
-	// 	mod: 'atlas',
-	// 	ruleset: [
-	// 		'Standard NatDex',
-	// 		'Dynamax Clause',
-	// 		'Atlas Only',
-	// 	],
-	// },
-	// {
-	// 	name: "[Gen 8 Atlas Only] LC",
-	// 	mod: 'atlas',
-	// 	ruleset: [
-	// 		'Little Cup',
-	// 		'Standard NatDex',
-	// 		'Dynamax Clause',
-	// 		'Sleep Clause Mod',
-	// 		'Evasion Moves Clause',
-	// 		'Species Clause',
-	// 		'OHKO Clause',
-	// 		'Atlas Only',
-	// 	],
-	// 	banlist: [
-	// 		'Moody', 'Baton Pass', 'Dragon Rage', 'Sonic Boom',
-	// 	],
-	// },
-
-	// {
-	// 	section: 'Atlas Only Doubles/Triples',
-	// },
-	// {
-	// 	name: "[Gen 8 Atlas Only] Doubles OU",
-	// 	mod: 'atlas',
-	// 	gameType: 'doubles',
-	// 	ruleset: [
-	// 		'Standard NatDex',
-	// 		'Dynamax Clause',
-	// 		'Sleep Clause Mod',
-	// 		'Evasion Moves Clause',
-	// 		'Species Clause',
-	// 		'Swagger Clause',
-	// 		'OHKO Clause',
-	// 		'Atlas Only',
-	// 	],
-	// 	banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass'],
-	// },
-	// {
-	// 	name: "[Gen 8 Atlas Only] Triples OU",
-	// 	mod: 'atlas',
-	// 	gameType: 'triples',
-	// 	ruleset: [
-	// 		'Standard NatDex',
-	// 		'Dynamax Clause',
-	// 		'Sleep Clause Mod',
-	// 		'Evasion Moves Clause',
-	// 		'Species Clause',
-	// 		'Swagger Clause',
-	// 		'OHKO Clause',
-	// 		'Atlas Only',
-	// 	],
-	// 	banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass'],
-	// },
+	///////////////////////////////////////////////////////////////////
+	// Other Memes
+	///////////////////////////////////////////////////////////////////
+	{
+		section: "Other Memes",
+	},
+	{
+		name: "[Gen 8] Random Showderp Meme Battle",
+		mod: 'gen8',
+		team: 'randomMeme',
+		ruleset: ['Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
+		name: "[Gen 8] Free-For-All Random Showderp Meme Battle",
+		mod: 'gen8',
+		gameType: 'freeforall',
+		tournamentShow: false,
+		team: 'randomMeme',
+		ruleset: ['Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
+		name: "[Gen 8 Clover Only] Random SPOOKY Battle",
+		mod: 'clover',
+		team: 'randomSpooky',
+		onEffectiveness(typeMod, target, type, move) {
+			if (['Dark', 'Ghost'].includes(type) && ['Dark', 'Ghost'].includes(move.type)) {
+				return 0;
+			}
+		},
+		ruleset: ['Dynamax Clause', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
 ];
