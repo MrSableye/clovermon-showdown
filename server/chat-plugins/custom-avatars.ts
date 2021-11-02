@@ -1,6 +1,7 @@
 import Axios from 'axios';
 import probe from 'probe-image-size';
 import {FS, Utils} from '../../lib';
+import {Badges} from './badges';
 
 const ERROR_USER_INELIGIBLE = 'You are not eligble for a custom avatar.';
 const ERROR_INVALID_IMAGE = 'Invalid image. Please provide a URL linking to a 80x80 GIF or PNG.';
@@ -76,7 +77,7 @@ export const commands: Chat.ChatCommands = {
 				throw new Chat.ErrorMessage(`The badges feature is currently disabled.`);
 			}
 
-			const userBadges = user.badges || [];
+			const userBadges = await Badges.getUserBadges(user.id);
 			const canHaveCustomAvatar = userBadges.some((userBadge) => customAvatarBadges.includes(userBadge.badge_id));
 
 			if (!canHaveCustomAvatar) {
