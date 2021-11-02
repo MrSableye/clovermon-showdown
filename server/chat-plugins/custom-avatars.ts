@@ -103,10 +103,27 @@ export const commands: Chat.ChatCommands = {
 				throw new Chat.ErrorMessage(ERROR_WRITING_IMAGE);
 			}
 		},
+		showapproved() {
+			this.checkCan('avatar');
+
+			const avatarList = Object.entries(avatars).filter(([userId, avatarStatus]) => avatarStatus.avatar !== undefined);
+
+			if (!avatarList.length) {
+				return this.sendReplyBox('There are no approved avatars.');
+			}
+
+			const avatarListHtml = avatarList.map(([userId, avatarStatus]) => `<div><div>${userId}</div><div>${createRawAvatarHtml(avatarStatus.avatar || '')}</div></div>`).join('<br />');
+
+			return this.sendReplyBox(avatarListHtml);
+		},
 		showrequests() {
 			this.checkCan('avatar');
 
 			const requestList = Object.entries(avatars).filter(([userId, avatarStatus]) => avatarStatus.requestedAvatar !== undefined);
+
+			if (!requestList.length) {
+				return this.sendReplyBox('There are no avatar requests.');
+			}
 
 			const requestListHtml = requestList.map(([userId, avatarStatus]) => createPendingAvatarRequestHtml(userId, avatarStatus.requestedAvatar || '')).join('<br />');
 
