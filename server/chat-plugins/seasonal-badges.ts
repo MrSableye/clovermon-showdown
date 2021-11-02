@@ -44,8 +44,8 @@ const createDateString = (date: Date): string => {
 	let month = `${date.getMonth() + 1}`;
 	if (month.length < 2) month = '0' + month;
 
-	const day = `${date.getDay()}`;
-	if (day.length < 2) month = '0' + day;
+	let day = `${date.getDay()}`;
+	if (day.length < 2) day = '0' + day;
 
 	return `${month}-${day}`;
 };
