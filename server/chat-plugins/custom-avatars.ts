@@ -49,7 +49,7 @@ const createAvatarHtml = (
 	isCustom = false,
 ) => `<img src="//${Config.routes.client}/sprites/trainers${isCustom ? '-custom' : ''}/${avatarName}.png" title="${avatarName}" alt="${avatarName}" width="80" height="80" class="pixelated" />`;
 
-const createRawAvatarHtml = (avatarFileName: string, isRequest = false) => `<avatar avatarfilename="${isRequest ? "requests/" : ""}${Utils.escapeHTML(avatarFileName)}" />`;
+const createRawAvatarHtml = (avatarFileName: string, isRequest = false) => `<avatar avatarfilename="${Utils.escapeHTML(avatarFileName)}"${isRequest ? ' "request" ' : " "} />`;
 
 const getUsername = (userId: string) => Users.get(userId)?.name || userId;
 
