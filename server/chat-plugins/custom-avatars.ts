@@ -118,7 +118,7 @@ export const commands: Chat.ChatCommands = {
 				return this.sendReplyBox('<b><u>Approved Avatars</u></b><br />' + '<div>No approved avatars.</div>');
 			}
 
-			const avatarListHtml = avatarList.map(([userId, avatarStatus]) => `<span style="display: inline-block;"><div>${getUsername(userId)}</div><div>${createRawAvatarHtml(avatarStatus.avatar || '')}</div></span>`).join('<br />');
+			const avatarListHtml = avatarList.map(([userId, avatarStatus]) => `<span style="display: inline-block;"><div>${getUsername(userId)}</div><div>${createRawAvatarHtml(avatarStatus.avatar || '')}</div></span>`).join(' ');
 
 			return this.sendReplyBox('<b><u>Approved Avatars</u></b><br />' + avatarListHtml);
 		},
