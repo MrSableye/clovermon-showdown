@@ -64,6 +64,14 @@ const createPendingAvatarRequestHtml = (userId: string, avatarFileName: string) 
 	return pendingAvatarRequestHtml + '</details>';
 };
 
+const canUserHaveCustomAvatar = async (user: User): Promise<boolean> => {
+	const userBadges = await Badges.getUserBadges(user.id);
+	const isTournamentWinner = userBadges.some((userBadge) => customAvatarBadges.includes(userBadge.badge_id));
+	const isWhitelisted = Config.customavatars[user.id] !== undefined;
+
+	return isTournamentWinner || isWhitelisted;
+};
+
 export const commands: Chat.ChatCommands = {
 	blobbos(target, room, user) {
 		if (Config.blobbosTournamentWinners && Config.blobbosTournamentWinners.includes(user.id)) {
@@ -77,8 +85,7 @@ export const commands: Chat.ChatCommands = {
 				throw new Chat.ErrorMessage(`The badges feature is currently disabled.`);
 			}
 
-			const userBadges = await Badges.getUserBadges(user.id);
-			const canHaveCustomAvatar = userBadges.some((userBadge) => customAvatarBadges.includes(userBadge.badge_id));
+			const canHaveCustomAvatar = await canUserHaveCustomAvatar(user);
 
 			if (!canHaveCustomAvatar) {
 				throw new Chat.ErrorMessage(ERROR_USER_INELIGIBLE);
