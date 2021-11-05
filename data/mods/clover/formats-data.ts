@@ -1519,7 +1519,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	seamapan: {
 		inherit: true,
-		tier: "NU",
+		tier: "NUBL",
 		isNonstandard: null,
 		randomBattleNicknames: [
 			"SPAM",
@@ -7352,7 +7352,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	scythear: {
 		inherit: true,
-		tier: "RU",
+		tier: "RUBL",
 		isNonstandard: null,
 		randomBattleNicknames: [
 			"Stingulor",
