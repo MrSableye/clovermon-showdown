@@ -2469,7 +2469,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	mennopaws: {
 		inherit: true,
-		tier: "NU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleNicknames: [
 			"Annie Mae",
