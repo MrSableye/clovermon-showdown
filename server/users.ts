@@ -1067,7 +1067,7 @@ export class User extends Chat.MessageContext {
 		this.registered = true;
 		if (!isMerge) this.tempGroup = globalAuth.get(this.id);
 
-		if (Config.customavatars && Config.customavatars[this.id]) {
+		if (Config.customavatars && Config.customavatars[this.id] && typeof Config.customavatars[this.id] === 'string') {
 			this.avatar = Config.customavatars[this.id];
 		}
 
