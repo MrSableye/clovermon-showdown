@@ -413,4 +413,26 @@ export const Formats: FormatList = [
 		},
 		ruleset: ['Dynamax Clause', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
+	{
+		name: "[Gen 1] Ubers",
+		mod: 'gen1',
+		challengeShow: false,
+		searchShow: false,
+		ruleset: ['Standard'],
+	},
+	{
+		name: "[Gen 1] OU",
+		mod: 'gen1',
+		challengeShow: false,
+		searchShow: false,
+		ruleset: ['Standard'],
+		banlist: ['Uber'],
+	},
+	{
+		name: "[Gen 1] UU",
+		mod: 'gen1',
+		searchShow: false,
+		ruleset: ['[Gen 1] OU'],
+		banlist: ['OU', 'UUBL'],
+	},
 ];
