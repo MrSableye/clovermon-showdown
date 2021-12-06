@@ -30,7 +30,11 @@ export const Formats: FormatList = [
 		team: 'randomFestive',
 		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 		onBattleStart() {
-			this.field.setWeather('hail');
+			this.field.setWeather('hail', this.getAllPokemon()[0]);
+			this.hint('Fairy-types use "Wish" after fainting.');
+			this.hint('Grass-types seed all enemies and start Grassy Terrain after fainting.');
+			this.hint('Ice-types uses "Lunar Dance" after fainting if Hail is active, otherwise Hail activates.');
+			this.hint('Normal-types use "Spikes" after fainting.');
 		},
 		onFaint(target) {
 			if (target.types.includes('Fairy')) {
