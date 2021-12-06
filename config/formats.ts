@@ -1,7 +1,7 @@
 // Note: This is the list of formats
 // The rules that formats use are stored in data/rulesets.ts
 /*
-If you want to add custom formats, create a file in this folder named: "custom-formats.ts"
+If you want to add custom formats, create a file in this folder named: 'custom-formats.ts'
 
 Paste the following code into the file and add your desired formats and their sections between the brackets:
 --------------------------------------------------------------------------------
@@ -19,13 +19,48 @@ The column value will be ignored for repeat sections.
 
 export const Formats: FormatList = [
 	///////////////////////////////////////////////////////////////////
+	// Seasonal Clovermon
+	///////////////////////////////////////////////////////////////////
+	{
+		section: 'Seasonal Formats',
+	},
+	{
+		name: '[Gen 8 Clover Only] Festive Random Battle',
+		mod: 'clover',
+		team: 'randomFestive',
+		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+		onBattleStart() {
+			this.field.setWeather('hail');
+		},
+		onFaint(target) {
+			if (target.types.includes('Fairy')) {
+				target.side.addSlotCondition(target, 'Wish', target);
+			} else if (target.types.includes('Grass')) {
+				target.foes(true).forEach((foe) => {
+					foe.addVolatile('leechseed');
+				});
+				this.field.setTerrain('grassyterrain');
+			} else if (target.types.includes('Ice')) {
+				if (this.field.weather === 'hail') {
+					target.side.addSlotCondition(target, 'lunardance', target);
+				} else {
+					this.field.setWeather('hail');
+				}
+			} else if (target.types.includes('Normal')) {
+				target.side.foeSidesWithConditions().forEach((side) => {
+					side.addSideCondition('spikes');
+				});
+			}
+		},
+	},
+	///////////////////////////////////////////////////////////////////
 	// Clovermon Core Tiers
 	///////////////////////////////////////////////////////////////////
 	{
-		section: "Clover Only Core Tiers",
+		section: 'Clover Only Core Tiers',
 	},
 	{
-		name: "[Gen 8 Clover Only] OU",
+		name: '[Gen 8 Clover Only] OU',
 		mod: 'clover',
 		ruleset: [
 			'Standard NatDex',
@@ -40,19 +75,19 @@ export const Formats: FormatList = [
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	{
-		name: "[Gen 8 Clover Only] UU",
+		name: '[Gen 8 Clover Only] UU',
 		mod: 'clover',
 		ruleset: ['[Gen 8 Clover Only] OU'],
 		banlist: ['OU', 'UUBL'],
 	},
 	{
-		name: "[Gen 8 Clover Only] RU",
+		name: '[Gen 8 Clover Only] RU',
 		mod: 'clover',
 		ruleset: ['[Gen 8 Clover Only] UU'],
 		banlist: ['UU', 'RUBL'],
 	},
 	{
-		name: "[Gen 8 Clover Only] NU",
+		name: '[Gen 8 Clover Only] NU',
 		mod: 'clover',
 		ruleset: ['[Gen 8 Clover Only] RU'],
 		banlist: ['RU', 'NUBL'],
@@ -61,10 +96,10 @@ export const Formats: FormatList = [
 	// Clovermon Singles
 	///////////////////////////////////////////////////////////////////
 	{
-		section: "Clover Only Singles",
+		section: 'Clover Only Singles',
 	},
 	{
-		name: "[Gen 8 Clover Only] Random Battle",
+		name: '[Gen 8 Clover Only] Random Battle',
 		mod: 'clover',
 		team: 'random',
 		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
@@ -76,7 +111,7 @@ export const Formats: FormatList = [
 		ruleset: ['Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod'],
 	},
 	{
-		name: "[Gen 8 Clover Only] Free-For-All Random Battle",
+		name: '[Gen 8 Clover Only] Free-For-All Random Battle',
 		mod: 'clover',
 		team: 'random',
 		gameType: 'freeforall',
@@ -84,7 +119,7 @@ export const Formats: FormatList = [
 		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
-		name: "[Gen 8 Clover Only] Ubers",
+		name: '[Gen 8 Clover Only] Ubers',
 		mod: 'clover',
 		ruleset: [
 			'Standard NatDex',
@@ -99,7 +134,7 @@ export const Formats: FormatList = [
 		banlist: ['Baton Pass'],
 	},
 	{
-		name: "[Gen 8 Clover Only] LC",
+		name: '[Gen 8 Clover Only] LC',
 		mod: 'clover',
 		ruleset: [
 			'Little Cup',
@@ -118,7 +153,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 8 Clover Only] Monotype",
+		name: '[Gen 8 Clover Only] Monotype',
 		mod: 'clover',
 		ruleset: [
 			'Same Type Clause',
@@ -134,7 +169,7 @@ export const Formats: FormatList = [
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	{
-		name: "[Gen 8 Clover Only] Anything Goes",
+		name: '[Gen 8 Clover Only] Anything Goes',
 		mod: 'clover',
 		ruleset: [
 			'Standard NatDex',
@@ -144,16 +179,16 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 8 Clover Only] CAP",
+		name: '[Gen 8 Clover Only] CAP',
 		mod: 'clover',
 		ruleset: ['[Gen 8 Clover Only] OU', '+CAP'],
 		banlist: ['Condoomite'],
 	},
 	{
-		section: "Clover Only Doubles/Triples",
+		section: 'Clover Only Doubles/Triples',
 	},
 	{
-		name: "[Gen 8 Clover Only] Doubles OU",
+		name: '[Gen 8 Clover Only] Doubles OU',
 		mod: 'clover',
 		gameType: 'doubles',
 		ruleset: [
@@ -170,7 +205,7 @@ export const Formats: FormatList = [
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	{
-		name: "[Gen 8 Clover Only] Triples OU",
+		name: '[Gen 8 Clover Only] Triples OU',
 		mod: 'clover',
 		gameType: 'triples',
 		ruleset: [
@@ -187,17 +222,17 @@ export const Formats: FormatList = [
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	{
-		name: "[Gen 8 Clover Only] CAP Doubles",
+		name: '[Gen 8 Clover Only] CAP Doubles',
 		rated: false,
 		mod: 'clover',
 		gameType: 'doubles',
 		ruleset: ['[Gen 8 Clover Only] CAP'],
 	},
 	{
-		section: "Other Clover Metagames",
+		section: 'Other Clover Metagames',
 	},
 	{
-		name: "[Gen 8 Clover Only] NFE",
+		name: '[Gen 8 Clover Only] NFE',
 		mod: 'clover',
 		ruleset: [
 			'Not Fully Evolved',
@@ -216,7 +251,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 8 Clover Only] Balanced Hackmons",
+		name: '[Gen 8 Clover Only] Balanced Hackmons',
 		mod: 'clover',
 		ruleset: ['Clover Only', '-Nonexistent', 'OHKO Clause', 'Evasion Moves Clause', 'Forme Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
 		banlist: [
@@ -226,7 +261,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 8 Clover Only] Multi-Tier",
+		name: '[Gen 8 Clover Only] Multi-Tier',
 		mod: 'clover',
 		ruleset: [
 			'Standard NatDex',
@@ -242,7 +277,7 @@ export const Formats: FormatList = [
 		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Wonder Guard'],
 	},
 	{
-		name: "[Gen 8 Clover Only] 350 Cup",
+		name: '[Gen 8 Clover Only] 350 Cup',
 		mod: 'clover',
 		ruleset: [
 			'350 Cup Mod',
@@ -258,7 +293,7 @@ export const Formats: FormatList = [
 		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Eviolite'],
 	},
 	{
-		name: "[Gen 8 Clover Only] Almost Any Ability",
+		name: '[Gen 8 Clover Only] Almost Any Ability',
 		desc: `Pok&eacute;mon have access to almost any ability.`,
 		mod: 'clover',
 		ruleset: ['Clover Only', 'Obtainable', '!Obtainable Abilities', 'Species Clause', 'Nickname Clause', '2 Ability Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
@@ -271,7 +306,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 8 Clover Only] STABmons",
+		name: '[Gen 8 Clover Only] STABmons',
 		desc: `Pok&eacute;mon can use any move of their typing, in addition to the moves they can normally learn.`,
 		mod: 'clover',
 		ruleset: [
@@ -293,7 +328,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 8 Clover Only] Alphabet Cup",
+		name: '[Gen 8 Clover Only] Alphabet Cup',
 		desc: `Allows Pok&eacute;mon to use any move that shares the same first letter as their name or a previous evolution's name.`,
 		mod: 'clover',
 		ruleset: [
@@ -316,7 +351,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 8 Clover Only] Custom Game",
+		name: '[Gen 8 Clover Only] Custom Game',
 		mod: 'clover',
 		debug: true,
 		battle: {trunc: Math.trunc},
@@ -324,7 +359,7 @@ export const Formats: FormatList = [
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
 	{
-		name: "[Gen 8 Clover Only] Custom Game (Doubles)",
+		name: '[Gen 8 Clover Only] Custom Game (Doubles)',
 		mod: 'clover',
 		gameType: 'doubles',
 		debug: true,
@@ -333,10 +368,10 @@ export const Formats: FormatList = [
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
 	{
-		section: "Clover National Dex Singles",
+		section: 'Clover National Dex Singles',
 	},
 	{
-		name: "[Gen 8 Clover National Dex] AG",
+		name: '[Gen 8 Clover National Dex] AG',
 		mod: 'clover',
 		ruleset: [
 			'Standard NatDex',
@@ -346,16 +381,16 @@ export const Formats: FormatList = [
 	// Other Memes
 	///////////////////////////////////////////////////////////////////
 	{
-		section: "Other Memes",
+		section: 'Other Memes',
 	},
 	{
-		name: "[Gen 8] Random Showderp Meme Battle",
+		name: '[Gen 8] Random Showderp Meme Battle',
 		mod: 'gen8',
 		team: 'randomMeme',
 		ruleset: ['Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
-		name: "[Gen 8] Free-For-All Random Showderp Meme Battle",
+		name: '[Gen 8] Free-For-All Random Showderp Meme Battle',
 		mod: 'gen8',
 		gameType: 'freeforall',
 		tournamentShow: false,
@@ -363,9 +398,10 @@ export const Formats: FormatList = [
 		ruleset: ['Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
-		name: "[Gen 8 Clover Only] Random SPOOKY Battle",
+		name: '[Gen 8 Clover Only] Random SPOOKY Battle',
 		mod: 'clover',
 		team: 'randomSpooky',
+		searchShow: false,
 		onEffectiveness(typeMod, target, type, move) {
 			if (['Dark', 'Ghost'].includes(type) && ['Dark', 'Ghost'].includes(move.type)) {
 				return 0;
