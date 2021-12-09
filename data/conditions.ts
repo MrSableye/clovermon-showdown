@@ -790,4 +790,15 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-sideend', side, 'Backdraft');
 		},
 	},
+	lootable: {
+		// this is a slot condition
+		name: 'Lootable',
+		onStart(pokemon, source) {
+			this.effectState.stacks = source.volatiles['stockpile']?.layers || 0;
+		},
+		onSwap(target) {
+			this.hint('DID IT WORK' + this.effectState.stacks);
+			target.side.removeSlotCondition(target, 'lootable');
+		},
+	},
 };

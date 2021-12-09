@@ -32808,6 +32808,33 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Human-Like"],
 		gen: 8,
 	},
+	blobboshenesys: {
+		num: 69132,
+		name: "Blobbos-Henesys",
+		baseSpecies: "Blobbos",
+		forme: "Henesys",
+		types: ["Poison"],
+		gender: "N",
+		baseStats: {
+			hp: 95,
+			atk: 80,
+			def: 110,
+			spa: 65,
+			spd: 120,
+			spe: 60,
+		},
+		abilities: {
+			0: "Gooey",
+			1: "Sticky Hold",
+			H: "Lootable",
+			S: "Comatose",
+		},
+		heightm: 0.4,
+		weightkg: 5.7,
+		color: "Green",
+		eggGroups: ["Ditto"],
+		gen: 8,
+	},
 	/* :^) */
 	autumn: {
 		num: -42002,

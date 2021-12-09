@@ -5649,49 +5649,12 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		isNonstandard: "Future",
 	},
-	loudconcert: {
-		name: "Loud Concert",
-		onResidualOrder: 26,
-		onResidualSubOrder: 1,
-		onStart(pokemon) {
-			this.add('-ability', pokemon, 'Loud Concert');
+	lootable: {
+		availability: {clover: 1},
+		name: "Lootable",
+		onFaint(target) {
+			target.side.addSlotCondition(target, 'lootable', target);
 		},
-		onResidual(source) {
-			for (const pokemon of this.getAllPokemon()) {
-				if (pokemon.ability !== 'soundproof') {
-					this.damage(pokemon.baseMaxhp / 16, pokemon, source, this.effect);
-				}
-			}
-		},
-		rating: 3,
-		isNonstandard: "Future",
-	},
-	epictestability: {
-		name: "Epic Test Ability",
-		onResidualOrder: 26,
-		onResidualSubOrder: 1,
-		onStart(pokemon) {
-			this.add('-ability', pokemon, 'Epic Test Ability');
-			const side = pokemon.side;
-			const sneedachu = new Pokemon({
-				species: 'Pikachu',
-				ability: 'Pressure',
-				evs: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
-				ivs: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
-				gender: 'F',
-				item: 'Leftovers',
-				level: 69,
-				moves: ['Tackle'],
-				name: 'Sneedachu',
-				shiny: true,
-				nature: 'Quiet',
-			}, side);
-			sneedachu.position = side.pokemon.length;
-			side.pokemon.push(sneedachu);
-			this.add('poke', side.id, 'Pikachu, L69, F', '');
-		},
-		rating: 3,
-		isNonstandard: "Future",
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {
