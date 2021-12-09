@@ -1993,6 +1993,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Eclipse",
 		desc: "On switch-in, removes Sunny Day and Desolate Land for a stat boost.",
 	},
+	lootable: {
+		name: "Lootable",
+		desc: "If this Pokemon is knocked out, it passes on its Stockpile boosts and heals the next Pokemon for 1/5 of its maximum HP for each Stockpile layer.",
+		shortDesc: "After fainting, passes on Stockpile boosts and heals for 1/5 of its maximum HP for each.",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",

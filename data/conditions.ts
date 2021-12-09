@@ -797,7 +797,13 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.effectState.stacks = source.volatiles['stockpile']?.layers || 0;
 		},
 		onSwap(target) {
-			this.hint('DID IT WORK' + this.effectState.stacks);
+			const stacks = this.effectState.stacks || 0;
+
+			for (let i = 0; i < stacks; i++) {
+				target.addVolatile('stockpile');
+			}
+			this.heal(target.baseMaxhp * 0.20 * stacks);
+
 			target.side.removeSlotCondition(target, 'lootable');
 		},
 	},
