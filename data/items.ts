@@ -8034,6 +8034,16 @@ export const Items: { [itemid: string]: ItemData } = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	ultrablobbosiumz: {
+		name: "Ultrablobbosium Z",
+		spritenum: 686,
+		onTakeItem: false,
+		zMove: "Light That Blobs the Sky",
+		zMoveFrom: "Blobby Bop",
+		itemUser: ["Blobbos-Ultra"],
+		gen: 8,
+		isNonstandard: "Future",
+	},
 	/* Atlas Exclusive Items */
 	eviomite: {
 		availability: {atlas: 1},

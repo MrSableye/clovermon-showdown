@@ -1998,6 +1998,16 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "If this Pokemon is knocked out, it passes on its Stockpile boosts and heals the next Pokemon for 1/5 of its maximum HP for each Stockpile layer.",
 		shortDesc: "After fainting, passes on Stockpile boosts and heals for 1/5 of its maximum HP for each.",
 	},
+	asoneblobbos: {
+		name: "As One (Blobbos)",
+		shortDesc: "The combination of Pure Power and Huge Power.",
+
+		start: "  [POKEMON] is ready to kick your ass!",
+	},
+	sharpshooter: {
+		name: "Sharpshooter",
+		shortDesc: "This Pokemon's critical hit, the damage is multiplied by 1.5, +1 Crit ratio.",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",
