@@ -6,6 +6,7 @@ import {Badges} from './badges';
 const ERROR_USER_INELIGIBLE = 'You are not eligble for a custom avatar.';
 const ERROR_INVALID_IMAGE = 'Invalid image. Please provide a URL linking to a 80x80 GIF or PNG.';
 const ERROR_WRITING_IMAGE = 'Unable to write image. Please try again or contact an administrator.';
+const ERROR_UNKNOWN_ERROR = 'An unknown error occured. Please try again or contact an administrator.';
 
 const customAvatarBadges = [
 	'tournamentwinner',
@@ -81,39 +82,43 @@ export const commands: Chat.ChatCommands = {
 	},
 	customavatar: {
 		async request(target, room, user) {
-			if (!Config.usesqlitebadges) {
-				throw new Chat.ErrorMessage(`The badges feature is currently disabled.`);
-			}
-
-			const canHaveCustomAvatar = await canUserHaveCustomAvatar(user);
-
-			if (!canHaveCustomAvatar) {
-				throw new Chat.ErrorMessage(ERROR_USER_INELIGIBLE);
-			}
-
-			const imageUrl = target.trim();
-			const imagebuffer = (await Axios.get(imageUrl, {responseType: 'arraybuffer'})).data;
-			const probeResult = probe.sync(imagebuffer);
-
-			if (!probeResult) {
-				throw new Chat.ErrorMessage(ERROR_INVALID_IMAGE);
-			}
-
-			const {width, height, type} = probeResult;
-
-			if (width !== 80 || height !== 80 || !['png', 'gif'].includes(toID(type))) {
-				throw new Chat.ErrorMessage(ERROR_INVALID_IMAGE);
-			}
-
 			try {
-				const fileName = `${user.id}.${type}`;
-				await FS(`./config/avatars/requests/${fileName}`).write(imagebuffer);
+				if (!Config.usesqlitebadges) {
+					throw new Chat.ErrorMessage(`The badges feature is currently disabled.`);
+				}
 
-				updateAvatarStatus(user.id, {requestedAvatar: fileName});
+				const canHaveCustomAvatar = await canUserHaveCustomAvatar(user);
 
-				return this.sendReplyBox(`Requested: ${createRawAvatarHtml(fileName, true)}`);
+				if (!canHaveCustomAvatar) {
+					throw new Chat.ErrorMessage(ERROR_USER_INELIGIBLE);
+				}
+
+				const imageUrl = target.trim();
+				const imagebuffer = (await Axios.get(imageUrl, {responseType: 'arraybuffer'})).data;
+				const probeResult = probe.sync(imagebuffer);
+
+				if (!probeResult) {
+					throw new Chat.ErrorMessage(ERROR_INVALID_IMAGE);
+				}
+
+				const {width, height, type} = probeResult;
+
+				if (width !== 80 || height !== 80 || !['png', 'gif'].includes(toID(type))) {
+					throw new Chat.ErrorMessage(ERROR_INVALID_IMAGE);
+				}
+
+				try {
+					const fileName = `${user.id}.${type}`;
+					await FS(`./config/avatars/requests/${fileName}`).write(imagebuffer);
+
+					updateAvatarStatus(user.id, {requestedAvatar: fileName});
+
+					return this.sendReplyBox(`Requested: ${createRawAvatarHtml(fileName, true)}`);
+				} catch (error) {
+					throw new Chat.ErrorMessage(ERROR_WRITING_IMAGE);
+				}
 			} catch (error) {
-				throw new Chat.ErrorMessage(ERROR_WRITING_IMAGE);
+				throw new Chat.ErrorMessage(ERROR_UNKNOWN_ERROR);
 			}
 		},
 		showall: 'showapproved',
