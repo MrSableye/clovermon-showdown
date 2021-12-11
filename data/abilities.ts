@@ -5656,6 +5656,34 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			target.side.addSlotCondition(target, 'lootable', target);
 		},
 	},
+	asoneblobbos: {
+		availability: {clover: 1},
+		onPreStart(pokemon) {
+			this.add('-ability', pokemon, 'Pure Power');
+			this.add('-ability', pokemon, 'Huge Power');
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk) {
+			return this.chainModify(4);
+		},
+		isPermanent: true,
+		name: "As One (Blobbos)",
+		isNonstandard: "Future",
+	},
+	sharpshooter: {
+		availability: {clover: 1},
+		onModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).crit) {
+				this.debug('Sniper boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyCritRatio(critRatio) {
+			return critRatio + 1;
+		},
+		name: "Sharpshooter",
+		isNonstandard: "Future",
+	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {
 		availability: {atlas: 1},

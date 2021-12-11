@@ -2504,7 +2504,14 @@ export const ItemsText: { [k: string]: ItemText } = {
 		name: "Goryannusite",
 		desc: "If held by an Goryannus, this item allows it to Mega Evolve in battle.",
 	},
-	/* Atlas Abilities */
+	ultrablobbosiumz: {
+		name: "Ultrablobbosium Z",
+		desc: "Blobbos: Ultra Burst, then Z-Move w/ Blobby Bop.",
+
+		transform: "  Bright light is about to burst out of [POKEMON]!",
+		activate: "[POKEMON] regained its true power through Ultra Burst!",
+	},
+	/* Atlas Items */
 	eviomite: {
 		name: "Eviomite",
 		desc: "If holder's species can evolve, its Atk and Spa. Atk are 1.5x.",

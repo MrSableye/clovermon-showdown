@@ -7334,6 +7334,21 @@ export const MovesText: {[k: string]: MoveText} = {
 		end: "  [TEAM]'s Backdraft petered out!",
 		switchOut: "#uturn",
 	},
+	closeblobmat: {
+		name: "Close Blobmat",
+		desc: "Lowers the user's Defense and Special Defense by 6 stages.",
+		shortDesc: "Lowers the user's Defense and Sp. Def by 6.",
+	},
+	hypersnore: {
+		name: "Hyper Snore",
+		shortDesc: "User must be asleep.",
+		desc: "Fails if the user is not asleep.",
+	},
+	lightthatbopsthesky: {
+		name: "Light That Blobs the Sky",
+		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes. This move and its effects ignore the Abilities of other Pokemon.",
+		shortDesc: "Physical if user's Atk > Sp. Atk. Ignores Abilities.",
+	},
 	/* :^) */
 	skullcannon: {
 		name: "Skull Cannon",
