@@ -35,6 +35,7 @@ export const Formats: FormatList = [
 			this.hint('Grass-types seed all enemies and start Grassy Terrain after fainting.');
 			this.hint('Ice-types uses "Lunar Dance" after fainting if Hail is active, otherwise Hail activates.');
 			this.hint('Normal-types use "Spikes" after fainting.');
+			this.hint('Only one effect will occur and it prioritizes types in the order above.');
 		},
 		onFaint(target) {
 			if (target.types.includes('Fairy')) {
