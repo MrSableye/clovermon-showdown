@@ -32840,7 +32840,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Blobbos-Galar",
 		baseSpecies: "Blobbos",
 		forme: "Galar",
-		types: ["Ice","Poison"],
+		types: ["Ice", "Poison"],
 		gender: "N",
 		baseStats: {
 			hp: 60,
@@ -32894,7 +32894,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Blobbos-Nega",
 		baseSpecies: "Blobbos",
 		forme: "Nega",
-		types: ["Rock","Ice"],
+		types: ["Rock", "Ice"],
 		gender: "N",
 		baseStats: {
 			hp: 15,
@@ -32921,7 +32921,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Blobbos-Double",
 		baseSpecies: "Blobbos",
 		forme: "Double",
-		types: ["Ice","Rock"],
+		types: ["Ice", "Rock"],
 		gender: "N",
 		baseStats: {
 			hp: 84,
@@ -32948,7 +32948,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Blobbos-Unova",
 		baseSpecies: "Blobbos",
 		forme: "Unova",
-		types: ["Ice","Rock"],
+		types: ["Ice", "Rock"],
 		gender: "N",
 		baseStats: {
 			hp: 42,
@@ -32989,7 +32989,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	bootlos: {
 		num: 42240,
 		name: "Bootlos",
-		types: ["Steel","Normal"],
+		types: ["Steel", "Normal"],
 		gender: "N",
 		baseStats: {hp: 26, atk: 14, def: 31, spa: 12, spd: 23, spe: 9},
 		abilities: {0: "Sturdy", 1: "Prankster", H: "Contrary", S: "Simple"},
