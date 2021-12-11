@@ -1882,7 +1882,7 @@ export class RandomTeams {
 			const species = this.dex.species.get(id);
 			if (species.gen > this.gen || exclude.includes(species.id)) continue;
 			console.log(species.types);
-			if (!species.types.includes('Fairy') && !species.types.includes('Grasss') && !species.types.includes('Ice') && !species.types.includes('Normal')) continue;
+			if (!species.types.includes('Fairy') && !species.types.includes('Grass') && !species.types.includes('Ice') && !species.types.includes('Normal')) continue;
 			if (species.num <= 69000 || species.num > 69386) continue;
 			pokemonPool.push(id);
 		}
