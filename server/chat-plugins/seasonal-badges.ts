@@ -38,6 +38,12 @@ void initializeSeasonalBadges([
 		seasonStart: '11-01',
 		seasonEnd: '11-14',
 	},
+	{
+		badgeId: 'christmas',
+		message: 'Happy Holidays! Unwrap a nifty badge!',
+		seasonStart: '12-25',
+		seasonEnd: '12-31',
+	},
 ]);
 
 const createDateString = (date: Date): string => {
