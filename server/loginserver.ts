@@ -72,7 +72,7 @@ class LoginServerInstance {
 			const json = parseJSON(buffer);
 			this.openRequests--;
 			if (json.error) {
-				return [null, new Error(json.error!)];
+				return [null, new Error(json.error)];
 			}
 			this.openRequests--;
 			return [json.json!, null];
