@@ -19,50 +19,10 @@ The column value will be ignored for repeat sections.
 
 export const Formats: FormatList = [
 	///////////////////////////////////////////////////////////////////
-	// Seasonal Clovermon
+	// Clover Core Tiers
 	///////////////////////////////////////////////////////////////////
 	{
-		section: 'Seasonal Formats',
-	},
-	{
-		name: '[Gen 8 Clover Only] Festive Random Battle',
-		mod: 'clover',
-		team: 'randomFestive',
-		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
-		onBattleStart() {
-			this.field.setWeather('hail', this.getAllPokemon()[0]);
-			this.hint('Fairy-types use "Wish" after fainting.');
-			this.hint('Grass-types seed all enemies and start Grassy Terrain after fainting.');
-			this.hint('Ice-types uses "Lunar Dance" after fainting if Hail is active, otherwise Hail activates.');
-			this.hint('Normal-types use "Spikes" after fainting.');
-			this.hint('Only one effect will occur and it prioritizes types in the order above.');
-		},
-		onFaint(target) {
-			if (target.types.includes('Fairy')) {
-				target.side.addSlotCondition(target, 'Wish', target);
-			} else if (target.types.includes('Grass')) {
-				target.foes(true).forEach((foe) => {
-					foe.addVolatile('leechseed');
-				});
-				this.field.setTerrain('grassyterrain');
-			} else if (target.types.includes('Ice')) {
-				if (this.field.weather === 'hail') {
-					target.side.addSlotCondition(target, 'lunardance', target);
-				} else {
-					this.field.setWeather('hail');
-				}
-			} else if (target.types.includes('Normal')) {
-				target.side.foeSidesWithConditions().forEach((side) => {
-					side.addSideCondition('spikes');
-				});
-			}
-		},
-	},
-	///////////////////////////////////////////////////////////////////
-	// Clovermon Core Tiers
-	///////////////////////////////////////////////////////////////////
-	{
-		section: 'Clover Only Core Tiers',
+		section: 'Clover Core Tiers',
 	},
 	{
 		name: '[Gen 8 Clover Only] OU',
@@ -98,10 +58,10 @@ export const Formats: FormatList = [
 		banlist: ['RU', 'NUBL'],
 	},
 	///////////////////////////////////////////////////////////////////
-	// Clovermon Singles
+	// Clover Singles
 	///////////////////////////////////////////////////////////////////
 	{
-		section: 'Clover Only Singles',
+		section: 'Clover Singles',
 	},
 	{
 		name: '[Gen 8 Clover Only] Random Battle',
@@ -189,8 +149,11 @@ export const Formats: FormatList = [
 		ruleset: ['[Gen 8 Clover Only] OU', '+CAP'],
 		banlist: ['Condoomite'],
 	},
+	///////////////////////////////////////////////////////////////////
+	// Clover Doubles & Triples
+	///////////////////////////////////////////////////////////////////
 	{
-		section: 'Clover Only Doubles/Triples',
+		section: 'Clover Doubles & Triples',
 	},
 	{
 		name: '[Gen 8 Clover Only] Doubles OU',
@@ -233,8 +196,53 @@ export const Formats: FormatList = [
 		gameType: 'doubles',
 		ruleset: ['[Gen 8 Clover Only] CAP'],
 	},
+	///////////////////////////////////////////////////////////////////
+	// Seasonal Clover
+	///////////////////////////////////////////////////////////////////
 	{
-		section: 'Other Clover Metagames',
+		section: 'Seasonal Clover',
+		column: 2,
+	},
+	{
+		name: '[Gen 8 Clover Only] Festive Random Battle',
+		mod: 'clover',
+		team: 'randomFestive',
+		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+		onBattleStart() {
+			this.field.setWeather('hail', this.getAllPokemon()[0]);
+			this.hint('Fairy-types use "Wish" after fainting.');
+			this.hint('Grass-types seed all enemies and start Grassy Terrain after fainting.');
+			this.hint('Ice-types uses "Lunar Dance" after fainting if Hail is active, otherwise Hail activates.');
+			this.hint('Normal-types use "Spikes" after fainting.');
+			this.hint('Only one effect will occur and it prioritizes types in the order above.');
+		},
+		onFaint(target) {
+			if (target.types.includes('Fairy')) {
+				target.side.addSlotCondition(target, 'Wish', target);
+			} else if (target.types.includes('Grass')) {
+				target.foes(true).forEach((foe) => {
+					foe.addVolatile('leechseed');
+				});
+				this.field.setTerrain('grassyterrain');
+			} else if (target.types.includes('Ice')) {
+				if (this.field.weather === 'hail') {
+					target.side.addSlotCondition(target, 'lunardance', target);
+				} else {
+					this.field.setWeather('hail');
+				}
+			} else if (target.types.includes('Normal')) {
+				target.side.foeSidesWithConditions().forEach((side) => {
+					side.addSideCondition('spikes');
+				});
+			}
+		},
+	},
+	///////////////////////////////////////////////////////////////////
+	// Clover OMs
+	///////////////////////////////////////////////////////////////////
+	{
+		section: 'Clover OMs',
+		column: 2,
 	},
 	{
 		name: '[Gen 8 Clover Only] NFE',
@@ -372,8 +380,12 @@ export const Formats: FormatList = [
 		// no restrictions, for serious (other than team preview)
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
+	///////////////////////////////////////////////////////////////////
+	// Clover NatDex Singles
+	///////////////////////////////////////////////////////////////////
 	{
 		section: 'Clover National Dex Singles',
+		column: 2,
 	},
 	{
 		name: '[Gen 8 Clover National Dex] AG',
@@ -383,10 +395,11 @@ export const Formats: FormatList = [
 		],
 	},
 	///////////////////////////////////////////////////////////////////
-	// Other Memes
+	// Non-Clover
 	///////////////////////////////////////////////////////////////////
 	{
 		section: 'Other Memes',
+		column: 2,
 	},
 	{
 		name: '[Gen 8] Random Showderp Meme Battle',
