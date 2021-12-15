@@ -294,6 +294,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	ultrablobbosiumz: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 	moluganion: {
 		inherit: true,
 		isNonstandard: "CAP",
