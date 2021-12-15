@@ -32948,7 +32948,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Blobbos-Unova",
 		baseSpecies: "Blobbos",
 		forme: "Unova",
-		types: ["Ice", "Rock"],
+		types: ["Ice", "Steel"],
 		gender: "N",
 		baseStats: {
 			hp: 42,
