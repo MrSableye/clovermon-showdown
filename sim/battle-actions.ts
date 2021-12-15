@@ -1764,6 +1764,9 @@ export class BattleActions {
 			pokemon.getItem().id === 'ultranecroziumz') {
 			return "Necrozma-Ultra";
 		}
+		if (pokemon.baseSpecies.name === 'Blobbos' && pokemon.getItem().id === 'ultrablobbosiumz') {
+			return "Blobbos-Ultra";
+		}
 		return null;
 	}
 
