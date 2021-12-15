@@ -8035,6 +8035,7 @@ export const Items: { [itemid: string]: ItemData } = {
 		isNonstandard: "Future",
 	},
 	ultrablobbosiumz: {
+		availability: {clover: 1},
 		name: "Ultrablobbosium Z",
 		spritenum: 686,
 		onTakeItem: false,
