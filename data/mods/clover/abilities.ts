@@ -127,4 +127,16 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	asoneblobbos: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	lootable: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	sharpshooter: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

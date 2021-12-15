@@ -5655,6 +5655,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onFaint(target) {
 			target.side.addSlotCondition(target, 'lootable', target);
 		},
+		isNonstandard: "Future",
 	},
 	asoneblobbos: {
 		availability: {clover: 1},
