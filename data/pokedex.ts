@@ -32984,7 +32984,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		color: "Blue",
 		eggGroups: ["Ditto"],
 		requiredItem: "Ultrablobbosium Z",
-		battleOnly: ["Blobbos"],
+		battleOnly: "Blobbos",
 	},
 	bootlos: {
 		num: 42240,
