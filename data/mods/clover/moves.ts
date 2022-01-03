@@ -978,6 +978,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	closeblobmat: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 	appleacid: {
 		inherit: true,
 		isNonstandard: "CAP",
