@@ -8039,7 +8039,7 @@ export const Items: { [itemid: string]: ItemData } = {
 		name: "Ultrablobbosium Z",
 		spritenum: 686,
 		onTakeItem: false,
-		zMove: "Light That Blobs the Sky",
+		zMove: "Slepp That Blobs the Sky",
 		zMoveFrom: "Blobby Bop",
 		itemUser: ["Blobbos-Ultra"],
 		gen: 8,

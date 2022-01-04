@@ -15469,6 +15469,31 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	bootlos: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosmagic: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosarceus: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosalola: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosdust: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,

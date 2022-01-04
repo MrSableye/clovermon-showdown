@@ -5660,6 +5660,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	asoneblobbos: {
 		availability: {clover: 1},
 		onPreStart(pokemon) {
+			this.add('-ability', pokemon, 'As One (Blobbos)');
 			this.add('-ability', pokemon, 'Pure Power');
 			this.add('-ability', pokemon, 'Huge Power');
 		},
