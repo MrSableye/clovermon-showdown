@@ -982,10 +982,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
-	hypersnore: {
-		inherit: true,
-		isNonstandard: "CAP",
-	},
 	appleacid: {
 		inherit: true,
 		isNonstandard: "CAP",

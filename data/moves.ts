@@ -22817,31 +22817,12 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
-	hypersnore: {
-		availability: {clover: 1, atlas: 1},
-		accuracy: 100,
-		basePower: 255,
-		category: "Special",
-		name: "Hyper Snore",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
-		sleepUsable: true,
-		onTryHit(target, source) {
-			if (source.status !== 'slp' && !source.hasAbility('comatose')) return false;
-		},
-		target: "normal",
-		type: "Ice",
-		zMove: {basePower: 220},
-		contestType: "Cute",
-		isNonstandard: "Future",
-	},
-	lightthatblobsthesky: {
+	sleppthatblobsthesky: {
 		accuracy: true,
 		basePower: 200,
 		category: "Special",
 		isNonstandard: "Future",
-		name: "Light That Blobs the Sky",
+		name: "Slepp That Blobs the Sky",
 		pp: 1,
 		priority: 0,
 		flags: {},

@@ -7344,8 +7344,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "User must be asleep.",
 		desc: "Fails if the user is not asleep.",
 	},
-	lightthatbopsthesky: {
-		name: "Light That Blobs the Sky",
+	sleppthatblobsthesky: {
+		name: "Slepp That Blobs the Sky",
 		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes. This move and its effects ignore the Abilities of other Pokemon.",
 		shortDesc: "Physical if user's Atk > Sp. Atk. Ignores Abilities.",
 	},
