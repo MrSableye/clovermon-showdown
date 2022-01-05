@@ -307,50 +307,62 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: "CAP",
 	},
 	dracoplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	dreadplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	earthplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	fistplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	flameplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	icicleplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	insectplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	ironplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	meadowplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	mindplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	pixieplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	skyplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
@@ -359,18 +371,22 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: "CAP",
 	},
 	spookyplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	stoneplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	toxicplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	zapplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
