@@ -5687,6 +5687,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		isNonstandard: "Future",
 	},
 	blobbotype: {
+		availability: {clover: 1},
 		isPermanent: true,
 		name: "Blobbotype",
 		rating: 4,
