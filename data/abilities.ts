@@ -5686,6 +5686,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Sharpshooter",
 		isNonstandard: "Future",
 	},
+	blobbotype: {
+		isPermanent: true,
+		name: "Blobbotype",
+		rating: 4,
+		num: 121,
+		isNonstandard: "Future",
+	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {
 		availability: {atlas: 1},

@@ -1170,4 +1170,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	judgment: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
