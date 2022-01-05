@@ -5693,7 +5693,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 4,
 		num: 121,
 		isNonstandard: "Future",
-		onStart(source) {
+		onSwitchIn(source) {
 			const type = source.getItem().onPlate;
 			if (type) {
 				const types = ['Ice', type];
