@@ -5693,6 +5693,14 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 4,
 		num: 121,
 		isNonstandard: "Future",
+		onStart(source) {
+			const type = source.getItem().onPlate;
+			if (type) {
+				const types = ['Ice', type];
+				source.setType(['Ice', type]);
+				this.add('-start', source, 'typechange', types.join('/'), '[from] ability: Blobbotype');
+			}
+		},
 	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {

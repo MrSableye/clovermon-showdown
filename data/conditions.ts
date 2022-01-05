@@ -807,19 +807,4 @@ export const Conditions: {[k: string]: ConditionData} = {
 			target.side.removeSlotCondition(target, 'lootable');
 		},
 	},
-	blobbosarceus: {
-		name: 'Blobbos-Arceus',
-		onTypePriority: 1,
-		onType(types, pokemon) {
-			if (pokemon.transformed || pokemon.ability !== 'blobbotype' && this.gen >= 8) return types;
-			let type: string | undefined = 'Normal';
-			if (pokemon.ability === 'multitype') {
-				type = pokemon.getItem().onPlate;
-				if (!type) {
-					type = 'Normal';
-				}
-			}
-			return ['Ice', type];
-		},
-	},
 };

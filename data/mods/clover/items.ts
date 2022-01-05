@@ -306,4 +306,72 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	dracoplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	dreadplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	earthplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	fistplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	flameplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	icicleplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	insectplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	ironplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	meadowplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	mindplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	pixieplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	skyplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	splashplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	spookyplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	stoneplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	toxicplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	zapplate: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
