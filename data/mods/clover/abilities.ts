@@ -143,4 +143,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	icescales: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

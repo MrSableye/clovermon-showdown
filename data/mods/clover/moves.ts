@@ -1174,8 +1174,4 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
-	icescales: {
-		inherit: true,
-		isNonstandard: "CAP",
-	},
 };
