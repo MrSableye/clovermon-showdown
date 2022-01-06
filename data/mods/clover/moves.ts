@@ -1174,4 +1174,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	gunshot: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
