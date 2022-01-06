@@ -22973,10 +22973,14 @@ export const Moves: { [moveid: string]: MoveData } = {
 				spd: -1,
 			},
 		},
-		onTryMove(source, target, move) {
-			if (target.baseSpecies.id === 'vandash') {
-				move.ohko = true;
+		onModifyMove(move, pokemon, target) {
+			if (target && target.baseSpecies.id === 'vandash') {
 				move.accuracy = true;
+			}
+		},
+		onBasePower(basePower, pokemon, target) {
+			if (target && target.baseSpecies.id === 'vandash') {
+				return this.chainModify(100);
 			}
 		},
 		target: "normal",
