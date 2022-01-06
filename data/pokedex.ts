@@ -32905,8 +32905,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 			spe: 240,
 		},
 		abilities: {
-			0: "Comatose",
-			1: "Comatose",
+			0: "Inversion",
+			1: "Inversion",
 			H: "Huge Power",
 			S: "Pure Power",
 		},
