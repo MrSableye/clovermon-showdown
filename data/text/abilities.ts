@@ -2015,6 +2015,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 			shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate.",
 		},
 	},
+	uncompetitive: {
+		name: "Uncompetitive",
+		shortDesc: "Snow Cloak + Sand Veil + Bright Powder + Lax Incense + Razor Fang + King's Rock + Moody + Arena Trap + Shadow Tag + Focus Band",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",
