@@ -367,6 +367,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: "CAP",
 	},
 	splashplate: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},

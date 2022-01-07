@@ -1171,6 +1171,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "CAP",
 	},
 	judgment: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
