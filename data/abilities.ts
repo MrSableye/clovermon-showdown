@@ -5686,6 +5686,112 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Sharpshooter",
 		isNonstandard: "Future",
 	},
+	blobbotype: {
+		availability: {clover: 1},
+		isPermanent: true,
+		name: "Blobbotype",
+		rating: 4,
+		num: 121,
+		isNonstandard: "Future",
+		onSwitchIn(source) {
+			const type = source.getItem().onPlate;
+			if (type) {
+				const types = ['Ice', type];
+				source.setType(['Ice', type]);
+				this.add('-start', source, 'typechange', types.join('/'), '[from] ability: Blobbotype');
+			}
+		},
+	},
+	uncompetitive: {
+		availability: {clover: 1},
+		name: "Uncompetitive",
+		isPermanent: true,
+		isNonstandard: "Future",
+		onImmunity(type) {
+			if (type === 'hail') return false;
+			if (type === 'sandstorm') return false;
+		},
+		onModifyAccuracyPriority: -1,
+		onModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			if (this.field.isWeather('hail')) {
+				this.debug('Snow Cloak - decreasing accuracy');
+				this.chainModify([3277, 4096]);
+			} else if (this.field.isWeather('sandstorm')) {
+				this.debug('Sand Veil - decreasing accuracy');
+				this.chainModify([3277, 4096]);
+			}
+			this.debug('brightpowder - decreasing accuracy');
+			this.chainModify([3686, 4096]);
+			this.debug('lax incense - decreasing accuracy');
+			this.chainModify([3686, 4096]);
+		},
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.volatileStatus === 'flinch') return;
+				}
+				move.secondaries.push({
+					chance: 20,
+					volatileStatus: 'flinch',
+				});
+			}
+		},
+		onFoeTrapPokemon(pokemon) {
+			if (!pokemon.isAdjacent(this.effectState.target)) return;
+			if (pokemon.isGrounded()) {
+				pokemon.tryTrap(true);
+			} else if (!pokemon.hasAbility('shadowtag') && pokemon.isAdjacent(this.effectState.target)) {
+				pokemon.tryTrap(true);
+			}
+		},
+		onFoeMaybeTrapPokemon(pokemon, source) {
+			if (!source) source = this.effectState.target;
+			if (!source || !pokemon.isAdjacent(source)) return;
+			if (pokemon.isGrounded(!pokemon.knownType)) {
+				pokemon.maybeTrapped = true;
+			} else if (!pokemon.hasAbility('shadowtag')) {
+				pokemon.maybeTrapped = true;
+			}
+		},
+		onDamagePriority: -40,
+		onDamage(damage, target, source, effect) {
+			if (this.randomChance(1, 10) && damage >= target.hp && effect && effect.effectType === 'Move') {
+				this.add("-activate", target, "item: Focus Band");
+				return target.hp - 1;
+			}
+		},
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			let stats: BoostID[] = [];
+			const boost: SparseBoostsTable = {};
+			let statPlus: BoostID;
+			for (statPlus in pokemon.boosts) {
+				if (statPlus === 'accuracy' || statPlus === 'evasion') continue;
+				if (pokemon.boosts[statPlus] < 6) {
+					stats.push(statPlus);
+				}
+			}
+			let randomStat: BoostID | undefined = stats.length ? this.sample(stats) : undefined;
+			if (randomStat) boost[randomStat] = 2;
+
+			stats = [];
+			let statMinus: BoostID;
+			for (statMinus in pokemon.boosts) {
+				if (statMinus === 'accuracy' || statMinus === 'evasion') continue;
+				if (pokemon.boosts[statMinus] > -6 && statMinus !== randomStat) {
+					stats.push(statMinus);
+				}
+			}
+			randomStat = stats.length ? this.sample(stats) : undefined;
+			if (randomStat) boost[randomStat] = -1;
+
+			this.boost(boost);
+		},
+	},
 	/* Atlas Exclusive Abilities */
 	tardrage: {
 		availability: {atlas: 1},

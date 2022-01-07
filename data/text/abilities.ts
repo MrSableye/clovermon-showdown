@@ -2008,6 +2008,17 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Sharpshooter",
 		shortDesc: "This Pokemon's critical hit, the damage is multiplied by 1.5, +1 Crit ratio.",
 	},
+	blobbotype: {
+		name: "Blobbotype",
+		shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate or Z-Crystal.",
+		gen6: {
+			shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate.",
+		},
+	},
+	uncompetitive: {
+		name: "Uncompetitive",
+		shortDesc: "Snow Cloak + Sand Veil + Bright Powder + Lax Incense + Razor Fang + King's Rock + Moody + Arena Trap + Shadow Tag + Focus Band",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",

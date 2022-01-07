@@ -7385,6 +7385,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  A mystical barrier was erected around [TEAM]!",
 		end: "  The mystical barrier disappeared from around [TEAM]!",
 	},
+	gunshot: {
+		name: "Gun Shot",
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage. Always hits and deals 100x against Vandash.",
+		shortDesc: "10% chance to lower the target's Sp. Def by 1. Always hits and deals 100x against Vandash.",
+	},
 	/* Atlas move descs lol */
 	mondayz: {
 		name: "Mondayz",

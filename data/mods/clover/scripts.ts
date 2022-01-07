@@ -34,9 +34,10 @@ export const Scripts: ModdedBattleScriptsData = {
 			// random factor - also not a modifier
 			baseDamage = this.battle.randomizer(baseDamage);
 
+			const matchingTypeCount = pokemon.types.filter((pokemonType) => pokemonType === type).length;
 			// STAB
 			if (move.forceSTAB || pokemon.hasType(type)) {
-				baseDamage = this.battle.modify(baseDamage, move.stab || 1.5);
+				baseDamage = this.battle.modify(baseDamage, move.stab || Math.pow(1.5, Math.max(matchingTypeCount, 1)));
 			}
 			// types
 			let typeMod = target.runEffectiveness(move);

@@ -22957,6 +22957,37 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "allySide",
 		type: "Psychic",
 	},
+	gunshot: {
+		availability: {clover: 1},
+		num: 441,
+		accuracy: 80,
+		basePower: 120,
+		category: "Special",
+		name: "Gun Shot",
+		pp: 5,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spd: -1,
+			},
+		},
+		onModifyMove(move, pokemon, target) {
+			if (target && target.baseSpecies.id === 'vandash') {
+				move.accuracy = true;
+			}
+		},
+		onBasePower(basePower, pokemon, target) {
+			if (target && target.baseSpecies.id === 'vandash') {
+				return this.chainModify(100);
+			}
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
 	/* Atlas Exclusive Moves */
 	mondayz: {
 		availability: {atlas: 1},
