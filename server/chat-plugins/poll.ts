@@ -5,7 +5,7 @@
 import {Utils} from '../../lib';
 
 const MINUTES = 60000;
-const MAX_QUESTIONS = 10;
+const MAX_QUESTIONS = 69;
 
 interface PollAnswer {
 	name: string; votes: number; correct?: boolean;
