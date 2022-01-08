@@ -2019,6 +2019,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Uncompetitive",
 		shortDesc: "Snow Cloak + Sand Veil + Bright Powder + Lax Incense + Razor Fang + King's Rock + Moody + Arena Trap + Shadow Tag + Focus Band",
 	},
+	niceface: {
+		name: "Nice Face",
+		desc: "If this Pokemon is an Blobbos-Nice, the first hit it takes in battle deals 0 neutral damage. Its leaf shield is then broken and it changes forme to Noice Face. Blobbos-Nice regains its Leaf Shield forme when Grassy Terrain begins or when Eiscue switches in while Grassy Terrain is active. Confusion damage also breaks the leaf shield.",
+		shortDesc: "If Blobbos-Nice, the first hit it takes deals 0 damage. This effect is restored in Grassy Terrain.",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",

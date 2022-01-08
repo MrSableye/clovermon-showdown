@@ -9264,6 +9264,31 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
+	blobbospostmodern: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	blobboshoenn: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	blobbosnice: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	blobbosnoice: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	vermingio: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	/* :^) */
 	dussans: {
 		availability: {clover: 1},

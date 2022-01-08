@@ -7228,8 +7228,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	phantomfang: {
 		name: "Phantom Fang",
-		desc: "Has a 30% chance to burn the target.",
-		shortDesc: "30% to flinch, Lowers the user's Speed by 1.",
+		desc: "Has a 20% chance to Curse the target.",
+		shortDesc: "20% to Curse, Lowers the user's Speed by 1.",
 	},
 	phasethrough: {
 		name: "Phase Through",
@@ -7348,6 +7348,18 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Slepp That Blobs the Sky",
 		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes. This move and its effects ignore the Abilities of other Pokemon.",
 		shortDesc: "Physical if user's Atk > Sp. Atk. Ignores Abilities.",
+	},
+	yiikout: {
+		name: "Yiik Out",
+		desc: "Has a 100% chance to make the target confused and infatuated. Fails unless it is the user's first turn on the field.",
+		shortDesc: "Hits first. First turn out only, 100% Confuse + Attract.",
+	},
+	leafshield: {
+		name: "Leaf Shield",
+		desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon making contact with the user lose 1/8 of their maximum HP, rounded down. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
+		shortDesc: "Protects from moves. Contact: loses 1/8 HP. Sets Grass.",
+
+		damage: "  [POKEMON] was hurt by the sharp leaves!",
 	},
 	/* :^) */
 	skullcannon: {

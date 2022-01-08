@@ -576,7 +576,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: {},
 		onHit(target) {
 			const noAssist = [
-				'assist', 'banefulbunker', 'beakblast', 'belch', 'bestow', 'bounce', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'destinybond', 'detect', 'dig', 'dive', 'dragontail', 'endure', 'feint', 'fly', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'phantomforce', 'protect', 'ragepowder', 'roar', 'shadowforce', 'shelltrap', 'sketch', 'skydrop', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'wingsofcorrection',
+				'assist', 'banefulbunker', 'beakblast', 'belch', 'bestow', 'bounce', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'destinybond', 'detect', 'dig', 'dive', 'dragontail', 'endure', 'feint', 'fly', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'phantomforce', 'protect', 'ragepowder', 'roar', 'shadowforce', 'shelltrap', 'sketch', 'skydrop', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'wingsofcorrection', 'leafshield'
 			];
 
 			const moves = [];
@@ -22175,8 +22175,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 		secondary: {
-			chance: 30,
-			volatileStatus: 'flinch',
+			chance: 20,
+			volatileStatus: 'curse',
 		},
 		self: {
 			boosts: {
@@ -22837,6 +22837,34 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Ice",
 		contestType: "Cool",
 	},
+	yiikout: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "Yiik Out",
+		pp: 10,
+		priority: 4,
+		flags: {protect: 1, mirror: 1},
+		onTry(source) {
+			if (source.activeMoveActions > 1) {
+				this.hint("Yiik is only fun for the first five minutes.");
+				return false;
+			}
+		},
+		secondaries: [
+			{
+				chance: 100,
+				status: 'confusion',
+			}, {
+				chance: 100,
+				volatileStatus: 'attract',
+			},
+		],
+		target: "normal",
+		type: "Fairy",
+		isNonstandard: "Future",
+	},
 	strum: {
 		availability: {clover: 1},
 		num: 813,
@@ -22987,6 +23015,89 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Steel",
 		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	leafshield: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Leaf Shield",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'spikyshield',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'move: Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect']) {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					this.damage(source.baseMaxhp / 8, source, target);
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+					this.damage(source.baseMaxhp / 8, source, target);
+				}
+			},
+		},
+		terrain: 'grassyterrain',
+		secondary: null,
+		target: "self",
+		type: "Grass",
+		zMove: {boost: {def: 1}},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	bilebite: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Bile Bite",
+		pp: 10,
+		priority: 0,
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		secondaries: [
+			{
+				chance: 30,
+				status: 'tox',
+			}, {
+				chance: 30,
+				volatileStatus: 'flinch',
+			},
+		],
+		target: "normal",
+		type: "Poison",
+		contestType: "Cool",
 		isNonstandard: "Future",
 	},
 	/* Atlas Exclusive Moves */
