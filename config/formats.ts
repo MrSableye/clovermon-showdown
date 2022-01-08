@@ -204,7 +204,7 @@ export const Formats: FormatList = [
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	{
-		name: '[Gen 8 Clover Only] CAP Doubles',
+		name: '[Gen 8 Clover Only] Doubles CAP',
 		rated: false,
 		mod: 'clover',
 		gameType: 'doubles',
