@@ -5707,36 +5707,27 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			if (this.field.isTerrain('grassyterrain') && pokemon.species.id === 'blobbosnoice' && !pokemon.transformed) {
 				this.add('-activate', pokemon, 'ability: Nice Face');
 				this.effectState.busted = false;
-				pokemon.formeChange('blobbosnice', this.effect, true);
+				pokemon.formeChange('Blobbos-Nice', this.effect, true);
 			}
 		},
 		onDamagePriority: 1,
-		onDamage(damage, target, source, effect) {
-			if (
-				effect && effect.effectType === 'Move' &&
-				target.species.id === 'blobbosnice' && !target.transformed
-			) {
+		onDamage(damage, target) {
+			if (target.species.id === 'blobbosnice' && !target.transformed) {
 				this.add('-activate', target, 'ability: Nice Face');
 				this.effectState.busted = true;
 				return 0;
 			}
 		},
-		onCriticalHit(target, source, move) {
+		onCriticalHit(target, type, move) {
 			if (!target) return;
-			if (!['blobbosnice'].includes(target.species.id) || target.transformed) {
-				return;
-			}
-			const hitSub = target.volatiles['substitute'] && !move.flags['authentic'] && !(move.infiltrates && this.gen >= 6);
-			if (hitSub) return;
-
+			if (target.species.id !== 'blobbosnice' || target.transformed) return;
+			if (target.volatiles['substitute'] && !(move.flags['authentic'] || move.infiltrates)) return;
 			if (!target.runImmunity(move.type)) return;
 			return false;
 		},
 		onEffectiveness(typeMod, target, type, move) {
-			if (!target || move.category === 'Status') return;
-			if (!['blobbosnice'].includes(target.species.id) || target.transformed) {
-				return;
-			}
+			if (!target) return;
+			if (target.species.id !== 'blobbosnice' || target.transformed) return;
 
 			const hitSub = target.volatiles['substitute'] && !move.flags['authentic'] && !(move.infiltrates && this.gen >= 6);
 			if (hitSub) return;
@@ -5745,7 +5736,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			return 0;
 		},
 		onUpdate(pokemon) {
-			if (pokemon.species.id === 'eiscue' && this.effectState.busted) {
+			if (pokemon.species.id === 'blobbosnice' && this.effectState.busted) {
 				pokemon.formeChange('Blobbos-Noice', this.effect, true);
 			}
 		},
@@ -5758,7 +5749,6 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				pokemon.formeChange('Blobbos-Nice', this.effect, true);
 			}
 		},
-
 		isBreakable: true,
 		isPermanent: true,
 		name: "Nice Face",

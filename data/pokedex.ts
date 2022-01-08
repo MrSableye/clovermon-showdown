@@ -33224,6 +33224,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 			"Ditto",
 		],
 		gen: 8,
+		requiredAbility: "Ice Face",
+		battleOnly: "Eiscue",
 	},
 	/* :^) */
 	autumn: {
@@ -33300,7 +33302,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	vermingio: {
 		num: -42008,
 		name: "Vermingio",
-		types: ["Poison","Dark"],
+		types: ["Poison", "Dark"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 65, atk: 75, def: 65, spa: 95, spd: 70, spe: 110},
 		abilities: {0: "Stench", 1: "Liquid Ooze", H: "Corrosion"},
