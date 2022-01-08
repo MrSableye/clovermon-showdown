@@ -5702,6 +5702,69 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			}
 		},
 	},
+	niceface: {
+		onStart(pokemon) {
+			if (this.field.isTerrain('grassyterrain') && pokemon.species.id === 'blobbosnoice' && !pokemon.transformed) {
+				this.add('-activate', pokemon, 'ability: Nice Face');
+				this.effectState.busted = false;
+				pokemon.formeChange('blobbosnice', this.effect, true);
+			}
+		},
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
+			if (
+				effect && effect.effectType === 'Move' &&
+				target.species.id === 'blobbosnice' && !target.transformed
+			) {
+				this.add('-activate', target, 'ability: Nice Face');
+				this.effectState.busted = true;
+				return 0;
+			}
+		},
+		onCriticalHit(target, source, move) {
+			if (!target) return;
+			if (!['blobbosnice'].includes(target.species.id) || target.transformed) {
+				return;
+			}
+			const hitSub = target.volatiles['substitute'] && !move.flags['authentic'] && !(move.infiltrates && this.gen >= 6);
+			if (hitSub) return;
+
+			if (!target.runImmunity(move.type)) return;
+			return false;
+		},
+		onEffectiveness(typeMod, target, type, move) {
+			if (!target || move.category === 'Status') return;
+			if (!['blobbosnice'].includes(target.species.id) || target.transformed) {
+				return;
+			}
+
+			const hitSub = target.volatiles['substitute'] && !move.flags['authentic'] && !(move.infiltrates && this.gen >= 6);
+			if (hitSub) return;
+
+			if (!target.runImmunity(move.type)) return;
+			return 0;
+		},
+		onUpdate(pokemon) {
+			if (pokemon.species.id === 'eiscue' && this.effectState.busted) {
+				pokemon.formeChange('Blobbos-Noice', this.effect, true);
+			}
+		},
+		onAnyTerrainStart() {
+			const pokemon = this.effectState.target;
+			if (!pokemon.hp) return;
+			if (this.field.isTerrain('grassyterrain') && pokemon.species.id === 'blobbosnoice' && !pokemon.transformed) {
+				this.add('-activate', pokemon, 'ability: Nice Face');
+				this.effectState.busted = false;
+				pokemon.formeChange('Blobbos-Nice', this.effect, true);
+			}
+		},
+
+		isBreakable: true,
+		isPermanent: true,
+		name: "Nice Face",
+		isNonstandard: "Future",
+		rating: 3,
+	},
 	uncompetitive: {
 		availability: {clover: 1},
 		name: "Uncompetitive",

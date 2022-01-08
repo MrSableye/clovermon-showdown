@@ -1179,6 +1179,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	yiikout: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	leafshield: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 	skullcannon: {
 		availability: {clover: 1},
 		inherit: true,
