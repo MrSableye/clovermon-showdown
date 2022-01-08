@@ -22729,6 +22729,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onDamage(damage, target, source, effect) {
 			if (damage >= target.hp) return target.hp - 1;
 		},
+		noSketch: true,
 		target: "normal",
 		type: "Dark",
 		contestType: "Cool",
