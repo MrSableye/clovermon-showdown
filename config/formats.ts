@@ -160,6 +160,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Clover Only',
 			'Blobbos Only',
+			'+CAP',
 		],
 	},
 	///////////////////////////////////////////////////////////////////
