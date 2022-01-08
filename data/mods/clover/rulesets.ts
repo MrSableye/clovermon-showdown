@@ -107,4 +107,16 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 			return errors;
 		},
 	},
+	blobbosonly: {
+		effectType: 'ValidatorRule',
+		name: 'Blobbos',
+		desc: "Only Blobbos and its alternate formes can be used.",
+		onValidateSet(set) {
+			const species = this.dex.species.get(set.species || set.name);
+
+			if (species.baseSpecies !== 'Blobbos') {
+				return [`${set.name || set.species} is not Blobbos.`];
+			}
+		},
+	},
 };

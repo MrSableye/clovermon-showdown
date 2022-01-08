@@ -149,6 +149,19 @@ export const Formats: FormatList = [
 		ruleset: ['[Gen 8 Clover Only] OU', '+CAP'],
 		banlist: ['Condoomite'],
 	},
+	{
+		name: '[Gen 8 Clover Only] Blobbos CAP',
+		mod: 'clover',
+		ruleset: [
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Evasion Moves Clause',
+			'OHKO Clause',
+			'Clover Only',
+			'Blobbos Only',
+		],
+	},
 	///////////////////////////////////////////////////////////////////
 	// Clover Doubles & Triples
 	///////////////////////////////////////////////////////////////////
