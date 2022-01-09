@@ -151,4 +151,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	niceface: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

@@ -33224,8 +33224,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 			"Ditto",
 		],
 		gen: 8,
-		requiredAbility: "Ice Face",
-		battleOnly: "Eiscue",
+		requiredAbility: "Nice Face",
+		battleOnly: "Blobbos-Nice",
 	},
 	/* :^) */
 	autumn: {
