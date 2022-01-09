@@ -32897,12 +32897,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		types: ["Rock", "Ice"],
 		gender: "N",
 		baseStats: {
-			hp: 213,
-			atk: 238,
-			def: 219,
-			spa: 240,
-			spd: 230,
-			spe: 240,
+			hp: 15,
+			atk: 25,
+			def: 15,
+			spa: 36,
+			spd: 17,
+			spe: 42,
 		},
 		abilities: {
 			0: "Inversion",
