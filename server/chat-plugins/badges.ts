@@ -131,7 +131,7 @@ export const Badges = new class {
 
 		const badge = await Chat.Badges.getBadge(badgeID);
 		if (badge) {
-			sendPM(`/html <div>You received a badge: ${this.createRawBadgeHtml(badge.badge_id, badge.badge_name)}</div>`, toID(userID));
+			sendPM(`/html <div>You received a badge: ${this.createRawBadgeHtml(badge.badge_name, badge.file_name)}</div>`, toID(userID));
 		}
 	}
 	async removeBadgeFromUser(userID: string, badgeID: string, requester: User, override = false) {
