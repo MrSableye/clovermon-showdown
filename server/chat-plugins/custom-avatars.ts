@@ -65,6 +65,28 @@ const createPendingAvatarRequestHtml = (userId: string, avatarFileName: string) 
 	return pendingAvatarRequestHtml + '</details>';
 };
 
+const sendPM = (message: string, userId: ID) => {
+	const user = Users.get(userId);
+
+	if (user) {
+		user.send(`|pm|&|${user.getIdentity()}|${message}`);
+	}
+};
+
+const notifyStaff = (requester: User, fileName: string) => {
+	const staffRoom = Rooms.get('staff');
+
+	if (staffRoom) {
+		staffRoom?.sendRankedUsers(
+			`|tempnotify|pendingapprovals|Pending avatar request!|${requester.name} has requested a new custom avatar.`,
+			'%',
+		);
+		staffRoom?.sendMods(
+			Utils.html`|uhtml|avatar-request-${requester.id}|${createPendingAvatarRequestHtml(requester.id, fileName)}`
+		);
+	}
+};
+
 const canUserHaveCustomAvatar = async (user: User): Promise<boolean> => {
 	const userBadges = await Badges.getUserBadges(user.id);
 	const isTournamentWinner = userBadges.some((userBadge) => customAvatarBadges.includes(userBadge.badge_id));
@@ -112,6 +134,8 @@ export const commands: Chat.ChatCommands = {
 					await FS(`./config/avatars/requests/${fileName}`).write(imagebuffer);
 
 					updateAvatarStatus(user.id, {requestedAvatar: fileName});
+
+					notifyStaff(user, fileName);
 
 					return this.sendReplyBox(`Requested: ${createRawAvatarHtml(fileName, true)}`);
 				} catch (error) {
@@ -167,6 +191,8 @@ export const commands: Chat.ChatCommands = {
 			FS(`./config/avatars/requests/${avatarStatus.requestedAvatar}`)
 				.renameSync(`./config/avatars/${avatarStatus.requestedAvatar}`);
 
+			sendPM(`/html <div><div>Avatar approved</div><div>${createRawAvatarHtml(avatarStatus.requestedAvatar)}</div></div>`, targetId);
+
 			return this.sendReplyBox(`<div><div>Approved avatar request of ${targetId}</div><div>${createRawAvatarHtml(avatarStatus.requestedAvatar)}</div></div>`);
 		},
 		deny(target) {
@@ -184,6 +210,8 @@ export const commands: Chat.ChatCommands = {
 			});
 
 			FS(`./config/avatars/requests/${avatarStatus.requestedAvatar}`).unlinkIfExistsSync();
+
+			sendPM('Your avatar request was denied.', targetId);
 
 			return this.sendReply(`Denied avatar request of ${targetId}`);
 		},

@@ -33,6 +33,14 @@ function toLink(buf: string) {
 	return buf.replace(/<a roomid="/g, `<a target="replace" href="/`);
 }
 
+const sendPM = (message: string, userId: ID) => {
+	const user = Users.get(userId);
+
+	if (user) {
+		user.send(`|pm|&|${user.getIdentity()}|${message}`);
+	}
+};
+
 export const Badges = new class {
 	// Permissions
 	checkBadgesEnabled() {
@@ -120,6 +128,11 @@ export const Badges = new class {
 		const overridePermissions = override || Badges.canOverrideBadgeOwnership(requester);
 		await Chat.Badges.addBadgeToUser(userID, badgeID, requester.id, overridePermissions);
 		await Badges.updateUser(userID);
+
+		const badge = await Chat.Badges.getBadge(badgeID);
+		if (badge) {
+			sendPM(`/html <div>You received a badge: ${this.createRawBadgeHtml(badge.badge_id, badge.badge_name)}</div>`, toID(userID));
+		}
 	}
 	async removeBadgeFromUser(userID: string, badgeID: string, requester: User, override = false) {
 		const overridePermissions = override || Badges.canOverrideBadgeOwnership(requester);
@@ -396,6 +409,7 @@ export const commands: Chat.ChatCommands = {
 	badge: {
 		async showall(target, room, user, connection, cmd, message) {
 			Badges.checkHasBadgePermission(this);
+			this.runBroadcast();
 
 			const badges = await Badges.getBadges();
 
