@@ -73,15 +73,23 @@ const sendPM = (message: string, userId: ID) => {
 	}
 };
 
-const notifyStaff = (requester: User, fileName: string) => {
+const notifyStaff = (requesterId: string, fileName: string) => {
 	const staffRoom = Rooms.get('staff');
 
 	if (staffRoom) {
-		staffRoom?.sendRankedUsers(
-			`|tempnotify|pendingapprovals|Pending avatar request!|${requester.name} has requested a new custom avatar.`,
-			'%',
+		staffRoom.sendMods(
+			Utils.html`|uhtml|avatar-request-${requesterId}|${createPendingAvatarRequestHtml(requesterId, fileName, true)}`,
 		);
-		staffRoom?.add(`|html|${createPendingAvatarRequestHtml(requester.id, fileName)}`);
+	}
+};
+
+const removeStaffNotficiation = (requesterId: string) => {
+	const staffRoom = Rooms.get('staff');
+
+	if (staffRoom) {
+		staffRoom.sendMods(
+			Utils.html`|uhtml|avatar-request-${requesterId}|`,
+		);
 	}
 };
 
@@ -133,7 +141,7 @@ export const commands: Chat.ChatCommands = {
 
 					updateAvatarStatus(user.id, {requestedAvatar: fileName});
 
-					notifyStaff(user, fileName);
+					notifyStaff(user.id, fileName);
 
 					return this.sendReplyBox(`Requested: ${createRawAvatarHtml(fileName, true)}`);
 				} catch (error) {
@@ -190,6 +198,7 @@ export const commands: Chat.ChatCommands = {
 				.renameSync(`./config/avatars/${avatarStatus.requestedAvatar}`);
 
 			sendPM(`/html <div><div>Avatar approved</div><div>${createRawAvatarHtml(avatarStatus.requestedAvatar)}</div></div>`, targetId);
+			removeStaffNotficiation(targetId);
 
 			return this.sendReplyBox(`<div><div>Approved avatar request of ${targetId}</div><div>${createRawAvatarHtml(avatarStatus.requestedAvatar)}</div></div>`);
 		},
@@ -210,6 +219,7 @@ export const commands: Chat.ChatCommands = {
 			FS(`./config/avatars/requests/${avatarStatus.requestedAvatar}`).unlinkIfExistsSync();
 
 			sendPM('Your avatar request was denied.', targetId);
+			removeStaffNotficiation(targetId);
 
 			return this.sendReply(`Denied avatar request of ${targetId}`);
 		},
