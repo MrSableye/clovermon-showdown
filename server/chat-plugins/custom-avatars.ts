@@ -55,10 +55,10 @@ const createRawAvatarHtml = (avatarFileName: string, isRequest = false) => `<ava
 
 const getUsername = (userId: string) => Users.get(userId)?.name || userId;
 
-const createPendingAvatarRequestHtml = (userId: string, avatarFileName: string) => {
+const createPendingAvatarRequestHtml = (userId: string, avatarFileName: string, isBroadcast = false) => {
 	const username = getUsername(userId);
 	let pendingAvatarRequestHtml = '<details>';
-	pendingAvatarRequestHtml += `<summary><b>${username}</b></summary>`;
+	pendingAvatarRequestHtml += `<summary><b>${username}${isBroadcast ? ' Custom Avatar Request' : ''}</b></summary>`;
 	pendingAvatarRequestHtml += createRawAvatarHtml(avatarFileName, true) + '<br />';
 	pendingAvatarRequestHtml += `<button class="button" name="send" value="/customavatar approve ${userId}">Approve</button>`;
 	pendingAvatarRequestHtml += `<button class="button" name="send" value="/customavatar deny ${userId}">Deny</button>`;
@@ -81,9 +81,7 @@ const notifyStaff = (requester: User, fileName: string) => {
 			`|tempnotify|pendingapprovals|Pending avatar request!|${requester.name} has requested a new custom avatar.`,
 			'%',
 		);
-		staffRoom?.sendMods(
-			Utils.html`|uhtml|avatar-request-${requester.id}|${createPendingAvatarRequestHtml(requester.id, fileName)}`
-		);
+		staffRoom?.add(`|html|${createPendingAvatarRequestHtml(requester.id, fileName)}`);
 	}
 };
 
