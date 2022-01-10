@@ -77,9 +77,7 @@ const notifyStaff = (requesterId: string, fileName: string) => {
 	const staffRoom = Rooms.get('staff');
 
 	if (staffRoom) {
-		staffRoom.sendMods(
-			Utils.html`|uhtml|avatar-request-${requesterId}|${createPendingAvatarRequestHtml(requesterId, fileName, true)}`,
-		);
+		staffRoom.sendMods(`|uhtml|avatar-request-${requesterId}|${createPendingAvatarRequestHtml(requesterId, fileName, true)}`);
 	}
 };
 
