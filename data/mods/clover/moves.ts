@@ -1187,6 +1187,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	bilebite: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 	skullcannon: {
 		availability: {clover: 1},
 		inherit: true,
