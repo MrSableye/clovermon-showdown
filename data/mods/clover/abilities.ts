@@ -147,6 +147,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	parentalbond: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 	uncompetitive: {
 		inherit: true,
 		isNonstandard: "CAP",

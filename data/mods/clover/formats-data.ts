@@ -15509,6 +15509,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	blobbosgnome: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	vermingio: {
 		inherit: true,
 		isNonstandard: "CAP",

@@ -22653,9 +22653,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 	badeggs: {
 		availability: {clover: 1},
 		accuracy: 85,
-		basePower: 20,
+		basePower: 25,
 		basePowerCallback(pokemon, target, move) {
-			return 20 * move.hit;
+			return 25 * move.hit;
 		},
 		category: "Physical",
 		name: "Bad Eggs",
@@ -22666,7 +22666,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		multiaccuracy: true,
 		secondary: {
 			chance: 20,
-			status: 'psn',
+			status: 'tox',
 		},
 		target: "normal",
 		type: "Dark",
