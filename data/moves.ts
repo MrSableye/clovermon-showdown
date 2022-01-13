@@ -22087,7 +22087,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 42013,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Trick Stab",
@@ -22096,6 +22096,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		beforeMoveCallback(source, target, move) {
 			if (source.illusion) move.willCrit = true;
+		},
+		onHit(target, source) {
+			this.singleEvent('End', this.dex.abilities.get('Illusion'), source.abilityState, source);
 		},
 		secondary: null,
 		target: "normal",

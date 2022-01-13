@@ -7145,8 +7145,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	trickstab: {
 		name: "Trick Stab",
-		desc: "This move always crits under illusion.",
-		shortDesc: "Guaranteed crit under illusion.",
+		desc: "This move always crits under illusion and removes it on a successful hit.",
+		shortDesc: "Guaranteed crit under illusion; removes it on hit.",
 	},
 	psychofists: {
 		name: "Psycho Fists",
