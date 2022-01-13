@@ -5712,8 +5712,11 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			}
 		},
 		onDamagePriority: 1,
-		onDamage(damage, target) {
-			if (target.species.id === 'blobbosnice' && !target.transformed) {
+		onDamage(damage, target, source, effect) {
+			if (
+				effect && effect.effectType === 'Move' && effect.category === 'Physical' &&
+				target.species.id === 'blobbosnice' && !target.transformed
+			) {
 				this.add('-activate', target, 'ability: Nice Face');
 				this.effectState.busted = true;
 				return 0;
@@ -5721,14 +5724,14 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		onCriticalHit(target, type, move) {
 			if (!target) return;
-			if (target.species.id !== 'blobbosnice' || target.transformed) return;
+			if (move.category !== 'Physical' || target.species.id !== 'blobbosnice' || target.transformed) return;
 			if (target.volatiles['substitute'] && !(move.flags['authentic'] || move.infiltrates)) return;
 			if (!target.runImmunity(move.type)) return;
 			return false;
 		},
 		onEffectiveness(typeMod, target, type, move) {
 			if (!target) return;
-			if (target.species.id !== 'blobbosnice' || target.transformed) return;
+			if (move.category !== 'Physical' || target.species.id !== 'blobbosnice' || target.transformed) return;
 
 			const hitSub = target.volatiles['substitute'] && !move.flags['authentic'] && !(move.infiltrates && this.gen >= 6);
 			if (hitSub) return;
