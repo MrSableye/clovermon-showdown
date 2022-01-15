@@ -925,7 +925,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	lightball: {
 		name: "Light Ball",
 		/* Clover Modification Start */
-    desc: "If held by a Pikachu or Pikotton, its Sp. Atk is doubled. If held by a Pikachu, its Attack is also doubled.",
+		desc: "If held by a Pikachu or Pikotton, its Sp. Atk is doubled. If held by a Pikachu, its Attack is also doubled.",
 		/* Clover Modification End */
 		gen4: {
 			desc: "If held by a Pikachu, its attacks have their power doubled.",

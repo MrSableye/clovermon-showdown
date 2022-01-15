@@ -106,30 +106,30 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	assist: {
 		inherit: true,
 		onHit(target) {
-      const noAssist = [
-        'assist', 'banefulbunker', 'beakblast', 'belch', 'bestow', 'bounce', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'destinybond', 'detect', 'dig', 'dive', 'dragontail', 'endure', 'feint', 'fly', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'phantomforce', 'protect', 'ragepowder', 'roar', 'shadowforce', 'shelltrap', 'sketch', 'skydrop', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'wingsofcorrection', 'leafshield',
-      ];
+			const noAssist = [
+				'assist', 'banefulbunker', 'beakblast', 'belch', 'bestow', 'bounce', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'destinybond', 'detect', 'dig', 'dive', 'dragontail', 'endure', 'feint', 'fly', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'phantomforce', 'protect', 'ragepowder', 'roar', 'shadowforce', 'shelltrap', 'sketch', 'skydrop', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'wingsofcorrection', 'leafshield',
+			];
 
-      const moves = [];
-      for (const pokemon of target.side.pokemon) {
-        if (pokemon === target) continue;
-        for (const moveSlot of pokemon.moveSlots) {
-          const moveid = moveSlot.id;
-          if (noAssist.includes(moveid)) continue;
-          const move = this.dex.moves.get(moveid);
-          if (move.isZ || move.isMax) {
-            continue;
-          }
-          moves.push(moveid);
-        }
-      }
-      let randomMove = '';
-      if (moves.length) randomMove = this.sample(moves);
-      if (!randomMove) {
-        return false;
-      }
-      this.actions.useMove(randomMove, target);
-    },
+			const moves = [];
+			for (const pokemon of target.side.pokemon) {
+				if (pokemon === target) continue;
+				for (const moveSlot of pokemon.moveSlots) {
+					const moveid = moveSlot.id;
+					if (noAssist.includes(moveid)) continue;
+					const move = this.dex.moves.get(moveid);
+					if (move.isZ || move.isMax) {
+						continue;
+					}
+					moves.push(moveid);
+				}
+			}
+			let randomMove = '';
+			if (moves.length) randomMove = this.sample(moves);
+			if (!randomMove) {
+				return false;
+			}
+			this.actions.useMove(randomMove, target);
+		},
 		isNonstandard: null,
 	},
 	assurance: {
@@ -476,18 +476,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	copycat: {
 		inherit: true,
 		onHit(pokemon) {
-      const noCopycat = [
-        'assist', 'banefulbunker', 'beakblast', 'behemothbash', 'behemothblade', 'belch', 'bestow', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'dragontail', 'dynamaxcannon', 'endure', 'feint', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'protect', 'ragepowder', 'roar', 'shelltrap', 'sketch', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'wingsofcorrection',
-      ];
-      let move: Move | ActiveMove | null = this.lastMove;
-      if (!move) return;
+			const noCopycat = [
+				'assist', 'banefulbunker', 'beakblast', 'behemothbash', 'behemothblade', 'belch', 'bestow', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'dragontail', 'dynamaxcannon', 'endure', 'feint', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'protect', 'ragepowder', 'roar', 'shelltrap', 'sketch', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'wingsofcorrection',
+			];
+			let move: Move | ActiveMove | null = this.lastMove;
+			if (!move) return;
 
-      if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
-      if (noCopycat.includes(move.id) || move.isZ || move.isMax) {
-        return false;
-      }
-      this.actions.useMove(move.id, pokemon);
-    },
+			if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
+			if (noCopycat.includes(move.id) || move.isZ || move.isMax) {
+				return false;
+			}
+			this.actions.useMove(move.id, pokemon);
+		},
 		isNonstandard: null,
 	},
 	coreenforcer: {
@@ -521,22 +521,22 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	covet: {
 		inherit: true,
 		onAfterHit(target, source, move) {
-      if (source.item) {
-        return;
-      }
-      const yourItem = target.takeItem(source);
-      if (!yourItem) {
-        return;
-      }
-      if (
-        !this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem) ||
+			if (source.item) {
+				return;
+			}
+			const yourItem = target.takeItem(source);
+			if (!yourItem) {
+				return;
+			}
+			if (
+				!this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem) ||
         !source.setItem(yourItem)
-      ) {
-        target.item = yourItem.id; // bypass setItem so we don't break choicelock or anything
-        return;
-      }
-      this.add('-item', source, yourItem, '[from] move: Covet', '[of] ' + target);
-    },
+			) {
+				target.item = yourItem.id; // bypass setItem so we don't break choicelock or anything
+				return;
+			}
+			this.add('-item', source, yourItem, '[from] move: Covet', '[of] ' + target);
+		},
 		isNonstandard: null,
 	},
 	crabhammer: {
@@ -609,30 +609,30 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	defog: {
 		inherit: true,
 		onHit(target, source, move) {
-      let success = false;
-      if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
-      const removeTarget = [
-        'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard',
-      ];
-      const removeAll = [
-        'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard',
-      ];
-      for (const targetCondition of removeTarget) {
-        if (target.side.removeSideCondition(targetCondition)) {
-          if (!removeAll.includes(targetCondition)) continue;
-          this.add('-sideend', target.side, this.dex.conditions.get(targetCondition).name, '[from] move: Defog', '[of] ' + source);
-          success = true;
-        }
-      }
-      for (const sideCondition of removeAll) {
-        if (source.side.removeSideCondition(sideCondition)) {
-          this.add('-sideend', source.side, this.dex.conditions.get(sideCondition).name, '[from] move: Defog', '[of] ' + source);
-          success = true;
-        }
-      }
-      this.field.clearTerrain();
-      return success;
-    },
+			let success = false;
+			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
+			const removeTarget = [
+				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard',
+			];
+			const removeAll = [
+				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard',
+			];
+			for (const targetCondition of removeTarget) {
+				if (target.side.removeSideCondition(targetCondition)) {
+					if (!removeAll.includes(targetCondition)) continue;
+					this.add('-sideend', target.side, this.dex.conditions.get(targetCondition).name, '[from] move: Defog', '[of] ' + source);
+					success = true;
+				}
+			}
+			for (const sideCondition of removeAll) {
+				if (source.side.removeSideCondition(sideCondition)) {
+					this.add('-sideend', source.side, this.dex.conditions.get(sideCondition).name, '[from] move: Defog', '[of] ' + source);
+					success = true;
+				}
+			}
+			this.field.clearTerrain();
+			return success;
+		},
 		isNonstandard: null,
 	},
 	destinybond: {
@@ -1294,29 +1294,29 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	gmaxwindrage: {
 		inherit: true,
 		self: {
-      onHit(source) {
-        let success = false;
-        const removeTarget = [
-          'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'sleazyspores', 'shattershard',
-        ];
-        const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard'];
-        for (const targetCondition of removeTarget) {
-          if (source.side.foe.removeSideCondition(targetCondition)) {
-            if (!removeAll.includes(targetCondition)) continue;
-            this.add('-sideend', source.side.foe, this.dex.conditions.get(targetCondition).name, '[from] move: G-Max Wind Rage', '[of] ' + source);
-            success = true;
-          }
-        }
-        for (const sideCondition of removeAll) {
-          if (source.side.removeSideCondition(sideCondition)) {
-            this.add('-sideend', source.side, this.dex.conditions.get(sideCondition).name, '[from] move: G-Max Wind Rage', '[of] ' + source);
-            success = true;
-          }
-        }
-        this.field.clearTerrain();
-        return success;
-      },
-    },
+			onHit(source) {
+				let success = false;
+				const removeTarget = [
+					'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'sleazyspores', 'shattershard',
+				];
+				const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard'];
+				for (const targetCondition of removeTarget) {
+					if (source.side.foe.removeSideCondition(targetCondition)) {
+						if (!removeAll.includes(targetCondition)) continue;
+						this.add('-sideend', source.side.foe, this.dex.conditions.get(targetCondition).name, '[from] move: G-Max Wind Rage', '[of] ' + source);
+						success = true;
+					}
+				}
+				for (const sideCondition of removeAll) {
+					if (source.side.removeSideCondition(sideCondition)) {
+						this.add('-sideend', source.side, this.dex.conditions.get(sideCondition).name, '[from] move: G-Max Wind Rage', '[of] ' + source);
+						success = true;
+					}
+				}
+				this.field.clearTerrain();
+				return success;
+			},
+		},
 		isNonstandard: "Gigantamax",
 	},
 	grassknot: {
@@ -1840,27 +1840,27 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	magicroom: {
 		inherit: true,
 		condition: {
-      duration: 5,
-      durationCallback(source, effect) {
-        if (source?.hasAbility(['persistent', 'moreroom'])) {
-          this.add('-activate', source, `ability: ${source.ability}`, effect);
-          return 7;
-        }
-        return 5;
-      },
-      onFieldStart(target, source) {
-        this.add('-fieldstart', 'move: Magic Room', '[of] ' + source);
-      },
-      onFieldRestart(target, source) {
-        this.field.removePseudoWeather('magicroom');
-      },
-      // Item suppression implemented in Pokemon.ignoringItem() within sim/pokemon.js
-      onFieldResidualOrder: 27,
-      onFieldResidualSubOrder: 6,
-      onFieldEnd() {
-        this.add('-fieldend', 'move: Magic Room', '[of] ' + this.effectState.source);
-      },
-    },
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 7;
+				}
+				return 5;
+			},
+			onFieldStart(target, source) {
+				this.add('-fieldstart', 'move: Magic Room', '[of] ' + source);
+			},
+			onFieldRestart(target, source) {
+				this.field.removePseudoWeather('magicroom');
+			},
+			// Item suppression implemented in Pokemon.ignoringItem() within sim/pokemon.js
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 6,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Magic Room', '[of] ' + this.effectState.source);
+			},
+		},
 		isNonstandard: null,
 	},
 	magmastorm: {
@@ -2442,39 +2442,39 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	rapidspin: {
 		inherit: true,
 		onAfterHit(target, pokemon) {
-      if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
-        this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
-      }
-      if (pokemon.hp && pokemon.removeVolatile('livewire')) {
-        this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
-      }
-      const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
-      for (const condition of sideConditions) {
-        if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
-          this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
-        }
-      }
-      if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
-        pokemon.removeVolatile('partiallytrapped');
-      }
-    },
-    onAfterSubDamage(damage, target, pokemon) {
-      if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
-        this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
-      }
-      if (pokemon.hp && pokemon.removeVolatile('livewire')) {
-        this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
-      }
-      const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
-      for (const condition of sideConditions) {
-        if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
-          this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
-        }
-      }
-      if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
-        pokemon.removeVolatile('partiallytrapped');
-      }
-    },
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
+				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
+				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
 		isNonstandard: null,
 	},
 	razorleaf: {
@@ -3278,27 +3278,27 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	trickroom: {
 		inherit: true,
 		condition: {
-      duration: 5,
-      durationCallback(source, effect) {
-        if (source?.hasAbility(['persistent', 'moreroom'])) {
-          this.add('-activate', source, `ability: ${source.ability}`, effect);
-          return 7;
-        }
-        return 5;
-      },
-      onFieldStart(target, source) {
-        this.add('-fieldstart', 'move: Trick Room', '[of] ' + source);
-      },
-      onFieldRestart(target, source) {
-        this.field.removePseudoWeather('trickroom');
-      },
-      // Speed modification is changed in Pokemon.getActionSpeed() in sim/pokemon.js
-      onFieldResidualOrder: 27,
-      onFieldResidualSubOrder: 1,
-      onFieldEnd() {
-        this.add('-fieldend', 'move: Trick Room');
-      },
-    },
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 7;
+				}
+				return 5;
+			},
+			onFieldStart(target, source) {
+				this.add('-fieldstart', 'move: Trick Room', '[of] ' + source);
+			},
+			onFieldRestart(target, source) {
+				this.field.removePseudoWeather('trickroom');
+			},
+			// Speed modification is changed in Pokemon.getActionSpeed() in sim/pokemon.js
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 1,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Trick Room');
+			},
+		},
 		isNonstandard: null,
 	},
 	triplekick: {
@@ -3448,35 +3448,35 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	wonderroom: {
 		inherit: true,
 		condition: {
-      duration: 5,
-      durationCallback(source, effect) {
-        if (source?.hasAbility(['persistent', 'moreroom'])) {
-          this.add('-activate', source, `ability: ${source.ability}`, effect);
-          return 7;
-        }
-        return 5;
-      },
-      onModifyMove(move, source, target) {
-        // This code is for moves that use defensive stats as the attacking stat; see below for most of the implementation
-        if (!move.overrideOffensiveStat) return;
-        const statAndBoosts = move.overrideOffensiveStat;
-        if (!['def', 'spd'].includes(statAndBoosts)) return;
-        move.overrideOffensiveStat = statAndBoosts === 'def' ? 'spd' : 'def';
-        this.hint(`${move.name} uses ${statAndBoosts === 'def' ? '' : 'Sp. '}Def boosts when Wonder Room is active.`);
-      },
-      onFieldStart(field, source) {
-        this.add('-fieldstart', 'move: Wonder Room', '[of] ' + source);
-      },
-      onFieldRestart(target, source) {
-        this.field.removePseudoWeather('wonderroom');
-      },
-      // Swapping defenses partially implemented in sim/pokemon.js:Pokemon#calculateStat and Pokemon#getStat
-      onFieldResidualOrder: 27,
-      onFieldResidualSubOrder: 5,
-      onFieldEnd() {
-        this.add('-fieldend', 'move: Wonder Room');
-      },
-    },
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 7;
+				}
+				return 5;
+			},
+			onModifyMove(move, source, target) {
+				// This code is for moves that use defensive stats as the attacking stat; see below for most of the implementation
+				if (!move.overrideOffensiveStat) return;
+				const statAndBoosts = move.overrideOffensiveStat;
+				if (!['def', 'spd'].includes(statAndBoosts)) return;
+				move.overrideOffensiveStat = statAndBoosts === 'def' ? 'spd' : 'def';
+				this.hint(`${move.name} uses ${statAndBoosts === 'def' ? '' : 'Sp. '}Def boosts when Wonder Room is active.`);
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Wonder Room', '[of] ' + source);
+			},
+			onFieldRestart(target, source) {
+				this.field.removePseudoWeather('wonderroom');
+			},
+			// Swapping defenses partially implemented in sim/pokemon.js:Pokemon#calculateStat and Pokemon#getStat
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 5,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Wonder Room');
+			},
+		},
 		isNonstandard: null,
 	},
 	woodhammer: {
@@ -5960,67 +5960,67 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	courtchange: {
 		inherit: true,
 		onHitField(target, source) {
-      const sideConditions = [
-        'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire', 'sleazyspores', 'shattershard',
-      ];
-      let success = false;
-      if (this.gameType === "freeforall") {
-        // random integer from 1-3 inclusive
-        const offset = this.random(3) + 1;
-        // the list of all sides in counterclockwise order
-        const sides = [this.sides[0], this.sides[2]!, this.sides[1], this.sides[3]!];
-        for (const id of sideConditions) {
-          const effectName = this.dex.conditions.get(id).name;
-          const rotatedSides = [];
-          let someCondition = false;
-          for (let i = 0; i < 4; i++) {
-            const sourceSide = sides[i];
-            const targetSide = sides[(i + offset) % 4]; // the next side in rotation
-            rotatedSides.push(targetSide.sideConditions[id]);
-            if (sourceSide.sideConditions[id]) {
-              this.add('-sideend', sourceSide, effectName, '[silent]');
-              someCondition = true;
-            }
-          }
-          if (!someCondition) continue;
-          [
-            sides[0].sideConditions[id], sides[1].sideConditions[id],
-            sides[2]!.sideConditions[id], sides[3]!.sideConditions[id],
-          ] = [...rotatedSides];
-          for (const side of sides) {
-            if (side.sideConditions[id]) {
-              let layers = side.sideConditions[id].layers || 1;
-              for (; layers > 0; layers--) this.add('-sidestart', side, effectName, '[silent]');
-            } else {
-              delete side.sideConditions[id];
-            }
-          }
-          success = true;
-        }
-      } else {
-        const sourceSide = source.side;
-        const targetSide = source.side.foe;
-        for (const id of sideConditions) {
-          if (sourceSide.sideConditions[id] && targetSide.sideConditions[id]) {
-            [sourceSide.sideConditions[id], targetSide.sideConditions[id]] = [
-              targetSide.sideConditions[id], sourceSide.sideConditions[id],
-            ];
-          } else if (sourceSide.sideConditions[id] && !targetSide.sideConditions[id]) {
-            targetSide.sideConditions[id] = sourceSide.sideConditions[id];
-            delete sourceSide.sideConditions[id];
-          } else if (targetSide.sideConditions[id] && !sourceSide.sideConditions[id]) {
-            sourceSide.sideConditions[id] = targetSide.sideConditions[id];
-            delete targetSide.sideConditions[id];
-          } else {
-            continue;
-          }
-          success = true;
-        }
-        this.add('-swapsideconditions');
-      }
-      if (!success) return false;
-      this.add('-activate', source, 'move: Court Change');
-    },
+			const sideConditions = [
+				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire', 'sleazyspores', 'shattershard',
+			];
+			let success = false;
+			if (this.gameType === "freeforall") {
+				// random integer from 1-3 inclusive
+				const offset = this.random(3) + 1;
+				// the list of all sides in counterclockwise order
+				const sides = [this.sides[0], this.sides[2]!, this.sides[1], this.sides[3]!];
+				for (const id of sideConditions) {
+					const effectName = this.dex.conditions.get(id).name;
+					const rotatedSides = [];
+					let someCondition = false;
+					for (let i = 0; i < 4; i++) {
+						const sourceSide = sides[i];
+						const targetSide = sides[(i + offset) % 4]; // the next side in rotation
+						rotatedSides.push(targetSide.sideConditions[id]);
+						if (sourceSide.sideConditions[id]) {
+							this.add('-sideend', sourceSide, effectName, '[silent]');
+							someCondition = true;
+						}
+					}
+					if (!someCondition) continue;
+					[
+						sides[0].sideConditions[id], sides[1].sideConditions[id],
+						sides[2]!.sideConditions[id], sides[3]!.sideConditions[id],
+					] = [...rotatedSides];
+					for (const side of sides) {
+						if (side.sideConditions[id]) {
+							let layers = side.sideConditions[id].layers || 1;
+							for (; layers > 0; layers--) this.add('-sidestart', side, effectName, '[silent]');
+						} else {
+							delete side.sideConditions[id];
+						}
+					}
+					success = true;
+				}
+			} else {
+				const sourceSide = source.side;
+				const targetSide = source.side.foe;
+				for (const id of sideConditions) {
+					if (sourceSide.sideConditions[id] && targetSide.sideConditions[id]) {
+						[sourceSide.sideConditions[id], targetSide.sideConditions[id]] = [
+							targetSide.sideConditions[id], sourceSide.sideConditions[id],
+						];
+					} else if (sourceSide.sideConditions[id] && !targetSide.sideConditions[id]) {
+						targetSide.sideConditions[id] = sourceSide.sideConditions[id];
+						delete sourceSide.sideConditions[id];
+					} else if (targetSide.sideConditions[id] && !sourceSide.sideConditions[id]) {
+						sourceSide.sideConditions[id] = targetSide.sideConditions[id];
+						delete targetSide.sideConditions[id];
+					} else {
+						continue;
+					}
+					success = true;
+				}
+				this.add('-swapsideconditions');
+			}
+			if (!success) return false;
+			this.add('-activate', source, 'move: Court Change');
+		},
 		isNonstandard: "CAP",
 	},
 	decorate: {
@@ -6039,7 +6039,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
-	
+
 	eternabeam: {
 		inherit: true,
 		isNonstandard: "CAP",

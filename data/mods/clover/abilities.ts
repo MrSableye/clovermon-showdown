@@ -268,51 +268,51 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	forecast: {
 		inherit: true,
 		onUpdate(pokemon) {
-      if (pokemon.transformed) return;
-      if (pokemon.baseSpecies.baseSpecies === 'Castform') {
-        let forme = null;
-        switch (pokemon.effectiveWeather()) {
-        case 'sunnyday':
-        case 'desolateland':
-          if (pokemon.species.id !== 'castformsunny') forme = 'Castform-Sunny';
-          break;
-        case 'raindance':
-        case 'primordialsea':
-          if (pokemon.species.id !== 'castformrainy') forme = 'Castform-Rainy';
-          break;
-        case 'hail':
-          if (pokemon.species.id !== 'castformsnowy') forme = 'Castform-Snowy';
-          break;
-        default:
-          if (pokemon.species.id !== 'castform') forme = 'Castform';
-          break;
-        }
-        if (pokemon.isActive && forme) {
-          pokemon.formeChange(forme, this.effect, false, '[msg]');
-        }
-      } else if (pokemon.baseSpecies.baseSpecies === 'Acufront') {
-        let forme = null;
-        switch (pokemon.effectiveWeather()) {
-        case 'sunnyday':
-        case 'desolateland':
-          if (pokemon.species.id !== 'acufrontf') forme = 'Acufront-F';
-          break;
-        case 'raindance':
-        case 'primordialsea':
-          if (pokemon.species.id !== 'acufrontw') forme = 'Acufront-W';
-          break;
-        case 'hail':
-          if (pokemon.species.id !== 'acufronti') forme = 'Acufront-I';
-          break;
-        default:
-          if (pokemon.species.id !== 'acufront') forme = 'Acufront';
-          break;
-        }
-        if (pokemon.isActive && forme) {
-          pokemon.formeChange(forme, this.effect, false, '[msg]');
-        }
-      }
-    },
+			if (pokemon.transformed) return;
+			if (pokemon.baseSpecies.baseSpecies === 'Castform') {
+				let forme = null;
+				switch (pokemon.effectiveWeather()) {
+				case 'sunnyday':
+				case 'desolateland':
+					if (pokemon.species.id !== 'castformsunny') forme = 'Castform-Sunny';
+					break;
+				case 'raindance':
+				case 'primordialsea':
+					if (pokemon.species.id !== 'castformrainy') forme = 'Castform-Rainy';
+					break;
+				case 'hail':
+					if (pokemon.species.id !== 'castformsnowy') forme = 'Castform-Snowy';
+					break;
+				default:
+					if (pokemon.species.id !== 'castform') forme = 'Castform';
+					break;
+				}
+				if (pokemon.isActive && forme) {
+					pokemon.formeChange(forme, this.effect, false, '[msg]');
+				}
+			} else if (pokemon.baseSpecies.baseSpecies === 'Acufront') {
+				let forme = null;
+				switch (pokemon.effectiveWeather()) {
+				case 'sunnyday':
+				case 'desolateland':
+					if (pokemon.species.id !== 'acufrontf') forme = 'Acufront-F';
+					break;
+				case 'raindance':
+				case 'primordialsea':
+					if (pokemon.species.id !== 'acufrontw') forme = 'Acufront-W';
+					break;
+				case 'hail':
+					if (pokemon.species.id !== 'acufronti') forme = 'Acufront-I';
+					break;
+				default:
+					if (pokemon.species.id !== 'acufront') forme = 'Acufront';
+					break;
+				}
+				if (pokemon.isActive && forme) {
+					pokemon.formeChange(forme, this.effect, false, '[msg]');
+				}
+			}
+		},
 		isNonstandard: null,
 	},
 	forewarn: {
@@ -520,13 +520,13 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	liquidooze: {
 		inherit: true,
 		onSourceTryHeal(damage, target, source, effect) {
-      this.debug("Heal is occurring: " + target + " <- " + source + " :: " + effect.id);
-      const canOoze = ['drain', 'leechseed', 'strengthsap', 'livewire'];
-      if (canOoze.includes(effect.id)) {
-        this.damage(damage);
-        return 0;
-      }
-    },
+			this.debug("Heal is occurring: " + target + " <- " + source + " :: " + effect.id);
+			const canOoze = ['drain', 'leechseed', 'strengthsap', 'livewire'];
+			if (canOoze.includes(effect.id)) {
+				this.damage(damage);
+				return 0;
+			}
+		},
 		isNonstandard: null,
 	},
 	liquidvoice: {
@@ -1149,18 +1149,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	wonderguard: {
 		inherit: true,
 		onTryHit(target, source, move) {
-      if (target === source || move.category === 'Status' || move.id === 'struggle') return;
-      if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
-      this.debug('Wonder Guard immunity: ' + move.id);
-      if (target.runEffectiveness(move) <= 0) {
-        if (move.smartTarget) {
-          move.smartTarget = false;
-        } else {
-          this.add('-immune', target, '[from] ability: Wonder Guard');
-        }
-        return null;
-      }
-    },
+			if (target === source || move.category === 'Status' || move.id === 'struggle') return;
+			if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
+			this.debug('Wonder Guard immunity: ' + move.id);
+			if (target.runEffectiveness(move) <= 0) {
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-immune', target, '[from] ability: Wonder Guard');
+				}
+				return null;
+			}
+		},
 		isNonstandard: null,
 	},
 	wonderskin: {
