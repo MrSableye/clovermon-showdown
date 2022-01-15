@@ -2846,7 +2846,9 @@ export class Battle {
 		}
 		if (!didSomething) return;
 		this.inputLog.push(`>player ${slot} ` + JSON.stringify(options));
-		this.add('player', side.id, side.name, side.avatar, options.rating || '');
+		/* Clover Modification Start */
+		this.add('player', side.id, side.name, side.avatar, options.rating || '', JSON.stringify(options.misc || {}));
+		/* Clover Modification End */
 
 		// Start the battle if it's ready to start
 		if (this.sides.every(playerSide => !!playerSide) && !this.started) this.start();

@@ -398,6 +398,9 @@ interface PlayerOptions {
 	rating?: number;
 	team?: PokemonSet[] | string | null;
 	seed?: PRNGSeed;
+	/* Clover Modification Start */
+	misc?: AnyObject;
+	/* Clover Modification End */
 }
 
 interface TextObject {

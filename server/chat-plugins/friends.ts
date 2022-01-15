@@ -155,8 +155,13 @@ export const Friends = new class {
 	}
 	checkCanUse(context: Chat.CommandContext | Chat.PageContext) {
 		const user = context.user;
-		if (!user.autoconfirmed) {
-			throw new Chat.ErrorMessage(context.tr`You must be autoconfirmed to use the friends feature.`);
+		/* Clover Modification Start */
+		if (user.locked || user.namelocked || user.semilocked || user.permalocked) {
+			throw new Chat.ErrorMessage(`You are locked, and so cannot use the friends feature.`);
+		}
+		if (!user.registered) {
+			throw new Chat.ErrorMessage(context.tr`You must be registered to use the friends feature.`);
+		/* Clover Modification Start */
 		}
 		if (user.locked || user.namelocked || user.semilocked || user.permalocked) {
 			throw new Chat.ErrorMessage(`You are locked, and so cannot use the friends feature.`);

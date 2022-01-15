@@ -729,6 +729,12 @@ export const commands: Chat.ChatCommands = {
 					if (move.flags['recharge']) details["&#10003; Has recharge turn"] = "";
 					if (move.flags['gravity'] && dex.gen >= 4) details["&#10007; Suppressed by Gravity"] = "";
 					if (move.flags['dance'] && dex.gen >= 7) details["&#10003; Dance move"] = "";
+					/* Clover Modification Start */
+					if (move.flags['blade']) details["&#10003; Blade move"] = "";
+					if (move.flags['kick']) details["&#10003; Kick move"] = "";
+					if (move.flags['bone']) details["&#10003; Bone move"] = "";
+					if (move.flags['hammer']) details["&#10003; Hammer move"] = "";
+					/* Clover Modification Start */
 
 					if (dex.gen >= 7) {
 						if (move.gen >= 8 && move.isMax) {
@@ -2663,8 +2669,10 @@ export const commands: Chat.ChatCommands = {
 		if (!target) target = user.id;
 		let rawResult;
 		try {
-			rawResult = await Net(`https://${Config.routes.root}/users/${target}.json`).get();
-		} catch (e: any) {
+			/* Clover Modification Start */
+			rawResult = await Net(`https://pokemonshowdown.com/users/${target}.json`).get();
+			/* Clover Modification End */
+		} catch (e) {
 			if (e.message.includes('Not found')) throw new Chat.ErrorMessage(`User '${target}' is unregistered.`);
 			throw new Chat.ErrorMessage(e.message);
 		}

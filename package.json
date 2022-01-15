@@ -7,6 +7,8 @@
     "@swc/core": "^1.2.61",
     "preact": "^10.5.15",
     "preact-render-to-string": "^5.1.19",
+    "@types/better-sqlite3": "^5.4.0",
+    "axios": "^0.21.1",
     "probe-image-size": "^5.0.0",
     "sockjs": "^0.3.21",
     "ts-node": "^10.0.0"
@@ -78,6 +80,7 @@
     "@types/node-static": "^0.7.7",
     "@types/nodemailer": "^6.4.4",
     "@types/pg": "^8.6.1",
+    "@types/probe-image-size": "^7.0.1",
     "@types/sockjs": "^0.3.33",
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",

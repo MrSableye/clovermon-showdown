@@ -1308,7 +1308,9 @@ export class Pokemon {
 				this.battle.add('-formechange', this, this.illusion ? this.illusion.species.name : species.name, message);
 			}
 		}
-		if (isPermanent && !['disguise', 'iceface'].includes(source.id)) {
+		/* Clover Modification Start */
+		if (isPermanent && !['disguise', 'iceface', 'niceface'].includes(source.id)) {
+		/* Clover Modification End */
 			if (this.illusion) {
 				this.ability = ''; // Don't allow Illusion to wear off
 			}

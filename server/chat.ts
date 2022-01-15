@@ -27,6 +27,9 @@ import type {RoomPermission, GlobalPermission} from './user-groups';
 import type {Punishment} from './punishments';
 import type {PartialModlogEntry} from './modlog';
 import {FriendsDatabase, PM} from './friends';
+/* Clover Modification Start */
+import {BadgesDatabase} from './badges';
+/* Clover Modification End */
 import {SQL, Repl, FS, Utils} from '../lib';
 import {Dex} from '../sim';
 import {resolve} from 'path';
@@ -1498,6 +1501,9 @@ export const Chat = new class {
 	 */
 	readonly MAX_TIMEOUT_DURATION = 2147483647;
 	readonly Friends = new FriendsDatabase();
+	/* Clover Modification Start */
+	readonly Badges = new BadgesDatabase();
+	/* Clover Modification End */
 	readonly PM = PM;
 
 	readonly multiLinePattern = new PatternTester();

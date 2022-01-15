@@ -851,21 +851,30 @@ export class RoomBattle extends RoomGames.RoomGame {
 		const p2id = toID(p2name);
 		Chat.runHandlers('BattleEnd', this, winnerid, [p1id, p2id, this.p3?.id, this.p4?.id].filter(Boolean));
 		if (this.room.rated) {
+			/* Clover Modification Start */
 			this.room.rated = 0;
-
-			if (winnerid === p1id) {
-				p1score = 1;
-			} else if (winnerid === p2id) {
-				p1score = 0;
-			}
 
 			winner = Users.get(winnerid);
 			if (winner && !winner.registered) {
 				this.room.sendUser(winner, '|askreg|' + winner.id);
 			}
-			const [score, p1rating, p2rating] = await Ladders(this.ladder).updateRating(p1name, p2name, p1score, this.room);
-			void this.logBattle(score, p1rating, p2rating);
-			Chat.runHandlers('BattleRanked', this, winnerid, [p1rating, p2rating], [p1id, p2id]);
+
+			const players = [this.p1, this.p2, this.p3, this.p4].filter((player) => (player !== null) && (player !== undefined));
+			const playersWithScore = players.map((player) => {
+				const playerId = player.id;
+
+				if (playerId === winnerid) {
+					return [playerId, 1] as [string, number];
+				}
+
+				return [playerId, 0] as [string, number];
+			});
+			const playerRatings = await Ladders(this.ladder).updateMultiRating(playersWithScore, this.room);
+
+			void this.logBattle(playersWithScore[0][1], playerRatings);
+
+			Chat.runHandlers('BattleRanked', this, winnerid, playerRatings.map((playerRating) => playerRating[1] || 1000), players.map((player) => player.id));
+			/* Clover Modification End */
 		} else if (Config.logchallenges) {
 			if (winnerid === p1id) {
 				p1score = 1;
@@ -1007,7 +1016,9 @@ export class RoomBattle extends RoomGames.RoomGame {
 		if (player && !player.active) {
 			player.active = true;
 			this.timer.checkActivity();
-			this.room.add(`|player|${player.slot}|${user.name}|${user.avatar}`);
+			/* Clover Modification Start */
+			this.room.add(`|player|${player.slot}|${user.name}|${user.avatar}||${JSON.stringify({badges: user.badges})}`);
+			/* Clover Modification End */
 		}
 	}
 	onLeave(user: User, oldUserid?: ID) {
@@ -1075,6 +1086,9 @@ export class RoomBattle extends RoomGames.RoomGame {
 				avatar: user ? '' + user.avatar : '',
 				team: playerOpts.team || undefined,
 				rating: Math.round(playerOpts.rating || 0),
+				/* Clover Modification Start */
+				misc: {badges: user?.badges},
+				/* Clover Modification End */
 			};
 			void this.stream.write(`>player ${slot} ${JSON.stringify(options)}`);
 			player.hasTeam = true;
@@ -1163,11 +1177,15 @@ export class RoomBattle extends RoomGames.RoomGame {
 				name: player.name,
 				avatar: user.avatar,
 				team: playerOpts?.team,
+				/* Clover Modification Start */
+				misc: {badges: user.badges},
+				/* Clover Modification End */
 			};
 			void this.stream.write(`>player ${slot} ` + JSON.stringify(options));
 			if (playerOpts) player.hasTeam = true;
-
-			this.room.add(`|player|${slot}|${player.name}|${user.avatar}`);
+			/* Clover Modification Start */
+			this.room.add(`|player|${slot}|${player.name}|${user.avatar}||${JSON.stringify(options.misc)}`);
+			/* Clover Modification End */
 		} else {
 			const options = {
 				name: '',

@@ -68,6 +68,9 @@ export class LadderStore {
 				const line = dataLine.trim();
 				if (!line) continue;
 				const row = line.split('\t');
+				/* Clover Modification Start */
+				if (isNaN(Number(row[2]))) continue;
+				/* Clover Modification End */
 				ladder.push([toID(row[1]), Number(row[0]), row[1], Number(row[2]), Number(row[3]), Number(row[4]), row[5]]);
 			}
 			// console.log('Ladders(' + this.formatid + ') loaded tsv: ' + JSON.stringify(this.ladder));
@@ -282,6 +285,83 @@ export class LadderStore {
 		return [p1score, p1newElo, p2newElo];
 	}
 
+	/* Clover Modification Start */
+	/**
+	 * Update the Elo rating for more than 2 players after a battle, and display
+	 * the results in the passed room.
+	 */
+	 async updateMultiRating(playerResults: [string, number][], room: AnyObject): Promise<[string, number | null][]> {
+		if (Ladders.disabled) {
+			room.addRaw(`Ratings not updated. The ladders are currently disabled.`).update();
+			return playerResults.map((playerResult) => [playerResult[0], null]);
+		}
+
+		const formatid = this.formatid;
+		const ladder = await this.getLadder();
+
+		try {
+			const updatedResults = this.calculateMultiElo(playerResults.map((playerResult) => {
+				const playerIndex = this.indexOfUser(playerResult[0], true);
+				const playerElo = ladder[playerIndex][1];
+
+				return [...playerResult, playerElo];
+			}));
+
+			return updatedResults.map(([playerId, playerScore, playerOldElo, playerNewElo]) => {
+				// Update Ladder
+				const playerIndex = this.indexOfUser(playerId, true);
+				const row = ladder[playerIndex];
+				row[1] = playerNewElo;
+				if (playerScore > 0.6) {
+					row[3]++; // Win
+				} else if (playerScore < 0.4) {
+					row[4]++; // Loss
+				} else {
+					row[5]++; // Tie
+				}
+				row[6] = '' + new Date();
+
+				// Rearrange Ladder
+				let newIndex = playerIndex;
+				while (newIndex > 0 && ladder[newIndex - 1][1] <= playerNewElo) newIndex--;
+				while (newIndex === playerIndex || (ladder[newIndex] && ladder[newIndex][1] > playerNewElo)) newIndex++;
+				if (newIndex !== playerIndex && newIndex !== playerIndex + 1) {
+					const newRow = ladder.splice(playerIndex, 1)[0];
+					if (newIndex > playerIndex) newIndex--;
+					ladder.splice(newIndex, 0, newRow);
+				}
+
+				// Update MMR Cache
+				const user = Users.getExact(playerId);
+				if (user) user.mmrCache[formatid] = +playerNewElo;
+
+				// Send Messages to Room
+				if (!room.battle) {
+					Monitor.warn(`room expired before ladder update was received`);
+					return [playerId, null];
+				} else {
+					let reasons = '' + (Math.round(playerNewElo) - Math.round(playerOldElo)) + ' for ' + (playerScore > 0.9 ? 'winning' : (playerScore < 0.1 ? 'losing' : 'tying'));
+					if (!reasons.startsWith('-')) reasons = '+' + reasons;
+					room.addRaw(
+						Utils.html`${playerId}'s rating: ${Math.round(playerOldElo)} &rarr; <strong>${Math.round(playerNewElo)}</strong><br />(${reasons})`
+					);
+
+					room.update();
+				}
+
+				return [playerId, playerNewElo];
+			});
+		} catch (e) {
+			if (!room.battle) return playerResults.map((playerResult) => [playerResult[0], null]);
+			room.addRaw(`There was an error calculating rating changes:`);
+			room.add(e.stack);
+			room.update();
+		}
+
+		return playerResults.map((playerResult) => [playerResult[0], null]);
+	}
+	/* Clover Modification End */
+
 	/**
 	 * Returns a promise for a <tr> with all ratings for the current format.
 	 */
@@ -328,6 +408,43 @@ export class LadderStore {
 
 		return Math.max(newElo, 1000);
 	}
+
+	/* Clover Modification Start */
+	/**
+	 * Calculates multi Elo based on a match result
+	 */
+	calculateMultiElo(playerResults: [string, number, number][]): [string, number, number, number][] {
+		return playerResults.map(([playerId, playerScore, playerCurrentElo]) => {
+			let eloChange = 0;
+
+			for (const [opponentId, opponentScore, opponentCurrentElo] of playerResults) {
+				if (playerId === opponentId) continue;
+
+				let k = 50;
+				if (playerCurrentElo < 1200) {
+					if (playerScore < 0.5) {
+						k = 10 + (playerCurrentElo - 1000) * 40 / 200;
+					} else if (playerScore > 0.5) {
+						k = 90 - (playerCurrentElo - 1000) * 40 / 200;
+					}
+				} else if (playerCurrentElo > 1350 && playerCurrentElo <= 1600) {
+					k = 40;
+				} else {
+					k = 32;
+				}
+
+				let relativeScore = 0.5;
+				if (playerScore > opponentScore) relativeScore = 1;
+				if (playerScore < opponentScore) relativeScore = 0;
+
+				const e = 1 / (1 + Math.pow(10, (opponentCurrentElo - playerCurrentElo) / 400));
+				eloChange += k * (relativeScore - e);
+			}
+
+			return [playerId, playerScore, playerCurrentElo, Math.max(1000, playerCurrentElo + eloChange)];
+		});
+	}
+	/* Clover Modification End */
 
 	/**
 	 * Returns a Promise for an array of strings of <tr>s for ladder ratings of the user

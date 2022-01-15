@@ -71,6 +71,9 @@ export const crqHandlers: {[k: string]: Chat.CRQHandler} = {
 			status: targetUser.getStatus() || undefined,
 			rooms: roomList,
 			friended: user.friends?.has(targetUser.id) || undefined,
+			/* Clover Modification Start */
+			badges: targetUser.badges,
+			/* Clover Modification End */
 		};
 	},
 	roomlist(target, user, trustable) {

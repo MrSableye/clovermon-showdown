@@ -924,7 +924,9 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	lightball: {
 		name: "Light Ball",
-		desc: "If held by a Pikachu, its Attack and Sp. Atk are doubled.",
+		/* Clover Modification Start */
+    desc: "If held by a Pikachu or Pikotton, its Sp. Atk is doubled. If held by a Pikachu, its Attack is also doubled.",
+		/* Clover Modification End */
 		gen4: {
 			desc: "If held by a Pikachu, its attacks have their power doubled.",
 		},
@@ -2340,4 +2342,184 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Vile Vial",
 		desc: "If held by a Venomicon, its Poison- and Flying-type attacks have 1.2x power.",
 	},
+	/* Clover Modification Start */
+	/* Clovermons */
+	suedeshoes: {
+		name: "Suede Shoes",
+		desc: "If held by a Pretzely, its Speed is doubled.",
+	},
+	bigfaggot: {
+		name: "Big Faggot",
+		desc: "If held by a Flameboyan, its Special Attack is doubled.",
+	},
+	baconstrip: {
+		name: "Bacon Strip",
+		desc: "If held by a Urswine, its Special Defense is doubled.",
+	},
+	katana: {
+		name: "Katana",
+		desc: "Holder's Steel-type attacks have 1.2x power.",
+	},
+	cutebow: {
+		name: "Cute Bow",
+		desc: "Holder's Fairy-type attacks have 1.2x power.",
+	},
+	bible: {
+		name: "Bible",
+		desc: "If held by a Caroline, its critical hit ratio is raised by 2 stages.",
+	},
+	taco: {
+		name: "Taco",
+		desc: "Restores 50 HP when at 1/2 max HP or less. Single use.",
+	},
+	thiccbone: {
+		name: "Thicc Bone",
+		desc: "If held by a Masdawg or a Pasdawg, its Attack is doubled.",
+	},
+	manifesto: {
+		name: "Manifesto",
+		desc: "If held by a Walruskie, its Steel- and Ice-type attacks have 1.5x power.",
+	},
+	piratesjug: {
+		name: "Pirate's Jug",
+		desc: "If held by an Octai, it doubles the power of Lactose Shot.",
+	},
+	blobbosinite: {
+		name: "Blobbosinite",
+		desc: "On switch-in, causes the user to win the game. Single use.",
+	},
+	/* Clover CAP */
+	moluganion: {
+		name: "Moluganion",
+		desc: "If held by Noxilium, it is immune to status effects and confusion.",
+	},
+	skub: {
+		name: "Skub",
+		desc: "Skuba-Pro 1.5x Def and SpD; Skuba-Anti 1.5x Atk and SpA.",
+	},
+	/* Clover CAP Mega Stones */
+	ooganite: {
+		name: "Ooganite",
+		desc: "If held by an Oogabuga, this item allows it to Mega Evolve in battle.",
+	},
+	wifeminite: {
+		name: "Wifeminite",
+		desc: "If held by an Wifemin, this item allows it to Mega Evolve in battle.",
+	},
+	bitekinite: {
+		name: "Bitekinite",
+		desc: "If held by an Biteki, this item allows it to Mega Evolve in battle.",
+	},
+	fonduppite: {
+		name: "Fonduppite",
+		desc: "If held by an Fondupple, this item allows it to Mega Evolve in battle.",
+	},
+	ebolabite: {
+		name: "Ebolabite",
+		desc: "If held by an Ebolable, this item allows it to Mega Evolve in battle.",
+	},
+	somboludite: {
+		name: "Somboludite",
+		desc: "If held by an Somboludo, this item allows it to Mega Evolve in battle.",
+	},
+	floriousite: {
+		name: "Floriousite",
+		desc: "If held by an Florious, this item allows it to Mega Evolve in battle.",
+	},
+	illumatrixite: {
+		name: "Illumatrixite",
+		desc: "If held by an Illumatrix, this item allows it to Mega Evolve in battle.",
+	},
+	grimdakite: {
+		name: "Grimdakite",
+		desc: "If held by an Grimdak, this item allows it to Mega Evolve in battle.",
+	},
+	hazmatite: {
+		name: "Hazmatite",
+		desc: "If held by an Hazmate, this item allows it to Mega Evolve in battle.",
+	},
+	krokizonite: {
+		name: "Krokizonite",
+		desc: "If held by an Krokizon, this item allows it to Mega Evolve in battle.",
+	},
+	spookzillite: {
+		name: "Spookzillite",
+		desc: "If held by an Spookzilla, this item allows it to Mega Evolve in battle.",
+	},
+	lizakbarite: {
+		name: "Lizakbarite",
+		desc: "If held by an Lizakbar, this item allows it to Mega Evolve in battle.",
+	},
+	rectreemite: {
+		name: "Rectreemite",
+		desc: "If held by an Rectreem, this item allows it to Mega Evolve in battle.",
+	},
+	unjoyite: {
+		name: "Unjoyite",
+		desc: "If held by an Unjoy, this item allows it to Mega Evolve in battle.",
+	},
+	emplyinite: {
+		name: "Emplyinite",
+		desc: "If held by an Emplyin, this item allows it to Mega Evolve in battle.",
+	},
+	upbeddite: {
+		name: "Upbeddite",
+		desc: "If held by an Upbeddit, this item allows it to Mega Evolve in battle.",
+	},
+	smelloxite: {
+		name: "Smelloxite",
+		desc: "If held by an Smellox, this item allows it to Mega Evolve in battle.",
+	},
+	pigusonite: {
+		name: "Pigusonite",
+		desc: "If held by an Piguson, this item allows it to Mega Evolve in battle.",
+	},
+	hohohomite: {
+		name: "Hohohomite",
+		desc: "If held by an Hohohoming, this item allows it to Mega Evolve in battle.",
+	},
+	faptite: {
+		name: "Faptite",
+		desc: "If held by an Faptime, this item allows it to Mega Evolve in battle.",
+	},
+	jerklite: {
+		name: "Jerklite",
+		desc: "If held by an Jerkle, this item allows it to Mega Evolve in battle.",
+	},
+	dowsterite: {
+		name: "Dowsterite",
+		desc: "If held by an Dowster, this item allows it to Mega Evolve in battle.",
+	},
+	reptrillite: {
+		name: "Reptrillite",
+		desc: "If held by an Reptrill, this item allows it to Mega Evolve in battle.",
+	},
+	kuklanite: {
+		name: "kuklanite",
+		desc: "If held by an Kuklan, this item allows it to Mega Evolve in battle.",
+	},
+	ricosuavite: {
+		name: "Ricosuavite",
+		desc: "If held by an Ricosuave, this item allows it to Mega Evolve in battle.",
+	},
+	vandashite: {
+		name: "Vandashite",
+		desc: "If held by an Vandash, this item allows it to Mega Evolve in battle.",
+	},
+	chasumite: {
+		name: "Chasumite",
+		desc: "If held by an Chasumo, this item allows it to Mega Evolve in battle.",
+	},
+	goryannusite: {
+		name: "Goryannusite",
+		desc: "If held by an Goryannus, this item allows it to Mega Evolve in battle.",
+	},
+	ultrablobbosiumz: {
+		name: "Ultrablobbosium Z",
+		desc: "Blobbos: Ultra Burst, then Z-Move w/ Blobby Bop.",
+
+		transform: "  Bright light is about to burst out of [POKEMON]!",
+		activate: "[POKEMON] regained its true power through Ultra Burst!",
+	},
+	/* Clover Modification End */
 };

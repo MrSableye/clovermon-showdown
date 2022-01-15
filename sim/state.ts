@@ -108,6 +108,9 @@ export const State = new class {
 				name: side.name,
 				avatar: side.avatar,
 				team: team.map((p: string) => side.pokemon[Number(p) - 1].set),
+				/* Clover Modification Start */
+				misc: side.misc,
+				/* Clover Modification End */
 			};
 		}
 		// We create the Battle, allowing it to instantiate the Field/Side/Pokemon

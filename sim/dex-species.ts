@@ -23,6 +23,16 @@ export interface SpeciesData extends Partial<Species> {
 
 export type ModdedSpeciesData = SpeciesData | Partial<Omit<SpeciesData, 'name'>> & {inherit: true};
 
+/* Clover Modification Start */
+interface RandomBattleSet {
+	lockedMoves?: readonly string[];
+	abilities?: readonly string[];
+	items?: readonly string[];
+	moves?: readonly string[];
+	level?: number;
+}
+/* Clover Modification End */
+
 export interface SpeciesFormatsData {
 	comboMoves?: readonly string[];
 	doublesTier?: TierTypes.Doubles | TierTypes.Other;
@@ -30,10 +40,16 @@ export interface SpeciesFormatsData {
 	exclusiveMoves?: readonly string[];
 	gmaxUnreleased?: boolean;
 	isNonstandard?: Nonstandard | null;
+	/* Clover Modification Start */
+	randomBattleNicknames?: readonly string[];
+	/* Clover Modification End */
 	randomBattleMoves?: readonly string[];
 	randomBattleLevel?: number;
 	randomDoubleBattleMoves?: readonly string[];
 	randomDoubleBattleLevel?: number;
+	/* Clover Modification Start */
+	randomBattleSets?: RandomBattleSet[];
+	/* Clover Modification End */
 	randomBattleNoDynamaxMoves?: readonly string[];
 	tier?: TierTypes.Singles | TierTypes.Other;
 }
@@ -219,10 +235,16 @@ export class Species extends BasicEffect implements Readonly<BasicEffect & Speci
 	 * Doubles Tier. The Pokemon's location in the Smogon doubles tier system.
 	 */
 	readonly doublesTier: TierTypes.Doubles | TierTypes.Other;
+	/* Clover Modification Start */
+	declare readonly randomBattleNicknames?: string[];
+	/* Clover Modification End */
 	declare readonly randomBattleMoves?: readonly ID[];
 	declare readonly randomBattleLevel?: number;
 	declare readonly randomDoubleBattleMoves?: readonly ID[];
 	declare readonly randomDoubleBattleLevel?: number;
+	/* Clover Modification Start */
+	declare readonly randomBattleSets?: RandomBattleSet[];
+	/* Clover Modification End */
 	declare readonly randomBattleNoDynamaxMoves?: readonly ID[];
 	declare readonly exclusiveMoves?: readonly ID[];
 	declare readonly comboMoves?: readonly ID[];

@@ -398,8 +398,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	flowergift: {
 		name: "Flower Gift",
-		desc: "If this Pokemon is a Cherrim and Sunny Day is active, it changes to Sunshine Form and the Attack and Special Defense of it and its allies are multiplied by 1.5. If this Pokemon is a Cherrim and it is holding Utility Umbrella, it remains in its regular form and the Attack and Special Defense stats of it and its allies are not boosted. If this Pokemon is a Cherrim in its Sunshine form and is given Utility Umbrella, it will immediately switch back to its regular form. If this Pokemon is a Cherrim holding Utility Umbrella and its item is removed while Sunny Day is active, it will transform into its Sunshine Form. If an ally is holding Utility Umbrella while Cherrim is in its Sunshine Form, they will not receive the Attack and Special Defense boosts.",
-		shortDesc: "If user is Cherrim and Sunny Day is active, it and allies' Attack and Sp. Def are 1.5x.",
+		/* Clover Modification Start */
+    desc: "If Sunny Day is active, the Attack and Special Defense of it and its allies are multiplied by 1.5. If this Pokemon is holding Utility Umbrella, the Attack and Special Defense stats of it and its allies are not boosted. If an ally is holding Utility Umbrella, they will not receive the Attack and Special Defense boosts. If this Pokemon is a Cherim and is not holding Utility Umrella, it transforms into its Sunshine Form",
+    shortDesc: "If Sunny Day is active, it and allies' Attack and Sp. Def are 1.5x and if it is a Cherrim, it transforms into its Sunshine Form.",
+		/* Clover Modification End */
 		gen7: {
 			desc: "If this Pokemon is a Cherrim and Sunny Day is active, it changes to Sunshine Form and the Attack and Special Defense of it and its allies are multiplied by 1.5.",
 		},
@@ -1736,4 +1738,293 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		activate: "  [POKEMON] extends [MOVE] by 2 turns!",
 	},
+	/* Clover Modification Start */
+	/* Clovermons */
+	showerpower: {
+		name: "Shower Power",
+		desc: "If Rain Dance is active, this Pokemon's Special Attack is multiplied by 1.5 and it loses 1/8 of its maximum HP, rounded down, at the end of each turn. If this Pokemon is holding Utility Umbrella, its Special Attack remains the same and it does not lose any HP.",
+		shortDesc: "If Rain Dance is active, this Pokemon's Sp. Atk is 1.5x; loses 1/8 max HP per turn.",
+	},
+	concert: {
+		name: "Concert",
+		shortDesc: "All Pokemon on the field lose 1/16 HP per turn if they're not immune to sound effects.",
+		start: "  [POKEMON] is getting ready to throw a concert!",
+	},
+	waitforit: {
+		name: "Wait For It",
+		shortDesc: "Boosts all stats after 5 turns.",
+		start: "  [POKEMON] is asking you kindly to wait!",
+		end: "  [POKEMON]'s announcement came true!",
+	},
+	gradient: {
+		name: "Gradient",
+		shortDesc: "Gains an extra type in battle based on the foe's color.",
+		desc: "Gains an extra type in battle based on the foe's color. Red = Fire, Blue = Water, Yellow = Electric, Green = Grass, Black = Dark, Brown = Ground, Purple = Poison, Gray = Steel, White = Flying, Pink = Fairy.",
+	},
+	anyability: {
+		name: "Any Ability",
+		shortDesc: "It's any ability. Becomes a random ability available in Clover on switch-in.",
+		changeAbility: "  [POKEMON] acquired [ABILITY] :^)",
+	},
+	adminabuse: {
+		name: "Admin Abuse",
+		shortDesc: "This Pokemon's hammer-based attacks have 1.2x power and have their negative effects removed.",
+	},
+	anability: {
+		name: "An Ability",
+		shortDesc: "No competitive use :^)",
+	},
+	bigguy: {
+		name: "Big Guy",
+		shortDesc: "Summons Gravity upon switch-in.",
+	},
+	blademaster: {
+		name: "Blademaster",
+		shortDesc: "This Pokemon's sword- or cutting-based attacks have 1.2x power and have +1 crit ratio.",
+	},
+	boombox: {
+		name: "Boombox",
+		shortDesc: "This Pokemon's sound-based attacks have their power multiplied by 1.2.",
+	},
+	bonezone: {
+		name: "Bone Zone",
+		shortDesc: "This Pokemon's Bone-based moves ignore immunities.",
+		start: "  [POKEMON] has entered the Bone Zone!",
+	},
+	degenerate: {
+		name: "Degenerate",
+		shortDesc: "This Pokemon's Normal-type moves become Dark type and have 1.2x power.",
+		desc: "This Pokemon's Normal-type moves become Dark-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+	},
+	degradation: {
+		name: "Degradation",
+		shortDesc: "This Pokemon's Dark-type attacks are super-effective against Normal-types.",
+	},
+	flareheal: {
+		name: "Flare Heal",
+		shortDesc: "This Pokemon is healed by 1/8 of its max HP each turn when burned; no HP loss or reduction to the power of its physical moves.",
+		desc: "If this Pokemon is burned, it restores 1/8 of its maximum HP, rounded down, at the end of each turn instead of losing HP; burn's physical damage halving is ignored.",
+	},
+	ghostnote: {
+		name: "Ghost Note",
+		shortDesc: "This Pokemon's sound-based moves become Ghost type.",
+		desc: "This Pokemon's sound-based moves become Ghost-type moves. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+	},
+	hydrophile: {
+		name: "Hydrophile",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack.",
+	},
+	inversion: {
+		name: "Inverse Room",
+		shortDesc: "Summons Inverse Room upon switch-in.",
+	},
+	jewelry: {
+		name: "Jewelry",
+		shortDesc: "If this Pokemon has no item, it finds a gem matching the type of one of its moves at the end of this turn.",
+		desc: "If this Pokemon has no item, it finds a gem matching the type of one of its moves, prioritizing attacking moves, at the end of this turn.",
+	},
+	madman: {
+		name: "Madman",
+		shortDesc: "This Pokemon's contact moves have a 30% chance of confusing.",
+	},
+	moreroom: {
+		name: "More Room",
+		shortDesc: "When used, Room effects last 2 more turns.",
+		desc: "The duration of Inverse Room, Magic Room, Trick Room, and Wonder Room is increased by 2 turns if the effect is started by this Pokemon.",
+	},
+	pollution: {
+		name: "Pollution",
+		shortDesc: "This Pokemon's Poison-type attacks are super-effective against Water-types.",
+	},
+	pozzed: {
+		name: "Pozzed",
+		shortDesc: "This Pokemon is immune to Poison-type moves and restores 1/4 of its maximum HP, rounded down, when hit by a Poison-type move.",
+		desc: "This Pokemon heals 1/4 of its max HP when hit by Poison moves; Poison immunity. Toxic Orb, Toxic Spikes, etc. and non-Poison-type moves can still Poison this Pokemon.",
+	},
+	puppeteer: {
+		name: "Puppeteer",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Bug-type attack.",
+	},
+	striker: {
+		name: "Striker",
+		shortDesc: "This Pokemon's kick-based attacks have 1.2x power and always hit.",
+	},
+	suddenly: {
+		name: "Suddenly",
+		shortDesc: "This Pokemon's two-turn moves complete in one turn (except Sky Drop).",
+	},
+	woke: {
+		name: "Woke",
+		shortDesc: "Pokemon making contact with this Pokemon have their Ability changed to Woke.",
+		desc: "Pokemon making contact with this Pokemon have their Ability changed to Woke. Does not affect the Battle Bond, Comatose, Disguise, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, and Zen Mode Abilities.",
+	},
+	woodenguard: {
+		name: "Wooden Guard",
+		shortDesc: "This Pokemon recieves 1.5x damage from Fire moves, 0.75x from other moves.",
+	},
+	/* Clover CAP Abilities */
+	cakeveil: {
+		name: "Cake Veil",
+		desc: "At the end of every turn, this Pokemon restores 1/10 of its max HP.",
+	},
+	rusepower: {
+		name: "Ruse Power",
+		desc: "Poison and Dark moves have 1.5x power.",
+	},
+	omniscience: {
+		name: "Omniscience",
+		desc: "This Pokemon can hit Dark types with Psychic-type moves.",
+	},
+	oldschool: {
+		name: "Old School",
+		desc: "High crit ratio moves always crit.",
+	},
+	wholesome100: {
+		name: "Wholesome 100",
+		desc: "This Pokemon is immune to Dark-type moves.",
+	},
+	spookyaura: {
+		name: "Spooky Aura",
+		desc: "While this Pokemon is active, the power of Ghost-type moves used by active Pokemon is multiplied by 1.33.",
+		shortDesc: "While this Pokemon is active, a Ghost move used by any Pokemon has 1.33x power.",
+
+		start: "  [POKEMON] is radiating a spooky aura!",
+	},
+	tetanus: {
+		name: "Tetanus",
+		shortDesc: "A Pokemon making contact with this Pokemon will be Toxic poisoned.",
+	},
+	shavedice: {
+		name: "Shaved Ice",
+		desc: "The power of Fire, Steel, Rock and Fighting-type attacks against this Pokemon is halved.",
+		shortDesc: "Removes all of Ice-Type's weaknesses.",
+	},
+	temperamental: {
+		name: "Temperamental",
+		shortDesc: "If Disbeary, it changes between Nice and Ebil Mode at the end of each turn.",
+	},
+	hewillbedragon: {
+		name: "He Will Be Dragon",
+		desc: "This Pokemon's Normal-type moves become Dragon-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's Normal-type moves become Dragon type and have 1.2x power.",
+	},
+	blueblood: {
+		name: "Blue Blood",
+		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",
+	},
+	colonoscopy: {
+		name: "Colonoscopy",
+		shortDesc: "This Pokemon's draining moves have 1.5x power.",
+	},
+	swarming: {
+		name: "Swarming",
+		desc: "On switch-in, if this Pokemon is a Jermin that is level 20 or above and has more than 1/4 of its maximum HP left, it changes to Swarm Form. If it is in Swarm Form and its HP drops to 1/4 of its maximum HP or less, it changes to Solo Form at the end of the turn. If it is in Solo Form and its HP is greater than 1/4 its maximum HP at the end of the turn, it changes to Swarm Form.",
+		shortDesc: "If user is Jermin, changes to Swarm Form if it has > 1/4 max HP, else Solo Form.",
+
+		transform: "[POKEMON] formed a swarm!",
+		transformEnd: "[POKEMON] stopped swarming!",
+	},
+	overeager: {
+		name: "Overeager",
+		desc: "This Pokemon's damaging moves become multi-hit moves that hit thrice. Subsequent hits has its damage quartered. Does not affect multi-hit moves or moves that have multiple targets.",
+		shortDesc: "This Pokemon's moves hit thrice. Hits after the first have their damage quartered.",
+	},
+	stoneflesh: {
+		name: "Stoneflesh",
+		desc: "If this Pokemon is an Gargarramer, it changes to Awoken Forme before attempting to use an attacking move, and changes to Statue Forme before attempting to use Petrify.",
+		shortDesc: "If Gargarramer, changes Forme to Awoken before attacks and Statue before Petrify.",
+
+		transform: "Changed to Awoken Forme!",
+		transformEnd: "Changed to Statue Forme!",
+	},
+	sousaphone: {
+		name: "Sousaphone",
+		desc: "This Pokemon's sound-based moves become Steel-type moves. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's sound-based moves become Steel type.",
+	},
+	beamboost: {
+		name: "Beam Boost",
+		desc: "This Pokemon's Beam-based attacks have their power multiplied by 1.5.",
+		shortDesc: "This Pokemon's beam attacks have 1.5x power",
+	},
+	spincleaner: {
+		name: "Spin Cleaner",
+		shortDesc: "When this Pokemon switches in, entry hazards on this side are removed.",
+	},
+	amplify: {
+		name: "Amplify",
+		desc: "This Pokemon's attacking stat is doubled while using a Electric-type attack. If a Pokemon uses a Flying-type attack against this Pokemon, that Pokemon's attacking stat is halved when calculating the damage to this Pokemon. This Pokemon cannot be put to sleep. Gaining this Ability while asleep cures it.",
+		shortDesc: "This Pokemon's Electric power is 2x; can't sleep; Flying power against it is halved.",
+	},
+	bigbrain: {
+		name: "Big Brain",
+		shortDesc: "This Pokemon's Special Attack is doubled.",
+	},
+	shitbugtactics: {
+		name: "Shitbug Tactics",
+		shortDesc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes.",
+	},
+	dispenser: {
+		name: "Dispenser",
+		shortDesc: "At the end of every turn, heals user and allies for 1/10 of their max HP and 1 PP to one of their moves.",
+		activate: "  [SOURCE]'s Dispenser restored the PP of [TARGET]'s [MOVE] by 1!",
+	},
+	leech: {
+		name: "Leech",
+		shortDesc: "User recovers 25% of damage dealt.",
+	},
+	supportive: {
+		name: "Supportive",
+		desc: "While this Pokemon is active, moves with recoil and faint the user are prevented from having an effect.",
+		shortDesc: "Prevents self harming moves while active.",
+
+		block: "  [SOURCE] was stopped from using [MOVE]!",
+
+		start: "  [POKEMON] is being supportive!",
+	},
+	bonerzoner: {
+		name: "Boner Zoner",
+		shortDesc: "This Pokemon's Bone-based and Dragon moves ignore immunities.",
+		start: "  [POKEMON] has descended into the Boner Zoner!",
+	},
+	chording: {
+		name: "Chording",
+		desc: "After using a Special attack, its Atk is raised by 1 stage. After using a Physical attack, its Sp. Atk is raised by 1 stage.",
+	},
+	eclipse: {
+		name: "Eclipse",
+		desc: "On switch-in, removes Sunny Day and Desolate Land for a stat boost.",
+	},
+	lootable: {
+		name: "Lootable",
+		desc: "If this Pokemon is knocked out, it passes on its Stockpile boosts and heals the next Pokemon for 1/5 of its maximum HP for each Stockpile layer.",
+		shortDesc: "After fainting, passes on Stockpile boosts and heals for 1/5 of its maximum HP for each.",
+	},
+	asoneblobbos: {
+		name: "As One (Blobbos)",
+		shortDesc: "The combination of Pure Power and Huge Power.",
+
+		start: "  [POKEMON] is ready to kick your ass!",
+	},
+	sharpshooter: {
+		name: "Sharpshooter",
+		shortDesc: "This Pokemon's critical hit, the damage is multiplied by 1.5, +1 Crit ratio.",
+	},
+	blobbotype: {
+		name: "Blobbotype",
+		shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate or Z-Crystal.",
+		gen6: {
+			shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate.",
+		},
+	},
+	uncompetitive: {
+		name: "Uncompetitive",
+		shortDesc: "Snow Cloak + Sand Veil + Bright Powder + Lax Incense + Razor Fang + King's Rock + Moody + Arena Trap + Shadow Tag + Focus Band",
+	},
+	niceface: {
+		name: "Nice Face",
+		desc: "If this Pokemon is an Blobbos-Nice, the first physical hit it takes in battle deals 0 neutral damage. Its leaf shield is then broken and it changes forme to Noice Face. Blobbos-Nice regains its Leaf Shield forme when Grassy Terrain begins or when Eiscue switches in while Grassy Terrain is active. Confusion damage also breaks the leaf shield.",
+		shortDesc: "If Blobbos-Nice, the first physical hit it takes deals 0 damage. This effect is restored in Grassy Terrain.",
+	},
+	/* Clover Modification End */
 };

@@ -47,6 +47,9 @@ import {FS, Utils, ProcessManager} from '../lib';
 import {
 	Auth, GlobalAuth, SECTIONLEADER_SYMBOL, PLAYER_SYMBOL, HOST_SYMBOL, RoomPermission, GlobalPermission,
 } from './user-groups';
+/* Clover Modification Start */
+import {UserBadge} from './badges';
+/* Clover Modification End */
 
 const MINUTES = 60 * 1000;
 const IDLE_TIMER = 60 * MINUTES;
@@ -367,6 +370,9 @@ export class User extends Chat.MessageContext {
 	lastConnected: number;
 	foodfight?: {generatedTeam: string[], dish: string, ingredients: string[], timestamp: number};
 	friends?: Set<string>;
+	/* Clover Modification Start */
+	badges?: UserBadge[];
+	/* Clover Modification End */
 
 	chatQueue: ChatQueueEntry[] | null;
 	chatQueueTimeout: NodeJS.Timeout | null;
