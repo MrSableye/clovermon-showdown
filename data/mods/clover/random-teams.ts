@@ -1,6 +1,7 @@
 /* eslint max-len: ["error", 240] */
 
 import {Dex, toID} from '../../../sim/dex';
+import { Species } from '../../../sim/dex-species';
 import {PRNG, PRNGSeed} from '../../../sim/prng';
 
 export interface TeamData {
@@ -61,7 +62,7 @@ export class RandomTeams {
 	 * Remove an element from an unsorted array significantly faster
 	 * than .splice
 	 */
-	fastPop(list: any[], index: number) {
+	fastPop<T>(list: T[], index: number) {
 		// If an array doesn't need to be in order, replacing the
 		// element at the given index with the removed element
 		// is much, much faster than using list.splice(index, 1).
@@ -76,7 +77,7 @@ export class RandomTeams {
 	 * Remove a random element from an unsorted array and return it.
 	 * Uses the battle's RNG if in a battle.
 	 */
-	sampleNoReplace(list: any[]) {
+	sampleNoReplace<T>(list: T[]) {
 		const length = list.length;
 		const index = this.random(length);
 		return this.fastPop(list, index);
@@ -1881,7 +1882,6 @@ export class RandomTeams {
 		for (const id in this.dex.data.FormatsData) {
 			const species = this.dex.species.get(id);
 			if (species.gen > this.gen || exclude.includes(species.id)) continue;
-			console.log(species.types);
 			if (!species.types.includes('Fairy') && !species.types.includes('Grass') && !species.types.includes('Ice') && !species.types.includes('Normal')) continue;
 			if (species.num <= 69000 || species.num > 69386) continue;
 			pokemonPool.push(id);
@@ -2014,7 +2014,6 @@ export class RandomTeams {
 			if (['shedinja', 'sprucifix'].includes(id)) continue;
 			const species = this.dex.species.get(id);
 			if (species.gen > this.gen || exclude.includes(species.id)) continue;
-			console.log(species.types);
 			if (!species.types.includes('Ghost') && !species.types.includes('Dark')) continue;
 			if (isCloveronly) {
 				if (species.num <= 69000 || species.num > 69386) continue;
@@ -2241,7 +2240,6 @@ export class RandomTeams {
 			// For setting Zoroark's level
 			if (set.ability === 'Illusion') teamDetails['illusion'] = pokemon.length;
 		}
-		console.log(pokemon, clovermon);
 		if ((pokemon.length + clovermon.length) < 6) throw new Error(`Could not build a random team for ${this.format} (seed=${seed})`);
 
 		return [...pokemon, ...clovermon];
@@ -2440,17 +2438,22 @@ export class RandomTeams {
 			'Zoloft',
 		];
 
+		const blobbosFormes = this.dex.species.all()
+			.filter((species) => species.baseSpecies === 'Blobbos' && !species.battleOnly);
+
 		while (sets.length < 6) {
+			const blobbosForme = this.sampleNoReplace(blobbosFormes);
+
 			sets.push({
 				name: this.sampleNoReplace(blobbosNicknames),
-				species: 'Blobbos',
+				species: blobbosForme.name,
 				gender: 'N',
 				moves: ['Metronome'],
-				ability: 'Huge Power',
+				ability: blobbosForme.abilities[0],
+				item: '',
 				evs: {hp: 4, atk: 252, spa: 252},
 				ivs: {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31},
-				item: 'Blobbosinite',
-				level: 100,
+				level: Math.ceil(100 * ((700 - blobbosForme.bst) / 700)),
 				shiny: this.randomChance(1, 12),
 			});
 		}
