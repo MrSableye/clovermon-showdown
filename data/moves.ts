@@ -22855,15 +22855,10 @@ export const Moves: { [moveid: string]: MoveData } = {
 				return false;
 			}
 		},
-		secondaries: [
-			{
-				chance: 100,
-				status: 'confusion',
-			}, {
-				chance: 100,
-				volatileStatus: 'attract',
-			},
-		],
+		onHit(target) {
+			target.addVolatile('confusion');
+			target.addVolatile('attract');
+		},
 		target: "normal",
 		type: "Fairy",
 		isNonstandard: "Future",
