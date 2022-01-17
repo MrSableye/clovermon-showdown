@@ -146,7 +146,7 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Only] CAP',
 		mod: 'clover',
-		ruleset: ['[Gen 8 Clover Only] OU', '+CAP'],
+		ruleset: ['[Gen 8 Clover Only] OU', '+CAP', 'No Blobbos'],
 		banlist: ['Condoomite'],
 	},
 	{
