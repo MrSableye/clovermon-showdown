@@ -33,16 +33,16 @@ const initializeSeasonalBadges = async (badgesToInitialize: SeasonalBadge[]) => 
 
 void initializeSeasonalBadges([
 	{
-		badgeId: 'sableyebirthday',
-		message: 'Happy Birthday, Mr. Sableye! Enjoy a free badge!',
-		seasonStart: '11-01',
-		seasonEnd: '11-14',
-	},
-	{
 		badgeId: 'christmas',
 		message: 'Happy Holidays! Unwrap a nifty badge!',
 		seasonStart: '12-25',
 		seasonEnd: '12-31',
+	},
+	{
+		badgeId: 'anniversary',
+		message: 'Happy anniversay, Clovermon Showdown!',
+		seasonStart: '01-16',
+		seasonEnd: '01-20',
 	},
 ]);
 
