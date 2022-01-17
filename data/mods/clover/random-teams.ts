@@ -1,7 +1,7 @@
 /* eslint max-len: ["error", 240] */
 
 import {Dex, toID} from '../../../sim/dex';
-import { Species } from '../../../sim/dex-species';
+import {Species} from '../../../sim/dex-species';
 import {PRNG, PRNGSeed} from '../../../sim/prng';
 
 export interface TeamData {
