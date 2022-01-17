@@ -111,12 +111,29 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 		effectType: 'ValidatorRule',
 		name: 'Blobbos Only',
 		desc: "Only Blobbos and its alternate formes can be used.",
-		onValidateSet(set) {
-			const species = this.dex.species.get(set.species || set.name);
+		onValidateTeam(team) {
+			const blobbosFormeCount: Record<string, number> = {};
+			const errors: string[] = [];
 
-			if (species.baseSpecies !== 'Blobbos') {
-				return [`${set.name || set.species} is not Blobbos.`];
-			}
+			team.forEach((set) => {
+				const species = this.dex.species.get(set.species || set.name);
+
+				if (species.baseSpecies !== 'Blobbos') {
+					errors.push(`${set.name || set.species} is not a forme of Blobbos.`);
+				}
+
+				if (blobbosFormeCount[species.id]) blobbosFormeCount[species.id] = 0;
+				blobbosFormeCount[species.id] = blobbosFormeCount[species.id] + 1;
+			});
+
+			Object.entries(blobbosFormeCount).forEach(([formeId, formeCount]) => {
+				if (formeCount > 1) {
+					const species = this.dex.species.get(formeId);
+					errors.push(`You have ${species.name}. You may only have up to 1 ${species.name}`);
+				}
+			});
+
+			return errors;
 		},
 	},
 	noblobbos: {
