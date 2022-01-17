@@ -33225,6 +33225,38 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 		gen: 8,
 	},
+	blobbosgnome: {
+		num: 69132,
+		name: "Blobbos-Gnome",
+		baseSpecies: "Blobbos",
+		forme: "Gnome",
+		types: [
+			"Ice",
+			"Fairy",
+		],
+		gender: "N",
+		baseStats: {
+			hp: 115,
+			atk: 17,
+			def: 110,
+			spa: 40,
+			spd: 120,
+			spe: 15,
+		},
+		abilities: {
+			0: "Soundproof",
+			1: "Concert",
+			H: "Comatose",
+			S: "Natural Cure",
+		},
+		heightm: 0.4,
+		weightkg: 9.7,
+		color: "Green",
+		eggGroups: [
+			"Ditto",
+		],
+		gen: 8,
+	},
 	/* :^) */
 	autumn: {
 		num: -42002,

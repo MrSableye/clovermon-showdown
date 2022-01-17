@@ -2012,7 +2012,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"shellsmash",
 					"crabhammer",
 				],
-				level: 84,
+				level: 80,
 			},
 			{
 				abilities: [
@@ -2380,7 +2380,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"focusblast",
 					"kingsshield",
 					"taunt",
-					"fierydance",
+					"icebeam",
 				],
 				lockedMoves: [
 					"boomburst",
@@ -2605,6 +2605,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				],
 				moves: [
 					"boltbeam",
+				],
+				level: 84,
+			},
+			{
+				abilities: [
+					"adaptability",
+				],
+				items: [
+					"focussash",
+				],
+				moves: [
+					"encore",
+					"thunderbolt",
+					"icebeam",
+					"grassknot",
 				],
 				level: 84,
 			},
@@ -6432,13 +6447,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 					"cursedbody",
 				],
 				items: [
-					"leftovers",
+					"assaultvest",
 				],
 				moves: [
-					"strengthsap",
-					"softboiled",
-					"recover",
-					"synthesis",
+					"moongeistbeam",
+					"aurasphere",
+					"lavaplume",
+					"gigadrain",
 				],
 				level: 84,
 			},
@@ -6467,7 +6482,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 				],
 				moves: [
 					"aromatherapy",
-					"calmmind",
+					"recover",
 					"moongeistbeam",
 					"aurasphere",
 				],
@@ -15505,6 +15520,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "CAP",
 	},
 	blobbosnice: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosgnome: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",
