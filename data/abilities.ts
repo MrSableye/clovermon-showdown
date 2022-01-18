@@ -5708,13 +5708,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			if (this.field.isTerrain('grassyterrain') && pokemon.species.id === 'blobbosnoice' && !pokemon.transformed) {
 				this.add('-activate', pokemon, 'ability: Nice Face');
 				this.effectState.busted = false;
-				pokemon.formeChange('blobbosnice', this.effect, true);
+				pokemon.formeChange('Blobbos-Nice', this.effect, true);
 			}
 		},
 		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {
 			if (
-				effect && effect.effectType === 'Move' &&
+				effect && effect.effectType === 'Move' && effect.category === 'Physical' &&
 				target.species.id === 'blobbosnice' && !target.transformed
 			) {
 				this.add('-activate', target, 'ability: Nice Face');
@@ -5724,7 +5724,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		onCriticalHit(target, source, move) {
 			if (!target) return;
-			if (!['blobbosnice'].includes(target.species.id) || target.transformed) {
+			if (move.category !== 'Physical' || !['blobbosnice'].includes(target.species.id) || target.transformed) {
 				return;
 			}
 			const hitSub = target.volatiles['substitute'] && !move.flags['authentic'] && !(move.infiltrates && this.gen >= 6);
@@ -5735,7 +5735,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		onEffectiveness(typeMod, target, type, move) {
 			if (!target || move.category === 'Status') return;
-			if (!['blobbosnice'].includes(target.species.id) || target.transformed) {
+			if (move.category !== 'Physical' || !['blobbosnice'].includes(target.species.id) || target.transformed) {
 				return;
 			}
 
