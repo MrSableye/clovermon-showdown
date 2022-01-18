@@ -228,8 +228,8 @@ export const Badges = new class {
 	createBadgeHeaderButtons(currentPage: string) {
 		const buf = [];
 		const icons: {[k: string]: string} = {
-			owned: '<i class="fa fa-user-shield"></i>',
-			managed: '<i class="fa fa-user-cog"></i>',
+			owned: '<i class="fa fa-user"></i>',
+			managed: '<i class="fa fa-get-pocket"></i>',
 		};
 		const titles: {[k: string]: string} = {
 			owned: 'Owned Badges',
