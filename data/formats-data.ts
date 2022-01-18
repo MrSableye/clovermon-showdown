@@ -8854,11 +8854,6 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	jermouse: {
-		availability: {clover: 1},
-		isNonstandard: "Future",
-		tier: "Illegal",
-	},
 	jermin: {
 		availability: {clover: 1},
 		isNonstandard: "Future",

@@ -15149,11 +15149,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
-	jermouse: {
-		inherit: true,
-		isNonstandard: "CAP",
-		tier: "CAP LC",
-	},
 	jermin: {
 		inherit: true,
 		isNonstandard: "CAP",

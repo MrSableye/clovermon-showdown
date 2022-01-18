@@ -31802,18 +31802,6 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		color: "Green",
 		eggGroups: ["Flying"],
 	},
-	jermouse: {
-		num: 42010,
-		name: "Jermouse",
-		types: ["Normal", "Poison"],
-		baseStats: {hp: 45, atk: 15, def: 25, spa: 30, spd: 20, spe: 55},
-		abilities: {0: "Run Away", 1: "Wimp Out", H: "Sturdy", S: "Rattled"},
-		heightm: 0.3,
-		weightkg: 0.8,
-		color: "Gray",
-		evos: ["Jermin"],
-		eggGroups: ["Field"],
-	},
 	jermin: {
 		num: 42011,
 		name: "Jermin",
