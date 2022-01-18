@@ -15149,11 +15149,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
-	jermouse: {
-		inherit: true,
-		isNonstandard: "CAP",
-		tier: "CAP LC",
-	},
 	jermin: {
 		inherit: true,
 		isNonstandard: "CAP",
@@ -15530,6 +15525,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "CAP",
 	},
 	vermingio: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	rootchew: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobboschad: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosmini: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosking: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",

@@ -2024,6 +2024,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "If this Pokemon is an Blobbos-Nice, the first physical hit it takes in battle deals 0 neutral damage. Its leaf shield is then broken and it changes forme to Noice Face. Blobbos-Nice regains its Leaf Shield forme when Grassy Terrain begins or when Eiscue switches in while Grassy Terrain is active. Confusion damage also breaks the leaf shield.",
 		shortDesc: "If Blobbos-Nice, the first physical hit it takes deals 0 damage. This effect is restored in Grassy Terrain.",
 	},
+	evasionhax: {
+		name: "Evasion Hax",
+		shortDesc: "This Pokemon's Evasion is doubled.",
+	},
+	nimblemetalbody: {
+		name: "Nimble Metal Body",
+		shortDesc: "This Pokemon's self-switching moves have their priority increased by 1.",
+	},
 	/* Atlas Abilities */
 	tardrage: {
 		name: "Tard Rage",

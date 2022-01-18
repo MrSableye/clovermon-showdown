@@ -5765,6 +5765,29 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		isNonstandard: "Future",
 		rating: 3,
 	},
+	evasionhax: {
+		availability: {clover: 1},
+		onModifyAccuracyPriority: -1,
+		onModifyAccuracy(accuracy) {
+			return this.chainModify([1, 2]);
+		},
+		isBreakable: true,
+		name: "Evasion Hax",
+		rating: 1.5,
+		isNonstandard: "Future",
+	},
+	nimblemetalbody: {
+		availability: {clover: 1},
+		onModifyPriority(priority, pokemon, target, move) {
+			const momentum = [
+				'batonpass', 'uturn', 'flipturn', 'partingshot', 'teleport', 'uturn', 'voltswitch',
+			];
+			if (momentum.includes(move.id)) return priority + 1;
+		},
+		name: "Nimble Metal Body",
+		rating: 3,
+		isNonstandard: "Future",
+	},
 	uncompetitive: {
 		availability: {clover: 1},
 		name: "Uncompetitive",

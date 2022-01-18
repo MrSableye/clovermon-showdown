@@ -8854,11 +8854,6 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	jermouse: {
-		availability: {clover: 1},
-		isNonstandard: "Future",
-		tier: "Illegal",
-	},
 	jermin: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
@@ -9289,7 +9284,27 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
+	rootchew: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	blobbosgnome: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	blobboschad: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	blobbosmini: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	blobbosking: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",

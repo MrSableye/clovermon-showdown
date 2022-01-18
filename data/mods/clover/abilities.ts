@@ -151,6 +151,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	evasionhax: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	nimblemetalbody: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 	uncompetitive: {
 		inherit: true,
 		isNonstandard: "CAP",
