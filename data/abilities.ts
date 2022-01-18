@@ -5722,22 +5722,16 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				return 0;
 			}
 		},
-		onCriticalHit(target, source, move) {
+		onCriticalHit(target, type, move) {
 			if (!target) return;
-			if (move.category !== 'Physical' || !['blobbosnice'].includes(target.species.id) || target.transformed) {
-				return;
-			}
-			const hitSub = target.volatiles['substitute'] && !move.flags['authentic'] && !(move.infiltrates && this.gen >= 6);
-			if (hitSub) return;
-
+			if (move.category !== 'Physical' || target.species.id !== 'blobbosnice' || target.transformed) return;
+			if (target.volatiles['substitute'] && !(move.flags['authentic'] || move.infiltrates)) return;
 			if (!target.runImmunity(move.type)) return;
 			return false;
 		},
 		onEffectiveness(typeMod, target, type, move) {
-			if (!target || move.category === 'Status') return;
-			if (move.category !== 'Physical' || !['blobbosnice'].includes(target.species.id) || target.transformed) {
-				return;
-			}
+			if (!target) return;
+			if (move.category !== 'Physical' || target.species.id !== 'blobbosnice' || target.transformed) return;
 
 			const hitSub = target.volatiles['substitute'] && !move.flags['authentic'] && !(move.infiltrates && this.gen >= 6);
 			if (hitSub) return;
@@ -5746,7 +5740,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			return 0;
 		},
 		onUpdate(pokemon) {
-			if (pokemon.species.id === 'eiscue' && this.effectState.busted) {
+			if (pokemon.species.id === 'blobbosnice' && this.effectState.busted) {
 				pokemon.formeChange('Blobbos-Noice', this.effect, true);
 			}
 		},
@@ -5759,7 +5753,6 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				pokemon.formeChange('Blobbos-Nice', this.effect, true);
 			}
 		},
-
 		isBreakable: true,
 		isPermanent: true,
 		name: "Nice Face",
