@@ -9284,6 +9284,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
+	rootchew: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	blobbosgnome: {
 		availability: {clover: 1},
 		isNonstandard: "Future",

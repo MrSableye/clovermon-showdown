@@ -15529,6 +15529,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	rootchew: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	blobboschad: {
 		inherit: true,
 		isNonstandard: "CAP",
