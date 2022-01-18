@@ -5703,6 +5703,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 	},
 	niceface: {
+		availability: {clover: 1},
 		onStart(pokemon) {
 			if (this.field.isTerrain('grassyterrain') && pokemon.species.id === 'blobbosnoice' && !pokemon.transformed) {
 				this.add('-activate', pokemon, 'ability: Nice Face');
