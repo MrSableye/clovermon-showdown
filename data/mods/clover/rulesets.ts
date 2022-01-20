@@ -111,9 +111,6 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 		effectType: 'ValidatorRule',
 		name: 'Blobbos Only',
 		desc: "Only Blobbos and its alternate formes can be used.",
-		onBegin() {
-			this.add('rule', 'Species Clause: Limit one of each Blobbos forme');
-		},
 		onValidateTeam(team) {
 			const blobbosFormeCount: Record<string, number> = {};
 			const errors: string[] = [];
