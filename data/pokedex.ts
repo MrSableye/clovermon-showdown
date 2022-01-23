@@ -32803,11 +32803,11 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		types: ["Poison"],
 		gender: "N",
 		baseStats: {
-			hp: 95,
+			hp: 90,
 			atk: 80,
-			def: 110,
+			def: 105,
 			spa: 65,
-			spd: 120,
+			spd: 105,
 			spe: 60,
 		},
 		abilities: {
