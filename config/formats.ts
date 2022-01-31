@@ -221,6 +221,7 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Festive Random Battle',
 		mod: 'clover',
 		team: 'randomFestive',
+		searchShow: false,
 		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 		onBattleStart() {
 			this.field.setWeather('hail', this.getAllPokemon()[0]);
