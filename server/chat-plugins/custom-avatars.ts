@@ -101,7 +101,10 @@ const canUserHaveCustomAvatar = async (user: User): Promise<boolean> => {
 
 export const commands: Chat.ChatCommands = {
 	blobbos(target, room, user) {
-		if (Config.blobbosTournamentWinners && Config.blobbosTournamentWinners.includes(user.id)) {
+		const isInBlobbosConfig = Config.blobbosTournamentWinners && Config.blobbosTournamentWinners.includes(user.id);
+		const hasBlobbosBadge = Config.usesqlitebadges && user.badges?.some((badge) => badge.badge_id === 'blobboswinner');
+
+		if (isInBlobbosConfig || hasBlobbosBadge) {
 			this.user.avatar = '#blobbos';
 			this.sendReply(`${this.tr`Avatar changed to:`}\n|raw|${createAvatarHtml('blobbos', true)}`);
 		}
