@@ -49,7 +49,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	absorb: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 71,
 		accuracy: 100,
 		basePower: 20,
@@ -65,7 +65,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	accelerock: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 709,
 		accuracy: 100,
 		basePower: 40,
@@ -80,7 +80,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	acid: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 51,
 		accuracy: 100,
 		basePower: 40,
@@ -100,7 +100,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	acidarmor: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 151,
 		accuracy: true,
 		basePower: 0,
@@ -135,7 +135,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	acidspray: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 491,
 		accuracy: 100,
 		basePower: 40,
@@ -155,7 +155,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	acrobatics: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 512,
 		accuracy: 100,
 		basePower: 55,
@@ -177,7 +177,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	acupressure: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 367,
 		accuracy: true,
 		basePower: 0,
@@ -210,7 +210,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	aerialace: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 332,
 		accuracy: true,
 		basePower: 60,
@@ -225,7 +225,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	aeroblast: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 177,
 		accuracy: 95,
 		basePower: 100,
@@ -241,7 +241,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	afteryou: {
-		availability: {atlas: 1},
 		num: 495,
 		accuracy: true,
 		basePower: 0,
@@ -267,7 +266,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	agility: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 97,
 		accuracy: true,
 		basePower: 0,
@@ -286,7 +285,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	aircutter: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 314,
 		accuracy: 95,
 		basePower: 60,
@@ -302,7 +301,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	airslash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 403,
 		accuracy: 95,
 		basePower: 75,
@@ -336,7 +335,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	allyswitch: {
-		availability: {atlas: 1},
 		num: 502,
 		accuracy: true,
 		basePower: 0,
@@ -362,7 +360,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	amnesia: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 133,
 		accuracy: true,
 		basePower: 0,
@@ -381,7 +379,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	anchorshot: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 677,
 		accuracy: 100,
 		basePower: 80,
@@ -401,7 +399,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	ancientpower: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 246,
 		accuracy: 100,
 		basePower: 60,
@@ -427,7 +425,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	appleacid: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 787,
 		accuracy: 100,
 		basePower: 80,
@@ -446,7 +444,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Grass",
 	},
 	aquajet: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 453,
 		accuracy: 100,
 		basePower: 40,
@@ -461,7 +459,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	aquaring: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 392,
 		accuracy: true,
 		basePower: 0,
@@ -487,7 +485,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	aquatail: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 401,
 		accuracy: 90,
 		basePower: 90,
@@ -502,7 +500,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	armthrust: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 292,
 		accuracy: 100,
 		basePower: 15,
@@ -518,7 +516,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	aromatherapy: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 312,
 		accuracy: true,
 		basePower: 0,
@@ -545,7 +543,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	aromaticmist: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 597,
 		accuracy: true,
 		basePower: 0,
@@ -564,7 +562,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	assist: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 274,
 		accuracy: true,
 		basePower: 0,
@@ -605,7 +603,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	assurance: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 372,
 		accuracy: 100,
 		basePower: 60,
@@ -627,7 +625,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	astonish: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 310,
 		accuracy: 100,
 		basePower: 30,
@@ -645,7 +643,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	astralbarrage: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 825,
 		accuracy: 100,
 		basePower: 120,
@@ -659,7 +657,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Ghost",
 	},
 	attackorder: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 454,
 		accuracy: 100,
 		basePower: 90,
@@ -675,7 +673,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	attract: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 213,
 		accuracy: 100,
 		basePower: 0,
@@ -730,7 +728,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	aurasphere: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 396,
 		accuracy: true,
 		basePower: 80,
@@ -781,7 +779,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Electric",
 	},
 	aurorabeam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 62,
 		accuracy: 100,
 		basePower: 65,
@@ -801,7 +799,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	auroraveil: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 694,
 		accuracy: true,
 		basePower: 0,
@@ -851,7 +849,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	autotomize: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 475,
 		accuracy: true,
 		basePower: 0,
@@ -882,7 +880,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	avalanche: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 419,
 		accuracy: 100,
 		basePower: 60,
@@ -907,7 +905,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	babydolleyes: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 608,
 		accuracy: 100,
 		basePower: 0,
@@ -926,7 +924,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	baddybad: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 737,
 		accuracy: 95,
 		basePower: 80,
@@ -945,7 +943,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	banefulbunker: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 661,
 		accuracy: true,
 		basePower: 0,
@@ -1004,7 +1002,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	barrage: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 140,
 		accuracy: 85,
 		basePower: 15,
@@ -1021,7 +1019,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	barrier: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 112,
 		accuracy: true,
 		basePower: 0,
@@ -1041,7 +1039,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	batonpass: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 226,
 		accuracy: true,
 		basePower: 0,
@@ -1063,7 +1061,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	beakblast: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 690,
 		accuracy: 100,
 		basePower: 100,
@@ -1097,7 +1095,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	beatup: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 251,
 		accuracy: 100,
 		basePower: 0,
@@ -1145,7 +1143,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Steel",
 	},
 	belch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 562,
 		accuracy: 90,
 		basePower: 120,
@@ -1161,7 +1159,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	bellydrum: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 187,
 		accuracy: true,
 		basePower: 0,
@@ -1184,7 +1182,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	bestow: {
-		availability: {atlas: 1},
 		num: 516,
 		accuracy: true,
 		basePower: 0,
@@ -1213,7 +1210,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	bide: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 117,
 		accuracy: true,
 		basePower: 0,
@@ -1288,7 +1285,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	bind: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 20,
 		accuracy: 85,
 		basePower: 15,
@@ -1304,7 +1301,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	bite: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 44,
 		accuracy: 100,
 		basePower: 60,
@@ -1338,7 +1335,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	blastburn: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 307,
 		accuracy: 90,
 		basePower: 150,
@@ -1356,7 +1353,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	blazekick: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 299,
 		accuracy: 90,
 		basePower: 85,
@@ -1375,7 +1372,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	blizzard: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 59,
 		accuracy: 70,
 		basePower: 110,
@@ -1396,7 +1393,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	block: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 335,
 		accuracy: true,
 		basePower: 0,
@@ -1431,7 +1428,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	blueflare: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 551,
 		accuracy: 85,
 		basePower: 130,
@@ -1449,7 +1446,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	bodypress: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 776,
 		accuracy: 100,
 		basePower: 80,
@@ -1464,7 +1461,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fighting",
 	},
 	bodyslam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 34,
 		accuracy: 100,
 		basePower: 85,
@@ -1482,7 +1479,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	boltbeak: {
-		availability: {atlas: 1},
 		num: 754,
 		accuracy: 100,
 		basePower: 85,
@@ -1504,7 +1500,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Electric",
 	},
 	boltstrike: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 550,
 		accuracy: 85,
 		basePower: 130,
@@ -1522,7 +1518,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	boneclub: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 125,
 		accuracy: 85,
 		basePower: 65,
@@ -1541,7 +1537,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	bonemerang: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 155,
 		accuracy: 90,
 		basePower: 50,
@@ -1558,7 +1554,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	bonerush: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 198,
 		accuracy: 90,
 		basePower: 25,
@@ -1576,7 +1572,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	boomburst: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 586,
 		accuracy: 100,
 		basePower: 140,
@@ -1591,7 +1587,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	bounce: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 340,
 		accuracy: 85,
 		basePower: 85,
@@ -1634,7 +1630,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	bouncybubble: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 733,
 		accuracy: 100,
 		basePower: 60,
@@ -1651,7 +1647,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	branchpoke: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 785,
 		accuracy: 100,
 		basePower: 40,
@@ -1665,7 +1661,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Grass",
 	},
 	bravebird: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 413,
 		accuracy: 100,
 		basePower: 120,
@@ -1681,7 +1677,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	breakingswipe: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 784,
 		accuracy: 100,
 		basePower: 60,
@@ -1716,7 +1712,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	brickbreak: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 280,
 		accuracy: 100,
 		basePower: 75,
@@ -1737,7 +1733,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	brine: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 362,
 		accuracy: 100,
 		basePower: 65,
@@ -1757,7 +1753,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	brutalswing: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 693,
 		accuracy: 100,
 		basePower: 60,
@@ -1772,7 +1768,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	bubble: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 145,
 		accuracy: 100,
 		basePower: 40,
@@ -1793,7 +1789,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	bubblebeam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 61,
 		accuracy: 100,
 		basePower: 65,
@@ -1813,7 +1809,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	bugbite: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 450,
 		accuracy: 100,
 		basePower: 60,
@@ -1839,7 +1835,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	bugbuzz: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 405,
 		accuracy: 100,
 		basePower: 90,
@@ -1859,7 +1855,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	bulkup: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 339,
 		accuracy: true,
 		basePower: 0,
@@ -1879,7 +1875,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	bulldoze: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 523,
 		accuracy: 100,
 		basePower: 60,
@@ -1899,7 +1895,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	bulletpunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 418,
 		accuracy: 100,
 		basePower: 40,
@@ -1914,7 +1910,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	bulletseed: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 331,
 		accuracy: 100,
 		basePower: 25,
@@ -1932,7 +1928,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	burningjealousy: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 807,
 		accuracy: 100,
 		basePower: 70,
@@ -1954,7 +1950,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	burnup: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 682,
 		accuracy: 100,
 		basePower: 130,
@@ -1999,7 +1995,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	calmmind: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 347,
 		accuracy: true,
 		basePower: 0,
@@ -2019,7 +2015,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	camouflage: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 293,
 		accuracy: true,
 		basePower: 0,
@@ -2051,7 +2047,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	captivate: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 445,
 		accuracy: 100,
 		basePower: 0,
@@ -2090,7 +2086,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	celebrate: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 606,
 		accuracy: true,
 		basePower: 0,
@@ -2109,7 +2105,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	charge: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 268,
 		accuracy: true,
 		basePower: 0,
@@ -2145,7 +2141,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	chargebeam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 451,
 		accuracy: 90,
 		basePower: 50,
@@ -2167,7 +2163,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	charm: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 204,
 		accuracy: 100,
 		basePower: 0,
@@ -2186,7 +2182,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	chatter: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 448,
 		accuracy: 100,
 		basePower: 65,
@@ -2206,7 +2202,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	chipaway: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 498,
 		accuracy: 100,
 		basePower: 70,
@@ -2224,7 +2220,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	circlethrow: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 509,
 		accuracy: 90,
 		basePower: 60,
@@ -2239,7 +2235,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	clamp: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 128,
 		accuracy: 85,
 		basePower: 35,
@@ -2256,7 +2252,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	clangingscales: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 691,
 		accuracy: 100,
 		basePower: 110,
@@ -2276,7 +2272,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	clangoroussoul: {
-		availability: {atlas: 1},
 		num: 775,
 		accuracy: 100,
 		basePower: 0,
@@ -2334,7 +2329,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	clearsmog: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 499,
 		accuracy: true,
 		basePower: 50,
@@ -2353,7 +2348,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	closecombat: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 370,
 		accuracy: 100,
 		basePower: 120,
@@ -2374,7 +2369,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	coaching: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 811,
 		accuracy: true,
 		basePower: 0,
@@ -2392,7 +2387,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fighting",
 	},
 	coil: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 489,
 		accuracy: true,
 		basePower: 0,
@@ -2413,7 +2408,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	cometpunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 4,
 		accuracy: 85,
 		basePower: 18,
@@ -2431,7 +2426,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	confide: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 590,
 		accuracy: true,
 		basePower: 0,
@@ -2450,7 +2445,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	confuseray: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 109,
 		accuracy: 100,
 		basePower: 0,
@@ -2467,7 +2462,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	confusion: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 93,
 		accuracy: 100,
 		basePower: 50,
@@ -2485,7 +2480,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	constrict: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 132,
 		accuracy: 100,
 		basePower: 10,
@@ -2522,7 +2517,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	conversion: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 160,
 		accuracy: true,
 		basePower: 0,
@@ -2543,7 +2538,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	conversion2: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 176,
 		accuracy: true,
 		basePower: 0,
@@ -2580,7 +2575,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	copycat: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 383,
 		accuracy: true,
 		basePower: 0,
@@ -2609,7 +2604,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	coreenforcer: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 687,
 		accuracy: 100,
 		basePower: 100,
@@ -2651,7 +2646,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	corrosivegas: {
-		availability: {atlas: 1},
 		num: 810,
 		accuracy: 100,
 		basePower: 0,
@@ -2673,7 +2667,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Poison",
 	},
 	cosmicpower: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 322,
 		accuracy: true,
 		basePower: 0,
@@ -2693,7 +2687,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	cottonguard: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 538,
 		accuracy: true,
 		basePower: 0,
@@ -2712,7 +2706,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	cottonspore: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 178,
 		accuracy: 100,
 		basePower: 0,
@@ -2731,7 +2725,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	counter: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 68,
 		accuracy: 100,
 		basePower: 0,
@@ -2778,7 +2772,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	courtchange: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 756,
 		accuracy: 100,
 		basePower: 0,
@@ -2866,7 +2860,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Normal",
 	},
 	covet: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 343,
 		accuracy: 100,
 		basePower: 60,
@@ -2898,7 +2892,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	crabhammer: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 152,
 		accuracy: 90,
 		basePower: 100,
@@ -2914,7 +2908,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	craftyshield: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 578,
 		accuracy: true,
 		basePower: 0,
@@ -2946,7 +2940,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	crosschop: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 238,
 		accuracy: 80,
 		basePower: 100,
@@ -2962,7 +2956,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	crosspoison: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 440,
 		accuracy: 100,
 		basePower: 70,
@@ -2981,7 +2975,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	crunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 242,
 		accuracy: 100,
 		basePower: 80,
@@ -3001,7 +2995,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	crushclaw: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 306,
 		accuracy: 95,
 		basePower: 75,
@@ -3021,7 +3015,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	crushgrip: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 462,
 		accuracy: 100,
 		basePower: 0,
@@ -3041,7 +3035,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	curse: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 174,
 		accuracy: true,
 		basePower: 0,
@@ -3085,7 +3079,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	cut: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 15,
 		accuracy: 95,
 		basePower: 50,
@@ -3100,7 +3094,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	darkestlariat: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 663,
 		accuracy: 100,
 		basePower: 85,
@@ -3117,7 +3111,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	darkpulse: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 399,
 		accuracy: 100,
 		basePower: 80,
@@ -3135,7 +3129,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	darkvoid: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 464,
 		accuracy: 50,
 		basePower: 0,
@@ -3161,7 +3155,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	dazzlinggleam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 605,
 		accuracy: 100,
 		basePower: 80,
@@ -3176,7 +3170,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	decorate: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 777,
 		accuracy: true,
 		basePower: 0,
@@ -3194,7 +3188,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fairy",
 	},
 	defendorder: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 455,
 		accuracy: true,
 		basePower: 0,
@@ -3214,7 +3208,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	defensecurl: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 111,
 		accuracy: true,
 		basePower: 0,
@@ -3237,7 +3231,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	defog: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 432,
 		accuracy: true,
 		basePower: 0,
@@ -3278,7 +3272,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	destinybond: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 194,
 		accuracy: true,
 		basePower: 0,
@@ -3323,7 +3317,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	detect: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 197,
 		accuracy: true,
 		basePower: 0,
@@ -3363,7 +3357,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	diamondstorm: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 591,
 		accuracy: 95,
 		basePower: 100,
@@ -3386,7 +3380,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	dig: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 91,
 		accuracy: 100,
 		basePower: 80,
@@ -3429,7 +3423,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	disable: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 50,
 		accuracy: 100,
 		basePower: 0,
@@ -3500,7 +3494,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	disarmingvoice: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 574,
 		accuracy: true,
 		basePower: 40,
@@ -3515,7 +3509,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	discharge: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 435,
 		accuracy: 100,
 		basePower: 80,
@@ -3533,7 +3527,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	dive: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 291,
 		accuracy: 100,
 		basePower: 80,
@@ -3580,7 +3574,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	dizzypunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 146,
 		accuracy: 100,
 		basePower: 70,
@@ -3599,7 +3593,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	doomdesire: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 353,
 		accuracy: 100,
 		basePower: 140,
@@ -3636,7 +3630,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	doubleedge: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 38,
 		accuracy: 100,
 		basePower: 120,
@@ -3652,7 +3646,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	doublehit: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 458,
 		accuracy: 90,
 		basePower: 35,
@@ -3670,7 +3664,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	doubleironbash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 742,
 		accuracy: 100,
 		basePower: 60,
@@ -3691,7 +3685,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	doublekick: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 24,
 		accuracy: 100,
 		basePower: 30,
@@ -3708,7 +3702,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	doubleslap: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 3,
 		accuracy: 85,
 		basePower: 15,
@@ -3725,7 +3719,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	doubleteam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 104,
 		accuracy: true,
 		basePower: 0,
@@ -3744,7 +3738,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	dracometeor: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 434,
 		accuracy: 90,
 		basePower: 130,
@@ -3764,7 +3758,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	dragonascent: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 620,
 		accuracy: 100,
 		basePower: 120,
@@ -3784,7 +3778,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	dragonbreath: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 225,
 		accuracy: 100,
 		basePower: 60,
@@ -3802,7 +3796,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	dragonclaw: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 337,
 		accuracy: 100,
 		basePower: 80,
@@ -3817,7 +3811,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	dragondance: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 349,
 		accuracy: true,
 		basePower: 0,
@@ -3854,7 +3848,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		maxMove: {basePower: 130},
 	},
 	dragonenergy: {
-		availability: {atlas: 1},
 		num: 820,
 		accuracy: 100,
 		basePower: 150,
@@ -3871,7 +3864,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Dragon",
 	},
 	dragonhammer: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 692,
 		accuracy: 100,
 		basePower: 90,
@@ -3886,7 +3879,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	dragonpulse: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 406,
 		accuracy: 100,
 		basePower: 85,
@@ -3901,7 +3894,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	dragonrage: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 82,
 		accuracy: 100,
 		basePower: 0,
@@ -3918,7 +3911,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	dragonrush: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 407,
 		accuracy: 75,
 		basePower: 100,
@@ -3936,7 +3929,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	dragontail: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 525,
 		accuracy: 90,
 		basePower: 60,
@@ -3951,7 +3944,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	drainingkiss: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 577,
 		accuracy: 100,
 		basePower: 50,
@@ -3967,7 +3960,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	drainpunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 409,
 		accuracy: 100,
 		basePower: 75,
@@ -3983,7 +3976,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	dreameater: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 138,
 		accuracy: 100,
 		basePower: 100,
@@ -4002,7 +3995,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	drillpeck: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 65,
 		accuracy: 100,
 		basePower: 80,
@@ -4017,7 +4010,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	drillrun: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 529,
 		accuracy: 95,
 		basePower: 80,
@@ -4051,7 +4044,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Grass",
 	},
 	dualchop: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 530,
 		accuracy: 90,
 		basePower: 40,
@@ -4068,7 +4061,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	dualwingbeat: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 814,
 		accuracy: 90,
 		basePower: 40,
@@ -4097,7 +4090,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Dragon",
 	},
 	dynamicpunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 223,
 		accuracy: 50,
 		basePower: 100,
@@ -4115,7 +4108,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	earthpower: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 414,
 		accuracy: 100,
 		basePower: 90,
@@ -4135,7 +4128,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	earthquake: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 89,
 		accuracy: 100,
 		basePower: 100,
@@ -4150,7 +4143,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	echoedvoice: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 497,
 		accuracy: 100,
 		basePower: 40,
@@ -4188,7 +4181,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	eerieimpulse: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 598,
 		accuracy: 100,
 		basePower: 0,
@@ -4207,7 +4200,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	eeriespell: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 826,
 		accuracy: 100,
 		basePower: 80,
@@ -4233,7 +4226,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Psychic",
 	},
 	eggbomb: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 121,
 		accuracy: 75,
 		basePower: 100,
@@ -4249,7 +4242,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	electricterrain: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 604,
 		accuracy: true,
 		basePower: 0,
@@ -4309,7 +4302,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	electrify: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 582,
 		accuracy: true,
 		basePower: 0,
@@ -4342,7 +4335,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	electroball: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 486,
 		accuracy: 100,
 		basePower: 0,
@@ -4366,7 +4359,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	electroweb: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 527,
 		accuracy: 95,
 		basePower: 55,
@@ -4386,7 +4379,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	embargo: {
-		availability: {atlas: 1},
 		num: 373,
 		accuracy: 100,
 		basePower: 0,
@@ -4415,7 +4407,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	ember: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 52,
 		accuracy: 100,
 		basePower: 40,
@@ -4433,7 +4425,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	encore: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 227,
 		accuracy: 100,
 		basePower: 0,
@@ -4497,7 +4489,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	endeavor: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 283,
 		accuracy: 100,
 		basePower: 0,
@@ -4520,7 +4512,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	endure: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 203,
 		accuracy: true,
 		basePower: 0,
@@ -4557,7 +4549,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	energyball: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 412,
 		accuracy: 100,
 		basePower: 90,
@@ -4577,7 +4569,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	entrainment: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 494,
 		accuracy: 100,
 		basePower: 0,
@@ -4617,7 +4609,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	eruption: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 284,
 		accuracy: 100,
 		basePower: 150,
@@ -4652,7 +4644,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Dragon",
 	},
 	expandingforce: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 797,
 		accuracy: 100,
 		basePower: 80,
@@ -4677,7 +4669,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Psychic",
 	},
 	explosion: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 153,
 		accuracy: 100,
 		basePower: 250,
@@ -4693,7 +4685,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	extrasensory: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 326,
 		accuracy: 100,
 		basePower: 80,
@@ -4734,7 +4726,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	extremespeed: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 245,
 		accuracy: 100,
 		basePower: 80,
@@ -4749,7 +4741,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	facade: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 263,
 		accuracy: 100,
 		basePower: 70,
@@ -4769,7 +4761,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	fairylock: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 587,
 		accuracy: true,
 		basePower: 0,
@@ -4795,7 +4787,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	fairywind: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 584,
 		accuracy: 100,
 		basePower: 40,
@@ -4810,7 +4802,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	fakeout: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 252,
 		accuracy: 100,
 		basePower: 40,
@@ -4834,7 +4826,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	faketears: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 313,
 		accuracy: 100,
 		basePower: 0,
@@ -4867,7 +4859,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Dark",
 	},
 	falseswipe: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 206,
 		accuracy: 100,
 		basePower: 40,
@@ -4886,7 +4878,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	featherdance: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 297,
 		accuracy: 100,
 		basePower: 0,
@@ -4905,7 +4897,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	feint: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 364,
 		accuracy: 100,
 		basePower: 30,
@@ -4922,7 +4914,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	feintattack: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 185,
 		accuracy: true,
 		basePower: 60,
@@ -4938,7 +4930,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	fellstinger: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 565,
 		accuracy: 100,
 		basePower: 50,
@@ -4956,7 +4948,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	fierydance: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 552,
 		accuracy: 100,
 		basePower: 80,
@@ -4978,7 +4970,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	fierywrath: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 822,
 		accuracy: 100,
 		basePower: 90,
@@ -4995,7 +4987,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Dark",
 	},
 	finalgambit: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 515,
 		accuracy: 100,
 		basePower: 0,
@@ -5017,7 +5009,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	fireblast: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 126,
 		accuracy: 85,
 		basePower: 110,
@@ -5035,7 +5027,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	firefang: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 424,
 		accuracy: 95,
 		basePower: 65,
@@ -5058,7 +5050,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	firelash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 680,
 		accuracy: 100,
 		basePower: 80,
@@ -5078,7 +5070,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	firepledge: {
-		availability: {atlas: 1},
 		num: 519,
 		accuracy: 100,
 		basePower: 80,
@@ -5143,7 +5134,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	firepunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 7,
 		accuracy: 100,
 		basePower: 75,
@@ -5161,7 +5152,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	firespin: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 83,
 		accuracy: 85,
 		basePower: 35,
@@ -5177,7 +5168,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	firstimpression: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 660,
 		accuracy: 100,
 		basePower: 90,
@@ -5198,7 +5189,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	fishiousrend: {
-		availability: {atlas: 1},
 		num: 755,
 		accuracy: 100,
 		basePower: 85,
@@ -5220,7 +5210,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Water",
 	},
 	fissure: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 90,
 		accuracy: 30,
 		basePower: 0,
@@ -5238,7 +5228,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	flail: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 175,
 		accuracy: 100,
 		basePower: 0,
@@ -5274,7 +5264,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	flameburst: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 481,
 		accuracy: 100,
 		basePower: 70,
@@ -5300,7 +5290,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	flamecharge: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 488,
 		accuracy: 100,
 		basePower: 50,
@@ -5322,7 +5312,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	flamewheel: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 172,
 		accuracy: 100,
 		basePower: 60,
@@ -5340,7 +5330,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	flamethrower: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 53,
 		accuracy: 100,
 		basePower: 90,
@@ -5358,7 +5348,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	flareblitz: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 394,
 		accuracy: 100,
 		basePower: 120,
@@ -5377,7 +5367,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	flash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 148,
 		accuracy: 100,
 		basePower: 0,
@@ -5397,7 +5387,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	flashcannon: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 430,
 		accuracy: 100,
 		basePower: 80,
@@ -5417,7 +5407,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	flatter: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 260,
 		accuracy: 100,
 		basePower: 0,
@@ -5457,7 +5447,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	fling: {
-		availability: {atlas: 1},
 		num: 374,
 		accuracy: 100,
 		basePower: 0,
@@ -5509,7 +5498,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	flipturn: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 812,
 		accuracy: 100,
 		basePower: 60,
@@ -5542,7 +5531,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	floralhealing: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 666,
 		accuracy: true,
 		basePower: 0,
@@ -5570,7 +5559,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	flowershield: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 579,
 		accuracy: true,
 		basePower: 0,
@@ -5604,7 +5593,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	fly: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 19,
 		accuracy: 95,
 		basePower: 90,
@@ -5644,7 +5633,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	flyingpress: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 560,
 		accuracy: 95,
 		basePower: 100,
@@ -5663,7 +5652,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	focusblast: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 411,
 		accuracy: 70,
 		basePower: 120,
@@ -5683,7 +5672,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	focusenergy: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 116,
 		accuracy: true,
 		basePower: 0,
@@ -5714,7 +5703,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	focuspunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 264,
 		accuracy: 100,
 		basePower: 150,
@@ -5752,7 +5741,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	followme: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 266,
 		accuracy: true,
 		basePower: 0,
@@ -5790,7 +5779,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	forcepalm: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 395,
 		accuracy: 100,
 		basePower: 60,
@@ -5808,7 +5797,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	foresight: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 193,
 		accuracy: true,
 		basePower: 0,
@@ -5843,7 +5832,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	forestscurse: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 571,
 		accuracy: 100,
 		basePower: 0,
@@ -5864,7 +5853,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	foulplay: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 492,
 		accuracy: 100,
 		basePower: 95,
@@ -5880,7 +5869,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	freezedry: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 573,
 		accuracy: 100,
 		basePower: 70,
@@ -5930,7 +5919,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	freezingglare: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 821,
 		accuracy: 100,
 		basePower: 90,
@@ -5968,7 +5957,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	frenzyplant: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 338,
 		accuracy: 90,
 		basePower: 150,
@@ -5986,7 +5975,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	frostbreath: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 524,
 		accuracy: 90,
 		basePower: 60,
@@ -6002,7 +5991,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	frustration: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 218,
 		accuracy: 100,
 		basePower: 0,
@@ -6023,7 +6012,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	furyattack: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 31,
 		accuracy: 85,
 		basePower: 15,
@@ -6039,7 +6028,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	furycutter: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 210,
 		accuracy: 95,
 		basePower: 40,
@@ -6072,7 +6061,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	furyswipes: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 154,
 		accuracy: 80,
 		basePower: 18,
@@ -6089,7 +6078,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	fusionbolt: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 559,
 		accuracy: 100,
 		basePower: 100,
@@ -6110,7 +6099,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	fusionflare: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 558,
 		accuracy: 100,
 		basePower: 100,
@@ -6131,7 +6120,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	futuresight: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 248,
 		accuracy: 100,
 		basePower: 120,
@@ -6171,7 +6160,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	gastroacid: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 380,
 		accuracy: 100,
 		basePower: 0,
@@ -6221,7 +6210,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	gearup: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 674,
 		accuracy: true,
 		basePower: 0,
@@ -6249,7 +6238,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	genesissupernova: {
-		availability: {atlas: 1},
 		num: 703,
 		accuracy: true,
 		basePower: 185,
@@ -6273,7 +6261,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	geomancy: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 601,
 		accuracy: true,
 		basePower: 0,
@@ -6305,7 +6293,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	gigadrain: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 202,
 		accuracy: 100,
 		basePower: 75,
@@ -6321,7 +6309,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	gigaimpact: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 416,
 		accuracy: 90,
 		basePower: 150,
@@ -6355,7 +6343,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	glaciallance: {
-		availability: {atlas: 1},
 		num: 824,
 		accuracy: 100,
 		basePower: 130,
@@ -6369,7 +6356,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Ice",
 	},
 	glaciate: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 549,
 		accuracy: 95,
 		basePower: 65,
@@ -6389,7 +6376,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	glare: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 137,
 		accuracy: 100,
 		basePower: 0,
@@ -7248,7 +7235,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	gmaxwindrage: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 1000,
 		accuracy: true,
 		basePower: 10,
@@ -7289,7 +7276,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	grassknot: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 447,
 		accuracy: 100,
 		basePower: 0,
@@ -7338,7 +7325,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	grasspledge: {
-		availability: {atlas: 1},
 		num: 520,
 		accuracy: 100,
 		basePower: 80,
@@ -7401,7 +7387,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	grasswhistle: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 320,
 		accuracy: 55,
 		basePower: 0,
@@ -7419,7 +7405,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	grassyglide: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 803,
 		accuracy: 100,
 		basePower: 70,
@@ -7439,7 +7425,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	grassyterrain: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 580,
 		accuracy: true,
 		basePower: 0,
@@ -7498,7 +7484,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	gravapple: {
-		availability: {atlas: 1},
 		num: 788,
 		accuracy: 100,
 		basePower: 80,
@@ -7522,7 +7507,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Grass",
 	},
 	gravity: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 356,
 		accuracy: true,
 		basePower: 0,
@@ -7609,7 +7594,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	growl: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 45,
 		accuracy: 100,
 		basePower: 0,
@@ -7628,7 +7613,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	growth: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 74,
 		accuracy: true,
 		basePower: 0,
@@ -7651,7 +7636,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	grudge: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 288,
 		accuracy: true,
 		basePower: 0,
@@ -7719,7 +7704,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	guardsplit: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 470,
 		accuracy: true,
 		basePower: 0,
@@ -7744,7 +7729,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	guardswap: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 385,
 		accuracy: true,
 		basePower: 0,
@@ -7775,7 +7760,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	guillotine: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 12,
 		accuracy: 30,
 		basePower: 0,
@@ -7793,7 +7778,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	gunkshot: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 441,
 		accuracy: 80,
 		basePower: 120,
@@ -7811,7 +7796,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	gust: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 16,
 		accuracy: 100,
 		basePower: 40,
@@ -7826,7 +7811,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	gyroball: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 360,
 		accuracy: 100,
 		basePower: 0,
@@ -7850,7 +7835,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	hail: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 258,
 		accuracy: true,
 		basePower: 0,
@@ -7867,7 +7852,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	hammerarm: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 359,
 		accuracy: 90,
 		basePower: 100,
@@ -7887,7 +7872,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	happyhour: {
-		availability: {atlas: 1},
 		num: 603,
 		accuracy: true,
 		basePower: 0,
@@ -7906,7 +7890,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	harden: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 106,
 		accuracy: true,
 		basePower: 0,
@@ -7925,7 +7909,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	haze: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 114,
 		accuracy: true,
 		basePower: 0,
@@ -7947,7 +7931,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	headbutt: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 29,
 		accuracy: 100,
 		basePower: 70,
@@ -7965,7 +7949,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	headcharge: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 543,
 		accuracy: 100,
 		basePower: 120,
@@ -7981,7 +7965,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	headsmash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 457,
 		accuracy: 80,
 		basePower: 150,
@@ -7997,7 +7981,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	healbell: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 215,
 		accuracy: true,
 		basePower: 0,
@@ -8022,7 +8006,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	healblock: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 377,
 		accuracy: 100,
 		basePower: 0,
@@ -8088,7 +8072,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	healingwish: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 361,
 		accuracy: true,
 		basePower: 0,
@@ -8121,7 +8105,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	healorder: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 456,
 		accuracy: true,
 		basePower: 0,
@@ -8139,7 +8123,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	healpulse: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 505,
 		accuracy: true,
 		basePower: 0,
@@ -8167,7 +8151,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	heartstamp: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 531,
 		accuracy: 100,
 		basePower: 60,
@@ -8186,7 +8170,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	heartswap: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 391,
 		accuracy: true,
 		basePower: 0,
@@ -8218,7 +8202,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	heatcrash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 535,
 		accuracy: 100,
 		basePower: 0,
@@ -8259,7 +8243,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	heatwave: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 257,
 		accuracy: 90,
 		basePower: 95,
@@ -8277,7 +8261,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	heavyslam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 484,
 		accuracy: 100,
 		basePower: 0,
@@ -8318,7 +8302,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	helpinghand: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 270,
 		accuracy: true,
 		basePower: 0,
@@ -8354,7 +8338,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	hex: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 506,
 		accuracy: 100,
 		basePower: 65,
@@ -8374,7 +8358,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	hiddenpower: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 237,
 		accuracy: 100,
 		basePower: 60,
@@ -8537,7 +8521,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	hiddenpowerground: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 237,
 		accuracy: 100,
 		basePower: 60,
@@ -8586,7 +8570,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	hiddenpowerpsychic: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 237,
 		accuracy: 100,
 		basePower: 60,
@@ -8651,7 +8635,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	highhorsepower: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 667,
 		accuracy: 95,
 		basePower: 95,
@@ -8666,7 +8650,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	highjumpkick: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 136,
 		accuracy: 90,
 		basePower: 130,
@@ -8704,7 +8688,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	holdhands: {
-		availability: {atlas: 1},
 		num: 607,
 		accuracy: true,
 		basePower: 0,
@@ -8720,7 +8703,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	honeclaws: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 468,
 		accuracy: true,
 		basePower: 0,
@@ -8740,7 +8723,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	hornattack: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 30,
 		accuracy: 100,
 		basePower: 65,
@@ -8773,7 +8756,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	hornleech: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 532,
 		accuracy: 100,
 		basePower: 75,
@@ -8789,7 +8772,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	howl: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 336,
 		accuracy: true,
 		basePower: 0,
@@ -8808,7 +8791,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	hurricane: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 542,
 		accuracy: 70,
 		basePower: 110,
@@ -8838,7 +8821,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	hydrocannon: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 308,
 		accuracy: 90,
 		basePower: 150,
@@ -8856,7 +8839,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	hydropump: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 56,
 		accuracy: 80,
 		basePower: 110,
@@ -8887,7 +8870,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	hyperbeam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 63,
 		accuracy: 90,
 		basePower: 150,
@@ -8905,7 +8888,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	hyperfang: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 158,
 		accuracy: 90,
 		basePower: 80,
@@ -8924,7 +8907,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	hyperspacefury: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 621,
 		accuracy: true,
 		basePower: 100,
@@ -8960,7 +8943,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	hyperspacehole: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 593,
 		accuracy: true,
 		basePower: 80,
@@ -8977,7 +8960,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	hypervoice: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 304,
 		accuracy: 100,
 		basePower: 90,
@@ -8992,7 +8975,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	hypnosis: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 95,
 		accuracy: 60,
 		basePower: 0,
@@ -9009,7 +8992,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	iceball: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 301,
 		accuracy: 90,
 		basePower: 30,
@@ -9056,7 +9039,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	icebeam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 58,
 		accuracy: 100,
 		basePower: 90,
@@ -9103,7 +9086,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	icefang: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 423,
 		accuracy: 95,
 		basePower: 65,
@@ -9126,7 +9109,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	icehammer: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 665,
 		accuracy: 90,
 		basePower: 100,
@@ -9147,7 +9130,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	icepunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 8,
 		accuracy: 100,
 		basePower: 75,
@@ -9165,7 +9148,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	iceshard: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 420,
 		accuracy: 100,
 		basePower: 40,
@@ -9180,7 +9163,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	iciclecrash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 556,
 		accuracy: 90,
 		basePower: 85,
@@ -9198,7 +9181,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	iciclespear: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 333,
 		accuracy: 100,
 		basePower: 25,
@@ -9216,7 +9199,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	icywind: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 196,
 		accuracy: 95,
 		basePower: 55,
@@ -9236,7 +9219,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	imprison: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 286,
 		accuracy: true,
 		basePower: 0,
@@ -9274,7 +9257,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	incinerate: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 510,
 		accuracy: 100,
 		basePower: 60,
@@ -9295,7 +9278,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	inferno: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 517,
 		accuracy: 50,
 		basePower: 100,
@@ -9313,7 +9296,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	infernooverdrive: {
-		availability: {atlas: 1},
 		num: 640,
 		accuracy: true,
 		basePower: 1,
@@ -9330,7 +9312,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	infestation: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 611,
 		accuracy: 100,
 		basePower: 20,
@@ -9346,7 +9328,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	ingrain: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 275,
 		accuracy: true,
 		basePower: 0,
@@ -9380,7 +9362,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	instruct: {
-		availability: {atlas: 1},
 		num: 689,
 		accuracy: true,
 		basePower: 0,
@@ -9414,7 +9395,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	iondeluge: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 569,
 		accuracy: true,
 		basePower: 0,
@@ -9446,7 +9427,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	irondefense: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 334,
 		accuracy: true,
 		basePower: 0,
@@ -9465,7 +9446,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	ironhead: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 442,
 		accuracy: 100,
 		basePower: 80,
@@ -9483,7 +9464,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	irontail: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 231,
 		accuracy: 75,
 		basePower: 100,
@@ -9503,7 +9484,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	jawlock: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 746,
 		accuracy: 100,
 		basePower: 80,
@@ -9543,7 +9524,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	jumpkick: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 26,
 		accuracy: 95,
 		basePower: 100,
@@ -9563,7 +9544,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	junglehealing: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 816,
 		accuracy: true,
 		basePower: 0,
@@ -9581,7 +9562,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Grass",
 	},
 	karatechop: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 2,
 		accuracy: 100,
 		basePower: 50,
@@ -9598,7 +9579,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	kinesis: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 134,
 		accuracy: 80,
 		basePower: 0,
@@ -9617,7 +9598,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	kingsshield: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 588,
 		accuracy: true,
 		basePower: 0,
@@ -9676,7 +9657,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	knockoff: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 282,
 		accuracy: 100,
 		basePower: 65,
@@ -9722,7 +9703,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	laserfocus: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 673,
 		accuracy: true,
 		basePower: 0,
@@ -9759,7 +9740,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	lashout: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 808,
 		accuracy: 100,
 		basePower: 75,
@@ -9779,7 +9760,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Dark",
 	},
 	lastresort: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 387,
 		accuracy: 100,
 		basePower: 140,
@@ -9806,7 +9787,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	lavaplume: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 436,
 		accuracy: 100,
 		basePower: 80,
@@ -9824,7 +9805,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	leafage: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 670,
 		accuracy: 100,
 		basePower: 40,
@@ -9839,7 +9820,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	leafblade: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 348,
 		accuracy: 100,
 		basePower: 90,
@@ -9855,7 +9836,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	leafstorm: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 437,
 		accuracy: 90,
 		basePower: 130,
@@ -9875,7 +9856,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	leaftornado: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 536,
 		accuracy: 90,
 		basePower: 65,
@@ -9895,7 +9876,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	leechlife: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 141,
 		accuracy: 100,
 		basePower: 80,
@@ -9911,7 +9892,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	leechseed: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 73,
 		accuracy: 90,
 		basePower: 0,
@@ -9948,7 +9929,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	leer: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 43,
 		accuracy: 100,
 		basePower: 0,
@@ -9983,7 +9964,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	lick: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 122,
 		accuracy: 100,
 		basePower: 30,
@@ -10001,7 +9982,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	lifedew: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 791,
 		accuracy: true,
 		basePower: 0,
@@ -10033,7 +10014,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	lightscreen: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 113,
 		accuracy: true,
 		basePower: 0,
@@ -10096,7 +10077,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	liquidation: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 710,
 		accuracy: 100,
 		basePower: 85,
@@ -10116,7 +10097,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	lockon: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 199,
 		accuracy: true,
 		basePower: 0,
@@ -10150,7 +10131,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	lovelykiss: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 142,
 		accuracy: 75,
 		basePower: 0,
@@ -10167,7 +10148,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	lowkick: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 67,
 		accuracy: 100,
 		basePower: 0,
@@ -10209,7 +10190,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	lowsweep: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 490,
 		accuracy: 100,
 		basePower: 65,
@@ -10229,7 +10210,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	luckychant: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 381,
 		accuracy: true,
 		basePower: 0,
@@ -10259,7 +10240,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	lunardance: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 461,
 		accuracy: true,
 		basePower: 0,
@@ -10301,7 +10282,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	lunge: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 679,
 		accuracy: 100,
 		basePower: 80,
@@ -10321,7 +10302,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	lusterpurge: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 295,
 		accuracy: 100,
 		basePower: 70,
@@ -10341,7 +10322,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	machpunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 183,
 		accuracy: 100,
 		basePower: 40,
@@ -10356,7 +10337,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	magicalleaf: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 345,
 		accuracy: true,
 		basePower: 60,
@@ -10371,7 +10352,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	magiccoat: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 277,
 		accuracy: true,
 		basePower: 0,
@@ -10418,7 +10399,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	magicpowder: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 750,
 		accuracy: 100,
 		basePower: 0,
@@ -10436,7 +10417,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Psychic",
 	},
 	magicroom: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 478,
 		accuracy: true,
 		basePower: 0,
@@ -10475,7 +10456,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	magmastorm: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 463,
 		accuracy: 75,
 		basePower: 100,
@@ -10491,7 +10472,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	magnetbomb: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 443,
 		accuracy: true,
 		basePower: 60,
@@ -10507,7 +10488,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	magneticflux: {
-		availability: {atlas: 1},
 		num: 602,
 		accuracy: true,
 		basePower: 0,
@@ -10536,7 +10516,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	magnetrise: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 393,
 		accuracy: true,
 		basePower: 0,
@@ -10575,7 +10555,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	magnitude: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 222,
 		accuracy: 100,
 		basePower: 0,
@@ -10637,7 +10617,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	matblock: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 561,
 		accuracy: true,
 		basePower: 0,
@@ -10951,7 +10931,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	maxovergrowth: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 773,
 		accuracy: true,
 		basePower: 10,
@@ -11122,7 +11102,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	meanlook: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 212,
 		accuracy: true,
 		basePower: 0,
@@ -11141,7 +11121,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	meditate: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 96,
 		accuracy: true,
 		basePower: 0,
@@ -11161,7 +11141,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	mefirst: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 382,
 		accuracy: true,
 		basePower: 0,
@@ -11201,7 +11181,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	megadrain: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 72,
 		accuracy: 100,
 		basePower: 40,
@@ -11218,7 +11198,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	megahorn: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 224,
 		accuracy: 85,
 		basePower: 120,
@@ -11233,7 +11213,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	megakick: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 25,
 		accuracy: 75,
 		basePower: 120,
@@ -11248,7 +11228,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	megapunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 5,
 		accuracy: 85,
 		basePower: 80,
@@ -11263,7 +11243,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	memento: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 262,
 		accuracy: 100,
 		basePower: 0,
@@ -11301,7 +11281,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	metalburst: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 368,
 		accuracy: 100,
 		basePower: 0,
@@ -11333,7 +11313,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	metalclaw: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 232,
 		accuracy: 95,
 		basePower: 50,
@@ -11355,7 +11335,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	metalsound: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 319,
 		accuracy: 85,
 		basePower: 0,
@@ -11374,7 +11354,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	meteorassault: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 794,
 		accuracy: 100,
 		basePower: 150,
@@ -11391,7 +11371,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fighting",
 	},
 	meteorbeam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 800,
 		accuracy: 90,
 		basePower: 120,
@@ -11417,7 +11397,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Rock",
 	},
 	meteormash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 309,
 		accuracy: 90,
 		basePower: 90,
@@ -11439,7 +11419,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	metronome: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 118,
 		accuracy: true,
 		basePower: 0,
@@ -11477,7 +11457,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	milkdrink: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 208,
 		accuracy: true,
 		basePower: 0,
@@ -11494,7 +11474,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	mimic: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 102,
 		accuracy: true,
 		basePower: 0,
@@ -11532,7 +11512,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	mindblown: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 720,
 		accuracy: 100,
 		basePower: 150,
@@ -11553,7 +11533,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	mindreader: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 170,
 		accuracy: true,
 		basePower: 0,
@@ -11576,7 +11556,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	minimize: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 107,
 		accuracy: true,
 		basePower: 0,
@@ -11616,7 +11596,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	miracleeye: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 357,
 		accuracy: true,
 		basePower: 0,
@@ -11651,7 +11631,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	mirrorcoat: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 243,
 		accuracy: 100,
 		basePower: 0,
@@ -11697,7 +11677,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	mirrormove: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 119,
 		accuracy: true,
 		basePower: 0,
@@ -11722,7 +11702,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	mirrorshot: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 429,
 		accuracy: 85,
 		basePower: 65,
@@ -11743,7 +11723,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	mist: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 54,
 		accuracy: true,
 		basePower: 0,
@@ -11787,7 +11767,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	mistball: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 296,
 		accuracy: 100,
 		basePower: 70,
@@ -11807,7 +11787,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	mistyexplosion: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 802,
 		accuracy: 100,
 		basePower: 100,
@@ -11828,7 +11808,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fairy",
 	},
 	mistyterrain: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 581,
 		accuracy: true,
 		basePower: 0,
@@ -11887,7 +11867,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	moonblast: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 585,
 		accuracy: 100,
 		basePower: 95,
@@ -11923,7 +11903,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	moonlight: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 236,
 		accuracy: true,
 		basePower: 0,
@@ -11955,7 +11935,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	morningsun: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 234,
 		accuracy: true,
 		basePower: 0,
@@ -11987,7 +11967,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	mudbomb: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 426,
 		accuracy: 85,
 		basePower: 65,
@@ -12008,7 +11988,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	mudshot: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 341,
 		accuracy: 95,
 		basePower: 55,
@@ -12028,7 +12008,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	mudslap: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 189,
 		accuracy: 100,
 		basePower: 20,
@@ -12048,7 +12028,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	mudsport: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 300,
 		accuracy: true,
 		basePower: 0,
@@ -12084,7 +12064,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	muddywater: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 330,
 		accuracy: 85,
 		basePower: 90,
@@ -12124,7 +12104,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	mysticalfire: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 595,
 		accuracy: 100,
 		basePower: 75,
@@ -12144,7 +12124,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	nastyplot: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 417,
 		accuracy: true,
 		basePower: 0,
@@ -12163,7 +12143,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	naturalgift: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 363,
 		accuracy: 100,
 		basePower: 0,
@@ -12197,7 +12177,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	naturepower: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 267,
 		accuracy: true,
 		basePower: 0,
@@ -12226,7 +12206,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	naturesmadness: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 717,
 		accuracy: 90,
 		basePower: 0,
@@ -12244,7 +12224,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	needlearm: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 302,
 		accuracy: 100,
 		basePower: 60,
@@ -12263,7 +12243,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	neverendingnightmare: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 636,
 		accuracy: true,
 		basePower: 1,
@@ -12280,7 +12260,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	nightdaze: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 539,
 		accuracy: 95,
 		basePower: 85,
@@ -12300,7 +12280,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	nightmare: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 171,
 		accuracy: 100,
 		basePower: 0,
@@ -12331,7 +12311,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	nightshade: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 101,
 		accuracy: 100,
 		basePower: 0,
@@ -12347,7 +12327,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	nightslash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 400,
 		accuracy: 100,
 		basePower: 70,
@@ -12363,7 +12343,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	nobleroar: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 568,
 		accuracy: 100,
 		basePower: 0,
@@ -12383,7 +12363,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	noretreat: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 748,
 		accuracy: true,
 		basePower: 0,
@@ -12419,7 +12399,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fighting",
 	},
 	nuzzle: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 609,
 		accuracy: 100,
 		basePower: 20,
@@ -12437,7 +12417,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	oblivionwing: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 613,
 		accuracy: 100,
 		basePower: 80,
@@ -12453,7 +12433,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	obstruct: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 792,
 		accuracy: 100,
 		basePower: 0,
@@ -12526,7 +12506,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	octazooka: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 190,
 		accuracy: 85,
 		basePower: 65,
@@ -12546,7 +12526,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	octolock: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 753,
 		accuracy: 100,
 		basePower: 0,
@@ -12582,7 +12562,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fighting",
 	},
 	odorsleuth: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 316,
 		accuracy: true,
 		basePower: 0,
@@ -12603,7 +12583,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	ominouswind: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 466,
 		accuracy: 100,
 		basePower: 60,
@@ -12644,7 +12624,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	outrage: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 200,
 		accuracy: 100,
 		basePower: 120,
@@ -12667,7 +12647,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	overdrive: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 786,
 		accuracy: 100,
 		basePower: 80,
@@ -12681,7 +12661,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Electric",
 	},
 	overheat: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 315,
 		accuracy: 90,
 		basePower: 130,
@@ -12701,7 +12681,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	painsplit: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 220,
 		accuracy: true,
 		basePower: 0,
@@ -12746,7 +12726,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	paraboliccharge: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 570,
 		accuracy: 100,
 		basePower: 65,
@@ -12762,7 +12742,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	partingshot: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 575,
 		accuracy: 100,
 		basePower: 0,
@@ -12785,7 +12765,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	payback: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 371,
 		accuracy: 100,
 		basePower: 50,
@@ -12808,7 +12788,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	payday: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 6,
 		accuracy: 100,
 		basePower: 40,
@@ -12826,7 +12806,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	peck: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 64,
 		accuracy: 100,
 		basePower: 35,
@@ -12841,7 +12821,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	perishsong: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 195,
 		accuracy: true,
 		basePower: 0,
@@ -12888,7 +12868,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	petalblizzard: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 572,
 		accuracy: 100,
 		basePower: 90,
@@ -12903,7 +12883,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	petaldance: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 80,
 		accuracy: 100,
 		basePower: 120,
@@ -12926,7 +12906,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	phantomforce: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 566,
 		accuracy: 100,
 		basePower: 90,
@@ -12994,7 +12974,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	pinmissile: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 42,
 		accuracy: 95,
 		basePower: 25,
@@ -13012,7 +12992,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	plasmafists: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 721,
 		accuracy: 100,
 		basePower: 100,
@@ -13028,7 +13008,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	playnice: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 589,
 		accuracy: true,
 		basePower: 0,
@@ -13047,7 +13027,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	playrough: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 583,
 		accuracy: 90,
 		basePower: 90,
@@ -13067,7 +13047,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	pluck: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 365,
 		accuracy: 100,
 		basePower: 60,
@@ -13093,7 +13073,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	poisonfang: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 305,
 		accuracy: 100,
 		basePower: 50,
@@ -13111,7 +13091,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	poisongas: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 139,
 		accuracy: 90,
 		basePower: 0,
@@ -13128,7 +13108,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	poisonjab: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 398,
 		accuracy: 100,
 		basePower: 80,
@@ -13146,7 +13126,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	poisonpowder: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 77,
 		accuracy: 75,
 		basePower: 0,
@@ -13163,7 +13143,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	poisonsting: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 40,
 		accuracy: 100,
 		basePower: 15,
@@ -13181,7 +13161,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	poisontail: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 342,
 		accuracy: 100,
 		basePower: 50,
@@ -13200,7 +13180,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	pollenpuff: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 676,
 		accuracy: 100,
 		basePower: 90,
@@ -13228,7 +13208,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	poltergeist: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 809,
 		accuracy: 90,
 		basePower: 110,
@@ -13248,7 +13228,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Ghost",
 	},
 	pound: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 1,
 		accuracy: 100,
 		basePower: 40,
@@ -13263,7 +13243,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	powder: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 600,
 		accuracy: 100,
 		basePower: 0,
@@ -13295,7 +13275,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	powdersnow: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 181,
 		accuracy: 100,
 		basePower: 40,
@@ -13313,7 +13293,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	powergem: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 408,
 		accuracy: 100,
 		basePower: 80,
@@ -13328,7 +13308,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	powersplit: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 471,
 		accuracy: true,
 		basePower: 0,
@@ -13353,7 +13333,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	powerswap: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 384,
 		accuracy: true,
 		basePower: 0,
@@ -13384,7 +13364,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	powertrick: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 379,
 		accuracy: true,
 		basePower: 0,
@@ -13426,7 +13406,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	powertrip: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 681,
 		accuracy: 100,
 		basePower: 20,
@@ -13446,7 +13426,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	poweruppunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 612,
 		accuracy: 100,
 		basePower: 40,
@@ -13468,7 +13448,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	powerwhip: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 438,
 		accuracy: 85,
 		basePower: 120,
@@ -13497,7 +13477,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	present: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 217,
 		accuracy: 90,
 		basePower: 0,
@@ -13543,7 +13523,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	protect: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 182,
 		accuracy: true,
 		basePower: 0,
@@ -13594,7 +13574,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	psybeam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 60,
 		accuracy: 100,
 		basePower: 65,
@@ -13612,7 +13592,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	psychup: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 244,
 		accuracy: true,
 		basePower: 0,
@@ -13644,7 +13624,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	psychic: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 94,
 		accuracy: 100,
 		basePower: 90,
@@ -13664,7 +13644,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	psychicfangs: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 706,
 		accuracy: 100,
 		basePower: 85,
@@ -13685,7 +13665,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	psychicterrain: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 678,
 		accuracy: true,
 		basePower: 0,
@@ -13746,7 +13726,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	psychoboost: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 354,
 		accuracy: 90,
 		basePower: 140,
@@ -13767,7 +13747,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	psychocut: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 427,
 		accuracy: 100,
 		basePower: 70,
@@ -13783,7 +13763,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	psychoshift: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 375,
 		accuracy: 100,
 		basePower: 0,
@@ -13808,7 +13788,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	psyshock: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 473,
 		accuracy: 100,
 		basePower: 80,
@@ -13824,7 +13804,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	psystrike: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 540,
 		accuracy: 100,
 		basePower: 100,
@@ -13840,7 +13820,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	psywave: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 149,
 		accuracy: 100,
 		basePower: 0,
@@ -13875,7 +13855,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	punishment: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 386,
 		accuracy: 100,
 		basePower: 0,
@@ -13898,7 +13878,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	purify: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 685,
 		accuracy: true,
 		basePower: 0,
@@ -13918,7 +13898,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	pursuit: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 228,
 		accuracy: 100,
 		basePower: 40,
@@ -14003,7 +13983,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fire",
 	},
 	quash: {
-		availability: {atlas: 1},
 		num: 511,
 		accuracy: 100,
 		basePower: 0,
@@ -14027,7 +14006,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	quickattack: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 98,
 		accuracy: 100,
 		basePower: 40,
@@ -14042,7 +14021,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	quickguard: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 501,
 		accuracy: true,
 		basePower: 0,
@@ -14091,7 +14070,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	quiverdance: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 483,
 		accuracy: true,
 		basePower: 0,
@@ -14112,7 +14091,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	rage: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 99,
 		accuracy: 100,
 		basePower: 20,
@@ -14146,7 +14125,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	ragepowder: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 476,
 		accuracy: true,
 		basePower: 0,
@@ -14183,7 +14162,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	raindance: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 240,
 		accuracy: true,
 		basePower: 0,
@@ -14200,7 +14179,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	rapidspin: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 229,
 		accuracy: 100,
 		basePower: 50,
@@ -14256,7 +14235,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	razorleaf: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 75,
 		accuracy: 95,
 		basePower: 55,
@@ -14272,7 +14251,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	razorshell: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 534,
 		accuracy: 95,
 		basePower: 75,
@@ -14292,7 +14271,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	razorwind: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 13,
 		accuracy: 100,
 		basePower: 80,
@@ -14320,7 +14299,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	recover: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 105,
 		accuracy: true,
 		basePower: 0,
@@ -14337,7 +14316,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	recycle: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 278,
 		accuracy: true,
 		basePower: 0,
@@ -14360,7 +14339,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	reflect: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 115,
 		accuracy: true,
 		basePower: 0,
@@ -14403,7 +14382,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	reflecttype: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 513,
 		accuracy: true,
 		basePower: 0,
@@ -14434,7 +14413,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	refresh: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 287,
 		accuracy: true,
 		basePower: 0,
@@ -14485,7 +14464,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	rest: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 156,
 		accuracy: true,
 		basePower: 0,
@@ -14519,7 +14498,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	retaliate: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 514,
 		accuracy: 100,
 		basePower: 70,
@@ -14540,7 +14519,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	return: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 216,
 		accuracy: 100,
 		basePower: 0,
@@ -14582,7 +14561,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	revenge: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 279,
 		accuracy: 100,
 		basePower: 60,
@@ -14607,7 +14586,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	reversal: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 179,
 		accuracy: 100,
 		basePower: 0,
@@ -14642,7 +14621,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	risingvoltage: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 804,
 		accuracy: 100,
 		basePower: 70,
@@ -14663,7 +14642,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		maxMove: {basePower: 140},
 	},
 	roar: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 46,
 		accuracy: true,
 		basePower: 0,
@@ -14698,7 +14677,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	rockblast: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 350,
 		accuracy: 90,
 		basePower: 25,
@@ -14716,7 +14695,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	rockclimb: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 431,
 		accuracy: 85,
 		basePower: 90,
@@ -14735,7 +14714,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	rockpolish: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 397,
 		accuracy: true,
 		basePower: 0,
@@ -14754,7 +14733,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	rockslide: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 157,
 		accuracy: 90,
 		basePower: 75,
@@ -14772,7 +14751,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	rocksmash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 249,
 		accuracy: 100,
 		basePower: 40,
@@ -14792,7 +14771,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	rockthrow: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 88,
 		accuracy: 90,
 		basePower: 50,
@@ -14807,7 +14786,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	rocktomb: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 317,
 		accuracy: 95,
 		basePower: 60,
@@ -14827,7 +14806,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	rockwrecker: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 439,
 		accuracy: 90,
 		basePower: 150,
@@ -14845,7 +14824,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	roleplay: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 272,
 		accuracy: true,
 		basePower: 0,
@@ -14882,7 +14861,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	rollingkick: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 27,
 		accuracy: 85,
 		basePower: 60,
@@ -14901,7 +14880,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	rollout: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 205,
 		accuracy: 90,
 		basePower: 30,
@@ -14947,7 +14926,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	roost: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 355,
 		accuracy: true,
 		basePower: 0,
@@ -14979,7 +14958,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	rototiller: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 563,
 		accuracy: true,
 		basePower: 0,
@@ -15015,7 +14994,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	round: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 496,
 		accuracy: 100,
 		basePower: 60,
@@ -15045,7 +15024,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	sacredfire: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 221,
 		accuracy: 95,
 		basePower: 100,
@@ -15063,7 +15042,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	sacredsword: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 533,
 		accuracy: 100,
 		basePower: 90,
@@ -15080,7 +15059,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	safeguard: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 219,
 		accuracy: true,
 		basePower: 0,
@@ -15135,7 +15114,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	sandattack: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 28,
 		accuracy: 100,
 		basePower: 0,
@@ -15154,7 +15133,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	sandstorm: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 201,
 		accuracy: true,
 		basePower: 0,
@@ -15171,7 +15150,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	sandtomb: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 328,
 		accuracy: 85,
 		basePower: 35,
@@ -15222,7 +15201,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	scald: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 503,
 		accuracy: 100,
 		basePower: 80,
@@ -15241,7 +15220,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	scaleshot: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 799,
 		accuracy: 90,
 		basePower: 25,
@@ -15264,7 +15243,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		maxMove: {basePower: 130},
 	},
 	scaryface: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 184,
 		accuracy: 100,
 		basePower: 0,
@@ -15283,7 +15262,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	scorchingsands: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 815,
 		accuracy: 100,
 		basePower: 70,
@@ -15301,7 +15280,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Ground",
 	},
 	scratch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 10,
 		accuracy: 100,
 		basePower: 40,
@@ -15316,7 +15295,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	screech: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 103,
 		accuracy: 85,
 		basePower: 0,
@@ -15335,7 +15314,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	searingshot: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 545,
 		accuracy: 100,
 		basePower: 100,
@@ -15370,7 +15349,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	secretpower: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 290,
 		accuracy: 100,
 		basePower: 70,
@@ -15418,7 +15397,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	secretsword: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 548,
 		accuracy: 100,
 		basePower: 85,
@@ -15434,7 +15413,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	seedbomb: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 402,
 		accuracy: 100,
 		basePower: 80,
@@ -15449,7 +15428,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	seedflare: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 465,
 		accuracy: 85,
 		basePower: 120,
@@ -15470,7 +15449,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	seismictoss: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69,
 		accuracy: 100,
 		basePower: 0,
@@ -15487,7 +15466,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	selfdestruct: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 120,
 		accuracy: 100,
 		basePower: 200,
@@ -15503,7 +15482,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	shadowball: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 247,
 		accuracy: 100,
 		basePower: 80,
@@ -15523,7 +15502,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	shadowbone: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 708,
 		accuracy: 100,
 		basePower: 85,
@@ -15543,7 +15522,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	shadowclaw: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 421,
 		accuracy: 100,
 		basePower: 70,
@@ -15559,7 +15538,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	shadowforce: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 467,
 		accuracy: 100,
 		basePower: 120,
@@ -15590,7 +15569,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	shadowpunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 325,
 		accuracy: true,
 		basePower: 60,
@@ -15605,7 +15584,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	shadowsneak: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 425,
 		accuracy: 100,
 		basePower: 40,
@@ -15640,7 +15619,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	sharpen: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 159,
 		accuracy: true,
 		basePower: 0,
@@ -15676,7 +15655,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	sheercold: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 329,
 		accuracy: 30,
 		basePower: 0,
@@ -15694,7 +15673,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	shellsidearm: {
-		availability: {atlas: 1},
 		num: 801,
 		accuracy: 100,
 		basePower: 90,
@@ -15736,7 +15714,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Poison",
 	},
 	shellsmash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 504,
 		accuracy: true,
 		basePower: 0,
@@ -15759,7 +15737,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	shelltrap: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 704,
 		accuracy: 100,
 		basePower: 150,
@@ -15799,7 +15777,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	shiftgear: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 508,
 		accuracy: true,
 		basePower: 0,
@@ -15819,7 +15797,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	shockwave: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 351,
 		accuracy: true,
 		basePower: 60,
@@ -15834,7 +15812,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	shoreup: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 659,
 		accuracy: true,
 		basePower: 0,
@@ -15857,7 +15835,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	signalbeam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 324,
 		accuracy: 100,
 		basePower: 75,
@@ -15876,7 +15854,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	silverwind: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 318,
 		accuracy: 100,
 		basePower: 60,
@@ -15903,7 +15881,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	simplebeam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 493,
 		accuracy: 100,
 		basePower: 0,
@@ -15932,7 +15910,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	sing: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 47,
 		accuracy: 55,
 		basePower: 0,
@@ -15983,7 +15961,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	sketch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 166,
 		accuracy: true,
 		basePower: 0,
@@ -16022,7 +16000,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	skillswap: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 285,
 		accuracy: true,
 		basePower: 0,
@@ -16066,7 +16044,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	skittersmack: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 806,
 		accuracy: 90,
 		basePower: 70,
@@ -16085,7 +16063,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Bug",
 	},
 	skullbash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 130,
 		accuracy: 100,
 		basePower: 130,
@@ -16112,7 +16090,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	skyattack: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 143,
 		accuracy: 90,
 		basePower: 140,
@@ -16142,7 +16120,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	skydrop: {
-		availability: {atlas: 1},
 		num: 507,
 		accuracy: 100,
 		basePower: 60,
@@ -16254,7 +16231,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	skyuppercut: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 327,
 		accuracy: 90,
 		basePower: 85,
@@ -16270,7 +16247,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	slackoff: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 303,
 		accuracy: true,
 		basePower: 0,
@@ -16287,7 +16264,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	slam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 21,
 		accuracy: 75,
 		basePower: 80,
@@ -16302,7 +16279,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	slash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 163,
 		accuracy: 100,
 		basePower: 70,
@@ -16318,7 +16295,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	sleeppowder: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 79,
 		accuracy: 75,
 		basePower: 0,
@@ -16335,7 +16312,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	sleeptalk: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 214,
 		accuracy: true,
 		basePower: 0,
@@ -16376,7 +16353,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	sludge: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 124,
 		accuracy: 100,
 		basePower: 65,
@@ -16394,7 +16371,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	sludgebomb: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 188,
 		accuracy: 100,
 		basePower: 90,
@@ -16412,7 +16389,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	sludgewave: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 482,
 		accuracy: 100,
 		basePower: 95,
@@ -16430,7 +16407,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	smackdown: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 479,
 		accuracy: 100,
 		basePower: 50,
@@ -16477,7 +16454,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	smartstrike: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 684,
 		accuracy: true,
 		basePower: 70,
@@ -16492,7 +16469,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	smellingsalts: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 265,
 		accuracy: 100,
 		basePower: 70,
@@ -16515,7 +16492,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	smog: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 123,
 		accuracy: 70,
 		basePower: 30,
@@ -16533,7 +16510,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	smokescreen: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 108,
 		accuracy: 100,
 		basePower: 0,
@@ -16552,7 +16529,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	snaptrap: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 779,
 		accuracy: 100,
 		basePower: 35,
@@ -16567,7 +16544,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Grass",
 	},
 	snarl: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 555,
 		accuracy: 95,
 		basePower: 55,
@@ -16587,7 +16564,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	snatch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 289,
 		accuracy: true,
 		basePower: 0,
@@ -16624,7 +16601,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	snipeshot: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 745,
 		accuracy: 100,
 		basePower: 80,
@@ -16640,7 +16617,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Water",
 	},
 	snore: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 173,
 		accuracy: 100,
 		basePower: 50,
@@ -16662,7 +16639,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	soak: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 487,
 		accuracy: 100,
 		basePower: 0,
@@ -16687,7 +16664,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	softboiled: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 135,
 		accuracy: true,
 		basePower: 0,
@@ -16704,7 +16681,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	solarbeam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 76,
 		accuracy: 100,
 		basePower: 120,
@@ -16741,7 +16718,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	solarblade: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 669,
 		accuracy: 100,
 		basePower: 125,
@@ -16778,7 +16755,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	sonicboom: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 49,
 		accuracy: 90,
 		basePower: 0,
@@ -16827,7 +16804,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	spark: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 209,
 		accuracy: 100,
 		basePower: 65,
@@ -16845,7 +16822,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	sparklingaria: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 664,
 		accuracy: 100,
 		basePower: 90,
@@ -16892,7 +16869,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	spectralthief: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 712,
 		accuracy: 100,
 		basePower: 90,
@@ -16909,7 +16886,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	speedswap: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 683,
 		accuracy: true,
 		basePower: 0,
@@ -16931,7 +16908,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	spiderweb: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 169,
 		accuracy: true,
 		basePower: 0,
@@ -16951,7 +16928,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	spikecannon: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 131,
 		accuracy: 100,
 		basePower: 20,
@@ -16969,7 +16946,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	spikes: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 191,
 		accuracy: true,
 		basePower: 0,
@@ -17004,7 +16981,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	spikyshield: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 596,
 		accuracy: true,
 		basePower: 0,
@@ -17063,7 +17040,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	spiritbreak: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 789,
 		accuracy: 100,
 		basePower: 75,
@@ -17082,7 +17059,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fairy",
 	},
 	spiritshackle: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 662,
 		accuracy: 100,
 		basePower: 80,
@@ -17102,7 +17079,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	spitup: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 255,
 		accuracy: 100,
 		basePower: 0,
@@ -17127,7 +17104,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	spite: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 180,
 		accuracy: 100,
 		basePower: 0,
@@ -17152,7 +17129,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	splash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 150,
 		accuracy: true,
 		basePower: 0,
@@ -17200,7 +17177,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	splishysplash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 730,
 		accuracy: 100,
 		basePower: 90,
@@ -17219,7 +17196,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	spore: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 147,
 		accuracy: 100,
 		basePower: 0,
@@ -17236,7 +17213,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	spotlight: {
-		availability: {atlas: 1},
 		num: 671,
 		accuracy: true,
 		basePower: 0,
@@ -17270,7 +17246,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	stealthrock: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 446,
 		accuracy: true,
 		basePower: 0,
@@ -17298,7 +17274,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	steameruption: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 592,
 		accuracy: 95,
 		basePower: 110,
@@ -17317,7 +17293,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	steamroller: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 537,
 		accuracy: 100,
 		basePower: 65,
@@ -17336,7 +17312,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	steelbeam: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 796,
 		accuracy: 95,
 		basePower: 140,
@@ -17356,7 +17332,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Steel",
 	},
 	steelroller: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 798,
 		accuracy: 100,
 		basePower: 130,
@@ -17379,7 +17355,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Steel",
 	},
 	steelwing: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 211,
 		accuracy: 90,
 		basePower: 70,
@@ -17401,7 +17377,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	stickyweb: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 564,
 		accuracy: true,
 		basePower: 0,
@@ -17430,7 +17406,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	stockpile: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 254,
 		accuracy: true,
 		basePower: 0,
@@ -17504,7 +17480,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	stomp: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 23,
 		accuracy: 100,
 		basePower: 65,
@@ -17522,7 +17498,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	stompingtantrum: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 707,
 		accuracy: 100,
 		basePower: 75,
@@ -17544,7 +17520,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	stoneedge: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 444,
 		accuracy: 80,
 		basePower: 100,
@@ -17560,7 +17536,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	storedpower: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 500,
 		accuracy: 100,
 		basePower: 20,
@@ -17580,7 +17556,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	stormthrow: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 480,
 		accuracy: 100,
 		basePower: 60,
@@ -17596,7 +17572,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	strangesteam: {
-		availability: {atlas: 1},
 		num: 790,
 		accuracy: 95,
 		basePower: 90,
@@ -17613,7 +17588,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fairy",
 	},
 	strength: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 70,
 		accuracy: 100,
 		basePower: 80,
@@ -17628,7 +17603,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	strengthsap: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 668,
 		accuracy: 100,
 		basePower: 0,
@@ -17650,7 +17625,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	stringshot: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 81,
 		accuracy: 95,
 		basePower: 0,
@@ -17669,7 +17644,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	struggle: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 165,
 		accuracy: true,
 		basePower: 50,
@@ -17691,7 +17666,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	strugglebug: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 522,
 		accuracy: 100,
 		basePower: 50,
@@ -17711,7 +17686,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	stuffcheeks: {
-		availability: {atlas: 1},
 		num: 747,
 		accuracy: true,
 		basePower: 0,
@@ -17734,7 +17708,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Normal",
 	},
 	stunspore: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 78,
 		accuracy: 75,
 		basePower: 0,
@@ -17751,7 +17725,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	submission: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 66,
 		accuracy: 80,
 		basePower: 80,
@@ -17767,7 +17741,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	substitute: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 164,
 		accuracy: true,
 		basePower: 0,
@@ -17862,7 +17836,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	suckerpunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 389,
 		accuracy: 100,
 		basePower: 70,
@@ -17884,7 +17858,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	sunnyday: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 241,
 		accuracy: true,
 		basePower: 0,
@@ -17901,7 +17875,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	sunsteelstrike: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 713,
 		accuracy: 100,
 		basePower: 100,
@@ -17917,7 +17891,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	superfang: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 162,
 		accuracy: 90,
 		basePower: 0,
@@ -17935,7 +17909,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	superpower: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 276,
 		accuracy: 100,
 		basePower: 120,
@@ -17956,7 +17930,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	supersonic: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 48,
 		accuracy: 55,
 		basePower: 0,
@@ -17989,7 +17963,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	surf: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 57,
 		accuracy: 100,
 		basePower: 90,
@@ -18021,7 +17995,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		maxMove: {basePower: 130},
 	},
 	swagger: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 207,
 		accuracy: 85,
 		basePower: 0,
@@ -18041,7 +18015,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	swallow: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 256,
 		accuracy: true,
 		basePower: 0,
@@ -18066,7 +18040,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	sweetkiss: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 186,
 		accuracy: 75,
 		basePower: 0,
@@ -18083,7 +18057,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	sweetscent: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 230,
 		accuracy: 100,
 		basePower: 0,
@@ -18102,7 +18076,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	swift: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 129,
 		accuracy: true,
 		basePower: 60,
@@ -18117,7 +18091,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	switcheroo: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 415,
 		accuracy: 100,
 		basePower: 0,
@@ -18166,7 +18140,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	swordsdance: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 14,
 		accuracy: true,
 		basePower: 0,
@@ -18185,7 +18159,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	synchronoise: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 485,
 		accuracy: 100,
 		basePower: 120,
@@ -18204,7 +18178,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	synthesis: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 235,
 		accuracy: true,
 		basePower: 0,
@@ -18236,7 +18210,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	tackle: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 33,
 		accuracy: 100,
 		basePower: 40,
@@ -18251,7 +18225,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	tailglow: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 294,
 		accuracy: true,
 		basePower: 0,
@@ -18271,7 +18245,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	tailslap: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 541,
 		accuracy: 85,
 		basePower: 25,
@@ -18289,7 +18263,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	tailwhip: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 39,
 		accuracy: 100,
 		basePower: 0,
@@ -18308,7 +18282,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	tailwind: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 366,
 		accuracy: true,
 		basePower: 0,
@@ -18346,7 +18320,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	takedown: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 36,
 		accuracy: 85,
 		basePower: 90,
@@ -18362,7 +18336,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	tarshot: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 749,
 		accuracy: 100,
 		basePower: 0,
@@ -18392,7 +18366,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Rock",
 	},
 	taunt: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 269,
 		accuracy: 100,
 		basePower: 0,
@@ -18437,7 +18411,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	tearfullook: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 715,
 		accuracy: true,
 		basePower: 0,
@@ -18457,7 +18431,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	teatime: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 752,
 		accuracy: true,
 		basePower: 0,
@@ -18488,7 +18462,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Normal",
 	},
 	technoblast: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 546,
 		accuracy: 100,
 		basePower: 120,
@@ -18507,7 +18481,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	tectonicrage: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 630,
 		accuracy: true,
 		basePower: 1,
@@ -18524,7 +18498,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	teeterdance: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 298,
 		accuracy: 100,
 		basePower: 0,
@@ -18541,7 +18515,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	telekinesis: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 477,
 		accuracy: true,
 		basePower: 0,
@@ -18596,7 +18570,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	teleport: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 100,
 		accuracy: true,
 		basePower: 0,
@@ -18614,7 +18588,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	terrainpulse: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 805,
 		accuracy: 100,
 		basePower: 50,
@@ -18652,7 +18626,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		maxMove: {basePower: 130},
 	},
 	thief: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 168,
 		accuracy: 100,
 		basePower: 60,
@@ -18683,7 +18657,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	thousandarrows: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 614,
 		accuracy: 100,
 		basePower: 90,
@@ -18709,7 +18683,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	thousandwaves: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 615,
 		accuracy: 100,
 		basePower: 90,
@@ -18727,7 +18701,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	thrash: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 37,
 		accuracy: 100,
 		basePower: 120,
@@ -18750,7 +18724,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	throatchop: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 675,
 		accuracy: 100,
 		basePower: 80,
@@ -18800,7 +18774,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	thunder: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 87,
 		accuracy: 70,
 		basePower: 110,
@@ -18830,7 +18804,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	thunderbolt: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 85,
 		accuracy: 100,
 		basePower: 90,
@@ -18848,7 +18822,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	thundercage: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 819,
 		accuracy: 90,
 		basePower: 80,
@@ -18863,7 +18837,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Electric",
 	},
 	thunderfang: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 422,
 		accuracy: 95,
 		basePower: 65,
@@ -18886,7 +18860,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	thunderouskick: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 823,
 		accuracy: 100,
 		basePower: 90,
@@ -18905,7 +18879,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fighting",
 	},
 	thunderpunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 9,
 		accuracy: 100,
 		basePower: 75,
@@ -18923,7 +18897,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	thundershock: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 84,
 		accuracy: 100,
 		basePower: 40,
@@ -18941,7 +18915,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	thunderwave: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 86,
 		accuracy: 90,
 		basePower: 0,
@@ -18959,7 +18933,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	tickle: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 321,
 		accuracy: 100,
 		basePower: 0,
@@ -18979,7 +18953,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	topsyturvy: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 576,
 		accuracy: true,
 		basePower: 0,
@@ -19006,7 +18980,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	torment: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 259,
 		accuracy: 100,
 		basePower: 0,
@@ -19039,7 +19013,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	toxic: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 92,
 		accuracy: 90,
 		basePower: 0,
@@ -19057,7 +19031,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	toxicspikes: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 390,
 		accuracy: true,
 		basePower: 0,
@@ -19099,7 +19073,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	toxicthread: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 672,
 		accuracy: 100,
 		basePower: 0,
@@ -19120,7 +19094,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	transform: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 144,
 		accuracy: true,
 		basePower: 0,
@@ -19141,7 +19115,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	triattack: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 161,
 		accuracy: 100,
 		basePower: 80,
@@ -19168,7 +19142,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	trick: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 271,
 		accuracy: 100,
 		basePower: 0,
@@ -19217,7 +19191,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	trickortreat: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 567,
 		accuracy: 100,
 		basePower: 0,
@@ -19246,7 +19220,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	trickroom: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 433,
 		accuracy: true,
 		basePower: 0,
@@ -19285,7 +19259,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	tripleaxel: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 813,
 		accuracy: 90,
 		basePower: 20,
@@ -19306,7 +19280,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		maxMove: {basePower: 140},
 	},
 	triplekick: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 167,
 		accuracy: 90,
 		basePower: 10,
@@ -19328,7 +19302,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	tropkick: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 688,
 		accuracy: 100,
 		basePower: 70,
@@ -19348,7 +19322,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	trumpcard: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 376,
 		accuracy: true,
 		basePower: 0,
@@ -19384,7 +19358,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	twineedle: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 41,
 		accuracy: 100,
 		basePower: 25,
@@ -19405,7 +19379,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	twinkletackle: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 656,
 		accuracy: true,
 		basePower: 1,
@@ -19422,7 +19396,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	twister: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 239,
 		accuracy: 100,
 		basePower: 40,
@@ -19440,7 +19414,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	uturn: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 369,
 		accuracy: 100,
 		basePower: 70,
@@ -19456,7 +19430,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	uproar: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 253,
 		accuracy: 100,
 		basePower: 90,
@@ -19516,7 +19490,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	vacuumwave: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 410,
 		accuracy: 100,
 		basePower: 40,
@@ -19531,7 +19505,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	vcreate: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 557,
 		accuracy: 95,
 		basePower: 180,
@@ -19572,7 +19546,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	venomdrench: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 599,
 		accuracy: 100,
 		basePower: 0,
@@ -19594,7 +19568,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	venoshock: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 474,
 		accuracy: 100,
 		basePower: 65,
@@ -19614,7 +19588,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	vinewhip: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 22,
 		accuracy: 100,
 		basePower: 45,
@@ -19629,7 +19603,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	visegrip: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 11,
 		accuracy: 100,
 		basePower: 55,
@@ -19644,7 +19618,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	vitalthrow: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 233,
 		accuracy: true,
 		basePower: 70,
@@ -19659,7 +19633,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	voltswitch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 521,
 		accuracy: 100,
 		basePower: 70,
@@ -19675,7 +19649,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	volttackle: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 344,
 		accuracy: 100,
 		basePower: 120,
@@ -19694,7 +19668,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	wakeupslap: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 358,
 		accuracy: 100,
 		basePower: 70,
@@ -19717,7 +19691,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	waterfall: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 127,
 		accuracy: 100,
 		basePower: 80,
@@ -19735,7 +19709,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	watergun: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 55,
 		accuracy: 100,
 		basePower: 40,
@@ -19750,7 +19724,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	waterpledge: {
-		availability: {atlas: 1},
 		num: 518,
 		accuracy: 100,
 		basePower: 80,
@@ -19823,7 +19796,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	waterpulse: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 352,
 		accuracy: 100,
 		basePower: 60,
@@ -19841,7 +19814,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	watershuriken: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 594,
 		accuracy: 100,
 		basePower: 15,
@@ -19863,7 +19836,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	watersport: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 346,
 		accuracy: true,
 		basePower: 0,
@@ -19899,7 +19872,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	waterspout: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 323,
 		accuracy: 100,
 		basePower: 150,
@@ -19917,7 +19890,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	weatherball: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 311,
 		accuracy: 100,
 		basePower: 50,
@@ -19970,7 +19943,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	whirlpool: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 250,
 		accuracy: 85,
 		basePower: 35,
@@ -19986,7 +19959,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	whirlwind: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 18,
 		accuracy: true,
 		basePower: 0,
@@ -20017,7 +19990,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Dark",
 	},
 	wideguard: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 469,
 		accuracy: true,
 		basePower: 0,
@@ -20067,7 +20040,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	wildcharge: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 528,
 		accuracy: 100,
 		basePower: 90,
@@ -20083,7 +20056,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	willowisp: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 261,
 		accuracy: 85,
 		basePower: 0,
@@ -20100,7 +20073,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Beautiful",
 	},
 	wingattack: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 17,
 		accuracy: 100,
 		basePower: 60,
@@ -20115,7 +20088,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	wish: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 273,
 		accuracy: true,
 		basePower: 0,
@@ -20147,7 +20120,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	withdraw: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 110,
 		accuracy: true,
 		basePower: 0,
@@ -20166,7 +20139,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	wonderroom: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 472,
 		accuracy: true,
 		basePower: 0,
@@ -20205,7 +20178,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	woodhammer: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 452,
 		accuracy: 100,
 		basePower: 120,
@@ -20221,7 +20194,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	workup: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 526,
 		accuracy: true,
 		basePower: 0,
@@ -20241,7 +20214,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	worryseed: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 388,
 		accuracy: 100,
 		basePower: 0,
@@ -20280,7 +20253,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	wrap: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 35,
 		accuracy: 90,
 		basePower: 15,
@@ -20296,7 +20269,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	wringout: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 378,
 		accuracy: 100,
 		basePower: 0,
@@ -20317,7 +20290,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Tough",
 	},
 	xscissor: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 404,
 		accuracy: 100,
 		basePower: 80,
@@ -20332,7 +20305,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	yawn: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 281,
 		accuracy: true,
 		basePower: 0,
@@ -20366,7 +20339,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 	zapcannon: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 192,
 		accuracy: 50,
 		basePower: 120,
@@ -20384,7 +20357,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	zenheadbutt: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 428,
 		accuracy: 90,
 		basePower: 80,
@@ -20402,7 +20375,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	zingzap: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 716,
 		accuracy: 100,
 		basePower: 80,
@@ -20549,7 +20522,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	fruitpunch: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69031,
 		accuracy: 100,
 		basePower: 75,
@@ -20569,7 +20542,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	dragonfist: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69040,
 		accuracy: 100,
 		basePower: 75,
@@ -20587,7 +20560,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	lickclean: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69045,
 		accuracy: 100,
 		basePower: 40,
@@ -20621,7 +20594,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	speedweed: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69041,
 		accuracy: 100,
 		basePower: 40,
@@ -20635,7 +20608,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	overbite: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69036,
 		accuracy: 100,
 		basePower: 150,
@@ -20652,7 +20625,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	"1000folds": {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69047,
 		accuracy: 100,
 		basePower: 80,
@@ -20678,7 +20651,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	warhead: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69042,
 		accuracy: 80,
 		basePower: 110,
@@ -20825,7 +20798,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	mop: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69033,
 		accuracy: 100,
 		basePower: 0,
@@ -20866,7 +20839,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	thinkfast: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69038,
 		accuracy: 100,
 		basePower: 40,
@@ -20915,7 +20888,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	pixiepummel: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69039,
 		accuracy: 80,
 		basePower: 120,
@@ -20999,7 +20972,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	greatrage: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69053,
 		accuracy: 100,
 		basePower: 140,
@@ -21169,7 +21142,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	dailydose: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69018,
 		accuracy: 95,
 		basePower: 80,
@@ -21248,7 +21221,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	erosionwave: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69005,
 		accuracy: 100,
 		basePower: 95,
@@ -21406,7 +21379,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	meme: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69009,
 		accuracy: 100,
 		basePower: 65,
@@ -21471,7 +21444,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	pukeblood: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69016,
 		accuracy: 95,
 		basePower: 130,
@@ -21488,7 +21461,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	punchout: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69004,
 		accuracy: 100,
 		basePower: 70,
@@ -21569,7 +21542,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	spookout: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69010,
 		accuracy: 100,
 		basePower: 60,
@@ -21597,7 +21570,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	stratoblade: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69006,
 		accuracy: 100,
 		basePower: 90,
@@ -21614,7 +21587,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	supersnore: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69007,
 		accuracy: 100,
 		basePower: 255,
@@ -21741,7 +21714,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	sudoku: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 69035,
 		accuracy: 100,
 		basePower: 0,
@@ -21935,7 +21908,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Smart",
 	},
 	voltaiccyclone: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 42008,
 		accuracy: 100,
 		basePower: 75,
@@ -21984,7 +21957,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 	boilover: {
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		num: 42009,
 		accuracy: 100,
 		basePower: 80,
@@ -23096,1234 +23069,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Poison",
 		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	/* Atlas Exclusive Moves */
-	mondayz: {
-		availability: {atlas: 1},
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Mondayz",
-		pp: 10,
-		priority: 0,
-		flags: {snatch: 1},
-		onTry(source) {
-			if (source.status === 'slp' || source.hasAbility('comatose')) return false;
-			if (source.hasAbility(['insomnia', 'vitalspirit'])) {
-				this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
-				return null;
-			}
-		},
-		onHit(target, source, move) {
-			if (!target.setStatus('slp', source, move)) return false;
-			target.statusState.time = 3;
-			target.statusState.startTime = 3;
-		},
-		secondary: {
-			chance: 100,
-			self: {
-				boosts: {
-					atk: 12,
-				},
-			},
-		},
-		target: "self",
-		type: "Grass",
-		zMove: {effect: 'heal'},
-		contestType: "Cute",
-		isNonstandard: "Future",
-	},
-	fortunatesun: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 90,
-		category: "Special",
-		name: "Fortunate Sun",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: {
-			weather: 'sunnyday',
-		},
-		target: "normal",
-		type: "Fire",
-		contestType: "Tough",
-		isNonstandard: "Future",
-	},
-	cosmiccrunch: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 85,
-		category: "Physical",
-		name: "Cosmic Crunch",
-		pp: 10,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, heal: 1},
-		drain: [1, 2],
-		secondary: null,
-		target: "normal",
-		type: "Rock",
-		contestType: "Tough",
-		isNonstandard: "Future",
-	},
-	breadclub: {
-		availability: {atlas: 1},
-		accuracy: 95,
-		basePower: 90,
-		category: "Physical",
-		name: "Bread Club",
-		pp: 20,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 10,
-			volatileStatus: 'flinch',
-		},
-		target: "normal",
-		type: "Fighting",
-		contestType: "Tough",
-		isNonstandard: "Future",
-	},
-	breadmerang: {
-		availability: {atlas: 1},
-		accuracy: 90,
-		basePower: 55,
-		category: "Physical",
-		name: "Breadmerang",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		multihit: 2,
-		secondary: null,
-		target: "normal",
-		type: "Fighting",
-		maxMove: {basePower: 130},
-		contestType: "Tough",
-		isNonstandard: "Future",
-	},
-	sentaiblade: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 150,
-		category: "Physical",
-		name: "Sentai Blade",
-		pp: 5,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
-		self: {
-			volatileStatus: 'lockedmove',
-		},
-		onAfterMove(pokemon) {
-			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
-				pokemon.removeVolatile('lockedmove');
-			}
-		},
-		boosts: {
-			accuracy: -1,
-		},
-		secondary: null,
-		target: "randomNormal",
-		type: "Fighting",
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	bigshock: {
-		availability: {atlas: 1},
-		accuracy: 80,
-		basePower: 150,
-		category: "Physical",
-		name: "Big Shock",
-		pp: 5,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		recoil: [1, 2],
-		secondary: null,
-		target: "normal",
-		type: "Electric",
-		contestType: "Tough",
-		isNonstandard: "Future",
-	},
-	kingsvoice: {
-		availability: {atlas: 1},
-		accuracy: 90,
-		basePower: 120,
-		category: "Special",
-		name: "King's Voice",
-		pp: 10,
-		priority: 0,
-		flags: {charge: 1, protect: 1, mirror: 1},
-		onTryMove(attacker, defender, move) {
-			if (attacker.removeVolatile(move.id)) {
-				return;
-			}
-			this.add('-prepare', attacker, move.name);
-			this.boost({spd: 1}, attacker, attacker, move);
-			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-				return;
-			}
-			attacker.addVolatile('twoturnmove', defender);
-			return null;
-		},
-		secondary: {
-			chance: 30,
-			boosts: {
-				atk: -1,
-			},
-		},
-		target: "normal",
-		type: "Ground",
-		isNonstandard: "Future",
-	},
-	psychocrusher: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 120,
-		category: "Physical",
-		name: "Psycho Crusher",
-		pp: 15,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		recoil: [33, 100],
-		secondary: null,
-		target: "normal",
-		type: "Psychic",
-		contestType: "Tough",
-		isNonstandard: "Future",
-	},
-	bordercontrol: {
-		availability: {atlas: 1},
-		accuracy: 90,
-		basePower: 70,
-		category: "Physical",
-		name: "Border Control",
-		pp: 10,
-		priority: -6,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		forceSwitch: true,
-		target: "normal",
-		type: "Fire",
-		contestType: "Tough",
-		isNonstandard: "Future",
-	},
-	kegerdance: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 0,
-		category: "Status",
-		name: "Keger Dance",
-		pp: 15,
-		priority: 0,
-		flags: {dance: 1, snatch: 1},
-		volatileStatus: 'confusion',
-		self: {
-			boosts: {
-				spa: 3,
-				spe: -1,
-			},
-		},
-		secondary: null,
-		target: "self",
-		type: "Water",
-		zMove: {boost: {spa: 4}},
-		contestType: "Clever",
-		isNonstandard: "Future",
-	},
-	canslam: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 50,
-		category: "Physical",
-		name: "Can Slam",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, nonsky: 1},
-		volatileStatus: 'smackdown',
-		condition: {
-			noCopy: true,
-			onStart(pokemon) {
-				let applies = false;
-				if (pokemon.hasType('Flying') || pokemon.hasAbility('levitate')) applies = true;
-				if (pokemon.hasItem('ironball') || pokemon.volatiles['ingrain'] ||
-					this.field.getPseudoWeather('gravity')) applies = false;
-				if (pokemon.removeVolatile('fly') || pokemon.removeVolatile('bounce')) {
-					applies = true;
-					this.queue.cancelMove(pokemon);
-					pokemon.removeVolatile('twoturnmove');
-				}
-				if (pokemon.volatiles['magnetrise']) {
-					applies = true;
-					delete pokemon.volatiles['magnetrise'];
-				}
-				if (pokemon.volatiles['telekinesis']) {
-					applies = true;
-					delete pokemon.volatiles['telekinesis'];
-				}
-				if (!applies) return false;
-				this.add('-start', pokemon, 'Smack Down');
-			},
-			onRestart(pokemon) {
-				if (pokemon.removeVolatile('fly') || pokemon.removeVolatile('bounce')) {
-					this.queue.cancelMove(pokemon);
-					this.add('-start', pokemon, 'Smack Down');
-				}
-			},
-			isNonstandard: "Future",
-			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
-		},
-		secondary: null,
-		target: "normal",
-		type: "Steel",
-		contestType: "Tough",
-		isNonstandard: "Future",
-	},
-	thunderousdrumming: {
-		availability: {atlas: 1},
-		accuracy: 75,
-		basePower: 100,
-		category: "Special",
-		name: "Thunderous Drumming",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: {
-			chance: 60,
-			status: 'par',
-		},
-		target: "normal",
-		type: "Electric",
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	timebomb: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 120,
-		category: "Special",
-		name: "Time Bomb",
-		pp: 10,
-		priority: 0,
-		flags: {},
-		ignoreImmunity: true,
-		isFutureMove: true,
-		onTry(source, target) {
-			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
-			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
-				duration: 3,
-				move: 'futuresight',
-				source: source,
-				moveData: {
-					id: 'timebomb',
-					name: "Time Bomb",
-					accuracy: 100,
-					basePower: 120,
-					category: "Special",
-					priority: 0,
-					flags: {},
-					ignoreImmunity: false,
-					effectType: 'Move',
-					isFutureMove: true,
-					type: 'Fire',
-				},
-			});
-			this.add('-start', source, 'move: Time Bomb');
-			return this.NOT_FAIL;
-		},
-		secondary: null,
-		target: "normal",
-		type: "Fire",
-		contestType: "Clever",
-		isNonstandard: "Future",
-	},
-	stonehenge: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 85,
-		category: "Physical",
-		name: "Stonehenge",
-		pp: 20,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		onAfterHit(target, pokemon) {
-			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
-				this.add('-end', pokemon, 'Leech Seed', '[from] move: Stonehenge', '[of] ' + pokemon);
-			}
-			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
-				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
-			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'pleasedontdothat'];
-			for (const condition of sideConditions) {
-				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
-					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Stonehenge', '[of] ' + pokemon);
-				}
-			}
-			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
-				pokemon.removeVolatile('partiallytrapped');
-			}
-		},
-		onAfterSubDamage(damage, target, pokemon) {
-			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
-				this.add('-end', pokemon, 'Leech Seed', '[from] move: Stonehenge', '[of] ' + pokemon);
-			}
-			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
-				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
-			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'pleasedontdothat'];
-			for (const condition of sideConditions) {
-				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
-					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Stonehenge', '[of] ' + pokemon);
-				}
-			}
-			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
-				pokemon.removeVolatile('partiallytrapped');
-			}
-		},
-		target: "normal",
-		type: "Rock",
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	jacsmack: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 100,
-		category: "Special",
-		name: "Jac Smack",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		onModifyType(move, pokemon) {
-			let type = pokemon.getTypes()[0];
-			if (type === "Bird") type = "???";
-			move.type = type;
-			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
-		},
-		secondary: null,
-		target: "normal",
-		type: "Normal",
-		contestType: "Beautiful",
-		isNonstandard: "Future",
-	},
-	serpentskiss: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 75,
-		category: "Special",
-		name: "Serpents Kiss",
-		pp: 20,
-		priority: 0,
-		flags: {protect: 1, heal: 1},
-		drain: [2, 3],
-		secondary: null,
-		target: "normal",
-		type: "Water",
-		contestType: "Beautiful",
-		isNonstandard: "Future",
-	},
-	wunderbeam: {
-		availability: {atlas: 1},
-		accuracy: 90,
-		basePower: 0,
-		category: "Special",
-		// defensiveCategory: "Physical",
-		name: "Wunder Beam",
-		pp: 5,
-		priority: 0,
-		desc: "Not yet implemented.",
-		flags: {recharge: 1, protect: 1, mirror: 1},
-		// ignoreAbility: true,
-		// self: {
-		// 	volatileStatus: 'mustrecharge',
-		// },
-		// secondary: if (target && target.hp <= 0) {
-		// 				if (pokemon.volatiles['mustrecharge']) pokemon.removeVolatile('mustrecharge');
-		// 				 delete pokemon.volatiles['partialtrappinglock'];
-		// 				 target.side.removeSideCondition('reflect');
-		// 					target.side.removeSideCondition('lightscreen');
-		// 				 pokemon.removeVolatile('twoturnmove');
-		// 				} else if (pokemon.hp) {
-		// 				 this.runEvent('AfterMoveSelf', pokemon, target, move);
-		// 			 }
-		// }
-		// if (pokemon.volatiles['mustrecharge']) this.add('-mustrecharge', pokemon);
-		target: "normal",
-		type: "Normal",
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	thornshot: {
-		availability: {atlas: 1},
-		accuracy: 95,
-		basePower: 80,
-		category: "Physical",
-		name: "Thorn Shot",
-		pp: 15,
-		priority: 0,
-		flags: {bullet: 1, contact: 1, protect: 1, mirror: 1},
-		secondaries: [
-			{
-				chance: 30,
-				volatileStatus: 'flinch',
-			},
-		],
-		target: "normal",
-		type: "Grass",
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	cometrain: {
-		availability: {atlas: 1},
-		accuracy: 90,
-		basePower: 90,
-		category: "Physical",
-		name: "Comet Rain",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: {
-			weather: 'hail',
-		},
-		target: "normal",
-		type: "Ice",
-		contestType: "Tough",
-		isNonstandard: "Future",
-	},
-	overthewall: {
-		availability: {atlas: 1},
-		accuracy: 90,
-		basePower: 130,
-		category: "Physical",
-		name: "Over The Wall",
-		pp: 10,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, nosky: 1},
-		volatileStatus: 'smackdown',
-		condition: {
-			noCopy: true,
-			onStart(pokemon) {
-				let applies = false;
-				if (pokemon.hasType('Flying') || pokemon.hasAbility('levitate')) applies = true;
-				if (pokemon.hasItem('ironball') || pokemon.volatiles['ingrain'] ||
-					this.field.getPseudoWeather('gravity')) applies = false;
-				if (pokemon.removeVolatile('fly') || pokemon.removeVolatile('bounce')) {
-					applies = true;
-					this.queue.cancelMove(pokemon);
-					pokemon.removeVolatile('twoturnmove');
-				}
-				if (pokemon.volatiles['magnetrise']) {
-					applies = true;
-					delete pokemon.volatiles['magnetrise'];
-				}
-				if (pokemon.volatiles['telekinesis']) {
-					applies = true;
-					delete pokemon.volatiles['telekinesis'];
-				}
-				if (!applies) return false;
-				this.add('-start', pokemon, 'Over The Wall');
-			},
-			onRestart(pokemon) {
-				if (pokemon.removeVolatile('fly') || pokemon.removeVolatile('bounce')) {
-					this.queue.cancelMove(pokemon);
-					this.add('-start', pokemon, 'Over The Wall');
-				}
-			},
-			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
-		},
-		hasCrashDamage: true,
-		onMoveFail(target, source, move) {
-			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('Over The Wall'));
-		},
-		secondary: null,
-		target: "normal",
-		type: "Ice",
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	acidrain: {
-		availability: {atlas: 1},
-		accuracy: 90,
-		basePower: 0,
-		category: "Status",
-		name: 'Acid Rain',
-		desc: "Not yet implemented",
-		pp: 5,
-		flags: {},
-		type: 'poison',
-		priority: 0,
-		target: 'all',
-		isNonstandard: "Future",
-		// 	effectType: 'Weather',
-		// 	duration: 5,
-		// 	durationCallback(source, effect) {
-		// 		if (source?.hasItem('erodedrock')) {
-		// 			return 8;
-		// 		}
-		// 		return 5;
-		// 	},
-		// 	onWeatherModifyDamage(damage, attacker, defender, move) {
-		// 		if (defender.hasItem('utilityumbrella')) return;
-		// 		if (move.type === 'Poison') {
-		// 			this.debug('Acid Rain poison boost');
-		// 			return this.chainModify(1.5);
-		// 		}
-		// 	},
-		// 	onStart(battle, source, effect) {
-		// 		if (effect?.effectType === 'Ability') {
-		// 				if (this.gen <= 5) this.effectState.duration = 0;
-		// 				this.add('-weather', 'Acid Rain', '[from] ability: ' + effect, '[of] ' + source);
-		// 		} else {
-		// 				this.add('-weather', 'Acid Rain');
-		// 		}
-		// 	},
-		// 	onWeatherModifyDamage(damage, attacker, defender, move) {
-		// 		if (defender.hasItem('utilityumbrella')) return;
-		// 		if (move.type === 'Poison') {
-		// 			this.debug('acid rain boost');
-		// 			return this.chainModify(1.5);
-		// 		}
-		// 		if (move.type === 'Grass', 'Fairy') {
-		// 			this.debug('acid rain suppress');
-		// 			return this.chainModify(0.5);
-		// 		}
-		// 	},
-		// if (!source) source = this;
-
-		// if (this.status === status.id) {
-		// 		if ((sourceEffect as Move)?.status === this.status) {
-		// 				this.battle.add('-fail', this, this.status);
-		// 		} else if ((sourceEffect as Move)?.status) {
-		// 				this.battle.add('-fail', source);
-		// 				this.battle.attrLastMove('[still]');
-		// 		}
-		// 		return false;
-		// }
-
-	// if (!ignoreImmunities && status.id &&
-	// 				!(source?.hasAbility('corrosion') && ['tox', 'psn'].includes(status.id))) {
-	// 		// the game currently never ignores immunities
-	// 		if (!this.runStatusImmunity(status.id === 'tox' ? 'psn' : status.id)) {
-	// 				this.battle.debug('immune to status');
-	// 				if ((sourceEffect as Move)?.status) {
-	// 						this.battle.add('-immune', this);
-	// 				}
-	// 				return false;
-	// 		}
-	// },
-	// onResidualOrder: 1,
-	// onResidual() {
-	// 		this.add('-weather', 'Acid Rain', '[upkeep]');
-	// 		if (this.field.isWeather('sandstorm')) this.eachEvent('Weather');
-	// },
-	// onWeather(target) {
-	// 		this.damage(target.baseMaxhp / 16);
-	// },
-	// onEnd() {
-	// 		this.add('-weather', 'none');
-	// },
-	},
-	raindestruction: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 100,
-		category: "Physical",
-		name: "Rain Destruction",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, nonsky: 1, authentic: 1},
-		secondary: null,
-		target: "allAdjacent",
-		type: "Fire",
-		contestType: "Beautiful",
-		isNonstandard: "Future",
-	},
-	supernova: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 250,
-		category: "Special",
-		name: "Supernova",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, nonsky: 1, authentic: 1},
-		boosts: {
-			spa: -1,
-		},
-		target: "allAdjacent",
-		type: "Fire",
-		contestType: "Beautiful",
-		isNonstandard: "Future",
-	},
-	wingswing: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 60,
-		category: "Physical",
-		name: "Wing Swing",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		multihit: 2,
-		secondary: {
-			chance: 20,
-			boosts: {
-				spe: -1,
-			},
-		},
-		target: "normal",
-		type: "Flying",
-		contestType: "Beautiful",
-		isNonstandard: "Future",
-	},
-	shattershard: {
-		availability: {atlas: 1},
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Shatter Shard",
-		pp: 20,
-		priority: 0,
-		flags: {reflectable: 1},
-		sideCondition: 'shattershard',
-		condition: {
-			// this is a side condition
-			onSideStart(side) {
-				this.add('-sidestart', side, 'move: Shatter Shard');
-			},
-			onSwitchIn(pokemon) {
-				if (pokemon.hasItem('heavydutyboots')) return;
-				const typeMod = this.clampIntRange(pokemon.runEffectiveness(this.dex.getActiveMove('shattershard')), -6, 6);
-				this.damage(pokemon.maxhp * Math.pow(2, typeMod) / 8);
-			},
-		},
-		secondary: null,
-		target: "foeSide",
-		type: "Ice",
-		zMove: {boost: {def: 1}},
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	runewrecker: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 90,
-		category: "Special",
-		name: "Rune Wrecker",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 20,
-			onHit(target, source) {
-				const stats: BoostID[] = [];
-				for (const stat in target.boosts) {
-					if (source.boosts[stat as BoostID] < 6) {
-						stats.push(stat as BoostID);
-					}
-				}
-				if (stats.length) {
-					const randomStat = this.sample(stats);
-					const boost: SparseBoostsTable = {};
-					boost[randomStat] = 2;
-					this.boost(boost);
-				} else {
-					return false;
-				}
-			},
-		},
-		target: "normal",
-		type: "Rock",
-		contestType: "Tough",
-		isNonstandard: "Future",
-	},
-	flamenco: {
-		availability: {atlas: 1},
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Flamenco",
-		pp: 20,
-		priority: 0,
-		flags: {snatch: 1, dance: 1},
-		boosts: {
-			atk: 1,
-			spe: 1,
-		},
-		secondary: {
-			self: {
-				status: 'brn',
-			},
-		},
-		target: "self",
-		type: "Grass",
-		zMove: {effect: 'clearnegativeboost'},
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	coomdoom: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 150,
-		basePowerCallback(pokemon, target, move) {
-			return move.basePower * pokemon.hp / pokemon.maxhp;
-		},
-		category: "Special",
-		name: "Coom Doom",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, pulse: 1},
-		secondary: null,
-		target: "allAdjacentFoes",
-		type: "Ground",
-		contestType: "Beautiful",
-		isNonstandard: "Future",
-	},
-	uhoh: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 90,
-		category: "Special",
-		name: "Uh Oh",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, pulse: 1},
-		secondary: {
-			chance: 100,
-			boosts: {
-				accuracy: -1,
-			},
-		},
-		target: "normal",
-		type: "Ground",
-		contestType: "Cute",
-		isNonstandard: "Future",
-	},
-	raizehell: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 150,
-		category: "Physical",
-		name: "Raize Hell",
-		pp: 5,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: {
-			chance: 100,
-			self: {
-				boosts: {
-					atk: -1,
-					def: -1,
-					spa: -1,
-					spd: -1,
-					spe: -1,
-				},
-			},
-			boosts: {
-				atk: -1,
-				def: -1,
-				spa: -1,
-				spd: -1,
-				spe: -1,
-			},
-		},
-		target: "normal",
-		type: "Dark",
-		contestType: "Tough",
-		isNonstandard: "Future",
-	},
-	plasmaslasher: {
-		availability: {atlas: 1},
-		accuracy: 90,
-		basePower: 90,
-		category: "Physical",
-		name: "Plasma Slasher",
-		pp: 20,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
-		critRatio: 2,
-		secondary: null,
-		target: "normal",
-		type: "Electric",
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	sloth: {
-		availability: {atlas: 1},
-		num: 203,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Sloth",
-		pp: 8,
-		priority: 1,
-		flags: {heal: 1},
-		stallingMove: true,
-		volatileStatus: 'endure',
-		onPrepareHit(pokemon) {
-			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
-		},
-		onHit(pokemon) {
-			pokemon.addVolatile('stall');
-		},
-		condition: {
-			duration: 1,
-			onStart(target) {
-				this.add('-singleturn', target, 'move: Endure');
-			},
-			onDamagePriority: -10,
-			onDamage(damage, target, source, effect) {
-				if (effect?.effectType === 'Move' && damage >= target.hp) {
-					this.add('-activate', target, 'move: Endure');
-					return target.hp - 1;
-				}
-			},
-		},
-		heal: [1, 2],
-		secondary: null,
-		target: "self",
-		type: "Normal",
-		zMove: {effect: 'clearnegativeboost'},
-		contestType: "Tough",
-		isNonstandard: "Future",
-	},
-	beetdown: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 150,
-		basePowerCallback(pokemon, target, move) {
-			return move.basePower * pokemon.hp / pokemon.maxhp;
-		},
-		category: "Physical",
-		name: "Beet Down",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		target: "allAdjacentFoes",
-		type: "Grass",
-		contestType: "Beautiful",
-		isNonstandard: "Future",
-	},
-	wisecrack: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 20,
-		category: "Physical",
-		name: "Wise Crack",
-		pp: 20,
-		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, authentic: 1},
-		onHit(target, source, move) {
-			const success = this.boost({def: -1, spd: -1}, target, source);
-			if (!success && !target.hasAbility('mirrorarmor')) {
-				delete move.selfSwitch;
-			}
-		},
-		selfSwitch: true,
-		secondary: null,
-		target: "normal",
-		type: "Normal",
-		zMove: {effect: 'healreplacement'},
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	brainblast: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 120,
-		category: "Special",
-		name: "Brain Blast",
-		pp: 5,
-		priority: 0,
-		flags: {authentic: 1, protect: 1, mirror: 1},
-		self: {
-			boosts: {
-				def: -1,
-				spd: -1,
-			},
-		},
-		secondary: null,
-		target: "normal",
-		type: "Psychic",
-		contestType: "Clever",
-		isNonstandard: "Future",
-	},
-	slamburger: {
-		availability: {atlas: 1},
-		accuracy: 95,
-		basePower: 100,
-		category: "Physical",
-		name: "Slamburger",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		onHit(target) {
-			const stats: BoostID[] = [];
-			let stat: BoostID;
-			for (stat in target.boosts) {
-				if (target.boosts[stat] < 6) {
-					stats.push(stat);
-				}
-			}
-			if (stats.length) {
-				const randomStat = this.sample(stats);
-				const boost: SparseBoostsTable = {};
-				boost[randomStat] = -2;
-				this.boost(boost);
-			} else {
-				return false;
-			}
-		},
-		target: "normal",
-		type: "???",
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	leechsneed: {
-		availability: {atlas: 1},
-		accuracy: 85,
-		basePower: 110,
-		category: "Physical",
-		name: "Leech Sneed",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, reflectable: 1},
-		onHit(target, source) {
-			if (target.hasType('Grass')) return null;
-			target.addVolatile('leechseed', source);
-		},
-		secondary: null,
-		target: "normal",
-		type: "Grass",
-		contestType: "Clever",
-		isNonstandard: "Future",
-	},
-	poundcake: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 95,
-		category: "Physical",
-		name: "Pound Cake",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 100,
-			boosts: {
-				spe: -1,
-			},
-		},
-		target: "normal",
-		type: "Fairy",
-		contestType: "Beautiful",
-		isNonstandard: "Future",
-	},
-	fragments: {
-		availability: {atlas: 1},
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Fragments",
-		pp: 1,
-		priority: 0,
-		flags: {reflectable: 1},
-		sideCondition: 'fragments',
-		condition: {
-			// this is a side condition
-			onSideStart(side) {
-				this.add('-sidestart', side, 'move: Fragments');
-			},
-			onSwitchIn(pokemon) {
-				if (pokemon.hasItem('heavydutyboots')) return;
-				const typeMod = this.clampIntRange(pokemon.runEffectiveness(this.dex.getActiveMove('fragments')), -6, 6);
-				this.damage(pokemon.maxhp * Math.pow(2, typeMod) / 8);
-			},
-		},
-		secondary: null,
-		target: "foeSide",
-		type: "Steel",
-		zMove: {boost: {def: 1}},
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	fragbomb: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 250,
-		category: "Physical",
-		name: "Frag Bomb",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, reflectable: 1},
-		onHit(target, source) {
-			target.addVolatile('fragments', source);
-		},
-		selfdestruct: "always",
-		secondary: null,
-		target: "allAdjacent",
-		type: "Steel",
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	warcry: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 80,
-		category: "Physical",
-		name: "War Cry",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
-		secondary: {
-			chance: 50,
-			self: {
-				boosts: {
-					atk: 1,
-				},
-			},
-		},
-		target: "allAdjacentFoes",
-		type: "Normal",
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	soulsteal: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 70,
-		category: "Special",
-		name: "Soul Steal",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, heal: 1},
-		drain: [1, 2],
-		secondary: null,
-		target: "normal",
-		type: "Ghost",
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	jumpscare: {
-		availability: {atlas: 1},
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Jumpscare",
-		pp: 10,
-		priority: 4,
-		flags: {},
-		stallingMove: true,
-		volatileStatus: 'protect',
-		onPrepareHit(pokemon) {
-			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
-		},
-		onHit(pokemon) {
-			pokemon.addVolatile('stall');
-		},
-		condition: {
-			duration: 1,
-			onStart(target) {
-				this.add('-singleturn', target, 'move: Protect');
-			},
-			onTryHitPriority: 3,
-			onTryHit(target, source, move) {
-				if (!move.flags['protect']) {
-					if (move.isZ || (move.isMax && !move.breaksProtect)) target.getMoveHitData(move).zBrokeProtect = true;
-					return;
-				}
-				if (move.smartTarget) {
-					move.smartTarget = false;
-				} else {
-					this.add('-activate', target, 'move: Protect');
-				}
-				const lockedmove = source.getVolatile('lockedmove');
-				if (lockedmove) {
-					// Outrage counter is reset
-					if (source.volatiles['lockedmove'].duration === 2) {
-						delete source.volatiles['lockedmove'];
-					}
-				}
-				if (move.flags['contact']) {
-					source.trySetStatus('par', target);
-				}
-				return this.NOT_FAIL;
-			},
-			onHit(target, source, move) {
-				if (move.isZOrMaxPowered && move.flags['contact']) {
-					source.trySetStatus('par', target);
-				}
-			},
-		},
-		secondary: null,
-		target: "self",
-		type: "Ghost",
-		zMove: {boost: {evasion: 1}},
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	alternator: {
-		availability: {atlas: 1},
-		accuracy: 100,
-		basePower: 80,
-		category: "Physical",
-		name: "Alternator",
-		pp: 20,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		selfSwitch: true,
-		secondary: null,
-		target: "normal",
-		type: "Steel",
-		contestType: "Cool",
-		isNonstandard: "Future",
-	},
-	lootrun: {
-		availability: {atlas: 1},
-		num: 34643,
-		accuracy: 100,
-		basePower: 75,
-		category: "Physical",
-		name: "Loot Run",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, mystery: 1},
-		onTryImmunity(target) {
-			return !target.hasAbility('stickyhold');
-		},
-		onHit(target, source, move) {
-			const yourItem = target.takeItem(source);
-			const myItem = source.takeItem();
-			if (target.item || source.item || (!yourItem && !myItem)) {
-				if (yourItem) target.item = yourItem.id;
-				if (myItem) source.item = myItem.id;
-				return false;
-			}
-			if (
-				(myItem && !this.singleEvent('TakeItem', myItem, source.itemState, target, source, move, myItem)) ||
-				(yourItem && !this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem))
-			) {
-				if (yourItem) target.item = yourItem.id;
-				if (myItem) source.item = myItem.id;
-				return false;
-			}
-			this.add('-activate', source, 'move: Trick', '[of] ' + target);
-			if (myItem) {
-				target.setItem(myItem);
-				this.add('-item', target, myItem, '[from] move: Trick');
-			} else {
-				this.add('-enditem', target, yourItem, '[silent]', '[from] move: Trick');
-			}
-			if (yourItem) {
-				source.setItem(yourItem);
-				this.add('-item', source, yourItem, '[from] move: Trick');
-			} else {
-				this.add('-enditem', source, myItem, '[silent]', '[from] move: Trick');
-			}
-		},
-		secondary: null,
-		target: "normal",
-		type: "Fairy",
-		zMove: {boost: {spe: 1}},
-		contestType: "Tough",
 		isNonstandard: "Future",
 	},
 };

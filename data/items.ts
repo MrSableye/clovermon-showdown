@@ -116,7 +116,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	aguavberry: {
 		name: "Aguav Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 5,
 		isBerry: true,
 		naturalGift: {
@@ -226,7 +226,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	apicotberry: {
 		name: "Apicot Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 10,
 		isBerry: true,
 		naturalGift: {
@@ -256,7 +256,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	aspearberry: {
 		name: "Aspear Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 13,
 		isBerry: true,
 		naturalGift: {
@@ -278,7 +278,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	assaultvest: {
 		name: "Assault Vest",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 581,
 		fling: {
 			basePower: 80,
@@ -313,7 +313,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	babiriberry: {
 		name: "Babiri Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 17,
 		isBerry: true,
 		naturalGift: {
@@ -386,7 +386,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	berryjuice: {
 		name: "Berry Juice",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 22,
 		fling: {
 			basePower: 30,
@@ -412,7 +412,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	bigroot: {
 		name: "Big Root",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 29,
 		fling: {
 			basePower: 10,
@@ -429,7 +429,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	bindingband: {
 		name: "Binding Band",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 31,
 		fling: {
 			basePower: 30,
@@ -440,7 +440,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	blackbelt: {
 		name: "Black Belt",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 32,
 		fling: {
 			basePower: 30,
@@ -456,7 +456,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	blacksludge: {
 		name: "Black Sludge",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 34,
 		fling: {
 			basePower: 30,
@@ -551,7 +551,6 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	blunderpolicy: {
 		name: "Blunder Policy",
-		availability: {atlas: 1},
 		spritenum: 716,
 		fling: {
 			basePower: 80,
@@ -562,7 +561,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	bottlecap: {
 		name: "Bottle Cap",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 696,
 		fling: {
 			basePower: 30,
@@ -572,7 +571,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	brightpowder: {
 		name: "Bright Powder",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 51,
 		fling: {
 			basePower: 10,
@@ -588,7 +587,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	buggem: {
 		name: "Bug Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 53,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -630,7 +629,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	burndrive: {
 		name: "Burn Drive",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 54,
 		onTakeItem(item, pokemon, source) {
 			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
@@ -677,7 +676,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	charcoal: {
 		name: "Charcoal",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 61,
 		fling: {
 			basePower: 30,
@@ -721,7 +720,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	chartiberry: {
 		name: "Charti Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 62,
 		isBerry: true,
 		naturalGift: {
@@ -746,7 +745,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	cheriberry: {
 		name: "Cheri Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 63,
 		isBerry: true,
 		naturalGift: {
@@ -775,7 +774,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	chestoberry: {
 		name: "Chesto Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 65,
 		isBerry: true,
 		naturalGift: {
@@ -797,7 +796,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	chilanberry: {
 		name: "Chilan Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 66,
 		isBerry: true,
 		naturalGift: {
@@ -822,7 +821,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	chilldrive: {
 		name: "Chill Drive",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 67,
 		onTakeItem(item, pokemon, source) {
 			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
@@ -847,7 +846,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	choiceband: {
 		name: "Choice Band",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 68,
 		fling: {
 			basePower: 10,
@@ -872,7 +871,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	choicescarf: {
 		name: "Choice Scarf",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 69,
 		fling: {
 			basePower: 10,
@@ -896,7 +895,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	choicespecs: {
 		name: "Choice Specs",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 70,
 		fling: {
 			basePower: 10,
@@ -921,7 +920,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	chopleberry: {
 		name: "Chople Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 71,
 		isBerry: true,
 		naturalGift: {
@@ -965,7 +964,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	cobaberry: {
 		name: "Coba Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 76,
 		isBerry: true,
 		naturalGift: {
@@ -1047,7 +1046,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	custapberry: {
 		name: "Custap Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 86,
 		isBerry: true,
 		naturalGift: {
@@ -1072,7 +1071,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	damprock: {
 		name: "Damp Rock",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 88,
 		fling: {
 			basePower: 60,
@@ -1082,7 +1081,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	darkgem: {
 		name: "Dark Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 89,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -1124,7 +1123,6 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	dawnstone: {
 		name: "Dawn Stone",
-		availability: {atlas: 1},
 		spritenum: 92,
 		fling: {
 			basePower: 80,
@@ -1177,7 +1175,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	destinyknot: {
 		name: "Destiny Knot",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 95,
 		fling: {
 			basePower: 10,
@@ -1207,7 +1205,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	diveball: {
 		name: "Dive Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 101,
 		num: 7,
 		gen: 3,
@@ -1225,7 +1223,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	dousedrive: {
 		name: "Douse Drive",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 103,
 		onTakeItem(item, pokemon, source) {
 			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
@@ -1262,7 +1260,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	dragonfang: {
 		name: "Dragon Fang",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 106,
 		fling: {
 			basePower: 70,
@@ -1278,7 +1276,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	dragongem: {
 		name: "Dragon Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 107,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -1350,7 +1348,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	dreamball: {
 		name: "Dream Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 111,
 		num: 576,
 		gen: 5,
@@ -1380,7 +1378,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	duskball: {
 		name: "Dusk Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 115,
 		num: 13,
 		gen: 4,
@@ -1388,7 +1386,6 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	duskstone: {
 		name: "Dusk Stone",
-		availability: {atlas: 1},
 		spritenum: 116,
 		fling: {
 			basePower: 80,
@@ -1430,7 +1427,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	ejectbutton: {
 		name: "Eject Button",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 118,
 		fling: {
 			basePower: 30,
@@ -1492,7 +1489,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	electricgem: {
 		name: "Electric Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 120,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -1558,7 +1555,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	energypowder: {
 		name: "Energy Powder",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 123,
 		fling: {
 			basePower: 30,
@@ -1568,7 +1565,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	enigmaberry: {
 		name: "Enigma Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 124,
 		isBerry: true,
 		naturalGift: {
@@ -1591,7 +1588,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	eviolite: {
 		name: "Eviolite",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 130,
 		fling: {
 			basePower: 40,
@@ -1613,7 +1610,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	expertbelt: {
 		name: "Expert Belt",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 132,
 		fling: {
 			basePower: 10,
@@ -1640,7 +1637,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	fairygem: {
 		name: "Fairy Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 611,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -1677,7 +1674,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	fightinggem: {
 		name: "Fighting Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 139,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -1719,7 +1716,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	figyberry: {
 		name: "Figy Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 140,
 		isBerry: true,
 		naturalGift: {
@@ -1745,7 +1742,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	firegem: {
 		name: "Fire Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 141,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -1776,7 +1773,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	firestone: {
 		name: "Fire Stone",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 142,
 		fling: {
 			basePower: 30,
@@ -1819,7 +1816,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	flameorb: {
 		name: "Flame Orb",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 145,
 		fling: {
 			basePower: 30,
@@ -1877,7 +1874,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	flyinggem: {
 		name: "Flying Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 149,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -1919,7 +1916,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	focusband: {
 		name: "Focus Band",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 150,
 		fling: {
 			basePower: 10,
@@ -1936,7 +1933,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	focussash: {
 		name: "Focus Sash",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 151,
 		fling: {
 			basePower: 10,
@@ -2039,7 +2036,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	ganlonberry: {
 		name: "Ganlon Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 158,
 		isBerry: true,
 		naturalGift: {
@@ -2101,7 +2098,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	ghostgem: {
 		name: "Ghost Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 161,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -2157,7 +2154,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	goldbottlecap: {
 		name: "Gold Bottle Cap",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 697,
 		fling: {
 			basePower: 30,
@@ -2167,7 +2164,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	grassgem: {
 		name: "Grass Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 172,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -2233,7 +2230,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	greatball: {
 		name: "Great Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 174,
 		num: 3,
 		gen: 1,
@@ -2241,7 +2238,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	grepaberry: {
 		name: "Grepa Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 178,
 		isBerry: true,
 		naturalGift: {
@@ -2254,7 +2251,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	gripclaw: {
 		name: "Grip Claw",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 179,
 		fling: {
 			basePower: 90,
@@ -2288,7 +2285,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	groundgem: {
 		name: "Ground Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 182,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -2344,7 +2341,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	habanberry: {
 		name: "Haban Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 185,
 		isBerry: true,
 		naturalGift: {
@@ -2369,7 +2366,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	hardstone: {
 		name: "Hard Stone",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 187,
 		fling: {
 			basePower: 100,
@@ -2385,7 +2382,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	healball: {
 		name: "Heal Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 188,
 		num: 14,
 		gen: 4,
@@ -2393,7 +2390,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	heatrock: {
 		name: "Heat Rock",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 193,
 		fling: {
 			basePower: 60,
@@ -2409,7 +2406,6 @@ export const Items: { [itemid: string]: ItemData } = {
 		isPokeball: true,
 	},
 	heavydutyboots: {
-		availability: {atlas: 1},
 		name: "Heavy-Duty Boots",
 		spritenum: 715,
 		fling: {
@@ -2445,7 +2441,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	hondewberry: {
 		name: "Hondew Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 213,
 		isBerry: true,
 		naturalGift: {
@@ -2472,7 +2468,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	iapapaberry: {
 		name: "Iapapa Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 217,
 		isBerry: true,
 		naturalGift: {
@@ -2498,7 +2494,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	icegem: {
 		name: "Ice Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 218,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -2570,7 +2566,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	icyrock: {
 		name: "Icy Rock",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 221,
 		fling: {
 			basePower: 40,
@@ -2612,7 +2608,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	ironball: {
 		name: "Iron Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 224,
 		fling: {
 			basePower: 130,
@@ -2681,7 +2677,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	kasibberry: {
 		name: "Kasib Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 233,
 		isBerry: true,
 		naturalGift: {
@@ -2706,7 +2702,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	kebiaberry: {
 		name: "Kebia Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 234,
 		isBerry: true,
 		naturalGift: {
@@ -2751,7 +2747,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	kelpsyberry: {
 		name: "Kelpsy Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 235,
 		isBerry: true,
 		naturalGift: {
@@ -2778,7 +2774,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	kingsrock: {
 		name: "King's Rock",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 236,
 		fling: {
 			basePower: 30,
@@ -2813,7 +2809,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	laggingtail: {
 		name: "Lagging Tail",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 237,
 		fling: {
 			basePower: 10,
@@ -2824,7 +2820,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	lansatberry: {
 		name: "Lansat Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 238,
 		isBerry: true,
 		naturalGift: {
@@ -2872,7 +2868,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	laxincense: {
 		name: "Lax Incense",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 240,
 		fling: {
 			basePower: 10,
@@ -2888,7 +2884,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	leafstone: {
 		name: "Leaf Stone",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 241,
 		fling: {
 			basePower: 30,
@@ -2913,7 +2909,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	leftovers: {
 		name: "Leftovers",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 242,
 		fling: {
 			basePower: 10,
@@ -2928,7 +2924,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	leppaberry: {
 		name: "Leppa Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 244,
 		isBerry: true,
 		naturalGift: {
@@ -2961,7 +2957,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	liechiberry: {
 		name: "Liechi Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 248,
 		isBerry: true,
 		naturalGift: {
@@ -2981,7 +2977,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	lifeorb: {
 		name: "Life Orb",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 249,
 		fling: {
 			basePower: 30,
@@ -2999,7 +2995,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	lightball: {
 		name: "Light Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 251,
 		fling: {
 			basePower: 30,
@@ -3023,7 +3019,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	lightclay: {
 		name: "Light Clay",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 252,
 		fling: {
 			basePower: 30,
@@ -3094,7 +3090,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	lumberry: {
 		name: "Lum Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 262,
 		isBerry: true,
 		naturalGift: {
@@ -3170,7 +3166,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	luxuryball: {
 		name: "Luxury Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 266,
 		num: 11,
 		gen: 3,
@@ -3189,7 +3185,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	machobrace: {
 		name: "Macho Brace",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 269,
 		ignoreKlutz: true,
 		fling: {
@@ -3212,7 +3208,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	magnet: {
 		name: "Magnet",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 273,
 		fling: {
 			basePower: 30,
@@ -3228,7 +3224,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	magoberry: {
 		name: "Mago Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 274,
 		isBerry: true,
 		naturalGift: {
@@ -3322,7 +3318,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	masterball: {
 		name: "Master Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 276,
 		num: 1,
 		gen: 1,
@@ -3379,7 +3375,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	mentalherb: {
 		name: "Mental Herb",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 285,
 		fling: {
 			basePower: 10,
@@ -3432,7 +3428,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	metalcoat: {
 		name: "Metal Coat",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 286,
 		fling: {
 			basePower: 30,
@@ -3606,7 +3602,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	miracleseed: {
 		name: "Miracle Seed",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		fling: {
 			basePower: 30,
 		},
@@ -3652,7 +3648,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	moonstone: {
 		name: "Moon Stone",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 295,
 		fling: {
 			basePower: 30,
@@ -3677,7 +3673,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	mysticwater: {
 		name: "Mystic Water",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 300,
 		fling: {
 			basePower: 30,
@@ -3693,7 +3689,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	nanabberry: {
 		name: "Nanab Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 302,
 		isBerry: true,
 		naturalGift: {
@@ -3707,7 +3703,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	nestball: {
 		name: "Nest Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 303,
 		num: 8,
 		gen: 3,
@@ -3715,7 +3711,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	netball: {
 		name: "Net Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 304,
 		num: 6,
 		gen: 3,
@@ -3723,7 +3719,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	nevermeltice: {
 		name: "Never-Melt Ice",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 305,
 		fling: {
 			basePower: 30,
@@ -3739,7 +3735,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	nomelberry: {
 		name: "Nomel Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 306,
 		isBerry: true,
 		naturalGift: {
@@ -3753,7 +3749,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	normalgem: {
 		name: "Normal Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 307,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -3778,7 +3774,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	occaberry: {
 		name: "Occa Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 311,
 		isBerry: true,
 		naturalGift: {
@@ -3828,7 +3824,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	oranberry: {
 		name: "Oran Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 319,
 		isBerry: true,
 		naturalGift: {
@@ -3880,7 +3876,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	passhoberry: {
 		name: "Passho Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 329,
 		isBerry: true,
 		naturalGift: {
@@ -3905,7 +3901,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	payapaberry: {
 		name: "Payapa Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 330,
 		isBerry: true,
 		naturalGift: {
@@ -3930,7 +3926,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	pechaberry: {
 		name: "Pecha Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 333,
 		isBerry: true,
 		naturalGift: {
@@ -3952,7 +3948,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	persimberry: {
 		name: "Persim Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 334,
 		isBerry: true,
 		naturalGift: {
@@ -3972,7 +3968,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	petayaberry: {
 		name: "Petaya Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 335,
 		isBerry: true,
 		naturalGift: {
@@ -4084,7 +4080,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	poisonbarb: {
 		name: "Poison Barb",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 343,
 		fling: {
 			basePower: 70,
@@ -4101,7 +4097,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	poisongem: {
 		name: "Poison Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 344,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -4143,7 +4139,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	pokeball: {
 		name: "Poke Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 345,
 		num: 4,
 		gen: 1,
@@ -4151,7 +4147,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	pomegberry: {
 		name: "Pomeg Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 351,
 		isBerry: true,
 		naturalGift: {
@@ -4224,7 +4220,7 @@ export const Items: { [itemid: string]: ItemData } = {
 			}
 		},
 		name: "Power Herb",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 358,
 		fling: {
 			basePower: 10,
@@ -4260,7 +4256,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	premierball: {
 		name: "Premier Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 363,
 		num: 12,
 		gen: 3,
@@ -4307,7 +4303,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	psychicgem: {
 		name: "Psychic Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 369,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -4372,7 +4368,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	qualotberry: {
 		name: "Qualot Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 371,
 		isBerry: true,
 		naturalGift: {
@@ -4385,7 +4381,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	quickball: {
 		name: "Quick Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 372,
 		num: 15,
 		gen: 4,
@@ -4438,7 +4434,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	rarebone: {
 		name: "Rare Bone",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 379,
 		fling: {
 			basePower: 100,
@@ -4448,7 +4444,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	rawstberry: {
 		name: "Rawst Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 381,
 		isBerry: true,
 		naturalGift: {
@@ -4470,7 +4466,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	razorclaw: {
 		name: "Razor Claw",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 382,
 		fling: {
 			basePower: 80,
@@ -4571,7 +4567,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	repeatball: {
 		name: "Repeat Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 401,
 		num: 9,
 		gen: 3,
@@ -4588,7 +4584,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	rindoberry: {
 		name: "Rindo Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 409,
 		isBerry: true,
 		naturalGift: {
@@ -4623,7 +4619,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	rockgem: {
 		name: "Rock Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 415,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -4680,7 +4676,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	rockyhelmet: {
 		name: "Rocky Helmet",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 417,
 		fling: {
 			basePower: 60,
@@ -4738,7 +4734,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	roseliberry: {
 		name: "Roseli Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 603,
 		isBerry: true,
 		naturalGift: {
@@ -4833,7 +4829,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	safariball: {
 		name: "Safari Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 425,
 		num: 5,
 		gen: 1,
@@ -4841,7 +4837,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	safetygoggles: {
 		name: "Safety Goggles",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 604,
 		fling: {
 			basePower: 80,
@@ -4870,7 +4866,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	salacberry: {
 		name: "Salac Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 426,
 		isBerry: true,
 		naturalGift: {
@@ -4932,7 +4928,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	scopelens: {
 		name: "Scope Lens",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 429,
 		fling: {
 			basePower: 30,
@@ -4945,7 +4941,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	seaincense: {
 		name: "Sea Incense",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 430,
 		fling: {
 			basePower: 10,
@@ -4961,7 +4957,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	sharpbeak: {
 		name: "Sharp Beak",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 436,
 		fling: {
 			basePower: 50,
@@ -4991,7 +4987,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	shedshell: {
 		name: "Shed Shell",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 437,
 		fling: {
 			basePower: 10,
@@ -5005,7 +5001,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	shellbell: {
 		name: "Shell Bell",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 438,
 		fling: {
 			basePower: 30,
@@ -5021,7 +5017,6 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	shinystone: {
 		name: "Shiny Stone",
-		availability: {atlas: 1},
 		spritenum: 439,
 		fling: {
 			basePower: 80,
@@ -5031,7 +5026,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	shockdrive: {
 		name: "Shock Drive",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 442,
 		onTakeItem(item, pokemon, source) {
 			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
@@ -5047,7 +5042,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	shucaberry: {
 		name: "Shuca Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 443,
 		isBerry: true,
 		naturalGift: {
@@ -5072,7 +5067,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	silkscarf: {
 		name: "Silk Scarf",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 444,
 		fling: {
 			basePower: 10,
@@ -5088,7 +5083,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	silverpowder: {
 		name: "Silver Powder",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 447,
 		fling: {
 			basePower: 10,
@@ -5104,7 +5099,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	sitrusberry: {
 		name: "Sitrus Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 448,
 		isBerry: true,
 		naturalGift: {
@@ -5172,7 +5167,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	smoothrock: {
 		name: "Smooth Rock",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 453,
 		fling: {
 			basePower: 10,
@@ -5210,7 +5205,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	softsand: {
 		name: "Soft Sand",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 456,
 		fling: {
 			basePower: 10,
@@ -5256,7 +5251,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	spelltag: {
 		name: "Spell Tag",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 461,
 		fling: {
 			basePower: 30,
@@ -5334,7 +5329,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	starfberry: {
 		name: "Starf Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 472,
 		isBerry: true,
 		naturalGift: {
@@ -5389,7 +5384,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	steelgem: {
 		name: "Steel Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 473,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -5447,7 +5442,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	stickybarb: {
 		name: "Sticky Barb",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 476,
 		fling: {
 			basePower: 80,
@@ -5500,7 +5495,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	sunstone: {
 		name: "Sun Stone",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 480,
 		fling: {
 			basePower: 30,
@@ -5533,7 +5528,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	tamatoberry: {
 		name: "Tamato Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 486,
 		isBerry: true,
 		naturalGift: {
@@ -5546,7 +5541,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	tangaberry: {
 		name: "Tanga Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 487,
 		isBerry: true,
 		naturalGift: {
@@ -5591,7 +5586,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	terrainextender: {
 		name: "Terrain Extender",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 662,
 		fling: {
 			basePower: 60,
@@ -5634,7 +5629,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	thunderstone: {
 		name: "Thunder Stone",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 492,
 		fling: {
 			basePower: 30,
@@ -5644,7 +5639,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	timerball: {
 		name: "Timer Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 494,
 		num: 10,
 		gen: 3,
@@ -5652,7 +5647,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	toxicorb: {
 		name: "Toxic Orb",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 515,
 		fling: {
 			basePower: 30,
@@ -6589,7 +6584,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	twistedspoon: {
 		name: "Twisted Spoon",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 520,
 		fling: {
 			basePower: 30,
@@ -6619,7 +6614,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	ultraball: {
 		name: "Ultra Ball",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 521,
 		num: 2,
 		gen: 1,
@@ -6638,7 +6633,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	upgrade: {
 		name: "Up-Grade",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 523,
 		fling: {
 			basePower: 30,
@@ -6672,7 +6667,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	wacanberry: {
 		name: "Wacan Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 526,
 		isBerry: true,
 		naturalGift: {
@@ -6696,7 +6691,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	watergem: {
 		name: "Water Gem",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 528,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -6727,7 +6722,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	waterstone: {
 		name: "Water Stone",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 529,
 		fling: {
 			basePower: 30,
@@ -6749,7 +6744,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	watmelberry: {
 		name: "Watmel Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 530,
 		isBerry: true,
 		naturalGift: {
@@ -6778,7 +6773,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	weaknesspolicy: {
 		name: "Weakness Policy",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 609,
 		fling: {
 			basePower: 80,
@@ -6819,7 +6814,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	whiteherb: {
 		name: "White Herb",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 535,
 		fling: {
 			basePower: 10,
@@ -6859,7 +6854,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	widelens: {
 		name: "Wide Lens",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 537,
 		fling: {
 			basePower: 10,
@@ -6875,7 +6870,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	wikiberry: {
 		name: "Wiki Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 538,
 		isBerry: true,
 		naturalGift: {
@@ -6916,7 +6911,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	yacheberry: {
 		name: "Yache Berry",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 567,
 		isBerry: true,
 		naturalGift: {
@@ -6962,7 +6957,7 @@ export const Items: { [itemid: string]: ItemData } = {
 	},
 	zoomlens: {
 		name: "Zoom Lens",
-		availability: {clover: 1, atlas: 1},
+		availability: {clover: 1},
 		spritenum: 574,
 		fling: {
 			basePower: 10,
@@ -8044,76 +8039,5 @@ export const Items: { [itemid: string]: ItemData } = {
 		itemUser: ["Blobbos-Ultra"],
 		gen: 8,
 		isNonstandard: "Future",
-	},
-	/* Atlas Exclusive Items */
-	eviomite: {
-		availability: {atlas: 1},
-		name: "Eviomite",
-		spritenum: 130,
-		fling: {
-			basePower: 40,
-		},
-		onModifyAtkPriority: 2,
-		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.nfe) {
-				return this.chainModify(1.5);
-			}
-		},
-		onModifySpAPriority: 2,
-		onModifySpA(spa, pokemon) {
-			if (pokemon.baseSpecies.nfe) {
-				return this.chainModify(1.5);
-			}
-		},
-		gen: 8,
-		isNonstandard: "Future",
-	},
-	baguette: {
-		availability: {atlas: 1},
-		name: "Baguette",
-		spritenum: 520,
-		fling: {
-			basePower: 90,
-		},
-		onModifyAtkPriority: 1,
-		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Marsourais' || pokemon.baseSpecies.baseSpecies === 'Paratsien') {
-				return this.chainModify(2);
-			}
-		},
-		itemUser: ["Paratsien", "Marsourais"],
-		gen: 8,
-	},
-	staticorb: {
-		name: "Static Orb",
-		availability: {atlas: 1},
-		spritenum: 145,
-		fling: {
-			basePower: 30,
-			status: 'par',
-		},
-		onResidualOrder: 26,
-		onResidualSubOrder: 2,
-		onResidual(pokemon) {
-			pokemon.trySetStatus('par', pokemon);
-		},
-		num: 716,
-		gen: 8,
-	},
-	snoozeorb: {
-		name: "Snooze Orb",
-		availability: {atlas: 1},
-		spritenum: 145,
-		fling: {
-			basePower: 30,
-			status: 'slp',
-		},
-		onResidualOrder: 26,
-		onResidualSubOrder: 2,
-		onResidual(pokemon) {
-			pokemon.trySetStatus('slp', pokemon);
-		},
-		num: 716,
-		gen: 8,
 	},
 };

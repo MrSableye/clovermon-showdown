@@ -2511,17 +2511,4 @@ export const ItemsText: { [k: string]: ItemText } = {
 		transform: "  Bright light is about to burst out of [POKEMON]!",
 		activate: "[POKEMON] regained its true power through Ultra Burst!",
 	},
-	/* Atlas Items */
-	eviomite: {
-		name: "Eviomite",
-		desc: "If holder's species can evolve, its Atk and Spa. Atk are 1.5x.",
-	},
-	baguette: {
-		name: "Baguette",
-		desc: "If held by a Marsourais or a Paratsien, its Attack is doubled.",
-	},
-	staticorb: {
-		name: "Static Orb",
-		desc: "At the end of every turn, this item attempts to paralyze the holder.",
-	},
 };
