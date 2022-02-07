@@ -534,7 +534,6 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 	};
 	const allAvailabilities: {[k: string]: string} = {
 		clover: 'clover',
-		thyme: 'atlas', atlas: 'atlas',
 	};
 	let showAll = false;
 	let sort = null;
@@ -1275,7 +1274,6 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 	}
 	const allAvailabilities: {[k: string]: string} = {
 		clover: 'clover',
-		thyme: 'atlas', atlas: 'atlas',
 	};
 	let showAll = false;
 	let sort: string | null = null;
