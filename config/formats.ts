@@ -403,7 +403,7 @@ export const Formats: FormatList = [
 			const scale = 600 - species.baseStats['hp'];
 			for (const stat of stats) {
 				// @ts-ignore
-				template.baseStats[stat] = this.clampIntRange(template.baseStats[stat] * scale / pst, 1, 255);
+				species.baseStats[stat] = this.clampIntRange(species.baseStats[stat] * scale / pst, 1, 255);
 			}
 			return species;
 		},
