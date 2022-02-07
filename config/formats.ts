@@ -379,6 +379,36 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: "[Gen 8 Clover Only] Scalemons",
+		desc: `Every Pok&eacute;mon's stats, barring HP, are scaled to give them a BST as close to 600 as possible.`,
+		mod: 'clover',
+		ruleset: [
+			'Clover Only',
+			'Standard NatDex',
+			'OHKO Clause',
+			'Evasion Moves Clause',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Species Clause',
+		],
+		banlist: [
+			'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
+			'Huge Power', 'Eviolite', 'Light Ball', 'Thick Club',
+		],
+		onModifySpecies(species) {
+			if (!species.baseStats) return;
+			const stats = ['atk', 'def', 'spa', 'spd', 'spe'];
+			// @ts-ignore
+			const pst = stats.map(stat => species.baseStats[stat]).reduce((x, y) => x + y);
+			const scale = 600 - species.baseStats['hp'];
+			for (const stat of stats) {
+				// @ts-ignore
+				template.baseStats[stat] = this.clampIntRange(template.baseStats[stat] * scale / pst, 1, 255);
+			}
+			return species;
+		},
+	},
+	{
 		name: '[Gen 8 Clover Only] Custom Game',
 		mod: 'clover',
 		debug: true,
