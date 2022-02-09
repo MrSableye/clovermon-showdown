@@ -390,23 +390,12 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sleep Clause Mod',
 			'Species Clause',
+			'Scalemons Mod',
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
 			'Huge Power', 'Eviolite', 'Light Ball', 'Thick Club',
 		],
-		onModifySpecies(species) {
-			if (!species.baseStats) return;
-			const stats = ['atk', 'def', 'spa', 'spd', 'spe'];
-			// @ts-ignore
-			const pst = stats.map(stat => species.baseStats[stat]).reduce((x, y) => x + y);
-			const scale = 600 - species.baseStats['hp'];
-			for (const stat of stats) {
-				// @ts-ignore
-				species.baseStats[stat] = this.clampIntRange(species.baseStats[stat] * scale / pst, 1, 255);
-			}
-			return species;
-		},
 	},
 	{
 		name: '[Gen 8 Clover Only] Custom Game',
