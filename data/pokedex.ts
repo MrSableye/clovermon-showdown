@@ -31848,9 +31848,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Flying"],
 		gen: 8,
 	},
-	celestare: {
+	flubunny: {
 		num: 42062,
-		name: "Celestare",
+		name: "Flubunny",
 		types: ["Fairy", "Psychic"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 65, atk: 30, def: 49, spa: 49, spd: 65, spe: 60},
@@ -31861,9 +31861,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Field"],
 		gen: 8,
 	},
-	haregee: {
+	lepooze: {
 		num: 42063,
-		name: "Haregee",
+		name: "Lepooze",
 		types: ["Fairy", "Psychic"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 80, atk: 45, def: 63, spa: 65, spd: 80, spe: 72},
@@ -31887,9 +31887,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Field"],
 		gen: 8,
 	},
-	toxipole: {
+	tadpoison: {
 		num: 42059,
-		name: "Toxipole",
+		name: "Tadpoison",
 		types: ["Poison"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 40, atk: 55, def: 43, spa: 60, spd: 50, spe: 70},
@@ -31900,9 +31900,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Water 1"],
 		gen: 8,
 	},
-	venoad: {
+	bretkhelm: {
 		num: 42060,
-		name: "Venoad",
+		name: "Bretkhelm",
 		types: ["Poison", "Dragon"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 89, atk: 56, def: 65, spa: 65, spd: 85, spe: 45},
@@ -31926,9 +31926,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Water 1"],
 		gen: 8,
 	},
-	camorogue: {
+	helmata: {
 		num: 42065,
-		name: "Camorogue",
+		name: "Helmata",
 		types: ["Ground"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 40, atk: 70, def: 40, spa: 58, spd: 40, spe: 70},
@@ -31939,9 +31939,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Dragon"],
 		gen: 8,
 	},
-	puncheleon: {
+	punkuyu: {
 		num: 42066,
-		name: "Puncheleon",
+		name: "Punkuyu",
 		types: ["Ground", "Fighting"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 55, atk: 85, def: 60, spa: 60, spd: 60, spe: 85},
