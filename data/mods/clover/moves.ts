@@ -1200,4 +1200,24 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	amnesiad: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	blizzardd: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	hyperbeamd: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	wrapd: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	darkening: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

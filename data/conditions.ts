@@ -807,4 +807,13 @@ export const Conditions: {[k: string]: ConditionData} = {
 			target.side.removeSlotCondition(target, 'lootable');
 		},
 	},
+	bound: {
+		name: 'bound',
+		duration: 2,
+		onBeforeMovePriority: 4,
+		onBeforeMove(pokemon) {
+			this.add('cant', pokemon, 'bound');
+			return false;
+		},
+	},
 };
