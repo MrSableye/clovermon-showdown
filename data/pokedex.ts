@@ -31665,7 +31665,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		heightm: 2.59,
 		weightkg: 97,
 		color: "Blue",
-		cosmeticFormes: ["Eccosmic-Magellanic", "Eccosmic-Sol", "Eccosmic-Starburst", "Eccosmic-Quasar", "Eccosmic-Andromeda", "Eccosmic-Nebula", "Eccosmic-Milky Way"],
+		cosmeticFormes: ["Eccosmic-Magellanic", "Eccosmic-Sol", "Eccosmic-Starburst", "Eccosmic-Quasar", "Eccosmic-Andromeda", "Eccosmic-Nebula", "Eccosmic-Milky-Way"],
 		formeOrder: [
 			"Eccosmic",
 			"Eccosmic-Magellanic",
@@ -31674,7 +31674,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 			"Eccosmic-Quasar",
 			"Eccosmic-Andromeda",
 			"Eccosmic-Nebula",
-			"Eccosmic-Milky Way",
+			"Eccosmic-Milky-Way",
 		],
 		eggGroups: ["Water 2", "Field"],
 		gen: 8,
