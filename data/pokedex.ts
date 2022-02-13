@@ -24044,6 +24044,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: [
 			"Undiscovered",
 		],
+		cosmeticFormes: ["Fontaba-a", "Fontaba-b", "Fontaba-c", "Fontaba-co", "Fontaba-d", "Fontaba-f", "Fontaba-fa", "Fontaba-fit", "Fontaba-g", "Fontaba-h", "Fontaba-int", "Fontaba-jp", "Fontaba-k", "Fontaba-out", "Fontaba-pol", "Fontaba-r9k", "Fontaba-s", "Fontaba-s4s", "Fontaba-soc", "Fontaba-sp", "Fontaba-trv", "Fontaba-tv", "Fontaba-v", "Fontaba-vg", "Fontaba-vp", "Fontaba-vr", "Fontaba-x", "Fontaba-z"],
+		formeOrder: ["Fontaba", "Fontaba-a", "Fontaba-b", "Fontaba-c", "Fontaba-co", "Fontaba-d", "Fontaba-f", "Fontaba-fa", "Fontaba-fit", "Fontaba-g", "Fontaba-h", "Fontaba-int", "Fontaba-jp", "Fontaba-k", "Fontaba-out", "Fontaba-pol", "Fontaba-r9k", "Fontaba-s", "Fontaba-s4s", "Fontaba-soc", "Fontaba-sp", "Fontaba-trv", "Fontaba-tv", "Fontaba-v", "Fontaba-vg", "Fontaba-vp", "Fontaba-vr", "Fontaba-x", "Fontaba-z"],
 		gen: 8,
 	},
 	floconut: {
@@ -31664,6 +31666,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		color: "Blue",
 		cosmeticFormes: ["Eccosmic-Magellanic", "Eccosmic-Sol", "Eccosmic-Starburst", "Eccosmic-Quasar", "Eccosmic-Andromeda", "Eccosmic-Nebula", "Eccosmic-Milky Way"],
 		formeOrder: [
+			"Eccosmic",
 			"Eccosmic-Magellanic",
 			"Eccosmic-Sol",
 			"Eccosmic-Starburst",
