@@ -7206,11 +7206,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 20% chance to burn the target.",
 		shortDesc: "20% chance to burn the target.",
 	},
-	avianrush: {
-		name: "Avian Rush",
-		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
-		shortDesc: "Has 33% recoil.",
-	},
 	moredakka: {
 		name: "More Dakka",
 		desc: "Hits three times. This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
