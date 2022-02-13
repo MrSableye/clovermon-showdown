@@ -15162,12 +15162,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	flubunny: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP LC",
 	},
 	lepooze: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP NFE",
 	},
 	lunabbit: {
 		inherit: true,
@@ -15177,12 +15177,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	tadpoison: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP LC",
 	},
 	bretkhelm: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP NFE",
 	},
 	berfgoyle: {
 		inherit: true,
@@ -15192,12 +15192,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	helmata: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP LC",
 	},
 	punkuyu: {
 		inherit: true,
 		isNonstandard: "CAP",
-		tier: "CAP",
+		tier: "CAP NFE",
 	},
 	chamelee: {
 		inherit: true,
