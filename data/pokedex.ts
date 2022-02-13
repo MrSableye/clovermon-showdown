@@ -31662,11 +31662,11 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		heightm: 2.59,
 		weightkg: 97,
 		color: "Blue",
-		cosmeticFormes: ["Eccosmic-Magellanic", "Eccosmic-Pulsar", "Eccosmic-Sol", "Eccosmic-Quasar", "Eccosmic-Andromeda", "Eccosmic-Nebula", "Eccosmic-Milky Way"],
+		cosmeticFormes: ["Eccosmic-Magellanic", "Eccosmic-Sol", "Eccosmic-Starburst", "Eccosmic-Quasar", "Eccosmic-Andromeda", "Eccosmic-Nebula", "Eccosmic-Milky Way"],
 		formeOrder: [
 			"Eccosmic-Magellanic",
-			"Eccosmic-Pulsar",
 			"Eccosmic-Sol",
+			"Eccosmic-Starburst",
 			"Eccosmic-Quasar",
 			"Eccosmic-Andromeda",
 			"Eccosmic-Nebula",
