@@ -7398,7 +7398,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "10% chance to lower the target's Sp. Def by 1. Always hits and deals 100x against Vandash.",
 	},
 	wrapd: {
-		name: "Wrap?",
+		name: "Wrap-D",
 		desc: "The user spends two to five turns using this move. Has a 3/8 chance to last two or three turns, and a 1/8 chance to last four or five turns. The damage calculated for the first turn is used for every other turn. The user cannot select a move and the target cannot execute a move during the effect, but both may switch out. If the user switches out, the target remains unable to execute a move during that turn. If the target switches out, the user uses this move again automatically, and if it had 0 PP at the time, it becomes 63. If the user or the target switch out, or the user is prevented from moving, the effect ends. This move can prevent the target from moving even if it has type immunity, but will not deal damage.",
 		shortDesc: "Prevents the target from moving for 2-5 turns.",
 
@@ -7406,17 +7406,17 @@ export const MovesText: {[k: string]: MoveText} = {
 		move: "#wrap", // gen 1 only
 	},
 	blizzardd: {
-		name: "Blizzard?",
+		name: "Blizzard-D",
 		desc: "Has a 30% chance to freeze the target.",
 		shortDesc: "30% chance to freeze the target.",
 	},
 	amnesiad: {
-		name: "Amnesia?",
+		name: "Amnesia-D",
 		desc: "Raises the user's Special by 2 stages.",
 		shortDesc: "Raises the user's Special by 2.",
 	},
 	hyperbeamd: {
-		name: "Hyper Beam?",
+		name: "Hyper Beam-D",
 		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move, unless the target or its substitute was knocked out by this move.",
 		shortDesc: "Can't move next turn if target or sub is not KOed.",
 	},
