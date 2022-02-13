@@ -32167,7 +32167,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Salezerker",
 		types: ["Fire", "Steel"],
 		genderRatio: {M: 0.875, F: 0.125},
-		baseStats: {hp: 95, atk: 113, def: 101, spa: 78, spd: 88, spe: 50},
+		baseStats: {hp: 95, atk: 113, def: 101, spa: 68, spd: 78, spe: 70},
 		abilities: {0: "Blaze", H: "Flame Body", S: "Regenerator"},
 		heightm: 2.3,
 		weightkg: 666,
