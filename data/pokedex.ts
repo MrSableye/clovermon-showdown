@@ -24021,6 +24021,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	fontaba: {
 		num: 69201,
 		name: "Fontaba",
+		baseForme: "a",
 		types: [
 			"Psychic",
 		],
