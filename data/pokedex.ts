@@ -31293,7 +31293,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		forme: "Anti",
 		types: ["Water", "Steel"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 70, atk: 50, def: 110, spa: 70, spd: 115, spe: 55},
+		baseStats: {hp: 70, atk: 50, def: 110, spa: 70, spd: 115, spe: 65},
 		abilities: {0: "Motor Drive", 1: "Rain Dish", H: "Rivalry", S: "Minus"},
 		heightm: 1,
 		weightkg: 18,
