@@ -8869,12 +8869,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	celestare: {
+	flubunny: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	haregee: {
+	lepooze: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",
@@ -8884,12 +8884,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	toxipole: {
+	tadpoison: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	venoad: {
+	bretkhelm: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",
@@ -8899,12 +8899,12 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	camorogue: {
+	helmata: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	puncheleon: {
+	punkuyu: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",
@@ -9080,6 +9080,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 	},
 	primateve: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	tokoyaki: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",

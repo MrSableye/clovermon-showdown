@@ -22039,23 +22039,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fighting",
 		zMove: {basePower: 180},
 	},
-	avianrush: {
-		availability: {clover: 1},
-		num: 42012,
-		accuracy: 100,
-		basePower: 120,
-		category: "Physical",
-		isNonstandard: "Future",
-		name: "Avian Rush",
-		pp: 15,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		recoil: [1, 4],
-		secondary: null,
-		target: "normal",
-		type: "???",
-		contestType: "Tough",
-	},
 	trickstab: {
 		availability: {clover: 1},
 		num: 42013,
@@ -22328,9 +22311,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 	memejr: {
 		availability: {clover: 1},
-		num: 612,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 60,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Meme Jr.",
@@ -23069,6 +23051,105 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Poison",
 		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	wrapd: {
+		availability: {clover: 1},
+		accuracy: 85,
+		basePower: 15,
+		category: "Physical",
+		name: "Wrap?",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		volatileStatus: 'bound',
+		self: {
+			volatileStatus: 'partialtrappinglock',
+		},
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+		// FIXME: onBeforeMove(pokemon, target) {target.removeVolatile('mustrecharge')}
+		onHit(target, source) {
+			/**
+			 * The duration of the partially trapped must be always renewed to 2
+			 * so target doesn't move on trapper switch out as happens in gen 1.
+			 * However, this won't happen if there's no switch and the trapper is
+			 * about to end its partial trapping.
+			 **/
+			if (target.volatiles['bound']) {
+				if (source.volatiles['partialtrappinglock'] && source.volatiles['partialtrappinglock'].duration > 1) {
+					target.volatiles['bound'].duration = 2;
+				}
+			}
+		},
+	},
+	blizzardd: {
+		availability: {clover: 1},
+		accuracy: 90,
+		basePower: 120,
+		category: "Special",
+		name: "Blizzard?",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'frz',
+		},
+		target: "allAdjacentFoes",
+		type: "Ice",
+		isNonstandard: "Future",
+	},
+	amnesiad: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Amnesia?",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			spa: 2,
+			spd: 2,
+		},
+		secondary: null,
+		target: "self",
+		type: "Psychic",
+		isNonstandard: "Future",
+	},
+	hyperbeamd: {
+		availability: {clover: 1},
+		accuracy: 90,
+		basePower: 150,
+		category: "Physical",
+		name: "Hyper Beam?",
+		pp: 5,
+		priority: 0,
+		flags: {recharge: 1, protect: 1, mirror: 1},
+		onMoveFail(target, source, move) {
+			source.addVolatile('mustrecharge');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	darkening: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 135,
+		category: "Special",
+		name: "Darkening",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 1],
+		secondary: null,
+		target: "allAdjacent",
+		type: "Dark",
 		isNonstandard: "Future",
 	},
 };

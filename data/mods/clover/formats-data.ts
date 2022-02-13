@@ -15159,12 +15159,42 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	flubunny: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	lepooze: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	lunabbit: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	tadpoison: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	bretkhelm: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	berfgoyle: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	helmata: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	punkuyu: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",
