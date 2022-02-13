@@ -9084,6 +9084,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
+	tokoyaki: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	onsenpura: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
