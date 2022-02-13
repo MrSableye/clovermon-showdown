@@ -1856,5 +1856,5 @@ export const Aliases: {[alias: string]: string} = {
 	eccosmicquasar: "Eccosmic",
 	eccosmicandromeda: "Eccosmic",
 	eccosmicnebula: "Eccosmic",
-	eccosmicmilkyWay: "Eccosmic",
+	eccosmicmilkyway: "Eccosmic",
 };
