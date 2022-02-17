@@ -5782,6 +5782,15 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3,
 		isNonstandard: "Future",
 	},
+	magicalrealm: {
+		availability: {clover: 1},
+		name: "Magic Realm",
+		onStart(pokemon) {
+			this.add('-activate', pokemon, 'ability: Magical Realm');
+			this.field.addPseudoWeather('magicroom');
+		},
+		rating: 4,
+	},
 	uncompetitive: {
 		availability: {clover: 1},
 		name: "Uncompetitive",

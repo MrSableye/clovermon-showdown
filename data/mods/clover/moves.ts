@@ -1197,22 +1197,27 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "CAP",
 	},
 	amnesiad: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	blizzardd: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	hyperbeamd: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	wrapd: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	darkening: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
