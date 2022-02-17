@@ -23066,6 +23066,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		self: {
 			volatileStatus: 'partialtrappinglock',
 		},
+		noSketch: true,
 		target: "normal",
 		type: "Normal",
 		isNonstandard: "Future",
@@ -23115,6 +23116,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			spd: 2,
 		},
 		secondary: null,
+		noSketch: true,
 		target: "self",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -23132,6 +23134,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			source.addVolatile('mustrecharge');
 		},
 		secondary: null,
+		noSketch: true,
 		target: "normal",
 		type: "Normal",
 		contestType: "Cool",
@@ -23148,6 +23151,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: {protect: 1, mirror: 1, heal: 1},
 		drain: [1, 1],
 		secondary: null,
+		noSketch: true,
 		target: "allAdjacent",
 		type: "Dark",
 		isNonstandard: "Future",

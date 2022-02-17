@@ -164,6 +164,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	magicalrealm: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 	uncompetitive: {
 		inherit: true,
 		isNonstandard: "CAP",

@@ -2032,4 +2032,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Nimble Metal Body",
 		shortDesc: "This Pokemon's self-switching moves have their priority increased by 1.",
 	},
+	magicalrealm: {
+		name: "Magical Realm",
+		shortDesc: "Summons Magic Room upon switch-in.",
+	},
 };
