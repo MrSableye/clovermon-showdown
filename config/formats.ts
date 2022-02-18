@@ -430,7 +430,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Uber', 'Baton Pass',
-			'Knokedge', 'Reagain', 'Spedo', 'Wedgard', 'Signot', 'Motherfuck', 'Hofucno', 'Dowster', 'Deemdow', 'Sprucifix', 'Grimdak', 'Pearchie', 'Mennopaws', 'Inbitween', 'Randomix',
+			'Shadow Tag', 'Arena Trap', 'Moody',
 		],
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
@@ -449,11 +449,11 @@ export const Formats: FormatList = [
 		},
 		onBegin() {
 			for (const pokemon of this.getAllPokemon()) {
-				if (pokemon.ability === this.toID(pokemon.species.abilities['S'])) {
-					continue;
-				}
+				const ruleTable = this.dex.formats.getRuleTable(this.format);
+
 				pokemon.m.innates = Object.keys(pokemon.species.abilities)
 					.map(key => this.toID(pokemon.species.abilities[key as "0" | "1" | "H" | "S"]))
+					.filter(ability => !ruleTable.isBanned(ability))
 					.filter(ability => ability !== pokemon.ability);
 			}
 		},
