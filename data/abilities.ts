@@ -5797,7 +5797,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onStart(source) {
 			this.field.setWeather('densefog');
 		},
-		onModifyAccuracy(acc, pokemon) {
+		onSourceModifyAccuracy(acc, pokemon) {
 			if (this.field.isWeather('densefog')) {
 				return this.chainModify(2);
 			}
