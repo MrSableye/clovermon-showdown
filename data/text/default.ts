@@ -289,6 +289,12 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		upkeep: "  (The hail is crashing down.)",
 		damage: "  [POKEMON] is buffeted by the hail!",
 	},
+	densefog: {
+		weatherName: "Fog",
+		start: "  A thick fog rolled in!",
+		end: "  The dense fog faded.",
+		upkeep: "  (The fog is deep.)",
+	},
 	desolateland: {
 		weatherName: "Intense Sun",
 		start: "  The sunlight turned extremely harsh!",

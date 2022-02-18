@@ -11923,6 +11923,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			case 'primordialsea':
 			case 'sandstorm':
 			case 'hail':
+			case 'densefog':
 				factor = 0.25;
 				break;
 			}
@@ -11955,6 +11956,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			case 'primordialsea':
 			case 'sandstorm':
 			case 'hail':
+			case 'densefog':
 				factor = 0.25;
 				break;
 			}
@@ -16707,7 +16709,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			return null;
 		},
 		onBasePower(basePower, pokemon, target) {
-			if (['raindance', 'primordialsea', 'sandstorm', 'hail'].includes(pokemon.effectiveWeather())) {
+			if (['raindance', 'primordialsea', 'sandstorm', 'hail', 'densefog'].includes(pokemon.effectiveWeather())) {
 				this.debug('weakened by weather');
 				return this.chainModify(0.5);
 			}
@@ -16744,7 +16746,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			return null;
 		},
 		onBasePower(basePower, pokemon, target) {
-			if (['raindance', 'primordialsea', 'sandstorm', 'hail'].includes(pokemon.effectiveWeather())) {
+			if (['raindance', 'primordialsea', 'sandstorm', 'hail', 'densefog'].includes(pokemon.effectiveWeather())) {
 				this.debug('weakened by weather');
 				return this.chainModify(0.5);
 			}
@@ -18198,6 +18200,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			case 'primordialsea':
 			case 'sandstorm':
 			case 'hail':
+			case 'densefog':
 				factor = 0.25;
 				break;
 			}
@@ -19931,6 +19934,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 				move.basePower *= 2;
 				break;
 			case 'hail':
+				move.basePower *= 2;
+				break;
+			case 'densefog':
 				move.basePower *= 2;
 				break;
 			}
@@ -22173,7 +22179,10 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		critRatio: 2,
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Ice",
 	},
@@ -22600,9 +22609,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 				}
 			}
 		},
-		secondary: {
-			chance: 50,
-			volatileStatus: 'confusion',
+		secondary: null,
+		self: {
+			sideCondition: 'lightscreen',
 		},
 		target: "normal",
 		type: "Poison",
@@ -23052,6 +23061,46 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Poison",
 		contestType: "Cool",
 		isNonstandard: "Future",
+	},
+	frigidend: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 105,
+		category: "Physical",
+		name: "Frigid End",
+		pp: 10,
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Ice', type);
+		},
+		breaksProtect: true,
+		priority: 0,
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	twintowertumblingterror: {
+		accuracy: true,
+		basePower: 290,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Twin Tower Tumbling Terror",
+		pp: 1,
+		priority: -7,
+		flags: {contact: 1, hammer: 1},
+		isZ: "sableviumz",
+		onAfterMove(source) {
+			source.trySetStatus('brn');
+		},
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Smart",
 	},
 	wrapd: {
 		availability: {clover: 1},

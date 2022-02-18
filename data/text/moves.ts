@@ -6898,7 +6898,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	scorchedearth: {
 		name: "Scorched Earth",
-		desc: "Hits adjacent Pokemon. Has a 100% to burn adjacent Pokemon and itself.",
+		desc: "Has a 100% to burn grounded adjacent Pokemon and itself if grounded.",
 	},
 	hulkup: {
 		name: "Hulk Up",
@@ -7234,8 +7234,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	coldcutter: {
 		name: "Cold Cutter",
-		desc: "Has a higher chance for a critical hit.",
-		shortDesc: "High critical hit ratio.",
+		desc: "Has a higher chance for a critical hit and a 20% chance to freeze the target.",
+		shortDesc: "High critical hit ratio, 20% chance to freeze.",
 	},
 	shadowscales: {
 		name: "Shadow Scales",
@@ -7245,7 +7245,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	wingsofcorrection: {
 		name: "Wings Of Correction",
 		desc: "If this move is successful and whether or not the target's evasiveness was affected, the effects of Reflect, Light Screen, Aurora Veil, Safeguard, Mist, Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the target's side, and the effects of Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the user's side. If there is a terrain active and this move is successful, the terrain will be cleared. Has -6 priority and switches the opponent out to a random member.",
-		shortDesc: "Clears terrain and hazards, switches out opponent",
+		shortDesc: "Clears terrain and hazards, switches out opponent.",
 	},
 	brutalpunishment: {
 		name: "Brutal Punishment",
@@ -7305,7 +7305,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	medsnow: {
 		name: "Meds Now",
 		desc: "If the target is an ally, this move restores 3/4 of its maximum HP, rounded down, instead of dealing damage.",
-		shortDesc: "If the target is an ally, heals 75% of its max HP.",
+		shortDesc: "Heals 75% if targeting an ally, Summons Light Screen.",
 	},
 	villify: {
 		name: "Villify",
@@ -7355,6 +7355,15 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "Protects from moves. Contact: loses 1/8 HP. Sets Grass.",
 
 		damage: "  [POKEMON] was hurt by the sharp leaves!",
+	},
+	twintowertumblingterror: {
+		name: "Twin Tower Tumbling Terror",
+		desc: "100% chance to burn the user and the opponent.",
+	},
+	frigidend: {
+		name: "Frigid End",
+		desc: "This move combines Ice in its type effectiveness against the target. Damage doubles and no accuracy check is done if the target has used Minimize while active.",
+		shortDesc: "Combines Ice in its type effectiveness, Breaks protection.",
 	},
 	/* :^) */
 	skullcannon: {

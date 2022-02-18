@@ -5790,6 +5790,29 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			this.field.addPseudoWeather('magicroom');
 		},
 		rating: 4,
+		isNonstandard: "Future",
+	},
+	fogofwar: {
+		availability: {clover: 1},
+		onStart(source) {
+			this.field.setWeather('densefog');
+		},
+		onModifyAccuracy(acc, pokemon) {
+			if (this.field.isWeather('densefog')) {
+				return this.chainModify(2);
+			}
+		},
+		name: "Fog Of War",
+		rating: 4,
+		isNonstandard: "Future",
+	},
+	jihad: {
+		availability: {clover: 1},
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move.selfdestruct) return priority + 1;
+		},
+		name: "Jihad",
+		isNonstandard: "Future",
 	},
 	uncompetitive: {
 		availability: {clover: 1},

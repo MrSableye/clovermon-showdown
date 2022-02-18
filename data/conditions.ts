@@ -807,6 +807,36 @@ export const Conditions: {[k: string]: ConditionData} = {
 			target.side.removeSlotCondition(target, 'lootable');
 		},
 	},
+	densefog: {
+		name: 'DenseFog',
+		effectType: 'Weather',
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source?.hasItem('suedeshoes')) {
+				return 8;
+			}
+			return 5;
+		},
+		// This should be applied directly to the stat before any of the other modifiers are chained
+		// So we give it increased priority.
+		onModifyAccuracyPriority: 10,
+		onModifyAccuracy(acc, pokemon) {
+			if (this.field.isWeather('densefog')) {
+				return this.modify(acc, 0.6);
+			}
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'DenseFog', '[from] ability: ' + effect, '[of] ' + source);
+			} else {
+				this.add('-weather', 'DenseFog');
+			}
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
 	bound: {
 		name: 'bound',
 		duration: 2,
