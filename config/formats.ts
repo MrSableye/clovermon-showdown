@@ -429,7 +429,8 @@ export const Formats: FormatList = [
 			'Species Clause',
 		],
 		banlist: [
-			'Uber',
+			'Uber', 'Baton Pass',
+			'Knokedge', 'Reagain', 'Spedo', 'Wedgard', 'Signot', 'Motherfuck', 'Hofucno', 'Dowster', 'Deemdow', 'Sprucifix', 'Grimdak', 'Pearchie', 'Mennopaws', 'Inbitween', 'Randomix',
 		],
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
