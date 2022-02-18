@@ -419,7 +419,6 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] Pokebilities",
 		desc: `Pok&eacute;mon have all of their released abilities simultaneously.`,
 		mod: 'cloverabilities',
-		searchShow: false,
 		ruleset: [
 			'Clover Only',
 			'Standard NatDex',
