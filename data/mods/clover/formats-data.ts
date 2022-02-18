@@ -15589,6 +15589,36 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	peasol: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	vaponobi: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP NFE",
+	},
+	haarshogun: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	vineboom: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	fucker: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	emojinn: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,

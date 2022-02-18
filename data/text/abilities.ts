@@ -2036,4 +2036,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Magical Realm",
 		shortDesc: "Summons Magic Room upon switch-in.",
 	},
+	fogofwar: {
+		name: "Fog Of War",
+		shortDesc: "On switch-in, this Pokemon summons Dense Fog.",
+	},
+	jihad: {
+		name: "Jihad",
+		shortDesc: "This Pokemon's self-destructing moves have their priority increased by 1.",
+	},
 };

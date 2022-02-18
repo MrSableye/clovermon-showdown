@@ -2511,4 +2511,8 @@ export const ItemsText: { [k: string]: ItemText } = {
 		transform: "  Bright light is about to burst out of [POKEMON]!",
 		activate: "[POKEMON] regained its true power through Ultra Burst!",
 	},
+	sableviumz: {
+		name: "Sablevium Z",
+		desc: "If held by a Sableven forme with Heavy Slam, it can use Twin Tower Tumbling Terror.",
+	},
 };

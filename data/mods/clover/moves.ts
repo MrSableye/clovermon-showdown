@@ -1196,6 +1196,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	frigidend: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 	amnesiad: {
 		availability: {clover: 1},
 		inherit: true,
