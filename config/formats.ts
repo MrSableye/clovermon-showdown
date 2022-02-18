@@ -394,7 +394,25 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
-			'Huge Power', 'Eviolite', 'Light Ball', 'Thick Club',
+			'Huge Power', 'Pure Power', 'Eviolite', 'Light Ball', 'Thick Club',
+		],
+	},
+	{
+		name: "[Gen 8 Clover Only] Camomons",
+		desc: `Pok&eacute;mon change type to match their first two moves.`,
+		mod: 'clover',
+		ruleset: [
+			'Clover Only',
+			'Standard NatDex',
+			'OHKO Clause',
+			'Evasion Moves Clause',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Species Clause',
+			'Camomons Mod',
+		],
+		banlist: [
+			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass',
 		],
 	},
 	{
