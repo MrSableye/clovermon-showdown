@@ -394,7 +394,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
-			'Huge Power', 'Pure Power', 'Eviolite', 'Light Ball', 'Thick Club',
+			'Huge Power', 'Pure Power', 'Eviolite', 'Light Ball', 'Thick Club', 'Big Faggot',
 		],
 	},
 	{
