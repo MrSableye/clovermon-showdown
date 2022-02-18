@@ -812,9 +812,6 @@ export const Conditions: {[k: string]: ConditionData} = {
 		effectType: 'Weather',
 		duration: 5,
 		durationCallback(source, effect) {
-			if (source?.hasItem('suedeshoes')) {
-				return 8;
-			}
 			return 5;
 		},
 		// This should be applied directly to the stat before any of the other modifiers are chained
