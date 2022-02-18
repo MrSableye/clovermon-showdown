@@ -432,21 +432,6 @@ export const Formats: FormatList = [
 			'Uber', 'Baton Pass',
 			'Shadow Tag', 'Arena Trap', 'Moody',
 		],
-		onValidateSet(set) {
-			const species = this.dex.species.get(set.species);
-			const unSeenAbilities = Object.keys(species.abilities)
-				.filter(key => key !== 'S' && (key !== 'H' || !species.unreleasedHidden))
-				.map(key => species.abilities[key as "0" | "1" | "H" | "S"])
-				.filter(ability => ability !== set.ability);
-			if (unSeenAbilities.length && this.toID(set.ability) !== this.toID(species.abilities['S'])) {
-				for (const abilityName of unSeenAbilities) {
-					const banReason = this.ruleTable.check('ability:' + this.toID(abilityName));
-					if (banReason) {
-						return [`${set.name}'s ability ${abilityName} is ${banReason}.`];
-					}
-				}
-			}
-		},
 		onBegin() {
 			for (const pokemon of this.getAllPokemon()) {
 				const ruleTable = this.dex.formats.getRuleTable(this.format);
