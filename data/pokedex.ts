@@ -33492,7 +33492,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		types: ["Psychic", "Flying"],
 		gender: "M",
 		baseStats: {hp: 70, atk: 55, def: 79, spa: 121, spd: 86, spe: 101},
-		abilities: {0: "Prankster", H: "Tangled Hair", S: "Berserk"},
+		abilities: {0: "Prankster", H: "Tangling Hair", S: "Berserk"},
 		heightm: 1.5,
 		weightkg: 64,
 		color: "Blue",
