@@ -412,7 +412,7 @@ export const Formats: FormatList = [
 			'Camomons Mod',
 		],
 		banlist: [
-			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass',
+			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
 		],
 	},
 	{
