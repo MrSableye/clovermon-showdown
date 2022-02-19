@@ -3263,6 +3263,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 				}
 			}
 			this.field.clearTerrain();
+			if (this.field.isWeather('densefog')) {
+				this.field.clearWeather();
+			}
 			return success;
 		},
 		secondary: null,
