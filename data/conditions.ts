@@ -817,9 +817,9 @@ export const Conditions: {[k: string]: ConditionData} = {
 		// This should be applied directly to the stat before any of the other modifiers are chained
 		// So we give it increased priority.
 		onModifyAccuracyPriority: 10,
-		onModifyAccuracy(acc, pokemon) {
-			if (this.field.isWeather('densefog')) {
-				return this.modify(acc, 0.6);
+		onModifyAccuracy(accuracy, pokemon) {
+			if (this.field.isWeather('densefog') && typeof accuracy === 'number') {
+				return this.modify(accuracy, 0.6);
 			}
 		},
 		onFieldStart(field, source, effect) {
