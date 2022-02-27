@@ -32191,13 +32191,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		heightm: 1.5,
 		weightkg: 312,
 		color: "Brown",
-		evos: ["Chaotark"],
+		evos: ["Aquaos"],
 		eggGroups: ["Amorphous"],
 		gen: 8,
 	},
-	chaotark: {
+	Aquaos: {
 		num: 42008,
-		name: "Chaotark",
+		name: "Aquaos",
 		types: ["Water", "Ground"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 80, atk: 65, def: 70, spa: 75, spd: 68, spe: 47},
@@ -32221,7 +32221,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		heightm: 1.5,
 		weightkg: 312,
 		color: "Brown",
-		prevo: "Chaotark",
+		prevo: "Aquaos",
 		evoLevel: 38,
 		eggGroups: ["Amorphous"],
 		gen: 8,
@@ -32457,9 +32457,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 	},
-	primateve: {
+	primiteve: {
 		num: 42103,
-		name: "Primateve",
+		name: "Primiteve",
 		types: ["Rock", "Steel"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 100, atk: 110, def: 101, spa: 64, spd: 61, spe: 85},

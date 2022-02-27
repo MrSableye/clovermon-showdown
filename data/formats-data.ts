@@ -8989,7 +8989,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	chaotark: {
+	aquaos: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",
@@ -9079,7 +9079,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	primateve: {
+	primiteve: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",
