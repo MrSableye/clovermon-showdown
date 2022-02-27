@@ -18544,7 +18544,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			duration: 3,
 			onStart(target) {
 				if (['Diglett', 'Dugtrio', 'Palossand', 'Sandygast', 'Fusjahl'].includes(target.baseSpecies.baseSpecies) ||
-					target.baseSpecies.name === 'Gengar-Mega') {
+					['Gengar-Mega', 'Goryannus-Mega'].includes(target.baseSpecies.name)) {
 					this.add('-immune', target);
 					return null;
 				}
