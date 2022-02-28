@@ -32195,7 +32195,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Amorphous"],
 		gen: 8,
 	},
-	Aquaos: {
+	aquaos: {
 		num: 42008,
 		name: "Aquaos",
 		types: ["Water", "Ground"],
