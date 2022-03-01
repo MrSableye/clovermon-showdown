@@ -3263,6 +3263,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 				}
 			}
 			this.field.clearTerrain();
+			if (this.field.isWeather('densefog')) {
+				this.field.clearWeather();
+			}
 			return success;
 		},
 		secondary: null,
@@ -18540,8 +18543,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 		condition: {
 			duration: 3,
 			onStart(target) {
-				if (['Diglett', 'Dugtrio', 'Palossand', 'Sandygast'].includes(target.baseSpecies.baseSpecies) ||
-					target.baseSpecies.name === 'Gengar-Mega') {
+				if (['Diglett', 'Dugtrio', 'Palossand', 'Sandygast', 'Fusjahl'].includes(target.baseSpecies.baseSpecies) ||
+					['Gengar-Mega', 'Goryannus-Mega'].includes(target.baseSpecies.name)) {
 					this.add('-immune', target);
 					return null;
 				}

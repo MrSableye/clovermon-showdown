@@ -15274,7 +15274,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP LC",
 	},
-	chaotark: {
+	aquaos: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP NFE",
@@ -15364,7 +15364,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
-	primateve: {
+	primiteve: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",

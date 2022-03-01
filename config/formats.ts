@@ -394,8 +394,69 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
-			'Huge Power', 'Eviolite', 'Light Ball', 'Thick Club',
+			'Huge Power', 'Pure Power', 'Eviolite', 'Light Ball', 'Thick Club', 'Big Faggot', 'Militant',
 		],
+	},
+	{
+		name: "[Gen 8 Clover Only] Camomons",
+		desc: `Pok&eacute;mon change type to match their first two moves.`,
+		mod: 'clover',
+		ruleset: [
+			'Clover Only',
+			'Standard NatDex',
+			'OHKO Clause',
+			'Evasion Moves Clause',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Species Clause',
+			'Camomons Mod',
+		],
+		banlist: [
+			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
+		],
+	},
+	{
+		name: "[Gen 8 Clover Only] Pokebilities",
+		desc: `Pok&eacute;mon have all of their released abilities simultaneously.`,
+		mod: 'cloverabilities',
+		ruleset: [
+			'Clover Only',
+			'Standard NatDex',
+			'OHKO Clause',
+			'Evasion Moves Clause',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Species Clause',
+		],
+		banlist: [
+			'Uber', 'Baton Pass',
+			'Shadow Tag', 'Arena Trap', 'Moody',
+			'Bunnorgy',
+		],
+		onBegin() {
+			for (const pokemon of this.getAllPokemon()) {
+				const ruleTable = this.dex.formats.getRuleTable(this.format);
+
+				pokemon.m.innates = Object.keys(pokemon.species.abilities)
+					.map(key => this.toID(pokemon.species.abilities[key as "0" | "1" | "H" | "S"]))
+					.filter(ability => !ruleTable.isBanned(ability))
+					.filter(ability => ability !== pokemon.ability);
+			}
+		},
+		onSwitchInPriority: 2,
+		onSwitchIn(pokemon) {
+			if (pokemon.m.innates) {
+				for (const innate of pokemon.m.innates) {
+					pokemon.addVolatile("ability:" + innate, pokemon);
+				}
+			}
+		},
+		onAfterMega(pokemon) {
+			for (const innate of Object.keys(pokemon.volatiles).filter(i => i.startsWith('ability:'))) {
+				pokemon.removeVolatile(innate);
+			}
+			pokemon.m.innates = undefined;
+		},
 	},
 	{
 		name: '[Gen 8 Clover Only] Custom Game',

@@ -2443,8 +2443,7 @@ export class RandomTeams {
 
 		while (sets.length < 6) {
 			const blobbosForme = this.sampleNoReplace(blobbosFormes);
-
-			sets.push({
+			const set = {
 				name: this.sampleNoReplace(blobbosNicknames),
 				species: blobbosForme.name,
 				gender: 'N',
@@ -2455,7 +2454,13 @@ export class RandomTeams {
 				ivs: {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31},
 				level: Math.ceil(100 * ((700 - blobbosForme.bst) / 700)),
 				shiny: this.randomChance(1, 12),
-			});
+			};
+
+			if (blobbosForme.id === 'blobbosmini') {
+				set.level = Math.floor(set.level / 2);
+			}
+
+			sets.push(set);
 		}
 
 		return sets;

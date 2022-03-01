@@ -24021,6 +24021,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	fontaba: {
 		num: 69201,
 		name: "Fontaba",
+		baseForme: "a",
 		types: [
 			"Psychic",
 		],
@@ -24044,6 +24045,8 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: [
 			"Undiscovered",
 		],
+		cosmeticFormes: ["Fontaba-a", "Fontaba-b", "Fontaba-c", "Fontaba-co", "Fontaba-d", "Fontaba-f", "Fontaba-fa", "Fontaba-fit", "Fontaba-g", "Fontaba-h", "Fontaba-int", "Fontaba-jp", "Fontaba-k", "Fontaba-out", "Fontaba-pol", "Fontaba-r9k", "Fontaba-s", "Fontaba-s4s", "Fontaba-soc", "Fontaba-sp", "Fontaba-trv", "Fontaba-tv", "Fontaba-v", "Fontaba-vg", "Fontaba-vp", "Fontaba-vr", "Fontaba-x", "Fontaba-z"],
+		formeOrder: ["Fontaba", "Fontaba-a", "Fontaba-b", "Fontaba-c", "Fontaba-co", "Fontaba-d", "Fontaba-f", "Fontaba-fa", "Fontaba-fit", "Fontaba-g", "Fontaba-h", "Fontaba-int", "Fontaba-jp", "Fontaba-k", "Fontaba-out", "Fontaba-pol", "Fontaba-r9k", "Fontaba-s", "Fontaba-s4s", "Fontaba-soc", "Fontaba-sp", "Fontaba-trv", "Fontaba-tv", "Fontaba-v", "Fontaba-vg", "Fontaba-vp", "Fontaba-vr", "Fontaba-x", "Fontaba-z"],
 		gen: 8,
 	},
 	floconut: {
@@ -31664,6 +31667,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		color: "Blue",
 		cosmeticFormes: ["Eccosmic-Magellanic", "Eccosmic-Sol", "Eccosmic-Starburst", "Eccosmic-Quasar", "Eccosmic-Andromeda", "Eccosmic-Nebula", "Eccosmic-Milky Way"],
 		formeOrder: [
+			"Eccosmic",
 			"Eccosmic-Magellanic",
 			"Eccosmic-Sol",
 			"Eccosmic-Starburst",
@@ -32187,13 +32191,13 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		heightm: 1.5,
 		weightkg: 312,
 		color: "Brown",
-		evos: ["Chaotark"],
+		evos: ["Aquaos"],
 		eggGroups: ["Amorphous"],
 		gen: 8,
 	},
-	chaotark: {
+	aquaos: {
 		num: 42008,
-		name: "Chaotark",
+		name: "Aquaos",
 		types: ["Water", "Ground"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 80, atk: 65, def: 70, spa: 75, spd: 68, spe: 47},
@@ -32217,7 +32221,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		heightm: 1.5,
 		weightkg: 312,
 		color: "Brown",
-		prevo: "Chaotark",
+		prevo: "Aquaos",
 		evoLevel: 38,
 		eggGroups: ["Amorphous"],
 		gen: 8,
@@ -32453,9 +32457,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 	},
-	primateve: {
+	primiteve: {
 		num: 42103,
-		name: "Primateve",
+		name: "Primiteve",
 		types: ["Rock", "Steel"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 100, atk: 110, def: 101, spa: 64, spd: 61, spe: 85},
@@ -33488,7 +33492,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		types: ["Psychic", "Flying"],
 		gender: "M",
 		baseStats: {hp: 70, atk: 55, def: 79, spa: 121, spd: 86, spe: 101},
-		abilities: {0: "Prankster", H: "Tangled Hair", S: "Berserk"},
+		abilities: {0: "Prankster", H: "Tangling Hair", S: "Berserk"},
 		heightm: 1.5,
 		weightkg: 64,
 		color: "Blue",
