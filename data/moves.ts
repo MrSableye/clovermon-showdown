@@ -22305,7 +22305,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	memejr: {
 		availability: {clover: 1},
 		accuracy: 100,
-		basePower: 60,
+		basePower: 40,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Meme Jr.",
