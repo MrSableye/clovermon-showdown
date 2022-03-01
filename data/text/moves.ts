@@ -7201,11 +7201,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power is multiplied by 999 times if the target has less than or equal to half of its maximum HP remaining.",
 		shortDesc: "Power is multiplied by 999x if the target's HP is 50% or less.",
 	},
-	cheeseclaw: {
-		name: "Cheese Claw",
-		desc: "Has a 20% chance to burn the target.",
-		shortDesc: "20% chance to burn the target.",
-	},
 	moredakka: {
 		name: "More Dakka",
 		desc: "Hits three times. This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
