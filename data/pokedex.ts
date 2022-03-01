@@ -32716,7 +32716,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Skallaxy",
 		types: ["Flying", "Fire"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 95, atk: 122, def: 46, spa: 60, spd: 73, spe: 104},
+		baseStats: {hp: 95, atk: 122, def: 56, spa: 60, spd: 73, spe: 104},
 		abilities: {0: "Cloud Nine", 1: "Moxie", H: "Magic Guard", S: "Eclipse"},
 		heightm: 3.4,
 		weightkg: 221.3,
