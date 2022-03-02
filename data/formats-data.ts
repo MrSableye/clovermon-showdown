@@ -9360,11 +9360,6 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	autumn: {
-		availability: {clover: 1},
-		isNonstandard: "Future",
-		tier: "Illegal",
-	},
 	horse: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
