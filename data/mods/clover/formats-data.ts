@@ -15209,7 +15209,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
-	sableven: {
+	sablini: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",

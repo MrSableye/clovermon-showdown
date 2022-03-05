@@ -8919,7 +8919,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	sableven: {
+	sablini: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",
