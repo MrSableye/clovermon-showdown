@@ -439,7 +439,7 @@ export const Formats: FormatList = [
 
 				pokemon.m.innates = Object.keys(pokemon.species.abilities)
 					.map(key => this.toID(pokemon.species.abilities[key as "0" | "1" | "H" | "S"]))
-					.filter(ability => !ruleTable.isBanned(ability))
+					.filter(ability => !ruleTable.isBanned(`ability:${ability}`))
 					.filter(ability => ability !== pokemon.ability);
 			}
 		},
