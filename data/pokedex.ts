@@ -33499,6 +33499,18 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Amorphous", "Human-Like"],
 	},
 	/* :^) */
+	autumn: {
+		num: -42002,
+		name: "Autumn",
+		types: ["Grass", "Fire", "Fighting"],
+		gender: "F",
+		baseStats: {hp: 120, atk: 167, def: 100, spa: 167, spd: 100, spe: 146},
+		abilities: {0: "Huge Power", H: "Pure Power", S: "Protean"},
+		heightm: 1.6,
+		weightkg: 60,
+		color: "Brown",
+		eggGroups: ["Human-Like"],
+	},
 	horse: {
 		num: -42004,
 		name: "Horse",
