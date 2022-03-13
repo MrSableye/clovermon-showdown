@@ -32495,7 +32495,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		weightkg: 2241.3,
 		color: "Red",
 		prevo: "Tokoyaki",
-		evoLevel: 40,
+		evoLevel: 35,
 		eggGroups: ["Mineral", "Water 2"],
 		gen: 8,
 	},
