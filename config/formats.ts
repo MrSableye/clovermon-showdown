@@ -252,6 +252,12 @@ export const Formats: FormatList = [
 			}
 		},
 	},
+	{
+		name: '[Gen 8 Clover Only] Random Irish Battle',
+		mod: 'clover',
+		team: 'randomIrish',
+		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
 	///////////////////////////////////////////////////////////////////
 	// Clover OMs
 	///////////////////////////////////////////////////////////////////
