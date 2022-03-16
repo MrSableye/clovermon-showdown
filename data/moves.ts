@@ -22723,7 +22723,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			this.add('-start', target, 'typechange', 'Dark');
 		},
 		secondary: null,
-		target: "allAdjacent",
+		target: "allAdjacentFoes",
 		type: "Dark",
 		contestType: "Cute",
 		isNonstandard: "Future",
