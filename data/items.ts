@@ -6751,7 +6751,17 @@ export const Items: { [itemid: string]: ItemData } = {
 			basePower: 100,
 			type: "Fire",
 		},
-		onEat: false,
+		onUpdate(pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 2) {
+				pokemon.eatItem();
+			}
+		},
+		onTryEatItem(item, pokemon) {
+			if (!this.runEvent('TryHeal', pokemon)) return false;
+		},
+		onEat(pokemon) {
+			this.heal(70);
+		},
 		num: 181,
 		gen: 3,
 		isNonstandard: "Past",
