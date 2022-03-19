@@ -33569,6 +33569,17 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		color: "Brown",
 		eggGroups: ["Bug"],
 	},
+	waterweedle: {
+		num: 13,
+		name: "Water Weedle",
+		types: ["Water"],
+		baseStats: {hp: 40, atk: 35, def: 30, spa: 20, spd: 20, spe: 50},
+		abilities: {0: "Shield Dust", H: "Run Away"},
+		heightm: 0.3,
+		weightkg: 3.2,
+		color: "Brown",
+		eggGroups: ["Bug"],
+	},
 	francine: {
 		num: -42006,
 		name: "Francine",

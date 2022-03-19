@@ -2215,7 +2215,7 @@ export const ItemsText: { [k: string]: ItemText } = {
 	},
 	watmelberry: {
 		name: "Watmel Berry",
-		desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+		desc: "Restores 70 HP when at 1/2 max HP or less. Single use.",
 	},
 	waveincense: {
 		name: "Wave Incense",
@@ -2510,9 +2510,5 @@ export const ItemsText: { [k: string]: ItemText } = {
 
 		transform: "  Bright light is about to burst out of [POKEMON]!",
 		activate: "[POKEMON] regained its true power through Ultra Burst!",
-	},
-	sableviumz: {
-		name: "Sablevium Z",
-		desc: "If held by a Sableven forme with Heavy Slam, it can use Twin Tower Tumbling Terror.",
 	},
 };
