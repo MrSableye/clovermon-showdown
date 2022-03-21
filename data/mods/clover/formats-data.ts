@@ -15619,6 +15619,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	sporestool: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP LC",
+	},
+	peashroom: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,

@@ -22734,7 +22734,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		basePower: 90,
 		category: "Special",
 		name: "Nuclear Winter",
-		pp: 20,
+		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
@@ -22746,6 +22746,26 @@ export const Moves: { [moveid: string]: MoveData } = {
 		},
 		target: "allAdjacentFoes",
 		type: "Ice",
+		isNonstandard: "Future",
+	},
+	shroomsnuggle: {
+		availability: {clover: 1},
+		accuracy: 95,
+		basePower: 70,
+		category: "Physical",
+		name: "Shroom Snuggle",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			onHit(target, source, move) {
+				if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+			},
+		},
+		drain: [1, 2],
+		target: "allAdjacent",
+		type: "Fairy",
 		isNonstandard: "Future",
 	},
 	closeblobmat: {
@@ -23065,26 +23085,25 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
-	twintowertumblingterror: {
-		accuracy: true,
-		basePower: 290,
-		category: "Physical",
-		isNonstandard: "Future",
-		name: "Twin Tower Tumbling Terror",
-		pp: 1,
-		priority: -7,
-		flags: {contact: 1, hammer: 1},
-		isZ: "sableviumz",
-		onAfterMove(source) {
-			source.trySetStatus('brn');
+	coinflip: {
+		availability: {clover: 1},
+		accuracy: 50,
+		basePower: 0,
+		category: "Special",
+		name: "Coin Flip",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		ohko: true,
+		onMoveFail(target, source, move) {
+			this.damage(source.baseMaxhp, source, source, this.dex.conditions.get('ouchie'));
 		},
-		secondary: {
-			chance: 100,
-			status: 'brn',
-		},
+		secondary: null,
+		ignoreAbility: true,
 		target: "normal",
-		type: "Steel",
-		contestType: "Smart",
+		type: "???",
+		noSketch: true,
+		isNonstandard: "Future",
 	},
 	wrapd: {
 		availability: {clover: 1},

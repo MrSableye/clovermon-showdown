@@ -33439,7 +33439,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		],
 		gen: 8,
 	},
-	/* Booster Pack 1 */
+	/* gen 2 isn't real */
 	peasol: {
 		num: 42161,
 		name: "Peasol",
@@ -33520,6 +33520,35 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		weightkg: 64,
 		color: "Blue",
 		eggGroups: ["Amorphous", "Human-Like"],
+	},
+	sporestool: {
+		num: 42167,
+		name: "Sporestool",
+		types: ["Fairy"],
+		gender: "F",
+		baseStats: {hp: 55, atk: 65, def: 40, spa: 55, spd: 70, spe: 20},
+		abilities: {0: "Magic Bounce", 1: "Victory Star", H: "Effect Spore", S: "Levitate"},
+		heightm: 0.2,
+		weightkg: 6.4,
+		color: "Pink",
+		evos: ["Peashroom"],
+		eggGroups: ["Grass", "Human-Like"],
+		gen: 8,
+	},
+	peashroom: {
+		num: 42168,
+		name: "Peashroom",
+		types: ["Fairy"],
+		gender: "F",
+		baseStats: {hp: 105, atk: 95, def: 80, spa: 85, spd: 100, spe: 40},
+		abilities: {0: "Magic Bounce", 1: "Victory Star", H: "Effect Spore", S: "Levitate"},
+		heightm: 1.7,
+		weightkg: 32,
+		color: "Pink",
+		prevo: "Sporestool",
+		evoType: "levelFriendship",
+		eggGroups: ["Grass", "Field"],
+		gen: 8,
 	},
 	/* :^) */
 	autumn: {
