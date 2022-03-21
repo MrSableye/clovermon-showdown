@@ -7429,4 +7429,13 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user recovers 100% the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
 		shortDesc: "User recovers 100% of the damage dealt.",
 	},
+	shroomsnuggle: {
+		name: "Shroom Snuggle",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "Recovers 50% damage dealt, Prevents target from switching.",
+	},
+	coinflip: {
+		name: "Horn Drill",
+		shortDesc: "lol, lmao",
+	},
 };
