@@ -7435,7 +7435,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "Recovers 50% damage dealt, Prevents target from switching.",
 	},
 	coinflip: {
-		name: "Horn Drill",
+		name: "Coin Flip",
 		shortDesc: "lol, lmao",
 	},
 };
