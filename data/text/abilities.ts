@@ -2044,4 +2044,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Jihad",
 		shortDesc: "This Pokemon's self-destructing moves have their priority increased by 1.",
 	},
+	bathtime: {
+		name: "Bath Time",
+		shortDesc: "Product Label: KEEP AWAY FROM WATER.",
+
+		damage: "  Uh oh!",
+	},
 };

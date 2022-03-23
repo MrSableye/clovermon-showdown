@@ -180,4 +180,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	bathtime: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
