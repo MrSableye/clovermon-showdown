@@ -5814,6 +5814,18 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Jihad",
 		isNonstandard: "Future",
 	},
+	bathtime: {
+		availability: {clover: 1},
+		onDamagingHit(damage, target, source, move) {
+			if (target !== source && move.type === 'Water') {
+				this.damage(source.baseMaxhp, source, target);
+				this.damage(source.baseMaxhp, target, target);
+			}
+		},
+		isBreakable: true,
+		name: "Bath Time",
+		isNonstandard: "Future",
+	},
 	uncompetitive: {
 		availability: {clover: 1},
 		name: "Uncompetitive",

@@ -22757,12 +22757,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 100,
-			onHit(target, source, move) {
-				if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
-			},
-		},
+		secondary: null,
 		drain: [1, 2],
 		target: "allAdjacent",
 		type: "Fairy",
