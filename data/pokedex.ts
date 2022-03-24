@@ -33609,6 +33609,18 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		color: "Brown",
 		eggGroups: ["Bug"],
 	},
+	heaventoad: {
+		num: -42009,
+		name: "Heaventoad",
+		types: ["Water", "Fairy"],
+		baseStats: {hp: 77, atk: 106, def: 130, spa: 106, spd: 90, spe: 91},
+		abilities: {0: "Water Absorb", H: "Water Veil"},
+		heightm: 7.1,
+		weightkg: 34,
+		color: "Blue",
+		tags: ["Sub-Legendary"],
+		eggGroups: ["Undiscovered"],
+	},
 	francine: {
 		num: -42006,
 		name: "Francine",

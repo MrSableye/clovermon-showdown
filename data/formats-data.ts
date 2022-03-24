@@ -9400,6 +9400,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
+	heaventoad: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	/* Clover CAP Pokémon */
 	oogabugamega: {
 		availability: {clover: 1},
