@@ -465,6 +465,19 @@ export const Formats: FormatList = [
 		},
 	},
 	{
+		name: "[Gen 8 Clover Only] 1v1",
+		desc: `Bring three Pok&eacute;mon to Team Preview and choose one to battle.`,
+		mod: 'clover',
+		ruleset: [
+			'Picked Team Size = 1', 'Max Team Size = 3',
+			'Obtainable', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Accuracy Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Endless Battle Clause',
+		],
+		banlist: [
+			'Adesign', 'Baddon', 'Boarnograf', 'Chromox', 'Clovenix', 'Condoom', 'Demiwaifu', 'Endranther', 'Foryu', 'Funnedong', 'Griffawork', 'Heliofug',
+			'Jewipede', 'Kuuroba', 'Narwhiz', 'Scytill', 'Semdemen', 'Tentaquil', 'Vivaiger', 'Wonder Guard', 'Moody', 'Bright Powder', 'Focus Band', 'Focus Sash', 'Lax Incense', 'Quick Claw', 'Perish Song',
+		],
+	},
+	{
 		name: '[Gen 8 Clover Only] Custom Game',
 		mod: 'clover',
 		debug: true,
