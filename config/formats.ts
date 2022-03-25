@@ -470,7 +470,14 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		ruleset: [
 			'Picked Team Size = 1', 'Max Team Size = 3',
-			'Obtainable', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Accuracy Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Endless Battle Clause',
+			'Clover Only',
+			'Standard NatDex',
+			'OHKO Clause',
+			'Evasion Moves Clause',
+			'Accuracy Moves Clause',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Species Clause',
 		],
 		banlist: [
 			'Adesign', 'Baddon', 'Boarnograf', 'Chromox', 'Clovenix', 'Condoom', 'Demiwaifu', 'Endranther', 'Foryu', 'Funnedong', 'Griffawork', 'Heliofug',
