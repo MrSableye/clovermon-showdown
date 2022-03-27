@@ -7160,18 +7160,14 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	livewire: {
 		name: "Livewire",
-		desc: "The Pokemon at the user's position steals 1/8 of the target's maximum HP, rounded down, at the end of each turn. If Big Root is held by the recipient, the HP recovered is 1.3x normal, rounded half down. If the target uses Baton Pass, the replacement will continue being leeched. If the target switches out or uses Rapid Spin successfully, the effect ends. Ground-type Pokemon are immune to this move on use, but not its effect.",
-		shortDesc: "1/8 of target's HP is restored to user every turn.",
+		desc: "The user restores 33% of its maximum HP, rounded half up; 66% under Electric Terrain.",
+		shortDesc: "Heals 33% HP, 66% under Electric Terrain.",
 		gen3: {
-			desc: "The Pokemon at the user's position steals 1/8 of the target's maximum HP, rounded down, at the end of each turn. If the target uses Baton Pass, the replacement will continue being leeched. If the target switches out or uses Rapid Spin, the effect ends. Grass-type Pokemon are immune to this move on use, but not its effect.",
+			desc: "The user restores 33% of its maximum HP, rounded half up; 66% under Electric Terrain.",
 		},
 		gen1: {
-			desc: "At the end of each of the target's turns, The Pokemon at the user's position steals 1/16 of the target's maximum HP, rounded down and multiplied by the target's current Toxic counter if it has one, even if the target currently has less than that amount of HP remaining. If the target switches out or any Pokemon uses Haze, this effect ends. Ground-type Pokemon are immune to this move.",
+			desc: "The user restores 33% of its maximum HP, rounded half up; 66% under Electric Terrain.",
 		},
-
-		start: "  [POKEMON] was wired!",
-		end: "  [POKEMON] was freed from the wires!",
-		damage: "  [POKEMON]'s health is sapped by wires!",
 	},
 	rockclock: {
 		name: "Rock Clock",
