@@ -32443,7 +32443,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Impfection",
 		types: ["Poison"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 80, atk: 70, def: 60, spa: 90, spd: 60, spe: 100},
+		baseStats: {hp: 100, atk: 60, def: 60, spa: 90, spd: 70, spe: 80},
 		abilities: {0: "Prankster", 1: "Curious Medicine", H: "Corrosion", S: "Serene Grace"},
 		heightm: 0.7,
 		weightkg: 20.2,
