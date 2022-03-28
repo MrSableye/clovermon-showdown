@@ -34505,11 +34505,11 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		},
 		baseStats: {
 			hp: 60,
-			atk: 75,
+			atk: 100,
 			def: 80,
-			spa: 145,
+			spa: 125,
 			spd: 145,
-			spe: 110,
+			spe: 105,
 		},
 		abilities: {
 			0: "Desolate Land",
