@@ -14197,9 +14197,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
-				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
-			}
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'pleasedontdothat'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
@@ -14213,9 +14210,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onAfterSubDamage(damage, target, pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
-			}
-			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
-				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'pleasedontdothat'];
 			for (const condition of sideConditions) {
@@ -21807,25 +21801,38 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Psychic",
 		isNonstandard: "Future",
 	},
-	livewire: {
+	faradaycage: {
 		availability: {clover: 1},
+		num: 275,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		name: "Livewire",
-		pp: 10,
+		name: "Faraday Cage",
+		pp: 20,
 		priority: 0,
-		flags: {snatch: 1, heal: 1},
-		onHit(pokemon) {
-			let factor = 0.333;
-			if (this.field.isTerrain('electricterrain') && pokemon.isGrounded()) {
-				factor = 0.667;
-			}
-			return !!this.heal(this.modify(pokemon.maxhp, factor));
+		flags: {snatch: 1, nonsky: 1},
+		volatileStatus: 'ingrain',
+		condition: {
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'move: Ingrain');
+			},
+			onResidualOrder: 7,
+			onResidual(pokemon) {
+				this.heal(pokemon.baseMaxhp / 8);
+			},
+			onTrapPokemon(pokemon) {
+				pokemon.tryTrap();
+			},
+			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
+			onDragOut(pokemon) {
+				this.add('-activate', pokemon, 'move: Ingrain');
+				return null;
+			},
 		},
 		secondary: null,
 		target: "self",
 		type: "Electric",
+		isNonstandard: "Future",
 	},
 	dragonburst: {
 		availability: {clover: 1},
@@ -21841,15 +21848,15 @@ export const Moves: { [moveid: string]: MoveData } = {
 				return 150;
 			}
 			if (ratio < 10) {
-				return 100;
+				return 120;
 			}
 			if (ratio < 17) {
-				return 80;
+				return 100;
 			}
 			if (ratio < 33) {
-				return 40;
+				return 90;
 			}
-			return 20;
+			return 60;
 		},
 		category: "Special",
 		name: "Dragon Burst",
@@ -21931,9 +21938,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
-				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
-			}
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'pleasedontdothat'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
@@ -21947,9 +21951,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onAfterSubDamage(damage, target, pokemon) {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
-			}
-			if (pokemon.hp && pokemon.removeVolatile('livewire')) {
-				this.add('-end', pokemon, 'Livewire', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
 			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'pleasedontdothat'];
 			for (const condition of sideConditions) {
@@ -22010,14 +22011,15 @@ export const Moves: { [moveid: string]: MoveData } = {
 	soulcrusher: {
 		availability: {clover: 1},
 		num: 42010,
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 10,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Soul Crusher",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 1],
 		/* lol */
 		onBasePower(basePower, pokemon, target) {
 			if (target.hp * 2 <= target.maxhp) {
@@ -22026,7 +22028,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		},
 		secondary: null,
 		target: "normal",
-		type: "Ghost",
+		type: "Normal",
 		contestType: "Tough",
 	},
 	trickstab: {
@@ -23200,7 +23202,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		secondary: null,
 		noSketch: true,
 		target: "allAdjacent",
-		type: "Dark",
+		type: "Ghost",
 		isNonstandard: "Future",
 	},
 };

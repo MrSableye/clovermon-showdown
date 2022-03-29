@@ -838,7 +838,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
-	livewire: {
+	faradaycage: {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
