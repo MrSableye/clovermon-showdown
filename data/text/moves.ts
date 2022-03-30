@@ -7155,19 +7155,12 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	dragonburst: {
 		name: "Dragon Burst",
-		desc: "The power of this move is 20 if X is 33 to 48, 40 if X is 17 to 32, 80 if X is 10 to 16, 100 if X is 5 to 9, 150 if X is 2 to 4, and 200 if X is 0 or 1, where X is equal to (user's current HP * 48 / user's maximum HP), rounded down.",
+		desc: "The power of this move is 60 if X is 33 to 48, 80 if X is 17 to 32, 100 if X is 10 to 16, 120 if X is 5 to 9, 150 if X is 2 to 4, and 200 if X is 0 or 1, where X is equal to (user's current HP * 48 / user's maximum HP), rounded down.",
 		shortDesc: "More power the less HP the user has left.",
 	},
-	livewire: {
-		name: "Livewire",
-		desc: "The user restores 33% of its maximum HP, rounded half up; 66% under Electric Terrain.",
-		shortDesc: "Heals 33% HP, 66% under Electric Terrain.",
-		gen3: {
-			desc: "The user restores 33% of its maximum HP, rounded half up; 66% under Electric Terrain.",
-		},
-		gen1: {
-			desc: "The user restores 33% of its maximum HP, rounded half up; 66% under Electric Terrain.",
-		},
+	faradaycage: {
+		name: "Faraday Cage",
+		shortDesc: "Traps/grounds user; heals 1/8 max HP per turn.",
 	},
 	rockclock: {
 		name: "Rock Clock",
@@ -7176,8 +7169,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	awaken: {
 		name: "Awaken",
-		desc: "Raises the user's Attack, Defense, and Special Defense by 2 stages. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
-		shortDesc: "Charges, then raises Atk, Def, SpD by 2 turn 2.",
+		desc: "Raises the user's Attack, Defense, and Speed by 2 stages. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
+		shortDesc: "Charges, then raises Atk, Def, Spe by 2 turn 2.",
 
 		prepare: "[POKEMON] is channeling energy!",
 	},
@@ -7194,8 +7187,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	soulcrusher: {
 		name: "Soul Crusher",
-		desc: "Power is multiplied by 999 times if the target has less than or equal to half of its maximum HP remaining.",
-		shortDesc: "Power is multiplied by 999x if the target's HP is 50% or less.",
+		desc: "Power is multiplied by 999 times if the target has less than or equal to half of its maximum HP remaining. Heals for 100% of the damage the move has dealt.",
+		shortDesc: "999x power if target HP <50%, Heals for damage dealt.",
 	},
 	moredakka: {
 		name: "More Dakka",
@@ -7433,5 +7426,9 @@ export const MovesText: {[k: string]: MoveText} = {
 	coinflip: {
 		name: "Coin Flip",
 		shortDesc: "lol, lmao",
+	},
+	bilebite: {
+		name: "Bile Bite",
+		shortDesc: "We prey at night, we stalk at night, we're the rats.",
 	},
 };
