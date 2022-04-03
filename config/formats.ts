@@ -162,6 +162,16 @@ export const Formats: FormatList = [
 			'+CAP',
 		],
 	},
+		{
+			name: '[Gen 8 Clover Only] CAP NFE',
+			mod: 'clover',
+			ruleset: ['[Gen 8 Clover Only] NFE', '+CAP', 'No Blobbos'],
+		},
+	{
+			name: '[Gen 8 Clover Only] CAP LC',
+			mod: 'clover',
+			ruleset: ['[Gen 8 Clover Only] LC', '+CAP', 'No Blobbos'],
+		},
 	///////////////////////////////////////////////////////////////////
 	// Clover Doubles & Triples
 	///////////////////////////////////////////////////////////////////
