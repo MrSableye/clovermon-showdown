@@ -392,7 +392,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'clover',
-		ruleset: ['Clover Only', 'Standard', 'Overflow Stat Mod', 'Dynamax Clause'],
+		ruleset: ['Clover Only', 'Standard', 'Overflow Stat Mod', 'Dynamax Clause', 'Species Clause', 'Sleep Clause Mod', 'Evasion Moves Clause', 'OHKO Clause'],
 		banlist: [
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify'],
