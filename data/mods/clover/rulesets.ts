@@ -44,6 +44,41 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 			}
 		},
 	},
+	cloveronlyminandmega: {
+		effectType: 'ValidatorRule',
+		name: 'Clover Only Mix and Mega',
+		desc: "Only allows Pokémon, items, and moves available in Pokémon Clover.",
+		onValidateSet(set) {
+			const errors = [];
+
+			const species = this.dex.species.get(set.species || set.name);
+			if (!species.availability?.clover) {
+				errors.push(`${species.baseSpecies} is not in Pokémon Clover.`);
+			}
+
+			const item = this.dex.items.get(set.item);
+			if (item && item.id && item.id !== '' && (!item.availability?.clover || item.megaStone)) {
+				errors.push(`${set.name || set.species} has ${item.name}, which is unavailable in Pokémon Clover.`);
+			}
+
+			const ability = this.dex.abilities.get(set.ability);
+			if (ability && !ability.availability?.clover) {
+				errors.push(`${set.name || set.species} has ${ability.name}, which is unavailable in Pokémon Clover.`);
+			}
+
+			set.moves.forEach((moveName) => {
+				const move = this.dex.moves.get(this.toID(moveName));
+
+				if (!this.toID(moveName).startsWith('hiddenpower') && !move.availability?.clover) {
+					errors.push(`${set.name || set.species} has ${move}, which is unavailable in Pokémon Clover.`);
+				}
+			});
+
+			if (errors.length > 0) {
+				return errors;
+			}
+		},
+	},
 	originalityclause: {
 		effectType: 'ValidatorRule',
 		name: 'Originality Clause',
