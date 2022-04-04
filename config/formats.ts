@@ -162,16 +162,16 @@ export const Formats: FormatList = [
 			'+CAP',
 		],
 	},
-		{
-			name: '[Gen 8 Clover Only] CAP NFE',
-			mod: 'clover',
-			ruleset: ['[Gen 8 Clover Only] NFE', '+CAP', 'No Blobbos'],
-		},
 	{
-			name: '[Gen 8 Clover Only] CAP LC',
-			mod: 'clover',
-			ruleset: ['[Gen 8 Clover Only] LC', '+CAP', 'No Blobbos'],
-		},
+		name: '[Gen 8 Clover Only] CAP NFE',
+		mod: 'clover',
+		ruleset: ['[Gen 8 Clover Only] NFE', '+CAP', 'No Blobbos'],
+	},
+	{
+		name: '[Gen 8 Clover Only] CAP LC',
+		mod: 'clover',
+		ruleset: ['[Gen 8 Clover Only] LC', '+CAP', 'No Blobbos'],
+	},
 	///////////////////////////////////////////////////////////////////
 	// Clover Doubles & Triples
 	///////////////////////////////////////////////////////////////////
@@ -477,7 +477,7 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] Mix and Mega",
 		desc: `Mega evolve any Pok&eacute;mon with any mega stone and no limit. Boosts based on mega evolution from gen 7.`,
 		mod: 'clover',
-		ruleset: ['Clover Only', 'Standard', 'Overflow Stat Mod', 'Dynamax Clause', 'Species Clause', 'Sleep Clause Mod', 'Evasion Moves Clause', 'OHKO Clause'],
+		ruleset: ['Clover Only', 'Standard NatDex', 'Overflow Stat Mod', 'Dynamax Clause', 'Species Clause', 'Sleep Clause Mod', 'Evasion Moves Clause', 'OHKO Clause'],
 		banlist: [
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify'],
