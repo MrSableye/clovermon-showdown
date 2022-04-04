@@ -162,6 +162,16 @@ export const Formats: FormatList = [
 			'+CAP',
 		],
 	},
+		{
+			name: '[Gen 8 Clover Only] CAP NFE',
+			mod: 'clover',
+			ruleset: ['[Gen 8 Clover Only] NFE', '+CAP', 'No Blobbos'],
+		},
+	{
+			name: '[Gen 8 Clover Only] CAP LC',
+			mod: 'clover',
+			ruleset: ['[Gen 8 Clover Only] LC', '+CAP', 'No Blobbos'],
+		},
 	///////////////////////////////////////////////////////////////////
 	// Clover Doubles & Triples
 	///////////////////////////////////////////////////////////////////
@@ -461,6 +471,69 @@ export const Formats: FormatList = [
 				pokemon.removeVolatile(innate);
 			}
 			pokemon.m.innates = undefined;
+		},
+	},
+	{
+		name: "[Gen 8 Clover Only] Mix and Mega",
+		desc: `Mega evolve any Pok&eacute;mon with any mega stone and no limit. Boosts based on mega evolution from gen 7.`,
+		mod: 'clover',
+		ruleset: ['Clover Only', 'Standard', 'Overflow Stat Mod', 'Dynamax Clause', 'Species Clause', 'Sleep Clause Mod', 'Evasion Moves Clause', 'OHKO Clause'],
+		banlist: [
+			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
+			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify'],
+		unbanlist: [
+			'Abomasite', 'Absolite', 'Aerodactylite', 'Aggronite', 'Alakazite', 'Altarianite', 'Ampharosite', 'Audinite', 'Banettite', 'Blastoisinite', 'Blue Orb', 'Cameruptite', 'Charizardite X', 'Charizardite Y', 'Diancite', 'Galladite', 'Garchompite', 'Gardevoirite', 'Glalitite', 'Gyaradosite', 'Heracronite', 'Houndoomite', 'Latiasite', 'Latiosite', 'Lopunnite', 'Lucarionite', 'Manectite', 'Metagrossite', 'Mewtwonite X', 'Mewtwonite Y', 'Pinsirite', 'Red Orb', 'Sablenite', 'Salamencite', 'Sceptilite', 'Scizorite', 'Sharpedonite', 'Slowbronite', 'Steelixite', 'Swampertite', 'Tyranitarite', 'Venusaurite', 'Bitekinite', 'Chasumite', 'Condoomite', 'Dowsterite', 'Ebolabite', 'Emplyinite', 'Faptite', 'Floriousite', 'Fonduppite', 'Goryannusite', 'Grimdakite', 'Hazmatite', 'Hohohomite', 'Honradite', 'Illumatrixite', 'Jerklite', 'Krokizonite', 'Kuklanite', 'Lizakbarite', 'Ooganite', 'Pigusonite', 'Rectreemite', 'Reptrillite', 'Ricosuavite', 'Smelloxite', 'Somboludite', 'Spookscarite', 'Spookzillite', 'Unjoyite', 'Upbeddite', 'Vandashite', 'Wifeminite', 'Uber'],
+		restricted: [
+			'Adesign', 'Baddon', 'Boarnograf', 'Chromox', 'Clovenix', 'Demiwaifu', 'Endranther', 'Foryu', 'Funnedong',
+			'Griffawork', 'Heliofug', 'Jewipede', 'Narwhiz', 'Scytill', 'Semdemen', 'Tentaquil',
+			'Vivaiger',
+		],
+		onValidateTeam(team) {
+			const itemTable = new Set<ID>();
+			for (const set of team) {
+				const item = this.dex.items.get(set.item);
+				if (!item.megaStone) continue;
+				const natdex = this.ruleTable.has('standardnatdex');
+				if (natdex && item.id !== 'ultranecroziumz') continue;
+				const species = this.dex.species.get(set.species);
+				if (species.isNonstandard && !this.ruleTable.has(`+${this.toID(species.isNonstandard)}`)) {
+					return [`${species.baseSpecies} does not exist in gen 8.`];
+				}
+				if (natdex && species.name.startsWith('Necrozma-') && item.id === 'ultranecroziumz') {
+					continue;
+				}
+				if (this.ruleTable.isRestrictedSpecies(species) || this.toID(set.ability) === 'powerconstruct') {
+					return [`${species.name} is not allowed to hold ${item.name}.`];
+				}
+				if (itemTable.has(item.id)) {
+					return [`You are limited to one of each mega stone.`, `(You have more than one ${item.name})`];
+				}
+				itemTable.add(item.id);
+			}
+		},
+		onBegin() {
+			for (const pokemon of this.getAllPokemon()) {
+				pokemon.m.originalSpecies = pokemon.baseSpecies.name;
+			}
+		},
+		onSwitchIn(pokemon) {
+			// @ts-ignore
+			const oMegaSpecies = this.dex.species.get(pokemon.species.originalMega);
+			if (oMegaSpecies.exists && pokemon.m.originalSpecies !== oMegaSpecies.baseSpecies) {
+				// Place volatiles on the Pokémon to show its mega-evolved condition and details
+				this.add('-start', pokemon, oMegaSpecies.requiredItem || oMegaSpecies.requiredMove, '[silent]');
+				const oSpecies = this.dex.species.get(pokemon.m.originalSpecies);
+				if (oSpecies.types.length !== pokemon.species.types.length || oSpecies.types[1] !== pokemon.species.types[1]) {
+					this.add('-start', pokemon, 'typechange', pokemon.species.types.join('/'), '[silent]');
+				}
+			}
+		},
+		onSwitchOut(pokemon) {
+			// @ts-ignore
+			const oMegaSpecies = this.dex.species.get(pokemon.species.originalMega);
+			if (oMegaSpecies.exists && pokemon.m.originalSpecies !== oMegaSpecies.baseSpecies) {
+				this.add('-end', pokemon, oMegaSpecies.requiredItem || oMegaSpecies.requiredMove, '[silent]');
+			}
 		},
 	},
 	{
