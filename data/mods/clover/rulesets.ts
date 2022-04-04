@@ -44,9 +44,9 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 			}
 		},
 	},
-	cloveronlyminandmega: {
+	cloveronlymnm: {
 		effectType: 'ValidatorRule',
-		name: 'Clover Only Mix and Mega',
+		name: 'Clover Only MnM',
 		desc: "Only allows Pokémon, items, and moves available in Pokémon Clover.",
 		onValidateSet(set) {
 			const errors = [];
