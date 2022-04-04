@@ -57,7 +57,7 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 			}
 
 			const item = this.dex.items.get(set.item);
-			if (item && item.id && item.id !== '' && (!item.availability?.clover || item.megaStone)) {
+			if (item && item.id && item.id !== '' && (!item.availability?.clover && !item.megaStone)) {
 				errors.push(`${set.name || set.species} has ${item.name}, which is unavailable in Pokémon Clover.`);
 			}
 
