@@ -349,6 +349,14 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: "[Gen 8 Clover Only] Flipped",
+		desc: `Pok&eacute;mon have their base stats flipped.`,
+		mod: 'clover',
+		ruleset: ['Clover Only', 'Standard NatDex', 'Flipped Mod', 'Sleep Clause Mod', 'Evasion Moves Clause', 'Species Clause', 'OHKO Clause', 'Blobbos Clause', 'Dynamax Clause'],
+		banlist: ['Draconius', 'Manatank', 'Pasdawg', 'Arena Trap', 'Moody', 'Power Construct', 'Psychic Surge', 'Shadow Tag', 'Baton Pass', 'Psychic Terrain', 'Shell Smash', 'Toke', 'Uber'],
+		unbanlist: ['Chromox', 'Condoom', 'Funnedong', 'Foryu'],
+	},
+	{
 		name: '[Gen 8 Clover Only] STABmons',
 		desc: `Pok&eacute;mon can use any move of their typing, in addition to the moves they can normally learn.`,
 		mod: 'clover',
