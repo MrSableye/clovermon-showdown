@@ -12,6 +12,7 @@
  * @license MIT
  */
 import {Utils} from '../lib';
+import {LadderRow} from './ladders-local';
 
 export class LadderStore {
 	formatid: string;
@@ -55,6 +56,20 @@ export class LadderStore {
 			user.mmrCache[formatid] = mmr;
 		}
 		return mmr;
+	}
+
+	/**
+	 * Gets all the users on a ladder.
+	 */
+	getUsers(predicate: (ladderRow: LadderRow) => boolean): Promise<string[]> {
+		return Promise.resolve([]);
+	}
+
+
+	/**
+	 * Update the Elo rating for a player.
+	 */
+	updateUserRating(playerName: string, adjustRating: (ladderRow: LadderRow) => number): Promise<void> {
 	}
 
 	/**

@@ -20,7 +20,7 @@ import {FS, Utils} from '../lib';
 // ladder is basically a 2D array representing the corresponding ladder.tsv
 //   with userid in front
 /** [userid, elo, username, w, l, t, lastUpdate */
-type LadderRow = [string, number, string, number, number, number, string];
+export type LadderRow = [string, number, string, number, number, number, string];
 /** formatid: ladder */
 type LadderCache = Map<string, LadderRow[] | Promise<LadderRow[]>>;
 
@@ -183,6 +183,49 @@ export class LadderStore {
 			row[5]++; // tie
 		}
 		row[6] = '' + new Date();
+	}
+
+	/**
+	 * Gets all the users on a ladder.
+	 */
+	async getUsers(predicate: (ladderRow: LadderRow) => boolean) {
+		const ladder = await this.getLadder();
+
+		return Array.from(ladder.values()).filter(predicate).map((row) => row[2]);
+	}
+
+	/**
+	 * Update the Elo rating for a player.
+	 */
+	async updateUserRating(playerName: string, adjustRating: (ladderRow: LadderRow) => number) {
+		if (Ladders.disabled) {
+			return;
+		}
+
+		const ladder = await this.getLadder();
+
+		const playerIndex = this.indexOfUser(playerName, true);
+		const playerLadderRow = ladder[playerIndex];
+		const playerRating = playerLadderRow[1];
+		const adjustedPlayerRating = adjustRating(playerLadderRow);
+
+		if (playerRating === adjustedPlayerRating) {
+			return;
+		}
+
+		playerLadderRow[1] = adjustedPlayerRating;
+
+		let newIndex = playerIndex;
+		while (newIndex > 0 && ladder[newIndex - 1][1] <= adjustedPlayerRating) newIndex--;
+		while (newIndex === playerIndex || (ladder[newIndex] && ladder[newIndex][1] > adjustedPlayerRating)) newIndex++;
+
+		if (newIndex !== playerIndex && newIndex !== playerIndex + 1) {
+			const row = ladder.splice(playerIndex, 1)[0];
+			if (newIndex > playerIndex) newIndex--;
+			ladder.splice(newIndex, 0, row);
+		}
+
+		await this.save();
 	}
 
 	/**
