@@ -14,7 +14,7 @@ const createUserFilter = (currentDate: Date, dayThreshold: number, minimumRating
 
 const createUserRatingAdjust = (minimumRating: number, adjustmentFactor: number) => (row: LadderRow): number => {
 	const rating = row[1];
-	const adjustment = 1 + Math.min(0, (rating - minimumRating) / adjustmentFactor);
+	const adjustment = 1 + Math.max(0, (rating - minimumRating) / adjustmentFactor);
 
 	return Math.max(minimumRating, rating - adjustment);
 };
