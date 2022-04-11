@@ -3,20 +3,26 @@ import {Badges} from './badges';
 
 const ERROR_USER_INELIGIBLE = 'You are not eligble for a custom flair.';
 
-const URL_BASE = 'https://raw.githubusercontent.com/MrSableye/clovermon-showdown-assets/master/clover/sprites/pokemon-icons';
+const baseUrls: Record<string, string> = {
+	pokemon: 'https://raw.githubusercontent.com/Jackinev/pokeicons/master/40x30',
+	clover: 'https://raw.githubusercontent.com/MrSableye/clovermon-showdown-assets/master/clover/sprites/pokemon-icons',
+};
+
 const CSS_HEADER = `.userlist li button:hover {
 	background: rgba(220,230,240,0.7);
 }`;
 
-const getFlairUrl = (pokemonId: string) => `${URL_BASE}/${pokemonId}.png`;
+const getBaseUrl = (pokemonMod: string) => baseUrls[pokemonMod] || baseUrls.clover;
 
-const createUserCss = (userId: string, pokemonId: string) => `[id$="-userlist-user-${userId}"]{background: url("${getFlairUrl(pokemonId)}") no-repeat right -7px center;}`;
+const getFlairUrl = (pokemonId: string, pokemonMod: string) => `${getBaseUrl(pokemonMod)}/${pokemonId}.png`;
 
-const createCss = (cssConfig: CssConfig): string => [CSS_HEADER, ...Object.entries(cssConfig).map(([userId, pokemonId]) => createUserCss(userId, pokemonId))].join('\n');
+const createUserCss = (userId: string, pokemonId: string, pokemonMod: string) => `[id$="-userlist-user-${userId}"]{background: url("${getFlairUrl(pokemonId, pokemonMod)}") no-repeat right -7px center;}`;
+
+const createCss = (cssConfig: CssConfig): string => [CSS_HEADER, ...Object.entries(cssConfig).map(([userId, {pokemonId, pokemonMod}]) => createUserCss(userId, pokemonId, pokemonMod))].join('\n');
 
 const writeCss = (content: string) => FS('config/custom.css').writeSync(content);
 
-type CssConfig = Record<string, string>;
+type CssConfig = Record<string, { pokemonId: string, pokemonMod: string }>;
 
 const cssConfig: CssConfig = JSON.parse(
 	FS('config/chat-plugins/custom-flair.json').readIfExistsSync() || "{}"
@@ -52,8 +58,8 @@ export const commands: Chat.ChatCommands = {
 				throw new Chat.ErrorMessage(ERROR_USER_INELIGIBLE);
 			}
 
-			const pokemonId = toID(target);
-			const flairUrl = getFlairUrl(pokemonId);
+			const [pokemonId, pokemonMod] = target.split(',').map(toID);
+			const flairUrl = getFlairUrl(pokemonId, pokemonMod);
 
 			try {
 				await Net(flairUrl).get();
@@ -61,7 +67,7 @@ export const commands: Chat.ChatCommands = {
 				return this.errorReply('Invalid Clovermon name.');
 			}
 
-			cssConfig[user.id] = pokemonId;
+			cssConfig[user.id] = {pokemonId, pokemonMod};
 			saveCssConfig();
 
 			this.sendReply("|raw| Your flair was successfully set. It may take a while for it to show up. Flair:<br /><img src='" + flairUrl + "' width='40' height='30'>");
