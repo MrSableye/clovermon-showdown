@@ -64,7 +64,7 @@ export const commands: Chat.ChatCommands = {
 			cssConfig[user.id] = pokemonId;
 			saveCssConfig();
 
-			this.sendReply("|raw| Your flair was successfully set. It may take a while for it to show up. Flair:<br /><img src='" + badgeUrl + "' width='40' height='30'>");
+			this.sendReply("|raw| Your flair was successfully set. It may take a while for it to show up. Flair:<br /><img src='" + flairUrl + "' width='40' height='30'>");
 		},
 	},
 };
