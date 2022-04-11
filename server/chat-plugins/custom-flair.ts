@@ -8,7 +8,7 @@ const CSS_HEADER = `.userlist li button:hover {
 	background: rgba(220,230,240,0.7);
 }`;
 
-const getFlairUrl = (pokemonId: string) => `https://raw.githubusercontent.com/MrSableye/clovermon-showdown-assets/master/clover/sprites/pokemon-icons/${pokemonId}.png`;
+const getFlairUrl = (pokemonId: string) => `${URL_BASE}/${pokemonId}.png`;
 
 const createUserCss = (userId: string, pokemonId: string) => `[id$="-userlist-user-${userId}"]{background: url("${getFlairUrl(pokemonId)}") no-repeat right -7px center;}`;
 
@@ -33,7 +33,10 @@ const customFlairBadges = [
 
 const canUserHaveCustomFlair = async (user: User): Promise<boolean> => {
 	const userBadges = await Badges.getUserBadges(user.id);
-	return userBadges.some((userBadge) => customFlairBadges.includes(userBadge.badge_id));
+	const isTournamentWinner = userBadges.some((userBadge) => customFlairBadges.includes(userBadge.badge_id));
+	const isWhitelisted = Config.customflair[user.id] !== undefined;
+
+	return isTournamentWinner || isWhitelisted;
 };
 
 export const commands: Chat.ChatCommands = {
@@ -50,10 +53,10 @@ export const commands: Chat.ChatCommands = {
 			}
 
 			const pokemonId = toID(target);
-			const badgeUrl = `${URL_BASE}/${pokemonId}.png`;
+			const flairUrl = getFlairUrl(pokemonId);
 
 			try {
-				await Net(badgeUrl).get();
+				await Net(flairUrl).get();
 			} catch (e) {
 				return this.errorReply('Invalid Clovermon name.');
 			}
@@ -61,7 +64,7 @@ export const commands: Chat.ChatCommands = {
 			cssConfig[user.id] = pokemonId;
 			saveCssConfig();
 
-			this.sendReply("|raw|" + user.name + "'s badge was successfully set. Badge:<br /><img src='" + badgeUrl + "' width='40' height='30'>");
+			this.sendReply("|raw| Your flair was successfully set. It may take a while for it to show up. Flair:<br /><img src='" + badgeUrl + "' width='40' height='30'>");
 		},
 	},
 };
