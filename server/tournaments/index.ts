@@ -1170,7 +1170,7 @@ export class Tournament extends Rooms.RoomGame {
 		};
 		this.room.add(`|tournament|end|${JSON.stringify(update)}`);
 		if (this?.room?.settings?.tournaments?.official) {
-			this.onOfficialTournamentEnd(update.results.flat());
+			this.onOfficialTournamentEnd(update.results[0]);
 		}
 		this.remove();
 	}
