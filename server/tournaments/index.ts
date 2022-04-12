@@ -1923,31 +1923,38 @@ const commands: Chat.ChatCommands = {
 			this.modlog('TOUR SETTINGS', null, `official: ${isOfficial}`);
 			return this.sendReply(`Tournament was set to ${isOfficial ? 'official' : 'unofficial'}`);
 		},
-		results(target, room, user) {
+		results(target) {
 			this.runBroadcast();
 
 			const targetId = toID(target);
 
 			if (targetId.length) {
+				const userName = Users.get(targetId)?.name || targetId;
 				const playerResult = officialTournamentResults[targetId];
 
+				const header = `<b><u>${userName}'s Tournament Results</b></u><br />`;
+				let body = '';
+
 				if (!playerResult || playerResult.tournaments.length < 1) {
-					return this.sendReplyBox(`<strong>${targetId} has no tournament wins.</strong>`);
+					body = '<p>This player has not won an official tournament.</p>';
 				} else {
 					const sortedTournaments = playerResult.tournaments.sort((tournamentA, tournamentB) => tournamentA.timestamp - tournamentB.timestamp);
 					const tournamentLines = sortedTournaments.map((tournamentResult) => {
 						const tournamentDate = new Date(tournamentResult.timestamp);
 						const dateString = `${tournamentDate.getFullYear()}/${tournamentDate.getMonth() + 1}/${tournamentDate.getDate()}`;
-						return `<li>[${tournamentResult.format}] ${tournamentResult.title} @ ${dateString}</li>`;
+						return `<li>${tournamentResult.title} <small>(${tournamentResult.format})</small> [${dateString}]</li>`;
 					});
-					return this.sendReplyBox(`<p><strong>${targetId}</strong> Tournament Wins</p><br /><ul>${tournamentLines.join('')}</ul>`);
+					body = `<ul>${tournamentLines.join('')}</ul>`;
 				}
-			} else {
-				const lines = Object.entries(officialTournamentResults)
-					.sort((resultA, resultB) => resultA[1].tournaments.length - resultB[1].tournaments.length)
-					.map(([playerId, tournamentResults]) => `<p><strong>${playerId}</strong>: ${tournamentResults.tournaments.length} wins</p>`);
 
-				return this.sendReplyBox(lines.join(''));
+				return this.sendReplyBox(`${header}${body}`);
+			} else {
+				const header = `<b><u>Top Tournament Results</b></u><br />`;
+				const lines = Object.entries(officialTournamentResults)
+					.sort((resultA, resultB) => resultB[1].tournaments.length - resultA[1].tournaments.length)
+					.map(([playerId, tournamentResults]) => `<strong>${playerId}</strong>: ${tournamentResults.tournaments.length} wins`);
+
+				return this.sendReplyBox(`${header}${lines.join('<br />')}`);
 			}
 		},
 		settings: {
