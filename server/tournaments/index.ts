@@ -1,7 +1,7 @@
 
 import {Elimination} from './generator-elimination';
 import {RoundRobin} from './generator-round-robin';
-import {Utils} from '../../lib';
+import {FS, Utils} from '../../lib';
 
 export interface TournamentRoomSettings {
 	allowModjoin?: boolean;
@@ -12,6 +12,7 @@ export interface TournamentRoomSettings {
 	forcePublic?: boolean;
 	forceTimer?: boolean;
 	playerCap?: number;
+	official?: boolean;
 }
 
 type Generator = RoundRobin | Elimination;
@@ -72,6 +73,22 @@ export class TournamentPlayer extends Rooms.RoomGamePlayer {
 		this.score = 0;
 	}
 }
+
+interface OfficialTournamentResult {
+	timestamp: number;
+	title: string;
+	format: string;
+}
+
+type OfficialTournamentResults = Record<string, { tournaments: OfficialTournamentResult[] }>;
+
+const officialTournamentResults: OfficialTournamentResults = JSON.parse(
+	FS('config/chat-plugins/official-tournaments.json').readIfExistsSync() || "{}"
+);
+
+const saveOfficialTournamentResults = () => {
+	FS('config/chat-plugins/official-tournaments.json').writeUpdate(() => JSON.stringify(officialTournamentResults));
+};
 
 export class Tournament extends Rooms.RoomGame {
 	readonly playerTable: {[userid: string]: TournamentPlayer};
@@ -1152,7 +1169,25 @@ export class Tournament extends Rooms.RoomGame {
 			bracketData: this.getBracketData(),
 		};
 		this.room.add(`|tournament|end|${JSON.stringify(update)}`);
+		if (this?.room?.settings?.tournaments?.official) {
+			this.onOfficialTournamentEnd(update.results.flat());
+		}
 		this.remove();
+	}
+	onOfficialTournamentEnd(winners: string[]) {
+		winners.forEach((winner) => {
+			if (!officialTournamentResults[winner]) {
+				officialTournamentResults[winner] = {tournaments: []};
+			}
+
+			officialTournamentResults[winner].tournaments.push({
+				timestamp: new Date().getTime(),
+				title: this.title,
+				format: this.name,
+			});
+		});
+
+		saveOfficialTournamentResults();
 	}
 }
 
@@ -2107,6 +2142,47 @@ const commands: Chat.ChatCommands = {
 					}
 				} else {
 					return this.sendReply(`Usage: ${this.cmdToken}${this.fullCmd} <number|off>`);
+				}
+			},
+			unofficial: 'official',
+			official(target, room, user, connection, cmd) {
+				room = this.requireRoom();
+
+				this.checkCan('game', null, room);
+
+				if (!room.settings.tournaments) room.settings.tournaments = {};
+
+				const isOfficial = cmd === 'official';
+				room.settings.tournaments.official = isOfficial;
+				room.saveSettings();
+
+				this.privateModAction(`Tournament was set to ${isOfficial ? 'official' : 'unofficial'} by ${user.name}`);
+				this.modlog('TOUR SETTINGS', null, `official: ${isOfficial}`);
+				return this.sendReply(`Tournament was set to ${isOfficial ? 'official' : 'unofficial'}`);
+			},
+			results(target, room, user) {
+				const targetId = toID(target);
+
+				if (targetId.length) {
+					const playerResult = officialTournamentResults[targetId];
+
+					if (!playerResult || playerResult.tournaments.length < 1) {
+						return this.sendReplyBox(`<strong>${targetId} has no tournament wins.</strong>`);
+					} else {
+						const sortedTournaments = playerResult.tournaments.sort((tournamentA, tournamentB) => tournamentA.timestamp - tournamentB.timestamp);
+						const tournamentLines = sortedTournaments.map((tournamentResult) => {
+							const tournamentDate = new Date(tournamentResult.timestamp);
+							const dateString = `${tournamentDate.getFullYear()}/${tournamentDate.getMonth() + 1}/${tournamentDate.getDate()}`;
+							return `<li>[${tournamentResult.format}] ${tournamentResult.title} @ ${dateString}</li>`;
+						});
+						return this.sendReplyBox(`<p><strong>${targetId}</strong> Tournament Wins</p><br /><ul>${tournamentLines.join('<br />')}</ul>`);
+					}
+				} else {
+					const lines = Object.entries(officialTournamentResults)
+						.sort((resultA, resultB) => resultA[1].tournaments.length - resultB[1].tournaments.length)
+						.map(([playerId, tournamentResults]) => `<p><strong>${playerId}</strong>: ${tournamentResults.tournaments.length} wins</p>`);
+
+					return this.sendReplyBox(lines.join('<br />'));
 				}
 			},
 			'': 'help',
