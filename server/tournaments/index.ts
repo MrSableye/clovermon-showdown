@@ -1952,7 +1952,7 @@ const commands: Chat.ChatCommands = {
 				const header = `<b><u>Top Tournament Results</b></u><br />`;
 				const lines = Object.entries(officialTournamentResults)
 					.sort((resultA, resultB) => resultB[1].tournaments.length - resultA[1].tournaments.length)
-					.map(([playerId, tournamentResults]) => `<strong>${playerId}</strong>: ${tournamentResults.tournaments.length} wins`);
+					.map(([playerId, tournamentResults]) => `<strong>${Users.get(playerId)?.name || playerId}</strong>: ${tournamentResults.tournaments.length} wins`);
 
 				return this.sendReplyBox(`${header}${lines.join('<br />')}`);
 			}
