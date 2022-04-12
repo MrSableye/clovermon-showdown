@@ -1176,11 +1176,13 @@ export class Tournament extends Rooms.RoomGame {
 	}
 	onOfficialTournamentEnd(winners: string[]) {
 		winners.forEach((winner) => {
+			const winnerId = toID(winner);
+
 			if (!officialTournamentResults[winner]) {
-				officialTournamentResults[winner] = {tournaments: []};
+				officialTournamentResults[winnerId] = {tournaments: []};
 			}
 
-			officialTournamentResults[winner].tournaments.push({
+			officialTournamentResults[winnerId].tournaments.push({
 				timestamp: new Date().getTime(),
 				title: this.title,
 				format: this.name,
@@ -1905,6 +1907,47 @@ const commands: Chat.ChatCommands = {
 				return this.sendReply(`Usage: /tour ${cmd} <on|off>`);
 			}
 		},
+		unofficial: 'official',
+		official(target, room, user, connection, cmd) {
+			room = this.requireRoom();
+
+			this.checkCan('game', null, room);
+
+			if (!room.settings.tournaments) room.settings.tournaments = {};
+
+			const isOfficial = cmd === 'official';
+			room.settings.tournaments.official = isOfficial;
+			room.saveSettings();
+
+			this.privateModAction(`Tournament was set to ${isOfficial ? 'official' : 'unofficial'} by ${user.name}`);
+			this.modlog('TOUR SETTINGS', null, `official: ${isOfficial}`);
+			return this.sendReply(`Tournament was set to ${isOfficial ? 'official' : 'unofficial'}`);
+		},
+		results(target, room, user) {
+			const targetId = toID(target);
+
+			if (targetId.length) {
+				const playerResult = officialTournamentResults[targetId];
+
+				if (!playerResult || playerResult.tournaments.length < 1) {
+					return this.sendReplyBox(`<strong>${targetId} has no tournament wins.</strong>`);
+				} else {
+					const sortedTournaments = playerResult.tournaments.sort((tournamentA, tournamentB) => tournamentA.timestamp - tournamentB.timestamp);
+					const tournamentLines = sortedTournaments.map((tournamentResult) => {
+						const tournamentDate = new Date(tournamentResult.timestamp);
+						const dateString = `${tournamentDate.getFullYear()}/${tournamentDate.getMonth() + 1}/${tournamentDate.getDate()}`;
+						return `<li>[${tournamentResult.format}] ${tournamentResult.title} @ ${dateString}</li>`;
+					});
+					return this.sendReplyBox(`<p><strong>${targetId}</strong> Tournament Wins</p><br /><ul>${tournamentLines.join('<br />')}</ul>`);
+				}
+			} else {
+				const lines = Object.entries(officialTournamentResults)
+					.sort((resultA, resultB) => resultA[1].tournaments.length - resultB[1].tournaments.length)
+					.map(([playerId, tournamentResults]) => `<p><strong>${playerId}</strong>: ${tournamentResults.tournaments.length} wins</p>`);
+
+				return this.sendReplyBox(lines.join('<br />'));
+			}
+		},
 		settings: {
 			modjoin(target, room, user) {
 				room = this.requireRoom();
@@ -2142,47 +2185,6 @@ const commands: Chat.ChatCommands = {
 					}
 				} else {
 					return this.sendReply(`Usage: ${this.cmdToken}${this.fullCmd} <number|off>`);
-				}
-			},
-			unofficial: 'official',
-			official(target, room, user, connection, cmd) {
-				room = this.requireRoom();
-
-				this.checkCan('game', null, room);
-
-				if (!room.settings.tournaments) room.settings.tournaments = {};
-
-				const isOfficial = cmd === 'official';
-				room.settings.tournaments.official = isOfficial;
-				room.saveSettings();
-
-				this.privateModAction(`Tournament was set to ${isOfficial ? 'official' : 'unofficial'} by ${user.name}`);
-				this.modlog('TOUR SETTINGS', null, `official: ${isOfficial}`);
-				return this.sendReply(`Tournament was set to ${isOfficial ? 'official' : 'unofficial'}`);
-			},
-			results(target, room, user) {
-				const targetId = toID(target);
-
-				if (targetId.length) {
-					const playerResult = officialTournamentResults[targetId];
-
-					if (!playerResult || playerResult.tournaments.length < 1) {
-						return this.sendReplyBox(`<strong>${targetId} has no tournament wins.</strong>`);
-					} else {
-						const sortedTournaments = playerResult.tournaments.sort((tournamentA, tournamentB) => tournamentA.timestamp - tournamentB.timestamp);
-						const tournamentLines = sortedTournaments.map((tournamentResult) => {
-							const tournamentDate = new Date(tournamentResult.timestamp);
-							const dateString = `${tournamentDate.getFullYear()}/${tournamentDate.getMonth() + 1}/${tournamentDate.getDate()}`;
-							return `<li>[${tournamentResult.format}] ${tournamentResult.title} @ ${dateString}</li>`;
-						});
-						return this.sendReplyBox(`<p><strong>${targetId}</strong> Tournament Wins</p><br /><ul>${tournamentLines.join('<br />')}</ul>`);
-					}
-				} else {
-					const lines = Object.entries(officialTournamentResults)
-						.sort((resultA, resultB) => resultA[1].tournaments.length - resultB[1].tournaments.length)
-						.map(([playerId, tournamentResults]) => `<p><strong>${playerId}</strong>: ${tournamentResults.tournaments.length} wins</p>`);
-
-					return this.sendReplyBox(lines.join('<br />'));
 				}
 			},
 			'': 'help',
