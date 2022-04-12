@@ -1938,14 +1938,14 @@ const commands: Chat.ChatCommands = {
 						const dateString = `${tournamentDate.getFullYear()}/${tournamentDate.getMonth() + 1}/${tournamentDate.getDate()}`;
 						return `<li>[${tournamentResult.format}] ${tournamentResult.title} @ ${dateString}</li>`;
 					});
-					return this.sendReplyBox(`<p><strong>${targetId}</strong> Tournament Wins</p><br /><ul>${tournamentLines.join('<br />')}</ul>`);
+					return this.sendReplyBox(`<p><strong>${targetId}</strong> Tournament Wins</p><br /><ul>${tournamentLines.join('')}</ul>`);
 				}
 			} else {
 				const lines = Object.entries(officialTournamentResults)
 					.sort((resultA, resultB) => resultA[1].tournaments.length - resultB[1].tournaments.length)
 					.map(([playerId, tournamentResults]) => `<p><strong>${playerId}</strong>: ${tournamentResults.tournaments.length} wins</p>`);
 
-				return this.sendReplyBox(lines.join('<br />'));
+				return this.sendReplyBox(lines.join(''));
 			}
 		},
 		settings: {
