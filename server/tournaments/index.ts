@@ -1924,6 +1924,8 @@ const commands: Chat.ChatCommands = {
 			return this.sendReply(`Tournament was set to ${isOfficial ? 'official' : 'unofficial'}`);
 		},
 		results(target, room, user) {
+			this.runBroadcast();
+
 			const targetId = toID(target);
 
 			if (targetId.length) {
