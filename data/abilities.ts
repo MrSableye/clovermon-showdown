@@ -5395,6 +5395,29 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Overeager",
 		isNonstandard: "Future",
 	},
+	overeagerest: {
+		availability: {clover: 1},
+		onPrepareHit(source, target, move) {
+			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
+			if (['endeavor', 'fling', 'iceball', 'rollout'].includes(move.id)) return;
+			if (!move.flags['charge'] && !move.spreadHit && !move.isZ && !move.isMax) {
+				move.multihit = 100;
+				move.multihitType = 'overeagerest';
+			}
+		},
+		onBasePowerPriority: 7,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.multihitType === 'overeagerest' && move.hit > 1) return this.chainModify(Math.pow(move.hit, 2));
+		},
+		onSourceModifySecondaries(secondaries, target, source, move) {
+			if (move.multihitType === 'overeagerest' && move.id === 'secretpower' && move.hit < 100) {
+				// hack to prevent accidentally suppressing King's Rock/Razor Fang
+				return secondaries.filter(effect => effect.volatileStatus === 'flinch');
+			}
+		},
+		name: "Overeagerest",
+		isNonstandard: "Future",
+	},
 	swarming: {
 		availability: {clover: 1},
 		onStart(pokemon) {

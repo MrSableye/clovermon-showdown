@@ -1927,6 +1927,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's damaging moves become multi-hit moves that hit thrice. Subsequent hits has its damage quartered. Does not affect multi-hit moves or moves that have multiple targets.",
 		shortDesc: "This Pokemon's moves hit thrice. Hits after the first have their damage quartered.",
 	},
+	overeagerest: {
+		name: "Overeagerest",
+		desc: "This Pokemon's damaging moves become multi-hit moves that hit 100 times. Subsequent hits deal 2^N more damage. Does not affect multi-hit moves or moves that have multiple targets.",
+		shortDesc: "This Pokemon's moves hit 100 times. Hits after the first increase in damage exponentially.",
+	},
 	stoneflesh: {
 		name: "Stoneflesh",
 		desc: "If this Pokemon is an Gargarramer, it changes to Awoken Forme before attempting to use an attacking move, and changes to Statue Forme before attempting to use Petrify.",

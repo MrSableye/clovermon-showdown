@@ -8039,6 +8039,21 @@ export const Items: { [itemid: string]: ItemData } = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	fusjite: {
+		availability: {clover: 1},
+		name: "Fusjite",
+		spritenum: 577,
+		megaStone: "Fusjahl-Mega",
+		megaEvolves: "Fusjahl",
+		itemUser: ["Fusjahl"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
 	ultrablobbosiumz: {
 		availability: {clover: 1},
 		name: "Ultrablobbosium Z",
