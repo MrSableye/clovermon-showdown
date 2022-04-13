@@ -5959,32 +5959,39 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	stormshelter: {
 		availability: {clover: 1},
 		onTryHit(target, source, move) {
+			let immune = false;
+
 			if (target !== source && move.type === 'fire') {
 				switch (target.effectiveWeather()) {
-					case 'sunnyday':
-					case 'desolateland':
-						this.add('-immune', target, '[from] ability: Storm Shelter');
-						break;
+				case 'sunnyday':
+				case 'desolateland':
+					immune = true;
+					break;
 				}
 			} else if (target !== source && move.type === 'water') {
 				switch (target.effectiveWeather()) {
-					case 'raindance':
-					case 'primordialsea':
-						this.add('-immune', target, '[from] ability: Storm Shelter');
-						break;
+				case 'raindance':
+				case 'primordialsea':
+					immune = true;
+					break;
 				}
 			} else if (target !== source && move.type === 'rock') {
 				switch (target.effectiveWeather()) {
-					case 'sandstorm':
-						this.add('-immune', target, '[from] ability: Storm Shelter');
-						break;
+				case 'sandstorm':
+					immune = true;
+					break;
 				}
 			} else if (target !== source && move.type === 'ice') {
 				switch (target.effectiveWeather()) {
-					case 'hail':
-						this.add('-immune', target, '[from] ability: Storm Shelter');
-						break;
+				case 'hail':
+					immune = true;
+					break;
 				}
+			}
+
+			if (immune) {
+				this.add('-immune', target, '[from] ability: Storm Shelter');
+				return null;
 			}
 		},
 		onImmunity(type, pokemon) {
@@ -5997,8 +6004,8 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		availability: {clover: 1},
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Wishiwashi' || pokemon.transformed) return;
-				if (pokemon.species.id === 'simionach') {
-					pokemon.formeChange('Simionach-Zen');
+			if (pokemon.species.id === 'simionach') {
+				pokemon.formeChange('Simionach-Zen');
 			}
 		},
 		name: "Zen Monke",

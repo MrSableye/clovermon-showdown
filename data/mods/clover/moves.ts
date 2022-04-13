@@ -1256,7 +1256,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
-	poisontongue: {
+	stickytongue: {
 		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",

@@ -30852,7 +30852,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		forme: "Zen",
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 100, atk: 69, def: 130, spa: 130, spd: 130, spe: 30},
-		abilities: {0: "Zen Monke",},
+		abilities: {0: "Zen Monke"},
 		heightm: 1.54,
 		weightkg: 31,
 		color: "Yellow",

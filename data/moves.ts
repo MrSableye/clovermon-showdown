@@ -29,7 +29,7 @@ bone: Bone-based moves (for Bone Zone)
 hammer: Hammer-based moves (for Admin Abuse)
 */
 import {Pokemon} from '../sim';
-import { PokemonSources } from '../sim/team-validator';
+import {PokemonSources} from '../sim/team-validator';
 
 export const Moves: { [moveid: string]: MoveData } = {
 	"10000000voltthunderbolt": {
@@ -23246,45 +23246,45 @@ export const Moves: { [moveid: string]: MoveData } = {
 		volatileStatus: 'temptrapped',
 		onAfterHit(target, source, move) {
 			const poisonContact = [
-				'poisonpoint','poisontouch'
+				'poisonpoint', 'poisontouch',
 			];
 			const toxicContact = [
-				'tetanus'
+				'tetanus',
 			];
 			const burnContact = [
-				'flamebody'
+				'flamebody',
 			];
 			const speedContact = [
-				'tanglinghair','gooey'
+				'tanglinghair', 'gooey',
 			];
 			const damageContact = [
-				'ironbarbs','roughskin'
+				'ironbarbs', 'roughskin',
 			];
 			const stealContact = [
-				'pickpocket','magician'
+				'pickpocket', 'magician',
 			];
 			const paralyzeContact = [
-				'static'
+				'static',
 			];
 			const infatuateContact = [
-				'cutecharm'
+				'cutecharm',
 			];
 			const mummyContact = [
-				'mummy','woke'
+				'mummy', 'woke',
 			];
 			const randomContact = [
-				'effectspore'
+				'effectspore',
 			];
 			const random = this.random(3);
 			if (poisonContact.includes(source.ability)) {
 				if (random === 0) {
-					source.trySetStatus('psn', target);
+					target.trySetStatus('psn', source);
 				}
 			} else if (toxicContact.includes(source.ability)) {
-				source.trySetStatus('tox', target);
+				target.trySetStatus('tox', source);
 			} else if (burnContact.includes(source.ability)) {
 				if (random === 0) {
-					source.trySetStatus('brn', target);
+					target.trySetStatus('brn', source);
 				}
 			} else if (speedContact.includes(source.ability)) {
 				this.boost({spe: -1}, target, source, this.dex.getActiveMove("Bear Hug"));
@@ -23307,7 +23307,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 				this.add('-item', source, yourItem, '[from] move: Thief', '[of] ' + target);
 			} else if (paralyzeContact.includes(source.ability)) {
 				if (random === 0) {
-					source.trySetStatus('par', target);
+					target.trySetStatus('par', source);
 				}
 			} else if (infatuateContact.includes(source.ability)) {
 				if (random === 0) {
@@ -23481,7 +23481,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fairy",
 		isNonstandard: "Future",
 	},
-	poisontongue: {
+	stickytongue: {
 		availability: {clover: 1},
 		accuracy: 100,
 		basePower: 75,
@@ -23501,25 +23501,25 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (source.hp) {
 				const item = target.takeItem();
 				const hurtItem = [
-					'stickybarb'
+					'stickybarb',
 				];
 				const burnItem = [
-					'flameorb'
+					'flameorb',
 				];
 				const poisonItem = [
-					'poisonbarb'
+					'poisonbarb',
 				];
 				const toxicItem = [
-					'toxicorb'
+					'toxicorb',
 				];
 				const paralyzeItem = [
-					'lightball'
+					'lightball',
 				];
 				const whiteherbItem = [
-					'whiteherb'
+					'whiteherb',
 				];
 				const mentalherbItem = [
-					'mentalherb'
+					'mentalherb',
 				];
 				if (item) {
 					if (source.hp && item.isBerry && target.takeItem(source)) {
