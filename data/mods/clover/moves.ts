@@ -1276,4 +1276,9 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	glaciallance: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

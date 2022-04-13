@@ -22395,7 +22395,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	starseedblast: {
 		availability: {clover: 1},
 		accuracy: 100,
-		basePower: 20,
+		basePower: 25,
 		category: "Physical",
 		name: "Starseed Blast",
 		pp: 30,
