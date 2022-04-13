@@ -7254,20 +7254,21 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Cloud Breaker",
 		shortDesc: "Clears the currently active weather.",
 	},
-	genesisboost: {
-		name: "Genesis Boost",
-		desc: "Raises this Pokemon's or ally's Attack and Defense by 2 stages. Fails unless it is the user's first turn on the field.",
-		shortDesc: "+2 Atk, +2 Def; First turn out only.",
+	starseedblast: {
+		name: "Starseed Blast",
+		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+		shortDesc: "Hits 2-5 times, Special if Sp. Atk > Atk",
 	},
 	brandingblade: {
-		name: "Branding Blade",
-		desc: "Has a 30% chance to burn the target. The target thaws out if it is frozen.",
-		shortDesc: "30% chance to burn the target. Thaws target.",
+		name: "Flare Blitz",
+		shortDesc: "Has 33% recoil. Nullifies the foe's Ability.",
 	},
 	mudmaelstrom: {
 		name: "Mud Maelstrom",
-		desc: "Has a 100% chance to lower the target's Speed by 1 stage.",
-		shortDesc: "100% chance lower adjacent Pkmn Speed by 1.",
+		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
+		shortDesc: "Traps and damages the target for 4-5 turns.",
+
+		start: "  [POKEMON] became trapped by the geyser of mud!",
 	},
 	finalhour: {
 		name: "Final Hour",
@@ -7286,8 +7287,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Meme Jr.",
 		shortDesc: "100% chance to evenly raise a random stat by 1.",
 	},
-	medsnow: {
-		name: "Meds Now",
+	meddymeds: {
+		name: "Meddy Meds",
 		desc: "If the target is an ally, this move restores 3/4 of its maximum HP, rounded down, instead of dealing damage.",
 		shortDesc: "Heals 75% if targeting an ally, Summons Light Screen.",
 	},
@@ -7430,5 +7431,64 @@ export const MovesText: {[k: string]: MoveText} = {
 	bilebite: {
 		name: "Bile Bite",
 		shortDesc: "We prey at night, we stalk at night, we're the rats.",
+	},
+	blackbomb: {
+		name: "Black Bomb",
+		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
+		shortDesc: "Traps and damages the target for 4-5 turns.",
+
+		start: "  [POKEMON] became buried!",
+	},
+	beamblade: {
+		name: "Beam Blade",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
+	},
+	bearhug: {
+		name: "Bear Hug",
+		shortDesc: "Activates contact effects of the user, Traps for a turn.",
+	},
+	chilipowder: {
+		name: "Chili Powder",
+		desc: "Burns the target.",
+		shortDesc: "Burns the target.",
+	},
+	thunderdrop: {
+		name: "Thunder Drop",
+		desc: "This attack takes the target into the air with the user on the first turn and executes on the second. Pokemon weighing 200 kg or more cannot be lifted. On the first turn, the user and the target avoid all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thousand Arrows, Thunder, and Twister. The user and the target cannot make a move between turns, but the target can select a move to use. This move cannot damage Flying-type Pokemon. Fails on the first turn if the target is an ally, if the target has a substitute, or if the target is using Bounce, Dig, Dive, Fly, Phantom Force, Shadow Force, or Sky Drop.",
+		shortDesc: "User and foe fly up turn 1. Damages on turn 2.",
+
+		prepare: "[POKEMON] took [TARGET] into the sky!",
+		end: "  [POKEMON] was freed from the Thunder Drop!",
+		failSelect: "Thunder Drop won't let [POKEMON] go!",
+		failTooHeavy: "  [POKEMON] is too heavy to be lifted!",
+	},
+	faeblade: {
+		name: "Faeblade",
+		desc: "Deals damage to the target based on its Special Defense instead of Defense.",
+		shortDesc: "Damages target based on Sp.Def, not Defense",
+	},
+	stickytongue: {
+		name: "Sticky Tongue",
+		desc: "If the target is holding an item that can be removed from it, ignoring the Sticky Hold Ability, this move's power is multiplied by 1.5. If the user has not fainted, the target loses its held item. This move cannot cause Pokemon with the Sticky Hold Ability to lose their held item or cause a Kyogre, a Groudon, a Giratina, an Arceus, a Genesect, a Silvally, a Zacian, or a Zamazenta to lose their Blue Orb, Red Orb, Griseous Orb, Plate, Drive, Memory, Rusted Sword, or Rusted Shield respectively. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
+		shortDesc: "1.5x damage if foe holds an item. Eats item.",
+
+		removeItem: "  [SOURCE] ate [POKEMON]'s [ITEM]!",
+	},
+	rocketpunch: {
+		name: "Rocket Punch",
+		desc: "Fails unless it is the user's first turn on the field. This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
+		shortDesc: "Hits first. First turn out only. Always crits.",
+	},
+	powerwasher: {
+		name: "Power Washer",
+		desc: "This move does not check accuracy.",
+		shortDesc: "50% chance to lower the target's Sp. Def. Goes last.",
+	},
+	flakcannon: {
+		name: "Fling",
+		shortDesc: "Removes the user's held item, Always Crits.",
+
+		removeItem: "  [POKEMON] shot the fragments of [ITEM]!",
 	},
 };

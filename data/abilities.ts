@@ -4702,7 +4702,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		num: -2,
 	},
 	rebound: {
-		isNonstandard: "CAP",
+		isNonstandard: "Future",
 		name: "Rebound",
 		onTryHitPriority: 1,
 		onTryHit(target, source, move) {
@@ -5938,5 +5938,70 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 
 			this.boost(boost);
 		},
+	},
+	stopsign: {
+		availability: {clover: 1},
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Stop Sign');
+		},
+		onAnyTryMove(target, source, move) {
+			if (move.selfSwitch) {
+				this.attrLastMove('[still]');
+				this.add('cant', this.effectState.target, 'ability: Stop Sign', move, '[of] ' + target);
+				return false;
+			}
+		},
+		isBreakable: true,
+		name: "Stop Sign",
+		rating: 1,
+		isNonstandard: "Future",
+	},
+	stormshelter: {
+		availability: {clover: 1},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'fire') {
+				switch (target.effectiveWeather()) {
+					case 'sunnyday':
+					case 'desolateland':
+						this.add('-immune', target, '[from] ability: Storm Shelter');
+						break;
+				}
+			} else if (target !== source && move.type === 'water') {
+				switch (target.effectiveWeather()) {
+					case 'raindance':
+					case 'primordialsea':
+						this.add('-immune', target, '[from] ability: Storm Shelter');
+						break;
+				}
+			} else if (target !== source && move.type === 'rock') {
+				switch (target.effectiveWeather()) {
+					case 'sandstorm':
+						this.add('-immune', target, '[from] ability: Storm Shelter');
+						break;
+				}
+			} else if (target !== source && move.type === 'ice') {
+				switch (target.effectiveWeather()) {
+					case 'hail':
+						this.add('-immune', target, '[from] ability: Storm Shelter');
+						break;
+				}
+			}
+		},
+		onImmunity(type, pokemon) {
+			if (type === 'sandstorm' || type === 'hail') return false;
+		},
+		name: "Storm Shelter",
+		isNonstandard: "Future",
+	},
+	zenmonke: {
+		availability: {clover: 1},
+		onStart(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Wishiwashi' || pokemon.transformed) return;
+				if (pokemon.species.id === 'simionach') {
+					pokemon.formeChange('Simionach-Zen');
+			}
+		},
+		name: "Zen Monke",
+		isNonstandard: "Future",
 	},
 };

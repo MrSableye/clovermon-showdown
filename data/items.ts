@@ -3013,7 +3013,7 @@ export const Items: { [itemid: string]: ItemData } = {
 				return this.chainModify(2);
 			}
 		},
-		itemUser: ["Pikachu"],
+		itemUser: ["Pikachu", "Ampstar"],
 		num: 236,
 		gen: 2,
 	},
@@ -3079,7 +3079,7 @@ export const Items: { [itemid: string]: ItemData } = {
 			basePower: 40,
 		},
 		onModifyCritRatio(critRatio, user) {
-			if (user.baseSpecies.name === 'Chansey') {
+			if (user.baseSpecies.name === 'Chansey' || user.baseSpecies.name === 'Fucker') {
 				return critRatio + 2;
 			}
 		},

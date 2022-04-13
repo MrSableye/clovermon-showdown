@@ -29,6 +29,7 @@ bone: Bone-based moves (for Bone Zone)
 hammer: Hammer-based moves (for Admin Abuse)
 */
 import {Pokemon} from '../sim';
+import { PokemonSources } from '../sim/team-validator';
 
 export const Moves: { [moveid: string]: MoveData } = {
 	"10000000voltthunderbolt": {
@@ -22118,7 +22119,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 42017,
 		accuracy: 100,
-		basePower: 85,
+		basePower: 80,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Phantom Fang",
@@ -22194,7 +22195,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	wingsofcorrection: {
 		availability: {clover: 1},
 		accuracy: true,
-		basePower: 150,
+		basePower: 100,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Wings Of Correction",
@@ -22391,63 +22392,55 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "self",
 		type: "Rock",
 	},
-	genesisboost: {
+	starseedblast: {
 		availability: {clover: 1},
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Genesis Boost",
-		pp: 5,
+		accuracy: 100,
+		basePower: 20,
+		category: "Physical",
+		name: "Starseed Blast",
+		pp: 30,
 		priority: 0,
-		flags: {},
-		onTry(source) {
-			if (source.activeMoveActions > 1) {
-				this.hint("Genesis Boost only works on your first turn out.");
-				return false;
-			}
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		multihit: [2, 5],
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
 		secondary: null,
-		boosts: {
-			atk: 2,
-			def: 2,
-		},
-		target: "adjacentAllyOrSelf",
+		target: "normal",
 		type: "Fairy",
 		isNonstandard: "Future",
 	},
 	brandingblade: {
 		availability: {clover: 1},
 		accuracy: 100,
-		basePower: 80,
+		basePower: 120,
 		category: "Physical",
 		name: "Branding Blade",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, defrost: 1, blade: 1},
-		thawsTarget: true,
-		secondary: {
-			chance: 30,
-			status: 'brn',
+		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1, blade: 1},
+		onHit(target) {
+			if (target.getAbility().isPermanent) return;
+			if (target.newlySwitched || this.queue.willMove(target)) return;
+			target.addVolatile('gastroacid');
 		},
+		secondary: null,
+		recoil: [33, 100],
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
 	},
 	mudmaelstrom: {
 		availability: {clover: 1},
-		accuracy: 100,
-		basePower: 80,
+		accuracy: 80,
+		basePower: 100,
 		category: "Special",
 		name: "Mud Maelstrom",
-		pp: 15,
+		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, nonsky: 1},
-		secondary: {
-			chance: 100,
-			boosts: {
-				spe: -1,
-			},
-		},
+		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
+		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Ground",
 		isNonstandard: "Future",
@@ -22573,12 +22566,12 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Ghost",
 		isNonstandard: "Future",
 	},
-	medsnow: {
+	meddymeds: {
 		availability: {clover: 1},
 		accuracy: 100,
 		basePower: 100,
 		category: "Special",
-		name: "Meds Now",
+		name: "Meddy Meds",
 		pp: 10,
 		priority: 0,
 		flags: {bullet: 1, protect: 1, mirror: 1},
@@ -22634,7 +22627,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Backdraft",
 		pp: 5,
 		priority: 0,
-		flags: {snatch: 1},
+		flags: {protect: 1, mirror: 1},
 		self: {
 			sideCondition: 'backdraft',
 		},
@@ -23203,6 +23196,474 @@ export const Moves: { [moveid: string]: MoveData } = {
 		noSketch: true,
 		target: "allAdjacent",
 		type: "Ghost",
+		isNonstandard: "Future",
+	},
+	blackbomb: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 110,
+		category: "Special",
+		name: "Black Bomb",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		onTry(source, target) {
+			if (!source.volatiles['buried']) {
+				this.add('-anim', source, 'Wish', source);
+				source.addVolatile('buried');
+				return null;
+			}
+		},
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+	},
+	beamblade: {
+		availability: {clover: 1},
+		accuracy: 80,
+		basePower: 100,
+		category: "Special",
+		name: "Beam Blade",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		critRatio: 2,
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+	},
+	bearhug: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Body Slam",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		volatileStatus: 'temptrapped',
+		onAfterHit(target, source, move) {
+			const poisonContact = [
+				'poisonpoint','poisontouch'
+			];
+			const toxicContact = [
+				'tetanus'
+			];
+			const burnContact = [
+				'flamebody'
+			];
+			const speedContact = [
+				'tanglinghair','gooey'
+			];
+			const damageContact = [
+				'ironbarbs','roughskin'
+			];
+			const stealContact = [
+				'pickpocket','magician'
+			];
+			const paralyzeContact = [
+				'static'
+			];
+			const infatuateContact = [
+				'cutecharm'
+			];
+			const mummyContact = [
+				'mummy','woke'
+			];
+			const randomContact = [
+				'effectspore'
+			];
+			const random = this.random(3);
+			if (poisonContact.includes(source.ability)) {
+				if (random === 0) {
+					source.trySetStatus('psn', target);
+				}
+			} else if (toxicContact.includes(source.ability)) {
+				source.trySetStatus('tox', target);
+			} else if (burnContact.includes(source.ability)) {
+				if (random === 0) {
+					source.trySetStatus('brn', target);
+				}
+			} else if (speedContact.includes(source.ability)) {
+				this.boost({spe: -1}, target, source, this.dex.getActiveMove("Bear Hug"));
+			} else if (damageContact.includes(source.ability)) {
+				this.damage(target.baseMaxhp / 8, target, source);
+			} else if (stealContact.includes(source.ability)) {
+				if (source.item) {
+					return;
+				}
+				const yourItem = target.takeItem(source);
+				if (!yourItem) {
+					return;
+				}
+				if (!this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem) ||
+					!source.setItem(yourItem)) {
+					target.item = yourItem.id; // bypass setItem so we don't break choicelock or anything
+					return;
+				}
+				this.add('-enditem', target, yourItem, '[silent]', '[from] move: Thief', '[of] ' + source);
+				this.add('-item', source, yourItem, '[from] move: Thief', '[of] ' + target);
+			} else if (paralyzeContact.includes(source.ability)) {
+				if (random === 0) {
+					source.trySetStatus('par', target);
+				}
+			} else if (infatuateContact.includes(source.ability)) {
+				if (random === 0) {
+					if (source.isActive) target.addVolatile('attract', source, move, 'trapper');
+				}
+			} else if (mummyContact.includes(source.ability)) {
+				const oldAbility = target.setAbility(source.ability);
+				if (oldAbility) {
+					this.add('-ability', target, target.getAbility().name, '[from] move: Bear Hug');
+					if (!target.isAlly(source)) target.volatileStaleness = 'external';
+					return;
+				}
+				return false;
+			} else if (randomContact.includes(source.ability)) {
+				if (random === 0) {
+					const result = this.random(3);
+					if (result === 0) {
+						target.trySetStatus('psn', source);
+					} else if (result === 1) {
+						target.trySetStatus('par', source);
+					} else {
+						target.trySetStatus('slp', source);
+					}
+				}
+			}
+		},
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+	},
+	chilipowder: {
+		availability: {clover: 1},
+		accuracy: 75,
+		basePower: 0,
+		category: "Status",
+		name: "Chili Powder",
+		pp: 15,
+		priority: 0,
+		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
+		status: 'brn',
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		isNonstandard: "Future",
+	},
+	thunderdrop: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Thunder Drop",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1, distance: 1},
+		onModifyMove(move, source) {
+			if (!source.volatiles['skydrop']) {
+				move.accuracy = true;
+				move.flags.contact = 0;
+			}
+		},
+		onMoveFail(target, source) {
+			if (source.volatiles['twoturnmove'] && source.volatiles['twoturnmove'].duration === 1) {
+				source.removeVolatile('skydrop');
+				source.removeVolatile('twoturnmove');
+				if (target === this.effectState.target) {
+					this.add('-end', target, 'Sky Drop', '[interrupt]');
+				}
+			}
+		},
+		onTry(source, target) {
+			return !target.fainted;
+		},
+		onTryHit(target, source, move) {
+			if (source.removeVolatile(move.id)) {
+				if (target !== source.volatiles['twoturnmove'].source) return false;
+
+				if (target.hasType('Flying')) {
+					this.add('-immune', target);
+					return null;
+				}
+			} else {
+				if (target.volatiles['substitute'] || target.isAlly(source)) {
+					return false;
+				}
+				if (target.getWeight() >= 2000) {
+					this.add('-fail', target, 'move: Sky Drop', '[heavy]');
+					return null;
+				}
+
+				this.add('-prepare', source, move.name, target);
+				source.addVolatile('twoturnmove', target);
+				return null;
+			}
+		},
+		onHit(target, source) {
+			if (target.hp) this.add('-end', target, 'Sky Drop');
+		},
+		condition: {
+			duration: 2,
+			onAnyDragOut(pokemon) {
+				if (pokemon === this.effectState.target || pokemon === this.effectState.source) return false;
+			},
+			onFoeTrapPokemonPriority: -15,
+			onFoeTrapPokemon(defender) {
+				if (defender !== this.effectState.source) return;
+				defender.trapped = true;
+			},
+			onFoeBeforeMovePriority: 12,
+			onFoeBeforeMove(attacker, defender, move) {
+				if (attacker === this.effectState.source) {
+					attacker.activeMoveActions--;
+					this.debug('Sky drop nullifying.');
+					return null;
+				}
+			},
+			onRedirectTargetPriority: 99,
+			onRedirectTarget(target, source, source2) {
+				if (source !== this.effectState.target) return;
+				if (this.effectState.source.fainted) return;
+				return this.effectState.source;
+			},
+			onAnyInvulnerability(target, source, move) {
+				if (target !== this.effectState.target && target !== this.effectState.source) {
+					return;
+				}
+				if (source === this.effectState.target && target === this.effectState.source) {
+					return;
+				}
+				if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows'].includes(move.id)) {
+					return;
+				}
+				return false;
+			},
+			onAnyBasePower(basePower, target, source, move) {
+				if (target !== this.effectState.target && target !== this.effectState.source) {
+					return;
+				}
+				if (source === this.effectState.target && target === this.effectState.source) {
+					return;
+				}
+				if (move.id === 'gust' || move.id === 'twister') {
+					return this.chainModify(2);
+				}
+			},
+			onFaint(target) {
+				if (target.volatiles['skydrop'] && target.volatiles['twoturnmove'].source) {
+					this.add('-end', target.volatiles['twoturnmove'].source, 'Sky Drop', '[interrupt]');
+				}
+			},
+		},
+		secondary: {
+			chance: 20,
+			status: 'par',
+		},
+		target: "any",
+		type: "Electric",
+		isNonstandard: "Future",
+	},
+	faeblade: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		defensiveCategory: "Special",
+		name: "Faeblade",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, blade: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		isNonstandard: "Future",
+	},
+	poisontongue: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Poison Tongue",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onBasePower(basePower, source, target, move) {
+			const item = target.getItem();
+			if (!this.singleEvent('TakeItem', item, target.itemState, target, target, move, item)) return;
+			if (item.id) {
+				return this.chainModify(1.5);
+			}
+		},
+		onAfterHit(target, source) {
+			if (source.hp) {
+				const item = target.takeItem();
+				const hurtItem = [
+					'stickybarb'
+				];
+				const burnItem = [
+					'flameorb'
+				];
+				const poisonItem = [
+					'poisonbarb'
+				];
+				const toxicItem = [
+					'toxicorb'
+				];
+				const paralyzeItem = [
+					'lightball'
+				];
+				const whiteherbItem = [
+					'whiteherb'
+				];
+				const mentalherbItem = [
+					'mentalherb'
+				];
+				if (item) {
+					if (source.hp && item.isBerry && target.takeItem(source)) {
+						this.add('-enditem', target, item.name, '[from] stealeat', '[move] Sticky Tongue', '[of] ' + source);
+						if (this.singleEvent('Eat', item, null, source, null, null)) {
+							this.runEvent('EatItem', source, null, null, item);
+							if (item.id === 'leppaberry') target.staleness = 'external';
+						}
+						if (item.onEat) source.ateBerry = true;
+					} else if (hurtItem.includes(target.item)) {
+						this.damage(source.baseMaxhp / 8);
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					} else if (burnItem.includes(target.item)) {
+						source.trySetStatus('brn', target);
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					} else if (poisonItem.includes(target.item)) {
+						source.trySetStatus('psn', target);
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					} else if (toxicItem.includes(target.item)) {
+						source.trySetStatus('tox', target);
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					} else if (paralyzeItem.includes(target.item)) {
+						source.trySetStatus('par', target);
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					} else if (whiteherbItem.includes(target.item)) {
+						let activate = false;
+						const boosts: SparseBoostsTable = {};
+						let i: BoostID;
+						for (i in source.boosts) {
+							if (source.boosts[i] < 0) {
+								activate = true;
+								boosts[i] = 0;
+							}
+						}
+						if (activate) {
+							source.setBoost(boosts);
+							this.add('-clearnegativeboost', source, '[silent]');
+						}
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					} else if (mentalherbItem.includes(target.item)) {
+						const conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
+						for (const firstCondition of conditions) {
+							if (source.volatiles[firstCondition]) {
+								for (const secondCondition of conditions) {
+									source.removeVolatile(secondCondition);
+									if (firstCondition === 'attract' && secondCondition === 'attract') {
+										this.add('-end', source, 'move: Attract', '[from] item: Mental Herb');
+									}
+								}
+								return;
+							}
+						}
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					} else {
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					}
+				}
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+		isNonstandard: "Future",
+	},
+	rocketpunch: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 50,
+		category: "Physical",
+		name: "Rocket Punch",
+		pp: 10,
+		priority: 2,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onTry(source) {
+			if (source.activeMoveActions > 1) {
+				this.hint("Rocket Punch only works on your first turn out.");
+				return false;
+			}
+		},
+		willCrit: true,
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		isNonstandard: "Future",
+	},
+	powerwasher: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Power Washer",
+		pp: 10,
+		priority: -1,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Water",
+		isNonstandard: "Future",
+	},
+	flakcannon: {
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Flak Cannon",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, mystery: 1},
+		onPrepareHit(target, source, move) {
+			if (source.ignoringItem()) return false;
+			const item = source.getItem();
+			if (!this.singleEvent('TakeItem', item, source.itemState, source, source, move, item)) return false;
+			if (!item.fling) return false;
+			if (item.fling.effect) {
+				move.onHit = item.fling.effect;
+			} else {
+				if (!move.secondaries) move.secondaries = [];
+				if (item.fling.status) {
+					move.secondaries.push({status: item.fling.status});
+				} else if (item.fling.volatileStatus) {
+					move.secondaries.push({volatileStatus: item.fling.volatileStatus});
+				}
+			}
+			source.addVolatile('fling');
+		},
+		condition: {
+			onUpdate(pokemon) {
+				const item = pokemon.getItem();
+				pokemon.setItem('');
+				pokemon.lastItem = item.id;
+				pokemon.usedItemThisTurn = true;
+				this.add('-enditem', pokemon, item.name, '[from] move: Flak Cannon');
+				this.runEvent('AfterUseItem', pokemon, null, null, item);
+				pokemon.removeVolatile('fling');
+			},
+		},
+		secondary: null,
+		willCrit: true,
+		target: "normal",
+		type: "Steel",
 		isNonstandard: "Future",
 	},
 };

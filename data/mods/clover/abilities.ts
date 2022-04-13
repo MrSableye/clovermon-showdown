@@ -195,4 +195,20 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	stopsign: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	rebound: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	stormshelter: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	zenmonke: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
