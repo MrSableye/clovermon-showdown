@@ -7287,8 +7287,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Meme Jr.",
 		shortDesc: "100% chance to evenly raise a random stat by 1.",
 	},
-	medsnow: {
-		name: "Meds Now",
+	meddymeds: {
+		name: "Meddy Meds",
 		desc: "If the target is an ally, this move restores 3/4 of its maximum HP, rounded down, instead of dealing damage.",
 		shortDesc: "Heals 75% if targeting an ally, Summons Light Screen.",
 	},

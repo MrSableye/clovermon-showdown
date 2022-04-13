@@ -22566,12 +22566,12 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Ghost",
 		isNonstandard: "Future",
 	},
-	medsnow: {
+	meddymeds: {
 		availability: {clover: 1},
 		accuracy: 100,
 		basePower: 100,
 		category: "Special",
-		name: "Meds Now",
+		name: "Meddy Meds",
 		pp: 10,
 		priority: 0,
 		flags: {bullet: 1, protect: 1, mirror: 1},
