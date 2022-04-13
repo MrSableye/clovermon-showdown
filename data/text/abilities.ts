@@ -2050,4 +2050,24 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		damage: "  Uh oh!",
 	},
+	stopsign: {
+		name: "Stop Sign",
+		desc: "While this Pokemon is active, moves that switch the user out are prevented from having an effect.",
+		shortDesc: "Prevents pivoting moves while active.",
+
+		block: "  [SOURCE] was stopped from using [MOVE]!",
+
+		start: "  [POKEMON] has eight fantastic sides, and eight awesome angles!",
+	},
+	stormshelter: {
+		name: "Storm Shelter",
+		shortDesc: "Grants immunity to the type of each weather in that weather.",
+	},
+	zenmonke: {
+		name: "Zen Monke",
+		shortDesc: "If Simionach, goes into Zen Mode.",
+
+		transform: "Zen Monke triggered!",
+		transformEnd: "Zen Monke ended!",
+	},
 };

@@ -814,12 +814,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 		durationCallback(source, effect) {
 			return 5;
 		},
-		// This should be applied directly to the stat before any of the other modifiers are chained
-		// So we give it increased priority.
-		onModifyAccuracyPriority: 10,
-		onModifyAccuracy(accuracy, pokemon) {
-			if (this.field.isWeather('densefog') && typeof accuracy === 'number') {
-				return this.modify(accuracy, 0.6);
+		onDisableMove(pokemon) {
+			for (const moveSlot of pokemon.moveSlots) {
+				if (this.dex.moves.get(moveSlot.move).category === 'Status') {
+					pokemon.disableMove(moveSlot.id);
+				}
 			}
 		},
 		onFieldStart(field, source, effect) {
@@ -841,6 +840,32 @@ export const Conditions: {[k: string]: ConditionData} = {
 		onBeforeMove(pokemon) {
 			this.add('cant', pokemon, 'bound');
 			return false;
+		},
+	},
+	buried: {
+		name: 'buried',
+		onStart(pokemon, source) {
+			this.add('-activate', pokemon, 'move: ' + this.effectState.sourceEffect, '[of] ' + source);
+			this.effectState.time = this.random(2, 4);
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, this.effectState.sourceEffect, '[buried]');
+		},
+		onTrapPokemon(pokemon) {
+			if (this.effectState.source?.isActive) pokemon.tryTrap();
+		},
+	},
+	temptrapped: {
+		name: 'temptrapped',
+		duration: 2,
+		onStart(pokemon, source) {
+			this.add('-activate', pokemon, 'move: ' + this.effectState.sourceEffect, '[of] ' + source);
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, this.effectState.sourceEffect, '[temptrapped]');
+		},
+		onTrapPokemon(pokemon) {
+			if (this.effectState.source?.isActive) pokemon.tryTrap();
 		},
 	},
 };
