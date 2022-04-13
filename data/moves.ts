@@ -22397,7 +22397,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		accuracy: 100,
 		basePower: 20,
 		category: "Physical",
-		name: "Bullet Seed",
+		name: "Starseed Blast",
 		pp: 30,
 		priority: 0,
 		flags: {bullet: 1, protect: 1, mirror: 1},
