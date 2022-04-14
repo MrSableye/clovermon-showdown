@@ -23486,7 +23486,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		accuracy: 100,
 		basePower: 75,
 		category: "Physical",
-		name: "Poison Tongue",
+		name: "Sticky Tongue",
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
