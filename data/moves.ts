@@ -20456,7 +20456,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 69044,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 75,
 		category: "Physical",
 		name: "Slime Gulp",
 		pp: 10,
@@ -20978,7 +20978,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	greatrage: {
 		availability: {clover: 1},
 		num: 69053,
-		accuracy: 100,
+		accuracy: 90,
 		basePower: 140,
 		category: "Physical",
 		name: "Great Rage",
