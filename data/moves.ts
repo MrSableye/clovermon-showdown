@@ -22424,6 +22424,11 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (target.newlySwitched || this.queue.willMove(target)) return;
 			target.addVolatile('gastroacid');
 		},
+		onAfterSubDamage(damage, target) {
+			if (target.getAbility().isPermanent) return;
+			if (target.newlySwitched || this.queue.willMove(target)) return;
+			target.addVolatile('gastroacid');
+		},
 		secondary: null,
 		recoil: [33, 100],
 		target: "normal",
