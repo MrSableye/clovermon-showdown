@@ -33517,9 +33517,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		eggGroups: ["Amorphous", "Human-Like"],
 		gen: 8,
 	},
-	vineboom: {
+	vinebomb: {
 		num: 42164,
-		name: "Vineboom",
+		name: "Vinebomb",
 		types: ["Grass", "Fire"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 70, atk: 115, def: 60, spa: 115, spd: 60, spe: 70},

@@ -15604,7 +15604,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
-	vineboom: {
+	vinebomb: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",
