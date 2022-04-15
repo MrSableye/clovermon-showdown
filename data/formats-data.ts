@@ -9344,7 +9344,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	vineboom: {
+	vinebomb: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
 		tier: "Illegal",

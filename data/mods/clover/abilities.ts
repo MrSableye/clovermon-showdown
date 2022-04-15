@@ -211,4 +211,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	unseenfist: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

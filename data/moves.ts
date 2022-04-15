@@ -20456,7 +20456,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 69044,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 75,
 		category: "Physical",
 		name: "Slime Gulp",
 		pp: 10,
@@ -20978,7 +20978,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	greatrage: {
 		availability: {clover: 1},
 		num: 69053,
-		accuracy: 100,
+		accuracy: 90,
 		basePower: 140,
 		category: "Physical",
 		name: "Great Rage",
@@ -22424,6 +22424,11 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (target.newlySwitched || this.queue.willMove(target)) return;
 			target.addVolatile('gastroacid');
 		},
+		onAfterSubDamage(damage, target) {
+			if (target.getAbility().isPermanent) return;
+			if (target.newlySwitched || this.queue.willMove(target)) return;
+			target.addVolatile('gastroacid');
+		},
 		secondary: null,
 		recoil: [33, 100],
 		target: "normal",
@@ -23486,7 +23491,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		accuracy: 100,
 		basePower: 75,
 		category: "Physical",
-		name: "Poison Tongue",
+		name: "Sticky Tongue",
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
