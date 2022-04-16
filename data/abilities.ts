@@ -6003,7 +6003,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	zenmonke: {
 		availability: {clover: 1},
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.baseSpecies !== 'Wishiwashi' || pokemon.transformed) return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Simionach' || pokemon.transformed) return;
 			if (pokemon.species.id === 'simionach') {
 				pokemon.formeChange('Simionach-Zen');
 			}
