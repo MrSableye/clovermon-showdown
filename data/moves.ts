@@ -21302,7 +21302,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	foryou: {
 		availability: {clover: 1},
 		num: 69010,
-		accuracy: 100,
+		accuracy: 90,
 		basePower: 100,
 		category: "Physical",
 		name: "For You",
