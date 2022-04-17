@@ -22398,12 +22398,12 @@ export const Moves: { [moveid: string]: MoveData } = {
 		basePower: 25,
 		category: "Physical",
 		name: "Starseed Blast",
-		pp: 30,
+		pp: 10,
 		priority: 0,
 		flags: {bullet: 1, protect: 1, mirror: 1},
 		multihit: [2, 5],
 		onModifyMove(move, pokemon) {
-			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
 		},
 		secondary: null,
 		target: "normal",
