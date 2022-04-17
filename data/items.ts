@@ -7370,11 +7370,11 @@ export const Items: { [itemid: string]: ItemData } = {
 		spritenum: 379,
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Masdawg' || pokemon.baseSpecies.baseSpecies === 'Pasdawg') {
+			if (pokemon.baseSpecies.baseSpecies === 'Masdawg' || pokemon.baseSpecies.baseSpecies === 'Pasdawg'|| pokemon.baseSpecies.baseSpecies === 'Naughtycoot') {
 				return this.chainModify(2);
 			}
 		},
-		itemUser: ["Masdawg", "Pasdawg"],
+		itemUser: ["Masdawg", "Pasdawg", "Naughtycoot"],
 		isNonstandard: "Future",
 	},
 	manifesto: {
