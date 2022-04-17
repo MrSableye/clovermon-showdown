@@ -7486,7 +7486,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "50% chance to lower the target's Sp. Def. Goes last.",
 	},
 	flakcannon: {
-		name: "Fling",
+		name: "Flak Cannon",
 		shortDesc: "Removes the user's held item, Always Crits.",
 
 		removeItem: "  [POKEMON] shot the fragments of [ITEM]!",

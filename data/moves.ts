@@ -23640,7 +23640,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Flak Cannon",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, mystery: 1},
+		flags: {protect: 1, pulse: 1, mirror: 1, mystery: 1},
 		onPrepareHit(target, source, move) {
 			if (source.ignoringItem()) return false;
 			const item = source.getItem();
@@ -23656,7 +23656,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 					move.secondaries.push({volatileStatus: item.fling.volatileStatus});
 				}
 			}
-			source.addVolatile('fling');
+			source.addVolatile('flakcannon');
 		},
 		condition: {
 			onUpdate(pokemon) {
@@ -23666,7 +23666,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 				pokemon.usedItemThisTurn = true;
 				this.add('-enditem', pokemon, item.name, '[from] move: Flak Cannon');
 				this.runEvent('AfterUseItem', pokemon, null, null, item);
-				pokemon.removeVolatile('fling');
+				pokemon.removeVolatile('flakcannon');
 			},
 		},
 		secondary: null,
