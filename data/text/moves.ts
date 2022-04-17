@@ -7164,8 +7164,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	rockclock: {
 		name: "Rock Clock",
-		desc: "Has a 30% chance to make the target flinch.",
-		shortDesc: "30% chance to make the target flinch.",
+		desc: "Has a 20% chance to make the target confused.",
+		shortDesc: "20% chance to make the target confused.",
 	},
 	awaken: {
 		name: "Awaken",
@@ -7486,7 +7486,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "50% chance to lower the target's Sp. Def. Goes last.",
 	},
 	flakcannon: {
-		name: "Fling",
+		name: "Flak Cannon",
 		shortDesc: "Removes the user's held item, Always Crits.",
 
 		removeItem: "  [POKEMON] shot the fragments of [ITEM]!",

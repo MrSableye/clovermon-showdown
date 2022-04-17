@@ -22398,12 +22398,12 @@ export const Moves: { [moveid: string]: MoveData } = {
 		basePower: 25,
 		category: "Physical",
 		name: "Starseed Blast",
-		pp: 30,
+		pp: 10,
 		priority: 0,
 		flags: {bullet: 1, protect: 1, mirror: 1},
 		multihit: [2, 5],
 		onModifyMove(move, pokemon) {
-			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
 		},
 		secondary: null,
 		target: "normal",
@@ -22421,12 +22421,10 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1, blade: 1},
 		onHit(target) {
 			if (target.getAbility().isPermanent) return;
-			if (target.newlySwitched || this.queue.willMove(target)) return;
 			target.addVolatile('gastroacid');
 		},
 		onAfterSubDamage(damage, target) {
 			if (target.getAbility().isPermanent) return;
-			if (target.newlySwitched || this.queue.willMove(target)) return;
 			target.addVolatile('gastroacid');
 		},
 		secondary: null,
@@ -23265,6 +23263,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 			const damageContact = [
 				'ironbarbs', 'roughskin',
 			];
+			const rockyContact = [
+				'rockyhelmet',
+			];
 			const stealContact = [
 				'pickpocket', 'magician',
 			];
@@ -23295,7 +23296,10 @@ export const Moves: { [moveid: string]: MoveData } = {
 				this.boost({spe: -1}, target, source, this.dex.getActiveMove("Bear Hug"));
 			} else if (damageContact.includes(source.ability)) {
 				this.damage(target.baseMaxhp / 8, target, source);
-			} else if (stealContact.includes(source.ability)) {
+			} else if(rockyContact.includes(source.item)) {
+				this.damage(target.baseMaxhp / 6, target, source);
+			} 
+			else if (stealContact.includes(source.ability)) {
 				if (source.item) {
 					return;
 				}
@@ -23597,7 +23601,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Rocket Punch",
 		pp: 10,
 		priority: 2,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		onTry(source) {
 			if (source.activeMoveActions > 1) {
 				this.hint("Rocket Punch only works on your first turn out.");
@@ -23636,7 +23640,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Flak Cannon",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, mystery: 1},
+		flags: {protect: 1, pulse: 1, mirror: 1, mystery: 1},
 		onPrepareHit(target, source, move) {
 			if (source.ignoringItem()) return false;
 			const item = source.getItem();
@@ -23652,7 +23656,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 					move.secondaries.push({volatileStatus: item.fling.volatileStatus});
 				}
 			}
-			source.addVolatile('fling');
+			source.addVolatile('flakcannon');
 		},
 		condition: {
 			onUpdate(pokemon) {
@@ -23662,7 +23666,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 				pokemon.usedItemThisTurn = true;
 				this.add('-enditem', pokemon, item.name, '[from] move: Flak Cannon');
 				this.runEvent('AfterUseItem', pokemon, null, null, item);
-				pokemon.removeVolatile('fling');
+				pokemon.removeVolatile('flakcannon');
 			},
 		},
 		secondary: null,
