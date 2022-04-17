@@ -7164,8 +7164,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	rockclock: {
 		name: "Rock Clock",
-		desc: "Has a 30% chance to make the target flinch.",
-		shortDesc: "30% chance to make the target flinch.",
+		desc: "Has a 20% chance to make the target confused.",
+		shortDesc: "20% chance to make the target confused.",
 	},
 	awaken: {
 		name: "Awaken",

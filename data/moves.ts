@@ -23263,6 +23263,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 			const damageContact = [
 				'ironbarbs', 'roughskin',
 			];
+			const rockyContact = [
+				'rockyhelmet',
+			];
 			const stealContact = [
 				'pickpocket', 'magician',
 			];
@@ -23293,7 +23296,10 @@ export const Moves: { [moveid: string]: MoveData } = {
 				this.boost({spe: -1}, target, source, this.dex.getActiveMove("Bear Hug"));
 			} else if (damageContact.includes(source.ability)) {
 				this.damage(target.baseMaxhp / 8, target, source);
-			} else if (stealContact.includes(source.ability)) {
+			} else if(rockyContact.includes(source.item)) {
+				this.damage(target.baseMaxhp / 6, target, source);
+			} 
+			else if (stealContact.includes(source.ability)) {
 				if (source.item) {
 					return;
 				}
