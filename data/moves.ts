@@ -22421,12 +22421,10 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1, blade: 1},
 		onHit(target) {
 			if (target.getAbility().isPermanent) return;
-			if (target.newlySwitched || this.queue.willMove(target)) return;
 			target.addVolatile('gastroacid');
 		},
 		onAfterSubDamage(damage, target) {
 			if (target.getAbility().isPermanent) return;
-			if (target.newlySwitched || this.queue.willMove(target)) return;
 			target.addVolatile('gastroacid');
 		},
 		secondary: null,
