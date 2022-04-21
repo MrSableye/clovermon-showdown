@@ -1331,7 +1331,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	wedgard: {
 		inherit: true,
-		tier: "NFE",
+		tier: "LC",
 		isNonstandard: null,
 	},
 	knokedge: {
@@ -3043,7 +3043,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	charagon: {
 		inherit: true,
-		tier: "NFE",
+		tier: "LC",
 		isNonstandard: null,
 	},
 	hyletrack: {
@@ -5503,7 +5503,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	glassannon: {
 		inherit: true,
-		tier: "UU",
+		tier: "UUBL",
 		isNonstandard: null,
 		randomBattleNicknames: [
 			"Glass anon",
@@ -7246,7 +7246,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	ninoop: {
 		inherit: true,
-		tier: "NFE",
+		tier: "LC",
 		isNonstandard: null,
 	},
 	draconius: {

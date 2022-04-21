@@ -30843,11 +30843,12 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		weightkg: 31,
 		color: "Yellow",
 		eggGroups: ["Field", "Human-Like"],
+		otherFormes: ["Simionach-Zen"],
 		gen: 8,
 	},
 	simionachzen: {
 		num: 42046,
-		name: "Simionach",
+		name: "Simionach-Zen",
 		types: ["Fighting", "Psychic"],
 		forme: "Zen",
 		genderRatio: {M: 0.5, F: 0.5},
