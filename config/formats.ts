@@ -114,7 +114,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Moody', 'Baton Pass', 'Dragon Rage', 'Sonic Boom',
-			'Wedgard', 'Chompest', 'Masdawg', 'Flowre', 'Charagon', 'Ayylamo', 'Ninoop', 'Embortion', 'Nutjobber',
+			'Chompest', 'Masdawg', 'Flowre', 'Ayylamo', 'Embortion', 'Nutjobber',
 		],
 	},
 	{
