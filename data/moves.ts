@@ -22416,7 +22416,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		basePower: 120,
 		category: "Physical",
 		name: "Branding Blade",
-		pp: 15,
+		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1, blade: 1},
 		onHit(target) {
@@ -23620,7 +23620,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		basePower: 100,
 		category: "Special",
 		name: "Power Washer",
-		pp: 10,
+		pp: 5,
 		priority: -1,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
@@ -23638,7 +23638,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		basePower: 100,
 		category: "Special",
 		name: "Flak Cannon",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, pulse: 1, mirror: 1, mystery: 1},
 		onPrepareHit(target, source, move) {
