@@ -336,6 +336,23 @@ export const Formats: FormatList = [
 		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Eviolite'],
 	},
 	{
+		name: '[Gen 8 Clover Only] Inverse',
+		mod: 'clover',
+		ruleset: [
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Inverse Mod',
+			'Evasion Moves Clause',
+			'Species Clause',
+			'OHKO Clause',
+			'Clover Only',
+			'Blobbos Clause',
+		],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Draconius', 'Bunnorgy'],
+		unbanlist: ['Condoom', 'Foryu', 'Narwhiz', 'Scytill'],
+	},
+	{
 		name: '[Gen 8 Clover Only] Almost Any Ability',
 		desc: `Pok&eacute;mon have access to almost any ability.`,
 		mod: 'clover',
