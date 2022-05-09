@@ -167,16 +167,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		accuracy: 95,
 	},
-	razorwind: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 140,
-		type: "Flying",
-	},
-	burnup: {
-		inherit: true,
-		basePower: 140,
-	},
 	/* Clover Enabled Moves */
 	assist: {
 		inherit: true,
@@ -467,6 +457,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	rage: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	razorwind: {
 		inherit: true,
 		isNonstandard: null,
 	},

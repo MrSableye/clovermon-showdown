@@ -23213,11 +23213,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 		secondary: null,
 		onTry(source, target) {
 			if (!source.volatiles['buried']) {
+				this.add('-anim', source, 'Wish', source);
 				source.addVolatile('buried');
-			}
-			else {
-				source.removeVolatile('buried');
-				source.addVolatile('buried');
+				return null;
 			}
 		},
 		target: "normal",
@@ -23288,32 +23286,20 @@ export const Moves: { [moveid: string]: MoveData } = {
 				if (random === 0) {
 					target.trySetStatus('psn', source);
 				}
-				if(rockyContact.includes(source.item)) {
-					this.damage(target.baseMaxhp / 6, target, source);
-				} 
 			} else if (toxicContact.includes(source.ability)) {
 				target.trySetStatus('tox', source);
-				if(rockyContact.includes(source.item)) {
-					this.damage(target.baseMaxhp / 6, target, source);
-				} 
 			} else if (burnContact.includes(source.ability)) {
 				if (random === 0) {
 					target.trySetStatus('brn', source);
 				}
-				if(rockyContact.includes(source.item)) {
-					this.damage(target.baseMaxhp / 6, target, source);
-				} 
 			} else if (speedContact.includes(source.ability)) {
 				this.boost({spe: -1}, target, source, this.dex.getActiveMove("Bear Hug"));
-				if(rockyContact.includes(source.item)) {
-					this.damage(target.baseMaxhp / 6, target, source);
-				} 
 			} else if (damageContact.includes(source.ability)) {
 				this.damage(target.baseMaxhp / 8, target, source);
-				if(rockyContact.includes(source.item)) {
-					this.damage(target.baseMaxhp / 6, target, source);
-				} 
-			} else if (stealContact.includes(source.ability)) {
+			} else if(rockyContact.includes(source.item)) {
+				this.damage(target.baseMaxhp / 6, target, source);
+			} 
+			else if (stealContact.includes(source.ability)) {
 				if (source.item) {
 					return;
 				}
@@ -23328,23 +23314,14 @@ export const Moves: { [moveid: string]: MoveData } = {
 				}
 				this.add('-enditem', target, yourItem, '[silent]', '[from] move: Thief', '[of] ' + source);
 				this.add('-item', source, yourItem, '[from] move: Thief', '[of] ' + target);
-				if(rockyContact.includes(source.item)) {
-					this.damage(target.baseMaxhp / 6, target, source);
-				} 
 			} else if (paralyzeContact.includes(source.ability)) {
 				if (random === 0) {
 					target.trySetStatus('par', source);
 				}
-				if(rockyContact.includes(source.item)) {
-					this.damage(target.baseMaxhp / 6, target, source);
-				} 
 			} else if (infatuateContact.includes(source.ability)) {
 				if (random === 0) {
 					if (source.isActive) target.addVolatile('attract', source, move, 'trapper');
 				}
-				if(rockyContact.includes(source.item)) {
-					this.damage(target.baseMaxhp / 6, target, source);
-				} 
 			} else if (mummyContact.includes(source.ability)) {
 				const oldAbility = target.setAbility(source.ability);
 				if (oldAbility) {
@@ -23365,9 +23342,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 					}
 				}
 			}
-			else if(rockyContact.includes(source.item)) {
-				this.damage(target.baseMaxhp / 6, target, source);
-			} 
 		},
 		target: "normal",
 		type: "Normal",

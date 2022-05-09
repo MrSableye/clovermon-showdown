@@ -5960,28 +5960,29 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		availability: {clover: 1},
 		onTryHit(target, source, move) {
 			let immune = false;
-			if (move.type === 'fire') {
-				switch (source.effectiveWeather()) {
+
+			if (target !== source && move.type === 'fire') {
+				switch (target.effectiveWeather()) {
 				case 'sunnyday':
 				case 'desolateland':
 					immune = true;
 					break;
 				}
-			} else if (move.type === 'water') {
-				switch (source.effectiveWeather()) {
+			} else if (target !== source && move.type === 'water') {
+				switch (target.effectiveWeather()) {
 				case 'raindance':
 				case 'primordialsea':
 					immune = true;
 					break;
 				}
-			} else if (move.type === 'rock') {
-				switch (source.effectiveWeather()) {
+			} else if (target !== source && move.type === 'rock') {
+				switch (target.effectiveWeather()) {
 				case 'sandstorm':
 					immune = true;
 					break;
 				}
-			} else if (move.type === 'ice') {
-				switch (source.effectiveWeather()) {
+			} else if (target !== source && move.type === 'ice') {
+				switch (target.effectiveWeather()) {
 				case 'hail':
 					immune = true;
 					break;

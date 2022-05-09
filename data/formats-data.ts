@@ -8659,11 +8659,6 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
-	bubbasaur: {
-		availability: {clover: 1},
-		isNonstandard: "Future",
-		tier: "Illegal",
-	},
 	bungaloon: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
