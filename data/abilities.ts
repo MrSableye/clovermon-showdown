@@ -5807,7 +5807,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	},
 	magicalrealm: {
 		availability: {clover: 1},
-		name: "Magical Realm",
+		name: "Magic Realm",
 		onStart(pokemon) {
 			this.add('-activate', pokemon, 'ability: Magical Realm');
 			this.field.addPseudoWeather('magicroom');
