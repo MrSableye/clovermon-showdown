@@ -23365,6 +23365,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 					}
 				}
 			}
+			else if(rockyContact.includes(source.item)) {
+				this.damage(target.baseMaxhp / 6, target, source);
+			} 
 		},
 		target: "normal",
 		type: "Normal",
