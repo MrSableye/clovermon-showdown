@@ -844,9 +844,9 @@ export const Conditions: {[k: string]: ConditionData} = {
 	},
 	buried: {
 		name: 'buried',
+		duration: 2,
 		onStart(pokemon, source) {
 			this.add('-activate', pokemon, 'move: ' + this.effectState.sourceEffect, '[of] ' + source);
-			this.effectState.time = this.random(5, 6);
 		},
 		onEnd(pokemon) {
 			this.add('-end', pokemon, this.effectState.sourceEffect, '[buried]');
