@@ -2040,6 +2040,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	magicalrealm: {
 		name: "Magical Realm",
 		shortDesc: "Summons Magic Room upon switch-in.",
+		start: "  [POKEMON] used its magic to nullify items!",
 	},
 	fogofwar: {
 		name: "Fog Of War",
