@@ -22469,7 +22469,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 					id: 'finalhour',
 					name: "Final Hour",
 					accuracy: 100,
-					basePower: 200,
+					basePower: 160,
 					category: "Special",
 					priority: 0,
 					flags: {},
