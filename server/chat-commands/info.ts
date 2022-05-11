@@ -1128,12 +1128,9 @@ export const commands: Chat.ChatCommands = {
 				case 1:
 					neutral.push(type);
 					break;
-				case 2:
-				case 4:
+				default:
 					superEff.push(type);
 					break;
-				default:
-					throw new Error(`/coverage effectiveness of ${bestCoverage[type]} from parameters: ${target}`);
 				}
 			}
 			buffer.push(`Coverage for ${sources.join(' + ')}:`);
@@ -1205,12 +1202,9 @@ export const commands: Chat.ChatCommands = {
 					case 1:
 						cell += `bgcolor=#6688AA title="${typing}"><font color=#000066>${bestEff}</font>`;
 						break;
-					case 2:
-					case 4:
+					default:
 						cell += `bgcolor=#559955 title="${typing}"><font color=#003300>${bestEff}</font>`;
 						break;
-					default:
-						throw new Error(`/coverage effectiveness of ${bestEff} from parameters: ${target}`);
 					}
 					cell += '</th>';
 					buffer += cell;
