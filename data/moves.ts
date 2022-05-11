@@ -22054,23 +22054,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Dark",
 		contestType: "Cute",
 	},
-	moredakka: {
-		availability: {clover: 1},
-		num: 42014,
-		accuracy: 100,
-		basePower: 25,
-		category: "Special",
-		isNonstandard: "Future",
-		name: "More Dakka",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, bullet: 1},
-		willCrit: true,
-		multihit: 3,
-		secondary: null,
-		target: "normal",
-		type: "Steel",
-	},
 	tombstoner: {
 		availability: {clover: 1},
 		num: 42015,
@@ -23213,9 +23196,11 @@ export const Moves: { [moveid: string]: MoveData } = {
 		secondary: null,
 		onTry(source, target) {
 			if (!source.volatiles['buried']) {
-				this.add('-anim', source, 'Wish', source);
 				source.addVolatile('buried');
-				return null;
+			}
+			else {
+				source.removeVolatile('buried');
+				source.addVolatile('buried');
 			}
 		},
 		target: "normal",
@@ -23286,18 +23271,31 @@ export const Moves: { [moveid: string]: MoveData } = {
 				if (random === 0) {
 					target.trySetStatus('psn', source);
 				}
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				} 
 			} else if (toxicContact.includes(source.ability)) {
 				target.trySetStatus('tox', source);
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				} 
 			} else if (burnContact.includes(source.ability)) {
 				if (random === 0) {
 					target.trySetStatus('brn', source);
 				}
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				} 
 			} else if (speedContact.includes(source.ability)) {
 				this.boost({spe: -1}, target, source, this.dex.getActiveMove("Bear Hug"));
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				} 
 			} else if (damageContact.includes(source.ability)) {
 				this.damage(target.baseMaxhp / 8, target, source);
-			} else if (rockyContact.includes(source.item)) {
-				this.damage(target.baseMaxhp / 6, target, source);
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				} 
 			} else if (stealContact.includes(source.ability)) {
 				if (source.item) {
 					return;
@@ -23313,14 +23311,23 @@ export const Moves: { [moveid: string]: MoveData } = {
 				}
 				this.add('-enditem', target, yourItem, '[silent]', '[from] move: Thief', '[of] ' + source);
 				this.add('-item', source, yourItem, '[from] move: Thief', '[of] ' + target);
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				} 
 			} else if (paralyzeContact.includes(source.ability)) {
 				if (random === 0) {
 					target.trySetStatus('par', source);
 				}
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				} 
 			} else if (infatuateContact.includes(source.ability)) {
 				if (random === 0) {
 					if (source.isActive) target.addVolatile('attract', source, move, 'trapper');
 				}
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				} 
 			} else if (mummyContact.includes(source.ability)) {
 				const oldAbility = target.setAbility(source.ability);
 				if (oldAbility) {
@@ -23328,6 +23335,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 					if (!target.isAlly(source)) target.volatileStaleness = 'external';
 					return;
 				}
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				} 
 				return false;
 			} else if (randomContact.includes(source.ability)) {
 				if (random === 0) {
@@ -23339,7 +23349,12 @@ export const Moves: { [moveid: string]: MoveData } = {
 					} else {
 						target.trySetStatus('slp', source);
 					}
+					if (rockyContact.includes(source.item)) {
+						this.damage(target.baseMaxhp / 6, target, source);
+					} 
 				}
+			} else if (rockyContact.includes(source.item)) {
+				this.damage(target.baseMaxhp / 6, target, source);
 			}
 		},
 		target: "normal",
@@ -23634,12 +23649,14 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 	flakcannon: {
 		accuracy: 100,
-		basePower: 100,
+		basePower: 35,
 		category: "Special",
 		name: "Flak Cannon",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, pulse: 1, mirror: 1, mystery: 1},
+		willCrit: true,
+		multihit: 3,
 		onPrepareHit(target, source, move) {
 			if (source.ignoringItem()) return false;
 			const item = source.getItem();
@@ -23669,7 +23686,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 			},
 		},
 		secondary: null,
-		willCrit: true,
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",

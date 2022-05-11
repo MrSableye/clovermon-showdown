@@ -1823,7 +1823,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	madman: {
 		name: "Madman",
-		shortDesc: "This Pokemon's contact moves have a 30% chance of confusing.",
+		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be confused.",
 	},
 	moreroom: {
 		name: "More Room",
