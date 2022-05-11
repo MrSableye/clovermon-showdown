@@ -7447,6 +7447,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	bearhug: {
 		name: "Bear Hug",
 		shortDesc: "Activates contact effects of the user, Traps for a turn.",
+		start: "  [POKEMON] was squeezed by [SOURCE]!",
 	},
 	chilipowder: {
 		name: "Chili Powder",
@@ -7482,12 +7483,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	powerwasher: {
 		name: "Power Washer",
-		desc: "This move does not check accuracy.",
 		shortDesc: "50% chance to lower the target's Sp. Def. Goes last.",
 	},
 	flakcannon: {
 		name: "Flak Cannon",
-		shortDesc: "Removes the user's held item, Always Crits.",
+		shortDesc: "Removes user's held item, Crits three times.",
 
 		removeItem: "  [POKEMON] shot the fragments of [ITEM]!",
 	},

@@ -5961,27 +5961,27 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onTryHit(target, source, move) {
 			let immune = false;
 
-			if (target !== source && move.type === 'fire') {
+			if (move.type === 'fire') {
 				switch (target.effectiveWeather()) {
 				case 'sunnyday':
 				case 'desolateland':
 					immune = true;
 					break;
 				}
-			} else if (target !== source && move.type === 'water') {
+			} else if (move.type === 'water') {
 				switch (target.effectiveWeather()) {
 				case 'raindance':
 				case 'primordialsea':
 					immune = true;
 					break;
 				}
-			} else if (target !== source && move.type === 'rock') {
+			} else if (move.type === 'rock') {
 				switch (target.effectiveWeather()) {
 				case 'sandstorm':
 					immune = true;
 					break;
 				}
-			} else if (target !== source && move.type === 'ice') {
+			} else if (move.type === 'ice') {
 				switch (target.effectiveWeather()) {
 				case 'hail':
 					immune = true;

@@ -32501,7 +32501,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Nyanonite",
 		types: ["Fairy", "Rock"],
 		gender: "N",
-		baseStats: {hp: 95, atk: 101, def: 85, spa: 111, spd: 80, spe: 128},
+		baseStats: {hp: 95, atk: 111, def: 85, spa: 101, spd: 80, spe: 128},
 		abilities: {0: "Dazzling", 1: "Weak Armor", H: "Jewelry", S: "Pixilate"},
 		heightm: 750,
 		weightkg: 2200000,
@@ -34627,6 +34627,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		baseSpecies: "Chasumo",
 		forme: "Mega",
 		types: [
+			"Dark",
 			"Fighting",
 		],
 		genderRatio: {
