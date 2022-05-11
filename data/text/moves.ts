@@ -7190,11 +7190,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power is multiplied by 999 times if the target has less than or equal to half of its maximum HP remaining. Heals for 100% of the damage the move has dealt.",
 		shortDesc: "999x power if target HP <50%, Heals for damage dealt.",
 	},
-	moredakka: {
-		name: "More Dakka",
-		desc: "Hits three times. This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
-		shortDesc: "Always results in a critical hit. Hits 3 times.",
-	},
 	tombstoner: {
 		name: "Tombstoner",
 		desc: "The user faints after using this move, Damage is calculated using the user's Defense stat as its Attack. This move is prevented from executing if any active Pokemon has the Damp Ability. ",
