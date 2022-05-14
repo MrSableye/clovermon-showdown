@@ -5962,22 +5962,26 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather() && target !== source && move.type === 'Water'))  {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 			}
+			return null;
 		},
 		onTryHit(target, source, move) {
 			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather() && target !== source && move.type === 'Fire'))  {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 			}
+			return null;
 		},
-
 		onTryHit(target, source, move) {
 			if (['hail'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Ice'))  {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
+				
 			}
+			return null;
 		},
 		onTryHit(target, source, move) {
 			if (['sandstorm'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Rock'))  {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 			}
+			return null;
 		},
 		isBreakable: true,
 		name: "Storm Shelter",
