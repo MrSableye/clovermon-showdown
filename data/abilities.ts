@@ -5959,45 +5959,29 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	stormshelter: {
 		availability: {clover: 1},
 		onTryHit(target, source, move) {
-			let immune = false;
-
-			if (move.type === 'fire') {
-				switch (target.effectiveWeather()) {
-				case 'sunnyday':
-				case 'desolateland':
-					immune = true;
-					break;
-				}
-			} else if (move.type === 'water') {
-				switch (target.effectiveWeather()) {
-				case 'raindance':
-				case 'primordialsea':
-					immune = true;
-					break;
-				}
-			} else if (move.type === 'rock') {
-				switch (target.effectiveWeather()) {
-				case 'sandstorm':
-					immune = true;
-					break;
-				}
-			} else if (move.type === 'ice') {
-				switch (target.effectiveWeather()) {
-				case 'hail':
-					immune = true;
-					break;
-				}
-			}
-
-			if (immune) {
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Water'))  {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
-				return null;
 			}
 		},
-		onImmunity(type, pokemon) {
-			if (type === 'sandstorm' || type === 'hail') return false;
+		onTryHit(target, source, move) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Fire'))  {
+				this.add('-immune', target, '[from] ability: Storm Shelter');
+			}
 		},
+
+		onTryHit(target, source, move) {
+			if (['hail'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Ice'))  {
+				this.add('-immune', target, '[from] ability: Storm Shelter');
+			}
+		},
+		onTryHit(target, source, move) {
+			if (['sandstorm'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Rock'))  {
+				this.add('-immune', target, '[from] ability: Storm Shelter');
+			}
+		},
+		isBreakable: true,
 		name: "Storm Shelter",
+		rating: 3,
 		isNonstandard: "Future",
 	},
 	zenmonke: {
