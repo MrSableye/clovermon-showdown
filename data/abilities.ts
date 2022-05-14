@@ -5956,19 +5956,19 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 1,
 		isNonstandard: "Future",
 	},
-		stormshelter: {
+	stormshelter: {
 		availability: {clover: 1},
 		onTryHit(target, source, move) {
-			if (['raindance', 'primordialsea'].includes(target.effectiveWeather()) && target !== source && move.type === 'Water')  {
+			if (['raindance', 'primordialsea'].includes(target.effectiveWeather()) && target !== source && move.type === 'Water') {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 				return null;
-			} else if (['sunnyday', 'desolateland'].includes(target.effectiveWeather()) && target !== source && move.type === 'Fire')  {
+			} else if (['sunnyday', 'desolateland'].includes(target.effectiveWeather()) && target !== source && move.type === 'Fire') {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 				return null;
-			} else if (['hail'].includes(target.effectiveWeather()) && target !== source && move.type === 'Ice')  {
+			} else if (['hail'].includes(target.effectiveWeather()) && target !== source && move.type === 'Ice') {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 				return null;
-			} else if (['sandstorm'].includes(target.effectiveWeather())&&target !== source && move.type === 'Rock')  {
+			} else if (['sandstorm'].includes(target.effectiveWeather()) && target !== source && move.type === 'Rock') {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 				return null;
 			}
