@@ -22434,7 +22434,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	finalhour: {
 		availability: {clover: 1},
 		accuracy: 100,
-		basePower: 160,
+		basePower: 200,
 		category: "Special",
 		name: "Final Hour",
 		pp: 5,

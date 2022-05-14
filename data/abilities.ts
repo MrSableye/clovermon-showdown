@@ -5807,7 +5807,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	},
 	magicalrealm: {
 		availability: {clover: 1},
-		name: "Magic Realm",
+		name: "Magical Realm",
 		onStart(pokemon) {
 			this.add('-activate', pokemon, 'ability: Magical Realm');
 			this.field.addPseudoWeather('magicroom');
@@ -5956,7 +5956,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 1,
 		isNonstandard: "Future",
 	},
-	stormshelter: {
+		stormshelter: {
 		availability: {clover: 1},
 		onTryHit(target, source, move) {
 			if (['raindance', 'primordialsea'].includes(target.effectiveWeather()) && target !== source && move.type === 'Water')  {

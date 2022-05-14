@@ -22,6 +22,7 @@ export interface TeamData {
 export class RandomTeams {
 	dex: ModdedDex;
 	gen: number;
+	readonly maxTeamSize: number;
 	factoryTier: string;
 	format: Format;
 	prng: PRNG;
@@ -30,6 +31,8 @@ export class RandomTeams {
 		format = Dex.formats.get(format);
 		this.dex = Dex.forFormat(format);
 		this.gen = this.dex.gen;
+		const ruleTable = Dex.formats.getRuleTable(format);
+		this.maxTeamSize = ruleTable.maxTeamSize;
 
 		this.factoryTier = '';
 		this.format = format;
@@ -1901,7 +1904,7 @@ export class RandomTeams {
 		const teamDetails: RandomTeamsTypes.TeamDetails = {};
 
 		const pokemonPool = this.getFestivePokemonPool();
-		while (pokemonPool.length && pokemon.length < 6) {
+		while (pokemonPool.length && pokemon.length < this.maxTeamSize) {
 			const species = this.dex.species.get(this.sampleNoReplace(pokemonPool));
 			if (!species.exists) continue;
 
@@ -1952,7 +1955,7 @@ export class RandomTeams {
 			// Okay, the set passes, add it to our team
 			pokemon.push(set);
 
-			if (pokemon.length === 6) {
+			if (pokemon.length === this.maxTeamSize) {
 				// Set Zoroark's level to be the same as the last Pokemon
 				const illusion = teamDetails['illusion'];
 				if (illusion) pokemon[illusion - 1].level = pokemon[5].level;
@@ -2002,7 +2005,7 @@ export class RandomTeams {
 			if (set.ability === 'Illusion') teamDetails['illusion'] = pokemon.length;
 		}
 
-		if (pokemon.length < 6) throw new Error(`Could not build a random team for ${this.format} (seed=${seed})`);
+		if (pokemon.length < this.maxTeamSize) throw new Error(`Could not build a random team for ${this.format} (seed=${seed})`);
 
 		return pokemon;
 	}
@@ -2032,7 +2035,7 @@ export class RandomTeams {
 		const teamDetails: RandomTeamsTypes.TeamDetails = {};
 
 		const pokemonPool = this.getIrishPokemonPool();
-		while (pokemonPool.length && pokemon.length < 6) {
+		while (pokemonPool.length && pokemon.length < this.maxTeamSize) {
 			const species = this.dex.species.get(this.sampleNoReplace(pokemonPool));
 			if (!species.exists) continue;
 
@@ -2083,7 +2086,7 @@ export class RandomTeams {
 			// Okay, the set passes, add it to our team
 			pokemon.push(set);
 
-			if (pokemon.length === 6) {
+			if (pokemon.length === this.maxTeamSize) {
 				// Set Zoroark's level to be the same as the last Pokemon
 				const illusion = teamDetails['illusion'];
 				if (illusion) pokemon[illusion - 1].level = pokemon[5].level;
@@ -2133,7 +2136,7 @@ export class RandomTeams {
 			if (set.ability === 'Illusion') teamDetails['illusion'] = pokemon.length;
 		}
 
-		if (pokemon.length < 6) throw new Error(`Could not build a random team for ${this.format} (seed=${seed})`);
+		if (pokemon.length < this.maxTeamSize) throw new Error(`Could not build a random team for ${this.format} (seed=${seed})`);
 
 		return pokemon;
 	}
@@ -2220,7 +2223,7 @@ export class RandomTeams {
 			// Okay, the set passes, add it to our team
 			pokemon.push(set);
 
-			if (pokemon.length === 6) {
+			if (pokemon.length === this.maxTeamSize) {
 				// Set Zoroark's level to be the same as the last Pokemon
 				const illusion = teamDetails['illusion'];
 				if (illusion) pokemon[illusion - 1].level = pokemon[5].level;
@@ -2322,7 +2325,7 @@ export class RandomTeams {
 			// Okay, the set passes, add it to our team
 			pokemon.push(set);
 
-			if (pokemon.length === 6) {
+			if (pokemon.length === this.maxTeamSize) {
 				// Set Zoroark's level to be the same as the last Pokemon
 				const illusion = teamDetails['illusion'];
 				if (illusion) pokemon[illusion - 1].level = pokemon[5].level;
@@ -2371,7 +2374,7 @@ export class RandomTeams {
 			// For setting Zoroark's level
 			if (set.ability === 'Illusion') teamDetails['illusion'] = pokemon.length;
 		}
-		if ((pokemon.length + clovermon.length) < 6) throw new Error(`Could not build a random team for ${this.format} (seed=${seed})`);
+		if ((pokemon.length + clovermon.length) < this.maxTeamSize) throw new Error(`Could not build a random team for ${this.format} (seed=${seed})`);
 
 		return [...pokemon, ...clovermon];
 	}
@@ -2422,7 +2425,7 @@ export class RandomTeams {
 		const teamDetails: RandomTeamsTypes.TeamDetails = {};
 
 		const pokemonPool = this.getPokemonPool(type, pokemon, isMonotype, isCloveronly);
-		while (pokemonPool.length && pokemon.length < 6) {
+		while (pokemonPool.length && pokemon.length < this.maxTeamSize) {
 			let species = this.dex.species.get(this.sampleNoReplace(pokemonPool));
 			if (!species.exists) continue;
 
@@ -2491,7 +2494,7 @@ export class RandomTeams {
 			// Okay, the set passes, add it to our team
 			pokemon.push(set);
 
-			if (pokemon.length === 6) {
+			if (pokemon.length === this.maxTeamSize) {
 				// Set Zoroark's level to be the same as the last Pokemon
 				const illusion = teamDetails['illusion'];
 				if (illusion) pokemon[illusion - 1].level = pokemon[5].level;
@@ -2540,7 +2543,7 @@ export class RandomTeams {
 			// For setting Zoroark's level
 			if (set.ability === 'Illusion') teamDetails['illusion'] = pokemon.length;
 		}
-		if (pokemon.length < 6) throw new Error(`Could not build a random team for ${this.format} (seed=${seed})`);
+		if (pokemon.length < this.maxTeamSize) throw new Error(`Could not build a random team for ${this.format} (seed=${seed})`);
 
 		return pokemon;
 	}
@@ -2572,7 +2575,7 @@ export class RandomTeams {
 		const blobbosFormes = this.dex.species.all()
 			.filter((species) => species.baseSpecies === 'Blobbos' && !species.battleOnly);
 
-		while (sets.length < 6) {
+		while (sets.length < this.maxTeamSize) {
 			const blobbosForme = this.sampleNoReplace(blobbosFormes);
 			const set = {
 				name: this.sampleNoReplace(blobbosNicknames),
