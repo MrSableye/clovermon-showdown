@@ -5959,23 +5959,23 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	stormshelter: {
 		availability: {clover: 1},
 		onTryHit(target, source, move) {
-			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Water'))  {
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather() && target !== source && move.type === 'Water')) {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 			}
 		},
 		onTryHit(target, source, move) {
-			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Fire'))  {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather() && target !== source && move.type === 'Fire')) {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 			}
 		},
 
 		onTryHit(target, source, move) {
-			if (['hail'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Ice'))  {
+			if (['hail'].includes(pokemon.effectiveWeather() && target !== source && move.type === 'Ice')) {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 			}
 		},
 		onTryHit(target, source, move) {
-			if (['sandstorm'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Rock'))  {
+			if (['sandstorm'].includes(pokemon.effectiveWeather() && target !== source && move.type === 'Rock')) {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 			}
 		},
