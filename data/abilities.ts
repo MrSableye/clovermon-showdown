@@ -5959,48 +5959,19 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	stormshelter: {
 		availability: {clover: 1},
 		onTryHit(target, source, move) {
-<<<<<<< HEAD
-			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather() && target !== source && move.type === 'Water'))  {
-=======
-			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Water'))  {
->>>>>>> a50d2af71b71d84bfe74d59744190972295abda4
+			if (['raindance', 'primordialsea'].includes(target.effectiveWeather()) && target !== source && move.type === 'Water')  {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
-			}
-			return null;
-		},
-		onTryHit(target, source, move) {
-<<<<<<< HEAD
-			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather() && target !== source && move.type === 'Fire'))  {
+				return null;
+			} else if (['sunnyday', 'desolateland'].includes(target.effectiveWeather()) && target !== source && move.type === 'Fire')  {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
-			}
-			return null;
-		},
-		onTryHit(target, source, move) {
-			if (['hail'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Ice'))  {
+				return null;
+			} else if (['hail'].includes(target.effectiveWeather()) && target !== source && move.type === 'Ice')  {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
-				
-			}
-			return null;
-=======
-			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Fire'))  {
+				return null;
+			} else if (['sandstorm'].includes(target.effectiveWeather())&&target !== source && move.type === 'Rock'))  {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
+				return null;
 			}
-		},
-
-		onTryHit(target, source, move) {
-			if (['hail'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Ice'))  {
-				this.add('-immune', target, '[from] ability: Storm Shelter');
-			}
->>>>>>> a50d2af71b71d84bfe74d59744190972295abda4
-		},
-		onTryHit(target, source, move) {
-			if (['sandstorm'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Rock'))  {
-				this.add('-immune', target, '[from] ability: Storm Shelter');
-			}
-<<<<<<< HEAD
-			return null;
-=======
->>>>>>> a50d2af71b71d84bfe74d59744190972295abda4
 		},
 		isBreakable: true,
 		name: "Storm Shelter",
