@@ -5959,12 +5959,12 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	stormshelter: {
 		availability: {clover: 1},
 		onTryHit(target, source, move) {
-			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Water'))  {
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather() && target !== source && move.type === 'Water'))  {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 			}
 		},
 		onTryHit(target, source, move) {
-			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather()&&target !== source && move.type === 'Fire'))  {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather() && target !== source && move.type === 'Fire'))  {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 			}
 		},
