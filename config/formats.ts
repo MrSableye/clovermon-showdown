@@ -84,6 +84,14 @@ export const Formats: FormatList = [
 		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
+		name: "[Gen 8 Clover Only] Multi Random Battle",
+		mod: 'clover',
+		team: 'random',
+		gameType: 'multi',
+		tournamentShow: false,
+		ruleset: ['Max Team Size = 3', 'Clover Only', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Dynamax Clause'],
+	},
+	{
 		name: '[Gen 8 Clover Only] Ubers',
 		mod: 'clover',
 		ruleset: [
@@ -334,6 +342,23 @@ export const Formats: FormatList = [
 			'Blobbos Clause',
 		],
 		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Eviolite'],
+	},
+	{
+		name: '[Gen 8 Clover Only] Inverse',
+		mod: 'clover',
+		ruleset: [
+			'Standard NatDex',
+			'Dynamax Clause',
+			'Sleep Clause Mod',
+			'Inverse Mod',
+			'Evasion Moves Clause',
+			'Species Clause',
+			'OHKO Clause',
+			'Clover Only',
+			'Blobbos Clause',
+		],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Draconius', 'Bunnorgy'],
+		unbanlist: ['Condoom', 'Foryu', 'Narwhiz', 'Scytill'],
 	},
 	{
 		name: '[Gen 8 Clover Only] Almost Any Ability',
