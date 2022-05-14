@@ -1909,7 +1909,7 @@ export class RandomTeams {
 			if (!species.exists) continue;
 
 			// Check if the forme has moves for random battle
-			if ((this.format.gameType === 'singles') || (this.format.gameType === 'freeforall')) {
+			if ((this.format.gameType === 'singles') || (this.format.gameType === 'freeforall') || (this.format.gameType === 'multi')) {
 				if (!species.randomBattleMoves) continue;
 			} else {
 				if (!species.randomDoubleBattleMoves) continue;
@@ -2040,7 +2040,7 @@ export class RandomTeams {
 			if (!species.exists) continue;
 
 			// Check if the forme has moves for random battle
-			if ((this.format.gameType === 'singles') || (this.format.gameType === 'freeforall')) {
+			if ((this.format.gameType === 'singles') || (this.format.gameType === 'freeforall') || (this.format.gameType === 'multi')) {
 				if (!species.randomBattleMoves) continue;
 			} else {
 				if (!species.randomDoubleBattleMoves) continue;
@@ -2177,7 +2177,7 @@ export class RandomTeams {
 			if (!species.exists) continue;
 
 			// Check if the forme has moves for random battle
-			if ((this.format.gameType === 'singles') || (this.format.gameType === 'freeforall')) {
+			if ((this.format.gameType === 'singles') || (this.format.gameType === 'freeforall') || (this.format.gameType === 'multi')) {
 				if (!species.randomBattleMoves) continue;
 			} else {
 				if (!species.randomDoubleBattleMoves) continue;
@@ -2279,7 +2279,7 @@ export class RandomTeams {
 			if (!species.exists) continue;
 
 			// Check if the forme has moves for random battle
-			if ((this.format.gameType === 'singles') || (this.format.gameType === 'freeforall')) {
+			if ((this.format.gameType === 'singles') || (this.format.gameType === 'freeforall') || (this.format.gameType === 'multi')) {
 				if (!species.randomBattleMoves) continue;
 			} else {
 				if (!species.randomDoubleBattleMoves) continue;
@@ -2430,7 +2430,7 @@ export class RandomTeams {
 			if (!species.exists) continue;
 
 			// Check if the forme has moves for random battle
-			if ((this.format.gameType === 'singles') || (this.format.gameType === 'freeforall')) {
+			if ((this.format.gameType === 'singles') || (this.format.gameType === 'freeforall') || (this.format.gameType === 'multi')) {
 				if (!species.randomBattleMoves) continue;
 			} else {
 				if (!species.randomDoubleBattleMoves) continue;
