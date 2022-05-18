@@ -5989,4 +5989,42 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Zen Monke",
 		isNonstandard: "Future",
 	},
+
+
+	asoneblobbost: {
+		onPreStart(pokemon) {
+			this.add('-ability', pokemon, 'As One (Blobbos)');
+			this.add('-ability', pokemon, 'Intimidate');
+			this.add('-ability', pokemon, 'Levitate');
+			this.effectState.unnerved = true;
+		},
+		onEnd() {
+			this.effectState.unnerved = false;
+		},
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Intimidate', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					this.boost({atk: -1}, target, pokemon, null, true);
+				}
+			}
+		},
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({atk: length}, source, source, this.dex.abilities.get('chillingneigh'));
+			}
+		},
+		isPermanent: true,
+		name: "As One (Blobbos-Therian)",
+		rating: 3.5,
+		num: 266,
+	},
+	
+
 };
