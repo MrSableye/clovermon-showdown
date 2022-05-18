@@ -6025,6 +6025,24 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3.5,
 		num: 266,
 	},
+
+	flipflops: {
+		availability: {clover: 1},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk) {
+				if (this.field.getPseudoWeather('inverseroom') ) {
+				return this.chainModify(2);
+			}
+		},
+		onModifySpe(spe, pokemon) {
+			if (this.field.getPseudoWeather('inverseroom')) {
+				return this.chainModify(2);
+			}
+		},
+		name: "Flip Flops",
+		rating: 3.5,
+		isNonstandard: "Future",
+	},
 	
 
 };

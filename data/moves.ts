@@ -23709,4 +23709,5 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Normal",
 		maxMove: {basePower: 140},
 	},
+
 };
