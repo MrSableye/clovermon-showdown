@@ -23689,4 +23689,24 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Steel",
 		isNonstandard: "Future",
 	},
+
+	inverserush: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Inverse Rush",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (this.field.getPseudoWeather('inverseroom')) {
+				return this.chainModify(2);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		maxMove: {basePower: 140},
+	},
 };
