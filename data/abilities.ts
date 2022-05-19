@@ -5998,9 +5998,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			this.add('-ability', pokemon, 'Levitate');
 			this.effectState.unnerved = true;
 		},
-		onEnd() {
-			this.effectState.unnerved = false;
-		},
+		
 		onStart(pokemon) {
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
@@ -6015,16 +6013,11 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				}
 			}
 		},
-		onSourceAfterFaint(length, target, source, effect) {
-			if (effect && effect.effectType === 'Move') {
-				this.boost({atk: length}, source, source, this.dex.abilities.get('chillingneigh'));
-			}
-		},
+	
 		isPermanent: true,
 		name: "As One (Blobbos-Therian)",
 		rating: 3.5,
-		num: 266,
-	},
+		},
 
 	flipflops: {
 		availability: {clover: 1},
