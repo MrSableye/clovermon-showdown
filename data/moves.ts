@@ -23823,7 +23823,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			pokemon.addVolatile('stall');
 		},
 		onAfterMove(source) {
-				source.trySetStatus('brn');
+				source.trySetStatus('psn');
 		},
 		secondary: null,
 		target: "self",
