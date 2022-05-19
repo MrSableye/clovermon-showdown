@@ -23710,4 +23710,42 @@ export const Moves: { [moveid: string]: MoveData } = {
 		maxMove: {basePower: 140},
 	},
 
+
+
+	faedozer: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Fae Dozer",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+			onHit() {
+			const rand = this.random(4);
+			if (rand < 2) {
+						this.field.setTerrain('psychicterrain');
+					
+			} else if (rand < 3) {
+						this.field.setTerrain('electricterrain');	
+			} else if (rand < 4) {	
+						this.field.setTerrain('grassyterrain');	
+			} else {
+						this.field.setTerrain('mistyterrain');
+				}
+			}
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+
+
+
+
 };
