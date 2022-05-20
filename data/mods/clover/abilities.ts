@@ -200,6 +200,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: "CAP",
 	},
 	rebound: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
@@ -212,14 +213,17 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: "CAP",
 	},
 	unseenfist: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	powerspot: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	libero: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
@@ -228,6 +232,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: "CAP",
 	},
 	asoneblobbostherian: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
