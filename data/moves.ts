@@ -22747,7 +22747,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	closeblobmat: {
 		availability: {clover: 1},
 		accuracy: 100,
-		basePower: 255,
+		basePower: 200,
 		category: "Physical",
 		name: "Close Blobmat",
 		pp: 5,
@@ -22757,6 +22757,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			boosts: {
 				def: -6,
 				spd: -6,
+				spe: -1,
 			},
 		},
 		secondary: null,
