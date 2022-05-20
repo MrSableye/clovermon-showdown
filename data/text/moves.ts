@@ -6835,7 +6835,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	zippyzap: {
 		name: "Zippy Zap",
 		desc: "Has a 100% chance to raise the user's evasion by 1 stage.",
-		shortDesc: "Goes first. Raises user's evasion by 1.",
+		shortDesc: "Goes first. Always crits.",
 		gen7: {
 			desc: "Will always result in a critical hit.",
 			shortDesc: "Nearly always goes first. Always crits.",
@@ -7311,8 +7311,19 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	closeblobmat: {
 		name: "Close Blobmat",
-		desc: "Lowers the user's Defense and Special Defense by 6 stages.",
-		shortDesc: "Lowers the user's Defense and Sp. Def by 6.",
+		shortDesc: "Lowers the user's Defense and Sp. Def by 6, and Speed by 1.",
+	},
+	faedozer: {
+		name: "Fae Dozer",
+		shortDesc: "Summons a random terrain when this attack hits.",
+	},
+	roidflex: {
+		name: "Roid Flex",
+		shortDesc: "Protects self, poisons self, and raises accuracy.",
+	},
+	inverserush: {
+		name: "Inverse Rush",
+		shortDesc: "Doubles damage under Inverse Room.",
 	},
 	hypersnore: {
 		name: "Hyper Snore",
@@ -7326,8 +7337,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	yiikout: {
 		name: "Yiik Out",
-		desc: "Has a 100% chance to make the target confused and infatuated. Fails unless it is the user's first turn on the field.",
-		shortDesc: "Hits first. First turn out only, 100% Confuse + Attract.",
+		shortDesc: "Hits first. First turn out only, makes the opponent have the same ability as the user.",
 	},
 	leafshield: {
 		name: "Leaf Shield",
