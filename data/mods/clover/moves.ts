@@ -1120,6 +1120,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+		multiattack: {
+			inherit: true,
+			isNonstandard: "CAP",
+	},
 	noretreat: {
 		inherit: true,
 		isNonstandard: "CAP",
