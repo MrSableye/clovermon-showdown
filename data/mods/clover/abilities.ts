@@ -215,4 +215,20 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	powerspot: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	libero: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	flipflops: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	asoneblobbostherian: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

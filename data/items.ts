@@ -3003,17 +3003,17 @@ export const Items: { [itemid: string]: ItemData } = {
 		},
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.baseSpecies.baseSpecies === 'Chanto' || pokemon.baseSpecies.baseSpecies === 'Ampstar') {
+			if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.baseSpecies.baseSpecies === 'Blobbos-Pika' || pokemon.baseSpecies.baseSpecies === 'Chanto' || pokemon.baseSpecies.baseSpecies === 'Ampstar') {
 				return this.chainModify(2);
 			}
 		},
 		onModifySpAPriority: 1,
 		onModifySpA(spa, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.baseSpecies.baseSpecies === 'Pikotton' || pokemon.baseSpecies.baseSpecies === 'Chanto' || pokemon.baseSpecies.baseSpecies === 'Ampstar') {
+			if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.baseSpecies.baseSpecies === 'Blobbos-Pika' || pokemon.baseSpecies.baseSpecies === 'Pikotton' || pokemon.baseSpecies.baseSpecies === 'Chanto' || pokemon.baseSpecies.baseSpecies === 'Ampstar') {
 				return this.chainModify(2);
 			}
 		},
-		itemUser: ["Pikachu", "Ampstar"],
+		itemUser: ["Pikachu", "Ampstar", "Blobbos-Pika"],
 		num: 236,
 		gen: 2,
 	},
