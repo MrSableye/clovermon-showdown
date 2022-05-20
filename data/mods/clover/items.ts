@@ -396,4 +396,84 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	fightingmemory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	flyingmemory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	poisonmemory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	groundmemory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	rockmemory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	bugmemory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	ghostmemory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	steelmemory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	firememory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	watermemory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	grassmemory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	electricmemory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	psychicmemory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	icememory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	darkmemory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	fairymemory: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

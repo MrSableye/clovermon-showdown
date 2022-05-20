@@ -15589,6 +15589,31 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	blobbostherian: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbostriple: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosretro: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbospika: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosathlete: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	peasol: {
 		inherit: true,
 		isNonstandard: "CAP",
