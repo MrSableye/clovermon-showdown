@@ -23711,7 +23711,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 
 
-
 	faedozer: {
 		availability: {clover: 1},
 		accuracy: 100,
@@ -23724,19 +23723,18 @@ export const Moves: { [moveid: string]: MoveData } = {
 		secondary: {
 			chance: 100,
 			self: {
-			onHit() {
-			const rand = this.random(3);
-			if (rand < 1) {
+				onHit() {
+					const rand = this.random(3);
+					if (rand < 1) {
 						this.field.setTerrain('psychicterrain');
-					
-			} else if (rand < 2) {
-						this.field.setTerrain('electricterrain');	
-			} else if (rand < 3) {	
-						this.field.setTerrain('grassyterrain');	
-			} else {
+					} else if (rand < 2) {
+						this.field.setTerrain('electricterrain');
+					} else if (rand < 3) {
+						this.field.setTerrain('grassyterrain');
+					} else {
 						this.field.setTerrain('mistyterrain');
-				}
-			}
+					}
+				},
 			},
 		},
 		target: "normal",
@@ -23791,7 +23789,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		secondary: {
 			chance: 100,
 			volatileStatus: 'flinch',
-			
+
 		},
 		target: "normal",
 		type: "Fairy",
@@ -23823,7 +23821,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			pokemon.addVolatile('stall');
 		},
 		onAfterMove(source) {
-				source.trySetStatus('psn');
+			source.trySetStatus('psn');
 		},
 		secondary: null,
 		target: "self",

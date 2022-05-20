@@ -5998,7 +5998,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			this.add('-ability', pokemon, 'Levitate');
 			this.effectState.unnerved = true;
 		},
-		
+
 		onStart(pokemon) {
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
@@ -6013,17 +6013,17 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				}
 			}
 		},
-	
+
 		isPermanent: true,
 		name: "As One (Blobbos-Therian)",
 		rating: 3.5,
-		},
+	},
 
 	flipflops: {
 		availability: {clover: 1},
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk) {
-				if (this.field.getPseudoWeather('inverseroom') ) {
+			if (this.field.getPseudoWeather('inverseroom')) {
 				return this.chainModify(2);
 			}
 		},
@@ -6036,6 +6036,6 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3.5,
 		isNonstandard: "Future",
 	},
-	
+
 
 };
