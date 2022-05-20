@@ -5991,9 +5991,9 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	},
 
 
-	asoneblobbost: {
+	asoneblobbostherian: {
 		onPreStart(pokemon) {
-			this.add('-ability', pokemon, 'As One (Blobbos)');
+			this.add('-ability', pokemon, 'As One (Blobbos-Therian)');
 			this.add('-ability', pokemon, 'Intimidate');
 			this.add('-ability', pokemon, 'Levitate');
 			this.effectState.unnerved = true;
