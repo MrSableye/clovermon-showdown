@@ -23718,20 +23718,20 @@ export const Moves: { [moveid: string]: MoveData } = {
 		basePower: 100,
 		category: "Physical",
 		name: "Fae Dozer",
-		pp: 20,
+		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
 			self: {
 			onHit() {
-			const rand = this.random(4);
-			if (rand < 2) {
+			const rand = this.random(3);
+			if (rand < 1) {
 						this.field.setTerrain('psychicterrain');
 					
-			} else if (rand < 3) {
+			} else if (rand < 2) {
 						this.field.setTerrain('electricterrain');	
-			} else if (rand < 4) {	
+			} else if (rand < 3) {	
 						this.field.setTerrain('grassyterrain');	
 			} else {
 						this.field.setTerrain('mistyterrain');
@@ -23746,6 +23746,90 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 
 
+	yiikout2: {
+		availability: {clover: 1},
+		num: 69010,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		name: "Yiik Out 2",
+		pp: 10,
+		priority: 3,
+		flags: {sound: 1, protect: 1, mirror: 1, authentic: 1},
+		onTry(pokemon, target) {
+			if (pokemon.activeTurns > 1) {
+				this.attrLastMove('[still]');
+				this.add('-fail', pokemon);
+				this.hint("Yiik Out only works on your first turn out.");
+				return null;
+			}
+		},
+		onTryHit(target, source) {
+			if (target === source || target.volatiles['dynamax']) return false;
 
+			const additionalBannedSourceAbilities = [
+				// Zen Mode included here for compatability with Gen 5-6
+				'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode',
+			];
+			if (
+				target.ability === source.ability ||
+				target.getAbility().isPermanent || target.ability === 'truant' ||
+				source.getAbility().isPermanent || additionalBannedSourceAbilities.includes(source.ability)
+			) {
+				return false;
+			}
+		},
+		onHit(target, source) {
+			const oldAbility = target.setAbility(source.ability);
+			if (oldAbility) {
+				this.add('-ability', target, target.getAbility().name, '[from] move: Yiikout');
+				if (!target.isAlly(source)) target.volatileStaleness = 'external';
+				return;
+			}
+			return false;
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+			
+		},
+		target: "normal",
+		type: "Fairy",
+		zMove: {basePower: 120},
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+
+
+	roidflex: {
+		availability: {clover: 1},
+		num: 197,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Roid Flex",
+		pp: 5,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'protect',
+		boosts: {
+			accuracy: 1,
+		},
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		onAfterMove(source) {
+				source.trySetStatus('psn');
+		},
+		secondary: null,
+		target: "self",
+		type: "Fighting",
+		zMove: {boost: {evasion: 1}},
+		contestType: "Cool",
+	},
 
 };
