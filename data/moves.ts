@@ -23725,12 +23725,12 @@ export const Moves: { [moveid: string]: MoveData } = {
 			chance: 100,
 			self: {
 				onHit() {
-					const rand = this.random(3);
-					if (rand < 1) {
+					const rand = this.random(3)+1;
+					if (rand == 1) {
 						this.field.setTerrain('psychicterrain');
-					} else if (rand < 2) {
+					} else if (rand == 2) {
 						this.field.setTerrain('electricterrain');
-					} else if (rand < 3) {
+					} else if (rand == 3) {
 						this.field.setTerrain('grassyterrain');
 					} else {
 						this.field.setTerrain('mistyterrain');
