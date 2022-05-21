@@ -6038,5 +6038,16 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		isNonstandard: "Future",
 	},
 
+	genwunning: {
+		availability: {clover: 1},
+		name: "Gen Wunning",
+		onStart(pokemon) {
+			this.add('-activate', pokemon, 'ability: Genwunning');
+			this.field.addPseudoWeather('genwunning');
+		},
+		rating: 4,
+		isNonstandard: "Future",
+	},
+
 
 };
