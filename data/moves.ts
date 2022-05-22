@@ -22854,7 +22854,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {contact: 1, protect: 1},
 		secondary: {
-			chance: 20,
+			chance: 100,
 			onHit(target, source) {
 				if (!source.speciesState['parent']) {
 					this.add('-activate', source, 'move: Mating Press', '[of] ' + target);
