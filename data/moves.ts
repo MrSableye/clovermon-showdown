@@ -23702,7 +23702,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			chance: 100,
 			self: {
 				onHit() {
-					const rand = this.random(3);
+					const rand = this.random(4);
 					if (rand === 0) {
 						this.field.setTerrain('psychicterrain');
 					} else if (rand === 1) {
