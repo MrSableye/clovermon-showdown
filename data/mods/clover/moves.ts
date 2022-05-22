@@ -985,14 +985,17 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "CAP",
 	},
 	behemothbash: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	behemothblade: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	boltbeak: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
@@ -1009,6 +1012,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "CAP",
 	},
 	clangoroussoul: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
@@ -1021,6 +1025,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "CAP",
 	},
 	corrosivegas: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
@@ -1037,6 +1042,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "CAP",
 	},
 	drumbeating: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
@@ -1045,6 +1051,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "CAP",
 	},
 	dynamaxcannon: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
@@ -1069,6 +1076,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "CAP",
 	},
 	fishiousrend: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
@@ -1085,6 +1093,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "CAP",
 	},
 	gravapple: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
@@ -1121,6 +1130,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "CAP",
 	},
 		multiattack: {
+			availability: {clover: 1},
 			inherit: true,
 			isNonstandard: "CAP",
 	},
@@ -1161,6 +1171,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "CAP",
 	},
 	shellsidearm: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
@@ -1189,14 +1200,17 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "CAP",
 	},
 	strangesteam: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	stuffcheeks: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	surgingstrikes: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
@@ -1225,10 +1239,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "CAP",
 	},
 	wickedblow: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	zippyzap: {
+		availability: {clover: 1},
 		inherit: true,
 		basePower: 50,
 		pp: 15,
@@ -1237,14 +1253,17 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "CAP",
 	},
 	splishysplash: {
+		availability: {clover: 1},
 			inherit: true,
 			isNonstandard: "CAP",
 	},
 	pikapapow: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
 	floatyfall: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},

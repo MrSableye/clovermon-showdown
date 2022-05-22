@@ -22785,29 +22785,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Ice",
 		contestType: "Cool",
 	},
-	yiikout: {
-		availability: {clover: 1},
-		accuracy: 100,
-		basePower: 60,
-		category: "Special",
-		name: "Yiik Out",
-		pp: 10,
-		priority: 4,
-		flags: {protect: 1, mirror: 1},
-		onTry(source) {
-			if (source.activeMoveActions > 1) {
-				this.hint("Yiik is only fun for the first five minutes.");
-				return false;
-			}
-		},
-		onHit(target) {
-			target.addVolatile('confusion');
-			target.addVolatile('attract');
-		},
-		target: "normal",
-		type: "Fairy",
-		isNonstandard: "Future",
-	},
 	strum: {
 		availability: {clover: 1},
 		num: 813,
@@ -23745,13 +23722,13 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 
 
-	yiikout2: {
+	yiikout: {
 		availability: {clover: 1},
 		num: 69010,
 		accuracy: 100,
 		basePower: 60,
-		category: "Physical",
-		name: "Yiik Out 2",
+		category: "Special",
+		name: "Yiik Out",
 		pp: 10,
 		priority: 3,
 		flags: {sound: 1, protect: 1, mirror: 1, authentic: 1},
@@ -23759,7 +23736,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (pokemon.activeTurns > 1) {
 				this.attrLastMove('[still]');
 				this.add('-fail', pokemon);
-				this.hint("Yiik Out only works on your first turn out.");
+				this.hint("Yiik is only fun for the first five minutes.");
 				return null;
 			}
 		},
