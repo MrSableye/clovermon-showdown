@@ -6047,7 +6047,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 
 	genwunning: {
 		availability: {clover: 1},
-		name: "Gen Wunning",
+		name: "Genwunning",
 		onStart(pokemon) {
 			this.add('-activate', pokemon, 'ability: Genwunning');
 			this.field.addPseudoWeather('genwunning');

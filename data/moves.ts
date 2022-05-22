@@ -22831,7 +22831,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {contact: 1, protect: 1},
 		secondary: {
-			chance: 20,
+			chance: 100,
 			onHit(target, source) {
 				if (!source.speciesState['parent']) {
 					this.add('-activate', source, 'move: Mating Press', '[of] ' + target);
@@ -23702,12 +23702,12 @@ export const Moves: { [moveid: string]: MoveData } = {
 			chance: 100,
 			self: {
 				onHit() {
-					const rand = this.random(3)+1;
-					if (rand == 1) {
+					const rand = this.random(3);
+					if (rand === 0) {
 						this.field.setTerrain('psychicterrain');
-					} else if (rand == 2) {
+					} else if (rand === 1) {
 						this.field.setTerrain('electricterrain');
-					} else if (rand == 3) {
+					} else if (rand === 2) {
 						this.field.setTerrain('grassyterrain');
 					} else {
 						this.field.setTerrain('mistyterrain');
