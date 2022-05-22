@@ -33563,6 +33563,7 @@ blobbosretro: {
 	abilities: {
 		0: "Old School",
 		1: "Neutralizing Gas",
+		H: "Genwunning",
 	},
 	heightm: 0.4,
 	weightkg: 5.7,
