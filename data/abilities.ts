@@ -5958,7 +5958,10 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	},
 	stormshelter: {
 		availability: {clover: 1},
-		onTryHit(target, source, move) {
+			onImmunity(type, pokemon) {
+			if (type === 'sandstorm' || type === 'hail') return false;
+		},
+			onTryHit(target, source, move) {
 			if (['raindance', 'primordialsea'].includes(target.effectiveWeather()) && target !== source && move.type === 'Water') {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 				return null;
@@ -5971,7 +5974,11 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			} else if (['sandstorm'].includes(target.effectiveWeather()) && target !== source && move.type === 'Rock') {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 				return null;
+			} else if (['deltastream'].includes(target.effectiveWeather()) && target !== source && move.type === 'Flying') {
+				this.add('-immune', target, '[from] ability: Storm Shelter');
+				return null;
 			}
+			
 		},
 		isBreakable: true,
 		name: "Storm Shelter",
@@ -5992,6 +5999,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 
 
 	asoneblobbostherian: {
+		availability: {clover: 1},
 		onPreStart(pokemon) {
 			this.add('-ability', pokemon, 'As One (Blobbos-Therian)');
 			this.add('-ability', pokemon, 'Intimidate');
@@ -6034,6 +6042,17 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		name: "Flip Flops",
 		rating: 3.5,
+		isNonstandard: "Future",
+	},
+
+	genwunning: {
+		availability: {clover: 1},
+		name: "Gen Wunning",
+		onStart(pokemon) {
+			this.add('-activate', pokemon, 'ability: Genwunning');
+			this.field.addPseudoWeather('genwunning');
+		},
+		rating: 4,
 		isNonstandard: "Future",
 	},
 
