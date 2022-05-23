@@ -793,18 +793,9 @@ export const Conditions: {[k: string]: ConditionData} = {
 	lootable: {
 		// this is a slot condition
 		name: 'Lootable',
-		onStart(pokemon, source) {
-			this.effectState.stacks = source.volatiles['stockpile']?.layers || 0;
-		},
 		onSwap(target) {
-			const stacks = this.effectState.stacks || 0;
-
-			for (let i = 0; i < stacks; i++) {
-				target.addVolatile('stockpile');
-			}
-			this.heal(target.baseMaxhp * 0.20 * stacks);
-
-			target.side.removeSlotCondition(target, 'lootable');
+			target.addVolatile('focusenergy');
+			target.setAbility('serenegrace');
 		},
 	},
 	densefog: {

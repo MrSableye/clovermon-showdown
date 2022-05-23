@@ -2000,8 +2000,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	lootable: {
 		name: "Lootable",
-		desc: "If this Pokemon is knocked out, it passes on its Stockpile boosts and heals the next Pokemon for 1/5 of its maximum HP for each Stockpile layer.",
-		shortDesc: "After fainting, passes on Stockpile boosts and heals for 1/5 of its maximum HP for each.",
+		desc: "If this Pokemon is knocked out, it gives +2 crit ratio and Serene Grace to the next Pokemon.",
+		shortDesc: "After fainting, gives +2 crit and Serene Grace to next Pokemon.",
 	},
 	asoneblobbos: {
 		name: "As One (Blobbos)",
