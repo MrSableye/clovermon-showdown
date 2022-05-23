@@ -32924,7 +32924,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 	blobbosgalarcrowned: {
 		num: 69132,
 		name: "Blobbos-Galar-Crowned",
-		baseSpecies: "Blobbos-Galar",
+		baseSpecies: "Blobbos",
 		forme: "Crowned",
 		types: ["Steel", "Poison"],
 		gender: "N",
@@ -33508,7 +33508,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 			spe: 120,
 		},
 		abilities: {
-			0: "Speed Boost",
+			0: "Quick Feet",
 			1: "Guts",
 			H: "Aura Break",
 		},
