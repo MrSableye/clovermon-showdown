@@ -23702,7 +23702,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			chance: 100,
 			self: {
 				onHit() {
-					const rand = this.random(3);
+					const rand = this.random(4);
 					if (rand === 0) {
 						this.field.setTerrain('psychicterrain');
 					} else if (rand === 1) {
@@ -23748,7 +23748,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 				'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode',
 			];
 			if (
-				target.ability === source.ability ||
 				target.getAbility().isPermanent || target.ability === 'truant' ||
 				source.getAbility().isPermanent || additionalBannedSourceAbilities.includes(source.ability)
 			) {
@@ -23806,6 +23805,47 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fighting",
 		zMove: {boost: {evasion: 1}},
 		contestType: "Cool",
+	},
+
+
+	genwunroom: {
+		availability: {clover: 1},
+		num: 1001,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Genwun Room",
+		pp: 10,
+		priority: 0,
+		flags: {mirror: 1},
+		pseudoWeather: 'genwunroom',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 7;
+				}
+				return 5;
+			},
+			onFieldStart(target, source) {
+				this.add('-fieldstart', 'move: Genwun Room', '[of] ' + source);
+			},
+			onFieldRestart(target, source) {
+				this.field.removePseudoWeather('genwunroom');
+			},
+			// Item suppression implemented in Pokemon.ignoringItem() within sim/pokemon.js
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 6,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Genwun Room', '[of] ' + this.effectState.source);
+			},
+		},
+		secondary: null,
+		target: "all",
+		type: "Psychic",
+		zMove: {boost: {spd: 1}},
+		contestType: "Clever",
 	},
 
 };
