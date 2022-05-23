@@ -795,7 +795,10 @@ export const Conditions: {[k: string]: ConditionData} = {
 		name: 'Lootable',
 		onSwap(target) {
 			target.addVolatile('focusenergy');
-			target.setAbility('serenegrace');
+			const oldAbility = target.setAbility('serenegrace');
+			if (oldAbility) {
+				this.add('-activate', target, 'ability: Serene Grace', this.dex.abilities.get(oldAbility).name);
+			}
 		},
 	},
 	densefog: {
