@@ -306,6 +306,11 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	rustedcrown: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 	dracoplate: {
 		availability: {clover: 1},
 		inherit: true,

@@ -9229,6 +9229,11 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
+	blobbosgalarcrowned: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	blobbosvalian: {
 		availability: {clover: 1},
 		isNonstandard: "Future",

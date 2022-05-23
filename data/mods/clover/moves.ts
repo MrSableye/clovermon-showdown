@@ -976,6 +976,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	behemothblob: {
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 	appleacid: {
 		inherit: true,
 		isNonstandard: "CAP",
@@ -1038,6 +1042,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: "CAP",
 	},
 	dragonenergy: {
+		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
 	},
