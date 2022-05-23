@@ -799,6 +799,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 			if (oldAbility) {
 				this.add('-activate', target, 'ability: Serene Grace', this.dex.abilities.get(oldAbility).name);
 			}
+			target.side.removeSlotCondition(target, 'lootable');
 		},
 	},
 	densefog: {
