@@ -769,7 +769,7 @@ export class Pokemon {
 		let neutralizinggas = false;
 		for (const pokemon of this.battle.getAllActive()) {
 			// can't use hasAbility because it would lead to infinite recursion
-			if (pokemon.ability === ('neutralizinggas' as ID) && !pokemon.volatiles['gastroacid'] && this.battle.field.pseudoWeather['genwunroom'] && 
+			if (pokemon.ability === ('neutralizinggas' as ID) && !pokemon.volatiles['gastroacid'] && this.battle.field.pseudoWeather['genwunroom'] &&
 				!pokemon.abilityState.ending) {
 				neutralizinggas = true;
 				break;
@@ -778,7 +778,7 @@ export class Pokemon {
 
 		return !!(
 			(this.battle.gen >= 5 && !this.isActive) ||
-			((this.volatiles['gastroacid'] || (neutralizinggas && this.ability !== ('neutralizinggas' as ID)) || this.battle.field.pseudoWeather['genwunroom'])  &&
+			((this.volatiles['gastroacid'] || (neutralizinggas && this.ability !== ('neutralizinggas' as ID)) || this.battle.field.pseudoWeather['genwunroom']) &&
 			!this.getAbility().isPermanent
 			)
 		);

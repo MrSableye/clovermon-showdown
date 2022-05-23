@@ -1129,10 +1129,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
-		multiattack: {
-			availability: {clover: 1},
-			inherit: true,
-			isNonstandard: "CAP",
+	multiattack: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
 	},
 	noretreat: {
 		inherit: true,
@@ -1254,8 +1254,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	splishysplash: {
 		availability: {clover: 1},
-			inherit: true,
-			isNonstandard: "CAP",
+		inherit: true,
+		isNonstandard: "CAP",
 	},
 	pikapapow: {
 		availability: {clover: 1},

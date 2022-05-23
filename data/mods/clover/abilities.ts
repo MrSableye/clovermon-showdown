@@ -237,7 +237,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: "CAP",
 	},
 	genwunning: {
-	inherit: true,
-	isNonstandard: "CAP",
+		inherit: true,
+		isNonstandard: "CAP",
 	},
 };

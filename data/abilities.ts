@@ -5958,10 +5958,10 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	},
 	stormshelter: {
 		availability: {clover: 1},
-			onImmunity(type, pokemon) {
+		onImmunity(type, pokemon) {
 			if (type === 'sandstorm' || type === 'hail') return false;
 		},
-			onTryHit(target, source, move) {
+		onTryHit(target, source, move) {
 			if (['raindance', 'primordialsea'].includes(target.effectiveWeather()) && target !== source && move.type === 'Water') {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 				return null;
@@ -5978,7 +5978,6 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 				return null;
 			}
-			
 		},
 		isBreakable: true,
 		name: "Storm Shelter",
