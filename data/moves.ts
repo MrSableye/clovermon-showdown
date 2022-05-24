@@ -22763,6 +22763,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			},
 		},
 		secondary: null,
+		noSketch: true,
 		target: "normal",
 		type: "Fighting",
 		contestType: "Cool",
