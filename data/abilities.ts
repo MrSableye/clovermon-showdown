@@ -3782,6 +3782,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		num: 100,
 	},
 	stalwart: {
+		availability: {clover: 1},
 		onModifyMovePriority: 1,
 		onModifyMove(move) {
 			// most of the implementation is in Battle#getTarget
