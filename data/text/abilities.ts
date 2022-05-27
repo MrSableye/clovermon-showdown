@@ -2023,6 +2023,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Flip Flops",
 		shortDesc: "Doubles Attack and Speed under Inverse Room.",
 	},
+	genwunning: {
+		name: "Genwunning",
+		shortDesc: "Summons Genwun Room upon switch-in, how nostalgic!",
+	},
 	blobbotype: {
 		name: "Blobbotype",
 		shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate or Z-Crystal.",
