@@ -32925,7 +32925,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		num: 69132,
 		name: "Blobbos-Galar-Crowned",
 		baseSpecies: "Blobbos",
-		forme: "Crowned",
+		forme: "Galar-Crowned",
 		types: ["Steel", "Poison"],
 		gender: "N",
 		baseStats: {hp: 92, atk: 110, def: 82, spa: 110, spd: 81, spe: 75},
@@ -33081,7 +33081,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		num: 69132,
 		name: "Blobbos-Magic",
 		baseSpecies: "Blobbos",
-		forme: "Magi",
+		forme: "Magic",
 		types: ["Psychic", "Fairy"],
 		gender: "N",
 		baseStats: {
