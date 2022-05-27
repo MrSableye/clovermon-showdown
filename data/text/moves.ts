@@ -6853,7 +6853,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	slimegulp: {
 		name: "Slime Gulp",
 		desc: "The target's Ability is rendered ineffective as long as it remains active.",
-		shortDesc: "Nullifies the foe(s) Ability.",
+		shortDesc: "Nullifies the foe(s) Ability if the foe(s) move first.",
 	},
 	inverseroom: {
 		name: "Inverse Room",
@@ -7489,6 +7489,14 @@ export const MovesText: {[k: string]: MoveText} = {
 	powerwasher: {
 		name: "Power Washer",
 		shortDesc: "50% chance to lower the target's Sp. Def. Goes last.",
+	},
+	behemothblob: {
+		name: "Behemoth Blob",
+		shortDesc: "Damage doubles if the target is Dynamaxed.",
+	},
+	genwunroom: {
+		name: "Genwun Room",
+		shortDesc: "For 5 turns, most abilities are disabled.",
 	},
 	flakcannon: {
 		name: "Flak Cannon",

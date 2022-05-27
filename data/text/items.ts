@@ -2387,6 +2387,10 @@ export const ItemsText: { [k: string]: ItemText } = {
 		name: "Skub",
 		desc: "Skuba-Pro 1.5x Def and SpD; Skuba-Anti 1.5x Atk and SpA.",
 	},
+	rustedcrown: {
+		name: "Rusted Crown",
+		desc: "Allows Blobbos-Galar to turn into its Crowned forme.",
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",
