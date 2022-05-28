@@ -7558,21 +7558,21 @@ export const Items: { [itemid: string]: ItemData } = {
 		},
 		itemUser: ["Skuba", "Skuba-Anti"],
 	},
-rustedcrown: {
-	availability: {clover: 1},
-	name: "Rusted Crown",
-	spritenum: 236,
-	onTakeItem(item, pokemon, source) {
-		if ((source && source.baseSpecies.name === 'Blobbos-Galar') || pokemon.baseSpecies.name === 'Blobbos-Galar-Crowned') {
-			return false;
-		}
-		return true;
+	rustedcrown: {
+		availability: {clover: 1},
+		name: "Rusted Crown",
+		spritenum: 236,
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.name === 'Blobbos-Galar') || pokemon.baseSpecies.name === 'Blobbos-Galar-Crowned') {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Blobbos-Galar-Crowned",
+		itemUser: ["Blobbos-Galar-Crowned"],
+		gen: 8,
+		isNonstandard: "Future",
 	},
-	forcedForme: "Blobbos-Galar-Crowned",
-	itemUser: ["Blobbos-Galar-Crowned"],
-	gen: 8,
-	isNonstandard: "Future",
-},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		availability: {clover: 1},
