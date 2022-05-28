@@ -23877,7 +23877,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		category: "Physical",
 		name: "Backroom",
 		pp: 5,
-		priority: 0,
+		priority: -7,
 		flags: {protect: 1, mirror: 1},
 		condition: {
 			
