@@ -8080,4 +8080,19 @@ rustedcrown: {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	ointmiteite: {
+		availability: {clover: 1},
+		name: "Ointmiteite",
+		spritenum: 599,
+		megaStone: "Ointmite-Mega",
+		megaEvolves: "Ointmite",
+		itemUser: ["Ointmite"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
 };

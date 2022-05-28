@@ -23687,7 +23687,33 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Steel",
 		isNonstandard: "Future",
 	},
-
+	polysporin: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Polysporin",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		status: 'slp',
+		onHit(target, source) {
+			let success = false;
+			if (source.hasAbility('wonderskin')) {
+				success = !!this.heal(this.modify(target.baseMaxhp, 1));
+			} else {
+				success = !!this.heal(Math.ceil(target.baseMaxhp * 0.5));
+			}
+			if (success && !target.isAlly(source)) {
+				target.staleness = 'external';
+			}
+			return success;
+		},
+		secondary: null,
+		target: "any",
+		type: "Poison",
+		isNonstandard: "Future",
+	},
 	inverserush: {
 		availability: {clover: 1},
 		accuracy: 100,
@@ -23707,8 +23733,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Normal",
 		maxMove: {basePower: 140},
 	},
-
-
 	faedozer: {
 		availability: {clover: 1},
 		accuracy: 100,
@@ -23740,8 +23764,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 		isNonstandard: "Future",
 	},
-
-
 	yiikout: {
 		availability: {clover: 1},
 		num: 69010,
@@ -23794,8 +23816,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 		isNonstandard: "Future",
 	},
-
-
 	roidflex: {
 		availability: {clover: 1},
 		num: 197,
@@ -23826,8 +23846,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		zMove: {boost: {evasion: 1}},
 		contestType: "Cool",
 	},
-
-
 	genwunroom: {
 		availability: {clover: 1},
 		num: 1001,
@@ -23867,5 +23885,4 @@ export const Moves: { [moveid: string]: MoveData } = {
 		zMove: {boost: {spd: 1}},
 		contestType: "Clever",
 	},
-
 };
