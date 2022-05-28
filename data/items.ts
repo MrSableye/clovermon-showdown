@@ -7558,21 +7558,21 @@ export const Items: { [itemid: string]: ItemData } = {
 		},
 		itemUser: ["Skuba", "Skuba-Anti"],
 	},
-rustedcrown: {
-	availability: {clover: 1},
-	name: "Rusted Crown",
-	spritenum: 236,
-	onTakeItem(item, pokemon, source) {
-		if ((source && source.baseSpecies.name === 'Blobbos-Galar') || pokemon.baseSpecies.name === 'Blobbos-Galar-Crowned') {
-			return false;
-		}
-		return true;
+	rustedcrown: {
+		availability: {clover: 1},
+		name: "Rusted Crown",
+		spritenum: 236,
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.name === 'Blobbos-Galar') || pokemon.baseSpecies.name === 'Blobbos-Galar-Crowned') {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Blobbos-Galar-Crowned",
+		itemUser: ["Blobbos-Galar-Crowned"],
+		gen: 8,
+		isNonstandard: "Future",
 	},
-	forcedForme: "Blobbos-Galar-Crowned",
-	itemUser: ["Blobbos-Galar-Crowned"],
-	gen: 8,
-	isNonstandard: "Future",
-},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		availability: {clover: 1},
@@ -8077,6 +8077,21 @@ rustedcrown: {
 		zMove: "Slepp That Blobs the Sky",
 		zMoveFrom: "Blobby Bop",
 		itemUser: ["Blobbos-Ultra"],
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	ointmiteite: {
+		availability: {clover: 1},
+		name: "Ointmiteite",
+		spritenum: 599,
+		megaStone: "Ointmite-Mega",
+		megaEvolves: "Ointmite",
+		itemUser: ["Ointmite"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
 	},

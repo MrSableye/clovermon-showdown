@@ -7504,4 +7504,8 @@ export const MovesText: {[k: string]: MoveText} = {
 
 		removeItem: "  [POKEMON] shot the fragments of [ITEM]!",
 	},
+	polysporin: {
+		name: "Polysporin",
+		shortDesc: "Heals the target by 50%, Puts them to sleep.",
+	},
 };
