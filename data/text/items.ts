@@ -2515,4 +2515,11 @@ export const ItemsText: { [k: string]: ItemText } = {
 		transform: "  Bright light is about to burst out of [POKEMON]!",
 		activate: "[POKEMON] regained its true power through Ultra Burst!",
 	},
+	ointmitemite: {
+		name: "Ointmitemite",
+		desc: "OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!!",
+
+		transform: "  OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!!!",
+		activate: "OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!!",
+	},
 };
