@@ -15619,6 +15619,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	blobbossexy: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	peasol: {
 		inherit: true,
 		isNonstandard: "CAP",
