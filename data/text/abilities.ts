@@ -2023,6 +2023,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Flip Flops",
 		shortDesc: "Doubles Attack and Speed under Inverse Room.",
 	},
+	memepower: {
+		name: "Meme Power",
+		shortDesc: "Adds a meme to every attack.",
+	},
 	genwunning: {
 		name: "Genwunning",
 		shortDesc: "Summons Genwun Room upon switch-in, how nostalgic!",

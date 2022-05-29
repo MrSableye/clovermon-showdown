@@ -6056,5 +6056,28 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		isNonstandard: "Future",
 	},
 
+	memepower: {
+		availability: {clover: 1},
+		onPrepareHit(source, target, move) {
+			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
+			if (['endeavor', 'fling', 'iceball', 'rollout'].includes(move.id)) return;
+			if (!move.flags['charge'] && !move.spreadHit && !move.isZ && !move.isMax) {
+				move.multihit = 2;
+				move.multihitType = 'memepower';	
+			}
+		},
+			onTryHit(target, pokemon, move) {
+				if (move.multihitType === 'memepower' && move.hit > 1) {
+				let move = 'meme';
+				this.actions.useMove(move, pokemon, target);
+				return null;
+			}
+		},
+		name: "Meme Power",
+		rating: 4.5,
+		num: 185,
+		isNonstandard: "Future",
+	},
+
 
 };

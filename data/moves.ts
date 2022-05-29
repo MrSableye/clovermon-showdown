@@ -23885,4 +23885,46 @@ export const Moves: { [moveid: string]: MoveData } = {
 		zMove: {boost: {spd: 1}},
 		contestType: "Clever",
 	},
+
+	backroom: {
+		availability: {clover: 1},
+		num: 366,
+		accuracy: true,
+		basePower: 65,
+		category: "Physical",
+		name: "Backroom",
+		pp: 5,
+		priority: -7,
+		flags: {protect: 1, mirror: 1},
+		condition: {
+			
+			duration: 2,
+			durationCallback(source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 4;
+				}
+				return 2;
+				
+			},
+			onFieldStart(target, source) {
+				this.add('-fieldstart', 'move: Trick Room', '[of] ' + source);
+				this.add('-message', 'Backroom, bottom floor!');
+							},
+					// Speed modification is changed in Pokemon.getActionSpeed() in sim/pokemon.js
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 1,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Trick Room');
+			},
+			
+		},
+		selfSwitch: true,
+		
+		secondary: null,
+		target: "normal",
+		type: "Ground",
+		isNonstandard: "Future",
+	},
+
 };
