@@ -6066,16 +6066,70 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				move.multihitType = 'memepower';	
 			}
 		},
-			onTryHit(target, pokemon, move) {
-				if (move.multihitType === 'memepower' && move.hit > 1) {
-				let move = 'meme';
+			onTryHit(target, pokemon, move) 
+			{
+				if (move.multihitType === 'memepower' && move.hit > 1)
+				{
+				let move = '';
+				move = 'meme';
 				this.actions.useMove(move, pokemon, target);
 				return null;
 			}
 		},
+		
 		name: "Meme Power",
 		rating: 4.5,
-		num: 185,
+		isNonstandard: "Future",
+	},
+
+
+	godrejection: {
+		availability: {clover: 1},
+		onSourceBasePowerPriority: 18,
+		onSourceBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Fairy') {
+				return this.chainModify(0.125);
+			}
+			else if (move.type === 'Dark') {
+				return this.chainModify(0.25);
+			}
+		},
+
+
+		onAnyEffectiveness(typemod, target, type, move) {
+			const degradationUser = this.effectState.target;
+			if (degradationUser !== this.activePokemon) return;
+			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy'|| type === 'Dark') {
+				return 2;
+			}
+		},
+		isBreakable: true,
+		name: "God Rejection",
+		rating: 3.5,
+		isNonstandard: "Future",
+	},
+
+	godrejection2: {
+		availability: {clover: 1},
+		onSourceBasePowerPriority: 18,
+		onSourceBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Fairy') {
+				return .5;
+			}
+			else if (move.type === 'Dark') {
+				return .5;
+			}
+		},
+		onAnyEffectiveness(typemod, target, type, move) {
+			const degradationUser = this.effectState.target;
+			if (degradationUser !== this.activePokemon) return;
+			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy'|| type === 'Dark') {
+				return 2;
+			}
+		},
+		isBreakable: true,
+		name: "God Rejection 2",
+		rating: 3.5,
 		isNonstandard: "Future",
 	},
 
