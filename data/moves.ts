@@ -23910,7 +23910,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 
-	Charmerssong: {
+	charmerssong: {
 		availability: {clover: 1},
 		num: 273,
 		accuracy: 100,
@@ -23935,7 +23935,52 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	
+	psychospell: {
+		availability: {clover: 1},
+		num: 42003,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Psycho Spell",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.setTerrain('psychicterrain');
+				},
+			},
+		},
+		target: "normal",
+		type: "Psychic",
+		isNonstandard: "Future",
+	},
 
+
+	wonderwand: {
+		availability: {clover: 1},
+		num: 42003,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Wonder Wand",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('wonderroom');
+				},
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+		isNonstandard: "Future",
+	},
 	
 
 };
