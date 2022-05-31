@@ -24006,5 +24006,21 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	
+	portalgun: {
+		availability: {clover: 1},
+		num: 509,
+		accuracy: 90,
+		basePower: 90,
+		category: "Special",
+		name: "Portal Gun",
+		pp: 10,
+		priority: -6,
+		flags: {bullet: 1, protect: 1, pulse: 1, mirror: 1, distance: 1},
+		selfSwitch: true,
+		forceSwitch: true,
+		target: "normal",
+		type: "Steel",
+		contestType: "Cool",
+	},
 
 };
