@@ -24021,6 +24021,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Steel",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 
 };
