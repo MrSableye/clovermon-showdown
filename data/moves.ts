@@ -23981,6 +23981,30 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fairy",
 		isNonstandard: "Future",
 	},
+
+
+	implosion: {
+		availability: {clover: 1},
+		num: 42003,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "implosion",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('inverseroom');
+				},
+			},
+		},
+		target: "normal",
+		type: "Fire",
+		isNonstandard: "Future",
+	},
 	
 
 };
