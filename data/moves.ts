@@ -23992,7 +23992,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "implosion",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
 			self: {
@@ -24001,7 +24001,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 				},
 			},
 		},
-		target: "normal",
+		target: "allAdjacent",
 		type: "Fire",
 		isNonstandard: "Future",
 	},
