@@ -23998,7 +23998,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		accuracy: 100,
 		basePower: 90,
 		category: "Special",
-		name: "implosion",
+		name: "Implosion",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
@@ -24034,5 +24034,36 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
+
+	sportsball: {
+		availability: {clover: 1},
+		num: 42003,
+		accuracy: 85,
+		basePower: 60,
+		category: "Physical",
+		name: "Sportsball",
+		pp: 10,
+		priority: 0,
+		multihit: 2,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('mudsport');
+					this.field.addPseudoWeather('watersport');
+				},
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Fighting",
+		isNonstandard: "Future",
+	},
+	
+
+	
+
+
 
 };
