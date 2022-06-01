@@ -24061,8 +24061,27 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 	
-
-	
+	rainbowbeam: {
+		availability: {clover: 1},
+		num: 69048,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Rainbow Beam",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		type: "???",
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Ice', type) + this.dex.getEffectiveness('Normal', type) + this.dex.getEffectiveness('Fighting', type) 
+			+ this.dex.getEffectiveness('Flying', type) + this.dex.getEffectiveness('Poison', type) + this.dex.getEffectiveness('Ground', type) + this.dex.getEffectiveness('Rock', type)
+			+ this.dex.getEffectiveness('Bug', type) + this.dex.getEffectiveness('Ghost', type) + this.dex.getEffectiveness('Steel', type) + this.dex.getEffectiveness('Fire', type)
+			+ this.dex.getEffectiveness('Water', type) + this.dex.getEffectiveness('Grass', type) + this.dex.getEffectiveness('Electric', type) + this.dex.getEffectiveness('Psychic', type)
+			+ this.dex.getEffectiveness('Dragon', type) + this.dex.getEffectiveness('Dark', type) + this.dex.getEffectiveness('Fairy', type);
+		},
+		isNonstandard: "Future",
+	},
 
 
 
