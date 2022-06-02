@@ -23729,6 +23729,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			}
 		},
 		secondary: null,
+		noSketch: true,
 		target: "normal",
 		type: "Normal",
 		maxMove: {basePower: 140},
@@ -23759,6 +23760,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 				},
 			},
 		},
+		noSketch: true,
 		target: "normal",
 		type: "Fairy",
 		contestType: "Cute",
@@ -23810,6 +23812,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			volatileStatus: 'flinch',
 
 		},
+		noSketch: true,
 		target: "normal",
 		type: "Fairy",
 		zMove: {basePower: 120},
@@ -23841,6 +23844,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			source.trySetStatus('psn');
 		},
 		secondary: null,
+		noSketch: true,
 		target: "self",
 		type: "Fighting",
 		zMove: {boost: {evasion: 1}},
@@ -23880,6 +23884,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			},
 		},
 		secondary: null,
+		noSketch: true,
 		target: "all",
 		type: "Psychic",
 		zMove: {boost: {spd: 1}},
@@ -23890,41 +23895,194 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 366,
 		accuracy: true,
-		basePower: 65,
+		basePower: 70,
 		category: "Physical",
 		name: "Backroom",
 		pp: 5,
 		priority: -7,
 		flags: {protect: 1, mirror: 1},
-		condition: {
-			
+		condition:{
 			duration: 2,
-			durationCallback(source, effect) {
-				if (source?.hasAbility(['persistent', 'moreroom'])) {
-					this.add('-activate', source, `ability: ${source.ability}`, effect);
-					return 4;
-				}
-				return 2;
-				
+				onHit() {
+					this.field.addPseudoWeather('trickroom');
+					
+				},
 			},
-			onFieldStart(target, source) {
-				this.add('-fieldstart', 'move: Trick Room', '[of] ' + source);
-				this.add('-message', 'Backroom, bottom floor!');
-							},
-					// Speed modification is changed in Pokemon.getActionSpeed() in sim/pokemon.js
-			onFieldResidualOrder: 27,
-			onFieldResidualSubOrder: 1,
-			onFieldEnd() {
-				this.add('-fieldend', 'move: Trick Room');
-			},
-			
-		},
-		selfSwitch: true,
-		
 		secondary: null,
+		noSketch: true,
+		selfSwitch: true,
 		target: "normal",
 		type: "Ground",
 		isNonstandard: "Future",
 	},
+
+	charmerssong: {
+		availability: {clover: 1},
+		num: 273,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Charmer's Song",
+		pp: 10,
+		priority: -6,
+		flags: {contact: 1, protect: 1, mirror: 1,sound: 1},
+		forceSwitch: true,
+		condition: {
+			onSwap(target) {
+				target.addVolatile('Taunt');
+				
+			},
+			
+		},
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "Poison",
+		zMove: {boost: {spd: 1}},
+		contestType: "Clever",
+	},
+	
+	psychospell: {
+		availability: {clover: 1},
+		num: 42003,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Psycho Spell",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.setTerrain('psychicterrain');
+				},
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Psychic",
+		isNonstandard: "Future",
+	},
+
+
+	wonderwand: {
+		availability: {clover: 1},
+		num: 42003,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Wonder Wand",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('wonderroom');
+				},
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Fairy",
+		isNonstandard: "Future",
+	},
+
+
+	implosion: {
+		availability: {clover: 1},
+		num: 42003,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Implosion",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('inverseroom');
+				},
+			},
+		},
+		noSketch: true,
+		target: "allAdjacent",
+		type: "Fire",
+		isNonstandard: "Future",
+	},
+	
+	portalgun: {
+		availability: {clover: 1},
+		num: 509,
+		accuracy: 90,
+		basePower: 90,
+		category: "Special",
+		name: "Portal Gun",
+		pp: 10,
+		priority: -6,
+		flags: {bullet: 1, protect: 1, pulse: 1, mirror: 1, distance: 1},
+		selfSwitch: true,
+		forceSwitch: true,
+		noSketch: true,
+		target: "normal",
+		type: "Steel",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+
+	sportsball: {
+		availability: {clover: 1},
+		num: 42003,
+		accuracy: 85,
+		basePower: 60,
+		category: "Physical",
+		name: "Sportsball",
+		pp: 10,
+		priority: 0,
+		multihit: 2,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('mudsport');
+					this.field.addPseudoWeather('watersport');
+				},
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Fighting",
+		isNonstandard: "Future",
+	},
+	
+	rainbowbeam: {
+		availability: {clover: 1},
+		num: 69048,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Rainbow Beam",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		type: "???",
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Ice', type) + this.dex.getEffectiveness('Normal', type) + this.dex.getEffectiveness('Fighting', type) 
+			+ this.dex.getEffectiveness('Flying', type) + this.dex.getEffectiveness('Poison', type) + this.dex.getEffectiveness('Ground', type) + this.dex.getEffectiveness('Rock', type)
+			+ this.dex.getEffectiveness('Bug', type) + this.dex.getEffectiveness('Ghost', type) + this.dex.getEffectiveness('Steel', type) + this.dex.getEffectiveness('Fire', type)
+			+ this.dex.getEffectiveness('Water', type) + this.dex.getEffectiveness('Grass', type) + this.dex.getEffectiveness('Electric', type) + this.dex.getEffectiveness('Psychic', type)
+			+ this.dex.getEffectiveness('Dragon', type) + this.dex.getEffectiveness('Dark', type) + this.dex.getEffectiveness('Fairy', type);
+		},
+		isNonstandard: "Future",
+	},
+
+
 
 };
