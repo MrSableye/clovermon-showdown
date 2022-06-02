@@ -790,6 +790,24 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-sideend', side, 'Backdraft');
 		},
 	},
+
+
+	backroom: {
+		duration: 2,
+		onSideStart(side) {
+			this.add('-sidestart', side, 'Backroom');
+		},
+		onHit() {
+			this.field.addPseudoWeather('trickroom');
+		},
+		onSideResidualOrder: 26,
+		onSideResidualSubOrder: 5,
+		onSideEnd(side) {
+			this.add('-sideend', side, 'Backroom');
+		},
+	},
+
+
 	lootable: {
 		// this is a slot condition
 		name: 'Lootable',
