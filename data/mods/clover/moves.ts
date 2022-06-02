@@ -1255,6 +1255,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		pp: 15,
 		willCrit: true,
 		secondary: null,
+		noSketch: true,
 		isNonstandard: "CAP",
 	},
 	splishysplash: {
