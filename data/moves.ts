@@ -23894,26 +23894,21 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 
-	backroom: {
+	Backroom: {
 		availability: {clover: 1},
 		num: 366,
 		accuracy: true,
-		basePower: 70,
+		basePower: 65,
 		category: "Physical",
 		name: "Backroom",
 		pp: 5,
-		priority: -7,
+		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		condition:{
-			duration: 2,
-				onHit() {
-					this.field.addPseudoWeather('trickroom');
-					
-				},
-			},
-		secondary: null,
-		noSketch: true,
+		self: {
+			sideCondition: 'backroom',
+		},
 		selfSwitch: true,
+		secondary: null,
 		target: "normal",
 		type: "Ground",
 		isNonstandard: "Future",
