@@ -33090,7 +33090,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 			def: 36,
 			spa: 130,
 			spd: 111,
-			spe: 15,
+			spe: 25,
 		},
 		abilities: {
 			0: "Magician",
