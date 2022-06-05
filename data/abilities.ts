@@ -6090,7 +6090,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			if (move.type === 'Fairy') {
 				return this.chainModify(0.125);
 			}
-			else if (move.type === 'Dark') {
+			else if (move.type === 'Dragon') {
 				return this.chainModify(0.25);
 			}
 		},
@@ -6099,7 +6099,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onAnyEffectiveness(typemod, target, type, move) {
 			const degradationUser = this.effectState.target;
 			if (degradationUser !== this.activePokemon) return;
-			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy'|| type === 'Dark') {
+			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy'|| type === 'Dragon') {
 				return 2;
 			}
 		},
@@ -6116,14 +6116,14 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			if (move.type === 'Fairy') {
 				return .5;
 			}
-			else if (move.type === 'Dark') {
+			else if (move.type === 'Dragon') {
 				return .5;
 			}
 		},
 		onAnyEffectiveness(typemod, target, type, move) {
 			const degradationUser = this.effectState.target;
 			if (degradationUser !== this.activePokemon) return;
-			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy'|| type === 'Dark') {
+			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy'|| type === 'Dragon') {
 				return 2;
 			}
 		},
