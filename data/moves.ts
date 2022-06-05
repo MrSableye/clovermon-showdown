@@ -24082,6 +24082,35 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 
+	freikugel : {
+		availability: {clover: 1},
+		accuracy: 80,
+		basePower: 150,
+		category: "Physical",
+		name: "Freikugel",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyMove(move, pokemon, target) {
+			if (this.field.getPseudoWeather('magicroom')) {
+				move.accuracy = true;
+			}
+		},
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'recoil' && this.field.getPseudoWeather('magicroom')) {
+				if (!this.activeMove) throw new Error("Battle.activeMove is null");
+				if (this.activeMove.id !== 'struggle') return null;
+			}
+		},
+		
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Tough",
+		maxMove: {basePower: 200},
+	},		
 
+	
 
 };
