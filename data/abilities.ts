@@ -6066,21 +6066,26 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				move.multihitType = 'memepower';	
 			}
 		},
-			onTryHit(target, pokemon, move) 
+			onHit(target, pokemon, move) 
 			{
 				if (move.multihitType === 'memepower' && move.hit > 1)
 				{
-				let move = '';
-				move = 'meme';
+				let move = 'meme';
 				this.actions.useMove(move, pokemon, target);
 				return null;
+
 			}
 		},
 		
+
+	
+
 		name: "Meme Power",
 		rating: 4.5,
 		isNonstandard: "Future",
 	},
+
+
 
 
 	godrejection: {
