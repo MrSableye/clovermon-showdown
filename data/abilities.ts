@@ -6105,7 +6105,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			const degradationUser = this.effectState.target;
 			if (degradationUser !== this.activePokemon) return;
 			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy'|| type === 'Dragon') {
-				return 2;
+				return 1;
 			}
 		},
 		isBreakable: true,
@@ -6119,17 +6119,17 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onSourceBasePowerPriority: 18,
 		onSourceBasePower(basePower, attacker, defender, move) {
 			if (move.type === 'Fairy') {
-				return .5;
+				return 2;
 			}
 			else if (move.type === 'Dragon') {
-				return .5;
+				return 2;
 			}
 		},
 		onAnyEffectiveness(typemod, target, type, move) {
 			const degradationUser = this.effectState.target;
 			if (degradationUser !== this.activePokemon) return;
 			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy'|| type === 'Dragon') {
-				return 2;
+				return 1;
 			}
 		},
 		isBreakable: true,
