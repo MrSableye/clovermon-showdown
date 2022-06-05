@@ -22868,7 +22868,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 					const baby = new Pokemon({
 						...targetSet,
 						name: childName,
-						moves: ['Metronome'],
+						moves: ['Metronome','Softboiled','Egg Bomb','Revelation Dance'],
 						item: undefined,
 					}, sourceSide);
 					baby.position = sourceSide.pokemon.length;
@@ -23927,7 +23927,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		forceSwitch: true,
 		condition: {
 			onSwap(target) {
-				target.addVolatile('Taunt');
+				target.addVolatile('taunt');
 				
 			},
 			
