@@ -33090,7 +33090,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 			def: 36,
 			spa: 130,
 			spd: 111,
-			spe: 15,
+			spe: 25,
 		},
 		abilities: {
 			0: "Magician",
@@ -33165,9 +33165,9 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		baseStats: {
 			hp: 80,
 			atk: 17,
-			def: 36,
+			def: 78,
 			spa: 15,
-			spd: 25,
+			spd: 67,
 			spe: 70,
 		},
 		abilities: {
@@ -33287,7 +33287,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		gender: "M",
 		baseStats: {
 			hp: 70,
-			atk: 120,
+			atk: 100,
 			def: 120,
 			spa: 80,
 			spd: 60,

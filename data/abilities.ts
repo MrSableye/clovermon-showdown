@@ -6066,21 +6066,26 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				move.multihitType = 'memepower';	
 			}
 		},
-			onTryHit(target, pokemon, move) 
+			onHit(target, pokemon, move) 
 			{
 				if (move.multihitType === 'memepower' && move.hit > 1)
 				{
-				let move = '';
-				move = 'meme';
+				let move = 'meme';
 				this.actions.useMove(move, pokemon, target);
 				return null;
+
 			}
 		},
 		
+
+	
+
 		name: "Meme Power",
 		rating: 4.5,
 		isNonstandard: "Future",
 	},
+
+
 
 
 	godrejection: {
@@ -6090,7 +6095,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			if (move.type === 'Fairy') {
 				return this.chainModify(0.125);
 			}
-			else if (move.type === 'Dark') {
+			else if (move.type === 'Dragon') {
 				return this.chainModify(0.25);
 			}
 		},
@@ -6099,8 +6104,8 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onAnyEffectiveness(typemod, target, type, move) {
 			const degradationUser = this.effectState.target;
 			if (degradationUser !== this.activePokemon) return;
-			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy'|| type === 'Dark') {
-				return 2;
+			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy'|| type === 'Dragon') {
+				return 1;
 			}
 		},
 		isBreakable: true,
@@ -6114,17 +6119,17 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onSourceBasePowerPriority: 18,
 		onSourceBasePower(basePower, attacker, defender, move) {
 			if (move.type === 'Fairy') {
-				return .5;
+				return 2;
 			}
-			else if (move.type === 'Dark') {
-				return .5;
+			else if (move.type === 'Dragon') {
+				return 2;
 			}
 		},
 		onAnyEffectiveness(typemod, target, type, move) {
 			const degradationUser = this.effectState.target;
 			if (degradationUser !== this.activePokemon) return;
-			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy'|| type === 'Dark') {
-				return 2;
+			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy'|| type === 'Dragon') {
+				return 1;
 			}
 		},
 		isBreakable: true,

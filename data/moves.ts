@@ -22868,7 +22868,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 					const baby = new Pokemon({
 						...targetSet,
 						name: childName,
-						moves: ['Metronome'],
+						moves: ['Metronome','Softboiled','Egg Bomb','Revelation Dance'],
 						item: undefined,
 					}, sourceSide);
 					baby.position = sourceSide.pokemon.length;
@@ -23894,26 +23894,21 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 
-	backroom: {
+	Backroom: {
 		availability: {clover: 1},
 		num: 366,
 		accuracy: true,
-		basePower: 70,
+		basePower: 65,
 		category: "Physical",
 		name: "Backroom",
 		pp: 5,
-		priority: -7,
+		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		condition:{
-			duration: 2,
-				onHit() {
-					this.field.addPseudoWeather('trickroom');
-					
-				},
-			},
-		secondary: null,
-		noSketch: true,
+		self: {
+			sideCondition: 'backroom',
+		},
 		selfSwitch: true,
+		secondary: null,
 		target: "normal",
 		type: "Ground",
 		isNonstandard: "Future",
@@ -23932,7 +23927,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		forceSwitch: true,
 		condition: {
 			onSwap(target) {
-				target.addVolatile('Taunt');
+				target.addVolatile('taunt');
 				
 			},
 			
@@ -24087,6 +24082,35 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 
+	freikugel : {
+		availability: {clover: 1},
+		accuracy: 80,
+		basePower: 150,
+		category: "Physical",
+		name: "Freikugel",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyMove(move, pokemon, target) {
+			if (this.field.getPseudoWeather('magicroom')) {
+				move.accuracy = true;
+			}
+		},
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'recoil' && this.field.getPseudoWeather('magicroom')) {
+				if (!this.activeMove) throw new Error("Battle.activeMove is null");
+				if (this.activeMove.id !== 'struggle') return null;
+			}
+		},
+		
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Tough",
+		maxMove: {basePower: 200},
+	},		
 
+	
 
 };
