@@ -24434,6 +24434,27 @@ export const Moves: { [moveid: string]: MoveData } = {
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Beautiful",
 		isNonstandard: "Future",
+	},
+	telluriccurrent: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Telluric Current",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Ground') return 0;
+		},
+		secondary: {
+			chance: 10,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Electric",
+		contestType: "Cool",
 	},		
 
 	
