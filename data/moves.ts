@@ -24091,6 +24091,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 2],
 		onModifyMove(move, pokemon, target) {
 			if (this.field.getPseudoWeather('magicroom')) {
 				move.accuracy = true;
