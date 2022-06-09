@@ -6102,8 +6102,8 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 
 
 		onAnyEffectiveness(typemod, target, type, move) {
-			const degradationUser = this.effectState.target;
-			if (degradationUser !== this.activePokemon) return;
+			const godrejectionUser = this.effectState.target;
+			if (godrejectionUser !== this.activePokemon) return;
 			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy'|| type === 'Dragon') {
 				return 1;
 			}
