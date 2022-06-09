@@ -6138,5 +6138,17 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		isNonstandard: "Future",
 	},
 
+	allskilll: {
+		availability: {clover: 1},
+		onCriticalHit: false,
+		onModifySecondaries(secondaries) {
+			this.debug('Shield Dust prevent secondary');
+			return secondaries.filter(effect => !!(effect.self || effect.dustproof));
+		},
+		isBreakable: true,
+		name: "All Skill",
+		rating: 2,
+		num: 19,
+	},
 
 };

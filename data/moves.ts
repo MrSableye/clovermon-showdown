@@ -23894,7 +23894,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 
-	Backroom: {
+	backroom: {
 		availability: {clover: 1},
 		num: 366,
 		accuracy: true,
