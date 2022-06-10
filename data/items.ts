@@ -8102,7 +8102,7 @@ export const Items: { [itemid: string]: ItemData } = {
 		onTakeItem: false,
 		zMove: "Twin Tower Tumbling Terror",
 		zMoveFrom: "Heavy Slam",
-		itemUser: ["Blobbos-Remembered"],
+		itemUser: ["Blobbos-Sexy"],
 		gen: 8,
 		isNonstandard: "Future",
 	},
