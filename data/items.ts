@@ -8095,4 +8095,15 @@ export const Items: { [itemid: string]: ItemData } = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	sableviumz: {
+		availability: {clover: 1},
+		name: "Sablevium Z",
+		spritenum: 792,
+		onTakeItem: false,
+		zMove: "Twin Tower Tumbling Terror",
+		zMoveFrom: "Heavy Slam",
+		itemUser: ["Blobbos-Remembered"],
+		gen: 8,
+		isNonstandard: "Future",
+	},
 };

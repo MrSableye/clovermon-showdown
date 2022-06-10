@@ -24130,5 +24130,30 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 	
-
+	twintowertumblingterror: {
+		accuracy: true,
+		basePower: 290,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Twin Tower Tumbling Terror",
+		pp: 1,
+		priority: -7,
+		flags: {contact: 1, hammer: 1},
+		isZ: "sableviumz",
+		onAfterMove(source) {
+			source.trySetStatus('brn');
+		},
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Smart",
+	},
 };
