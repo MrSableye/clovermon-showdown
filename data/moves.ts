@@ -24445,10 +24445,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Telluric Current",
 		pp: 20,
 		priority: 0,
+		ignoreImmunity: {'Ground': true},
 		flags: {protect: 1, mirror: 1},
-		onEffectiveness(typeMod, target, type) {
-			if (type === 'Ground') return 0;
-		},
 		secondary: {
 			chance: 10,
 			status: 'par',
