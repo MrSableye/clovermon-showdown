@@ -792,20 +792,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 	},
 
 
-	backroom: {
-		duration: 2,
-		onSideStart(side) {
-			this.add('-sidestart', side, 'Backroom');
-		},
-		onHit() {
-			this.field.addPseudoWeather('trickroom');
-		},
-		onSideResidualOrder: 26,
-		onSideResidualSubOrder: 5,
-		onSideEnd(side) {
-			this.add('-sideend', side, 'Backroom');
-		},
-	},
+
 
 
 	lootable: {

@@ -23901,14 +23901,19 @@ export const Moves: { [moveid: string]: MoveData } = {
 		basePower: 65,
 		category: "Physical",
 		name: "Backroom",
-		pp: 5,
+		pp: 16,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		self: {
-			sideCondition: 'backroom',
+		
+		condition: {
+			duration: 2,
+			onHit() {
+				this.field.addPseudoWeather('trickroom');
+			},
 		},
-		selfSwitch: true,
 		secondary: null,
+		noSketch: true,
+		selfSwitch: true,
 		target: "normal",
 		type: "Ground",
 		isNonstandard: "Future",
@@ -23928,11 +23933,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 		condition: {
 			onSwap(target) {
 				target.addVolatile('taunt');
-				
 			},
-			
 		},
-		secondary: null,
 		noSketch: true,
 		target: "normal",
 		type: "Poison",
