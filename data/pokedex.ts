@@ -24409,6 +24409,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 		name: "Ticktac",
 		types: [
 			"Bug",
+			"Steel",
 		],
 		genderRatio: {
 			M: 0.5,
