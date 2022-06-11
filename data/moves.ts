@@ -23894,7 +23894,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Clever",
 	},
 
-	Backroom: {
+	backroom: {
 		availability: {clover: 1},
 		num: 366,
 		accuracy: true,
@@ -24109,6 +24109,352 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fighting",
 		contestType: "Tough",
 		maxMove: {basePower: 200},
+	},
+	confettigun: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 200,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Confetti Gun",
+		pp: 15,
+		priority: 0,
+		flags: {distance: 1, protect: 1, mirror: 1, bullet: 1},
+		secondary: {
+			chance: 50,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		noSketch: true,
+		type: "Normal",
+		contestType: "Cute",
+	},
+	butterflykick: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 180,
+		category: "Physical",
+		name: "Butterfly Kick",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		noSketch: true,
+		type: "Bug",
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Fighting', type);
+		},
+		isNonstandard: "Future",
+	},
+	toxicbeam: {
+		availability: {clover: 1},
+		accuracy: 90,
+		basePower: 110,
+		category: "Special",
+		name: "Toxic Beam",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			status: 'tox',
+		},
+		target: "normal",
+		noSketch: true,
+		type: "Poison",
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	windwhip: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Wind Whip",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		noSketch: true,
+		type: "Flying",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	firewall: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Firewall",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'firewall',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'move: Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect']) {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					source.trySetStatus('brn', target);
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+					source.trySetStatus('brn', target);
+				}
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Fire",
+		noSketch: true,
+		zMove: {boost: {def: 1}},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	maximize: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 300,
+		category: "Physical",
+		name: "Maximize",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				evasion: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+		noSketch: true,
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	seaquake: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Seaquake",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		noSketch: true,
+		type: "Water",
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Ground', type);
+		},
+		isNonstandard: "Future",
+	},
+	edgequake: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Edgequake",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		noSketch: true,
+		type: "Rock",
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Ground', type);
+		},
+		isNonstandard: "Future",
+	},
+	sugarrush: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sugar Rush",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1},
+		onHit(target) {
+			if (target.hp <= target.maxhp / 2 || target.boosts.spa >= 6 || target.maxhp === 1) { // Shedinja clause
+				return false;
+			}
+			this.directDamage(target.maxhp / 2);
+			this.boost({spa: 12}, target);
+		},
+		secondary: null,
+		target: "self",
+		type: "Fairy",
+		noSketch: true,
+		zMove: {effect: 'heal'},
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	sleepingsands: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Sleeping Sands",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'slp',
+		},
+		target: "normal",
+		type: "Ground",
+		noSketch: true,
+		isNonstandard: "Future",
+	},
+	fuckyou: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Fuck You",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, authentic: 1},
+		onHit(target, source, move) {
+			const success = this.boost({atk: -6, def: -6, spa: -6, spd: -6, spe: -6, accuracy: -6, evasion: -6}, target, source);
+			if (!success && !target.hasAbility('mirrorarmor')) {
+				delete move.selfSwitch;
+			}
+		},
+		selfSwitch: true,
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "Fighting",
+		zMove: {effect: 'healreplacement'},
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	absolutezero: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Absolute Zero",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			status: 'frz',
+		},
+		target: "normal",
+		noSketch: true,
+		type: "Ice",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	poisonivy: {
+		availability: {clover: 1},
+		accuracy: 95,
+		basePower: 90,
+		category: "Physical",
+		name: "Poison Ivy",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		secondary: {
+			chance: 30,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('psn', source);
+				} else if (result === 1) {
+					target.trySetStatus('tox', source);
+				} else {
+					target.trySetStatus('par', source);
+				}
+			},
+		},
+		target: "normal",
+		noSketch: true,
+		type: "Grass",
+		zMove: {basePower: 160},
+		isNonstandard: "Future",
+	},
+	doesthiswork: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 60,
+		category: "Status",
+		name: "Does This Work",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1, dance: 1},
+		boosts: {
+			spa: 1,
+			spe: 1,
+		},
+		secondary: null,
+		noSketch: true,
+		target: "self",
+		type: "Psychic",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	telluriccurrent: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Telluric Current",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Ground') return 0;
+		},
+		secondary: {
+			chance: 10,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Electric",
+		contestType: "Cool",
 	},		
 
 	
