@@ -23994,7 +23994,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 42003,
 		accuracy: 100,
-		basePower: 90,
+		basePower: 120,
 		category: "Special",
 		name: "Implosion",
 		pp: 10,
