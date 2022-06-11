@@ -24498,6 +24498,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 			if (type === "Bird") type = "???";
 			move.type = type;
 		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		target: "normal",
 		type: "Steel",
 		contestType: "Smart",
