@@ -6138,7 +6138,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		isNonstandard: "Future",
 	},
 
-	allskilll: {
+	allskill: {
 		availability: {clover: 1},
 		onCriticalHit: false,
 		onModifySecondaries(secondaries) {
