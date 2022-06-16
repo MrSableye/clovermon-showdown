@@ -23901,14 +23901,19 @@ export const Moves: { [moveid: string]: MoveData } = {
 		basePower: 65,
 		category: "Physical",
 		name: "Backroom",
-		pp: 5,
+		pp: 16,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		self: {
-			sideCondition: 'backroom',
+		
+		condition: {
+			duration: 2,
+			onHit() {
+				this.field.addPseudoWeather('trickroom');
+			},
 		},
-		selfSwitch: true,
 		secondary: null,
+		noSketch: true,
+		selfSwitch: true,
 		target: "normal",
 		type: "Ground",
 		isNonstandard: "Future",
@@ -23928,11 +23933,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 		condition: {
 			onSwap(target) {
 				target.addVolatile('taunt');
-				
 			},
-			
 		},
-		secondary: null,
 		noSketch: true,
 		target: "normal",
 		type: "Poison",
@@ -23994,7 +23996,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 42003,
 		accuracy: 100,
-		basePower: 90,
+		basePower: 120,
 		category: "Special",
 		name: "Implosion",
 		pp: 10,
@@ -24091,6 +24093,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 2],
 		onModifyMove(move, pokemon, target) {
 			if (this.field.getPseudoWeather('magicroom')) {
 				move.accuracy = true;
@@ -24444,10 +24447,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Telluric Current",
 		pp: 20,
 		priority: 0,
+		ignoreImmunity: {'Ground': true},
 		flags: {protect: 1, mirror: 1},
-		onEffectiveness(typeMod, target, type) {
-			if (type === 'Ground') return 0;
-		},
 		secondary: {
 			chance: 10,
 			status: 'par',
@@ -24457,6 +24458,51 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},		
 
+	rockout: {
+		availability: {clover: 1},
+		num: 369,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Rock Out",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, sound: 1, mirror: 1},
+		selfSwitch: true,
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "Rock",
+		contestType: "Clever",
+	},
 	
-
+	twintowertumblingterror: {
+		accuracy: true,
+		basePower: 290,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Twin Tower Tumbling Terror",
+		pp: 1,
+		priority: -7,
+		flags: {contact: 1, hammer: 1},
+		isZ: "sableviumz",
+		onAfterMove(source) {
+			source.trySetStatus('brn');
+		},
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Smart",
+	},
 };
