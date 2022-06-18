@@ -23726,12 +23726,20 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('wonderroom');
+				},
+			},
+		},
+	
 		onBasePower(basePower, pokemon, target) {
 			if (this.field.getPseudoWeather('inverseroom')) {
 				return this.chainModify(2);
 			}
 		},
-		secondary: null,
 		noSketch: true,
 		target: "normal",
 		type: "Normal",
