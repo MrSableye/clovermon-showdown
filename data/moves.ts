@@ -24576,7 +24576,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 173,
 		accuracy: 100,
-		basePower: 50,
+		basePower: 120,
 		category: "Physical",
 		name: "Sandy Snore",
 		pp: 15,
@@ -24603,7 +24603,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		},
 		noSketch: true,
 		target: "normal",
-		type: "Normal",
+		type: "Rock",
 		contestType: "Cute",
 	},
 	
