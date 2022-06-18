@@ -24564,10 +24564,46 @@ export const Moves: { [moveid: string]: MoveData } = {
 			const success = !!this.heal(this.modify(pokemon.maxhp, 0.25));
 			return pokemon.cureStatus() || success;
 		},
+		
 		secondary: null,
 		target: "self",
 		type: "Normal",
 		zMove: {boost: {spd: 1}},
+		contestType: "Cute",
+	},
+
+	sandysnore: {
+		availability: {clover: 1},
+		num: 173,
+		accuracy: 100,
+		basePower: 50,
+		category: "Physical",
+		name: "Sandy Snore",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
+		sleepUsable: true,
+		onTry(source) {
+			return source.status === 'slp' || source.hasAbility('comatose');
+		},
+		
+		self: {
+			onHit(source) {
+				this.field.setWeather('sandstorm');
+			},
+		},
+
+		onHit(target) {
+			const oldAbility = target.setAbility('sandrush');
+			if (oldAbility) {
+				this.add('-ability', target, 'Sand Rush', '[from] move: Sandy Snore');
+				return;
+			}
+			return false;
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Normal",
 		contestType: "Cute",
 	},
 	
