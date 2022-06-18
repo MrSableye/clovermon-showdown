@@ -24530,6 +24530,41 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cool",
 	},
 
-
+	heavensblessing: {
+		availability: {clover: 1},
+		num: 273,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Heaven's Blessing",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		slotCondition: 'Wish',
+		condition: {
+			duration: 2,
+			onStart(pokemon, source) {
+				this.effectState.hp = source.maxhp / 2;
+			},
+			onResidualOrder: 4,
+			onEnd(target) {
+				if (target && !target.fainted) {
+					const damage = this.heal(this.effectState.hp, target, target);
+					if (damage) {
+						this.add('-heal', target, target.getHealth, '[from] move: Wish', '[wisher] ' + this.effectState.source.name);
+					}
+				}
+			},
+		},
+		onHit(pokemon) {
+			const success = !!this.heal(this.modify(pokemon.maxhp, 0.25));
+			return pokemon.cureStatus() || success;
+		},
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {boost: {spd: 1}},
+		contestType: "Cute",
+	},
 	
 };
