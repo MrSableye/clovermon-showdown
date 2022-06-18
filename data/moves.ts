@@ -24505,4 +24505,31 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Steel",
 		contestType: "Smart",
 	},
+
+	toppingtoss: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 50,
+		onModifyType(move, pokemon) {
+			if (move.hit = 2)
+			move.type = 'Ground';
+			if (move.hit = 3)
+			move.type = 'Grass';
+			},
+		category: "Special",
+		name: "Topping Toss",
+		isNonstandard: "Future",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: 3,
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		noSketch: true,
+		contestType: "Cool",
+	},
+
+
+	
 };
