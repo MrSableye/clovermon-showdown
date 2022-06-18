@@ -24100,12 +24100,16 @@ export const Moves: { [moveid: string]: MoveData } = {
 			}
 		},
 		onDamage(damage, target, source, effect) {
-			if (effect.id === 'recoil' && this.field.getPseudoWeather('magicroom')) {
+
+			if(this.field.getPseudoWeather('magicroom')){
+			if (effect.id === 'recoil') {
 				if (!this.activeMove) throw new Error("Battle.activeMove is null");
 				if (this.activeMove.id !== 'struggle') return null;
 			}
+		}
 		},
-		
+
+
 		secondary: null,
 		noSketch: true,
 		target: "normal",
