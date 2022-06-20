@@ -24135,7 +24135,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	butterflykick: {
 		availability: {clover: 1},
 		accuracy: 100,
-		basePower: 180,
+		basePower: 80,
 		category: "Physical",
 		name: "Butterfly Kick",
 		pp: 10,
@@ -24447,7 +24447,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Telluric Current",
 		pp: 20,
 		priority: 0,
-		ignoreImmunity: {'Ground': true},
+		ignoreImmunity: {'Electric': true},
 		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 10,
