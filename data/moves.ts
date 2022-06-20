@@ -23726,12 +23726,20 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('wonderroom');
+				},
+			},
+		},
+	
 		onBasePower(basePower, pokemon, target) {
 			if (this.field.getPseudoWeather('inverseroom')) {
 				return this.chainModify(2);
 			}
 		},
-		secondary: null,
 		noSketch: true,
 		target: "normal",
 		type: "Normal",
@@ -24100,12 +24108,16 @@ export const Moves: { [moveid: string]: MoveData } = {
 			}
 		},
 		onDamage(damage, target, source, effect) {
-			if (effect.id === 'recoil' && this.field.getPseudoWeather('magicroom')) {
+
+			if(this.field.getPseudoWeather('magicroom')){
+			if (effect.id === 'recoil') {
 				if (!this.activeMove) throw new Error("Battle.activeMove is null");
 				if (this.activeMove.id !== 'struggle') return null;
 			}
+		}
 		},
-		
+
+
 		secondary: null,
 		noSketch: true,
 		target: "normal",
@@ -24505,4 +24517,102 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Steel",
 		contestType: "Smart",
 	},
+
+	toppingtoss: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 50,
+		onModifyType(move, pokemon) {
+			if (move.hit = 2)
+			move.type = 'Ground';
+			if (move.hit = 3)
+			move.type = 'Grass';
+			},
+		category: "Special",
+		name: "Topping Toss",
+		isNonstandard: "Future",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: 3,
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		noSketch: true,
+		contestType: "Cool",
+	},
+
+	heavensblessing: {
+		availability: {clover: 1},
+		num: 273,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Heaven's Blessing",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		slotCondition: 'Wish',
+		condition: {
+			duration: 2,
+			onStart(pokemon, source) {
+				this.effectState.hp = source.maxhp / 2;
+			},
+			onResidualOrder: 4,
+			onEnd(target) {
+				if (target && !target.fainted) {
+					const damage = this.heal(this.effectState.hp, target, target);
+					if (damage) {
+						this.add('-heal', target, target.getHealth, '[from] move: Wish', '[wisher] ' + this.effectState.source.name);
+					}
+				}
+			},
+		},
+		onHit(pokemon) {
+			const success = !!this.heal(this.modify(pokemon.maxhp, 0.25));
+			return pokemon.cureStatus() || success;
+		},
+		
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {boost: {spd: 1}},
+		contestType: "Cute",
+	},
+
+	sandysnore: {
+		availability: {clover: 1},
+		num: 173,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Sandy Snore",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
+		sleepUsable: true,
+		onTry(source) {
+			return source.status === 'slp' || source.hasAbility('comatose');
+		},
+		
+		self: {
+			onHit(source) {
+				this.field.setWeather('sandstorm');
+			},
+		},
+
+		onHit(target) {
+			const oldAbility = target.setAbility('sandrush');
+			if (oldAbility) {
+				this.add('-ability', target, 'Sand Rush', '[from] move: Sandy Snore');
+				return;
+			}
+			return false;
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Rock",
+		contestType: "Cute",
+	},
+	
 };
