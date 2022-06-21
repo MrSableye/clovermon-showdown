@@ -24522,11 +24522,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		accuracy: 100,
 		basePower: 50,
-		onModifyType(move, pokemon) {
-			if (move.hit = 2)
-			move.type = 'Ground';
-			if (move.hit = 3)
-			move.type = 'Grass';
+			onHit(target, source, move) {
+				if (move.hit === 2) move.type = 'Ground';
+				if (move.hit === 3) move.type = 'Grass';
 			},
 		category: "Special",
 		name: "Topping Toss",
