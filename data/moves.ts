@@ -24523,8 +24523,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 		accuracy: 100,
 		basePower: 50,
 			onHit(target, source, move) {
-				if (move.hit === 2) move.type = 'Ground';
-				if (move.hit === 3) move.type = 'Grass';
+				if (move.hit === 2) {move.type = 'Ground';}
+				
+				else if (move.hit === 3) {move.type = 'Grass';}
 			},
 		category: "Special",
 		name: "Topping Toss",

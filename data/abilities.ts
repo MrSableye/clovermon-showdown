@@ -6068,7 +6068,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 			onHit(target, pokemon, move) 
 			{
-				if (move.multihitType === 'memepower' && move.hit > 1)
+				if (move.multihitType === 'memepower' && move.hit === 2)
 				{
 				let move = 'meme';
 				this.actions.useMove(move, pokemon, target);
