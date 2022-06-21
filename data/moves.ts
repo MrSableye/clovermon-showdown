@@ -24601,10 +24601,10 @@ export const Moves: { [moveid: string]: MoveData } = {
 			},
 		},
 
-		onHit(target) {
-			const oldAbility = target.setAbility('sandrush');
+		onHit(source) {
+			const oldAbility = source.setAbility('sandrush');
 			if (oldAbility) {
-				this.add('-ability', target, 'Sand Rush', '[from] move: Sandy Snore');
+				this.add('-ability', source, 'Sand Rush', '[from] move: Sandy Snore');
 				return;
 			}
 			return false;
