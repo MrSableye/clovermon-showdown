@@ -6151,4 +6151,17 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		num: 19,
 	},
 
+	artillery: {
+		availability: {clover: 1},
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['bullet']) {
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Artillery",
+		rating: 3,
+		num: 178,
+	},
+
 };

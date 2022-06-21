@@ -23730,7 +23730,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			chance: 100,
 			self: {
 				onHit() {
-					this.field.addPseudoWeather('wonderroom');
+					this.field.addPseudoWeather('inverseroom');
 				},
 			},
 		},
