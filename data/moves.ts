@@ -24603,5 +24603,20 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Rock",
 		contestType: "Cute",
 	},
-
+	amogus: {
+		availability: {clover: 1},
+		num: 173,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Sandy Snore",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
+		noSketch: true,
+		target: "normal",
+		type: "Rock",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
 };

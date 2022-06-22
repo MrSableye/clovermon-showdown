@@ -1718,6 +1718,27 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 					break;
 				}
 			}
+
+			if (pokemon.illusion) {
+				const amogusIndex = pokemon.moves.indexOf('amogus');
+				if (amogusIndex < 0) return;
+				const replacementMove = Dex.moves.get(pokemon.illusion?.moves[0]);
+
+				if (replacementMove) {
+					pokemon.moveSlots[amogusIndex] = {
+						move: replacementMove.name,
+						id: replacementMove.id,
+						pp: replacementMove.pp,
+						maxpp: replacementMove.pp,
+						target: replacementMove.target,
+						disabled: false,
+						used: false,
+						virtual: true,
+					};
+
+					pokemon.abilityState.replacedMoveIndex = amogusIndex;
+				}
+			}
 		},
 		onDamagingHit(damage, target, source, move) {
 			if (target.illusion) {
@@ -1732,6 +1753,22 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 					(pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.shiny ? ', shiny' : '');
 				this.add('replace', pokemon, details);
 				this.add('-end', pokemon, 'Illusion');
+
+				if (pokemon.abilityState.replacedMoveIndex !== undefined) {
+					const amogusMove = Dex.moves.get('amogus');
+
+					pokemon.moveSlots[pokemon.abilityState.replacedMoveIndex] = {
+						move: amogusMove.name,
+						id: amogusMove.id,
+						pp: amogusMove.pp,
+						maxpp: amogusMove.pp,
+						target: amogusMove.target,
+						disabled: false,
+						used: false,
+					};
+
+					pokemon.abilityState.replacedMoveIndex = undefined;
+				}
 			}
 		},
 		onFaint(pokemon) {
