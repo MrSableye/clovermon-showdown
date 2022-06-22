@@ -6088,11 +6088,15 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			}
 		},
 		onHit(target, pokemon, move) {
-			if (move.multihitType === 'memepower' && move.hit === 2) {
+			if (move.multihitType === 'memepower' && move.hit === 2 && !pokemon.abilityState.hasMemed) {
 				const moveId = 'meme';
+				pokemon.abilityState.hasMemed = true;
 				this.actions.useMove(moveId, pokemon, target);
 				return null;
 			}
+		},
+		onResidual(pokemon) {
+			pokemon.abilityState.hasMemed = false;
 		},
 		name: "Meme Power",
 		rating: 4.5,
