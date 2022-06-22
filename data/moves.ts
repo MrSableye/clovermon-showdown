@@ -23726,14 +23726,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 100,
-			self: {
-				onHit() {
-					this.field.addPseudoWeather('wonderroom');
-				},
-			},
-		},
+		secondary: null,
 	
 		onBasePower(basePower, pokemon, target) {
 			if (this.field.getPseudoWeather('inverseroom')) {
@@ -23915,8 +23908,24 @@ export const Moves: { [moveid: string]: MoveData } = {
 		
 		condition: {
 			duration: 2,
-			onHit() {
-				this.field.addPseudoWeather('trickroom');
+			durationCallback(source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 4;
+				}
+				return 2;
+			},
+			onFieldStart(target, source) {
+				this.add('-fieldstart', 'move: Trick Room', '[of] ' + source);
+			},
+			onFieldRestart(target, source) {
+				this.field.removePseudoWeather('trickroom');
+			},
+			// Speed modification is changed in Pokemon.getActionSpeed() in sim/pokemon.js
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 1,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Trick Room');
 			},
 		},
 		secondary: null,
@@ -24522,11 +24531,10 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		accuracy: 100,
 		basePower: 50,
-		onModifyType(move, pokemon) {
-			if (move.hit = 2)
-			move.type = 'Ground';
-			if (move.hit = 3)
-			move.type = 'Grass';
+			onHit(target, source, move) {
+				if (move.hit === 2) {move.type = 'Ground';}
+				
+				else if (move.hit === 3) {move.type = 'Grass';}
 			},
 		category: "Special",
 		name: "Topping Toss",
@@ -24601,10 +24609,10 @@ export const Moves: { [moveid: string]: MoveData } = {
 			},
 		},
 
-		onHit(target) {
-			const oldAbility = target.setAbility('sandrush');
+		onHit(source) {
+			const oldAbility = source.setAbility('sandrush');
 			if (oldAbility) {
-				this.add('-ability', target, 'Sand Rush', '[from] move: Sandy Snore');
+				this.add('-ability', source, 'Sand Rush', '[from] move: Sandy Snore');
 				return;
 			}
 			return false;

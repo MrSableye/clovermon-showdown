@@ -6027,6 +6027,27 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3.5,
 	},
 
+
+	asoneremembered: {
+		availability: {clover: 1},
+		onPreStart(pokemon) {
+			this.add('-ability', pokemon, 'As One (Blobbos-Remembered)');
+			this.add('-ability', pokemon, 'Flare Heal');
+			this.add('-ability', pokemon, 'Magic Guard');
+			this.effectState.unnerved = true;
+		},
+
+		onDamage(damage, target, source, effect) {
+			if (effect && effect.id === 'stealthrock'|| effect.id === 'spikes'|| effect.id === 'gmaxsteelsurge') {
+				return false;
+			}
+		},
+
+		isPermanent: true,
+		name: "As One (Blobbos-Remembered)",
+		rating: 3.5,
+	},
+
 	flipflops: {
 		availability: {clover: 1},
 		onModifyAtkPriority: 5,
@@ -6068,7 +6089,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 			onHit(target, pokemon, move) 
 			{
-				if (move.multihitType === 'memepower' && move.hit > 1)
+				if (move.multihitType === 'memepower' && move.hit === 2)
 				{
 				let move = 'meme';
 				this.actions.useMove(move, pokemon, target);
@@ -6149,6 +6170,19 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "All Skill",
 		rating: 2,
 		num: 19,
+	},
+
+	artillery: {
+		availability: {clover: 1},
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['bullet']) {
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Artillery",
+		rating: 3,
+		num: 178,
 	},
 
 };
