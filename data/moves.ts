@@ -23905,28 +23905,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 16,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-
-		condition: {
-			duration: 2,
-			durationCallback(source, effect) {
-				if (source?.hasAbility(['persistent', 'moreroom'])) {
-					this.add('-activate', source, `ability: ${source.ability}`, effect);
-					return 4;
-				}
-				return 2;
-			},
-			onFieldStart(target, source) {
-				this.add('-fieldstart', 'move: Trick Room', '[of] ' + source);
-			},
-			onFieldRestart(target, source) {
-				this.field.removePseudoWeather('trickroom');
-			},
-			// Speed modification is changed in Pokemon.getActionSpeed() in sim/pokemon.js
-			onFieldResidualOrder: 27,
-			onFieldResidualSubOrder: 1,
-			onFieldEnd() {
-				this.add('-fieldend', 'move: Trick Room');
-			},
+		onHit() {
+			this.field.addPseudoWeather('trickroom');
 		},
 		secondary: null,
 		noSketch: true,
