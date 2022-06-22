@@ -6079,20 +6079,10 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 
 	memepower: {
 		availability: {clover: 1},
-		onPrepareHit(source, target, move) {
-			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
-			if (['endeavor', 'fling', 'iceball', 'rollout'].includes(move.id)) return;
-			if (!move.flags['charge'] && !move.spreadHit && !move.isZ && !move.isMax) {
-				move.multihit = 2;
-				move.multihitType = 'memepower';
-			}
-		},
-		onHit(target, pokemon, move) {
-			if (move.multihitType === 'memepower' && move.hit === 2 && !pokemon.abilityState.hasMemed) {
-				const moveId = 'meme';
-				pokemon.abilityState.hasMemed = true;
-				this.actions.useMove(moveId, pokemon, target);
-				return null;
+		onAfterMove(source, target, move) {
+			if (!source.abilityState.hasMemed) {
+				source.abilityState.hasMemed = true;
+				this.actions.useMove('meme', source, target);
 			}
 		},
 		onResidual(pokemon) {
