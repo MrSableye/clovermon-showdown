@@ -24515,7 +24515,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		accuracy: 100,
 		basePower: 50,
 		onHit(target, source, move) {
-			if (move.hit === 2) { move.type = 'Ground'; } else if (move.hit === 3) { move.type = 'Grass'; }
+			if (move.hit === 1) { move.type = 'Ground'; } else if (move.hit === 2) { move.type = 'Grass'; }
 		},
 		category: "Special",
 		name: "Topping Toss",
@@ -24587,17 +24587,17 @@ export const Moves: { [moveid: string]: MoveData } = {
 		self: {
 			onHit(source) {
 				this.field.setWeather('sandstorm');
+				const oldAbility = source.setAbility('sandrush');
+				if (oldAbility) {
+					this.add('-ability', source, 'Sand Rush', '[from] move: Sandy Snore');
+					return;
+				}
+				return false;
 			},
-		},
-
-		onHit(source) {
-			const oldAbility = source.setAbility('sandrush');
-			if (oldAbility) {
-				this.add('-ability', source, 'Sand Rush', '[from] move: Sandy Snore');
-				return;
-			}
-			return false;
-		},
+				
+			},
+		
+		
 		noSketch: true,
 		target: "normal",
 		type: "Rock",
