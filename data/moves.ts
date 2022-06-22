@@ -24561,7 +24561,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			const success = !!this.heal(this.modify(pokemon.maxhp, 0.25));
 			return pokemon.cureStatus() || success;
 		},
-
+		noSketch: true,
 		secondary: null,
 		target: "self",
 		type: "Normal",
