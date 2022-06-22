@@ -24458,6 +24458,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			status: 'par',
 		},
 		target: "normal",
+		noSketch: true,
 		type: "Electric",
 		contestType: "Cool",
 	},
@@ -24614,9 +24615,37 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		noSketch: true,
 		target: "normal",
 		type: "Normal",
 		contestType: "Tough",
 		isNonstandard: "Future",
+	},
+
+	heavenpierce: {
+		availability: {clover: 1},
+		num: 713,
+		accuracy: true,
+		basePower: 70,
+		category: "Physical",
+		name: "Heaven Pierce",
+		pp: 5,
+		priority: 0,
+		flags: {mirror: 1, defrost: 1},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+		},
+		ignoreAbility: true,
+		ignoreImmunity: {'Steel': true},
+		breaksProtect: true,
+		willCrit: true,
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "Steel",
+		contestType: "Cool",
 	},
 };
