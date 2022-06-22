@@ -19241,6 +19241,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
+				if (this.activeMove?.id === 'backroom') {
+					return 2;
+				}
 				if (source?.hasAbility(['persistent', 'moreroom'])) {
 					this.add('-activate', source, `ability: ${source.ability}`, effect);
 					return 7;
@@ -23906,7 +23909,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onHit() {
-			this.field.addPseudoWeather('trickroom');
+			this.field.addPseudoWeather('trickroom', null, this.activeMove);
 		},
 		secondary: null,
 		noSketch: true,
