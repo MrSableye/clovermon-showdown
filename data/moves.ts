@@ -23947,6 +23947,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: -6,
 		flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
 		forceSwitch: true,
+		slotCondition: 'charmerssong',
 		condition: {
 			onSwap(target) {
 				target.addVolatile('taunt');
