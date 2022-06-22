@@ -24624,7 +24624,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 
 	heavenpierce: {
 		availability: {clover: 1},
-		num: 713,
 		accuracy: true,
 		basePower: 70,
 		category: "Physical",
