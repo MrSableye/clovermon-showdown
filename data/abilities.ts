@@ -6038,7 +6038,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 
 		onDamage(damage, target, source, effect) {
-			if (effect && effect.id === 'stealthrock'|| effect.id === 'spikes'|| effect.id === 'gmaxsteelsurge') {
+			if (effect && effect.id === 'stealthrock' || effect.id === 'spikes' || effect.id === 'gmaxsteelsurge') {
 				return false;
 			}
 		},
@@ -6084,29 +6084,20 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			if (['endeavor', 'fling', 'iceball', 'rollout'].includes(move.id)) return;
 			if (!move.flags['charge'] && !move.spreadHit && !move.isZ && !move.isMax) {
 				move.multihit = 2;
-				move.multihitType = 'memepower';	
+				move.multihitType = 'memepower';
 			}
 		},
-			onHit(target, pokemon, move) 
-			{
-				if (move.multihitType === 'memepower' && move.hit === 2)
-				{
-				let move = 'meme';
-				this.actions.useMove(move, pokemon, target);
+		onHit(target, pokemon, move) {
+			if (move.multihitType === 'memepower' && move.hit === 2) {
+				const moveId = 'meme';
+				this.actions.useMove(moveId, pokemon, target);
 				return null;
-
 			}
 		},
-		
-
-	
-
 		name: "Meme Power",
 		rating: 4.5,
 		isNonstandard: "Future",
 	},
-
-
 
 
 	godrejection: {
@@ -6115,8 +6106,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onSourceBasePower(basePower, attacker, defender, move) {
 			if (move.type === 'Fairy') {
 				return this.chainModify(0.125);
-			}
-			else if (move.type === 'Dragon') {
+			} else if (move.type === 'Dragon') {
 				return this.chainModify(0.25);
 			}
 		},
@@ -6125,7 +6115,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onAnyEffectiveness(typemod, target, type, move) {
 			const godrejectionUser = this.effectState.target;
 			if (godrejectionUser !== this.activePokemon) return;
-			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy'|| type === 'Dragon') {
+			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy' || type === 'Dragon') {
 				return 1;
 			}
 		},
@@ -6141,15 +6131,14 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onSourceBasePower(basePower, attacker, defender, move) {
 			if (move.type === 'Fairy') {
 				return 2;
-			}
-			else if (move.type === 'Dragon') {
+			} else if (move.type === 'Dragon') {
 				return 2;
 			}
 		},
 		onAnyEffectiveness(typemod, target, type, move) {
 			const degradationUser = this.effectState.target;
 			if (degradationUser !== this.activePokemon) return;
-			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy'|| type === 'Dragon') {
+			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy' || type === 'Dragon') {
 				return 1;
 			}
 		},

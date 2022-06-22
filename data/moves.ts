@@ -22868,7 +22868,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 					const baby = new Pokemon({
 						...targetSet,
 						name: childName,
-						moves: ['Metronome','Softboiled','Egg Bomb','Revelation Dance'],
+						moves: ['Metronome', 'Softboiled', 'Egg Bomb', 'Revelation Dance'],
 						item: undefined,
 					}, sourceSide);
 					baby.position = sourceSide.pokemon.length;
@@ -23727,7 +23727,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
-	
+
 		onBasePower(basePower, pokemon, target) {
 			if (this.field.getPseudoWeather('inverseroom')) {
 				return this.chainModify(2);
@@ -23905,7 +23905,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 16,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		
+
 		condition: {
 			duration: 2,
 			durationCallback(source, effect) {
@@ -23945,7 +23945,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Charmer's Song",
 		pp: 10,
 		priority: -6,
-		flags: {contact: 1, protect: 1, mirror: 1,sound: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
 		forceSwitch: true,
 		condition: {
 			onSwap(target) {
@@ -23958,7 +23958,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		zMove: {boost: {spd: 1}},
 		contestType: "Clever",
 	},
-	
+
 	psychospell: {
 		availability: {clover: 1},
 		num: 42003,
@@ -24032,7 +24032,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fire",
 		isNonstandard: "Future",
 	},
-	
+
 	portalgun: {
 		availability: {clover: 1},
 		num: 509,
@@ -24077,7 +24077,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fighting",
 		isNonstandard: "Future",
 	},
-	
+
 	rainbowbeam: {
 		availability: {clover: 1},
 		num: 69048,
@@ -24092,16 +24092,16 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "???",
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Ice', type) + this.dex.getEffectiveness('Normal', type) + this.dex.getEffectiveness('Fighting', type) 
-			+ this.dex.getEffectiveness('Flying', type) + this.dex.getEffectiveness('Poison', type) + this.dex.getEffectiveness('Ground', type) + this.dex.getEffectiveness('Rock', type)
-			+ this.dex.getEffectiveness('Bug', type) + this.dex.getEffectiveness('Ghost', type) + this.dex.getEffectiveness('Steel', type) + this.dex.getEffectiveness('Fire', type)
-			+ this.dex.getEffectiveness('Water', type) + this.dex.getEffectiveness('Grass', type) + this.dex.getEffectiveness('Electric', type) + this.dex.getEffectiveness('Psychic', type)
-			+ this.dex.getEffectiveness('Dragon', type) + this.dex.getEffectiveness('Dark', type) + this.dex.getEffectiveness('Fairy', type);
+			return typeMod + this.dex.getEffectiveness('Ice', type) + this.dex.getEffectiveness('Normal', type) + this.dex.getEffectiveness('Fighting', type) +
+			this.dex.getEffectiveness('Flying', type) + this.dex.getEffectiveness('Poison', type) + this.dex.getEffectiveness('Ground', type) + this.dex.getEffectiveness('Rock', type) +
+			this.dex.getEffectiveness('Bug', type) + this.dex.getEffectiveness('Ghost', type) + this.dex.getEffectiveness('Steel', type) + this.dex.getEffectiveness('Fire', type) +
+			this.dex.getEffectiveness('Water', type) + this.dex.getEffectiveness('Grass', type) + this.dex.getEffectiveness('Electric', type) + this.dex.getEffectiveness('Psychic', type) +
+			this.dex.getEffectiveness('Dragon', type) + this.dex.getEffectiveness('Dark', type) + this.dex.getEffectiveness('Fairy', type);
 		},
 		isNonstandard: "Future",
 	},
 
-	freikugel : {
+	freikugel: {
 		availability: {clover: 1},
 		accuracy: 80,
 		basePower: 150,
@@ -24117,13 +24117,12 @@ export const Moves: { [moveid: string]: MoveData } = {
 			}
 		},
 		onDamage(damage, target, source, effect) {
-
-			if(this.field.getPseudoWeather('magicroom')){
-			if (effect.id === 'recoil') {
-				if (!this.activeMove) throw new Error("Battle.activeMove is null");
-				if (this.activeMove.id !== 'struggle') return null;
+			if (this.field.getPseudoWeather('magicroom')) {
+				if (effect.id === 'recoil') {
+					if (!this.activeMove) throw new Error("Battle.activeMove is null");
+					if (this.activeMove.id !== 'struggle') return null;
+				}
 			}
-		}
 		},
 
 
@@ -24477,7 +24476,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Electric",
 		contestType: "Cool",
-	},		
+	},
 
 	rockout: {
 		availability: {clover: 1},
@@ -24496,7 +24495,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Rock",
 		contestType: "Clever",
 	},
-	
+
 	twintowertumblingterror: {
 		accuracy: true,
 		basePower: 290,
@@ -24531,11 +24530,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		accuracy: 100,
 		basePower: 50,
-			onHit(target, source, move) {
-				if (move.hit === 2) {move.type = 'Ground';}
-				
-				else if (move.hit === 3) {move.type = 'Grass';}
-			},
+		onHit(target, source, move) {
+			if (move.hit === 2) { move.type = 'Ground'; } else if (move.hit === 3) { move.type = 'Grass'; }
+		},
 		category: "Special",
 		name: "Topping Toss",
 		isNonstandard: "Future",
@@ -24580,7 +24577,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			const success = !!this.heal(this.modify(pokemon.maxhp, 0.25));
 			return pokemon.cureStatus() || success;
 		},
-		
+
 		secondary: null,
 		target: "self",
 		type: "Normal",
@@ -24602,7 +24599,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onTry(source) {
 			return source.status === 'slp' || source.hasAbility('comatose');
 		},
-		
+
 		self: {
 			onHit(source) {
 				this.field.setWeather('sandstorm');
@@ -24622,5 +24619,5 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Rock",
 		contestType: "Cute",
 	},
-	
+
 };

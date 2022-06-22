@@ -792,9 +792,6 @@ export const Conditions: {[k: string]: ConditionData} = {
 	},
 
 
-
-
-
 	lootable: {
 		// this is a slot condition
 		name: 'Lootable',
