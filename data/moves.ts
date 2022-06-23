@@ -24599,7 +24599,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			},
 		},
 
-		onHit(source) {
+		onHit(target, source) {
 			const oldAbility = source.setAbility('sandrush');
 			if (oldAbility) {
 				this.add('-ability', source, 'Sand Rush', '[from] move: Sandy Snore');

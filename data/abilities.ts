@@ -1753,22 +1753,27 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 					(pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.shiny ? ', shiny' : '');
 				this.add('replace', pokemon, details);
 				this.add('-end', pokemon, 'Illusion');
+			}
+		},
+		onTryMove(source, target, move) {
+			const sourceMoveIndex = source.moveSlots.findIndex((moveSlot) => moveSlot.id === move.id);
+			const moveIndex = source.abilityState.replacedMoveIndex;
+			if (!source.illusion && moveIndex !== undefined && moveIndex === sourceMoveIndex) {
+				const amogusMove = Dex.moves.get('amogus');
 
-				if (pokemon.abilityState.replacedMoveIndex !== undefined) {
-					const amogusMove = Dex.moves.get('amogus');
+				source.moveSlots[moveIndex] = {
+					move: amogusMove.name,
+					id: amogusMove.id,
+					pp: amogusMove.pp,
+					maxpp: amogusMove.pp,
+					target: amogusMove.target,
+					disabled: false,
+					used: false,
+				};
 
-					pokemon.moveSlots[pokemon.abilityState.replacedMoveIndex] = {
-						move: amogusMove.name,
-						id: amogusMove.id,
-						pp: amogusMove.pp,
-						maxpp: amogusMove.pp,
-						target: amogusMove.target,
-						disabled: false,
-						used: false,
-					};
+				source.abilityState.replacedMoveIndex = undefined;
 
-					pokemon.abilityState.replacedMoveIndex = undefined;
-				}
+				this.actions.useMove('amogus', source, target);
 			}
 		},
 		onFaint(pokemon) {
@@ -6118,7 +6123,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	memepower: {
 		availability: {clover: 1},
 		onAfterMove(source, target, move) {
-			if (!source.abilityState.hasMemed) {
+			if (!source.abilityState.hasMemed && move.category !== 'Status') {
 				source.abilityState.hasMemed = true;
 				this.actions.useMove('meme', source, target);
 			}
