@@ -23937,6 +23937,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		condition: {
 			onSwap(target) {
 				target.addVolatile('taunt');
+				target.side.removeSideCondition('charmerssong');
 			},
 		},
 		noSketch: true,
