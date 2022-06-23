@@ -6122,14 +6122,20 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 
 	memepower: {
 		availability: {clover: 1},
-		onAfterMove(source, target, move) {
-			if (!source.abilityState.hasMemed && move.category !== 'Status') {
-				source.abilityState.hasMemed = true;
-				this.actions.useMove('meme', source, target);
-			}
+		onAnyAfterHit(source, target, move) {
+			const targetSlot = target.getSlot();
+			if (source !== this.activePokemon) return;
+			if (source.ability !== 'memepower') return;
+			if (move.category === 'Status') return;
+			if (source.abilityState.hasMemed?.[targetSlot]) return;
+
+			if (!source.abilityState?.hasMemed) source.abilityState.hasMemed = {};
+			source.abilityState.hasMemed[targetSlot] = true;
+
+			this.actions.useMove('meme', source, target);
 		},
 		onResidual(pokemon) {
-			pokemon.abilityState.hasMemed = false;
+			pokemon.abilityState.hasMemed = undefined;
 		},
 		name: "Meme Power",
 		rating: 4.5,
