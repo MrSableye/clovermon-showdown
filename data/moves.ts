@@ -24647,4 +24647,45 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Steel",
 		contestType: "Cool",
 	},
+
+	fughamut: {
+		accuracy: true,
+		basePower: 90,
+		category: "Status",
+		name: "Fughamut",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1},
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+				if (!source.speciesState['parent']) {
+					this.add('-activate', source, 'move: Fughamut', '[of] ' + target);
+					const sourceSide = source.side;
+					const targetSet = target.set;
+					const childName = [
+						`${targetSet.species}, ${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.name}`,
+						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.name}`,
+						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.species}`,
+					].find((name) => name.length <= 18) || 'A Mere Child';
+					const baby = new Pokemon({
+						species: 'Rayquaza',
+						name: "Fug",
+						moves: ['Draco Meteor', 'Extreme Speed', 'Overheat', 'Dragon Ascent'],
+						item: 'Life Orb',
+					}, sourceSide);
+					baby.position = sourceSide.pokemon.length;
+					sourceSide.pokemon.push(baby);
+					sourceSide.pokemonLeft += 1;
+					this.add('teamsize', sourceSide.id, sourceSide.pokemon.length);
+					source.speciesState['parent'] = true;
+				} else {
+					this.add('-fail', source, 'move: Fughamut');
+				}
+			},
+		},
+		target: "normal",
+		type: "Dragon",
+		isNonstandard: "Future",
+	},
 };
