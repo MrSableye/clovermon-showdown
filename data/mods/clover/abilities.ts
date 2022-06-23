@@ -245,4 +245,29 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	memepower: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	symbiosis: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	godrejection: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	allskill: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	artillery: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };
