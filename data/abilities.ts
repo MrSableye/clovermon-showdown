@@ -1774,6 +1774,8 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				source.abilityState.replacedMoveIndex = undefined;
 
 				this.actions.useMove('amogus', source, target);
+
+				return null;
 			}
 		},
 		onFaint(pokemon) {
