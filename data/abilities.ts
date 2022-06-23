@@ -6065,7 +6065,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	},
 
 
-	asoneremembered: {
+	asoneblobbosremembered: {
 		availability: {clover: 1},
 		onPreStart(pokemon) {
 			this.add('-ability', pokemon, 'As One (Blobbos-Remembered)');
@@ -6081,6 +6081,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 
 		isPermanent: true,
+		isNonstandard: "Future",
 		name: "As One (Blobbos-Remembered)",
 		rating: 3.5,
 	},
@@ -6187,6 +6188,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			return secondaries.filter(effect => !!(effect.self || effect.dustproof));
 		},
 		isBreakable: true,
+		isNonstandard: "Future",
 		name: "All Skill",
 		rating: 2,
 		num: 19,
@@ -6201,6 +6203,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 			}
 		},
 		name: "Artillery",
+		isNonstandard: "Future",
 		rating: 3,
 		num: 178,
 	},

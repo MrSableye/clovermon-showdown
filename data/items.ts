@@ -8098,11 +8098,41 @@ export const Items: { [itemid: string]: ItemData } = {
 	sableviumz: {
 		availability: {clover: 1},
 		name: "Sablevium Z",
-		spritenum: 792,
+		spritenum: 636,
 		onTakeItem: false,
 		zMove: "Twin Tower Tumbling Terror",
-		zMoveFrom: "Heavy Slam",
-		itemUser: ["Blobbos-Sexy"],
+		zMoveFrom: "Freeze-Dry",
+		itemUser: ["Blobbos-Remembered"],
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	kalosite: {
+		availability: {clover: 1},
+		name: "Kalosite",
+		spritenum: 599,
+		megaStone: "Blobbos-Kalos-Mega",
+		megaEvolves: "Blobbos-Kalos",
+		itemUser: ["Blobbos-Kalos"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	blobbosite: {
+		availability: {clover: 1},
+		name: "Blobbosite",
+		spritenum: 630,
+		megaStone: "Blobbos-Mega",
+		megaEvolves: "Blobbos",
+		itemUser: ["Blobbos"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
 	},
