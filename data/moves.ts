@@ -22850,7 +22850,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 	matingpress: {
 		accuracy: 100,
-		basePower: 25,
+		basePower: 90,
 		category: "Physical",
 		name: "Mating Press",
 		pp: 20,
