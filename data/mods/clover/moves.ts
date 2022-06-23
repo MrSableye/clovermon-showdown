@@ -1421,7 +1421,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		availability: {clover: 1},
 		inherit: true,
 		isNonstandard: "CAP",
-	},	
+	},
 	psychospell: {
 		availability: {clover: 1},
 		inherit: true,
