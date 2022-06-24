@@ -23739,6 +23739,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		noSketch: true,
 		target: "normal",
 		type: "Normal",
+		isNonstandard: "Future",
 		maxMove: {basePower: 140},
 	},
 	faedozer: {
@@ -23854,6 +23855,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		noSketch: true,
 		target: "self",
 		type: "Fighting",
+		isNonstandard: "Future",
 		zMove: {boost: {evasion: 1}},
 		contestType: "Cool",
 	},
@@ -23894,6 +23896,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		noSketch: true,
 		target: "all",
 		type: "Psychic",
+		isNonstandard: "Future",
 		zMove: {boost: {spd: 1}},
 		contestType: "Clever",
 	},
@@ -23934,11 +23937,13 @@ export const Moves: { [moveid: string]: MoveData } = {
 		condition: {
 			onSwap(target) {
 				target.addVolatile('taunt');
+				target.side.removeSlotCondition(target, 'charmerssong');
 			},
 		},
 		noSketch: true,
 		target: "normal",
 		type: "Poison",
+		isNonstandard: "Future",
 		zMove: {boost: {spd: 1}},
 		contestType: "Clever",
 	},
@@ -23952,7 +23957,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Psycho Spell",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
 			self: {
@@ -23977,7 +23982,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Wonder Wand",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
 			self: {
@@ -24090,6 +24095,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		accuracy: 80,
 		basePower: 150,
 		category: "Physical",
+		isNonstandard: "Future",
 		name: "Freikugel",
 		pp: 20,
 		priority: 0,
@@ -24479,6 +24485,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Rock",
 		contestType: "Clever",
+		isNonstandard: "Future",
 	},
 
 	twintowertumblingterror: {
@@ -24564,10 +24571,12 @@ export const Moves: { [moveid: string]: MoveData } = {
 		},
 		noSketch: true,
 		secondary: null,
+		noSketch: true,
 		target: "self",
 		type: "Normal",
 		zMove: {boost: {spd: 1}},
 		contestType: "Cute",
+		isNonstandard: "Future",
 	},
 
 	sandysnore: {
@@ -24595,20 +24604,32 @@ export const Moves: { [moveid: string]: MoveData } = {
 				}
 				return false;
 			},
+
 				
 			},
 		
 		
+		},
+
+		onHit(target, source) {
+			const oldAbility = source.setAbility('sandrush');
+			if (oldAbility) {
+				this.add('-ability', source, 'Sand Rush', '[from] move: Sandy Snore');
+				return;
+			}
+			return false;
+		},
 		noSketch: true,
 		target: "normal",
 		type: "Rock",
 		contestType: "Cute",
+		isNonstandard: "Future",
 	},
 	amogus: {
 		availability: {clover: 1},
 		num: 1,
 		accuracy: 100,
-		basePower: 40,
+		basePower: 70,
 		category: "Physical",
 		name: "Amogus",
 		pp: 35,
@@ -24617,9 +24638,127 @@ export const Moves: { [moveid: string]: MoveData } = {
 		secondary: null,
 		noSketch: true,
 		target: "normal",
-		type: "Normal",
+		type: "???",
 		contestType: "Tough",
 		isNonstandard: "Future",
+	},
+	ninjutsu: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 15,
+		category: "Special",
+		name: "Ninjutsu",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: 4,
+		target: "normal",
+		type: "Steel",
+		isNonstandard: "Future",
+		noSketch: true,
+	},
+	groundbomb: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 250,
+		category: "Special",
+		name: "Ground Bomb",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		selfdestruct: "always",
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -2,
+			},
+		},
+		target: "normal",
+		type: "Ground",
+		zMove: {basePower: 180},
+		isNonstandard: "Future",
+		noSketch: true,
+	},
+	chernoboil: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 26,
+		category: "Special",
+		name: "Chernoboil",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Nuclear",
+		contestType: "Tough",
+		isNonstandard: "Future",
+		noSketch: true,
+	},
+	halflife: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 0,
+		damageCallback(pokemon, target) {
+			return this.clampIntRange(target.getUndynamaxedHP() / 2, 1);
+		},
+		category: "Special",
+		name: "Half-Life",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Nuclear",
+		contestType: "Tough",
+		isNonstandard: "Future",
+		noSketch: true,
+	},
+	obsidianhorn: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Obsidian Horn",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			self: {
+				boosts: {
+					def: 1,
+					spd: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+		contestType: "Cool",
+		noSketch: true,
+	},
+	feudefee: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Feu de Fe\u0301e",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		contestType: "Cute",
+		isNonstandard: "Future",
+		noSketch: true,
 	},
 
 	heavenpierce: {

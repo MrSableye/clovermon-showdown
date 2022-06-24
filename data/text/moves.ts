@@ -7508,4 +7508,144 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Polysporin",
 		shortDesc: "Heals the target by 50%, Puts them to sleep.",
 	},
+	backroom: {
+		name: "Backroom",
+		shortDesc: "The user switches out and summons Trick Room.",
+	},
+	charmerssong: {
+		name: "Charmer's Song",
+		shortDesc: "The foe is switched out, and the replacement is taunted.",
+	},
+	psychospell: {
+		name: "Psycho Spell",
+		shortDesc: "Summons Psychic Terrain after hit.",
+	},
+	wonderwand: {
+		name: "Wonder Wand",
+		shortDesc: "Summons Wonder Room after hit.",
+	},
+	implosion: {
+		name: "Implosion",
+		shortDesc: "Summons Inverse Room after hit.",
+	},
+	portalgun: {
+		name: "Portal Gun",
+		shortDesc: "Switches foe out first, then the user.",
+	},
+	sportsball: {
+		name: "Sportsball",
+		shortDesc: "Summons Mud Sport and Water Sport after hit.",
+	},
+	rainbowbeam: {
+		name: "Rainbow Beam",
+		shortDesc: "Taste the rainbow, motherfucker.",
+	},
+	freikugel: {
+		name: "Freikugel",
+		shortDesc: "Has 50% recoil.",
+	},
+	confettigun: {
+		name: "Confetti Gun",
+		shortDesc: "Surprise, motherfucker!",
+	},
+	butterflykick: {
+		name: "Butterfly Kick",
+		shortDesc: "Combines Bug and Fighting in the result.",
+	},
+	toxicbeam: {
+		name: "Toxic Beam",
+		shortDesc: "Slight chance to badly poison the foe.",
+	},
+	windwhip: {
+		name: "Wind Whip",
+		shortDesc: "100% chance to lower the foe's Special Defense.",
+	},
+	firewall: {
+		name: "Firewall",
+		shortDesc: "Protect yourself from malware, also burns foes on contact.",
+	},
+	maximize: {
+		name: "Maximize",
+		shortDesc: "100% chance to lower user's evasion by 1.",
+	},
+	seaquake: {
+		name: "Seaquake",
+		shortDesc: "The true Potarded, Venowatt and Weatherbane counter.",
+	},
+	edgequake: {
+		name: "Edgequake",
+		shortDesc: "Good old Edgequake coverage.",
+	},
+	sugarrush: {
+		name: "Sugar Rush",
+		shortDesc: "Raises user's Sp. Atk by 6 stages, but lowers HP 1/2.",
+	},
+	sleepingsands: {
+		name: "Sleeping Sands",
+		shortDesc: "Chance to make the foe fall asleep.",
+	},
+	fuckyou: {
+		name: "Fuck You",
+		shortDesc: "Kill yourself. Cope. Seethe. Mald.",
+	},
+	poisonivy: {
+		name: "Poison Ivy",
+		shortDesc: "Chance to poison or badly poison the foe.",
+	},
+	absolutezero: {
+		name: "Absolute Zero",
+		shortDesc: "100% freeze is fair and balanced.",
+	},
+	doesthiswork: {
+		name: "Does This Work",
+		shortDesc: "I dunno, does it?",
+	},
+	telluriccurrent: {
+		name: "Telluric Current",
+		shortDesc: "Able to hit Ground types.",
+	},
+	rockout: {
+		name: "Rock Out",
+		shortDesc: "User switches out.",
+	},
+	toppingtoss: {
+		name: "Topping Toss",
+		shortDesc: "3-hit move, each hit has a different type.",
+	},
+	heavensblessing: {
+		name: "Heaven's Blessing",
+		shortDesc: "Heals self and activates Wish effect.",
+	},
+	sandysnore: {
+		name: "Sandy Snore",
+		shortDesc: "Only works if user is asleep, has a myriad of effects.",
+	},
+	amogus: {
+		name: "Amogus",
+		shortDesc: "Disguises as teammate's attack, how sus.",
+	},
+	ninjutsu: {
+		name: "Ninjutsu",
+		shortDesc: "Hits 4 times.",
+	},
+	groundbomb: {
+		name: "Ground Bomb",
+		shortDesc: "Explodes self, halves foe's defense.",
+	},
+	chernoboil: {
+		name: "Chernoboil",
+		shortDesc: "10% chance to burn foe.",
+	},
+	halflife: {
+		name: "Half-Life",
+		shortDesc: "Cuts foe's HP in half.",
+	},
+	obsidianhorn: {
+		name: "Obsidian Horn",
+		shortDesc: "10% chance to raise Defense and Sp.Def by 1.",
+	},
+	feudefee: {
+		name: "Feu de Fe\u0301e",
+		shortDesc: "Physical if Attack is higher than Sp. Atk.",
+	},
 };

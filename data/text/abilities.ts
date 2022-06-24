@@ -2027,6 +2027,18 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Meme Power",
 		shortDesc: "Adds a meme to every attack.",
 	},
+	godrejection: {
+		name: "God Rejection",
+		shortDesc: "Lowers damage from Fairy and Dragon moves, Dark + Fighting deal more damage to Fairy and Dragon foes.",
+	},
+	allskill: {
+		name: "All Skill",
+		shortDesc: "Shield Dust + Shell Armor.",
+	},
+	artillery: {
+		name: "Artillery",
+		shortDesc: "Boosts bomb and bullet moves.",
+	},
 	genwunning: {
 		name: "Genwunning",
 		shortDesc: "Summons Genwun Room upon switch-in, how nostalgic!",
