@@ -24816,4 +24816,44 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 	},
 
+	feedandseed: {
+		num: 738,
+		accuracy: 90,
+		basePower: 100,
+		category: "Physical",
+		isNonstandard: "LGPE",
+		name: "Feed and Seed",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent) {
+				return false;
+			}
+		},
+		onHit(target, source) {
+			if (target.hasType('Grass')) return null;
+			target.addVolatile('leechseed', source);
+			const oldAbility = target.setAbility('insomnia');
+			if (oldAbility) {
+				this.add('-ability', target, 'Insomnia', '[from] move: Feed and Seed');
+				if (target.status === 'slp') {
+					target.cureStatus();
+				}
+				return;
+			}
+		},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.setTerrain('grassyterrain');
+				},
+			},
+		},
+		target: "normal",
+		type: "Grass",
+		contestType: "Clever",
+	},
+
 };

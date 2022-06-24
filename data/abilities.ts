@@ -6257,5 +6257,18 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3,
 		num: 178,
 	},
+	sneedboost: {
+		availability: {clover: 1},
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.activeTurns) {
+				this.boost({spe: 1, accuracy: 1});
+			}
+		},
+		name: "Sneed Boost",
+		rating: 4.5,
+		num: 3,
+	},
 
 };
