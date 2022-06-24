@@ -4790,6 +4790,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	showerpower: {
 		availability: {clover: 1},
 		name: "Shower Power",
+		isNonstandard: "Future",
 		onModifySpAPriority: 5,
 		onModifySpA(spa, pokemon) {
 			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
@@ -4807,6 +4808,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	concert: {
 		availability: {clover: 1},
 		name: "Concert",
+		isNonstandard: "Future",
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
 		onStart(pokemon) {
@@ -4827,6 +4829,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	waitforit: {
 		availability: {clover: 1},
 		name: "Wait For It",
+		isNonstandard: "Future",
 		onStart(pokemon) {
 			pokemon.addVolatile('waitforit');
 		},
@@ -4855,6 +4858,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	gradient: {
 		availability: {clover: 1},
 		name: "Gradient",
+		isNonstandard: "Future",
 		onStart(pokemon) {
 			const possibleTargets = pokemon.side.foe.active.filter(foeActive => foeActive && pokemon.isAdjacent(foeActive));
 			let rand = 0;
@@ -4887,6 +4891,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	anyability: {
 		availability: {clover: 1},
 		name: "Any Ability",
+		isNonstandard: "Future",
 		onStart(pokemon) {
 			const isStandard = (ability: AbilityData, format: Format) => {
 				if (format.isNonstandard === 'CAP') {
@@ -4919,6 +4924,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	adminabuse: {
 		availability: {clover: 1},
 		name: "Admin Abuse",
+		isNonstandard: "Future",
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags.hammer) {
@@ -4944,11 +4950,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	anability: {
 		availability: {clover: 1},
 		name: "An Ability",
+		isNonstandard: "Future",
 		rating: 0,
 	},
 	bigguy: {
 		availability: {clover: 1},
 		name: "Big Guy",
+		isNonstandard: "Future",
 		onStart(pokemon) {
 			this.add('-activate', pokemon, 'ability: Big Guy');
 			this.field.addPseudoWeather('gravity');
@@ -4958,6 +4966,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	blademaster: {
 		availability: {clover: 1},
 		name: "Blademaster",
+		isNonstandard: "Future",
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags.blade) {
@@ -4973,6 +4982,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	boombox: {
 		availability: {clover: 1},
 		name: "Boombox",
+		isNonstandard: "Future",
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['sound']) {
@@ -4985,6 +4995,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	bonezone: {
 		availability: {clover: 1},
 		name: "Bone Zone",
+		isNonstandard: "Future",
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Bone Zone');
 		},
@@ -5004,6 +5015,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	degenerate: {
 		availability: {clover: 1},
 		name: "Degenerate",
+		isNonstandard: "Future",
 		onModifyMovePriority: -1,
 		onModifyMove(move) {
 			if (move.type === 'Normal' && !['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'weatherball'].includes(move.id) && !(move.isZ && move.category !== 'Status')) {
@@ -5021,6 +5033,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	degradation: {
 		availability: {clover: 1},
 		name: "Degradation",
+		isNonstandard: "Future",
 		onAnyEffectiveness(typemod, target, type, move) {
 			const degradationUser = this.effectState.target;
 
@@ -5035,6 +5048,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	flareheal: {
 		availability: {clover: 1},
 		name: "Flare Heal",
+		isNonstandard: "Future",
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
 			if (attacker.status === 'brn' && move.id !== 'facade') {
@@ -5058,6 +5072,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	ghostnote: {
 		availability: {clover: 1},
 		name: "Ghost Note",
+		isNonstandard: "Future",
 		onModifyMovePriority: -1,
 		onModifyMove(move) {
 			if (move.flags['sound']) {
@@ -5069,6 +5084,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	hydrophile: {
 		availability: {clover: 1},
 		name: "Hydrophile",
+		isNonstandard: "Future",
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Water') {
@@ -5088,6 +5104,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	inversion: {
 		availability: {clover: 1},
 		name: "Inversion",
+		isNonstandard: "Future",
 		onStart(source) {
 			this.field.addPseudoWeather('inverseroom');
 		},
@@ -5096,6 +5113,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	jewelry: {
 		availability: {clover: 1},
 		name: "Jewelry",
+		isNonstandard: "Future",
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
 		onResidual(pokemon) {
@@ -5126,6 +5144,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	madman: {
 		availability: {clover: 1},
 		name: "Madman",
+		isNonstandard: "Future",
 		onDamagingHit(damage, target, source, move) {
 			if (move.flags['contact']) {
 				if (this.randomChance(3, 10)) {
@@ -5138,11 +5157,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	moreroom: {
 		availability: {clover: 1},
 		name: "More Room",
+		isNonstandard: "Future",
 		rating: 2.5,
 	},
 	pollution: {
 		availability: {clover: 1},
 		name: "Pollution",
+		isNonstandard: "Future",
 		onAnyEffectiveness(typemod, target, type, move) {
 			const pollutionUser = this.effectState.target;
 
@@ -5157,6 +5178,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	pozzed: {
 		availability: {clover: 1},
 		name: "Pozzed",
+		isNonstandard: "Future",
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Poison') {
 				if (!this.heal(target.maxhp / 4)) {
@@ -5170,6 +5192,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	puppeteer: {
 		availability: {clover: 1},
 		name: "Puppeteer",
+		isNonstandard: "Future",
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Bug') {
@@ -5189,6 +5212,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	striker: {
 		availability: {clover: 1},
 		name: "Striker",
+		isNonstandard: "Future",
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags.kick) {
@@ -5208,6 +5232,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	suddenly: {
 		availability: {clover: 1},
 		name: "Suddenly",
+		isNonstandard: "Future",
 		onChargeMove(pokemon, target, move) {
 			this.debug('suddenly - remove charge turn for ' + move.id);
 			this.attrLastMove('[still]');
@@ -5219,6 +5244,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	woke: {
 		availability: {clover: 1},
 		name: "Woke",
+		isNonstandard: "Future",
 		onDamagingHit(damage, target, source, move) {
 			const sourceAbility = source.getAbility();
 			if (sourceAbility.isPermanent || sourceAbility.id === 'woke') {
@@ -5239,6 +5265,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	woodenguard: {
 		availability: {clover: 1},
 		name: "Wooden Guard",
+		isNonstandard: "Future",
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.type === 'Fire') return this.chainModify(1.5);
 			return this.chainModify(0.75);
@@ -6068,6 +6095,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 
 		isPermanent: true,
 		name: "As One (Blobbos-Therian)",
+		isNonstandard: "Future",
 		rating: 3.5,
 	},
 

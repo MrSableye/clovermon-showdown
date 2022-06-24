@@ -37,6 +37,115 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	/* Clovermons */
+	showerpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	concert: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	waitforit: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	gradient: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	anyability: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	adminabuse: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	anability: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bigguy: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	blademaster: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boombox: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bonezone: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	degenerate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	degradation: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	flareheal: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ghostnote: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hydrophile: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	inversion: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	jewelry: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	madman: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	moreroom: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pollution: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pozzed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	puppeteer: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	striker: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	suddenly: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	woke: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	woodenguard: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	/* Clover CAP Abilities */
 	cakeveil: {
 		inherit: true,
