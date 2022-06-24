@@ -24569,7 +24569,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 			const success = !!this.heal(this.modify(pokemon.maxhp, 0.25));
 			return pokemon.cureStatus() || success;
 		},
-		noSketch: true,
 		secondary: null,
 		noSketch: true,
 		target: "self",
@@ -24608,17 +24607,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 				
 			},
 		
-		
-		},
-
-		onHit(target, source) {
-			const oldAbility = source.setAbility('sandrush');
-			if (oldAbility) {
-				this.add('-ability', source, 'Sand Rush', '[from] move: Sandy Snore');
-				return;
-			}
-			return false;
-		},
 		noSketch: true,
 		target: "normal",
 		type: "Rock",
@@ -24827,4 +24815,5 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Dragon",
 		isNonstandard: "Future",
 	},
+
 };
