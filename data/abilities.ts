@@ -6146,9 +6146,18 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onAnyEffectiveness(typemod, target, type, move) {
 			const godrejectionUser = this.effectState.target;
 			if (godrejectionUser !== this.activePokemon) return;
-			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy' || type === 'Dragon') {
-				return 1;
-			}
+			if (move.type === 'Dark' && type === 'Fairy') {
+				return 1;}
+				else if (move.type === 'Fighting' && type === 'Fairy') {
+					return 1;}
+					else if (move.type === 'Fighting' && type === 'Fairy') {
+						return 1;}
+						else if (move.type === 'Fighting' && type === 'Dragon') {
+							return 1;}
+							else if (move.type === 'Dark' && type === 'Dragon') {
+								return 1;}
+							
+			
 		},
 		isBreakable: true,
 		name: "God Rejection",
