@@ -481,4 +481,19 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	blobbosite: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	kalosite: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
+	sableviumz: {
+		availability: {clover: 1},
+		inherit: true,
+		isNonstandard: "CAP",
+	},
 };

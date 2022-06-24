@@ -15624,6 +15624,111 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	blobbosdemifiend: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosgay: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosreverse: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbossnek: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbossus: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobboskeks: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosviol: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosremembered: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosjohto: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbossinnoh: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbostandor: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobboshorse: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosbirb: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosmountain: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobboskalos: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobboskalosmega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosmega: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosangel: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosmexican: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbospizza: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
+	blobbosexplosion: {
+		inherit: true,
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	peasol: {
 		inherit: true,
 		isNonstandard: "CAP",
