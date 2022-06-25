@@ -6313,4 +6313,30 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		
 	},
 
+
+	copypower: {
+		availability: {clover: 1},
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				let statName = 'atk';
+				let bestStat = 0;
+				let s: StatIDExceptHP;
+				for (s in source.storedStats) {
+					if (source.storedStats[s] > bestStat) {
+						statName = s;
+						bestStat = source.storedStats[s];
+					}
+				}
+				this.boost({[statName]: length}, source);
+				this.add('-ability', source, target.getAbility());
+					
+			}
+		},
+		name: "Copy Power",
+		isNonstandard: "Future",
+		rating: 3.5,
+		num: 224,
+	},
+
+
 };
