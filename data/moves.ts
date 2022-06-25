@@ -24857,5 +24857,48 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Grass",
 		contestType: "Clever",
 	},
+	atombomb: {
+		availability: {clover: 1},
+		num: 69003,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Atom Bomb",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		selfdestruct: "always",
+		secondary: null,
+		target: "allAdjacent",
+		type: "Nuclear",
+		zMove: {basePower: 200},
+		isNonstandard: "Future",
+	},
+
+	radiation: {
+		availability: {clover: 1},
+		num: 487,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Radiation",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, mystery: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Nuclear' || !target.setType('Nuclear')) {
+				// Soak should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add('-fail', target);
+				return null;
+			}
+			this.add('-start', target, 'typechange', 'Nuclear');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Nuclear",
+		zMove: {boost: {spa: 1}},
+		contestType: "Cute",
+	},
 
 };
