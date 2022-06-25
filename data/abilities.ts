@@ -6293,4 +6293,23 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3,
 	},
 
+	asonehorse: {
+		onPreStart(pokemon) {
+			this.add('-ability', pokemon, 'Grim Neigh');
+			this.add('-ability', pokemon, 'Chilling Neigh');
+			
+		},
+				
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({spa: length}, source, source, this.dex.abilities.get('grimneigh'));
+				this.boost({atk: length}, source, source, this.dex.abilities.get('chillingneigh'));
+			}
+		},
+		isPermanent: true,
+		name: "As One (Horse)",
+		rating: 3.5,
+		num: 267,
+	},
+
 };
