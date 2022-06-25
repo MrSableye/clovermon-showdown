@@ -24655,11 +24655,13 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		selfdestruct: "always",
-		secondary: {
-			chance: 100,
-			boosts: {
-				def: -2,
-			},
+		secondary:  {
+			chance: 10,
+			status: 'brn',
+		},
+		onBasePower(basePower, pokemon, target) {
+			
+				return this.chainModify(2);
 		},
 		target: "normal",
 		type: "Ground",
