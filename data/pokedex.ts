@@ -33723,7 +33723,7 @@ export const Pokedex: { [speciesid: string]: SpeciesData } = {
 			0: "Big Brain",
 			1: "Inversion",
 			H: "Vital Spirit",
-			S: "Insomnia",
+			S: "Fur Coat",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,

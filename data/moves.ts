@@ -24002,7 +24002,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 42003,
 		accuracy: 100,
-		basePower: 120,
+		basePower: 150,
 		category: "Special",
 		name: "Implosion",
 		pp: 10,
