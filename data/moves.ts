@@ -24901,4 +24901,28 @@ export const Moves: { [moveid: string]: MoveData } = {
 		contestType: "Cute",
 	},
 
+	meltdown: {
+		availability: {clover: 1},
+		num: 557,
+		accuracy: 95,
+		basePower: 35,
+		category: "Physical",
+		name: "Meltdown",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spe: -1,
+				atk: -1,
+				spa: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Nuclear",
+		zMove: {basePower: 220},
+		contestType: "Cool",
+	},
+
 };
