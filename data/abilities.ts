@@ -6297,7 +6297,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onPreStart(pokemon) {
 			this.add('-ability', pokemon, 'Grim Neigh');
 			this.add('-ability', pokemon, 'Chilling Neigh');
-			
+			this.effectState.unnerved = true;
 		},
 				
 		onSourceAfterFaint(length, target, source, effect) {
