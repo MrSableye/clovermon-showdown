@@ -24710,7 +24710,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	obsidianhorn: {
 		availability: {clover: 1},
 		accuracy: 100,
-		basePower: 75,
+		basePower: 100,
 		category: "Physical",
 		name: "Obsidian Horn",
 		pp: 10,
