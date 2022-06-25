@@ -6308,8 +6308,9 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		isPermanent: true,
 		name: "As One (Horse)",
+		isNonstandard: "Future",
 		rating: 3.5,
-		num: 267,
+		
 	},
 
 };
