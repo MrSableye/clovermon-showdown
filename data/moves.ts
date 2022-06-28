@@ -22850,7 +22850,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	},
 	matingpress: {
 		accuracy: 100,
-		basePower: 25,
+		basePower: 90,
 		category: "Physical",
 		name: "Mating Press",
 		pp: 20,
@@ -24002,7 +24002,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		availability: {clover: 1},
 		num: 42003,
 		accuracy: 100,
-		basePower: 120,
+		basePower: 150,
 		category: "Special",
 		name: "Implosion",
 		pp: 10,
@@ -24523,7 +24523,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		accuracy: 100,
 		basePower: 50,
 		onHit(target, source, move) {
-			if (move.hit === 2) { move.type = 'Ground'; } else if (move.hit === 3) { move.type = 'Grass'; }
+			if (move.hit === 1) { move.type = 'Ground'; } else if (move.hit === 2) { move.type = 'Grass'; }
 		},
 		category: "Special",
 		name: "Topping Toss",
@@ -24569,7 +24569,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 			const success = !!this.heal(this.modify(pokemon.maxhp, 0.25));
 			return pokemon.cureStatus() || success;
 		},
-
 		secondary: null,
 		noSketch: true,
 		target: "self",
@@ -24597,17 +24596,17 @@ export const Moves: { [moveid: string]: MoveData } = {
 		self: {
 			onHit(source) {
 				this.field.setWeather('sandstorm');
+				const oldAbility = source.setAbility('sandrush');
+				if (oldAbility) {
+					this.add('-ability', source, 'Sand Rush', '[from] move: Sandy Snore');
+					return;
+				}
+				return false;
 			},
-		},
 
-		onHit(target, source) {
-			const oldAbility = source.setAbility('sandrush');
-			if (oldAbility) {
-				this.add('-ability', source, 'Sand Rush', '[from] move: Sandy Snore');
-				return;
-			}
-			return false;
-		},
+				
+			},
+		
 		noSketch: true,
 		target: "normal",
 		type: "Rock",
@@ -24656,11 +24655,13 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		selfdestruct: "always",
-		secondary: {
-			chance: 100,
-			boosts: {
-				def: -2,
-			},
+		secondary:  {
+			chance: 10,
+			status: 'brn',
+		},
+		onBasePower(basePower, pokemon, target) {
+			
+				return this.chainModify(2);
 		},
 		target: "normal",
 		type: "Ground",
@@ -24709,7 +24710,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	obsidianhorn: {
 		availability: {clover: 1},
 		accuracy: 100,
-		basePower: 75,
+		basePower: 100,
 		category: "Physical",
 		name: "Obsidian Horn",
 		pp: 10,
@@ -24749,4 +24750,179 @@ export const Moves: { [moveid: string]: MoveData } = {
 		isNonstandard: "Future",
 		noSketch: true,
 	},
+
+	heavenpierce: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 70,
+		category: "Physical",
+		name: "Heaven Pierce",
+		pp: 5,
+		priority: 0,
+		flags: {mirror: 1, defrost: 1},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+		},
+		ignoreAbility: true,
+		ignoreImmunity: {'Steel': true},
+		breaksProtect: true,
+		willCrit: true,
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "Steel",
+		contestType: "Cool",
+	},
+
+	fughamut: {
+		accuracy: true,
+		basePower: 90,
+		category: "Status",
+		name: "Fughamut",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1},
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+				if (!source.speciesState['parent']) {
+					this.add('-activate', source, 'move: Fughamut', '[of] ' + target);
+					const sourceSide = source.side;
+					const targetSet = target.set;
+					const childName = [
+						`${targetSet.species}, ${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.name}`,
+						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.name}`,
+						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.species}`,
+					].find((name) => name.length <= 18) || 'A Mere Child';
+					const baby = new Pokemon({
+						species: 'Rayquaza',
+						name: "Fug",
+						moves: ['Draco Meteor', 'Extreme Speed', 'Overheat', 'Dragon Ascent'],
+						item: 'Life Orb',
+					}, sourceSide);
+					baby.position = sourceSide.pokemon.length;
+					sourceSide.pokemon.push(baby);
+					sourceSide.pokemonLeft += 1;
+					this.add('teamsize', sourceSide.id, sourceSide.pokemon.length);
+					source.speciesState['parent'] = true;
+				} else {
+					this.add('-fail', source, 'move: Fughamut');
+				}
+			},
+		},
+		target: "normal",
+		type: "Dragon",
+		isNonstandard: "Future",
+	},
+
+	feedandseed: {
+		num: 738,
+		accuracy: 90,
+		basePower: 100,
+		category: "Physical",
+		isNonstandard: "LGPE",
+		name: "Feed and Seed",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent) {
+				return false;
+			}
+		},
+		onHit(target, source) {
+			if (target.hasType('Grass')) return null;
+			target.addVolatile('leechseed', source);
+			const oldAbility = target.setAbility('insomnia');
+			if (oldAbility) {
+				this.add('-ability', target, 'Insomnia', '[from] move: Feed and Seed');
+				if (target.status === 'slp') {
+					target.cureStatus();
+				}
+				return;
+			}
+		},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.setTerrain('grassyterrain');
+				},
+			},
+		},
+		target: "normal",
+		type: "Grass",
+		contestType: "Clever",
+	},
+	atombomb: {
+		availability: {clover: 1},
+		num: 69003,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Atom Bomb",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		selfdestruct: "always",
+		secondary: null,
+		target: "allAdjacent",
+		type: "Nuclear",
+		zMove: {basePower: 200},
+		isNonstandard: "Future",
+	},
+
+	radiation: {
+		availability: {clover: 1},
+		num: 487,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Radiation",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, mystery: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Nuclear' || !target.setType('Nuclear')) {
+				// Soak should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add('-fail', target);
+				return null;
+			}
+			this.add('-start', target, 'typechange', 'Nuclear');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Nuclear",
+		zMove: {boost: {spa: 1}},
+		contestType: "Cute",
+	},
+
+	meltdown: {
+		availability: {clover: 1},
+		num: 557,
+		accuracy: 95,
+		basePower: 35,
+		category: "Physical",
+		name: "Meltdown",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spe: -1,
+				atk: -1,
+				spa: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Nuclear",
+		zMove: {basePower: 220},
+		contestType: "Cool",
+	},
+
 };

@@ -6188,9 +6188,18 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onAnyEffectiveness(typemod, target, type, move) {
 			const godrejectionUser = this.effectState.target;
 			if (godrejectionUser !== this.activePokemon) return;
-			if (move.type === 'Dark' || move.type === 'Fighting' && type === 'Fairy' || type === 'Dragon') {
-				return 1;
-			}
+			if (move.type === 'Dark' && type === 'Fairy') {
+				return 1;}
+				else if (move.type === 'Fighting' && type === 'Fairy') {
+					return 1;}
+					else if (move.type === 'Fighting' && type === 'Fairy') {
+						return 1;}
+						else if (move.type === 'Fighting' && type === 'Dragon') {
+							return 1;}
+							else if (move.type === 'Dark' && type === 'Dragon') {
+								return 1;}
+							
+			
 		},
 		isBreakable: true,
 		name: "God Rejection",
@@ -6248,5 +6257,86 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3,
 		num: 178,
 	},
+	sneedboost: {
+		availability: {clover: 1},
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.activeTurns) {
+				this.boost({spe: 1, accuracy: 1});
+			}
+		},
+		name: "Sneed Boost",
+		isNonstandard: "Future",
+		rating: 4.5,
+		num: 3,
+	},
+
+	armorplate: {
+		availability: {clover: 1},
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
+				move.type = 'Steel';
+				move.pixilateBoosted = true;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.pixilateBoosted) return this.chainModify([4915, 4096]);
+		},
+		name: "Armor Plate",
+		isNonstandard: "Future",
+		rating: 3,
+	},
+
+	asonehorse: {
+		onPreStart(pokemon) {
+			this.add('-ability', pokemon, 'Grim Neigh');
+			this.add('-ability', pokemon, 'Chilling Neigh');
+			this.effectState.unnerved = true;
+		},
+				
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({spa: length}, source, source, this.dex.abilities.get('grimneigh'));
+				this.boost({atk: length}, source, source, this.dex.abilities.get('chillingneigh'));
+			}
+		},
+		isPermanent: true,
+		name: "As One (Horse)",
+		isNonstandard: "Future",
+		rating: 3.5,
+		
+	},
+
+
+	copypower: {
+		availability: {clover: 1},
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				let statName = 'atk';
+				let bestStat = 0;
+				let s: StatIDExceptHP;
+				for (s in source.storedStats) {
+					if (source.storedStats[s] > bestStat) {
+						statName = s;
+						bestStat = source.storedStats[s];
+					}
+				}
+				this.boost({[statName]: length}, source);
+				this.add('-ability', source, target.getAbility());
+					
+			}
+		},
+		name: "Copy Power",
+		isNonstandard: "Future",
+		rating: 3.5,
+		num: 224,
+	},
+
 
 };
