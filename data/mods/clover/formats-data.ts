@@ -15299,17 +15299,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
-	sokumite: {
+	jarumite: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP LC",
 	},
-	serpervent: {
+	serpotine: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP NFE",
 	},
-	tsemani: {
+	tsenami: {
 		inherit: true,
 		isNonstandard: "CAP",
 		tier: "CAP",

@@ -9039,6 +9039,21 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
+	jarumite: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	serpotine: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	tsenami: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 	floribel: {
 		availability: {clover: 1},
 		isNonstandard: "Future",
