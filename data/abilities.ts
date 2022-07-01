@@ -876,6 +876,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		num: 88,
 	},
 	dragonsmaw: {
+		availability: {clover: 1},
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Dragon') {
@@ -4294,7 +4295,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 
 			const additionalBannedAbilities = [
 				// Zen Mode included here for compatability with Gen 5-6
-				'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode',
+				'noability', 'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode', 'zenmonke',
 			];
 			const possibleTargets = pokemon.adjacentFoes().filter(target => (
 				!target.getAbility().isPermanent && !additionalBannedAbilities.includes(target.ability)
@@ -6060,11 +6061,35 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		availability: {clover: 1},
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Simionach' || pokemon.transformed) return;
-			if (pokemon.species.id === 'simionach') {
-				pokemon.formeChange('Simionach-Zen');
+			if (pokemon.hp < pokemon.maxhp) {
+				if (pokemon.species.id === 'simionach') {
+					pokemon.formeChange('Simionach-Zen');
+				}
+			} else {
+				if (pokemon.species.id === 'simionachzen') {
+					pokemon.formeChange('Simionach');
+				}
 			}
 		},
+		onResidualOrder: 29,
+		onResidual(pokemon) {
+			if (
+				pokemon.baseSpecies.baseSpecies !== 'Simionach' ||
+				pokemon.transformed || !pokemon.hp
+			) return;
+			if (pokemon.hp < pokemon.maxhp) {
+				if (pokemon.species.id === 'simionach') {
+					pokemon.formeChange('Simionach-Zen');
+				}
+			} else {
+				if (pokemon.species.id === 'simionachzen') {
+					pokemon.formeChange('Simionach');
+				}
+			}
+		},
+		isPermanent: true,
 		name: "Zen Monke",
+		rating: 3,
 		isNonstandard: "Future",
 	},
 
