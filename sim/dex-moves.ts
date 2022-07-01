@@ -258,6 +258,8 @@ export interface MoveData extends EffectData, MoveEventMethods, HitEffect {
 	noSketch?: boolean;
 	stallingMove?: boolean;
 	baseMove?: string;
+
+	availability?: AnyObject;
 }
 
 export type ModdedMoveData = MoveData | Partial<Omit<MoveData, 'name'>> & {
@@ -453,6 +455,8 @@ export class DataMove extends BasicEffect implements Readonly<BasicEffect & Move
 
 	readonly volatileStatus?: ID;
 
+	readonly availability?: AnyObject;
+
 	constructor(data: AnyObject) {
 		super(data);
 		// eslint-disable-next-line @typescript-eslint/no-this-alias
@@ -494,6 +498,7 @@ export class DataMove extends BasicEffect implements Readonly<BasicEffect & Move
 		this.noSketch = !!data.noSketch;
 		this.stab = data.stab || undefined;
 		this.volatileStatus = typeof data.volatileStatus === 'string' ? (data.volatileStatus as ID) : undefined;
+		this.availability = data.availability || {};
 
 		if (this.category !== 'Status' && !this.maxMove && this.id !== 'struggle') {
 			this.maxMove = {basePower: 1};

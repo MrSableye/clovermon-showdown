@@ -2044,7 +2044,9 @@ export class TeamValidator {
 
 					if (learned.charAt(1) === 'L') {
 						// special checking for level-up moves
-						if (level >= parseInt(learned.substr(2)) || learnedGen === 7) {
+						if (this.dex.currentMod === 'clover' && species.canHatch) {
+							// Clover allows all level-up moves to be passed down as egg moves
+						} else if (level >= parseInt(learned.substr(2)) || learnedGen === 7) {
 							// we're past the required level to learn it
 							// (gen 7 level-up moves can be relearnered at any level)
 							// falls through to LMT check below
@@ -2067,14 +2069,15 @@ export class TeamValidator {
 							// current-gen level-up, TM or tutor moves:
 							//   always available
 							if (learned !== '8E' && babyOnly) setSources.babyOnly = babyOnly;
-							if (!moveSources.moveEvoCarryCount) return null;
 						}
 						// past-gen level-up, TM, or tutor moves:
 						//   available as long as the source gen was or was before this gen
 						if (learned.charAt(1) === 'R') {
 							moveSources.restrictedMove = moveid;
 						}
-						limit1 = false;
+						if (learned !== '8E') {
+							limit1 = false;
+						}
 						moveSources.addGen(learnedGen);
 					} else if (learned.charAt(1) === 'E') {
 						// egg moves:

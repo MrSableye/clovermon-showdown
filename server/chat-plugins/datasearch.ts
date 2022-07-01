@@ -24,7 +24,9 @@ interface DexOrGroup {
 	resists: {[k: string]: boolean};
 	weak: {[k: string]: boolean};
 	stats: {[k: string]: {[k in Direction]: number}};
+	mods: {[k: string]: boolean};
 	skip: boolean;
+	availabilities: {[k: string]: boolean};
 }
 
 interface MoveOrGroup {
@@ -44,6 +46,8 @@ interface MoveOrGroup {
 	targets: {[k: string]: boolean};
 	skip: boolean;
 	multihit: boolean;
+	mods: {[k: string]: boolean};
+	availabilities: {[k: string]: boolean};
 }
 
 type Direction = 'less' | 'greater' | 'equal';
@@ -521,6 +525,9 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 		attack: 'atk', defense: 'def', specialattack: 'spa', spc: 'spa', special: 'spa', spatk: 'spa',
 		specialdefense: 'spd', spdef: 'spd', speed: 'spe', wt: 'weight', ht: 'height', generation: 'gen',
 	};
+	const allAvailabilities: {[k: string]: string} = {
+		clover: 'clover',
+	};
 	let showAll = false;
 	let sort = null;
 	let megaSearch = null;
@@ -556,7 +563,8 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 	for (const andGroup of splitTarget) {
 		const orGroup: DexOrGroup = {
 			abilities: {}, tiers: {}, doublesTiers: {}, colors: {}, 'egg groups': {}, formes: {},
-			gens: {}, moves: {}, types: {}, resists: {}, weak: {}, stats: {}, skip: false,
+			gens: {}, moves: {}, types: {}, resists: {}, weak: {}, stats: {}, mods: {}, skip: false,
+			availabilities: {},
 		};
 		const parameters = andGroup.split("|");
 		if (parameters.length > 3) return {error: "No more than 3 alternatives for each parameter may be used."};
@@ -665,6 +673,12 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 				const invalid = validParameter("egg groups", target, isNotSearch, target);
 				if (invalid) return {error: invalid};
 				orGroup['egg groups'][target] = !isNotSearch;
+				continue;
+			}
+
+			if (toID(target) in allAvailabilities) {
+				target = allAvailabilities[toID(target)];
+				orGroup.availabilities[target] = !isNotSearch;
 				continue;
 			}
 
@@ -965,6 +979,18 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 				}
 			}
 
+			for (const availability in alts.availabilities) {
+				const isAvailabilityRequired = alts.availabilities[availability];
+				if (isAvailabilityRequired && dex[mon].availability?.[availability] === 1) {
+					matched = true;
+					break;
+				}
+				if (!isAvailabilityRequired && dex[mon].availability?.[availability] !== 1) {
+					matched = true;
+					break;
+				}
+			}
+
 			if (alts.tiers && Object.keys(alts.tiers).length) {
 				let tier = dex[mon].tier;
 				if (tier.startsWith('(') && tier !== '(PU)') tier = tier.slice(1, -1) as TierTypes.Singles;
@@ -1120,6 +1146,11 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 			}
 			if (matched) continue;
 
+			for (const altMod in alts.mods) {
+				if (dex[mon].availability?.[altMod]) matched = true;
+			}
+			if (matched) continue;
+
 			delete dex[mon];
 		}
 	}
@@ -1212,7 +1243,7 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 	const allFlags = [
 		'bypasssub', 'bite', 'bullet', 'charge', 'contact', 'dance', 'defrost', 'gravity', 'highcrit', 'mirror',
 		'multihit', 'ohko', 'powder', 'protect', 'pulse', 'punch', 'recharge', 'reflectable', 'secondary',
-		'snatch', 'sound', 'zmove', 'maxmove', 'gmaxmove', 'protection',
+		'snatch', 'sound', 'zmove', 'maxmove', 'gmaxmove', 'protection', 'blade', 'kick', 'bone',
 	];
 	const allStatus = ['psn', 'tox', 'brn', 'par', 'frz', 'slp'];
 	const allVolatileStatus = ['flinch', 'confusion', 'partiallytrapped'];
@@ -1238,6 +1269,9 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 	for (const type of mod.types.all()) {
 		allTypes[type.id] = type.name;
 	}
+	const allAvailabilities: {[k: string]: string} = {
+		clover: 'clover',
+	};
 	let showAll = false;
 	let sort: string | null = null;
 	const targetMons: {name: string, shouldBeExcluded: boolean}[] = [];
@@ -1246,7 +1280,9 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 	for (const arg of splitTarget) {
 		const orGroup: MoveOrGroup = {
 			types: {}, categories: {}, contestTypes: {}, flags: {}, gens: {}, other: {}, mon: {}, property: {},
-			boost: {}, lower: {}, zboost: {}, status: {}, volatileStatus: {}, targets: {}, skip: false, multihit: false,
+			boost: {}, lower: {}, zboost: {}, status: {}, volatileStatus: {}, targets: {}, skip: false,
+			multihit: false, mods: {},
+			availabilities: {},
 		};
 		const parameters = arg.split("|");
 		if (parameters.length > 3) return {error: "No more than 3 alternatives for each parameter may be used."};
@@ -1293,6 +1329,12 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 					return {error: 'A search cannot both exclude and include a contest condition.'};
 				}
 				orGroup.contestTypes[target] = !isNotSearch;
+				continue;
+			}
+
+			if (toID(target) in allAvailabilities) {
+				target = allAvailabilities[toID(target)];
+				orGroup['availabilities'][target] = !isNotSearch;
 				continue;
 			}
 
@@ -1693,6 +1735,18 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 				if (Object.values(alts.targets).includes(false) && alts.targets[move.target] !== false) continue;
 			}
 
+			for (const availability in alts.availabilities) {
+				const isAvailabilityRequired = alts.availabilities[availability];
+				if (isAvailabilityRequired && move.availability?.[availability] === 1) {
+					matched = true;
+					break;
+				}
+				if (!isAvailabilityRequired && move.availability?.[availability] !== 1) {
+					matched = true;
+					break;
+				}
+			}
+
 			for (const flag in alts.flags) {
 				if (flag === 'secondary') {
 					if (!(move.secondary || move.secondaries) === !alts.flags[flag]) {
@@ -1870,6 +1924,10 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 			if (alts.other.pivot !== undefined) {
 				const pivot = move.selfSwitch && move.id !== 'batonpass';
 				if (pivot && alts.other.pivot || !(pivot || alts.other.pivot)) matched = true;
+			}
+			if (matched) continue;
+			for (const altMod in alts.mods) {
+				if (move.availability?.[altMod]) matched = true;
 			}
 			if (matched) continue;
 

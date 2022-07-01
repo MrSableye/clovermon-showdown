@@ -1,4 +1,4 @@
-export const Items: {[itemid: string]: ItemData} = {
+export const Items: { [itemid: string]: ItemData } = {
 	abomasite: {
 		name: "Abomasite",
 		spritenum: 575,
@@ -116,6 +116,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	aguavberry: {
 		name: "Aguav Berry",
+		availability: {clover: 1},
 		spritenum: 5,
 		isBerry: true,
 		naturalGift: {
@@ -141,6 +142,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	airballoon: {
 		name: "Air Balloon",
+		availability: {clover: 1},
 		spritenum: 6,
 		fling: {
 			basePower: 10,
@@ -224,6 +226,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	apicotberry: {
 		name: "Apicot Berry",
+		availability: {clover: 1},
 		spritenum: 10,
 		isBerry: true,
 		naturalGift: {
@@ -253,6 +256,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	aspearberry: {
 		name: "Aspear Berry",
+		availability: {clover: 1},
 		spritenum: 13,
 		isBerry: true,
 		naturalGift: {
@@ -274,6 +278,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	assaultvest: {
 		name: "Assault Vest",
+		availability: {clover: 1},
 		spritenum: 581,
 		fling: {
 			basePower: 80,
@@ -308,6 +313,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	babiriberry: {
 		name: "Babiri Berry",
+		availability: {clover: 1},
 		spritenum: 17,
 		isBerry: true,
 		naturalGift: {
@@ -380,6 +386,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	berryjuice: {
 		name: "Berry Juice",
+		availability: {clover: 1},
 		spritenum: 22,
 		fling: {
 			basePower: 30,
@@ -405,13 +412,14 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	bigroot: {
 		name: "Big Root",
+		availability: {clover: 1},
 		spritenum: 29,
 		fling: {
 			basePower: 10,
 		},
 		onTryHealPriority: 1,
 		onTryHeal(damage, target, source, effect) {
-			const heals = ['drain', 'leechseed', 'ingrain', 'aquaring', 'strengthsap'];
+			const heals = ['drain', 'leechseed', 'ingrain', 'aquaring', 'strengthsap', 'livewire'];
 			if (heals.includes(effect.id)) {
 				return this.chainModify([5324, 4096]);
 			}
@@ -421,6 +429,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	bindingband: {
 		name: "Binding Band",
+		availability: {clover: 1},
 		spritenum: 31,
 		fling: {
 			basePower: 30,
@@ -431,6 +440,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	blackbelt: {
 		name: "Black Belt",
+		availability: {clover: 1},
 		spritenum: 32,
 		fling: {
 			basePower: 30,
@@ -446,6 +456,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	blacksludge: {
 		name: "Black Sludge",
+		availability: {clover: 1},
 		spritenum: 34,
 		fling: {
 			basePower: 30,
@@ -464,6 +475,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	blackglasses: {
 		name: "Black Glasses",
+		availability: {clover: 1},
 		spritenum: 35,
 		fling: {
 			basePower: 30,
@@ -549,6 +561,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	bottlecap: {
 		name: "Bottle Cap",
+		availability: {clover: 1},
 		spritenum: 696,
 		fling: {
 			basePower: 30,
@@ -558,6 +571,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	brightpowder: {
 		name: "Bright Powder",
+		availability: {clover: 1},
 		spritenum: 51,
 		fling: {
 			basePower: 10,
@@ -573,6 +587,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	buggem: {
 		name: "Bug Gem",
+		availability: {clover: 1},
 		spritenum: 53,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -614,6 +629,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	burndrive: {
 		name: "Burn Drive",
+		availability: {clover: 1},
 		spritenum: 54,
 		onTakeItem(item, pokemon, source) {
 			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
@@ -660,6 +676,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	charcoal: {
 		name: "Charcoal",
+		availability: {clover: 1},
 		spritenum: 61,
 		fling: {
 			basePower: 30,
@@ -703,6 +720,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	chartiberry: {
 		name: "Charti Berry",
+		availability: {clover: 1},
 		spritenum: 62,
 		isBerry: true,
 		naturalGift: {
@@ -727,6 +745,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	cheriberry: {
 		name: "Cheri Berry",
+		availability: {clover: 1},
 		spritenum: 63,
 		isBerry: true,
 		naturalGift: {
@@ -756,6 +775,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	chestoberry: {
 		name: "Chesto Berry",
+		availability: {clover: 1},
 		spritenum: 65,
 		isBerry: true,
 		naturalGift: {
@@ -777,6 +797,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	chilanberry: {
 		name: "Chilan Berry",
+		availability: {clover: 1},
 		spritenum: 66,
 		isBerry: true,
 		naturalGift: {
@@ -801,6 +822,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	chilldrive: {
 		name: "Chill Drive",
+		availability: {clover: 1},
 		spritenum: 67,
 		onTakeItem(item, pokemon, source) {
 			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
@@ -825,6 +847,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	choiceband: {
 		name: "Choice Band",
+		availability: {clover: 1},
 		spritenum: 68,
 		fling: {
 			basePower: 10,
@@ -849,6 +872,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	choicescarf: {
 		name: "Choice Scarf",
+		availability: {clover: 1},
 		spritenum: 69,
 		fling: {
 			basePower: 10,
@@ -872,6 +896,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	choicespecs: {
 		name: "Choice Specs",
+		availability: {clover: 1},
 		spritenum: 70,
 		fling: {
 			basePower: 10,
@@ -896,6 +921,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	chopleberry: {
 		name: "Chople Berry",
+		availability: {clover: 1},
 		spritenum: 71,
 		isBerry: true,
 		naturalGift: {
@@ -939,6 +965,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	cobaberry: {
 		name: "Coba Berry",
+		availability: {clover: 1},
 		spritenum: 76,
 		isBerry: true,
 		naturalGift: {
@@ -963,6 +990,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	colburberry: {
 		name: "Colbur Berry",
+		availability: {clover: 1},
 		spritenum: 78,
 		isBerry: true,
 		naturalGift: {
@@ -1019,6 +1047,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	custapberry: {
 		name: "Custap Berry",
+		availability: {clover: 1},
 		spritenum: 86,
 		isBerry: true,
 		naturalGift: {
@@ -1043,6 +1072,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	damprock: {
 		name: "Damp Rock",
+		availability: {clover: 1},
 		spritenum: 88,
 		fling: {
 			basePower: 60,
@@ -1052,6 +1082,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	darkgem: {
 		name: "Dark Gem",
+		availability: {clover: 1},
 		spritenum: 89,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -1145,6 +1176,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	destinyknot: {
 		name: "Destiny Knot",
+		availability: {clover: 1},
 		spritenum: 95,
 		fling: {
 			basePower: 10,
@@ -1174,6 +1206,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	diveball: {
 		name: "Dive Ball",
+		availability: {clover: 1},
 		spritenum: 101,
 		num: 7,
 		gen: 3,
@@ -1191,6 +1224,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	dousedrive: {
 		name: "Douse Drive",
+		availability: {clover: 1},
 		spritenum: 103,
 		onTakeItem(item, pokemon, source) {
 			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
@@ -1227,6 +1261,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	dragonfang: {
 		name: "Dragon Fang",
+		availability: {clover: 1},
 		spritenum: 106,
 		fling: {
 			basePower: 70,
@@ -1242,6 +1277,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	dragongem: {
 		name: "Dragon Gem",
+		availability: {clover: 1},
 		spritenum: 107,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -1313,6 +1349,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	dreamball: {
 		name: "Dream Ball",
+		availability: {clover: 1},
 		spritenum: 111,
 		num: 576,
 		gen: 5,
@@ -1342,6 +1379,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	duskball: {
 		name: "Dusk Ball",
+		availability: {clover: 1},
 		spritenum: 115,
 		num: 13,
 		gen: 4,
@@ -1390,6 +1428,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	ejectbutton: {
 		name: "Eject Button",
+		availability: {clover: 1},
 		spritenum: 118,
 		fling: {
 			basePower: 30,
@@ -1451,6 +1490,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	electricgem: {
 		name: "Electric Gem",
+		availability: {clover: 1},
 		spritenum: 120,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -1516,6 +1556,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	energypowder: {
 		name: "Energy Powder",
+		availability: {clover: 1},
 		spritenum: 123,
 		fling: {
 			basePower: 30,
@@ -1525,6 +1566,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	enigmaberry: {
 		name: "Enigma Berry",
+		availability: {clover: 1},
 		spritenum: 124,
 		isBerry: true,
 		naturalGift: {
@@ -1547,6 +1589,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	eviolite: {
 		name: "Eviolite",
+		availability: {clover: 1},
 		spritenum: 130,
 		fling: {
 			basePower: 40,
@@ -1568,6 +1611,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	expertbelt: {
 		name: "Expert Belt",
+		availability: {clover: 1},
 		spritenum: 132,
 		fling: {
 			basePower: 10,
@@ -1594,6 +1638,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	fairygem: {
 		name: "Fairy Gem",
+		availability: {clover: 1},
 		spritenum: 611,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -1630,6 +1675,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	fightinggem: {
 		name: "Fighting Gem",
+		availability: {clover: 1},
 		spritenum: 139,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -1671,6 +1717,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	figyberry: {
 		name: "Figy Berry",
+		availability: {clover: 1},
 		spritenum: 140,
 		isBerry: true,
 		naturalGift: {
@@ -1696,6 +1743,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	firegem: {
 		name: "Fire Gem",
+		availability: {clover: 1},
 		spritenum: 141,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -1726,6 +1774,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	firestone: {
 		name: "Fire Stone",
+		availability: {clover: 1},
 		spritenum: 142,
 		fling: {
 			basePower: 30,
@@ -1768,6 +1817,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	flameorb: {
 		name: "Flame Orb",
+		availability: {clover: 1},
 		spritenum: 145,
 		fling: {
 			basePower: 30,
@@ -1825,6 +1875,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	flyinggem: {
 		name: "Flying Gem",
+		availability: {clover: 1},
 		spritenum: 149,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -1866,6 +1917,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	focusband: {
 		name: "Focus Band",
+		availability: {clover: 1},
 		spritenum: 150,
 		fling: {
 			basePower: 10,
@@ -1882,6 +1934,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	focussash: {
 		name: "Focus Sash",
+		availability: {clover: 1},
 		spritenum: 151,
 		fling: {
 			basePower: 10,
@@ -1984,6 +2037,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	ganlonberry: {
 		name: "Ganlon Berry",
+		availability: {clover: 1},
 		spritenum: 158,
 		isBerry: true,
 		naturalGift: {
@@ -2045,6 +2099,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	ghostgem: {
 		name: "Ghost Gem",
+		availability: {clover: 1},
 		spritenum: 161,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -2100,6 +2155,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	goldbottlecap: {
 		name: "Gold Bottle Cap",
+		availability: {clover: 1},
 		spritenum: 697,
 		fling: {
 			basePower: 30,
@@ -2109,6 +2165,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	grassgem: {
 		name: "Grass Gem",
+		availability: {clover: 1},
 		spritenum: 172,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -2174,6 +2231,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	greatball: {
 		name: "Great Ball",
+		availability: {clover: 1},
 		spritenum: 174,
 		num: 3,
 		gen: 1,
@@ -2181,6 +2239,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	grepaberry: {
 		name: "Grepa Berry",
+		availability: {clover: 1},
 		spritenum: 178,
 		isBerry: true,
 		naturalGift: {
@@ -2193,6 +2252,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	gripclaw: {
 		name: "Grip Claw",
+		availability: {clover: 1},
 		spritenum: 179,
 		fling: {
 			basePower: 90,
@@ -2226,6 +2286,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	groundgem: {
 		name: "Ground Gem",
+		availability: {clover: 1},
 		spritenum: 182,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -2281,6 +2342,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	habanberry: {
 		name: "Haban Berry",
+		availability: {clover: 1},
 		spritenum: 185,
 		isBerry: true,
 		naturalGift: {
@@ -2305,6 +2367,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	hardstone: {
 		name: "Hard Stone",
+		availability: {clover: 1},
 		spritenum: 187,
 		fling: {
 			basePower: 100,
@@ -2320,6 +2383,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	healball: {
 		name: "Heal Ball",
+		availability: {clover: 1},
 		spritenum: 188,
 		num: 14,
 		gen: 4,
@@ -2327,6 +2391,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	heatrock: {
 		name: "Heat Rock",
+		availability: {clover: 1},
 		spritenum: 193,
 		fling: {
 			basePower: 60,
@@ -2377,6 +2442,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	hondewberry: {
 		name: "Hondew Berry",
+		availability: {clover: 1},
 		spritenum: 213,
 		isBerry: true,
 		naturalGift: {
@@ -2403,6 +2469,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	iapapaberry: {
 		name: "Iapapa Berry",
+		availability: {clover: 1},
 		spritenum: 217,
 		isBerry: true,
 		naturalGift: {
@@ -2428,6 +2495,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	icegem: {
 		name: "Ice Gem",
+		availability: {clover: 1},
 		spritenum: 218,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -2499,6 +2567,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	icyrock: {
 		name: "Icy Rock",
+		availability: {clover: 1},
 		spritenum: 221,
 		fling: {
 			basePower: 40,
@@ -2540,6 +2609,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	ironball: {
 		name: "Iron Ball",
+		availability: {clover: 1},
 		spritenum: 224,
 		fling: {
 			basePower: 130,
@@ -2608,6 +2678,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	kasibberry: {
 		name: "Kasib Berry",
+		availability: {clover: 1},
 		spritenum: 233,
 		isBerry: true,
 		naturalGift: {
@@ -2632,6 +2703,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	kebiaberry: {
 		name: "Kebia Berry",
+		availability: {clover: 1},
 		spritenum: 234,
 		isBerry: true,
 		naturalGift: {
@@ -2676,6 +2748,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	kelpsyberry: {
 		name: "Kelpsy Berry",
+		availability: {clover: 1},
 		spritenum: 235,
 		isBerry: true,
 		naturalGift: {
@@ -2702,6 +2775,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	kingsrock: {
 		name: "King's Rock",
+		availability: {clover: 1},
 		spritenum: 236,
 		fling: {
 			basePower: 30,
@@ -2736,6 +2810,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	laggingtail: {
 		name: "Lagging Tail",
+		availability: {clover: 1},
 		spritenum: 237,
 		fling: {
 			basePower: 10,
@@ -2746,6 +2821,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	lansatberry: {
 		name: "Lansat Berry",
+		availability: {clover: 1},
 		spritenum: 238,
 		isBerry: true,
 		naturalGift: {
@@ -2793,6 +2869,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	laxincense: {
 		name: "Lax Incense",
+		availability: {clover: 1},
 		spritenum: 240,
 		fling: {
 			basePower: 10,
@@ -2808,6 +2885,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	leafstone: {
 		name: "Leaf Stone",
+		availability: {clover: 1},
 		spritenum: 241,
 		fling: {
 			basePower: 30,
@@ -2832,6 +2910,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	leftovers: {
 		name: "Leftovers",
+		availability: {clover: 1},
 		spritenum: 242,
 		fling: {
 			basePower: 10,
@@ -2846,6 +2925,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	leppaberry: {
 		name: "Leppa Berry",
+		availability: {clover: 1},
 		spritenum: 244,
 		isBerry: true,
 		naturalGift: {
@@ -2878,6 +2958,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	liechiberry: {
 		name: "Liechi Berry",
+		availability: {clover: 1},
 		spritenum: 248,
 		isBerry: true,
 		naturalGift: {
@@ -2897,6 +2978,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	lifeorb: {
 		name: "Life Orb",
+		availability: {clover: 1},
 		spritenum: 249,
 		fling: {
 			basePower: 30,
@@ -2914,6 +2996,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	lightball: {
 		name: "Light Ball",
+		availability: {clover: 1},
 		spritenum: 251,
 		fling: {
 			basePower: 30,
@@ -2921,22 +3004,23 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Pikachu') {
+			if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.species.name === 'Blobbos-Pika' || pokemon.baseSpecies.baseSpecies === 'Chanto' || pokemon.baseSpecies.baseSpecies === 'Ampstar') {
 				return this.chainModify(2);
 			}
 		},
 		onModifySpAPriority: 1,
 		onModifySpA(spa, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Pikachu') {
+			if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.species.name === 'Blobbos-Pika' || pokemon.baseSpecies.baseSpecies === 'Pikotton' || pokemon.baseSpecies.baseSpecies === 'Chanto' || pokemon.baseSpecies.baseSpecies === 'Ampstar') {
 				return this.chainModify(2);
 			}
 		},
-		itemUser: ["Pikachu", "Pikachu-Cosplay", "Pikachu-Rock-Star", "Pikachu-Belle", "Pikachu-Pop-Star", "Pikachu-PhD", "Pikachu-Libre", "Pikachu-Original", "Pikachu-Hoenn", "Pikachu-Sinnoh", "Pikachu-Unova", "Pikachu-Kalos", "Pikachu-Alola", "Pikachu-Partner", "Pikachu-Starter", "Pikachu-World"],
+		itemUser: ["Pikachu", "Pikachu-Cosplay", "Pikachu-Rock-Star", "Pikachu-Belle", "Pikachu-Pop-Star", "Pikachu-PhD", "Pikachu-Libre", "Pikachu-Original", "Pikachu-Hoenn", "Pikachu-Sinnoh", "Pikachu-Unova", "Pikachu-Kalos", "Pikachu-Alola", "Pikachu-Partner", "Pikachu-Starter", "Pikachu-World", "Ampstar", "Blobbos-Pika"],
 		num: 236,
 		gen: 2,
 	},
 	lightclay: {
 		name: "Light Clay",
+		availability: {clover: 1},
 		spritenum: 252,
 		fling: {
 			basePower: 30,
@@ -2996,7 +3080,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			basePower: 40,
 		},
 		onModifyCritRatio(critRatio, user) {
-			if (user.baseSpecies.name === 'Chansey') {
+			if (user.baseSpecies.name === 'Chansey' || user.baseSpecies.name === 'Fucker') {
 				return critRatio + 2;
 			}
 		},
@@ -3007,6 +3091,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	lumberry: {
 		name: "Lum Berry",
+		availability: {clover: 1},
 		spritenum: 262,
 		isBerry: true,
 		naturalGift: {
@@ -3082,6 +3167,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	luxuryball: {
 		name: "Luxury Ball",
+		availability: {clover: 1},
 		spritenum: 266,
 		num: 11,
 		gen: 3,
@@ -3100,6 +3186,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	machobrace: {
 		name: "Macho Brace",
+		availability: {clover: 1},
 		spritenum: 269,
 		ignoreKlutz: true,
 		fling: {
@@ -3122,6 +3209,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	magnet: {
 		name: "Magnet",
+		availability: {clover: 1},
 		spritenum: 273,
 		fling: {
 			basePower: 30,
@@ -3137,6 +3225,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	magoberry: {
 		name: "Mago Berry",
+		availability: {clover: 1},
 		spritenum: 274,
 		isBerry: true,
 		naturalGift: {
@@ -3230,6 +3319,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	masterball: {
 		name: "Master Ball",
+		availability: {clover: 1},
 		spritenum: 276,
 		num: 1,
 		gen: 1,
@@ -3286,6 +3376,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	mentalherb: {
 		name: "Mental Herb",
+		availability: {clover: 1},
 		spritenum: 285,
 		fling: {
 			basePower: 10,
@@ -3338,6 +3429,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	metalcoat: {
 		name: "Metal Coat",
+		availability: {clover: 1},
 		spritenum: 286,
 		fling: {
 			basePower: 30,
@@ -3353,6 +3445,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	metalpowder: {
 		name: "Metal Powder",
+		availability: {clover: 1},
 		fling: {
 			basePower: 10,
 		},
@@ -3514,6 +3607,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	miracleseed: {
 		name: "Miracle Seed",
+		availability: {clover: 1},
 		fling: {
 			basePower: 30,
 		},
@@ -3559,6 +3653,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	moonstone: {
 		name: "Moon Stone",
+		availability: {clover: 1},
 		spritenum: 295,
 		fling: {
 			basePower: 30,
@@ -3583,6 +3678,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	mysticwater: {
 		name: "Mystic Water",
+		availability: {clover: 1},
 		spritenum: 300,
 		fling: {
 			basePower: 30,
@@ -3598,6 +3694,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	nanabberry: {
 		name: "Nanab Berry",
+		availability: {clover: 1},
 		spritenum: 302,
 		isBerry: true,
 		naturalGift: {
@@ -3611,6 +3708,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	nestball: {
 		name: "Nest Ball",
+		availability: {clover: 1},
 		spritenum: 303,
 		num: 8,
 		gen: 3,
@@ -3618,6 +3716,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	netball: {
 		name: "Net Ball",
+		availability: {clover: 1},
 		spritenum: 304,
 		num: 6,
 		gen: 3,
@@ -3625,6 +3724,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	nevermeltice: {
 		name: "Never-Melt Ice",
+		availability: {clover: 1},
 		spritenum: 305,
 		fling: {
 			basePower: 30,
@@ -3640,6 +3740,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	nomelberry: {
 		name: "Nomel Berry",
+		availability: {clover: 1},
 		spritenum: 306,
 		isBerry: true,
 		naturalGift: {
@@ -3653,6 +3754,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	normalgem: {
 		name: "Normal Gem",
+		availability: {clover: 1},
 		spritenum: 307,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -3677,6 +3779,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	occaberry: {
 		name: "Occa Berry",
+		availability: {clover: 1},
 		spritenum: 311,
 		isBerry: true,
 		naturalGift: {
@@ -3726,6 +3829,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	oranberry: {
 		name: "Oran Berry",
+		availability: {clover: 1},
 		spritenum: 319,
 		isBerry: true,
 		naturalGift: {
@@ -3778,6 +3882,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	passhoberry: {
 		name: "Passho Berry",
+		availability: {clover: 1},
 		spritenum: 329,
 		isBerry: true,
 		naturalGift: {
@@ -3802,6 +3907,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	payapaberry: {
 		name: "Payapa Berry",
+		availability: {clover: 1},
 		spritenum: 330,
 		isBerry: true,
 		naturalGift: {
@@ -3826,6 +3932,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	pechaberry: {
 		name: "Pecha Berry",
+		availability: {clover: 1},
 		spritenum: 333,
 		isBerry: true,
 		naturalGift: {
@@ -3847,6 +3954,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	persimberry: {
 		name: "Persim Berry",
+		availability: {clover: 1},
 		spritenum: 334,
 		isBerry: true,
 		naturalGift: {
@@ -3866,6 +3974,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	petayaberry: {
 		name: "Petaya Berry",
+		availability: {clover: 1},
 		spritenum: 335,
 		isBerry: true,
 		naturalGift: {
@@ -3977,6 +4086,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	poisonbarb: {
 		name: "Poison Barb",
+		availability: {clover: 1},
 		spritenum: 343,
 		fling: {
 			basePower: 70,
@@ -3993,6 +4103,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	poisongem: {
 		name: "Poison Gem",
+		availability: {clover: 1},
 		spritenum: 344,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -4034,6 +4145,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	pokeball: {
 		name: "Poke Ball",
+		availability: {clover: 1},
 		spritenum: 345,
 		num: 4,
 		gen: 1,
@@ -4041,6 +4153,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	pomegberry: {
 		name: "Pomeg Berry",
+		availability: {clover: 1},
 		spritenum: 351,
 		isBerry: true,
 		naturalGift: {
@@ -4113,6 +4226,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		name: "Power Herb",
+		availability: {clover: 1},
 		spritenum: 358,
 		fling: {
 			basePower: 10,
@@ -4148,6 +4262,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	premierball: {
 		name: "Premier Ball",
+		availability: {clover: 1},
 		spritenum: 363,
 		num: 12,
 		gen: 3,
@@ -4194,6 +4309,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	psychicgem: {
 		name: "Psychic Gem",
+		availability: {clover: 1},
 		spritenum: 369,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -4258,6 +4374,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	qualotberry: {
 		name: "Qualot Berry",
+		availability: {clover: 1},
 		spritenum: 371,
 		isBerry: true,
 		naturalGift: {
@@ -4270,6 +4387,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	quickball: {
 		name: "Quick Ball",
+		availability: {clover: 1},
 		spritenum: 372,
 		num: 15,
 		gen: 4,
@@ -4284,6 +4402,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		name: "Quick Claw",
+		availability: {clover: 1},
 		spritenum: 373,
 		fling: {
 			basePower: 80,
@@ -4321,6 +4440,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	rarebone: {
 		name: "Rare Bone",
+		availability: {clover: 1},
 		spritenum: 379,
 		fling: {
 			basePower: 100,
@@ -4330,6 +4450,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	rawstberry: {
 		name: "Rawst Berry",
+		availability: {clover: 1},
 		spritenum: 381,
 		isBerry: true,
 		naturalGift: {
@@ -4351,6 +4472,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	razorclaw: {
 		name: "Razor Claw",
+		availability: {clover: 1},
 		spritenum: 382,
 		fling: {
 			basePower: 80,
@@ -4451,6 +4573,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	repeatball: {
 		name: "Repeat Ball",
+		availability: {clover: 1},
 		spritenum: 401,
 		num: 9,
 		gen: 3,
@@ -4467,6 +4590,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	rindoberry: {
 		name: "Rindo Berry",
+		availability: {clover: 1},
 		spritenum: 409,
 		isBerry: true,
 		naturalGift: {
@@ -4501,6 +4625,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	rockgem: {
 		name: "Rock Gem",
+		availability: {clover: 1},
 		spritenum: 415,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -4557,6 +4682,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	rockyhelmet: {
 		name: "Rocky Helmet",
+		availability: {clover: 1},
 		spritenum: 417,
 		fling: {
 			basePower: 60,
@@ -4614,6 +4740,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	roseliberry: {
 		name: "Roseli Berry",
+		availability: {clover: 1},
 		spritenum: 603,
 		isBerry: true,
 		naturalGift: {
@@ -4706,6 +4833,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	safariball: {
 		name: "Safari Ball",
+		availability: {clover: 1},
 		spritenum: 425,
 		num: 5,
 		gen: 1,
@@ -4713,6 +4841,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	safetygoggles: {
 		name: "Safety Goggles",
+		availability: {clover: 1},
 		spritenum: 604,
 		fling: {
 			basePower: 80,
@@ -4741,6 +4870,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	salacberry: {
 		name: "Salac Berry",
+		availability: {clover: 1},
 		spritenum: 426,
 		isBerry: true,
 		naturalGift: {
@@ -4802,6 +4932,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	scopelens: {
 		name: "Scope Lens",
+		availability: {clover: 1},
 		spritenum: 429,
 		fling: {
 			basePower: 30,
@@ -4814,6 +4945,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	seaincense: {
 		name: "Sea Incense",
+		availability: {clover: 1},
 		spritenum: 430,
 		fling: {
 			basePower: 10,
@@ -4829,6 +4961,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	sharpbeak: {
 		name: "Sharp Beak",
+		availability: {clover: 1},
 		spritenum: 436,
 		fling: {
 			basePower: 50,
@@ -4858,6 +4991,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	shedshell: {
 		name: "Shed Shell",
+		availability: {clover: 1},
 		spritenum: 437,
 		fling: {
 			basePower: 10,
@@ -4871,6 +5005,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	shellbell: {
 		name: "Shell Bell",
+		availability: {clover: 1},
 		spritenum: 438,
 		fling: {
 			basePower: 30,
@@ -4895,6 +5030,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	shockdrive: {
 		name: "Shock Drive",
+		availability: {clover: 1},
 		spritenum: 442,
 		onTakeItem(item, pokemon, source) {
 			if ((source && source.baseSpecies.num === 649) || pokemon.baseSpecies.num === 649) {
@@ -4910,6 +5046,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	shucaberry: {
 		name: "Shuca Berry",
+		availability: {clover: 1},
 		spritenum: 443,
 		isBerry: true,
 		naturalGift: {
@@ -4934,6 +5071,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	silkscarf: {
 		name: "Silk Scarf",
+		availability: {clover: 1},
 		spritenum: 444,
 		fling: {
 			basePower: 10,
@@ -4949,6 +5087,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	silverpowder: {
 		name: "Silver Powder",
+		availability: {clover: 1},
 		spritenum: 447,
 		fling: {
 			basePower: 10,
@@ -4964,6 +5103,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	sitrusberry: {
 		name: "Sitrus Berry",
+		availability: {clover: 1},
 		spritenum: 448,
 		isBerry: true,
 		naturalGift: {
@@ -5031,6 +5171,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	smoothrock: {
 		name: "Smooth Rock",
+		availability: {clover: 1},
 		spritenum: 453,
 		fling: {
 			basePower: 10,
@@ -5068,6 +5209,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	softsand: {
 		name: "Soft Sand",
+		availability: {clover: 1},
 		spritenum: 456,
 		fling: {
 			basePower: 10,
@@ -5113,6 +5255,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	spelltag: {
 		name: "Spell Tag",
+		availability: {clover: 1},
 		spritenum: 461,
 		fling: {
 			basePower: 30,
@@ -5190,6 +5333,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	starfberry: {
 		name: "Starf Berry",
+		availability: {clover: 1},
 		spritenum: 472,
 		isBerry: true,
 		naturalGift: {
@@ -5244,6 +5388,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	steelgem: {
 		name: "Steel Gem",
+		availability: {clover: 1},
 		spritenum: 473,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -5301,6 +5446,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	stickybarb: {
 		name: "Sticky Barb",
+		availability: {clover: 1},
 		spritenum: 476,
 		fling: {
 			basePower: 80,
@@ -5353,6 +5499,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	sunstone: {
 		name: "Sun Stone",
+		availability: {clover: 1},
 		spritenum: 480,
 		fling: {
 			basePower: 30,
@@ -5385,6 +5532,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	tamatoberry: {
 		name: "Tamato Berry",
+		availability: {clover: 1},
 		spritenum: 486,
 		isBerry: true,
 		naturalGift: {
@@ -5397,6 +5545,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	tangaberry: {
 		name: "Tanga Berry",
+		availability: {clover: 1},
 		spritenum: 487,
 		isBerry: true,
 		naturalGift: {
@@ -5441,6 +5590,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	terrainextender: {
 		name: "Terrain Extender",
+		availability: {clover: 1},
 		spritenum: 662,
 		fling: {
 			basePower: 60,
@@ -5483,6 +5633,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	thunderstone: {
 		name: "Thunder Stone",
+		availability: {clover: 1},
 		spritenum: 492,
 		fling: {
 			basePower: 30,
@@ -5492,6 +5643,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	timerball: {
 		name: "Timer Ball",
+		availability: {clover: 1},
 		spritenum: 494,
 		num: 10,
 		gen: 3,
@@ -5499,6 +5651,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	toxicorb: {
 		name: "Toxic Orb",
+		availability: {clover: 1},
 		spritenum: 515,
 		fling: {
 			basePower: 30,
@@ -6435,6 +6588,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	twistedspoon: {
 		name: "Twisted Spoon",
+		availability: {clover: 1},
 		spritenum: 520,
 		fling: {
 			basePower: 30,
@@ -6464,6 +6618,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	ultraball: {
 		name: "Ultra Ball",
+		availability: {clover: 1},
 		spritenum: 521,
 		num: 2,
 		gen: 1,
@@ -6482,6 +6637,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	upgrade: {
 		name: "Up-Grade",
+		availability: {clover: 1},
 		spritenum: 523,
 		fling: {
 			basePower: 30,
@@ -6515,6 +6671,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	wacanberry: {
 		name: "Wacan Berry",
+		availability: {clover: 1},
 		spritenum: 526,
 		isBerry: true,
 		naturalGift: {
@@ -6538,6 +6695,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	watergem: {
 		name: "Water Gem",
+		availability: {clover: 1},
 		spritenum: 528,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
@@ -6568,6 +6726,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	waterstone: {
 		name: "Water Stone",
+		availability: {clover: 1},
 		spritenum: 529,
 		fling: {
 			basePower: 30,
@@ -6589,13 +6748,24 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	watmelberry: {
 		name: "Watmel Berry",
+		availability: {clover: 1},
 		spritenum: 530,
 		isBerry: true,
 		naturalGift: {
 			basePower: 100,
 			type: "Fire",
 		},
-		onEat: false,
+		onUpdate(pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 2) {
+				pokemon.eatItem();
+			}
+		},
+		onTryEatItem(item, pokemon) {
+			if (!this.runEvent('TryHeal', pokemon)) return false;
+		},
+		onEat(pokemon) {
+			this.heal(70);
+		},
 		num: 181,
 		gen: 3,
 		isNonstandard: "Past",
@@ -6617,6 +6787,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	weaknesspolicy: {
 		name: "Weakness Policy",
+		availability: {clover: 1},
 		spritenum: 609,
 		fling: {
 			basePower: 80,
@@ -6657,6 +6828,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	whiteherb: {
 		name: "White Herb",
+		availability: {clover: 1},
 		spritenum: 535,
 		fling: {
 			basePower: 10,
@@ -6696,6 +6868,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	widelens: {
 		name: "Wide Lens",
+		availability: {clover: 1},
 		spritenum: 537,
 		fling: {
 			basePower: 10,
@@ -6711,6 +6884,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	wikiberry: {
 		name: "Wiki Berry",
+		availability: {clover: 1},
 		spritenum: 538,
 		isBerry: true,
 		naturalGift: {
@@ -6751,6 +6925,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	yacheberry: {
 		name: "Yache Berry",
+		availability: {clover: 1},
 		spritenum: 567,
 		isBerry: true,
 		naturalGift: {
@@ -6796,6 +6971,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	zoomlens: {
 		name: "Zoom Lens",
+		availability: {clover: 1},
 		spritenum: 574,
 		fling: {
 			basePower: 10,
@@ -7130,5 +7306,865 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -2,
 		gen: 8,
 		isNonstandard: "CAP",
+	},
+	/* Clover Exclusive Items */
+	suedeshoes: {
+		name: "Suede Shoes",
+		availability: {clover: 1},
+		spritenum: 746,
+		onModifySpe(spe, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Pretzely') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Pretzely"],
+		isNonstandard: "Future",
+	},
+	bigfaggot: {
+		name: "Big Faggot",
+		availability: {clover: 1},
+		spritenum: 741,
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Flameboyan') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Flameboyan"],
+		isNonstandard: "Future",
+	},
+	baconstrip: {
+		name: "Bacon Strip",
+		availability: {clover: 1},
+		spritenum: 749,
+		onModifySpDPriority: 2,
+		onModifySpD(spd, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Urswine') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Urswine"],
+		isNonstandard: "Future",
+	},
+	katana: {
+		name: "Katana",
+		availability: {clover: 1},
+		spritenum: 743,
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Steel') {
+				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
+		isNonstandard: "Future",
+	},
+	cutebow: {
+		name: "Cute Bow",
+		availability: {clover: 1},
+		spritenum: 742,
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Fairy') {
+				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
+		isNonstandard: "Future",
+	},
+	bible: {
+		name: "Bible",
+		availability: {clover: 1},
+		spritenum: 748,
+		onModifyCritRatio(critRatio, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Caroline') {
+				return critRatio + 2;
+			}
+		},
+		itemUser: ["Caroline"],
+		isNonstandard: "Future",
+	},
+	taco: {
+		name: "Taco",
+		availability: {clover: 1},
+		spritenum: 747,
+		onUpdate(pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 2) {
+				if (this.runEvent('TryHeal', pokemon) && pokemon.useItem()) {
+					this.heal(50);
+				}
+			}
+		},
+		isNonstandard: "Future",
+	},
+	thiccbone: {
+		name: "Thicc Bone",
+		availability: {clover: 1},
+		spritenum: 379,
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Masdawg' || pokemon.baseSpecies.baseSpecies === 'Pasdawg' || pokemon.baseSpecies.baseSpecies === 'Naughtycoot') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Masdawg", "Pasdawg", "Naughtycoot"],
+		isNonstandard: "Future",
+	},
+	manifesto: {
+		name: "Manifesto",
+		availability: {clover: 1},
+		spritenum: 744,
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move && user.baseSpecies.baseSpecies === 'Walruskie' && (move.type === 'Steel' || move.type === 'Ice')) {
+				return this.chainModify(1.5);
+			}
+		},
+		itemUser: ["Walruskie"],
+		isNonstandard: "Future",
+	},
+	piratesjug: {
+		name: "Pirate's Jug",
+		availability: {clover: 1},
+		spritenum: 745,
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move && user.baseSpecies.baseSpecies === 'Octai' && move.id === 'lactoseshot') {
+				return this.chainModify([2, 1]);
+			}
+		},
+		itemUser: ["Octai"],
+		isNonstandard: "Future",
+	},
+	blobbosinite: {
+		name: "Blobbosinite",
+		availability: {clover: 1},
+		spritenum: 617,
+		onStart(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Blobbos') {
+				pokemon.formeChange('megablobbos', this.effect, true);
+
+				this.add('-message', 'Blobbos is unleashing its true power!');
+
+				const moves = Object.values(this.dex.data.Moves);
+				let animationsRemaining = 30;
+				while (animationsRemaining > 0 && moves.length > 0) {
+					this.add('-anim', pokemon, this.sample(moves).name, pokemon);
+					animationsRemaining--;
+				}
+
+				pokemon.formeChange('blobbos', this.effect, true);
+
+				pokemon.eatItem(true, pokemon);
+
+				if (this.format.id.includes('ultimateblobbos')) {
+					this.random();
+					if (this.randomChance(1, 2)) {
+						this.add('-message', 'The Blobbosinite gave Blobbos an ulcer... but raised its stats!');
+						this.directDamage(pokemon.maxhp / 3);
+						this.boost({
+							atk: 1,
+							def: 1,
+							spa: 1,
+							spd: 1,
+							spe: 1,
+						});
+					} else {
+						if (this.randomChance(1, 2)) {
+							this.add('-message', "The Blobbosinite was highly toxic... but gave it special power!");
+							pokemon.setStatus('tox', null, this.effect);
+							this.boost({
+								spa: 12,
+							});
+						} else {
+							if (this.randomChance(1, 2)) {
+								this.add('-message', 'The Blobbosinite weakened its defenses... but gave it a wonderful ability!');
+								this.boost({
+									def: -6,
+									spd: -6,
+								});
+								pokemon.setAbility('Wonder Guard');
+								this.add('-ability', pokemon, 'Wonder Guard', '[from] item: Blobbosinite');
+							} else {
+								if (this.randomChance(1, 2)) {
+									this.add('-message', 'The Blobbosinite turned Blobbos gay... but increased its strength!');
+									pokemon.setType('Fairy');
+									this.add('-start', pokemon, 'typechange', 'Fairy', '[from] item: Blobbosinite');
+									this.boost({
+										atk: 1,
+										spa: 1,
+									});
+								} else {
+									if (this.randomChance(1, 2)) {
+										this.add('-message', 'The Blobbosinite gave Blobbos polio... but made it hard as iron!');
+										pokemon.setStatus('par', null, this.effect);
+										this.boost({
+											def: 2,
+										});
+										pokemon.addType('Steel');
+										this.add('-start', pokemon, 'typeadd', 'Steel', '[from] item: Blobbosinite');
+									} else {
+										if (this.randomChance(1, 2)) {
+											this.add('-message', "The Blobbosinite ruptured Blobbos's intestines... but turned it into a cute trap!");
+											this.directDamage(pokemon.maxhp / 2);
+											pokemon.formeChange('pikachubelle');
+											this.add('-formechange', pokemon, pokemon.name, undefined, `[from] item: Blobbosinite`);
+										} else {
+											this.add('-message', 'The Blobbosinite was delicious and Blobbos saved some for later!');
+											pokemon.setItem('Leftovers', undefined, this.effect);
+											this.add('-item', pokemon, 'Leftovers', '[from] item: Blobbosinite');
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			} else {
+				this.hint('Blobbosinite can only be used by Blobbos... idiot...');
+			}
+		},
+		itemUser: ["Blobbos"],
+		isNonstandard: "Future",
+	},
+	/* Clover CAP */
+	moluganion: {
+		name: "Moluganion",
+		availability: {clover: 1},
+		spritenum: 748,
+		fling: {
+			basePower: 20,
+		},
+		onAfterSetStatusPriority: -1,
+		onAfterSetStatus(status, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Noxilium') {
+				this.add('-message', 'The power from the Moluganion cured the status!');
+				pokemon.cureStatus();
+				pokemon.removeVolatile('confusion');
+			}
+		},
+		onUpdate(pokemon) {
+			if (pokemon.status || pokemon.volatiles['confusion']) {
+				if (pokemon.baseSpecies.baseSpecies === 'Noxilium') {
+					this.add('-message', 'The power from the Moluganion cured the status!');
+					pokemon.cureStatus();
+					pokemon.removeVolatile('confusion');
+				} else {
+					this.add('-message', 'The holder is unable to comprehend the Moluganion!');
+					pokemon.addVolatile('confusion');
+				}
+			}
+		},
+		itemUser: ["Noxilium"],
+		isNonstandard: "Future",
+	},
+	skub: {
+		name: "Skub",
+		availability: {clover: 1},
+		spritenum: 286,
+		fling: {
+			basePower: 20,
+		},
+		onModifyDefPriority: 1,
+		onModifyDef(def, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Skuba') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpDPriority: 1,
+		onModifySpD(spd, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Skuba') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Skuba-Anti') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Skuba-Anti') {
+				return this.chainModify(1.5);
+			}
+		},
+		itemUser: ["Skuba", "Skuba-Anti"],
+	},
+	rustedcrown: {
+		availability: {clover: 1},
+		name: "Rusted Crown",
+		spritenum: 236,
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.name === 'Blobbos-Galar') || pokemon.baseSpecies.name === 'Blobbos-Galar-Crowned') {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Blobbos-Galar-Crowned",
+		itemUser: ["Blobbos-Galar-Crowned"],
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	/* Clover CAP Mega Stones */
+	ooganite: {
+		availability: {clover: 1},
+		name: "Ooganite",
+		spritenum: 577,
+		megaStone: "Oogabuga-Mega",
+		megaEvolves: "Oogabuga",
+		itemUser: ["Oogabuga"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	wifeminite: {
+		availability: {clover: 1},
+		name: "Wifeminite",
+		spritenum: 577,
+		megaStone: "Wifemin-Mega",
+		megaEvolves: "Wifemin",
+		itemUser: ["Wifemin"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	bitekinite: {
+		availability: {clover: 1},
+		name: "Bitekinite",
+		spritenum: 577,
+		megaStone: "Biteki-Mega",
+		megaEvolves: "Biteki",
+		itemUser: ["Biteki"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	fonduppite: {
+		availability: {clover: 1},
+		name: "Fonduppite",
+		spritenum: 577,
+		megaStone: "Fondupple-Mega",
+		megaEvolves: "Fondupple",
+		itemUser: ["Fondupple"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	ebolabite: {
+		availability: {clover: 1},
+		name: "Ebolabite",
+		spritenum: 577,
+		megaStone: "Ebolable-Mega",
+		megaEvolves: "Ebolable",
+		itemUser: ["Ebolable"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	somboludite: {
+		availability: {clover: 1},
+		name: "Somboludite",
+		spritenum: 577,
+		megaStone: "Somboludo-Mega",
+		megaEvolves: "Somboludo",
+		itemUser: ["Somboludo"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	floriousite: {
+		availability: {clover: 1},
+		name: "Floriousite",
+		spritenum: 577,
+		megaStone: "Florious-Mega",
+		megaEvolves: "Florious",
+		itemUser: ["Florious"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	illumatrixite: {
+		availability: {clover: 1},
+		name: "Illumatrixite",
+		spritenum: 577,
+		megaStone: "Illumatrix-Mega",
+		megaEvolves: "Illumatrix",
+		itemUser: ["Illumatrix"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	grimdakite: {
+		availability: {clover: 1},
+		name: "Grimdakite",
+		spritenum: 577,
+		megaStone: "Grimdak-Mega",
+		megaEvolves: "Grimdak",
+		itemUser: ["Grimdak"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	hazmatite: {
+		availability: {clover: 1},
+		name: "Hazmatite",
+		spritenum: 577,
+		megaStone: "Hazmate-Mega",
+		megaEvolves: "Hazmate",
+		itemUser: ["Hazmate"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	krokizonite: {
+		availability: {clover: 1},
+		name: "Krokizonite",
+		spritenum: 577,
+		megaStone: "Krokizon-Mega",
+		megaEvolves: "Krokizon",
+		itemUser: ["Krokizon"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	spookzillite: {
+		availability: {clover: 1},
+		name: "Spookzillite",
+		spritenum: 577,
+		megaStone: "Spookzilla-Mega",
+		megaEvolves: "Spookzilla",
+		itemUser: ["Spookzilla"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	lizakbarite: {
+		availability: {clover: 1},
+		name: "Lizakbarite",
+		spritenum: 577,
+		megaStone: "Lizakbar-Mega",
+		megaEvolves: "Lizakbar",
+		itemUser: ["Lizakbar"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	rectreemite: {
+		availability: {clover: 1},
+		name: "Rectreemite",
+		spritenum: 577,
+		megaStone: "Rectreem-Mega",
+		megaEvolves: "Rectreem",
+		itemUser: ["Rectreem"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	unjoyite: {
+		availability: {clover: 1},
+		name: "Unjoyite",
+		spritenum: 577,
+		megaStone: "Unjoy-Mega",
+		megaEvolves: "Unjoy",
+		itemUser: ["Unjoy"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	emplyinite: {
+		availability: {clover: 1},
+		name: "Emplyinite",
+		spritenum: 577,
+		megaStone: "Emplyin-Mega",
+		megaEvolves: "Emplyin",
+		itemUser: ["Emplyin"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	upbeddite: {
+		availability: {clover: 1},
+		name: "Upbeddite",
+		spritenum: 577,
+		megaStone: "Upbeddit-Mega",
+		megaEvolves: "Upbeddit",
+		itemUser: ["Upbeddit"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	smelloxite: {
+		availability: {clover: 1},
+		name: "Smelloxite",
+		spritenum: 577,
+		megaStone: "Smellox-Mega",
+		megaEvolves: "Smellox",
+		itemUser: ["Smellox"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	pigusonite: {
+		availability: {clover: 1},
+		name: "Pigusonite",
+		spritenum: 577,
+		megaStone: "Piguson-Mega",
+		megaEvolves: "Piguson",
+		itemUser: ["Piguson"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	condoomite: {
+		availability: {clover: 1},
+		name: "Condoomite",
+		spritenum: 577,
+		megaStone: "Condoom-Mega",
+		megaEvolves: "Condoom",
+		itemUser: ["Condoom"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	hohohomite: {
+		availability: {clover: 1},
+		name: "Hohohomite",
+		spritenum: 577,
+		megaStone: "Hohohoming-Mega",
+		megaEvolves: "Hohohoming",
+		itemUser: ["Hohohoming"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	faptite: {
+		availability: {clover: 1},
+		name: "Faptite",
+		spritenum: 577,
+		megaStone: "Faptime-Mega",
+		megaEvolves: "Faptime",
+		itemUser: ["Faptime"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	jerklite: {
+		availability: {clover: 1},
+		name: "Jerklite",
+		spritenum: 577,
+		megaStone: "Jerkle-Mega",
+		megaEvolves: "Jerkle",
+		itemUser: ["Jerkle"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	dowsterite: {
+		availability: {clover: 1},
+		name: "Dowsterite",
+		spritenum: 577,
+		megaStone: "Dowster-Mega",
+		megaEvolves: "Dowster",
+		itemUser: ["Dowster"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	reptrillite: {
+		availability: {clover: 1},
+		name: "Reptrillite",
+		spritenum: 577,
+		megaStone: "Reptrill-Mega",
+		megaEvolves: "Reptrill",
+		itemUser: ["Reptrill"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	kuklanite: {
+		availability: {clover: 1},
+		name: "Kuklanite",
+		spritenum: 577,
+		megaStone: "Kuklan-Mega",
+		megaEvolves: "Kuklan",
+		itemUser: ["Kuklan"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	ricosuavite: {
+		availability: {clover: 1},
+		name: "Ricosuavite",
+		spritenum: 577,
+		megaStone: "Ricosuave-Mega",
+		megaEvolves: "Ricosuave",
+		itemUser: ["Ricosuave"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	vandashite: {
+		availability: {clover: 1},
+		name: "Vandashite",
+		spritenum: 577,
+		megaStone: "Vandash-Mega",
+		megaEvolves: "Vandash",
+		itemUser: ["Vandash"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	chasumite: {
+		availability: {clover: 1},
+		name: "Chasumite",
+		spritenum: 577,
+		megaStone: "Chasumo-Mega",
+		megaEvolves: "Chasumo",
+		itemUser: ["Chasumo"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	goryannusite: {
+		availability: {clover: 1},
+		name: "Goryannusite",
+		spritenum: 577,
+		megaStone: "Goryannus-Mega",
+		megaEvolves: "Goryannus",
+		itemUser: ["Goryannus"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	spookscarite: {
+		availability: {clover: 1},
+		name: "Spookscarite",
+		spritenum: 577,
+		megaStone: "Spookscare-Mega",
+		megaEvolves: "Spookscare",
+		itemUser: ["Spookscare"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	honradite: {
+		availability: {clover: 1},
+		name: "Honradite",
+		spritenum: 577,
+		megaStone: "Honrade-Mega",
+		megaEvolves: "Honrade",
+		itemUser: ["Honrade"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	fusjite: {
+		availability: {clover: 1},
+		name: "Fusjite",
+		spritenum: 577,
+		megaStone: "Fusjahl-Mega",
+		megaEvolves: "Fusjahl",
+		itemUser: ["Fusjahl"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	ultrablobbosiumz: {
+		availability: {clover: 1},
+		name: "Ultrablobbosium Z",
+		spritenum: 686,
+		onTakeItem: false,
+		zMove: "Slepp That Blobs the Sky",
+		zMoveFrom: "Blobby Bop",
+		itemUser: ["Blobbos-Ultra"],
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	ointmiteite: {
+		availability: {clover: 1},
+		name: "Ointmiteite",
+		spritenum: 599,
+		megaStone: "Ointmite-Mega",
+		megaEvolves: "Ointmite",
+		itemUser: ["Ointmite"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	sableviumz: {
+		availability: {clover: 1},
+		name: "Sablevium Z",
+		spritenum: 636,
+		onTakeItem: false,
+		zMove: "Twin Tower Tumbling Terror",
+		zMoveFrom: "Freeze-Dry",
+		itemUser: ["Blobbos-Remembered"],
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	kalosite: {
+		availability: {clover: 1},
+		name: "Kalosite",
+		spritenum: 599,
+		megaStone: "Blobbos-Kalos-Mega",
+		megaEvolves: "Blobbos-Kalos",
+		itemUser: ["Blobbos-Kalos"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	blobbosite: {
+		availability: {clover: 1},
+		name: "Blobbosite",
+		spritenum: 630,
+		megaStone: "Blobbos-Mega",
+		megaEvolves: "Blobbos",
+		itemUser: ["Blobbos"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
 	},
 };

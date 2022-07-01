@@ -1,7 +1,7 @@
 
 import {Elimination} from './generator-elimination';
 import {RoundRobin} from './generator-round-robin';
-import {Utils} from '../../lib';
+import {FS, Utils} from '../../lib';
 import {SampleTeams, teamData} from '../chat-plugins/sample-teams';
 import {PRNG} from '../../sim/prng';
 
@@ -18,6 +18,7 @@ export interface TournamentRoomSettings {
 	recentToursLength?: number;
 	recentTours?: {name: string, baseFormat: string, time: number}[];
 	blockRecents?: boolean;
+	official?: boolean;
 }
 
 type Generator = RoundRobin | Elimination;
@@ -81,6 +82,22 @@ export class TournamentPlayer extends Rooms.RoomGamePlayer<Tournament> {
 		this.score = 0;
 	}
 }
+
+interface OfficialTournamentResult {
+	timestamp: number;
+	title: string;
+	format: string;
+}
+
+type OfficialTournamentResults = Record<string, { tournaments: OfficialTournamentResult[] }>;
+
+const officialTournamentResults: OfficialTournamentResults = JSON.parse(
+	FS('config/chat-plugins/official-tournaments.json').readIfExistsSync() || "{}"
+);
+
+const saveOfficialTournamentResults = () => {
+	FS('config/chat-plugins/official-tournaments.json').writeUpdate(() => JSON.stringify(officialTournamentResults));
+};
 
 export class Tournament extends Rooms.RoomGame<TournamentPlayer> {
 	readonly isTournament: true;
@@ -1197,7 +1214,27 @@ export class Tournament extends Rooms.RoomGame<TournamentPlayer> {
 			}
 			this.room.saveSettings();
 		}
+		if (this?.room?.settings?.tournaments?.official) {
+			this.onOfficialTournamentEnd(update.results[0]);
+		}
 		this.remove();
+	}
+	onOfficialTournamentEnd(winners: string[]) {
+		winners.forEach((winner) => {
+			const winnerId = toID(winner);
+
+			if (!officialTournamentResults[winner]) {
+				officialTournamentResults[winnerId] = {tournaments: []};
+			}
+
+			officialTournamentResults[winnerId].tournaments.push({
+				timestamp: new Date().getTime(),
+				title: this.title,
+				format: this.name,
+			});
+		});
+
+		saveOfficialTournamentResults();
 	}
 }
 
@@ -1943,6 +1980,56 @@ const commands: Chat.ChatCommands = {
 				this.modlog('TOUR FORCETIMER', null, 'OFF');
 			} else {
 				return this.sendReply(`Usage: /tour ${cmd} <on|off>`);
+			}
+		},
+		unofficial: 'official',
+		official(target, room, user, connection, cmd) {
+			room = this.requireRoom();
+
+			this.checkCan('game', null, room);
+
+			if (!room.settings.tournaments) room.settings.tournaments = {};
+
+			const isOfficial = cmd === 'official';
+			room.settings.tournaments.official = isOfficial;
+			room.saveSettings();
+
+			this.privateModAction(`Tournament was set to ${isOfficial ? 'official' : 'unofficial'} by ${user.name}`);
+			this.modlog('TOUR SETTINGS', null, `official: ${isOfficial}`);
+			return this.sendReply(`Tournament was set to ${isOfficial ? 'official' : 'unofficial'}`);
+		},
+		results(target) {
+			this.runBroadcast();
+
+			const targetId = toID(target);
+
+			if (targetId.length) {
+				const userName = Users.get(targetId)?.name || targetId;
+				const playerResult = officialTournamentResults[targetId];
+
+				const header = `<b><u>${userName}'s Tournament Results</b></u><br />`;
+				let body = '';
+
+				if (!playerResult || playerResult.tournaments.length < 1) {
+					body = '<p>This player has not won an official tournament.</p>';
+				} else {
+					const sortedTournaments = playerResult.tournaments.sort((tournamentA, tournamentB) => tournamentA.timestamp - tournamentB.timestamp);
+					const tournamentLines = sortedTournaments.map((tournamentResult) => {
+						const tournamentDate = new Date(tournamentResult.timestamp);
+						const dateString = `${tournamentDate.getFullYear()}/${tournamentDate.getMonth() + 1}/${tournamentDate.getDate()}`;
+						return `<li>${tournamentResult.title} <small>(${tournamentResult.format})</small> [${dateString}]</li>`;
+					});
+					body = `<ul>${tournamentLines.join('')}</ul>`;
+				}
+
+				return this.sendReplyBox(`${header}${body}`);
+			} else {
+				const header = `<b><u>Top Tournament Results</b></u><br />`;
+				const lines = Object.entries(officialTournamentResults)
+					.sort((resultA, resultB) => resultB[1].tournaments.length - resultA[1].tournaments.length)
+					.map(([playerId, tournamentResults]) => `<strong>${Users.get(playerId)?.name || playerId}</strong>: ${tournamentResults.tournaments.length} wins`);
+
+				return this.sendReplyBox(`${header}${lines.join('<br />')}`);
 			}
 		},
 		settings: {

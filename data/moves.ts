@@ -23,10 +23,15 @@ recharge: If this move is successful, the user must recharge on the following tu
 reflectable: Bounced back to the original user by Magic Coat or the Magic Bounce Ability.
 snatch: Can be stolen from the original user and instead used by another Pokemon using Snatch.
 sound: Has no effect on Pokemon with the Soundproof Ability.
-
+kick: Kick-based moves (for Striker)
+blade: Blade-based moves (for Blademaster)
+bone: Bone-based moves (for Bone Zone)
+hammer: Hammer-based moves (for Admin Abuse)
 */
+import {Pokemon} from '../sim';
+import {PokemonSources} from '../sim/team-validator';
 
-export const Moves: {[moveid: string]: MoveData} = {
+export const Moves: { [moveid: string]: MoveData } = {
 	"10000000voltthunderbolt": {
 		num: 719,
 		accuracy: true,
@@ -45,6 +50,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	absorb: {
+		availability: {clover: 1},
 		num: 71,
 		accuracy: 100,
 		basePower: 20,
@@ -60,6 +66,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	accelerock: {
+		availability: {clover: 1},
 		num: 709,
 		accuracy: 100,
 		basePower: 40,
@@ -74,6 +81,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	acid: {
+		availability: {clover: 1},
 		num: 51,
 		accuracy: 100,
 		basePower: 40,
@@ -93,6 +101,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	acidarmor: {
+		availability: {clover: 1},
 		num: 151,
 		accuracy: true,
 		basePower: 0,
@@ -127,6 +136,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	acidspray: {
+		availability: {clover: 1},
 		num: 491,
 		accuracy: 100,
 		basePower: 40,
@@ -146,6 +156,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	acrobatics: {
+		availability: {clover: 1},
 		num: 512,
 		accuracy: 100,
 		basePower: 55,
@@ -167,6 +178,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	acupressure: {
+		availability: {clover: 1},
 		num: 367,
 		accuracy: true,
 		basePower: 0,
@@ -199,6 +211,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	aerialace: {
+		availability: {clover: 1},
 		num: 332,
 		accuracy: true,
 		basePower: 60,
@@ -213,6 +226,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	aeroblast: {
+		availability: {clover: 1},
 		num: 177,
 		accuracy: 95,
 		basePower: 100,
@@ -253,6 +267,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	agility: {
+		availability: {clover: 1},
 		num: 97,
 		accuracy: true,
 		basePower: 0,
@@ -271,6 +286,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	aircutter: {
+		availability: {clover: 1},
 		num: 314,
 		accuracy: 95,
 		basePower: 60,
@@ -286,6 +302,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	airslash: {
+		availability: {clover: 1},
 		num: 403,
 		accuracy: 95,
 		basePower: 75,
@@ -293,7 +310,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Air Slash",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, distance: 1},
+		flags: {protect: 1, mirror: 1, distance: 1, blade: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'flinch',
@@ -344,6 +361,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	amnesia: {
+		availability: {clover: 1},
 		num: 133,
 		accuracy: true,
 		basePower: 0,
@@ -362,6 +380,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	anchorshot: {
+		availability: {clover: 1},
 		num: 677,
 		accuracy: 100,
 		basePower: 80,
@@ -381,6 +400,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	ancientpower: {
+		availability: {clover: 1},
 		num: 246,
 		accuracy: 100,
 		basePower: 60,
@@ -406,6 +426,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	appleacid: {
+		availability: {clover: 1},
 		num: 787,
 		accuracy: 100,
 		basePower: 80,
@@ -424,6 +445,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	aquajet: {
+		availability: {clover: 1},
 		num: 453,
 		accuracy: 100,
 		basePower: 40,
@@ -438,6 +460,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	aquaring: {
+		availability: {clover: 1},
 		num: 392,
 		accuracy: true,
 		basePower: 0,
@@ -463,6 +486,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	aquatail: {
+		availability: {clover: 1},
 		num: 401,
 		accuracy: 90,
 		basePower: 90,
@@ -477,6 +501,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	armthrust: {
+		availability: {clover: 1},
 		num: 292,
 		accuracy: 100,
 		basePower: 15,
@@ -492,6 +517,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	aromatherapy: {
+		availability: {clover: 1},
 		num: 312,
 		accuracy: true,
 		basePower: 0,
@@ -506,7 +532,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
 			for (const ally of allies) {
 				if (ally !== source && ((ally.hasAbility('sapsipper')) ||
-						(ally.volatiles['substitute'] && !move.infiltrates))) {
+					(ally.volatiles['substitute'] && !move.infiltrates))) {
 					continue;
 				}
 				if (ally.cureStatus()) success = true;
@@ -519,6 +545,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	aromaticmist: {
+		availability: {clover: 1},
 		num: 597,
 		accuracy: true,
 		basePower: 0,
@@ -537,6 +564,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	assist: {
+		availability: {clover: 1},
 		num: 274,
 		accuracy: true,
 		basePower: 0,
@@ -548,7 +576,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		onHit(target) {
 			const noAssist = [
-				'assist', 'banefulbunker', 'beakblast', 'belch', 'bestow', 'bounce', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'destinybond', 'detect', 'dig', 'dive', 'dragontail', 'endure', 'feint', 'fly', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'phantomforce', 'protect', 'ragepowder', 'roar', 'shadowforce', 'shelltrap', 'sketch', 'skydrop', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind',
+				'assist', 'banefulbunker', 'beakblast', 'belch', 'bestow', 'bounce', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'destinybond', 'detect', 'dig', 'dive', 'dragontail', 'endure', 'feint', 'fly', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'phantomforce', 'protect', 'ragepowder', 'roar', 'shadowforce', 'shelltrap', 'sketch', 'skydrop', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'wingsofcorrection', 'leafshield',
 			];
 
 			const moves = [];
@@ -577,6 +605,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	assurance: {
+		availability: {clover: 1},
 		num: 372,
 		accuracy: 100,
 		basePower: 60,
@@ -598,6 +627,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	astonish: {
+		availability: {clover: 1},
 		num: 310,
 		accuracy: 100,
 		basePower: 30,
@@ -615,6 +645,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	astralbarrage: {
+		availability: {clover: 1},
 		num: 825,
 		accuracy: 100,
 		basePower: 120,
@@ -628,6 +659,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ghost",
 	},
 	attackorder: {
+		availability: {clover: 1},
 		num: 454,
 		accuracy: 100,
 		basePower: 90,
@@ -643,6 +675,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	attract: {
+		availability: {clover: 1},
 		num: 213,
 		accuracy: 100,
 		basePower: 0,
@@ -697,6 +730,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	aurasphere: {
+		availability: {clover: 1},
 		num: 396,
 		accuracy: true,
 		basePower: 80,
@@ -747,6 +781,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	aurorabeam: {
+		availability: {clover: 1},
 		num: 62,
 		accuracy: 100,
 		basePower: 65,
@@ -766,6 +801,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	auroraveil: {
+		availability: {clover: 1},
 		num: 694,
 		accuracy: true,
 		basePower: 0,
@@ -789,7 +825,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onAnyModifyDamage(damage, source, target, move) {
 				if (target !== source && this.effectState.target.hasAlly(target)) {
 					if ((target.side.getSideCondition('reflect') && this.getCategory(move) === 'Physical') ||
-							(target.side.getSideCondition('lightscreen') && this.getCategory(move) === 'Special')) {
+						(target.side.getSideCondition('lightscreen') && this.getCategory(move) === 'Special')) {
 						return;
 					}
 					if (!target.getMoveHitData(move).crit && !move.infiltrates) {
@@ -815,6 +851,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	autotomize: {
+		availability: {clover: 1},
 		num: 475,
 		accuracy: true,
 		basePower: 0,
@@ -845,6 +882,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	avalanche: {
+		availability: {clover: 1},
 		num: 419,
 		accuracy: 100,
 		basePower: 60,
@@ -869,6 +907,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	babydolleyes: {
+		availability: {clover: 1},
 		num: 608,
 		accuracy: 100,
 		basePower: 0,
@@ -887,6 +926,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	baddybad: {
+		availability: {clover: 1},
 		num: 737,
 		accuracy: 95,
 		basePower: 80,
@@ -905,6 +945,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	banefulbunker: {
+		availability: {clover: 1},
 		num: 661,
 		accuracy: true,
 		basePower: 0,
@@ -963,6 +1004,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	barrage: {
+		availability: {clover: 1},
 		num: 140,
 		accuracy: 85,
 		basePower: 15,
@@ -979,6 +1021,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	barrier: {
+		availability: {clover: 1},
 		num: 112,
 		accuracy: true,
 		basePower: 0,
@@ -998,6 +1041,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	batonpass: {
+		availability: {clover: 1},
 		num: 226,
 		accuracy: true,
 		basePower: 0,
@@ -1026,6 +1070,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	beakblast: {
+		availability: {clover: 1},
 		num: 690,
 		accuracy: 100,
 		basePower: 100,
@@ -1059,6 +1104,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	beatup: {
+		availability: {clover: 1},
 		num: 251,
 		accuracy: 100,
 		basePower: 0,
@@ -1106,6 +1152,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 	},
 	belch: {
+		availability: {clover: 1},
 		num: 562,
 		accuracy: 90,
 		basePower: 120,
@@ -1121,6 +1168,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	bellydrum: {
+		availability: {clover: 1},
 		num: 187,
 		accuracy: true,
 		basePower: 0,
@@ -1171,6 +1219,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	bide: {
+		availability: {clover: 1},
 		num: 117,
 		accuracy: true,
 		basePower: 0,
@@ -1245,6 +1294,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	bind: {
+		availability: {clover: 1},
 		num: 20,
 		accuracy: 85,
 		basePower: 15,
@@ -1260,6 +1310,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	bite: {
+		availability: {clover: 1},
 		num: 44,
 		accuracy: 100,
 		basePower: 60,
@@ -1293,6 +1344,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	blastburn: {
+		availability: {clover: 1},
 		num: 307,
 		accuracy: 90,
 		basePower: 150,
@@ -1310,6 +1362,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	blazekick: {
+		availability: {clover: 1},
 		num: 299,
 		accuracy: 90,
 		basePower: 85,
@@ -1317,7 +1370,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Blaze Kick",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		critRatio: 2,
 		secondary: {
 			chance: 10,
@@ -1328,6 +1381,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	blizzard: {
+		availability: {clover: 1},
 		num: 59,
 		accuracy: 70,
 		basePower: 110,
@@ -1348,6 +1402,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	block: {
+		availability: {clover: 1},
 		num: 335,
 		accuracy: true,
 		basePower: 0,
@@ -1382,6 +1437,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	blueflare: {
+		availability: {clover: 1},
 		num: 551,
 		accuracy: 85,
 		basePower: 130,
@@ -1399,6 +1455,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	bodypress: {
+		availability: {clover: 1},
 		num: 776,
 		accuracy: 100,
 		basePower: 80,
@@ -1413,6 +1470,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 	},
 	bodyslam: {
+		availability: {clover: 1},
 		num: 34,
 		accuracy: 100,
 		basePower: 85,
@@ -1446,11 +1504,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		noSketch: true,
 		secondary: null,
 		target: "normal",
 		type: "Electric",
 	},
 	boltstrike: {
+		availability: {clover: 1},
 		num: 550,
 		accuracy: 85,
 		basePower: 130,
@@ -1468,6 +1528,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	boneclub: {
+		availability: {clover: 1},
 		num: 125,
 		accuracy: 85,
 		basePower: 65,
@@ -1476,7 +1537,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Bone Club",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, bone: 1},
 		secondary: {
 			chance: 10,
 			volatileStatus: 'flinch',
@@ -1486,6 +1547,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	bonemerang: {
+		availability: {clover: 1},
 		num: 155,
 		accuracy: 90,
 		basePower: 50,
@@ -1493,7 +1555,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Bonemerang",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, bone: 1},
 		multihit: 2,
 		secondary: null,
 		target: "normal",
@@ -1502,6 +1564,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	bonerush: {
+		availability: {clover: 1},
 		num: 198,
 		accuracy: 90,
 		basePower: 25,
@@ -1509,7 +1572,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Bone Rush",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, bone: 1},
 		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
@@ -1519,6 +1582,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	boomburst: {
+		availability: {clover: 1},
 		num: 586,
 		accuracy: 100,
 		basePower: 140,
@@ -1533,6 +1597,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	bounce: {
+		availability: {clover: 1},
 		num: 340,
 		accuracy: 85,
 		basePower: 85,
@@ -1575,6 +1640,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	bouncybubble: {
+		availability: {clover: 1},
 		num: 733,
 		accuracy: 100,
 		basePower: 60,
@@ -1591,6 +1657,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	branchpoke: {
+		availability: {clover: 1},
 		num: 785,
 		accuracy: 100,
 		basePower: 40,
@@ -1604,6 +1671,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	bravebird: {
+		availability: {clover: 1},
 		num: 413,
 		accuracy: 100,
 		basePower: 120,
@@ -1619,6 +1687,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	breakingswipe: {
+		availability: {clover: 1},
 		num: 784,
 		accuracy: 100,
 		basePower: 60,
@@ -1653,6 +1722,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	brickbreak: {
+		availability: {clover: 1},
 		num: 280,
 		accuracy: 100,
 		basePower: 75,
@@ -1673,6 +1743,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	brine: {
+		availability: {clover: 1},
 		num: 362,
 		accuracy: 100,
 		basePower: 65,
@@ -1692,6 +1763,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	brutalswing: {
+		availability: {clover: 1},
 		num: 693,
 		accuracy: 100,
 		basePower: 60,
@@ -1706,6 +1778,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	bubble: {
+		availability: {clover: 1},
 		num: 145,
 		accuracy: 100,
 		basePower: 40,
@@ -1726,6 +1799,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	bubblebeam: {
+		availability: {clover: 1},
 		num: 61,
 		accuracy: 100,
 		basePower: 65,
@@ -1745,6 +1819,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	bugbite: {
+		availability: {clover: 1},
 		num: 450,
 		accuracy: 100,
 		basePower: 60,
@@ -1770,6 +1845,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	bugbuzz: {
+		availability: {clover: 1},
 		num: 405,
 		accuracy: 100,
 		basePower: 90,
@@ -1789,6 +1865,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	bulkup: {
+		availability: {clover: 1},
 		num: 339,
 		accuracy: true,
 		basePower: 0,
@@ -1808,6 +1885,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	bulldoze: {
+		availability: {clover: 1},
 		num: 523,
 		accuracy: 100,
 		basePower: 60,
@@ -1827,6 +1905,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	bulletpunch: {
+		availability: {clover: 1},
 		num: 418,
 		accuracy: 100,
 		basePower: 40,
@@ -1841,6 +1920,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	bulletseed: {
+		availability: {clover: 1},
 		num: 331,
 		accuracy: 100,
 		basePower: 25,
@@ -1858,6 +1938,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	burningjealousy: {
+		availability: {clover: 1},
 		num: 807,
 		accuracy: 100,
 		basePower: 70,
@@ -1879,6 +1960,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	burnup: {
+		availability: {clover: 1},
 		num: 682,
 		accuracy: 100,
 		basePower: 130,
@@ -1923,6 +2005,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	calmmind: {
+		availability: {clover: 1},
 		num: 347,
 		accuracy: true,
 		basePower: 0,
@@ -1942,6 +2025,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	camouflage: {
+		availability: {clover: 1},
 		num: 293,
 		accuracy: true,
 		basePower: 0,
@@ -1973,6 +2057,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	captivate: {
+		availability: {clover: 1},
 		num: 445,
 		accuracy: 100,
 		basePower: 0,
@@ -2011,6 +2096,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	celebrate: {
+		availability: {clover: 1},
 		num: 606,
 		accuracy: true,
 		basePower: 0,
@@ -2029,6 +2115,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	charge: {
+		availability: {clover: 1},
 		num: 268,
 		accuracy: true,
 		basePower: 0,
@@ -2064,6 +2151,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	chargebeam: {
+		availability: {clover: 1},
 		num: 451,
 		accuracy: 90,
 		basePower: 50,
@@ -2085,6 +2173,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	charm: {
+		availability: {clover: 1},
 		num: 204,
 		accuracy: 100,
 		basePower: 0,
@@ -2103,6 +2192,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	chatter: {
+		availability: {clover: 1},
 		num: 448,
 		accuracy: 100,
 		basePower: 65,
@@ -2122,6 +2212,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	chipaway: {
+		availability: {clover: 1},
 		num: 498,
 		accuracy: 100,
 		basePower: 70,
@@ -2139,6 +2230,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	circlethrow: {
+		availability: {clover: 1},
 		num: 509,
 		accuracy: 90,
 		basePower: 60,
@@ -2153,6 +2245,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	clamp: {
+		availability: {clover: 1},
 		num: 128,
 		accuracy: 85,
 		basePower: 35,
@@ -2169,6 +2262,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	clangingscales: {
+		availability: {clover: 1},
 		num: 691,
 		accuracy: 100,
 		basePower: 110,
@@ -2245,6 +2339,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	clearsmog: {
+		availability: {clover: 1},
 		num: 499,
 		accuracy: true,
 		basePower: 50,
@@ -2263,6 +2358,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	closecombat: {
+		availability: {clover: 1},
 		num: 370,
 		accuracy: 100,
 		basePower: 120,
@@ -2283,6 +2379,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	coaching: {
+		availability: {clover: 1},
 		num: 811,
 		accuracy: true,
 		basePower: 0,
@@ -2300,6 +2397,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 	},
 	coil: {
+		availability: {clover: 1},
 		num: 489,
 		accuracy: true,
 		basePower: 0,
@@ -2320,6 +2418,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	cometpunch: {
+		availability: {clover: 1},
 		num: 4,
 		accuracy: 85,
 		basePower: 18,
@@ -2337,6 +2436,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	confide: {
+		availability: {clover: 1},
 		num: 590,
 		accuracy: true,
 		basePower: 0,
@@ -2355,6 +2455,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	confuseray: {
+		availability: {clover: 1},
 		num: 109,
 		accuracy: 100,
 		basePower: 0,
@@ -2371,6 +2472,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	confusion: {
+		availability: {clover: 1},
 		num: 93,
 		accuracy: 100,
 		basePower: 50,
@@ -2388,6 +2490,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	constrict: {
+		availability: {clover: 1},
 		num: 132,
 		accuracy: 100,
 		basePower: 10,
@@ -2424,6 +2527,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	conversion: {
+		availability: {clover: 1},
 		num: 160,
 		accuracy: true,
 		basePower: 0,
@@ -2444,6 +2548,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	conversion2: {
+		availability: {clover: 1},
 		num: 176,
 		accuracy: true,
 		basePower: 0,
@@ -2480,6 +2585,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	copycat: {
+		availability: {clover: 1},
 		num: 383,
 		accuracy: true,
 		basePower: 0,
@@ -2490,7 +2596,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		onHit(pokemon) {
 			const noCopycat = [
-				'assist', 'banefulbunker', 'beakblast', 'behemothbash', 'behemothblade', 'belch', 'bestow', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'dragontail', 'dynamaxcannon', 'endure', 'feint', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'protect', 'ragepowder', 'roar', 'shelltrap', 'sketch', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind',
+				'assist', 'banefulbunker', 'beakblast', 'behemothbash', 'behemothblade', 'belch', 'bestow', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'dragontail', 'dynamaxcannon', 'endure', 'feint', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'protect', 'ragepowder', 'roar', 'shelltrap', 'sketch', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'wingsofcorrection',
 			];
 			let move: Move | ActiveMove | null = this.lastMove;
 			if (!move) return;
@@ -2508,6 +2614,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	coreenforcer: {
+		availability: {clover: 1},
 		num: 687,
 		accuracy: 100,
 		basePower: 100,
@@ -2570,6 +2677,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	cosmicpower: {
+		availability: {clover: 1},
 		num: 322,
 		accuracy: true,
 		basePower: 0,
@@ -2589,6 +2697,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	cottonguard: {
+		availability: {clover: 1},
 		num: 538,
 		accuracy: true,
 		basePower: 0,
@@ -2607,6 +2716,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	cottonspore: {
+		availability: {clover: 1},
 		num: 178,
 		accuracy: 100,
 		basePower: 0,
@@ -2625,6 +2735,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	counter: {
+		availability: {clover: 1},
 		num: 68,
 		accuracy: 100,
 		basePower: 0,
@@ -2671,6 +2782,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	courtchange: {
+		availability: {clover: 1},
 		num: 756,
 		accuracy: 100,
 		basePower: 0,
@@ -2681,7 +2793,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {mirror: 1},
 		onHitField(target, source) {
 			const sideConditions = [
-				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire',
+				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire', 'sleazyspores', 'shattershard', 'pleasedontdothat',
 			];
 			let success = false;
 			if (this.gameType === "freeforall") {
@@ -2743,6 +2855,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 	},
 	covet: {
+		availability: {clover: 1},
 		num: 343,
 		accuracy: 100,
 		basePower: 60,
@@ -2752,7 +2865,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -2774,6 +2887,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	crabhammer: {
+		availability: {clover: 1},
 		num: 152,
 		accuracy: 90,
 		basePower: 100,
@@ -2781,7 +2895,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Crabhammer",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -2789,6 +2903,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	craftyshield: {
+		availability: {clover: 1},
 		num: 578,
 		accuracy: true,
 		basePower: 0,
@@ -2820,6 +2935,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	crosschop: {
+		availability: {clover: 1},
 		num: 238,
 		accuracy: 80,
 		basePower: 100,
@@ -2835,6 +2951,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	crosspoison: {
+		availability: {clover: 1},
 		num: 440,
 		accuracy: 100,
 		basePower: 70,
@@ -2842,7 +2959,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Cross Poison",
 		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		secondary: {
 			chance: 10,
 			status: 'psn',
@@ -2853,6 +2970,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	crunch: {
+		availability: {clover: 1},
 		num: 242,
 		accuracy: 100,
 		basePower: 80,
@@ -2872,6 +2990,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	crushclaw: {
+		availability: {clover: 1},
 		num: 306,
 		accuracy: 95,
 		basePower: 75,
@@ -2891,6 +3010,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	crushgrip: {
+		availability: {clover: 1},
 		num: 462,
 		accuracy: 100,
 		basePower: 0,
@@ -2910,6 +3030,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	curse: {
+		availability: {clover: 1},
 		num: 174,
 		accuracy: true,
 		basePower: 0,
@@ -2953,6 +3074,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	cut: {
+		availability: {clover: 1},
 		num: 15,
 		accuracy: 95,
 		basePower: 50,
@@ -2960,13 +3082,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Cut",
 		pp: 30,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
 		contestType: "Cool",
 	},
 	darkestlariat: {
+		availability: {clover: 1},
 		num: 663,
 		accuracy: 100,
 		basePower: 85,
@@ -2983,6 +3106,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	darkpulse: {
+		availability: {clover: 1},
 		num: 399,
 		accuracy: 100,
 		basePower: 80,
@@ -3000,6 +3124,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	darkvoid: {
+		availability: {clover: 1},
 		num: 464,
 		accuracy: 50,
 		basePower: 0,
@@ -3025,6 +3150,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	dazzlinggleam: {
+		availability: {clover: 1},
 		num: 605,
 		accuracy: 100,
 		basePower: 80,
@@ -3039,6 +3165,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	decorate: {
+		availability: {clover: 1},
 		num: 777,
 		accuracy: true,
 		basePower: 0,
@@ -3056,6 +3183,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 	},
 	defendorder: {
+		availability: {clover: 1},
 		num: 455,
 		accuracy: true,
 		basePower: 0,
@@ -3075,6 +3203,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	defensecurl: {
+		availability: {clover: 1},
 		num: 111,
 		accuracy: true,
 		basePower: 0,
@@ -3098,6 +3227,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	defog: {
+		availability: {clover: 1},
 		num: 432,
 		accuracy: true,
 		basePower: 0,
@@ -3110,10 +3240,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 			let success = false;
 			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
 			const removeTarget = [
-				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
+				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard',
 			];
 			const removeAll = [
-				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
+				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'pleasedontdothat',
 			];
 			for (const targetCondition of removeTarget) {
 				if (target.side.removeSideCondition(targetCondition)) {
@@ -3129,6 +3259,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			}
 			this.field.clearTerrain();
+			if (this.field.isWeather('densefog')) {
+				this.field.clearWeather();
+			}
 			return success;
 		},
 		secondary: null,
@@ -3138,6 +3271,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	destinybond: {
+		availability: {clover: 1},
 		num: 194,
 		accuracy: true,
 		basePower: 0,
@@ -3182,6 +3316,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	detect: {
+		availability: {clover: 1},
 		num: 197,
 		accuracy: true,
 		basePower: 0,
@@ -3221,6 +3356,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	diamondstorm: {
+		availability: {clover: 1},
 		num: 591,
 		accuracy: 95,
 		basePower: 100,
@@ -3243,6 +3379,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	dig: {
+		availability: {clover: 1},
 		num: 91,
 		accuracy: 100,
 		basePower: 80,
@@ -3285,6 +3422,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	disable: {
+		availability: {clover: 1},
 		num: 50,
 		accuracy: 100,
 		basePower: 0,
@@ -3355,6 +3493,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	disarmingvoice: {
+		availability: {clover: 1},
 		num: 574,
 		accuracy: true,
 		basePower: 40,
@@ -3369,6 +3508,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	discharge: {
+		availability: {clover: 1},
 		num: 435,
 		accuracy: 100,
 		basePower: 80,
@@ -3386,6 +3526,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	dive: {
+		availability: {clover: 1},
 		num: 291,
 		accuracy: 100,
 		basePower: 80,
@@ -3432,6 +3573,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	dizzypunch: {
+		availability: {clover: 1},
 		num: 146,
 		accuracy: 100,
 		basePower: 70,
@@ -3450,6 +3592,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	doomdesire: {
+		availability: {clover: 1},
 		num: 353,
 		accuracy: 100,
 		basePower: 140,
@@ -3486,6 +3629,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	doubleedge: {
+		availability: {clover: 1},
 		num: 38,
 		accuracy: 100,
 		basePower: 120,
@@ -3501,6 +3645,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	doublehit: {
+		availability: {clover: 1},
 		num: 458,
 		accuracy: 90,
 		basePower: 35,
@@ -3518,6 +3663,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	doubleironbash: {
+		availability: {clover: 1},
 		num: 742,
 		accuracy: 100,
 		basePower: 60,
@@ -3538,6 +3684,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	doublekick: {
+		availability: {clover: 1},
 		num: 24,
 		accuracy: 100,
 		basePower: 30,
@@ -3545,7 +3692,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Double Kick",
 		pp: 30,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		multihit: 2,
 		secondary: null,
 		target: "normal",
@@ -3554,6 +3701,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	doubleslap: {
+		availability: {clover: 1},
 		num: 3,
 		accuracy: 85,
 		basePower: 15,
@@ -3570,6 +3718,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	doubleteam: {
+		availability: {clover: 1},
 		num: 104,
 		accuracy: true,
 		basePower: 0,
@@ -3588,6 +3737,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	dracometeor: {
+		availability: {clover: 1},
 		num: 434,
 		accuracy: 90,
 		basePower: 130,
@@ -3607,6 +3757,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	dragonascent: {
+		availability: {clover: 1},
 		num: 620,
 		accuracy: 100,
 		basePower: 120,
@@ -3626,6 +3777,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	dragonbreath: {
+		availability: {clover: 1},
 		num: 225,
 		accuracy: 100,
 		basePower: 60,
@@ -3643,6 +3795,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	dragonclaw: {
+		availability: {clover: 1},
 		num: 337,
 		accuracy: 100,
 		basePower: 80,
@@ -3657,6 +3810,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	dragondance: {
+		availability: {clover: 1},
 		num: 349,
 		accuracy: true,
 		basePower: 0,
@@ -3676,6 +3830,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	dragondarts: {
+		availability: {clover: 1},
 		num: 751,
 		accuracy: 100,
 		basePower: 50,
@@ -3704,10 +3859,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		noSketch: true,
 		target: "allAdjacentFoes",
 		type: "Dragon",
 	},
 	dragonhammer: {
+		availability: {clover: 1},
 		num: 692,
 		accuracy: 100,
 		basePower: 90,
@@ -3715,13 +3872,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Dragon Hammer",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
 		contestType: "Tough",
 	},
 	dragonpulse: {
+		availability: {clover: 1},
 		num: 406,
 		accuracy: 100,
 		basePower: 85,
@@ -3736,6 +3894,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	dragonrage: {
+		availability: {clover: 1},
 		num: 82,
 		accuracy: 100,
 		basePower: 0,
@@ -3752,6 +3911,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	dragonrush: {
+		availability: {clover: 1},
 		num: 407,
 		accuracy: 75,
 		basePower: 100,
@@ -3769,6 +3929,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	dragontail: {
+		availability: {clover: 1},
 		num: 525,
 		accuracy: 90,
 		basePower: 60,
@@ -3783,6 +3944,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	drainingkiss: {
+		availability: {clover: 1},
 		num: 577,
 		accuracy: 100,
 		basePower: 50,
@@ -3798,6 +3960,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	drainpunch: {
+		availability: {clover: 1},
 		num: 409,
 		accuracy: 100,
 		basePower: 75,
@@ -3813,6 +3976,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	dreameater: {
+		availability: {clover: 1},
 		num: 138,
 		accuracy: 100,
 		basePower: 100,
@@ -3831,6 +3995,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	drillpeck: {
+		availability: {clover: 1},
 		num: 65,
 		accuracy: 100,
 		basePower: 80,
@@ -3845,6 +4010,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	drillrun: {
+		availability: {clover: 1},
 		num: 529,
 		accuracy: 95,
 		basePower: 80,
@@ -3878,6 +4044,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	dualchop: {
+		availability: {clover: 1},
 		num: 530,
 		accuracy: 90,
 		basePower: 40,
@@ -3894,6 +4061,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	dualwingbeat: {
+		availability: {clover: 1},
 		num: 814,
 		accuracy: 90,
 		basePower: 40,
@@ -3922,6 +4090,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	dynamicpunch: {
+		availability: {clover: 1},
 		num: 223,
 		accuracy: 50,
 		basePower: 100,
@@ -3939,6 +4108,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	earthpower: {
+		availability: {clover: 1},
 		num: 414,
 		accuracy: 100,
 		basePower: 90,
@@ -3958,6 +4128,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	earthquake: {
+		availability: {clover: 1},
 		num: 89,
 		accuracy: 100,
 		basePower: 100,
@@ -3972,6 +4143,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	echoedvoice: {
+		availability: {clover: 1},
 		num: 497,
 		accuracy: 100,
 		basePower: 40,
@@ -4009,6 +4181,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	eerieimpulse: {
+		availability: {clover: 1},
 		num: 598,
 		accuracy: 100,
 		basePower: 0,
@@ -4027,6 +4200,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	eeriespell: {
+		availability: {clover: 1},
 		num: 826,
 		accuracy: 100,
 		basePower: 80,
@@ -4052,6 +4226,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	eggbomb: {
+		availability: {clover: 1},
 		num: 121,
 		accuracy: 75,
 		basePower: 100,
@@ -4067,6 +4242,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	electricterrain: {
+		availability: {clover: 1},
 		num: 604,
 		accuracy: true,
 		basePower: 0,
@@ -4126,6 +4302,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	electrify: {
+		availability: {clover: 1},
 		num: 582,
 		accuracy: true,
 		basePower: 0,
@@ -4158,6 +4335,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	electroball: {
+		availability: {clover: 1},
 		num: 486,
 		accuracy: 100,
 		basePower: 0,
@@ -4181,6 +4359,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	electroweb: {
+		availability: {clover: 1},
 		num: 527,
 		accuracy: 95,
 		basePower: 55,
@@ -4228,6 +4407,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	ember: {
+		availability: {clover: 1},
 		num: 52,
 		accuracy: 100,
 		basePower: 40,
@@ -4245,6 +4425,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	encore: {
+		availability: {clover: 1},
 		num: 227,
 		accuracy: 100,
 		basePower: 0,
@@ -4308,6 +4489,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	endeavor: {
+		availability: {clover: 1},
 		num: 283,
 		accuracy: 100,
 		basePower: 0,
@@ -4330,6 +4512,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	endure: {
+		availability: {clover: 1},
 		num: 203,
 		accuracy: true,
 		basePower: 0,
@@ -4366,6 +4549,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	energyball: {
+		availability: {clover: 1},
 		num: 412,
 		accuracy: 100,
 		basePower: 90,
@@ -4385,6 +4569,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	entrainment: {
+		availability: {clover: 1},
 		num: 494,
 		accuracy: 100,
 		basePower: 0,
@@ -4424,6 +4609,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	eruption: {
+		availability: {clover: 1},
 		num: 284,
 		accuracy: 100,
 		basePower: 150,
@@ -4441,6 +4627,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	eternabeam: {
+		availability: {clover: 1},
 		num: 795,
 		accuracy: 90,
 		basePower: 160,
@@ -4457,6 +4644,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 	},
 	expandingforce: {
+		availability: {clover: 1},
 		num: 797,
 		accuracy: 100,
 		basePower: 80,
@@ -4481,6 +4669,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	explosion: {
+		availability: {clover: 1},
 		num: 153,
 		accuracy: 100,
 		basePower: 250,
@@ -4496,6 +4685,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	extrasensory: {
+		availability: {clover: 1},
 		num: 326,
 		accuracy: 100,
 		basePower: 80,
@@ -4536,6 +4726,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	extremespeed: {
+		availability: {clover: 1},
 		num: 245,
 		accuracy: 100,
 		basePower: 80,
@@ -4550,6 +4741,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	facade: {
+		availability: {clover: 1},
 		num: 263,
 		accuracy: 100,
 		basePower: 70,
@@ -4569,6 +4761,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	fairylock: {
+		availability: {clover: 1},
 		num: 587,
 		accuracy: true,
 		basePower: 0,
@@ -4594,6 +4787,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	fairywind: {
+		availability: {clover: 1},
 		num: 584,
 		accuracy: 100,
 		basePower: 40,
@@ -4608,6 +4802,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	fakeout: {
+		availability: {clover: 1},
 		num: 252,
 		accuracy: 100,
 		basePower: 40,
@@ -4631,6 +4826,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	faketears: {
+		availability: {clover: 1},
 		num: 313,
 		accuracy: 100,
 		basePower: 0,
@@ -4649,6 +4845,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	falsesurrender: {
+		availability: {clover: 1},
 		num: 793,
 		accuracy: true,
 		basePower: 80,
@@ -4662,6 +4859,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 	},
 	falseswipe: {
+		availability: {clover: 1},
 		num: 206,
 		accuracy: 100,
 		basePower: 40,
@@ -4669,7 +4867,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "False Swipe",
 		pp: 40,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		onDamagePriority: -20,
 		onDamage(damage, target, source, effect) {
 			if (damage >= target.hp) return target.hp - 1;
@@ -4680,6 +4878,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	featherdance: {
+		availability: {clover: 1},
 		num: 297,
 		accuracy: 100,
 		basePower: 0,
@@ -4698,6 +4897,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	feint: {
+		availability: {clover: 1},
 		num: 364,
 		accuracy: 100,
 		basePower: 30,
@@ -4714,6 +4914,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	feintattack: {
+		availability: {clover: 1},
 		num: 185,
 		accuracy: true,
 		basePower: 60,
@@ -4729,6 +4930,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	fellstinger: {
+		availability: {clover: 1},
 		num: 565,
 		accuracy: 100,
 		basePower: 50,
@@ -4746,6 +4948,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	fierydance: {
+		availability: {clover: 1},
 		num: 552,
 		accuracy: 100,
 		basePower: 80,
@@ -4767,6 +4970,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	fierywrath: {
+		availability: {clover: 1},
 		num: 822,
 		accuracy: 100,
 		basePower: 90,
@@ -4783,6 +4987,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 	},
 	finalgambit: {
+		availability: {clover: 1},
 		num: 515,
 		accuracy: 100,
 		basePower: 0,
@@ -4803,6 +5008,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	fireblast: {
+		availability: {clover: 1},
 		num: 126,
 		accuracy: 85,
 		basePower: 110,
@@ -4820,6 +5026,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	firefang: {
+		availability: {clover: 1},
 		num: 424,
 		accuracy: 95,
 		basePower: 65,
@@ -4842,6 +5049,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	firelash: {
+		availability: {clover: 1},
 		num: 680,
 		accuracy: 100,
 		basePower: 80,
@@ -4925,6 +5133,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	firepunch: {
+		availability: {clover: 1},
 		num: 7,
 		accuracy: 100,
 		basePower: 75,
@@ -4942,6 +5151,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	firespin: {
+		availability: {clover: 1},
 		num: 83,
 		accuracy: 85,
 		basePower: 35,
@@ -4957,6 +5167,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	firstimpression: {
+		availability: {clover: 1},
 		num: 660,
 		accuracy: 100,
 		basePower: 90,
@@ -4993,11 +5204,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		noSketch: true,
 		secondary: null,
 		target: "normal",
 		type: "Water",
 	},
 	fissure: {
+		availability: {clover: 1},
 		num: 90,
 		accuracy: 30,
 		basePower: 0,
@@ -5015,6 +5228,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	flail: {
+		availability: {clover: 1},
 		num: 175,
 		accuracy: 100,
 		basePower: 0,
@@ -5050,6 +5264,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	flameburst: {
+		availability: {clover: 1},
 		num: 481,
 		accuracy: 100,
 		basePower: 70,
@@ -5075,6 +5290,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	flamecharge: {
+		availability: {clover: 1},
 		num: 488,
 		accuracy: 100,
 		basePower: 50,
@@ -5096,6 +5312,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	flamewheel: {
+		availability: {clover: 1},
 		num: 172,
 		accuracy: 100,
 		basePower: 60,
@@ -5113,6 +5330,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	flamethrower: {
+		availability: {clover: 1},
 		num: 53,
 		accuracy: 100,
 		basePower: 90,
@@ -5130,6 +5348,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	flareblitz: {
+		availability: {clover: 1},
 		num: 394,
 		accuracy: 100,
 		basePower: 120,
@@ -5148,6 +5367,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	flash: {
+		availability: {clover: 1},
 		num: 148,
 		accuracy: 100,
 		basePower: 0,
@@ -5167,6 +5387,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	flashcannon: {
+		availability: {clover: 1},
 		num: 430,
 		accuracy: 100,
 		basePower: 80,
@@ -5186,6 +5407,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	flatter: {
+		availability: {clover: 1},
 		num: 260,
 		accuracy: 100,
 		basePower: 0,
@@ -5205,6 +5427,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	fleurcannon: {
+		availability: {clover: 1},
 		num: 705,
 		accuracy: 90,
 		basePower: 130,
@@ -5275,6 +5498,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	flipturn: {
+		availability: {clover: 1},
 		num: 812,
 		accuracy: 100,
 		basePower: 60,
@@ -5303,10 +5527,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 			volatileStatus: 'flinch',
 		},
 		target: "normal",
+		noSketch: true,
 		type: "Flying",
 		contestType: "Cool",
 	},
 	floralhealing: {
+		availability: {clover: 1},
 		num: 666,
 		accuracy: true,
 		basePower: 0,
@@ -5338,6 +5564,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	flowershield: {
+		availability: {clover: 1},
 		num: 579,
 		accuracy: true,
 		basePower: 0,
@@ -5352,11 +5579,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (
 					pokemon.hasType('Grass') &&
 					(!pokemon.volatiles['maxguard'] ||
-					  this.runEvent('TryHit', pokemon, source, move))
-				  ) {
+						this.runEvent('TryHit', pokemon, source, move))
+				) {
 					// This move affects every Grass-type Pokemon in play.
 					targets.push(pokemon);
-				  }
+				}
 			}
 			let success = false;
 			for (const target of targets) {
@@ -5371,6 +5598,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	fly: {
+		availability: {clover: 1},
 		num: 19,
 		accuracy: 95,
 		basePower: 90,
@@ -5421,6 +5649,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	flyingpress: {
+		availability: {clover: 1},
 		num: 560,
 		accuracy: 95,
 		basePower: 100,
@@ -5439,6 +5668,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	focusblast: {
+		availability: {clover: 1},
 		num: 411,
 		accuracy: 70,
 		basePower: 120,
@@ -5458,6 +5688,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	focusenergy: {
+		availability: {clover: 1},
 		num: 116,
 		accuracy: true,
 		basePower: 0,
@@ -5488,6 +5719,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	focuspunch: {
+		availability: {clover: 1},
 		num: 264,
 		accuracy: 100,
 		basePower: 150,
@@ -5525,6 +5757,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	followme: {
+		availability: {clover: 1},
 		num: 266,
 		accuracy: true,
 		basePower: 0,
@@ -5562,6 +5795,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	forcepalm: {
+		availability: {clover: 1},
 		num: 395,
 		accuracy: 100,
 		basePower: 60,
@@ -5579,6 +5813,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	foresight: {
+		availability: {clover: 1},
 		num: 193,
 		accuracy: true,
 		basePower: 0,
@@ -5613,6 +5848,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	forestscurse: {
+		availability: {clover: 1},
 		num: 571,
 		accuracy: 100,
 		basePower: 0,
@@ -5633,6 +5869,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	foulplay: {
+		availability: {clover: 1},
 		num: 492,
 		accuracy: 100,
 		basePower: 95,
@@ -5648,6 +5885,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	freezedry: {
+		availability: {clover: 1},
 		num: 573,
 		accuracy: 100,
 		basePower: 70,
@@ -5668,6 +5906,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	freezeshock: {
+		availability: {clover: 1},
 		num: 553,
 		accuracy: 90,
 		basePower: 140,
@@ -5696,6 +5935,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	freezingglare: {
+		availability: {clover: 1},
 		num: 821,
 		accuracy: 100,
 		basePower: 90,
@@ -5733,6 +5973,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	frenzyplant: {
+		availability: {clover: 1},
 		num: 338,
 		accuracy: 90,
 		basePower: 150,
@@ -5750,6 +5991,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	frostbreath: {
+		availability: {clover: 1},
 		num: 524,
 		accuracy: 90,
 		basePower: 60,
@@ -5765,6 +6007,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	frustration: {
+		availability: {clover: 1},
 		num: 218,
 		accuracy: 100,
 		basePower: 0,
@@ -5785,6 +6028,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	furyattack: {
+		availability: {clover: 1},
 		num: 31,
 		accuracy: 85,
 		basePower: 15,
@@ -5800,6 +6044,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	furycutter: {
+		availability: {clover: 1},
 		num: 210,
 		accuracy: 95,
 		basePower: 40,
@@ -5813,7 +6058,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Fury Cutter",
 		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		condition: {
 			duration: 2,
 			onStart() {
@@ -5832,6 +6077,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	furyswipes: {
+		availability: {clover: 1},
 		num: 154,
 		accuracy: 80,
 		basePower: 18,
@@ -5848,6 +6094,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	fusionbolt: {
+		availability: {clover: 1},
 		num: 559,
 		accuracy: 100,
 		basePower: 100,
@@ -5868,6 +6115,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	fusionflare: {
+		availability: {clover: 1},
 		num: 558,
 		accuracy: 100,
 		basePower: 100,
@@ -5888,6 +6136,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	futuresight: {
+		availability: {clover: 1},
 		num: 248,
 		accuracy: 100,
 		basePower: 120,
@@ -5927,6 +6176,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	gastroacid: {
+		availability: {clover: 1},
 		num: 380,
 		accuracy: 100,
 		basePower: 0,
@@ -5958,6 +6208,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	geargrind: {
+		availability: {clover: 1},
 		num: 544,
 		accuracy: 85,
 		basePower: 50,
@@ -5975,6 +6226,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	gearup: {
+		availability: {clover: 1},
 		num: 674,
 		accuracy: true,
 		basePower: 0,
@@ -6025,6 +6277,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	geomancy: {
+		availability: {clover: 1},
 		num: 601,
 		accuracy: true,
 		basePower: 0,
@@ -6056,6 +6309,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	gigadrain: {
+		availability: {clover: 1},
 		num: 202,
 		accuracy: 100,
 		basePower: 75,
@@ -6071,6 +6325,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	gigaimpact: {
+		availability: {clover: 1},
 		num: 416,
 		accuracy: 90,
 		basePower: 150,
@@ -6117,6 +6372,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 	},
 	glaciate: {
+		availability: {clover: 1},
 		num: 549,
 		accuracy: 95,
 		basePower: 65,
@@ -6136,6 +6392,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	glare: {
+		availability: {clover: 1},
 		num: 137,
 		accuracy: 100,
 		basePower: 0,
@@ -6994,6 +7251,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	gmaxwindrage: {
+		availability: {clover: 1},
 		num: 1000,
 		accuracy: true,
 		basePower: 10,
@@ -7008,9 +7266,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onHit(source) {
 				let success = false;
 				const removeTarget = [
-					'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb',
+					'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'sleazyspores', 'shattershard', 'pleasedontdothat',
 				];
-				const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+				const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'pleasedontdothat'];
 				for (const targetCondition of removeTarget) {
 					if (source.side.foe.removeSideCondition(targetCondition)) {
 						if (!removeAll.includes(targetCondition)) continue;
@@ -7034,6 +7292,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	grassknot: {
+		availability: {clover: 1},
 		num: 447,
 		accuracy: 100,
 		basePower: 0,
@@ -7144,6 +7403,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	grasswhistle: {
+		availability: {clover: 1},
 		num: 320,
 		accuracy: 55,
 		basePower: 0,
@@ -7161,6 +7421,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	grassyglide: {
+		availability: {clover: 1},
 		num: 803,
 		accuracy: 100,
 		basePower: 70,
@@ -7180,6 +7441,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	grassyterrain: {
+		availability: {clover: 1},
 		num: 580,
 		accuracy: true,
 		basePower: 0,
@@ -7261,6 +7523,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	gravity: {
+		availability: {clover: 1},
 		num: 356,
 		accuracy: true,
 		basePower: 0,
@@ -7347,6 +7610,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	growl: {
+		availability: {clover: 1},
 		num: 45,
 		accuracy: 100,
 		basePower: 0,
@@ -7365,6 +7629,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	growth: {
+		availability: {clover: 1},
 		num: 74,
 		accuracy: true,
 		basePower: 0,
@@ -7387,6 +7652,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	grudge: {
+		availability: {clover: 1},
 		num: 288,
 		accuracy: true,
 		basePower: 0,
@@ -7454,6 +7720,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	guardsplit: {
+		availability: {clover: 1},
 		num: 470,
 		accuracy: true,
 		basePower: 0,
@@ -7478,6 +7745,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	guardswap: {
+		availability: {clover: 1},
 		num: 385,
 		accuracy: true,
 		basePower: 0,
@@ -7508,6 +7776,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	guillotine: {
+		availability: {clover: 1},
 		num: 12,
 		accuracy: 30,
 		basePower: 0,
@@ -7525,6 +7794,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	gunkshot: {
+		availability: {clover: 1},
 		num: 441,
 		accuracy: 80,
 		basePower: 120,
@@ -7542,6 +7812,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	gust: {
+		availability: {clover: 1},
 		num: 16,
 		accuracy: 100,
 		basePower: 40,
@@ -7556,6 +7827,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	gyroball: {
+		availability: {clover: 1},
 		num: 360,
 		accuracy: 100,
 		basePower: 0,
@@ -7579,6 +7851,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	hail: {
+		availability: {clover: 1},
 		num: 258,
 		accuracy: true,
 		basePower: 0,
@@ -7595,6 +7868,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	hammerarm: {
+		availability: {clover: 1},
 		num: 359,
 		accuracy: 90,
 		basePower: 100,
@@ -7602,7 +7876,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Hammer Arm",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, hammer: 1},
 		self: {
 			boosts: {
 				spe: -1,
@@ -7632,6 +7906,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	harden: {
+		availability: {clover: 1},
 		num: 106,
 		accuracy: true,
 		basePower: 0,
@@ -7650,6 +7925,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	haze: {
+		availability: {clover: 1},
 		num: 114,
 		accuracy: true,
 		basePower: 0,
@@ -7671,6 +7947,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	headbutt: {
+		availability: {clover: 1},
 		num: 29,
 		accuracy: 100,
 		basePower: 70,
@@ -7688,6 +7965,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	headcharge: {
+		availability: {clover: 1},
 		num: 543,
 		accuracy: 100,
 		basePower: 120,
@@ -7703,6 +7981,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	headsmash: {
+		availability: {clover: 1},
 		num: 457,
 		accuracy: 80,
 		basePower: 150,
@@ -7718,6 +7997,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	healbell: {
+		availability: {clover: 1},
 		num: 215,
 		accuracy: true,
 		basePower: 0,
@@ -7742,6 +8022,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	healblock: {
+		availability: {clover: 1},
 		num: 377,
 		accuracy: 100,
 		basePower: 0,
@@ -7807,6 +8088,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	healingwish: {
+		availability: {clover: 1},
 		num: 361,
 		accuracy: true,
 		basePower: 0,
@@ -7840,6 +8122,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	healorder: {
+		availability: {clover: 1},
 		num: 456,
 		accuracy: true,
 		basePower: 0,
@@ -7857,6 +8140,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	healpulse: {
+		availability: {clover: 1},
 		num: 505,
 		accuracy: true,
 		basePower: 0,
@@ -7888,6 +8172,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	heartstamp: {
+		availability: {clover: 1},
 		num: 531,
 		accuracy: 100,
 		basePower: 60,
@@ -7906,6 +8191,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	heartswap: {
+		availability: {clover: 1},
 		num: 391,
 		accuracy: true,
 		basePower: 0,
@@ -7937,6 +8223,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	heatcrash: {
+		availability: {clover: 1},
 		num: 535,
 		accuracy: 100,
 		basePower: 0,
@@ -7977,6 +8264,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	heatwave: {
+		availability: {clover: 1},
 		num: 257,
 		accuracy: 90,
 		basePower: 95,
@@ -7994,6 +8282,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	heavyslam: {
+		availability: {clover: 1},
 		num: 484,
 		accuracy: 100,
 		basePower: 0,
@@ -8034,6 +8323,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	helpinghand: {
+		availability: {clover: 1},
 		num: 270,
 		accuracy: true,
 		basePower: 0,
@@ -8069,6 +8359,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	hex: {
+		availability: {clover: 1},
 		num: 506,
 		accuracy: 100,
 		basePower: 65,
@@ -8088,6 +8379,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	hiddenpower: {
+		availability: {clover: 1},
 		num: 237,
 		accuracy: 100,
 		basePower: 60,
@@ -8250,6 +8542,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	hiddenpowerground: {
+		availability: {clover: 1},
 		num: 237,
 		accuracy: 100,
 		basePower: 60,
@@ -8298,6 +8591,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	hiddenpowerpsychic: {
+		availability: {clover: 1},
 		num: 237,
 		accuracy: 100,
 		basePower: 60,
@@ -8362,6 +8656,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	highhorsepower: {
+		availability: {clover: 1},
 		num: 667,
 		accuracy: 95,
 		basePower: 95,
@@ -8376,6 +8671,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	highjumpkick: {
+		availability: {clover: 1},
 		num: 136,
 		accuracy: 90,
 		basePower: 130,
@@ -8383,7 +8679,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "High Jump Kick",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1},
 		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
@@ -8394,6 +8690,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	holdback: {
+		availability: {clover: 1},
 		num: 610,
 		accuracy: 100,
 		basePower: 40,
@@ -8427,6 +8724,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	honeclaws: {
+		availability: {clover: 1},
 		num: 468,
 		accuracy: true,
 		basePower: 0,
@@ -8446,6 +8744,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	hornattack: {
+		availability: {clover: 1},
 		num: 30,
 		accuracy: 100,
 		basePower: 65,
@@ -8460,6 +8759,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	horndrill: {
+		availability: {clover: 1},
 		num: 32,
 		accuracy: 30,
 		basePower: 0,
@@ -8477,6 +8777,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	hornleech: {
+		availability: {clover: 1},
 		num: 532,
 		accuracy: 100,
 		basePower: 75,
@@ -8492,6 +8793,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	howl: {
+		availability: {clover: 1},
 		num: 336,
 		accuracy: true,
 		basePower: 0,
@@ -8510,6 +8812,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	hurricane: {
+		availability: {clover: 1},
 		num: 542,
 		accuracy: 70,
 		basePower: 110,
@@ -8539,6 +8842,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	hydrocannon: {
+		availability: {clover: 1},
 		num: 308,
 		accuracy: 90,
 		basePower: 150,
@@ -8556,6 +8860,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	hydropump: {
+		availability: {clover: 1},
 		num: 56,
 		accuracy: 80,
 		basePower: 110,
@@ -8586,6 +8891,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	hyperbeam: {
+		availability: {clover: 1},
 		num: 63,
 		accuracy: 90,
 		basePower: 150,
@@ -8603,6 +8909,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	hyperfang: {
+		availability: {clover: 1},
 		num: 158,
 		accuracy: 90,
 		basePower: 80,
@@ -8621,6 +8928,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	hyperspacefury: {
+		availability: {clover: 1},
 		num: 621,
 		accuracy: true,
 		basePower: 100,
@@ -8656,6 +8964,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	hyperspacehole: {
+		availability: {clover: 1},
 		num: 593,
 		accuracy: true,
 		basePower: 80,
@@ -8672,6 +8981,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	hypervoice: {
+		availability: {clover: 1},
 		num: 304,
 		accuracy: 100,
 		basePower: 90,
@@ -8686,6 +8996,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	hypnosis: {
+		availability: {clover: 1},
 		num: 95,
 		accuracy: 60,
 		basePower: 0,
@@ -8702,6 +9013,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	iceball: {
+		availability: {clover: 1},
 		num: 301,
 		accuracy: 90,
 		basePower: 30,
@@ -8748,6 +9060,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	icebeam: {
+		availability: {clover: 1},
 		num: 58,
 		accuracy: 100,
 		basePower: 90,
@@ -8765,6 +9078,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	iceburn: {
+		availability: {clover: 1},
 		num: 554,
 		accuracy: 90,
 		basePower: 140,
@@ -8793,6 +9107,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	icefang: {
+		availability: {clover: 1},
 		num: 423,
 		accuracy: 95,
 		basePower: 65,
@@ -8815,6 +9130,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	icehammer: {
+		availability: {clover: 1},
 		num: 665,
 		accuracy: 90,
 		basePower: 100,
@@ -8823,7 +9139,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Ice Hammer",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, hammer: 1},
 		self: {
 			boosts: {
 				spe: -1,
@@ -8835,6 +9151,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	icepunch: {
+		availability: {clover: 1},
 		num: 8,
 		accuracy: 100,
 		basePower: 75,
@@ -8852,6 +9169,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	iceshard: {
+		availability: {clover: 1},
 		num: 420,
 		accuracy: 100,
 		basePower: 40,
@@ -8866,6 +9184,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	iciclecrash: {
+		availability: {clover: 1},
 		num: 556,
 		accuracy: 90,
 		basePower: 85,
@@ -8883,6 +9202,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	iciclespear: {
+		availability: {clover: 1},
 		num: 333,
 		accuracy: 100,
 		basePower: 25,
@@ -8900,6 +9220,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	icywind: {
+		availability: {clover: 1},
 		num: 196,
 		accuracy: 95,
 		basePower: 55,
@@ -8919,6 +9240,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	imprison: {
+		availability: {clover: 1},
 		num: 286,
 		accuracy: true,
 		basePower: 0,
@@ -8956,6 +9278,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	incinerate: {
+		availability: {clover: 1},
 		num: 510,
 		accuracy: 100,
 		basePower: 60,
@@ -8976,6 +9299,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	inferno: {
+		availability: {clover: 1},
 		num: 517,
 		accuracy: 50,
 		basePower: 100,
@@ -9009,6 +9333,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	infestation: {
+		availability: {clover: 1},
 		num: 611,
 		accuracy: 100,
 		basePower: 20,
@@ -9024,6 +9349,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	ingrain: {
+		availability: {clover: 1},
 		num: 275,
 		accuracy: true,
 		basePower: 0,
@@ -9090,6 +9416,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	iondeluge: {
+		availability: {clover: 1},
 		num: 569,
 		accuracy: true,
 		basePower: 0,
@@ -9121,6 +9448,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	irondefense: {
+		availability: {clover: 1},
 		num: 334,
 		accuracy: true,
 		basePower: 0,
@@ -9139,6 +9467,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	ironhead: {
+		availability: {clover: 1},
 		num: 442,
 		accuracy: 100,
 		basePower: 80,
@@ -9156,6 +9485,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	irontail: {
+		availability: {clover: 1},
 		num: 231,
 		accuracy: 75,
 		basePower: 100,
@@ -9175,6 +9505,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	jawlock: {
+		availability: {clover: 1},
 		num: 746,
 		accuracy: 100,
 		basePower: 80,
@@ -9214,6 +9545,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	jumpkick: {
+		availability: {clover: 1},
 		num: 26,
 		accuracy: 95,
 		basePower: 100,
@@ -9222,7 +9554,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Jump Kick",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1},
 		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('Jump Kick'));
@@ -9233,6 +9565,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	junglehealing: {
+		availability: {clover: 1},
 		num: 816,
 		accuracy: true,
 		basePower: 0,
@@ -9250,6 +9583,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	karatechop: {
+		availability: {clover: 1},
 		num: 2,
 		accuracy: 100,
 		basePower: 50,
@@ -9266,6 +9600,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	kinesis: {
+		availability: {clover: 1},
 		num: 134,
 		accuracy: 80,
 		basePower: 0,
@@ -9284,6 +9619,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	kingsshield: {
+		availability: {clover: 1},
 		num: 588,
 		accuracy: true,
 		basePower: 0,
@@ -9342,6 +9678,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	knockoff: {
+		availability: {clover: 1},
 		num: 282,
 		accuracy: 100,
 		basePower: 65,
@@ -9371,6 +9708,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	landswrath: {
+		availability: {clover: 1},
 		num: 616,
 		accuracy: 100,
 		basePower: 90,
@@ -9386,6 +9724,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	laserfocus: {
+		availability: {clover: 1},
 		num: 673,
 		accuracy: true,
 		basePower: 0,
@@ -9422,6 +9761,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	lashout: {
+		availability: {clover: 1},
 		num: 808,
 		accuracy: 100,
 		basePower: 75,
@@ -9441,6 +9781,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 	},
 	lastresort: {
+		availability: {clover: 1},
 		num: 387,
 		accuracy: 100,
 		basePower: 140,
@@ -9467,6 +9808,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	lavaplume: {
+		availability: {clover: 1},
 		num: 436,
 		accuracy: 100,
 		basePower: 80,
@@ -9484,6 +9826,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	leafage: {
+		availability: {clover: 1},
 		num: 670,
 		accuracy: 100,
 		basePower: 40,
@@ -9498,6 +9841,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	leafblade: {
+		availability: {clover: 1},
 		num: 348,
 		accuracy: 100,
 		basePower: 90,
@@ -9505,7 +9849,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Leaf Blade",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -9513,6 +9857,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	leafstorm: {
+		availability: {clover: 1},
 		num: 437,
 		accuracy: 90,
 		basePower: 130,
@@ -9532,6 +9877,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	leaftornado: {
+		availability: {clover: 1},
 		num: 536,
 		accuracy: 90,
 		basePower: 65,
@@ -9551,6 +9897,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	leechlife: {
+		availability: {clover: 1},
 		num: 141,
 		accuracy: 100,
 		basePower: 80,
@@ -9566,6 +9913,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	leechseed: {
+		availability: {clover: 1},
 		num: 73,
 		accuracy: 90,
 		basePower: 0,
@@ -9602,6 +9950,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	leer: {
+		availability: {clover: 1},
 		num: 43,
 		accuracy: 100,
 		basePower: 0,
@@ -9636,6 +9985,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	lick: {
+		availability: {clover: 1},
 		num: 122,
 		accuracy: 100,
 		basePower: 30,
@@ -9653,6 +10003,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	lifedew: {
+		availability: {clover: 1},
 		num: 791,
 		accuracy: true,
 		basePower: 0,
@@ -9667,6 +10018,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Water",
 	},
 	lightofruin: {
+		availability: {clover: 1},
 		num: 617,
 		accuracy: 90,
 		basePower: 140,
@@ -9683,6 +10035,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	lightscreen: {
+		availability: {clover: 1},
 		num: 113,
 		accuracy: true,
 		basePower: 0,
@@ -9745,6 +10098,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	liquidation: {
+		availability: {clover: 1},
 		num: 710,
 		accuracy: 100,
 		basePower: 85,
@@ -9764,6 +10118,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	lockon: {
+		availability: {clover: 1},
 		num: 199,
 		accuracy: true,
 		basePower: 0,
@@ -9797,6 +10152,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	lovelykiss: {
+		availability: {clover: 1},
 		num: 142,
 		accuracy: 75,
 		basePower: 0,
@@ -9813,6 +10169,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	lowkick: {
+		availability: {clover: 1},
 		num: 67,
 		accuracy: 100,
 		basePower: 0,
@@ -9839,7 +10196,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Low Kick",
 		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		onTryHit(target, pokemon, move) {
 			if (target.volatiles['dynamax']) {
 				this.add('-fail', pokemon, 'Dynamax');
@@ -9854,6 +10211,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	lowsweep: {
+		availability: {clover: 1},
 		num: 490,
 		accuracy: 100,
 		basePower: 65,
@@ -9873,6 +10231,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	luckychant: {
+		availability: {clover: 1},
 		num: 381,
 		accuracy: true,
 		basePower: 0,
@@ -9902,6 +10261,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	lunardance: {
+		availability: {clover: 1},
 		num: 461,
 		accuracy: true,
 		basePower: 0,
@@ -9944,6 +10304,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	lunge: {
+		availability: {clover: 1},
 		num: 679,
 		accuracy: 100,
 		basePower: 80,
@@ -9963,6 +10324,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	lusterpurge: {
+		availability: {clover: 1},
 		num: 295,
 		accuracy: 100,
 		basePower: 70,
@@ -9982,6 +10344,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	machpunch: {
+		availability: {clover: 1},
 		num: 183,
 		accuracy: 100,
 		basePower: 40,
@@ -9996,6 +10359,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	magicalleaf: {
+		availability: {clover: 1},
 		num: 345,
 		accuracy: true,
 		basePower: 60,
@@ -10010,6 +10374,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	magiccoat: {
+		availability: {clover: 1},
 		num: 277,
 		accuracy: true,
 		basePower: 0,
@@ -10056,6 +10421,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	magicpowder: {
+		availability: {clover: 1},
 		num: 750,
 		accuracy: 100,
 		basePower: 0,
@@ -10073,6 +10439,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 	},
 	magicroom: {
+		availability: {clover: 1},
 		num: 478,
 		accuracy: true,
 		basePower: 0,
@@ -10085,8 +10452,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasAbility('persistent')) {
-					this.add('-activate', source, 'ability: Persistent', effect);
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
 					return 7;
 				}
 				return 5;
@@ -10111,6 +10478,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	magmastorm: {
+		availability: {clover: 1},
 		num: 463,
 		accuracy: 75,
 		basePower: 100,
@@ -10126,6 +10494,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	magnetbomb: {
+		availability: {clover: 1},
 		num: 443,
 		accuracy: true,
 		basePower: 60,
@@ -10169,6 +10538,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	magnetrise: {
+		availability: {clover: 1},
 		num: 393,
 		accuracy: true,
 		basePower: 0,
@@ -10207,6 +10577,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	magnitude: {
+		availability: {clover: 1},
 		num: 222,
 		accuracy: 100,
 		basePower: 0,
@@ -10268,6 +10639,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	matblock: {
+		availability: {clover: 1},
 		num: 561,
 		accuracy: true,
 		basePower: 0,
@@ -10575,6 +10947,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	maxovergrowth: {
+		availability: {clover: 1},
 		num: 773,
 		accuracy: true,
 		basePower: 10,
@@ -10745,6 +11118,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	meanlook: {
+		availability: {clover: 1},
 		num: 212,
 		accuracy: true,
 		basePower: 0,
@@ -10763,6 +11137,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	meditate: {
+		availability: {clover: 1},
 		num: 96,
 		accuracy: true,
 		basePower: 0,
@@ -10782,6 +11157,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	mefirst: {
+		availability: {clover: 1},
 		num: 382,
 		accuracy: true,
 		basePower: 0,
@@ -10821,6 +11197,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	megadrain: {
+		availability: {clover: 1},
 		num: 72,
 		accuracy: 100,
 		basePower: 40,
@@ -10837,6 +11214,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	megahorn: {
+		availability: {clover: 1},
 		num: 224,
 		accuracy: 85,
 		basePower: 120,
@@ -10851,6 +11229,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	megakick: {
+		availability: {clover: 1},
 		num: 25,
 		accuracy: 75,
 		basePower: 120,
@@ -10858,13 +11237,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Mega Kick",
 		pp: 5,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
 		contestType: "Cool",
 	},
 	megapunch: {
+		availability: {clover: 1},
 		num: 5,
 		accuracy: 85,
 		basePower: 80,
@@ -10879,6 +11259,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	memento: {
+		availability: {clover: 1},
 		num: 262,
 		accuracy: 100,
 		basePower: 0,
@@ -10916,6 +11297,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	metalburst: {
+		availability: {clover: 1},
 		num: 368,
 		accuracy: 100,
 		basePower: 0,
@@ -10947,6 +11329,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	metalclaw: {
+		availability: {clover: 1},
 		num: 232,
 		accuracy: 95,
 		basePower: 50,
@@ -10968,6 +11351,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	metalsound: {
+		availability: {clover: 1},
 		num: 319,
 		accuracy: 85,
 		basePower: 0,
@@ -10986,6 +11370,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	meteorassault: {
+		availability: {clover: 1},
 		num: 794,
 		accuracy: 100,
 		basePower: 150,
@@ -11002,6 +11387,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 	},
 	meteorbeam: {
+		availability: {clover: 1},
 		num: 800,
 		accuracy: 90,
 		basePower: 120,
@@ -11027,6 +11413,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rock",
 	},
 	meteormash: {
+		availability: {clover: 1},
 		num: 309,
 		accuracy: 90,
 		basePower: 90,
@@ -11048,6 +11435,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	metronome: {
+		availability: {clover: 1},
 		num: 118,
 		accuracy: true,
 		basePower: 0,
@@ -11080,6 +11468,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	milkdrink: {
+		availability: {clover: 1},
 		num: 208,
 		accuracy: true,
 		basePower: 0,
@@ -11096,6 +11485,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	mimic: {
+		availability: {clover: 1},
 		num: 102,
 		accuracy: true,
 		basePower: 0,
@@ -11135,6 +11525,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	mindblown: {
+		availability: {clover: 1},
 		num: 720,
 		accuracy: 100,
 		basePower: 150,
@@ -11155,6 +11546,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	mindreader: {
+		availability: {clover: 1},
 		num: 170,
 		accuracy: true,
 		basePower: 0,
@@ -11177,6 +11569,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	minimize: {
+		availability: {clover: 1},
 		num: 107,
 		accuracy: true,
 		basePower: 0,
@@ -11217,6 +11610,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	miracleeye: {
+		availability: {clover: 1},
 		num: 357,
 		accuracy: true,
 		basePower: 0,
@@ -11251,6 +11645,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	mirrorcoat: {
+		availability: {clover: 1},
 		num: 243,
 		accuracy: 100,
 		basePower: 0,
@@ -11296,6 +11691,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	mirrormove: {
+		availability: {clover: 1},
 		num: 119,
 		accuracy: true,
 		basePower: 0,
@@ -11320,6 +11716,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	mirrorshot: {
+		availability: {clover: 1},
 		num: 429,
 		accuracy: 85,
 		basePower: 65,
@@ -11340,6 +11737,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	mist: {
+		availability: {clover: 1},
 		num: 54,
 		accuracy: true,
 		basePower: 0,
@@ -11383,6 +11781,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	mistball: {
+		availability: {clover: 1},
 		num: 296,
 		accuracy: 100,
 		basePower: 70,
@@ -11402,6 +11801,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	mistyexplosion: {
+		availability: {clover: 1},
 		num: 802,
 		accuracy: 100,
 		basePower: 100,
@@ -11422,6 +11822,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 	},
 	mistyterrain: {
+		availability: {clover: 1},
 		num: 581,
 		accuracy: true,
 		basePower: 0,
@@ -11480,6 +11881,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	moonblast: {
+		availability: {clover: 1},
 		num: 585,
 		accuracy: 100,
 		basePower: 95,
@@ -11499,6 +11901,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	moongeistbeam: {
+		availability: {clover: 1},
 		num: 714,
 		accuracy: 100,
 		basePower: 100,
@@ -11514,6 +11917,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	moonlight: {
+		availability: {clover: 1},
 		num: 236,
 		accuracy: true,
 		basePower: 0,
@@ -11533,6 +11937,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			case 'primordialsea':
 			case 'sandstorm':
 			case 'hail':
+			case 'densefog':
 				factor = 0.25;
 				break;
 			}
@@ -11550,6 +11955,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	morningsun: {
+		availability: {clover: 1},
 		num: 234,
 		accuracy: true,
 		basePower: 0,
@@ -11569,6 +11975,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			case 'primordialsea':
 			case 'sandstorm':
 			case 'hail':
+			case 'densefog':
 				factor = 0.25;
 				break;
 			}
@@ -11586,6 +11993,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	mudbomb: {
+		availability: {clover: 1},
 		num: 426,
 		accuracy: 85,
 		basePower: 65,
@@ -11606,6 +12014,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	mudshot: {
+		availability: {clover: 1},
 		num: 341,
 		accuracy: 95,
 		basePower: 55,
@@ -11625,6 +12034,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	mudslap: {
+		availability: {clover: 1},
 		num: 189,
 		accuracy: 100,
 		basePower: 20,
@@ -11644,6 +12054,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	mudsport: {
+		availability: {clover: 1},
 		num: 300,
 		accuracy: true,
 		basePower: 0,
@@ -11679,6 +12090,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	muddywater: {
+		availability: {clover: 1},
 		num: 330,
 		accuracy: 85,
 		basePower: 90,
@@ -11718,6 +12130,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	mysticalfire: {
+		availability: {clover: 1},
 		num: 595,
 		accuracy: 100,
 		basePower: 75,
@@ -11737,6 +12150,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	nastyplot: {
+		availability: {clover: 1},
 		num: 417,
 		accuracy: true,
 		basePower: 0,
@@ -11755,6 +12169,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	naturalgift: {
+		availability: {clover: 1},
 		num: 363,
 		accuracy: 100,
 		basePower: 0,
@@ -11788,6 +12203,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	naturepower: {
+		availability: {clover: 1},
 		num: 267,
 		accuracy: true,
 		basePower: 0,
@@ -11816,6 +12232,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	naturesmadness: {
+		availability: {clover: 1},
 		num: 717,
 		accuracy: 90,
 		basePower: 0,
@@ -11833,6 +12250,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	needlearm: {
+		availability: {clover: 1},
 		num: 302,
 		accuracy: 100,
 		basePower: 60,
@@ -11851,6 +12269,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	neverendingnightmare: {
+		availability: {clover: 1},
 		num: 636,
 		accuracy: true,
 		basePower: 1,
@@ -11867,6 +12286,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	nightdaze: {
+		availability: {clover: 1},
 		num: 539,
 		accuracy: 95,
 		basePower: 85,
@@ -11886,6 +12306,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	nightmare: {
+		availability: {clover: 1},
 		num: 171,
 		accuracy: 100,
 		basePower: 0,
@@ -11916,6 +12337,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	nightshade: {
+		availability: {clover: 1},
 		num: 101,
 		accuracy: 100,
 		basePower: 0,
@@ -11931,6 +12353,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	nightslash: {
+		availability: {clover: 1},
 		num: 400,
 		accuracy: 100,
 		basePower: 70,
@@ -11938,7 +12361,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Night Slash",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -11946,6 +12369,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	nobleroar: {
+		availability: {clover: 1},
 		num: 568,
 		accuracy: 100,
 		basePower: 0,
@@ -11965,6 +12389,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	noretreat: {
+		availability: {clover: 1},
 		num: 748,
 		accuracy: true,
 		basePower: 0,
@@ -12000,6 +12425,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 	},
 	nuzzle: {
+		availability: {clover: 1},
 		num: 609,
 		accuracy: 100,
 		basePower: 20,
@@ -12017,6 +12443,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	oblivionwing: {
+		availability: {clover: 1},
 		num: 613,
 		accuracy: 100,
 		basePower: 80,
@@ -12032,6 +12459,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	obstruct: {
+		availability: {clover: 1},
 		num: 792,
 		accuracy: 100,
 		basePower: 0,
@@ -12104,6 +12532,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	octazooka: {
+		availability: {clover: 1},
 		num: 190,
 		accuracy: 85,
 		basePower: 65,
@@ -12123,6 +12552,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	octolock: {
+		availability: {clover: 1},
 		num: 753,
 		accuracy: 100,
 		basePower: 0,
@@ -12158,6 +12588,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 	},
 	odorsleuth: {
+		availability: {clover: 1},
 		num: 316,
 		accuracy: true,
 		basePower: 0,
@@ -12178,6 +12609,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	ominouswind: {
+		availability: {clover: 1},
 		num: 466,
 		accuracy: 100,
 		basePower: 60,
@@ -12204,6 +12636,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	originpulse: {
+		availability: {clover: 1},
 		num: 618,
 		accuracy: 85,
 		basePower: 110,
@@ -12217,6 +12650,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	outrage: {
+		availability: {clover: 1},
 		num: 200,
 		accuracy: 100,
 		basePower: 120,
@@ -12239,6 +12673,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	overdrive: {
+		availability: {clover: 1},
 		num: 786,
 		accuracy: 100,
 		basePower: 80,
@@ -12252,6 +12687,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	overheat: {
+		availability: {clover: 1},
 		num: 315,
 		accuracy: 90,
 		basePower: 130,
@@ -12271,6 +12707,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	painsplit: {
+		availability: {clover: 1},
 		num: 220,
 		accuracy: true,
 		basePower: 0,
@@ -12315,6 +12752,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	paraboliccharge: {
+		availability: {clover: 1},
 		num: 570,
 		accuracy: 100,
 		basePower: 65,
@@ -12330,6 +12768,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	partingshot: {
+		availability: {clover: 1},
 		num: 575,
 		accuracy: 100,
 		basePower: 0,
@@ -12352,6 +12791,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	payback: {
+		availability: {clover: 1},
 		num: 371,
 		accuracy: 100,
 		basePower: 50,
@@ -12374,6 +12814,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	payday: {
+		availability: {clover: 1},
 		num: 6,
 		accuracy: 100,
 		basePower: 40,
@@ -12391,6 +12832,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	peck: {
+		availability: {clover: 1},
 		num: 64,
 		accuracy: 100,
 		basePower: 35,
@@ -12405,6 +12847,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	perishsong: {
+		availability: {clover: 1},
 		num: 195,
 		accuracy: true,
 		basePower: 0,
@@ -12451,6 +12894,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	petalblizzard: {
+		availability: {clover: 1},
 		num: 572,
 		accuracy: 100,
 		basePower: 90,
@@ -12465,6 +12909,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	petaldance: {
+		availability: {clover: 1},
 		num: 80,
 		accuracy: 100,
 		basePower: 120,
@@ -12487,6 +12932,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	phantomforce: {
+		availability: {clover: 1},
 		num: 566,
 		accuracy: 100,
 		basePower: 90,
@@ -12517,6 +12963,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	photongeyser: {
+		availability: {clover: 1},
 		num: 722,
 		accuracy: 100,
 		basePower: 100,
@@ -12548,11 +12995,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1},
 		secondary: null,
+		noSketch: true,
 		target: "normal",
 		type: "Electric",
 		contestType: "Cute",
 	},
 	pinmissile: {
+		availability: {clover: 1},
 		num: 42,
 		accuracy: 95,
 		basePower: 25,
@@ -12570,6 +13019,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	plasmafists: {
+		availability: {clover: 1},
 		num: 721,
 		accuracy: 100,
 		basePower: 100,
@@ -12585,6 +13035,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	playnice: {
+		availability: {clover: 1},
 		num: 589,
 		accuracy: true,
 		basePower: 0,
@@ -12603,6 +13054,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	playrough: {
+		availability: {clover: 1},
 		num: 583,
 		accuracy: 90,
 		basePower: 90,
@@ -12622,6 +13074,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	pluck: {
+		availability: {clover: 1},
 		num: 365,
 		accuracy: 100,
 		basePower: 60,
@@ -12647,6 +13100,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	poisonfang: {
+		availability: {clover: 1},
 		num: 305,
 		accuracy: 100,
 		basePower: 50,
@@ -12664,6 +13118,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	poisongas: {
+		availability: {clover: 1},
 		num: 139,
 		accuracy: 90,
 		basePower: 0,
@@ -12680,6 +13135,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	poisonjab: {
+		availability: {clover: 1},
 		num: 398,
 		accuracy: 100,
 		basePower: 80,
@@ -12697,6 +13153,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	poisonpowder: {
+		availability: {clover: 1},
 		num: 77,
 		accuracy: 75,
 		basePower: 0,
@@ -12713,6 +13170,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	poisonsting: {
+		availability: {clover: 1},
 		num: 40,
 		accuracy: 100,
 		basePower: 15,
@@ -12730,6 +13188,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	poisontail: {
+		availability: {clover: 1},
 		num: 342,
 		accuracy: 100,
 		basePower: 50,
@@ -12748,6 +13207,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	pollenpuff: {
+		availability: {clover: 1},
 		num: 676,
 		accuracy: 100,
 		basePower: 90,
@@ -12776,6 +13236,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	poltergeist: {
+		availability: {clover: 1},
 		num: 809,
 		accuracy: 90,
 		basePower: 110,
@@ -12795,6 +13256,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ghost",
 	},
 	pound: {
+		availability: {clover: 1},
 		num: 1,
 		accuracy: 100,
 		basePower: 40,
@@ -12809,6 +13271,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	powder: {
+		availability: {clover: 1},
 		num: 600,
 		accuracy: 100,
 		basePower: 0,
@@ -12841,6 +13304,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	powdersnow: {
+		availability: {clover: 1},
 		num: 181,
 		accuracy: 100,
 		basePower: 40,
@@ -12858,6 +13322,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	powergem: {
+		availability: {clover: 1},
 		num: 408,
 		accuracy: 100,
 		basePower: 80,
@@ -12872,6 +13337,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	powersplit: {
+		availability: {clover: 1},
 		num: 471,
 		accuracy: true,
 		basePower: 0,
@@ -12896,6 +13362,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	powerswap: {
+		availability: {clover: 1},
 		num: 384,
 		accuracy: true,
 		basePower: 0,
@@ -12926,6 +13393,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	powertrick: {
+		availability: {clover: 1},
 		num: 379,
 		accuracy: true,
 		basePower: 0,
@@ -12967,6 +13435,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	powertrip: {
+		availability: {clover: 1},
 		num: 681,
 		accuracy: 100,
 		basePower: 20,
@@ -12986,6 +13455,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	poweruppunch: {
+		availability: {clover: 1},
 		num: 612,
 		accuracy: 100,
 		basePower: 40,
@@ -13007,6 +13477,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	powerwhip: {
+		availability: {clover: 1},
 		num: 438,
 		accuracy: 85,
 		basePower: 120,
@@ -13021,6 +13492,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	precipiceblades: {
+		availability: {clover: 1},
 		num: 619,
 		accuracy: 85,
 		basePower: 120,
@@ -13034,6 +13506,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	present: {
+		availability: {clover: 1},
 		num: 217,
 		accuracy: 90,
 		basePower: 0,
@@ -13061,6 +13534,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	prismaticlaser: {
+		availability: {clover: 1},
 		num: 711,
 		accuracy: 100,
 		basePower: 160,
@@ -13078,6 +13552,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	protect: {
+		availability: {clover: 1},
 		num: 182,
 		accuracy: true,
 		basePower: 0,
@@ -13128,6 +13603,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	psybeam: {
+		availability: {clover: 1},
 		num: 60,
 		accuracy: 100,
 		basePower: 65,
@@ -13145,6 +13621,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	psychup: {
+		availability: {clover: 1},
 		num: 244,
 		accuracy: true,
 		basePower: 0,
@@ -13176,6 +13653,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	psychic: {
+		availability: {clover: 1},
 		num: 94,
 		accuracy: 100,
 		basePower: 90,
@@ -13195,6 +13673,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	psychicfangs: {
+		availability: {clover: 1},
 		num: 706,
 		accuracy: 100,
 		basePower: 85,
@@ -13215,6 +13694,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	psychicterrain: {
+		availability: {clover: 1},
 		num: 678,
 		accuracy: true,
 		basePower: 0,
@@ -13275,6 +13755,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	psychoboost: {
+		availability: {clover: 1},
 		num: 354,
 		accuracy: 90,
 		basePower: 140,
@@ -13295,6 +13776,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	psychocut: {
+		availability: {clover: 1},
 		num: 427,
 		accuracy: 100,
 		basePower: 70,
@@ -13302,7 +13784,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Psycho Cut",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, blade: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -13310,6 +13792,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	psychoshift: {
+		availability: {clover: 1},
 		num: 375,
 		accuracy: 100,
 		basePower: 0,
@@ -13334,6 +13817,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	psyshock: {
+		availability: {clover: 1},
 		num: 473,
 		accuracy: 100,
 		basePower: 80,
@@ -13349,6 +13833,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	psystrike: {
+		availability: {clover: 1},
 		num: 540,
 		accuracy: 100,
 		basePower: 100,
@@ -13364,6 +13849,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	psywave: {
+		availability: {clover: 1},
 		num: 149,
 		accuracy: 100,
 		basePower: 0,
@@ -13398,6 +13884,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	punishment: {
+		availability: {clover: 1},
 		num: 386,
 		accuracy: 100,
 		basePower: 0,
@@ -13420,6 +13907,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	purify: {
+		availability: {clover: 1},
 		num: 685,
 		accuracy: true,
 		basePower: 0,
@@ -13439,6 +13927,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	pursuit: {
+		availability: {clover: 1},
 		num: 228,
 		accuracy: 100,
 		basePower: 40,
@@ -13506,6 +13995,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	pyroball: {
+		availability: {clover: 1},
 		num: 780,
 		accuracy: 90,
 		basePower: 120,
@@ -13545,6 +14035,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	quickattack: {
+		availability: {clover: 1},
 		num: 98,
 		accuracy: 100,
 		basePower: 40,
@@ -13559,6 +14050,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	quickguard: {
+		availability: {clover: 1},
 		num: 501,
 		accuracy: true,
 		basePower: 0,
@@ -13607,6 +14099,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	quiverdance: {
+		availability: {clover: 1},
 		num: 483,
 		accuracy: true,
 		basePower: 0,
@@ -13627,6 +14120,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	rage: {
+		availability: {clover: 1},
 		num: 99,
 		accuracy: 100,
 		basePower: 20,
@@ -13660,6 +14154,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	ragepowder: {
+		availability: {clover: 1},
 		num: 476,
 		accuracy: true,
 		basePower: 0,
@@ -13696,6 +14191,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	raindance: {
+		availability: {clover: 1},
 		num: 240,
 		accuracy: true,
 		basePower: 0,
@@ -13712,6 +14208,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	rapidspin: {
+		availability: {clover: 1},
 		num: 229,
 		accuracy: 100,
 		basePower: 50,
@@ -13724,7 +14221,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'pleasedontdothat'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -13738,7 +14235,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'pleasedontdothat'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -13761,6 +14258,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	razorleaf: {
+		availability: {clover: 1},
 		num: 75,
 		accuracy: 95,
 		basePower: 55,
@@ -13776,6 +14274,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	razorshell: {
+		availability: {clover: 1},
 		num: 534,
 		accuracy: 95,
 		basePower: 75,
@@ -13795,6 +14294,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	razorwind: {
+		availability: {clover: 1},
 		num: 13,
 		accuracy: 100,
 		basePower: 80,
@@ -13803,7 +14303,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Razor Wind",
 		pp: 10,
 		priority: 0,
-		flags: {charge: 1, protect: 1, mirror: 1},
+		flags: {charge: 1, protect: 1, mirror: 1, blade: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -13822,6 +14322,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	recover: {
+		availability: {clover: 1},
 		num: 105,
 		accuracy: true,
 		basePower: 0,
@@ -13838,6 +14339,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	recycle: {
+		availability: {clover: 1},
 		num: 278,
 		accuracy: true,
 		basePower: 0,
@@ -13860,6 +14362,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	reflect: {
+		availability: {clover: 1},
 		num: 115,
 		accuracy: true,
 		basePower: 0,
@@ -13902,6 +14405,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	reflecttype: {
+		availability: {clover: 1},
 		num: 513,
 		accuracy: true,
 		basePower: 0,
@@ -13932,6 +14436,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	refresh: {
+		availability: {clover: 1},
 		num: 287,
 		accuracy: true,
 		basePower: 0,
@@ -13952,6 +14457,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	relicsong: {
+		availability: {clover: 1},
 		num: 547,
 		accuracy: 100,
 		basePower: 75,
@@ -13981,6 +14487,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	rest: {
+		availability: {clover: 1},
 		num: 156,
 		accuracy: true,
 		basePower: 0,
@@ -14015,6 +14522,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	retaliate: {
+		availability: {clover: 1},
 		num: 514,
 		accuracy: 100,
 		basePower: 70,
@@ -14035,6 +14543,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	return: {
+		availability: {clover: 1},
 		num: 216,
 		accuracy: 100,
 		basePower: 0,
@@ -14055,6 +14564,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	revelationdance: {
+		availability: {clover: 1},
 		num: 686,
 		accuracy: 100,
 		basePower: 90,
@@ -14075,6 +14585,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	revenge: {
+		availability: {clover: 1},
 		num: 279,
 		accuracy: 100,
 		basePower: 60,
@@ -14099,6 +14610,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	reversal: {
+		availability: {clover: 1},
 		num: 179,
 		accuracy: 100,
 		basePower: 0,
@@ -14133,6 +14645,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	risingvoltage: {
+		availability: {clover: 1},
 		num: 804,
 		accuracy: 100,
 		basePower: 70,
@@ -14154,6 +14667,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		maxMove: {basePower: 140},
 	},
 	roar: {
+		availability: {clover: 1},
 		num: 46,
 		accuracy: true,
 		basePower: 0,
@@ -14170,6 +14684,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	roaroftime: {
+		availability: {clover: 1},
 		num: 459,
 		accuracy: 90,
 		basePower: 150,
@@ -14187,6 +14702,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	rockblast: {
+		availability: {clover: 1},
 		num: 350,
 		accuracy: 90,
 		basePower: 25,
@@ -14204,6 +14720,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	rockclimb: {
+		availability: {clover: 1},
 		num: 431,
 		accuracy: 85,
 		basePower: 90,
@@ -14222,6 +14739,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	rockpolish: {
+		availability: {clover: 1},
 		num: 397,
 		accuracy: true,
 		basePower: 0,
@@ -14240,6 +14758,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	rockslide: {
+		availability: {clover: 1},
 		num: 157,
 		accuracy: 90,
 		basePower: 75,
@@ -14257,6 +14776,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	rocksmash: {
+		availability: {clover: 1},
 		num: 249,
 		accuracy: 100,
 		basePower: 40,
@@ -14276,6 +14796,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	rockthrow: {
+		availability: {clover: 1},
 		num: 88,
 		accuracy: 90,
 		basePower: 50,
@@ -14290,6 +14811,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	rocktomb: {
+		availability: {clover: 1},
 		num: 317,
 		accuracy: 95,
 		basePower: 60,
@@ -14309,6 +14831,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	rockwrecker: {
+		availability: {clover: 1},
 		num: 439,
 		accuracy: 90,
 		basePower: 150,
@@ -14326,6 +14849,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	roleplay: {
+		availability: {clover: 1},
 		num: 272,
 		accuracy: true,
 		basePower: 0,
@@ -14362,6 +14886,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	rollingkick: {
+		availability: {clover: 1},
 		num: 27,
 		accuracy: 85,
 		basePower: 60,
@@ -14370,7 +14895,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Rolling Kick",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		secondary: {
 			chance: 30,
 			volatileStatus: 'flinch',
@@ -14380,6 +14905,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	rollout: {
+		availability: {clover: 1},
 		num: 205,
 		accuracy: 90,
 		basePower: 30,
@@ -14425,6 +14951,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	roost: {
+		availability: {clover: 1},
 		num: 355,
 		accuracy: true,
 		basePower: 0,
@@ -14456,6 +14983,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	rototiller: {
+		availability: {clover: 1},
 		num: 563,
 		accuracy: true,
 		basePower: 0,
@@ -14491,6 +15019,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	round: {
+		availability: {clover: 1},
 		num: 496,
 		accuracy: 100,
 		basePower: 60,
@@ -14520,6 +15049,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	sacredfire: {
+		availability: {clover: 1},
 		num: 221,
 		accuracy: 95,
 		basePower: 100,
@@ -14537,6 +15067,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	sacredsword: {
+		availability: {clover: 1},
 		num: 533,
 		accuracy: 100,
 		basePower: 90,
@@ -14544,7 +15075,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Sacred Sword",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		ignoreEvasion: true,
 		ignoreDefensive: true,
 		secondary: null,
@@ -14553,6 +15084,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	safeguard: {
+		availability: {clover: 1},
 		num: 219,
 		accuracy: true,
 		basePower: 0,
@@ -14607,6 +15139,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	sandattack: {
+		availability: {clover: 1},
 		num: 28,
 		accuracy: 100,
 		basePower: 0,
@@ -14625,6 +15158,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	sandstorm: {
+		availability: {clover: 1},
 		num: 201,
 		accuracy: true,
 		basePower: 0,
@@ -14641,6 +15175,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	sandtomb: {
+		availability: {clover: 1},
 		num: 328,
 		accuracy: 85,
 		basePower: 35,
@@ -14691,6 +15226,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	scald: {
+		availability: {clover: 1},
 		num: 503,
 		accuracy: 100,
 		basePower: 80,
@@ -14709,6 +15245,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	scaleshot: {
+		availability: {clover: 1},
 		num: 799,
 		accuracy: 90,
 		basePower: 25,
@@ -14731,6 +15268,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		maxMove: {basePower: 130},
 	},
 	scaryface: {
+		availability: {clover: 1},
 		num: 184,
 		accuracy: 100,
 		basePower: 0,
@@ -14749,6 +15287,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	scorchingsands: {
+		availability: {clover: 1},
 		num: 815,
 		accuracy: 100,
 		basePower: 70,
@@ -14766,6 +15305,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ground",
 	},
 	scratch: {
+		availability: {clover: 1},
 		num: 10,
 		accuracy: 100,
 		basePower: 40,
@@ -14780,6 +15320,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	screech: {
+		availability: {clover: 1},
 		num: 103,
 		accuracy: 85,
 		basePower: 0,
@@ -14798,6 +15339,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	searingshot: {
+		availability: {clover: 1},
 		num: 545,
 		accuracy: 100,
 		basePower: 100,
@@ -14832,6 +15374,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	secretpower: {
+		availability: {clover: 1},
 		num: 290,
 		accuracy: 100,
 		basePower: 70,
@@ -14879,6 +15422,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	secretsword: {
+		availability: {clover: 1},
 		num: 548,
 		accuracy: 100,
 		basePower: 85,
@@ -14887,13 +15431,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Secret Sword",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, blade: 1},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
 		contestType: "Beautiful",
 	},
 	seedbomb: {
+		availability: {clover: 1},
 		num: 402,
 		accuracy: 100,
 		basePower: 80,
@@ -14908,6 +15453,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	seedflare: {
+		availability: {clover: 1},
 		num: 465,
 		accuracy: 85,
 		basePower: 120,
@@ -14928,6 +15474,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	seismictoss: {
+		availability: {clover: 1},
 		num: 69,
 		accuracy: 100,
 		basePower: 0,
@@ -14944,6 +15491,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	selfdestruct: {
+		availability: {clover: 1},
 		num: 120,
 		accuracy: 100,
 		basePower: 200,
@@ -14959,6 +15507,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	shadowball: {
+		availability: {clover: 1},
 		num: 247,
 		accuracy: 100,
 		basePower: 80,
@@ -14978,6 +15527,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	shadowbone: {
+		availability: {clover: 1},
 		num: 708,
 		accuracy: 100,
 		basePower: 85,
@@ -14985,7 +15535,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Shadow Bone",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, bone: 1},
 		secondary: {
 			chance: 20,
 			boosts: {
@@ -14997,6 +15547,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	shadowclaw: {
+		availability: {clover: 1},
 		num: 421,
 		accuracy: 100,
 		basePower: 70,
@@ -15012,6 +15563,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	shadowforce: {
+		availability: {clover: 1},
 		num: 467,
 		accuracy: 100,
 		basePower: 120,
@@ -15042,6 +15594,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	shadowpunch: {
+		availability: {clover: 1},
 		num: 325,
 		accuracy: true,
 		basePower: 60,
@@ -15056,6 +15609,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	shadowsneak: {
+		availability: {clover: 1},
 		num: 425,
 		accuracy: 100,
 		basePower: 40,
@@ -15090,6 +15644,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	sharpen: {
+		availability: {clover: 1},
 		num: 159,
 		accuracy: true,
 		basePower: 0,
@@ -15125,6 +15680,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	sheercold: {
+		availability: {clover: 1},
 		num: 329,
 		accuracy: 30,
 		basePower: 0,
@@ -15183,6 +15739,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 	},
 	shellsmash: {
+		availability: {clover: 1},
 		num: 504,
 		accuracy: true,
 		basePower: 0,
@@ -15205,6 +15762,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	shelltrap: {
+		availability: {clover: 1},
 		num: 704,
 		accuracy: 100,
 		basePower: 150,
@@ -15244,6 +15802,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	shiftgear: {
+		availability: {clover: 1},
 		num: 508,
 		accuracy: true,
 		basePower: 0,
@@ -15263,6 +15822,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	shockwave: {
+		availability: {clover: 1},
 		num: 351,
 		accuracy: true,
 		basePower: 60,
@@ -15277,6 +15837,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	shoreup: {
+		availability: {clover: 1},
 		num: 659,
 		accuracy: true,
 		basePower: 0,
@@ -15304,6 +15865,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	signalbeam: {
+		availability: {clover: 1},
 		num: 324,
 		accuracy: 100,
 		basePower: 75,
@@ -15322,6 +15884,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	silverwind: {
+		availability: {clover: 1},
 		num: 318,
 		accuracy: 100,
 		basePower: 60,
@@ -15348,6 +15911,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	simplebeam: {
+		availability: {clover: 1},
 		num: 493,
 		accuracy: 100,
 		basePower: 0,
@@ -15376,6 +15940,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	sing: {
+		availability: {clover: 1},
 		num: 47,
 		accuracy: 55,
 		basePower: 0,
@@ -15426,6 +15991,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	sketch: {
+		availability: {clover: 1},
 		num: 166,
 		accuracy: true,
 		basePower: 0,
@@ -15464,6 +16030,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	skillswap: {
+		availability: {clover: 1},
 		num: 285,
 		accuracy: true,
 		basePower: 0,
@@ -15507,6 +16074,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	skittersmack: {
+		availability: {clover: 1},
 		num: 806,
 		accuracy: 90,
 		basePower: 70,
@@ -15525,6 +16093,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Bug",
 	},
 	skullbash: {
+		availability: {clover: 1},
 		num: 130,
 		accuracy: 100,
 		basePower: 130,
@@ -15551,6 +16120,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	skyattack: {
+		availability: {clover: 1},
 		num: 143,
 		accuracy: 90,
 		basePower: 140,
@@ -15691,6 +16261,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	skyuppercut: {
+		availability: {clover: 1},
 		num: 327,
 		accuracy: 90,
 		basePower: 85,
@@ -15706,6 +16277,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	slackoff: {
+		availability: {clover: 1},
 		num: 303,
 		accuracy: true,
 		basePower: 0,
@@ -15722,6 +16294,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	slam: {
+		availability: {clover: 1},
 		num: 21,
 		accuracy: 75,
 		basePower: 80,
@@ -15736,6 +16309,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	slash: {
+		availability: {clover: 1},
 		num: 163,
 		accuracy: 100,
 		basePower: 70,
@@ -15743,7 +16317,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Slash",
 		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -15751,6 +16325,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	sleeppowder: {
+		availability: {clover: 1},
 		num: 79,
 		accuracy: 75,
 		basePower: 0,
@@ -15767,6 +16342,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	sleeptalk: {
+		availability: {clover: 1},
 		num: 214,
 		accuracy: true,
 		basePower: 0,
@@ -15807,6 +16383,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	sludge: {
+		availability: {clover: 1},
 		num: 124,
 		accuracy: 100,
 		basePower: 65,
@@ -15824,6 +16401,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	sludgebomb: {
+		availability: {clover: 1},
 		num: 188,
 		accuracy: 100,
 		basePower: 90,
@@ -15841,6 +16419,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	sludgewave: {
+		availability: {clover: 1},
 		num: 482,
 		accuracy: 100,
 		basePower: 95,
@@ -15858,6 +16437,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	smackdown: {
+		availability: {clover: 1},
 		num: 479,
 		accuracy: 100,
 		basePower: 50,
@@ -15871,7 +16451,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			noCopy: true,
 			onStart(pokemon) {
 				let applies = false;
-				if (pokemon.hasType('Flying') || pokemon.hasAbility('levitate')) applies = true;
+				if (pokemon.hasType('Flying') || pokemon.hasAbility('levitate') || pokemon.hasAbility('asoneblobbostherian')) applies = true;
 				if (pokemon.hasItem('ironball') || pokemon.volatiles['ingrain'] ||
 					this.field.getPseudoWeather('gravity')) applies = false;
 				if (pokemon.removeVolatile('fly') || pokemon.removeVolatile('bounce')) {
@@ -15905,6 +16485,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	smartstrike: {
+		availability: {clover: 1},
 		num: 684,
 		accuracy: true,
 		basePower: 70,
@@ -15919,6 +16500,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	smellingsalts: {
+		availability: {clover: 1},
 		num: 265,
 		accuracy: 100,
 		basePower: 70,
@@ -15941,6 +16523,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	smog: {
+		availability: {clover: 1},
 		num: 123,
 		accuracy: 70,
 		basePower: 30,
@@ -15958,6 +16541,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	smokescreen: {
+		availability: {clover: 1},
 		num: 108,
 		accuracy: 100,
 		basePower: 0,
@@ -15976,6 +16560,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	snaptrap: {
+		availability: {clover: 1},
 		num: 779,
 		accuracy: 100,
 		basePower: 35,
@@ -15990,6 +16575,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 	},
 	snarl: {
+		availability: {clover: 1},
 		num: 555,
 		accuracy: 95,
 		basePower: 55,
@@ -16009,6 +16595,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	snatch: {
+		availability: {clover: 1},
 		num: 289,
 		accuracy: true,
 		basePower: 0,
@@ -16045,6 +16632,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	snipeshot: {
+		availability: {clover: 1},
 		num: 745,
 		accuracy: 100,
 		basePower: 80,
@@ -16060,6 +16648,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Water",
 	},
 	snore: {
+		availability: {clover: 1},
 		num: 173,
 		accuracy: 100,
 		basePower: 50,
@@ -16081,6 +16670,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	soak: {
+		availability: {clover: 1},
 		num: 487,
 		accuracy: 100,
 		basePower: 0,
@@ -16105,6 +16695,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	softboiled: {
+		availability: {clover: 1},
 		num: 135,
 		accuracy: true,
 		basePower: 0,
@@ -16121,6 +16712,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	solarbeam: {
+		availability: {clover: 1},
 		num: 76,
 		accuracy: 100,
 		basePower: 120,
@@ -16146,7 +16738,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return null;
 		},
 		onBasePower(basePower, pokemon, target) {
-			if (['raindance', 'primordialsea', 'sandstorm', 'hail'].includes(pokemon.effectiveWeather())) {
+			if (['raindance', 'primordialsea', 'sandstorm', 'hail', 'densefog'].includes(pokemon.effectiveWeather())) {
 				this.debug('weakened by weather');
 				return this.chainModify(0.5);
 			}
@@ -16157,6 +16749,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	solarblade: {
+		availability: {clover: 1},
 		num: 669,
 		accuracy: 100,
 		basePower: 125,
@@ -16164,7 +16757,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Solar Blade",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, charge: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, blade: 1},
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -16182,7 +16775,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return null;
 		},
 		onBasePower(basePower, pokemon, target) {
-			if (['raindance', 'primordialsea', 'sandstorm', 'hail'].includes(pokemon.effectiveWeather())) {
+			if (['raindance', 'primordialsea', 'sandstorm', 'hail', 'densefog'].includes(pokemon.effectiveWeather())) {
 				this.debug('weakened by weather');
 				return this.chainModify(0.5);
 			}
@@ -16193,6 +16786,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	sonicboom: {
+		availability: {clover: 1},
 		num: 49,
 		accuracy: 90,
 		basePower: 0,
@@ -16225,6 +16819,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	spacialrend: {
+		availability: {clover: 1},
 		num: 460,
 		accuracy: 95,
 		basePower: 100,
@@ -16240,6 +16835,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	spark: {
+		availability: {clover: 1},
 		num: 209,
 		accuracy: 100,
 		basePower: 65,
@@ -16257,6 +16853,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	sparklingaria: {
+		availability: {clover: 1},
 		num: 664,
 		accuracy: 100,
 		basePower: 90,
@@ -16308,6 +16905,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	spectralthief: {
+		availability: {clover: 1},
 		num: 712,
 		accuracy: 100,
 		basePower: 90,
@@ -16324,6 +16922,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	speedswap: {
+		availability: {clover: 1},
 		num: 683,
 		accuracy: true,
 		basePower: 0,
@@ -16345,6 +16944,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	spiderweb: {
+		availability: {clover: 1},
 		num: 169,
 		accuracy: true,
 		basePower: 0,
@@ -16364,6 +16964,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	spikecannon: {
+		availability: {clover: 1},
 		num: 131,
 		accuracy: 100,
 		basePower: 20,
@@ -16381,6 +16982,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	spikes: {
+		availability: {clover: 1},
 		num: 191,
 		accuracy: true,
 		basePower: 0,
@@ -16414,6 +17016,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	spikyshield: {
+		availability: {clover: 1},
 		num: 596,
 		accuracy: true,
 		basePower: 0,
@@ -16472,6 +17075,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	spiritbreak: {
+		availability: {clover: 1},
 		num: 789,
 		accuracy: 100,
 		basePower: 75,
@@ -16490,6 +17094,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 	},
 	spiritshackle: {
+		availability: {clover: 1},
 		num: 662,
 		accuracy: 100,
 		basePower: 80,
@@ -16509,6 +17114,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	spitup: {
+		availability: {clover: 1},
 		num: 255,
 		accuracy: 100,
 		basePower: 0,
@@ -16533,6 +17139,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	spite: {
+		availability: {clover: 1},
 		num: 180,
 		accuracy: 100,
 		basePower: 0,
@@ -16557,6 +17164,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	splash: {
+		availability: {clover: 1},
 		num: 150,
 		accuracy: true,
 		basePower: 0,
@@ -16604,6 +17212,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	splishysplash: {
+		availability: {clover: 1},
 		num: 730,
 		accuracy: 100,
 		basePower: 90,
@@ -16618,10 +17227,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 			status: 'par',
 		},
 		target: "allAdjacentFoes",
+		noSketch: true,
 		type: "Water",
 		contestType: "Cool",
 	},
 	spore: {
+		availability: {clover: 1},
 		num: 147,
 		accuracy: 100,
 		basePower: 0,
@@ -16671,6 +17282,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	stealthrock: {
+		availability: {clover: 1},
 		num: 446,
 		accuracy: true,
 		basePower: 0,
@@ -16698,6 +17310,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	steameruption: {
+		availability: {clover: 1},
 		num: 592,
 		accuracy: 95,
 		basePower: 110,
@@ -16716,6 +17329,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	steamroller: {
+		availability: {clover: 1},
 		num: 537,
 		accuracy: 100,
 		basePower: 65,
@@ -16734,6 +17348,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	steelbeam: {
+		availability: {clover: 1},
 		num: 796,
 		accuracy: 95,
 		basePower: 140,
@@ -16753,6 +17368,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 	},
 	steelroller: {
+		availability: {clover: 1},
 		num: 798,
 		accuracy: 100,
 		basePower: 130,
@@ -16775,6 +17391,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 	},
 	steelwing: {
+		availability: {clover: 1},
 		num: 211,
 		accuracy: 90,
 		basePower: 70,
@@ -16796,6 +17413,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	stickyweb: {
+		availability: {clover: 1},
 		num: 564,
 		accuracy: true,
 		basePower: 0,
@@ -16823,6 +17441,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	stockpile: {
+		availability: {clover: 1},
 		num: 254,
 		accuracy: true,
 		basePower: 0,
@@ -16896,6 +17515,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	stomp: {
+		availability: {clover: 1},
 		num: 23,
 		accuracy: 100,
 		basePower: 65,
@@ -16913,6 +17533,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	stompingtantrum: {
+		availability: {clover: 1},
 		num: 707,
 		accuracy: 100,
 		basePower: 75,
@@ -16934,6 +17555,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	stoneedge: {
+		availability: {clover: 1},
 		num: 444,
 		accuracy: 80,
 		basePower: 100,
@@ -16949,6 +17571,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	storedpower: {
+		availability: {clover: 1},
 		num: 500,
 		accuracy: 100,
 		basePower: 20,
@@ -16968,6 +17591,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	stormthrow: {
+		availability: {clover: 1},
 		num: 480,
 		accuracy: 100,
 		basePower: 60,
@@ -16999,6 +17623,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 	},
 	strength: {
+		availability: {clover: 1},
 		num: 70,
 		accuracy: 100,
 		basePower: 80,
@@ -17013,6 +17638,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	strengthsap: {
+		availability: {clover: 1},
 		num: 668,
 		accuracy: 100,
 		basePower: 0,
@@ -17034,6 +17660,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	stringshot: {
+		availability: {clover: 1},
 		num: 81,
 		accuracy: 95,
 		basePower: 0,
@@ -17052,6 +17679,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	struggle: {
+		availability: {clover: 1},
 		num: 165,
 		accuracy: true,
 		basePower: 50,
@@ -17073,6 +17701,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	strugglebug: {
+		availability: {clover: 1},
 		num: 522,
 		accuracy: 100,
 		basePower: 50,
@@ -17114,6 +17743,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 	},
 	stunspore: {
+		availability: {clover: 1},
 		num: 78,
 		accuracy: 75,
 		basePower: 0,
@@ -17130,6 +17760,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	submission: {
+		availability: {clover: 1},
 		num: 66,
 		accuracy: 80,
 		basePower: 80,
@@ -17145,6 +17776,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	substitute: {
+		availability: {clover: 1},
 		num: 164,
 		accuracy: true,
 		basePower: 0,
@@ -17239,6 +17871,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	suckerpunch: {
+		availability: {clover: 1},
 		num: 389,
 		accuracy: 100,
 		basePower: 70,
@@ -17260,6 +17893,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	sunnyday: {
+		availability: {clover: 1},
 		num: 241,
 		accuracy: true,
 		basePower: 0,
@@ -17276,6 +17910,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	sunsteelstrike: {
+		availability: {clover: 1},
 		num: 713,
 		accuracy: 100,
 		basePower: 100,
@@ -17291,6 +17926,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	superfang: {
+		availability: {clover: 1},
 		num: 162,
 		accuracy: 90,
 		basePower: 0,
@@ -17308,6 +17944,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	superpower: {
+		availability: {clover: 1},
 		num: 276,
 		accuracy: 100,
 		basePower: 120,
@@ -17328,6 +17965,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	supersonic: {
+		availability: {clover: 1},
 		num: 48,
 		accuracy: 55,
 		basePower: 0,
@@ -17360,6 +17998,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	surf: {
+		availability: {clover: 1},
 		num: 57,
 		accuracy: 100,
 		basePower: 90,
@@ -17385,12 +18024,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		willCrit: true,
 		multihit: 3,
 		secondary: null,
+		noSketch: true,
 		target: "normal",
 		type: "Water",
 		zMove: {basePower: 140},
 		maxMove: {basePower: 130},
 	},
 	swagger: {
+		availability: {clover: 1},
 		num: 207,
 		accuracy: 85,
 		basePower: 0,
@@ -17410,6 +18051,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	swallow: {
+		availability: {clover: 1},
 		num: 256,
 		accuracy: true,
 		basePower: 0,
@@ -17435,6 +18077,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	sweetkiss: {
+		availability: {clover: 1},
 		num: 186,
 		accuracy: 75,
 		basePower: 0,
@@ -17451,6 +18094,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	sweetscent: {
+		availability: {clover: 1},
 		num: 230,
 		accuracy: 100,
 		basePower: 0,
@@ -17469,6 +18113,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	swift: {
+		availability: {clover: 1},
 		num: 129,
 		accuracy: true,
 		basePower: 60,
@@ -17483,6 +18128,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	switcheroo: {
+		availability: {clover: 1},
 		num: 415,
 		accuracy: 100,
 		basePower: 0,
@@ -17531,6 +18177,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	swordsdance: {
+		availability: {clover: 1},
 		num: 14,
 		accuracy: true,
 		basePower: 0,
@@ -17549,6 +18196,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	synchronoise: {
+		availability: {clover: 1},
 		num: 485,
 		accuracy: 100,
 		basePower: 120,
@@ -17567,6 +18215,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	synthesis: {
+		availability: {clover: 1},
 		num: 235,
 		accuracy: true,
 		basePower: 0,
@@ -17586,6 +18235,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			case 'primordialsea':
 			case 'sandstorm':
 			case 'hail':
+			case 'densefog':
 				factor = 0.25;
 				break;
 			}
@@ -17603,6 +18253,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	tackle: {
+		availability: {clover: 1},
 		num: 33,
 		accuracy: 100,
 		basePower: 40,
@@ -17617,6 +18268,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	tailglow: {
+		availability: {clover: 1},
 		num: 294,
 		accuracy: true,
 		basePower: 0,
@@ -17636,6 +18288,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	tailslap: {
+		availability: {clover: 1},
 		num: 541,
 		accuracy: 85,
 		basePower: 25,
@@ -17653,6 +18306,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	tailwhip: {
+		availability: {clover: 1},
 		num: 39,
 		accuracy: 100,
 		basePower: 0,
@@ -17671,6 +18325,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	tailwind: {
+		availability: {clover: 1},
 		num: 366,
 		accuracy: true,
 		basePower: 0,
@@ -17708,6 +18363,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	takedown: {
+		availability: {clover: 1},
 		num: 36,
 		accuracy: 85,
 		basePower: 90,
@@ -17723,6 +18379,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	tarshot: {
+		availability: {clover: 1},
 		num: 749,
 		accuracy: 100,
 		basePower: 0,
@@ -17752,6 +18409,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rock",
 	},
 	taunt: {
+		availability: {clover: 1},
 		num: 269,
 		accuracy: 100,
 		basePower: 0,
@@ -17796,6 +18454,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	tearfullook: {
+		availability: {clover: 1},
 		num: 715,
 		accuracy: true,
 		basePower: 0,
@@ -17815,6 +18474,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	teatime: {
+		availability: {clover: 1},
 		num: 752,
 		accuracy: true,
 		basePower: 0,
@@ -17845,6 +18505,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 	},
 	technoblast: {
+		availability: {clover: 1},
 		num: 546,
 		accuracy: 100,
 		basePower: 120,
@@ -17863,6 +18524,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	tectonicrage: {
+		availability: {clover: 1},
 		num: 630,
 		accuracy: true,
 		basePower: 1,
@@ -17879,6 +18541,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	teeterdance: {
+		availability: {clover: 1},
 		num: 298,
 		accuracy: 100,
 		basePower: 0,
@@ -17895,6 +18558,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	telekinesis: {
+		availability: {clover: 1},
 		num: 477,
 		accuracy: true,
 		basePower: 0,
@@ -17916,8 +18580,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 3,
 			onStart(target) {
-				if (['Diglett', 'Dugtrio', 'Palossand', 'Sandygast'].includes(target.baseSpecies.baseSpecies) ||
-						target.baseSpecies.name === 'Gengar-Mega') {
+				if (['Diglett', 'Dugtrio', 'Palossand', 'Sandygast', 'Fusjahl'].includes(target.baseSpecies.baseSpecies) ||
+					['Gengar-Mega', 'Goryannus-Mega'].includes(target.baseSpecies.name)) {
 					this.add('-immune', target);
 					return null;
 				}
@@ -17949,6 +18613,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	teleport: {
+		availability: {clover: 1},
 		num: 100,
 		accuracy: true,
 		basePower: 0,
@@ -17968,6 +18633,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	terrainpulse: {
+		availability: {clover: 1},
 		num: 805,
 		accuracy: 100,
 		basePower: 50,
@@ -18005,6 +18671,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		maxMove: {basePower: 130},
 	},
 	thief: {
+		availability: {clover: 1},
 		num: 168,
 		accuracy: 100,
 		basePower: 60,
@@ -18014,7 +18681,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onAfterHit(target, source, move) {
-			if (source.item || source.volatiles['gem']) {
+			if (source.item) {
 				return;
 			}
 			const yourItem = target.takeItem(source);
@@ -18035,6 +18702,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	thousandarrows: {
+		availability: {clover: 1},
 		num: 614,
 		accuracy: 100,
 		basePower: 90,
@@ -18060,6 +18728,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	thousandwaves: {
+		availability: {clover: 1},
 		num: 615,
 		accuracy: 100,
 		basePower: 90,
@@ -18077,6 +18746,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	thrash: {
+		availability: {clover: 1},
 		num: 37,
 		accuracy: 100,
 		basePower: 120,
@@ -18099,6 +18769,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	throatchop: {
+		availability: {clover: 1},
 		num: 675,
 		accuracy: 100,
 		basePower: 80,
@@ -18148,6 +18819,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	thunder: {
+		availability: {clover: 1},
 		num: 87,
 		accuracy: 70,
 		basePower: 110,
@@ -18177,6 +18849,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	thunderbolt: {
+		availability: {clover: 1},
 		num: 85,
 		accuracy: 100,
 		basePower: 90,
@@ -18194,6 +18867,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	thundercage: {
+		availability: {clover: 1},
 		num: 819,
 		accuracy: 90,
 		basePower: 80,
@@ -18208,6 +18882,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 	},
 	thunderfang: {
+		availability: {clover: 1},
 		num: 422,
 		accuracy: 95,
 		basePower: 65,
@@ -18230,6 +18905,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	thunderouskick: {
+		availability: {clover: 1},
 		num: 823,
 		accuracy: 100,
 		basePower: 90,
@@ -18237,7 +18913,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Thunderous Kick",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -18248,6 +18924,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 	},
 	thunderpunch: {
+		availability: {clover: 1},
 		num: 9,
 		accuracy: 100,
 		basePower: 75,
@@ -18265,6 +18942,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	thundershock: {
+		availability: {clover: 1},
 		num: 84,
 		accuracy: 100,
 		basePower: 40,
@@ -18282,6 +18960,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	thunderwave: {
+		availability: {clover: 1},
 		num: 86,
 		accuracy: 90,
 		basePower: 0,
@@ -18299,6 +18978,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	tickle: {
+		availability: {clover: 1},
 		num: 321,
 		accuracy: 100,
 		basePower: 0,
@@ -18318,6 +18998,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	topsyturvy: {
+		availability: {clover: 1},
 		num: 576,
 		accuracy: true,
 		basePower: 0,
@@ -18344,6 +19025,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	torment: {
+		availability: {clover: 1},
 		num: 259,
 		accuracy: 100,
 		basePower: 0,
@@ -18377,6 +19059,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	toxic: {
+		availability: {clover: 1},
 		num: 92,
 		accuracy: 90,
 		basePower: 0,
@@ -18394,6 +19077,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	toxicspikes: {
+		availability: {clover: 1},
 		num: 390,
 		accuracy: true,
 		basePower: 0,
@@ -18435,6 +19119,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	toxicthread: {
+		availability: {clover: 1},
 		num: 672,
 		accuracy: 100,
 		basePower: 0,
@@ -18455,6 +19140,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	transform: {
+		availability: {clover: 1},
 		num: 144,
 		accuracy: true,
 		basePower: 0,
@@ -18475,6 +19161,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	triattack: {
+		availability: {clover: 1},
 		num: 161,
 		accuracy: 100,
 		basePower: 80,
@@ -18501,6 +19188,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	trick: {
+		availability: {clover: 1},
 		num: 271,
 		accuracy: 100,
 		basePower: 0,
@@ -18549,6 +19237,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	trickortreat: {
+		availability: {clover: 1},
 		num: 567,
 		accuracy: 100,
 		basePower: 0,
@@ -18577,6 +19266,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	trickroom: {
+		availability: {clover: 1},
 		num: 433,
 		accuracy: true,
 		basePower: 0,
@@ -18589,8 +19279,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasAbility('persistent')) {
-					this.add('-activate', source, 'ability: Persistent', effect);
+				if (this.activeMove?.id === 'backroom') {
+					return 2;
+				}
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
 					return 7;
 				}
 				return 5;
@@ -18615,6 +19308,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	tripleaxel: {
+		availability: {clover: 1},
 		num: 813,
 		accuracy: 90,
 		basePower: 20,
@@ -18625,7 +19319,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Triple Axel",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		multihit: 3,
 		multiaccuracy: true,
 		secondary: null,
@@ -18635,6 +19329,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		maxMove: {basePower: 140},
 	},
 	triplekick: {
+		availability: {clover: 1},
 		num: 167,
 		accuracy: 90,
 		basePower: 10,
@@ -18645,7 +19340,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Triple Kick",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		multihit: 3,
 		multiaccuracy: true,
 		secondary: null,
@@ -18656,6 +19351,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	tropkick: {
+		availability: {clover: 1},
 		num: 688,
 		accuracy: 100,
 		basePower: 70,
@@ -18663,7 +19359,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Trop Kick",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -18675,6 +19371,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	trumpcard: {
+		availability: {clover: 1},
 		num: 376,
 		accuracy: true,
 		basePower: 0,
@@ -18710,6 +19407,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	twineedle: {
+		availability: {clover: 1},
 		num: 41,
 		accuracy: 100,
 		basePower: 25,
@@ -18730,6 +19428,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	twinkletackle: {
+		availability: {clover: 1},
 		num: 656,
 		accuracy: true,
 		basePower: 1,
@@ -18746,6 +19445,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	twister: {
+		availability: {clover: 1},
 		num: 239,
 		accuracy: 100,
 		basePower: 40,
@@ -18763,6 +19463,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	uturn: {
+		availability: {clover: 1},
 		num: 369,
 		accuracy: 100,
 		basePower: 70,
@@ -18778,6 +19479,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	uproar: {
+		availability: {clover: 1},
 		num: 253,
 		accuracy: 100,
 		basePower: 90,
@@ -18837,6 +19539,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	vacuumwave: {
+		availability: {clover: 1},
 		num: 410,
 		accuracy: 100,
 		basePower: 40,
@@ -18851,6 +19554,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	vcreate: {
+		availability: {clover: 1},
 		num: 557,
 		accuracy: 95,
 		basePower: 180,
@@ -18891,6 +19595,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	venomdrench: {
+		availability: {clover: 1},
 		num: 599,
 		accuracy: 100,
 		basePower: 0,
@@ -18912,6 +19617,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	venoshock: {
+		availability: {clover: 1},
 		num: 474,
 		accuracy: 100,
 		basePower: 65,
@@ -18931,6 +19637,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	vinewhip: {
+		availability: {clover: 1},
 		num: 22,
 		accuracy: 100,
 		basePower: 45,
@@ -18945,6 +19652,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	visegrip: {
+		availability: {clover: 1},
 		num: 11,
 		accuracy: 100,
 		basePower: 55,
@@ -18959,6 +19667,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	vitalthrow: {
+		availability: {clover: 1},
 		num: 233,
 		accuracy: true,
 		basePower: 70,
@@ -18973,6 +19682,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	voltswitch: {
+		availability: {clover: 1},
 		num: 521,
 		accuracy: 100,
 		basePower: 70,
@@ -18988,6 +19698,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	volttackle: {
+		availability: {clover: 1},
 		num: 344,
 		accuracy: 100,
 		basePower: 120,
@@ -19006,6 +19717,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	wakeupslap: {
+		availability: {clover: 1},
 		num: 358,
 		accuracy: 100,
 		basePower: 70,
@@ -19028,6 +19740,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	waterfall: {
+		availability: {clover: 1},
 		num: 127,
 		accuracy: 100,
 		basePower: 80,
@@ -19045,6 +19758,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	watergun: {
+		availability: {clover: 1},
 		num: 55,
 		accuracy: 100,
 		basePower: 40,
@@ -19131,6 +19845,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	waterpulse: {
+		availability: {clover: 1},
 		num: 352,
 		accuracy: 100,
 		basePower: 60,
@@ -19148,6 +19863,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	watershuriken: {
+		availability: {clover: 1},
 		num: 594,
 		accuracy: 100,
 		basePower: 15,
@@ -19170,6 +19886,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	watersport: {
+		availability: {clover: 1},
 		num: 346,
 		accuracy: true,
 		basePower: 0,
@@ -19205,6 +19922,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	waterspout: {
+		availability: {clover: 1},
 		num: 323,
 		accuracy: 100,
 		basePower: 150,
@@ -19222,6 +19940,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	weatherball: {
+		availability: {clover: 1},
 		num: 311,
 		accuracy: 100,
 		basePower: 50,
@@ -19264,6 +19983,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 			case 'hail':
 				move.basePower *= 2;
 				break;
+			case 'densefog':
+				move.basePower *= 2;
+				break;
 			}
 		},
 		secondary: null,
@@ -19274,6 +19996,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	whirlpool: {
+		availability: {clover: 1},
 		num: 250,
 		accuracy: 85,
 		basePower: 35,
@@ -19289,6 +20012,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	whirlwind: {
+		availability: {clover: 1},
 		num: 18,
 		accuracy: true,
 		basePower: 0,
@@ -19315,10 +20039,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
 		willCrit: true,
 		secondary: null,
+		noSketch: true,
 		target: "normal",
 		type: "Dark",
 	},
 	wideguard: {
+		availability: {clover: 1},
 		num: 469,
 		accuracy: true,
 		basePower: 0,
@@ -19368,6 +20094,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	wildcharge: {
+		availability: {clover: 1},
 		num: 528,
 		accuracy: 100,
 		basePower: 90,
@@ -19383,6 +20110,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	willowisp: {
+		availability: {clover: 1},
 		num: 261,
 		accuracy: 85,
 		basePower: 0,
@@ -19399,6 +20127,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	wingattack: {
+		availability: {clover: 1},
 		num: 17,
 		accuracy: 100,
 		basePower: 60,
@@ -19413,6 +20142,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	wish: {
+		availability: {clover: 1},
 		num: 273,
 		accuracy: true,
 		basePower: 0,
@@ -19444,6 +20174,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	withdraw: {
+		availability: {clover: 1},
 		num: 110,
 		accuracy: true,
 		basePower: 0,
@@ -19462,6 +20193,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	wonderroom: {
+		availability: {clover: 1},
 		num: 472,
 		accuracy: true,
 		basePower: 0,
@@ -19474,8 +20206,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasAbility('persistent')) {
-					this.add('-activate', source, 'ability: Persistent', effect);
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
 					return 7;
 				}
 				return 5;
@@ -19508,6 +20240,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	woodhammer: {
+		availability: {clover: 1},
 		num: 452,
 		accuracy: 100,
 		basePower: 120,
@@ -19515,7 +20248,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Wood Hammer",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
 		recoil: [33, 100],
 		secondary: null,
 		target: "normal",
@@ -19523,6 +20256,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	workup: {
+		availability: {clover: 1},
 		num: 526,
 		accuracy: true,
 		basePower: 0,
@@ -19542,6 +20276,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	worryseed: {
+		availability: {clover: 1},
 		num: 388,
 		accuracy: 100,
 		basePower: 0,
@@ -19580,6 +20315,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	wrap: {
+		availability: {clover: 1},
 		num: 35,
 		accuracy: 90,
 		basePower: 15,
@@ -19595,6 +20331,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	wringout: {
+		availability: {clover: 1},
 		num: 378,
 		accuracy: 100,
 		basePower: 0,
@@ -19615,6 +20352,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	xscissor: {
+		availability: {clover: 1},
 		num: 404,
 		accuracy: 100,
 		basePower: 80,
@@ -19622,13 +20360,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "X-Scissor",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		secondary: null,
 		target: "normal",
 		type: "Bug",
 		contestType: "Cool",
 	},
 	yawn: {
+		availability: {clover: 1},
 		num: 281,
 		accuracy: true,
 		basePower: 0,
@@ -19662,6 +20401,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 	},
 	zapcannon: {
+		availability: {clover: 1},
 		num: 192,
 		accuracy: 50,
 		basePower: 120,
@@ -19679,6 +20419,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	zenheadbutt: {
+		availability: {clover: 1},
 		num: 428,
 		accuracy: 90,
 		basePower: 80,
@@ -19696,6 +20437,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	zingzap: {
+		availability: {clover: 1},
 		num: 716,
 		accuracy: 100,
 		basePower: 80,
@@ -19734,4 +20476,4500 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 		contestType: "Cool",
 	},
+	/* Clover Exclusive Moves */
+	sleazyspores: {
+		availability: {clover: 1},
+		num: 69056,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sleazy Spores",
+		pp: 10,
+		priority: 0,
+		flags: {reflectable: 1, powder: 1},
+		sideCondition: 'sleazyspores',
+		condition: {
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Sleazy Spores');
+			},
+			onSwitchIn(pokemon) {
+				if (pokemon.hasType('Grass')) {
+					this.add('-sideend', pokemon.side, 'move: Sleazy Spores', '[of] ' + pokemon);
+					pokemon.side.removeSideCondition('sleazyspores');
+					return;
+				}
+				if (!pokemon.runStatusImmunity('powder')) return;
+				if (pokemon.hasItem('heavydutyboots')) return;
+				this.add('-activate', pokemon, 'move: Sleazy Spores');
+				this.boost({spe: -1}, pokemon, this.effectState.source, this.dex.getActiveMove('sleazyspores'));
+			},
+		},
+		secondary: null,
+		pressureTarget: "self",
+		target: "foeSide",
+		type: "Grass",
+		isNonstandard: "Future",
+	},
+	slimegulp: {
+		availability: {clover: 1},
+		num: 69044,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Slime Gulp",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		type: "Poison",
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target) {
+			if (target.getAbility().isPermanent) return;
+			if (target.newlySwitched || this.queue.willMove(target)) return;
+			target.addVolatile('gastroacid');
+		},
+		onAfterSubDamage(damage, target) {
+			if (target.getAbility().isPermanent) return;
+			if (target.newlySwitched || this.queue.willMove(target)) return;
+			target.addVolatile('gastroacid');
+		},
+		isNonstandard: "Future",
+	},
+	inverseroom: {
+		availability: {clover: 1},
+		num: 69032,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Inverse Room",
+		pp: 15,
+		priority: 0,
+		target: "all",
+		type: "???",
+		flags: {mirror: 1},
+		pseudoWeather: 'inverseroom',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 7;
+				}
+				return 5;
+			},
+			onNegateImmunity: false,
+			onEffectivenessPriority: 1,
+			onEffectiveness(typeMod, target, type, move) {
+				// The effectiveness of Freeze Dry on Water isn't reverted
+				if (move && move.id === 'freezedry' && type === 'Water') return;
+				if (move && move.id === '1000folds' && type === 'Steel') return;
+				if (move && !this.dex.getImmunity(move, type)) return 1;
+				return -typeMod;
+			},
+			onFieldStart(target, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Inverse Room', '[from] ability: ' + effect, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Inverse Room');
+				}
+				this.add('-message', 'The battlefield became upside down!');
+			},
+			onFieldRestart(target, source) {
+				this.field.removePseudoWeather('inverseroom');
+			},
+			onFieldResidualOrder: 23,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Inverse Room');
+			},
+		},
+		isNonstandard: "Future",
+	},
+	fruitpunch: {
+		availability: {clover: 1},
+		num: 69031,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Fruit Punch",
+		pp: 15,
+		priority: 0,
+		target: "normal",
+		type: "Fairy",
+		secondary: {
+			chance: 20,
+			boosts: {
+				def: -1,
+			},
+		},
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		isNonstandard: "Future",
+	},
+	dragonfist: {
+		availability: {clover: 1},
+		num: 69040,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Dragon Fist",
+		pp: 15,
+		priority: 0,
+		target: "normal",
+		type: "Dragon",
+		secondary: {
+			chance: 10,
+			status: 'par',
+		},
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		isNonstandard: "Future",
+	},
+	lickclean: {
+		availability: {clover: 1},
+		num: 69045,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Lick Clean",
+		pp: 20,
+		priority: 0,
+		target: "normal",
+		type: "Water",
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target, source) {
+			const positiveBoosts = target.positiveBoosts();
+			const adjustedBoosts: SparseBoostsTable = {};
+			for (const statName in target.boosts) {
+				const stage = target.boosts[statName as BoostID];
+				adjustedBoosts[statName as BoostID] = target.boosts[statName as BoostID];
+				if (stage > 0) {
+					adjustedBoosts[statName as BoostID] = 0;
+				}
+			}
+
+			if (positiveBoosts > 0) {
+				const factor = 12.5 * Math.pow(2, Math.max(4, positiveBoosts));
+				const amount = this.modify(source.maxhp, factor);
+				target.setBoost(adjustedBoosts);
+				source.heal(amount);
+				this.add('-clearpositiveboost', target, source, 'move: Lick Clean');
+				this.add('-heal', source, source.getHealth, '[from] move: Lick Clean');
+			}
+		},
+		isNonstandard: "Future",
+	},
+	speedweed: {
+		availability: {clover: 1},
+		num: 69041,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Speed Weed",
+		pp: 30,
+		priority: 1,
+		target: "normal",
+		type: "Grass",
+		flags: {contact: 1, protect: 1, mirror: 1},
+		isNonstandard: "Future",
+	},
+	overbite: {
+		availability: {clover: 1},
+		num: 69036,
+		accuracy: 100,
+		basePower: 150,
+		category: "Physical",
+		name: "Overbite",
+		pp: 5,
+		priority: 0,
+		target: "normal",
+		type: "Dark",
+		onAfterHit(target, source) {
+			this.damage(Math.round(source.maxhp / 2), source, source, this.dex.conditions.get('Overbite'), true);
+		},
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		isNonstandard: "Future",
+	},
+	"1000folds": {
+		availability: {clover: 1},
+		num: 69047,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "1000 Folds",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		type: "Steel",
+		flags: {contact: 1, mirror: 1, blade: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel') return 0;
+		},
+		breaksProtect: true,
+		infiltrates: true,
+		onTryHit(pokemon) {
+			if (pokemon.runImmunity('Steel')) {
+				pokemon.side.removeSideCondition('reflect');
+				pokemon.side.removeSideCondition('lightscreen');
+				pokemon.side.removeSideCondition('auroraveil');
+			}
+		},
+		isNonstandard: "Future",
+	},
+	warhead: {
+		availability: {clover: 1},
+		num: 69042,
+		accuracy: 80,
+		basePower: 110,
+		category: "Special",
+		name: "Warhead",
+		pp: 5,
+		priority: 0,
+		target: "normal",
+		type: "Steel",
+		flags: {protect: 1, mirror: 1},
+		isNonstandard: "Future",
+	},
+	weirdflex: {
+		availability: {clover: 1},
+		num: 69043,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Weird Flex",
+		pp: 15,
+		priority: 4,
+		target: "self",
+		type: "Fighting",
+		flags: {snatch: 1},
+		boosts: {
+			atk: 1,
+			def: 1,
+			spe: -2,
+		},
+		volatileStatus: 'weirdflex',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'move: Weird Flex');
+			},
+			onDamagePriority: -10,
+			onDamage(damage, target, source, effect) {
+				if (effect?.effectType === 'Move' && damage >= target.hp) {
+					this.add('-activate', target, 'move: Weird Flex');
+					return target.hp - 1;
+				}
+			},
+			onFoeRedirectTargetPriority: 1,
+			onFoeRedirectTarget(target, source, source2, move) {
+				if (!this.effectState.target.isSkyDropped() && this.validTarget(this.effectState.target, source, move.target)) {
+					if (move.smartTarget) move.smartTarget = false;
+					this.debug("Weird Flex redirected target of move");
+					return this.effectState.target;
+				}
+			},
+		},
+		isNonstandard: "Future",
+	},
+	scorchedearth: {
+		availability: {clover: 1},
+		num: 69046,
+		accuracy: 100,
+		basePower: 20,
+		category: "Special",
+		name: "Scorched Earth",
+		pp: 10,
+		priority: 0,
+		target: "allAdjacent",
+		type: "Ground",
+		flags: {protect: 1, mirror: 1},
+		onAfterMove(source) {
+			if (source.isGrounded()) {
+				source.trySetStatus('brn');
+			}
+		},
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
+		isNonstandard: "Future",
+	},
+	hulkup: {
+		availability: {clover: 1},
+		num: 69051,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Hulk Up",
+		pp: 10,
+		priority: 0,
+		target: "self",
+		type: "Fighting",
+		onHit(target) {
+			if (target.hp <= target.maxhp / 2) {
+				this.boost({
+					atk: 2,
+					def: 2,
+				});
+			} else {
+				this.boost({
+					atk: 1,
+					def: 1,
+				});
+			}
+		},
+		flags: {snatch: 1},
+		isNonstandard: "Future",
+	},
+	focusmunch: {
+		availability: {clover: 1},
+		num: 69034,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Focus Munch",
+		pp: 10,
+		priority: -3,
+		target: "self",
+		type: "Fighting",
+		flags: {},
+		beforeTurnCallback(pokemon) {
+			pokemon.addVolatile('focusmunch');
+		},
+		beforeMoveCallback(pokemon) {
+			if (pokemon.volatiles['focusmunch'] && pokemon.volatiles['focusmunch'].lostFocus) {
+				this.add('cant', pokemon, 'Focus Munch', 'Focus Munch');
+				return true;
+			}
+		},
+		condition: {
+			duration: 1,
+			onStart(pokemon) {
+				this.add('-singleturn', pokemon, 'move: Focus Munch');
+			},
+			onHit(pokemon, source, move) {
+				if (move.category !== 'Status') {
+					pokemon.volatiles['focusmunch'].lostFocus = true;
+				}
+			},
+		},
+		heal: [1, 2],
+		boosts: {accuracy: 1},
+		isNonstandard: "Future",
+	},
+	mop: {
+		availability: {clover: 1},
+		num: 69033,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Mop",
+		pp: 10,
+		priority: 0,
+		target: "self",
+		type: "Fairy",
+		flags: {},
+		onHit(pokemon) {
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'sleazyspores', 'gmaxsteelsurge', 'shattershard', 'pleasedontdothat'];
+			const removedConditions = [];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Mop', '[of] ' + pokemon);
+					removedConditions.push(condition);
+				}
+			}
+			if (removedConditions.length > 0) {
+				this.boost({accuracy: 1});
+			}
+		},
+		isNonstandard: "Future",
+	},
+	quicksand: {
+		availability: {clover: 1},
+		num: 69037,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Quick Sand",
+		pp: 20,
+		priority: 1,
+		target: "normal",
+		type: "Ground",
+		flags: {protect: 1, mirror: 1},
+		isNonstandard: "Future",
+	},
+	thinkfast: {
+		availability: {clover: 1},
+		num: 69038,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Think Fast",
+		pp: 20,
+		priority: 1,
+		target: "normal",
+		type: "Psychic",
+		flags: {protect: 1, mirror: 1},
+		isNonstandard: "Future",
+	},
+	boltbeam: {
+		availability: {clover: 1},
+		num: 69048,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Boltbeam",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		type: "Electric",
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Ice', type);
+		},
+		isNonstandard: "Future",
+	},
+	checkem: {
+		availability: {clover: 1},
+		num: 69052,
+		accuracy: 100,
+		basePower: 25,
+		category: "Special",
+		name: "Check 'Em",
+		pp: 15,
+		priority: 0,
+		target: "normal",
+		type: "Psychic",
+		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		isNonstandard: "Future",
+	},
+	pixiepummel: {
+		availability: {clover: 1},
+		num: 69039,
+		accuracy: 80,
+		basePower: 120,
+		category: "Physical",
+		name: "Pixie Pummel",
+		pp: 5,
+		priority: 0,
+		target: "normal",
+		type: "Fairy",
+		flags: {contact: 1, protect: 1, mirror: 1},
+		isNonstandard: "Future",
+	},
+	gayagenda: {
+		availability: {clover: 1},
+		num: 69059,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Gay Agenda",
+		pp: 15,
+		priority: 0,
+		target: "normal",
+		type: "Fairy",
+		flags: {protect: 1, reflectable: 1, mirror: 1, authentic: 1},
+		volatileStatus: 'gayagenda',
+		condition: {
+			noCopy: true, // doesn't get copied by Baton Pass
+			onStart(pokemon, source, effect) {
+				if (!(pokemon.gender === 'M' && source.gender === 'M') && !(pokemon.gender === 'F' && source.gender === 'F')) {
+					this.debug('incompatible gender');
+					return false;
+				}
+				if (!this.runEvent('Gay Agenda', pokemon, source)) {
+					this.debug('Gay Agenda event failed');
+					return false;
+				}
+
+				if (effect.id === 'destinyknot') {
+					this.add('-start', pokemon, 'Gay Agenda', '[from] item: Destiny Knot', '[of] ' + source);
+				} else {
+					this.add('-start', pokemon, 'Gay Agenda');
+				}
+			},
+			onUpdate(pokemon) {
+				if (this.effectState.source && !this.effectState.source.isActive && pokemon.volatiles['gayagenda']) {
+					this.debug('Removing Gay Agenda volatile on ' + pokemon);
+					pokemon.removeVolatile('gayagenda');
+				}
+			},
+			onBeforeMovePriority: 2,
+			onBeforeMove(pokemon, target, move) {
+				this.add('-activate', pokemon, 'move: Gay Agenda', '[of] ' + this.effectState.source);
+				if (this.randomChance(1, 2)) {
+					this.add('cant', pokemon, 'Gay Agenda');
+					return false;
+				}
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Gay Agenda', '[silent]');
+			},
+		},
+		zMove: {effect: 'clearnegativeboost'},
+		isNonstandard: "Future",
+	},
+	spooperpower: {
+		availability: {clover: 1},
+		num: 69057,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Spooperpower",
+		pp: 5,
+		priority: 0,
+		target: "normal",
+		type: "Ghost",
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		ignoreAbility: true,
+		isNonstandard: "Future",
+	},
+	greatrage: {
+		availability: {clover: 1},
+		num: 69053,
+		accuracy: 90,
+		basePower: 140,
+		category: "Physical",
+		name: "Great Rage",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		type: "Grass",
+		flags: {sound: 1, protect: 1, mirror: 1, authentic: 1},
+		isNonstandard: "Future",
+	},
+	wowwiener: {
+		availability: {clover: 1},
+		num: 69054,
+		accuracy: 100,
+		basePower: 30,
+		category: "Special",
+		name: "Wow Wiener",
+		pp: 15,
+		priority: 0,
+		target: "normal",
+		type: "Fire",
+		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		isNonstandard: "Future",
+	},
+	plunder: {
+		availability: {clover: 1},
+		num: 69055,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Plunder",
+		pp: 5,
+		priority: 0,
+		target: "normal",
+		type: "Water",
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, source, move) {
+			if (source.item) {
+				return;
+			}
+			const yourItem = target.takeItem(source);
+			if (!yourItem) {
+				return;
+			}
+			if (!this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem) ||
+				!source.setItem(yourItem)) {
+				target.item = yourItem.id; // bypass setItem so we don't break choicelock or anything
+				return;
+			}
+			this.add('-enditem', target, yourItem, '[silent]', '[from] move: Plunder', '[of] ' + source);
+			this.add('-item', source, yourItem, '[from] move: Plunder', '[of] ' + target);
+		},
+		isNonstandard: "Future",
+	},
+	blobbybop: {
+		availability: {clover: 1},
+		num: 69060,
+		accuracy: true,
+		basePower: 70,
+		category: "Physical",
+		name: "Blobby Bop",
+		pp: 15,
+		priority: 0,
+		target: "normal",
+		type: "Ice",
+		flags: {contact: 1, protect: 1, mirror: 1},
+		isNonstandard: "Future",
+	},
+	banhammer: {
+		availability: {clover: 1},
+		num: 69049,
+		accuracy: 90,
+		basePower: 90,
+		category: "Physical",
+		name: "Ban Hammer",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		type: "Normal",
+		flags: {protect: 1, mirror: 1, hammer: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('torment');
+			}
+		},
+		isNonstandard: "Future",
+	},
+	homerunbat: {
+		availability: {clover: 1},
+		num: 69050,
+		accuracy: 90,
+		basePower: 90,
+		category: "Physical",
+		name: "Homerun Bat",
+		pp: 10,
+		priority: -6,
+		target: "normal",
+		type: "Normal",
+		flags: {contact: 1, protect: 1, mirror: 0},
+		forceSwitch: true,
+		isNonstandard: "Future",
+	},
+	elbowdrop: {
+		availability: {clover: 1},
+		num: 69058,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Elbow Drop",
+		pp: 5,
+		priority: 0,
+		target: "normal",
+		type: "Ghost",
+		flags: {contact: 1, protect: 1, mirror: 1},
+		isNonstandard: "Future",
+	},
+	anattack: {
+		availability: {clover: 1},
+		num: 69022,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "An Attack",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "???",
+		zMove: {basePower: 190},
+		isNonstandard: "Future",
+	},
+	chaosdunk: {
+		availability: {clover: 1},
+		num: 69017,
+		accuracy: 100,
+		basePower: 110,
+		category: "Physical",
+		name: "Chaos Dunk",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+		zMove: {basePower: 185},
+		isNonstandard: "Future",
+	},
+	comengo: {
+		availability: {clover: 1},
+		num: 69002,
+		accuracy: 100,
+		basePower: 25,
+		category: "Special",
+		name: "Come n' Go",
+		pp: 30,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		zMove: {basePower: 140},
+		isNonstandard: "Future",
+	},
+	dailydose: {
+		availability: {clover: 1},
+		num: 69018,
+		accuracy: 95,
+		basePower: 80,
+		category: "Special",
+		name: "Daily Dose",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('psn', source);
+				} else if (result === 1) {
+					target.trySetStatus('tox', source);
+				} else {
+					target.trySetStatus('slp', source);
+				}
+			},
+		},
+		target: "normal",
+		type: "Poison",
+		zMove: {basePower: 160},
+		isNonstandard: "Future",
+	},
+	decaydrain: {
+		availability: {clover: 1},
+		num: 69012,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Decay Drain",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+		zMove: {basePower: 180},
+		isNonstandard: "Future",
+	},
+	dildocannon: {
+		availability: {clover: 1},
+		num: 69013,
+		accuracy: 100,
+		basePower: 25,
+		category: "Physical",
+		name: "Dildo Cannon",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+		zMove: {basePower: 140},
+		isNonstandard: "Future",
+	},
+	enema: {
+		availability: {clover: 1},
+		num: 69001,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Enema",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		zMove: {basePower: 140},
+		isNonstandard: "Future",
+	},
+	erosionwave: {
+		availability: {clover: 1},
+		num: 69005,
+		accuracy: 100,
+		basePower: 95,
+		category: "Special",
+		name: "Erosion Wave",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, nonsky: 1},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Rock",
+		zMove: {basePower: 175},
+		isNonstandard: "Future",
+	},
+	falconpunch: {
+		availability: {clover: 1},
+		num: 69030,
+		accuracy: 90,
+		basePower: 100,
+		category: "Physical",
+		name: "Falcon Punch",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Flying",
+		zMove: {basePower: 180},
+		isNonstandard: "Future",
+	},
+	firebomb: {
+		availability: {clover: 1},
+		num: 69020,
+		accuracy: 95,
+		basePower: 100,
+		category: "Physical",
+		name: "Fire Bomb",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		zMove: {basePower: 180},
+		isNonstandard: "Future",
+	},
+	fizzbitch: {
+		availability: {clover: 1},
+		num: 69019,
+		accuracy: 80,
+		basePower: 150,
+		category: "Special",
+		name: "Fizzbitch",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Grass",
+		zMove: {basePower: 200},
+		isNonstandard: "Future",
+	},
+	foryou: {
+		availability: {clover: 1},
+		num: 69010,
+		accuracy: 90,
+		basePower: 100,
+		category: "Physical",
+		name: "For You",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -1,
+			},
+		},
+		target: "normal",
+		type: "Fighting",
+		zMove: {basePower: 180},
+		isNonstandard: "Future",
+	},
+	futababreak: {
+		availability: {clover: 1},
+		num: 69015,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Futaba Break",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			if (pokemon.runImmunity('Grass')) {
+				pokemon.side.removeSideCondition('reflect');
+				pokemon.side.removeSideCondition('lightscreen');
+				pokemon.side.removeSideCondition('auroraveil');
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		zMove: {basePower: 170},
+		isNonstandard: "Future",
+	},
+	holyduty: {
+		availability: {clover: 1},
+		num: 69003,
+		accuracy: 100,
+		basePower: 250,
+		category: "Special",
+		name: "Holy Duty",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		selfdestruct: "always",
+		secondary: null,
+		target: "allAdjacent",
+		type: "Fire",
+		zMove: {basePower: 200},
+		isNonstandard: "Future",
+	},
+	lactoseshot: {
+		availability: {clover: 1},
+		num: 69023,
+		accuracy: 90,
+		basePower: 130,
+		category: "Special",
+		name: "Lactose Shot",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spa: -2,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		zMove: {basePower: 195},
+		isNonstandard: "Future",
+	},
+	meme: {
+		availability: {clover: 1},
+		num: 69009,
+		accuracy: 100,
+		basePower: 65,
+		category: "Special",
+		name: "Meme",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			self: {
+				boosts: {
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "???",
+		zMove: {basePower: 120},
+		isNonstandard: "Future",
+	},
+	overenergize: {
+		availability: {clover: 1},
+		num: 69021,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Overenergize",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spa: -2,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		zMove: {basePower: 200},
+		isNonstandard: "Future",
+	},
+	owtheedge: {
+		availability: {clover: 1},
+		num: 69014,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Ow The Edge",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
+		recoil: [1, 4],
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		zMove: {basePower: 190},
+		isNonstandard: "Future",
+	},
+	pukeblood: {
+		availability: {clover: 1},
+		num: 69016,
+		accuracy: 95,
+		basePower: 130,
+		category: "Special",
+		name: "Puke Blood",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		recoil: [1, 4],
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+		zMove: {basePower: 190},
+		isNonstandard: "Future",
+	},
+	punchout: {
+		availability: {clover: 1},
+		num: 69004,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Punch Out",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		zMove: {basePower: 140},
+		isNonstandard: "Future",
+	},
+	regenerate: {
+		availability: {clover: 1},
+		num: 69027,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Regenerate",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		onHit(pokemon) {
+			if (['', 'slp', 'frz'].includes(pokemon.status) && pokemon.hp >= pokemon.maxhp) return false;
+			pokemon.cureStatus();
+		},
+		heal: [1, 2],
+		secondary: null,
+		target: "self",
+		type: "Grass",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	riotshield: {
+		availability: {clover: 1},
+		num: 69028,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Riot Shield",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1},
+		self: {
+			sideCondition: 'safeguard',
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		isNonstandard: "Future",
+	},
+	shitpost: {
+		availability: {clover: 1},
+		num: 69026,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Shitpost",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
+		secondary: null,
+		target: "randomNormal",
+		type: "Ground",
+		zMove: {basePower: 190},
+		isNonstandard: "Future",
+	},
+	spookout: {
+		availability: {clover: 1},
+		num: 69010,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		name: "Spook Out",
+		pp: 10,
+		priority: 3,
+		flags: {sound: 1, protect: 1, mirror: 1, authentic: 1},
+		onTry(pokemon, target) {
+			if (pokemon.activeTurns > 1) {
+				this.attrLastMove('[still]');
+				this.add('-fail', pokemon);
+				this.hint("Spook Out only works on your first turn out.");
+				return null;
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Ghost",
+		zMove: {basePower: 120},
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	stratoblade: {
+		availability: {clover: 1},
+		num: 69006,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Strato Blade",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
+		critRatio: 2,
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+		zMove: {basePower: 175},
+		isNonstandard: "Future",
+	},
+	supersnore: {
+		availability: {clover: 1},
+		num: 69007,
+		accuracy: 100,
+		basePower: 255,
+		category: "Physical",
+		name: "Super Snore",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
+		sleepUsable: true,
+		onTryHit(target, source) {
+			if (source.status !== 'slp' && !source.hasAbility('comatose')) return false;
+		},
+		target: "normal",
+		type: "Ice",
+		zMove: {basePower: 220},
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	swindle: {
+		availability: {clover: 1},
+		num: 69029,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Swindle",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onAfterHit(target, source, move) {
+			if (source.item) {
+				return;
+			}
+			const yourItem = target.takeItem(source);
+			if (!yourItem) {
+				return;
+			}
+			if (!this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem) || !source.setItem(yourItem)) {
+				target.item = yourItem.id; // bypass setItem so we don't break choicelock or anything
+				return;
+			}
+			this.add('-item', source, yourItem, '[from] move: Swindle', '[of] ' + target);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		zMove: {basePower: 180},
+		isNonstandard: "Future",
+	},
+	toke: {
+		availability: {clover: 1},
+		num: 69025,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Toke",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			def: -1,
+			spd: -1,
+			atk: 2,
+			spa: 2,
+			spe: 2,
+		},
+		secondary: null,
+		target: "self",
+		type: "Fire",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	toxiravage: {
+		availability: {clover: 1},
+		num: 69008,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Toxiravage",
+		pp: 10,
+		priority: 1,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+		zMove: {basePower: 160},
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	trigger: {
+		availability: {clover: 1},
+		num: 69024,
+		accuracy: 100,
+		basePower: 40,
+		basePowerCallback(pokemon, target, move) {
+			if (!pokemon.volatiles.trigger || move.hit === 1) {
+				pokemon.addVolatile('trigger');
+			}
+			return this.clampIntRange(move.basePower * pokemon.volatiles.trigger.multiplier, 1, 160);
+		},
+		category: "Special",
+		name: "Trigger",
+
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		condition: {
+			duration: 2,
+			onStart() {
+				this.effectState.multiplier = 1;
+			},
+			onRestart() {
+				if (this.effectState.multiplier < 4) {
+					this.effectState.multiplier <<= 1;
+				}
+				this.effectState.duration = 2;
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+		zMove: {basePower: 100},
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	sudoku: {
+		availability: {clover: 1},
+		num: 69035,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Sudoku",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		selfdestruct: "ifHit",
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {effect: 'healreplacement'},
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	maxmemeitude: {
+		accuracy: true,
+		basePower: 10,
+		category: "Physical",
+		name: "Max Memeitude",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		isMax: true,
+		target: "adjacentFoe",
+		type: "???",
+		contestType: "Cool",
+	},
+	/* Clover CAP Moves */
+	crusadercrash: {
+		availability: {clover: 1},
+		num: 42001,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Crusader Crash",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		willCrit: true,
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		isNonstandard: "Future",
+	},
+	moregun: {
+		availability: {clover: 1},
+		num: 42002,
+		accuracy: 100,
+		basePower: 16,
+		category: "Special",
+		name: "More Gun",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: 6,
+		target: "allAdjacent",
+		type: "Normal",
+		isNonstandard: "Future",
+	},
+	psychofists: {
+		availability: {clover: 1},
+		num: 42003,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Psycho Fists",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.setTerrain('psychicterrain');
+				},
+			},
+		},
+		target: "normal",
+		type: "Psychic",
+		isNonstandard: "Future",
+	},
+	faradaycage: {
+		availability: {clover: 1},
+		num: 275,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Faraday Cage",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1, nonsky: 1},
+		volatileStatus: 'ingrain',
+		condition: {
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'move: Ingrain');
+			},
+			onResidualOrder: 7,
+			onResidual(pokemon) {
+				this.heal(pokemon.baseMaxhp / 8);
+			},
+			onTrapPokemon(pokemon) {
+				pokemon.tryTrap();
+			},
+			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
+			onDragOut(pokemon) {
+				this.add('-activate', pokemon, 'move: Ingrain');
+				return null;
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Electric",
+		isNonstandard: "Future",
+	},
+	dragonburst: {
+		availability: {clover: 1},
+		num: 42005,
+		accuracy: 100,
+		basePower: 0,
+		basePowerCallback(pokemon, target) {
+			const ratio = pokemon.hp * 48 / pokemon.maxhp;
+			if (ratio < 2) {
+				return 200;
+			}
+			if (ratio < 5) {
+				return 150;
+			}
+			if (ratio < 10) {
+				return 120;
+			}
+			if (ratio < 17) {
+				return 100;
+			}
+			if (ratio < 33) {
+				return 90;
+			}
+			return 60;
+		},
+		category: "Special",
+		name: "Dragon Burst",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Dragon",
+		isNonstandard: "Future",
+		zMove: {basePower: 160},
+		maxMove: {basePower: 130},
+		contestType: "Cute",
+	},
+	rockclock: {
+		availability: {clover: 1},
+		num: 42006,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Rock Clock",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Rock",
+		contestType: "Tough",
+	},
+	awaken: {
+		availability: {clover: 1},
+		num: 42007,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Future",
+		name: "Awaken",
+		pp: 10,
+		priority: 0,
+		flags: {charge: 1, nonsky: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		boosts: {
+			atk: 2,
+			def: 2,
+			spe: 2,
+		},
+		secondary: null,
+		target: "self",
+		type: "Fighting",
+		zMove: {boost: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1}},
+		contestType: "Smart",
+	},
+	voltaiccyclone: {
+		availability: {clover: 1},
+		num: 42008,
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Voltaic Cyclone",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onAfterHit(target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'pleasedontdothat'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'pleasedontdothat'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		target: "allAdjacent",
+		type: "Electric",
+		contestType: "Cool",
+	},
+	boilover: {
+		availability: {clover: 1},
+		num: 42009,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Boil Over",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyType(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+				move.type = 'Water';
+				break;
+			case 'raindance':
+			case 'primordialsea':
+				move.type = 'Fire';
+				break;
+			}
+		},
+		onModifyMove(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+				move.basePower *= 2;
+				break;
+			case 'raindance':
+			case 'primordialsea':
+				move.basePower *= 2;
+				break;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		zMove: {basePower: 200},
+		maxMove: {basePower: 149},
+		contestType: "Beautiful",
+	},
+	soulcrusher: {
+		availability: {clover: 1},
+		num: 42010,
+		accuracy: 100,
+		basePower: 10,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Soul Crusher",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		drain: [1, 1],
+		/* lol */
+		onBasePower(basePower, pokemon, target) {
+			if (target.hp * 2 <= target.maxhp) {
+				return this.chainModify(999);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Tough",
+	},
+	trickstab: {
+		availability: {clover: 1},
+		num: 42013,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Trick Stab",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
+		beforeMoveCallback(source, target, move) {
+			if (source.illusion) move.willCrit = true;
+		},
+		onHit(target, source) {
+			this.singleEvent('End', this.dex.abilities.get('Illusion'), source.abilityState, source);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		contestType: "Cute",
+	},
+	tombstoner: {
+		availability: {clover: 1},
+		num: 42015,
+		accuracy: 100,
+		basePower: 300,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Tombstoner",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		selfdestruct: "always",
+		useSourceDefensiveAsOffensive: true,
+		secondary: null,
+		target: "allAdjacent",
+		type: "Rock",
+	},
+	fruitjuice: {
+		availability: {clover: 1},
+		num: 42016,
+		accuracy: 100,
+		basePower: 0,
+		basePowerCallback(pokemon) {
+			if (!pokemon.volatiles['stockpile'] || !pokemon.volatiles['stockpile'].layers) return false;
+			return pokemon.volatiles['stockpile'].layers * 120;
+		},
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Fruit Juice",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1},
+		onAfterMove(pokemon) {
+			pokemon.removeVolatile('stockpile');
+		},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -2,
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	phantomfang: {
+		availability: {clover: 1},
+		num: 42017,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Phantom Fang",
+		pp: 15,
+		priority: 0,
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			volatileStatus: 'curse',
+		},
+		self: {
+			boosts: {
+				spe: -1,
+			},
+		},
+		target: "normal",
+		type: "Ghost",
+	},
+	phasethrough: {
+		availability: {clover: 1},
+		num: 42018,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Phase Through",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, blade: 1},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+	},
+	coldcutter: {
+		availability: {clover: 1},
+		num: 42019,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Cold Cutter",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
+		critRatio: 2,
+		secondary: {
+			chance: 20,
+			status: 'frz',
+		},
+		target: "normal",
+		type: "Ice",
+	},
+	shadowscales: {
+		availability: {clover: 1},
+		num: 42020,
+		accuracy: 100,
+		basePower: 110,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Shadow Scales",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		selfBoost: {
+			boosts: {
+				def: -1,
+			},
+		},
+		target: "normal",
+		type: "Ghost",
+	},
+	wingsofcorrection: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 100,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Wings Of Correction",
+		pp: 5,
+		priority: -6,
+		flags: {protect: 1, mirror: 1, authentic: 1},
+		forceSwitch: true,
+		onHit(target, source, move) {
+			let success = false;
+			const removeAll = [
+				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments', 'pleasedontdothat'];
+			for (const sideCondition of removeAll) {
+				if (target.side.removeSideCondition(sideCondition)) {
+					if (!removeAll.includes(sideCondition)) continue;
+					this.add('-sideend', target.side, this.dex.conditions.get(sideCondition).name, '[from] move: Defog', '[of] ' + source);
+					success = true;
+				}
+
+				if (source.side.removeSideCondition(sideCondition)) {
+					this.add('-sideend', source.side, this.dex.conditions.get(sideCondition).name, '[from] move: Defog', '[of] ' + source);
+					success = true;
+				}
+			}
+
+			this.field.clearTerrain();
+			this.field.clearWeather();
+			return success;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+	},
+	brutalpunishment: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Brutal Punishment",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					atk: 1,
+					spa: 1,
+				},
+			},
+		},
+		onTry(source) {
+			if (source.species.baseSpecies === 'Disbeary') {
+				return;
+			}
+			this.attrLastMove('[still]');
+			this.add('-fail', source, 'move: Brutal Punishment');
+			this.hint("Only a Pokemon whose form is Disbeary or Disbeary-Ebil can use this move.");
+			return null;
+		},
+		onModifyType(move, pokemon) {
+			if (pokemon.species.name === 'Disbeary-Ebil') {
+				move.type = 'Dark';
+			} else {
+				move.type = 'Fairy';
+			}
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	cloudbreaker: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Cloud Breaker",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onHit() {
+			this.field.clearWeather();
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+		contestType: "Beautiful",
+	},
+	gazerbeam: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Gazer Beam",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel') return 1;
+		},
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Cool",
+	},
+	memejr: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Meme Jr.",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+				const boosts: StatsExceptHPTable = {
+					atk: source.boosts.atk,
+					def: source.boosts.def,
+					spa: source.boosts.spa,
+					spd: source.boosts.spd,
+					spe: source.boosts.spe,
+				};
+				let minBoost = Infinity;
+				let minBoosts: StatIDExceptHP[] = [];
+				Object.entries(boosts).forEach(([statName, boostValue]) => {
+					if (boostValue < minBoost) {
+						minBoost = boostValue;
+						minBoosts = [statName as StatIDExceptHP];
+					} else if (boostValue === minBoost) {
+						minBoosts.push(statName as StatIDExceptHP);
+					}
+				});
+				if (minBoosts.length) {
+					const randomStat = this.sample(minBoosts);
+					const boost: SparseBoostsTable = {};
+					boost[randomStat] = 1;
+					this.boost(boost, source);
+				} else {
+					return false;
+				}
+			},
+		},
+		target: "normal",
+		type: "???",
+		contestType: "Cute",
+	},
+	shinestrike: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 30,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Shine Strike",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel') return 0;
+		},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+	},
+	petrify: {
+		availability: {clover: 1},
+		isNonstandard: "Future",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Petrify",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'protect',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		boosts: {
+			def: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Rock",
+	},
+	starseedblast: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 25,
+		category: "Physical",
+		name: "Starseed Blast",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		multihit: [2, 5],
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		isNonstandard: "Future",
+	},
+	brandingblade: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Branding Blade",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1, blade: 1},
+		onHit(target) {
+			if (target.getAbility().isPermanent) return;
+			target.addVolatile('gastroacid');
+		},
+		onAfterSubDamage(damage, target) {
+			if (target.getAbility().isPermanent) return;
+			target.addVolatile('gastroacid');
+		},
+		secondary: null,
+		recoil: [33, 100],
+		target: "normal",
+		type: "Steel",
+		isNonstandard: "Future",
+	},
+	mudmaelstrom: {
+		availability: {clover: 1},
+		accuracy: 80,
+		basePower: 100,
+		category: "Special",
+		name: "Mud Maelstrom",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Ground",
+		isNonstandard: "Future",
+	},
+	finalhour: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 200,
+		category: "Special",
+		name: "Final Hour",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		ignoreImmunity: true,
+		isFutureMove: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 4,
+				move: 'finalhour',
+				source: source,
+				moveData: {
+					id: 'finalhour',
+					name: "Final Hour",
+					accuracy: 100,
+					basePower: 200,
+					category: "Special",
+					priority: 0,
+					flags: {},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					isFutureMove: true,
+					type: 'Dark',
+				},
+			});
+			this.add('-start', source, 'move: Final Hour');
+			return this.NOT_FAIL;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+	},
+	turnabout: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Turnabout",
+		pp: 10,
+		priority: 0,
+		flags: {mirror: 1},
+		volatileStatus: 'endure',
+		onAfterMove(target, source) {
+			const sourceSide = source.side;
+			const targetSide = source.side.foe;
+			const sideConditions = [
+				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire', 'sleazyspores', 'shattershard', 'pleasedontdothat',
+			];
+			let success = false;
+			for (const id of sideConditions) {
+				const effectName = this.dex.conditions.get(id).name;
+				if (sourceSide.sideConditions[id] && targetSide.sideConditions[id]) {
+					[sourceSide.sideConditions[id], targetSide.sideConditions[id]] = [
+						targetSide.sideConditions[id], sourceSide.sideConditions[id],
+					];
+					this.add('-sideend', sourceSide, effectName, '[silent]');
+					this.add('-sideend', targetSide, effectName, '[silent]');
+				} else if (sourceSide.sideConditions[id] && !targetSide.sideConditions[id]) {
+					targetSide.sideConditions[id] = sourceSide.sideConditions[id];
+					delete sourceSide.sideConditions[id];
+					this.add('-sideend', sourceSide, effectName, '[silent]');
+				} else if (targetSide.sideConditions[id] && !sourceSide.sideConditions[id]) {
+					sourceSide.sideConditions[id] = targetSide.sideConditions[id];
+					delete targetSide.sideConditions[id];
+					this.add('-sideend', targetSide, effectName, '[silent]');
+				} else {
+					continue;
+				}
+				let sourceLayers = sourceSide.sideConditions[id] ? (sourceSide.sideConditions[id].layers || 1) : 0;
+				let targetLayers = targetSide.sideConditions[id] ? (targetSide.sideConditions[id].layers || 1) : 0;
+				for (; sourceLayers > 0; sourceLayers--) {
+					this.add('-sidestart', sourceSide, effectName, '[silent]');
+				}
+				for (; targetLayers > 0; targetLayers--) {
+					this.add('-sidestart', targetSide, effectName, '[silent]');
+				}
+				success = true;
+			}
+			if (!success) return false;
+			this.add('-activate', source, 'move: Turnabout');
+		},
+		onHit(target, source) {
+			const targetBoosts: SparseBoostsTable = {};
+			const sourceBoosts: SparseBoostsTable = {};
+
+			let i: BoostID;
+			for (i in target.boosts) {
+				targetBoosts[i] = target.boosts[i];
+				sourceBoosts[i] = source.boosts[i];
+			}
+
+			target.setBoost(sourceBoosts);
+			source.setBoost(targetBoosts);
+
+			this.add('-swapboost', source, target, '[from] move: Turnabout');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'move: Endure');
+			},
+			onDamagePriority: -10,
+			onDamage(damage, target, source, effect) {
+				if (effect?.effectType === 'Move' && damage >= target.hp) {
+					this.add('-activate', target, 'move: Endure');
+					return target.hp - 1;
+				}
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+		isNonstandard: "Future",
+	},
+	meddymeds: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Meddy Meds",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		onTryHit(target, source, move) {
+			if (source.side === target.side) {
+				move.basePower = 0;
+				move.infiltrates = true;
+			}
+		},
+		onHit(target, source) {
+			if (source.side === target.side) {
+				if (!this.heal(Math.floor(target.baseMaxhp * 0.75))) {
+					this.add('-immune', target);
+				}
+			}
+		},
+		secondary: null,
+		self: {
+			sideCondition: 'lightscreen',
+		},
+		target: "normal",
+		type: "Poison",
+		isNonstandard: "Future",
+	},
+	badeggs: {
+		availability: {clover: 1},
+		accuracy: 90,
+		basePower: 20,
+		basePowerCallback(pokemon, target, move) {
+			return 20 * move.hit;
+		},
+		category: "Physical",
+		name: "Bad Eggs",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: 3,
+		multiaccuracy: true,
+		secondary: {
+			chance: 20,
+			status: 'psn',
+		},
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+	},
+	backdraft: {
+		availability: {clover: 1},
+		num: 366,
+		accuracy: true,
+		basePower: 65,
+		category: "Physical",
+		name: "Backdraft",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			sideCondition: 'backdraft',
+		},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+		isNonstandard: "Future",
+	},
+	/* :^) */
+	skullcannon: {
+		availability: {clover: 1},
+		accuracy: 90,
+		basePower: 150,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Skull Cannon",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		ignoreAbility: true,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				},
+			},
+			boosts: {
+				atk: -1,
+				def: -1,
+				spa: -1,
+				spd: -1,
+				spe: -1,
+			},
+		},
+		onDamagePriority: -20,
+		onDamage(damage, target, source, effect) {
+			if (damage >= target.hp) return target.hp - 1;
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Dark",
+		contestType: "Cool",
+	},
+	itsover: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "It's Over",
+		pp: 40,
+		priority: 6,
+		flags: {},
+		onTryHit(target, source) {
+			this.add('-nothing');
+		},
+		secondary: null,
+		target: "self",
+		type: "Bug",
+		zMove: {boost: {atk: 6, def: 6, spa: 6, spd: 6, spe: 6, accuracy: 6, evasion: 6}},
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	villify: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Villify",
+		pp: 20,
+		priority: 1,
+		flags: {protect: 1, reflectable: 1, mirror: 1, mystery: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Dark' || !target.setType('Dark')) {
+				// Soak should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add('-fail', target);
+				return null;
+			}
+			this.add('-start', target, 'typechange', 'Dark');
+		},
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Dark",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	nuclearwinter: {
+		availability: {clover: 1},
+		accuracy: 95,
+		basePower: 90,
+		category: "Special",
+		name: "Nuclear Winter",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Ice') return 1;
+		},
+		secondary: {
+			chance: 10,
+			status: 'psn',
+		},
+		target: "allAdjacentFoes",
+		type: "Ice",
+		isNonstandard: "Future",
+	},
+	shroomsnuggle: {
+		availability: {clover: 1},
+		accuracy: 95,
+		basePower: 70,
+		category: "Physical",
+		name: "Shroom Snuggle",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		drain: [1, 2],
+		target: "allAdjacent",
+		type: "Fairy",
+		isNonstandard: "Future",
+	},
+	closeblobmat: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 200,
+		category: "Physical",
+		name: "Close Blobmat",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				def: -6,
+				spd: -6,
+				spe: -1,
+			},
+		},
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	behemothblob: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Behemoth Blob",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+		isNonstandard: "Future",
+	},
+	sleppthatblobsthesky: {
+		accuracy: true,
+		basePower: 200,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Slepp That Blobs the Sky",
+		pp: 1,
+		priority: 0,
+		flags: {},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		ignoreAbility: true,
+		isZ: "ultrablobbosiumz",
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+		contestType: "Cool",
+	},
+	strum: {
+		availability: {clover: 1},
+		num: 813,
+		accuracy: 90,
+		basePower: 15,
+		basePowerCallback(pokemon, target, move) {
+			if (move.hit === 4) return move.basePower * 4;
+			return move.basePower;
+		},
+		onHit(target, source, move) {
+			if (move.hit === 3) move.category = 'Physical';
+		},
+		category: "Special",
+		name: "Strum",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1},
+		multihit: 4,
+		multiaccuracy: true,
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+	},
+	cope: {
+		accuracy: true,
+		basePower: 2,
+		category: "Special",
+		name: "Cope",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		multihit: 69,
+		target: "normal",
+		type: "Bug",
+		isNonstandard: "Future",
+	},
+	matingpress: {
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Mating Press",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1},
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+				if (!source.speciesState['parent']) {
+					this.add('-activate', source, 'move: Mating Press', '[of] ' + target);
+					const sourceSide = source.side;
+					const targetSet = target.set;
+					const childName = [
+						`${targetSet.species}, ${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.name}`,
+						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.name}`,
+						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.species}`,
+					].find((name) => name.length <= 18) || 'A Mere Child';
+					const baby = new Pokemon({
+						...targetSet,
+						name: childName,
+						moves: ['Metronome', 'Softboiled', 'Egg Bomb', 'Revelation Dance'],
+						item: undefined,
+					}, sourceSide);
+					baby.position = sourceSide.pokemon.length;
+					sourceSide.pokemon.push(baby);
+					sourceSide.pokemonLeft += 1;
+					this.add('teamsize', sourceSide.id, sourceSide.pokemon.length);
+					source.speciesState['parent'] = true;
+				} else {
+					this.add('-fail', source, 'move: Mating Press');
+				}
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+		isNonstandard: "Future",
+	},
+	pleasedontdothat: {
+		basePower: 0,
+		accuracy: true,
+		category: "Status",
+		name: "Please Don't Do That",
+		pp: 20,
+		priority: 0,
+		flags: {},
+		sideCondition: 'pleasedontdothat',
+		condition: {
+			onSideStart(side) {
+				this.add('-sidestart', side, "move: Please Don't Do That");
+			},
+			onTryHitPriority: 2,
+			onTryHit(target, source, move) {
+				if (target === source || move.hasBounced || !move.flags['reflectable']) {
+					return;
+				}
+				const newMove = this.dex.getActiveMove(move.id);
+				newMove.hasBounced = true;
+				newMove.pranksterBoosted = false;
+				this.actions.useMove(newMove, target, source);
+				target.side.removeSideCondition('pleasedontdothat');
+				return null;
+			},
+			onAllyTryHitSide(target, source, move) {
+				if (target.isAlly(source) || move.hasBounced || !move.flags['reflectable']) {
+					return;
+				}
+				const newMove = this.dex.getActiveMove(move.id);
+				newMove.hasBounced = true;
+				newMove.pranksterBoosted = false;
+				this.actions.useMove(newMove, this.effectState.target, source);
+				target.side.removeSideCondition('pleasedontdothat');
+				return null;
+			},
+			onSideEnd(side) {
+				this.add('-sideend', side, "move: Please Don't Do That");
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Psychic",
+	},
+	gunshot: {
+		availability: {clover: 1},
+		num: 441,
+		accuracy: 80,
+		basePower: 120,
+		category: "Special",
+		name: "Gun Shot",
+		pp: 5,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spd: -1,
+			},
+		},
+		onModifyMove(move, pokemon, target) {
+			if (target && target.baseSpecies.id === 'vandash') {
+				move.accuracy = true;
+			}
+		},
+		onBasePower(basePower, pokemon, target) {
+			if (target && target.baseSpecies.id === 'vandash') {
+				return this.chainModify(100);
+			}
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	leafshield: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Leaf Shield",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'spikyshield',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'move: Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect']) {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					this.damage(source.baseMaxhp / 8, source, target);
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+					this.damage(source.baseMaxhp / 8, source, target);
+				}
+			},
+		},
+		terrain: 'grassyterrain',
+		secondary: null,
+		target: "self",
+		type: "Grass",
+		zMove: {boost: {def: 1}},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	bilebite: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Bile Bite",
+		pp: 10,
+		priority: 0,
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		secondaries: [
+			{
+				chance: 30,
+				status: 'tox',
+			}, {
+				chance: 30,
+				volatileStatus: 'flinch',
+			},
+		],
+		target: "normal",
+		type: "Poison",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	frigidend: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 105,
+		category: "Physical",
+		name: "Frigid End",
+		pp: 10,
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Ice', type);
+		},
+		breaksProtect: true,
+		priority: 0,
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	coinflip: {
+		availability: {clover: 1},
+		accuracy: 50,
+		basePower: 0,
+		category: "Special",
+		name: "Coin Flip",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		ohko: true,
+		onMoveFail(target, source, move) {
+			this.damage(source.baseMaxhp, source, source, this.dex.conditions.get('ouchie'));
+		},
+		secondary: null,
+		ignoreAbility: true,
+		target: "normal",
+		type: "???",
+		noSketch: true,
+		isNonstandard: "Future",
+	},
+	wrapd: {
+		availability: {clover: 1},
+		accuracy: 85,
+		basePower: 15,
+		category: "Physical",
+		name: "Wrap-D",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		volatileStatus: 'bound',
+		self: {
+			volatileStatus: 'partialtrappinglock',
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+		// FIXME: onBeforeMove(pokemon, target) {target.removeVolatile('mustrecharge')}
+		onHit(target, source) {
+			/**
+			 * The duration of the partially trapped must be always renewed to 2
+			 * so target doesn't move on trapper switch out as happens in gen 1.
+			 * However, this won't happen if there's no switch and the trapper is
+			 * about to end its partial trapping.
+			 **/
+			if (target.volatiles['bound']) {
+				if (source.volatiles['partialtrappinglock'] && source.volatiles['partialtrappinglock'].duration > 1) {
+					target.volatiles['bound'].duration = 2;
+				}
+			}
+		},
+	},
+	blizzardd: {
+		availability: {clover: 1},
+		accuracy: 90,
+		basePower: 120,
+		category: "Special",
+		name: "Blizzard-D",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'frz',
+		},
+		target: "allAdjacentFoes",
+		type: "Ice",
+		isNonstandard: "Future",
+	},
+	amnesiad: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Amnesia-D",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			spa: 2,
+			spd: 2,
+		},
+		secondary: null,
+		noSketch: true,
+		target: "self",
+		type: "Psychic",
+		isNonstandard: "Future",
+	},
+	hyperbeamd: {
+		availability: {clover: 1},
+		accuracy: 90,
+		basePower: 150,
+		category: "Physical",
+		name: "Hyper Beam-D",
+		pp: 5,
+		priority: 0,
+		flags: {recharge: 1, protect: 1, mirror: 1},
+		onMoveFail(target, source, move) {
+			source.addVolatile('mustrecharge');
+		},
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "Normal",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	darkening: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 135,
+		category: "Special",
+		name: "Darkening",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 1],
+		secondary: null,
+		noSketch: true,
+		target: "allAdjacent",
+		type: "Ghost",
+		isNonstandard: "Future",
+	},
+	blackbomb: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 110,
+		category: "Special",
+		name: "Black Bomb",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		onTry(source, target) {
+			if (!source.volatiles['buried']) {
+				source.addVolatile('buried');
+			} else {
+				source.removeVolatile('buried');
+				source.addVolatile('buried');
+			}
+		},
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+	},
+	beamblade: {
+		availability: {clover: 1},
+		accuracy: 80,
+		basePower: 100,
+		category: "Special",
+		name: "Beam Blade",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		critRatio: 2,
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+	},
+	bearhug: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Bear Hug",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		volatileStatus: 'temptrapped',
+		onAfterHit(target, source, move) {
+			const poisonContact = [
+				'poisonpoint', 'poisontouch',
+			];
+			const toxicContact = [
+				'tetanus',
+			];
+			const burnContact = [
+				'flamebody',
+			];
+			const speedContact = [
+				'tanglinghair', 'gooey',
+			];
+			const damageContact = [
+				'ironbarbs', 'roughskin',
+			];
+			const rockyContact = [
+				'rockyhelmet',
+			];
+			const stealContact = [
+				'pickpocket', 'magician',
+			];
+			const paralyzeContact = [
+				'static',
+			];
+			const infatuateContact = [
+				'cutecharm',
+			];
+			const mummyContact = [
+				'mummy', 'woke',
+			];
+			const randomContact = [
+				'effectspore',
+			];
+			const random = this.random(3);
+			if (poisonContact.includes(source.ability)) {
+				if (random === 0) {
+					target.trySetStatus('psn', source);
+				}
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				}
+			} else if (toxicContact.includes(source.ability)) {
+				target.trySetStatus('tox', source);
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				}
+			} else if (burnContact.includes(source.ability)) {
+				if (random === 0) {
+					target.trySetStatus('brn', source);
+				}
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				}
+			} else if (speedContact.includes(source.ability)) {
+				this.boost({spe: -1}, target, source, this.dex.getActiveMove("Bear Hug"));
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				}
+			} else if (damageContact.includes(source.ability)) {
+				this.damage(target.baseMaxhp / 8, target, source);
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				}
+			} else if (stealContact.includes(source.ability)) {
+				if (source.item) {
+					return;
+				}
+				const yourItem = target.takeItem(source);
+				if (!yourItem) {
+					return;
+				}
+				if (!this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem) ||
+					!source.setItem(yourItem)) {
+					target.item = yourItem.id; // bypass setItem so we don't break choicelock or anything
+					return;
+				}
+				this.add('-enditem', target, yourItem, '[silent]', '[from] move: Thief', '[of] ' + source);
+				this.add('-item', source, yourItem, '[from] move: Thief', '[of] ' + target);
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				}
+			} else if (paralyzeContact.includes(source.ability)) {
+				if (random === 0) {
+					target.trySetStatus('par', source);
+				}
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				}
+			} else if (infatuateContact.includes(source.ability)) {
+				if (random === 0) {
+					if (source.isActive) target.addVolatile('attract', source, move, 'trapper');
+				}
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				}
+			} else if (mummyContact.includes(source.ability)) {
+				const oldAbility = target.setAbility(source.ability);
+				if (oldAbility) {
+					this.add('-ability', target, target.getAbility().name, '[from] move: Bear Hug');
+					if (!target.isAlly(source)) target.volatileStaleness = 'external';
+					return;
+				}
+				if (rockyContact.includes(source.item)) {
+					this.damage(target.baseMaxhp / 6, target, source);
+				}
+				return false;
+			} else if (randomContact.includes(source.ability)) {
+				if (random === 0) {
+					const result = this.random(3);
+					if (result === 0) {
+						target.trySetStatus('psn', source);
+					} else if (result === 1) {
+						target.trySetStatus('par', source);
+					} else {
+						target.trySetStatus('slp', source);
+					}
+					if (rockyContact.includes(source.item)) {
+						this.damage(target.baseMaxhp / 6, target, source);
+					}
+				}
+			} else if (rockyContact.includes(source.item)) {
+				this.damage(target.baseMaxhp / 6, target, source);
+			}
+		},
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+	},
+	chilipowder: {
+		availability: {clover: 1},
+		accuracy: 75,
+		basePower: 0,
+		category: "Status",
+		name: "Chili Powder",
+		pp: 15,
+		priority: 0,
+		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1},
+		status: 'brn',
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		isNonstandard: "Future",
+	},
+	thunderdrop: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Thunder Drop",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1, distance: 1},
+		onModifyMove(move, source) {
+			if (!source.volatiles['skydrop']) {
+				move.accuracy = true;
+				move.flags.contact = 0;
+			}
+		},
+		onMoveFail(target, source) {
+			if (source.volatiles['twoturnmove'] && source.volatiles['twoturnmove'].duration === 1) {
+				source.removeVolatile('skydrop');
+				source.removeVolatile('twoturnmove');
+				if (target === this.effectState.target) {
+					this.add('-end', target, 'Sky Drop', '[interrupt]');
+				}
+			}
+		},
+		onTry(source, target) {
+			return !target.fainted;
+		},
+		onTryHit(target, source, move) {
+			if (source.removeVolatile(move.id)) {
+				if (target !== source.volatiles['twoturnmove'].source) return false;
+
+				if (target.hasType('Flying')) {
+					this.add('-immune', target);
+					return null;
+				}
+			} else {
+				if (target.volatiles['substitute'] || target.isAlly(source)) {
+					return false;
+				}
+				if (target.getWeight() >= 2000) {
+					this.add('-fail', target, 'move: Sky Drop', '[heavy]');
+					return null;
+				}
+
+				this.add('-prepare', source, move.name, target);
+				source.addVolatile('twoturnmove', target);
+				return null;
+			}
+		},
+		onHit(target, source) {
+			if (target.hp) this.add('-end', target, 'Sky Drop');
+		},
+		condition: {
+			duration: 2,
+			onAnyDragOut(pokemon) {
+				if (pokemon === this.effectState.target || pokemon === this.effectState.source) return false;
+			},
+			onFoeTrapPokemonPriority: -15,
+			onFoeTrapPokemon(defender) {
+				if (defender !== this.effectState.source) return;
+				defender.trapped = true;
+			},
+			onFoeBeforeMovePriority: 12,
+			onFoeBeforeMove(attacker, defender, move) {
+				if (attacker === this.effectState.source) {
+					attacker.activeMoveActions--;
+					this.debug('Sky drop nullifying.');
+					return null;
+				}
+			},
+			onRedirectTargetPriority: 99,
+			onRedirectTarget(target, source, source2) {
+				if (source !== this.effectState.target) return;
+				if (this.effectState.source.fainted) return;
+				return this.effectState.source;
+			},
+			onAnyInvulnerability(target, source, move) {
+				if (target !== this.effectState.target && target !== this.effectState.source) {
+					return;
+				}
+				if (source === this.effectState.target && target === this.effectState.source) {
+					return;
+				}
+				if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows'].includes(move.id)) {
+					return;
+				}
+				return false;
+			},
+			onAnyBasePower(basePower, target, source, move) {
+				if (target !== this.effectState.target && target !== this.effectState.source) {
+					return;
+				}
+				if (source === this.effectState.target && target === this.effectState.source) {
+					return;
+				}
+				if (move.id === 'gust' || move.id === 'twister') {
+					return this.chainModify(2);
+				}
+			},
+			onFaint(target) {
+				if (target.volatiles['skydrop'] && target.volatiles['twoturnmove'].source) {
+					this.add('-end', target.volatiles['twoturnmove'].source, 'Sky Drop', '[interrupt]');
+				}
+			},
+		},
+		secondary: {
+			chance: 20,
+			status: 'par',
+		},
+		target: "any",
+		type: "Electric",
+		isNonstandard: "Future",
+	},
+	faeblade: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		defensiveCategory: "Special",
+		name: "Faeblade",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, blade: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		isNonstandard: "Future",
+	},
+	stickytongue: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Sticky Tongue",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onBasePower(basePower, source, target, move) {
+			const item = target.getItem();
+			if (!this.singleEvent('TakeItem', item, target.itemState, target, target, move, item)) return;
+			if (item.id) {
+				return this.chainModify(1.5);
+			}
+		},
+		onAfterHit(target, source) {
+			if (source.hp) {
+				const item = target.takeItem();
+				const hurtItem = [
+					'stickybarb',
+				];
+				const burnItem = [
+					'flameorb',
+				];
+				const poisonItem = [
+					'poisonbarb',
+				];
+				const toxicItem = [
+					'toxicorb',
+				];
+				const paralyzeItem = [
+					'lightball',
+				];
+				const whiteherbItem = [
+					'whiteherb',
+				];
+				const mentalherbItem = [
+					'mentalherb',
+				];
+				if (item) {
+					if (source.hp && item.isBerry && target.takeItem(source)) {
+						this.add('-enditem', target, item.name, '[from] stealeat', '[move] Sticky Tongue', '[of] ' + source);
+						if (this.singleEvent('Eat', item, null, source, null, null)) {
+							this.runEvent('EatItem', source, null, null, item);
+							if (item.id === 'leppaberry') target.staleness = 'external';
+						}
+						if (item.onEat) source.ateBerry = true;
+					} else if (hurtItem.includes(target.item)) {
+						this.damage(source.baseMaxhp / 8);
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					} else if (burnItem.includes(target.item)) {
+						source.trySetStatus('brn', target);
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					} else if (poisonItem.includes(target.item)) {
+						source.trySetStatus('psn', target);
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					} else if (toxicItem.includes(target.item)) {
+						source.trySetStatus('tox', target);
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					} else if (paralyzeItem.includes(target.item)) {
+						source.trySetStatus('par', target);
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					} else if (whiteherbItem.includes(target.item)) {
+						let activate = false;
+						const boosts: SparseBoostsTable = {};
+						let i: BoostID;
+						for (i in source.boosts) {
+							if (source.boosts[i] < 0) {
+								activate = true;
+								boosts[i] = 0;
+							}
+						}
+						if (activate) {
+							source.setBoost(boosts);
+							this.add('-clearnegativeboost', source, '[silent]');
+						}
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					} else if (mentalherbItem.includes(target.item)) {
+						const conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
+						for (const firstCondition of conditions) {
+							if (source.volatiles[firstCondition]) {
+								for (const secondCondition of conditions) {
+									source.removeVolatile(secondCondition);
+									if (firstCondition === 'attract' && secondCondition === 'attract') {
+										this.add('-end', source, 'move: Attract', '[from] item: Mental Herb');
+									}
+								}
+								return;
+							}
+						}
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					} else {
+						this.add('-enditem', target, item.name, '[from] move: Sticky Tongue', '[of] ' + source);
+					}
+				}
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+		isNonstandard: "Future",
+	},
+	rocketpunch: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 50,
+		category: "Physical",
+		name: "Rocket Punch",
+		pp: 10,
+		priority: 2,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		onTry(source) {
+			if (source.activeMoveActions > 1) {
+				this.hint("Rocket Punch only works on your first turn out.");
+				return false;
+			}
+		},
+		willCrit: true,
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		isNonstandard: "Future",
+	},
+	powerwasher: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Power Washer",
+		pp: 5,
+		priority: -1,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Water",
+		isNonstandard: "Future",
+	},
+	flakcannon: {
+		accuracy: 100,
+		basePower: 35,
+		category: "Special",
+		name: "Flak Cannon",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, pulse: 1, mirror: 1, mystery: 1},
+		willCrit: true,
+		multihit: 3,
+		onPrepareHit(target, source, move) {
+			if (source.ignoringItem()) return false;
+			const item = source.getItem();
+			if (!this.singleEvent('TakeItem', item, source.itemState, source, source, move, item)) return false;
+			if (!item.fling) return false;
+			if (item.fling.effect) {
+				move.onHit = item.fling.effect;
+			} else {
+				if (!move.secondaries) move.secondaries = [];
+				if (item.fling.status) {
+					move.secondaries.push({status: item.fling.status});
+				} else if (item.fling.volatileStatus) {
+					move.secondaries.push({volatileStatus: item.fling.volatileStatus});
+				}
+			}
+			source.addVolatile('flakcannon');
+		},
+		condition: {
+			onUpdate(pokemon) {
+				const item = pokemon.getItem();
+				pokemon.setItem('');
+				pokemon.lastItem = item.id;
+				pokemon.usedItemThisTurn = true;
+				this.add('-enditem', pokemon, item.name, '[from] move: Flak Cannon');
+				this.runEvent('AfterUseItem', pokemon, null, null, item);
+				pokemon.removeVolatile('flakcannon');
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+		isNonstandard: "Future",
+	},
+	polysporin: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Polysporin",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		status: 'slp',
+		onHit(target, source) {
+			let success = false;
+			if (source.hasAbility('wonderskin')) {
+				success = !!this.heal(this.modify(target.baseMaxhp, 1));
+			} else {
+				success = !!this.heal(Math.ceil(target.baseMaxhp * 0.5));
+			}
+			if (success && !target.isAlly(source)) {
+				target.staleness = 'external';
+			}
+			return success;
+		},
+		secondary: null,
+		target: "any",
+		type: "Poison",
+		isNonstandard: "Future",
+	},
+	inverserush: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Inverse Rush",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+
+		onBasePower(basePower, pokemon, target) {
+			if (this.field.getPseudoWeather('inverseroom')) {
+				return this.chainModify(2);
+			}
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+		maxMove: {basePower: 140},
+	},
+	faedozer: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Fae Dozer",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					const rand = this.random(4);
+					if (rand === 0) {
+						this.field.setTerrain('psychicterrain');
+					} else if (rand === 1) {
+						this.field.setTerrain('electricterrain');
+					} else if (rand === 2) {
+						this.field.setTerrain('grassyterrain');
+					} else {
+						this.field.setTerrain('mistyterrain');
+					}
+				},
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Fairy",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	yiikout: {
+		availability: {clover: 1},
+		num: 69010,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "Yiik Out",
+		pp: 10,
+		priority: 3,
+		flags: {sound: 1, protect: 1, mirror: 1, authentic: 1},
+		onTry(pokemon, target) {
+			if (pokemon.activeTurns > 1) {
+				this.attrLastMove('[still]');
+				this.add('-fail', pokemon);
+				this.hint("Yiik is only fun for the first five minutes.");
+				return null;
+			}
+		},
+		onTryHit(target, source) {
+			if (target === source || target.volatiles['dynamax']) return false;
+
+			const additionalBannedSourceAbilities = [
+				// Zen Mode included here for compatability with Gen 5-6
+				'flowergift', 'forecast', 'hungerswitch', 'illusion', 'imposter', 'neutralizinggas', 'powerofalchemy', 'receiver', 'trace', 'zenmode',
+			];
+			if (
+				target.getAbility().isPermanent || target.ability === 'truant' ||
+				source.getAbility().isPermanent || additionalBannedSourceAbilities.includes(source.ability)
+			) {
+				return false;
+			}
+		},
+		onHit(target, source) {
+			const oldAbility = target.setAbility(source.ability);
+			if (oldAbility) {
+				this.add('-ability', target, target.getAbility().name, '[from] move: Yiikout');
+				if (!target.isAlly(source)) target.volatileStaleness = 'external';
+				return;
+			}
+			return false;
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Fairy",
+		zMove: {basePower: 120},
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	roidflex: {
+		availability: {clover: 1},
+		num: 197,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Roid Flex",
+		pp: 5,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'protect',
+		boosts: {
+			accuracy: 1,
+		},
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		onAfterMove(source) {
+			source.trySetStatus('psn');
+		},
+		secondary: null,
+		noSketch: true,
+		target: "self",
+		type: "Fighting",
+		isNonstandard: "Future",
+		zMove: {boost: {evasion: 1}},
+		contestType: "Cool",
+	},
+	genwunroom: {
+		availability: {clover: 1},
+		num: 1001,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Genwun Room",
+		pp: 10,
+		priority: 0,
+		flags: {mirror: 1},
+		pseudoWeather: 'genwunroom',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 7;
+				}
+				return 5;
+			},
+			onFieldStart(target, source) {
+				this.add('-fieldstart', 'move: Genwun Room', '[of] ' + source);
+			},
+			onFieldRestart(target, source) {
+				this.field.removePseudoWeather('genwunroom');
+			},
+			// Item suppression implemented in Pokemon.ignoringItem() within sim/pokemon.js
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 6,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Genwun Room', '[of] ' + this.effectState.source);
+			},
+		},
+		secondary: null,
+		noSketch: true,
+		target: "all",
+		type: "Psychic",
+		isNonstandard: "Future",
+		zMove: {boost: {spd: 1}},
+		contestType: "Clever",
+	},
+
+	backroom: {
+		availability: {clover: 1},
+		num: 366,
+		accuracy: true,
+		basePower: 65,
+		category: "Physical",
+		name: "Backroom",
+		pp: 16,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onHit() {
+			this.field.addPseudoWeather('trickroom', null, this.activeMove);
+		},
+		secondary: null,
+		noSketch: true,
+		selfSwitch: true,
+		target: "normal",
+		type: "Ground",
+		isNonstandard: "Future",
+	},
+
+	charmerssong: {
+		availability: {clover: 1},
+		num: 273,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Charmer's Song",
+		pp: 10,
+		priority: -6,
+		flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
+		forceSwitch: true,
+		slotCondition: 'charmerssong',
+		condition: {
+			onSwap(target) {
+				target.addVolatile('taunt');
+				target.side.removeSlotCondition(target, 'charmerssong');
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Poison",
+		isNonstandard: "Future",
+		zMove: {boost: {spd: 1}},
+		contestType: "Clever",
+	},
+
+	psychospell: {
+		availability: {clover: 1},
+		num: 42003,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Psycho Spell",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.setTerrain('psychicterrain');
+				},
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Psychic",
+		isNonstandard: "Future",
+	},
+
+
+	wonderwand: {
+		availability: {clover: 1},
+		num: 42003,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Wonder Wand",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('wonderroom');
+				},
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Fairy",
+		isNonstandard: "Future",
+	},
+
+
+	implosion: {
+		availability: {clover: 1},
+		num: 42003,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Implosion",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('inverseroom');
+				},
+			},
+		},
+		noSketch: true,
+		target: "allAdjacent",
+		type: "Fire",
+		isNonstandard: "Future",
+	},
+
+	portalgun: {
+		availability: {clover: 1},
+		num: 509,
+		accuracy: 90,
+		basePower: 90,
+		category: "Special",
+		name: "Portal Gun",
+		pp: 10,
+		priority: -6,
+		flags: {bullet: 1, protect: 1, pulse: 1, mirror: 1, distance: 1},
+		selfSwitch: true,
+		forceSwitch: true,
+		noSketch: true,
+		target: "normal",
+		type: "Steel",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+
+	sportsball: {
+		availability: {clover: 1},
+		num: 42003,
+		accuracy: 85,
+		basePower: 60,
+		category: "Physical",
+		name: "Sportsball",
+		pp: 10,
+		priority: 0,
+		multihit: 2,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('mudsport');
+					this.field.addPseudoWeather('watersport');
+				},
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Fighting",
+		isNonstandard: "Future",
+	},
+
+	rainbowbeam: {
+		availability: {clover: 1},
+		num: 69048,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Rainbow Beam",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		noSketch: true,
+		type: "???",
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Ice', type) + this.dex.getEffectiveness('Normal', type) + this.dex.getEffectiveness('Fighting', type) +
+			this.dex.getEffectiveness('Flying', type) + this.dex.getEffectiveness('Poison', type) + this.dex.getEffectiveness('Ground', type) + this.dex.getEffectiveness('Rock', type) +
+			this.dex.getEffectiveness('Bug', type) + this.dex.getEffectiveness('Ghost', type) + this.dex.getEffectiveness('Steel', type) + this.dex.getEffectiveness('Fire', type) +
+			this.dex.getEffectiveness('Water', type) + this.dex.getEffectiveness('Grass', type) + this.dex.getEffectiveness('Electric', type) + this.dex.getEffectiveness('Psychic', type) +
+			this.dex.getEffectiveness('Dragon', type) + this.dex.getEffectiveness('Dark', type) + this.dex.getEffectiveness('Fairy', type);
+		},
+		isNonstandard: "Future",
+	},
+
+	freikugel: {
+		availability: {clover: 1},
+		accuracy: 80,
+		basePower: 150,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Freikugel",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 2],
+		onModifyMove(move, pokemon, target) {
+			if (this.field.getPseudoWeather('magicroom')) {
+				move.accuracy = true;
+			}
+		},
+		onDamage(damage, target, source, effect) {
+			if (this.field.getPseudoWeather('magicroom')) {
+				if (effect.id === 'recoil') {
+					if (!this.activeMove) throw new Error("Battle.activeMove is null");
+					if (this.activeMove.id !== 'struggle') return null;
+				}
+			}
+		},
+
+
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Tough",
+		maxMove: {basePower: 200},
+	},
+	confettigun: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 200,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Confetti Gun",
+		pp: 15,
+		priority: 0,
+		flags: {distance: 1, protect: 1, mirror: 1, bullet: 1},
+		secondary: {
+			chance: 50,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		noSketch: true,
+		type: "Normal",
+		contestType: "Cute",
+	},
+	butterflykick: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Butterfly Kick",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		noSketch: true,
+		type: "Bug",
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Fighting', type);
+		},
+		isNonstandard: "Future",
+	},
+	toxicbeam: {
+		availability: {clover: 1},
+		accuracy: 90,
+		basePower: 110,
+		category: "Special",
+		name: "Toxic Beam",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			status: 'tox',
+		},
+		target: "normal",
+		noSketch: true,
+		type: "Poison",
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	windwhip: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Wind Whip",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		noSketch: true,
+		type: "Flying",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	firewall: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Firewall",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'firewall',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'move: Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect']) {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					source.trySetStatus('brn', target);
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+					source.trySetStatus('brn', target);
+				}
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Fire",
+		noSketch: true,
+		zMove: {boost: {def: 1}},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	maximize: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 300,
+		category: "Physical",
+		name: "Maximize",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				evasion: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+		noSketch: true,
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	seaquake: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Seaquake",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		noSketch: true,
+		type: "Water",
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Ground', type);
+		},
+		isNonstandard: "Future",
+	},
+	edgequake: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Edgequake",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		noSketch: true,
+		type: "Rock",
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Ground', type);
+		},
+		isNonstandard: "Future",
+	},
+	sugarrush: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sugar Rush",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1},
+		onHit(target) {
+			if (target.hp <= target.maxhp / 2 || target.boosts.spa >= 6 || target.maxhp === 1) { // Shedinja clause
+				return false;
+			}
+			this.directDamage(target.maxhp / 2);
+			this.boost({spa: 12}, target);
+		},
+		secondary: null,
+		target: "self",
+		type: "Fairy",
+		noSketch: true,
+		zMove: {effect: 'heal'},
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	sleepingsands: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Sleeping Sands",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'slp',
+		},
+		target: "normal",
+		type: "Ground",
+		noSketch: true,
+		isNonstandard: "Future",
+	},
+	fuckyou: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Fuck You",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, authentic: 1},
+		onHit(target, source, move) {
+			const success = this.boost({atk: -6, def: -6, spa: -6, spd: -6, spe: -6, accuracy: -6, evasion: -6}, target, source);
+			if (!success && !target.hasAbility('mirrorarmor')) {
+				delete move.selfSwitch;
+			}
+		},
+		selfSwitch: true,
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "Fighting",
+		zMove: {effect: 'healreplacement'},
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	absolutezero: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Absolute Zero",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			status: 'frz',
+		},
+		target: "normal",
+		noSketch: true,
+		type: "Ice",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	poisonivy: {
+		availability: {clover: 1},
+		accuracy: 95,
+		basePower: 90,
+		category: "Physical",
+		name: "Poison Ivy",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		secondary: {
+			chance: 30,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('psn', source);
+				} else if (result === 1) {
+					target.trySetStatus('tox', source);
+				} else {
+					target.trySetStatus('par', source);
+				}
+			},
+		},
+		target: "normal",
+		noSketch: true,
+		type: "Grass",
+		zMove: {basePower: 160},
+		isNonstandard: "Future",
+	},
+	doesthiswork: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 60,
+		category: "Status",
+		name: "Does This Work",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1, dance: 1},
+		boosts: {
+			spa: 1,
+			spe: 1,
+		},
+		secondary: null,
+		noSketch: true,
+		target: "self",
+		type: "Psychic",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	telluriccurrent: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Telluric Current",
+		pp: 20,
+		priority: 0,
+		ignoreImmunity: {'Electric': true},
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			status: 'par',
+		},
+		target: "normal",
+		noSketch: true,
+		type: "Electric",
+		contestType: "Cool",
+	},
+
+	rockout: {
+		availability: {clover: 1},
+		num: 369,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Rock Out",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, sound: 1, mirror: 1},
+		selfSwitch: true,
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "Rock",
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+
+	twintowertumblingterror: {
+		accuracy: true,
+		basePower: 290,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Twin Tower Tumbling Terror",
+		pp: 1,
+		priority: -7,
+		flags: {contact: 1, hammer: 1},
+		isZ: "sableviumz",
+		onAfterMove(source) {
+			source.trySetStatus('brn');
+		},
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Smart",
+	},
+
+	toppingtoss: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 50,
+		onHit(target, source, move) {
+			if (move.hit === 1) { move.type = 'Ground'; } else if (move.hit === 2) { move.type = 'Grass'; }
+		},
+		category: "Special",
+		name: "Topping Toss",
+		isNonstandard: "Future",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: 3,
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		noSketch: true,
+		contestType: "Cool",
+	},
+
+	heavensblessing: {
+		availability: {clover: 1},
+		num: 273,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Heaven's Blessing",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		slotCondition: 'Wish',
+		condition: {
+			duration: 2,
+			onStart(pokemon, source) {
+				this.effectState.hp = source.maxhp / 2;
+			},
+			onResidualOrder: 4,
+			onEnd(target) {
+				if (target && !target.fainted) {
+					const damage = this.heal(this.effectState.hp, target, target);
+					if (damage) {
+						this.add('-heal', target, target.getHealth, '[from] move: Wish', '[wisher] ' + this.effectState.source.name);
+					}
+				}
+			},
+		},
+		onHit(pokemon) {
+			const success = !!this.heal(this.modify(pokemon.maxhp, 0.25));
+			return pokemon.cureStatus() || success;
+		},
+		secondary: null,
+		noSketch: true,
+		target: "self",
+		type: "Normal",
+		zMove: {boost: {spd: 1}},
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+
+	sandysnore: {
+		availability: {clover: 1},
+		num: 173,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Sandy Snore",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
+		sleepUsable: true,
+		onTry(source) {
+			return source.status === 'slp' || source.hasAbility('comatose');
+		},
+
+		self: {
+			onHit(source) {
+				this.field.setWeather('sandstorm');
+				const oldAbility = source.setAbility('sandrush');
+				if (oldAbility) {
+					this.add('-ability', source, 'Sand Rush', '[from] move: Sandy Snore');
+					return;
+				}
+				return false;
+			},
+
+				
+			},
+		
+		noSketch: true,
+		target: "normal",
+		type: "Rock",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	amogus: {
+		availability: {clover: 1},
+		num: 1,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Amogus",
+		pp: 35,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "???",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	ninjutsu: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 15,
+		category: "Special",
+		name: "Ninjutsu",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: 4,
+		target: "normal",
+		type: "Steel",
+		isNonstandard: "Future",
+		noSketch: true,
+	},
+	groundbomb: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 250,
+		category: "Special",
+		name: "Ground Bomb",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		selfdestruct: "always",
+		secondary:  {
+			chance: 10,
+			status: 'brn',
+		},
+		onBasePower(basePower, pokemon, target) {
+			
+				return this.chainModify(2);
+		},
+		target: "normal",
+		type: "Ground",
+		zMove: {basePower: 180},
+		isNonstandard: "Future",
+		noSketch: true,
+	},
+	chernoboil: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 26,
+		category: "Special",
+		name: "Chernoboil",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Nuclear",
+		contestType: "Tough",
+		isNonstandard: "Future",
+		noSketch: true,
+	},
+	halflife: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 0,
+		damageCallback(pokemon, target) {
+			return this.clampIntRange(target.getUndynamaxedHP() / 2, 1);
+		},
+		category: "Special",
+		name: "Half-Life",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Nuclear",
+		contestType: "Tough",
+		isNonstandard: "Future",
+		noSketch: true,
+	},
+	obsidianhorn: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Obsidian Horn",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			self: {
+				boosts: {
+					def: 1,
+					spd: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+		contestType: "Cool",
+		noSketch: true,
+	},
+	feudefee: {
+		availability: {clover: 1},
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Feu de Fe\u0301e",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		contestType: "Cute",
+		isNonstandard: "Future",
+		noSketch: true,
+	},
+
+	heavenpierce: {
+		availability: {clover: 1},
+		accuracy: true,
+		basePower: 70,
+		category: "Physical",
+		name: "Heaven Pierce",
+		pp: 5,
+		priority: 0,
+		flags: {mirror: 1, defrost: 1},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+		},
+		ignoreAbility: true,
+		ignoreImmunity: {'Steel': true},
+		breaksProtect: true,
+		willCrit: true,
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "Steel",
+		contestType: "Cool",
+	},
+
+	fughamut: {
+		accuracy: true,
+		basePower: 90,
+		category: "Status",
+		name: "Fughamut",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1},
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+				if (!source.speciesState['parent']) {
+					this.add('-activate', source, 'move: Fughamut', '[of] ' + target);
+					const sourceSide = source.side;
+					const targetSet = target.set;
+					const childName = [
+						`${targetSet.species}, ${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.name}`,
+						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.name}`,
+						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.species}`,
+					].find((name) => name.length <= 18) || 'A Mere Child';
+					const baby = new Pokemon({
+						species: 'Rayquaza',
+						name: "Fug",
+						moves: ['Draco Meteor', 'Extreme Speed', 'Overheat', 'Dragon Ascent'],
+						item: 'Life Orb',
+					}, sourceSide);
+					baby.position = sourceSide.pokemon.length;
+					sourceSide.pokemon.push(baby);
+					sourceSide.pokemonLeft += 1;
+					this.add('teamsize', sourceSide.id, sourceSide.pokemon.length);
+					source.speciesState['parent'] = true;
+				} else {
+					this.add('-fail', source, 'move: Fughamut');
+				}
+			},
+		},
+		target: "normal",
+		type: "Dragon",
+		isNonstandard: "Future",
+	},
+
+	feedandseed: {
+		num: 738,
+		accuracy: 90,
+		basePower: 100,
+		category: "Physical",
+		isNonstandard: "LGPE",
+		name: "Feed and Seed",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent) {
+				return false;
+			}
+		},
+		onHit(target, source) {
+			if (target.hasType('Grass')) return null;
+			target.addVolatile('leechseed', source);
+			const oldAbility = target.setAbility('insomnia');
+			if (oldAbility) {
+				this.add('-ability', target, 'Insomnia', '[from] move: Feed and Seed');
+				if (target.status === 'slp') {
+					target.cureStatus();
+				}
+				return;
+			}
+		},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.setTerrain('grassyterrain');
+				},
+			},
+		},
+		target: "normal",
+		type: "Grass",
+		contestType: "Clever",
+	},
+	atombomb: {
+		availability: {clover: 1},
+		num: 69003,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Atom Bomb",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		selfdestruct: "always",
+		secondary: null,
+		target: "allAdjacent",
+		type: "Nuclear",
+		zMove: {basePower: 200},
+		isNonstandard: "Future",
+	},
+
+	radiation: {
+		availability: {clover: 1},
+		num: 487,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Radiation",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, mystery: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Nuclear' || !target.setType('Nuclear')) {
+				// Soak should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add('-fail', target);
+				return null;
+			}
+			this.add('-start', target, 'typechange', 'Nuclear');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Nuclear",
+		zMove: {boost: {spa: 1}},
+		contestType: "Cute",
+	},
+
+	meltdown: {
+		availability: {clover: 1},
+		num: 557,
+		accuracy: 95,
+		basePower: 35,
+		category: "Physical",
+		name: "Meltdown",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spe: -1,
+				atk: -1,
+				spa: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Nuclear",
+		zMove: {basePower: 220},
+		contestType: "Cool",
+	},
+
 };

@@ -23,6 +23,14 @@ export interface SpeciesData extends Partial<Species> {
 
 export type ModdedSpeciesData = SpeciesData | Partial<Omit<SpeciesData, 'name'>> & {inherit: true};
 
+interface RandomBattleSet {
+	lockedMoves?: readonly string[];
+	abilities?: readonly string[];
+	items?: readonly string[];
+	moves?: readonly string[];
+	level?: number;
+}
+
 export interface SpeciesFormatsData {
 	comboMoves?: readonly string[];
 	doublesTier?: TierTypes.Doubles | TierTypes.Other;
@@ -30,12 +38,15 @@ export interface SpeciesFormatsData {
 	exclusiveMoves?: readonly string[];
 	gmaxUnreleased?: boolean;
 	isNonstandard?: Nonstandard | null;
+	randomBattleNicknames?: readonly string[];
 	randomBattleMoves?: readonly string[];
 	randomBattleLevel?: number;
 	randomDoubleBattleMoves?: readonly string[];
 	randomDoubleBattleLevel?: number;
+	randomBattleSets?: RandomBattleSet[];
 	randomBattleNoDynamaxMoves?: readonly string[];
 	tier?: TierTypes.Singles | TierTypes.Other;
+	availability?: AnyObject;
 }
 
 export type ModdedSpeciesFormatsData = SpeciesFormatsData & {inherit?: true};
@@ -219,14 +230,18 @@ export class Species extends BasicEffect implements Readonly<BasicEffect & Speci
 	 * Doubles Tier. The Pokemon's location in the Smogon doubles tier system.
 	 */
 	readonly doublesTier: TierTypes.Doubles | TierTypes.Other;
+	declare readonly randomBattleNicknames?: string[];
 	declare readonly randomBattleMoves?: readonly ID[];
 	declare readonly randomBattleLevel?: number;
 	declare readonly randomDoubleBattleMoves?: readonly ID[];
 	declare readonly randomDoubleBattleLevel?: number;
+	declare readonly randomBattleSets?: RandomBattleSet[];
 	declare readonly randomBattleNoDynamaxMoves?: readonly ID[];
 	declare readonly exclusiveMoves?: readonly ID[];
 	declare readonly comboMoves?: readonly ID[];
 	declare readonly essentialMove?: ID;
+
+	readonly availability?: AnyObject;
 
 	constructor(data: AnyObject) {
 		super(data);
@@ -282,6 +297,7 @@ export class Species extends BasicEffect implements Readonly<BasicEffect & Speci
 		this.changesFrom = data.changesFrom ||
 			(this.battleOnly !== this.baseSpecies ? this.battleOnly : this.baseSpecies);
 		if (Array.isArray(data.changesFrom)) this.changesFrom = data.changesFrom[0];
+		this.availability = data.availability || {};
 
 		if (!this.gen && this.num >= 1) {
 			if (this.num >= 810 || ['Gmax', 'Galar', 'Galar-Zen', 'Hisui'].includes(this.forme)) {
