@@ -7396,14 +7396,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		activate: "  [SOURCE] had a child with [POKEMON]!",
 		fail: "[POKEMON] had a miscarriage...",
 	},
-	pleasedontdothat: {
-		name: "Please Don't Do That",
-		desc: "Sets up a hazard on the opposing side of the field, blocks certain status moves once and instead uses the move against the original user. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin or Defog successfully, or is hit by Defog.",
-		shortDesc: "Blocks certain status moves and bounces them back to the user.",
-
-		start: "  A mystical barrier was erected around [TEAM]!",
-		end: "  The mystical barrier disappeared from around [TEAM]!",
-	},
 	gunshot: {
 		name: "Gun Shot",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage. Always hits and deals 100x against Vandash.",

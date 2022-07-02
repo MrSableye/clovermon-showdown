@@ -612,10 +612,10 @@ export const commands: Chat.ChatCommands = {
 	},
 };
 
-export const loginfilter: Chat.LoginFilter = async user => {
+export const loginfilter: Chat.LoginFilter = user => {
 	if (!Config.usesqlitebadges) {
 		return;
 	}
 
-	await Badges.updateUser(user.id);
+	void Badges.updateUser(user.id);
 };

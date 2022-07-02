@@ -32,8 +32,6 @@ export interface MinorActivityData {
 	totalVotes?: number;
 	isQuiz?: boolean;
 	answers: string[] | {name: string, votes: number, correct?: boolean}[];
-	voterAuth?: AuthLevel;
-	ratingRequirement?: { format: string, minimumRating: number };
 }
 
 // globally Rooms.MinorActivity

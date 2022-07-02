@@ -100,8 +100,6 @@ export class Item extends BasicEffect implements Readonly<BasicEffect> {
 	declare readonly onPrimal?: (this: Battle, pokemon: Pokemon) => void;
 	declare readonly onStart?: (this: Battle, target: Pokemon) => void;
 
-	declare readonly availability?: AnyObject;
-
 	constructor(data: AnyObject) {
 		super(data);
 		// eslint-disable-next-line @typescript-eslint/no-this-alias
@@ -123,7 +121,6 @@ export class Item extends BasicEffect implements Readonly<BasicEffect> {
 		this.onPlate = data.onPlate || undefined;
 		this.isGem = !!data.isGem;
 		this.isPokeball = !!data.isPokeball;
-		this.availability = data.availability || {};
 
 		if (!this.gen) {
 			if (this.num >= 689) {

@@ -4,6 +4,18 @@ import {Dex, toID} from '../../../sim/dex';
 import {Species} from '../../../sim/dex-species';
 import {PRNG, PRNGSeed} from '../../../sim/prng';
 
+interface RandomBattleSetData {
+	nicknames?: string[];
+	sets?: {
+		abilities?: string[],
+		items?: string[],
+		moves?: string[],
+		lockedMoves?: string[],
+		level?: number,
+	}[];
+}
+type RandomBattleSets = Record<string, RandomBattleSetData>;
+
 export interface TeamData {
 	typeCount: {[k: string]: number};
 	typeComboCount: {[k: string]: number};
@@ -580,6 +592,8 @@ export class RandomTeams {
 		return counter;
 	}
 
+	randomCloverSets: RandomBattleSets = require('./clover-sets.json');
+
 	randomSet(species: string | Species, teamDetails: RandomTeamsTypes.TeamDetails = {}, isLead = false, isDoubles = false, isCloveronly = false): RandomTeamsTypes.RandomSet {
 		species = this.dex.species.get(species);
 		let forme = species.name;
@@ -598,11 +612,14 @@ export class RandomTeams {
 		}
 
 		let nickname: string | undefined = undefined;
-		if (species.randomBattleNicknames) {
-			nickname = this.sample(species.randomBattleNicknames);
+		const cloverSetData = this.randomCloverSets[species.id];
+		if (cloverSetData && cloverSetData.nicknames) {
+			nickname = this.sample(cloverSetData.nicknames);
 		}
 
-		const randomBattleSet = species.randomBattleSets ? this.sample(species.randomBattleSets) : {};
+		const randomBattleSet = cloverSetData && cloverSetData.sets ?
+			this.sample(cloverSetData.sets) :
+			{};
 
 		const singlesMoves = randomBattleSet.moves || species.randomBattleMoves;
 		const randMoves = !isDoubles ? singlesMoves : (species.randomDoubleBattleMoves || singlesMoves);
@@ -1816,7 +1833,6 @@ export class RandomTeams {
 			"Powder Jar",
 			"Big Root",
 			"Jar of Pee",
-			"Blobbosinite",
 		].map(toID);
 
 		if (isCloveronly && !fochunItems.includes(toID(item))) {

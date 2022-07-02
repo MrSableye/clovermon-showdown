@@ -848,6 +848,14 @@ export class RoomBattle extends RoomGames.RoomGame<RoomBattlePlayer> {
 		const p2id = toID(p2name);
 		Chat.runHandlers('onBattleEnd', this, winnerid, [p1id, p2id, this.p3?.id, this.p4?.id].filter(Boolean));
 		if (this.room.rated) {
+			this.room.rated = 0;
+
+			if (winnerid === p1id) {
+				p1score = 1;
+			} else if (winnerid === p2id) {
+				p1score = 0;
+			}
+
 			winner = Users.get(winnerid);
 			if (winner && !winner.registered) {
 				this.room.sendUser(winner, '|askreg|' + winner.id);

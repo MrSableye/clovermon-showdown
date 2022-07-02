@@ -2383,10 +2383,6 @@ export const ItemsText: { [k: string]: ItemText } = {
 		name: "Pirate's Jug",
 		desc: "If held by an Octai, it doubles the power of Lactose Shot.",
 	},
-	blobbosinite: {
-		name: "Blobbosinite",
-		desc: "On switch-in, causes the user to win the game. Single use.",
-	},
 	/* Clover CAP */
 	moluganion: {
 		name: "Moluganion",

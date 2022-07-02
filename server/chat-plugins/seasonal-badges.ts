@@ -68,15 +68,19 @@ const isInSeason = (date: Date, seasonalBadge: SeasonalBadge): boolean => {
 	}
 };
 
-export const loginfilter: Chat.LoginFilter = async (user) => {
-	await Promise.all(seasonalBadges.map(async (seasonalBadge) => {
+export const loginfilter: Chat.LoginFilter = user => {
+	seasonalBadges.forEach((seasonalBadge) => {
 		if (isInSeason(new Date(), seasonalBadge)) {
-			const userBadges = await Badges.getUserBadges(user.id);
-			const hasBadge = userBadges.some((userBadge) => userBadge.badge_id === seasonalBadge.badgeId);
-			if (!hasBadge) {
-				await Badges.addBadgeToUser(user.id, seasonalBadge.badgeId, user, true);
-				user.send(`|pm|&|${user.tempGroup}${user.name}|/raw <div class="broadcast-blue"><b>${seasonalBadge.message}</b></div>`);
-			}
+			void Badges.getUserBadges(user.id)
+				.then((userBadges) => {
+					const hasBadge = userBadges.some((userBadge) => userBadge.badge_id === seasonalBadge.badgeId);
+					if (!hasBadge) {
+						void Badges.addBadgeToUser(user.id, seasonalBadge.badgeId, user, true)
+							.then(() => {
+								user.send(`|pm|&|${user.tempGroup}${user.name}|/raw <div class="broadcast-blue"><b>${seasonalBadge.message}</b></div>`);
+							});
+					}
+				});
 		}
-	}));
+	});
 };

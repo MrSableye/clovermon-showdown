@@ -34,7 +34,6 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 			'OHKO Clause',
-			'Clover Only',
 			'Blobbos Clause',
 		],
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
@@ -89,7 +88,7 @@ export const Formats: FormatList = [
 		team: 'random',
 		gameType: 'multi',
 		tournamentShow: false,
-		ruleset: ['Max Team Size = 3', 'Clover Only', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Dynamax Clause'],
+		ruleset: ['Max Team Size = 3', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Dynamax Clause'],
 	},
 	{
 		name: '[Gen 8 Clover Only] Ubers',
@@ -101,7 +100,6 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 			'OHKO Clause',
-			'Clover Only',
 			'Blobbos Clause',
 		],
 		banlist: ['Baton Pass'],
@@ -117,7 +115,6 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 			'OHKO Clause',
-			'Clover Only',
 			'Blobbos Clause',
 		],
 		banlist: [
@@ -136,7 +133,6 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 			'OHKO Clause',
-			'Clover Only',
 			'Blobbos Clause',
 		],
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
@@ -147,7 +143,6 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Standard NatDex',
 			'Dynamax Clause',
-			'Clover Only',
 			'Blobbos Clause',
 		],
 	},
@@ -166,7 +161,6 @@ export const Formats: FormatList = [
 			'Sleep Clause Mod',
 			'Evasion Moves Clause',
 			'OHKO Clause',
-			'Clover Only',
 			'Blobbos Only',
 			'+CAP',
 		],
@@ -200,7 +194,6 @@ export const Formats: FormatList = [
 			'Swagger Clause',
 			'Sleep Clause Mod',
 			'Evasion Moves Clause',
-			'Clover Only',
 			'Blobbos Clause',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
@@ -217,7 +210,6 @@ export const Formats: FormatList = [
 			'Swagger Clause',
 			'Sleep Clause Mod',
 			'Evasion Moves Clause',
-			'Clover Only',
 			'Blobbos Clause',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
@@ -295,7 +287,6 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 			'OHKO Clause',
-			'Clover Only',
 			'Blobbos Clause',
 		],
 		banlist: [
@@ -306,7 +297,7 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Only] Balanced Hackmons',
 		mod: 'clover',
-		ruleset: ['Clover Only', '-Nonexistent', 'OHKO Clause', 'Evasion Moves Clause', 'Forme Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
+		ruleset: ['-Nonexistent', 'OHKO Clause', 'Evasion Moves Clause', 'Forme Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
 		banlist: [
 			'Arena Trap', 'Contrary', 'Gorilla Tactics', 'Huge Power', 'Illusion', 'Innards Out', 'Libero', 'Magnet Pull', 'Moody',
 			'Neutralizing Gas', 'Parental Bond', 'Protean', 'Pure Power', 'Shadow Tag', 'Stakeout', 'Water Bubble', 'Wonder Guard',
@@ -323,7 +314,6 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 			'OHKO Clause',
-			'Clover Only',
 			'Blobbos Clause',
 			'Multi Tier',
 		],
@@ -340,7 +330,6 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 			'OHKO Clause',
-			'Clover Only',
 			'Blobbos Clause',
 		],
 		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Eviolite', 'Nutjobber'],
@@ -354,7 +343,6 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 			'OHKO Clause',
-			'Clover Only',
 			'Blobbos Clause'],
 		banlist: [
 			'Unjoy', 'Chancer',
@@ -428,7 +416,6 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 			'OHKO Clause',
-			'Clover Only',
 			'Blobbos Clause',
 		],
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Draconius', 'Bunnorgy'],
@@ -438,7 +425,7 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Almost Any Ability',
 		desc: `Pok&eacute;mon have access to almost any ability.`,
 		mod: 'clover',
-		ruleset: ['Clover Only', 'Obtainable', '!Obtainable Abilities', 'Species Clause', 'Nickname Clause', '2 Ability Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
+		ruleset: ['Obtainable', '!Obtainable Abilities', 'Species Clause', 'Nickname Clause', '2 Ability Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
 		banlist: [
 			'Uber', 'Niterpent',
 			'Arena Trap', 'Comatose', 'Contrary', 'Fluffy', 'Fur Coat', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Intrepid Sword',
@@ -451,7 +438,7 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] Flipped",
 		desc: `Pok&eacute;mon have their base stats flipped.`,
 		mod: 'clover',
-		ruleset: ['Clover Only', 'Standard NatDex', 'Flipped Mod', 'Sleep Clause Mod', 'Evasion Moves Clause', 'Species Clause', 'OHKO Clause', 'Blobbos Clause', 'Dynamax Clause'],
+		ruleset: ['Standard NatDex', 'Flipped Mod', 'Sleep Clause Mod', 'Evasion Moves Clause', 'Species Clause', 'OHKO Clause', 'Blobbos Clause', 'Dynamax Clause'],
 		banlist: ['Draconius', 'Manatank', 'Pasdawg', 'Arena Trap', 'Moody', 'Power Construct', 'Psychic Surge', 'Shadow Tag', 'Baton Pass', 'Psychic Terrain', 'Shell Smash', 'Toke', 'Uber'],
 		unbanlist: ['Chromox', 'Condoom', 'Funnedong', 'Foryu'],
 	},
@@ -460,7 +447,6 @@ export const Formats: FormatList = [
 		desc: `Pok&eacute;mon can use any move of their typing, in addition to the moves they can normally learn.`,
 		mod: 'clover',
 		ruleset: [
-			'Clover Only',
 			'Standard NatDex',
 			'STABmons Move Legality',
 			'Dynamax Clause',
@@ -482,7 +468,6 @@ export const Formats: FormatList = [
 		desc: `Allows Pok&eacute;mon to use any move that shares the same first letter as their name or a previous evolution's name.`,
 		mod: 'clover',
 		ruleset: [
-			'Clover Only',
 			'Standard NatDex',
 			'OHKO Clause',
 			'Evasion Moves Clause',
@@ -505,7 +490,6 @@ export const Formats: FormatList = [
 		desc: `Every Pok&eacute;mon's stats, barring HP, are scaled to give them a BST as close to 600 as possible.`,
 		mod: 'clover',
 		ruleset: [
-			'Clover Only',
 			'Standard NatDex',
 			'OHKO Clause',
 			'Evasion Moves Clause',
@@ -524,7 +508,6 @@ export const Formats: FormatList = [
 		desc: `Pok&eacute;mon change type to match their first two moves.`,
 		mod: 'clover',
 		ruleset: [
-			'Clover Only',
 			'Standard NatDex',
 			'OHKO Clause',
 			'Evasion Moves Clause',
@@ -542,7 +525,6 @@ export const Formats: FormatList = [
 		desc: `Pok&eacute;mon have all of their released abilities simultaneously.`,
 		mod: 'cloverabilities',
 		ruleset: [
-			'Clover Only',
 			'Standard NatDex',
 			'OHKO Clause',
 			'Evasion Moves Clause',
@@ -584,7 +566,7 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] Mix and Mega",
 		desc: `Mega evolve any Pok&eacute;mon with any mega stone and no limit. Boosts based on mega evolution from gen 7.`,
 		mod: 'clovermixandmega',
-		ruleset: ['Clover Only', 'Standard NatDex', 'Overflow Stat Mod', 'Dynamax Clause', 'Species Clause', 'Sleep Clause Mod', 'Evasion Moves Clause', 'OHKO Clause'],
+		ruleset: ['Standard NatDex', 'Overflow Stat Mod', 'Dynamax Clause', 'Species Clause', 'Sleep Clause Mod', 'Evasion Moves Clause', 'OHKO Clause'],
 		banlist: [
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify', 'Blobbosite', 'Kalosite'],
@@ -649,7 +631,6 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		ruleset: [
 			'Picked Team Size = 1', 'Max Team Size = 3',
-			'Clover Only',
 			'Standard NatDex',
 			'OHKO Clause',
 			'Evasion Moves Clause',

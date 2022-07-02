@@ -83,5 +83,105 @@ export const Scripts: ModdedBattleScriptsData = {
 			// ...but 16-bit truncation happens even later, and can truncate to 0
 			return tr(baseDamage, 16);
 		},
+		canUltraBurst(pokemon: Pokemon) {
+			if (['Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane'].includes(pokemon.baseSpecies.name) &&
+				pokemon.getItem().id === 'ultranecroziumz') {
+				return "Necrozma-Ultra";
+			}
+			if (pokemon.baseSpecies.name === 'Blobbos' && pokemon.getItem().id === 'ultrablobbosiumz') {
+				return "Blobbos-Ultra";
+			}
+			return null;
+		},
+	},
+	pokemon: {
+		ignoringAbility() {
+			// Check if any active pokemon have the ability Neutralizing Gas
+			let neutralizinggas = false;
+			for (const pokemon of this.battle.getAllActive()) {
+				// can't use hasAbility because it would lead to infinite recursion
+				if (pokemon.ability === ('neutralizinggas' as ID) && !pokemon.volatiles['gastroacid'] && this.battle.field.pseudoWeather['genwunroom'] &&
+					!pokemon.transformed && !pokemon.abilityState.ending) {
+					neutralizinggas = true;
+					break;
+				}
+			}
+
+			return !!(
+				(this.battle.gen >= 5 && !this.isActive) ||
+				((this.volatiles['gastroacid'] || (neutralizinggas && this.ability !== ('neutralizinggas' as ID)) || this.battle.field.pseudoWeather['genwunroom']) &&
+				!this.getAbility().isPermanent
+				)
+			);
+		},
+		formeChange(
+			speciesId: string | Species, source: Effect,
+			isPermanent?: boolean, message?: string
+		) {
+			source = source || this.battle.effect;
+			const rawSpecies = this.battle.dex.species.get(speciesId);
+
+			const species = this.setSpecies(rawSpecies, source);
+			if (!species) return false;
+
+			if (this.battle.gen <= 2) return true;
+
+			// The species the opponent sees
+			const apparentSpecies =
+				this.illusion ? this.illusion.species.name : species.baseSpecies;
+			if (isPermanent) {
+				this.baseSpecies = rawSpecies;
+				this.details = species.name + (this.level === 100 ? '' : ', L' + this.level) +
+					(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '');
+				this.battle.add('detailschange', this, (this.illusion || this).details);
+				if (source.effectType === 'Item') {
+					if (source.zMove) {
+						this.battle.add('-burst', this, apparentSpecies, species.requiredItem);
+						this.moveThisTurnResult = true; // Ultra Burst counts as an action for Truant
+					} else if (source.onPrimal) {
+						if (this.illusion) {
+							this.ability = '';
+							this.battle.add('-primal', this.illusion);
+						} else {
+							this.battle.add('-primal', this);
+						}
+					} else {
+						this.battle.add('-mega', this, apparentSpecies, species.requiredItem);
+						this.moveThisTurnResult = true; // Mega Evolution counts as an action for Truant
+					}
+				} else if (source.effectType === 'Status') {
+					// Shaymin-Sky -> Shaymin
+					this.battle.add('-formechange', this, species.name, message);
+				}
+			} else {
+				if (source.effectType === 'Ability') {
+					this.battle.add('-formechange', this, species.name, message, `[from] ability: ${source.name}`);
+				} else {
+					this.battle.add('-formechange', this, this.illusion ? this.illusion.species.name : species.name, message);
+				}
+			}
+			if (isPermanent && !['disguise', 'iceface'].includes(source.id)) {
+				if (this.illusion) {
+					this.ability = ''; // Don't allow Illusion to wear off
+				}
+				this.setAbility(species.abilities['0'], null, true);
+				this.baseAbility = this.ability;
+			}
+			return true;
+		},
+		isGrounded(negateImmunity = false) {
+			if ('gravity' in this.battle.field.pseudoWeather) return true;
+			if ('ingrain' in this.volatiles && this.battle.gen >= 4) return true;
+			if ('smackdown' in this.volatiles) return true;
+			if ('buried' in this.volatiles) return true;
+			const item = (this.ignoringItem() ? '' : this.item);
+			if (item === 'ironball') return true;
+			// If a Fire/Flying type uses Burn Up and Roost, it becomes ???/Flying-type, but it's still grounded.
+			if (!negateImmunity && this.hasType('Flying') && !('roost' in this.volatiles)) return false;
+			if ((this.hasAbility('levitate') || this.hasAbility('asoneblobbostherian')) && !this.battle.suppressingAbility()) return null;
+			if ('magnetrise' in this.volatiles) return false;
+			if ('telekinesis' in this.volatiles) return false;
+			return item !== 'airballoon';
+		},
 	},
 };
