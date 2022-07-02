@@ -60,7 +60,7 @@ try {
 	FS(AVATARS_FILE).writeSync(JSON.stringify(customAvatars));
 }
 if ((Config.customavatars && Object.keys(Config.customavatars).length) || Config.allowedavatars) {
-	Monitor.crashlog("Please remove 'customavatars' and 'allowedavatars' from Config (config/config.js). Your avatars have been migrated to the new '/addavatar' system.");
+	Monitor.log("Please remove 'customavatars' and 'allowedavatars' from Config (config/config.js). Your avatars have been migrated to the new '/addavatar' system.");
 }
 function saveCustomAvatars(instant?: boolean) {
 	FS(AVATARS_FILE).writeUpdate(() => JSON.stringify(customAvatars), {throttle: instant ? null : 60_000});
