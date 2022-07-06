@@ -629,7 +629,6 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		ruleset: [
 			'Standard NatDex',
-			'Sketch Gen 8 Moves',
 		],
 	},
 	///////////////////////////////////////////////////////////////////
