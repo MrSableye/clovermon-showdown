@@ -31,6 +31,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Blobbos Clause',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
@@ -62,7 +63,7 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Random Battle',
 		mod: 'clover',
 		team: 'random',
-		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Sketch Gen 8 Moves'],
 	},
 	{
 		name: '[Gen 8 Clover Only] Ultimate Blobbos Metronome Showdown DX',
@@ -93,6 +94,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Blobbos Clause',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: ['Baton Pass'],
 	},
@@ -104,6 +106,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Blobbos Clause',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: [
 			'Moody', 'Baton Pass', 'Dragon Rage', 'Sonic Boom',
@@ -118,6 +121,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Blobbos Clause',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
@@ -127,6 +131,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Dynamax Clause',
 			'Blobbos Clause',
+			'Sketch Gen 8 Moves',
 		],
 	},
 	{
@@ -151,6 +156,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Blobbos Only',
 			'+CAP',
+			'Sketch Gen 8 Moves',
 		],
 		unbanlist: ['Blobbosite', 'Kalosite'],
 	},
@@ -179,6 +185,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Blobbos Clause',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
@@ -191,6 +198,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Blobbos Clause',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
@@ -264,6 +272,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Blobbos Clause',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: [
 			'Chancer', 'Semrust',
@@ -288,6 +297,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Blobbos Clause',
 			'Multi Tier',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Wonder Guard'],
 	},
@@ -299,6 +309,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Blobbos Clause',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Eviolite', 'Nutjobber'],
 	},
@@ -307,7 +318,8 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		ruleset: ['Standard',
 			'Dynamax Clause',
-			'Blobbos Clause'
+			'Blobbos Clause',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: [
 			'Unjoy', 'Chancer',
@@ -378,6 +390,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Inverse Mod',
 			'Blobbos Clause',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Draconius', 'Bunnorgy'],
 		unbanlist: ['Condoom', 'Foryu', 'Narwhiz', 'Scytill'],
@@ -386,7 +399,7 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Almost Any Ability',
 		desc: `Pok&eacute;mon have access to almost any ability.`,
 		mod: 'clover',
-		ruleset: ['Obtainable', '!Obtainable Abilities', 'Species Clause', 'Nickname Clause', '2 Ability Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
+		ruleset: ['Sketch Gen 8 Moves', 'Obtainable', '!Obtainable Abilities', 'Species Clause', 'Nickname Clause', '2 Ability Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
 		banlist: [
 			'Uber', 'Niterpent',
 			'Arena Trap', 'Comatose', 'Contrary', 'Fluffy', 'Fur Coat', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Intrepid Sword',
@@ -399,7 +412,7 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] Flipped",
 		desc: `Pok&eacute;mon have their base stats flipped.`,
 		mod: 'clover',
-		ruleset: ['Standard', 'Flipped Mod', 'Blobbos Clause', 'Dynamax Clause'],
+		ruleset: ['Standard', 'Flipped Mod', 'Blobbos Clause', 'Dynamax Clause', 'Sketch Gen 8 Moves',],
 		banlist: ['Draconius', 'Manatank', 'Pasdawg', 'Arena Trap', 'Moody', 'Power Construct', 'Psychic Surge', 'Shadow Tag', 'Baton Pass', 'Psychic Terrain', 'Shell Smash', 'Toke', 'Uber'],
 		unbanlist: ['Chromox', 'Condoom', 'Funnedong', 'Foryu'],
 	},
@@ -412,6 +425,7 @@ export const Formats: FormatList = [
 			'STABmons Move Legality',
 			'Dynamax Clause',
 			'Blobbos Clause',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 		restricted: [
@@ -428,6 +442,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Alphabet Cup Move Legality',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Acupressure', 'Baton Pass', 'Wonder Guard',
@@ -446,6 +461,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Scalemons Mod',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
@@ -460,6 +476,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Camomons Mod',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
@@ -472,6 +489,7 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Standard',
 			'Dynamax Clause',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: [
 			'Uber', 'Baton Pass',
@@ -507,7 +525,7 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] Mix and Mega",
 		desc: `Mega evolve any Pok&eacute;mon with any mega stone and no limit. Boosts based on mega evolution from gen 7.`,
 		mod: 'clovermixandmega',
-		ruleset: ['Standard', 'Overflow Stat Mod', 'Dynamax Clause'],
+		ruleset: ['Standard', 'Overflow Stat Mod', 'Dynamax Clause', 'Sketch Gen 8 Moves',],
 		banlist: [
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify', 'Blobbosite', 'Kalosite'],
@@ -575,6 +593,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Accuracy Moves Clause',
 			'Dynamax Clause',
+			'Sketch Gen 8 Moves',
 		],
 		banlist: [
 			'Adesign', 'Baddon', 'Boarnograf', 'Chromox', 'Clovenix', 'Condoom', 'Demiwaifu', 'Endranther', 'Foryu', 'Funnedong', 'Griffawork', 'Heliofug',
@@ -610,6 +629,7 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		ruleset: [
 			'Standard NatDex',
+			'Sketch Gen 8 Moves',
 		],
 	},
 	///////////////////////////////////////////////////////////////////
