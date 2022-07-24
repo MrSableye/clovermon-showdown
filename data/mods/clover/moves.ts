@@ -1728,7 +1728,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		name: "Wings Of Correction",
 		pp: 5,
 		priority: -6,
-		flags: {protect: 1, mirror: 1, authentic: 1},
+		flags: {protect: 1, mirror: 1, bypasssub: 1},
 		forceSwitch: true,
 		onHit(target, source, move) {
 			let success = false;
@@ -3227,7 +3227,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		name: "Yiik Out",
 		pp: 10,
 		priority: 3,
-		flags: {sound: 1, protect: 1, mirror: 1, authentic: 1},
+		flags: {sound: 1, protect: 1, mirror: 1, bypasssub: 1},
 		onTry(pokemon, target) {
 			if (pokemon.activeTurns > 1) {
 				this.attrLastMove('[still]');
@@ -3786,7 +3786,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		name: "Fuck You",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, authentic: 1},
+		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
 		onHit(target, source, move) {
 			const success = this.boost({atk: -6, def: -6, spa: -6, spd: -6, spe: -6, accuracy: -6, evasion: -6}, target, source);
 			if (!success && !target.hasAbility('mirrorarmor')) {
@@ -4001,7 +4001,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		name: "Sandy Snore",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 		sleepUsable: true,
 		onTry(source) {
 			return source.status === 'slp' || source.hasAbility('comatose');
@@ -5066,7 +5066,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		priority: 0,
 		target: "normal",
 		type: "Fairy",
-		flags: {protect: 1, reflectable: 1, mirror: 1, authentic: 1},
+		flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
 		volatileStatus: 'gayagenda',
 		condition: {
 			noCopy: true, // doesn't get copied by Baton Pass
@@ -5132,7 +5132,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		priority: 0,
 		target: "normal",
 		type: "Grass",
-		flags: {sound: 1, protect: 1, mirror: 1, authentic: 1},
+		flags: {sound: 1, protect: 1, mirror: 1, bypasssub: 1},
 	},
 	wowwiener: {
 		num: 69054,
@@ -5640,7 +5640,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		name: "Spook Out",
 		pp: 10,
 		priority: 3,
-		flags: {sound: 1, protect: 1, mirror: 1, authentic: 1},
+		flags: {sound: 1, protect: 1, mirror: 1, bypasssub: 1},
 		onTry(pokemon, target) {
 			if (pokemon.activeTurns > 1) {
 				this.attrLastMove('[still]');
@@ -5681,7 +5681,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		name: "Super Snore",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 		sleepUsable: true,
 		onTryHit(target, source) {
 			if (source.status !== 'slp' && !source.hasAbility('comatose')) return false;
