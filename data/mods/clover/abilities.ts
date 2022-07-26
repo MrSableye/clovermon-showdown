@@ -1691,7 +1691,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 
 	memepower: {
-		onAnyAfterHit(source, target, move) {
+		onAfterMoveSecondary(target, source, move) {
 			const targetSlot = target.getSlot();
 			if (source !== this.activePokemon) return;
 			if (source.ability !== 'memepower') return;
