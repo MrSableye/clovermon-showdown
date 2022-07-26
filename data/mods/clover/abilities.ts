@@ -445,7 +445,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			const bannedAbilities = ['wonderguard', 'trace', 'forecast', 'comatose', 'artificial', 'anability', 'anyability'];
 			const abilityList = Object.values(this.dex.data.Abilities)
 				.filter((ability) => !bannedAbilities.includes(this.toID(ability.name)))
-				.filter((ability) => ability.isNonstandard === null)
+				.filter((ability) => !ability.isNonstandard)
 				.map((ability) => this.toID(ability.name));
 			const randomAbility = this.sample(abilityList);
 
