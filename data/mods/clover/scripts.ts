@@ -160,7 +160,7 @@ export const Scripts: ModdedBattleScriptsData = {
 					this.battle.add('-formechange', this, this.illusion ? this.illusion.species.name : species.name, message);
 				}
 			}
-			if (isPermanent && !['disguise', 'iceface'].includes(source.id)) {
+			if (isPermanent && !['disguise', 'iceface', 'niceface'].includes(source.id)) {
 				if (this.illusion) {
 					this.ability = ''; // Don't allow Illusion to wear off
 				}
