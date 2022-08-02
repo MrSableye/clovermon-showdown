@@ -8259,4 +8259,36 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: "Future",
 		tier: "Illegal",
 	},
+	horse: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	dussans: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	spweedle: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	waterweedle: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	heaventoad: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	francine: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	autumn: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
+	nothing: {
+		isNonstandard: "Future",
+		tier: "Illegal",
+	},
 };
