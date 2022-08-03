@@ -909,6 +909,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 			}
 		},
 		itemUser: ["Chansey", "Fucker"],
+		isNonstandard: "CAP",
 	},
 	magoberry: {
 		inherit: true,
@@ -1719,4 +1720,8 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
+	luckypunch: {
+		inherit: true,
+
+	}
 };
