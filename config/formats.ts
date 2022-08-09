@@ -129,6 +129,7 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Anything Goes',
 		mod: 'clover',
 		ruleset: [
+			'Obtainable',
 			'Dynamax Clause',
 			'Blobbos Clause',
 			'Sketch Gen 8 Moves',
