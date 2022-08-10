@@ -1720,8 +1720,4 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "CAP",
 	},
-	luckypunch: {
-		inherit: true,
-
-	}
 };
