@@ -99,7 +99,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			const item = pokemon.getItem();
 			// Mega Rayquaza
 			if (altForme?.isMega && altForme?.requiredMove &&
-				pokemon.baseMoves.includes(toID(altForme.requiredMove)) && !item.zMove) {
+				pokemon.baseMoves.includes(this.dex.toID(altForme.requiredMove)) && !item.zMove) {
 				return altForme.name;
 			}
 			// a hacked-in Megazard X can mega evolve into Megazard Y, but not into Megazard X
