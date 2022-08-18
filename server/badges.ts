@@ -325,10 +325,6 @@ const TRANSACTIONS: {[k: string]: (input: any[]) => DatabaseResult} = {
 				throw new FailureMessage(`You do not own or manage '${badgeID}'.`);
 			}
 
-			if (!overridePermissions && (existingBadge[0].owner_id !== requesterID)) {
-				throw new FailureMessage(`You do not own '${badgeID}'.`);
-			}
-
 			const userOwnedBadges = statements.countUserBadges.get(userID)['num'];
 			if (userOwnedBadges >= MAX_USER_BADGES) {
 				throw new FailureMessage(`User '${userID}' has the maximum number of badges.`);
