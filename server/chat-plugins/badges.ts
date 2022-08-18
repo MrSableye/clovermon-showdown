@@ -4,7 +4,7 @@
  * Written by Mr. Sableye.
  * @author MrSableye
  */
-import {Badge, UpdateableBadgeAttribute, UserBadge} from '../badges';
+import {Badge, UpdateableBadgeAttribute, UserBadge, UserManagedBadge} from '../badges';
 import {FS, Utils} from '../../lib';
 import Axios from 'axios';
 import probe from 'probe-image-size';
@@ -98,8 +98,8 @@ export const Badges = new class {
 	getBadges() {
 		return Chat.Badges.getBadges();
 	}
-	getManagedBadges(managerID: string) {
-		return Chat.Badges.getOwnedBadges(managerID);
+	getOwnedBadges(ownerID: string) {
+		return Chat.Badges.getOwnedBadges(ownerID);
 	}
 	getUserBadges(userID: string) {
 		return Chat.Badges.getUserBadges(userID);
@@ -109,6 +109,12 @@ export const Badges = new class {
 	}
 	getBadgeOwners(badgeID: string, requester: User, override = false): Promise<UserBadge[]> {
 		return Chat.Badges.getBadgeOwners(badgeID, requester.id, override || Badges.canOverrideBadgeOwnership(requester));
+	}
+	getUserManagedBadges(userID: string): Promise<UserManagedBadge[]> {
+		return Chat.Badges.getUserManagedBadges(userID);
+	}
+	getBadgeManagers(badgeID: string): Promise<UserManagedBadge[]> {
+		return Chat.Badges.getBadgeManagers(badgeID);
 	}
 	// Modification
 	createBadge(badgeID: string, badgeName: string, managerID: string, filePath: string) {
@@ -150,6 +156,19 @@ export const Badges = new class {
 	async updateBadgePriority(userID: string, badgeID: string, priority: number) {
 		await Chat.Badges.updateBadgePriority(userID, badgeID, priority);
 		await Badges.updateUser(userID);
+	}
+	async addManagedBadgeToUser(userID: string, badgeID: string, requester: User, override = false) {
+		const overridePermissions = override || Badges.canOverrideBadgeOwnership(requester);
+		await Chat.Badges.addManagedBadgeToUser(userID, badgeID, requester.id, overridePermissions);
+
+		const badge = await Chat.Badges.getBadge(badgeID);
+		if (badge) {
+			sendPM(`/html <div class="infobox">You now manage badge: ${this.createRawBadgeHtml(badge.badge_name, badge.file_name)}</div>`, toID(userID));
+		}
+	}
+	async removeManagedBadgeFromUser(userID: string, badgeID: string, requester: User, override = false) {
+		const overridePermissions = override || Badges.canOverrideBadgeOwnership(requester);
+		await Chat.Badges.removeManagedBadgeFromUser(userID, badgeID, requester.id, overridePermissions);
 	}
 	async downloadBadgeImage(badgeID: string, imageUrl: string) {
 		try {
@@ -292,15 +311,25 @@ export const Badges = new class {
 		managedBadgePageElementHtml += `<strong>${badge.badge_name}</strong> <small>[id: ${badge.badge_id}]</small><br />`;
 		return managedBadgePageElementHtml;
 	}
-	createManagedBadgePageHtml(badges: Badge[]) {
+	createManagedBadgePageHtml(ownedBadges: Badge[], managedBadges: Badge[]) {
 		let managedBadgePageHtml = '<div class="pad">';
 		managedBadgePageHtml += Badges.createBadgeHeaderButtons('managed');
 		managedBadgePageHtml += '<h3>Your Managed Badges</h3>';
 
-		if (badges.length) {
-			managedBadgePageHtml += badges.map(Badges.createManagedBadgePageElementHtml).join('');
+		managedBadgePageHtml += '<h4>Directly Owned Badges</h4>';
+
+		if (ownedBadges.length) {
+			managedBadgePageHtml += ownedBadges.map(Badges.createManagedBadgePageElementHtml).join('');
 		} else {
-			managedBadgePageHtml += '<em>you manage no badges on Showdown lol</em>';
+			managedBadgePageHtml += '<em>you directly manage no badges on Showdown lol</em>';
+		}
+
+		managedBadgePageHtml += '<h4>Delegated Badges</h4>';
+
+		if (managedBadges.length) {
+			managedBadgePageHtml += managedBadges.map(Badges.createManagedBadgePageElementHtml).join('');
+		} else {
+			managedBadgePageHtml += '<em>you have been delegated no badges on Showdown lol</em>';
 		}
 
 		managedBadgePageHtml += '</div>';
@@ -326,9 +355,10 @@ export const pages: Chat.PageTable = {
 
 			this.title = '[Badges] Managed';
 
-			const badges = await Badges.getManagedBadges(user.id);
+			const ownedBadges = await Badges.getOwnedBadges(user.id);
+			const managedBadges = await Badges.getUserManagedBadges(user.id);
 
-			return Badges.createManagedBadgePageHtml(badges);
+			return Badges.createManagedBadgePageHtml(ownedBadges, managedBadges);
 		},
 	},
 };
@@ -423,13 +453,15 @@ export const commands: Chat.ChatCommands = {
 			if (userID) {
 				Badges.checkHasBadgePermission(this);
 
-				const badges = await Badges.getManagedBadges(userID);
+				const ownedBadges = await Badges.getOwnedBadges(userID);
+				const managedBadges = await Badges.getUserManagedBadges(userID);
 
-				return this.sendReplyBox(Badges.createBadgeListHtml(message, badges));
+				return this.sendReplyBox(Badges.createBadgeListHtml(message, [...ownedBadges, ...managedBadges]));
 			} else {
-				const badges = await Badges.getManagedBadges(user.id);
+				const ownedBadges = await Badges.getOwnedBadges(user.id);
+				const managedBadges = await Badges.getUserManagedBadges(userID);
 
-				return this.sendReplyBox(Badges.createBadgeListHtml(message, badges));
+				return this.sendReplyBox(Badges.createBadgeListHtml(message, [...ownedBadges, ...managedBadges]));
 			}
 		},
 		async show(target, room, user, connection, cmd, message) {
@@ -580,6 +612,33 @@ export const commands: Chat.ChatCommands = {
 
 			this.refreshPage('badge-owned');
 			return this.sendReply(`Set Badge '${id}' priority to '${priority}'.`);
+		},
+		manage: 'manager',
+		manager: {
+			grant: 'add',
+			async add(target, room, user) {
+				Badges.checkCanUse(this);
+				const [rawUserID, rawBadgeID] = target.split(',').map(toID);
+
+				const userID = getUserID(rawUserID);
+				const badgeID = getBadgeID(rawBadgeID);
+
+				await Badges.addManagedBadgeToUser(userID, badgeID, user);
+
+				return this.sendReply(`Granted Management of Badge '${badgeID}' to User '${userID}'.`);
+			},
+			revoke: 'remove',
+			async remove(target, room, user) {
+				Badges.checkCanUse(this);
+				const [rawUserID, rawBadgeID] = target.split(',');
+
+				const userID = getUserID(rawUserID);
+				const badgeID = getBadgeID(rawBadgeID);
+
+				await Badges.removeManagedBadgeFromUser(userID, badgeID, user);
+
+				return this.sendReply(`Removed Management of Badge '${badgeID}' from User '${userID}'.`);
+			},
 		},
 		'': 'view',
 		view() {

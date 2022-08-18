@@ -16,6 +16,12 @@ CREATE TABLE user_badges (
 	PRIMARY KEY (user, badge)
 ) WITHOUT ROWID;
 
+CREATE TABLE user_managed_badges (
+	user TEXT NOT NULL,
+	badge TEXT NOT NULL,
+	PRIMARY KEY (user, badge)
+) WITHOUT ROWID;
+
 CREATE TABLE database_settings (
 	name TEXT NOT NULL,
 	val TEXT NOT NULL,
