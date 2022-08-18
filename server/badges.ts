@@ -351,9 +351,9 @@ const TRANSACTIONS: {[k: string]: (input: any[]) => DatabaseResult} = {
 			}
 
 			const badgeManagers = statements.getBadgeManagers.all(badgeID);
-			const isManager = badgeManagers.some((badgeManager) => badgeManager.user_id === userID);
+			const isManager = badgeManagers.some((badgeManager) => badgeManager.user_id === requesterID);
 
-			if (!overridePermissions && ((existingBadge[0].owner_id !== requesterID) || !isManager)) {
+			if (!overridePermissions && (existingBadge[0].owner_id !== requesterID) && !isManager) {
 				throw new FailureMessage(`You do not own or manage '${badgeID}'.`);
 			}
 
