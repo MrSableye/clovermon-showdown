@@ -113,7 +113,7 @@ export const Scripts: ModdedBattleScriptsData = {
 		ignoringAbility() {
 			// Check if any active pokemon have the ability Neutralizing Gas
 			let neutralizinggas = false;
-			let genwunRoom = this.battle.field.pseudoWeather['genwunroom'];
+			const genwunRoom = this.battle.field.pseudoWeather['genwunroom'];
 			for (const pokemon of this.battle.getAllActive()) {
 				// can't use hasAbility because it would lead to infinite recursion
 				if (pokemon.ability === ('neutralizinggas' as ID) && !pokemon.volatiles['gastroacid'] &&
