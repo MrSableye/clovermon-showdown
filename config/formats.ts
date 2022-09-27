@@ -183,7 +183,7 @@ export const Formats: FormatList = [
 		section: 'Clover CAP',
 	},
 	{
-		name: '[Gen 8 Clover Only] Ubers',
+		name: '[Gen 8 Clover CAP Only] Ubers',
 		mod: 'clovercap',
 		ruleset: [
 			'Standard',
