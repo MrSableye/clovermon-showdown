@@ -169,7 +169,7 @@ export const Formats: FormatList = [
 		banlist: ['Moody', 'Baton Pass', 'Dragon Rage', 'Sonic Boom'],
 	},
 	{
-		name: '[Gen 8 Clover Blobbos CAP Only] Blobbos CAP',
+		name: '[Gen 8 Clover Blobbos CAP Only] OU',
 		mod: 'cloverblobboscap',
 		ruleset: [
 			'Standard',
