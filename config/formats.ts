@@ -131,39 +131,6 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: '[Gen 8 Clover CAP Only] OU',
-		mod: 'clovercap',
-		ruleset: [
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Gen 8 Moves',
-		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
-	},
-
-	{
-		name: '[Gen 8 Clover CAP Only] NFE',
-		mod: 'clovercap',
-		ruleset: [
-			'Not Fully Evolved',
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Gen 8 Moves',
-		],
-		banlist: ['Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Wonder Guard'],
-	},
-	{
-		name: '[Gen 8 Clover CAP Only] LC',
-		mod: 'clovercap',
-		ruleset: [
-			'Little Cup',
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Gen 8 Moves',
-		],
-		banlist: ['Moody', 'Baton Pass', 'Dragon Rage', 'Sonic Boom'],
-	},
-	{
 		name: '[Gen 8 Clover Blobbos CAP Only] OU',
 		mod: 'cloverblobboscap',
 		ruleset: [
@@ -208,6 +175,54 @@ export const Formats: FormatList = [
 			'Sketch Gen 8 Moves',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+	},
+	///////////////////////////////////////////////////////////////////
+	// Clover CAP
+	///////////////////////////////////////////////////////////////////
+	{
+		section: 'Clover CAP',
+	},
+	{
+		name: '[Gen 8 Clover Only] Ubers',
+		mod: 'clovercap',
+		ruleset: [
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Gen 8 Moves',
+		],
+		banlist: ['Baton Pass'],
+	},
+	{
+		name: '[Gen 8 Clover CAP Only] OU',
+		mod: 'clovercap',
+		ruleset: [
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Gen 8 Moves',
+		],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+	},
+	{
+		name: '[Gen 8 Clover CAP Only] NFE',
+		mod: 'clovercap',
+		ruleset: [
+			'Not Fully Evolved',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Gen 8 Moves',
+		],
+		banlist: ['Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Wonder Guard'],
+	},
+	{
+		name: '[Gen 8 Clover CAP Only] LC',
+		mod: 'clovercap',
+		ruleset: [
+			'Little Cup',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Gen 8 Moves',
+		],
+		banlist: ['Moody', 'Baton Pass', 'Dragon Rage', 'Sonic Boom'],
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] Doubles OU',
