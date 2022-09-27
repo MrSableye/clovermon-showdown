@@ -57,7 +57,7 @@ export const commands: Chat.ChatCommands = {
 			});
 			this.sendReplyBox(JSON.stringify(missingAbilities));
 		},
-		dumpBlobb() {
+		dumpblobb() {
 			const dex = Dex.mod('cloverblobboscap');
 			let missingAbilities: string[] = [];
 			dex.species.all().forEach((species) => {
