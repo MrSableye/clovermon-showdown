@@ -148,7 +148,7 @@ export const Formats: FormatList = [
 
 	{
 		name: '[Gen 8 Clover CAP Only] CAP NFE',
-		mod: 'clover',
+		mod: 'clovercap',
 		ruleset: [
 			'Not Fully Evolved',
 			'Standard',
@@ -159,7 +159,7 @@ export const Formats: FormatList = [
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] CAP LC',
-		mod: 'clover',
+		mod: 'clovercap',
 		ruleset: [
 			'Little Cup',
 			'Standard',
@@ -211,11 +211,11 @@ export const Formats: FormatList = [
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	{
-		name: '[Gen 8 Clover Only] Doubles CAP',
+		name: '[Gen 8 Clover CAP Only] Doubles OU',
 		rated: false,
-		mod: 'clover',
+		mod: 'clovercap',
 		gameType: 'doubles',
-		ruleset: ['[Gen 8 Clover Only] CAP'],
+		ruleset: ['[Gen 8 Clover CAP Only] OU'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Seasonal Clover
