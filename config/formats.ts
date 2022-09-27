@@ -147,7 +147,7 @@ export const Formats: FormatList = [
 	},
 
 	{
-		name: '[Gen 8 Clover CAP Only] CAP NFE',
+		name: '[Gen 8 Clover CAP Only] NFE',
 		mod: 'clovercap',
 		ruleset: [
 			'Not Fully Evolved',
@@ -158,7 +158,7 @@ export const Formats: FormatList = [
 		banlist: ['Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Wonder Guard'],
 	},
 	{
-		name: '[Gen 8 Clover CAP Only] CAP LC',
+		name: '[Gen 8 Clover CAP Only] LC',
 		mod: 'clovercap',
 		ruleset: [
 			'Little Cup',
