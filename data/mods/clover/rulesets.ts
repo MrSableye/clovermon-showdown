@@ -58,7 +58,7 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 			team.forEach((set) => {
 				const species = this.dex.species.get(set.species || set.name);
 
-				if (species.baseSpecies !== 'Blobbos') {
+				if (species.baseSpecies !== 'Blobbos' && species.baseSpecies !== 'Bootlos') {
 					errors.push(`${set.name || set.species} is not a forme of Blobbos.`);
 				}
 
