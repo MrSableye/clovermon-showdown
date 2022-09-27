@@ -38,6 +38,23 @@ export const commands: Chat.ChatCommands = {
 				'<p>Daily usage stats for most Clovermon Showdown formats can be found on our <a href="https://clover.weedl.es/usage/">usage site</a>.</p>'
 			);
 		},
+		dump() {
+			const dex = Dex.mod('clovercap');
+			let missingAbilities: string[] = [];
+			dex.species.all().forEach((species) => {
+				const abilities = [species.abilities[0], species.abilities[1], species.abilities.H, species.abilities.S];
+
+				abilities.forEach((ability) => {
+					if (ability) {
+						const dexAbility = dex.abilities.get(ability);
+						if (dexAbility.isNonstandard) {
+							missingAbilities.push(toID(ability));
+						}
+					}
+				})
+			});
+			this.sendReplyBox(JSON.stringify(missingAbilities));
+		},
 	},
 	cloverhelp() {
 		this.runBroadcast();
