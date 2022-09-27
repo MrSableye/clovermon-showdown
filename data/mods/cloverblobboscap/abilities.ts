@@ -1,4 +1,21 @@
 export const Abilities: {[k: string]: ModdedAbilityData} = {
+	/* Enabled Abilities */
+	parentalbond: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	propellertail: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	grimneigh: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	chillingneigh: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	/* Modified Abilities */
 	illusion: {
 		inherit: true,

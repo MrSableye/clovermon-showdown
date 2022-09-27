@@ -172,8 +172,6 @@ export const Formats: FormatList = [
 			'Sleep Clause Mod',
 			'Blobbos Only',
 			'Nickname Clause',
-			'OHKO Clause',
-			'Evasion Moves Clause',
 			'Endless Battle Clause',
 			'HP Percentage Mod',
 			'Cancel Mod',
