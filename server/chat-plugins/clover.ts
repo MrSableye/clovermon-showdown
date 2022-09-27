@@ -57,6 +57,25 @@ export const commands: Chat.ChatCommands = {
 			});
 			this.sendReplyBox(JSON.stringify(missingAbilities));
 		},
+		dumpBlobb() {
+			const dex = Dex.mod('cloverblobboscap');
+			let missingAbilities: string[] = [];
+			dex.species.all().forEach((species) => {
+				if (!species.id.includes('blobbos')) return;
+
+				const abilities = [species.abilities[0], species.abilities[1], species.abilities.H, species.abilities.S];
+
+				abilities.forEach((ability) => {
+					if (ability) {
+						const dexAbility = dex.abilities.get(ability);
+						if (dexAbility.isNonstandard) {
+							missingAbilities.push(toID(ability));
+						}
+					}
+				})
+			});
+			this.sendReplyBox(JSON.stringify(missingAbilities));
+		},
 	},
 	cloverhelp() {
 		this.runBroadcast();
