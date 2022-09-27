@@ -1,3 +1,3 @@
 export const Scripts: ModdedBattleScriptsData = {
-	inherit: 'blobboscap',
+	inherit: 'clovercap',
 };
