@@ -384,6 +384,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	disbearyebil: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	eccosmic: {
 		inherit: true,
 		isNonstandard: null,
@@ -440,6 +445,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	jermin: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	jerminswarm: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -505,6 +515,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	gargarramer: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	gargarramerawoken: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

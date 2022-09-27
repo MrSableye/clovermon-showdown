@@ -1864,6 +1864,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	disbearyebil: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	eccosmic: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -1909,6 +1913,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	jermin: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	jerminswarm: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -1961,6 +1969,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	gargarramer: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	gargarramerawoken: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -2405,6 +2417,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobbosnice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosnoice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosultra: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
