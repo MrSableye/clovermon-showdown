@@ -9195,4 +9195,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosnoice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosultra: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };
