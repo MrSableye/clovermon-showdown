@@ -3327,6 +3327,22 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Future",
 	},
+	sinisteaantique: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	polteageistantique: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	darmanitanzen: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	mimikyubusted: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	grasshole: {
 		inherit: true,
 		tier: "LC",

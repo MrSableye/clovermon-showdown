@@ -22299,9 +22299,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 0.4,
 		weightkg: 5.7,
 		color: "Blue",
-		evos: [
-			"Mega Blobbos",
-		],
 		eggGroups: [
 			"Ditto",
 		],
@@ -31146,9 +31143,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 9999,
 		weightkg: 9999,
 		color: "Blue",
-		prevo: "Blobbos",
-		evoCondition: "Hack",
-		evoType: "other",
 		eggGroups: [
 			"Ditto",
 		],
