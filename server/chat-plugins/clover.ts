@@ -42,6 +42,8 @@ export const commands: Chat.ChatCommands = {
 			const dex = Dex.mod('clovercap');
 			let missingAbilities: string[] = [];
 			dex.species.all().forEach((species) => {
+				if (species.num < 42000 || species.num > 42999) return;
+
 				const abilities = [species.abilities[0], species.abilities[1], species.abilities.H, species.abilities.S];
 
 				abilities.forEach((ability) => {
