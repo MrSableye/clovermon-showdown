@@ -1528,10 +1528,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	blobbos: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	vandash: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -2346,6 +2342,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	/* Clover CAP Mons */
+	blobbos: {
+		inherit: true,
+		tier: "OU",
+	},
 	blobboshenesys: {
 		inherit: true,
 		isNonstandard: null,
