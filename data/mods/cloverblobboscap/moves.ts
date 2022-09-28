@@ -146,28 +146,37 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	chernoboil: {
 		inherit: true,
 		type: "Nuclear",
+		isNonstandard: null,
 	},
 	halflife: {
 		inherit: true,
 		type: "Nuclear",
+		isNonstandard: null,
 	},
 	atombomb: {
 		inherit: true,
 		type: "Nuclear",
+		isNonstandard: null,
 	},
 	radiation: {
 		inherit: true,
 		type: "Nuclear",
+		isNonstandard: null,
 	},
 	meltdown: {
 		inherit: true,
 		type: "Nuclear",
+		isNonstandard: null,
 	},
 	toxicbeam: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	butterflykick: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	inverserush: {
 		inherit: true,
 		isNonstandard: null,
 	},
