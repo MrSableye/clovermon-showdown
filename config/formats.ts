@@ -145,6 +145,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Gen 8 Moves',
 		],
+		banlist: ['Blobbos-Alola'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Clover Doubles & Triples
