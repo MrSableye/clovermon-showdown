@@ -13,8 +13,24 @@ interface InitializedSeasonalBadge extends SeasonalBadge {
 }
 
 let seasonalBadges: InitializedSeasonalBadge[] = [];
+let isInitialized = false;
 
-const initializeSeasonalBadges = async (badgesToInitialize: SeasonalBadge[]) => {
+const initializeSeasonalBadges = async () => {
+	if (isInitialized || !Config.usesqlitebadges) return;
+	const badgesToInitialize = [
+		{
+			badgeId: 'christmas',
+			message: 'Happy Holidays! Unwrap a nifty badge!',
+			seasonStart: '12-25',
+			seasonEnd: '12-31',
+		},
+		{
+			badgeId: 'anniversary',
+			message: 'Happy anniversay, Clovermon Showdown!',
+			seasonStart: '01-16',
+			seasonEnd: '01-20',
+		},
+	];
 	const initializedSeasonalBadges: InitializedSeasonalBadge[] = [];
 
 	await Promise.all(badgesToInitialize.map(async (badgeToInitialize) => {
@@ -29,22 +45,8 @@ const initializeSeasonalBadges = async (badgesToInitialize: SeasonalBadge[]) => 
 	}));
 
 	seasonalBadges = initializedSeasonalBadges;
+	isInitialized = true;
 };
-
-void initializeSeasonalBadges([
-	{
-		badgeId: 'christmas',
-		message: 'Happy Holidays! Unwrap a nifty badge!',
-		seasonStart: '12-25',
-		seasonEnd: '12-31',
-	},
-	{
-		badgeId: 'anniversary',
-		message: 'Happy anniversay, Clovermon Showdown!',
-		seasonStart: '01-16',
-		seasonEnd: '01-20',
-	},
-]);
 
 const createDateString = (date: Date): string => {
 	let month = `${date.getMonth() + 1}`;
@@ -68,7 +70,8 @@ const isInSeason = (date: Date, seasonalBadge: SeasonalBadge): boolean => {
 	}
 };
 
-export const loginfilter: Chat.LoginFilter = user => {
+export const loginfilter: Chat.LoginFilter = async (user) => {
+	await initializeSeasonalBadges();
 	seasonalBadges.forEach((seasonalBadge) => {
 		if (isInSeason(new Date(), seasonalBadge)) {
 			void Badges.getUserBadges(user.id)
