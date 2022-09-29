@@ -872,4 +872,40 @@ export const Conditions: {[k: string]: ConditionData} = {
 			target.side.removeSlotCondition(target, 'lootable');
 		},
 	},
+
+	hyperboreanarctic: {
+		name: 'Hyperborean Arctic',
+		effectType: 'Weather',
+		duration: 0,
+		onTryMovePriority: 1,
+		onTryMove(attacker, defender, move) {
+			if (move.type === 'Fighting' && move.category !== 'Status') {
+				this.debug('Hyperborean Arctic fighting suppress');
+				this.add('-fail', attacker, move, '[from] Hyperborean Arctic');
+				this.attrLastMove('[still]');
+				return null;
+			}
+		},
+		onWeatherModifyDamage(damage, attacker, defender, move) {
+			if (defender.hasItem('utilityumbrella')) return;
+			if (move.type === 'Ice') {
+				this.debug('Ice storm boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onFieldStart(field, source, effect) {
+			this.add('-weather', 'Hyperborean Arctic', '[from] ability: ' + effect.name, '[of] ' + source);
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Hyperborean Arctic', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	
+
+
 };

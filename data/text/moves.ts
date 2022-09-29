@@ -7645,6 +7645,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Half-Life",
 		shortDesc: "Cuts foe's HP in half.",
 	},
+	meltdown: {
+		name: "Meldown",
+		shortDesc: "Lowers user's Atk, SpA, and SpE",
+	},
 	obsidianhorn: {
 		name: "Obsidian Horn",
 		shortDesc: "10% chance to raise Defense and Sp.Def by 1.",
@@ -7652,5 +7656,25 @@ export const MovesText: {[k: string]: MoveText} = {
 	feudefee: {
 		name: "Feu de Fe\u0301e",
 		shortDesc: "Physical if Attack is higher than Sp. Atk.",
+	},
+	skulltoss: {
+		name: "Skull Toss",
+		shortDesc: "Raises speed once",
+	},
+	blobblast: {
+		name: "Blobblast",
+		shortDesc: "Has 1/4 Recoil",
+	},
+	floofandpoof: {
+		name: "Floof and Poof",
+		shortDesc: "Uses Defense. Summons Lucky Chant, Safeguard, Mist",
+	},
+	sunburst: {
+		name: "Sunburst",
+		shortDesc: "Summons Sun. Chance to Burn",
+	},
+	deepfry: {
+		name: "Deep Fry",
+		shortDesc: "Cooks the opponent's item",
 	},
 };
