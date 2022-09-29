@@ -16,7 +16,7 @@ let seasonalBadges: InitializedSeasonalBadge[] = [];
 let isInitialized = false;
 
 const initializeSeasonalBadges = async () => {
-	if (isInitialized) return;
+	if (isInitialized || !Config.usesqlitebadges) return;
 	const badgesToInitialize = [
 		{
 			badgeId: 'christmas',
