@@ -22093,6 +22093,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			},
 		},
+		overrideOffensiveStat: 'def',
 		target: "normal",
 		type: "Fairy",
 		isNonstandard: "Future",
