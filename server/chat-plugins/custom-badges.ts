@@ -18,8 +18,10 @@ const createTeam = async (teamToBadge: Record<string, string>): Promise<Team> =>
 };
 
 let teams: Record<string, Team> = {};
+let isInitialized = false;
 
 const initializeTeams = async () => {
+	if (isInitialized) return;
 	teams = {
 		waifu: await createTeam({
 			kymmi: 'teamkymmi',
@@ -49,8 +51,8 @@ const initializeTeams = async () => {
 			australian: 'australiancrewmate',
 		}),
 	};
+	isInitialized = true;
 };
-void initializeTeams();
 
 const createTeamHtml = (teamName: string, team: Team) => {
 	let teamHtml = `<b>${teamName} <i>(try <code>/badgeteam join ${teamName}, SIDE</code>)</i></b><br />`;
@@ -87,10 +89,12 @@ const joinTeam = async (user: User, teamName: string, teamSide: string): Promise
 
 export const commands: Chat.ChatCommands = {
 	badgeteam: {
-		list() {
+		async list() {
 			if (!Config.usesqlitebadges) {
 				throw new Chat.ErrorMessage(`The badges feature is currently disabled.`);
 			}
+
+			await initializeTeams();
 
 			this.runBroadcast();
 
@@ -101,6 +105,8 @@ export const commands: Chat.ChatCommands = {
 			if (!Config.usesqlitebadges) {
 				throw new Chat.ErrorMessage(`The badges feature is currently disabled.`);
 			}
+
+			await initializeTeams();
 
 			const [teamName, teamSide] = target.split(',').map(toID);
 
