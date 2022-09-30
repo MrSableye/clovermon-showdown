@@ -34386,7 +34386,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		},
 		abilities: {
 			0: "Shed Skin",
-			H: "Rattled",
+			1: "Rattled",
+			H: "Intimidate",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
