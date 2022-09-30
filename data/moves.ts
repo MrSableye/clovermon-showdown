@@ -24087,6 +24087,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 					} else if (choicebandItem.includes(target.item)) {
 						this.boost({atk: 1}, source);
 						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
+					} else if (choicespecsItem.includes(target.item)) {
+						this.boost({spa: 1}, source);
+						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
+					} else if (choicescarfItem.includes(target.item)) {
+						this.boost({spe: 1}, source);
+						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
 					} else if (whiteherbItem.includes(target.item)) {
 						let activate = false;
 						const boosts: SparseBoostsTable = {};
