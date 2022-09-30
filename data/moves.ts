@@ -24252,4 +24252,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
+	flashbang: {
+		num: 366,
+		accuracy: true,
+		basePower: 70,
+		category: "Special",
+		name: "Flashbang",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			sideCondition: 'flashbang',
+		},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+		isNonstandard: "Future",
+	},
 };

@@ -7677,4 +7677,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Deep Fry",
 		shortDesc: "Cooks the opponent's item",
 	},
+	flashbang: {
+		name: "Flashbang",
+		shortDesc: "Switches out and sets up dazzling for a turn",
+		start: "  A dazzling display surrounds [TEAM]!",
+		end: "  [TEAM]'s the dazzling display has dissipated!",
+		switchOut: "#uturn",
+	},
 };
