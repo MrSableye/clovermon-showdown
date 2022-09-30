@@ -7646,7 +7646,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "Cuts foe's HP in half.",
 	},
 	meltdown: {
-		name: "Meldown",
+		name: "Meltdown",
 		shortDesc: "Lowers user's Atk, SpA, and SpE",
 	},
 	obsidianhorn: {
