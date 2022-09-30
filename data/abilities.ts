@@ -5753,9 +5753,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-ability', pokemon, 'Magic Guard');
 			this.effectState.unnerved = true;
 		},
-
+		onModifyAtk(atk, attacker, defender, move) {
+			if (attacker.status === 'brn' && move.id !== 'facade') {
+				return this.chainModify(2);
+			}
+		},
+		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {
+			if (effect.id === 'brn') {
+				this.heal(target.maxhp / 8);
+				if (this.toID(target.side.name).includes('doomwillbefallall')) {
+					this.add('-message', `${target.side.name} is cringe!`);
+					this.add('-message', `${target.side.name} still wets the bed!`);
+					this.add('-message', `${target.side.name} sharted!`);
+				}
+				return false;
+			}
 			if (effect && effect.id === 'stealthrock' || effect.id === 'spikes' || effect.id === 'gmaxsteelsurge') {
+				return false;
+			}
+			if (effect.effectType !== 'Move') {
+				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
 				return false;
 			}
 		},
