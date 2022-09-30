@@ -23090,7 +23090,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	psychospell: {
 		num: 42003,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Special",
 		name: "Psycho Spell",
 		pp: 10,
@@ -23114,7 +23114,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	wonderwand: {
 		num: 42003,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 95,
 		category: "Special",
 		name: "Wonder Wand",
 		pp: 10,
@@ -23633,7 +23633,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	toppingtoss: {
 		accuracy: 100,
-		basePower: 50,
+		basePower: 60,
 		onHit(target, source, move) {
 			if (move.hit === 1) { move.type = 'Ground'; } else if (move.hit === 2) { move.type = 'Grass'; }
 		},
@@ -23830,7 +23830,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	feudefee: {
 		accuracy: 100,
-		basePower: 80,
+		basePower: 100,
 		category: "Special",
 		name: "Feu de Fe\u0301e",
 		pp: 10,
@@ -23988,7 +23988,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	meltdown: {
 		num: 557,
 		accuracy: 95,
-		basePower: 35,
+		basePower: 37,
 		category: "Physical",
 		name: "Meltdown",
 		pp: 5,
