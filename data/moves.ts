@@ -23589,7 +23589,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 369,
 		accuracy: 100,
 		basePower: 70,
-		category: "Physical",
+		category: "Special",
 		name: "Rock Out",
 		pp: 20,
 		priority: 0,
