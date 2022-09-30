@@ -24025,9 +24025,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 				return this.chainModify(1.5);
 			}
 		},
-		onAfterHit(target, source) {
+		onHit(target, source) {
+			const item = target.getItem();
 			if (source.hp) {
-				const item = target.takeItem();
 				const hurtItem = [
 					'stickybarb',
 				];
