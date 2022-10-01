@@ -88,7 +88,7 @@ export const commands: Chat.ChatCommands = {
 	},
 	flairhelp() {
 		this.sendReplyBox(
-			`<code>/flair set [pokemon, mod, heightOffset]</code>: sets your flair to the desired pokemon from the specified mod (pokemon or clover) with an optional height adjustment.<br />`,
+			`<code>/flair set [pokemon], [mod], [heightOffset]</code>: sets your flair to the desired pokemon from the specified mod (pokemon or clover) with an optional height adjustment.<br />`,
 		);
 	},
 };
