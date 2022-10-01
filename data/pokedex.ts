@@ -34386,7 +34386,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		},
 		abilities: {
 			0: "Shed Skin",
-			H: "Rattled",
+			1: "Rattled",
+			H: "Intimidate",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
@@ -34699,7 +34700,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	blobboskalosmega: {
 		num: 69132,
 		name: "Blobbos-Kalos-Mega",
-		baseSpecies: "Blobbos",
+		baseSpecies: "Blobbos-Kalos",
 		forme: "Mega",
 		types: ["Fire", "Fairy"],
 		baseStats: {hp: 72, atk: 99, def: 75, spa: 94, spd: 105, spe: 82},

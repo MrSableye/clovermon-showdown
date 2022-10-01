@@ -2105,4 +2105,28 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		transform: "Zen Monke triggered!",
 		transformEnd: "Zen Monke ended!",
 	},
+	peaceandtranquility : {
+		name: "Peace and Tranquility",
+		shortDesc: "Always crits at 1/3 health",
+	},
+	darkthoughts: {
+		name: "Dark Thoughts",
+		shortDesc: "May cause Taunt on contact",
+	},
+	gmaxcomatose: {
+		name: "GMax Comatose",
+		shortDesc: "Protection from status, moves that resistrict choices, and switching",
+	},
+	bloodthirsty: {
+		name: "Bloodthirsty",
+		shortDesc: "Increased power at the cost of health",
+	},
+	intangible: {
+		name: "Intangible",
+		shortDesc: "Immune to fighting and normal moves",
+	},
+	hyperboreanarctic: {
+		name: "Hyperborean Arctic",
+		shortDesc: "On switch-in, extremely harsh blizzard begins until this Ability is not active in battle.",
+	},
 };

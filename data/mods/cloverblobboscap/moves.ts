@@ -180,4 +180,29 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	skulltoss: {
+		inherit: true,
+		isNonstandard: null,
+		flags: {protect: 1, mirror: 1, bone: 1},
+	},
+	blobblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	floofandpoof: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sunburst: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	deepfry: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	flashbang: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

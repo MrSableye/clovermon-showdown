@@ -26,6 +26,7 @@ sound: Has no effect on Pokemon with the Soundproof Ability.
 
 */
 
+import { createBuilderStatusReporter } from "typescript";
 import {Pokemon} from "../sim";
 
 export const Moves: {[moveid: string]: MoveData} = {
@@ -22092,6 +22093,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			},
 		},
+		overrideOffensiveStat: 'def',
 		target: "normal",
 		type: "Fairy",
 		isNonstandard: "Future",
@@ -23088,7 +23090,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	psychospell: {
 		num: 42003,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Special",
 		name: "Psycho Spell",
 		pp: 10,
@@ -23112,7 +23114,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	wonderwand: {
 		num: 42003,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 95,
 		category: "Special",
 		name: "Wonder Wand",
 		pp: 10,
@@ -23587,7 +23589,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 369,
 		accuracy: 100,
 		basePower: 70,
-		category: "Physical",
+		category: "Special",
 		name: "Rock Out",
 		pp: 20,
 		priority: 0,
@@ -23631,9 +23633,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	toppingtoss: {
 		accuracy: 100,
-		basePower: 50,
+		basePower: 60,
 		onHit(target, source, move) {
-			if (move.hit === 1) { move.type = 'Ground'; } else if (move.hit === 2) { move.type = 'Grass'; }
+			if (move.hit === 1) { move.type = 'Grass'; } else if (move.hit === 2) { move.type = 'Ground'; }
 		},
 		category: "Special",
 		name: "Topping Toss",
@@ -23828,7 +23830,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	feudefee: {
 		accuracy: 100,
-		basePower: 80,
+		basePower: 100,
 		category: "Special",
 		name: "Feu de Fe\u0301e",
 		pp: 10,
@@ -23986,7 +23988,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	meltdown: {
 		num: 557,
 		accuracy: 95,
-		basePower: 35,
+		basePower: 37,
 		category: "Physical",
 		name: "Meltdown",
 		pp: 5,
@@ -24004,6 +24006,276 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "???",
 		zMove: {basePower: 220},
 		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	
+
+	deepfry: {
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Deep Fry",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onBasePower(basePower, source, target, move) {
+			const item = target.getItem();
+			if (!this.singleEvent('TakeItem', item, target.itemState, target, target, move, item)) return;
+			if (item.id) {
+				return this.chainModify(1.5);
+			}
+		},
+
+		
+		onHit(target, source) {
+			const item = target.takeItem();
+			if (source.hp) {
+				const hurtItem = [
+					'stickybarb',
+				];
+				const burnItem = [
+					'flameorb',
+				];
+				const poisonItem = [
+					'poisonbarb',
+				];
+				const toxicItem = [
+					'toxicorb',
+				];
+				const paralyzeItem = [
+					'lightball',
+				];
+				const choicescarfItem = [
+					'choicescarf',
+				];
+				const choicebandItem = [
+					'choiceband',
+				];
+				const choicespecsItem = [
+					'choicespecs',
+				];
+				const whiteherbItem = [
+					'whiteherb',
+				];
+				const mentalherbItem = [
+					'mentalherb',
+				];
+			
+				if (item) {
+					if (source.hp && item.isBerry && target.takeItem(source)) {
+						this.add('-enditem', target, item.name, '[from] stealeat', '[move] Deep Fry', '[of] ' + source);
+						if (this.singleEvent('Eat', item, null, source, null, null)) {
+							this.runEvent('EatItem', source, null, null, item);
+							if (item.id === 'leppaberry') target.staleness = 'external';
+						}
+						if (item.onEat) source.ateBerry = true;
+					} else if (hurtItem.includes(target.item)) {
+						this.damage(source.baseMaxhp / 8);
+						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
+					} else if (burnItem.includes(target.item)) {
+						source.trySetStatus('brn', target);
+						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
+					} else if (poisonItem.includes(target.item)) {
+						source.trySetStatus('psn', target);
+						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
+					} else if (toxicItem.includes(target.item)) {
+						source.trySetStatus('tox', target);
+						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
+					} else if (paralyzeItem.includes(target.item)) {
+						source.trySetStatus('par', target);
+						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
+					} else if (choicebandItem.includes(target.item)) {
+						this.boost({atk: 1}, source);
+						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
+					} else if (choicespecsItem.includes(target.item)) {
+						this.boost({spa: 1}, source);
+						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
+					} else if (choicescarfItem.includes(target.item)) {
+						this.boost({spe: 1}, source);
+						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
+					} else if (whiteherbItem.includes(target.item)) {
+						let activate = false;
+						const boosts: SparseBoostsTable = {};
+						let i: BoostID;
+						for (i in source.boosts) {
+							if (source.boosts[i] < 0) {
+								activate = true;
+								boosts[i] = 0;
+							}
+						}
+						if (activate) {
+							source.setBoost(boosts);
+							this.add('-clearnegativeboost', source, '[silent]');
+						}
+						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
+					} else if (mentalherbItem.includes(target.item)) {
+						const conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
+						for (const firstCondition of conditions) {
+							if (source.volatiles[firstCondition]) {
+								for (const secondCondition of conditions) {
+									source.removeVolatile(secondCondition);
+									if (firstCondition === 'attract' && secondCondition === 'attract') {
+										this.add('-end', source, 'move: Attract', '[from] item: Mental Herb');
+									}
+								}
+								return;
+							}
+						}
+						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
+					} else {
+						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
+					}
+				}
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+		isNonstandard: "Future",
+	},
+		sunburst: {
+		num: 173,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Sunburst",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		sleepUsable: true,
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
+		self: {
+			onHit(source) {
+				this.field.setWeather('sunnyday');
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Grass",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	floofandpoof: {
+		num: 69028,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Floof and Poof",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1},
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('luckychant');
+					side.addSideCondition('safeguard');
+					side.addSideCondition('mist');
+				}
+			},
+		},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
+		overrideOffensiveStat: 'def',
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+	},
+	blobblast: {
+		num: 66,
+		accuracy: 100,
+		basePower: 110,
+		category: "Special",
+		name: "Blobblast",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1},
+		recoil: [1, 4],
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	skulltoss: {
+		num: 488,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Skull Toss",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onTry(pokemon) {
+			if (pokemon.weighthg > 1) {
+				pokemon.weighthg = Math.max(1, pokemon.weighthg - 1000);
+				this.add('-start', pokemon, 'Autotomize');
+			}
+		},
+		onHit(source) {
+			if (source.volatiles['skulltoss'] && source.volatiles['skulltoss'].layers >= 1) return false;
+		},
+		volatileStatus: 'skulltoss',
+		condition: {
+			noCopy: true,
+			onStart(target) {
+				this.effectState.layers = 1;
+				this.effectState.spe = 0;
+				this.add('-start', target, 'skulltoss' + this.effectState.layers);
+				const [curSpe] = [target.boosts.spe];
+				this.boost({spe: 1}, target, target);
+				if (curSpe !== target.boosts.spe) this.effectState.spe--;
+				
+			},
+			onRestart(target) {
+				if (this.effectState.layers >= 1) return false;
+				this.effectState.layers++;
+				this.add('-start', target, 'skulltoss' + this.effectState.layers);
+				const curSpe = target.boosts.spe;
+				this.boost({spe: 1}, target);
+				if (curSpe !== target.boosts.spe) this.effectState.spe--;
+				
+			},
+			onEnd(target) {
+				if (this.effectState.def || this.effectState.spd) {
+					const boosts: SparseBoostsTable = {};
+					if (this.effectState.spe) boosts.spe = this.effectState.spe;
+					this.boost(boosts, target);
+				}
+				this.add('-end', target, 'skulltoss');
+				if (this.effectState.spe !== this.effectState.layers * -1  * -1) {
+					this.hint("In Gen 7, Stockpile keeps track of how many times it successfully altered each stat individually.");
+				}
+			},
+		},
+
+		target: "normal",
+		type: "Dark",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	flashbang: {
+		num: 366,
+		accuracy: true,
+		basePower: 70,
+		category: "Special",
+		name: "Flashbang",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			sideCondition: 'flashbang',
+		},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Steel",
 		isNonstandard: "Future",
 	},
 };

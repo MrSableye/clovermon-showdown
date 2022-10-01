@@ -5753,9 +5753,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-ability', pokemon, 'Magic Guard');
 			this.effectState.unnerved = true;
 		},
-
+		onModifyAtk(atk, attacker, defender, move) {
+			if (attacker.status === 'brn' && move.id !== 'facade') {
+				return this.chainModify(2);
+			}
+		},
+		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {
+			if (effect.id === 'brn') {
+				this.heal(target.maxhp / 8);
+				if (this.toID(target.side.name).includes('doomwillbefallall')) {
+					this.add('-message', `${target.side.name} is cringe!`);
+					this.add('-message', `${target.side.name} still wets the bed!`);
+					this.add('-message', `${target.side.name} sharted!`);
+				}
+				return false;
+			}
 			if (effect && effect.id === 'stealthrock' || effect.id === 'spikes' || effect.id === 'gmaxsteelsurge') {
+				return false;
+			}
+			if (effect.effectType !== 'Move') {
+				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
 				return false;
 			}
 		},
@@ -5842,6 +5860,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifySecondaries(secondaries) {
 			this.debug('Shield Dust prevent secondary');
 			return secondaries.filter(effect => !!(effect.self || effect.dustproof));
+		},
+		onAnyInvulnerabilityPriority: 1,
+		onAnyInvulnerability(target, source, move) {
+			if (move && (source === this.effectState.target || target === this.effectState.target)) return 0;
+		},
+		onAnyAccuracy(accuracy, target, source, move) {
+			if (move && (source === this.effectState.target || target === this.effectState.target)) {
+				return true;
+			}
+			return accuracy;
 		},
 		isBreakable: true,
 		isNonstandard: "Future",
@@ -5935,4 +5963,108 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 224,
 	},
+
+	peaceandtranquility: {
+		onModifyCritRatio(critRatio, target, source, move) {
+			if (target.hp <= target.maxhp / 3)
+			return critRatio + 3;
+		
+		},
+		name: "Peace and Tranquility",
+		isNonstandard: "Future",
+		rating: 1.5,
+		num: 105,
+	},
+	darkthoughts: {
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+				if (this.randomChance(3, 10)) {
+					source.addVolatile('taunt', this.effectState.target);
+				}
+			}
+		},
+		name: "Dark Thoughts",
+		isNonstandard: "Future",
+		rating: 0.5,
+		num: 56,
+	},
+	gmaxcomatose: {
+		onSetStatus(status, target, source, effect) {
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: GMax Comatose');
+			}
+			return false;
+		},
+		onTryAddVolatile(status, pokemon) {
+			if (status.id === 'flinch','disable','torment','encore') 
+			this.add('-immune', pokemon, '[from] ability: GMax Comatose');
+			return null;
+		},
+		onTryHit(pokemon, target, move) {
+			if (move.ohko) {
+				this.add('-immune', pokemon, '[from] ability: GMax Comatose');
+				return null;
+			}
+		},
+		onDragOutPriority: 1,
+		onDragOut(pokemon) {
+			this.add('-activate', pokemon, 'ability: GMax Comatose');
+			return null;
+		},
+		name: "GMax Comatose",
+		isNonstandard: "Future",
+		rating: 0.5,
+		num: 56,
+	},
+
+	bloodthirsty: {
+		onModifyDamage(damage, source, target, move) {
+			return this.chainModify([5324, 4096]);
+		},
+		onAfterMoveSecondarySelf(source, target, move) {
+			if (source && source !== target && move && move.category !== 'Status' && !source.forceSwitchFlag) {
+				this.damage(source.baseMaxhp / 10, source, source, this.dex.items.get('lifeorb'));
+			}
+		},
+		name: "Bloodthirsty",
+		isNonstandard: "Future",
+		rating: 5,
+		num: 37,
+	},
+	intangible: {
+		name: "Pozzed",
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Normal'|| move.type === 'Fighting') {
+				this.add('-immune', target, '[from] ability: Pozzed');
+				return null;
+			}
+		},
+		rating: 3.5,
+		isNonstandard: "Future",
+	},
+
+	hyperboreanarctic: {
+		onStart(source) {
+			this.field.setWeather('hyperboreanarctic');
+		},
+		onAnySetWeather(target, source, weather) {
+			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream', 'hyperboreanarctic'];
+			if (this.field.getWeather().id === 'hyperboreanarctic' && !strongWeathers.includes(weather.id)) return false;
+		},
+		onEnd(pokemon) {
+			if (this.field.weatherState.source !== pokemon) return;
+			for (const target of this.getAllActive()) {
+				if (target === pokemon) continue;
+				if (target.hasAbility('hyperboreanarctic')) {
+					this.field.weatherState.source = target;
+					return;
+				}
+			}
+			this.field.clearWeather();
+		},
+		name: "Hyperborean Arctic",
+		rating: 4.5,
+		num: 189,
+	},
+	
 };

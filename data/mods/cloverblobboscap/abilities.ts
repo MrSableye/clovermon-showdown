@@ -144,4 +144,28 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	peaceandtranquility : {
+		inherit: true,
+		isNonstandard: null,
+	},
+	darkthoughts: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	gmaxcomatose: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bloodthirsty: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	intangible: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hyperboreanarctic: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
