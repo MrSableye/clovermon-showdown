@@ -47,6 +47,12 @@ export const commands: Chat.ChatCommands = {
 
 			const title = formatTitle(target);
 
+			if (title.length === 0) {
+				return this.sendReply('|raw| Your title must be at least one character long.');
+			} else if (title.length > 18) {
+				return this.sendReply('|raw| Your title must be less than 18 characters long.');
+			}
+
 			customTitles[user.id] = { title };
 			saveCustomTitles();
 
