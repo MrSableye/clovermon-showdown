@@ -34,7 +34,7 @@ const getRooms = (formatId: string) => {
 	const rooms = roomBattleReporterConfig[formatId];
 
 	if (rooms) {
-		return Object.keys(rooms)
+		return Object.keys(rooms.rooms)
 			.map((roomId) => Rooms.get(roomId))
 			.filter((room) => room !== undefined) as Room[];
 	}
