@@ -9203,4 +9203,96 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbossexymega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosreversemega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbossneed: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosslepp: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosshining: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosengineer: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosdrill: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmetal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboskaiju: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboshat: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboselectric: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbossurfer: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmuhpalms: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosdalle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosorangeisles: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboschef: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosomori: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosglover: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosglovercrystalball: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosgloverballbearing: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosgloverbowlingball: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosspeen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboseggdog: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };

@@ -24331,5 +24331,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Fairy",
 		contestType: "Cute",
+		isNonstandard: "Future",
 	},
 };
