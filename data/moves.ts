@@ -23707,7 +23707,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return source.status === 'slp' || source.hasAbility('comatose');
 		},
 		self: {
-			onHit(source) {
+			onHit(target, source) {
 				this.field.setWeather('sandstorm');
 				const oldAbility = source.setAbility('sandrush');
 				if (oldAbility) {
@@ -23717,6 +23717,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 				return false;
 			},
 		},
+
+		
 		noSketch: true,
 		target: "normal",
 		type: "Rock",
@@ -24173,14 +24175,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1},
-		self: {
-			onHit(source) {
-				for (const side of source.side.foeSidesWithConditions()) {
-					side.addSideCondition('luckychant');
-					side.addSideCondition('safeguard');
-					side.addSideCondition('mist');
-				}
-			},
+		onHit(target, source, move) {	
+					source.side.addSideCondition('luckychant');
+					source.side.addSideCondition('safeguard');
+					source.side.addSideCondition('mist');
+					
 		},
 		secondary: {
 			chance: 100,
@@ -24230,31 +24229,31 @@ export const Moves: {[moveid: string]: MoveData} = {
 		volatileStatus: 'skulltoss',
 		condition: {
 			noCopy: true,
-			onStart(target) {
+			onStart(source) {
 				this.effectState.layers = 1;
 				this.effectState.spe = 0;
-				this.add('-start', target, 'skulltoss' + this.effectState.layers);
-				const [curSpe] = [target.boosts.spe];
-				this.boost({spe: 1}, target, target);
-				if (curSpe !== target.boosts.spe) this.effectState.spe--;
+				this.add('-start', source, 'skulltoss' + this.effectState.layers);
+				const [curSpe] = [source.boosts.spe];
+				this.boost({spe: 1}, source);
+				if (curSpe !== source.boosts.spe) this.effectState.spe--;
 				
 			},
-			onRestart(target) {
+			onRestart(source) {
 				if (this.effectState.layers >= 1) return false;
 				this.effectState.layers++;
-				this.add('-start', target, 'skulltoss' + this.effectState.layers);
-				const curSpe = target.boosts.spe;
-				this.boost({spe: 1}, target);
-				if (curSpe !== target.boosts.spe) this.effectState.spe--;
+				this.add('-start', source, 'skulltoss' + this.effectState.layers);
+				const curSpe = source.boosts.spe;
+				this.boost({spe: 1}, source);
+				if (curSpe !== source.boosts.spe) this.effectState.spe--;
 				
 			},
-			onEnd(target) {
+			onEnd(source) {
 				if (this.effectState.def || this.effectState.spd) {
 					const boosts: SparseBoostsTable = {};
 					if (this.effectState.spe) boosts.spe = this.effectState.spe;
-					this.boost(boosts, target);
+					this.boost(boosts, source);
 				}
-				this.add('-end', target, 'skulltoss');
+				this.add('-end', source, 'skulltoss');
 				if (this.effectState.spe !== this.effectState.layers * -1  * -1) {
 					this.hint("In Gen 7, Stockpile keeps track of how many times it successfully altered each stat individually.");
 				}
