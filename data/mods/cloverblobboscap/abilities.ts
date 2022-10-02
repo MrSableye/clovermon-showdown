@@ -180,10 +180,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dragonsmaw: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	mimicry: {
 		inherit: true,
 		isNonstandard: null,
