@@ -7850,4 +7850,32 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	reversite: {
+		name: "Reversite",
+		spritenum: 625,
+		megaStone: "Blobbos-Reverse-Mega",
+		megaEvolves: "Blobbos-Reverse",
+		itemUser: ["Blobbos-Reverse"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	sexite: {
+		name: "Sexite",
+		spritenum: 587,
+		megaStone: "Blobbos-Sexy-Mega",
+		megaEvolves: "Blobbos-Sexy",
+		itemUser: ["Blobbos-Sexy"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
 };

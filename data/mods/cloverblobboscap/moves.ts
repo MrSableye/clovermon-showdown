@@ -205,4 +205,32 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	doubleiceblob: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	extremesneed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bouncyball: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bouncybubble: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	buzzybuzz: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	windwhip: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sleepingsands: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
