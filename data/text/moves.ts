@@ -7567,7 +7567,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	firewall: {
 		name: "Firewall",
-		shortDesc: "Protect yourself from malware, also burns foes on contact.",
+		shortDesc: "Protects, burns foes on contact.",
 	},
 	maximize: {
 		name: "Maximize",
@@ -7575,11 +7575,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	seaquake: {
 		name: "Seaquake",
-		shortDesc: "The true Potarded, Venowatt and Weatherbane counter.",
+		shortDesc: "Water + Ground type move.",
 	},
 	edgequake: {
 		name: "Edgequake",
-		shortDesc: "Good old Edgequake coverage.",
+		shortDesc: "Rock + Ground together in an attack.",
 	},
 	sugarrush: {
 		name: "Sugar Rush",
@@ -7683,5 +7683,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  A dazzling display surrounds [TEAM]!",
 		end: "  [TEAM]'s the dazzling display has dissipated!",
 		switchOut: "#uturn",
+	},
+	bouncyball: {
+		name: "Bouncy Ball",
+		shortDesc: "No additional effect.",
 	},
 };

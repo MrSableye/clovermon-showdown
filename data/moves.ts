@@ -21865,6 +21865,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
 		ignoreAbility: true,
+		onTry(source) {
+			if (source.activeMoveActions > 1) {
+				this.hint("Skull Cannon only works on your first turn out.");
+				return false;
+			}
+		},
 		secondary: {
 			chance: 100,
 			self: {
@@ -24141,7 +24147,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 100,
 		category: "Special",
 		name: "Sunburst",
-		pp: 15,
+		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		sleepUsable: true,
@@ -24276,5 +24282,54 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
+	},
+	doubleiceblob: {
+		num: 742,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		name: "Double Ice Blob",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		multihit: 2,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Ice",
+		isNonstandard: "Future",
+		zMove: {basePower: 180},
+		maxMove: {basePower: 140},
+		contestType: "Clever",
+	},
+	extremesneed: {
+		num: 245,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "Extreme Sneed",
+		pp: 5,
+		priority: 2,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+		contestType: "Cool",
+	},
+	bouncyball: {
+		num: 583,
+		accuracy: 100,
+		basePower: 95,
+		category: "Physical",
+		name: "Bouncy Ball",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		target: "normal",
+		type: "Fairy",
+		contestType: "Cute",
 	},
 };

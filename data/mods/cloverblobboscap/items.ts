@@ -19,4 +19,12 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	sexite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	reversite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
