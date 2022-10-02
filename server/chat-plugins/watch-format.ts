@@ -11,7 +11,7 @@ const saveRoomBattleReporterConfig = () => {
 };
 
 const addRoom = (formatId: string, roomId: string) => {
-	const rooms = roomBattleReporterConfig[formatId] || {};
+	const rooms = roomBattleReporterConfig[formatId] || { rooms: {} };
 
 	rooms.rooms[roomId] = true;
 
@@ -21,7 +21,7 @@ const addRoom = (formatId: string, roomId: string) => {
 };
 
 const removeRoom = (formatId: string, roomId: string) => {
-	const rooms = roomBattleReporterConfig[formatId] || {};
+	const rooms = roomBattleReporterConfig[formatId] || { rooms: {} };
 
 	delete rooms.rooms[roomId];
 
