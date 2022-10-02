@@ -7251,7 +7251,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	/* Clover CAP Exclusive Items */
 	moluganion: {
 		name: "Moluganion",
-		spritenum: 748,
+		spritenum: 751,
 		fling: {
 			basePower: 20,
 		},
@@ -7280,7 +7280,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	skub: {
 		name: "Skub",
-		spritenum: 286,
+		spritenum: 752,
 		fling: {
 			basePower: 20,
 		},
@@ -7327,7 +7327,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	nullgem: {
 		name: "Null Gem",
-		spritenum: 218,
+		spritenum: 750,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
 			if (target === source || move.category === 'Status') return;
