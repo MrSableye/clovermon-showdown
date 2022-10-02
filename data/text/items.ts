@@ -2396,6 +2396,13 @@ export const ItemsText: { [k: string]: ItemText } = {
 		name: "Rusted Crown",
 		desc: "Allows Blobbos-Galar to turn into its Crowned forme.",
 	},
+	nullgem: {
+		name: "Null Gem",
+		desc: "Holder's first successful ???-type attack will have 1.5x power. Single use.",
+		gen5: {
+			desc: "Holder's first successful ???-type attack will have 1.5x power. Single use.",
+		},
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",

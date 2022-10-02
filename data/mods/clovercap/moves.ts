@@ -734,4 +734,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	blackbomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	frigidend: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

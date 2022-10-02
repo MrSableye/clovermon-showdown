@@ -7325,6 +7325,20 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	nullgem: {
+		name: "Null Gem",
+		spritenum: 218,
+		isGem: true,
+		onSourceTryPrimaryHit(target, source, move) {
+			if (target === source || move.category === 'Status') return;
+			if (move.type === '???' && source.useItem()) {
+				source.addVolatile('gem');
+			}
+		},
+		num: 562,
+		gen: 5,
+		isNonstandard: "Past",
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",
