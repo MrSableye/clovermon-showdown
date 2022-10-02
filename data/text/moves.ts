@@ -7688,4 +7688,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Bouncy Ball",
 		shortDesc: "No additional effect.",
 	},
+	extremesneed: {
+		name: "Extreme Sneed",
+		shortDesc: "Usually goes first.",
+	},
 };
