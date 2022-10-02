@@ -144,6 +144,7 @@ export const Formats: FormatList = [
 			'Cancel Mod',
 			'Dynamax Clause',
 			'Sketch Gen 8 Moves',
+			'OHKO Clause',
 		],
 		banlist: ['Blobbos-Alola'],
 	},

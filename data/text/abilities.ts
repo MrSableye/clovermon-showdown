@@ -2129,4 +2129,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Hyperborean Arctic",
 		shortDesc: "On switch-in, extremely harsh blizzard begins until this Ability is not active in battle.",
 	},
+	sneedboost: {
+		name: "Sneed Boost",
+		shortDesc: "Speed and Acc raised each turn",
+	},
 };
