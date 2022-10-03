@@ -7621,6 +7621,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Heaven's Blessing",
 		shortDesc: "Heals self and activates Wish effect.",
 	},
+	heavenpierce: {
+		name: "Heaven Pierce",
+		shortDesc: "Always crits, breaks screens, ignores abilities, ignores everything.",
+	},
 	sandysnore: {
 		name: "Sandy Snore",
 		shortDesc: "Only works if user is asleep, has a myriad of effects.",
@@ -7691,5 +7695,9 @@ export const MovesText: {[k: string]: MoveText} = {
 	extremesneed: {
 		name: "Extreme Sneed",
 		shortDesc: "Usually goes first.",
+	},
+	feedandseed: {
+		name: "Feed and Seed",
+		shortDesc: "Leech Seed, Worry Seed, and Grassy Terrain",
 	},
 };

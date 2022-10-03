@@ -23915,9 +23915,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	feedandseed: {
 		num: 738,
-		accuracy: 90,
-		basePower: 100,
-		category: "Physical",
+		accuracy: 80,
+		basePower: 85,
+		category: "Special",
 		isNonstandard: "Future",
 		name: "Feed and Seed",
 		pp: 10,
@@ -24223,7 +24223,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-start', pokemon, 'Autotomize');
 			}
 		},
-		onHit(source) {
+		onHit(source,target) {
 			if (source.volatiles['skulltoss'] && source.volatiles['skulltoss'].layers >= 1) return false;
 		},
 		volatileStatus: 'skulltoss',
@@ -24238,7 +24238,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (curSpe !== source.boosts.spe) this.effectState.spe--;
 				
 			},
-			onRestart(source) {
+			onRestart(source,target) {
 				if (this.effectState.layers >= 1) return false;
 				this.effectState.layers++;
 				this.add('-start', source, 'skulltoss' + this.effectState.layers);
