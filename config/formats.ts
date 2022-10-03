@@ -146,7 +146,7 @@ export const Formats: FormatList = [
 			'Sketch Gen 8 Moves',
 			'OHKO Clause',
 		],
-		banlist: ['Blobbos-Alola'],
+		banlist: ['Blobbos-Alola', 'Baton Pass'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Clover Doubles & Triples
