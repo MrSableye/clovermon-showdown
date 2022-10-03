@@ -42,13 +42,6 @@ const getRooms = (formatId: string) => {
 	return [];
 };
 
-if (Config.reportbattles) {
-	const reportRoom = Rooms.get(Config.reportbattles === true ? 'lobby' : Config.reportbattles);
-	if (reportRoom) {
-		
-	}
-}
-
 export const commands: Chat.ChatCommands = {
 	watchformat(target, room) {
 		if (!room) {
@@ -100,9 +93,9 @@ export const handlers: Chat.Handlers = {
 			.filter((player) => player !== null) as User[];
 		const reportPlayers = players.map(p => p.getIdentity()).join('|');
 
-		const rooms = getRooms(toID(room.format));
-		rooms.forEach((room) => {
-			room
+		const formatRooms = getRooms(toID(room.format));
+		formatRooms.forEach((formatRoom) => {
+			formatRoom
 				.add(`|b|${room.roomid}|${reportPlayers}`)
 				.update();
 		});
