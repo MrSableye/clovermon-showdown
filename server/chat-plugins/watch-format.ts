@@ -86,6 +86,7 @@ export const commands: Chat.ChatCommands = {
 	},
 };
 
+const handledBattles: Record<string, boolean> = {};
 
 export const handlers: Chat.Handlers = {
 	onBattleStart(user, room) {
@@ -93,11 +94,22 @@ export const handlers: Chat.Handlers = {
 			.filter((player) => player !== null) as User[];
 		const reportPlayers = players.map(p => p.getIdentity()).join('|');
 
-		const formatRooms = getRooms(toID(room.format));
+		const battleRoomId = toID(room.format);
+
+		if (handledBattles[battleRoomId]) {
+			return;
+		}
+
+		const formatRooms = getRooms(battleRoomId);
 		formatRooms.forEach((formatRoom) => {
 			formatRoom
 				.add(`|b|${room.roomid}|${reportPlayers}`)
 				.update();
 		});
+
+		handledBattles[battleRoomId] = true;
+	},
+	onBattleEnd(battle) {
+		delete handledBattles[battle.roomid];
 	},
 };
