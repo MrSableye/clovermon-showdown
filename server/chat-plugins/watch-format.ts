@@ -59,7 +59,7 @@ export const commands: Chat.ChatCommands = {
 
 		const format = Dex.formats.get(target);
 
-		if (!format) {
+		if (!format.exists) {
 			throw new Chat.ErrorMessage(`Format ${format} doesn't exist.`);
 		}
 
