@@ -21068,10 +21068,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1, nonsky: 1},
-		volatileStatus: 'ingrain',
+		volatileStatus: 'faradaycage',
 		condition: {
 			onStart(pokemon) {
-				this.add('-start', pokemon, 'move: Ingrain');
+				this.add('-start', pokemon, 'move: Faraday Cage');
 			},
 			onResidualOrder: 7,
 			onResidual(pokemon) {
@@ -21082,7 +21082,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
 			onDragOut(pokemon) {
-				this.add('-activate', pokemon, 'move: Ingrain');
+				this.add('-activate', pokemon, 'move: Faraday Cage');
 				return null;
 			},
 		},
