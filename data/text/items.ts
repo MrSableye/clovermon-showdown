@@ -2373,7 +2373,7 @@ export const ItemsText: { [k: string]: ItemText } = {
 	},
 	thiccbone: {
 		name: "Thicc Bone",
-		desc: "If held by a Masdawg or a Pasdawg, its Attack is doubled.",
+		desc: "If held by a Masdawg, Pasdawg or Naughtycoot, its Attack is doubled.",
 	},
 	manifesto: {
 		name: "Manifesto",
