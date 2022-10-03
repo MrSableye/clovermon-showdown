@@ -1055,6 +1055,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1},
 	},
+	hurricane: {
+		inherit: true,
+		accuracy: 75,
+	},
 	hyperspacefury: {
 		inherit: true,
 		desc: "Lowers the user's Defense by 1 stage. This move cannot be used by a Hoopa unless its current form, while considering Transform, is Hoopa Unbound. If this move is successful, it breaks through the target's Baneful Bunker, Detect, King's Shield, Protect, or Spiky Shield for this turn, allowing other Pokemon to attack the target normally. If the target's side is protected by Crafty Shield, Mat Block, Quick Guard, or Wide Guard, that protection is also broken for this turn and other Pokemon may attack the target's side normally.",
