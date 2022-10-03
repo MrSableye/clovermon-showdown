@@ -26,11 +26,9 @@ const canUserHaveCustomTitle = async (user: User): Promise<boolean> => {
 	return isTournamentWinner || isWhitelisted;
 };
 
-const formatTitle = (string: string) => {
-	return string
-		.replace(/[^A-Za-z0-9 ]*/, '')
-		.replace(/( )+/, ' ');
-};
+const formatTitle = (string: string) => string
+	.replace(/[^A-Za-z0-9 ]*/, '')
+	.replace(/( )+/, ' ');
 
 export const commands: Chat.ChatCommands = {
 	title: {
@@ -53,7 +51,7 @@ export const commands: Chat.ChatCommands = {
 				return this.sendReply('|raw| Your title must be less than 18 characters long.');
 			}
 
-			customTitles[user.id] = { title };
+			customTitles[user.id] = {title};
 			saveCustomTitles();
 
 			this.sendReply(`|raw| Your title was successfully set. Relog in for it to appear. Title: ${title}`);

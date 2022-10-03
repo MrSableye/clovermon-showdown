@@ -26,7 +26,7 @@ sound: Has no effect on Pokemon with the Soundproof Ability.
 
 */
 
-import { createBuilderStatusReporter } from "typescript";
+import {createBuilderStatusReporter} from "typescript";
 import {Pokemon} from "../sim";
 
 export const Moves: {[moveid: string]: MoveData} = {
@@ -23718,7 +23718,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 
-		
+
 		noSketch: true,
 		target: "normal",
 		type: "Rock",
@@ -24016,7 +24016,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
-	
+
 
 	deepfry: {
 		accuracy: 100,
@@ -24034,7 +24034,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 
-		
+
 		onHit(target, source) {
 			const item = target.takeItem();
 			if (source.hp) {
@@ -24068,7 +24068,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				const mentalherbItem = [
 					'mentalherb',
 				];
-			
+
 				if (item) {
 					if (source.hp && item.isBerry && target.takeItem(source)) {
 						this.add('-enditem', target, item.name, '[from] stealeat', '[move] Deep Fry', '[of] ' + source);
@@ -24141,7 +24141,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		isNonstandard: "Future",
 	},
-		sunburst: {
+	sunburst: {
 		num: 173,
 		accuracy: 100,
 		basePower: 100,
@@ -24175,11 +24175,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1},
-		onHit(target, source, move) {	
-					source.side.addSideCondition('luckychant');
-					source.side.addSideCondition('safeguard');
-					source.side.addSideCondition('mist');
-					
+		onHit(target, source, move) {
+			source.side.addSideCondition('luckychant');
+			source.side.addSideCondition('safeguard');
+			source.side.addSideCondition('mist');
 		},
 		secondary: {
 			chance: 100,
@@ -24200,7 +24199,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Blobblast",
 		pp: 10,
 		priority: 0,
-		flags: { protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1},
 		recoil: [1, 4],
 		secondary: null,
 		target: "normal",
@@ -24236,7 +24235,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				const [curSpe] = [source.boosts.spe];
 				this.boost({spe: 1}, source);
 				if (curSpe !== source.boosts.spe) this.effectState.spe--;
-				
 			},
 			onRestart(source) {
 				if (this.effectState.layers >= 1) return false;
@@ -24245,7 +24243,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				const curSpe = source.boosts.spe;
 				this.boost({spe: 1}, source);
 				if (curSpe !== source.boosts.spe) this.effectState.spe--;
-				
 			},
 			onEnd(source) {
 				if (this.effectState.def || this.effectState.spd) {
@@ -24254,7 +24251,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					this.boost(boosts, source);
 				}
 				this.add('-end', source, 'skulltoss');
-				if (this.effectState.spe !== this.effectState.layers * -1  * -1) {
+				if (this.effectState.spe !== this.effectState.layers * -1 * -1) {
 					this.hint("In Gen 7, Stockpile keeps track of how many times it successfully altered each stat individually.");
 				}
 			},

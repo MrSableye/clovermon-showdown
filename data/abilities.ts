@@ -5966,9 +5966,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
 	peaceandtranquility: {
 		onModifyCritRatio(critRatio, target, source, move) {
-			if (target.hp <= target.maxhp / 3)
-			return critRatio + 3;
-		
+			if (target.hp <= target.maxhp / 3) { return critRatio + 3; }
 		},
 		name: "Peace and Tranquility",
 		isNonstandard: "Future",
@@ -5996,8 +5994,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			return false;
 		},
 		onTryAddVolatile(status, pokemon) {
-			if (status.id === 'flinch','disable','torment','encore') 
-			this.add('-immune', pokemon, '[from] ability: GMax Comatose');
+			if (['flinch', 'disable', 'torment', 'encore'].includes(status.id)) { this.add('-immune', pokemon, '[from] ability: GMax Comatose'); }
 			return null;
 		},
 		onTryHit(pokemon, target, move) {
@@ -6034,7 +6031,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	intangible: {
 		name: "Pozzed",
 		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Normal'|| move.type === 'Fighting') {
+			if (target !== source && move.type === 'Normal' || move.type === 'Fighting') {
 				this.add('-immune', target, '[from] ability: Pozzed');
 				return null;
 			}
@@ -6066,5 +6063,5 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4.5,
 		num: 189,
 	},
-	
+
 };
