@@ -7286,25 +7286,25 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		onModifyDefPriority: 1,
 		onModifyDef(def, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Skuba') {
+			if (pokemon.species.name === 'Skuba') {
 				return this.chainModify(1.5);
 			}
 		},
 		onModifySpDPriority: 1,
 		onModifySpD(spd, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Skuba') {
+			if (pokemon.species.name === 'Skuba') {
 				return this.chainModify(1.5);
 			}
 		},
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Skuba-Anti') {
+			if (pokemon.species.name === 'Skuba-Anti') {
 				return this.chainModify(1.5);
 			}
 		},
 		onModifySpAPriority: 1,
 		onModifySpA(spa, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Skuba-Anti') {
+			if (pokemon.species.name === 'Skuba-Anti') {
 				return this.chainModify(1.5);
 			}
 		},
