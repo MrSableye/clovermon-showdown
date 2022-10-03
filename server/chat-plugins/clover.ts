@@ -1,9 +1,11 @@
 import {OFFICIAL_CLODOWN_AVATARS} from '../chat-commands/avatars';
 
+/* eslint-disable max-len */
 const createAvatarHtml = (
 	avatarName: string,
 	isCustom = false,
 ) => `<img src="//${Config.routes.client}/sprites/trainers${isCustom ? '-custom' : ''}/${avatarName}.png" title="${avatarName}" alt="${avatarName}" width="80" height="80" class="pixelated" />`;
+/* eslint-enable max-len */
 
 export const commands: Chat.ChatCommands = {
 	clover: {

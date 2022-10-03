@@ -26,7 +26,6 @@ sound: Has no effect on Pokemon with the Soundproof Ability.
 
 */
 
-import {createBuilderStatusReporter} from "typescript";
 import {Pokemon} from "../sim";
 
 export const Moves: {[moveid: string]: MoveData} = {
@@ -20132,7 +20131,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 		flags: {},
 		onHit(pokemon) {
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'sleazyspores', 'gmaxsteelsurge', 'shattershard'];
+			const sideConditions = [
+				'spikes',
+				'toxicspikes',
+				'stealthrock',
+				'stickyweb',
+				'sleazyspores',
+				'gmaxsteelsurge',
+				'shattershard',
+			];
 			const removedConditions = [];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
@@ -20905,7 +20912,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (!yourItem) {
 				return;
 			}
-			if (!this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem) || !source.setItem(yourItem)) {
+			if (!this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem) ||
+			!source.setItem(yourItem)) {
 				target.item = yourItem.id; // bypass setItem so we don't break choicelock or anything
 				return;
 			}
@@ -23206,7 +23214,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 		isNonstandard: "Future",
 	},
-
 	rainbowbeam: {
 		num: 69048,
 		accuracy: 100,
@@ -23220,15 +23227,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "???",
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Ice', type) + this.dex.getEffectiveness('Normal', type) + this.dex.getEffectiveness('Fighting', type) +
-			this.dex.getEffectiveness('Flying', type) + this.dex.getEffectiveness('Poison', type) + this.dex.getEffectiveness('Ground', type) + this.dex.getEffectiveness('Rock', type) +
-			this.dex.getEffectiveness('Bug', type) + this.dex.getEffectiveness('Ghost', type) + this.dex.getEffectiveness('Steel', type) + this.dex.getEffectiveness('Fire', type) +
-			this.dex.getEffectiveness('Water', type) + this.dex.getEffectiveness('Grass', type) + this.dex.getEffectiveness('Electric', type) + this.dex.getEffectiveness('Psychic', type) +
-			this.dex.getEffectiveness('Dragon', type) + this.dex.getEffectiveness('Dark', type) + this.dex.getEffectiveness('Fairy', type);
+			return this.dex.types.all().reduce(
+				(currentTypeMod, dexType) => currentTypeMod + this.dex.getEffectiveness(dexType.name, type),
+				typeMod,
+			);
 		},
 		isNonstandard: "Future",
 	},
-
 	freikugel: {
 		accuracy: 80,
 		basePower: 150,
@@ -23252,8 +23257,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			}
 		},
-
-
 		secondary: null,
 		noSketch: true,
 		target: "normal",

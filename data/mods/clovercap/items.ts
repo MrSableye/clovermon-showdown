@@ -86,7 +86,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	thiccbone: {
 		inherit: true,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Masdawg' || pokemon.baseSpecies.baseSpecies === 'Pasdawg' || pokemon.baseSpecies.baseSpecies === 'Naughtycoot') {
+			if (['Masdawg', 'Pasdawg', 'NaughtyCoot'].includes(pokemon.baseSpecies.baseSpecies)) {
 				return this.chainModify(2);
 			}
 		},

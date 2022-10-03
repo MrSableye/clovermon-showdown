@@ -19,9 +19,18 @@ const getBaseUrl = (pokemonMod: string) => baseUrls[pokemonMod] || baseUrls.clov
 
 const getFlairUrl = (pokemonId: string, pokemonMod: string) => `${getBaseUrl(pokemonMod)}/${pokemonId}.png`;
 
-const createUserCss = (userId: string, pokemonId: string, pokemonMod: string, heightOffset: number) => `[id$="-userlist-user-${userId}"]{background: url("${getFlairUrl(pokemonId, pokemonMod)}") no-repeat right -7px top ${heightOffset}px;}`;
+const createUserCss = (
+	userId: string,
+	pokemonId: string,
+	pokemonMod: string,
+	heightOffset: number,
+) => `[id$="-userlist-user-${userId}"]{background: url("${getFlairUrl(pokemonId, pokemonMod)}") no-repeat right -7px top ${heightOffset}px;}`; // eslint-disable-line max-len
 
-const createCss = (cssConfig: CssConfig): string => [CSS_HEADER, ...Object.entries(cssConfig).map(([userId, {pokemonId, pokemonMod, heightOffset}]) => createUserCss(userId, pokemonId, pokemonMod, heightOffset))].join('\n');
+const createCss = (cssConfig: CssConfig): string => [
+	CSS_HEADER,
+	...Object.entries(cssConfig)
+		.map(([userId, {pokemonId, pokemonMod, heightOffset}]) => createUserCss(userId, pokemonId, pokemonMod, heightOffset)),
+].join('\n');
 
 const writeCss = (content: string) => FS('config/custom.css').writeSync(content);
 

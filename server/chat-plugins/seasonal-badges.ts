@@ -70,20 +70,21 @@ const isInSeason = (date: Date, seasonalBadge: SeasonalBadge): boolean => {
 	}
 };
 
-export const loginfilter: Chat.LoginFilter = async (user) => {
-	await initializeSeasonalBadges();
-	seasonalBadges.forEach((seasonalBadge) => {
-		if (isInSeason(new Date(), seasonalBadge)) {
-			void Badges.getUserBadges(user.id)
-				.then((userBadges) => {
-					const hasBadge = userBadges.some((userBadge) => userBadge.badge_id === seasonalBadge.badgeId);
-					if (!hasBadge) {
-						void Badges.addBadgeToUser(user.id, seasonalBadge.badgeId, user, true)
-							.then(() => {
-								user.send(`|pm|&|${user.tempGroup}${user.name}|/raw <div class="broadcast-blue"><b>${seasonalBadge.message}</b></div>`);
-							});
-					}
-				});
-		}
+export const loginfilter: Chat.LoginFilter = user => {
+	void initializeSeasonalBadges().then(() => {
+		seasonalBadges.forEach((seasonalBadge) => {
+			if (isInSeason(new Date(), seasonalBadge)) {
+				void Badges.getUserBadges(user.id)
+					.then((userBadges) => {
+						const hasBadge = userBadges.some((userBadge) => userBadge.badge_id === seasonalBadge.badgeId);
+						if (!hasBadge) {
+							void Badges.addBadgeToUser(user.id, seasonalBadge.badgeId, user, true)
+								.then(() => {
+									user.send(`|pm|&|${user.tempGroup}${user.name}|/raw <div class="broadcast-blue"><b>${seasonalBadge.message}</b></div>`);
+								});
+						}
+					});
+			}
+		});
 	});
 };

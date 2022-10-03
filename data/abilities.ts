@@ -4625,13 +4625,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Degenerate",
 		onModifyMovePriority: -1,
 		onModifyMove(move) {
-			if (move.type === 'Normal' && !['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'weatherball'].includes(move.id) && !(move.isZ && move.category !== 'Status')) {
+			const ignoredMoves = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'weatherball'];
+			if (move.type === 'Normal' && !ignoredMoves.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
 				move.type = 'Dark';
 			}
 		},
 		onBasePowerPriority: 8,
 		onBasePower(basePower, pokemon, target, move) {
-			if (move.type === 'Dark' || move.type === 'Normal' && !['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'weatherball'].includes(move.id) && !(move.isZ && move.category !== 'Status')) {
+			const validTypes = ['Dark', 'Normal'];
+			const ignoredMoves = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'weatherball'];
+			if (validTypes.includes(move.type) && !ignoredMoves.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
 				return this.chainModify([0x1333, 0x1000]);
 			}
 		},
@@ -5093,7 +5096,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	beamboost: {
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
-			if (['aurorabeam', 'boltbeam', 'bubblebeam', 'chargebeam', 'eternabeam', 'gazerbeam', 'hyperbeam', 'icebeam', 'meteorbeam', 'moongeistbeam', 'powergem', 'psybeam', 'signalbeam', 'solarbeam', 'solarblade', 'solarblade', 'steelbeam', 'prismaticlaser'].includes(move.id)) {
+			const beamMoves = [
+				'aurorabeam',
+				'boltbeam',
+				'bubblebeam',
+				'chargebeam',
+				'eternabeam',
+				'gazerbeam',
+				'hyperbeam',
+				'icebeam',
+				'meteorbeam',
+				'moongeistbeam',
+				'powergem',
+				'psybeam',
+				'signalbeam',
+				'solarbeam',
+				'solarblade',
+				'steelbeam',
+				'prismaticlaser',
+			];
+			if (beamMoves.includes(move.id)) {
 				this.debug('Beam Boost boost');
 				return this.chainModify(1.5);
 			}
@@ -5207,7 +5229,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	spincleaner: {
 		name: "Spin Cleaner",
 		onStart(pokemon) {
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
+			const sideConditions = [
+				'spikes',
+				'toxicspikes',
+				'stealthrock',
+				'stickyweb',
+				'gmaxsteelsurge',
+				'sleazyspores',
+				'shattershard',
+			];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -5666,7 +5696,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (['raindance', 'primordialsea'].includes(target.effectiveWeather()) && target !== source && move.type === 'Water') {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 				return null;
-			} else if (['sunnyday', 'desolateland'].includes(target.effectiveWeather()) && target !== source && move.type === 'Fire') {
+			} else if (['sunnyday', 'desolateland'].includes(target.effectiveWeather()) &&
+				target !== source && move.type === 'Fire') {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 				return null;
 			} else if (['hail'].includes(target.effectiveWeather()) && target !== source && move.type === 'Ice') {
@@ -5994,7 +6025,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			return false;
 		},
 		onTryAddVolatile(status, pokemon) {
-			if (['flinch', 'disable', 'torment', 'encore'].includes(status.id)) { this.add('-immune', pokemon, '[from] ability: GMax Comatose'); }
+			const immuneStatuses = ['flinch', 'disable', 'torment', 'encore'];
+			if (immuneStatuses.includes(status.id)) { this.add('-immune', pokemon, '[from] ability: GMax Comatose'); }
 			return null;
 		},
 		onTryHit(pokemon, target, move) {

@@ -1,4 +1,4 @@
-import {FS, Net} from '../../lib';
+import {FS} from '../../lib';
 import {Badges} from './badges';
 
 const ERROR_USER_INELIGIBLE = 'You are not eligble for a custom title.';
