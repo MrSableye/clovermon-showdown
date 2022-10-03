@@ -23918,9 +23918,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	feedandseed: {
 		num: 738,
-		accuracy: 90,
-		basePower: 100,
-		category: "Physical",
+		accuracy: 80,
+		basePower: 85,
+		category: "Special",
 		isNonstandard: "Future",
 		name: "Feed and Seed",
 		pp: 10,
@@ -24259,7 +24259,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			},
 		},
-
 		target: "normal",
 		type: "Dark",
 		contestType: "Tough",

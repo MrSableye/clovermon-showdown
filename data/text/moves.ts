@@ -7692,4 +7692,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Extreme Sneed",
 		shortDesc: "Usually goes first.",
 	},
+	heavenpierce: {
+		name: "Heaven Pierce",
+		shortDesc: "Always crits, breaks screens, ignores abilities, ignores everything.",
+	},
+	feedandseed: {
+		name: "Feed and Seed",
+		shortDesc: "Leech Seed, Worry Seed, and Grassy Terrain",
+	},
 };
