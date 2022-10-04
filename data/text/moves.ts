@@ -7362,7 +7362,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	twintowertumblingterror: {
 		name: "Twin Tower Tumbling Terror",
-		desc: "100% chance to burn the user and the opponent.",
+		desc: "Same type as user primary type. 100% chance to burn the user and the opponent.",
 	},
 	frigidend: {
 		name: "Frigid End",
