@@ -74,7 +74,7 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 					errors.push(`${set.name || set.species} is not a forme of Blobbos.`);
 				}
 
-				if (blobbosFormeCount[baseForme.id]) blobbosFormeCount[baseForme.id] = 0;
+				if (!blobbosFormeCount[baseForme.id]) blobbosFormeCount[baseForme.id] = 0;
 				blobbosFormeCount[baseForme.id] = blobbosFormeCount[baseForme.id] + 1;
 			});
 
