@@ -2133,4 +2133,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Sneed Boost",
 		shortDesc: "Speed and Acc raised each turn",
 	},
+	armorplate: {
+		name: "Armor Plate",
+		shortDesc: "This Pokemon's Normal-type moves become Steel type and have 1.3x power.",
+	},
+	kinglymajesty: {
+		name: "Queenly Majesty",
+		desc: "Priority moves used by opposing Pokemon targeting this Pokemon or its allies are prevented from having an effect.",
+		shortDesc: "This Pokemon and its allies are protected from opposing priority moves.",
+
+		block: "#damp",
+	},
 };

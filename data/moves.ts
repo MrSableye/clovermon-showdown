@@ -23993,12 +23993,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 		isNonstandard: "Future",
 	},
-	meltdown: {
+	nuclearmeltdown: {
 		num: 557,
 		accuracy: 95,
 		basePower: 37,
 		category: "Physical",
-		name: "Meltdown",
+		name: "Nuclear Meltdown",
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
@@ -24229,7 +24229,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		volatileStatus: 'skulltoss',
 		condition: {
 			noCopy: true,
-			onStart(source) {
+			onStart(source,target) {
 				this.effectState.layers = 1;
 				this.effectState.spe = 0;
 				this.add('-start', source, 'skulltoss' + this.effectState.layers);

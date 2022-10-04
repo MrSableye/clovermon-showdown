@@ -143,6 +143,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	
 	chernoboil: {
 		inherit: true,
 		type: "Nuclear",
@@ -163,7 +164,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Nuclear",
 		isNonstandard: null,
 	},
-	meltdown: {
+	nuclearmeltdown: {
 		inherit: true,
 		type: "Nuclear",
 		isNonstandard: null,
@@ -233,4 +234,9 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	feedandseed: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
+
