@@ -2017,7 +2017,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	asoneblobbosremembered: {
 		name: "As One (Remembered)",
-		shortDesc: "The combination of Intimidate and Levitate.",
+		shortDesc: "The combination of Flare Heal and Magic Guard.",
 
 		start: "  [POKEMON] is ready to rember ;_;7",
 	},
