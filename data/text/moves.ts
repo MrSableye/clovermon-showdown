@@ -6912,7 +6912,6 @@ export const MovesText: {[k: string]: MoveText} = {
 	scorchedearth: {
 		name: "Scorched Earth",
 		shortDesc: "Has a 100% to burn grounded adjacent Pokemon and itself if grounded.",
-		desc: "Has a 100% to burn grounded adjacent Pokemon and itself if grounded.",
 	},
 	hulkup: {
 		name: "Hulk Up",

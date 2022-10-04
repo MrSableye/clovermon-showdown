@@ -905,7 +905,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'none');
 		},
 	},
-	
+
 	flashbang: {
 		duration: 2,
 		onSideStart(side) {

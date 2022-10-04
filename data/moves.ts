@@ -26,7 +26,6 @@ sound: Has no effect on Pokemon with the Soundproof Ability.
 
 */
 
-import { createBuilderStatusReporter } from "typescript";
 import {Pokemon} from "../sim";
 
 export const Moves: {[moveid: string]: MoveData} = {
@@ -20132,7 +20131,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 		flags: {},
 		onHit(pokemon) {
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'sleazyspores', 'gmaxsteelsurge', 'shattershard'];
+			const sideConditions = [
+				'spikes',
+				'toxicspikes',
+				'stealthrock',
+				'stickyweb',
+				'sleazyspores',
+				'gmaxsteelsurge',
+				'shattershard',
+			];
 			const removedConditions = [];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
@@ -20905,7 +20912,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (!yourItem) {
 				return;
 			}
-			if (!this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem) || !source.setItem(yourItem)) {
+			if (!this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem) ||
+			!source.setItem(yourItem)) {
 				target.item = yourItem.id; // bypass setItem so we don't break choicelock or anything
 				return;
 			}
@@ -21068,10 +21076,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1, nonsky: 1},
-		volatileStatus: 'ingrain',
+		volatileStatus: 'faradaycage',
 		condition: {
 			onStart(pokemon) {
-				this.add('-start', pokemon, 'move: Ingrain');
+				this.add('-start', pokemon, 'move: Faraday Cage');
 			},
 			onResidualOrder: 7,
 			onResidual(pokemon) {
@@ -21082,7 +21090,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
 			onDragOut(pokemon) {
-				this.add('-activate', pokemon, 'move: Ingrain');
+				this.add('-activate', pokemon, 'move: Faraday Cage');
 				return null;
 			},
 		},
@@ -23206,7 +23214,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 		isNonstandard: "Future",
 	},
-
 	rainbowbeam: {
 		num: 69048,
 		accuracy: 100,
@@ -23220,15 +23227,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "???",
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Ice', type) + this.dex.getEffectiveness('Normal', type) + this.dex.getEffectiveness('Fighting', type) +
-			this.dex.getEffectiveness('Flying', type) + this.dex.getEffectiveness('Poison', type) + this.dex.getEffectiveness('Ground', type) + this.dex.getEffectiveness('Rock', type) +
-			this.dex.getEffectiveness('Bug', type) + this.dex.getEffectiveness('Ghost', type) + this.dex.getEffectiveness('Steel', type) + this.dex.getEffectiveness('Fire', type) +
-			this.dex.getEffectiveness('Water', type) + this.dex.getEffectiveness('Grass', type) + this.dex.getEffectiveness('Electric', type) + this.dex.getEffectiveness('Psychic', type) +
-			this.dex.getEffectiveness('Dragon', type) + this.dex.getEffectiveness('Dark', type) + this.dex.getEffectiveness('Fairy', type);
+			return this.dex.types.all().reduce(
+				(currentTypeMod, dexType) => currentTypeMod + this.dex.getEffectiveness(dexType.name, type),
+				typeMod,
+			);
 		},
 		isNonstandard: "Future",
 	},
-
 	freikugel: {
 		accuracy: 80,
 		basePower: 150,
@@ -23252,8 +23257,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			}
 		},
-
-
 		secondary: null,
 		noSketch: true,
 		target: "normal",
@@ -23718,7 +23721,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 
-		
+
 		noSketch: true,
 		target: "normal",
 		type: "Rock",
@@ -24016,7 +24019,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
-	
+
 
 	deepfry: {
 		accuracy: 100,
@@ -24034,7 +24037,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 
-		
+
 		onHit(target, source) {
 			const item = target.takeItem();
 			if (source.hp) {
@@ -24068,7 +24071,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				const mentalherbItem = [
 					'mentalherb',
 				];
-			
+
 				if (item) {
 					if (source.hp && item.isBerry && target.takeItem(source)) {
 						this.add('-enditem', target, item.name, '[from] stealeat', '[move] Deep Fry', '[of] ' + source);
@@ -24141,7 +24144,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		isNonstandard: "Future",
 	},
-		sunburst: {
+	sunburst: {
 		num: 173,
 		accuracy: 100,
 		basePower: 100,
@@ -24175,11 +24178,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1},
-		onHit(target, source, move) {	
-					source.side.addSideCondition('luckychant');
-					source.side.addSideCondition('safeguard');
-					source.side.addSideCondition('mist');
-					
+		onHit(target, source, move) {
+			source.side.addSideCondition('luckychant');
+			source.side.addSideCondition('safeguard');
+			source.side.addSideCondition('mist');
 		},
 		secondary: {
 			chance: 100,
@@ -24200,7 +24202,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Blobblast",
 		pp: 10,
 		priority: 0,
-		flags: { protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1},
 		recoil: [1, 4],
 		secondary: null,
 		target: "normal",
@@ -24236,7 +24238,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				const [curSpe] = [source.boosts.spe];
 				this.boost({spe: 1}, source);
 				if (curSpe !== source.boosts.spe) this.effectState.spe--;
-				
 			},
 			onRestart(source,target) {
 				if (this.effectState.layers >= 1) return false;
@@ -24245,7 +24246,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				const curSpe = source.boosts.spe;
 				this.boost({spe: 1}, source);
 				if (curSpe !== source.boosts.spe) this.effectState.spe--;
-				
 			},
 			onEnd(source) {
 				if (this.effectState.def || this.effectState.spd) {
@@ -24254,12 +24254,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 					this.boost(boosts, source);
 				}
 				this.add('-end', source, 'skulltoss');
-				if (this.effectState.spe !== this.effectState.layers * -1  * -1) {
+				if (this.effectState.spe !== this.effectState.layers * -1 * -1) {
 					this.hint("In Gen 7, Stockpile keeps track of how many times it successfully altered each stat individually.");
 				}
 			},
 		},
-
 		target: "normal",
 		type: "Dark",
 		contestType: "Tough",

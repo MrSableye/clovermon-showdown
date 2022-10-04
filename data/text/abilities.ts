@@ -2111,7 +2111,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		transform: "Zen Monke triggered!",
 		transformEnd: "Zen Monke ended!",
 	},
-	peaceandtranquility : {
+	peaceandtranquility: {
 		name: "Peace and Tranquility",
 		shortDesc: "Always crits at 1/3 health",
 	},

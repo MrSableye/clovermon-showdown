@@ -889,13 +889,14 @@ export const Items: {[k: string]: ModdedItemData} = {
 	lightball: {
 		inherit: true,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.species.name === 'Blobbos-Pika' || pokemon.baseSpecies.baseSpecies === 'Ampstar') {
+			if (['Pikachu', 'Ampstar'].includes(pokemon.baseSpecies.baseSpecies) || pokemon.species.name === 'Blobbos-Pika') {
 				return this.chainModify(2);
 			}
 		},
 		onModifySpAPriority: 1,
 		onModifySpA(spa, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Pikachu' || pokemon.species.name === 'Blobbos-Pika' || pokemon.baseSpecies.baseSpecies === 'Pikotton' || pokemon.baseSpecies.baseSpecies === 'Ampstar') {
+			if (['Pikachu', 'Ampstar', 'Pikotton'].includes(pokemon.baseSpecies.baseSpecies) ||
+			pokemon.species.name === 'Blobbos-Pika') {
 				return this.chainModify(2);
 			}
 		},

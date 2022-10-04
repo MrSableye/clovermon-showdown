@@ -314,7 +314,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			noCopy: true,
 			onStart(pokemon) { // TODO: Blobbos cap
 				let applies = false;
-				if (pokemon.hasType('Flying') || pokemon.hasAbility('levitate') || pokemon.hasAbility('asoneblobbostherian')) applies = true;
+				if (
+					pokemon.hasType('Flying') ||
+					pokemon.hasAbility('levitate') ||
+					pokemon.hasAbility('asoneblobbostherian')) {
+					applies = true;
+				}
 				if (pokemon.hasItem('ironball') || pokemon.volatiles['ingrain'] ||
 					this.field.getPseudoWeather('gravity')) applies = false;
 				if (pokemon.removeVolatile('fly') || pokemon.removeVolatile('bounce')) {
@@ -731,6 +736,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	polysporin: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	blackbomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	frigidend: {
 		inherit: true,
 		isNonstandard: null,
 	},

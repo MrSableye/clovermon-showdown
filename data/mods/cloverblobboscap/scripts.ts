@@ -20,5 +20,5 @@ export const Scripts: ModdedBattleScriptsData = {
 			}
 			return null;
 		},
-	}
+	},
 };

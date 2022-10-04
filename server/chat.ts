@@ -2400,7 +2400,8 @@ export const Chat = new class {
 		buf += '<span class="col typecol">';
 		if (species.types) {
 			for (const type of species.types) {
-				buf += `<img src="https://${Config.routes.client}/sprites/types/${type}.png" alt="${type}" height="14" width="32">`;
+				const encodedType = encodeURIComponent(type);
+				buf += `<img src="https://${Config.routes.client}/sprites/types/${encodedType}.png" alt="${type}" height="14" width="32">`;
 			}
 		}
 		buf += '</span> ';
