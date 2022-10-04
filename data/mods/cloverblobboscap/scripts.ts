@@ -1,6 +1,7 @@
 export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'clovercap',
 	actions: {
+		inherit: true,
 		canMegaEvo(pokemon: Pokemon) {
 			const species = pokemon.baseSpecies;
 			const altForme = species.otherFormes && this.dex.species.get(species.otherFormes[0]);
