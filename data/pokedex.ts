@@ -35221,9 +35221,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	blobbosorangeisles: {
 		num: 69132,
-		name: "Blobbos-Orange Isles",
+		name: "Blobbos-Orange-Isles",
 		baseSpecies: "Blobbos",
-		forme: "Orange Isles",
+		forme: "Orange-Isles",
 		types: ["Grass", "Rock"],
 		gender: "N",
 		baseStats: {
@@ -35325,9 +35325,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	blobbosglovercrystalball: {
 		num: 69132,
-		name: "Blobbos-Glover (Crystal Ball)",
+		name: "Blobbos-Glover-Crystal-Ball",
 		baseSpecies: "Blobbos",
-		forme: "Glover (Crystal Ball)",
+		forme: "Glover-Crystal-Ball",
 		types: ["Psychic", "Fighting"],
 		gender: "N",
 		baseStats: {hp: 95, atk: 92, def: 64, spa: 115, spd: 64, spe: 89},
@@ -35346,9 +35346,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	blobbosgloverballbearing: {
 		num: 69132,
-		name: "Blobbos-Glover (Ballbearing)",
+		name: "Blobbos-Glover-Ball-Bearing",
 		baseSpecies: "Blobbos",
-		forme: "Glover (Ballbearing)",
+		forme: "Glover-Ball-Bearing",
 		types: ["Electric", "Fighting"],
 		gender: "N",
 		baseStats: {hp: 95, atk: 64, def: 65, spa: 99, spd: 65, spe: 131},
@@ -35367,9 +35367,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	blobbosgloverbowlingball: {
 		num: 69132,
-		name: "Blobbos-Glover (Bowling Ball)",
+		name: "Blobbos-Glover-Bowling-Ball",
 		baseSpecies: "Blobbos",
-		forme: "Glover (Bowling Ball)",
+		forme: "Glover-Bowling-Ball",
 		types: ["Steel", "Fighting"],
 		gender: "N",
 		baseStats: {hp: 95, atk: 130, def: 100, spa: 64, spd: 100, spe: 30},
