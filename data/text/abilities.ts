@@ -2015,6 +2015,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  [POKEMON] is ready to kick your ass in OU!",
 	},
+	asoneblobbosremembered: {
+		name: "As One (Remembered)",
+		shortDesc: "The combination of Intimidate and Levitate.",
+
+		start: "  [POKEMON] is ready to rember ;_;7",
+	},
 	sharpshooter: {
 		name: "Sharpshooter",
 		shortDesc: "This Pokemon's critical hit, the damage is multiplied by 1.5, +1 Crit ratio.",
