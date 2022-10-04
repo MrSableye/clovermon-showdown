@@ -57,9 +57,11 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 
 			team.forEach((set) => {
 				const species = this.dex.species.get(set.species || set.name);
-				let baseSpecies = species;
+				let baseSpecies = this.dex.species.get(species.baseSpecies);
+				let baseForme = species;
 				let maxDepth = 10;
-				while (baseSpecies.name !== baseSpecies.baseSpecies && maxDepth > 0) {
+				while (baseForme.baseSpecies !== baseSpecies.name && maxDepth > 0) {
+					baseForme = baseSpecies;
 					baseSpecies = this.dex.species.get(baseSpecies.baseSpecies);
 					maxDepth--;
 				}
@@ -72,8 +74,8 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 					errors.push(`${set.name || set.species} is not a forme of Blobbos.`);
 				}
 
-				if (blobbosFormeCount[species.id]) blobbosFormeCount[species.id] = 0;
-				blobbosFormeCount[species.id] = blobbosFormeCount[species.id] + 1;
+				if (blobbosFormeCount[baseForme.id]) blobbosFormeCount[baseForme.id] = 0;
+				blobbosFormeCount[baseForme.id] = blobbosFormeCount[baseForme.id] + 1;
 			});
 
 			Object.entries(blobbosFormeCount).forEach(([formeId, formeCount]) => {
