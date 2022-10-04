@@ -57,8 +57,18 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 
 			team.forEach((set) => {
 				const species = this.dex.species.get(set.species || set.name);
+				let baseSpecies = species;
+				let maxDepth = 10;
+				while (baseSpecies.name !== baseSpecies.baseSpecies && maxDepth > 0) {
+					baseSpecies = this.dex.species.get(baseSpecies.baseSpecies);
+					maxDepth--;
+				}
 
-				if (species.baseSpecies !== 'Blobbos' && species.baseSpecies !== 'Bootlos') {
+				if (maxDepth === 0) {
+					errors.push('Recursive species found. Please report this to an administrator');
+				}
+
+				if (baseSpecies.name !== 'Blobbos' && baseSpecies.name !== 'Bootlos') {
 					errors.push(`${set.name || set.species} is not a forme of Blobbos.`);
 				}
 
