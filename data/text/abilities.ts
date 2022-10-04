@@ -2015,6 +2015,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  [POKEMON] is ready to kick your ass in OU!",
 	},
+	asoneblobbosremembered: {
+		name: "As One (Remembered)",
+		shortDesc: "The combination of Flare Heal and Magic Guard.",
+
+		start: "  [POKEMON] is ready to rember ;_;7",
+	},
 	sharpshooter: {
 		name: "Sharpshooter",
 		shortDesc: "This Pokemon's critical hit, the damage is multiplied by 1.5, +1 Crit ratio.",
@@ -2132,5 +2138,16 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	sneedboost: {
 		name: "Sneed Boost",
 		shortDesc: "Speed and Acc raised each turn",
+	},
+	armorplate: {
+		name: "Armor Plate",
+		shortDesc: "This Pokemon's Normal-type moves become Steel type and have 1.3x power.",
+	},
+	kinglymajesty: {
+		name: "Queenly Majesty",
+		desc: "Priority moves used by opposing Pokemon targeting this Pokemon or its allies are prevented from having an effect.",
+		shortDesc: "This Pokemon and its allies are protected from opposing priority moves.",
+
+		block: "#damp",
 	},
 };

@@ -6911,7 +6911,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	scorchedearth: {
 		name: "Scorched Earth",
-		desc: "Has a 100% to burn grounded adjacent Pokemon and itself if grounded.",
+		shortDesc: "Has a 100% to burn grounded adjacent Pokemon and itself if grounded.",
 	},
 	hulkup: {
 		name: "Hulk Up",
@@ -7361,7 +7361,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	twintowertumblingterror: {
 		name: "Twin Tower Tumbling Terror",
-		desc: "100% chance to burn the user and the opponent.",
+		desc: "Same type as user primary type. 100% chance to burn the user and the opponent.",
 	},
 	frigidend: {
 		name: "Frigid End",
@@ -7615,11 +7615,15 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	toppingtoss: {
 		name: "Topping Toss",
-		shortDesc: "3-hit move, each hit has a different type.",
+		shortDesc: "3-hit move, 1st hit Fire, 2nd Grass, 3rd Ground",
 	},
 	heavensblessing: {
 		name: "Heaven's Blessing",
 		shortDesc: "Heals self and activates Wish effect.",
+	},
+	heavenpierce: {
+		name: "Heaven Pierce",
+		shortDesc: "Always crits, breaks screens, ignores abilities, ignores everything.",
 	},
 	sandysnore: {
 		name: "Sandy Snore",
@@ -7627,7 +7631,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	amogus: {
 		name: "Amogus",
-		shortDesc: "Disguises as teammate's attack, how sus.",
+		shortDesc: "Disguises as 6th teammate's attack, how sus.",
 	},
 	ninjutsu: {
 		name: "Ninjutsu",
@@ -7645,8 +7649,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Half-Life",
 		shortDesc: "Cuts foe's HP in half.",
 	},
-	meltdown: {
-		name: "Meltdown",
+	nuclearmeltdown: {
+		name: "Nuclear Meltdown",
 		shortDesc: "Lowers user's Atk, SpA, and SpE",
 	},
 	obsidianhorn: {
@@ -7692,12 +7696,16 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Extreme Sneed",
 		shortDesc: "Usually goes first.",
 	},
-	heavenpierce: {
-		name: "Heaven Pierce",
-		shortDesc: "Always crits, breaks screens, ignores abilities, ignores everything.",
-	},
 	feedandseed: {
 		name: "Feed and Seed",
 		shortDesc: "Leech Seed, Worry Seed, and Grassy Terrain",
+	},
+	atombomb: {
+		name: "Atom Bomb",
+		shortDesc: "Hits adjacent Pokemon. The user faints.",
+	},
+	radiation: {
+		name: "Radiation",
+		shortDesc: "Makes the opponent Nuclear type.",
 	},
 };

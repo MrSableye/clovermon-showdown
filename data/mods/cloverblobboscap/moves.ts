@@ -163,7 +163,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Nuclear",
 		isNonstandard: null,
 	},
-	meltdown: {
+	nuclearmeltdown: {
 		inherit: true,
 		type: "Nuclear",
 		isNonstandard: null,
@@ -230,6 +230,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	sleepingsands: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	feedandseed: {
 		inherit: true,
 		isNonstandard: null,
 	},
