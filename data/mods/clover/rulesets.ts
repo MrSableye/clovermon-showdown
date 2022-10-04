@@ -60,7 +60,7 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 				let baseSpecies = this.dex.species.get(species.baseSpecies);
 				let baseForme = species;
 				let maxDepth = 10;
-				while (baseForme.baseSpecies !== baseSpecies.name && maxDepth > 0) {
+				while (baseSpecies.baseSpecies !== baseSpecies.name && maxDepth > 0) {
 					baseForme = baseSpecies;
 					baseSpecies = this.dex.species.get(baseSpecies.baseSpecies);
 					maxDepth--;
