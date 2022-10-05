@@ -1,6 +1,7 @@
 export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen8',
 	actions: {
+		inherit: true,
 		modifyDamage(
 			baseDamage: number, pokemon: Pokemon, target: Pokemon, move: ActiveMove, suppressMessages = false
 		) {
@@ -110,6 +111,7 @@ export const Scripts: ModdedBattleScriptsData = {
 		},
 	},
 	pokemon: {
+		inherit: true,
 		ignoringAbility() {
 			// Check if any active pokemon have the ability Neutralizing Gas
 			let neutralizinggas = false;
