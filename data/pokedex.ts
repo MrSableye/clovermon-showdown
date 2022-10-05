@@ -35293,7 +35293,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			0: "Sturdy",
 			1: "Dark Thoughts",
 			H: "Degenerate",
-			S: "Degradation",
+			S: "Moody",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
