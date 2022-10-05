@@ -24225,35 +24225,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-start', pokemon, 'Autotomize');
 			}
 		},
-		onHit(source,target) {
-			if (source.volatiles['skulltoss'] && source.volatiles['skulltoss'].layers >= 1) return false;
+		onHit(pokemon,target) {
+			if (pokemon.volatiles['skulltoss'] && pokemon.volatiles['skulltoss'].layers >= 1) return false;
 		},
-		volatileStatus: 'skulltoss',
+		volatileStatus: 'Skull Toss',
 		condition: {
 			noCopy: true,
-			onStart(source,target) {
+			onStart(pokemon,target) {
 				this.effectState.layers = 1;
 				this.effectState.spe = 0;
-				this.add('-start', source, 'skulltoss' + this.effectState.layers);
-				const [curSpe] = [source.boosts.spe];
-				this.boost({spe: 1}, source);
-				if (curSpe !== source.boosts.spe) this.effectState.spe--;
+				this.add('-start', pokemon, 'skulltoss' + this.effectState.layers);
+				const [curSpe] = [pokemon.boosts.spe];
+				this.boost({spe: 1}, pokemon);
+				if (curSpe !== pokemon.boosts.spe) this.effectState.spe--;
 			},
-			onRestart(source,target) {
+			onRestart(pokemon,target) {
 				if (this.effectState.layers >= 1) return false;
 				this.effectState.layers++;
-				this.add('-start', source, 'skulltoss' + this.effectState.layers);
-				const curSpe = source.boosts.spe;
-				this.boost({spe: 1}, source);
-				if (curSpe !== source.boosts.spe) this.effectState.spe--;
+				this.add('-start', pokemon, 'skulltoss' + this.effectState.layers);
+				const curSpe = pokemon.boosts.spe;
+				this.boost({spe: 1}, pokemon);
+				if (curSpe !== pokemon.boosts.spe) this.effectState.spe--;
 			},
-			onEnd(source) {
+			onEnd(pokemon) {
 				if (this.effectState.def || this.effectState.spd) {
 					const boosts: SparseBoostsTable = {};
 					if (this.effectState.spe) boosts.spe = this.effectState.spe;
-					this.boost(boosts, source);
+					this.boost(boosts, pokemon);
 				}
-				this.add('-end', source, 'skulltoss');
+				this.add('-end', pokemon, 'skulltoss');
 				if (this.effectState.spe !== this.effectState.layers * -1 * -1) {
 					this.hint("In Gen 7, Stockpile keeps track of how many times it successfully altered each stat individually.");
 				}
