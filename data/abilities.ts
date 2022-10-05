@@ -6005,17 +6005,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 105,
 	},
 	darkthoughts: {
-		onDamagingHit(damage, target, source, move) {
-			if (this.checkMoveMakesContact(move, source, target)) {
-				if (this.randomChance(3, 10)) {
-					source.addVolatile('taunt', this.effectState.target);
-				}
+		onModifyMove(move) {
+			if (!move?.flags['contact'] || move.target === 'self') return;
+			if (!move.secondaries) {
+				move.secondaries = [];
 			}
+			move.secondaries.push({
+				chance: 30,
+				volatileStatus: 'torment',
+				ability: this.dex.abilities.get('darkthoughts'),
+			});
 		},
 		name: "Dark Thoughts",
-		isNonstandard: "Future",
-		rating: 0.5,
-		num: 56,
+		rating: 2,
+		num: 143,
 	},
 	gmaxcomatose: {
 		onSetStatus(status, target, source, effect) {

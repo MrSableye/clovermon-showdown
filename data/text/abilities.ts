@@ -2117,7 +2117,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	darkthoughts: {
 		name: "Dark Thoughts",
-		shortDesc: "May cause Taunt on contact",
+		shortDesc: "May cause Torment on contact",
 	},
 	gmaxcomatose: {
 		name: "GMax Comatose",

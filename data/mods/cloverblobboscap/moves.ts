@@ -237,4 +237,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	relicsong: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	astralbarrage: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
