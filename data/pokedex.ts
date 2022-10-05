@@ -31450,6 +31450,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 31,
 		color: "Yellow",
 		requiredAbility: "Zen Monke",
+		battleOnly: "Simionach",
 		eggGroups: ["Field", "Human-Like"],
 		gen: 8,
 	},
