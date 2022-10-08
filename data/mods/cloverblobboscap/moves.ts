@@ -143,7 +143,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	
 	chernoboil: {
 		inherit: true,
 		type: "Nuclear",

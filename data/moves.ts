@@ -24225,13 +24225,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-start', pokemon, 'Autotomize');
 			}
 		},
-		onHit(pokemon,target) {
+		onHit(pokemon) {
 			if (pokemon.volatiles['skulltoss'] && pokemon.volatiles['skulltoss'].layers >= 1) return false;
 		},
 		volatileStatus: 'Skull Toss',
 		condition: {
 			noCopy: true,
-			onStart(pokemon,target) {
+			onStart(pokemon) {
 				this.effectState.layers = 1;
 				this.effectState.spe = 0;
 				this.add('-start', pokemon, 'skulltoss' + this.effectState.layers);
@@ -24239,7 +24239,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.boost({spe: 1}, pokemon);
 				if (curSpe !== pokemon.boosts.spe) this.effectState.spe--;
 			},
-			onRestart(pokemon,target) {
+			onRestart(pokemon) {
 				if (this.effectState.layers >= 1) return false;
 				this.effectState.layers++;
 				this.add('-start', pokemon, 'skulltoss' + this.effectState.layers);
