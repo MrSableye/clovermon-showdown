@@ -1986,7 +1986,7 @@ const commands: Chat.ChatCommands = {
 		official(target, room, user, connection, cmd) {
 			room = this.requireRoom();
 
-			this.checkCan('game', null, room);
+			this.checkCan('tournaments', null, room);
 
 			if (!room.settings.tournaments) room.settings.tournaments = {};
 
