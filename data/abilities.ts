@@ -6105,7 +6105,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onDamage(damage, target, source, effect) {
 			if (damage >= target.hp) {
 				this.add('-ability', target, 'Infection');
-				this.add('-activate', source, 'ability: Infection');
 				this.heal(target.maxhp);
 				target.formeChange('Infected-Zombie', this.effect, true);
 				
