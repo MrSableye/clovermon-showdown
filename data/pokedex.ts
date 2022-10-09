@@ -32253,6 +32253,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: 42031,
 		name: "Disbeary-Ebil",
 		baseSpecies: "Disbeary",
+		forme: "Ebil",
 		types: ["Normal", "Dark"],
 		genderRatio: {M: 0.125, F: 0.875},
 		baseStats: {hp: 69, atk: 100, def: 69, spa: 81, spd: 69, spe: 111},
