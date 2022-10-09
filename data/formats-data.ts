@@ -8172,6 +8172,15 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+
+	infected: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+	},
+	infectedzombie: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+	},
 	/* Clover CAP */
 	bearedaze: {
 		tier: "Illegal",

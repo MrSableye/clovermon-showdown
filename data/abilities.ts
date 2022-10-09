@@ -6107,7 +6107,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.add('-ability', target, 'Infection');
 				this.add('-activate', source, 'ability: Infection');
 				this.heal(target.maxhp);
-				source.formeChange('Infected-Zombie', this.effect, true);
+				target.formeChange('Infected-Zombie', this.effect, true);
 				
 				
 			}
