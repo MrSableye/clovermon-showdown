@@ -6099,4 +6099,24 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 189,
 	},
 
+	infection: {
+		
+		onDamagePriority: -30,
+		onDamage(damage, target, source, effect) {
+			if (damage >= target.hp) {
+				this.add('-ability', target, 'Infection');
+				this.add('-activate', source, 'ability: Infection');
+				this.heal(target.maxhp);
+				source.formeChange('Infected-Zombie', this.effect, true);
+				
+				
+			}
+			
+		},
+		isBreakable: true,
+		name: "Infection",
+		rating: 3,
+		num: 5,
+	},
+
 };

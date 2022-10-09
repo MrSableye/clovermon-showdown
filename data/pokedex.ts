@@ -35443,6 +35443,38 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
+
+	infected: {
+		num: 42152,
+		name: "Infected",
+		types: ["Normal"],
+		gender: "N",
+		baseStats: {hp: 52, atk: 52, def: 52, spa: 52, spd: 52, spe: 52},
+		abilities: {0: "Infection"},
+		heightm: 15.2,
+		weightkg: 1521.52,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+		gen: 8,
+	},
+	infectedzomebie: {
+		num: 658,
+		name: "Infected-Zombie",
+		baseSpecies: "Infected",
+		forme: "Ash",
+		types: ["Water", "Dark"],
+		gender: "N",
+		baseStats: {hp: 72, atk: 145, def: 67, spa: 153, spd: 71, spe: 132},
+		abilities: {0: "Infection"},
+		heightm: 1.5,
+		weightkg: 40,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+		requiredAbility: "Infection",
+		battleOnly: "Infected",
+		gen: 7,
+	},
+	
 	/* gen 2 isn't real */
 	peasol: {
 		num: 42161,
@@ -35700,6 +35732,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Fairy"],
 		requiredItem: "Ointmiteite",
 	},
+
+	
 	/* Clover CAP Megas */
 	oogabugamega: {
 		num: 69268,
