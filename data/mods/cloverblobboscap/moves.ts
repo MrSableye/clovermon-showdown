@@ -245,5 +245,9 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	testbeam: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
 

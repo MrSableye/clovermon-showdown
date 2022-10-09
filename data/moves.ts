@@ -24332,4 +24332,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 		isNonstandard: "Future",
 	},
+	testbeam: {
+		num: 583,
+		accuracy: 100,
+		basePower: 95,
+		category: "Special",
+		name: "Test Beam",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		target: "normal",
+		type: "Fairy",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
 };

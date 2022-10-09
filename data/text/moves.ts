@@ -7708,4 +7708,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Radiation",
 		shortDesc: "Makes the opponent Nuclear type.",
 	},
+	testbeam: {
+		name: "Test Beam",
+		shortDesc: "???",
+	},
 };
