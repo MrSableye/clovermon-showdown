@@ -92,10 +92,10 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 		effectType: 'ValidatorRule',
 		name: 'Clovermon Showdown Gold',
 		desc: "This forme requires a Clovermon Showdown Gold account.",
-		onBattleStart() {
+		onSwitchInPriority: -1000000,
+		onSwitchIn(pokemon) {
 			const premiumFormes = ['fuckerkonata'];
-			for (const pokemon of this.getAllPokemon()) {
-				if (!premiumFormes.includes(pokemon.species.id)) continue;
+			if (premiumFormes.includes(pokemon.species.id)) {
 				this.add(
 					'message',
 					`${pokemon.side.name} tried to use a Clovermon Showdown Gold™ only premium cosmetic forme ${pokemon.species.name}. ` +
