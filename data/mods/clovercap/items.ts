@@ -16,6 +16,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ejectpack: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	fistplate: {
 		inherit: true,
 		isNonstandard: null,
@@ -57,6 +61,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: null,
 	},
 	stoneplate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	throatspray: {
 		inherit: true,
 		isNonstandard: null,
 	},
