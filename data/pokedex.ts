@@ -35511,6 +35511,11 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 0.8,
 		weightkg: 21.2,
 		color: "Brown",
+		cosmeticFormes: ["Fucker-Konata"],
+		formeOrder: [
+			"Fucker",
+			"Fucker-Konata",
+		],
 		eggGroups: ["Flying", "Water 2"],
 	},
 	emojinn: {

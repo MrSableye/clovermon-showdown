@@ -88,15 +88,22 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 			return errors;
 		},
 	},
-	noblobbos: {
+	clovermonshowdowngold: {
 		effectType: 'ValidatorRule',
-		name: 'No Blobbos',
-		desc: "Blobbos is illegal.",
-		onValidateSet(set) {
-			const species = this.dex.species.get(set.species || set.name);
-
-			if (species.baseSpecies === 'Blobbos') {
-				return [`${set.name || set.species} is Blobbos. Fun is not allowed.`];
+		name: 'Clovermon Showdown Gold',
+		desc: "This forme requires a Clovermon Showdown Gold account.",
+		onBattleStart() {
+			const premiumFormes = ['fuckerkonata'];
+			for (const pokemon of this.getAllPokemon()) {
+				if (!premiumFormes.includes(pokemon.species.id)) continue;
+				this.add(
+					'message',
+					`Player ${pokemon.side.name} tried to use a Clovermon Showdown Gold only premium cosmetic forme ${pokemon.species.name}. ` +
+					`It has been replaced with the basic ${pokemon.baseSpecies.name}.`
+				);
+				pokemon.formeChange(pokemon.species.baseSpecies, this.effect, true);
+				const newDetails = pokemon.details.replace(pokemon.species.name, pokemon.baseSpecies.name);
+				this.add('updatepoke', pokemon, newDetails);
 			}
 		},
 	},
