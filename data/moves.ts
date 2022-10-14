@@ -24332,4 +24332,51 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 		isNonstandard: "Future",
 	},
+	battlecry: {
+		num: 612,
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Battle Cry",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1},
+		secondary: {
+			chance: 10,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Fighting",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	sereneshockwave: {
+		num: 215,
+		basePower: 120,
+		accuracy: 90,
+		category: "Physical",
+		name: "Serene Shockwave",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, sound: 1, mirror: 1},
+		onHit(target, source) {
+			this.add('-activate', source, 'move: Heal Bell');
+			let success = false;
+			const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
+			for (const ally of allies) {
+				if (ally !== source && ally.hasAbility('soundproof')) continue;
+				if (ally.cureStatus()) success = true;
+			}
+			return success;
+		},
+		target: "allyTeam",
+		type: "Psychic",
+		zMove: {effect: 'heal'},
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
 };
