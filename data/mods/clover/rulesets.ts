@@ -99,10 +99,10 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 				this.add(
 					'message',
 					`Player ${pokemon.side.name} tried to use a Clovermon Showdown Gold only premium cosmetic forme ${pokemon.species.name}. ` +
-					`It has been replaced with the basic ${pokemon.baseSpecies.name}.`
+					`It has been replaced with the basic ${pokemon.species.baseSpecies}.`
 				);
 				pokemon.formeChange(pokemon.species.baseSpecies, this.effect, true);
-				const newDetails = pokemon.details.replace(pokemon.species.name, pokemon.baseSpecies.name);
+				const newDetails = pokemon.details.replace(pokemon.species.name, pokemon.species.baseSpecies);
 				this.add('updatepoke', pokemon, newDetails);
 			}
 		},
