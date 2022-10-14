@@ -7708,4 +7708,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Radiation",
 		shortDesc: "Makes the opponent Nuclear type.",
 	},
+	battlecry: {
+		name: "Battle Cry",
+		shortDesc: "10% chance to raise the user's Special Attack by 1.",
+	},
+	sereneshockwave: {
+		name: "Serene Shockwave",
+		shortDesc: "Cures teammates of their status effects.",
+	},
 };
