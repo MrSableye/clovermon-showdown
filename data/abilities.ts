@@ -5535,7 +5535,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	nimblemetalbody: {
 		onModifyPriority(priority, pokemon, target, move) {
 			const momentum = [
-				'batonpass', 'uturn', 'flipturn', 'partingshot', 'teleport', 'uturn', 'voltswitch',
+				'batonpass', 'uturn', 'flipturn', 'partingshot', 'teleport', 'uturn', 'voltswitch', 'flashbang',
 			];
 			if (momentum.includes(move.id)) return priority + 1;
 		},
