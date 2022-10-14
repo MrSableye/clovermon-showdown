@@ -6064,10 +6064,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 37,
 	},
 	intangible: {
-		name: "Pozzed",
+		name: "Intangible",
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Normal' || move.type === 'Fighting') {
-				this.add('-immune', target, '[from] ability: Pozzed');
+				this.add('-immune', target, '[from] ability: Intangible');
 				return null;
 			}
 		},
