@@ -13,7 +13,6 @@ export const Scripts: ModdedBattleScriptsData = {
 		},
 	},
 	pokemon: {
-		inherit: true,
 		ignoringAbility() {
 			// Check if any active pokemon have the ability Neutralizing Gas
 			let neutralizinggas = false;

@@ -2373,7 +2373,7 @@ export const ItemsText: { [k: string]: ItemText } = {
 	},
 	thiccbone: {
 		name: "Thicc Bone",
-		desc: "If held by a Masdawg, Pasdawg or Naughtycoot, its Attack is doubled.",
+		desc: "If held by a Masdawg or a Pasdawg, its Attack is doubled.",
 	},
 	manifesto: {
 		name: "Manifesto",
@@ -2395,13 +2395,6 @@ export const ItemsText: { [k: string]: ItemText } = {
 	rustedcrown: {
 		name: "Rusted Crown",
 		desc: "Allows Blobbos-Galar to turn into its Crowned forme.",
-	},
-	nullgem: {
-		name: "Null Gem",
-		desc: "Holder's first successful ???-type attack will have 1.5x power. Single use.",
-		gen5: {
-			desc: "Holder's first successful ???-type attack will have 1.5x power. Single use.",
-		},
 	},
 	/* Clover CAP Mega Stones */
 	ooganite: {

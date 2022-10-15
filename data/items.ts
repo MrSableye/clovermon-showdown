@@ -7251,7 +7251,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	/* Clover CAP Exclusive Items */
 	moluganion: {
 		name: "Moluganion",
-		spritenum: 751,
+		spritenum: 748,
 		fling: {
 			basePower: 20,
 		},
@@ -7280,31 +7280,31 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	skub: {
 		name: "Skub",
-		spritenum: 752,
+		spritenum: 286,
 		fling: {
 			basePower: 20,
 		},
 		onModifyDefPriority: 1,
 		onModifyDef(def, pokemon) {
-			if (pokemon.species.name === 'Skuba') {
+			if (pokemon.baseSpecies.baseSpecies === 'Skuba') {
 				return this.chainModify(1.5);
 			}
 		},
 		onModifySpDPriority: 1,
 		onModifySpD(spd, pokemon) {
-			if (pokemon.species.name === 'Skuba') {
+			if (pokemon.baseSpecies.baseSpecies === 'Skuba') {
 				return this.chainModify(1.5);
 			}
 		},
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.species.name === 'Skuba-Anti') {
+			if (pokemon.baseSpecies.baseSpecies === 'Skuba-Anti') {
 				return this.chainModify(1.5);
 			}
 		},
 		onModifySpAPriority: 1,
 		onModifySpA(spa, pokemon) {
-			if (pokemon.species.name === 'Skuba-Anti') {
+			if (pokemon.baseSpecies.baseSpecies === 'Skuba-Anti') {
 				return this.chainModify(1.5);
 			}
 		},
@@ -7324,20 +7324,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Blobbos-Galar-Crowned"],
 		gen: 8,
 		isNonstandard: "Future",
-	},
-	nullgem: {
-		name: "Null Gem",
-		spritenum: 750,
-		isGem: true,
-		onSourceTryPrimaryHit(target, source, move) {
-			if (target === source || move.category === 'Status') return;
-			if (move.type === '???' && source.useItem()) {
-				source.addVolatile('gem');
-			}
-		},
-		num: 562,
-		gen: 5,
-		isNonstandard: "Past",
 	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
@@ -7856,34 +7842,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		megaStone: "Blobbos-Mega",
 		megaEvolves: "Blobbos",
 		itemUser: ["Blobbos"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
-		num: -1,
-		gen: 8,
-		isNonstandard: "Future",
-	},
-	reversite: {
-		name: "Reversite",
-		spritenum: 625,
-		megaStone: "Blobbos-Reverse-Mega",
-		megaEvolves: "Blobbos-Reverse",
-		itemUser: ["Blobbos-Reverse"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
-		num: -1,
-		gen: 8,
-		isNonstandard: "Future",
-	},
-	sexite: {
-		name: "Sexite",
-		spritenum: 587,
-		megaStone: "Blobbos-Sexy-Mega",
-		megaEvolves: "Blobbos-Sexy",
-		itemUser: ["Blobbos-Sexy"],
 		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;

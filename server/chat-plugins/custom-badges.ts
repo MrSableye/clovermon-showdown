@@ -57,9 +57,7 @@ const initializeTeams = async () => {
 const createTeamHtml = (teamName: string, team: Team) => {
 	let teamHtml = `<b>${teamName} <i>(try <code>/badgeteam join ${teamName}, SIDE</code>)</i></b><br />`;
 
-	teamHtml += Object.entries(team).map(
-		([sideName, badge]) => Badges.createBadgeHtml({...badge, badge_id: sideName}, false),
-	).join(' ');
+	teamHtml += Object.entries(team).map(([sideName, badge]) => Badges.createBadgeHtml({...badge, badge_id: sideName}, false)).join(' ');
 
 	return teamHtml;
 };
@@ -79,15 +77,9 @@ const joinTeam = async (user: User, teamName: string, teamSide: string): Promise
 
 	const userBadges = user.badges;
 	if (userBadges) {
-		const existingTeamBadges = userBadges.filter(
-			(userBadge) => Object.values(team).map((teamBadge) => teamBadge.badge_id).includes(userBadge.badge_id),
-		);
+		const existingTeamBadges = userBadges.filter((userBadge) => Object.values(team).map((teamBadge) => teamBadge.badge_id).includes(userBadge.badge_id));
 
-		await Promise.all(
-			existingTeamBadges.map(
-				(existingTeamBadge) => Badges.removeBadgeFromUser(user.id, existingTeamBadge.badge_id, user, true),
-			),
-		);
+		await Promise.all(existingTeamBadges.map((existingTeamBadge) => Badges.removeBadgeFromUser(user.id, existingTeamBadge.badge_id, user, true)));
 	}
 
 	await Badges.addBadgeToUser(user.id, badge.badge_id, user, true);

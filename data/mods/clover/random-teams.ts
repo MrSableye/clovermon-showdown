@@ -2589,7 +2589,7 @@ export class RandomTeams {
 		];
 
 		const blobbosFormes = this.dex.species.all()
-			.filter((species) => species.baseSpecies === 'Blobbos' && !species.battleOnly && species.name !== 'Blobbos');
+			.filter((species) => species.baseSpecies === 'Blobbos' && !species.battleOnly);
 
 		while (sets.length < this.maxTeamSize) {
 			const blobbosForme = this.sampleNoReplace(blobbosFormes);
@@ -2602,9 +2602,13 @@ export class RandomTeams {
 				item: '',
 				evs: {hp: 4, atk: 252, spa: 252},
 				ivs: {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31},
-				level: 100,
+				level: Math.ceil(100 * ((700 - blobbosForme.bst) / 700)),
 				shiny: this.randomChance(1, 12),
 			};
+
+			if (blobbosForme.id === 'blobbosmini') {
+				set.level = Math.floor(set.level / 2);
+			}
 
 			sets.push(set);
 		}

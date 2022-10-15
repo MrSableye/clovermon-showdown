@@ -6911,7 +6911,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	scorchedearth: {
 		name: "Scorched Earth",
-		shortDesc: "Has a 100% to burn grounded adjacent Pokemon and itself if grounded.",
+		desc: "Has a 100% to burn grounded adjacent Pokemon and itself if grounded.",
 	},
 	hulkup: {
 		name: "Hulk Up",
@@ -7361,7 +7361,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	twintowertumblingterror: {
 		name: "Twin Tower Tumbling Terror",
-		desc: "Same type as user primary type. 100% chance to burn the user and the opponent.",
+		desc: "100% chance to burn the user and the opponent.",
 	},
 	frigidend: {
 		name: "Frigid End",
@@ -7391,7 +7391,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	matingpress: {
 		name: "Mating Press",
 		desc: "20% chance to have a child with the opposing mon with no item and only Metronome. Can only occur once for a user.",
-		shortDesc: "Produces a child. Uses Defense",
+		shortDesc: "20% chance to have a child.",
 
 		activate: "  [SOURCE] had a child with [POKEMON]!",
 		fail: "[POKEMON] had a miscarriage...",
@@ -7567,7 +7567,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	firewall: {
 		name: "Firewall",
-		shortDesc: "Protects, burns foes on contact.",
+		shortDesc: "Protect yourself from malware, also burns foes on contact.",
 	},
 	maximize: {
 		name: "Maximize",
@@ -7575,11 +7575,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	seaquake: {
 		name: "Seaquake",
-		shortDesc: "Water + Ground type move.",
+		shortDesc: "The true Potarded, Venowatt and Weatherbane counter.",
 	},
 	edgequake: {
 		name: "Edgequake",
-		shortDesc: "Rock + Ground together in an attack.",
+		shortDesc: "Good old Edgequake coverage.",
 	},
 	sugarrush: {
 		name: "Sugar Rush",
@@ -7615,15 +7615,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	toppingtoss: {
 		name: "Topping Toss",
-		shortDesc: "3-hit move, 1st hit Fire, 2nd Grass, 3rd Ground",
+		shortDesc: "3-hit move, each hit has a different type.",
 	},
 	heavensblessing: {
 		name: "Heaven's Blessing",
 		shortDesc: "Heals self and activates Wish effect.",
-	},
-	heavenpierce: {
-		name: "Heaven Pierce",
-		shortDesc: "Always crits, breaks screens, ignores abilities, ignores everything.",
 	},
 	sandysnore: {
 		name: "Sandy Snore",
@@ -7631,7 +7627,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	amogus: {
 		name: "Amogus",
-		shortDesc: "Disguises as 6th teammate's attack, how sus.",
+		shortDesc: "Disguises as teammate's attack, how sus.",
 	},
 	ninjutsu: {
 		name: "Ninjutsu",
@@ -7649,10 +7645,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Half-Life",
 		shortDesc: "Cuts foe's HP in half.",
 	},
-	nuclearmeltdown: {
-		name: "Nuclear Meltdown",
-		shortDesc: "Lowers user's Atk, SpA, and SpE",
-	},
 	obsidianhorn: {
 		name: "Obsidian Horn",
 		shortDesc: "10% chance to raise Defense and Sp.Def by 1.",
@@ -7660,60 +7652,5 @@ export const MovesText: {[k: string]: MoveText} = {
 	feudefee: {
 		name: "Feu de Fe\u0301e",
 		shortDesc: "Physical if Attack is higher than Sp. Atk.",
-	},
-	skulltoss: {
-		name: "Skull Toss",
-		shortDesc: "Raises speed once",
-	},
-	blobblast: {
-		name: "Blobblast",
-		shortDesc: "Has 1/4 Recoil",
-	},
-	floofandpoof: {
-		name: "Floof and Poof",
-		shortDesc: "Uses Defense. Summons Lucky Chant, Safeguard, Mist",
-	},
-	sunburst: {
-		name: "Sunburst",
-		shortDesc: "Summons Sun. Chance to Burn",
-	},
-	deepfry: {
-		name: "Deep Fry",
-		shortDesc: "Cooks the opponent's item",
-	},
-	flashbang: {
-		name: "Flashbang",
-		shortDesc: "Switches out and sets up dazzling for a turn",
-		start: "  A dazzling display surrounds [TEAM]!",
-		end: "  [TEAM]'s the dazzling display has dissipated!",
-		switchOut: "#uturn",
-	},
-	bouncyball: {
-		name: "Bouncy Ball",
-		shortDesc: "No additional effect.",
-	},
-	extremesneed: {
-		name: "Extreme Sneed",
-		shortDesc: "Usually goes first.",
-	},
-	feedandseed: {
-		name: "Feed and Seed",
-		shortDesc: "Leech Seed, Worry Seed, and Grassy Terrain",
-	},
-	atombomb: {
-		name: "Atom Bomb",
-		shortDesc: "Hits adjacent Pokemon. The user faints.",
-	},
-	radiation: {
-		name: "Radiation",
-		shortDesc: "Makes the opponent Nuclear type.",
-	},
-	battlecry: {
-		name: "Battle Cry",
-		shortDesc: "10% chance to raise the user's Special Attack by 1.",
-	},
-	sereneshockwave: {
-		name: "Serene Shockwave",
-		shortDesc: "Cures teammates of their status effects.",
 	},
 };

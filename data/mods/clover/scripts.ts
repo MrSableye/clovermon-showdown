@@ -1,7 +1,6 @@
 export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen8',
 	actions: {
-		inherit: true,
 		modifyDamage(
 			baseDamage: number, pokemon: Pokemon, target: Pokemon, move: ActiveMove, suppressMessages = false
 		) {
@@ -111,7 +110,6 @@ export const Scripts: ModdedBattleScriptsData = {
 		},
 	},
 	pokemon: {
-		inherit: true,
 		ignoringAbility() {
 			// Check if any active pokemon have the ability Neutralizing Gas
 			let neutralizinggas = false;
@@ -196,9 +194,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			if (item === 'ironball') return true;
 			// If a Fire/Flying type uses Burn Up and Roost, it becomes ???/Flying-type, but it's still grounded.
 			if (!negateImmunity && this.hasType('Flying') && !('roost' in this.volatiles)) return false;
-			if ((this.hasAbility('levitate') || this.hasAbility('asoneblobbostherian')) && !this.battle.suppressingAbility()) {
-				return null;
-			}
+			if ((this.hasAbility('levitate') || this.hasAbility('asoneblobbostherian')) && !this.battle.suppressingAbility()) return null;
 			if ('magnetrise' in this.volatiles) return false;
 			if ('telekinesis' in this.volatiles) return false;
 			return item !== 'airballoon';

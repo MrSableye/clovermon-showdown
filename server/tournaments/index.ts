@@ -1986,7 +1986,7 @@ const commands: Chat.ChatCommands = {
 		official(target, room, user, connection, cmd) {
 			room = this.requireRoom();
 
-			this.checkCan('tournaments', null, room);
+			this.checkCan('game', null, room);
 
 			if (!room.settings.tournaments) room.settings.tournaments = {};
 
@@ -2013,9 +2013,7 @@ const commands: Chat.ChatCommands = {
 				if (!playerResult || playerResult.tournaments.length < 1) {
 					body = '<p>This player has not won an official tournament.</p>';
 				} else {
-					const sortedTournaments = playerResult.tournaments.sort(
-						(tournamentA, tournamentB) => tournamentA.timestamp - tournamentB.timestamp,
-					);
+					const sortedTournaments = playerResult.tournaments.sort((tournamentA, tournamentB) => tournamentA.timestamp - tournamentB.timestamp);
 					const tournamentLines = sortedTournaments.map((tournamentResult) => {
 						const tournamentDate = new Date(tournamentResult.timestamp);
 						const dateString = `${tournamentDate.getFullYear()}/${tournamentDate.getMonth() + 1}/${tournamentDate.getDate()}`;
@@ -2029,10 +2027,7 @@ const commands: Chat.ChatCommands = {
 				const header = `<b><u>Top Tournament Results</b></u><br />`;
 				const lines = Object.entries(officialTournamentResults)
 					.sort((resultA, resultB) => resultB[1].tournaments.length - resultA[1].tournaments.length)
-					.map(([
-						playerId,
-						tournamentResults,
-					]) => `<strong>${Users.get(playerId)?.name || playerId}</strong>: ${tournamentResults.tournaments.length} wins`);
+					.map(([playerId, tournamentResults]) => `<strong>${Users.get(playerId)?.name || playerId}</strong>: ${tournamentResults.tournaments.length} wins`);
 
 				return this.sendReplyBox(`${header}${lines.join('<br />')}`);
 			}

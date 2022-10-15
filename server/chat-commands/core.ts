@@ -66,7 +66,7 @@ export const crqHandlers: {[k: string]: Chat.CRQHandler} = {
 			name: targetUser.name,
 			avatar: targetUser.avatar,
 			group: group,
-			customgroup: targetUser.customgroup || (sectionleader ? "Section Leader" : undefined),
+			customgroup: sectionleader ? "Section Leader" : undefined,
 			autoconfirmed: targetUser.autoconfirmed ? true : undefined,
 			status: targetUser.getStatus() || undefined,
 			rooms: roomList,

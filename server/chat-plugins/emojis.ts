@@ -17,9 +17,7 @@ export const emojis: Emojis = JSON.parse(
 	FS('config/chat-plugins/emojis.json').readIfExistsSync() || "{}"
 );
 
-const createEmojiRegex = (
-	emojiNames: string[],
-) => new RegExp(`(${emojiNames.map((emojiName) => `:${emojiName}:`).join('|')})`, 'g');
+const createEmojiRegex = (emojiNames: string[]) => new RegExp(`(${emojiNames.map((emojiName) => `:${emojiName}:`).join('|')})`, 'g');
 
 let emojiRegex: RegExp = createEmojiRegex(Object.keys(emojis));
 
@@ -41,10 +39,7 @@ const deleteEmoji = (name: string) => {
 
 const toAlphaNumeric = (text: string) => ('' + text).replace(/[^A-Za-z0-9]+/g, '');
 
-const createEmojiHtml = (
-	name: string,
-	url: string,
-) => `<img src="${url}" title=":${name}:" height="${EMOJI_SIZE}" width="${EMOJI_SIZE}">`;
+const createEmojiHtml = (name: string, url: string) => `<img src="${url}" title=":${name}:" height="${EMOJI_SIZE}" width="${EMOJI_SIZE}">`;
 
 export const commands: Chat.ChatCommands = {
 	emojis: 'emoji',

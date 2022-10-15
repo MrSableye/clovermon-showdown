@@ -188,11 +188,7 @@ export class Side {
 			case 'move':
 				let details = ``;
 				if (action.targetLoc && this.active.length > 1) details += ` ${action.targetLoc > 0 ? '+' : ''}${action.targetLoc}`;
-				if (action.mega) {
-					details += (
-						['ultranecroziumz', 'ultrablobbosiumz'].includes(action.pokemon!.item) ? ` ultra` : ` mega`
-					); // TODO: Remove this when able
-				}
+				if (action.mega) details += (['ultranecroziumz', 'ultrablobbosiumz'].includes(action.pokemon!.item) ? ` ultra` : ` mega`); // TODO: Remove this when able
 				if (action.zmove) details += ` zmove`;
 				if (action.maxMove) details += ` dynamax`;
 				return `move ${action.moveid}${details}`;

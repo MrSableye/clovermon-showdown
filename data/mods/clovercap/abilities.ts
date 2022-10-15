@@ -48,11 +48,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	/* Enabled Abilities */
-	dragonsmaw: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	/* Clover CAP Abilities */
 	cakeveil: {
 		inherit: true,
