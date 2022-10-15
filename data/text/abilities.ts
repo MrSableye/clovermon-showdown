@@ -2015,6 +2015,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  [POKEMON] is ready to kick your ass in OU!",
 	},
+	asoneblobbosremembered: {
+		name: "As One (Remembered)",
+		shortDesc: "The combination of Flare Heal and Magic Guard.",
+
+		start: "  [POKEMON] is ready to rember ;_;7",
+	},
 	sharpshooter: {
 		name: "Sharpshooter",
 		shortDesc: "This Pokemon's critical hit, the damage is multiplied by 1.5, +1 Crit ratio.",
@@ -2104,5 +2110,44 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		transform: "Zen Monke triggered!",
 		transformEnd: "Zen Monke ended!",
+	},
+	peaceandtranquility: {
+		name: "Peace and Tranquility",
+		shortDesc: "Always crits at 1/3 health",
+	},
+	darkthoughts: {
+		name: "Dark Thoughts",
+		shortDesc: "May cause Torment on contact",
+	},
+	gmaxcomatose: {
+		name: "GMax Comatose",
+		shortDesc: "Protection from status, moves that resistrict choices, and switching",
+	},
+	bloodthirsty: {
+		name: "Bloodthirsty",
+		shortDesc: "Increased power at the cost of health",
+	},
+	intangible: {
+		name: "Intangible",
+		shortDesc: "Immune to fighting and normal moves",
+	},
+	hyperboreanarctic: {
+		name: "Hyperborean Arctic",
+		shortDesc: "On switch-in, extremely harsh blizzard begins until this Ability is not active in battle.",
+	},
+	sneedboost: {
+		name: "Sneed Boost",
+		shortDesc: "Speed and Acc raised each turn",
+	},
+	armorplate: {
+		name: "Armor Plate",
+		shortDesc: "This Pokemon's Normal-type moves become Steel type and have 1.3x power.",
+	},
+	kinglymajesty: {
+		name: "Queenly Majesty",
+		desc: "Priority moves used by opposing Pokemon targeting this Pokemon or its allies are prevented from having an effect.",
+		shortDesc: "This Pokemon and its allies are protected from opposing priority moves.",
+
+		block: "#damp",
 	},
 };

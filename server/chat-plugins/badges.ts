@@ -125,7 +125,13 @@ export const Badges = new class {
 		await Badges.deleteUserBadges(badgeID, requester);
 		await Chat.Badges.deleteBadge(badgeID, requester.id, overridePermissions);
 	}
-	async updateBadgeAttribute(badgeID: string, attributeName: UpdateableBadgeAttribute, attributeValue: any, requester: User, override = false) {
+	async updateBadgeAttribute(
+		badgeID: string,
+		attributeName: UpdateableBadgeAttribute,
+		attributeValue: any,
+		requester: User,
+		override = false,
+	) {
 		const overridePermissions = override || Badges.canOverrideBadgeOwnership(requester);
 		await Chat.Badges.updateBadgeAttribute(badgeID, attributeName, attributeValue, requester.id, overridePermissions);
 		await Badges.updateBadgeForUsers(badgeID, requester);
@@ -292,7 +298,9 @@ export const Badges = new class {
 
 		const visibleBadges = userBadges.filter((userBadge) => userBadge.is_hidden === 0);
 		userBadgePageHtml += '<h3>Your Visible Badges</h3>';
-		userBadgePageHtml += visibleBadges.map((visibleBadge) => Badges.createRawBadgeHtml(visibleBadge.badge_name, visibleBadge.file_name)).join('');
+		userBadgePageHtml += visibleBadges.map(
+			(visibleBadge) => Badges.createRawBadgeHtml(visibleBadge.badge_name, visibleBadge.file_name),
+		).join('');
 		userBadgePageHtml += '<br />';
 
 		userBadgePageHtml += '<h3>Your Badges</h3>';
@@ -389,9 +397,17 @@ const getBadgeID = (arg: string) => applyPredicate(
 );
 
 const getBadgeDescription = (arg: string) => applyPredicate(
-	{predicate: (predicateArg) => nameRegex.test(predicateArg), transform: Utils.escapeHTML, errorMessage: ERROR_INVALID_BADGE_DESCRIPTION},
+	{
+		predicate: (predicateArg) => nameRegex.test(predicateArg),
+		transform: Utils.escapeHTML,
+		errorMessage: ERROR_INVALID_BADGE_DESCRIPTION,
+	},
 	applyPredicate(
-		{predicate: isNotNullOrUndefined, transform: (transformArg) => transformArg.trim(), errorMessage: ERROR_NO_BADGE_DESCRIPTION},
+		{
+			predicate: isNotNullOrUndefined,
+			transform: (transformArg) => transformArg.trim(),
+			errorMessage: ERROR_NO_BADGE_DESCRIPTION,
+		},
 		arg,
 	),
 );
@@ -413,7 +429,11 @@ const validateUrl = (maybeUrl: string) => {
 const getBadgeImageUrl = (arg: string) => applyPredicate(
 	{predicate: validateUrl, transform: identity, errorMessage: ERROR_INVALID_IMAGE},
 	applyPredicate(
-		{predicate: isNotNullOrUndefined, transform: (transformArg) => transformArg.trim(), errorMessage: ERROR_NO_BADGE_IMAGE_URL},
+		{
+			predicate: isNotNullOrUndefined,
+			transform: (transformArg) => transformArg.trim(),
+			errorMessage: ERROR_NO_BADGE_IMAGE_URL,
+		},
 		arg,
 	),
 );
@@ -424,11 +444,23 @@ const getUserID = (arg: string) => applyPredicate(
 );
 
 const getBadgePriority = (arg: string) => applyPredicate(
-	{predicate: (predicateArg) => Number.isInteger(predicateArg), transform: identity, errorMessage: ERROR_NON_INTEGER_BADGE_PRIORITY},
+	{
+		predicate: (predicateArg) => Number.isInteger(predicateArg),
+		transform: identity,
+		errorMessage: ERROR_NON_INTEGER_BADGE_PRIORITY,
+	},
 	applyPredicate(
-		{predicate: (predicateArg) => !Number.isNaN(parseInt(predicateArg)), transform: parseInt, errorMessage: ERROR_NON_NUMERIC_BADGE_PRIORITY},
+		{
+			predicate: (predicateArg) => !Number.isNaN(parseInt(predicateArg)),
+			transform: parseInt,
+			errorMessage: ERROR_NON_NUMERIC_BADGE_PRIORITY,
+		},
 		applyPredicate(
-			{predicate: isNotNullOrUndefined, transform: (transformArg) => transformArg.trim(), errorMessage: ERROR_NO_BADGE_PRIORITY},
+			{
+				predicate: isNotNullOrUndefined,
+				transform: (transformArg) => transformArg.trim(),
+				errorMessage: ERROR_NO_BADGE_PRIORITY,
+			},
 			arg,
 		),
 	),

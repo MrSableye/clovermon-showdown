@@ -16,6 +16,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ejectpack: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	fistplate: {
 		inherit: true,
 		isNonstandard: null,
@@ -60,6 +64,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	throatspray: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	toxicplate: {
 		inherit: true,
 		isNonstandard: null,
@@ -86,7 +94,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	thiccbone: {
 		inherit: true,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Masdawg' || pokemon.baseSpecies.baseSpecies === 'Pasdawg' || pokemon.baseSpecies.baseSpecies === 'Naughtycoot') {
+			if (['Masdawg', 'Pasdawg', 'Naughtycoot'].includes(pokemon.baseSpecies.baseSpecies)) {
 				return this.chainModify(2);
 			}
 		},
@@ -98,6 +106,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: null,
 	},
 	skub: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	nullgem: {
 		inherit: true,
 		isNonstandard: null,
 	},

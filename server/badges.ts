@@ -146,7 +146,13 @@ export class BadgesDatabase {
 	deleteBadge(badgeID: string, requesterID: string, overridePermissions: boolean) {
 		return this.transaction('deleteBadge', [badgeID, requesterID, overridePermissions]);
 	}
-	updateBadgeAttribute(badgeID: string, attributeName: UpdateableBadgeAttribute, attributeValue: any, requesterID: string, overridePermissions: boolean) {
+	updateBadgeAttribute(
+		badgeID: string,
+		attributeName: UpdateableBadgeAttribute,
+		attributeValue: any,
+		requesterID: string,
+		overridePermissions: boolean,
+	) {
 		return this.transaction('updateBadgeAttribute', [badgeID, attributeName, attributeValue, requesterID, overridePermissions]);
 	}
 	addBadgeToUser(userID: string, badgeID: string, requesterID: string, overridePermissions: boolean) {

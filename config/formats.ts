@@ -144,8 +144,9 @@ export const Formats: FormatList = [
 			'Cancel Mod',
 			'Dynamax Clause',
 			'Sketch Gen 8 Moves',
+			'OHKO Clause',
 		],
-		banlist: ['Blobbos-Alola'],
+		banlist: ['Blobbos-Alola', 'Baton Pass', 'Moody'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Clover Doubles & Triples
@@ -545,7 +546,7 @@ export const Formats: FormatList = [
 		ruleset: ['Standard', 'Overflow Stat Mod', 'Dynamax Clause', 'Sketch Gen 8 Moves'],
 		banlist: [
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
-			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify', 'Blobbosite', 'Kalosite'],
+			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify', 'Blobbosite', 'Kalosite', 'Sexite', 'Reversite'],
 		unbanlist: [
 			'Abomasite', 'Absolite', 'Aerodactylite', 'Aggronite', 'Alakazite', 'Altarianite', 'Ampharosite', 'Audinite', 'Banettite', 'Blastoisinite', 'Blue Orb', 'Cameruptite', 'Charizardite X', 'Charizardite Y', 'Diancite', 'Galladite', 'Garchompite', 'Gardevoirite', 'Glalitite', 'Gyaradosite', 'Heracronite', 'Houndoominite', 'Latiasite', 'Latiosite', 'Lopunnite', 'Lucarionite', 'Manectite', 'Metagrossite', 'Mewtwonite X', 'Mewtwonite Y', 'Pinsirite', 'Red Orb', 'Sablenite', 'Salamencite', 'Sceptilite', 'Scizorite', 'Sharpedonite', 'Slowbronite', 'Steelixite', 'Swampertite', 'Tyranitarite', 'Venusaurite', 'Bitekinite', 'Chasumite', 'Condoomite', 'Dowsterite', 'Ebolabite', 'Emplyinite', 'Faptite', 'Floriousite', 'Fonduppite', 'Goryannusite', 'Grimdakite', 'Hazmatite', 'Hohohomite', 'Honradite', 'Illumatrixite', 'Jerklite', 'Krokizonite', 'Kuklanite', 'Lizakbarite', 'Ooganite', 'Pigusonite', 'Rectreemite', 'Reptrillite', 'Ricosuavite', 'Smelloxite', 'Somboludite', 'Spookscarite', 'Spookzillite', 'Unjoyite', 'Upbeddite', 'Vandashite', 'Wifeminite', 'Uber'],
 		restricted: [

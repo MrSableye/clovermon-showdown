@@ -57,13 +57,25 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 
 			team.forEach((set) => {
 				const species = this.dex.species.get(set.species || set.name);
+				let baseSpecies = this.dex.species.get(species.baseSpecies);
+				let baseForme = species;
+				let maxDepth = 10;
+				while (baseSpecies.baseSpecies !== baseSpecies.name && maxDepth > 0) {
+					baseForme = baseSpecies;
+					baseSpecies = this.dex.species.get(baseSpecies.baseSpecies);
+					maxDepth--;
+				}
 
-				if (species.baseSpecies !== 'Blobbos' && species.baseSpecies !== 'Bootlos') {
+				if (maxDepth === 0) {
+					errors.push('Recursive species found. Please report this to an administrator');
+				}
+
+				if (baseSpecies.name !== 'Blobbos' && baseSpecies.name !== 'Bootlos') {
 					errors.push(`${set.name || set.species} is not a forme of Blobbos.`);
 				}
 
-				if (blobbosFormeCount[species.id]) blobbosFormeCount[species.id] = 0;
-				blobbosFormeCount[species.id] = blobbosFormeCount[species.id] + 1;
+				if (!blobbosFormeCount[baseForme.id]) blobbosFormeCount[baseForme.id] = 0;
+				blobbosFormeCount[baseForme.id] = blobbosFormeCount[baseForme.id] + 1;
 			});
 
 			Object.entries(blobbosFormeCount).forEach(([formeId, formeCount]) => {
@@ -74,18 +86,6 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 			});
 
 			return errors;
-		},
-	},
-	noblobbos: {
-		effectType: 'ValidatorRule',
-		name: 'No Blobbos',
-		desc: "Blobbos is illegal.",
-		onValidateSet(set) {
-			const species = this.dex.species.get(set.species || set.name);
-
-			if (species.baseSpecies === 'Blobbos') {
-				return [`${set.name || set.species} is Blobbos. Fun is not allowed.`];
-			}
 		},
 	},
 };

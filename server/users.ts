@@ -369,6 +369,7 @@ export class User extends Chat.MessageContext {
 	foodfight?: {generatedTeam: string[], dish: string, ingredients: string[], timestamp: number};
 	friends?: Set<string>;
 	badges?: UserBadge[];
+	customgroup?: string;
 
 	chatQueue: ChatQueueEntry[] | null;
 	chatQueueTimeout: NodeJS.Timeout | null;

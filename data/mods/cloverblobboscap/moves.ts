@@ -163,7 +163,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Nuclear",
 		isNonstandard: null,
 	},
-	meltdown: {
+	nuclearmeltdown: {
 		inherit: true,
 		type: "Nuclear",
 		isNonstandard: null,
@@ -180,4 +180,70 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	skulltoss: {
+		inherit: true,
+		isNonstandard: null,
+		flags: {protect: 1, mirror: 1, bone: 1},
+	},
+	blobblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	floofandpoof: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sunburst: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	deepfry: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	flashbang: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	doubleiceblob: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	extremesneed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bouncyball: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bouncybubble: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	buzzybuzz: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	windwhip: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sleepingsands: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	feedandseed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	relicsong: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	astralbarrage: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
+
