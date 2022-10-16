@@ -970,4 +970,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	doomsday: {
+		isNonstandard: null,
+		tier: "AG",
+	},
 };

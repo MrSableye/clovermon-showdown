@@ -192,7 +192,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Gen 8 Moves',
 		],
-		banlist: ['Baton Pass'],
+		banlist: ['Baton Pass', 'AG'],
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] OU',
@@ -225,6 +225,11 @@ export const Formats: FormatList = [
 			'Sketch Gen 8 Moves',
 		],
 		banlist: ['Moody', 'Baton Pass', 'Dragon Rage', 'Sonic Boom'],
+	},
+	{
+		name: '[Gen 8 Clover CAP Only] Anything Goes',
+		mod: 'clovercap',
+		ruleset: ['Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', 'Sketch Gen 8 Moves', 'Dynamax Clause'],
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] Doubles OU',
