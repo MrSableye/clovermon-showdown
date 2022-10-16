@@ -21321,6 +21321,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			return move.basePower * pokemon.hp / pokemon.maxhp;
+		},
 		selfdestruct: "always",
 		overrideOffensiveStat: "def",
 		secondary: null,
