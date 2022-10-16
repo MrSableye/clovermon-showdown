@@ -5427,6 +5427,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Hydrothermal",
 		onModifyMove(move) {
 			if (!["Fire", "Water"].includes(move.type)) return;
+			if (move.category === 'Status') return;
 			if (!move.secondaries) {
 				move.secondaries = [];
 			}
