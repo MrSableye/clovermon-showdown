@@ -31785,13 +31785,13 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Mineral"],
 		gen: 8,
 	},
-	vulkancer: {
+	molterra: {
 		num: 42106,
-		name: "Vulkancer",
+		name: "Molterra",
 		types: ["Fire", "Ground"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 80, atk: 90, def: 90, spa: 140, spd: 60, spe: 30},
-		abilities: {0: "Flame Body", 1: "Magma Armor", H: "Dancer", S: "Speed Boost"},
+		baseStats: {hp: 83, atk: 107, def: 104, spa: 124, spd: 72, spe: 30},
+		abilities: {0: "Battle Armor", 1: "Magma Armor", H: "Turboblaze", S: "Sheer Force"},
 		heightm: 1,
 		weightkg: 40,
 		color: "Red",

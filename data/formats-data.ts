@@ -8353,7 +8353,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	vulkancer: {
+	molterra: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

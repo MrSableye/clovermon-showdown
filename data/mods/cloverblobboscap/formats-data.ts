@@ -1732,7 +1732,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	vulkancer: {
+	molterra: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
