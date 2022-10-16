@@ -774,4 +774,20 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	wrapd: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	blizzardd: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	amnesiad: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hyperbeamd: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
