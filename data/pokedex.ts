@@ -33350,7 +33350,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Ice", "Poison"],
 		gender: "N",
 		baseStats: {hp: 79, atk: 132, def: 61, spa: 133, spd: 69, spe: 79},
-		abilities: {0: "Liquid Oooze", 1: "Poison Touch", H: "Illuminate", S: "Adaptability"},
+		abilities: {0: "Liquid Ooze", 1: "Poison Touch", H: "Illuminate", S: "Adaptability"},
 		heightm: 1.9,
 		weightkg: 121.3,
 		color: "White",
@@ -36583,7 +36583,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 130,
 		},
 		abilities: {
-			0: "Kingly Majesty",
+			0: "Slavemaster",
 		},
 		heightm: 1.7,
 		weightkg: 55.6,

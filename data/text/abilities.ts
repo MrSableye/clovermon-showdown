@@ -2000,6 +2000,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Hydrothermal",
 		desc: "Fire- and Water-type moves have a 10% higher chance to burn.",
 	},
+	slavemaster: {
+		name: "Slavemaster",
+		desc: "Doubles the power of HM moves.",
+	},
 	chording: {
 		name: "Chording",
 		desc: "After using a Special attack, its Atk is raised by 1 stage. After using a Physical attack, its Sp. Atk is raised by 1 stage.",

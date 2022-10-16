@@ -5446,6 +5446,29 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				});
 			}
 		},
+		isNonstandard: "Future",
+	},
+	slavemaster: {
+		name: "Slavemaster",
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			const affectedHMs = [
+				'cut',
+				'strength',
+				'rockclimb',
+				'rocksmash',
+				'fly',
+				'surf',
+				'dive',
+				'waterfall',
+				'defog',
+			];
+			if (affectedHMs.includes(move.id)) {
+				this.debug('Slavemaster boost');
+				return this.chainModify(2);
+			}
+		},
+		isNonstandard: "Future",
 	},
 	chording: {
 		name: "Chording",
