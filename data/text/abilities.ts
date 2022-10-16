@@ -1974,7 +1974,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	leech: {
 		name: "Leech",
-		shortDesc: "User recovers 25% of damage dealt.",
+		shortDesc: "User recovers 50% of damage dealt.",
 	},
 	supportive: {
 		name: "Supportive",
