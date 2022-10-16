@@ -1871,7 +1871,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	omniscience: {
 		name: "Omniscience",
-		desc: "This Pokemon can hit Dark types with Psychic-type moves.",
+		desc: "This Pokemon can hit Dark types with Psychic-type moves. Psychic-type moves don't miss.",
 	},
 	oldschool: {
 		name: "Old School",
@@ -1890,7 +1890,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	tetanus: {
 		name: "Tetanus",
-		shortDesc: "A Pokemon making contact with this Pokemon will be Toxic poisoned.",
+		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be Toxic poisoned.",
 	},
 	shavedice: {
 		name: "Shaved Ice",
@@ -1989,6 +1989,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Boner Zoner",
 		shortDesc: "This Pokemon's Bone-based and Dragon moves ignore immunities.",
 		start: "  [POKEMON] has descended into the Boner Zoner!",
+	},
+	pairoswrath: {
+		name: "Pairo's Wrath",
+		desc: "This Pokemon is immune to Fire-type moves and raises its Special Attack by 1 stage when hit by a Fire-type move.",
+
+		activate: "#lightningrod",
 	},
 	chording: {
 		name: "Chording",

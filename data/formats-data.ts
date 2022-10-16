@@ -8653,7 +8653,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	tsenami: {
+	tsemani: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

@@ -7322,6 +7322,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		end: "  [TEAM]'s Backdraft petered out!",
 		switchOut: "#uturn",
 	},
+	cherrybomb: {
+		name: "Cherry Bomb",
+		shortDesc: "Hits twice. 10% brn.",
+	},
+	crashhopper: {
+		name: "Crash Hopper",
+		desc: "30% prz. Paralyze self on miss.",
+	},
 	closeblobmat: {
 		name: "Close Blobmat",
 		shortDesc: "Lowers the user's Defense and Sp. Def by 6, and Speed by 1.",

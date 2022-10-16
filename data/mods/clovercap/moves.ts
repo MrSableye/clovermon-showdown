@@ -1,5 +1,9 @@
 export const Moves: { [k: string]: ModdedMoveData } = {
 	/* CAP Enabled/Modified Moves */
+	aerialace: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, distance: 1, blade: 1},
+	},
 	appleacid: {
 		inherit: true,
 		isNonstandard: null,
@@ -139,6 +143,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	firefang: {
+		inherit: true,
+		accuracy: 100,
+	},
+	firstimpression: {
+		inherit: true,
+		priority: 3,
+	},
 	fishiousrend: {
 		inherit: true,
 		isNonstandard: null,
@@ -168,6 +180,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	gravapple: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	icefang: {
+		inherit: true,
+		accuracy: 100,
 	},
 	jawlock: {
 		inherit: true,
@@ -478,6 +494,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	thunderfang: {
+		inherit: true,
+		accuracy: 100,
+	},
 	thunderouskick: {
 		inherit: true,
 		isNonstandard: null,
@@ -744,6 +764,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	frigidend: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cherrybomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	crashhopper: {
 		inherit: true,
 		isNonstandard: null,
 	},

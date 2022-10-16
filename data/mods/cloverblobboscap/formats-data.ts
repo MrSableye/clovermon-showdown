@@ -2044,7 +2044,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	tsenami: {
+	tsemani: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
