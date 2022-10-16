@@ -5423,6 +5423,29 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		isNonstandard: "Future",
 	},
+	hydrothermal: {
+		name: "Hydrothermal",
+		onModifyMove(move) {
+			if (!["Fire", "Water"].includes(move.type)) return;
+			if (!move.secondaries) {
+				move.secondaries = [];
+			}
+			const burnIndexes = [];
+			move.secondaries.forEach((secondary, secondaryIndex) => {
+				if (secondary.status === 'brn') {
+					secondary.chance = (secondary.chance || 0) + 10;
+					burnIndexes.push(secondaryIndex);
+				}
+			});
+			if (!burnIndexes.length) {
+				move.secondaries.push({
+					chance: 10,
+					status: 'brn',
+					ability: this.dex.abilities.get('hydrothermal'),
+				});
+			}
+		},
+	},
 	chording: {
 		name: "Chording",
 		onAfterMove(source, target, move) {

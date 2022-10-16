@@ -53,6 +53,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	primordialsea: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	transistor: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	punkrock: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	/* Clover CAP Abilities */
 	cakeveil: {
 		inherit: true,
@@ -191,6 +203,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	pairoswrath: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hydrothermal: {
 		inherit: true,
 		isNonstandard: null,
 	},

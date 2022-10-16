@@ -419,7 +419,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	surgingstrikes: {
 		inherit: true,
 		isNonstandard: null,
-		noSketch: true,
 	},
 	synthesis: {
 		inherit: true,
