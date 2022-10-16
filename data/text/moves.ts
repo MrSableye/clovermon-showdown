@@ -7226,8 +7226,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	coldcutter: {
 		name: "Cold Cutter",
-		desc: "Has a higher chance for a critical hit and a 20% chance to freeze the target.",
-		shortDesc: "High critical hit ratio, 20% chance to freeze.",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
 	},
 	shadowscales: {
 		name: "Shadow Scales",
@@ -7273,10 +7273,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mudmaelstrom: {
 		name: "Mud Maelstrom",
-		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
-		shortDesc: "Traps and damages the target for 4-5 turns.",
-
-		start: "  [POKEMON] became trapped by the geyser of mud!",
+		desc: "Has a 30% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "30% chance to lower the target's Spe by 1.",
 	},
 	finalhour: {
 		name: "Final Hour",
@@ -7307,12 +7305,12 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	nuclearwinter: {
 		name: "Nuclear Winter",
-		desc: "Has a 10% chance to poison the target. This move's type effectiveness against Ice is changed to be super effective no matter what this move's type is.",
-		shortDesc: "10% poison. Super effective on Ice.",
+		desc: "Has a 10% chance to freeze the target. This move's type effectiveness against Poison is changed to be super effective no matter what this move's type is.",
+		shortDesc: "10% freeze. Super effective on Poison.",
 	},
 	badeggs: {
 		name: "Bad Eggs",
-		shortDesc: "Hits 3 times, hits can miss, gets stronger, 20% psn.",
+		shortDesc: "Hits 3 times, hits can miss, gets stronger, 10% psn.",
 	},
 	backdraft: {
 		name: "Backdraft",
@@ -7484,8 +7482,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	faeblade: {
 		name: "Faeblade",
-		desc: "Deals damage to the target based on its Special Defense instead of Defense.",
-		shortDesc: "Damages target based on Sp.Def, not Defense",
+		desc: "This move becomes a physical attack that makes contact if the value of ((((2 * the user's level / 5 + 2) * 90 * X) / Y) / 50), where X is the user's Attack stat and Y is the target's Defense stat, is greater than the same value where X is the user's Special Attack stat and Y is the target's Special Defense stat. No stat modifiers other than stat stage changes are considered for this purpose. If the two values are equal, this move chooses a damage category at random.",
+		shortDesc: "Physical+contact if it would be stronger.",
 	},
 	stickytongue: {
 		name: "Sticky Tongue",
@@ -7513,7 +7511,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	flakcannon: {
 		name: "Flak Cannon",
-		shortDesc: "Removes user's held item, Crits three times.",
+		shortDesc: "Removes user's held item, always crits.",
 
 		removeItem: "  [POKEMON] shot the fragments of [ITEM]!",
 	},
