@@ -8353,7 +8353,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	vulkancer: {
+	molterra: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8653,7 +8653,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	tsenami: {
+	tsemani: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8826,6 +8826,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	peashroom: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	doomsday: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

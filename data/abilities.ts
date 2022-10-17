@@ -4950,7 +4950,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
 		onResidual(pokemon) {
-			this.heal(pokemon.baseMaxhp / 8);
+			this.heal(pokemon.baseMaxhp / 10);
 		},
 		name: "Cake Veil",
 		rating: 4,
@@ -4981,6 +4981,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Psychic'] = true;
+			}
+			if (move.type === 'Psychic') {
+				move.accuracy = true;
 			}
 		},
 		name: "Omniscience",
@@ -5029,7 +5032,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	tetanus: {
 		onDamagingHit(damage, target, source, move) {
 			if (move.flags['contact']) {
-				source.trySetStatus('tox', target);
+				if (this.randomChance(3, 10)) {
+					source.trySetStatus('tox', target);
+				}
 			}
 		},
 		name: "Tetanus",
@@ -5114,6 +5119,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'solarblade',
 				'steelbeam',
 				'prismaticlaser',
+				'beamblade',
 			];
 			if (beamMoves.includes(move.id)) {
 				this.debug('Beam Boost boost');
@@ -5348,7 +5354,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onAfterMoveSecondarySelfPriority: -1,
 		onAfterMoveSecondarySelf(pokemon, target, move) {
 			if (move.totalDamage) {
-				this.heal(move.totalDamage / 4, pokemon);
+				this.heal(move.totalDamage / 2, pokemon);
 			}
 		},
 		name: "Leech",
@@ -5403,6 +5409,65 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Eclipse",
 		rating: 4,
+		isNonstandard: "Future",
+	},
+	pairoswrath: {
+		name: "Pairo's Wrath",
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fire') {
+				if (!this.boost({spa: 1})) {
+					this.add('-immune', target, '[from] ability: Pairo\'s Wrath');
+				}
+				return null;
+			}
+		},
+		isNonstandard: "Future",
+	},
+	hydrothermal: {
+		name: "Hydrothermal",
+		onModifyMove(move) {
+			if (!["Fire", "Water"].includes(move.type)) return;
+			if (move.category === 'Status') return;
+			if (!move.secondaries) {
+				move.secondaries = [];
+			}
+			const burnIndexes = [];
+			move.secondaries.forEach((secondary, secondaryIndex) => {
+				if (secondary.status === 'brn') {
+					secondary.chance = (secondary.chance || 0) + 10;
+					burnIndexes.push(secondaryIndex);
+				}
+			});
+			if (!burnIndexes.length) {
+				move.secondaries.push({
+					chance: 10,
+					status: 'brn',
+					ability: this.dex.abilities.get('hydrothermal'),
+				});
+			}
+		},
+		isNonstandard: "Future",
+	},
+	slavemaster: {
+		name: "Slavemaster",
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			const affectedHMs = [
+				'cut',
+				'strength',
+				'rockclimb',
+				'rocksmash',
+				'fly',
+				'surf',
+				'dive',
+				'waterfall',
+				'defog',
+			];
+			if (affectedHMs.includes(move.id)) {
+				this.debug('Slavemaster boost');
+				return this.chainModify(2);
+			}
+		},
 		isNonstandard: "Future",
 	},
 	chording: {

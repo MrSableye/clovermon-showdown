@@ -21020,7 +21020,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	crusadercrash: {
 		num: 42001,
 		accuracy: 100,
-		basePower: 85,
+		basePower: 80,
 		category: "Physical",
 		name: "Crusader Crash",
 		pp: 5,
@@ -21230,7 +21230,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	boilover: {
 		num: 42009,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Boil Over",
@@ -21321,6 +21321,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			return move.basePower * pokemon.hp / pokemon.maxhp;
+		},
 		selfdestruct: "always",
 		overrideOffensiveStat: "def",
 		secondary: null,
@@ -21378,7 +21381,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	phasethrough: {
 		num: 42018,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 60,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Phase Through",
@@ -21393,7 +21396,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	coldcutter: {
 		num: 42019,
 		accuracy: 100,
-		basePower: 90,
+		basePower: 75,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Cold Cutter",
@@ -21401,10 +21404,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 		critRatio: 2,
-		secondary: {
-			chance: 20,
-			status: 'frz',
-		},
 		target: "normal",
 		type: "Ice",
 	},
@@ -21428,7 +21427,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	wingsofcorrection: {
 		accuracy: true,
-		basePower: 100,
+		basePower: 150,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Wings Of Correction",
@@ -21469,7 +21468,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Brutal Punishment",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: {
 			chance: 100,
 			self: {
@@ -21541,7 +21540,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Meme Jr.",
-		pp: 15,
+		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
@@ -21580,7 +21579,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	shinestrike: {
 		accuracy: 100,
-		basePower: 30,
+		basePower: 25,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Shine Strike",
@@ -21659,15 +21658,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	mudmaelstrom: {
-		accuracy: 80,
-		basePower: 100,
+		accuracy: 90,
+		basePower: 110,
 		category: "Special",
 		name: "Mud Maelstrom",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		volatileStatus: 'partiallytrapped',
-		secondary: null,
+		secondary: {
+			chance: 30,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Ground",
 		isNonstandard: "Future",
@@ -21834,7 +21837,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		multihit: 3,
 		multiaccuracy: true,
 		secondary: {
-			chance: 20,
+			chance: 10,
 			status: 'psn',
 		},
 		target: "normal",
@@ -21845,7 +21848,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 366,
 		accuracy: true,
 		basePower: 65,
-		category: "Physical",
+		category: "Special",
 		name: "Backdraft",
 		pp: 5,
 		priority: 0,
@@ -21949,19 +21952,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	nuclearwinter: {
-		accuracy: 95,
-		basePower: 90,
+		accuracy: 70,
+		basePower: 120,
 		category: "Special",
 		name: "Nuclear Winter",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
-			if (type === 'Ice') return 1;
+			if (type === 'Poison') return 1;
+		},
+		onModifyMove(move) {
+			if (this.field.isWeather('hail')) move.accuracy = true;
 		},
 		secondary: {
 			chance: 10,
-			status: 'psn',
+			status: 'frz',
 		},
 		target: "allAdjacentFoes",
 		type: "Ice",
@@ -22365,7 +22371,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Black Bomb",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: null,
 		onTry(source, target) {
 			if (!source.volatiles['buried']) {
@@ -22386,7 +22392,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Beam Blade",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, blade: 1},
 		critRatio: 2,
 		secondary: null,
 		target: "normal",
@@ -22661,11 +22667,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 80,
 		category: "Physical",
-		overrideDefensiveStat: 'spd',
 		name: "Faeblade",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, blade: 1},
+		onPrepareHit(target, source, move) {
+			if (!source.isAlly(target)) {
+				this.attrLastMove('[anim] Faeblade ' + move.category);
+			}
+		},
+		onModifyMove(move, pokemon, target) {
+			if (!target) return;
+			const atk = pokemon.getStat('atk', false, true);
+			const spa = pokemon.getStat('spa', false, true);
+			const def = target.getStat('def', false, true);
+			const spd = target.getStat('spd', false, true);
+			const physical = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * atk) / def) / 50);
+			const special = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * spa) / spd) / 50);
+			if (physical > special || (physical === special && this.random(2) === 0)) {
+				move.category = 'Physical';
+				move.flags.contact = 1;
+			}
+		},
+		onHit(target, source, move) {
+			// Shell Side Arm normally reveals its category via animation on cart, but doesn't play either custom animation against allies
+			if (!source.isAlly(target)) this.hint(move.category + " Faeblade");
+		},
+		onAfterSubDamage(damage, target, source, move) {
+			if (!source.isAlly(target)) this.hint(move.category + " Faeblade");
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fairy",
@@ -22673,7 +22703,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	stickytongue: {
 		accuracy: 100,
-		basePower: 75,
+		basePower: 70,
 		category: "Physical",
 		name: "Sticky Tongue",
 		pp: 20,
@@ -22779,7 +22809,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Physical",
 		name: "Rocket Punch",
 		pp: 10,
-		priority: 2,
+		priority: 3,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		onTry(source) {
 			if (source.activeMoveActions > 1) {
@@ -22811,16 +22841,50 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Water",
 		isNonstandard: "Future",
 	},
+	cherrybomb: {
+		accuracy: 90,
+		basePower: 35,
+		category: "Physical",
+		name: "Cherry Bomb",
+		pp: 15,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Fire",
+		isNonstandard: "Future",
+	},
+	crashhopper: {
+		accuracy: 90,
+		basePower: 100,
+		category: "Physical",
+		name: "Crash Hopper",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onMoveFail(target, source) {
+			source.trySetStatus('prz');
+		},
+		secondary: {
+			chance: 30,
+			status: 'prz',
+		},
+		target: "normal",
+		type: "Bug",
+		isNonstandard: "Future",
+	},
 	flakcannon: {
 		accuracy: 100,
-		basePower: 35,
+		basePower: 105,
 		category: "Special",
 		name: "Flak Cannon",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, pulse: 1, mirror: 1, mystery: 1},
 		willCrit: true,
-		multihit: 3,
 		onPrepareHit(target, source, move) {
 			if (source.ignoringItem()) return false;
 			const item = source.getItem();
