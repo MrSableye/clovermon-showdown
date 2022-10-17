@@ -22828,7 +22828,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 100,
 		category: "Special",
 		name: "Power Washer",
-		pp: 5,
+		pp: 10,
 		priority: -1,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
@@ -22842,13 +22842,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	cherrybomb: {
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 35,
 		category: "Physical",
 		name: "Cherry Bomb",
 		pp: 15,
 		priority: 0,
 		flags: {bullet: 1, protect: 1, mirror: 1},
+		multihit: 2,
 		secondary: {
 			chance: 10,
 			status: 'brn',
