@@ -1,4 +1,4 @@
-export const MovesText: {[k: string]: MoveText} = {
+nastyplot: ["3L1"],export const MovesText: {[k: string]: MoveText} = {
 	"10000000voltthunderbolt": {
 		name: "10,000,000 Volt Thunderbolt",
 		desc: "Has a very high chance for a critical hit.",
@@ -7394,6 +7394,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Cope",
 		shortDesc: "Hits 69 times.",
 	},
+	eternalwalk: {
+		name: "Eternal Walk",
+		desc: "Hits 255 times. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Magic Guard Ability are unaffected by crash damage.",
+		shortDesc: "Hits 255 times. Each hit can miss, crash on miss.",
+	},
 	matingpress: {
 		name: "Mating Press",
 		desc: "20% chance to have a child with the opposing mon with no item and only Metronome. Can only occur once for a user.",
@@ -7450,8 +7455,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	blackbomb: {
 		name: "Black Bomb",
-		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
-		shortDesc: "Traps and damages the target for 4-5 turns.",
+		desc: "If the user is a Flying type or a Pokemon with the Levitate Ability, it loses its immunity to Ground-type attacks and the Arena Trap Ability the turn it is used as well as the turn afterwards. During the effect, Magnet Rise fails for the user.",
+		shortDesc: "Grounds and traps the user for a turn when used.",
 
 		start: "  [POKEMON] became buried!",
 	},
