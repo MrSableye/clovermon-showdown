@@ -303,7 +303,7 @@ export const Formats: FormatList = [
 			'Sketch Gen 8 Moves',
 		],
 		banlist: [
-			'Chancer', 'Semrust',
+			'Chancer', 'Semrust', 'Hosajack',
 			'Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Wonder Guard',
 		],
 	},

@@ -245,5 +245,17 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	fruitjuice: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sizzlyslide: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	electromagnetism: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
 
