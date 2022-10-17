@@ -8995,9 +8995,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	krackowalker: {
-        tier: "Illegal",
-        isNonstandard: "Future",
-    },
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	heaventoad: {
 		tier: "Illegal",
 		isNonstandard: "Future",

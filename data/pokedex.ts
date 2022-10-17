@@ -35590,7 +35590,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	krackowalker: {
 		num: -42113,
 		name: "Krackowalker",
-		types: ["Dark","Electric"],
+		types: ["Dark", "Electric"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 90, atk: 109, def: 73, spa: 69, spd: 64, spe: 142},
 		abilities: {0: "Cloud Nine", 1: "Quick Feet", H: "Tough Claws", S: "Speed Boost"},

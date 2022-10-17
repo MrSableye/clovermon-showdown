@@ -22088,14 +22088,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
-		},		
+		},
 		multihit: 255,
 		multiaccuracy: true,
 		secondary: null,
 		target: "normal",
 		type: "Electric",
 		noSketch: true,
-		isNonstandard: "Future"
+		isNonstandard: "Future",
 	},
 	matingpress: {
 		accuracy: 100,
