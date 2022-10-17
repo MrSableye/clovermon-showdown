@@ -35674,6 +35674,18 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Fairy"],
 		requiredItem: "Ointmiteite",
 	},
+	beegyosh: {
+		num: -42012,
+		name: "Beegyosh",
+		types: ["Normal", "Dragon"],
+		gender: "M",
+		baseStats: {hp: 135, atk: 115, def: 120, spa: 115, spd: 120, spe: 60},
+		abilities: {0: "Big Guy", 1: "Long Reach", H: "Gluttony", S: "Thick Fat"},
+		heightm: 9999999999999,
+		weightkg: 9999999999999,
+		color: "Green",
+		eggGroups: ["Dragon", "Monster"],
+	},
 	/* Clover CAP Megas */
 	oogabugamega: {
 		num: 69268,
