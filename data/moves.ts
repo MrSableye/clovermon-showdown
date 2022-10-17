@@ -23620,11 +23620,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {basePower: 160},
 		isNonstandard: "Future",
 	},
-	doesthiswork: {
+	bloodletting: {
 		accuracy: true,
-		basePower: 60,
+		basePower: 40,
 		category: "Status",
-		name: "Does This Work",
+		name: "Bloodletting",
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1, dance: 1},
@@ -23635,7 +23635,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		noSketch: true,
 		target: "self",
-		type: "Psychic",
+		type: "Poison",
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Beautiful",
 		isNonstandard: "Future",
@@ -24218,7 +24218,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		sleepUsable: true,
 		secondary: {
 			chance: 10,
 			status: 'brn',
@@ -24441,6 +24440,158 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "allyTeam",
 		type: "Psychic",
 		zMove: {effect: 'heal'},
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	flashfreeze: {
+		num: 420,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Flash Freeze",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	electromagnetism: {
+		num: 393,
+		accuracy: 85,
+		basePower: 115,
+		category: "Special",
+		name: "Electromagnetism",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'magnetrise',
+		onTry(source, target, move) {
+			if (target.volatiles['smackdown'] || target.volatiles['ingrain']) return false;
+
+			// Additional Gravity check for Z-move variant
+			if (this.field.getPseudoWeather('Gravity')) {
+				this.add('cant', source, 'move: Gravity', move);
+				return null;
+			}
+		},
+		condition: {
+			duration: 5,
+			onStart(target) {
+				this.add('-start', target, 'Magnet Rise');
+			},
+			onImmunity(type) {
+				if (type === 'Ground') return false;
+			},
+			onResidualOrder: 18,
+			onEnd(target) {
+				this.add('-end', target, 'Magnet Rise');
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Electric",
+		zMove: {boost: {evasion: 1}},
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	nosedive: {
+		num: 354,
+		accuracy: 90,
+		basePower: 140,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Nosedive",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				def: -2,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+		contestType: "Clever",
+	},
+	paranormalactivity: {
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Paranormal Activity",
+		pp: 20,
+		priority: 0,
+		ignoreImmunity: {'Ghost': true},
+		flags: {protect: 1, mirror: 1},
+		target: "normal",
+		noSketch: true,
+		type: "Ghost",
+		contestType: "Cool",
+	},
+	downpour: {
+		num: 173,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Downpour",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				this.field.setWeather('raindance');
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Water",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	snowstorm: {
+		num: 173,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Snowstorm",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		sleepUsable: true,
+		secondary: {
+			chance: 10,
+			status: 'frz',
+		},
+		self: {
+			onHit(source) {
+				this.field.setWeather('hail');
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Ice",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	titaniumclap: {
+		num: 550,
+		accuracy: 85,
+		basePower: 125,
+		category: "Physical",
+		name: "Titanium Clap",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Steel",
 		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},
