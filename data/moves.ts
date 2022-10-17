@@ -28,7 +28,7 @@ sound: Has no effect on Pokemon with the Soundproof Ability.
 
 import {Pokemon} from "../sim";
 
-export const MovesText: {[k: string]: MoveText} = {
+export const Moves: {[moveid: string]: MoveData} = {
 	"10000000voltthunderbolt": {
 		num: 719,
 		accuracy: true,
