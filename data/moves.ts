@@ -22879,19 +22879,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	crashhopper: {
-		accuracy: 90,
+		accuracy: 85,
 		basePower: 100,
 		category: "Physical",
 		name: "Crash Hopper",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick:1},
 		onMoveFail(target, source) {
-			source.trySetStatus('prz');
+			source.trySetStatus('par');
 		},
 		secondary: {
 			chance: 30,
-			status: 'prz',
+			status: 'par',
 		},
 		target: "normal",
 		type: "Bug",
