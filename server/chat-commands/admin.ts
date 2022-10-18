@@ -766,7 +766,7 @@ export const commands: Chat.ChatCommands = {
 			['development', 'staff'] as RoomID[],
 			`|c|${user.getIdentity()}|/log ${user.name} used /hotpatch ${target}`
 		);
-		if (this.room && options.includes('notify')) {
+		if (this.room && (options || [] as string[]).includes('notify')) {
 			this.room.add(`|raw|<p>${user.name} hotpatched ${target}</p>`);
 		}
 	},
