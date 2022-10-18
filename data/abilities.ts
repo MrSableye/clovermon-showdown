@@ -4982,7 +4982,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Psychic'] = true;
 			}
-			if (move.type === 'Psychic') {
+			if (move.category !== 'Status' && move.type === 'Psychic') {
 				move.accuracy = true;
 			}
 		},
