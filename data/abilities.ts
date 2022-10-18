@@ -5482,6 +5482,29 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		isNonstandard: "Future",
 	},
+	capacitance: {
+		name: "Capacitance",
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			const makesContact = this.checkMoveMakesContact(move, source, target, true);
+			const stockpileLayers = target.volatiles['stockpile']?.layers;
+
+			if (makesContact && stockpileLayers) {
+				const isImmune = this.dex.getImmunity('Electric', source);
+				const typeMod = this.clampIntRange(this.dex.getEffectiveness('Electric', source), -6, 6);
+				if (isImmune) {
+					this.add('-immune', source);
+				} else {
+					this.damage(source.maxhp * Math.pow(2, typeMod) / 8, source, target);
+					if (this.randomChance(2 * stockpileLayers, 10)) {
+						source.trySetStatus('par', target);
+					}
+				}
+				target.removeVolatile('stockpile');
+			}
+		},
+		isNonstandard: "Future",
+	},
 	lootable: {
 		name: "Lootable",
 		onFaint(target) {

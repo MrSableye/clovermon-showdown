@@ -2008,6 +2008,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Chording",
 		desc: "After using a Special attack, its Atk is raised by 1 stage. After using a Physical attack, its Sp. Atk is raised by 1 stage.",
 	},
+	capacitance: {
+		name: "Capacitance",
+		desc: "Pokemon making contact with this Pokemon lose 1/8 times this Pokemon's Stockpile count of their maximum HP, rounded down. Factors Electric weakness. 20% chance per use of Stockpile to paralyze. Resets Stockpile.",
+
+		damage: "  [POKEMON] was shocked!",
+	},
 	eclipse: {
 		name: "Eclipse",
 		desc: "On switch-in, removes Sunny Day and Desolate Land for a stat boost.",
