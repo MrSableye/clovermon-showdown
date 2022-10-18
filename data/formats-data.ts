@@ -8985,6 +8985,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	spweedle: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+	oblivion: {
+		tier: "illegal",
+		isNonstandard: "Future",
 	},
 	waterweedle: {
 		tier: "Illegal",
