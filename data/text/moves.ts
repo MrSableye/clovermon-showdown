@@ -7394,6 +7394,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Hits four times. Power quadruples on the fourth hit. The fourth hit becomes Physical. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit four times.",
 		shortDesc: "Hits 4 times. Each hit can miss, but power rises on the 4th hit. Last hit is Physical.",
 	},
+	flybackfrenzy: {
+		name: "Flyback Frenzy",
+		desc: "Power is equal to 100 times the user's Stockpile count. Fails if the user's Stockpile count is 0. Whether or not this move is successful, the user's Defense and Special Defense decrease by as many stages as Stockpile had increased them, and the user's Stockpile count resets to 0. 20% chance per use of Stockpile to paralyze.",
+		shortDesc: "More power with more uses of Stockpile. 15% par chance per Stockpile.",
+	},
 	cope: {
 		name: "Cope",
 		shortDesc: "Hits 69 times.",

@@ -22064,6 +22064,36 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		isNonstandard: "Future",
 	},
+	flybackfrenzy: {
+		accuracy: 100,
+		basePower: 0,
+		basePowerCallback(pokemon) {
+			if (!pokemon.volatiles['stockpile']?.layers) return false;
+			return pokemon.volatiles['stockpile'].layers * 100;
+		},
+		category: "Special",
+		name: "Flyback Frenzy",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1},
+		onTry(source) {
+			return !!source.volatiles['stockpile'];
+		},
+		onHit(target, source) {
+			const layers = source.volatiles['stockpile']?.layers || 0;
+			if (this.randomChance(2 * layers, 10)) {
+				target.trySetStatus('par', target);
+			}
+		},
+		onAfterMove(pokemon) {
+			pokemon.removeVolatile('stockpile');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
 	cope: {
 		accuracy: true,
 		basePower: 2,
