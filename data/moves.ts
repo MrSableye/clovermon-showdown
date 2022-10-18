@@ -21359,7 +21359,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	phantomfang: {
 		num: 42017,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 85,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Phantom Fang",
@@ -22603,7 +22603,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	thunderdrop: {
 		accuracy: 100,
-		basePower: 80,
+		basePower: 85,
 		category: "Physical",
 		name: "Thunder Drop",
 		pp: 10,
@@ -22909,13 +22909,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	crashhopper: {
-		accuracy: 85,
+		accuracy: 90,
 		basePower: 100,
 		category: "Physical",
 		name: "Crash Hopper",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1, gravity: 1},
 		onMoveFail(target, source) {
 			source.trySetStatus('par');
 		},

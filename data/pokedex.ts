@@ -35587,6 +35587,17 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		eggGroups: ["Bug"],
 	},
+	oblivion: {
+		num: -42100,
+		name: "Oblivion",
+		types: ["Bug", "Dark"],
+		baseStats: {hp: 120, atk: 85, def: 110, spa: 190, spd: 115, spe: 90},
+		abilities: {0: "Shadow Tag"},
+		heightm: 0.3,
+		weightkg: 3.2,
+		color: "Black",
+		eggGroups: ["Bug"],
+	},
 	krackowalker: {
 		num: -42113,
 		name: "Krackowalker",
