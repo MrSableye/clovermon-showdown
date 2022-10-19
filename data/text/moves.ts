@@ -7408,6 +7408,20 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Hits 255 times. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Magic Guard Ability are unaffected by crash damage.",
 		shortDesc: "Hits 255 times. Each hit can miss, crash on miss.",
 	},
+	destructionstinger: {
+		name: "Destruction Stinger",
+		shortDesc: "Always badly poisons the foe.",
+	},
+	extinctionwave: {
+		name: "Extinction Wave",
+		shortDesc: "Power nonuples if the target is poisoned.",
+	},
+	poisonbullet: {
+		name: "Poison Bullet",
+		shortDesc: "Turn 1: Poisons the foe. Turn 2: 2x damage vs poisoned.",
+
+		prepare: "[POKEMON] is bursting with malice!",
+	},
 	matingpress: {
 		name: "Mating Press",
 		desc: "20% chance to have a child with the opposing mon with no item and only Metronome. Can only occur once for a user.",
@@ -7529,8 +7543,8 @@ export const MovesText: {[k: string]: MoveText} = {
 
 		removeItem: "  [POKEMON] shot the fragments of [ITEM]!",
 	},
-	polysporin: {
-		name: "Polysporin",
+	neosporin: {
+		name: "Neosporin",
 		shortDesc: "Heals the target by 50%, Puts them to sleep.",
 	},
 	backroom: {
