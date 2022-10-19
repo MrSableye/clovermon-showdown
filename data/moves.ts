@@ -11901,7 +11901,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			noCopy: true,
 			onStart(pokemon) {
-				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose')) {
+				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose')&& !pokemon.hasAbility('lethargic')) {
 					return false;
 				}
 				this.add('-start', pokemon, 'Nightmare');
@@ -24721,7 +24721,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					this.add('-fail', target);
 					return null;
 				}
-				this.add('-start', target, 'typechange', 'Water');
+				this.add('-start', target, 'typechange', '???');
 			},
 
 		},

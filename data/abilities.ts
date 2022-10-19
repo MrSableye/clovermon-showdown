@@ -6225,7 +6225,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 
-<<<<<<< HEAD
 		lethargic: {
 			onStart(pokemon) {
 				this.add('-ability', pokemon, 'Lethargic');
@@ -6269,23 +6268,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			},
 			rating: 2,
 			isNonstandard: "Future",
-=======
-
-	lethargic: {
-		onStart(pokemon) {
-			this.add('-ability', pokemon, 'Lethargic');
->>>>>>> 0cabdaa1d6d8843867cfdc77ed2026cce6c47480
+			num: 213,
 		},
-		onSetStatus(status, target, source, effect) {
-			if ((effect as Move)?.status) {
-				this.add('-immune', target, '[from] ability: Lethargic');
-			}
-			return false;
-		},
-		// Permanent sleep "status" implemented in the relevant sleep-checking effects
-		name: "Lethargic",
-		rating: 4,
-		num: 213,
-	},
+		
+	
 
 };
