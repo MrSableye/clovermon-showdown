@@ -7206,7 +7206,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	tombstoner: {
 		name: "Tombstoner",
-		desc: "Power is equal to (user's current HP * 300 / user's maximum HP), rounded down, but not less than 1. The user faints after using this move, Damage is calculated using the user's Defense stat as its Attack. This move is prevented from executing if any active Pokemon has the Damp Ability. ",
+		desc: "Power is equal to (user's current HP * 300 / user's maximum HP), rounded down, but not less than 100. The user faints after using this move, Damage is calculated using the user's Defense stat as its Attack. This move is prevented from executing if any active Pokemon has the Damp Ability. ",
 		shortDesc: "Power = HP%. The user faints, uses user's Def stat as Atk.",
 	},
 	fruitjuice: {

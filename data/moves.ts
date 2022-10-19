@@ -21322,7 +21322,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onModifyMove(move, pokemon) {
-			move.basePower = move.basePower * pokemon.hp / pokemon.maxhp;
+			move.basePower = Math.max(move.basePower * pokemon.hp / pokemon.maxhp, 100);
 		},
 		selfdestruct: "always",
 		overrideOffensiveStat: "def",
