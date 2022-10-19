@@ -6206,6 +6206,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Infection",
 		rating: 3,
 		num: 5,
+		isNonstandard: "Future",
 	},
 
 	perishtouch: {
@@ -6242,6 +6243,35 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			name: "Lethargic",
 			rating: 4,
 			num: 213,
+			isNonstandard: "Future",
+		},
+
+		triforce: {
+			name: "Triforce",
+			onStart(pokemon) {
+				pokemon.addVolatile('triforce');
+			},
+			onEnd(pokemon) {
+				delete pokemon.volatiles['triforce'];
+				this.add('-end', pokemon, 'Triforce', '[silent]');
+			},
+			condition: {
+				duration: 3,
+				onStart(target) {
+					this.add('-start', target, 'ability: Triforce');
+				},
+				onEnd(target) {
+					this.boost({
+						atk: 1,
+						spa: 1,
+						spd: 1,
+						
+					});
+					this.add('-end', target, 'Triforce');
+				},
+			},
+			rating: 2,
+			isNonstandard: "Future",
 		},
 
 };
