@@ -11901,7 +11901,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			noCopy: true,
 			onStart(pokemon) {
-				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose')&& !pokemon.hasAbility('lethargic')) {
+				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose')) {
 					return false;
 				}
 				this.add('-start', pokemon, 'Nightmare');
@@ -21322,7 +21322,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onModifyMove(move, pokemon) {
-			move.basePower = move.basePower * pokemon.hp / pokemon.maxhp;
+			move.basePower = Math.max(move.basePower * pokemon.hp / pokemon.maxhp, 100);
 		},
 		selfdestruct: "always",
 		overrideOffensiveStat: "def",
@@ -24645,8 +24645,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},
-
-	
 	hypersomnia: {
 		num: 738,
 		accuracy: 100,
@@ -24670,10 +24668,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 			return false;
 		},
-
 		self: {
 			onHit(target, source) {
-				
 				const oldAbility = source.setAbility('baddreams');
 				if (oldAbility) {
 					this.add('-ability', source, 'Bad Dreams', '[from] move: Hypersomnia');
@@ -24682,18 +24678,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 				return false;
 			},
 		},
-
 		onAfterHit(target, source) {
 			if (target.getAbility().isPermanent) return;
 			target.addVolatile('nightmare');
-			
-		
 		},
 		target: "normal",
 		type: "Grass",
 		contestType: "Clever",
 	},
-
 	abduction: {
 		num: 509,
 		accuracy: 90,
@@ -24711,9 +24703,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
-
-
-	Xenobeam: {
+	xenobeam: {
 		num: 487,
 		accuracy: 100,
 		basePower: 90,
@@ -24733,12 +24723,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 				this.add('-start', target, 'typechange', 'Water');
 			},
-			
+
 		},
-		
 		target: "normal",
 		type: "Psychic",
 		zMove: {boost: {spa: 1}},
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 };

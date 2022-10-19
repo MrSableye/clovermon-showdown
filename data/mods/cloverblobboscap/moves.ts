@@ -1,4 +1,20 @@
 export const Moves: { [k: string]: ModdedMoveData } = {
+	nightmare: {
+		inherit: true,
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose') && !pokemon.hasAbility('lethargic')) {
+					return false;
+				}
+				this.add('-start', pokemon, 'Nightmare');
+			},
+			onResidualOrder: 11,
+			onResidual(pokemon) {
+				this.damage(pokemon.baseMaxhp / 4);
+			},
+		},
+	},
 	closeblobmat: {
 		inherit: true,
 		isNonstandard: null,
