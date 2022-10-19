@@ -24648,7 +24648,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hypersomnia: {
 		num: 738,
 		accuracy: 100,
-		basePower: 85,
+		basePower: 65,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Hypersomnia",
@@ -24683,7 +24683,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			target.addVolatile('nightmare');
 		},
 		target: "normal",
-		type: "Grass",
+		type: "Ghost",
 		contestType: "Clever",
 	},
 	abduction: {
