@@ -22106,6 +22106,75 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Bug",
 		isNonstandard: "Future", // TODO: Meme move
+		noSketch: true,
+	},
+	destructionstinger: {
+		accuracy: 100,
+		basePower: 99,
+		category: "Physical",
+		name: "Destruction Stinger",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			status: 'tox',
+		},
+		target: "normal",
+		type: "Dark",
+		noSketch: true,
+		isNonstandard: "Future"
+	},
+	extinctionwave: {
+		accuracy: 100,
+		basePower: 66,
+		category: "Special",
+		name: "Extinction Wave",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.status === 'psn' || target.status === 'tox') {
+				return this.chainModify(9);
+			}
+		},
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Dark",
+		noSketch: true,
+		isNonstandard: "Future"
+	},
+	poisonbullet: {
+		accuracy: 100,
+		basePower: 152,
+		category: "Physical",
+		name: "Poison Bullet",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, charge: 1, mirror: 1},
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			defender.trySetStatus('psn');
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		onBasePower(basePower, pokemon, target) {
+			if (target.status === 'psn' || target.status === 'tox') {
+				return this.chainModify(2);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+		noSketch: true,
+		isNonstandard: "Future"
 	},
 	eternalwalk: {
 		accuracy: 90,
@@ -22402,7 +22471,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	darkening: {
 		accuracy: 100,
 		basePower: 135,
-		category: "Special",
+		category: "Physical",
 		name: "Darkening",
 		pp: 10,
 		priority: 0,
@@ -22410,6 +22479,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		drain: [1, 1],
 		secondary: null,
 		noSketch: true,
+		onTry(source) {
+			if (source.species.baseSpecies === 'Doomsday') {
+				return;
+			}
+			this.attrLastMove('[still]');
+			this.add('-fail', source, 'move: Darkening');
+			this.hint("You lack the power.");
+			return null;
+		},
+		onModifyType(move, pokemon) {
+			if (pokemon.species.name === 'Doomsday-Revenant') {
+				move.type = 'Dark';
+			} else {
+				move.type = 'Ghost';
+			}
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.species.name === 'Doomsday-Revenant') move.category = 'Special';
+		},
 		target: "allAdjacent",
 		type: "Ghost",
 		isNonstandard: "Future",
@@ -22969,11 +23057,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		isNonstandard: "Future",
 	},
-	polysporin: {
+	neosporin: {
 		accuracy: 100,
 		basePower: 0,
 		category: "Status",
-		name: "Polysporin",
+		name: "Neosporin",
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},

@@ -758,7 +758,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	polysporin: {
+	neosporin: {
 		inherit: true,
 		isNonstandard: null,
 	},
