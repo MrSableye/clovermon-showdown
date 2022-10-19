@@ -35704,7 +35704,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	titaneedle: {
 		num: -42215,
-		name: "Stingulor",
+		name: "Titaneedle",
 		types: ["Bug", "Fighting"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 85, atk: 165, def: 85, spa: 25, spd: 85, spe: 105},
