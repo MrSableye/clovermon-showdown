@@ -2170,4 +2170,19 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		block: "#damp",
 	},
+	infected: {
+		name: "Infected",
+		desc: "Pokemon is infected by a virus that revives the dead",
+		shortDesc: "Pokemon is infected by a virus that revives the dead",
+	},
+	perishtouch: {
+		name: "Poison Touch",
+		shortDesc: "This Pokemon's contact moves cause perishing",
+	},
+
+	lethargic: {
+		name: "Lethargic",
+		shortDesc: "This Pokemon is on the verge of sleeping",
+	},
+	
 };

@@ -11901,7 +11901,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			noCopy: true,
 			onStart(pokemon) {
-				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose')) {
+				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose')&& !pokemon.hasAbility('lethargic')) {
 					return false;
 				}
 				this.add('-start', pokemon, 'Nightmare');
@@ -24339,35 +24339,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-start', pokemon, 'Autotomize');
 			}
 		},
-		onHit(pokemon) {
-			if (pokemon.volatiles['skulltoss'] && pokemon.volatiles['skulltoss'].layers >= 1) return false;
+		onHit(pokemon, target) {
+			if (target.volatiles['skulltoss'] && target.volatiles['skulltoss'].layers >= 1) return false;
 		},
 		volatileStatus: 'Skull Toss',
 		condition: {
 			noCopy: true,
-			onStart(pokemon) {
+			onStart(pokemon, target) {
 				this.effectState.layers = 1;
 				this.effectState.spe = 0;
-				this.add('-start', pokemon, 'skulltoss' + this.effectState.layers);
-				const [curSpe] = [pokemon.boosts.spe];
-				this.boost({spe: 1}, pokemon);
-				if (curSpe !== pokemon.boosts.spe) this.effectState.spe--;
+				this.add('-start', target, 'skulltoss' + this.effectState.layers);
+				const [curSpe] = [target.boosts.spe];
+				this.boost({spe: 1}, target);
+				if (curSpe !== target.boosts.spe) this.effectState.spe--;
 			},
-			onRestart(pokemon) {
+			onRestart(pokemon, target) {
 				if (this.effectState.layers >= 1) return false;
 				this.effectState.layers++;
-				this.add('-start', pokemon, 'skulltoss' + this.effectState.layers);
-				const curSpe = pokemon.boosts.spe;
-				this.boost({spe: 1}, pokemon);
-				if (curSpe !== pokemon.boosts.spe) this.effectState.spe--;
+				this.add('-start', target, 'skulltoss' + this.effectState.layers);
+				const curSpe = target.boosts.spe;
+				this.boost({spe: 1}, target);
+				if (curSpe !== target.boosts.spe) this.effectState.spe--;
 			},
-			onEnd(pokemon) {
+			onEnd(target) {
 				if (this.effectState.def || this.effectState.spd) {
 					const boosts: SparseBoostsTable = {};
 					if (this.effectState.spe) boosts.spe = this.effectState.spe;
-					this.boost(boosts, pokemon);
+					this.boost(boosts, target);
 				}
-				this.add('-end', pokemon, 'skulltoss');
+				this.add('-end', target, 'skulltoss');
 				if (this.effectState.spe !== this.effectState.layers * -1 * -1) {
 					this.hint("In Gen 7, Stockpile keeps track of how many times it successfully altered each stat individually.");
 				}
@@ -24644,5 +24644,101 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		contestType: "Beautiful",
 		isNonstandard: "Future",
+	},
+
+	
+	hypersomnia: {
+		num: 738,
+		accuracy: 100,
+		basePower: 85,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hypersomnia",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent) {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('lethargic');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Lethargic', '[from] move: Hypersomnia');
+				return;
+			}
+			return false;
+		},
+
+		self: {
+			onHit(target, source) {
+				
+				const oldAbility = source.setAbility('baddreams');
+				if (oldAbility) {
+					this.add('-ability', source, 'Bad Dreams', '[from] move: Hypersomnia');
+					return;
+				}
+				return false;
+			},
+		},
+
+		onAfterHit(target, source) {
+			if (target.getAbility().isPermanent) return;
+			target.addVolatile('nightmare');
+			
+		
+		},
+		target: "normal",
+		type: "Grass",
+		contestType: "Clever",
+	},
+
+	abduction: {
+		num: 509,
+		accuracy: 90,
+		basePower: 90,
+		category: "Special",
+		name: "Abduction",
+		pp: 10,
+		priority: -6,
+		flags: {bullet: 1, protect: 1, pulse: 1, mirror: 1, distance: 1},
+		selfSwitch: true,
+		forceSwitch: true,
+		noSketch: true,
+		target: "normal",
+		type: "???",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+
+
+	Xenobeam: {
+		num: 487,
+		accuracy: 100,
+		basePower: 90,
+		category: "Status",
+		name: "Xenobeam",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				if (target.getTypes().join() === '???' || !target.setType('???')) {
+					// Soak should animate even when it fails.
+					// Returning false would suppress the animation.
+					this.add('-fail', target);
+					return null;
+				}
+				this.add('-start', target, 'typechange', 'Water');
+			},
+			
+		},
+		
+		target: "normal",
+		type: "Psychic",
+		zMove: {boost: {spa: 1}},
+		contestType: "Cool",
 	},
 };
