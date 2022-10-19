@@ -24339,35 +24339,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-start', pokemon, 'Autotomize');
 			}
 		},
-		onHit(pokemon) {
-			if (pokemon.volatiles['skulltoss'] && pokemon.volatiles['skulltoss'].layers >= 1) return false;
+		onHit(pokemon, target) {
+			if (target.volatiles['skulltoss'] && target.volatiles['skulltoss'].layers >= 1) return false;
 		},
 		volatileStatus: 'Skull Toss',
 		condition: {
 			noCopy: true,
-			onStart(pokemon) {
+			onStart(pokemon, target) {
 				this.effectState.layers = 1;
 				this.effectState.spe = 0;
-				this.add('-start', pokemon, 'skulltoss' + this.effectState.layers);
-				const [curSpe] = [pokemon.boosts.spe];
-				this.boost({spe: 1}, pokemon);
-				if (curSpe !== pokemon.boosts.spe) this.effectState.spe--;
+				this.add('-start', target, 'skulltoss' + this.effectState.layers);
+				const [curSpe] = [target.boosts.spe];
+				this.boost({spe: 1}, target);
+				if (curSpe !== target.boosts.spe) this.effectState.spe--;
 			},
-			onRestart(pokemon) {
+			onRestart(pokemon, target) {
 				if (this.effectState.layers >= 1) return false;
 				this.effectState.layers++;
-				this.add('-start', pokemon, 'skulltoss' + this.effectState.layers);
-				const curSpe = pokemon.boosts.spe;
-				this.boost({spe: 1}, pokemon);
-				if (curSpe !== pokemon.boosts.spe) this.effectState.spe--;
+				this.add('-start', target, 'skulltoss' + this.effectState.layers);
+				const curSpe = target.boosts.spe;
+				this.boost({spe: 1}, target);
+				if (curSpe !== target.boosts.spe) this.effectState.spe--;
 			},
-			onEnd(pokemon) {
+			onEnd(target) {
 				if (this.effectState.def || this.effectState.spd) {
 					const boosts: SparseBoostsTable = {};
 					if (this.effectState.spe) boosts.spe = this.effectState.spe;
-					this.boost(boosts, pokemon);
+					this.boost(boosts, target);
 				}
-				this.add('-end', pokemon, 'skulltoss');
+				this.add('-end', target, 'skulltoss');
 				if (this.effectState.spe !== this.effectState.layers * -1 * -1) {
 					this.hint("In Gen 7, Stockpile keeps track of how many times it successfully altered each stat individually.");
 				}
