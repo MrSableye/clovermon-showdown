@@ -80,6 +80,79 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	protectivepads: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	snowball: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cellbattery: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ringtarget: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	roomservice: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	grassyseed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	electricseed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psychicseed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mistyseed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	metronome: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	adrenalineorb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	luminousmoss: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	absorbbulb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fullincense: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	oddincense: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	rockincense: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	roseincense: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	waveincense: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	
 	/* Modified items */
 	luckypunch: {
 		inherit: true,
