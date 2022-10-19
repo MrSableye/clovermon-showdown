@@ -35444,7 +35444,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		battleOnly: "Infected",
 		gen: 8,
 	},
-	
+
 	/* gen 2 isn't real */
 	peasol: {
 		num: 42161,

@@ -242,7 +242,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onResidual(pokemon) {
 			if (!pokemon.hp) return;
 			for (const target of pokemon.foes()) {
-				if (target.status === 'slp' || target.hasAbility('comatose') || target.hasAbility('lethargic' )) {
+				if (target.status === 'slp' || target.hasAbility('comatose')) {
 					this.damage(target.baseMaxhp / 8, target, pokemon);
 				}
 			}
@@ -2675,7 +2675,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 57,
 	},
 
-	
+
 	poisonheal: {
 		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {
@@ -6190,17 +6190,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 
 	infection: {
-		
+
 		onDamagePriority: -30,
 		onDamage(damage, target, source, effect) {
 			if (damage >= target.hp) {
 				this.add('-ability', target, 'Infection');
 				this.heal(target.maxhp);
 				target.formeChange('Infected-Zombie', this.effect, true);
-				
-				
 			}
-			
 		},
 		isBreakable: true,
 		name: "Infection",
@@ -6225,23 +6222,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		num: 143,
 		isNonstandard: "Future",
-		},
-		
+	},
 
-		lethargic: {
-			onStart(pokemon) {
-				this.add('-ability', pokemon, 'Lethargic');
-			},
-			onSetStatus(status, target, source, effect) {
-				if ((effect as Move)?.status) {
-					this.add('-immune', target, '[from] ability: Lethargic');
-				}
-				return false;
-			},
-			// Permanent sleep "status" implemented in the relevant sleep-checking effects
-			name: "Lethargic",
-			rating: 4,
-			num: 213,
+
+	lethargic: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Lethargic');
 		},
+		onSetStatus(status, target, source, effect) {
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: Lethargic');
+			}
+			return false;
+		},
+		// Permanent sleep "status" implemented in the relevant sleep-checking effects
+		name: "Lethargic",
+		rating: 4,
+		num: 213,
+	},
 
 };
