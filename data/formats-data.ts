@@ -8833,6 +8833,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	doomsdayrevenant: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		tier: "Illegal",
@@ -8987,7 +8991,15 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	oblivion: {
-		tier: "illegal",
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	spireedle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	dalleedle: {
+		tier: "Illegal",
 		isNonstandard: "Future",
 	},
 	waterweedle: {
@@ -8998,6 +9010,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
         tier: "Illegal",
         isNonstandard: "Future",
     },
+	stingulor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	titaneedle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	heaventoad: {
 		tier: "Illegal",
 		isNonstandard: "Future",
