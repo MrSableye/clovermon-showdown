@@ -33467,7 +33467,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Doomsday-Revenant",
 		forme: "Revenant",
 		baseSpecies: "Doomsday",
-		types: ["Ghost"],
+		types: ["Dark","Ghost"],
 		gender: "N",
 		baseStats: {hp: 158, atk: 158, def: 158, spa: 158, spd: 158, spe: 158},
 		abilities: {0: "Illuminate"},
