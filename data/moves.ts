@@ -24693,4 +24693,52 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 		contestType: "Clever",
 	},
+
+	abduction: {
+		num: 509,
+		accuracy: 90,
+		basePower: 90,
+		category: "Special",
+		name: "Abduction",
+		pp: 10,
+		priority: -6,
+		flags: {bullet: 1, protect: 1, pulse: 1, mirror: 1, distance: 1},
+		selfSwitch: true,
+		forceSwitch: true,
+		noSketch: true,
+		target: "normal",
+		type: "???",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+
+
+	Xenobeam: {
+		num: 487,
+		accuracy: 100,
+		basePower: 90,
+		category: "Status",
+		name: "Xenobeam",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				if (target.getTypes().join() === '???' || !target.setType('???')) {
+					// Soak should animate even when it fails.
+					// Returning false would suppress the animation.
+					this.add('-fail', target);
+					return null;
+				}
+				this.add('-start', target, 'typechange', 'Water');
+			},
+			
+		},
+		
+		target: "normal",
+		type: "Psychic",
+		zMove: {boost: {spa: 1}},
+		contestType: "Cool",
+	},
 };

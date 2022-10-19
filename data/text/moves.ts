@@ -7740,4 +7740,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Hypersomnia",
 		shortDesc: "Cures teammates of their status effects.",
 	},
+	xenobeam: {
+		name: "Xenobeam",
+		shortDesc: "Makes the opponent ??? type",
+	},
+	abduction: {
+		name: "Abduction",
+		shortDesc: "Switches the user and opponent",
+	},
 };
