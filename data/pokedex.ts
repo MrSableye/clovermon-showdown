@@ -35442,7 +35442,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		requiredAbility: "Infection",
 		battleOnly: "Infected",
-		gen: 7,
+		gen: 8,
 	},
 	
 	/* gen 2 isn't real */
