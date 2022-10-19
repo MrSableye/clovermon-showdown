@@ -88,16 +88,4 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 			return errors;
 		},
 	},
-	noblobbos: {
-		effectType: 'ValidatorRule',
-		name: 'No Blobbos',
-		desc: "Blobbos is illegal.",
-		onValidateSet(set) {
-			const species = this.dex.species.get(set.species || set.name);
-
-			if (species.baseSpecies === 'Blobbos') {
-				return [`${set.name || set.species} is Blobbos. Fun is not allowed.`];
-			}
-		},
-	},
 };

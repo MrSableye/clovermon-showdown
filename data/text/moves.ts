@@ -7148,7 +7148,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	/* Clover CAP */
 	crusadercrash: {
 		name: "Crusader Crash",
-		desc: "This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
+		desc: "This move is always a critical hit unless the target is under the effect of Lucky Chant or has an ability that prevents critical hits.",
 		shortDesc: "Always results in a critical hit.",
 	},
 	moregun: {
@@ -7158,8 +7158,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	trickstab: {
 		name: "Trick Stab",
-		desc: "This move always crits under illusion and removes it on a successful hit.",
-		shortDesc: "Guaranteed crit under illusion; removes it on hit.",
+		desc: "This move always crits under Illusion unless the target is under the effect of Lucky Chant or has an ability that prevents critical hits, and removes Illusion on a successful hit.",
+		shortDesc: "Guaranteed crit under Illusion; removes it on hit.",
 	},
 	psychofists: {
 		name: "Psycho Fists",
@@ -7173,6 +7173,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	faradaycage: {
 		name: "Faraday Cage",
+		desc: "The user has 1/8 of its maximum HP restored at the end of each turn, but it is prevented from switching out and other Pokemon cannot force the user to switch out. The user can still switch out if it uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. If the user leaves the field using Baton Pass, the replacement will remain trapped and still receive the healing effect. During the effect, the user can be hit normally by Ground-type attacks and be affected by Spikes, Toxic Spikes, and Sticky Web, even if the user is a Flying type or has the Levitate Ability.",
 		shortDesc: "Traps/grounds user; heals 1/8 max HP per turn.",
 	},
 	rockclock: {
@@ -7190,7 +7191,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	voltaiccyclone: {
 		name: "Voltaic Cyclone",
 		desc: "If this move is successful and the user has not fainted, the effects of Leech Seed and binding moves end for the user, and all hazards are removed from the user's side of the field.",
-		shortDesc: "Free user from hazards/bind/Leech Seed",
+		shortDesc: "Free user from hazards/bind/Leech Seed.",
 	},
 	boilover: {
 		name: "Boil Over",
@@ -7201,12 +7202,12 @@ export const MovesText: {[k: string]: MoveText} = {
 	soulcrusher: {
 		name: "Soul Crusher",
 		desc: "Power is multiplied by 999 times if the target has less than or equal to half of its maximum HP remaining. Heals for 100% of the damage the move has dealt.",
-		shortDesc: "999x power if target HP <50%, Heals for damage dealt.",
+		shortDesc: "999x power if target HP <50%, heals for damage dealt.",
 	},
 	tombstoner: {
 		name: "Tombstoner",
-		desc: "The user faints after using this move, Damage is calculated using the user's Defense stat as its Attack. This move is prevented from executing if any active Pokemon has the Damp Ability. ",
-		shortDesc: "The user faints, Uses user's Def stat as Atk.",
+		desc: "Power is equal to (user's current HP * 300 / user's maximum HP), rounded down, but not less than 1. The user faints after using this move, Damage is calculated using the user's Defense stat as its Attack. This move is prevented from executing if any active Pokemon has the Damp Ability. ",
+		shortDesc: "Power = HP%. The user faints, uses user's Def stat as Atk.",
 	},
 	fruitjuice: {
 		name: "Fruit Juice",
@@ -7226,8 +7227,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	coldcutter: {
 		name: "Cold Cutter",
-		desc: "Has a higher chance for a critical hit and a 20% chance to freeze the target.",
-		shortDesc: "High critical hit ratio, 20% chance to freeze.",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
 	},
 	shadowscales: {
 		name: "Shadow Scales",
@@ -7236,7 +7237,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	wingsofcorrection: {
 		name: "Wings Of Correction",
-		desc: "If this move is successful and whether or not the target's evasiveness was affected, the effects of Reflect, Light Screen, Aurora Veil, Safeguard, Mist, Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the target's side, and the effects of Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the user's side. If there is a terrain active and this move is successful, the terrain will be cleared. Has -6 priority and switches the opponent out to a random member.",
+		desc: "If this move is successful the effects of Reflect, Light Screen, Aurora Veil, Safeguard, Mist, Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the target's side, and the effects of Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the user's side. If there is a terrain active and this move is successful, the terrain will be cleared. Has -6 priority and switches the opponent out to a random member.",
 		shortDesc: "Clears terrain and hazards, switches out opponent.",
 	},
 	brutalpunishment: {
@@ -7273,31 +7274,30 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mudmaelstrom: {
 		name: "Mud Maelstrom",
-		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
-		shortDesc: "Traps and damages the target for 4-5 turns.",
-
-		start: "  [POKEMON] became trapped by the geyser of mud!",
+		desc: "Has a 30% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "30% chance to lower the target(s) Spe by 1.",
 	},
 	finalhour: {
 		name: "Final Hour",
 		desc: "Deals damage three turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if this move or Future Sight is already in effect for the target's position.",
 		shortDesc: "Hits three turns after being used.",
 
-		start: "  [POKEMON] chose Final Hour as its destiny!",
-		activate: "  [TARGET] took the Final Hour attack!",
+		start: "  [POKEMON] ticks down to your Final Hour!",
+		activate: "  [TARGET]'s Final Hour is at hand!",
 	},
 	turnabout: {
 		name: "Turnabout",
-		desc: "The user swaps all its stat stage changes with the target.",
+		desc: "The user swaps all its stat stage changes with the target and switches the Mist, Light Screen, Reflect, Spikes, Safeguard, Tailwind, Toxic Spikes, Stealth Rock, Water Pledge, Fire Pledge, Grass Pledge, Sticky Web, Aurora Veil, G-Max Steelsurge, G-Max Cannonade, G-Max Vine Lash, and G-Max Wildfire effects from the user's side to the opposing side and vice versa.",
 		shortDesc: "Swaps all stat changes and hazards with opponent.",
 	},
 	memejr: {
 		name: "Meme Jr.",
+		desc: "Has a 100% chance to raise the user's lowest boosted stat by 1. If all stat boosts are equal it will raise a random stat by 1.",
 		shortDesc: "100% chance to evenly raise a random stat by 1.",
 	},
 	meddymeds: {
 		name: "Meddy Meds",
-		desc: "If the target is an ally, this move restores 3/4 of its maximum HP, rounded down, instead of dealing damage.",
+		desc: "This move summons Light Screen for 5 turns upon use. If the target is an ally and not immune, this move restores 3/4 of its maximum HP, rounded down, instead of dealing damage.",
 		shortDesc: "Heals 75% if targeting an ally, Summons Light Screen.",
 	},
 	villify: {
@@ -7307,20 +7307,30 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	nuclearwinter: {
 		name: "Nuclear Winter",
-		desc: "Has a 10% chance to poison the target. This move's type effectiveness against Ice is changed to be super effective no matter what this move's type is.",
-		shortDesc: "10% poison. Super effective on Ice.",
+		desc: "Has a 10% chance to freeze the target. This move's type effectiveness against Poison is changed to be super effective no matter what this move's type is. If the weather is Hail, this move does not check accuracy.",
+		shortDesc: "10% chance to freeze. Super effective on Poison.",
 	},
 	badeggs: {
 		name: "Bad Eggs",
-		shortDesc: "Hits 3 times, hits can miss, gets stronger, 20% psn.",
+		desc: "Hits three times. Power increases to 40 for the second hit and 60 for the third. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit three times. Each hit has a 10% chance to poison the target.",
+		shortDesc: "Hits 3 times, hits can miss, gets stronger, 10% psn.",
 	},
 	backdraft: {
 		name: "Backdraft",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities. Summons Tailwind for two turns after landing.",
 		shortDesc: "Switches user out, Swapped mon has 2x speed for a turn",
-
 		start: "  The Backdraft blew from behind [TEAM]!",
 		end: "  [TEAM]'s Backdraft petered out!",
 		switchOut: "#uturn",
+	},
+	cherrybomb: {
+		name: "Cherry Bomb",
+		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. Each hit has a 10% chance to burn.",
+		shortDesc: "Hits twice. 10% chance to burn.",
+	},
+	crashhopper: {
+		name: "Crash Hopper",
+		shortDesc: "30% chance to paralyze. Paralyze self on miss.",
 	},
 	closeblobmat: {
 		name: "Close Blobmat",
@@ -7384,9 +7394,19 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Hits four times. Power quadruples on the fourth hit. The fourth hit becomes Physical. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit four times.",
 		shortDesc: "Hits 4 times. Each hit can miss, but power rises on the 4th hit. Last hit is Physical.",
 	},
+	flybackfrenzy: {
+		name: "Flyback Frenzy",
+		desc: "Power is equal to 100 times the user's Stockpile count. Fails if the user's Stockpile count is 0. Whether or not this move is successful, the user's Defense and Special Defense decrease by as many stages as Stockpile had increased them, and the user's Stockpile count resets to 0. 20% chance per use of Stockpile to paralyze.",
+		shortDesc: "More power with more uses of Stockpile. 15% par chance per Stockpile.",
+	},
 	cope: {
 		name: "Cope",
 		shortDesc: "Hits 69 times.",
+	},
+	eternalwalk: {
+		name: "Eternal Walk",
+		desc: "Hits 255 times. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Magic Guard Ability are unaffected by crash damage.",
+		shortDesc: "Hits 255 times. Each hit can miss, crash on miss.",
 	},
 	matingpress: {
 		name: "Mating Press",
@@ -7432,7 +7452,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	shroomsnuggle: {
 		name: "Shroom Snuggle",
 		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
-		shortDesc: "Recovers 50% damage dealt, Prevents target from switching.",
+		shortDesc: "User recovers 50% of the damage dealt.",
 	},
 	coinflip: {
 		name: "Coin Flip",
@@ -7444,8 +7464,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	blackbomb: {
 		name: "Black Bomb",
-		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
-		shortDesc: "Traps and damages the target for 4-5 turns.",
+		desc: "If the user is a Flying type or a Pokemon with the Levitate Ability, it loses its immunity to Ground-type attacks and the Arena Trap Ability the turn it is used as well as the turn afterwards. During the effect, Magnet Rise fails for the user.",
+		shortDesc: "Grounds and traps the user for a turn when used.",
 
 		start: "  [POKEMON] became buried!",
 	},
@@ -7456,7 +7476,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	bearhug: {
 		name: "Bear Hug",
-		shortDesc: "Activates contact effects of the user, Traps for a turn.",
+		shortDesc: "Activates contact effects of the user, traps for a turn.",
 		start: "  [POKEMON] was squeezed by [SOURCE]!",
 	},
 	chilipowder: {
@@ -7476,8 +7496,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	faeblade: {
 		name: "Faeblade",
-		desc: "Deals damage to the target based on its Special Defense instead of Defense.",
-		shortDesc: "Damages target based on Sp.Def, not Defense",
+		desc: "This move becomes a physical attack that makes contact if the value of ((((2 * the user's level / 5 + 2) * 90 * X) / Y) / 50), where X is the user's Attack stat and Y is the target's Defense stat, is greater than the same value where X is the user's Special Attack stat and Y is the target's Special Defense stat. No stat modifiers other than stat stage changes are considered for this purpose. If the two values are equal, this move chooses a damage category at random.",
+		shortDesc: "Physical+contact if it would be stronger.",
 	},
 	stickytongue: {
 		name: "Sticky Tongue",
@@ -7505,7 +7525,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	flakcannon: {
 		name: "Flak Cannon",
-		shortDesc: "Removes user's held item, Crits three times.",
+		shortDesc: "Removes user's held item, always crits.",
 
 		removeItem: "  [POKEMON] shot the fragments of [ITEM]!",
 	},
@@ -7708,8 +7728,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Radiation",
 		shortDesc: "Makes the opponent Nuclear type.",
 	},
-	testbeam: {
-		name: "Test Beam",
-		shortDesc: "???",
+	battlecry: {
+		name: "Battle Cry",
+		shortDesc: "10% chance to raise the user's Special Attack by 1.",
+	},
+	sereneshockwave: {
+		name: "Serene Shockwave",
+		shortDesc: "Cures teammates of their status effects.",
 	},
 };

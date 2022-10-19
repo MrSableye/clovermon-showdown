@@ -27,7 +27,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	regicide: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	ballboa: {
 		inherit: true,
@@ -224,7 +224,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	vulkancer: {
+	molterra: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -611,7 +611,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "NFE",
 	},
-	tsenami: {
+	tsemani: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -664,7 +664,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	nyanonite: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	primiteve: {
 		inherit: true,
@@ -920,7 +920,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	condoommega: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	hohohomingmega: {
 		isNonstandard: null,
@@ -969,5 +969,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	honrademega: {
 		isNonstandard: null,
 		tier: "OU",
+	},
+	doomsday: {
+		isNonstandard: null,
+		tier: "AG",
 	},
 };

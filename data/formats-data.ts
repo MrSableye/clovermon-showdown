@@ -8362,7 +8362,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	vulkancer: {
+	molterra: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8662,7 +8662,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	tsenami: {
+	tsemani: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8838,6 +8838,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	doomsday: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	beegyosh: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		tier: "Illegal",
@@ -8991,7 +8999,15 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	oblivion: {
+		tier: "illegal",
+		isNonstandard: "Future",
+	},
 	waterweedle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	krackowalker: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

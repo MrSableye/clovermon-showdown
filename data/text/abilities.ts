@@ -1871,7 +1871,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	omniscience: {
 		name: "Omniscience",
-		desc: "This Pokemon can hit Dark types with Psychic-type moves.",
+		desc: "This Pokemon can hit Dark types with Psychic-type moves. Psychic-type moves don't miss.",
 	},
 	oldschool: {
 		name: "Old School",
@@ -1890,7 +1890,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	tetanus: {
 		name: "Tetanus",
-		shortDesc: "A Pokemon making contact with this Pokemon will be Toxic poisoned.",
+		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be Toxic poisoned.",
 	},
 	shavedice: {
 		name: "Shaved Ice",
@@ -1974,7 +1974,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	leech: {
 		name: "Leech",
-		shortDesc: "User recovers 25% of damage dealt.",
+		shortDesc: "User recovers 50% of damage dealt.",
 	},
 	supportive: {
 		name: "Supportive",
@@ -1990,9 +1990,29 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "This Pokemon's Bone-based and Dragon moves ignore immunities.",
 		start: "  [POKEMON] has descended into the Boner Zoner!",
 	},
+	pairoswrath: {
+		name: "Pairo's Wrath",
+		desc: "This Pokemon is immune to Fire-type moves and raises its Special Attack by 1 stage when hit by a Fire-type move.",
+
+		activate: "#lightningrod",
+	},
+	hydrothermal: {
+		name: "Hydrothermal",
+		desc: "Fire- and Water-type moves have a 10% higher chance to burn.",
+	},
+	slavemaster: {
+		name: "Slavemaster",
+		desc: "Doubles the power of HM moves.",
+	},
 	chording: {
 		name: "Chording",
 		desc: "After using a Special attack, its Atk is raised by 1 stage. After using a Physical attack, its Sp. Atk is raised by 1 stage.",
+	},
+	capacitance: {
+		name: "Capacitance",
+		desc: "Pokemon making contact with this Pokemon lose 1/8 times this Pokemon's Stockpile count of their maximum HP, rounded down. Factors Electric weakness. 20% chance per use of Stockpile to paralyze. Resets Stockpile.",
+
+		damage: "  [POKEMON] was shocked!",
 	},
 	eclipse: {
 		name: "Eclipse",
