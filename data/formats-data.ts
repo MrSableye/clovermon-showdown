@@ -8172,6 +8172,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	infected: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+	},
+	infectedzombie: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+	},
 	/* Clover CAP */
 	bearedaze: {
 		tier: "Illegal",
@@ -8833,6 +8841,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	beegyosh: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		tier: "Illegal",
@@ -8987,7 +8999,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	oblivion: {
-		tier: "illegal",
+		tier: "Illegal",
 		isNonstandard: "Future",
 	},
 	waterweedle: {
@@ -8995,9 +9007,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	krackowalker: {
-        tier: "Illegal",
-        isNonstandard: "Future",
-    },
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	heaventoad: {
 		tier: "Illegal",
 		isNonstandard: "Future",

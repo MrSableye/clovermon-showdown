@@ -527,7 +527,9 @@ export const commands: Chat.ChatCommands = {
 			'processmanager', 'roomsp', 'usersp',
 		];
 
-		target = toID(target);
+		const [hotpatchTarget, options] = target.split(',').map(toID);
+
+		target = hotpatchTarget;
 		try {
 			Utils.clearRequireCache({exclude: ['/lib/process-manager']});
 			if (target === 'all') {
@@ -764,6 +766,9 @@ export const commands: Chat.ChatCommands = {
 			['development', 'staff'] as RoomID[],
 			`|c|${user.getIdentity()}|/log ${user.name} used /hotpatch ${target}`
 		);
+		if (this.room && (options || [] as string[]).includes('notify')) {
+			this.room.add(`|raw|<p>${user.name} hotpatched ${target}</p>`);
+		}
 	},
 	hotpatchhelp: [
 		`Hot-patching the game engine allows you to update parts of Showdown without interrupting currently-running battles. Requires: console access`,

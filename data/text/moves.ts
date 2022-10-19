@@ -7206,7 +7206,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	tombstoner: {
 		name: "Tombstoner",
-		desc: "Power is equal to (user's current HP * 300 / user's maximum HP), rounded down, but not less than 1. The user faints after using this move, Damage is calculated using the user's Defense stat as its Attack. This move is prevented from executing if any active Pokemon has the Damp Ability. ",
+		desc: "Power is equal to (user's current HP * 300 / user's maximum HP), rounded down, but not less than 100. The user faints after using this move, Damage is calculated using the user's Defense stat as its Attack. This move is prevented from executing if any active Pokemon has the Damp Ability. ",
 		shortDesc: "Power = HP%. The user faints, uses user's Def stat as Atk.",
 	},
 	fruitjuice: {
@@ -7393,6 +7393,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Strum",
 		desc: "Hits four times. Power quadruples on the fourth hit. The fourth hit becomes Physical. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit four times.",
 		shortDesc: "Hits 4 times. Each hit can miss, but power rises on the 4th hit. Last hit is Physical.",
+	},
+	flybackfrenzy: {
+		name: "Flyback Frenzy",
+		desc: "Power is equal to 100 times the user's Stockpile count. Fails if the user's Stockpile count is 0. Whether or not this move is successful, the user's Defense and Special Defense decrease by as many stages as Stockpile had increased them, and the user's Stockpile count resets to 0. 20% chance per use of Stockpile to paralyze.",
+		shortDesc: "More power with more uses of Stockpile. 15% par chance per Stockpile.",
 	},
 	cope: {
 		name: "Cope",
@@ -7730,5 +7735,17 @@ export const MovesText: {[k: string]: MoveText} = {
 	sereneshockwave: {
 		name: "Serene Shockwave",
 		shortDesc: "Cures teammates of their status effects.",
+	},
+	hypersomnia: {
+		name: "Hypersomnia",
+		shortDesc: "Cures teammates of their status effects.",
+	},
+	xenobeam: {
+		name: "Xenobeam",
+		shortDesc: "Makes the opponent ??? type",
+	},
+	abduction: {
+		name: "Abduction",
+		shortDesc: "Switches the user and opponent",
 	},
 };

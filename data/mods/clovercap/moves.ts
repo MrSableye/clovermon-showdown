@@ -416,6 +416,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	suckerpunch: {
+		inherit: true,
+		flags: {punch: 1, contact: 1, protect: 1, mirror: 1},
+	},
 	surgingstrikes: {
 		inherit: true,
 		isNonstandard: null,

@@ -2674,6 +2674,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: 57,
 	},
+
+
 	poisonheal: {
 		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {
@@ -4982,7 +4984,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Psychic'] = true;
 			}
-			if (move.type === 'Psychic') {
+			if (move.category !== 'Status' && move.type === 'Psychic') {
 				move.accuracy = true;
 			}
 		},
@@ -5478,6 +5480,29 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.boost({spa: 1});
 			} else if (baseMove.category === 'Special') {
 				this.boost({atk: 1});
+			}
+		},
+		isNonstandard: "Future",
+	},
+	capacitance: {
+		name: "Capacitance",
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			const makesContact = this.checkMoveMakesContact(move, source, target, true);
+			const stockpileLayers = target.volatiles['stockpile']?.layers;
+
+			if (makesContact && stockpileLayers) {
+				const isImmune = this.dex.getImmunity('Electric', source);
+				const typeMod = this.clampIntRange(this.dex.getEffectiveness('Electric', source), -6, 6);
+				if (isImmune) {
+					this.add('-immune', source);
+				} else {
+					this.damage(source.maxhp * Math.pow(2, typeMod) / 8, source, target);
+					if (this.randomChance(2 * stockpileLayers, 10)) {
+						source.trySetStatus('par', target);
+					}
+				}
+				target.removeVolatile('stockpile');
 			}
 		},
 		isNonstandard: "Future",
@@ -6162,6 +6187,58 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Hyperborean Arctic",
 		rating: 4.5,
 		num: 189,
+	},
+
+	infection: {
+
+		onDamagePriority: -30,
+		onDamage(damage, target, source, effect) {
+			if (damage >= target.hp) {
+				this.add('-ability', target, 'Infection');
+				this.heal(target.maxhp);
+				target.formeChange('Infected-Zombie', this.effect, true);
+			}
+		},
+		isBreakable: true,
+		name: "Infection",
+		rating: 3,
+		num: 5,
+	},
+
+	perishtouch: {
+		// upokecenter says this is implemented as an added secondary effect
+		onModifyMove(move) {
+			if (!move?.flags['contact'] || move.target === 'self') return;
+			if (!move.secondaries) {
+				move.secondaries = [];
+			}
+			move.secondaries.push({
+				chance: 100,
+				volatileStatus: 'perishsong',
+				ability: this.dex.abilities.get('perishtouch'),
+			});
+		},
+		name: "Perish Touch",
+		rating: 2,
+		num: 143,
+		isNonstandard: "Future",
+	},
+
+
+	lethargic: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Lethargic');
+		},
+		onSetStatus(status, target, source, effect) {
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: Lethargic');
+			}
+			return false;
+		},
+		// Permanent sleep "status" implemented in the relevant sleep-checking effects
+		name: "Lethargic",
+		rating: 4,
+		num: 213,
 	},
 
 };

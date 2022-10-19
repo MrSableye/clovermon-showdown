@@ -17,6 +17,17 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	/* Modified Abilities */
+	baddreams: {
+		inherit: true,
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			for (const target of pokemon.foes()) {
+				if (target.status === 'slp' || target.hasAbility('comatose') || target.hasAbility('lethargic')) {
+					this.damage(target.baseMaxhp / 8, target, pokemon);
+				}
+			}
+		},
+	},
 	illusion: {
 		inherit: true,
 		onBeforeSwitchIn(pokemon) {

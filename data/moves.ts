@@ -21321,8 +21321,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		basePowerCallback(pokemon, target, move) {
-			return move.basePower * pokemon.hp / pokemon.maxhp;
+		onModifyMove(move, pokemon) {
+			move.basePower = Math.max(move.basePower * pokemon.hp / pokemon.maxhp, 100);
 		},
 		selfdestruct: "always",
 		overrideOffensiveStat: "def",
@@ -22064,6 +22064,36 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		isNonstandard: "Future",
 	},
+	flybackfrenzy: {
+		accuracy: 100,
+		basePower: 0,
+		basePowerCallback(pokemon) {
+			if (!pokemon.volatiles['stockpile']?.layers) return false;
+			return pokemon.volatiles['stockpile'].layers * 100;
+		},
+		category: "Special",
+		name: "Flyback Frenzy",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1},
+		onTry(source) {
+			return !!source.volatiles['stockpile'];
+		},
+		onHit(target, source) {
+			const layers = source.volatiles['stockpile']?.layers || 0;
+			if (this.randomChance(2 * layers, 10)) {
+				target.trySetStatus('par', target);
+			}
+		},
+		onAfterMove(pokemon) {
+			pokemon.removeVolatile('stockpile');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
 	cope: {
 		accuracy: true,
 		basePower: 2,
@@ -22088,14 +22118,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
-		},		
+		},
 		multihit: 255,
 		multiaccuracy: true,
 		secondary: null,
 		target: "normal",
 		type: "Electric",
 		noSketch: true,
-		isNonstandard: "Future"
+		isNonstandard: "Future",
 	},
 	matingpress: {
 		accuracy: 100,
@@ -23640,11 +23670,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {basePower: 160},
 		isNonstandard: "Future",
 	},
-	doesthiswork: {
+	bloodletting: {
 		accuracy: true,
-		basePower: 60,
+		basePower: 40,
 		category: "Status",
-		name: "Does This Work",
+		name: "Bloodletting",
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1, dance: 1},
@@ -23655,7 +23685,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		noSketch: true,
 		target: "self",
-		type: "Psychic",
+		type: "Poison",
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Beautiful",
 		isNonstandard: "Future",
@@ -24238,7 +24268,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		sleepUsable: true,
 		secondary: {
 			chance: 10,
 			status: 'brn',
@@ -24310,35 +24339,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-start', pokemon, 'Autotomize');
 			}
 		},
-		onHit(pokemon) {
-			if (pokemon.volatiles['skulltoss'] && pokemon.volatiles['skulltoss'].layers >= 1) return false;
+		onHit(pokemon, target) {
+			if (target.volatiles['skulltoss'] && target.volatiles['skulltoss'].layers >= 1) return false;
 		},
 		volatileStatus: 'Skull Toss',
 		condition: {
 			noCopy: true,
-			onStart(pokemon) {
+			onStart(pokemon, target) {
 				this.effectState.layers = 1;
 				this.effectState.spe = 0;
-				this.add('-start', pokemon, 'skulltoss' + this.effectState.layers);
-				const [curSpe] = [pokemon.boosts.spe];
-				this.boost({spe: 1}, pokemon);
-				if (curSpe !== pokemon.boosts.spe) this.effectState.spe--;
+				this.add('-start', target, 'skulltoss' + this.effectState.layers);
+				const [curSpe] = [target.boosts.spe];
+				this.boost({spe: 1}, target);
+				if (curSpe !== target.boosts.spe) this.effectState.spe--;
 			},
-			onRestart(pokemon) {
+			onRestart(pokemon, target) {
 				if (this.effectState.layers >= 1) return false;
 				this.effectState.layers++;
-				this.add('-start', pokemon, 'skulltoss' + this.effectState.layers);
-				const curSpe = pokemon.boosts.spe;
-				this.boost({spe: 1}, pokemon);
-				if (curSpe !== pokemon.boosts.spe) this.effectState.spe--;
+				this.add('-start', target, 'skulltoss' + this.effectState.layers);
+				const curSpe = target.boosts.spe;
+				this.boost({spe: 1}, target);
+				if (curSpe !== target.boosts.spe) this.effectState.spe--;
 			},
-			onEnd(pokemon) {
+			onEnd(target) {
 				if (this.effectState.def || this.effectState.spd) {
 					const boosts: SparseBoostsTable = {};
 					if (this.effectState.spe) boosts.spe = this.effectState.spe;
-					this.boost(boosts, pokemon);
+					this.boost(boosts, target);
 				}
-				this.add('-end', pokemon, 'skulltoss');
+				this.add('-end', target, 'skulltoss');
 				if (this.effectState.spe !== this.effectState.layers * -1 * -1) {
 					this.hint("In Gen 7, Stockpile keeps track of how many times it successfully altered each stat individually.");
 				}
@@ -24462,6 +24491,244 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 		zMove: {effect: 'heal'},
 		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	flashfreeze: {
+		num: 420,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Flash Freeze",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	electromagnetism: {
+		num: 393,
+		accuracy: 85,
+		basePower: 115,
+		category: "Special",
+		name: "Electromagnetism",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'magnetrise',
+		onTry(source, target, move) {
+			if (target.volatiles['smackdown'] || target.volatiles['ingrain']) return false;
+
+			// Additional Gravity check for Z-move variant
+			if (this.field.getPseudoWeather('Gravity')) {
+				this.add('cant', source, 'move: Gravity', move);
+				return null;
+			}
+		},
+		condition: {
+			duration: 5,
+			onStart(target) {
+				this.add('-start', target, 'Magnet Rise');
+			},
+			onImmunity(type) {
+				if (type === 'Ground') return false;
+			},
+			onResidualOrder: 18,
+			onEnd(target) {
+				this.add('-end', target, 'Magnet Rise');
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Electric",
+		zMove: {boost: {evasion: 1}},
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	nosedive: {
+		num: 354,
+		accuracy: 90,
+		basePower: 140,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Nosedive",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				def: -2,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+		contestType: "Clever",
+	},
+	paranormalactivity: {
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Paranormal Activity",
+		pp: 20,
+		priority: 0,
+		ignoreImmunity: {'Ghost': true},
+		flags: {protect: 1, mirror: 1},
+		target: "normal",
+		noSketch: true,
+		type: "Ghost",
+		contestType: "Cool",
+	},
+	downpour: {
+		num: 173,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Downpour",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				this.field.setWeather('raindance');
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Water",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	snowstorm: {
+		num: 173,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Snowstorm",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		sleepUsable: true,
+		secondary: {
+			chance: 10,
+			status: 'frz',
+		},
+		self: {
+			onHit(source) {
+				this.field.setWeather('hail');
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Ice",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	titaniumclap: {
+		num: 550,
+		accuracy: 85,
+		basePower: 125,
+		category: "Physical",
+		name: "Titanium Clap",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	hypersomnia: {
+		num: 738,
+		accuracy: 100,
+		basePower: 85,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hypersomnia",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent) {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('lethargic');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Lethargic', '[from] move: Hypersomnia');
+				return;
+			}
+			return false;
+		},
+		self: {
+			onHit(target, source) {
+				const oldAbility = source.setAbility('baddreams');
+				if (oldAbility) {
+					this.add('-ability', source, 'Bad Dreams', '[from] move: Hypersomnia');
+					return;
+				}
+				return false;
+			},
+		},
+		onAfterHit(target, source) {
+			if (target.getAbility().isPermanent) return;
+			target.addVolatile('nightmare');
+		},
+		target: "normal",
+		type: "Grass",
+		contestType: "Clever",
+	},
+	abduction: {
+		num: 509,
+		accuracy: 90,
+		basePower: 90,
+		category: "Special",
+		name: "Abduction",
+		pp: 10,
+		priority: -6,
+		flags: {bullet: 1, protect: 1, pulse: 1, mirror: 1, distance: 1},
+		selfSwitch: true,
+		forceSwitch: true,
+		noSketch: true,
+		target: "normal",
+		type: "???",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	xenobeam: {
+		num: 487,
+		accuracy: 100,
+		basePower: 90,
+		category: "Status",
+		name: "Xenobeam",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				if (target.getTypes().join() === '???' || !target.setType('???')) {
+					// Soak should animate even when it fails.
+					// Returning false would suppress the animation.
+					this.add('-fail', target);
+					return null;
+				}
+				this.add('-start', target, 'typechange', 'Water');
+			},
+
+		},
+		target: "normal",
+		type: "Psychic",
+		zMove: {boost: {spa: 1}},
+		contestType: "Cool",
 		isNonstandard: "Future",
 	},
 };

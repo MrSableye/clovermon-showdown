@@ -48,6 +48,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	redcard: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	skyplate: {
 		inherit: true,
 		isNonstandard: null,

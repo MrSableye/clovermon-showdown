@@ -227,6 +227,17 @@ export const Formats: FormatList = [
 		banlist: ['Moody', 'Baton Pass', 'Dragon Rage', 'Sonic Boom'],
 	},
 	{
+		name: '[Gen 8 Clover CAP Only] Monotype',
+		mod: 'clovercap',
+		ruleset: [
+			'Same Type Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Gen 8 Moves',
+		],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+	},
+	{
 		name: '[Gen 8 Clover CAP Only] Anything Goes',
 		mod: 'clovercap',
 		ruleset: ['Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', 'Sketch Gen 8 Moves', 'Dynamax Clause'],
@@ -303,7 +314,7 @@ export const Formats: FormatList = [
 			'Sketch Gen 8 Moves',
 		],
 		banlist: [
-			'Chancer', 'Semrust',
+			'Chancer', 'Semrust', 'Hosajack',
 			'Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Wonder Guard',
 		],
 	},
