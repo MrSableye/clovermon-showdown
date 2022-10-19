@@ -2172,9 +2172,17 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	infected: {
 		name: "Infected",
-		desc: "Priority moves used by opposing Pokemon targeting this Pokemon or its allies are prevented from having an effect.",
-		shortDesc: "This Pokemon and its allies are protected from opposing priority moves.",
-
-		
+		desc: "Pokemon is infected by a virus that revives the dead",
+		shortDesc: "Pokemon is infected by a virus that revives the dead",
 	},
+	perishtouch: {
+		name: "Poison Touch",
+		shortDesc: "This Pokemon's contact moves cause perishing",
+	},
+
+	lethargic: {
+		name: "Lethargic",
+		shortDesc: "This Pokemon is on the verge of sleeping",
+	},
+	
 };

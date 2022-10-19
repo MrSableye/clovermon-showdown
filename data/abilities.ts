@@ -242,7 +242,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onResidual(pokemon) {
 			if (!pokemon.hp) return;
 			for (const target of pokemon.foes()) {
-				if (target.status === 'slp' || target.hasAbility('comatose')) {
+				if (target.status === 'slp' || target.hasAbility('comatose') || target.hasAbility('lethargic' )) {
 					this.damage(target.baseMaxhp / 8, target, pokemon);
 				}
 			}
@@ -2674,6 +2674,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: 57,
 	},
+
+	
 	poisonheal: {
 		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {
@@ -6205,5 +6207,41 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: 5,
 	},
+
+	perishtouch: {
+		// upokecenter says this is implemented as an added secondary effect
+		onModifyMove(move) {
+			if (!move?.flags['contact'] || move.target === 'self') return;
+			if (!move.secondaries) {
+				move.secondaries = [];
+			}
+			move.secondaries.push({
+				chance: 100,
+				volatileStatus: 'perishsong',
+				ability: this.dex.abilities.get('perishtouch'),
+			});
+		},
+		name: "Perish Touch",
+		rating: 2,
+		num: 143,
+		isNonstandard: "Future",
+		},
+		
+
+		lethargic: {
+			onStart(pokemon) {
+				this.add('-ability', pokemon, 'Lethargic');
+			},
+			onSetStatus(status, target, source, effect) {
+				if ((effect as Move)?.status) {
+					this.add('-immune', target, '[from] ability: Lethargic');
+				}
+				return false;
+			},
+			// Permanent sleep "status" implemented in the relevant sleep-checking effects
+			name: "Lethargic",
+			rating: 4,
+			num: 213,
+		},
 
 };

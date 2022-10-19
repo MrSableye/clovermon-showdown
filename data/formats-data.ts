@@ -9000,7 +9000,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	oblivion: {
-		tier: "illegal",
+		tier: "Illegal",
 		isNonstandard: "Future",
 	},
 	waterweedle: {

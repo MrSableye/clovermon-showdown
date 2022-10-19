@@ -7736,4 +7736,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Serene Shockwave",
 		shortDesc: "Cures teammates of their status effects.",
 	},
+	hypersomnia: {
+		name: "Hypersomnia",
+		shortDesc: "Cures teammates of their status effects.",
+	},
 };
