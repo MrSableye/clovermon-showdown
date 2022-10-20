@@ -35433,7 +35433,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 
 	infected: {
-		num: 42152,
+		num: 42999,
 		name: "Infected",
 		types: ["Normal"],
 		gender: "N",
@@ -35446,8 +35446,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 	},
-	infectedzomebie: {
-		num: 658,
+	infectedzombie: {
+		num: 42999,
 		name: "Infected-Zombie",
 		baseSpecies: "Infected",
 		forme: "Ash",
