@@ -2179,8 +2179,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Poison Touch",
 		shortDesc: "This Pokemon's contact moves cause perishing",
 	},
+
 	lethargic: {
 		name: "Lethargic",
 		shortDesc: "This Pokemon is on the verge of sleeping",
+	},
+	triforce: {
+		name: "Triforce",
+		shortDesc: "In 3 turns, this Pokemon collects the triforce, boosting Atk, SpA, and SpD",
 	},
 };

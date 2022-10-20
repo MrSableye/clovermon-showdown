@@ -242,7 +242,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onResidual(pokemon) {
 			if (!pokemon.hp) return;
 			for (const target of pokemon.foes()) {
-				if (target.status === 'slp' || target.hasAbility('comatose')) {
+				if (target.status === 'slp' || target.hasAbility('comatose')|| target.hasAbility('lethargic')) {
 					this.damage(target.baseMaxhp / 8, target, pokemon);
 				}
 			}
@@ -6203,6 +6203,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Infection",
 		rating: 3,
 		num: 5,
+		isNonstandard: "Future",
 	},
 
 	perishtouch: {
@@ -6224,21 +6225,52 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 
+		lethargic: {
+			onStart(pokemon) {
+				this.add('-ability', pokemon, 'Lethargic');
+			},
+			onSetStatus(status, target, source, effect) {
+				if ((effect as Move)?.status) {
+					this.add('-immune', target, '[from] ability: Lethargic');
+				}
+				return false;
+			},
+			// Permanent sleep "status" implemented in the relevant sleep-checking effects
+			name: "Lethargic",
+			rating: 4,
+			num: 213,
+			isNonstandard: "Future",
+		},
 
-	lethargic: {
-		onStart(pokemon) {
-			this.add('-ability', pokemon, 'Lethargic');
+		triforce: {
+			name: "Triforce",
+			onStart(pokemon) {
+				pokemon.addVolatile('triforce');
+			},
+			onEnd(pokemon) {
+				delete pokemon.volatiles['triforce'];
+				this.add('-end', pokemon, 'Triforce', '[silent]');
+			},
+			condition: {
+				duration: 3,
+				onStart(target) {
+					this.add('-start', target, 'ability: Triforce');
+				},
+				onEnd(target) {
+					this.boost({
+						atk: 1,
+						spa: 1,
+						spd: 1,
+						
+					});
+					this.add('-end', target, 'Triforce');
+				},
+			},
+			rating: 2,
+			isNonstandard: "Future",
+			num: 213,
 		},
-		onSetStatus(status, target, source, effect) {
-			if ((effect as Move)?.status) {
-				this.add('-immune', target, '[from] ability: Lethargic');
-			}
-			return false;
-		},
-		// Permanent sleep "status" implemented in the relevant sleep-checking effects
-		name: "Lethargic",
-		rating: 4,
-		num: 213,
-	},
+		
+	
 
 };

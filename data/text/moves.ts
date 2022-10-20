@@ -7752,7 +7752,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hypersomnia: {
 		name: "Hypersomnia",
-		shortDesc: "Cures teammates of their status effects.",
+		shortDesc: "Makes user ability Bad Dreams, opponent Lethargic and gives Nightmare.",
 	},
 	xenobeam: {
 		name: "Xenobeam",

@@ -11901,7 +11901,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			noCopy: true,
 			onStart(pokemon) {
-				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose')) {
+				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose')&& !pokemon.hasAbility('lethargic')) {
 					return false;
 				}
 				this.add('-start', pokemon, 'Nightmare');
@@ -24736,7 +24736,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hypersomnia: {
 		num: 738,
 		accuracy: 100,
-		basePower: 85,
+		basePower: 65,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Hypersomnia",
@@ -24771,7 +24771,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			target.addVolatile('nightmare');
 		},
 		target: "normal",
-		type: "Grass",
+		type: "Ghost",
 		contestType: "Clever",
 	},
 	abduction: {
@@ -24809,7 +24809,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					this.add('-fail', target);
 					return null;
 				}
-				this.add('-start', target, 'typechange', 'Water');
+				this.add('-start', target, 'typechange', '???');
 			},
 
 		},
