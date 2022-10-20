@@ -156,7 +156,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	
+
 	/* Modified items */
 	luckypunch: {
 		inherit: true,

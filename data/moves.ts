@@ -11901,7 +11901,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			noCopy: true,
 			onStart(pokemon) {
-				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose')&& !pokemon.hasAbility('lethargic')) {
+				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose')) {
 					return false;
 				}
 				this.add('-start', pokemon, 'Nightmare');
@@ -22123,7 +22123,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Dark",
 		noSketch: true,
-		isNonstandard: "Future"
+		isNonstandard: "Future",
 	},
 	extinctionwave: {
 		accuracy: 100,
@@ -22142,7 +22142,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "allAdjacentFoes",
 		type: "Dark",
 		noSketch: true,
-		isNonstandard: "Future"
+		isNonstandard: "Future",
 	},
 	poisonbullet: {
 		accuracy: 100,
@@ -22174,7 +22174,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Poison",
 		noSketch: true,
-		isNonstandard: "Future"
+		isNonstandard: "Future",
 	},
 	eternalwalk: {
 		accuracy: 90,
@@ -24811,7 +24811,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 				this.add('-start', target, 'typechange', '???');
 			},
-
 		},
 		target: "normal",
 		type: "Psychic",
