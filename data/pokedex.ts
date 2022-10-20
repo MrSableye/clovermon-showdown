@@ -33467,7 +33467,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Doomsday-Revenant",
 		forme: "Revenant",
 		baseSpecies: "Doomsday",
-		types: ["Ghost"],
+		types: ["Dark","Ghost"],
 		gender: "N",
 		baseStats: {hp: 158, atk: 158, def: 158, spa: 158, spd: 158, spe: 158},
 		abilities: {0: "Illuminate"},
@@ -35704,7 +35704,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	titaneedle: {
 		num: -42215,
-		name: "Stingulor",
+		name: "Titaneedle",
 		types: ["Bug", "Fighting"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 85, atk: 165, def: 85, spa: 25, spd: 85, spe: 105},
