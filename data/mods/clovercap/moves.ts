@@ -275,6 +275,13 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	needlearm: {
+		inherit: true,
+		onHit(target) {
+			target.side.addSideCondition('spikes');
+		},
+		secondary: null,
+	},
 	noretreat: {
 		inherit: true,
 		isNonstandard: null,
