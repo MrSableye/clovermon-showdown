@@ -1,4 +1,4 @@
-export const MoveText: {[k: string]: ModdedMoveText} = {
+export const MovesText: {[k: string]: ModdedMoveText} = {
 	needlearm: {
 		inherit: true,
 		desc: "Has a 100% chance to set spikes.",
