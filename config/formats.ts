@@ -295,6 +295,7 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Random Irish Battle',
 		mod: 'clover',
 		team: 'randomIrish',
+		searchShow: false,
 		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	///////////////////////////////////////////////////////////////////
@@ -690,7 +691,7 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Random SPOOKY Battle',
 		mod: 'clover',
 		team: 'randomSpooky',
-		searchShow: false,
+		searchShow: true,
 		onEffectiveness(typeMod, target, type, move) {
 			if (['Dark', 'Ghost'].includes(type) && ['Dark', 'Ghost'].includes(move.type)) {
 				return 0;
