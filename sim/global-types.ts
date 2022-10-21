@@ -472,6 +472,22 @@ interface DefaultText extends AnyObject {}
 interface ModdedTextObject extends TextObject, Plines {}
 /* eslint-enable @typescript-eslint/no-empty-interface */
 
+type ModdedMoveText = MoveText | Partial<Omit<MoveData, 'name'>> & {
+	inherit: true,
+};
+
+type ModdedItemText = ItemText | Partial<Omit<ItemText, 'name'>> & {
+	inherit: true,
+};
+
+type ModdedDefaultText = DefaultText | Partial<Omit<DefaultText, 'name'>> & {
+	inherit: true,
+};
+
+type ModdedPokedexText = PokedexText | Partial<Omit<PokedexText, 'name'>> & {
+	inherit: true,
+};
+
 namespace RandomTeamsTypes {
 	export interface TeamDetails {
 		megaStone?: number;
