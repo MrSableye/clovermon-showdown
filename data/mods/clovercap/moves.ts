@@ -277,6 +277,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	needlearm: {
 		inherit: true,
+		basePower: 80,
 		onHit(target) {
 			target.side.addSideCondition('spikes');
 		},
