@@ -62,6 +62,16 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	bulletseed: {
+		inherit: true,
+		onHit(target, source) {
+			if (source.types.includes('Grass')) {
+				if (this.randomChance(1, 16)) {
+					target.addVolatile('leechseed');
+				}
+			}
+		},
+	},
 	burningjealousy: {
 		inherit: true,
 		isNonstandard: null,
@@ -176,6 +186,54 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	grassyglide: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	grassyterrain: {
+		inherit: true,
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem('terrainextender')) {
+					return 8;
+				}
+				return 5;
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				const weakenedMoves = ['earthquake', 'bulldoze', 'magnitude', 'earthpower'];
+				if (weakenedMoves.includes(move.id) && defender.isGrounded() && !defender.isSemiInvulnerable()) {
+					this.debug('move weakened by grassy terrain');
+					return this.chainModify(0.5);
+				}
+				if (move.id === 'earthpower') {
+					this.add('-message', 'In Clover CAP, Earth Power is weakened by Grassy Terrain.');
+				}
+				if (move.type === 'Grass' && attacker.isGrounded()) {
+					this.debug('grassy terrain boost');
+					return this.chainModify([5325, 4096]);
+				}
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Grassy Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Grassy Terrain');
+				}
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				if (pokemon.isGrounded() && !pokemon.isSemiInvulnerable()) {
+					this.heal(pokemon.baseMaxhp / 16, pokemon, pokemon);
+				} else {
+					this.debug(`Pokemon semi-invuln or not grounded; Grassy Terrain skipped`);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Grassy Terrain');
+			},
+		},
 	},
 	gravapple: {
 		inherit: true,
@@ -324,6 +382,16 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	seedbomb: {
+		inherit: true,
+		onHit(target, source) {
+			if (source.types.includes('Grass')) {
+				if (this.randomChance(3, 10)) {
+					target.addVolatile('leechseed');
+				}
+			}
+		},
+	},
 	shellsidearm: {
 		inherit: true,
 		isNonstandard: null,
@@ -396,6 +464,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			if (['raindance', 'primordialsea', 'sandstorm', 'hail', 'densefog'].includes(pokemon.effectiveWeather())) {
 				this.debug('weakened by weather');
 				return this.chainModify(0.5);
+			}
+		},
+	},
+	spikecannon: {
+		inherit: true,
+		onHit(target) {
+			if (this.randomChance(1, 8)) {
+				target.side.addSideCondition('spikes');
 			}
 		},
 	},
