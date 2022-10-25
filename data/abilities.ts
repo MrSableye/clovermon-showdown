@@ -2463,7 +2463,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	overcoat: {
 		onImmunity(type, pokemon) {
-			if (type === 'sandstorm' || type === 'hail' || type === 'powder') return false;
+			if (type === 'sandstorm' || type === 'hail' ||  type === 'hyperboreanarctic' || type === 'powder') return false;
 		},
 		onTryHitPriority: 1,
 		onTryHit(target, source, move) {
@@ -3443,7 +3443,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	slushrush: {
 		onModifySpe(spe, pokemon) {
-			if (this.field.isWeather('hail')) {
+			if (['hail', 'hyperboreanarctic'].includes(pokemon.effectiveWeather())) {
 				return this.chainModify(2);
 			}
 		},

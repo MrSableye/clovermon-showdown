@@ -901,10 +901,16 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'Hyperborean Arctic', '[upkeep]');
 			this.eachEvent('Weather');
 		},
+		onWeather(target) {
+			this.damage(target.baseMaxhp / 16);
+		},
 		onFieldEnd() {
 			this.add('-weather', 'none');
 		},
 	},
+
+
+	
 
 	flashbang: {
 		duration: 2,
