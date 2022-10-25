@@ -11901,7 +11901,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			noCopy: true,
 			onStart(pokemon) {
-				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose')&& !pokemon.hasAbility('lethargic')) {
+				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose') && !pokemon.hasAbility('lethargic')) {
 					return false;
 				}
 				this.add('-start', pokemon, 'Nightmare');
