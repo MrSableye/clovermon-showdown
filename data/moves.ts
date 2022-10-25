@@ -23934,7 +23934,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	amogus: {
 		num: 1,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 90,
 		category: "Physical",
 		name: "Amogus",
 		pp: 35,

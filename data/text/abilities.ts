@@ -2178,6 +2178,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	perishtouch: {
 		name: "Poison Touch",
 		shortDesc: "This Pokemon's contact moves cause perishing",
+		activate: "  ([Target] has been hit with the touch of death!)",
 	},
 
 	lethargic: {
