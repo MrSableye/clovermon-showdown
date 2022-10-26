@@ -917,19 +917,17 @@ export const Conditions: {[k: string]: ConditionData} = {
 		onSideStart(side) {
 			this.add('-sidestart', side, 'Flashbang');
 		},
-		onFoeTryMove(target, source, move) {
-			const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
-			if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) {
+		onFoeTryMove(target, source, effect) {
+			if (effect && (effect.priority <= 0.1 || effect.target === 'self')) {
 				return;
 			}
-
-			const dazzlingHolder = this.effectState.target;
-			if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
-				this.attrLastMove('[still]');
-				this.add('cant', dazzlingHolder, 'ability: Dazzling', move, '[of] ' + target);
-				return false;
-			}
+			
+			return null;
 		},
+
+
+
+		
 		onSideResidualOrder: 26,
 		onSideResidualSubOrder: 5,
 		onSideEnd(side) {
