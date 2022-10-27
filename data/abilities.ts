@@ -6271,4 +6271,24 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 		num: 213,
 	},
+	gentlefist: {
+		name: "Gentle Fist",
+		isNonstandard: "Future",
+		onStart(pokemon) {
+			if (pokemon.hasItem('rockyhelmet') && pokemon.takeItem()) {
+				this.add('-enditem', pokemon, 'Rocky Helmet');
+			}
+		},
+		onResidual(pokemon) {
+			if (pokemon.hasItem('rockyhelmet') && pokemon.takeItem()) {
+				this.add('-enditem', pokemon, 'Rocky Helmet');
+			}
+		},
+		onSourceDamage(damage, target, source, effect) {
+			if (damage >= target.hp) return target.hp - 1;
+		},
+		onModifyAtk() {
+			return this.chainModify(3);
+		},
+	},
 };

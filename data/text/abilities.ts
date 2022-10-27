@@ -2189,4 +2189,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Triforce",
 		shortDesc: "In 3 turns, this Pokemon collects the triforce, boosting Atk, SpA, and SpD",
 	},
+	gentlefist: {
+		name: "Gentle Fist",
+		shortDesc: "This Pokemon's Attack is tripled. Leaves its targets with at least 1 HP. Dislikes helmets.",
+	},
 };
