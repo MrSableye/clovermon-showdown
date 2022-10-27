@@ -928,6 +928,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 				) ||
 				(species.tier !== 'Unreleased' && species.tier !== 'Illegal')
 			) &&
+			(!nationalSearch || species.isNonstandard !== 'Past') &&
 			(!species.tier.startsWith("CAP") || capSearch) &&
 			megaSearchResult &&
 			gmaxSearchResult &&
