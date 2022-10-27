@@ -807,6 +807,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return 5;
 		},
 		onDisableMove(pokemon) {
+			if (pokemon.hasItem('utilityumbrella')) return;
 			for (const moveSlot of pokemon.moveSlots) {
 				if (this.dex.moves.get(moveSlot.move).category === 'Status') {
 					pokemon.disableMove(moveSlot.id);
