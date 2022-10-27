@@ -1338,11 +1338,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onModifyMove(move,pokemon) {
-			if (['hail', 'hyperboreanarctic'].includes(pokemon.effectiveWeather()))  move.accuracy = true;
+		onModifyMove(move, pokemon) {
+			if (['hail', 'hyperboreanarctic'].includes(pokemon.effectiveWeather())) move.accuracy = true;
 		},
-		
-		
+
+
 		secondary: {
 			chance: 10,
 			status: 'frz',

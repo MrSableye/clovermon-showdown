@@ -911,8 +911,6 @@ export const Conditions: {[k: string]: ConditionData} = {
 	},
 
 
-	
-
 	flashbang: {
 		duration: 2,
 		onSideStart(side) {
@@ -922,13 +920,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 			if (effect && (effect.priority <= 0.1 || effect.target === 'self')) {
 				return;
 			}
-			
+
 			return null;
 		},
 
 
-
-		
 		onSideResidualOrder: 26,
 		onSideResidualSubOrder: 5,
 		onSideEnd(side) {
