@@ -24824,7 +24824,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	infectiouswheeze: {
 		num: 594,
 		accuracy: 100,
-		basePower: 15,
+		basePower: 25,
 		onModifyType(move, pokemon) {
 			if (pokemon.species.name === 'Blobbos-Zombie') {
 				move.type = 'Ghost';
@@ -24835,7 +24835,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Special",
 		name: "Infectious Wheeze",
 		pp: 20,
-		priority: 1,
+		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		multihit: [2, 5],
 		secondary: null,

@@ -35627,7 +35627,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	blobbosbloody: {
 		num: 69132,
-		name: "Blobbos-Nightmare",
+		name: "Blobbos-Bloody",
 		baseSpecies: "Blobbos",
 		forme: "Bloody",
 		types: ["Poison", "Ghost"],

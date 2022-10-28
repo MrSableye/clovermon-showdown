@@ -309,5 +309,9 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	sugarrush: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
 
