@@ -171,11 +171,11 @@ export const Items: {[k: string]: ModdedItemData} = {
 	thiccbone: {
 		inherit: true,
 		onModifyAtk(atk, pokemon) {
-			if (['Masdawg', 'Pasdawg', 'Naughtycoot'].includes(pokemon.baseSpecies.baseSpecies)) {
+			if (['Masdawg', 'Pasdawg', 'Naughtycoot', 'Blobbos-Skeleton'].includes(pokemon.baseSpecies.baseSpecies)) {
 				return this.chainModify(2);
 			}
 		},
-		itemUser: ["Masdawg", "Pasdawg", "Naughtycoot"],
+		itemUser: ["Masdawg", "Pasdawg", "Naughtycoot", "Blobbos-Skeleton"],
 	},
 	/* Clover CAP Exclusive Items */
 	moluganion: {
