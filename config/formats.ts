@@ -145,8 +145,10 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Gen 8 Moves',
 			'OHKO Clause',
+			'Evasion Moves Clause',
+			'Unique Formes Clause',
 		],
-		banlist: ['Blobbos-Alola', 'Baton Pass', 'Moody'],
+		banlist: ['Blobbos-Alola', 'Baton Pass', 'Moody', 'Arena Trap', 'Moody', 'Shadow Tag'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Clover Doubles & Triples

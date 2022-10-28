@@ -88,4 +88,30 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 			return errors;
 		},
 	},
+	uniqueformesclause: {
+		effectType: 'ValidatorRule',
+		name: 'Unique Formes Clause',
+		desc: 'All formes must be unique.',
+		onValidateTeam(team) {
+			const problems: string[] = [];
+			const ids = new Set();
+
+			team.forEach((set) => {
+				let species = this.dex.species.get(set.species || set.name);
+				while (species.battleOnly) {
+					if (Array.isArray(species.battleOnly)) {
+						species = this.dex.species.get(species.battleOnly[0]);
+					} else {
+						species = this.dex.species.get(species.battleOnly);
+					}
+				}
+				if (ids.has(species.id)) {
+					problems.push(`Your team has more than 1 ${species.name}.`);
+				}
+				ids.add(species.id);
+			});
+
+			return problems;
+		},
+	},
 };
