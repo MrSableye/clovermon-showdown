@@ -57,6 +57,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	rebound: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	transistor: {
 		inherit: true,
 		isNonstandard: null,

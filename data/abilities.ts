@@ -2463,7 +2463,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	overcoat: {
 		onImmunity(type, pokemon) {
-			if (type === 'sandstorm' || type === 'hail' || type === 'powder') return false;
+			if (type === 'sandstorm' || type === 'hail' || type === 'hyperboreanarctic' || type === 'powder') return false;
 		},
 		onTryHitPriority: 1,
 		onTryHit(target, source, move) {
@@ -3443,7 +3443,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	slushrush: {
 		onModifySpe(spe, pokemon) {
-			if (this.field.isWeather('hail')) {
+			if (['hail', 'hyperboreanarctic'].includes(pokemon.effectiveWeather())) {
 				return this.chainModify(2);
 			}
 		},
@@ -5647,6 +5647,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.field.setWeather('densefog');
 		},
 		onSourceModifyAccuracy(acc, pokemon) {
+			if (pokemon.hasItem('utilityumbrella')) return;
 			if (this.field.isWeather('densefog')) {
 				return this.chainModify(2);
 			}
@@ -6190,13 +6191,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 
 	infection: {
-
 		onDamagePriority: -30,
 		onDamage(damage, target, source, effect) {
-			if (damage >= target.hp) {
+			if (target.species.id !== 'infectedzombie' && damage >= target.hp) {
+				this.add('-damage', target, 0);
 				this.add('-ability', target, 'Infection');
-				this.heal(target.maxhp);
 				target.formeChange('Infected-Zombie', this.effect, true);
+				target.heal(target.maxhp, target, this.effect);
+				this.add('-heal', target, target.getHealth, '[silent]');
+				return 0;
 			}
 		},
 		isBreakable: true,

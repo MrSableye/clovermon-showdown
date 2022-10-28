@@ -1338,9 +1338,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onModifyMove(move) {
-			if (this.field.isWeather('hail')) move.accuracy = true;
+		onModifyMove(move, pokemon) {
+			if (['hail', 'hyperboreanarctic'].includes(pokemon.effectiveWeather())) move.accuracy = true;
 		},
+
+
 		secondary: {
 			chance: 10,
 			status: 'frz',
@@ -19246,6 +19248,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move.type = 'Rock';
 				break;
 			case 'hail':
+			case 'hyperboreanarctic':
 				move.type = 'Ice';
 				break;
 			}
@@ -23934,7 +23937,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	amogus: {
 		num: 1,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 90,
 		category: "Physical",
 		name: "Amogus",
 		pp: 35,

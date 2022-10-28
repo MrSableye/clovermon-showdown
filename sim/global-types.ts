@@ -472,6 +472,10 @@ interface DefaultText extends AnyObject {}
 interface ModdedTextObject extends TextObject, Plines {}
 /* eslint-enable @typescript-eslint/no-empty-interface */
 
+type ModdedAbilityText = AbilityText | Partial<Omit<AbilityData, 'name'>> & {
+	inherit: true,
+};
+
 type ModdedMoveText = MoveText | Partial<Omit<MoveData, 'name'>> & {
 	inherit: true,
 };
