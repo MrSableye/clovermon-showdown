@@ -6271,6 +6271,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 		num: 213,
 	},
+	gentlefist: {
+		name: "Gentle Fist",
+		isNonstandard: "Future",
+		onStart(pokemon) {
+			if (pokemon.hasItem('rockyhelmet') && pokemon.takeItem()) {
+				this.add('-enditem', pokemon, 'Rocky Helmet');
+			}
+		},
+		onResidual(pokemon) {
+			if (pokemon.hasItem('rockyhelmet') && pokemon.takeItem()) {
+				this.add('-enditem', pokemon, 'Rocky Helmet');
+			}
+		},
+		onSourceDamage(damage, target, source, effect) {
+			if (damage >= target.hp) return target.hp - 1;
+		},
+		onModifyAtk() {
+			return this.chainModify(3);
+		},
+	},
 	eyeofblobbos: {
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Blobbos-Eye' || pokemon.transformed) return;
@@ -6334,15 +6354,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return;
 			}
 
-			const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			const hitSub = target.volatiles['substitute'] &&
+				!move.flags['bypasssub'] &&
+				!(move.infiltrates && this.gen >= 6);
 			if (hitSub) return;
 
 			if (!target.runImmunity(move.type)) return;
 			return 0;
 		},
 		onUpdate(pokemon) {
-			if (['blobbosmimikyu'].includes(pokemon.species.id) && this.effectState.busted) {
-				const speciesid = pokemon.species.id === 'blobbosmimikyutotem' ? 'Blobbos-Mimikyu-Busted-Totem' : 'Blobbos-Mimikyu-Busted';
+			if (['blobbosmimikyu'].includes(pokemon.species.id) &&
+			this.effectState.busted) {
+				const speciesid = pokemon.species.id === 'blobbosmimikyutotem' ?
+					'Blobbos-Mimikyu-Busted-Totem' :
+					'Blobbos-Mimikyu-Busted';
 				pokemon.formeChange(speciesid, this.effect, true);
 				this.damage(pokemon.baseMaxhp / 8, pokemon, pokemon, this.dex.species.get(speciesid));
 			}
