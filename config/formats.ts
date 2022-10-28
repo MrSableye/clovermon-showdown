@@ -148,7 +148,7 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Unique Formes Clause',
 		],
-		banlist: ['Blobbos-Alola', 'Baton Pass', 'Moody', 'Arena Trap', 'Moody', 'Shadow Tag'],
+		banlist: ['Blobbos-Alola', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Clover Doubles & Triples
