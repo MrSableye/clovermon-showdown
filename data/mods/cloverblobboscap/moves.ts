@@ -313,5 +313,9 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	bloodletting: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
 
