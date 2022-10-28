@@ -6271,24 +6271,86 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 		num: 213,
 	},
-	gentlefist: {
-		name: "Gentle Fist",
-		isNonstandard: "Future",
+	eyeofblobbos: {
 		onStart(pokemon) {
-			if (pokemon.hasItem('rockyhelmet') && pokemon.takeItem()) {
-				this.add('-enditem', pokemon, 'Rocky Helmet');
+			if (pokemon.baseSpecies.baseSpecies !== 'Blobbos-Eye' || pokemon.transformed) return;
+			if (pokemon.hp < pokemon.maxhp) {
+				if (pokemon.species.id === 'blobboseye') {
+					pokemon.formeChange('Blobbos-Eye-Mouth');
+				}
+			} else {
+				if (pokemon.species.id === 'blobboseyemouth') {
+					pokemon.formeChange('Blobbos-Eye');
+				}
 			}
 		},
+		onResidualOrder: 29,
 		onResidual(pokemon) {
-			if (pokemon.hasItem('rockyhelmet') && pokemon.takeItem()) {
-				this.add('-enditem', pokemon, 'Rocky Helmet');
+			if (
+				pokemon.baseSpecies.baseSpecies !== 'Blobbos-Eye' ||
+				pokemon.transformed || !pokemon.hp
+			) return;
+			if (pokemon.hp < pokemon.maxhp) {
+				if (pokemon.species.id === 'blobboseye') {
+					pokemon.formeChange('Blobbos-Eye-Mouth');
+				}
+			} else {
+				if (pokemon.species.id === 'blobboseyemouth') {
+					pokemon.formeChange('Blobbos-Eye');
+				}
 			}
 		},
-		onSourceDamage(damage, target, source, effect) {
-			if (damage >= target.hp) return target.hp - 1;
+		isPermanent: true,
+		name: "Eye of Blobbos",
+		rating: 3,
+		isNonstandard: "Future",
+	},
+	costume: {
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
+			if (
+				effect && effect.effectType === 'Move' &&
+				['blobbosmimikyu'].includes(target.species.id) && !target.transformed
+			) {
+				this.add('-activate', target, 'ability: Costume');
+				this.effectState.busted = true;
+				return 0;
+			}
 		},
-		onModifyAtk() {
-			return this.chainModify(3);
+		onCriticalHit(target, source, move) {
+			if (!target) return;
+			if (!['blobbosmimikyu'].includes(target.species.id) || target.transformed) {
+				return;
+			}
+			const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (hitSub) return;
+
+			if (!target.runImmunity(move.type)) return;
+			return false;
 		},
+		onEffectiveness(typeMod, target, type, move) {
+			if (!target || move.category === 'Status') return;
+			if (!['blobbosmimikyu'].includes(target.species.id) || target.transformed) {
+				return;
+			}
+
+			const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (hitSub) return;
+
+			if (!target.runImmunity(move.type)) return;
+			return 0;
+		},
+		onUpdate(pokemon) {
+			if (['blobbosmimikyu'].includes(pokemon.species.id) && this.effectState.busted) {
+				const speciesid = pokemon.species.id === 'blobbosmimikyutotem' ? 'Blobbos-Mimikyu-Busted-Totem' : 'Blobbos-Mimikyu-Busted';
+				pokemon.formeChange(speciesid, this.effect, true);
+				this.damage(pokemon.baseMaxhp / 8, pokemon, pokemon, this.dex.species.get(speciesid));
+			}
+		},
+		isBreakable: true,
+		isPermanent: true,
+		name: "Costume",
+		rating: 3.5,
+		num: 209,
 	},
 };

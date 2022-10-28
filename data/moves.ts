@@ -24821,4 +24821,62 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
+	infectiouswheeze: {
+		num: 594,
+		accuracy: 100,
+		basePower: 15,
+		onModifyType(move, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Zombie') {
+				move.type = 'Ghost';
+			} else {
+				move.type = 'Poison';
+			}
+		},
+		category: "Special",
+		name: "Infectious Wheeze",
+		pp: 20,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	siphon: {
+		num: 577,
+		accuracy: 85,
+		basePower: 100,
+		category: "Special",
+		name: "Siphon",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
+		drain: [3, 4],
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	letssleppforever: {
+		num: 700,
+		accuracy: true,
+		basePower: 190,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Let's Slepp Forever",
+		pp: 1,
+		priority: 0,
+		flags: {},
+		isZ: "blobbosmikiumz",
+		secondary: {
+			chance: 100,
+			status: 'slp',
+		},
+		target: "normal",
+		type: "Ice",
+		contestType: "Cool",
+	},
 };

@@ -7892,4 +7892,42 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	negite: {
+		name: "Negite",
+		spritenum: 628,
+		megaStone: "Blobbos-Nega-Mega",
+		megaEvolves: "Blobbos-Nega",
+		itemUser: ["Blobbos-Nega"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	dustite: {
+		name: "Dustite",
+		spritenum: 623,
+		megaStone: "Blobbos-Dust-Mega",
+		megaEvolves: "Blobbos-Dust",
+		itemUser: ["Blobbos-Dust"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	blobbosmikiumz: {
+		name: "Blobbosmikium Z",
+		spritenum: 686,
+		onTakeItem: false,
+		zMove: "Let's Slepp Forever",
+		zMoveFrom: "Flash Freeze",
+		itemUser: ["Blobbos-Mimikyu", "Blobbos-Mimikyu-Busted"],
+		gen: 8,
+		isNonstandard: "Future",
+	},
 };

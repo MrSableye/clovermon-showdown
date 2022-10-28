@@ -2059,7 +2059,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	allskill: {
 		name: "All Skill",
-		shortDesc: "Shield Dust + Shell Armor.",
+		shortDesc: "Shield Dust + Shell Armor + No Guard.",
 	},
 	artillery: {
 		name: "Artillery",
@@ -2189,8 +2189,27 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Triforce",
 		shortDesc: "In 3 turns, this Pokemon collects the triforce, boosting Atk, SpA, and SpD",
 	},
-	gentlefist: {
-		name: "Gentle Fist",
-		shortDesc: "This Pokemon's Attack is tripled. Leaves its targets with at least 1 HP. Dislikes helmets.",
+	infection: {
+		name: "Infection",
+		shortDesc: "(Blobbos Infected) When this Pokemon faints, it regains HP and changes form to be a zombie.",
+	},
+	costume: {
+		name: "Costume",
+		desc: "If this Pokemon is a Blobbos-Mimikyu, the first hit it takes in battle deals 0 neutral damage. Its costume is then broken, it changes to Busted Form, and it loses 1/8 of its max HP. Confusion damage also breaks the costume.",
+		shortDesc: "(Blobbos-Mimikyu only) The first hit it takes is blocked, and it takes 1/8 HP damage instead.",
+		gen7: {
+			desc: "If this Pokemon is a Blobbos-Mimikyu, the first hit it takes in battle deals 0 neutral damage. Its costume is then broken and it changes to Busted Form. Confusion damage also breaks the costume.",
+			shortDesc: "(Blobbos-Mimikyu only) First hit deals 0 damage, breaks costume.",
+		},
+
+		block: "  Its costume served it as a decoy!",
+		transform: "[POKEMON]'s costume was busted!",
+	},
+	eyeofblobbos: {
+		name: "Eye of Blobbos",
+		shortDesc: "If Blobbos-Eye, goes into Eye-Mouth Mode.",
+
+		transform: "You feel a chill down your spine!",
+		transformEnd: "Blobbos-Eye-Mouth has calmed down!",
 	},
 };

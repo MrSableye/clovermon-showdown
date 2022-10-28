@@ -9335,4 +9335,92 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosskeleton: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosvampire: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosnightmare: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosjackolantern: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboseye: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboseyemouth: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosbloody: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosshadow: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosinfected: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboszombie: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscreature: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosdrowned: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmoniker: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosayylien: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscandycorn: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmummy: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosspooky: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosexe: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmimikyu: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmimikyubusted: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosnegamega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosdustmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };

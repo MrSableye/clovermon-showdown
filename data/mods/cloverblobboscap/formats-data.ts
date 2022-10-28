@@ -2711,4 +2711,89 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbosskeleton: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosvampire: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosnightmare: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosjackolantern: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboseye: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbloody: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosshadow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosinfected: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscreature: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdrowned: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmoniker: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosayylien: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscandycorn: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmummy: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosspooky: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosexe: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmimikyu: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
