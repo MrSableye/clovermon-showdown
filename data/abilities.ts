@@ -6294,31 +6294,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	eyeofblobbos: {
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.baseSpecies !== 'Blobbos-Eye' || pokemon.transformed) return;
-			if (pokemon.hp < pokemon.maxhp) {
-				if (pokemon.species.id === 'blobboseye') {
-					pokemon.formeChange('Blobbos-Eye-Mouth');
-				}
-			} else {
-				if (pokemon.species.id === 'blobboseyemouth') {
-					pokemon.formeChange('Blobbos-Eye');
-				}
+			if (pokemon.transformed) return;
+			if (pokemon.species.id === 'blobboseye' && pokemon.hp < pokemon.maxhp) {
+				pokemon.formeChange('Blobbos-Eye-Mouth');
+			} else if (pokemon.species.id === 'blobboseyemouth' && pokemon.hp === pokemon.maxhp) {
+				pokemon.formeChange('Blobbos-Eye');
 			}
 		},
 		onResidualOrder: 29,
 		onResidual(pokemon) {
-			if (
-				pokemon.baseSpecies.baseSpecies !== 'Blobbos-Eye' ||
-				pokemon.transformed || !pokemon.hp
-			) return;
-			if (pokemon.hp < pokemon.maxhp) {
-				if (pokemon.species.id === 'blobboseye') {
-					pokemon.formeChange('Blobbos-Eye-Mouth');
-				}
-			} else {
-				if (pokemon.species.id === 'blobboseyemouth') {
-					pokemon.formeChange('Blobbos-Eye');
-				}
+			if (pokemon.transformed || !pokemon.hp) return;
+			if (pokemon.species.id === 'blobboseye' && pokemon.hp < pokemon.maxhp) {
+				pokemon.formeChange('Blobbos-Eye-Mouth');
+			} else if (pokemon.species.id === 'blobboseyemouth' && pokemon.hp === pokemon.maxhp) {
+				pokemon.formeChange('Blobbos-Eye');
 			}
 		},
 		isPermanent: true,
