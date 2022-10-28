@@ -35615,7 +35615,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Dark", "Psychic"],
 		forme: "Eye-Mouth",
 		gender: 'N',
-		baseStats: {hp: 80, atk: 135, def: 145, spa: 115, spd: 45, spe: 120},
+		baseStats: {hp: 80, atk: 135, def: 45, spa: 115, spd: 45, spe: 120},
 		abilities: {0: "Strong Jaw"},
 		heightm: 0.4,
 		weightkg: 5.7,
@@ -35627,7 +35627,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	blobbosbloody: {
 		num: 69132,
-		name: "Blobbos-Nightmare",
+		name: "Blobbos-Bloody",
 		baseSpecies: "Blobbos",
 		forme: "Bloody",
 		types: ["Poison", "Ghost"],

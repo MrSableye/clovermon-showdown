@@ -215,4 +215,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	perishtouch: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
