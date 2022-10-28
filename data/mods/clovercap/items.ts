@@ -156,6 +156,14 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	rowapberry: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	jabocaberry: {
+		inherit: true,
+		isNonstandard: null,
+	},
 
 	/* Modified items */
 	luckypunch: {

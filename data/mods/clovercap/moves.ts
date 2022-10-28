@@ -263,6 +263,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	lowsweep: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+	},
 	magicpowder: {
 		inherit: true,
 		isNonstandard: null,
@@ -622,6 +626,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+	},
+	xscissor: {
+		inherit: true,
+		critRatio: 2,
 	},
 	weatherball: {
 		inherit: true,
