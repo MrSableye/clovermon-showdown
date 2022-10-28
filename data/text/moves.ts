@@ -7752,7 +7752,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hypersomnia: {
 		name: "Hypersomnia",
-		shortDesc: "Cures teammates of their status effects.",
+		shortDesc: "Makes user ability Bad Dreams, opponent Lethargic and gives Nightmare.",
 	},
 	xenobeam: {
 		name: "Xenobeam",
@@ -7761,5 +7761,21 @@ export const MovesText: {[k: string]: MoveText} = {
 	abduction: {
 		name: "Abduction",
 		shortDesc: "Switches the user and opponent",
+	},
+	electromagnetism: {
+		name: "Electromagnetism",
+		shortDesc: "Deals damage and user is under Magnet Rise effect",
+	},
+	titaniumclap: {
+		name: "Titanium Clap",
+		shortDesc: "30% chance to paralyze the foe.",
+	},
+	paranormalactivity: {
+		name: "Paranormal Activity",
+		shortDesc: "Able to hit Normal-type Pokemon.",
+	},
+	infectiouswheeze: {
+		name: "Infectious Wheeze",
+		shortDesc: "If Blobbos-Infected, becomes Poison type, if Blobbos-Zombie, becomes Ghost type.",
 	},
 };

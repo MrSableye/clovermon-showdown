@@ -27,4 +27,26 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	negite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dustite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	blobbosmikiumz: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	thiccbone: {
+		inherit: true,
+		onModifyAtk(atk, pokemon) {
+			if (['Masdawg', 'Pasdawg', 'Naughtycoot'].includes(pokemon.baseSpecies.baseSpecies) ||
+			pokemon.species.id === 'blobbosskeleton') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Masdawg", "Pasdawg", "Naughtycoot", "Blobbos-Skeleton"],
+	},
 };

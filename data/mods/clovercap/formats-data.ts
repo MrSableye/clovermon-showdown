@@ -600,6 +600,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	"3dawg": {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	jarumite: {
 		inherit: true,

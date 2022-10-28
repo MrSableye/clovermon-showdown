@@ -242,7 +242,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onResidual(pokemon) {
 			if (!pokemon.hp) return;
 			for (const target of pokemon.foes()) {
-				if (target.status === 'slp' || target.hasAbility('comatose')) {
+				if (target.status === 'slp' || target.hasAbility('comatose') || target.hasAbility('lethargic')) {
 					this.damage(target.baseMaxhp / 8, target, pokemon);
 				}
 			}
@@ -2463,7 +2463,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	overcoat: {
 		onImmunity(type, pokemon) {
-			if (type === 'sandstorm' || type === 'hail' || type === 'powder') return false;
+			if (type === 'sandstorm' || type === 'hail' || type === 'hyperboreanarctic' || type === 'powder') return false;
 		},
 		onTryHitPriority: 1,
 		onTryHit(target, source, move) {
@@ -3443,7 +3443,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	slushrush: {
 		onModifySpe(spe, pokemon) {
-			if (this.field.isWeather('hail')) {
+			if (['hail', 'hyperboreanarctic'].includes(pokemon.effectiveWeather())) {
 				return this.chainModify(2);
 			}
 		},
@@ -5647,6 +5647,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.field.setWeather('densefog');
 		},
 		onSourceModifyAccuracy(acc, pokemon) {
+			if (pokemon.hasItem('utilityumbrella')) return;
 			if (this.field.isWeather('densefog')) {
 				return this.chainModify(2);
 			}
@@ -6190,19 +6191,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 
 	infection: {
-
 		onDamagePriority: -30,
 		onDamage(damage, target, source, effect) {
+			if (target.species.id !== 'blobbosinfected') return;
 			if (damage >= target.hp) {
+				this.add('-damage', target, 0);
 				this.add('-ability', target, 'Infection');
-				this.heal(target.maxhp);
-				target.formeChange('Infected-Zombie', this.effect, true);
+				target.formeChange('Blobbos-Zombie', this.effect, true);
+				target.heal(target.maxhp, target, this.effect);
+				this.add('-heal', target, target.getHealth, '[silent]');
+				return 0;
 			}
 		},
 		isBreakable: true,
 		name: "Infection",
 		rating: 3,
 		num: 5,
+		isNonstandard: "Future",
 	},
 
 	perishtouch: {
@@ -6223,8 +6228,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 143,
 		isNonstandard: "Future",
 	},
-
-
 	lethargic: {
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Lethargic');
@@ -6239,6 +6242,130 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Lethargic",
 		rating: 4,
 		num: 213,
+		isNonstandard: "Future",
 	},
+	triforce: {
+		name: "Triforce",
+		onStart(pokemon) {
+			pokemon.addVolatile('triforce');
+		},
+		onEnd(pokemon) {
+			delete pokemon.volatiles['triforce'];
+			this.add('-end', pokemon, 'Triforce', '[silent]');
+		},
+		condition: {
+			duration: 3,
+			onStart(target) {
+				this.add('-start', target, 'ability: Triforce');
+			},
+			onEnd(target) {
+				this.boost({
+					atk: 1,
+					spa: 1,
+					spd: 1,
 
+				});
+				this.add('-end', target, 'Triforce');
+			},
+		},
+		rating: 2,
+		isNonstandard: "Future",
+		num: 213,
+	},
+	gentlefist: {
+		name: "Gentle Fist",
+		isNonstandard: "Future",
+		onStart(pokemon) {
+			if (pokemon.hasItem('rockyhelmet') && pokemon.takeItem()) {
+				this.add('-enditem', pokemon, 'Rocky Helmet');
+			}
+		},
+		onResidual(pokemon) {
+			if (pokemon.hasItem('rockyhelmet') && pokemon.takeItem()) {
+				this.add('-enditem', pokemon, 'Rocky Helmet');
+			}
+		},
+		onSourceDamage(damage, target, source, effect) {
+			if (damage >= target.hp) return target.hp - 1;
+		},
+		onModifyAtk() {
+			return this.chainModify(3);
+		},
+	},
+	eyeofblobbos: {
+		onStart(pokemon) {
+			if (pokemon.transformed) return;
+			if (pokemon.species.id === 'blobboseye' && pokemon.hp < pokemon.maxhp) {
+				pokemon.formeChange('Blobbos-Eye-Mouth');
+			} else if (pokemon.species.id === 'blobboseyemouth' && pokemon.hp === pokemon.maxhp) {
+				pokemon.formeChange('Blobbos-Eye');
+			}
+		},
+		onResidualOrder: 29,
+		onResidual(pokemon) {
+			if (pokemon.transformed || !pokemon.hp) return;
+			if (pokemon.species.id === 'blobboseye' && pokemon.hp < pokemon.maxhp) {
+				pokemon.formeChange('Blobbos-Eye-Mouth');
+			} else if (pokemon.species.id === 'blobboseyemouth' && pokemon.hp === pokemon.maxhp) {
+				pokemon.formeChange('Blobbos-Eye');
+			}
+		},
+		isPermanent: true,
+		name: "Eye of Blobbos",
+		rating: 3,
+		isNonstandard: "Future",
+	},
+	costume: {
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
+			if (
+				effect && effect.effectType === 'Move' &&
+				['blobbosmimikyu'].includes(target.species.id) && !target.transformed
+			) {
+				this.add('-activate', target, 'ability: Costume');
+				this.effectState.busted = true;
+				return 0;
+			}
+		},
+		onCriticalHit(target, source, move) {
+			if (!target) return;
+			if (!['blobbosmimikyu'].includes(target.species.id) || target.transformed) {
+				return;
+			}
+			const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+			if (hitSub) return;
+
+			if (!target.runImmunity(move.type)) return;
+			return false;
+		},
+		onEffectiveness(typeMod, target, type, move) {
+			if (!target || move.category === 'Status') return;
+			if (!['blobbosmimikyu'].includes(target.species.id) || target.transformed) {
+				return;
+			}
+
+			const hitSub = target.volatiles['substitute'] &&
+				!move.flags['bypasssub'] &&
+				!(move.infiltrates && this.gen >= 6);
+			if (hitSub) return;
+
+			if (!target.runImmunity(move.type)) return;
+			return 0;
+		},
+		onUpdate(pokemon) {
+			if (['blobbosmimikyu'].includes(pokemon.species.id) &&
+			this.effectState.busted) {
+				const speciesid = pokemon.species.id === 'blobbosmimikyutotem' ?
+					'Blobbos-Mimikyu-Busted-Totem' :
+					'Blobbos-Mimikyu-Busted';
+				pokemon.formeChange(speciesid, this.effect, true);
+				this.damage(pokemon.baseMaxhp / 8, pokemon, pokemon, this.dex.species.get(speciesid));
+			}
+		},
+		isBreakable: true,
+		isPermanent: true,
+		name: "Costume",
+		rating: 3.5,
+		num: 209,
+	},
 };

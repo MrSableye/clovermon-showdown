@@ -228,7 +228,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	illuminate: {
 		inherit: true,
-		shortDesc: "This Pokemon's moves have their accuracy multiplied by 1.3.",
 		rating: 3,
 		onSourceModifyAccuracyPriority: -1,
 		onSourceModifyAccuracy(accuracy) {

@@ -1338,9 +1338,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onModifyMove(move) {
-			if (this.field.isWeather('hail')) move.accuracy = true;
+		onModifyMove(move, pokemon) {
+			if (['hail', 'hyperboreanarctic'].includes(pokemon.effectiveWeather())) move.accuracy = true;
 		},
+
+
 		secondary: {
 			chance: 10,
 			status: 'frz',
@@ -11901,7 +11903,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			noCopy: true,
 			onStart(pokemon) {
-				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose')) {
+				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose') && !pokemon.hasAbility('lethargic')) {
 					return false;
 				}
 				this.add('-start', pokemon, 'Nightmare');
@@ -19246,6 +19248,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move.type = 'Rock';
 				break;
 			case 'hail':
+			case 'hyperboreanarctic':
 				move.type = 'Ice';
 				break;
 			}
@@ -22123,7 +22126,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Dark",
 		noSketch: true,
-		isNonstandard: "Future"
+		isNonstandard: "Future",
 	},
 	extinctionwave: {
 		accuracy: 100,
@@ -22142,7 +22145,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "allAdjacentFoes",
 		type: "Dark",
 		noSketch: true,
-		isNonstandard: "Future"
+		isNonstandard: "Future",
 	},
 	poisonbullet: {
 		accuracy: 100,
@@ -22174,7 +22177,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Poison",
 		noSketch: true,
-		isNonstandard: "Future"
+		isNonstandard: "Future",
 	},
 	eternalwalk: {
 		accuracy: 90,
@@ -23934,7 +23937,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	amogus: {
 		num: 1,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 90,
 		category: "Physical",
 		name: "Amogus",
 		pp: 35,
@@ -24736,7 +24739,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hypersomnia: {
 		num: 738,
 		accuracy: 100,
-		basePower: 85,
+		basePower: 65,
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Hypersomnia",
@@ -24771,7 +24774,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			target.addVolatile('nightmare');
 		},
 		target: "normal",
-		type: "Grass",
+		type: "Ghost",
 		contestType: "Clever",
 	},
 	abduction: {
@@ -24809,14 +24812,71 @@ export const Moves: {[moveid: string]: MoveData} = {
 					this.add('-fail', target);
 					return null;
 				}
-				this.add('-start', target, 'typechange', 'Water');
+				this.add('-start', target, 'typechange', '???');
 			},
-
 		},
 		target: "normal",
 		type: "Psychic",
 		zMove: {boost: {spa: 1}},
 		contestType: "Cool",
 		isNonstandard: "Future",
+	},
+	infectiouswheeze: {
+		num: 594,
+		accuracy: 100,
+		basePower: 25,
+		onModifyType(move, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Zombie') {
+				move.type = 'Ghost';
+			} else {
+				move.type = 'Poison';
+			}
+		},
+		category: "Special",
+		name: "Infectious Wheeze",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	siphon: {
+		num: 577,
+		accuracy: 85,
+		basePower: 100,
+		category: "Special",
+		name: "Siphon",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
+		drain: [3, 4],
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	letssleppforever: {
+		num: 700,
+		accuracy: true,
+		basePower: 190,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Let's Slepp Forever",
+		pp: 1,
+		priority: 0,
+		flags: {},
+		isZ: "blobbosmikiumz",
+		secondary: {
+			chance: 100,
+			status: 'slp',
+		},
+		target: "normal",
+		type: "Ice",
+		contestType: "Cool",
 	},
 };

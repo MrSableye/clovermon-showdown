@@ -199,4 +199,24 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	infection: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	costume: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	eyeofblobbos: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	triforce: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	perishtouch: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

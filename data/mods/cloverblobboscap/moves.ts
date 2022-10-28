@@ -273,5 +273,49 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	splishysplash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	titaniumclap: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	paranormalactivity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	infectiouswheeze: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	siphon: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	xenobeam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	abduction: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	flashfreeze: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hypersomnia: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sugarrush: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bloodletting: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
 
