@@ -32409,7 +32409,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Fusjahl",
 		types: ["???", "Ground"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 77, atk: 111, def: 88, spa: 55, spd: 88, spe: 25},
+		baseStats: {hp: 88, atk: 111, def: 88, spa: 55, spd: 88, spe: 14},
 		abilities: {0: "Overeager"},
 		heightm: 0.7,
 		weightkg: 111,
