@@ -32424,7 +32424,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		forme: "Mega",
 		types: ["???", "Bug", "Dark", "Dragon", "Electric", "Fairy", "Fighting", "Fire", "Flying", "Ghost", "Grass", "Ground", "Ice", "Normal", "Poison", "Psychic", "Rock", "Steel", "Water"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 777, atk: 1111, def: 888, spa: 333, spd: 1111, spe: 0},
+		baseStats: {hp: 1111, atk: 1111, def: 1111, spa: 1111, spd: 1111, spe: 0},
 		abilities: {0: "Overeagerest"},
 		heightm: 7,
 		weightkg: 1111,
