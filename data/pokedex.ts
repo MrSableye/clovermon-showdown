@@ -35968,7 +35968,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: 69132,
 		name: "Blobbos-Mimikyu",
 		baseSpecies: "Blobbos",
-		baseForme: "Costumed",
+		forme: "Mimikyu",
 		types: ["Ghost", "Ice"],
 		baseStats: {hp: 55, atk: 50, def: 80, spa: 90, spd: 105, spe: 96},
 		abilities: {0: "Costume"},
