@@ -339,9 +339,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	needlearm: {
 		inherit: true,
-		basePower: 80,
+		basePower: 65,
 		onHit(target) {
-			target.side.addSideCondition('spikes');
+			if (this.randomChance(1, 2)) {
+				target.side.addSideCondition('spikes');
+			}
 		},
 		secondary: null,
 	},
