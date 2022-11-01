@@ -11,7 +11,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	anaconduke: {
 		inherit: true,
-		evos: ["Balboa"],
+		evos: ["Ballboa"],
 	},
 	ballboa: {
 		inherit: true,
