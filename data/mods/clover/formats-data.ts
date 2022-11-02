@@ -3446,7 +3446,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	corooster: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"bravebird",
@@ -3469,7 +3469,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	gutsifly: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"stickyweb",
@@ -3488,7 +3488,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	proboskito: {
 		inherit: true,
-		tier: "NU",
+		tier: "RU",
 		isNonstandard: null,
 	},
 	clovour: {
@@ -3557,7 +3557,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	birdhouse: {
 		inherit: true,
-		tier: "NU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"softboiled",
@@ -3662,7 +3662,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	finasoven: {
 		inherit: true,
-		tier: "NU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"trickroom",
@@ -3703,7 +3703,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fairileon: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"quiverdance",
@@ -3760,7 +3760,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	seamapan: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"lovelykiss",
@@ -3797,7 +3797,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	pasdawg: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"bodyslam",
@@ -3816,7 +3816,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	anaconduke: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"powerwhip",
@@ -3913,7 +3913,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fabkube: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"calmmind",
@@ -4053,7 +4053,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	glacialynx: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"icebeam",
@@ -4125,7 +4125,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	somboludo: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"mop",
@@ -4180,7 +4180,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	hyletrack: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"shiftgear",
@@ -4198,7 +4198,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	armowite: {
 		inherit: true,
-		tier: "NU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"owtheedge",
@@ -4216,12 +4216,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	karawn: {
 		inherit: true,
-		tier: "NFE",
+		tier: "NU",
 		isNonstandard: null,
 	},
 	mabster: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"shellsmash",
@@ -4275,7 +4275,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	huntabre: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"return",
@@ -4361,7 +4361,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	chancer: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleLevel: 80,
 	},
@@ -4385,7 +4385,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	whizzard: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"auroraveil",
@@ -4454,7 +4454,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	geigh: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"aeroblast",
@@ -4865,7 +4865,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	lossolith: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"wish",
@@ -4929,7 +4929,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	nomaestro: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"boomburst",
@@ -5109,7 +5109,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	rekroach: {
 		inherit: true,
-		tier: "NU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"partingshot",
@@ -5128,7 +5128,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	ricosuave: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"uturn",
@@ -5142,7 +5142,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	spaghefant: {
 		inherit: true,
-		tier: "RU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"moonblast",
@@ -5160,7 +5160,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	crystaking: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"gunkshot",
@@ -5196,7 +5196,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	roynapalm: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"sunnyday",
@@ -5264,7 +5264,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	draconius: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"dragondance",
@@ -5348,7 +5348,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	premantom: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"hex",
@@ -5428,7 +5428,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	uwotto: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"shiftgear",
@@ -5526,7 +5526,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	spookeer: {
 		inherit: true,
-		tier: "NFE",
+		tier: "NU",
 		isNonstandard: null,
 	},
 	spookzilla: {
@@ -5567,7 +5567,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	sadfish: {
 		inherit: true,
-		tier: "NU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"sudoku",
@@ -5580,7 +5580,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	deloris: {
 		inherit: true,
-		tier: "NU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"geomancy",
@@ -5645,7 +5645,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	regirust: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"spooperpower",
@@ -5758,7 +5758,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bunnorgy: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"fakeout",
@@ -5821,7 +5821,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	emplyin: {
 		inherit: true,
-		tier: "NU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"knockoff",
@@ -5869,7 +5869,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	gangnome: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"toxic",
@@ -5900,7 +5900,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	ubruh: {
 		inherit: true,
-		tier: "NU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"shoreup",
@@ -6102,7 +6102,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	falcaptain: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"falconpunch",
@@ -6115,7 +6115,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	cirpent: {
 		inherit: true,
-		tier: "LC",
+		tier: "NU",
 		isNonstandard: null,
 	},
 	traumobra: {
@@ -6458,7 +6458,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	cthullord: {
 		inherit: true,
-		tier: "RU",
+		tier: "NU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"shellsmash",
@@ -6505,7 +6505,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	substarr: {
 		inherit: true,
-		tier: "UU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"boomburst",
@@ -6579,7 +6579,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	banageddon: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"banhammer",
@@ -6649,7 +6649,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	reagain: {
 		inherit: true,
-		tier: "UU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"recover",
