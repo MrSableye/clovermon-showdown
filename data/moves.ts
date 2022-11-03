@@ -24879,4 +24879,52 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 		contestType: "Cool",
 	},
+	shadowban: {
+		num: 269,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Shadowban",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
+		volatileStatus: 'taunt',
+		condition: {
+			duration: 3,
+			onStart(target) {
+				if (target.activeTurns && !this.queue.willMove(target)) {
+					this.effectState.duration++;
+				}
+				this.add('-start', target, 'move: Taunt');
+			},
+			onResidualOrder: 15,
+			onEnd(target) {
+				this.add('-end', target, 'move: Taunt');
+			},
+			onDisableMove(pokemon) {
+				for (const moveSlot of pokemon.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.id);
+					if (move.category === 'Status' && move.id !== 'mefirst') {
+						pokemon.disableMove(moveSlot.id);
+					}
+				}
+			},
+			onBeforeMovePriority: 5,
+			onBeforeMove(attacker, defender, move) {
+				if (!move.isZ && !move.isMax && move.category === 'Status' && move.id !== 'mefirst') {
+					this.add('cant', attacker, 'move: Taunt', move);
+					return false;
+				}
+			},
+		},
+		self: {
+			boosts: {
+				spe: +1,
+			},
+		},
+		target: "normal",
+		type: "Ghost",
+		zMove: {boost: {atk: 1}},
+		contestType: "Clever",
+	},
 };

@@ -7778,4 +7778,17 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Infectious Wheeze",
 		shortDesc: "If Blobbos-Infected, becomes Poison type, if Blobbos-Zombie, becomes Ghost type.",
 	},
+	nosedive: {
+		name: "Nosedive",
+		shortDesc: "Lowers the user's Defense by 2 stages.",
+	},
+	siphon: {
+		name: "Siphon",
+		desc: "The user recovers 3/4 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 75% of the damage dealt.",
+	},
+	shadowban: {
+		name: "Shadowban",
+		shortDesc: "Taunts the foe; user gets +1 Speed.",
+	},
 };

@@ -317,5 +317,17 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	nosedive: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shadowstrike: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shadowban: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
 
