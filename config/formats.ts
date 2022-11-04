@@ -35,6 +35,16 @@ export const Formats: FormatList = [
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	{
+		name: '[Gen 8 Clover Only] Ubers',
+		mod: 'clover',
+		ruleset: [
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Gen 8 Moves',
+		],
+		banlist: ['Baton Pass'],
+	},
+	{
 		name: '[Gen 8 Clover Only] UU',
 		mod: 'clover',
 		ruleset: ['[Gen 8 Clover Only] OU'],
@@ -87,16 +97,6 @@ export const Formats: FormatList = [
 		ruleset: ['Max Team Size = 3', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Dynamax Clause'],
 	},
 	{
-		name: '[Gen 8 Clover Only] Ubers',
-		mod: 'clover',
-		ruleset: [
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Gen 8 Moves',
-		],
-		banlist: ['Baton Pass'],
-	},
-	{
 		name: '[Gen 8 Clover Only] LC',
 		mod: 'clover',
 		ruleset: [
@@ -130,26 +130,6 @@ export const Formats: FormatList = [
 			'Sketch Gen 8 Moves',
 		],
 	},
-	{
-		name: '[Gen 8 Clover Blobbos CAP Only] OU',
-		mod: 'cloverblobboscap',
-		ruleset: [
-			'Obtainable',
-			'Team Preview',
-			'Sleep Clause Mod',
-			'Blobbos Only',
-			'Nickname Clause',
-			'Endless Battle Clause',
-			'HP Percentage Mod',
-			'Cancel Mod',
-			'Dynamax Clause',
-			'Sketch Gen 8 Moves',
-			'OHKO Clause',
-			'Evasion Moves Clause',
-			'Unique Formes Clause',
-		],
-		banlist: ['Blobbos-Alola', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag'],
-	},
 	///////////////////////////////////////////////////////////////////
 	// Clover Doubles & Triples
 	///////////////////////////////////////////////////////////////////
@@ -179,77 +159,6 @@ export const Formats: FormatList = [
 			'Sketch Gen 8 Moves',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
-	},
-	///////////////////////////////////////////////////////////////////
-	// Clover CAP
-	///////////////////////////////////////////////////////////////////
-	{
-		section: 'Clover CAP',
-	},
-	{
-		name: '[Gen 8 Clover CAP Only] Ubers',
-		mod: 'clovercap',
-		ruleset: [
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Gen 8 Moves',
-		],
-		banlist: ['Baton Pass', 'AG'],
-	},
-	{
-		name: '[Gen 8 Clover CAP Only] OU',
-		mod: 'clovercap',
-		ruleset: [
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Gen 8 Moves',
-		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
-	},
-	{
-		name: '[Gen 8 Clover CAP Only] NFE',
-		mod: 'clovercap',
-		ruleset: [
-			'Not Fully Evolved',
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Gen 8 Moves',
-		],
-		banlist: ['Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Wonder Guard'],
-	},
-	{
-		name: '[Gen 8 Clover CAP Only] LC',
-		mod: 'clovercap',
-		ruleset: [
-			'Little Cup',
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Gen 8 Moves',
-		],
-		banlist: ['Moody', 'Baton Pass', 'Dragon Rage', 'Sonic Boom', 'Ribbizap'],
-	},
-	{
-		name: '[Gen 8 Clover CAP Only] Monotype',
-		mod: 'clovercap',
-		ruleset: [
-			'Same Type Clause',
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Gen 8 Moves',
-		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
-	},
-	{
-		name: '[Gen 8 Clover CAP Only] Anything Goes',
-		mod: 'clovercap',
-		ruleset: ['Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', 'Sketch Gen 8 Moves', 'Dynamax Clause'],
-	},
-	{
-		name: '[Gen 8 Clover CAP Only] Doubles OU',
-		rated: false,
-		mod: 'clovercap',
-		gameType: 'doubles',
-		ruleset: ['[Gen 8 Clover CAP Only] OU'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Seasonal Clover
@@ -306,6 +215,13 @@ export const Formats: FormatList = [
 	{
 		section: 'Clover OMs',
 		column: 2,
+	},
+	{
+		name: '[Gen 8 Clover National Dex] AG',
+		mod: 'clover',
+		ruleset: [
+			'Standard NatDex',
+		],
 	},
 	{
 		name: '[Gen 8 Clover Only] NFE',
@@ -655,25 +571,120 @@ export const Formats: FormatList = [
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
 	///////////////////////////////////////////////////////////////////
-	// Clover NatDex Singles
+	// Clover CAP
 	///////////////////////////////////////////////////////////////////
 	{
-		section: 'Clover National Dex Singles',
-		column: 2,
+		section: 'Clover CAP',
+		column: 3,
 	},
 	{
-		name: '[Gen 8 Clover National Dex] AG',
-		mod: 'clover',
+		name: '[Gen 8 Clover CAP Only] Ubers',
+		mod: 'clovercap',
 		ruleset: [
-			'Standard NatDex',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Gen 8 Moves',
 		],
+		banlist: ['Baton Pass', 'AG'],
+	},
+	{
+		name: '[Gen 8 Clover CAP Only] OU',
+		mod: 'clovercap',
+		ruleset: [
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Gen 8 Moves',
+		],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+	},
+	{
+		name: '[Gen 8 Clover CAP Only] NFE',
+		mod: 'clovercap',
+		ruleset: [
+			'Not Fully Evolved',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Gen 8 Moves',
+		],
+		banlist: ['Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Wonder Guard'],
+	},
+	{
+		name: '[Gen 8 Clover CAP Only] LC',
+		mod: 'clovercap',
+		ruleset: [
+			'Little Cup',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Gen 8 Moves',
+		],
+		banlist: ['Moody', 'Baton Pass', 'Dragon Rage', 'Sonic Boom', 'Ribbizap'],
+	},
+	{
+		name: '[Gen 8 Clover CAP Only] Monotype',
+		mod: 'clovercap',
+		ruleset: [
+			'Same Type Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Gen 8 Moves',
+		],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+	},
+	{
+		name: '[Gen 8 Clover CAP Only] Anything Goes',
+		mod: 'clovercap',
+		ruleset: ['Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', 'Sketch Gen 8 Moves', 'Dynamax Clause'],
+	},
+	{
+		name: '[Gen 8 Clover CAP Only] Doubles OU',
+		rated: false,
+		mod: 'clovercap',
+		gameType: 'doubles',
+		ruleset: ['[Gen 8 Clover CAP Only] OU'],
+	},
+	///////////////////////////////////////////////////////////////////
+	// Clover Blobbos CAP
+	///////////////////////////////////////////////////////////////////
+	{
+		section: 'Clover Blobbos CAP',
+		column: 3,
+	},
+	{
+		name: '[Gen 8 Clover Blobbos CAP Only] OU',
+		mod: 'cloverblobboscap',
+		ruleset: [
+			'Obtainable',
+			'Team Preview',
+			'Sleep Clause Mod',
+			'Blobbos Only',
+			'Nickname Clause',
+			'Endless Battle Clause',
+			'HP Percentage Mod',
+			'Cancel Mod',
+			'Dynamax Clause',
+			'Sketch Gen 8 Moves',
+			'OHKO Clause',
+			'Evasion Moves Clause',
+			'Unique Formes Clause',
+		],
+		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag'],
+	},
+	{
+		name: '[Gen 8 Clover Blobbos CAP Only] Ubers',
+		mod: 'cloverblobboscap',
+		ruleset: [
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Gen 8 Moves',
+		],
+		banlist: ['Baton Pass', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Non-Clover
 	///////////////////////////////////////////////////////////////////
 	{
 		section: 'Other Memes',
-		column: 2,
+		column: 3,
 	},
 	{
 		name: '[Gen 8] Random Showderp Meme Battle',

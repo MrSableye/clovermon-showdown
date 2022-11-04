@@ -2399,7 +2399,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	blobbosalola: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	blobbosdust: {
 		inherit: true,
