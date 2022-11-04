@@ -677,7 +677,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Gen 8 Moves',
 		],
-		banlist: ['Baton Pass', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag'],
+		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Non-Clover
