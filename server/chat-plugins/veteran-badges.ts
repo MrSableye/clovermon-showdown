@@ -51,9 +51,9 @@ export const loginfilter: Chat.LoginFilter = user => {
 					if (totalGames < minimumBattles) return;
 					if (winrate < minimumWinrate) return;
 					if (row[1] < minimumElo) return;
-					void Badges.addBadgeToUser(user.id, badgeId, user, true);
+					void Badges.addBadgeToUser(user.id, badgeId, user, true).catch(() => {});
 				});
-			});
+			}).catch(() => {});
 		});
-	});
+	}).catch(() => {});
 };
