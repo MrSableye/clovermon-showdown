@@ -13,6 +13,8 @@
  */
 import {Utils} from '../lib';
 
+type LadderRow = [string, number, string, number, number, number, string];
+
 export class LadderStore {
 	formatid: string;
 	static readonly formatsListPrefix = '';
@@ -30,6 +32,11 @@ export class LadderStore {
 	// eslint-disable-next-line @typescript-eslint/require-await
 	async getTop(prefix?: string): Promise<[string, string] | null> {
 		return null;
+	}
+
+	// eslint-disable-next-line @typescript-eslint/require-await
+	async getTopData(prefix?: string): Promise<LadderRow[]> {
+		return [];
 	}
 
 	/**
