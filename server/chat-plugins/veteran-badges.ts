@@ -47,6 +47,13 @@ let veteranBadgeConfigurations: VeteranBadgeConfiguration[] = [
 		minimumWinrate: 0.40,
 	},
 	{
+		formatId: 'gen8cloveronlylc',
+		badgeId: 'lcveteran',
+		minimumElo: 1200,
+		minimumBattles: 100,
+		minimumWinrate: 0.40,
+	},
+	{
 		formatId: 'gen8clovercaponlyou',
 		badgeId: 'capveteran',
 		minimumElo: 1200,
