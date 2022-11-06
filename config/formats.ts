@@ -75,6 +75,21 @@ export const Formats: FormatList = [
 		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Sketch Gen 8 Moves'],
 	},
 	{
+		name: '[Gen 8 Clover Only] Pick Your Team Random Battle',
+		mod: 'clover',
+		team: 'random',
+		ruleset: [
+			'Picked Team Size = 6', 'Max Team Size = 12',
+			'Dynamax Clause',
+			'Obtainable',
+			'Species Clause',
+			'HP Percentage Mod',
+			'Cancel Mod',
+			'Sleep Clause Mod',
+			'Sketch Gen 8 Moves',
+		],
+	},
+	{
 		name: '[Gen 8 Clover Only] Ultimate Blobbos Metronome Showdown DX',
 		mod: 'clover',
 		team: 'randomBlobbosMetronome',
