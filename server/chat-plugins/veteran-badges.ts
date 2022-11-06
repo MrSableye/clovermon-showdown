@@ -53,6 +53,13 @@ let veteranBadgeConfigurations: VeteranBadgeConfiguration[] = [
 		minimumBattles: 100,
 		minimumWinrate: 0.40,
 	},
+	{
+		formatId: 'gen8cloverblobboscaponlyou',
+		badgeId: 'cabveteran',
+		minimumElo: 1200,
+		minimumBattles: 100,
+		minimumWinrate: 0.40,
+	},
 ];
 
 const initializeVeteranBadges = async () => {
