@@ -79,7 +79,9 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		team: 'random',
 		ruleset: [
-			'Picked Team Size = 6', 'Max Team Size = 12',
+			'Picked Team Size = 6',
+			'Max Team Size = 12',
+			'Team Preview',
 			'Dynamax Clause',
 			'Obtainable',
 			'Species Clause',
