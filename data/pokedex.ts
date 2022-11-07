@@ -31436,6 +31436,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	simionachzen: {
 		num: 42046,
 		name: "Simionach-Zen",
+		baseSpecies: "Simionach",
 		types: ["Fighting", "Psychic"],
 		forme: "Zen",
 		genderRatio: {M: 0.5, F: 0.5},
