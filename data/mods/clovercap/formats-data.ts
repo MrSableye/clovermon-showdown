@@ -824,6 +824,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	rootchew: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU"
+	},
+	toofgrew: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	hognaw: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,
