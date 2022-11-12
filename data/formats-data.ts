@@ -8805,6 +8805,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	toofgrew: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	hognaw: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	peasol: {
 		tier: "Illegal",
 		isNonstandard: "Future",
