@@ -22969,7 +22969,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 100,
 		category: "Special",
 		name: "Power Washer",
-		pp: 10,
+		pp: 5,
 		priority: -1,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
