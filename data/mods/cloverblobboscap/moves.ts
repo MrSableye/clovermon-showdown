@@ -139,7 +139,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ninjutsu: {
+	bishido: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -326,6 +326,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	shadowban: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	coldcutter: {
 		inherit: true,
 		isNonstandard: null,
 	},

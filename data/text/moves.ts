@@ -7577,7 +7577,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	rainbowbeam: {
 		name: "Rainbow Beam",
-		shortDesc: "Taste the rainbow, motherfucker.",
+		shortDesc: "Adds all types into one attack.",
 	},
 	freikugel: {
 		name: "Freikugel",
@@ -7593,7 +7593,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	toxicbeam: {
 		name: "Toxic Beam",
-		shortDesc: "Slight chance to badly poison the foe.",
+		shortDesc: "20% chance to badly poison the foe.",
 	},
 	windwhip: {
 		name: "Wind Whip",
@@ -7756,7 +7756,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	xenobeam: {
 		name: "Xenobeam",
-		shortDesc: "Makes the opponent ??? type",
+		shortDesc: "Makes the opponent ??? type.",
 	},
 	abduction: {
 		name: "Abduction",
@@ -7790,5 +7790,21 @@ export const MovesText: {[k: string]: MoveText} = {
 	shadowban: {
 		name: "Shadowban",
 		shortDesc: "Taunts the foe; user gets +1 Speed.",
+	},
+	bloodletting: {
+		name: "Bloodletting",
+		shortDesc: "+1 Sp. Atk and +1 Speed for the cost of health.",
+	},
+	flashfreeze: {
+		name: "Flash Freeze",
+		shortDesc: "Usually goes first.",
+	},
+	letssleppforever: {
+		name: "Let's Slepp Forever",
+		shortDesc: "100% chance to make the foe fall asleep.",
+	},
+	energyburst: {
+		name: "Energy Burst",
+		shortDesc: "No additional effect.",
 	},
 };
