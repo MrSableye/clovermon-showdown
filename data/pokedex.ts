@@ -36359,7 +36359,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Ground", "Normal"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 148, atk: 96, def: 80, spa: 75, spd: 86, spe: 40},
-		abilities: {0: "Thick Fat", 1: "Sap Sipper", H: "Hustle", S: "Glutonny"},
+		abilities: {0: "Thick Fat", 1: "Sap Sipper", H: "Hustle", S: "Gluttony"},
 		heightm: 1.9,
 		weightkg: 347,
 		color: "Brown",
