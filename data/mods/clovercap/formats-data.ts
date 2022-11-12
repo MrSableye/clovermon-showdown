@@ -827,7 +827,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	rootchew: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU"
+		tier: "OU",
 	},
 	toofgrew: {
 		inherit: true,
