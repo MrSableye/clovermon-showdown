@@ -36341,7 +36341,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	toofgrew: {
 		num: 42169,
 		name: "Toofgrew",
-		types: ["Ground", "Water"],
+		types: ["Ground", "Grass"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 96, atk: 123, def: 95, spa: 91, spd: 85, spe: 35},
 		abilities: {0: "Regenerator", 1: "Strong Jaw", H: "Hustle", S: "Harvest"},
