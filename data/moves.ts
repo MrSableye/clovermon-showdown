@@ -5487,7 +5487,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		secondary: null,
 		target: "self",
-		type: "Normal",
+		type:
+		 "Normal",
 		zMove: {boost: {accuracy: 1}},
 		contestType: "Cool",
 	},
@@ -23450,7 +23451,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		recoil: [1, 2],
-		onModifyMove(move, pokemon, target) {
+		onModifyMove(move, pokemon) {
 			if (this.field.getPseudoWeather('magicroom')) {
 				move.accuracy = true;
 			}
@@ -23463,6 +23464,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			}
 		},
+
+
+		
 		secondary: null,
 		noSketch: true,
 		target: "normal",
@@ -24940,5 +24944,305 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "any",
 		type: "Normal",
 		contestType: "Beautiful",
+	},
+
+	recycleterrain: {
+		num: 580,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Recycle Terrain",
+		pp: 10,
+		priority: 0,
+		flags: {nonsky: 1},
+		terrain: 'recycleterrain',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem('terrainextender')) {
+					return 8;
+				}
+				return 5;
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				const weakenedMoves = ['earthquake', 'bulldoze', 'magnitude'];
+				if (weakenedMoves.includes(move.id) && defender.isGrounded() && !defender.isSemiInvulnerable()) {
+					this.debug('move weakened by plastic terrain');
+					return this.chainModify(0.5);
+				}
+				if (move.type === 'Plastic' && attacker.isGrounded()) {
+					this.debug('plastic terrain boost');
+					return this.chainModify([5325, 4096]);
+				}
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Plastic Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Plastic Terrain');
+				}
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				if (pokemon.isGrounded() && !pokemon.isSemiInvulnerable()) {
+					if (pokemon.item || !pokemon.lastItem) return false;
+			const item = pokemon.lastItem;
+			pokemon.lastItem = '';
+			this.add('-item', pokemon, this.dex.items.get(item), '[from] move: Recycle');
+			pokemon.setItem(item);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Plastic Terrain');
+			},
+		},
+		secondary: null,
+		target: "all",
+		type: "Plastic",
+		zMove: {boost: {def: 1}},
+		contestType: "Beautiful",
+	},
+	highjumpsaw: {
+		num: 136,
+		accuracy: 90,
+		basePower: 130,
+		category: "Physical",
+		name: "High Jump Saw",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1, punch: 1},
+		
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Grass', type) + this.dex.getEffectiveness('Steel', type);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		contestType: "Cool",
+	},
+	stingingrage: {
+		num: 153,
+		accuracy: 100,
+		basePower: 250,
+		category: "Physical",
+		name: "Stinging Rage",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		secondary: {
+			chance: 100,
+			status: 'tox',
+		},
+		selfdestruct: "always",
+		target: "normal",
+		type: "Bug",
+		contestType: "Beautiful",
+	},
+	
+	malicepowder: {
+		num: 298,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Malice Powder",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, dance: 1},
+		volatileStatus: 'confusion',
+		secondary: null,
+		onHit(target,source) {
+			source.addVolatile('confusion');
+		},
+		target: "allAdjacent",
+		type: "Bug",
+		zMove: {boost: {spa: 1}},
+		contestType: "Cool",
+	},
+	overdose: {
+		num: 457,
+		accuracy: 80,
+		basePower: 150,
+		category: "Special",
+		name: "Overdose",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+		contestType: "Beautiful",
+	},
+	bloodshot: {
+		num: 161,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Blood Shot",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('psn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.addVolatile('confusion');
+				}
+			},
+		},
+		target: "normal",
+		type: "???",
+		contestType: "Cool",
+	},
+	glassing: {
+		num: 487,
+		accuracy: 90,
+		basePower: 80,
+		category: "Special",
+		name: "Glassing",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				if (target.getTypes().join() === 'Glass' || !target.setType('Glass')) {
+					// Soak should animate even when it fails.
+					// Returning false would suppress the animation.
+					this.add('-fail', target);
+					return null;
+				}
+				this.add('-start', target, 'typechange', 'Glass');
+			},
+		},
+		target: "normal",
+		type: "Glass",
+		zMove: {boost: {spa: 1}},
+		contestType: "Smart",
+		isNonstandard: "Future",
+	},
+	meltedplastic: {
+		num: 503,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Melted Plastic",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, defrost: 1},
+		thawsTarget: true,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Plastic",
+		contestType: "Tough",
+	},
+	plasticblaze: {
+		num: 551,
+		accuracy: 85,
+		basePower: 120,
+		category: "Special",
+		name: "Plastic Blaze",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 25,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Plastic",
+		contestType: "Beautiful",
+	},
+	fadereflection: {
+		num: 223,
+		accuracy: 90,
+		basePower: 85,
+		category: "Special",
+		name: "Fade Reflection",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 25,
+			volatileStatus: 'disable',
+		},
+		target: "normal",
+		type: "Glass",
+		contestType: "Cool",
+	},
+	recycleray: {
+		num: 94,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Recycle Ray",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Plastic",
+		contestType: "Clever",
+	},
+	spectresabre: {
+		num: 530,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "Spectre Sabre",
+		pp: 15,
+		priority: 0,
+		flags: {blade: 1, protect: 1, mirror: 1},
+		multihit: 2,
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+		maxMove: {basePower: 150},
+		contestType: "Cool",
+	},
+	skummray: {
+		num: 161,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Skumm Ray",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+				const result = this.random(4);
+				if (result === 0) {
+					target.trySetStatus('slp', source);
+				} else if (result === 1) {
+					target.trySetStatus('frz', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.addVolatile('flinch');
+				}
+			},
+		},
+		target: "normal",
+		type: "???",
+		contestType: "Cool",
 	},
 };

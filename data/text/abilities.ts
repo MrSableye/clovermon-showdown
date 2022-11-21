@@ -2212,4 +2212,66 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		transform: "You feel a chill down your spine!",
 		transformEnd: "Blobbos-Eye-Mouth has calmed down!",
 	},
+	reconstruct: {
+		name: "Reconstruct",
+		shortDesc: "Rebuilds item on switchout",
+	},
+	ultraego: {
+		name: "Ultra Ego",
+		shortDesc: "Gains Attack when takes damage",
+	},
+	limblauncher: {
+		name: "Limb Launcher",
+		shortDesc: "Powers up Punch and Kick moves by 1.3 and don't make contact",
+	},
+	plasticsurge: {
+		name: "Plastic Surge",
+		shortDesc: "On switch-in, this Pokemon summons Plastic Terrain.",
+	},
+	thatscap: {
+		name: "That's Cap",
+		shortDesc: "boosts Head based moves",
+	},
+	radioactive: {
+		name: "Radioactive",
+		shortDesc: "Pokemon making contact become Nuclear type",
+	},
+	paperpower: {
+		name: "Paper Power",
+		shortDesc: "Boosts Fist and Hammer moves, but makes the mon weak to Fire and Water moves",
+	},
+	artist: {
+		name: "Artist",
+		shortDesc: "The opponent becomes the type of the last move used",
+	},
+	ultrainstinct: {
+		name: "Ultra Instinct",
+		shortDesc: "At low health, boosts all stats",
+	},
+	balance: {
+		name: "Balance",
+		shortDesc: "Boosts not very effective attacks and reduces damage from super effective attacks",
+	},
+	breakdown: {
+		name: "Breakdown",
+		desc: "If this Pokemon, but not its substitute, is struck by a critical hit, its Special Attack is raised by 12 stages.",
+		shortDesc: "If this Pokemon (not its substitute) takes a critical hit, its Special Attack is raised 12 stages.",
+		boost: "  [POKEMON] maxed its Special Attack!",
+	},
+	turbine: {
+		name: "Turbine",
+		desc: "This Pokemon is immune to Flying-type moves and raises its Special Attack by 1 stage when hit by an Flying-type move. If this Pokemon is not the target of a single-target Flying-type move used by another Pokemon, this Pokemon redirects that move to itself if it is within the range of that move.",
+		shortDesc: "This Pokemon draws Flying moves to itself to raise Sp. Atk by 1; Flying immunity.",
+		activate: "  [POKEMON] took the attack!",
+	},
+	drenchedbulb: {
+		name: "Drenched Bulb",
+		desc: "This Pokemon is immune to Fire-type moves and self destruct moves.",
+	},
+	intoxicate: {
+		name: "Intoxicate",
+		desc: "This Pokemon's Normal-type moves become Poison-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's Normal-type moves become Poison type and have 1.2x power.",
+		
+	},
 };

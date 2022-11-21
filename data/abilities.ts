@@ -6368,4 +6368,259 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 209,
 	},
+
+	reconstruct: {
+		name: "Reconstruct",
+		
+		onSwitchOut(pokemon) {
+			// console.log("lastItem: "+this.dex.getItem(pokemon.lastItem));
+			// console.log("currentItem: "+this.dex.getItem(pokemon.item));
+			
+				if (pokemon.hp && !pokemon.item && this.dex.items.get(pokemon.lastItem)) {
+					pokemon.setItem(pokemon.lastItem);
+					pokemon.lastItem = '';
+					this.add('-item', pokemon, pokemon.getItem(), '[from] ability: Reconstruct');
+				}
+			
+		},
+		rating: 2.5,
+		num: 1039,
+	},
+
+	ultraego: {
+		name: "Ultra Ego",
+		onDamage(damage, target, source, move) {
+				this.boost({atk: 1}, target, target);
+		},
+		
+		rating: 1,
+		num: 1303,
+	},
+	limblauncher: {
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['punch'] || move.flags['kick']) {
+				this.debug('Limb Launcher boost');
+				return this.chainModify([1.3]);
+			}
+			
+		},
+		onModifyMove(move) {
+			if (move.flags.kick) {
+			delete move.flags['contact'];
+			}
+			if (move.flags.punch) {
+				delete move.flags['contact'];
+			}
+			
+		},
+		name: "Limb Launcher",
+		rating: 3,
+		num: 89,
+		isNonstandard: "Future",
+	},
+	plasticsurge: {
+		onStart(source) {
+			this.field.setTerrain('recycleterrain');
+		},
+		name: "Plastic Surge",
+		rating: 4,
+		num: 229,
+		isNonstandard: "Future",
+	},
+	thatscap: {
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			const beamMoves = [
+				'zenheadbutt',
+				'headbutt',
+				'headcharge',
+				'headsmash',
+				'ironhead',
+				'skulltoss',
+				'skullbash',
+			];
+			if (beamMoves.includes(move.id)) {
+				this.debug('Thats Cap boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "That's Cap",
+		isNonstandard: "Future",
+	},
+	radioactive: {
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target, true)) {
+				this.add('-start', source, 'typechange', 'Nuclear');
+			}
+		},
+		name: "Radioactive",
+		rating: 2.5,
+		num: 160,
+	},
+	paperpower: {
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['punch']) {
+				this.debug('Paper Power boost');
+				return this.chainModify([1.5]);
+			}
+			if (move.flags['hammer']) {
+				this.debug('Paper Power boost');
+				return this.chainModify([1.5]);
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			let mod = 1;
+			if (move.type === 'Fire') mod *= 2;
+			if (move.type === 'Water') mod *= 2;
+			return this.chainModify(mod);
+		},
+		name: "Paper Power",
+		rating: 3,
+		num: 89,
+		isNonstandard: "Future",
+	},
+	artist: {
+		onAfterMoveSecondarySelf(source, target, move) {
+			if (move.hasBounced || move.isFutureMove || move.sourceEffect === 'snatch') return;
+			const type = move.type;
+			if (type && type !== '???' && source.getTypes().join() !== type) {
+				if (!source.setType(type)) return;
+				this.add('-start', target, 'typechange', type, '[from] ability: Artist');
+			}
+		},
+
+		
+		name: "Artist",
+		rating: 0,
+		num: 16,
+	},
+	intoxicate: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
+				move.type = 'Poison';
+				move.pixilateBoosted = true;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.pixilateBoosted) return this.chainModify([4915, 4096]);
+		},
+		name: "Intoxicate",
+		rating: 4,
+		num: 182,
+	},
+
+	drenchedbulb: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fire') {
+				this.add('-immune', target, '[from] ability: Drenched Bulb');
+				return null;
+			}
+		},
+		onAnyTryMove(target, source, effect) {
+			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct'].includes(effect.id)) {
+				this.attrLastMove('[still]');
+				this.add('cant', this.effectState.target, 'ability: Drenched Bulb', effect, '[of] ' + target);
+				return false;
+			}
+		},
+		onAnyDamage(damage, target, source, effect) {
+			if (effect && effect.name === 'Aftermath') {
+				return false;
+			}
+		},
+		
+		isBreakable: true,
+		name: "Drenched Bulb",
+		rating: 3.5,
+		num: 18,
+	},
+	turbine: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Flying') {
+				if (!this.boost({spa: 1})) {
+					this.add('-immune', target, '[from] ability: Turbine');
+				}
+				return null;
+			}
+		},
+		onAnyRedirectTarget(target, source, source2, move) {
+			if (move.type !== 'Flying' || ['firepledge', 'grasspledge', 'waterpledge'].includes(move.id)) return;
+			const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
+			if (this.validTarget(this.effectState.target, source, redirectTarget)) {
+				if (move.smartTarget) move.smartTarget = false;
+				if (this.effectState.target !== target) {
+					this.add('-activate', this.effectState.target, 'ability: Turbine');
+				}
+				return this.effectState.target;
+			}
+		},
+		isBreakable: true,
+		name: "Turbine",
+		rating: 3,
+		num: 31,
+	},
+	breakdown: {
+		onHit(target, source, move) {
+			if (!target.hp) return;
+			if (move?.effectType === 'Move' && target.getMoveHitData(move).crit) {
+				target.setBoost({atk: 6});
+				this.add('-setboost', target, 'spa', 12, '[from] ability: Breakdown');
+			}
+		},
+		name: "Breakdown",
+		rating: 1.5,
+		num: 83,
+	},
+	balance: {
+		onModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod < 0) {
+				this.debug('Balance boost');
+				return this.chainModify(1.25);
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('Balance neutralize');
+				return this.chainModify(0.75);
+			}
+		},
+		
+		name: "Balance",
+		rating: 4,
+		num: 110,
+	},
+
+	ultrainstinct: {
+		
+		onResidualOrder: 29,
+		onResidual(pokemon) {
+			if (pokemon.volatiles['ultrainstinct']) {
+				return;
+			}
+			if (pokemon.hp <= pokemon.maxhp / 4) {
+				this.boost({atk: 1}, pokemon);
+				this.boost({def: 1}, pokemon);
+				this.boost({spa: 1}, pokemon);
+				this.boost({spd: 1}, pokemon);
+				this.boost({spe: 1}, pokemon);
+				pokemon.addVolatile('ultrainstict');	
+			}
+		},
+		
+		
+		
+		name: "Ultra Instinct",
+		rating: 1.5,
+		num: 123,
+	},
+	
+
 };
