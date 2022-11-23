@@ -23451,7 +23451,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		recoil: [1, 2],
-		onModifyMove(move, pokemon) {
+		onModifyMove(move) {
 			if (this.field.getPseudoWeather('magicroom')) {
 				move.accuracy = true;
 			}
@@ -23464,9 +23464,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			}
 		},
-
-
-		
 		secondary: null,
 		noSketch: true,
 		target: "normal",
@@ -24988,10 +24985,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onResidual(pokemon) {
 				if (pokemon.isGrounded() && !pokemon.isSemiInvulnerable()) {
 					if (pokemon.item || !pokemon.lastItem) return false;
-			const item = pokemon.lastItem;
-			pokemon.lastItem = '';
-			this.add('-item', pokemon, this.dex.items.get(item), '[from] move: Recycle');
-			pokemon.setItem(item);
+					const item = pokemon.lastItem;
+					pokemon.lastItem = '';
+					this.add('-item', pokemon, this.dex.items.get(item), '[from] move: Recycle');
+					pokemon.setItem(item);
 				}
 			},
 			onFieldResidualOrder: 27,
@@ -25015,7 +25012,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1, punch: 1},
-		
+
 		onEffectiveness(typeMod, target, type, move) {
 			return typeMod + this.dex.getEffectiveness('Grass', type) + this.dex.getEffectiveness('Steel', type);
 		},
@@ -25042,7 +25039,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Bug",
 		contestType: "Beautiful",
 	},
-	
+
 	malicepowder: {
 		num: 298,
 		accuracy: 100,
@@ -25054,7 +25051,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1, dance: 1},
 		volatileStatus: 'confusion',
 		secondary: null,
-		onHit(target,source) {
+		onHit(target, source) {
 			source.addVolatile('confusion');
 		},
 		target: "allAdjacent",
@@ -25234,7 +25231,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					target.trySetStatus('slp', source);
 				} else if (result === 1) {
 					target.trySetStatus('frz', source);
-				} else if (result === 1) {
+				} else if (result === 2) {
 					target.trySetStatus('par', source);
 				} else {
 					target.addVolatile('flinch');
