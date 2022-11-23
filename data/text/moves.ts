@@ -7807,4 +7807,65 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Energy Burst",
 		shortDesc: "No additional effect.",
 	},
+	plasticterrain: {
+		name: "Plastic Terrain",
+		desc: "For 5 turns, the terrain becomes Plastic Terrain. During the effect, the power of Plastic-type attacks used by grounded Pokemon is multiplied by 1.3, and items get recycled.",
+		shortDesc: "5 turns. Grounded: +Plastic power, Recycle items",
+	},
+	highjumpsaw: {
+		name: "High Jump Saw",
+		shortDesc: "The user jumps up high, spinning its fists and feet like a buzzsaw",
+	},
+	stingingrage: {
+		name: "Stinging Rage",
+		shortDesc: "The user faints. Causes Toxic",
+	},
+	malicepowder: {
+		name: "Malice Powder",
+		shortDesc: "Confuses everyone",
+	},
+	spectresabre: {
+		name: "Spectre Sabre",
+		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit.",
+		shortDesc: "Hits 2 times in one turn.",
+	},
+	recycleray: {
+		name: "Recycle Ray",
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+	},
+	fadereflection: {
+		name: "Fade Reflection",
+		desc: "Has a 25% chance to disable the target's move",
+		shortDesc: "25% chance to disable.",
+	},
+	plasticblaze: {
+		name: "Plastic Blaze",
+		desc: "Has a 25% chance to burn the target.",
+		shortDesc: "25% chance to burn the target.",
+	},
+	meltedplastic: {
+		name: "Melted Plastic",
+		desc: "Has a 30% chance to burn the target. The target thaws out if it is frozen.",
+		shortDesc: "30% chance to burn the target. Thaws target.",
+	},
+	glassing: {
+		name: "Glassing",
+		shortDesc: "Makes the opponent Glass type.",
+	},
+	bloodshot: {
+		name: "Blood Shot",
+		desc: "Has a 20% chance to either poison, confuse, or paralyze the target.",
+		shortDesc: "20% chance to poison, confuse, or paralyze target.",
+	},
+	overdose: {
+		name: "Overdose",
+		desc: "If the target lost HP, the user takes recoil damage equal to 1/2 the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 1/2 recoil.",
+	},
+	skummray: {
+		name: "Skumm Ray",
+		desc: "Has a 100% chance to either sleep, freeze, flinch, or paralyze the target.",
+		shortDesc: "100% chance to sleep, freeze, flinch, or paralyze target.",
+	},
 };
