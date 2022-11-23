@@ -6368,33 +6368,30 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 209,
 	},
-
 	reconstruct: {
 		name: "Reconstruct",
-		
 		onSwitchOut(pokemon) {
 			// console.log("lastItem: "+this.dex.getItem(pokemon.lastItem));
 			// console.log("currentItem: "+this.dex.getItem(pokemon.item));
-			
-				if (pokemon.hp && !pokemon.item && this.dex.items.get(pokemon.lastItem)) {
-					pokemon.setItem(pokemon.lastItem);
-					pokemon.lastItem = '';
-					this.add('-item', pokemon, pokemon.getItem(), '[from] ability: Reconstruct');
-				}
-			
+
+			if (pokemon.hp && !pokemon.item && this.dex.items.get(pokemon.lastItem)) {
+				pokemon.setItem(pokemon.lastItem);
+				pokemon.lastItem = '';
+				this.add('-item', pokemon, pokemon.getItem(), '[from] ability: Reconstruct');
+			}
 		},
 		rating: 2.5,
 		num: 1039,
+		isNonstandard: "Future",
 	},
-
 	ultraego: {
 		name: "Ultra Ego",
 		onDamage(damage, target, source, move) {
-				this.boost({atk: 1}, target, target);
+			this.boost({atk: 1}, target, target);
 		},
-		
 		rating: 1,
 		num: 1303,
+		isNonstandard: "Future",
 	},
 	limblauncher: {
 		onBasePowerPriority: 23,
@@ -6403,16 +6400,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.debug('Limb Launcher boost');
 				return this.chainModify([1.3]);
 			}
-			
 		},
 		onModifyMove(move) {
 			if (move.flags.kick) {
-			delete move.flags['contact'];
+				delete move.flags['contact'];
 			}
 			if (move.flags.punch) {
 				delete move.flags['contact'];
 			}
-			
 		},
 		name: "Limb Launcher",
 		rating: 3,
@@ -6491,11 +6486,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.add('-start', target, 'typechange', type, '[from] ability: Artist');
 			}
 		},
-
-		
 		name: "Artist",
 		rating: 0,
 		num: 16,
+		isNonstandard: "Future",
 	},
 	intoxicate: {
 		onModifyTypePriority: -1,
@@ -6515,8 +6509,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Intoxicate",
 		rating: 4,
 		num: 182,
+		isNonstandard: "Future",
 	},
-
 	drenchedbulb: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Fire') {
@@ -6536,11 +6530,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return false;
 			}
 		},
-		
 		isBreakable: true,
 		name: "Drenched Bulb",
 		rating: 3.5,
 		num: 18,
+		isNonstandard: "Future",
 	},
 	turbine: {
 		onTryHit(target, source, move) {
@@ -6566,6 +6560,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Turbine",
 		rating: 3,
 		num: 31,
+		isNonstandard: "Future",
 	},
 	breakdown: {
 		onHit(target, source, move) {
@@ -6578,6 +6573,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Breakdown",
 		rating: 1.5,
 		num: 83,
+		isNonstandard: "Future",
 	},
 	balance: {
 		onModifyDamage(damage, source, target, move) {
@@ -6592,14 +6588,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(0.75);
 			}
 		},
-		
 		name: "Balance",
 		rating: 4,
 		num: 110,
+		isNonstandard: "Future",
 	},
-
 	ultrainstinct: {
-		
 		onResidualOrder: 29,
 		onResidual(pokemon) {
 			if (pokemon.volatiles['ultrainstinct']) {
@@ -6611,16 +6605,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.boost({spa: 1}, pokemon);
 				this.boost({spd: 1}, pokemon);
 				this.boost({spe: 1}, pokemon);
-				pokemon.addVolatile('ultrainstict');	
+				pokemon.addVolatile('ultrainstict');
 			}
 		},
-		
-		
-		
 		name: "Ultra Instinct",
 		rating: 1.5,
 		num: 123,
+		isNonstandard: "Future",
 	},
-	
-
 };

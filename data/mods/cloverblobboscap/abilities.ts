@@ -87,7 +87,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 	},
 
-	
+
 	/* Clover Blobbos CAP Abilities */
 	allskill: {
 		inherit: true,
