@@ -6605,7 +6605,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.boost({spa: 1}, pokemon);
 				this.boost({spd: 1}, pokemon);
 				this.boost({spe: 1}, pokemon);
-				pokemon.addVolatile('ultrainstict');
+				pokemon.addVolatile('ultrainstinct');
 			}
 		},
 		name: "Ultra Instinct",
