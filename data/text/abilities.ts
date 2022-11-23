@@ -2274,4 +2274,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "This Pokemon's Normal-type moves become Poison type and have 1.2x power.",
 		
 	},
+	hyperzone: {
+		name: "Hyper Zone",
+		shortDesc: "Summons Hyper Zone upon switch-in. protecting Dark type pokemon from priority, status, and screens",
+	},
+	
 };

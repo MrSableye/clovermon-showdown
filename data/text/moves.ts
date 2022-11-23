@@ -7868,4 +7868,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 100% chance to either sleep, freeze, flinch, or paralyze the target.",
 		shortDesc: "100% chance to sleep, freeze, flinch, or paralyze target.",
 	},
+	hyperzone: {
+		name: "Hyper Zone",
+		desc: "For 5 turns, Dark types are protected from status, priority, and screens",
+		shortDesc: "For 5 turns, Dark types are protected from status, priority, and screens",
+	},
 };

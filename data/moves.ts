@@ -25245,4 +25245,75 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "???",
 		contestType: "Cool",
 	},
+
+	hyperzone: {
+		num: 1001,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Hyper Zone",
+		pp: 5,
+		priority: 0,
+		flags: {mirror: 1},
+		pseudoWeather: 'hyperzone',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 7;
+				}
+				return 5;
+			},
+			onTryHitPriority: 4,
+			onTryHit(target, source, effect) {
+				if (effect && (effect.priority <= 0.1 || effect.target === 'self')) {
+					return;
+				}
+				if (target.isSemiInvulnerable() || target.isAlly(source)) return;
+				
+				this.add('-activate', target, 'move: Psychic Terrain');
+				if (effect && (effect.priority > 0) && (target.getTypes().join() === 'Dark' )) {
+				return null;
+				}
+			},
+
+			onSetStatus(status, target, source, effect) {
+				if (source.getTypes().join() === 'Dark' || !source.setType('Dark')) {
+				if ((effect as Move)?.status) {
+					
+					this.add('-immune', source, '[from] ability: Hyper Zone');
+					
+				}
+				return false;
+			}
+			},
+
+			onModifyMove(move, target) {
+				if (target.getTypes().join() === 'Dark' || !target.setType('Dark')) {
+				move.infiltrates = true;
+				}
+			},
+			onFieldStart(target, source) {
+				this.add('-fieldstart', 'move: Hyper Zone', '[of] ' + source);
+			},
+			onFieldRestart(target, source) {
+				this.field.removePseudoWeather('hyperzone');
+			},
+			// Item suppression implemented in Pokemon.ignoringItem() within sim/pokemon.js
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 6,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Hyper Zone', '[of] ' + this.effectState.source);
+			},
+		},
+		secondary: null,
+		noSketch: true,
+		target: "all",
+		type: "Dark",
+		isNonstandard: "Future",
+		zMove: {boost: {spd: 1}},
+		contestType: "Clever",
+	},
+
 };
