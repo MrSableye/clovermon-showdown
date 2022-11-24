@@ -24283,18 +24283,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 				if (target.hasItem('whiteherb')) {
 					let activate = false;
-						const boosts: SparseBoostsTable = {};
-						let i: BoostID;
-						for (i in source.boosts) {
-							if (source.boosts[i] < 0) {
-								activate = true;
-								boosts[i] = 0;
-							}
+					const boosts: SparseBoostsTable = {};
+					let i: BoostID;
+					for (i in source.boosts) {
+						if (source.boosts[i] < 0) {
+							activate = true;
+							boosts[i] = 0;
 						}
-						if (activate) {
-							source.setBoost(boosts);
-							this.add('-clearnegativeboost', source, '[silent]');
-						}
+					}
+					if (activate) {
+						source.setBoost(boosts);
+						this.add('-clearnegativeboost', source, '[silent]');
+					}
 				}
 				if (target.hasItem('lightball')) {
 					this.boost({spa: 1}, source);
@@ -24304,12 +24304,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (target.hasItem('blacksludge')) {
 					source.trySetStatus('psn', target);
 				}
-				
-				const item = target.takeItem();	
-					
+
+				const item = target.takeItem();
+
 				if (item) {
 					this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
-				}				
+				}
 			}
 		},
 		secondary: null,
@@ -25208,7 +25208,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "???",
 		contestType: "Cool",
 	},
-
 	hyperzone: {
 		num: 1001,
 		accuracy: true,
@@ -25236,28 +25235,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (target.isSemiInvulnerable() || target.isAlly(source)) return;
 				if (!(target.hasType('Dark'))) {
 					const baseMove = this.dex.moves.get(effect.id);
-					if (baseMove.priority > 0) {						
-					}
-					return;
+					if (baseMove.priority > 0) return;
 				}
 				this.add('-activate', target, 'move: Hyper Zone');
 				return null;
-			},	
-			
+			},
 			onSetStatus(status, target, source, effect) {
 				if (!(target.hasType('Dark'))) {
-				if (((effect as Move)?.status))  {	
-					}
-					return;
+					if (((effect as Move)?.status)) return;
 				}
 				this.add('-immune', target, '[from] move: Hyper Zone');
 				return false;
-				
 			},
 			onModifyMove(move, target, source) {
 				if ((target.hasType('Dark'))) {
-				move.infiltrates = true;
-				this.add('-activate', target, 'move: Hyper Zone');
+					move.infiltrates = true;
+					this.add('-activate', target, 'move: Hyper Zone');
 				}
 			},
 			onFieldStart(target, source) {
@@ -25280,9 +25273,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {spd: 1}},
 		contestType: "Cool",
 	},
-
-	
-
 	freeballoonday: {
 		num: 788,
 		accuracy: 100,
@@ -25295,11 +25285,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onBasePower(basePower, pokemon, target) {
 			if (target.hasItem('airballoon') && pokemon.hasItem('airballoon')) {
 				return this.chainModify(4);
-			}
-			else if (pokemon.hasItem('airballoon')) {
+			} else if (pokemon.hasItem('airballoon')) {
 				return this.chainModify(2);
-			}
-			else if (target.hasItem('airballoon')) {
+			} else if (target.hasItem('airballoon')) {
 				return this.chainModify(2);
 			}
 		},
@@ -25310,9 +25298,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (!target.item) {
 				target.setItem('airballoon');
 			}
-
 		},
-		
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
@@ -25347,5 +25333,4 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Dark",
 	},
-	
 };
