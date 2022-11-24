@@ -6613,7 +6613,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 123,
 		isNonstandard: "Future",
 	},
-	
 	hyperzone: {
 		onStart(source) {
 			this.field.setTerrain('hyperzone');
@@ -6621,7 +6620,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Hyper Zone",
 		rating: 4,
 		num: 227,
+		isNonstandard: "Future",
 	},
-
-
 };
