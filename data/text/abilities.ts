@@ -2277,4 +2277,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Hyper Zone",
 		shortDesc: "Summons Hyper Zone upon switch-in. protecting Dark type pokemon from priority, status, and screens",
 	},
+	shadowaura: {
+		name: "Shadow Aura",
+		shortDesc: "Boosts the power of shadow moves by 1.3",
+	},
 };

@@ -35666,6 +35666,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Shadow Shield",
 			H: "Shadow Tag",
+			S: "Shadow Aura",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
