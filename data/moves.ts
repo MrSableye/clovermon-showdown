@@ -24276,7 +24276,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 					this.boost({atk: 1}, source);
 					this.damage(source.baseMaxhp / 4, source, target);
 				}
-				if (target.hasItem('whitherb')) {
+				if (target.hasItem('weaknesspolicy')) {
+					this.boost({spa: 2}, source);
+					this.boost({atk: 2}, source);
+					this.add('-message', 'oh fug oh shid');
+				}
+				if (target.hasItem('whiteherb')) {
 					let activate = false;
 						const boosts: SparseBoostsTable = {};
 						let i: BoostID;
