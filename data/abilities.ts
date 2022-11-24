@@ -6622,4 +6622,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 227,
 		isNonstandard: "Future",
 	},
+	shadowaura: {
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			const shadowMoves = [
+				'shadowball',
+				'shadowbone',
+				'shadowclaw',
+				'shadowscales',
+				'shadowsneak',
+				'shadowstrike',
+				'shadowpunch',
+				'shadowforce',
+			];
+			if (shadowMoves.includes(move.id)) {
+				this.debug('Shadow Aura boost');
+				return this.chainModify(1.3);
+			}
+		},
+		name: "Shadow Aura",
+		isNonstandard: "Future",
+	},
+
 };
