@@ -7868,4 +7868,17 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 100% chance to either sleep, freeze, flinch, or paralyze the target.",
 		shortDesc: "100% chance to sleep, freeze, flinch, or paralyze target.",
 	},
+	hyperzone: {
+		name: "Hyper Zone",
+		shortDesc: "For 5 turns, Dark types are protected from status, priority, and screens",
+	},
+	freeballoonday: {
+		name: "Free Balloon Day",
+		shortDesc: "Doubles in power if holding a balloon. Recycles balloon if you don't have an item",
+	},
+	helldive: {
+		name: "Hell Dive",
+		shortDesc: "Can't be used twice in a row. Physical if user's Atk > Sp. Atk.",
+	},
+
 };

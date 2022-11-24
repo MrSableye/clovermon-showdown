@@ -24243,76 +24243,46 @@ export const Moves: {[moveid: string]: MoveData} = {
 				return this.chainModify(1.5);
 			}
 		},
-
-
 		onHit(target, source) {
-			const item = target.takeItem();
+			const item = target.getItem();
+			if (source.hp && item.isBerry && target.takeItem(source)) {
+				this.add('-enditem', target, item.name, '[from] stealeat', '[move] Deep Fry', '[of] ' + source);
+				if (this.singleEvent('Eat', item, null, source, null, null)) {
+					this.runEvent('EatItem', source, null, null, item);
+					if (item.id === 'leppaberry') target.staleness = 'external';
+				}
+				if (item.onEat) source.ateBerry = true;
+			}
+		},
+		onAfterHit(target, source) {
 			if (source.hp) {
-				const hurtItem = [
-					'stickybarb',
-				];
-				const burnItem = [
-					'flameorb',
-				];
-				const poisonItem = [
-					'poisonbarb',
-				];
-				const toxicItem = [
-					'toxicorb',
-				];
-				const paralyzeItem = [
-					'lightball',
-				];
-				const choicescarfItem = [
-					'choicescarf',
-				];
-				const choicebandItem = [
-					'choiceband',
-				];
-				const choicespecsItem = [
-					'choicespecs',
-				];
-				const whiteherbItem = [
-					'whiteherb',
-				];
-				const mentalherbItem = [
-					'mentalherb',
-				];
-
-				if (item) {
-					if (source.hp && item.isBerry && target.takeItem(source)) {
-						this.add('-enditem', target, item.name, '[from] stealeat', '[move] Deep Fry', '[of] ' + source);
-						if (this.singleEvent('Eat', item, null, source, null, null)) {
-							this.runEvent('EatItem', source, null, null, item);
-							if (item.id === 'leppaberry') target.staleness = 'external';
-						}
-						if (item.onEat) source.ateBerry = true;
-					} else if (hurtItem.includes(target.item)) {
-						this.damage(source.baseMaxhp / 8);
-						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
-					} else if (burnItem.includes(target.item)) {
-						source.trySetStatus('brn', target);
-						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
-					} else if (poisonItem.includes(target.item)) {
-						source.trySetStatus('psn', target);
-						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
-					} else if (toxicItem.includes(target.item)) {
-						source.trySetStatus('tox', target);
-						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
-					} else if (paralyzeItem.includes(target.item)) {
-						source.trySetStatus('par', target);
-						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
-					} else if (choicebandItem.includes(target.item)) {
-						this.boost({atk: 1}, source);
-						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
-					} else if (choicespecsItem.includes(target.item)) {
-						this.boost({spa: 1}, source);
-						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
-					} else if (choicescarfItem.includes(target.item)) {
-						this.boost({spe: 1}, source);
-						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
-					} else if (whiteherbItem.includes(target.item)) {
-						let activate = false;
+				if (target.hasItem('choiceband')) {
+					this.boost({atk: 1}, source);
+				}
+				if (target.hasItem('choicespecs')) {
+					this.boost({spa: 1}, source);
+				}
+				if (target.hasItem('choicescarf')) {
+					this.boost({spe: 1}, source);
+				}
+				if (target.hasItem('assaultvest')) {
+					this.boost({spd: 1}, source);
+				}
+				if (target.hasItem('leftovers')) {
+					this.heal(source.baseMaxhp / 2, source, target);
+				}
+				if (target.hasItem('lifeorb')) {
+					this.boost({spa: 1}, source);
+					this.boost({atk: 1}, source);
+					this.damage(source.baseMaxhp / 4, source, target);
+				}
+				if (target.hasItem('weaknesspolicy')) {
+					this.boost({spa: 2}, source);
+					this.boost({atk: 2}, source);
+					this.add('-message', 'oh fug oh shid');
+				}
+				if (target.hasItem('whiteherb')) {
+					let activate = false;
 						const boosts: SparseBoostsTable = {};
 						let i: BoostID;
 						for (i in source.boosts) {
@@ -24325,25 +24295,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 							source.setBoost(boosts);
 							this.add('-clearnegativeboost', source, '[silent]');
 						}
-						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
-					} else if (mentalherbItem.includes(target.item)) {
-						const conditions = ['attract', 'taunt', 'encore', 'torment', 'disable', 'healblock'];
-						for (const firstCondition of conditions) {
-							if (source.volatiles[firstCondition]) {
-								for (const secondCondition of conditions) {
-									source.removeVolatile(secondCondition);
-									if (firstCondition === 'attract' && secondCondition === 'attract') {
-										this.add('-end', source, 'move: Attract', '[from] item: Mental Herb');
-									}
-								}
-								return;
-							}
-						}
-						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
-					} else {
-						this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
-					}
 				}
+				if (target.hasItem('lightball')) {
+					this.boost({spa: 1}, source);
+					this.boost({atk: 1}, source);
+					source.trySetStatus('par', target);
+				}
+				if (target.hasItem('blacksludge')) {
+					source.trySetStatus('psn', target);
+				}
+				
+				const item = target.takeItem();	
+					
+				if (item) {
+					this.add('-enditem', target, item.name, '[from] move: Deep Fry', '[of] ' + source);
+				}				
 			}
 		},
 		secondary: null,
@@ -24633,7 +24599,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "self",
+		target: "normal",
 		type: "Electric",
 		zMove: {boost: {evasion: 1}},
 		contestType: "Clever",
@@ -25242,4 +25208,144 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "???",
 		contestType: "Cool",
 	},
+
+	hyperzone: {
+		num: 1001,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Hyper Zone",
+		pp: 5,
+		priority: 0,
+		flags: {mirror: 1},
+		pseudoWeather: 'hyperzone',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 7;
+				}
+				return 5;
+			},
+			onTryHitPriority: 4,
+			onTryHit(target, source, effect) {
+				if (effect && (effect.priority <= 0.1 || effect.target === 'self')) {
+					return;
+				}
+				if (target.isSemiInvulnerable() || target.isAlly(source)) return;
+				if (!(target.hasType('Dark'))) {
+					const baseMove = this.dex.moves.get(effect.id);
+					if (baseMove.priority > 0) {						
+					}
+					return;
+				}
+				this.add('-activate', target, 'move: Hyper Zone');
+				return null;
+			},	
+			
+			onSetStatus(status, target, source, effect) {
+				if (!(target.hasType('Dark'))) {
+				if (((effect as Move)?.status))  {	
+					}
+					return;
+				}
+				this.add('-immune', target, '[from] move: Hyper Zone');
+				return false;
+				
+			},
+			onModifyMove(move, target, source) {
+				if ((target.hasType('Dark'))) {
+				move.infiltrates = true;
+				this.add('-activate', target, 'move: Hyper Zone');
+				}
+			},
+			onFieldStart(target, source) {
+				this.add('-fieldstart', 'move: Hyper Zone', '[of] ' + source);
+			},
+			onFieldRestart(target, source) {
+				this.field.removePseudoWeather('hyperzone');
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 6,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Hyper Zone', '[of] ' + this.effectState.source);
+			},
+		},
+		secondary: null,
+		noSketch: true,
+		target: "all",
+		type: "Dark",
+		isNonstandard: "Future",
+		zMove: {boost: {spd: 1}},
+		contestType: "Cool",
+	},
+
+	
+
+	freeballoonday: {
+		num: 788,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Free Balloon Day",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.hasItem('airballoon') && pokemon.hasItem('airballoon')) {
+				return this.chainModify(4);
+			}
+			else if (pokemon.hasItem('airballoon')) {
+				return this.chainModify(2);
+			}
+			else if (target.hasItem('airballoon')) {
+				return this.chainModify(2);
+			}
+		},
+		onAfterHit(pokemon, target) {
+			if (!pokemon.item) {
+				pokemon.setItem('airballoon');
+			}
+			if (!target.item) {
+				target.setItem('airballoon');
+			}
+
+		},
+		
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+	},
+	helldive: {
+		num: 893,
+		accuracy: 100,
+		basePower: 160,
+		category: "Special",
+		name: "Hell Dive",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		// Move disabling implemented in Battle#nextTurn in sim/battle.ts
+		onTry(source) {
+			source.addVolatile('helldive');
+		},
+		condition: {
+			duration: 2,
+			onBeforeMove(pokemon, target, move) {
+				if (move.id === 'helldive') {
+					this.add('cant', pokemon, 'move: Hell Dive', move);
+					pokemon.removeVolatile('helldive');
+					return false;
+				}
+			},
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
+	
 };
