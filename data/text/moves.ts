@@ -7870,7 +7870,15 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hyperzone: {
 		name: "Hyper Zone",
-		desc: "For 5 turns, Dark types are protected from status, priority, and screens",
 		shortDesc: "For 5 turns, Dark types are protected from status, priority, and screens",
 	},
+	freeballoonday: {
+		name: "Free Balloon Day",
+		shortDesc: "Doubles in power if holding a balloon. Recycles balloon if you don't have an item",
+	},
+	helldive: {
+		name: "Hell Dive",
+		shortDesc: "Can't be used twice in a row. Physical if user's Atk > Sp. Atk.",
+	},
+
 };

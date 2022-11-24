@@ -6614,5 +6614,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	
+	hyperzone: {
+		onStart(source) {
+			this.field.setTerrain('hyperzone');
+		},
+		name: "Hyper Zone",
+		rating: 4,
+		num: 227,
+	},
+
 
 };
