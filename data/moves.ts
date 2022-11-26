@@ -22001,8 +22001,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		self: {
 			boosts: {
-				def: -6,
-				spd: -6,
+				def: -1,
+				spd: -1,
 				spe: -1,
 			},
 		},
