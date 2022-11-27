@@ -22001,8 +22001,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		self: {
 			boosts: {
-				def: -6,
-				spd: -6,
+				def: -1,
+				spd: -1,
 				spe: -1,
 			},
 		},
@@ -23447,7 +23447,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Freikugel",
-		pp: 20,
+		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		recoil: [1, 2],

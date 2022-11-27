@@ -2041,6 +2041,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  [POKEMON] is ready to rember ;_;7",
 	},
+	asonehorse: {
+		name: "As One (Remembered)",
+		shortDesc: "The combination of Grim Neight, Chilling Neigh, and Striker",
+
+		start: "  [POKEMON] is ready to yeehaw",
+	},
 	sharpshooter: {
 		name: "Sharpshooter",
 		shortDesc: "This Pokemon's critical hit, the damage is multiplied by 1.5, +1 Crit ratio.",
@@ -2281,4 +2287,17 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Shadow Aura",
 		shortDesc: "Boosts the power of shadow moves by 1.3",
 	},
+	presentpower: {
+		name: "Present Power",
+		shortDesc: "Adds a Present to every attack.",
+	},
+	supermentum: {
+		name: "Supermentum",
+		shortDesc: "Switches out after using moves.",
+	},
+	muhmentum: {
+		name: "Muhmentum",
+		shortDesc: "Switches out after using offensive moves.",
+	},
+
 };

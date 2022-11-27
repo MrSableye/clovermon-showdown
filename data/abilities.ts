@@ -6049,6 +6049,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onPreStart(pokemon) {
 			this.add('-ability', pokemon, 'Grim Neigh');
 			this.add('-ability', pokemon, 'Chilling Neigh');
+			this.add('-ability', pokemon, 'Chilling Striker');
 			this.effectState.unnerved = true;
 		},
 
@@ -6057,6 +6058,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.boost({spa: length}, source, source, this.dex.abilities.get('grimneigh'));
 				this.boost({atk: length}, source, source, this.dex.abilities.get('chillingneigh'));
 			}
+		},
+
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags.kick) {
+				this.debug('Striker boost');
+				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
+		onAnyAccuracy(accuracy, target, source, move) {
+			if (move.flags.kick) {
+				this.debug('Striker - ensuring perfect accuracy');
+				return true;
+			}
+			return accuracy;
 		},
 		isPermanent: true,
 		name: "As One (Horse)",
@@ -6643,5 +6659,46 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Shadow Aura",
 		isNonstandard: "Future",
 	},
+	presentpower: {
+		onAfterMoveSecondarySelf(source, target, move) {
+			const targetSlot = target.getSlot();
+			if (!move || !target) return;
+			if (source.ability !== 'presentpower') return;
+			if (move.category === 'Status') return;
+			if (source.abilityState.hasMemed?.[targetSlot]) return;
 
+			if (!source.abilityState?.hasMemed) source.abilityState.hasMemed = {};
+			source.abilityState.hasMemed[targetSlot] = true;
+
+			this.actions.useMove('present', source, target);
+		},
+		onResidual(pokemon) {
+			pokemon.abilityState.hasMemed = undefined;
+		},
+		
+		name: "Present Power",
+		rating: 4.5,
+		isNonstandard: "Future",
+	},
+	
+	muhmentum: {
+		onAfterMove(pokemon, target, move) {
+			if (move.category !== "Status") {
+			pokemon.switchFlag = true;
+			this.add('-activate', pokemon, 'ability: Muhmentum');
+			}
+		},
+		name: "Muhmentum",
+		rating: 3,
+		isNonstandard: "Future",
+	},
+	supermentum: {
+		onAfterMove(pokemon, target, move) {
+			pokemon.switchFlag = true;
+			this.add('-activate', pokemon, 'ability: Supermentum');
+		},
+		name: "Supermentum",
+		rating: 3,
+		isNonstandard: "Future",
+	},
 };
