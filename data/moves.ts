@@ -25014,11 +25014,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Malice Powder",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, dance: 1},
-		volatileStatus: 'confusion',
+		flags: {powder: 1, protect: 1, mirror: 1, dance: 1},
+		volatileStatus: 'confusion', 
 		secondary: null,
 		onHit(target, source) {
 			source.addVolatile('confusion');
+			target.addVolatile('partiallytrapped');
+			source.addVolatile('partiallytrapped');
+			
 		},
 		target: "allAdjacent",
 		type: "Bug",
@@ -25305,7 +25308,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	helldive: {
 		num: 893,
-		accuracy: 100,
+		accuracy: 85,
 		basePower: 160,
 		category: "Special",
 		name: "Hell Dive",

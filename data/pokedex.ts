@@ -36314,6 +36314,18 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 	},
+	kingmadio: {
+		num: -42117,
+		name: "Kingmadio",
+		types: ["Ghost", "Dark"],
+		gender: "N",
+		baseStats: {hp: 1, atk: 1, def: 1, spa: 1, spd: 1, spe: 255},
+		abilities: {0: "Wonder Guard", 1: "Wonder Guard", H: "Wonder Guard", S: "Wonder Guard"},
+		heightm: 1.2,
+		weightkg: 8,
+		color: "Black",
+		eggGroups: ["Undiscovered"],
+	},
 	vermingio: {
 		num: -42008,
 		name: "Vermingio",
