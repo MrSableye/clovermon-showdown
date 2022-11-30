@@ -333,7 +333,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-
 	terrainpulse: {
 		num: 805,
 		accuracy: 100,
@@ -374,30 +373,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		zMove: {basePower: 160},
 		maxMove: {basePower: 130},
 	},
-	
-
 	present: {
-		num: 217,
-		accuracy: 90,
-		basePower: 0,
-		category: "Physical",
-		name: "Present",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		onModifyMove(move, pokemon, target) {
-			const rand = this.random(10);
-			if (rand < 2) {
-				move.heal = [1, 4];
-				move.infiltrates = true;
-			} else if (rand < 6) {
-				move.basePower = 40;
-			} else if (rand < 9) {
-				move.basePower = 80;
-			} else {
-				move.basePower = 120;
-			}
-		},
+		inherit: true,
 		onModifyType(move, pokemon) {
 			if (pokemon.species.name === 'Blobbos-Clause') {
 				move.type = 'Ice';
@@ -407,28 +384,23 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		},
 		onTryHit(target, source, move) {
 			if (source.species.name === 'Blobbos-Clause') {
-			if (source.isAlly(target)) {
-				move.basePower = 0;
-				move.infiltrates = true;
+				if (source.isAlly(target)) {
+					move.basePower = 0;
+					move.infiltrates = true;
+				}
+				move.basePower = 120;
 			}
-			move.basePower = 120;
-		}
 		},
 		onHit(target, source) {
 			if (source.species.name === 'Blobbos-Clause') {
-			if (source.isAlly(target)) {
-				if (!this.heal(Math.floor(target.baseMaxhp * 0.5))) {
-					this.add('-immune', target);
-					return this.NOT_FAIL;
+				if (source.isAlly(target)) {
+					if (!this.heal(Math.floor(target.baseMaxhp * 0.5))) {
+						this.add('-immune', target);
+						return this.NOT_FAIL;
+					}
 				}
 			}
-		}
 		},
-		secondary: null,
-		target: "normal",
-		type: "Normal",
-		contestType: "Cute",
 	},
-
 };
 

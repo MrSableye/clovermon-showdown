@@ -6681,17 +6681,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onResidual(pokemon) {
 			pokemon.abilityState.hasMemed = undefined;
 		},
-		
 		name: "Present Power",
 		rating: 4.5,
 		isNonstandard: "Future",
 	},
-	
 	muhmentum: {
 		onAfterMove(pokemon, target, move) {
 			if (move.category !== "Status") {
-			pokemon.switchFlag = true;
-			this.add('-activate', pokemon, 'ability: Muhmentum');
+				pokemon.switchFlag = true;
+				this.add('-activate', pokemon, 'ability: Muhmentum');
 			}
 		},
 		name: "Muhmentum",
