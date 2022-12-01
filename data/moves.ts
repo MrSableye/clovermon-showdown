@@ -25302,6 +25302,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				target.setItem('airballoon');
 			}
 		},
+		isNonstandard: "Future",
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
@@ -25333,7 +25334,36 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
 		secondary: null,
+		isNonstandard: "Future",
 		target: "normal",
 		type: "Dark",
 	},
+
+	mushroomshot: {
+		num: 788,
+		accuracy: 100,
+		basePower: 30,
+		category: "Physical",
+		name: "Mushroom Shot",
+		pp: 10,
+		priority: 0,
+		multihit: 4,
+		flags: {bullet: 1, powder: 1, protect: 1, mirror: 1},
+		onBasePower(basePower, source, target) {
+			if (this.field.getPseudoWeather('gravity') && (target.volatiles['partiallytrapped'])){
+			return this.chainModify(3);
+			}
+			if (target.volatiles['partiallytrapped']){
+				return this.chainModify(2);
+			}
+			if (this.field.getPseudoWeather('gravity')) {
+				return this.chainModify(1.5);
+			}
+		},
+		secondary: null,
+		isNonstandard: "Future",
+		target: "normal",
+		type: "Bug",
+	},
+
 };

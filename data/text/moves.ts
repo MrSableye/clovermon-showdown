@@ -7880,5 +7880,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Hell Dive",
 		shortDesc: "Can't be used twice in a row. Physical if user's Atk > Sp. Atk.",
 	},
+	mushroomshot: {
+		name: "Mushroom Shot",
+		shortDesc: "Doubles in power if opponent partially trapped. During Gravity: 1.5x power.",
+	},
 
 };
