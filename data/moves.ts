@@ -25014,11 +25014,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Malice Powder",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, dance: 1},
-		volatileStatus: 'confusion',
+		flags: {powder: 1, protect: 1, mirror: 1, dance: 1},
+		volatileStatus: 'confusion', 
 		secondary: null,
 		onHit(target, source) {
 			source.addVolatile('confusion');
+			target.addVolatile('partiallytrapped');
+			source.addVolatile('partiallytrapped');
+			
 		},
 		target: "allAdjacent",
 		type: "Bug",
@@ -25299,13 +25302,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 				target.setItem('airballoon');
 			}
 		},
+		isNonstandard: "Future",
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
 	},
 	helldive: {
 		num: 893,
-		accuracy: 100,
+		accuracy: 85,
 		basePower: 160,
 		category: "Special",
 		name: "Hell Dive",
@@ -25330,7 +25334,36 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
 		secondary: null,
+		isNonstandard: "Future",
 		target: "normal",
 		type: "Dark",
 	},
+
+	mushroomshot: {
+		num: 788,
+		accuracy: 100,
+		basePower: 30,
+		category: "Physical",
+		name: "Mushroom Shot",
+		pp: 10,
+		priority: 0,
+		multihit: 4,
+		flags: {bullet: 1, powder: 1, protect: 1, mirror: 1},
+		onBasePower(basePower, source, target) {
+			if (this.field.getPseudoWeather('gravity') && (target.volatiles['partiallytrapped'])){
+			return this.chainModify(3);
+			}
+			if (target.volatiles['partiallytrapped']){
+				return this.chainModify(2);
+			}
+			if (this.field.getPseudoWeather('gravity')) {
+				return this.chainModify(1.5);
+			}
+		},
+		secondary: null,
+		isNonstandard: "Future",
+		target: "normal",
+		type: "Bug",
+	},
+
 };

@@ -6653,7 +6653,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			];
 			if (shadowMoves.includes(move.id)) {
 				this.debug('Shadow Aura boost');
-				return this.chainModify(1.3);
+				return this.chainModify(1.5);
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.hp >= target.maxhp) {
+				this.debug('Shadow Shield weaken');
+				return this.chainModify(0.5);
 			}
 		},
 		name: "Shadow Aura",
