@@ -2015,7 +2015,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	bonerzoner: {
 		name: "Boner Zoner",
-		shortDesc: "This Pokemon's Bone-based and Dragon moves ignore immunities.",
+		shortDesc: "This Pokemon's Bone-based and Dragon moves ignore immunities and abilities.",
 		start: "  [POKEMON] has descended into the Boner Zoner!",
 	},
 	pairoswrath: {

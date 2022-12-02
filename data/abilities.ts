@@ -5720,6 +5720,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 						move.ignoreImmunity[name] = true;
 					}
 				});
+				move.ignoreAbility = true;
 			}
 		},
 		rating: 3.5,
