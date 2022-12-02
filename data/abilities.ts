@@ -4729,8 +4729,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				};
 				const type = colorType[this.toID(color)];
 				if (type) {
-					this.add('-start', pokemon, 'typechange', '[from] ability: Gradient');
-					pokemon.setType([type, ...pokemon.types]);
+					const newTypes = [type, ...pokemon.types];
+					this.add('-start', pokemon, 'typechange', newTypes.join('/'), '[from] ability: Gradient');
 				}
 			}
 		},
