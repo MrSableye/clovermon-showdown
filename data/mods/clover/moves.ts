@@ -21,6 +21,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	bodypress: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	bubble: {
 		inherit: true,
 		isNonstandard: null,
@@ -395,10 +399,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	/* Disabled moves */
 	appleacid: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	bodypress: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
