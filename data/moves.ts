@@ -25015,13 +25015,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {powder: 1, protect: 1, mirror: 1, dance: 1},
-		volatileStatus: 'confusion', 
+		volatileStatus: 'confusion',
 		secondary: null,
 		onHit(target, source) {
 			source.addVolatile('confusion');
 			target.addVolatile('partiallytrapped');
 			source.addVolatile('partiallytrapped');
-			
 		},
 		target: "allAdjacent",
 		type: "Bug",
@@ -25350,10 +25349,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		multihit: 4,
 		flags: {bullet: 1, powder: 1, protect: 1, mirror: 1},
 		onBasePower(basePower, source, target) {
-			if (this.field.getPseudoWeather('gravity') && (target.volatiles['partiallytrapped'])){
-			return this.chainModify(3);
+			if (this.field.getPseudoWeather('gravity') && (target.volatiles['partiallytrapped'])) {
+				return this.chainModify(3);
 			}
-			if (target.volatiles['partiallytrapped']){
+			if (target.volatiles['partiallytrapped']) {
 				return this.chainModify(2);
 			}
 			if (this.field.getPseudoWeather('gravity')) {
@@ -25365,5 +25364,4 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Bug",
 	},
-
 };
