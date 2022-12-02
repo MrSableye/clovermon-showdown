@@ -9050,6 +9050,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	kingmadio: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	/* Clover Blobbos CAP */
 	blobboshenesys: {
 		tier: "Illegal",
