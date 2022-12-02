@@ -5040,9 +5040,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	fuku: {
 		name: "Fuk U",
 		onStart(source) {
-			for (const pokemon of this.getAllPokemon()) {
+			for (const pokemon of this.getAllActive()) {
 				if (pokemon === source) continue;
-				this.add('-start', pokemon, 'typechange', '[from] ability: Fuk U', '[of] ' + source);
+				this.add('-start', pokemon, 'typechange', 'Normal', '[from] ability: Fuk U', '[of] ' + source);
 				pokemon.setType('Normal');
 			}
 		},
@@ -5051,7 +5051,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	stinkbomb: {
 		name: "Stink Bomb",
 		onStart() {
-			for (const pokemon of this.getAllPokemon()) {
+			for (const pokemon of this.getAllActive()) {
 				pokemon.setAbility('stench');
 			}
 		},
