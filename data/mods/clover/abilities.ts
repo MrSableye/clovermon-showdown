@@ -157,6 +157,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: "Past",
 	},
 	/* Modified abilities */
+	flareboost: {
+		inherit: true,
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'brn') {
+				return false;
+			}
+		},
+	},
 	flowergift: {
 		inherit: true,
 		onAllyModifyAtk(atk, pokemon) {
@@ -258,12 +267,27 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	runaway: {
+		inherit: true,
+		onImmunity(type) {
+			if (type === 'trapping') return false;
+		},
+	},
 	soundproof: {
 		inherit: true,
 		onTryHit(target, source, move) {
 			if (move.flags['sound']) {
 				this.add('-immune', target, '[from] ability: Soundproof');
 				return null;
+			}
+		},
+	},
+	toxicboost: {
+		inherit: true,
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'psn' || effect.id === 'tox') {
+				return false;
 			}
 		},
 	},
@@ -300,6 +324,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					this.add('-immune', target, '[from] ability: Wonder Guard');
 				}
 				return null;
+			}
+		},
+	},
+	magmaarmor: {
+		inherit: true,
+		onSourceModifyDamage(damage, source, target, move) {
+			if (['Water', 'Ice'].includes(move.type)) {
+				return this.chainModify(1, 2);
 			}
 		},
 	},
@@ -409,6 +441,38 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	woodenguard: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	jihad: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	phantasma: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shitstorm: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fuku: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	stinkbomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	whiteflames: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	presage: {
 		inherit: true,
 		isNonstandard: null,
 	},

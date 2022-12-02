@@ -784,6 +784,13 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return [type];
 		},
 	},
+	/* Clover conditions */
+	stinkbomb: {
+		duration: 1,
+		onModifyType(move) {
+			move.type = 'Poison';
+		},
+	},
 	/* Clover CAP conditions */
 	backdraft: {
 		duration: 2,

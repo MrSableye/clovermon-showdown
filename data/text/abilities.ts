@@ -1782,7 +1782,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boombox: {
 		name: "Boombox",
-		shortDesc: "This Pokemon's sound-based attacks have their power multiplied by 1.2.",
+		shortDesc: "This Pokemon's sound-based attacks have their power multiplied by 1.2 and takes 1/2 damage from sound attacks.",
 	},
 	bonezone: {
 		name: "Bone Zone",
@@ -1796,7 +1796,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	degradation: {
 		name: "Degradation",
-		shortDesc: "This Pokemon's Dark-type attacks are super-effective against Normal-types.",
+		shortDesc: "This Pokemon's Dark-type attacks are super-effective against Normal- and Fairy-types.",
 	},
 	flareheal: {
 		name: "Flare Heal",
@@ -1810,7 +1810,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	hydrophile: {
 		name: "Hydrophile",
-		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack.",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack. This Pokemon is healed 1/4 by Water, 1/8 by Rain.",
 	},
 	inversion: {
 		name: "Inverse Room",
@@ -1823,7 +1823,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	madman: {
 		name: "Madman",
-		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be confused.",
+		shortDesc: "100% chance a Pokemon making contact with this Pokemon will be confused.",
 	},
 	moreroom: {
 		name: "More Room",
@@ -1832,12 +1832,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	pollution: {
 		name: "Pollution",
-		shortDesc: "This Pokemon's Poison-type attacks are super-effective against Water-types.",
+		shortDesc: "This Pokemon's Poison-type attacks are super-effective against Water-, Flying- and Ground-types.",
 	},
 	pozzed: {
 		name: "Pozzed",
-		shortDesc: "This Pokemon is immune to Poison-type moves and restores 1/4 of its maximum HP, rounded down, when hit by a Poison-type move.",
-		desc: "This Pokemon heals 1/4 of its max HP when hit by Poison moves; Poison immunity. Toxic Orb, Toxic Spikes, etc. and non-Poison-type moves can still Poison this Pokemon.",
+		shortDesc: "This Pokemon is immune to Poison-type moves and restores 1/4 of its maximum HP, rounded down, when hit by a Poison-type move. No HP loss from Poison. This Pokemon's attacking stat is multiplied by 1.5 while using a Poison-type attack. Absorbs Toxic Spikes.",
+		desc: "This Pokemon heals 1/4 of its max HP when hit by Poison moves; Poison immunity. Toxic Orb, Toxic Spikes, etc. and non-Poison-type moves can still Poison this Pokemon. No HP loss from Poison. This Pokemon's attacking stat is multiplied by 1.5 while using a Poison-type attack. Absorbs Toxic Spikes.",
 	},
 	puppeteer: {
 		name: "Puppeteer",
@@ -1859,6 +1859,34 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	woodenguard: {
 		name: "Wooden Guard",
 		shortDesc: "This Pokemon recieves 1.5x damage from Fire moves, 0.75x from other moves.",
+	},
+	jihad: {
+		name: "Jihad",
+		shortDesc: "+1 priority to suicide moves. Immune to sandstorm.",
+	},
+	phantasma: {
+		name: "Phantasma",
+		shortDesc: "1.5x boost to Ghost-type moves. Immune to trapping. Curse is Ghost-type.",
+	},
+	shitstorm: {
+		name: "Shitstorm",
+		shortDesc: "Starts Mud Sport and Water Sport on switch-in.",
+	},
+	fuku: {
+		name: "Fuk U",
+		shortDesc: "Sets all other mons to Normal-type on switch-in.",
+	},
+	stinkbomb: {
+		name: "Stink Bomb",
+		shortDesc: "Sets all mons abilities to Stench. Makes all attacks Poison-type for 1 turn.",
+	},
+	whiteflames: {
+		name: "White Flames",
+		shortDesc: "1.2x damage against inferior mons. Takes 0.5x damage from inferior mons.",
+	},
+	boardpower: {
+		name: "Board Power",
+		shortDesc: "No competitive use (yet).",
 	},
 	/* Clover CAP Abilities */
 	cakeveil: {
@@ -2106,10 +2134,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	fogofwar: {
 		name: "Fog Of War",
 		shortDesc: "On switch-in, this Pokemon summons Dense Fog.",
-	},
-	jihad: {
-		name: "Jihad",
-		shortDesc: "This Pokemon's self-destructing moves have their priority increased by 1.",
 	},
 	bathtime: {
 		name: "Bath Time",

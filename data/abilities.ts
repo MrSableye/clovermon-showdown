@@ -4527,7 +4527,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	anyability: {
 		name: "Any Ability",
 		onStart(pokemon) {
-			const bannedAbilities = ['wonderguard', 'trace', 'forecast', 'comatose', 'artificial', 'anability', 'anyability'];
+			const bannedAbilities = [
+				'wonderguard',
+				'trace',
+				'forecast',
+				'comatose',
+				'artificial',
+				'anability',
+				'anyability',
+				'presage',
+				'boardpower',
+			];
 			const abilityList = Object.values(this.dex.data.Abilities)
 				.filter((ability) => !bannedAbilities.includes(this.toID(ability.name)))
 				.filter((ability) => !ability.isNonstandard)
@@ -4579,6 +4589,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.flags['sound']) {
 				this.debug('Boombox boost');
 				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.flags['sound']) {
+				return this.chainModify(0.5);
 			}
 		},
 		rating: 3,
@@ -4650,7 +4665,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
 			if (degradationUser !== this.activePokemon) return;
 
-			if (move.type === 'Dark' && type === 'Normal') {
+			if (move.type === 'Dark' && ['Normal', 'Fairy'].includes(type)) {
 				return 1;
 			}
 		},
@@ -4714,9 +4729,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				};
 				const type = colorType[this.toID(color)];
 				if (type) {
-					const typeAdded = pokemon.addType(type);
-					if (!typeAdded) return false;
-					this.add('-start', pokemon, 'typeadd', type, '[from] ability: Gradient');
+					this.add('-start', pokemon, 'typechange', '[from] ability: Gradient');
+					pokemon.setType([type, ...pokemon.types]);
 				}
 			}
 		},
@@ -4737,6 +4751,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.type === 'Water') {
 				this.debug('Hydrophile boost');
 				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Water') {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Hydrophile');
+				}
+				return null;
+			}
+		},
+		onWeather(target, source, effect) {
+			if (target.hasItem('utilityumbrella')) return;
+			if (effect.id === 'raindance' || effect.id === 'primordialsea') {
+				this.heal(target.baseMaxhp / 8);
 			}
 		},
 		rating: 3.5,
@@ -4784,9 +4812,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Madman",
 		onDamagingHit(damage, target, source, move) {
 			if (move.flags['contact']) {
-				if (this.randomChance(3, 10)) {
-					source.addVolatile('confusion');
-				}
+				source.addVolatile('confusion');
 			}
 		},
 		rating: 3,
@@ -4804,7 +4830,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
 			if (pollutionUser !== this.activePokemon) return;
 
-			if (move.type === 'Poison' && type === 'Water') {
+			if (move.type === 'Poison' && ['Water', 'Flying', 'Ground'].includes(type)) {
 				return 1;
 			}
 		},
@@ -4819,6 +4845,30 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					this.add('-immune', target, '[from] ability: Pozzed');
 				}
 				return null;
+			}
+		},
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'psn' || effect.id === 'tox') {
+				return false;
+			}
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Poison') {
+				this.debug('Pozzed boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Poison') {
+				this.debug('Pozzed boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onStart(pokemon) {
+			if (pokemon.side.removeSideCondition('toxicspikes')) {
+				this.add('-sideend', pokemon.side, this.dex.conditions.get('toxicspikes').name, '[from] ability: Pozzed', '[of] ' + pokemon);
 			}
 		},
 		rating: 3.5,
@@ -4945,6 +4995,281 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			return this.chainModify(0.75);
 		},
 		rating: 3,
+		isNonstandard: "Future",
+	},
+	jihad: {
+		name: "Jihad",
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.selfdestruct) return priority + 1;
+		},
+		onImmunity(type, pokemon) {
+			if (type === 'sandstorm') return false;
+		},
+		isNonstandard: "Future",
+	},
+	phantasma: {
+		name: "Phantasma",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Ghost') {
+				this.debug('Phantasma boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Ghost') {
+				this.debug('Phantasma boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onImmunity(type) {
+			if (type === 'trapped') return false;
+		},
+		// TODO: Make Curse Ghost-type
+		isNonstandard: "Future",
+	},
+	shitstorm: {
+		name: "Shitstorm",
+		onStart() {
+			this.field.addPseudoWeather('mudsport');
+			this.field.addPseudoWeather('watersport');
+		},
+		isNonstandard: "Future",
+	},
+	fuku: {
+		name: "Fuk U",
+		onStart(source) {
+			for (const pokemon of this.getAllPokemon()) {
+				if (pokemon === source) continue;
+				this.add('-start', pokemon, 'typechange', '[from] ability: Fuk U', '[of] ' + source);
+				pokemon.setType('Normal');
+			}
+		},
+		isNonstandard: "Future",
+	},
+	stinkbomb: {
+		name: "Stink Bomb",
+		onStart() {
+			for (const pokemon of this.getAllPokemon()) {
+				pokemon.setAbility('stench');
+			}
+		},
+		isNonstandard: "Future",
+	},
+	whiteflames: {
+		name: "White Flames",
+		onSourceModifyDamage(damage, source, target, move) {
+			const scaryMons = [
+				'arabomb',
+				'iguallah',
+				'lizakbar',
+				'squirrap',
+				'gampster',
+				'vandash',
+				'ebolable',
+				'monstrap',
+				'elephas',
+				'chompest',
+				'fishnism',
+				'sjwhale',
+				'flowre',
+				'florious',
+				'juarecito',
+				'ponchito',
+				'somboludo',
+				'euphoreal',
+				'armowite',
+				'ogrelord',
+				'chantruth',
+				'inbitween',
+				'geigh',
+				'jarape',
+				'spilefree',
+				'oilslam',
+				'isissin',
+				'felimbus',
+				'deathorus',
+				'yedoom',
+				'mimimie',
+				'flameboyan',
+				'ballacle',
+				'barbarkley',
+				'kekroach',
+				'rekroach',
+				'anonymouse',
+				'embortion',
+				'premantom',
+				'vaultevour',
+				'dragking',
+				'oreon',
+				'jewipede',
+				'catikillar',
+				'tikoon',
+				'oogabuga',
+				'ebining',
+				'emplyin',
+				'upbote',
+				'upbeddit',
+				'diobat',
+				'warudio',
+				'mehndior',
+				'tunakking',
+				'hopault',
+				'araketsu',
+				'senketula',
+				'grimdak',
+				'shroofle',
+				'typobop',
+				'yeerex',
+				'preasu',
+				'undastand',
+				'signot',
+				'reagain',
+				'lankong',
+				'ballankey',
+				'funnedong',
+				'boarnograf',
+				'pyongnome',
+				'gangnome',
+			];
+
+			if (scaryMons.includes(source.baseSpecies.id)) {
+				this.add('-ability', target, 'White Flames');
+				return this.chainModify(0.5);
+			}
+		},
+		onBasePower(basePower, pokemon, target, move) {
+			const scaryMons = [
+				'arabomb',
+				'iguallah',
+				'lizakbar',
+				'squirrap',
+				'gampster',
+				'vandash',
+				'ebolable',
+				'monstrap',
+				'elephas',
+				'chompest',
+				'fishnism',
+				'sjwhale',
+				'flowre',
+				'florious',
+				'juarecito',
+				'ponchito',
+				'somboludo',
+				'euphoreal',
+				'armowite',
+				'ogrelord',
+				'chantruth',
+				'inbitween',
+				'geigh',
+				'jarape',
+				'spilefree',
+				'oilslam',
+				'isissin',
+				'felimbus',
+				'deathorus',
+				'yedoom',
+				'mimimie',
+				'flameboyan',
+				'ballacle',
+				'barbarkley',
+				'kekroach',
+				'rekroach',
+				'anonymouse',
+				'embortion',
+				'premantom',
+				'vaultevour',
+				'dragking',
+				'oreon',
+				'jewipede',
+				'catikillar',
+				'tikoon',
+				'oogabuga',
+				'ebining',
+				'emplyin',
+				'upbote',
+				'upbeddit',
+				'diobat',
+				'warudio',
+				'mehndior',
+				'tunakking',
+				'hopault',
+				'araketsu',
+				'senketula',
+				'grimdak',
+				'shroofle',
+				'typobop',
+				'yeerex',
+				'preasu',
+				'undastand',
+				'signot',
+				'reagain',
+				'lankong',
+				'ballankey',
+				'funnedong',
+				'boarnograf',
+				'pyongnome',
+				'gangnome',
+			];
+
+			if (scaryMons.includes(target.baseSpecies.id)) {
+				this.add('-ability', pokemon, 'White Flames');
+				return this.chainModify(1.2);
+			}
+		},
+		isNonstandard: "Future",
+	},
+	boardpower: {
+		name: "Board Power",
+		isNonstandard: "Future",
+	},
+	presage: {
+		name: "Presage",
+		onPrepareHit(source, target, move) {
+			if (move.category === 'Status') return;
+			const sunMoves = ['solarbeam', 'solarblaade'];
+			const rainMoves = ['thunder', 'hurricane'];
+			const isInRain = ['raindance', 'primordialsea'].includes(target.effectiveWeather());
+			const isInSun = ['sunnyday', 'desolateland'].includes(target.effectiveWeather());
+			const isInHail = ['hail'].includes(target.effectiveWeather());
+
+			if (!isInSun && (sunMoves.includes(move.id) || move.type === 'Fire')) {
+				this.field.setWeather('sunnyday');
+			} else if (!isInRain && (rainMoves.includes(move.id) || move.type === 'Water')) {
+				this.field.setWeather('raindance');
+			} else if (!isInHail && move.type === 'Ice') {
+				this.field.setWeather('hail');
+			} else if (move.type === 'Normal' && move.id !== 'weatherball') {
+				this.field.clearWeather();
+			}
+		},
+		onUpdate(pokemon) {
+			if (pokemon.transformed) return;
+			if (pokemon.baseSpecies.baseSpecies === 'Acufront') {
+				let forme = null;
+				switch (pokemon.effectiveWeather()) {
+				case 'sunnyday':
+				case 'desolateland':
+					if (pokemon.species.id !== 'acufrontf') forme = 'Acufront-F';
+					break;
+				case 'raindance':
+				case 'primordialsea':
+					if (pokemon.species.id !== 'acufrontw') forme = 'Acufront-W';
+					break;
+				case 'hail':
+					if (pokemon.species.id !== 'acufronti') forme = 'Acufront-I';
+					break;
+				default:
+					if (pokemon.species.id !== 'acufront') forme = 'Acufront';
+					break;
+				}
+				if (pokemon.isActive && forme) {
+					pokemon.formeChange(forme, this.effect, false, '[msg]');
+				}
+			}
+		},
 		isNonstandard: "Future",
 	},
 	/* Clover CAP Abilities */
@@ -5654,13 +5979,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Fog Of War",
 		rating: 4,
-		isNonstandard: "Future",
-	},
-	jihad: {
-		onModifyPriority(priority, pokemon, target, move) {
-			if (move.selfdestruct) return priority + 1;
-		},
-		name: "Jihad",
 		isNonstandard: "Future",
 	},
 	bathtime: {

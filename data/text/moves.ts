@@ -6858,7 +6858,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	sleazyspores: {
 		name: "Sleazy Spores",
 		shortDesc: "Lowers Speed of foes by 1 on switch-in.",
-		desc: "Sets up a hazard on the opposing side of the field, lowering the Speed by 1 stage of each opposing Pokemon that switches in, unless it is immune to powder moves. Fails if the effect is already active on the opposing side. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin or Defog successfully, is hit by Defog, or a Grass-type Pokemon switches in",
+		desc: "Sets up a hazard on the opposing side of the field, lowering the Speed by 1 stage of each opposing Pokemon that switches in, unless it is immune to powder moves. Fails if the effect is already active on the opposing side. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin or Defog successfully, is hit by Defog",
 		start: "  Sleazy spores float in the air around [TEAM]!",
 		end: "  The sleazy spores disappeared from around [TEAM]!",
 		activate: "  Sleazy spores sedated [POKEMON]!",
@@ -6903,7 +6903,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	warhead: {
 		name: "Warhead",
-		shortDesc: "No additional effect.",
+		desc: "Has a 10% chance to burn the target.",
+		shortDesc: "10% chance to burn the target.",
 	},
 	weirdflex: {
 		name: "Weird Flex",
@@ -6940,8 +6941,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	boltbeam: {
 		name: "Boltbeam",
-		shortDesc: "Combines Ice in its type effectiveness.",
-		desc: "This move combines Ice in its type effectiveness against the target.",
+		shortDesc: "Hits 2 times in one turn. First hit is Electric-type and second is Ice-type.",
 	},
 	checkem: {
 		name: "Check 'Em",
@@ -6982,7 +6982,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	banhammer: {
 		name: "Ban Hammer",
-		shortDesc: "Torments the foe.",
+		shortDesc: "Torments and Taunts the foe.",
 	},
 	homerunbat: {
 		name: "Homerun Bat",
@@ -7008,8 +7008,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	dailydose: {
 		name: "Daily Dose",
-		shortDesc: "30% chance to poison or badly poison or put the target to sleep.",
-		desc: "Has a 30% chance to either poison, badly poison, or inflict sleep on the target.",
+		shortDesc: "25% chance to poison or badly poison or put the target to sleep.",
+		desc: "Has a 25% chance to either poison, badly poison, or inflict sleep on the target.",
 	},
 	decaydrain: {
 		name: "Decay Drain",
@@ -7144,6 +7144,19 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Sudoku",
 		shortDesc: "User faints.",
 		desc: "The user faints.",
+	},
+	slipturn: {
+		name: "Slip Turn",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+		shortDesc: "User switches out after damaging the target.",
+		gen6: {
+			desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button.",
+		},
+		gen4: {
+			desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members.",
+		},
+
+		switchOut: "[POKEMON] went back to [TRAINER]!",
 	},
 	/* Clover CAP */
 	crusadercrash: {

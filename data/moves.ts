@@ -19770,11 +19770,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-sidestart', side, 'move: Sleazy Spores');
 			},
 			onSwitchIn(pokemon) {
-				if (pokemon.hasType('Grass')) {
-					this.add('-sideend', pokemon.side, 'move: Sleazy Spores', '[of] ' + pokemon);
-					pokemon.side.removeSideCondition('sleazyspores');
-					return;
-				}
 				if (!pokemon.runStatusImmunity('powder')) return;
 				if (pokemon.hasItem('heavydutyboots')) return;
 				this.add('-activate', pokemon, 'move: Sleazy Spores');
@@ -19790,7 +19785,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	slimegulp: {
 		num: 69044,
 		accuracy: 100,
-		basePower: 75,
+		basePower: 80,
 		category: "Physical",
 		name: "Slime Gulp",
 		pp: 10,
@@ -19880,7 +19875,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	dragonfist: {
 		num: 69040,
 		accuracy: 100,
-		basePower: 75,
+		basePower: 90,
 		category: "Physical",
 		name: "Dragon Fist",
 		pp: 15,
@@ -19897,7 +19892,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	lickclean: {
 		num: 69045,
 		accuracy: 100,
-		basePower: 40,
+		basePower: 50,
 		category: "Physical",
 		name: "Lick Clean",
 		pp: 20,
@@ -19959,7 +19954,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	"1000folds": {
 		num: 69047,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Physical",
 		name: "1000 Folds",
 		pp: 10,
@@ -19989,6 +19984,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Warhead",
 		pp: 5,
 		priority: 0,
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Steel",
 		flags: {protect: 1, mirror: 1},
@@ -20186,7 +20185,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	boltbeam: {
 		num: 69048,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 65,
 		category: "Special",
 		name: "Boltbeam",
 		pp: 10,
@@ -20194,10 +20193,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Electric",
 		flags: {protect: 1, mirror: 1},
-		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Ice', type);
+		multihit: 2,
+		onModifyType(move) {
+			if (move.hit === 2) {
+				move.type = 'Ice';
+			}
 		},
-		isNonstandard: "Future",
 	},
 	checkem: {
 		num: 69052,
@@ -20368,8 +20369,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	banhammer: {
 		num: 69049,
-		accuracy: 90,
-		basePower: 90,
+		accuracy: 100,
+		basePower: 100,
 		category: "Physical",
 		name: "Ban Hammer",
 		pp: 10,
@@ -20380,6 +20381,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onHit(target) {
 			if (!target.volatiles['dynamax']) {
 				target.addVolatile('torment');
+				target.addVolatile('taunt');
 			}
 		},
 		isNonstandard: "Future",
@@ -20444,7 +20446,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	comengo: {
 		num: 69002,
 		accuracy: 100,
-		basePower: 25,
+		basePower: 30,
 		category: "Special",
 		name: "Come n' Go",
 		pp: 30,
@@ -20459,15 +20461,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	dailydose: {
 		num: 69018,
-		accuracy: 95,
-		basePower: 80,
+		accuracy: 100,
+		basePower: 90,
 		category: "Special",
 		name: "Daily Dose",
-		pp: 5,
+		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
-			chance: 30,
+			chance: 25,
 			onHit(target, source) {
 				const result = this.random(3);
 				if (result === 0) {
@@ -20554,7 +20556,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	falconpunch: {
 		num: 69030,
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 100,
 		category: "Physical",
 		name: "Falcon Punch",
@@ -21018,6 +21020,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		zMove: {effect: 'healreplacement'},
 		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	slipturn: {
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Slip Turn",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+		contestType: "Cute",
 		isNonstandard: "Future",
 	},
 	/* Clover CAP Moves */

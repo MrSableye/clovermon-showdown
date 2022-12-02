@@ -349,10 +349,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	spikecannon: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	steamroller: {
 		inherit: true,
 		isNonstandard: null,
@@ -787,6 +783,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, distance: 1, blade: 1},
 	},
+	armthrust: {
+		inherit: true,
+		basePower: 20,
+	},
 	assist: {
 		inherit: true,
 		isNonstandard: null,
@@ -800,6 +800,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	barrage: {
 		inherit: true,
 		basePower: 25,
+		accuracy: 100,
 		type: "Steel",
 		isNonstandard: null,
 	},
@@ -819,6 +820,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	bonerush: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, bone: 1},
+	},
+	bugbite: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
 	},
 	burnup: {
 		inherit: true,
@@ -920,6 +925,23 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
 	},
+	curse: {
+		inherit: true,
+		onModifyMove(move, source, target) {
+			if (!source.hasType('Ghost') && !source.hasAbility('phantasma')) {
+				move.target = move.nonGhostTarget as MoveTarget;
+			}
+		},
+		onTryHit(target, source, move) {
+			if (!source.hasType('Ghost') && !source.hasAbility('phantasma')) {
+				delete move.volatileStatus;
+				delete move.onHit;
+				move.self = {boosts: {spe: -1, atk: 1, def: 1}};
+			} else if (move.volatileStatus && target.volatiles['curse']) {
+				return false;
+			}
+		},
+	},
 	cut: {
 		inherit: true,
 		accuracy: 100,
@@ -974,15 +996,69 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 	},
+	dragonclaw: {
+		inherit: true,
+		critRatio: 2,
+	},
 	dragonhammer: {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
+	},
+	drillpeck: {
+		inherit: true,
+		critRatio: 2,
 	},
 	eggbomb: {
 		inherit: true,
 		accuracy: 85,
 		basePower: 100,
 		isNonstandard: null,
+	},
+	electricterrain: {
+		inherit: true,
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem('terrainextender')) {
+					return 8;
+				}
+				return 5;
+			},
+			onSetStatus(status, target, source, effect) {
+				if (status.id === 'slp' && target.isGrounded() && !target.isSemiInvulnerable()) {
+					if (effect.id === 'yawn' || (effect.effectType === 'Move' && !effect.secondaries)) {
+						this.add('-activate', target, 'move: Electric Terrain');
+					}
+					return false;
+				}
+			},
+			onTryAddVolatile(status, target) {
+				if (!target.isGrounded() || target.isSemiInvulnerable()) return;
+				if (status.id === 'yawn') {
+					this.add('-activate', target, 'move: Electric Terrain');
+					return null;
+				}
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Electric' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
+					this.debug('electric terrain boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Electric Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Electric Terrain');
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Electric Terrain');
+			},
+		},
 	},
 	falseswipe: {
 		inherit: true,
@@ -1047,6 +1123,51 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			},
 		},
 	},
+	grassyterrain: {
+		inherit: true,
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem('terrainextender')) {
+					return 8;
+				}
+				return 5;
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				const weakenedMoves = ['earthquake', 'bulldoze', 'magnitude'];
+				if (weakenedMoves.includes(move.id) && defender.isGrounded() && !defender.isSemiInvulnerable()) {
+					this.debug('move weakened by grassy terrain');
+					return this.chainModify(0.5);
+				}
+				if (move.type === 'Grass' && attacker.isGrounded()) {
+					this.debug('grassy terrain boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Grassy Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Grassy Terrain');
+				}
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				if (pokemon.isGrounded() && !pokemon.isSemiInvulnerable()) {
+					this.heal(pokemon.baseMaxhp / 16, pokemon, pokemon);
+				} else {
+					this.debug(`Pokemon semi-invuln or not grounded; Grassy Terrain skipped`);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Grassy Terrain');
+			},
+		},
+	},
 	hammerarm: {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, hammer: 1},
@@ -1080,6 +1201,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, hammer: 1},
+	},
+	inferno: {
+		inherit: true,
+		basePower: 120,
 	},
 	irontail: {
 		inherit: true,
@@ -1212,9 +1337,64 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			this.actions.useMove(randomMove, target);
 		},
 	},
+	milkdrink: {
+		inherit: true,
+		pp: 5,
+	},
 	nightslash: {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
+	},
+	pinmissile: {
+		inherit: true,
+		accuracy: 100,
+	},
+	psychicterrain: {
+		inherit: true,
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem('terrainextender')) {
+					return 8;
+				}
+				return 5;
+			},
+			onTryHitPriority: 4,
+			onTryHit(target, source, effect) {
+				if (effect && (effect.priority <= 0.1 || effect.target === 'self')) {
+					return;
+				}
+				if (target.isSemiInvulnerable() || target.isAlly(source)) return;
+				if (!target.isGrounded()) {
+					const baseMove = this.dex.moves.get(effect.id);
+					if (baseMove.priority > 0) {
+						this.hint("Psychic Terrain doesn't affect Pokémon immune to Ground.");
+					}
+					return;
+				}
+				this.add('-activate', target, 'move: Psychic Terrain');
+				return null;
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Psychic' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
+					this.debug('psychic terrain boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Psychic Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Psychic Terrain');
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Psychic Terrain');
+			},
+		},
 	},
 	psychocut: {
 		inherit: true,
@@ -1258,6 +1438,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		type: "Flying",
 		flags: {charge: 1, protect: 1, mirror: 1, blade: 1},
 	},
+	recover: {
+		inherit: true,
+		pp: 5,
+	},
+	rest: {
+		inherit: true,
+		pp: 5,
+	},
 	rockclimb: {
 		inherit: true,
 		type: "Rock",
@@ -1272,6 +1460,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 	},
+	roost: {
+		inherit: true,
+		pp: 5,
+	},
 	sacredsword: {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
@@ -1284,6 +1476,36 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, bone: 1},
 	},
+	shelltrap: {
+		inherit: true,
+		basePower: 75,
+		priorityChargeCallback() {},
+		onTryMove() {},
+		onBasePower(basePower, pokemon) {
+			if (!pokemon.volatiles['shelltrap']?.gotHit) {
+				return this.chainModify(2);
+			}
+		},
+		condition: {
+			duration: 1,
+			onStart(pokemon) {
+				this.add('-singleturn', pokemon, 'move: Shell Trap');
+			},
+			onHit(pokemon, source, move) {
+				if (!pokemon.isAlly(source) && move.category === 'Physical') {
+					this.effectState.gotHit = true;
+				}
+			},
+		},
+	},
+	shoreup: {
+		inherit: true,
+		pp: 5,
+	},
+	slackoff: {
+		inherit: true,
+		pp: 5,
+	},
 	slam: {
 		inherit: true,
 		accuracy: 85,
@@ -1291,6 +1513,16 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	slash: {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
+	},
+	softboiled: {
+		inherit: true,
+		pp: 5,
+	},
+	spikecannon: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 25,
+		type: "Ground",
 	},
 	strength: {
 		inherit: true,
@@ -1353,6 +1585,13 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 	},
+	wildcharge: {
+		inherit: true,
+		secondary: {
+			chance: 20,
+			status: 'par',
+		},
+	},
 	wonderroom: {
 		inherit: true,
 		condition: {
@@ -1393,6 +1632,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	xscissor: {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
+		critRatio: 2,
 	},
 	zenheadbutt: {
 		inherit: true,
@@ -1636,6 +1876,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	sudoku: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	slipturn: {
 		inherit: true,
 		isNonstandard: null,
 	},
