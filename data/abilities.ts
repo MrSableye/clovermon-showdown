@@ -4732,6 +4732,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (type) {
 					const newTypes = [type, ...pokemon.types];
 					this.add('-start', pokemon, 'typechange', newTypes.join('/'), '[from] ability: Gradient');
+					pokemon.setType(newTypes);
 				}
 			}
 		},
