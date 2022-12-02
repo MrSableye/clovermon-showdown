@@ -1786,7 +1786,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	bonezone: {
 		name: "Bone Zone",
-		shortDesc: "This Pokemon's Bone-based moves ignore immunities.",
+		shortDesc: "This Pokemon's Bone-based moves ignore immunities and abilities.",
 		start: "  [POKEMON] has entered the Bone Zone!",
 	},
 	degenerate: {
