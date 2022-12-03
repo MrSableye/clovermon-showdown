@@ -5365,7 +5365,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	presage: {
 		name: "Presage",
-		onPrepareHit(source, target, move) {
+		onBeforeMove(source, target, move) {
 			if (move.category === 'Status') return;
 			const sunMoves = ['solarbeam', 'solarblaade'];
 			const rainMoves = ['thunder', 'hurricane'];
