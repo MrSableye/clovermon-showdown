@@ -93,7 +93,7 @@ export const Formats: FormatList = [
 	},
 	{
 		name: '[Gen 8 Clover Only] Ultimate Blobbos Metronome Showdown DX',
-		mod: 'clover',
+		mod: 'cloverblobboscap',
 		team: 'randomBlobbosMetronome',
 		ruleset: ['Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod'],
 	},
