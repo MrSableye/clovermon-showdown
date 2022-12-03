@@ -880,7 +880,14 @@ export class BattleActions {
 				accuracy = this.battle.runEvent('ModifyAccuracy', target, pokemon, move, accuracy);
 				if (!move.alwaysHit) {
 					accuracy = this.battle.runEvent('Accuracy', target, pokemon, move, accuracy);
-					if (accuracy !== true && !this.battle.randomChance(accuracy, 100)) break;
+					if (!move.alwaysHit) {
+						accuracy = this.battle.runEvent('Accuracy', target, pokemon, move, accuracy);
+						if (move.canContinue) {
+							if (accuracy !== true && !this.battle.randomChance(accuracy, 100)) continue;
+						} else {
+							if (accuracy !== true && !this.battle.randomChance(accuracy, 100)) break;
+						}
+					}
 				}
 			}
 

@@ -204,6 +204,7 @@ export interface MoveData extends EffectData, MoveEventMethods, HitEffect {
 	basePowerModifier?: number;
 	critModifier?: number;
 	critRatio?: number;
+	canContinue?: boolean;
 	/**
 	 * Pokemon for the attack stat. Ability and Item damage modifiers still come from the real attacker.
 	 */
