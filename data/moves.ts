@@ -20195,8 +20195,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		multihit: 2,
 		canContinue: true,
-		onHit(target, source, move) {
-			if (move.hit === 1) {
+		onTryHit(target, source, move) {
+			if (move.hit === 2) {
 				move.type = 'Ice';
 			}
 		},
