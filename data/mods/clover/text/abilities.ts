@@ -27,4 +27,9 @@ export const AbilitiesText: {[k: string]: ModdedAbilityText} = {
 		desc: "While this Pokemon is poisoned, the power of its physical attacks is multiplied by 1.5. No HP loss from Poison.",
 		shortDesc: "While this Pokemon is poisoned, its physical attacks have 1.5x power. No HP loss from Poison.",
 	},
+	presage: {
+		inherit: true,
+		desc: "Changes weather when using certain moves relating to weather.",
+		shortDesc: "Changes weather to benefit certain moves.",
+	},
 };
