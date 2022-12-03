@@ -1888,6 +1888,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Board Power",
 		shortDesc: "No competitive use (yet).",
 	},
+	presage: {
+		name: "Presage",
+		desc: "Changes weather when using certain moves relating to weather.",
+		shortDesc: "Changes weather to benefit certain moves.",
+	},
 	/* Clover CAP Abilities */
 	cakeveil: {
 		name: "Cake Veil",
