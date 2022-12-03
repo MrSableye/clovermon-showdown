@@ -20194,8 +20194,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 		flags: {protect: 1, mirror: 1},
 		multihit: 2,
-		onModifyType(move) {
-			if (move.hit === 2) {
+		onHit(target, source, move) {
+			if (move.hit === 1) {
 				move.type = 'Ice';
 			}
 		},

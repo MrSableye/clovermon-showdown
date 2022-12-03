@@ -5382,6 +5382,30 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			} else if (move.type === 'Normal' && move.id !== 'weatherball') {
 				this.field.clearWeather();
 			}
+
+			if (source.transformed) return;
+			if (source.baseSpecies.baseSpecies === 'Acufront') {
+				let forme = null;
+				switch (source.effectiveWeather()) {
+				case 'sunnyday':
+				case 'desolateland':
+					if (source.species.id !== 'acufrontf') forme = 'Acufront-F';
+					break;
+				case 'raindance':
+				case 'primordialsea':
+					if (source.species.id !== 'acufrontw') forme = 'Acufront-W';
+					break;
+				case 'hail':
+					if (source.species.id !== 'acufronti') forme = 'Acufront-I';
+					break;
+				default:
+					if (source.species.id !== 'acufront') forme = 'Acufront';
+					break;
+				}
+				if (source.isActive && forme) {
+					source.formeChange(forme, this.effect, false, '[msg]');
+				}
+			}
 		},
 		onUpdate(pokemon) {
 			if (pokemon.transformed) return;

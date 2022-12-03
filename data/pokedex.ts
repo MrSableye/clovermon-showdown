@@ -24293,7 +24293,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Shed Skin",
 			1: "Harvest",
-			H: "Unburden",
+			H: "Prankster",
 			S: "Sweet Veil",
 		},
 		heightm: 0.8,
