@@ -7404,6 +7404,114 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	fontabab: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabac: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabaco: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabad: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabaf: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabafa: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabafit: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabag: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabah: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabaint: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabajp: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabak: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabaout: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabapol: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabar9k: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontaba5: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabas4s: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabasoc: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabasp: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabatrv: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabatv: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabav: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabavg: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabavp: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabavr: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabax: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fontabaz: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	floconut: {
 		tier: "Illegal",
 		isNonstandard: "Future",

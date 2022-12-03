@@ -5184,6 +5184,114 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		],
 		randomBattleLevel: 84,
 	},
+	fontabab: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabac: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabaco: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabad: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabaf: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabafa: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabafit: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabag: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabah: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabaint: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabajp: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabak: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabaout: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabapol: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabar9k: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontaba5: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabas4s: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabasoc: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabasp: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabatrv: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabatv: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabav: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabavg: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabavp: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabavr: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabax: {
+		inherit: true,
+		tier: "NU",
+	},
+	fontabaz: {
+		inherit: true,
+		tier: "NU",
+	},
 	floconut: {
 		inherit: true,
 		tier: "LC",
