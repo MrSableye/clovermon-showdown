@@ -5187,110 +5187,137 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	fontabab: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabac: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabaco: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabad: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabaf: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabafa: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabafit: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabag: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabah: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabaint: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabajp: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabak: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabaout: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabapol: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabar9k: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontaba5: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabas4s: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabasoc: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabasp: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabatrv: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabatv: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabav: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabavg: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabavp: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabavr: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabax: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	fontabaz: {
 		inherit: true,
 		tier: "NU",
+		isNonstandard: null,
 	},
 	floconut: {
 		inherit: true,
