@@ -468,7 +468,115 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	boardpower: {
+	boardpowera: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerc: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerco: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerd: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerf: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerfa: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerfit: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerg: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerh: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerint: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerjp: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerk: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerout: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerpol: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerr9k: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpower5: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowers4s: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowersoc: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowersp: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowertrv: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowertv: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerv: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowervg: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowervp: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowervr: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerx: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerz: {
 		inherit: true,
 		isNonstandard: null,
 	},

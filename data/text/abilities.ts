@@ -1884,8 +1884,116 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "White Flames",
 		shortDesc: "1.2x damage against inferior mons. Takes 0.5x damage from inferior mons.",
 	},
-	boardpower: {
-		name: "Board Power",
+	boardpowera: {
+		name: "Board Power (/a/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerb: {
+		name: "Board Power (/b/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerc: {
+		name: "Board Power (/c/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerco: {
+		name: "Board Power (/co/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerd: {
+		name: "Board Power (/d/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerf: {
+		name: "Board Power (/f/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerfa: {
+		name: "Board Power (/fa/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerfit: {
+		name: "Board Power (/fit/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerg: {
+		name: "Board Power (/g/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerh: {
+		name: "Board Power (/h/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerint: {
+		name: "Board Power (/int/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerjp: {
+		name: "Board Power (/jp/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerk: {
+		name: "Board Power (/k/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerout: {
+		name: "Board Power (/out/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerpol: {
+		name: "Board Power (/pol/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerr9k: {
+		name: "Board Power (/r9k/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpower5: {
+		name: "Board Power (/5/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowers4s: {
+		name: "Board Power (/s4s/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowersoc: {
+		name: "Board Power (/soc/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowersp: {
+		name: "Board Power (/sp/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowertrv: {
+		name: "Board Power (/trv/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowertv: {
+		name: "Board Power (/tv/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerv: {
+		name: "Board Power (/v/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowervg: {
+		name: "Board Power (/vg/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowervp: {
+		name: "Board Power (/vp/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowervr: {
+		name: "Board Power (/vr/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerx: {
+		name: "Board Power (/x/)",
+		shortDesc: "No competitive use (yet).",
+	},
+	boardpowerz: {
+		name: "Board Power (/z/)",
 		shortDesc: "No competitive use (yet).",
 	},
 	presage: {

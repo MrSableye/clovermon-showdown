@@ -4536,7 +4536,34 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'anability',
 				'anyability',
 				'presage',
-				'boardpower',
+				'boardpowera',
+				'boardpowerb',
+				'boardpowerc',
+				'boardpowerco',
+				'boardpowerd',
+				'boardpowerf',
+				'boardpowerfa',
+				'boardpowerfit',
+				'boardpowerg',
+				'boardpowerh',
+				'boardpowerint',
+				'boardpowerjp',
+				'boardpowerk',
+				'boardpowerout',
+				'boardpowerpol',
+				'boardpowerr9k',
+				'boardpower5',
+				'boardpowers4s',
+				'boardpowersoc',
+				'boardpowersp',
+				'boardpowertrv',
+				'boardpowertv',
+				'boardpowerv',
+				'boardpowervg',
+				'boardpowervp',
+				'boardpowervr',
+				'boardpowerx',
+				'boardpowerz',
 			];
 			const abilityList = Object.values(this.dex.data.Abilities)
 				.filter((ability) => !bannedAbilities.includes(this.toID(ability.name)))
@@ -5224,8 +5251,116 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		isNonstandard: "Future",
 	},
-	boardpower: {
-		name: "Board Power",
+	boardpowera: {
+		name: "Board Power (/a/)",
+		isNonstandard: "Future",
+	},
+	boardpowerb: {
+		name: "Board Power (/b/)",
+		isNonstandard: "Future",
+	},
+	boardpowerc: {
+		name: "Board Power (/c/)",
+		isNonstandard: "Future",
+	},
+	boardpowerco: {
+		name: "Board Power (/co/)",
+		isNonstandard: "Future",
+	},
+	boardpowerd: {
+		name: "Board Power (/d/)",
+		isNonstandard: "Future",
+	},
+	boardpowerf: {
+		name: "Board Power (/f/)",
+		isNonstandard: "Future",
+	},
+	boardpowerfa: {
+		name: "Board Power (/fa/)",
+		isNonstandard: "Future",
+	},
+	boardpowerfit: {
+		name: "Board Power (/fit/)",
+		isNonstandard: "Future",
+	},
+	boardpowerg: {
+		name: "Board Power (/g/)",
+		isNonstandard: "Future",
+	},
+	boardpowerh: {
+		name: "Board Power (/h/)",
+		isNonstandard: "Future",
+	},
+	boardpowerint: {
+		name: "Board Power (/int/)",
+		isNonstandard: "Future",
+	},
+	boardpowerjp: {
+		name: "Board Power (/jp/)",
+		isNonstandard: "Future",
+	},
+	boardpowerk: {
+		name: "Board Power (/k/)",
+		isNonstandard: "Future",
+	},
+	boardpowerout: {
+		name: "Board Power (/out/)",
+		isNonstandard: "Future",
+	},
+	boardpowerpol: {
+		name: "Board Power (/pol/)",
+		isNonstandard: "Future",
+	},
+	boardpowerr9k: {
+		name: "Board Power (/r9k/)",
+		isNonstandard: "Future",
+	},
+	boardpower5: {
+		name: "Board Power (/5/)",
+		isNonstandard: "Future",
+	},
+	boardpowers4s: {
+		name: "Board Power (/s4s/)",
+		isNonstandard: "Future",
+	},
+	boardpowersoc: {
+		name: "Board Power (/soc/)",
+		isNonstandard: "Future",
+	},
+	boardpowersp: {
+		name: "Board Power (/sp/)",
+		isNonstandard: "Future",
+	},
+	boardpowertrv: {
+		name: "Board Power (/trv/)",
+		isNonstandard: "Future",
+	},
+	boardpowertv: {
+		name: "Board Power (/tv/)",
+		isNonstandard: "Future",
+	},
+	boardpowerv: {
+		name: "Board Power (/v/)",
+		isNonstandard: "Future",
+	},
+	boardpowervg: {
+		name: "Board Power (/vg/)",
+		isNonstandard: "Future",
+	},
+	boardpowervp: {
+		name: "Board Power (/vp/)",
+		isNonstandard: "Future",
+	},
+	boardpowervr: {
+		name: "Board Power (/vr/)",
+		isNonstandard: "Future",
+	},
+	boardpowerx: {
+		name: "Board Power (/x/)",
+		isNonstandard: "Future",
+	},
+	boardpowerz: {
+		name: "Board Power (/z/)",
 		isNonstandard: "Future",
 	},
 	presage: {
