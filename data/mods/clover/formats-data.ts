@@ -5602,7 +5602,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	semdemen: {
 		inherit: true,
-		tier: "Uber",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"scald",
@@ -5611,7 +5611,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"stealthrock",
 			"stickyweb",
 		],
-		randomBattleLevel: 72,
+		randomBattleLevel: 76,
 	},
 	dragking: {
 		inherit: true,
@@ -6864,7 +6864,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	chromox: {
 		inherit: true,
-		tier: "Uber",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"eruption",
@@ -6873,7 +6873,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"flashcannon",
 			"protect",
 		],
-		randomBattleLevel: 72,
+		randomBattleLevel: 76,
 	},
 	pitayen: {
 		inherit: true,
