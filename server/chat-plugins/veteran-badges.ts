@@ -70,6 +70,7 @@ let veteranBadgeConfigurations: VeteranBadgeConfiguration[] = [
 ];
 
 const initializeVeteranBadges = async () => {
+	if (!Config.usesqlitebadges) return;
 	veteranBadgeConfigurations = await Promise.all(veteranBadgeConfigurations.map(async (veteranBadgeConfiguration) => {
 		if (veteranBadgeConfiguration.badge) return veteranBadgeConfiguration;
 
