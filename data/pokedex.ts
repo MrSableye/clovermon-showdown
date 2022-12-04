@@ -29245,7 +29245,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			0: "Truant",
 			1: "Effect Spore",
 			H: "Mold Breaker",
-			S: "Unnverve",
+			S: "Unnerve",
 		},
 		heightm: 1.5,
 		weightkg: 9,
