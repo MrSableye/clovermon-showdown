@@ -22463,7 +22463,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 50,
 		},
 		abilities: {
-			0: "Liquid Oooze",
+			0: "Liquid Ooze",
 			1: "Flare Boost",
 			H: "Merciless",
 			S: "Jihad",
