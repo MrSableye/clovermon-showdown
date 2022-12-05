@@ -5344,8 +5344,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.boost({atk: 1});
 			}
 		},
-		onEffectiveness(typeMod, target, type, move) {
-			if (type === 'Dark') return 2;
+		onSourceModifyDamage(damage, source, target, move) {
+			let mod = 1;
+			if (move.type === 'Dark') mod *= 2;
+			return this.chainModify(mod);
 		},
 		isNonstandard: "Future",
 	},
