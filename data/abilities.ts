@@ -5468,6 +5468,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowerfit: {
 		name: "Board Power (/fit/)",
+		onStart(pokemon) {
+			if (pokemon.addType('Fighting')) {
+				this.add('-start', pokemon, 'typeadd', 'Fighting', '[from] ability: Board Power (/fit/)');
+			}
+			this.actions.useMove('Hulk Up', pokemon);
+		},
 		isNonstandard: "Future",
 	},
 	boardpowerg: {
