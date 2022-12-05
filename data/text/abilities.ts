@@ -1890,7 +1890,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowerb: {
 		name: "Board Power (/b/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Gets a random different Board Power.",
 	},
 	boardpowerc: {
 		name: "Board Power (/c/)",

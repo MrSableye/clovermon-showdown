@@ -5300,6 +5300,49 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowerb: {
 		name: "Board Power (/b/)",
+		onStart(pokemon) {
+			const boardAbilities = [
+				'boardpowera',
+				'boardpowerc',
+				'boardpowerco',
+				'boardpowerd',
+				'boardpowerf',
+				'boardpowerfa',
+				'boardpowerfit',
+				'boardpowerg',
+				'boardpowerh',
+				'boardpowerint',
+				'boardpowerjp',
+				'boardpowerk',
+				'boardpowerout',
+				'boardpowerpol',
+				'boardpowerr9k',
+				'boardpower5',
+				'boardpowers4s',
+				'boardpowersoc',
+				'boardpowersp',
+				'boardpowertrv',
+				'boardpowertv',
+				'boardpowerv',
+				'boardpowervg',
+				'boardpowervp',
+				'boardpowervr',
+				'boardpowerx',
+				'boardpowerz',
+			];
+			const randomAbility = this.sample(boardAbilities);
+
+			if (randomAbility) {
+				const oldAbility = pokemon.setAbility(randomAbility);
+
+				if (oldAbility) {
+					this.add('-ability', pokemon, randomAbility, '[from] move: Board Power (/b/)');
+					return;
+				}
+			}
+
+			return false;
+		},
 		isNonstandard: "Future",
 	},
 	boardpowerc: {
