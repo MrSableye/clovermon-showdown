@@ -125,8 +125,8 @@ export const Scripts: ModdedBattleScriptsData = {
 					if (!target.illusion) this.battle.hint("Since gen 7, Dark is immune to Prankster moves.");
 					this.battle.add('-immune', target);
 					hitResults[i] = move.canContinue || false;
-				} else if (move.pranksterBoosted && pokemon.hasAbility('boardpowers4s') &&
-					!targets[i].isAlly(pokemon) && !target.hasAbility('boardpowers4s')) {
+				} else if (move.pranksterBoosted && pokemon.hasAbility('prankster') &&
+					!targets[i].isAlly(pokemon) && target.hasAbility('boardpowers4s')) {
 					this.battle.debug('s4s prankster immunity');
 					this.battle.add('-immune', target);
 					hitResults[i] = move.canContinue || false;
