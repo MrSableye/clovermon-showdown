@@ -1902,7 +1902,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowerd: {
 		name: "Board Power (/d/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Adds Dark-type. Degenerates. Uses Stockpile on switch-in.",
 	},
 	boardpowerf: {
 		name: "Board Power (/f/)",

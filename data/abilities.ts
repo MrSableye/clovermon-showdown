@@ -5351,6 +5351,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowerd: {
 		name: "Board Power (/d/)",
+		onStart(pokemon) {
+			if (pokemon.addType('Dark')) {
+				this.add('-start', pokemon, 'typeadd', 'Dark', '[from] ability: Board Power (/d/)');
+			}
+			this.actions.useMove('Stockpile', pokemon);
+		},
+		onModifyMove(move) {
+			const ignoredMoves = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'weatherball'];
+			if (move.type === 'Normal' && !ignoredMoves.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
+				move.type = 'Dark';
+			}
+		},
+		onBasePowerPriority: 8,
+		onBasePower(basePower, pokemon, target, move) {
+			const validTypes = ['Dark', 'Normal'];
+			const ignoredMoves = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'weatherball'];
+			if (validTypes.includes(move.type) && !ignoredMoves.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
+				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
 		isNonstandard: "Future",
 	},
 	boardpowerf: {
