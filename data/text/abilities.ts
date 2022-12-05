@@ -1962,7 +1962,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowersp: {
 		name: "Board Power (/sp/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Magic Bounce. +1 Spe on switch-in.",
 	},
 	boardpowertrv: {
 		name: "Board Power (/trv/)",

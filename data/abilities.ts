@@ -5637,6 +5637,34 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowersp: {
 		name: "Board Power (/sp/)",
+		onStart(pokemon) {
+			this.boost({spe: 1}, pokemon);
+		},
+		onTryHitPriority: 1,
+		onTryHit(target, source, move) {
+			if (target === source || move.hasBounced || !move.flags['reflectable']) {
+				return;
+			}
+			const newMove = this.dex.getActiveMove(move.id);
+			newMove.hasBounced = true;
+			newMove.pranksterBoosted = false;
+			this.actions.useMove(newMove, target, source);
+			return null;
+		},
+		onAllyTryHitSide(target, source, move) {
+			if (target.isAlly(source) || move.hasBounced || !move.flags['reflectable']) {
+				return;
+			}
+			const newMove = this.dex.getActiveMove(move.id);
+			newMove.hasBounced = true;
+			newMove.pranksterBoosted = false;
+			this.actions.useMove(newMove, this.effectState.target, source);
+			return null;
+		},
+		condition: {
+			duration: 1,
+		},
+		isBreakable: true,
 		isNonstandard: "Future",
 	},
 	boardpowertrv: {
