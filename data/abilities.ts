@@ -5489,6 +5489,31 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowerh: {
 		name: "Board Power (/h/)",
+		onStart(pokemon) {
+			if (pokemon.addType('Fire')) {
+				this.add('-start', pokemon, 'typeadd', 'Fire', '[from] ability: Board Power (/h/)');
+			}
+			pokemon.abilityState.irresistable = true;
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+				if (this.randomChance(3, 10)) {
+					source.addVolatile('attract', this.effectState.target);
+				}
+			}
+		},
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.volatileStatus === 'attract') return;
+				}
+				move.secondaries.push({
+					chance: 33,
+					volatileStatus: 'attract',
+				});
+			}
+		},
 		isNonstandard: "Future",
 	},
 	boardpowerint: {

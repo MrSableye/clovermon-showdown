@@ -1922,7 +1922,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowerh: {
 		name: "Board Power (/h/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Adds Fire-type. Gender-neutral Cute Charm. Attract works on any gender. 1/3 chance to attract on hit.",
 	},
 	boardpowerint: {
 		name: "Board Power (/int/)",
