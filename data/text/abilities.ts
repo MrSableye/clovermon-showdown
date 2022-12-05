@@ -1974,7 +1974,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowerv: {
 		name: "Board Power (/v/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Gorilla Tactics. Anger Point. +1 Atk when hit.",
 	},
 	boardpowervg: {
 		name: "Board Power (/vg/)",
