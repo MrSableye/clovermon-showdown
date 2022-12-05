@@ -4896,11 +4896,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(1.5);
 			}
 		},
-		onStart(pokemon) {
-			if (pokemon.side.removeSideCondition('toxicspikes')) {
-				this.add('-sideend', pokemon.side, this.dex.conditions.get('toxicspikes').name, '[from] ability: Pozzed', '[of] ' + pokemon);
-			}
-		},
 		rating: 3.5,
 		isNonstandard: "Future",
 	},
