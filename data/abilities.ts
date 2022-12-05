@@ -5591,6 +5591,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowerr9k: {
 		name: "Board Power (/r9k/)",
+		onStart() {
+			for (const activePokemon of this.getAllActive()) {
+				activePokemon.addVolatile('torment');
+			}
+		},
 		isNonstandard: "Future",
 	},
 	boardpower5: {
