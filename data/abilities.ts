@@ -5454,8 +5454,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			pokemon.setAbility(ability);
 
 			// Copy Types
+			const newBaseTypes = target.getTypes(true);
 			this.add('-start', pokemon, 'typechange', '[from] ability: Board Power (/fa/)', '[of] ' + target);
-			pokemon.setType(target.types);
+			pokemon.setType(newBaseTypes);
 
 			// Copy Boosts
 			let i: BoostID;
