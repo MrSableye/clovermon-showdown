@@ -5686,6 +5686,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowertv: {
 		name: "Board Power (/tv/)",
+		onStart(pokemon) {
+			if (pokemon.addType('Ground')) {
+				this.add('-start', pokemon, 'typeadd', 'Ground', '[from] ability: Board Power (/k/)');
+			}
+			this.field.addPseudoWeather('gravity');
+		},
 		isNonstandard: "Future",
 	},
 	boardpowerv: {

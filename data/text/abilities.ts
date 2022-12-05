@@ -1970,7 +1970,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowertv: {
 		name: "Board Power (/tv/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Adds Ground-type. Sets Gravity on switch-in.",
 	},
 	boardpowerv: {
 		name: "Board Power (/v/)",
