@@ -5928,8 +5928,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (activePokemon === pokemon) continue;
 				if (activePokemon.isSemiInvulnerable()) continue;
 				if (activePokemon.volatiles['substitute']) continue;
-				activePokemon.addType('Ghost');
-				this.add('-start', pokemon, 'typeadd', 'Ghost', '[from] ability: Board Power (/x/)');
+				this.add('-start', activePokemon, 'typechange', '[from] ability: Board Power (/x/)');
+				activePokemon.setType('Ghost');
 			}
 		},
 		isNonstandard: "Future",
