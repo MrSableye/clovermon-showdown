@@ -5079,6 +5079,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			for (const pokemon of this.getAllActive()) {
 				this.add('-ability', pokemon, 'Stench', '[from] ability: Stink Bomb', '[of] ' + source);
 				pokemon.setAbility('stench');
+				pokemon.addVolatile('stinkbomb');
 			}
 		},
 		isNonstandard: "Future",
