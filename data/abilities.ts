@@ -5735,7 +5735,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/tv/)",
 		onStart(pokemon) {
 			if (pokemon.addType('Ground')) {
-				this.add('-start', pokemon, 'typeadd', 'Ground', '[from] ability: Board Power (/k/)');
+				this.add('-start', pokemon, 'typeadd', 'Ground', '[from] ability: Board Power (/tv/)');
 			}
 			this.field.addPseudoWeather('gravity');
 		},
@@ -5747,6 +5747,32 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowervg: {
 		name: "Board Power (/vg/)",
+		onStart(pokemon) {
+			if (pokemon.addType('Dragon')) {
+				this.add('-start', pokemon, 'typeadd', 'Dragon', '[from] ability: Board Power (/vg/)');
+			}
+		},
+		onAfterMove(source, target, move) {
+			if (!this.effectState.repetition) {
+				this.effectState.repetition = { moveId: move.id, times: 1 };
+			} else {
+				if (this.effectState.repetition.moveId === move.id) {
+					this.effectState.repetition.times++;
+				} else {
+					this.effectState.repetition = { moveId: move.id, times: 1 };
+				}
+			}
+		},
+		onModifyMovePriority: -6969,
+		onModifyMove(move) {
+			if (move.category === 'Status') return;
+			if (!this.effectState.repetition) return;
+
+			const { moveId, times } = this.effectState.repetition;
+
+			if (moveId !== move.id) return;
+			move.basePower = Math.min(160, move.basePower * Math.pow(1.2, times));
+		},
 		isNonstandard: "Future",
 	},
 	boardpowervp: {

@@ -1978,7 +1978,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowervg: {
 		name: "Board Power (/vg/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Adds Dragon-type. Repeated attacks get 20% BP boosted up to 160 BP.",
 	},
 	boardpowervp: {
 		name: "Board Power (/vp/)",
