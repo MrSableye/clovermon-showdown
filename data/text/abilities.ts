@@ -1934,7 +1934,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowerk: {
 		name: "Board Power (/k/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Adds Steel-type. Bulletproof. +1 Def and +SpD on switch-in.",
 	},
 	boardpowerout: {
 		name: "Board Power (/out/)",

@@ -5532,6 +5532,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowerk: {
 		name: "Board Power (/k/)",
+		onStart(pokemon) {
+			if (pokemon.addType('Steel')) {
+				this.add('-start', pokemon, 'typeadd', 'Steel', '[from] ability: Board Power (/k/)');
+			}
+			this.boost({def: 1, spd: 1}, pokemon);
+		},
+		onTryHit(pokemon, target, move) {
+			if (move.flags['bullet']) {
+				this.add('-immune', pokemon, '[from] ability: Board Power (/k/)');
+				return null;
+			}
+		},
 		isNonstandard: "Future",
 	},
 	boardpowerout: {
