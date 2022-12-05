@@ -1990,7 +1990,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowerx: {
 		name: "Board Power (/x/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Adds Ghost-type. Turns all other mons into pure Ghost-types.",
 	},
 	boardpowerz: {
 		name: "Board Power (/z/)",

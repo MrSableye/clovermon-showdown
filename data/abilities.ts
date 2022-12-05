@@ -5814,6 +5814,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowerx: {
 		name: "Board Power (/x/)",
+		onStart(pokemon) {
+			if (pokemon.addType('Ghost')) {
+				this.add('-start', pokemon, 'typeadd', 'Ghost', '[from] ability: Board Power (/x/)');
+			}
+			for (const activePokemon of this.getAllActive()) {
+				if (activePokemon === pokemon) continue;
+				if (activePokemon.isSemiInvulnerable()) continue;
+				if (activePokemon.volatiles['substitute']) continue;
+				activePokemon.addType('Ghost');
+				this.add('-start', pokemon, 'typeadd', 'Ghost', '[from] ability: Board Power (/x/)');
+			}
+		},
 		isNonstandard: "Future",
 	},
 	boardpowerz: {
