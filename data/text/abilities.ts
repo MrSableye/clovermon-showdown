@@ -1954,7 +1954,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowers4s: {
 		name: "Board Power (/s4s/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "+1 priority to status moves. Immune to Prankster.",
 	},
 	boardpowersoc: {
 		name: "Board Power (/soc/)",

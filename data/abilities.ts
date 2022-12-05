@@ -5695,6 +5695,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowers4s: {
 		name: "Board Power (/s4s/)",
+		onImmunity(type) {
+			if (type === 'prankster') return false;
+		},
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.category === 'Status') {
+				move.pranksterBoosted = true;
+				return priority + 1;
+			}
+		},
 		isNonstandard: "Future",
 	},
 	boardpowersoc: {
