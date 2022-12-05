@@ -1926,7 +1926,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowerint: {
 		name: "Board Power (/int/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Adaptability. Sets Psychic Terrain on switch-in.",
 	},
 	boardpowerjp: {
 		name: "Board Power (/jp/)",

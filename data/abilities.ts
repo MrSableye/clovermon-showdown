@@ -5518,6 +5518,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowerint: {
 		name: "Board Power (/int/)",
+		onStart() {
+			this.field.setTerrain('psychicterrain');
+		},
+		onModifyMove(move) {
+			move.stab = 2;
+		},
 		isNonstandard: "Future",
 	},
 	boardpowerjp: {
