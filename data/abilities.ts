@@ -5390,6 +5390,80 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowerfa: {
 		name: "Board Power (/fa/)",
+		onStart(pokemon) {
+			if (!pokemon.isStarted || this.effectState.gaveUp) return;
+
+			const additionalBannedAbilities = [
+				// Zen Mode included here for compatability with Gen 5-6
+				'noability',
+				'flowergift',
+				'forecast',
+				'hungerswitch',
+				'illusion',
+				'imposter',
+				'neutralizinggas',
+				'powerofalchemy',
+				'receiver',
+				'trace',
+				'zenmode',
+				'presage',
+				'artificial',
+				'wonderguard',
+				'anyability',
+				'comatose',
+				'flowergift',
+				'boardpowera',
+				'boardpowerb',
+				'boardpowerc',
+				'boardpowerco',
+				'boardpowerd',
+				'boardpowerf',
+				'boardpowerfa',
+				'boardpowerfit',
+				'boardpowerg',
+				'boardpowerh',
+				'boardpowerint',
+				'boardpowerjp',
+				'boardpowerk',
+				'boardpowerout',
+				'boardpowerpol',
+				'boardpowerr9k',
+				'boardpower5',
+				'boardpowers4s',
+				'boardpowersoc',
+				'boardpowersp',
+				'boardpowertrv',
+				'boardpowertv',
+				'boardpowerv',
+				'boardpowervg',
+				'boardpowervp',
+				'boardpowervr',
+				'boardpowerx',
+				'boardpowerz',
+			];
+			const possibleTargets = pokemon.adjacentFoes().filter(target => (
+				!target.getAbility().isPermanent && !additionalBannedAbilities.includes(target.ability)
+			));
+			if (!possibleTargets.length) return;
+
+			const target = this.sample(possibleTargets);
+
+			// Copy Ability
+			const ability = target.getAbility();
+			this.add('-ability', pokemon, ability, '[from] ability: Board Power (/fa/)', '[of] ' + target);
+			pokemon.setAbility(ability);
+
+			// Copy Types
+			this.add('-start', pokemon, 'typechange', '[from] ability: Board Power (/fa/)', '[of] ' + target);
+			pokemon.setType(target.types);
+
+			// Copy Boosts
+			let i: BoostID;
+			for (i in target.boosts) {
+				pokemon.boosts[i] = target.boosts[i];
+			}
+			this.add('-copyboost', pokemon, target, '[from] ability: Board Power (/fa/)');
+		},
 		isNonstandard: "Future",
 	},
 	boardpowerfit: {

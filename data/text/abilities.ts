@@ -1910,7 +1910,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowerfa: {
 		name: "Board Power (/fa/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Copies opponent's typing, ability, and boosts.",
 	},
 	boardpowerfit: {
 		name: "Board Power (/fit/)",
