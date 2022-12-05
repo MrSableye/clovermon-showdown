@@ -32,8 +32,6 @@ Ratings and how they work:
 
 */
 
-import { Pokemon } from "../sim";
-
 export const Abilities: {[abilityid: string]: AbilityData} = {
 	noability: {
 		isNonstandard: "Past",
