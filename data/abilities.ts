@@ -5380,10 +5380,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart() {
 			this.field.addPseudoWeather('inverseroom');
 		},
-		onBasePowerPriority: -6969,
-		onBasePower(basePower, pokemon, target, move) {
+		onModifyMovePriority: -6969,
+		onModifyMove(move) {
 			if (move.id === 'flash') {
-				return 90;
+				move.basePower = 90;
 			}
 		},
 		isNonstandard: "Future",
