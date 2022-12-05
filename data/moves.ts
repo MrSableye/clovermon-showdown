@@ -11816,6 +11816,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			} else if (this.field.isTerrain('psychicterrain')) {
 				move = 'psychic';
 			}
+			const fullMove = this.dex.getActiveMove(move);
+			fullMove.flags = { ...fullMove.flags, naturePower: true };
 			this.actions.useMove(move, pokemon, target);
 			return null;
 		},
