@@ -1958,7 +1958,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowersoc: {
 		name: "Board Power (/soc/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Frisk. Friend Guard. Poison Absorb (like Water Absorb). Poison-type moves have 1.5x power.",
 	},
 	boardpowersp: {
 		name: "Board Power (/sp/)",

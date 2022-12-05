@@ -5608,6 +5608,31 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowersoc: {
 		name: "Board Power (/soc/)",
+		onStart(pokemon) {
+			for (const target of pokemon.foes()) {
+				if (target.item) {
+					this.add('-item', target, target.getItem().name, '[from] ability: Board Power (/soc/)', '[of] ' + pokemon, '[identify]');
+				}
+			}
+		},
+		onAnyModifyDamage(damage, source, target, move) {
+			if (target !== this.effectState.target && target.isAlly(this.effectState.target)) {
+				this.debug('Board Power (/soc/) weaken');
+				return this.chainModify(0.75);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Poison') {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Board Power (/soc/)');
+				}
+				return null;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.type === 'Poison') return this.chainModify(1.5);
+		},
 		isNonstandard: "Future",
 	},
 	boardpowersp: {
