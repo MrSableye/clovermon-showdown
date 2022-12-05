@@ -1982,7 +1982,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowervp: {
 		name: "Board Power (/vp/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Poison Heal. Puppeteer. Bug Absorb (like Water Absorb).",
 	},
 	boardpowervr: {
 		name: "Board Power (/vr/)",
