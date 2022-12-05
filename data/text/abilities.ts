@@ -1942,7 +1942,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowerpol: {
 		name: "Board Power (/pol/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Stakeout. Analytic. Psychic-type moves hit Dark-types.",
 	},
 	boardpowerr9k: {
 		name: "Board Power (/r9k/)",

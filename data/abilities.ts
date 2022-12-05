@@ -5552,6 +5552,41 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowerpol: {
 		name: "Board Power (/pol/)",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender) {
+			if (!defender.activeTurns) {
+				this.debug('Board Power (/pol/) boost');
+				return this.chainModify(2);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender) {
+			if (!defender.activeTurns) {
+				this.debug('Board Power (/pol/) boost');
+				return this.chainModify(2);
+			}
+		},
+		onBasePowerPriority: 21,
+		onBasePower(basePower, pokemon) {
+			let boosted = true;
+			for (const target of this.getAllActive()) {
+				if (target === pokemon) continue;
+				if (this.queue.willMove(target)) {
+					boosted = false;
+					break;
+				}
+			}
+			if (boosted) {
+				this.debug('Board Power (/pol/) boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true && move.type === 'Psychic') {
+				move.ignoreImmunity['Dark'] = true;
+			}
+		},
 		isNonstandard: "Future",
 	},
 	boardpowerr9k: {
