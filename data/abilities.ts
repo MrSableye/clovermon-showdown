@@ -5669,6 +5669,19 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowertrv: {
 		name: "Board Power (/trv/)",
+		onModifySpe(spe, pokemon) {
+			if (pokemon.effectiveWeather().length) {
+				return this.chainModify(2);
+			}
+		},
+		onModifyMovePriority: -6969,
+		onModifyMove(move, pokemon) {
+			if (pokemon.effectiveWeather().length) {
+				if (move.id === 'weatherball') {
+					move.basePower = 150;
+				}
+			}
+		},
 		isNonstandard: "Future",
 	},
 	boardpowertv: {

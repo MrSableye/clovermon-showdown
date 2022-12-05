@@ -1966,7 +1966,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowertrv: {
 		name: "Board Power (/trv/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "2x Spe in weather. 150 BP Weather Ball in weather.",
 	},
 	boardpowertv: {
 		name: "Board Power (/tv/)",
