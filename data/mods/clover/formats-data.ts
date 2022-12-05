@@ -4678,7 +4678,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	notridley: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"dragondance",
@@ -4688,7 +4688,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"extremespeed",
 			"outrage",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 72,
 	},
 	demiwaifu: {
 		inherit: true,
