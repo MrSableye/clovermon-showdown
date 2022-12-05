@@ -32,6 +32,8 @@ Ratings and how they work:
 
 */
 
+import { Pokemon } from "../sim";
+
 export const Abilities: {[abilityid: string]: AbilityData} = {
 	noability: {
 		isNonstandard: "Past",
@@ -5253,6 +5255,49 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowera: {
 		name: "Board Power (/a/)",
+		onTryHit(pokemon, target, move) {
+			if (move.ohko) {
+				this.add('-immune', pokemon, '[from] ability: Board Power (/a/)');
+				return null;
+			}
+		},
+		onDamagePriority: -30,
+		onDamage(damage, target, source, effect) {
+			if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move') {
+				this.add('-ability', target, 'Board Power (/a/)');
+				return target.hp - 1;
+			}
+		},
+		onStart(pokemon) {
+			if (pokemon.side.pokemonLeft === 1) {
+				this.boost({
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				});
+				pokemon.abilityState.anime = true;
+			}
+		},
+		onBoost(boost, target, source, effect) {
+			if (!target?.abilityState?.anime) return;
+			if (source && target === source) return;
+			let showMsg = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost[i]! < 0) {
+					delete boost[i];
+					showMsg = true;
+				}
+			}
+			if (showMsg && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
+				this.add("-fail", target, "unboost", "[from] ability: Board Power (/a/)", "[of] " + target);
+			}
+		},
+		isBreakable: true,
+		rating: 3,
+		num: 5,
 		isNonstandard: "Future",
 	},
 	boardpowerb: {

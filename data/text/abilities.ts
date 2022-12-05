@@ -1886,7 +1886,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowera: {
 		name: "Board Power (/a/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Sturdy. Omniboost + Clear Body on switch-in if the last unfainted Pokemon.",
 	},
 	boardpowerb: {
 		name: "Board Power (/b/)",
