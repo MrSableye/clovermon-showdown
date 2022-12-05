@@ -5754,12 +5754,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onAfterMove(source, target, move) {
 			if (!this.effectState.repetition) {
-				this.effectState.repetition = { moveId: move.id, times: 1 };
+				this.effectState.repetition = {moveId: move.id, times: 1};
 			} else {
 				if (this.effectState.repetition.moveId === move.id) {
 					this.effectState.repetition.times++;
 				} else {
-					this.effectState.repetition = { moveId: move.id, times: 1 };
+					this.effectState.repetition = {moveId: move.id, times: 1};
 				}
 			}
 		},
@@ -5768,7 +5768,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.category === 'Status') return;
 			if (!this.effectState.repetition) return;
 
-			const { moveId, times } = this.effectState.repetition;
+			const {moveId, times} = this.effectState.repetition;
 
 			if (moveId !== move.id) return;
 			move.basePower = Math.min(160, move.basePower * Math.pow(1.2, times));
