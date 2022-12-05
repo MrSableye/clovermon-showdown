@@ -5330,6 +5330,25 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowerco: {
 		name: "Board Power (/co/)",
+		onDamage(damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
+				return false;
+			}
+		},
+		onModifyDef(def, pokemon) {
+			if (pokemon.status) {
+				return this.chainModify(1.5);
+			}
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (move.type === 'Dark') {
+				this.boost({atk: 1});
+			}
+		},
+		onEffectiveness(typeMod, target, type, move) {
+			if (type === 'Dark') return 2;
+		},
 		isNonstandard: "Future",
 	},
 	boardpowerd: {

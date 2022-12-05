@@ -1898,7 +1898,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowerco: {
 		name: "Board Power (/co/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Magic Guard + Marvel Scale + Justified + Resists Dark.",
 	},
 	boardpowerd: {
 		name: "Board Power (/d/)",
