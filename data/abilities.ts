@@ -5494,7 +5494,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
 			// Copy Types
 			const newBaseTypes = target.getTypes(true);
-			this.add('-start', pokemon, 'typechange', '[from] ability: Board Power (/fa/)', '[of] ' + target);
+			this.add('-start', pokemon, 'typechange', newBaseTypes.join('/'), '[from] ability: Board Power (/fa/)', '[of] ' + target);
 			pokemon.setType(newBaseTypes);
 
 			// Copy Boosts
@@ -5928,7 +5928,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (activePokemon === pokemon) continue;
 				if (activePokemon.isSemiInvulnerable()) continue;
 				if (activePokemon.volatiles['substitute']) continue;
-				this.add('-start', activePokemon, 'typechange', '[from] ability: Board Power (/x/)');
+				this.add('-start', activePokemon, 'typechange', 'Ghost', '[from] ability: Board Power (/x/)');
 				activePokemon.setType('Ghost');
 			}
 		},
@@ -5937,7 +5937,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerz: {
 		name: "Board Power (/z/)",
 		onStart(pokemon) {
-			this.add('-start', pokemon, 'typechange', '[from] ability: Board Power (/z/)');
+			this.add('-start', pokemon, 'typechange', '???', '[from] ability: Board Power (/z/)');
 			pokemon.setType('???');
 		},
 		onModifySecondaries(secondaries) {
