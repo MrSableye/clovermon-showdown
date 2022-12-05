@@ -1894,7 +1894,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowerc: {
 		name: "Board Power (/c/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Adds Fairy-type. Fairy Aura. Gender-neutral Cute Charm. Attract works on any gender.",
 	},
 	boardpowerco: {
 		name: "Board Power (/co/)",

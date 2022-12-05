@@ -5306,6 +5306,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowerc: {
 		name: "Board Power (/c/)",
+		onStart(pokemon) {
+			if (pokemon.addType('Fairy')) {
+				this.add('-start', pokemon, 'typeadd', 'Fairy', '[from] ability: Board Power (/c/)');
+			}
+			pokemon.abilityState.irresistable = true;
+		},
+		onAnyBasePowerPriority: 20,
+		onAnyBasePower(basePower, source, target, move) {
+			if (target === source || move.category === 'Status' || move.type !== 'Fairy') return;
+			if (!move.auraBooster) move.auraBooster = this.effectState.target;
+			if (move.auraBooster !== this.effectState.target) return;
+			return this.chainModify([move.hasAuraBreak ? 3072 : 5448, 4096]);
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+				if (this.randomChance(3, 10)) {
+					source.addVolatile('attract', this.effectState.target);
+				}
+			}
+		},
 		isNonstandard: "Future",
 	},
 	boardpowerco: {
