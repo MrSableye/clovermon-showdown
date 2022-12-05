@@ -1986,7 +1986,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowervr: {
 		name: "Board Power (/vr/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Sets Magic Room and sppresses all other abilities other than Comatose and Board Power on switch-in.",
 	},
 	boardpowerx: {
 		name: "Board Power (/x/)",

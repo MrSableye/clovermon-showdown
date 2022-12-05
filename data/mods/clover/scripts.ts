@@ -118,16 +118,20 @@ export const Scripts: ModdedBattleScriptsData = {
 			const genwunRoom = this.battle.field.pseudoWeather['genwunroom'];
 			for (const pokemon of this.battle.getAllActive()) {
 				// can't use hasAbility because it would lead to infinite recursion
-				if (pokemon.ability === ('neutralizinggas' as ID) && !pokemon.volatiles['gastroacid'] &&
+				if (pokemon.ability === ('neutralizinggas' as ID) && !pokemon.volatiles['gastroacid'] && !pokemon.volatiles['retro'] &&
 					!pokemon.transformed && !pokemon.abilityState.ending) {
 					neutralizinggas = true;
 					break;
 				}
 			}
 
+			const retroSuppression = this.volatiles['retro'] &&
+			!(this.ability !== ('comatose' as ID)) && !this.ability.startsWith('boardpower');
+
 			return !!(
 				(this.battle.gen >= 5 && !this.isActive) ||
-				((this.volatiles['gastroacid'] || (neutralizinggas && this.ability !== ('neutralizinggas' as ID)) || genwunRoom) &&
+				((this.volatiles['gastroacid'] ||
+				(neutralizinggas && this.ability !== ('neutralizinggas' as ID)) || genwunRoom || retroSuppression) &&
 				!this.getAbility().isPermanent
 				)
 			);

@@ -5917,6 +5917,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowervr: {
 		name: "Board Power (/vr/)",
+		onStart(source) {
+			for (const pokemon of this.getAllActive()) {
+				if (pokemon === source) continue;
+				pokemon.addVolatile('retro');
+			}
+			this.field.addPseudoWeather('magicroom');
+		},
 		isNonstandard: "Future",
 	},
 	boardpowerx: {
