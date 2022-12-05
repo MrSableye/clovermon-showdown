@@ -1950,7 +1950,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpower5: {
 		name: "Board Power (/5/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Wait For It. Skill Link.",
 	},
 	boardpowers4s: {
 		name: "Board Power (/s4s/)",

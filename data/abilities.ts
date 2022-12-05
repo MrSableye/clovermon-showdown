@@ -5600,6 +5600,37 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpower5: {
 		name: "Board Power (/5/)",
+		onModifyMove(move) {
+			if (move.multihit && Array.isArray(move.multihit) && move.multihit.length) {
+				move.multihit = move.multihit[1];
+			}
+			if (move.multiaccuracy) {
+				delete move.multiaccuracy;
+			}
+		},
+		onStart(pokemon) {
+			pokemon.addVolatile('boardpower5');
+		},
+		onEnd(pokemon) {
+			delete pokemon.volatiles['boardpower5'];
+			this.add('-end', pokemon, 'Board Power (/5/)', '[silent]');
+		},
+		condition: {
+			duration: 5,
+			onStart(target) {
+				this.add('-start', target, 'ability: Board Power (/5/)');
+			},
+			onEnd(target) {
+				this.boost({
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				});
+				this.add('-end', target, 'Board Power (/5/)');
+			},
+		},
 		isNonstandard: "Future",
 	},
 	boardpowers4s: {
