@@ -242,7 +242,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onResidual(pokemon) {
 			if (!pokemon.hp) return;
 			for (const target of pokemon.foes()) {
-				if (target.status === 'slp' || target.hasAbility('comatose') || target.hasAbility('lethargic')) {
+				if (target.status === 'slp' || target.hasAbility('comatose') || target.hasAbility('lethargic') || target.hasAbility('boardpowerz')) {
 					this.damage(target.baseMaxhp / 8, target, pokemon);
 				}
 			}
@@ -5831,6 +5831,33 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowerz: {
 		name: "Board Power (/z/)",
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'typechange', '[from] ability: Board Power (/z/)');
+			pokemon.setType('???');
+		},
+		onModifySecondaries(secondaries) {
+			this.debug('Board Power (/z/) prevent secondary');
+			return secondaries.filter(effect => !!(effect.self || effect.dustproof));
+		},
+		onBoost(boost, target, source, effect) {
+			if (source && target === source) return;
+			if (boost.accuracy && boost.accuracy < 0) {
+				delete boost.accuracy;
+				if (!(effect as ActiveMove).secondaries) {
+					this.add("-fail", target, "unboost", "accuracy", "[from] ability: Board Power (/z/)", "[of] " + target);
+				}
+			}
+		},
+		onModifyMove(move) {
+			move.ignoreEvasion = true;
+		},
+		onSetStatus(status, target, source, effect) {
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: Board Power (/z/)');
+			}
+			return false; // TODO: Remove Comatose checks from base mod
+		},
+		onCriticalHit: false,
 		isNonstandard: "Future",
 	},
 	presage: {

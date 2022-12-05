@@ -1994,7 +1994,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowerz: {
 		name: "Board Power (/z/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Becomes pure ???-type. Shield Dust. Keen Eye. Comatose. Shell Armor.",
 	},
 	presage: {
 		name: "Presage",
