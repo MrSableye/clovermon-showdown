@@ -11817,7 +11817,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'psychic';
 			}
 			const fullMove = this.dex.getActiveMove(move);
-			fullMove.flags = { ...fullMove.flags, naturePower: true };
+			fullMove.flags = {...fullMove.flags, naturePower: true};
 			this.actions.useMove(move, pokemon, target);
 			return null;
 		},
@@ -11910,7 +11910,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			noCopy: true,
 			onStart(pokemon) {
-				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose') && !pokemon.hasAbility('lethargic') && !pokemon.hasAbility('boardpowerz')) {
+				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose') &&
+				!pokemon.hasAbility('lethargic') && !pokemon.hasAbility('boardpowerz')) {
 					return false;
 				}
 				this.add('-start', pokemon, 'Nightmare');
@@ -19021,7 +19022,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 70,
 		basePowerCallback(pokemon, target, move) {
-			if (target.status === 'slp' || target.hasAbility('comatose') || target.hasAbility('boardpowerz')) return move.basePower * 2;
+			if (target.status === 'slp' || target.hasAbility('comatose') ||
+			target.hasAbility('boardpowerz')) return move.basePower * 2;
 			return move.basePower;
 		},
 		category: "Physical",
