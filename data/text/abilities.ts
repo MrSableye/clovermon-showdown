@@ -1906,7 +1906,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowerf: {
 		name: "Board Power (/f/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Sets Inverse Room. Flash BP = 90.",
 	},
 	boardpowerfa: {
 		name: "Board Power (/fa/)",

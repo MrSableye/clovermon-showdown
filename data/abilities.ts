@@ -5375,6 +5375,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	boardpowerf: {
 		name: "Board Power (/f/)",
+		onStart() {
+			this.field.addPseudoWeather('inverseroom');
+		},
+		onBasePowerPriority: -6969,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.id === 'flash') {
+				return 90;
+			}
+		},
 		isNonstandard: "Future",
 	},
 	boardpowerfa: {
