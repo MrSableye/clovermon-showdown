@@ -153,7 +153,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			}
 
 			const retroSuppression = this.volatiles['retro'] &&
-			!(this.ability !== ('comatose' as ID)) && !this.ability.startsWith('boardpower');
+			this.ability !== ('comatose' as ID) && !this.ability.startsWith('boardpower');
 
 			return !!(
 				(this.battle.gen >= 5 && !this.isActive) ||
