@@ -5605,7 +5605,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerout: {
 		name: "Board Power (/out/)",
 		onStart() {
-			this.field.setTerrain('grassyerrain');
+			this.field.setTerrain('grassyterrain');
 		},
 		onBasePower(relayVar, source, target, move) {
 			if (move?.flags?.naturePower) return this.chainModify(2);
