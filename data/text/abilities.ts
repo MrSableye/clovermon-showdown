@@ -1930,7 +1930,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpowerjp: {
 		name: "Board Power (/jp/)",
-		shortDesc: "No competitive use (yet).",
+		shortDesc: "Adds Fairy-type. Serene Grace. Treated as female.",
 	},
 	boardpowerk: {
 		name: "Board Power (/k/)",

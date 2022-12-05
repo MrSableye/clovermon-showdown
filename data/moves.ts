@@ -657,8 +657,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			noCopy: true, // doesn't get copied by Baton Pass
 			onStart(pokemon, source, effect) {
-				if (!source?.abilityState?.irresistable &&
-					!(pokemon.gender === 'M' && source.gender === 'F') && !(pokemon.gender === 'F' && source.gender === 'M')) {
+				const isMale = (query: Pokemon) => query.gender === 'M';
+				const isFemale = (query: Pokemon) => query.gender === 'F' || query.getAbility().id === 'boardpowerjp';
+				const hasGender = (query: Pokemon) => isMale(query) || isFemale(query);
+				if (!(source?.abilityState?.irresistable && hasGender(pokemon)) &&
+					!(isMale(pokemon) && isFemale(source)) && !(isFemale(pokemon) && isMale(source))) {
 					this.debug('incompatible gender');
 					return false;
 				}
