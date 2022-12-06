@@ -7740,7 +7740,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			let success = false;
 			const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
 			for (const ally of allies) {
-				if (ally !== source && ally.hasAbility('soundproof')) continue;
+				if (ally !== source && ally.hasAbility(['soundproof', 'cacophony'])) continue;
 				if (ally.cureStatus()) success = true;
 			}
 			return success;
@@ -24566,7 +24566,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			let success = false;
 			const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
 			for (const ally of allies) {
-				if (ally !== source && ally.hasAbility('soundproof')) continue;
+				if (ally !== source && ally.hasAbility(['soundproof', 'cacophony'])) continue;
 				if (ally.cureStatus()) success = true;
 			}
 			return success;

@@ -4659,7 +4659,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const targets = this.sides.flatMap((side) => side.allies(true));
 			for (const target of targets) {
 				if (!target || !target.hp || pokemon === target) continue;
-				if (!target.hasAbility('soundproof')) {
+				if (!target.hasAbility(['soundproof', 'cacophony'])) {
 					this.damage(target.baseMaxhp / 16, target, pokemon);
 				}
 			}
@@ -6035,6 +6035,24 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
+		isNonstandard: "Future",
+	},
+	cacophony: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.flags['sound']) {
+				this.add('-immune', target, '[from] ability: Cacophony');
+				return null;
+			}
+		},
+		onAllyTryHitSide(target, source, move) {
+			if (move.flags['sound']) {
+				this.add('-immune', this.effectState.target, '[from] ability: Cacophony');
+			}
+		},
+		isBreakable: true,
+		name: "Cacophony",
+		rating: 1.5,
+		num: 43,
 		isNonstandard: "Future",
 	},
 	/* Clover CAP Abilities */

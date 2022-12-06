@@ -584,4 +584,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	cacophony: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

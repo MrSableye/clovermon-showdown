@@ -2001,6 +2001,16 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Changes weather when using certain moves relating to weather.",
 		shortDesc: "Changes weather to benefit certain moves.",
 	},
+	cacophony: {
+		name: "Cacophony",
+		shortDesc: "This Pokemon is immune to sound-based moves, including Heal Bell.",
+		gen5: {
+			shortDesc: "This Pokemon is immune to sound-based moves, except Heal Bell.",
+		},
+		gen4: {
+			shortDesc: "This Pokemon is immune to sound-based moves, including Heal Bell.",
+		},
+	},
 	/* Clover CAP Abilities */
 	cakeveil: {
 		name: "Cake Veil",
