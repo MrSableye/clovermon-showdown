@@ -364,20 +364,24 @@ export const Formats: FormatList = [
 		onModifySpecies(species, target, source) {
 			if (source || !target?.side) return;
 			const god = target.side.team.find(set => {
-				let godSpecies = this.dex.species.get(set.species);
-				const isNatDex = this.format.ruleTable?.has('standardnatdex');
-				const validator = this.dex.formats.getRuleTable(
-					this.dex.formats.get(`gen${isNatDex && this.gen < 8 ? 8 : this.gen}${isNatDex ? 'nationaldex' : 'ou'}`)
-				);
-				if (this.toID(set.ability) === 'powerconstruct') {
-					return true;
-				}
-				if (set.item) {
+				let setSpecies = this.dex.species.get(set.species);
+				if (typeof setSpecies.battleOnly === 'string') setSpecies = this.dex.species.get(setSpecies.battleOnly);
+				if (set.item && this.dex.items.get(set.item).megaStone) {
 					const item = this.dex.items.get(set.item);
-					if (item.megaEvolves === set.species) godSpecies = this.dex.species.get(item.megaStone);
+					if (item.megaEvolves === setSpecies.baseSpecies) {
+						setSpecies = this.dex.species.get(item.megaStone);
+					}
 				}
-				const isBanned = validator.isBannedSpecies(godSpecies);
-				return isBanned;
+				if (this.ruleTable.has('standardnatdex')) {
+					const format = this.dex.formats.getRuleTable(this.dex.formats.get('gen8nationaldex'));
+					if (format.isBannedSpecies(setSpecies)) return true;
+				} else {
+					if (['ag', 'uber'].includes(this.toID(setSpecies.tier)) || this.toID(set.ability) === 'powerconstruct') {
+						return true;
+					}
+				}
+
+				return false;
 			}) || target.side.team[0];
 			const stat = Dex.stats.ids()[target.side.team.indexOf(target.set)];
 			const newSpecies = this.dex.deepClone(species);
