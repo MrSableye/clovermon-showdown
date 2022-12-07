@@ -616,7 +616,7 @@ export class BattleActions {
 		const hitResults = [];
 		for (const i of targets.keys()) {
 			hitResults[i] = (move.ignoreImmunity && (move.ignoreImmunity === true || move.ignoreImmunity[move.type])) ||
-				targets[i].runImmunity(move.type, !move.smartTarget);
+				targets[i].runImmunity(move.type, !move.smartTarget && !move.canContinue) || move.canContinue || false;
 			if (move.smartTarget && !hitResults[i]) move.smartTarget = false;
 		}
 
@@ -628,16 +628,16 @@ export class BattleActions {
 			if (this.battle.gen >= 6 && move.flags['powder'] && target !== pokemon && !this.dex.getImmunity('powder', target)) {
 				this.battle.debug('natural powder immunity');
 				this.battle.add('-immune', target);
-				hitResults[i] = false;
+				hitResults[i] = move.canContinue || false;
 			} else if (!this.battle.singleEvent('TryImmunity', move, {}, target, pokemon, move)) {
 				this.battle.add('-immune', target);
-				hitResults[i] = false;
+				hitResults[i] = move.canContinue || false;
 			} else if (this.battle.gen >= 7 && move.pranksterBoosted && pokemon.hasAbility('prankster') &&
 				!targets[i].isAlly(pokemon) && !this.dex.getImmunity('prankster', target)) {
 				this.battle.debug('natural prankster immunity');
 				if (!target.illusion) this.battle.hint("Since gen 7, Dark is immune to Prankster moves.");
 				this.battle.add('-immune', target);
-				hitResults[i] = false;
+				hitResults[i] = move.canContinue || false;
 			} else {
 				hitResults[i] = true;
 			}
@@ -880,7 +880,14 @@ export class BattleActions {
 				accuracy = this.battle.runEvent('ModifyAccuracy', target, pokemon, move, accuracy);
 				if (!move.alwaysHit) {
 					accuracy = this.battle.runEvent('Accuracy', target, pokemon, move, accuracy);
-					if (accuracy !== true && !this.battle.randomChance(accuracy, 100)) break;
+					if (!move.alwaysHit) {
+						accuracy = this.battle.runEvent('Accuracy', target, pokemon, move, accuracy);
+						if (move.canContinue) {
+							if (accuracy !== true && !this.battle.randomChance(accuracy, 100)) continue;
+						} else {
+							if (accuracy !== true && !this.battle.randomChance(accuracy, 100)) break;
+						}
+					}
 				}
 			}
 
@@ -1525,6 +1532,10 @@ export class BattleActions {
 
 		if (!move.ignoreImmunity || (move.ignoreImmunity !== true && !move.ignoreImmunity[move.type])) {
 			if (!target.runImmunity(move.type, !suppressMessages)) {
+				if (move.canContinue) {
+					return undefined;
+				}
+
 				return false;
 			}
 		}

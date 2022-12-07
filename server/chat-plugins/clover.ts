@@ -37,7 +37,8 @@ export const commands: Chat.ChatCommands = {
 			this.runBroadcast();
 			this.sendReplyBox(
 				'<b><u>Usage Stats</u></b><br />' +
-				'<p>Daily usage stats for most Clovermon Showdown formats can be found on our <a href="https://clover.weedl.es/usage/">usage site</a>.</p>'
+				'<p>Daily usage stats for most Clovermon Showdown formats can be found here:</p>' +
+				'<ul><li><a href="https://clover.weedl.es/usage_new/">Fancy Usage Site</a></li><li><a href="https://clover.weedl.es/usage/">Old Plain Usage Site</a></li></ul>'
 			);
 		},
 	},

@@ -2212,6 +2212,18 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	rootchew: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	toofgrew: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	hognaw: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,
@@ -2399,7 +2411,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	blobbosalola: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	blobbosdust: {
 		inherit: true,

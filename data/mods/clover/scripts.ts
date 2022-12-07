@@ -109,6 +109,33 @@ export const Scripts: ModdedBattleScriptsData = {
 			}
 			return null;
 		},
+		hitStepTryImmunity(targets: Pokemon[], pokemon: Pokemon, move: ActiveMove) {
+			const hitResults = [];
+			for (const [i, target] of targets.entries()) {
+				if (this.battle.gen >= 6 && move.flags['powder'] && target !== pokemon && !this.dex.getImmunity('powder', target)) {
+					this.battle.debug('natural powder immunity');
+					this.battle.add('-immune', target);
+					hitResults[i] = move.canContinue || false;
+				} else if (!this.battle.singleEvent('TryImmunity', move, {}, target, pokemon, move)) {
+					this.battle.add('-immune', target);
+					hitResults[i] = move.canContinue || false;
+				} else if (this.battle.gen >= 7 && move.pranksterBoosted && pokemon.hasAbility('prankster') &&
+					!targets[i].isAlly(pokemon) && !this.dex.getImmunity('prankster', target)) {
+					this.battle.debug('natural prankster immunity');
+					if (!target.illusion) this.battle.hint("Since gen 7, Dark is immune to Prankster moves.");
+					this.battle.add('-immune', target);
+					hitResults[i] = move.canContinue || false;
+				} else if (move.pranksterBoosted && pokemon.hasAbility('prankster') &&
+					!targets[i].isAlly(pokemon) && target.hasAbility('boardpowers4s')) {
+					this.battle.debug('s4s prankster immunity');
+					this.battle.add('-immune', target);
+					hitResults[i] = move.canContinue || false;
+				} else {
+					hitResults[i] = true;
+				}
+			}
+			return hitResults;
+		},
 	},
 	pokemon: {
 		inherit: true,
@@ -118,16 +145,20 @@ export const Scripts: ModdedBattleScriptsData = {
 			const genwunRoom = this.battle.field.pseudoWeather['genwunroom'];
 			for (const pokemon of this.battle.getAllActive()) {
 				// can't use hasAbility because it would lead to infinite recursion
-				if (pokemon.ability === ('neutralizinggas' as ID) && !pokemon.volatiles['gastroacid'] &&
+				if (pokemon.ability === ('neutralizinggas' as ID) && !pokemon.volatiles['gastroacid'] && !pokemon.volatiles['retro'] &&
 					!pokemon.transformed && !pokemon.abilityState.ending) {
 					neutralizinggas = true;
 					break;
 				}
 			}
 
+			const retroSuppression = this.volatiles['retro'] &&
+			this.ability !== ('comatose' as ID) && !this.ability.startsWith('boardpower');
+
 			return !!(
 				(this.battle.gen >= 5 && !this.isActive) ||
-				((this.volatiles['gastroacid'] || (neutralizinggas && this.ability !== ('neutralizinggas' as ID)) || genwunRoom) &&
+				((this.volatiles['gastroacid'] ||
+				(neutralizinggas && this.ability !== ('neutralizinggas' as ID)) || genwunRoom || retroSuppression) &&
 				!this.getAbility().isPermanent
 				)
 			);

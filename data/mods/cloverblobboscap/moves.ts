@@ -139,7 +139,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ninjutsu: {
+	bishido: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -316,6 +316,91 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	bloodletting: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	nosedive: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shadowstrike: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shadowban: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	coldcutter: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	terrainpulse: {
+		num: 805,
+		accuracy: 100,
+		basePower: 50,
+		category: "Special",
+		name: "Terrain Pulse",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, pulse: 1},
+		onModifyType(move, pokemon) {
+			if (!pokemon.isGrounded()) return;
+			switch (this.field.terrain) {
+			case 'electricterrain':
+				move.type = 'Electric';
+				break;
+			case 'grassyterrain':
+				move.type = 'Grass';
+				break;
+			case 'mistyterrain':
+				move.type = 'Fairy';
+				break;
+			case 'psychicterrain':
+				move.type = 'Psychic';
+				break;
+			case 'plasticterrain':
+				move.type = 'Plastic';
+				break;
+			}
+		},
+		onModifyMove(move, pokemon) {
+			if (this.field.terrain && pokemon.isGrounded()) {
+				move.basePower *= 2;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		zMove: {basePower: 160},
+		maxMove: {basePower: 130},
+	},
+	present: {
+		inherit: true,
+		onModifyType(move, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Clause') {
+				move.type = 'Ice';
+			} else {
+				move.type = 'Normal';
+			}
+		},
+		onTryHit(target, source, move) {
+			if (source.species.name === 'Blobbos-Clause') {
+				if (source.isAlly(target)) {
+					move.basePower = 0;
+					move.infiltrates = true;
+				}
+				move.basePower = 120;
+			}
+		},
+		onHit(target, source) {
+			if (source.species.name === 'Blobbos-Clause') {
+				if (source.isAlly(target)) {
+					if (!this.heal(Math.floor(target.baseMaxhp * 0.5))) {
+						this.add('-immune', target);
+						return this.NOT_FAIL;
+					}
+				}
+			}
+		},
 	},
 };
 

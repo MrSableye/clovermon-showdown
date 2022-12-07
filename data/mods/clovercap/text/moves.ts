@@ -11,8 +11,8 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	},
 	needlearm: {
 		inherit: true,
-		desc: "Has a 100% chance to set spikes.",
-		shortDesc: "100% chance to set spikes.",
+		desc: "Has a 50% chance to set spikes.",
+		shortDesc: "50% chance to set spikes.",
 	},
 	seedbomb: {
 		inherit: true,

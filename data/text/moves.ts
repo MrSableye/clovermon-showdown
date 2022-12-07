@@ -6858,7 +6858,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	sleazyspores: {
 		name: "Sleazy Spores",
 		shortDesc: "Lowers Speed of foes by 1 on switch-in.",
-		desc: "Sets up a hazard on the opposing side of the field, lowering the Speed by 1 stage of each opposing Pokemon that switches in, unless it is immune to powder moves. Fails if the effect is already active on the opposing side. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin or Defog successfully, is hit by Defog, or a Grass-type Pokemon switches in",
+		desc: "Sets up a hazard on the opposing side of the field, lowering the Speed by 1 stage of each opposing Pokemon that switches in, unless it is immune to powder moves. Fails if the effect is already active on the opposing side. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin or Defog successfully, is hit by Defog",
 		start: "  Sleazy spores float in the air around [TEAM]!",
 		end: "  The sleazy spores disappeared from around [TEAM]!",
 		activate: "  Sleazy spores sedated [POKEMON]!",
@@ -6903,7 +6903,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	warhead: {
 		name: "Warhead",
-		shortDesc: "No additional effect.",
+		desc: "Has a 10% chance to burn the target.",
+		shortDesc: "10% chance to burn the target.",
 	},
 	weirdflex: {
 		name: "Weird Flex",
@@ -6940,8 +6941,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	boltbeam: {
 		name: "Boltbeam",
-		shortDesc: "Combines Ice in its type effectiveness.",
-		desc: "This move combines Ice in its type effectiveness against the target.",
+		shortDesc: "Hits 2 times in one turn. First hit is Electric-type and second is Ice-type.",
 	},
 	checkem: {
 		name: "Check 'Em",
@@ -6982,7 +6982,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	banhammer: {
 		name: "Ban Hammer",
-		shortDesc: "Torments the foe.",
+		shortDesc: "Torments and Taunts the foe.",
 	},
 	homerunbat: {
 		name: "Homerun Bat",
@@ -7008,8 +7008,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	dailydose: {
 		name: "Daily Dose",
-		shortDesc: "30% chance to poison or badly poison or put the target to sleep.",
-		desc: "Has a 30% chance to either poison, badly poison, or inflict sleep on the target.",
+		shortDesc: "25% chance to poison or badly poison or put the target to sleep.",
+		desc: "Has a 25% chance to either poison, badly poison, or inflict sleep on the target.",
 	},
 	decaydrain: {
 		name: "Decay Drain",
@@ -7144,6 +7144,19 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Sudoku",
 		shortDesc: "User faints.",
 		desc: "The user faints.",
+	},
+	slipturn: {
+		name: "Slip Turn",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+		shortDesc: "User switches out after damaging the target.",
+		gen6: {
+			desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button.",
+		},
+		gen4: {
+			desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members.",
+		},
+
+		switchOut: "[POKEMON] went back to [TRAINER]!",
 	},
 	/* Clover CAP */
 	crusadercrash: {
@@ -7577,7 +7590,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	rainbowbeam: {
 		name: "Rainbow Beam",
-		shortDesc: "Taste the rainbow, motherfucker.",
+		shortDesc: "Adds all types into one attack.",
 	},
 	freikugel: {
 		name: "Freikugel",
@@ -7593,7 +7606,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	toxicbeam: {
 		name: "Toxic Beam",
-		shortDesc: "Slight chance to badly poison the foe.",
+		shortDesc: "20% chance to badly poison the foe.",
 	},
 	windwhip: {
 		name: "Wind Whip",
@@ -7756,7 +7769,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	xenobeam: {
 		name: "Xenobeam",
-		shortDesc: "Makes the opponent ??? type",
+		shortDesc: "Makes the opponent ??? type.",
 	},
 	abduction: {
 		name: "Abduction",
@@ -7778,4 +7791,111 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Infectious Wheeze",
 		shortDesc: "If Blobbos-Infected, becomes Poison type, if Blobbos-Zombie, becomes Ghost type.",
 	},
+	nosedive: {
+		name: "Nosedive",
+		shortDesc: "Lowers the user's Defense by 2 stages.",
+	},
+	siphon: {
+		name: "Siphon",
+		desc: "The user recovers 3/4 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 75% of the damage dealt.",
+	},
+	shadowban: {
+		name: "Shadowban",
+		shortDesc: "Taunts the foe; user gets +1 Speed.",
+	},
+	bloodletting: {
+		name: "Bloodletting",
+		shortDesc: "+1 Sp. Atk and +1 Speed for the cost of health.",
+	},
+	flashfreeze: {
+		name: "Flash Freeze",
+		shortDesc: "Usually goes first.",
+	},
+	letssleppforever: {
+		name: "Let's Slepp Forever",
+		shortDesc: "100% chance to make the foe fall asleep.",
+	},
+	energyburst: {
+		name: "Energy Burst",
+		shortDesc: "No additional effect.",
+	},
+	plasticterrain: {
+		name: "Plastic Terrain",
+		desc: "For 5 turns, the terrain becomes Plastic Terrain. During the effect, the power of Plastic-type attacks used by grounded Pokemon is multiplied by 1.3, and items get recycled.",
+		shortDesc: "5 turns. Grounded: +Plastic power, Recycle items",
+	},
+	highjumpsaw: {
+		name: "High Jump Saw",
+		shortDesc: "The user jumps up high, spinning its fists and feet like a buzzsaw",
+	},
+	stingingrage: {
+		name: "Stinging Rage",
+		shortDesc: "The user faints. Causes Toxic",
+	},
+	malicepowder: {
+		name: "Malice Powder",
+		shortDesc: "Confuses everyone",
+	},
+	spectresabre: {
+		name: "Spectre Sabre",
+		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit.",
+		shortDesc: "Hits 2 times in one turn.",
+	},
+	recycleray: {
+		name: "Recycle Ray",
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+	},
+	fadereflection: {
+		name: "Fade Reflection",
+		desc: "Has a 25% chance to disable the target's move",
+		shortDesc: "25% chance to disable.",
+	},
+	plasticblaze: {
+		name: "Plastic Blaze",
+		desc: "Has a 25% chance to burn the target.",
+		shortDesc: "25% chance to burn the target.",
+	},
+	meltedplastic: {
+		name: "Melted Plastic",
+		desc: "Has a 30% chance to burn the target. The target thaws out if it is frozen.",
+		shortDesc: "30% chance to burn the target. Thaws target.",
+	},
+	glassing: {
+		name: "Glassing",
+		shortDesc: "Makes the opponent Glass type.",
+	},
+	bloodshot: {
+		name: "Blood Shot",
+		desc: "Has a 20% chance to either poison, confuse, or paralyze the target.",
+		shortDesc: "20% chance to poison, confuse, or paralyze target.",
+	},
+	overdose: {
+		name: "Overdose",
+		desc: "If the target lost HP, the user takes recoil damage equal to 1/2 the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 1/2 recoil.",
+	},
+	skummray: {
+		name: "Skumm Ray",
+		desc: "Has a 100% chance to either sleep, freeze, flinch, or paralyze the target.",
+		shortDesc: "100% chance to sleep, freeze, flinch, or paralyze target.",
+	},
+	hyperzone: {
+		name: "Hyper Zone",
+		shortDesc: "For 5 turns, Dark types are protected from status, priority, and screens",
+	},
+	freeballoonday: {
+		name: "Free Balloon Day",
+		shortDesc: "Doubles in power if holding a balloon. Recycles balloon if you don't have an item",
+	},
+	helldive: {
+		name: "Hell Dive",
+		shortDesc: "Can't be used twice in a row. Physical if user's Atk > Sp. Atk.",
+	},
+	mushroomshot: {
+		name: "Mushroom Shot",
+		shortDesc: "Doubles in power if opponent partially trapped. During Gravity: 1.5x power.",
+	},
+
 };

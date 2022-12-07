@@ -157,6 +157,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: "Past",
 	},
 	/* Modified abilities */
+	flareboost: {
+		inherit: true,
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'brn') {
+				return false;
+			}
+		},
+	},
 	flowergift: {
 		inherit: true,
 		onAllyModifyAtk(atk, pokemon) {
@@ -258,12 +267,27 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	runaway: {
+		inherit: true,
+		onImmunity(type) {
+			if (type === 'trapping') return false;
+		},
+	},
 	soundproof: {
 		inherit: true,
 		onTryHit(target, source, move) {
 			if (move.flags['sound']) {
 				this.add('-immune', target, '[from] ability: Soundproof');
 				return null;
+			}
+		},
+	},
+	toxicboost: {
+		inherit: true,
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'psn' || effect.id === 'tox') {
+				return false;
 			}
 		},
 	},
@@ -300,6 +324,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					this.add('-immune', target, '[from] ability: Wonder Guard');
 				}
 				return null;
+			}
+		},
+	},
+	magmaarmor: {
+		inherit: true,
+		onSourceModifyDamage(damage, source, target, move) {
+			if (['Water', 'Ice'].includes(move.type)) {
+				return this.chainModify(1, 2);
 			}
 		},
 	},
@@ -409,6 +441,150 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	woodenguard: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	jihad: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	phantasma: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shitstorm: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fuku: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	stinkbomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	whiteflames: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowera: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerc: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerco: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerd: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerf: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerfa: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerfit: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerg: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerh: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerint: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerjp: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerk: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerout: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerpol: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerr9k: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpower5: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowers4s: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowersoc: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowersp: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowertrv: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowertv: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerv: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowervg: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowervp: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowervr: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerx: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	boardpowerz: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	presage: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cacophony: {
 		inherit: true,
 		isNonstandard: null,
 	},

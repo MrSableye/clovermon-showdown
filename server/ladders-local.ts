@@ -145,6 +145,18 @@ export class LadderStore {
 		return [formatid, buf];
 	}
 
+	async getTopData(prefix?: string) {
+		const ladder = await this.getLadder();
+		const data = [];
+
+		for (const [, row] of ladder.entries()) {
+			if (prefix && !row[0].startsWith(prefix)) continue;
+			data.push(row);
+		}
+
+		return data;
+	}
+
 	/**
 	 * Returns a Promise for the Elo rating of a user
 	 */

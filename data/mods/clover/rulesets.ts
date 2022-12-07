@@ -51,41 +51,22 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 		effectType: 'ValidatorRule',
 		name: 'Blobbos Only',
 		desc: "Only Blobbos and its alternate formes can be used.",
-		onValidateTeam(team) {
-			const blobbosFormeCount: Record<string, number> = {};
-			const errors: string[] = [];
+		onValidateSet(set) {
+			const species = this.dex.species.get(set.species || set.name);
+			let baseSpecies = this.dex.species.get(species.baseSpecies);
+			let maxDepth = 10;
+			while (baseSpecies.baseSpecies !== baseSpecies.name && maxDepth > 0) {
+				baseSpecies = this.dex.species.get(baseSpecies.baseSpecies);
+				maxDepth--;
+			}
 
-			team.forEach((set) => {
-				const species = this.dex.species.get(set.species || set.name);
-				let baseSpecies = this.dex.species.get(species.baseSpecies);
-				let baseForme = species;
-				let maxDepth = 10;
-				while (baseSpecies.baseSpecies !== baseSpecies.name && maxDepth > 0) {
-					baseForme = baseSpecies;
-					baseSpecies = this.dex.species.get(baseSpecies.baseSpecies);
-					maxDepth--;
-				}
+			if (maxDepth === 0) {
+				return ['Recursive species found. Please report this to an administrator'];
+			}
 
-				if (maxDepth === 0) {
-					errors.push('Recursive species found. Please report this to an administrator');
-				}
-
-				if (baseSpecies.name !== 'Blobbos' && baseSpecies.name !== 'Bootlos') {
-					errors.push(`${set.name || set.species} is not a forme of Blobbos.`);
-				}
-
-				if (!blobbosFormeCount[baseForme.id]) blobbosFormeCount[baseForme.id] = 0;
-				blobbosFormeCount[baseForme.id] = blobbosFormeCount[baseForme.id] + 1;
-			});
-
-			Object.entries(blobbosFormeCount).forEach(([formeId, formeCount]) => {
-				if (formeCount > 1) {
-					const species = this.dex.species.get(formeId);
-					errors.push(`You have ${species.name}. You may only have up to 1 ${species.name}`);
-				}
-			});
-
-			return errors;
+			if (baseSpecies.name !== 'Blobbos' && baseSpecies.name !== 'Bootlos') {
+				return [`${set.name || set.species} is not a forme of Blobbos.`];
+			}
 		},
 	},
 	uniqueformesclause: {

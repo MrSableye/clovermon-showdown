@@ -1782,11 +1782,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boombox: {
 		name: "Boombox",
-		shortDesc: "This Pokemon's sound-based attacks have their power multiplied by 1.2.",
+		shortDesc: "This Pokemon's sound-based attacks have their power multiplied by 1.2 and takes 1/2 damage from sound attacks.",
 	},
 	bonezone: {
 		name: "Bone Zone",
-		shortDesc: "This Pokemon's Bone-based moves ignore immunities.",
+		shortDesc: "This Pokemon's Bone-based moves ignore immunities and abilities.",
 		start: "  [POKEMON] has entered the Bone Zone!",
 	},
 	degenerate: {
@@ -1796,7 +1796,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	degradation: {
 		name: "Degradation",
-		shortDesc: "This Pokemon's Dark-type attacks are super-effective against Normal-types.",
+		shortDesc: "This Pokemon's Dark-type attacks are super-effective against Normal- and Fairy-types.",
 	},
 	flareheal: {
 		name: "Flare Heal",
@@ -1810,7 +1810,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	hydrophile: {
 		name: "Hydrophile",
-		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack.",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack. This Pokemon is healed 1/4 by Water, 1/8 by Rain.",
 	},
 	inversion: {
 		name: "Inverse Room",
@@ -1823,7 +1823,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	madman: {
 		name: "Madman",
-		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be confused.",
+		shortDesc: "100% chance a Pokemon making contact with this Pokemon will be confused.",
 	},
 	moreroom: {
 		name: "More Room",
@@ -1832,12 +1832,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	pollution: {
 		name: "Pollution",
-		shortDesc: "This Pokemon's Poison-type attacks are super-effective against Water-types.",
+		shortDesc: "This Pokemon's Poison-type attacks are super-effective against Water-, Flying- and Ground-types.",
 	},
 	pozzed: {
 		name: "Pozzed",
-		shortDesc: "This Pokemon is immune to Poison-type moves and restores 1/4 of its maximum HP, rounded down, when hit by a Poison-type move.",
-		desc: "This Pokemon heals 1/4 of its max HP when hit by Poison moves; Poison immunity. Toxic Orb, Toxic Spikes, etc. and non-Poison-type moves can still Poison this Pokemon.",
+		shortDesc: "This Pokemon is immune to Poison-type moves and restores 1/4 of its maximum HP, rounded down, when hit by a Poison-type move. No HP loss from Poison. This Pokemon's attacking stat is multiplied by 1.5 while using a Poison-type attack. Absorbs Toxic Spikes.",
+		desc: "This Pokemon heals 1/4 of its max HP when hit by Poison moves; Poison immunity. Toxic Orb, Toxic Spikes, etc. and non-Poison-type moves can still Poison this Pokemon. No HP loss from Poison. This Pokemon's attacking stat is multiplied by 1.5 while using a Poison-type attack. Absorbs Toxic Spikes.",
 	},
 	puppeteer: {
 		name: "Puppeteer",
@@ -1859,6 +1859,157 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	woodenguard: {
 		name: "Wooden Guard",
 		shortDesc: "This Pokemon recieves 1.5x damage from Fire moves, 0.75x from other moves.",
+	},
+	jihad: {
+		name: "Jihad",
+		shortDesc: "+1 priority to suicide moves. Immune to sandstorm.",
+	},
+	phantasma: {
+		name: "Phantasma",
+		shortDesc: "1.5x boost to Ghost-type moves. Immune to trapping. Curse is Ghost-type.",
+	},
+	shitstorm: {
+		name: "Shitstorm",
+		shortDesc: "Starts Mud Sport and Water Sport on switch-in.",
+	},
+	fuku: {
+		name: "Fuk U",
+		shortDesc: "Sets all other mons to Normal-type on switch-in.",
+	},
+	stinkbomb: {
+		name: "Stink Bomb",
+		shortDesc: "Sets all mons abilities to Stench. Makes all attacks Poison-type for 1 turn.",
+	},
+	whiteflames: {
+		name: "White Flames",
+		shortDesc: "1.2x damage against inferior mons. Takes 0.5x damage from inferior mons.",
+	},
+	boardpowera: {
+		name: "Board Power (/a/)",
+		shortDesc: "Sturdy. Omniboost + Clear Body on switch-in if the last unfainted Pokemon.",
+	},
+	boardpowerb: {
+		name: "Board Power (/b/)",
+		shortDesc: "Gets a random different Board Power.",
+	},
+	boardpowerc: {
+		name: "Board Power (/c/)",
+		shortDesc: "Adds Fairy-type. Fairy Aura. Gender-neutral Cute Charm. Attract works on any gender.",
+	},
+	boardpowerco: {
+		name: "Board Power (/co/)",
+		shortDesc: "Magic Guard + Marvel Scale + Justified + Resists Dark.",
+	},
+	boardpowerd: {
+		name: "Board Power (/d/)",
+		shortDesc: "Adds Dark-type. Degenerates. Uses Stockpile on switch-in.",
+	},
+	boardpowerf: {
+		name: "Board Power (/f/)",
+		shortDesc: "Sets Inverse Room. Flash BP = 90.",
+	},
+	boardpowerfa: {
+		name: "Board Power (/fa/)",
+		shortDesc: "Copies opponent's typing, ability, and boosts.",
+	},
+	boardpowerfit: {
+		name: "Board Power (/fit/)",
+		shortDesc: "Adds Fighting-type. Uses Hulk Up on switch-in.",
+	},
+	boardpowerg: {
+		name: "Board Power (/g/)",
+		shortDesc: "Adds Electric-type. Sets Electric Terrain and uses Charge on switch-in.",
+	},
+	boardpowerh: {
+		name: "Board Power (/h/)",
+		shortDesc: "Adds Fire-type. Gender-neutral Cute Charm. Attract works on any gender. 1/3 chance to attract on hit.",
+	},
+	boardpowerint: {
+		name: "Board Power (/int/)",
+		shortDesc: "Adaptability. Sets Psychic Terrain on switch-in.",
+	},
+	boardpowerjp: {
+		name: "Board Power (/jp/)",
+		shortDesc: "Adds Fairy-type. Serene Grace. Treated as female.",
+	},
+	boardpowerk: {
+		name: "Board Power (/k/)",
+		shortDesc: "Adds Steel-type. Bulletproof. +1 Def and +SpD on switch-in.",
+	},
+	boardpowerout: {
+		name: "Board Power (/out/)",
+		shortDesc: "Sets Grassy Terrain on switch-in. 2x boost to Nature Power moves.",
+	},
+	boardpowerpol: {
+		name: "Board Power (/pol/)",
+		shortDesc: "Stakeout. Analytic. Psychic-type moves hit Dark-types.",
+	},
+	boardpowerr9k: {
+		name: "Board Power (/r9k/)",
+		shortDesc: "Torments all mons.",
+	},
+	boardpower5: {
+		name: "Board Power (/5/)",
+		shortDesc: "Wait For It. Skill Link.",
+	},
+	boardpowers4s: {
+		name: "Board Power (/s4s/)",
+		shortDesc: "+1 priority to status moves. Immune to Prankster.",
+	},
+	boardpowersoc: {
+		name: "Board Power (/soc/)",
+		shortDesc: "Frisk. Friend Guard. Poison Absorb (like Water Absorb). Poison-type moves have 1.5x power.",
+	},
+	boardpowersp: {
+		name: "Board Power (/sp/)",
+		shortDesc: "Magic Bounce. +1 Spe on switch-in.",
+	},
+	boardpowertrv: {
+		name: "Board Power (/trv/)",
+		shortDesc: "2x Spe in weather. 150 BP Weather Ball in weather.",
+	},
+	boardpowertv: {
+		name: "Board Power (/tv/)",
+		shortDesc: "Adds Ground-type. Sets Gravity on switch-in.",
+	},
+	boardpowerv: {
+		name: "Board Power (/v/)",
+		shortDesc: "Gorilla Tactics. Anger Point. +1 Atk when hit.",
+	},
+	boardpowervg: {
+		name: "Board Power (/vg/)",
+		shortDesc: "Adds Dragon-type. Repeated attacks get 20% BP boosted up to 160 BP.",
+	},
+	boardpowervp: {
+		name: "Board Power (/vp/)",
+		shortDesc: "Poison Heal. Puppeteer. Bug Absorb (like Water Absorb).",
+	},
+	boardpowervr: {
+		name: "Board Power (/vr/)",
+		shortDesc: "Sets Magic Room and sppresses all other abilities other than Comatose and Board Power on switch-in.",
+	},
+	boardpowerx: {
+		name: "Board Power (/x/)",
+		shortDesc: "Adds Ghost-type. Turns all other mons into pure Ghost-types.",
+	},
+	boardpowerz: {
+		name: "Board Power (/z/)",
+		shortDesc: "Becomes pure ???-type. Shield Dust. Keen Eye. Comatose. Shell Armor.",
+	},
+	presage: {
+		name: "Presage",
+		desc: "Changes weather when using certain moves relating to weather.",
+		shortDesc: "Changes weather to benefit certain moves.",
+	},
+	cacophony: {
+		name: "Cacophony",
+		shortDesc: "This Pokemon is immune to sound-based moves, including Heal Bell.",
+		gen5: {
+			shortDesc: "This Pokemon is immune to sound-based moves, except Heal Bell.",
+		},
+		gen4: {
+			shortDesc: "This Pokemon is immune to sound-based moves, including Heal Bell.",
+		},
 	},
 	/* Clover CAP Abilities */
 	cakeveil: {
@@ -1987,7 +2138,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	bonerzoner: {
 		name: "Boner Zoner",
-		shortDesc: "This Pokemon's Bone-based and Dragon moves ignore immunities.",
+		shortDesc: "This Pokemon's Bone-based and Dragon moves ignore immunities and abilities.",
 		start: "  [POKEMON] has descended into the Boner Zoner!",
 	},
 	pairoswrath: {
@@ -2040,6 +2191,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "The combination of Flare Heal and Magic Guard.",
 
 		start: "  [POKEMON] is ready to rember ;_;7",
+	},
+	asonehorse: {
+		name: "As One (Remembered)",
+		shortDesc: "The combination of Grim Neight, Chilling Neigh, and Striker",
+
+		start: "  [POKEMON] is ready to yeehaw",
 	},
 	sharpshooter: {
 		name: "Sharpshooter",
@@ -2100,10 +2257,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	fogofwar: {
 		name: "Fog Of War",
 		shortDesc: "On switch-in, this Pokemon summons Dense Fog.",
-	},
-	jihad: {
-		name: "Jihad",
-		shortDesc: "This Pokemon's self-destructing moves have their priority increased by 1.",
 	},
 	bathtime: {
 		name: "Bath Time",
@@ -2212,4 +2365,86 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		transform: "You feel a chill down your spine!",
 		transformEnd: "Blobbos-Eye-Mouth has calmed down!",
 	},
+	reconstruct: {
+		name: "Reconstruct",
+		shortDesc: "Rebuilds item on switchout",
+	},
+	ultraego: {
+		name: "Ultra Ego",
+		shortDesc: "Gains Attack when takes damage",
+	},
+	limblauncher: {
+		name: "Limb Launcher",
+		shortDesc: "Powers up Punch and Kick moves by 1.3 and don't make contact",
+	},
+	plasticsurge: {
+		name: "Plastic Surge",
+		shortDesc: "On switch-in, this Pokemon summons Plastic Terrain.",
+	},
+	thatscap: {
+		name: "That's Cap",
+		shortDesc: "boosts Head based moves",
+	},
+	radioactive: {
+		name: "Radioactive",
+		shortDesc: "Pokemon making contact become Nuclear type",
+	},
+	paperpower: {
+		name: "Paper Power",
+		shortDesc: "Boosts Fist and Hammer moves, but makes the mon weak to Fire and Water moves",
+	},
+	artist: {
+		name: "Artist",
+		shortDesc: "The opponent becomes the type of the last move used",
+	},
+	ultrainstinct: {
+		name: "Ultra Instinct",
+		shortDesc: "At low health, boosts all stats",
+	},
+	balance: {
+		name: "Balance",
+		shortDesc: "Boosts not very effective attacks and reduces damage from super effective attacks",
+	},
+	breakdown: {
+		name: "Breakdown",
+		desc: "If this Pokemon, but not its substitute, is struck by a critical hit, its Special Attack is raised by 12 stages.",
+		shortDesc: "If this Pokemon (not its substitute) takes a critical hit, its Special Attack is raised 12 stages.",
+		boost: "  [POKEMON] maxed its Special Attack!",
+	},
+	turbine: {
+		name: "Turbine",
+		desc: "This Pokemon is immune to Flying-type moves and raises its Special Attack by 1 stage when hit by an Flying-type move. If this Pokemon is not the target of a single-target Flying-type move used by another Pokemon, this Pokemon redirects that move to itself if it is within the range of that move.",
+		shortDesc: "This Pokemon draws Flying moves to itself to raise Sp. Atk by 1; Flying immunity.",
+		activate: "  [POKEMON] took the attack!",
+	},
+	drenchedbulb: {
+		name: "Drenched Bulb",
+		desc: "This Pokemon is immune to Fire-type moves and self destruct moves.",
+	},
+	intoxicate: {
+		name: "Intoxicate",
+		desc: "This Pokemon's Normal-type moves become Poison-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's Normal-type moves become Poison type and have 1.2x power.",
+	},
+	hyperzone: {
+		name: "Hyper Zone",
+		shortDesc: "Summons Hyper Zone upon switch-in. protecting Dark type pokemon from priority, status, and screens.",
+	},
+	shadowaura: {
+		name: "Shadow Aura",
+		shortDesc: "Boosts the power of shadow moves by 1.5 and takes half damage at full HP.",
+	},
+	presentpower: {
+		name: "Present Power",
+		shortDesc: "Adds a Present to every attack.",
+	},
+	supermentum: {
+		name: "Supermentum",
+		shortDesc: "Switches out after using moves.",
+	},
+	muhmentum: {
+		name: "Muhmentum",
+		shortDesc: "Switches out after using offensive moves.",
+	},
+
 };
