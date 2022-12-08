@@ -719,6 +719,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 			if (allSpeciesTags.includes(toID(target))) {
 				target = toID(target);
 				orGroup.tags[target] = !isNotSearch;
+				continue;
 			}
 
 			if (target === 'megas' || target === 'mega') {
