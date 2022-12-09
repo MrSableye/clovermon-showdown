@@ -17808,6 +17808,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Monster",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	iguallah: {
 		num: 69005,
@@ -17846,6 +17847,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Monster",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	lizakbar: {
 		num: 69006,
@@ -17881,6 +17883,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Monster",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	ejacasm: {
 		num: 69007,
@@ -18023,6 +18026,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Field",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	gampster: {
 		num: 69011,
@@ -18056,6 +18060,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Field",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	kengeon: {
 		num: 69012,
@@ -18527,6 +18532,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Amorphous",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	pikotton: {
 		num: 69025,
@@ -18801,6 +18807,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	piguson: {
 		num: 69033,
@@ -19193,6 +19200,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Water 2",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	pixila: {
 		num: 69044,
@@ -19400,6 +19408,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Field",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	seamapan: {
 		num: 69050,
@@ -19498,6 +19507,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Mineral",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	masdawg: {
 		num: 69053,
@@ -19677,6 +19687,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Water 2",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	sjwhale: {
 		num: 69058,
@@ -19712,6 +19723,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Water 2",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	chezetta: {
 		num: 69059,
@@ -20693,6 +20705,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Amorphous",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	florious: {
 		num: 69087,
@@ -20729,6 +20742,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Amorphous",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	juarecito: {
 		num: 69088,
@@ -20764,6 +20778,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	ponchito: {
 		num: 69089,
@@ -20801,6 +20816,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	somboludo: {
 		num: 69090,
@@ -20836,6 +20852,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	puppacti: {
 		num: 69091,
@@ -21080,6 +21097,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Amorphous",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	armowite: {
 		num: 69098,
@@ -21113,6 +21131,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Amorphous",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	praunch: {
 		num: 69099,
@@ -21991,6 +22010,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	chantruth: {
 		num: 69124,
@@ -22023,6 +22043,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	inbitween: {
 		num: 69125,
@@ -22060,6 +22081,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Fairy",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	geigh: {
 		num: 69126,
@@ -22093,6 +22115,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Fairy",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	jarape: {
 		num: 69127,
@@ -22127,6 +22150,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Mineral",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	spilefree: {
 		num: 69128,
@@ -22161,6 +22185,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Mineral",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	bongecko: {
 		num: 69129,
@@ -22442,6 +22467,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Monster",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	isissin: {
 		num: 69137,
@@ -22478,6 +22504,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Monster",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	stuffowl: {
 		num: 69138,
@@ -23214,6 +23241,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Amorphous",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	deathorus: {
 		num: 69160,
@@ -23249,6 +23277,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Amorphous",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	knogoat: {
 		num: 69161,
@@ -23461,6 +23490,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Fairy",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	mirrostine: {
 		num: 69167,
@@ -23663,6 +23693,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Water 3",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	sprucifix: {
 		num: 69173,
@@ -24036,6 +24067,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Amorphous ",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	piicee: {
 		num: 69184,
@@ -24335,6 +24367,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	barbarkley: {
 		num: 69193,
@@ -24367,6 +24400,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	kekroach: {
 		num: 69194,
@@ -24403,6 +24437,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Bug",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	rekroach: {
 		num: 69195,
@@ -24438,6 +24473,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Bug",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	ricosheep: {
 		num: 69196,
@@ -25732,6 +25768,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Fairy",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	motherfuck: {
 		num: 69209,
@@ -26120,6 +26157,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	premantom: {
 		num: 69220,
@@ -26155,6 +26193,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	galavik: {
 		num: 69221,
@@ -26510,6 +26549,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Mineral",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	semdemen: {
 		num: 69231,
@@ -26580,6 +26620,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Fairy",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	kuuroba: {
 		num: 69233,
@@ -26960,6 +27001,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Field",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	farfigtron: {
 		num: 69244,
@@ -27109,6 +27151,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	vivaiger: {
 		num: 69249,
@@ -27727,6 +27770,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Bug",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	tikoon: {
 		num: 69267,
@@ -27764,6 +27808,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Bug",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	oogabuga: {
 		num: 69268,
@@ -27799,6 +27844,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Bug",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	ebining: {
 		num: 69269,
@@ -27834,6 +27880,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Amorphous",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	emplyin: {
 		num: 69270,
@@ -27868,6 +27915,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Amorphous",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	upbote: {
 		num: 69271,
@@ -27903,6 +27951,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Amorphous",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	upbeddit: {
 		num: 69272,
@@ -27937,6 +27986,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Amorphous",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	flipbird: {
 		num: 69273,
@@ -28042,6 +28092,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	pyongnome: {
 		num: 69276,
@@ -28074,6 +28125,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	bruhkid: {
 		num: 69277,
@@ -28252,6 +28304,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Flying",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	warudio: {
 		num: 69282,
@@ -28288,6 +28341,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Flying",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	docee: {
 		num: 69283,
@@ -28599,6 +28653,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	tunakking: {
 		num: 69292,
@@ -28635,6 +28690,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	missletoe: {
 		num: 69293,
@@ -28778,6 +28834,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	araketsu: {
 		num: 69297,
@@ -28814,6 +28871,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Bug",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	senketula: {
 		num: 69298,
@@ -28849,6 +28907,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Bug",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	falcaptain: {
 		num: 69299,
@@ -29814,6 +29873,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Mineral",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	shroofle: {
 		num: 69327,
@@ -29846,6 +29906,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Grass",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	betacluck: {
 		num: 69328,
@@ -30092,6 +30153,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Dragon",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	yeerex: {
 		num: 69335,
@@ -30129,6 +30191,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Dragon",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	randomix: {
 		num: 69336,
@@ -30550,6 +30613,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Field",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	undastand: {
 		num: 69348,
@@ -30585,6 +30649,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Field",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	warney: {
 		num: 69349,
@@ -30887,6 +30952,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Field",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	reagain: {
 		num: 69355,
@@ -30923,6 +30989,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Field",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	ormite: {
 		num: 69356,
@@ -31724,6 +31791,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	ballankey: {
 		num: 69379,
@@ -31760,6 +31828,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	funnedong: {
 		num: 69380,
@@ -31793,6 +31862,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Human-Like",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	narwhiz: {
 		num: 69381,
@@ -31909,6 +31979,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Inferior"],
 	},
 	admoot: {
 		num: 69385,
@@ -37442,6 +37513,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 		requiredItem: "Ebolabite",
+		tags: ["Inferior"],
 	},
 	somboludomega: {
 		num: 69090,
