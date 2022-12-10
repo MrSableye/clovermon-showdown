@@ -7895,7 +7895,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mushroomshot: {
 		name: "Mushroom Shot",
-		shortDesc: "Doubles in power if opponent partially trapped. During Gravity: 1.5x power.",
+		shortDesc: "Doubles in power if opponent partially trapped. During Gravity: 1.5x power. Hits 4 times",
 	},
 
 };
