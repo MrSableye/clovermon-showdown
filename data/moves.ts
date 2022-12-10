@@ -24935,16 +24935,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 
-	recycleterrain: {
+	plastictterrain: {
 		num: 580,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		name: "Recycle Terrain",
+		name: "Plastic Terrain",
 		pp: 10,
 		priority: 0,
 		flags: {nonsky: 1},
-		terrain: 'recycleterrain',
+		terrain: 'plastictterrain',
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {

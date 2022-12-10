@@ -7386,7 +7386,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	plasticsurge: {
 		onStart(source) {
-			this.field.setTerrain('recycleterrain');
+			this.field.setTerrain('plastictterrain');
 		},
 		name: "Plastic Surge",
 		rating: 4,

@@ -481,7 +481,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	fadedreflection: {
+	fadereflection: {
 		inherit: true,
 		isNonstandard: null,
 	},
