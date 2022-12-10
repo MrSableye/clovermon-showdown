@@ -37218,7 +37218,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			atk: 105,
 			def: 80,
 			spa: 80,
-			spd: 88,
+			spd: 85,
 			spe: 120,
 		},
 		abilities: {
@@ -37272,7 +37272,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseSpecies: "Blobbos-Zero",
 		forme: "Mega",
 		types: ["???", "Dark"],
-		baseStats: {hp: 160, atk: 100, def: 90, spa: 160, spd: 60, spe: 120},
+		baseStats: {hp: 160, atk: 100, def: 90, spa: 160, spd: 90, spe: 120},
 		abilities: {0: "Hyper Zone"},
 		heightm: 4.2,
 		weightkg: 173.8,
