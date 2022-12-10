@@ -7930,4 +7930,32 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	wackite: {
+		name: "Wackite",
+		spritenum: 589,
+		megaStone: "Blobbos-Wack-Mega",
+		megaEvolves: "Blobbos-Wack",
+		itemUser: ["Blobbos-Wack"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	zeroite: {
+		name: "Zeroite",
+		spritenum: 616,
+		megaStone: "Blobbos-Zero-Mega",
+		megaEvolves: "Blobbos-Zero",
+		itemUser: ["Blobbos-Zero"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
 };

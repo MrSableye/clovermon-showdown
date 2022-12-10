@@ -7407,7 +7407,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			];
 			if (beamMoves.includes(move.id)) {
 				this.debug('Thats Cap boost');
-				return this.chainModify(1.5);
+				return this.chainModify(2);
 			}
 		},
 		name: "That's Cap",

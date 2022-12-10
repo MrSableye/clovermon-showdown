@@ -281,4 +281,48 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ultraego: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ultrainstinct: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	artist: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hyperzone: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	paperpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	thatscap: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	drenchedbulb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	intoxicate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	radioactive: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	limblauncher: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	muhmentum: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
