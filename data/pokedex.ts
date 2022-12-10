@@ -37594,6 +37594,33 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
+	blobbosstrand: {
+		num: 69132,
+		name: "Blobbos-Strand",
+		baseSpecies: "Blobbos",
+		forme: "Strand",
+		types: ["Steel", "Dark"],
+		gender: "N",
+		baseStats: {
+			hp: 90,
+			atk: 90,
+			def: 90,
+			spa: 90,
+			spd: 90,
+			spe: 80,
+		},
+		abilities: {
+			0: "Death Stranding by Hideo Kojima",
+			1: "Aphenphosmphobia",
+		},
+		heightm: 0.4,
+		weightkg: 5.7,
+		color: "Black",
+		eggGroups: [
+			"Ditto",
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",

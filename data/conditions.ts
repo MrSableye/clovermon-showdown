@@ -948,5 +948,30 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-sideend', side, 'Flashbang');
 		},
 	},
-
+	timefall: {
+		name: 'Timefall',
+		effectType: 'Weather',
+		duration: 5,
+		onWeather(target) {
+			let statName = 'atk';
+			let bestStat = 0;
+			let s: StatIDExceptHP;
+			for (s in target.storedStats) {
+				if (target.storedStats[s] > bestStat) {
+					statName = s;
+					bestStat = target.storedStats[s];
+				}
+			}
+			this.boost({[statName]: 1}, target);
+			this.damage(target.baseMaxhp / 8);
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Timefall', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
 };

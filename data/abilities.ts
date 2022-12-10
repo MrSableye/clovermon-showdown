@@ -7665,7 +7665,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBeforeMove(source, target, move) {
 			if (move.category === 'Status') return;
 			const grassyMoves = ['earthpower', 'highhorsepower'];
-			
+
 			if ((grassyMoves.includes(move.id) || move.type === 'Grass')) {
 				this.field.setTerrain('grassyterrain');
 			} else if (move.type === 'Electric') {
@@ -7676,7 +7676,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.field.setTerrain('mistyterrain');
 			} else if (move.type === 'Plastic') {
 				this.field.setTerrain('plasticterrain');
-			} else if (move.type === 'Normal' && move.id !== 'terrainpulse','naturepower','secretpower') {
+			} else if (move.type === 'Normal' && !['terrainpulse', 'naturepower', 'secretpower'].includes(move.id)) {
 				this.field.clearTerrain();
 			}
 		},
@@ -7714,11 +7714,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				case 'psychicterrain':
 					newType = 'Psychic';
 					break;
-					case 'plasticterrain':
+				case 'plasticterrain':
 					newType = 'Plastic';
 					break;
 				}
-				
+
 				if (!newType || pokemon.getTypes().join() === newType || !pokemon.setType(newType)) return;
 				this.add('-start', pokemon, 'typechange', newType, '[from] ability: Terraform');
 			},
@@ -7744,7 +7744,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.add('-start', pokemon, 'typechange', 'Normal', '[from] ability: F Bomb', '[of] ' + source);
 				pokemon.setType('Normal');
 			}
-			
+		},
+		isNonstandard: "Future",
+	},
+	deathstrandingbyhideokojima: {
+		name: "Death Stranding by Hideo Kojima",
+		onStart() {
+			this.field.setWeather('timefall');
+		},
+		isNonstandard: "Future",
+	},
+	aphenphosmphobia: {
+		name: "Aphenphosmphobia",
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.flags['contact']) {
+				return this.chainModify(2);
+			}
 		},
 		isNonstandard: "Future",
 	},
