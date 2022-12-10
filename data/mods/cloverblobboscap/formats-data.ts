@@ -2818,4 +2818,129 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobboshologram: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdarkmatter: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobbosnoke: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosclassy: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosui: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosue: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosartist: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmushroom: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboswack: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboswackmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscup: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdelinquent: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboszero: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobboszeromega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobboshardcore: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospaper: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscap: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscalamity: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmarx: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdoctor: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosnegatandor: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosplok: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbee: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosshoreline: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmuhmentum: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

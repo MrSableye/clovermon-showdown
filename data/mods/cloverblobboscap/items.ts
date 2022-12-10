@@ -35,6 +35,14 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	wackite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	zeroite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	blobbosmikiumz: {
 		inherit: true,
 		isNonstandard: null,
