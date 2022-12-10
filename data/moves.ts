@@ -25005,11 +25005,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1, punch: 1},
 
 		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Grass', type) + this.dex.getEffectiveness('Steel', type);
+			return typeMod + this.dex.getEffectiveness('Steel', type);
 		},
 		secondary: null,
 		target: "normal",
-		type: "Water",
+		type: "Grass",
 		contestType: "Cool",
 	},
 	stingingrage: {

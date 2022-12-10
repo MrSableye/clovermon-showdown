@@ -7827,7 +7827,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	highjumpsaw: {
 		name: "High Jump Saw",
-		shortDesc: "The user jumps up high, spinning its fists and feet like a buzzsaw. Triple type: Water, Grass, Steel",
+		shortDesc: "The user jumps up high, spinning its fists and feet like a buzzsaw. Dual Type Steel",
 	},
 	stingingrage: {
 		name: "Stinging Rage",
