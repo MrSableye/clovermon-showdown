@@ -792,6 +792,114 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	fontabab: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabac: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabaco: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabad: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabaf: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabafa: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabafit: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabag: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabah: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabaint: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabajp: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabak: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabaout: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabapol: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabar9k: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontaba5: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabas4s: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabasoc: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabasp: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabatrv: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabatv: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabav: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabavg: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabavp: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabavr: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabax: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabaz: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	floconut: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -1633,6 +1741,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	simionach: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	simionachzen: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
