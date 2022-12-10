@@ -37009,7 +37009,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			def: 95,
 			spa: 75,
 			spd: 80,
-			spe: 45,
+			spe: 70,
 		},
 		abilities: {
 			0: "Dancer",
@@ -37041,7 +37041,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 70,
 		},
 		abilities: {
-			0: "Ultra Instinct",
+			0: "Inner Focus",
+			H: "Ultra Instinct",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
@@ -37067,7 +37068,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 80,
 		},
 		abilities: {
-			0: "Ultra Ego",
+			0: "Defiant",
+			H: "Ultra Ego",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
