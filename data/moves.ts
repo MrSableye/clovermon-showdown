@@ -24934,8 +24934,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		contestType: "Beautiful",
 	},
-
-	plastictterrain: {
+	plasticterrain: {
 		num: 580,
 		accuracy: true,
 		basePower: 0,
