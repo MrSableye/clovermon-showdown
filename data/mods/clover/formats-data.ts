@@ -3404,7 +3404,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	condoom: {
 		inherit: true,
-		tier: "Uber",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"scald",
@@ -3414,7 +3414,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"sludgebomb",
 			"icebeam",
 		],
-		randomBattleLevel: 72,
+		randomBattleLevel: 76,
 	},
 	squirrap: {
 		inherit: true,
@@ -4053,7 +4053,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	glacialynx: {
 		inherit: true,
-		tier: "NU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"icebeam",
@@ -4062,7 +4062,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"grassknot",
 			"boltbeam",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 76,
 	},
 	pengas: {
 		inherit: true,
@@ -4084,7 +4084,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	praestish: {
 		inherit: true,
-		tier: "NU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"uturn",
@@ -4093,7 +4093,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"toxic",
 			"icebeam",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 76,
 	},
 	flowre: {
 		inherit: true,
@@ -4865,7 +4865,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	lossolith: {
 		inherit: true,
-		tier: "NU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"wish",
@@ -4875,7 +4875,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"stealthrock",
 			"teleport",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 76,
 	},
 	mimimie: {
 		inherit: true,
@@ -5992,7 +5992,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	wheygle: {
 		inherit: true,
-		tier: "UUBL",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"uturn",
@@ -6151,7 +6151,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	ruselamp: {
 		inherit: true,
-		tier: "NU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"thunderbolt",
@@ -6160,7 +6160,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"voltswitch",
 			"trick",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 76,
 	},
 	mehndior: {
 		inherit: true,
@@ -6557,7 +6557,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	illumatrix: {
 		inherit: true,
-		tier: "NU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"psychoboost",
@@ -6566,7 +6566,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"earthpower",
 			"uturn",
 		],
-		randomBattleLevel: 80,
+		randomBattleLevel: 76,
 	},
 	typobop: {
 		inherit: true,
@@ -6727,7 +6727,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	acufront: {
 		inherit: true,
-		tier: "NU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"boomburst",
@@ -6736,7 +6736,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"earthpower",
 			"hydropump",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 76,
 	},
 	acufrontf: {
 		inherit: true,
