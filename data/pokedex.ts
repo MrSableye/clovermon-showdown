@@ -37945,7 +37945,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			F: 0.125,
 		},
 		baseStats: {hp: 151, atk: 159, def: 138, spa: 81, spd: 99, spe: 103},
-		abilities: {0: "Fuk U", 1: "Stink Bomb", H: "Neutralizing Gass", S: "F Bomb"},
+		abilities: {0: "Fuk U", 1: "Stink Bomb", H: "Neutralizing Gas", S: "F Bomb"},
 		heightm: 1.7,
 		weightkg: 90.5,
 		color: "Red",
