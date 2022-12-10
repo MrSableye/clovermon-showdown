@@ -7958,4 +7958,32 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	plasticgem: {
+		name: "Plastic Gem",
+		spritenum: 53,
+		isGem: true,
+		onSourceTryPrimaryHit(target, source, move) {
+			if (target === source || move.category === 'Status') return;
+			if (move.type === 'Plastic' && source.useItem()) {
+				source.addVolatile('gem');
+			}
+		},
+		num: 558,
+		gen: 5,
+		isNonstandard: "Future",
+	},
+	glassgem: {
+		name: "Glass Gem",
+		spritenum: 53,
+		isGem: true,
+		onSourceTryPrimaryHit(target, source, move) {
+			if (target === source || move.category === 'Status') return;
+			if (move.type === 'Glass' && source.useItem()) {
+				source.addVolatile('gem');
+			}
+		},
+		num: 558,
+		gen: 5,
+		isNonstandard: "Future",
+	},
 };

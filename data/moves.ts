@@ -25362,7 +25362,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Dark",
 	},
-
 	mushroomshot: {
 		num: 788,
 		accuracy: 100,
