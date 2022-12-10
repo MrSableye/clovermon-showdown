@@ -2446,5 +2446,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Muhmentum",
 		shortDesc: "Switches out after using offensive moves.",
 	},
-
+	terraform: {
+		name: "Terrform",
+		desc: "Changes terrain when using certain moves relating to terrain.",
+		shortDesc: "Changes terrain to benefit certain moves.",
+	},
+	fbomb: {
+		name: "F Bomb",
+		shortDesc: "Sets all mons abilities to Stench. Makes all attacks Poison-type for 1 turn. Makes everyone else Normal",
+	},
 };

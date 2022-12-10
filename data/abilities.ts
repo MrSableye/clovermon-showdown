@@ -7659,4 +7659,93 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		isNonstandard: "Future",
 	},
+
+	terraform: {
+		name: "Terraform",
+		onBeforeMove(source, target, move) {
+			if (move.category === 'Status') return;
+			const grassyMoves = ['earthpower', 'highhorsepower'];
+			
+			if ((grassyMoves.includes(move.id) || move.type === 'Grass')) {
+				this.field.setTerrain('grassyterrain');
+			} else if (move.type === 'Electric') {
+				this.field.setTerrain('electricterrain');
+			} else if (move.type === 'Psychic') {
+				this.field.setTerrain('psychicterrain');
+			} else if (move.type === 'Fairy') {
+				this.field.setTerrain('mistyterrain');
+			} else if (move.type === 'Plastic') {
+				this.field.setTerrain('plasticterrain');
+			} else if (move.type === 'Normal' && move.id !== 'terrainpulse','naturepower','secretpower') {
+				this.field.clearTerrain();
+			}
+		},
+		onStart(pokemon) {
+			if (this.field.terrain) {
+				pokemon.addVolatile('terraform');
+			} else {
+				const types = pokemon.baseSpecies.types;
+				if (pokemon.getTypes().join() === types.join() || !pokemon.setType(types)) return;
+				this.add('-start', pokemon, 'typechange', types.join('/'), '[from] ability: Terraform');
+				this.hint("Transform Terraform changes you to your original un-transformed types.");
+			}
+		},
+		onAnyTerrainStart() {
+			const pokemon = this.effectState.target;
+			delete pokemon.volatiles['terraform'];
+			pokemon.addVolatile('terraform');
+		},
+		onEnd(pokemon) {
+			delete pokemon.volatiles['terrafrom'];
+		},
+		condition: {
+			onStart(pokemon) {
+				let newType;
+				switch (this.field.terrain) {
+				case 'electricterrain':
+					newType = 'Electric';
+					break;
+				case 'grassyterrain':
+					newType = 'Grass';
+					break;
+				case 'mistyterrain':
+					newType = 'Fairy';
+					break;
+				case 'psychicterrain':
+					newType = 'Psychic';
+					break;
+					case 'plasticterrain':
+					newType = 'Plastic';
+					break;
+				}
+				
+				if (!newType || pokemon.getTypes().join() === newType || !pokemon.setType(newType)) return;
+				this.add('-start', pokemon, 'typechange', newType, '[from] ability: Terraform');
+			},
+			onUpdate(pokemon) {
+				if (!this.field.terrain) {
+					const types = pokemon.species.types;
+					if (pokemon.getTypes().join() === types.join() || !pokemon.setType(types)) return;
+					this.add('-activate', pokemon, 'ability: Terraform');
+					this.add('-end', pokemon, 'typechange', '[silent]');
+					pokemon.removeVolatile('terraform');
+				}
+			},
+		},
+		isNonstandard: "Future",
+	},
+	fbomb: {
+		name: "F Bomb",
+		onStart(source) {
+			for (const pokemon of this.getAllActive()) {
+				this.add('-ability', pokemon, 'Stench', '[from] ability: F Bomb', '[of] ' + source);
+				pokemon.setAbility('stench');
+				pokemon.addVolatile('stinkbomb');
+				this.add('-start', pokemon, 'typechange', 'Normal', '[from] ability: F Bomb', '[of] ' + source);
+				pokemon.setType('Normal');
+			}
+			
+		},
+		isNonstandard: "Future",
+	},
 };

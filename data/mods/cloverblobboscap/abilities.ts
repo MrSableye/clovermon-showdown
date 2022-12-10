@@ -325,4 +325,28 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	plasticsurge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	turbine: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	balance: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	presentpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	reconstruct: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	terraform: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
