@@ -345,4 +345,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	terraform: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

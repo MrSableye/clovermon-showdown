@@ -36171,6 +36171,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		},
 		abilities: {
 			0: "Mimicry",
+			H: "Terraform",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
@@ -37934,6 +37935,21 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 8,
 		color: "Black",
 		eggGroups: ["Undiscovered"],
+	},
+	smellsumo: {
+		num: -42118,
+		name: "Smellsumo",
+		types: ["Poison", "Fighting"],
+		genderRatio: {
+			M: 0.875,
+			F: 0.125,
+		},
+		baseStats: {hp: 151, atk: 159, def: 138, spa: 81, spd: 99, spe: 103},
+		abilities: {0: "Fuk U", 1: "Stink Bomb", H: "Neutralizing Gass", S: "F Bomb"},
+		heightm: 1.7,
+		weightkg: 90.5,
+		color: "Red",
+		eggGroups: ["Human-Like"],
 	},
 	vermingio: {
 		num: -42008,
