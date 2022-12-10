@@ -25371,7 +25371,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		multihit: 4,
-		flags: {bullet: 1, powder: 1, protect: 1, mirror: 1},
+		flags: {bullet: 1, protect: 1, mirror: 1},
 		onBasePower(basePower, source, target) {
 			if (this.field.getPseudoWeather('gravity') && (target.volatiles['partiallytrapped'])) {
 				return this.chainModify(3);
