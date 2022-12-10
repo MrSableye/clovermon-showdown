@@ -8373,6 +8373,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	simionachzen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	krissy: {
 		tier: "Illegal",
 		isNonstandard: "Future",
