@@ -9543,4 +9543,104 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobboshologram: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosdarkmatter: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosnoke: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosclassy: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosui: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosue: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosartist: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmushroom: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboswack: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboswackmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscup: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosdelinquent: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboszero: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboszeromega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboshardcore: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospaper: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscap: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscalamity: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmarx: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosdoctor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosnegatandor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosplok: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosbee: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosshoreline: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmuhmentum: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };
