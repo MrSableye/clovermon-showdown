@@ -7835,7 +7835,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	malicepowder: {
 		name: "Malice Powder",
-		shortDesc: "Confuses everyone",
+		shortDesc: "Confuses everyone, and it infestates those not immune to powder moves",
 	},
 	spectresabre: {
 		name: "Spectre Sabre",
