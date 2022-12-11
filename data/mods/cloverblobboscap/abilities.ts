@@ -353,7 +353,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	deathstrandingbyhideokojima: {
+	deathstranding: {
 		inherit: true,
 		isNonstandard: null,
 	},

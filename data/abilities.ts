@@ -7747,8 +7747,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		isNonstandard: "Future",
 	},
-	deathstrandingbyhideokojima: {
-		name: "Death Stranding by Hideo Kojima",
+	deathstranding: {
+		name: "Death Stranding",
 		onStart() {
 			this.field.setWeather('timefall');
 		},
