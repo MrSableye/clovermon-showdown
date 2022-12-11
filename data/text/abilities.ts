@@ -2465,6 +2465,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	chiralnetwork: {
 		name: "Chiral Network",
-		shortDesc: "Creates a bridge. If the next Pokemon that switches out switches back to a Pokemon with Chiral Network, it gets its positive boosts."
+		shortDesc: "Creates a bridge. If the next Pokemon that switches out switches back to a Pokemon with Chiral Network, it gets its positive boosts.",
 	},
 };
