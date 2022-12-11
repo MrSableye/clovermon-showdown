@@ -37611,7 +37611,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		},
 		abilities: {
 			0: "Death Stranding by Hideo Kojima",
-			1: "Aphenphosmphobia",
+			1: "Chiral Network",
+			H: "Aphenphosmphobia",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,

@@ -7763,4 +7763,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		isNonstandard: "Future",
 	},
+	chiralnetwork: {
+		name: "Chiral Network",
+		onStart(pokemon) {
+			pokemon.side.addSlotCondition(pokemon, 'bridge');
+		},
+		isNonstandard: "Future",
+	},
 };

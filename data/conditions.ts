@@ -974,4 +974,29 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'none');
 		},
 	},
+	bridge: {
+		name: 'Bridge',
+		onSwitchIn(pokemon) {
+			if (this.effectState.boosts) {
+				if (pokemon.hasAbility('chiralnetwork')) {
+					this.boost(this.effectState.boosts);
+				}
+				pokemon.side.removeSlotCondition(pokemon, 'bridge');
+			}
+		},
+		onSwitchOut(pokemon) {
+			if (!pokemon.hasAbility('chiralnetwork')) {
+				const boosts: SparseBoostsTable = {};
+
+				let i: BoostID;
+				for (i in pokemon.boosts) {
+					if (pokemon.boosts[i] > 0) {
+						boosts[i] = pokemon.boosts[i];
+					}
+				}
+
+				this.effectState.boosts = boosts;
+			}
+		},
+	},
 };

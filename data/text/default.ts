@@ -371,4 +371,11 @@ export const DefaultText: {[k: string]: DefaultText} = {
 	crash: {
 		damage: "  [POKEMON] kept going and crashed!",
 	},
+
+	timefall: {
+		weatherName: "Timefall",
+		start: "  Chiralium precipitation started to fall!",
+		end: "  The timefall stopped.",
+		upkeep: "  (Timefall continues.)",
+	},
 };
