@@ -349,7 +349,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	pastelveil: {
+	deathstrandingbyhideokojima: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	aphenphosmphobia: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	chiralnetwork: {
 		inherit: true,
 		isNonstandard: null,
 	},
