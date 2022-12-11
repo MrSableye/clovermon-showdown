@@ -37218,11 +37218,11 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gender: "M",
 		baseStats: {
 			hp: 80,
-			atk: 105,
+			atk: 88,
 			def: 80,
 			spa: 80,
 			spd: 85,
-			spe: 120,
+			spe: 105,
 		},
 		abilities: {
 			0: "Forewarn",
