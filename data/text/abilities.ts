@@ -2455,10 +2455,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "F Bomb",
 		shortDesc: "Sets all mons abilities to Stench. Makes all attacks Poison-type for 1 turn. Makes everyone else Normal",
 	},
-	deathstrandingbyhideokojima: {
-		name: "Death Stranding by Hideo Kojima",
+	deathstranding: {
+		name: "Death Stranding",
 		shortDesc: "Sets Timefall. All Pokemon on the field lose 1/8 HP per turn and boost their highest stat by 1 stage",
-		desc: "Death Stranding is a 2019 action game developed by Kojima Productions. It is the first game from director Hideo Kojima and Kojima Productions after their split from Konami in 2015. It was published by Sony Interactive Entertainment for the PlayStation 4 in November 2019 and by 505 Games for Windows in July 2020. A director's cut version was released for the PlayStation 5 in September 2021, followed by a release for Windows in March 2022.",
 	},
 	aphenphosmphobia: {
 		name: "Aphenphosmphobia",

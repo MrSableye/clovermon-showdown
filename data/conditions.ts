@@ -970,17 +970,27 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'Timefall', '[upkeep]');
 			this.eachEvent('Weather');
 		},
+		onFieldStart() {
+			this.add('-weather', 'Timefall');
+		},
 		onFieldEnd() {
 			this.add('-weather', 'none');
 		},
 	},
 	bridge: {
 		name: 'Bridge',
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'bridge');
+		},
 		onSwitchIn(pokemon) {
 			if (this.effectState.boosts) {
 				if (pokemon.hasAbility('chiralnetwork')) {
+					this.add('-activate', pokemon, 'bridge');
 					this.boost(this.effectState.boosts);
+				} else {
+					this.add('-fail', pokemon, 'bridge');
 				}
+
 				pokemon.side.removeSlotCondition(pokemon, 'bridge');
 			}
 		},
