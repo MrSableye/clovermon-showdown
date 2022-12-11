@@ -378,4 +378,9 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		end: "  The timefall stopped.",
 		upkeep: "  (Timefall continues.)",
 	},
+	bridge: {
+		start: "  [POKEMON] began building an addition to the Chiral Network!",
+		fail: "  The new addition to the Chiral Network has been abandoned.",
+		activate: "  [POKEMON] finished the addition to the Chiral Network!",
+	},
 };

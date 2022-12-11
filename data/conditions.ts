@@ -979,11 +979,18 @@ export const Conditions: {[k: string]: ConditionData} = {
 	},
 	bridge: {
 		name: 'Bridge',
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'bridge');
+		},
 		onSwitchIn(pokemon) {
 			if (this.effectState.boosts) {
 				if (pokemon.hasAbility('chiralnetwork')) {
+					this.add('-activate', pokemon, 'bridge');
 					this.boost(this.effectState.boosts);
+				} else {
+					this.add('-fail', pokemon, 'bridge');
 				}
+
 				pokemon.side.removeSlotCondition(pokemon, 'bridge');
 			}
 		},
