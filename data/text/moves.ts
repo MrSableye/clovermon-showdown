@@ -7827,7 +7827,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	highjumpsaw: {
 		name: "High Jump Saw",
-		shortDesc: "The user jumps up high, spinning its fists and feet like a buzzsaw",
+		shortDesc: "The user jumps up high, spinning its fists and feet like a buzzsaw. Dual Type Steel",
 	},
 	stingingrage: {
 		name: "Stinging Rage",
@@ -7895,7 +7895,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mushroomshot: {
 		name: "Mushroom Shot",
-		shortDesc: "Doubles in power if opponent partially trapped. During Gravity: 1.5x power.",
+		shortDesc: "Doubles in power if opponent partially trapped. During Gravity: 1.5x power. Hits 4 times",
 	},
 
 };

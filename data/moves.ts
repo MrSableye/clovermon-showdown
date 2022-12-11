@@ -25005,11 +25005,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1, punch: 1},
 
 		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Grass', type) + this.dex.getEffectiveness('Steel', type);
+			return typeMod + this.dex.getEffectiveness('Steel', type);
 		},
 		secondary: null,
 		target: "normal",
-		type: "Water",
+		type: "Grass",
 		contestType: "Cool",
 	},
 	stingingrage: {
@@ -25371,7 +25371,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		multihit: 4,
-		flags: {bullet: 1, powder: 1, protect: 1, mirror: 1},
+		flags: {bullet: 1, protect: 1, mirror: 1},
 		onBasePower(basePower, source, target) {
 			if (this.field.getPseudoWeather('gravity') && (target.volatiles['partiallytrapped'])) {
 				return this.chainModify(3);
