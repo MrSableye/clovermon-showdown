@@ -970,6 +970,9 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'Timefall', '[upkeep]');
 			this.eachEvent('Weather');
 		},
+		onFieldStart() {
+			this.add('-weather', 'Timefall');
+		},
 		onFieldEnd() {
 			this.add('-weather', 'none');
 		},
