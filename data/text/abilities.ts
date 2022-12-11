@@ -2464,4 +2464,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Aphenphosmphobia",
 		shortDesc: "This Pokemon receives 2x damage from contact attacks.",
 	},
+	chiralnetwork: {
+		name: "Chiral Network",
+		shortDesc: "Creates a bridge. If the next Pokemon that switches out switches back to a Pokemon with Chiral Network, it gets its positive boosts."
+	},
 };
