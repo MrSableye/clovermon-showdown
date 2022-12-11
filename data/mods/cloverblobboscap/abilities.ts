@@ -349,4 +349,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	pastelveil: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
