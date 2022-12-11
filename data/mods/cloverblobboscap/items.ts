@@ -57,4 +57,13 @@ export const Items: {[k: string]: ModdedItemData} = {
 		},
 		itemUser: ["Masdawg", "Pasdawg", "Naughtycoot", "Blobbos-Skeleton"],
 	},
+	plasticgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	glassgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+
 };
