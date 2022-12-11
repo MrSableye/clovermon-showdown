@@ -5956,7 +5956,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	emplyin: {
 		inherit: true,
-		tier: "RU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"knockoff",
@@ -5965,7 +5965,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"suckerpunch",
 			"pursuit",
 		],
-		randomBattleLevel: 84,
+		randomBattleLevel: 76,
 	},
 	upbote: {
 		inherit: true,
