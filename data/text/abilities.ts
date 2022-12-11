@@ -2360,7 +2360,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	eyeofblobbos: {
 		name: "Eye of Blobbos",
-		shortDesc: "If Blobbos-Eye, goes into Eye-Mouth Mode.",
+		shortDesc: "If Blobbos-Eye, at end of turn changes to Eye-Mouth mode if > 1/2 max HP",
 
 		transform: "You feel a chill down your spine!",
 		transformEnd: "Blobbos-Eye-Mouth has calmed down!",
