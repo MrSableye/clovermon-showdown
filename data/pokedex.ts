@@ -37381,7 +37381,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			hp: 80,
 			atk: 110,
 			def: 120,
-			spa: 85,
+			spa: 80,
 			spd: 100,
 			spe: 60,
 		},
