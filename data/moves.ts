@@ -25401,4 +25401,49 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Bug",
 	},
+	qualityrip: {
+		num: 222,
+		accuracy: 100,
+		basePower: 0,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Quality Rip",
+		pp: 30,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, nonsky: 1, sound: 1},
+		onModifyMove(move, pokemon) {
+			const i = this.random(100);
+			if (i < 5) {
+				move.magnitude = 4;
+				move.basePower = 10;
+			} else if (i < 15) {
+				move.magnitude = 5;
+				move.basePower = 30;
+			} else if (i < 35) {
+				move.magnitude = 6;
+				move.basePower = 50;
+			} else if (i < 65) {
+				move.magnitude = 7;
+				move.basePower = 70;
+			} else if (i < 85) {
+				move.magnitude = 8;
+				move.basePower = 90;
+			} else if (i < 95) {
+				move.magnitude = 9;
+				move.basePower = 110;
+			} else {
+				move.magnitude = 10;
+				move.basePower = 150;
+			}
+		},
+		onUseMoveMessage(pokemon, target, move) {
+			this.add('-activate', pokemon, 'move: Quality Rip', move.magnitude);
+		},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Electric",
+		zMove: {basePower: 140},
+		maxMove: {basePower: 140},
+		contestType: "Tough",
+	},
 };
