@@ -37613,6 +37613,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			0: "Death Stranding",
 			1: "Chiral Network",
 			H: "Aphenphosmphobia",
+			S: "Aftermath",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
