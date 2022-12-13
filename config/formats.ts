@@ -334,7 +334,7 @@ export const Formats: FormatList = [
 			'Sketch Gen 8 Moves',
 		],
 		banlist: [
-			'Unjoy', 'Chancer', 'Tarditank',
+			'Unjoy', 'Chancer', 'Tarditank', 'Flameboyan', 'Eviolite', 'Seamapan',
 			'Pikotton', 'Pretzely', 'Urswine', 'Masdawg', 'Pasdawg', 'Uber > 1', 'AG ++ Uber > 1', 'Arena Trap', 'Huge Power',
 			'Moody', 'Pure Power', 'Shadow Tag', 'Swift Swim', 'Bright Powder', 'King\'s Rock', 'Lax Incense', 'Quick Claw',
 			'Baton Pass', 'Wonder Guard',

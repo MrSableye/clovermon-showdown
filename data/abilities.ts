@@ -6853,7 +6853,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return false;
 			}
 		},
-
 		isPermanent: true,
 		isNonstandard: "Future",
 		name: "As One (Blobbos-Remembered)",
@@ -6978,7 +6977,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4.5,
 		num: 3,
 	},
-
 	armorplate: {
 		onModifyTypePriority: -1,
 		onModifyType(move, pokemon) {
@@ -6998,7 +6996,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 		rating: 3,
 	},
-
 	asonehorse: {
 		onPreStart(pokemon) {
 			this.add('-ability', pokemon, 'Grim Neigh');
@@ -7006,7 +7003,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-ability', pokemon, 'Striker');
 			this.effectState.unnerved = true;
 		},
-
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
 				this.boost({spa: length}, source, source, this.dex.abilities.get('grimneigh'));
@@ -7032,7 +7028,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "As One (Horse)",
 		isNonstandard: "Future",
 		rating: 3.5,
-
 	},
 	copypower: {
 		onSourceAfterFaint(length, target, source, effect) {
@@ -7080,6 +7075,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Dark Thoughts",
 		rating: 2,
 		num: 143,
+		isNonstandard: "Future",
 	},
 	gmaxcomatose: {
 		onSetStatus(status, target, source, effect) {
@@ -7158,6 +7154,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Hyperborean Arctic",
 		rating: 4.5,
 		num: 189,
+		isNonstandard: "Future",
 	},
 
 	infection: {
@@ -7337,6 +7334,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Costume",
 		rating: 3.5,
 		num: 209,
+		isNonstandard: "Future",
 	},
 	reconstruct: {
 		name: "Reconstruct",
@@ -7423,6 +7421,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Radioactive",
 		rating: 2.5,
 		num: 160,
+		isNonstandard: "Future",
 	},
 	paperpower: {
 		onBasePowerPriority: 23,
