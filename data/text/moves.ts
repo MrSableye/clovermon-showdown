@@ -7347,7 +7347,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	closeblobmat: {
 		name: "Close Blobmat",
-		shortDesc: "Lowers the user's Defense and Sp. Def by 6, and Speed by 1.",
+		shortDesc: "Lowers the user's Defense, Sp. Def, and Speed by 1.",
 	},
 	faedozer: {
 		name: "Fae Dozer",
