@@ -24919,6 +24919,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ghost",
 		zMove: {boost: {atk: 1}},
 		contestType: "Clever",
+		isNonstandard: "Future",
 	},
 	energyburst: {
 		num: 406,
@@ -24933,6 +24934,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "any",
 		type: "Normal",
 		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
 	plasticterrain: {
 		num: 580,
@@ -24993,6 +24995,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Plastic",
 		zMove: {boost: {def: 1}},
 		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
 	highjumpsaw: {
 		num: 136,
@@ -25011,6 +25014,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Grass",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	stingingrage: {
 		num: 153,
@@ -25029,8 +25033,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Bug",
 		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
-
 	malicepowder: {
 		num: 298,
 		accuracy: 100,
@@ -25051,6 +25055,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Bug",
 		zMove: {boost: {spa: 1}},
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	overdose: {
 		num: 457,
@@ -25066,6 +25071,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Poison",
 		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
 	bloodshot: {
 		num: 161,
@@ -25092,6 +25098,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "???",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	glassing: {
 		num: 487,
@@ -25137,6 +25144,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Plastic",
 		contestType: "Tough",
+		isNonstandard: "Future",
 	},
 	plasticblaze: {
 		num: 551,
@@ -25154,6 +25162,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Plastic",
 		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
 	fadereflection: {
 		num: 223,
@@ -25171,6 +25180,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Glass",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	recycleray: {
 		num: 94,
@@ -25190,6 +25200,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Plastic",
 		contestType: "Clever",
+		isNonstandard: "Future",
 	},
 	spectresabre: {
 		num: 530,
@@ -25206,6 +25217,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ghost",
 		maxMove: {basePower: 150},
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	skummray: {
 		num: 161,
@@ -25234,6 +25246,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "???",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	hyperzone: {
 		num: 1001,
@@ -25387,5 +25400,50 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 		target: "normal",
 		type: "Bug",
+	},
+	qualityrip: {
+		num: 222,
+		accuracy: 100,
+		basePower: 0,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Quality Rip",
+		pp: 30,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, nonsky: 1, sound: 1},
+		onModifyMove(move, pokemon) {
+			const i = this.random(100);
+			if (i < 5) {
+				move.magnitude = 4;
+				move.basePower = 10;
+			} else if (i < 15) {
+				move.magnitude = 5;
+				move.basePower = 30;
+			} else if (i < 35) {
+				move.magnitude = 6;
+				move.basePower = 50;
+			} else if (i < 65) {
+				move.magnitude = 7;
+				move.basePower = 70;
+			} else if (i < 85) {
+				move.magnitude = 8;
+				move.basePower = 90;
+			} else if (i < 95) {
+				move.magnitude = 9;
+				move.basePower = 110;
+			} else {
+				move.magnitude = 10;
+				move.basePower = 150;
+			}
+		},
+		onUseMoveMessage(pokemon, target, move) {
+			this.add('-activate', pokemon, 'move: Quality Rip', move.magnitude);
+		},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Electric",
+		zMove: {basePower: 140},
+		maxMove: {basePower: 140},
+		contestType: "Tough",
 	},
 };
