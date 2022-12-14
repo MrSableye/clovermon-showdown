@@ -24963,7 +24963,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 				if (move.type === 'Plastic' && attacker.isGrounded()) {
 					this.debug('plastic terrain boost');
-					return this.chainModify([5325, 4096]);
+					return this.chainModify([1.5]);
 				}
 			},
 			onFieldStart(field, source, effect) {
