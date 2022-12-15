@@ -493,6 +493,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	qualityrip: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	terrainpulse: {
 		num: 805,
 		accuracy: 100,

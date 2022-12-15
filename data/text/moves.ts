@@ -7897,5 +7897,15 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Mushroom Shot",
 		shortDesc: "Doubles in power if opponent partially trapped. During Gravity: 1.5x power. Hits 4 times",
 	},
+	qualityrip: {
+		name: "Quality Rip",
+		desc: "The power of this move varies; 5% chances for 10 and 150 power, 10% chances for 30 and 110 power, 20% chances for 50 and 90 power, and 30% chance for 70 power. Damage doubles if the target is using Thunder Drop.",
+		shortDesc: "Hits adjacent Pokemon. Power varies; 2x on Thunder Drop.",
+		gen4: {
+			desc: "The power of this move varies. 5% chances for 10 and 150 power, 10% chances for 30 and 110 power, 20% chances for 50 and 90 power, and 30% chance for 70 power. Power doubles if the target is using Thunder Drop.",
+		},
+
+		activate: "  Quality Rip [NUMBER]!",
+	},
 
 };

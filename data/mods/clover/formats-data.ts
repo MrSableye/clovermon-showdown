@@ -4906,7 +4906,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	hulkan: {
 		inherit: true,
-		tier: "NU",
+		tier: "UU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"hulkup",
