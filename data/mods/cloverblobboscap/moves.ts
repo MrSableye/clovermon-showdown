@@ -497,6 +497,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	concussion: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shootingstar: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	terrainpulse: {
 		num: 805,
 		accuracy: 100,

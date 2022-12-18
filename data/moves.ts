@@ -24633,8 +24633,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	nosedive: {
 		num: 354,
-		accuracy: 100,
-		basePower: 140,
+		accuracy: 95,
+		basePower: 120,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Nosedive",
@@ -25445,5 +25445,45 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {basePower: 140},
 		maxMove: {basePower: 140},
 		contestType: "Tough",
+	},
+	concussion: {
+		num: 200,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Concussion",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
+		secondary: null,
+		isNonstandard: "Future",
+		target: "randomNormal",
+		type: "Psychic",
+		contestType: "Cool",
+	},
+	shootingstar: {
+		num: 394,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Shooting Star",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [20, 100],
+		target: "normal",
+		isNonstandard: "Future",
+		selfSwitch: true,
+		secondary: null,
+		type: "Fairy",
+		contestType: "Cool",
 	},
 };

@@ -37002,7 +37002,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Blobbos-Classy",
 		baseSpecies: "Blobbos",
 		forme: "Classy",
-		types: ["Ice", "Dark"],
+		types: ["Dark", "Ice"],
 		gender: "N",
 		baseStats: {
 			hp: 90,
