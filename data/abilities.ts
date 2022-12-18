@@ -7426,7 +7426,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	paperpower: {
 		onBasePowerPriority: 23,
 		onBasePower(basePower, attacker, defender, move) {
-			if (move.flags['punch']) {
+			if (move.flags['kick']) {
 				this.debug('Paper Power boost');
 				return this.chainModify([1.5]);
 			}
