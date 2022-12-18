@@ -38690,8 +38690,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {
 			hp: 105,
 			atk: 138,
-			def: 120,
-			spa: 50,
+			def: 125,
+			spa: 48,
 			spd: 100,
 			spe: 42,
 		},
@@ -38970,8 +38970,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseSpecies: "Vandash",
 		forme: "Mega",
 		types: [
-			"Grass",
 			"Dark",
+			"Grass",
 		],
 		genderRatio: {
 			M: 0.5,
