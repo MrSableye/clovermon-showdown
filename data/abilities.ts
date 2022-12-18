@@ -5087,161 +5087,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	whiteflames: {
 		name: "White Flames",
 		onSourceModifyDamage(damage, source, target, move) {
-			const scaryMons = [
-				'arabomb',
-				'iguallah',
-				'lizakbar',
-				'squirrap',
-				'gampster',
-				'vandash',
-				'ebolable',
-				'monstrap',
-				'elephas',
-				'chompest',
-				'fishnism',
-				'sjwhale',
-				'flowre',
-				'florious',
-				'juarecito',
-				'ponchito',
-				'somboludo',
-				'euphoreal',
-				'armowite',
-				'ogrelord',
-				'chantruth',
-				'inbitween',
-				'geigh',
-				'jarape',
-				'spilefree',
-				'oilslam',
-				'isissin',
-				'felimbus',
-				'deathorus',
-				'yedoom',
-				'mimimie',
-				'flameboyan',
-				'ballacle',
-				'barbarkley',
-				'kekroach',
-				'rekroach',
-				'anonymouse',
-				'embortion',
-				'premantom',
-				'vaultevour',
-				'dragking',
-				'oreon',
-				'jewipede',
-				'catikillar',
-				'tikoon',
-				'oogabuga',
-				'ebining',
-				'emplyin',
-				'upbote',
-				'upbeddit',
-				'diobat',
-				'warudio',
-				'mehndior',
-				'tunakking',
-				'hopault',
-				'araketsu',
-				'senketula',
-				'grimdak',
-				'shroofle',
-				'typobop',
-				'yeerex',
-				'preasu',
-				'undastand',
-				'signot',
-				'reagain',
-				'lankong',
-				'ballankey',
-				'funnedong',
-				'boarnograf',
-				'pyongnome',
-				'gangnome',
-			];
-
-			if (scaryMons.includes(source.baseSpecies.id)) {
+			if (source.species.tags.includes('Inferior')) {
 				this.add('-ability', target, 'White Flames');
 				return this.chainModify(0.5);
 			}
 		},
 		onBasePower(basePower, pokemon, target, move) {
-			const scaryMons = [
-				'arabomb',
-				'iguallah',
-				'lizakbar',
-				'squirrap',
-				'gampster',
-				'vandash',
-				'ebolable',
-				'monstrap',
-				'elephas',
-				'chompest',
-				'fishnism',
-				'sjwhale',
-				'flowre',
-				'florious',
-				'juarecito',
-				'ponchito',
-				'somboludo',
-				'euphoreal',
-				'armowite',
-				'ogrelord',
-				'chantruth',
-				'inbitween',
-				'geigh',
-				'jarape',
-				'spilefree',
-				'oilslam',
-				'isissin',
-				'felimbus',
-				'deathorus',
-				'yedoom',
-				'mimimie',
-				'flameboyan',
-				'ballacle',
-				'barbarkley',
-				'kekroach',
-				'rekroach',
-				'anonymouse',
-				'embortion',
-				'premantom',
-				'vaultevour',
-				'dragking',
-				'oreon',
-				'jewipede',
-				'catikillar',
-				'tikoon',
-				'oogabuga',
-				'ebining',
-				'emplyin',
-				'upbote',
-				'upbeddit',
-				'diobat',
-				'warudio',
-				'mehndior',
-				'tunakking',
-				'hopault',
-				'araketsu',
-				'senketula',
-				'grimdak',
-				'shroofle',
-				'typobop',
-				'yeerex',
-				'preasu',
-				'undastand',
-				'signot',
-				'reagain',
-				'lankong',
-				'ballankey',
-				'funnedong',
-				'boarnograf',
-				'pyongnome',
-				'gangnome',
-			];
-
-			if (scaryMons.includes(target.baseSpecies.id)) {
+			if (target.species.tags.includes('Inferior')) {
 				this.add('-ability', pokemon, 'White Flames');
 				return this.chainModify(1.2);
 			}
@@ -7001,7 +6853,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return false;
 			}
 		},
-
 		isPermanent: true,
 		isNonstandard: "Future",
 		name: "As One (Blobbos-Remembered)",
@@ -7126,7 +6977,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4.5,
 		num: 3,
 	},
-
 	armorplate: {
 		onModifyTypePriority: -1,
 		onModifyType(move, pokemon) {
@@ -7146,15 +6996,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 		rating: 3,
 	},
-
 	asonehorse: {
 		onPreStart(pokemon) {
 			this.add('-ability', pokemon, 'Grim Neigh');
 			this.add('-ability', pokemon, 'Chilling Neigh');
-			this.add('-ability', pokemon, 'Chilling Striker');
+			this.add('-ability', pokemon, 'Striker');
 			this.effectState.unnerved = true;
 		},
-
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
 				this.boost({spa: length}, source, source, this.dex.abilities.get('grimneigh'));
@@ -7180,7 +7028,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "As One (Horse)",
 		isNonstandard: "Future",
 		rating: 3.5,
-
 	},
 	copypower: {
 		onSourceAfterFaint(length, target, source, effect) {
@@ -7228,6 +7075,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Dark Thoughts",
 		rating: 2,
 		num: 143,
+		isNonstandard: "Future",
 	},
 	gmaxcomatose: {
 		onSetStatus(status, target, source, effect) {
@@ -7306,6 +7154,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Hyperborean Arctic",
 		rating: 4.5,
 		num: 189,
+		isNonstandard: "Future",
 	},
 
 	infection: {
@@ -7485,6 +7334,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Costume",
 		rating: 3.5,
 		num: 209,
+		isNonstandard: "Future",
 	},
 	reconstruct: {
 		name: "Reconstruct",
@@ -7534,7 +7384,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	plasticsurge: {
 		onStart(source) {
-			this.field.setTerrain('recycleterrain');
+			this.field.setTerrain('plasticterrain');
 		},
 		name: "Plastic Surge",
 		rating: 4,
@@ -7555,7 +7405,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			];
 			if (beamMoves.includes(move.id)) {
 				this.debug('Thats Cap boost');
-				return this.chainModify(1.5);
+				return this.chainModify(2);
 			}
 		},
 		name: "That's Cap",
@@ -7571,11 +7421,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Radioactive",
 		rating: 2.5,
 		num: 160,
+		isNonstandard: "Future",
 	},
 	paperpower: {
 		onBasePowerPriority: 23,
 		onBasePower(basePower, attacker, defender, move) {
-			if (move.flags['punch']) {
+			if (move.flags['kick']) {
 				this.debug('Paper Power boost');
 				return this.chainModify([1.5]);
 			}
@@ -7805,6 +7656,120 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Supermentum",
 		rating: 3,
+		isNonstandard: "Future",
+	},
+
+	terraform: {
+		name: "Terraform",
+		onBeforeMove(source, target, move) {
+			if (move.category === 'Status') return;
+			const grassyMoves = ['earthpower', 'highhorsepower'];
+
+			if ((grassyMoves.includes(move.id) || move.type === 'Grass')) {
+				this.field.setTerrain('grassyterrain');
+			} else if (move.type === 'Electric') {
+				this.field.setTerrain('electricterrain');
+			} else if (move.type === 'Psychic') {
+				this.field.setTerrain('psychicterrain');
+			} else if (move.type === 'Fairy') {
+				this.field.setTerrain('mistyterrain');
+			} else if (move.type === 'Plastic') {
+				this.field.setTerrain('plasticterrain');
+			} else if (move.type === 'Normal' && !['terrainpulse', 'naturepower', 'secretpower'].includes(move.id)) {
+				this.field.clearTerrain();
+			}
+		},
+		onStart(pokemon) {
+			if (this.field.terrain) {
+				pokemon.addVolatile('terraform');
+			} else {
+				const types = pokemon.baseSpecies.types;
+				if (pokemon.getTypes().join() === types.join() || !pokemon.setType(types)) return;
+				this.add('-start', pokemon, 'typechange', types.join('/'), '[from] ability: Terraform');
+				this.hint("Transform Terraform changes you to your original un-transformed types.");
+			}
+		},
+		onAnyTerrainStart() {
+			const pokemon = this.effectState.target;
+			delete pokemon.volatiles['terraform'];
+			pokemon.addVolatile('terraform');
+		},
+		onEnd(pokemon) {
+			delete pokemon.volatiles['terrafrom'];
+		},
+		condition: {
+			onStart(pokemon) {
+				let newType;
+				switch (this.field.terrain) {
+				case 'electricterrain':
+					newType = 'Electric';
+					break;
+				case 'grassyterrain':
+					newType = 'Grass';
+					break;
+				case 'mistyterrain':
+					newType = 'Fairy';
+					break;
+				case 'psychicterrain':
+					newType = 'Psychic';
+					break;
+				case 'plasticterrain':
+					newType = 'Plastic';
+					break;
+				}
+
+				if (!newType || pokemon.getTypes().join() === newType || !pokemon.setType(newType)) return;
+				this.add('-start', pokemon, 'typechange', newType, '[from] ability: Terraform');
+			},
+			onUpdate(pokemon) {
+				if (!this.field.terrain) {
+					const types = pokemon.species.types;
+					if (pokemon.getTypes().join() === types.join() || !pokemon.setType(types)) return;
+					this.add('-activate', pokemon, 'ability: Terraform');
+					this.add('-end', pokemon, 'typechange', '[silent]');
+					pokemon.removeVolatile('terraform');
+				}
+			},
+		},
+		isNonstandard: "Future",
+	},
+	fbomb: {
+		name: "F Bomb",
+		onStart(source) {
+			for (const pokemon of this.getAllActive()) {
+				this.add('-ability', pokemon, 'Stench', '[from] ability: F Bomb', '[of] ' + source);
+				pokemon.setAbility('stench');
+				pokemon.addVolatile('stinkbomb');
+			}
+			for (const pokemon of this.getAllActive()) {
+				if (pokemon === source) continue;
+				this.add('-start', pokemon, 'typechange', 'Normal', '[from] ability: Fuk U', '[of] ' + source);
+				pokemon.setType('Normal');
+			}
+		},
+		isNonstandard: "Future",
+	},
+	deathstranding: {
+		name: "Death Stranding",
+		onStart() {
+			this.field.setWeather('timefall');
+		},
+		isNonstandard: "Future",
+	},
+	aphenphosmphobia: {
+		name: "Aphenphosmphobia",
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.flags['contact']) {
+				return this.chainModify(2);
+			}
+		},
+		isNonstandard: "Future",
+	},
+	chiralnetwork: {
+		name: "Chiral Network",
+		onStart(pokemon) {
+			pokemon.side.addSlotCondition(pokemon, 'bridge');
+		},
 		isNonstandard: "Future",
 	},
 };

@@ -32,7 +32,10 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Gen 8 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+		banlist: [
+			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
+			'Condoom + Unaware', 'Potarded + Unaware', 'Wheygle + Unburden',
+		],
 	},
 	{
 		name: '[Gen 8 Clover Only] Ubers',
@@ -206,7 +209,6 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Festive Random Battle',
 		mod: 'clover',
 		team: 'randomFestive',
-		searchShow: false,
 		ruleset: ['Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 		onBattleStart() {
 			this.field.setWeather('hail', this.getAllPokemon()[0]);
@@ -331,7 +333,7 @@ export const Formats: FormatList = [
 			'Sketch Gen 8 Moves',
 		],
 		banlist: [
-			'Unjoy', 'Chancer',
+			'Unjoy', 'Chancer', 'Tarditank', 'Flameboyan', 'Eviolite', 'Seamapan',
 			'Pikotton', 'Pretzely', 'Urswine', 'Masdawg', 'Pasdawg', 'Uber > 1', 'AG ++ Uber > 1', 'Arena Trap', 'Huge Power',
 			'Moody', 'Pure Power', 'Shadow Tag', 'Swift Swim', 'Bright Powder', 'King\'s Rock', 'Lax Incense', 'Quick Claw',
 			'Baton Pass', 'Wonder Guard',
@@ -364,20 +366,24 @@ export const Formats: FormatList = [
 		onModifySpecies(species, target, source) {
 			if (source || !target?.side) return;
 			const god = target.side.team.find(set => {
-				let godSpecies = this.dex.species.get(set.species);
-				const isNatDex = this.format.ruleTable?.has('standardnatdex');
-				const validator = this.dex.formats.getRuleTable(
-					this.dex.formats.get(`gen${isNatDex && this.gen < 8 ? 8 : this.gen}${isNatDex ? 'nationaldex' : 'ou'}`)
-				);
-				if (this.toID(set.ability) === 'powerconstruct') {
-					return true;
-				}
-				if (set.item) {
+				let setSpecies = this.dex.species.get(set.species);
+				if (typeof setSpecies.battleOnly === 'string') setSpecies = this.dex.species.get(setSpecies.battleOnly);
+				if (set.item && this.dex.items.get(set.item).megaStone) {
 					const item = this.dex.items.get(set.item);
-					if (item.megaEvolves === set.species) godSpecies = this.dex.species.get(item.megaStone);
+					if (item.megaEvolves === setSpecies.baseSpecies) {
+						setSpecies = this.dex.species.get(item.megaStone);
+					}
 				}
-				const isBanned = validator.isBannedSpecies(godSpecies);
-				return isBanned;
+				if (this.ruleTable.has('standardnatdex')) {
+					const format = this.dex.formats.getRuleTable(this.dex.formats.get('gen8nationaldex'));
+					if (format.isBannedSpecies(setSpecies)) return true;
+				} else {
+					if (['ag', 'uber'].includes(this.toID(setSpecies.tier)) || this.toID(set.ability) === 'powerconstruct') {
+						return true;
+					}
+				}
+
+				return false;
 			}) || target.side.team[0];
 			const stat = Dex.stats.ids()[target.side.team.indexOf(target.set)];
 			const newSpecies = this.dex.deepClone(species);

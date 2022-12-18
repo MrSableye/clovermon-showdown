@@ -104,6 +104,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	simionachzen: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	krissy: {
 		inherit: true,
 		isNonstandard: null,

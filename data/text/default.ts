@@ -371,4 +371,16 @@ export const DefaultText: {[k: string]: DefaultText} = {
 	crash: {
 		damage: "  [POKEMON] kept going and crashed!",
 	},
+
+	timefall: {
+		weatherName: "Timefall",
+		start: "  Chiralium precipitation started to fall!",
+		end: "  The timefall stopped.",
+		upkeep: "  (Timefall continues.)",
+	},
+	bridge: {
+		start: "  [POKEMON] is working on an addition to the Chiral Network!",
+		fail: "  The new addition to the Chiral Network has been abandoned.",
+		end: "  [POKEMON] finished the addition to the Chiral Network!",
+	},
 };

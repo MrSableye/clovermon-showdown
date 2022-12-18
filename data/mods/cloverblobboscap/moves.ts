@@ -329,7 +329,179 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	slipturn: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	helldive: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hyperzone: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	freeballoonday: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	spectresabre: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bloodshot: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	malicepowder: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mushroomshot: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	overdose: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	highjumpsaw: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	stingingrage: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	afteryou: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bilebite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bestow: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	downpour: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	embargo: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	firepledge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fling: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	freezyfrost: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	grasspledge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	energyburst: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	glitzyglow: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	happyhour: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	holdhands: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	icestorm: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	instruct: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	magneticflux: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	paleowave: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	poisonivy: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	quash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	skydrop: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sappyseed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	telekinesis: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	waterpledge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	glassing: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	meltedplastic: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	recycleray: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	plasticterrain: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fadereflection: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	plasticblaze: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	coldcutter: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	qualityrip: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	concussion: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shootingstar: {
 		inherit: true,
 		isNonstandard: null,
 	},

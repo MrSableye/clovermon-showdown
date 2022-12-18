@@ -7930,4 +7930,60 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	wackite: {
+		name: "Wackite",
+		spritenum: 589,
+		megaStone: "Blobbos-Wack-Mega",
+		megaEvolves: "Blobbos-Wack",
+		itemUser: ["Blobbos-Wack"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	zeroite: {
+		name: "Zeroite",
+		spritenum: 616,
+		megaStone: "Blobbos-Zero-Mega",
+		megaEvolves: "Blobbos-Zero",
+		itemUser: ["Blobbos-Zero"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	plasticgem: {
+		name: "Plastic Gem",
+		spritenum: 53,
+		isGem: true,
+		onSourceTryPrimaryHit(target, source, move) {
+			if (target === source || move.category === 'Status') return;
+			if (move.type === 'Plastic' && source.useItem()) {
+				source.addVolatile('gem');
+			}
+		},
+		num: 558,
+		gen: 5,
+		isNonstandard: "Future",
+	},
+	glassgem: {
+		name: "Glass Gem",
+		spritenum: 53,
+		isGem: true,
+		onSourceTryPrimaryHit(target, source, move) {
+			if (target === source || move.category === 'Status') return;
+			if (move.type === 'Glass' && source.useItem()) {
+				source.addVolatile('gem');
+			}
+		},
+		num: 558,
+		gen: 5,
+		isNonstandard: "Future",
+	},
 };

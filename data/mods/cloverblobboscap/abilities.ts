@@ -16,6 +16,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	pastelveil: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	/* Modified Abilities */
 	baddreams: {
 		inherit: true,
@@ -278,6 +282,90 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	shadowaura: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ultraego: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ultrainstinct: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	artist: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hyperzone: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	paperpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	thatscap: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	drenchedbulb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	intoxicate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	radioactive: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	limblauncher: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	muhmentum: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	plasticsurge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	turbine: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	balance: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	presentpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	reconstruct: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	terraform: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	deathstranding: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	aphenphosmphobia: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	chiralnetwork: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	breakdown: {
 		inherit: true,
 		isNonstandard: null,
 	},

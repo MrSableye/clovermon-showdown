@@ -24633,8 +24633,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	nosedive: {
 		num: 354,
-		accuracy: 100,
-		basePower: 140,
+		accuracy: 95,
+		basePower: 120,
 		category: "Physical",
 		isNonstandard: "Future",
 		name: "Nosedive",
@@ -24919,6 +24919,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ghost",
 		zMove: {boost: {atk: 1}},
 		contestType: "Clever",
+		isNonstandard: "Future",
 	},
 	energyburst: {
 		num: 406,
@@ -24933,18 +24934,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "any",
 		type: "Normal",
 		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
-
-	recycleterrain: {
+	plasticterrain: {
 		num: 580,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		name: "Recycle Terrain",
+		name: "Plastic Terrain",
 		pp: 10,
 		priority: 0,
 		flags: {nonsky: 1},
-		terrain: 'recycleterrain',
+		terrain: 'plastictterrain',
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
@@ -24962,7 +24963,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 				if (move.type === 'Plastic' && attacker.isGrounded()) {
 					this.debug('plastic terrain boost');
-					return this.chainModify([5325, 4096]);
+					return this.chainModify([1.5]);
 				}
 			},
 			onFieldStart(field, source, effect) {
@@ -24994,6 +24995,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Plastic",
 		zMove: {boost: {def: 1}},
 		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
 	highjumpsaw: {
 		num: 136,
@@ -25006,12 +25008,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1, punch: 1},
 
 		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Grass', type) + this.dex.getEffectiveness('Steel', type);
+			return typeMod + this.dex.getEffectiveness('Steel', type);
 		},
 		secondary: null,
 		target: "normal",
-		type: "Water",
+		type: "Grass",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	stingingrage: {
 		num: 153,
@@ -25030,8 +25033,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Bug",
 		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
-
 	malicepowder: {
 		num: 298,
 		accuracy: 100,
@@ -25052,6 +25055,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Bug",
 		zMove: {boost: {spa: 1}},
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	overdose: {
 		num: 457,
@@ -25067,6 +25071,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Poison",
 		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
 	bloodshot: {
 		num: 161,
@@ -25093,6 +25098,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "???",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	glassing: {
 		num: 487,
@@ -25138,6 +25144,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Plastic",
 		contestType: "Tough",
+		isNonstandard: "Future",
 	},
 	plasticblaze: {
 		num: 551,
@@ -25155,6 +25162,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Plastic",
 		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
 	fadereflection: {
 		num: 223,
@@ -25172,6 +25180,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Glass",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	recycleray: {
 		num: 94,
@@ -25191,6 +25200,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Plastic",
 		contestType: "Clever",
+		isNonstandard: "Future",
 	},
 	spectresabre: {
 		num: 530,
@@ -25207,6 +25217,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ghost",
 		maxMove: {basePower: 150},
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	skummray: {
 		num: 161,
@@ -25235,6 +25246,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "???",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	hyperzone: {
 		num: 1001,
@@ -25363,7 +25375,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Dark",
 	},
-
 	mushroomshot: {
 		num: 788,
 		accuracy: 100,
@@ -25373,7 +25384,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		multihit: 4,
-		flags: {bullet: 1, powder: 1, protect: 1, mirror: 1},
+		flags: {bullet: 1, protect: 1, mirror: 1},
 		onBasePower(basePower, source, target) {
 			if (this.field.getPseudoWeather('gravity') && (target.volatiles['partiallytrapped'])) {
 				return this.chainModify(3);
@@ -25389,5 +25400,90 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 		target: "normal",
 		type: "Bug",
+	},
+	qualityrip: {
+		num: 222,
+		accuracy: 100,
+		basePower: 0,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Quality Rip",
+		pp: 30,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, nonsky: 1, sound: 1},
+		onModifyMove(move, pokemon) {
+			const i = this.random(100);
+			if (i < 5) {
+				move.magnitude = 4;
+				move.basePower = 10;
+			} else if (i < 15) {
+				move.magnitude = 5;
+				move.basePower = 30;
+			} else if (i < 35) {
+				move.magnitude = 6;
+				move.basePower = 50;
+			} else if (i < 65) {
+				move.magnitude = 7;
+				move.basePower = 70;
+			} else if (i < 85) {
+				move.magnitude = 8;
+				move.basePower = 90;
+			} else if (i < 95) {
+				move.magnitude = 9;
+				move.basePower = 110;
+			} else {
+				move.magnitude = 10;
+				move.basePower = 150;
+			}
+		},
+		onUseMoveMessage(pokemon, target, move) {
+			this.add('-activate', pokemon, 'move: Quality Rip', move.magnitude);
+		},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Electric",
+		zMove: {basePower: 140},
+		maxMove: {basePower: 140},
+		contestType: "Tough",
+	},
+	concussion: {
+		num: 200,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Concussion",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
+		secondary: null,
+		isNonstandard: "Future",
+		target: "randomNormal",
+		type: "Psychic",
+		contestType: "Cool",
+	},
+	shootingstar: {
+		num: 394,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Shooting Star",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [20, 100],
+		target: "normal",
+		isNonstandard: "Future",
+		selfSwitch: true,
+		secondary: null,
+		type: "Fairy",
+		contestType: "Cool",
 	},
 };

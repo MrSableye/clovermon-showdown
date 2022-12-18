@@ -948,5 +948,67 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-sideend', side, 'Flashbang');
 		},
 	},
+	timefall: {
+		name: 'Timefall',
+		effectType: 'Weather',
+		duration: 5,
+		onWeather(target) {
+			let statName = 'atk';
+			let bestStat = 0;
+			let s: StatIDExceptHP;
+			for (s in target.storedStats) {
+				if (target.storedStats[s] > bestStat) {
+					statName = s;
+					bestStat = target.storedStats[s];
+				}
+			}
+			this.boost({[statName]: 1}, target);
+			this.damage(target.baseMaxhp / 8);
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Timefall', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldStart() {
+			this.add('-weather', 'Timefall');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	bridge: {
+		name: 'Bridge',
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'bridge');
+		},
+		onSwitchIn(pokemon) {
+			if (this.effectState.boosts) {
+				if (pokemon.hasAbility('chiralnetwork')) {
+					this.add('-end', pokemon, 'bridge');
+					this.boost(this.effectState.boosts);
+				} else {
+					this.add('-fail', pokemon, 'bridge');
+				}
 
+				pokemon.side.removeSlotCondition(pokemon, 'bridge');
+			} else if (!pokemon.hasAbility('chiralnetwork')) {
+				this.add('-start', pokemon, 'bridge');
+			}
+		},
+		onSwitchOut(pokemon) {
+			if (!pokemon.hasAbility('chiralnetwork')) {
+				const boosts: SparseBoostsTable = {};
+
+				let i: BoostID;
+				for (i in pokemon.boosts) {
+					if (pokemon.boosts[i] > 0) {
+						boosts[i] = pokemon.boosts[i];
+					}
+				}
+
+				this.effectState.boosts = boosts;
+			}
+		},
+	},
 };

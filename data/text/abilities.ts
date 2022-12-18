@@ -2360,7 +2360,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	eyeofblobbos: {
 		name: "Eye of Blobbos",
-		shortDesc: "If Blobbos-Eye, goes into Eye-Mouth Mode.",
+		shortDesc: "If Blobbos-Eye, at end of turn changes to Eye-Mouth mode if > 1/2 max HP",
 
 		transform: "You feel a chill down your spine!",
 		transformEnd: "Blobbos-Eye-Mouth has calmed down!",
@@ -2446,5 +2446,25 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Muhmentum",
 		shortDesc: "Switches out after using offensive moves.",
 	},
-
+	terraform: {
+		name: "Terrform",
+		desc: "Changes terrain when using certain moves relating to terrain.",
+		shortDesc: "Changes terrain to benefit certain moves.",
+	},
+	fbomb: {
+		name: "F Bomb",
+		shortDesc: "Sets all mons abilities to Stench. Makes all attacks Poison-type for 1 turn. Makes everyone else Normal",
+	},
+	deathstranding: {
+		name: "Death Stranding",
+		shortDesc: "Sets Timefall. All Pokemon on the field lose 1/8 HP per turn and boost their highest stat by 1 stage",
+	},
+	aphenphosmphobia: {
+		name: "Aphenphosmphobia",
+		shortDesc: "This Pokemon receives 2x damage from contact attacks.",
+	},
+	chiralnetwork: {
+		name: "Chiral Network",
+		shortDesc: "Creates a bridge. If the next Pokemon that switches out switches back to a Pokemon with Chiral Network, it gets its positive boosts.",
+	},
 };

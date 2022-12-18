@@ -7347,7 +7347,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	closeblobmat: {
 		name: "Close Blobmat",
-		shortDesc: "Lowers the user's Defense and Sp. Def by 6, and Speed by 1.",
+		shortDesc: "Lowers the user's Defense, Sp. Def, and Speed by 1.",
 	},
 	faedozer: {
 		name: "Fae Dozer",
@@ -7827,7 +7827,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	highjumpsaw: {
 		name: "High Jump Saw",
-		shortDesc: "The user jumps up high, spinning its fists and feet like a buzzsaw",
+		shortDesc: "The user jumps up high, spinning its fists and feet like a buzzsaw. Dual Type Steel",
 	},
 	stingingrage: {
 		name: "Stinging Rage",
@@ -7835,7 +7835,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	malicepowder: {
 		name: "Malice Powder",
-		shortDesc: "Confuses everyone",
+		shortDesc: "Confuses everyone, and it infestates those not immune to powder moves",
 	},
 	spectresabre: {
 		name: "Spectre Sabre",
@@ -7895,7 +7895,26 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mushroomshot: {
 		name: "Mushroom Shot",
-		shortDesc: "Doubles in power if opponent partially trapped. During Gravity: 1.5x power.",
+		shortDesc: "Doubles in power if opponent partially trapped. During Gravity: 1.5x power. Hits 4 times",
 	},
+	qualityrip: {
+		name: "Quality Rip",
+		desc: "The power of this move varies; 5% chances for 10 and 150 power, 10% chances for 30 and 110 power, 20% chances for 50 and 90 power, and 30% chance for 70 power. Damage doubles if the target is using Thunder Drop.",
+		shortDesc: "Hits adjacent Pokemon. Power varies; 2x on Thunder Drop.",
+		gen4: {
+			desc: "The power of this move varies. 5% chances for 10 and 150 power, 10% chances for 30 and 110 power, 20% chances for 50 and 90 power, and 30% chance for 70 power. Power doubles if the target is using Thunder Drop.",
+		},
 
+		activate: "  Quality Rip [NUMBER]!",
+	},
+	concussion: {
+		name: "Concussion",
+		desc: "The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pokemon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
+		shortDesc: "Lasts 2-3 turns. Confuses the user afterwards.",
+	},
+	shootingstar: {
+		name: "Shooting Star",
+		shortDesc: "20% recoil, user switches out.",
+		switchOut: "#uturn",
+	},
 };

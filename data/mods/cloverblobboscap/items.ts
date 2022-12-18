@@ -35,6 +35,14 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	wackite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	zeroite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	blobbosmikiumz: {
 		inherit: true,
 		isNonstandard: null,
@@ -49,4 +57,13 @@ export const Items: {[k: string]: ModdedItemData} = {
 		},
 		itemUser: ["Masdawg", "Pasdawg", "Naughtycoot", "Blobbos-Skeleton"],
 	},
+	plasticgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	glassgem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+
 };

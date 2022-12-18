@@ -792,6 +792,114 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	fontabab: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabac: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabaco: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabad: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabaf: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabafa: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabafit: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabag: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabah: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabaint: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabajp: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabak: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabaout: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabapol: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabar9k: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontaba5: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabas4s: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabasoc: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabasp: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabatrv: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabatv: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabav: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabavg: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabavp: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabavr: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabax: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fontabaz: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	floconut: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -1633,6 +1741,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	simionach: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	simionachzen: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -2814,6 +2926,136 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobbosdustmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshologram: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdarkmatter: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobbosnoke: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosclassy: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosui: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosue: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosartist: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmushroom: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboswack: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboswackmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscup: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdelinquent: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboszero: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobboszeromega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobboshardcore: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospaper: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscap: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscalamity: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmarx: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdoctor: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosnegatandor: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosplok: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbee: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosshoreline: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmuhmentum: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosstrand: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
