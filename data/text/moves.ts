@@ -7907,5 +7907,20 @@ export const MovesText: {[k: string]: MoveText} = {
 
 		activate: "  Quality Rip [NUMBER]!",
 	},
-
+	dousingflame: {
+		name: "Dousing Flame",
+		shortDesc: "Super Effective on Fire",
+	},
+	cursedblade: {
+		name: "Cursed Blade",
+		shortDesc: "30% chance to inflict Curse",
+	},
+	riptide: {
+		name: "Riptide",
+		shortDesc: "Traps and damages the target for 4-5 turns",
+	},
+	secretstrength: {
+		name: "Secret Strength",
+		shortDesc: "Type varies based on the user's secondary type.",
+	},
 };

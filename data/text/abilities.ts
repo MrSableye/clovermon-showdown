@@ -2467,4 +2467,16 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Chiral Network",
 		shortDesc: "Creates a bridge. If the next Pokemon that switches out switches back to a Pokemon with Chiral Network, it gets its positive boosts.",
 	},
+	fishermansbait: {
+		name: "Fisherman's Ruse",
+		shortDesc: "Prankster + Lightningrod + STAB on Water + Bug SE on Steel",
+	},
+	masterbait: {
+		name: "Masterbait",
+		shortDesc: "This Pokemon's Dark-type moves become Bug type and have 1.2x power.",
+	},
+	captchahorni: {
+		name: "Captcha: Horni",
+		shortDesc: "This Pokemon's horn moves have 1.5x power and trap for a turn.",
+	},
 };
