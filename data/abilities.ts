@@ -7447,14 +7447,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	artist: {
-		onAfterMoveSecondarySelf(source, target, move) {
+		onAfterMove(source, target, move) {
 			if (move.hasBounced || move.isFutureMove || move.sourceEffect === 'snatch') return;
 			const type = move.type;
-			if (type && type !== '???' && source.getTypes().join() !== type) {
-				if (!source.setType(type)) return;
+			if (type && type !== '???' && target.getTypes().join() !== type) {
+				if (!target.setType(type)) return;
 				this.add('-start', target, 'typechange', type, '[from] ability: Artist');
 			}
 		},
+		
+		
 		name: "Artist",
 		rating: 0,
 		num: 16,
@@ -7737,15 +7739,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "F Bomb",
 		onStart(source) {
 			for (const pokemon of this.getAllActive()) {
-				this.add('-ability', pokemon, 'Stench', '[from] ability: F Bomb', '[of] ' + source);
-				pokemon.setAbility('stench');
-				pokemon.addVolatile('stinkbomb');
-			}
-			for (const pokemon of this.getAllActive()) {
 				if (pokemon === source) continue;
 				this.add('-start', pokemon, 'typechange', 'Normal', '[from] ability: Fuk U', '[of] ' + source);
 				pokemon.setType('Normal');
 			}
+			for (const pokemon of this.getAllActive()) {
+				this.add('-ability', pokemon, 'Stench', '[from] ability: F Bomb', '[of] ' + source);
+				pokemon.setAbility('stench');
+				pokemon.addVolatile('stinkbomb');
+			}
+			
 		},
 		isNonstandard: "Future",
 	},
@@ -7770,6 +7773,125 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart(pokemon) {
 			pokemon.side.addSlotCondition(pokemon, 'bridge');
 		},
+		isNonstandard: "Future",
+	},
+	masterbait: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Dark' && !noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
+				move.type = 'Bug';
+				move.pixilateBoosted = true;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.pixilateBoosted) return this.chainModify([4915, 4096]);
+		},
+		name: "Masterbait",
+		rating: 4,
+		num: 182,
+	},
+	fishermansruse: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (['Water'].includes(move.type)) {
+				this.debug('Ruse Power boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (['Water'].includes(move.type)) {
+				this.debug('Ruse Power boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.category === 'Status') {
+				move.pranksterBoosted = true;
+				return priority + 1;
+			}
+		},
+		onAnyEffectiveness(typemod, target, type, move) {
+			const degradationUser = this.effectState.target;
+
+			if (degradationUser !== this.activePokemon) return;
+
+			if (move.type === 'Bug' && ['Steel'].includes(type)) {
+				return 1;
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Electric') {
+				this.add('-message', 'Blobbos-Bait used its hook as a lightningrod!');
+				if (!this.boost({spa: 1})) {
+					
+					this.add('-immune', target, '[from] ability: Lightning Rod');
+					
+				}
+				return null;
+			}
+		},
+		onAnyRedirectTarget(target, source, source2, move) {
+			if (move.type !== 'Electric' || ['firepledge', 'grasspledge', 'waterpledge'].includes(move.id)) return;
+			const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
+			if (this.validTarget(this.effectState.target, source, redirectTarget)) {
+				if (move.smartTarget) move.smartTarget = false;
+				
+				if (this.effectState.target !== target) {
+					
+					this.add('-activate', this.effectState.target, 'ability: Lightning Rod');
+					
+				}
+				return this.effectState.target;
+			}
+		},
+		name: "Fisherman's Ruse",
+		rating: 5,
+		isNonstandard: "Future",
+	},
+	captchahorni: {
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			const hornMoves = [
+				'megahorn',
+				'hornattack',
+				'smartstrike',
+				'hornleech',
+				'obsidianhorn',
+			];
+			if (hornMoves.includes(move.id)) {
+				this.debug('Horn boost');
+				return this.chainModify(1.5);
+				
+				
+			}
+			
+		},
+		onModifyMove(move) {
+			const hornMoves = [
+				'megahorn',
+				'hornattack',
+				'smartstrike',
+				'hornleech',
+				'obsidianhorn',
+				'furyattack',
+			];
+			if (hornMoves.includes(move.id)) {
+			if (!move.secondaries) {
+				move.secondaries = [];
+			}
+			move.secondaries.push({
+				chance: 100,
+				pseudoWeather: 'fairylock',
+				ability: this.dex.abilities.get('Captcha: Horni'),
+			})
+		}
+		},
+		name: "Captcha: Horni",
 		isNonstandard: "Future",
 	},
 };

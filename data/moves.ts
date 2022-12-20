@@ -24207,24 +24207,26 @@ export const Moves: {[moveid: string]: MoveData} = {
 	radiation: {
 		num: 487,
 		accuracy: 100,
-		basePower: 0,
-		category: "Status",
+		basePower: 37,
+		category: "Special",
 		name: "Radiation",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1, mystery: 1},
-		onHit(target) {
-			if (target.getTypes().join() === 'Nuclear' || !target.setType('Nuclear')) {
-				// Soak should animate even when it fails.
-				// Returning false would suppress the animation.
-				this.add('-fail', target);
-				return null;
-			}
-			this.add('-start', target, 'typechange', 'Nuclear');
+		flags: {protect: 1,  mirror: 1},
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				if (target.getTypes().join() === 'Nuclear' || !target.setType('Nuclear')) {
+					// Soak should animate even when it fails.
+					// Returning false would suppress the animation.
+					this.add('-fail', target);
+					return null;
+				}
+				this.add('-start', target, 'typechange', 'Nuclear');
+			},
 		},
-		secondary: null,
 		target: "normal",
-		type: "???",
+		type: "Nuclear",
 		zMove: {boost: {spa: 1}},
 		contestType: "Cute",
 		isNonstandard: "Future",
@@ -25486,4 +25488,85 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 		contestType: "Cool",
 	},
+	cursedblade: {
+		num: 42017,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Cursed Blade",
+		pp: 15,
+		priority: 0,
+		flags: {blade: 1, contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'curse',
+		},
+		target: "normal",
+		type: "Ghost",
+		contestType: "Cool",
+	},
+	dousingflame: {
+		num: 573,
+		accuracy: 80,
+		basePower: 120,
+		category: "Special",
+		name: "Dousing Flame",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, defrost: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Fire') return 1;
+		},
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
+		target: "normal",
+		isNonstandard: "Future",
+		type: "Fire",
+		contestType: "Beautiful",
+	},
+	riptide: {
+		num: 463,
+		accuracy: 80,
+		basePower: 100,
+		category: "Special",
+		name: "Riptide",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
+		secondary: null,
+		target: "normal",
+		isNonstandard: "Future",
+		type: "Water",
+		contestType: "Tough",
+	},
+	secretstrength: {
+		num: 686,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Secret Strength",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, dance: 1},
+		onModifyType(move, pokemon) {
+			
+			if (pokemon.getTypes()[1]) {
+			move.type = pokemon.getTypes()[1];
+			}
+			else {
+				move.type = pokemon.getTypes()[0];
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+		contestType: "Clever",
+	},
+
+
 };
