@@ -5,7 +5,7 @@
 import {Utils} from '../../lib';
 
 const MINUTES = 60000;
-const MAX_QUESTIONS = 69;
+const MAX_QUESTIONS = 30;
 
 interface PollAnswer {
 	name: string; votes: number; correct?: boolean;
@@ -25,6 +25,7 @@ export interface PollOptions {
 	timerEnd?: number;
 	isQuiz?: boolean;
 	answers: string[] | PollAnswer[];
+	ratingRequirement?: { format: string, minimumRating: number };
 }
 
 export interface PollData extends PollOptions {
@@ -45,6 +46,7 @@ export class Poll extends Rooms.MinorActivity {
 	/** Max votes of 0 means no vote cap */
 	maxVotes: number;
 	answers: Map<number, PollAnswer>;
+	ratingRequirement?: { format: string, minimumRating: number };
 	constructor(room: Room, options: PollOptions) {
 		super(room);
 		this.activityNumber = options.activityNumber || room.nextGameNumber();
@@ -56,6 +58,7 @@ export class Poll extends Rooms.MinorActivity {
 		this.voterIps = options.voterIps || {};
 		this.totalVotes = options.totalVotes || 0;
 		this.maxVotes = options.maxVotes || 0;
+		this.ratingRequirement = options.ratingRequirement;
 
 		// backwards compatibility
 		if (!options.answers) options.answers = (options as any).questions;
@@ -65,12 +68,12 @@ export class Poll extends Rooms.MinorActivity {
 		this.setTimer(options);
 	}
 
-	select(user: User, option: number) {
+	async select(user: User, option: number) {
 		const userid = user.id;
 		if (!this.multiPoll) {
 			// vote immediately
 			this.pendingVotes[userid] = [option];
-			this.submit(user);
+			await this.submit(user);
 			return;
 		}
 
@@ -96,9 +99,23 @@ export class Poll extends Rooms.MinorActivity {
 		this.save();
 	}
 
-	submit(user: User) {
+	async submit(user: User) {
 		const ip = user.latestIp;
 		const userid = user.id;
+
+		if (!user.can('bypassall') && this.ratingRequirement) {
+			const {format, minimumRating} = this.ratingRequirement;
+			const formatLadder = Ladders(format);
+
+			const userRating = await formatLadder.getRating(user.id);
+
+			if (userRating < minimumRating) {
+				return user.sendTo(
+					this.room,
+					this.room.tr`You must have a rating of ${minimumRating} in ${format} to vote in this poll (Your rating: ${userRating})`,
+				);
+			}
+		}
 
 		if (userid in this.voters || (!Config.noipchecks && ip in this.voterIps)) {
 			delete this.pendingVotes[userid];
@@ -143,7 +160,7 @@ export class Poll extends Rooms.MinorActivity {
 			`<i class="fa fa-question"></i> ${this.room.tr`Quiz`}` :
 			`<i class="fa fa-bar-chart"></i> ${this.room.tr`Poll`}`;
 		let output = `<div class="infobox"><p style="margin: 2px 0 5px 0"><span style="border:1px solid #6A6;color:#484;border-radius:4px;padding:0 3px">${iconText}</span>`;
-		output += ` <strong style="font-size:11pt">${Poll.getQuestionMarkup(this.question, this.supportHTML)}</strong></p>`;
+		output += ` <strong style="font-size:11pt">${Poll.getQuestionMarkup(this.question, this.supportHTML, this.ratingRequirement)}</strong></p>`;
 
 		if (this.multiPoll) {
 			const empty = `<i class="fa fa-square-o" aria-hidden="true"></i>`;
@@ -175,14 +192,14 @@ export class Poll extends Rooms.MinorActivity {
 	}
 
 	static generateResults(
-		options: Rooms.MinorActivityData, room: Room,
+		options: PollData, room: Room,
 		ended = false, choice: number[] | null = null
 	) {
 		const iconText = options.isQuiz ?
 			`<i class="fa fa-question"></i> ${room.tr`Quiz`}` :
 			`<i class="fa fa-bar-chart"></i> ${room.tr`Poll`}`;
 		const icon = `<span style="border:1px solid #${ended ? '777;color:#555' : '6A6;color:#484'};border-radius:4px;padding:0 3px">${iconText}${ended ? ' ' + room.tr`ended` : ""}</span> <small>${options.totalVotes || 0} ${room.tr`votes`}</small>`;
-		let output = `<div class="infobox"><p style="margin: 2px 0 5px 0">${icon} <strong style="font-size:11pt">${this.getQuestionMarkup(options.question, options.supportHTML)}</strong></p>`;
+		let output = `<div class="infobox"><p style="margin: 2px 0 5px 0">${icon} <strong style="font-size:11pt">${this.getQuestionMarkup(options.question, options.supportHTML, options.ratingRequirement)}</strong></p>`;
 		const answers = Poll.getAnswers(options.answers);
 
 		// indigo, blue, green
@@ -204,9 +221,14 @@ export class Poll extends Rooms.MinorActivity {
 		return output;
 	}
 
-	static getQuestionMarkup(question: string, supportHTML = false) {
+	static getQuestionMarkup(question: string, supportHTML = false, ratingRequiredment?: {format: string, minimumRating: number}) {
 		if (supportHTML) return question;
-		return Chat.formatText(question);
+		let ratingText = '';
+		if (ratingRequiredment) {
+			const format = Dex.formats.get(ratingRequiredment.format);
+			ratingText = ` (>${ratingRequiredment.minimumRating} in ${format.name})`;
+		}
+		return Chat.formatText(`${question}${ratingText}`);
 	}
 
 	static getAnswerMarkup(answer: PollAnswer, supportHTML = false) {
@@ -335,6 +357,7 @@ export class Poll extends Rooms.MinorActivity {
 			timerEnd: this.timerEnd,
 			isQuiz: this.isQuiz,
 			answers: [...this.answers.values()],
+			ratingRequirement: this.ratingRequirement,
 		};
 	}
 
@@ -370,9 +393,16 @@ export const commands: Chat.ChatCommands = {
 		htmlcreatemulti: 'new',
 		queue: 'new',
 		queuehtml: 'new',
-		htmlqueue: 'new',
 		queuemulti: 'new',
 		htmlqueuemulti: 'new',
+		ratinghtmlcreate: 'new',
+		ratingcreate: 'new',
+		ratingcreatemulti: 'new',
+		ratinghtmlcreatemulti: 'new',
+		ratingqueue: 'new',
+		ratingqueuehtml: 'new',
+		ratingqueuemulti: 'new',
+		ratinghtmlqueuemulti: 'new',
 		new(target, room, user, connection, cmd, message) {
 			room = this.requireRoom();
 			if (!target) return this.parse('/help poll new');
@@ -386,6 +416,7 @@ export const commands: Chat.ChatCommands = {
 			const supportHTML = cmd.includes('html');
 			const multiPoll = cmd.includes('multi');
 			const queue = cmd.includes('queue');
+			const requiresRating = cmd.includes('rating');
 			let separator = '';
 			if (text.includes('\n')) {
 				separator = '\n';
@@ -397,6 +428,24 @@ export const commands: Chat.ChatCommands = {
 				return this.errorReply(this.tr`Not enough arguments for /poll new.`);
 			}
 			let params = text.split(separator).map(param => param.trim());
+
+			let ratingRequirement;
+			if (params.length > 1 && requiresRating) {
+				const format = params[0].toLowerCase().trim();
+				const rating = +(params[1].toLowerCase().trim());
+
+				const actualFormat = Dex.formats.get(format);
+				if (!actualFormat.exists) {
+					return this.errorReply(this.tr`Non-existent format "${format}" provided.`);
+				}
+
+				if (Number.isNaN(rating) || rating < 1000) {
+					return this.errorReply(this.tr`Invalid rating requirement "${params[1]}" provided.`);
+				}
+
+				ratingRequirement = {format, minimumRating: rating};
+				params = params.slice(2);
+			}
 
 			this.checkCan('minigame', null, room);
 			if (supportHTML) this.checkCan('declare', null, room);
@@ -427,7 +476,7 @@ export const commands: Chat.ChatCommands = {
 				return this.privateModAction(room.tr`${user.name} queued a poll.`);
 			}
 			room.setMinorActivity(new Poll(room, {
-				question: params[0], supportHTML, answers: questions, multiPoll,
+				question: params[0], supportHTML, answers: questions, multiPoll, ratingRequirement,
 			}));
 
 			this.roomlog(`${user.name} used ${message}`);
@@ -494,7 +543,7 @@ export const commands: Chat.ChatCommands = {
 
 		deselect: 'select',
 		vote: 'select',
-		select(target, room, user, connection, cmd) {
+		async select(target, room, user, connection, cmd) {
 			room = this.requireRoom();
 			const poll = this.requireMinorActivity(Poll);
 			if (!target) return this.parse('/help poll vote');
@@ -507,7 +556,7 @@ export const commands: Chat.ChatCommands = {
 			if (cmd === 'deselect') {
 				poll.deselect(user, parsed);
 			} else {
-				poll.select(user, parsed);
+				await poll.select(user, parsed);
 			}
 		},
 		selecthelp: [
@@ -515,11 +564,11 @@ export const commands: Chat.ChatCommands = {
 			`/poll deselect [number] - Deselects option [number].`,
 		],
 
-		submit(target, room, user) {
+		async submit(target, room, user) {
 			room = this.requireRoom();
 			const poll = this.requireMinorActivity(Poll);
 
-			poll.submit(user);
+			await poll.submit(user);
 		},
 		submithelp: [`/poll submit - Submits your vote.`],
 
@@ -663,7 +712,7 @@ export const pages: Chat.PageTable = {
 				`(${this.tr`delete`})</button>`
 			);
 			buf += `<hr />`;
-			buf += `${button}<br />${Poll.generateResults(poll, room, false)}`;
+			buf += `${button}<br />${Poll.generateResults(poll as PollData, room, false)}`;
 		}
 		buf += `<hr />`;
 		return buf;
