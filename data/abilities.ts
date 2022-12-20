@@ -5142,7 +5142,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.add("-fail", target, "unboost", "[from] ability: Board Power (/a/)", "[of] " + target);
 			}
 		},
-		isBreakable: true,
+		isPermanent: true,
 		rating: 3,
 		num: 5,
 		isNonstandard: "Future",
@@ -5192,6 +5192,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
 			return false;
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerc: {
@@ -5216,6 +5217,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerco: {
@@ -5241,6 +5243,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.type === 'Dark') mod /= 2;
 			return this.chainModify(mod);
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerd: {
@@ -5265,6 +5268,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify([0x1333, 0x1000]);
 			}
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerf: {
@@ -5278,6 +5282,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				move.basePower = 90;
 			}
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerfa: {
@@ -5357,6 +5362,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			this.add('-copyboost', pokemon, target, '[from] ability: Board Power (/fa/)');
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerfit: {
@@ -5367,6 +5373,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			this.actions.useMove('Hulk Up', pokemon);
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerg: {
@@ -5378,6 +5385,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.field.setTerrain('electricterrain');
 			this.actions.useMove('Charge', pokemon);
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerh: {
@@ -5407,6 +5415,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				});
 			}
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerint: {
@@ -5417,6 +5426,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyMove(move) {
 			move.stab = 2;
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerjp: {
@@ -5437,6 +5447,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			if (move.self?.chance) move.self.chance *= 2;
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerk: {
@@ -5453,6 +5464,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerout: {
@@ -5463,6 +5475,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePower(relayVar, source, target, move) {
 			if (move?.flags?.naturePower) return this.chainModify(2);
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerpol: {
@@ -5502,6 +5515,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				move.ignoreImmunity['Dark'] = true;
 			}
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerr9k: {
@@ -5511,6 +5525,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				activePokemon.addVolatile('torment');
 			}
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpower5: {
@@ -5546,6 +5561,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.add('-end', target, 'Board Power (/5/)');
 			},
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowers4s: {
@@ -5556,6 +5572,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return priority + 1;
 			}
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowersoc: {
@@ -5585,6 +5602,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePower(basePower, pokemon, target, move) {
 			if (move.type === 'Poison') return this.chainModify(1.5);
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowersp: {
@@ -5616,7 +5634,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		condition: {
 			duration: 1,
 		},
-		isBreakable: true,
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowertrv: {
@@ -5634,6 +5652,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowertv: {
@@ -5644,6 +5663,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			this.field.addPseudoWeather('gravity');
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerv: {
@@ -5695,6 +5715,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.boost({atk: 1});
 			}
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowervg: {
@@ -5725,6 +5746,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (moveId !== move.id) return;
 			move.basePower = Math.min(160, move.basePower * Math.pow(1.2, times));
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowervp: {
@@ -5758,6 +5780,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowervr: {
@@ -5769,6 +5792,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			this.field.addPseudoWeather('magicroom');
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerx: {
@@ -5785,6 +5809,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				activePokemon.setType('Ghost');
 			}
 		},
+		isPermanent: true,
 		isNonstandard: "Future",
 	},
 	boardpowerz: {
@@ -5815,6 +5840,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			return false; // TODO: Remove Comatose checks from base mod
 		},
+		isPermanent: true,
 		onCriticalHit: false,
 		isNonstandard: "Future",
 	},
