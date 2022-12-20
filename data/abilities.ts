@@ -5380,7 +5380,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/g/)",
 		onStart(pokemon) {
 			if (pokemon.addType('Electric')) {
-				this.add('-start', pokemon, 'typeadd', 'Electric', '[from] ability: Board Power (/fit/)');
+				this.add('-start', pokemon, 'typeadd', 'Electric', '[from] ability: Board Power (/g/)');
 			}
 			this.field.setTerrain('electricterrain');
 			this.actions.useMove('Charge', pokemon);
