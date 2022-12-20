@@ -7481,8 +7481,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.add('-start', target, 'typechange', type, '[from] ability: Artist');
 			}
 		},
-		
-		
+
+
 		name: "Artist",
 		rating: 0,
 		num: 16,
@@ -7774,7 +7774,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				pokemon.setAbility('stench');
 				pokemon.addVolatile('stinkbomb');
 			}
-			
 		},
 		isNonstandard: "Future",
 	},
@@ -7854,9 +7853,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (target !== source && move.type === 'Electric') {
 				this.add('-message', 'Blobbos-Bait used its hook as a lightningrod!');
 				if (!this.boost({spa: 1})) {
-					
 					this.add('-immune', target, '[from] ability: Lightning Rod');
-					
 				}
 				return null;
 			}
@@ -7866,11 +7863,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
 			if (this.validTarget(this.effectState.target, source, redirectTarget)) {
 				if (move.smartTarget) move.smartTarget = false;
-				
+
 				if (this.effectState.target !== target) {
-					
 					this.add('-activate', this.effectState.target, 'ability: Lightning Rod');
-					
 				}
 				return this.effectState.target;
 			}
@@ -7892,10 +7887,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (hornMoves.includes(move.id)) {
 				this.debug('Horn boost');
 				return this.chainModify(1.5);
-				
-				
 			}
-			
 		},
 		onModifyMove(move) {
 			const hornMoves = [
@@ -7907,15 +7899,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'furyattack',
 			];
 			if (hornMoves.includes(move.id)) {
-			if (!move.secondaries) {
-				move.secondaries = [];
+				if (!move.secondaries) {
+					move.secondaries = [];
+				}
+				move.secondaries.push({
+					chance: 100,
+					pseudoWeather: 'fairylock',
+					ability: this.dex.abilities.get('Captcha: Horni'),
+				});
 			}
-			move.secondaries.push({
-				chance: 100,
-				pseudoWeather: 'fairylock',
-				ability: this.dex.abilities.get('Captcha: Horni'),
-			})
-		}
 		},
 		name: "Captcha: Horni",
 		isNonstandard: "Future",

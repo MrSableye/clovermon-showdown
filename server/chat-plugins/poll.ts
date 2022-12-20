@@ -221,7 +221,11 @@ export class Poll extends Rooms.MinorActivity {
 		return output;
 	}
 
-	static getQuestionMarkup(question: string, supportHTML = false, ratingRequiredment?: {format: string, minimumRating: number}) {
+	static getQuestionMarkup(
+		question: string,
+		supportHTML = false,
+		ratingRequiredment?: {format: string, minimumRating: number},
+	) {
 		if (supportHTML) return question;
 		let ratingText = '';
 		if (ratingRequiredment) {
