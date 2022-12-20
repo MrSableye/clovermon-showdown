@@ -5089,12 +5089,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onSourceModifyDamage(damage, source, target, move) {
 			if (source.species.tags.includes('Inferior')) {
 				this.add('-ability', target, 'White Flames');
+				if (target.species.tags.includes('Inferior')) {
+					this.add('-message', `${target.name} is an Uncle Tom!`);
+				}
 				return this.chainModify(0.5);
 			}
 		},
 		onBasePower(basePower, pokemon, target, move) {
 			if (target.species.tags.includes('Inferior')) {
 				this.add('-ability', pokemon, 'White Flames');
+				if (pokemon.species.tags.includes('Inferior')) {
+					this.add('-message', `${pokemon.name} is an Uncle Tom!`);
+				}
 				return this.chainModify(1.2);
 			}
 		},
