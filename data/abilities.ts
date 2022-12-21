@@ -5109,7 +5109,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowera: {
 		name: "Board Power (/a/)",
 		onTryHit(pokemon, target, move) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (move.ohko) {
 				this.add('-immune', pokemon, '[from] ability: Board Power (/a/)');
 				return null;
@@ -5117,14 +5117,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onDamagePriority: -30,
 		onDamage(damage, target, source, effect) {
-			if (target.baseSpecies.name !== 'Fontaba') return;
+			if (target.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move') {
 				this.add('-ability', target, 'Board Power (/a/)');
 				return target.hp - 1;
 			}
 		},
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.side.pokemonLeft === 1) {
 				this.boost({
 					atk: 1,
@@ -5137,7 +5137,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onBoost(boost, target, source, effect) {
-			if (target.baseSpecies.name !== 'Fontaba') return;
+			if (target.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (!target?.abilityState?.anime) return;
 			if (source && target === source) return;
 			let showMsg = false;
@@ -5160,7 +5160,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerb: {
 		name: "Board Power (/b/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			const boardAbilities = [
 				'boardpowera',
 				'boardpowerc',
@@ -5209,7 +5209,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerc: {
 		name: "Board Power (/c/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.addType('Fairy')) {
 				this.add('-start', pokemon, 'typeadd', 'Fairy', '[from] ability: Board Power (/c/)');
 			}
@@ -5235,26 +5235,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerco: {
 		name: "Board Power (/co/)",
 		onDamage(damage, target, source, effect) {
-			if (target.baseSpecies.name !== 'Fontaba') return;
+			if (target.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (effect.effectType !== 'Move') {
 				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
 				return false;
 			}
 		},
 		onModifyDef(def, pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.status) {
 				return this.chainModify(1.5);
 			}
 		},
 		onDamagingHit(damage, target, source, move) {
-			if (target.baseSpecies.name !== 'Fontaba') return;
+			if (target.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (move.type === 'Dark') {
 				this.boost({atk: 1});
 			}
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if (source.baseSpecies.name !== 'Fontaba') return;
+			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			let mod = 1;
 			if (move.type === 'Dark') mod /= 2;
 			return this.chainModify(mod);
@@ -5265,14 +5265,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerd: {
 		name: "Board Power (/d/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.addType('Dark')) {
 				this.add('-start', pokemon, 'typeadd', 'Dark', '[from] ability: Board Power (/d/)');
 			}
 			this.actions.useMove('Stockpile', pokemon);
 		},
 		onModifyMove(move, source) {
-			if (source.baseSpecies.name !== 'Fontaba') return;
+			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			const ignoredMoves = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'weatherball'];
 			if (move.type === 'Normal' && !ignoredMoves.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
 				move.type = 'Dark';
@@ -5280,7 +5280,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onBasePowerPriority: 8,
 		onBasePower(basePower, pokemon, target, move) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			const validTypes = ['Dark', 'Normal'];
 			const ignoredMoves = ['judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'weatherball'];
 			if (validTypes.includes(move.type) && !ignoredMoves.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
@@ -5293,12 +5293,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerf: {
 		name: "Board Power (/f/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			this.field.addPseudoWeather('inverseroom');
 		},
 		onModifyMovePriority: -6969,
 		onModifyMove(move, source) {
-			if (source.baseSpecies.name !== 'Fontaba') return;
+			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (move.id === 'flash') {
 				move.basePower = 90;
 			}
@@ -5309,7 +5309,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerfa: {
 		name: "Board Power (/fa/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (!pokemon.isStarted || this.effectState.gaveUp) return;
 
 			const additionalBannedAbilities = [
@@ -5390,7 +5390,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerfit: {
 		name: "Board Power (/fit/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.addType('Fighting')) {
 				this.add('-start', pokemon, 'typeadd', 'Fighting', '[from] ability: Board Power (/fit/)');
 			}
@@ -5402,7 +5402,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerg: {
 		name: "Board Power (/g/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.addType('Electric')) {
 				this.add('-start', pokemon, 'typeadd', 'Electric', '[from] ability: Board Power (/g/)');
 			}
@@ -5415,14 +5415,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerh: {
 		name: "Board Power (/h/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.addType('Fire')) {
 				this.add('-start', pokemon, 'typeadd', 'Fire', '[from] ability: Board Power (/h/)');
 			}
 			pokemon.abilityState.irresistable = true;
 		},
 		onDamagingHit(damage, target, source, move) {
-			if (target.baseSpecies.name !== 'Fontaba') return;
+			if (target.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (this.checkMoveMakesContact(move, source, target)) {
 				if (this.randomChance(3, 10)) {
 					source.addVolatile('attract', this.effectState.target);
@@ -5430,7 +5430,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onModifyMove(move, source) {
-			if (source.baseSpecies.name !== 'Fontaba') return;
+			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (move.category !== "Status") {
 				if (!move.secondaries) move.secondaries = [];
 				for (const secondary of move.secondaries) {
@@ -5448,11 +5448,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerint: {
 		name: "Board Power (/int/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			this.field.setTerrain('psychicterrain');
 		},
 		onModifyMove(move, source) {
-			if (source.baseSpecies.name !== 'Fontaba') return;
+			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			move.stab = 2;
 		},
 		isPermanent: true,
@@ -5461,7 +5461,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerjp: {
 		name: "Board Power (/jp/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.addType('Fairy')) {
 				this.add('-start', pokemon, 'typeadd', 'Fairy', '[from] ability: Board Power (/jp/)');
 			}
@@ -5469,7 +5469,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onModifyMovePriority: -2,
 		onModifyMove(move, source) {
-			if (source.baseSpecies.name !== 'Fontaba') return;
+			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (move.secondaries) {
 				this.debug('doubling secondary chance');
 				for (const secondary of move.secondaries) {
@@ -5484,14 +5484,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerk: {
 		name: "Board Power (/k/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.addType('Steel')) {
 				this.add('-start', pokemon, 'typeadd', 'Steel', '[from] ability: Board Power (/k/)');
 			}
 			this.boost({def: 1, spd: 1}, pokemon);
 		},
 		onTryHit(pokemon, target, move) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (move.flags['bullet']) {
 				this.add('-immune', pokemon, '[from] ability: Board Power (/k/)');
 				return null;
@@ -5503,11 +5503,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerout: {
 		name: "Board Power (/out/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			this.add('-message', pokemon.baseSpecies.baseSpecies);
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			this.field.setTerrain('grassyterrain');
 		},
 		onBasePower(relayVar, source, target, move) {
-			if (source.baseSpecies.name !== 'Fontaba') return;
+			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (move?.flags?.naturePower) return this.chainModify(2);
 		},
 		isPermanent: true,
@@ -5517,7 +5518,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/pol/)",
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender) {
-			if (attacker.baseSpecies.name !== 'Fontaba') return;
+			if (attacker.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (!defender.activeTurns) {
 				this.debug('Board Power (/pol/) boost');
 				return this.chainModify(2);
@@ -5525,7 +5526,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onModifySpAPriority: 5,
 		onModifySpA(atk, attacker, defender) {
-			if (attacker.baseSpecies.name !== 'Fontaba') return;
+			if (attacker.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (!defender.activeTurns) {
 				this.debug('Board Power (/pol/) boost');
 				return this.chainModify(2);
@@ -5533,7 +5534,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onBasePowerPriority: 21,
 		onBasePower(basePower, pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			let boosted = true;
 			for (const target of this.getAllActive()) {
 				if (target === pokemon) continue;
@@ -5548,7 +5549,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onModifyMove(move, source) {
-			if (source.baseSpecies.name !== 'Fontaba') return;
+			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true && move.type === 'Psychic') {
 				move.ignoreImmunity['Dark'] = true;
@@ -5560,7 +5561,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerr9k: {
 		name: "Board Power (/r9k/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			for (const activePokemon of this.getAllActive()) {
 				activePokemon.addVolatile('torment');
 			}
@@ -5571,7 +5572,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpower5: {
 		name: "Board Power (/5/)",
 		onModifyMove(move, source) {
-			if (source.baseSpecies.name !== 'Fontaba') return;
+			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (move.multihit && Array.isArray(move.multihit) && move.multihit.length) {
 				move.multihit = move.multihit[1];
 			}
@@ -5580,11 +5581,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			pokemon.addVolatile('boardpower5');
 		},
 		onEnd(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			delete pokemon.volatiles['boardpower5'];
 			this.add('-end', pokemon, 'Board Power (/5/)', '[silent]');
 		},
@@ -5610,7 +5611,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowers4s: {
 		name: "Board Power (/s4s/)",
 		onModifyPriority(priority, pokemon, target, move) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (move?.category === 'Status') {
 				move.pranksterBoosted = true;
 				return priority + 1;
@@ -5622,7 +5623,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowersoc: {
 		name: "Board Power (/soc/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			for (const target of pokemon.foes()) {
 				if (target.item) {
 					this.add('-item', target, target.getItem().name, '[from] ability: Board Power (/soc/)', '[of] ' + pokemon, '[identify]');
@@ -5630,15 +5631,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onAnyModifyDamage(damage, source, target, move) {
-			if (target.baseSpecies.name !== 'Fontaba' &&
-			this.effectState.target.baseSpecies.name !== 'Fontaba') return;
+			if (target.baseSpecies.baseSpecies !== 'Fontaba' &&
+			this.effectState.target.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (target !== this.effectState.target && target.isAlly(this.effectState.target)) {
 				this.debug('Board Power (/soc/) weaken');
 				return this.chainModify(0.75);
 			}
 		},
 		onTryHit(target, source, move) {
-			if (target.baseSpecies.name !== 'Fontaba') return;
+			if (target.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (target !== source && move.type === 'Poison') {
 				if (!this.heal(target.baseMaxhp / 4)) {
 					this.add('-immune', target, '[from] ability: Board Power (/soc/)');
@@ -5648,7 +5649,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onBasePowerPriority: 23,
 		onBasePower(basePower, pokemon, target, move) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (move.type === 'Poison') return this.chainModify(1.5);
 		},
 		isPermanent: true,
@@ -5657,12 +5658,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowersp: {
 		name: "Board Power (/sp/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			this.boost({spe: 1}, pokemon);
 		},
 		onTryHitPriority: 1,
 		onTryHit(target, source, move) {
-			if (target.baseSpecies.name !== 'Fontaba') return;
+			if (target.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (target === source || move.hasBounced || !move.flags['reflectable']) {
 				return;
 			}
@@ -5673,8 +5674,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			return null;
 		},
 		onAllyTryHitSide(target, source, move) {
-			if (target.baseSpecies.name !== 'Fontaba' &&
-			this.effectState.target.baseSpecies.name !== 'Fontaba') return;
+			if (target.baseSpecies.baseSpecies !== 'Fontaba' &&
+			this.effectState.target.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (target.isAlly(source) || move.hasBounced || !move.flags['reflectable']) {
 				return;
 			}
@@ -5693,14 +5694,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowertrv: {
 		name: "Board Power (/trv/)",
 		onModifySpe(spe, pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.effectiveWeather().length) {
 				return this.chainModify(2);
 			}
 		},
 		onModifyMovePriority: -6969,
 		onModifyMove(move, pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.effectiveWeather().length) {
 				if (move.id === 'weatherball') {
 					move.basePower = 150;
@@ -5713,7 +5714,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowertv: {
 		name: "Board Power (/tv/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.addType('Ground')) {
 				this.add('-start', pokemon, 'typeadd', 'Ground', '[from] ability: Board Power (/tv/)');
 			}
@@ -5725,11 +5726,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerv: {
 		name: "Board Power (/v/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			pokemon.abilityState.choiceLock = "";
 		},
 		onBeforeMove(pokemon, target, move) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (move.isZOrMaxPowered || move.id === 'struggle') return;
 			if (pokemon.abilityState.choiceLock && pokemon.abilityState.choiceLock !== move.id) {
 				// Fails unless ability is being ignored (these events will not run), no PP lost.
@@ -5741,20 +5742,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onModifyMove(move, pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.abilityState.choiceLock || move.isZOrMaxPowered || move.id === 'struggle') return;
 			pokemon.abilityState.choiceLock = move.id;
 		},
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.volatiles['dynamax']) return;
 			// PLACEHOLDER
 			this.debug('Board Power (/v/) Atk Boost');
 			return this.chainModify(1.5);
 		},
 		onDisableMove(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (!pokemon.abilityState.choiceLock) return;
 			if (pokemon.volatiles['dynamax']) return;
 			for (const moveSlot of pokemon.moveSlots) {
@@ -5764,11 +5765,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onEnd(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			pokemon.abilityState.choiceLock = "";
 		},
 		onHit(target, source, move) {
-			if (target.baseSpecies.name !== 'Fontaba') return;
+			if (target.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (!target.hp) return;
 			if (move?.effectType === 'Move' && target.getMoveHitData(move).crit) {
 				target.setBoost({atk: 6});
@@ -5784,13 +5785,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowervg: {
 		name: "Board Power (/vg/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.addType('Dragon')) {
 				this.add('-start', pokemon, 'typeadd', 'Dragon', '[from] ability: Board Power (/vg/)');
 			}
 		},
 		onAfterMove(source, target, move) {
-			if (source.baseSpecies.name !== 'Fontaba') return;
+			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (!this.effectState.repetition) {
 				this.effectState.repetition = {moveId: move.id, times: 1};
 			} else {
@@ -5803,7 +5804,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onModifyMovePriority: -6969,
 		onModifyMove(move, source) {
-			if (source.baseSpecies.name !== 'Fontaba') return;
+			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (move.category === 'Status') return;
 			if (!this.effectState.repetition) return;
 
@@ -5819,7 +5820,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/vp/)",
 		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {
-			if (target.baseSpecies.name !== 'Fontaba') return;
+			if (target.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (effect.id === 'psn' || effect.id === 'tox') {
 				this.heal(target.baseMaxhp / 8);
 				return false;
@@ -5827,7 +5828,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
-			if (attacker.baseSpecies.name !== 'Fontaba') return;
+			if (attacker.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (move.type === 'Bug') {
 				this.debug('Puppeteer boost');
 				return this.chainModify(1.5);
@@ -5835,14 +5836,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onModifySpAPriority: 5,
 		onModifySpA(atk, attacker, defender, move) {
-			if (attacker.baseSpecies.name !== 'Fontaba') return;
+			if (attacker.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (move.type === 'Bug') {
 				this.debug('Puppeteer boost');
 				return this.chainModify(1.5);
 			}
 		},
 		onTryHit(target, source, move) {
-			if (target.baseSpecies.name !== 'Fontaba') return;
+			if (target.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (target !== source && move.type === 'Bug') {
 				if (!this.heal(target.baseMaxhp / 4)) {
 					this.add('-immune', target, '[from] ability: Board Power (/vp/)');
@@ -5856,7 +5857,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowervr: {
 		name: "Board Power (/vr/)",
 		onStart(source) {
-			if (source.baseSpecies.name !== 'Fontaba') return;
+			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			for (const pokemon of this.getAllActive()) {
 				if (pokemon === source) continue;
 				pokemon.addVolatile('retro');
@@ -5869,7 +5870,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerx: {
 		name: "Board Power (/x/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.addType('Ghost')) {
 				this.add('-start', pokemon, 'typeadd', 'Ghost', '[from] ability: Board Power (/x/)');
 			}
@@ -5887,17 +5888,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerz: {
 		name: "Board Power (/z/)",
 		onStart(pokemon) {
-			if (pokemon.baseSpecies.name !== 'Fontaba') return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			this.add('-start', pokemon, 'typechange', '???', '[from] ability: Board Power (/z/)');
 			pokemon.setType('???');
 		},
 		onModifySecondaries(secondaries, target, source) {
-			if (source.baseSpecies.name !== 'Fontaba') return;
+			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			this.debug('Board Power (/z/) prevent secondary');
 			return secondaries.filter(effect => !!(effect.self || effect.dustproof));
 		},
 		onBoost(boost, target, source, effect) {
-			if (target.baseSpecies.name !== 'Fontaba') return;
+			if (target.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (source && target === source) return;
 			if (boost.accuracy && boost.accuracy < 0) {
 				delete boost.accuracy;
@@ -5907,11 +5908,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onModifyMove(move, source) {
-			if (source.baseSpecies.name !== 'Fontaba') return;
+			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			move.ignoreEvasion = true;
 		},
 		onSetStatus(status, target, source, effect) {
-			if (target.baseSpecies.name !== 'Fontaba') return;
+			if (target.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if ((effect as Move)?.status) {
 				this.add('-immune', target, '[from] ability: Board Power (/z/)');
 			}
