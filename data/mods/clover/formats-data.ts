@@ -5316,7 +5316,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fontabaz: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	floconut: {
