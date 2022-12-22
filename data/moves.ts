@@ -24212,7 +24212,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Radiation",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1,  mirror: 1},
+		flags: {protect: 1, mirror: 1},
 		secondary: {
 			chance: 100,
 			onHit(target) {
@@ -25553,11 +25553,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, dance: 1},
 		onModifyType(move, pokemon) {
-			
 			if (pokemon.getTypes()[1]) {
-			move.type = pokemon.getTypes()[1];
-			}
-			else {
+				move.type = pokemon.getTypes()[1];
+			} else {
 				move.type = pokemon.getTypes()[0];
 			}
 		},
