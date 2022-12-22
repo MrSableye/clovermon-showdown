@@ -25568,5 +25568,81 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 
-
+	hornithrust: {
+		num: 428,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Horni Thrust",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyMove(move, pokemon, target) {
+			pokemon.abilityState.irresistable = true;
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.volatileStatus === 'attract') return;
+				}
+				move.secondaries.push({
+					chance: 33,
+					volatileStatus: 'attract',
+				});
+			}
+		},
+		target: "normal",
+		type: "Ice",
+		isNonstandard: "Future",
+		contestType: "Clever",
+	},
+	mouthmelter: {
+		num: 675,
+		accuracy: 100,
+		basePower: 50,
+		category: "Physical",
+		name: "Mouth Melter",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		condition: {
+			duration: 5,
+			onStart(target) {
+				this.add('-start', target, 'TMouth Melter', '[silent]');
+			},
+			onDisableMove(pokemon) {
+				for (const moveSlot of pokemon.moveSlots) {
+					if (this.dex.moves.get(moveSlot.id).flags['sound'] || this.dex.moves.get(moveSlot.id).flags['bite']) {
+						pokemon.disableMove(moveSlot.id);
+					}
+				}
+			},
+			onBeforeMovePriority: 6,
+			onBeforeMove(pokemon, target, move) {
+				if (!move.isZ && !move.isMax && move.flags['sound'] || move.flags['bite']) {
+					this.add('cant', pokemon, 'move: Mouth Melter');
+					return false;
+				}
+			},
+			onModifyMove(move, pokemon, target) {
+				if (!move.isZ && !move.isMax && move.flags['sound'] || move.flags['bite']) {
+					this.add('cant', pokemon, 'move: Mouth Melter');
+					return false;
+				}
+			},
+			onResidualOrder: 22,
+			onEnd(target) {
+				this.add('-end', target, 'Mouth Melter', '[silent]');
+			},
+		},
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				target.addVolatile('mouthmelter');
+			},
+		},
+		multihit: 2,
+		target: "normal",
+		type: "Dark",
+		contestType: "Clever",
+	},
 };
