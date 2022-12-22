@@ -2467,7 +2467,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Chiral Network",
 		shortDesc: "Creates a bridge. If the next Pokemon that switches out switches back to a Pokemon with Chiral Network, it gets its positive boosts.",
 	},
-	fishermansbait: {
+	fishermansruse: {
 		name: "Fisherman's Ruse",
 		shortDesc: "Prankster + Lightningrod + STAB on Water + Bug SE on Steel",
 	},
