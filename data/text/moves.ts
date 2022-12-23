@@ -7932,4 +7932,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Secret Strength",
 		shortDesc: "Type varies based on the user's secondary type.",
 	},
+	hornithrust: {
+		name: "Horni Thrust",
+		shortDesc: "1/3 chance to cause attract. Ignores genders.",
+	},
+	mouthmelter: {
+		name: "Mouth Melter",
+		desc: "For 5 turns, the target cannot use sound or bite-based moves.",
+		shortDesc: "For 5 turns, the target cannot use sound or bite-based moves.",
+		cant: "The effects of Mouth Melter prevent [POKEMON] from using certain moves!",
+	},
 };

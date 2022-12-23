@@ -7961,6 +7961,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'smartstrike',
 				'hornleech',
 				'obsidianhorn',
+				'furyattack',
+				'hornithrust',
 			];
 			if (hornMoves.includes(move.id)) {
 				this.debug('Horn boost');
