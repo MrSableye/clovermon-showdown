@@ -37727,7 +37727,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 65,
 		},
 		abilities: {
-			0: "Capatcha: Horni",
+			0: "Captcha: Horni",
 			1: "Cute Charm",
 			H: "Arena Trap",
 			S: "Pozzed",
