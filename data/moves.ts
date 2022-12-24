@@ -25640,7 +25640,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		multihit: 2,
 		target: "normal",
-		type: "Dark",
+		type: "Poison",
 		contestType: "Clever",
 	},
 };
