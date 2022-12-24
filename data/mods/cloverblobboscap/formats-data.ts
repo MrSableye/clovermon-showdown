@@ -3060,4 +3060,29 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbosclause: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospresent: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbossnowman: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshorni: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmandm: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
