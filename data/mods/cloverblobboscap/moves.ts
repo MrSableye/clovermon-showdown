@@ -505,6 +505,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	hornithrust: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mouthmelter: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	terrainpulse: {
 		num: 805,
 		accuracy: 100,
