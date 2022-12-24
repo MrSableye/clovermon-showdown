@@ -9667,7 +9667,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	blobbosmm: {
+	blobbosmandm: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
