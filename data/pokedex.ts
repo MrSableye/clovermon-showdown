@@ -37684,7 +37684,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	blobbospresent: {
 		num: 69132,
-		name: "Blobbos-Bee",
+		name: "Blobbos-Present",
 		baseSpecies: "Blobbos",
 		forme: "Bee",
 		types: ["Fairy", "Normal"],
