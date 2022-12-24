@@ -37740,11 +37740,11 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
-	blobbosmandm: {
+	blobbosmm: {
 		num: 69132,
-		name: "Blobbos-M & M",
+		name: "Blobbos-M&M",
 		baseSpecies: "Blobbos",
-		forme: "M & M",
+		forme: "M&M",
 		types: ["Bug", "Poison"],
 		gender: "N",
 		baseStats: {
