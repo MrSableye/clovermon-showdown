@@ -781,6 +781,10 @@ export const Formats: FormatList = [
 		ruleset: ['Dynamax Clause', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
+		name: '[Gen 8 Sandbox Only] OU',
+		mod: 'sandbox',
+	},
+	{
 		name: "[Gen 1] Ubers",
 		mod: 'gen1',
 		challengeShow: false,
