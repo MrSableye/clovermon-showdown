@@ -5871,48 +5871,39 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	wyrdeer: {
 		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+		isNonstandard: "Future",
 	},
 	kleavor: {
 		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+		isNonstandard: "Future",
 	},
 	ursaluna: {
 		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+		isNonstandard: "Future",
 	},
 	basculegion: {
 		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+		isNonstandard: "Future",
 	},
 	basculegionf: {
 		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+		isNonstandard: "Future",
 	},
 	sneasler: {
 		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+		isNonstandard: "Future",
 	},
 	overqwil: {
 		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+		isNonstandard: "Future",
 	},
 	enamorus: {
 		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+		isNonstandard: "Future",
 	},
 	enamorustherian: {
 		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+		isNonstandard: "Future",
 	},
 	missingno: {
 		inherit: true,
@@ -8431,8 +8422,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	megablobbos: {
 		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+		isNonstandard: "Future",
 	},
 	bearedaze: {
 		inherit: true,
