@@ -795,8 +795,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Evasion Moves Clause',
 		],
-		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag','Autumn','Doomsday','Doomsday-Revenant','Fusjite','Eternatus-Eternamax'],
-		
+		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Autumn', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax'],
 	},
 	{
 		name: "[Gen 1] Ubers",
