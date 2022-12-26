@@ -6864,7 +6864,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	chromox: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"eruption",
@@ -6873,7 +6873,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"flashcannon",
 			"protect",
 		],
-		randomBattleLevel: 76,
+		randomBattleLevel: 72,
 	},
 	pitayen: {
 		inherit: true,
