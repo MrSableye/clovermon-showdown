@@ -783,6 +783,20 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Sandbox Only] OU',
 		mod: 'sandbox',
+		ruleset: [
+			'Obtainable',
+			'Team Preview',
+			'Sleep Clause Mod',
+			'Nickname Clause',
+			'Endless Battle Clause',
+			'HP Percentage Mod',
+			'Cancel Mod',
+			'Sketch Gen 8 Moves',
+			'OHKO Clause',
+			'Evasion Moves Clause',
+		],
+		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag','Autumn','Doomsday','Doomsday-Revenant','Fusjite','Eternatus-Eternamax'],
+		
 	},
 	{
 		name: "[Gen 1] Ubers",
