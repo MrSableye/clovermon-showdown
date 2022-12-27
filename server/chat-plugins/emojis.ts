@@ -1,3 +1,6 @@
+/* eslint max-len: ["error", 240] */
+
+import Axios from 'axios';
 import probe from 'probe-image-size';
 import {FS} from '../../lib';
 import {Punishments} from '../punishments';
@@ -6,9 +9,7 @@ const EMOJI_BAN_DURATION = 7 * 24 * 60 * 60 * 1000; // 1 week
 const MAX_REASON_LENGTH = 300;
 const EMOJI_SIZE = 32;
 const ERROR_NO_EMOJI_NAME = 'Specify an emoji name.';
-const ERROR_NO_EMOJI_URL = 'Specify an emoji description.';
-const ERROR_NON_DISCORD_UPLOAD = 'Specify a Discord URL.';
-const ERROR_TOO_LARGE_IMAGE = 'Specify an image under 150x150.';
+const ERROR_NO_EMOJI_URL = 'Specify an emoji URL.';
 const ERROR_NO_VALID_EMOJI_IMAGE = 'Specify a PNG or GIF image.';
 
 type Emojis = Record<string, string>;
@@ -27,8 +28,8 @@ const saveEmojis = () => {
 	FS('config/chat-plugins/emojis.json').writeUpdate(() => JSON.stringify(emojis));
 };
 
-const addOrUpdateEmoji = (name: string, url: string) => {
-	emojis[name] = url;
+const addOrUpdateEmoji = (name: string, filename: string) => {
+	emojis[name] = filename;
 	emojiRegex = createEmojiRegex(Object.keys(emojis));
 	saveEmojis();
 };
@@ -43,8 +44,32 @@ const toAlphaNumeric = (text: string) => ('' + text).replace(/[^A-Za-z0-9]+/g, '
 
 const createEmojiHtml = (
 	name: string,
-	url: string,
-) => `<img src="${url}" title=":${name}:" height="${EMOJI_SIZE}" width="${EMOJI_SIZE}">`;
+	filename: string,
+) => `<img src="//${Config.routes.root}/emojis/${filename}" title=":${name}:" height="${EMOJI_SIZE}" width="${EMOJI_SIZE}">`;
+
+const downloadEmoji = async (emojiName: string, imageUrl: string) => {
+	const imagebuffer = (await Axios.get(imageUrl, {responseType: 'arraybuffer'})).data;
+	const probeResult = probe.sync(imagebuffer);
+
+	if (!probeResult) {
+		throw new Chat.ErrorMessage(ERROR_NO_VALID_EMOJI_IMAGE);
+	}
+
+	const {width, height, type} = probeResult;
+
+	if (!['png', 'gif'].includes(type)) {
+		throw new Chat.ErrorMessage(ERROR_NO_VALID_EMOJI_IMAGE);
+	}
+
+	if ((width !== EMOJI_SIZE) || (height !== EMOJI_SIZE)) {
+		throw new Chat.ErrorMessage(`Specify a 32x32 image. Your image is ${probeResult.width}x${probeResult.height}`);
+	}
+
+	const fileName = `${emojiName}.${type}`;
+	await FS(`./config/emojis/${fileName}`).write(imagebuffer);
+
+	return fileName;
+};
 
 export const commands: Chat.ChatCommands = {
 	emojis: 'emoji',
@@ -67,22 +92,11 @@ export const commands: Chat.ChatCommands = {
 				return this.errorReply(ERROR_NO_EMOJI_URL);
 			}
 
-			if (!emojiUrl.startsWith('https://cdn.discordapp.com')) {
-				return this.errorReply(ERROR_NON_DISCORD_UPLOAD);
-			}
+			const filename = await downloadEmoji(emojiName, emojiUrl);
 
-			const probeResult = await probe(emojiUrl);
-			if (!['png', 'gif'].includes(probeResult.type)) {
-				return this.errorReply(ERROR_NO_VALID_EMOJI_IMAGE);
-			}
+			addOrUpdateEmoji(emojiName, filename);
 
-			if (Math.max(probeResult.width, probeResult.height) > 150) {
-				return this.errorReply(ERROR_TOO_LARGE_IMAGE);
-			}
-
-			addOrUpdateEmoji(emojiName, emojiUrl);
-
-			return this.sendReplyBox(`Added: ${createEmojiHtml(emojiName, emojiUrl)}`);
+			return this.sendReplyBox(`Added: ${createEmojiHtml(emojiName, filename)}`);
 		},
 		remove(target) {
 			this.checkCan('emoji');
