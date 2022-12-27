@@ -7,6 +7,7 @@ import {Punishments} from '../punishments';
 
 const EMOJI_BAN_DURATION = 7 * 24 * 60 * 60 * 1000; // 1 week
 const MAX_REASON_LENGTH = 300;
+const MAX_EMOJI_SIZE = 64;
 const EMOJI_SIZE = 32;
 const ERROR_NO_EMOJI_NAME = 'Specify an emoji name.';
 const ERROR_NO_EMOJI_URL = 'Specify an emoji URL.';
@@ -61,8 +62,11 @@ const downloadEmoji = async (emojiName: string, imageUrl: string) => {
 		throw new Chat.ErrorMessage(ERROR_NO_VALID_EMOJI_IMAGE);
 	}
 
-	if ((width !== EMOJI_SIZE) || (height !== EMOJI_SIZE)) {
-		throw new Chat.ErrorMessage(`Specify a 32x32 image. Your image is ${probeResult.width}x${probeResult.height}`);
+	const maxSize = Math.max(width, height);
+	const minSize = Math.min(width, height);
+
+	if (maxSize > MAX_EMOJI_SIZE || minSize < EMOJI_SIZE || (width !== height)) {
+		throw new Chat.ErrorMessage(`Specify a square image between 32x32 and 64x64. Your image is ${probeResult.width}x${probeResult.height}`);
 	}
 
 	const fileName = `${emojiName}.${type}`;
