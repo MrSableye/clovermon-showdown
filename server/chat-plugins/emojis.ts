@@ -45,7 +45,7 @@ const toAlphaNumeric = (text: string) => ('' + text).replace(/[^A-Za-z0-9]+/g, '
 const createEmojiHtml = (
 	name: string,
 	filename: string,
-) => `<img src="//${Config.routes.root}/emojis/${filename}" title=":${name}:" height="${EMOJI_SIZE}" width="${EMOJI_SIZE}">`;
+) => `<img src="https://clover.weed.es:8443/emojis/${filename}" title=":${name}:" height="${EMOJI_SIZE}" width="${EMOJI_SIZE}">`;
 
 const downloadEmoji = async (emojiName: string, imageUrl: string) => {
 	const imagebuffer = (await Axios.get(imageUrl, {responseType: 'arraybuffer'})).data;
