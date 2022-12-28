@@ -10034,6 +10034,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	vulkancermr: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	oogabugamega: {
 		inherit: true,
 		tier: "OU",
