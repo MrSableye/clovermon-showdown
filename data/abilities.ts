@@ -5503,7 +5503,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	boardpowerout: {
 		name: "Board Power (/out/)",
 		onStart(pokemon) {
-			this.add('-message', pokemon.baseSpecies.baseSpecies);
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			this.field.setTerrain('grassyterrain');
 		},

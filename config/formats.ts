@@ -543,11 +543,11 @@ export const Formats: FormatList = [
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify', 'Blobbosite', 'Kalosite', 'Sexite', 'Reversite'],
 		unbanlist: [
-			'Abomasite', 'Absolite', 'Aerodactylite', 'Aggronite', 'Alakazite', 'Altarianite', 'Ampharosite', 'Audinite', 'Banettite', 'Blastoisinite', 'Blue Orb', 'Cameruptite', 'Charizardite X', 'Charizardite Y', 'Diancite', 'Galladite', 'Garchompite', 'Gardevoirite', 'Glalitite', 'Gyaradosite', 'Heracronite', 'Houndoominite', 'Latiasite', 'Latiosite', 'Lopunnite', 'Lucarionite', 'Manectite', 'Metagrossite', 'Mewtwonite X', 'Mewtwonite Y', 'Pinsirite', 'Red Orb', 'Sablenite', 'Salamencite', 'Sceptilite', 'Scizorite', 'Sharpedonite', 'Slowbronite', 'Steelixite', 'Swampertite', 'Tyranitarite', 'Venusaurite', 'Bitekinite', 'Chasumite', 'Condoomite', 'Dowsterite', 'Ebolabite', 'Emplyinite', 'Faptite', 'Floriousite', 'Fonduppite', 'Goryannusite', 'Grimdakite', 'Hazmatite', 'Hohohomite', 'Honradite', 'Illumatrixite', 'Jerklite', 'Krokizonite', 'Kuklanite', 'Lizakbarite', 'Ooganite', 'Pigusonite', 'Rectreemite', 'Reptrillite', 'Ricosuavite', 'Smelloxite', 'Somboludite', 'Spookscarite', 'Spookzillite', 'Unjoyite', 'Upbeddite', 'Vandashite', 'Wifeminite', 'Uber'],
+			'Abomasite', 'Absolite', 'Aerodactylite', 'Aggronite', 'Alakazite', 'Altarianite', 'Ampharosite', 'Audinite', 'Banettite', 'Blastoisinite', 'Blue Orb', 'Cameruptite', 'Charizardite X', 'Charizardite Y', 'Diancite', 'Galladite', 'Garchompite', 'Gardevoirite', 'Glalitite', 'Gyaradosite', 'Heracronite', 'Houndoominite', 'Latiasite', 'Latiosite', 'Lopunnite', 'Lucarionite', 'Manectite', 'Metagrossite', 'Mewtwonite X', 'Mewtwonite Y', 'Pinsirite', 'Red Orb', 'Sablenite', 'Salamencite', 'Sceptilite', 'Scizorite', 'Sharpedonite', 'Slowbronite', 'Steelixite', 'Swampertite', 'Tyranitarite', 'Venusaurite', 'Uber'],
 		restricted: [
 			'Adesign', 'Baddon', 'Boarnograf', 'Chromox', 'Clovenix', 'Demiwaifu', 'Endranther', 'Foryu', 'Funnedong',
 			'Griffawork', 'Heliofug', 'Jewipede', 'Narwhiz', 'Scytill', 'Semdemen', 'Tentaquil',
-			'Vivaiger',
+			'Vivaiger', 'Niterpent', 'Notridley',
 		],
 		onValidateTeam(team) {
 			const itemTable = new Set<ID>();
@@ -779,6 +779,23 @@ export const Formats: FormatList = [
 			}
 		},
 		ruleset: ['Dynamax Clause', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
+		name: '[Gen 8 Sandbox Only] OU',
+		mod: 'sandbox',
+		ruleset: [
+			'Obtainable',
+			'Team Preview',
+			'Sleep Clause Mod',
+			'Nickname Clause',
+			'Endless Battle Clause',
+			'HP Percentage Mod',
+			'Cancel Mod',
+			'Sketch Gen 8 Moves',
+			'OHKO Clause',
+			'Evasion Moves Clause',
+		],
+		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Autumn', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over"],
 	},
 	{
 		name: "[Gen 1] Ubers",

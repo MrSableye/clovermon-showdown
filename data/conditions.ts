@@ -953,6 +953,13 @@ export const Conditions: {[k: string]: ConditionData} = {
 		effectType: 'Weather',
 		duration: 5,
 		onWeather(target) {
+			if (target.hasItem('utilityumbrella')) {
+				if (this.randomChance(1, 100)) {
+					this.add('-message', `${target.name} is Fragile... but not that fragile.`);
+				}
+
+				return;
+			}
 			let statName = 'atk';
 			let bestStat = 0;
 			let s: StatIDExceptHP;

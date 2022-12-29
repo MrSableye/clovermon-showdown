@@ -38044,7 +38044,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Stingulor",
 		types: ["Bug", "Steel"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 130, atk: 136, def: 70, spa: 70, spd: 130, spe: 70},
+		baseStats: {hp: 85, atk: 135, def: 85, spa: 60, spd: 70, spe: 115},
 		abilities: {0: "Compound Eyes", 1: "White Smoke", H: "Infiltrator", S: "Sheer Force"},
 		heightm: 2.1,
 		weightkg: 79,
@@ -38218,6 +38218,18 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 9999999999999,
 		color: "Green",
 		eggGroups: ["Dragon", "Monster"],
+	},
+	vulkancermr: {
+		num: -42013,
+		name: "Vulkancer-MR",
+		types: ["Steel", "Fire"],
+		baseStats: {hp: 60, atk: 65, def: 90, spa: 160, spd: 85, spe: 140},
+		abilities: {0: "Speed Boost"},
+		heightm: 10.1,
+		weightkg: 160,
+		color: "Red",
+		tags: ["Sub-Legendary"],
+		eggGroups: ["Ditto"],
 	},
 	/* Clover CAP Megas */
 	oogabugamega: {
