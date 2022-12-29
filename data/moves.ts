@@ -25775,4 +25775,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {spd: 1}},
 		contestType: "Beautiful",
 	},
+	bigshot: {
+		num: 177,
+		accuracy: 80,
+		basePower: 80,
+		category: "Special",
+		name: "Big Shot",
+		pp: 5,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1, distance: 1},
+		critRatio: 2,
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		target: "any",
+		type: "Dark",
+		isNonstandard: "Future",
+		contestType: "Cool",
+	},
 };

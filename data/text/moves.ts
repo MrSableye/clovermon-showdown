@@ -7958,4 +7958,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "Charges, then restores 2/3 of its maximum HP, and cures its burn, poison, or paralysis.",
 		prepare: "[POKEMON] is reforming itself!",
 	},
+	bigshot: {
+		name: "Rebuild",
+		shortDesc: "30% chance to paralyze the target and high crit rate.",
+	
+	},
 };
