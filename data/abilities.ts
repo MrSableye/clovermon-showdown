@@ -6848,7 +6848,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				target !== source && move.type === 'Fire') {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 				return null;
-			} else if (['hail'].includes(target.effectiveWeather()) && target !== source && move.type === 'Ice') {
+			} else if (['hail', 'hyperboreanarctic'].includes(target.effectiveWeather()) && target !== source && move.type === 'Ice') {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 				return null;
 			} else if (['sandstorm'].includes(target.effectiveWeather()) && target !== source && move.type === 'Rock') {
