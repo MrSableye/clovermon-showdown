@@ -7959,7 +7959,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		prepare: "[POKEMON] is reforming itself!",
 	},
 	bigshot: {
-		name: "Rebuild",
+		name: "Big Shot",
 		shortDesc: "30% chance to paralyze the target and high crit rate.",
 	
 	},
