@@ -920,7 +920,12 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.eachEvent('Weather');
 		},
 		onWeather(target) {
-			this.damage(target.baseMaxhp / 16);
+			if (!target.hasType('Ice')) this.damage(target.baseMaxhp / 8);
+		},
+		onModifyDef(def, pokemon) {
+			if (pokemon.hasType('Ice')) {
+				return this.modify(def, 1.5);
+			}
 		},
 		onFieldEnd() {
 			this.add('-weather', 'none');

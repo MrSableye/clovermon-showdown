@@ -1516,7 +1516,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	icebody: {
 		onWeather(target, source, effect) {
-			if (effect.id === 'hail') {
+			if (effect.id === 'hail' || effect.id === 'hyperboreanarctic') {
 				this.heal(target.baseMaxhp / 16);
 			}
 		},
