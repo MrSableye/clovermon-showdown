@@ -8582,4 +8582,5 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 5,
 		isNonstandard: "Future",
 	},
+	
 };

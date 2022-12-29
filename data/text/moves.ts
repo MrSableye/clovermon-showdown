@@ -7961,6 +7961,10 @@ export const MovesText: {[k: string]: MoveText} = {
 	bigshot: {
 		name: "Big Shot",
 		shortDesc: "30% chance to paralyze the target and high crit rate.",
-	
+	},
+	foolsgambit: {
+		name: "Fool's Gambit",
+		desc: "The target is immune if it does not share a type with the user.",
+		shortDesc: "Hits adjacent Pokemon sharing the user's type.",
 	},
 };

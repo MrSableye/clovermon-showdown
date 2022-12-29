@@ -25795,4 +25795,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 		contestType: "Cool",
 	},
+	foolsgambit: {
+		num: 485,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Fool's Gambit",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onTryImmunity(target, source) {
+			return target.hasType(source.getTypes());
+		},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Dark",
+		isNonstandard: "Future",
+		contestType: "Clever",
+	},
 };
