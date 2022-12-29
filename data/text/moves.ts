@@ -7942,4 +7942,20 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "For 5 turns, the target cannot use sound or bite-based moves.",
 		cant: "The effects of Mouth Melter prevent [POKEMON] from using certain moves!",
 	},
+	swamp: {
+		name: "Swamp",
+		shortDesc: "A swamp appears on the target's side for 4 turns, which quarters the Speed of each Pokemon on that side.",
+		start: "  A swamp enveloped [TEAM]!",
+		end: "  The swamp around [TEAM] disappeared!",
+	},
+	devilsbarrage: {
+		name: "Devil's Barrage",
+		shortDesc: "Charges, then hits 3 times",
+		prepare: "[POKEMON] is splitting apart!",
+	},
+	rebuild: {
+		name: "Rebuild",
+		shortDesc: "Charges, then restores 2/3 of its maximum HP, and cures its burn, poison, or paralysis.",
+		prepare: "[POKEMON] is reforming itself!",
+	},
 };
