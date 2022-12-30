@@ -21895,7 +21895,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	/* :^) */
 	skullcannon: {
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 150,
 		category: "Special",
 		isNonstandard: "Future",
