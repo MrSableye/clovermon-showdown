@@ -782,7 +782,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {snatch: 1},
 		sideCondition: 'auroraveil',
 		onTry() {
-			return this.field.isWeather('hail');
+			return this.field.isWeather('hail') || this.field.isWeather('hyperboreanarctic');
+			
 		},
 		condition: {
 			duration: 5,
@@ -21894,7 +21895,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	/* :^) */
 	skullcannon: {
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 150,
 		category: "Special",
 		isNonstandard: "Future",
@@ -25643,5 +25644,173 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 		contestType: "Clever",
 		isNonstandard: "Future",
+	},
+	rebuild: {
+		num: 69027,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Rebuild",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		onHit(pokemon) {
+			if (['', 'slp', 'frz'].includes(pokemon.status) && pokemon.hp >= pokemon.maxhp) return false;
+			pokemon.cureStatus();
+		},
+		heal: [2, 3],
+		secondary: null,
+		target: "self",
+		type: "Steel",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	devilsbarrage: {
+		num: 458,
+		accuracy: 100,
+		basePower: 65,
+		category: "Physical",
+		name: "Devil's Barrage",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		multihit: 2,
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		zMove: {basePower: 190},
+		maxMove: {basePower: 140},
+		contestType: "Cool",
+	},
+	slysquall: {
+		num: 42013,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Sly Squall",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
+		beforeMoveCallback(source, target, move) {
+			if (source.illusion) move.willCrit = true;
+		},
+		onHit(target, source) {
+			this.singleEvent('End', this.dex.abilities.get('Illusion'), source.abilityState, source);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		contestType: "Cute",
+	},
+	
+	swamp: {
+		num: 1001,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Swamp",
+		pp: 5,
+		priority: 0,
+		flags: {mirror: 1},
+		sideCondition: 'swamp',
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('swamp');
+				}
+			},
+		},
+		condition: {
+			duration: 4,
+			durationCallback(target, source, effect) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-activate', source, 'ability: Persistent', effect);
+					return 6;
+				}
+				return 4;
+			},
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'swamp');
+			},
+			onModifySpe(spe, pokemon) {
+				return this.chainModify(0.25);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 9,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'swamp');
+			},
+			
+			
+		},
+
+		secondary: null,
+		noSketch: true,
+		target: "all",
+		type: "Grass",
+		isNonstandard: "Future",
+		zMove: {boost: {spd: 1}},
+		contestType: "Beautiful",
+	},
+	bigshot: {
+		num: 177,
+		accuracy: 80,
+		basePower: 80,
+		category: "Special",
+		name: "Big Shot",
+		pp: 5,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1, distance: 1},
+		critRatio: 2,
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		target: "any",
+		type: "Dark",
+		isNonstandard: "Future",
+		contestType: "Cool",
+	},
+	foolsgambit: {
+		num: 485,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Fool's Gambit",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onTryImmunity(target, source) {
+			return target.hasType(source.getTypes());
+		},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Dark",
+		isNonstandard: "Future",
+		contestType: "Clever",
 	},
 };

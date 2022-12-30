@@ -2479,4 +2479,33 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Captcha: Horni",
 		shortDesc: "This Pokemon's horn moves have 1.5x power and trap for a turn.",
 	},
+	metronomepower: {
+		name: "Present Power",
+		shortDesc: "Adds a Metronome to every attack.",
+	},
+	swamped: {
+		name: "Swamped",
+		shortDesc: "On switch-in, this Pokemon summons a Swamp.",
+	},
+	revvingmalice: {
+		name: "Revving Malice",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Dark-type attack.",
+	},
+	woodchipper: {
+		name: "Woodchipper",
+		shortDesc: "30% chance a Pokemon making contact with this Pokemon will lose their item. 1.2x Blade moves.",
+	},
+	pooperpower: {
+		name: "Pooperpower",
+		shortDesc: "Mud and Shit moves have 2x power",
+	},
+	bejeweled: {
+		name: "Bejeweled",
+		shortDesc: "Sets Psychic Surge and recovers gems at the end of turns",
+	},
+	boardpoweryou: {
+		name: "Board Power (/you/)",
+		shortDesc: "Every Board Power combined except /Z/ and Gorrilla Tactics",
+		
+	},
 };
