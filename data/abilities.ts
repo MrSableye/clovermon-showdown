@@ -6848,7 +6848,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				target !== source && move.type === 'Fire') {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 				return null;
-			} else if (['hail', 'hyperboreanarctic'].includes(target.effectiveWeather()) && target !== source && move.type === 'Ice') {
+			} else if (['hail', 'hyperboreanarctic'].includes(target.effectiveWeather()) &&
+			target !== source && move.type === 'Ice') {
 				this.add('-immune', target, '[from] ability: Storm Shelter');
 				return null;
 			} else if (['sandstorm'].includes(target.effectiveWeather()) && target !== source && move.type === 'Rock') {
@@ -8047,16 +8048,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target)) {
-			if (source.hp) {
-				const item = source.takeItem();
-				if (item) {
-					this.add('-enditem', source, item.name, '[from] ability: Woodchipper', '[of] ' + target);
+				if (source.hp) {
+					const item = source.takeItem();
+					if (item) {
+						this.add('-enditem', source, item.name, '[from] ability: Woodchipper', '[of] ' + target);
+					}
 				}
 			}
-		}
 		},
 
-		
+
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags.blade) {
 				this.debug('Blademaster boost');
@@ -8112,7 +8113,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				side.addSideCondition('swamp');
 			}
 		},
-		
+
 		name: "Swamped",
 		rating: 4,
 		num: 229,
@@ -8131,7 +8132,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 
-			//Poison Immunity?
+			// Poison Immunity?
 			if (target !== pokemon && move.type === 'Poison') {
 				if (!this.heal(target.baseMaxhp / 4)) {
 					this.add('-immune', pokemon, '[from] ability: Board Power (/soc/)');
@@ -8140,14 +8141,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 
 
-			//bug Immunity?
+			// bug Immunity?
 			if (target !== pokemon && move.type === 'Bug') {
 				if (!this.heal(target.baseMaxhp / 4)) {
 					this.add('-immune', pokemon, '[from] ability: Board Power (/vp/)');
 				}
 				return null;
 			}
-			//magic Bounce?
+			// magic Bounce?
 			if (target.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (target === pokemon || move.hasBounced || !move.flags['reflectable']) {
 				return;
@@ -8157,7 +8158,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			newMove.pranksterBoosted = false;
 			this.actions.useMove(newMove, target, pokemon);
 			return null;
-			
 		},
 		onDamagePriority: -30,
 		onDamage(damage, target, source, effect) {
@@ -8177,7 +8177,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			
+
 			const additionalBannedAbilities = [
 				// Zen Mode included here for compatability with Gen 5-6
 				'noability',
@@ -8245,13 +8245,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			this.add('-copyboost', pokemon, target, '[from] ability: Board Power (/fa/)');
 			// Frisk
-			for (const target of pokemon.foes()) {
+			for (const foe of pokemon.foes()) {
 				if (target.item) {
-					this.add('-item', target, target.getItem().name, '[from] ability: Board Power (/soc/)', '[of] ' + pokemon, '[identify]');
+					this.add('-item', foe, foe.getItem().name, '[from] ability: Board Power (/soc/)', '[of] ' + pokemon, '[identify]');
 				}
 			}
 			pokemon.addVolatile('boardpower5');
-			
+
 			if (pokemon.side.pokemonLeft === 1) {
 				this.boost({
 					atk: 1,
@@ -8270,61 +8270,62 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.add('-start', activePokemon, 'typechange', 'Ghost', '[from] ability: Board Power (/x/)');
 				activePokemon.setType('Ghost');
 			}
-			
+
 			pokemon.abilityState.irresistable = true;
 			const rand2 = this.random(8);
 			if (rand2 === 0) {
-			if (pokemon.addType('Dark')) {
-				this.add('-start', pokemon, 'typeadd', 'Dark', '[from] ability: Board Power (/d/)');
-			}}
-			else if (rand2 === 1) {
-			if (pokemon.addType('Fighting')) {
-				this.add('-start', pokemon, 'typeadd', 'Fighting', '[from] ability: Board Power (/fit/)');
-			}}
-			else if (rand2 === 2) {
-			if (pokemon.addType('Electric')) {
-				this.add('-start', pokemon, 'typeadd', 'Electric', '[from] ability: Board Power (/g/)');
-			}}
-			else if (rand2 === 3) {
-			if (pokemon.addType('Fire')) {
-				this.add('-start', pokemon, 'typeadd', 'Fire', '[from] ability: Board Power (/h/)');
-			}}
-			else if (rand2 === 4) {
-			if (pokemon.addType('Steel')) {
-				this.add('-start', pokemon, 'typeadd', 'Steel', '[from] ability: Board Power (/k/)');
-			}}
-			else if (rand2 === 5) {
-			if (pokemon.addType('Ground')) {
-				this.add('-start', pokemon, 'typeadd', 'Ground', '[from] ability: Board Power (/tv/)');
-			}}
-			else if (rand2 === 6) {
-			if (pokemon.addType('Dragon')) {
-				this.add('-start', pokemon, 'typeadd', 'Dragon', '[from] ability: Board Power (/vg/)');
-			}}
-			else if (rand2 === 7) {
-			if (pokemon.addType('Ghost')) {
-				this.add('-start', pokemon, 'typeadd', 'Ghost', '[from] ability: Board Power (/x/)');
-			}}
-			else {
-			if (pokemon.addType('Fairy')) {
-				this.add('-start', pokemon, 'typeadd', 'Fairy', '[from] ability: Board Power (/c/)');
-			}}
+				if (pokemon.addType('Dark')) {
+					this.add('-start', pokemon, 'typeadd', 'Dark', '[from] ability: Board Power (/d/)');
+				}
+			} else if (rand2 === 1) {
+				if (pokemon.addType('Fighting')) {
+					this.add('-start', pokemon, 'typeadd', 'Fighting', '[from] ability: Board Power (/fit/)');
+				}
+			} else if (rand2 === 2) {
+				if (pokemon.addType('Electric')) {
+					this.add('-start', pokemon, 'typeadd', 'Electric', '[from] ability: Board Power (/g/)');
+				}
+			} else if (rand2 === 3) {
+				if (pokemon.addType('Fire')) {
+					this.add('-start', pokemon, 'typeadd', 'Fire', '[from] ability: Board Power (/h/)');
+				}
+			} else if (rand2 === 4) {
+				if (pokemon.addType('Steel')) {
+					this.add('-start', pokemon, 'typeadd', 'Steel', '[from] ability: Board Power (/k/)');
+				}
+			} else if (rand2 === 5) {
+				if (pokemon.addType('Ground')) {
+					this.add('-start', pokemon, 'typeadd', 'Ground', '[from] ability: Board Power (/tv/)');
+				}
+			} else if (rand2 === 6) {
+				if (pokemon.addType('Dragon')) {
+					this.add('-start', pokemon, 'typeadd', 'Dragon', '[from] ability: Board Power (/vg/)');
+				}
+			} else if (rand2 === 7) {
+				if (pokemon.addType('Ghost')) {
+					this.add('-start', pokemon, 'typeadd', 'Ghost', '[from] ability: Board Power (/x/)');
+				}
+			} else {
+				if (pokemon.addType('Fairy')) {
+					this.add('-start', pokemon, 'typeadd', 'Fairy', '[from] ability: Board Power (/c/)');
+				}
+			}
 
 			this.field.addPseudoWeather('gravity');
 			this.boost({def: 1, spd: 1}, pokemon);
 
 
 			const rand = this.random(4);
-					if (rand === 0) {
-						this.field.setTerrain('psychicterrain');
-					} else if (rand === 1) {
-						this.field.setTerrain('electricterrain');
-					} else if (rand === 2) {
-						this.field.setTerrain('grassyterrain');
-					} else {
-						this.field.setTerrain('mistyterrain');
-					}
-			
+			if (rand === 0) {
+				this.field.setTerrain('psychicterrain');
+			} else if (rand === 1) {
+				this.field.setTerrain('electricterrain');
+			} else if (rand === 2) {
+				this.field.setTerrain('grassyterrain');
+			} else {
+				this.field.setTerrain('mistyterrain');
+			}
+
 			this.actions.useMove('Charge', pokemon);
 			this.actions.useMove('Hulk Up', pokemon);
 			this.actions.useMove('Stockpile', pokemon);
@@ -8335,15 +8336,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				activePokemon.addVolatile('torment');
 			}
 
-			for (const pokemon of this.getAllActive()) {
-				//if (pokemon === source) continue;
-				pokemon.addVolatile('retro');
+			for (const activePokemon of this.getAllActive()) {
+				// if (pokemon === source) continue;
+				activePokemon.addVolatile('retro');
 			}
 			this.field.addPseudoWeather('magicroom');
-
-			
-		
-			
 		},
 		onBoost(boost, target, source, effect) {
 			if (target.baseSpecies.baseSpecies !== 'Fontaba') return;
@@ -8361,7 +8358,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.add("-fail", target, "unboost", "[from] ability: Board Power (/a/)", "[of] " + target);
 			}
 		},
-		
+
 		onAnyBasePowerPriority: 20,
 		onAnyBasePower(basePower, source, target, move) {
 			if (target === source || move.category === 'Status' || move.type !== 'Fairy') return;
@@ -8384,14 +8381,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
-		
+
 		onModifyDef(def, pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (pokemon.status) {
 				return this.chainModify(1.5);
 			}
 		},
-		
+
 		onSourceModifyDamage(damage, source, target, move) {
 			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			let mod = 1;
@@ -8442,7 +8439,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					move.basePower = 150;
 				}
 			}
-			//if (move.category === 'Status') return;
+			// if (move.category === 'Status') return;
 			if (!this.effectState.repetition) return;
 
 			const {moveId, times} = this.effectState.repetition;
@@ -8459,9 +8456,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify([0x1333, 0x1000]);
 			}
 			let boosted = true;
-			for (const target of this.getAllActive()) {
-				if (target === pokemon) continue;
-				if (this.queue.willMove(target)) {
+			for (const activePokemon of this.getAllActive()) {
+				if (activePokemon === pokemon) continue;
+				if (this.queue.willMove(activePokemon)) {
 					boosted = false;
 					break;
 				}
@@ -8473,7 +8470,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.type === 'Poison') return this.chainModify(1.5);
 		},
 		onModifyAtkPriority: 5,
-		onModifyAtk(atk, attacker, defender,move) {
+		onModifyAtk(atk, attacker, defender, move) {
 			if (attacker.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (!defender.activeTurns) {
 				this.debug('Board Power (/pol/) boost');
@@ -8496,7 +8493,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(1.5);
 			}
 		},
-		
+
 		onEnd(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			delete pokemon.volatiles['boardpower5'];
@@ -8534,7 +8531,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(0.75);
 			}
 		},
-		
+
 		onAllyTryHitSide(target, source, move) {
 			if (target.baseSpecies.baseSpecies !== 'Fontaba' &&
 			this.effectState.target.baseSpecies.baseSpecies !== 'Fontaba') return;
@@ -8576,11 +8573,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
-		
+
 		isPermanent: true,
 		rating: 3,
 		num: 5,
 		isNonstandard: "Future",
 	},
-	
+
 };
