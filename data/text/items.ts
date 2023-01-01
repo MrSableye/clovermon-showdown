@@ -2544,6 +2544,6 @@ export const ItemsText: { [k: string]: ItemText } = {
 	},
 	kerosenehose: {
 		name: "Kerosene Hose",
-		desc: "If held by a Blobbos-Firefighter, its SpD is 1.5x.",
+		desc: "If held by a Blobbos-Firefighter, its SpE is 1.5x.",
 	},
 };
