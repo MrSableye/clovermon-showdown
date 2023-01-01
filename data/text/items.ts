@@ -2534,4 +2534,16 @@ export const ItemsText: { [k: string]: ItemText } = {
 		transform: "  OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!!!",
 		activate: "OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!!",
 	},
+	masamune: {
+		name: "Masamune",
+		desc: "If held by a Blobbos-Ninja, its Atk and SpA is 1.5x.",
+	},
+	piratesbooty: {
+		name: "Pirate's Booty",
+		desc: "If held by a Blobbos-Pirate, its Def and SpD is 1.5x.",
+	},
+	kerosenehose: {
+		name: "Kerosene Hose",
+		desc: "If held by a Blobbos-Firefighter, its SpD is 1.5x.",
+	},
 };

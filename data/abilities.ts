@@ -8047,12 +8047,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target)) {
+				if (this.randomChance(3, 10)) {
 			if (source.hp) {
 				const item = source.takeItem();
 				if (item) {
 					this.add('-enditem', source, item.name, '[from] ability: Woodchipper', '[of] ' + target);
 				}
 			}
+		}
 		}
 		},
 

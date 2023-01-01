@@ -25813,4 +25813,76 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 		contestType: "Clever",
 	},
+	trapcard: {
+		num: 485,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Trap Card",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		priorityChargeCallback() {},
+		onTryMove() {},
+		onBasePower(basePower, pokemon) {
+			
+			if (!pokemon.volatiles['shelltrap']?.gotHit) {
+				return this.chainModify(2);		
+			}
+		},
+		onAfterHit(target, pokemon, move) {
+			pokemon.abilityState.irresistable = true;
+			if (!pokemon.volatiles['shelltrap']?.gotHit) {
+				target.addVolatile('attract');	
+			}
+			},
+		condition: {
+			duration: 1,
+			onStart(pokemon) {
+				this.add('-singleturn', pokemon, 'move: Shell Trap');
+			},
+			onHit(pokemon, source, move) {
+				if (!pokemon.isAlly(source) && move.category === 'Physical') {
+					this.effectState.gotHit = true;
+				}
+			},
+		},
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Fairy",
+		isNonstandard: "Future",
+		contestType: "Cute",
+	},
+	winterwhiteout: {
+		num: 619,
+		accuracy: 85,
+		basePower: 120,
+		category: "Physical",
+		name: "Winter Whiteout",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		target: "allAdjacentFoes",
+		type: "Ice",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	gmaxblobbomb: {
+		num: 69028,
+		accuracy: 100,
+		basePower: 160,
+		category: "Physical",
+		name: "G-Max Blob Bomb",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		onHit(target, source, move) {
+			source.side.addSideCondition('safeguard');
+			source.side.addSideCondition('mist');
+		},
+		target: "normal",
+		type: "Ice",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
 };

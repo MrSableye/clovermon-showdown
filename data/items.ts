@@ -7986,4 +7986,64 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 5,
 		isNonstandard: "Future",
 	},
+	piratesbooty: {
+		name: "Pirate's Booty",
+		spritenum: 581,
+		fling: {
+			basePower: 80,
+		},
+		onModifySpDPriority: 2,
+		onModifySpD(spd, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Pirate') {
+				return this.chainModify(2);
+			}
+		},
+		onModifyDefPriority: 2,
+		onModifyDef(def, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Pirate') {
+				return this.chainModify(2);
+			}
+		},
+		num: 640,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	masamune: {
+		name: "Masamune",
+		spritenum: 743,
+		fling: {
+			basePower: 80,
+		},
+		onModifySpDPriority: 2,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Ninja') {
+				return this.chainModify(2);
+			}
+		},
+		onModifyDefPriority: 2,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Ninja') {
+				return this.chainModify(2);
+			}
+		},
+		num: 640,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	kerosenehose: {
+		name: "Kerosene Hose",
+		spritenum: 743,
+		fling: {
+			basePower: 80,
+		},
+		onModifySpDPriority: 2,
+		onModifySpe(spe, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Firefighter') {
+				return this.chainModify(2);
+			}
+		},
+		num: 640,
+		gen: 8,
+		isNonstandard: "Future",
+	},
 };
