@@ -2506,6 +2506,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	boardpoweryou: {
 		name: "Board Power (/you/)",
 		shortDesc: "Every Board Power combined except /Z/ and Gorrilla Tactics",
-		
+
 	},
 };

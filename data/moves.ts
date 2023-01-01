@@ -783,7 +783,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		sideCondition: 'auroraveil',
 		onTry() {
 			return this.field.isWeather('hail') || this.field.isWeather('hyperboreanarctic');
-			
 		},
 		condition: {
 			duration: 5,
@@ -25704,6 +25703,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {basePower: 190},
 		maxMove: {basePower: 140},
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	slysquall: {
 		num: 42013,
@@ -25726,7 +25726,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		contestType: "Cute",
 	},
-	
+
 	swamp: {
 		num: 1001,
 		accuracy: true,
@@ -25764,8 +25764,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onSideEnd(targetSide) {
 				this.add('-sideend', targetSide, 'swamp');
 			},
-			
-			
+
+
 		},
 
 		secondary: null,
