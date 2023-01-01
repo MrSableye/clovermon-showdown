@@ -7722,7 +7722,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sunburst: {
 		name: "Sunburst",
-		shortDesc: "Summons Sun. Chance to Burn",
+		shortDesc: "Summons Sun. 10% chance to Burn",
 	},
 	deepfry: {
 		name: "Deep Fry",
