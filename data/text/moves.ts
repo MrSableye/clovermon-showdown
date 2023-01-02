@@ -7722,7 +7722,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sunburst: {
 		name: "Sunburst",
-		shortDesc: "Summons Sun. Chance to Burn",
+		shortDesc: "Summons Sun. 10% chance to Burn",
 	},
 	deepfry: {
 		name: "Deep Fry",
@@ -7966,5 +7966,13 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Fool's Gambit",
 		desc: "The target is immune if it does not share a type with the user.",
 		shortDesc: "Hits adjacent Pokemon sharing the user's type.",
+	},
+	trapcard: {
+		name: "Trap Card",
+		shortDesc: "Does double damage and attracts the foe if hit by a physical attack",
+
+		start: "  [POKEMON] set a trap card!",
+		prepare: "  [POKEMON] set a trap card!",
+		cant: "[POKEMON]'s trap card didn't work!",
 	},
 };

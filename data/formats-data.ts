@@ -9679,4 +9679,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	jerkistal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };
