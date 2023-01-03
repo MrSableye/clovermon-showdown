@@ -7373,18 +7373,18 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	yiikout: {
 		name: "Yiik Out",
-		shortDesc: "Hits first. First turn out only, makes the opponent have the same ability as the user.",
+		shortDesc: "Hits first. First turn out only. The target's Ability changes to match the user's.",
 	},
 	leafshield: {
 		name: "Leaf Shield",
 		desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon making contact with the user lose 1/8 of their maximum HP, rounded down. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
-		shortDesc: "Protects from moves. Contact: loses 1/8 HP. Sets Grass.",
+		shortDesc: "Protects from moves. Contact: loses 1/8 HP. Sets Grassy Terrain.",
 
 		damage: "  [POKEMON] was hurt by the sharp leaves!",
 	},
 	twintowertumblingterror: {
 		name: "Twin Tower Tumbling Terror",
-		desc: "Same type as user primary type. 100% chance to burn the user and the opponent.",
+		desc: "Type varies based on the user's primary type. Burns everyone.",
 	},
 	frigidend: {
 		name: "Frigid End",
@@ -7602,7 +7602,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	butterflykick: {
 		name: "Butterfly Kick",
-		shortDesc: "Combines Bug and Fighting in the result.",
+		shortDesc: "Combines Fighting in its type effectiveness.",
 	},
 	toxicbeam: {
 		name: "Toxic Beam",
@@ -7618,23 +7618,23 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	maximize: {
 		name: "Maximize",
-		shortDesc: "100% chance to lower user's evasion by 1.",
+		shortDesc: "Lowers user's evasion by 1.",
 	},
 	seaquake: {
 		name: "Seaquake",
-		shortDesc: "Water + Ground type move.",
+		shortDesc: "Combines Ground in its type effectiveness.",
 	},
 	edgequake: {
 		name: "Edgequake",
-		shortDesc: "Rock + Ground together in an attack.",
+		shortDesc: "Combines Ground in its type effectiveness.",
 	},
 	sugarrush: {
 		name: "Sugar Rush",
-		shortDesc: "Raises user's Sp. Atk by 6 stages, but lowers HP 1/2.",
+		shortDesc: "User loses 50% max HP. Maximizes Sp. Atk.",
 	},
 	sleepingsands: {
 		name: "Sleeping Sands",
-		shortDesc: "Chance to make the foe fall asleep.",
+		shortDesc: "10% chance to make the foe fall asleep.",
 	},
 	fuckyou: {
 		name: "Fuck You",
@@ -7658,11 +7658,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	rockout: {
 		name: "Rock Out",
-		shortDesc: "User switches out.",
+		shortDesc: "User switches out after damaging the opponent.",
 	},
 	toppingtoss: {
 		name: "Topping Toss",
-		shortDesc: "3-hit move, 1st hit Fire, 2nd Grass, 3rd Ground",
+		shortDesc: "3-hit move; 1st hit Fire, 2nd Grass, 3rd Ground.",
 	},
 	heavensblessing: {
 		name: "Heaven's Blessing",
@@ -7670,7 +7670,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	heavenpierce: {
 		name: "Heaven Pierce",
-		shortDesc: "Always crits, breaks screens, ignores abilities, ignores everything.",
+		shortDesc: "Always crits, breaks screens, ignores everything.",
 	},
 	sandysnore: {
 		name: "Sandy Snore",
@@ -7698,11 +7698,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	nuclearmeltdown: {
 		name: "Nuclear Meltdown",
-		shortDesc: "Lowers user's Atk, SpA, and SpE",
+		shortDesc: "Lowers user's Attack, Sp. Atk, and Speed by 2.",
 	},
 	obsidianhorn: {
 		name: "Obsidian Horn",
-		shortDesc: "10% chance to raise Defense and Sp.Def by 1.",
+		shortDesc: "10% chance to raise Defense and Sp. Def by 1.",
 	},
 	feudefee: {
 		name: "Feu de Fe\u0301e",
@@ -7710,27 +7710,27 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	skulltoss: {
 		name: "Skull Toss",
-		shortDesc: "Raises speed once",
+		shortDesc: "Raises Speed by 1, but only once.",
 	},
 	blobblast: {
 		name: "Blobblast",
-		shortDesc: "Has 1/4 Recoil",
+		shortDesc: "Has 1/4 recoil.",
 	},
 	floofandpoof: {
 		name: "Floof and Poof",
-		shortDesc: "Uses Defense. Summons Lucky Chant, Safeguard, Mist",
+		shortDesc: "Uses Def as Atk. Summons Lucky Chant, Safeguard, and Mist.",
 	},
 	sunburst: {
 		name: "Sunburst",
-		shortDesc: "Summons Sun. 10% chance to Burn",
+		shortDesc: "Summons Sun. 10% chance to Burn.",
 	},
 	deepfry: {
 		name: "Deep Fry",
-		shortDesc: "Cooks the opponent's item",
+		shortDesc: "Cooks the opponent's item, with varying effects.",
 	},
 	flashbang: {
 		name: "Flashbang",
-		shortDesc: "Switches out and sets up dazzling for a turn",
+		shortDesc: "User switches out. Sets up Dazzling for a turn.",
 		start: "  A dazzling display surrounds [TEAM]!",
 		end: "  [TEAM]'s the dazzling display has dissipated!",
 		switchOut: "#uturn",
@@ -7745,7 +7745,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	feedandseed: {
 		name: "Feed and Seed",
-		shortDesc: "Leech Seed, Worry Seed, and Grassy Terrain",
+		shortDesc: "Uses Leech Seed, Worry Seed, and Grassy Terrain.",
 	},
 	atombomb: {
 		name: "Atom Bomb",
@@ -7773,11 +7773,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	abduction: {
 		name: "Abduction",
-		shortDesc: "Switches the user and opponent",
+		shortDesc: "The user and opponent both switch out.",
 	},
 	electromagnetism: {
 		name: "Electromagnetism",
-		shortDesc: "Deals damage and user is under Magnet Rise effect",
+		shortDesc: "Deals damage. Magnet Rises the user.",
 	},
 	titaniumclap: {
 		name: "Titanium Clap",
@@ -7823,19 +7823,19 @@ export const MovesText: {[k: string]: MoveText} = {
 	plasticterrain: {
 		name: "Plastic Terrain",
 		desc: "For 5 turns, the terrain becomes Plastic Terrain. During the effect, the power of Plastic-type attacks used by grounded Pokemon is multiplied by 1.3, and items get recycled.",
-		shortDesc: "5 turns. Grounded: +Plastic power, Recycle items",
+		shortDesc: "5 turns. Grounded: +Plastic power, Recycles items.",
 	},
 	highjumpsaw: {
 		name: "High Jump Saw",
-		shortDesc: "The user jumps up high, spinning its fists and feet like a buzzsaw. Dual Type Steel",
+		shortDesc: "The user jumps up high, spinning its fists and feet like a buzzsaw. Dual Type Steel.",
 	},
 	stingingrage: {
 		name: "Stinging Rage",
-		shortDesc: "The user faints. Causes Toxic",
+		shortDesc: "The user faints. Badly poisons the opponent.",
 	},
 	malicepowder: {
 		name: "Malice Powder",
-		shortDesc: "Confuses everyone, and it infestates those not immune to powder moves",
+		shortDesc: "Confuses everyone. Causes infestation.",
 	},
 	spectresabre: {
 		name: "Spectre Sabre",
@@ -7849,7 +7849,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	fadereflection: {
 		name: "Fade Reflection",
-		desc: "Has a 25% chance to disable the target's move",
+		desc: "Has a 25% chance to disable the target's move.",
 		shortDesc: "25% chance to disable.",
 	},
 	plasticblaze: {
@@ -7883,11 +7883,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hyperzone: {
 		name: "Hyper Zone",
-		shortDesc: "For 5 turns, Dark types are protected from status, priority, and screens",
+		shortDesc: "For 5 turns, Dark types are protected from status, priority, and screens.",
 	},
 	freeballoonday: {
 		name: "Free Balloon Day",
-		shortDesc: "Doubles in power if holding a balloon. Recycles balloon if you don't have an item",
+		shortDesc: "Doubles in power if holding a balloon. Recycles balloon if you don't have an item.",
 	},
 	helldive: {
 		name: "Hell Dive",
@@ -7895,7 +7895,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mushroomshot: {
 		name: "Mushroom Shot",
-		shortDesc: "Doubles in power if opponent partially trapped. During Gravity: 1.5x power. Hits 4 times",
+		shortDesc: "Power doubles if opponent partially trapped. During Gravity: 1.5x power. Hits 4 times",
 	},
 	qualityrip: {
 		name: "Quality Rip",
@@ -7916,17 +7916,18 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Shooting Star",
 		shortDesc: "20% recoil, user switches out.",
 		switchOut: "#uturn",
-	},	dousingflame: {
+	},	
+	dousingflame: {
 		name: "Dousing Flame",
-		shortDesc: "Super Effective on Fire",
+		shortDesc: "Super effective on Fire.",
 	},
 	cursedblade: {
 		name: "Cursed Blade",
-		shortDesc: "30% chance to inflict Curse",
+		shortDesc: "30% chance to inflict Curse.",
 	},
 	riptide: {
 		name: "Riptide",
-		shortDesc: "Traps and damages the target for 4-5 turns",
+		shortDesc: "Traps and damages the target for 4-5 turns.",
 	},
 	secretstrength: {
 		name: "Secret Strength",
@@ -7944,13 +7945,13 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	swamp: {
 		name: "Swamp",
-		shortDesc: "A swamp appears on the target's side for 4 turns, which quarters the Speed of each Pokemon on that side.",
+		shortDesc: "For 4 turns, foes' Speed is quartered.",
 		start: "  A swamp enveloped [TEAM]!",
 		end: "  The swamp around [TEAM] disappeared!",
 	},
 	devilsbarrage: {
 		name: "Devil's Barrage",
-		shortDesc: "Charges, then hits 3 times",
+		shortDesc: "Charges, then hits 3 times.",
 		prepare: "[POKEMON] is splitting apart!",
 	},
 	rebuild: {
@@ -7960,7 +7961,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	bigshot: {
 		name: "Big Shot",
-		shortDesc: "30% chance to paralyze the target and high crit rate.",
+		shortDesc: "High critical hit ratio, 30% chance to paralyze.",
 	},
 	foolsgambit: {
 		name: "Fool's Gambit",
@@ -7969,7 +7970,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	trapcard: {
 		name: "Trap Card",
-		shortDesc: "Does double damage and attracts the foe if hit by a physical attack",
+		shortDesc: "Does double damage and attracts the foe if hit by a physical attack.",
 
 		start: "  [POKEMON] set a trap card!",
 		prepare: "  [POKEMON] set a trap card!",
