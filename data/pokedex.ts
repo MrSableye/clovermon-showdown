@@ -38173,6 +38173,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Ghost", "Dark"],
 		gender: "N",
 		baseStats: {hp: 1, atk: 1, def: 1, spa: 1, spd: 1, spe: 255},
+		maxHP: 1,
 		abilities: {0: "Wonder Guard", 1: "Wonder Guard", H: "Wonder Guard", S: "Wonder Guard"},
 		heightm: 1.2,
 		weightkg: 8,
