@@ -7916,7 +7916,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Shooting Star",
 		shortDesc: "20% recoil, user switches out.",
 		switchOut: "#uturn",
-	},	
+	},
 	dousingflame: {
 		name: "Dousing Flame",
 		shortDesc: "Super effective on Fire.",

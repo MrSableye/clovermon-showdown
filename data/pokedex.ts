@@ -35379,7 +35379,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spd: 40,
 			spe: 111,
 		},
-		cosmeticFormes: ["Blobbossus-Black", "Blobbossus-Blue", "Blobbossus-Brown","Blobbossus-Cyan", "Blobbossus-Green", "Blobbossus-Lime", "Blobbossus-Orange", "Blobbossus-Pink", "Blobbossus-Purple", "Blobbossus-Red", "Blobbossus-White", "Blobbossus-Yellow",],
+		cosmeticFormes: ["Blobbossus-Black", "Blobbossus-Blue", "Blobbossus-Brown", "Blobbossus-Cyan", "Blobbossus-Green", "Blobbossus-Lime", "Blobbossus-Orange", "Blobbossus-Pink", "Blobbossus-Purple", "Blobbossus-Red", "Blobbossus-White", "Blobbossus-Yellow"],
 		formeOrder: [
 			"Blobbos Sus",
 			"Blobbossus-Black",
@@ -38155,7 +38155,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Mineral", "Amorphous"],
 		gen: 0,
 	},
-	
+
 	vermingio: {
 		num: -42008,
 		name: "Vermingio",

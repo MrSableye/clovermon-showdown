@@ -7133,28 +7133,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 		rating: 3.5,
 	},
-	copypower: {
-		onSourceAfterFaint(length, target, source, effect) {
-			if (effect && effect.effectType === 'Move') {
-				let statName = 'atk';
-				let bestStat = 0;
-				let s: StatIDExceptHP;
-				for (s in source.storedStats) {
-					if (source.storedStats[s] > bestStat) {
-						statName = s;
-						bestStat = source.storedStats[s];
-					}
-				}
-				this.boost({[statName]: length}, source);
-				this.add('-ability', source, target.getAbility());
-			}
-		},
-		name: "Copy Power",
-		isNonstandard: "Future",
-		rating: 3.5,
-		num: 224,
-	},
-
 	peaceandtranquility: {
 		onModifyCritRatio(critRatio, target, source, move) {
 			if (target.hp <= target.maxhp / 3) { return critRatio + 3; }
@@ -8048,15 +8026,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target)) {
-					if (this.randomChance(3, 10)) {
-			if (source.hp) {
-					const item = source.takeItem();
-					if (item) {
-						this.add('-enditem', source, item.name, '[from] ability: Woodchipper', '[of] ' + target);
+				if (this.randomChance(3, 10)) {
+					if (source.hp) {
+						const item = source.takeItem();
+						if (item) {
+							this.add('-enditem', source, item.name, '[from] ability: Woodchipper', '[of] ' + target);
+						}
 					}
 				}
 			}
-		}
 		},
 
 
@@ -8581,5 +8559,32 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 5,
 		isNonstandard: "Future",
 	},
-
+	copypower: {
+		name: "Copy Power",
+		onStart(pokemon) {
+			const additionalBannedAbilities = [
+				'noability',
+				'flowergift',
+				'forecast',
+				'hungerswitch',
+				'illusion',
+				'imposter',
+				'neutralizinggas',
+				'powerofalchemy',
+				'receiver',
+				'trace',
+				'zenmode',
+				'zenmonke', // TODO: Cap-only
+				'copypower',
+			];
+			const faintedPokemon = pokemon.side.faintedLastTurn || pokemon.side.faintedThisTurn;
+			if (faintedPokemon) {
+				const ability = this.dex.abilities.get(faintedPokemon.ability);
+				if (ability.isPermanent || additionalBannedAbilities.includes(ability.id)) return;
+				this.add('-ability', pokemon, ability, '[from] ability: Copy Power', '[of] ' + pokemon);
+				pokemon.setAbility(ability);
+			}
+		},
+		isNonstandard: "Future",
+	},
 };

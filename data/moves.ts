@@ -25825,17 +25825,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priorityChargeCallback() {},
 		onTryMove() {},
 		onBasePower(basePower, pokemon) {
-			
 			if (!pokemon.volatiles['shelltrap']?.gotHit) {
-				return this.chainModify(2);		
+				return this.chainModify(2);
 			}
 		},
 		onAfterHit(target, pokemon, move) {
 			pokemon.abilityState.irresistable = true;
 			if (!pokemon.volatiles['shelltrap']?.gotHit) {
-				target.addVolatile('attract');	
+				target.addVolatile('attract');
 			}
-			},
+		},
 		condition: {
 			duration: 1,
 			onStart(pokemon) {
