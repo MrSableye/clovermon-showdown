@@ -8587,4 +8587,127 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		isNonstandard: "Future",
 	},
+	onaquest: {
+		name: "On A Quest",
+		onStart(pokemon) {
+			if (pokemon.species.id !== 'blobbosadventurer') return;
+			const quests = [
+				{id: 'ko', name: 'Righteous Purge', requirement: 2, text: 'KO 2 Pokémon', progressText: 'Pokémon KO\'d'},
+				{id: 'repeat', name: 'Practice Makes Perfect', requirement: 3, text: 'Use the same move 3 times in a row', progressText: 'move repetitions'},
+				{id: 'boost', name: 'Cultivation of Power', requirement: 5, text: 'Boost its stats 5 stages', progressText: 'boosts'},
+				{id: 'switch', name: 'Agility Training', requirement: 6, text: 'Switch out 6 times', progressText: 'switch outs'},
+				{id: 'wait', name: 'Patience', requirement: 6, text: 'Wait 6 turns', progressText: 'turns waited'},
+			];
+
+			if (!this.effectState.quest) {
+				const quest = this.sample(quests);
+				this.effectState.quest = {...quest, progress: 0};
+				this.add('-start', pokemon, 'ability: On A Quest', `[questname] ${quest.name}`, `[questtext] ${quest.text}`);
+			}
+		},
+		onAfterMove(source, target, move) {
+			const quest = this.effectState.quest;
+			if (quest && quest.id === 'repeat' && !quest.complete) {
+				if (!this.effectState.repetition) {
+					this.effectState.repetition = {moveId: move.id, times: 1};
+				} else {
+					if (this.effectState.repetition.moveId === move.id) {
+						this.effectState.repetition.times++;
+					} else {
+						this.effectState.repetition = {moveId: move.id, times: 1};
+					}
+				}
+				quest.progress = Math.min(this.effectState.repetition.times, quest.requirement);
+				this.add('-activate', target, 'ability: On A Quest', `[questname] ${quest.name}`, `[questprogress] ${quest.progress}`, `[questrequirement] ${quest.requirement}`, `[questprogresstext] ${quest.progressText}`);
+			}
+		},
+		onSourceAfterFaint(length, target, source, effect) {
+			const quest = this.effectState.quest;
+			if (quest && quest.id === 'ko' && !quest.complete) {
+				quest.progress = Math.min(quest.progress + 1, quest.requirement);
+				this.add('-activate', target, 'ability: On A Quest', `[questname] ${quest.name}`, `[questprogress] ${quest.progress}`, `[questrequirement] ${quest.requirement}`, `[questprogresstext] ${quest.progressText}`);
+			}
+		},
+		onBoost(boost, pokemon) {
+			const quest = this.effectState.quest;
+			if (quest && quest.id === 'boost' && !quest.complete) {
+				let totalBoosts = 0;
+				let i: BoostID;
+				for (i in boost) {
+					totalBoosts += Math.max(boost[i] || 0, 0);
+				}
+				if (totalBoosts > 0) {
+					quest.progress = Math.min(quest.progress + totalBoosts, quest.requirement);
+					this.add('-activate', pokemon, 'ability: On A Quest', `[questname] ${quest.name}`, `[questprogress] ${quest.progress}`, `[questrequirement] ${quest.requirement}`, `[questprogresstext] ${quest.progressText}`);
+				}
+			}
+		},
+		onSwitchOut(pokemon) {
+			const quest = this.effectState.quest;
+			if (quest && quest.id === 'switch' && !quest.complete) {
+				quest.progress = Math.min(quest.progress + 1, quest.requirement);
+				this.add('-activate', pokemon, 'ability: On A Quest', `[questname] ${quest.name}`, `[questprogress] ${quest.progress}`, `[questrequirement] ${quest.requirement}`, `[questprogresstext] ${quest.progressText}`);
+			}
+		},
+		onResidual(pokemon) {
+			const quest = this.effectState.quest;
+			if (!quest) return;
+			if (quest.progress >= quest.requirement) {
+				quest.complete = true;
+				this.add('-end', pokemon, 'ability: On A Quest', `[questname] ${quest.name}`);
+				pokemon.formeChange('Blobbos-Adventurer-Legendary', this.effect, true);
+			} else if (quest.id === 'wait' && !quest.complete) {
+				quest.progress = Math.min(quest.progress + 1, quest.requirement);
+				this.add('-activate', pokemon, 'ability: On A Quest', `[questname] ${quest.name}`, `[questprogress] ${quest.progress}`, `[questrequirement] ${quest.requirement}`, `[questprogresstext] ${quest.progressText}`);
+			}
+		},
+		isNonstandard: "Future",
+	},
+	legendary: {
+		name: "Legendary",
+		onStart(pokemon) {
+			pokemon.cureStatus();
+			const heroicStrike = pokemon.baseMoves.indexOf('heroicstrike');
+			if (heroicStrike >= 0) {
+				const move = this.dex.moves.get('heroiconslaught');
+				pokemon.baseMoveSlots[heroicStrike] = {
+					move: move.name,
+					id: move.id,
+					pp: (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5,
+					maxpp: (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5,
+					target: move.target,
+					disabled: false,
+					disabledSource: '',
+					used: false,
+				};
+				pokemon.moveSlots = pokemon.baseMoveSlots.slice();
+			}
+		},
+		onBoost(boost, target, source, effect) {
+			let showMsg = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost[i]! < 0) {
+					delete boost[i];
+					showMsg = true;
+				}
+			}
+			if (showMsg && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
+				this.add("-fail", target, "unboost", "[from] ability: Legendary", "[of] " + target);
+			}
+		},
+		onSetStatus(status, target, source, effect) {
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: Legendary');
+			}
+			return false;
+		},
+		onBasePower(basePower, pokemon, target, move) {
+			if (['Dragon', 'Dark'].some((type) => target.hasType(type))) {
+				return this.chainModify(1.5);
+			}
+		},
+		isPermanent: true,
+		isNonstandard: "Future",
+	},
 };

@@ -373,4 +373,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	onaquest: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	legendary: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

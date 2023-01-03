@@ -9675,6 +9675,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosadventurer: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosadventurerlegendary: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	smellsumo: {
 		tier: "Illegal",
 		isNonstandard: "Future",

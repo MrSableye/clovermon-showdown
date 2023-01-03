@@ -582,5 +582,13 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			}
 		},
 	},
+	heroicstrike: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	heroiconslaught: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
 

@@ -2506,6 +2506,18 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	boardpoweryou: {
 		name: "Board Power (/you/)",
 		shortDesc: "Every Board Power combined except /Z/ and Gorilla Tactics.",
+	},
+	onaquest: {
+		name: "On A Quest",
+		shortDesc: "Begin a quest. Complete it to become a legendary hero!",
 
+		start: "  [POKEMON] started a quest: [[QUESTNAME]] - [QUESTTEXT]",
+		activate: "  [POKEMON]'s quest was updated: [[QUESTNAME]] - [QUESTPROGRESS] / [QUESTREQUIREMENT] [QUESTPROGRESSTEXT]",
+		end: "  [POKEMON] finished [[QUESTNAME]]!",
+		transform: "[POKEMON] became a legendary hero!",
+	},
+	legendary: {
+		name: "Legendary",
+		desc: "This Pokemon cannot be statused. Prevents this Pokemon's stat stages from lowering. The power of this Pokemon's move is multiplied by 1.5 against Dark- and Dragon-types. Heroic Strike becomes Heroic Onslaught.",
 	},
 };

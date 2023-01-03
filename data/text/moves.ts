@@ -7976,4 +7976,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		prepare: "  [POKEMON] set a trap card!",
 		cant: "[POKEMON]'s trap card didn't work!",
 	},
+	heroicstrike: {
+		name: "Heroic Strike",
+		shortDesc: "Ignores immunities. Cannot miss. Special if user's Sp. Atk > Atk.",
+	},
+	heroiconslaught: {
+		name: "Heroic Onslaught",
+		shortDesc: "Hits twice. Ignores immunities. Cannot miss. Special if user's Sp. Atk > Atk.",
+	},
 };

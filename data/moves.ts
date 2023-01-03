@@ -25884,4 +25884,42 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
+	heroicstrike: {
+		accuracy: true,
+		basePower: 90,
+		category: "Physical",
+		name: "Heroic Strike",
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
+		},
+		ignoreImmunity: true,
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	heroiconslaught: {
+		accuracy: true,
+		basePower: 90,
+		category: "Physical",
+		name: "Heroic Onslaught",
+		multihit: 2,
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
+		},
+		ignoreImmunity: true,
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
 };
