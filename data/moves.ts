@@ -25957,7 +25957,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 
 			target.deductPP(this.effect.id, Math.max(0, doses - 1)); // Don't include normally used PP
-			this.add('-activate', target, 'move: Drink Potion', doses);
+			this.add('-activate', target, 'move: Drink Potion', this.effect.name, doses);
 		},
 	},
 };
