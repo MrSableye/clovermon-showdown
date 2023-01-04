@@ -7984,4 +7984,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Heroic Onslaught",
 		shortDesc: "Hits twice. Ignores immunities. Cannot miss. Special if user's Sp. Atk > Atk.",
 	},
+	drinkpotion: {
+		name: "Drink Potion",
+		shortDesc: "Heals 20% of max HP per dose. Tries to minimize doses used. Each dose uses 1 PP.",
+
+		activate: "  [POKEMON] drank [NUMBER] doses of its potion!",
+	},
 };

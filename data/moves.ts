@@ -25922,4 +25922,42 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
+	drinkpotion: {
+		num: 166,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Drink Potion",
+		pp: 5,
+		priority: 1,
+		noPPBoosts: true,
+		isNonstandard: "Future",
+		type: "Normal",
+		flags: {snatch: 1, heal: 1},
+		target: "self",
+		onHit(target, source, activeMove) {
+			if (target.hp >= target.maxhp) return false;
+			const percentHp = target.hp / target.maxhp;
+			let doses = activeMove.pp;
+			if (percentHp >= 0.8) {
+				doses = Math.min(doses, 1);
+			} else if (percentHp >= 0.6) {
+				doses = Math.min(doses, 2);
+			} else if (percentHp >= 0.4) {
+				doses = Math.min(doses, 3);
+			} else if (percentHp >= 0.2) {
+				doses = Math.min(doses, 4);
+			}
+
+			if (!doses) return false;
+
+			const damage = this.heal((target.maxhp / 5) * doses);
+			if (damage) {
+				this.add('-heal', target, target.getHealth, '[from] move: Drink Potion');
+			}
+
+			target.deductPP(this.effect.id, Math.max(0, doses - 1)); // Don't include normally used PP
+			this.add('-activate', target, 'move: Drink Potion', doses);
+		},
+	},
 };
