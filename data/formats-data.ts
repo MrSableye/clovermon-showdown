@@ -9687,7 +9687,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	blobbosgmax: {
+	blobbosgigantamax: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -9743,7 +9743,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	blobbosspam: {
+	blobbosspamton: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

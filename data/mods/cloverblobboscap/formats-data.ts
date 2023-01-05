@@ -3110,7 +3110,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	blobbosgmax: {
+	blobbosgigantamax: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -3185,7 +3185,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	blobbosspam: {
+	blobbosspamton: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
