@@ -65,5 +65,20 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-
+	baitite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	masamune: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	kerosenehose: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	piratesbooty: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

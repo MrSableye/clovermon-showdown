@@ -9999,6 +9999,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	sparmor: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	ohmadillo: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	colombolt: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	jerkistal: {
 		inherit: true,
 		tier: "OU",

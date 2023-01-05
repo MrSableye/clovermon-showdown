@@ -3095,4 +3095,109 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbosprimal: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosswamp: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboskirby: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgmax: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgene: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosninja: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosfirefighter: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospirate: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscaca: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosjannie: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdevil: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbait: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbaitmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosfools: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboslawnmower: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbostrap: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboslambdal: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscloud: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosspam: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboschainsaw: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosfox: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

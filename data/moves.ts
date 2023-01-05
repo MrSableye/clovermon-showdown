@@ -25714,7 +25714,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Sly Squall",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, blade: 1},
+		flags: {protect: 1, mirror: 1},
 		beforeMoveCallback(source, target, move) {
 			if (source.illusion) move.willCrit = true;
 		},

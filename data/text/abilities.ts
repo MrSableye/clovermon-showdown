@@ -2520,4 +2520,16 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Legendary",
 		desc: "This Pokemon cannot be statused. Prevents this Pokemon's stat stages from lowering. The power of this Pokemon's move is multiplied by 1.5 against Dark- and Dragon-types. Heroic Strike becomes Heroic Onslaught.",
 	},
+	copypower: {
+		name: "Copy Power",
+		desc: "After your ally pokemon has fainted, when this Pokemon switches in, they will replicate their ability.",
+	},
+	mrshield: {
+		name: "MR-Shield",
+		shortDesc: "Immune to status, weakens super effective damage at full HP.",
+	},
+	mracceleration: {
+		name: "MR-Shield",
+		shortDesc: "Fire-type moves gain +1 priority, +1 Spe every turn.",
+	},
 };

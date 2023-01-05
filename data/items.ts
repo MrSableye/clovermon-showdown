@@ -7988,7 +7988,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	piratesbooty: {
 		name: "Pirate's Booty",
-		spritenum: 581,
+		spritenum: 745,
 		fling: {
 			basePower: 80,
 		},
@@ -8032,7 +8032,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	kerosenehose: {
 		name: "Kerosene Hose",
-		spritenum: 743,
+		spritenum: 574,
 		fling: {
 			basePower: 80,
 		},
@@ -8043,6 +8043,20 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		num: 640,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	baitite: {
+		name: "Baitite",
+		spritenum: 585,
+		megaStone: "Blobbos-Bait-Mega",
+		megaEvolves: "Blobbos-Bait",
+		itemUser: ["Blobbos-Bait"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
 	},

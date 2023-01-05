@@ -381,4 +381,20 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	copypower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	swamped: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	revvingmalice: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pooperpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
