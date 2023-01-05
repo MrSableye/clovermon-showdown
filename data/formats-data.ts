@@ -9675,6 +9675,90 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosprimal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosswamp: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboskirby: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosgmax: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosgene: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosninja: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosfirefighter: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospirate: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscaca: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosjannie: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosdevil: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosbait: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosbaitmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosfools: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbostrap: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboslawnmower: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboslambdal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosspam: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscloud: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboschainsaw: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosfox: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosadventurer: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -9688,6 +9772,18 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	jerkistal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sparmor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ohmadillo: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	colombolt: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

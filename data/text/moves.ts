@@ -7990,4 +7990,26 @@ export const MovesText: {[k: string]: MoveText} = {
 
 		activate: "  [POKEMON] drank [NUMBER] doses of its potion!",
 	},
+	winterwhiteout: {
+		name: "Winter Whiteout",
+		desc: "No additional effect.",
+		shortDesc: "No additional effect. Hits adjacent foes.",
+	},
+	gmaxblobbomb: {
+		name: "G-Max Blob Bomb",
+		shortDesc: "Upon hit, summons Mist and Safeguard.",
+	},
+	icestorm: {
+		name: "Ice Storm",
+		shortDesc: "Summons Hail. 10% chance to freeze.",
+	},
+	downpour: {
+		name: "Downpour",
+		shortDesc: "Summons Rain.",
+	},
+	slysquall: {
+		name: "Sly Squall",
+		desc: "This move always crits under Illusion unless the target is under the effect of Lucky Chant or has an ability that prevents critical hits, and removes Illusion on a successful hit.",
+		shortDesc: "Guaranteed crit under Illusion; removes it on hit.",
+	},
 };

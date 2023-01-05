@@ -1727,4 +1727,12 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	mrshield: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mracceleration: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
