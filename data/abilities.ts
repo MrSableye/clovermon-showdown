@@ -7162,27 +7162,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	gmaxcomatose: {
 		onSetStatus(status, target, source, effect) {
 			if ((effect as Move)?.status) {
-				this.add('-immune', target, '[from] ability: GMax Comatose');
+				this.add('-immune', target, '[from] ability: G-Max Comatose');
 			}
 			return false;
 		},
 		onTryAddVolatile(status, pokemon) {
 			const immuneStatuses = ['flinch', 'disable', 'torment', 'encore'];
-			if (immuneStatuses.includes(status.id)) { this.add('-immune', pokemon, '[from] ability: GMax Comatose'); }
+			if (immuneStatuses.includes(status.id)) { this.add('-immune', pokemon, '[from] ability: G-Max Comatose'); }
 			return null;
 		},
 		onTryHit(pokemon, target, move) {
 			if (move.ohko) {
-				this.add('-immune', pokemon, '[from] ability: GMax Comatose');
+				this.add('-immune', pokemon, '[from] ability: G-Max Comatose');
 				return null;
 			}
 		},
 		onDragOutPriority: 1,
 		onDragOut(pokemon) {
-			this.add('-activate', pokemon, 'ability: GMax Comatose');
+			this.add('-activate', pokemon, 'ability: G-Max Comatose');
 			return null;
 		},
-		name: "GMax Comatose",
+		name: "G-Max Comatose",
 		isNonstandard: "Future",
 		rating: 0.5,
 		num: 56,

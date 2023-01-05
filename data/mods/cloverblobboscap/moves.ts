@@ -417,6 +417,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		accuracy: 100,
 		basePower: 90,
+		isNonstandard: null,
 	},
 	happyhour: {
 		inherit: true,
