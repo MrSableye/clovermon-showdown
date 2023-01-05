@@ -855,5 +855,9 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	winterwhiteout: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
 
