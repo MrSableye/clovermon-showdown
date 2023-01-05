@@ -22226,6 +22226,75 @@ export const Moves: {[moveid: string]: MoveData} = {
 		noSketch: true,
 		isNonstandard: "Future",
 	},
+	penetrate: {
+		accuracy: 100,
+		basePower: 65,
+		category: "Special",
+		name: "Penetrate",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1},
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+				if (!source.speciesState['parent']) {
+					this.add('-activate', source, 'move: Penetrate', '[of] ' + target);
+					const sourceSide = source.side;
+					const targetSet = target.set;
+					const childName = [
+						`${targetSet.species}, ${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.name}`,
+						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${"Krissy"}`,
+						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${"Krissy"}`,
+					].find((name) => name.length <= 18) || 'Horror';
+					const baby = new Pokemon({
+						...targetSet,
+						name: childName,
+						ability: "Levitate",
+						moves: ['Volt Switch', 'Dark Pulse', 'Memento', 'Spikes'],
+						item: "Focus Sash",
+					}, sourceSide);
+					baby.position = sourceSide.pokemon.length;
+					sourceSide.pokemon.push(baby);
+					sourceSide.pokemonLeft += 1;
+					this.add('teamsize', sourceSide.id, sourceSide.pokemon.length);
+					source.speciesState['parent'] = true;
+				} else {
+					this.add('-fail', source, 'move: Penetrate');
+				}
+			},
+		},
+		noSketch: true,
+		overrideOffensivePokemon: 'target',
+		target: "normal",
+		type: "Flying",
+		isNonstandard: "Future",
+	},
+	susteelstrike: {
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Susteel Strike",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (!target || target.fainted || target.hp <= 0) this.boost({atk: 2}, pokemon, pokemon, move);
+		},
+		secondary: null,
+		onTry(source) {
+			if (source.species.baseSpecies === 'Susko') {
+				return;
+			}
+			this.attrLastMove('[still]');
+			this.add('-fail', source, 'move: Susteel Strike');
+			this.hint("You are not the impostor.");
+			return null;
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Steel",
+		isNonstandard: "Future",
+	},
 	matingpress: {
 		accuracy: 100,
 		basePower: 90,
