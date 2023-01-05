@@ -37921,11 +37921,11 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
-	blobbosgmax: {
+	blobbosgigantamax: {
 		num: 69132,
-		name: "Blobbos-Gmax",
+		name: "Blobbos-Gigantamax",
 		baseSpecies: "Blobbos",
-		forme: "Gmax",
+		forme: "Gigantamax",
 		types: ["Ice", "Rock"],
 		gender: "N",
 		baseStats: {
@@ -38240,9 +38240,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gender: "M",
 		baseStats: {
 			hp: 70,
-			atk: 45,
+			atk: 120,
 			def: 100,
-			spa: 120,
+			spa: 45,
 			spd: 100,
 			spe: 69,
 		},
@@ -38318,11 +38318,11 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
-	blobbosspam: {
+	blobbosspamton: {
 		num: 69132,
-		name: "Blobbos-Spam",
+		name: "Blobbos-Spamton",
 		baseSpecies: "Blobbos",
-		forme: "Spam",
+		forme: "Spamton",
 		types: ["Electric", "Dark"],
 		gender: "N",
 		baseStats: {

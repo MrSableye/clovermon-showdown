@@ -415,7 +415,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	glitzyglow: {
 		inherit: true,
-		isNonstandard: null,
+		accuracy: 100,
+		basePower: 90,
 	},
 	happyhour: {
 		inherit: true,
@@ -843,6 +844,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	bigshot: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	drinkpotion: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	rebuild: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	winterwhiteout: {
 		inherit: true,
 		isNonstandard: null,
 	},
