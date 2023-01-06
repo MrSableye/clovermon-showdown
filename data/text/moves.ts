@@ -7421,6 +7421,17 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Hits 255 times. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Magic Guard Ability are unaffected by crash damage.",
 		shortDesc: "Hits 255 times. Each hit can miss, crash on miss.",
 	},
+	susteelstrike: {
+		name: "Susteel Strike",
+		desc: "Raises the user's Attack by 2 stages if this move knocks out the target.",
+		shortDesc: "Raises user's Attack by 2 if this KOes the target.",
+	},
+	penetrate: {
+		name: "Penetrate",
+		shortDesc: "Uses the foe's offense, Creates a horror.",
+
+		activate: "  A horror was birthed!",
+	},
 	destructionstinger: {
 		name: "Destruction Stinger",
 		shortDesc: "Always badly poisons the foe.",

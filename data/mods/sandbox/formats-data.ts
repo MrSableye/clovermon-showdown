@@ -9959,6 +9959,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	susko: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	shroomko: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	schiztarf: {
 		inherit: true,
 		tier: "OU",

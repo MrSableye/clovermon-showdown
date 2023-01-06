@@ -9142,6 +9142,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	susko: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	shroomko: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	stingulor: {
 		tier: "Illegal",
 		isNonstandard: "Future",
