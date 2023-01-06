@@ -8753,4 +8753,146 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isPermanent: true,
 		isNonstandard: "Future",
 	},
+	taskoriented: {
+		name: "Task Oriented",
+		onStart(pokemon) {
+			const fastPop = <T>(list: T[], index: number) => {
+				// If an array doesn't need to be in order, replacing the
+				// element at the given index with the removed element
+				// is much, much faster than using list.splice(index, 1).
+				const length = list.length;
+				if (index < 0 || index >= list.length) {
+					// sanity check
+					throw new Error(`Index ${index} out of bounds for given array`);
+				}
+
+				const element = list[index];
+				list[index] = list[length - 1];
+				list.pop();
+				return element;
+			};
+
+			const sampleNoReplace = <T>(list: T[]) => {
+				const length = list.length;
+				if (length === 0) return null;
+				const index = this.random(length);
+				return fastPop(list, index);
+			};
+
+			const tasks = [
+				{
+					id: 'repeat',
+					name: 'Repeat Yourself',
+					requirement: 2,
+					text: 'Use the same move twice in a row',
+					progressText: 'move repetitions',
+				},
+				{id: 'move', name: 'Move Around', requirement: 3, text: 'Use a move 3 times', progressText: 'moves used'},
+				{id: 'switch', name: 'Switch the Power On', requirement: 2, text: 'Switch out 2 times', progressText: 'switch outs'},
+				{id: 'wait', name: 'Wait Around', requirement: 3, text: 'Wait 3 turns', progressText: 'turns waited'},
+			];
+
+			if (!this.effectState.tasks) {
+				const newTasks = [];
+				newTasks.push(sampleNoReplace(tasks) as any);
+				newTasks.push(sampleNoReplace(tasks) as any);
+				this.effectState.tasks = newTasks;
+
+				newTasks.forEach((newTask) => {
+					this.addSplit(pokemon.side.id, [
+						'-start',
+						pokemon,
+						'ability: Task Oriented',
+						`[taskname] ${newTask.name}`,
+						`[tasktext] ${newTask.text}`,
+					]);
+				});
+			}
+		},
+		onAfterMove(source, target, move) {
+			const repeatTask = this.effectState.tasks.find((task: any) => task.id === 'repeat');
+			if (repeatTask) {
+				if (!this.effectState.repetition) {
+					this.effectState.repetition = {moveId: move.id, times: 1};
+				} else {
+					if (this.effectState.repetition.moveId === move.id) {
+						this.effectState.repetition.times++;
+					} else {
+						this.effectState.repetition = {moveId: move.id, times: 1};
+					}
+				}
+				repeatTask.progress = Math.min(this.effectState.repetition.times, repeatTask.requirement);
+				this.addSplit(
+					target.side.id,
+					[
+						'-activate',
+						target,
+						'ability: Task Oriented',
+						`[taskname] ${repeatTask.name}`,
+						`[taskprogress] ${repeatTask.progress}`,
+						`[taskrequirement] ${repeatTask.requirement}`,
+						`[taskrogresstext] ${repeatTask.progressText}`,
+					],
+				);
+			}
+			const moveTask = this.effectState.tasks.find((task: any) => task.id === 'repeat');
+			if (moveTask) {
+				moveTask.progress = Math.min(moveTask.progress + 1, moveTask.requirement);
+				this.addSplit(
+					target.side.id,
+					[
+						'-activate',
+						target,
+						'ability: Task Oriented',
+						`[taskname] ${moveTask.name}`,
+						`[taskprogress] ${moveTask.progress}`,
+						`[taskrequirement] ${moveTask.requirement}`,
+						`[taskrogresstext] ${moveTask.progressText}`,
+					],
+				);
+			}
+		},
+		onSwitchOut(pokemon) {
+			const switchTask = this.effectState.tasks.find((task: any) => task.id === 'switch');
+			if (switchTask) {
+				switchTask.progress = Math.min(switchTask.progress + 1, switchTask.requirement);
+				this.addSplit(
+					pokemon.side.id,
+					[
+						'-activate',
+						pokemon,
+						'ability: Task Oriented',
+						`[taskname] ${switchTask.name}`,
+						`[taskprogress] ${switchTask.progress}`,
+						`[taskrequirement] ${switchTask.requirement}`,
+						`[taskrogresstext] ${switchTask.progressText}`,
+					],
+				);
+			}
+		},
+		onResidual(pokemon) {
+			const tasks = this.effectState.tasks;
+			if (tasks && tasks.length) {
+				tasks.forEach((task: any) => {
+					if (task.progress >= task.requirement) {
+						task.complete = true;
+					}
+				});
+				if (tasks.every((task: any) => task.complete)) {
+					this.add('-end', pokemon, 'ability: Task Oriented');
+					this.boost({
+						accuracy: 1,
+						evasion: 1,
+						atk: 4,
+						def: 4,
+						spa: 4,
+						spd: 4,
+						spe: 4,
+					});
+					this.effectState.tasks = [];
+				}
+			}
+		},
+		isNonstandard: "Future",
+	},
 };
