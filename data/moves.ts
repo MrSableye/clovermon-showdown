@@ -22228,7 +22228,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	penetrate: {
 		accuracy: 100,
-		basePower: 65,
+		basePower: 75,
 		category: "Special",
 		name: "Penetrate",
 		pp: 5,
@@ -22241,16 +22241,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 					this.add('-activate', source, 'move: Penetrate', '[of] ' + target);
 					const sourceSide = source.side;
 					const targetSet = target.set;
-					const childName = [
-						`${targetSet.species}, ${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${source.name}`,
-						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${"Krissy"}`,
-						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${"Krissy"}`,
-					].find((name) => name.length <= 18) || 'Horror';
 					const baby = new Pokemon({
 						...targetSet,
-						name: childName,
+						name: "Unspeakable Horror",
+						species: "Krissy",
 						ability: "Levitate",
-						moves: ['Volt Switch', 'Dark Pulse', 'Memento', 'Spikes'],
+						moves: ['Memento', 'Glare', 'Voltaic Cyclone', 'Spikes'],
 						item: "Focus Sash",
 					}, sourceSide);
 					baby.position = sourceSide.pokemon.length;
