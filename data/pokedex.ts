@@ -38101,7 +38101,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Dark", "Steel"],
 		gender: "N",
 		baseStats: {hp: 90, atk: 142, def: 73, spa: 69, spd: 109, spe: 64},
-		abilities: {0: "Illusion", 1: "Infiltrator", H: "Impostor", S: "Degenerate"},
+		abilities: {0: "Illusion", 1: "Infiltrator", H: "Imposter", S: "Degenerate"},
 		heightm: 5.2,
 		weightkg: 888,
 		color: "Black",
