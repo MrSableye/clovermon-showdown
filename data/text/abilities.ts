@@ -2532,4 +2532,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "MR-Shield",
 		shortDesc: "Fire-type moves gain +1 priority, +1 Spe every turn.",
 	},
+	taskoriented: {
+		name: "Task Oriented",
+		shortDesc: "Complete 2 tasks for a massive boost.",
+
+		start: "  [POKEMON] recieved a task: [TASKNAME] - [TASKTEXT]",
+		activate: "  [POKEMON]'s task was updated: [TASKNAME] - [TASKPROGRESS] / [TASKREQUIREMENT] [TASKPROGRESSTEXT]",
+		end: "  [POKEMON] finished their tasks!",
+	},
 };
