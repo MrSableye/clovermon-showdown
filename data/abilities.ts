@@ -8631,8 +8631,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 						{id: 'ko', name: 'Righteous Purge', requirement: 2, text: 'KO 2 Pokémon', progressText: 'Pokémon KO\'d'},
 						{id: 'repeat', name: 'Practice Makes Perfect', requirement: 3, text: 'Use the same move 3 times in a row', progressText: 'move repetitions'},
 						{id: 'boost', name: 'Cultivation of Power', requirement: 5, text: 'Boost its stats 5 stages', progressText: 'boosts'},
-						{id: 'switch', name: 'Agility Training', requirement: 6, text: 'Switch out 6 times', progressText: 'switch outs'},
-						{id: 'wait', name: 'Patience', requirement: 6, text: 'Wait 6 turns', progressText: 'turns waited'},
+						{id: 'switch', name: 'Agility Training', requirement: 5, text: 'Switch out 5 times', progressText: 'switch outs'},
+						{id: 'wait', name: 'Patience', requirement: 4, text: 'Wait 4 turns', progressText: 'turns waited'},
 					];
 		
 					if (!this.effectState.quest) {
@@ -8657,11 +8657,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 						this.add('-activate', target, 'ability: On A Quest', `[questname] ${quest.name}`, `[questprogress] ${quest.progress}`, `[questrequirement] ${quest.requirement}`, `[questprogresstext] ${quest.progressText}`);
 					}
 				},
-				onSourceAfterFaint(length, target, source, effect) {
+				onAnyFaint(target, source, effect) {
 					const quest = this.effectState.quest;
 					if (quest && quest.id === 'ko' && !quest.complete) {
 						quest.progress = Math.min(quest.progress + 1, quest.requirement);
-						this.add('-activate', target, 'ability: On A Quest', `[questname] ${quest.name}`, `[questprogress] ${quest.progress}`, `[questrequirement] ${quest.requirement}`, `[questprogresstext] ${quest.progressText}`);
+						this.add('-activate', source, 'ability: On A Quest', `[questname] ${quest.name}`, `[questprogress] ${quest.progress}`, `[questrequirement] ${quest.requirement}`, `[questprogresstext] ${quest.progressText}`);
 					}
 				},
 				onBoost(boost, pokemon) {

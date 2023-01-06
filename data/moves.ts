@@ -25961,13 +25961,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
 		},
+		onEffectiveness(typeMod, target, type, move) {
+			if (this.dex.getEffectiveness('Fighting', type) > 0) {
+				return typeMod + this.dex.getEffectiveness('Fighting', type);
+			}
+		},
 		ignoreImmunity: true,
+		ignoreEvasion: true,
+		ignoreDefensive: true,
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
-		type: "Fighting",
+		type: "Normal",
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
@@ -25981,6 +25988,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
 		},
 		ignoreImmunity: true,
+		ignoreEvasion: true,
+		ignoreDefensive: true,
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},

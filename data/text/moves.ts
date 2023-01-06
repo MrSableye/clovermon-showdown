@@ -7989,11 +7989,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	heroicstrike: {
 		name: "Heroic Strike",
-		shortDesc: "Ignores immunities. Cannot miss. Special if user's Sp. Atk > Atk.",
+		shortDesc: "Ignores immunities. Uses Fighting-type effectiveness if it would be SE. Cannot miss. Special if user's Sp. Atk > Atk. Ignores the target's stat stage changes.",
 	},
 	heroiconslaught: {
 		name: "Heroic Onslaught",
-		shortDesc: "Hits twice. Ignores immunities. Cannot miss. Special if user's Sp. Atk > Atk.",
+		shortDesc: "Hits twice. Ignores immunities. Cannot miss. Special if user's Sp. Atk > Atk. Ignores the target's stat stage changes.",
 	},
 	drinkpotion: {
 		name: "Drink Potion",
