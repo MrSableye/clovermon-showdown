@@ -25901,9 +25901,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 1,
 			onStart(pokemon) {
+				pokemon.abilityState.irresistable = true;
 				this.add('-singleturn', pokemon, 'move: Shell Trap');
 			},
 			onHit(pokemon, source, move) {
+				pokemon.abilityState.irresistable = true;
 				if (!pokemon.isAlly(source) && move.category === 'Physical') {
 					this.effectState.gotHit = true;
 				}
