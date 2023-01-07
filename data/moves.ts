@@ -24319,8 +24319,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
-
-
 	deepfry: {
 		accuracy: 100,
 		basePower: 75,
@@ -25761,7 +25759,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			attacker.addVolatile('twoturnmove', defender);
 			return null;
 		},
-		multihit: 2,
+		multihit: 3,
 		secondary: null,
 		target: "normal",
 		type: "Electric",
