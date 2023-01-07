@@ -39011,7 +39011,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: -42013,
 		name: "Vulkancer-MR",
 		types: ["Steel", "Fire"],
-		baseStats: {hp: 60, atk: 65, def: 90, spa: 140, spd: 85, spe: 140},
+		baseStats: {hp: 60, atk: 85, def: 90, spa: 140, spd: 85, spe: 140},
 		abilities: {0: "MR-Shield", H: "MR-Acceleration"},
 		heightm: 10.1,
 		weightkg: 160,
