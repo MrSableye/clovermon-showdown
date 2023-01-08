@@ -8039,7 +8039,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onModifySpDPriority: 2,
 		onModifySpe(spe, pokemon) {
 			if (pokemon.species.name === 'Blobbos-Firefighter') {
-				return this.chainModify(2);
+				return this.chainModify(1.5);
 			}
 		},
 		num: 640,

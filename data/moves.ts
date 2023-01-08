@@ -24296,8 +24296,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
-
-
 	deepfry: {
 		accuracy: 100,
 		basePower: 75,
@@ -25738,7 +25736,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			attacker.addVolatile('twoturnmove', defender);
 			return null;
 		},
-		multihit: 2,
+		multihit: 3,
 		secondary: null,
 		target: "normal",
 		type: "Electric",
@@ -25880,9 +25878,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 1,
 			onStart(pokemon) {
+				pokemon.abilityState.irresistable = true;
 				this.add('-singleturn', pokemon, 'move: Shell Trap');
 			},
 			onHit(pokemon, source, move) {
+				pokemon.abilityState.irresistable = true;
 				if (!pokemon.isAlly(source) && move.category === 'Physical') {
 					this.effectState.gotHit = true;
 				}
