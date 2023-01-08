@@ -7764,6 +7764,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		isNonstandard: "Future",
 	},
+	
 	terraform: {
 		name: "Terraform",
 		onBeforeMove(source, target, move) {
