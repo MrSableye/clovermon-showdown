@@ -6195,6 +6195,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Beam Boost",
 		isNonstandard: "Future",
 	},
+	detonator: {
+				onBasePowerPriority: 8,
+				onModifyMove(move) {
+					const bombMoves = ['blackbomb','cherrybomb','eggbomb','firebomb','magnetbomb','mudbomb','seedbomb','sludgebomb'];
+					if (!bombMoves.includes(move.id)) return;
+		if (move.secondaries) {
+			this.debug('doubling secondary chance');
+			for (const secondary of move.secondaries) {
+				if (secondary.chance) secondary.chance *= 2;
+			}
+		}
+		if (move.self?.chance) move.self.chance *= 2;
+		},
+			onBasePower(basePower, attacker, defender, move) {
+					const bombMoves = ['blackbomb','cherrybomb','eggbomb','firebomb','magnetbomb','mudbomb','seedbomb','sludgebomb'];
+					if (!bombMoves.includes(move.id)) return;
+					return this.chainModify(1.2);
+		},
+		name: "Detonator",
+		isNonstandard: "Future",
+	},
 	overeager: {
 		onPrepareHit(source, target, move) {
 			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
