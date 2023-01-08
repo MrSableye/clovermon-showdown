@@ -2538,6 +2538,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "MR-Shield",
 		shortDesc: "Fire-type moves gain +1 priority, +1 Spe every turn.",
 	},
+	numerouno: {
+		name: "Numero Uno",
+		shortDesc: "Removes the restriction of first-turn out moves.",
+
+		start: "BRAZIL NUMERO UNO! CAMPEAO DE MUNDO!",
+	},
 	overeagerest: {
 		name: "Overeagerest",
 		desc: "This Pokemon's damaging moves become multi-hit moves that hit 100 times. Subsequent hits deal 2^N more damage. Does not affect multi-hit moves or moves that have multiple targets.",
