@@ -22899,39 +22899,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 	faeblade: {
 		accuracy: 100,
 		basePower: 80,
-		category: "Physical",
 		name: "Faeblade",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, blade: 1},
-		onPrepareHit(target, source, move) {
-			if (!source.isAlly(target)) {
-				this.attrLastMove('[anim] Faeblade ' + move.category);
-			}
-		},
-		onModifyMove(move, pokemon, target) {
-			if (!target) return;
-			const atk = pokemon.getStat('atk', false, true);
-			const spa = pokemon.getStat('spa', false, true);
-			const def = target.getStat('def', false, true);
-			const spd = target.getStat('spd', false, true);
-			const physical = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * atk) / def) / 50);
-			const special = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * spa) / spd) / 50);
-			if (physical > special || (physical === special && this.random(2) === 0)) {
-				move.category = 'Physical';
-				move.flags.contact = 1;
-			}
-		},
-		onHit(target, source, move) {
-			// Shell Side Arm normally reveals its category via animation on cart, but doesn't play either custom animation against allies
-			if (!source.isAlly(target)) this.hint(move.category + " Faeblade");
-		},
-		onAfterSubDamage(damage, target, source, move) {
-			if (!source.isAlly(target)) this.hint(move.category + " Faeblade");
-		},
+		category: "Physical",
+		overrideDefensiveStat: 'spd',
 		secondary: null,
 		target: "normal",
 		type: "Fairy",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, blade: 1},
+		
 		isNonstandard: "Future",
 	},
 	stickytongue: {

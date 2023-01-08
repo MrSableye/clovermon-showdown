@@ -2279,10 +2279,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	zenmonke: {
 		name: "Zen Monke",
-		shortDesc: "If Simionach, goes into Zen Mode.",
+		shortDesc: "If Simionach, goes into Zen Mode while under full HP.",
 
-		transform: "Zen Monke triggered!",
-		transformEnd: "Zen Monke ended!",
+		transform: "  [SOURCE] enters a state of pure zen!",
+		transformEnd: "  [SOURCE] snaps out of its zen state!",
 	},
 	peaceandtranquility: {
 		name: "Peace and Tranquility",
