@@ -7764,7 +7764,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		isNonstandard: "Future",
 	},
-
+	
 	terraform: {
 		name: "Terraform",
 		onBeforeMove(source, target, move) {
@@ -8027,6 +8027,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "MR-Shield",
 		rating: 3,
 		num: 232,
+	},
+	numerouno: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Numero Uno');
+		},
+		name: "Numero Uno",
+		rating: 2.5,
+		isNonstandard: "Future",
 	},
 	bejeweled: {
 		onStart(source) {

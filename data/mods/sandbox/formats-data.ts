@@ -9974,6 +9974,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	yanorm: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	yancoon: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	yanture: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	stingulor: {
 		inherit: true,
 		tier: "OU",
@@ -10060,11 +10075,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	beegyosh: {
-		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
-	},
-	vulkancermr: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
