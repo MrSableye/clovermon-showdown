@@ -38808,7 +38808,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	kingmadio: {
-		num: -42118,
+		num: -42117,
 		name: "Kingmadio",
 		types: ["Ghost", "Dark"],
 		gender: "N",
@@ -38821,7 +38821,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	smellsumo: {
-		num: -42119,
+		num: -42118,
 		name: "Smellsumo",
 		types: ["Poison", "Fighting"],
 		genderRatio: {
