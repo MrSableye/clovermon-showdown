@@ -2012,25 +2012,114 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		},
 	},
 	/* Clover CAP Abilities */
+	amplify: {
+		name: "Amplify",
+		desc: "This Pokemon's attacking stat is doubled while using a Electric-type attack. If a Pokemon uses a Flying-type attack against this Pokemon, that Pokemon's attacking stat is halved when calculating the damage to this Pokemon. This Pokemon cannot be put to sleep. Gaining this Ability while asleep cures it.",
+		shortDesc: "This Pokemon's Electric power is 2x; can't sleep; Flying power against it is halved.",
+	},
+	bathtime: {
+		name: "Bath Time",
+		shortDesc: "Product Label: KEEP AWAY FROM WATER.",
+
+		damage: "  Uh oh!",
+	},
+	beamboost: {
+		name: "Beam Boost",
+		desc: "This Pokemon's Beam-based attacks have their power multiplied by 1.5.",
+		shortDesc: "This Pokemon's beam attacks have 1.5x power",
+		},
+	bigbrain: {
+		name: "Big Brain",
+		shortDesc: "This Pokemon's Special Attack is doubled.",
+	},
+	blueblood: {
+		name: "Blue Blood",
+		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",
+	},
+	bonerzoner: {
+		name: "Boner Zoner",
+		shortDesc: "This Pokemon's Bone-based and Dragon moves ignore immunities and abilities.",
+		start: "  [POKEMON] has descended into the Boner Zoner!",
+	},
 	cakeveil: {
 		name: "Cake Veil",
 		desc: "At the end of every turn, this Pokemon restores 1/10 of its max HP.",
 	},
-	rusepower: {
-		name: "Ruse Power",
-		desc: "Poison and Dark moves have 1.5x power.",
+	colonoscopy: {
+		name: "Colonoscopy",
+		shortDesc: "This Pokemon's draining moves have 1.5x power.",
+	},
+	detonator: {
+		name: "Detonator",
+		shortDesc: "Bomb attacks have 1.2x power and doubled secondary effect chances.",
+	},
+	dispenser: {
+		name: "Dispenser",
+		shortDesc: "At the end of every turn, heals user and allies for 1/10 of their max HP and 1 PP to one of their moves.",
+		activate: "  [SOURCE]'s Dispenser restored the PP of [TARGET]'s [MOVE] by 1!",
+	},
+	eclipse: {
+		name: "Eclipse",
+		desc: "On switch-in, removes Sunny Day and Desolate Land for a stat boost.",
+	},
+	fogofwar: {
+		name: "Fog Of War",
+		shortDesc: "On switch-in, this Pokemon summons Dense Fog.",
+	},
+	hewillbedragon: {
+		name: "He Will Be Dragon",
+		desc: "This Pokemon's Normal-type moves become Dragon-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's Normal-type moves become Dragon type and have 1.2x power.",
+	},
+	hydrothermal: {
+		name: "Hydrothermal",
+		desc: "Fire- and Water-type moves have a 10% higher chance to burn.",
+	},
+	leech: {
+		name: "Leech",
+		shortDesc: "User recovers 50% of damage dealt.",
+	},
+	oldschool: {
+		name: "Old School",
+		desc: "THe user's high crit ratio moves always crit.",
 	},
 	omniscience: {
 		name: "Omniscience",
 		desc: "This Pokemon can hit Dark types with Psychic-type moves. Psychic-type moves don't miss.",
 	},
-	oldschool: {
-		name: "Old School",
-		desc: "High crit ratio moves always crit.",
+	overeager: {
+		name: "Overeager",
+		desc: "This Pokemon's damaging moves become multi-hit moves that hit thrice. Subsequent hits has its damage quartered. Does not affect multi-hit moves or moves that have multiple targets.",
+		shortDesc: "This Pokemon's moves hit thrice. Hits after the first have their damage quartered.",
 	},
-	wholesome100: {
-		name: "Wholesome 100",
-		desc: "This Pokemon is immune to Dark-type moves.",
+	pairoswrath: {
+		name: "Pairo's Wrath",
+		desc: "This Pokemon is immune to Fire-type moves and raises its Special Attack by 1 stage when hit by a Fire-type move.",
+
+		activate: "#lightningrod",
+	},
+	rusepower: {
+		name: "Ruse Power",
+		desc: "This Pokemon's attacking stat is multiplied by 1.5 while using Poison- or Dark-type attacks.",
+	},
+	shavedice: {
+		name: "Shaved Ice",
+		desc: "The power of Fire, Steel, Rock and Fighting-type attacks against this Pokemon is halved.",
+		shortDesc: "Halves the damage from Ice-type's weaknesses.",
+	},
+	slavemaster: {
+		name: "Slavemaster",
+		desc: "The power of Cut, Fly, Surf, Strength, Whirlpool, Rock Smash, Waterfall, Rock Climb and Dive when used by this Pokemon doubled.",
+		shortDesc: "Doubles the power of HM moves.",
+	},	
+	sousaphone: {
+		name: "Sousaphone",
+		desc: "This Pokemon's sound-based moves become Steel-type moves. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's sound-based moves become Steel type.",
+	},
+	spincleaner: {
+		name: "Spin Cleaner",
+		shortDesc: "When this Pokemon switches in, entry hazards on this side are removed.",
 	},
 	spookyaura: {
 		name: "Spooky Aura",
@@ -2039,50 +2128,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  [POKEMON] is radiating a spooky aura!",
 	},
-	tetanus: {
-		name: "Tetanus",
-		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be Toxic poisoned.",
-	},
-	shavedice: {
-		name: "Shaved Ice",
-		desc: "The power of Fire, Steel, Rock and Fighting-type attacks against this Pokemon is halved.",
-		shortDesc: "Removes all of Ice-Type's weaknesses.",
-	},
-	temperamental: {
-		name: "Temperamental",
-		shortDesc: "If Disbeary, it changes between Nice and Ebil Mode at the end of each turn.",
-	},
-	hewillbedragon: {
-		name: "He Will Be Dragon",
-		desc: "This Pokemon's Normal-type moves become Dragon-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
-		shortDesc: "This Pokemon's Normal-type moves become Dragon type and have 1.2x power.",
-	},
-	blueblood: {
-		name: "Blue Blood",
-		shortDesc: "This Pokemon's Attack is raised by 12 stages after it is damaged by a Dark-type move.",
-	},
-	colonoscopy: {
-		name: "Colonoscopy",
-		shortDesc: "This Pokemon's draining moves have 1.5x power.",
-	},
-	swarming: {
-		name: "Swarming",
-		desc: "On switch-in, if this Pokemon is a Jermin that is level 20 or above and has more than 1/4 of its maximum HP left, it changes to Swarm Form. If it is in Swarm Form and its HP drops to 1/4 of its maximum HP or less, it changes to Solo Form at the end of the turn. If it is in Solo Form and its HP is greater than 1/4 its maximum HP at the end of the turn, it changes to Swarm Form.",
-		shortDesc: "If user is Jermin, changes to Swarm Form if it has > 1/4 max HP, else Solo Form.",
-
-		transform: "[POKEMON] formed a swarm!",
-		transformEnd: "[POKEMON] stopped swarming!",
-	},
-	overeager: {
-		name: "Overeager",
-		desc: "This Pokemon's damaging moves become multi-hit moves that hit thrice. Subsequent hits has its damage quartered. Does not affect multi-hit moves or moves that have multiple targets.",
-		shortDesc: "This Pokemon's moves hit thrice. Hits after the first have their damage quartered.",
-	},
-	overeagerest: {
-		name: "Overeagerest",
-		desc: "This Pokemon's damaging moves become multi-hit moves that hit 100 times. Subsequent hits deal 2^N more damage. Does not affect multi-hit moves or moves that have multiple targets.",
-		shortDesc: "This Pokemon's moves hit 100 times. Hits after the first increase in damage exponentially.",
-	},
 	stoneflesh: {
 		name: "Stoneflesh",
 		desc: "If this Pokemon is an Gargarramer, it changes to Awoken Forme before attempting to use an attacking move, and changes to Statue Forme before attempting to use Petrify.",
@@ -2090,180 +2135,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		transform: "Changed to Awoken Forme!",
 		transformEnd: "Changed to Statue Forme!",
-	},
-	sousaphone: {
-		name: "Sousaphone",
-		desc: "This Pokemon's sound-based moves become Steel-type moves. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
-		shortDesc: "This Pokemon's sound-based moves become Steel type.",
-	},
-	beamboost: {
-		name: "Beam Boost",
-		desc: "This Pokemon's Beam-based attacks have their power multiplied by 1.5.",
-		shortDesc: "This Pokemon's beam attacks have 1.5x power",
-	},
-	spincleaner: {
-		name: "Spin Cleaner",
-		shortDesc: "When this Pokemon switches in, entry hazards on this side are removed.",
-	},
-	amplify: {
-		name: "Amplify",
-		desc: "This Pokemon's attacking stat is doubled while using a Electric-type attack. If a Pokemon uses a Flying-type attack against this Pokemon, that Pokemon's attacking stat is halved when calculating the damage to this Pokemon. This Pokemon cannot be put to sleep. Gaining this Ability while asleep cures it.",
-		shortDesc: "This Pokemon's Electric power is 2x; can't sleep; Flying power against it is halved.",
-	},
-	bigbrain: {
-		name: "Big Brain",
-		shortDesc: "This Pokemon's Special Attack is doubled.",
-	},
-	shitbugtactics: {
-		name: "Shitbug Tactics",
-		shortDesc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes.",
-	},
-	dispenser: {
-		name: "Dispenser",
-		shortDesc: "At the end of every turn, heals user and allies for 1/10 of their max HP and 1 PP to one of their moves.",
-		activate: "  [SOURCE]'s Dispenser restored the PP of [TARGET]'s [MOVE] by 1!",
-	},
-	leech: {
-		name: "Leech",
-		shortDesc: "User recovers 50% of damage dealt.",
-	},
-	supportive: {
-		name: "Supportive",
-		desc: "While this Pokemon is active, moves with recoil and faint the user are prevented from having an effect.",
-		shortDesc: "Prevents self harming moves while active.",
-
-		block: "  [SOURCE] was stopped from using [MOVE]!",
-
-		start: "  [POKEMON] is being supportive!",
-	},
-	bonerzoner: {
-		name: "Boner Zoner",
-		shortDesc: "This Pokemon's Bone-based and Dragon moves ignore immunities and abilities.",
-		start: "  [POKEMON] has descended into the Boner Zoner!",
-	},
-	pairoswrath: {
-		name: "Pairo's Wrath",
-		desc: "This Pokemon is immune to Fire-type moves and raises its Special Attack by 1 stage when hit by a Fire-type move.",
-
-		activate: "#lightningrod",
-	},
-	hydrothermal: {
-		name: "Hydrothermal",
-		desc: "Fire- and Water-type moves have a 10% higher chance to burn.",
-	},
-	slavemaster: {
-		name: "Slavemaster",
-		desc: "Doubles the power of HM moves.",
-	},
-	chording: {
-		name: "Chording",
-		desc: "After using a Special attack, its Atk is raised by 1 stage. After using a Physical attack, its Sp. Atk is raised by 1 stage.",
-	},
-	capacitance: {
-		name: "Capacitance",
-		desc: "Pokemon making contact with this Pokemon lose 1/8 times this Pokemon's Stockpile count of their maximum HP, rounded down. Factors Electric weakness. 20% chance per use of Stockpile to paralyze. Resets Stockpile.",
-
-		damage: "  [POKEMON] was shocked!",
-	},
-	eclipse: {
-		name: "Eclipse",
-		desc: "On switch-in, removes Sunny Day and Desolate Land for a stat boost.",
-	},
-	lootable: {
-		name: "Lootable",
-		desc: "If this Pokemon is knocked out, it gives +2 crit ratio and Serene Grace to the next Pokemon.",
-		shortDesc: "After fainting, gives +2 crit ratio and Serene Grace to next Pokemon.",
-	},
-	asoneblobbos: {
-		name: "As One (Blobbos)",
-		shortDesc: "The combination of Pure Power and Huge Power.",
-
-		start: "  [POKEMON] is ready to kick your ass!",
-	},
-	asoneblobbostherian: {
-		name: "As One (Blobbos-Therian)",
-		shortDesc: "The combination of Intimidate and Levitate.",
-
-		start: "  [POKEMON] is ready to kick your ass in OU!",
-	},
-	asoneblobbosremembered: {
-		name: "As One (Remembered)",
-		shortDesc: "The combination of Flare Heal and Magic Guard.",
-
-		start: "  [POKEMON] is ready to rember ;_;7",
-	},
-	asonehorse: {
-		name: "As One (Horse)",
-		shortDesc: "The combination of Grim Neight, Chilling Neigh, and Striker",
-
-		start: "  [POKEMON] is ready to yeehaw!",
-	},
-	sharpshooter: {
-		name: "Sharpshooter",
-		shortDesc: "This Pokemon's critical hits deal 1.5x damage; +1 Crit ratio.",
-	},
-	flipflops: {
-		name: "Flip Flops",
-		shortDesc: "Doubles Attack and Speed under Inverse Room.",
-	},
-	memepower: {
-		name: "Meme Power",
-		shortDesc: "Adds a Meme to every attack.",
-	},
-	godrejection: {
-		name: "God Rejection",
-		shortDesc: "Lowers damage from Fairy and Dragon moves, Dark + Fighting deal more damage to Fairy and Dragon foes.",
-	},
-	allskill: {
-		name: "All Skill",
-		shortDesc: "Shield Dust + Shell Armor + No Guard.",
-	},
-	artillery: {
-		name: "Artillery",
-		shortDesc: "Boosts bomb and bullet moves by 1.5x.",
-	},
-	genwunning: {
-		name: "Genwunning",
-		shortDesc: "Summons Genwun Room upon switch-in, how nostalgic!",
-	},
-	blobbotype: {
-		name: "Blobbotype",
-		shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate or Z-Crystal.",
-		gen6: {
-			shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate.",
-		},
-	},
-	uncompetitive: {
-		name: "Uncompetitive",
-		shortDesc: "Snow Cloak + Sand Veil + Bright Powder + Lax Incense + Razor Fang + King's Rock + Moody + Arena Trap + Shadow Tag + Focus Band.",
-	},
-	niceface: {
-		name: "Nice Face",
-		desc: "If this Pokemon is an Blobbos-Nice, the first physical hit it takes in battle deals 0 neutral damage. Its leaf shield is then broken and it changes forme to Noice Face. Blobbos-Nice regains its Leaf Shield forme when Grassy Terrain begins or when Eiscue switches in while Grassy Terrain is active. Confusion damage also breaks the leaf shield.",
-		shortDesc: "If Blobbos-Nice, the first physical hit it takes deals 0 damage. This effect is restored in Grassy Terrain.",
-	},
-	evasionhax: {
-		name: "Evasion Hax",
-		shortDesc: "This Pokemon's Evasion is doubled.",
-	},
-	nimblemetalbody: {
-		name: "Nimble Metal Body",
-		shortDesc: "This Pokemon's self-switching moves have their priority increased by 1.",
-	},
-	magicalrealm: {
-		name: "Magical Realm",
-		shortDesc: "Summons Magic Room upon switch-in.",
-	},
-	fogofwar: {
-		name: "Fog Of War",
-		shortDesc: "On switch-in, this Pokemon summons Dense Fog.",
-	},
-	bathtime: {
-		name: "Bath Time",
-		shortDesc: "Product Label: KEEP AWAY FROM WATER.",
-
-		damage: "  Uh oh!",
-	},
+	},	
 	stopsign: {
 		name: "Stop Sign",
 		desc: "While this Pokemon is active, moves that switch the user out are prevented from having an effect.",
@@ -2277,12 +2149,127 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Storm Shelter",
 		shortDesc: "Grants immunity to the type of each weather in that weather.",
 	},
+	supportive: {
+		name: "Supportive",
+		desc: "While this Pokemon is active, moves with recoil and faint the user are prevented from having an effect.",
+		shortDesc: "Prevents self harming moves while active.",
+
+		block: "  [SOURCE] was stopped from using [MOVE]!",
+
+		start: "  [POKEMON] is being supportive!",
+	},
+	swarming: {
+		name: "Swarming",
+		desc: "On switch-in, if this Pokemon is a Jermin that is level 20 or above and has more than 1/4 of its maximum HP left, it changes to Swarm Form. If it is in Swarm Form and its HP drops to 1/4 of its maximum HP or less, it changes to Solo Form at the end of the turn. If it is in Solo Form and its HP is greater than 1/4 its maximum HP at the end of the turn, it changes to Swarm Form.",
+		shortDesc: "If user is Jermin, changes to Swarm Form if it has > 1/4 max HP, else Solo Form.",
+
+		transform: "[POKEMON] formed a swarm!",
+		transformEnd: "[POKEMON] stopped swarming!",
+	},
+	temperamental: {
+		name: "Temperamental",
+		shortDesc: "If Disbeary, it changes between Nice and Ebil Mode at the end of each turn.",
+	},
+	tetanus: {
+		name: "Tetanus",
+		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be Toxic poisoned.",
+	},
+	wholesome100: {
+		name: "Wholesome 100",
+		desc: "This Pokemon is immune to Dark-type moves.",
+	},
 	zenmonke: {
 		name: "Zen Monke",
 		shortDesc: "If Simionach, goes into Zen Mode while under full HP.",
 
 		transform: "  [SOURCE] enters a state of pure zen!",
 		transformEnd: "  [SOURCE] snaps out of its zen state!",
+	},
+		/* Blobbos CAP Abilities */
+	lootable: {
+			name: "Lootable",
+			desc: "If this Pokemon is knocked out, it gives +2 crit ratio and Serene Grace to the next Pokemon.",
+			shortDesc: "After fainting, gives +2 crit ratio and Serene Grace to next Pokemon.",
+	},
+	asoneblobbos: {
+			name: "As One (Blobbos)",
+			shortDesc: "The combination of Pure Power and Huge Power.",
+	
+			start: "  [POKEMON] is ready to kick your ass!",
+	},
+	asoneblobbostherian: {
+			name: "As One (Blobbos-Therian)",
+			shortDesc: "The combination of Intimidate and Levitate.",
+	
+			start: "  [POKEMON] is ready to kick your ass in OU!",
+	},
+	asoneblobbosremembered: {
+			name: "As One (Remembered)",
+			shortDesc: "The combination of Flare Heal and Magic Guard.",
+	
+			start: "  [POKEMON] is ready to rember ;_;7",
+	},
+	asonehorse: {
+			name: "As One (Horse)",
+			shortDesc: "The combination of Grim Neight, Chilling Neigh, and Striker",
+	
+			start: "  [POKEMON] is ready to yeehaw!",
+	},
+	sharpshooter: {
+			name: "Sharpshooter",
+			shortDesc: "This Pokemon's critical hits deal 1.5x damage; +1 Crit ratio.",
+	},
+	flipflops: {
+			name: "Flip Flops",
+			shortDesc: "Doubles Attack and Speed under Inverse Room.",
+	},
+	memepower: {
+			name: "Meme Power",
+			shortDesc: "Adds a Meme to every attack.",
+	},
+	godrejection: {
+			name: "God Rejection",
+			shortDesc: "Lowers damage from Fairy and Dragon moves, Dark + Fighting deal more damage to Fairy and Dragon foes.",
+	},
+	allskill: {
+			name: "All Skill",
+			shortDesc: "Shield Dust + Shell Armor + No Guard.",
+	},
+	artillery: {
+			name: "Artillery",
+			shortDesc: "Boosts bomb and bullet moves by 1.5x.",
+	},
+	genwunning: {
+			name: "Genwunning",
+			shortDesc: "Summons Genwun Room upon switch-in, how nostalgic!",
+	},
+	blobbotype: {
+			name: "Blobbotype",
+			shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate or Z-Crystal.",
+			gen6: {
+				shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate.",
+			},
+	},
+	uncompetitive: {
+			name: "Uncompetitive",
+			shortDesc: "Snow Cloak + Sand Veil + Bright Powder + Lax Incense + Razor Fang + King's Rock + Moody + Arena Trap + Shadow Tag + Focus Band.",
+	},
+	niceface: {
+			name: "Nice Face",
+			desc: "If this Pokemon is an Blobbos-Nice, the first physical hit it takes in battle deals 0 neutral damage. Its leaf shield is then broken and it changes forme to Noice Face. Blobbos-Nice regains its Leaf Shield forme when Grassy Terrain begins or when Eiscue switches in while Grassy Terrain is active. Confusion damage also breaks the leaf shield.",
+			shortDesc: "If Blobbos-Nice, the first physical hit it takes deals 0 damage. This effect is restored in Grassy Terrain.",
+	},
+	evasionhax: {
+			name: "Evasion Hax",
+			shortDesc: "This Pokemon's Evasion is doubled.",
+	},
+	nimblemetalbody: {
+			name: "Nimble Metal Body",
+			shortDesc: "This Pokemon's self-switching moves have their priority increased by 1.",
+	},
+	magicalrealm: {
+			name: "Magical Realm",
+			shortDesc: "Summons Magic Room upon switch-in.",
 	},
 	peaceandtranquility: {
 		name: "Peace and Tranquility",
@@ -2499,14 +2486,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Pooperpower",
 		shortDesc: "Doubles the power of Mud and Shit moves.",
 	},
-	bejeweled: {
-		name: "Bejeweled",
-		shortDesc: "Sets Psychic Surge; recovers gems at the end of turns.",
-	},
-	boardpoweryou: {
-		name: "Board Power (/you/)",
-		shortDesc: "Every Board Power combined except /Z/ and Gorilla Tactics.",
-	},
 	onaquest: {
 		name: "On A Quest",
 		shortDesc: "Begin a quest. Complete it to become a legendary hero!",
@@ -2524,6 +2503,33 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Copy Power",
 		desc: "After your ally pokemon has fainted, when this Pokemon switches in, they will replicate their ability.",
 	},
+	taskoriented: {
+		name: "Task Oriented",
+		shortDesc: "Complete 2 tasks for a massive boost.",
+
+		start: "  [POKEMON] recieved a task: [TASKNAME] - [TASKTEXT]",
+		activate: "  [POKEMON]'s task was updated: [TASKNAME] - [TASKPROGRESS] / [TASKREQUIREMENT] [TASKPROGRESSTEXT]",
+		end: "  [POKEMON] finished their tasks!",
+	},
+			/* Sandbox + Misc. Abilities */
+	bejeweled: {
+		name: "Bejeweled",
+		shortDesc: "Sets Psychic Surge; recovers gems at the end of turns.",
+	},
+	boardpoweryou: {
+		name: "Board Power (/you/)",
+		shortDesc: "Every Board Power combined except /Z/ and Gorilla Tactics.",
+	},
+	capacitance: {
+		name: "Capacitance",
+		desc: "Pokemon making contact with this Pokemon lose 1/8 times this Pokemon's Stockpile count of their maximum HP, rounded down. Factors Electric weakness. 20% chance per use of Stockpile to paralyze. Resets Stockpile.",
+
+		damage: "  [POKEMON] was shocked!",
+	},
+	chording: {
+		name: "Chording",
+		desc: "After using a Special attack, its Atk is raised by 1 stage. After using a Physical attack, its Sp. Atk is raised by 1 stage.",
+	},
 	mrshield: {
 		name: "MR-Shield",
 		shortDesc: "Immune to status, weakens super effective damage at full HP.",
@@ -2532,12 +2538,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "MR-Shield",
 		shortDesc: "Fire-type moves gain +1 priority, +1 Spe every turn.",
 	},
-	taskoriented: {
-		name: "Task Oriented",
-		shortDesc: "Complete 2 tasks for a massive boost.",
-
-		start: "  [POKEMON] recieved a task: [TASKNAME] - [TASKTEXT]",
-		activate: "  [POKEMON]'s task was updated: [TASKNAME] - [TASKPROGRESS] / [TASKREQUIREMENT] [TASKPROGRESSTEXT]",
-		end: "  [POKEMON] finished their tasks!",
+	overeagerest: {
+		name: "Overeagerest",
+		desc: "This Pokemon's damaging moves become multi-hit moves that hit 100 times. Subsequent hits deal 2^N more damage. Does not affect multi-hit moves or moves that have multiple targets.",
+		shortDesc: "This Pokemon's moves hit 100 times. Hits after the first increase in damage exponentially.",
+	},
+	shitbugtactics: {
+		name: "Shitbug Tactics",
+		shortDesc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes.",
 	},
 };
