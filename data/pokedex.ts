@@ -39005,7 +39005,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Field"],
 		otherFormes: ["Toxanine-Mega"],
 		formeOrder: ["Toxanine", "Toxanine-Mega"],
-		},
+	},
 	toxaninemega: {
 		num: -42019,
 		name: "Toxanine-Mega",
