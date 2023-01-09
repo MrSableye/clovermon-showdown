@@ -8622,7 +8622,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart(pokemon) {
 			if (pokemon.species.id !== 'blobbosadventurer') return;
 			const quests = [
-				{id: 'ko', name: 'Righteous Purge', requirement: 1, text: 'KO 2 Pokémon', progressText: 'Pokémon KO\'d'},
+				{id: 'ko', name: 'Righteous Purge', requirement: 1, text: 'KO 1 Pokémon', progressText: 'Pokémon KO\'d'},
 				{
 					id: 'repeat',
 					name: 'Practice Makes Perfect',
@@ -8631,8 +8631,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					progressText: 'move repetitions',
 				},
 				{id: 'boost', name: 'Cultivation of Power', requirement: 5, text: 'Boost its stats 5 stages', progressText: 'boosts'},
-				{id: 'switch', name: 'Agility Training', requirement: 4, text: 'Switch out 5 times', progressText: 'switch outs'},
-				{id: 'wait', name: 'Patience', requirement: 3, text: 'Wait 4 turns', progressText: 'turns waited'},
+				{id: 'switch', name: 'Agility Training', requirement: 4, text: 'Switch out 4 times', progressText: 'switch outs'},
+				{id: 'wait', name: 'Patience', requirement: 3, text: 'Wait 3 turns', progressText: 'turns waited'},
 			];
 
 			if (!this.effectState.quest) {
