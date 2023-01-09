@@ -2545,4 +2545,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Shitbug Tactics",
 		shortDesc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes.",
 	},
+	neurotoxin: {
+		name: "Neurotoxin",
+		shortDesc: "Immune to Psychic-type moves; restores 1/4 HP. Poison-type attacks hit Psychic-types super effectively.",
+	},
 };

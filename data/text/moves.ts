@@ -8023,4 +8023,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "This move always crits under Illusion unless the target is under the effect of Lucky Chant or has an ability that prevents critical hits, and removes Illusion on a successful hit.",
 		shortDesc: "Guaranteed crit under Illusion; removes it on hit.",
 	},
+	rawvenom: {
+		name: "Raw Venom",
+		shortDesc: "30% chance to disable the foe.",
+	},
 };

@@ -8888,4 +8888,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		isNonstandard: "Future",
 	},
+	neurotoxin: {
+		name: "Neurotoxin",
+		onAnyEffectiveness(typemod, target, type, move) {
+			const neurotoxinUser = this.effectState.target;
+
+			if (neurotoxinUser !== this.activePokemon) return;
+
+			if (move.type === 'Poison' && ['Psychic'].includes(type)) {
+				return 1;
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Psychic') {
+				if (!this.heal(target.maxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Neurotoxin');
+				}
+				return null;
+			}
+		},
+		rating: 3,
+		isNonstandard: "Future",
+	},
 };

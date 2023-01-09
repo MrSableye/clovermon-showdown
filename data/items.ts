@@ -8060,4 +8060,18 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	toxanite: {
+		name: "Toxanite",
+		spritenum: 577,
+		megaStone: "Toxanine-Mega",
+		megaEvolves: "Toxanine",
+		itemUser: ["Toxanine"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
 };

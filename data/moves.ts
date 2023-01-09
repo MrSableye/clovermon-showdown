@@ -26013,4 +26013,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 			this.add('-activate', target, 'move: Drink Potion', this.effect.name, doses);
 		},
 	},
+	rawvenom: {
+		num: 403,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Raw Venom",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, distance: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'disable',
+		},
+		target: "any",
+		type: "Poison",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
 };
