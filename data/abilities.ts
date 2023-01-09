@@ -7992,42 +7992,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Captcha: Horni",
 		isNonstandard: "Future",
 	},
-	mracceleration: {
-		onModifyPriority(priority, pokemon, target, move) {
-			if (move?.type === 'Fire') return priority + 1;
-		},
-		onResidualOrder: 28,
-		onResidualSubOrder: 2,
-		onResidual(pokemon) {
-			if (pokemon.activeTurns) {
-				this.boost({spe: 1, spa: 1});
-			}
-		},
-		name: "MR-Acceleration",
-		isNonstandard: "Future",
-		rating: 4.5,
-		num: 3,
-	},
-	mrshield: {
-		onStart(pokemon) {
-			this.add('-ability', pokemon, 'MR-Shield');
-		},
-		onSetStatus(status, target, source, effect) {
-			if ((effect as Move)?.status) {
-				this.add('-immune', target, '[from] ability: MR-Shield');
-			}
-			return false;
-		},
-		onSourceModifyDamage(damage, source, target, move) {
-			if (target.getMoveHitData(move).typeMod > 0) {
-				this.debug('MR-Shield neutralize');
-				return this.chainModify(0.75);
-			}
-		},
-		name: "MR-Shield",
-		rating: 3,
-		num: 232,
-	},
 	numerouno: {
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Numero Uno');
@@ -8658,7 +8622,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart(pokemon) {
 			if (pokemon.species.id !== 'blobbosadventurer') return;
 			const quests = [
-				{id: 'ko', name: 'Righteous Purge', requirement: 2, text: 'KO 2 Pokémon', progressText: 'Pokémon KO\'d'},
+				{id: 'ko', name: 'Righteous Purge', requirement: 1, text: 'KO 2 Pokémon', progressText: 'Pokémon KO\'d'},
 				{
 					id: 'repeat',
 					name: 'Practice Makes Perfect',
@@ -8667,8 +8631,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					progressText: 'move repetitions',
 				},
 				{id: 'boost', name: 'Cultivation of Power', requirement: 5, text: 'Boost its stats 5 stages', progressText: 'boosts'},
-				{id: 'switch', name: 'Agility Training', requirement: 5, text: 'Switch out 5 times', progressText: 'switch outs'},
-				{id: 'wait', name: 'Patience', requirement: 4, text: 'Wait 4 turns', progressText: 'turns waited'},
+				{id: 'switch', name: 'Agility Training', requirement: 4, text: 'Switch out 5 times', progressText: 'switch outs'},
+				{id: 'wait', name: 'Patience', requirement: 3, text: 'Wait 4 turns', progressText: 'turns waited'},
 			];
 
 			if (!this.effectState.quest) {

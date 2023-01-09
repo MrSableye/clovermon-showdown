@@ -2530,14 +2530,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Chording",
 		desc: "After using a Special attack, its Atk is raised by 1 stage. After using a Physical attack, its Sp. Atk is raised by 1 stage.",
 	},
-	mrshield: {
-		name: "MR-Shield",
-		shortDesc: "Immune to status, this Pokemon receives 3/4 damage from supereffective attacks. ",
-	},
-	mracceleration: {
-		name: "MR-Shield",
-		shortDesc: "Fire-type moves gain +1 priority, +1 Spe and + 1 SpA every turn.",
-	},
 	numerouno: {
 		name: "Numero Uno",
 		shortDesc: "Removes the restriction of first-turn out moves.",
