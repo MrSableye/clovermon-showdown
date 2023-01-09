@@ -4624,10 +4624,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 3,
 		flags: {contact: 1, protect: 1, mirror: 1},
-        onTry(source) {
-            if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
-                this.hint("Fake Out only works on your first turn out.");
-                return false;
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Fake Out only works on your first turn out.");
+				return false;
 			}
 		},
 		secondary: {
@@ -4965,25 +4965,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 	},
 	firstimpression: {
-        num: 660,
-        accuracy: 100,
-        basePower: 90,
-        category: "Physical",
-        name: "First Impression",
-        pp: 10,
-        priority: 2,
-        flags: {contact: 1, protect: 1, mirror: 1},
-        onTry(source) {
-            if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
-                this.hint("First Impression only works on your first turn out.");
-                return false;
-            }
-        },
-        secondary: null,
-        target: "normal",
-        type: "Bug",
-        contestType: "Cute",
-    },
+		num: 660,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "First Impression",
+		pp: 10,
+		priority: 2,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("First Impression only works on your first turn out.");
+				return false;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+		contestType: "Cute",
+	},
 	fishiousrend: {
 		num: 755,
 		accuracy: 100,
@@ -10287,10 +10287,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {snatch: 1, nonsky: 1},
 		stallingMove: true,
 		sideCondition: 'matblock',
-        onTry(source) {
-            if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
-                this.hint("Mat Block only works on your first turn out.");
-                return false;
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Mat Block only works on your first turn out.");
+				return false;
 			}
 			return !!this.queue.willAct();
 		},
@@ -20857,13 +20857,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 3,
 		flags: {sound: 1, protect: 1, mirror: 1, bypasssub: 1},
-        onTry(pokemon, target) {
-            if (!pokemon.hasAbility('numerouno') && pokemon.activeTurns > 1) {
-                this.attrLastMove('[still]');
-                this.add('-fail', pokemon);
-                this.hint("Spook Out only works on your first turn out.");
-                return null;
-            }
+		onTry(pokemon, target) {
+			if (!pokemon.hasAbility('numerouno') && pokemon.activeTurns > 1) {
+				this.attrLastMove('[still]');
+				this.add('-fail', pokemon);
+				this.hint("Spook Out only works on your first turn out.");
+				return null;
+			}
 		},
 		secondary: {
 			chance: 100,
@@ -22908,7 +22908,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, blade: 1},
-		
+
 		isNonstandard: "Future",
 	},
 	stickytongue: {
@@ -23021,10 +23021,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 3,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-        onTry(source) {
-            if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
-                this.hint("Rocket Punch only works on your first turn out.");
-                return false;
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Rocket Punch only works on your first turn out.");
+				return false;
 			}
 		},
 		willCrit: true,
