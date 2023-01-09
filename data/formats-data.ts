@@ -9791,4 +9791,20 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	fatherfuck: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	puppois: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	toxanine: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	toxaninemega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };

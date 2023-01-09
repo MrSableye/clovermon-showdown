@@ -10044,6 +10044,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	fatherfuck: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	puppois: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	toxanine: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	toxaninemega: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	vermingio: {
 		inherit: true,
 		tier: "OU",
