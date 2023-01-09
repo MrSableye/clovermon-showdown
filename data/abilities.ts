@@ -8000,7 +8000,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onResidualSubOrder: 2,
 		onResidual(pokemon) {
 			if (pokemon.activeTurns) {
-				this.boost({spe: 1});
+				this.boost({spe: 1, spa: 1});
 			}
 		},
 		name: "MR-Acceleration",
@@ -8019,7 +8019,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			return false;
 		},
 		onSourceModifyDamage(damage, source, target, move) {
-			if ((target.getMoveHitData(move).typeMod > 0) && (target.hp >= target.maxhp)) {
+			if (target.getMoveHitData(move).typeMod > 0) {
 				this.debug('MR-Shield neutralize');
 				return this.chainModify(0.75);
 			}

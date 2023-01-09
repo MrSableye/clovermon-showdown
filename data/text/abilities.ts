@@ -2532,11 +2532,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	mrshield: {
 		name: "MR-Shield",
-		shortDesc: "Immune to status, weakens super effective damage at full HP.",
+		shortDesc: "Immune to status, this Pokemon receives 3/4 damage from supereffective attacks. ",
 	},
 	mracceleration: {
 		name: "MR-Shield",
-		shortDesc: "Fire-type moves gain +1 priority, +1 Spe every turn.",
+		shortDesc: "Fire-type moves gain +1 priority, +1 Spe and + 1 SpA every turn.",
 	},
 	numerouno: {
 		name: "Numero Uno",
