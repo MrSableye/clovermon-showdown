@@ -1727,15 +1727,11 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mrshield: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	mracceleration: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	numerouno: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	neurotoxin: {
 		inherit: true,
 		isNonstandard: null,
 	},

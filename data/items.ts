@@ -8039,7 +8039,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onModifySpDPriority: 2,
 		onModifySpe(spe, pokemon) {
 			if (pokemon.species.name === 'Blobbos-Firefighter') {
-				return this.chainModify(2);
+				return this.chainModify(1.5);
 			}
 		},
 		num: 640,
@@ -8052,6 +8052,20 @@ export const Items: {[itemid: string]: ItemData} = {
 		megaStone: "Blobbos-Bait-Mega",
 		megaEvolves: "Blobbos-Bait",
 		itemUser: ["Blobbos-Bait"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	toxanite: {
+		name: "Toxanite",
+		spritenum: 577,
+		megaStone: "Toxanine-Mega",
+		megaEvolves: "Toxanine",
+		itemUser: ["Toxanine"],
 		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;

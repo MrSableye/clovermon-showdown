@@ -2027,7 +2027,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Beam Boost",
 		desc: "This Pokemon's Beam-based attacks have their power multiplied by 1.5.",
 		shortDesc: "This Pokemon's beam attacks have 1.5x power",
-		},
+	},
 	bigbrain: {
 		name: "Big Brain",
 		shortDesc: "This Pokemon's Special Attack is doubled.",
@@ -2111,7 +2111,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Slavemaster",
 		desc: "The power of Cut, Fly, Surf, Strength, Whirlpool, Rock Smash, Waterfall, Rock Climb and Dive when used by this Pokemon doubled.",
 		shortDesc: "Doubles the power of HM moves.",
-	},	
+	},
 	sousaphone: {
 		name: "Sousaphone",
 		desc: "This Pokemon's sound-based moves become Steel-type moves. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
@@ -2135,7 +2135,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		transform: "Changed to Awoken Forme!",
 		transformEnd: "Changed to Statue Forme!",
-	},	
+	},
 	stopsign: {
 		name: "Stop Sign",
 		desc: "While this Pokemon is active, moves that switch the user out are prevented from having an effect.",
@@ -2185,91 +2185,91 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		transform: "  [SOURCE] enters a state of pure zen!",
 		transformEnd: "  [SOURCE] snaps out of its zen state!",
 	},
-		/* Blobbos CAP Abilities */
+	/* Blobbos CAP Abilities */
 	lootable: {
-			name: "Lootable",
-			desc: "If this Pokemon is knocked out, it gives +2 crit ratio and Serene Grace to the next Pokemon.",
-			shortDesc: "After fainting, gives +2 crit ratio and Serene Grace to next Pokemon.",
+		name: "Lootable",
+		desc: "If this Pokemon is knocked out, it gives +2 crit ratio and Serene Grace to the next Pokemon.",
+		shortDesc: "After fainting, gives +2 crit ratio and Serene Grace to next Pokemon.",
 	},
 	asoneblobbos: {
-			name: "As One (Blobbos)",
-			shortDesc: "The combination of Pure Power and Huge Power.",
-	
-			start: "  [POKEMON] is ready to kick your ass!",
+		name: "As One (Blobbos)",
+		shortDesc: "The combination of Pure Power and Huge Power.",
+
+		start: "  [POKEMON] is ready to kick your ass!",
 	},
 	asoneblobbostherian: {
-			name: "As One (Blobbos-Therian)",
-			shortDesc: "The combination of Intimidate and Levitate.",
-	
-			start: "  [POKEMON] is ready to kick your ass in OU!",
+		name: "As One (Blobbos-Therian)",
+		shortDesc: "The combination of Intimidate and Levitate.",
+
+		start: "  [POKEMON] is ready to kick your ass in OU!",
 	},
 	asoneblobbosremembered: {
-			name: "As One (Remembered)",
-			shortDesc: "The combination of Flare Heal and Magic Guard.",
-	
-			start: "  [POKEMON] is ready to rember ;_;7",
+		name: "As One (Remembered)",
+		shortDesc: "The combination of Flare Heal and Magic Guard.",
+
+		start: "  [POKEMON] is ready to rember ;_;7",
 	},
 	asonehorse: {
-			name: "As One (Horse)",
-			shortDesc: "The combination of Grim Neight, Chilling Neigh, and Striker",
-	
-			start: "  [POKEMON] is ready to yeehaw!",
+		name: "As One (Horse)",
+		shortDesc: "The combination of Grim Neight, Chilling Neigh, and Striker",
+
+		start: "  [POKEMON] is ready to yeehaw!",
 	},
 	sharpshooter: {
-			name: "Sharpshooter",
-			shortDesc: "This Pokemon's critical hits deal 1.5x damage; +1 Crit ratio.",
+		name: "Sharpshooter",
+		shortDesc: "This Pokemon's critical hits deal 1.5x damage; +1 Crit ratio.",
 	},
 	flipflops: {
-			name: "Flip Flops",
-			shortDesc: "Doubles Attack and Speed under Inverse Room.",
+		name: "Flip Flops",
+		shortDesc: "Doubles Attack and Speed under Inverse Room.",
 	},
 	memepower: {
-			name: "Meme Power",
-			shortDesc: "Adds a Meme to every attack.",
+		name: "Meme Power",
+		shortDesc: "Adds a Meme to every attack.",
 	},
 	godrejection: {
-			name: "God Rejection",
-			shortDesc: "Lowers damage from Fairy and Dragon moves, Dark + Fighting deal more damage to Fairy and Dragon foes.",
+		name: "God Rejection",
+		shortDesc: "Lowers damage from Fairy and Dragon moves, Dark + Fighting deal more damage to Fairy and Dragon foes.",
 	},
 	allskill: {
-			name: "All Skill",
-			shortDesc: "Shield Dust + Shell Armor + No Guard.",
+		name: "All Skill",
+		shortDesc: "Shield Dust + Shell Armor + No Guard.",
 	},
 	artillery: {
-			name: "Artillery",
-			shortDesc: "Boosts bomb and bullet moves by 1.5x.",
+		name: "Artillery",
+		shortDesc: "Boosts bomb and bullet moves by 1.5x.",
 	},
 	genwunning: {
-			name: "Genwunning",
-			shortDesc: "Summons Genwun Room upon switch-in, how nostalgic!",
+		name: "Genwunning",
+		shortDesc: "Summons Genwun Room upon switch-in, how nostalgic!",
 	},
 	blobbotype: {
-			name: "Blobbotype",
-			shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate or Z-Crystal.",
-			gen6: {
-				shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate.",
-			},
+		name: "Blobbotype",
+		shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate or Z-Crystal.",
+		gen6: {
+			shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate.",
+		},
 	},
 	uncompetitive: {
-			name: "Uncompetitive",
-			shortDesc: "Snow Cloak + Sand Veil + Bright Powder + Lax Incense + Razor Fang + King's Rock + Moody + Arena Trap + Shadow Tag + Focus Band.",
+		name: "Uncompetitive",
+		shortDesc: "Snow Cloak + Sand Veil + Bright Powder + Lax Incense + Razor Fang + King's Rock + Moody + Arena Trap + Shadow Tag + Focus Band.",
 	},
 	niceface: {
-			name: "Nice Face",
-			desc: "If this Pokemon is an Blobbos-Nice, the first physical hit it takes in battle deals 0 neutral damage. Its leaf shield is then broken and it changes forme to Noice Face. Blobbos-Nice regains its Leaf Shield forme when Grassy Terrain begins or when Eiscue switches in while Grassy Terrain is active. Confusion damage also breaks the leaf shield.",
-			shortDesc: "If Blobbos-Nice, the first physical hit it takes deals 0 damage. This effect is restored in Grassy Terrain.",
+		name: "Nice Face",
+		desc: "If this Pokemon is an Blobbos-Nice, the first physical hit it takes in battle deals 0 neutral damage. Its leaf shield is then broken and it changes forme to Noice Face. Blobbos-Nice regains its Leaf Shield forme when Grassy Terrain begins or when Eiscue switches in while Grassy Terrain is active. Confusion damage also breaks the leaf shield.",
+		shortDesc: "If Blobbos-Nice, the first physical hit it takes deals 0 damage. This effect is restored in Grassy Terrain.",
 	},
 	evasionhax: {
-			name: "Evasion Hax",
-			shortDesc: "This Pokemon's Evasion is doubled.",
+		name: "Evasion Hax",
+		shortDesc: "This Pokemon's Evasion is doubled.",
 	},
 	nimblemetalbody: {
-			name: "Nimble Metal Body",
-			shortDesc: "This Pokemon's self-switching moves have their priority increased by 1.",
+		name: "Nimble Metal Body",
+		shortDesc: "This Pokemon's self-switching moves have their priority increased by 1.",
 	},
 	magicalrealm: {
-			name: "Magical Realm",
-			shortDesc: "Summons Magic Room upon switch-in.",
+		name: "Magical Realm",
+		shortDesc: "Summons Magic Room upon switch-in.",
 	},
 	peaceandtranquility: {
 		name: "Peace and Tranquility",
@@ -2511,7 +2511,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		activate: "  [POKEMON]'s task was updated: [TASKNAME] - [TASKPROGRESS] / [TASKREQUIREMENT] [TASKPROGRESSTEXT]",
 		end: "  [POKEMON] finished their tasks!",
 	},
-			/* Sandbox + Misc. Abilities */
+	/* Sandbox + Misc. Abilities */
 	bejeweled: {
 		name: "Bejeweled",
 		shortDesc: "Sets Psychic Surge; recovers gems at the end of turns.",
@@ -2530,14 +2530,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Chording",
 		desc: "After using a Special attack, its Atk is raised by 1 stage. After using a Physical attack, its Sp. Atk is raised by 1 stage.",
 	},
-	mrshield: {
-		name: "MR-Shield",
-		shortDesc: "Immune to status, weakens super effective damage at full HP.",
-	},
-	mracceleration: {
-		name: "MR-Shield",
-		shortDesc: "Fire-type moves gain +1 priority, +1 Spe every turn.",
-	},
 	numerouno: {
 		name: "Numero Uno",
 		shortDesc: "Removes the restriction of first-turn out moves.",
@@ -2552,5 +2544,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	shitbugtactics: {
 		name: "Shitbug Tactics",
 		shortDesc: "This Pokemon's SpA is 1.5x, but it can only select the first move it executes.",
+	},
+	neurotoxin: {
+		name: "Neurotoxin",
+		shortDesc: "Immune to Psychic-type moves; restores 1/4 HP. Poison-type attacks hit Psychic-types super effectively.",
 	},
 };

@@ -6196,22 +6196,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	detonator: {
-				onBasePowerPriority: 8,
-				onModifyMove(move) {
-					const bombMoves = ['blackbomb','cherrybomb','eggbomb','firebomb','magnetbomb','mudbomb','seedbomb','sludgebomb'];
-					if (!bombMoves.includes(move.id)) return;
-		if (move.secondaries) {
-			this.debug('doubling secondary chance');
-			for (const secondary of move.secondaries) {
-				if (secondary.chance) secondary.chance *= 2;
+		onBasePowerPriority: 8,
+		onModifyMove(move) {
+			const bombMoves = ['blackbomb', 'cherrybomb', 'eggbomb', 'firebomb', 'magnetbomb', 'mudbomb', 'seedbomb', 'sludgebomb'];
+			if (!bombMoves.includes(move.id)) return;
+			if (move.secondaries) {
+				this.debug('doubling secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance *= 2;
+				}
 			}
-		}
-		if (move.self?.chance) move.self.chance *= 2;
+			if (move.self?.chance) move.self.chance *= 2;
 		},
-			onBasePower(basePower, attacker, defender, move) {
-					const bombMoves = ['blackbomb','cherrybomb','eggbomb','firebomb','magnetbomb','mudbomb','seedbomb','sludgebomb'];
-					if (!bombMoves.includes(move.id)) return;
-					return this.chainModify(1.2);
+		onBasePower(basePower, attacker, defender, move) {
+			const bombMoves = ['blackbomb', 'cherrybomb', 'eggbomb', 'firebomb', 'magnetbomb', 'mudbomb', 'seedbomb', 'sludgebomb'];
+			if (!bombMoves.includes(move.id)) return;
+			return this.chainModify(1.2);
 		},
 		name: "Detonator",
 		isNonstandard: "Future",
@@ -7764,7 +7764,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		isNonstandard: "Future",
 	},
-	
+
 	terraform: {
 		name: "Terraform",
 		onBeforeMove(source, target, move) {
@@ -7991,42 +7991,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Captcha: Horni",
 		isNonstandard: "Future",
-	},
-	mracceleration: {
-		onModifyPriority(priority, pokemon, target, move) {
-			if (move?.type === 'Fire') return priority + 1;
-		},
-		onResidualOrder: 28,
-		onResidualSubOrder: 2,
-		onResidual(pokemon) {
-			if (pokemon.activeTurns) {
-				this.boost({spe: 1});
-			}
-		},
-		name: "MR-Acceleration",
-		isNonstandard: "Future",
-		rating: 4.5,
-		num: 3,
-	},
-	mrshield: {
-		onStart(pokemon) {
-			this.add('-ability', pokemon, 'MR-Shield');
-		},
-		onSetStatus(status, target, source, effect) {
-			if ((effect as Move)?.status) {
-				this.add('-immune', target, '[from] ability: MR-Shield');
-			}
-			return false;
-		},
-		onSourceModifyDamage(damage, source, target, move) {
-			if ((target.getMoveHitData(move).typeMod > 0) && (target.hp >= target.maxhp)) {
-				this.debug('MR-Shield neutralize');
-				return this.chainModify(0.75);
-			}
-		},
-		name: "MR-Shield",
-		rating: 3,
-		num: 232,
 	},
 	numerouno: {
 		onStart(pokemon) {
@@ -8658,7 +8622,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart(pokemon) {
 			if (pokemon.species.id !== 'blobbosadventurer') return;
 			const quests = [
-				{id: 'ko', name: 'Righteous Purge', requirement: 2, text: 'KO 2 Pokémon', progressText: 'Pokémon KO\'d'},
+				{id: 'ko', name: 'Righteous Purge', requirement: 1, text: 'KO 1 Pokémon', progressText: 'Pokémon KO\'d'},
 				{
 					id: 'repeat',
 					name: 'Practice Makes Perfect',
@@ -8667,8 +8631,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					progressText: 'move repetitions',
 				},
 				{id: 'boost', name: 'Cultivation of Power', requirement: 5, text: 'Boost its stats 5 stages', progressText: 'boosts'},
-				{id: 'switch', name: 'Agility Training', requirement: 5, text: 'Switch out 5 times', progressText: 'switch outs'},
-				{id: 'wait', name: 'Patience', requirement: 4, text: 'Wait 4 turns', progressText: 'turns waited'},
+				{id: 'switch', name: 'Agility Training', requirement: 4, text: 'Switch out 4 times', progressText: 'switch outs'},
+				{id: 'wait', name: 'Patience', requirement: 3, text: 'Wait 3 turns', progressText: 'turns waited'},
 			];
 
 			if (!this.effectState.quest) {
@@ -8922,6 +8886,28 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
+		isNonstandard: "Future",
+	},
+	neurotoxin: {
+		name: "Neurotoxin",
+		onAnyEffectiveness(typemod, target, type, move) {
+			const neurotoxinUser = this.effectState.target;
+
+			if (neurotoxinUser !== this.activePokemon) return;
+
+			if (move.type === 'Poison' && ['Psychic'].includes(type)) {
+				return 1;
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Psychic') {
+				if (!this.heal(target.maxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Neurotoxin');
+				}
+				return null;
+			}
+		},
+		rating: 3,
 		isNonstandard: "Future",
 	},
 };
