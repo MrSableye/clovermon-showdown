@@ -19840,6 +19840,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				// The effectiveness of Freeze Dry on Water isn't reverted
 				if (move && move.id === 'freezedry' && type === 'Water') return;
 				if (move && move.id === '1000folds' && type === 'Steel') return;
+				if (move && move.id === 'airshooter' && type === 'Flying') return;
 				if (move && !this.dex.getImmunity(move, type)) return 1;
 				return -typeMod;
 			},
@@ -22362,6 +22363,192 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
+	lemons: {
+		accuracy: 95,
+		basePower: 4,
+		category: "Special",
+		name: "Lemons",
+		pp: 40,
+		priority: -1,
+		flags: {pulse: 1, bullet: 1, protect: 1,},
+		multihit: 100,
+		multiaccuracy: true,
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future", // TODO: Meme move
+		noSketch: true,
+	},
+	metalblade: {
+		num: 364,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Metal Blade",
+		pp: 25,
+		priority: 0,
+		flags: {bullet: 1, mirror: 1},
+		breaksProtect: true,
+		// Breaking protection implemented in scripts.js
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+		isNonstandard: "Future",
+	},
+	airshooter: {
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		name: "Air Shooter",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Flying') return 1;
+		},
+		onBasePower(basePower, pokemon, target) {
+			if (target.ability === 'levitate') {
+				return this.chainModify(2);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+		isNonstandard: "Future",
+	},
+	bubblelead: {
+		accuracy: 100,
+		basePower: 50,
+		category: "Special",
+		name: "Bubble Lead",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: null,
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('gmaxsteelsurge');
+				}
+			},
+		},
+		condition: {
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: G-Max Steelsurge');
+			},
+			onEntryHazard(pokemon) {
+				if (pokemon.hasItem('heavydutyboots')) return;
+				// Ice Face and Disguise correctly get typed damage from Stealth Rock
+				// because Stealth Rock bypasses Substitute.
+				// They don't get typed damage from Steelsurge because Steelsurge doesn't,
+				// so we're going to test the damage of a Steel-type Stealth Rock instead.
+				const steelHazard = this.dex.getActiveMove('Stealth Rock');
+				steelHazard.type = 'Steel';
+				const typeMod = this.clampIntRange(pokemon.runEffectiveness(steelHazard), -6, 6);
+				this.damage(pokemon.maxhp * Math.pow(2, typeMod) / 8);
+			},
+		},
+		target: "normal",
+		type: "Water",
+		isNonstandard: "Future",
+	},
+	quickboomerang: {
+		accuracy: 90,
+		basePower: 40,
+		category: "Physical",
+		name: "Quick Boomerang",
+		pp: 40,
+		priority: 1,
+		flags: {pulse: 1, bullet: 1, protect: 1, mirror: 1},
+		multihit: 2,
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		isNonstandard: "Future",
+	},
+	crashbomber: {
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		name: "Crash Bomber",
+		pp: 5,
+		priority: 0,
+		flags: {bullet: 1},
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				move: 'crashbomber',
+				source: source,
+				moveData: {
+					id: 'crashbomber',
+					name: "Crash Bomber",
+					accuracy: 100,
+					basePower: 140,
+					category: "Physical",
+					priority: 0,
+					flags: {bullet: 1},
+					effectType: 'Move',
+					isFutureMove: true,
+					type: 'Ground',
+				},
+			});
+			this.add('-start', source, 'Crash Bomber');
+			return this.NOT_FAIL;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ground",
+		isNonstandard: "Future",
+	},
+	timestopper: {
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Time Stopper",
+		pp: 1,
+		noPPBoosts: true,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		status: 'frz',
+		secondary: null,
+		target: "allAdjacent",
+		type: "Fairy",
+		isNonstandard: "Future",
+	},
+	atomicfire: {
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Atomic Fire",
+		pp: 5,
+		priority: 0,
+		flags: {pulse: 1, bullet: 1, charge: 1, protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.field.isTerrain('')) {
+				this.attrLastMove('[still]');
+				this.addMove('-anim', attacker, move.name, defender);
+				return;
+			}
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		isNonstandard: "Future",
+	},
 	leafshield: {
 		accuracy: true,
 		basePower: 0,
@@ -22866,7 +23053,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (source === this.effectState.target && target === this.effectState.source) {
 					return;
 				}
-				if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows'].includes(move.id)) {
+				if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows', 'airshooter'].includes(move.id)) {
 					return;
 				}
 				return false;
@@ -22878,7 +23065,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (source === this.effectState.target && target === this.effectState.source) {
 					return;
 				}
-				if (move.id === 'gust' || move.id === 'twister') {
+				if (move.id === 'gust' || move.id === 'twister' || move.id === 'airshooter') {
 					return this.chainModify(2);
 				}
 			},

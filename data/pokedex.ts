@@ -38646,6 +38646,18 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		eggGroups: ["Undiscovered"],
 	},
+	megaweedle: {
+		num: -42102,
+		name: "Megaweedle",
+		types: ["Bug", "Rock"],
+		gender: "M",
+		baseStats: {hp: 85, atk: 85, def: 85, spa: 85, spd: 85, spe: 85},
+		abilities: {0: "Protean", 1: "Mega Launcher"},
+		heightm: 0.4,
+		weightkg: 4,
+		color: "Blue",
+		eggGroups: ["Undiscovered"],
+	},
 	krackowalker: {
 		num: -42113,
 		name: "Krackowalker",

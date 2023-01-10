@@ -9130,6 +9130,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	megaweedle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	waterweedle: {
 		tier: "Illegal",
 		isNonstandard: "Future",

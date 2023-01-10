@@ -7375,12 +7375,51 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Yiik Out",
 		shortDesc: "Hits first. First turn out only. The target's Ability changes to match the user's.",
 	},
+	metalblade: {
+		name: "Metal Blade",
+		shortDesc: "Breaks Protect and screens.",
+	},
+	airshooter: {
+		name: "Air Shooter",
+		shortDesc: "Effective vs. flying types, 2x power vs. Levitate.",
+	},
+	bubblelead: {
+		name: "Bubble Lead",
+		shortDesc: "Sets Steelspikes on the opponent side.",
+	},
+	quickboomerang: {
+		name: "Quick Boomerang",
+		shortDesc: "Usually goes first, Hits twice.",
+	},
+	crashbomber: {
+		name: "Future Sight",
+		desc: "Deals damage two turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if another future move is already in effect for the target's position.",
+		shortDesc: "Hits again at 140 power two turns after being used.",
+
+		start: "  [POKEMON] set a crash bomb!",
+		activate: "  The crash bomb exploded on [TARGET]!",
+	},
+	timestopper: {
+		name: "Time Stopper",
+		shortDesc: "Freezes all adjacent Pokemon.",
+	},
+	atomicfire: {
+		name: "Atomic Fire",
+		desc: "This attack charges on the first turn and executes on the second. If a terrain is active, the move completes in one turn.",
+		shortDesc: "Charges turn 1. Hits turn 2. No charge in terrain.",
+
+		prepare: "  [POKEMON] is charging power!",
+	},
 	leafshield: {
 		name: "Leaf Shield",
 		desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon making contact with the user lose 1/8 of their maximum HP, rounded down. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
 		shortDesc: "Protects from moves. Contact: loses 1/8 HP. Sets Grassy Terrain.",
 
 		damage: "  [POKEMON] was hurt by the sharp leaves!",
+	},
+	lemons: {
+		name: "Lemons",
+		shortDesc: "Hits 100 times. Each hit can miss. Always goes last.",
 	},
 	twintowertumblingterror: {
 		name: "Twin Tower Tumbling Terror",

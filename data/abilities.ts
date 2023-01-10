@@ -8000,6 +8000,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2.5,
 		isNonstandard: "Future",
 	},
+	real: {
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'Real');
+		},
+		name: "Real",
+		rating: 0,
+		isNonstandard: "Future",
+	},
 	bejeweled: {
 		onStart(source) {
 			this.field.setTerrain('psychicterrain');
