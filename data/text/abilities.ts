@@ -2536,6 +2536,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "BRAZIL NUMERO UNO! CAMPEAO DE MUNDO!",
 	},
+	real: {
+		name: "Real",
+		shortDesc: "This Pokemon is real.",
+
+		start: "  [POKEMON] real!",
+	},
 	overeagerest: {
 		name: "Overeagerest",
 		desc: "This Pokemon's damaging moves become multi-hit moves that hit 100 times. Subsequent hits deal 2^N more damage. Does not affect multi-hit moves or moves that have multiple targets.",

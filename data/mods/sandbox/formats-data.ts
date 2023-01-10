@@ -9954,6 +9954,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	megaweedle: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	krackowalker: {
 		inherit: true,
 		tier: "OU",

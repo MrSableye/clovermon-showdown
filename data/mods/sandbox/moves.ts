@@ -4311,4 +4311,36 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	metalblade: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	airshooter: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bubblelead: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	crashbomber: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	quickboomerang: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	timestopper: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	atomicfire: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lemons: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
