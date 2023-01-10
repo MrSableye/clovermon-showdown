@@ -26249,7 +26249,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			0: "Levitate",
 			1: "Teravolt",
 			H: "Light Metal",
-			S: "Lightningrod",
+			S: "Lightning Rod",
 		},
 		heightm: 2.3,
 		weightkg: 105.5,
