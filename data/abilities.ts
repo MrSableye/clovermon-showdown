@@ -5253,11 +5253,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.boost({atk: 1});
 			}
 		},
-		onSourceModifyDamage(damage, source, target, move) {
-			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
-			let mod = 1;
-			if (move.type === 'Dark') mod /= 2;
-			return this.chainModify(mod);
+		onEffectiveness(typeMod, target, type, move) {
+			if (!target || target.baseSpecies.baseSpecies !== 'Fontaba') return;
+			if (move.type === 'Dark') {
+				return -1;
+			}
 		},
 		isPermanent: true,
 		isNonstandard: "Future",
