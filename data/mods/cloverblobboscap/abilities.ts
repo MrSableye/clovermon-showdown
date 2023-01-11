@@ -397,4 +397,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	metamorphosis: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

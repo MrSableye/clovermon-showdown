@@ -4343,4 +4343,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	flurryfist: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

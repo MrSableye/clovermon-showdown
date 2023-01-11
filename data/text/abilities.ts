@@ -2555,4 +2555,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Neurotoxin",
 		shortDesc: "Immune to Psychic-type moves; restores 1/4 HP. Poison-type attacks hit Psychic-types super effectively.",
 	},
+	metamorphosis: {
+		name: "Metamorphosis",
+		shortDesc: "If this Pokemon is a Blobbos-eedle, switching out makes it change into its True Form.",
+
+		activate: "  [POKEMON] harnessed the power of the Weedles!",
+	},
 };

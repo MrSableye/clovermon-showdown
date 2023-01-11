@@ -8066,4 +8066,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Raw Venom",
 		shortDesc: "30% chance to disable the foe.",
 	},
+	flurryfist: {
+		name: "Flurry Fist",
+		shortDesc: "Usually goes first.",
+	},
 };
