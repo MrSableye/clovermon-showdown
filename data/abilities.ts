@@ -8918,22 +8918,4 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		isNonstandard: "Future",
 	},
-	metamorphosis: {
-		onSwitchOut(pokemon) {
-			if (pokemon.species.id !== 'blobboseedle' || pokemon.transformed) return;
-			pokemon.formeChange('Blobbos-eedle-True', this.effect, true);
-			this.effectState.sendTrueMessage = true;
-		},
-		onStart(pokemon) {
-			if (this.effectState.sendTrueMessage) {
-				this.add('-activate', pokemon, 'ability: Metamorphosis');
-				this.effectState.sendTrueMessage = false;
-			}
-		},
-		isPermanent: true,
-		name: "Metamorphosis",
-		rating: 5,
-		isNonstandard: "Future",
-		num: 278,
-	},
 };

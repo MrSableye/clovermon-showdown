@@ -9767,14 +9767,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	blobboseedle: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	blobboseedletrue: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
 	blobbosadventurer: {
 		tier: "Illegal",
 		isNonstandard: "Future",
