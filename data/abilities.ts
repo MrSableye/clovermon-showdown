@@ -8920,16 +8920,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	metamorphosis: {
 		onSwitchOut(pokemon) {
-			if (pokemon.baseSpecies.baseSpecies !== 'Blobbos-eedle' || pokemon.transformed) return;
-			if (pokemon.species.forme !== 'True') {
-				pokemon.formeChange('Blobbos-eedle-True', this.effect, true);
-				this.effectState.sendTrueMessage = true;
-			}
+			if (pokemon.species.id !== 'blobboseedle' || pokemon.transformed) return;
+			pokemon.formeChange('Blobbos-eedle-True', this.effect, true);
+			this.effectState.sendTrueMessage = true;
 		},
 		onStart(pokemon) {
 			if (this.effectState.sendTrueMessage) {
 				this.add('-activate', pokemon, 'ability: Metamorphosis');
-				this.effectState.sendHeroMessage = false;
+				this.effectState.sendTrueMessage = false;
 			}
 		},
 		isPermanent: true,
