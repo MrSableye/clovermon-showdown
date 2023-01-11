@@ -2525,6 +2525,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	},
+	blobboseedle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobboseedletrue: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
 	blobbosdust: {
 		inherit: true,
 		isNonstandard: null,
