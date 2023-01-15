@@ -86,65 +86,182 @@ export const commands: Chat.ChatCommands = {
 				'<p>Repos: <a href="https://github.com/MrSableye/clovermon-showdown">MrSableye/clovermon-showdown</a> / <a href="https://github.com/MrSableye/clovermon-showdown-client">MrSableye/clovermon-showdown-client</a></p>'
 			);
 		},
-		async usage(target, room, user) {
-			this.runBroadcast();
+		usage: {
+			tier: 'format',
+			async format(target, room) {
+				this.runBroadcast();
 
-			if (!target) {
+				if (!target) {
+					return this.sendReplyBox(
+						'<b><u>Usage Stats</u></b><br />' +
+						'<p>Daily usage stats for most Clovermon Showdown formats can be found here:</p>' +
+						'<ul><li><a href="https://clover.weedl.es/usage_new/">Fancy Usage Site</a></li><li><a href="https://clover.weedl.es/usage/">Old Plain Usage Site</a></li></ul>'
+					);
+				}
+
+				let [targetFormatId, targetYearText, targetMonthText] = target.split(',').map(toID);
+
+				if (!targetFormatId) {
+					const format = room?.settings.defaultFormat || room?.battle?.format;
+					if (!format) {
+						return this.sendReplyBox('Please specify a valid format.');
+					}
+					targetFormatId = toID(format);
+				}
+
+				if (targetYearText) {
+					const targetYear = parseInt(targetYearText);
+					if (Number.isNaN(targetYear) || targetYear > 3000) {
+						return this.sendReplyBox('Please specify a valid year.');
+					}
+				}
+
+				if (targetMonthText) {
+					const targetMonth = parseInt(targetMonthText);
+					if (Number.isNaN(targetMonth) || targetMonth > 3000) {
+						return this.sendReplyBox('Please specify a valid month.');
+					}
+				}
+
+				const stats = await getStats(targetFormatId, targetYearText, targetMonthText);
+
+				if (!stats || !('pokemonStats' in stats)) {
+					return this.sendReplyBox('No stats available.');
+				}
+
+				const allPokemonStats = Object.entries(stats.pokemonStats).sort((entryA, entryB) => {
+					const [, pokemonA] = entryA;
+					const [, pokemonB] = entryB;
+
+					return pokemonB.usage - pokemonA.usage;
+				}).slice(0, 10); // TODO: Add ", all" equivalent maybe
+
+				const messageParts = [targetFormatId, targetYearText, targetMonthText].filter((part) => part !== undefined);
+				let resultStr = `<span style="color:#999999;">Usage for ${messageParts.join(',')}:</span><br />`;
+
+				resultStr += allPokemonStats.map(([id, pokemonStats]) => {
+					const species = Dex.species.get(id);
+					const name = species.name || id;
+
+					return resultString(name, pokemonStats.usage, pokemonStats.win, stats.totalTeams);
+				}).join(', ');
+
+				return this.sendReplyBox(resultStr);
+			},
+			mon: 'pokemon',
+			async pokemon(target, room) {
+				this.runBroadcast();
+
+				let [targetPokemon, targetFormatId, targetYearText, targetMonthText] = target.split(',').map(toID);
+
+				if (!targetPokemon) {
+					return this.sendReplyBox('Please specify a Pokemon.');
+				}
+
+				if (!targetFormatId) {
+					const format = room?.settings.defaultFormat || room?.battle?.format;
+					if (!format) {
+						return this.sendReplyBox('Please specify a valid format.');
+					}
+					targetFormatId = toID(format);
+				}
+
+				if (targetYearText) {
+					const targetYear = parseInt(targetYearText);
+					if (Number.isNaN(targetYear) || targetYear > 3000) {
+						return this.sendReplyBox('Please specify a valid year.');
+					}
+				}
+
+				if (targetMonthText) {
+					const targetMonth = parseInt(targetMonthText);
+					if (Number.isNaN(targetMonth) || targetMonth > 3000) {
+						return this.sendReplyBox('Please specify a valid month.');
+					}
+				}
+
+				const stats = await getStats(targetFormatId, targetYearText, targetMonthText);
+
+				if (!stats || !('pokemonStats' in stats)) {
+					return this.sendReplyBox('No stats available.');
+				}
+
+				const pokemonStats = stats.pokemonStats[targetPokemon];
+
+				if (!pokemonStats) {
+					return this.sendReplyBox('No stats available.');
+				}
+
+				const moves = Object.entries(pokemonStats.move).sort((entryA, entryB) => {
+					const [, moveA] = entryA;
+					const [, moveB] = entryB;
+
+					return moveB.usage - moveA.usage;
+				}).slice(0, 10);
+
+				const abilities = Object.entries(pokemonStats.ability).sort((entryA, entryB) => {
+					const [, abilityA] = entryA;
+					const [, abilityB] = entryB;
+
+					return abilityB.usage - abilityA.usage;
+				});
+
+				const items = Object.entries(pokemonStats.item).sort((entryA, entryB) => {
+					const [, itemA] = entryA;
+					const [, itemB] = entryB;
+
+					return itemB.usage - itemA.usage;
+				}).slice(0, 5);
+
+				const pokemonName = Dex.species.get(targetPokemon)?.name || targetPokemon;
+				/* eslint-disable max-len */
+				const messageParts = [pokemonName, targetFormatId, targetYearText, targetMonthText].filter((part) => part !== undefined);
+				/* eslint-enable max-len */
+				let resultStr = `<span style="color:#999999;">Usage for ${messageParts.join(',')}:</span><br />`;
+
+				resultStr += `<psicon pokemon="${pokemonName}" style="vertical-align:-7px;margin:-2px" />${pokemonName}<br />`;
+				resultStr += `<strong>Usage</strong>: ${formatPercentage(pokemonStats.usage / stats.totalTeams)}%<br />`;
+				resultStr += `<strong>Win Rate</strong>: ${formatPercentage(pokemonStats.win / pokemonStats.usage)}%`;
+
+				const abilitiesStats = abilities.map(([abilityId, abilityStats]) => {
+					const ability = Dex.abilities.get(abilityId)?.name || abilityId;
+					return `${ability} (${formatPercentage(abilityStats.usage / pokemonStats.usage)}%, WR: ${formatPercentage(abilityStats.win / abilityStats.usage)}%)`;
+				});
+
+				if (abilitiesStats.length) {
+					resultStr += '<br /><strong>Abilities</strong>: <br />';
+					resultStr += abilitiesStats.join('<br />');
+				}
+
+				const itemsStats = items.map(([itemId, itemStats]) => {
+					const item = Dex.items.get(itemId)?.name || itemId;
+					return `${item} (${formatPercentage(itemStats.usage / pokemonStats.usage)}%, WR: ${formatPercentage(itemStats.win / itemStats.usage)}%)`;
+				});
+
+				if (itemsStats.length) {
+					resultStr += '<br /><strong>Items</strong>: <br />';
+					resultStr += itemsStats.join('<br />');
+				}
+
+				const movesStats = moves.map(([moveId, moveStats]) => {
+					const move = Dex.moves.get(moveId)?.name || moveId;
+					return `${move} (${formatPercentage(moveStats.usage / pokemonStats.usage)}%, WR: ${formatPercentage(moveStats.win / moveStats.usage)}%)`;
+				});
+
+				if (movesStats.length) {
+					resultStr += '<br /><strong>Moves</strong>: <br />';
+					resultStr += movesStats.join('<br />');
+				}
+
+				return this.sendReplyBox(resultStr);
+			},
+			''() {
 				return this.sendReplyBox(
 					'<b><u>Usage Stats</u></b><br />' +
 					'<p>Daily usage stats for most Clovermon Showdown formats can be found here:</p>' +
 					'<ul><li><a href="https://clover.weedl.es/usage_new/">Fancy Usage Site</a></li><li><a href="https://clover.weedl.es/usage/">Old Plain Usage Site</a></li></ul>'
 				);
-			}
-
-			let [targetFormatId, targetYearText, targetMonthText] = target.split(',').map(toID);
-
-			if (!targetFormatId) {
-				const format = room?.settings.defaultFormat || room?.battle?.format;
-				if (!format) {
-					return this.sendReplyBox('Please specify a valid format.');
-				}
-				targetFormatId = toID(format);
-			}
-
-			if (targetYearText) {
-				const targetYear = parseInt(targetYearText);
-				if (Number.isNaN(targetYear) || targetYear > 3000) {
-					return this.sendReplyBox('Please specify a valid year.');
-				}
-			}
-
-			if (targetMonthText) {
-				const targetMonth = parseInt(targetMonthText);
-				if (Number.isNaN(targetMonth) || targetMonth > 3000) {
-					return this.sendReplyBox('Please specify a valid month.');
-				}
-			}
-
-			const stats = await getStats(targetFormatId, targetYearText, targetMonthText);
-
-			if (!stats || !('pokemonStats' in stats)) {
-				return this.sendReplyBox('No stats available.');
-			}
-
-			const allPokemonStats = Object.entries(stats.pokemonStats).sort((entryA, entryB) => {
-				const [, pokemonA] = entryA;
-				const [, pokemonB] = entryB;
-
-				return pokemonB.usage - pokemonA.usage;
-			}).slice(0, 10); // TODO: Add ", all" equivalent maybe
-
-			const messageParts = [targetFormatId, targetYearText, targetMonthText].filter((part) => part !== undefined);
-			let resultStr = `<span style="color:#999999;">Usage for ${messageParts.join(',')}:</span><br />`;
-
-			resultStr += allPokemonStats.map(([id, pokemonStats]) => {
-				const species = Dex.species.get(id);
-				const name = species.name || id;
-
-				return resultString(name, pokemonStats.usage, pokemonStats.win, stats.totalTeams);
-			}).join(', ');
-
-			return this.sendReplyBox(resultStr);
+			},
 		},
 	},
 	cloverhelp() {
