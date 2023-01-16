@@ -38604,7 +38604,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Grass", "Fire", "Fighting"],
 		gender: "F",
 		baseStats: {hp: 120, atk: 167, def: 100, spa: 167, spd: 100, spe: 146},
-		abilities: {0: "Huge Power", H: "Pure Power", S: "Protean"},
+		abilities: {0: "Huge Power", H: "Big Brain", S: "Protean"},
 		heightm: 1.6,
 		weightkg: 60,
 		color: "Brown",
