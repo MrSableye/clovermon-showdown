@@ -39183,18 +39183,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Green",
 		eggGroups: ["Dragon", "Monster"],
 	},
-	vulkancermr: {
-		num: -42013,
-		name: "Vulkancer-MR",
-		types: ["Steel", "Fire"],
-		baseStats: {hp: 60, atk: 65, def: 90, spa: 160, spd: 85, spe: 140},
-		abilities: {0: "Speed Boost"},
-		heightm: 10.1,
-		weightkg: 160,
-		color: "Red",
-		tags: ["Sub-Legendary"],
-		eggGroups: ["Ditto"],
-	},
 	/* Clover CAP Megas */
 	oogabugamega: {
 		num: 69268,
