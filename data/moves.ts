@@ -22370,7 +22370,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Lemons",
 		pp: 40,
 		priority: -1,
-		flags: {pulse: 1, bullet: 1, protect: 1,},
+		flags: {pulse: 1, bullet: 1, protect: 1},
 		multihit: 100,
 		multiaccuracy: true,
 		target: "normal",
@@ -23053,7 +23053,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (source === this.effectState.target && target === this.effectState.source) {
 					return;
 				}
-				if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows', 'airshooter'].includes(move.id)) {
+				const moves = ['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows', 'airshooter'];
+				if (moves.includes(move.id)) {
 					return;
 				}
 				return false;
@@ -26215,6 +26216,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "any",
 		type: "Poison",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	flurryfist: {
+		num: 857,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "Flurry Fist",
+		pp: 15,
+		priority: 1,
+		flags: {protect: 1, mirror: 1, punch: 1},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},

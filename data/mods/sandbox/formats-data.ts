@@ -9864,6 +9864,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	blobboseedle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboseedletrue: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	infected: {
 		inherit: true,
 		tier: "OU",

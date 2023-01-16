@@ -5253,11 +5253,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				this.boost({atk: 1});
 			}
 		},
-		onSourceModifyDamage(damage, source, target, move) {
-			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
-			let mod = 1;
-			if (move.type === 'Dark') mod /= 2;
-			return this.chainModify(mod);
+		onEffectiveness(typeMod, target, type, move) {
+			if (!target || target.baseSpecies.baseSpecies !== 'Fontaba') return;
+			if (move.type === 'Dark') {
+				return -1;
+			}
 		},
 		isPermanent: true,
 		isNonstandard: "Future",
@@ -8917,5 +8917,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		rating: 3,
 		isNonstandard: "Future",
+	},
+	metamorphosis: {
+		onSwitchOut(pokemon) {
+			if (pokemon.species.id !== 'blobboseedle' || pokemon.transformed) return;
+			pokemon.formeChange('Blobbos-eedle-True', this.effect, true);
+			this.effectState.sendTrueMessage = true;
+		},
+		onStart(pokemon) {
+			if (this.effectState.sendTrueMessage) {
+				this.add('-activate', pokemon, 'ability: Metamorphosis');
+				this.effectState.sendTrueMessage = false;
+			}
+		},
+		isPermanent: true,
+		name: "Metamorphosis",
+		rating: 5,
+		isNonstandard: "Future",
+		num: 278,
 	},
 };
