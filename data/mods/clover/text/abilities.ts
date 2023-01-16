@@ -22,6 +22,11 @@ export const AbilitiesText: {[k: string]: ModdedAbilityText} = {
 		inherit: true,
 		shortDesc: "This Pokemon is immune to trapping.",
 	},
+	strongjaw: {
+		name: "Strong Jaw",
+		desc: "This Pokemon's bite-based attacks have their power multiplied by 1.5.",
+		shortDesc: "This Pokemon's bite-based attacks have 1.5x power.",
+	},
 	toxicboost: {
 		inherit: true,
 		desc: "While this Pokemon is poisoned, the power of its physical attacks is multiplied by 1.5. No HP loss from Poison.",

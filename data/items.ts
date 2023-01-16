@@ -7986,4 +7986,92 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 5,
 		isNonstandard: "Future",
 	},
+	piratesbooty: {
+		name: "Pirate's Booty",
+		spritenum: 745,
+		fling: {
+			basePower: 80,
+		},
+		onModifySpDPriority: 2,
+		onModifySpD(spd, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Pirate') {
+				return this.chainModify(2);
+			}
+		},
+		onModifyDefPriority: 2,
+		onModifyDef(def, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Pirate') {
+				return this.chainModify(2);
+			}
+		},
+		num: 640,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	masamune: {
+		name: "Masamune",
+		spritenum: 743,
+		fling: {
+			basePower: 80,
+		},
+		onModifySpDPriority: 2,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Ninja') {
+				return this.chainModify(2);
+			}
+		},
+		onModifyDefPriority: 2,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Ninja') {
+				return this.chainModify(2);
+			}
+		},
+		num: 640,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	kerosenehose: {
+		name: "Kerosene Hose",
+		spritenum: 574,
+		fling: {
+			basePower: 80,
+		},
+		onModifySpDPriority: 2,
+		onModifySpe(spe, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Firefighter') {
+				return this.chainModify(1.5);
+			}
+		},
+		num: 640,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	baitite: {
+		name: "Baitite",
+		spritenum: 585,
+		megaStone: "Blobbos-Bait-Mega",
+		megaEvolves: "Blobbos-Bait",
+		itemUser: ["Blobbos-Bait"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	toxanite: {
+		name: "Toxanite",
+		spritenum: 577,
+		megaStone: "Toxanine-Mega",
+		megaEvolves: "Toxanine",
+		itemUser: ["Toxanine"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
 };

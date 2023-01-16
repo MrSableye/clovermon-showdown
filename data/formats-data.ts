@@ -9130,11 +9130,23 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	megaweedle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	waterweedle: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
 	krackowalker: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	susko: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	shroomko: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -9671,7 +9683,131 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosprimal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosswamp: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboskirby: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosgigantamax: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosgene: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosninja: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosfirefighter: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospirate: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscaca: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosjannie: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosdevil: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosbait: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosbaitmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosfools: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbostrap: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboslawnmower: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboslambdal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosspamton: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscloud: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboschainsaw: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosfox: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosadventurer: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosadventurerlegendary: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	smellsumo: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	jerkistal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sparmor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ohmadillo: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	colombolt: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fatherfuck: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	puppois: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	toxanine: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	toxaninemega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

@@ -7373,18 +7373,57 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	yiikout: {
 		name: "Yiik Out",
-		shortDesc: "Hits first. First turn out only, makes the opponent have the same ability as the user.",
+		shortDesc: "Hits first. First turn out only. The target's Ability changes to match the user's.",
+	},
+	metalblade: {
+		name: "Metal Blade",
+		shortDesc: "Breaks Protect and screens.",
+	},
+	airshooter: {
+		name: "Air Shooter",
+		shortDesc: "Effective vs. flying types, 2x power vs. Levitate.",
+	},
+	bubblelead: {
+		name: "Bubble Lead",
+		shortDesc: "Sets Steelspikes on the opponent side.",
+	},
+	quickboomerang: {
+		name: "Quick Boomerang",
+		shortDesc: "Usually goes first, Hits twice.",
+	},
+	crashbomber: {
+		name: "Future Sight",
+		desc: "Deals damage two turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if another future move is already in effect for the target's position.",
+		shortDesc: "Hits again at 140 power two turns after being used.",
+
+		start: "  [POKEMON] set a crash bomb!",
+		activate: "  The crash bomb exploded on [TARGET]!",
+	},
+	timestopper: {
+		name: "Time Stopper",
+		shortDesc: "Freezes all adjacent Pokemon.",
+	},
+	atomicfire: {
+		name: "Atomic Fire",
+		desc: "This attack charges on the first turn and executes on the second. If a terrain is active, the move completes in one turn.",
+		shortDesc: "Charges turn 1. Hits turn 2. No charge in terrain.",
+
+		prepare: "  [POKEMON] is charging power!",
 	},
 	leafshield: {
 		name: "Leaf Shield",
 		desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon making contact with the user lose 1/8 of their maximum HP, rounded down. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
-		shortDesc: "Protects from moves. Contact: loses 1/8 HP. Sets Grass.",
+		shortDesc: "Protects from moves. Contact: loses 1/8 HP. Sets Grassy Terrain.",
 
 		damage: "  [POKEMON] was hurt by the sharp leaves!",
 	},
+	lemons: {
+		name: "Lemons",
+		shortDesc: "Hits 100 times. Each hit can miss. Always goes last.",
+	},
 	twintowertumblingterror: {
 		name: "Twin Tower Tumbling Terror",
-		desc: "Same type as user primary type. 100% chance to burn the user and the opponent.",
+		desc: "Type varies based on the user's primary type. Burns everyone.",
 	},
 	frigidend: {
 		name: "Frigid End",
@@ -7420,6 +7459,17 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Eternal Walk",
 		desc: "Hits 255 times. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Magic Guard Ability are unaffected by crash damage.",
 		shortDesc: "Hits 255 times. Each hit can miss, crash on miss.",
+	},
+	susteelstrike: {
+		name: "Susteel Strike",
+		desc: "Raises the user's Attack by 2 stages if this move knocks out the target.",
+		shortDesc: "Raises user's Attack by 2 if this KOes the target.",
+	},
+	penetrate: {
+		name: "Penetrate",
+		shortDesc: "Uses the foe's offense, Creates a horror.",
+
+		activate: "  A horror was birthed!",
 	},
 	destructionstinger: {
 		name: "Destruction Stinger",
@@ -7523,8 +7573,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	faeblade: {
 		name: "Faeblade",
-		desc: "This move becomes a physical attack that makes contact if the value of ((((2 * the user's level / 5 + 2) * 90 * X) / Y) / 50), where X is the user's Attack stat and Y is the target's Defense stat, is greater than the same value where X is the user's Special Attack stat and Y is the target's Special Defense stat. No stat modifiers other than stat stage changes are considered for this purpose. If the two values are equal, this move chooses a damage category at random.",
-		shortDesc: "Physical+contact if it would be stronger.",
+		desc: "Deals damage to the target based on its Special Defense instead of Defense.",
+		shortDesc: "Damages target based on Sp. Def, not Defense.",
 	},
 	stickytongue: {
 		name: "Sticky Tongue",
@@ -7602,7 +7652,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	butterflykick: {
 		name: "Butterfly Kick",
-		shortDesc: "Combines Bug and Fighting in the result.",
+		shortDesc: "Combines Fighting in its type effectiveness.",
 	},
 	toxicbeam: {
 		name: "Toxic Beam",
@@ -7618,23 +7668,23 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	maximize: {
 		name: "Maximize",
-		shortDesc: "100% chance to lower user's evasion by 1.",
+		shortDesc: "Lowers user's evasion by 1.",
 	},
 	seaquake: {
 		name: "Seaquake",
-		shortDesc: "Water + Ground type move.",
+		shortDesc: "Combines Ground in its type effectiveness.",
 	},
 	edgequake: {
 		name: "Edgequake",
-		shortDesc: "Rock + Ground together in an attack.",
+		shortDesc: "Combines Ground in its type effectiveness.",
 	},
 	sugarrush: {
 		name: "Sugar Rush",
-		shortDesc: "Raises user's Sp. Atk by 6 stages, but lowers HP 1/2.",
+		shortDesc: "User loses 50% max HP. Maximizes Sp. Atk.",
 	},
 	sleepingsands: {
 		name: "Sleeping Sands",
-		shortDesc: "Chance to make the foe fall asleep.",
+		shortDesc: "10% chance to make the foe fall asleep.",
 	},
 	fuckyou: {
 		name: "Fuck You",
@@ -7658,11 +7708,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	rockout: {
 		name: "Rock Out",
-		shortDesc: "User switches out.",
+		shortDesc: "User switches out after damaging the opponent.",
 	},
 	toppingtoss: {
 		name: "Topping Toss",
-		shortDesc: "3-hit move, 1st hit Fire, 2nd Grass, 3rd Ground",
+		shortDesc: "3-hit move; 1st hit Fire, 2nd Grass, 3rd Ground.",
 	},
 	heavensblessing: {
 		name: "Heaven's Blessing",
@@ -7670,7 +7720,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	heavenpierce: {
 		name: "Heaven Pierce",
-		shortDesc: "Always crits, breaks screens, ignores abilities, ignores everything.",
+		shortDesc: "Always crits, breaks screens, ignores everything.",
 	},
 	sandysnore: {
 		name: "Sandy Snore",
@@ -7698,11 +7748,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	nuclearmeltdown: {
 		name: "Nuclear Meltdown",
-		shortDesc: "Lowers user's Atk, SpA, and SpE",
+		shortDesc: "Lowers user's Attack, Sp. Atk, and Speed by 2.",
 	},
 	obsidianhorn: {
 		name: "Obsidian Horn",
-		shortDesc: "10% chance to raise Defense and Sp.Def by 1.",
+		shortDesc: "10% chance to raise Defense and Sp. Def by 1.",
 	},
 	feudefee: {
 		name: "Feu de Fe\u0301e",
@@ -7710,27 +7760,27 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	skulltoss: {
 		name: "Skull Toss",
-		shortDesc: "Raises speed once",
+		shortDesc: "Raises Speed by 1, but only once.",
 	},
 	blobblast: {
 		name: "Blobblast",
-		shortDesc: "Has 1/4 Recoil",
+		shortDesc: "Has 1/4 recoil.",
 	},
 	floofandpoof: {
 		name: "Floof and Poof",
-		shortDesc: "Uses Defense. Summons Lucky Chant, Safeguard, Mist",
+		shortDesc: "Uses Def as Atk. Summons Lucky Chant, Safeguard, and Mist.",
 	},
 	sunburst: {
 		name: "Sunburst",
-		shortDesc: "Summons Sun. Chance to Burn",
+		shortDesc: "Summons Sun. 10% chance to Burn.",
 	},
 	deepfry: {
 		name: "Deep Fry",
-		shortDesc: "Cooks the opponent's item",
+		shortDesc: "Cooks the opponent's item, with varying effects.",
 	},
 	flashbang: {
 		name: "Flashbang",
-		shortDesc: "Switches out and sets up dazzling for a turn",
+		shortDesc: "User switches out. Sets up Dazzling for a turn.",
 		start: "  A dazzling display surrounds [TEAM]!",
 		end: "  [TEAM]'s the dazzling display has dissipated!",
 		switchOut: "#uturn",
@@ -7745,7 +7795,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	feedandseed: {
 		name: "Feed and Seed",
-		shortDesc: "Leech Seed, Worry Seed, and Grassy Terrain",
+		shortDesc: "Uses Leech Seed, Worry Seed, and Grassy Terrain.",
 	},
 	atombomb: {
 		name: "Atom Bomb",
@@ -7773,11 +7823,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	abduction: {
 		name: "Abduction",
-		shortDesc: "Switches the user and opponent",
+		shortDesc: "The user and opponent both switch out.",
 	},
 	electromagnetism: {
 		name: "Electromagnetism",
-		shortDesc: "Deals damage and user is under Magnet Rise effect",
+		shortDesc: "Deals damage. Magnet Rises the user.",
 	},
 	titaniumclap: {
 		name: "Titanium Clap",
@@ -7823,19 +7873,19 @@ export const MovesText: {[k: string]: MoveText} = {
 	plasticterrain: {
 		name: "Plastic Terrain",
 		desc: "For 5 turns, the terrain becomes Plastic Terrain. During the effect, the power of Plastic-type attacks used by grounded Pokemon is multiplied by 1.3, and items get recycled.",
-		shortDesc: "5 turns. Grounded: +Plastic power, Recycle items",
+		shortDesc: "5 turns. Grounded: +Plastic power, Recycles items.",
 	},
 	highjumpsaw: {
 		name: "High Jump Saw",
-		shortDesc: "The user jumps up high, spinning its fists and feet like a buzzsaw. Dual Type Steel",
+		shortDesc: "The user jumps up high, spinning its fists and feet like a buzzsaw. Dual Type Steel.",
 	},
 	stingingrage: {
 		name: "Stinging Rage",
-		shortDesc: "The user faints. Causes Toxic",
+		shortDesc: "The user faints. Badly poisons the opponent.",
 	},
 	malicepowder: {
 		name: "Malice Powder",
-		shortDesc: "Confuses everyone, and it infestates those not immune to powder moves",
+		shortDesc: "Confuses everyone. Causes infestation.",
 	},
 	spectresabre: {
 		name: "Spectre Sabre",
@@ -7849,7 +7899,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	fadereflection: {
 		name: "Fade Reflection",
-		desc: "Has a 25% chance to disable the target's move",
+		desc: "Has a 25% chance to disable the target's move.",
 		shortDesc: "25% chance to disable.",
 	},
 	plasticblaze: {
@@ -7883,11 +7933,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hyperzone: {
 		name: "Hyper Zone",
-		shortDesc: "For 5 turns, Dark types are protected from status, priority, and screens",
+		shortDesc: "For 5 turns, Dark types are protected from status, priority, and screens.",
 	},
 	freeballoonday: {
 		name: "Free Balloon Day",
-		shortDesc: "Doubles in power if holding a balloon. Recycles balloon if you don't have an item",
+		shortDesc: "Doubles in power if holding a balloon. Recycles balloon if you don't have an item.",
 	},
 	helldive: {
 		name: "Hell Dive",
@@ -7895,7 +7945,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mushroomshot: {
 		name: "Mushroom Shot",
-		shortDesc: "Doubles in power if opponent partially trapped. During Gravity: 1.5x power. Hits 4 times",
+		shortDesc: "Power doubles if opponent partially trapped. During Gravity: 1.5x power. Hits 4 times",
 	},
 	qualityrip: {
 		name: "Quality Rip",
@@ -7916,17 +7966,18 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Shooting Star",
 		shortDesc: "20% recoil, user switches out.",
 		switchOut: "#uturn",
-	},	dousingflame: {
+	},
+	dousingflame: {
 		name: "Dousing Flame",
-		shortDesc: "Super Effective on Fire",
+		shortDesc: "Super effective on Fire.",
 	},
 	cursedblade: {
 		name: "Cursed Blade",
-		shortDesc: "30% chance to inflict Curse",
+		shortDesc: "30% chance to inflict Curse.",
 	},
 	riptide: {
 		name: "Riptide",
-		shortDesc: "Traps and damages the target for 4-5 turns",
+		shortDesc: "Traps and damages the target for 4-5 turns.",
 	},
 	secretstrength: {
 		name: "Secret Strength",
@@ -7941,5 +7992,78 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "For 5 turns, the target cannot use sound or bite-based moves.",
 		shortDesc: "For 5 turns, the target cannot use sound or bite-based moves.",
 		cant: "The effects of Mouth Melter prevent [POKEMON] from using certain moves!",
+	},
+	swamp: {
+		name: "Swamp",
+		shortDesc: "For 4 turns, foes' Speed is quartered.",
+		start: "  A swamp enveloped [TEAM]!",
+		end: "  The swamp around [TEAM] disappeared!",
+	},
+	devilsbarrage: {
+		name: "Devil's Barrage",
+		shortDesc: "Charges, then hits 3 times.",
+		prepare: "[POKEMON] is splitting apart!",
+	},
+	rebuild: {
+		name: "Rebuild",
+		shortDesc: "Charges, then restores 2/3 of its maximum HP, and cures its burn, poison, or paralysis.",
+		prepare: "[POKEMON] is reforming itself!",
+	},
+	bigshot: {
+		name: "Big Shot",
+		shortDesc: "High critical hit ratio, 30% chance to paralyze.",
+	},
+	foolsgambit: {
+		name: "Fool's Gambit",
+		desc: "The target is immune if it does not share a type with the user.",
+		shortDesc: "Hits adjacent Pokemon sharing the user's type.",
+	},
+	trapcard: {
+		name: "Trap Card",
+		shortDesc: "Does double damage and attracts the foe if hit by a physical attack.",
+
+		start: "  [POKEMON] set a trap card!",
+		prepare: "  [POKEMON] set a trap card!",
+		cant: "[POKEMON]'s trap card didn't work!",
+	},
+	heroicstrike: {
+		name: "Heroic Strike",
+		shortDesc: "Ignores immunities. Uses Fighting-type effectiveness if it would be SE. Cannot miss. Special if user's Sp. Atk > Atk. Ignores the target's stat stage changes.",
+	},
+	heroiconslaught: {
+		name: "Heroic Onslaught",
+		shortDesc: "Hits twice. Ignores immunities. Cannot miss. Special if user's Sp. Atk > Atk. Ignores the target's stat stage changes.",
+	},
+	drinkpotion: {
+		name: "Drink Potion",
+		shortDesc: "Heals 20% of max HP per dose. Tries to minimize doses used. Each dose uses 1 PP.",
+
+		activate: "  [POKEMON] drank [NUMBER] doses of its potion!",
+	},
+	winterwhiteout: {
+		name: "Winter Whiteout",
+		desc: "No additional effect.",
+		shortDesc: "No additional effect. Hits adjacent foes.",
+	},
+	gmaxblobbomb: {
+		name: "G-Max Blob Bomb",
+		shortDesc: "Upon hit, summons Mist and Safeguard.",
+	},
+	icestorm: {
+		name: "Ice Storm",
+		shortDesc: "Summons Hail. 10% chance to freeze.",
+	},
+	downpour: {
+		name: "Downpour",
+		shortDesc: "Summons Rain.",
+	},
+	slysquall: {
+		name: "Sly Squall",
+		desc: "This move always crits under Illusion unless the target is under the effect of Lucky Chant or has an ability that prevents critical hits, and removes Illusion on a successful hit.",
+		shortDesc: "Guaranteed crit under Illusion; removes it on hit.",
+	},
+	rawvenom: {
+		name: "Raw Venom",
+		shortDesc: "30% chance to disable the foe.",
 	},
 };

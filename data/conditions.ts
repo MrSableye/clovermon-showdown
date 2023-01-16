@@ -920,7 +920,12 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.eachEvent('Weather');
 		},
 		onWeather(target) {
-			this.damage(target.baseMaxhp / 16);
+			if (!target.hasType('Ice')) this.damage(target.baseMaxhp / 8);
+		},
+		onModifyDef(def, pokemon) {
+			if (pokemon.hasType('Ice')) {
+				return this.modify(def, 1.5);
+			}
 		},
 		onFieldEnd() {
 			this.add('-weather', 'none');
@@ -953,6 +958,13 @@ export const Conditions: {[k: string]: ConditionData} = {
 		effectType: 'Weather',
 		duration: 5,
 		onWeather(target) {
+			if (target.hasItem('utilityumbrella')) {
+				if (this.randomChance(1, 100)) {
+					this.add('-message', `${target.name} is Fragile... but not that fragile.`);
+				}
+
+				return;
+			}
 			let statName = 'atk';
 			let bestStat = 0;
 			let s: StatIDExceptHP;
