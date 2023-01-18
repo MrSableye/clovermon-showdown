@@ -455,7 +455,7 @@ export class TeamValidator {
 		}
 
 		if (!set.teraType && this.gen === 9) {
-			set.teraType = species.types[0];
+			set.teraType = species.types.find((type) => type !== '???') || 'Normal';
 		}
 
 		if (!set.level) set.level = ruleTable.defaultLevel;
