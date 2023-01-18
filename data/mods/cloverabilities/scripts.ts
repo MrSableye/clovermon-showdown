@@ -1,4 +1,5 @@
 export const Scripts: ModdedBattleScriptsData = {
+	gen: 8,
 	inherit: 'clover',
 	field: {
 		suppressingWeather() {
