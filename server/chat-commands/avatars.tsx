@@ -60,7 +60,7 @@ try {
 	FS(AVATARS_FILE).writeSync(JSON.stringify(customAvatars));
 }
 if ((Config.customavatars && Object.keys(Config.customavatars).length) || Config.allowedavatars) {
-	Monitor.crashlog("Please remove 'customavatars' and 'allowedavatars' from Config (config/config.js). Your avatars have been migrated to the new '/addavatar' system.");
+	Monitor.log("Please remove 'customavatars' and 'allowedavatars' from Config (config/config.js). Your avatars have been migrated to the new '/addavatar' system.");
 }
 function saveCustomAvatars(instant?: boolean) {
 	FS(AVATARS_FILE).writeUpdate(() => JSON.stringify(customAvatars), {throttle: instant ? null : 60_000});
@@ -194,6 +194,9 @@ export const Avatars = new class {
 	handleLogin(user: User) {
 		const avatar = this.getDefault(user.id);
 		if (avatar) user.avatar = avatar;
+		if (Config.customavatars && Config.customavatars[user.id] && typeof Config.customavatars[user.id] === 'string') {
+			user.avatar = Config.customavatars[user.id];
+		}
 		this.tryNotify(user);
 	}
 	tryNotify(user?: User | null) {
@@ -628,6 +631,123 @@ const OFFICIAL_AVATARS_FIFTY = new Set([
 	'rose-zerosuit',
 ]);
 
+export const OFFICIAL_CLODOWN_AVATARS = new Set([
+	'clover-kymmibattle',
+	'clover-stump',
+	'clover-kymmi',
+	'clover-rocker',
+	'clover-edgie',
+	'clover-smogoon',
+	'clover-youngster',
+	'clover-tyrone',
+	'clover-terry',
+	'clover-swimmer',
+	'clover-swimmerf',
+	'clover-supernerd',
+	'clover-stoner',
+	'clover-skeleton',
+	'clover-lilbro',
+	'clover-painter',
+	'clover-skinhead',
+	'clover-neckbeard',
+	'clover-viol',
+	'clover-keksandra',
+	'clover-bouncer',
+	'clover-deadlyseven',
+	'clover-private',
+	'clover-engineer',
+	'clover-psychic',
+	'clover-oboma',
+	'clover-gamer',
+	'clover-brock',
+	'clover-bendova',
+	'clover-vyglass',
+	'clover-trump',
+	'clover-stumpsaide',
+	'clover-nomel',
+	'clover-neokarmam',
+	'clover-neokarmaf',
+	'clover-neet',
+	'clover-mom',
+	'clover-merchant',
+	'clover-memerf',
+	'clover-leon',
+	'clover-lass',
+	'clover-karmacouncil',
+	'clover-kanye2',
+	'clover-kanye1',
+	'clover-guy',
+	'clover-freddie2',
+	'clover-freddie1',
+	'clover-feminist',
+	'clover-exorcist',
+	'clover-ebinduo',
+	'clover-doctor',
+	'clover-darude',
+	'clover-cut',
+	'clover-coldsteel',
+	'clover-clown',
+	'clover-carlito',
+	'clover-broly',
+	'clover-beauty',
+	'clover-bavi',
+	'clover-tumblrita',
+	'clover-tranny',
+	'clover-terrorist',
+	'clover-karmam',
+	'clover-karmaf',
+	'clover-karmaduo',
+	'clover-acem',
+	'clover-acef',
+	'clover-aceduo',
+	'clover-weeb',
+	'clover-theorist',
+	'clover-polk',
+	'clover-officer',
+	'clover-nurse',
+	'clover-midget',
+	'clover-memerm',
+	'clover-lifter',
+	'clover-inmigrant',
+	'clover-hale',
+	'clover-ginosaji',
+	'clover-furry',
+	'clover-burglar',
+	'clover-barafag',
+	'clover-masuda',
+	'clover-youngsters',
+	'clover-fetishists',
+	'clover-guitarist',
+	'clover-randy',
+	'clover-van',
+	'clover-snoop',
+	'clover-moot',
+	'clover-imakuni',
+	'clover-evilleader',
+	'clover-chris',
+	'clover-bavi2',
+	'clover-dan',
+	'clover-mom2',
+	'clover-vyglass2',
+	'clover-viol2',
+	/* Periwinkle Avatars */
+	'periwinkle-coldsteel',
+	'periwinkle-coldsteel2',
+	'periwinkle-deadlysev',
+	'periwinkle-mom',
+	'periwinkle-oboma',
+	'periwinkle-sage',
+	'periwinkle-stump',
+	/* Showderp Avatars */
+	'showderp-showtan',
+	'showderp-showtan2',
+	/* Secret Avatars */
+	'secret-cia',
+	'secret-moonman',
+	'secret-titodick',
+	'secret-umaru',
+]);
+
 for (const avatar of OFFICIAL_AVATARS_BELIOT419) OFFICIAL_AVATARS.add(avatar);
 for (const avatar of OFFICIAL_AVATARS_GNOMOWLADNY) OFFICIAL_AVATARS.add(avatar);
 for (const avatar of OFFICIAL_AVATARS_BRUMIRAGE) OFFICIAL_AVATARS.add(avatar);
@@ -636,6 +756,7 @@ for (const avatar of OFFICIAL_AVATARS_KYLEDOVE) OFFICIAL_AVATARS.add(avatar);
 for (const avatar of OFFICIAL_AVATARS_HYOOPPA) OFFICIAL_AVATARS.add(avatar);
 for (const avatar of OFFICIAL_AVATARS_GRAPO) OFFICIAL_AVATARS.add(avatar);
 for (const avatar of OFFICIAL_AVATARS_FIFTY) OFFICIAL_AVATARS.add(avatar);
+for (const avatar of OFFICIAL_CLODOWN_AVATARS) OFFICIAL_AVATARS.add(avatar);
 
 export const commands: Chat.ChatCommands = {
 	avatar(target, room, user) {

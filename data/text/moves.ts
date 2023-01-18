@@ -7394,10 +7394,1226 @@ export const MovesText: {[k: string]: MoveText} = {
 	zippyzap: {
 		name: "Zippy Zap",
 		desc: "Has a 100% chance to raise the user's evasion by 1 stage.",
-		shortDesc: "Goes first. Raises user's evasion by 1.",
+		shortDesc: "Goes first. Always crits.",
 		gen7: {
 			desc: "Will always result in a critical hit.",
 			shortDesc: "Nearly always goes first. Always crits.",
 		},
+	},
+	/* Clovermons */
+	sleazyspores: {
+		name: "Sleazy Spores",
+		shortDesc: "Lowers Speed of foes by 1 on switch-in.",
+		desc: "Sets up a hazard on the opposing side of the field, lowering the Speed by 1 stage of each opposing Pokemon that switches in, unless it is immune to powder moves. Fails if the effect is already active on the opposing side. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin or Defog successfully, is hit by Defog",
+		start: "  Sleazy spores float in the air around [TEAM]!",
+		end: "  The sleazy spores disappeared from around [TEAM]!",
+		activate: "  Sleazy spores sedated [POKEMON]!",
+	},
+	slimegulp: {
+		name: "Slime Gulp",
+		desc: "The target's Ability is rendered ineffective as long as it remains active.",
+		shortDesc: "Nullifies the foe(s) Ability if the foe(s) move first.",
+	},
+	inverseroom: {
+		name: "Inverse Room",
+		shortDesc: "Creates a bizarre area where type matchups are swapped for five turns.",
+	},
+	fruitpunch: {
+		name: "Fruit Punch",
+		shortDesc: "20% chance to lower the target's Def by 1.",
+		desc: "Has a 20% chance to lower the target's Defense by 1 stage.",
+	},
+	dragonfist: {
+		name: "Dragon Fist",
+		shortDesc: "10% chance to paralyze the target.",
+		desc: "Has a 10% chance to paralyze the target.",
+	},
+	lickclean: {
+		name: "Lick Clean",
+		shortDesc: "Resets all of the target's positive stat stages to 0. Heals for each boost removed.",
+	},
+	speedweed: {
+		name: "Speed Weed",
+		shortDesc: "Usually goes first.",
+		desc: "No additional effect.",
+	},
+	overbite: {
+		name: "Overbite",
+		shortDesc: "User loses 50% max HP on hit. Hits adjacent Pokemon.",
+		desc: "If this move is successful, the user loses 1/2 of its maximum HP, rounded up, unless the user has the Magic Guard Ability.",
+		damage: "  ([POKEMON] cut its own HP to power up its move!)",
+	},
+	"1000folds": {
+		name: "1000 Folds",
+		shortDesc: "Not resisted by Steel. Ignore substitutes. Destroys screens. Hits through protection.",
+	},
+	warhead: {
+		name: "Warhead",
+		desc: "Has a 10% chance to burn the target.",
+		shortDesc: "10% chance to burn the target.",
+	},
+	weirdflex: {
+		name: "Weird Flex",
+		shortDesc: "Uses Bulk Up, Scary Face, Endure, and Follow Me targeted all at itself.",
+	},
+	scorchedearth: {
+		name: "Scorched Earth",
+		shortDesc: "Has a 100% to burn grounded adjacent Pokemon and itself if grounded.",
+	},
+	hulkup: {
+		name: "Hulk Up",
+		shortDesc: "Raises Atk and Def by 1. Raises by 2 if this has 1/2 of less of its max HP.",
+		desc: "Raises the user's Attack and Defense by 1 stage. If this Pokemon has 1/2 or less of its maximum HP, it boosts Attack and Defense an additional stage.",
+	},
+	focusmunch: {
+		name: "Focus Munch",
+		shortDesc: "Heals the user by 50% of its max HP and raises Acc by 1. Fails if the user takes damage before it hits.",
+		desc: "The user restores 1/2 of its maximum HP, rounded half up. The user loses its focus and does nothing if it is hit by a damaging attack this turn before it can execute the move.",
+	},
+	mop: {
+		name: "Mop",
+		shortDesc: "Free user from hazards; +1 Acc if any hazards were removed.",
+		desc: "If this move is successful and the user has not fainted, all hazards are removed from the user's side of the field. Has a 100% chance to raise the user's Accuracy by 1 stage if any hazards were removed.",
+	},
+	quicksand: {
+		name: "Quick Sand",
+		shortDesc: "Usually goes first.",
+		desc: "No additional effect.",
+	},
+	thinkfast: {
+		name: "Think Fast",
+		shortDesc: "Usually goes first.",
+		desc: "No additional effect.",
+	},
+	boltbeam: {
+		name: "Boltbeam",
+		shortDesc: "Hits 2 times in one turn. First hit is Electric-type and second is Ice-type.",
+	},
+	checkem: {
+		name: "Check 'Em",
+		shortDesc: "Hits 2-5 times in one turn. Physical if user's Atk > Sp. Atk.",
+		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times. This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes.",
+	},
+	pixiepummel: {
+		name: "Pixie Pummel",
+		shortDesc: "No additional effect.",
+	},
+	gayagenda: {
+		name: "Gay Agenda",
+		shortDesc: "A target of the same gender gets infatuated.",
+		desc: "Causes the target to become infatuated, making it unable to attack 50% of the time. Fails if both the user and the target are not the same gender, if either is genderless, or if the target is already infatuated. The effect ends when either the user or the target is no longer active. Pokemon with the Oblivious Ability or protected by the Aroma Veil Ability are immune.",
+	},
+	spooperpower: {
+		name: "Spooperpower",
+		shortDesc: "Physical if user's Atk > Sp. Atk.",
+		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes.",
+	},
+	greatrage: {
+		name: "Great Rage",
+		shortDesc: "No additional effect.",
+	},
+	wowwiener: {
+		name: "Wow Wiener",
+		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+		shortDesc: "Hits 2-5 times in one turn.",
+	},
+	plunder: {
+		name: "Plunder",
+		desc: "If this attack was successful and the user has not fainted, it steals the target's held item if the user is not holding one. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
+		shortDesc: "If the user has no item, it steals the target's.",
+	},
+	blobbybop: {
+		name: "Blobby Bop",
+		shortDesc: "This move does not check accuracy.",
+	},
+	banhammer: {
+		name: "Ban Hammer",
+		shortDesc: "Torments and Taunts the foe.",
+	},
+	homerunbat: {
+		name: "Homerun Bat",
+		shortDesc: "Forces the target to switch to a random ally.",
+		desc: "If both the user and the target have not fainted, the target is forced to switch out and be replaced with a random unfainted ally. This effect fails if the target used Ingrain previously, has the Suction Cups Ability, or this move hit a substitute.",
+	},
+	elbowdrop: {
+		name: "Elbow Drop",
+		shortDesc: "No additional effect.",
+	},
+	anattack: {
+		name: "An Attack",
+		shortDesc: "No additional effect.",
+	},
+	chaosdunk: {
+		name: "Chaos Dunk",
+		shortDesc: "No additional effect.",
+	},
+	comengo: {
+		name: "Come n' Go",
+		shortDesc: "Hits 2-5 times in one turn.",
+		desc: "Hits two to five times. Has a 1/3 chance to hit two or three times, and a 1/6 chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+	},
+	dailydose: {
+		name: "Daily Dose",
+		shortDesc: "25% chance to poison or badly poison or put the target to sleep.",
+		desc: "Has a 25% chance to either poison, badly poison, or inflict sleep on the target.",
+	},
+	decaydrain: {
+		name: "Decay Drain",
+		shortDesc: "User recovers 50% of the damage dealt.",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+	},
+	dildocannon: {
+		name: "Dildo Cannon",
+		shortDesc: "Hits 2-5 times in one turn.",
+		desc: "Hits two to five times. Has a 1/3 chance to hit two or three times, and a 1/6 chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+	},
+	enema: {
+		name: "Enema",
+		shortDesc: "User recovers 50% of the damage dealt.",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+	},
+	erosionwave: {
+		name: "Erosion Wave",
+		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
+	},
+	falconpunch: {
+		name: "Falcon Punch",
+		shortDesc: "10% chance to burn the target.",
+		desc: "Has a 10% chance to burn the target.",
+	},
+	firebomb: {
+		name: "Fire Bomb",
+		shortDesc: "No additional effect.",
+	},
+	fizzbitch: {
+		name: "Fizzbitch",
+		shortDesc: "10% chance to paralyze the target.",
+		desc: "Has a 10% chance to paralyze the target.",
+	},
+	foryou: {
+		name: "For You",
+		desc: "Has a 100% chance to lower the target's Defense by 1 stage.",
+		shortDesc: "100% chance to lower the target's Defense by 1.",
+	},
+	futababreak: {
+		name: "Futaba Break",
+		shortDesc: "Destroys screens, unless the target is immune.",
+		desc: "If this attack does not miss, the effects of Reflect, Light Screen, and Aurora Veil end for the target's side of the field before damage is calculated.",
+	},
+	holyduty: {
+		name: "Holy Duty",
+		shortDesc: "Hits adjacent Pokemon. The user faints.",
+		desc: "The user faints after using this move, even if this move fails for having no target. This move is prevented from executing if any active Pokemon has the Damp Ability.",
+	},
+	lactoseshot: {
+		name: "Lactose Shot",
+		shortDesc: "Lowers the user's Sp. Atk by 2.",
+		desc: "Lowers the user's Special Attack by 2 stages.",
+	},
+	meme: {
+		name: "Meme",
+		shortDesc: "10% chance to raise all stats by 1 (not acc/eva).",
+		desc: "Has a 10% chance to raise the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
+	},
+	overenergize: {
+		name: "Overenergize",
+		shortDesc: "Lowers the user's Sp. Atk by 2.",
+		desc: "Lowers the user's Special Attack by 2 stages.",
+	},
+	owtheedge: {
+		name: "Ow The Edge",
+		shortDesc: "Has 25% recoil.",
+		desc: "If the target lost HP, the user takes recoil damage equal to 25% the HP lost by the target, rounded half up, but not less than 1 HP.",
+	},
+	pukeblood: {
+		name: "Puke Blood",
+		shortDesc: "Has 25% recoil.",
+		desc: "If the target lost HP, the user takes recoil damage equal to 25% the HP lost by the target, rounded half up, but not less than 1 HP.",
+	},
+	punchout: {
+		name: "Punch Out",
+		shortDesc: "User switches out after damaging the target.",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+	},
+	regenerate: {
+		name: "Regenerate",
+		shortDesc: "Heals the user by 50% of its max HP. User cures its burn, poison, or paralysis.",
+		desc: "The user restores 1/2 of its maximum HP, rounded half up, and cures its burn, poison, or paralysis.",
+	},
+	riotshield: {
+		name: "Riot Shield",
+		shortDesc: "Summons Safeguard.",
+		desc: "This move summons Safeguard for 5 turns upon use.",
+	},
+	shitpost: {
+		name: "Shitpost",
+		shortDesc: "Lasts 2-3 turns. Confuses the user afterwards.",
+		desc: "The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pokemon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
+	},
+	spookout: {
+		name: "Spook Out",
+		desc: "Has a 100% chance to flinch the target. Fails unless it is the user's first turn on the field.",
+		shortDesc: "Hits first. First turn out only. 100% flinch chance.",
+	},
+	stratoblade: {
+		name: "Strato Blade",
+		shortDesc: "High critical hit ratio.",
+		desc: "Has a higher chance for a critical hit.",
+	},
+	supersnore: {
+		name: "Super Snore",
+		shortDesc: "User must be asleep.",
+		desc: "Fails if the user is not asleep.",
+	},
+	swindle: {
+		name: "Swindle",
+		shortDesc: "If the user has no item, it steals the target's.",
+		desc: "If this attack was successful and the user has not fainted, it steals the target's held item if the user is not holding one. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
+	},
+	toke: {
+		name: "Toke",
+		shortDesc: "Lowers Def, SpD by 1; raises Atk, SpA, Spe by 2.",
+		desc: "Lowers the user's Defense and Special Defense by 1 stage. Raises the user's Attack, Special Attack, and Speed by 2 stages.",
+	},
+	toxiravage: {
+		name: "Toxiravage",
+		shortDesc: "Usually goes first.",
+		desc: "No additional effect.",
+	},
+	trigger: {
+		name: "Trigger",
+		shortDesc: "Power doubles with each hit, up to 160.",
+		desc: "Power doubles with each successful hit, up to a maximum of 160 power. The power is reset if this move misses or another move is used.",
+	},
+	sudoku: {
+		name: "Sudoku",
+		shortDesc: "User faints.",
+		desc: "The user faints.",
+	},
+	slipturn: {
+		name: "Slip Turn",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+		shortDesc: "User switches out after damaging the target.",
+		gen6: {
+			desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button.",
+		},
+		gen4: {
+			desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members.",
+		},
+
+		switchOut: "[POKEMON] went back to [TRAINER]!",
+	},
+	/* Clover CAP */
+	crusadercrash: {
+		name: "Crusader Crash",
+		desc: "This move is always a critical hit unless the target is under the effect of Lucky Chant or has an ability that prevents critical hits.",
+		shortDesc: "Always results in a critical hit.",
+	},
+	moregun: {
+		name: "More Gun",
+		desc: "Hits six times.",
+		shortDesc: "Hits 6 times.",
+	},
+	trickstab: {
+		name: "Trick Stab",
+		desc: "This move always crits under Illusion unless the target is under the effect of Lucky Chant or has an ability that prevents critical hits, and removes Illusion on a successful hit.",
+		shortDesc: "Guaranteed crit under Illusion; removes it on hit.",
+	},
+	psychofists: {
+		name: "Psycho Fists",
+		desc: "If this move is successful, the terrain becomes Psychic Terrain.",
+		shortDesc: "Summons Psychic Terrain.",
+	},
+	dragonburst: {
+		name: "Dragon Burst",
+		desc: "The power of this move is 60 if X is 33 to 48, 80 if X is 17 to 32, 100 if X is 10 to 16, 120 if X is 5 to 9, 150 if X is 2 to 4, and 200 if X is 0 or 1, where X is equal to (user's current HP * 48 / user's maximum HP), rounded down.",
+		shortDesc: "More power the less HP the user has left.",
+	},
+	faradaycage: {
+		name: "Faraday Cage",
+		desc: "The user has 1/8 of its maximum HP restored at the end of each turn, but it is prevented from switching out and other Pokemon cannot force the user to switch out. The user can still switch out if it uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. If the user leaves the field using Baton Pass, the replacement will remain trapped and still receive the healing effect. During the effect, the user can be hit normally by Ground-type attacks and be affected by Spikes, Toxic Spikes, and Sticky Web, even if the user is a Flying type or has the Levitate Ability.",
+		shortDesc: "Traps/grounds user; heals 1/8 max HP per turn.",
+	},
+	rockclock: {
+		name: "Rock Clock",
+		desc: "Has a 20% chance to make the target confused.",
+		shortDesc: "20% chance to make the target confused.",
+	},
+	awaken: {
+		name: "Awaken",
+		desc: "Raises the user's Attack, Defense, and Speed by 2 stages. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
+		shortDesc: "Charges, then raises Atk, Def, Spe by 2 turn 2.",
+
+		prepare: "[POKEMON] is channeling energy!",
+	},
+	voltaiccyclone: {
+		name: "Voltaic Cyclone",
+		desc: "If this move is successful and the user has not fainted, the effects of Leech Seed and binding moves end for the user, and all hazards are removed from the user's side of the field.",
+		shortDesc: "Free user from hazards/bind/Leech Seed.",
+	},
+	boilover: {
+		name: "Boil Over",
+		desc: "Power doubles if Rain Dance or Sunny Day is active, and this move's type changes to match the other. Fire type during Primordial Sea or Rain Dance and Water type during Desolate Land or Sunny Day.",
+		shortDesc: "Power doubles and type varies in rain or sun.",
+		move: "Breakneck Blitz turned into [MOVE] due to the weather!",
+	},
+	soulcrusher: {
+		name: "Soul Crusher",
+		desc: "Power is multiplied by 999 times if the target has less than or equal to half of its maximum HP remaining. Heals for 100% of the damage the move has dealt.",
+		shortDesc: "999x power if target HP <50%, heals for damage dealt.",
+	},
+	tombstoner: {
+		name: "Tombstoner",
+		desc: "Power is equal to (user's current HP * 300 / user's maximum HP), rounded down, but not less than 100. The user faints after using this move, Damage is calculated using the user's Defense stat as its Attack. This move is prevented from executing if any active Pokemon has the Damp Ability. ",
+		shortDesc: "Power = HP%. The user faints, uses user's Def stat as Atk.",
+	},
+	fruitjuice: {
+		name: "Fruit Juice",
+		desc: "Power is equal to 120 times the user's Stockpile count. Whether or not this move is successful, the user's Defense and Special Defense decrease by as many stages as Stockpile had increased them, and the user's Stockpile count resets to 0. Lowers the target's Sp.Def by two stages.",
+		shortDesc: "Gets stronger with Stockpile, -2 SpD to the target",
+	},
+	phantomfang: {
+		name: "Phantom Fang",
+		desc: "Has a 20% chance to Curse the target.",
+		shortDesc: "20% to Curse, Lowers the user's Speed by 1.",
+	},
+	phasethrough: {
+		name: "Phase Through",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+		shortDesc: "User switches out after damaging the target.",
+		switchOut: "[POKEMON] went back to [TRAINER]!",
+	},
+	coldcutter: {
+		name: "Cold Cutter",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
+	},
+	shadowscales: {
+		name: "Shadow Scales",
+		desc: "Lowers the user's Defense by 1 stage.",
+		shortDesc: "Lowers the user's Defense by 1.",
+	},
+	wingsofcorrection: {
+		name: "Wings Of Correction",
+		desc: "If this move is successful the effects of Reflect, Light Screen, Aurora Veil, Safeguard, Mist, Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the target's side, and the effects of Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the user's side. If there is a terrain active and this move is successful, the terrain will be cleared. Has -6 priority and switches the opponent out to a random member.",
+		shortDesc: "Clears terrain and hazards, switches out opponent.",
+	},
+	brutalpunishment: {
+		name: "Brutal Punishment",
+		desc: "Has a 100% chance to raise the user's Attack and Special Attack by 1 stage. If the user is a Disbeary in Nice Mode, this move is Fairy type. If the user is a Disbeary in Ebil Mode, this move is Dark type. This move cannot be used successfully unless the user's current form, while considering Transform, is Nice or Ebil Mode Disbeary.",
+		shortDesc: "Disbeary: Fairy; Ebil: Dark; 100% +1 Atk and SpA.",
+	},
+	shinestrike: {
+		name: "Shine Strike",
+		shortDesc: "Not resisted by Steel, Hits 2-5 times in one turn.",
+	},
+	petrify: {
+		name: "Petrify",
+		desc: "The user is protected from most attacks made by other Pokemon during this turn. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
+		shortDesc: "Protects user this turn, +1 Defense.",
+	},
+	gazerbeam: {
+		name: "Gazer Beam",
+		desc: "Has a 30% chance to burn the target. This move's type effectiveness against Steel is changed to be super effective no matter what this move's type is.",
+		shortDesc: "30% chance to burn. Super effective on Steel.",
+	},
+	cloudbreaker: {
+		name: "Cloud Breaker",
+		shortDesc: "Clears the currently active weather.",
+	},
+	starseedblast: {
+		name: "Starseed Blast",
+		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+		shortDesc: "Hits 2-5 times, Special if Sp. Atk > Atk",
+	},
+	brandingblade: {
+		name: "Flare Blitz",
+		shortDesc: "Has 33% recoil. Nullifies the foe's Ability.",
+	},
+	mudmaelstrom: {
+		name: "Mud Maelstrom",
+		desc: "Has a 30% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "30% chance to lower the target(s) Spe by 1.",
+	},
+	finalhour: {
+		name: "Final Hour",
+		desc: "Deals damage three turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if this move or Future Sight is already in effect for the target's position.",
+		shortDesc: "Hits three turns after being used.",
+
+		start: "  [POKEMON] ticks down to your Final Hour!",
+		activate: "  [TARGET]'s Final Hour is at hand!",
+	},
+	turnabout: {
+		name: "Turnabout",
+		desc: "The user swaps all its stat stage changes with the target and switches the Mist, Light Screen, Reflect, Spikes, Safeguard, Tailwind, Toxic Spikes, Stealth Rock, Water Pledge, Fire Pledge, Grass Pledge, Sticky Web, Aurora Veil, G-Max Steelsurge, G-Max Cannonade, G-Max Vine Lash, and G-Max Wildfire effects from the user's side to the opposing side and vice versa.",
+		shortDesc: "Swaps all stat changes and hazards with opponent.",
+	},
+	memejr: {
+		name: "Meme Jr.",
+		desc: "Has a 100% chance to raise the user's lowest boosted stat by 1. If all stat boosts are equal it will raise a random stat by 1.",
+		shortDesc: "100% chance to evenly raise a random stat by 1.",
+	},
+	meddymeds: {
+		name: "Meddy Meds",
+		desc: "This move summons Light Screen for 5 turns upon use. If the target is an ally and not immune, this move restores 3/4 of its maximum HP, rounded down, instead of dealing damage.",
+		shortDesc: "Heals 75% if targeting an ally, Summons Light Screen.",
+	},
+	villify: {
+		name: "Villify",
+		desc: "Causes the target to become a Dark type. Fails if the target is an Arceus or a Silvally, or if the target is already purely Dark type.",
+		shortDesc: "Changes adjacent Pokemon's types to Dark, +1 Prio.",
+	},
+	nuclearwinter: {
+		name: "Nuclear Winter",
+		desc: "Has a 10% chance to freeze the target. This move's type effectiveness against Poison is changed to be super effective no matter what this move's type is. If the weather is Hail, this move does not check accuracy.",
+		shortDesc: "10% chance to freeze. Super effective on Poison.",
+	},
+	badeggs: {
+		name: "Bad Eggs",
+		desc: "Hits three times. Power increases to 40 for the second hit and 60 for the third. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit three times. Each hit has a 10% chance to poison the target.",
+		shortDesc: "Hits 3 times, hits can miss, gets stronger, 10% psn.",
+	},
+	backdraft: {
+		name: "Backdraft",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities. Summons Tailwind for two turns after landing.",
+		shortDesc: "Switches user out, Swapped mon has 2x speed for a turn",
+		start: "  The Backdraft blew from behind [TEAM]!",
+		end: "  [TEAM]'s Backdraft petered out!",
+		switchOut: "#uturn",
+	},
+	cherrybomb: {
+		name: "Cherry Bomb",
+		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. Each hit has a 10% chance to burn.",
+		shortDesc: "Hits twice. 10% chance to burn.",
+	},
+	crashhopper: {
+		name: "Crash Hopper",
+		shortDesc: "30% chance to paralyze. Paralyze self on miss.",
+	},
+	closeblobmat: {
+		name: "Close Blobmat",
+		shortDesc: "Lowers the user's Defense, Sp. Def, and Speed by 1.",
+	},
+	faedozer: {
+		name: "Fae Dozer",
+		shortDesc: "Summons a random terrain when this attack hits.",
+	},
+	roidflex: {
+		name: "Roid Flex",
+		shortDesc: "Protects self, poisons self, and raises accuracy.",
+	},
+	inverserush: {
+		name: "Inverse Rush",
+		shortDesc: "Doubles damage under Inverse Room.",
+	},
+	hypersnore: {
+		name: "Hyper Snore",
+		shortDesc: "User must be asleep.",
+		desc: "Fails if the user is not asleep.",
+	},
+	sleppthatblobsthesky: {
+		name: "Slepp That Blobs the Sky",
+		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes. This move and its effects ignore the Abilities of other Pokemon.",
+		shortDesc: "Physical if user's Atk > Sp. Atk. Ignores Abilities.",
+	},
+	yiikout: {
+		name: "Yiik Out",
+		shortDesc: "Hits first. First turn out only. The target's Ability changes to match the user's.",
+	},
+	metalblade: {
+		name: "Metal Blade",
+		shortDesc: "Breaks Protect and screens.",
+	},
+	airshooter: {
+		name: "Air Shooter",
+		shortDesc: "Effective vs. flying types, 2x power vs. Levitate.",
+	},
+	bubblelead: {
+		name: "Bubble Lead",
+		shortDesc: "Sets Steelspikes on the opponent side.",
+	},
+	quickboomerang: {
+		name: "Quick Boomerang",
+		shortDesc: "Usually goes first, Hits twice.",
+	},
+	crashbomber: {
+		name: "Future Sight",
+		desc: "Deals damage two turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if another future move is already in effect for the target's position.",
+		shortDesc: "Hits again at 140 power two turns after being used.",
+
+		start: "  [POKEMON] set a crash bomb!",
+		activate: "  The crash bomb exploded on [TARGET]!",
+	},
+	timestopper: {
+		name: "Time Stopper",
+		shortDesc: "Freezes all adjacent Pokemon.",
+	},
+	atomicfire: {
+		name: "Atomic Fire",
+		desc: "This attack charges on the first turn and executes on the second. If a terrain is active, the move completes in one turn.",
+		shortDesc: "Charges turn 1. Hits turn 2. No charge in terrain.",
+
+		prepare: "  [POKEMON] is charging power!",
+	},
+	leafshield: {
+		name: "Leaf Shield",
+		desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon making contact with the user lose 1/8 of their maximum HP, rounded down. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
+		shortDesc: "Protects from moves. Contact: loses 1/8 HP. Sets Grassy Terrain.",
+
+		damage: "  [POKEMON] was hurt by the sharp leaves!",
+	},
+	lemons: {
+		name: "Lemons",
+		shortDesc: "Hits 100 times. Each hit can miss. Always goes last.",
+	},
+	twintowertumblingterror: {
+		name: "Twin Tower Tumbling Terror",
+		desc: "Type varies based on the user's primary type. Burns everyone.",
+	},
+	frigidend: {
+		name: "Frigid End",
+		desc: "This move combines Ice in its type effectiveness against the target. Damage doubles and no accuracy check is done if the target has used Minimize while active.",
+		shortDesc: "Combines Ice in its type effectiveness, Breaks protection.",
+	},
+	/* :^) */
+	skullcannon: {
+		name: "Skull Cannon",
+		shortDesc: "I AM THE TRUE HERO OF THIS STORY.",
+	},
+	itsover: {
+		name: "It's Over",
+		shortDesc: "No competitive use.",
+
+		activate: "  It's over!",
+	},
+	strum: {
+		name: "Strum",
+		desc: "Hits four times. Power quadruples on the fourth hit. The fourth hit becomes Physical. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit four times.",
+		shortDesc: "Hits 4 times. Each hit can miss, but power rises on the 4th hit. Last hit is Physical.",
+	},
+	flybackfrenzy: {
+		name: "Flyback Frenzy",
+		desc: "Power is equal to 100 times the user's Stockpile count. Fails if the user's Stockpile count is 0. Whether or not this move is successful, the user's Defense and Special Defense decrease by as many stages as Stockpile had increased them, and the user's Stockpile count resets to 0. 20% chance per use of Stockpile to paralyze.",
+		shortDesc: "More power with more uses of Stockpile. 15% par chance per Stockpile.",
+	},
+	cope: {
+		name: "Cope",
+		shortDesc: "Hits 69 times.",
+	},
+	eternalwalk: {
+		name: "Eternal Walk",
+		desc: "Hits 255 times. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Magic Guard Ability are unaffected by crash damage.",
+		shortDesc: "Hits 255 times. Each hit can miss, crash on miss.",
+	},
+	susteelstrike: {
+		name: "Susteel Strike",
+		desc: "Raises the user's Attack by 2 stages if this move knocks out the target.",
+		shortDesc: "Raises user's Attack by 2 if this KOes the target.",
+	},
+	penetrate: {
+		name: "Penetrate",
+		shortDesc: "Uses the foe's offense, Creates a horror.",
+
+		activate: "  A horror was birthed!",
+	},
+	destructionstinger: {
+		name: "Destruction Stinger",
+		shortDesc: "Always badly poisons the foe.",
+	},
+	extinctionwave: {
+		name: "Extinction Wave",
+		shortDesc: "Power nonuples if the target is poisoned.",
+	},
+	poisonbullet: {
+		name: "Poison Bullet",
+		shortDesc: "Turn 1: Poisons the foe. Turn 2: 2x damage vs poisoned.",
+
+		prepare: "[POKEMON] is bursting with malice!",
+	},
+	matingpress: {
+		name: "Mating Press",
+		desc: "20% chance to have a child with the opposing mon with no item and only Metronome. Can only occur once for a user.",
+		shortDesc: "Produces a child. Uses Defense",
+
+		activate: "  [SOURCE] had a child with [POKEMON]!",
+		fail: "[POKEMON] had a miscarriage...",
+	},
+	gunshot: {
+		name: "Gun Shot",
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage. Always hits and deals 100x against Vandash.",
+		shortDesc: "10% chance to lower the target's Sp. Def by 1. Always hits and deals 100x against Vandash.",
+	},
+	wrapd: {
+		name: "Wrap-D",
+		desc: "The user spends two to five turns using this move. Has a 3/8 chance to last two or three turns, and a 1/8 chance to last four or five turns. The damage calculated for the first turn is used for every other turn. The user cannot select a move and the target cannot execute a move during the effect, but both may switch out. If the user switches out, the target remains unable to execute a move during that turn. If the target switches out, the user uses this move again automatically, and if it had 0 PP at the time, it becomes 63. If the user or the target switch out, or the user is prevented from moving, the effect ends. This move can prevent the target from moving even if it has type immunity, but will not deal damage.",
+		shortDesc: "Prevents the target from moving for 2-5 turns.",
+
+		start: "  [POKEMON] was squeezed by [SOURCE]!",
+		move: "#wrap", // gen 1 only
+	},
+	blizzardd: {
+		name: "Blizzard-D",
+		desc: "Has a 30% chance to freeze the target.",
+		shortDesc: "30% chance to freeze the target.",
+	},
+	amnesiad: {
+		name: "Amnesia-D",
+		desc: "Raises the user's Special by 2 stages.",
+		shortDesc: "Raises the user's Special by 2.",
+	},
+	hyperbeamd: {
+		name: "Hyper Beam-D",
+		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move, unless the target or its substitute was knocked out by this move.",
+		shortDesc: "Can't move next turn if target or sub is not KOed.",
+	},
+	darkening: {
+		name: "Darkening",
+		desc: "The user recovers 100% the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 100% of the damage dealt.",
+	},
+	shroomsnuggle: {
+		name: "Shroom Snuggle",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 50% of the damage dealt.",
+	},
+	coinflip: {
+		name: "Coin Flip",
+		shortDesc: "lol, lmao",
+	},
+	bilebite: {
+		name: "Bile Bite",
+		shortDesc: "We prey at night, we stalk at night, we're the rats.",
+	},
+	blackbomb: {
+		name: "Black Bomb",
+		desc: "If the user is a Flying type or a Pokemon with the Levitate Ability, it loses its immunity to Ground-type attacks and the Arena Trap Ability the turn it is used as well as the turn afterwards. During the effect, Magnet Rise fails for the user.",
+		shortDesc: "Grounds and traps the user for a turn when used.",
+
+		start: "  [POKEMON] became buried!",
+	},
+	beamblade: {
+		name: "Beam Blade",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
+	},
+	bearhug: {
+		name: "Bear Hug",
+		shortDesc: "Activates contact effects of the user, traps for a turn.",
+		start: "  [POKEMON] was squeezed by [SOURCE]!",
+	},
+	chilipowder: {
+		name: "Chili Powder",
+		desc: "Burns the target.",
+		shortDesc: "Burns the target.",
+	},
+	thunderdrop: {
+		name: "Thunder Drop",
+		desc: "This attack takes the target into the air with the user on the first turn and executes on the second. Pokemon weighing 200 kg or more cannot be lifted. On the first turn, the user and the target avoid all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thousand Arrows, Thunder, and Twister. The user and the target cannot make a move between turns, but the target can select a move to use. This move cannot damage Flying-type Pokemon. Fails on the first turn if the target is an ally, if the target has a substitute, or if the target is using Bounce, Dig, Dive, Fly, Phantom Force, Shadow Force, or Sky Drop.",
+		shortDesc: "User and foe fly up turn 1. Damages on turn 2.",
+
+		prepare: "[POKEMON] took [TARGET] into the sky!",
+		end: "  [POKEMON] was freed from the Thunder Drop!",
+		failSelect: "Thunder Drop won't let [POKEMON] go!",
+		failTooHeavy: "  [POKEMON] is too heavy to be lifted!",
+	},
+	faeblade: {
+		name: "Faeblade",
+		desc: "Deals damage to the target based on its Special Defense instead of Defense.",
+		shortDesc: "Damages target based on Sp. Def, not Defense.",
+	},
+	stickytongue: {
+		name: "Sticky Tongue",
+		desc: "If the target is holding an item that can be removed from it, ignoring the Sticky Hold Ability, this move's power is multiplied by 1.5. If the user has not fainted, the target loses its held item. This move cannot cause Pokemon with the Sticky Hold Ability to lose their held item or cause a Kyogre, a Groudon, a Giratina, an Arceus, a Genesect, a Silvally, a Zacian, or a Zamazenta to lose their Blue Orb, Red Orb, Griseous Orb, Plate, Drive, Memory, Rusted Sword, or Rusted Shield respectively. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
+		shortDesc: "1.5x damage if foe holds an item. Eats item.",
+
+		removeItem: "  [SOURCE] ate [POKEMON]'s [ITEM]!",
+	},
+	rocketpunch: {
+		name: "Rocket Punch",
+		desc: "Fails unless it is the user's first turn on the field. This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
+		shortDesc: "Hits first. First turn out only. Always crits.",
+	},
+	powerwasher: {
+		name: "Power Washer",
+		shortDesc: "50% chance to lower the target's Sp. Def. Goes last.",
+	},
+	behemothblob: {
+		name: "Behemoth Blob",
+		shortDesc: "Damage doubles if the target is Dynamaxed.",
+	},
+	genwunroom: {
+		name: "Genwun Room",
+		shortDesc: "For 5 turns, most abilities are disabled.",
+	},
+	flakcannon: {
+		name: "Flak Cannon",
+		shortDesc: "Removes user's held item, always crits.",
+
+		removeItem: "  [POKEMON] shot the fragments of [ITEM]!",
+	},
+	neosporin: {
+		name: "Neosporin",
+		shortDesc: "Heals the target by 50%, Puts them to sleep.",
+	},
+	backroom: {
+		name: "Backroom",
+		shortDesc: "The user switches out and summons Trick Room.",
+	},
+	charmerssong: {
+		name: "Charmer's Song",
+		shortDesc: "The foe is switched out, and the replacement is taunted.",
+	},
+	psychospell: {
+		name: "Psycho Spell",
+		shortDesc: "Summons Psychic Terrain after hit.",
+	},
+	wonderwand: {
+		name: "Wonder Wand",
+		shortDesc: "Summons Wonder Room after hit.",
+	},
+	implosion: {
+		name: "Implosion",
+		shortDesc: "Summons Inverse Room after hit.",
+	},
+	portalgun: {
+		name: "Portal Gun",
+		shortDesc: "Switches foe out first, then the user.",
+	},
+	sportsball: {
+		name: "Sportsball",
+		shortDesc: "Summons Mud Sport and Water Sport after hit.",
+	},
+	rainbowbeam: {
+		name: "Rainbow Beam",
+		shortDesc: "Adds all types into one attack.",
+	},
+	freikugel: {
+		name: "Freikugel",
+		shortDesc: "Has 50% recoil.",
+	},
+	confettigun: {
+		name: "Confetti Gun",
+		shortDesc: "Surprise, motherfucker!",
+	},
+	butterflykick: {
+		name: "Butterfly Kick",
+		shortDesc: "Combines Fighting in its type effectiveness.",
+	},
+	toxicbeam: {
+		name: "Toxic Beam",
+		shortDesc: "20% chance to badly poison the foe.",
+	},
+	windwhip: {
+		name: "Wind Whip",
+		shortDesc: "100% chance to lower the foe's Special Defense.",
+	},
+	firewall: {
+		name: "Firewall",
+		shortDesc: "Protects, burns foes on contact.",
+	},
+	maximize: {
+		name: "Maximize",
+		shortDesc: "Lowers user's evasion by 1.",
+	},
+	seaquake: {
+		name: "Seaquake",
+		shortDesc: "Combines Ground in its type effectiveness.",
+	},
+	edgequake: {
+		name: "Edgequake",
+		shortDesc: "Combines Ground in its type effectiveness.",
+	},
+	sugarrush: {
+		name: "Sugar Rush",
+		shortDesc: "User loses 50% max HP. Maximizes Sp. Atk.",
+	},
+	sleepingsands: {
+		name: "Sleeping Sands",
+		shortDesc: "10% chance to make the foe fall asleep.",
+	},
+	fuckyou: {
+		name: "Fuck You",
+		shortDesc: "Kill yourself. Cope. Seethe. Mald.",
+	},
+	poisonivy: {
+		name: "Poison Ivy",
+		shortDesc: "Chance to poison or badly poison the foe.",
+	},
+	absolutezero: {
+		name: "Absolute Zero",
+		shortDesc: "100% freeze is fair and balanced.",
+	},
+	doesthiswork: {
+		name: "Does This Work",
+		shortDesc: "I dunno, does it?",
+	},
+	telluriccurrent: {
+		name: "Telluric Current",
+		shortDesc: "Able to hit Ground types.",
+	},
+	rockout: {
+		name: "Rock Out",
+		shortDesc: "User switches out after damaging the opponent.",
+	},
+	toppingtoss: {
+		name: "Topping Toss",
+		shortDesc: "3-hit move; 1st hit Fire, 2nd Grass, 3rd Ground.",
+	},
+	heavensblessing: {
+		name: "Heaven's Blessing",
+		shortDesc: "Heals self and activates Wish effect.",
+	},
+	heavenpierce: {
+		name: "Heaven Pierce",
+		shortDesc: "Always crits, breaks screens, ignores everything.",
+	},
+	sandysnore: {
+		name: "Sandy Snore",
+		shortDesc: "Only works if user is asleep, has a myriad of effects.",
+	},
+	amogus: {
+		name: "Amogus",
+		shortDesc: "Disguises as 6th teammate's attack, how sus.",
+	},
+	ninjutsu: {
+		name: "Ninjutsu",
+		shortDesc: "Hits 4 times.",
+	},
+	groundbomb: {
+		name: "Ground Bomb",
+		shortDesc: "Explodes self, halves foe's defense.",
+	},
+	chernoboil: {
+		name: "Chernoboil",
+		shortDesc: "10% chance to burn foe.",
+	},
+	halflife: {
+		name: "Half-Life",
+		shortDesc: "Cuts foe's HP in half.",
+	},
+	nuclearmeltdown: {
+		name: "Nuclear Meltdown",
+		shortDesc: "Lowers user's Attack, Sp. Atk, and Speed by 2.",
+	},
+	obsidianhorn: {
+		name: "Obsidian Horn",
+		shortDesc: "10% chance to raise Defense and Sp. Def by 1.",
+	},
+	feudefee: {
+		name: "Feu de Fe\u0301e",
+		shortDesc: "Physical if Attack is higher than Sp. Atk.",
+	},
+	skulltoss: {
+		name: "Skull Toss",
+		shortDesc: "Raises Speed by 1, but only once.",
+	},
+	blobblast: {
+		name: "Blobblast",
+		shortDesc: "Has 1/4 recoil.",
+	},
+	floofandpoof: {
+		name: "Floof and Poof",
+		shortDesc: "Uses Def as Atk. Summons Lucky Chant, Safeguard, and Mist.",
+	},
+	sunburst: {
+		name: "Sunburst",
+		shortDesc: "Summons Sun. 10% chance to Burn.",
+	},
+	deepfry: {
+		name: "Deep Fry",
+		shortDesc: "Cooks the opponent's item, with varying effects.",
+	},
+	flashbang: {
+		name: "Flashbang",
+		shortDesc: "User switches out. Sets up Dazzling for a turn.",
+		start: "  A dazzling display surrounds [TEAM]!",
+		end: "  [TEAM]'s the dazzling display has dissipated!",
+		switchOut: "#uturn",
+	},
+	bouncyball: {
+		name: "Bouncy Ball",
+		shortDesc: "No additional effect.",
+	},
+	extremesneed: {
+		name: "Extreme Sneed",
+		shortDesc: "Usually goes first.",
+	},
+	feedandseed: {
+		name: "Feed and Seed",
+		shortDesc: "Uses Leech Seed, Worry Seed, and Grassy Terrain.",
+	},
+	atombomb: {
+		name: "Atom Bomb",
+		shortDesc: "Hits adjacent Pokemon. The user faints.",
+	},
+	radiation: {
+		name: "Radiation",
+		shortDesc: "Makes the opponent Nuclear type.",
+	},
+	battlecry: {
+		name: "Battle Cry",
+		shortDesc: "10% chance to raise the user's Special Attack by 1.",
+	},
+	sereneshockwave: {
+		name: "Serene Shockwave",
+		shortDesc: "Cures teammates of their status effects.",
+	},
+	hypersomnia: {
+		name: "Hypersomnia",
+		shortDesc: "Makes user ability Bad Dreams, opponent Lethargic and gives Nightmare.",
+	},
+	xenobeam: {
+		name: "Xenobeam",
+		shortDesc: "Makes the opponent ??? type.",
+	},
+	abduction: {
+		name: "Abduction",
+		shortDesc: "The user and opponent both switch out.",
+	},
+	electromagnetism: {
+		name: "Electromagnetism",
+		shortDesc: "Deals damage. Magnet Rises the user.",
+	},
+	titaniumclap: {
+		name: "Titanium Clap",
+		shortDesc: "30% chance to paralyze the foe.",
+	},
+	paranormalactivity: {
+		name: "Paranormal Activity",
+		shortDesc: "Able to hit Normal-type Pokemon.",
+	},
+	infectiouswheeze: {
+		name: "Infectious Wheeze",
+		shortDesc: "If Blobbos-Infected, becomes Poison type, if Blobbos-Zombie, becomes Ghost type.",
+	},
+	nosedive: {
+		name: "Nosedive",
+		shortDesc: "Lowers the user's Defense by 2 stages.",
+	},
+	siphon: {
+		name: "Siphon",
+		desc: "The user recovers 3/4 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 75% of the damage dealt.",
+	},
+	shadowban: {
+		name: "Shadowban",
+		shortDesc: "Taunts the foe; user gets +1 Speed.",
+	},
+	bloodletting: {
+		name: "Bloodletting",
+		shortDesc: "+1 Sp. Atk and +1 Speed for the cost of health.",
+	},
+	flashfreeze: {
+		name: "Flash Freeze",
+		shortDesc: "Usually goes first.",
+	},
+	letssleppforever: {
+		name: "Let's Slepp Forever",
+		shortDesc: "100% chance to make the foe fall asleep.",
+	},
+	energyburst: {
+		name: "Energy Burst",
+		shortDesc: "No additional effect.",
+	},
+	plasticterrain: {
+		name: "Plastic Terrain",
+		desc: "For 5 turns, the terrain becomes Plastic Terrain. During the effect, the power of Plastic-type attacks used by grounded Pokemon is multiplied by 1.3, and items get recycled.",
+		shortDesc: "5 turns. Grounded: +Plastic power, Recycles items.",
+	},
+	highjumpsaw: {
+		name: "High Jump Saw",
+		shortDesc: "The user jumps up high, spinning its fists and feet like a buzzsaw. Dual Type Steel.",
+	},
+	stingingrage: {
+		name: "Stinging Rage",
+		shortDesc: "The user faints. Badly poisons the opponent.",
+	},
+	malicepowder: {
+		name: "Malice Powder",
+		shortDesc: "Confuses everyone. Causes infestation.",
+	},
+	spectresabre: {
+		name: "Spectre Sabre",
+		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit.",
+		shortDesc: "Hits 2 times in one turn.",
+	},
+	recycleray: {
+		name: "Recycle Ray",
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+	},
+	fadereflection: {
+		name: "Fade Reflection",
+		desc: "Has a 25% chance to disable the target's move.",
+		shortDesc: "25% chance to disable.",
+	},
+	plasticblaze: {
+		name: "Plastic Blaze",
+		desc: "Has a 25% chance to burn the target.",
+		shortDesc: "25% chance to burn the target.",
+	},
+	meltedplastic: {
+		name: "Melted Plastic",
+		desc: "Has a 30% chance to burn the target. The target thaws out if it is frozen.",
+		shortDesc: "30% chance to burn the target. Thaws target.",
+	},
+	glassing: {
+		name: "Glassing",
+		shortDesc: "Makes the opponent Glass type.",
+	},
+	bloodshot: {
+		name: "Blood Shot",
+		desc: "Has a 20% chance to either poison, confuse, or paralyze the target.",
+		shortDesc: "20% chance to poison, confuse, or paralyze target.",
+	},
+	overdose: {
+		name: "Overdose",
+		desc: "If the target lost HP, the user takes recoil damage equal to 1/2 the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 1/2 recoil.",
+	},
+	skummray: {
+		name: "Skumm Ray",
+		desc: "Has a 100% chance to either sleep, freeze, flinch, or paralyze the target.",
+		shortDesc: "100% chance to sleep, freeze, flinch, or paralyze target.",
+	},
+	hyperzone: {
+		name: "Hyper Zone",
+		shortDesc: "For 5 turns, Dark types are protected from status, priority, and screens.",
+	},
+	freeballoonday: {
+		name: "Free Balloon Day",
+		shortDesc: "Doubles in power if holding a balloon. Recycles balloon if you don't have an item.",
+	},
+	helldive: {
+		name: "Hell Dive",
+		shortDesc: "Can't be used twice in a row. Physical if user's Atk > Sp. Atk.",
+	},
+	mushroomshot: {
+		name: "Mushroom Shot",
+		shortDesc: "Power doubles if opponent partially trapped. During Gravity: 1.5x power. Hits 4 times",
+	},
+	qualityrip: {
+		name: "Quality Rip",
+		desc: "The power of this move varies; 5% chances for 10 and 150 power, 10% chances for 30 and 110 power, 20% chances for 50 and 90 power, and 30% chance for 70 power. Damage doubles if the target is using Thunder Drop.",
+		shortDesc: "Hits adjacent Pokemon. Power varies; 2x on Thunder Drop.",
+		gen4: {
+			desc: "The power of this move varies. 5% chances for 10 and 150 power, 10% chances for 30 and 110 power, 20% chances for 50 and 90 power, and 30% chance for 70 power. Power doubles if the target is using Thunder Drop.",
+		},
+
+		activate: "  Quality Rip [NUMBER]!",
+	},
+	concussion: {
+		name: "Concussion",
+		desc: "The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pokemon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
+		shortDesc: "Lasts 2-3 turns. Confuses the user afterwards.",
+	},
+	shootingstar: {
+		name: "Shooting Star",
+		shortDesc: "20% recoil, user switches out.",
+		switchOut: "#uturn",
+	},
+	dousingflame: {
+		name: "Dousing Flame",
+		shortDesc: "Super effective on Fire.",
+	},
+	cursedblade: {
+		name: "Cursed Blade",
+		shortDesc: "30% chance to inflict Curse.",
+	},
+	riptide: {
+		name: "Riptide",
+		shortDesc: "Traps and damages the target for 4-5 turns.",
+	},
+	secretstrength: {
+		name: "Secret Strength",
+		shortDesc: "Type varies based on the user's secondary type.",
+	},
+	hornithrust: {
+		name: "Horni Thrust",
+		shortDesc: "1/3 chance to cause attract. Ignores genders.",
+	},
+	mouthmelter: {
+		name: "Mouth Melter",
+		desc: "For 5 turns, the target cannot use sound or bite-based moves.",
+		shortDesc: "For 5 turns, the target cannot use sound or bite-based moves.",
+		cant: "The effects of Mouth Melter prevent [POKEMON] from using certain moves!",
+	},
+	swamp: {
+		name: "Swamp",
+		shortDesc: "For 4 turns, foes' Speed is quartered.",
+		start: "  A swamp enveloped [TEAM]!",
+		end: "  The swamp around [TEAM] disappeared!",
+	},
+	devilsbarrage: {
+		name: "Devil's Barrage",
+		shortDesc: "Charges, then hits 3 times.",
+		prepare: "[POKEMON] is splitting apart!",
+	},
+	rebuild: {
+		name: "Rebuild",
+		shortDesc: "Charges, then restores 2/3 of its maximum HP, and cures its burn, poison, or paralysis.",
+		prepare: "[POKEMON] is reforming itself!",
+	},
+	bigshot: {
+		name: "Big Shot",
+		shortDesc: "High critical hit ratio, 30% chance to paralyze.",
+	},
+	foolsgambit: {
+		name: "Fool's Gambit",
+		desc: "The target is immune if it does not share a type with the user.",
+		shortDesc: "Hits adjacent Pokemon sharing the user's type.",
+	},
+	trapcard: {
+		name: "Trap Card",
+		shortDesc: "Does double damage and attracts the foe if hit by a physical attack.",
+
+		start: "  [POKEMON] set a trap card!",
+		prepare: "  [POKEMON] set a trap card!",
+		cant: "[POKEMON]'s trap card didn't work!",
+	},
+	heroicstrike: {
+		name: "Heroic Strike",
+		shortDesc: "Ignores immunities. Uses Fighting-type effectiveness if it would be SE. Cannot miss. Special if user's Sp. Atk > Atk. Ignores the target's stat stage changes.",
+	},
+	heroiconslaught: {
+		name: "Heroic Onslaught",
+		shortDesc: "Hits twice. Ignores immunities. Cannot miss. Special if user's Sp. Atk > Atk. Ignores the target's stat stage changes.",
+	},
+	drinkpotion: {
+		name: "Drink Potion",
+		shortDesc: "Heals 20% of max HP per dose. Tries to minimize doses used. Each dose uses 1 PP.",
+
+		activate: "  [POKEMON] drank [NUMBER] doses of its potion!",
+	},
+	winterwhiteout: {
+		name: "Winter Whiteout",
+		desc: "No additional effect.",
+		shortDesc: "No additional effect. Hits adjacent foes.",
+	},
+	gmaxblobbomb: {
+		name: "G-Max Blob Bomb",
+		shortDesc: "Upon hit, summons Mist and Safeguard.",
+	},
+	icestorm: {
+		name: "Ice Storm",
+		shortDesc: "Summons Hail. 10% chance to freeze.",
+	},
+	downpour: {
+		name: "Downpour",
+		shortDesc: "Summons Rain.",
+	},
+	slysquall: {
+		name: "Sly Squall",
+		desc: "This move always crits under Illusion unless the target is under the effect of Lucky Chant or has an ability that prevents critical hits, and removes Illusion on a successful hit.",
+		shortDesc: "Guaranteed crit under Illusion; removes it on hit.",
+	},
+	rawvenom: {
+		name: "Raw Venom",
+		shortDesc: "30% chance to disable the foe.",
+	},
+	flurryfist: {
+		name: "Flurry Fist",
+		shortDesc: "Usually goes first.",
 	},
 };

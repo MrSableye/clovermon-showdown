@@ -27,6 +27,8 @@ import type {RoomPermission, GlobalPermission} from './user-groups';
 import type {Punishment} from './punishments';
 import type {PartialModlogEntry} from './modlog';
 import {FriendsDatabase, PM} from './friends';
+import {BadgesDatabase} from './badges';
+import {DiscordClient} from './discord';
 import {SQL, Repl, FS, Utils} from '../lib';
 import * as Artemis from './artemis';
 import {Dex} from '../sim';
@@ -1124,13 +1126,6 @@ export class CommandContext extends MessageContext {
 						throw new Chat.ErrorMessage(this.tr`You are ${lockType} and can't talk in chat. ${lockExpiration}`);
 					}
 				}
-				if (!room.persist && !room.roomid.startsWith('help-') && !(user.registered || user.autoconfirmed)) {
-					this.sendReply(
-						this.tr`|html|<div class="message-error">You must be registered to chat in temporary rooms (like battles).</div>` +
-						this.tr`You may register in the <button name="openOptions"><i class="fa fa-cog"></i> Options</button> menu.`
-					);
-					throw new Chat.Interruption();
-				}
 				if (room.isMuted(user)) {
 					throw new Chat.ErrorMessage(this.tr`You are muted and cannot talk in this room.`);
 				}
@@ -1527,6 +1522,8 @@ export const Chat = new class {
 	 */
 	readonly MAX_TIMEOUT_DURATION = 2147483647;
 	readonly Friends = new FriendsDatabase();
+	readonly Badges = new BadgesDatabase();
+	readonly Discord = new DiscordClient();
 	readonly PM = PM;
 
 	readonly multiLinePattern = new PatternTester();
@@ -2413,7 +2410,8 @@ export const Chat = new class {
 		buf += '<span class="col typecol">';
 		if (species.types) {
 			for (const type of species.types) {
-				buf += `<img src="https://${Config.routes.client}/sprites/types/${type}.png" alt="${type}" height="14" width="32">`;
+				const encodedType = encodeURIComponent(type);
+				buf += `<img src="https://${Config.routes.client}/sprites/types/${encodedType}.png" alt="${type}" height="14" width="32">`;
 			}
 		}
 		buf += '</span> ';

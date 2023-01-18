@@ -48,6 +48,9 @@ interface MoveFlags {
 	snatch?: 1; // Can be stolen from the original user and instead used by another Pokemon using Snatch.
 	sound?: 1; // Has no effect on Pokemon with the Ability Soundproof.
 	wind?: 1; // Activates the Wind Power and Wind Rider Abilities.
+	kick?: 1; // Kick-based moves (for Striker)
+	bone?: 1; // Bone-based moves (for Bone Zone)
+	hammer?: 1; // Hammer-based moves (for Admin Abuse)
 }
 
 export interface HitEffect {
@@ -209,6 +212,7 @@ export interface MoveData extends EffectData, MoveEventMethods, HitEffect {
 	basePowerModifier?: number;
 	critModifier?: number;
 	critRatio?: number;
+	canContinue?: boolean;
 	/**
 	 * Pokemon for the attack stat. Ability and Item damage modifiers still come from the real attacker.
 	 */

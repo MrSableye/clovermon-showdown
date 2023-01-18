@@ -1,7 +1,7 @@
 
 import {Elimination} from './generator-elimination';
 import {RoundRobin} from './generator-round-robin';
-import {Utils} from '../../lib';
+import {FS, Utils} from '../../lib';
 import {SampleTeams, teamData} from '../chat-plugins/sample-teams';
 import {PRNG} from '../../sim/prng';
 
@@ -18,6 +18,7 @@ export interface TournamentRoomSettings {
 	recentToursLength?: number;
 	recentTours?: {name: string, baseFormat: string, time: number}[];
 	blockRecents?: boolean;
+	official?: boolean;
 }
 
 type Generator = RoundRobin | Elimination;
@@ -60,6 +61,10 @@ export class TournamentPlayer extends Rooms.RoomGamePlayer<Tournament> {
 	isEliminated: boolean;
 	autoDisqualifyWarned: boolean;
 	lastActionTime: number;
+	/**
+	 * If the tournament is team-locked, the player's team is stored here when their first battle starts.
+	 */
+	lockedTeam: string | null;
 	wins: number;
 	losses: number;
 	games: number;
@@ -74,6 +79,7 @@ export class TournamentPlayer extends Rooms.RoomGamePlayer<Tournament> {
 		this.isEliminated = false;
 		this.autoDisqualifyWarned = false;
 		this.lastActionTime = 0;
+		this.lockedTeam = null;
 
 		this.wins = 0;
 		this.losses = 0;
@@ -81,6 +87,22 @@ export class TournamentPlayer extends Rooms.RoomGamePlayer<Tournament> {
 		this.score = 0;
 	}
 }
+
+interface OfficialTournamentResult {
+	timestamp: number;
+	title: string;
+	format: string;
+}
+
+type OfficialTournamentResults = Record<string, { tournaments: OfficialTournamentResult[] }>;
+
+const officialTournamentResults: OfficialTournamentResults = JSON.parse(
+	FS('config/chat-plugins/official-tournaments.json').readIfExistsSync() || "{}"
+);
+
+const saveOfficialTournamentResults = () => {
+	FS('config/chat-plugins/official-tournaments.json').writeUpdate(() => JSON.stringify(officialTournamentResults));
+};
 
 export class Tournament extends Rooms.RoomGame<TournamentPlayer> {
 	readonly isTournament: true;
@@ -95,6 +117,7 @@ export class Tournament extends Rooms.RoomGame<TournamentPlayer> {
 	customRules: string[];
 	generator: Generator;
 	isRated: boolean;
+	teamLock: boolean;
 	allowScouting: boolean;
 	allowModjoin: boolean;
 	forceTimer: boolean;
@@ -136,6 +159,7 @@ export class Tournament extends Rooms.RoomGame<TournamentPlayer> {
 		this.customRules = [];
 		this.generator = generator;
 		this.isRated = isRated;
+		this.teamLock = false;
 		this.allowScouting = true;
 		this.allowModjoin = false;
 		this.forceTimer = false;
@@ -317,6 +341,7 @@ export class Tournament extends Rooms.RoomGame<TournamentPlayer> {
 			const update2 = {
 				challenges: usersToNames(this.availableMatchesCache.challenges.get(this.playerTable[targetUser.id])!),
 				challengeBys: usersToNames(this.availableMatchesCache.challengeBys.get(this.playerTable[targetUser.id])!),
+				teamLocked: !!this.playerTable[targetUser.id].lockedTeam,
 			};
 			connection.sendTo(this.room, `|tournament|update|${JSON.stringify(update2)}`);
 
@@ -905,6 +930,10 @@ export class Tournament extends Rooms.RoomGame<TournamentPlayer> {
 		this.autostartcap = true;
 		this.room.add(`The tournament will start once ${this.playerCap} players have joined.`);
 	}
+	setTeamLock(teamLock: boolean) {
+		this.teamLock = teamLock;
+		this.room.add(`|tournament|teamlock|${teamLock ? 'on' : 'off'}`);
+	}
 	showSampleTeams() {
 		if (teamData.teams[this.baseFormat]) {
 			let buf = ``;
@@ -958,7 +987,7 @@ export class Tournament extends Rooms.RoomGame<TournamentPlayer> {
 		this.isAvailableMatchesInvalidated = true;
 		this.update();
 
-		const ready = await Ladders(this.fullFormat).prepBattle(output.connection, 'tour');
+		const ready = await Ladders(this.fullFormat).prepBattle(output.connection, 'tour', from.lockedTeam);
 		if (!ready) {
 			from.isBusy = false;
 			to.isBusy = false;
@@ -1022,7 +1051,7 @@ export class Tournament extends Rooms.RoomGame<TournamentPlayer> {
 		const challenge = player.pendingChallenge;
 		if (!challenge?.from) return;
 
-		const ready = await Ladders(this.fullFormat).prepBattle(output.connection, 'tour');
+		const ready = await Ladders(this.fullFormat).prepBattle(output.connection, 'tour', player.lockedTeam);
 		if (!ready) return;
 
 		// Prevent battles between offline users from starting
@@ -1032,6 +1061,14 @@ export class Tournament extends Rooms.RoomGame<TournamentPlayer> {
 		// Prevent double accepts and users that have been disqualified while between these two functions
 		if (!challenge.from.pendingChallenge) return;
 		if (!player.pendingChallenge) return;
+
+		if (this.teamLock) {
+			if (!player.lockedTeam) player.lockedTeam = ready.settings.team;
+			user.sendTo(this.room, '|tournament|update|{"teamLocked":true}');
+			const opponent = this.playerTable[from.id];
+			if (!opponent.lockedTeam) opponent.lockedTeam = challenge.team;
+			from.sendTo(this.room, '|tournament|update|{"teamLocked":true}');
+		}
 
 		const room = Rooms.createBattle({
 			format: this.fullFormat,
@@ -1197,7 +1234,27 @@ export class Tournament extends Rooms.RoomGame<TournamentPlayer> {
 			}
 			this.room.saveSettings();
 		}
+		if (this?.room?.settings?.tournaments?.official) {
+			this.onOfficialTournamentEnd(update.results[0]);
+		}
 		this.remove();
+	}
+	onOfficialTournamentEnd(winners: string[]) {
+		winners.forEach((winner) => {
+			const winnerId = toID(winner);
+
+			if (!officialTournamentResults[winner]) {
+				officialTournamentResults[winnerId] = {tournaments: []};
+			}
+
+			officialTournamentResults[winnerId].tournaments.push({
+				timestamp: new Date().getTime(),
+				title: this.title,
+				format: this.name,
+			});
+		});
+
+		saveOfficialTournamentResults();
 	}
 }
 
@@ -1680,6 +1737,30 @@ const commands: Chat.ChatCommands = {
 			this.privateModAction(`${user.name} cleared the tournament's custom rules.`);
 			this.modlog('TOUR CLEARRULES');
 		},
+		teamlock(target, room, user) {
+			room = this.requireRoom();
+			this.checkCan('tournaments', null, room);
+			const tournament = this.requireGame(Tournament);
+			if (tournament.isTournamentStarted) {
+				throw new Chat.ErrorMessage("Team locking cannot be changed once the tournament has started.");
+			}
+			if (this.meansYes(target)) {
+				if (tournament.teamLock) throw new Chat.ErrorMessage("This tournament is already team-locked.");
+				if (Dex.formats.get(tournament.baseFormat).team) {
+					throw new Chat.ErrorMessage("This tournament uses random teams, and can't be team-locked.");
+				}
+				tournament.setTeamLock(true);
+				this.privateModAction(`${user.name} made this tournament team-locked.`);
+				this.modlog('TOUR TEAMLOCK', null, 'on');
+			} else if (this.meansNo(target)) {
+				if (!tournament.teamLock) throw new Chat.ErrorMessage("Team lock is already off for this tournament.");
+				tournament.setTeamLock(false);
+				this.privateModAction(`${user.name} turned team lock off for this tournament.`);
+				this.modlog('TOUR TEAMLOCK', null, 'off');
+			} else {
+				this.sendReply("Usage: /tour teamlock <on|off>");
+			}
+		},
 		name: 'setname',
 		customname: 'setname',
 		setname(target, room, user, connection, cmd) {
@@ -1940,6 +2021,61 @@ const commands: Chat.ChatCommands = {
 				this.modlog('TOUR FORCETIMER', null, 'OFF');
 			} else {
 				return this.sendReply(`Usage: /tour ${cmd} <on|off>`);
+			}
+		},
+		unofficial: 'official',
+		official(target, room, user, connection, cmd) {
+			room = this.requireRoom();
+
+			this.checkCan('tournaments', null, room);
+
+			if (!room.settings.tournaments) room.settings.tournaments = {};
+
+			const isOfficial = cmd === 'official';
+			room.settings.tournaments.official = isOfficial;
+			room.saveSettings();
+
+			this.privateModAction(`Tournament was set to ${isOfficial ? 'official' : 'unofficial'} by ${user.name}`);
+			this.modlog('TOUR SETTINGS', null, `official: ${isOfficial}`);
+			return this.sendReply(`Tournament was set to ${isOfficial ? 'official' : 'unofficial'}`);
+		},
+		results(target) {
+			this.runBroadcast();
+
+			const targetId = toID(target);
+
+			if (targetId.length) {
+				const userName = Users.get(targetId)?.name || targetId;
+				const playerResult = officialTournamentResults[targetId];
+
+				const header = `<b><u>${userName}'s Tournament Results</b></u><br />`;
+				let body = '';
+
+				if (!playerResult || playerResult.tournaments.length < 1) {
+					body = '<p>This player has not won an official tournament.</p>';
+				} else {
+					const sortedTournaments = playerResult.tournaments.sort(
+						(tournamentA, tournamentB) => tournamentA.timestamp - tournamentB.timestamp,
+					);
+					const tournamentLines = sortedTournaments.map((tournamentResult) => {
+						const tournamentDate = new Date(tournamentResult.timestamp);
+						const dateString = `${tournamentDate.getFullYear()}/${tournamentDate.getMonth() + 1}/${tournamentDate.getDate()}`;
+						return `<li>${tournamentResult.title} <small>(${tournamentResult.format})</small> [${dateString}]</li>`;
+					});
+					body = `<ul>${tournamentLines.join('')}</ul>`;
+				}
+
+				return this.sendReplyBox(`${header}${body}`);
+			} else {
+				const header = `<b><u>Top Tournament Results</b></u><br />`;
+				const lines = Object.entries(officialTournamentResults)
+					.sort((resultA, resultB) => resultB[1].tournaments.length - resultA[1].tournaments.length)
+					.map(([
+						playerId,
+						tournamentResults,
+					]) => `<strong>${Users.get(playerId)?.name || playerId}</strong>: ${tournamentResults.tournaments.length} wins`);
+
+				return this.sendReplyBox(`${header}${lines.join('<br />')}`);
 			}
 		},
 		settings: {

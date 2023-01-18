@@ -512,7 +512,7 @@ export function destroy() {
 
 export const commands: Chat.ChatCommands = {
 	async randchannel(target, room, user) {
-		room = this.requireRoom('youtube' as RoomID);
+		room = this.requireRoom(room?.roomid);
 		if (Object.keys(YouTube.data.channels).length < 1) return this.errorReply(`No channels in the database.`);
 		target = toID(target);
 		this.runBroadcast();
@@ -524,7 +524,7 @@ export const commands: Chat.ChatCommands = {
 	yt: 'youtube',
 	youtube: {
 		async addchannel(target, room, user) {
-			room = this.requireRoom('youtube' as RoomID);
+			room = this.requireRoom(room?.roomid);
 			this.checkCan('mute', null, room);
 			const [id, name] = target.split(',').map(t => t.trim());
 			if (!id) return this.errorReply('Specify a channel ID.');
@@ -537,7 +537,7 @@ export const commands: Chat.ChatCommands = {
 		addchannelhelp: [`/addchannel - Add channel data to the YouTube database. Requires: % @ #`],
 
 		removechannel(target, room, user) {
-			room = this.requireRoom('youtube' as RoomID);
+			room = this.requireRoom(room?.roomid);
 			this.checkCan('mute', null, room);
 			const id = YouTube.channelSearch(target);
 			if (!id) return this.errorReply(`Channel with ID or name ${target} not found.`);
@@ -549,7 +549,7 @@ export const commands: Chat.ChatCommands = {
 		removechannelhelp: [`/youtube removechannel - Delete channel data from the YouTube database. Requires: % @ #`],
 
 		async channel(target, room, user) {
-			room = this.requireRoom('youtube' as RoomID);
+			room = this.requireRoom(room?.roomid);
 			const channel = YouTube.channelSearch(target);
 			if (!channel) return this.errorReply(`No channels with ID or name ${target} found.`);
 			const data = await YouTube.generateChannelDisplay(channel);
@@ -560,7 +560,7 @@ export const commands: Chat.ChatCommands = {
 			'/youtube channel - View the data of a specified channel. Can be either channel ID or channel name.',
 		],
 		async video(target, room, user) {
-			room = this.requireRoom('youtube' as RoomID);
+			room = this.requireRoom(room?.roomid);
 			this.checkCan('mute', null, room);
 			const buffer = await YouTube.generateVideoDisplay(target, true);
 			this.runBroadcast();
@@ -580,7 +580,7 @@ export const commands: Chat.ChatCommands = {
 		},
 
 		update(target, room, user) {
-			room = this.requireRoom('youtube' as RoomID);
+			room = this.requireRoom(room?.roomid);
 			this.checkCan('mute', null, room);
 			const [channel, name] = target.split(',');
 			const id = YouTube.channelSearch(channel);
@@ -592,7 +592,7 @@ export const commands: Chat.ChatCommands = {
 		},
 		interval: 'repeat',
 		repeat(target, room, user) {
-			room = this.requireRoom('youtube' as RoomID);
+			room = this.requireRoom(room?.roomid);
 			this.checkCan('declare', null, room);
 			if (!target) {
 				if (!YouTube.interval) return this.errorReply(`The YouTube plugin is not currently running an interval.`);
@@ -614,7 +614,7 @@ export const commands: Chat.ChatCommands = {
 			return this.modlog(`CHANNELINTERVAL`, null, `${target} minutes`);
 		},
 		addcategory(target, room, user) {
-			room = this.requireRoom('youtube' as RoomID);
+			room = this.requireRoom(room?.roomid);
 			this.checkCan('mute', null, room);
 			const categoryID = toID(target);
 			if (!categoryID) return this.parse(`/help youtube`);
@@ -627,7 +627,7 @@ export const commands: Chat.ChatCommands = {
 			YouTube.save();
 		},
 		removecategory(target, room, user) {
-			room = this.requireRoom('youtube' as RoomID);
+			room = this.requireRoom(room?.roomid);
 			this.checkCan('mute', null, room);
 			const categoryID = toID(target);
 			if (!categoryID) return this.parse(`/help youtube`);
@@ -644,7 +644,7 @@ export const commands: Chat.ChatCommands = {
 			this.modlog(`YOUTUBE REMOVECATEGORY`, null, target);
 		},
 		setcategory(target, room, user) {
-			room = this.requireRoom('youtube' as RoomID);
+			room = this.requireRoom(room?.roomid);
 			this.checkCan('mute', null, room);
 			target = target.trim();
 			const [category, id] = Utils.splitFirst(target, ',').map(item => item.trim());
@@ -663,7 +663,7 @@ export const commands: Chat.ChatCommands = {
 			this.privateModAction(`${user.name} set the channel ${channel.name}'s category to '${category}'.`);
 		},
 		decategorize(target, room, user) {
-			room = this.requireRoom('youtube' as RoomID);
+			room = this.requireRoom(room?.roomid);
 			this.checkCan('mute', null, room);
 			target = target.trim();
 			if (!target) {
@@ -743,7 +743,7 @@ export const commands: Chat.ChatCommands = {
 	],
 	twitch: {
 		async channel(target, room, user) {
-			room = this.requireRoom('youtube' as RoomID);
+			room = this.requireRoom(room?.roomid);
 			if (!Config.twitchKey) return this.errorReply(`Twitch is not configured`);
 			const data = await Twitch.getChannel(target);
 			if (!data) return this.errorReply(`Channel not found`);

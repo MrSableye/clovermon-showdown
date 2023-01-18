@@ -730,8 +730,11 @@ export const commands: Chat.ChatCommands = {
 					if (move.flags['recharge']) details["&#10003; Has recharge turn"] = "";
 					if (move.flags['gravity'] && dex.gen >= 4) details["&#10007; Suppressed by Gravity"] = "";
 					if (move.flags['dance'] && dex.gen >= 7) details["&#10003; Dance move"] = "";
-					if (move.flags['slicing'] && dex.gen >= 9) details["&#10003; Slicing move"] = "";
+					if (move.flags['slicing'] && dex.gen >= 8) details["&#10003; Slicing move"] = "";
 					if (move.flags['wind'] && dex.gen >= 9) details["&#10003; Wind move"] = "";
+					if (move.flags['kick'] && dex.gen >= 8) details["&#10003; Kick move"] = "";
+					if (move.flags['bone'] && dex.gen >= 8) details["&#10003; Bone move"] = "";
+					if (move.flags['hammer'] && dex.gen >= 8) details["&#10003; Hammer move"] = "";
 
 					if (dex.gen >= 7) {
 						if (move.gen >= 8 && move.isMax) {
@@ -1137,12 +1140,9 @@ export const commands: Chat.ChatCommands = {
 				case 1:
 					neutral.push(type);
 					break;
-				case 2:
-				case 4:
+				default:
 					superEff.push(type);
 					break;
-				default:
-					throw new Error(`/coverage effectiveness of ${bestCoverage[type]} from parameters: ${target}`);
 				}
 			}
 			buffer.push(`Coverage for ${sources.join(' + ')}:`);
@@ -1214,12 +1214,9 @@ export const commands: Chat.ChatCommands = {
 					case 1:
 						cell += `bgcolor=#6688AA title="${typing}"><font color=#000066>${bestEff}</font>`;
 						break;
-					case 2:
-					case 4:
+					default:
 						cell += `bgcolor=#559955 title="${typing}"><font color=#003300>${bestEff}</font>`;
 						break;
-					default:
-						throw new Error(`/coverage effectiveness of ${bestEff} from parameters: ${target}`);
 					}
 					cell += '</th>';
 					buffer += cell;
@@ -2710,8 +2707,8 @@ export const commands: Chat.ChatCommands = {
 		if (!target) target = user.id;
 		let rawResult;
 		try {
-			rawResult = await Net(`https://${Config.routes.root}/users/${target}.json`).get();
-		} catch (e: any) {
+			rawResult = await Net(`https://pokemonshowdown.com/users/${target}.json`).get(); // TODO: Remove clover hack!!
+		} catch (e) {
 			if (e.message.includes('Not found')) throw new Chat.ErrorMessage(`User '${target}' is unregistered.`);
 			throw new Chat.ErrorMessage(e.message);
 		}

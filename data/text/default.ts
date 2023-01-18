@@ -296,6 +296,12 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		end: "  The snow stopped.",
 		upkeep: "  (The snow is falling down.)",
 	},
+	densefog: {
+		weatherName: "Fog",
+		start: "  A thick fog rolled in!",
+		end: "  The dense fog faded.",
+		upkeep: "  (The fog is deep.)",
+	},
 	desolateland: {
 		weatherName: "Intense Sun",
 		start: "  The sunlight turned extremely harsh!",
@@ -371,5 +377,17 @@ export const DefaultText: {[k: string]: DefaultText} = {
 	// misc
 	crash: {
 		damage: "  [POKEMON] kept going and crashed!",
+	},
+
+	timefall: {
+		weatherName: "Timefall",
+		start: "  Chiralium precipitation started to fall!",
+		end: "  The timefall stopped.",
+		upkeep: "  (Timefall continues.)",
+	},
+	bridge: {
+		start: "  [POKEMON] is working on an addition to the Chiral Network!",
+		fail: "  The new addition to the Chiral Network has been abandoned.",
+		end: "  [POKEMON] finished the addition to the Chiral Network!",
 	},
 };

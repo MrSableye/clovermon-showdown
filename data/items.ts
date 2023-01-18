@@ -7537,4 +7537,947 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "CAP",
 	},
+	/* Clover Exclusive Items */
+	baconstrip: {
+		name: "Bacon Strip",
+		spritenum: 749,
+		onModifySpDPriority: 2,
+		onModifySpD(spd, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Urswine') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Urswine"],
+		isNonstandard: "Future",
+	},
+	bible: {
+		name: "Bible",
+		spritenum: 748,
+		onModifyCritRatio(critRatio, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Caroline') {
+				return critRatio + 2;
+			}
+		},
+		itemUser: ["Caroline"],
+		isNonstandard: "Future",
+	},
+	bigfaggot: {
+		name: "Big Faggot",
+		spritenum: 741,
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Flameboyan') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Flameboyan"],
+		isNonstandard: "Future",
+	},
+	cutebow: {
+		name: "Cute Bow",
+		spritenum: 742,
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Fairy') {
+				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
+		isNonstandard: "Future",
+	},
+	katana: {
+		name: "Katana",
+		spritenum: 743,
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Steel') {
+				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
+		isNonstandard: "Future",
+	},
+	manifesto: {
+		name: "Manifesto",
+		spritenum: 744,
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move && user.baseSpecies.baseSpecies === 'Walruskie' && (move.type === 'Steel' || move.type === 'Ice')) {
+				return this.chainModify(1.5);
+			}
+		},
+		itemUser: ["Walruskie"],
+		isNonstandard: "Future",
+	},
+	piratesjug: {
+		name: "Pirate's Jug",
+		spritenum: 745,
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move && user.baseSpecies.baseSpecies === 'Octai' && move.id === 'lactoseshot') {
+				return this.chainModify([2, 1]);
+			}
+		},
+		itemUser: ["Octai"],
+		isNonstandard: "Future",
+	},
+	suedeshoes: {
+		name: "Suede Shoes",
+		spritenum: 746,
+		onModifySpe(spe, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Pretzely') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Pretzely"],
+		isNonstandard: "Future",
+	},
+	taco: {
+		name: "Taco",
+		spritenum: 747,
+		onUpdate(pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 2) {
+				if (this.runEvent('TryHeal', pokemon) && pokemon.useItem()) {
+					this.heal(50);
+				}
+			}
+		},
+		isNonstandard: "Future",
+	},
+	thiccbone: {
+		name: "Thicc Bone",
+		spritenum: 379,
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Masdawg' || pokemon.baseSpecies.baseSpecies === 'Pasdawg') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Masdawg", "Pasdawg"],
+		isNonstandard: "Future",
+	},
+	/* Clover CAP Exclusive Items */
+	moluganion: {
+		name: "Moluganion",
+		spritenum: 751,
+		fling: {
+			basePower: 20,
+		},
+		onAfterSetStatusPriority: -1,
+		onAfterSetStatus(status, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Noxilium') {
+				this.add('-message', 'The power from the Moluganion cured the status!');
+				pokemon.cureStatus();
+				pokemon.removeVolatile('confusion');
+			}
+		},
+		onUpdate(pokemon) {
+			if (pokemon.status || pokemon.volatiles['confusion']) {
+				if (pokemon.baseSpecies.baseSpecies === 'Noxilium') {
+					this.add('-message', 'The power from the Moluganion cured the status!');
+					pokemon.cureStatus();
+					pokemon.removeVolatile('confusion');
+				} else {
+					this.add('-message', 'The holder is unable to comprehend the Moluganion!');
+					pokemon.addVolatile('confusion');
+				}
+			}
+		},
+		itemUser: ["Noxilium"],
+		isNonstandard: "Future",
+	},
+	skub: {
+		name: "Skub",
+		spritenum: 752,
+		fling: {
+			basePower: 20,
+		},
+		onModifyDefPriority: 1,
+		onModifyDef(def, pokemon) {
+			if (pokemon.species.name === 'Skuba') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpDPriority: 1,
+		onModifySpD(spd, pokemon) {
+			if (pokemon.species.name === 'Skuba') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.species.name === 'Skuba-Anti') {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.species.name === 'Skuba-Anti') {
+				return this.chainModify(1.5);
+			}
+		},
+		itemUser: ["Skuba", "Skuba-Anti"],
+		isNonstandard: "Future",
+	},
+	rustedcrown: {
+		name: "Rusted Crown",
+		spritenum: 236,
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.name === 'Blobbos-Galar') || pokemon.baseSpecies.name === 'Blobbos-Galar-Crowned') {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Blobbos-Galar-Crowned",
+		itemUser: ["Blobbos-Galar-Crowned"],
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	nullgem: {
+		name: "Null Gem",
+		spritenum: 750,
+		isGem: true,
+		onSourceTryPrimaryHit(target, source, move) {
+			if (target === source || move.category === 'Status') return;
+			if (move.type === '???' && source.useItem()) {
+				source.addVolatile('gem');
+			}
+		},
+		num: 562,
+		gen: 5,
+		isNonstandard: "Past",
+	},
+	/* Clover CAP Mega Stones */
+	ooganite: {
+		name: "Ooganite",
+		spritenum: 577,
+		megaStone: "Oogabuga-Mega",
+		megaEvolves: "Oogabuga",
+		itemUser: ["Oogabuga"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	wifeminite: {
+		name: "Wifeminite",
+		spritenum: 577,
+		megaStone: "Wifemin-Mega",
+		megaEvolves: "Wifemin",
+		itemUser: ["Wifemin"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	bitekinite: {
+		name: "Bitekinite",
+		spritenum: 577,
+		megaStone: "Biteki-Mega",
+		megaEvolves: "Biteki",
+		itemUser: ["Biteki"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	fonduppite: {
+		name: "Fonduppite",
+		spritenum: 577,
+		megaStone: "Fondupple-Mega",
+		megaEvolves: "Fondupple",
+		itemUser: ["Fondupple"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	ebolabite: {
+		name: "Ebolabite",
+		spritenum: 577,
+		megaStone: "Ebolable-Mega",
+		megaEvolves: "Ebolable",
+		itemUser: ["Ebolable"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	somboludite: {
+		name: "Somboludite",
+		spritenum: 577,
+		megaStone: "Somboludo-Mega",
+		megaEvolves: "Somboludo",
+		itemUser: ["Somboludo"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	floriousite: {
+		name: "Floriousite",
+		spritenum: 577,
+		megaStone: "Florious-Mega",
+		megaEvolves: "Florious",
+		itemUser: ["Florious"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	illumatrixite: {
+		name: "Illumatrixite",
+		spritenum: 577,
+		megaStone: "Illumatrix-Mega",
+		megaEvolves: "Illumatrix",
+		itemUser: ["Illumatrix"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	grimdakite: {
+		name: "Grimdakite",
+		spritenum: 577,
+		megaStone: "Grimdak-Mega",
+		megaEvolves: "Grimdak",
+		itemUser: ["Grimdak"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	hazmatite: {
+		name: "Hazmatite",
+		spritenum: 577,
+		megaStone: "Hazmate-Mega",
+		megaEvolves: "Hazmate",
+		itemUser: ["Hazmate"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	krokizonite: {
+		name: "Krokizonite",
+		spritenum: 577,
+		megaStone: "Krokizon-Mega",
+		megaEvolves: "Krokizon",
+		itemUser: ["Krokizon"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	spookzillite: {
+		name: "Spookzillite",
+		spritenum: 577,
+		megaStone: "Spookzilla-Mega",
+		megaEvolves: "Spookzilla",
+		itemUser: ["Spookzilla"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	lizakbarite: {
+		name: "Lizakbarite",
+		spritenum: 577,
+		megaStone: "Lizakbar-Mega",
+		megaEvolves: "Lizakbar",
+		itemUser: ["Lizakbar"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	rectreemite: {
+		name: "Rectreemite",
+		spritenum: 577,
+		megaStone: "Rectreem-Mega",
+		megaEvolves: "Rectreem",
+		itemUser: ["Rectreem"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	unjoyite: {
+		name: "Unjoyite",
+		spritenum: 577,
+		megaStone: "Unjoy-Mega",
+		megaEvolves: "Unjoy",
+		itemUser: ["Unjoy"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	emplyinite: {
+		name: "Emplyinite",
+		spritenum: 577,
+		megaStone: "Emplyin-Mega",
+		megaEvolves: "Emplyin",
+		itemUser: ["Emplyin"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	upbeddite: {
+		name: "Upbeddite",
+		spritenum: 577,
+		megaStone: "Upbeddit-Mega",
+		megaEvolves: "Upbeddit",
+		itemUser: ["Upbeddit"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	smelloxite: {
+		name: "Smelloxite",
+		spritenum: 577,
+		megaStone: "Smellox-Mega",
+		megaEvolves: "Smellox",
+		itemUser: ["Smellox"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	pigusonite: {
+		name: "Pigusonite",
+		spritenum: 577,
+		megaStone: "Piguson-Mega",
+		megaEvolves: "Piguson",
+		itemUser: ["Piguson"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	condoomite: {
+		name: "Condoomite",
+		spritenum: 577,
+		megaStone: "Condoom-Mega",
+		megaEvolves: "Condoom",
+		itemUser: ["Condoom"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	hohohomite: {
+		name: "Hohohomite",
+		spritenum: 577,
+		megaStone: "Hohohoming-Mega",
+		megaEvolves: "Hohohoming",
+		itemUser: ["Hohohoming"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	faptite: {
+		name: "Faptite",
+		spritenum: 577,
+		megaStone: "Faptime-Mega",
+		megaEvolves: "Faptime",
+		itemUser: ["Faptime"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	jerklite: {
+		name: "Jerklite",
+		spritenum: 577,
+		megaStone: "Jerkle-Mega",
+		megaEvolves: "Jerkle",
+		itemUser: ["Jerkle"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	dowsterite: {
+		name: "Dowsterite",
+		spritenum: 577,
+		megaStone: "Dowster-Mega",
+		megaEvolves: "Dowster",
+		itemUser: ["Dowster"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	reptrillite: {
+		name: "Reptrillite",
+		spritenum: 577,
+		megaStone: "Reptrill-Mega",
+		megaEvolves: "Reptrill",
+		itemUser: ["Reptrill"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	kuklanite: {
+		name: "Kuklanite",
+		spritenum: 577,
+		megaStone: "Kuklan-Mega",
+		megaEvolves: "Kuklan",
+		itemUser: ["Kuklan"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	ricosuavite: {
+		name: "Ricosuavite",
+		spritenum: 577,
+		megaStone: "Ricosuave-Mega",
+		megaEvolves: "Ricosuave",
+		itemUser: ["Ricosuave"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	vandashite: {
+		name: "Vandashite",
+		spritenum: 577,
+		megaStone: "Vandash-Mega",
+		megaEvolves: "Vandash",
+		itemUser: ["Vandash"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	chasumite: {
+		name: "Chasumite",
+		spritenum: 577,
+		megaStone: "Chasumo-Mega",
+		megaEvolves: "Chasumo",
+		itemUser: ["Chasumo"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	goryannusite: {
+		name: "Goryannusite",
+		spritenum: 577,
+		megaStone: "Goryannus-Mega",
+		megaEvolves: "Goryannus",
+		itemUser: ["Goryannus"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	spookscarite: {
+		name: "Spookscarite",
+		spritenum: 577,
+		megaStone: "Spookscare-Mega",
+		megaEvolves: "Spookscare",
+		itemUser: ["Spookscare"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	honradite: {
+		name: "Honradite",
+		spritenum: 577,
+		megaStone: "Honrade-Mega",
+		megaEvolves: "Honrade",
+		itemUser: ["Honrade"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	fusjite: {
+		name: "Fusjite",
+		spritenum: 577,
+		megaStone: "Fusjahl-Mega",
+		megaEvolves: "Fusjahl",
+		itemUser: ["Fusjahl"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	ultrablobbosiumz: {
+		name: "Ultrablobbosium Z",
+		spritenum: 686,
+		onTakeItem: false,
+		zMove: "Slepp That Blobs the Sky",
+		zMoveFrom: "Blobby Bop",
+		itemUser: ["Blobbos-Ultra"],
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	ointmiteite: {
+		name: "Ointmiteite",
+		spritenum: 599,
+		megaStone: "Ointmite-Mega",
+		megaEvolves: "Ointmite",
+		itemUser: ["Ointmite"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	sableviumz: {
+		name: "Sablevium Z",
+		spritenum: 636,
+		onTakeItem: false,
+		zMove: "Twin Tower Tumbling Terror",
+		zMoveFrom: "Freeze-Dry",
+		itemUser: ["Blobbos-Remembered"],
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	kalosite: {
+		name: "Kalosite",
+		spritenum: 599,
+		megaStone: "Blobbos-Kalos-Mega",
+		megaEvolves: "Blobbos-Kalos",
+		itemUser: ["Blobbos-Kalos"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	blobbosite: {
+		name: "Blobbosite",
+		spritenum: 630,
+		megaStone: "Blobbos-Mega",
+		megaEvolves: "Blobbos",
+		itemUser: ["Blobbos"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	reversite: {
+		name: "Reversite",
+		spritenum: 625,
+		megaStone: "Blobbos-Reverse-Mega",
+		megaEvolves: "Blobbos-Reverse",
+		itemUser: ["Blobbos-Reverse"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	sexite: {
+		name: "Sexite",
+		spritenum: 587,
+		megaStone: "Blobbos-Sexy-Mega",
+		megaEvolves: "Blobbos-Sexy",
+		itemUser: ["Blobbos-Sexy"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	negite: {
+		name: "Negite",
+		spritenum: 628,
+		megaStone: "Blobbos-Nega-Mega",
+		megaEvolves: "Blobbos-Nega",
+		itemUser: ["Blobbos-Nega"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	dustite: {
+		name: "Dustite",
+		spritenum: 623,
+		megaStone: "Blobbos-Dust-Mega",
+		megaEvolves: "Blobbos-Dust",
+		itemUser: ["Blobbos-Dust"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	blobbosmikiumz: {
+		name: "Blobbosmikium Z",
+		spritenum: 686,
+		onTakeItem: false,
+		zMove: "Let's Slepp Forever",
+		zMoveFrom: "Flash Freeze",
+		itemUser: ["Blobbos-Mimikyu", "Blobbos-Mimikyu-Busted"],
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	wackite: {
+		name: "Wackite",
+		spritenum: 589,
+		megaStone: "Blobbos-Wack-Mega",
+		megaEvolves: "Blobbos-Wack",
+		itemUser: ["Blobbos-Wack"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	zeroite: {
+		name: "Zeroite",
+		spritenum: 616,
+		megaStone: "Blobbos-Zero-Mega",
+		megaEvolves: "Blobbos-Zero",
+		itemUser: ["Blobbos-Zero"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	plasticgem: {
+		name: "Plastic Gem",
+		spritenum: 53,
+		isGem: true,
+		onSourceTryPrimaryHit(target, source, move) {
+			if (target === source || move.category === 'Status') return;
+			if (move.type === 'Plastic' && source.useItem()) {
+				source.addVolatile('gem');
+			}
+		},
+		num: 558,
+		gen: 5,
+		isNonstandard: "Future",
+	},
+	glassgem: {
+		name: "Glass Gem",
+		spritenum: 53,
+		isGem: true,
+		onSourceTryPrimaryHit(target, source, move) {
+			if (target === source || move.category === 'Status') return;
+			if (move.type === 'Glass' && source.useItem()) {
+				source.addVolatile('gem');
+			}
+		},
+		num: 558,
+		gen: 5,
+		isNonstandard: "Future",
+	},
+	piratesbooty: {
+		name: "Pirate's Booty",
+		spritenum: 745,
+		fling: {
+			basePower: 80,
+		},
+		onModifySpDPriority: 2,
+		onModifySpD(spd, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Pirate') {
+				return this.chainModify(2);
+			}
+		},
+		onModifyDefPriority: 2,
+		onModifyDef(def, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Pirate') {
+				return this.chainModify(2);
+			}
+		},
+		num: 640,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	masamune: {
+		name: "Masamune",
+		spritenum: 743,
+		fling: {
+			basePower: 80,
+		},
+		onModifySpDPriority: 2,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Ninja') {
+				return this.chainModify(2);
+			}
+		},
+		onModifyDefPriority: 2,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Ninja') {
+				return this.chainModify(2);
+			}
+		},
+		num: 640,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	kerosenehose: {
+		name: "Kerosene Hose",
+		spritenum: 574,
+		fling: {
+			basePower: 80,
+		},
+		onModifySpDPriority: 2,
+		onModifySpe(spe, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Firefighter') {
+				return this.chainModify(1.5);
+			}
+		},
+		num: 640,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	baitite: {
+		name: "Baitite",
+		spritenum: 585,
+		megaStone: "Blobbos-Bait-Mega",
+		megaEvolves: "Blobbos-Bait",
+		itemUser: ["Blobbos-Bait"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	toxanite: {
+		name: "Toxanite",
+		spritenum: 577,
+		megaStone: "Toxanine-Mega",
+		megaEvolves: "Toxanine",
+		itemUser: ["Toxanine"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
 };

@@ -190,7 +190,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	buggem: {
 		name: "Bug Gem",
-		desc: "Holder's first successful Bug-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Bug-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Bug-type attack will have 1.5x power. Single use.",
 		},
@@ -324,7 +324,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	darkgem: {
 		name: "Dark Gem",
-		desc: "Holder's first successful Dark-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Dark-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Dark-type attack will have 1.5x power. Single use.",
 		},
@@ -392,7 +392,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	dragongem: {
 		name: "Dragon Gem",
-		desc: "Holder's first successful Dragon-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Dragon-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Dragon-type attack will have 1.5x power. Single use.",
 		},
@@ -466,7 +466,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	electricgem: {
 		name: "Electric Gem",
-		desc: "Holder's first successful Electric-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Electric-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Electric-type attack will have 1.5x power. Single use.",
 		},
@@ -504,7 +504,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	fairygem: {
 		name: "Fairy Gem",
-		desc: "Holder's first successful Fairy-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Fairy-type attack will have 1.5x power. Single use.",
 	},
 	fairymemory: {
 		name: "Fairy Memory",
@@ -516,7 +516,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	fightinggem: {
 		name: "Fighting Gem",
-		desc: "Holder's first successful Fighting-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Fighting-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Fighting-type attack will have 1.5x power. Single use.",
 		},
@@ -541,7 +541,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	firegem: {
 		name: "Fire Gem",
-		desc: "Holder's first successful Fire-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Fire-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Fire-type attack will have 1.5x power. Single use.",
 		},
@@ -581,7 +581,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	flyinggem: {
 		name: "Flying Gem",
-		desc: "Holder's first successful Flying-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Flying-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Flying-type attack will have 1.5x power. Single use.",
 		},
@@ -666,7 +666,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	ghostgem: {
 		name: "Ghost Gem",
-		desc: "Holder's first successful Ghost-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Ghost-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Ghost-type attack will have 1.5x power. Single use.",
 		},
@@ -689,7 +689,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	grassgem: {
 		name: "Grass Gem",
-		desc: "Holder's first successful Grass-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Grass-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Grass-type attack will have 1.5x power. Single use.",
 		},
@@ -731,7 +731,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	groundgem: {
 		name: "Ground Gem",
-		desc: "Holder's first successful Ground-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Ground-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Ground-type attack will have 1.5x power. Single use.",
 		},
@@ -803,7 +803,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	icegem: {
 		name: "Ice Gem",
-		desc: "Holder's first successful Ice-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Ice-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Ice-type attack will have 1.5x power. Single use.",
 		},
@@ -951,7 +951,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	lightball: {
 		name: "Light Ball",
-		desc: "If held by a Pikachu, its Attack and Sp. Atk are doubled.",
+		desc: "If held by a Pikachu or Pikotton, its Sp. Atk is doubled. If held by a Pikachu, its Attack is also doubled.",
 		gen4: {
 			desc: "If held by a Pikachu, its attacks have their power doubled.",
 		},
@@ -1210,7 +1210,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	normalgem: {
 		name: "Normal Gem",
-		desc: "Holder's first successful Normal-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Normal-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Normal-type attack will have 1.5x power. Single use.",
 		},
@@ -1304,7 +1304,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	poisongem: {
 		name: "Poison Gem",
-		desc: "Holder's first successful Poison-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Poison-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Poison-type attack will have 1.5x power. Single use.",
 		},
@@ -1379,7 +1379,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	psychicgem: {
 		name: "Psychic Gem",
-		desc: "Holder's first successful Psychic-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Psychic-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Psychic-type attack will have 1.5x power. Single use.",
 		},
@@ -1479,7 +1479,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	rockgem: {
 		name: "Rock Gem",
-		desc: "Holder's first successful Rock-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Rock-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Rock-type attack will have 1.5x power. Single use.",
 		},
@@ -1713,7 +1713,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	steelgem: {
 		name: "Steel Gem",
-		desc: "Holder's first successful Steel-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Steel-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Steel-type attack will have 1.5x power. Single use.",
 		},
@@ -2247,7 +2247,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	watergem: {
 		name: "Water Gem",
-		desc: "Holder's first successful Water-type attack will have 1.3x power. Single use.",
+		desc: "Holder's first successful Water-type attack will have 1.5x power. Single use.",
 		gen5: {
 			desc: "Holder's first successful Water-type attack will have 1.5x power. Single use.",
 		},
@@ -2267,7 +2267,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	watmelberry: {
 		name: "Watmel Berry",
-		desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+		desc: "Restores 70 HP when at 1/2 max HP or less. Single use.",
 	},
 	waveincense: {
 		name: "Wave Incense",
@@ -2388,5 +2388,209 @@ export const ItemsText: {[k: string]: ItemText} = {
 	vilevial: {
 		name: "Vile Vial",
 		desc: "If held by a Venomicon, its Poison- and Flying-type attacks have 1.2x power.",
+	},
+	/* Clovermons */
+	suedeshoes: {
+		name: "Suede Shoes",
+		desc: "If held by a Pretzely, its Speed is doubled.",
+	},
+	bigfaggot: {
+		name: "Big Faggot",
+		desc: "If held by a Flameboyan, its Special Attack is doubled.",
+	},
+	baconstrip: {
+		name: "Bacon Strip",
+		desc: "If held by a Urswine, its Special Defense is doubled.",
+	},
+	katana: {
+		name: "Katana",
+		desc: "Holder's Steel-type attacks have 1.2x power.",
+	},
+	cutebow: {
+		name: "Cute Bow",
+		desc: "Holder's Fairy-type attacks have 1.2x power.",
+	},
+	bible: {
+		name: "Bible",
+		desc: "If held by a Caroline, its critical hit ratio is raised by 2 stages.",
+	},
+	taco: {
+		name: "Taco",
+		desc: "Restores 50 HP when at 1/2 max HP or less. Single use.",
+	},
+	thiccbone: {
+		name: "Thicc Bone",
+		desc: "If held by a Masdawg, Pasdawg or Naughtycoot, its Attack is doubled.",
+	},
+	manifesto: {
+		name: "Manifesto",
+		desc: "If held by a Walruskie, its Steel- and Ice-type attacks have 1.5x power.",
+	},
+	piratesjug: {
+		name: "Pirate's Jug",
+		desc: "If held by an Octai, it doubles the power of Lactose Shot.",
+	},
+	/* Clover CAP */
+	moluganion: {
+		name: "Moluganion",
+		desc: "If held by Noxilium, it is immune to status effects and confusion.",
+	},
+	skub: {
+		name: "Skub",
+		desc: "Skuba-Pro 1.5x Def and SpD; Skuba-Anti 1.5x Atk and SpA.",
+	},
+	rustedcrown: {
+		name: "Rusted Crown",
+		desc: "Allows Blobbos-Galar to turn into its Crowned forme.",
+	},
+	nullgem: {
+		name: "Null Gem",
+		desc: "Holder's first successful ???-type attack will have 1.5x power. Single use.",
+		gen5: {
+			desc: "Holder's first successful ???-type attack will have 1.5x power. Single use.",
+		},
+	},
+	/* Clover CAP Mega Stones */
+	ooganite: {
+		name: "Ooganite",
+		desc: "If held by an Oogabuga, this item allows it to Mega Evolve in battle.",
+	},
+	wifeminite: {
+		name: "Wifeminite",
+		desc: "If held by an Wifemin, this item allows it to Mega Evolve in battle.",
+	},
+	bitekinite: {
+		name: "Bitekinite",
+		desc: "If held by an Biteki, this item allows it to Mega Evolve in battle.",
+	},
+	fonduppite: {
+		name: "Fonduppite",
+		desc: "If held by an Fondupple, this item allows it to Mega Evolve in battle.",
+	},
+	ebolabite: {
+		name: "Ebolabite",
+		desc: "If held by an Ebolable, this item allows it to Mega Evolve in battle.",
+	},
+	somboludite: {
+		name: "Somboludite",
+		desc: "If held by an Somboludo, this item allows it to Mega Evolve in battle.",
+	},
+	floriousite: {
+		name: "Floriousite",
+		desc: "If held by an Florious, this item allows it to Mega Evolve in battle.",
+	},
+	illumatrixite: {
+		name: "Illumatrixite",
+		desc: "If held by an Illumatrix, this item allows it to Mega Evolve in battle.",
+	},
+	grimdakite: {
+		name: "Grimdakite",
+		desc: "If held by an Grimdak, this item allows it to Mega Evolve in battle.",
+	},
+	hazmatite: {
+		name: "Hazmatite",
+		desc: "If held by an Hazmate, this item allows it to Mega Evolve in battle.",
+	},
+	krokizonite: {
+		name: "Krokizonite",
+		desc: "If held by an Krokizon, this item allows it to Mega Evolve in battle.",
+	},
+	spookzillite: {
+		name: "Spookzillite",
+		desc: "If held by an Spookzilla, this item allows it to Mega Evolve in battle.",
+	},
+	lizakbarite: {
+		name: "Lizakbarite",
+		desc: "If held by an Lizakbar, this item allows it to Mega Evolve in battle.",
+	},
+	rectreemite: {
+		name: "Rectreemite",
+		desc: "If held by an Rectreem, this item allows it to Mega Evolve in battle.",
+	},
+	unjoyite: {
+		name: "Unjoyite",
+		desc: "If held by an Unjoy, this item allows it to Mega Evolve in battle.",
+	},
+	emplyinite: {
+		name: "Emplyinite",
+		desc: "If held by an Emplyin, this item allows it to Mega Evolve in battle.",
+	},
+	upbeddite: {
+		name: "Upbeddite",
+		desc: "If held by an Upbeddit, this item allows it to Mega Evolve in battle.",
+	},
+	smelloxite: {
+		name: "Smelloxite",
+		desc: "If held by an Smellox, this item allows it to Mega Evolve in battle.",
+	},
+	pigusonite: {
+		name: "Pigusonite",
+		desc: "If held by an Piguson, this item allows it to Mega Evolve in battle.",
+	},
+	hohohomite: {
+		name: "Hohohomite",
+		desc: "If held by an Hohohoming, this item allows it to Mega Evolve in battle.",
+	},
+	faptite: {
+		name: "Faptite",
+		desc: "If held by an Faptime, this item allows it to Mega Evolve in battle.",
+	},
+	jerklite: {
+		name: "Jerklite",
+		desc: "If held by an Jerkle, this item allows it to Mega Evolve in battle.",
+	},
+	dowsterite: {
+		name: "Dowsterite",
+		desc: "If held by an Dowster, this item allows it to Mega Evolve in battle.",
+	},
+	reptrillite: {
+		name: "Reptrillite",
+		desc: "If held by an Reptrill, this item allows it to Mega Evolve in battle.",
+	},
+	kuklanite: {
+		name: "kuklanite",
+		desc: "If held by an Kuklan, this item allows it to Mega Evolve in battle.",
+	},
+	ricosuavite: {
+		name: "Ricosuavite",
+		desc: "If held by an Ricosuave, this item allows it to Mega Evolve in battle.",
+	},
+	vandashite: {
+		name: "Vandashite",
+		desc: "If held by an Vandash, this item allows it to Mega Evolve in battle.",
+	},
+	chasumite: {
+		name: "Chasumite",
+		desc: "If held by an Chasumo, this item allows it to Mega Evolve in battle.",
+	},
+	goryannusite: {
+		name: "Goryannusite",
+		desc: "If held by an Goryannus, this item allows it to Mega Evolve in battle.",
+	},
+	ultrablobbosiumz: {
+		name: "Ultrablobbosium Z",
+		desc: "Blobbos: Ultra Burst, then Z-Move w/ Blobby Bop.",
+
+		transform: "  Bright light is about to burst out of [POKEMON]!",
+		activate: "[POKEMON] regained its true power through Ultra Burst!",
+	},
+	ointmitemite: {
+		name: "Ointmitemite",
+		desc: "OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!!",
+
+		transform: "  OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!!!",
+		activate: "OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!! OINT!!! MENT!!!",
+	},
+	masamune: {
+		name: "Masamune",
+		desc: "If held by a Blobbos-Ninja, its Atk and SpA is 1.5x.",
+	},
+	piratesbooty: {
+		name: "Pirate's Booty",
+		desc: "If held by a Blobbos-Pirate, its Def and SpD is 1.5x.",
+	},
+	kerosenehose: {
+		name: "Kerosene Hose",
+		desc: "If held by a Blobbos-Firefighter, its SpE is 1.5x.",
 	},
 };

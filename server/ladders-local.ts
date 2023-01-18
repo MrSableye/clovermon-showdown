@@ -68,6 +68,7 @@ export class LadderStore {
 				const line = dataLine.trim();
 				if (!line) continue;
 				const row = line.split('\t');
+				if (isNaN(Number(row[2]))) continue;
 				ladder.push([toID(row[1]), Number(row[0]), row[1], Number(row[2]), Number(row[3]), Number(row[4]), row[5]]);
 			}
 			// console.log('Ladders(' + this.formatid + ') loaded tsv: ' + JSON.stringify(this.ladder));
@@ -142,6 +143,18 @@ export class LadderStore {
 			].join(`</td><td>`) + `</td></tr>`;
 		}
 		return [formatid, buf];
+	}
+
+	async getTopData(prefix?: string) {
+		const ladder = await this.getLadder();
+		const data = [];
+
+		for (const [, row] of ladder.entries()) {
+			if (prefix && !row[0].startsWith(prefix)) continue;
+			data.push(row);
+		}
+
+		return data;
 	}
 
 	/**
