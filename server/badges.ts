@@ -483,7 +483,7 @@ export const PM = new ProcessManager.QueryProcessManager<DatabaseRequest, Databa
 	}
 });
 
-if (!PM.isParentProcess) {
+if (require.main === module) {
 	global.Config = (require as any)('./config-loader').Config;
 	if (Config.usesqlite) {
 		BadgesDatabase.setupDatabase();
