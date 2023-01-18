@@ -21902,13 +21902,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Skull Cannon",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, pulse: 1, mirror: 1},
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
 		ignoreAbility: true,
 		onTry(source) {
-			if (source.activeMoveActions > 1) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
 				this.hint("Skull Cannon only works on your first turn out.");
 				return false;
 			}
