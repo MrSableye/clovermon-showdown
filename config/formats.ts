@@ -27,7 +27,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Only] OU',
 		mod: 'clover',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
@@ -40,7 +41,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Only] Ubers',
 		mod: 'clover',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
@@ -81,7 +83,8 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Pick Your Team Random Battle',
 		mod: 'clover',
 		team: 'random',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Picked Team Size = 6',
 			'Max Team Size = 12',
 			'Team Preview',
@@ -113,7 +116,8 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		team: 'random',
 		gameType: 'freeforall',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Picked Team Size = 6',
 			'Max Team Size = 12',
 			'Team Preview',
@@ -137,7 +141,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Only] LC',
 		mod: 'clover',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Little Cup',
 			'Standard',
 			'Dynamax Clause',
@@ -151,7 +156,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Only] Monotype',
 		mod: 'clover',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Same Type Clause',
 			'Standard',
 			'Dynamax Clause',
@@ -162,7 +168,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Only] Anything Goes',
 		mod: 'clover',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Obtainable',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
@@ -178,7 +185,8 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Doubles OU',
 		mod: 'clover',
 		gameType: 'doubles',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
 			'Swagger Clause',
@@ -190,7 +198,8 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Triples OU',
 		mod: 'clover',
 		gameType: 'triples',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
 			'Swagger Clause',
@@ -256,14 +265,16 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover National Dex] AG',
 		mod: 'clover',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Standard NatDex',
 		],
 	},
 	{
 		name: '[Gen 8 Clover Only] NFE',
 		mod: 'clover',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Not Fully Evolved',
 			'Standard',
 			'Dynamax Clause',
@@ -278,7 +289,8 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] OU (No Team Preview)',
 		mod: 'clover',
 		rated: false,
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Obtainable',
 			'Sleep Clause Mod',
 			'Species Clause',
@@ -306,7 +318,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Only] Multi-Tier',
 		mod: 'clover',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
 			'Multi Tier',
@@ -317,7 +330,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Only] 350 Cup',
 		mod: 'clover',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'350 Cup Mod',
 			'Standard',
 			'Dynamax Clause',
@@ -328,7 +342,9 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 8 Clover Only] Godly Gift",
 		mod: 'clover',
-		ruleset: ['Terastal Clause', 'Standard',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
@@ -400,7 +416,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Only] Inverse',
 		mod: 'clover',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
 			'Inverse Mod',
@@ -434,7 +451,8 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] STABmons',
 		desc: `Pok&eacute;mon can use any move of their typing, in addition to the moves they can normally learn.`,
 		mod: 'clover',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Standard',
 			'STABmons Move Legality',
 			'Dynamax Clause',
@@ -451,7 +469,8 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Alphabet Cup',
 		desc: `Allows Pok&eacute;mon to use any move that shares the same first letter as their name or a previous evolution's name.`,
 		mod: 'clover',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
 			'Alphabet Cup Move Legality',
@@ -470,7 +489,8 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] Scalemons",
 		desc: `Every Pok&eacute;mon's stats, barring HP, are scaled to give them a BST as close to 600 as possible.`,
 		mod: 'clover',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
 			'Scalemons Mod',
@@ -485,7 +505,8 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] Camomons",
 		desc: `Pok&eacute;mon change type to match their first two moves.`,
 		mod: 'clover',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
 			'Camomons Mod',
@@ -499,7 +520,8 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] Pokebilities",
 		desc: `Pok&eacute;mon have all of their released abilities simultaneously.`,
 		mod: 'cloverabilities',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
@@ -601,7 +623,8 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] 1v1",
 		desc: `Bring three Pok&eacute;mon to Team Preview and choose one to battle.`,
 		mod: 'clover',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Picked Team Size = 1', 'Max Team Size = 3',
 			'Standard',
 			'Accuracy Moves Clause',
@@ -640,7 +663,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover CAP Only] Ubers',
 		mod: 'clovercap',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
@@ -650,7 +674,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover CAP Only] OU',
 		mod: 'clovercap',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
@@ -660,7 +685,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover CAP Only] NFE',
 		mod: 'clovercap',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Not Fully Evolved',
 			'Standard',
 			'Dynamax Clause',
@@ -671,7 +697,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover CAP Only] LC',
 		mod: 'clovercap',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Little Cup',
 			'Standard',
 			'Dynamax Clause',
@@ -682,7 +709,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover CAP Only] Monotype',
 		mod: 'clovercap',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Same Type Clause',
 			'Standard',
 			'Dynamax Clause',
@@ -712,7 +740,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Blobbos CAP Only] OU',
 		mod: 'cloverblobboscap',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Obtainable',
 			'Team Preview',
 			'Sleep Clause Mod',
@@ -731,7 +760,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Blobbos CAP Only] Ubers',
 		mod: 'cloverblobboscap',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Obtainable',
 			'Team Preview',
 			'Sleep Clause Mod',
@@ -783,7 +813,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Sandbox Only] OU',
 		mod: 'sandbox',
-		ruleset: ['Terastal Clause',
+		ruleset: [
+			'Terastal Clause',
 			'Obtainable',
 			'Team Preview',
 			'Sleep Clause Mod',

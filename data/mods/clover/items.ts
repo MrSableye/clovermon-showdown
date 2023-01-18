@@ -849,6 +849,43 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	/* Gen 9 items */
+	abilityshield: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	auspiciousarmor: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	boosterenergy: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	clearamulet: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	covertcloak: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	loadeddice: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	maliciousarmor: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	mirrorherb: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	punchingglove: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	/* Modified items */
 	aguavberry: {
 		inherit: true,

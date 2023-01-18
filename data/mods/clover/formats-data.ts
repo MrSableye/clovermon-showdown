@@ -3343,6 +3343,436 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	/* Gen 9 mons */
+	annihilape: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	arboliva: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	arctibax: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	armarouge: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	baxcalibur: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	bellibolt: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	bombirdier: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	brambleghast: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	bramblin: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	brutebonnet: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	capsakid: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ceruledge: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	cetitan: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	cetoddle: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	charcadet: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	chiyu: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	chienpao: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	clodsire: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	crocalor: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	cyclizar: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	dachsbun: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	dolliv: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	dondozo: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	dudunsparce: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	espathra: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	farigiraf: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fidough: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	finizen: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	flamigo: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	flittle: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	floragato: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fluttermane: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	frigibax: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fuecoco: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	garganacl: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	gholdengo: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	gimmighoul: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	glimmet: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	glimmora: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	grafaiai: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	greattusk: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	greavard: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	houndstone: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ironbundle: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ironhands: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ironjugulis: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ironmoth: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ironthorns: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	irontreads: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ironvaliant: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	kilowattrel: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	kingambit: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	klawf: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	koraidon: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	lechonk: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	lokix: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	mabosstiff: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	maschiff: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	maushold: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	meowscarada: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	miraidon: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	nacli: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	naclstack: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	nymble: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	oinkologne: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	orthworm: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	palafin: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	pawmi: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	pawmo: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	pawmot: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	quaquaval: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	quaxly: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	quaxwell: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	rabsca: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	rellor: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	revavroom: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	roaringmoon: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	sandyshocks: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	scovillain: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	screamtail: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	shroodle: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	skeledirge: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	slitherwing: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	smoliv: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	spidops: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	sprigatito: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	squawkabilly: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	tadbulb: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	tandemaus: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	tarountula: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	tatsugiri: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	taurospaldea: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	taurospaldeafire: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	taurospaldeawater: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	tinglu: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	tinkatink: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	tinkaton: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	tinkatuff: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	toedscool: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	toedscruel: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	varoom: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	veluza: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	wattrel: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	wiglett: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	wochien: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	wooperpaldea: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	wugtrio: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	/* Clovermons */
 	grasshole: {
 		inherit: true,
 		tier: "LC",

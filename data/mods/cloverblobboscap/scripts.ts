@@ -1,5 +1,4 @@
 export const Scripts: ModdedBattleScriptsData = {
-	gen: 8,
 	inherit: 'clovercap',
 	actions: {
 		inherit: true,

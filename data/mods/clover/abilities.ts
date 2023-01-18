@@ -156,6 +156,131 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	/* Gen 9 Abilities */
+	angershell: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	armortail: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	beadsofruin: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	commander: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	costar: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	cudchew: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	eartheater: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	electromorphosis: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	goodasgold: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	guarddog: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	hadronengine: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	lingeringaroma: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	myceliummight: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	opportunist: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	orichalcumpulse: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	protosynthesis: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	purifyingsalt: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	quarkdrive: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	rockypayload: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	seedsower: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	sharpness: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	supremeoverlord: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	swordofruin: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	tabletsofruin: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	thermalexchange: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	toxicdebris: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	vesselofruin: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	wellbakedbody: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	windpower: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	windrider: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	zerotohero: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	/* Modified abilities */
 	flareboost: {
 		inherit: true,

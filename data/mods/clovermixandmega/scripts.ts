@@ -1,5 +1,4 @@
 export const Scripts: ModdedBattleScriptsData = {
-	gen: 8,
 	inherit: 'clover',
 	init() {
 		for (const i in this.data.Items) {
