@@ -395,10 +395,6 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	energypowder: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	enigmaberry: {
 		inherit: true,
 		isNonstandard: null,
