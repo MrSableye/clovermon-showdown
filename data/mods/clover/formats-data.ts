@@ -3440,6 +3440,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	dudunsparcethreesegment: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	espathra: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -3580,6 +3584,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	mausholdfour: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	meowscarada: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -3601,6 +3609,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	oinkologne: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	oinkolognef: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -3689,6 +3701,18 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	squawkabilly: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	squawkabillyblue: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	squawkabillywhite: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	squawkabillyyellow: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
