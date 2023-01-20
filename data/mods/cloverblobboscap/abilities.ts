@@ -417,4 +417,36 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	mountaineer: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lingeringaroma: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wellbakedbody: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	seedsower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	electromorphosis: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	goodasgold: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	supremeoverlord: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	myceliummight: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
