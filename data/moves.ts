@@ -27761,7 +27761,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	devilsbarrage: {
 		num: 458,
 		accuracy: 100,
-		basePower: 65,
+		basePower: 70,
 		category: "Physical",
 		name: "Devil's Barrage",
 		pp: 10,
@@ -27860,8 +27860,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	bigshot: {
 		num: 177,
-		accuracy: 80,
-		basePower: 80,
+		accuracy: 97,
+		basePower: 97,
 		category: "Special",
 		name: "Big Shot",
 		pp: 5,

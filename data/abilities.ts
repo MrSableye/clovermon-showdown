@@ -8230,6 +8230,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'ironhead',
 				'skulltoss',
 				'skullbash',
+				'concussion',
+				'headlongrush',
 			];
 			if (beamMoves.includes(move.id)) {
 				this.debug('Thats Cap boost');

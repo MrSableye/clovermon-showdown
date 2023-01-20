@@ -899,5 +899,297 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	rawvenom: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	direclaw: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psyshieldbash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	powershift: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	stoneaxe: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	springtidestorm: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mysticalpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ragingfury: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wavecrash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	chloroblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mountaingale: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	victorydance: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	headlongrush: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	barbbarrage: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	esperwing: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bittermalice: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shelter: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	triplearrows: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	infernalparade: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ceaselessedge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bleakwindstorm: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wildboltstorm: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sandsearstorm: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lunarblessing: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	takeheart: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	silktrap: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	axekick: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lastrespects: {
+		inherit: true,
+		isNonstandard: null,
+		noSketch: true,
+	},
+	luminacrash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	orderup: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	jetpunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	spicyextract: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	spinout: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	populationbomb: {
+		inherit: true,
+		isNonstandard: null,
+		noSketch: true,
+	},
+	icespinner: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	glaiverush: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	revivalblessing: {
+		inherit: true,
+		isNonstandard: null,
+		noSketch: true,
+	},
+	saltcure: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	tripledive: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mortalspin: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	doodle: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	filletaway: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	kowtowcleave: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	flowertrick: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	torchsong: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	aquastep: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ragingbull: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	makeitrain: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ruination: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	collisioncourse: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	electrodrift: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shedtail: {
+		inherit: true,
+		isNonstandard: null,
+		noSketch: true,
+	},
+	chillyreception: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	snowscape: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	tidyup: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pounce: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	trailblaze: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	chillingwater: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hyperdrill: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	twinbeam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ragefist: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	armorcannon: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bitterblade: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	doubleshock: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	gigatonhammer: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	comeuppance: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	aquacutter: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	blazingtorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wickedtorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	combattorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	noxioustorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	magicaltorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
 
