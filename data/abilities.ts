@@ -9662,7 +9662,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	inmemoriam: {
 		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Fire') {
+			if (target !== source && move.type === 'Fire'||move.type === 'Steel') {
 				this.add('-immune', target, '[from] ability: In Memoriam');
 				this.add('-message', `AND THE ROCKETS RED GLARE`);
 				return null;
