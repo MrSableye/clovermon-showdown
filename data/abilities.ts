@@ -7672,9 +7672,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 		rating: 3.5,
 	},
-	asoneblobbosremembered: {
+	asoneblobbosrembered: {
 		onPreStart(pokemon) {
-			this.add('-ability', pokemon, 'As One (Blobbos-Remembered)');
+			this.add('-ability', pokemon, 'As One (Blobbos-Rembered)');
 			this.add('-ability', pokemon, 'Flare Heal');
 			this.add('-ability', pokemon, 'Magic Guard');
 			this.effectState.unnerved = true;
@@ -7705,7 +7705,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		isPermanent: true,
 		isNonstandard: "Future",
-		name: "As One (Blobbos-Remembered)",
+		name: "As One (Blobbos-Rembered)",
 		rating: 3.5,
 	},
 	flipflops: {
@@ -9659,5 +9659,42 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 5,
 		isNonstandard: "Future",
 		num: 278,
+	},
+	inmemoriam: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fire') {
+				this.add('-immune', target, '[from] ability: In Memoriam');
+				this.add('-message', `AND THE ROCKETS RED GLARE`);
+				return null;
+			}
+		},
+		onModifyAtk(atk, attacker, defender, move) {
+			if (attacker.status === 'brn' && move.id !== 'facade') {
+				return this.chainModify(2);
+			}
+		},
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'brn') {
+				this.heal(target.maxhp / 8);
+				if (this.toID(target.side.name).includes('doomwillbefallall')) {
+					this.add('-message', `${target.side.name} is cringe!`);
+					this.add('-message', `${target.side.name} still wets the bed!`);
+					this.add('-message', `${target.side.name} sharted!`);
+				}
+				return false;
+			}
+			if (effect && effect.id === 'stealthrock' || effect.id === 'spikes' || effect.id === 'gmaxsteelsurge') {
+				return false;
+			}
+			if (effect.effectType !== 'Move') {
+				if (effect.effectType === 'Ability') this.add('-activate', source, 'ability: ' + effect.name);
+				return false;
+			}
+		},
+		isPermanent: true,
+		isNonstandard: "Future",
+		name: "In Memoriam",
+		rating: 3.5,
 	},
 };

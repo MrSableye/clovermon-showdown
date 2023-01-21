@@ -1523,7 +1523,11 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	asoneblobbosremembered: {
+	asoneblobbosrembered: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	inmemoriam: {
 		inherit: true,
 		isNonstandard: null,
 	},
