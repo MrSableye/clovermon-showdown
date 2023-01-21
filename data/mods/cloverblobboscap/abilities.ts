@@ -405,6 +405,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	inmemoriam: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	revvingmalice: {
 		inherit: true,
 		isNonstandard: null,
