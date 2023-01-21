@@ -2924,7 +2924,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		activate: "  [POKEMON]'s task was updated: [TASKNAME] - [TASKPROGRESS] / [TASKREQUIREMENT] [TASKPROGRESSTEXT]",
 		end: "  [POKEMON] finished their tasks!",
 	},
-	inmemeoriam: {
+	inmemoriam: {
 		name: "In Memoriam",
 		shortDesc: "Magic Guard + Flare Heal + Fire+Steel Immunity.",
 
