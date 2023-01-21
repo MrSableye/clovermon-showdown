@@ -8974,7 +8974,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	blobbosRembered: {
+	blobbosrembered: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
