@@ -8238,7 +8238,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onTakeItem: false,
 		zMove: "Twin Tower Tumbling Terror",
 		zMoveFrom: "Freeze-Dry",
-		itemUser: ["Blobbos-Remembered"],
+		itemUser: ["Blobbos-Rembered"],
 		gen: 8,
 		isNonstandard: "Future",
 	},

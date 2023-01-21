@@ -2616,8 +2616,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  [POKEMON] is ready to kick your ass in OU!",
 	},
-	asoneblobbosremembered: {
-		name: "As One (Remembered)",
+	asoneblobbosrembered: {
+		name: "As One (Rembered)",
 		shortDesc: "The combination of Flare Heal and Magic Guard.",
 
 		start: "  [POKEMON] is ready to rember ;_;7",
@@ -2923,6 +2923,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		start: "  [POKEMON] recieved a task: [TASKNAME] - [TASKTEXT]",
 		activate: "  [POKEMON]'s task was updated: [TASKNAME] - [TASKPROGRESS] / [TASKREQUIREMENT] [TASKPROGRESSTEXT]",
 		end: "  [POKEMON] finished their tasks!",
+	},
+	inmemeoriam: {
+		name: "In Memoriam",
+		shortDesc: "Magic Guard + Flare Heal + Fire+Steel Immunity.",
+
+		start: "  [POKEMON] is always ready to rember ;_;7",
 	},
 	/* Sandbox + Misc. Abilities */
 	bejeweled: {

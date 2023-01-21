@@ -2660,7 +2660,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	blobbosremembered: {
+	blobbosrembered: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

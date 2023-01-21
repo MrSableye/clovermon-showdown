@@ -37029,11 +37029,11 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
-	blobbosremembered: {
+	blobbosrembered: {
 		num: 69132,
-		name: "Blobbos-Remembered",
+		name: "Blobbos-Rembered",
 		baseSpecies: "Blobbos",
-		forme: "Remembered",
+		forme: "Rembered",
 		types: ["Flying", "Ice"],
 		gender: "N",
 		baseStats: {
@@ -37046,8 +37046,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		},
 		abilities: {
 			0: "Magic Guard",
-			H: "Flare Heal",
-			S: "As One (Blobbos-Remembered)",
+			1: "Flare Heal",
+			H: "As One (Blobbos-Rembered)",
+			S: "In Memoriam",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
