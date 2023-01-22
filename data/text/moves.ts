@@ -8624,4 +8624,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Gigasubferno Strike",
 		shortDesc: "Hits 3 times in one turn. First hit is Ice-type and can freeze (50%); second hit is Electric-type and can paralyze (50%); third hit is Fire-type and can burn (50%).",
 	},
+	backwardslongjump: {
+		name: "Backwards Long Jump",
+		shortDesc: "User is hurt by 50% of its max HP if it misses. Boosts speed and damage (+10 BP, up to 160) with each successive hit.",
+	},
 };

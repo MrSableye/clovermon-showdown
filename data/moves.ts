@@ -28160,4 +28160,50 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 	},
+	backwardslongjump: {
+		num: 136,
+		accuracy: 90,
+		basePower: 90,
+		category: "Physical",
+		name: "Backwards Long Jump",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		hasCrashDamage: true,
+		onMoveFail(target, source, move) {
+			this.damage(source.baseMaxhp / 2, source, source, this.effect);
+		},
+		secondary: null,
+		target: "normal",
+		type: "???",
+		contestType: "Cool",
+		basePowerCallback(pokemon, target, move) {
+			if (!pokemon.volatiles['backwardslongjump'] || move.hit === 1) {
+				pokemon.addVolatile('backwardslongjump');
+			}
+			const bp = this.clampIntRange(move.basePower + 10 * pokemon.volatiles['backwardslongjump'].multiplier, 1, 160);
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		onAfterMoveSecondary(target, source, move) {
+			if (!source.volatiles['backwardslongjump'] || move.hit === 1) {
+				source.addVolatile('backwardslongjump');
+			}
+			const numBoosts = source.volatiles['backwardslongjump'].multiplier;
+			this.boost({ spe: numBoosts }, source);
+		},
+		condition: {
+			duration: 2,
+			onStart() {
+				this.effectState.multiplier = 1;
+			},
+			onRestart() {
+				if (this.effectState.multiplier < 4) {
+					this.effectState.multiplier <<= 1;
+				}
+				this.effectState.duration = 2;
+			},
+		},
+		isNonstandard: "Future",
+	},
 };
