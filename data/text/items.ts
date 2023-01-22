@@ -2593,4 +2593,8 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Kerosene Hose",
 		desc: "If held by a Blobbos-Firefighter, its SpE is 1.5x.",
 	},
+	fusjiniumz: {
+		name: "Fusjinium Z",
+		desc: "If held by Fusjahl with Tri-Punch, it can use Gigasubferno Strike.",
+	},
 };

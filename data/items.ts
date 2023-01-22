@@ -8480,4 +8480,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	fusjiniumz: {
+		name: "Fusjinium Z",
+		spritenum: 686,
+		onTakeItem: false,
+		zMove: "Gigasubferno Strike",
+		zMoveFrom: "Tri-Punch",
+		itemUser: ["Fusjahl"],
+		gen: 8,
+		isNonstandard: "Future",
+	},
 };

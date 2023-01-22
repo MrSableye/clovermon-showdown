@@ -8616,4 +8616,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Flurry Fist",
 		shortDesc: "Usually goes first.",
 	},
+	tripunch: {
+		name: "Tri-Punch",
+		shortDesc: "Hits 3 times in one turn. First hit is Ice-type and can freeze (15%); second hit is Electric-type and can paralyze (15%); third hit is Fire-type and can burn (15%).",
+	},
+	gigasubfernostrike: {
+		name: "Gigasubferno Strike",
+		shortDesc: "Hits 3 times in one turn. First hit is Ice-type and can freeze (50%); second hit is Electric-type and can paralyze (50%); third hit is Fire-type and can burn (50%).",
+	},
 };

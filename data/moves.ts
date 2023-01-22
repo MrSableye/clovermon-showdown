@@ -28088,4 +28088,76 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
+	tripunch: {
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Tri-Punch",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		type: "???",
+		flags: {protect: 1, mirror: 1},
+		multihit: 3,
+		canContinue: true,
+		onTryHit(target, source, move) {
+			if (move.hit === 1) {
+				move.type === 'Ice';
+			} else if (move.hit === 2) {
+				move.type = 'Electric';
+			} else if (move.hit === 3) {
+				move.type = 'Fire';
+			}
+		},
+		secondary: {
+			chance: 15,
+			onHit(target, source, move) {
+				if (move.hit === 1) {
+					target.trySetStatus('frz', source);
+				} else if (move.hit === 2) {
+					target.trySetStatus('par', source);
+				} else if (move.hit === 3) {
+					source.trySetStatus('brn', target);
+				}
+			},
+		},
+		isNonstandard: "Future",
+	},
+	gigasubfernostrike: {
+		accuracy: true,
+		basePower: 111,
+		category: "Physical",
+		name: "Gigasubferno Strike",
+		pp: 1,
+		priority: 0,
+		flags: {},
+		isZ: "fusjiniumz",
+		target: "normal",
+		type: "???",
+		contestType: "Cool",
+		isNonstandard: "Future",
+		multihit: 3,
+		canContinue: true,
+		onTryHit(target, source, move) {
+			if (move.hit === 1) {
+				move.type === 'Ice';
+			} else if (move.hit === 2) {
+				move.type = 'Electric';
+			} else if (move.hit === 3) {
+				move.type = 'Fire';
+			}
+		},
+		secondary: {
+			chance: 50,
+			onHit(target, source, move) {
+				if (move.hit === 1) {
+					target.trySetStatus('frz', source);
+				} else if (move.hit === 2) {
+					target.trySetStatus('par', source);
+				} else if (move.hit === 3) {
+					source.trySetStatus('brn', target);
+				}
+			},
+		},
+	},
 };

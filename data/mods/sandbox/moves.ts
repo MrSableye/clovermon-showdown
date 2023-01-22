@@ -4347,4 +4347,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	tripunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	gigasubfernostrike: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
