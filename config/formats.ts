@@ -785,14 +785,14 @@ export const Formats: FormatList = [
 		column: 3,
 	},
 	{
-		name: '[Gen 8] Random Showderp Meme Battle',
-		mod: 'gen8',
+		name: '[Gen 9] Random Showderp Meme Battle',
+		mod: 'gen9',
 		team: 'randomMeme',
 		ruleset: ['Terastal Clause', 'Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
-		name: '[Gen 8] Free-For-All Random Showderp Meme Battle',
-		mod: 'gen8',
+		name: '[Gen 9] Free-For-All Random Showderp Meme Battle',
+		mod: 'gen9',
 		gameType: 'freeforall',
 		tournamentShow: false,
 		team: 'randomMeme',
