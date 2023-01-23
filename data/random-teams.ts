@@ -1435,7 +1435,7 @@ export class RandomTeams {
 
 	randomMemeSets: any[] = require('./meme-sets.json');
 
-	randomMemeTeam() {
+	randomMeme() {
 		const indexes = Object.keys(this.randomMemeSets);
 		const sets = this.multipleSamplesNoReplace(indexes, 6)
 			.map((index) => this.randomMemeSets[index as unknown as number]);
