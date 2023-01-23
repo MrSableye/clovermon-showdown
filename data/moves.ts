@@ -28361,11 +28361,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		onHit(target, source) {
 			if (!target) return false;
-			if (!this.effectState.pokemonCenters) {
-				this.effectState.pokemonCenters = 0;
-			}
+			let pokemonCenters = 0;
+			target.side.pokemon.forEach((pokemon) => {
+				if (pokemon.baseSpecies.id === 'chansey') pokemonCenters++;
+			});
 			const shitmon = new Pokemon({
-				name: `Pokemon Center v${++this.effectState.pokemonCenters}`,
+				name: `Pokemon Center v${pokemonCenters}`,
 				species: 'Chansey',
 				moves: ['Heal Pulse'],
 				evs: {hp: 4, atk: 0, def: 252, spa: 0, spd: 252, spe: 0},
