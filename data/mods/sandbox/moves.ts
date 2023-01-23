@@ -4359,4 +4359,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	sap: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

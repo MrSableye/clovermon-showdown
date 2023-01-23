@@ -8631,5 +8631,9 @@ export const MovesText: {[k: string]: MoveText} = {
 	deepfreeze: {
 		name: "Deep Freeze",
 		shortDesc: "Freezes the target and self. Fails if self already has a status condition.",
-	}
+	},
+	sap: {
+		name: "Sap",
+		shortDesc: "Deals 1/8 max HP each turn; 1/4 on Steel. 3/4 reduced Atk, SpA, Spe on Steel.",
+	},
 };

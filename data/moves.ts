@@ -28232,4 +28232,48 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
+	sap: {
+		accuracy: 100,
+		basePower: 20,
+		category: "Physical",
+		name: "Sap",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Sap');
+			},
+			onResidualOrder: 13,
+			onResidual(pokemon) {
+				this.damage(pokemon.baseMaxhp / (pokemon.hasType(['Steel']) ? 4 : 8));
+			},
+			onModifySpe(spe, pokemon) {
+				if (pokemon.hasType('Steel')) {
+					return this.chainModify(0.50);
+				}
+			},
+			onModifyAtk(atk, pokemon) {
+				if (pokemon.hasType('Steel')) {
+					return this.chainModify(0.75);
+				}
+			},
+			onModifySpA(atk, pokemon) {
+				if (pokemon.hasType('Steel')) {
+					return this.chainModify(0.75);
+				}
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Sap');
+			},
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'sap',
+		},
+		target: "normal",
+		type: "Steel",
+		isNonstandard: "Future",
+	},
 };
