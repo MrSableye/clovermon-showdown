@@ -28206,4 +28206,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		isNonstandard: "Future",
 	},
+	deepfreeze: {
+		num: 86,
+		accuracy: 90,
+		basePower: 0,
+		category: "Status",
+		name: "Deep Freeze",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		status: 'frz',
+		ignoreImmunity: false,
+		onAfterHit(source, target, move) {
+			source.trySetStatus('frz');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+		zMove: {boost: {spd: 1}},
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
 };

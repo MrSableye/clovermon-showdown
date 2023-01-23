@@ -8628,4 +8628,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Backwards Long Jump",
 		shortDesc: "User is hurt by 50% of its max HP if it misses. Boosts speed and damage (+10 BP, up to 160) with each successive hit.",
 	},
+	deepfreeze: {
+		name: "Deep Freeze",
+		shortDesc: "Freezes the target and self. Fails if self already has a status condition.",
+	}
 };
