@@ -28336,7 +28336,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Fastpoke Beam",
-		pp: 10,
+		pp: 5,
+		noPPBoosts: true,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		onHit(target, pokemon) {
@@ -28357,6 +28358,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Status",
 		name: "Pokemon Center",
 		pp: 5,
+		noPPBoosts: true,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		onHit(target, source) {
