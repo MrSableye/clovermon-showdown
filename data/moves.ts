@@ -28117,7 +28117,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				} else if (move.hit === 2) {
 					target.trySetStatus('par', source);
 				} else if (move.hit === 3) {
-					source.trySetStatus('brn', target);
+					target.trySetStatus('brn', source);
 				}
 			},
 		},
@@ -28155,7 +28155,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				} else if (move.hit === 2) {
 					target.trySetStatus('par', source);
 				} else if (move.hit === 3) {
-					source.trySetStatus('brn', target);
+					target.trySetStatus('brn', source);
 				}
 			},
 		},
