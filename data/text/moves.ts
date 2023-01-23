@@ -8636,4 +8636,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Sap",
 		shortDesc: "Deals 1/8 max HP each turn; 1/4 on Steel. 3/4 reduced Atk, SpA, Spe on Steel.",
 	},
+	vwlstrk: {
+		name: "Vwl Strk",
+		shortDesc: "+20 BP for every vowel in the target's species.",
+	},
 };

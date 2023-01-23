@@ -28276,4 +28276,32 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		isNonstandard: "Future",
 	},
+	vwlstrk: {
+		num: 86,
+		accuracy: 100,
+		basePower: 50,
+		category: "Special",
+		name: "Vwl Strk",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (!target) return move.basePower;
+
+			let totalVowels = 0;
+			for (let i = 0; i < target.species.name.length; i++) {
+				const character = target.species.name.charAt(i);
+				if (['a', 'e', 'i',' o', 'u']) {
+					totalVowels++;
+				}
+			}
+
+			const bp = this.clampIntRange(move.basePower + 20 * totalVowels, 1, 160);
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		target: "normal",
+		type: "Psychic",
+		isNonstandard: "Future",
+	},
 };

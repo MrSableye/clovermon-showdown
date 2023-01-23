@@ -4363,4 +4363,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	vwlstrk: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
