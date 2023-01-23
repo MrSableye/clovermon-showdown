@@ -28351,4 +28351,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 		isNonstandard: "Future",
 	},
+	pokemoncenter: {
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Pokemon Center",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target, source) {
+			if (!target) return false;
+			if (!this.effectState.pokemonCenters) {
+				this.effectState.pokemonCenters = 0;
+			}
+			const shitmon = new Pokemon({
+				name: `Pokemon Center v${++this.effectState.pokemonCenters}`,
+				species: 'Chansey',
+				moves: ['Heal Pulse'],
+				evs: {hp: 4, atk: 0, def: 252, spa: 0, spd: 252, spe: 0},
+				item: 'Eviolite',
+			}, target.side);
+			shitmon.position = target.side.pokemon.length;
+			target.side.pokemon.push(shitmon);
+			target.side.pokemonLeft += 1;
+			this.add('teamsize', target.side.id, target.side.pokemon.length);
+		},
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+	},
 };

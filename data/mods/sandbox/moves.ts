@@ -4375,4 +4375,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	pokemoncenter: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

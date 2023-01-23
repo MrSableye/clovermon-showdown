@@ -8648,4 +8648,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Fastpoke Beam",
 		shortDesc: "Transforms the target into Slowpoke-Galar.",
 	},
+	pokemoncenter: {
+		name: "Pokemon Center",
+		shortDesc: "Adds a Heal Pulse-only Eviolite Chansey with 4 HP / 252 Def / 252 SpD EVs to the enemy team.",
+	},
 };
