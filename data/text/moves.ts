@@ -8640,4 +8640,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Vwl Strk",
 		shortDesc: "+20 BP for every vowel in the target's species.",
 	},
+	itemclaws: {
+		name: "Item Claws",
+		shortDesc: "-15 BP for each unique item on the enemy's team.",
+	},
 };

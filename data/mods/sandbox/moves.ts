@@ -4367,4 +4367,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	itemclaws: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

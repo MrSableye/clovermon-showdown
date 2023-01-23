@@ -28304,4 +28304,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 		isNonstandard: "Future",
 	},
+	itemclaws: {
+		accuracy: 100,
+		basePower: 140,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Item Claws",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (!target) return move.basePower;
+
+			const itemSet = new Set<string>();
+			target.side.pokemon
+				.forEach((pokemon) => { itemSet.add(pokemon.item); });
+
+			const bp = this.clampIntRange(move.basePower - (15 * itemSet.size), 1, 160);
+			return bp;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Cool",
+	},
 };
