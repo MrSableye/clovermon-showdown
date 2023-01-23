@@ -28331,4 +28331,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		contestType: "Cool",
 	},
+	fastpokebeam: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Fastpoke Beam",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target, pokemon) {
+			if (!target.formeChange('Slowpoke-Galar')) {
+				return false;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		zMove: {effect: 'heal'},
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
 };

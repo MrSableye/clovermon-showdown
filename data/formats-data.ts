@@ -8797,6 +8797,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	sableedle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	krackowalker: {
 		tier: "Illegal",
 		isNonstandard: "Future",

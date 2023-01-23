@@ -8644,4 +8644,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Item Claws",
 		shortDesc: "-15 BP for each unique item on the enemy's team.",
 	},
+	fastpokebeam: {
+		name: "Fastpoke Beam",
+		shortDesc: "Transforms the target into Slowpoke-Galar.",
+	},
 };

@@ -40223,6 +40223,17 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		eggGroups: ["Bug"],
 	},
+	sableedle: {
+		num: -42691,
+		name: "Sableedle",
+		types: ["Dark", "Ghost", "Bug", "Poison"],
+		baseStats: {hp: 90, atk: 110, def: 105, spa: 85, spd: 85, spe: 100},
+		abilities: {0: "Keen Eye", 1: "Stall", H: "Prankster", S: "Shield Dust"},
+		heightm: 0.3,
+		weightkg: 14.2,
+		color: "Purple",
+		eggGroups: ["Bug", "Human-Like"],
+	},
 	oblivion: {
 		num: -42099,
 		name: "Oblivion",

@@ -9949,6 +9949,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	sableedle: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	oblivion: {
 		inherit: true,
 		tier: "OU",
