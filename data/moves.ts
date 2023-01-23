@@ -28217,6 +28217,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		status: 'frz',
 		ignoreImmunity: false,
+		onTryHit(source) {
+			if (source.status) {
+				return false;
+			}
+		},
 		onAfterHit(source, target, move) {
 			source.trySetStatus('frz');
 		},
