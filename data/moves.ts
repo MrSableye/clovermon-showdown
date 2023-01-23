@@ -28291,7 +28291,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			let totalVowels = 0;
 			for (let i = 0; i < target.species.name.length; i++) {
 				const character = target.species.name.charAt(i);
-				if (['a', 'e', 'i',' o', 'u']) {
+				if (['a', 'e', 'i',' o', 'u'].includes(character)) {
 					totalVowels++;
 				}
 			}
