@@ -28318,7 +28318,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 
 			const itemSet = new Set<string>();
 			target.side.pokemon
-				.forEach((pokemon) => { itemSet.add(pokemon.item); });
+				.forEach((pokemon) => { 
+					const item = pokemon.getItem().id || pokemon.lastItem;
+					if (item) itemSet.add(item);
+				});
 
 			const bp = this.clampIntRange(move.basePower - (15 * itemSet.size), 1, 160);
 			return bp;
