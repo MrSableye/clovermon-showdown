@@ -35951,7 +35951,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 	},
 	katir: {
-		num: 42241,
+		num: -42241,
 		name: "Katir",
 		types: ["Normal"],
 		gender: "F",
@@ -36179,7 +36179,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		battleOnly: "Blobbos",
 	},
 	bootlos: {
-		num: 42240,
+		num: -42240,
 		name: "Bootlos",
 		types: ["Steel", "Normal"],
 		gender: "N",
@@ -40681,7 +40681,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Field"],
 	},
 	rootchew: {
-		num: -42010,
+		num: 42171,
 		name: "Rootchew",
 		types: ["Ground", "Water"],
 		genderRatio: {M: 0.5, F: 0.5},
