@@ -25935,7 +25935,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 		name: "Twin Tower Tumbling Terror",
 		pp: 1,
-		priority: -7,
+		priority: 0,
 		flags: {contact: 1, hammer: 1},
 		isZ: "sableviumz",
 		onAfterMove(source) {

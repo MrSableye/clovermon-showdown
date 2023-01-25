@@ -10064,6 +10064,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	shroomageddon: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	fatherfuck: {
 		inherit: true,
 		tier: "OU",
