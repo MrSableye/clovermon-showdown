@@ -40490,7 +40490,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Shroomageddon",
 		types: ["Poison", "Fairy"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 145, atk: 40, def: 90, spa: 145, spd: 90, spe:35},
+		baseStats: {hp: 145, atk: 40, def: 95, spa: 145, spd: 95, spe:35},
 		abilities: {0: "Mold Breaker", 1: "Dry Skin", H: "Regenerator"},
 		heightm: 2.1,
 		weightkg: 172,
