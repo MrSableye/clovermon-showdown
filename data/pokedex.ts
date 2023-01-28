@@ -36053,7 +36053,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			def: 80,
 			spa: 15,
 			spd: 85,
-			spe: 54,
+			spe: 63,
 		},
 		abilities: {
 			0: "Steadfast",
@@ -36078,9 +36078,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			hp: 42,
 			atk: 61,
 			def: 36,
-			spa: 51,
+			spa: 66,
 			spd: 25,
-			spe: 85,
+			spe: 70,
 		},
 		abilities: {
 			0: "Inversion",
@@ -36100,7 +36100,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseSpecies: "Blobbos-Nega",
 		forme: "Mega",
 		types: ["Normal", "???"],
-		baseStats: {hp: 42, atk: 81, def: 79, spa: 71, spd: 76, spe: 51},
+		baseStats: {hp: 42, atk: 71, def: 79, spa: 81, spd: 76, spe: 51},
 		abilities: {0: "Flip Flops"},
 		heightm: 0.8,
 		weightkg: 13.4,
@@ -37068,9 +37068,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {
 			hp: 95,
 			atk: 90,
-			def: 85,
+			def: 65,
 			spa: 115,
-			spd: 65,
+			spd: 85,
 			spe: 90,
 		},
 		abilities: {
@@ -37939,11 +37939,11 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Normal"],
 		gender: "N",
 		baseStats: {
-			hp: 65,
+			hp: 70,
 			atk: 80,
 			def: 80,
 			spa: 45,
-			spd: 65,
+			spd: 80,
 			spe: 75,
 		},
 		abilities: {
@@ -38416,9 +38416,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {
 			hp: 95,
-			atk: 80,
+			atk: 70,
 			def: 55,
-			spa: 90,
+			spa: 80,
 			spd: 55,
 			spe: 120,
 		},
@@ -39030,7 +39030,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			0: "Curious Medicine",
 			1: "Healer",
 			H: "Intoxicate",
-			S: "Natural Cure",
+			S: "Rock Head",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
@@ -39048,7 +39048,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Nuclear", "???"],
 		gender: "N",
 		baseStats: {
-			hp: 90,
+			hp: 80,
 			atk: 50,
 			def: 85,
 			spa: 130,
@@ -39441,9 +39441,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {
 			hp: 80,
 			atk: 50,
-			def: 90,
+			def: 80,
 			spa: 90,
-			spd: 100,
+			spd: 90,
 			spe: 20,
 		},
 		abilities: {
@@ -39470,9 +39470,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {
 			hp: 100,
 			atk: 90,
-			def: 80,
+			def: 90,
 			spa: 90,
-			spd: 80,
+			spd: 90,
 			spe: 100,
 		},
 		abilities: {
