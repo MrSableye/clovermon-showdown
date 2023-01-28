@@ -8665,4 +8665,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Ball Kick",
 		shortDesc: "You do NOT want to be on the receiving end of this.",
 	},
+	highkick: {
+		name: "High Kick",
+		desc: "This move's power is 20 if the target is shorter than 0.25m, 40 if less than 0.5m, 60 if less than 1m, 80 if less than 2m, 100 if less than 3m, and 120 if greater than or equal to 3m.",
+		shortDesc: "More power the taller the target.",
+	},
 };

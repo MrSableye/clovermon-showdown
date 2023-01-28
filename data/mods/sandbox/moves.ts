@@ -4379,4 +4379,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	highkick: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

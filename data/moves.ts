@@ -28436,4 +28436,39 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
+	highkick: {
+		num: 67,
+		accuracy: 100,
+		basePower: 0,
+		basePowerCallback(pokemon, target) {
+			const targetHeight = target.species.heightm;
+			let bp;
+			if (targetHeight >= 3) {
+				bp = 120;
+			} else if (targetHeight >= 2) {
+				bp = 100;
+			} else if (targetHeight >= 1) {
+				bp = 80;
+			} else if (targetHeight >= 0.5) {
+				bp = 60;
+			} else if (targetHeight >= 0.25) {
+				bp = 40;
+			} else {
+				bp = 20;
+			}
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		category: "Physical",
+		name: "High Kick",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		zMove: {basePower: 160},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
 };
