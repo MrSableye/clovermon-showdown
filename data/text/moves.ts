@@ -8563,8 +8563,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	foolsgambit: {
 		name: "Fool's Gambit",
-		desc: "The target is immune if it does not share a type with the user.",
-		shortDesc: "Hits adjacent Pokemon sharing the user's type.",
+		shortDesc: "No additional effect.",
 	},
 	trapcard: {
 		name: "Trap Card",
@@ -8653,5 +8652,17 @@ export const MovesText: {[k: string]: MoveText} = {
 	pokemoncenter: {
 		name: "Pokemon Center",
 		shortDesc: "Adds a Heal Pulse-only Eviolite Chansey with 4 HP / 252 Def / 252 SpD EVs to the enemy team.",
+	},
+	regularattack: {
+		name: "Regular Attack",
+		shortDesc: "Just a regular attack.",
+	},
+	laserbeam: {
+		name: "Laser Beam",
+		shortDesc: "15% chance to lower foe's accuracy.",
+	},
+	ballkick: {
+		name: "Ball Kick",
+		shortDesc: "You do NOT want to be on the receiving end of this.",
 	},
 };
