@@ -27839,7 +27839,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-sidestart', targetSide, 'swamp');
 			},
 			onModifySpe(spe, pokemon) {
-				return this.chainModify(0.25);
+				return this.chainModify(0.80);
 			},
 			onSideResidualOrder: 26,
 			onSideResidualSubOrder: 9,
