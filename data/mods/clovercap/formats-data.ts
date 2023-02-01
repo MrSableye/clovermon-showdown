@@ -443,32 +443,32 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	polybrawl: {
+	polybrawn: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	polybrawlh: {
+	polybrawnh: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	polybrawlw: {
+	polybrawnw: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	polybrawli: {
+	polybrawni: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	polybrawlp: {
+	polybrawnp: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	polybrawlk: {
+	polybrawnk: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

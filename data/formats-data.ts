@@ -8304,27 +8304,27 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	polybrawl: {
+	polybrawn: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	polybrawlh: {
+	polybrawnh: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	polybrawlw: {
+	polybrawnw: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	polybrawli: {
+	polybrawni: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	polybrawlp: {
+	polybrawnp: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	polybrawlk: {
+	polybrawnk: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
