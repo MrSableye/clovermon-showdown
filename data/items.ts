@@ -7692,29 +7692,29 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		onModifyDefPriority: 1,
 		onModifyDef(def, pokemon) {
-			if (pokemon.species.name === 'Skuba') {
+			 if (['Skubmarine', 'Skuba'].includes(pokemon.species.name)) {
 				return this.chainModify(1.5);
 			}
 		},
 		onModifySpDPriority: 1,
 		onModifySpD(spd, pokemon) {
-			if (pokemon.species.name === 'Skuba') {
+			 if (['Skubmarine', 'Skuba'].includes(pokemon.species.name)) {
 				return this.chainModify(1.5);
 			}
 		},
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.species.name === 'Skuba-Anti') {
+			 if (['Skubmarine-Anti', 'Skuba-Anti'].includes(pokemon.species.name)) {
 				return this.chainModify(1.5);
 			}
 		},
 		onModifySpAPriority: 1,
 		onModifySpA(spa, pokemon) {
-			if (pokemon.species.name === 'Skuba-Anti') {
+			if (['Skubmarine-Anti', 'Skuba-Anti'].includes(pokemon.species.name)) { 
 				return this.chainModify(1.5);
 			}
 		},
-		itemUser: ["Skuba", "Skuba-Anti"],
+		itemUser: ["Skubmarine", "Skubmarine-Anti","Skuba","Skuba-Anti"],
 		isNonstandard: "Future",
 	},
 	rustedcrown: {
