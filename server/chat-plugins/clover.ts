@@ -30,7 +30,7 @@ const createAvatarHtml = (
 ) => `<img src="//${Config.routes.client}/sprites/trainers${isCustom ? '-custom' : ''}/${avatarName}.png" title="${avatarName}" alt="${avatarName}" width="80" height="80" class="pixelated" />`;
 /* eslint-enable max-len */
 
-const BASE_URL = 'https://clover.weedl.es';
+const BASE_URL = 'https://usage.weedl.es';
 
 export const getStats = async (
 	format?: string,
@@ -40,7 +40,7 @@ export const getStats = async (
 	try {
 		const path = [format, year, month]
 			.filter((value) => value !== undefined).join('/');
-		const url = `${BASE_URL}/usage/${path}/index.json`;
+		const url = `${BASE_URL}/data/${path}/index.json`;
 
 		const {data} = await Axios.get(url, {
 			responseType: 'json',
@@ -95,7 +95,7 @@ export const commands: Chat.ChatCommands = {
 					return this.sendReplyBox(
 						'<b><u>Usage Stats</u></b><br />' +
 						'<p>Daily usage stats for most Clovermon Showdown formats can be found here:</p>' +
-						'<ul><li><a href="https://clover.weedl.es/usage_new/">Fancy Usage Site</a></li><li><a href="https://clover.weedl.es/usage/">Old Plain Usage Site</a></li></ul>'
+						'<ul><li><a href="https://usage.weedl.es">Usage Site</a></li></ul>'
 					);
 				}
 
@@ -259,7 +259,7 @@ export const commands: Chat.ChatCommands = {
 				return this.sendReplyBox(
 					'<b><u>Usage Stats</u></b><br />' +
 					'<p>Daily usage stats for most Clovermon Showdown formats can be found here:</p>' +
-					'<ul><li><a href="https://clover.weedl.es/usage_new/">Fancy Usage Site</a></li><li><a href="https://clover.weedl.es/usage/">Old Plain Usage Site</a></li></ul>'
+					'<ul><li><a href="https://usage.weedl.es">Usage Site</a></li></ul>'
 				);
 			},
 		},

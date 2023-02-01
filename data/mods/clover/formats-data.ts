@@ -3624,6 +3624,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	palafinhero: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	pawmi: {
 		inherit: true,
 		isNonstandard: "Past",

@@ -4347,4 +4347,40 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	tripunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	gigasubfernostrike: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	backwardslongjump: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sap: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	vwlstrk: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	itemclaws: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fastpokebeam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pokemoncenter: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	highkick: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

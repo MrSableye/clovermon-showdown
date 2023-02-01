@@ -8548,11 +8548,13 @@ export const MovesText: {[k: string]: MoveText} = {
 	devilsbarrage: {
 		name: "Devil's Barrage",
 		shortDesc: "Charges, then hits 3 times.",
+
 		prepare: "[POKEMON] is splitting apart!",
 	},
 	rebuild: {
 		name: "Rebuild",
 		shortDesc: "Charges, then restores 2/3 of its maximum HP, and cures its burn, poison, or paralysis.",
+		
 		prepare: "[POKEMON] is reforming itself!",
 	},
 	bigshot: {
@@ -8561,8 +8563,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	foolsgambit: {
 		name: "Fool's Gambit",
-		desc: "The target is immune if it does not share a type with the user.",
-		shortDesc: "Hits adjacent Pokemon sharing the user's type.",
+		shortDesc: "No additional effect.",
 	},
 	trapcard: {
 		name: "Trap Card",
@@ -8615,5 +8616,58 @@ export const MovesText: {[k: string]: MoveText} = {
 	flurryfist: {
 		name: "Flurry Fist",
 		shortDesc: "Usually goes first.",
+	},
+	tripunch: {
+		name: "Tri-Punch",
+		shortDesc: "Hits 3 times in one turn. First hit is Ice-type and can freeze (15%); second hit is Electric-type and can paralyze (15%); third hit is Fire-type and can burn (15%).",
+	},
+	gigasubfernostrike: {
+		name: "Gigasubferno Strike",
+		shortDesc: "Hits 3 times in one turn. First hit is Ice-type and can freeze (50%); second hit is Electric-type and can paralyze (50%); third hit is Fire-type and can burn (50%).",
+	},
+	backwardslongjump: {
+		name: "Backwards Long Jump",
+		shortDesc: "User is hurt by 50% of its max HP if it misses. Boosts speed and damage (+10 BP, up to 160) with each successive hit.",
+	},
+	deepfreeze: {
+		name: "Deep Freeze",
+		shortDesc: "Freezes the target and self. Fails if self already has a status condition.",
+	},
+	sap: {
+		name: "Sap",
+		shortDesc: "Deals 1/8 max HP each turn; 1/4 on Steel. 3/4 reduced Atk, SpA, Spe on Steel.",
+	},
+	vwlstrk: {
+		name: "Vwl Strk",
+		shortDesc: "+20 BP for every vowel in the target's species.",
+	},
+	itemclaws: {
+		name: "Item Claws",
+		shortDesc: "-15 BP for each unique item on the enemy's team.",
+	},
+	fastpokebeam: {
+		name: "Fastpoke Beam",
+		shortDesc: "Transforms the target into Slowpoke-Galar.",
+	},
+	pokemoncenter: {
+		name: "Pokemon Center",
+		shortDesc: "Adds a Heal Pulse-only Eviolite Chansey with 4 HP / 252 Def / 252 SpD EVs to the enemy team.",
+	},
+	regularattack: {
+		name: "Regular Attack",
+		shortDesc: "Just a regular attack.",
+	},
+	laserbeam: {
+		name: "Laser Beam",
+		shortDesc: "15% chance to lower foe's accuracy.",
+	},
+	ballkick: {
+		name: "Ball Kick",
+		shortDesc: "You do NOT want to be on the receiving end of this.",
+	},
+	highkick: {
+		name: "High Kick",
+		desc: "This move's power is 20 if the target is shorter than 0.25m, 40 if less than 0.5m, 60 if less than 1m, 80 if less than 2m, 100 if less than 3m, and 120 if greater than or equal to 3m.",
+		shortDesc: "More power the taller the target.",
 	},
 };

@@ -25204,7 +25204,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Inverse Rush",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: null,
 
 		onBasePower(basePower, pokemon, target) {
@@ -25935,7 +25935,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 		name: "Twin Tower Tumbling Terror",
 		pp: 1,
-		priority: -7,
+		priority: 0,
 		flags: {contact: 1, hammer: 1},
 		isZ: "sableviumz",
 		onAfterMove(source) {
@@ -27880,16 +27880,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 	foolsgambit: {
 		num: 485,
 		accuracy: 100,
-		basePower: 120,
+		basePower: 135,
 		category: "Physical",
 		name: "Fool's Gambit",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onTryImmunity(target, source) {
-			return target.hasType(source.getTypes());
-		},
-		secondary: null,
 		target: "allAdjacent",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -28086,6 +28082,393 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Ice",
 		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	tripunch: {
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Tri-Punch",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		type: "???",
+		flags: {protect: 1, mirror: 1},
+		multihit: 3,
+		canContinue: true,
+		onTryHit(target, source, move) {
+			if (move.hit === 1) {
+				move.type === 'Ice';
+			} else if (move.hit === 2) {
+				move.type = 'Electric';
+			} else if (move.hit === 3) {
+				move.type = 'Fire';
+			}
+		},
+		secondary: {
+			chance: 15,
+			onHit(target, source, move) {
+				if (move.hit === 1) {
+					target.trySetStatus('frz', source);
+				} else if (move.hit === 2) {
+					target.trySetStatus('par', source);
+				} else if (move.hit === 3) {
+					target.trySetStatus('brn', source);
+				}
+			},
+		},
+		isNonstandard: "Future",
+	},
+	gigasubfernostrike: {
+		accuracy: true,
+		basePower: 111,
+		category: "Physical",
+		name: "Gigasubferno Strike",
+		pp: 1,
+		priority: 0,
+		flags: {},
+		isZ: "fusjiniumz",
+		target: "normal",
+		type: "???",
+		contestType: "Cool",
+		isNonstandard: "Future",
+		multihit: 3,
+		canContinue: true,
+		onTryHit(target, source, move) {
+			if (move.hit === 1) {
+				move.type === 'Ice';
+			} else if (move.hit === 2) {
+				move.type = 'Electric';
+			} else if (move.hit === 3) {
+				move.type = 'Fire';
+			}
+		},
+		secondary: {
+			chance: 50,
+			onHit(target, source, move) {
+				if (move.hit === 1) {
+					target.trySetStatus('frz', source);
+				} else if (move.hit === 2) {
+					target.trySetStatus('par', source);
+				} else if (move.hit === 3) {
+					target.trySetStatus('brn', source);
+				}
+			},
+		},
+	},
+	backwardslongjump: {
+		num: 136,
+		accuracy: 90,
+		basePower: 90,
+		category: "Physical",
+		name: "Backwards Long Jump",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		hasCrashDamage: true,
+		onMoveFail(target, source, move) {
+			this.damage(source.baseMaxhp / 2, source, source, this.effect);
+		},
+		secondary: null,
+		target: "normal",
+		type: "???",
+		contestType: "Cool",
+		basePowerCallback(pokemon, target, move) {
+			if (!pokemon.volatiles['backwardslongjump'] || move.hit === 1) {
+				pokemon.addVolatile('backwardslongjump');
+			}
+			const bp = this.clampIntRange(move.basePower + 10 * pokemon.volatiles['backwardslongjump'].multiplier, 1, 160);
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		onAfterMoveSecondary(target, source, move) {
+			if (!source.volatiles['backwardslongjump'] || move.hit === 1) {
+				source.addVolatile('backwardslongjump');
+			}
+			const numBoosts = source.volatiles['backwardslongjump'].multiplier;
+			this.boost({ spe: numBoosts }, source);
+		},
+		condition: {
+			duration: 2,
+			onStart() {
+				this.effectState.multiplier = 1;
+			},
+			onRestart() {
+				if (this.effectState.multiplier < 4) {
+					this.effectState.multiplier <<= 1;
+				}
+				this.effectState.duration = 2;
+			},
+		},
+		isNonstandard: "Future",
+	},
+	deepfreeze: {
+		num: 86,
+		accuracy: 90,
+		basePower: 0,
+		category: "Status",
+		name: "Deep Freeze",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		status: 'frz',
+		ignoreImmunity: false,
+		onTryHit(source) {
+			if (source.status) {
+				return false;
+			}
+		},
+		onAfterHit(source, target, move) {
+			source.trySetStatus('frz');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+		zMove: {boost: {spd: 1}},
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	sap: {
+		accuracy: 100,
+		basePower: 20,
+		category: "Physical",
+		name: "Sap",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Sap');
+			},
+			onResidualOrder: 13,
+			onResidual(pokemon) {
+				this.damage(pokemon.baseMaxhp / (pokemon.hasType(['Steel']) ? 4 : 8));
+			},
+			onModifySpe(spe, pokemon) {
+				if (pokemon.hasType('Steel')) {
+					return this.chainModify(0.50);
+				}
+			},
+			onModifyAtk(atk, pokemon) {
+				if (pokemon.hasType('Steel')) {
+					return this.chainModify(0.75);
+				}
+			},
+			onModifySpA(atk, pokemon) {
+				if (pokemon.hasType('Steel')) {
+					return this.chainModify(0.75);
+				}
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Sap');
+			},
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'sap',
+		},
+		target: "normal",
+		type: "Steel",
+		isNonstandard: "Future",
+	},
+	vwlstrk: {
+		num: 86,
+		accuracy: 100,
+		basePower: 50,
+		category: "Special",
+		name: "Vwl Strk",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (!target) return move.basePower;
+
+			let totalVowels = 0;
+			for (let i = 0; i < target.species.name.length; i++) {
+				const character = target.species.name.charAt(i);
+				if (['a', 'e', 'i',' o', 'u'].includes(character)) {
+					totalVowels++;
+				}
+			}
+
+			const bp = this.clampIntRange(move.basePower + 20 * totalVowels, 1, 160);
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		target: "normal",
+		type: "Psychic",
+		isNonstandard: "Future",
+	},
+	itemclaws: {
+		accuracy: 100,
+		basePower: 140,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Item Claws",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (!target) return move.basePower;
+
+			const itemSet = new Set<string>();
+			target.side.pokemon
+				.forEach((pokemon) => { 
+					const item = pokemon.getItem().id || pokemon.lastItem;
+					if (item) itemSet.add(item);
+				});
+
+			const bp = this.clampIntRange(move.basePower - (15 * itemSet.size), 1, 160);
+			return bp;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Cool",
+	},
+	fastpokebeam: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Fastpoke Beam",
+		pp: 5,
+		noPPBoosts: true,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target, pokemon) {
+			if (!target.formeChange('Slowpoke-Galar')) {
+				return false;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		zMove: {effect: 'heal'},
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	pokemoncenter: {
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Pokemon Center",
+		pp: 5,
+		noPPBoosts: true,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target, source) {
+			if (!target) return false;
+			let pokemonCenters = 0;
+			target.side.pokemon.forEach((pokemon) => {
+				if (pokemon.baseSpecies.id === 'chansey') pokemonCenters++;
+			});
+			const shitmon = new Pokemon({
+				name: `Pokemon Center v${pokemonCenters}`,
+				species: 'Chansey',
+				moves: ['Heal Pulse'],
+				evs: {hp: 4, atk: 0, def: 252, spa: 0, spd: 252, spe: 0},
+				item: 'Eviolite',
+			}, target.side);
+			shitmon.position = target.side.pokemon.length;
+			target.side.pokemon.push(shitmon);
+			target.side.pokemonLeft += 1;
+			this.add('teamsize', target.side.id, target.side.pokemon.length);
+		},
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+	},
+	regularattack: {
+		num: 69022,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Regular Attack",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		secondary: null,
+		target: "normal",
+		type: "???",
+		zMove: {basePower: 190},
+		isNonstandard: "Future",
+	},
+	laserbeam: {
+		num: 190,
+		accuracy: 90,
+		basePower: 100,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Laser Beam",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 15,
+			boosts: {
+				accuracy: -1,
+			},
+		},
+		target: "normal",
+		type: "???",
+		contestType: "Tough",
+	},
+	ballkick: {
+		num: 86,
+		accuracy: 95,
+		basePower: 210,
+		category: "Physical",
+		name: "Ball Kick",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, kick: 1, mirror: 1, contact: 1},
+		secondary: {
+			chance: 30,
+			status: 'par',
+			boosts: {
+				def: -1,
+			},
+		},
+		target: "normal",
+		type: "Fighting",
+		zMove: {basePower: 190},
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	highkick: {
+		num: 67,
+		accuracy: 100,
+		basePower: 0,
+		basePowerCallback(pokemon, target) {
+			const targetHeight = target.species.heightm;
+			let bp;
+			if (targetHeight >= 3) {
+				bp = 120;
+			} else if (targetHeight >= 2) {
+				bp = 100;
+			} else if (targetHeight >= 1) {
+				bp = 80;
+			} else if (targetHeight >= 0.5) {
+				bp = 60;
+			} else if (targetHeight >= 0.25) {
+				bp = 40;
+			} else {
+				bp = 20;
+			}
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		category: "Physical",
+		name: "High Kick",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		zMove: {basePower: 160},
+		contestType: "Tough",
 		isNonstandard: "Future",
 	},
 };
