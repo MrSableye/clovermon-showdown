@@ -8554,7 +8554,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	rebuild: {
 		name: "Rebuild",
 		shortDesc: "Charges, then restores 2/3 of its maximum HP, and cures its burn, poison, or paralysis.",
-		
+
 		prepare: "[POKEMON] is reforming itself!",
 	},
 	bigshot: {

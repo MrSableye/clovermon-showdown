@@ -456,7 +456,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	polybrawlw: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU"
+		tier: "OU",
 	},
 	polybrawli: {
 		inherit: true,
@@ -831,7 +831,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	primitool: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "LC"
+		tier: "LC",
 	},
 	tokoyaki: {
 		inherit: true,
