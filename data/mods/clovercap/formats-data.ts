@@ -206,7 +206,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	mimikrab: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "LC",
 	},
 	ankhira: {
 		inherit: true,
@@ -541,7 +541,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	voltocor: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "LC",
 	},
 	wycern: {
 		inherit: true,
@@ -681,7 +681,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	juankey: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "LC",
 	},
 	tarquail: {
 		inherit: true,
