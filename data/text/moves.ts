@@ -8563,7 +8563,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	foolsgambit: {
 		name: "Fool's Gambit",
-		shortDesc: "No additional effect.",
+		shortDesc: "Has 33% recoil.",
 	},
 	trapcard: {
 		name: "Trap Card",
