@@ -35996,7 +35996,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 	    },
 	afloof: {
-	    num: 8043,
+	    num: 42179,
 	    name: "Afloof",
 		types: ["Normal"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -36010,7 +36010,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 	    },
 	burnugget: {
-		num: 8050,
+		num: 42178,
 		name: "Burnugget",
 		types: ["Fire"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -36024,7 +36024,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 	    },
 	shroomag: {
-		num: 8050,
+		num: 42177,
 		name: "Shroomag",
 		types: ["Grass","Electric"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -36038,7 +36038,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 	    },
 	skuba: {
-		num: 8025,
+		num: 42176,
 		name: "Skuba",
 		baseForme: "Pro",
 		types: ["Water"],
@@ -36055,7 +36055,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 		},
 	skubaanti: {
-		num: 8025,
+		num: 42176,
 		name: "Skuba-Anti",
 		baseSpecies: "Skuba",
 		forme: "Anti",
@@ -36072,7 +36072,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	
         },
     turtini: {
-	        num: 8058,
+	        num: 42175,
 	        name: "Turtini",
 	        types: ["Ground"],
 	        genderRatio: {M: 0.5, F: 0.5},
@@ -36086,7 +36086,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	        gen: 8,
         },
 	mimikrab: {
-	   num: 8060,
+	   num: 42174,
 	   name: "Mimikrab",
 	   types: ["Water"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36100,7 +36100,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,
 	},
 	pascal: {
-	   num: 8067,
+	   num: 42173,
 	   name: "Pascal",
 	   types: ["Dark","Normal"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36114,7 +36114,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,
 	},
 	mogumole: {
-	   num: 8202,
+	   num: 42200,
 	   name: "Mogumole",
 	   types: ["Ground","Dragon"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36127,7 +36127,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,
 	},
 	knitten: {
-	   num: 8069,
+	   num: 42172,
 	   name: "Knitten",
 	   types: ["Normal"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36141,7 +36141,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,
 	},
 	nebulite: {
-	   num: 8075,
+	   num: 42180,
 	   name: "Nebulite",
 	   types: ["Water"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36155,7 +36155,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	doomter: {
-	   num: 8099,
+	   num: 42181,
 	   name: "Doomter",
 	   types: ["Steel"],
 	   gender: "M",
@@ -36169,7 +36169,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	seaman: {
-	   num: -80111,
+	   num: -42042,
 	   name: "Seaman",
 	   types: ["???","Water"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36183,7 +36183,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	barabyss: {
-	   num: -80112,
+	   num: -42043,
 	   name: "Barabyss",
 	   types: ["???","Water"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36198,7 +36198,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	flubbster: {
-	   num: -80666,
+	   num: -42666,
 	   name: "Flubbster",
 	   types: ["Normal","Water"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36212,7 +36212,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	blubbastard: {
-	   num: -80667,
+	   num: -42667,
 	   name: "Blubbastard",
 	   types: ["Normal","Water"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36228,7 +36228,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	fleurrium: {
-	   num: 8101,
+	   num: 42182,
 	   name: "Fleurrium",
 	   types: ["Grass","Steel"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36242,7 +36242,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	cheepouf: {
-	   num: 8103,
+	   num: 42183,
 	   name: "Cheepouf",
 	   types: ["Electric","Fire"],
 	   gender: "M",
@@ -36256,7 +36256,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	triderling: {
-	   num: 8105,
+	   num: 42184,
 	   name: "Triderling",
 	   types: ["Bug"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36270,7 +36270,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	whimple: {
-	   num: 8107,
+	   num: 42185,
 	   name: "Whimple",
 	   types: ["Bug"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36284,7 +36284,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	whipscuffle: {
-	   num: 8108,
+	   num: 42186,
 	   name: "Whipscuffle",
 	   types: ["Bug","Fighting"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36300,7 +36300,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	moblin: {
-	   num: 8117,
+	   num: 42187,
 	   name: "Moblin",
 	   types: ["Dark"],
 	   gender: "M",
@@ -36314,7 +36314,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	fangster: {
-	   num: 8118,
+	   num: 42188,
 	   name: "Fangster",
 	   types: ["Dark"],
 	   gender: "M",
@@ -36330,7 +36330,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	voltocor: {
-	   num: 8114,
+	   num: 42189,
 	   name: "Voltocor",
 	   types: ["Electric"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36344,7 +36344,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	volbrat: {
-	   num: 8115,
+	   num: 42190,
 	   name: "Volbrat",
 	   types: ["Electric"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36360,7 +36360,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	garookie: {
-	   num: 8157,
+	   num: 42191,
 	   name: "Garookie",
 	   types: ["Rock"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36374,7 +36374,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	garble: {
-	   num: 8158,
+	   num: 42192,
 	   name: "Garble",
 	   types: ["Rock",],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36390,7 +36390,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	vinedup: {
-	   num: 8195,
+	   num: 42193,
 	   name: "Vinedup",
 	   types: ["Grass","Fire"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36404,7 +36404,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	ramboom: {
-	   num: 8196,
+	   num: 42194,
 	   name: "Ramboom",
 	   types: ["Grass","Fire"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36420,7 +36420,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	juankey: {
-	   num: 8136,
+	   num: 42195,
 	   name: "Juankey",
 	   types: ["Normal"],
 	   genderRatio: {M: 0.75, F: 0.25},
@@ -36434,7 +36434,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	poltire: {
-	   num: 8143,
+	   num: 42196,
 	   name: "Poltire",
 	   types: ["Poison","Ghost"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36448,7 +36448,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	primitool: {
-	   num: 8128,
+	   num: 42197,
 	   name: "Primitool",
 	   types: ["Rock"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36462,7 +36462,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,  
 	},
 	moltama: {
-	   num: 8132,
+	   num: 42198,
 	   name: "Moltama",
 	   types: ["Fire"],
 	   genderRatio: {M: 0.5, F: 0.5},
@@ -36476,7 +36476,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   gen: 8,
 	},
 	polybrawn: {
-		num: 8203,
+		num: 42199,
 		name: "Polybrawn",
 		types: ["Electric", "Fighting"],
 		gender: "N",
@@ -36490,7 +36490,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		formeOrder: ["Polybrawn", "Polybrawn-H", "Polybrawn-W", "Polybrawn-I", "Polybrawn-P", "Polybrawn-K"],
 	},
 	polybrawnh: {
-		num: 8203,
+		num: 42199,
 		name: "Polybrawn-H",
 		baseSpecies: "Polybrawn",
 		forme: "H",
@@ -36505,7 +36505,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		changesFrom: "Polybrawn",
 	},
 	polybrawnw: {
-		num: 8203,
+		num: 42199,
 		name: "Polybrawn-W",
 		baseSpecies: "Polybrawn",
 		forme: "W",
@@ -36520,7 +36520,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		changesFrom: "Polybrawn",
 	},
 	polybrawni: {
-		num: 8203,
+		num: 42199,
 		name: "Polybrawn-I",
 		baseSpecies: "Polybrawn",
 		forme: "I",
@@ -36535,7 +36535,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		changesFrom: "Polybrawn",
 	},
 	polybrawnp: {
-		num: 8203,
+		num: 42199,
 		name: "Polybrawn-P",
 		baseSpecies: "Polybrawn",
 		forme: "P",
@@ -36550,7 +36550,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		changesFrom: "Polybrawn",
 	},
 	polybrawnk: {
-		num: 8203,
+		num: 42199,
 		name: "Polybrawn-K",
 		baseSpecies: "Polybrawn",
 		forme: "K",
