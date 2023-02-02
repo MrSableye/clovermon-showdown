@@ -7761,7 +7761,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	soulcrusher: {
 		name: "Soul Crusher",
 		desc: "Power is multiplied by 999 times if the target has less than or equal to half of its maximum HP remaining. Heals for 100% of the damage the move has dealt.",
-		shortDesc: "999x power if target HP <50%, heals for damage dealt.",
+		shortDesc: "999x power if target HP < 50%, heals for damage dealt.",
 	},
 	tombstoner: {
 		name: "Tombstoner",
@@ -7771,7 +7771,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	fruitjuice: {
 		name: "Fruit Juice",
 		desc: "Power is equal to 120 times the user's Stockpile count. Whether or not this move is successful, the user's Defense and Special Defense decrease by as many stages as Stockpile had increased them, and the user's Stockpile count resets to 0. Lowers the target's Sp.Def by two stages.",
-		shortDesc: "Gets stronger with Stockpile, -2 SpD to the target",
+		shortDesc: "Gets stronger with Stockpile, -2 Sp. Def to the target.",
 	},
 	phantomfang: {
 		name: "Phantom Fang",
@@ -7802,7 +7802,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	brutalpunishment: {
 		name: "Brutal Punishment",
 		desc: "Has a 100% chance to raise the user's Attack and Special Attack by 1 stage. If the user is a Disbeary in Nice Mode, this move is Fairy type. If the user is a Disbeary in Ebil Mode, this move is Dark type. This move cannot be used successfully unless the user's current form, while considering Transform, is Nice or Ebil Mode Disbeary.",
-		shortDesc: "Disbeary: Fairy; Ebil: Dark; 100% +1 Atk and SpA.",
+		shortDesc: "Disbeary: Fairy; Ebil: Dark; 100% +1 Atk and Sp. Atk.",
 	},
 	shinestrike: {
 		name: "Shine Strike",
@@ -7825,7 +7825,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	starseedblast: {
 		name: "Starseed Blast",
 		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
-		shortDesc: "Hits 2-5 times, Special if Sp. Atk > Atk",
+		shortDesc: "Hits 2-5 times, Special if Sp. Atk > Atk.",
 	},
 	brandingblade: {
 		name: "Flare Blitz",
@@ -8034,7 +8034,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	matingpress: {
 		name: "Mating Press",
 		desc: "20% chance to have a child with the opposing mon with no item and only Metronome. Can only occur once for a user.",
-		shortDesc: "Produces a child. Uses Defense",
+		shortDesc: "Produces a child. Uses Defense.",
 
 		activate: "  [SOURCE] had a child with [POKEMON]!",
 		fail: "[POKEMON] had a miscarriage...",
@@ -8186,7 +8186,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	rainbowbeam: {
 		name: "Rainbow Beam",
-		shortDesc: "Adds all types into one attack.",
+		shortDesc: "Adds all types into one attack. Taste the rainbow, motherfucker!",
 	},
 	freikugel: {
 		name: "Freikugel",
@@ -8262,7 +8262,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	heavensblessing: {
 		name: "Heaven's Blessing",
-		shortDesc: "Heals self and activates Wish effect.",
+		shortDesc: "Heals user by 25% of max HP, activates Wish effect.",
 	},
 	heavenpierce: {
 		name: "Heaven Pierce",
@@ -8501,7 +8501,7 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "The power of this move varies. 5% chances for 10 and 150 power, 10% chances for 30 and 110 power, 20% chances for 50 and 90 power, and 30% chance for 70 power. Power doubles if the target is using Thunder Drop.",
 		},
 
-		activate: "  Quality Rip [NUMBER]!",
+		activate: "  Rip Quality: [NUMBER]!",
 	},
 	concussion: {
 		name: "Concussion",
@@ -8541,7 +8541,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	swamp: {
 		name: "Swamp",
-		shortDesc: "For 4 turns, foes' Speed is quartered.",
+		shortDesc: "For 4 turns, foes' Speed is reduced by 20%.",
 		start: "  A swamp enveloped [TEAM]!",
 		end: "  The swamp around [TEAM] disappeared!",
 	},
@@ -8563,7 +8563,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	foolsgambit: {
 		name: "Fool's Gambit",
-		shortDesc: "No additional effect.",
+		shortDesc: "Has 33% recoil.",
 	},
 	trapcard: {
 		name: "Trap Card",
@@ -8575,11 +8575,12 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	heroicstrike: {
 		name: "Heroic Strike",
-		shortDesc: "Ignores immunities. Uses Fighting-type effectiveness if it would be SE. Cannot miss. Special if user's Sp. Atk > Atk. Ignores the target's stat stage changes.",
+		desc: "Ignores immunities. Uses Fighting-type effectiveness if it would be SE. Cannot miss. Special if user's Sp. Atk > Atk. Ignores the target's stat stage changes.",
+		shortDesc: "Ignores immunities. Fighting if it would be SE. Special if user's Sp. Atk > Atk. Ignores target's stat changes.",
 	},
 	heroiconslaught: {
 		name: "Heroic Onslaught",
-		shortDesc: "Hits twice. Ignores immunities. Cannot miss. Special if user's Sp. Atk > Atk. Ignores the target's stat stage changes.",
+		shortDesc: "Hits twice. Ignores immunities. Cannot miss. Special if user's Sp. Atk > Atk. Ignores target's stat changes.",
 	},
 	drinkpotion: {
 		name: "Drink Potion",
@@ -8631,7 +8632,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	deepfreeze: {
 		name: "Deep Freeze",
-		shortDesc: "Freezes the target and self. Fails if self already has a status condition.",
+		shortDesc: "Freezes the target and user. Fails if user already has a status condition.",
 	},
 	sap: {
 		name: "Sap",
