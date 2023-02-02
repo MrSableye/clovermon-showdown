@@ -10503,6 +10503,31 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	barabyss: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	seaman: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	saccestoda: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	flubbster: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	blubbastard: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	autumn: {
 		inherit: true,
 		tier: "OU",

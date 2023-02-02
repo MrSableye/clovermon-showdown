@@ -36464,7 +36464,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	moltama: {
 	   num: 8132,
 	   name: "Moltama",
-	   types: ["Ground"],
+	   types: ["Fire"],
 	   genderRatio: {M: 0.5, F: 0.5},
 	   baseStats: {hp: 55, atk: 35, def: 88, spa: 60, spd: 34, spe: 10},
 	   abilities: {0: "Battle Armor", 1: "Magma Armor", H: "Turboblaze", S: "Sheer Force"},
