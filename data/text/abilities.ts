@@ -2439,7 +2439,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	beamboost: {
 		name: "Beam Boost",
 		desc: "This Pokemon's Beam-based attacks have their power multiplied by 1.5.",
-		shortDesc: "This Pokemon's beam attacks have 1.5x power",
+		shortDesc: "This Pokemon's beam attacks have 1.5x power.",
 	},
 	bigbrain: {
 		name: "Big Brain",
@@ -2624,7 +2624,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	asonehorse: {
 		name: "As One (Horse)",
-		shortDesc: "The combination of Grim Neight, Chilling Neigh, and Striker",
+		shortDesc: "The combination of Grim Neigh, Chilling Neigh, and Striker.",
 
 		start: "  [POKEMON] is ready to yeehaw!",
 	},
@@ -2634,7 +2634,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	flipflops: {
 		name: "Flip Flops",
-		shortDesc: "Doubles Attack and Speed under Inverse Room.",
+		shortDesc: "1.5x Attack and Speed under Inverse Room.",
 	},
 	memepower: {
 		name: "Meme Power",
@@ -2740,7 +2740,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	triforce: {
 		name: "Triforce",
-		shortDesc: "In 3 turns, this Pokemon collects the Triforce, boosting Atk, SpA, and SpD.",
+		shortDesc: "In 3 turns, this Pokemon collects the Triforce, boosting Atk, Sp. Atk, and Sp. Def.",
 	},
 	infection: {
 		name: "Infection",
@@ -2760,9 +2760,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	eyeofblobbos: {
 		name: "Eye of Blobbos",
-		shortDesc: "If Blobbos-Eye, at end of turn changes to Eye-Mouth mode if > 1/2 max HP",
+		shortDesc: "If Blobbos-Eye, at end of the turn, changes to Eye-Mouth mode if below full HP.",
 
-		transform: "You feel a chill down your spine!",
+		transform: "You feel an evil presence watching you!",
 		transformEnd: "Blobbos-Eye-Mouth has calmed down!",
 	},
 	reconstruct: {
@@ -2771,7 +2771,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	ultraego: {
 		name: "Ultra Ego",
-		shortDesc: "Boosts Attack by 1 whenever this mon takes damage from any source.",
+		shortDesc: "Boosts Attack by 1 whenever this Pokemon takes damage from any source.",
 	},
 	limblauncher: {
 		name: "Limb Launcher",
@@ -2840,14 +2840,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	supermentum: {
 		name: "Supermentum",
-		shortDesc: "Switches out after using moves.",
+		shortDesc: "Switches out after using a move.",
 	},
 	muhmentum: {
 		name: "Muhmentum",
-		shortDesc: "Switches out after using offensive moves.",
+		shortDesc: "Switches out after using an offensive move.",
 	},
 	terraform: {
-		name: "Terrform",
+		name: "Terraform",
 		desc: "Changes terrain when using certain moves relating to terrain.",
 		shortDesc: "Changes terrain to benefit certain moves.",
 	},
@@ -2911,6 +2911,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	legendary: {
 		name: "Legendary",
 		desc: "This Pokemon cannot be statused. Prevents this Pokemon's stat stages from lowering. The power of this Pokemon's move is multiplied by 1.5 against Dark- and Dragon-types. Heroic Strike becomes Heroic Onslaught.",
+		shortDesc: "Cannot be statused, Clear Body, x1.5 damage vs Dark/Dragon, Heroic Strike -> Heroic Onslaught.",
 	},
 	copypower: {
 		name: "Copy Power",
@@ -2926,7 +2927,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	inmemoriam: {
 		name: "In Memoriam",
-		shortDesc: "Magic Guard + Flare Heal + Fire+Steel Immunity.",
+		shortDesc: "Magic Guard, Flare Heal, immune to Fire and Steel.",
 
 		start: "  [POKEMON] is always ready to rember ;_;7",
 	},
@@ -2937,7 +2938,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	boardpoweryou: {
 		name: "Board Power (/you/)",
-		shortDesc: "Every Board Power combined except /Z/ and Gorilla Tactics.",
+		shortDesc: "Every Board Power combined except /z/ and Gorilla Tactics.",
 	},
 	capacitance: {
 		name: "Capacitance",
