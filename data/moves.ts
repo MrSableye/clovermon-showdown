@@ -28489,7 +28489,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onEntryHazard(pokemon) {
 				if (pokemon.hasItem('heavydutyboots')) return;
 				const typeMod = this.clampIntRange(pokemon.runEffectiveness(this.dex.getActiveMove('landmind')), -6, 6);
-				this.damage(pokemon.maxhp * Math.pow(2, typeMod) / 2);
+				this.damage(pokemon.maxhp * Math.pow(2, typeMod) / 4);
 				pokemon.side.removeSideCondition('landmind');
 			},
 		},
