@@ -39974,11 +39974,11 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Normal"],
 		gender: "N",
 		baseStats: {
-			hp: 75,
+			hp: 80,
 			atk: 65,
-			def: 75,
+			def: 80,
 			spa: 65,
-			spd: 75,
+			spd: 80,
 			spe: 65,
 		},
 		abilities: {
