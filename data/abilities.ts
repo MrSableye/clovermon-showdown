@@ -9735,14 +9735,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const previousPokemon = this.effectState.switchedPokemon[target.position] as Pokemon;
 			const previousEffectiveness = previousPokemon.runEffectiveness(move);
 			const currentEffectiveness = target.runEffectiveness(move);
-			this.debug('Previous mon effectiveness ' + previousEffectiveness);
-			this.debug('Current mon effectiveness ' + currentEffectiveness);
 			if (previousEffectiveness < 0) {
 				if (currentEffectiveness > 0) {
-					this.debug('Keikaku boost');
+					this.add('-activate', pokemon, 'ability: All According to Keikaku (Plan)');
 					this.chainModify(2);
 				} else if (currentEffectiveness < 0) {
-					this.debug('Keikaku deboost');
 					this.chainModify(0.25);
 				}
 			}
