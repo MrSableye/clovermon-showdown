@@ -2981,4 +2981,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		activate: "  [POKEMON] harnessed the power of the Weedles!",
 	},
+	fourwarn: {
+		name: "Fourwarn",
+		desc: "On switch-in, this Pokemon is alerted to every opponent's move.",
+		shortDesc: "On switch-in, this Pokemon is alerted to every opponent's move.",
+
+		activate: "  [TARGET]'s [MOVE] was revealed!",
+		activateNoTarget: "  [POKEMON]'s Fourwarn alerted it to [MOVE]!",
+	},
 };

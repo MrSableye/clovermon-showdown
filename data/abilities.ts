@@ -9697,4 +9697,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "In Memoriam",
 		rating: 3.5,
 	},
+	fourwarn: {
+		onStart(pokemon) {
+			for (const target of pokemon.foes()) {
+				for (const moveSlot of target.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.move);
+					this.add('-activate', pokemon, 'ability: Fourwarn', move, '[of] ' + target);
+				}
+			}
+		},
+		name: "Forewarn",
+		isNonstandard: "Future",
+	},
 };
