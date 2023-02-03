@@ -1743,4 +1743,16 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	fourwarn: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	anythingyoucando: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	allaccordingtokeikakuplan: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

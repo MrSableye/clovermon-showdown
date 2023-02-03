@@ -4383,4 +4383,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	landmind: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

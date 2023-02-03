@@ -2311,4 +2311,8 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	charger: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
