@@ -27796,7 +27796,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Sly Squall",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, wind: 1},
 		beforeMoveCallback(source, target, move) {
 			if (source.illusion) move.willCrit = true;
 		},
@@ -27839,7 +27839,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.add('-sidestart', targetSide, 'swamp');
 			},
 			onModifySpe(spe, pokemon) {
-				return this.chainModify(0.25);
+				return this.chainModify(0.80);
 			},
 			onSideResidualOrder: 26,
 			onSideResidualSubOrder: 9,
@@ -27880,12 +27880,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 	foolsgambit: {
 		num: 485,
 		accuracy: 100,
-		basePower: 135,
+		basePower: 115,
 		category: "Physical",
 		name: "Fool's Gambit",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		recoil: [33, 100],
 		target: "allAdjacent",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -28098,7 +28099,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		canContinue: true,
 		onTryHit(target, source, move) {
 			if (move.hit === 1) {
-				move.type === 'Ice';
+				move.type = 'Ice';
 			} else if (move.hit === 2) {
 				move.type = 'Electric';
 			} else if (move.hit === 3) {
@@ -28136,7 +28137,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		canContinue: true,
 		onTryHit(target, source, move) {
 			if (move.hit === 1) {
-				move.type === 'Ice';
+				move.type = 'Ice';
 			} else if (move.hit === 2) {
 				move.type = 'Electric';
 			} else if (move.hit === 3) {
@@ -28186,7 +28187,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				source.addVolatile('backwardslongjump');
 			}
 			const numBoosts = source.volatiles['backwardslongjump'].multiplier;
-			this.boost({ spe: numBoosts }, source);
+			this.boost({spe: numBoosts}, source);
 		},
 		condition: {
 			duration: 2,
@@ -28287,7 +28288,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			let totalVowels = 0;
 			for (let i = 0; i < target.species.name.length; i++) {
 				const character = target.species.name.charAt(i);
-				if (['a', 'e', 'i',' o', 'u'].includes(character)) {
+				if (['a', 'e', 'i', ' o', 'u'].includes(character)) {
 					totalVowels++;
 				}
 			}
@@ -28314,8 +28315,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 
 			const itemSet = new Set<string>();
 			target.side.pokemon
-				.forEach((pokemon) => { 
-					const item = pokemon.getItem().id || pokemon.lastItem;
+				.forEach((sidePokemon) => {
+					const item = sidePokemon.getItem().id || sidePokemon.lastItem;
 					if (item) itemSet.add(item);
 				});
 

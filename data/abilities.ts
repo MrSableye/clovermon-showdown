@@ -7712,12 +7712,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk) {
 			if (this.field.getPseudoWeather('inverseroom')) {
-				return this.chainModify(2);
+				return this.chainModify(1.5);
 			}
 		},
 		onModifySpe(spe, pokemon) {
 			if (this.field.getPseudoWeather('inverseroom')) {
-				return this.chainModify(2);
+				return this.chainModify(1.5);
 			}
 		},
 		name: "Flip Flops",
@@ -9662,7 +9662,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	inmemoriam: {
 		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Fire'||move.type === 'Steel') {
+			if (target !== source && move.type === 'Fire' || move.type === 'Steel') {
 				this.add('-immune', target, '[from] ability: In Memoriam');
 				this.add('-message', `AND THE ROCKETS RED GLARE`);
 				return null;

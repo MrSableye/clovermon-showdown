@@ -443,32 +443,32 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	polybrawl: {
+	polybrawn: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	polybrawlh: {
+	polybrawnh: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	polybrawlw: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU"
-	},
-	polybrawli: {
+	polybrawnw: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	polybrawlp: {
+	polybrawni: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
-	polybrawlk: {
+	polybrawnp: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	polybrawnk: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -831,7 +831,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	primitool: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "LC"
+		tier: "LC",
 	},
 	tokoyaki: {
 		inherit: true,

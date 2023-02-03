@@ -11,8 +11,9 @@ export const Scripts: ModdedBattleScriptsData = {
 				pokemon.baseMoves.includes(this.dex.toID(altForme.requiredMove)) && !item.zMove) {
 				return altForme.name;
 			}
+			const isBlobbos = species.baseSpecies.includes('Blobbos');
 			// a hacked-in Megazard X can mega evolve into Megazard Y, but not into Megazard X
-			if (item.megaEvolves === species.baseSpecies && item.megaStone !== species.name) {
+			if (!isBlobbos && item.megaEvolves === species.baseSpecies && item.megaStone !== species.name) {
 				return item.megaStone;
 			}
 			// work around for blobbos-kalos

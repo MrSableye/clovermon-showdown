@@ -7964,6 +7964,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	knitten: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	regishort: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -7977,6 +7981,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	turturret: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	turtini: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8056,6 +8064,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	cheepouf: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	glaciun: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -8076,6 +8088,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	pascal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	dinomight: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -8093,6 +8109,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	spycrab: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	mimikrab: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8136,7 +8156,15 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	moltama: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	junkgeist: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	poltire: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8165,6 +8193,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	skubaanti: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	skubmarine: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	skubmarineanti: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8212,7 +8248,19 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	fangster: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	moblin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	fungnet: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	shroomag: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8252,6 +8300,34 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	mogumole: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	polybrawn: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	polybrawnh: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	polybrawnw: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	polybrawni: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	polybrawnp: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	polybrawnk: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	strollge: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -8260,7 +8336,15 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	afloof: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	eccosmic: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	nebulite: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8288,6 +8372,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	volbrat: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	voltocor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	wycern: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -8301,6 +8393,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	cristanium: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fleurrium: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8360,6 +8456,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	garble: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	garookie: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	toastort: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -8368,7 +8472,15 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	doomter: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	equuan: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	juankey: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8472,11 +8584,23 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	whipscuffle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	whimple: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	nyanonite: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
 	primiteve: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	primitool: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8504,6 +8628,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	burnugget: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	larvitty: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -8525,6 +8653,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	tarantagon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	triderling: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -8600,6 +8732,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	ramboom: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	vinedup: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	fucker: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -8633,142 +8773,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	blubbastard: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	mogumole: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	polybrawn: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	polybrawnh: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	polybrawnw: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	polybrawni: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	polybrawnp: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	polybrawnk: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	knitten: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	voltocor: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	volbrat: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	moblin: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	fangster: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	whimple: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	whipscuffle: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	pascal: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	moltama: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	juankey: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	mimikrab: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	ramboom: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	vinedup: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	afloof: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	burnugget: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	cheepouf: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	doomter: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	fleurrium: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	garookie: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	garble: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	nebulite: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-		},
-	primitool: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	shroomag: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	skubmarine: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	skubmarineanti: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	triderling: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	turtini: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

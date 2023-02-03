@@ -7710,11 +7710,11 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		onModifySpAPriority: 1,
 		onModifySpA(spa, pokemon) {
-			if (['Skubmarine-Anti', 'Skuba-Anti'].includes(pokemon.species.name)) { 
+			if (['Skubmarine-Anti', 'Skuba-Anti'].includes(pokemon.species.name)) {
 				return this.chainModify(1.5);
 			}
 		},
-		itemUser: ["Skubmarine", "Skubmarine-Anti","Skuba","Skuba-Anti"],
+		itemUser: ["Skubmarine", "Skubmarine-Anti", "Skuba", "Skuba-Anti"],
 		isNonstandard: "Future",
 	},
 	rustedcrown: {
