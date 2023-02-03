@@ -8490,4 +8490,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	charger: {
+		name: "Charger",
+		spritenum: 60,
+		onHit(target, source, move) {
+			if (move.type === 'Electric' || move.id.includes('energy')) {
+				target.addVolatile('charge');
+			}
+		},
+		isNonstandard: "Future",
+	},
 };

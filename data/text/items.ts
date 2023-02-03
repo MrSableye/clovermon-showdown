@@ -2597,4 +2597,8 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Fusjinium Z",
 		desc: "If held by Fusjahl with Tri-Punch, it can use Gigasubferno Strike.",
 	},
+	charger: {
+		name: "Charger",
+		desc: "If hit by an Electric-type or Energy move, this Pokemon gains the Charge effect.",
+	},
 };

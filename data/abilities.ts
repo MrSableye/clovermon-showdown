@@ -9730,6 +9730,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onBasePower(basePower, pokemon, target, move) {
 			if (!target) return;
+			if (!this.effectState.switchedPokemon) this.effectState.switchedPokemon = {};
 			if (!this.effectState.switchedPokemon[target.position]) return;
 			const previousPokemon = this.effectState.switchedPokemon[target.position] as Pokemon;
 			const previousEffectiveness = previousPokemon.runEffectiveness(move);
