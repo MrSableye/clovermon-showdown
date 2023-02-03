@@ -9706,7 +9706,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
-		name: "Forewarn",
+		name: "Fourwarn",
 		isNonstandard: "Future",
 	},
 };
