@@ -2989,4 +2989,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		activate: "  [TARGET]'s [MOVE] was revealed!",
 		activateNoTarget: "  [POKEMON]'s Fourwarn alerted it to [MOVE]!",
 	},
+	anythingyoucando: {
+		name: "Anything You Can Do",
+		shortDesc: "All foes that used the same move as this Pokemon lose 1/8 HP at the end of the turn.",
+	},
 };

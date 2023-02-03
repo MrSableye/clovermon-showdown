@@ -9709,4 +9709,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Fourwarn",
 		isNonstandard: "Future",
 	},
+	anythingyoucando: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (!pokemon.moveThisTurn) return;
+			for (const target of pokemon.foes()) {
+				if (pokemon.moveThisTurn !== target.moveThisTurn) return;
+				this.damage(target.baseMaxhp / 8, target, pokemon);
+			}
+		},
+		name: "Anything You Can Do",
+		isNonstandard: "Future",
+	},
 };
