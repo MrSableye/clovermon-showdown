@@ -9722,4 +9722,31 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Anything You Can Do",
 		isNonstandard: "Future",
 	},
+	allaccordingtokeikakuplan: {
+		name: "All According to Keikaku (Plan)",
+		onBeforeSwitchOut(pokemon) {
+			if (!this.effectState.switchedPokemon) this.effectState.switchedPokemon = {};
+			this.effectState.switchedPokemon[pokemon.position] = pokemon;
+		},
+		onBasePower(basePower, pokemon, target, move) {
+			if (!target) return;
+			if (!this.effectState.switchedPokemon[target.position]) return;
+			const previousPokemon = this.effectState.switchedPokemon[target.position] as Pokemon;
+			const previousEffectiveness = previousPokemon.runEffectiveness(move);
+			const currentEffectiveness = target.runEffectiveness(move);
+			if (previousEffectiveness < 0) {
+				if (currentEffectiveness > 0) {
+					this.debug('Keikaku boost');
+					this.chainModify(2);
+				} else if (currentEffectiveness < 0) {
+					this.debug('Keikaku deboost');
+					this.chainModify(0.25);
+				}
+			}
+		},
+		onResidual() {
+			this.effectState.switchedPokemon = {};
+		},
+		isNonstandard: "Future",
+	},
 };

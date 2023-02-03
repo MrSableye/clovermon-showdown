@@ -2993,4 +2993,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Anything You Can Do",
 		shortDesc: "All foes that used the same move as this Pokemon lose 1/8 HP at the end of the turn.",
 	},
+	allaccordingtokeikakuplan: {
+		name: "All According to Keikaku (Plan)",
+		shortDesc: "2x BP when using a move SE against a mon when the previous mon in its slot resisted the move.",
+	},
 };
