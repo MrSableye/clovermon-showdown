@@ -8671,4 +8671,13 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "This move's power is 20 if the target is shorter than 0.25m, 40 if less than 0.5m, 60 if less than 1m, 80 if less than 2m, 100 if less than 3m, and 120 if greater than or equal to 3m.",
 		shortDesc: "More power the taller the target.",
 	},
+	landmind: {
+		name: "Land Mind",
+		desc: "Sets up a hazard on the opposing side of the field, damaging the next opposing Pokemon that switches in. Fails if the effect is already active on the opposing side. Foes lose 1/32, 1/16, 1/8, 1/4, or 1/2 of their maximum HP, rounded down, based on their weakness to the Psychic type; 0.25x, 0.5x, neutral, 2x, or 4x, respectively. Removed on first activation.",
+		shortDesc: "Hurts foes on switch-in. Factors Psychic weakness. Removed on first activation.",
+
+		start: "  A psychic trap was set around [TEAM]!",
+		end: "  The psychic trap was removed from around [TEAM]!",
+		damage: "  [POKEMON] into a psychic trap!",
+	},
 };

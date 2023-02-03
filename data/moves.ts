@@ -28472,4 +28472,32 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
+	landmind: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Land Mind",
+		pp: 20,
+		priority: 0,
+		flags: {reflectable: 1},
+		sideCondition: 'landmind',
+		condition: {
+			// this is a side condition
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Land Mind');
+			},
+			onEntryHazard(pokemon) {
+				if (pokemon.hasItem('heavydutyboots')) return;
+				const typeMod = this.clampIntRange(pokemon.runEffectiveness(this.dex.getActiveMove('landmind')), -6, 6);
+				this.damage(pokemon.maxhp * Math.pow(2, typeMod) / 2);
+				pokemon.side.removeSideCondition('landmind');
+			},
+		},
+		secondary: null,
+		target: "foeSide",
+		type: "Psychic",
+		zMove: {boost: {spd: 1}},
+		contestType: "Smart",
+		isNonstandard: "Future",
+	},
 };
