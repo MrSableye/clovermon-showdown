@@ -9724,7 +9724,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	allaccordingtokeikakuplan: {
 		name: "All According to Keikaku (Plan)",
-		onBeforeSwitchOut(pokemon) {
+		onFoeSwitchOut(pokemon) {
 			if (!this.effectState.switchedPokemon) this.effectState.switchedPokemon = {};
 			this.effectState.switchedPokemon[pokemon.position] = pokemon;
 		},
@@ -9735,6 +9735,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const previousPokemon = this.effectState.switchedPokemon[target.position] as Pokemon;
 			const previousEffectiveness = previousPokemon.runEffectiveness(move);
 			const currentEffectiveness = target.runEffectiveness(move);
+			this.debug('Previous mon effectiveness ' + previousEffectiveness);
+			this.debug('Current mon effectiveness ' + currentEffectiveness);
 			if (previousEffectiveness < 0) {
 				if (currentEffectiveness > 0) {
 					this.debug('Keikaku boost');
