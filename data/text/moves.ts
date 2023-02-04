@@ -8699,7 +8699,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	eructlas: {
 		name: "Eruc Tlas",
 		desc: "Heals the target equal to 1/4 of its maximum HP (1/8 if the target is Steel or Water type), rounded down, at the end of each turn during effect. This effect ends when the target is no longer active.",
-		shortDesc: "Heals 1/4 max HP each turn; 1/8 on Steel, Water.",
+		shortDesc: "Heals the target 1/4 max HP each turn; 1/8 on Steel, Water.",
 
 		start: "  !deruc tlas gnieb si [POKEMON]",
 		damage: "  !eruC tlaS yb truh si [POKEMON]",
