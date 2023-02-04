@@ -3009,4 +3009,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Scaredy Cat",
 		shortDesc: "This Pokemon switches out when Intimidated."
 	},
+	shroomspeed: {
+		name: "Shroom Speed",
+		shortDesc: "This Pokemon's non-Status moves have priority raised by 1.",
+	},
 };

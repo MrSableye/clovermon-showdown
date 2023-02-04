@@ -9792,4 +9792,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Scaredy Cat",
 		isNonstandard: "Future",
 	},
+	shroomspeed: {
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.category !== 'Status') {
+				return priority + 1;
+			}
+		},
+		name: "Shroom Speed",
+		isNonstandard: "Future",
+	},
 };

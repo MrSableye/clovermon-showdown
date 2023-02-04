@@ -1767,4 +1767,8 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	shroomspeed: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
