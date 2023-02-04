@@ -8708,4 +8708,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "De-Population Bomb",
 		shortDesc: "No additional effect.",
 	},
+	glaiverest: {
+		name: "Glaive Rest",
+		shortDesc: "User sleeps 2 turns and restores HP and status. User takes sure-hit 2x damage until its next turn.",
+	},
 };
