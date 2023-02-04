@@ -2997,4 +2997,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "All According to Keikaku (Plan)",
 		shortDesc: "2x BP when using a move SE against a mon when the previous mon in its slot resisted the move. 0.25x BP when using a move resisted against a mon when the previous mon also resisted it.",
 	},
+	goodaszinc: {
+		name: "Good as Zinc",
+		shortDesc: "This Pokemon cannot be confused.",
+	}
 };

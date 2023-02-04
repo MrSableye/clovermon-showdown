@@ -1755,4 +1755,8 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	goodaszinc: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

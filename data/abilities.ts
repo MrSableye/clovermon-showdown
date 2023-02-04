@@ -9749,4 +9749,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		isNonstandard: "Future",
 	},
+	goodaszinc: {
+		onUpdate(pokemon) {
+			if (pokemon.volatiles['confusion']) {
+				this.add('-activate', pokemon, 'ability: Good as Zinc');
+				pokemon.removeVolatile('confusion');
+			}
+		},
+		onTryAddVolatile(status, pokemon) {
+			if (status.id === 'confusion') return null;
+		},
+		onHit(target, source, move) {
+			if (move?.volatileStatus === 'confusion') {
+				this.add('-immune', target, 'confusion', '[from] ability: Good as Zinc');
+			}
+		},
+		name: "Good as Zinc",
+		isNonstandard: "Future",
+	},
 };
