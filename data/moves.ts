@@ -28517,4 +28517,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Water",
 		isNonstandard: "Future",
 	},
+	firstrespects: {
+		accuracy: 100,
+		basePower: 120,
+		basePowerCallback(pokemon, target, move) {
+			return Math.max(1, 120 - 20 * pokemon.side.totalFainted);
+		},
+		category: "Physical",
+		name: "First Respects",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+	},
 };

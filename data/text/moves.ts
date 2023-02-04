@@ -8685,4 +8685,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power is equal to 140-(X*20), where X is the total number of times the user has been hit by a damaging attack during the battle, even if the user did not lose HP from the attack. X cannot be greater than 6 and does not reset upon switching out or fainting. Each hit of a multi-hit attack is counted, but confusion damage is not counted.",
 		shortDesc: "-20 power for each time user was hit. Max 6 hits.",
 	},
+	firstrespects: {
+		name: "First Respects",
+		desc: "Power is equal to 120-(X*20), where X is the total number of times any Pokemon has fainted on the user's side, and X cannot be lower than 1.",
+		shortDesc: "-20 power for each time a party member fainted.",
+	},
 };
