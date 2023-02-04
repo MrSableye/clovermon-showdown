@@ -9824,4 +9824,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Supreme Underlord",
 		isNonstandard: "Future",
 	},
+	altruist: {
+		onAfterBoost(boost, target, source, effect) {
+			if (effect?.name === 'Altruist') return;
+			const positiveBoosts: Partial<BoostsTable> = {};
+			let i: BoostID;
+			for (i in boost) {
+				if (boost[i]! > 0) {
+					positiveBoosts[i] = boost[i];
+				}
+			}
+			if (Object.keys(positiveBoosts).length < 1) return;
+			for (const foe of target.adjacentFoes()) {
+				this.boost(positiveBoosts, foe, target, null, true);
+			}
+		},
+		name: "Altruist",
+		isNonstandard: "Future",
+	},
 };

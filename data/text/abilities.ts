@@ -3020,4 +3020,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		activate: "  [POKEMON] gained strength from the living!",
 	},
+	altruist: {
+		name: "Altruist",
+		shortDesc: "When this Pokemon has a stat stage raised, all opposing Pokemon copy the effect.",
+	},
 };
