@@ -4387,4 +4387,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	calmfist: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

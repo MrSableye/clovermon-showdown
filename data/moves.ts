@@ -28501,4 +28501,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Smart",
 		isNonstandard: "Future",
 	},
+	calmfist: {
+		accuracy: 100,
+		basePower: 140,
+		basePowerCallback(pokemon) {
+			return Math.max(20, 140 - 20 * pokemon.timesAttacked);
+		},
+		category: "Physical",
+		name: "Calm Fist",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		isNonstandard: "Future",
+	},
 };
