@@ -28503,9 +28503,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	calmfist: {
 		accuracy: 100,
-		basePower: 140,
+		basePower: 160,
 		basePowerCallback(pokemon) {
-			return Math.max(20, 140 - 20 * pokemon.timesAttacked);
+			return Math.max(40, 160 - 20 * pokemon.timesAttacked);
 		},
 		category: "Physical",
 		name: "Calm Fist",
@@ -28519,7 +28519,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	firstrespects: {
 		accuracy: 100,
-		basePower: 120,
+		basePower: 140,
 		basePowerCallback(pokemon, target, move) {
 			return Math.max(1, 120 - 20 * pokemon.side.totalFainted);
 		},
