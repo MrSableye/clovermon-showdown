@@ -9782,4 +9782,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Half-Baked Body",
 		isNonstandard: "Future",
 	},
+	scaredycat: {
+		onBoost(boost, target, source, effect) {
+			if (effect.name === 'Intimidate') {
+				target.switchFlag = true;
+				this.add('-activate', target, 'ability: Scaredy Cat');
+			}
+		},
+		name: "Scaredy Cat",
+		isNonstandard: "Future",
+	},
 };

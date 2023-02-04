@@ -1763,4 +1763,8 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	scaredycat: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

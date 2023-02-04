@@ -3005,4 +3005,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Half-Baked Body",
 		shortDesc: "The power of Fire-type attacks against this Pokemon is halved and raises its Defense by 1 stage when hit by a Fire-type move.",
 	},
+	scaredycat: {
+		name: "Scaredy Cat",
+		shortDesc: "This Pokemon switches out when Intimidated."
+	},
 };
