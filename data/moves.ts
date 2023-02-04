@@ -28594,4 +28594,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Fairy",
 	},
+	depopulationbomb: {
+		accuracy: true,
+		basePower: 200,
+		category: "Special",
+		name: "De-Population Bomb",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+		multihit: 0,
+		multiaccuracy: true,
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
 };

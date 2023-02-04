@@ -8704,4 +8704,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  !deruc tlas gnieb si [POKEMON]",
 		damage: "  !eruC tlaS yb truh si [POKEMON]",
 	},
+	depopulationbomb: {
+		name: "De-Population Bomb",
+		desc: "Hits 0 times.",
+		shortDesc: "Hits 0 times.",
+	},
 };
