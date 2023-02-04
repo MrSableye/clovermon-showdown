@@ -9767,4 +9767,19 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Good as Zinc",
 		isNonstandard: "Future",
 	},
+	halfbakedbody: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fire') {
+				this.boost({def: 1});
+			}
+		},
+		onSourceBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				return this.chainModify(0.5);
+			}
+		},
+		isBreakable: true,
+		name: "Half-Baked Body",
+		isNonstandard: "Future",
+	},
 };

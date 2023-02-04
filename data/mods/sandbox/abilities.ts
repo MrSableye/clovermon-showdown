@@ -1759,4 +1759,8 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	halfbakedbody: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
