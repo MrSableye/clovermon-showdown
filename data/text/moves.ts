@@ -8693,5 +8693,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	unshedtail: {
 		name: "Unshed Tail",
 		desc: "Removes the user's substitute and switches into another. Heals the new mon for the removed substitute's health.",
+
+		heal: "  [POKEMON] restored its tail!",
 	},
 };

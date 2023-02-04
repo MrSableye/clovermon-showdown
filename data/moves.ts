@@ -28541,19 +28541,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1, heal: 1},
-		slotCondition: 'Unshed Tail',
+		slotCondition: 'unshedtail',
 		condition: {
 			duration: 2,
 			onStart(pokemon, source) {
 				this.effectState.hp = pokemon.volatiles['substitute'].hp
 			},
-			onResidualOrder: 4,
-			onEnd(target) {
-				if (target && !target.fainted) {
-					const damage = this.heal(this.effectState.hp, target, target);
-					if (damage) {
-						this.add('-heal', target, target.getHealth, '[from] move: Unshed Tail', '[wisher] ' + this.effectState.source.name);
-					}
+			onSwap(target) {
+				if (!target.fainted) {
+					target.heal(this.effectState.hp);
+					this.add('-heal', target, target.getHealth, '[from] move: Unshed Tail');
+					target.side.removeSlotCondition(target, 'unshedtail');
 				}
 			},
 		},
