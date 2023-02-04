@@ -28565,4 +28565,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {effect: 'clearnegativeboost'},
 		isNonstandard: "Future",
 	},
+	eructlas: {
+		num: 864,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Eruc Tlas",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Eruc Tlas');
+			},
+			onResidualOrder: 13,
+			onResidual(pokemon) {
+				this.heal(pokemon.baseMaxhp / (!pokemon.hasType(['Water', 'Steel']) ? 4 : 8));
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Eruc Tlas');
+			},
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'eructlas',
+		},
+		target: "normal",
+		type: "Fairy",
+	},
 };
