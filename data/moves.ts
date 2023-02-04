@@ -28533,4 +28533,38 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		isNonstandard: "Future",
 	},
+	unshedtail: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Unshed Tail",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		slotCondition: 'Unshed Tail',
+		condition: {
+			duration: 2,
+			onStart(pokemon, source) {
+				this.effectState.hp = pokemon.volatiles['substitute'].hp
+			},
+			onResidualOrder: 4,
+			onEnd(target) {
+				if (target && !target.fainted) {
+					const damage = this.heal(this.effectState.hp, target, target);
+					if (damage) {
+						this.add('-heal', target, target.getHealth, '[from] move: Unshed Tail', '[wisher] ' + this.effectState.source.name);
+					}
+				}
+			},
+		},
+		onTryHit(source) {
+			if (!source.volatiles['substitute']) return false;
+		},
+		selfSwitch: true,
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {effect: 'clearnegativeboost'},
+		isNonstandard: "Future",
+	},
 };

@@ -4395,4 +4395,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	unshedtail: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

@@ -8690,4 +8690,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power is equal to 140-(X*20), where X is the total number of times any Pokemon has fainted on the user's side, and X cannot be lower than 1.",
 		shortDesc: "-20 power for each time a party member fainted.",
 	},
+	unshedtail: {
+		name: "Unshed Tail",
+		desc: "Removes the user's substitute and switches into another. Heals the new mon for the removed substitute's health.",
+	},
 };
