@@ -1771,4 +1771,8 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	supremeunderlord: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

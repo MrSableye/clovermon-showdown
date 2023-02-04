@@ -3013,4 +3013,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Shroom Speed",
 		shortDesc: "This Pokemon's non-Status moves have priority raised by 1.",
 	},
+	supremeunderlord: {
+		name: "Supreme Underlord",
+		desc: "This Pokemon's moves have their power multiplied by 1+((5-X)*0.1), where X is the total number of times any Pokemon has fainted on the user's side when this Ability became active, and X cannot be greater than 5.",
+		shortDesc: "This Pokemon's moves have Pokemon's moves have 10% more power for each living ally, up to 5 allies.",
+
+		activate: "  [POKEMON] gained strength from the living!",
+	},
 };
