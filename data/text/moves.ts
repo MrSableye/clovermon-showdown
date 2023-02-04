@@ -8706,7 +8706,6 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	depopulationbomb: {
 		name: "De-Population Bomb",
-		desc: "Hits 0 times.",
-		shortDesc: "Hits 0 times.",
+		shortDesc: "No additional effect.",
 	},
 };
