@@ -28696,4 +28696,189 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 		isNonstandard: "Future",
 	},
+	
+	saltsprinkle: {
+		num: 1573,
+		accuracy: 100,
+		basePower: 65,
+		category: "Special",
+		name: "Salt Sprinkle",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Water'|| type === 'Steel') return 1;
+		},
+		basePowerCallback(pokemon, target, move) {
+			if (target.status || target.hasAbility('comatose')) {
+				this.debug('BP doubled from status condition');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		target: "normal",
+		isNonstandard: "Future",
+		type: "Rock",
+		contestType: "Tough",
+	},
+	shuttleloop: {
+		num: 812,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		name: "Shuttle Loop",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		selfSwitch: true,
+		secondary: null,
+		critRatio: 2,
+		target: "normal",
+		type: "Flying",
+		isNonstandard: "Future",
+		contestType: "Cool",
+	},
+	holdit: {
+		num: 1105,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Hold It!",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		heal: [4, 5],
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('taunt');
+			}
+		},
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {effect: 'clearnegativeboost'},
+		isNonstandard: "Future",
+		contestType: "Clever",
+	},
+	objection: {
+		num: 428,
+		accuracy: 90,
+		basePower: 100,
+		category: "Physical",
+		name: "Objection!",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Fighting",
+		isNonstandard: "Future",
+		contestType: "Clever",
+	},
+	takethat: {
+		num: 1212,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Take That!",
+		pp: 5,
+		priority: 0,
+		flags: {reflectable: 1, mirror: 1},
+		onHit(target, source, move) {
+			return target.addVolatile('trapped', source, move, 'trapper');
+		},
+		volatileStatus: 'confusion',
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		zMove: {boost: {spe: 1}},
+		isNonstandard: "Future",
+		contestType: "Beautiful",
+	},
+	plushrush: {
+		num: 1528,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Plush Rush",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 4],
+		secondary: null,
+		target: "normal",
+		type: "???",
+		isNonstandard: "Future",
+		contestType: "Tough",
+	},
+	seaoffire: {
+		num: 1001,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sea Of Fire",
+		pp: 5,
+		priority: 0,
+		flags: {mirror: 1},
+		sideCondition: 'seaoffire',
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('seaoffire');
+				}
+			},
+		},
+		condition: {
+			duration: 4,
+			durationCallback(target, source, effect) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-activate', source, 'ability: Persistent', effect);
+					return 6;
+				}
+				return 4;
+			},
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'seaoffire');
+			},
+			onResidual(pokemon) {
+				if (!pokemon.hasType('Fire')) this.damage(pokemon.baseMaxhp / 8, pokemon);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 9,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'seaoffire');
+			},
+		},
+		secondary: null,
+		target: "all",
+		type: "Fire",
+		isNonstandard: "Future",
+		zMove: {boost: {spd: 1}},
+		contestType: "Beautiful",
+	},
+	tridentcharge: {
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Trident Charge",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'torment',
+		},
+		onBasePower(basePower, pokemon, target) {
+			if (this.field.getPseudoWeather('seaoffire')) {
+				return this.chainModify(1.5);
+			}
+		},
+		target: "normal",
+		type: "Fire",
+		isNonstandard: "Future",
+		maxMove: {basePower: 140},
+	},
 };
