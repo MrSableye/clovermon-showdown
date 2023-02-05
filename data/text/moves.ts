@@ -8712,4 +8712,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Glaive Rest",
 		shortDesc: "User sleeps 2 turns and restores HP and status. User takes sure-hit 2x damage until its next turn.",
 	},
+	pobybbolb: {
+		name: "Pob Ybbolb",
+		shortDesc: "Raises accuracy when this move lands.",
+	},
+	eronsrepus: {
+		name: "Erons Repus",
+		shortDesc: "The user falls asleep after using this attack.",
+	},
 };

@@ -10888,4 +10888,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	blobbosforbidden: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sobbolb: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
