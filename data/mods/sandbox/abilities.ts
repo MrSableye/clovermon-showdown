@@ -1779,4 +1779,24 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	magmaticeruption: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shrimpleas: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cellshield: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hellfirerush: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	swampforce: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

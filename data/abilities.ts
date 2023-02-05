@@ -8861,6 +8861,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 229,
 		isNonstandard: "Future",
 	},
+	magmaticeruption: {
+		onStart(source) {
+			for (const side of source.side.foeSidesWithConditions()) {
+				side.addSideCondition('seaoffire');
+			}
+		},
+
+		name: "Magmatic Eruption",
+		rating: 4,
+		num: 1230,
+		isNonstandard: "Future",
+	},
 	boardpoweryou: {
 		name: "Board Power (/you/)",
 		onTryHit(pokemon, target, move) {
@@ -9840,6 +9852,80 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		name: "Altruist",
+		isNonstandard: "Future",
+	},
+	hellfirerush: {
+		onModifyAtkPriority: 5,
+		onModifySpe(spe, pokemon) {
+			if (this.field.getPseudoWeather('seaoffire')) {
+				return this.chainModify(2);
+			}
+		},
+		name: "Hellfire Rush",
+		rating: 3.5,
+		isNonstandard: "Future",
+	},
+	swampforce: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, pokemon) {
+			if ((this.field.getPseudoWeather('swamp')) && (this.field.isTerrain('grassyterrain') && pokemon.isGrounded)){
+				return this.chainModify(2);
+			} 
+				else if (this.field.getPseudoWeather('swamp')) {
+				return this.chainModify(1.5);
+			}
+			else if (this.field.isTerrain('grassyterrain') && pokemon.isGrounded()) {
+				this.debug('terrain buff');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Swamp Force",
+		rating: 3.5,
+		isNonstandard: "Future",
+	},
+	cellshield: {
+		onSetStatus(status, target, source, effect) {
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: Cell Shield');
+			}
+			return false;
+		},
+		onTrapPokemonPriority: -10,
+		onTrapPokemon(pokemon) {
+			pokemon.trapped = pokemon.maybeTrapped = false;
+		},
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Water' || move.type === 'Dark') {
+				this.debug('Thick Fat weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Water' || move.type === 'Dark') {
+				this.debug('Thick Fat weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		name: "Cell Shield",
+		rating: 4,
+		num: 1213,
+		isNonstandard: "Future",
+	},
+	shrimpleas: {
+		onModifyMove(move, pokemon) {
+			if (!move.secondaries) {
+				move.hasSheerForce = true;
+			}
+		},
+		onBasePowerPriority: 21,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.hasSheerForce) return this.chainModify([5325, 4096]);
+		},
+		name: "Shrimple As",
+		rating: 3.5,
+		num: 1125,
 		isNonstandard: "Future",
 	},
 };

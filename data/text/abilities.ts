@@ -3024,4 +3024,25 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Altruist",
 		shortDesc: "When this Pokemon has a stat stage raised, all opposing Pokemon copy the effect.",
 	},
+	magmaticeruption: {
+		name: "Magmatic Eruption",
+		shortDesc: "On switch-in, this Pokemon summons a Sea of Fire.",
+	},
+	shrimpleas: {
+		name: "Shrimple As",
+		desc: "This Pokemon's attacks without secondary effects have their power multiplied by 1.3.",
+		shortDesc: "This Pokemon's attacks without secondary effects have 1.3x power.",
+	},
+	cellshield: {
+		name: "Cell Shield",
+		shortDesc: "Water-/Dark-type moves against this Pokemon do half damage. Cannot be trapped.",
+	},
+	hellfirerush: {
+		name: "Hellfire Rush",
+		shortDesc: "Speed Doubles during Sea of Fire.",
+	},
+	swampforce: {
+		name: "Swamp Force",
+		shortDesc: "1.5x atk during Grassy Terrain or Swamp. 2x atk during both.",
+	},
 };

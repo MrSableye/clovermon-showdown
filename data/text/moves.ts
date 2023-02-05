@@ -8720,4 +8720,53 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Erons Repus",
 		shortDesc: "The user falls asleep after using this attack.",
 	},
+	shuttleloop: {
+		name: "Shuttle Loop",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities. Increased crit chance.",
+		shortDesc: "User switches out after damaging the target. Increased crit chance.",
+
+		switchOut: "#uturn",
+	},
+	saltsprinkle: {
+		name: "Salt Sprinkle",
+		desc: "Power doubles if the target has a non-volatile status condition.",
+		shortDesc: "Power doubles if the target has a status ailment. Double Damage to Water and Steel types.",
+	},
+	holdit: {
+		name: "Hold It!",
+		desc: "The user restores 14/5 of its maximum HP, rounded half up. Taunts user.",
+		shortDesc: "Heals the user by 80% of its max HP. Taunts User",
+	},
+	objection: {
+		name: "Objection!",
+		desc: "Has a 20% chance to make the target flinch.",
+		shortDesc: "20% chance to make the target flinch.",
+	},
+	takethat: {
+		name: "Take",
+		desc: "Confuses and prevents the target from switching out. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. If the target leaves the field using Baton Pass, the replacement will remain trapped. The effect ends if the user leaves the field.",
+		shortDesc: "Confuses and prevents the target from switching out.",	
+	},
+	plushrush: {
+		name: "Plush Rush",
+		desc: "If the target lost HP, the user takes recoil damage equal to 1/4 the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 1/4 recoil.",
+	},
+	seaoffire: {
+		name: "Sea of Fire",
+		shortDesc: "For 4 turns, non-Fire type foes lose 1/8 max HP.",
+		start: "  A sea of fire enveloped [TEAM]!",
+		end: "  The sea of fire around [TEAM] disappeared!",
+	},
+	tridentcharge: {
+		name: "Trident Charge",
+		shortDesc: "1.5x damage under Sea of Fire.",
+	},
+	wildfire: {
+		name: "Wildfire",
+		shortDesc: "Foes: -1/6 HP, 4 turns.",
+
+		start: "  [PARTY] were surrounded by fire!",
+		damage: "  [POKEMON] is burning up within Wildfire’s flames!",
+	},
 };
