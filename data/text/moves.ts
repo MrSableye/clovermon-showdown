@@ -8767,6 +8767,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "Foes: -1/6 HP, 4 turns.",
 
 		start: "  [PARTY] were surrounded by fire!",
-		damage: "  [POKEMON] is burning up within G-Max Wildfire’s flames!",
+		damage: "  [POKEMON] is burning up within Wildfire’s flames!",
 	},
 };
