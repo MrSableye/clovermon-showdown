@@ -28657,4 +28657,43 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Cute",
 	},
+	pobybbolb: {
+		num: 69060,
+		accuracy: 70,
+		basePower: 100,
+		category: "Special",
+		name: "Pob Ybbolb",
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					accuracy: 1,
+				},
+			},
+		},
+		pp: 15,
+		priority: 0,
+		target: "normal",
+		type: "Flying",
+		flags: {contact: 1, protect: 1, mirror: 1},
+		isNonstandard: "Future",
+	},
+	eronsrepus: {
+		num: 69007,
+		accuracy: 255,
+		basePower: 100,
+		category: "Special",
+		name: "Erons Repus",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+		onAfterMove(source) {
+			source.trySetStatus('slp');
+		},
+		target: "normal",
+		type: "Fire",
+		zMove: {basePower: 220},
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
 };

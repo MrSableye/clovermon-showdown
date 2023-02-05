@@ -9646,4 +9646,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosforbidden: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sobbolb: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };
