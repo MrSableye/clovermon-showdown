@@ -4443,4 +4443,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	wildfire: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

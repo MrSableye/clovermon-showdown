@@ -28881,4 +28881,42 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 		maxMove: {basePower: 140},
 	},
+	wildfire: {
+		num: 1000,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Wildfire",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('gmaxwildfire');
+				}
+			},
+		},
+		condition: {
+			duration: 4,
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'G-Max Wildfire');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (!target.hasType('Fire')) this.damage(target.baseMaxhp / 6, target);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'G-Max Wildfire');
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Fire",
+		contestType: "Cool",
+	},
 };

@@ -8762,4 +8762,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Trident Charge",
 		shortDesc: "1.5x damage under Sea of Fire.",
 	},
+	wildfire: {
+		name: "Wildfire",
+		shortDesc: "Foes: -1/6 HP, 4 turns.",
+
+		start: "  [PARTY] were surrounded by fire!",
+		damage: "  [POKEMON] is burning up within G-Max Wildfire’s flames!",
+	},
 };
