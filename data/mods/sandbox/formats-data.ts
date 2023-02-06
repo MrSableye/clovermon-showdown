@@ -10517,6 +10517,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
+		},
+	monikat: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
 	},
 	flubbster: {
 		inherit: true,

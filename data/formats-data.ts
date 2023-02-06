@@ -8327,6 +8327,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	polybrawnk: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+		},
+	monikat: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	strollge: {
 		tier: "Illegal",
