@@ -28872,7 +28872,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			volatileStatus: 'torment',
 		},
 		onBasePower(basePower, pokemon, target) {
-			if (this.field.getPseudoWeather('seaoffire')) {
+			if (target.side.getSideCondition('seaoffire')) {
 				return this.chainModify(1.5);
 			}
 		},
@@ -28881,13 +28881,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 		maxMove: {basePower: 140},
 	},
-	wildfire: {
+	blackfire: {
 		num: 1000,
 		accuracy: 100,
 		basePower: 90,
 		category: "Physical",
 		isNonstandard: "Future",
-		name: "Wildfire",
+		name: "Blackfire",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},

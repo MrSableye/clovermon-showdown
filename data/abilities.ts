@@ -9855,10 +9855,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	hellfirerush: {
-		onModifyAtkPriority: 5,
-		onModifySpe(spe, pokemon) {
-			if (this.field.getPseudoWeather('seaoffire')) {
-				return this.chainModify(2);
+		onModifySpe(spe, target) {
+			if (target.side.getSideCondition('seaoffire')) {
+				return this.chainModify(1.5);
 			}
 		},
 		name: "Hellfire Rush",
@@ -9867,11 +9866,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	swampforce: {
 		onModifyAtkPriority: 5,
-		onModifyAtk(atk, pokemon) {
-			if ((this.field.getPseudoWeather('swamp')) && (this.field.isTerrain('grassyterrain') && pokemon.isGrounded)){
+		onModifyAtk(atk, pokemon, target) {
+			if ((target.side.getSideCondition('swamp')) && (this.field.isTerrain('grassyterrain') && pokemon.isGrounded)){
 				return this.chainModify(2);
 			} 
-				else if (this.field.getPseudoWeather('swamp')) {
+				else if (target.side.getSideCondition('swamp')) {
 				return this.chainModify(1.5);
 			}
 			else if (this.field.isTerrain('grassyterrain') && pokemon.isGrounded()) {
