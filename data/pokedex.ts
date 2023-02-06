@@ -36071,7 +36071,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 	},
 	turtini: {
-	        num: 8058,
+	        num: 42201,
 	        name: "Turtini",
 	        types: ["Ground"],
 	        genderRatio: {M: 0.5, F: 0.5},
