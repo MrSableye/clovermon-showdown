@@ -9946,7 +9946,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	immortality: {
 		onUpdate(pokemon) {
 			if (pokemon.species.id !== 'blobboslich') return;
-			if (!pokemon.side.pokemon.some((ally) => (ally !== pokemon) && !ally.fainted && ally.hasItem('phylactery'))) {
+			if (!pokemon.side.pokemon.some((ally) => (ally !== pokemon) && !ally.fainted && ally.item === 'phylactery')) {
 				pokemon.formeChange('Blobbos-Lich-Mortal', this.effect, true);
 			}
 
