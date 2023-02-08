@@ -3007,7 +3007,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	scaredycat: {
 		name: "Scaredy Cat",
-		shortDesc: "This Pokemon switches out when Intimidated."
+		shortDesc: "This Pokemon switches out when Intimidated.",
 	},
 	shroomspeed: {
 		name: "Shroom Speed",
@@ -3051,6 +3051,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	immortality: {
 		name: "Immortality",
-		shortDesc: "This Pokemon survives damage with at least 1 HP. Immune to OHKO. It transforms into Blobbos-Lich-Mortal if no unfainted ally holds a Phylactery and is forced to switch if it survived lethal damage this turn."
+		shortDesc: "This Pokemon survives damage with at least 1 HP. Immune to OHKO. It transforms into Blobbos-Lich-Mortal if no unfainted ally holds a Phylactery and is forced to switch if it survived lethal damage this turn.",
 	},
 };

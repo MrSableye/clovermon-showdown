@@ -28545,7 +28545,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 2,
 			onStart(pokemon, source) {
-				this.effectState.hp = pokemon.volatiles['substitute'].hp
+				this.effectState.hp = pokemon.volatiles['substitute'].hp;
 			},
 			onSwap(target) {
 				if (!target.fainted) {
@@ -28696,7 +28696,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 		isNonstandard: "Future",
 	},
-	
+
 	saltsprinkle: {
 		num: 1573,
 		accuracy: 100,
@@ -28707,7 +28707,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
-			if (type === 'Water'|| type === 'Steel') return 1;
+			if (type === 'Water' || type === 'Steel') return 1;
 		},
 		basePowerCallback(pokemon, target, move) {
 			if (target.status || target.hasAbility('comatose')) {

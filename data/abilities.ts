@@ -9867,13 +9867,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	swampforce: {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, pokemon, target) {
-			if ((target.side.getSideCondition('swamp')) && (this.field.isTerrain('grassyterrain') && pokemon.isGrounded)){
+			if ((target.side.getSideCondition('swamp')) && (this.field.isTerrain('grassyterrain') && pokemon.isGrounded)) {
 				return this.chainModify(2);
-			} 
-				else if (target.side.getSideCondition('swamp')) {
+			} else if (target.side.getSideCondition('swamp')) {
 				return this.chainModify(1.5);
-			}
-			else if (this.field.isTerrain('grassyterrain') && pokemon.isGrounded()) {
+			} else if (this.field.isTerrain('grassyterrain') && pokemon.isGrounded()) {
 				this.debug('terrain buff');
 				return this.chainModify(1.5);
 			}

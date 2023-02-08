@@ -8745,7 +8745,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	takethat: {
 		name: "Take",
 		desc: "Confuses and prevents the target from switching out. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. If the target leaves the field using Baton Pass, the replacement will remain trapped. The effect ends if the user leaves the field.",
-		shortDesc: "Confuses and prevents the target from switching out.",	
+		shortDesc: "Confuses and prevents the target from switching out.",
 	},
 	plushrush: {
 		name: "Plush Rush",
