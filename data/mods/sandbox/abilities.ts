@@ -1799,4 +1799,12 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	mortal: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	immortality: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

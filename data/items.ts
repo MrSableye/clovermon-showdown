@@ -8466,6 +8466,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	phylactery: {
+		name: "Phylactery",
+		isNonstandard: "Future",
+	},
 	toxanite: {
 		name: "Toxanite",
 		spritenum: 577,

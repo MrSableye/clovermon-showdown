@@ -9927,4 +9927,53 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 1125,
 		isNonstandard: "Future",
 	},
+	mortal: {
+		onResidual(pokemon) {
+			if (pokemon.species.id !== 'blobboslichmortal') return;
+			if (pokemon.side.pokemon.some((ally) => (ally !== pokemon) && !ally.fainted && ally.hasItem('phylactery'))) {
+				pokemon.formeChange('Blobbos-Lich', this.effect, true);
+			}
+		},
+		onDisableMove(pokemon) {
+			if (pokemon.species.id !== 'blobboslichmortal') return;
+			for (const moveSlot of pokemon.moveSlots) {
+				if (this.dex.moves.get(moveSlot.move).category === 'Status') {
+					pokemon.disableMove(moveSlot.id);
+				}
+			}
+		},
+		name: "Mortal",
+		isNonstandard: "Future",
+	},
+	immortality: {
+		onUpdate(pokemon) {
+			if (pokemon.species.id !== 'blobboslich') return;
+			if (!pokemon.side.pokemon.some((ally) => (ally !== pokemon) && !ally.fainted && ally.hasItem('phylactery'))) {
+				pokemon.formeChange('Blobbos-Lich-Mortal', this.effect, true);
+			}
+
+			if (this.effectState.recovering) {
+				pokemon.switchFlag = true;
+			}
+		},
+		onTryHit(pokemon, target, move) {
+			if (pokemon.species.id !== 'blobboslich') return;
+			if (move.ohko) {
+				this.effectState.recovering = true;
+				this.add('-immune', pokemon, '[from] ability: Immortality');
+				return null;
+			}
+		},
+		onDamagePriority: -30,
+		onDamage(damage, target) {
+			if (target.species.id !== 'blobboslich') return;
+			if (target.hp === target.maxhp && damage >= target.hp) {
+				this.effectState.recovering = true;
+				this.add('-ability', target, 'Immortality');
+				return target.hp - 1;
+			}
+		},
+		name: "Immortality",
+		isNonstandard: "Future",
+	},
 };

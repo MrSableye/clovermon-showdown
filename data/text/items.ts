@@ -2601,4 +2601,8 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Charger",
 		desc: "If hit by an Electric-type or Energy move, this Pokemon gains the Charge effect.",
 	},
+	phylactery: {
+		name: "Phylactery",
+		desc: "If held by an unfainted ally of Blobbos-Lich, the Blobbos-Lich remains immortal.",
+	},
 };
