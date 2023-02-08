@@ -9949,15 +9949,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (!pokemon.side.pokemon.some((ally) => (ally !== pokemon) && !ally.fainted && ally.item === 'phylactery')) {
 				pokemon.formeChange('Blobbos-Lich-Mortal', this.effect, true);
 			}
-
-			if (this.effectState.recovering) {
-				pokemon.switchFlag = true;
-			}
 		},
 		onTryHit(pokemon, target, move) {
 			if (pokemon.species.id !== 'blobboslich') return;
 			if (move.ohko) {
-				this.effectState.recovering = true;
+				pokemon.switchFlag = true;
 				this.add('-immune', pokemon, '[from] ability: Immortality');
 				return null;
 			}
@@ -9966,7 +9962,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onDamage(damage, target) {
 			if (target.species.id !== 'blobboslich') return;
 			if (target.hp === target.maxhp && damage >= target.hp) {
-				this.effectState.recovering = true;
+				target.switchFlag = true;
 				this.add('-ability', target, 'Immortality');
 				return target.hp - 1;
 			}
