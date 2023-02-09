@@ -8469,6 +8469,17 @@ export const Items: {[itemid: string]: ItemData} = {
 	phylactery: {
 		name: "Phylactery",
 		isNonstandard: "Future",
+		onResidual(pokemon) {
+			const mortals = pokemon.side.pokemon.filter((ally) => ally.ability === 'mortal');
+
+			for (const mortal of mortals) {
+				mortal.abilityState.recovered = true;
+			}
+
+			if (mortals.length) {
+				this.add('-activate', pokemon, 'item: Phylactery');
+			}
+		},
 	},
 	toxanite: {
 		name: "Toxanite",

@@ -3047,10 +3047,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	mortal: {
 		name: "Mortal",
-		shortDesc: "If this Pokemon is a Blobbos-Lich, it can only select damaging moves. Transforms into Blobbos-Lich at end of turn if any unfainted ally holds a Phylactery.",
+		shortDesc: "Turns into Blobbos-Lich at end of turn if any unfainted ally holding a Phylactery spent a turn switched in and restores 1/3 of its max HP.",
+
+		transform: "[POKEMON] has lost its immortality!",
 	},
 	immortality: {
 		name: "Immortality",
-		shortDesc: "This Pokemon survives damage with at least 1 HP. Immune to OHKO. It transforms into Blobbos-Lich-Mortal if no unfainted ally holds a Phylactery and is forced to switch if it survived lethal damage this turn.",
+		shortDesc: "This Pokemon survives damage with at least 1 HP. Immune to OHKO. It transforms into Blobbos-Lich-Mortal if it survives lethal damage.",
+
+		transform: "[POKEMON] has regained its immortality!",
 	},
 };

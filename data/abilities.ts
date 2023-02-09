@@ -9926,18 +9926,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	mortal: {
-		onResidual(pokemon) {
+		onUpdate(pokemon) {
 			if (pokemon.species.id !== 'blobboslichmortal') return;
-			if (pokemon.side.pokemon.some((ally) => (ally !== pokemon) && !ally.fainted && ally.hasItem('phylactery'))) {
-				pokemon.formeChange('Blobbos-Lich', this.effect, true);
-			}
-		},
-		onDisableMove(pokemon) {
-			if (pokemon.species.id !== 'blobboslichmortal') return;
-			for (const moveSlot of pokemon.moveSlots) {
-				if (this.dex.moves.get(moveSlot.move).category === 'Status') {
-					pokemon.disableMove(moveSlot.id);
-				}
+			if (this.effectState.recovered === true) {
+				pokemon.formeChange('Blobbos-Lich', this.effect, true, '[msg]');
+				this.heal(pokemon.baseMaxhp / 3);
 			}
 		},
 		name: "Mortal",
@@ -9946,15 +9939,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	immortality: {
 		onUpdate(pokemon) {
 			if (pokemon.species.id !== 'blobboslich') return;
-			if (!pokemon.side.pokemon.some((ally) => (ally !== pokemon) && !ally.fainted && ally.item === 'phylactery')) {
-				pokemon.formeChange('Blobbos-Lich-Mortal', this.effect, true);
+			if (!pokemon.side.pokemon.some((ally) => (ally !== pokemon) &&
+			!ally.fainted && !['blobboslich', 'blobboslichmortal'].includes(ally.species.id) && ally.item === 'phylactery')) {
+				pokemon.formeChange('Blobbos-Lich-Mortal', this.effect, true, '[msg]');
 			}
 		},
 		onTryHit(pokemon, target, move) {
 			if (pokemon.species.id !== 'blobboslich') return;
 			if (move.ohko) {
-				pokemon.switchFlag = true;
 				this.add('-immune', pokemon, '[from] ability: Immortality');
+				pokemon.formeChange('Blobbos-Lich-Mortal', this.effect, true, '[msg]');
 				return null;
 			}
 		},
@@ -9962,8 +9956,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onDamage(damage, target) {
 			if (target.species.id !== 'blobboslich') return;
 			if (damage >= target.hp) {
-				target.switchFlag = true;
 				this.add('-ability', target, 'Immortality');
+				target.formeChange('Blobbos-Lich-Mortal', this.effect, true, '[msg]');
 				return target.hp - 1;
 			}
 		},
