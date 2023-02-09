@@ -43,4 +43,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 71,
 		},
 	},
+	fusjahl: {
+		inherit: true,
+		baseStats: {
+			hp: 99,
+			atk: 111,
+			def: 99,
+			spa: 11,
+			spd: 111,
+			spe: 13,
+		},
+	},
 };
