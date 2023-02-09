@@ -9961,7 +9961,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onDamagePriority: -30,
 		onDamage(damage, target) {
 			if (target.species.id !== 'blobboslich') return;
-			if (target.hp === target.maxhp && damage >= target.hp) {
+			if (damage >= target.hp) {
 				target.switchFlag = true;
 				this.add('-ability', target, 'Immortality');
 				return target.hp - 1;
