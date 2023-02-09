@@ -8470,6 +8470,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Phylactery",
 		isNonstandard: "Future",
 		onResidual(pokemon) {
+			if (['blobboslich', 'blobboslichmortal'].includes(pokemon.species.id)) return;
 			const mortals = pokemon.side.pokemon.filter((ally) => ally.ability === 'mortal');
 
 			for (const mortal of mortals) {

@@ -2603,7 +2603,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	phylactery: {
 		name: "Phylactery",
-		desc: "At end of turn, makes all Blobbos-Lich-Mortals immortal.",
+		desc: "At end of turn, makes all Blobbos-Lich-Mortals immortal. Cannot be used by a Lich.",
 
 		activate: "  [POKEMON] restored the immortality of its master.",
 	},
