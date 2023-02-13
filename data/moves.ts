@@ -28472,4 +28472,451 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
+	landmind: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Land Mind",
+		pp: 20,
+		priority: 0,
+		flags: {reflectable: 1},
+		sideCondition: 'landmind',
+		condition: {
+			// this is a side condition
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Land Mind');
+			},
+			onEntryHazard(pokemon) {
+				if (pokemon.hasItem('heavydutyboots')) return;
+				const typeMod = this.clampIntRange(pokemon.runEffectiveness(this.dex.getActiveMove('landmind')), -6, 6);
+				this.damage(pokemon.maxhp * Math.pow(2, typeMod) / 4);
+				pokemon.side.removeSideCondition('landmind');
+				this.add('-sideend', pokemon.side, 'move: Land Mind');
+			},
+		},
+		secondary: null,
+		target: "foeSide",
+		type: "Psychic",
+		zMove: {boost: {spd: 1}},
+		contestType: "Smart",
+		isNonstandard: "Future",
+	},
+	calmfist: {
+		accuracy: 100,
+		basePower: 160,
+		basePowerCallback(pokemon) {
+			return Math.max(40, 160 - 20 * pokemon.timesAttacked);
+		},
+		category: "Physical",
+		name: "Calm Fist",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		isNonstandard: "Future",
+	},
+	firstrespects: {
+		accuracy: 100,
+		basePower: 140,
+		basePowerCallback(pokemon, target, move) {
+			return Math.max(1, 120 - 20 * pokemon.side.totalFainted);
+		},
+		category: "Physical",
+		name: "First Respects",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+	},
+	unshedtail: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Unshed Tail",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		slotCondition: 'unshedtail',
+		condition: {
+			duration: 2,
+			onStart(pokemon, source) {
+				this.effectState.hp = pokemon.volatiles['substitute'].hp;
+			},
+			onSwap(target) {
+				if (!target.fainted) {
+					target.heal(this.effectState.hp);
+					this.add('-heal', target, target.getHealth, '[from] move: Unshed Tail');
+					target.side.removeSlotCondition(target, 'unshedtail');
+				}
+			},
+		},
+		onTryHit(source) {
+			if (!source.volatiles['substitute']) return false;
+		},
+		selfSwitch: true,
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {effect: 'clearnegativeboost'},
+		isNonstandard: "Future",
+	},
+	eructlas: {
+		num: 864,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Eruc Tlas",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Eruc Tlas');
+			},
+			onResidualOrder: 13,
+			onResidual(pokemon) {
+				this.heal(pokemon.baseMaxhp / (!pokemon.hasType(['Water', 'Steel']) ? 4 : 8));
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Eruc Tlas');
+			},
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'eructlas',
+		},
+		target: "normal",
+		type: "Fairy",
+	},
+	depopulationbomb: {
+		accuracy: 50,
+		basePower: 240,
+		category: "Special",
+		name: "De-Population Bomb",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
+	glaiverest: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Glaive Rest",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		onTry(source) {
+			if (source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz')) return false;
+
+			if (source.hp === source.maxhp) {
+				this.add('-fail', source, 'heal');
+				return null;
+			}
+			if (source.hasAbility(['insomnia', 'vitalspirit'])) {
+				this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
+				return null;
+			}
+		},
+		onHit(target, source, move) {
+			const result = target.setStatus('slp', source, move);
+			if (!result) return result;
+			target.statusState.time = 3;
+			target.statusState.startTime = 3;
+			this.heal(target.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
+		},
+		volatileStatus: 'glaiverest',
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				this.add('-singlemove', pokemon, 'Glaive Rest', '[silent]');
+			},
+			onAccuracy() {
+				return true;
+			},
+			onSourceModifyDamage() {
+				return this.chainModify(2);
+			},
+			onBeforeMovePriority: 100,
+			onBeforeMove(pokemon) {
+				this.debug('removing Glaive Rest drawback before attack');
+				pokemon.removeVolatile('glaiverest');
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Psychic",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Cute",
+	},
+	pobybbolb: {
+		num: 69060,
+		accuracy: 70,
+		basePower: 100,
+		category: "Special",
+		name: "Pob Ybbolb",
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					accuracy: 1,
+				},
+			},
+		},
+		pp: 15,
+		priority: 0,
+		target: "normal",
+		type: "Flying",
+		flags: {contact: 1, protect: 1, mirror: 1},
+		isNonstandard: "Future",
+	},
+	eronsrepus: {
+		num: 69007,
+		accuracy: 255,
+		basePower: 100,
+		category: "Special",
+		name: "Erons Repus",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+		onAfterMove(source) {
+			source.trySetStatus('slp');
+		},
+		target: "normal",
+		type: "Fire",
+		zMove: {basePower: 220},
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+
+	saltsprinkle: {
+		num: 1573,
+		accuracy: 100,
+		basePower: 65,
+		category: "Special",
+		name: "Salt Sprinkle",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Water' || type === 'Steel') return 1;
+		},
+		basePowerCallback(pokemon, target, move) {
+			if (target.status || target.hasAbility('comatose')) {
+				this.debug('BP doubled from status condition');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		target: "normal",
+		isNonstandard: "Future",
+		type: "Rock",
+		contestType: "Tough",
+	},
+	shuttleloop: {
+		num: 812,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		name: "Shuttle Loop",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		selfSwitch: true,
+		secondary: null,
+		critRatio: 2,
+		target: "normal",
+		type: "Flying",
+		isNonstandard: "Future",
+		contestType: "Cool",
+	},
+	holdit: {
+		num: 1105,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Hold It!",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		heal: [4, 5],
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('taunt');
+			}
+		},
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {effect: 'clearnegativeboost'},
+		isNonstandard: "Future",
+		contestType: "Clever",
+	},
+	objection: {
+		num: 428,
+		accuracy: 90,
+		basePower: 100,
+		category: "Physical",
+		name: "Objection!",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Fighting",
+		isNonstandard: "Future",
+		contestType: "Clever",
+	},
+	takethat: {
+		num: 1212,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Take That!",
+		pp: 5,
+		priority: 0,
+		flags: {reflectable: 1, mirror: 1},
+		onHit(target, source, move) {
+			return target.addVolatile('trapped', source, move, 'trapper');
+		},
+		volatileStatus: 'confusion',
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		zMove: {boost: {spe: 1}},
+		isNonstandard: "Future",
+		contestType: "Beautiful",
+	},
+	plushrush: {
+		num: 1528,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Plush Rush",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 4],
+		secondary: null,
+		target: "normal",
+		type: "???",
+		isNonstandard: "Future",
+		contestType: "Tough",
+	},
+	seaoffire: {
+		num: 1001,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sea Of Fire",
+		pp: 5,
+		priority: 0,
+		flags: {mirror: 1},
+		sideCondition: 'seaoffire',
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('seaoffire');
+				}
+			},
+		},
+		condition: {
+			duration: 4,
+			durationCallback(target, source, effect) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-activate', source, 'ability: Persistent', effect);
+					return 6;
+				}
+				return 4;
+			},
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'seaoffire');
+			},
+			onResidual(pokemon) {
+				if (!pokemon.hasType('Fire')) this.damage(pokemon.baseMaxhp / 8, pokemon);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 9,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'seaoffire');
+			},
+		},
+		secondary: null,
+		target: "all",
+		type: "Fire",
+		isNonstandard: "Future",
+		zMove: {boost: {spd: 1}},
+		contestType: "Beautiful",
+	},
+	tridentcharge: {
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Trident Charge",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'torment',
+		},
+		onBasePower(basePower, pokemon, target) {
+			if (target.side.getSideCondition('seaoffire')) {
+				return this.chainModify(1.5);
+			}
+		},
+		target: "normal",
+		type: "Fire",
+		isNonstandard: "Future",
+		maxMove: {basePower: 140},
+	},
+	blackfire: {
+		num: 1000,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Blackfire",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('gmaxwildfire');
+				}
+			},
+		},
+		condition: {
+			duration: 4,
+			onSideStart(targetSide) {
+				this.add('-sidestart', targetSide, 'G-Max Wildfire');
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 1,
+			onResidual(target) {
+				if (!target.hasType('Fire')) this.damage(target.baseMaxhp / 6, target);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 11,
+			onSideEnd(targetSide) {
+				this.add('-sideend', targetSide, 'G-Max Wildfire');
+			},
+		},
+		secondary: null,
+		target: "adjacentFoe",
+		type: "Fire",
+		contestType: "Cool",
+	},
 };

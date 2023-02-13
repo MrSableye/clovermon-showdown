@@ -4383,4 +4383,68 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	landmind: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	calmfist: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	firstrespects: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	unshedtail: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	eructlas: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	depopulationbomb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	glaiverest: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shuttleloop: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	saltsprinkle: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	holdit: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	objection: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	takethat: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	plushrush: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	seaoffire: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	tridentcharge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wildfire: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

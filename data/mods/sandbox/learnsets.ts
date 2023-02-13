@@ -80,6 +80,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			wideguard: ["8L1"],
 			workup: ["8L1"],
 			zenheadbutt: ["8L1"],
+			triplearrows: ["8L1"],
+			trickroom: ["8L1"],
+			shoreup: ["8L1"],
 		},
 	},
 	wawho: {

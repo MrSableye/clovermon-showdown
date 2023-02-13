@@ -3346,4 +3346,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbosforbidden: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sobbolb: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

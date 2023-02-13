@@ -8327,7 +8327,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	polybrawnk: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-		},
+	},
 	monikat: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -9618,6 +9618,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobboslich: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboslichmortal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	smellsumo: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -9655,6 +9663,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	toxaninemega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosforbidden: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sobbolb: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

@@ -1743,4 +1743,68 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	fourwarn: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	anythingyoucando: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	allaccordingtokeikakuplan: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	goodaszinc: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	halfbakedbody: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	scaredycat: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shroomspeed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	supremeunderlord: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	altruist: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	magmaticeruption: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shrimpleas: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cellshield: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hellfirerush: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	swampforce: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mortal: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	immortality: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

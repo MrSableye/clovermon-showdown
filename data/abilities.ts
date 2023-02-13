@@ -8861,6 +8861,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 229,
 		isNonstandard: "Future",
 	},
+	magmaticeruption: {
+		onStart(source) {
+			for (const side of source.side.foeSidesWithConditions()) {
+				side.addSideCondition('seaoffire');
+			}
+		},
+
+		name: "Magmatic Eruption",
+		rating: 4,
+		num: 1230,
+		isNonstandard: "Future",
+	},
 	boardpoweryou: {
 		name: "Board Power (/you/)",
 		onTryHit(pokemon, target, move) {
@@ -9696,5 +9708,260 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 		name: "In Memoriam",
 		rating: 3.5,
+	},
+	fourwarn: {
+		onStart(pokemon) {
+			for (const target of pokemon.foes()) {
+				for (const moveSlot of target.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.move);
+					this.add('-activate', pokemon, 'ability: Fourwarn', move, '[of] ' + target);
+				}
+			}
+		},
+		name: "Fourwarn",
+		isNonstandard: "Future",
+	},
+	anythingyoucando: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (!pokemon.moveThisTurn) return;
+			for (const target of pokemon.foes()) {
+				if (pokemon.moveThisTurn !== target.moveThisTurn) return;
+				this.damage(target.baseMaxhp / 8, target, pokemon);
+			}
+		},
+		name: "Anything You Can Do",
+		isNonstandard: "Future",
+	},
+	allaccordingtokeikakuplan: {
+		name: "All According to Keikaku (Plan)",
+		onFoeSwitchOut(pokemon) {
+			if (!this.effectState.switchedPokemon) this.effectState.switchedPokemon = {};
+			this.effectState.switchedPokemon[pokemon.position] = pokemon;
+		},
+		onBasePower(basePower, pokemon, target, move) {
+			if (!target) return;
+			if (!this.effectState.switchedPokemon) this.effectState.switchedPokemon = {};
+			if (!this.effectState.switchedPokemon[target.position]) return;
+			const previousPokemon = this.effectState.switchedPokemon[target.position] as Pokemon;
+			const previousEffectiveness = previousPokemon.runEffectiveness(move);
+			const currentEffectiveness = target.runEffectiveness(move);
+			if (previousEffectiveness < 0) {
+				if (currentEffectiveness > 0) {
+					this.add('-activate', pokemon, 'ability: All According to Keikaku (Plan)');
+					this.chainModify(2);
+				} else if (currentEffectiveness < 0) {
+					this.chainModify(0.25);
+				}
+			}
+		},
+		onResidual() {
+			this.effectState.switchedPokemon = {};
+		},
+		isNonstandard: "Future",
+	},
+	goodaszinc: {
+		onUpdate(pokemon) {
+			if (pokemon.volatiles['confusion']) {
+				this.add('-activate', pokemon, 'ability: Good as Zinc');
+				pokemon.removeVolatile('confusion');
+			}
+		},
+		onTryAddVolatile(status, pokemon) {
+			if (status.id === 'confusion') return null;
+		},
+		onHit(target, source, move) {
+			if (move?.volatileStatus === 'confusion') {
+				this.add('-immune', target, 'confusion', '[from] ability: Good as Zinc');
+			}
+		},
+		name: "Good as Zinc",
+		isNonstandard: "Future",
+	},
+	halfbakedbody: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fire') {
+				this.boost({def: 1});
+			}
+		},
+		onSourceBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				return this.chainModify(0.5);
+			}
+		},
+		isBreakable: true,
+		name: "Half-Baked Body",
+		isNonstandard: "Future",
+	},
+	scaredycat: {
+		onBoost(boost, target, source, effect) {
+			if (effect.name === 'Intimidate') {
+				target.switchFlag = true;
+				this.add('-activate', target, 'ability: Scaredy Cat');
+			}
+		},
+		name: "Scaredy Cat",
+		isNonstandard: "Future",
+	},
+	shroomspeed: {
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.category !== 'Status') {
+				return priority + 1;
+			}
+		},
+		name: "Shroom Speed",
+		isNonstandard: "Future",
+	},
+	supremeunderlord: {
+		onStart(pokemon) {
+			if (pokemon.side.totalFainted) {
+				this.add('-activate', pokemon, 'ability: Supreme Underlord');
+				const fallen = Math.min(pokemon.side.totalFainted, 5);
+				this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
+				this.effectState.fallen = fallen;
+			}
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+		},
+		onBasePowerPriority: 21,
+		onBasePower(basePower, attacker, defender, move) {
+			if (this.effectState.fallen) {
+				const powMod = [6144, 5734, 5325, 4915, 4506, 4096];
+				this.debug(`Supreme Underlord boost: ${powMod[this.effectState.fallen]}/4096`);
+				return this.chainModify([powMod[this.effectState.fallen], 4096]);
+			}
+		},
+		name: "Supreme Underlord",
+		isNonstandard: "Future",
+	},
+	altruist: {
+		onAfterBoost(boost, target, source, effect) {
+			if (effect?.name === 'Altruist') return;
+			const positiveBoosts: Partial<BoostsTable> = {};
+			let i: BoostID;
+			for (i in boost) {
+				if (boost[i]! > 0) {
+					positiveBoosts[i] = boost[i];
+				}
+			}
+			if (Object.keys(positiveBoosts).length < 1) return;
+			for (const foe of target.adjacentFoes()) {
+				this.boost(positiveBoosts, foe, target, null, true);
+			}
+		},
+		name: "Altruist",
+		isNonstandard: "Future",
+	},
+	hellfirerush: {
+		onModifySpe(spe, target) {
+			if (target.side.getSideCondition('seaoffire')) {
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Hellfire Rush",
+		rating: 3.5,
+		isNonstandard: "Future",
+	},
+	swampforce: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, pokemon, target) {
+			if ((target.side.getSideCondition('swamp')) && (this.field.isTerrain('grassyterrain') && pokemon.isGrounded)) {
+				return this.chainModify(2);
+			} else if (target.side.getSideCondition('swamp')) {
+				return this.chainModify(1.5);
+			} else if (this.field.isTerrain('grassyterrain') && pokemon.isGrounded()) {
+				this.debug('terrain buff');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Swamp Force",
+		rating: 3.5,
+		isNonstandard: "Future",
+	},
+	cellshield: {
+		onSetStatus(status, target, source, effect) {
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: Cell Shield');
+			}
+			return false;
+		},
+		onTrapPokemonPriority: -10,
+		onTrapPokemon(pokemon) {
+			pokemon.trapped = pokemon.maybeTrapped = false;
+		},
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Water' || move.type === 'Dark') {
+				this.debug('Thick Fat weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Water' || move.type === 'Dark') {
+				this.debug('Thick Fat weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		name: "Cell Shield",
+		rating: 4,
+		num: 1213,
+		isNonstandard: "Future",
+	},
+	shrimpleas: {
+		onModifyMove(move, pokemon) {
+			if (!move.secondaries) {
+				move.hasSheerForce = true;
+			}
+		},
+		onBasePowerPriority: 21,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.hasSheerForce) return this.chainModify([5325, 4096]);
+		},
+		name: "Shrimple As",
+		rating: 3.5,
+		num: 1125,
+		isNonstandard: "Future",
+	},
+	mortal: {
+		onUpdate(pokemon) {
+			if (pokemon.species.id !== 'blobboslichmortal') return;
+			if (this.effectState.recovered === true) {
+				pokemon.formeChange('Blobbos-Lich', this.effect, true, '[msg]');
+				this.heal(pokemon.baseMaxhp / 3);
+			}
+		},
+		name: "Mortal",
+		isNonstandard: "Future",
+	},
+	immortality: {
+		onUpdate(pokemon) {
+			if (pokemon.species.id !== 'blobboslich') return;
+			if (!pokemon.side.pokemon.some((ally) => (ally !== pokemon) &&
+			!ally.fainted && !['blobboslich', 'blobboslichmortal'].includes(ally.species.id) && ally.item === 'phylactery')) {
+				pokemon.formeChange('Blobbos-Lich-Mortal', this.effect, true, '[msg]');
+			}
+		},
+		onTryHit(pokemon, target, move) {
+			if (pokemon.species.id !== 'blobboslich') return;
+			if (move.ohko) {
+				this.add('-immune', pokemon, '[from] ability: Immortality');
+				pokemon.formeChange('Blobbos-Lich-Mortal', this.effect, true, '[msg]');
+				return null;
+			}
+		},
+		onDamagePriority: -30,
+		onDamage(damage, target) {
+			if (target.species.id !== 'blobboslich') return;
+			if (damage >= target.hp) {
+				this.add('-ability', target, 'Immortality');
+				target.formeChange('Blobbos-Lich-Mortal', this.effect, true, '[msg]');
+				return target.hp - 1;
+			}
+		},
+		name: "Immortality",
+		isNonstandard: "Future",
 	},
 };

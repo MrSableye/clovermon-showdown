@@ -8671,4 +8671,102 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "This move's power is 20 if the target is shorter than 0.25m, 40 if less than 0.5m, 60 if less than 1m, 80 if less than 2m, 100 if less than 3m, and 120 if greater than or equal to 3m.",
 		shortDesc: "More power the taller the target.",
 	},
+	landmind: {
+		name: "Land Mind",
+		desc: "Sets up a hazard on the opposing side of the field, damaging the next opposing Pokemon that switches in. Fails if the effect is already active on the opposing side. Foes lose 1/32, 1/16, 1/8, 1/4, or 1/2 of their maximum HP, rounded down, based on their weakness to the Psychic type; 0.25x, 0.5x, neutral, 2x, or 4x, respectively. Removed on first activation.",
+		shortDesc: "Hurts foes on switch-in. Factors Psychic weakness. Removed on first activation.",
+
+		start: "  A psychic trap was set around [TEAM]!",
+		end: "  The psychic trap was removed from around [TEAM]!",
+		damage: "  [POKEMON] into a psychic trap!",
+	},
+	calmfist: {
+		name: "Calm Fist",
+		desc: "Power is equal to 160-(X*20), where X is the total number of times the user has been hit by a damaging attack during the battle, even if the user did not lose HP from the attack. X cannot be greater than 6 and does not reset upon switching out or fainting. Each hit of a multi-hit attack is counted, but confusion damage is not counted.",
+		shortDesc: "-20 power for each time user was hit. Max 6 hits.",
+	},
+	firstrespects: {
+		name: "First Respects",
+		desc: "Power is equal to 140-(X*20), where X is the total number of times any Pokemon has fainted on the user's side, and X cannot be lower than 1.",
+		shortDesc: "-20 power for each time a party member fainted.",
+	},
+	unshedtail: {
+		name: "Unshed Tail",
+		desc: "Removes the user's substitute and switches into another. Heals the new mon for the removed substitute's health.",
+
+		heal: "  [POKEMON] restored its tail!",
+	},
+	eructlas: {
+		name: "Eruc Tlas",
+		desc: "Heals the target equal to 1/4 of its maximum HP (1/8 if the target is Steel or Water type), rounded down, at the end of each turn during effect. This effect ends when the target is no longer active.",
+		shortDesc: "Heals the target 1/4 max HP each turn; 1/8 on Steel, Water.",
+
+		start: "  !deruc tlas gnieb si [POKEMON]",
+		damage: "  !eruC tlaS yb truh si [POKEMON]",
+	},
+	depopulationbomb: {
+		name: "De-Population Bomb",
+		shortDesc: "No additional effect.",
+	},
+	glaiverest: {
+		name: "Glaive Rest",
+		shortDesc: "User sleeps 2 turns and restores HP and status. User takes sure-hit 2x damage until its next turn.",
+	},
+	pobybbolb: {
+		name: "Pob Ybbolb",
+		shortDesc: "Raises accuracy when this move lands.",
+	},
+	eronsrepus: {
+		name: "Erons Repus",
+		shortDesc: "The user falls asleep after using this attack.",
+	},
+	shuttleloop: {
+		name: "Shuttle Loop",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities. Increased crit chance.",
+		shortDesc: "User switches out after damaging the target. Increased crit chance.",
+
+		switchOut: "#uturn",
+	},
+	saltsprinkle: {
+		name: "Salt Sprinkle",
+		desc: "Power doubles if the target has a non-volatile status condition.",
+		shortDesc: "Power doubles if the target has a status ailment. Double Damage to Water and Steel types.",
+	},
+	holdit: {
+		name: "Hold It!",
+		desc: "The user restores 14/5 of its maximum HP, rounded half up. Taunts user.",
+		shortDesc: "Heals the user by 80% of its max HP. Taunts User",
+	},
+	objection: {
+		name: "Objection!",
+		desc: "Has a 20% chance to make the target flinch.",
+		shortDesc: "20% chance to make the target flinch.",
+	},
+	takethat: {
+		name: "Take",
+		desc: "Confuses and prevents the target from switching out. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. If the target leaves the field using Baton Pass, the replacement will remain trapped. The effect ends if the user leaves the field.",
+		shortDesc: "Confuses and prevents the target from switching out.",
+	},
+	plushrush: {
+		name: "Plush Rush",
+		desc: "If the target lost HP, the user takes recoil damage equal to 1/4 the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 1/4 recoil.",
+	},
+	seaoffire: {
+		name: "Sea of Fire",
+		shortDesc: "For 4 turns, non-Fire type foes lose 1/8 max HP.",
+		start: "  A sea of fire enveloped [TEAM]!",
+		end: "  The sea of fire around [TEAM] disappeared!",
+	},
+	tridentcharge: {
+		name: "Trident Charge",
+		shortDesc: "1.5x damage under Sea of Fire.",
+	},
+	wildfire: {
+		name: "Wildfire",
+		shortDesc: "Foes: -1/6 HP, 4 turns.",
+
+		start: "  [PARTY] were surrounded by fire!",
+		damage: "  [POKEMON] is burning up within Wildfire’s flames!",
+	},
 };

@@ -8466,6 +8466,22 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	phylactery: {
+		name: "Phylactery",
+		isNonstandard: "Future",
+		onResidual(pokemon) {
+			if (['blobboslich', 'blobboslichmortal'].includes(pokemon.species.id)) return;
+			const mortals = pokemon.side.pokemon.filter((ally) => ally.ability === 'mortal');
+
+			for (const mortal of mortals) {
+				mortal.abilityState.recovered = true;
+			}
+
+			if (mortals.length) {
+				this.add('-activate', pokemon, 'item: Phylactery');
+			}
+		},
+	},
 	toxanite: {
 		name: "Toxanite",
 		spritenum: 577,
@@ -8488,6 +8504,16 @@ export const Items: {[itemid: string]: ItemData} = {
 		zMoveFrom: "Tri-Punch",
 		itemUser: ["Fusjahl"],
 		gen: 8,
+		isNonstandard: "Future",
+	},
+	charger: {
+		name: "Charger",
+		spritenum: 60,
+		onHit(target, source, move) {
+			if (move.type === 'Electric' || move.id.includes('energy')) {
+				target.addVolatile('charge');
+			}
+		},
 		isNonstandard: "Future",
 	},
 };

@@ -2981,4 +2981,80 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		activate: "  [POKEMON] harnessed the power of the Weedles!",
 	},
+	fourwarn: {
+		name: "Fourwarn",
+		desc: "On switch-in, this Pokemon is alerted to every opponent's move.",
+		shortDesc: "On switch-in, this Pokemon is alerted to every opponent's move.",
+
+		activate: "  [TARGET]'s [MOVE] was revealed!",
+		activateNoTarget: "  [POKEMON]'s Fourwarn alerted it to [MOVE]!",
+	},
+	anythingyoucando: {
+		name: "Anything You Can Do",
+		shortDesc: "All foes that used the same move as this Pokemon lose 1/8 HP at the end of the turn.",
+	},
+	allaccordingtokeikakuplan: {
+		name: "All According to Keikaku (Plan)",
+		shortDesc: "2x BP when using a move SE against a mon when the previous mon in its slot resisted the move. 0.25x BP when using a move resisted against a mon when the previous mon also resisted it.",
+	},
+	goodaszinc: {
+		name: "Good as Zinc",
+		shortDesc: "This Pokemon cannot be confused.",
+	},
+	halfbakedbody: {
+		name: "Half-Baked Body",
+		shortDesc: "The power of Fire-type attacks against this Pokemon is halved and raises its Defense by 1 stage when hit by a Fire-type move.",
+	},
+	scaredycat: {
+		name: "Scaredy Cat",
+		shortDesc: "This Pokemon switches out when Intimidated.",
+	},
+	shroomspeed: {
+		name: "Shroom Speed",
+		shortDesc: "This Pokemon's non-Status moves have priority raised by 1.",
+	},
+	supremeunderlord: {
+		name: "Supreme Underlord",
+		desc: "This Pokemon's moves have their power multiplied by 1+((5-X)*0.1), where X is the total number of times any Pokemon has fainted on the user's side when this Ability became active, and X cannot be greater than 5.",
+		shortDesc: "This Pokemon's moves have Pokemon's moves have 10% more power for each living ally, up to 5 allies.",
+
+		activate: "  [POKEMON] gained strength from the living!",
+	},
+	altruist: {
+		name: "Altruist",
+		shortDesc: "When this Pokemon has a stat stage raised, all opposing Pokemon copy the effect.",
+	},
+	magmaticeruption: {
+		name: "Magmatic Eruption",
+		shortDesc: "On switch-in, this Pokemon summons a Sea of Fire.",
+	},
+	shrimpleas: {
+		name: "Shrimple As",
+		desc: "This Pokemon's attacks without secondary effects have their power multiplied by 1.3.",
+		shortDesc: "This Pokemon's attacks without secondary effects have 1.3x power.",
+	},
+	cellshield: {
+		name: "Cell Shield",
+		shortDesc: "Water-/Dark-type moves against this Pokemon do half damage. Cannot be trapped.",
+	},
+	hellfirerush: {
+		name: "Hellfire Rush",
+		shortDesc: "Speed Doubles during Sea of Fire.",
+	},
+	swampforce: {
+		name: "Swamp Force",
+		shortDesc: "1.5x atk during Grassy Terrain or Swamp. 2x atk during both.",
+	},
+	mortal: {
+		name: "Mortal",
+		shortDesc: "Turns into Blobbos-Lich at end of turn if any unfainted ally holding a Phylactery spent a turn switched in and restores 1/3 of its max HP.",
+
+		transform: "[POKEMON] has lost its immortality!",
+	},
+	immortality: {
+		name: "Immortality",
+		shortDesc: "This Pokemon survives damage with at least 1 HP. Immune to OHKO. It transforms into Blobbos-Lich-Mortal if it survives lethal damage.",
+
+		transform: "[POKEMON] has regained its immortality!",
+	},
 };

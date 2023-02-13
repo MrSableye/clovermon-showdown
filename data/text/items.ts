@@ -2597,4 +2597,14 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Fusjinium Z",
 		desc: "If held by Fusjahl with Tri-Punch, it can use Gigasubferno Strike.",
 	},
+	charger: {
+		name: "Charger",
+		desc: "If hit by an Electric-type or Energy move, this Pokemon gains the Charge effect.",
+	},
+	phylactery: {
+		name: "Phylactery",
+		desc: "At end of turn, makes all Blobbos-Lich-Mortals immortal. Cannot be used by a Lich.",
+
+		activate: "  [POKEMON] restored the immortality of its master.",
+	},
 };

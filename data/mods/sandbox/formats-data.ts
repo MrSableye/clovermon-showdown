@@ -10453,6 +10453,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobboslich: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboslichmortal: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	infected: {
 		inherit: true,
 		tier: "OU",
@@ -10902,5 +10912,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
+	},
+	blobbosforbidden: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sobbolb: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 };
