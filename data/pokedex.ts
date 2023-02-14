@@ -41134,8 +41134,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Smellsumo",
 		types: ["Poison", "Fighting"],
 		genderRatio: {
-		M: 0.875,
-		F: 0.125,
+			M: 0.875,
+			F: 0.125,
 		},
 		baseStats: {hp: 151, atk: 159, def: 138, spa: 81, spd: 99, spe: 103},
 		abilities: {0: "Fuk U", 1: "Stink Bomb", H: "Neutralizing Gas", S: "F Bomb"},
@@ -41144,7 +41144,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Red",
 		eggGroups: ["Human-Like"],
 	},
-	Buge: {
+	buge: {
 		num: -42106,
 		name: "Buge",
 		types: ["Bug"],
@@ -41158,7 +41158,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Bug"],
 		gen: 9,
 	},
-	Bige: {
+	bige: {
 		num: -42107,
 		name: "Bige",
 		types: ["Bug"],
