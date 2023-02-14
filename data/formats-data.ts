@@ -8764,6 +8764,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	buge: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bige: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	seaman: {
 		tier: "Illegal",
 		isNonstandard: "Future",

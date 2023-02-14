@@ -10528,6 +10528,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	buge: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	bige: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	monikat: {
 		inherit: true,
 		tier: "OU",

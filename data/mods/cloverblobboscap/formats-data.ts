@@ -2092,6 +2092,142 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	mogumole: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	polybrawn: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	polybrawnh: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	polybrawnw: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	polybrawni: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	polybrawnp: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	polybrawnk: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	skubmarine: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	skubmarineanti: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fangster: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	garble: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ramboom: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	volbrat: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	whipscuffle: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	afloof: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	burnugget: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	cheepouf: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	doomter: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fleurrium: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	juankey: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	knitten: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	mimikrab: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	moblin: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	moltama: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	nebulite: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	pascal: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	primitool: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	garookie: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	shroomag: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	triderling: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	turtini: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	vinedup: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	voltocor: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	whimple: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	equuan: {
 		inherit: true,
 		isNonstandard: "Past",
