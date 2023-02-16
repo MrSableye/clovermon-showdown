@@ -28919,4 +28919,29 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		contestType: "Cool",
 	},
+	justmonikat: {
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Just Monikat",
+		pp: 5,
+		noPPBoosts: true,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target, pokemon, move) {
+			const formeChangeResult = target.formeChange('Monikat');
+			const trapResult = target.addVolatile('trapped', target, move, 'trapper');
+
+			return trapResult && formeChangeResult;
+		},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+		isNonstandard: "Future",
+	},
 };

@@ -4447,4 +4447,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	justmonikat: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

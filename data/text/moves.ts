@@ -8769,4 +8769,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  [PARTY] were surrounded by fire!",
 		damage: "  [POKEMON] is burning up within Wildfire’s flames!",
 	},
+	justmonikat: {
+		name: "Just Monikat",
+		desc: "Transforms the target into a Monikat. Prevents the target from switching out. Drops the target's speed one stage.",
+	},
 };
