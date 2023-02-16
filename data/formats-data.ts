@@ -9674,4 +9674,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	pizzisdee: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };
