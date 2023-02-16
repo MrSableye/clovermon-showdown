@@ -390,4 +390,10 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		fail: "  The new addition to the Chiral Network has been abandoned.",
 		end: "  [POKEMON] finished the addition to the Chiral Network!",
 	},
+	agile: {
+		start: "  [POKEMON] switched to its Agile style!",
+	},
+	strong: {
+		start: "  [POKEMON] switched to its Strong style!",
+	},
 };

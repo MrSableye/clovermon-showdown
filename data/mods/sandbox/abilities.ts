@@ -1807,4 +1807,16 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	joycon: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	constrictor: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ancientstyle: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

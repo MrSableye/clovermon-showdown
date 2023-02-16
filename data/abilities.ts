@@ -9964,4 +9964,62 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Immortality",
 		isNonstandard: "Future",
 	},
+	joycon: {
+		onModifyMovePriority: 1,
+		onModifyMove(move, attacker, defender) {
+			if (attacker.species.baseSpecies !== 'Blobbos-Switch' || attacker.transformed) return;
+			if (move.category === 'Status') {
+				attacker.formeChange('Blobbos-Switch');
+			} else if (move.category === 'Special') {
+				attacker.formeChange('Blobbos-Switch-Blue');
+			} else {
+				attacker.formeChange('Blobbos-Switch-Red');
+			}
+		},
+		isPermanent: true,
+		name: "Joycon",
+		isNonstandard: "Future",
+	},
+	ancientstyle: {
+		onStart(pokemon) {
+			this.effectState.style = 'agile';
+			this.add('-start', pokemon, this.effectState.style);
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, this.effectState.style);
+		},
+		onResidual(pokemon) {
+			if (!pokemon.activeTurns) return;
+			if (this.effectState.style === 'agile') {
+				this.effectState.style = 'strong';
+				this.add('-end', pokemon, 'agile');
+				this.add('-start', pokemon, 'strong');
+			} else {
+				this.effectState.style = 'agile';
+				this.add('-end', pokemon, 'strong');
+				this.add('-start', pokemon, 'agile');
+			}
+		},
+		onBasePower(basePower, pokemon, target, move) {
+			if (this.effectState.style === 'agile') {
+				return this.chainModify(0.75);
+			} else {
+				return this.chainModify(1.25);
+			}
+		},
+		onModifySpe(spe, pokemon) {
+			if (this.effectState.style === 'agile') {
+				return this.chainModify(1.25);
+			} else {
+				return this.chainModify(0.75);
+			}
+		},
+		name: "Ancient Style",
+		isNonstandard: "Future",
+	},
+	constrictor: {
+		// implemented in statuses
+		name: "Constrictor",
+		isNonstandard: "Future",
+	},
 };

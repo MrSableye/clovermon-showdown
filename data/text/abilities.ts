@@ -3057,4 +3057,17 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		transform: "[POKEMON] has regained its immortality!",
 	},
+	joycon: {
+		name: "Joycon",
+		desc: "If this Pokemon is an Blobbos-Switch, it changes to Blue Forme before using a special move, Red forme before using a physical move, and its base forme Shield Forme before using a status move.",
+		shortDesc: "If Blobbos-Switch, changes Forme to Blue before special attacks, Red before physical attacks, and base before status moves.",
+	},
+	ancientstyle: {
+		name: "Ancient Style",
+		desc: "Switches between Agile and Strong styles at end of turn. If Strong, 1.25x base power and 0.75x speed. If Agile, 0.75x base power and 1.25x speed.",
+	},
+	constrictor: {
+		name: "Binding Band",
+		desc: "User's partial-trapping moves deal 1/6 max HP per turn instead of 1/8.",
+	},
 };
