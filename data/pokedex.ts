@@ -41501,6 +41501,19 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Water 2", "Field"],
 		gen: 8,
 	},
+	pizzisdee: {
+		num: -42021,
+		name: "Pizzisdee",
+		types: ["Fire", "Fighting"],
+		gender: "M",
+		baseStats: {hp: 105, atk: 115, def: 105, spa: 85, spd: 65, spe: 135},
+		abilities: {0: "Anger Point", 1: "Berserk", H: "Hustle", S: "Sheer Force"},
+		heightm: 1.75,
+		weightkg: 74.8,
+		color: "White",
+		eggGroups: ["Undiscovered"],
+		gen: 0,
+	},
 	/* Clover CAP Megas */
 	oogabugamega: {
 		num: 69268,
