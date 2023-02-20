@@ -3070,4 +3070,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Binding Band",
 		desc: "User's partial-trapping moves deal 1/6 max HP per turn instead of 1/8.",
 	},
+	deadlypincers: {
+		name: "Deadly Pincers",
+		desc: "This Pokemon's Defense is 1.5x before using a force switch move.",
+	},
 };

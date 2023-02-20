@@ -10022,4 +10022,24 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Constrictor",
 		isNonstandard: "Future",
 	},
+	deadlypincers: {
+		onBeforeTurn(pokemon) {
+			const action = this.queue.willMove(pokemon);
+			if (!action) return;
+			if (!action.move.forceSwitch) return;
+			pokemon.addVolatile('deadlypincers')
+		},
+		condition: {
+			noCopy: true,
+			duration: 1,
+			onModifyDef() {
+				return this.chainModify(1.5);
+			},
+			onAfterMoveSecondarySelf(source) {
+				source.removeVolatile('deadlypincers');
+			},
+		},
+		name: "Deadly Pincers",
+		isNonstandard: "Future",
+	}
 };
