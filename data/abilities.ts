@@ -10028,6 +10028,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (!action) return;
 			if (!action.move.forceSwitch) return;
 			pokemon.addVolatile('deadlypincers')
+			this.add('-start', pokemon, 'ability: Deadly Pincers');
 		},
 		condition: {
 			noCopy: true,
@@ -10035,11 +10036,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			onModifyDef() {
 				return this.chainModify(1.5);
 			},
+			onModifySpD() {
+				return this.chainModify(1.5);
+			},
 			onAfterMoveSecondarySelf(source) {
 				source.removeVolatile('deadlypincers');
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'ability: Deadly Pincers');
 			},
 		},
 		name: "Deadly Pincers",
 		isNonstandard: "Future",
-	}
+	},
 };

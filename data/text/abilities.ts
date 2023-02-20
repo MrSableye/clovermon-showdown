@@ -3072,6 +3072,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	deadlypincers: {
 		name: "Deadly Pincers",
-		desc: "This Pokemon's Defense is 1.5x before using a force switch move.",
+		desc: "This Pokemon's Defense and Special Defense is 1.5x before using a force switch move.",
 	},
 };
