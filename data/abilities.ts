@@ -10043,7 +10043,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				source.removeVolatile('deadlypincers');
 			},
 			onEnd(pokemon) {
-				this.add('-end', pokemon, 'ability: Deadly Pincers');
+				this.add('-end', pokemon, 'ability: Deadly Pincers', '[silent]');
 			},
 		},
 		name: "Deadly Pincers",
