@@ -157,6 +157,7 @@ export const commands: Chat.ChatCommands = {
 		},
 		showall: 'showapproved',
 		showapproved() {
+			this.runBroadcast();
 			this.checkCan('avatar');
 
 			const avatarList = Object.entries(avatars).filter(([userId, avatarStatus]) => avatarStatus.avatar !== undefined);
