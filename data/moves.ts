@@ -29004,7 +29004,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 722,
 		accuracy: 100,
 		basePower: 130,
-		category: "Physical",
+		category: "Special",
 		isNonstandard: "Future",
 		name: "Hardcrash",
 		pp: 5,
