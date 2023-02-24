@@ -10052,10 +10052,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	possessed: {
 		onModifyMovePriority: 1,
 		onModifyMove(move, attacker, defender) {
-			if ((attacker.species.baseSpecies !== 'Blobbos-Doll' && attacker.species.name !== 'Blobbos-Doll') || attacker.transformed) return;
+			if (attacker.species.name !== 'Blobbos-Doll' || attacker.transformed) return;
 			if (move.id !== 'plushrush') return;
-			const targetForme = (move.id === 'plushrush' ? 'Blobbos-Doll' : 'Blobbos-Doll-Possessed');
-			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+			attacker.formeChange('Blobbos-Doll-Possessed');
 		},
 		isPermanent: true,
 		name: "Possessed",
