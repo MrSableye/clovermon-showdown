@@ -9967,7 +9967,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	joycon: {
 		onModifyMovePriority: 1,
 		onModifyMove(move, attacker, defender) {
-			if (attacker.species.baseSpecies !== 'Blobbos-Switch' || attacker.transformed) return;
+			if ((attacker.species.baseSpecies !== 'Blobbos-Switch' && attacker.species.name !== 'Blobbos-Switch') || attacker.transformed) return;
 			if (move.category === 'Status') {
 				attacker.formeChange('Blobbos-Switch');
 			} else if (move.category === 'Special') {
@@ -10052,7 +10052,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	possessed: {
 		onModifyMovePriority: 1,
 		onModifyMove(move, attacker, defender) {
-			if (attacker.species.baseSpecies !== 'Blobbos-Doll' || attacker.transformed) return;
+			if ((attacker.species.baseSpecies !== 'Blobbos-Doll' && attacker.species.name !== 'Blobbos-Doll') || attacker.transformed) return;
 			if (move.category === 'Physical' && move.id !== 'plushrush') return;
 			const targetForme = (move.id === 'plushrush' ? 'Blobbos-Doll' : 'Blobbos-Doll-Possessed');
 			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
