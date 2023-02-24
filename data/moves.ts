@@ -24408,7 +24408,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Leaf Shield",
-		pp: 10,
+		pp: 5,
 		priority: 4,
 		flags: {},
 		stallingMove: true,
@@ -26275,7 +26275,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	atombomb: {
 		num: 69003,
 		accuracy: 100,
-		basePower: 150,
+		basePower: 151,
 		category: "Special",
 		name: "Atom Bomb",
 		pp: 5,
@@ -28729,7 +28729,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Shuttle Loop",
 		pp: 20,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		selfSwitch: true,
 		secondary: null,
 		critRatio: 2,
@@ -28942,6 +28942,111 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "normal",
 		type: "Fairy",
+		isNonstandard: "Future",
+	},
+	bugout: {
+		num: 69050,
+		accuracy: 90,
+		basePower: 90,
+		category: "Physical",
+		name: "Bug Out",
+		pp: 10,
+		priority: -6,
+		target: "normal",
+		type: "Bug",
+		flags: {contact: 1, protect: 1},
+		forceSwitch: true,
+		isNonstandard: "Future",
+	},
+	gentworrible: {
+		num: 217,
+		accuracy: 90,
+		basePower: 100,
+		category: "Special",
+		name: "Gentworrible",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon, target) {
+			const rand = this.random(10);
+			if (rand < 2) {
+				move.heal = [1, 4];
+				move.infiltrates = true;
+			} else if (rand < 6) {
+				move.basePower = 100;
+			} else if (rand < 9) {
+				move.basePower = 100;
+			} else {
+				move.basePower = 100;
+			}
+		},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Ice', type);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	hardcrash: {
+		num: 722,
+		accuracy: 100,
+		basePower: 130,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hardcrash",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		secondary: {
+			chance: 100,
+			status: 'par',
+		},
+		onAfterMove(source) {
+			source.trySetStatus('frz');
+		},
+		target: "normal",
+		type: "Electric",
+		contestType: "Cool",
+	},
+	driftgear: {
+		num: 508,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Drift Gear",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			spe: 2,
+			atk: 1,
+		},
+		self: {
+			boosts: {
+				accuracy: -1,
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Steel",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Clever",
 		isNonstandard: "Future",
 	},
 };

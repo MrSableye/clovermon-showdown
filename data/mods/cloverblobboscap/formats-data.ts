@@ -3355,4 +3355,24 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbosswitch: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosswitchblue: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosswitchred: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosdoll: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosdollpossessed: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };

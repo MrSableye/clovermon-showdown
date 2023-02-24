@@ -10049,4 +10049,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Deadly Pincers",
 		isNonstandard: "Future",
 	},
+	possessed: {
+		onModifyMovePriority: 1,
+		onModifyMove(move, attacker, defender) {
+			if (attacker.species.baseSpecies !== 'Blobbos-Doll' || attacker.transformed) return;
+			if (move.category === 'Physical' && move.id !== 'plushrush') return;
+			const targetForme = (move.id === 'plushrush' ? 'Blobbos-Doll' : 'Blobbos-Doll-Possessed');
+			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+		},
+		isPermanent: true,
+		name: "Possessed",
+		rating: 4,
+		isNonstandard: "Future",
+	},
 };

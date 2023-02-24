@@ -1243,7 +1243,23 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	wildfire: {
+	blackfire: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bugout: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hardcrash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	driftgear: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	gentworrible: {
 		inherit: true,
 		isNonstandard: null,
 	},
