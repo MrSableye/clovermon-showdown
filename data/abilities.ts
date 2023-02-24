@@ -9965,7 +9965,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	joycon: {
-		onModifyMovePriority: 1,
+		onModifyMovePriority: -11,
 		onModifyMove(move, attacker, defender) {
 			if ((attacker.species.baseSpecies !== 'Blobbos-Switch' && attacker.species.name !== 'Blobbos-Switch') || attacker.transformed) return;
 			if (move.category === 'Status') {
