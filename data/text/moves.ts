@@ -8743,7 +8743,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "20% chance to make the target flinch.",
 	},
 	takethat: {
-		name: "Take",
+		name: "Take That!",
 		desc: "Confuses and prevents the target from switching out. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. If the target leaves the field using Baton Pass, the replacement will remain trapped. The effect ends if the user leaves the field.",
 		shortDesc: "Confuses and prevents the target from switching out.",
 	},
@@ -8762,15 +8762,36 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Trident Charge",
 		shortDesc: "1.5x damage under Sea of Fire.",
 	},
-	wildfire: {
-		name: "Wildfire",
+	blackfire: {
+		name: "Blackfire",
 		shortDesc: "Foes: -1/6 HP, 4 turns.",
 
 		start: "  [PARTY] were surrounded by fire!",
-		damage: "  [POKEMON] is burning up within Wildfire’s flames!",
+		damage: "  [POKEMON] is burning up within Blackfire’s flames!",
 	},
 	justmonikat: {
 		name: "Just Monikat",
 		desc: "Transforms the target into a Monikat. Prevents the target from switching out. Drops the target's speed one stage.",
+	},
+	doubleiceblob: {
+		name: "Double Ice Blob",
+		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. Has a 30% chance to make the target flinch.",
+		shortDesc: "Hits twice. 30% chance to make the target flinch.",
+	},
+	bugout: {
+		name: "Bug Out",
+		shortDesc: "Forces the foe to switch out.",
+	},
+	gentworrible: {
+		name: "Gentworrible",
+		shortDesc: "Grass + Ice, charges for 2 turns, and has a chance to heal the foe.",
+	},
+	hardcrash: {
+		name: "Hardcrash",
+		shortDesc: "Special if Sp.Atk > Atk. Paralyzes the foe, but freezes self.",
+	},
+	driftgear: {
+		name: "Drift Gear",
+		shortDesc: "1.5x damage under Sea of Fire.",
 	},
 };
