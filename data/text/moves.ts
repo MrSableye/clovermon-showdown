@@ -8792,7 +8792,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	driftgear: {
 		name: "Drift Gear",
-		shortDesc: "1.5x damage under Sea of Fire.",
+		shortDesc: "7.5x damage under Sea of Fire.",
 	},
 	tombstonerd: {
 		name: "Tombstoner-D",
