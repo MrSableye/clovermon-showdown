@@ -29049,4 +29049,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 		isNonstandard: "Future",
 	},
+	tombstonerd: {
+		num: 1317,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Tomberstoner-D",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			boosts: {
+				spe: -1,
+			},
+		},
+		target: "normal",
+		type: "Rock",
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
 };

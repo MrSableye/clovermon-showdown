@@ -1263,5 +1263,9 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	tombstonerd: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
 
