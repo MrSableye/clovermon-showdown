@@ -29054,7 +29054,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 70,
 		category: "Physical",
-		name: "Tomberstoner-D",
+		name: "Tombstoner-D",
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
