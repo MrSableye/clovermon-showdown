@@ -9855,8 +9855,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	hellfirerush: {
-		onModifySpe(spe, target) {
-			if (target.side.getSideCondition('seaoffire')) {
+		onModifySpe(spe, pokemon) {
+			if (pokemon.side.getSideCondition('seaoffire')) {
 				return this.chainModify(1.5);
 			}
 		},
