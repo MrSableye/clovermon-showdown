@@ -41255,9 +41255,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gender: "N",
 		baseStats: {
 			hp: 115,
-			atk: 50,
+			atk: 70,
 			def: 60,
-			spa: 50,
+			spa: 70,
 			spd: 60,
 			spe: 148,
 		},

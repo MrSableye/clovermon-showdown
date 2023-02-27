@@ -10074,6 +10074,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			pokemon.abilityState.gluttony = true;
 		},
 		onEatItem(item, pokemon) {
+			pokemon.abilityState.gluttony = true;
 			const weakenBerries = [
 				'Babiri Berry', 'Charti Berry', 'Chilan Berry', 'Chople Berry', 'Coba Berry', 'Colbur Berry', 'Haban Berry', 'Kasib Berry', 'Kebia Berry', 'Occa Berry', 'Passho Berry', 'Payapa Berry', 'Rindo Berry', 'Roseli Berry', 'Shuca Berry', 'Tanga Berry', 'Wacan Berry', 'Yache Berry',
 			];
@@ -10085,6 +10086,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.heal(pokemon.baseMaxhp / 3);
 		},
 		onTryHeal(damage, target, source, effect) {
+			
 			if (!effect) return;
 			if (effect.name === 'Berry Juice' || effect.name === 'Leftovers') {
 				this.add('-activate', target, 'ability: Ripen');
@@ -10116,6 +10118,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,
 		onResidual(pokemon) {
+			pokemon.abilityState.gluttony = true;
 			if (this.field.isWeather(['sunnyday', 'desolateland']) || this.randomChance(1, 2)) {
 				if (pokemon.hp && !pokemon.item && this.dex.items.get(pokemon.lastItem).isBerry) {
 					pokemon.setItem(pokemon.lastItem);
@@ -10128,12 +10131,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			noCopy: true,
 			duration: 2,
 			onRestart() {
+				
 				this.effectState.duration = 2;
 			},
 			onResidualOrder: 28,
 			onResidualSubOrder: 2,
 			onEnd(pokemon) {
+				pokemon.abilityState.gluttony = true;
 				if (pokemon.hp) {
+					
 					const item = this.effectState.berry;
 					this.add('-activate', pokemon, 'ability: Cud Chew');
 					this.add('-enditem', pokemon, item.name, '[eat]');

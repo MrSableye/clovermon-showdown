@@ -10699,12 +10699,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	abdiking: {
-		tier: "Illegal",
-		isNonstandard: "Future",
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
 	},
 	botanerry: {
-		tier: "Illegal",
-		isNonstandard: "Future",
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
 	},
 	fatherfuck: {
 		inherit: true,
