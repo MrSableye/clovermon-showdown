@@ -10698,6 +10698,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	abdiking: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	fatherfuck: {
 		inherit: true,
 		tier: "OU",

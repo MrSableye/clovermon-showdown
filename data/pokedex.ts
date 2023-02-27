@@ -41237,6 +41237,30 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Red",
 		eggGroups: ["Human-Like"],
 	},
+	abdiking: {
+		num: -69132,
+		name: "Abdiking",
+		types: ["Electric", "Bug"],
+		gender: "N",
+		baseStats: {
+			hp: 115,
+			atk: 50,
+			def: 60,
+			spa: 50,
+			spd: 60,
+			spe: 148,
+		},
+		abilities: {
+			0: "Supermentum",
+		},
+		heightm: 0.8,
+		weightkg: 11.4,
+		color: "Yellow",
+		eggGroups: [
+			"Ditto",
+		],
+		gen: 8,
+	},
 	buge: {
 		num: -42106,
 		name: "Buge",

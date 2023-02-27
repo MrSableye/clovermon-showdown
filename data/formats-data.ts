@@ -9638,6 +9638,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	abdiking: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	sparmor: {
 		tier: "Illegal",
 		isNonstandard: "Future",
