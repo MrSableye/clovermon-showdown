@@ -3074,4 +3074,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Deadly Pincers",
 		desc: "This Pokemon's Defense and Special Defense is 1.5x before using a force switch move.",
 	},
+	bountifulharvest: {
+		name: "Bountiful Harvest",
+		desc: "Harvest+Ripen+Gluttony+Cheek Pouch+Cud Chew",
+	},
 };

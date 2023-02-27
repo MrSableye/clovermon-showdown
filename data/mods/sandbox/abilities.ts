@@ -1819,4 +1819,8 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	bountifulharvest: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
