@@ -41222,6 +41222,17 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 	},
+	botanerry: {
+		num: -840,
+		name: "Botanerry",
+		types: ["Grass"],
+		baseStats: {hp: 70, atk: 71, def: 80, spa: 74, spd: 79, spe: 65},
+		abilities: {0: "Bountiful Harvest"},
+		heightm: 0.2,
+		weightkg: 0.5,
+		color: "Green",
+		eggGroups: ["Grass", "Dragon"],
+	},
 	smellsumo: {
 		num: -42118,
 		name: "Smellsumo",

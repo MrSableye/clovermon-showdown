@@ -10702,6 +10702,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	botanerry: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	fatherfuck: {
 		inherit: true,
 		tier: "OU",

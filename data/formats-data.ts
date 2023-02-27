@@ -9642,6 +9642,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	botanerry: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	sparmor: {
 		tier: "Illegal",
 		isNonstandard: "Future",
