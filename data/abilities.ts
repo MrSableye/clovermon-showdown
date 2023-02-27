@@ -10118,6 +10118,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onResidualOrder: 28,
 		onResidualSubOrder: 2,
 		onResidual(pokemon) {
+			pokemon.abilityState.gluttony = true;
 			if (this.field.isWeather(['sunnyday', 'desolateland']) || this.randomChance(1, 2)) {
 				if (pokemon.hp && !pokemon.item && this.dex.items.get(pokemon.lastItem).isBerry) {
 					pokemon.setItem(pokemon.lastItem);
@@ -10136,8 +10137,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			onResidualOrder: 28,
 			onResidualSubOrder: 2,
 			onEnd(pokemon) {
+				pokemon.abilityState.gluttony = true;
 				if (pokemon.hp) {
-					pokemon.abilityState.gluttony = true;
+					
 					const item = this.effectState.berry;
 					this.add('-activate', pokemon, 'ability: Cud Chew');
 					this.add('-enditem', pokemon, item.name, '[eat]');
