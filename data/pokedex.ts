@@ -41222,6 +41222,17 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 	},
+	botanerry: {
+		num: -840,
+		name: "Botanerry",
+		types: ["Grass"],
+		baseStats: {hp: 70, atk: 71, def: 80, spa: 74, spd: 79, spe: 65},
+		abilities: {0: "Bountiful Harvest"},
+		heightm: 0.2,
+		weightkg: 0.5,
+		color: "Green",
+		eggGroups: ["Grass", "Dragon"],
+	},
 	smellsumo: {
 		num: -42118,
 		name: "Smellsumo",
@@ -41236,6 +41247,30 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 90.5,
 		color: "Red",
 		eggGroups: ["Human-Like"],
+	},
+	abdiking: {
+		num: -69132,
+		name: "Abdiking",
+		types: ["Electric", "Bug"],
+		gender: "N",
+		baseStats: {
+			hp: 115,
+			atk: 50,
+			def: 60,
+			spa: 50,
+			spd: 60,
+			spe: 148,
+		},
+		abilities: {
+			0: "Supermentum",
+		},
+		heightm: 0.8,
+		weightkg: 11.4,
+		color: "Yellow",
+		eggGroups: [
+			"Ditto",
+		],
+		gen: 8,
 	},
 	buge: {
 		num: -42106,
