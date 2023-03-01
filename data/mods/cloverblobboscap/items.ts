@@ -81,4 +81,8 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	boosterenergy: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
