@@ -8760,7 +8760,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	tridentcharge: {
 		name: "Trident Charge",
-		shortDesc: "1.5x damage under Sea of Fire.",
+		shortDesc: "1.5x damage under Sea of Fire; torments foe.",
 	},
 	blackfire: {
 		name: "Blackfire",
@@ -8792,7 +8792,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	driftgear: {
 		name: "Drift Gear",
-		shortDesc: "7.5x damage under Sea of Fire.",
+		shortDesc: "+1 Atk, +2 Speed, but lowers accuracy by 1.",
 	},
 	tombstonerd: {
 		name: "Tombstoner-D",

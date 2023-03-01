@@ -497,4 +497,24 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	quarkdrive: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	protosynthesis: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	purifyingsalt: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	eartheater: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	windrider: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

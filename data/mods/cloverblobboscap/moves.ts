@@ -1159,10 +1159,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	gigatonhammer: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	comeuppance: {
 		inherit: true,
 		isNonstandard: null,
@@ -1266,6 +1262,35 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	tombstonerd: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	secretstrength: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	gigatonhammer: {
+		num: 893,
+		accuracy: 100,
+		basePower: 160,
+		category: "Physical",
+		name: "Gigaton Hammer",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, hammer: 1},
+		onDisableMove(pokemon) {
+			if (pokemon.lastMove?.id === 'gigatonhammer') pokemon.disableMove('gigatonhammer');
+		},
+		beforeMoveCallback(pokemon) {
+			if (pokemon.lastMove?.id === 'gigatonhammer') pokemon.addVolatile('gigatonhammer');
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.removeVolatile('gigatonhammer')) {
+				this.add('-hint', "Some effects can force a Pokemon to use Gigaton Hammer again in a row.");
+			}
+		},
+		condition: {},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
 	},
 };
 
