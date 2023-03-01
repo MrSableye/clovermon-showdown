@@ -28862,7 +28862,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	tridentcharge: {
 		accuracy: 100,
 		basePower: 80,
-		category: "Special",
+		category: "Physical",
 		name: "Trident Charge",
 		pp: 20,
 		priority: 0,

@@ -2196,6 +2196,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	poltire: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	primitool: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -3356,23 +3360,148 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobbosswitch: {
-		tier: "Illegal",
-		isNonstandard: "Future",
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	blobbosswitchblue: {
-		tier: "Illegal",
-		isNonstandard: "Future",
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	blobbosswitchred: {
-		tier: "Illegal",
-		isNonstandard: "Future",
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	blobbosdoll: {
-		tier: "Illegal",
-		isNonstandard: "Future",
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	blobbosdollpossessed: {
-		tier: "Illegal",
-		isNonstandard: "Future",
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmimikyubusted: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosdemon: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosvolcano: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosocean: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosstarfy: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosstarfymonstar: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosstarfystarpedo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosstarfyroostar: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosstarfystarfright: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbossalt: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	ironblob: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	cavernsnore: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospaldea: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshisui: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscell: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosrobotnik: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmidjourney: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmetaknight: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosattorney: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosogre: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosshrimp: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosbeetle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboskorea: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosperi: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 };

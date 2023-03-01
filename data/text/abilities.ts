@@ -3078,4 +3078,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Bountiful Harvest",
 		desc: "Harvest+Ripen+Gluttony+Cheek Pouch+Cud Chew",
 	},
+	possessed: {
+		name: "Possessed",
+		shortDesc: "If Blobbos-Doll, changes to Possessed form after using Plush Rush.",
+	},
 };

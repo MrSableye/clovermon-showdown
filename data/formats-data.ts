@@ -9706,4 +9706,96 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosdemon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosvolcano: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosocean: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosstarfy: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosstarfymonstar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosstarfystarpedo: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosstarfyroostar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosstarfystarfright: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbossalt: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ironblob: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cavernsnore: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospaldea: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosrobotnik: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboshisui: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscell: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmidjourney: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmetaknight: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosattorney: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosogre: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosshrimp: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosbeetle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboskorea: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosperi: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };
