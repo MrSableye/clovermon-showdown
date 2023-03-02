@@ -8808,6 +8808,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	tsuchinoko: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	doomsday: {
 		tier: "Illegal",
 		isNonstandard: "Future",

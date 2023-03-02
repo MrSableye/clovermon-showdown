@@ -10578,6 +10578,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	tsuchinoko: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	autumn: {
 		inherit: true,
 		tier: "OU",
