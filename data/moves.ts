@@ -29053,7 +29053,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	coldreception: {
-		num: 881,
+		num: 69881,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
