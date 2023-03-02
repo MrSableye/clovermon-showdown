@@ -29104,7 +29104,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
 		secondary: {
-			chance: 8, // ::(
+			chance: 8, // ::::)
 			onHit(target, source) {
 				const result = this.random(5);
 				if (result === 0) {
