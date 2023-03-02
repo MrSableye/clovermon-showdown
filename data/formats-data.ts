@@ -8788,6 +8788,26 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	devante: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	vergilion: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	dugwalker: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	junkbane: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	weathervein: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	doomsday: {
 		tier: "Illegal",
 		isNonstandard: "Future",
