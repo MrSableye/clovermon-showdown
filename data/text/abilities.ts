@@ -2893,7 +2893,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	woodchipper: {
 		name: "Woodchipper",
-		shortDesc: "30% chance a Pokemon making contact with this Pokemon will lose their item. 1.2x Blade moves.",
+		shortDesc: "Pokemon making contact with this Pokemon lose their item. 1.2x Blade moves.",
 	},
 	pooperpower: {
 		name: "Pooperpower",
