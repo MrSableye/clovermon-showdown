@@ -8158,7 +8158,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	backroom: {
 		name: "Backroom",
-		shortDesc: "The user switches out and summons Trick Room.",
+		shortDesc: "The user switches out and summons Trick Room for one turn.",
 	},
 	charmerssong: {
 		name: "Charmer's Song",
@@ -8182,7 +8182,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sportsball: {
 		name: "Sportsball",
-		shortDesc: "Summons Mud Sport and Water Sport after hit.",
+		shortDesc: "Hits twice. Summons Mud Sport and Water Sport after hit.",
 	},
 	rainbowbeam: {
 		name: "Rainbow Beam",
@@ -8190,7 +8190,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	freikugel: {
 		name: "Freikugel",
-		shortDesc: "Has 50% recoil.",
+		shortDesc: "Has 50% recoil. Always hits in Magic Room.",
 	},
 	confettigun: {
 		name: "Confetti Gun",
@@ -8536,7 +8536,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	mouthmelter: {
 		name: "Mouth Melter",
 		desc: "For 5 turns, the target cannot use sound or bite-based moves.",
-		shortDesc: "For 5 turns, the target cannot use sound or bite-based moves.",
+		shortDesc: "Hits twice. Prevents target from using sound & bite moves.",
 		cant: "The effects of Mouth Melter prevent [POKEMON] from using certain moves!",
 	},
 	swamp: {
@@ -8563,7 +8563,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	foolsgambit: {
 		name: "Fool's Gambit",
-		shortDesc: "Has 33% recoil.",
+		shortDesc: "Damages target based on Sp. Def. Neutral on Fairy.",
 	},
 	trapcard: {
 		name: "Trap Card",
@@ -8735,7 +8735,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	holdit: {
 		name: "Hold It!",
 		desc: "The user restores 14/5 of its maximum HP, rounded half up. Taunts user.",
-		shortDesc: "Heals the user by 80% of its max HP. Taunts User",
+		shortDesc: "Heals the user by 80% of its max HP. Taunts User.",
 	},
 	objection: {
 		name: "Objection!",
@@ -8793,6 +8793,14 @@ export const MovesText: {[k: string]: MoveText} = {
 	driftgear: {
 		name: "Drift Gear",
 		shortDesc: "+1 Atk, +2 Speed, but lowers accuracy by 1.",
+	},
+	coldreception: {
+		name: "Cold Reception",
+		desc: "For 5 turns, the weather becomes Hail. The user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members.",
+		shortDesc: "Starts Hail. User switches out.",
+
+		// TODO needs to be implemented
+		activate: "  [POKEMON] is preparing to tell a chillingly bad joke!",
 	},
 	tombstonerd: {
 		name: "Tombstoner-D",
