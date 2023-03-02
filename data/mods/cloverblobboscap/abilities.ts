@@ -517,4 +517,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	lethargic: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
