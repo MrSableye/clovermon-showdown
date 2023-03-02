@@ -41482,6 +41482,32 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
+	blobboshomestuck: {
+		num: 69132,
+		name: "Blobbos-Homestuck",
+		baseSpecies: "Blobbos",
+		forme: "Homestuck",
+		types: ["Dark", "Bug"],
+		gender: "N",
+		baseStats: {
+			hp: 88,
+			atk: 118,
+			def: 78,
+			spa: 118,
+			spd: 88,
+			spe: 108,
+		},
+		abilities: {
+			0: "Plundered Luck",
+		},
+		heightm: 0.4,
+		weightkg: 5.7,
+		color: "Blue",
+		eggGroups: [
+			"Ditto",
+		],
+		gen: 8,
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",

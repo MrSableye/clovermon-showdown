@@ -3504,4 +3504,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobboshomestuck: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

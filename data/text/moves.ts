@@ -8799,4 +8799,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 50% chance to lower the target's Speed by 1 stage.",
 		shortDesc: "50% chance to lower the target's Speed by 1.",
 	},
+	strifedicekind: {
+		name: "Strife: Dicekind",
+		desc: "Hits 8 times. Each hit can miss. 4% chance to either burn, freeze, paralyze, boost a foe's random stat by 1, or lower a foe's random stat by 1.",
+	},
 };

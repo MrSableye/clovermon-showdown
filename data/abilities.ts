@@ -10151,4 +10151,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			},
 		},
 	},
+	plunderedluck: {
+		onModifyMovePriority: -2,
+		onFoeModifyMove(move) {
+			if (move.secondaries) {
+				this.debug('halving secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance /= 2;
+				}
+			}
+			if (move.self?.chance) move.self.chance /= 2;
+		},
+		onModifyMove(move) {
+			if (move.secondaries) {
+				this.debug('doubling secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance *= 2;
+				}
+			}
+			if (move.self?.chance) move.self.chance *= 2;
+		},
+		name: "Plundered Luck",
+		isNonstandard: "Future",
+	},
 };
