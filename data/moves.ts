@@ -17248,7 +17248,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		sleepUsable: true,
 		onTry(source) {
-			return source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz')|| source.hasAbility('lethargic');
+			return source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz') || source.hasAbility('lethargic');
 		},
 		onHit(pokemon) {
 			const noSleepTalk = [

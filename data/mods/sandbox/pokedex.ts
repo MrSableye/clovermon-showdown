@@ -63,6 +63,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			S: "Regenerator",
 		},
 		color: "Black",
-		
+
 	},
 };
