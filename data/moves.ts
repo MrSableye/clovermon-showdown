@@ -29068,6 +29068,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "all",
 		type: "Ice",
+		isNonstandard: "Future",
 	},
 	tombstonerd: {
 		num: 1317,
