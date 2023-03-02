@@ -25401,7 +25401,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Charmer's Song",
 		pp: 10,
 		priority: -6,
-		flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
+		flags: {protect: 1, mirror: 1, sound: 1},
 		forceSwitch: true,
 		slotCondition: 'charmerssong',
 		condition: {
@@ -25640,7 +25640,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Wind Whip",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, wind: 1},
 		secondary: {
 			chance: 100,
 			boosts: {
@@ -25879,7 +25879,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Bloodletting",
 		pp: 20,
 		priority: 0,
-		flags: {snatch: 1, dance: 1},
+		flags: {snatch: 1},
 		boosts: {
 			spa: 1,
 			spe: 1,
@@ -26163,7 +26163,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Feu de Fe\u0301e",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, defrost: 1},
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
@@ -26724,7 +26724,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Nosedive",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, contact: 1},
 		self: {
 			boosts: {
 				def: -2,
@@ -26862,7 +26862,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Abduction",
 		pp: 10,
 		priority: -6,
-		flags: {bullet: 1, protect: 1, pulse: 1, mirror: 1, distance: 1},
+		flags: {protect: 1, mirror: 1, distance: 1},
 		selfSwitch: true,
 		forceSwitch: true,
 		noSketch: true,
@@ -27127,7 +27127,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Malice Powder",
 		pp: 20,
 		priority: 0,
-		flags: {powder: 1, protect: 1, mirror: 1, dance: 1},
+		flags: {powder: 1, protect: 1, mirror: 1},
 		volatileStatus: 'confusion',
 		secondary: null,
 		onHit(target, source) {
@@ -27149,7 +27149,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Overdose",
 		pp: 5,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1},
 		recoil: [1, 2],
 		secondary: null,
 		target: "normal",
@@ -27436,7 +27436,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Hell Dive",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, contact: 1},
 		// Move disabling implemented in Battle#nextTurn in sim/battle.ts
 		onTry(source) {
 			source.addVolatile('helldive');
@@ -27633,7 +27633,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Secret Strength",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, dance: 1},
+		flags: {protect: 1, mirror: 1},
 		onModifyType(move, pokemon) {
 			if (pokemon.getTypes()[1]) {
 				move.type = pokemon.getTypes()[1];
@@ -27882,11 +27882,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 115,
 		category: "Physical",
+		overrideDefensiveStat: 'spd',
 		name: "Fool's Gambit",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		recoil: [33, 100],
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Fairy') return 1;
+		},
 		target: "allAdjacent",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -27984,7 +27987,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		ignoreAbility: true,
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -28006,7 +28009,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		ignoreAbility: true,
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: null,
 		noSketch: true,
 		target: "normal",
@@ -28078,7 +28081,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Flurry Fist",
 		pp: 15,
 		priority: 1,
-		flags: {protect: 1, mirror: 1, punch: 1},
+		flags: {protect: 1, mirror: 1, punch: 1, contact: 1},
 		secondary: null,
 		target: "normal",
 		type: "Ice",
@@ -28094,7 +28097,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		target: "normal",
 		type: "???",
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, contact: 1},
 		multihit: 3,
 		canContinue: true,
 		onTryHit(target, source, move) {
@@ -28309,7 +28312,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Item Claws",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, contact: 1},
 		basePowerCallback(pokemon, target, move) {
 			if (!target) return move.basePower;
 
@@ -28601,7 +28604,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "De-Population Bomb",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -28675,7 +28678,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		target: "normal",
 		type: "Flying",
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1},
 		isNonstandard: "Future",
 	},
 	eronsrepus: {
@@ -28686,7 +28689,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Erons Repus",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+		flags: {protect: 1, mirror: 1, contact: 1},
 		onAfterMove(source) {
 			source.trySetStatus('slp');
 		},
@@ -29048,6 +29051,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Clever",
 		isNonstandard: "Future",
+	},
+	coldreception: {
+		num: 881,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Cold Reception",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		// TODO show prepare message before the "POKEMON used MOVE!" message
+		// This happens even before sleep shows its "POKEMON is fast asleep." message
+		weather: 'hail',
+		selfSwitch: true,
+		secondary: null,
+		target: "all",
+		type: "Ice",
 	},
 	tombstonerd: {
 		num: 1317,
