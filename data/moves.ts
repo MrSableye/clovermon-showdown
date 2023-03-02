@@ -17248,7 +17248,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		sleepUsable: true,
 		onTry(source) {
-			return source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz');
+			return source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz')|| source.hasAbility('lethargic');
 		},
 		onHit(pokemon) {
 			const noSleepTalk = [
@@ -17545,7 +17545,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 		sleepUsable: true,
 		onTry(source) {
-			return source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz');
+			return source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz') || source.hasAbility('lethargic');
 		},
 		secondary: {
 			chance: 30,
@@ -26024,7 +26024,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 		sleepUsable: true,
 		onTry(source) {
-			return source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz');
+			return source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz') || source.hasAbility('lethargic');
 		},
 		self: {
 			onHit(target, source) {
