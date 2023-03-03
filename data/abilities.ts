@@ -10027,7 +10027,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const action = this.queue.willMove(pokemon);
 			if (!action) return;
 			if (!action.move.forceSwitch) return;
-			pokemon.addVolatile('deadlypincers')
+			pokemon.addVolatile('deadlypincers');
 			this.add('-start', pokemon, 'ability: Deadly Pincers');
 		},
 		condition: {
@@ -10086,7 +10086,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.heal(pokemon.baseMaxhp / 3);
 		},
 		onTryHeal(damage, target, source, effect) {
-			
 			if (!effect) return;
 			if (effect.name === 'Berry Juice' || effect.name === 'Leftovers') {
 				this.add('-activate', target, 'ability: Ripen');
@@ -10131,7 +10130,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			noCopy: true,
 			duration: 2,
 			onRestart() {
-				
 				this.effectState.duration = 2;
 			},
 			onResidualOrder: 28,
@@ -10139,7 +10137,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			onEnd(pokemon) {
 				pokemon.abilityState.gluttony = true;
 				if (pokemon.hp) {
-					
 					const item = this.effectState.berry;
 					this.add('-activate', pokemon, 'ability: Cud Chew');
 					this.add('-enditem', pokemon, item.name, '[eat]');
@@ -10150,5 +10147,28 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			},
 		},
+	},
+	plunderedluck: {
+		onModifyMovePriority: -2,
+		onFoeModifyMove(move) {
+			if (move.secondaries) {
+				this.debug('halving secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance /= 2;
+				}
+			}
+			if (move.self?.chance) move.self.chance /= 2;
+		},
+		onModifyMove(move) {
+			if (move.secondaries) {
+				this.debug('doubling secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance *= 2;
+				}
+			}
+			if (move.self?.chance) move.self.chance *= 2;
+		},
+		name: "Plundered Luck",
+		isNonstandard: "Future",
 	},
 };

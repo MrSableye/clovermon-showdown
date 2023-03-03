@@ -3082,4 +3082,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Possessed",
 		shortDesc: "If Blobbos-Doll, changes to Possessed form after using Plush Rush.",
 	},
+	plunderedluck: {
+		name: "Plundered Luck",
+		desc: "This Pokemon's moves have their secondary effect chance doubled. Foes's moves have their secondary effect chance halved.",
+		shortDesc: "This Pokemon's moves have their secondary effect chance doubled. Foes's moves have their secondary effect chance halved.",
+	},
 };

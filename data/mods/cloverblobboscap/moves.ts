@@ -1292,5 +1292,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Steel",
 	},
+	strifedicekind: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
-

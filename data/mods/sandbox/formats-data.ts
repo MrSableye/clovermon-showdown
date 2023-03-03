@@ -10553,6 +10553,36 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	devante: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	vergilion: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	dugwalker: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	junkbane: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	weathervein: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	tsuchinoko: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	autumn: {
 		inherit: true,
 		tier: "OU",

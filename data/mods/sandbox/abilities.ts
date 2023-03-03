@@ -1823,4 +1823,16 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	sharpness: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	vesselofruin: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	toxicdebris: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
