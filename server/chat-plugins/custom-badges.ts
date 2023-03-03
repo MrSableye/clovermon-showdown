@@ -50,6 +50,20 @@ const initializeTeams = async () => {
 			reverse: 'reversecrewmate',
 			australian: 'australiancrewmate',
 		}),
+		horoscope: await createTeam({
+			virgo: 'virgo',
+			taurus: 'taurus',
+			scorpio: 'scorpio',
+			sagittarius: 'sagittarius',
+			pisces: 'pisces',
+			libra: 'libra',
+			leo: 'leo',
+			gemini: 'gemini',
+			capricorn: 'capricorn',
+			cancer: 'cancer',
+			aries: 'aries',
+			aquarius: 'aquarius',
+		}),
 	};
 	isInitialized = true;
 };
