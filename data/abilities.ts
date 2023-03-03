@@ -352,6 +352,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 210,
 	},
 	beadsofruin: {
+		isNonstandard: "Future",
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
 			this.add('-ability', pokemon, 'Beads of Ruin');
@@ -4434,6 +4435,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 28,
 	},
 	swordofruin: {
+		isNonstandard: "Future",
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
 			this.add('-ability', pokemon, 'Sword of Ruin');
@@ -4451,6 +4453,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 285,
 	},
 	tabletsofruin: {
+		isNonstandard: "Future",
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
 			this.add('-ability', pokemon, 'Tablets of Ruin');
@@ -4796,6 +4799,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 260,
 	},
 	vesselofruin: {
+		isNonstandard: "Future",
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
 			this.add('-ability', pokemon, 'Vessel of Ruin');
