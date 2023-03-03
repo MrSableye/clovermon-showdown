@@ -70,4 +70,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evoType: "useItem",
 		evoItem: "Moon Stone",
 	},
+	blobboscell: {
+		inherit: true,
+		abilities: {
+			0: "Swift Swim",
+			1: "Cell Shield",
+			H: "Filter",
+			S: "Regenerator",
+		},
+		color: "Black",
+
+	},
 };

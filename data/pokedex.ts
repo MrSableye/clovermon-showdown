@@ -40772,7 +40772,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		forme: "Switch",
 		types: ["Electric", "Normal"],
 		baseStats: {hp: 85, atk: 50, def: 145, spa: 50, spd: 145, spe: 45},
-		abilities: {0: "Joycon" , 1: "Hunger Switch"},
+		abilities: {0: "Joycon", 1: "Hunger Switch"},
 		heightm: 0.1,
 		weightkg: 0.3,
 		color: "Blue",
@@ -40857,7 +40857,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		requiredAbility: "Possessed",
 		battleOnly: "Blobbos-Doll",
 	},
-		blobbosdemon: {
+	blobbosdemon: {
 		num: 69132,
 		name: "Blobbos-Demon",
 		baseSpecies: "Blobbos",
@@ -40886,7 +40886,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
-		blobbosvolcano: {
+	blobbosvolcano: {
 		num: 69132,
 		name: "Blobbos-Volcano",
 		baseSpecies: "Blobbos",
@@ -41003,7 +41003,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		requiredMove: "Flamethrower",
 		gen: 8,
 	},
-		blobbosstarfystarpedo: {
+	blobbosstarfystarpedo: {
 		num: 69132,
 		name: "Blobbos-Starfy-Starpedo",
 		baseSpecies: "Blobbos",
@@ -41033,7 +41033,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		requiredMove: "Icicle Crash",
 		gen: 8,
 	},
-		blobbosstarfyroostar: {
+	blobbosstarfyroostar: {
 		num: 69132,
 		name: "Blobbos-Starfy-Roostar",
 		baseSpecies: "Blobbos",
@@ -41063,7 +41063,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		requiredMove: "Hyper Voice",
 		gen: 8,
 	},
-		blobbosstarfystarfright: {
+	blobbosstarfystarfright: {
 		num: 69132,
 		name: "Blobbos-Starfy-Starfright",
 		baseSpecies: "Blobbos",
@@ -41473,6 +41473,32 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			1: "Hustle",
 			H: "Protean",
 			S: "Adaptability",
+		},
+		heightm: 0.4,
+		weightkg: 5.7,
+		color: "Blue",
+		eggGroups: [
+			"Ditto",
+		],
+		gen: 8,
+	},
+	blobboshomestuck: {
+		num: 69132,
+		name: "Blobbos-Homestuck",
+		baseSpecies: "Blobbos",
+		forme: "Homestuck",
+		types: ["Dark", "Bug"],
+		gender: "N",
+		baseStats: {
+			hp: 88,
+			atk: 118,
+			def: 78,
+			spa: 118,
+			spd: 88,
+			spe: 108,
+		},
+		abilities: {
+			0: "Plundered Luck",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,

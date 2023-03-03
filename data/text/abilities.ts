@@ -2893,7 +2893,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	woodchipper: {
 		name: "Woodchipper",
-		shortDesc: "30% chance a Pokemon making contact with this Pokemon will lose their item. 1.2x Blade moves.",
+		shortDesc: "Pokemon making contact with this Pokemon lose their item. Blade moves deal 1.2x damage.",
 	},
 	pooperpower: {
 		name: "Pooperpower",
@@ -3081,5 +3081,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	possessed: {
 		name: "Possessed",
 		shortDesc: "If Blobbos-Doll, changes to Possessed form after using Plush Rush.",
+	},
+	plunderedluck: {
+		name: "Plundered Luck",
+		desc: "This Pokemon's moves have their secondary effect chance doubled. Foes's moves have their secondary effect chance halved.",
+		shortDesc: "This Pokemon's moves have their secondary effect chance doubled. Foes's moves have their secondary effect chance halved.",
 	},
 };

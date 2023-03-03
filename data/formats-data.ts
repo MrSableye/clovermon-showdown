@@ -9822,4 +9822,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobboshomestuck: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };
