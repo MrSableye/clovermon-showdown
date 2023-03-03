@@ -909,7 +909,7 @@ export const Aliases: {[alias: string]: string} = {
 	wow: "Will-O-Wisp",
 	esneed: "Extreme Sneed",
 	zap7: "Zap Cannon",
-	
+
 	// z-moves
 	"10mv": "10,000,000 Volt Thunderbolt",
 	"10mvt": "10,000,000 Volt Thunderbolt",
@@ -1000,7 +1000,7 @@ export const Aliases: {[alias: string]: string} = {
 	zvolttackle: "Catastropika",
 	zwater: "Hydro Vortex",
 	stbts: "Slepp That Blobs The Sky",
-	
+
 	// Max moves
 	maxbug: "Max Flutterby",
 	maxdark: "Max Darkness",
