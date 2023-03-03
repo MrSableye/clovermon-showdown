@@ -8730,7 +8730,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	saltsprinkle: {
 		name: "Salt Sprinkle",
 		desc: "Power doubles if the target has a non-volatile status condition.",
-		shortDesc: "Power doubles if the target has a status ailment. Double Damage to Water and Steel types.",
+		shortDesc: "x2 BP if target has a non-volatile status. SE on Water and Steel.",
 	},
 	holdit: {
 		name: "Hold It!",

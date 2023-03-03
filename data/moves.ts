@@ -27888,7 +27888,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
-			if (type === 'Fairy') return 1;
+			if (type === 'Fairy') return 0;
 		},
 		target: "allAdjacent",
 		type: "Dark",

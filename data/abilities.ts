@@ -8790,7 +8790,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target)) {
-				if (this.randomChance(3, 10)) {
+				if (this.randomChance(10, 10)) {
 					if (source.hp) {
 						const item = source.takeItem();
 						if (item) {
