@@ -396,4 +396,13 @@ export const DefaultText: {[k: string]: DefaultText} = {
 	strong: {
 		start: "  [POKEMON] switched to its Strong style!",
 	},
+	hyperboreanarctic: {
+		weatherName: "Hyperborean Arctic",
+		start: "  A blistering cold is brewing!",
+		end: "  The cold was halted!",
+		block: "  The icy winds are too cold!",
+		blockMove: "  The freezing winds prevent [POKEMON] from fighting!",
+		upkeep: "  (The hail is crashing down.)",
+		damage: "  [POKEMON] is buffeted by the hail!",
+	},
 };
