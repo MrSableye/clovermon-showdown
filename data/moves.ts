@@ -25245,7 +25245,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		noSketch: true,
 		target: "normal",
-		type: "Fairy",
+		type: "Rock",
 		contestType: "Cute",
 		isNonstandard: "Future",
 	},
