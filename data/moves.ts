@@ -24148,10 +24148,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	matingpress: {
 		accuracy: 100,
-		basePower: 90,
+		basePower: 70,
 		category: "Physical",
 		name: "Mating Press",
-		pp: 20,
+		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1},
 		secondary: {
@@ -25218,11 +25218,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 		maxMove: {basePower: 140},
 	},
-	faedozer: {
+	terradozer: {
 		accuracy: 100,
 		basePower: 100,
 		category: "Physical",
-		name: "Fae Dozer",
+		name: "Terra Dozer",
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
@@ -25469,7 +25469,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	implosion: {
 		num: 42003,
 		accuracy: 100,
-		basePower: 150,
+		basePower: 75,
 		category: "Special",
 		name: "Implosion",
 		pp: 10,
@@ -25534,7 +25534,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	rainbowbeam: {
 		num: 69048,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 69,
 		category: "Special",
 		name: "Rainbow Beam",
 		pp: 10,
@@ -28674,8 +28674,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 				},
 			},
 		},
-		pp: 15,
+		pp: 42,
 		priority: 0,
+		noPPBoosts: true,
 		target: "normal",
 		type: "Flying",
 		flags: {protect: 1, mirror: 1},
@@ -28687,8 +28688,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 100,
 		category: "Special",
 		name: "Erons Repus",
-		pp: 10,
+		pp: 61,
 		priority: 0,
+		noPPBoosts: true,
 		flags: {protect: 1, mirror: 1, contact: 1},
 		onAfterMove(source) {
 			source.trySetStatus('slp');
