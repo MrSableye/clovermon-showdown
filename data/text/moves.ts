@@ -7895,8 +7895,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Close Blobmat",
 		shortDesc: "Lowers the user's Defense, Sp. Def, and Speed by 1.",
 	},
-	faedozer: {
-		name: "Fae Dozer",
+	terradozer: {
+		name: "Terra Dozer",
 		shortDesc: "Summons a random terrain when this attack hits.",
 	},
 	roidflex: {
