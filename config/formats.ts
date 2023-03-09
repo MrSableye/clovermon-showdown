@@ -680,7 +680,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Condoom + Unaware', 'Potarded + Unaware', 'Wheygle'],
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] NFE',
@@ -716,7 +716,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Condoom + Unaware', 'Potarded + Unaware'],
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] Anything Goes',

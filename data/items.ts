@@ -7651,7 +7651,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				return this.chainModify(2);
 			}
 		},
-		itemUser: ["Masdawg", "Pasdawg"],
+		itemUser: ["Masdawg", "Pasdawg", "Naughtycoot", "Blobbos-Skeleton"],
 		isNonstandard: "Future",
 	},
 	/* Clover CAP Exclusive Items */
@@ -8412,6 +8412,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 640,
 		gen: 8,
+		itemUser: ["Blobbos-Pirate"],
 		isNonstandard: "Future",
 	},
 	masamune: {
@@ -8434,6 +8435,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 640,
 		gen: 8,
+		itemUser: ["Blobbos-Ninja"],
 		isNonstandard: "Future",
 	},
 	kerosenehose: {
@@ -8442,7 +8444,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		fling: {
 			basePower: 80,
 		},
-		onModifySpDPriority: 2,
+		onModifySpePriority: 2,
 		onModifySpe(spe, pokemon) {
 			if (pokemon.species.name === 'Blobbos-Firefighter') {
 				return this.chainModify(1.5);
@@ -8450,6 +8452,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 640,
 		gen: 8,
+		itemUser: ["Blobbos-Firefighter"],
 		isNonstandard: "Future",
 	},
 	baitite: {
@@ -8515,5 +8518,25 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		isNonstandard: "Future",
+	},
+	blackmagiumz: {
+		name: "Pikashunium Z",
+		spritenum: 648,
+		onTakeItem: false,
+		zMove: "Ultima",
+		zMoveFrom: "Meteor",
+		itemUser: ["Blobbos-Black Mage"],
+		num: 1836,
+		isNonstandard: "Future",
+	},
+	terrainboard: {
+		name: "Terrain Board",
+		onModifySpePriority: 1,
+		onModifySpe(spe, pokemon) {
+			if (this.field.terrain && pokemon.species.name === 'Blobbos-Surfer') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Blobbos-Surfer"],
 	},
 };

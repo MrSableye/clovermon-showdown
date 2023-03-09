@@ -2420,7 +2420,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	thiccbone: {
 		name: "Thicc Bone",
-		desc: "If held by a Masdawg, Pasdawg or Naughtycoot, its Attack is doubled.",
+		desc: "If held by a Masdawg, Pasdawg, Naughtycoot, or Blobbos-Skeleton, its Attack is doubled.",
 	},
 	manifesto: {
 		name: "Manifesto",
@@ -2583,15 +2583,15 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	masamune: {
 		name: "Masamune",
-		desc: "If held by a Blobbos-Ninja, its Atk and SpA is 1.5x.",
+		desc: "If held by a Blobbos-Ninja, its Attack and Sp. Attack is 1.5x.",
 	},
 	piratesbooty: {
 		name: "Pirate's Booty",
-		desc: "If held by a Blobbos-Pirate, its Def and SpD is 1.5x.",
+		desc: "If held by a Blobbos-Pirate, its Defense and Sp. Defense is 1.5x.",
 	},
 	kerosenehose: {
 		name: "Kerosene Hose",
-		desc: "If held by a Blobbos-Firefighter, its SpE is 1.5x.",
+		desc: "If held by a Blobbos-Firefighter, its Speed is 1.5x.",
 	},
 	fusjiniumz: {
 		name: "Fusjinium Z",
@@ -2606,5 +2606,53 @@ export const ItemsText: {[k: string]: ItemText} = {
 		desc: "At end of turn, makes all Blobbos-Lich-Mortals immortal. Cannot be used by a Lich.",
 
 		activate: "  [POKEMON] restored the immortality of its master.",
+	},
+	blackmagiumz: {
+		name: "Blackmagium Z",
+		desc: "If held by Blobbos-Black Mage with Meteor, it can use Ultima.",
+	},
+	blobbosmikiumz: {
+		name: "Blobbosmikium Z",
+		desc: "If held by Blobbos-Mimikyu with Flash Freeze, it can use Let's Slepp Forever.",
+	},
+	sableviumz: {
+		name: "Sablevium Z",
+		desc: "If held by Blobbos-Rembered with Freeze Dry, it can use Twin Tower Tumbling Terror.",
+	},
+	terrainboard: {
+		name: "Terrain Board",
+		desc: "If held by Blobbos-Surfer, doubles speed on any Terrain.",
+	},
+	blobbosite: {
+		name: "Blobbosite",
+		desc: "If held by a basic Blobbos, this item allows it to Mega Evolve in battle.",
+	},
+	baitite: {
+		name: "Baitite",
+		desc: "If held by a Blobbos-Bait, this item allows it to Mega Evolve in battle.",
+	},
+	dustite: {
+		name: "Dustite",
+		desc: "If held by a Blobbos-Dust, this item allows it to Mega Evolve in battle.",
+	},
+	kalosite: {
+		name: "Kalosite",
+		desc: "If held by a Blobbos-Kalos, this item allows it to Mega Evolve in battle.",
+	},
+	negite: {
+		name: "Negite",
+		desc: "If held by a Blobbos-Nega, this item allows it to Mega Evolve in battle.",
+	},
+	reversite: {
+		name: "Reversite",
+		desc: "If held by a Blobbos-Reverse, this item allows it to Mega Evolve in battle.",
+	},
+	sexite: {
+		name: "Sexite",
+		desc: "If held by a Blobbos-Sexy, this item allows it to Mega Evolve in battle.",
+	},
+	wackite: {
+		name: "Wackite",
+		desc: "If held by a Blobbos-Wack, this item allows it to Mega Evolve in battle.",
 	},
 };

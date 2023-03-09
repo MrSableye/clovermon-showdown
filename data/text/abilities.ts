@@ -3103,5 +3103,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	fallenangel: {
 		name: "Fallen Angel",
 		shortDesc: "Gains STAB on Fairy and Dark-type moves. Takes halved damage from Fairy and Ghost moves.",
-	}
+	},
+	kantonaut: {
+		name: "Kantonaut",
+		shortDesc: "Takes halved damage to Fairy, Steel, and Dark. Takes double damage from Ice.",
+	},
 };
