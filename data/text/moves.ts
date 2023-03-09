@@ -8811,4 +8811,17 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Strife: Dicekind",
 		desc: "Physical if user's Atk > Sp. Atk. Hits 8 times. Each hit can miss. 4% chance to either burn, freeze, paralyze, boost a foe's random stat by 1, or lower a foe's random stat by 1.",
 	},
+	lavadapt: {
+		name: "Lavadapt",
+		desc: "User adapts its type to resist the opponent's last move.",
+	},
+	shiternet: {
+		name: "Shiternet",
+		desc: "User lags out the battle, paralyzing both Pokemon on the field.",
+	},
+	banfulbunker: {
+		name: "Banful Bunker",
+		desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon making contact with the user become taunted and tormented. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Max Guard, Obstruct, Protect, Quick Guard, Silk Trap, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
+		shortDesc: "User misspells Baneful, protecting them and taunting + tormenting Pokemon who make contact.",
+	}
 };

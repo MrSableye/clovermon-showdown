@@ -10763,6 +10763,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	fukinsuks: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	vermingio: {
 		inherit: true,
 		tier: "OU",
