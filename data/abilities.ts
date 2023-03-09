@@ -9946,9 +9946,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	hellfirerush: {
-		onModifySpe(spe, pokemon) {
+		onFoeModifySpe(spe, pokemon) {
 			if (pokemon.side.getSideCondition('seaoffire')) {
-				return this.chainModify(1.5);
+				this.debug('i have no fucking clue');
+				return this.chainModify(0.5);
 			}
 		},
 		name: "Hellfire Rush",
@@ -9959,11 +9960,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, pokemon, target) {
 			if ((target.side.getSideCondition('swamp')) && (this.field.isTerrain('grassyterrain') && pokemon.isGrounded)) {
+				this.debug('Swamp Force double buff');
 				return this.chainModify(2);
 			} else if (target.side.getSideCondition('swamp')) {
+				this.debug('Swamp Force swamp buff');
 				return this.chainModify(1.5);
 			} else if (this.field.isTerrain('grassyterrain') && pokemon.isGrounded()) {
-				this.debug('terrain buff');
+				this.debug('Swamp Force terrain buff');
 				return this.chainModify(1.5);
 			}
 		},
@@ -9979,14 +9982,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onSourceModifyAtkPriority: 6,
 		onSourceModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Water' || move.type === 'Dark') {
-				this.debug('Thick Fat weaken');
+				this.debug('Cell Shield weaken');
 				return this.chainModify(0.5);
 			}
 		},
 		onSourceModifySpAPriority: 5,
 		onSourceModifySpA(atk, attacker, defender, move) {
 			if (move.type === 'Water' || move.type === 'Dark') {
-				this.debug('Thick Fat weaken');
+				this.debug('Cell Shield weaken');
 				return this.chainModify(0.5);
 			}
 		},
@@ -10254,6 +10257,33 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.self?.chance) move.self.chance *= 2;
 		},
 		name: "Plundered Luck",
+		isNonstandard: "Future",
+	},
+	kantonaut: {
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Steel' || move.type === 'Dark' || move.type === 'Fairy') {
+				this.debug('KANTOOOOOOOOOOO');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Steel' || move.type === 'Dark' || move.type === 'Fairy') {
+				this.debug('KANTOOOOOOOOOOO');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceBasePowerPriority: 17,
+		onSourceBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Ice') {
+				return this.chainModify(2);
+			}
+		},
+		isBreakable: true,
+		name: "Kantonaut",
+		rating: 3.5,
+		num: 1047,
 		isNonstandard: "Future",
 	},
 };
