@@ -3035,7 +3035,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	cellshield: {
 		name: "Cell Shield",
-		shortDesc: "Water-/Dark-type moves against this Pokemon do half damage. Cannot be trapped.",
+		shortDesc: "Water and Dark-type moves used against this Pokemon do half damage. Cannot be trapped.",
 	},
 	hellfirerush: {
 		name: "Hellfire Rush",
@@ -3076,7 +3076,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	bountifulharvest: {
 		name: "Bountiful Harvest",
-		desc: "Harvest+Ripen+Gluttony+Cheek Pouch+Cud Chew",
+		desc: "Harvest + Ripen + Gluttony + Cheek Pouch + Cud Chew.",
 	},
 	possessed: {
 		name: "Possessed",
@@ -3085,6 +3085,23 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	plunderedluck: {
 		name: "Plundered Luck",
 		desc: "This Pokemon's moves have their secondary effect chance doubled. Foes's moves have their secondary effect chance halved.",
-		shortDesc: "This Pokemon's moves have their secondary effect chance doubled. Foes's moves have their secondary effect chance halved.",
+		shortDesc: "Doubles user's secondary effect chances, halves foe's secondary effect chance.",
 	},
+	masshopping: {
+		name: "Mass Hopping",
+		desc: "Hopping moves used by this Pokemon have 1.3x power.",
+		shortDesc: "Hopping moves used by this Pokemon have 1.3x power.",
+	},
+	stringpower: {
+		name: "String Power",
+		shortDesc: "Adds a String Shot to every attack.",
+	},
+	madlad: {
+		name: "Madlad",
+		shortDesc: "Pokemon making contact with this Pokemon will be confused. +1 priority on Status moves.",
+	},
+	fallenangel: {
+		name: "Fallen Angel",
+		shortDesc: "Gains STAB on Fairy and Dark-type moves. Takes halved damage from Fairy and Ghost moves.",
+	}
 };

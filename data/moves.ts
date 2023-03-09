@@ -29137,4 +29137,122 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		isNonstandard: "Future",
 	},
+	lavadapt: {
+		num: 1176,
+		accuracy: true,
+		basePower: 85,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Lavadapt",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1},
+		onHit(target, source) {
+			if (!target.lastMoveUsed) {
+				return false;
+			}
+			const possibleTypes = [];
+			const attackType = target.lastMoveUsed.type;
+			for (const type of this.dex.types.names()) {
+				if (source.hasType(type)) continue;
+				const typeCheck = this.dex.types.get(type).damageTaken[attackType];
+				if (typeCheck === 2 || typeCheck === 3) {
+					possibleTypes.push(type);
+				}
+			}
+			if (!possibleTypes.length) {
+				return false;
+			}
+			const randomType = this.sample(possibleTypes);
+
+			if (!source.setType(randomType)) return false;
+			this.add('-start', source, 'typechange', randomType);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		zMove: {effect: 'heal'},
+		contestType: "Beautiful",
+	},
+	shiternet: {
+		num: 1046,
+		accuracy: 85,
+		basePower: 0,
+		category: "Status",
+		name: "Shiternet",
+		pp: 10,
+		priority: 0,
+		target: "allAdjacent",
+		type: "Psychic",
+		flags: {},
+		onAfterMove(source) {
+			source.trySetStatus('par');
+		},
+		secondary: {
+			chance: 100,
+			status: 'par',
+		},
+		isNonstandard: "Future",
+	},
+	banfulbunker: {
+		num: 1661,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Banful Bunker",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'banfulbunker',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'move: Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect']) {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					source.addVolatile('taunt');
+					source.addVolatile('torment');
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+					source.addVolatile('taunt');
+					source.addVolatile('torment');
+				}
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Poison",
+		zMove: {boost: {def: 1}},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
 };

@@ -36951,7 +36951,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Beast Boost",
 			H: "Steelworker",
-			S: "Soul-Heart",
+			S: "Merciless",
 		},
 		heightm: 0.4,
 		weightkg: 5.9,
@@ -37046,11 +37046,11 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gender: "N",
 		baseStats: {
 			hp: 170,
-			atk: 150,
-			def: 36,
-			spa: 150,
-			spd: 25,
-			spe: 15,
+			atk: 115,
+			def: 45,
+			spa: 115,
+			spd: 45,
+			spe: 28,
 		},
 		abilities: {
 			0: "Speed Boost",
@@ -42368,6 +42368,19 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		gen: 0,
+	},
+	fukinsuks: {
+		num: -42022,
+		name: "Fukinsuks",
+		types: ["Ice", "Grass"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 70, atk: 90, def: 85, spa: 80, spd: 110, spe: 85},
+		abilities: {0: "Early Bird", 1: "Hustle", H: "Solar Power", S: "Insomnia"},
+		heightm: 1.1,
+		weightkg: 12.8,
+		color: "Red",
+		eggGroups: ["Field"],
+		gen: 2,
 	},
 	/* Clover CAP Megas */
 	oogabugamega: {

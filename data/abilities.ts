@@ -8454,6 +8454,93 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Shadow Aura",
 		isNonstandard: "Future",
 	},
+	masshopping: {
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			const hoppingMoves = [
+				'crashhopper',
+				'bounce',
+				'highjumpkick',
+				'jumpkick',
+				'bouncybubble',
+				'splash',
+				'pounce',
+				'lunge',
+				'splishysplash',
+				'lavadapt',
+			];
+			if (hoppingMoves.includes(move.id)) {
+				this.debug('Mass Hopping boost');
+				return this.chainModify(1.3);
+			}
+		},
+		name: "Mass Hopping",
+		isNonstandard: "Future",
+	},
+	stringpower: {
+		onAfterMoveSecondarySelf(source, target, move) {
+			const targetSlot = target.getSlot();
+			if (!move || !target) return;
+			if (source.ability !== 'stringpower') return;
+			if (move.category === 'Status') return;
+			if (source.abilityState.hasMemed?.[targetSlot]) return;
+
+			if (!source.abilityState?.hasMemed) source.abilityState.hasMemed = {};
+			source.abilityState.hasMemed[targetSlot] = true;
+
+			this.actions.useMove('stringshot', source, target);
+		},
+		onResidual(pokemon) {
+			pokemon.abilityState.hasMemed = undefined;
+		},
+		name: "String Power",
+		rating: 4.5,
+		isNonstandard: "Future",
+	},
+	madlad: {
+		name: "Madlad",
+		onDamagingHit(damage, target, source, move) {
+			if (move.flags['contact']) {
+				source.addVolatile('confusion');
+			}
+		},
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.category === 'Status') {
+				move.pranksterBoosted = true;
+				return priority + 1;
+			}
+		},
+		rating: 4.5,
+		isNonstandard: "Future",
+	},
+	fallenangel: {
+		onSourceBasePowerPriority: 18,
+		onSourceBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Fairy') {
+				return this.chainModify(0.5);
+			} else if (move.type === 'Ghost') {
+				return this.chainModify(0.5);
+			}
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (['Fairy', 'Dark'].includes(move.type)) {
+				this.debug('Fallen Angel boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (['Fairy', 'Dark'].includes(move.type)) {
+				this.debug('Fallen Angel boost');
+				return this.chainModify(1.5);
+			}
+		},
+		isBreakable: true,
+		name: "Fallen Angel",
+		rating: 3.5,
+		isNonstandard: "Future",
+	},
 	presentpower: {
 		onAfterMoveSecondarySelf(source, target, move) {
 			const targetSlot = target.getSlot();
@@ -9885,12 +9972,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	cellshield: {
-		onSetStatus(status, target, source, effect) {
-			if ((effect as Move)?.status) {
-				this.add('-immune', target, '[from] ability: Cell Shield');
-			}
-			return false;
-		},
 		onTrapPokemonPriority: -10,
 		onTrapPokemon(pokemon) {
 			pokemon.trapped = pokemon.maybeTrapped = false;
