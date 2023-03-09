@@ -8538,5 +8538,6 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		itemUser: ["Blobbos-Surfer"],
+		isNonstandard: "Future",
 	},
 };
