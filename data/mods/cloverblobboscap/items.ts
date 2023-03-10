@@ -85,4 +85,12 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	terrainboard: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	phylactery: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

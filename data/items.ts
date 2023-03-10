@@ -8520,7 +8520,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 	},
 	blackmagiumz: {
-		name: "Pikashunium Z",
+		name: "Blackmagium Z	",
 		spritenum: 648,
 		onTakeItem: false,
 		zMove: "Ultima",
