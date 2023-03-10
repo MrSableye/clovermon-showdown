@@ -8823,5 +8823,13 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Banful Bunker",
 		desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon making contact with the user become taunted and tormented. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Max Guard, Obstruct, Protect, Quick Guard, Silk Trap, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
 		shortDesc: "User misspells Baneful, protecting them and taunting + tormenting Pokemon who make contact.",
+	},
+	meteor: {
+		name: "Meteor",
+		shortDesc: "Hits twice. Ignores defensive boosts.",
+	},
+	ultima: {
+		name: "Ultima",
+		shortDesc: "Hits all adjacent foes. Lowers all of the user's stats by 1.",
 	}
 };
