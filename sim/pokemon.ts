@@ -1959,7 +1959,7 @@ export class Pokemon {
 		this.knownType = true;
 		this.apparentType = this.types.join('/');
 
-		this.battle.runEvent('TypeChange', this, null, null, [[oldTypes, this.types]]);
+		this.battle.runEvent('AfterTypeChange', this, null, null, [[oldTypes, this.types]]);
 
 		return true;
 	}
@@ -1973,7 +1973,7 @@ export class Pokemon {
 		}
 		this.addedType = newType;
 
-		this.battle.runEvent('TypeChange', this, null, null, [this.types, [...this.types, this.addedType]]);
+		this.battle.runEvent('AfterTypeChange', this, null, null, [this.types, [...this.types, this.addedType]]);
 
 		return true;
 	}
