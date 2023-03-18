@@ -10286,4 +10286,25 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 1047,
 		isNonstandard: "Future",
 	},
+	colorboost: {
+		name: "Color Boost",
+		onAfterTypeChange(typeChange, pokemon) {
+			if (this.effectState.colorBoost) return;
+			const [oldTypes, newTypes] = typeChange;
+			if (oldTypes.join('/') === newTypes.join('/')) return;
+			pokemon.addVolatile('colorboost');
+		},
+		onSwitchIn(pokemon) {
+			delete this.effectState.colorBoost;
+		},
+		condition: {
+			noCopy: true,
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, source, target, move) {
+				this.debug('Color Boost atk boost');
+				return this.chainModify(1.5);
+			},
+		},
+		isNonstandard: "Future",
+	},
 };

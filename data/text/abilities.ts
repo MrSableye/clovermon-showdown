@@ -3108,4 +3108,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Kantonaut",
 		shortDesc: "Takes halved damage to Fairy, Steel, and Dark. Takes double damage from Ice.",
 	},
+	colorboost: {
+		name: "Color Boost",
+		shortDesc: "This Pokemon's gets a 1.2x Attack boost after changing type. Once per switch-in.",
+	},
 };
