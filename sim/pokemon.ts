@@ -1959,7 +1959,7 @@ export class Pokemon {
 		this.knownType = true;
 		this.apparentType = this.types.join('/');
 
-		this.battle.runEvent('AfterTypeChange', this, null, null, [[oldTypes, this.types]]);
+		this.battle.runEvent('AfterTypeChange', this, null, null, [oldTypes, this.types]);
 
 		return true;
 	}
