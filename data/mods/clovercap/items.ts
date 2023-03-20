@@ -173,7 +173,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	luckypunch: {
 		inherit: true,
 		onModifyCritRatio(critRatio, user) {
-			if (user.baseSpecies.name === 'Chansey' || user.baseSpecies.name === 'Fucker') {
+			if (user.baseSpecies.name === 'Chansey' || user.baseSpecies.baseSpecies === 'Fucker') {
 				return critRatio + 2;
 			}
 		},

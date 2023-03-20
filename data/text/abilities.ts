@@ -3109,4 +3109,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Hyperspeen",
 		shortDesc: "Doubles the damage of Spin-based moves.",
 	},
+	colorboost: {
+		name: "Color Boost",
+		shortDesc: "This Pokemon's gets a 1.2x Attack boost after changing type. Once per switch-in.",
+	},
 };

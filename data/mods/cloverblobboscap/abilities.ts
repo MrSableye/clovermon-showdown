@@ -533,4 +533,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	colorboost: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
