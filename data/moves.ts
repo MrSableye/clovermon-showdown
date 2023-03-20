@@ -952,7 +952,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Axe Kick",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
@@ -23761,6 +23761,47 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
 		ignoreAbility: true,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				},
+			},
+			boosts: {
+				atk: -1,
+				def: -1,
+				spa: -1,
+				spd: -1,
+				spe: -1,
+			},
+		},
+		onDamagePriority: -20,
+		onDamage(damage, target, source, effect) {
+			if (damage >= target.hp) return target.hp - 1;
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Dark",
+		contestType: "Cool",
+	},
+	dustcannon: {
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Dust Cannon",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, pulse: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		ignoreAbility: true,
 		onTry(source) {
 			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
 				this.hint("Skull Cannon only works on your first turn out.");
@@ -26655,7 +26696,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 			return success;
 		},
-		target: "allyTeam",
+		target: "normal",
 		type: "Psychic",
 		zMove: {effect: 'heal'},
 		contestType: "Beautiful",
@@ -27879,18 +27920,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	foolsgambit: {
 		num: 485,
-		accuracy: 100,
-		basePower: 115,
+		accuracy: 95,
+		basePower: 100,
 		category: "Physical",
 		overrideDefensiveStat: 'spd',
 		name: "Fool's Gambit",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
 			if (type === 'Fairy') return 0;
 		},
-		target: "allAdjacent",
+		target: "any",
 		type: "Dark",
 		isNonstandard: "Future",
 		contestType: "Clever",
@@ -29294,5 +29335,191 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "allAdjacentFoes",
 		type: "Fairy",
 		contestType: "Cool",
+	},
+	metronomeifitwasfunny: {
+		num: 118,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Metronome If It Was Funny",
+		pp: 40,
+		priority: 0,
+		flags: {},
+		noMetronome: [],
+		onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				!effect.noMetronome!.includes(move.name)
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		contestType: "Cute",
+	},
+	meatballmash: {
+		num: 3090,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Meatball Mash",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 25,
+			self: {
+				boosts: {
+					def: 1,
+					spd: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Flying",
+		contestType: "Cool",
+	},
+	blandybland: {
+		num: 1111,
+		accuracy: 85,
+		basePower: 100,
+		category: "Special",
+		name: "Blandy Bland",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'simple' || target.ability === 'truant') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('simple');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Simple', '[from] move: Blandy Bland');
+				return;
+			}
+			return oldAbility as false | null;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		zMove: {boost: {spa: 1}},
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	thunderblitz: {
+		num: 2424,
+		accuracy: 90,
+		basePower: 40,
+		category: "Physical",
+		name: "Thunder Blitz",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 2,
+		willCrit: true,
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		maxMove: {basePower: 80},
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	scarystory: {
+		num: 6666,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Scary Story",
+		pp: 5,
+		priority: -6,
+		flags: {reflectable: 1, mirror: 1, sound: 1, bypasssub: 1, allyanim: 1},
+		forceSwitch: true,
+		secondary: {
+			chance: 100,
+			boosts: {
+				atk: 1,
+				spd: 1,
+			},
+		},
+		target: "normal",
+		type: "Ghost",
+		zMove: {boost: {def: 1}},
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	moonstrike: {
+		num: 5851,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Moonstrike",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1, punch: 1},
+		secondary: {
+			chance: 30,
+			boosts: {
+				atk: -1,
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	invigorate: {
+		num: 4204,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Invigorate",
+		pp: 10,
+		priority: 0,
+		target: "self",
+		type: "Fighting",
+		heal: [1, 4],
+		onHit(target) {
+			if (target.hp <= target.maxhp / 2) {
+				this.boost({
+					atk: 2,
+				});
+			} else {
+				this.boost({
+					atk: 1,
+				});
+			}
+		},
+		flags: {snatch: 1},
+		isNonstandard: "Future",
+	},
+	blazingswipe: {
+		num: 7842,
+		accuracy: 95,
+		basePower: 95,
+		category: "Physical",
+		name: "Breaking Swipe",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spa: -1,
+			},
+		},
+		target: "allAdjacentFoes",
+		type: "Fire",
+		isNonstandard: "Future",
 	},
 };

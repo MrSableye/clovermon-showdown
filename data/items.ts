@@ -8531,6 +8531,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	terrainboard: {
 		name: "Terrain Board",
+		spritenum: 730,
 		onModifySpePriority: 1,
 		onModifySpe(spe, pokemon) {
 			if (this.field.terrain && pokemon.species.name === 'Blobbos-Surfer') {
@@ -8538,6 +8539,240 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		itemUser: ["Blobbos-Surfer"],
+		isNonstandard: "Future",
+	},
+	curlykrill: {
+		name: "Curly Krill",
+		spritenum: 730,
+		onAfterMove(pokemon, target, move) {
+			if (move.id === 'orderup') {
+				this.boost({atk: 1});
+			}
+		},
+		isNonstandard: "Future",
+	},
+	droopykrill: {
+		name: "Droopy Krill",
+		spritenum: 730,
+		onAfterMove(pokemon, target, move) {
+			if (move.id === 'orderup') {
+				this.boost({def: 1});
+			}
+		},
+		isNonstandard: "Future",
+	},
+	stretchykrill: {
+		name: "Stretchy Krill",
+		spritenum: 730,
+		onAfterMove(pokemon, target, move) {
+			if (move.id === 'orderup') {
+				this.boost({spe: 1});
+			}
+		},
+		isNonstandard: "Future",
+	},
+	earmuffs: {
+		name: "Earmuffs",
+		spritenum: 367,
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.flags['sound']) {
+				this.debug('Earmuffs weaken');
+				return this.chainModify(0.5);
+			}
+		},
+	},
+	paraorb: {
+		name: "Para Orb",
+		spritenum: 251,
+		fling: {
+			basePower: 30,
+			status: 'par',
+		},
+		onResidualOrder: 28,
+		onResidualSubOrder: 3,
+		onResidual(pokemon) {
+			pokemon.trySetStatus('par', pokemon);
+		},
+		num: 2512,
+		isNonstandard: "Future",
+	},
+	usbdrive: {
+		name: "USB Drive",
+		spritenum: 103,
+		fling: {
+			basePower: 42,
+		},
+		onResidualOrder: 28,
+		onResidualSubOrder: 3,
+		onSwitchIn(pokemon) {
+			if (pokemon.hasType('Steel')) {
+				pokemon.useItem();
+			}
+		},
+		boosts: {
+			atk: 1,
+			spa: 1,
+		},
+		num: 2512,
+		isNonstandard: "Future",
+	},
+	royalcrown: {
+		name: "Royal Crown",
+		spritenum: 236,
+		fling: {
+			basePower: 80,
+		},
+		onModifySpePriority: 2,
+		onModifySpe(spe, pokemon) {
+			if (pokemon.species.name === 'Blobbos-King') {
+				return this.chainModify(2);
+			}
+		},
+		num: 640,
+		gen: 8,
+		itemUser: ["Blobbos-King"],
+		isNonstandard: "Future",
+	},
+	starrod: {
+		name: "Star Rod",
+		spritenum: 343,
+		fling: {
+			basePower: 30,
+		},
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Kirby') {
+				return this.chainModify(1.3);
+			}
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Kirby') {
+				return this.chainModify(1.3);
+			}
+		},
+		itemUser: ["Blobbos-Kirby"],
+		isNonstandard: "Future",
+	},
+	glock: {
+		name: "Glock",
+		spritenum: 343,
+		fling: {
+			basePower: 30,
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Unova') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Blobbos-Unova"],
+		isNonstandard: "Future",
+	},
+	loadeddisk: {
+		name: "Loaded Disk",
+		spritenum: 287,
+		onModifyDefPriority: 2,
+		onModifyDef(def, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Spamton') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Blobbos-Spamton"],
+		isNonstandard: "Future",
+	},
+	propellerhat: {
+		name: "Propeller Hat",
+		spritenum: 417,
+		fling: {
+			basePower: 80,
+		},
+		onModifySpePriority: 2,
+		onModifySpe(spe, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Keks') {
+				return this.chainModify(2);
+			}
+		},
+		onDisableMove(pokemon) {
+			for (const moveSlot of pokemon.moveSlots) {
+				if (this.dex.moves.get(moveSlot.move).category === 'Status') {
+					pokemon.disableMove(moveSlot.id);
+				}
+			}
+		},
+		itemUser: ["Blobbos-Keks"],
+		isNonstandard: "Future",
+	},
+	assaultjacket: {
+		name: "Assault Jacket",
+		spritenum: 581,
+		fling: {
+			basePower: 80,
+		},
+		onModifyDefPriority: 1,
+		onModifyDef(def) {
+			return this.chainModify(1.5);
+		},
+		onDisableMove(pokemon) {
+			for (const moveSlot of pokemon.moveSlots) {
+				if (this.dex.moves.get(moveSlot.move).category !== 'Status') {
+					pokemon.disableMove(moveSlot.id);
+				}
+			}
+		},
+		isNonstandard: "Future",
+	},
+	choiceshield: {
+		name: "Choice Shield",
+		spritenum: 699,
+		fling: {
+			basePower: 10,
+		},
+		onStart(pokemon) {
+			if (pokemon.volatiles['choicelock']) {
+				this.debug('removing choicelock: ' + pokemon.volatiles['choicelock']);
+			}
+			pokemon.removeVolatile('choicelock');
+		},
+		onModifyMove(move, pokemon) {
+			pokemon.addVolatile('choicelock');
+		},
+		onModifyDef(def, pokemon) {
+			if (pokemon.volatiles['dynamax']) return;
+			return this.chainModify(1.5);
+		},
+		isChoice: true,
+		isNonstandard: "Future",
+	},
+	choicevest: {
+		name: "Choice Vest",
+		spritenum: 581,
+		fling: {
+			basePower: 10,
+		},
+		onStart(pokemon) {
+			if (pokemon.volatiles['choicelock']) {
+				this.debug('removing choicelock: ' + pokemon.volatiles['choicelock']);
+			}
+			pokemon.removeVolatile('choicelock');
+		},
+		onModifyMove(move, pokemon) {
+			pokemon.addVolatile('choicelock');
+		},
+		onModifySpD(spd, pokemon) {
+			if (pokemon.volatiles['dynamax']) return;
+			return this.chainModify(1.5);
+		},
+		isChoice: true,
+		isNonstandard: "Future",
+	},
+	licensetosellhotdogs: {
+		name: "License to Sell Hotdogs",
+		spritenum: 609,
+		fling: {
+			basePower: 5185550170,
+		},
+		itemUser: ["Blobbos-Snek", "Blobbos-Angel"],
 		isNonstandard: "Future",
 	},
 };

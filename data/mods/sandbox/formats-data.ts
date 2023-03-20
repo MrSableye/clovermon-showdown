@@ -10964,10 +10964,20 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	blobbosforbidden: {
-		tier: "Illegal",
-		isNonstandard: "Future",
+		tier: "OU",
+		isNonstandard: null,
 	},
 	sobbolb: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	joelbat: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	vintini: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

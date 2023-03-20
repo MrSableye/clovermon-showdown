@@ -93,4 +93,97 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	curlykrill: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	droopykrill: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	stretchykrill: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	berserkgene: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	moluganion: {
+		inherit: true,
+		onAfterSetStatusPriority: -1,
+		onAfterSetStatus(status, pokemon) {
+			if (pokemon.baseSpecies.baseSpecies === 'Blobbos-Cap') {
+				this.add('-message', 'The power from the Moluganion cured the status!');
+				pokemon.cureStatus();
+				pokemon.removeVolatile('confusion');
+			}
+		},
+		onUpdate(pokemon) {
+			if (pokemon.status || pokemon.volatiles['confusion']) {
+				if (pokemon.baseSpecies.baseSpecies === 'Blobbos-Cap') {
+					this.add('-message', 'The power from the Moluganion cured the status!');
+					pokemon.cureStatus();
+					pokemon.removeVolatile('confusion');
+				} else {
+					this.add('-message', 'The holder is unable to comprehend the Moluganion!');
+					pokemon.addVolatile('confusion');
+				}
+			}
+		},
+		itemUser: ["Blobbos-Cap"],
+		isNonstandard: null,
+	},
+	mirrorherb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	earmuffs: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	paraorb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	usbdrive: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	royalcrown: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	starrod: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	glock: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	loadeddisk: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	propellerhat: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	assaultjacket: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	choiceshield: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	choicevest: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	licensetosellhotdogs: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

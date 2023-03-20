@@ -7649,9 +7649,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		isNonstandard: "Future",
 	},
-	asoneblobbostherian: {
+	metagaming: {
 		onPreStart(pokemon) {
-			this.add('-ability', pokemon, 'As One (Blobbos-Therian)');
+			this.add('-ability', pokemon, 'Metagaming');
 			this.add('-ability', pokemon, 'Intimidate');
 			this.add('-ability', pokemon, 'Levitate');
 			this.effectState.unnerved = true;
@@ -7849,39 +7849,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Armor Plate",
 		isNonstandard: "Future",
 		rating: 3,
-	},
-	asonehorse: {
-		onPreStart(pokemon) {
-			this.add('-ability', pokemon, 'Grim Neigh');
-			this.add('-ability', pokemon, 'Chilling Neigh');
-			this.add('-ability', pokemon, 'Striker');
-			this.effectState.unnerved = true;
-		},
-		onSourceAfterFaint(length, target, source, effect) {
-			if (effect && effect.effectType === 'Move') {
-				this.boost({spa: length}, source, source, this.dex.abilities.get('grimneigh'));
-				this.boost({atk: length}, source, source, this.dex.abilities.get('chillingneigh'));
-			}
-		},
-
-		onBasePowerPriority: 8,
-		onBasePower(basePower, attacker, defender, move) {
-			if (move.flags.kick) {
-				this.debug('Striker boost');
-				return this.chainModify([0x1333, 0x1000]);
-			}
-		},
-		onAnyAccuracy(accuracy, target, source, move) {
-			if (move.flags.kick) {
-				this.debug('Striker - ensuring perfect accuracy');
-				return true;
-			}
-			return accuracy;
-		},
-		isPermanent: true,
-		name: "As One (Horse)",
-		isNonstandard: "Future",
-		rating: 3.5,
 	},
 	peaceandtranquility: {
 		onModifyCritRatio(critRatio, target, source, move) {
@@ -8893,7 +8860,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags.slicing) {
-				this.debug('Blademaster boost');
+				this.debug('Woodchipper blade move boost');
 				return this.chainModify([0x1333, 0x1000]);
 			}
 		},
@@ -8925,7 +8892,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const targetSlot = target.getSlot();
 			if (!move || !target) return;
 			if (source.ability !== 'metronomepower') return;
-			if (move.category === 'Status') return;
+			if (move.category === 'Status' && move.name !== 'Metronome' && move.name !== 'Metronome If It Was Funny') return;
 			if (source.abilityState.hasMemed?.[targetSlot]) return;
 
 			if (!source.abilityState?.hasMemed) source.abilityState.hasMemed = {};
@@ -10284,6 +10251,115 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Kantonaut",
 		rating: 3.5,
 		num: 1047,
+		isNonstandard: "Future",
+	},
+	powerofyeehaw: {
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags.kick) {
+				this.debug('YEEHAW! boost');
+				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
+		onAnyAccuracy(accuracy, target, source, move) {
+			if (move.flags.kick) {
+				this.debug('YEEHAW! - ensuring perfect accuracy');
+				return true;
+			}
+			return accuracy;
+		},
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({atk: length}, source);
+				this.boost({spa: length}, source);
+			}
+		},
+		name: "Power of YEEHAW!",
+		rating: 3,
+		num: 265,
+	},
+	doomed: {
+		onAfterUseItem(item, pokemon) {
+			if (pokemon !== this.effectState.target) return;
+			pokemon.addVolatile('doomed');
+		},
+		onTakeItem(item, pokemon) {
+			pokemon.addVolatile('doomed');
+		},
+		onEnd(pokemon) {
+			pokemon.removeVolatile('doomed');
+		},
+		condition: {
+			onModifySpe(spe, pokemon) {
+				if (!pokemon.item && !pokemon.ignoringAbility()) {
+					return this.chainModify(0.5);
+				}
+			},
+		},
+		onSwitchOut(pokemon) {
+			pokemon.heal(pokemon.baseMaxhp / -3);
+		},
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			const headBasedMoves = [
+				'zenheadbutt',
+				'headbutt',
+				'headcharge',
+				'headsmash',
+				'ironhead',
+				'skulltoss',
+				'skullbash',
+				'concussion',
+				'headlongrush',
+			];
+			if (headBasedMoves.includes(move.id)) {
+				this.debug('boosts Head based moves');
+				return this.chainModify(0.5);
+			}
+		},
+		onUpdate(pokemon) {
+			if (pokemon.status === 'psn' || pokemon.status === 'tox') {
+				this.add('-activate', pokemon, 'ability: Doomed');
+				pokemon.cureStatus();
+			}
+		},
+		onSetStatus(status, target, source, effect) {
+			if (status.id !== 'psn' && status.id !== 'tox') return;
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: Doomed');
+			}
+			return false;
+		},
+		name: "Doomed",
+		rating: 6,
+		num: 666,
+	},
+	hyperspeen: {
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			const SPEENMoves = [
+				'blazingtorque',
+				'combattorque',
+				'darkestlariat',
+				'icespinner',
+				'magicaltorque',
+				'mortalspin',
+				'noxioustorque',
+				'rapidspin',
+				'spinout',
+				'wickedtorque',
+				'firespin',
+				'gyroball',
+				'iceball',
+				'rollout',
+				'twister',
+			];
+			if (SPEENMoves.includes(move.id)) {
+				this.debug('Hyperspeen boost');
+				return this.chainModify(2);
+			}
+		},
+		name: "Hyperspeen",
 		isNonstandard: "Future",
 	},
 };
