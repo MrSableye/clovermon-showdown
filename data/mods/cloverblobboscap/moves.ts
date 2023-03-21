@@ -1328,4 +1328,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	hivemind: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
