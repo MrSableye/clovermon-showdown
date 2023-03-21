@@ -29536,5 +29536,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Bug",
 		maxMove: {basePower: 80},
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 };
