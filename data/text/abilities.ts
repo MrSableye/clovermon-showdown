@@ -2610,21 +2610,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  [POKEMON] is ready to kick your ass!",
 	},
-	asoneblobbostherian: {
-		name: "As One (Blobbos-Therian)",
+	metagaming: {
+		name: "Metagaming",
 		shortDesc: "The combination of Intimidate and Levitate.",
 
 		start: "  [POKEMON] is ready to kick your ass in OU!",
 	},
-	asoneblobbosrembered: {
-		name: "As One (Rembered)",
-		shortDesc: "The combination of Flare Heal and Magic Guard.",
-
-		start: "  [POKEMON] is ready to rember ;_;7",
-	},
-	asonehorse: {
-		name: "As One (Horse)",
-		shortDesc: "The combination of Grim Neigh, Chilling Neigh, and Striker.",
+	powerofyeehaw: {
+		name: "Power of YEEHAW!",
+		shortDesc: "Kick moves deal 1.2x damage and always hit. Attack and Sp. Attack are boosted by 1 upon KO-ing an opponent.",
 
 		start: "  [POKEMON] is ready to yeehaw!",
 	},
@@ -2658,9 +2652,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	blobbotype: {
 		name: "Blobbotype",
-		shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate or Z-Crystal.",
+		shortDesc: "If this Pokemon is a Blobbos-Arceus, its secondary type changes to match its held Plate or Z-Crystal.",
 		gen6: {
-			shortDesc: "If this Pokemon is a Blobbos-Arceus, its type changes to match its held Plate.",
+			shortDesc: "If this Pokemon is a Blobbos-Arceus, its secondary type changes to match its held Plate.",
 		},
 	},
 	uncompetitive: {
@@ -2674,11 +2668,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	evasionhax: {
 		name: "Evasion Hax",
-		shortDesc: "This Pokemon's Evasion is doubled.",
+		shortDesc: "Moves used against this Pokemon have their accuracy halved.",
 	},
 	nimblemetalbody: {
 		name: "Nimble Metal Body",
-		shortDesc: "This Pokemon's self-switching moves have their priority increased by 1.",
+		shortDesc: "This Pokemon's pivot moves have their priority increased by 1.",
 	},
 	magicalrealm: {
 		name: "Magical Realm",
@@ -2690,7 +2684,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	darkthoughts: {
 		name: "Dark Thoughts",
-		shortDesc: "30% to Torment the opponent on contact.",
+		shortDesc: "30% to Torment the opponent when you make contact with them.",
 	},
 	gmaxcomatose: {
 		name: "GMax Comatose",
@@ -2706,7 +2700,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	hyperboreanarctic: {
 		name: "Hyperborean Arctic",
-		shortDesc: "On switch-in, extremely harsh blizzard begins until this Ability is not active in battle.",
+		shortDesc: "While this Pokemon is active, an extremely harsh blizzard occurs, preventing Fighting-type moves from doing anything.",
 	},
 	sneedboost: {
 		name: "Sneed Boost",
@@ -2733,7 +2727,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "This Pokemon's contact moves cause the opponent to perish in three turns.",
 		activate: "  ([Target] has been hit with the touch of death!)",
 	},
-
 	lethargic: {
 		name: "Lethargic",
 		shortDesc: "This Pokemon is on the verge of sleeping, and is considered to be aslepp.",
@@ -2901,7 +2894,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	onaquest: {
 		name: "On A Quest",
-		shortDesc: "Begin a quest. Complete it to become a legendary hero!",
+		shortDesc: "When first switched in, begins a quest. Complete it to become a legendary hero!",
 
 		start: "  [POKEMON] started a quest: [[QUESTNAME]] - [QUESTTEXT]",
 		activate: "  [POKEMON]'s quest was updated: [[QUESTNAME]] - [QUESTPROGRESS] / [QUESTREQUIREMENT] [QUESTPROGRESSTEXT]",
@@ -3106,7 +3099,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	kantonaut: {
 		name: "Kantonaut",
-		shortDesc: "Takes halved damage to Fairy, Steel, and Dark. Takes double damage from Ice.",
+		shortDesc: "Takes halved damage from Fairy, Steel, and Dark. Takes double damage from Ice.",
+	},
+	doomed: {
+		name: "Doomed",
+		shortDesc: "boosts Head based moves",
+	},
+	hyperspeen: {
+		name: "Hyperspeen",
+		shortDesc: "Doubles the damage of Spin-based moves.",
 	},
 	colorboost: {
 		name: "Color Boost",

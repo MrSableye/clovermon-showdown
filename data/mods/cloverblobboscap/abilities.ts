@@ -105,7 +105,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	asoneblobbostherian: {
+	metagaming: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -185,7 +185,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	asonehorse: {
+	powerofyeehaw: {
 		inherit: true,
 		isNonstandard: null,
 	},

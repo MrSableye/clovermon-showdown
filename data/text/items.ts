@@ -2621,7 +2621,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	terrainboard: {
 		name: "Terrain Board",
-		desc: "If held by Blobbos-Surfer, doubles speed on any Terrain.",
+		desc: "If held by a Blobbos-Surfer, doubles Speed on any Terrain.",
 	},
 	blobbosite: {
 		name: "Blobbosite",
@@ -2654,5 +2654,65 @@ export const ItemsText: {[k: string]: ItemText} = {
 	wackite: {
 		name: "Wackite",
 		desc: "If held by a Blobbos-Wack, this item allows it to Mega Evolve in battle.",
+	},
+	curlykrill: {
+		name: "Curly Krill",
+		desc: "This Pokemon's Order Up boosts its Attack stat by 1 stage.",
+	},
+	droopykrill: {
+		name: "Droopy Krill",
+		desc: "This Pokemon's Order Up boosts its Defense stat by 1 stage.",
+	},
+	stretchykrill: {
+		name: "Stretchy Krill",
+		desc: "This Pokemon's Order Up boosts its Speed stat by 1 stage.",
+	},
+	earmuffs: {
+		name: "Earmuffs",
+		desc: "Halves the damage taken from Sound-based moves.",
+	},
+	paraorb: {
+		name: "Para Orb",
+		desc: "At the end of every turn, this item attempts to paralyze the holder.",
+	},
+	usbdrive: {
+		name: "USB Drive",
+		desc: "If holder is Steel, raises Atk and SpA by 1 upon switch-in. Consumes item.",
+	},
+	royalcrown: {
+		name: "Royal Crown",
+		desc: "If held by a Blobbos-King, its Speed is doubled.",
+	},
+	starrod: {
+		name: "Star Rod",
+		desc: "If held by a Blobbos-Kirby, its Attack and Sp. Attack is 1.3x.",
+	},
+	glock: {
+		name: "Glock",
+		desc: "If held by a Blobbos-Unova, its Sp. Attack is doubled.",
+	},
+	loadeddisk: {
+		name: "Loaded Disk",
+		desc: "If held by a Blobbos-Spamton, its Defense is doubled.",
+	},
+	propellerhat: {
+		name: "Propeller Hat",
+		desc: "If held by a Blobbos-Keks, its Speed is doubled, but it can only select damaging moves.",
+	},
+	assaultjacket: {
+		name: "Assault Jacket",
+		desc: "Holder's Def is 1.5x, but it can only select Status moves.",
+	},
+	choiceshield: {
+		name: "Choice Shield",
+		desc: "Holder's Defense is 1.5x, but it can only select the first move it executes.",
+	},
+	choicevest: {
+		name: "Choice Vest",
+		desc: "Holder's Sp. Defense is 1.5x, but it can only select the first move it executes.",
+	}, // god i love being inconsistent :^) -rex
+	licensetosellhotdogs: {
+		name: "License to Sell Hotdogs",
+		desc: "If I ever get your stinky mug in my line of sight, I swear to Chekhov I'll cock your clock off.",
 	},
 };

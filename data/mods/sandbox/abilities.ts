@@ -1847,4 +1847,12 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	hyperspeen: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	metronomepower: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

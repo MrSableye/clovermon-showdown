@@ -73,12 +73,27 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	blobboscell: {
 		inherit: true,
 		abilities: {
-			0: "Swift Swim",
-			1: "Cell Shield",
-			H: "Filter",
+			0: "Cell Shield",
+			1: "Filter",
+			H: "Admin Abuse",
 			S: "Regenerator",
 		},
 		color: "Black",
 
+	},
+	blobbosforbidden: {
+		inherit: true,
+		baseStats: {
+			hp: 89, 
+			atk: 131, 
+			def: 90, 
+			spa: 133, 
+			spd: 80, 
+			spe: 142
+		},
+		abilities: {
+			0: "Competitive", 
+			1: "Uncompetitive",
+		},
 	},
 };

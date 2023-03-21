@@ -9714,6 +9714,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	joelbat: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	vintini: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosswitch: {
 		tier: "Illegal",
 		isNonstandard: "Future",

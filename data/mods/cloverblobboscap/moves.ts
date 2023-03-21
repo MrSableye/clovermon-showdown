@@ -1296,4 +1296,36 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	metronomeifitwasfunny: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	meatballmash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	blandybland: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	thunderblitz: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	scarystory: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	moonstrike: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	invigorate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	blazingswipe: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

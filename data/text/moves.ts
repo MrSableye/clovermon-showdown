@@ -8831,5 +8831,45 @@ export const MovesText: {[k: string]: MoveText} = {
 	ultima: {
 		name: "Ultima",
 		shortDesc: "Hits all adjacent foes. Lowers all of the user's stats by 1.",
-	}
+	},
+	metronomeifitwasfunny: {
+		name: "Metronome If It Was Funny",
+		shortDesc: "You know all those moves Metronome can't pull? That's old news.",
+	},
+	meatballmash: {
+		name: "Meatball Mash",
+		shortDesc: "1/4 chance to raise both of the user's defenses by 1 stage on hit.",
+	},
+	blandybland: {
+		name: "Blandy Bland",
+		shortDesc: "Changes the opponent's ability to Simple.",
+	},
+	thunderblitz: {
+		name: "Thunder Blitz",
+		shortDesc: "Hits twice. Always lands a critical hit.",
+	},
+	scarystory: {
+		name: "Scary Story",
+		shortDesc: "Switches out the target. Raises Atk and Sp. Atk by 1 stage. Always goes last.",
+	},
+	moonstrike: {
+		name: "Moonstrike",
+		shortDesc: "30% chance to lower the target's Atk by 1.",
+	},
+	invigorate: {
+		name: "Invigorate",
+		shortDesc: "Heals 25% of user's max HP. Raises Atk by 1. Raises by 2 if this has 1/2 of less of its max HP.",
+	},
+	blazingswipe: {
+		name: "Blazing Swipe",
+		shortDesc: "100% chance to lower the foe(s) Attack by 1. Hits all foes.",
+	},
+	bishido: {
+		name: "Bishido",
+		shortDesc: "Hits 4 times.",
+	},
+	dustcannon: {
+		name: "Dust Cannon",
+		shortDesc: "First turn only. Raises users' stats by 1, lowers enemy's stats by 1. False Swipe and Photon Geyser effect.",
+	},
 };

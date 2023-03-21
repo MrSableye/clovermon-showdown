@@ -37359,7 +37359,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Levitate",
 			1: "Intimidate",
-			H: "As One (Blobbos-Therian)",
+			H: "Metagaming",
 		},
 		heightm: 1.3,
 		weightkg: 68,
@@ -37408,8 +37408,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		},
 		abilities: {
 			0: "Old School",
-			1: "Neutralizing Gas",
+			1: "No Ability",
 			H: "Genwunning",
+			S: "Kantonaut"
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
@@ -37426,9 +37427,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gender: "N",
 		baseStats: {
 			hp: 45,
-			atk: 75,
+			atk: 55,
 			def: 50,
-			spa: 70,
+			spa: 50,
 			spd: 60,
 			spe: 90,
 		},
@@ -37737,8 +37738,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Magic Guard",
 			1: "Flare Heal",
-			H: "As One (Blobbos-Rembered)",
-			S: "In Memoriam",
+			H: "In Memoriam",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
@@ -37852,7 +37852,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		},
 		abilities: {
 			0: "Striker",
-			1: "As One (Horse)",
+			1: "Power of YEEHAW!",
 			H: "Grim Neigh",
 			S: "Chilling Neigh",
 		},
@@ -40723,7 +40723,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 	},
 	blobbosforbidden: {
-		num: -42132,
+		num: 69132,
 		name: "Blobbos-Forbidden",
 		types: ["Steel", "Fairy"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -42381,6 +42381,30 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Red",
 		eggGroups: ["Field"],
 		gen: 2,
+	},
+	joelbat: {
+		num: -42023,
+		name: "Joelbat",
+		types: ["Flying", "Ghost"],
+		gender: "M",
+		baseStats: {hp: 79, atk: 91, def: 111, spa: 133, spd: 95, spe: 91},
+		abilities: {0: "Ghost Note", 1: "Gorilla Tactics", H: "Swarm", S: "Boner Zoner"},
+		heightm: 1.6,
+		weightkg: 55,
+		color: "Green",
+		eggGroups: ["Flying"],
+	},
+	vintini: {
+		num: -42024,
+		name: "Vintini",
+		types: ["Grass", "Fire"],
+		gender: "M",
+		baseStats: {hp: 112, atk: 115, def: 89, spa: 69, spd: 115, spe: 100},
+		abilities: {0: "Punk Rock", 1: "Metronome Power", H: "Effect Spore", S: "Hyperspeen"},
+		heightm: 0.4,
+		weightkg: 4,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
 	},
 	/* Clover CAP Megas */
 	oogabugamega: {
