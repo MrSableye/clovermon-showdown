@@ -8872,4 +8872,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Dust Cannon",
 		shortDesc: "First turn only. Raises users' stats by 1, lowers enemy's stats by 1. False Swipe and Photon Geyser effect.",
 	},
+	hivemind: {
+		name: "Hivemind",
+		shortDesc: "Hits three times. Hits three times.",
+	},
 };
