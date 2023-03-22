@@ -7672,7 +7672,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 
 		isPermanent: true,
-		name: "As One (Blobbos-Therian)",
+		name: "Metagaming",
 		isNonstandard: "Future",
 		rating: 3.5,
 	},
