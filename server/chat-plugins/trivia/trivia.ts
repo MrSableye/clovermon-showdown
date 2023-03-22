@@ -1722,7 +1722,7 @@ const triviaCommands: Chat.ChatCommands = {
 
 	submit: 'add',
 	async add(target, room, user, connection, cmd) {
-		room = this.requireRoom('questionworkshop' as RoomID);
+		room = this.requireRoom();
 		if (cmd === 'add') this.checkCan('mute', null, room);
 		if (cmd === 'submit') this.checkCan('show', null, room);
 		if (!target) return false;
@@ -1806,7 +1806,7 @@ const triviaCommands: Chat.ChatCommands = {
 	addhelp: [`/trivia add [category] | [question] | [answer1], [answer2], ... [answern] - Adds question(s) to the question database. Requires: % @ # &`],
 
 	async review(target, room) {
-		room = this.requireRoom('questionworkshop' as RoomID);
+		room = this.requireRoom();
 		this.checkCan('ban', null, room);
 
 		const submissions = await database.getSubmissions();
@@ -1829,7 +1829,7 @@ const triviaCommands: Chat.ChatCommands = {
 
 	reject: 'accept',
 	async accept(target, room, user, connection, cmd) {
-		room = this.requireRoom('questionworkshop' as RoomID);
+		room = this.requireRoom();
 		this.checkCan('ban', null, room);
 		this.checkChat();
 
@@ -1903,7 +1903,7 @@ const triviaCommands: Chat.ChatCommands = {
 	rejecthelp: [`/trivia reject [index1], [index2], ... [indexn] OR all - Remove questions from the submission database using their index numbers or ranges of them. Requires: @ # &`],
 
 	async delete(target, room, user) {
-		room = this.requireRoom('questionworkshop' as RoomID);
+		room = this.requireRoom();
 		this.checkCan('mute', null, room);
 		this.checkChat();
 
@@ -1924,7 +1924,7 @@ const triviaCommands: Chat.ChatCommands = {
 	deletehelp: [`/trivia delete [question] - Delete a question from the trivia database. Requires: % @ # &`],
 
 	async move(target, room, user) {
-		room = this.requireRoom('questionworkshop' as RoomID);
+		room = this.requireRoom();
 		this.checkCan('mute', null, room);
 		this.checkChat();
 
@@ -1965,7 +1965,7 @@ const triviaCommands: Chat.ChatCommands = {
 	],
 
 	async migrate(target, room, user) {
-		room = this.requireRoom('questionworkshop' as RoomID);
+		room = this.requireRoom();
 		this.checkCan('editroom', null, room);
 
 		const [sourceCategory, destinationCategory] = target.split(',').map(toID);
@@ -2000,7 +2000,7 @@ const triviaCommands: Chat.ChatCommands = {
 	],
 
 	async edit(target, room, user) {
-		room = this.requireRoom('questionworkshop' as RoomID);
+		room = this.requireRoom();
 		this.checkCan('mute', null, room);
 
 		let isQuestionOnly = false;
@@ -2082,7 +2082,7 @@ const triviaCommands: Chat.ChatCommands = {
 	],
 
 	async qs(target, room, user) {
-		room = this.requireRoom('questionworkshop' as RoomID);
+		room = this.requireRoom();
 
 		let buffer = "|raw|<div class=\"ladder\" style=\"overflow-y: scroll; max-height: 300px;\"><table>";
 		if (!target) {
@@ -2146,7 +2146,7 @@ const triviaCommands: Chat.ChatCommands = {
 	cssearch: 'search',
 	casesensitivesearch: 'search',
 	async search(target, room, user, connection, cmd) {
-		room = this.requireRoom('questionworkshop' as RoomID);
+		room = this.requireRoom();
 		this.checkCan('show', null, room);
 		if (!target.includes(',')) return this.errorReply(this.tr`No valid search arguments entered.`);
 
@@ -2185,7 +2185,7 @@ const triviaCommands: Chat.ChatCommands = {
 	],
 
 	async moveusedevent(target, room, user) {
-		room = this.requireRoom('questionworkshop' as RoomID);
+		room = this.requireRoom();
 		const fromCatName = ALL_CATEGORIES[MOVE_QUESTIONS_AFTER_USE_FROM_CATEGORY];
 		const toCatName = ALL_CATEGORIES[MOVE_QUESTIONS_AFTER_USE_TO_CATEGORY];
 		const currentSetting = await database.shouldMoveEventQuestions();
@@ -2342,7 +2342,7 @@ const triviaCommands: Chat.ChatCommands = {
 
 	clearquestions: 'clearqs',
 	async clearqs(target, room, user) {
-		room = this.requireRoom('questionworkshop' as RoomID);
+		room = this.requireRoom();
 		this.checkCan('declare', null, room);
 		target = toID(target);
 		const category = CATEGORY_ALIASES[target] || target;
