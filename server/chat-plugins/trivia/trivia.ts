@@ -1724,7 +1724,6 @@ const triviaCommands: Chat.ChatCommands = {
 	async add(target, room, user, connection, cmd) {
 		room = this.requireRoom();
 		if (cmd === 'add') this.checkCan('mute', null, room);
-		if (cmd === 'submit') this.checkCan('show', null, room);
 		if (!target) return false;
 		this.checkChat();
 
