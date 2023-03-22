@@ -537,4 +537,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	kantonaut: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
