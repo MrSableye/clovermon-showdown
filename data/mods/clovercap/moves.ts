@@ -412,7 +412,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 				this.add('-start', target, 'sharpen' + this.effectState.stacks);
 			},
 			onRestart(target) {
-				if (this.effectState.layers >= 3) return false;
+				if (this.effectState.stacks >= 3) return false;
 				this.effectState.stacks++;
 				this.add('-start', target, 'sharpen' + this.effectState.stacks);
 			},
