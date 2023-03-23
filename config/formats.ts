@@ -850,4 +850,11 @@ export const Formats: FormatList = [
 		ruleset: ['Terastal Clause', '[Gen 1] OU', 'APT Clause'],
 		banlist: ['OU', 'UUBL'],
 	},
+	{
+		name: "[Gen 1] 10u",
+		mod: "gen1",
+		ruleset: ['Standard'],
+		banlist: ['Uber'],
+		unbanlist: ['Weedle', 'Kakuna', 'Caterpie', 'Metapod', 'Ditto', 'Magikarp', 'Magikarp + Dragon Rage'],
+	}
 ];
