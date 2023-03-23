@@ -854,7 +854,7 @@ export const Formats: FormatList = [
 		name: "[Gen 1] 10u",
 		mod: "gen1",
 		ruleset: ['Standard'],
-		banlist: ["AG", "Uber" , "OU", "UUBL", "UU", "RUBL", "RU", "NUBL", "NU", "PUBL", "PU", "NFE", "LC", "DUber", "DOU", "DBL", "DUU", "NFE", "LC", "Unreleased", "Illegal", "CAP", "CAP NFE", "CAP LC"],
+		banlist: ["AG", "Uber" , "OU", "UUBL", "UU", "RUBL", "RU", "NUBL", "NU", "PUBL", "PU", "NFE", "LC", "DUber", "DOU", "DBL", "DUU", "LC", "Unreleased", "Illegal", "CAP", "CAP NFE", "CAP LC"],
 		unbanlist: ['Weedle', 'Kakuna', 'Caterpie', 'Metapod', 'Ditto', 'Magikarp', 'Magikarp + Dragon Rage'],
 	}
 ];
