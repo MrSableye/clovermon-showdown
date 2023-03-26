@@ -7661,13 +7661,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onTryHit(target, source, move) {
-			if (!target.lastMoveUsed) {
+			if (!source.lastMoveUsed) {
 				return false;
 			}
 			const possibleTypes = [];
-			const attackType = target.lastMoveUsed.type;
+			const attackType = source.lastMoveUsed.type;
 			for (const type of this.dex.types.names()) {
-				if (source.hasType(type)) continue;
+				if (target.hasType(type)) continue;
 				const typeCheck = this.dex.types.get(type).damageTaken[attackType];
 				if (typeCheck === 2 || typeCheck === 3) {
 					possibleTypes.push(type);
@@ -7678,8 +7678,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			const randomType = this.sample(possibleTypes);
 
-			if (!source.setType(randomType)) return false;
-			this.add('-start', source, 'typechange', randomType);
+			if (!target.setType(randomType)) return false;
+			this.add('-start', target, 'typechange', randomType);
 		},
 		onSwitchIn(pokemon) {
 			delete this.effectState.protean;
