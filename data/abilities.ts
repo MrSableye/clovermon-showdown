@@ -7649,6 +7649,46 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		isNonstandard: "Future",
 	},
+	finale: {
+		onPrepareHit(source, target, move) {
+			if (this.effectState.protean) return;
+			if (move.hasBounced || move.isFutureMove || move.sourceEffect === 'snatch') return;
+			const type = move.type;
+			if (type && type !== '???' && source.getTypes().join() !== type) {
+				if (!source.setType(type)) return;
+				this.effectState.protean = true;
+				this.add('-start', source, 'typechange', type, '[from] ability: Finale');
+			}
+		},
+		onTryHit(target, source, move) {
+			if (!target.lastMoveUsed) {
+				return false;
+			}
+			const possibleTypes = [];
+			const attackType = target.lastMoveUsed.type;
+			for (const type of this.dex.types.names()) {
+				if (source.hasType(type)) continue;
+				const typeCheck = this.dex.types.get(type).damageTaken[attackType];
+				if (typeCheck === 2 || typeCheck === 3) {
+					possibleTypes.push(type);
+				}
+			}
+			if (!possibleTypes.length) {
+				return false;
+			}
+			const randomType = this.sample(possibleTypes);
+
+			if (!source.setType(randomType)) return false;
+			this.add('-start', source, 'typechange', randomType);
+		},
+		onSwitchIn(pokemon) {
+			delete this.effectState.protean;
+		},
+		name: "Finale",
+		rating: 5,
+		isNonstandard: "Future",
+		isPermanent: true,
+	},
 	metagaming: {
 		onPreStart(pokemon) {
 			this.add('-ability', pokemon, 'Metagaming');
