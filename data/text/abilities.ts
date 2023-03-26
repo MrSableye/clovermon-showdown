@@ -3017,6 +3017,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Altruist",
 		shortDesc: "When this Pokemon has a stat stage raised, all opposing Pokemon copy the effect.",
 	},
+	finale: {
+		name: "Finale",
+		shortDesc: "Changes type to match moves used and to resist oncoming moves.",
+	},
 	magmaticeruption: {
 		name: "Magmatic Eruption",
 		shortDesc: "On switch-in, this Pokemon summons a Sea of Fire.",
