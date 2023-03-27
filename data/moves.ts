@@ -29576,7 +29576,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				return fastPop(list, index);
 			};
 
-			const allTypes = this.dex.types.all().map((type) => type.id);
+			const allTypes = this.dex.types.all().map((type) => type.name);
 			const types = [sampleNoReplace(allTypes), sampleNoReplace(allTypes)] as string[];
 
 			pokemon.setType(types);
@@ -29630,7 +29630,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 						return fastPop(list, index);
 					};
 		
-					const allTypes = this.dex.types.all().map((type) => type.id);
+					const allTypes = this.dex.types.all().map((type) => type.name);
 					const types = source.getTypes().map((type) => sampleNoReplace(allTypes)) as string[];
 		
 					source.setType(types);
@@ -29663,7 +29663,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 						return fastPop(list, index);
 					};
 		
-					const allTypes = this.dex.types.all().map((type) => type.id);
+					const allTypes = this.dex.types.all().map((type) => type.name);
 					const types = source.getTypes().map((type) => sampleNoReplace(allTypes)) as string[];
 		
 					source.setType(types);
