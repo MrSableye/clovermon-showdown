@@ -29577,7 +29577,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 			};
 
 			const allTypes = this.dex.types.all().map((type) => type.name);
-			const types = [sampleNoReplace(allTypes), sampleNoReplace(allTypes)] as string[];
+			const types = [sampleNoReplace(allTypes), sampleNoReplace(allTypes)].filter((type) => type) as string[];
+
+			if (!types.length) return;
 
 			pokemon.setType(types);
 			this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Art Wall');
@@ -29631,7 +29633,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 					};
 		
 					const allTypes = this.dex.types.all().map((type) => type.name);
-					const types = source.getTypes().map((type) => sampleNoReplace(allTypes)) as string[];
+					const types = source.getTypes().map((type) => sampleNoReplace(allTypes)).filter((type) => type) as string[];
+
+					if (!types.length) return;
 		
 					source.setType(types);
 					this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] move: Art Wall');
@@ -29664,7 +29668,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 					};
 		
 					const allTypes = this.dex.types.all().map((type) => type.name);
-					const types = source.getTypes().map((type) => sampleNoReplace(allTypes)) as string[];
+					const types = source.getTypes().map((type) => sampleNoReplace(allTypes)).filter((type) => type) as string[];
+
+					if (!types.length) return;
 		
 					source.setType(types);
 					this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] move: Art Wall');
