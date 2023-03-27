@@ -6280,7 +6280,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true && move.type === 'Psychic') {
-				move.ignoreImmunity['Dark'] = true;
+				move.ignoreImmunity['Psychic'] = true;
 			}
 		},
 		isPermanent: true,
