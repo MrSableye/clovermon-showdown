@@ -1118,4 +1118,25 @@ export const Conditions: {[k: string]: ConditionData} = {
 			}
 		},
 	},
+	luckyroll: {
+		name: 'Lucky Roll',
+		onSideStart(side) {
+			this.add('-sidestart', side, 'Lucky Roll');
+			this.effectState.layers = 1;
+		},
+		onSideRestart(side) {
+			if (this.effectState.layers >= 3) return false;
+			this.add('-sidestart', side, 'Lucky Roll');
+			this.effectState.layers++;
+		},
+		onModifyMove(move) {
+			const chanceMod = Math.pow(1.2, this.effectState.layers || 0);
+			if (move.secondaries) {
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance *= chanceMod;
+				}
+			}
+			if (move.self?.chance) move.self.chance *= chanceMod;
+		},
+	},
 };

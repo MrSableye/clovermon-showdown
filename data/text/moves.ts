@@ -8809,7 +8809,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	strifedicekind: {
 		name: "Strife: Dicekind",
-		desc: "Physical if user's Atk > Sp. Atk. Hits 8 times. Each hit can miss. 4% chance to either burn, freeze, paralyze, boost a foe's random stat by 1, or lower a foe's random stat by 1.",
+		desc: "Physical if user's Atk > Sp. Atk. Hits 8 times. Each hit can miss. 4% to permanently improve's the user's side's luck by 1.2x up to 3 times.",
 	},
 	lavadapt: {
 		name: "Lavadapt",

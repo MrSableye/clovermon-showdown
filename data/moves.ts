@@ -29149,28 +29149,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 4, // ::(
 			onHit(target, source) {
-				const result = this.random(5);
-				if (result === 0) {
-					target.trySetStatus('brn', source);
-				} else if (result === 1) {
-					target.trySetStatus('par', source);
-				} else if (result === 2) {
-					target.trySetStatus('frz', source);
-				} else {
-					const stats: BoostID[] = [];
-					let stat: BoostID;
-					for (stat in target.boosts) {
-						if (target.boosts[stat] < 6) {
-							stats.push(stat);
-						}
-					}
-					if (stats.length) {
-						const randomStat = this.sample(stats);
-						const boost: SparseBoostsTable = {};
-						boost[randomStat] = result === 3 ? 1 : -1;
-						this.boost(boost, target);
-					}
-				}
+				source.side.addSideCondition('luckyroll');
 			},
 		},
 		category: "Special",
