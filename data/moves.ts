@@ -29538,4 +29538,143 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
+	artwall: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Future",
+		name: "Art Wall",
+		pp: 10,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'artwall',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			const fastPop = <T>(list: T[], index: number) => {
+				// If an array doesn't need to be in order, replacing the
+				// element at the given index with the removed element
+				// is much, much faster than using list.splice(index, 1).
+				const length = list.length;
+				if (index < 0 || index >= list.length) {
+					// sanity check
+					throw new Error(`Index ${index} out of bounds for given array`);
+				}
+
+				const element = list[index];
+				list[index] = list[length - 1];
+				list.pop();
+				return element;
+			};
+
+			const sampleNoReplace = <T>(list: T[]) => {
+				const length = list.length;
+				if (length === 0) return null;
+				const index = this.random(length);
+				return fastPop(list, index);
+			};
+
+			const allTypes = this.dex.types.all().map((type) => type.id);
+			const types = [sampleNoReplace(allTypes), sampleNoReplace(allTypes)] as string[];
+
+			pokemon.setType(types);
+			this.add('-start', pokemon, 'typechange', types.join('/'), '[from] move: Art Wall');
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add('-singleturn', target, 'Protect');
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags['protect'] || move.category === 'Status') {
+					if (['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-activate', target, 'move: Protect');
+				}
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					// Outrage counter is reset
+					if (source.volatiles['lockedmove'].duration === 2) {
+						delete source.volatiles['lockedmove'];
+					}
+				}
+				if (this.checkMoveMakesContact(move, source, target)) {
+					const fastPop = <T>(list: T[], index: number) => {
+						// If an array doesn't need to be in order, replacing the
+						// element at the given index with the removed element
+						// is much, much faster than using list.splice(index, 1).
+						const length = list.length;
+						if (index < 0 || index >= list.length) {
+							// sanity check
+							throw new Error(`Index ${index} out of bounds for given array`);
+						}
+		
+						const element = list[index];
+						list[index] = list[length - 1];
+						list.pop();
+						return element;
+					};
+		
+					const sampleNoReplace = <T>(list: T[]) => {
+						const length = list.length;
+						if (length === 0) return null;
+						const index = this.random(length);
+						return fastPop(list, index);
+					};
+		
+					const allTypes = this.dex.types.all().map((type) => type.id);
+					const types = source.getTypes().map((type) => sampleNoReplace(allTypes)) as string[];
+		
+					source.setType(types);
+					this.add('-start', source, 'typechange', allTypes.join('/'), '[from] move: Art Wall');
+				}
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target)) {
+					const fastPop = <T>(list: T[], index: number) => {
+						// If an array doesn't need to be in order, replacing the
+						// element at the given index with the removed element
+						// is much, much faster than using list.splice(index, 1).
+						const length = list.length;
+						if (index < 0 || index >= list.length) {
+							// sanity check
+							throw new Error(`Index ${index} out of bounds for given array`);
+						}
+		
+						const element = list[index];
+						list[index] = list[length - 1];
+						list.pop();
+						return element;
+					};
+		
+					const sampleNoReplace = <T>(list: T[]) => {
+						const length = list.length;
+						if (length === 0) return null;
+						const index = this.random(length);
+						return fastPop(list, index);
+					};
+		
+					const allTypes = this.dex.types.all().map((type) => type.id);
+					const types = source.getTypes().map((type) => sampleNoReplace(allTypes)) as string[];
+		
+					source.setType(types);
+					this.add('-start', source, 'typechange', allTypes.join('/'), '[from] move: Art Wall');
+				}
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "???",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Cool",
+	},
 };
