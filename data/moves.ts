@@ -29147,7 +29147,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
 		secondary: {
-			chance: 4, // ::(
+			chance: 8, // ::::)
 			onHit(target, source) {
 				source.side.addSideCondition('luckyroll');
 			},

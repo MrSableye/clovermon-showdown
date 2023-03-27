@@ -1138,5 +1138,8 @@ export const Conditions: {[k: string]: ConditionData} = {
 			}
 			if (move.self?.chance) move.self.chance *= chanceMod;
 		},
+		onModifyCritRatio(critRatio) {
+			if (this.effectState.layers >= 3) return critRatio + 1;
+		},
 	},
 };
