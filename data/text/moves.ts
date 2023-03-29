@@ -8876,4 +8876,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Hivemind",
 		shortDesc: "Hits three times. Hits three times.",
 	},
+	miraclepunch: {
+		name: "Miracle Punch",
+		desc: "A random punch move is selected for use.",
+	},
 };

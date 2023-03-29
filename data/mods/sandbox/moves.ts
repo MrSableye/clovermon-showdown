@@ -4491,4 +4491,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	miraclepunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
