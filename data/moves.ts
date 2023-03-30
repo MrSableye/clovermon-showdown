@@ -1862,6 +1862,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('reflect');
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
 		},
 		secondary: null,
 		target: "normal",
@@ -3053,7 +3054,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {mirror: 1},
 		onHitField(target, source) {
 			const sideConditions = [
-				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire',
+				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'mirageveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire',
 			];
 			let success = false;
 			if (this.gameType === "freeforall") {
@@ -3491,7 +3492,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			let success = false;
 			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
 			const removeTarget = [
-				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
+				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
 			];
 			const removeAll = [
 				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
@@ -14330,6 +14331,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('reflect');
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
 		},
 		secondary: null,
 		target: "normal",
@@ -14875,6 +14877,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('reflect');
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
 		},
 		onModifyType(move, pokemon) {
 			switch (pokemon.species.name) {
@@ -21835,6 +21838,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				pokemon.side.removeSideCondition('reflect');
 				pokemon.side.removeSideCondition('lightscreen');
 				pokemon.side.removeSideCondition('auroraveil');
+				pokemon.side.removeSideCondition('mirageveil');
 			}
 		},
 		isNonstandard: "Future",
@@ -22504,6 +22508,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				pokemon.side.removeSideCondition('reflect');
 				pokemon.side.removeSideCondition('lightscreen');
 				pokemon.side.removeSideCondition('auroraveil');
+				pokemon.side.removeSideCondition('mirageveil');
 			}
 		},
 		secondary: null,
@@ -23323,7 +23328,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onHit(target, source, move) {
 			let success = false;
 			const removeAll = [
-				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
+				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'fragments'];
 			for (const sideCondition of removeAll) {
 				if (target.side.removeSideCondition(sideCondition)) {
 					if (!removeAll.includes(sideCondition)) continue;
@@ -23611,7 +23616,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			const sourceSide = source.side;
 			const targetSide = source.side.foe;
 			const sideConditions = [
-				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire', 'sleazyspores', 'shattershard',
+				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'mirageveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire', 'sleazyspores', 'shattershard',
 			];
 			let success = false;
 			for (const id of sideConditions) {
@@ -24124,7 +24129,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	penetrate: {
 		accuracy: 100,
-		basePower: 75,
+		basePower: 98,
 		category: "Special",
 		name: "Penetrate",
 		pp: 5,
@@ -24161,11 +24166,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Flying",
 		isNonstandard: "Future",
 	},
-	susteelstrike: {
+	sussteelstrike: {
 		accuracy: 100,
 		basePower: 100,
 		category: "Physical",
-		name: "Susteel Strike",
+		name: "Sussteel Strike",
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
@@ -24178,13 +24183,32 @@ export const Moves: {[moveid: string]: MoveData} = {
 				return;
 			}
 			this.attrLastMove('[still]');
-			this.add('-fail', source, 'move: Susteel Strike');
+			this.add('-fail', source, 'move: Sussteel Strike');
 			this.hint("You are not the impostor.");
 			return null;
 		},
 		noSketch: true,
 		target: "normal",
 		type: "Steel",
+		isNonstandard: "Future",
+	},
+	krackocean: {
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Krackocean",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				this.field.setWeather('sunnyday');
+				this.field.setTerrain('electricterrain')
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Water",
 		isNonstandard: "Future",
 	},
 	matingpress: {
@@ -24276,7 +24300,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	metalblade: {
 		num: 364,
 		accuracy: 100,
-		basePower: 85,
+		basePower: 105,
 		category: "Physical",
 		name: "Metal Blade",
 		pp: 25,
@@ -24289,6 +24313,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('reflect');
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
 		},
 		secondary: null,
 		target: "normal",
@@ -25210,6 +25235,211 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Steel",
+		isNonstandard: "Future",
+	},
+	fractus: {
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Fractus",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+		isNonstandard: "Future",
+	},
+	extinction: {
+		accuracy: 30,
+		basePower: 0,
+		category: "Special",
+		name: "Extinction",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		ohko: true,
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+		zMove: {basePower: 650},
+		maxMove: {basePower: 250},
+		isNonstandard: "Future",
+	},
+	purge: {
+		accuracy: 100,
+		basePower: 55,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status || target.hasAbility('comatose')) {
+				this.debug('BP tripled from status condition');
+				return move.basePower * 3;
+			}
+			return move.basePower;
+		},
+		onHit(target, source) {
+			target.cureStatus()
+		},
+		category: "Special",
+		name: "Purge",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+		isNonstandard: "Future",
+	},
+	uproot: {
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Uproot",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1,},
+		onTryMove(pokemon, target, move) {
+			if (pokemon.hasType('Grass')) return;
+			this.add('-fail', pokemon, 'move: Uproot');
+			this.attrLastMove('[still]');
+			return null;
+		},
+		self: {
+			onHit(pokemon) {
+				pokemon.setType(pokemon.getTypes(true).map(type => type === "Grass" ? "???" : type));
+				this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Uproot');
+			},
+		},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Grass",
+		isNonstandard: "Future",
+	},
+	frostbite: {
+		accuracy: 100,
+		basePower: 65,
+		category: "Special",
+		name: "Frostbite",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, bite: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spa: -2,
+			},
+		},
+		target: "allAdjacentFoes",
+		type: "Ice",
+		isNonstandard: "Future",
+	},
+	calibrate: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Calibrate",
+		pp: 15,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+			accuracy: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Steel",
+		zMove: {boost: {spa: 1}},
+		isNonstandard: "Future",
+	},
+	braindamage: {
+		accuracy: 80,
+		basePower: 150,
+		category: "Physical",
+		name: "Brain Damage",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+		isNonstandard: "Future",
+	},
+	flintfang: {
+		accuracy: 100,
+		basePower: 65,
+		category: "Physical",
+		name: "Flint Fang",
+		pp: 15,
+		priority: 0,
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		onHit(target, source) {
+			if (target.getTypes().join() === "Steel") {
+				target.trySetStatus('brn', source);
+			}
+		},
+		secondaries: [
+			{
+				chance: 10,
+				volatileStatus: 'flinch',
+			},
+		],
+		target: "normal",
+		type: "Rock",
+		isNonstandard: "Future",
+	},
+	mirageveil: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Mirage Veil",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'mirageveil',
+		onTry() {
+			return this.field.isWeather(['sandstorm']);
+		},
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('lightclay')) {
+					return 8;
+				}
+				return 5;
+			},
+			onModifyAtk(atk, pokemon) {
+				return this.chainModify(1.5);
+			},
+			onModifySpA(atk, pokemon) {
+				return this.chainModify(1.5);
+			},
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Mirage Veil');
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 10,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'move: Mirage Veil');
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Ground",
+		zMove: {boost: {spa: 1}},
 		isNonstandard: "Future",
 	},
 	neosporin: {
@@ -26228,6 +26458,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			pokemon.side.removeSideCondition('reflect');
 			pokemon.side.removeSideCondition('lightscreen');
 			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
 		},
 		ignoreAbility: true,
 		ignoreImmunity: {'Steel': true},
