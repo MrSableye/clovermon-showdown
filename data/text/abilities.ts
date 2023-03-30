@@ -3119,6 +3119,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	cancer: {
 		name: "Cancer",
-		shortDesc: "At end of turn, try to toxic all foes. If the foe is already poisoned, they lose 1/16 of their max HP.",
+		shortDesc: "At end of turn, try to toxic all foes, ignoring immunity. If the foe is already poisoned, they lose 1/16 of their max HP.",
 	},
 };
