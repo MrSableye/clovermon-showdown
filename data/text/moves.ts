@@ -7891,6 +7891,53 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Crash Hopper",
 		shortDesc: "30% chance to paralyze. Paralyze self on miss.",
 	},
+	fractus: {
+		name: "Fractus",
+		desc: "If this attack does not miss, the effects of Reflect, Light Screen, and Aurora Veil end for the target's side of the field before damage is calculated.",
+		shortDesc: "Destroys screens, unless the target is immune.",
+		activate: "  [POKEMON] shattered [TEAM]'s protections!",
+	},
+	purge: {
+		name: "Purge",
+		desc: "Power triples if the target has a non-volatile status condition.",
+		shortDesc: "Power is tripled if target is statused. Cures the target.",
+	},
+	uproot: {
+		name: "Uproot",
+		shortDesc: "User's Grass type becomes typeless; must be Grass, +1 Spe.",
+
+		typeChange: "  [POKEMON] uprooted themselves!",
+	},
+	mirageveil: {
+		name: "Mirage Veil",
+		shortDesc: "For 5 turns, damage done by allies is 1.5x. Sand only.",
+
+		start: "  Mirage Veil made [TEAM] physical and special moves stronger!",
+		end: "  [TEAM]'s Mirage Veil wore off!",
+	},
+	frostbite: {
+		name: "Frostbite",
+		desc: "Has a 100% chance to lower the target's Special Attack by 2 stage.",
+		shortDesc: "100% chance to lower foe(s) Sp. Atk by 1, 2 in Hail",
+	},
+	calibrate: {
+		name: "Calibrate",
+		desc: "Raises the user's Special Attack and accuracy by 1 stage.",
+		shortDesc: "Raises the user's Sp.Atk and accuracy by 1.",
+	},
+	braindamage: {
+		name: "Brain Damage",
+		desc: "If the target lost HP, the user takes recoil damage equal to 1/2 the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 1/2 recoil.",
+	},
+	flintfang: {
+		name: "Flint Fang",
+		shortDesc: "10% chance to flinch; Burns Steel type foes.",
+	},
+	krackocean: {
+		name: "Krackocean",
+		shortDesc: "Sets Rain Dance and Electric Terrain after damage.",
+	},
 	closeblobmat: {
 		name: "Close Blobmat",
 		shortDesc: "Lowers the user's Defense, Sp. Def, and Speed by 1.",

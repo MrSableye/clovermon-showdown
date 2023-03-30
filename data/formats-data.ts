@@ -9013,6 +9013,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	krakenwalker: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	stingulor: {
 		tier: "Illegal",
 		isNonstandard: "Future",

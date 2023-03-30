@@ -914,4 +914,130 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	fractus: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	purge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	extinction: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	uproot: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mirageveil: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	frostbite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	braindamage: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	flintfang: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	calibrate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	razorwind: {
+		accuracy: 90,
+		basePower: 60,
+		category: "Special",
+		name: "Razor Wind",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, wind: 1},
+		willCrit: true,
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+		isNonstandard: "Future",
+	},
+	rototiller: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Rototiller",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		onModifyMove(move, pokemon) {
+			if (['sandstorm'].includes(pokemon.effectiveWeather())) move.boosts = {atk: 2, spa: 2};
+		},
+		boosts: {
+			atk: 1,
+			spa: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Ground",
+		zMove: {boost: {atk: 1}},
+		contestType: "Beautiful",
+	},
+	skyuppercut: {
+		inherit: true,
+		isNonstandard: null,
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Flying') return 0;
+		},
+	},
+	smellingsalts: {
+		inherit: true,
+		type: "Fighting",
+		secondary: {
+			chance: 10,
+			status: 'par',
+		},
+		isNonstandard: null,
+	},
+	sonicboom: {
+		inherit: true,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Sonic Boom",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		mindBlownRecoil: true,
+		onAfterMove(pokemon, target, move) {
+			if (move.mindBlownRecoil && !move.multihit) {
+				const hpBeforeRecoil = pokemon.hp;
+				this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.conditions.get('Sonic Boom'), true);
+				if (pokemon.hp <= pokemon.maxhp / 2 && hpBeforeRecoil > pokemon.maxhp / 2) {
+					this.runEvent('EmergencyExit', pokemon, pokemon);
+				}
+			}
+		},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Flying",
+		isNonstandard: null,
+	},
+	geargrind: {
+		inherit: true,
+		isNonstandard: null,
+		secondary: {
+			chance: 30,
+			boosts: {
+				def: -1,
+			},
+		},
+	},
+	zenheadbutt: {
+		inherit: true,
+		accuracy: 100,
+		isNonstandard: null,
+	},
 };
