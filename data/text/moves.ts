@@ -8943,4 +8943,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Any Statup",
 		desc: "A random statup move is selected for use.",
 	},
+	piercingstrike: {
+		name: "Piercing Strike",
+		desc: "Any damage dealt over a Pokemon's remaining health is dealt to the next.",
+	},
 };

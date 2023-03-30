@@ -1142,4 +1142,18 @@ export const Conditions: {[k: string]: ConditionData} = {
 			if (this.effectState.layers >= 3) return critRatio + 1;
 		},
 	},
+	overkill: {
+		name: "Overkill",
+		onUpdate(pokemon) {
+			const data = this.effectState;
+			if (!data.overkillDamage) {
+				pokemon.side.removeSlotCondition(pokemon, 'overkill');
+			} else {
+				if (!pokemon.fainted) {
+					pokemon.damage(data.overkillDamage);
+					pokemon.side.removeSlotCondition(pokemon, 'overkill');
+				}
+			}
+		},
+	},
 };

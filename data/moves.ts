@@ -30044,4 +30044,33 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 		isNonstandard: "Future",
 	},
+	piercingstrike: {
+		name: "Piercing Strike",
+		basePower: 60,
+		accuracy: 100,
+		category: "Physical",
+		type: "Steel",
+		target: "normal",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onDamagePriority: -20,
+		onDamage(damage, target, source, effect) {
+			if (!target || damage <= target.hp) return;
+			target.speciesState.overkillDamage = damage - target.hp;
+			console.log(target.speciesState);
+		},
+		onAfterMoveSecondary(target) {
+			console.log('movesecondary', target.speciesState);
+			console.log(target.speciesState.overkillDamage, (target === undefined) || (target === null), target?.fainted, target?.hp);
+			if (target.speciesState.overkillDamage && (!target || target.fainted || target.hp <= 0)) {
+				if (!target.side.addSlotCondition(target, 'overkill')) return false;
+				Object.assign(target.side.slotConditions[target.position]['overkill'], {
+					overkillDamage: target.speciesState.overkillDamage,
+				});
+			}
+			delete target.speciesState.overkillDamage;
+		},
+		isNonstandard: "Future",
+	},
 };
