@@ -8927,4 +8927,16 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Miracle Punch",
 		desc: "A random punch move is selected for use.",
 	},
+	anyattack: {
+		name: "Any Attack",
+		desc: "A random attack with base power > 80 is selected for use.",
+	},
+	anyheal: {
+		name: "Any Heal",
+		desc: "A random healing move is selected for use.",
+	},
+	anystatus: {
+		name: "Any Status",
+		desc: "A random status condition move is selected for use.",
+	},
 };
