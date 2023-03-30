@@ -29930,7 +29930,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Any Attack",
 		pp: 10,
 		priority: 0,
-		flags: {punch: 1},
+		flags: {protect: 1, mirror: 1},
 		onHit(target, source, effect) {
 			const moves = this.dex.moves.all().filter(move => (
 				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
@@ -30014,5 +30014,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 		isNonstandard: "Future",
 	},
-	
+	anystatup: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Any Statup",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1},
+		onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.boosts 
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
+		secondary: null,
+		target: "self",
+		type: "???",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
 };

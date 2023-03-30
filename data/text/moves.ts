@@ -8939,4 +8939,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Any Status",
 		desc: "A random status condition move is selected for use.",
 	},
+	anystatup: {
+		name: "Any Statup",
+		desc: "A random statup move is selected for use.",
+	},
 };
