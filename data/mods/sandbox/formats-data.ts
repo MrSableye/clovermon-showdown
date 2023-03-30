@@ -10613,6 +10613,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	karkeedle: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	oblivion: {
 		inherit: true,
 		tier: "OU",

@@ -41740,6 +41740,17 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Purple",
 		eggGroups: ["Bug", "Human-Like"],
 	},
+	karkeedle: {
+		num: -42692,
+		name: "Karkeedle",
+		types: ["Dark", "Bug"],
+		baseStats: {hp: 90, atk: 130, def: 90, spa: 95, spd: 80, spe: 110},
+		abilities: {0: "Cancer"},
+		heightm: 0.3,
+		weightkg: 14.2,
+		color: "Grey",
+		eggGroups: ["Bug", "Human-Like"],
+	},
 	oblivion: {
 		num: -42099,
 		name: "Oblivion",

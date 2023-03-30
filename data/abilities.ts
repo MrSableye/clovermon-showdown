@@ -10430,4 +10430,19 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Hyperspeen",
 		isNonstandard: "Future",
 	},
+	cancer: {
+		name: "Cancer",
+		isNonstandard: "Future",
+		onResidual(pokemon) {
+			pokemon.foes(true).forEach((foe) => {
+				if (foe.status) {
+					if (['tox', 'psn'].includes(foe.status)) {
+						this.damage(foe.baseMaxhp / 16, foe, pokemon);
+					}
+				} else {
+					foe.setStatus('tox');
+				}
+			});
+		},
+	}
 };
