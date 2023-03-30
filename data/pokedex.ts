@@ -41744,7 +41744,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: -42692,
 		name: "Karkeedle",
 		types: ["Dark", "Bug"],
-		baseStats: {hp: 90, atk: 130, def: 90, spa: 95, spd: 80, spe: 110},
+		baseStats: {hp: 91, atk: 130, def: 90, spa: 95, spd: 80, spe: 110},
 		abilities: {0: "Cancer"},
 		heightm: 0.3,
 		weightkg: 14.2,
