@@ -29966,7 +29966,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
 				!move.realMove && !move.isZ && !move.isMax &&
 				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
-				move.flags.heal === 1 && move.basePower === 0 && move.id !== 'anyheal'
+				move.flags.heal === 1 && move.basePower === 0 && move.id !== 'anyheal' && move.id !== 'healingwish' && move.id !== 'lunardance' && move.id !== 'floralhealing' 
 			));
 			let randomMove = '';
 			if (moves.length) {
@@ -30027,7 +30027,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
 				!move.realMove && !move.isZ && !move.isMax &&
 				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
-				move.boosts 
+				move.boosts && move.target === "self" && move.id !== 'memento'
 			));
 			let randomMove = '';
 			if (moves.length) {
