@@ -962,7 +962,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		secondary: null,
 		target: "normal",
 		type: "Flying",
-		isNonstandard: "Future",
+		isNonstandard: null,
 	},
 	rototiller: {
 		accuracy: true,
