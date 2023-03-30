@@ -633,7 +633,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Adesign', 'Baddon', 'Boarnograf', 'Chasumo', 'Chromox', 'Clovenix', 'Condoom', 'Demiwaifu', 'Endranther', 'Foryu', 'Funnedong', 'Griffawork', 'Heliofug',
-			'Jewipede', 'Kuuroba', 'Narwhiz', 'Scytill', 'Semdemen', 'Tentaquil', 'Vivaiger', 'Wonder Guard', 'Moody', 'Bright Powder', 'Focus Band', 'Focus Sash', 'Lax Incense', 'Quick Claw', 'Perish Song',
+			'Jewipede', 'Kuuroba', 'Narwhiz', 'Notridley', 'Scytill', 'Semdemen', 'Tentaquil', 'Vivaiger', 'Wonder Guard', 'Moody', 'Bright Powder', 'Focus Band', 'Focus Sash', 'Lax Incense', 'Quick Claw', 'Perish Song',
 		],
 	},
 	{
