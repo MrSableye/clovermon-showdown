@@ -38,7 +38,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 		onBeforeMovePriority: 1,
 		onBeforeMove(pokemon) {
 			if (this.randomChance(1, 4)) {
-				if (!pokemon.hasAbility(['quickfeet', 'paralysisheal'])) {
+				if (!pokemon.hasAbility('paralysisheal')) {
 					this.add('cant', pokemon, 'par');
 					return false;
 				}
