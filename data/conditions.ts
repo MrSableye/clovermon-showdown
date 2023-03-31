@@ -30,7 +30,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 		onModifySpe(spe, pokemon) {
 			// Paralysis occurs after all other Speed modifiers, so evaluate all modifiers up to this point first
 			spe = this.finalModify(spe);
-			if (!pokemon.hasAbility('quickfeet')) {
+			if (!pokemon.hasAbility(['quickfeet', 'paralysisheal'])) {
 				spe = Math.floor(spe * 50 / 100);
 			}
 			return spe;
@@ -38,8 +38,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 		onBeforeMovePriority: 1,
 		onBeforeMove(pokemon) {
 			if (this.randomChance(1, 4)) {
-				this.add('cant', pokemon, 'par');
-				return false;
+				if (!pokemon.hasAbility(['quickfeet', 'paralysisheal'])) {
+					this.add('cant', pokemon, 'par');
+					return false;
+				}
+					else return;
 			}
 		},
 	},

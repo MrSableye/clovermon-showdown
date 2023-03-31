@@ -4303,7 +4303,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	susteelstrike: {
+	sussteelstrike: {
 		inherit: true,
 		isNonstandard: null,
 	},

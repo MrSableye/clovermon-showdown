@@ -8243,6 +8243,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'skullbash',
 				'concussion',
 				'headlongrush',
+				'braindamage',
 			];
 			if (beamMoves.includes(move.id)) {
 				this.debug('Thats Cap boost');
@@ -9966,13 +9967,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	swampforce: {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, pokemon, target) {
-			if ((target.side.getSideCondition('swamp')) && (this.field.isTerrain('grassyterrain') && pokemon.isGrounded)) {
+			if ((target.side.getSideCondition('swamp')) && (this.field.isTerrain('grassyterrain'))) {
 				this.debug('Swamp Force double buff');
 				return this.chainModify(2);
 			} else if (target.side.getSideCondition('swamp')) {
 				this.debug('Swamp Force swamp buff');
 				return this.chainModify(1.5);
-			} else if (this.field.isTerrain('grassyterrain') && pokemon.isGrounded()) {
+			} else if (this.field.isTerrain('grassyterrain')) {
 				this.debug('Swamp Force terrain buff');
 				return this.chainModify(1.5);
 			}
@@ -10379,6 +10380,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'skullbash',
 				'concussion',
 				'headlongrush',
+				'braindamage',
 			];
 			if (headBasedMoves.includes(move.id)) {
 				this.debug('boosts Head based moves');
@@ -10444,5 +10446,36 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			});
 		},
-	}
+	},
+	brainwash: {
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Brainwash', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					this.boost({spa: -1}, target, pokemon, null, true);
+				}
+			}
+		},
+		name: "Brainwash",
+		rating: 3.5,
+		isNonstandard: "Future",
+	},
+	paralysisheal: {
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'par') {
+				this.heal(target.baseMaxhp / 8);
+				return false;
+			}
+		},
+		name: "Paralysis Heal",
+		rating: 4,
+		isNonstandard: "Future",
+	},
 };

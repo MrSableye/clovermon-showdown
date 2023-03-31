@@ -755,7 +755,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Evasion Moves Clause',
 		],
-		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Blobbos-Plok + Jet Punch'],
+		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs'],
 	},
 	{
 		name: '[Gen 8 Clover Blobbos CAP Only] Ubers',
@@ -775,7 +775,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Evasion Moves Clause',
 		],
-		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag'],
+		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Fling + License to Sell Hotdogs'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Non-Clover
@@ -826,12 +826,11 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Evasion Moves Clause',
 		],
-		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow"],
+		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs'],
 	},
 	{
 		name: "[Gen 1] Ubers",
 		mod: 'gen1',
-		challengeShow: false,
 		ruleset: ['Terastal Clause', 'Standard'],
 	},
 	{

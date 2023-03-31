@@ -2357,7 +2357,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	gearup: {
 		name: "Gear Up",
-		desc: "Raises the Attack and Special Attack of Pokemon on the user's side with the Plus or Minus Abilities by 1 stage.",
+		desc: "Raises the Attack and Special Attack ofhttps://phasmophobia.fandom.com/wiki/6_Tanglewood_Drive#Cursed_Possession_locations Pokemon on the user's side with the Plus or Minus Abilities by 1 stage.",
 		shortDesc: "Raises Atk, Sp. Atk of allies with Plus/Minus by 1.",
 	},
 	genesissupernova: {
@@ -8053,8 +8053,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Hits 255 times. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Magic Guard Ability are unaffected by crash damage.",
 		shortDesc: "Hits 255 times. Each hit can miss, crash on miss.",
 	},
-	susteelstrike: {
-		name: "Susteel Strike",
+	sussteelstrike: {
+		name: "Sussteel Strike",
 		desc: "Raises the user's Attack by 2 stages if this move knocks out the target.",
 		shortDesc: "Raises user's Attack by 2 if this KOes the target.",
 	},
@@ -8877,7 +8877,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	ultima: {
 		name: "Ultima",
-		shortDesc: "Hits all adjacent foes. Lowers all of the user's stats by 1.",
+		shortDesc: "Hits all adjacent foes.",
 	},
 	metronomeifitwasfunny: {
 		name: "Metronome If It Was Funny",
@@ -8897,7 +8897,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	scarystory: {
 		name: "Scary Story",
-		shortDesc: "Switches out the target. Raises Atk and Sp. Atk by 1 stage. Always goes last.",
+		shortDesc: "Switches out the target. Raises Atk, Sp. Atk, and Speed by 1 stage. Always goes last.",
 	},
 	moonstrike: {
 		name: "Moonstrike",
@@ -8909,7 +8909,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	blazingswipe: {
 		name: "Blazing Swipe",
-		shortDesc: "100% chance to lower the foe(s) Attack by 1. Hits all foes.",
+		shortDesc: "100% chance to lower the foe(s) Sp. Attack by 1. Hits all foes.",
 	},
 	bishido: {
 		name: "Bishido",
@@ -8946,5 +8946,52 @@ export const MovesText: {[k: string]: MoveText} = {
 	piercingstrike: {
 		name: "Piercing Strike",
 		desc: "Any damage dealt over a Pokemon's remaining health is dealt to the next.",
+	},
+	artwall: {
+		name: "Art Wall",
+		shortDesc: "Protects the user and randomizes their typing. Contact: randomizes typing of the Pokemon making contact.",
+	},
+	badenergy: {
+		name: "Bad Energy",
+		shortDesc: "10% chance to inflict Curse.",
+	},
+	cerebralparasite: {
+		name: "Cerebral Parasite",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 50% of the damage dealt.",
+	},
+	bellyflop: {
+		name: "Bellyflop",
+		desc: "If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Magic Guard Ability are unaffected by crash damage.",
+		shortDesc: "User is hurt by 50% of its max HP if it misses.",
+
+		damage: "#crash",
+	},
+	sinkhole: {
+		name: "Sinkhole",
+		desc: "If an opposing Pokemon switches out this turn, this move hits that Pokemon before it leaves the field, even if it was not the original target. If the user moves after an opponent using Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch, but not Baton Pass, it will hit that opponent before it leaves the field. Power doubles and no accuracy check is done if the user hits an opponent switching out, and the user's turn is over; if an opponent faints from this, the replacement Pokemon does not become active until the end of the turn.",
+		shortDesc: "If a foe is switching out, hits it at 2x power.",
+
+		activate: "  ([TARGET] is being withdrawn...)",
+	},
+	dustbowl: {
+		name: "Dustbowl",
+		shortDesc: "Summons Sandstorm.",
+	},
+	squash: {
+		name: "Body Slam",
+		shortDesc: "30% chance to paralyze the target.",
+	},
+	cherrynobyl: {
+		name: "Cherrynobyl",
+		shortDesc: "Hits twice. Sets up Grassy Terrain.",
+	},
+	shadowbox: {
+		name: "Mindbreak",
+		shortDesc: "Supereffective on Ghost.",
+	},
+	mindbreak: {
+		name: "Mindbreak",
+		shortDesc: "Neutral effectiveness on Dark.",
 	},
 };

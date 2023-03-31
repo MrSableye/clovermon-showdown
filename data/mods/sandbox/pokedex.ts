@@ -93,7 +93,20 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		abilities: {
 			0: "Competitive", 
-			1: "Uncompetitive",
+			1: "Intimidate",
+			H: "Good as Gold",
+			S: "Cursed Body",
+		},
+	},
+	blobbosplok: {
+		inherit: true,
+		baseStats: {
+			hp: 80,
+			atk: 120,
+			def: 70,
+			spa: 65,
+			spd: 70,
+			spe: 110,
 		},
 	},
 };

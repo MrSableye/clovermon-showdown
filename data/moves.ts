@@ -26705,7 +26705,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 100,
 		category: "Special",
 		name: "Sunburst",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
@@ -26860,7 +26860,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	extremesneed: {
 		num: 245,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 80,
 		category: "Special",
 		name: "Extreme Sneed",
 		pp: 5,
@@ -27028,7 +27028,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 100,
 		category: "Special",
 		name: "Downpour",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		self: {
@@ -27048,7 +27048,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 100,
 		category: "Special",
 		name: "Ice Storm",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		sleepUsable: true,
@@ -29162,7 +29162,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 1000,
 		accuracy: 100,
 		basePower: 90,
-		category: "Physical",
+		category: "Special",
 		isNonstandard: "Future",
 		name: "Blackfire",
 		pp: 5,
@@ -29389,8 +29389,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 	},
 	lavadapt: {
-		num: 1176,
-		accuracy: true,
+		accuracy: 100,
 		basePower: 85,
 		category: "Physical",
 		isNonstandard: "Future",
@@ -29435,7 +29434,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		target: "allAdjacent",
 		type: "Psychic",
-		flags: {},
+		flags: {reflectable: 1},
 		onAfterMove(source) {
 			source.trySetStatus('par');
 		},
@@ -29531,15 +29530,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 1,
 		priority: 0,
 		flags: {},
-		self: {
-			boosts: {
-				atk: -1,
-				spa: -1,
-				spe: -1,
-				def: -1,
-				spd: -1,
-			},
-		},
 		isZ: "blackmagiumz",
 		secondary: null,
 		target: "allAdjacentFoes",
@@ -29657,9 +29647,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		forceSwitch: true,
 		secondary: {
 			chance: 100,
-			boosts: {
-				atk: 1,
-				spd: 1,
+			self: {
+				boosts: {
+					atk: 1,
+					spa: 1,
+					spe: 1,
+				},
 			},
 		},
 		target: "normal",
@@ -30072,5 +30065,212 @@ export const Moves: {[moveid: string]: MoveData} = {
 			delete target.speciesState.overkillDamage;
 		},
 		isNonstandard: "Future",
+	},
+	badenergy: {
+		accuracy: 90,
+		basePower: 90,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Bad Energy",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			volatileStatus: 'curse',
+		},
+		target: "normal",
+		type: "Dark",
+		contestType: "Cool",
+	},
+	cerebralparasite: {
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Cerebral Parasite",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	bellyflop: {
+		accuracy: 90,
+		basePower: 130,
+		category: "Physical",
+		name: "Bellyflop",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		hasCrashDamage: true,
+		onMoveFail(target, source, move) {
+			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+		},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	sinkhole: {
+		num: 228,
+		accuracy: 100,
+		basePower: 40,
+		basePowerCallback(pokemon, target, move) {
+			// You can't get here unless the pursuit succeeds
+			if (target.beingCalledBack || target.switchFlag) {
+				this.debug('Pursuit damage boost');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Sinkhole",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		beforeTurnCallback(pokemon) {
+			for (const side of this.sides) {
+				if (side.hasAlly(pokemon)) continue;
+				side.addSideCondition('pursuit', pokemon);
+				const data = side.getSideConditionData('pursuit');
+				if (!data.sources) {
+					data.sources = [];
+				}
+				data.sources.push(pokemon);
+			}
+		},
+		onModifyMove(move, source, target) {
+			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
+		},
+		onTryHit(target, pokemon) {
+			target.side.removeSideCondition('pursuit');
+		},
+		condition: {
+			duration: 1,
+			onBeforeSwitchOut(pokemon) {
+				this.debug('Pursuit start');
+				let alreadyAdded = false;
+				pokemon.removeVolatile('destinybond');
+				for (const source of this.effectState.sources) {
+					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
+					if (!alreadyAdded) {
+						this.add('-activate', pokemon, 'move: Pursuit');
+						alreadyAdded = true;
+					}
+					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
+					// If it is, then Mega Evolve before moving.
+					if (source.canMegaEvo || source.canUltraBurst) {
+						for (const [actionIndex, action] of this.queue.entries()) {
+							if (action.pokemon === source && action.choice === 'megaEvo') {
+								this.actions.runMegaEvo(source);
+								this.queue.list.splice(actionIndex, 1);
+								break;
+							}
+						}
+					}
+					this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+				}
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ground",
+		contestType: "Clever",
+	},
+	dustbowl: {
+		num: 173,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Dustbowl",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				this.field.setWeather('sandstorm');
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Rock",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	squash: {
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Squash",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, nonsky: 1},
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Grass",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	cherrynobyl: {
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Cherrynobyl",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, bullet: 1},
+		multihit: 2,
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.setTerrain('grassyterrain');
+				},
+			},
+		},
+		target: "normal",
+		type: "Grass",
+		isNonstandard: "Future",
+	},
+	shadowbox: {
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Shadowbox",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, punch: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Ghost') return 1;
+		},
+		target: "normal",
+		type: "Fighting",
+		isNonstandard: "Future",
+		contestType: "Cool",
+	},
+	mindbreak: {
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Mindbreak",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Dark') return 0;
+		},
+		target: "any",
+		type: "Psychic",
+		isNonstandard: "Future",
+		contestType: "Clever",
 	},
 };
