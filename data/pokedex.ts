@@ -40738,13 +40738,15 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	blobbosforbidden: {
 		num: 69132,
 		name: "Blobbos-Forbidden",
+		baseSpecies: "Blobbos",
+		forme: "Forbidden",
 		types: ["Steel", "Fairy"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 255, atk: 203, def: 230, spa: 194, spd: 230, spe: 200},
 		abilities: {0: "Jewelry", 1: "Uncompetitive", H: "Shadow Tag", S: "Wonder Guard"},
 		heightm: 0.4,
 		weightkg: 5.7,
-		color: "Blue",
+		color: "Black",
 		eggGroups: ["Undiscovered"],
 	},
 	blobboslich: {
@@ -41421,8 +41423,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gender: "N",
 		baseStats: {
 			hp: 85,
-			atk: 125,
-			def: 85,
+			atk: 130,
+			def: 90,
 			spa: 55,
 			spd: 90,
 			spe: 55,

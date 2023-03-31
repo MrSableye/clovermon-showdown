@@ -29,4 +29,36 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		desc: "Has a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio",
 	},
+	smellingsalts: {
+		inherit: true,
+		desc: "Power doubles if the target is paralyzed. If the user has not fainted, the target is cured of paralysis. Has a 10% chance of paralyzing the opponent on hit.",
+		shortDesc: "Power doubles if target is paralyzed, and cures it. 10% chance to paralyze.",
+	},
+	razorwind: {
+		inherit: true,
+		desc: "Guaranteed to land a critical hit.",
+		shortDesc: "Always crits.",
+	},
+	rototiller: {
+		inherit: true,
+		desc: "Raises the user's Attack and Special Attack by 1 stage. If the weather is Sandstorm, this move raises the user's Attack and Special Attack by 2 stages.",
+		shortDesc: "Raises user's Attack and Sp. Atk by 1; 2 in Sandstorm.",
+	},
+	skyuppercut: {
+		inherit: true,
+		desc: "This move is neutrally effective on Flying-type Pokemon. This move can hit Pokemon that are using Bounce, Fly, or Sky Drop.",
+		shortDesc: "Neutral on Flying. Can hit Pokemon using Bounce, Fly, or Sky Drop.",
+	},
+	sonicboom: {
+		name: "Sonic Boom",
+		desc: "Whether or not this move is successful and even if it would cause fainting, the user loses 1/2 of its maximum HP, rounded up, unless the user has the Magic Guard Ability.",
+		shortDesc: "User loses 50% max HP. Hits adjacent Pokemon.",
+
+		damage: "  ([POKEMON] cut its own HP to power up its move!)",
+	},
+	geargrind: {
+		inherit: true,
+		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. Both hits individually have a 30% chance to lower the target's Defense by 1 stage.",
+		shortDesc: "Hits 2 times in one turn. 30% chance to lower Def.",
+	},
 };

@@ -1332,4 +1332,80 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	fractus: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	purge: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	extinction: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	uproot: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mirageveil: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	frostbite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	braindamage: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	flintfang: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	calibrate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	artwall: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	badenergy: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cerebralparasite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bellyflop: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sinkhole: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dustbowl: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	squash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cherrynobyl: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shadowbox: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mindbreak: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

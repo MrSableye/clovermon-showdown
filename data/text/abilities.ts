@@ -3121,4 +3121,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Cancer",
 		shortDesc: "At end of turn, try to toxic all foes, ignoring immunity. If the foe is already poisoned, they lose 1/16 of their max HP.",
 	},
+	brainwash: {
+		name: "Brainwash",
+		shortDesc: "On switch-in, this Pokemon lowers the Sp. Attack of opponents by 1 stage.",
+	},
+	paralysisheal: {
+		name: "Paralysis Heal",
+		shortDesc: "This Pokemon is healed by 1/8 of its max HP each turn when paralyzed; no Speed loss, cannot be fully paralyzed.",
+	},	
 };
