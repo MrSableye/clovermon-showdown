@@ -8994,4 +8994,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Mindbreak",
 		shortDesc: "Neutral effectiveness on Dark.",
 	},
+	extinction: {
+		name: "Horn Drill",
+		desc: "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",
+		shortDesc: "OHKOs the target. Fails if user is a lower level.",
+	},
 };
