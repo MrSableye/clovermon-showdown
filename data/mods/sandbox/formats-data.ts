@@ -10638,6 +10638,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	krakenwalker: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	susko: {
 		inherit: true,
 		tier: "OU",

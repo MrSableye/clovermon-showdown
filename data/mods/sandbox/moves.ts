@@ -4303,6 +4303,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	krackocean: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	susteelstrike: {
 		inherit: true,
 		isNonstandard: null,
