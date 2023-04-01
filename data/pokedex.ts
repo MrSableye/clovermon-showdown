@@ -41782,7 +41782,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Poison", "Electric"],
 		gender: "N",
 		baseStats: {hp: 130, atk: 86, def: 70, spa: 70, spd: 130, spe: 70},
-		abilities: {0: "Download"},
+		abilities: {0: "Download", H:"Serene Grace"},
 		heightm: 0.5,
 		weightkg: 6.4,
 		color: "Brown",
