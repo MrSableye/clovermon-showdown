@@ -24202,7 +24202,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		self: {
 			onHit(source) {
-				this.field.setWeather('sunnyday');
+				this.field.setWeather('raindance');
 				this.field.setTerrain('electricterrain')
 			},
 		},
