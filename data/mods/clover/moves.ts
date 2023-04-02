@@ -1181,6 +1181,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, hammer: 1},
 	},
+	dreameater: {
+		inherit: true,
+		basePower: 120,
+	},
 	drillpeck: {
 		inherit: true,
 		critRatio: 2,
