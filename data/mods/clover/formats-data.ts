@@ -4987,7 +4987,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	chasumo: {
 		inherit: true,
-		tier: "NU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"highjumpkick",
