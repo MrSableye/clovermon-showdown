@@ -433,9 +433,9 @@ export const Formats: FormatList = [
 		ruleset: ['Terastal Clause', 'Sketch Post-Gen 7 Moves', 'Obtainable', '!Obtainable Abilities', 'Species Clause', 'Nickname Clause', 'Ability Clause = 2', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
 		banlist: [
 			'Uber', 'Niterpent',
-			'Arena Trap', 'Comatose', 'Contrary', 'Fluffy', 'Fur Coat', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Intrepid Sword',
-			'Libero', 'Moody', 'Neutralizing Gas', 'Parental Bond', 'Poison Heal', 'Power Construct', 'Protean', 'Pure Power', 'Shadow Tag', 'Simple', 'Stakeout', 'Speed Boost',
-			'Flare Heal', 'Suddenly',
+			'Arena Trap', 'Comatose', 'Contrary', 'Fluffy', 'Fuk U', 'Fur Coat', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Intrepid Sword',
+			'Libero', 'Moody', 'Neutralizing Gas', 'Parental Bond', 'Poison Heal', 'Power Construct', 'Protean', 'Pure Power', 'Shadow Tag', 'Simple', 'Stakeout', 'Stink Bomb',
+			'Speed Boost', 'Flare Heal', 'Suddenly',
 			'Water Bubble', 'Wonder Guard', 'Baton Pass',
 		],
 	},
