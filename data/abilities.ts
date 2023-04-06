@@ -8719,6 +8719,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
 		},
 		name: "Masterbait",
+		isNonstandard: "Future",
 		rating: 4,
 		num: 182,
 	},
@@ -8862,6 +8863,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
+		isNonstandard: "Future",
 		name: "Bejeweled",
 		rating: 4,
 		num: 227,
@@ -8908,6 +8910,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Woodchipper",
 		rating: 2.5,
 		num: 160,
+		isNonstandard: "Future",
 	},
 	revvingmalice: {
 		name: "Revving Malice",
@@ -10344,6 +10347,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		name: "Power of YEEHAW!",
+		isNonstandard: "Future",
 		rating: 3,
 		num: 265,
 	},
@@ -10403,6 +10407,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Doomed",
 		rating: 6,
 		num: 666,
+		isNonstandard: "Future",
 	},
 	hyperspeen: {
 		onBasePowerPriority: 8,
