@@ -30273,4 +30273,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 		contestType: "Clever",
 	},
+	finalfreeze: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Final Freeze",
+		pp: 1,
+		noPPBoosts: true,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		status: 'frz',
+		ignoreImmunity: false,
+		onTryHit(source) {
+			if (source.speciesState.hasFinalFrozen) return false;
+		},
+		onAfterHit(source, target, move) {
+			source.speciesState.hasFinalFrozen = true;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+		zMove: {boost: {spd: 1}},
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
 };
