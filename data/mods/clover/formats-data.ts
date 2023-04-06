@@ -4987,7 +4987,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	chasumo: {
 		inherit: true,
-		tier: "NU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"highjumpkick",
@@ -5714,7 +5714,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fontabar9k: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 		isNonstandard: null,
 	},
 	fontaba5: {
