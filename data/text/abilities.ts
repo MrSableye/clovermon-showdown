@@ -3128,5 +3128,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	paralysisheal: {
 		name: "Paralysis Heal",
 		shortDesc: "This Pokemon is healed by 1/8 of its max HP each turn when paralyzed; no Speed loss, cannot be fully paralyzed.",
-	},	
+	},
+	dramatic: {
+		name: "Dramatic",
+		shortDesc: "This Pokemon's next attack is a critical hit if it was crit against. +2 crit ratio when below 1/4 max HP.",
+	},
 };

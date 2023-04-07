@@ -8775,4 +8775,18 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Blobbos-Snek", "Blobbos-Angel"],
 		isNonstandard: "Future",
 	},
+	ancientitem: {
+		name: "Ancient Item",
+		isNonstandard: "Future",
+		onDamagePriority: -40,
+		onDamage(damage, target, source, effect) {
+			if (target.species.id !== 'blobbosduelist') return;
+			if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move') {
+				if (target.useItem()) {
+					target.formeChange('blobbosduelistdark', this.effect, true);
+					return target.hp - 1;
+				}
+			}
+		},
+	},
 };

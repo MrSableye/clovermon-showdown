@@ -9003,4 +9003,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Final Freeze",
 		desc: "Freezes the target. Can only be used once.",
 	},
+	berserkersoul: {
+		name: "Berserker Soul",
+		desc: "Hits once for each unfainted ally. Special if user's Sp. Atk > Atk."
+	},
 };

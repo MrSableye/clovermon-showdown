@@ -10483,4 +10483,25 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		isNonstandard: "Future",
 	},
+	dramatic: {
+		name: "Dramatic",
+		isNonstandard: "Future",
+		onHit(target, source, move) {
+			if (move?.effectType === 'Move' && target.getMoveHitData(move).crit) {
+				this.effectState.forceCrit = true;
+			}
+		},
+		onModifyCritRatio(critRatio, pokemon) {
+			if (this.effectState.forceCrit) {
+				return 5;
+			} else if ((pokemon.hp / pokemon.baseMaxhp) <= 0.25) {
+				return critRatio + 2;
+			}
+		},
+		onAfterMove(source, target, move) {
+			if (this.effectState.forceCrit && target.getMoveHitData(move).crit) {
+				delete this.effectState.forceCrit;
+			}
+		},
+	},
 };

@@ -3515,4 +3515,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbosduelist: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

@@ -30297,4 +30297,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
+	berserkersoul: {
+		accuracy: 100,
+		basePower: 25,
+		category: "Physical",
+		name: "Berserker Soul",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, allyanim: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) < pokemon.getStat('spa', false, true)) move.category = 'Special';
+			move.multihit = pokemon.side.pokemon.filter(ally => !ally.fainted).length;
+		},
+		onTry(source, target, move) {
+			if (!move.multihit) return false;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
 };

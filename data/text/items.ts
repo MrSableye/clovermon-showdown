@@ -2715,4 +2715,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "License to Sell Hotdogs",
 		desc: "If I ever get your stinky mug in my line of sight, I swear to Chekhov I'll cock your clock off.",
 	},
+	ancientitem: {
+		name: "Ancient Item",
+		desc: "If holder's HP is full and it is Blobbos-Duelist, will survive an attack that would KO it with 1 HP and transform into Blobbos-Duelist-Dark. Single use.",
+
+		end: "  [POKEMON] was protected by a dark spirit!",
+	},
 };

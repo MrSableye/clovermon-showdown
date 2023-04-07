@@ -1408,4 +1408,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	berserkersoul: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

@@ -9850,4 +9850,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosduelist: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosduelistdark: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };
