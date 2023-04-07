@@ -30318,4 +30318,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 		isNonstandard: "Future",
 	},
+	heartofthecards: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Heart of the Cards",
+		pp: 30,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			atk: 1,
+			spa: 1,
+		},
+		volatileStatus: 'focusenergy',
+		secondary: null,
+		target: "self",
+		type: "Fairy",
+		zMove: {boost: {atk: 1}},
+		contestType: "Tough",
+	},
 };

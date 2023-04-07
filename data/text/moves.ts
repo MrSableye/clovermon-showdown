@@ -9007,4 +9007,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Berserker Soul",
 		desc: "Hits once for each unfainted ally. Special if user's Sp. Atk > Atk."
 	},
+	heartofthecards: {
+		name: "Heart of the Cards",
+		desc: "Raises the user's Attack and Special Attack by 1 stage. Applies Focus Energy.",
+		shortDesc: "Raises the user's Attack and Sp. Atk by 1. Applies Focus Energy.",
+	},
 };
