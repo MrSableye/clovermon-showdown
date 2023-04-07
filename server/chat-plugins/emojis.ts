@@ -113,7 +113,7 @@ export const commands: Chat.ChatCommands = {
 
 			deleteEmoji(emojiName);
 
-			this.addGlobalModAction(`${user.name} emoji :${emojiName}:`);
+			this.addGlobalModAction(`${user.name} deleted emoji :${emojiName}:`);
 			return this.sendReply(`Deleted :${emojiName}:`);
 		},
 		async ban(target, room, user) {
