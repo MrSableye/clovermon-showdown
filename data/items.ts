@@ -8788,5 +8788,6 @@ export const Items: {[itemid: string]: ItemData} = {
 				}
 			}
 		},
+		itemUser: ['Blobbos-Duelist', 'Blobbos-Duelist-Dark'],
 	},
 };
