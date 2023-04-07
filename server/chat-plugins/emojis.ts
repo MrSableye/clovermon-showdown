@@ -83,7 +83,7 @@ export const commands: Chat.ChatCommands = {
 			return this.sendReplyBox(`<b><u>Emojis</u> <i>(hover for name, try <code>:EMOJINAME:</code>)</i></b><br />${Object.entries(emojis).map(([emojiName, emojiUrl]) => createEmojiHtml(emojiName, emojiUrl)).join(' ')}`);
 		},
 		update: 'add',
-		async add(target) {
+		async add(target, room, user) {
 			this.checkCan('emoji');
 			const [rawEmojiName, emojiUrl] = target.split(',').map((part) => part.trim());
 
@@ -100,9 +100,10 @@ export const commands: Chat.ChatCommands = {
 
 			addOrUpdateEmoji(emojiName, filename);
 
+			this.addGlobalModAction(`${user.name} added emoji :${emojiName}:`);
 			return this.sendReplyBox(`Added: ${createEmojiHtml(emojiName, filename)}`);
 		},
-		remove(target) {
+		remove(target, room, user) {
 			this.checkCan('emoji');
 			const emojiName = toAlphaNumeric(target);
 
@@ -112,6 +113,7 @@ export const commands: Chat.ChatCommands = {
 
 			deleteEmoji(emojiName);
 
+			this.addGlobalModAction(`${user.name} emoji :${emojiName}:`);
 			return this.sendReply(`Deleted :${emojiName}:`);
 		},
 		async ban(target, room, user) {
@@ -131,7 +133,7 @@ export const commands: Chat.ChatCommands = {
 				reason,
 			}, false);
 			targetUser.popup(`|modal|${user.name} has emoji banned you for ${Chat.toDurationString(EMOJI_BAN_DURATION)}. ${reason}`);
-			this.addModAction(`${targetUser.name} was emoji banned by ${user.name} for ${Chat.toDurationString(EMOJI_BAN_DURATION)}.${(reason ? ` (${reason})` : ``)}`);
+			this.addGlobalModAction(`${targetUser.name} was emoji banned by ${user.name} for ${Chat.toDurationString(EMOJI_BAN_DURATION)}.${(reason ? ` (${reason})` : ``)}`);
 			this.modlog(`EMOJI`, targetUser, reason);
 		},
 		unban(target, room, user) {
@@ -141,7 +143,7 @@ export const commands: Chat.ChatCommands = {
 
 			const success = Punishments.unpunish(targetUser?.id || toID(targetUsername), 'EMOJIBAN');
 			if (success) {
-				this.addModAction(`${(targetUser ? targetUser.name : toID(targetUsername))}'s emoji banned was lifted by ${user.name}.`);
+				this.globalModlog(`${(targetUser ? targetUser.name : toID(targetUsername))}'s emoji banned was lifted by ${user.name}.`);
 				this.modlog('UNEMOJIBAN', (targetUser || toID(targetUsername)), null, {noip: 1, noalts: 1});
 			} else {
 				this.errorReply(`${(targetUser ? targetUser.name : targetUsername)} is not emoji banned.`);
