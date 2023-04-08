@@ -28305,7 +28305,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onHit(target, source, activeMove) {
 			if (target.hp >= target.maxhp) return false;
 			const percentHp = target.hp / target.maxhp;
-			let doses = activeMove.pp;
+			const moveIndex = target.moves.indexOf(activeMove.id);
+			let doses = Math.max(5, target.moveSlots[moveIndex]?.pp || 0);
 			if (percentHp >= 0.8) {
 				doses = Math.min(doses, 1);
 			} else if (percentHp >= 0.6) {
