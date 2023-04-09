@@ -25387,7 +25387,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 		onHit(target, source) {
-			if (target.getTypes().join() === "Steel") {
+			if (target.hasType("Steel")) {
 				target.trySetStatus('brn', source);
 			}
 		},
