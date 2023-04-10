@@ -29738,6 +29738,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
 		},
 		onHit(pokemon) {
+			pokemon.addVolatile('stall');
 			const fastPop = <T>(list: T[], index: number) => {
 				// If an array doesn't need to be in order, replacing the
 				// element at the given index with the removed element
