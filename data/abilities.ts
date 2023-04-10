@@ -10505,4 +10505,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 	},
+	digger: {
+		name: "Digger",
+		isNonstandard: "Future",
+		onModifyMove(move) {
+			if (move.id !== 'dig') return;
+			delete move.flags.protect;
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity['Flying'] = true;
+			}
+		},
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.id !== 'dig') return;
+			return this.chainModify(1.5);
+		},
+		onFoeEffectiveness(typeMod, target, type, move) {
+			if (move.id !== 'dig') return typeMod;
+			if (target && target.hasType('Flying')) {
+				return -1;
+			}
+			return typeMod;
+		},
+	}
 };

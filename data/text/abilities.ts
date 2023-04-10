@@ -3133,4 +3133,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Dramatic",
 		shortDesc: "This Pokemon's next attack is a critical hit if it was crit against. +2 crit ratio when below 1/4 max HP.",
 	},
+	digger: {
+		name: "Digger",
+		shortDesc: "Dig has 1.5x power, ignores the target's protection, and hits Flying-types but is not very effective. Immune to Earthquake and Magnitude during Dig.",
+	},
 };

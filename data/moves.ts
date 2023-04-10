@@ -3650,7 +3650,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (type === 'sandstorm' || type === 'hail') return false;
 			},
 			onInvulnerability(target, source, move) {
-				if (['earthquake', 'magnitude'].includes(move.id)) {
+				if (['earthquake', 'magnitude'].includes(move.id) && !target.hasAbility('Digger')) {
 					return;
 				}
 				return false;
