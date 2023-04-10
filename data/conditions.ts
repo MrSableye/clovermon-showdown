@@ -1133,7 +1133,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.effectState.layers++;
 		},
 		onModifyMove(move) {
-			const chanceMod = Math.pow(1.2, this.effectState.layers || 0);
+			const chanceMod = Math.pow(1.05, this.effectState.layers || 0);
 			if (move.secondaries) {
 				for (const secondary of move.secondaries) {
 					if (secondary.chance) secondary.chance *= chanceMod;
