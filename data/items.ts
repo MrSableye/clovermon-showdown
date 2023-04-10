@@ -8790,4 +8790,46 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ['Blobbos-Duelist', 'Blobbos-Duelist-Dark'],
 	},
+	pizzaite: {
+		name: "Pizzaite",
+		spritenum: 587,
+		megaStone: "Blobbos-Pizza-Mega",
+		megaEvolves: "Blobbos-Pizza",
+		itemUser: ["Blobbos-Pizza"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	marxite: {
+		name: "Marxite",
+		spritenum: 616,
+		megaStone: "Blobbos-Marx-Mega",
+		megaEvolves: "Blobbos-Marx",
+		itemUser: ["Blobbos-Marx"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	beeite: {
+		name: "Beeite",
+		spritenum: 628,
+		megaStone: "Blobbos-Bee-Mega",
+		megaEvolves: "Blobbos-Bee",
+		itemUser: ["Blobbos-Bee"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
 };

@@ -64,7 +64,7 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 				return ['Recursive species found. Please report this to an administrator'];
 			}
 
-			if (baseSpecies.name !== 'Blobbos' && baseSpecies.name !== 'Bootlos' && baseSpecies.name !== 'Sobbolb' && baseSpecies.name !== 'Iron Blob' && baseSpecies.name !== 'Cavern Snore') {
+			if (baseSpecies.name !== 'Blobbos' && baseSpecies.name !== 'Bootlos' && baseSpecies.name !== 'Sobbolb' && baseSpecies.name !== 'Iron Blob' && baseSpecies.name !== 'Cavern Snore' && baseSpecies.name !== 'Chibomon') {
 				return [`${set.name || set.species} is not a forme of Blobbos.`];
 			}
 		},

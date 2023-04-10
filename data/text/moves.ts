@@ -9012,4 +9012,16 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Raises the user's Attack and Special Attack by 1 stage. Applies Focus Energy.",
 		shortDesc: "Raises the user's Attack and Sp. Atk by 1. Applies Focus Energy.",
 	},
+	thebigone: {
+		name: "THE BIG ONE",
+		desc: "TOO MANY EXCESS VACATION DAYS? TAKE A GODDAMN VACATION STRAIGHT TO HELL!"
+	},
+	mirrorball: {
+		name: "Mirror Ball",
+		desc: "Deals damage, then creates Magic Coat.",
+	},
+	trashtalk: {
+		name: "Trash Talk",
+		desc: "Makes the foe have Rage effect.",
+	},
 };
