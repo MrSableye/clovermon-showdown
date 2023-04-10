@@ -10511,6 +10511,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyMove(move) {
 			if (move.id !== 'dig') return;
 			delete move.flags.protect;
+			move.infiltrates = true;
 			if (!move.ignoreImmunity) move.ignoreImmunity = {};
 			if (move.ignoreImmunity !== true) {
 				move.ignoreImmunity['Flying'] = true;

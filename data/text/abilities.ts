@@ -3135,6 +3135,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	digger: {
 		name: "Digger",
-		shortDesc: "Dig has 1.5x power, ignores the target's protection, and hits Flying-types but is not very effective. Immune to Earthquake and Magnitude during Dig.",
+		shortDesc: "Dig has 1.5x power, ignores the target's protection, infiltrates, and hits Flying-types but is not very effective. Immune to Earthquake and Magnitude during Dig.",
 	},
 };
