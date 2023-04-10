@@ -8456,7 +8456,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onSourceModifyDamage(damage, source, target, move) {
 			if (target.hp >= target.maxhp) {
-				this.debug('Shadow Shield weaken');
+				this.debug('Shadow Aura weaken');
 				return this.chainModify(0.5);
 			}
 		},

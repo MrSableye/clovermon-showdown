@@ -8538,7 +8538,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mushroomshot: {
 		name: "Mushroom Shot",
-		shortDesc: "Power doubles if opponent partially trapped. During Gravity: 1.5x power. Hits 4 times",
+		shortDesc: "Power doubles if opponent partially trapped. During Gravity: 1.5x power. Hits 4 times.",
 	},
 	qualityrip: {
 		name: "Quality Rip",
@@ -9014,7 +9014,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	thebigone: {
 		name: "THE BIG ONE",
-		desc: "TOO MANY EXCESS VACATION DAYS? TAKE A GODDAMN VACATION STRAIGHT TO HELL!"
+		desc: "I USED TO BE NOTHING BUT THE E_MAIL GUY, NOW I'M THE [[It Burns! Ow! Stop! Help Me! It Burns!]] GUY! [[Amazed at thi5 amazing transformation? You too can]] HAVE A [[Communion]] WITH [[Unintelligble Laughter]] SOON I'LL EVEN SURPASS THAT DAMNED [[Clown Around Town!]] BUT UNLIKE HIM I'M GONNA [[Shoot For the Sky!]] AND  GET ON THE PATH TO ... [[The Big One]] I'LL GET SO. I'LL GET SO. I'LL GET SO. I'LL GET SO. I'LL GET SO. I'LL GET SO. [[Hyperlink blocked.]]",
+		shortDesc: "TOO MANY EXCESS VACATION DAYS?? TAKE A GOD DAMN VACATION STRAIGHT TO HELL"
 	},
 	mirrorball: {
 		name: "Mirror Ball",
@@ -9023,5 +9024,9 @@ export const MovesText: {[k: string]: MoveText} = {
 	trashtalk: {
 		name: "Trash Talk",
 		desc: "Makes the foe have Rage effect.",
+	},
+	torchshriek: {
+		name: "Torch Shriek",
+		desc: "Lowers the user's Sp. Atk by 1.",
 	},
 };

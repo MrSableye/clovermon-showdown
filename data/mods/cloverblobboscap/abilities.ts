@@ -561,4 +561,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	honeygather: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	masterbait: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

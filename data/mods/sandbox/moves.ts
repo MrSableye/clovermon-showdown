@@ -4503,4 +4503,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	thebigone: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

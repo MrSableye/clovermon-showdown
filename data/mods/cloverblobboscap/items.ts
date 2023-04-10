@@ -113,7 +113,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		onAfterSetStatusPriority: -1,
 		onAfterSetStatus(status, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Blobbos-Cap') {
+			if (pokemon.species.name === 'Blobbos-Cap') {
 				this.add('-message', 'The power from the Moluganion cured the status!');
 				pokemon.cureStatus();
 				pokemon.removeVolatile('confusion');
@@ -121,7 +121,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		},
 		onUpdate(pokemon) {
 			if (pokemon.status || pokemon.volatiles['confusion']) {
-				if (pokemon.baseSpecies.baseSpecies === 'Blobbos-Cap') {
+				if (pokemon.species.name === 'Blobbos-Cap') {
 					this.add('-message', 'The power from the Moluganion cured the status!');
 					pokemon.cureStatus();
 					pokemon.removeVolatile('confusion');

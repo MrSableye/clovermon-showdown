@@ -2657,15 +2657,15 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	curlykrill: {
 		name: "Curly Krill",
-		desc: "This Pokemon's Order Up boosts its Attack stat by 1 stage.",
+		desc: "This Pokemon's Order Up boosts its Attack stat by 1 stage, regardless of if it deals damage.",
 	},
 	droopykrill: {
 		name: "Droopy Krill",
-		desc: "This Pokemon's Order Up boosts its Defense stat by 1 stage.",
+		desc: "This Pokemon's Order Up boosts its Defense stat by 1 stage, regardless of if it deals damage.",
 	},
 	stretchykrill: {
 		name: "Stretchy Krill",
-		desc: "This Pokemon's Order Up boosts its Speed stat by 1 stage.",
+		desc: "This Pokemon's Order Up boosts its Speed stat by 1 stage, regardless of if it deals damage.",
 	},
 	earmuffs: {
 		name: "Earmuffs",
@@ -2677,7 +2677,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	usbdrive: {
 		name: "USB Drive",
-		desc: "If holder is Steel, raises Atk and SpA by 1 upon switch-in. Consumes item.",
+		desc: "If holder is Steel, raises Atk and Sp. Atk by 1 upon switch-in. Consumes item.",
 	},
 	royalcrown: {
 		name: "Royal Crown",
@@ -2693,11 +2693,11 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	loadeddisk: {
 		name: "Loaded Disk",
-		desc: "If held by a Blobbos-Spamton, its Defense is doubled.",
+		desc: "DIDN'T YOU KNOW [Blobbos-Spamton] IS FAMOUS FOR ITS [Doubled] DEFENSE [while holding]!?",
 	},
 	propellerhat: {
 		name: "Propeller Hat",
-		desc: "If held by a Blobbos-Keks, its Speed is doubled, but it can only select damaging moves.",
+		desc: "If held by a Blobbos-Keks, its Speed is 1.5x, but it can only select damaging moves.",
 	},
 	assaultjacket: {
 		name: "Assault Jacket",
@@ -2720,5 +2720,21 @@ export const ItemsText: {[k: string]: ItemText} = {
 		desc: "If holder's HP is full and it is Blobbos-Duelist, will survive an attack that would KO it with 1 HP and transform into Blobbos-Duelist-Dark. Single use.",
 
 		end: "  [POKEMON] was protected by a dark spirit!",
+	},
+	beeite: {
+		name: "Beeite",
+		desc: "If held by a Blobbos-Bee, this item allows it to Mega Evolve in battle.",
+	},
+	pizzaite: {
+		name: "Pizzaite",
+		desc: "If held by a Blobbos-Pizza, this item allows it to Mega Evolve in battle.",
+	},
+	marxite: {
+		name: "Marxite",
+		desc: "If held by a Blobbos-Marx, this item allows it to Mega Evolve in battle.",
+	},
+	zeroite: {
+		name: "Zeroite",
+		desc: "If held by a Blobbos-Zero, this item allows it to Mega Evolve in battle.",
 	},
 };
