@@ -1416,4 +1416,32 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	anyheal: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	anystatus: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	anyattack: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	anystatup: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lavadapt: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	trashtalk: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mirrorball: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

@@ -8447,6 +8447,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'shadowstrike',
 				'shadowpunch',
 				'shadowforce',
+				'shadowbox',
 			];
 			if (shadowMoves.includes(move.id)) {
 				this.debug('Shadow Aura boost');

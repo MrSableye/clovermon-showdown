@@ -190,4 +190,16 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	pizzaite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	beeite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	marxite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

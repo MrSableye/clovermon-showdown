@@ -26230,7 +26230,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	toppingtoss: {
 		accuracy: 100,
-		basePower: 60,
+		basePower: 50,
 		onHit(target, source, move) {
 			if (move.hit === 1) { move.type = 'Grass'; } else if (move.hit === 2) { move.type = 'Ground'; }
 		},
@@ -26957,28 +26957,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		volatileStatus: 'magnetrise',
-		onTry(source, target, move) {
-			if (target.volatiles['smackdown'] || target.volatiles['ingrain']) return false;
-
-			// Additional Gravity check for Z-move variant
-			if (this.field.getPseudoWeather('Gravity')) {
-				this.add('cant', source, 'move: Gravity', move);
-				return null;
-			}
-		},
-		condition: {
-			duration: 5,
-			onStart(target) {
-				this.add('-start', target, 'Magnet Rise');
-			},
-			onImmunity(type) {
-				if (type === 'Ground') return false;
-			},
-			onResidualOrder: 18,
-			onEnd(target) {
-				this.add('-end', target, 'Magnet Rise');
-			},
+		self: {
+			sideCondition: 'magnetrise',
 		},
 		secondary: null,
 		target: "normal",
@@ -30250,6 +30230,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, punch: 1},
+		ignoreImmunity: {'Ghost': true},
 		onEffectiveness(typeMod, target, type) {
 			if (type === 'Ghost') return 1;
 		},
@@ -30260,8 +30241,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	mindbreak: {
 		accuracy: 100,
-		basePower: 80,
-		category: "Special",
+		basePower: 90,
+		category: "Physical",
 		name: "Mindbreak",
 		pp: 10,
 		priority: 0,
@@ -30337,5 +30318,58 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 		zMove: {boost: {atk: 1}},
 		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	mirrorball: {
+		num: 277,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Mirror Ball",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, bullet: 1},
+		self: {
+			sideCondition: 'magiccoat',
+		},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+		contestType: "Beautiful",
+	},
+	trashtalk: {
+		num: 99,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Trash Talk",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'rage',
+		},
+		target: "normal",
+		type: "Poison",
+		contestType: "Tough",
+	},
+	thebigone: {
+		num: 1997,
+		accuracy: 1997,
+		basePower: 1997,
+		category: "Special",
+		name: "THE BIG ONE",
+		pp: 1,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		selfdestruct: "always",
+		secondary: null,
+		target: "allAdjacent",
+		type: "Electric",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
 	},
 };

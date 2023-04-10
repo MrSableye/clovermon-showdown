@@ -545,4 +545,20 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	masshopping: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fallenangel: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	madlad: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ripen: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
