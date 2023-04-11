@@ -39734,7 +39734,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseSpecies: "Blobbos-Marx",
 		forme: "Mega",
 		types: ["Dark", "Flying"],
-		baseStats: {hp: 85, atk: 115, def: 90, spa: 125, spd: 90, spe: 125},
+		baseStats: {hp: 85, atk: 120, def: 95, spa: 120, spd: 95, spe: 115},
 		abilities: {0: "Phantasma"},
 		heightm: 1.5,
 		weightkg: 17.6,
@@ -41710,9 +41710,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Rock"],
 		gender: "N",
 		baseStats: {
-			hp: 65,
+			hp: 75,
 			atk: 75,
-			def: 165,
+			def: 175,
 			spa: 55,
 			spd: 75,
 			spe: 0,
@@ -41780,7 +41780,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {
 			hp: 88,
 			atk: 110,
-			def: 88,
+			def: 66,
 			spa: 77,
 			spd: 111,
 			spe: 22,
@@ -41879,9 +41879,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 6.66,
 		color: "Red",
 		eggGroups: [
-			"Ditto",
+			"Field",
 		],
-		gen: 8,
+		gen: 9,
 	},
 	ablobbos: {
 		num: -69251,
@@ -41903,11 +41903,11 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Poison", "Dragon"],
 		gender: "N",
 		baseStats: {
-			hp: 85,
-			atk: 115,
+			hp: 95,
+			atk: 100,
 			def: 80,
 			spa: 100,
-			spd: 115,
+			spd: 125,
 			spe: 45,
 		},
 		abilities: {

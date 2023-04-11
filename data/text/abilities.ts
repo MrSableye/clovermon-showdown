@@ -2620,7 +2620,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Power of YEEHAW!",
 		shortDesc: "Kick moves deal 1.2x damage and always hit. Attack and Sp. Attack are boosted by 1 upon KO-ing an opponent.",
 
-		start: "  [POKEMON] is ready to yeehaw!",
+		start: "  [POKEMON] lets out a loud YEEHAW!",
 	},
 	sharpshooter: {
 		name: "Sharpshooter",

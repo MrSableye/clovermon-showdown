@@ -29709,13 +29709,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	hivemind: {
 		accuracy: 100,
-		basePower: 33,
+		basePower: 40,
 		category: "Physical",
 		name: "Hivemind",
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		multihit: 3,
+		multihit: 2,
 		secondary: null,
 		target: "normal",
 		type: "Bug",
@@ -30232,7 +30232,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, punch: 1},
-		ignoreImmunity: {'Ghost': true},
+		ignoreImmunity: {'Fighting': true},
 		onEffectiveness(typeMod, target, type) {
 			if (type === 'Ghost') return 1;
 		},
@@ -30249,6 +30249,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		ignoreImmunity: {'Psychic': true},
 		onEffectiveness(typeMod, target, type) {
 			if (type === 'Dark') return 0;
 		},
@@ -30329,7 +30330,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Special",
 		isNonstandard: "Future",
 		name: "Mirror Ball",
-		pp: 15,
+		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bullet: 1},
 		self: {
@@ -30364,13 +30365,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 1997,
 		category: "Special",
 		name: "THE BIG ONE",
-		pp: 1,
+		pp: 1997,
 		priority: 0,
+		noPPBoosts: true,
 		flags: {protect: 1, mirror: 1},
 		selfdestruct: "always",
 		secondary: null,
 		target: "allAdjacent",
 		type: "Electric",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	torchshriek: {
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Torch Shriek",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spa: -1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Fire",
 		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},

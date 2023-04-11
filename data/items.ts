@@ -8544,7 +8544,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	curlykrill: {
 		name: "Curly Krill",
 		spritenum: 730,
-		onSourceAfterMoveSecondarySelf(pokemon, target, move) {
+		onAfterMove(pokemon, target, move) {
 			if (move.id === 'orderup') {
 				this.boost({atk: 1});
 			}
@@ -8554,7 +8554,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	droopykrill: {
 		name: "Droopy Krill",
 		spritenum: 730,
-		onSourceAfterMoveSecondarySelf(pokemon, target, move) {
+		onAfterMove(pokemon, target, move) {
 			if (move.id === 'orderup') {
 				this.boost({def: 1});
 			}
@@ -8564,7 +8564,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	stretchykrill: {
 		name: "Stretchy Krill",
 		spritenum: 730,
-		onSourceAfterMoveSecondarySelf(pokemon, target, move) {
+		onAfterMove(pokemon, target, move) {
 			if (move.id === 'orderup') {
 				this.boost({spe: 1});
 			}
@@ -8671,7 +8671,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	loadeddisk: {
 		name: "Loaded Disk",
-		spritenum: 287,
+		spritenum: 730,
 		onModifyDefPriority: 2,
 		onModifyDef(def, pokemon) {
 			if (pokemon.species.name === 'Blobbos-Spamton') {

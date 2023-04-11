@@ -335,6 +335,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	shadowstrike: {
 		inherit: true,
+		accuracy: 100,
 		isNonstandard: null,
 	},
 	shadowban: {
