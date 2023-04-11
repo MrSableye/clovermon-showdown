@@ -8921,7 +8921,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hivemind: {
 		name: "Hivemind",
-		shortDesc: "Hits three times. Hits three times.",
+		shortDesc: "Hits twice. Hits twice.",
 	},
 	miraclepunch: {
 		name: "Miracle Punch",
