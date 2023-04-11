@@ -29349,7 +29349,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	strifedicekind: {
 		name: "Strife: Dicekind",
 		basePower: 18,
-		accuracy: 88,
+		accuracy: 108,
 		multihit: 8,
 		pp: 8,
 		noPPBoosts: true,
