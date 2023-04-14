@@ -10992,4 +10992,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	zangursed: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	emaneko: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

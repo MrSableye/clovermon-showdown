@@ -3115,7 +3115,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	colorboost: {
 		name: "Color Boost",
-		shortDesc: "This Pokemon's gets a 1.2x Attack boost after changing type. Once per switch-in.",
+		shortDesc: "This Pokemon's gets a 1.2x boost to its offenses after changing type. Once per switch-in.",
 	},
 	cancer: {
 		name: "Cancer",
@@ -3136,5 +3136,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	digger: {
 		name: "Digger",
 		shortDesc: "Dig has 1.5x power, ignores the target's protection, infiltrates, and hits Flying-types but is not very effective. Immune to Earthquake and Magnitude during Dig.",
+	},
+	mongoosesmalice: {
+		name: "Mongoose's Malice",
+		shortDesc: "This Pokemon's Poison/Ghost moves deal 1.3x damage, and Normal/Fighting moves deal 0.5x damage.",
 	},
 };

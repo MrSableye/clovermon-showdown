@@ -9029,4 +9029,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Torch Shriek",
 		desc: "Lowers the user's Sp. Atk by 1.",
 	},
+	this: {
+		name: "This",
+		desc: "Harnesses the power of perfection to obliterate your target where they stand.",
+	},
+	dartoftoxin: {
+		name: "Dart of Toxin",
+		desc: "Not very effective on Steel. Goes first. 20% to set Toxic Spikes.",
+	},
 };

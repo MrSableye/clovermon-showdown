@@ -1445,4 +1445,16 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	torchshriek: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sereneshockwave: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	battlecry: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
