@@ -10313,10 +10313,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		condition: {
 			noCopy: true,
 			onModifyAtkPriority: 5,
+			onModifySpAPriority: 5,
 			onStart(pokemon) {
 				this.add('-start', pokemon, 'ability: Color Boost');
 			},
 			onModifyAtk(atk, source, target, move) {
+				this.debug('Color Boost atk boost');
+				return this.chainModify(1.5);
+			},
+			onModifySpA(atk, source, target, move) {
 				this.debug('Color Boost atk boost');
 				return this.chainModify(1.5);
 			},
@@ -10528,5 +10533,32 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			return typeMod;
 		},
-	}
+	},
+	mongoosesmalice: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (['Poison', 'Ghost'].includes(move.type)) {
+				this.debug('MM boost');
+				return this.chainModify(1.3);
+			}
+			if (['Fighting', 'Normal'].includes(move.type)) {
+				this.debug('MM "boost"');
+				return this.chainModify(0.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (['Poison', 'Ghost'].includes(move.type)) {
+				this.debug('MM boost');
+				return this.chainModify(1.3);
+			}
+			if (['Fighting', 'Normal'].includes(move.type)) {
+				this.debug('MM "boost"');
+				return this.chainModify(0.5);
+			}
+		},
+		name: "Mongoose's Malice",
+		rating: 5,
+		isNonstandard: "Future",
+	},
 };

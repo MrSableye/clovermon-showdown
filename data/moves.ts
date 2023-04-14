@@ -29602,7 +29602,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	thunderblitz: {
 		num: 2424,
 		accuracy: 90,
-		basePower: 40,
+		basePower: 35,
 		category: "Physical",
 		name: "Thunder Blitz",
 		pp: 5,
@@ -29904,7 +29904,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Any Attack",
-		pp: 10,
+		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onHit(target, source, effect) {
@@ -29934,7 +29934,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Any Heal",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {snatch: 1, heal: 1},
 		onHit(target, source, effect) {
@@ -29995,7 +29995,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Any Statup",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
 		onHit(target, source, effect) {
@@ -30396,5 +30396,53 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		contestType: "Beautiful",
 		isNonstandard: "Future",
+	},
+	this: { // ZVTLsQ8iNCM 34:49
+		accuracy: true,
+		basePower: 399,
+		category: "Special",
+		name: "This",
+		pp: 1,
+		priority: 0,
+		noPPBoosts: true,
+		flags: {bypasssub: 1},
+		breaksProtect: true,
+		onBasePower(basePower, pokemon, target) {
+			return this.chainModify(2);
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('spa', false, true) < pokemon.getStat('atk', false, true)) move.category = 'Physical';
+		},
+		ignoreAbility: true,
+		ignoreImmunity: {'???': true},
+		willCrit: true,
+		secondary: null,
+		noSketch: true,
+		target: "normal",
+		type: "???",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	dartoftoxin: {
+		accuracy: 100,
+		basePower: 50,
+		category: "Physical",
+		name: "Dart of Toxin",
+		pp: 5,
+		priority: 2,
+		flags: {},
+		ignoreImmunity: {'Poison': true},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel') return -1;
+		},
+		onHit(target) {
+			if (this.randomChance(1, 5)) {
+				target.side.addSideCondition('toxicspikes');
+			}
+		},
+		target: "normal",
+		type: "Poison",
+		isNonstandard: "Future",
+		contestType: "Cool",
 	},
 };
