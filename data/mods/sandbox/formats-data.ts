@@ -10743,6 +10743,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	galashitwatt: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	botanerry: {
 		inherit: true,
 		tier: "OU",
