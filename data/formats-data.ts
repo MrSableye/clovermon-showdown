@@ -9678,6 +9678,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	galashiwatt: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	botanerry: {
 		tier: "Illegal",
 		isNonstandard: "Future",

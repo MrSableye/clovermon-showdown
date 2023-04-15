@@ -42444,6 +42444,21 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
+	galashitwatt: {
+		num: -29371,
+		name: "Galashitwatt",
+		types: ["Steel", "Fire", "Poison", "Electric"],
+		genderRatio: {
+			M: 0.5,
+			F: 0.5,
+		},
+		baseStats: {hp: 85, atk: 60, def: 115, spa: 130, spd: 105, spe: 105},
+		abilities: {0: "Levitate", 1: "Levitate", H: "Levitate", S: "Levitate"},
+		heightm: 1.3,
+		weightkg: 1.1,
+		color: "Yellow",
+		eggGroups: ["Fairy"],
+	},
 	buge: {
 		num: -42106,
 		name: "Buge",
