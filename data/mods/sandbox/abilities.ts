@@ -1851,6 +1851,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	mongoosesmalice: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	metronomepower: {
 		inherit: true,
 		isNonstandard: null,

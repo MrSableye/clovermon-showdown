@@ -7333,6 +7333,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
+		},
+	oengas: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
 	},
 	praeteur: {
 		inherit: true,
@@ -10998,6 +11003,51 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	zangursed: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	mogumole: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	polybrawn: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	polybrawnh: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	polybrawni: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	polybrawnp: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	polybrawnk: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	polybrawnw: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	turtini: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	whipscuffle: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
