@@ -62,7 +62,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		prevo: "Pengas",
 		evoType: "other",
-		evoCondition: "Win the race"
+		evoCondition: "Win the race."
 	},
 	zangoose: {
 		inherit: true,
@@ -72,7 +72,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		prevo: "Zangoose",
 		evoType: "other",
-		evoCondition: "Die from the Poison status after getting mortally wounded by a Seviper"
+		evoCondition: "Die from the Poison status after getting mortally wounded by a Seviper."
 	},
     motherfuck: {
 	    inherit: true,
@@ -82,8 +82,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	    inherit: true,
 	    prevo: "Motherfuck",
 	    evoType: "other",
-	    evoCondition: "Kill Samuel L Jackson"
+	    evoCondition: "Kill Samuel L. Jackson."
     },
+	hofucno: {
+		inherit: true,
+		evos: ["Hofucyea"],
+	},
 	honrade: {
 		inherit: true,
 		evos: ["Devante", "Vergilion"],
@@ -123,7 +127,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		},
 		abilities: {
 			0: "Competitive", 
-			1: "Intimidate",
+			1: "Metagaming",
 			H: "Good as Gold",
 			S: "Cursed Body",
 		},

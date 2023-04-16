@@ -12792,6 +12792,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'moonblast';
 			} else if (this.field.isTerrain('psychicterrain')) {
 				move = 'psychic';
+			} else if (this.field.isTerrain('plasticterrain')) {
+				move = 'recycleray';
 			}
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags/* , naturePower: true*/};
@@ -28105,7 +28107,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 
 		secondary: null,
 		noSketch: true,
-		target: "all",
+		target: "allAdjacentFoes",
 		type: "Grass",
 		isNonstandard: "Future",
 		zMove: {boost: {spd: 1}},
@@ -29112,7 +29114,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "all",
+		target: "allAdjacentFoes",
 		type: "Fire",
 		isNonstandard: "Future",
 		zMove: {boost: {spd: 1}},
@@ -30403,7 +30405,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Special",
 		name: "This",
 		pp: 1,
-		priority: 0,
+		priority: -6,
 		noPPBoosts: true,
 		flags: {bypasssub: 1},
 		breaksProtect: true,
