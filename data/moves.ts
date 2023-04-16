@@ -30447,4 +30447,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		isNonstandard: "Future",
 		contestType: "Cool",
 	},
+	focusmiss: {
+		num: 411,
+		accuracy: 0,
+		basePower: 120,
+		category: "Special",
+		name: "Focus Miss",
+		pp: 5,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Fighting",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
 };

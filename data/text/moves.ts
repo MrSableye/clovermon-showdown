@@ -9037,4 +9037,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Dart of Toxin",
 		desc: "Not very effective on Steel. Goes first. 20% to set Toxic Spikes.",
 	},
+	focusmiss: {
+		name: "Focus Miss",
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+	},
 };
