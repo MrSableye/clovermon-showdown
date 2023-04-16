@@ -30215,7 +30215,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1, bullet: 1},
 		multihit: 2,
 		onTry(source) {
-			if (pokemon.species.name === 'Blobbos-Cherry') {
+			if (source.species.name === 'Blobbos-Cherry') {
 				return;
 			}
 			this.attrLastMove('[still]');
