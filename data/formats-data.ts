@@ -9742,6 +9742,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	sectsei: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	hofucyea: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosswitch: {
 		tier: "Illegal",
 		isNonstandard: "Future",

@@ -12792,6 +12792,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'moonblast';
 			} else if (this.field.isTerrain('psychicterrain')) {
 				move = 'psychic';
+			} else if (this.field.isTerrain('plasticterrain')) {
+				move = 'recycleray';
 			}
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags/* , naturePower: true*/};
@@ -28105,7 +28107,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 
 		secondary: null,
 		noSketch: true,
-		target: "all",
+		target: "allAdjacentFoes",
 		type: "Grass",
 		isNonstandard: "Future",
 		zMove: {boost: {spd: 1}},
@@ -29112,7 +29114,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: null,
-		target: "all",
+		target: "allAdjacentFoes",
 		type: "Fire",
 		isNonstandard: "Future",
 		zMove: {boost: {spd: 1}},
@@ -30212,6 +30214,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bullet: 1},
 		multihit: 2,
+		onTry(source) {
+			if (source.species.name === 'Blobbos-Cherry') {
+				return;
+			}
+			this.attrLastMove('[still]');
+			this.add('-fail', source, 'move: Cherrynobyl');
+			this.hint("You lack the bombs.");
+			return null;
+		},
 		secondary: {
 			chance: 100,
 			self: {
@@ -30403,7 +30414,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Special",
 		name: "This",
 		pp: 1,
-		priority: 0,
+		priority: -6,
 		noPPBoosts: true,
 		flags: {bypasssub: 1},
 		breaksProtect: true,
@@ -30444,5 +30455,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 		isNonstandard: "Future",
 		contestType: "Cool",
+	},
+	focusmiss: {
+		num: 411,
+		accuracy: 0,
+		basePower: 120,
+		category: "Special",
+		name: "Focus Miss",
+		pp: 5,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Fighting",
+		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 };
