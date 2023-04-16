@@ -30214,6 +30214,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bullet: 1},
 		multihit: 2,
+		onTry(source) {
+			if (pokemon.species.name === 'Blobbos-Cherry') {
+				return;
+			}
+			this.attrLastMove('[still]');
+			this.add('-fail', source, 'move: Cherrynobyl');
+			this.hint("You lack the bombs.");
+			return null;
+		},
 		secondary: {
 			chance: 100,
 			self: {
@@ -30224,7 +30233,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "normal",
 		type: "Grass",
-		noSketch: true,
 		isNonstandard: "Future",
 	},
 	shadowbox: {
