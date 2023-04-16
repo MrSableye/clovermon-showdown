@@ -54,6 +54,36 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 13,
 		},
 	},
+	pengas: {
+		inherit: true,
+		evos: ["Oengas"],
+	},
+	oengas: {
+		inherit: true,
+		prevo: "Pengas",
+		evoType: "other",
+		evoCondition: "Win the race"
+	},
+	zangoose: {
+		inherit: true,
+		evos: ["Zangursed"],
+	},
+	zangursed: {
+		inherit: true,
+		prevo: "Zangoose",
+		evoType: "other",
+		evoCondition: "Die from the Poison status after getting mortally wounded by a Seviper"
+	},
+    motherfuck: {
+	    inherit: true,
+	    evos: ["Fatherfuck"],
+    },
+    fatherfuck: {
+	    inherit: true,
+	    prevo: "Motherfuck",
+	    evoType: "other",
+	    evoCondition: "Kill Samuel L Jackson"
+    },
 	honrade: {
 		inherit: true,
 		evos: ["Devante", "Vergilion"],

@@ -6599,6 +6599,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	oengas: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	praeteur: {
 		tier: "Illegal",
 		isNonstandard: "Future",
