@@ -42041,7 +42041,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		forme: "Ultra",
 		types: ["Electric", "Fighting", "Fighting"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 67, atk: 157, def: 87, spa: 111, spd: 61, spe: 117},
+		baseStats: {hp: 67, atk: 167, def: 87, spa: 167, spd: 61, spe: 127},
 		abilities: {0: "Fuckforce"},
 		heightm: 0.8,
 		weightkg: 21.2,
