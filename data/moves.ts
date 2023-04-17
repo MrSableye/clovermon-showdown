@@ -27284,7 +27284,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {nonsky: 1},
-		terrain: 'plastictterrain',
+		terrain: 'plasticterrain',
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
