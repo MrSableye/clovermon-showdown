@@ -9934,4 +9934,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	fuckerultra: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };

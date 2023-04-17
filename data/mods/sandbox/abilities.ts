@@ -1871,4 +1871,8 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	fuckforce: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

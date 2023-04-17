@@ -2737,4 +2737,11 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Zeroite",
 		desc: "If held by a Blobbos-Zero, this item allows it to Mega Evolve in battle.",
 	},
+	ultrafuckiumz: {
+		name: "Ultrafuckium Z",
+		desc: "Fucker: Ultra Burst, then Z-Move w/ Rocket Punch.",
+
+		transform: "  Bright light is about to burst out of [POKEMON]!",
+		activate: "[POKEMON] regained its true power through Ultra Burst!",
+	},
 };

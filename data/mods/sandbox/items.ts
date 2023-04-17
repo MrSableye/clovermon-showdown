@@ -2319,4 +2319,8 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ultrafuckiumz: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

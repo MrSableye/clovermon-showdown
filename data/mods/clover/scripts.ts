@@ -93,6 +93,9 @@ export const Scripts: ModdedBattleScriptsData = {
 			if (pokemon.baseSpecies.name === 'Blobbos' && pokemon.getItem().id === 'ultrablobbosiumz') {
 				return "Blobbos-Ultra";
 			}
+			if (pokemon.baseSpecies.name === 'Fucker' && pokemon.getItem().id === 'ultrafuckiumz') {
+				return "Fucker-Ultra";
+			}
 			return null;
 		},
 		canMegaEvo(pokemon: Pokemon) {

@@ -9042,4 +9042,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
 		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
 	},
+	movethatkillsyourself: {
+		name: "Move That Kills Yourself",
+		desc: "This move and its effects ignore the Abilities of other Pokemon.",
+		shortDesc: "Ignores Abilities.",
+	},
 };

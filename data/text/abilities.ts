@@ -3145,4 +3145,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Extreme Skill",
 		shortDesc: "This Pokemon's hits have a 1% chance to win the game instantly.",
 	},
+	fuckforce: {
+		name: "Fuckforce",
+		shortDesc: "Neuroforce + Scrappy + Swift Swim + Iron Fist.",
+	},
 };

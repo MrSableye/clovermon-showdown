@@ -8832,4 +8832,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	ultrafuckiumz: {
+		name: "Ultrafuckium Z",
+		spritenum: 687,
+		onTakeItem: false,
+		zMove: "Move That Fucks Yourself",
+		zMoveFrom: "Rocket Punch",
+		itemUser: ["Fucker-Ultra"],
+		isNonstandard: "Future",
+	},
 };
