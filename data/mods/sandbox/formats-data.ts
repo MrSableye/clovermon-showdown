@@ -10753,6 +10753,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	taterdoom: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	botanerry: {
 		inherit: true,
 		tier: "OU",

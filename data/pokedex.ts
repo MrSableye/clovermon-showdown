@@ -42474,6 +42474,38 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 1.1,
 		color: "Yellow",
 		eggGroups: ["Fairy"],
+		gen: 9,
+	},
+	taterdoom: {
+		num: -69240,
+		name: "Taterdoom",
+		types: ["Ground", "Water", "Poison"],
+		genderRatio: {
+			M: 0.5,
+			F: 0.5,
+		},
+		baseStats: {
+			hp: 120,
+			atk: 145,
+			def: 116,
+			spa: 85,
+			spd: 100,
+			spe: 70,
+		},
+		abilities: {
+			0: "Torrent",
+			1: "Skill Link",
+			H: "Unaware",
+			S: "Rock Head",
+		},
+		heightm: 1.2,
+		weightkg: 40,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Monster",
+		],
+		gen: 9,
 	},
 	buge: {
 		num: -42106,
