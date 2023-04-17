@@ -10561,4 +10561,19 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 5,
 		isNonstandard: "Future",
 	},
+	extremeskill: {
+		name: "Extreme Skill",
+		isNonstandard: "Future",
+		onModifyMove(move) {
+			if (!move.secondaries) {
+				move.secondaries = [];
+			}
+			move.secondaries.push({
+				chance: 1,
+				onHit(target, source, move) {
+					this.win(source.side);
+				},
+			});
+		},
+	},
 };

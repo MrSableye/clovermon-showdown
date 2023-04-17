@@ -3141,4 +3141,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Mongoose's Malice",
 		shortDesc: "This Pokemon's Poison/Ghost moves deal 1.3x damage, and Normal/Fighting moves deal 0.5x damage.",
 	},
+	extremeskill: {
+		name: "Extreme Skill",
+		shortDesc: "This Pokemon's hits have a 1% chance to win the game instantly.",
+	},
 };
