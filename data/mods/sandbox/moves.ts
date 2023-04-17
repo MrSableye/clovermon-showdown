@@ -4197,6 +4197,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	plasticterrain: {
 		inherit: true,
+		onTry(source) {
+			this.attrLastMove('[still]');
+			this.add('-fail', source, 'move: Plastic Terrain');
+			this.hint("Wack is a bad game and you should feel bad.");
+			return null;
+		},
 		isNonstandard: null,
 	},
 	highjumpsaw: {

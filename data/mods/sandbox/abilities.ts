@@ -1636,7 +1636,11 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		isNonstandard: null,
 	},
 	plasticsurge: {
-		inherit: true,
+		onStart(source) {
+			this.hint("Wack is a bad game and you should feel bad.");
+		},
+		name: "Plastic Surge",
+		rating: 4,
 		isNonstandard: null,
 	},
 	thatscap: {
