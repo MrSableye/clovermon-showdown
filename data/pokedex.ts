@@ -42495,7 +42495,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Torrent",
 			1: "Skill Link",
-			H: "Unaware",
+			H: "Klutz",
 			S: "Rock Head",
 		},
 		heightm: 1.2,
