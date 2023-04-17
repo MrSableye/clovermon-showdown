@@ -30484,12 +30484,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Move That Kills Yourself",
 		pp: 1,
 		priority: 0,
-		flags: {},
+		flags: {contact: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Electric', type);
+		},
 		ignoreAbility: true,
 		isZ: "ultrafuckiumz",
 		secondary: null,
 		target: "normal",
-		type: "Physical",
+		type: "Fighting",
 		contestType: "Cool",
 	},
 };

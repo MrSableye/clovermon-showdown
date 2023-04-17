@@ -9044,7 +9044,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	movethatkillsyourself: {
 		name: "Move That Kills Yourself",
-		desc: "This move and its effects ignore the Abilities of other Pokemon.",
-		shortDesc: "Ignores Abilities.",
+		desc: "This move combines Electric in its type effectiveness against the target and its effects ignore the Abilities of other Pokemon.",
+		shortDesc: "Combines Electric in its type effectiveness. Ignores Abilities.",
 	},
 };
