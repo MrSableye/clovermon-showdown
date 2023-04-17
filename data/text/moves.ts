@@ -9047,4 +9047,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "This move combines Electric in its type effectiveness against the target and its effects ignore the Abilities of other Pokemon.",
 		shortDesc: "Combines Electric in its type effectiveness. Ignores Abilities.",
 	},
+	flounderpunch: {
+		name: "Flounder Punch",
+		shortDesc: "OHKOs the target Stunfisk. Fails if target is not a Stunfisk.",
+	},
 };

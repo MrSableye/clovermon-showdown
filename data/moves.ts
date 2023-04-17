@@ -30495,4 +30495,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 		contestType: "Cool",
 	},
+	flounderpunch: {
+		accuracy: 100,
+		basePower: 0,
+		category: "Physical",
+		name: "Flounder Punch",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryHit(source, target) {
+			if (target.baseSpecies.id !== 'Stunfisk') return false;
+		},
+		ohko: true,
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		zMove: {basePower: 180},
+		maxMove: {basePower: 130},
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
 };

@@ -4517,4 +4517,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	flounderpunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
