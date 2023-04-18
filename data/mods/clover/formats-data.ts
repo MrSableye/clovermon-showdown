@@ -7396,7 +7396,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fireshitre: {
 		inherit: true,
-		tier: "UU",
+		tier: "UUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"calmmind",
