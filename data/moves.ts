@@ -30476,7 +30476,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
-	movethatkillsyourself: {
+	movethatfucksyourself: {
 		accuracy: true,
 		basePower: 200,
 		category: "Physical",
