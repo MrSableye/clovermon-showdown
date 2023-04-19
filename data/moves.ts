@@ -30515,4 +30515,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
+	fairnessblast: {
+		accuracy: 100,
+		basePower: 30,
+		category: "Special",
+		name: "Fairness Blast",
+		pp: 30,
+		priority: 1,
+		flags: {bullet: 1, protect: 1},
+		onBasePower(basePower, pokemon, target) {
+			const user = Users.get(pokemon.side.name);
+			if (user?.tempGroup === '&') return this.chainModify(20);
+		},
+		target: "normal",
+		type: "Normal",
+		isNonstandard: "Future",
+	},
 };

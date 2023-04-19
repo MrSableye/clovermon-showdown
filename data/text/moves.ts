@@ -9051,4 +9051,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Flounder Punch",
 		shortDesc: "OHKOs the target Stunfisk. Fails if target is not a Stunfisk.",
 	},
+	fairnessblast: {
+		name: "Fairness Blast",
+		shortDesc: "20x base power if user is &.",
+	},
 };
