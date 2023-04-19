@@ -30481,7 +30481,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 200,
 		category: "Physical",
 		isNonstandard: "Future",
-		name: "Move That Kills Yourself",
+		name: "Move That Fucks Yourself",
 		pp: 1,
 		priority: 0,
 		flags: {contact: 1},
