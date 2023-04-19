@@ -42048,7 +42048,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		eggGroups: ["Flying", "Water 2"],
 		requiredItem: "Ultrafuckium Z",
-		battleOnly: ["Fucker"],
+		battleOnly: "Fucker",
 	},
 	emojinn: {
 		num: 42166,
