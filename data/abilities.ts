@@ -10376,7 +10376,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			},
 		},
 		onSwitchOut(pokemon) {
-			pokemon.heal(pokemon.baseMaxhp / -3);
+			pokemon.damage(pokemon.baseMaxhp / 3);
 		},
 		onBasePowerPriority: 8,
 		onBasePower(basePower, attacker, defender, move) {
