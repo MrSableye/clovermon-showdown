@@ -3147,6 +3147,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	fuckforce: {
 		name: "Fuckforce",
-		shortDesc: "Neuroforce + Scrappy + Swift Swim + Iron Fist.",
+		shortDesc: "Neuroforce + Scrappy + Swift Swim + Iron Fist. Miracle Punch hits twice.",
 	},
 };

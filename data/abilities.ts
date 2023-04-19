@@ -10589,6 +10589,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				move.ignoreImmunity['Fighting'] = true;
 				move.ignoreImmunity['Normal'] = true;
 			}
+			if (move.id === 'miraclepunch') {
+				move.multihit = 2;
+			}
 		},
 		onBoost(boost, target, source, effect) {
 			if (effect.name === 'Intimidate') {
