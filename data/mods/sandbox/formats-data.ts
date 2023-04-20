@@ -10043,6 +10043,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	blobbosrasta: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	blobbosbirb: {
 		inherit: true,
 		tier: "OU",
