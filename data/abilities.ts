@@ -7999,11 +7999,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	infection: {
 		onDamagePriority: -30,
 		onDamage(damage, target, source, effect) {
-			if (target.species.id !== 'blobbosinfected') return;
+			if (!['blobbosinfected', 'infected'].includes(target.species.id)) return;
 			if (damage >= target.hp) {
 				this.add('-damage', target, 0);
 				this.add('-ability', target, 'Infection');
-				target.formeChange('Blobbos-Zombie', this.effect, true);
+				if (target.species.id === 'blobbosinfected') {
+					target.formeChange('Blobbos-Zombie', this.effect, true);
+				} else {
+					target.formeChange('Infected-Zombie', this.effect, true);
+				}
 				target.heal(target.maxhp, target, this.effect);
 				this.add('-heal', target, target.getHealth, '[silent]');
 				return 0;

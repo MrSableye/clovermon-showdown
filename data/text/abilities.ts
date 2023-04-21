@@ -2737,7 +2737,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	infection: {
 		name: "Infection",
-		shortDesc: "(Blobbos-Infected) When this Pokemon faints, it regains HP and changes form to be a zombie.",
+		shortDesc: "(Blobbos-Infected or Infected) When this Pokemon faints, it regains HP and changes form to be a zombie.",
 	},
 	costume: {
 		name: "Costume",
