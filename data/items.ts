@@ -8841,4 +8841,18 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Fucker-Ultra"],
 		isNonstandard: "Future",
 	},
+	stunfiskite: {
+		name: "Stunfiskite",
+		spritenum: 628,
+		megaStone: "Stunfisk-Mega",
+		megaEvolves: "Stunfisk",
+		itemUser: ["Stunfisk"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
 };

@@ -9946,4 +9946,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	stunfiskmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };
