@@ -30501,7 +30501,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Physical",
 		name: "Flounder Punch",
 		pp: 5,
-		priority: 0,
+		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onTryHit(source, target) {
 			if (target.baseSpecies.id !== 'Stunfisk') return false;
