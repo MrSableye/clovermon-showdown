@@ -30515,4 +30515,69 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
+	alloutirony: {
+		accuracy: 100,
+		basePower: 10,
+		category: "Physical",
+		name: "All-Out Irony",
+		noSketch: true,
+		pp: 35,
+		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			let bonus = 1;
+			// You can't get here unless the pursuit succeeds
+			if (target.beingCalledBack || target.switchFlag) {
+				this.debug('Pursuit-esque damage boost');
+				bonus *= 2;
+			}
+			if (target.species.id.includes('kracko') || target.species.id.includes('eedle')) {
+				bonus *= 100;
+			}
+			return bonus * move.basePower;
+		},
+		beforeTurnCallback(pokemon) {
+			for (const side of this.sides) {
+				if (side.hasAlly(pokemon)) continue;
+				side.addSideCondition('alloutirony', pokemon);
+				const data = side.getSideConditionData('alloutirony');
+				if (!data.sources) {
+					data.sources = [];
+				}
+				data.sources.push(pokemon);
+			}
+		},
+		condition: {
+			duration: 1,
+			onBeforeSwitchOut(pokemon) {
+				this.debug('Pursuit-esque start');
+				let alreadyAdded = false;
+				pokemon.removeVolatile('destinybond');
+				for (const source of this.effectState.sources) {
+					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
+					if (!alreadyAdded) {
+						this.add('-activate', pokemon, 'move: All-Out Irony');
+						alreadyAdded = true;
+					}
+					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
+					// If it is, then Mega Evolve before moving.
+					if (source.canMegaEvo || source.canUltraBurst) {
+						for (const [actionIndex, action] of this.queue.entries()) {
+							if (action.pokemon === source && action.choice === 'megaEvo') {
+								this.actions.runMegaEvo(source);
+								this.queue.list.splice(actionIndex, 1);
+								break;
+							}
+						}
+					}
+					this.actions.runMove('alloutirony', source, source.getLocOf(pokemon));
+				}
+			},
+		},
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
 };
