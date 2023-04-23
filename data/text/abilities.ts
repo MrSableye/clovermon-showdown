@@ -3149,4 +3149,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Fuckforce",
 		shortDesc: "Neuroforce + Scrappy + Swift Swim + Iron Fist. Miracle Punch hits twice.",
 	},
+	ironfish: {
+		name: "Iron Fish",
+		desc: "This Pokemon's fish-based attacks have their power multiplied by 1.2.",
+		shortDesc: "This Pokemon's fish-based attacks have 1.2x power. Flounder Punch is not boosted.",
+	},
 };

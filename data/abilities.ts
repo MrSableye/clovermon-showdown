@@ -10618,4 +10618,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Fuckforce",
 		isNonstandard: "Future",
 	},
+	ironfish: {
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.id !== 'fishiousrend') return;
+			this.debug('Iron Fist boost');
+			return this.chainModify([4915, 4096]);
+		},
+		name: "Iron Fish",
+		isNonstandard: "Future",
+	},
 };
