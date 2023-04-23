@@ -3123,12 +3123,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	blobboswack: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	blobboswackmega: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	blobboscup: {
 		inherit: true,

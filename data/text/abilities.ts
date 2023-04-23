@@ -3115,7 +3115,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	colorboost: {
 		name: "Color Boost",
-		shortDesc: "This Pokemon's gets a 1.2x boost to its offenses after changing type. Once per switch-in.",
+		shortDesc: "This Pokemon's gets a 1.5x boost to its offenses after changing type. Once per switch-in.",
 	},
 	cancer: {
 		name: "Cancer",
@@ -3139,7 +3139,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	mongoosesmalice: {
 		name: "Mongoose's Malice",
-		shortDesc: "This Pokemon's Poison/Ghost moves deal 1.3x damage, and Normal/Fighting moves deal 0.5x damage.",
+		shortDesc: "This Pokemon's Poison/Ghost moves deal 1.5x damage, and Normal/Fighting moves deal 0.5x damage.",
 	},
 	extremeskill: {
 		name: "Extreme Skill",
@@ -3153,5 +3153,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Iron Fish",
 		desc: "This Pokemon's fish-based attacks have their power multiplied by 1.2.",
 		shortDesc: "This Pokemon's fish-based attacks have 1.2x power. Flounder Punch is not boosted.",
+	},
+	originalsin: {
+		name: "Original Sin",
+		shortDesc: "Added 1/256 chance for user's moves to miss. User's held item does nothing. Poison Sting always poisons. Summons Genwun Room upon switch-in.",
 	},
 };

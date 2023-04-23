@@ -143,4 +143,51 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 110,
 		},
 	},
+	regigigas: {
+		inherit: true,
+		abilities: {
+			0: "Slow Start", 
+			S: "Big Guy",
+		},
+	},
+	regigigone: {
+		inherit: true,
+		abilities: {
+			0: "Defeatist", 
+			S: "Flame Body",
+		},
+	},
+	slaking: {
+		inherit: true,
+		abilities: {
+			0: "Truant", 
+			S: "Stall",
+		},
+	},
+	gigalith: {
+		inherit: true,
+		baseStats: {
+			hp: 100, 
+			atk: 135, 
+			def: 130, 
+			spa: 60, 
+			spd: 95, 
+			spe: 25
+		},
+		abilities: {
+			0: "Sturdy", 
+			1: "Sand Stream", 
+			H: "Sand Force", 
+			S: "Solid Rock",
+		},
+	},
+	alakazam: {
+		inherit: true,
+		abilities: {
+			0: "Synchronize", 
+			1: "Inner Focus", 
+			H: "Magic Guard",
+			S: "Big Brain",
+		},
+	},
 };
