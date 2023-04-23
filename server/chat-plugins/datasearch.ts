@@ -524,7 +524,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 		attack: 'atk', defense: 'def', specialattack: 'spa', spc: 'spa', special: 'spa', spatk: 'spa',
 		specialdefense: 'spd', spdef: 'spd', speed: 'spe', wt: 'weight', ht: 'height', generation: 'gen',
 	};
-	const allSpeciesTags = ['inferior', 'mythical', 'restrictedlegendary', 'sublegendary'];
+	const allSpeciesTags = ['krackokind', 'weedlekind', 'inferior', 'mythical', 'restrictedlegendary', 'sublegendary'];
 	let showAll = false;
 	let sort = null;
 	let megaSearch = null;

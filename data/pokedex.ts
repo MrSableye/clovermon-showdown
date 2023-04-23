@@ -304,6 +304,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		evos: ["Kakuna"],
 		eggGroups: ["Bug"],
+		tags: ["Weedlekind"],
 	},
 	kakuna: {
 		num: 14,
@@ -33957,6 +33958,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Krackodemon", "Krackowalker", "Susko", "Shroomko", "Krakenwalker"],
 		eggGroups: ["Monster", "Amorphous"],
 		gen: 8,
+		tags: ["Krackokind"],
 	},
 	krackodemon: {
 		num: 42113,
@@ -33973,6 +33975,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Thunder Stone",
 		eggGroups: ["Monster", "Amorphous"],
 		gen: 8,
+		tags: ["Krackokind"],
 	},
 	dubsnake: {
 		num: 42107,
@@ -36330,6 +36333,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		tags: ["Weedlekind"],
 	 },
 	fleurrium: {
 	   num: 42182,
@@ -40758,6 +40762,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Ditto",
 		],
 		gen: 8,
+		tags: ["Weedlekind"],
 	},
 	blobboseedletrue: {
 		num: 69132,
@@ -40774,6 +40779,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		requiredAbility: "Metamorphosis",
 		battleOnly: "Blobbos-eedle",
 		gen: 8,
+		tags: ["Weedlekind"],
 	},
 	sobbolb: {
 		num: 23196,
@@ -42181,6 +42187,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 3.2,
 		color: "Brown",
 		eggGroups: ["Bug"],
+		tags: ["Weedlekind"],
 	},
 	waterweedle: {
 		num: 13,
@@ -42192,6 +42199,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 3.2,
 		color: "Brown",
 		eggGroups: ["Bug"],
+		tags: ["Weedlekind"],
 	},
 	sableedle: {
 		num: -42691,
@@ -42203,6 +42211,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 14.2,
 		color: "Purple",
 		eggGroups: ["Bug", "Human-Like"],
+		tags: ["Weedlekind"],
 	},
 	karkeedle: {
 		num: -42692,
@@ -42214,6 +42223,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 14.2,
 		color: "Grey",
 		eggGroups: ["Bug", "Human-Like"],
+		tags: ["Weedlekind"],
 	},
 	oblivion: {
 		num: -42099,
@@ -42225,6 +42235,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 3.2,
 		color: "Black",
 		eggGroups: ["Undiscovered"],
+		tags: ["Weedlekind"],
 	},
 	spireedle: {
 		num: -42100,
@@ -42237,6 +42248,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 0.1,
 		color: "White",
 		eggGroups: ["Undiscovered"],
+		tags: ["Weedlekind"],
 	},
 	dalleedle: {
 		num: -42101,
@@ -42261,6 +42273,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 4,
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
+		tags: ["Weedlekind"],
 	},
 	krackowalker: {
 		num: -42113,
@@ -42277,6 +42290,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoCondition: "Survive a Close Combat from Pure Power / Huge Power Kuuroba",
 		eggGroups: ["Monster", "Amorphous"],
 		gen: 8,
+		tags: ["Krackokind"],
 	},
 	susko: {
 		num: -42864,
@@ -42293,6 +42307,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoCondition: "Win ten games of Among Us in a row.",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		tags: ["Krackokind"],
 	},
 	shroomko: {
 		num: -42865,
@@ -42309,6 +42324,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoCondition: "Discover a reason to live.",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		tags: ["Krackokind"],
 	},
 	krakenwalker: {
 		num: -42888,
@@ -42325,6 +42341,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoCondition: "Level Krissy while in the deepest layer of the Krackocean",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		tags: ["Krackokind"],
 	},
 	yanorm: {
 		num: -42110,

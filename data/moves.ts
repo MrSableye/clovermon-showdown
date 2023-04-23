@@ -30530,7 +30530,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				this.debug('Pursuit-esque damage boost');
 				bonus *= 2;
 			}
-			if (target.species.id.includes('kracko') || target.species.id.includes('eedle')) {
+			if (target.species.tags.includes('Weedlekind') || target.species.tags.includes('Krackokind')) {
 				bonus *= 100;
 			}
 			return bonus * move.basePower;

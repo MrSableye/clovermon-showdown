@@ -2744,4 +2744,12 @@ export const ItemsText: {[k: string]: ItemText} = {
 		transform: "  Bright light is about to burst out of [POKEMON]!",
 		activate: "[POKEMON] regained its true power through Ultra Burst!",
 	},
+	focusspecs: {
+		name: "Focus Specs",
+		shortDesc: "20% of the holder's Sp. Atk is 1.5x. 20% of the time is Focus Band. 60% nothing. Changes each turn. Only works on Weedlekind.",
+	},
+	krack: {
+		name: "Krack",
+		desc: "At the end of every turn, if the user is a Krackokind, holder -1 boost to all stats except +1 to Spe.",
+	},
 };

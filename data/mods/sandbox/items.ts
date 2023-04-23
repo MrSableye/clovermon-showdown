@@ -2327,4 +2327,12 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	focusspecs: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	krack: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

@@ -54,6 +54,14 @@ export const Tags: {[id: string]: TagData} = {
 		name: "Inferior",
 		speciesFilter: species => species.tags.includes("Inferior"),
 	},
+	weedlekind: {
+		name: "Weedlekind",
+		speciesFilter: species => species.tags.includes("Weedlekind"),
+	},
+	krackokind: {
+		name: "Krackokind",
+		speciesFilter: species => species.tags.includes("Krackokind"),
+	},
 
 	// Move tags
 	// ---------

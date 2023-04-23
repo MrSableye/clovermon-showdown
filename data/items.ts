@@ -8855,4 +8855,45 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	focusspecs: {
+		name: "Focus Specs",
+		spritenum: 70,
+		onStart() {
+			this.effectState.forme = this.sample(['focus', 'specs', 'nothing', 'nothing', 'nothing']);
+		},
+		onResidual() {
+			this.effectState.forme = this.sample(['focus', 'specs', 'nothing', 'nothing', 'nothing']);
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (!pokemon.species.tags.includes('Weedlekind')) return;
+			if (this.effectState.forme !== 'specs') return;
+			return this.chainModify(1.5);
+		},
+		onDamagePriority: -40,
+		onDamage(damage, target, source, effect) {
+			if (!target.species.tags.includes('Weedlekind')) return;
+			if (this.effectState.forme !== 'focus') return;
+			if (this.randomChance(1, 10) && damage >= target.hp && effect && effect.effectType === 'Move') {
+				this.add("-activate", target, "item: Focus Specs");
+				return target.hp - 1;
+			}
+		},
+		isNonstandard: "Future",
+	},
+	krack: {
+		name: "Krack",
+		isNonstandard: "Future",
+		spritenum: 305,
+		onResidual(pokemon) {
+			if (!pokemon.species.tags.includes('Krackokind')) return;
+			this.boost({
+				atk: -1,
+				def: -1,
+				spa: -1,
+				spd: -1,
+				spe: 1,
+			}, pokemon);
+		},
+	},
 };

@@ -9057,6 +9057,6 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	alloutirony: {
 		name: "All-Out Irony",
-		shortDesc: "If a foe is switching out, hits it at 2x power. 100x power against Pokemon with kracko or eedle in their name.",
+		shortDesc: "If a foe is switching out, hits it at 2x power. 100x power against Krackokind or Weedlekind Pokemon.",
 	},
 };
