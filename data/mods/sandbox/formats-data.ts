@@ -11087,4 +11087,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	tenyuu: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	slimifu: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

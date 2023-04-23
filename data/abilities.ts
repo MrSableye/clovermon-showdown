@@ -10543,7 +10543,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyAtk(atk, attacker, defender, move) {
 			if (['Poison', 'Ghost'].includes(move.type)) {
 				this.debug('MM boost');
-				return this.chainModify(1.3);
+				return this.chainModify(1.5);
 			}
 			if (['Fighting', 'Normal'].includes(move.type)) {
 				this.debug('MM "boost"');
@@ -10554,7 +10554,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifySpA(atk, attacker, defender, move) {
 			if (['Poison', 'Ghost'].includes(move.type)) {
 				this.debug('MM boost');
-				return this.chainModify(1.3);
+				return this.chainModify(1.5);
 			}
 			if (['Fighting', 'Normal'].includes(move.type)) {
 				this.debug('MM "boost"');
@@ -10627,5 +10627,30 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Iron Fish",
 		isNonstandard: "Future",
+	},
+	originalsin: {
+		name: "Original Sin",
+		rating: 5,
+		isNonstandard: "Future",
+		isPermanent: true,
+		onSourceModifyAccuracyPriority: -1,
+		onSourceModifyAccuracy(accuracy, target, source, move) {
+			return this.chainModify([4080, 4096]);
+		},
+		onModifyMove(move) {
+			if (move.id === 'poisonsting') return;
+					if (!move.secondaries) {
+				move.secondaries = [];
+			}
+			move.secondaries.push({
+					chance: 100,
+					status: 'psn',
+					ability: this.dex.abilities.get('originalsin'),
+				});
+			},
+		onStart(pokemon) {
+			this.add('-activate', pokemon, 'ability: Original Sin');
+			this.field.addPseudoWeather('genwunroom');
+		},
 	},
 };
