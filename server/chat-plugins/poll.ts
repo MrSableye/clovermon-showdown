@@ -103,7 +103,7 @@ export class Poll extends Rooms.MinorActivity {
 		const ip = user.latestIp;
 		const userid = user.id;
 
-		if (!user.can('bypassall') && this.ratingRequirement) {
+		if (this.ratingRequirement) {
 			const {format, minimumRating} = this.ratingRequirement;
 			const formatLadder = Ladders(format);
 
