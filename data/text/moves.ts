@@ -9049,7 +9049,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	flounderpunch: {
 		name: "Flounder Punch",
-		shortDesc: "OHKOs the target Stunfisk. Fails if target is not a Stunfisk.",
+		shortDesc: "OHKOs the target Stunfisk. Fails if target is not a Stunfisk. Japanese Name: Flop Attack (失敗作うち). Not boosted by Iron Fisht.",
 	},
 	fairnessblast: {
 		name: "Fairness Blast",
