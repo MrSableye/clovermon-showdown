@@ -8912,7 +8912,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Rope",
 		isNonstandard: "Future",
 		onResidual(pokemon) {
-			if (pokemon.hp / pokemon.baseMaxhp < 0.33) {
+			const isSuicidal = (pokemon.hasType('Fairy') && (pokemon.hp / pokemon.baseMaxhp) < 0.41)
+				|| (pokemon.hp / pokemon.baseMaxhp < 0.33);
+
+			if (isSuicidal) {
 				for (const foe of pokemon.foes()) {
 					foe.addVolatile('curse', pokemon, this.effect);
 				}

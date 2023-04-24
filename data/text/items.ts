@@ -2758,7 +2758,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	rope: {
 		name: "Rope",
-		desc: "At the end of the turn, if the holder has less than 33% HP, it faints and curse is applied to all foes."
+		desc: "At the end of the turn, if the holder has less than 33% HP (41% if Fairy-type), it faints and curse is applied to all foes."
 	},
 	midnightsnack: {
 		name: "Midnight Snack",
