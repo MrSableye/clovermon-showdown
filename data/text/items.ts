@@ -2754,7 +2754,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	mirrorclaw: {
 		name: "Mirror Claw",
-		desc: "Each turn, holder has a 20% chance to have its damaging move hit twice",
+		desc: "Each turn, holder has a 5% chance to have its damaging move hit twice",
 	},
 	rope: {
 		name: "Rope",
