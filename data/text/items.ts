@@ -2752,4 +2752,26 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Krack",
 		desc: "At the end of every turn, if the user is a Krackokind, holder -1 boost to all stats except +1 to Spe.",
 	},
+	mirrorclaw: {
+		name: "Mirror Claw",
+		desc: "Each turn, holder has a 20% chance to have its damaging move hit twice",
+	},
+	rope: {
+		name: "Rope",
+		desc: "At the end of the turn, if the holder has <33% HP, it faints and curse is applied to all foes."
+	},
+	midnightsnack: {
+		name: "Midnight Snack",
+		desc: "At the end of every turn, holder restores 1/8 of its max HP if it is asleep.",
+
+		heal: "  [POKEMON] restored some HP using its Midnight Snack!",
+	},
+	squirtgun: {
+		name: "Squirt Gun",
+		desc: "After using a single target move, use Water Gun on the target. Single use.",
+	},
+	grimseeds: {
+		name: "Grim Seeds",
+		desc: "After the holder faints, if its a Grass-type, it Leech Seeds a random foe.",
+	},
 };

@@ -30580,4 +30580,32 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
+	eatrocks: {
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Eat Rocks",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		onHit(pokemon) {
+			let factor = 0.4;
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					factor = 0.6;
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Eat Rocks', '[of] ' + pokemon);
+				}
+			}
+			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+			if (!success) {
+				this.add('-fail', pokemon, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
+		target: "self",
+		type: "Dark",
+		contestType: "Cool",
+	}
 };

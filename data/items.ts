@@ -8896,4 +8896,58 @@ export const Items: {[itemid: string]: ItemData} = {
 			}, pokemon);
 		},
 	},
+	mirrorclaw: {
+		name: "Mirror Claw",
+		spritenum: 373,
+		isNonstandard: "Future",
+		onModifyMove(move) {
+			if (move.category === "Status") return;
+			if (move.multihit) return;
+			if (this.randomChance(1, 20)) {
+				move.multihit = 2;
+			}
+		},
+	},
+	rope: {
+		name: "Rope",
+		isNonstandard: "Future",
+		onResidual(pokemon) {
+			if (pokemon.hp / pokemon.baseMaxhp < 0.33) {
+				for (const foe of pokemon.foes()) {
+					foe.addVolatile('curse', pokemon, this.effect);
+				}
+				pokemon.faint(pokemon, this.effect);
+			}
+		},
+	},
+	midnightsnack: {
+		name: "Midnight Snack",
+		spritenum: 242,
+		isNonstandard: "Future",
+		onResidual(pokemon) {
+			if (pokemon.status !== 'slp') return;
+			this.heal(pokemon.baseMaxhp / 8);
+		},
+	},
+	squirtgun: {
+		name: "Squirt Gun",
+		isNonstandard: "Future",
+		onAfterMoveSecondarySelf(source, target, move) {
+			if (!move || !target) return;
+			if (move.target !== 'normal') return;
+			if (source.useItem()) {
+				this.actions.useMove('watergun', source, target);
+			}
+		},
+	},
+	grimseeds: {
+		name: "Grim Seeds",
+		isNonstandard: "Future",
+		onFaint(pokemon) {
+			if (!pokemon.hasType('grass')) return;
+			const target = this.sample(pokemon.foes().filter((foe) => !foe.fainted));
+			if (!target) return;
+			target.addVolatile('leechseeds');
+		},
+	},
 };

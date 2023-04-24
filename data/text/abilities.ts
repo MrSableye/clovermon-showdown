@@ -3158,4 +3158,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Original Sin",
 		shortDesc: "Added 1/256 chance for user's moves to miss. User's held item does nothing. Poison Sting always poisons. Summons Genwun Room upon switch-in.",
 	},
+	trickster: {
+		name: "Trickster",
+		shortDesc: "This Pokemon's Status moves have priority raised by 1, going first within its priority. If hit by one Fairy move, this Pokemon's Status moves ignore type immunites and certain Abilities of other Pokemon. Fairy immunity.",
+	
+		start: "  The power of [POKEMON]'s Status moves rose!",
+	},
 };

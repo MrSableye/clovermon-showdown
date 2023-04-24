@@ -2335,4 +2335,24 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	mirrorclaw: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	rope: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	midnightsnack: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	squirtgun: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	grimseeds: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

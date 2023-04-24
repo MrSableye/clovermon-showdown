@@ -10653,4 +10653,46 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.field.addPseudoWeather('genwunroom');
 		},
 	},
+	trickster: {
+		name: "Trickster",
+		isNonstandard: "Future",
+		onFractionalPriorityPriority: -1,
+		onFractionalPriority(priority, pokemon, target, move) {
+			if (move.category === "Status") {
+				return 0.1;
+			}
+		},
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.category === 'Status') {
+				return priority + 1;
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fairy') {
+				move.accuracy = true;
+				if (!target.addVolatile('trickster')) {
+					this.add('-immune', target, '[from] ability: Trickster');
+				}
+				return null;
+			}
+		},
+		onEnd(pokemon) {
+			pokemon.removeVolatile('trickster');
+		},
+		condition: {
+			noCopy: true, // doesn't get copied by Baton Pass
+			onStart(target) {
+				this.add('-start', target, 'ability: Trickster');
+			},
+			onModifyMove(move) {
+				if (move.category === 'Status') {
+					move.ignoreAbility = true;
+					move.ignoreImmunity = true;
+				}
+			},
+			onEnd(target) {
+				this.add('-end', target, 'ability: Trickster', '[silent]');
+			},
+		},
+	},
 };

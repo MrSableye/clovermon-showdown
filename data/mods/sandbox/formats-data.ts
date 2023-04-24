@@ -11097,4 +11097,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	yamigiri: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

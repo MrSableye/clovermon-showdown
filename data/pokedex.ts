@@ -42225,6 +42225,17 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Bug", "Human-Like"],
 		tags: ["Weedlekind"],
 	},
+	yamigiri: {
+		num: -42302,
+		name: "Yamigiri",
+		types: ["Dark", "Ghost"],
+		baseStats: {hp: 85, atk: 110, def: 110, spa: 100, spd: 100, spe: 85},
+		abilities: {0: "Trickster"},
+		heightm: 0.5,
+		weightkg: 11,
+		color: "Purple",
+		eggGroups: ["Human-Like"],
+	},
 	oblivion: {
 		num: -42099,
 		name: "Oblivion",

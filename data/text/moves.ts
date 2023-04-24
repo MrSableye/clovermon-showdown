@@ -9059,4 +9059,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "All-Out Irony",
 		shortDesc: "If a foe is switching out, hits it at 2x power. 100x power against Krackokind or Weedlekind Pokemon.",
 	},
+	eatrocks: {
+		name: "Eat Rocks",
+		shortDesc: "Removes Spikes, Toxic Spikes, and Stealth Rock from the user's side. If it removes a hazard this way, it heals 60%. Otherwise, 40%.",
+	},
 };
