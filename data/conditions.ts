@@ -1132,7 +1132,8 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-sidestart', side, 'Lucky Roll');
 			this.effectState.layers++;
 		},
-		onModifyMove(move) {
+		onModifyMove(move, pokemon) {
+			if (pokemon.hasItem('heavydutyboots')) return;
 			const chanceMod = Math.pow(1.05, this.effectState.layers || 0);
 			if (move.secondaries) {
 				for (const secondary of move.secondaries) {
@@ -1141,7 +1142,8 @@ export const Conditions: {[k: string]: ConditionData} = {
 			}
 			if (move.self?.chance) move.self.chance *= chanceMod;
 		},
-		onModifyCritRatio(critRatio) {
+		onModifyCritRatio(critRatio, pokemon) {
+			if (pokemon.hasItem('heavydutyboots')) return;
 			if (this.effectState.layers >= 3) return critRatio + 1;
 		},
 	},
