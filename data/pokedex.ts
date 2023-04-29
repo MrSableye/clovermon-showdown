@@ -43078,7 +43078,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Amorphous", "Fairy"],
 		gen: 0,
 	},
-	gardenia: { // creator by feneto_ OCB 
+	gardenia: {
 		num: -50000,
 		name: "Gardenia",
 		types: ["Psychic", "Fairy", "Steel"],
@@ -43090,8 +43090,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Pink",
 		eggGroups: ["Fairy"],
 		gen: 0,
+		creator: "feneto_ OCB",
 	},
-	unghost: { // creator by feneto_ OCB 
+	unghost: {
 		num: -50001,
 		name: "Unghost",
 		types: ["Normal", "Normal", "Water"],
@@ -43103,21 +43104,23 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Black",
 		eggGroups: ["Fairy"],
 		gen: 0,
+		creator: "feneto_ OCB",
 	},
-	leeohlee: { // creator by feneto_ OCB 
+	leeohlee: {
 		num: -50002,
 		name: "Leeohlee",
 		types: ["Normal", "Normal"],
 		gender: "M",
 		baseStats: {hp: 123, atk: 1, def: 103, spa: 177, spd: 0, spe: 137},
-		abilities: {0: "Muhmentum", 1: "Inversion", H: "Grass Terrain"},
+		abilities: {0: "Muhmentum", 1: "Inversion", H: "Grassy Surge"},
 		heightm: 1.7,
 		weightkg: 70,
 		color: "Black",
 		eggGroups: ["Fairy"],
 		gen: 0,
+		creator: "feneto_ OCB",
 	},
-	fucksteel: { // creator by feneto_ OCB 
+	fucksteel: {
 		num: -50003,
 		name: "Fucksteel",
 		types: ["Steel", "Fairy"],
@@ -43129,8 +43132,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Red",
 		eggGroups: ["Fairy"],
 		gen: 0,
+		creator: "feneto_ OCB",
 	},
-	uirapuobscuri: { // creator by feneto_ OCB 
+	uirapuobscuri: {
 		num: -50004,
 		name: "Uirapuobscuri",
 		types: ["Normal", "Ghost", "Fire"],
@@ -43142,6 +43146,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Black",
 		eggGroups: ["Fairy"],
 		gen: 0,
+		creator: "feneto_ OCB",
 	},
 	/* Clover CAP Megas */
 	oogabugamega: {

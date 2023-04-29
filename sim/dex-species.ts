@@ -19,6 +19,7 @@ export interface SpeciesData extends Partial<Species> {
 	baseStats: StatsTable;
 	eggGroups: string[];
 	weightkg: number;
+	creator?: string;
 }
 
 export type ModdedSpeciesData = SpeciesData | Partial<Omit<SpeciesData, 'name'>> & {inherit: true};
@@ -234,6 +235,7 @@ export class Species extends BasicEffect implements Readonly<BasicEffect & Speci
 	declare readonly exclusiveMoves?: readonly ID[];
 	declare readonly comboMoves?: readonly ID[];
 	declare readonly essentialMove?: ID;
+	declare readonly creator?: string;
 
 	constructor(data: AnyObject) {
 		super(data);

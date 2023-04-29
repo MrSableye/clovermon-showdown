@@ -628,6 +628,9 @@ export const commands: Chat.ChatCommands = {
 						Gen: String(pokemon.gen) || 'CAP',
 						Height: `${pokemon.heightm} m`,
 					};
+					if (pokemon.creator) {
+						details["Creator"] = `Creator: ${pokemon.creator}`;
+					}
 					details["Weight"] = `${pokemon.weighthg / 10} kg <em>(${weighthit} BP)</em>`;
 					const gmaxMove = pokemon.canGigantamax || dex.species.get(pokemon.changesFrom).canGigantamax;
 					if (gmaxMove && dex.gen >= 8) details["G-Max Move"] = gmaxMove;
