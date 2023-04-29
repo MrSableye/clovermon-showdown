@@ -629,7 +629,7 @@ export const commands: Chat.ChatCommands = {
 						Height: `${pokemon.heightm} m`,
 					};
 					if (pokemon.creator) {
-						details["Creator"] = `Creator: ${pokemon.creator}`;
+						details["Creator"] = pokemon.creator;
 					}
 					details["Weight"] = `${pokemon.weighthg / 10} kg <em>(${weighthit} BP)</em>`;
 					const gmaxMove = pokemon.canGigantamax || dex.species.get(pokemon.changesFrom).canGigantamax;
