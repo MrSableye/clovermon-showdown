@@ -36674,7 +36674,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Ditto"],
 		changesFrom: "Polybrawn",
 	},
-	    katir: {
+	katir: {
 		num: 42241,
 		name: "Katir",
 		types: ["Normal"],
@@ -36686,6 +36686,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Human-Like"],
 		gen: 8,
+		creator: "Mr. Sableye",
 	},
 	blobboshenesys: {
 		num: 69132,
