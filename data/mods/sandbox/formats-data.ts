@@ -11022,31 +11022,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	gardenia: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-	unghost: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-	leeohlee: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-	fucksteel: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-	uirapuobscuri: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
 	zangursed: {
 		inherit: true,
 		isNonstandard: null,
