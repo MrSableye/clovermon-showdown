@@ -9754,6 +9754,26 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	gardenia: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	unghost: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	leeohlee: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fucksteel: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	uirapuobscuri: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosswitch: {
 		tier: "Illegal",
 		isNonstandard: "Future",
