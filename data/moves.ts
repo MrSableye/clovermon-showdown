@@ -30607,5 +30607,5 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "self",
 		type: "Dark",
 		contestType: "Cool",
-	}
+	},
 };
