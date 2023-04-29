@@ -10931,6 +10931,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		eggGroups: ["Water 1", "Amorphous"],
 		requiredItem: "Stunfiskite",
+		creator: "Mr. Sableye",
 	},
 	mienfoo: {
 		num: 619,
@@ -34936,6 +34937,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Field"],
 		gen: 8,
+		creator: "Mr. Sableye",
 	},
 	fusjahlmega: {
 		num: 42125,
@@ -36711,6 +36713,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Green",
 		eggGroups: ["Ditto"],
 		gen: 8,
+		creator: "Mr. Sableye",
 	},
 	blobbosgalar: {
 		num: 69132,
@@ -39971,6 +39974,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Ditto",
 		],
 		gen: 8,
+		creator: "Mr. Sableye",
 	},
 	blobbosclause: {
 		num: 69132,
@@ -40140,6 +40144,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Ditto",
 		],
 		gen: 8,
+		creator: "Mr. Sableye",
 	},
 	blobbosadventurerlegendary: {
 		num: 69132,
@@ -40167,6 +40172,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 		battleOnly: "Blobbos-Adventurer",
+		creator: "Mr. Sableye",
 	},
 	blobbosprimal: {
 		num: 69132,
@@ -40824,6 +40830,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		eggGroups: ["Ditto"],
 		gen: 8,
+		creator: "Mr. Sableye",
 	},
 	blobboslichmortal: {
 		num: 69132,
@@ -40838,6 +40845,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		eggGroups: ["Ditto"],
 		gen: 8,
+		creator: "Mr. Sableye",
 	},
 	blobbosswitch: {
 		num: 69132,
@@ -41582,6 +41590,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Ditto",
 		],
 		gen: 8,
+		creator: "Mr. Sableye",
 	},
 	blobbosduelist: {
 		num: 69132,
@@ -41608,6 +41617,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Ditto",
 		],
 		gen: 8,
+		creator: "Mr. Sableye",
 	},
 	blobbosduelistdark: {
 		num: 69132,
@@ -41634,6 +41644,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Ditto",
 		],
 		gen: 8,
+		creator: "Mr. Sableye",
 	},
 	blobboschameleon: {
 		num: 69132,
@@ -42212,6 +42223,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Purple",
 		eggGroups: ["Bug", "Human-Like"],
 		tags: ["Weedlekind"],
+		creator: "Mr. Sableye",
 	},
 	karkeedle: {
 		num: -42692,
@@ -42224,6 +42236,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Grey",
 		eggGroups: ["Bug", "Human-Like"],
 		tags: ["Weedlekind"],
+		creator: "Mr. Sableye",
 	},
 	yamigiri: {
 		num: -42302,
@@ -42235,6 +42248,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 11,
 		color: "Purple",
 		eggGroups: ["Human-Like"],
+		creator: "Mr. Sableye",
 	},
 	oblivion: {
 		num: -42099,
