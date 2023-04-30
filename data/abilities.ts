@@ -10705,7 +10705,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (damage >= target.hp) {
 				target.formeChange('blobboshomestuckgodtier', this.effect, true);
 				target.heal(target.baseMaxhp);
-				return 0;
+				return false;
 			}
 		},
 	},
