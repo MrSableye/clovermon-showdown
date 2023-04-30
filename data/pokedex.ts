@@ -41610,7 +41610,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 118,
 		},
 		abilities: {
-			0: "Plundered Luck",
+			0: "Thief of Light",
 		},
 		heightm: 0.4,
 		weightkg: 5.7,
