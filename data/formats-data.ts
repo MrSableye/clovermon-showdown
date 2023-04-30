@@ -9682,7 +9682,31 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	galashiwatt: {
+	galashitwatt: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	yanture: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	schizstarf: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	yancoon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	yanorm: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	slimifu: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	gunkirby: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
