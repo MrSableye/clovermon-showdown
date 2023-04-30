@@ -3164,4 +3164,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	
 		start: "  The power of [POKEMON]'s Status moves rose!",
 	},
+	ascension: {
+		name: "Ascension",
+		shortDesc: "This Pokemon transforms into Blobbos-Homestuck-God-Tier and heals to full health if it deals lethal damage to itself.",
+	},
+	thiefoflight: {
+		name: "Thief of Light",
+		desc: "This Pokemon's moves have their secondary effect chance doubled. Foes's moves have their secondary effect chance removed. Immune to Ground. Light of Ruin becomes Heroine's Light.",
+		shortDesc: "Doubles user's secondary effect chances, removes foe's secondary effect chance. Immune to Ground. Light of Ruin becomes Heroine's Light.",
+	},
 };

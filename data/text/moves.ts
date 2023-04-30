@@ -9063,4 +9063,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Eat Rocks",
 		shortDesc: "Removes Spikes, Toxic Spikes, and Stealth Rock from the user's side. If it removes a hazard this way, it heals 60%. Otherwise, 40%.",
 	},
+	heroineslight: {
+		name: "Heroine's Light",
+		desc: "The target's stat stages greater than 0 are stolen from it and applied to the user before dealing damage.",
+		shortDesc: "Steals target's boosts before dealing damage.",
+
+		clearBoost: "  [SOURCE] stole the target's boosted stats!",
+	},
 };

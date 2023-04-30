@@ -1887,4 +1887,8 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ascension: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

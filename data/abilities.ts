@@ -10695,4 +10695,59 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			},
 		},
 	},
+	ascension: {
+		name: "Ascension",
+		isNonstandard: "Future",
+		onDamagePriority: -40,
+		onDamage(damage, target, source, effect) {
+			if (target.species.id !== 'blobboshomestuck') return;
+			if ((source !== target) && (effect.id !== 'recoil')) return;
+			if (damage >= target.hp) {
+				target.formeChange('blobboshomestuckgodtier', this.effect, true);
+				target.heal(target.baseMaxhp);
+				return 0;
+			}
+		},
+	},
+	thiefoflight: {
+		name: "Thief of Light",
+		isNonstandard: "Future",
+		onStart(pokemon) {
+			const lightOfRuin = pokemon.baseMoves.indexOf('lightofruin');
+			if (lightOfRuin >= 0) {
+				const move = this.dex.moves.get('heroineslight');
+				pokemon.baseMoveSlots[lightOfRuin] = {
+					move: move.name,
+					id: move.id,
+					pp: (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5,
+					maxpp: (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5,
+					target: move.target,
+					disabled: false,
+					disabledSource: '',
+					used: false,
+				};
+				pokemon.moveSlots = pokemon.baseMoveSlots.slice();
+			}
+		},
+		onModifyMovePriority: -2,
+		onFoeModifyMove(move) {
+			if (move.secondaries) {
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance = 0;
+				}
+			}
+			if (move.self?.chance) move.self.chance = 0;
+		},
+		onModifyMove(move) {
+			if (move.secondaries) {
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance *= 2;
+				}
+			}
+			if (move.self?.chance) move.self.chance *= 2;
+		},
+		onImmunity(type, pokemon) {
+			if (type === 'ground') return false;
+		},
+	},
 };
