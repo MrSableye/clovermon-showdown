@@ -5709,7 +5709,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fontabapol: {
 		inherit: true,
-		tier: "UU",
+		tier: "UUBL",
 		isNonstandard: null,
 	},
 	fontabar9k: {
