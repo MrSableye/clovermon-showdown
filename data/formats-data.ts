@@ -9774,6 +9774,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	lukingaryu: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosswitch: {
 		tier: "Illegal",
 		isNonstandard: "Future",

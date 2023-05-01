@@ -11047,6 +11047,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	lukingaryu: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	zangursed: {
 		inherit: true,
 		isNonstandard: null,

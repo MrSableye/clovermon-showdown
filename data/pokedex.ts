@@ -43143,6 +43143,19 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Fairy"],
 		gen: 0,
 	},
+	lukingaryu: { // creator by feneto_ OCB 
+		num: -50005,
+		name: "Luking-Aryu",
+		types: ["Fire", "Fire", "Dark"],
+		gender: "M",
+		baseStats: {hp: 110, atk: 140, def: 90, spa: 40, spd: 80, spe: 140},
+		abilities: {0: "Unseen Fist", 1: "Hyper Zone", H: "Motor Drive"},
+		heightm: 1.8,
+		weightkg: 80,
+		color: "Red",
+		eggGroups: ["Fairy"],
+		gen: 0,
+	},
 	/* Clover CAP Megas */
 	oogabugamega: {
 		num: 69268,
