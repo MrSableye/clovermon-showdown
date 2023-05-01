@@ -11102,4 +11102,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+    gunkirby: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+    },
 };
