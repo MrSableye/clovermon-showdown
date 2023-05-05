@@ -42315,6 +42315,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 6.4,
 		color: "Brown",
 		eggGroups: ["Undiscovered"],
+		creator: "Mainzo",
 	},
 	megaweedle: {
 		num: -42102,
@@ -42328,6 +42329,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
 		tags: ["Weedlekind"],
+		creator: "4 Legs Dinossaur",
 	},
 	krackowalker: {
 		num: -42113,
@@ -42379,6 +42381,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		tags: ["Krackokind"],
+		creator: "Karma",
 	},
 	krakenwalker: {
 		num: -42888,
@@ -42396,6 +42399,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		tags: ["Krackokind"],
+		creator: "Zac",
 	},
 	yanorm: {
 		num: -42110,
@@ -42409,6 +42413,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		evos: ["Yancoon"],
 		eggGroups: ["Undiscovered"],
+		creator: "Hitmonsamba",
 	},
 	yancoon: {
 		num: -42111,
@@ -42424,6 +42429,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 20,
 		evos: ["Yanture"],
 		eggGroups: ["Bug", "Fairy"],
+		creator: "Hitmonsamba",
 	},
 	yanture: {
 		num: -42112,
@@ -42438,6 +42444,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		prevo: "Yancoon",
 		evoLevel: 45,
 		eggGroups: ["Bug", "Fairy"],
+		creator: "Hitmonsamba",
 	},
 	schiztarf: {
 		num: -42114,
@@ -42450,6 +42457,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 86,
 		color: "Yellow",
 		eggGroups: ["Monster", "Grass"],
+		creator: "Karma",
 	},
 	stingulor: {
 		num: -42214,
@@ -42977,6 +42985,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Green",
 		eggGroups: ["Water 2", "Field"],
 		gen: 8,
+		creator: "Shyguy",
 	},
 	pizzisdee: {
 		num: -42021,
