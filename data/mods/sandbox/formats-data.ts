@@ -11107,4 +11107,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	isNonstandard: null,
 	tier: "OU",
     },
+    towhorse: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+    },
 };

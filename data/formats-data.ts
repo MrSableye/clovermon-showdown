@@ -9709,6 +9709,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	gunkirby: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+		},
+	towhorse: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	taterdoom: {
 		tier: "Illegal",
