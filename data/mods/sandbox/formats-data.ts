@@ -11103,13 +11103,23 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
     gunkirby: {
-	inherit: true,
-	isNonstandard: null,
-	tier: "OU",
+	    inherit: true,
+	    isNonstandard: null,
+	    tier: "OU",
     },
     towhorse: {
-	inherit: true,
-	isNonstandard: null,
-	tier: "OU",
+	    inherit: true,
+	    isNonstandard: null,
+	    tier: "OU",
     },
+    phantacade: {
+        inherit: true,
+        isNonstandard: null,
+        tier: "OU",
+    },
+	purplegoat: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
