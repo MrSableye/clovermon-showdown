@@ -187,7 +187,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			0: "Synchronize", 
 			1: "Inner Focus", 
 			H: "Magic Guard",
-			S: "Big Brain",
 		},
 	},
 };

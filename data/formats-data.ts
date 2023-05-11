@@ -9690,7 +9690,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	schizstarf: {
+	schiztarf: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -9709,8 +9709,16 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	gunkirby: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-		},
+	},
 	towhorse: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	phantacade: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	purplegoat: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
