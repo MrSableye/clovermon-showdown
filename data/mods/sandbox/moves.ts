@@ -4533,4 +4533,24 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	acridblaze: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shellup: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shatteringstrike: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sandblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	scavenge: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
