@@ -9082,4 +9082,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Shattering Strike",
 		shortDesc: "Breaks the target's protection and lowers their Defense by 1.",
 	},
+	sandblast: {
+		name: "Sandblast",
+		shortDesc: "30% chance to lower the target's accuracy.",
+	},
+	scavenge: {
+		name: "Scavenge",
+		shortDesc: "hp recovery  and user item recovery.",
+	},
 };
