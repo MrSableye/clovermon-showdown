@@ -43223,7 +43223,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: -42026,
 		name: "Podostroud",
 		types: ["Fire", "Ground"],
-		baseStats: {hp: 111, atk: 108, def: 64, spa: 75, spd: 145, spe: 53},
+		baseStats: {hp: 111, atk: 108, def: 64, spa: 75, spd: 145, spe: 47},
 		abilities: {0: "Drought", 1: "Poison Touch", H: "Wonder Skin", S: "Detonator"},
 		heightm: 0,
 		weightkg: 0,
