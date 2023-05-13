@@ -30122,8 +30122,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		beforeTurnCallback(pokemon) {
 			for (const side of this.sides) {
 				if (side.hasAlly(pokemon)) continue;
-				side.addSideCondition('pursuit', pokemon);
-				const data = side.getSideConditionData('pursuit');
+				side.addSideCondition('sinkhole', pokemon);
+				const data = side.getSideConditionData('sinkhole');
 				if (!data.sources) {
 					data.sources = [];
 				}
@@ -30134,18 +30134,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
 		},
 		onTryHit(target, pokemon) {
-			target.side.removeSideCondition('pursuit');
+			target.side.removeSideCondition('sinkhole');
 		},
 		condition: {
 			duration: 1,
 			onBeforeSwitchOut(pokemon) {
-				this.debug('Pursuit start');
+				this.debug('Sinkhole start');
 				let alreadyAdded = false;
 				pokemon.removeVolatile('destinybond');
 				for (const source of this.effectState.sources) {
 					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
 					if (!alreadyAdded) {
-						this.add('-activate', pokemon, 'move: Pursuit');
+						this.add('-activate', pokemon, 'move: Sinkhole');
 						alreadyAdded = true;
 					}
 					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
@@ -30159,7 +30159,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 							}
 						}
 					}
-					this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+					this.actions.runMove('sinkhole', source, source.getLocOf(pokemon));
 				}
 			},
 		},
@@ -30607,6 +30607,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "self",
 		type: "Dark",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	heroineslight: {
 		accuracy: 100,
@@ -30622,5 +30623,112 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Fairy",
 		contestType: "Beautiful",
+	},
+	scavenge: {
+		num: 105,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Scavenge",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		onHit(pokemon) {
+			if (pokemon.item || !pokemon.lastItem) return false;
+			const item = pokemon.lastItem;
+			pokemon.lastItem = '';
+			this.add('-item', pokemon, this.dex.items.get(item), '[from] move: Scavenge');
+			pokemon.setItem(item);
+		},
+		heal: [49, 100],
+		secondary: null,
+		target: "self",
+		type: "Plastic",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	acridblaze: {
+		num: 305,
+		accuracy: 95,
+		basePower: 20,
+		category: "Special",
+		name: "Acrid Blaze",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			status: 'tox',
+		},
+		recoil: [3, 4],
+		target: "normal",
+		type: "Fire",
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	shellup: {
+		num: 105,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Shell Up",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		heal: [4, 5],
+		self: {
+			boosts: {
+				def: -1,
+				spd: -1,
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Water",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	shatteringstrike: {
+		num: 710,
+		accuracy: 90,
+		basePower: 110,
+		category: "Physical",
+		name: "Shattering Strike",
+		pp: 10,
+		priority: 0,
+		breaksProtect: true,
+		flags: {contact: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -1,
+			},
+		},
+		target: "normal",
+		type: "Ice",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	sandblast: {
+		num: 190,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Sandblast",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			boosts: {
+				accuracy: -1,
+			},
+		},
+		target: "normal",
+		type: "Rock",
+		contestType: "Tough",
+		isNonstandard: "Future",
 	},
 };

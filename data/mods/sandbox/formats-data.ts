@@ -11122,4 +11122,34 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	podostroud: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	bidripae: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	flochelin: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	emestacean: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	flamiptile: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	piiviasuustro: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "UU",
+	},
 };

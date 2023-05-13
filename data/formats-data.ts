@@ -10010,4 +10010,32 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	tenyuu: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	podostroud: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bidripae: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	flochelin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	emestacean: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	piiviasuustro: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	flamiptile: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };

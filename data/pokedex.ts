@@ -40041,12 +40041,12 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Fairy", "Normal"],
 		gender: "N",
 		baseStats: {
-			hp: 100,
-			atk: 90,
-			def: 125,
-			spa: 50,
-			spd: 85,
-			spe: 20,
+			hp: 80,
+			atk: 60,
+			def: 95,
+			spa: 60,
+			spd: 95,
+			spe: 15,
 		},
 		abilities: {
 			0: "Anticipation",
@@ -42192,6 +42192,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 60,
 		color: "Brown",
 		eggGroups: ["Human-Like"],
+		creator: "Genocity",
 	},
 	horse: {
 		num: -42004,
@@ -42204,6 +42205,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 4800,
 		color: "Brown",
 		eggGroups: ["Undiscovered"],
+		creator: "hell if i know",
 	},
 	dussans: {
 		num: -42003,
@@ -42216,6 +42218,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 15,
 		color: "White",
 		eggGroups: ["Monster", "Fairy"],
+		creator: "Abel45040",
 	},
 	spweedle: {
 		num: -42005,
@@ -42228,6 +42231,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		eggGroups: ["Bug"],
 		tags: ["Weedlekind"],
+		creator: "hell if i know",
 	},
 	waterweedle: {
 		num: 13,
@@ -42240,6 +42244,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		eggGroups: ["Bug"],
 		tags: ["Weedlekind"],
+		creator: "4 legs dinosaur"
 	},
 	sableedle: {
 		num: -42691,
@@ -42290,6 +42295,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 		tags: ["Weedlekind"],
+		creator: "4 legs dinosaur",
 	},
 	spireedle: {
 		num: -42100,
@@ -42303,6 +42309,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		tags: ["Weedlekind"],
+		creator: "4 legs dinosaur",
 	},
 	dalleedle: {
 		num: -42101,
@@ -42315,7 +42322,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 6.4,
 		color: "Brown",
 		eggGroups: ["Undiscovered"],
-		creator: "Mainzo",
+		creator: "Mainzo3Definitive",
 	},
 	megaweedle: {
 		num: -42102,
@@ -42329,7 +42336,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
 		tags: ["Weedlekind"],
-		creator: "4 Legs Dinossaur",
+		creator: "4 legs dinosaur",
 	},
 	krackowalker: {
 		num: -42113,
@@ -42347,6 +42354,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Monster", "Amorphous"],
 		gen: 8,
 		tags: ["Krackokind"],
+		creator: "4 legs dinosaur",
 	},
 	susko: {
 		num: -42864,
@@ -42364,6 +42372,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		tags: ["Krackokind"],
+		creator: "KarmaAttackCouncil"
 	},
 	shroomko: {
 		num: -42865,
@@ -42381,7 +42390,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		tags: ["Krackokind"],
-		creator: "Karma",
+		creator: "KarmaAttackCouncil",
 	},
 	krakenwalker: {
 		num: -42888,
@@ -42457,7 +42466,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 86,
 		color: "Yellow",
 		eggGroups: ["Monster", "Grass"],
-		creator: "Karma",
+		creator: "KarmaAttackCouncil",
 	},
 	stingulor: {
 		num: -42214,
@@ -42470,6 +42479,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 79,
 		color: "Blue",
 		eggGroups: ["Bug", "Monster"],
+		creator: "hell if i know",
 	},
 	titaneedle: {
 		num: -42215,
@@ -42482,6 +42492,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 632,
 		color: "Green",
 		eggGroups: ["Bug", "Monster"],
+		creator: "hell if i know",
 	},
 	heaventoad: {
 		num: -42009,
@@ -42494,6 +42505,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		tags: ["Sub-Legendary"],
 		eggGroups: ["Undiscovered"],
+		creator: "Showderp",
 	},
 	francine: {
 		num: -42006,
@@ -42506,6 +42518,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 5.1,
 		color: "Blue",
 		eggGroups: ["Field", "Human-Like"],
+		creator: "Francine is a character from Animal Crossing."
 	},
 	nothing: {
 		num: -42007,
@@ -42518,6 +42531,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 0,
 		color: "White",
 		eggGroups: ["Undiscovered"],
+		creator: "Nobody created this."
 	},
 	kingmadio: {
 		num: -42117,
@@ -42531,6 +42545,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 8,
 		color: "Black",
 		eggGroups: ["Undiscovered"],
+		creator: "Cutlerine, probably",
 	},
 	botanerry: {
 		num: -840,
@@ -42542,6 +42557,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 0.5,
 		color: "Green",
 		eggGroups: ["Grass", "Dragon"],
+		creator: "DoomWillBefallAll",
 	},
 	smellsumo: {
 		num: -42118,
@@ -42557,6 +42573,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 90.5,
 		color: "Red",
 		eggGroups: ["Human-Like"],
+		creator: "DoomWillBefallAll",
 	},
 	abdiking: {
 		num: -69132,
@@ -42581,6 +42598,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Ditto",
 		],
 		gen: 8,
+		creator: "DoomWillBefallAll",
 	},
 	galashitwatt: {
 		num: -29371,
@@ -42597,6 +42615,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Yellow",
 		eggGroups: ["Fairy"],
 		gen: 9,
+		creator: "DoomWillBefallAll",
 	},
 	taterdoom: {
 		num: -69240,
@@ -42628,6 +42647,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Monster",
 		],
 		gen: 9,
+		creator: "DoomWillBefallAll",
 	},
 	buge: {
 		num: -42106,
@@ -42642,6 +42662,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Bige"],
 		eggGroups: ["Bug"],
 		gen: 9,
+		creator: "Monkey junkie74",
 	},
 	bige: {
 		num: -42107,
@@ -42657,6 +42678,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 48,
 		eggGroups: ["Bug"],
 		gen: 9,
+		creator: "Monkey junkie74",
 	},
 	jerkistal: {
 		num: -42014,
@@ -42670,6 +42692,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		eggGroups: ["Mineral", "Amorphous"],
 		gen: 0,
+		creator: "DoomWillBefallAll",
 	},
 	shroomageddon: {
 		num: -42020,
@@ -42683,6 +42706,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Pink",
 		eggGroups: ["Grass"],
 		gen: 0,
+		creator: "DoomWillBefallAll",
 	},
 	sparmor: {
 		num: -42015,
@@ -42719,6 +42743,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Monster",
 		],
 		gen: 8,
+		creator: "Spectralized",
 	},
 	ohmadillo: {
 		num: -42016,
@@ -42755,6 +42780,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Monster",
 		],
 		gen: 8,
+		creator: "Spectralized",
 	},
 	colombolt: {
 		num: -42017,
@@ -42789,6 +42815,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Monster",
 		],
 		gen: 8,
+		creator: "Spectralized",
 	},
 	puppois: {
 		num: -42018,
@@ -42824,6 +42851,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Field",
 		],
 		gen: 8,
+		creator: "Spectralized",
 	},
 	toxanine: {
 		num: -42019,
@@ -42839,6 +42867,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Field"],
 		otherFormes: ["Toxanine-Mega"],
 		formeOrder: ["Toxanine", "Toxanine-Mega"],
+		creator: "Spectralized",
 	},
 	toxaninemega: {
 		num: -42019,
@@ -42853,6 +42882,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Purple",
 		eggGroups: ["Field"],
 		requiredItem: "Toxanite",
+		creator: "Spectralized",
 	},
 	fatherfuck: {
 		num: -42076,
@@ -42866,6 +42896,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		eggGroups: ["Mineral", "Dragon"],
 		gen: 0,
+		creator: "C3ll10u5",
 	},
 	vermingio: {
 		num: -42008,
@@ -42878,6 +42909,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 0.6,
 		color: "Yellow",
 		eggGroups: ["Field"],
+		creator: "hell if i know",
 	},
 	rootchew: {
 		num: 42171,
@@ -42932,6 +42964,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 0.01,
 		color: "White",
 		eggGroups: ["Fairy"],
+		creator: "Clown",
 	},
 	ointmitemega: {
 		num: -42011,
@@ -42947,6 +42980,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Fairy"],
 		requiredItem: "Ointmiteite",
+		creator: "Clown",
 	},
 	beegyosh: {
 		num: -42012,
@@ -42959,6 +42993,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 9999999999999,
 		color: "Green",
 		eggGroups: ["Dragon", "Monster"],
+		creator: "C3ll10u5",
 	},
 	monikat: {
 		num: -42074,
@@ -42972,6 +43007,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		eggGroups: ["Monster", "Field"],
 		gen: 8,
+		creator: "Monkey junkie74",
 	},
 	saccestoda: {
 		num: -8080,
@@ -42985,7 +43021,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Green",
 		eggGroups: ["Water 2", "Field"],
 		gen: 8,
-		creator: "Shyguy",
+		creator: "shyguywarrior",
 	},
 	pizzisdee: {
 		num: -42021,
@@ -42999,6 +43035,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		gen: 0,
+		creator: "Rexcanyon792",
 	},
 	fukinsuks: {
 		num: -42022,
@@ -43012,6 +43049,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Red",
 		eggGroups: ["Field"],
 		gen: 2,
+		creator: "Rexcanyon792",
 	},
 	joelbat: {
 		num: -42023,
@@ -43024,6 +43062,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 55,
 		color: "Green",
 		eggGroups: ["Flying"],
+		creator: "Rexcanyon792",
 	},
 	vintini: {
 		num: -42024,
@@ -43036,6 +43075,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 4,
 		color: "Green",
 		eggGroups: ["Undiscovered"],
+		creator: "Rexcanyon792",
 	},
 	zangursed: {
 		num: -42335,
@@ -43049,19 +43089,21 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Purple",
 		eggGroups: ["Field"],
 		gen: 0,
+		creator: "C3ll10u5",
 	},
 	oengas: {
 		num: -42336,
 		name: "Oengas",
 		types: ["Fire", "Ice"],
 		genderRatio: {M: 0.85, F: 0.15},
-		baseStats: {hp: 222, atk: 50, def: 86, spa: 146, spd: 86, spe: 116},
+		baseStats: {hp: 122, atk: 50, def: 86, spa: 146, spd: 86, spe: 116},
 		abilities: {0: "Berserk", 1: "Huge Power", H: "Magic Guard", S: "Refrigerate"},
 		heightm: 9.9,
 		weightkg: 1982.1,
 		color: "Red",
 		eggGroups: ["Field"],
 		gen: 0,
+		creator: "A Person Online",
 	},
 	emaneko: {
 		num: -42025,
@@ -43075,6 +43117,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Black",
 		eggGroups: ["Field"],
 		gen: 8,
+		creator: "Rexcanyon792",
 	},
 	sectsei: {
 		num: -42054,
@@ -43088,6 +43131,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		eggGroups: ["Bug"],
 		gen: 0,
+		creator: "mrmachmonaman",
 	},
 	hofucyea: {
 		num: -42077,
@@ -43104,6 +43148,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoCondition: "Rate Pokemon Alpha Sapphire 7.8/10 for having 'too much water'.",
 		eggGroups: ["Water 2", "Flying"],
 		gen: 8,
+		creator: "4 legs dinosaur",
 	},
 	gunkirby: {
 		num: -42500,
@@ -43117,6 +43162,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Pink",
 		eggGroups: ["Fairy"],
 		gen: 8,
+		creator: "A Person Online",
 	},
 	towhorse: {
 		num: -42501,
@@ -43130,6 +43176,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Grey",
 		eggGroups: ["Field", "Monster"],
 		gen: 8,
+		creator: "Monkey junkie74",
 	},
 	phantacade: {
 		num: -42502,
@@ -43143,6 +43190,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		eggGroups: ["Water2", "Monster"],
 		gen: 8,
+		creator: "Hitmonsamba",
 	},
 	purplegoat: {
 		num: -42503,
@@ -43156,6 +43204,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Purple",
 		eggGroups: ["Monster"],
 		gen: 8,
+		creator: "Zac",
 	},
 	tenyuu: {
 		num: 1000000,
@@ -43168,9 +43217,90 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Purple",
 		eggGroups: ["Undiscovered"],
 		gen: 1,
+		creator: "REXCANYON792",
 	},
-	slimifu: { // this was a fucking mistake. may god have mercy on my soul for adding this foul demon.
-		num: -42069,
+	podostroud: {
+		num: -42026,
+		name: "Podostroud",
+		types: ["Fire", "Ground"],
+		baseStats: {hp: 111, atk: 108, def: 64, spa: 75, spd: 145, spe: 53},
+		abilities: {0: "Drought", 1: "Poison Touch", H: "Wonder Skin", S: "Detonator"},
+		heightm: 0,
+		weightkg: 0,
+		color: "Red",
+		eggGroups: ["Undiscovered"],
+		gen: 8,
+		creator: "Rexcanyon792",
+	},
+	bidripae: {
+		num: -42027,
+		name: "Bidripae",
+		types: ["Water", "Bug"],
+		baseStats: {hp: 82, atk: 95, def: 155, spa: 108, spd: 61, spe: 49},
+		abilities: {0: "Drizzle", 1: "Shell Armor", H: "Rain Dish", S: "Volt Absorb"},
+		heightm: 0,
+		weightkg: 0,
+		color: "Red",
+		eggGroups: ["Undiscovered"],
+		gen: 8,
+		creator: "Rexcanyon792",
+	},
+	flochelin: {
+		num: -42028,
+		name: "Flochelin",
+		types: ["Ice", "Ghost"],
+		baseStats: {hp: 90, atk: 140, def: 60, spa: 70, spd: 70, spe: 120},
+		abilities: {0: "Snow Warning", 1: "Thick Fat", H: "Technician", S: "Tough Claws"},
+		heightm: 0,
+		weightkg: 0,
+		color: "Gray",
+		eggGroups: ["Undiscovered"],
+		gen: 8,
+		creator: "Rexcanyon792",
+	},
+	emestacean: {
+		num: -42029,
+		name: "Emestacean",
+		types: ["Rock", "Fighting"],
+		baseStats: {hp: 79, atk: 45, def: 91, spa: 133, spd: 86, spe: 116},
+		abilities: {0: "Sand Stream", 1: "Earth Eater", H: "No Guard", S: "Hydrophile"},
+		heightm: 0,
+		weightkg: 0,
+		color: "Brown",
+		eggGroups: ["Undiscovered"],
+		gen: 8,
+		creator: "Rexcanyon792",
+	},
+	piiviasuustro: {
+		num: -42135,
+		name: "Piiviasuustro",
+		types: ["Fairy", "Fighting", "Poison", "Psychic", "Steel", "Flying", "Flying"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 110, atk: 135, def: 95, spa: 95, spd: 115, spe: 80},
+		abilities: {0: "Doomed"},
+		heightm: 1.5,
+		weightkg: 1141.5,
+		color: "White",
+		eggGroups: ["Human-Like"],
+		gen: 0,
+		creator: "C3ll10u5",
+	},
+	flamiptile: {
+		num: -42108,
+		name: "Flamiptile",
+		types: ["Dragon", "Fire"],
+		genderRatio: {M: 0.5, F: 0.5},
+		baseStats: {hp: 84, atk: 32, def: 93, spa: 116, spd: 105, spe: 118},
+		abilities: {0: "Flame Body", 1: "Rough Skin", H: "Multiscale", S: "Unnerve"},
+		heightm: 1.5,
+		weightkg: 98.3,
+		color: "Blue",
+		eggGroups: ["Dragon", "Monster"],
+		gen: 0,
+		creator: "WingCapYT",
+	},
+	slimifu: { // i made a negative comment against slimifu here previously. it has been removed to make a notably better comment:
+		num: -42069, // fuck you, raycompetitive
 		name: "Slimifu",
 		types: ["Fairy", "Psychic"],
 		gender: "F",
@@ -43181,6 +43311,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Purple",
 		eggGroups: ["Amorphous", "Fairy"],
 		gen: 0,
+		creator: "R3lm",
 	},
 	gardenia: {
 		num: -50000,
