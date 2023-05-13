@@ -5699,7 +5699,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fontabak: {
 		inherit: true,
-		tier: "RU",
+		tier: "RUBL",
 		isNonstandard: null,
 	},
 	fontabaout: {
