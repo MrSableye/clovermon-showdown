@@ -10454,7 +10454,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			pokemon.foes(true).forEach((foe) => {
 				if (foe.status) {
 					if (['tox', 'psn'].includes(foe.status)) {
-						this.damage(foe.baseMaxhp / 16, foe, pokemon);
+						const heal = this.damage(foe.baseMaxhp / 16, foe, pokemon);
+						if (heal) {
+							this.heal(heal, pokemon);
+						}
 					}
 				} else {
 					foe.setStatus('tox');
