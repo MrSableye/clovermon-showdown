@@ -9790,23 +9790,23 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	gardenia: {
+	ferluci: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	unghost: {
+	armoredmewtwo: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	leeohlee: {
+	daemon: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	fucksteel: {
+	shaddow: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	uirapuobscuri: {
+	djiin: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
