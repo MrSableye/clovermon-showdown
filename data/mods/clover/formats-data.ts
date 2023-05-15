@@ -6591,7 +6591,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	socckat: {
 		inherit: true,
-		tier: "NU",
+		tier: "NUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"highjumpkick",
