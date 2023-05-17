@@ -11122,7 +11122,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	forgotno: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	podostroud: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	rendalopod: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

@@ -9722,6 +9722,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	forgotno: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	rendalopod: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	taterdoom: {
 		tier: "Illegal",
 		isNonstandard: "Future",
