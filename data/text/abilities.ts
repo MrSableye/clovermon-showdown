@@ -3119,7 +3119,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	cancer: {
 		name: "Cancer",
-		shortDesc: "At end of turn, try to toxic all foes, ignoring immunity. If the foe is already poisoned, they lose 1/16 of their max HP.",
+		shortDesc: "At end of turn, try to toxic all foes, ignoring immunity. If the foe is already poisoned, they lose 1/16 of their max HP and heal for that amount.",
 	},
 	brainwash: {
 		name: "Brainwash",
@@ -3156,7 +3156,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	originalsin: {
 		name: "Original Sin",
-		shortDesc: "Added 1/256 chance for user's moves to miss. User's held item does nothing. Poison Sting always poisons. Summons Genwun Room upon switch-in.",
+		shortDesc: "Added 1/256 chance for user's moves to miss. User's held item does nothing. Poison Sting always poisons. User takes 16x damage from Poison moves, and 4x damage from Bug moves.",
 	},
 	trickster: {
 		name: "Trickster",

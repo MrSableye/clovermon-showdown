@@ -565,7 +565,7 @@ export const Formats: FormatList = [
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify', 'Blobbosite', 'Kalosite', 'Sexite', 'Reversite'],
 		unbanlist: [
-			'Abomasite', 'Absolite', 'Aerodactylite', 'Aggronite', 'Alakazite', 'Altarianite', 'Ampharosite', 'Audinite', 'Banettite', 'Blastoisinite', 'Blue Orb', 'Cameruptite', 'Charizardite X', 'Charizardite Y', 'Diancite', 'Galladite', 'Garchompite', 'Gardevoirite', 'Glalitite', 'Gyaradosite', 'Heracronite', 'Houndoominite', 'Latiasite', 'Latiosite', 'Lopunnite', 'Lucarionite', 'Manectite', 'Metagrossite', 'Mewtwonite X', 'Mewtwonite Y', 'Pinsirite', 'Red Orb', 'Sablenite', 'Salamencite', 'Sceptilite', 'Scizorite', 'Sharpedonite', 'Slowbronite', 'Steelixite', 'Swampertite', 'Tyranitarite', 'Venusaurite', 'Uber'],
+			'Abomasite', 'Absolite', 'Aerodactylite', 'Aggronite', 'Alakazite', 'Altarianite', 'Ampharosite', 'Audinite', 'Banettite', 'Blastoisinite', 'Blue Orb', 'Cameruptite', 'Charizardite X', 'Charizardite Y', 'Diancite', 'Galladite', 'Garchompite', 'Gardevoirite', 'Glalitite', 'Gyaradosite', 'Heracronite', 'Houndoominite', 'Latiasite', 'Latiosite', 'Lopunnite', 'Lucarionite', 'Manectite', 'Metagrossite', 'Mewtwonite X', 'Mewtwonite Y', 'Pinsirite', 'Red Orb', 'Sablenite', 'Salamencite', 'Sceptilite', 'Scizorite', 'Sharpedonite', 'Slowbronite', 'Steelixite', 'Swampertite', 'Tyranitarite', 'Venusaurite', 'Uber', 'Ooganite', 'Wifeminite', 'Bitekinite', 'Fonduppite', 'Ebolabite', 'Somboludite', 'Floriousite', 'Illumatrixite', 'Grimdakite', 'Hazmatite', 'Krokizonite', 'Spookzillite', 'Lizakbarite', 'Rectreemite', 'Unjoyite', 'Emplyinite', 'Upbeddite', 'Smelloxite', 'Pigusonite', 'Condoomite', 'Hohohomite', 'Faptite', 'Jerklite', 'Dowsterite', 'Reptrillite', 'Kuklanite', 'Ricosuavite', 'Vandashite', 'Chasumite', 'Goryannusite', 'Spookscarite', 'Honradite'],
 		restricted: [
 			'Adesign', 'Baddon', 'Boarnograf', 'Chromox', 'Clovenix', 'Demiwaifu', 'Endranther', 'Foryu', 'Funnedong',
 			'Griffawork', 'Heliofug', 'Jewipede', 'Narwhiz', 'Scytill', 'Semdemen', 'Tentaquil',
@@ -828,6 +828,16 @@ export const Formats: FormatList = [
 			'Species Clause',
 		],
 		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs'],
+	},
+	{
+		name: '[Gen 8 Cope Only] Anything Goes',
+		mod: 'cope',
+		ruleset: [
+			'Terastal Clause',
+			'Obtainable',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
 	},
 	{
 		name: "[Gen 1] Ubers",

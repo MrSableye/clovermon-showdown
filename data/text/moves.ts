@@ -9070,4 +9070,24 @@ export const MovesText: {[k: string]: MoveText} = {
 
 		clearBoost: "  [SOURCE] stole the target's boosted stats!",
 	},
+	acridblaze: {
+		name: "Acrid Blaze",
+		shortDesc: "100% chance to badly poison the target. Has 75% recoil.",
+	},
+	shellup: {
+		name: "Shell Up",
+		shortDesc: "Recovers 80% of user's maximum HP. Lowers Defense and Special Defense by 1.",
+	},
+	shatteringstrike: {
+		name: "Shattering Strike",
+		shortDesc: "Breaks the target's protection and lowers their Defense by 1.",
+	},
+	sandblast: {
+		name: "Sandblast",
+		shortDesc: "30% chance to lower the target's accuracy.",
+	},
+	scavenge: {
+		name: "Scavenge",
+		shortDesc: "hp recovery  and user item recovery.",
+	},
 };
