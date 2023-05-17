@@ -847,7 +847,7 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 		],
-		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Eternal Walk', 'Cope', 'Fuck You'],
+		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Eternal Walk', 'Cope', 'Fuck You','Wonder Guard'],
 	},
 	{
 		name: "[Gen 1] Ubers",
