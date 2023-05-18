@@ -24,12 +24,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	autumn: {
 		inherit: true,
 		baseStats: {
-			hp: 96,
-			atk: 93,
+			hp: 91,
+			atk: 79,
 			def: 91,
-			spa: 93,
+			spa: 79,
 			spd: 93,
-			spe: 101,
+			spe: 104,
 		},
 	},
 	smellsumo: {

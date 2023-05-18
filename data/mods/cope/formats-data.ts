@@ -1227,7 +1227,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	warudio: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "LC",
+		tier: "OU",
 	},
 	docee: {
 		inherit: true,
