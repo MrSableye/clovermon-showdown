@@ -10924,7 +10924,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseSpecies: "Stunfisk",
 		forme: "Mega",
 		types: ["Ground", "Electric", "Fighting"],
-		baseStats: {hp: 109, atk: 166, def: 84, spa: 1, spd: 99, spe: 112},
+		baseStats: {hp: 109, atk: 85, def: 84, spa: 82, spd: 99, spe: 112},
 		abilities: {0: "Huge Power"},
 		heightm: 10,
 		weightkg: 200,
