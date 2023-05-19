@@ -212,4 +212,21 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			0: "Regenerator", 
 		},
 	},
+	tauros: { // i'm not a genwunner i just think tauros got shit on too hard from gen 1 to gen 2 -rex
+		inherit: true,
+		baseStats: {
+			hp: 75, 
+			atk: 100, 
+			def: 95, 
+			spa: 100, 
+			spd: 100, 
+			spe: 110,
+		},
+		abilities: {
+			0: "Intimidate", 
+			1: "Anger Point", 
+			H: "Sheer Force", 
+			S: "Rampage",
+		},
+	},
 };
