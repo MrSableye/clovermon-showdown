@@ -123,7 +123,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			def: 90, 
 			spa: 133, 
 			spd: 80, 
-			spe: 142
+			spe: 142,
 		},
 		abilities: {
 			0: "Competitive", 
@@ -172,7 +172,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			def: 130, 
 			spa: 60, 
 			spd: 95, 
-			spe: 25
+			spe: 25,
 		},
 		abilities: {
 			0: "Sturdy", 
@@ -187,6 +187,29 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			0: "Synchronize", 
 			1: "Inner Focus", 
 			H: "Magic Guard",
+		},
+	},
+	junkgeist: {
+		inherit: true,
+		baseStats: {
+			hp: 115, 
+			atk: 128, 
+			def: 80, 
+			spa: 90, 
+			spd: 80, 
+			spe: 38,
+		},
+		abilities: {
+			0: "Stench", 
+			1: "Tetanus", 
+			H: "Pollution", 
+			S: "Technician",
+		},
+	},
+	audinomega: {
+		inherit: true,
+		abilities: {
+			0: "Regenerator", 
 		},
 	},
 };
