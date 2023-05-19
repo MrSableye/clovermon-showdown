@@ -10768,6 +10768,36 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	pasdawggambino: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	pasdawgwhiteout: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	pasdawgtoadagi: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	pasdawgstaypuft: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	pasdawgmrtoad: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	pasdawgswoldier: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	fatherfuck: {
 		inherit: true,
 		tier: "OU",

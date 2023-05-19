@@ -30732,4 +30732,45 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
+	sharpwit: {
+		num: 673,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Future",
+		name: "Sharp Wit",
+		pp: 30,
+		priority: 0,
+		boosts: {
+			spa: 1,
+		},
+		flags: {snatch: 1},
+		volatileStatus: 'sharpwit',
+		condition: {
+			duration: 2,
+			onStart(pokemon, source, effect) {
+				if (effect && (['costar', 'imposter', 'psychup', 'transform'].includes(effect.id))) {
+					this.add('-start', pokemon, 'move: Sharp Wit', '[silent]');
+				} else {
+					this.add('-start', pokemon, 'move: Sharp Wit');
+				}
+			},
+			onRestart(pokemon) {
+				this.effectState.duration = 2;
+				this.add('-start', pokemon, 'move: Sharp Wit');
+			},
+			onModifyMove(move, source, target) {
+				move.overrideDefensiveStat = 'def';
+				
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'move: Sharp Wit', '[silent]');
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Psychic",
+		zMove: {boost: {spa: 2}},
+		contestType: "Cool",
+	},
 };

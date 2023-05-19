@@ -3177,4 +3177,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's moves have their secondary effect chance doubled. Foes's moves have their secondary effect chance removed. Immune to Ground. Light of Ruin becomes Heroine's Light.",
 		shortDesc: "Doubles user's secondary effect chances, removes foe's secondary effect chance. Immune to Ground. Light of Ruin becomes Heroine's Light.",
 	},
+	barkback: {
+		name: "Bark Back",
+		shortDesc: "Immune to sound-based moves. Opponent loses 1/4 of its max HP if it uses a sound-based move.",
+	},
 };
