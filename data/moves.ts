@@ -28220,6 +28220,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "normal",
 		type: "Ice",
+		noSketch: true,
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},

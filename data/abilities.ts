@@ -10641,19 +10641,44 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			return this.chainModify([4080, 4096]);
 		},
 		onModifyMove(move) {
-			if (move.id === 'poisonsting') return;
-					if (!move.secondaries) {
-				move.secondaries = [];
-			}
+			if (move.id !== 'poisonsting') return;
+			move.secondaries = [];
 			move.secondaries.push({
 					chance: 100,
 					status: 'psn',
 					ability: this.dex.abilities.get('originalsin'),
 				});
 			},
-		onStart(pokemon) {
-			this.add('-activate', pokemon, 'ability: Original Sin');
-			this.field.addPseudoWeather('genwunroom');
+			onSourceModifyAtkPriority: 6,
+			onSourceModifyAtk(atk, attacker, defender, move) {
+				if (move.type === 'Poison') {
+					this.debug('In Gen 1, Bug was weak to Poison.');
+					return this.chainModify(16);
+				}
+				if (move.type === 'Bug') {
+					this.debug('In Gen 1, Poison was weak to Bug.');
+					return this.chainModify(4);
+				}
+			},
+			onSourceModifySpAPriority: 5,
+			onSourceModifySpA(atk, attacker, defender, move) {
+				if (move.type === 'Poison') {
+					this.debug('In Gen 1, Bug was weak to Poison.');
+					return this.chainModify(16);
+				}
+				if (move.type === 'Bug') {
+					this.debug('In Gen 1, Poison was weak to Bug.');
+					return this.chainModify(4);
+				}
+			},
+	},
+	rampage: {
+		name: 'Rampage',
+		gen: 8,
+		onAfterHit(source, target, move) {
+			if (!target.hp && source.volatiles['mustrecharge']) {
+				source.removeVolatile('mustrecharge');
+			}
 		},
 	},
 	trickster: {
