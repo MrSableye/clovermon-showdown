@@ -2893,4 +2893,133 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	    },
+		/* CAP Megas */
+	oogabugamega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	wifeminmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	bitekimega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fondupplemega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ebolablemega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	somboludomega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	floriousmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	illumatrixmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	grimdakmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	hazmatemega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	krokizonmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	spookzillamega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	lizakbarmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	rectreemmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	unjoymega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	emplyinmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	upbedditmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	smelloxmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	pigusonmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	condoommega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	hohohomingmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	faptimemega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	jerklemega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	dowstermega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	reptrillmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	kuklanmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ricosuavemega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	vandashmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	chasumomega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	goryannusmega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	spookscaremega: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	honrademega: {
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
