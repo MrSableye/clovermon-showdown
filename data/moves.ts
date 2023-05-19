@@ -26293,7 +26293,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 120,
 		category: "Physical",
 		name: "Sandy Snore",
-		pp: 15,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 		sleepUsable: true,

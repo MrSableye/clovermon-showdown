@@ -1457,4 +1457,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	scavenge: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

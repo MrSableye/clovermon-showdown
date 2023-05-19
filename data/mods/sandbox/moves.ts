@@ -4553,4 +4553,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ragefist: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	lastrespects: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

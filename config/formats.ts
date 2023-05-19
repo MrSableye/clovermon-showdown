@@ -827,7 +827,7 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 		],
-		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs'],
+		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs', 'Basculegion + Last Respects', 'Houndstone + Last Respects'],
 	},
 	{
 		name: '[Gen 8 Cope Only] Anything Goes',

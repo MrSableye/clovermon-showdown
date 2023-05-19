@@ -11162,4 +11162,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "UU",
 	},
+	snapuppet: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

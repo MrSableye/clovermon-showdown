@@ -8317,7 +8317,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sandysnore: {
 		name: "Sandy Snore",
-		shortDesc: "Only works if user is asleep, has a myriad of effects.",
+		shortDesc: "Can only be used when asleep. Gives the user Sand Rush and summons Sandstorm.",
 	},
 	amogus: {
 		name: "Amogus",
