@@ -10674,7 +10674,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	rampage: {
 		name: 'Rampage',
-		gen: 8,
+		gen: 1,
+		isNonstandard: "Future",
 		onAfterHit(source, target, move) {
 			if (!target.hp && source.volatiles['mustrecharge']) {
 				source.removeVolatile('mustrecharge');
