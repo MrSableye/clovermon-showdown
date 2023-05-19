@@ -36221,7 +36221,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	   types: ["Normal", "Water"],
 	   genderRatio: {M: 0.5, F: 0.5},
 	   baseStats: {hp: 105, atk: 55, def: 10, spa: 24, spd: 12, spe: 11},
-	   abilities: {0: "Defeatist", H: "Aftermath"},
+	   abilities: {0: "Damp", H: "Aftermath"},
 	   heightm: 1.8,
 	   weightkg: 70.3,
 	   color: "White",
@@ -43209,7 +43209,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	forgotno: {
 		num: -42504,
 		name: "Forgotno",
-		types: ["Bird", "Steel"],
+		types: ["Steel", "???"],
 		gender: "N",
 		baseStats: {hp: 33, atk: 136, def: 0, spa: 143, spd: 143, spe: 91},
 		abilities: {0: "Wonder Guard", 1: "Gale Wings", H: "Perish Body"},
@@ -43218,6 +43218,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Grey",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		creator: "Zac",
 	},
 	rendalopod: {
 		num: -42505,
@@ -43231,6 +43232,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		eggGroups: ["Monster", "Water1",],
 		gen: 8,
+		creator: "Karmaattackcouncil",
 	},
 	tenyuu: {
 		num: 1000000,
