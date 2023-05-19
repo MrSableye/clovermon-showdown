@@ -42709,7 +42709,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		creator: "DoomWillBefallAll",
 	},
 	pasdawgtoadagi: {
-		num: 69054,
+		num: -69054,
 		name: "Pasdawg-Toadagi",
 		types: [
 			"Water",
@@ -42742,7 +42742,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 	},
 	pasdawggambino: {
-		num: 69054,
+		num: -69055,
 		name: "Pasdawg-Gambino",
 		types: [
 			"Normal",
@@ -42775,7 +42775,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 	},
 	pasdawgswoldier: {
-		num: 69054,
+		num: -69056,
 		name: "Pasdawg-Swoldier",
 		types: [
 			"Rock",
@@ -42808,7 +42808,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 	},
 	pasdawgwhiteout: {
-		num: 69054,
+		num: -69057,
 		name: "Pasdawg-Whiteout",
 		types: [
 			"Normal",
@@ -42841,7 +42841,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 	},
 	pasdawgmrtoad: {
-		num: 69054,
+		num: -69058,
 		name: "Pasdawg-Mr. Toad",
 		types: [
 			"Normal",
@@ -42874,7 +42874,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 	},
 	pasdawgstaypuft: {
-		num: 69054,
+		num: -69059,
 		name: "Pasdawg-Staypuft",
 		types: [
 			"Steel",
