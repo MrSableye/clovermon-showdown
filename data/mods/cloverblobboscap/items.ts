@@ -48,14 +48,16 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: null,
 	},
 	thiccbone: {
-		inherit: true,
+		name: "Thicc Bone",
+		spritenum: 379,
+		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (['Masdawg', 'Pasdawg', 'Naughtycoot'].includes(pokemon.baseSpecies.baseSpecies) ||
-			pokemon.species.id === 'blobbosskeleton') {
+			if (pokemon.baseSpecies.baseSpecies === 'Masdawg' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Gambino'|| pokemon.baseSpecies.baseSpecies === 'Pasdawg-Toadagi'|| pokemon.baseSpecies.baseSpecies === 'Pasdawg-Whiteout'|| pokemon.baseSpecies.baseSpecies === 'Pasdawg-Swoldier'|| pokemon.baseSpecies.baseSpecies === 'Pasdawg-Mr. Toad'|| pokemon.baseSpecies.baseSpecies === 'Pasdawg-Staypuft'|| pokemon.baseSpecies.baseSpecies === 'Pasdawg') {
 				return this.chainModify(2);
 			}
 		},
-		itemUser: ["Masdawg", "Pasdawg", "Naughtycoot", "Blobbos-Skeleton"],
+		itemUser: ["Masdawg", "Pasdawg", "Naughtycoot", "Blobbos-Skeleton","Pasdawg-Gambino","Pasdawg-Toadagi","Pasdawg-Whiteout","Pasdawg-Swoldier","Pasdawg-Mr. Toad","Pasdawg-Staypuft"],
+		isNonstandard: "Future",
 	},
 	plasticgem: {
 		inherit: true,
