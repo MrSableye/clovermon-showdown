@@ -9730,6 +9730,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	explovine: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	taterdoom: {
 		tier: "Illegal",
 		isNonstandard: "Future",

@@ -11126,6 +11126,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+		},
+	explovine: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	podostroud: {
 		inherit: true,
