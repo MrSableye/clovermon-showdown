@@ -2893,6 +2893,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	    },
+	    explovine: {
+	    inherit: true,
+	    isNonstandard: null,
+	    tier: "OU",
+	    },
+		colombolt: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+		},
+		sparmor: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+		},
+		ohmadillo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+		},
 		/* CAP Megas */
 	oogabugamega: {
 		inherit: true,
