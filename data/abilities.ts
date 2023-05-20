@@ -10779,4 +10779,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (type === 'ground') return false;
 		},
 	},
+	
+	barkback: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.flags['sound']) {
+				this.add('-immune', target, '[from] ability: Bark Back');
+				this.damage(source.baseMaxhp / 4, source, target);
+				return null;
+			}
+		},
+		onAllyTryHitSide(target, source, move) {
+			if (move.flags['sound']) {
+				this.add('-immune', this.effectState.target, '[from] ability: Bark Back');
+			}
+		},
+		isBreakable: true,
+		name: "Bark Back",
+		rating: 2,
+		num: 43,
+	},
 };
