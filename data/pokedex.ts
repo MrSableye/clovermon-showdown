@@ -41574,11 +41574,11 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Dark", "Bug"],
 		gender: "N",
 		baseStats: {
-			hp: 78,
+			hp: 88,
 			atk: 108,
-			def: 78,
+			def: 88,
 			spa: 108,
-			spd: 78,
+			spd: 88,
 			spe: 118,
 		},
 		abilities: {
