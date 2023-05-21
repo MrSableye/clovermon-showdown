@@ -42790,7 +42790,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			atk: 111,
 			def: 80,
 			spa: 25,
-			spd: 85,
+			spd: 80,
 			spe: 99,
 		},
 		abilities: {
@@ -42887,7 +42887,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			hp: 112,
 			atk: 90,
 			def: 105,
-			spa: 45,
+			spa: 65,
 			spd: 75,
 			spe: 60,
 		},
