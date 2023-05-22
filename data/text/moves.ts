@@ -9005,7 +9005,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	berserkersoul: {
 		name: "Berserker Soul",
-		desc: "Hits once for each unfainted ally. Special if user's Sp. Atk > Atk."
+		desc: "Hits once for each unfainted ally. Special if user's Sp. Atk > Atk.",
 	},
 	heartofthecards: {
 		name: "Heart of the Cards",
@@ -9015,7 +9015,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	thebigone: {
 		name: "THE BIG ONE",
 		desc: "I USED TO BE NOTHING BUT THE E_MAIL GUY, NOW I'M THE [[It Burns! Ow! Stop! Help Me! It Burns!]] GUY! [[Amazed at thi5 amazing transformation? You too can]] HAVE A [[Communion]] WITH [[Unintelligble Laughter]] SOON I'LL EVEN SURPASS THAT DAMNED [[Clown Around Town!]] BUT UNLIKE HIM I'M GONNA [[Shoot For the Sky!]] AND  GET ON THE PATH TO ... [[The Big One]] I'LL GET SO. I'LL GET SO. I'LL GET SO. I'LL GET SO. I'LL GET SO. I'LL GET SO. [[Hyperlink blocked.]]",
-		shortDesc: "TOO MANY EXCESS VACATION DAYS?? TAKE A GOD DAMN VACATION STRAIGHT TO HELL"
+		shortDesc: "TOO MANY EXCESS VACATION DAYS?? TAKE A GOD DAMN VACATION STRAIGHT TO HELL",
 	},
 	mirrorball: {
 		name: "Mirror Ball",

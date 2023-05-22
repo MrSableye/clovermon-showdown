@@ -3165,7 +3165,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	trickster: {
 		name: "Trickster",
 		shortDesc: "This Pokemon's Status moves have priority raised by 1, going first within its priority. If hit by one Fairy move, this Pokemon's Status moves ignore type immunites and certain Abilities of other Pokemon. Fairy immunity.",
-	
+
 		start: "  The power of [POKEMON]'s Status moves rose!",
 	},
 	ascension: {

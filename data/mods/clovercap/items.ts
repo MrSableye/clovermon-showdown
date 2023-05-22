@@ -185,11 +185,11 @@ export const Items: {[k: string]: ModdedItemData} = {
 		spritenum: 379,
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Masdawg' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Gambino'|| pokemon.baseSpecies.baseSpecies === 'Pasdawg-Toadagi'|| pokemon.baseSpecies.baseSpecies === 'Pasdawg-Whiteout'|| pokemon.baseSpecies.baseSpecies === 'Pasdawg-Swoldier'|| pokemon.baseSpecies.baseSpecies === 'Pasdawg-Mr. Toad'|| pokemon.baseSpecies.baseSpecies === 'Pasdawg-Staypuft'|| pokemon.baseSpecies.baseSpecies === 'Pasdawg') {
+			if (pokemon.baseSpecies.baseSpecies === 'Masdawg' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Gambino' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Toadagi' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Whiteout' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Swoldier' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Mr. Toad' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Staypuft' || pokemon.baseSpecies.baseSpecies === 'Pasdawg') {
 				return this.chainModify(2);
 			}
 		},
-		itemUser: ["Masdawg", "Pasdawg", "Naughtycoot", "Blobbos-Skeleton","Pasdawg-Gambino","Pasdawg-Toadagi","Pasdawg-Whiteout","Pasdawg-Swoldier","Pasdawg-Mr. Toad","Pasdawg-Staypuft"],
+		itemUser: ["Masdawg", "Pasdawg", "Naughtycoot", "Blobbos-Skeleton", "Pasdawg-Gambino", "Pasdawg-Toadagi", "Pasdawg-Whiteout", "Pasdawg-Swoldier", "Pasdawg-Mr. Toad", "Pasdawg-Staypuft"],
 		isNonstandard: "Future",
 	},
 	/* Clover CAP Exclusive Items */

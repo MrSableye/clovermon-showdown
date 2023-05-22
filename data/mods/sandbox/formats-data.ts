@@ -7333,7 +7333,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
-		},
+	},
 	oengas: {
 		inherit: true,
 		tier: "OU",
@@ -11132,21 +11132,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-    gunkirby: {
+	gunkirby: {
 	    inherit: true,
 	    isNonstandard: null,
 	    tier: "OU",
-    },
-    towhorse: {
+	},
+	towhorse: {
 	    inherit: true,
 	    isNonstandard: null,
 	    tier: "OU",
-    },
-    phantacade: {
-        inherit: true,
-        isNonstandard: null,
-        tier: "OU",
-    },
+	},
+	phantacade: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	purplegoat: {
 		inherit: true,
 		isNonstandard: null,
@@ -11156,7 +11156,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
-		},
+	},
 	explovine: {
 		inherit: true,
 		isNonstandard: null,

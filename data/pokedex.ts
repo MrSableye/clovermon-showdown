@@ -41824,7 +41824,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Dragon"],
 		gender: "N",
 		baseStats: {hp: 116, atk: 81, def: 63, spa: 52, spd: 63, spe: 60},
-		abilities: {0: "Pressure", 1:"Contrary", H: "Vital Spirit", S: "He Will Be Dragon"},
+		abilities: {0: "Pressure", 1: "Contrary", H: "Vital Spirit", S: "He Will Be Dragon"},
 		heightm: 0.1,
 		weightkg: 0.005,
 		color: "Blue",
@@ -42244,7 +42244,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		eggGroups: ["Bug"],
 		tags: ["Weedlekind"],
-		creator: "4 legs dinosaur"
+		creator: "4 legs dinosaur",
 	},
 	sableedle: {
 		num: -42691,
@@ -42317,7 +42317,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Poison", "Electric"],
 		gender: "N",
 		baseStats: {hp: 130, atk: 86, def: 70, spa: 70, spd: 130, spe: 70},
-		abilities: {0: "Download", H:"Serene Grace"},
+		abilities: {0: "Download", H: "Serene Grace"},
 		heightm: 0.5,
 		weightkg: 6.4,
 		color: "Brown",
@@ -42372,7 +42372,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 8,
 		tags: ["Krackokind"],
-		creator: "KarmaAttackCouncil"
+		creator: "KarmaAttackCouncil",
 	},
 	shroomko: {
 		num: -42865,
@@ -42518,7 +42518,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 5.1,
 		color: "Blue",
 		eggGroups: ["Field", "Human-Like"],
-		creator: "Francine is a character from Animal Crossing."
+		creator: "Francine is a character from Animal Crossing.",
 	},
 	nothing: {
 		num: -42007,
@@ -42531,7 +42531,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 0,
 		color: "White",
 		eggGroups: ["Undiscovered"],
-		creator: "Nobody created this."
+		creator: "Nobody created this.",
 	},
 	kingmadio: {
 		num: -42117,
@@ -43380,7 +43380,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["???", "Fighting"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 100, atk: 90, def: 125, spa: 65, spd: 87, spe: 40},
-		abilities: {0: "Stamina", 1: "Rough Skin", H: "Speed Boost", S:"Rocky Payload"},
+		abilities: {0: "Stamina", 1: "Rough Skin", H: "Speed Boost", S: "Rocky Payload"},
 		heightm: 11.9,
 		weightkg: 3000,
 		color: "Grey",
@@ -43440,7 +43440,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 15.28,
 		weightkg: 548.97,
 		color: "Blue",
-		eggGroups: ["Monster", "Water1",],
+		eggGroups: ["Monster", "Water1"],
 		gen: 8,
 		creator: "Karmaattackcouncil",
 	},
@@ -43457,7 +43457,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		prevo: "Ramboom",
 		evoType: "useItem",
 		evoItem: "Leaf Stone",
-		eggGroups: ["Grass",],
+		eggGroups: ["Grass"],
 		gen: 8,
 		creator: "Hitmonsamba",
 	},
