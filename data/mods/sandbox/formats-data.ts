@@ -7333,7 +7333,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
-		},
+	},
 	oengas: {
 		inherit: true,
 		tier: "OU",
@@ -10768,6 +10768,36 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	pasdawggambino: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	pasdawgwhiteout: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	pasdawgtoadagi: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	pasdawgstaypuft: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	pasdawgmrtoad: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	pasdawgswoldier: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	fatherfuck: {
 		inherit: true,
 		tier: "OU",
@@ -11102,27 +11132,32 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-    gunkirby: {
+	gunkirby: {
 	    inherit: true,
 	    isNonstandard: null,
 	    tier: "OU",
-    },
-    towhorse: {
+	},
+	towhorse: {
 	    inherit: true,
 	    isNonstandard: null,
 	    tier: "OU",
-    },
-    phantacade: {
-        inherit: true,
-        isNonstandard: null,
-        tier: "OU",
-    },
+	},
+	phantacade: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	purplegoat: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
 	},
 	forgotno: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	explovine: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

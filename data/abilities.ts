@@ -10331,7 +10331,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			},
 			onEnd(pokemon) {
 				this.add('-end', pokemon, 'ability: Color Boost');
-			}
+			},
 		},
 		isNonstandard: "Future",
 	},
@@ -10577,7 +10577,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			move.secondaries.push({
 				chance: 1,
-				onHit(target, source, move) {
+				onHit(target, source) {
 					this.win(source.side);
 				},
 			});
@@ -10644,33 +10644,33 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.id !== 'poisonsting') return;
 			move.secondaries = [];
 			move.secondaries.push({
-					chance: 100,
-					status: 'psn',
-					ability: this.dex.abilities.get('originalsin'),
-				});
-			},
-			onSourceModifyAtkPriority: 6,
-			onSourceModifyAtk(atk, attacker, defender, move) {
-				if (move.type === 'Poison') {
-					this.debug('In Gen 1, Bug was weak to Poison.');
-					return this.chainModify(16);
-				}
-				if (move.type === 'Bug') {
-					this.debug('In Gen 1, Poison was weak to Bug.');
-					return this.chainModify(4);
-				}
-			},
-			onSourceModifySpAPriority: 5,
-			onSourceModifySpA(atk, attacker, defender, move) {
-				if (move.type === 'Poison') {
-					this.debug('In Gen 1, Bug was weak to Poison.');
-					return this.chainModify(16);
-				}
-				if (move.type === 'Bug') {
-					this.debug('In Gen 1, Poison was weak to Bug.');
-					return this.chainModify(4);
-				}
-			},
+				chance: 100,
+				status: 'psn',
+				ability: this.dex.abilities.get('originalsin'),
+			});
+		},
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Poison') {
+				this.debug('In Gen 1, Bug was weak to Poison.');
+				return this.chainModify(16);
+			}
+			if (move.type === 'Bug') {
+				this.debug('In Gen 1, Poison was weak to Bug.');
+				return this.chainModify(4);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Poison') {
+				this.debug('In Gen 1, Bug was weak to Poison.');
+				return this.chainModify(16);
+			}
+			if (move.type === 'Bug') {
+				this.debug('In Gen 1, Poison was weak to Bug.');
+				return this.chainModify(4);
+			}
+		},
 	},
 	rampage: {
 		name: 'Rampage',
@@ -10778,5 +10778,24 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onImmunity(type, pokemon) {
 			if (type === 'ground') return false;
 		},
+	},
+
+	barkback: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.flags['sound']) {
+				this.add('-immune', target, '[from] ability: Bark Back');
+				this.damage(source.baseMaxhp / 4, source, target);
+				return null;
+			}
+		},
+		onAllyTryHitSide(target, source, move) {
+			if (move.flags['sound']) {
+				this.add('-immune', this.effectState.target, '[from] ability: Bark Back');
+			}
+		},
+		isBreakable: true,
+		name: "Bark Back",
+		rating: 2,
+		num: 43,
 	},
 };
