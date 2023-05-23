@@ -499,14 +499,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 			}
 		},
 	},
-	spikecannon: {
-		inherit: true,
-		onHit(target) {
-			if (this.randomChance(1, 8)) {
-				target.side.addSideCondition('spikes');
-			}
-		},
-	},
 	spiritbreak: {
 		inherit: true,
 		isNonstandard: null,
