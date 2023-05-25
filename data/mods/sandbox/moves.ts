@@ -4561,4 +4561,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	funnyfun: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	nightynight: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
