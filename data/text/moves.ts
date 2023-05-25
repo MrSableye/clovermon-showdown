@@ -8309,7 +8309,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	heavensblessing: {
 		name: "Heaven's Blessing",
-		shortDesc: "Heals user by 25% of max HP, activates Wish effect.",
+		shortDesc: "Heals user by 25% of max HP, activates Wish effect. Heals user's status condition.",
 	},
 	heavenpierce: {
 		name: "Heaven Pierce",
@@ -8341,7 +8341,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	nuclearmeltdown: {
 		name: "Nuclear Meltdown",
-		shortDesc: "Lowers user's Attack, Sp. Atk, and Speed by 2.",
+		shortDesc: "Lowers user's Attack, Sp. Atk, and Speed by 1.",
 	},
 	obsidianhorn: {
 		name: "Obsidian Horn",
@@ -9095,5 +9095,13 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Raises the user's Attack by 1. Until the end of the next turn, the user's attacks will use the opponent's defense stat.",
 		shortDesc: "Raises the user's Attack by 1. Until the end of the next turn, the user's attacks will use the opponent's defense stat.",
 		start: "  [POKEMON] is thingken!",
+	},
+	funnyfun: {
+		name: "Funny Fun",
+		shortDesc: "Goes first. Always crits. Power based on happiness. Summons Reflect + Light Screen. Seeds target. 100% para/brn. 30% flinch. Cures user's party of status. Resets all boosts.",
+	},
+	nightynight: {
+		name: "Nighty Night",
+		shortDesc: "Has a 30% chance to put the target to sleep.",
 	},
 };
