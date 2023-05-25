@@ -26070,7 +26070,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
-			chance: 30,
+			chance: 10,
 			status: 'slp',
 		},
 		target: "normal",
@@ -30771,5 +30771,76 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 		zMove: {boost: {spa: 2}},
 		contestType: "Cool",
+	},
+	funnyfun: { 
+		accuracy: true,
+		basePower: 0,
+		basePowerCallback(pokemon) {
+			const bp = Math.floor((pokemon.happiness * 10) / 25) || 1;
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Funny Fun",
+		pp: 5,
+		priority: 2,
+		flags: {protect: 1},
+		target: "normal",
+		type: "???",
+		noSketch: true,
+		willCrit: true,
+		secondaries: [
+			{
+				chance: 100,
+				onHit(target, source) {
+					const result = this.random(2);
+					if (result === 0) {
+						target.trySetStatus('brn', source);
+					} else {
+						target.trySetStatus('par', source);
+					}
+				},
+			}, {
+				chance: 30,
+				volatileStatus: 'flinch',
+			},
+		],
+		onHit(target, source, move) {
+			source.side.addSideCondition('reflect');
+			source.side.addSideCondition('lightscreen');
+			target.addVolatile('leechseed', source);
+			this.add('-clearallboost');
+			for (const pokemon of this.getAllActive()) {
+				pokemon.clearBoosts();
+			}
+		},
+		self: {
+			onHit(pokemon, source, move) {
+				this.add('-activate', source, 'move: Aromatherapy');
+				for (const ally of source.side.pokemon) {
+					if (ally !== source && (ally.volatiles['substitute'] && !move.infiltrates)) {
+						continue;
+					}
+					ally.cureStatus();
+				}
+			},
+		},
+	},
+	nightynight: {
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Nighty Night",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'slp',
+		},
+		target: "normal",
+		type: "Ghost",
+		isNonstandard: "Future",
 	},
 };
