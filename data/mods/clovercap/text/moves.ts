@@ -19,11 +19,6 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		desc: "If the user is a Grass-type, has a 30% chance to apply Leech Seeds.",
 		shortDesc: "Grass-type users have a 30% chance to Leech Seed.",
 	},
-	spikecannon: {
-		inherit: true,
-		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times. Has a 1/8 chance to set spikes per hit.",
-		shortDesc: "1/8 chance to set spikes per hit.",
-	},
 	xscissor: {
 		inherit: true,
 		desc: "Has a higher chance for a critical hit.",

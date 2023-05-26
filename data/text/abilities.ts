@@ -3158,10 +3158,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Original Sin",
 		shortDesc: "Added 1/256 chance for user's moves to miss. User's held item does nothing. Poison Sting always poisons. User takes 16x damage from Poison moves, and 4x damage from Bug moves.",
 	},
+	rampage: {
+		name: "Rampage",
+		shortDesc: "If the user KO's the target with a recharge move, the user does not need to recharge.",
+	},
 	trickster: {
 		name: "Trickster",
 		shortDesc: "This Pokemon's Status moves have priority raised by 1, going first within its priority. If hit by one Fairy move, this Pokemon's Status moves ignore type immunites and certain Abilities of other Pokemon. Fairy immunity.",
-	
+
 		start: "  The power of [POKEMON]'s Status moves rose!",
 	},
 	ascension: {
@@ -3172,5 +3176,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Thief of Light",
 		desc: "This Pokemon's moves have their secondary effect chance doubled. Foes's moves have their secondary effect chance removed. Immune to Ground. Light of Ruin becomes Heroine's Light.",
 		shortDesc: "Doubles user's secondary effect chances, removes foe's secondary effect chance. Immune to Ground. Light of Ruin becomes Heroine's Light.",
+	},
+	barkback: {
+		name: "Bark Back",
+		shortDesc: "Immune to sound-based moves. Opponent loses 1/4 of its max HP if it uses a sound-based move.",
 	},
 };

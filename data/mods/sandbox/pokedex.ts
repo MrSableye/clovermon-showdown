@@ -62,7 +62,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		prevo: "Pengas",
 		evoType: "other",
-		evoCondition: "Win the race."
+		evoCondition: "Win the race.",
 	},
 	zangoose: {
 		inherit: true,
@@ -72,18 +72,18 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		prevo: "Zangoose",
 		evoType: "other",
-		evoCondition: "Die from the Poison status after getting mortally wounded by a Seviper."
+		evoCondition: "Die from the Poison status after getting mortally wounded by a Seviper.",
 	},
-    motherfuck: {
+	motherfuck: {
 	    inherit: true,
 	    evos: ["Fatherfuck"],
-    },
-    fatherfuck: {
+	},
+	fatherfuck: {
 	    inherit: true,
 	    prevo: "Motherfuck",
 	    evoType: "other",
-	    evoCondition: "Kill Samuel L. Jackson."
-    },
+	    evoCondition: "Kill Samuel L. Jackson.",
+	},
 	hofucno: {
 		inherit: true,
 		evos: ["Hofucyea"],
@@ -118,15 +118,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	blobbosforbidden: {
 		inherit: true,
 		baseStats: {
-			hp: 89, 
-			atk: 131, 
-			def: 90, 
-			spa: 133, 
-			spd: 80, 
-			spe: 142
+			hp: 89,
+			atk: 131,
+			def: 90,
+			spa: 133,
+			spd: 80,
+			spe: 142,
 		},
 		abilities: {
-			0: "Competitive", 
+			0: "Competitive",
 			1: "Metagaming",
 			H: "Good as Gold",
 			S: "Cursed Body",
@@ -146,47 +146,87 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	regigigas: {
 		inherit: true,
 		abilities: {
-			0: "Slow Start", 
+			0: "Slow Start",
 			S: "Big Guy",
 		},
 	},
 	regigigone: {
 		inherit: true,
 		abilities: {
-			0: "Defeatist", 
+			0: "Defeatist",
 			S: "Flame Body",
 		},
 	},
 	slaking: {
 		inherit: true,
 		abilities: {
-			0: "Truant", 
+			0: "Truant",
 			S: "Stall",
 		},
 	},
 	gigalith: {
 		inherit: true,
 		baseStats: {
-			hp: 100, 
-			atk: 135, 
-			def: 130, 
-			spa: 60, 
-			spd: 95, 
-			spe: 25
+			hp: 100,
+			atk: 135,
+			def: 130,
+			spa: 60,
+			spd: 95,
+			spe: 25,
 		},
 		abilities: {
-			0: "Sturdy", 
-			1: "Sand Stream", 
-			H: "Sand Force", 
+			0: "Sturdy",
+			1: "Sand Stream",
+			H: "Sand Force",
 			S: "Solid Rock",
 		},
 	},
 	alakazam: {
 		inherit: true,
 		abilities: {
-			0: "Synchronize", 
-			1: "Inner Focus", 
+			0: "Synchronize",
+			1: "Inner Focus",
 			H: "Magic Guard",
+		},
+	},
+	junkgeist: {
+		inherit: true,
+		baseStats: {
+			hp: 115,
+			atk: 128,
+			def: 80,
+			spa: 90,
+			spd: 80,
+			spe: 38,
+		},
+		abilities: {
+			0: "Stench",
+			1: "Tetanus",
+			H: "Pollution",
+			S: "Technician",
+		},
+	},
+	audinomega: {
+		inherit: true,
+		abilities: {
+			0: "Regenerator",
+		},
+	},
+	tauros: { // i'm not a genwunner i just think tauros got shit on too hard from gen 1 to gen 2 -rex
+		inherit: true,
+		baseStats: {
+			hp: 75,
+			atk: 100,
+			def: 95,
+			spa: 100,
+			spd: 100,
+			spe: 110,
+		},
+		abilities: {
+			0: "Intimidate",
+			1: "Anger Point",
+			H: "Sheer Force",
+			S: "Rampage",
 		},
 	},
 };

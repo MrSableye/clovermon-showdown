@@ -41,8 +41,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 				if (!pokemon.hasAbility('paralysisheal')) {
 					this.add('cant', pokemon, 'par');
 					return false;
-				}
-					else return;
+				} else { return; }
 			}
 		},
 	},

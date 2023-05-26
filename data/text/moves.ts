@@ -8309,7 +8309,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	heavensblessing: {
 		name: "Heaven's Blessing",
-		shortDesc: "Heals user by 25% of max HP, activates Wish effect.",
+		shortDesc: "Heals user by 25% of max HP, activates Wish effect. Heals user's status condition.",
 	},
 	heavenpierce: {
 		name: "Heaven Pierce",
@@ -8317,7 +8317,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sandysnore: {
 		name: "Sandy Snore",
-		shortDesc: "Only works if user is asleep, has a myriad of effects.",
+		shortDesc: "Can only be used when asleep. Gives the user Sand Rush and summons Sandstorm.",
 	},
 	amogus: {
 		name: "Amogus",
@@ -8341,7 +8341,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	nuclearmeltdown: {
 		name: "Nuclear Meltdown",
-		shortDesc: "Lowers user's Attack, Sp. Atk, and Speed by 2.",
+		shortDesc: "Lowers user's Attack, Sp. Atk, and Speed by 1.",
 	},
 	obsidianhorn: {
 		name: "Obsidian Horn",
@@ -9005,7 +9005,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	berserkersoul: {
 		name: "Berserker Soul",
-		desc: "Hits once for each unfainted ally. Special if user's Sp. Atk > Atk."
+		desc: "Hits once for each unfainted ally. Special if user's Sp. Atk > Atk.",
 	},
 	heartofthecards: {
 		name: "Heart of the Cards",
@@ -9015,7 +9015,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	thebigone: {
 		name: "THE BIG ONE",
 		desc: "I USED TO BE NOTHING BUT THE E_MAIL GUY, NOW I'M THE [[It Burns! Ow! Stop! Help Me! It Burns!]] GUY! [[Amazed at thi5 amazing transformation? You too can]] HAVE A [[Communion]] WITH [[Unintelligble Laughter]] SOON I'LL EVEN SURPASS THAT DAMNED [[Clown Around Town!]] BUT UNLIKE HIM I'M GONNA [[Shoot For the Sky!]] AND  GET ON THE PATH TO ... [[The Big One]] I'LL GET SO. I'LL GET SO. I'LL GET SO. I'LL GET SO. I'LL GET SO. I'LL GET SO. [[Hyperlink blocked.]]",
-		shortDesc: "TOO MANY EXCESS VACATION DAYS?? TAKE A GOD DAMN VACATION STRAIGHT TO HELL"
+		shortDesc: "TOO MANY EXCESS VACATION DAYS?? TAKE A GOD DAMN VACATION STRAIGHT TO HELL",
 	},
 	mirrorball: {
 		name: "Mirror Ball",
@@ -9089,5 +9089,19 @@ export const MovesText: {[k: string]: MoveText} = {
 	scavenge: {
 		name: "Scavenge",
 		shortDesc: "hp recovery  and user item recovery.",
+	},
+	sharpwit: {
+		name: "Sharp Wit",
+		desc: "Raises the user's Attack by 1. Until the end of the next turn, the user's attacks will use the opponent's defense stat.",
+		shortDesc: "Raises the user's Attack by 1. Until the end of the next turn, the user's attacks will use the opponent's defense stat.",
+		start: "  [POKEMON] is thingken!",
+	},
+	funnyfun: {
+		name: "Funny Fun",
+		shortDesc: "Goes first. Always crits. Power based on happiness. Summons Reflect + Light Screen. Seeds target. 100% para/brn. 30% flinch. Cures user's party of status. Resets all boosts.",
+	},
+	nightynight: {
+		name: "Nighty Night",
+		shortDesc: "Has a 30% chance to put the target to sleep.",
 	},
 };

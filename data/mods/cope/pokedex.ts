@@ -31,16 +31,16 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evoType: "useItem",
 		evoItem: "Moon Stone",
 	},
-    pizzisdee: {
-	inherit: true,
-	baseStats: {
-		hp: 75,
-		atk: 85,
-		def: 80,
-		spa: 65,
-		spd: 80,
-		spe: 135,
-	},
+	pizzisdee: {
+		inherit: true,
+		baseStats: {
+			hp: 75,
+			atk: 85,
+			def: 80,
+			spa: 65,
+			spd: 80,
+			spe: 135,
+		},
 	},
 	noxilium: {
 		inherit: true,
@@ -85,5 +85,5 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spd: 109,
 			spe: 69,
 		},
-  },
+	},
 };

@@ -7642,7 +7642,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				const removeTarget = [
 					'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'luckyroll',
 				];
-				const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',  'luckyroll'];
+				const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
 				for (const targetCondition of removeTarget) {
 					if (source.side.foe.removeSideCondition(targetCondition)) {
 						if (!removeAll.includes(targetCondition)) continue;
@@ -19971,7 +19971,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			for (const active of this.getAllActive()) {
 				if (active.removeVolatile('substitute')) success = true;
 			}
-			const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',  'luckyroll'];
+			const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
 			const sides = [pokemon.side, ...pokemon.side.foeSidesWithConditions()];
 			for (const side of sides) {
 				for (const sideCondition of removeAll) {
@@ -23092,7 +23092,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores',  'luckyroll'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'luckyroll'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -23106,7 +23106,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 			}
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores',  'luckyroll'];
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'luckyroll'];
 			for (const condition of sideConditions) {
 				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -24206,7 +24206,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		self: {
 			onHit(source) {
 				this.field.setWeather('raindance');
-				this.field.setTerrain('electricterrain')
+				this.field.setTerrain('electricterrain');
 			},
 		},
 		noSketch: true,
@@ -25287,7 +25287,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			return move.basePower;
 		},
 		onHit(target, source) {
-			target.cureStatus()
+			target.cureStatus();
 		},
 		category: "Special",
 		name: "Purge",
@@ -25306,7 +25306,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Uproot",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1,},
+		flags: {protect: 1, mirror: 1},
 		onTryMove(pokemon, target, move) {
 			if (pokemon.hasType('Grass')) return;
 			this.add('-fail', pokemon, 'move: Uproot');
@@ -26070,7 +26070,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
-			chance: 30,
+			chance: 10,
 			status: 'slp',
 		},
 		target: "normal",
@@ -26293,7 +26293,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 120,
 		category: "Physical",
 		name: "Sandy Snore",
-		pp: 15,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
 		sleepUsable: true,
@@ -28220,6 +28220,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "normal",
 		type: "Ice",
+		noSketch: true,
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
@@ -29806,25 +29807,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 							// sanity check
 							throw new Error(`Index ${index} out of bounds for given array`);
 						}
-		
+
 						const element = list[index];
 						list[index] = list[length - 1];
 						list.pop();
 						return element;
 					};
-		
+
 					const sampleNoReplace = <T>(list: T[]) => {
 						const length = list.length;
 						if (length === 0) return null;
 						const index = this.random(length);
 						return fastPop(list, index);
 					};
-		
+
 					const allTypes = this.dex.types.all().map((type) => type.name);
 					const types = source.getTypes().map((type) => sampleNoReplace(allTypes)).filter((type) => type) as string[];
 
 					if (!types.length) return;
-		
+
 					source.setType(types);
 					this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] move: Art Wall');
 				}
@@ -29841,25 +29842,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 							// sanity check
 							throw new Error(`Index ${index} out of bounds for given array`);
 						}
-		
+
 						const element = list[index];
 						list[index] = list[length - 1];
 						list.pop();
 						return element;
 					};
-		
+
 					const sampleNoReplace = <T>(list: T[]) => {
 						const length = list.length;
 						if (length === 0) return null;
 						const index = this.random(length);
 						return fastPop(list, index);
 					};
-		
+
 					const allTypes = this.dex.types.all().map((type) => type.name);
 					const types = source.getTypes().map((type) => sampleNoReplace(allTypes)).filter((type) => type) as string[];
 
 					if (!types.length) return;
-		
+
 					source.setType(types);
 					this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] move: Art Wall');
 				}
@@ -29944,7 +29945,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
 				!move.realMove && !move.isZ && !move.isMax &&
 				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
-				move.flags.heal === 1 && move.basePower === 0 && move.id !== 'anyheal' && move.id !== 'healingwish' && move.id !== 'lunardance' && move.id !== 'floralhealing' 
+				move.flags.heal === 1 && move.basePower === 0 && move.id !== 'anyheal' && move.id !== 'healingwish' && move.id !== 'lunardance' && move.id !== 'floralhealing'
 			));
 			let randomMove = '';
 			if (moves.length) {
@@ -29975,7 +29976,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
 				!move.realMove && !move.isZ && !move.isMax &&
 				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
-				(move.status === 'par' || move.status === 'tox' || move.status === 'psn' || move.status === 'slp' || move.status === 'brn' ) && move.basePower === 0 && move.id !== 'anystatus'
+				(move.status === 'par' || move.status === 'tox' || move.status === 'psn' || move.status === 'slp' || move.status === 'brn') && move.basePower === 0 && move.id !== 'anystatus'
 			));
 			let randomMove = '';
 			if (moves.length) {
@@ -30729,6 +30730,117 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Rock",
 		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	sharpwit: {
+		num: 673,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Future",
+		name: "Sharp Wit",
+		pp: 30,
+		priority: 0,
+		boosts: {
+			spa: 1,
+		},
+		flags: {snatch: 1},
+		volatileStatus: 'sharpwit',
+		condition: {
+			duration: 2,
+			onStart(pokemon, source, effect) {
+				if (effect && (['costar', 'imposter', 'psychup', 'transform'].includes(effect.id))) {
+					this.add('-start', pokemon, 'move: Sharp Wit', '[silent]');
+				} else {
+					this.add('-start', pokemon, 'move: Sharp Wit');
+				}
+			},
+			onRestart(pokemon) {
+				this.effectState.duration = 2;
+				this.add('-start', pokemon, 'move: Sharp Wit');
+			},
+			onModifyMove(move, source, target) {
+				move.overrideDefensiveStat = 'def';
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'move: Sharp Wit', '[silent]');
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Psychic",
+		zMove: {boost: {spa: 2}},
+		contestType: "Cool",
+	},
+	funnyfun: { 
+		accuracy: true,
+		basePower: 0,
+		basePowerCallback(pokemon) {
+			const bp = Math.floor((pokemon.happiness * 10) / 25) || 1;
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Funny Fun",
+		pp: 5,
+		priority: 2,
+		flags: {protect: 1},
+		target: "normal",
+		type: "???",
+		noSketch: true,
+		willCrit: true,
+		secondaries: [
+			{
+				chance: 100,
+				onHit(target, source) {
+					const result = this.random(2);
+					if (result === 0) {
+						target.trySetStatus('brn', source);
+					} else {
+						target.trySetStatus('par', source);
+					}
+				},
+			}, {
+				chance: 30,
+				volatileStatus: 'flinch',
+			},
+		],
+		onHit(target, source, move) {
+			source.side.addSideCondition('reflect');
+			source.side.addSideCondition('lightscreen');
+			target.addVolatile('leechseed', source);
+			this.add('-clearallboost');
+			for (const pokemon of this.getAllActive()) {
+				pokemon.clearBoosts();
+			}
+		},
+		self: {
+			onHit(pokemon, source, move) {
+				this.add('-activate', source, 'move: Aromatherapy');
+				for (const ally of source.side.pokemon) {
+					if (ally !== source && (ally.volatiles['substitute'] && !move.infiltrates)) {
+						continue;
+					}
+					ally.cureStatus();
+				}
+			},
+		},
+	},
+	nightynight: {
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Nighty Night",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'slp',
+		},
+		target: "normal",
+		type: "Ghost",
 		isNonstandard: "Future",
 	},
 };

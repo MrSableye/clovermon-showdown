@@ -10050,4 +10050,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	snapuppet: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };
