@@ -1022,8 +1022,48 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",
-		},
+	},
 	blubbastard: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	phantacade: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	saccestoda: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	rendalopod: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	towhorse: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	forgotno: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	devante: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	vergilion: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	schiztarf: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

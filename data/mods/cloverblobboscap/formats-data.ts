@@ -2476,6 +2476,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	phantacade: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,

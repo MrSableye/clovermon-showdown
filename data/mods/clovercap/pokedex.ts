@@ -18,5 +18,21 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Anaconduke",
 		evoLevel: 50,
 	},
+	honrade: {
+		inherit: true,
+		evos: ["Devante","Vergilion"],
+	},
+	devante: {
+		inherit: true,
+		prevo: "Honrade",
+		evoType: "useItem",
+		evoItem: "Sun Stone",
+	},
+	vergilion: {
+		inherit: true,
+		prevo: "Honrade",
+		evoType: "useItem",
+		evoItem: "Moon Stone",
+	},
 };
 
