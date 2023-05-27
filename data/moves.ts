@@ -24896,7 +24896,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	thunderdrop: {
 		accuracy: 100,
-		basePower: 85,
+		basePower: 95,
 		category: "Physical",
 		name: "Thunder Drop",
 		pp: 10,
