@@ -4071,10 +4071,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	fughamut: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	feedandseed: {
 		inherit: true,
 		isNonstandard: null,
@@ -4198,10 +4194,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	plasticterrain: {
 		inherit: true,
 		onTry(source) {
-			this.attrLastMove('[still]');
-			this.add('-fail', source, 'move: Plastic Terrain');
 			this.hint("Wack is a bad game and you should feel bad.");
-			return null;
 		},
 		isNonstandard: null,
 	},
@@ -4566,6 +4559,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	nightynight: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	glacialgroove: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	crystalslash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	carcrash: {
 		inherit: true,
 		isNonstandard: null,
 	},

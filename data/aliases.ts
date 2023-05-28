@@ -2097,6 +2097,9 @@ export const Aliases: {[alias: string]: string} = {
 	slug: "Blobbos-Slug",
 	duelist: "Blobbos-Duelist",
 	darkduelist: "Blobbos-Duelist-Dark",
+	quartz: "Blobbos-Quartz",
+	suffering: "Blobbos-Suffering",
+	blobbastard: "Blobbos-Suffering",
 
 	// Board Power Aliases
 	bpa: "Board Power (/a/)",

@@ -3181,4 +3181,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Bark Back",
 		shortDesc: "Immune to sound-based moves. Opponent loses 1/4 of its max HP if it uses a sound-based move.",
 	},
+	sufferasihave: {
+		name: "Suffer As I Have",
+		shortDesc: "When this Pokemon is knocked out by an opponent's attack, the opponent is inflicted with Curse and loses 1/4 of its max HP.",
+	},
+	amplifier: {
+		name: "Amplifier",
+		shortDesc: "User's sound-based moves deal double damage. User takes halved damage from sound-based moves.",
+	},
 };

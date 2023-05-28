@@ -1903,4 +1903,12 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	sufferasihave: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	amplifier: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

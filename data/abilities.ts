@@ -10796,6 +10796,37 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isBreakable: true,
 		name: "Bark Back",
 		rating: 2,
+		isNonstandard: "Future",
 		num: 43,
+	},
+	sufferasihave: {
+		name: "Suffer As I Have",
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+				this.damage(source.baseMaxhp / 4, source, target);
+				source.addVolatile('curse', this.effectState.target);
+			},
+		rating: 2,
+		isNonstandard: "Future",
+	},
+	amplifier: {
+		onBasePowerPriority: 7,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['sound']) {
+				this.debug('Amplifier boost');
+				return this.chainModify(2);
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.flags['sound']) {
+				this.debug('Amplifier weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		isBreakable: true,
+		name: "Amplifier",
+		rating: 3.5,
+		num: 244,
+		isNonstandard: "Future",
 	},
 };

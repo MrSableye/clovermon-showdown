@@ -9104,4 +9104,16 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Nighty Night",
 		shortDesc: "Has a 30% chance to put the target to sleep.",
 	},
+	glacialgroove: {
+		name: "Glacial Groove",
+		shortDesc: "Taunts the target.",
+	},
+	crystalslash: {
+		name: "Crystal Slash",
+		shortDesc: "10% chance to lower the target's accuracy.",
+	},
+	carcrash: {
+		name: "Car Crash",
+		shortDesc: "Has a 10% chance to paralyze the target and a 10% chance to confuse it.",
+	},
 };

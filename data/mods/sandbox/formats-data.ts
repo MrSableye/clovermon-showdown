@@ -10048,6 +10048,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	blobbosquartz: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	blobbosbirb: {
 		inherit: true,
 		tier: "OU",
@@ -11198,6 +11203,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "UU",
 	},
 	snapuppet: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbossuffering: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
