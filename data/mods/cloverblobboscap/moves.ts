@@ -1461,4 +1461,16 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	glacialgroove: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	crystalslash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	carcrash: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
