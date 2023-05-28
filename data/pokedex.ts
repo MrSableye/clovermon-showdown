@@ -37181,7 +37181,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			0: "Soundproof",
 			1: "Concert",
 			H: "Boombox",
-			S: "Natural Cure",
+			S: "Amplifier",
 		},
 		heightm: 0.4,
 		weightkg: 9.7,
