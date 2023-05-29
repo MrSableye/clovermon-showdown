@@ -4574,4 +4574,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	newcannon: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	devilsharvest: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

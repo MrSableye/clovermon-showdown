@@ -9116,4 +9116,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Car Crash",
 		shortDesc: "Has a 10% chance to paralyze the target and a 10% chance to confuse it.",
 	},
+	newcannon: {
+		name: "New Cannon",
+		shortDesc: "Damage is thirded if the target is Water or Flying type.",
+	},
+	devilsharvest: {
+		name: "Devil's Harvest",
+		shortDesc: "Raise 5 random stats, lower 2 random stats.",
+	},
 };

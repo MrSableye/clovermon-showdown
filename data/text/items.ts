@@ -2774,4 +2774,8 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Grim Seeds",
 		desc: "After the holder faints, if its a Grass-type, it Leech Seeds a random foe.",
 	},
+	alcohol: {
+		name: "Alcohol",
+		desc: "Has adverse effects to Pokemon without extreme alcohol tolerance.",
+	},
 };
