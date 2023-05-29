@@ -3189,4 +3189,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Amplifier",
 		shortDesc: "User's sound-based moves deal double damage. User takes halved damage from sound-based moves.",
 	},
+	feelthefoliage: {
+		name: "Feel The Foliage",
+		shortDesc: "Contact: -1/4 max hp, 1/3 chance to brn/par/psn.",
+
+		damage: "#roughskin",
+	},
 };
