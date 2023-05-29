@@ -10845,5 +10845,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Feel The Foliage",
 		rating: 2,
+		isNonstandard: "Future",
 	},
 };
