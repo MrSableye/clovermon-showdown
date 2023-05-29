@@ -7651,12 +7651,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	finale: {
 		onPrepareHit(source, target, move) {
-			if (this.effectState.protean) return;
 			if (move.hasBounced || move.isFutureMove || move.sourceEffect === 'snatch') return;
 			const type = move.type;
 			if (type && type !== '???' && source.getTypes().join() !== type) {
 				if (!source.setType(type)) return;
-				this.effectState.protean = true;
 				this.add('-start', source, 'typechange', type, '[from] ability: Finale');
 			}
 		},
@@ -10828,5 +10826,30 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 244,
 		isNonstandard: "Future",
+	},
+	musclemass: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fighting') {
+				if (!this.boost({def: 1})) {
+					this.add('-immune', target, '[from] ability: Muscle Mass');
+				}
+				return null;
+			}
+		},
+		onAnyRedirectTarget(target, source, source2, move) {
+			if (move.type !== 'Fighting') return;
+			const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
+			if (this.validTarget(this.effectState.target, source, redirectTarget)) {
+				if (move.smartTarget) move.smartTarget = false;
+				if (this.effectState.target !== target) {
+					this.add('-activate', this.effectState.target, 'ability: Muscle Mass');
+				}
+				return this.effectState.target;
+			}
+		},
+		isBreakable: true,
+		name: "Muscle Mass",
+		rating: 3,
+		num: 114,
 	},
 };

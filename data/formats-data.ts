@@ -10062,4 +10062,16 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	hor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	lemonhorse: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	neohorse: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };
