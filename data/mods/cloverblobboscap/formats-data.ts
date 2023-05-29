@@ -2480,6 +2480,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	forgotno: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	rendalopod: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	saccestoda: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	schiztarf: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	towhorse: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,

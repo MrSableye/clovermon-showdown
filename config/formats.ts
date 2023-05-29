@@ -529,7 +529,7 @@ export const Formats: FormatList = [
 		banlist: [
 			'Uber', 'Baton Pass',
 			'Shadow Tag', 'Arena Trap', 'Moody',
-			'Bunnorgy',
+			'Bunnorgy', 'Sprucifix', 'Traumobra'
 		],
 		onBegin() {
 			for (const pokemon of this.getAllPokemon()) {

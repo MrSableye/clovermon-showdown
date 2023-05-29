@@ -10827,6 +10827,24 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 244,
 		isNonstandard: "Future",
 	},
+	feelthefoliage: {
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target) && !source.status) {
+				this.damage(source.baseMaxhp / 4, source, target);
+				const r = this.random(100);
+				if (r < 11) {
+					source.setStatus('brn', target);
+				} else if (r < 21) {
+					source.setStatus('par', target);
+				} else if (r < 30) {
+					source.setStatus('psn', target);
+				}
+			}
+		},
+		name: "Feel The Foliage",
+		rating: 2,
+		isNonstandard: "Future",
+  },
 	musclemass: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Fighting') {
@@ -10851,5 +10869,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Muscle Mass",
 		rating: 3,
 		num: 114,
+    isNonstandard: "Future",
 	},
 };

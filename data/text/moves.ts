@@ -9114,7 +9114,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	carcrash: {
 		name: "Car Crash",
-		shortDesc: "Has a 10% chance to paralyze the target and a 10% chance to confuse it.",
+		shortDesc: "Has a 10% chance to paralyze the target and a 10% chance to confuse it. 33% recoil.",
 	},
 	newcannon: {
 		name: "New Cannon",
