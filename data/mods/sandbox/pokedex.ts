@@ -229,4 +229,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			S: "Rampage",
 		},
 	},
+	towhorse: {
+		inherit: true,
+		types: ["???", "Fighting"],
+	}
 };
