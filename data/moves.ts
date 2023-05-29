@@ -30904,4 +30904,131 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		isNonstandard: "Future",
 	},
+	newcannon: {
+		accuracy: true,
+		basePower: 130,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "New Cannon",
+		pp: 9,
+		noPPBoosts: true,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, pulse: 1},
+		target: "normal",
+		type: "Steel",
+		onBasePower(basePower, target) {
+			if (target.getTypes().join() === 'Water' || target.getTypes().join() === 'Flying') {
+				return this.chainModify(0.33);
+			}
+		},
+	},
+	devilsharvest: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Future",
+		name: "Devil's Harvest",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		onHit(target) {
+			const stats: BoostID[] = [];
+			let stat: BoostID;
+			for (stat in target.boosts) {
+				if (target.boosts[stat] < 6) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				const randomStat = this.sample(stats);
+				const boost: SparseBoostsTable = {};
+				boost[randomStat] = 1;
+				this.boost(boost);
+			} else {
+				return false;
+			}
+			for (stat in target.boosts) {
+				if (target.boosts[stat] < 6) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				const randomStat = this.sample(stats);
+				const boost: SparseBoostsTable = {};
+				boost[randomStat] = 1;
+				this.boost(boost);
+			} else {
+				return false;
+			}
+			for (stat in target.boosts) {
+				if (target.boosts[stat] < 6) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				const randomStat = this.sample(stats);
+				const boost: SparseBoostsTable = {};
+				boost[randomStat] = 1;
+				this.boost(boost);
+			} else {
+				return false;
+			}
+			for (stat in target.boosts) {
+				if (target.boosts[stat] < 6) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				const randomStat = this.sample(stats);
+				const boost: SparseBoostsTable = {};
+				boost[randomStat] = 1;
+				this.boost(boost);
+			} else {
+				return false;
+			}
+			for (stat in target.boosts) {
+				if (target.boosts[stat] < 6) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				const randomStat = this.sample(stats);
+				const boost: SparseBoostsTable = {};
+				boost[randomStat] = 1;
+				this.boost(boost);
+			} else {
+				return false;
+			}
+			for (stat in target.boosts) {
+				if (target.boosts[stat] > -6) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				const randomStat = this.sample(stats);
+				const boost: SparseBoostsTable = {};
+				boost[randomStat] = -1;
+				this.boost(boost);
+			} else {
+				return false;
+			}
+			for (stat in target.boosts) {
+				if (target.boosts[stat] > -6) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				const randomStat = this.sample(stats);
+				const boost: SparseBoostsTable = {};
+				boost[randomStat] = -1;
+				this.boost(boost);
+			} else {
+				return false;
+			}
+		},
+		secondary: null,
+		target: "adjacentAllyOrSelf",
+		type: "Grass",
+		zMove: {effect: 'crit2'},
+	},
 };

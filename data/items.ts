@@ -8953,4 +8953,93 @@ export const Items: {[itemid: string]: ItemData} = {
 			target.addVolatile('leechseeds');
 		},
 	},
+	alcohol: {
+		name: "Alcohol",
+		spritenum: 22,
+		itemUser: ["Tsuchinoko", "Sanickel", "Skoxious"],
+		isNonstandard: "Future",
+		fling: {
+			basePower: 1,
+			status: 'slp',
+		},
+		onUpdate(pokemon) {
+			if (pokemon.hp < pokemon.maxhp) {
+				pokemon.eatItem();
+			}
+		},
+		onEat(pokemon) {
+			const random = this.random(4);
+			const drunken = this.random(6);
+			if (pokemon.species.name === 'Tsuchinoko' || pokemon.species.name === 'Sanickel' || pokemon.species.name === 'Skoxious' && !pokemon.transformed) {
+				if (random === 0) {
+					this.damage(pokemon.baseMaxhp / 4);
+				}
+				if (random === 1) {
+					this.heal(pokemon.baseMaxhp / 2);
+				}
+				if (random === 1) {
+					this.heal(pokemon.baseMaxhp);
+				}
+				if (drunken === 0) {
+					pokemon.trySetStatus('slp', pokemon);
+				}
+				if (drunken === 1) {
+					pokemon.addVolatile('confusion');
+				}
+				if (drunken === 2) {
+					pokemon.addVolatile('stockpile');
+				}
+				if (drunken === 3) {
+					pokemon.addVolatile('flinch');
+				}
+				if (drunken === 4) {
+					pokemon.addVolatile('aquaring');
+				}
+				if (drunken === 5) {
+					pokemon.addVolatile('focusenergy');
+				}
+			} else {
+				if (random === 0) {
+					this.damage(pokemon.baseMaxhp);
+				}
+				if (random === 1) {
+					this.damage(pokemon.baseMaxhp / 2);
+				}
+				if (random === 2) {
+					this.damage(pokemon.baseMaxhp / 4);
+				}
+				if (drunken === 0) {
+					pokemon.trySetStatus('lockedmove', pokemon);
+					pokemon.addVolatile('confusion');
+				}
+				if (drunken === 1) {
+					pokemon.trySetStatus('slp', pokemon);
+				}
+				if (drunken === 2) {
+					pokemon.addVolatile('confusion');
+				}
+				if (drunken === 3) {
+					pokemon.addVolatile('confusion');
+					pokemon.addVolatile('taunt');
+					pokemon.addVolatile('torment');
+					pokemon.addVolatile('lockedmove');
+				}
+				if (drunken === 4) {
+					pokemon.addVolatile('yawn');
+					pokemon.addVolatile('confusion');
+					pokemon.addVolatile('taunt');
+					pokemon.addVolatile('torment');
+				}
+				if (drunken === 5) {
+					pokemon.trySetStatus('slp', pokemon);
+					pokemon.addVolatile('nightmare');
+				}
+				if (drunken === 6) {
+					pokemon.trySetStatus('slp', pokemon);
+					pokemon.addVolatile('confusion');
+					pokemon.addVolatile('nightmare');
+				}
+			}
+		},
+	},
 };

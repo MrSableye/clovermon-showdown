@@ -11212,4 +11212,19 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	hor: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	lemonhorse: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	neohorse: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

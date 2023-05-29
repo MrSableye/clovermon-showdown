@@ -1911,4 +1911,8 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	musclemass: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
