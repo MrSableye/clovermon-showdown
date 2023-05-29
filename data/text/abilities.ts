@@ -3191,7 +3191,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	feelthefoliage: {
 		name: "Feel The Foliage",
-		shortDesc: "Contact: -1/4 max hp, 1/3 chance to brn/par/psn.",
+		shortDesc: "Opponent making contact: -1/4 max hp, 1/3 chance to brn/par/psn.",
 
 		damage: "#roughskin",
 	},
