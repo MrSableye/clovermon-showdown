@@ -11227,4 +11227,24 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	popecap: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	buggy: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	bugatti: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	bullepede: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

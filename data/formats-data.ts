@@ -10074,4 +10074,20 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	popecap: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	buggy: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bugatti: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bullepede: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };

@@ -9124,4 +9124,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Devil's Harvest",
 		shortDesc: "Raise 5 random stats, lower 2 random stats.",
 	},
+	metromash: {
+		name: "Metro Mash",
+		desc: "If this move is successful, the user is locked into this move and cannot make another move until it misses, 5 turns have passed, or the attack cannot be used. Power doubles with each successful hit of this move and doubles again if Shift Gear was used previously by the user. If this move is called by Sleep Talk, the move is used for one turn.",
+		shortDesc: "Power doubles with each hit or Shift Gear. Repeats for 5 turns.",
+	},
 };
