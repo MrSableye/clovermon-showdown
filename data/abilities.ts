@@ -10871,4 +10871,45 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 114,
     isNonstandard: "Future",
 	},
+	noweaknesses: {
+		isNonstandard: "Future",
+		onPreStart(pokemon) {
+			this.add('-ability', pokemon, 'NO WEAKNESSES');
+			this.add('-ability', pokemon, 'Levitate');
+			this.effectState.unnerved = true;
+		},
+		onPrepareHit(source, target, move) {
+			
+		if (move.type === 'Normal'||move.type === 'Ghost'){
+			source.setType(['Normal', 'Ghost']);
+			source.setAbility('wholesome100');
+			this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] ability: NO WEAKNESSES', '[of] ' + source);
+		this.add('-ability', source, source.getAbility(), '[from] ability: NO WEAKNESSES');
+		}
+		else if (move.type === 'Bug'||move.type === 'Steel'){
+			source.setType(['Bug', 'Steel']);
+			source.setAbility('flashfire');
+			this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] ability: NO WEAKNESSES', '[of] ' + source);
+		this.add('-ability', source, source.getAbility(), '[from] ability: NO WEAKNESSES');
+		}
+		else if (move.type === 'Dark'||move.type === 'Poison'){
+			source.setType(['Dark', 'Poison']);
+			source.setAbility('eartheater');
+			this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] ability: NO WEAKNESSES', '[of] ' + source);
+		this.add('-ability', source, source.getAbility(), '[from] ability: NO WEAKNESSES');
+		}
+		else if (move.type === 'Water'||move.type === 'Ground'){
+			source.setType(['Water', 'Ground']);
+			source.setAbility('sapsipper');	
+			this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] ability: NO WEAKNESSES', '[of] ' + source);
+		this.add('-ability', source, source.getAbility(), '[from] ability: NO WEAKNESSES');
+		}
+		
+		
+		},
+
+		name: "NO WEAKNESSES",
+		rating: 2,
+		num: 1067,
+	},
 };

@@ -1915,4 +1915,12 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	barkback: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	noweaknesses: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

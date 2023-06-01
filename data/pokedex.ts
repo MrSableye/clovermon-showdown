@@ -42715,6 +42715,23 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 9,
 		creator: "DoomWillBefallAll",
 	},
+	eelspectra: {
+		num: -29372,
+		name: "Eelspectra",
+		types: ["Electric"],
+		genderRatio: {
+			M: 0.5,
+			F: 0.5,
+		},
+		baseStats: {hp: 105, atk: 125, def: 95, spa: 125, spd: 95, spe: 85},
+		abilities: {0: "No Weaknesses"},
+		heightm: 2.1,
+		weightkg: 80.5,
+		color: "White",
+		eggGroups: ["Amorphous"],
+		gen: 9,
+		creator: "DoomWillBefallAll",
+	},
 	taterdoom: {
 		num: -69240,
 		name: "Taterdoom",
