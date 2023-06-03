@@ -52,7 +52,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	boltbeak: {
 		inherit: true,
 		isNonstandard: null,
-		noSketch: true,
 	},
 	branchpoke: {
 		inherit: true,
@@ -164,7 +163,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	fishiousrend: {
 		inherit: true,
 		isNonstandard: null,
-		noSketch: true,
 	},
 	floatyfall: {
 		inherit: true,
@@ -678,7 +676,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	wickedblow: {
 		inherit: true,
 		isNonstandard: null,
-		noSketch: true,
+	},
+	wavecrash: {
+		inherit: true,
+		isNonstandard: null,
 	},
 	zippyzap: {
 		inherit: true,
