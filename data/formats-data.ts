@@ -9730,6 +9730,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	hallmonitor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	amalgum: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	explovine: {
 		tier: "Illegal",
 		isNonstandard: "Future",
