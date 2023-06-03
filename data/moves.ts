@@ -31176,5 +31176,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Grass",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 };
