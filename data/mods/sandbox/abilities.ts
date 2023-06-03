@@ -1923,4 +1923,8 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	feelthefoliage: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

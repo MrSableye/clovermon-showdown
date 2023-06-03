@@ -3183,7 +3183,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	sufferasihave: {
 		name: "Suffer As I Have",
-		shortDesc: "When this Pokemon is knocked out by an opponent's attack, the opponent is inflicted with Curse and loses 1/4 of its max HP.",
+		shortDesc: "When this Pokemon is hit by an opponent's attack, the opponent is inflicted with Curse.",
 	},
 	amplifier: {
 		name: "Amplifier",

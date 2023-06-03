@@ -10054,6 +10054,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	graizze: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	flamiptile: {
 		tier: "Illegal",
 		isNonstandard: "Future",

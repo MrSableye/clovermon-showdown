@@ -4582,4 +4582,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	violentvines: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

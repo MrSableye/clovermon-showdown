@@ -11202,6 +11202,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "UU",
 	},
+	graizze: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	snapuppet: {
 		inherit: true,
 		isNonstandard: null,
