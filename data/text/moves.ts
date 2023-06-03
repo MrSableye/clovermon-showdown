@@ -9129,4 +9129,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "If this move is successful, the user is locked into this move and cannot make another move until it misses, 5 turns have passed, or the attack cannot be used. Power doubles with each successful hit of this move and doubles again if Shift Gear was used previously by the user. If this move is called by Sleep Talk, the move is used for one turn.",
 		shortDesc: "Power doubles with each hit or Shift Gear. Repeats for 5 turns.",
 	},
+	violentvines: {
+		name: "Violent Vines",
+		shortDesc: "Removes all hazards from user's side. Raises Sp. Atk by 1 if any hazards were removed.",
+	},
 };

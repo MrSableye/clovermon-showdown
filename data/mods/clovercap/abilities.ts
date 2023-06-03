@@ -69,6 +69,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ripen: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	/* Clover CAP Abilities */
 	cakeveil: {
 		inherit: true,

@@ -1083,6 +1083,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	amalgum: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	hallmonitor: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,

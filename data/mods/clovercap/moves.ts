@@ -52,7 +52,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	boltbeak: {
 		inherit: true,
 		isNonstandard: null,
-		noSketch: true,
 	},
 	branchpoke: {
 		inherit: true,
@@ -164,7 +163,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	fishiousrend: {
 		inherit: true,
 		isNonstandard: null,
-		noSketch: true,
 	},
 	floatyfall: {
 		inherit: true,
@@ -678,7 +676,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	wickedblow: {
 		inherit: true,
 		isNonstandard: null,
-		noSketch: true,
+	},
+	wavecrash: {
+		inherit: true,
+		isNonstandard: null,
 	},
 	zippyzap: {
 		inherit: true,
@@ -1031,5 +1032,24 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		accuracy: 100,
 		isNonstandard: null,
+	},
+	sleazyspores: {
+		inherit: true,
+		isNonstandard: null,
+		condition: {
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Sleazy Spores');
+			},
+			onSwitchIn(pokemon) {
+				if (pokemon.hasType('Grass')) {
+					this.add('-sideend', pokemon.side, 'move: Sleazy Spores', '[of] ' + pokemon);
+					pokemon.side.removeSideCondition('sleazyspores');
+				}
+				if (!pokemon.runStatusImmunity('powder')) return;
+				if (pokemon.hasItem('heavydutyboots')) return;
+				this.add('-activate', pokemon, 'move: Sleazy Spores');
+				this.boost({spe: -1}, pokemon, this.effectState.source, this.dex.getActiveMove('sleazyspores'));
+			},
+		},
 	},
 };

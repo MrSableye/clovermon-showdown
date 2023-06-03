@@ -10801,7 +10801,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Suffer As I Have",
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
-				this.damage(source.baseMaxhp / 4, source, target);
 				source.addVolatile('curse', this.effectState.target);
 			},
 		rating: 2,
