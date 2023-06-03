@@ -24766,7 +24766,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				'tanglinghair', 'gooey',
 			];
 			const damageContact = [
-				'ironbarbs', 'roughskin',
+				'ironbarbs', 'roughskin', 'feelthefoliage',
 			];
 			const rockyContact = [
 				'rockyhelmet',
@@ -24785,6 +24785,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 			];
 			const randomContact = [
 				'effectspore',
+			];
+			const grassContact = [
+				'feelthefoliage',
 			];
 			const random = this.random(3);
 			if (poisonContact.includes(source.ability)) {
@@ -24875,6 +24878,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			} else if (rockyContact.includes(source.item)) {
 				this.damage(target.baseMaxhp / 6, target, source);
+			} else if (grassContact.includes(source.ability)) {
+				if (random === 0) {
+					const result = this.random(3);
+					if (result === 0) {
+						target.trySetStatus('psn', source);
+					} else if (result === 1) {
+						target.trySetStatus('par', source);
+					} else {
+						target.trySetStatus('brn', source);
+					}
+				}
 			}
 		},
 		target: "normal",
@@ -31099,5 +31113,68 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Steel",
+	},
+	violentvines: {
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Violent Vines",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		onHit(pokemon) {
+			const sideConditions = [
+				'spikes',
+				'toxicspikes',
+				'stealthrock',
+				'stickyweb',
+				'sleazyspores',
+				'gmaxsteelsurge',
+				'shattershard',
+				'luckyroll',
+			];
+			const removedConditions = [];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Violent Vines', '[of] ' + pokemon);
+					removedConditions.push(condition);
+				}
+			}
+			if (removedConditions.length > 0) {
+				this.boost({spa: 1});
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		contestType: "Cool",
 	},
 };
