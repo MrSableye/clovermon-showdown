@@ -746,6 +746,13 @@ export const OFFICIAL_CLODOWN_AVATARS = new Set([
 	'secret-moonman',
 	'secret-titodick',
 	'secret-umaru',
+	'secret-takeuchi',
+	/* CAP Avatars */
+	'cap-capri',
+	'cap-sunny',
+	'cap-batherm',
+	'cap-batherf',
+	'cap-fucker'
 ]);
 
 for (const avatar of OFFICIAL_AVATARS_BELIOT419) OFFICIAL_AVATARS.add(avatar);
