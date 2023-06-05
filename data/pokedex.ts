@@ -42724,7 +42724,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			F: 0.5,
 		},
 		baseStats: {hp: 105, atk: 125, def: 95, spa: 125, spd: 95, spe: 85},
-		abilities: {0: "No Weaknesses"},
+		abilities: {0: "NO WEAKNESSES"},
 		heightm: 2.1,
 		weightkg: 80.5,
 		color: "White",
