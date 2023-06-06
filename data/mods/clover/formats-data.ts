@@ -6806,7 +6806,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	dedwheat: {
 		inherit: true,
-		tier: "RU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"skillswap",
