@@ -9131,6 +9131,6 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	violentvines: {
 		name: "Violent Vines",
-		shortDesc: "Removes all hazards from user's side. Raises Sp. Atk by 1 if any hazards were removed.",
+		shortDesc: "Removes all hazards from user's side. Raises user's Sp. Atk by 1.",
 	},
 };

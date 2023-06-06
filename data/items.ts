@@ -8580,6 +8580,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				return this.chainModify(0.5);
 			}
 		},
+		isNonstandard: "Future",
 	},
 	paraorb: {
 		name: "Para Orb",

@@ -31168,11 +31168,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 					removedConditions.push(condition);
 				}
 			}
-			if (removedConditions.length > 0) {
-				this.boost({spa: 1});
-			}
 		},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Grass",
 		contestType: "Cool",
