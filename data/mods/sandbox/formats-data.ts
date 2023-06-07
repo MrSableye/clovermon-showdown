@@ -11252,4 +11252,24 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	missalts: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	missirlia: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	missingvoir: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	missingvoirmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };

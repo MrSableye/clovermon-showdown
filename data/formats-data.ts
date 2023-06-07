@@ -10102,4 +10102,20 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	missalts: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	missirlia: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	missingvoir: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	missingvoirmega: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };
