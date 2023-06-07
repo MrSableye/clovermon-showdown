@@ -10829,13 +10829,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	feelthefoliage: {
 		onDamagingHit(damage, target, source, move) {
 			if (this.checkMoveMakesContact(move, source, target) && !source.status) {
-				this.damage(source.baseMaxhp / 4, source, target);
 				const r = this.random(100);
 				if (r < 11) {
+					this.damage(source.baseMaxhp / 4, source, target);
 					source.setStatus('brn', target);
 				} else if (r < 21) {
+					this.damage(source.baseMaxhp / 4, source, target);
 					source.setStatus('par', target);
 				} else if (r < 30) {
+					this.damage(source.baseMaxhp / 4, source, target);
 					source.setStatus('psn', target);
 				}
 			}
