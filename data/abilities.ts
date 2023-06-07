@@ -8946,6 +8946,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			source.abilityState.hasMemed[targetSlot] = true;
 
 			this.actions.useMove('metronome', source, target);
+			this.actions.useMove('metronome', source, target);
 		},
 		onResidual(pokemon) {
 			pokemon.abilityState.hasMemed = undefined;
