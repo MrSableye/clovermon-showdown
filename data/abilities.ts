@@ -7776,7 +7776,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	memepower: {
-		onAfterMoveSecondarySelf(source, target, move) {
+		onAfterMove(source, target, move) {
 			const targetSlot = target.getSlot();
 			if (!move || !target) return;
 			if (source.ability !== 'memepower') return;
@@ -8489,7 +8489,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	stringpower: {
-		onAfterMoveSecondarySelf(source, target, move) {
+		onAfterMove(source, target, move) {
 			const targetSlot = target.getSlot();
 			if (!move || !target) return;
 			if (source.ability !== 'stringpower') return;
@@ -8553,7 +8553,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	presentpower: {
-		onAfterMoveSecondarySelf(source, target, move) {
+		onAfterMove(source, target, move) {
 			const targetSlot = target.getSlot();
 			if (!move || !target) return;
 			if (source.ability !== 'presentpower') return;
@@ -8935,11 +8935,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	metronomepower: {
-		onAfterMoveSecondarySelf(source, target, move) {
+		onAfterMove(source, target, move) {
 			const targetSlot = target.getSlot();
 			if (!move || !target) return;
 			if (source.ability !== 'metronomepower') return;
-			if (move.category === 'Status' && move.name !== 'Metronome' && move.name !== 'Metronome If It Was Funny') return;
+			if (move.category === 'Status' && (move.id === 'metronome' || move.id === 'metronomeifitwasfunny')) return;
 			if (source.abilityState.hasMemed?.[targetSlot]) return;
 
 			if (!source.abilityState?.hasMemed) source.abilityState.hasMemed = {};
