@@ -2874,7 +2874,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	metronomepower: {
 		name: "Metronome Power",
-		shortDesc: "Adds a Metronome to every attack.",
+		shortDesc: "Uses Metronome twice after every attack.",
 	},
 	swamped: {
 		name: "Swamped",
