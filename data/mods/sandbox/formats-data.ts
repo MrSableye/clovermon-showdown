@@ -6834,6 +6834,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	hemogoblin: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	pokestarsmeargle: {
 		inherit: true,
 		tier: "OU",
