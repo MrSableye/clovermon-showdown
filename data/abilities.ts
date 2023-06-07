@@ -8939,13 +8939,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const targetSlot = target.getSlot();
 			if (!move || !target) return;
 			if (source.ability !== 'metronomepower') return;
-			if (move.category === 'Status' && move.name !== 'Metronome') return;
+			if (move.category === 'Status' && move.name !== 'Metronome' && move.name !== 'Metronome If It Was Funny') return;
 			if (source.abilityState.hasMemed?.[targetSlot]) return;
 
 			if (!source.abilityState?.hasMemed) source.abilityState.hasMemed = {};
 			source.abilityState.hasMemed[targetSlot] = true;
 
-			this.actions.useMove('metronome', source, target);
 			this.actions.useMove('metronome', source, target);
 		},
 		onResidual(pokemon) {
