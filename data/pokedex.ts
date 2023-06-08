@@ -42084,6 +42084,33 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 		creator: "The Fiery Pits of the Underworld (Detroit)"
 	},
+	blobboshole: {
+		num: 69132,
+		name: "Blobbos-Hole",
+		baseSpecies: "Blobbos",
+		forme: "Hole",
+		types: ["Ground"],
+		gender: "N",
+		baseStats: {
+			hp: 35,
+			atk: 140,
+			def: 50,
+			spa: 50,
+			spd: 70,
+			spe: 120,
+		},
+		abilities: {
+			0: "Digger",
+		},
+		heightm: 4.8,
+		weightkg: 440,
+		color: "Brown",
+		eggGroups: [
+			"Ditto",
+		],
+		gen: 8,
+		creator: "Mr. Sableye"
+	},
 	infected: {
 		num: 42999,
 		name: "Infected",

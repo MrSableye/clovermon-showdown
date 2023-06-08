@@ -3624,4 +3624,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobboshole: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
