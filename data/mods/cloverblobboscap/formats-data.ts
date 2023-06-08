@@ -2500,6 +2500,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	hallmonitor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	amalgum: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	buggy: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bugatti: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	bullepede: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,
