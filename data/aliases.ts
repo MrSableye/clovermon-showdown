@@ -719,6 +719,7 @@ export const Aliases: {[alias: string]: string} = {
 	ekiller: "Arceus",
 	esca: "Escavalier",
 	ferro: "Ferrothorn",
+	fiendfolio: "Hemogoblin",
 	fini: "Tapu Fini",
 	forry: "Forretress",
 	fug: "Rayquaza",

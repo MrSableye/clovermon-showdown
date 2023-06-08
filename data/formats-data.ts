@@ -6194,6 +6194,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "CAP",
 		tier: "CAP",
 	},
+	hemogoblin: {
+		isNonstandard: "CAP",
+		tier: "CAP",
+	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
@@ -10099,6 +10103,22 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	bullepede: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	missalts: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	missirlia: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	missingvoir: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	missingvoirmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

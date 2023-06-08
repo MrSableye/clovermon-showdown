@@ -6834,6 +6834,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	hemogoblin: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	pokestarsmeargle: {
 		inherit: true,
 		tier: "OU",
@@ -11248,6 +11253,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	bullepede: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	missalts: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	missirlia: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	missingvoir: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	missingvoirmega: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

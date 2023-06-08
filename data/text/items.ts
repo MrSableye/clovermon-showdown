@@ -2778,4 +2778,8 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Alcohol",
 		desc: "Has adverse effects to Pokemon without extreme alcohol tolerance.",
 	},
+	missingvoirite: {
+		name: "Missinvoirite",
+		desc: "If held by a Missingvoir, this item allows it to Mega Evolve in battle.",
+	},
 };

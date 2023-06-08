@@ -5468,7 +5468,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	sonnanos: {
 		inherit: true,
-		tier: "RU",
+		tier: "RUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"doubleironbash",

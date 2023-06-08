@@ -9043,4 +9043,16 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 	},
+	missingvoirite: {
+		name: "Missingvoirite",
+		spritenum: 587,
+		megaStone: "Missingvoir-Mega",
+		megaEvolves: "Missingvoir",
+		itemUser: ["Missingvoir"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		isNonstandard: "Future",
+	},
 };
