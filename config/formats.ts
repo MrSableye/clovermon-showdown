@@ -163,7 +163,8 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Wheygle + Unburden'],
+		unbanlist: ['Adesign'], // fucking lmao
 	},
 	{
 		name: '[Gen 8 Clover Only] Anything Goes',
@@ -303,7 +304,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',],
 	},
 	{
 		name: '[Gen 8 Clover Only] Balanced Hackmons',
@@ -325,7 +326,7 @@ export const Formats: FormatList = [
 			'Multi Tier',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Wonder Guard'],
+		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Wonder Guard', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',],
 	},
 	{
 		name: '[Gen 8 Clover Only] 350 Cup',
@@ -351,8 +352,8 @@ export const Formats: FormatList = [
 		banlist: [
 			'Unjoy', 'Chancer', 'Tarditank', 'Flameboyan', 'Eviolite', 'Seamapan',
 			'Pikotton', 'Pretzely', 'Urswine', 'Masdawg', 'Pasdawg', 'Uber > 1', 'AG ++ Uber > 1', 'Arena Trap', 'Huge Power',
-			'Moody', 'Pure Power', 'Shadow Tag', 'Swift Swim', 'Bright Powder', 'King\'s Rock', 'Lax Incense', 'Quick Claw',
-			'Baton Pass', 'Wonder Guard',
+			'Moody', 'Pure Power', 'Shadow Tag', 'Swift Swim',
+			'Baton Pass', 'Wonder Guard', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',
 		],
 		onValidateTeam(team) {
 			const gods = new Set<string>();
@@ -423,7 +424,8 @@ export const Formats: FormatList = [
 			'Inverse Mod',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Draconius', 'Bunnorgy'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Draconius', 'Bunnorgy', 
+			'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',],
 		unbanlist: ['Condoom', 'Foryu', 'Narwhiz', 'Scytill'],
 	},
 	{
@@ -462,7 +464,7 @@ export const Formats: FormatList = [
 		restricted: [
 			'Acupressure', 'Astral Barrage', 'Belly Drum', 'Bolt Beak', 'Clangorous Soul', 'Double Iron Bash', 'Electrify', 'Extreme Speed', 'Fishious Rend',
 			'Geomancy', 'Glacial Lance', 'Lovely Kiss', 'Precipice Blades', 'Shell Smash', 'Shift Gear', 'Spore', 'Thousand Arrows', 'V-create', 'Wicked Blow',
-			'Toke', 'Dark Void',
+			'Toke', 'Dark Void', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',
 		],
 	},
 	{
@@ -482,7 +484,7 @@ export const Formats: FormatList = [
 		restricted: [
 			'Astral Barrage', 'Belly Drum', 'Bolt Beak', 'Double Iron Bash', 'Electrify', 'Geomancy', 'Glacial Lance',
 			'Lovely Kiss', 'Shell Smash', 'Shift Gear', 'Sleep Powder', 'Spore', 'Surging Strikes', 'Thousand Arrows',
-			'Toke',
+			'Toke', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',
 		],
 	},
 	{
@@ -513,7 +515,8 @@ export const Formats: FormatList = [
 			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: [
-			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
+			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 
+			'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',
 		],
 	},
 	{
@@ -529,7 +532,8 @@ export const Formats: FormatList = [
 		banlist: [
 			'Uber', 'Baton Pass',
 			'Shadow Tag', 'Arena Trap', 'Moody',
-			'Bunnorgy', 'Sprucifix', 'Traumobra'
+			'Bunnorgy', 'Sprucifix', 'Traumobra',
+			'Wheygle', 'Condoom',
 		],
 		onBegin() {
 			for (const pokemon of this.getAllPokemon()) {
@@ -565,11 +569,11 @@ export const Formats: FormatList = [
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify', 'Blobbosite', 'Kalosite', 'Sexite', 'Reversite','Upbeddite'],
 		unbanlist: [
-			'Abomasite', 'Absolite', 'Aerodactylite', 'Aggronite', 'Alakazite', 'Altarianite', 'Ampharosite', 'Audinite', 'Banettite', 'Blastoisinite', 'Blue Orb', 'Cameruptite', 'Charizardite X', 'Charizardite Y', 'Diancite', 'Galladite', 'Garchompite', 'Gardevoirite', 'Glalitite', 'Gyaradosite', 'Heracronite', 'Houndoominite', 'Latiasite', 'Latiosite', 'Lopunnite', 'Lucarionite', 'Manectite', 'Metagrossite', 'Mewtwonite X', 'Mewtwonite Y', 'Pinsirite', 'Red Orb', 'Sablenite', 'Salamencite', 'Sceptilite', 'Scizorite', 'Sharpedonite', 'Slowbronite', 'Steelixite', 'Swampertite', 'Tyranitarite', 'Venusaurite', 'Uber', 'Ooganite', 'Wifeminite', 'Bitekinite', 'Fonduppite', 'Ebolabite', 'Somboludite', 'Floriousite', 'Illumatrixite', 'Grimdakite', 'Hazmatite', 'Krokizonite', 'Spookzillite', 'Lizakbarite', 'Rectreemite', 'Unjoyite', 'Emplyinite', 'Upbeddite', 'Smelloxite', 'Pigusonite', 'Condoomite', 'Hohohomite', 'Faptite', 'Jerklite', 'Dowsterite', 'Reptrillite', 'Kuklanite', 'Ricosuavite', 'Vandashite', 'Chasumite', 'Goryannusite', 'Spookscarite', 'Honradite'],
+			'Abomasite', 'Absolite', 'Aerodactylite', 'Aggronite', 'Alakazite', 'Altarianite', 'Ampharosite', 'Audinite', 'Banettite', 'Blastoisinite', 'Blue Orb', 'Cameruptite', 'Charizardite X', 'Charizardite Y', 'Diancite', 'Galladite', 'Garchompite', 'Gardevoirite', 'Glalitite', 'Gyaradosite', 'Heracronite', 'Houndoominite', 'Latiasite', 'Latiosite', 'Lopunnite', 'Lucarionite', 'Manectite', 'Metagrossite', 'Mewtwonite X', 'Mewtwonite Y', 'Pinsirite', 'Red Orb', 'Sablenite', 'Salamencite', 'Sceptilite', 'Scizorite', 'Sharpedonite', 'Slowbronite', 'Steelixite', 'Swampertite', 'Tyranitarite', 'Venusaurite', 'Uber', 'Ooganite', 'Wifeminite', 'Bitekinite', 'Fonduppite', 'Ebolabite', 'Somboludite', 'Floriousite', 'Illumatrixite', 'Grimdakite', 'Hazmatite', 'Krokizonite', 'Spookzillite', 'Lizakbarite', 'Rectreemite', 'Unjoyite', 'Emplyinite', 'Smelloxite', 'Pigusonite', 'Hohohomite', 'Faptite', 'Jerklite', 'Dowsterite', 'Reptrillite', 'Kuklanite', 'Ricosuavite', 'Vandashite', 'Chasumite', 'Goryannusite', 'Spookscarite', 'Honradite'],
 		restricted: [
 			'Adesign', 'Baddon', 'Boarnograf', 'Chromox', 'Clovenix', 'Demiwaifu', 'Endranther', 'Foryu', 'Funnedong',
 			'Griffawork', 'Heliofug', 'Jewipede', 'Narwhiz', 'Scytill', 'Semdemen', 'Tentaquil',
-			'Vivaiger', 'Niterpent', 'Notridley',
+			'Vivaiger', 'Niterpent', 'Notridley', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',
 		],
 		onValidateTeam(team) {
 			const itemTable = new Set<ID>();
@@ -680,7 +684,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Condoom + Unaware', 'Potarded + Unaware', 'Wheygle'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Condoom + Unaware', 'Potarded + Unaware', 'Wheygle + Unburden'],
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] NFE',
@@ -716,7 +720,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Condoom + Unaware', 'Potarded + Unaware'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',],
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] Anything Goes',
@@ -775,7 +779,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Evasion Moves Clause',
 		],
-		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Fling + License to Sell Hotdogs'],
+		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Fling + License to Sell Hotdogs', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Non-Clover
