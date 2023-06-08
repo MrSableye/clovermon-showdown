@@ -42093,7 +42093,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gender: "N",
 		baseStats: {
 			hp: 35,
-			atk: 140,
+			atk: 120,
 			def: 50,
 			spa: 50,
 			spd: 70,
