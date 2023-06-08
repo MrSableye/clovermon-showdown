@@ -9243,6 +9243,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	poltire: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	junkgeist: {
 		inherit: true,
 		tier: "OU",
@@ -9399,6 +9404,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	disbearyebil: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	nebulite: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
@@ -11245,7 +11255,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	buggy: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "LC",
+		tier: "OU",
 	},
 	bugatti: {
 		inherit: true,
@@ -11273,6 +11283,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	missingvoirmega: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	amalgum: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	hallmonitor: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
