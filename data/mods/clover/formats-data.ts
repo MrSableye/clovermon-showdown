@@ -4161,7 +4161,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fairileon: {
 		inherit: true,
-		tier: "RU",
+		tier: "OU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"quiverdance",

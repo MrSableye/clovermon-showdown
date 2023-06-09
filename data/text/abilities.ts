@@ -3137,6 +3137,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Digger",
 		shortDesc: "Dig has 1.5x power, ignores the target's protection, infiltrates, and hits Flying-types but is not very effective. Immune to Earthquake and Magnitude during Dig.",
 	},
+	windglider: {
+		name: "Windglider",
+		shortDesc: "Boosts Wind moves by 1.3; gains immunity to Flying-type moves.",
+	},
 	mongoosesmalice: {
 		name: "Mongoose's Malice",
 		shortDesc: "This Pokemon's Poison/Ghost moves deal 1.5x damage, and Normal/Fighting moves deal 0.5x damage.",

@@ -577,4 +577,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	windglider: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
