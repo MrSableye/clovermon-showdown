@@ -10913,4 +10913,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		num: 1067,
 	},
+	windglider: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Flying') {
+					this.add('-immune', target, '[from] ability: Windglider');
+				}
+				return null;
+			},
+				onBasePowerPriority: 19,
+				onBasePower(basePower, attacker, defender, move) {
+					if (move.flags['wind']) {
+						return this.chainModify(1.3);
+					}
+				},
+		isBreakable: true,
+		isNonstandard: "Future",
+		name: "Windglider",
+		rating: 3.5,
+		num: 18,
+	},
 };

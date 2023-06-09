@@ -10038,6 +10038,22 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbostaxi: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosteyvat: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosspider: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmermaid: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	stunfiskmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -10126,4 +10142,5 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	
 };
