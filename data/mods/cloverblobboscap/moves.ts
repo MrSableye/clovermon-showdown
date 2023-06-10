@@ -19,7 +19,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	faedozer: {
+	terradozer: {
 		inherit: true,
 		isNonstandard: null,
 	},
