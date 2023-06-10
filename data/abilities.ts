@@ -10916,9 +10916,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	windglider: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Flying') {
+				if (!this.boost({spe: 1})) {
 					this.add('-immune', target, '[from] ability: Windglider');
 				}
 				return null;
+				}
 			},
 				onBasePowerPriority: 19,
 				onBasePower(basePower, attacker, defender, move) {
