@@ -529,14 +529,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	terrainpulse: {
-		num: 805,
-		accuracy: 100,
-		basePower: 50,
-		category: "Special",
-		name: "Terrain Pulse",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, pulse: 1},
+		inherit: true,
 		onModifyType(move, pokemon) {
 			if (!pokemon.isGrounded()) return;
 			switch (this.field.terrain) {
@@ -562,11 +555,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 				move.basePower *= 2;
 			}
 		},
-		secondary: null,
-		target: "normal",
-		type: "Normal",
-		zMove: {basePower: 160},
-		maxMove: {basePower: 130},
+		isNonstandard: null,
 	},
 	present: {
 		inherit: true,
@@ -1522,5 +1511,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		target: "normal",
 		type: "Bug",
 		contestType: "Beautiful",
+	},
+	scald: {
+		inherit: true,
+		basePower: 70,
+		pp: 10,
+		isNonstandard: null,
 	},
 };

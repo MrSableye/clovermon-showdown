@@ -567,7 +567,7 @@ export const Formats: FormatList = [
 		ruleset: ['Terastal Clause', 'Standard', 'Overflow Stat Mod', 'Dynamax Clause', 'Sketch Post-Gen 7 Moves'],
 		banlist: [
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
-			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify', 'Blobbosite', 'Kalosite', 'Sexite', 'Reversite','Upbeddite'],
+			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify', 'Blobbosite', 'Kalosite', 'Sexite Y', 'Reversite','Upbeddite'],
 		unbanlist: [
 			'Abomasite', 'Absolite', 'Aerodactylite', 'Aggronite', 'Alakazite', 'Altarianite', 'Ampharosite', 'Audinite', 'Banettite', 'Blastoisinite', 'Blue Orb', 'Cameruptite', 'Charizardite X', 'Charizardite Y', 'Diancite', 'Galladite', 'Garchompite', 'Gardevoirite', 'Glalitite', 'Gyaradosite', 'Heracronite', 'Houndoominite', 'Latiasite', 'Latiosite', 'Lopunnite', 'Lucarionite', 'Manectite', 'Metagrossite', 'Mewtwonite X', 'Mewtwonite Y', 'Pinsirite', 'Red Orb', 'Sablenite', 'Salamencite', 'Sceptilite', 'Scizorite', 'Sharpedonite', 'Slowbronite', 'Steelixite', 'Swampertite', 'Tyranitarite', 'Venusaurite', 'Uber', 'Ooganite', 'Wifeminite', 'Bitekinite', 'Fonduppite', 'Ebolabite', 'Somboludite', 'Floriousite', 'Illumatrixite', 'Grimdakite', 'Hazmatite', 'Krokizonite', 'Spookzillite', 'Lizakbarite', 'Rectreemite', 'Unjoyite', 'Emplyinite', 'Smelloxite', 'Pigusonite', 'Hohohomite', 'Faptite', 'Jerklite', 'Dowsterite', 'Reptrillite', 'Kuklanite', 'Ricosuavite', 'Vandashite', 'Chasumite', 'Goryannusite', 'Spookscarite', 'Honradite'],
 		restricted: [

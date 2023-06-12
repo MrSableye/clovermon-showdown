@@ -2647,8 +2647,8 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Reversite",
 		desc: "If held by a Blobbos-Reverse, this item allows it to Mega Evolve in battle.",
 	},
-	sexite: {
-		name: "Sexite",
+	sexitey: {
+		name: "Sexite Y",
 		desc: "If held by a Blobbos-Sexy, this item allows it to Mega Evolve in battle.",
 	},
 	wackite: {

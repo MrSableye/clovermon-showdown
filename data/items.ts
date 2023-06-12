@@ -8284,10 +8284,10 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
-	sexite: {
-		name: "Sexite",
+	sexitey: {
+		name: "Sexite Y",
 		spritenum: 587,
-		megaStone: "Blobbos-Sexy-Mega",
+		megaStone: "Blobbos-Sexy-Mega-Y",
 		megaEvolves: "Blobbos-Sexy",
 		itemUser: ["Blobbos-Sexy"],
 		onTakeItem(item, source) {

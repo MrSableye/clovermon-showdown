@@ -25512,7 +25512,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 100,
 		category: "Physical",
 		name: "Terra Dozer",
-		pp: 15,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
@@ -25668,7 +25668,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 65,
 		category: "Physical",
 		name: "Backroom",
-		pp: 16,
+		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onHit() {
@@ -29009,7 +29009,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		selfSwitch: true,
 		secondary: null,
-		critRatio: 2,
 		target: "normal",
 		type: "Flying",
 		isNonstandard: "Future",
@@ -30223,13 +30222,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	cherrynobyl: {
 		accuracy: 100,
-		basePower: 70,
+		basePower: 55,
 		category: "Physical",
 		name: "Cherrynobyl",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bullet: 1},
 		multihit: 2,
+		recoil: [1, 3],
 		onTry(source) {
 			if (source.species.name === 'Blobbos-Cherry') {
 				return;
