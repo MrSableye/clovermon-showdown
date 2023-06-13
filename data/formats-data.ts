@@ -10142,5 +10142,28 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	
+	pasdawggambino: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pasdawgmrtoad: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pasdawgstaypuft: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pasdawgswoldier: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pasdawgtoadagi: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pasdawgwhiteout: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };
