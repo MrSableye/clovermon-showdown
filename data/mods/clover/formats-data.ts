@@ -4524,7 +4524,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	pengas: {
 		inherit: true,
-		tier: "RU",
+		tier: "RUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"boomburst",
@@ -6047,7 +6047,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	vaultevour: {
 		inherit: true,
-		tier: "NU",
+		tier: "RUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"crunch",
@@ -6351,7 +6351,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bunnorgy: {
 		inherit: true,
-		tier: "RU",
+		tier: "RUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"fakeout",

@@ -37518,13 +37518,13 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: [
 			"Ditto",
 		],
-		otherFormes: ["Blobbos-Sexy-Mega"],
-		formeOrder: ["Blobbos-Sexy", "Blobbos-Sexy-Mega"],
+		otherFormes: ["Blobbos-Sexy-Mega-Y"],
+		formeOrder: ["Blobbos-Sexy", "Blobbos-Sexy-Mega-Y"],
 		gen: 8,
 	},
-	blobbossexymega: {
+	blobbossexymegay: {
 		num: 69132,
-		name: "Blobbos-Sexy-Mega",
+		name: "Blobbos-Sexy-Mega-Y",
 		baseSpecies: "Blobbos-Sexy",
 		forme: "Mega",
 		types: ["Fighting", "Fairy"],
@@ -37534,7 +37534,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 34.3,
 		color: "Blue",
 		eggGroups: ["Ditto"],
-		requiredItem: "Sexite",
+		requiredItem: "Sexite Y",
 	},
 	blobbosdemifiend: {
 		num: 69132,
@@ -38381,12 +38381,12 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Electric"],
 		gender: "N",
 		baseStats: {
-			hp: 70,
-			atk: 110,
-			def: 75,
-			spa: 110,
-			spd: 70,
-			spe: 115,
+			hp: 50,
+			atk: 95,
+			def: 60,
+			spa: 85,
+			spd: 65,
+			spe: 110,
 		},
 		abilities: {
 			0: "Electromorphosis",
@@ -38748,12 +38748,12 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Flying", "Dark"],
 		gender: "N",
 		baseStats: {
-			hp: 108,
+			hp: 100,
 			atk: 110,
 			def: 70,
 			spa: 110,
 			spd: 95,
-			spe: 86,
+			spe: 85,
 		},
 		abilities: {
 			0: "Leech",
@@ -40686,7 +40686,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Pickpocket",
 			1: "Stakeout",
-			H: "Degradation",
+			H: "Hustle",
 			S: "Puppeteer",
 		},
 		heightm: 0.4,
@@ -41394,7 +41394,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gender: "M",
 		baseStats: {
 			hp: 95,
-			atk: 100,
+			atk: 95,
 			def: 75,
 			spa: 65,
 			spd: 70,
@@ -41939,8 +41939,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {
 			hp: 66,
 			atk: 75,
-			def: 100,
-			spa: 110,
+			def: 110,
+			spa: 100,
 			spd: 75,
 			spe: 104,
 		},
@@ -42196,7 +42196,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Water2", "Human-Like"],
 		gen: 8,
 	},
-	blobbosteyvat: {
+	blobbosteyvat: { // tevyat lmao
 		num: 69132,
 		name: "Blobbos-Teyvat",
 		baseSpecies: "Blobbos",
@@ -42220,7 +42220,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 0.7,
 		weightkg: 25.2,
 		color: "White",
-		eggGroups: ["Amorphous", "Field"],
+		eggGroups: ["Flying"],
 		gen: 8,
 	},
 	infected: {

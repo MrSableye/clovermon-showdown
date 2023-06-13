@@ -9988,7 +9988,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
-	blobbossexymega: {
+	blobbossexymegay: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
