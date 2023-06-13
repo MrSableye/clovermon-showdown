@@ -42111,6 +42111,38 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 		creator: "Mr. Sableye"
 	},
+	blobbosbalanced: {
+		num: 69132,
+		name: "Blobbos-Balanced",
+		forme: "Balanced",
+		types: [
+			"Ice",
+			"Rock",
+		],
+		gender: "N",
+		baseStats: {
+			hp: 189,
+			atk: 189,
+			def: 189,
+			spa: 189,
+			spd: 189,
+			spe: 189,
+		},
+		abilities: {
+			0: "Pure Power",
+			1: "Huge Power",
+			H: "Comatose",
+			S: "Comatose",
+		},
+		heightm: 0.4,
+		weightkg: 5.7,
+		color: "Blue",
+		eggGroups: [
+			"Ditto",
+		],
+		gen: 8,
+		creator: "Mr. Sableye"
+	},
 	blobbosspider: {
 		num: 69132,
 		name: "Blobbos-Spider",
