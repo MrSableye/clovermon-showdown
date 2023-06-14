@@ -169,6 +169,7 @@ export const Badges = new class {
 	async updateBadgeData(userID: string, badgeID: string, data: any, requester: User, override = false) {
 		const overridePermissions = override || Badges.canOverrideBadgeOwnership(requester);
 		await Chat.Badges.updateBadgeData(userID, badgeID, data, requester.id, overridePermissions);
+		await Badges.updateUser(userID);
 	}
 	async addManagedBadgeToUser(userID: string, badgeID: string, requester: User, override = false) {
 		const overridePermissions = override || Badges.canOverrideBadgeOwnership(requester);
