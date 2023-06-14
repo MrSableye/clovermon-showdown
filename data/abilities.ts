@@ -10913,6 +10913,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		num: 1067,
 	},
+	acapability: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				const bestStat = source.getBestStat(true, true);
+				this.boost({[bestStat]: length}, source);
+			}
+		},
+		name: "A Cap Ability",
+		isNonstandard: "Future",
+	},
 	windglider: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Flying') {

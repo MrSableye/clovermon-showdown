@@ -42128,6 +42128,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		},
 		abilities: {
 			0: "An Ability",
+			1: "A Cap Ability",
 		},
 		heightm: 2,
 		weightkg: 0.5,
