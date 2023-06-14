@@ -208,15 +208,15 @@ const ACTIONS = {
 	findBadge: `SELECT * FROM badges WHERE badge_id = ?`,
 	countOwnedBadges: `SELECT count(*) as num FROM badges WHERE owner_id = ?`,
 	getUserBadges: (
-		`SELECT user_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, user_badges.priority, user_badges.is_hidden, badges.create_date ` +
+		`SELECT user_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, user_badges.priority, user_badges.is_hidden, user_badges.badge_data, badges.create_date ` +
 		`FROM badges INNER JOIN user_badges ON badges.badge_id = user_badges.badge WHERE user_badges.user = ? LIMIT ?`
 	),
 	getVisibleUserBadges: (
-		`SELECT user_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, user_badges.priority, user_badges.is_hidden, badges.create_date ` +
+		`SELECT user_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, user_badges.priority, user_badges.is_hidden, user_badges.badge_data, badges.create_date ` +
 		`FROM badges INNER JOIN user_badges ON badges.badge_id = user_badges.badge WHERE (user_badges.user = ? AND user_badges.is_hidden = 0) LIMIT ?`
 	),
 	getBadgeOwners: (
-		`SELECT user_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, user_badges.priority, user_badges.is_hidden, badges.create_date ` +
+		`SELECT user_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, user_badges.priority, user_badges.is_hidden, user_badges.badge_data, badges.create_date ` +
 		`FROM badges INNER JOIN user_badges ON badges.badge_id = user_badges.badge WHERE (user_badges.badge = ?)`
 	),
 	countUserBadges: `SELECT count(*) as num FROM user_badges WHERE user = ?`,
@@ -229,11 +229,11 @@ const ACTIONS = {
 	findUserBadge: `SELECT * FROM user_badges WHERE (user = ? AND badge = ?)`,
 	findMaxPriority: `SELECT MAX(priority) as num FROM user_badges WHERE (user = ?)`,
 	getUserManagedBadges: (
-		`SELECT user_managed_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, badges.create_date ` +
+		`SELECT user_managed_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, badges.create_date, badges.badge_name_template ` +
 		`FROM badges INNER JOIN user_managed_badges ON badges.badge_id = user_managed_badges.badge WHERE user_managed_badges.user = ?`
 	),
 	getBadgeManagers: (
-		`SELECT user_managed_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, badges.create_date ` +
+		`SELECT user_managed_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, badges.create_date, badges.badge_name_template ` +
 		`FROM badges INNER JOIN user_managed_badges ON badges.badge_id = user_managed_badges.badge WHERE (user_managed_badges.badge = ?)`
 	),
 	addManagedBadgeToUser: `INSERT INTO user_managed_badges(user, badge) VALUES (?, ?)`,
