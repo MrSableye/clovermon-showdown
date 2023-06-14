@@ -4582,6 +4582,22 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	ahealingmove: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	apivotingmove: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	adamagingmove: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	aboostingmove: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	violentvines: {
 		inherit: true,
 		isNonstandard: null,

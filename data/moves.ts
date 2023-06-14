@@ -31122,6 +31122,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "A Boosting Move",
 		pp: 30,
 		priority: 0,
+		noSketch: true,
 		flags: {},
 		onHit(target) {
 			if (target.getStat('atk', true, true) > target.getStat('spa', true, true)) {
@@ -31145,6 +31146,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "A Damaging Move",
 		pp: 10,
 		priority: 0,
+		noSketch: true,
 		flags: {protect: 1, mirror: 1},
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
@@ -31172,6 +31174,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "A Pivoting Move",
 		pp: 20,
 		priority: 0,
+		noSketch: true,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
@@ -31190,6 +31193,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "A Healing Move",
 		pp: 5,
 		priority: 0,
+		noSketch: true,
 		flags: {snatch: 1, heal: 1},
 		onHit(pokemon) {
 			if (['', 'slp', 'frz'].includes(pokemon.status) && pokemon.hp >= pokemon.maxhp) return false;
