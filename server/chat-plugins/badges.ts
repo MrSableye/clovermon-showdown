@@ -11,6 +11,7 @@ import probe from 'probe-image-size';
 import {URL} from 'url';
 
 const nameRegex = /^[A-Za-z0-9 "'()]+$/;
+const nameTemplateRegex = /^[A-Za-z0-9 "'(){}]+$/;
 
 const ERROR_BADGE_FEATURE_DISABLED = 'The badges feature is currently disabled.';
 const ERROR_USER_LOCKED = 'You are locked, and so cannot use the badges feature.';
@@ -22,12 +23,14 @@ const ERROR_WRITING_IMAGE = 'Unable to write image. Please try again or contact 
 const ERROR_NO_BADGE_ID = 'Specify a badge ID.';
 const ERROR_NO_BADGE_DESCRIPTION = 'Specify a badge description.';
 const ERROR_INVALID_BADGE_DESCRIPTION = `A badge description can only contain a-z, A-Z, 0-9, ', ", (, ), and spaces.`;
+const ERROR_INVALID_BADGE_NAME_TEMPLATE = `A badge description can only contain a-z, A-Z, 0-9, ', ", (, ), {, }, and spaces.`;
 const ERROR_NO_BADGE_MANAGER = 'Specify a manager.';
 const ERROR_NO_BADGE_IMAGE_URL = 'Specify an image URL.';
 const ERROR_NO_USER_ID = 'Specify a user.';
 const ERROR_NO_BADGE_PRIORITY = 'Specify a priority.';
 const ERROR_NON_NUMERIC_BADGE_PRIORITY = 'Specify a numeric priority.';
 const ERROR_NON_INTEGER_BADGE_PRIORITY = 'Specify an integer priority.';
+const ERROR_INVALID_JSON = 'Specify valid JSON.';
 
 function toLink(buf: string) {
 	return buf.replace(/<a roomid="/g, `<a target="replace" href="/`);
@@ -117,8 +120,8 @@ export const Badges = new class {
 		return Chat.Badges.getBadgeManagers(badgeID);
 	}
 	// Modification
-	createBadge(badgeID: string, badgeName: string, managerID: string, filePath: string) {
-		return Chat.Badges.createBadge(badgeID, badgeName, managerID, filePath);
+	createBadge(badgeID: string, badgeName: string, managerID: string, filePath: string, badgeNameTemplate?: string) {
+		return Chat.Badges.createBadge(badgeID, badgeName, managerID, filePath, badgeNameTemplate);
 	}
 	async deleteBadge(badgeID: string, requester: User, override = false) {
 		const overridePermissions = override || Badges.canOverrideBadgeOwnership(requester);
@@ -162,6 +165,10 @@ export const Badges = new class {
 	async updateBadgePriority(userID: string, badgeID: string, priority: number) {
 		await Chat.Badges.updateBadgePriority(userID, badgeID, priority);
 		await Badges.updateUser(userID);
+	}
+	async updateBadgeData(userID: string, badgeID: string, data: any, requester: User, override = false) {
+		const overridePermissions = override || Badges.canOverrideBadgeOwnership(requester);
+		await Chat.Badges.updateBadgeData(userID, badgeID, data, requester.id, overridePermissions);
 	}
 	async addManagedBadgeToUser(userID: string, badgeID: string, requester: User, override = false) {
 		const overridePermissions = override || Badges.canOverrideBadgeOwnership(requester);
@@ -466,6 +473,22 @@ const getBadgePriority = (arg: string) => applyPredicate(
 	),
 );
 
+const getBadgeNameTemplate = (arg: string) => applyPredicate(
+	{
+		predicate: (predicateArg) => nameTemplateRegex.test(predicateArg),
+		transform: Utils.escapeHTML,
+		errorMessage: ERROR_INVALID_BADGE_NAME_TEMPLATE,
+	},
+	applyPredicate(
+		{
+			predicate: isNotNullOrUndefined,
+			transform: (transformArg) => transformArg.trim(),
+			errorMessage: ERROR_NO_BADGE_DESCRIPTION,
+		},
+		arg,
+	),
+);
+
 export const commands: Chat.ChatCommands = {
 	badges: 'badge',
 	badge: {
@@ -525,15 +548,20 @@ export const commands: Chat.ChatCommands = {
 		async create(target, room, user) {
 			Badges.checkHasBadgePermission(this);
 
-			const [rawID, rawDescription, rawManagerID, rawImageUrl] = target.split(',');
+			const [rawID, rawDescription, rawManagerID, rawImageUrl, rawBadgeNameTemplate] = target.split(',');
 
 			const id = getBadgeID(rawID);
 			const description = getBadgeDescription(rawDescription);
 			const managerID = getBadgeManagerID(rawManagerID);
 			const imageUrl = getBadgeImageUrl(rawImageUrl);
 			const imageFileName = await Badges.downloadBadgeImage(id, imageUrl);
+			let badgeNameTemplate: string | undefined = undefined;
 
-			await Badges.createBadge(id, description, managerID, imageFileName);
+			if (rawBadgeNameTemplate) {
+				badgeNameTemplate = getBadgeNameTemplate(rawBadgeNameTemplate);
+			}
+
+			await Badges.createBadge(id, description, managerID, imageFileName, badgeNameTemplate);
 
 			this.refreshPage('badge-managed');
 			return this.sendReply(`Added Badge '${id}'.`);
@@ -585,6 +613,17 @@ export const commands: Chat.ChatCommands = {
 				this.refreshPage('badge-managed');
 				return this.sendReply(`Updated image of Badge '${id}' to '${imageUrl}'.`);
 			},
+			async template(target, room, user) {
+				const [rawID, rawBadgeNameTemplate] = target.split(',');
+
+				const id = getBadgeID(rawID);
+				const badgeNameTemplate = getBadgeNameTemplate(rawBadgeNameTemplate);
+
+				await Badges.updateBadgeAttribute(id, 'badge_name_template', badgeNameTemplate, user);
+
+				this.refreshPage('badge-managed');
+				return this.sendReply(`Updated template of Badge '${id}' to '${badgeNameTemplate}'.`);
+			},
 		},
 		grant: 'add',
 		async add(target, room, user) {
@@ -609,6 +648,23 @@ export const commands: Chat.ChatCommands = {
 			await Badges.removeBadgeFromUser(userID, badgeID, user);
 
 			return this.sendReply(`Removed Badge '${badgeID}' from User '${userID}'.`);
+		},
+		async data(target, room, user) {
+			Badges.checkCanUse(this);
+
+			const [rawUserID, rawBadgeID, rawData] = target.split(',');
+			const userID = getUserID(rawUserID);
+			const badgeID = getBadgeID(rawBadgeID);
+
+			try {
+				const data = JSON.parse(rawData);
+
+				await Badges.updateBadgeData(userID, badgeID, data, user);
+
+				return this.sendReply(`Updated Badge '${badgeID}' data fom User '${userID}'.`);
+			} catch (e) {
+				throw new Chat.ErrorMessage(ERROR_INVALID_JSON);
+			}
 		},
 		enable: 'on',
 		async on(target, room, user) {
@@ -693,9 +749,11 @@ export const commands: Chat.ChatCommands = {
 			`<code>/badge set name [badge id], [badge name]</code>: updates a badge with the given name. Requires: & or ownership<br />` +
 			`<code>/badge set owner [badge id], [owner],</code>: updates a badge with the given owner. Requires: & or ownership<br />` +
 			`<code>/badge set image [badge id], [image url]</code>: updates a badge with the given image. Requires: & or ownership<br />` +
+			`<code>/badge set template [badge id], [image url]</code>: updates a badge with the given image. Requires: & or ownership<br />` +
 			`<code>/badge delete [badge id]</code>: deletes a badge. Requires: & or ownership<br />` +
 			`<code>/badge add [user], [badge id]</code>: grants a user a badge. Requires: & or ownership<br />` +
 			`<code>/badge remove [user], [badge id]</code>: revokes a badge from a user. Requires: & or ownership<br />` +
+			`<code>/badge data [user], [badge id], [data]</code>: sets badge data for a user. Requires: & or ownership<br />` +
 			`<code>/badge on [badge id]</code>: displays a badge you own<br />` +
 			`<code>/badge off [badge id]</code>: hides a badge you own<br />` +
 			`<code>/badge order [badge id], [priority]</code>: sets the order of a badge you own<br />`
