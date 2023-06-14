@@ -652,12 +652,12 @@ export const commands: Chat.ChatCommands = {
 		async data(target, room, user) {
 			Badges.checkCanUse(this);
 
-			const [rawUserID, rawBadgeID, rawData] = target.split(',');
+			const [rawUserID, rawBadgeID, ...rawData] = target.split(',');
 			const userID = getUserID(rawUserID);
 			const badgeID = getBadgeID(rawBadgeID);
 
 			try {
-				const data = JSON.parse(rawData);
+				const data = JSON.parse(rawData.join(','));
 
 				await Badges.updateBadgeData(userID, badgeID, data, user);
 
