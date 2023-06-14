@@ -9145,8 +9145,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	adamagingmove: {
 		name: "A Damaging Move",
-		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack.",
-		shortDesc: "Physical if user's Atk > Sp. Atk.",
+		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack. +1 priority and flinches if used on the first turn out.",
+		shortDesc: "Physical if user's Atk > Sp. Atk. +1 priority and flinches on first turn out.",
 	},
 	violentvines: {
 		name: "Violent Vines",
