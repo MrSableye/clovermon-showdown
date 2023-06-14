@@ -31154,10 +31154,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 			if (pokemon.activeMoveActions <= 1) {
-				move.secondary = {
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.volatileStatus === 'flinch') return;
+				}
+				move.secondaries.push({
 					chance: 100,
 					volatileStatus: 'flinch',
-				};
+				});
 			}
 		},
 		onModifyPriority(priority, source, target, move) {
