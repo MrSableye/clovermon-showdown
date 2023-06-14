@@ -9262,6 +9262,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbossexymegax: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosreversemega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -10171,6 +10175,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	blobbosbalanced: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscircus: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospterois: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

@@ -11063,4 +11063,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: 18,
 	},
+	wonderland: {
+		name: "Wonderland",
+		onStart(pokemon) {
+			this.add('-activate', pokemon, 'ability: Wonderland');
+			this.field.addPseudoWeather('wonderroom');
+		},
+		rating: 4,
+		isNonstandard: "Future",
+	},
 };

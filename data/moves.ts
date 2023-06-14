@@ -30383,6 +30383,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 			chance: 100,
 			volatileStatus: 'rage',
 		},
+		self: {
+			volatileStatus: 'focusenergy',
+		},
 		target: "normal",
 		type: "Poison",
 		contestType: "Tough",
