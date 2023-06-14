@@ -11028,8 +11028,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onAnyFaint(target, source) {
+			const countVowels = (str: string) => {
+				const id = toID(str) || '';
+				return (id.match(/[aeiou]/gi) || []).length;
+			};
 			if (source.abilityState && source.abilityState.type === 'vowels') {
-				source.abilityState.vowelCount += 1;
+				source.abilityState.vowelCount += countVowels(target.species.name);
 				this.add('-message', `${source.name} has collected ${source.abilityState.vowelCount} vowels.`);
 				if (source.abilityState.vowelCount >= 10) {
 					this.add('-message', `${source.name} collected enough vowels. They won.`);
