@@ -8298,6 +8298,20 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	sexitex: {
+		name: "Sexite X",
+		spritenum: 577,
+		megaStone: "Blobbos-Sexy-Mega-X",
+		megaEvolves: "Blobbos-Sexy",
+		itemUser: ["Blobbos-Sexy"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
 	negite: {
 		name: "Negite",
 		spritenum: 628,

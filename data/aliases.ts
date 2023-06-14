@@ -2106,6 +2106,11 @@ export const Aliases: {[alias: string]: string} = {
 	tevyat: "Blobbos-Teyvat",
 	mermaid: "Blobbos-Mermaid",
 	taxi: "Blobbos-Taxi",
+	spider: "Blobbos-Spider",
+	clown: "Blobbos-Circus",
+	circus: "Blobbos-Circus",
+	pterois: "Blobbos-Pterois",
+	lionfish: "Blobbos-Pterois",
 
 	// Board Power Aliases
 	bpa: "Board Power (/a/)",

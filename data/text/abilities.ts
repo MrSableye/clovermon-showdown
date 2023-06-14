@@ -3139,7 +3139,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	windglider: {
 		name: "Windglider",
-		shortDesc: "Boosts Wind moves by 1.3; gains immunity to Flying-type moves.",
+		shortDesc: "Boosts Wind moves by 1.3; gains immunity to Flying-type moves and +1 Speed if hit by one.",
 	},
 	mongoosesmalice: {
 		name: "Mongoose's Malice",
