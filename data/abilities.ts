@@ -32,6 +32,8 @@ Ratings and how they work:
 
 */
 
+import { Pokemon } from "../sim";
+
 export const Abilities: {[abilityid: string]: AbilityData} = {
 	noability: {
 		isNonstandard: "Past",
@@ -10922,6 +10924,119 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "A Cap Ability",
 		isNonstandard: "Future",
+	},
+	acabability: {
+		name: "A Cab Ability",
+		isNonstandard: "Future",
+		onStart(pokemon) {
+			if (pokemon.abilityState) return;
+			const date = new Date();
+			const dayOfWeek = date.getDay();
+			// Channeling Yandere-dev
+			if (dayOfWeek === 0) {
+				pokemon.abilityState = {
+					type: 'vowels',
+					vowelCount: 0,
+				};
+				this.add('-message', `${pokemon.name} is collecting vowels. If it KOs mons with 15 total vowels, its user wins the game.`);
+			} else if (dayOfWeek === 1) {
+				pokemon.abilityState = {
+					type: 'nicknames',
+				};
+				this.add('-message', `${pokemon.name} hates lazy players. It has 1.5x BP against enemies without nicknames.`);
+			} else if (dayOfWeek === 2) {
+				pokemon.abilityState = {
+					type: 'tripping',
+				};
+				this.add('-message', `${pokemon.name} loves randomness. 1% of the time ANY user's move will fail.`);
+			} else if (dayOfWeek === 3) {
+				pokemon.abilityState = {
+					type: 'primal',
+				};
+				this.add('-message', `${pokemon.name}'s Prime-al Reversion! If it has prime numbered health, it will be twice as fast.`);
+			} else if (dayOfWeek === 4) {
+				pokemon.abilityState = {
+					type: 'busted',
+				};
+				this.add('-message', `${pokemon.name} ignored the CAB team's advice and buffed itself. Excessively. But just this once.`);
+				this.boost({ atk: 1, def: 1, spa: 1, spd: 1, spe: 1 });
+			} else if (dayOfWeek === 5) {
+				pokemon.abilityState = {
+					type: 'reproduction',
+				};
+				if (!pokemon.speciesState['parent']) {
+					this.add('-message', `${pokemon.name} just cloned itself.`);
+					const targetSet = pokemon.set;
+					const childName = [
+						`${targetSet.species}, ${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${pokemon.name}`,
+						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${pokemon.name}`,
+						`${targetSet.gender === 'F' ? 'Daughter of' : targetSet.gender === 'M' ? 'Son of' : 'Offspring of'} ${pokemon.species}`,
+					].find((name) => name.length <= 18) || 'A Mere Child';
+					const baby = new Pokemon({
+						...targetSet,
+						name: childName,
+						moves: ['Metronome', 'Softboiled', 'Egg Bomb', 'Revelation Dance'],
+						item: undefined,
+					}, pokemon.side);
+					baby.speciesState['parent'] = true;
+					baby.position = pokemon.side.pokemon.length;
+					pokemon.side.pokemon.push(baby);
+					pokemon.side.pokemonLeft += 1;
+					pokemon.speciesState['parent'] = true;
+					this.add('teamsize', pokemon.side.id, pokemon.side.pokemon.length);
+				}
+			} else if (dayOfWeek === 6) {
+				pokemon.abilityState = {
+					type: 'loser',
+				};
+				this.add('-message', `${pokemon.name} doesn't feel like playing. His side loses, sorry.`);
+				this.lose(pokemon.side);
+			}
+		},
+		onBasePower(basePower, pokemon, target, move) {
+			if (pokemon.abilityState && pokemon.abilityState.type === 'nicknames') {
+				if (target.name === target.baseSpecies.name) {
+					this.add('-message', `${pokemon.name} thinks you should nickname your mons.`);
+					return this.chainModify(1.5);
+				}
+			}
+		},
+		onModifySpe(spe, pokemon) {
+			const isPrime = (num: number) => {
+				if (num <= 1) return false;
+				if (num === 2) return true;
+				let num2 = Math.sqrt(num);
+				for (let i = 2; i <= num2; i++) {
+					if (num2 % i === 0) {
+						return false;
+					}
+				}
+				return true;
+			};
+			if (pokemon.abilityState && pokemon.abilityState.type === 'primal') {
+				if (isPrime(pokemon.hp)) {
+					this.add('-message', `${pokemon.name} feels hella Prime-al.`);
+					return this.chainModify(2);
+				}
+			}
+		},
+		onAnyTryMove() {
+			const active = this.getAllActive()
+				.some((pokemon) => pokemon.hasAbility('acabability') && pokemon.abilityState && pokemon.abilityState.type === 'tripping');
+			if (this.randomChance(1, 100)) {
+				return this.FAIL;
+			}
+		},
+		onAnyFaint(target, source) {
+			if (source.abilityState && source.abilityState.type === 'vowels') {
+				source.abilityState.vowelCount += 1;
+				this.add('-message', `${source.name} has collected ${source.abilityState.vowelCount} vowels.`);
+				if (source.abilityState.vowelCount >= 10) {
+					this.add('-message', `${source.name} collected enough vowels. They won.`);
+					this.win(source.side);
+				}
+			}
+		},
 	},
 	windglider: {
 		onTryHit(target, source, move) {

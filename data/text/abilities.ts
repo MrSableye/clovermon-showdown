@@ -3210,6 +3210,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "A Cap Ability",
 		desc: "Beast Boost + Levitate."
 	},
+	acabability: {
+		name: "A Cab Ability",
+		desc: "https://pastebin.com/Nt7DxGis",
+	},
 	noweaknesses: {
 		name: "NO WEAKNESSES",
 		shortDesc: "This Pokemon's typing and ability change when using Normal, Ghost, Bug, Steel, Dark, Poison, Water, or Ground moves",
