@@ -11297,4 +11297,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	acapdesign: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
 };

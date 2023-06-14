@@ -10038,6 +10038,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	acapdesign: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbostaxi: {
 		tier: "Illegal",
 		isNonstandard: "Future",

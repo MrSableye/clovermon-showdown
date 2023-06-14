@@ -31114,6 +31114,83 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Steel",
 	},
+	aboostingmove: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "A Boosting Move",
+		pp: 30,
+		priority: 0,
+		flags: {},
+		onHit(target) {
+			if (target.getStat('atk', true, true) > target.getStat('spa', true, true)) {
+				this.boost({ atk: 1, spe: 1});
+			} else {
+				this.boost({ spa: 1, spe: 1});
+			}
+		},
+		secondary: null,
+		target: "self",
+		type: "???",
+		zMove: {effect: 'crit2'},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	adamagingmove: {
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "A Damaging Move",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		target: "normal",
+		type: "???",
+		contestType: "Beautiful",
+
+	},
+	apivotingmove: {
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "A Pivoting Move",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "???",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	ahealingmove: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "A Healing Move",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		onHit(pokemon) {
+			if (['', 'slp', 'frz'].includes(pokemon.status) && pokemon.hp >= pokemon.maxhp) return false;
+			pokemon.cureStatus();
+		},
+		heal: [1, 2],
+		secondary: null,
+		target: "self",
+		type: "???",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
 	violentvines: {
 		accuracy: 100,
 		basePower: 70,

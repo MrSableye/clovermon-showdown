@@ -9129,6 +9129,25 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "If this move is successful, the user is locked into this move and cannot make another move until it misses, 5 turns have passed, or the attack cannot be used. Power doubles with each successful hit of this move and doubles again if Shift Gear was used previously by the user. If this move is called by Sleep Talk, the move is used for one turn.",
 		shortDesc: "Power doubles with each hit or Shift Gear. Repeats for 5 turns.",
 	},
+	aboostingmove: {
+		name: "A Boosting Move",
+		desc: "If Atk > SpA, +1 Atk, +Spe. Otherwise, +1 SpA, +1 Spe.",
+	},
+	ahealingmove: {
+		name: "A Healing Move",
+		shortDesc: "Heals the user by 50% of its max HP. User cures its burn, poison, or paralysis.",
+		desc: "The user restores 1/2 of its maximum HP, rounded half up, and cures its burn, poison, or paralysis.",
+	},
+	apivotingmove: {
+		name: "A Pivoting Move",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+		shortDesc: "User switches out after damaging the target.",
+	},
+	adamagingmove: {
+		name: "A Damaging Move",
+		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack.",
+		shortDesc: "Physical if user's Atk > Sp. Atk.",
+	},
 	violentvines: {
 		name: "Violent Vines",
 		shortDesc: "Removes all hazards from user's side. Raises user's Sp. Atk by 1.",

@@ -42111,6 +42111,32 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 		creator: "Mr. Sableye"
 	},
+	acapdesign: {
+		num: -42075,
+		name: "Acapdesign",
+		types: [
+			"???",
+		],
+		gender: "N",
+		baseStats: {
+			hp: 115,
+			atk: 115,
+			def: 115,
+			spa: 115,
+			spd: 115,
+			spe: 116,
+		},
+		abilities: {
+			0: "An Ability",
+		},
+		heightm: 2,
+		weightkg: 0.5,
+		color: "White",
+		eggGroups: [
+			"Undiscovered",
+		],
+		gen: 8,
+	},
 	blobbosbalanced: {
 		num: 69132,
 		name: "Blobbos-Balanced",
