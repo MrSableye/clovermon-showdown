@@ -41520,7 +41520,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gender: "N",
 		baseStats: {
 			hp: 85,
-			atk: 130,
+			atk: 125,
 			def: 90,
 			spa: 55,
 			spd: 90,
@@ -43957,6 +43957,19 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 1,
 		creator: "REXCANYON792",
+	},
+	purakkusu: {
+		num: -69214,
+		name: "Purakkusu",
+		types: ["Bug", "Fighting"],
+		baseStats: {hp: 85, atk: 140, def: 90, spa: 55, spd: 115, spe: 95},
+		abilities: {0: "Puppeteer", 1: "Mold Breaker", H: "Moxie", S: "Deadly Pincers"},
+		heightm: 1.6,
+		weightkg: 60.5,
+		color: "Brown",
+		eggGroups: ["Bug"],
+		gen: 2,
+		creator: "Engineer Gameplays",
 	},
 	missalts: {
 		num: -66280,

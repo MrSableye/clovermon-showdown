@@ -74,6 +74,16 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evoType: "other",
 		evoCondition: "Die from the Poison status after getting mortally wounded by a Seviper.",
 	},
+	pinsir: {
+		inherit: true,
+		evos: ["Purakkusu"],
+	},
+	purakkusu: {
+		inherit: true,
+		prevo: "Pinsir",
+		evoType: "other",
+		evoCondition: "Prove your might by OHKOing a Buzzwole.",
+	},
 	motherfuck: {
 	    inherit: true,
 	    evos: ["Fatherfuck"],
