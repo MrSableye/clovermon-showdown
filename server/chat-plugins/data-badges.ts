@@ -3,6 +3,11 @@ import {Badges} from './badges';
 
 const MINIMUM_TOURS_REQUIRED = 4;
 const TOUR_BADGE_ID = "tourfarmer";
+const OTHER_BADGES: [number, string][] = [
+	[1, "tournamentwinner"],
+	[2, "2tournamentwinner"],
+	[3, "3tournamentwinner"],
+];
 
 interface Data {
 	tours: Record<string, number>;
@@ -52,6 +57,14 @@ const changeTourWins = (userID: string, func: (previousWins: number) => number) 
 
 const checkTourThreshold = async (userID: string, user: User) => {
 	const userTourWins = getTourWins(userID);
+
+	try {
+		await Promise.all(OTHER_BADGES.map(async ([threshold, badgeId]) => {
+			if (userTourWins >= threshold) {
+				await Badges.addBadgeToUser(userID, badgeId, user, true);
+			}
+		}));
+	} catch (e) {}
 
 	if (userTourWins >= MINIMUM_TOURS_REQUIRED) {
 		try {
@@ -121,7 +134,9 @@ export const commands: Chat.ChatCommands = {
 				return this.sendReplyBox(`User ${userID} has ${newTourWins} wins.${receivedBadge ? ` They have been granted the ${TOUR_BADGE_ID} badge.` : ''}`);
 			},
 		},
-		tourhelp() {
+		tourhelp: 'tournamenthelp',
+		tourshelp: 'tournamenthelp',
+		tournamenthelp() {
 			this.sendReplyBox(
 				`<code>/databadge tours get [user id]</code>: checks how many tour wins a user has.<br />` +
 				`<code>/databadge tours set [user id]</code>: sets how many tour wins a user has. Requires: ${TOUR_BADGE_ID} badge ownership<br />` +
