@@ -54,8 +54,11 @@ const checkTourThreshold = async (userID: string, user: User) => {
 	const userTourWins = getTourWins(userID);
 
 	if (userTourWins >= MINIMUM_TOURS_REQUIRED) {
-		await Badges.addBadgeToUser(userID, TOUR_BADGE_ID, user, true);
-		await Badges.updateBadgeData(userID, TOUR_BADGE_ID, { wins: userTourWins }, user, true);
+		try {
+			await Badges.addBadgeToUser(userID, TOUR_BADGE_ID, user, true);
+			await Badges.updateBadgeData(userID, TOUR_BADGE_ID, { wins: userTourWins }, user, true);
+		} catch (e) { return false; }
+
 		return true;
 	}
 
@@ -91,7 +94,7 @@ export const commands: Chat.ChatCommands = {
 				const newTourWins = changeTourWins(userID, () => value);
 				const receivedBadge = await checkTourThreshold(userID, user);
 
-				return this.sendReplyBox(`User ${userID} has ${newTourWins} wins.${receivedBadge ? ` They have been granted the ${TOUR_BADGE_ID}` : ''}`);
+				return this.sendReplyBox(`User ${userID} has ${newTourWins} wins.${receivedBadge ? ` They have been granted the ${TOUR_BADGE_ID} badge.` : ''}`);
 			},
 			add: 'increment',
 			async increment(target, room, user) {
@@ -103,7 +106,7 @@ export const commands: Chat.ChatCommands = {
 				const newTourWins = changeTourWins(userID, (previousValue) => previousValue + 1);
 				const receivedBadge = await checkTourThreshold(userID, user);
 
-				return this.sendReplyBox(`User ${userID} has ${newTourWins} wins.${receivedBadge ? ` They have been granted the ${TOUR_BADGE_ID}` : ''}`);
+				return this.sendReplyBox(`User ${userID} has ${newTourWins} wins.${receivedBadge ? ` They have been granted the ${TOUR_BADGE_ID} badge.` : ''}`);
 			},
 			remove: 'decrement',
 			async decrement(target, room, user) {
@@ -115,8 +118,16 @@ export const commands: Chat.ChatCommands = {
 				const newTourWins = changeTourWins(userID, (previousValue) => previousValue - 1);
 				const receivedBadge = await checkTourThreshold(userID, user);
 
-				return this.sendReplyBox(`User ${userID} has ${newTourWins} wins.${receivedBadge ? ` They have been granted the ${TOUR_BADGE_ID}` : ''}`);
+				return this.sendReplyBox(`User ${userID} has ${newTourWins} wins.${receivedBadge ? ` They have been granted the ${TOUR_BADGE_ID} badge.` : ''}`);
 			},
+		},
+		tourhelp() {
+			this.sendReplyBox(
+				`<code>/databadge tours get [user id]</code>: checks how many tour wins a user has.<br />` +
+				`<code>/databadge tours set [user id]</code>: sets how many tour wins a user has. Requires: ${TOUR_BADGE_ID} badge ownership<br />` +
+				`<code>/databadge tours add [user id]</code>: adds a tour win to a user. Requires: ${TOUR_BADGE_ID} badge ownership<br />` +
+				`<code>/databadge tours remove [user id]</code>: checks how many tour wins a user has. Requires: ${TOUR_BADGE_ID} badge ownership<br />`
+			);
 		},
 	},
 };
