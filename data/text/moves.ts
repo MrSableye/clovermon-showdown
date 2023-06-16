@@ -9023,7 +9023,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	trashtalk: {
 		name: "Trash Talk",
-		desc: "Makes the foe have Rage effect.",
+		desc: "Makes the foe have Rage effect. Raises the user's crit rate by 2.",
 	},
 	torchshriek: {
 		name: "Torch Shriek",

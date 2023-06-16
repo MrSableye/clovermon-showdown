@@ -11142,6 +11142,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	purakkusu: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	slimifu: {
 		inherit: true,
 		isNonstandard: null,

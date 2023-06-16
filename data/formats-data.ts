@@ -10074,6 +10074,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	purakkusu: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	podostroud: {
 		tier: "Illegal",
 		isNonstandard: "Future",

@@ -1507,6 +1507,11 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		pp: 10,
 		isNonstandard: null,
 	},
+	wickedblow: {
+		inherit: true,
+		basePower: 75,
+		isNonstandard: null,
+	},
 	flashcannon: {
 		num: 430,
 		accuracy: 100,
