@@ -2363,4 +2363,8 @@ export const Items: { [k: string]: ModdedItemData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	kikeousorb: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
