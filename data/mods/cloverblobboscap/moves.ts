@@ -1639,4 +1639,20 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		basePower: 65,
 		isNonstandard: null,
 	},
+	sadpoem: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	annoy: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	peptalk: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	errpkmn: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

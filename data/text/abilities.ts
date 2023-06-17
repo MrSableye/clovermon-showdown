@@ -3197,6 +3197,16 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Wonderland",
 		shortDesc: "Summons Wonder Room upon switch-in.",
 	},
+	runngun: {
+		name: "Run N' Gun",
+		shortDesc: "This Pokemon's critical hit ratio is raised by 1 stage and the accuracy of its attacks is 0.9x.",
+	},
+	massacre: {
+		name: "Massacre",
+		shortDesc: "Kills everyone when hit by a Dark or Fairy move.",
+
+		damage: "  The massacre is complete!",
+	},
 	feelthefoliage: {
 		name: "Feel The Foliage",
 		shortDesc: "Opponent making contact: -1/4 max hp, 1/3 chance to brn/par/psn.",

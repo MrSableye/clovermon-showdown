@@ -7483,6 +7483,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Bath Time",
 		isNonstandard: "Future",
 	},
+	massacre: {
+		onDamagingHit(damage, target, source, move) {
+			if (target !== source && move.type === 'Fairy') {
+				this.damage(source.baseMaxhp, source, target);
+				this.damage(source.baseMaxhp, target, target);
+			}
+			if (target !== source && move.type === 'Dark') {
+				this.damage(source.baseMaxhp, source, target);
+				this.damage(source.baseMaxhp, target, target);
+			}
+		},
+		isBreakable: true,
+		name: "Massacre",
+		isNonstandard: "Future",
+	},
 	uncompetitive: {
 		name: "Uncompetitive",
 		isPermanent: true,
@@ -10873,6 +10888,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: 114,
     isNonstandard: "Future",
+	},
+	runngun: {
+		// This should be applied directly to the stat as opposed to chaining with the others
+		onModifyCritRatio(critRatio) {
+			return critRatio + 1;
+		},
+		onSourceModifyAccuracyPriority: -1,
+		onSourceModifyAccuracy(accuracy, target, source, move) {
+			if (typeof accuracy === 'number') {
+				return this.chainModify([3687, 4096]);
+			}
+		},
+		name: "Run N' Gun",
+		rating: 3.5,
+		isNonstandard: "Future",
 	},
 	noweaknesses: {
 		isNonstandard: "Future",
