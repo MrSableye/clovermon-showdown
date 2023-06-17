@@ -35,7 +35,7 @@ const checkCanUpdateTours = async (user: User) => {
 		throw new Chat.ErrorMessage(`Tour badge ${TOUR_BADGE_ID} doesn't exist.`);
 	}
 
-	const canUpdate = [badge.owner_id, managers.map((manager) => manager.user_id)].includes(user.id);
+	const canUpdate = [badge.owner_id, ...managers.map((manager) => manager.user_id)].includes(user.id);
 
 	if (!canUpdate) {
 		throw new Chat.ErrorMessage('You do not have permission to manage this.');
