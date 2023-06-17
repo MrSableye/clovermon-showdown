@@ -31214,6 +31214,95 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 		isNonstandard: "Future",
 	},
+	sadpoem: {
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Sad Poem",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
+		},
+		secondary: {
+			chance: 40,
+			boosts: {
+				def: -1,
+			},
+		},
+		target: "normal",
+		type: "Dark",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	annoy: {
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Annoy",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
+		},
+		secondary: {
+			chance: 20,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Dark",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	peptalk: {
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Pep Talk",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
+		},
+		secondary: {
+			chance: 30,
+			self: {
+				boosts: {
+					accuracy: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Dark",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	errpkmn: {
+		accuracy: 100,
+		basePower: 88,
+		category: "Special",
+		overrideDefensiveStat: 'def',
+		name: "ERR.PKMN",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+		contestType: "Clever",
+		isNonstandard: "Future",
+		onTryHit(target, source, move) {
+			if (target.newlySwitched || this.queue.willMove(target)) {
+				this.debug('Went first, ERR crit activated');
+				return move.willCrit = true;
+			}
+			this.debug('Went last, ERR no crit');
+			return move.willCrit = false;
+		},
+	},
 	violentvines: {
 		accuracy: 100,
 		basePower: 70,

@@ -2913,6 +2913,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "NFE",
 	},
+	worldle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "AG",
+	},
+	stoppogriff: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	popecap: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,

@@ -9124,6 +9124,22 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Devil's Harvest",
 		shortDesc: "Raise 5 random stats, lower 2 random stats.",
 	},
+	sadpoem: {
+		name: "Sad Poem",
+		shortDesc: "Placeholder. 40% chance to lower Defense. Special if user's Sp. Atk > Atk.",
+	},
+	annoy: {
+		name: "Annoy",
+		shortDesc: "Placeholder. 20% chance to burn. Special if user's Sp. Atk > Atk.",
+	},
+	peptalk: {
+		name: "Pep Talk",
+		shortDesc: "Placeholder. 30% chance to raise user's accuracy. Special if user's Sp. Atk > Atk.",
+	},
+	errpkmn: {
+		name: "ERR.PKMN",
+		shortDesc: "Damages target based on Defense, not Sp. Def. Crits if user moves before the target.",
+	},
 	metromash: {
 		name: "Metro Mash",
 		desc: "If this move is successful, the user is locked into this move and cannot make another move until it misses, 5 turns have passed, or the attack cannot be used. Power doubles with each successful hit of this move and doubles again if Shift Gear was used previously by the user. If this move is called by Sleep Talk, the move is used for one turn.",

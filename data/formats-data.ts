@@ -9330,6 +9330,18 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosomorihappy: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosomorisad: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosomoriangry: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosglover: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -10067,6 +10079,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	yamigiri: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	stoppogriff: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
