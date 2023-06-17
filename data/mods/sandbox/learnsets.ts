@@ -2431,5 +2431,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			behemothbash: ["8L1"],
 		}
 	},
-	
+	ginocchio: {
+		eventData: [
+			{ generation: 9, level: 50, moves: ["genesisboost", "earthpower", "kingsshield", "nastyplot"], pokeball: "cherishball" },
+		],
+	},
 };

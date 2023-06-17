@@ -9155,6 +9155,6 @@ export const MovesText: {[k: string]: MoveText} = {
 	genesisboost: {
 		name: "Genesis Boost",
 		desc: "Fails unless it is the user's first turn on the field. Raises the user's Attack and Defense by 2.",
-		shortDesc: "Hits first. First turn out only.Raises the user's Attack and Defense by 2.",
+		shortDesc: "Usually goes first. First turn out only.Raises the user's Attack and Defense by 2.",
 	},
 };
