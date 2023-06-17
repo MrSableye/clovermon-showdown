@@ -242,5 +242,16 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	towhorse: {
 		inherit: true,
 		types: ["???", "Fighting"],
+	},
+	sherifuego: {
+		inherit: true,
+		abilities: {0: "Chlorophyll", 1: "Levitate", H: "Solar Power", S: "Flash Fire"},
+		
+	},
+	ginocchio: { 
+		inherit: true,
+		baseStats: {hp: 70, atk: 98, def: 65, spa: 105, spd: 62, spe: 125},
+		abilities: {0: "Overgrow", H: "Magic Guard", S: "Flower Gift"},
 	}
+	
 };

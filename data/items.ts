@@ -8968,6 +8968,22 @@ export const Items: {[itemid: string]: ItemData} = {
 			target.addVolatile('leechseeds');
 		},
 	},
+	kikeousorb: {
+		name: "Kikeous Orb",
+		spritenum: 180,
+		fling: {
+			basePower: 60,
+		},
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (user.baseSpecies.num === 6969248 && (move.type === 'Normal' || move.type === 'Bug')) {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		itemUser: ["Jewipede"],
+		num: 69112,
+		isNonstandard: "Future",
+	},
 	alcohol: {
 		name: "Alcohol",
 		spritenum: 22,

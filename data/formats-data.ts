@@ -10178,6 +10178,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	jewipedeo: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosbalanced: {
 		tier: "Illegal",
 		isNonstandard: "Future",

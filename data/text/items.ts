@@ -2782,4 +2782,11 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Missinvoirite",
 		desc: "If held by a Missingvoir, this item allows it to Mega Evolve in battle.",
 	},
+	kikeousorb: {
+		name: "Kikeous Orb",
+		desc: "If held by a Jewipede, its Normal- and Bug-type attacks have 1.2x power.",
+		gen4: {
+			desc: "Can only be held by Jewipede. Its Normal- & Bug-type attacks have 1.2x power.",
+		},
+	},
 };
