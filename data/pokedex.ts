@@ -43048,7 +43048,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Jewipede-O",
 		baseSpecies: "Jewipede",
 		forme: "O",
-		types: ["Normal", "Bug"],
+		types: ["Bug", "Normal"],
 		gender: "M",
 		baseStats: {hp: 105, atk: 150, def: 90, spa: 150, spd: 90, spe: 95},
 		abilities: {0: "Regenerator"},
