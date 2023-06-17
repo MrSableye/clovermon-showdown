@@ -9152,4 +9152,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Violent Vines",
 		shortDesc: "Removes all hazards from user's side. Raises user's Sp. Atk by 1.",
 	},
+	genesisboost: {
+		name: "Genesis Boost",
+		desc: "Fails unless it is the user's first turn on the field. Raises the user's Attack and Defense by 2.",
+		shortDesc: "Hits first. First turn out only.Raises the user's Attack and Defense by 2.",
+	},
 };

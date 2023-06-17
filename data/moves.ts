@@ -31282,4 +31282,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
+	genesisboost: {
+		num: 69660,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Genesis Boost",
+		pp: 5,
+		priority: 2,
+		flags: {snatch: 1, protect: 1, mirror: 1},
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Genesis Boost only works on your first turn out.");
+				return false;
+			}
+		},
+		boosts: {
+			atk: 2,
+			def: 2,
+		},
+		secondary: null,
+		target: "adjacentAllyOrSelf",
+		type: "Fairy",
+		contestType: "Cool",
+	},
 };
