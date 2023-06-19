@@ -10086,6 +10086,34 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	gem: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	suxako: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	natuonian: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pantherk: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fungore: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	glaggssacre: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	aiytch: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	tenyuu: {
 		tier: "Illegal",
 		isNonstandard: "Future",

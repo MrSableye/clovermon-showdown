@@ -8767,6 +8767,30 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Erons Repus",
 		shortDesc: "The user falls asleep after using this attack.",
 	},
+	garudaimpact: {
+		name: "Garuda Impact",
+		shortDesc: "Goes last. 100% chance to flinch the opponent.",
+	},
+	potemkinbuster: {
+		name: "Potemkin Buster",
+		desc: "This attack takes the target into the air with the user on the first turn and executes on the second. Pokemon weighing 500 kg or more cannot be lifted. On the first turn, the user and the target avoid all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thousand Arrows, Thunder, and Twister. The user and the target cannot make a move between turns, but the target can select a move to use. This move cannot damage Flying-type Pokemon. Fails on the first turn if the target is an ally, if the target has a substitute, or if the target is using Bounce, Dig, Dive, Fly, Phantom Force, Shadow Force, or Sky Drop. The user loses its focus and does nothing if it is hit by a damaging attack this turn before it can execute the move.",
+		shortDesc: "Goes last. User and foe jump up turn 1. Damages on turn 2. Fails if the user takes damage before it hits.",
+
+		start: "  [POKEMON] is tightening its focus!",
+		cant: "[POKEMON] lost its focus and couldn't move!",
+		prepare: "[POKEMON] took [TARGET] into the sky!",
+		end: "  [POKEMON] was freed from Potemkin Buster!",
+		failSelect: "Potemkin Buster won't let [POKEMON] go!",
+		failTooHeavy: "  [POKEMON] is too heavy to be lifted!",
+	},
+	pantherkkick: {
+		name: "Pantherk Kick",
+		shortDesc: "30% flinch chance. Pantherk.",
+	},
+	testomajesto: {
+		name: "Testo Majesto",
+		shortDesc: "'Ah, don't bother, it's just a coffee machine. Sometimes it shows ads on the screen.'",
+	},
 	shuttleloop: {
 		name: "Shuttle Loop",
 		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
