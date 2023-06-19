@@ -11352,4 +11352,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	},
+	sableven: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
