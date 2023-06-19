@@ -1919,6 +1919,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	hpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	barkback: {
 		inherit: true,
 		isNonstandard: null,

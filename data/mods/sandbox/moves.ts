@@ -4547,6 +4547,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	garudaimpact: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	potemkinbuster: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pantherkkick: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	scavenge: {
 		inherit: true,
 		isNonstandard: null,

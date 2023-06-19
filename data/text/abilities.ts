@@ -3107,7 +3107,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	doomed: {
 		name: "Doomed",
-		shortDesc: "boosts Head based moves",
+		shortDesc: "boosts Head based moves (Lose 1/3 HP upon switching out; Head-based moves deal half damage; Halved speed upon item loss; Immunity.)",
+	},
+	hpower: {
+		name: "H Power",
+		shortDesc: "Berserk + Technician.", // ???
 	},
 	hyperspeen: {
 		name: "Hyperspeen",

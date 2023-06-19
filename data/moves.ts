@@ -28935,7 +28935,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	pobybbolb: {
 		num: 69060,
-		accuracy: 70,
+		accuracy: 80,
 		basePower: 100,
 		category: "Special",
 		name: "Pob Ybbolb",
@@ -28947,7 +28947,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				},
 			},
 		},
-		pp: 42,
+		pp: 23,
 		priority: 0,
 		noPPBoosts: true,
 		target: "normal",
@@ -28974,7 +28974,183 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cute",
 		isNonstandard: "Future",
 	},
+	garudaimpact: {
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Garuda Impact",
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
+		pp: 15,
+		priority: -1,
+		target: "normal",
+		type: "Fire",
+		flags: {protect: 1},
+		isNonstandard: "Future",
+	},
+	potemkinbuster: {
+		accuracy: true,
+		basePower: 300,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Potemkin Buster",
+		pp: 10,
+		priority: -3,
+		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1, distance: 1},
+		onModifyMove(move, source) {
+			if (!source.volatiles['potemkinbuster']) {
+				move.accuracy = true;
+				delete move.flags['contact'];
+			}
+		},
+		onMoveFail(target, source) {
+			if (source.volatiles['twoturnmove'] && source.volatiles['twoturnmove'].duration === 1) {
+				source.removeVolatile('potemkinbuster');
+				source.removeVolatile('twoturnmove');
+				if (target === this.effectState.target) {
+					this.add('-end', target, 'Potemkin Buster', '[interrupt]');
+				}
+			}
+		},
+		onTry(source, target) {
+			return !target.fainted;
+		},
+		onTryHit(target, source, move) {
+			if (source.removeVolatile(move.id)) {
+				if (target !== source.volatiles['twoturnmove'].source) return false;
 
+				if (target.hasType('Flying')) {
+					this.add('-immune', target);
+					return null;
+				}
+			} else {
+				if (target.volatiles['substitute'] || target.isAlly(source)) {
+					return false;
+				}
+				if (target.getWeight() >= 5000) {
+					this.add('-fail', target, 'move: Potemkin Buster', '[heavy]');
+					return null;
+				}
+
+				this.add('-prepare', source, move.name, target);
+				source.addVolatile('twoturnmove', target);
+				return null;
+			}
+		},
+		onHit(target, source) {
+			if (target.hp) this.add('-end', target, 'Potemkin Buster');
+		},
+		condition: {
+			duration: 2,
+			onAnyDragOut(pokemon) {
+				if (pokemon === this.effectState.target || pokemon === this.effectState.source) return false;
+			},
+			onFoeTrapPokemonPriority: -15,
+			onFoeTrapPokemon(defender) {
+				if (defender !== this.effectState.source) return;
+				defender.trapped = true;
+			},
+			onFoeBeforeMovePriority: 12,
+			onFoeBeforeMove(attacker, defender, move) {
+				if (attacker === this.effectState.source) {
+					attacker.activeMoveActions--;
+					this.debug('Potemkin buster nullifying.');
+					return null;
+				}
+			},
+			onRedirectTargetPriority: 99,
+			onRedirectTarget(target, source, source2) {
+				if (source !== this.effectState.target) return;
+				if (this.effectState.source.fainted) return;
+				return this.effectState.source;
+			},
+			onAnyInvulnerability(target, source, move) {
+				if (target !== this.effectState.target && target !== this.effectState.source) {
+					return;
+				}
+				if (source === this.effectState.target && target === this.effectState.source) {
+					return;
+				}
+				if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows'].includes(move.id)) {
+					return;
+				}
+				return false;
+			},
+			onAnyBasePower(basePower, target, source, move) {
+				if (target !== this.effectState.target && target !== this.effectState.source) {
+					return;
+				}
+				if (source === this.effectState.target && target === this.effectState.source) {
+					return;
+				}
+				if (move.id === 'gust' || move.id === 'twister') {
+					this.debug('BP doubled on midair target');
+					return this.chainModify(2);
+				}
+			},
+			onFaint(target) {
+				if (target.volatiles['skydrop'] && target.volatiles['twoturnmove'].source) {
+					this.add('-end', target.volatiles['twoturnmove'].source, 'Potemkin Buster', '[interrupt]');
+				}
+			},
+			onStart(pokemon) {
+				this.add('-singleturn', pokemon, 'move: Potemkin Buster');
+			},
+			onHit(pokemon, source, move) {
+				if (move.category !== 'Status') {
+					this.effectState.lostFocus = true;
+				}
+			},
+			onTryAddVolatile(status, pokemon) {
+				if (status.id === 'flinch') return null;
+			},
+		},
+		secondary: null,
+		target: "any",
+		type: "Fighting",
+		contestType: "Tough",
+	},
+	pantherkkick: {
+		accuracy: 85,
+		basePower: 120,
+		category: "Physical",
+		name: "Pantherk Kick",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		onTry(source) {
+			if (source.species.name === 'Pantherk') {
+				return;
+			}
+			this.attrLastMove('[still]');
+			this.add('-fail', source, 'move: Pantherk Kick');
+			this.hint("You have not modded MUGEN hard enough.");
+			return null;
+		},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	testomajesto: {
+		accuracy: true,
+		basePower: 1,
+		category: "Physical",
+		name: "Testo Majesto",
+		pp: 35,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "???",
+		isNonstandard: "Future",
+	},
 	saltsprinkle: {
 		num: 1573,
 		accuracy: 100,

@@ -14,6 +14,14 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		prevo: "Pengas",
 		evoLevel: 100,
+		baseStats: {
+			hp: 139,
+			atk: 69,
+			def: 86,
+			spa: 125,
+			spd: 76,
+			spe: 111,
+		},
 	},
 	honrade: {
 		inherit: true,
@@ -84,6 +92,21 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spa: 142,
 			spd: 109,
 			spe: 69,
+		},
+	},
+	sableye: {
+		inherit: true,
+		abilities: {0: "Keen Eye", 1: "Prankster"},
+	},
+	pantherk: {
+		inherit: true,
+		baseStats: {
+			hp: 85,
+			atk: 115,
+			def: 75,
+			spa: 105,
+			spd: 75,
+			spe: 75,
 		},
 	},
 };
