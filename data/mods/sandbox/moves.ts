@@ -4047,7 +4047,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	bishido: {
+	bushido: {
 		inherit: true,
 		isNonstandard: null,
 	},

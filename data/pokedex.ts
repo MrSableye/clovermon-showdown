@@ -43126,7 +43126,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Jewipede-O",
 		baseSpecies: "Jewipede",
 		forme: "O",
-		types: ["Normal", "Bug"],
+		types: ["Bug", "Normal"],
 		gender: "M",
 		baseStats: {hp: 105, atk: 150, def: 90, spa: 150, spd: 90, spe: 95},
 		abilities: {0: "Regenerator"},
@@ -43393,6 +43393,19 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: [
 			"Field",
 		],
+		gen: 8,
+	},
+	sableven: {
+		num: -42151,
+		name: "Sableven",
+		types: ["Steel", "Ghost"],
+		gender: "N",
+		baseStats: {hp: 175, atk: 174, def: 157, spa: 174, spd: 138, spe: 193},
+		abilities: {0: "Stall", 1: "Admin Abuse", H: "Flare Heal", S: "Prankster"},
+		heightm: 8,
+		weightkg: 911,
+		color: "Purple",
+		eggGroups: ["Undiscovered"],
 		gen: 8,
 	},
 	sparmor: {

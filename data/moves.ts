@@ -26350,11 +26350,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
-	bishido: {
+	bushido: {
 		accuracy: 100,
 		basePower: 15,
 		category: "Special",
-		name: "Bishido",
+		name: "Bushido",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
@@ -31570,5 +31570,30 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "adjacentAllyOrSelf",
 		type: "Fairy",
 		contestType: "Cool",
+	},
+	godotshammer: {
+		num: 696969420,
+		accuracy: 90,
+		basePower: 90,
+		category: "Physical",
+		name: "Godot's Hammer",
+		pp: 5,
+		priority: 0,
+		target: "normal",
+		type: "Ghost",
+		recoil: [33, 100],
+		flags: {protect: 1, mirror: 1, hammer: 1},
+		self: {
+			boosts: {
+				spe: -2,
+			},
+		},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('torment');
+				target.addVolatile('taunt');
+			}
+		},
+		isNonstandard: "Future",
 	},
 };
