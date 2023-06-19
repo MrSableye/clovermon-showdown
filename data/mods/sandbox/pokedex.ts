@@ -248,10 +248,25 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		abilities: {0: "Chlorophyll", 1: "Levitate", H: "Solar Power", S: "Flash Fire"},
 		
 	},
+	sableven: {
+		num: -42151,
+		name: "Sableven",
+		types: ["Steel", "Ghost"],
+		gender: "N",
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Stall", 1: "Admin Abuse", H: "Flare Heal", S: "Prankster"},
+		heightm: 8,
+		weightkg: 911,
+		color: "Purple",
+		eggGroups: ["Undiscovered"],
+		gen: 8,
+	},
 	ginocchio: { 
 		inherit: true,
 		baseStats: {hp: 70, atk: 98, def: 65, spa: 105, spd: 62, spe: 125},
 		abilities: {0: "Overgrow", H: "Magic Guard", S: "Flower Gift"},
 	}
+
+	
 	
 };

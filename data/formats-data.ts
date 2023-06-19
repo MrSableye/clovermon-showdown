@@ -10182,6 +10182,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	sableven: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosbalanced: {
 		tier: "Illegal",
 		isNonstandard: "Future",
