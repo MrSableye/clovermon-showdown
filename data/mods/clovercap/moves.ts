@@ -995,7 +995,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	sonicboom: {
-		inherit: true,
 		accuracy: 100,
 		basePower: 150,
 		category: "Special",
