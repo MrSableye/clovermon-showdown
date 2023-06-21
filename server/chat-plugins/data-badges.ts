@@ -68,7 +68,10 @@ const checkTourThreshold = async (userID: string, user: User) => {
 
 	if (userTourWins >= MINIMUM_TOURS_REQUIRED) {
 		try {
-			await Badges.addBadgeToUser(userID, TOUR_BADGE_ID, user, true);
+			try {
+				await Badges.addBadgeToUser(userID, TOUR_BADGE_ID, user, true);
+			} catch (e) {}
+
 			await Badges.updateBadgeData(userID, TOUR_BADGE_ID, { wins: userTourWins }, user, true);
 		} catch (e) { return false; }
 
