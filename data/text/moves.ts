@@ -8935,8 +8935,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Blazing Swipe",
 		shortDesc: "100% chance to lower the foe(s) Sp. Attack by 1. Hits all foes.",
 	},
-	bishido: {
-		name: "Bishido",
+	bushido: {
+		name: "Bushido",
 		shortDesc: "Hits 4 times.",
 	},
 	dustcannon: {
