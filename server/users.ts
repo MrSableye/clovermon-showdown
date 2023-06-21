@@ -199,9 +199,9 @@ function isTrusted(userid: ID) {
 }
 
 function isPublicBot(userid: ID) {
-	if (globalAuth.get(userid) === '*') return true;
+	if (['*', 'ƒ'].includes(globalAuth.get(userid))) return true;
 	for (const room of Rooms.global.chatRooms) {
-		if (room.persist && !room.settings.isPrivate && room.auth.get(userid) === '*') {
+		if (room.persist && !room.settings.isPrivate && ['*', 'ƒ'].includes(room.auth.get(userid))) {
 			return true;
 		}
 	}
@@ -1093,7 +1093,7 @@ export class User extends Chat.MessageContext {
 		this.isStaff = !!(groupInfo && (groupInfo.lock || groupInfo.root));
 		if (!this.isStaff) {
 			const rank = Rooms.get('staff')?.auth.getDirect(this.id);
-			this.isStaff = !!(rank && rank !== '*' && rank !== Users.Auth.defaultSymbol());
+			this.isStaff = !!(rank && !['*', 'ƒ'].includes(rank) && rank !== Users.Auth.defaultSymbol());
 		}
 		if (this.trusted) {
 			if (this.locked && this.permalocked) {
@@ -1125,7 +1125,7 @@ export class User extends Chat.MessageContext {
 		this.isStaff = !!(groupInfo && (groupInfo.lock || groupInfo.root));
 		if (!this.isStaff) {
 			const rank = Rooms.get('staff')?.auth.getDirect(this.id);
-			this.isStaff = !!(rank && rank !== '*' && rank !== Users.Auth.defaultSymbol());
+			this.isStaff = !!(rank && !['*', 'ƒ'].includes(rank) && rank !== Users.Auth.defaultSymbol());
 		}
 		Rooms.global.checkAutojoin(this);
 		if (this.registered) {
