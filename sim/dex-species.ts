@@ -506,6 +506,7 @@ export class DexSpecies {
 			}
 			species.nfe = species.evos.some(evo => {
 				const evoSpecies = this.get(evo);
+				console.log(evoSpecies)
 				return !evoSpecies.isNonstandard ||
 					evoSpecies.isNonstandard === species?.isNonstandard ||
 					// Pokemon with Hisui evolutions
