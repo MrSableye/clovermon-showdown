@@ -85425,7 +85425,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 8.1,
 		color: "Green",
 		prevo : "Cmsnivy",
-		evos : ["Cmsnivy", "Cmservine"],
+		evos : ["Cmservine"],
 		eggGroups: ["Field", "Grass"],
 	},
 	cmservine: {
