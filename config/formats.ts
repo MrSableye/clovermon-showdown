@@ -897,4 +897,22 @@ export const Formats: FormatList = [
 		banlist: ["AG", "Uber", "OU", "UUBL", "UU", "RUBL", "RU", "NUBL", "NU", "PUBL", "PU", "NFE", "DUber", "DOU", "DBL", "DUU", "LC"],
 		unbanlist: ['Weedle', 'Kakuna', 'Caterpie', 'Metapod', 'Ditto', 'Magikarp', 'Magikarp + Dragon Rage'],
 	},
+
+	///////////////////////////////////////////////////////////////////
+	// Wack
+	///////////////////////////////////////////////////////////////////
+	{
+		section: 'Wack Core Tiers',
+		column: 4,
+	},
+	{
+		name: '[Gen 8 Wack Only] Anything Goes',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Obtainable',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+	},
 ];
