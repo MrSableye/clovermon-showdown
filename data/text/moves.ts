@@ -8157,7 +8157,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	thunderdrop: {
 		name: "Thunder Drop",
 		desc: "This attack takes the target into the air with the user on the first turn and executes on the second. Pokemon weighing 200 kg or more cannot be lifted. On the first turn, the user and the target avoid all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thousand Arrows, Thunder, and Twister. The user and the target cannot make a move between turns, but the target can select a move to use. This move cannot damage Flying-type Pokemon. Fails on the first turn if the target is an ally, if the target has a substitute, or if the target is using Bounce, Dig, Dive, Fly, Phantom Force, Shadow Force, or Sky Drop.",
-		shortDesc: "User and foe fly up turn 1. Damages on turn 2.",
+		shortDesc: "User and foe fly up turn 1. Damages on turn 2.30% chance to Paralyze the target",
 
 		prepare: "[POKEMON] took [TARGET] into the sky!",
 		end: "  [POKEMON] was freed from the Thunder Drop!",
@@ -8384,15 +8384,15 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	extremesneed: {
 		name: "Extreme Sneed",
-		shortDesc: "Usually goes first.",
+		shortDesc: "Usually goes first. Formerly Extremechuck",
 	},
 	feedandseed: {
 		name: "Feed and Seed",
-		shortDesc: "Uses Leech Seed, Worry Seed, and Grassy Terrain.",
+		shortDesc: "Uses Leech Seed, Worry Seed, and Grassy Terrain. Formerly Chuck and Fuck",
 	},
 	atombomb: {
 		name: "Atom Bomb",
-		shortDesc: "Hits adjacent Pokemon. The user faints.",
+		shortDesc: "Hits adjacent Pokemon. The user faints. Banned in Japan",
 	},
 	radiation: {
 		name: "Radiation",
@@ -8606,7 +8606,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	bigshot: {
 		name: "Big Shot",
-		shortDesc: "High critical hit ratio, 30% chance to paralyze.",
+		shortDesc: "High critical hit ratio, 30% chance to paralyze.Favorite move 1997",
 	},
 	foolsgambit: {
 		name: "Fool's Gambit",

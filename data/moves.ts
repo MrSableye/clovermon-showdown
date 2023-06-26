@@ -23888,7 +23888,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	nuclearwinter: {
 		accuracy: 70,
-		basePower: 120,
+		basePower: 110,
 		category: "Special",
 		name: "Nuclear Winter",
 		pp: 5,
@@ -24133,7 +24133,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	penetrate: {
 		accuracy: 100,
-		basePower: 98,
+		basePower: 95,
 		category: "Special",
 		name: "Penetrate",
 		pp: 5,
@@ -24198,7 +24198,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	krackocean: {
 		accuracy: 100,
-		basePower: 100,
+		basePower: 85,
 		category: "Special",
 		name: "Krackocean",
 		pp: 5,
@@ -24911,7 +24911,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	thunderdrop: {
 		accuracy: 100,
-		basePower: 95,
+		basePower: 100,
 		category: "Physical",
 		name: "Thunder Drop",
 		pp: 10,
@@ -25015,7 +25015,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		secondary: {
-			chance: 20,
+			chance: 30,
 			status: 'par',
 		},
 		target: "any",
@@ -25141,7 +25141,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	rocketpunch: {
 		accuracy: 100,
-		basePower: 50,
+		basePower: 40,
 		category: "Physical",
 		name: "Rocket Punch",
 		pp: 10,
@@ -30408,7 +30408,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		multihit: 2,
 		recoil: [1, 3],
 		onTry(source) {
-			if (source.species.name === 'Blobbos-Cherry') {
+			if (source.species.name === 'Blobbos-Cherry' || source.baseSpecies.baseSpecies === 'Lemonhorse') {
 				return;
 			}
 			this.attrLastMove('[still]');
