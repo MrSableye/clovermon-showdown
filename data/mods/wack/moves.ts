@@ -812,7 +812,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	lightball: {
+	flashball: {
 		inherit: true,
 		isNonstandard: null,
 	},

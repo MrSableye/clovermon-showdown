@@ -34634,7 +34634,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Glass",
 		isNonstandard: "Future",
 	},
-	lightball: {
+	flashball: {
 		num: 666822,
 		accuracy: 100,
 		basePower: 80,
