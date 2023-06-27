@@ -956,7 +956,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	doomsday: {
+	doom: {
 		inherit: true,
 		isNonstandard: null,
 	},

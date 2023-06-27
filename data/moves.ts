@@ -35174,12 +35174,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		isNonstandard: "Future",
 	},
-	doomsday: {
+	doom: {
 		num: 666860,
 		accuracy: 90,
 		basePower: 150,
 		category: "Physical",
-		name: "Doomsday",
+		name: "Doom",
 		pp: 3,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
