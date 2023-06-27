@@ -244,7 +244,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	comatose: {
+	soporous: {
 		inherit: true,
 		isNonstandard: null,
 	},

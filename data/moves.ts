@@ -32504,12 +32504,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Virus",
 		isNonstandard: "Future",
 	},
-	comatose: {
+	soporous: {
 		num: 666678,
 		accuracy: 90,
 		basePower: 70,
 		category: "Physical",
-		name: "Comatose",
+		name: "Soporous",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
