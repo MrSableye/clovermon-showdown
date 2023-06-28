@@ -1,5 +1,9 @@
 export const Moves: {[k: string]: ModdedMoveData} = {
 	/* Wack moves */
+	hijumpkick: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	smellingsalt: {
 		inherit: true,
 		isNonstandard: null,
@@ -164,7 +168,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	swarm: {
+	swarmattack: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -244,7 +248,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	soporous: {
+	S: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -352,7 +356,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	phantomtendrils: {
+	phantomtendril: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -448,7 +452,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	magicarrow: {
+	magicarrows: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -592,7 +596,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	nuwave: {
+	nuswave: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -812,7 +816,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	flashball: {
+	F: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -928,7 +932,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	insultandinjury: {
+	insultinjury: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -956,7 +960,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	doom: {
+	D: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1244,7 +1248,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	asiciclecleave: {
+	iciclecleave: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1328,7 +1332,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	travel: {
+	netsurf: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1420,7 +1424,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	gravitationalshift: {
+	gravityshift: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1428,7 +1432,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	thunderkick: {
+	voltkick: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1572,7 +1576,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	spookdance: {
+	nightmarch: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1628,7 +1632,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	gglassbreaker: {
+	glassbreaker: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1924,7 +1928,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	threefreeze: {
+	"3freeze": {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1936,7 +1940,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	heavendoor: {
+	heavensdoor: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1952,15 +1956,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	aselfdestruct: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	bitesthedust: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	aexplosion: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1997,10 +1993,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	sleightofhand: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	glassbreaker: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2120,7 +2112,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	acannibalize: {
+	cannibilize: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2340,7 +2332,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	fakeoutt: {
+	fa223rkeou543wfdt: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2364,7 +2356,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	bugpursuit: {
+	pester: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2560,10 +2552,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	gmudamuda: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	cosmicboost: {
 		inherit: true,
 		isNonstandard: null,
@@ -2580,7 +2568,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ddddc: {
+	dirtydeedsdonedirtcheap: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2868,7 +2856,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	timestop: {
+	timefreeze: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2916,7 +2904,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	windjavelin: {
+	windspear: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3072,11 +3060,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	paravirus: {
+	leprosy: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ultraparavirus: {
+	acceleprosy: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3432,7 +3420,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	aquajavelin: {
+	aquaspear: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4308,7 +4296,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	flyingcarpet: {
+	flycarpet: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4368,7 +4356,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	andthennone: {
+	andthentherewerenone: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4728,10 +4716,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	iciclecleave: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	weatherblade: {
 		inherit: true,
 		isNonstandard: null,
@@ -4792,7 +4776,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ibbstorm: {
+	infinitybigbangstorm: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -5040,15 +5024,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	gtomahawk: {
+	gettertomahawk: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	gdrillattack: {
+	drillattack: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	gmissile: {
+	gettermissile: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -5060,7 +5044,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	heatseakmissile: {
+	heatseekmissile: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -5220,7 +5204,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	willbememe: {
+	everyoneexplodenow: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -5528,10 +5512,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	everyoneexplodenow: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	heartpunch: {
 		inherit: true,
 		isNonstandard: null,
@@ -5832,7 +5812,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	matrimony: {
+	passion: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -5876,7 +5856,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	tgreenshell: {
+	"3greenshells": {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -5884,7 +5864,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	tredshell: {
+	"3redshells": {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -5940,15 +5920,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mghost: {
+	ghost: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	fakeitembox: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	mklightning: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -5992,7 +5968,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	greenhouse: {
+	greenhousegas: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -6000,7 +5976,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mudbnig: {
+	muffa: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -6036,7 +6012,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	steelcoat: {
+	metallurgy: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -6048,7 +6024,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	illusiondominance: {
+	illusionarydominance: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -6076,19 +6052,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	htails: {
+	tails: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	theads: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	ttails: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	hheads: {
+	heads: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -6688,10 +6656,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	enumaelishe: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	attackup: {
 		inherit: true,
 		isNonstandard: null,
@@ -6844,10 +6808,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	sgrondementduhaine: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	deadweight: {
 		inherit: true,
 		isNonstandard: null,
@@ -6897,10 +6857,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	shadowjavelin: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	srhongomyniad: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -7172,7 +7128,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	cryostasis: {
+	hibernation: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -7432,10 +7388,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	icevcreate: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	eighthoctave: {
 		inherit: true,
 		isNonstandard: null,
@@ -7508,7 +7460,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	twindeath: {
+	twinshit: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -7524,7 +7476,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	no: {
+	returntozero: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -7609,10 +7561,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	jetkick: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	fkiblast: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -7764,7 +7712,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	fimpossiblerequests: {
+	"5impossiblerequests": {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -7820,19 +7768,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ttwindeath: {
+	twindeath: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	eventhorizon: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	ffakeoutt: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	ddesecrations: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -7916,7 +7856,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ghatonovisage: {
+	ghatanovisage: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -8164,10 +8104,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dgoldrush: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	maxvoltcrash: {
 		inherit: true,
 		isNonstandard: null,
@@ -8212,7 +8148,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	lmachinegun: {
+	machinegun: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -8244,7 +8180,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	hibernate: {
+	hiberslam: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -8284,7 +8220,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mirage: {
+	heatmirage: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -8341,6 +8277,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	carpetslam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	rrrray: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -8568,15 +8508,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	machinegun: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	fieryslash: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dgaiaforce: {
+	gaiaforce: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -8584,7 +8520,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dgroundzero: {
+	groundzero: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -9320,23 +9256,23 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	glitchtm50: {
+	tm50: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	glitchtm05: {
+	tm05: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	glitchtm41: {
+	tm41: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	glitchtm54: {
+	tm54: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	glitchtm18: {
+	tm18: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -9464,7 +9400,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dginfinityarrow: {
+	infinityarrow: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -9496,15 +9432,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	goburibomb: {
+	goblinbomb: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	goburistrike: {
+	goblinstrike: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	pummelwhack: {
+	pummelwack: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -9696,10 +9632,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	wizardoutrage: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	acidbath: {
 		inherit: true,
 		isNonstandard: null,
@@ -9720,10 +9652,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	himvenom: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	moltentears: {
 		inherit: true,
 		isNonstandard: null,
@@ -9740,7 +9668,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	movecatalogue: {
+	movecatalog: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -9812,7 +9740,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	scorchingsting: {
+	schorchingsting: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -10064,7 +9992,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	bugswarm: {
+	swarm: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -10116,7 +10044,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	heatseakcrawl: {
+	heatseekcrawl: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -10336,7 +10264,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	hblackplague: {
+	blackplague: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -10373,10 +10301,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	trojanrush: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	sbathoryerzsebet: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -10424,10 +10348,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	sguillotine: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	bouncycastle: {
 		inherit: true,
 		isNonstandard: null,
@@ -10440,7 +10360,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	hdeath: {
+	death: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -10732,30 +10652,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	gainsanity: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	mrthunder: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	mrhurricane: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	mrcyclone: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	mrarcanebolt: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	aboostbeam: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	santamariaanchor: {
 		inherit: true,
 		isNonstandard: null,
@@ -10828,15 +10724,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dgrockbreaker: {
+	rockbreaker: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dgexhaustflame: {
+	exhaustflame: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dgatomicblaster: {
+	atomicblaster: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -10844,11 +10740,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dglightningjoust: {
+	lightningjoust: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dgshieldofjust: {
+	shieldofjust: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -10864,7 +10760,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dgburstshot: {
+	burstshot: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -10888,7 +10784,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dgloveserenade: {
+	loveserenade: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11044,7 +10940,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dhey: {
+	hey: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11052,11 +10948,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dnun: {
+	nun: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dshin: {
+	shin: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11077,14 +10973,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	sgaebuidhe: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	shrunting: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	scaladbolgii: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11128,7 +11016,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dghelterskelter: {
+	helterskelter: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11140,7 +11028,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dgphantompain: {
+	phantompain: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11272,10 +11160,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	aspikedarmor: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	innardspunch: {
 		inherit: true,
 		isNonstandard: null,
@@ -11288,7 +11172,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	threedattack: {
+	"3dattack": {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11504,7 +11388,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	timestopp: {
+	timestop: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11540,11 +11424,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ompocketdimension: {
+	pocketdimension: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	scpthecure: {
+	thecure: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11620,14 +11504,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	suckerpuncho: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	flareblizz: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	yourebluenow: {
 		inherit: true,
 		isNonstandard: null,
@@ -11652,7 +11528,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	storedq: {
+	stored: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11700,11 +11576,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dsshadow: {
+	shadow: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	hhim: {
+	him: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11713,10 +11589,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	greasepuke: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	abide: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11729,10 +11601,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	violencegust: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	pphantomtendrils: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11824,7 +11692,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	gwjudge: {
+	judge: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11844,27 +11712,27 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmsizz: {
+	sizz: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmsizzle: {
+	sizzle: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmbang: {
+	bang: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmkaboom: {
+	kaboom: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmsnooze: {
+	snooze: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmflameslash: {
+	flameslash: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11872,7 +11740,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmmetalslash: {
+	metalslash: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11880,43 +11748,39 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmwhack: {
+	whack: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmthwhack: {
+	magicburst: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmmagicburst: {
+	kamikaze: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmkamikaze: {
+	heal: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmheal: {
+	spellbounce: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmspellbounce: {
+	accelerate: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmaccelerate: {
+	kaclang: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmkaclang: {
+	zoom: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mmzoom: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	mmoomph: {
+	oomph: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -11928,7 +11792,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mcironsword: {
+	ironsword: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -12016,10 +11880,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	pangelrush: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	dragonpummelin: {
 		inherit: true,
 		isNonstandard: null,
@@ -12048,7 +11908,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	venergyballs: {
+	energyballs: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -12100,7 +11960,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	ffcatastrophe: {
+	catastrophe: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -12209,10 +12069,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	gooushourai: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	sknightofowner: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -12333,10 +12189,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	summonanimals: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	rexcalibur: {
 		inherit: true,
 		isNonstandard: null,
 	},

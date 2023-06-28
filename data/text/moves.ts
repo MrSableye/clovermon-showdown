@@ -9201,6 +9201,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Godot's Hammer",
 		shortDesc: "Torments and Taunts the foe. Lowers the user's Speed by 2. Has 1/3 recoil.",
 	},
+	hijumpkick: {
+		name: "Hi Jump Kick",
+		desc: "The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.",
+		shortDesc: "The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.",
+	},
 	smellingsalt: {
 		name: "SmellingSalt",
 		desc: "This attack inflicts double damage on a paralyzed foe. It also cures the target's paralysis, however.",
@@ -9406,7 +9411,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The target is punched with an pistoned fist. It may also leave the target with paralysis.",
 		shortDesc: "The target is punched with an pistoned fist. It may also leave the target with paralysis.",
 	},
-	swarm: {
+	swarmattack: {
 		name: "Swarm Attack",
 		desc: "The user calls on a swarm to hit the foe 2-5 times.",
 		shortDesc: "The user calls on a swarm to hit the foe 2-5 times.",
@@ -9506,8 +9511,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user sneezes at the speed of sound. This move always goes first.",
 		shortDesc: "The user sneezes at the speed of sound. This move always goes first.",
 	},
-	soporous: {
-		name: "Soporous",
+	S: {
+		name: "o",
 		desc: "The user injects the target with a needle to send it into a deep sleep.",
 		shortDesc: "The user injects the target with a needle to send it into a deep sleep.",
 	},
@@ -9641,7 +9646,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user murmurs incomprehensibly, causing a random side effect.",
 		shortDesc: "The user murmurs incomprehensibly, causing a random side effect.",
 	},
-	phantomtendrils: {
+	phantomtendril: {
 		name: "Phantom Tendril",
 		desc: "The user summons intangible tentacles to squeeze the foe for four to five turns.",
 		shortDesc: "The user summons intangible tentacles to squeeze the foe for four to five turns.",
@@ -9761,7 +9766,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user quickly launches a spell at the target. This move always goes first.",
 		shortDesc: "The user quickly launches a spell at the target. This move always goes first.",
 	},
-	magicarrow: {
+	magicarrows: {
 		name: "Magic Arrows",
 		desc: "The target is jabbed repeatedly with magic arrows two to five times in a row.",
 		shortDesc: "The target is jabbed repeatedly with magic arrows two to five times in a row.",
@@ -9941,7 +9946,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user causes a rift in reality, trapping the target for four to five turns.",
 		shortDesc: "The user causes a rift in reality, trapping the target for four to five turns.",
 	},
-	nuwave: {
+	nuswave: {
 		name: "Nu's Wave",
 		desc: "The user summons a torrent of water using the power of an ancient god, drags out another Pokemon in its party. In the wild, the battle ends.",
 		shortDesc: "The user summons a torrent of water using the power of an ancient god, drags out another Pokemon in its party. In the wild, the battle ends.",
@@ -10216,8 +10221,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Goes first. Recoil.",
 		shortDesc: "Goes first. Recoil.",
 	},
-	flashball: {
-		name: "Flash Ball",
+	F: {
+		name: "l",
 		desc: "The user hurls a shinning blob at the target. It may also lower the target's Sp. Def stat.",
 		shortDesc: "The user hurls a shinning blob at the target. It may also lower the target's Sp. Def stat.",
 	},
@@ -10361,7 +10366,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user strikes the target with a cheap blow. This attack always results in a critical hit.",
 		shortDesc: "The user strikes the target with a cheap blow. This attack always results in a critical hit.",
 	},
-	insultandinjury: {
+	insultinjury: {
 		name: "Insult & Injury",
 		desc: "The target is taunted and beat, causing it to use only attack moves for three turns.",
 		shortDesc: "The target is taunted and beat, causing it to use only attack moves for three turns.",
@@ -10396,8 +10401,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The target punched with a knuckle encased with brass. It may make the target flinch.",
 		shortDesc: "The target punched with a knuckle encased with brass. It may make the target flinch.",
 	},
-	doom: {
-		name: "Doom",
+	D: {
+		name: "o",
 		desc: "The user brings an end to all of those around it. The user faints upon using this move.",
 		shortDesc: "The user brings an end to all of those around it. The user faints upon using this move.",
 	},
@@ -10756,7 +10761,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user rings a tuning fork to raise its accuracy stat.",
 		shortDesc: "The user rings a tuning fork to raise its accuracy stat.",
 	},
-	asiciclecleave: {
+	iciclecleave: {
 		name: "Icicle Cleave",
 		desc: "The user strikes swiftly with a blade made of ice, increasing the chance of critical hits landing.",
 		shortDesc: "The user strikes swiftly with a blade made of ice, increasing the chance of critical hits landing.",
@@ -10861,7 +10866,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user attacks last. In return, this move is guaranteed not to miss.",
 		shortDesc: "The user attacks last. In return, this move is guaranteed not to miss.",
 	},
-	travel: {
+	netsurf: {
 		name: "Net Surf",
 		desc: "The user travels to the cyber realm, then strikes the target on the next turn. This move hits even if the target protects itself.",
 		shortDesc: "The user travels to the cyber realm, then strikes the target on the next turn. This move hits even if the target protects itself.",
@@ -10976,7 +10981,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user traps the target in a chamber of deadly gas. The target will faint instantly if this attack hits.",
 		shortDesc: "The user traps the target in a chamber of deadly gas. The target will faint instantly if this attack hits.",
 	},
-	gravitationalshift: {
+	gravityshift: {
 		name: "Gravity Shift",
 		desc: "After making its attack, the user shifts gravity to switch places with a party Pokemon in waiting.",
 		shortDesc: "After making its attack, the user shifts gravity to switch places with a party Pokemon in waiting.",
@@ -10986,7 +10991,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user sends out a ray of scorching hot heat which causes the sunlight to turn harsh.",
 		shortDesc: "The user sends out a ray of scorching hot heat which causes the sunlight to turn harsh.",
 	},
-	thunderkick: {
+	voltkick: {
 		name: "Volt Kick",
 		desc: "The user launches a kick with a high critical-hit ratio. It may also leave the target with paralysis.",
 		shortDesc: "The user launches a kick with a high critical-hit ratio. It may also leave the target with paralysis.",
@@ -11166,7 +11171,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "May stop the opponent in time for 1 round.",
 		shortDesc: "May stop the opponent in time for 1 round.",
 	},
-	spookdance: {
+	nightmarch: {
 		name: "Night March",
 		desc: "The user haunts the foe for two to three turns. It then becomes confused, however.",
 		shortDesc: "The user haunts the foe for two to three turns. It then becomes confused, however.",
@@ -11236,7 +11241,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user throws a stone or projectile to attack. A flying Pokemon will fall to the ground when hit.",
 		shortDesc: "The user throws a stone or projectile to attack. A flying Pokemon will fall to the ground when hit.",
 	},
-	gglassbreaker: {
+	glassbreaker: {
 		name: "Glassbreaker",
 		desc: "The user screams loud enough to shatter glass. It can also break any barrier such as Light Screen and Reflect.",
 		shortDesc: "The user screams loud enough to shatter glass. It can also break any barrier such as Light Screen and Reflect.",
@@ -11606,7 +11611,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user charges at the target using every bit of its power. The user must rest on the next turn.",
 		shortDesc: "The user charges at the target using every bit of its power. The user must rest on the next turn.",
 	},
-	threefreeze: {
+	"3freeze": {
 		name: "3-Freeze",
 		desc: "Makes the target heavy. Harshly lower's the opponent's speed.",
 		shortDesc: "Makes the target heavy. Harshly lower's the opponent's speed.",
@@ -11621,7 +11626,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "All status changes are returned to normal.",
 		shortDesc: "All status changes are returned to normal.",
 	},
-	heavendoor: {
+	heavensdoor: {
 		name: "Heaven's Door",
 		desc: "may disable a move.",
 		shortDesc: "may disable a move.",
@@ -11641,20 +11646,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Chance to disable the target's last used move.",
 		shortDesc: "Chance to disable the target's last used move.",
 	},
-	aselfdestruct: {
-		name: "Selfdestruct",
-		desc: "The user blows up to inflict damage on all Pokemon in battle. The user faints upon using this move.",
-		shortDesc: "The user blows up to inflict damage on all Pokemon in battle. The user faints upon using this move.",
-	},
 	bitesthedust: {
 		name: "Bites the Dust",
 		desc: "The user turns back time in an explosion. All status changes are returned to normal.",
 		shortDesc: "The user turns back time in an explosion. All status changes are returned to normal.",
-	},
-	aexplosion: {
-		name: "Explosion",
-		desc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
-		shortDesc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
 	},
 	airbomb: {
 		name: "Air Bomb",
@@ -11700,11 +11695,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Sleight of Hand",
 		desc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
 		shortDesc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
-	},
-	glassbreaker: {
-		name: "Glass Breaker",
-		desc: "It can also break any barrier such as Light Screen and Reflect.",
-		shortDesc: "It can also break any barrier such as Light Screen and Reflect.",
 	},
 	cannibalize: {
 		name: "Cannibalize",
@@ -11851,7 +11841,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "May disable the last move used by the target.",
 		shortDesc: "May disable the last move used by the target.",
 	},
-	acannibalize: {
+	cannibilize: {
 		name: "Cannibilize",
 		desc: "The user damages any Pokemon of the same type as the user.",
 		shortDesc: "The user damages any Pokemon of the same type as the user.",
@@ -12126,7 +12116,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.",
 		shortDesc: "The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.",
 	},
-	fakeoutt: {
+	fa223rkeou543wfdt: {
 		name: "Fa223rke Ou543wfdt",
 		desc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
 		shortDesc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
@@ -12156,7 +12146,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Traps target 3-5 turns.",
 		shortDesc: "Traps target 3-5 turns.",
 	},
-	bugpursuit: {
+	pester: {
 		name: "Pester",
 		desc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
 		shortDesc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
@@ -12401,11 +12391,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "It may also leave the target with a burn.",
 		shortDesc: "It may also leave the target with a burn.",
 	},
-	gmudamuda: {
-		name: "Muda Muda",
-		desc: "Hits twice, may paralyze.",
-		shortDesc: "Hits twice, may paralyze.",
-	},
 	cosmicboost: {
 		name: "Cosmic Boost",
 		desc: "50% to raise SpAtk.",
@@ -12426,7 +12411,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
 		shortDesc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
 	},
-	ddddc: {
+	dirtydeedsdonedirtcheap: {
 		name: "DirtyDeedsDoneDirtCheap",
 		desc: "After making its attack, the user switches places with a party Pokemon in waiting.",
 		shortDesc: "After making its attack, the user switches places with a party Pokemon in waiting.",
@@ -12786,7 +12771,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Causes paralysis.",
 		shortDesc: "Causes paralysis.",
 	},
-	timestop: {
+	timefreeze: {
 		name: "Time Freeze",
 		desc: "Freezes the target.",
 		shortDesc: "Freezes the target.",
@@ -12846,7 +12831,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "It will fail if the user is hit before it is used.",
 		shortDesc: "It will fail if the user is hit before it is used.",
 	},
-	windjavelin: {
+	windspear: {
 		name: "Wind Spear",
 		desc: "It may make the target flinch.",
 		shortDesc: "It may make the target flinch.",
@@ -13041,12 +13026,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Very high chance to freeze.",
 		shortDesc: "Very high chance to freeze.",
 	},
-	paravirus: {
+	leprosy: {
 		name: "Leprosy",
 		desc: "26% to paralyze.",
 		shortDesc: "26% to paralyze.",
 	},
-	ultraparavirus: {
+	acceleprosy: {
 		name: "Acceleprosy",
 		desc: "45% to paralyze.",
 		shortDesc: "45% to paralyze.",
@@ -13491,7 +13476,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "High chance to confuse.",
 		shortDesc: "High chance to confuse.",
 	},
-	aquajavelin: {
+	aquaspear: {
 		name: "Aqua Spear",
 		desc: "May lower the target's speed.",
 		shortDesc: "May lower the target's speed.",
@@ -14586,7 +14571,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Building up more power, it raises the user's Speed stat.",
 		shortDesc: "Building up more power, it raises the user's Speed stat.",
 	},
-	flyingcarpet: {
+	flycarpet: {
 		name: "Fly Carpet",
 		desc: "The user soars, then strikes on the second turn.",
 		shortDesc: "The user soars, then strikes on the second turn.",
@@ -14661,7 +14646,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Chance to 1 hit KO.",
 		shortDesc: "Chance to 1 hit KO.",
 	},
-	andthennone: {
+	andthentherewerenone: {
 		name: "And Then There Were None",
 		desc: "Chance to 1 hit KO.",
 		shortDesc: "Chance to 1 hit KO.",
@@ -15111,11 +15096,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user attacks in an uproar for three turns. Over that time, no one can fall asleep.",
 		shortDesc: "The user attacks in an uproar for three turns. Over that time, no one can fall asleep.",
 	},
-	iciclecleave: {
-		name: "Icicle Cleave",
-		desc: "Critical hits land more easily.",
-		shortDesc: "Critical hits land more easily.",
-	},
 	weatherblade: {
 		name: "Weather Blade",
 		desc: "Hi crit rate. Varies in type depending on the weather.",
@@ -15191,7 +15171,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Drastically raises both defenses. Ingrain, Mist and Safeguard.",
 		shortDesc: "Drastically raises both defenses. Ingrain, Mist and Safeguard.",
 	},
-	ibbstorm: {
+	infinitybigbangstorm: {
 		name: "InfinityBigBangStorm",
 		desc: "User must recharge unless the target faints.",
 		shortDesc: "User must recharge unless the target faints.",
@@ -15501,17 +15481,17 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Secondary effect depends on user's type.",
 		shortDesc: "Secondary effect depends on user's type.",
 	},
-	gtomahawk: {
+	gettertomahawk: {
 		name: "Getter Tomahawk",
 		desc: "Changes Gettarobo into Getter 1. Chance to 1 hit KO.",
 		shortDesc: "Changes Gettarobo into Getter 1. Chance to 1 hit KO.",
 	},
-	gdrillattack: {
+	drillattack: {
 		name: "Drill Attack",
 		desc: "Changes Gettarobo into Getter 2. Critical hits land more easily.",
 		shortDesc: "Changes Gettarobo into Getter 2. Critical hits land more easily.",
 	},
-	gmissile: {
+	gettermissile: {
 		name: "Getter Missile",
 		desc: "Changes Gettarobo into Getter 3. Hits both opponents, and may also make them flinch.",
 		shortDesc: "Changes Gettarobo into Getter 3. Hits both opponents, and may also make them flinch.",
@@ -15526,7 +15506,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Changes Gettarobo into Getter 1. Loops to hit the target twice, coming and going.",
 		shortDesc: "Changes Gettarobo into Getter 1. Loops to hit the target twice, coming and going.",
 	},
-	heatseakmissile: {
+	heatseekmissile: {
 		name: "HeatSeek Missile",
 		desc: "This attack never misses.",
 		shortDesc: "This attack never misses.",
@@ -15726,7 +15706,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Pulls its thoughts together and becomes sane, removing its Chaos-type. Fails if not Chaos-type.",
 		shortDesc: "Pulls its thoughts together and becomes sane, removing its Chaos-type. Fails if not Chaos-type.",
 	},
-	willbememe: {
+	everyoneexplodenow: {
 		name: "EveryoneExplodeNow",
 		desc: "Everybody on the field uses Explosion.",
 		shortDesc: "Everybody on the field uses Explosion.",
@@ -16111,11 +16091,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user boosts the power of the Grass move it uses next. It also raises the user's Accuracy stat.",
 		shortDesc: "The user boosts the power of the Grass move it uses next. It also raises the user's Accuracy stat.",
 	},
-	everyoneexplodenow: {
-		name: "EveryoneExplodeNow",
-		desc: "Attacks everything around the user, instantly fainting targets it hits. The user faints as well.",
-		shortDesc: "Attacks everything around the user, instantly fainting targets it hits. The user faints as well.",
-	},
 	heartpunch: {
 		name: "Heart Punch",
 		desc: "Chance to infatuate the target.",
@@ -16491,7 +16466,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Does double damage during Icy Terrain.",
 		shortDesc: "Does double damage during Icy Terrain.",
 	},
-	matrimony: {
+	passion: {
 		name: "Passion",
 		desc: "A full-power attack that grows more powerful the more the user likes its Trainer.",
 		shortDesc: "A full-power attack that grows more powerful the more the user likes its Trainer.",
@@ -16546,7 +16521,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Throws a Green Shell. It is sure to strike first.",
 		shortDesc: "Throws a Green Shell. It is sure to strike first.",
 	},
-	tgreenshell: {
+	"3greenshells": {
 		name: "3 Green Shells",
 		desc: "Throws three Green Shells. Goes first.",
 		shortDesc: "Throws three Green Shells. Goes first.",
@@ -16556,7 +16531,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "It hits without fail.",
 		shortDesc: "It hits without fail.",
 	},
-	tredshell: {
+	"3redshells": {
 		name: "3 Red Shells",
 		desc: "Hits 1 to 3 times. It hits without fail.",
 		shortDesc: "Hits 1 to 3 times. It hits without fail.",
@@ -16626,7 +16601,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user attacks everything around it with the destructive power of a terrible, explosive sound.",
 		shortDesc: "The user attacks everything around it with the destructive power of a terrible, explosive sound.",
 	},
-	mghost: {
+	ghost: {
 		name: "Ghost",
 		desc: "Very high chance to raise the user's Evasion.",
 		shortDesc: "Very high chance to raise the user's Evasion.",
@@ -16635,11 +16610,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Fake Item Box",
 		desc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
 		shortDesc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
-	},
-	mklightning: {
-		name: "Lightning",
-		desc: "It also lowers the targets' Speed stat.",
-		shortDesc: "It also lowers the targets' Speed stat.",
 	},
 	submerge: {
 		name: "Submerge",
@@ -16691,7 +16661,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Traps for 3 to 5 turns. Double damage to Ghost and Zombie types.",
 		shortDesc: "Traps for 3 to 5 turns. Double damage to Ghost and Zombie types.",
 	},
-	greenhouse: {
+	greenhousegas: {
 		name: "Greenhouse Gas",
 		desc: "Greenhouse gasses boost power of Poison+Fire. Lower power of Water+Ice. Lasts 6 turns.",
 		shortDesc: "Greenhouse gasses boost power of Poison+Fire. Lower power of Water+Ice. Lasts 6 turns.",
@@ -16701,7 +16671,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Lower's speed of pokemon that aren't Water, Grass or Ground type for 5 turns.",
 		shortDesc: "Lower's speed of pokemon that aren't Water, Grass or Ground type for 5 turns.",
 	},
-	mudbnig: {
+	muffa: {
 		name: "Muffa",
 		desc: "Restores HP. Restores more HP in Marshy Terrain, also raising SpDef.",
 		shortDesc: "Restores HP. Restores more HP in Marshy Terrain, also raising SpDef.",
@@ -16746,7 +16716,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The target takes more damage from Steel moves for 4 turns.",
 		shortDesc: "The target takes more damage from Steel moves for 4 turns.",
 	},
-	steelcoat: {
+	metallurgy: {
 		name: "Metallurgy",
 		desc: "Changes the target's type to Steel.",
 		shortDesc: "Changes the target's type to Steel.",
@@ -16761,7 +16731,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Drastically raises the user's Attack stat.",
 		shortDesc: "Drastically raises the user's Attack stat.",
 	},
-	illusiondominance: {
+	illusionarydominance: {
 		name: "IllusionaryDominance",
 		desc: "The user tries to outspeed the opponent. It does more damage the faster the user is.",
 		shortDesc: "The user tries to outspeed the opponent. It does more damage the faster the user is.",
@@ -16796,25 +16766,15 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Bet on Tails and flip a coin. Heads or tails, what will it be?",
 		shortDesc: "Bet on Tails and flip a coin. Heads or tails, what will it be?",
 	},
-	htails: {
+	tails: {
 		name: "Tails",
 		desc: "Oh no, looks like you didn't win the bet!",
 		shortDesc: "Oh no, looks like you didn't win the bet!",
 	},
-	theads: {
+	heads: {
 		name: "Heads",
 		desc: "Oh no, looks like you didn't win the bet!",
 		shortDesc: "Oh no, looks like you didn't win the bet!",
-	},
-	ttails: {
-		name: "Tails",
-		desc: "Will 1 hit KO.",
-		shortDesc: "Will 1 hit KO.",
-	},
-	hheads: {
-		name: "Heads",
-		desc: "Will 1 hit KO.",
-		shortDesc: "Will 1 hit KO.",
 	},
 	sealbreak: {
 		name: "Seal Break",
@@ -17561,11 +17521,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The target is hit 2-??? times.",
 		shortDesc: "The target is hit 2-??? times.",
 	},
-	enumaelishe: {
-		name: "Enuma Elish",
-		desc: "Lowers the target's defense stat and paralyzes them.",
-		shortDesc: "Lowers the target's defense stat and paralyzes them.",
-	},
 	attackup: {
 		name: "Attack Up",
 		desc: "Raises Attack and SpAtk of your side for 4 turns.",
@@ -17756,11 +17711,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
 		shortDesc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
 	},
-	sgrondementduhaine: {
-		name: "GrondementDuHaine",
-		desc: "Burns the target and inflicts Curse.",
-		shortDesc: "Burns the target and inflicts Curse.",
-	},
 	deadweight: {
 		name: "Dead Weight",
 		desc: "The heavier the user, the greater the damage.",
@@ -17825,11 +17775,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Shadow Javelin",
 		desc: "It may also cause confusion.",
 		shortDesc: "It may also cause confusion.",
-	},
-	srhongomyniad: {
-		name: "Rhongomyniad",
-		desc: "An attack that hits a target using Protect. It also lifts the effects of those moves.",
-		shortDesc: "An attack that hits a target using Protect. It also lifts the effects of those moves.",
 	},
 	gardenofavalon: {
 		name: "Garden of Avalon",
@@ -18166,7 +18111,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user unleashes its grudge on the move last used by the target by cutting 10 PP from it.",
 		shortDesc: "The user unleashes its grudge on the move last used by the target by cutting 10 PP from it.",
 	},
-	cryostasis: {
+	hibernation: {
 		name: "Hibernation",
 		desc: "Freezes user. It fully restores the user's HP and heals any status problem. Heals while frozen.",
 		shortDesc: "Freezes user. It fully restores the user's HP and heals any status problem. Heals while frozen.",
@@ -18491,11 +18436,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Double damage against Dragon types. Critical hits land more easily.",
 		shortDesc: "Double damage against Dragon types. Critical hits land more easily.",
 	},
-	icevcreate: {
-		name: "V-create",
-		desc: "With a icy forehead, the user hurls itself at the foe. It lowers the user's Defense, Sp. Def, and Speed.",
-		shortDesc: "With a icy forehead, the user hurls itself at the foe. It lowers the user's Defense, Sp. Def, and Speed.",
-	},
 	eighthoctave: {
 		name: "Eighth Octave",
 		desc: "Deafening sound. Target gains ability Soundproof.",
@@ -18586,7 +18526,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Makes the target Bleed.",
 		shortDesc: "Makes the target Bleed.",
 	},
-	twindeath: {
+	twinshit: {
 		name: "Twinshit",
 		desc: "Shit",
 		shortDesc: "Shit",
@@ -18606,7 +18546,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Please just help me. Harshly reduces the user's Sp. Atk stat.",
 		shortDesc: "Please just help me. Harshly reduces the user's Sp. Atk stat.",
 	},
-	no: {
+	returntozero: {
 		name: "Return to Zero",
 		desc: "Makes the user invincible.",
 		shortDesc: "Makes the user invincible.",
@@ -18715,11 +18655,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Jet Kick",
 		desc: "A kick.",
 		shortDesc: "A kick.",
-	},
-	fkiblast: {
-		name: "Ki Blast",
-		desc: "A fireball or soemthing idk really.",
-		shortDesc: "A fireball or soemthing idk really.",
 	},
 	haunterdark: {
 		name: "Haunter Dark",
@@ -18906,7 +18841,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "It lowers the user's Speed, however.",
 		shortDesc: "It lowers the user's Speed, however.",
 	},
-	fimpossiblerequests: {
+	"5impossiblerequests": {
 		name: "5ImpossibleRequests",
 		desc: "Uses one of Five impossible requests.",
 		shortDesc: "Uses one of Five impossible requests.",
@@ -18976,7 +18911,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "This attack also deals Dark-type damage.",
 		shortDesc: "This attack also deals Dark-type damage.",
 	},
-	ttwindeath: {
+	twindeath: {
 		name: "Twindeath",
 		desc: "Death.",
 		shortDesc: "Death.",
@@ -18985,16 +18920,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Event Horizon",
 		desc: "If the target's HP is down to about half, this attack will hit with double the power.",
 		shortDesc: "If the target's HP is down to about half, this attack will hit with double the power.",
-	},
-	ffakeoutt: {
-		name: "Fa223rke Ou543wfdt",
-		desc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
-		shortDesc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
-	},
-	ddesecrations: {
-		name: "Desecrations",
-		desc: "The user launches fireworks at the target two to five times in a row.",
-		shortDesc: "The user launches fireworks at the target two to five times in a row.",
 	},
 	curseofyig: {
 		name: "Curse of Yig",
@@ -19096,7 +19021,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user's HP is restored by half the damage taken by the target.",
 		shortDesc: "The user's HP is restored by half the damage taken by the target.",
 	},
-	ghatonovisage: {
+	ghatanovisage: {
 		name: "Ghatanovisage",
 		desc: "High chance to freeze.",
 		shortDesc: "High chance to freeze.",
@@ -19406,11 +19331,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "High chance to confuse. Money is earned after battle.",
 		shortDesc: "High chance to confuse. Money is earned after battle.",
 	},
-	dgoldrush: {
-		name: "Goldrush",
-		desc: "High chance to confuse. Money is earned after battle.",
-		shortDesc: "High chance to confuse. Money is earned after battle.",
-	},
 	maxvoltcrash: {
 		name: "Max Volt Crash",
 		desc: "Hits both targets and leaves them with paralysis.",
@@ -19466,7 +19386,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Hits all other mons on the field. May 1 hit KO.",
 		shortDesc: "Hits all other mons on the field. May 1 hit KO.",
 	},
-	lmachinegun: {
+	machinegun: {
 		name: "Machine Gun",
 		desc: "The user fires machine gun at the target. Hits two to five times.",
 		shortDesc: "The user fires machine gun at the target. Hits two to five times.",
@@ -19506,7 +19426,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Burns the target.",
 		shortDesc: "Burns the target.",
 	},
-	hibernate: {
+	hiberslam: {
 		name: "Hiberslam",
 		desc: "The user falls asleep and becomes fully healed after using this move.",
 		shortDesc: "The user falls asleep and becomes fully healed after using this move.",
@@ -19556,7 +19476,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "This attack's power increases the more the target has powered up with stat changes.",
 		shortDesc: "This attack's power increases the more the target has powered up with stat changes.",
 	},
-	mirage: {
+	heatmirage: {
 		name: "Heat Mirage",
 		desc: "Confuses both foes. Always hits in the Sun.",
 		shortDesc: "Confuses both foes. Always hits in the Sun.",
@@ -19630,6 +19550,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Carpet Slam",
 		desc: "The user rubs fabric up against the target. It may also leave the target with paralysis.",
 		shortDesc: "The user rubs fabric up against the target. It may also leave the target with paralysis.",
+	},
+	rrrray: {
+		name: "RRR Ray",
+		desc: "The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user's HP is restored by half the damage taken by the target.",
 	},
 	galeofdarkness: {
 		name: "Gale of Darkness",
@@ -19911,17 +19836,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Makes it hail for five turns.",
 		shortDesc: "Makes it hail for five turns.",
 	},
-	machinegun: {
-		name: "Machine Gun",
-		desc: "Hi crit rate. The user fires machine gun at the target. Hits two to five times.",
-		shortDesc: "Hi crit rate. The user fires machine gun at the target. Hits two to five times.",
-	},
 	fieryslash: {
 		name: "Fiery Slash",
 		desc: "The user slashes with a sharp claw made from fire. Critical hits land more easily.",
 		shortDesc: "The user slashes with a sharp claw made from fire. Critical hits land more easily.",
 	},
-	dgaiaforce: {
+	gaiaforce: {
 		name: "Gaia Force",
 		desc: "Gathers all the energy in the atmosphere and launches a high temperature energy shot.",
 		shortDesc: "Gathers all the energy in the atmosphere and launches a high temperature energy shot.",
@@ -19931,7 +19851,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Goes first, high crit rate.",
 		shortDesc: "Goes first, high crit rate.",
 	},
-	dgroundzero: {
+	groundzero: {
 		name: "Ground Zero",
 		desc: "The user fires two organic missiles from its spinal cord.",
 		shortDesc: "The user fires two organic missiles from its spinal cord.",
@@ -20851,27 +20771,27 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "A strange whistle, lowers Attack and Sp. Atk stats.",
 		shortDesc: "A strange whistle, lowers Attack and Sp. Atk stats.",
 	},
-	glitchtm50: {
+	tm50: {
 		name: "TM50",
 		desc: "Attacks two to five times in a row.",
 		shortDesc: "Attacks two to five times in a row.",
 	},
-	glitchtm05: {
+	tm05: {
 		name: "TM05",
 		desc: "Raises the user's Evasion 2 stages.",
 		shortDesc: "Raises the user's Evasion 2 stages.",
 	},
-	glitchtm41: {
+	tm41: {
 		name: "TM41",
 		desc: "Raises the user's Evasion by two stages.",
 		shortDesc: "Raises the user's Evasion by two stages.",
 	},
-	glitchtm54: {
+	tm54: {
 		name: "TM54",
 		desc: "The user eats the dreams of a sleeping foe. It absorbs half the damage caused to heal the user's HP.",
 		shortDesc: "The user eats the dreams of a sleeping foe. It absorbs half the damage caused to heal the user's HP.",
 	},
-	glitchtm18: {
+	tm18: {
 		name: "TM18",
 		desc: "The user must recharge the next turn.",
 		shortDesc: "The user must recharge the next turn.",
@@ -21031,7 +20951,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "This attack does special damage.",
 		shortDesc: "This attack does special damage.",
 	},
-	dginfinityarrow: {
+	infinityarrow: {
 		name: "Infinity Arrow",
 		desc: "Very high chance to paralyze.",
 		shortDesc: "Very high chance to paralyze.",
@@ -21071,17 +20991,17 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.",
 		shortDesc: "An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.",
 	},
-	goburibomb: {
+	goblinbomb: {
 		name: "Goblin Bomb",
 		desc: "It may also leave the target with a burn.",
 		shortDesc: "It may also leave the target with a burn.",
 	},
-	goburistrike: {
+	goblinstrike: {
 		name: "Goblin Strike",
 		desc: "It may also leave the target with a burn.",
 		shortDesc: "It may also leave the target with a burn.",
 	},
-	pummelwhack: {
+	pummelwack: {
 		name: "Pummel Wack",
 		desc: "This attack does special damage.",
 		shortDesc: "This attack does special damage.",
@@ -21321,11 +21241,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user annoys the target. Small chance to Taunt.",
 		shortDesc: "The user annoys the target. Small chance to Taunt.",
 	},
-	wizardoutrage: {
-		name: "Outrage",
-		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
-		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
-	},
 	acidbath: {
 		name: "Acid Bath",
 		desc: "The user restores its own HP. Heals more in Acid Rain.",
@@ -21351,11 +21266,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "It sharply raises the user's Attack. Also raises Defense during Library.",
 		shortDesc: "It sharply raises the user's Attack. Also raises Defense during Library.",
 	},
-	himvenom: {
-		name: "Venom",
-		desc: "Poison's the target.",
-		shortDesc: "Poison's the target.",
-	},
 	moltentears: {
 		name: "Molten Tears",
 		desc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
@@ -21376,7 +21286,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Lowers the user's stats. User's ability becomes Rubber Boost.",
 		shortDesc: "Lowers the user's stats. User's ability becomes Rubber Boost.",
 	},
-	movecatalogue: {
+	movecatalog: {
 		name: "Move Catalog",
 		desc: "Randomly uses a move among those known by other Pokemon in the party. More damage in Library.",
 		shortDesc: "Randomly uses a move among those known by other Pokemon in the party. More damage in Library.",
@@ -21466,7 +21376,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "It fails if the target is not readying an attack, however.",
 		shortDesc: "It fails if the target is not readying an attack, however.",
 	},
-	scorchingsting: {
+	schorchingsting: {
 		name: "Schorching Sting",
 		desc: "It may also leave the target with a burn.",
 		shortDesc: "It may also leave the target with a burn.",
@@ -21781,7 +21691,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "An arena where fighting moves are boosted for 5 turns.",
 		shortDesc: "An arena where fighting moves are boosted for 5 turns.",
 	},
-	bugswarm: {
+	swarm: {
 		name: "Swarm",
 		desc: "Does Bug damage to all except Bug-types for 5 turns. Powers up Bug moves.",
 		shortDesc: "Does Bug damage to all except Bug-types for 5 turns. Powers up Bug moves.",
@@ -21846,7 +21756,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Raises the user's Attack and SpAtk by a random amount, but also confuses.",
 		shortDesc: "Raises the user's Attack and SpAtk by a random amount, but also confuses.",
 	},
-	heatseakcrawl: {
+	heatseekcrawl: {
 		name: "HeatSeek Crawl",
 		desc: "Goes first, never misses.",
 		shortDesc: "Goes first, never misses.",
@@ -22121,7 +22031,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Starts Cyberspace.",
 		shortDesc: "Starts Cyberspace.",
 	},
-	hblackplague: {
+	blackplague: {
 		name: "BLACK PLAGUE",
 		desc: "The opponent cannot heal, is tormented, taunted.",
 		shortDesc: "The opponent cannot heal, is tormented, taunted.",
@@ -22170,11 +22080,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Trojan Rush",
 		desc: "Deals damage, then, two turns after this move is used deals damage again.",
 		shortDesc: "Deals damage, then, two turns after this move is used deals damage again.",
-	},
-	sbathoryerzsebet: {
-		name: "Bathory Erzsebet",
-		desc: "Seeking an opening, the user strikes continually. The foe's stat changes don't affect the damage.",
-		shortDesc: "Seeking an opening, the user strikes continually. The foe's stat changes don't affect the damage.",
 	},
 	tricktackle: {
 		name: "Trick Tackle",
@@ -22231,11 +22136,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "A claustrophobic screen is put up on the opp side to supress their physical attacks for 5 turns.",
 		shortDesc: "A claustrophobic screen is put up on the opp side to supress their physical attacks for 5 turns.",
 	},
-	sguillotine: {
-		name: "Guillotine",
-		desc: "A vicious, tearing attack. The target will faint instantly if this attack hits.",
-		shortDesc: "A vicious, tearing attack. The target will faint instantly if this attack hits.",
-	},
 	bouncycastle: {
 		name: "Bouncy Castle",
 		desc: "Pokemon using a physical move bounce into the air and Rubber moves are boosted for 5 turns.",
@@ -22251,7 +22151,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Starts Spiritstorm and boosts Attack and Defense when a target faints for 5 turns.",
 		shortDesc: "Starts Spiritstorm and boosts Attack and Defense when a target faints for 5 turns.",
 	},
-	hdeath: {
+	death: {
 		name: "DEATH",
 		desc: "Chance to 1 hit KO.",
 		shortDesc: "Chance to 1 hit KO.",
@@ -22616,36 +22516,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user gets all the party Pokemon to attack the foe. The more party Pokemon, the more damage.",
 		shortDesc: "The user gets all the party Pokemon to attack the foe. The more party Pokemon, the more damage.",
 	},
-	gainsanity: {
-		name: "Insanity",
-		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
-		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
-	},
-	mrthunder: {
-		name: "Thunder",
-		desc: "A wicked thunderbolt is dropped on the foe to inflict damage. It may also leave the target paralyzed.",
-		shortDesc: "A wicked thunderbolt is dropped on the foe to inflict damage. It may also leave the target paralyzed.",
-	},
-	mrhurricane: {
-		name: "Hurricane",
-		desc: "The user wraps its foe in a fierce wind that flies up into the sky. It may also confuse the foe.",
-		shortDesc: "The user wraps its foe in a fierce wind that flies up into the sky. It may also confuse the foe.",
-	},
-	mrcyclone: {
-		name: "Cyclone",
-		desc: "The target is struck by a violent cyclone. It may make the target flinch.",
-		shortDesc: "The target is struck by a violent cyclone. It may make the target flinch.",
-	},
-	mrarcanebolt: {
-		name: "Arcane Bolt",
-		desc: "The target is struck by a violent cyclone. It may make the target flinch.",
-		shortDesc: "The target is struck by a violent cyclone. It may make the target flinch.",
-	},
-	aboostbeam: {
-		name: "Boost Beam",
-		desc: "It may also raise the user's Sp. Atk stat.",
-		shortDesc: "It may also raise the user's Sp. Atk stat.",
-	},
 	santamariaanchor: {
 		name: "SantaMaria Anchor",
 		desc: "Lowers the target's crit chance.",
@@ -22736,17 +22606,17 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Raises the power of the next Fire-type move the user uses. Increases Attack and SpAtk by 1.",
 		shortDesc: "Raises the power of the next Fire-type move the user uses. Increases Attack and SpAtk by 1.",
 	},
-	dgrockbreaker: {
+	rockbreaker: {
 		name: "Rock Breaker",
 		desc: "The user attacks with a SLASh that can shatter a rock. Lowers the foe's Defense stat.",
 		shortDesc: "The user attacks with a SLASh that can shatter a rock. Lowers the foe's Defense stat.",
 	},
-	dgexhaustflame: {
+	exhaustflame: {
 		name: "Exhaust Flame",
 		desc: "Lowers the foe's Defense stat.",
 		shortDesc: "Lowers the foe's Defense stat.",
 	},
-	dgatomicblaster: {
+	atomicblaster: {
 		name: "Atomic Blaster",
 		desc: "Lowers the foe's Defense stat.",
 		shortDesc: "Lowers the foe's Defense stat.",
@@ -22756,12 +22626,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Critical hits land more easily.",
 		shortDesc: "Critical hits land more easily.",
 	},
-	dglightningjoust: {
+	lightningjoust: {
 		name: "Lightning Joust",
 		desc: "Raises the user's Attack and SpAttack.",
 		shortDesc: "Raises the user's Attack and SpAttack.",
 	},
-	dgshieldofjust: {
+	shieldofjust: {
 		name: "Shield of Just",
 		desc: "Raises the user's Defense and SpDef.",
 		shortDesc: "Raises the user's Defense and SpDef.",
@@ -22781,7 +22651,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "It may also lower all the target's stats at once.",
 		shortDesc: "It may also lower all the target's stats at once.",
 	},
-	dgburstshot: {
+	burstshot: {
 		name: "Burst Shot",
 		desc: "Hits twice. Hits both targets in a double battle.",
 		shortDesc: "Hits twice. Hits both targets in a double battle.",
@@ -22811,7 +22681,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Causes confusion.",
 		shortDesc: "Causes confusion.",
 	},
-	dgloveserenade: {
+	loveserenade: {
 		name: "Love Serenade",
 		desc: "Hits both foes in a double battle. It may also cause paralysis.",
 		shortDesc: "Hits both foes in a double battle. It may also cause paralysis.",
@@ -23006,7 +22876,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Either Take All, Do Nothing, Take Half or Put One In.",
 		shortDesc: "Either Take All, Do Nothing, Take Half or Put One In.",
 	},
-	dhey: {
+	hey: {
 		name: "Hey",
 		desc: "It cuts the target's HP to half.",
 		shortDesc: "It cuts the target's HP to half.",
@@ -23016,12 +22886,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The target will faint instantly if this attack hits.",
 		shortDesc: "The target will faint instantly if this attack hits.",
 	},
-	dnun: {
+	nun: {
 		name: "Nun",
 		desc: "The user just flops and splashes around to no effect at all...",
 		shortDesc: "The user just flops and splashes around to no effect at all...",
 	},
-	dshin: {
+	shin: {
 		name: "Shin",
 		desc: "Striking opponents over and over makes the user's fists harder. Hitting a target raises the Attack stat.",
 		shortDesc: "Striking opponents over and over makes the user's fists harder. Hitting a target raises the Attack stat.",
@@ -23050,16 +22920,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "S Gae Buidhe",
 		desc: "The opponent cannot heal for 5 turns after being hit by this move.",
 		shortDesc: "The opponent cannot heal for 5 turns after being hit by this move.",
-	},
-	shrunting: {
-		name: "Hrunting",
-		desc: "High crit rate. This attack never misses.",
-		shortDesc: "High crit rate. This attack never misses.",
-	},
-	scaladbolgii: {
-		name: "Caladbolg II",
-		desc: "An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.",
-		shortDesc: "An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.",
 	},
 	cyberpunch: {
 		name: "Cyber Punch",
@@ -23111,7 +22971,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
 		shortDesc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
 	},
-	dghelterskelter: {
+	helterskelter: {
 		name: "Helter Skelter",
 		desc: "Confuses and infatuates the target.",
 		shortDesc: "Confuses and infatuates the target.",
@@ -23126,7 +22986,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Chance to infatuate the target.",
 		shortDesc: "Chance to infatuate the target.",
 	},
-	dgphantompain: {
+	phantompain: {
 		name: "Phantom Pain",
 		desc: "High chance to inflict Curse.",
 		shortDesc: "High chance to inflict Curse.",
@@ -23291,11 +23151,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Lowers the foe's Defense stat.",
 		shortDesc: "Lowers the foe's Defense stat.",
 	},
-	aspikedarmor: {
-		name: "Spiked Armor",
-		desc: "The user gains spikes all over it, causing pokemon to take damage if they make contact.",
-		shortDesc: "The user gains spikes all over it, causing pokemon to take damage if they make contact.",
-	},
 	innardspunch: {
 		name: "Innards Punch",
 		desc: "It becomes more powerful the less HP the user has. The user takes some damage if it has more than one HP.",
@@ -23311,7 +23166,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "May cause the foe to be switched out.",
 		shortDesc: "May cause the foe to be switched out.",
 	},
-	threedattack: {
+	"3dattack": {
 		name: "3D Attack",
 		desc: "A three dimensional attack that becomes more powerful with each successive hit.",
 		shortDesc: "A three dimensional attack that becomes more powerful with each successive hit.",
@@ -23581,7 +23436,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Drains health, then the user rushes back to switch places with a party Pokemon in waiting.",
 		shortDesc: "Drains health, then the user rushes back to switch places with a party Pokemon in waiting.",
 	},
-	timestopp: {
+	timestop: {
 		name: "Timestop",
 		desc: "The target cannot do anything next turn.",
 		shortDesc: "The target cannot do anything next turn.",
@@ -23626,12 +23481,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "High chance to inflict Poison or Paralysis.",
 		shortDesc: "High chance to inflict Poison or Paralysis.",
 	},
-	ompocketdimension: {
+	pocketdimension: {
 		name: "Pocket Dimension",
 		desc: "Only works if target is PSN or PAR. They cannot escape and all stats are lowered every turn.",
 		shortDesc: "Only works if target is PSN or PAR. They cannot escape and all stats are lowered every turn.",
 	},
-	scpthecure: {
+	thecure: {
 		name: "The Cure",
 		desc: "Heals the target, changes their type to Zombie, raises Atk and Spd lowers SpAtk and SpDef. Target faints in 3 turns.",
 		shortDesc: "Heals the target, changes their type to Zombie, raises Atk and Spd lowers SpAtk and SpDef. Target faints in 3 turns.",
@@ -23726,16 +23581,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
 		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
 	},
-	suckerpuncho: {
-		name: "Sucker Punch",
-		desc: "It fails if the target is not readying an attack, however.",
-		shortDesc: "It fails if the target is not readying an attack, however.",
-	},
-	flareblizz: {
-		name: "Flareblitz",
-		desc: "The target is punched with a fiery fist. It may leave the target with a burn.",
-		shortDesc: "The target is punched with a fiery fist. It may leave the target with a burn.",
-	},
 	yourebluenow: {
 		name: "YoureBlueNow",
 		desc: "The target becomes blue and is now able to be hit by Ground-type moves if they were floating.",
@@ -23766,7 +23611,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The law of all.",
 		shortDesc: "The law of all.",
 	},
-	storedq: {
+	stored: {
 		name: "STORED",
 		desc: "The more the user's stats are raised, the greater the damage.",
 		shortDesc: "The more the user's stats are raised, the greater the damage.",
@@ -23826,12 +23671,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The target cannot use items for 5 turns.",
 		shortDesc: "The target cannot use items for 5 turns.",
 	},
-	dsshadow: {
+	shadow: {
 		name: "SHADOW",
 		desc: "Causes Confusion.",
 		shortDesc: "Causes Confusion.",
 	},
-	hhim: {
+	him: {
 		name: "HIM",
 		desc: "The user attacks with an eldritch power. It may also raise all the user's stats at once.",
 		shortDesc: "The user attacks with an eldritch power. It may also raise all the user's stats at once.",
@@ -23845,11 +23690,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Grease Puke",
 		desc: "Stockpile, more damage. Decreases Stockpile by 1.",
 		shortDesc: "Stockpile, more damage. Decreases Stockpile by 1.",
-	},
-	abide: {
-		name: "Bide",
-		desc: "The user endures attacks for two turns, then strikes back to cause double the damage taken.",
-		shortDesc: "The user endures attacks for two turns, then strikes back to cause double the damage taken.",
 	},
 	oilyterrain: {
 		name: "Oily Terrain",
@@ -23865,11 +23705,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "VIOLENCE GUST",
 		desc: "Drags out another Pokemon. +1 Priority",
 		shortDesc: "Drags out another Pokemon. +1 Priority",
-	},
-	pphantomtendrils: {
-		name: "Phantom Tendril",
-		desc: "The user summons intangible tentacles to squeeze the foe for four to five turns.",
-		shortDesc: "The user summons intangible tentacles to squeeze the foe for four to five turns.",
 	},
 	absoluteice: {
 		name: "Absolute Ice",
@@ -23981,7 +23816,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
 		shortDesc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
 	},
-	gwjudge: {
+	judge: {
 		name: "Judge",
 		desc: "Its power varies.",
 		shortDesc: "Its power varies.",
@@ -24006,32 +23841,32 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Uses a random set move.",
 		shortDesc: "Uses a random set move.",
 	},
-	mmsizz: {
+	sizz: {
 		name: "Sizz",
 		desc: "The user attacks the foe with a bursting flame. It also damages Pokemon next to the target.",
 		shortDesc: "The user attacks the foe with a bursting flame. It also damages Pokemon next to the target.",
 	},
-	mmsizzle: {
+	sizzle: {
 		name: "Sizzle",
 		desc: "The user attacks the foe with a bursting flame. It also damages Pokemon next to the target.",
 		shortDesc: "The user attacks the foe with a bursting flame. It also damages Pokemon next to the target.",
 	},
-	mmbang: {
+	bang: {
 		name: "Bang",
 		desc: "The user throws a boomerang that loops to hit both targets twice, coming and going.",
 		shortDesc: "The user throws a boomerang that loops to hit both targets twice, coming and going.",
 	},
-	mmkaboom: {
+	kaboom: {
 		name: "Kaboom",
 		desc: "The user throws a boomerang that loops to hit both targets twice, coming and going.",
 		shortDesc: "The user throws a boomerang that loops to hit both targets twice, coming and going.",
 	},
-	mmsnooze: {
+	snooze: {
 		name: "Snooze",
 		desc: "PUTS ALL TO SLEP",
 		shortDesc: "PUTS ALL TO SLEP",
 	},
-	mmflameslash: {
+	flameslash: {
 		name: "Flame Slash",
 		desc: "The user slashes the target the instant an opportunity arises. Critical hits land more easily.",
 		shortDesc: "The user slashes the target the instant an opportunity arises. Critical hits land more easily.",
@@ -24041,7 +23876,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user slashes the target the instant an opportunity arises. Critical hits land more easily.",
 		shortDesc: "The user slashes the target the instant an opportunity arises. Critical hits land more easily.",
 	},
-	mmmetalslash: {
+	metalslash: {
 		name: "Metal Slash",
 		desc: "Massive damage to steel-types.",
 		shortDesc: "Massive damage to steel-types.",
@@ -24051,52 +23886,47 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user focuses its mind before launching a punch. It will fail if the user is hit before it is used.",
 		shortDesc: "The user focuses its mind before launching a punch. It will fail if the user is hit before it is used.",
 	},
-	mmwhack: {
+	whack: {
 		name: "Whack",
 		desc: "Shoots with an arrow or other projectile. May 1 hit KO.",
 		shortDesc: "Shoots with an arrow or other projectile. May 1 hit KO.",
 	},
-	mmthwhack: {
-		name: "Whack",
-		desc: "Shoots with an arrow or other projectile. May 1 hit KO.",
-		shortDesc: "Shoots with an arrow or other projectile. May 1 hit KO.",
-	},
-	mmmagicburst: {
+	magicburst: {
 		name: "Magic Burst",
 		desc: "The user attacks the target at full power. The attack's recoil harshly reduces the user's Sp. Atk stat.",
 		shortDesc: "The user attacks the target at full power. The attack's recoil harshly reduces the user's Sp. Atk stat.",
 	},
-	mmkamikaze: {
+	kamikaze: {
 		name: "Kamikaze",
 		desc: "The user performs a heroic sacrifice to damage those around it. The user faints upon using this move.",
 		shortDesc: "The user performs a heroic sacrifice to damage those around it. The user faints upon using this move.",
 	},
-	mmheal: {
+	heal: {
 		name: "Heal",
 		desc: "Restoring its own cells, the user restores its own HP by half of its max HP.",
 		shortDesc: "Restoring its own cells, the user restores its own HP by half of its max HP.",
 	},
-	mmspellbounce: {
+	spellbounce: {
 		name: "Spell Bounce",
 		desc: "Prevents damage from Special moves for 5 turns.",
 		shortDesc: "Prevents damage from Special moves for 5 turns.",
 	},
-	mmaccelerate: {
+	accelerate: {
 		name: "Accelerate",
 		desc: "Drastically raises Speed.",
 		shortDesc: "Drastically raises Speed.",
 	},
-	mmkaclang: {
+	kaclang: {
 		name: "Kaclang",
 		desc: "Freezes user. It fully restores the user's HP and heals any status problem. Heals while frozen.",
 		shortDesc: "Freezes user. It fully restores the user's HP and heals any status problem. Heals while frozen.",
 	},
-	mmzoom: {
+	zoom: {
 		name: "Zoom",
 		desc: "Creates a substitute then switches out, passing along any stat changes.",
 		shortDesc: "Creates a substitute then switches out, passing along any stat changes.",
 	},
-	mmoomph: {
+	oomph: {
 		name: "Oomph",
 		desc: "A frenetic dance to uplift the fighting spirit. It sharply raises the user's Attack stat.",
 		shortDesc: "A frenetic dance to uplift the fighting spirit. It sharply raises the user's Attack stat.",
@@ -24111,7 +23941,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "May lower defense.",
 		shortDesc: "May lower defense.",
 	},
-	mcironsword: {
+	ironsword: {
 		name: "Iron Sword",
 		desc: "Critical hits land more easily.",
 		shortDesc: "Critical hits land more easily.",
@@ -24221,11 +24051,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user goes all-out at the cost of terrible damage. Can burn the target",
 		shortDesc: "The user goes all-out at the cost of terrible damage. Can burn the target",
 	},
-	pangelrush: {
-		name: "Angel Rush",
-		desc: "A combo of 9 hits with intent to kill. Each can drop the opponent's def.",
-		shortDesc: "A combo of 9 hits with intent to kill. Each can drop the opponent's def.",
-	},
 	dragonpummelin: {
 		name: "Dragon Pummelin'",
 		desc: "A barrage of smacks with the bat. Each hit can raise atk.",
@@ -24261,7 +24086,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
 		shortDesc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
 	},
-	venergyballs: {
+	energyballs: {
 		name: "Energy Balls",
 		desc: "Releases the energy cumulated in fight, dealing 50xthe number of spheres gathered",
 		shortDesc: "Releases the energy cumulated in fight, dealing 50xthe number of spheres gathered",
@@ -24326,7 +24151,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Hi crit rate.",
 		shortDesc: "Hi crit rate.",
 	},
-	ffcatastrophe: {
+	catastrophe: {
 		name: "Catastrophe",
 		desc: "This move can be used only after the user has used all the other moves it knows in the battle.",
 		shortDesc: "This move can be used only after the user has used all the other moves it knows in the battle.",
@@ -24465,11 +24290,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Goou Shourai",
 		desc: "High critical hit ratio. The target is hit seven times.",
 		shortDesc: "High critical hit ratio. The target is hit seven times.",
-	},
-	sknightofowner: {
-		name: "KnightOfOwner",
-		desc: "Copies the last move used by the opponent and disables it. Increases the user's crit rate.",
-		shortDesc: "Copies the last move used by the opponent and disables it. Increases the user's crit rate.",
 	},
 	hameshavanim: {
 		name: "Hamesh Avanim",
@@ -24620,11 +24440,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Summon Animals",
 		desc: "Summon minions to attack 2-5 times in a row. Deals physical damage.",
 		shortDesc: "Summon minions to attack 2-5 times in a row. Deals physical damage.",
-	},
-	rexcalibur: {
-		name: "Excalibur",
-		desc: "Hi crit rate. User must recharge unless it KOs the target.",
-		shortDesc: "Hi crit rate. User must recharge unless it KOs the target.",
 	},
 	stymphalianbirds: {
 		name: "Stymphalian Birds",

@@ -31596,6 +31596,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		isNonstandard: "Future",
 	},
+	hijumpkick: {
+		num: 666084,
+		accuracy: 90,
+		basePower: 130,
+		category: "Physical",
+		name: "Hi Jump Kick",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, powder: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		isNonstandard: "Future",
+	},
 	smellingsalt: {
 		num: 666297,
 		accuracy: 100,
@@ -32204,7 +32218,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Bug",
 		isNonstandard: "Future",
 	},
-	swarm: {
+	swarmattack: {
 		num: 666658,
 		accuracy: 90,
 		basePower: 20,
@@ -32504,12 +32518,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Virus",
 		isNonstandard: "Future",
 	},
-	soporous: {
+	S: {
 		num: 666678,
 		accuracy: 90,
 		basePower: 70,
 		category: "Physical",
-		name: "Soporous",
+		name: "o",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
@@ -32909,7 +32923,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ghost",
 		isNonstandard: "Future",
 	},
-	phantomtendrils: {
+	phantomtendril: {
 		num: 666705,
 		accuracy: 85,
 		basePower: 60,
@@ -33269,7 +33283,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Magic",
 		isNonstandard: "Future",
 	},
-	magicarrow: {
+	magicarrows: {
 		num: 666730,
 		accuracy: 90,
 		basePower: 15,
@@ -33809,7 +33823,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Chaos",
 		isNonstandard: "Future",
 	},
-	nuwave: {
+	nuswave: {
 		num: 666766,
 		accuracy: 90,
 		basePower: 45,
@@ -34634,12 +34648,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Glass",
 		isNonstandard: "Future",
 	},
-	flashball: {
+	F: {
 		num: 666822,
 		accuracy: 100,
 		basePower: 80,
 		category: "Special",
-		name: "Flash Ball",
+		name: "l",
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
@@ -35069,7 +35083,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		isNonstandard: "Future",
 	},
-	insultandinjury: {
+	insultinjury: {
 		num: 666853,
 		accuracy: 95,
 		basePower: 60,
@@ -35174,12 +35188,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		isNonstandard: "Future",
 	},
-	doom: {
+	D: {
 		num: 666860,
 		accuracy: 90,
 		basePower: 150,
 		category: "Physical",
-		name: "Doom",
+		name: "o",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
@@ -36254,7 +36268,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		isNonstandard: "Future",
 	},
-	asiciclecleave: {
+	iciclecleave: {
 		num: 666933,
 		accuracy: 100,
 		basePower: 70,
@@ -36569,7 +36583,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ground",
 		isNonstandard: "Future",
 	},
-	travel: {
+	netsurf: {
 		num: 666957,
 		accuracy: 100,
 		basePower: 90,
@@ -36914,7 +36928,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 		isNonstandard: "Future",
 	},
-	gravitationalshift: {
+	gravityshift: {
 		num: 666981,
 		accuracy: 100,
 		basePower: 70,
@@ -36944,7 +36958,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		isNonstandard: "Future",
 	},
-	thunderkick: {
+	voltkick: {
 		num: 666983,
 		accuracy: 90,
 		basePower: 85,
@@ -37484,7 +37498,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Time",
 		isNonstandard: "Future",
 	},
-	spookdance: {
+	nightmarch: {
 		num: 667020,
 		accuracy: 100,
 		basePower: 120,
@@ -37694,7 +37708,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fear",
 		isNonstandard: "Future",
 	},
-	gglassbreaker: {
+	glassbreaker: {
 		num: 667034,
 		accuracy: 100,
 		basePower: 95,
@@ -38804,7 +38818,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Tech",
 		isNonstandard: "Future",
 	},
-	threefreeze: {
+	"3freeze": {
 		num: 667135,
 		accuracy: 95,
 		basePower: 110,
@@ -38849,7 +38863,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Paper",
 		isNonstandard: "Future",
 	},
-	heavendoor: {
+	heavensdoor: {
 		num: 667138,
 		accuracy: true,
 		basePower: 120,
@@ -38909,21 +38923,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Paper",
 		isNonstandard: "Future",
 	},
-	aselfdestruct: {
-		num: 667142,
-		accuracy: 100,
-		basePower: 200,
-		category: "Physical",
-		name: "Selfdestruct",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "allAdjacent",
-		type: "Normal",
-		isNonstandard: "Future",
-	},
 	bitesthedust: {
 		num: 667143,
 		accuracy: true,
@@ -38937,21 +38936,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		critRatio: 2,
 		target: "normal",
 		type: "Time",
-		isNonstandard: "Future",
-	},
-	aexplosion: {
-		num: 667144,
-		accuracy: 100,
-		basePower: 250,
-		category: "Physical",
-		name: "Explosion",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "allAdjacent",
-		type: "Normal",
 		isNonstandard: "Future",
 	},
 	airbomb: {
@@ -39087,21 +39071,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		critRatio: 2,
 		target: "normal",
 		type: "Magic",
-		isNonstandard: "Future",
-	},
-	glassbreaker: {
-		num: 667154,
-		accuracy: 100,
-		basePower: 95,
-		category: "Special",
-		name: "Glass Breaker",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Sound",
 		isNonstandard: "Future",
 	},
 	cannibalize: {
@@ -39539,7 +39508,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ghost",
 		isNonstandard: "Future",
 	},
-	acannibalize: {
+	cannibilize: {
 		num: 667184,
 		accuracy: 100,
 		basePower: 150,
@@ -40364,7 +40333,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fabric",
 		isNonstandard: "Future",
 	},
-	fakeoutt: {
+	fa223rkeou543wfdt: {
 		num: 667242,
 		accuracy: 85,
 		basePower: 40,
@@ -40454,7 +40423,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fear",
 		isNonstandard: "Future",
 	},
-	bugpursuit: {
+	pester: {
 		num: 667248,
 		accuracy: 100,
 		basePower: 60,
@@ -41189,21 +41158,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Tech",
 		isNonstandard: "Future",
 	},
-	gmudamuda: {
-		num: 667297,
-		accuracy: 95,
-		basePower: 45,
-		category: "Physical",
-		name: "Muda Muda",
-		pp: 20,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Fighting",
-		isNonstandard: "Future",
-	},
 	cosmicboost: {
 		num: 667298,
 		accuracy: 95,
@@ -41264,7 +41218,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Magic",
 		isNonstandard: "Future",
 	},
-	ddddc: {
+	dirtydeedsdonedirtcheap: {
 		num: 667303,
 		accuracy: 95,
 		basePower: 110,
@@ -42344,7 +42298,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Magic",
 		isNonstandard: "Future",
 	},
-	timestop: {
+	timefreeze: {
 		num: 667376,
 		accuracy: 55,
 		basePower: 0,
@@ -42524,7 +42478,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Time",
 		isNonstandard: "Future",
 	},
-	windjavelin: {
+	windspear: {
 		num: 667388,
 		accuracy: 95,
 		basePower: 80,
@@ -43109,7 +43063,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Virus",
 		isNonstandard: "Future",
 	},
-	paravirus: {
+	leprosy: {
 		num: 667427,
 		accuracy: 100,
 		basePower: 85,
@@ -43124,7 +43078,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Virus",
 		isNonstandard: "Future",
 	},
-	ultraparavirus: {
+	acceleprosy: {
 		num: 667428,
 		accuracy: 85,
 		basePower: 115,
@@ -44459,7 +44413,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fear",
 		isNonstandard: "Future",
 	},
-	aquajavelin: {
+	aquaspear: {
 		num: 667523,
 		accuracy: 90,
 		basePower: 85,
@@ -47744,7 +47698,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fabric",
 		isNonstandard: "Future",
 	},
-	flyingcarpet: {
+	flycarpet: {
 		num: 667750,
 		accuracy: 95,
 		basePower: 110,
@@ -47969,7 +47923,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		isNonstandard: "Future",
 	},
-	andthennone: {
+	andthentherewerenone: {
 		num: 667767,
 		accuracy: 90,
 		basePower: 120,
@@ -49319,21 +49273,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Sound",
 		isNonstandard: "Future",
 	},
-	iciclecleave: {
-		num: 667862,
-		accuracy: 100,
-		basePower: 70,
-		category: "Physical",
-		name: "Icicle Cleave",
-		pp: 15,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Ice",
-		isNonstandard: "Future",
-	},
 	weatherblade: {
 		num: 667863,
 		accuracy: 100,
@@ -49559,7 +49498,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Divine",
 		isNonstandard: "Future",
 	},
-	ibbstorm: {
+	infinitybigbangstorm: {
 		num: 667880,
 		accuracy: 90,
 		basePower: 180,
@@ -50489,7 +50428,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Food",
 		isNonstandard: "Future",
 	},
-	gtomahawk: {
+	gettertomahawk: {
 		num: 667952,
 		accuracy: 95,
 		basePower: 65,
@@ -50504,7 +50443,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Tech",
 		isNonstandard: "Future",
 	},
-	gdrillattack: {
+	drillattack: {
 		num: 667953,
 		accuracy: 100,
 		basePower: 70,
@@ -50519,7 +50458,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Tech",
 		isNonstandard: "Future",
 	},
-	gmissile: {
+	gettermissile: {
 		num: 667954,
 		accuracy: 85,
 		basePower: 75,
@@ -50564,7 +50503,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Tech",
 		isNonstandard: "Future",
 	},
-	heatseakmissile: {
+	heatseekmissile: {
 		num: 667957,
 		accuracy: true,
 		basePower: 80,
@@ -51164,7 +51103,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Chaos",
 		isNonstandard: "Future",
 	},
-	willbememe: {
+	everyoneexplodenow: {
 		num: 667997,
 		accuracy: true,
 		basePower: 0,
@@ -52319,21 +52258,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 		isNonstandard: "Future",
 	},
-	everyoneexplodenow: {
-		num: 668076,
-		accuracy: 45,
-		basePower: 1,
-		category: "Physical",
-		name: "EveryoneExplodeNow",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Normal",
-		isNonstandard: "Future",
-	},
 	heartpunch: {
 		num: 668077,
 		accuracy: 100,
@@ -53459,7 +53383,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 		isNonstandard: "Future",
 	},
-	matrimony: {
+	passion: {
 		num: 668152,
 		accuracy: 100,
 		basePower: 1,
@@ -53624,7 +53548,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		isNonstandard: "Future",
 	},
-	tgreenshell: {
+	"3greenshells": {
 		num: 668163,
 		accuracy: 85,
 		basePower: 40,
@@ -53654,7 +53578,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		isNonstandard: "Future",
 	},
-	tredshell: {
+	"3redshells": {
 		num: 668165,
 		accuracy: true,
 		basePower: 60,
@@ -53864,7 +53788,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Sound",
 		isNonstandard: "Future",
 	},
-	mghost: {
+	ghost: {
 		num: 668179,
 		accuracy: 90,
 		basePower: 40,
@@ -53892,21 +53816,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		critRatio: 2,
 		target: "allAdjacent",
 		type: "Normal",
-		isNonstandard: "Future",
-	},
-	mklightning: {
-		num: 668181,
-		accuracy: 95,
-		basePower: 55,
-		category: "Special",
-		name: "Lightning",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "allAdjacentFoes",
-		type: "Electric",
 		isNonstandard: "Future",
 	},
 	submerge: {
@@ -54059,7 +53968,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ground",
 		isNonstandard: "Future",
 	},
-	greenhouse: {
+	greenhousegas: {
 		num: 668192,
 		accuracy: true,
 		basePower: 0,
@@ -54089,7 +53998,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ground",
 		isNonstandard: "Future",
 	},
-	mudbnig: {
+	muffa: {
 		num: 668194,
 		accuracy: true,
 		basePower: 0,
@@ -54224,7 +54133,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		isNonstandard: "Future",
 	},
-	steelcoat: {
+	metallurgy: {
 		num: 668203,
 		accuracy: true,
 		basePower: 0,
@@ -54269,7 +54178,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rock",
 		isNonstandard: "Future",
 	},
-	illusiondominance: {
+	illusionarydominance: {
 		num: 668206,
 		accuracy: 90,
 		basePower: 1,
@@ -54374,7 +54283,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		isNonstandard: "Future",
 	},
-	htails: {
+	tails: {
 		num: 668213,
 		accuracy: 100,
 		basePower: 1,
@@ -54389,7 +54298,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		isNonstandard: "Future",
 	},
-	theads: {
+	heads: {
 		num: 668214,
 		accuracy: 100,
 		basePower: 1,
@@ -54402,36 +54311,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		critRatio: 2,
 		target: "allAdjacent",
 		type: "Normal",
-		isNonstandard: "Future",
-	},
-	ttails: {
-		num: 668215,
-		accuracy: 100,
-		basePower: 1,
-		category: "Special",
-		name: "Tails",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Qmarks",
-		isNonstandard: "Future",
-	},
-	hheads: {
-		num: 668216,
-		accuracy: 100,
-		basePower: 1,
-		category: "Special",
-		name: "Heads",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Qmarks",
 		isNonstandard: "Future",
 	},
 	sealbreak: {
@@ -56669,21 +56548,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ground",
 		isNonstandard: "Future",
 	},
-	enumaelishe: {
-		num: 668370,
-		accuracy: 95,
-		basePower: 120,
-		category: "Physical",
-		name: "Enuma Elish",
-		pp: 5,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Divine",
-		isNonstandard: "Future",
-	},
 	attackup: {
 		num: 668371,
 		accuracy: true,
@@ -57254,21 +57118,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ghost",
 		isNonstandard: "Future",
 	},
-	sgrondementduhaine: {
-		num: 668409,
-		accuracy: 95,
-		basePower: 100,
-		category: "Special",
-		name: "GrondementDuHaine",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Fire",
-		isNonstandard: "Future",
-	},
 	deadweight: {
 		num: 668410,
 		accuracy: 100,
@@ -57458,21 +57307,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Shadow",
-		isNonstandard: "Future",
-	},
-	srhongomyniad: {
-		num: 668423,
-		accuracy: 95,
-		basePower: 100,
-		category: "Physical",
-		name: "Rhongomyniad",
-		pp: 5,
-		priority: 2,
-		flags: {},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -58484,7 +58318,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ghost",
 		isNonstandard: "Future",
 	},
-	cryostasis: {
+	hibernation: {
 		num: 668504,
 		accuracy: true,
 		basePower: 0,
@@ -59459,21 +59293,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		isNonstandard: "Future",
 	},
-	icevcreate: {
-		num: 668570,
-		accuracy: 95,
-		basePower: 180,
-		category: "Physical",
-		name: "V-create",
-		pp: 5,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Ice",
-		isNonstandard: "Future",
-	},
 	eighthoctave: {
 		num: 668571,
 		accuracy: 100,
@@ -59744,7 +59563,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Blood",
 		isNonstandard: "Future",
 	},
-	twindeath: {
+	twinshit: {
 		num: 668590,
 		accuracy: 95,
 		basePower: 1,
@@ -59804,7 +59623,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Chaos",
 		isNonstandard: "Future",
 	},
-	no: {
+	returntozero: {
 		num: 668594,
 		accuracy: true,
 		basePower: 0,
@@ -60132,21 +59951,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		critRatio: 2,
 		target: "normal",
 		type: "Fighting",
-		isNonstandard: "Future",
-	},
-	fkiblast: {
-		num: 668616,
-		accuracy: 100,
-		basePower: 90,
-		category: "Special",
-		name: "Ki Blast",
-		pp: 20,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Fire",
 		isNonstandard: "Future",
 	},
 	haunterdark: {
@@ -60704,7 +60508,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Zombie",
 		isNonstandard: "Future",
 	},
-	fimpossiblerequests: {
+	"5impossiblerequests": {
 		num: 668654,
 		accuracy: true,
 		basePower: 0,
@@ -60914,7 +60718,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Light",
 		isNonstandard: "Future",
 	},
-	ttwindeath: {
+	twindeath: {
 		num: 668668,
 		accuracy: 95,
 		basePower: 200,
@@ -60942,36 +60746,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		critRatio: 2,
 		target: "normal",
 		type: "Cosmic",
-		isNonstandard: "Future",
-	},
-	ffakeoutt: {
-		num: 668670,
-		accuracy: 100,
-		basePower: 220,
-		category: "Physical",
-		name: "Fa223rke Ou543wfdt",
-		pp: 40,
-		priority: 3,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Light",
-		isNonstandard: "Future",
-	},
-	ddesecrations: {
-		num: 668671,
-		accuracy: 100,
-		basePower: 125,
-		category: "Special",
-		name: "Desecrations",
-		pp: 25,
-		priority: 1,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Chaos",
 		isNonstandard: "Future",
 	},
 	curseofyig: {
@@ -61274,7 +61048,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Zombie",
 		isNonstandard: "Future",
 	},
-	ghatonovisage: {
+	ghatanovisage: {
 		num: 668692,
 		accuracy: 90,
 		basePower: 70,
@@ -62204,21 +61978,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		isNonstandard: "Future",
 	},
-	dgoldrush: {
-		num: 668755,
-		accuracy: 95,
-		basePower: 90,
-		category: "Physical",
-		name: "Goldrush",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "allAdjacentFoes",
-		type: "Dark",
-		isNonstandard: "Future",
-	},
 	maxvoltcrash: {
 		num: 668756,
 		accuracy: 90,
@@ -62384,7 +62143,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Blood",
 		isNonstandard: "Future",
 	},
-	lmachinegun: {
+	machinegun: {
 		num: 668767,
 		accuracy: 95,
 		basePower: 25,
@@ -62504,7 +62263,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Magma",
 		isNonstandard: "Future",
 	},
-	hibernate: {
+	hiberslam: {
 		num: 668775,
 		accuracy: 90,
 		basePower: 70,
@@ -62654,7 +62413,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Heart",
 		isNonstandard: "Future",
 	},
-	mirage: {
+	heatmirage: {
 		num: 668785,
 		accuracy: 70,
 		basePower: 0,
@@ -62877,6 +62636,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		critRatio: 2,
 		target: "normal",
 		type: "Fabric",
+		isNonstandard: "Future",
+	},
+	rrrray: {
+		num: 668800,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "RRR Ray",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		critRatio: 2,
+		target: "normal",
+		type: "Plastic",
 		isNonstandard: "Future",
 	},
 	galeofdarkness: {
@@ -63719,21 +63493,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 		isNonstandard: "Future",
 	},
-	machinegun: {
-		num: 668886,
-		accuracy: 90,
-		basePower: 20,
-		category: "Physical",
-		name: "Machine Gun",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Tech",
-		isNonstandard: "Future",
-	},
 	fieryslash: {
 		num: 668887,
 		accuracy: 100,
@@ -63749,7 +63508,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		isNonstandard: "Future",
 	},
-	dgaiaforce: {
+	gaiaforce: {
 		num: 668888,
 		accuracy: 85,
 		basePower: 140,
@@ -63779,7 +63538,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Wind",
 		isNonstandard: "Future",
 	},
-	dgroundzero: {
+	groundzero: {
 		num: 668890,
 		accuracy: 90,
 		basePower: 60,
@@ -66539,7 +66298,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Food",
 		isNonstandard: "Future",
 	},
-	glitchtm50: {
+	tm50: {
 		num: 669081,
 		accuracy: 28,
 		basePower: 56,
@@ -66554,7 +66313,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Qmarks",
 		isNonstandard: "Future",
 	},
-	glitchtm05: {
+	tm05: {
 		num: 669082,
 		accuracy: true,
 		basePower: 0,
@@ -66569,7 +66328,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Qmarks",
 		isNonstandard: "Future",
 	},
-	glitchtm41: {
+	tm41: {
 		num: 669083,
 		accuracy: 100,
 		basePower: 71,
@@ -66584,7 +66343,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Qmarks",
 		isNonstandard: "Future",
 	},
-	glitchtm54: {
+	tm54: {
 		num: 669084,
 		accuracy: 8,
 		basePower: 2,
@@ -66599,7 +66358,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Qmarks",
 		isNonstandard: "Future",
 	},
-	glitchtm18: {
+	tm18: {
 		num: 669085,
 		accuracy: 17,
 		basePower: 7,
@@ -67079,7 +66838,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Tech",
 		isNonstandard: "Future",
 	},
-	dginfinityarrow: {
+	infinityarrow: {
 		num: 669117,
 		accuracy: 90,
 		basePower: 80,
@@ -67199,7 +66958,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		isNonstandard: "Future",
 	},
-	goburibomb: {
+	goblinbomb: {
 		num: 669126,
 		accuracy: 95,
 		basePower: 85,
@@ -67214,7 +66973,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 		isNonstandard: "Future",
 	},
-	goburistrike: {
+	goblinstrike: {
 		num: 669127,
 		accuracy: 100,
 		basePower: 80,
@@ -67229,7 +66988,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 		isNonstandard: "Future",
 	},
-	pummelwhack: {
+	pummelwack: {
 		num: 669128,
 		accuracy: 95,
 		basePower: 90,
@@ -67949,21 +67708,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		isNonstandard: "Future",
 	},
-	wizardoutrage: {
-		num: 669181,
-		accuracy: 100,
-		basePower: 120,
-		category: "Physical",
-		name: "Outrage",
-		pp: 15,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "randomNormal",
-		type: "Dragon",
-		isNonstandard: "Future",
-	},
 	acidbath: {
 		num: 669182,
 		accuracy: true,
@@ -68039,21 +67783,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Paper",
 		isNonstandard: "Future",
 	},
-	himvenom: {
-		num: 669187,
-		accuracy: 100,
-		basePower: 80,
-		category: "Physical",
-		name: "Venom",
-		pp: 20,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Poison",
-		isNonstandard: "Future",
-	},
 	moltentears: {
 		num: 669188,
 		accuracy: 100,
@@ -68114,7 +67843,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rubber",
 		isNonstandard: "Future",
 	},
-	movecatalogue: {
+	movecatalog: {
 		num: 669192,
 		accuracy: true,
 		basePower: 0,
@@ -68384,7 +68113,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 		isNonstandard: "Future",
 	},
-	scorchingsting: {
+	schorchingsting: {
 		num: 669211,
 		accuracy: 90,
 		basePower: 90,
@@ -69329,7 +69058,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 		isNonstandard: "Future",
 	},
-	bugswarm: {
+	swarm: {
 		num: 669275,
 		accuracy: true,
 		basePower: 0,
@@ -69524,7 +69253,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Chaos",
 		isNonstandard: "Future",
 	},
-	heatseakcrawl: {
+	heatseekcrawl: {
 		num: 669288,
 		accuracy: true,
 		basePower: 80,
@@ -70349,7 +70078,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Cyber",
 		isNonstandard: "Future",
 	},
-	hblackplague: {
+	blackplague: {
 		num: 669345,
 		accuracy: 100,
 		basePower: 110,
@@ -70497,21 +70226,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		critRatio: 2,
 		target: "normal",
 		type: "Virus",
-		isNonstandard: "Future",
-	},
-	sbathoryerzsebet: {
-		num: 669355,
-		accuracy: 95,
-		basePower: 100,
-		category: "Special",
-		name: "Bathory Erzsebet",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "allAdjacentFoes",
-		type: "Shadow",
 		isNonstandard: "Future",
 	},
 	tricktackle: {
@@ -70679,21 +70393,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fear",
 		isNonstandard: "Future",
 	},
-	sguillotine: {
-		num: 669367,
-		accuracy: 30,
-		basePower: 1,
-		category: "Physical",
-		name: "Guillotine",
-		pp: 5,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Shadow",
-		isNonstandard: "Future",
-	},
 	bouncycastle: {
 		num: 669368,
 		accuracy: true,
@@ -70739,7 +70438,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ghost",
 		isNonstandard: "Future",
 	},
-	hdeath: {
+	death: {
 		num: 669372,
 		accuracy: 100,
 		basePower: 100,
@@ -71834,96 +71533,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Heart",
 		isNonstandard: "Future",
 	},
-	gainsanity: {
-		num: 669446,
-		accuracy: 100,
-		basePower: 90,
-		category: "Physical",
-		name: "Insanity",
-		pp: 10,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "randomNormal",
-		type: "Chaos",
-		isNonstandard: "Future",
-	},
-	mrthunder: {
-		num: 669447,
-		accuracy: 100,
-		basePower: 140,
-		category: "Special",
-		name: "Thunder",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Electric",
-		isNonstandard: "Future",
-	},
-	mrhurricane: {
-		num: 669448,
-		accuracy: 100,
-		basePower: 140,
-		category: "Special",
-		name: "Hurricane",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Flying",
-		isNonstandard: "Future",
-	},
-	mrcyclone: {
-		num: 669449,
-		accuracy: 100,
-		basePower: 140,
-		category: "Special",
-		name: "Cyclone",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Wind",
-		isNonstandard: "Future",
-	},
-	mrarcanebolt: {
-		num: 669450,
-		accuracy: 100,
-		basePower: 140,
-		category: "Special",
-		name: "Arcane Bolt",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Magic",
-		isNonstandard: "Future",
-	},
-	aboostbeam: {
-		num: 669451,
-		accuracy: 95,
-		basePower: 120,
-		category: "Special",
-		name: "Boost Beam",
-		pp: 40,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Plastic",
-		isNonstandard: "Future",
-	},
 	santamariaanchor: {
 		num: 669452,
 		accuracy: 85,
@@ -72194,7 +71803,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		isNonstandard: "Future",
 	},
-	dgrockbreaker: {
+	rockbreaker: {
 		num: 669470,
 		accuracy: 90,
 		basePower: 70,
@@ -72209,7 +71818,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dragon",
 		isNonstandard: "Future",
 	},
-	dgexhaustflame: {
+	exhaustflame: {
 		num: 669471,
 		accuracy: 90,
 		basePower: 100,
@@ -72224,7 +71833,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		isNonstandard: "Future",
 	},
-	dgatomicblaster: {
+	atomicblaster: {
 		num: 669472,
 		accuracy: 100,
 		basePower: 120,
@@ -72254,7 +71863,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Nuclear",
 		isNonstandard: "Future",
 	},
-	dglightningjoust: {
+	lightningjoust: {
 		num: 669474,
 		accuracy: 100,
 		basePower: 110,
@@ -72269,7 +71878,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 		isNonstandard: "Future",
 	},
-	dgshieldofjust: {
+	shieldofjust: {
 		num: 669475,
 		accuracy: 100,
 		basePower: 100,
@@ -72329,7 +71938,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Cyber",
 		isNonstandard: "Future",
 	},
-	dgburstshot: {
+	burstshot: {
 		num: 669479,
 		accuracy: 90,
 		basePower: 50,
@@ -72419,7 +72028,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 		isNonstandard: "Future",
 	},
-	dgloveserenade: {
+	loveserenade: {
 		num: 669485,
 		accuracy: 95,
 		basePower: 100,
@@ -73004,7 +72613,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Wood",
 		isNonstandard: "Future",
 	},
-	dhey: {
+	hey: {
 		num: 669524,
 		accuracy: 100,
 		basePower: 1,
@@ -73034,7 +72643,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Wood",
 		isNonstandard: "Future",
 	},
-	dnun: {
+	nun: {
 		num: 669526,
 		accuracy: true,
 		basePower: 0,
@@ -73049,7 +72658,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Wood",
 		isNonstandard: "Future",
 	},
-	dshin: {
+	shin: {
 		num: 669527,
 		accuracy: 100,
 		basePower: 90,
@@ -73133,36 +72742,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Shadow",
-		isNonstandard: "Future",
-	},
-	shrunting: {
-		num: 669533,
-		accuracy: true,
-		basePower: 80,
-		category: "Physical",
-		name: "Hrunting",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Shadow",
-		isNonstandard: "Future",
-	},
-	scaladbolgii: {
-		num: 669534,
-		accuracy: 100,
-		basePower: 70,
-		category: "Special",
-		name: "Caladbolg II",
-		pp: 5,
-		priority: 2,
-		flags: {},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -73319,7 +72898,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Blood",
 		isNonstandard: "Future",
 	},
-	dghelterskelter: {
+	helterskelter: {
 		num: 669546,
 		accuracy: 85,
 		basePower: 0,
@@ -73364,7 +72943,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		isNonstandard: "Future",
 	},
-	dgphantompain: {
+	phantompain: {
 		num: 669549,
 		accuracy: 75,
 		basePower: 40,
@@ -73859,21 +73438,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Blood",
 		isNonstandard: "Future",
 	},
-	aspikedarmor: {
-		num: 669582,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Spiked Armor",
-		pp: 5,
-		priority: 0,
-		flags: {snatch: 1, bite: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "self",
-		type: "Steel",
-		isNonstandard: "Future",
-	},
 	innardspunch: {
 		num: 669583,
 		accuracy: 100,
@@ -73919,7 +73483,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Water",
 		isNonstandard: "Future",
 	},
-	threedattack: {
+	"3dattack": {
 		num: 669586,
 		accuracy: 90,
 		basePower: 30,
@@ -74729,7 +74293,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Blood",
 		isNonstandard: "Future",
 	},
-	timestopp: {
+	timestop: {
 		num: 669645,
 		accuracy: 65,
 		basePower: 0,
@@ -74864,7 +74428,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		isNonstandard: "Future",
 	},
-	ompocketdimension: {
+	pocketdimension: {
 		num: 669654,
 		accuracy: 100,
 		basePower: 0,
@@ -74879,7 +74443,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		isNonstandard: "Future",
 	},
-	scpthecure: {
+	thecure: {
 		num: 669655,
 		accuracy: true,
 		basePower: 0,
@@ -75164,36 +74728,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Chaos",
 		isNonstandard: "Future",
 	},
-	suckerpuncho: {
-		num: 669675,
-		accuracy: 95,
-		basePower: 120,
-		category: "Physical",
-		name: "Sucker Punch",
-		pp: 10,
-		priority: 1,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Dark",
-		isNonstandard: "Future",
-	},
-	flareblizz: {
-		num: 669676,
-		accuracy: 100,
-		basePower: 125,
-		category: "Physical",
-		name: "Flareblitz",
-		pp: 15,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Fire",
-		isNonstandard: "Future",
-	},
 	yourebluenow: {
 		num: 669677,
 		accuracy: 100,
@@ -75284,7 +74818,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Qmarks",
 		isNonstandard: "Future",
 	},
-	storedq: {
+	stored: {
 		num: 669682,
 		accuracy: 100,
 		basePower: 1,
@@ -75464,7 +74998,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Divine",
 		isNonstandard: "Future",
 	},
-	dsshadow: {
+	shadow: {
 		num: 669694,
 		accuracy: 95,
 		basePower: 80,
@@ -75479,7 +75013,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Shadow",
 		isNonstandard: "Future",
 	},
-	hhim: {
+	him: {
 		num: 669695,
 		accuracy: 100,
 		basePower: 60,
@@ -75522,21 +75056,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		critRatio: 2,
 		target: "normal",
 		type: "Greasy",
-		isNonstandard: "Future",
-	},
-	abide: {
-		num: 669698,
-		accuracy: true,
-		basePower: 1,
-		category: "Physical",
-		name: "Bide",
-		pp: 40,
-		priority: 1,
-		flags: {contact: 1, protect: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "self",
-		type: "Qmarks",
 		isNonstandard: "Future",
 	},
 	oilyterrain: {
@@ -75582,21 +75101,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		critRatio: 2,
 		target: "normal",
 		type: "Flying",
-		isNonstandard: "Future",
-	},
-	pphantomtendrils: {
-		num: 669702,
-		accuracy: 85,
-		basePower: 120,
-		category: "Physical",
-		name: "Phantom Tendril",
-		pp: 20,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Ghost",
 		isNonstandard: "Future",
 	},
 	absoluteice: {
@@ -75929,7 +75433,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 		isNonstandard: "Future",
 	},
-	gwjudge: {
+	judge: {
 		num: 669729,
 		accuracy: 100,
 		basePower: 1,
@@ -76004,7 +75508,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Magic",
 		isNonstandard: "Future",
 	},
-	mmsizz: {
+	sizz: {
 		num: 669734,
 		accuracy: 100,
 		basePower: 60,
@@ -76019,7 +75523,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		isNonstandard: "Future",
 	},
-	mmsizzle: {
+	sizzle: {
 		num: 669735,
 		accuracy: 100,
 		basePower: 100,
@@ -76034,7 +75538,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		isNonstandard: "Future",
 	},
-	mmbang: {
+	bang: {
 		num: 669736,
 		accuracy: 90,
 		basePower: 45,
@@ -76049,7 +75553,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		isNonstandard: "Future",
 	},
-	mmkaboom: {
+	kaboom: {
 		num: 669737,
 		accuracy: 90,
 		basePower: 60,
@@ -76064,7 +75568,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		isNonstandard: "Future",
 	},
-	mmsnooze: {
+	snooze: {
 		num: 669738,
 		accuracy: 60,
 		basePower: 0,
@@ -76079,7 +75583,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Magic",
 		isNonstandard: "Future",
 	},
-	mmflameslash: {
+	flameslash: {
 		num: 669739,
 		accuracy: 100,
 		basePower: 70,
@@ -76109,7 +75613,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ice",
 		isNonstandard: "Future",
 	},
-	mmmetalslash: {
+	metalslash: {
 		num: 669741,
 		accuracy: 100,
 		basePower: 70,
@@ -76139,7 +75643,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		isNonstandard: "Future",
 	},
-	mmwhack: {
+	whack: {
 		num: 669743,
 		accuracy: 90,
 		basePower: 5,
@@ -76154,22 +75658,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Chaos",
 		isNonstandard: "Future",
 	},
-	mmthwhack: {
-		num: 669744,
-		accuracy: 90,
-		basePower: 20,
-		category: "Special",
-		name: "Whack",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Chaos",
-		isNonstandard: "Future",
-	},
-	mmmagicburst: {
+	magicburst: {
 		num: 669745,
 		accuracy: 90,
 		basePower: 150,
@@ -76184,7 +75673,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Magic",
 		isNonstandard: "Future",
 	},
-	mmkamikaze: {
+	kamikaze: {
 		num: 669746,
 		accuracy: 100,
 		basePower: 250,
@@ -76199,7 +75688,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Magic",
 		isNonstandard: "Future",
 	},
-	mmheal: {
+	heal: {
 		num: 669747,
 		accuracy: true,
 		basePower: 0,
@@ -76214,7 +75703,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Magic",
 		isNonstandard: "Future",
 	},
-	mmspellbounce: {
+	spellbounce: {
 		num: 669748,
 		accuracy: true,
 		basePower: 0,
@@ -76229,7 +75718,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Magic",
 		isNonstandard: "Future",
 	},
-	mmaccelerate: {
+	accelerate: {
 		num: 669749,
 		accuracy: true,
 		basePower: 0,
@@ -76244,7 +75733,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Magic",
 		isNonstandard: "Future",
 	},
-	mmkaclang: {
+	kaclang: {
 		num: 669750,
 		accuracy: true,
 		basePower: 0,
@@ -76259,7 +75748,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Magic",
 		isNonstandard: "Future",
 	},
-	mmzoom: {
+	zoom: {
 		num: 669751,
 		accuracy: true,
 		basePower: 0,
@@ -76274,7 +75763,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Magic",
 		isNonstandard: "Future",
 	},
-	mmoomph: {
+	oomph: {
 		num: 669752,
 		accuracy: true,
 		basePower: 0,
@@ -76319,7 +75808,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Crystal",
 		isNonstandard: "Future",
 	},
-	mcironsword: {
+	ironsword: {
 		num: 669755,
 		accuracy: 100,
 		basePower: 70,
@@ -76649,21 +76138,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Cosmic",
 		isNonstandard: "Future",
 	},
-	pangelrush: {
-		num: 669778,
-		accuracy: 100,
-		basePower: 9,
-		category: "Physical",
-		name: "Angel Rush",
-		pp: 10,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Heart",
-		isNonstandard: "Future",
-	},
 	dragonpummelin: {
 		num: 669779,
 		accuracy: 100,
@@ -76769,7 +76243,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		isNonstandard: "Future",
 	},
-	venergyballs: {
+	energyballs: {
 		num: 669786,
 		accuracy: 95,
 		basePower: 1,
@@ -76964,7 +76438,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Water",
 		isNonstandard: "Future",
 	},
-	ffcatastrophe: {
+	catastrophe: {
 		num: 669799,
 		accuracy: 100,
 		basePower: 150,
@@ -77382,21 +76856,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		critRatio: 2,
 		target: "normal",
 		type: "Electric",
-		isNonstandard: "Future",
-	},
-	sknightofowner: {
-		num: 669827,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "KnightOfOwner",
-		pp: 10,
-		priority: -1,
-		flags: {protect: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "normal",
-		type: "Fairy",
 		isNonstandard: "Future",
 	},
 	hameshavanim: {
@@ -77847,21 +77306,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		critRatio: 2,
 		target: "normal",
 		type: "Normal",
-		isNonstandard: "Future",
-	},
-	rexcalibur: {
-		num: 669859,
-		accuracy: 90,
-		basePower: 150,
-		category: "Physical",
-		name: "Excalibur",
-		pp: 5,
-		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
-		critRatio: 2,
-		target: "allAdjacentFoes",
-		type: "Fighting",
 		isNonstandard: "Future",
 	},
 	stymphalianbirds: {
