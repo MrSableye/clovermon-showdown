@@ -12386,6 +12386,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		selfdestruct: false,
+		recoil: [1, 3],
 		secondary: null,
 		target: "normal",
 		type: "Nuclear",
@@ -12401,7 +12403,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		self: {},
+		onAfterMove(pokemon) {},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Psychic",
 		isNonstandard: null,
@@ -12416,6 +12423,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onHit(target) {},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
 		secondary: null,
 		target: "randomNormal",
 		type: "Food",
@@ -12431,6 +12447,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -12446,6 +12463,22 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, source, move) {
+			if (source.item || source.volatiles['gem']) {
+				return;
+			}
+			const yourItem = target.takeItem(source);
+			if (!yourItem) {
+				return;
+			}
+			if (!this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem) ||
+				!source.setItem(yourItem)) {
+				target.item = yourItem.id; // bypass setItem so we don't break choicelock or anything
+				return;
+			}
+			this.add('-enditem', target, yourItem, '[silent]', '[from] move: Plunder', '[of] ' + source);
+			this.add('-item', source, yourItem, '[from] move: Plunder', '[of] ' + target);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -12461,6 +12494,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: -6,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		forceSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Wood",
@@ -12481,19 +12515,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Rock",
 		isNonstandard: null,
 	},
-	meltedplastic: {
+	meltedplastic: {		/** The move already exists in 'data/moves.ts' */
 		inherit: true,
-		accuracy: 100,
-		basePower: 80,
-		category: "Special",
-		desc: "It may also leave the target with a burn.",
-		shortDesc: "It may also leave the target with a burn.",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
-		target: "normal",
-		type: "Plastic",
 		isNonstandard: null,
 	},
 	uproot: {
@@ -12506,6 +12529,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryMove(pokemon, target, move) {
+			if (pokemon.hasType('Grass')) return;
+			this.add('-fail', pokemon, 'move: Uproot');
+			this.attrLastMove('[still]');
+			return null;
+		},
+		self: {
+			onHit(pokemon) {
+				pokemon.setType(pokemon.getTypes(true).map(type => type === "Fire" ? "???" : type));
+				this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Uproot');
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Grass",
@@ -12521,6 +12556,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		recoil: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Blood",
@@ -12536,6 +12572,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target, pokemon) {
+			const targetHP = target.getUndynamaxedHP();
+			const averagehp = Math.floor((targetHP + pokemon.hp) / 2) || 1;
+			const targetChange = targetHP - averagehp;
+			target.sethp(target.hp - targetChange);
+			this.add('-sethp', target, target.getHealth, '[from] move: Half-Life', '[silent]');
+			pokemon.sethp(averagehp);
+			this.add('-sethp', pokemon, pokemon.getHealth, '[from] move: Half-Life');
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Nuclear",
@@ -12554,7 +12599,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Normal",
-		isNonstandard: null,
+		isNonstandard: "Future",	/**TODO?: This move is perish song but in 1 turn and only affects the target... */
 	},
 	nosedive: {
 		inherit: true,
@@ -12566,7 +12611,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Flying",
 		isNonstandard: null,
@@ -12581,6 +12633,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon, target) {
+			switch (target?.effectiveWeather()) {
+			case 'sandstorm':
+				move.basePower = move.basePower * 2
+			}
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Ground",
@@ -12596,6 +12654,31 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, powder: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability(target, source, move) {
+				if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows'].includes(move.id)) {
+					return;
+				}
+				return false;
+			},
+			onSourceModifyDamage(damage, source, target, move) {
+				if (move.id === 'gust' || move.id === 'twister') {
+					return this.chainModify(2);
+				}
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Rubber",
@@ -12611,7 +12694,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		self: {},
+		secondary: {
+			chance: 100,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Sound",
 		isNonstandard: null,
@@ -12626,7 +12715,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		onAfterHit(target, source, move) {},
+		volatileStatus: 'partiallytrapped',
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -1,
+			},
+		},
 		target: "normal",
 		type: "Normal",
 		isNonstandard: null,
@@ -12644,7 +12740,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Glass",
-		isNonstandard: null,
+		isNonstandard: "Future",	/** TODO */
 	},
 	plasticblaze: {
 		inherit: true,
@@ -12656,7 +12752,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Plastic",
 		isNonstandard: null,
@@ -12686,7 +12785,17 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondaries: [
+			{
+				chance: 100,
+				self: {
+					status: 'prz',
+				},
+			}, {
+				chance: 100,
+				status: 'prz',
+			},
+		],
 		target: "normal",
 		type: "Tech",
 		isNonstandard: null,
@@ -12701,7 +12810,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Ice",
 		isNonstandard: null,
@@ -12716,7 +12828,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {snatch: 1},
-		secondary: null,
+		onHit(pokemon) {
+			if (pokemon.item || !pokemon.lastItem) return false;
+			const item = pokemon.lastItem;
+			pokemon.lastItem = '';
+			this.add('-item', pokemon, this.dex.items.get(item), '[from] move: Scavenge');
+			pokemon.setItem(item);
+		},
+		heal: null,
 		target: "normal",
 		type: "Normal",
 		isNonstandard: null,
@@ -12731,12 +12850,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Glass' || !target.setType('Glass')) return false;
+			this.add('-start', target, 'typechange', 'Glass');
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Glass",
 		isNonstandard: null,
 	},
-	mindbreak: {
+	mindbreak: {	
 		inherit: true,
 		accuracy: 60,
 		basePower: 0,
@@ -12749,7 +12872,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Heart",
-		isNonstandard: null,
+		isNonstandard: "Future",	/** TODO */
 	},
 	banhammer: {
 		inherit: true,
@@ -12761,6 +12884,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: -6,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target) {},
+		forceSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Cyber",
@@ -12776,7 +12901,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Fire",
 		isNonstandard: null,
@@ -12794,7 +12922,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Blood",
-		isNonstandard: null,
+		isNonstandard: "Future",	/** TODO: Code "Bleeding" */
 	},
 	fuckyou: {
 		inherit: true,
@@ -12809,6 +12937,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Chaos",
-		isNonstandard: null,
+		isNonstandard: "Future",	/** TODO: Code "Bleeding" */
 	},
 }
