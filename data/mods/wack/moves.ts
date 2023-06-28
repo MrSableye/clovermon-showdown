@@ -12869,6 +12869,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(pokemon) {
+			pokemon.addVolatile('confusion');
+			pokemon.trySetStatus('slp')
+			pokemon.addVolatile('attract');
+		},
+		onTryImmunity(target, source) {
+			return (target.gender === 'M' && source.gender === 'F') || (target.gender === 'F' && source.gender === 'M');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Heart",
