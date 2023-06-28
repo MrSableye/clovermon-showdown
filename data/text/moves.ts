@@ -24429,72 +24429,71 @@ export const MovesText: {[k: string]: MoveText} = {
 	iamreditetvirgo: {
 		name: "Iam Redit et Virgo",
 		desc: "Can only be used after every other move. Resets stats, reduces all stats and disables last move.",
-		shortDesc: "Can only be used after every other move. Resets stats, reduces all stats and disables last move.",
+		shortDesc: "Fails unless each known move has been used. Resets then reduces all stats, disables last move.",
 	},
 	elementsofharmony: {
 		name: "ElementsOfHarmony",
 		desc: "The user gets all the party Pokemon to attack the foe. The more party Pokemon, the more damage.",
-		shortDesc: "The user gets all the party Pokemon to attack the foe. The more party Pokemon, the more damage.",
+		shortDesc: "All healthy allies aid in damaging the target.",
 	},
 	summonanimals: {
 		name: "Summon Animals",
 		desc: "Summon minions to attack 2-5 times in a row. Deals physical damage.",
-		shortDesc: "Summon minions to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Hits 2-5 times in a row. Deals physical damage.",
 	},
 	stymphalianbirds: {
 		name: "Stymphalian Birds",
 		desc: "The target is jabbed repeatedly with birds arrows two to five times in a row.",
-		shortDesc: "The target is jabbed repeatedly with birds arrows two to five times in a row.",
+		shortDesc: "Hits 2-5 times in a row.",
 	},
 	harpe: {
 		name: "Harpe",
 		desc: " Hi crit. If the target is Divine-type, it loses its Divine typing.",
-		shortDesc: " Hi crit. If the target is Divine-type, it loses its Divine typing.",
+		shortDesc: " High crit rate. User Loses its Divine typing.",
 	},
 	caressofmedusa: {
 		name: "Caress of Medusa",
 		desc: "Causes paralysis.",
-		shortDesc: "Causes paralysis.",
+		shortDesc: "100% chance to cause paralysis.",
 	},
 	wingedsandals: {
 		name: "Winged Sandals",
 		desc: "The user charges at the target, calling on the speed of an ancient god. It raises the user's Speed stat.",
-		shortDesc: "The user charges at the target, calling on the speed of an ancient god. It raises the user's Speed stat.",
+		shortDesc: "100% chance to raise user's Speed.",
 	},
 	governmentmen: {
 		name: "Government Men",
 		desc: "Hits two to five times.",
-		shortDesc: "Hits two to five times.",
+		shortDesc: "Hits 2-5 times.",
 	},
 	momijigari: {
 		name: "Momijigari",
 		desc: "The user cloaks itself in fire and charges at the foe. The user also takes damage and may burn the target.",
-		shortDesc: "The user cloaks itself in fire and charges at the foe. The user also takes damage and may burn the target.",
+		shortDesc: "The user also takes damage and may burn the target.",
 	},
 	bonegnaw: {
 		name: "Bone Gnaw",
 		desc: "The user crunches up the target with sharp fangs. Hi chance to lower the target's Defense stat.",
-		shortDesc: "The user crunches up the target with sharp fangs. Hi chance to lower the target's Defense stat.",
+		shortDesc: "High chance to lower the target's Defense stat.",
 	},
 	bonelance: {
 		name: "Bone Lance",
 		desc: "Raises its Attack in the first turn, then rams the foe on the next turn.",
-		shortDesc: "Raises its Attack in the first turn, then rams the foe on the next turn.",
-	},
+		shortDesc: "2-turn attack. Raises Attack on first turn."
 	bonetired: {
 		name: "Bone Tired",
 		desc: "30% chance to put the target to sleep.",
-		shortDesc: "30% chance to put the target to sleep.",
+		shortDesc: "30% chance to put target to sleep.",
 	},
 	ribcage: {
 		name: "Ribcage",
 		desc: "Traps the foe for four to five turns in a cage of ribs.",
-		shortDesc: "Traps the foe for four to five turns in a cage of ribs.",
+		shortDesc: "Traps foe for 4-5 turns.",
 	},
 	boneify: {
 		name: "Boneify",
 		desc: "Changes the target's type to Bone.",
-		shortDesc: "Changes the target's type to Bone.",
+		shortDesc: "Changes target's type to Bone.",
 	},
 	boneitis: {
 		name: "Boneitis",
