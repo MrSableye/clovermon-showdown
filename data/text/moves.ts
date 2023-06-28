@@ -7877,7 +7877,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	backdraft: {
 		name: "Backdraft",
 		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities. Summons Tailwind for two turns after landing.",
-		shortDesc: "Switches user out, Swapped mon has 2x speed for a turn",
+		shortDesc: "User switches out. Swapped in mon has doubled speed for a turn.",
 		start: "  The Backdraft blew from behind [TEAM]!",
 		end: "  [TEAM]'s Backdraft petered out!",
 		switchOut: "#uturn",
@@ -7917,13 +7917,13 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	frostbite: {
 		name: "Frostbite",
-		desc: "Has a 100% chance to lower the target's Special Attack by 2 stage.",
-		shortDesc: "100% chance to lower foe(s) Sp. Atk by 1, 2 in Hail",
+		desc: "If hail is the active weather, this move has a 100% chance to lower the target's Special Attack by 2 stages. Otherwise, it has a 100% chance to lower the target's Special Attack by 1 stage.",
+		shortDesc: "100% chance to lower foe(s) Sp. Atk by 1, 2 in Hail.",
 	},
 	calibrate: {
 		name: "Calibrate",
 		desc: "Raises the user's Special Attack and accuracy by 1 stage.",
-		shortDesc: "Raises the user's Sp.Atk and accuracy by 1.",
+		shortDesc: "Raises the user's Sp. Atk and accuracy by 1.",
 	},
 	braindamage: {
 		name: "Brain Damage",

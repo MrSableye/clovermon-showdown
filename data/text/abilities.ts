@@ -2585,7 +2585,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	tetanus: {
 		name: "Tetanus",
-		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be Toxic poisoned.",
+		shortDesc: "A Pokemon making contact with this Pokemon will be Toxic poisoned.",
 	},
 	wholesome100: {
 		name: "Wholesome 100",
@@ -2628,7 +2628,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	flipflops: {
 		name: "Flip Flops",
-		shortDesc: "1.5x Attack and Speed under Inverse Room.",
+		shortDesc: "Doubles Attack and Speed under Inverse Room.",
 	},
 	memepower: {
 		name: "Meme Power",
@@ -2954,6 +2954,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "This Pokemon is real.",
 
 		start: "  [POKEMON] real!",
+	},
+	kattapillarssecretpower: {
+		name: "Kattapillar's Secret Power",
+		shortDesc: "Has a variety of effects depending on certain circumstances.",
 	},
 	overeagerest: {
 		name: "Overeagerest",

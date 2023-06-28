@@ -1019,6 +1019,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	geargrind: {
 		inherit: true,
+		accuracy: 100,
 		isNonstandard: null,
 		secondary: {
 			chance: 30,
