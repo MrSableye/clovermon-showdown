@@ -24480,6 +24480,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Bone Lance",
 		desc: "Raises its Attack in the first turn, then rams the foe on the next turn.",
 		shortDesc: "2-turn attack. Raises Attack on first turn."
+	},
 	bonetired: {
 		name: "Bone Tired",
 		desc: "30% chance to put the target to sleep.",
