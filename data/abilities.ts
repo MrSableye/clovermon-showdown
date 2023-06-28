@@ -6828,9 +6828,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	tetanus: {
 		onDamagingHit(damage, target, source, move) {
 			if (move.flags['contact']) {
-				if (this.randomChance(3, 10)) {
 					source.trySetStatus('tox', target);
-				}
 			}
 		},
 		name: "Tetanus",
@@ -7815,12 +7813,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk) {
 			if (this.field.getPseudoWeather('inverseroom')) {
-				return this.chainModify(1.5);
+				return this.chainModify(2);
 			}
 		},
 		onModifySpe(spe, pokemon) {
 			if (this.field.getPseudoWeather('inverseroom')) {
-				return this.chainModify(1.5);
+				return this.chainModify(2);
 			}
 		},
 		name: "Flip Flops",
@@ -8897,6 +8895,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Real",
 		rating: 0,
 		isNonstandard: "Future",
+	},
+	kattapillarssecretpower: {
+		name: "Kattapillar's Secret Power",
+		rating: 0, // LMAO YOU ACTUALLY THOUGHT THIS SHIT HAD REAL EFFECTS LMAOOOOOOOO
+		isNonstandard: "Future", // YOU EVEN CHECKED THE CODE HAHAHAHAHAHAHA
 	},
 	bejeweled: {
 		onStart(source) {

@@ -25316,7 +25316,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	uproot: {
 		accuracy: 100,
-		basePower: 100,
+		basePower: 120,
 		category: "Physical",
 		name: "Uproot",
 		pp: 5,
@@ -25353,11 +25353,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Frostbite",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, bite: 1},
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (this.field.isWeather('')) return;
+			move.secondaries = [];
+			if (this.field.isWeather(['hail'])) {
+				move.secondaries.push({
+					chance: 100,
+					boosts: {
+						spa: -2,
+					},
+				});
+			}
+		},
 		secondary: {
 			chance: 100,
 			boosts: {
-				spa: -2,
+				spa: -1,
 			},
 		},
 		target: "allAdjacentFoes",
@@ -25488,10 +25500,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	inverserush: {
 		accuracy: 100,
-		basePower: 80,
+		basePower: 70,
 		category: "Physical",
 		name: "Inverse Rush",
-		pp: 20,
+		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, contact: 1},
 		secondary: null,
@@ -26768,7 +26780,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	blobblast: {
 		num: 66,
-		accuracy: 100,
+		accuracy: 80,
 		basePower: 110,
 		category: "Special",
 		name: "Blobblast",
