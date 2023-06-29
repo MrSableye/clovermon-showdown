@@ -51,6 +51,19 @@ interface MoveFlags {
 	kick?: 1; // Kick-based moves (for Striker)
 	bone?: 1; // Bone-based moves (for Bone Zone)
 	hammer?: 1; // Hammer-based moves (for Admin Abuse)
+	bomb?: 1; // Bomb-based moves
+	tail?: 1; // Tail-based moves
+	coral?: 1; // Coral-based moves
+	bounce?: 1; // Bounce-based moves
+	web?: 1; // Web-based moves
+	sword?: 1; // Sword-based moves
+	beak?: 1; // Beak-based moves
+	arrow?: 1; // Arrow-based moves
+	kiss?: 1; // Kiss-based moves
+	west?: 1; // Yeehaw moves
+	moon?: 1; // Moon-based moves
+	sun?: 1; // Sun-based moves
+	above?: 1; // Moves from above (ex: Thunder)
 }
 
 export interface HitEffect {
