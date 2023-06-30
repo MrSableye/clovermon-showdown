@@ -14263,6 +14263,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {0: "Electric Surge", H: "Telepathy"},
 		heightm: 1.8,
 		weightkg: 20.5,
+		innateAbility: {0: "Drizzle"},
 		color: "Yellow",
 		tags: ["Sub-Legendary"],
 		eggGroups: ["Undiscovered"],

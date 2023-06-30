@@ -19,6 +19,7 @@ export interface SpeciesData extends Partial<Species> {
 	baseStats: StatsTable;
 	eggGroups: string[];
 	weightkg: number;
+	innateAbility?: SpeciesAbility;
 	creator?: string;
 	metadata?: Record<string, string | number>;
 }
