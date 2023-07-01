@@ -54,7 +54,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	husbin: {
+	starhiro: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	doubtlaw: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

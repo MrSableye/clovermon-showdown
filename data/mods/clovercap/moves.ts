@@ -237,6 +237,23 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	heartstamp: {
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Past",
+		name: "Heart Stamp",
+		pp: 25,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Fairy",
+		contestType: "Cute",
+	},
 	icefang: {
 		inherit: true,
 		accuracy: 100,
@@ -265,6 +282,25 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
 	},
+	lusterpurge: {
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		isNonstandard: "Past",
+		name: "Luster Purge",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Psychic",
+		contestType: "Clever",
+	},
 	magicpowder: {
 		inherit: true,
 		isNonstandard: null,
@@ -274,8 +310,28 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	meteorbeam: {
-		inherit: true,
-		isNonstandard: null,
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Meteor Beam",
+		pp: 10,
+		priority: 0,
+		flags: {charge: 1, protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			this.boost({spa: 1}, attacker, attacker, move);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Rock",
 	},
 	moonlight: {
 		inherit: true,
@@ -330,6 +386,25 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	mistyexplosion: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	mistball: {
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		isNonstandard: "Past",
+		name: "Mist Ball",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spa: -1,
+			},
+		},
+		target: "normal",
+		type: "Psychic",
+		contestType: "Clever",
 	},
 	multiattack: {
 		inherit: true,
