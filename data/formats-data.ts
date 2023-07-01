@@ -8004,6 +8004,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	starhiro: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	doubtlaw: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	ranruu: {
 		tier: "Illegal",
 		isNonstandard: "Future",
