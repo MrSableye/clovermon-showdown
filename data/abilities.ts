@@ -6239,7 +6239,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onBasePower(relayVar, source, target, move) {
 			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
-			// if (move?.flags?.naturePower) return this.chainModify(2);
+			if (move?.flags?.naturePower) return this.chainModify(2);
 		},
 		isPermanent: true,
 		isNonstandard: "Future",

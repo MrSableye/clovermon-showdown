@@ -12796,7 +12796,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'recycleray';
 			}
 			const fullMove = this.dex.getActiveMove(move);
-			fullMove.flags = {...fullMove.flags/* , naturePower: true*/};
+			fullMove.flags = {...fullMove.flags, naturePower: 1};
 			this.actions.useMove(move, pokemon, target);
 			return null;
 		},
