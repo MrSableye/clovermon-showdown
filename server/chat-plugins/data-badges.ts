@@ -178,7 +178,8 @@ export const commands: Chat.ChatCommands = {
 
 				const rest = new REST().setToken(Config.discord);
 				const discordUser = await rest.get(Routes.user(discordId)) as any;
-				const username = discordUser.global_name || `${discordUser.username}#${discordUser.discriminator}`;
+				const username = discordUser.discriminator === '0'
+					? discordUser.username : `${discordUser.username}#${discordUser.discriminator}`;
 
 				const success = await addDiscordBadge(user, username);
 				if (!success) throw new Chat.ErrorMessage('An error has occured.');
