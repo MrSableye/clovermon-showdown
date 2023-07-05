@@ -1,6 +1,7 @@
 import {FS} from '../../lib';
 import {Badges} from './badges';
 
+const DISCORD_BOT_ID = "mrsablebot"; // TODO: Make this configurable
 const MINIMUM_TOURS_REQUIRED = 4;
 const TOUR_BADGE_ID = "tourfarmer";
 const OTHER_BADGES: [number, string][] = [
@@ -11,10 +12,16 @@ const OTHER_BADGES: [number, string][] = [
 
 interface Data {
 	tours: Record<string, number>;
+	discord: Record<string, string>;
 }
 
+const defaultData: Data = {
+	tours: {},
+	discord: {},
+};
+
 const data: Data = JSON.parse(
-	FS('config/chat-plugins/data-badges.json').readIfExistsSync() || "{}"
+	FS('config/chat-plugins/data-badges.json').readIfExistsSync() || JSON.stringify(defaultData),
 );
 
 const saveData = () => {
@@ -146,6 +153,22 @@ export const commands: Chat.ChatCommands = {
 				`<code>/databadge tours add [user id]</code>: adds a tour win to a user. Requires: ${TOUR_BADGE_ID} badge ownership<br />` +
 				`<code>/databadge tours remove [user id]</code>: checks how many tour wins a user has. Requires: ${TOUR_BADGE_ID} badge ownership<br />`
 			);
+		},
+		discord: {
+			get(target, room, user) {
+				const discordId =  data.discord[user.id];
+				if (!discordId) throw new Chat.ErrorMessage('You have no linked Discord id.');
+
+				return this.sendReplyBox(`Your linked Discord id is ${discordId}`);
+			},
+			set(target, room, user) {
+				if (user.id !== DISCORD_BOT_ID) throw new Chat.ErrorMessage('You do not have permission to manage this.');
+
+				const [userId, discordId] = target.split(',').map(toID);
+				data.discord[userId] = discordId;
+
+				return this.sendReplyBox(`User ${userId} has newly associated Discord id ${discordId}`);
+			},
 		},
 	},
 };
