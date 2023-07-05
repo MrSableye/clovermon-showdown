@@ -166,6 +166,7 @@ export const commands: Chat.ChatCommands = {
 
 				const [userId, discordId] = target.split(',').map(toID);
 				data.discord[userId] = discordId;
+				saveData();
 
 				return this.sendReplyBox(`User ${userId} has newly associated Discord id ${discordId}`);
 			},
