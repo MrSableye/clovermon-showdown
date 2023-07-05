@@ -9008,7 +9008,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				if (random === 1) {
 					this.heal(pokemon.baseMaxhp / 2);
 				}
-				if (random === 1) {
+				if (random === 2) {
 					this.heal(pokemon.baseMaxhp);
 				}
 				if (drunken === 0) {
@@ -9031,7 +9031,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				}
 			} else {
 				if (random === 0) {
-					this.damage(pokemon.baseMaxhp);
+					this.damage(pokemon.baseMaxhp / 3);
 				}
 				if (random === 1) {
 					this.damage(pokemon.baseMaxhp / 2);
