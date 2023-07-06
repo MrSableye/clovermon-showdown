@@ -834,7 +834,7 @@ export const Formats: FormatList = [
 		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs', 'Skull Cannon', 'Extinction Wave', 'Wonder Guard', 'Assault Jacket', 'Junkbane', 'Shed Tail'],
 	},
 	{
-		name: '[Gen 9 Sandbox Only] FFA Battle',
+		name: '[Gen 8 Sandbox Only] FFA Battle',
 		mod: 'sandbox',
 		gameType: 'freeforall',
 		ruleset: [
