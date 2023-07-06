@@ -36,7 +36,7 @@ const canUserPreregister = async (user: User): Promise<boolean> => {
 const isValidName = (name: string) => {
 	const id = toID(name);
 	if (id.length <= 2) return false;
-	if (id.length > 12) return false;
+	if (id.length > 18) return false;
 	return true;
 };
 
@@ -63,7 +63,7 @@ export const commands: Chat.ChatCommands = {
 	preregister: {
 		submit(target, room, user) {
 			if (!canUserPreregister(user)) throw new Chat.ErrorMessage('You have won a tournament or be + or higher to preregister.');
-			if (!isValidName(target)) throw new Chat.ErrorMessage('Name must be greater than 2 characters and less than 13 characters.');
+			if (!isValidName(target)) throw new Chat.ErrorMessage('Name must be greater than 2 characters and less than 19 characters.');
 			if (registrationExists(target)) throw new Chat.ErrorMessage('Name is already registered.');
 			if (!pregistration[user.id]) pregistration[user.id] = [];
 			if (pregistration[user.id].length >= PREREGISTRATION_LIMIT) throw new Chat.ErrorMessage(`You can only preregister up to ${PREREGISTRATION_LIMIT} names.`);
