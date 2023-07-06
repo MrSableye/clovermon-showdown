@@ -80,7 +80,7 @@ export const commands: Chat.ChatCommands = {
 			const registrationIndex = userRegistrations.findIndex((reg) => reg.id === targetId);
 			if (registrationIndex < 0) throw new Chat.ErrorMessage(`You have not not preregistered ${targetId}`);
 			
-			pregistration[user.id]= pregistration[user.id].splice(registrationIndex, 1);
+			pregistration[user.id].splice(registrationIndex, 1);
 			savePreregistration();
 
 			return this.sendReplyBox(`Successfully unsubmitted preregistration for: ${targetId}`);
