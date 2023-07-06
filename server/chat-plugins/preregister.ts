@@ -50,7 +50,7 @@ const createPendingPregistrationHtml = () => {
 		let content = '<details>';
 		content += `<summary><b>${userId}</b></summary>`;
 		userRegistrations.forEach((reg) => {
-			if (!reg.approved) return;
+			if (reg.approved) return;
 			content += `<button class="button" name="send" value="/preregister approve ${userId},${reg.id}">Approve ${reg.id}</button><br />`;
 		});
 		return content + '</details>';
