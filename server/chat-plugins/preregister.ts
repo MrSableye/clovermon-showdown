@@ -111,7 +111,7 @@ export const commands: Chat.ChatCommands = {
 			if (!userRegistrations) throw new Chat.ErrorMessage(`No one has pregistered under ${targetId}`);
 			const registrationIndex = userRegistrations.findIndex((reg) => reg.id === targetApprovalId);
 			if (registrationIndex < 0) throw new Chat.ErrorMessage(`${targetId} has not preregistered ${targetApprovalId}`);
-			delete userRegistrations[registrationIndex];
+			pregistration[user.id].splice(registrationIndex, 1);
 			savePreregistration();
 			return this.sendReplyBox(`${targetApprovalId} has been denied for ${targetId}.`);
 		},
