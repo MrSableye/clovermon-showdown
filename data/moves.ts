@@ -31594,7 +31594,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		onHit(target, source, move) {
-			const starforce = this.effectState.starForce || 0;
+			const starforce = target.volatiles['furycutter'].starforce || 0;
 			const stats: BoostID[] = [];
 			let stat: BoostID;
 			for (stat in target.boosts) {
@@ -31634,7 +31634,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onRestart(pokemon) {
 				this.add('-end', pokemon, `Star Force: ${this.effectState.starforce}*`, '[silent]');
-				this.effectState.starForce++;
+				this.effectState.starforce++;
 				this.add('-start', pokemon, `Star Force: ${this.effectState.starforce}*`);
 			},
 			onEnd(pokemon) {
