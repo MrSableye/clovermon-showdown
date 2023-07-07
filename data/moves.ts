@@ -31594,7 +31594,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		onHit(target, source, move) {
-			const starforce = target.volatiles['furycutter'].starforce || 0;
+			const starforce = target.volatiles['starforce']?.starforce || 0;
 			const stats: BoostID[] = [];
 			let stat: BoostID;
 			for (stat in target.boosts) {
