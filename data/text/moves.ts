@@ -9197,6 +9197,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Fails unless it is the user's first turn on the field. Raises the user's Attack and Defense by 2.",
 		shortDesc: "Usually goes first. First turn out only.Raises the user's Attack and Defense by 2.",
 	},
+	starforce: {
+		name: "Star Force",
+		desc: "Has a (8 - X) / 8 chance to boost X + 2 random stats where X is the user's current Star Force. On success, increases the user's Star Force. On failure, the user faints.",
+	},
 	godotshammer: {
 		name: "Godot's Hammer",
 		shortDesc: "Torments and Taunts the foe. Lowers the user's Speed by 2. Has 1/3 recoil.",

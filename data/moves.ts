@@ -31583,6 +31583,63 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 		contestType: "Cool",
 	},
+	starforce: {
+		name: "Star Force",
+		category: "Status",
+		basePower: 0,
+		accuracy: 100,
+		pp: 10,
+		type: "normal",
+		target: "self",
+		priority: 0,
+		flags: {},
+		onHit(target, source, move) {
+			const starforce = this.effectState.starForce || 0;
+			const stats: BoostID[] = [];
+			let stat: BoostID;
+			for (stat in target.boosts) {
+				if (target.boosts[stat] < 6) {
+					stats.push(stat);
+				}
+			}
+
+			if (this.randomChance(8 - Math.max(starforce, 7), 8)) {
+				for (let i = 0; i < starforce + 2; i++) {
+					const randomStat = this.sampleNoReplace(stats);
+					const boost: SparseBoostsTable = {};
+
+					if (randomStat) {
+						boost[randomStat] = 1;
+						this.boost(boost);
+					} else {
+						break;
+					}
+				}
+
+				if (!target.volatiles['starforce'] || move.hit === 1) {
+					target.addVolatile('starforce');
+				}
+			} else {
+				target.faint();
+			}
+		},
+		condition: {
+			onStart(pokemon) {
+				this.effectState.starforce = 1;
+				this.add('-start', pokemon, `Star Force: ${this.effectState.starforce}*`);
+			},
+			onRestart(pokemon) {
+				this.add('-end', pokemon, `Star Force: ${this.effectState.starforce}*`, '[silent]');
+				this.effectState.starForce++;
+				this.add('-start', pokemon, `Star Force: ${this.effectState.starforce}*`);
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, `Star Force: ${this.effectState.starforce}*`, '[silent]');
+			},
+		},
+		noSketch: true,
+		isNonstandard: "Future",
+	},
 	godotshammer: {
 		num: 696969420,
 		accuracy: 90,
