@@ -31603,7 +31603,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			}
 
-			if (this.randomChance(8 - Math.max(starforce, 7), 8)) {
+			if (this.randomChance(9 - Math.max(starforce, 8), 8)) {
 				for (let i = 0; i < starforce + 2; i++) {
 					const randomStat = this.sampleNoReplace(stats);
 					const boost: SparseBoostsTable = {};

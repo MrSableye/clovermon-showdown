@@ -9199,7 +9199,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	starforce: {
 		name: "Star Force",
-		desc: "Has a (8 - X) / 8 chance to boost X + 2 random stats where X is the user's current Star Force. On success, increases the user's Star Force. On failure, the user faints.",
+		desc: "Has a (9 - X) / 8 chance to boost X + 2 random stats where X is the user's current Star Force. On success, increases the user's Star Force. On failure, the user faints.",
 	},
 	godotshammer: {
 		name: "Godot's Hammer",
