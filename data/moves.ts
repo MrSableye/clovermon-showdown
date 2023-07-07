@@ -31620,7 +31620,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 					target.addVolatile('starforce');
 				}
 			} else {
-				target.faint();
+				if (target.hasItem('mesosack') && target.takeItem()) {
+					this.add('-activate', target, 'item: Meso Sack');
+				} else {
+					target.faint();
+				}
 			}
 		},
 		condition: {

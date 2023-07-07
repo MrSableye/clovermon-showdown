@@ -9073,6 +9073,10 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 	},
+	mesosack: {
+		name: "Meso Sack",
+		isNonstandard: "Future",
+	},
 	missingvoirite: {
 		name: "Missingvoirite",
 		spritenum: 587,

@@ -204,6 +204,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	mesosack: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	marxite: {
 		inherit: true,
 		isNonstandard: null,
