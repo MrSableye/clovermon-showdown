@@ -31589,7 +31589,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		accuracy: 100,
 		pp: 10,
-		type: "normal",
+		type: "Normal",
 		target: "self",
 		priority: 0,
 		flags: {},
