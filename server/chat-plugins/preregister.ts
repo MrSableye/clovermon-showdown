@@ -51,7 +51,8 @@ const createPendingPregistrationHtml = () => {
 		content += `<summary><b>${userId}</b></summary>`;
 		userRegistrations.forEach((reg) => {
 			if (reg.approved) return;
-			content += `<button class="button" name="send" value="/preregister approve ${userId},${reg.id}">Approve ${reg.id}</button><br />`;
+			content += `<button class="button" name="send" value="/preregister approve ${userId},${reg.id}">Approve ${reg.id}</button>`;
+			content += `<button class="button" name="send" value="/preregister deny ${userId},${reg.id}">Deny ${reg.id}</button><br />`;
 		});
 		return content + '</details>';
 	});
@@ -65,6 +66,7 @@ export const commands: Chat.ChatCommands = {
 			if (!canUserPreregister(user)) throw new Chat.ErrorMessage('You have won a tournament or be + or higher to preregister.');
 			if (!isValidName(target)) throw new Chat.ErrorMessage('Name must be greater than 2 characters and less than 19 characters.');
 			if (registrationExists(target)) throw new Chat.ErrorMessage('Name is already registered.');
+			if (toID(target) === user.id) throw new Chat.ErrorMessage('Your own name is already preregistered by default.');
 			if (!pregistration[user.id]) pregistration[user.id] = [];
 			if (pregistration[user.id].length >= PREREGISTRATION_LIMIT) throw new Chat.ErrorMessage(`You can only preregister up to ${PREREGISTRATION_LIMIT} names.`);
 
@@ -101,6 +103,17 @@ export const commands: Chat.ChatCommands = {
 			userRegistrations[registrationIndex].approved = true;
 			savePreregistration();
 			return this.sendReplyBox(`${targetApprovalId} has been approved for ${targetId}.`);
+		},
+		deny(target, room, user) {
+			if (user.id !== 'mrsableye') throw new Chat.ErrorMessage('no');
+			const [targetId, targetApprovalId] = target.split(',').map(toID);
+			const userRegistrations = pregistration[targetId];
+			if (!userRegistrations) throw new Chat.ErrorMessage(`No one has pregistered under ${targetId}`);
+			const registrationIndex = userRegistrations.findIndex((reg) => reg.id === targetApprovalId);
+			if (registrationIndex < 0) throw new Chat.ErrorMessage(`${targetId} has not preregistered ${targetApprovalId}`);
+			delete userRegistrations[registrationIndex];
+			savePreregistration();
+			return this.sendReplyBox(`${targetApprovalId} has been denied for ${targetId}.`);
 		},
 		approvallist(target, room, user) {
 			if (user.id !== 'mrsableye') throw new Chat.ErrorMessage('no');
