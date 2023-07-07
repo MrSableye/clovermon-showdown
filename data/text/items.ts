@@ -2784,7 +2784,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	mesosack: {
 		name: "Meso Sack",
-		desc: "If the user would faint while using Star Force, it doesn't. Single user.",
+		desc: "If the user would faint while using Star Force, it doesn't. Single use.",
 	},
 	kikeousorb: {
 		name: "Kikeous Orb",
