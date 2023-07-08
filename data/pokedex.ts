@@ -36276,7 +36276,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Dark", "Fighting"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 80, atk: 160, def: 95, spa: 55, spd: 85, spe: 80},
-		abilities: {0: "Sharpness", 1: "Justified", H: "Quick Draw", S: "No Guard"},
+		abilities: {0: "Blademaster", 1: "Justified", H: "Quick Draw", S: "No Guard"},
 		heightm: 1.96,
 		weightkg: 80.0,
 		color: "Blue",
@@ -44671,10 +44671,10 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {
 			hp: 70,
 			atk: 133,
-			def: 90,
-			spa: 85,
-			spd: 75,
-			spe: 117,
+			def: 75,
+			spa: 112,
+			spd: 70,
+			spe: 110,
 		},
 		abilities: {
 			0: "Degradation",
