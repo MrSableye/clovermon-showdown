@@ -1040,7 +1040,6 @@ export const Aliases: {[alias: string]: string} = {
 	cuddle: "G-Max Cuddle",
 	depletion: "G-Max Depletion",
 	drumsolo: "G-Max Drum Solo",
-	fireball: "G-Max Fireball",
 	foamburst: "G-Max Foam Burst",
 	goldrush: "G-Max Gold Rush",
 	gravitas: "G-Max Gravitas",
