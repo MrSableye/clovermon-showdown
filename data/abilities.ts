@@ -6757,14 +6757,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyAtk(atk, attacker, defender, move) {
 			if (['Poison', 'Dark'].includes(move.type)) {
 				this.debug('Ruse Power boost');
-				return this.chainModify(1.5);
+				return this.chainModify(1.2);
 			}
 		},
 		onModifySpAPriority: 5,
 		onModifySpA(atk, attacker, defender, move) {
 			if (['Poison', 'Dark'].includes(move.type)) {
 				this.debug('Ruse Power boost');
-				return this.chainModify(1.5);
+				return this.chainModify(1.2);
 			}
 		},
 		name: "Ruse Power",
