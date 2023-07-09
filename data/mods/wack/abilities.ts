@@ -331,14 +331,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	detonator: {
 		inherit: true,
-		onHit(target, source, move) {
+		onModifyMove(move, pokemon, target) {
 			if (move.selfdestruct) delete move.selfdestruct;
-			this.directDamage(source.maxhp / 5);
+		},
+		onHit(target, source, move) {
+			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct'].includes(move.id)) {
+				this.directDamage(source.maxhp / 5);
+			}
 		},
 		onBasePower(basePower, attacker, defender, move) {},
 		name: "Detonator",
-		shortDesc: "Explosion moves do not kill the user, just recoil.",
-		desc: "Explosion don't kill, 1/5 max HP recoil.",
+		shortDesc: "Explosion don't kill, 1/5 max HP recoil.",
+		desc: "Explosion moves do not kill the user, just recoil.",
 		isNonstandard: null,
 	},
 	/**Infected somehow exists in 'data/text/abilities.ts' but nowhere else, doing this just to change the descs in Wack*/
