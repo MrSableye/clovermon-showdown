@@ -1518,6 +1518,7 @@ honrade: {
 			rocketpunch: ["8L1"],
 			steelroller: ["8L1"],
 			terrainpulse: ["8L1"],
+			thunderdrop: ['8L1'],
 		},
 	},
 	hornititan: {
@@ -11412,6 +11413,7 @@ honrade: {
 			watersport: ["8L1"],
 			coaching: ["8L1"],
 			flipturn: ["8L1"],
+			thunderdrop: ['8L1'],
 		},
 	},
 	walruskie: {
