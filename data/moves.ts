@@ -24939,26 +24939,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 			if (source.removeVolatile(move.id)) {
 				if (target !== source.volatiles['twoturnmove'].source) return false;
 
-				if (target.hasType('Flying')) {
-					this.add('-immune', target);
-					return null;
-				}
-			} else {
-				if (target.volatiles['substitute'] || target.isAlly(source)) {
-					return false;
-				}
-				if (target.getWeight() >= 2000) {
-					this.add('-fail', target, 'move: Sky Drop', '[heavy]');
-					return null;
-				}
-
 				this.add('-prepare', source, move.name, target);
 				source.addVolatile('twoturnmove', target);
 				return null;
 			}
 		},
 		onHit(target, source) {
-			if (target.hp) this.add('-end', target, 'Sky Drop');
+			if (target.hp) this.add('-end', target, 'Thunder Drop');
 		},
 		condition: {
 			duration: 2,
@@ -24974,7 +24961,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onFoeBeforeMove(attacker, defender, move) {
 				if (attacker === this.effectState.source) {
 					attacker.activeMoveActions--;
-					this.debug('Sky drop nullifying.');
+					this.debug('Thunder drop nullifying.');
 					return null;
 				}
 			},
