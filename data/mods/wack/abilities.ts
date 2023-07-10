@@ -334,11 +334,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onModifyMove(move, pokemon, target) {
 			if (move.selfdestruct) delete move.selfdestruct;
 		},
-		onHit(target, source, move) {
+		onAfterMove(source, target, move) {
 			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct'].includes(move.id)) {
-				this.directDamage(source.maxhp / 5);
+				this.damage(source.baseMaxhp / 5, source, source)
 			}
 		},
+		onBasePowerPriority: undefined,
 		onBasePower(basePower, attacker, defender, move) {},
 		name: "Detonator",
 		shortDesc: "Explosion don't kill, 1/5 max HP recoil.",
