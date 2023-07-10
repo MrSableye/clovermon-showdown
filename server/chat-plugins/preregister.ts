@@ -122,12 +122,12 @@ export const commands: Chat.ChatCommands = {
 	},
 	preregisterhelp() {
 		this.sendReplyBox(
-			`<code>/preregister submit [name]</code>: submits a name for preregistration. Requires: + or a tournament win.<br />` +
-			`<code>/preregister unsubmit [name]</code>: removes a name from preregisration. Requires: + or a tournament win.<br />` +
+			`<code>/preregister submit [name]</code>: submits a name for preregistration. Requires: + or a tournament win<br />` +
+			`<code>/preregister unsubmit [name]</code>: removes a name from preregisration. Requires: + or a tournament win<br />` +
 			`<code>/preregister list</code>: shows your preregistered names and their statuses<br />` +
-			`<code>/preregister approve [user], [name]</code>: shows all badges a given user manages. Requires: Server ownership<br />` +
-			`<code>/preregister deny [user], [name</code>: shows all badges the given user owns. Requires: Server ownership<br />` +
-			`<code>/preregister approvallist</code>: shows all owners of a badges. Requires: Server ownership<br />`
+			`<code>/preregister approve [user], [name]</code>: approves a preregistration request. Requires: Server ownership<br />` +
+			`<code>/preregister deny [user], [name</code>: denies a preregistration request. Requires: Server ownership<br />` +
+			`<code>/preregister approvallist</code>: shows all preregistration requests. Requires: Server ownership<br />`
 		);
 	},
 };
