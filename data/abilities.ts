@@ -11816,6 +11816,355 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 	},
+	fireaffinity: {
+		name: "Fire Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Fire Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Fire Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fire') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Fire Affinity');
+				}
+				return null;
+			}
+		},
+	},
+	wateraffinity: {
+		name: "Water Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Water') {
+				this.debug('Water Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Water') {
+				this.debug('Water Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Water') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Water Affinity');
+				}
+				return null;
+			}
+		},
+		onModifySpe(spe, pokemon) {
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(2);
+			}
+		},
+	},
+	electricityaffinity: {
+		name: "Electricity Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Electricity Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Electricity Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Electric') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Electricity Affinity');
+				}
+				return null;
+			}
+		},
+		onAnyTryMove(target, source, effect) {
+			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct'].includes(effect.id)) {
+				this.attrLastMove('[still]');
+				this.add('cant', this.effectState.target, 'ability: Damp', effect, '[of] ' + target);
+				return false;
+			}
+		},
+		onAnyDamage(damage, target, source, effect) {
+			if (effect && effect.name === 'Aftermath') {
+				return false;
+			}
+		},
+	},
+	strengthaffinity: {
+		name: "Strength Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fighting') {
+				this.debug('Strength Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fighting') {
+				this.debug('Strength Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fighting') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Strength Affinity');
+				}
+				return null;
+			}
+		},
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.id === 'strength') {
+				this.debug('Strength Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+	},
+	poisonaffinity: {
+		name: "Poison Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Poison') {
+				this.debug('Poison Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Poison') {
+				this.debug('Poison Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Poison') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Poison Affinity');
+				}
+				return null;
+			}
+		},
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onResidual(pokemon) {
+			if (pokemon.item) return;
+			let possibleMoves = pokemon.moveSlots.filter((moveSlot) => {
+				const move = this.dex.moves.get(moveSlot.move);
+
+				return move.category === 'Physical' || move.category === 'Special';
+			});
+
+			if (possibleMoves.length < 1) {
+				possibleMoves = pokemon.moveSlots;
+			}
+
+			const randomMoveSlot = this.sample(possibleMoves);
+
+			if (randomMoveSlot) {
+				const randomMove = this.dex.moves.get(randomMoveSlot.move);
+				const itemText = `${randomMove.type} Gem`;
+				const item = this.dex.items.get(itemText);
+				if (pokemon.setItem(item)) {
+					this.add('-item', pokemon, item, '[from] ability: Poison Affinity');
+				}
+			}
+		},
+	},
+	rockaffinity: {
+		name: "Rock Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Rock') {
+				this.debug('Rock Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Rock') {
+				this.debug('Rock Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (move.ohko) {
+				this.add('-immune', target, '[from] ability: Sturdy');
+				return null;
+			}
+			if (target !== source && move.type === 'Rock') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Rock Affinity');
+				}
+				return null;
+			}
+		},
+		onDamagePriority: -30,
+		onDamage(damage, target, source, effect) {
+			if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move') {
+				this.add('-ability', target, 'Rock Affinity');
+				return target.hp - 1;
+			}
+		},
+	},
+	flightaffinity: {
+		name: "Flight Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Flying') {
+				this.debug('Flight Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Flying') {
+				this.debug('Flight Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Flying') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Flight Affinity');
+				}
+				return null;
+			}
+		},
+		onImmunity(type, pokemon) {
+			if (toID(type) === 'ground') return false;
+		},
+	},
+	iceaffinity: {
+		name: "Ice Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Ice') {
+				this.debug('Ice Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Ice') {
+				this.debug('Ice Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Ice') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Ice Affinity');
+				}
+				return null;
+			}
+		},
+		onAnyEffectiveness(typemod, target, type, move) {
+			const user = this.effectState.target;
+
+			if (user !== this.activePokemon) return;
+
+			if (move.type === 'Ice' && ['Water'].includes(type)) {
+				return 1;
+			}
+		},
+	},
+	lightaffinity: {
+		name: "Light Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fairy') {
+				this.debug('Light Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fairy') {
+				this.debug('Light Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fairy') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Light Affinity');
+				}
+				return null;
+			}
+		},
+		onSourceModifyAccuracyPriority: -1,
+		onSourceModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			this.debug('Light Affinity - enhancing accuracy');
+			return this.chainModify(2);
+		},
+	},
+	parasiteaffinity: {
+		name: "Parasite Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Dark') {
+				this.debug('Parasite Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Dark') {
+				this.debug('Parasite Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Dark') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Parasite Affinity');
+				}
+				return null;
+			}
+		},
+		onResidual(pokemon) {
+			for (const target of pokemon.foes(true)) {
+				if (!target || target.fainted || target.hp <= 0) {
+					this.debug('Nothing to leech into');
+					return;
+				}
+				const damage = this.damage(pokemon.baseMaxhp / 16, pokemon, target);
+				if (damage) {
+					this.heal(damage, target, pokemon);
+				}
+			}
+		},
+	},
 	windglider: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Flying') {

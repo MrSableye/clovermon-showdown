@@ -3236,6 +3236,46 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "A Cab Ability",
 		desc: "https://pastebin.com/Nt7DxGis",
 	},
+	fireaffinity: {
+		name: "Fire Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fire-type attack. This Pokemon is healed 1/8 by Fire.",
+	},
+	electricityaffinity: {
+		name: "Electricity Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Electric-type attack. This Pokemon is healed 1/8 by Electricity. While this Pokemon is active, Explosion, Mind Blown, Misty Explosion, Self-Destruct, and the Aftermath Ability are prevented from having an effect.",
+	},
+	wateraffinity: {
+		name: "Water Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack. This Pokemon is healed 1/8 by Water. If Rain Dance is active, this Pokemon's Speed is doubled.",
+	},
+	strengthaffinity: {
+		name: "Strength Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fighting-type attack. This Pokemon is healed 1/8 by Fighting. Increases the power of Strength by 1.5x.",
+	},
+	poisonaffinity: {
+		name: "Poison Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Poison-type attack. This Pokemon is healed 1/8 by Poison. If this Pokemon has no item, it finds a gem matching the type of one of its moves at the end of this turn.",
+	},
+	rockaffinity: {
+		name: "Rock Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Rock-type attack. This Pokemon is healed 1/8 by Rock. If this Pokemon is at full HP, it survives one hit with at least 1 HP. Immune to OHKO.",
+	},
+	flightaffinity: {
+		name: "Flight Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Flying-type attack. This Pokemon is healed 1/8 by Flying. Immune to Ground.",
+	},
+	iceaffinity: {
+		name: "Ice Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Ice-type attack. This Pokemon is healed 1/8 by Ice. This Pokemon's Ice-type attacks are super-effective against Water-types.",
+	},
+	lightaffinity: {
+		name: "Light Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Fairy-type attack. This Pokemon is healed 1/8 by Fairy. This Pokemon's moves have their accuracy multiplied by 2.",
+	},
+	parasiteaffinity: {
+		name: "Parasite Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Dark-type attack. This Pokemon is healed 1/8 by Dark. All foes on the field lose 1/16 HP per turn and this Pokemon is healed by that much.",
+	},
 	noweaknesses: {
 		name: "NO WEAKNESSES",
 		shortDesc: "This Pokemon's typing and ability change when using Normal, Ghost, Bug, Steel, Dark, Poison, Water, or Ground moves",
