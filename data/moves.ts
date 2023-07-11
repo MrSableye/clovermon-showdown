@@ -31631,6 +31631,38 @@ export const Moves: {[moveid: string]: MoveData} = {
 		noSketch: true,
 		isNonstandard: "Future",
 	},
+	bombrock: {
+		name: "Bomb Rock",
+		isNonstandard: "Future",
+		accuracy: 100,
+		basePower: 250,
+		priority: 0,
+		pp: 1,
+		noPPBoosts: true,
+		type: "Rock",
+		category: "Physical",
+		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (target.newlySwitched || this.queue.willMove(target)) {
+				this.effectState.immuneToRecoil = true;
+			}
+
+			return move.basePower;
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
+		},
+		onAfterMove(pokemon, target, move) {
+			if (!this.effectState.immuneToRecoil && !move.multihit) {
+				const hpBeforeRecoil = pokemon.hp;
+				this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.conditions.get('Bomb Rock'), true);
+				if (pokemon.hp <= pokemon.maxhp / 2 && hpBeforeRecoil > pokemon.maxhp / 2) {
+					this.runEvent('EmergencyExit', pokemon, pokemon);
+				}
+			}
+		},
+		target: "normal",
+	},
 	godotshammer: {
 		num: 696969420,
 		accuracy: 90,

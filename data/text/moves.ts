@@ -9201,6 +9201,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Star Force",
 		desc: "Has a (9 - X) / 8 chance to boost X + 2 random stats where X is the user's current Star Force. On success, increases the user's Star Force. On failure, the user faints.",
 	},
+	bombrock: {
+		name: "Bomb Rock",
+		desc: "Special if user's Sp. Atk > Atk. User loses 50% max HP if the user moves after the target this turn.",
+	},
 	godotshammer: {
 		name: "Godot's Hammer",
 		shortDesc: "Torments and Taunts the foe. Lowers the user's Speed by 2. Has 1/3 recoil.",
