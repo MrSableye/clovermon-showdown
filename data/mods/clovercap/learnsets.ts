@@ -1710,6 +1710,7 @@ honrade: {
 			zenheadbutt: ["8T"],
 			bearhug: ["8L1"],
 			steelroller: ["8L1"],
+			flipturn: ["8L1"],
 		},
 	},
 	barbarkley: {
