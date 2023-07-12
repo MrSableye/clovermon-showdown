@@ -59,7 +59,7 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 	sharpen: {
 		inherit: true,
 		desc: "Raises the user's Attack by 1 stage.Increases Critical Hit odds by one stage",
-		shortDesc: "Raises the user's Attack by 1.Raises Critical Hit Odds",
+		shortDesc: "Raises the user's Attack by 1. Raises Critical Hit Odds",
 	},
 	mistball: {
 		name: "Mist Ball",

@@ -1098,6 +1098,46 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	manatank: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	theforest: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	sanickel: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	skoxious: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	onusalt: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	ghastropod: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	glucurs: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	qrakenmark: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,

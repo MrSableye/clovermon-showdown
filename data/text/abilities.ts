@@ -2513,7 +2513,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	rusepower: {
 		name: "Ruse Power",
-		desc: "This Pokemon's attacking stat is multiplied by 1.5 while using Poison- or Dark-type attacks.",
+		desc: "This Pokemon's attacking stat is multiplied by 1.2 while using Poison- or Dark-type attacks.",
 	},
 	shavedice: {
 		name: "Shaved Ice",
