@@ -7877,7 +7877,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	backdraft: {
 		name: "Backdraft",
 		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities. Summons Tailwind for two turns after landing.",
-		shortDesc: "Switches user out, Swapped mon has 2x speed for a turn",
+		shortDesc: "User switches out. Swapped in mon has doubled speed for a turn.",
 		start: "  The Backdraft blew from behind [TEAM]!",
 		end: "  [TEAM]'s Backdraft petered out!",
 		switchOut: "#uturn",
@@ -7917,13 +7917,13 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	frostbite: {
 		name: "Frostbite",
-		desc: "Has a 100% chance to lower the target's Special Attack by 2 stage.",
-		shortDesc: "100% chance to lower foe(s) Sp. Atk by 1, 2 in Hail",
+		desc: "If hail is the active weather, this move has a 100% chance to lower the target's Special Attack by 2 stages. Otherwise, it has a 100% chance to lower the target's Special Attack by 1 stage.",
+		shortDesc: "100% chance to lower foe(s) Sp. Atk by 1, 2 in Hail.",
 	},
 	calibrate: {
 		name: "Calibrate",
 		desc: "Raises the user's Special Attack and accuracy by 1 stage.",
-		shortDesc: "Raises the user's Sp.Atk and accuracy by 1.",
+		shortDesc: "Raises the user's Sp. Atk and accuracy by 1.",
 	},
 	braindamage: {
 		name: "Brain Damage",
@@ -8767,10 +8767,34 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Erons Repus",
 		shortDesc: "The user falls asleep after using this attack.",
 	},
+	garudaimpact: {
+		name: "Garuda Impact",
+		shortDesc: "Goes last. 100% chance to flinch the opponent.",
+	},
+	potemkinbuster: {
+		name: "Potemkin Buster",
+		desc: "This attack takes the target into the air with the user on the first turn and executes on the second. Pokemon weighing 500 kg or more cannot be lifted. On the first turn, the user and the target avoid all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thousand Arrows, Thunder, and Twister. The user and the target cannot make a move between turns, but the target can select a move to use. This move cannot damage Flying-type Pokemon. Fails on the first turn if the target is an ally, if the target has a substitute, or if the target is using Bounce, Dig, Dive, Fly, Phantom Force, Shadow Force, or Sky Drop. The user loses its focus and does nothing if it is hit by a damaging attack this turn before it can execute the move.",
+		shortDesc: "Goes last. User and foe jump up turn 1. Damages on turn 2. Fails if the user takes damage before it hits.",
+
+		start: "  [POKEMON] is tightening its focus!",
+		cant: "[POKEMON] lost its focus and couldn't move!",
+		prepare: "[POKEMON] took [TARGET] into the sky!",
+		end: "  [POKEMON] was freed from Potemkin Buster!",
+		failSelect: "Potemkin Buster won't let [POKEMON] go!",
+		failTooHeavy: "  [POKEMON] is too heavy to be lifted!",
+	},
+	pantherkkick: {
+		name: "Pantherk Kick",
+		shortDesc: "30% flinch chance. Pantherk.",
+	},
+	testomajesto: {
+		name: "Testo Majesto",
+		shortDesc: "'Ah, don't bother, it's just a coffee machine. Sometimes it shows ads on the screen.'",
+	},
 	shuttleloop: {
 		name: "Shuttle Loop",
-		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities. Increased crit chance.",
-		shortDesc: "User switches out after damaging the target. Increased crit chance.",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+		shortDesc: "User switches out after damaging the target.",
 
 		switchOut: "#uturn",
 	},
@@ -8911,8 +8935,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Blazing Swipe",
 		shortDesc: "100% chance to lower the foe(s) Sp. Attack by 1. Hits all foes.",
 	},
-	bishido: {
-		name: "Bishido",
+	bushido: {
+		name: "Bushido",
 		shortDesc: "Hits 4 times.",
 	},
 	dustcannon: {
@@ -9023,7 +9047,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	trashtalk: {
 		name: "Trash Talk",
-		desc: "Makes the foe have Rage effect.",
+		desc: "Makes the foe have Rage effect. Raises the user's crit rate by 2.",
 	},
 	torchshriek: {
 		name: "Torch Shriek",
@@ -9124,6 +9148,22 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Devil's Harvest",
 		shortDesc: "Raise 5 random stats, lower 2 random stats.",
 	},
+	sadpoem: {
+		name: "Sad Poem",
+		shortDesc: "Placeholder. 40% chance to lower Defense. Special if user's Sp. Atk > Atk.",
+	},
+	annoy: {
+		name: "Annoy",
+		shortDesc: "Placeholder. 20% chance to burn. Special if user's Sp. Atk > Atk.",
+	},
+	peptalk: {
+		name: "Pep Talk",
+		shortDesc: "Placeholder. 30% chance to raise user's accuracy. Special if user's Sp. Atk > Atk.",
+	},
+	errpkmn: {
+		name: "ERR.PKMN",
+		shortDesc: "Damages target based on Defense, not Sp. Def. Crits if user moves before the target.",
+	},
 	metromash: {
 		name: "Metro Mash",
 		desc: "If this move is successful, the user is locked into this move and cannot make another move until it misses, 5 turns have passed, or the attack cannot be used. Power doubles with each successful hit of this move and doubles again if Shift Gear was used previously by the user. If this move is called by Sleep Talk, the move is used for one turn.",
@@ -9151,5 +9191,22 @@ export const MovesText: {[k: string]: MoveText} = {
 	violentvines: {
 		name: "Violent Vines",
 		shortDesc: "Removes all hazards from user's side. Raises user's Sp. Atk by 1.",
+	},
+	genesisboost: {
+		name: "Genesis Boost",
+		desc: "Fails unless it is the user's first turn on the field. Raises the user's Attack and Defense by 2.",
+		shortDesc: "Usually goes first. First turn out only.Raises the user's Attack and Defense by 2.",
+	},
+	starforce: {
+		name: "Star Force",
+		desc: "Has a (9 - X) / 8 chance to boost X + 2 random stats where X is the user's current Star Force. On success, increases the user's Star Force. On failure, the user faints.",
+	},
+	bombrock: {
+		name: "Bomb Rock",
+		desc: "Special if user's Sp. Atk > Atk. User loses 50% max HP if the user moves after the target this turn.",
+	},
+	godotshammer: {
+		name: "Godot's Hammer",
+		shortDesc: "Torments and Taunts the foe. Lowers the user's Speed by 2. Has 1/3 recoil.",
 	},
 };

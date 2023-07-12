@@ -8238,7 +8238,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onTakeItem: false,
 		zMove: "Twin Tower Tumbling Terror",
 		zMoveFrom: "Freeze-Dry",
-		itemUser: ["Blobbos-Rembered"],
+		itemUser: ["Blobbos-Rembered","Sableven"],
 		gen: 8,
 		isNonstandard: "Future",
 	},
@@ -8288,6 +8288,20 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Sexite Y",
 		spritenum: 587,
 		megaStone: "Blobbos-Sexy-Mega-Y",
+		megaEvolves: "Blobbos-Sexy",
+		itemUser: ["Blobbos-Sexy"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: -1,
+		gen: 8,
+		isNonstandard: "Future",
+	},
+	sexitex: {
+		name: "Sexite X",
+		spritenum: 577,
+		megaStone: "Blobbos-Sexy-Mega-X",
 		megaEvolves: "Blobbos-Sexy",
 		itemUser: ["Blobbos-Sexy"],
 		onTakeItem(item, source) {
@@ -8954,6 +8968,22 @@ export const Items: {[itemid: string]: ItemData} = {
 			target.addVolatile('leechseeds');
 		},
 	},
+	kikeousorb: {
+		name: "Kikeous Orb",
+		spritenum: 180,
+		fling: {
+			basePower: 60,
+		},
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (user.baseSpecies.num === 6969248 && (move.type === 'Normal' || move.type === 'Bug')) {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		itemUser: ["Jewipede"],
+		num: 69112,
+		isNonstandard: "Future",
+	},
 	alcohol: {
 		name: "Alcohol",
 		spritenum: 22,
@@ -8978,7 +9008,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				if (random === 1) {
 					this.heal(pokemon.baseMaxhp / 2);
 				}
-				if (random === 1) {
+				if (random === 2) {
 					this.heal(pokemon.baseMaxhp);
 				}
 				if (drunken === 0) {
@@ -9001,7 +9031,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				}
 			} else {
 				if (random === 0) {
-					this.damage(pokemon.baseMaxhp);
+					this.damage(pokemon.baseMaxhp / 3);
 				}
 				if (random === 1) {
 					this.damage(pokemon.baseMaxhp / 2);
@@ -9042,6 +9072,10 @@ export const Items: {[itemid: string]: ItemData} = {
 				}
 			}
 		},
+	},
+	mesosack: {
+		name: "Meso Sack",
+		isNonstandard: "Future",
 	},
 	missingvoirite: {
 		name: "Missingvoirite",

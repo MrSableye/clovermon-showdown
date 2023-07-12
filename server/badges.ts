@@ -32,6 +32,7 @@ export interface Badge {
 	owner_id: string;
 	file_name: string;
 	create_date: number;
+	badge_name_template?: string;
 }
 
 export type UpdateableBadgeAttribute = Exclude<keyof Badge, 'badge_id' | 'create_date'>;
@@ -40,6 +41,7 @@ export interface UserBadge extends Badge {
 	user_id: string;
 	priority: number;
 	is_hidden: number;
+	badge_data?: string;
 }
 
 export interface UserManagedBadge extends Badge {
@@ -140,8 +142,8 @@ export class BadgesDatabase {
 	async getBadgeOwners(badgeID: string, requesterID: string, overridePermissions: boolean): Promise<UserBadge[]> {
 		return (await this.transaction('getBadgeOwners', [badgeID, requesterID, overridePermissions])).result;
 	}
-	createBadge(badgeID: string, badgeName: string, ownerID: string, filePath: string) {
-		return this.transaction('createBadge', [badgeID, badgeName, ownerID, filePath]);
+	createBadge(badgeID: string, badgeName: string, ownerID: string, filePath: string, badgeNameTemplate?: string) {
+		return this.transaction('createBadge', [badgeID, badgeName, ownerID, filePath, badgeNameTemplate]);
 	}
 	deleteBadge(badgeID: string, requesterID: string, overridePermissions: boolean) {
 		return this.transaction('deleteBadge', [badgeID, requesterID, overridePermissions]);
@@ -170,6 +172,9 @@ export class BadgesDatabase {
 	updateBadgePriority(userID: string, badgeID: string, priority: number) {
 		return this.transaction('updateBadgePriority', [userID, badgeID, priority]);
 	}
+	updateBadgeData(userID: string, badgeID: string, badgeData: any, requesterID: string, overridePermissions: boolean) {
+		return this.transaction('updateBadgeData', [userID, badgeID, JSON.stringify(badgeData), requesterID, overridePermissions]);
+	}
 	getUserManagedBadges(userID: string): Promise<UserManagedBadge[]> {
 		return this.all('getUserManagedBadges', [userID]);
 	}
@@ -194,23 +199,24 @@ const ACTIONS = {
 	getBadge: `SELECT * FROM badges WHERE badge_id = ?`,
 	getBadges: `SELECT * FROM badges`,
 	getOwnedBadges: `SELECT * FROM badges WHERE owner_id = ? LIMIT ?`,
-	createBadge: `INSERT INTO badges (badge_id, badge_name, owner_id, file_name, create_date) VALUES (?, ?, ?, ?, ?)`,
+	createBadge: `INSERT INTO badges (badge_id, badge_name, owner_id, file_name, create_date, badge_name_template) VALUES (?, ?, ?, ?, ?, ?)`,
 	deleteBadge: `DELETE FROM badges WHERE badge_id = ?`,
 	updateBadgeName: `UPDATE badges SET badge_name = ? WHERE badge_id = ?`,
 	updateBadgeOwner: `UPDATE badges SET owner_id = ? WHERE badge_id = ?`,
 	updateBadgeFileName: `UPDATE badges SET file_name = ? WHERE badge_id = ?`,
+	updateBadgeNameTemplate: `UPDATE badges SET badge_name_template = ? WHERE badge_id = ?`,
 	findBadge: `SELECT * FROM badges WHERE badge_id = ?`,
 	countOwnedBadges: `SELECT count(*) as num FROM badges WHERE owner_id = ?`,
 	getUserBadges: (
-		`SELECT user_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, user_badges.priority, user_badges.is_hidden, badges.create_date ` +
+		`SELECT user_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.badge_name_template, badges.file_name, user_badges.priority, user_badges.is_hidden, user_badges.badge_data, badges.create_date ` +
 		`FROM badges INNER JOIN user_badges ON badges.badge_id = user_badges.badge WHERE user_badges.user = ? LIMIT ?`
 	),
 	getVisibleUserBadges: (
-		`SELECT user_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, user_badges.priority, user_badges.is_hidden, badges.create_date ` +
+		`SELECT user_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.badge_name_template, badges.file_name, user_badges.priority, user_badges.is_hidden, user_badges.badge_data, badges.create_date ` +
 		`FROM badges INNER JOIN user_badges ON badges.badge_id = user_badges.badge WHERE (user_badges.user = ? AND user_badges.is_hidden = 0) LIMIT ?`
 	),
 	getBadgeOwners: (
-		`SELECT user_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, user_badges.priority, user_badges.is_hidden, badges.create_date ` +
+		`SELECT user_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.badge_name_template, badges.file_name, user_badges.priority, user_badges.is_hidden, user_badges.badge_data, badges.create_date ` +
 		`FROM badges INNER JOIN user_badges ON badges.badge_id = user_badges.badge WHERE (user_badges.badge = ?)`
 	),
 	countUserBadges: `SELECT count(*) as num FROM user_badges WHERE user = ?`,
@@ -219,14 +225,15 @@ const ACTIONS = {
 	deleteUserBadges: `DELETE FROM user_badges WHERE (badge = ?)`,
 	toggleBadgeVisibility: `UPDATE user_badges SET is_hidden = ? WHERE (user = ? AND badge = ?)`,
 	updateBadgePriority: `UPDATE user_badges SET priority = ? WHERE (user = ? AND badge = ?)`,
+	updateBadgeData: `UPDATE user_badges SET badge_data = ? WHERE (user = ? AND badge = ?)`,
 	findUserBadge: `SELECT * FROM user_badges WHERE (user = ? AND badge = ?)`,
 	findMaxPriority: `SELECT MAX(priority) as num FROM user_badges WHERE (user = ?)`,
 	getUserManagedBadges: (
-		`SELECT user_managed_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, badges.create_date ` +
+		`SELECT user_managed_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, badges.create_date, badges.badge_name_template ` +
 		`FROM badges INNER JOIN user_managed_badges ON badges.badge_id = user_managed_badges.badge WHERE user_managed_badges.user = ?`
 	),
 	getBadgeManagers: (
-		`SELECT user_managed_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, badges.create_date ` +
+		`SELECT user_managed_badges.user AS user_id, badges.badge_id, badges.badge_name, badges.file_name, badges.create_date, badges.badge_name_template ` +
 		`FROM badges INNER JOIN user_managed_badges ON badges.badge_id = user_managed_badges.badge WHERE (user_managed_badges.badge = ?)`
 	),
 	addManagedBadgeToUser: `INSERT INTO user_managed_badges(user, badge) VALUES (?, ?)`,
@@ -240,7 +247,7 @@ const FUNCTIONS: {[k: string]: (...input: any[]) => any} = {};
 const TRANSACTIONS: {[k: string]: (input: any[]) => DatabaseResult} = {
 	createBadge: requests => {
 		for (const request of requests) {
-			const [badgeID, badgeName, ownerID, filePath] = request;
+			const [badgeID, badgeName, ownerID, filePath, badgeNameTemplate] = request;
 
 			const existingBadge = statements.findBadge.all(badgeID);
 			if (existingBadge.length) {
@@ -252,7 +259,7 @@ const TRANSACTIONS: {[k: string]: (input: any[]) => DatabaseResult} = {
 				throw new FailureMessage(`You own the maximum number of badges.`);
 			}
 
-			statements.createBadge.run(badgeID, badgeName, ownerID, filePath, Date.now());
+			statements.createBadge.run(badgeID, badgeName, ownerID, filePath, Date.now(), badgeNameTemplate);
 		}
 		return {result: []};
 	},
@@ -292,6 +299,8 @@ const TRANSACTIONS: {[k: string]: (input: any[]) => DatabaseResult} = {
 				statements.updateBadgeOwner.run(attributeValue, badgeID);
 			} else if (attributeName === 'file_name') {
 				statements.updateBadgeFileName.run(attributeValue, badgeID);
+			} else if (attributeName === 'badge_name_template') {
+				statements.updateBadgeNameTemplate.run(attributeValue, badgeID);
 			}
 		}
 		return {result: []};
@@ -395,6 +404,26 @@ const TRANSACTIONS: {[k: string]: (input: any[]) => DatabaseResult} = {
 			}
 
 			statements.updateBadgePriority.run(priority, userID, badgeID);
+		}
+		return {result: []};
+	},
+	updateBadgeData: requests => {
+		for (const request of requests) {
+			const [userID, badgeID, badgeData, requesterID, overridePermissions] = request;
+
+			const existingOwnedBadge = statements.findUserBadge.all(userID, badgeID);
+			if (!existingOwnedBadge.length) {
+				throw new FailureMessage(`User '${userID}' does not have badge '${badgeID}'.`);
+			}
+
+			const badgeManagers = statements.getBadgeManagers.all(badgeID);
+			const isManager = badgeManagers.some((badgeManager) => badgeManager.user_id === requesterID);
+
+			if (!overridePermissions && (existingOwnedBadge[0].owner_id !== requesterID) && !isManager) {
+				throw new FailureMessage(`You do not own or manage '${badgeID}'.`);
+			}
+
+			statements.updateBadgeData.run(badgeData, userID, badgeID);
 		}
 		return {result: []};
 	},

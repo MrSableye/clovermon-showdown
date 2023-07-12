@@ -8852,6 +8852,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	kattapillar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	worldle: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -9294,6 +9298,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbossexymegax: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosreversemega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -9355,6 +9363,18 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	blobbosomori: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosomorihappy: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosomorisad: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosomoriangry: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -10098,7 +10118,43 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	stoppogriff: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	gem: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	suxako: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	natuonian: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pantherk: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fungore: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	glaggssacre: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	aiytch: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	tenyuu: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	purakkusu: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -10202,7 +10258,23 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	jewipedeo: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sableven: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosbalanced: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscircus: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospterois: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

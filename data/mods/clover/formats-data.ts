@@ -6645,7 +6645,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	hohohoming: {
 		inherit: true,
-		tier: "RU",
+		tier: "RUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"frostbreath",
@@ -7500,7 +7500,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	niterpent: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		doublesTier: "DUber",
 		isNonstandard: null,
 		randomBattleMoves: [

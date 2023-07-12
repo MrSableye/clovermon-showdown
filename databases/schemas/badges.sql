@@ -4,6 +4,7 @@ CREATE TABLE badges (
 	owner_id TEXT NOT NULL,
 	file_name TEXT NOT NULL,
 	create_date INTEGER NOT NULL,
+	badge_name_template TEXT,
 	PRIMARY KEY (badge_id)
 ) WITHOUT ROWID;
 
@@ -13,6 +14,7 @@ CREATE TABLE user_badges (
 	priority INTEGER NOT NULL,
 	is_hidden TINYINT(1) NOT NULL,
 	create_date INTEGER NOT NULL,
+	badge_data TEXT,
 	PRIMARY KEY (user, badge)
 ) WITHOUT ROWID;
 
