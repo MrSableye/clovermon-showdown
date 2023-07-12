@@ -43607,7 +43607,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Fairy", "Fighting"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 125, atk: 93, def: 97, spa: 20, spd: 57, spe: 66},
-		abilities: {0: "Overcoat", H: "Toxic Boost", S: "Magic Guard"},
+		abilities: {0: "Sweet Veil", H: "Toxic Boost", S: "Triage"},
 		heightm: 2.22,
 		weightkg: 100.0,
 		color: "Green",
