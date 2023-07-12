@@ -581,4 +581,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	woodchipper: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wonderland: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

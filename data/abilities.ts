@@ -6239,7 +6239,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onBasePower(relayVar, source, target, move) {
 			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;
-			// if (move?.flags?.naturePower) return this.chainModify(2);
+			if (move?.flags?.naturePower) return this.chainModify(2);
 		},
 		isPermanent: true,
 		isNonstandard: "Future",
@@ -6828,9 +6828,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	tetanus: {
 		onDamagingHit(damage, target, source, move) {
 			if (move.flags['contact']) {
-				if (this.randomChance(3, 10)) {
 					source.trySetStatus('tox', target);
-				}
 			}
 		},
 		name: "Tetanus",
@@ -7483,6 +7481,65 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Bath Time",
 		isNonstandard: "Future",
 	},
+	massacre: {
+		onDamagingHit(damage, target, source, move) {
+			if (target !== source && move.type === 'Fairy') {
+				this.damage(source.baseMaxhp, source, target);
+				this.damage(source.baseMaxhp, target, target);
+			}
+			if (target !== source && move.type === 'Dark') {
+				this.damage(source.baseMaxhp, source, target);
+				this.damage(source.baseMaxhp, target, target);
+			}
+		},
+		isBreakable: true,
+		name: "Massacre",
+		isNonstandard: "Future",
+	},
+	hpower: {
+		onDamage(damage, target, source, effect) {
+			if (
+				effect.effectType === "Move" &&
+				!effect.multihit &&
+				(!effect.negateSecondary && !(effect.hasSheerForce && source.hasAbility('sheerforce')))
+			) {
+				this.effectState.checkedBerserk = false;
+			} else {
+				this.effectState.checkedBerserk = true;
+			}
+		},
+		onTryEatItem(item) {
+			const healingItems = [
+				'aguavberry', 'enigmaberry', 'figyberry', 'iapapaberry', 'magoberry', 'sitrusberry', 'wikiberry', 'oranberry', 'berryjuice',
+			];
+			if (healingItems.includes(item.id)) {
+				return this.effectState.checkedBerserk;
+			}
+			return true;
+		},
+		onAfterMoveSecondary(target, source, move) {
+			this.effectState.checkedBerserk = true;
+			if (!source || source === target || !target.hp || !move.totalDamage) return;
+			const lastAttackedBy = target.getLastAttackedBy();
+			if (!lastAttackedBy) return;
+			const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
+			if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
+				this.boost({spa: 1}, target, target);
+			}
+		},
+		onBasePowerPriority: 30,
+		onBasePower(basePower, attacker, defender, move) {
+			const basePowerAfterMultiplier = this.modify(basePower, this.event.modifier);
+			this.debug('Base Power: ' + basePowerAfterMultiplier);
+			if (basePowerAfterMultiplier <= 60) {
+				this.debug('H power technician boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "H Power",
+		rating: 2,
+		isNonstandard: "Future",
+	},
 	uncompetitive: {
 		name: "Uncompetitive",
 		isPermanent: true,
@@ -7756,12 +7813,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk) {
 			if (this.field.getPseudoWeather('inverseroom')) {
-				return this.chainModify(1.5);
+				return this.chainModify(2);
 			}
 		},
 		onModifySpe(spe, pokemon) {
 			if (this.field.getPseudoWeather('inverseroom')) {
-				return this.chainModify(1.5);
+				return this.chainModify(2);
 			}
 		},
 		name: "Flip Flops",
@@ -8833,11 +8890,713 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	real: {
 		onStart(pokemon) {
+			const random = this.random(4);
 			this.add('-ability', pokemon, 'Real');
+			if (pokemon.status === 'frz') {
+				this.add('-message', `*slides into battle*`);
+			}
+			else if (pokemon.status === 'brn') {
+				if (random === 0) {
+					this.add('-message', `*agonized squeaks* I'M STILL BURNING!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*is sent out as a burning writhing crisp*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*horrified squeaking* PUT ME OUT PLEASE`);
+				}
+				if (random === 3) {
+					this.add('-message', `*screaming squeak* WHY ME! IM STILL ON FIRE!`);
+				}
+			}
+			else if (pokemon.status === 'psn' || pokemon.status === 'tox' ) {
+				if (random === 0) {
+					this.add('-message', `*sobbing squeaks* please just let me recover!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*ugly crying* ill die if you send me out like this!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*upset squeak* im too sick to battle!`);
+				}
+				if (random === 3) {
+					this.add('-message', `*wailing* anyone but me please!`);
+				}
+			}
+			else if (pokemon.status === 'par' ) {
+				if (random === 0) {
+					this.add('-message', `*squeaky wailing* i cant fend for myself! please get me out of here!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*sob* im useless to you! im paralyzed!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*terrified squeak* what are they going to do to me...`);
+				}
+				if (random === 3) {
+					this.add('-message', `*sobbing* please dont send me out!`);
+				}
+			}
+			else if (pokemon.status === 'slp' ) {
+				if (random === 0) {
+					this.add('-message', `*is sent out still unconscious*`);
+				}
+				if (random === 1) {
+					this.add('-message', `*rudely sent out while having a nice rest*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*is still unconscious*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*flopped over on side*`);
+				}
+			}
+			if (random === 0) {
+				this.add('-message', `*squeak* hi`);
+			}
+			if (random === 1) {
+				this.add('-message', `*happy squeaking* want to be friends?`);
+			}
+			if (random === 2) {
+				this.add('-message', `*happy squeak* hello! *ribbit*`);
+			}
+			if (random === 3) {
+				this.add('-message', `*wiggles happily*`);
+			}
+		},
+		onResidualOrder: 29,
+		onResidualSubOrder: 1,
+		onTryAddVolatile(status, pokemon) {
+			const random = this.random(4);
+			if (status.id === 'confusion') {
+				if (pokemon.status === 'frz') {
+					this.add('-message', `*frozen silence*`);
+				}
+				if (pokemon.status === 'slp') {
+					this.add('-message', `*sleeps but confused now*`);
+				}
+				else if (random === 0) {
+					this.add('-message', `*dizzy squeak*`);
+				}
+				else if (random === 1) {
+					this.add('-message', `*squeak of confusion*`);
+				}
+				else if (random === 2) {
+					this.add('-message', `*squeak* my vision is all hazy!`);
+				}
+				else if (random === 3) {
+					this.add('-message', `*horrified squeak* what are you doing to me!`);
+				}
+			}
+			else if (status.id === 'leechseed') {
+				if (pokemon.status === 'frz') {
+					this.add('-message', `*is helpless to stop the seeds from sprouting*`);
+				}
+				if (pokemon.status === 'slp') {
+					this.add('-message', `*starts dreaming of plants*`);
+				}
+				else if (random === 0) {
+					this.add('-message', `*fearful squeak* what are those seeds?`);
+				}
+				else if (random === 1) {
+					this.add('-message', `*confused squeaking* that didnt hurt me at all`);
+				}
+				else if (random === 2) {
+					this.add('-message', `*squeak* seeds?`);
+				}
+				else if (random === 3) {
+					this.add('-message', `*terrified squeak* what is this going to do to me!`);
+				}
+			}
+			else if (status.id === 'curse') {
+				if (pokemon.status === 'frz') {
+					this.add('-message', `*frozen insanity*`);
+				}
+				if (pokemon.status === 'slp') {
+					this.add('-message', `*thrashing while being tormented in dreams*`);
+				}
+				else if (random === 0) {
+					this.add('-message', `*screaming squeak* WHAT IS WRONG WITH YOU!`);
+				}
+				else if (random === 1) {
+					this.add('-message', `*begins to go insane* b-but why would you do something so cruel!`);
+				}
+				else if (random === 2) {
+					this.add('-message', `*squeak of horror* my mind is breaking!`);
+				}
+				else if (random === 3) {
+					this.add('-message', `*loud sobbing* WHY WHY WHY WHY WHY WHY WHY`);
+				}
+			}
+		},
+		onResidual(pokemon) {
+			const random = this.random(4);
+			if (pokemon.status === 'frz') {
+				if (random === 0) {
+					this.add('-message', `*is frozen solid*`);
+				}
+				if (random === 1) {
+					this.add('-message', `*cries a single frozen tear*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*unable to squeak*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*silence*`);
+				}
+			}
+			else if (pokemon.status === 'brn') {
+				if (random === 0) {
+					this.add('-message', `*pained squeaking* it burns!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*cries out in pain and writhing*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*squeaking of agony*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*screaming squeak* its too hot!`);
+				}
+			}
+			else if (pokemon.status === 'tox') {
+				if (random === 0) {
+					this.add('-message', `*screams and wriggles violently* it hurts! please stop it!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*squeals in pain* im melting!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*he screams as his eyes burn in the toxic sludge*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*slithers around in agony*`);
+				}
+			}
+			else if (pokemon.status === 'psn') {
+				if (random === 0) {
+					this.add('-message', `*squeaks of worry* i feel dizzy`);
+				}
+				if (random === 1) {
+					this.add('-message', `*horrified squeak* im poisoned!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*writhing on the ground from poison*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*frightened squeak* i dont want to die *sobs*`);
+				}
+			}
+			else if (pokemon.status === 'par') {
+				if (random === 0) {
+					this.add('-message', `*crying squeak* i cant feel my body`);
+				}
+				if (random === 1) {
+					this.add('-message', `*pained squeaks* it hurts to move`);
+				}
+				if (random === 2) {
+					this.add('-message', `*sobbing* i cant move...`);
+				}
+				if (random === 3) {
+					this.add('-message', `*hyperventilating squeak*`);
+				}
+			}
+			else if (pokemon.volatiles['nightmare']) {
+				if (random === 0) {
+					this.add('-message', `*thrashing about in sleep*`);
+				}
+				if (random === 1) {
+					this.add('-message', `*squeaking in sleep* no... please stop...`);
+				}
+				if (random === 2) {
+					this.add('-message', `*writhing while sleeping* help... help me..!`);
+				}
+				if (random === 3) {
+					this.add('-message', `*squeaky whimpers while asleep*`);
+				}
+			}
+			else if (pokemon.status === 'slp') {
+				if (random === 0) {
+					this.add('-message', `*curled up and sleeping soundly*`);
+				}
+				if (random === 1) {
+					this.add('-message', `*zzz*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*squeak snoring*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*sleepy squeaks*`);
+				}
+			}
+			else if (pokemon.volatiles['leechseed']) {
+				if (random === 0) {
+					this.add('-message', `*squeaks of horror* NO NO NO ITS DRAINING MY BLOOD!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*mortified squeak* WHAT DID YOU DO TO ME?!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*sobbing* IT'S DRINKING ME!`);
+				}
+				if (random === 3) {
+					this.add('-message', `*crying squeaks* ill never eat seeds again please stop!`);
+				}
+			}
+			else if (pokemon.volatiles['curse']) {
+				if (random === 0) {
+					this.add('-message', `*curls up in a ball and goes insane and starts crying*`);
+				}
+				if (random === 1) {
+					this.add('-message', `*slithers in circles and screeches in pain and terror*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*shrieks so loud it breaks glass*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*uncontrollable sobbing*`);
+				}
+			}
+			else if (pokemon.volatiles['attract']) {
+				if (random === 0) {
+					this.add('-message', `*happy squeak* i love you!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*wiggles cutely at you*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*shy squeak*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*infatuated chirping* i love you so much!`);
+				}
+			}
+			else if (pokemon.volatiles['substitute']) {
+				if (random === 0) {
+					this.add('-message', `*happy squeak* this substitute is so cute!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*cuddles with the substitute*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*wraps around the substitute tightly*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*cowers behind the substitute*`);
+				}
+			}
+			else {
+				if (random === 0) {
+					this.add('-message', `*thinks to self* *squeak* what am i even doing here`);
+				}
+				if (random === 1) {
+					this.add('-message', `*sad chirps* i dont want to fight anymore`);
+				}
+				if (random === 2) {
+					this.add('-message', `*confused squeak* where am i`);
+				}
+				if (random === 3) {
+					this.add('-message', `*squeak* why cant we just be friends`);
+				}
+			}
+		},
+		onTakeItem(item, pokemon, source) {
+			const random = this.random(4);
+			if (pokemon.status === 'slp' || pokemon.status === 'tox') {
+				this.add('-message', `*is helpless to stop it from happening`);
+			}
+			else if (pokemon.status === 'brn' || pokemon.status === 'par' || pokemon.status === 'psn' || pokemon.status === 'tox') {
+				this.add('-message', `*sobbing squeak* IT'S ALL I HAVE LEFT PLEASE!`);
+			}
+			else if (random === 0) {
+				this.add('-message', `*squeaks angrily* give that back!`);
+			}
+			else if (random === 1) {
+				this.add('-message', `*angry squeak* hey that was mine!`);
+			}
+			else if (random === 2) {
+				this.add('-message', `*sad squeaking* that was mine!`);
+			}
+			else if (random === 3) {
+				this.add('-message', `*angrily squeaks* you cant do that!`);
+			}
+		},
+		onEnd(pokemon) {
+			const random = this.random(4);
+			if (pokemon.status === 'frz') {
+				this.add('-message', `*slides away while frozen*`);
+			}
+			else if (pokemon.status === 'slp') {
+				this.add('-message', `*is shoved back in the pokeball still asleep*`);
+			}
+			else if (pokemon.status === 'par') {
+				this.add('-message', `*is shoved back in the pokeball* hey! be more gentle please!`);
+			}
+			else if (pokemon.status === 'brn') {
+				if (random === 0) {
+					this.add('-message', `*squeaking in agony* AT LEAST PUT ME OUT`);
+				}
+				if (random === 1) {
+					this.add('-message', `*crying squeak* PUT ME OUT!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*sobbing* it burns...`);
+				}
+				if (random === 3) {
+					this.add('-message', `*numb to the pain*`);
+				}
+			}
+			else if (pokemon.status === 'psn' || pokemon.status === 'tox') {
+				if (random === 0) {
+					this.add('-message', `*suffering squeak* cure me please...`);
+				}
+				if (random === 1) {
+					this.add('-message', `*crying* im gonna die...`);
+				}
+				if (random === 2) {
+					this.add('-message', `*sad squeaky cry* it hurts...`);
+				}
+				if (random === 3) {
+					this.add('-message', `*vomits*`);
+				}
+			}
+			else if (pokemon.volatiles['leechseed']) {
+				if (random === 0) {
+					this.add('-message', `*squeaks of horror* GET THESE SEEDS OFF OF ME!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*squeak of relief* theyre off of me now!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*whimper* are the seeds gone yet`);
+				}
+				if (random === 3) {
+					this.add('-message', `*fearful squeak* i never want to see a seed ever again`);
+				}
+			}
+			else if (pokemon.volatiles['curse']) {
+				this.add('-message', `*joyous squeak* im free from the curse!`);
+		}
+			else if (pokemon.volatiles['taunt']) {
+				if (random === 0) {
+					this.add('-message', `*angry squeak* go to hell!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*gives you the middle finger*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*angry squeak* i dont want to talk to you`);
+				}
+				if (random === 3) {
+					this.add('-message', `*angry squeak* youre so cruel`);
+				}
+			}
+			else if (pokemon.volatiles['torment']) {
+				if (random === 0) {
+					this.add('-message', `*sobbing* they wont bother me anymore!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*cry squeak* i never want to see you again!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*sad squeaky cry* why were you so mean...`);
+				}
+				if (random === 3) {
+					this.add('-message', `*relieved squeak* they were so mean...`);
+				}
+			}
+			else if (pokemon.volatiles['substitute']) {
+				if (random === 0) {
+					this.add('-message', `*sad squeak* ill miss my  substitute...`);
+				}
+				if (random === 1) {
+					this.add('-message', `*sad squeak* why! i wanted to cuddle my substitute more...`);
+				}
+				if (random === 2) {
+					this.add('-message', `*sad squeak* i wasted 25% of my health for nothing...`);
+				}
+				if (random === 3) {
+					this.add('-message', `*sad squeak* but my substitute was so cute!`);
+				}
+			}
+			else if (random === 0) {
+				this.add('-message', `*sad squeak* goodbye`);
+			}
+			else if (random === 1) {
+				this.add('-message', `*squeak* bye`);
+			}
+			else if (random === 2) {
+				this.add('-message', `*sad squeaking* but i was making a new friend!`);
+			}
+			else if (random === 3) {
+				this.add('-message', `*runs away squeaking fearfully*`);
+			}
+		},
+		onEatItem(item, pokemon) {
+			const random = this.random(4);
+			if (pokemon.status === 'frz') {
+					this.add('-message', `*somehow starts eating while frozen*`);
+			}
+			else if (pokemon.status === 'brn') {
+				if (random === 0) {
+					this.add('-message', `*pained squeaking* this better help with my burns!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*cries out in pain* please! it hurts too much to taste anything!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*squeaking in agony* i cant even enjoy my food!`);
+				}
+				if (random === 3) {
+					this.add('-message', `*screaming squeak* my food is too hot!`);
+				}
+			}
+			else if (pokemon.status === 'tox') {
+				if (random === 0) {
+					this.add('-message', `*struggles to keep food down*`);
+				}
+				if (random === 1) {
+					this.add('-message', `*squeals in pain* i feel so sick!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*sobs* it tastes so bad!`);
+				}
+				if (random === 3) {
+					this.add('-message', `*starts choking*`);
+				}
+			}
+			else if (pokemon.status === 'psn') {
+				if (random === 0) {
+					this.add('-message', `*sickened squeaking* this is worse than a hangover!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*whimpering squeaks* i hope this cures me!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*barely gets it down my throat*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*sad squeak* i feel too sick to enjoy anything...`);
+				}
+			}
+			else if (pokemon.status === 'par') {
+				if (random === 0) {
+					this.add('-message', `*crying squeak* i hope it doesnt get stuck in my throat...`);
+				}
+				if (random === 1) {
+					this.add('-message', `*pained squeaks* i can barely get it down my throat...`);
+				}
+				if (random === 2) {
+					this.add('-message', `*sobbing* it hurts to swallow`);
+				}
+				if (random === 3) {
+					this.add('-message', `*exhausted from trying to swallow while paralyzed*`);
+				}
+			}
+			else if (pokemon.volatiles['taunt']) {
+				if (random === 0) {
+					this.add('-message', `*angry squeak* this is mine you cant have any`);
+				}
+				if (random === 1) {
+					this.add('-message', `*angry squeak* what are you looking at!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*angrily gobbles it up*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*eats it all before you can say anything*`);
+				}
+			}
+			else if (pokemon.volatiles['torment']) {
+				if (random === 0) {
+					this.add('-message', `*sad squeak* please dont call me fat for this`);
+				}
+				if (random === 1) {
+					this.add('-message', `*sobbing* maybe this will make me feel better`);
+				}
+				if (random === 2) {
+					this.add('-message', `*sadly eats* it doesnt taste good anymore *sad squeak*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*crying squeak* i hope i choke...`);
+				}
+			}
+			else if (pokemon.volatiles['yawn'] ) {
+				if (random === 0) {
+					this.add('-message', `*sleepy squeak* its time for a midnight snack`);
+				}
+				if (random === 1) {
+					this.add('-message', `*yawning squeak* maybe i can feel more awake with this`);
+				}
+				if (random === 2) {
+					this.add('-message', `*tired squeaking* im too sleepy to enjoy anything...`);
+				}
+				if (random === 3) {
+					this.add('-message', `*eating while barely awake*`);
+				}
+			}
+			else if (pokemon.status === 'slp') {
+				if (random === 0) {
+					this.add('-message', `*begins sleepeating*`);
+				}
+				if (random === 1) {
+					this.add('-message', `*eating unconsciously*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*sleepy squeak* tasty...`);
+				}
+				if (random === 3) {
+					this.add('-message', `*squeaky snore*`);
+				}
+			}
+			else if (pokemon.volatiles['leechseed']) {
+				if (random === 0) {
+					this.add('-message', `*squeaks of horror* THIS ISNT HELPING!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*mortified squeak* IF I EAT YOUR KIND WILL YOU STOP?!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*sobbing* ITS STEALING MY NUTRIENTS!`);
+				}
+				if (random === 3) {
+					this.add('-message', `*crying squeaks* LOOK IM EATING SOMETHING ELSE PLEASE STOP IT!`);
+				}
+			}
+			else if (pokemon.volatiles['curse']) {
+				if (random === 0) {
+					this.add('-message', `*digs in like a feral animal*`);
+				}
+				if (random === 1) {
+					this.add('-message', `*swallows it whole*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*foaming at the mouth*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*furious squeak* i need blood`);
+				}
+			}
+			else if (pokemon.volatiles['attract']) {
+				if (random === 0) {
+					this.add('-message', `*happy squeak* i can share with you!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*blushing as you watch him eat*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*eating while looking up at you*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*embarassed chirping* is this a date?`);
+				}
+			}
+			else {
+				if (random === 0) {
+					this.add('-message', `*happy chirping* thanks for the food!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*happy squeak* i love eating`);
+				}
+				if (random === 2) {
+					this.add('-message', `*drunken slurring* more please`);
+				}
+				if (random === 3) {
+					this.add('-message', `*burp* oops sorry`);
+				}
+			}
+		},
+		onDamagingHit(damage, target, source, move) {
+			const random = this.random(4);
+			if (!target.hp) {
+				if (target.status === 'frz') {
+						this.add('-message', `*stops moving forever*`);
+				}
+				if (target.status === 'slp') {
+					this.add('-message', `*never wakes up*`);
+				}
+				else if (random === 0) {
+					this.add('-message', `*dying squeaks* PLEASE I JUST WANTED TO BE FRIENDS!`);
+				}
+				else if (random === 1) {
+					this.add('-message', `*last squeak* goodbye... *stops breathing*`);
+				}
+				else if (random === 2) {
+					this.add('-message', `*desperate squeaking* I DONT WANT TO DIE LIKE THIS!`);
+				}
+				else if (random === 3) {
+					this.add('-message', `*whimpers one last time and then curls up and dies*`);
+				}
+			}
+			if (target.status === 'frz') {
+					this.add('-message', `*is incapable of moving*`);
+			}
+			if (target.status === 'brn' || target.status === 'psn' || target.status === 'tox') {
+				if (random === 0) {
+					this.add('-message', `*pained squeaks* IT HURTS IT HURTS SO MUCH`);
+				}
+				if (random === 1) {
+					this.add('-message', `*shrieking squeal* PLEASE STOP`);
+				}
+				if (random === 2) {
+					this.add('-message', `*loud squeaky sobbing* ILL DO ANYTHING PLEASE STOP`);
+				}
+				if (random === 3) {
+					this.add('-message', `*horrible scream*`);
+				}
+			}
+			if (target.status === 'par') {
+				if (random === 0) {
+					this.add('-message', `*sobbing squeak* why would you attack a paralyzed little snake`);
+				}
+				if (random === 1) {
+					this.add('-message', `*crying* please no i cant even fight back`);
+				}
+				if (random === 2) {
+					this.add('-message', `*whimpers*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*cries a puddle that he cant get out of*`);
+				}
+			}
+			if (target.status === 'slp') {
+				if (random === 0) {
+					this.add('-message', `*squeaks of pain while unconscious*`);
+				}
+				if (random === 1) {
+					this.add('-message', `*doesn't respond*`);
+				}
+				if (random === 2) {
+					this.add('-message', `*writhes while asleep*`);
+				}
+				if (random === 3) {
+					this.add('-message', `*curls up defensively while sleeping*`);
+				}
+			}
+			else {
+				if (random === 0) {
+					this.add('-message', `*squeaks of pain* w-why?!`);
+				}
+				if (random === 1) {
+					this.add('-message', `*pained squeak* AAAAAAAAA!`);
+				}
+				if (random === 2) {
+					this.add('-message', `*sobbing squeak* i thought we were friends!`);
+				}
+				if (random === 3) {
+					this.add('-message', `*tries to dodge but is too weak and slow*`);
+				}
+			}
 		},
 		name: "Real",
+		isPermanent: true,
 		rating: 0,
 		isNonstandard: "Future",
+	},
+	kattapillarssecretpower: {
+		name: "Kattapillar's Secret Power",
+		rating: 0, // LMAO YOU ACTUALLY THOUGHT THIS SHIT HAD REAL EFFECTS LMAOOOOOOOO
+		isNonstandard: "Future", // YOU EVEN CHECKED THE CODE HAHAHAHAHAHAHA
 	},
 	bejeweled: {
 		onStart(source) {
@@ -10874,6 +11633,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 114,
     isNonstandard: "Future",
 	},
+	runngun: {
+		// This should be applied directly to the stat as opposed to chaining with the others
+		onModifyCritRatio(critRatio) {
+			return critRatio + 1;
+		},
+		onSourceModifyAccuracyPriority: -1,
+		onSourceModifyAccuracy(accuracy, target, source, move) {
+			if (typeof accuracy === 'number') {
+				return this.chainModify([3687, 4096]);
+			}
+		},
+		name: "Run N' Gun",
+		rating: 3.5,
+		isNonstandard: "Future",
+	},
 	noweaknesses: {
 		isNonstandard: "Future",
 		onPreStart(pokemon) {
@@ -11042,6 +11816,355 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 	},
+	fireaffinity: {
+		name: "Fire Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Fire Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Fire Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fire') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Fire Affinity');
+				}
+				return null;
+			}
+		},
+	},
+	wateraffinity: {
+		name: "Water Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Water') {
+				this.debug('Water Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Water') {
+				this.debug('Water Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Water') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Water Affinity');
+				}
+				return null;
+			}
+		},
+		onModifySpe(spe, pokemon) {
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(2);
+			}
+		},
+	},
+	electricityaffinity: {
+		name: "Electricity Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Electricity Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Electricity Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Electric') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Electricity Affinity');
+				}
+				return null;
+			}
+		},
+		onAnyTryMove(target, source, effect) {
+			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct'].includes(effect.id)) {
+				this.attrLastMove('[still]');
+				this.add('cant', this.effectState.target, 'ability: Damp', effect, '[of] ' + target);
+				return false;
+			}
+		},
+		onAnyDamage(damage, target, source, effect) {
+			if (effect && effect.name === 'Aftermath') {
+				return false;
+			}
+		},
+	},
+	strengthaffinity: {
+		name: "Strength Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fighting') {
+				this.debug('Strength Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fighting') {
+				this.debug('Strength Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fighting') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Strength Affinity');
+				}
+				return null;
+			}
+		},
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.id === 'strength') {
+				this.debug('Strength Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+	},
+	poisonaffinity: {
+		name: "Poison Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Poison') {
+				this.debug('Poison Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Poison') {
+				this.debug('Poison Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Poison') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Poison Affinity');
+				}
+				return null;
+			}
+		},
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onResidual(pokemon) {
+			if (pokemon.item) return;
+			let possibleMoves = pokemon.moveSlots.filter((moveSlot) => {
+				const move = this.dex.moves.get(moveSlot.move);
+
+				return move.category === 'Physical' || move.category === 'Special';
+			});
+
+			if (possibleMoves.length < 1) {
+				possibleMoves = pokemon.moveSlots;
+			}
+
+			const randomMoveSlot = this.sample(possibleMoves);
+
+			if (randomMoveSlot) {
+				const randomMove = this.dex.moves.get(randomMoveSlot.move);
+				const itemText = `${randomMove.type} Gem`;
+				const item = this.dex.items.get(itemText);
+				if (pokemon.setItem(item)) {
+					this.add('-item', pokemon, item, '[from] ability: Poison Affinity');
+				}
+			}
+		},
+	},
+	rockaffinity: {
+		name: "Rock Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Rock') {
+				this.debug('Rock Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Rock') {
+				this.debug('Rock Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (move.ohko) {
+				this.add('-immune', target, '[from] ability: Sturdy');
+				return null;
+			}
+			if (target !== source && move.type === 'Rock') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Rock Affinity');
+				}
+				return null;
+			}
+		},
+		onDamagePriority: -30,
+		onDamage(damage, target, source, effect) {
+			if (target.hp === target.maxhp && damage >= target.hp && effect && effect.effectType === 'Move') {
+				this.add('-ability', target, 'Rock Affinity');
+				return target.hp - 1;
+			}
+		},
+	},
+	flightaffinity: {
+		name: "Flight Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Flying') {
+				this.debug('Flight Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Flying') {
+				this.debug('Flight Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Flying') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Flight Affinity');
+				}
+				return null;
+			}
+		},
+		onImmunity(type, pokemon) {
+			if (toID(type) === 'ground') return false;
+		},
+	},
+	iceaffinity: {
+		name: "Ice Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Ice') {
+				this.debug('Ice Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Ice') {
+				this.debug('Ice Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Ice') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Ice Affinity');
+				}
+				return null;
+			}
+		},
+		onAnyEffectiveness(typemod, target, type, move) {
+			const user = this.effectState.target;
+
+			if (user !== this.activePokemon) return;
+
+			if (move.type === 'Ice' && ['Water'].includes(type)) {
+				return 1;
+			}
+		},
+	},
+	lightaffinity: {
+		name: "Light Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fairy') {
+				this.debug('Light Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fairy') {
+				this.debug('Light Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fairy') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Light Affinity');
+				}
+				return null;
+			}
+		},
+		onSourceModifyAccuracyPriority: -1,
+		onSourceModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			this.debug('Light Affinity - enhancing accuracy');
+			return this.chainModify(2);
+		},
+	},
+	parasiteaffinity: {
+		name: "Parasite Affinity",
+		isNonstandard: "Future",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Dark') {
+				this.debug('Parasite Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Dark') {
+				this.debug('Parasite Affinity boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Dark') {
+				if (!this.heal(target.baseMaxhp / 8)) {
+					this.add('-immune', target, '[from] ability: Parasite Affinity');
+				}
+				return null;
+			}
+		},
+		onResidual(pokemon) {
+			for (const target of pokemon.foes(true)) {
+				if (!target || target.fainted || target.hp <= 0) {
+					this.debug('Nothing to leech into');
+					return;
+				}
+				const damage = this.damage(pokemon.baseMaxhp / 16, pokemon, target);
+				if (damage) {
+					this.heal(damage, target, pokemon);
+				}
+			}
+		},
+	},
 	windglider: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Flying') {
@@ -11062,5 +12185,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Windglider",
 		rating: 3.5,
 		num: 18,
+	},
+	wonderland: {
+		name: "Wonderland",
+		onStart(pokemon) {
+			this.add('-activate', pokemon, 'ability: Wonderland');
+			this.field.addPseudoWeather('wonderroom');
+		},
+		rating: 4,
+		isNonstandard: "Future",
 	},
 };

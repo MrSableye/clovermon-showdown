@@ -74,6 +74,16 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evoType: "other",
 		evoCondition: "Die from the Poison status after getting mortally wounded by a Seviper.",
 	},
+	pinsir: {
+		inherit: true,
+		evos: ["Purakkusu"],
+	},
+	purakkusu: {
+		inherit: true,
+		prevo: "Pinsir",
+		evoType: "other",
+		evoCondition: "Prove your might by OHKOing a Buzzwole.",
+	},
 	motherfuck: {
 	    inherit: true,
 	    evos: ["Fatherfuck"],
@@ -232,5 +242,31 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	towhorse: {
 		inherit: true,
 		types: ["???", "Fighting"],
+	},
+	sherifuego: {
+		inherit: true,
+		abilities: {0: "Chlorophyll", 1: "Levitate", H: "Solar Power", S: "Flash Fire"},
+		
+	},
+	sableven: {
+		num: -42151,
+		name: "Sableven",
+		types: ["Steel", "Ghost"],
+		gender: "N",
+		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
+		abilities: {0: "Stall", 1: "Admin Abuse", H: "Flare Heal", S: "Prankster"},
+		heightm: 8,
+		weightkg: 911,
+		color: "Purple",
+		eggGroups: ["Undiscovered"],
+		gen: 8,
+	},
+	ginocchio: { 
+		inherit: true,
+		baseStats: {hp: 70, atk: 98, def: 65, spa: 105, spd: 62, spe: 125},
+		abilities: {0: "Overgrow", H: "Magic Guard", S: "Flower Gift"},
 	}
+
+	
+	
 };

@@ -2937,6 +2937,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbossexymegax: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	blobbosreversemega: {
 		inherit: true,
 		isNonstandard: null,
@@ -3673,6 +3678,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobbosteyvat: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboscircus: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospterois: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

@@ -23,6 +23,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	sexitex: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	reversite: {
 		inherit: true,
 		isNonstandard: null,
@@ -52,7 +56,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		spritenum: 379,
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Masdawg' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Gambino' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Toadagi' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Whiteout' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Swoldier' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Mr. Toad' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Staypuft' || pokemon.baseSpecies.baseSpecies === 'Pasdawg') {
+			if (pokemon.baseSpecies.baseSpecies === 'Masdawg' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Gambino' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Toadagi' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Whiteout' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Swoldier' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Mr. Toad' || pokemon.baseSpecies.baseSpecies === 'Pasdawg-Staypuft' || pokemon.baseSpecies.baseSpecies === 'Pasdawg' || pokemon.baseSpecies.baseSpecies === 'Naughtycoot' || pokemon.species.name === 'Blobbos-Skeleton') {
 				return this.chainModify(2);
 			}
 		},
@@ -115,7 +119,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		onAfterSetStatusPriority: -1,
 		onAfterSetStatus(status, pokemon) {
-			if (pokemon.species.name === 'Blobbos-Cap') {
+			if (pokemon.baseSpecies.baseSpecies === 'Noxilium' || pokemon.species.name === 'Blobbos-Cap') {
 				this.add('-message', 'The power from the Moluganion cured the status!');
 				pokemon.cureStatus();
 				pokemon.removeVolatile('confusion');
@@ -123,7 +127,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 		},
 		onUpdate(pokemon) {
 			if (pokemon.status || pokemon.volatiles['confusion']) {
-				if (pokemon.species.name === 'Blobbos-Cap') {
+				if (pokemon.baseSpecies.baseSpecies === 'Noxilium' || pokemon.species.name === 'Blobbos-Cap') {
 					this.add('-message', 'The power from the Moluganion cured the status!');
 					pokemon.cureStatus();
 					pokemon.removeVolatile('confusion');
@@ -133,7 +137,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 				}
 			}
 		},
-		itemUser: ["Blobbos-Cap"],
+		itemUser: ["Blobbos-Cap", "Noxilium"],
 		isNonstandard: null,
 	},
 	mirrorherb: {
@@ -197,6 +201,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: null,
 	},
 	beeite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mesosack: {
 		inherit: true,
 		isNonstandard: null,
 	},

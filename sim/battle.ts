@@ -320,6 +320,29 @@ export class Battle {
 		return this.prng.sample(items);
 	}
 
+	fastPop<T>(list: T[], index: number) {
+		// If an array doesn't need to be in order, replacing the
+		// element at the given index with the removed element
+		// is much, much faster than using list.splice(index, 1).
+		const length = list.length;
+		if (index < 0 || index >= list.length) {
+			// sanity check
+			throw new Error(`Index ${index} out of bounds for given array`);
+		}
+
+		const element = list[index];
+		list[index] = list[length - 1];
+		list.pop();
+		return element;
+	}
+
+	sampleNoReplace<T>(list: T[]) {
+		const length = list.length;
+		if (length === 0) return null;
+		const index = this.random(length);
+		return this.fastPop(list, index);
+	}
+
 	/** Note that passing `undefined` resets to the starting seed, but `null` will roll a new seed */
 	resetRNG(seed: PRNGSeed | null = this.prng.startingSeed) {
 		this.prng = new PRNG(seed);

@@ -2913,6 +2913,46 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "NFE",
 	},
+	worldle: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "AG",
+	},
+	stoppogriff: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	popecap: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	gem: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	suxako: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	natuonian: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	sableye: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	pantherk: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,

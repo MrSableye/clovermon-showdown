@@ -10613,6 +10613,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	kattapillar: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	autumn: {
 		inherit: true,
 		tier: "OU",
@@ -10814,6 +10819,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	pasdawgswoldier: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	jewipedeo: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
@@ -11142,6 +11152,51 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	stoppogriff: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	gem: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	suxako: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	natuonian: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	pantherk: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	fungore: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	glaggssacre: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	aiytch: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	purakkusu: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	slimifu: {
 		inherit: true,
 		isNonstandard: null,
@@ -11301,5 +11356,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "Uber",
+	},
+	sableven: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 };

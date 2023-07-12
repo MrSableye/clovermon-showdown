@@ -51,6 +51,7 @@ interface MoveFlags {
 	kick?: 1; // Kick-based moves (for Striker)
 	bone?: 1; // Bone-based moves (for Bone Zone)
 	hammer?: 1; // Hammer-based moves (for Admin Abuse)
+	naturePower?: 1;
 }
 
 export interface HitEffect {

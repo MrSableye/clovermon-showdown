@@ -3205,6 +3205,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	uturn: {
 		inherit: true,
+		basePower: 70,
 		isNonstandard: null,
 	},
 	uproar: {
@@ -3245,6 +3246,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	voltswitch: {
 		inherit: true,
+		basePower: 70,
 		isNonstandard: null,
 	},
 	volttackle: {
@@ -3569,6 +3571,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	punchout: {
 		inherit: true,
+		basePower: 70,
 		isNonstandard: null,
 	},
 	regenerate: {
@@ -3617,6 +3620,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	slipturn: {
 		inherit: true,
+		basePower: 70,
 		isNonstandard: null,
 	},
 	crusadercrash: {
@@ -4043,7 +4047,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	bishido: {
+	bushido: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4109,6 +4113,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	flashbang: {
 		inherit: true,
+		basePower: 70,
 		isNonstandard: null,
 	},
 	doubleiceblob: {
@@ -4542,6 +4547,18 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	garudaimpact: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	potemkinbuster: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pantherkkick: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	scavenge: {
 		inherit: true,
 		isNonstandard: null,
@@ -4599,6 +4616,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	violentvines: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	genesisboost: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	godotshammer: {
 		inherit: true,
 		isNonstandard: null,
 	},

@@ -1871,6 +1871,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	kattapillarssecretpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	fuckforce: {
 		inherit: true,
 		isNonstandard: null,
@@ -1915,11 +1919,23 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	massacre: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	barkback: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	noweaknesses: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	deadlypincers: {
 		inherit: true,
 		isNonstandard: null,
 	},
