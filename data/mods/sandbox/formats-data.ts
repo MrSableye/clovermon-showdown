@@ -11362,4 +11362,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbosmitosis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmitosiscomplete: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 };

@@ -176,10 +176,6 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	assaultjacket: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	choiceshield: {
 		inherit: true,
 		isNonstandard: null,
@@ -209,6 +205,14 @@ export const Items: {[k: string]: ModdedItemData} = {
 		isNonstandard: null,
 	},
 	marxite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	tumultuoustibia: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mascotsorb: {
 		inherit: true,
 		isNonstandard: null,
 	},

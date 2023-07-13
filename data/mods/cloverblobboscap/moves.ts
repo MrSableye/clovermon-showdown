@@ -1659,4 +1659,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	tornado: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
