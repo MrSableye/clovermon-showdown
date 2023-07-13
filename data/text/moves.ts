@@ -8327,9 +8327,17 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Ninjutsu",
 		shortDesc: "Hits 4 times.",
 	},
+	tornado: {
+		name: "Tornado",
+		shortDesc: "Summons Strong Winds after this move hits.",
+	},
 	groundbomb: {
 		name: "Ground Bomb",
-		shortDesc: "Explodes self, halves foe's defense.",
+		desc: "Deals damage three turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if this move or Ground Bomb is already in effect for the target's position.",
+		shortDesc: "Hits three turns after being used.",
+
+		start: "  [POKEMON] planted a bomb in the ground on the enemy's side!",
+		activate: "  [TARGET]'s movements activated the landmine!",
 	},
 	chernoboil: {
 		name: "Chernoboil",

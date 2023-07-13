@@ -26364,20 +26364,41 @@ export const Moves: {[moveid: string]: MoveData} = {
 		noSketch: true,
 	},
 	groundbomb: {
-		accuracy: 100,
-		basePower: 250,
-		category: "Special",
-		name: "Ground Bomb",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		selfdestruct: "always",
+			accuracy: 100,
+			basePower: 200,
+			category: "Special",
+			name: "Ground Bomb",
+			pp: 5,
+			priority: 0,
+			flags: {},
+			ignoreImmunity: true,
+			isFutureMove: true,
+			onTry(source, target) {
+				if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+				Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+					duration: 4,
+					move: 'groundbomb',
+					source: source,
+					moveData: {
+						id: 'groundbomb',
+						name: "Ground Bomb",
+						accuracy: 100,
+						basePower: 200,
+						category: "Special",
+						priority: 0,
+						flags: {},
+						ignoreImmunity: false,
+						effectType: 'Move',
+						isFutureMove: true,
+						type: 'Ground',
+					},
+				});
+				this.add('-start', source, 'move: Ground Bomb');
+				return this.NOT_FAIL;
+			},
 		secondary: {
 			chance: 10,
 			status: 'brn',
-		},
-		onBasePower(basePower, pokemon, target) {
-			return this.chainModify(2);
 		},
 		target: "normal",
 		type: "Ground",
@@ -30406,15 +30427,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1, bullet: 1},
 		multihit: 2,
 		recoil: [1, 3],
-		onTry(source) {
-			if (source.species.name === 'Blobbos-Cherry' || source.baseSpecies.baseSpecies === 'Lemonhorse') {
-				return;
-			}
-			this.attrLastMove('[still]');
-			this.add('-fail', source, 'move: Cherrynobyl');
-			this.hint("You lack the bombs.");
-			return null;
-		},
 		secondary: {
 			chance: 100,
 			self: {
@@ -30424,6 +30436,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		target: "normal",
+		noSketch: true,
 		type: "Grass",
 		isNonstandard: "Future",
 	},
@@ -31686,6 +31699,65 @@ export const Moves: {[moveid: string]: MoveData} = {
 				target.addVolatile('taunt');
 			}
 		},
+		isNonstandard: "Future",
+	},
+	tornado: {
+		num: 173,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Tornado",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, wind: 1},
+		self: {
+			onHit(source) {
+				this.field.setWeather('deltastream');
+			},
+		},
+		noSketch: true,
+		target: "normal",
+		type: "Flying",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	mitosistackle: {
+		num: 458,
+		accuracy: 80,
+		basePower: 60,
+		category: "Physical",
+		name: "Mitosis Tackle",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 2,
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		zMove: {basePower: 140},
+		maxMove: {basePower: 120},
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	mitosismash: {
+		num: 813,
+		accuracy: 90,
+		basePower: 65,
+		basePowerCallback(pokemon, target, move) {
+			return 13 * move.hit;
+		},
+		category: "Physical",
+		name: "Mitosis Mash",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 3,
+		multiaccuracy: true,
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		zMove: {basePower: 160},
+		maxMove: {basePower: 140},
 		isNonstandard: "Future",
 	},
 };

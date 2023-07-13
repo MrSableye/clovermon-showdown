@@ -12195,4 +12195,68 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		isNonstandard: "Future",
 	},
+	cellconstruct: {
+		onResidualOrder: 29,
+		onResidual(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Blobbos-Mitosis' || pokemon.transformed || !pokemon.hp) return;
+			if (pokemon.species.id === 'blobbosmitosiscomplete' || pokemon.hp > pokemon.maxhp / 2) return;
+			this.add('-activate', pokemon, 'ability: Cell Construct');
+			pokemon.formeChange('Blobbos-Mitosis-Complete', this.effect, true);
+			pokemon.baseMaxhp = Math.floor(Math.floor(
+				2 * pokemon.species.baseStats['hp'] + pokemon.set.ivs['hp'] + Math.floor(pokemon.set.evs['hp'] / 4) + 100
+			) * pokemon.level / 100 + 10);
+			const newMaxHP = pokemon.volatiles['dynamax'] ? (2 * pokemon.baseMaxhp) : pokemon.baseMaxhp;
+			pokemon.hp = newMaxHP - (pokemon.maxhp - pokemon.hp);
+			pokemon.maxhp = newMaxHP;
+			this.add('-heal', pokemon, pokemon.getHealth, '[silent]');
+		},
+		isPermanent: true,
+		name: "Cell Construct",
+		rating: 5,
+		num: 211,
+		isNonstandard: "Future",
+	},
+	malevolentsoul: {
+		onAfterMoveSecondarySelf(source, target, move) {
+			if (source && source !== target && move && move.category !== 'Status' && !source.forceSwitchFlag) {
+				this.damage(source.baseMaxhp / 10, source, source, this.dex.items.get('lifeorb'));
+			}
+		},
+		onTryHit(target, source, move) {
+			if (move.category === 'Status' && target !== source) {
+				this.add('-immune', target, '[from] ability: Malevolent Soul');
+				return null;
+			}
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fairy') {
+				this.debug('Malevolent Soul boost');
+				return this.chainModify(2);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fairy') {
+				this.debug('Malevolent Soul boost');
+				return this.chainModify(2);
+			}
+		},
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Ghost') {
+				this.debug('Malevolent Soul ghost quad weakness');
+				return this.chainModify(4);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Ghost') {
+				this.debug('Malevolent Soul ghost quad weakness');
+				return this.chainModify(4);
+			}
+		},
+		name: "Malevolent Soul",
+		isNonstandard: "Future",
+	},
 };

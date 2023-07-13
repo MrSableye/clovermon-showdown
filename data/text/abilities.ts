@@ -3278,6 +3278,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	noweaknesses: {
 		name: "NO WEAKNESSES",
-		shortDesc: "This Pokemon's typing and ability change when using Normal, Ghost, Bug, Steel, Dark, Poison, Water, or Ground moves",
+		shortDesc: "This Pokemon's typing and ability change when using Normal, Ghost, Bug, Steel, Dark, Poison, Water, or Ground moves.",
+	},
+	malevolentsoul: {
+		name: "Malevolent Soul",
+		shortDesc: "This Pokemon is immune to status and has doubled power on Fairy-Type moves. Takes 10% recoil for moves used and Ghost moves have x4 power against this Pokemon.",
 	},
 };
