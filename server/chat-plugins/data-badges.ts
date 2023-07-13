@@ -51,9 +51,7 @@ const checkCanUpdateTours = async (user: User) => {
 	}
 };
 
-const getTourWins = (userID: string) => {
-	return data.tours[userID] || 0;
-};
+const getTourWins = (userID: string) => data.tours[userID] || 0;
 
 const changeTourWins = (userID: string, func: (previousWins: number) => number) => {
 	if (!data.tours[userID]) data.tours[userID] = 0;
@@ -81,7 +79,7 @@ const checkTourThreshold = async (userID: string, user: User) => {
 				await Badges.addBadgeToUser(userID, TOUR_BADGE_ID, user, true);
 			} catch (e) {}
 
-			await Badges.updateBadgeData(userID, TOUR_BADGE_ID, { wins: userTourWins }, user, true);
+			await Badges.updateBadgeData(userID, TOUR_BADGE_ID, {wins: userTourWins}, user, true);
 		} catch (e) { return false; }
 
 		return true;
@@ -96,7 +94,7 @@ const addDiscordBadge = async (user: User, username: string) => {
 			await Badges.addBadgeToUser(user.id, DISCORD_BADGE_ID, user, true);
 		} catch (e) {}
 
-		await Badges.updateBadgeData(user.id, DISCORD_BADGE_ID, { username, }, user, true);
+		await Badges.updateBadgeData(user.id, DISCORD_BADGE_ID, {username}, user, true);
 	} catch (e) { return false; }
 
 	return true;
@@ -108,7 +106,7 @@ export const commands: Chat.ChatCommands = {
 		tour: 'tournament',
 		tours: 'tournament',
 		tournament: {
-			async get(target, room, user) {
+			get(target, room, user) {
 				checkBadgesEnabled();
 
 				const userID = toID(target);
@@ -122,7 +120,7 @@ export const commands: Chat.ChatCommands = {
 
 				const [rawUserID, rawValue] = target.split(',');
 				const userID = toID(rawUserID);
-				const value = parseInt(toID(rawValue), 10);
+				const value = parseInt(toID(rawValue));
 
 				if (Number.isNaN(value)) {
 					throw new Chat.ErrorMessage(`Invalid tour amount ${value} specified.`);
@@ -178,16 +176,16 @@ export const commands: Chat.ChatCommands = {
 
 				const rest = new REST().setToken(Config.discord);
 				const discordUser = await rest.get(Routes.user(discordId)) as any;
-				const username = discordUser.discriminator === '0'
-					? discordUser.username : `${discordUser.username}#${discordUser.discriminator}`;
+				const username = discordUser.discriminator === '0' ?
+					discordUser.username : `${discordUser.username}#${discordUser.discriminator}`;
 
 				const success = await addDiscordBadge(user, username);
 				if (!success) throw new Chat.ErrorMessage('An error has occured.');
-				
+
 				return this.sendReplyBox('Your Discord badge has been activated and updated.');
 			},
 			get(target, room, user) {
-				const discordId =  data.discord[user.id];
+				const discordId = data.discord[user.id];
 				if (!discordId) throw new Chat.ErrorMessage('You have no linked Discord id.');
 
 				return this.sendReplyBox(`Your linked Discord id is ${discordId}`);

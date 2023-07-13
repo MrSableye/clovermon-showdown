@@ -32,7 +32,7 @@ Ratings and how they work:
 
 */
 
-import { Pokemon } from "../sim";
+import {Pokemon} from "../sim";
 
 export const Abilities: {[abilityid: string]: AbilityData} = {
 	noability: {
@@ -6828,7 +6828,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	tetanus: {
 		onDamagingHit(damage, target, source, move) {
 			if (move.flags['contact']) {
-					source.trySetStatus('tox', target);
+				source.trySetStatus('tox', target);
 			}
 		},
 		name: "Tetanus",
@@ -8894,8 +8894,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-ability', pokemon, 'Real');
 			if (pokemon.status === 'frz') {
 				this.add('-message', `*slides into battle*`);
-			}
-			else if (pokemon.status === 'brn') {
+			} else if (pokemon.status === 'brn') {
 				if (random === 0) {
 					this.add('-message', `*agonized squeaks* I'M STILL BURNING!`);
 				}
@@ -8908,8 +8907,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*screaming squeak* WHY ME! IM STILL ON FIRE!`);
 				}
-			}
-			else if (pokemon.status === 'psn' || pokemon.status === 'tox' ) {
+			} else if (pokemon.status === 'psn' || pokemon.status === 'tox') {
 				if (random === 0) {
 					this.add('-message', `*sobbing squeaks* please just let me recover!`);
 				}
@@ -8922,8 +8920,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*wailing* anyone but me please!`);
 				}
-			}
-			else if (pokemon.status === 'par' ) {
+			} else if (pokemon.status === 'par') {
 				if (random === 0) {
 					this.add('-message', `*squeaky wailing* i cant fend for myself! please get me out of here!`);
 				}
@@ -8936,8 +8933,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*sobbing* please dont send me out!`);
 				}
-			}
-			else if (pokemon.status === 'slp' ) {
+			} else if (pokemon.status === 'slp') {
 				if (random === 0) {
 					this.add('-message', `*is sent out still unconscious*`);
 				}
@@ -8974,57 +8970,43 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 				if (pokemon.status === 'slp') {
 					this.add('-message', `*sleeps but confused now*`);
-				}
-				else if (random === 0) {
+				} else if (random === 0) {
 					this.add('-message', `*dizzy squeak*`);
-				}
-				else if (random === 1) {
+				} else if (random === 1) {
 					this.add('-message', `*squeak of confusion*`);
-				}
-				else if (random === 2) {
+				} else if (random === 2) {
 					this.add('-message', `*squeak* my vision is all hazy!`);
-				}
-				else if (random === 3) {
+				} else if (random === 3) {
 					this.add('-message', `*horrified squeak* what are you doing to me!`);
 				}
-			}
-			else if (status.id === 'leechseed') {
+			} else if (status.id === 'leechseed') {
 				if (pokemon.status === 'frz') {
 					this.add('-message', `*is helpless to stop the seeds from sprouting*`);
 				}
 				if (pokemon.status === 'slp') {
 					this.add('-message', `*starts dreaming of plants*`);
-				}
-				else if (random === 0) {
+				} else if (random === 0) {
 					this.add('-message', `*fearful squeak* what are those seeds?`);
-				}
-				else if (random === 1) {
+				} else if (random === 1) {
 					this.add('-message', `*confused squeaking* that didnt hurt me at all`);
-				}
-				else if (random === 2) {
+				} else if (random === 2) {
 					this.add('-message', `*squeak* seeds?`);
-				}
-				else if (random === 3) {
+				} else if (random === 3) {
 					this.add('-message', `*terrified squeak* what is this going to do to me!`);
 				}
-			}
-			else if (status.id === 'curse') {
+			} else if (status.id === 'curse') {
 				if (pokemon.status === 'frz') {
 					this.add('-message', `*frozen insanity*`);
 				}
 				if (pokemon.status === 'slp') {
 					this.add('-message', `*thrashing while being tormented in dreams*`);
-				}
-				else if (random === 0) {
+				} else if (random === 0) {
 					this.add('-message', `*screaming squeak* WHAT IS WRONG WITH YOU!`);
-				}
-				else if (random === 1) {
+				} else if (random === 1) {
 					this.add('-message', `*begins to go insane* b-but why would you do something so cruel!`);
-				}
-				else if (random === 2) {
+				} else if (random === 2) {
 					this.add('-message', `*squeak of horror* my mind is breaking!`);
-				}
-				else if (random === 3) {
+				} else if (random === 3) {
 					this.add('-message', `*loud sobbing* WHY WHY WHY WHY WHY WHY WHY`);
 				}
 			}
@@ -9044,8 +9026,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*silence*`);
 				}
-			}
-			else if (pokemon.status === 'brn') {
+			} else if (pokemon.status === 'brn') {
 				if (random === 0) {
 					this.add('-message', `*pained squeaking* it burns!`);
 				}
@@ -9058,8 +9039,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*screaming squeak* its too hot!`);
 				}
-			}
-			else if (pokemon.status === 'tox') {
+			} else if (pokemon.status === 'tox') {
 				if (random === 0) {
 					this.add('-message', `*screams and wriggles violently* it hurts! please stop it!`);
 				}
@@ -9072,8 +9052,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*slithers around in agony*`);
 				}
-			}
-			else if (pokemon.status === 'psn') {
+			} else if (pokemon.status === 'psn') {
 				if (random === 0) {
 					this.add('-message', `*squeaks of worry* i feel dizzy`);
 				}
@@ -9086,8 +9065,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*frightened squeak* i dont want to die *sobs*`);
 				}
-			}
-			else if (pokemon.status === 'par') {
+			} else if (pokemon.status === 'par') {
 				if (random === 0) {
 					this.add('-message', `*crying squeak* i cant feel my body`);
 				}
@@ -9100,8 +9078,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*hyperventilating squeak*`);
 				}
-			}
-			else if (pokemon.volatiles['nightmare']) {
+			} else if (pokemon.volatiles['nightmare']) {
 				if (random === 0) {
 					this.add('-message', `*thrashing about in sleep*`);
 				}
@@ -9114,8 +9091,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*squeaky whimpers while asleep*`);
 				}
-			}
-			else if (pokemon.status === 'slp') {
+			} else if (pokemon.status === 'slp') {
 				if (random === 0) {
 					this.add('-message', `*curled up and sleeping soundly*`);
 				}
@@ -9128,8 +9104,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*sleepy squeaks*`);
 				}
-			}
-			else if (pokemon.volatiles['leechseed']) {
+			} else if (pokemon.volatiles['leechseed']) {
 				if (random === 0) {
 					this.add('-message', `*squeaks of horror* NO NO NO ITS DRAINING MY BLOOD!`);
 				}
@@ -9142,8 +9117,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*crying squeaks* ill never eat seeds again please stop!`);
 				}
-			}
-			else if (pokemon.volatiles['curse']) {
+			} else if (pokemon.volatiles['curse']) {
 				if (random === 0) {
 					this.add('-message', `*curls up in a ball and goes insane and starts crying*`);
 				}
@@ -9156,8 +9130,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*uncontrollable sobbing*`);
 				}
-			}
-			else if (pokemon.volatiles['attract']) {
+			} else if (pokemon.volatiles['attract']) {
 				if (random === 0) {
 					this.add('-message', `*happy squeak* i love you!`);
 				}
@@ -9170,8 +9143,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*infatuated chirping* i love you so much!`);
 				}
-			}
-			else if (pokemon.volatiles['substitute']) {
+			} else if (pokemon.volatiles['substitute']) {
 				if (random === 0) {
 					this.add('-message', `*happy squeak* this substitute is so cute!`);
 				}
@@ -9184,8 +9156,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*cowers behind the substitute*`);
 				}
-			}
-			else {
+			} else {
 				if (random === 0) {
 					this.add('-message', `*thinks to self* *squeak* what am i even doing here`);
 				}
@@ -9204,20 +9175,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const random = this.random(4);
 			if (pokemon.status === 'slp' || pokemon.status === 'tox') {
 				this.add('-message', `*is helpless to stop it from happening`);
-			}
-			else if (pokemon.status === 'brn' || pokemon.status === 'par' || pokemon.status === 'psn' || pokemon.status === 'tox') {
+			} else if (pokemon.status === 'brn' || pokemon.status === 'par' || pokemon.status === 'psn' || pokemon.status === 'tox') {
 				this.add('-message', `*sobbing squeak* IT'S ALL I HAVE LEFT PLEASE!`);
-			}
-			else if (random === 0) {
+			} else if (random === 0) {
 				this.add('-message', `*squeaks angrily* give that back!`);
-			}
-			else if (random === 1) {
+			} else if (random === 1) {
 				this.add('-message', `*angry squeak* hey that was mine!`);
-			}
-			else if (random === 2) {
+			} else if (random === 2) {
 				this.add('-message', `*sad squeaking* that was mine!`);
-			}
-			else if (random === 3) {
+			} else if (random === 3) {
 				this.add('-message', `*angrily squeaks* you cant do that!`);
 			}
 		},
@@ -9225,14 +9191,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const random = this.random(4);
 			if (pokemon.status === 'frz') {
 				this.add('-message', `*slides away while frozen*`);
-			}
-			else if (pokemon.status === 'slp') {
+			} else if (pokemon.status === 'slp') {
 				this.add('-message', `*is shoved back in the pokeball still asleep*`);
-			}
-			else if (pokemon.status === 'par') {
+			} else if (pokemon.status === 'par') {
 				this.add('-message', `*is shoved back in the pokeball* hey! be more gentle please!`);
-			}
-			else if (pokemon.status === 'brn') {
+			} else if (pokemon.status === 'brn') {
 				if (random === 0) {
 					this.add('-message', `*squeaking in agony* AT LEAST PUT ME OUT`);
 				}
@@ -9245,8 +9208,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*numb to the pain*`);
 				}
-			}
-			else if (pokemon.status === 'psn' || pokemon.status === 'tox') {
+			} else if (pokemon.status === 'psn' || pokemon.status === 'tox') {
 				if (random === 0) {
 					this.add('-message', `*suffering squeak* cure me please...`);
 				}
@@ -9259,8 +9221,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*vomits*`);
 				}
-			}
-			else if (pokemon.volatiles['leechseed']) {
+			} else if (pokemon.volatiles['leechseed']) {
 				if (random === 0) {
 					this.add('-message', `*squeaks of horror* GET THESE SEEDS OFF OF ME!`);
 				}
@@ -9273,11 +9234,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*fearful squeak* i never want to see a seed ever again`);
 				}
-			}
-			else if (pokemon.volatiles['curse']) {
+			} else if (pokemon.volatiles['curse']) {
 				this.add('-message', `*joyous squeak* im free from the curse!`);
-		}
-			else if (pokemon.volatiles['taunt']) {
+			} else if (pokemon.volatiles['taunt']) {
 				if (random === 0) {
 					this.add('-message', `*angry squeak* go to hell!`);
 				}
@@ -9290,8 +9249,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*angry squeak* youre so cruel`);
 				}
-			}
-			else if (pokemon.volatiles['torment']) {
+			} else if (pokemon.volatiles['torment']) {
 				if (random === 0) {
 					this.add('-message', `*sobbing* they wont bother me anymore!`);
 				}
@@ -9304,8 +9262,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*relieved squeak* they were so mean...`);
 				}
-			}
-			else if (pokemon.volatiles['substitute']) {
+			} else if (pokemon.volatiles['substitute']) {
 				if (random === 0) {
 					this.add('-message', `*sad squeak* ill miss my  substitute...`);
 				}
@@ -9318,26 +9275,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*sad squeak* but my substitute was so cute!`);
 				}
-			}
-			else if (random === 0) {
+			} else if (random === 0) {
 				this.add('-message', `*sad squeak* goodbye`);
-			}
-			else if (random === 1) {
+			} else if (random === 1) {
 				this.add('-message', `*squeak* bye`);
-			}
-			else if (random === 2) {
+			} else if (random === 2) {
 				this.add('-message', `*sad squeaking* but i was making a new friend!`);
-			}
-			else if (random === 3) {
+			} else if (random === 3) {
 				this.add('-message', `*runs away squeaking fearfully*`);
 			}
 		},
 		onEatItem(item, pokemon) {
 			const random = this.random(4);
 			if (pokemon.status === 'frz') {
-					this.add('-message', `*somehow starts eating while frozen*`);
-			}
-			else if (pokemon.status === 'brn') {
+				this.add('-message', `*somehow starts eating while frozen*`);
+			} else if (pokemon.status === 'brn') {
 				if (random === 0) {
 					this.add('-message', `*pained squeaking* this better help with my burns!`);
 				}
@@ -9350,8 +9302,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*screaming squeak* my food is too hot!`);
 				}
-			}
-			else if (pokemon.status === 'tox') {
+			} else if (pokemon.status === 'tox') {
 				if (random === 0) {
 					this.add('-message', `*struggles to keep food down*`);
 				}
@@ -9364,8 +9315,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*starts choking*`);
 				}
-			}
-			else if (pokemon.status === 'psn') {
+			} else if (pokemon.status === 'psn') {
 				if (random === 0) {
 					this.add('-message', `*sickened squeaking* this is worse than a hangover!`);
 				}
@@ -9378,8 +9328,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*sad squeak* i feel too sick to enjoy anything...`);
 				}
-			}
-			else if (pokemon.status === 'par') {
+			} else if (pokemon.status === 'par') {
 				if (random === 0) {
 					this.add('-message', `*crying squeak* i hope it doesnt get stuck in my throat...`);
 				}
@@ -9392,8 +9341,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*exhausted from trying to swallow while paralyzed*`);
 				}
-			}
-			else if (pokemon.volatiles['taunt']) {
+			} else if (pokemon.volatiles['taunt']) {
 				if (random === 0) {
 					this.add('-message', `*angry squeak* this is mine you cant have any`);
 				}
@@ -9406,8 +9354,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*eats it all before you can say anything*`);
 				}
-			}
-			else if (pokemon.volatiles['torment']) {
+			} else if (pokemon.volatiles['torment']) {
 				if (random === 0) {
 					this.add('-message', `*sad squeak* please dont call me fat for this`);
 				}
@@ -9420,8 +9367,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*crying squeak* i hope i choke...`);
 				}
-			}
-			else if (pokemon.volatiles['yawn'] ) {
+			} else if (pokemon.volatiles['yawn']) {
 				if (random === 0) {
 					this.add('-message', `*sleepy squeak* its time for a midnight snack`);
 				}
@@ -9434,8 +9380,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*eating while barely awake*`);
 				}
-			}
-			else if (pokemon.status === 'slp') {
+			} else if (pokemon.status === 'slp') {
 				if (random === 0) {
 					this.add('-message', `*begins sleepeating*`);
 				}
@@ -9448,8 +9393,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*squeaky snore*`);
 				}
-			}
-			else if (pokemon.volatiles['leechseed']) {
+			} else if (pokemon.volatiles['leechseed']) {
 				if (random === 0) {
 					this.add('-message', `*squeaks of horror* THIS ISNT HELPING!`);
 				}
@@ -9462,8 +9406,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*crying squeaks* LOOK IM EATING SOMETHING ELSE PLEASE STOP IT!`);
 				}
-			}
-			else if (pokemon.volatiles['curse']) {
+			} else if (pokemon.volatiles['curse']) {
 				if (random === 0) {
 					this.add('-message', `*digs in like a feral animal*`);
 				}
@@ -9476,8 +9419,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*furious squeak* i need blood`);
 				}
-			}
-			else if (pokemon.volatiles['attract']) {
+			} else if (pokemon.volatiles['attract']) {
 				if (random === 0) {
 					this.add('-message', `*happy squeak* i can share with you!`);
 				}
@@ -9490,8 +9432,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*embarassed chirping* is this a date?`);
 				}
-			}
-			else {
+			} else {
 				if (random === 0) {
 					this.add('-message', `*happy chirping* thanks for the food!`);
 				}
@@ -9510,26 +9451,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const random = this.random(4);
 			if (!target.hp) {
 				if (target.status === 'frz') {
-						this.add('-message', `*stops moving forever*`);
+					this.add('-message', `*stops moving forever*`);
 				}
 				if (target.status === 'slp') {
 					this.add('-message', `*never wakes up*`);
-				}
-				else if (random === 0) {
+				} else if (random === 0) {
 					this.add('-message', `*dying squeaks* PLEASE I JUST WANTED TO BE FRIENDS!`);
-				}
-				else if (random === 1) {
+				} else if (random === 1) {
 					this.add('-message', `*last squeak* goodbye... *stops breathing*`);
-				}
-				else if (random === 2) {
+				} else if (random === 2) {
 					this.add('-message', `*desperate squeaking* I DONT WANT TO DIE LIKE THIS!`);
-				}
-				else if (random === 3) {
+				} else if (random === 3) {
 					this.add('-message', `*whimpers one last time and then curls up and dies*`);
 				}
 			}
 			if (target.status === 'frz') {
-					this.add('-message', `*is incapable of moving*`);
+				this.add('-message', `*is incapable of moving*`);
 			}
 			if (target.status === 'brn' || target.status === 'psn' || target.status === 'tox') {
 				if (random === 0) {
@@ -9572,8 +9509,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (random === 3) {
 					this.add('-message', `*curls up defensively while sleeping*`);
 				}
-			}
-			else {
+			} else {
 				if (random === 0) {
 					this.add('-message', `*squeaks of pain* w-why?!`);
 				}
@@ -11562,8 +11498,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Suffer As I Have",
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
-				source.addVolatile('curse', this.effectState.target);
-			},
+			source.addVolatile('curse', this.effectState.target);
+		},
 		rating: 2,
 		isNonstandard: "Future",
 	},
@@ -11606,7 +11542,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Feel The Foliage",
 		rating: 2,
 		isNonstandard: "Future",
-  },
+	},
 	musclemass: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Fighting') {
@@ -11631,7 +11567,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Muscle Mass",
 		rating: 3,
 		num: 114,
-    isNonstandard: "Future",
+		isNonstandard: "Future",
 	},
 	runngun: {
 		// This should be applied directly to the stat as opposed to chaining with the others
@@ -11656,33 +11592,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.effectState.unnerved = true;
 		},
 		onPrepareHit(source, target, move) {
-			
-		if (move.type === 'Normal'||move.type === 'Ghost'){
-			source.setType(['Normal', 'Ghost']);
-			source.setAbility('wholesome100');
-			this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] ability: NO WEAKNESSES', '[of] ' + source);
-		this.add('-ability', source, source.getAbility(), '[from] ability: NO WEAKNESSES');
-		}
-		else if (move.type === 'Bug'||move.type === 'Steel'){
-			source.setType(['Bug', 'Steel']);
-			source.setAbility('flashfire');
-			this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] ability: NO WEAKNESSES', '[of] ' + source);
-		this.add('-ability', source, source.getAbility(), '[from] ability: NO WEAKNESSES');
-		}
-		else if (move.type === 'Dark'||move.type === 'Poison'){
-			source.setType(['Dark', 'Poison']);
-			source.setAbility('eartheater');
-			this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] ability: NO WEAKNESSES', '[of] ' + source);
-		this.add('-ability', source, source.getAbility(), '[from] ability: NO WEAKNESSES');
-		}
-		else if (move.type === 'Water'||move.type === 'Ground'){
-			source.setType(['Water', 'Ground']);
-			source.setAbility('sapsipper');	
-			this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] ability: NO WEAKNESSES', '[of] ' + source);
-		this.add('-ability', source, source.getAbility(), '[from] ability: NO WEAKNESSES');
-		}
-		
-		
+			if (move.type === 'Normal' || move.type === 'Ghost') {
+				source.setType(['Normal', 'Ghost']);
+				source.setAbility('wholesome100');
+				this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] ability: NO WEAKNESSES', '[of] ' + source);
+				this.add('-ability', source, source.getAbility(), '[from] ability: NO WEAKNESSES');
+			} else if (move.type === 'Bug' || move.type === 'Steel') {
+				source.setType(['Bug', 'Steel']);
+				source.setAbility('flashfire');
+				this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] ability: NO WEAKNESSES', '[of] ' + source);
+				this.add('-ability', source, source.getAbility(), '[from] ability: NO WEAKNESSES');
+			} else if (move.type === 'Dark' || move.type === 'Poison') {
+				source.setType(['Dark', 'Poison']);
+				source.setAbility('eartheater');
+				this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] ability: NO WEAKNESSES', '[of] ' + source);
+				this.add('-ability', source, source.getAbility(), '[from] ability: NO WEAKNESSES');
+			} else if (move.type === 'Water' || move.type === 'Ground') {
+				source.setType(['Water', 'Ground']);
+				source.setAbility('sapsipper');
+				this.add('-start', source, 'typechange', source.getTypes().join('/'), '[from] ability: NO WEAKNESSES', '[of] ' + source);
+				this.add('-ability', source, source.getAbility(), '[from] ability: NO WEAKNESSES');
+			}
 		},
 
 		name: "NO WEAKNESSES",
@@ -11733,7 +11663,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					type: 'busted',
 				};
 				this.add('-message', `${pokemon.name} ignored the CAB team's advice and buffed itself. Excessively. But just this once.`);
-				this.boost({ atk: 1, def: 1, spa: 1, spd: 1, spe: 1 });
+				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1});
 			} else if (dayOfWeek === 5) {
 				pokemon.abilityState = {
 					type: 'reproduction',
@@ -11779,7 +11709,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			const isPrime = (num: number) => {
 				if (num <= 1) return false;
 				if (num === 2) return true;
-				let num2 = Math.sqrt(num);
+				const num2 = Math.sqrt(num);
 				for (let i = 2; i <= num2; i++) {
 					if (num2 % i === 0) {
 						return false;
@@ -11794,10 +11724,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
-		onAnyTryMove() {
+		onAnyTryMove(source) {
 			const active = this.getAllActive()
 				.some((pokemon) => pokemon.hasAbility('acabability') && pokemon.abilityState && pokemon.abilityState.type === 'tripping');
-			if (this.randomChance(1, 100)) {
+			if (active && this.randomChance(1, 100)) {
 				return this.FAIL;
 			}
 		},
@@ -12172,14 +12102,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					this.add('-immune', target, '[from] ability: Windglider');
 				}
 				return null;
-				}
-			},
-				onBasePowerPriority: 19,
-				onBasePower(basePower, attacker, defender, move) {
-					if (move.flags['wind']) {
-						return this.chainModify(1.3);
-					}
-				},
+			}
+		},
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['wind']) {
+				return this.chainModify(1.3);
+			}
+		},
 		isBreakable: true,
 		isNonstandard: "Future",
 		name: "Windglider",

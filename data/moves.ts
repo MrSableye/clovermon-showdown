@@ -26364,38 +26364,38 @@ export const Moves: {[moveid: string]: MoveData} = {
 		noSketch: true,
 	},
 	groundbomb: {
-			accuracy: 100,
-			basePower: 200,
-			category: "Special",
-			name: "Ground Bomb",
-			pp: 5,
-			priority: 0,
-			flags: {},
-			ignoreImmunity: true,
-			isFutureMove: true,
-			onTry(source, target) {
-				if (!target.side.addSlotCondition(target, 'futuremove')) return false;
-				Object.assign(target.side.slotConditions[target.position]['futuremove'], {
-					duration: 4,
-					move: 'groundbomb',
-					source: source,
-					moveData: {
-						id: 'groundbomb',
-						name: "Ground Bomb",
-						accuracy: 100,
-						basePower: 200,
-						category: "Special",
-						priority: 0,
-						flags: {},
-						ignoreImmunity: false,
-						effectType: 'Move',
-						isFutureMove: true,
-						type: 'Ground',
-					},
-				});
-				this.add('-start', source, 'move: Ground Bomb');
-				return this.NOT_FAIL;
-			},
+		accuracy: 100,
+		basePower: 200,
+		category: "Special",
+		name: "Ground Bomb",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		ignoreImmunity: true,
+		isFutureMove: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 4,
+				move: 'groundbomb',
+				source: source,
+				moveData: {
+					id: 'groundbomb',
+					name: "Ground Bomb",
+					accuracy: 100,
+					basePower: 200,
+					category: "Special",
+					priority: 0,
+					flags: {},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					isFutureMove: true,
+					type: 'Ground',
+				},
+			});
+			this.add('-start', source, 'move: Ground Bomb');
+			return this.NOT_FAIL;
+		},
 		secondary: {
 			chance: 10,
 			status: 'brn',
@@ -30979,7 +30979,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {spa: 2}},
 		contestType: "Cool",
 	},
-	funnyfun: { 
+	funnyfun: {
 		accuracy: true,
 		basePower: 0,
 		basePowerCallback(pokemon) {
@@ -31317,9 +31317,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {},
 		onHit(target) {
 			if (target.getStat('atk', true, true) > target.getStat('spa', true, true)) {
-				this.boost({ atk: 1, spe: 1});
+				this.boost({atk: 1, spe: 1});
 			} else {
-				this.boost({ spa: 1, spe: 1});
+				this.boost({spa: 1, spe: 1});
 			}
 		},
 		secondary: null,
@@ -31485,10 +31485,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onTryHit(target, source, move) {
 			if (target.newlySwitched || this.queue.willMove(target)) {
 				this.debug('Went first, ERR crit activated');
-				return move.willCrit = true;
+				move.willCrit = true;
+				return;
 			}
 			this.debug('Went last, ERR no crit');
-			return move.willCrit = false;
+			move.willCrit = false;
 		},
 	},
 	violentvines: {

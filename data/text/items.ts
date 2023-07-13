@@ -2789,13 +2789,12 @@ export const ItemsText: {[k: string]: ItemText} = {
 			desc: "Can only be held by Jewipede. Its Normal- & Bug-type attacks have 1.2x power.",
 		},
 	},
-		tumultuoustibia: {
-			name: "Tumultuous Tibia",
-			desc: "If held by Blobbos-Skeleton, its Attack is doubled.",
-		},
-		mascotsorb: {
-			name: "Mascot's Orb",
-			desc: "If held by Blobbos-Pika, its Attack and Special Attack are doubled.",
-		},
+	tumultuoustibia: {
+		name: "Tumultuous Tibia",
+		desc: "If held by Blobbos-Skeleton, its Attack is doubled.",
+	},
+	mascotsorb: {
+		name: "Mascot's Orb",
+		desc: "If held by Blobbos-Pika, its Attack and Special Attack are doubled.",
 	},
 };

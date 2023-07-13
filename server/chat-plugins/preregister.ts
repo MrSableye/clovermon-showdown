@@ -1,5 +1,5 @@
-import { FS } from "../../lib";
-import { Badges } from "./badges";
+import {FS} from "../../lib";
+import {Badges} from "./badges";
 
 const PREREGISTRATION_LIMIT = 2;
 
@@ -62,15 +62,15 @@ const createPendingPregistrationHtml = () => {
 
 export const commands: Chat.ChatCommands = {
 	preregister: {
-		submit(target, room, user) {
-			if (!canUserPreregister(user)) throw new Chat.ErrorMessage('You have won a tournament or be + or higher to preregister.');
+		async submit(target, room, user) {
+			if (!await canUserPreregister(user)) throw new Chat.ErrorMessage('You have won a tournament or be + or higher to preregister.');
 			if (!isValidName(target)) throw new Chat.ErrorMessage('Name must be greater than 2 characters and less than 19 characters.');
 			if (registrationExists(target)) throw new Chat.ErrorMessage('Name is already registered.');
 			if (toID(target) === user.id) throw new Chat.ErrorMessage('Your own name is already preregistered by default.');
 			if (!pregistration[user.id]) pregistration[user.id] = [];
 			if (pregistration[user.id].length >= PREREGISTRATION_LIMIT) throw new Chat.ErrorMessage(`You can only preregister up to ${PREREGISTRATION_LIMIT} names.`);
 
-			pregistration[user.id].push({ approved: false, id: toID(target), name: target.trim() });
+			pregistration[user.id].push({approved: false, id: toID(target), name: target.trim()});
 			savePreregistration();
 
 			return this.sendReplyBox(`Successfully submitted preregistration for: ${target.trim()}`);
@@ -81,7 +81,7 @@ export const commands: Chat.ChatCommands = {
 			if (!userRegistrations) throw new Chat.ErrorMessage('You have not preregistered any names.');
 			const registrationIndex = userRegistrations.findIndex((reg) => reg.id === targetId);
 			if (registrationIndex < 0) throw new Chat.ErrorMessage(`You have not not preregistered ${targetId}`);
-			
+
 			pregistration[user.id].splice(registrationIndex, 1);
 			savePreregistration();
 
@@ -90,7 +90,7 @@ export const commands: Chat.ChatCommands = {
 		list(target, room, user) {
 			const userRegistrations = pregistration[user.id];
 			if (!userRegistrations) throw new Chat.ErrorMessage('You have not preregistered any names.');
-			
+
 			return this.sendReplyBox(`Pregistrations: ${userRegistrations.map((reg) => `${reg.name} (${reg.approved ? 'APPROVED' : 'UNAPPROVED'})`).join(', ')}`);
 		},
 		approve(target, room, user) {
