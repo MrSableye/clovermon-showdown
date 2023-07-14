@@ -12128,7 +12128,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	cellconstruct: {
 		onResidualOrder: 29,
 		onResidual(pokemon) {
-			if (pokemon.baseSpecies.baseSpecies !== 'Blobbos-Mitosis' || pokemon.transformed || !pokemon.hp) return;
+			if (pokemon.species.name !== 'Blobbos-Mitosis' || pokemon.transformed || !pokemon.hp) return;
 			if (pokemon.species.id === 'blobbosmitosiscomplete' || pokemon.hp > pokemon.maxhp / 2) return;
 			this.add('-activate', pokemon, 'ability: Cell Construct');
 			pokemon.formeChange('Blobbos-Mitosis-Complete', this.effect, true);

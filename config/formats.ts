@@ -759,7 +759,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Evasion Moves Clause',
 		],
-		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs'],
+		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct'],
 	},
 	{
 		name: '[Gen 8 Clover Blobbos CAP Only] Ubers',

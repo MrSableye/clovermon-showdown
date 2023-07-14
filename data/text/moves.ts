@@ -8295,6 +8295,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Does This Work",
 		shortDesc: "I dunno, does it?",
 	},
+	mitosistackle: {
+		name: "Mitosis Tackle",
+		shortDesc: "Hits twice.",
+	},
+	mitosismash: {
+		name: "Mitosis Mash",
+		shortDesc: "Hits 3 times. Each hit rises by 13 Power. Each hit can miss.",
+	},
 	telluriccurrent: {
 		name: "Telluric Current",
 		shortDesc: "Able to hit Ground types.",

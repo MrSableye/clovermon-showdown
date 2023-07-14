@@ -1663,4 +1663,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	mitosistackle: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mitosismash: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
