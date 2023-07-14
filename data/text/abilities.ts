@@ -3236,6 +3236,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "A Cab Ability",
 		desc: "https://pastebin.com/Nt7DxGis",
 	},
+	cellconstruct: {
+		name: "Cell Construct",
+		desc: "If Blobbos-Mitosis reaches under 50% of health, transforms into Blobbos-Mitosis-Complete.",
+	},
 	fireaffinity: {
 		name: "Fire Affinity",
 		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fire-type attack. This Pokemon is healed 1/8 by Fire.",

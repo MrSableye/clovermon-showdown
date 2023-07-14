@@ -9075,7 +9075,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 379,
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Blobbos-Skeleton') {
+			if (pokemon.species.name === 'Blobbos-Skeleton') {
 				return this.chainModify(2);
 			}
 		},
@@ -9091,13 +9091,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Blobbos-Pika') {
+			if (pokemon.species.name === 'Blobbos-Pika') {
 				return this.chainModify(2);
 			}
 		},
 		onModifySpAPriority: 1,
 		onModifySpA(spa, pokemon) {
-			if (pokemon.baseSpecies.baseSpecies === 'Blobbos-Pika') {
+			if (pokemon.species.name === 'Blobbos-Pika') {
 				return this.chainModify(2);
 			}
 		},
