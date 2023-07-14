@@ -31605,6 +31605,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1, above: 1},
+		hasCrashDamage: true,
+		onMoveFail(target, source, move) {
+			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('Hi Jump Kick'));
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -31614,11 +31618,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 666297,
 		accuracy: 100,
 		basePower: 60,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'par') {
+				this.debug('BP doubled on paralyzed target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		category: "Physical",
 		name: "SmellingSalt",
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target) {
+			if (target.status === 'par') target.cureStatus();
+		},
 		secondary: null,
 		target: "normal",
 		type: "Food",
@@ -31661,7 +31675,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Wood",
 		isNonstandard: "Future",
@@ -31689,6 +31706,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Paper",
@@ -31703,6 +31721,39 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		volatileStatus: 'fold',
+		condition: {
+			onStart(pokemon, source, effect) {
+				this.add('-start', pokemon, 'Fold');
+			},
+			onRestart(pokemon, source, effect) {
+				this.add('-start', pokemon, 'Fold');
+			},
+			onBasePowerPriority: 9,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Paper') {
+					this.debug('fold boost');
+					return this.chainModify(2);
+				}
+			},
+//			onMoveAborted(pokemon, target, move) {
+//				if (move.id !== 'fold') {
+//					pokemon.removeVolatile('fold');
+//				}
+//			},
+//			onAfterMove(pokemon, target, move) {
+//				if (move.id !== 'fold') {
+//					pokemon.removeVolatile('fold');
+//				}
+//			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Fold', '[silent]');
+			},
+		},
+		boosts: {
+			def: 1,
+			spd: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Paper",
@@ -31727,11 +31778,67 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 666625,
 		accuracy: 90,
 		basePower: 35,
+		basePowerCallback(pokemon, target, move) {
+			let bp = move.basePower;
+			const paperballData = pokemon.volatiles['paperball'];
+			if (paperballData?.hitCount) {
+				bp *= Math.pow(2, paperballData.contactHitCount);
+			}
+			if (paperballData && pokemon.status !== 'slp') {
+				paperballData.hitCount++;
+				paperballData.contactHitCount++;
+				if (paperballData.hitCount < 5) {
+					paperballData.duration = 2;
+				}
+			}
+			if (pokemon.volatiles['defensecurl']) {
+				bp *= 2;
+			}
+			this.debug("BP: " + bp);
+			return bp;
+		},
 		category: "Physical",
 		name: "Paper Ball",
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bomb: 1},
+		onModifyMove(move, pokemon, target) {
+			if (pokemon.volatiles['paperball'] || pokemon.status === 'slp' || !target) return;
+			pokemon.addVolatile('paperball');
+			// @ts-ignore
+			// TS thinks pokemon.volatiles['paperball'] doesn't exist because of the condition on the return above
+			// but it does exist now because addVolatile created it
+			pokemon.volatiles['paperball'].targetSlot = move.sourceEffect ? pokemon.lastMoveTargetLoc : pokemon.getLocOf(target);
+		},
+		onAfterMove(source, target, move) {
+			const paperballData = source.volatiles["paperball"];
+			if (
+				paperballData &&
+				paperballData.hitCount === 5 &&
+				paperballData.contactHitCount < 5
+				// this conditions can only be met in gen7 and gen8dlc1
+				// see `disguise` and `iceface` abilities in the resp mod folders
+			) {
+				source.addVolatile("rolloutstorage");
+				source.volatiles["rolloutstorage"].contactHitCount =
+				paperballData.contactHitCount;
+			}
+		},
+
+		condition: {
+			duration: 1,
+			onLockMove: 'paperball',
+			onStart() {
+				this.effectState.hitCount = 0;
+				this.effectState.contactHitCount = 0;
+			},
+			onResidual(target) {
+				if (target.lastMove && target.lastMove.id === 'struggle') {
+					// don't lock
+					delete target.volatiles['paperball'];
+				}
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Paper",
@@ -31746,7 +31853,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -31775,7 +31885,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -31789,7 +31902,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1, bomb: 1},
-		secondary: null,
+		secondaries: [
+			{
+				chance: 10,
+				status: 'brn',
+			},
+			{
+				chance: 10,
+				volatileStatus: 'flinch',
+			},
+		],
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -31803,6 +31925,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+			spd: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Fire",
@@ -31817,6 +31943,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			this.boost({atk: 1}, attacker, attacker, move);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Tech",
@@ -31831,6 +31969,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Tech",
@@ -31859,6 +31998,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+			spd: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Tech",
@@ -31888,7 +32031,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -31916,7 +32062,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondaries: [
+			{
+				chance: 10,
+				status: 'par',
+			},
+			{
+				chance: 10,
+				volatileStatus: 'flinch',
+			},
+		],
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -31944,7 +32099,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 30,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
@@ -31972,7 +32130,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bomb: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
