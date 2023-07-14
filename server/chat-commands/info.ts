@@ -2710,7 +2710,7 @@ export const commands: Chat.ChatCommands = {
 		if (!target) target = user.id;
 		let rawResult;
 		try {
-			rawResult = await Net(`https://pokemonshowdown.com/users/${target}.json`).get(); // TODO: Remove clover hack!!
+			rawResult = await Net(`${Config.routes.root}/users/${target}.json`).get(); // TODO: Remove clover hack!!
 		} catch (e) {
 			if (e.message.includes('Not found')) throw new Chat.ErrorMessage(`User '${target}' is unregistered.`);
 			throw new Chat.ErrorMessage(e.message);

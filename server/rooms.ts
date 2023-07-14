@@ -1692,7 +1692,7 @@ export class GlobalRoomState {
 			user.joinRoom(roomName, connection);
 			if (roomName === 'lobby') includesLobby = true;
 		}
-		if (!includesLobby && Config.serverid !== 'showdown') user.send(`>lobby\n|deinit`);
+		if (!includesLobby && Config.serverid !== 'clodown') user.send(`>lobby\n|deinit`);
 	}
 	checkAutojoin(user: User, connection?: Connection) {
 		if (!user.named) return;
