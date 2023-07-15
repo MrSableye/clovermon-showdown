@@ -3288,4 +3288,329 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Malevolent Soul",
 		shortDesc: "This Pokemon is immune to status and has doubled power on Fairy-Type moves. Takes 10% recoil for moves used and Ghost moves have x4 power against this Pokemon.",
 	},
+	darklife: {
+		name: "Dark Life",
+		shortDesc: "Heals during Midnight.",
+		desc: "Heals during Midnight.",
+	},
+	memetic: {
+		name: "Memetic",
+		shortDesc: "Contact spreads this ability. Lwrs stats non-Meme types.",
+		desc: "Contact spreads this ability. Lwrs stats non-Meme types.",
+	},
+	isolation: {
+		name: "Isolation",
+		shortDesc: "Reduces the damage of incoming special moves.",
+		desc: "Reduces the damage of incoming special moves.",
+	},
+	acidrain: {
+		name: "Acid Rain",
+		shortDesc: "The Pokemon makes it acid rain if it appears in battle.",
+		desc: "The Pokemon makes it acid rain if it appears in battle.",
+	},
+	ethereal: {
+		name: "Ethereal",
+		shortDesc: "Immune to contact moves.",
+		desc: "Immune to contact moves.",
+	},
+	mozart: {
+		name: "Mozart",
+		shortDesc: "Could MOZART still be alive?",
+		desc: "Could MOZART still be alive?",
+	},
+	pride: {
+		name: "Pride",
+		shortDesc: "Raises Special Attack when you defeat a pokemon.",
+		desc: "Raises Special Attack when you defeat a pokemon.",
+	},
+	pounce: {
+		name: "Pounce",
+		shortDesc: "Goes first on the first turn.",
+		desc: "Goes first on the first turn.",
+	},
+	vespertine: {
+		name: "Vespertine",
+		shortDesc: "Boosts the Pokemon's Speed in Midnight.",
+		desc: "Boosts the Pokemon's Speed in Midnight.",
+	},
+	acidrush: {
+		name: "Acid Rush",
+		shortDesc: "Raises Speed in Acid Rain.",
+		desc: "Raises Speed in Acid Rain.",
+	},
+	headache: {
+		name: "Headache",
+		shortDesc: "User's SpAtk rises while confused.",
+		desc: "User's SpAtk rises while confused.",
+	},
+	windate: {
+		name: "Windate",
+		shortDesc: "Normal-type moves become Wind-type moves.",
+		desc: "Normal-type moves become Wind-type moves.",
+	},
+	immolate: {
+		name: "Immolate",
+		shortDesc: "Normal-type moves become Fire-type moves.",
+		desc: "Normal-type moves become Fire-type moves.",
+	},
+	sunbathe: {
+		name: "Sunbathe",
+		shortDesc: "The Pokemon gradually regains HP in sun.",
+		desc: "The Pokemon gradually regains HP in sun.",
+	},
+	snowrush: {
+		name: "Snow Rush",
+		shortDesc: "Boosts the Pokemon's Speed in hail.",
+		desc: "Boosts the Pokemon's Speed in hail.",
+	},
+	magicate: {
+		name: "Magicate",
+		shortDesc: "Normal-type moves become Magic-type moves.",
+		desc: "Normal-type moves become Magic-type moves.",
+	},
+	oasis: {
+		name: "Oasis",
+		shortDesc: "The Pokemon gradually regains HP in sandstorms.",
+		desc: "The Pokemon gradually regains HP in sandstorms.",
+	},
+	winterforce: {
+		name: "Winter Force",
+		shortDesc: "Boosts certain moves' power in hail.",
+		desc: "Boosts certain moves' power in hail.",
+	},
+	evaporate: {
+		name: "Evaporate",
+		shortDesc: "Normal-type moves become Steam-type moves.",
+		desc: "Normal-type moves become Steam-type moves.",
+	},
+	berserker: {
+		name: "Berserker",
+		shortDesc: "Raises Attack when hit.",
+		desc: "Raises Attack when hit.",
+	},
+	martialate: {
+		name: "Martialate",
+		shortDesc: "Normal-type moves become Fighting-type moves.",
+		desc: "Normal-type moves become Fighting-type moves.",
+	},
+	machinate: {
+		name: "Machinate",
+		shortDesc: "Normal-type moves become Steel-type moves.",
+		desc: "Normal-type moves become Steel-type moves.",
+	},
+	furiousfeet: {
+		name: "Furious Feet",
+		shortDesc: "Boosts the power of kicking moves.",
+		desc: "Boosts the power of kicking moves.",
+	},
+	thicktail: {
+		name: "Thick Tail",
+		shortDesc: "Boosts the power of tail moves.",
+		desc: "Boosts the power of tail moves.",
+	},
+	sceptic: {
+		name: "Sceptic",
+		shortDesc: "Ups resistance to Fairy, Divine and Magic-type moves.",
+		desc: "Ups resistance to Fairy, Divine and Magic-type moves.",
+	},
+	coldblooded: {
+		name: "Cold Blooded",
+		shortDesc: "Reduces HP if it is cold. Fire restores HP.",
+		desc: "Reduces HP if it is cold. Fire restores HP.",
+	},
+	lodestone: {
+		name: "Lodestone",
+		shortDesc: "Raises Defense if hit by a Steel-type move.",
+		desc: "Raises Defense if hit by a Steel-type move.",
+	},
+	vaporize: {
+		name: "Vaporize",
+		shortDesc: "Raises Sp.Def if hit by a Water-type move.",
+		desc: "Raises Sp.Def if hit by a Water-type move.",
+	},
+	firewall: {
+		name: "Firewall",
+		shortDesc: "Adjusts defenses according to a foe's offenses.",
+		desc: "Adjusts defenses according to a foe's offenses.",
+	},
+	focus: {
+		name: "Focus",
+		shortDesc: "Boosts SpAtk if there is a status problem.",
+		desc: "Boosts SpAtk if there is a status problem.",
+	},
+	shadowcall: {
+		name: "Shadow Call",
+		shortDesc: "Brings up Midnight weather.",
+		desc: "Brings up Midnight weather.",
+	},
+	wacky: {
+		name: "Wacky",
+		shortDesc: "Makes all moves Wack.",
+		desc: "Makes all moves Wack.",
+	},
+	hydrate: {
+		name: "Hydrate",
+		shortDesc: "Normal-type moves become Water-type moves.",
+		desc: "Normal-type moves become Water-type moves.",
+	},
+	sugarrush: {
+		name: "Sugar Rush",
+		shortDesc: "Raises Speed if hit by a Food-type move.",
+		desc: "Raises Speed if hit by a Food-type move.",
+	},
+	vacuum: {
+		name: "Vacuum",
+		shortDesc: "Draws in all Wind and Flying-type moves to up Defense.",
+		desc: "Draws in all Wind and Flying-type moves to up Defense.",
+	},
+	solarforce: {
+		name: "Solar Force",
+		shortDesc: "Boosts certain moves' power in sun.",
+		desc: "Boosts certain moves' power in sun.",
+	},
+	ionate: {
+		name: "Ionate",
+		shortDesc: "Normal-type moves become Electric-type moves.",
+		desc: "Normal-type moves become Electric-type moves.",
+	},
+	graze: {
+		name: "Graze",
+		shortDesc: "The Pokemon gradually regains HP.",
+		desc: "The Pokemon gradually regains HP.",
+	},
+	pro: {
+		name: "Pro",
+		shortDesc: "Slightly boosts the power of supereffective moves.",
+		desc: "Slightly boosts the power of supereffective moves.",
+	},
+	builder: {
+		name: "Builder",
+		shortDesc: "Extends the duration of barrier and room moves.",
+		desc: "Extends the duration of barrier and room moves.",
+	},
+	siphon: {
+		name: "Siphon",
+		shortDesc: "Boosts the power of draining moves.",
+		desc: "Boosts the power of draining moves.",
+	},
+	bellows: {
+		name: "Bellows",
+		shortDesc: "Wind moves power up this pokemon's fire moves.",
+		desc: "Wind moves power up this pokemon's fire moves.",
+	},
+	sadist: {
+		name: "Sadist",
+		shortDesc: "HP is restored a little every time it inflicts damage.",
+		desc: "HP is restored a little every time it inflicts damage.",
+	},
+	metalworker: {
+		name: "Metalworker",
+		shortDesc: "Boosts the power of Steel type moves.",
+		desc: "Boosts the power of Steel type moves.",
+	},
+	drumroll: {
+		name: "Drum Roll",
+		shortDesc: "Boosts moves used consecutively and sound based moves.",
+		desc: "Boosts moves used consecutively and sound based moves.",
+	},
+	explosive: {
+		name: "Explosive",
+		shortDesc: "Boosts the power of self destructing moves.",
+		desc: "Boosts the power of self destructing moves.",
+	},
+	dreamcatcher: {
+		name: "Dreamcatcher",
+		shortDesc: "Draws in all Psychic-type moves to up Sp. Attack.",
+		desc: "Draws in all Psychic-type moves to up Sp. Attack.",
+	},
+	irradiated: {
+		name: "Irradiated",
+		shortDesc: "Reduces a poisoned foe's HP.",
+		desc: "Reduces a poisoned foe's HP.",
+	},
+	safeshield: {
+		name: "Safe Shield",
+		shortDesc: "Sets up Safeguard.",
+		desc: "Sets up Safeguard.",
+	},
+	choicepower: {
+		name: "Choice Power",
+		shortDesc: "Powers up moves but can only choose one.",
+		desc: "Powers up moves but can only choose one.",
+	},
+	cactus: {
+		name: "Cactus",
+		shortDesc: "The Pokemon receives benefits in rain/sandstorm and inflicts damage on contact.",
+		desc: "The Pokemon receives benefits in rain/sandstorm and inflicts damage on contact.",
+	},
+	vastknowledge: {
+		name: "Vast Knowledge",
+		shortDesc: "Raises the Pokemon's SpAtk stat.",
+		desc: "Raises the Pokemon's SpAtk stat.",
+	},
+	neutral: {
+		name: "Neutral",
+		shortDesc: "Filter+Tinted Lens+Friend Guard+Lightning Rod+Plus+Minus",
+		desc: "Filter+Tinted Lens+Friend Guard+Lightning Rod+Plus+Minus",
+	},
+	rubberboost: {
+		name: "Rubber Boost",
+		shortDesc: "Its stats are gradually boosted.",
+		desc: "Its stats are gradually boosted.",
+	},
+	activecurrent: {
+		name: "Active Current",
+		shortDesc: "Reduces a paralyzed foe's HP.",
+		desc: "Reduces a paralyzed foe's HP.",
+	},
+	triggered: {
+		name: "Triggered",
+		shortDesc: "Cyber, Virus and Dark moves raise its stats.",
+		desc: "Cyber, Virus and Dark moves raise its stats.",
+	},
+	glitchboost: {
+		name: "Glitch Boost",
+		shortDesc: "All kinds of things.",
+		desc: "All kinds of things.",
+	},
+	thunderstorm: {
+		name: "Thunderstorm",
+		shortDesc: "Drizzle+Normal becomes Electric+Volt Absorb.",
+		desc: "Drizzle+Normal becomes Electric+Volt Absorb.",
+	},
+	flytrap: {
+		name: "Flytrap",
+		shortDesc: "Restores HP if hit by a Bug-type move.",
+		desc: "Restores HP if hit by a Bug-type move.",
+	},
+	wishmaker: {
+		name: "Wish Maker",
+		shortDesc: "Jirachi.",
+		desc: "Jirachi.",
+	},
+	burningdisease: {
+		name: "Burning Disease",
+		shortDesc: "Bellows+Flame Body+Poison Touch",
+		desc: "Bellows+Flame Body+Poison Touch",
+	},
+	computerbug: {
+		name: "Computer Bug",
+		shortDesc: "Moody+Compound Eyes",
+		desc: "Moody+Compound Eyes",
+	},
+	trashpile: {
+		name: "Trash Pile",
+		shortDesc: "Poison Point+Poison Touch+Stench+Liquid Ooze",
+		desc: "Poison Point+Poison Touch+Stench+Liquid Ooze",
+	},
+	godsendurance: {
+		name: "Gods Endurance",
+		shortDesc: "Cannot be defeated if its HP is above 1.",
+		desc: "Cannot be defeated if its HP is above 1.",
+	},
+	souleater: {
+		name: "Soul Eater",
+		shortDesc: "Restores HP if hit by a Ghost-type move.",
+		desc: "Restores HP if hit by a Ghost-type move.",
+	},
 };
