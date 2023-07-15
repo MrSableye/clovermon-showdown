@@ -12179,14 +12179,1297 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(4);
 			}
 		},
-		onSourceModifySpAPriority: 5,
-		onSourceModifySpA(atk, attacker, defender, move) {
+		onSourceModifySpAPriority: 6,
+		onSourceModifySpA(spa, attacker, defender, move) {
 			if (move.type === 'Ghost') {
 				this.debug('Malevolent Soul ghost quad weakness');
 				return this.chainModify(4);
 			}
 		},
 		name: "Malevolent Soul",
+	},
+	/** Wack abilities */
+	darklife: {
+		name: "Dark Life",
+		onWeather(target, source, effect) {
+			if (target.hasItem('utilityumbrella')) return;
+			if (effect.id === 'midnight') {
+				this.heal(target.baseMaxhp / 14);
+			}
+		},
+		rating: 2,
+		num: 6660,
+		isNonstandard: "Future",
+	},
+	memetic: {
+		onDamagingHit(damage, target, source, move) {
+			const sourceAbility = source.getAbility();
+			if (sourceAbility.isPermanent || sourceAbility.id === 'memetic') {
+				return;
+			}
+			if (this.checkMoveMakesContact(move, source, target, !source.isAlly(target))) {
+				const oldAbility = source.setAbility('memetic', target);
+				if (oldAbility) {
+					this.add('-activate', target, 'ability: Memetic', this.dex.abilities.get(oldAbility).name, '[of] ' + source);
+				}
+			}
+		},
+		onModifyAtk(atk, source, target, move) {
+			if (!source.hasType('Meme')) {
+				return this.chainModify(0.75);
+			}; 
+		},
+		onModifySpA(spa, source, target, move) {
+			if (!source.hasType('Meme')) {
+				return this.chainModify(0.75);
+			};
+		},
+		onModifyDef(def, target, source, move) {
+			if (!source.hasType('Meme')) {
+				return this.chainModify(0.75);
+			};
+		},
+		onModifySpD(spd, target, source, move) {
+			if (!source.hasType('Meme')) {
+				return this.chainModify(0.75);
+			};
+		},
+		onModifySpe(spe, pokemon) {
+			if (!pokemon.hasType('Meme')) {
+				return this.chainModify(0.75);
+			};
+		},
+		name: "Memetic",
+		rating: 4,
+		num: 6661,
+		isNonstandard: "Future",
+	},
+	isolation: {
+		onSourceModifyDamage(damage, source, target, move) {
+			let mod = 1;
+			if (move.category === "Special") mod /= 2;
+			return this.chainModify(mod);
+		},
+		isBreakable: true,
+		name: "Isolation",
+		rating: 3,
+		num: 6662,
+		isNonstandard: "Future",
+	},
+	acidrain: {
+		onStart(source) {
+			for (const action of this.queue) {
+				if (action.choice === 'runPrimal' && action.pokemon === source && source.species.id === 'kyogre') return;
+				if (action.choice !== 'runSwitch' && action.choice !== 'runPrimal') break;
+			}
+			this.field.setWeather('acidrain');
+		},
+		name: "Acid Rain",
+		rating: 3,
+		num: 6663,
+		isNonstandard: "Future",
+	},
+	ethereal: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.flags['contact']) {
+				this.add('-immune', target, '[from] ability: Ethereal');
+				return null;
+			}
+		},
+		onAllyTryHitSide(target, source, move) {
+			if (move.flags['contact']) {
+				this.add('-immune', this.effectState.target, '[from] ability: Ethereal');
+			}
+		},
+		name: "Ethereal",
+		rating: 3,
+		num: 6664,
+		isNonstandard: "Future",
+	},
+	mozart: {
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['sound']) {
+				this.debug('Mozart boost');
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		name: "Mozart",
+		rating: 3,
+		num: 6665,
+		isNonstandard: "Future",
+	},
+	pride: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({spa: length}, source);
+			}
+		},
+		name: "Pride",
+		rating: 3,
+		num: 6666,
+		isNonstandard: "Future",
+	},
+	pounce: {
+		onModifyPriority(priority, pokemon, target, move) {
+			if (!(pokemon.activeMoveActions > 1)) return priority + 1;
+		},
+		name: "Pounce",
+		rating: 3,
+		num: 6667,
+		isNonstandard: "Future",
+	},
+	vespertine: {
+		onModifySpe(spe, pokemon) {
+			if (this.field.isWeather('midnight')) return this.chainModify(2);
+		},
+		name: "Vespertine",
+		rating: 3,
+		num: 6668,
+		isNonstandard: "Future",
+	},
+	acidrush: {
+		onModifySpe(spe, pokemon) {
+			if (this.field.isWeather('acidrain')) return this.chainModify(2);
+		},
+		name: "Acid Rush",
+		rating: 4,
+		num: 6669,
+		isNonstandard: "Future",
+	},
+	headache: {
+		onModifySpAPriority: -1,
+		onModifySpA(spa, source, target, move) {
+			if (target?.volatiles['confusion']) {
+				this.debug('Headache - increasing spatk');
+				return this.chainModify(2);
+			}
+		},
+		name: "Headache",
+		rating: 2,
+		num: 6670,
+		isNonstandard: "Future",
+	},
+	windate: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Wind';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		name: "Windate",
+		rating: 3,
+		num: 6671,
+		isNonstandard: "Future",
+	},
+	immolate: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Fire';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		name: "Immolate",
+		rating: 4,
+		num: 6672,
+		isNonstandard: "Future",
+	},
+	sunbathe: {
+		onWeather(target, source, effect) {
+			if (target.hasItem('utilityumbrella')) return;
+			if (effect.id === 'sunnyday' || effect.id === 'desolateland') this.heal(target.baseMaxhp / 14);
+		},
+		name: "Sunbathe",
+		rating: 3,
+		num: 6673,
+		isNonstandard: "Future",
+	},
+	snowrush: {
+		onModifySpe(spe, pokemon) {
+			if (this.field.isWeather(['hail', 'snow'])) return this.chainModify(2);
+		},
+		name: "Snow Rush",
+		rating: 2,
+		num: 6674,
+		isNonstandard: "Future",
+	},
+	magicate: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Magic';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		name: "Magicate",
+		rating: 3,
+		num: 6675,
+		isNonstandard: "Future",
+	},
+	oasis: {
+		onWeather(target, source, effect) {
+			if (target.hasItem('utilityumbrella')) return;
+			if (this.field.isWeather('sandstorm')) this.heal(target.baseMaxhp / 14);
+		},
+		name: "Oasis",
+		rating: 3,
+		num: 6676,
+		isNonstandard: "Future",
+	},
+	winterforce: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Ice' || move.type === 'Water' || move.type === 'Steam') {
+				this.debug('Winter Force boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		onImmunity(type, pokemon) {
+			if (type === 'hail') return false;
+		},
+		name: "Winter Force",
+		rating: 3,
+		num: 6677,
+		isNonstandard: "Future",
+	},
+	evaporate: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Steam';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		name: "Evaporate",
+		rating: 3,
+		num: 6678,
+		isNonstandard: "Future",
+	},
+	berserker: {
+		onDamagingHit(damage, target, source, effect) {
+			this.boost({atk: 1});
+		},
+		name: "Berserker",
+		rating: 3,
+		num: 6679,
+		isNonstandard: "Future",
+	},
+	martialate: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Fighting';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		name: "Martialate",
+		rating: 3,
+		num: 6680,
+		isNonstandard: "Future",
+	},
+	machinate: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Steel';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		name: "Machinate",
+		rating: 3,
+		num: 6681,
+		isNonstandard: "Future",
+	},
+	furiousfeet: {
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['kick']) {
+				this.debug('Furious Feet boost');
+				return this.chainModify(1.4);
+			}
+		},
+		name: "Furious Feet",
+		rating: 3,
+		num: 6682,
+		isNonstandard: "Future",
+	},
+	thicktail: {
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['tail']) {
+				this.debug('Thick Tail boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Thick Tail",
+		rating: 3,
+		num: 6683,
+		isNonstandard: "Future",
+	},
+	sceptic: {
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fairy' || move.type === 'Divine' || move.type === 'Magic') {
+				this.debug('Sceptic weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fairy' || move.type === 'Divine' || move.type === 'Magic') {
+				this.debug('Sceptic weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		name: "Sceptic",
+		rating: 3,
+		num: 6684,
+		isNonstandard: "Future",
+	},
+	coldblooded: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fire') {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Cold Blooded');
+				}
+				return null;
+			}
+		},
+		onSourceBasePowerPriority: 17,
+		onSourceBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Ice') return this.chainModify(1.25);
+		},
+		name: "Cold Blooded",
+		rating: 3,
+		num: 6685,
+		isNonstandard: "Future",
+	},
+	lodestone: {
+		onTryHit(target, source, move) {
+			if (target !== source && (move.type === 'Steel' || move.type === 'Rock' || move.type === 'Ground')) {
+				if (!this.boost({def: 1})) {
+					this.add('-immune', target, '[from] ability: Lodestone');
+				}
+				return null;
+			}
+		},
+		name: "Lodestone",
+		rating: 3,
+		num: 6686,
+		isNonstandard: "Future",
+	},
+	vaporize: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Water') {
+				if (!this.boost({spd: 1})) {
+					this.add('-immune', target, '[from] ability: Vaporize');
+				}
+				return null;
+			}
+		},
+		name: "Vaporize",
+		rating: 3,
+		num: 6687,
+		isNonstandard: "Future",
+	},
+	firewall: {
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Cyber') {
+				this.debug('Firewall weaken');
+				return this.chainModify(0.8);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Cyber') {
+				this.debug('Firewall weaken');
+				return this.chainModify(0.8);
+			}
+		},
+		name: "Firewall",
+		rating: 3,
+		num: 6688,
+		isNonstandard: "Future",
+	},
+	focus: {
+		onModifySpAPriority: 5,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.status) {
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Focus",
+		rating: 3,
+		num: 6689,
+		isNonstandard: "Future",
+	},
+	shadowcall: {
+		onStart(source) {
+			this.field.setWeather('midnight');
+		},
+		name: "Shadow Call",
+		rating: 3,
+		num: 6690,
+		isNonstandard: "Future",
+	},
+	wacky: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (!noModifyType.includes(move.id) && !move.isZ && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Wack';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		name: "Wacky",
+		rating: 3,
+		num: 6691,
+		isNonstandard: "Future",
+	},
+	hydrate: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Water';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		name: "Hydrate",
+		rating: 3,
+		num: 6692,
+		isNonstandard: "Future",
+	},
+	sugarrush: {
+		onTryHit(target, source, move) {
+			if (target !== source && (move.type === 'Food' || move.type === 'Fairy')) {
+				if (!this.boost({spe: 2})) {
+					this.add('-immune', target, '[from] ability: Sugar Rush');
+				}
+				return null;
+			}
+		},
+		name: "Sugar Rush",
+		rating: 3,
+		num: 6693,
+		isNonstandard: "Future",
+	},
+	vacuum: {
+		onTryHit(target, source, move) {
+			if (target !== source && (move.type === 'Wind' || move.type === 'Flying')) {
+				if (!this.boost({def: 1})) {
+					this.add('-immune', target, '[from] ability: Vacuum');
+				}
+				return null;
+			}
+		},
+		onAnyRedirectTarget(target, source, source2, move) {
+			if ((move.type !== 'Wind' && move.type !== 'Flying') || ['firepledge', 'grasspledge', 'waterpledge'].includes(move.id)) return;
+			const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
+			if (this.validTarget(this.effectState.target, source, redirectTarget)) {
+				if (move.smartTarget) move.smartTarget = false;
+				if (this.effectState.target !== target) {
+					this.add('-activate', this.effectState.target, 'ability: Vacuum');
+				}
+				return this.effectState.target;
+			}
+		},
+		name: "Vacuum",
+		rating: 3,
+		num: 6694,
+		isNonstandard: "Future",
+	},
+	solarforce: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fire' || move.type === 'Grass' || move.type === 'Light') {
+				this.debug('Solar Force boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		name: "Solar Force",
+		rating: 3,
+		num: 6695,
+		isNonstandard: "Future",
+	},
+	ionate: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Electric';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		name: "Ionate",
+		rating: 3,
+		num: 6696,
+		isNonstandard: "Future",
+	},
+	graze: {
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
+			this.heal(target.baseMaxhp / 16);
+		},
+		name: "Graze",
+		rating: 3,
+		num: 6697,
+		isNonstandard: "Future",
+	},
+	pro: {
+		onModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('Pro boost');
+				return this.chainModify(1.2);
+			}
+		},
+		name: "Pro",
+		rating: 3,
+		num: 6698,
+		isNonstandard: "Future",
+	},
+	builder: {
+		/** Definied in corresponding screen/room moves */
+		name: "Builder",
+		rating: 3,
+		num: 6699,
+		isNonstandard: "Future",
+	},
+	siphon: {
+		onTryHealPriority: 1,
+		onTryHeal(damage, target, source, effect) {
+			const heals = ['drain', 'leechseed', 'ingrain', 'aquaring', 'strengthsap'];
+			if (heals.includes(effect.id)) {
+				return this.chainModify([5324, 4096]);
+			}
+		},
+		name: "Siphon",
+		rating: 3,
+		num: 6700,
+		isNonstandard: "Future",
+	},
+	bellows: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Wind') {
+				move.accuracy = true;
+				if (!target.addVolatile('bellows')) {
+					this.add('-immune', target, '[from] ability: Bellows');
+				}
+				return null;
+			}
+		},
+		onEnd(pokemon) {
+			pokemon.removeVolatile('bellows');
+		},
+		condition: {
+			noCopy: true, // doesn't get copied by Baton Pass
+			onStart(target) {
+				this.add('-start', target, 'ability: Bellows');
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, attacker, defender, move) {
+				if (move.type === 'Fire' && attacker.hasAbility('bellows')) {
+					this.debug('Bellows boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onModifySpAPriority: 5,
+			onModifySpA(atk, attacker, defender, move) {
+				if (move.type === 'Fire' && attacker.hasAbility('bellows')) {
+					this.debug('Bellows boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onEnd(target) {
+				this.add('-end', target, 'ability: Bellows', '[silent]');
+			},
+		},
+		isBreakable: true,
+		name: "Bellows",
+		rating: 3,
+		num: 6701,
+		isNonstandard: "Future",
+	},
+	sadist: {
+		onAfterMoveSecondarySelf(source, target, move) {
+			if (source && source !== target && move && move.category !== 'Status' && !source.forceSwitchFlag) {
+				this.heal(source.baseMaxhp / 16, source, source)
+			}
+		},
+		name: "Sadist",
+		rating: 3,
+		num: 6702,
+		isNonstandard: "Future",
+	},
+	metalworker: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Steel') {
+				this.debug('Metalworker boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Steel') {
+				this.debug('Metalworker boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Metalworker",
+		rating: 3,
+		num: 6703,
+		isNonstandard: "Future",
+	},
+	drumroll: {
+		onStart(pokemon) {
+			pokemon.addVolatile('metronome');
+		},
+		condition: {
+			onStart(pokemon) {
+				this.effectState.lastMove = '';
+				this.effectState.numConsecutive = 0;
+			},
+			onTryMovePriority: -2,
+			onTryMove(pokemon, target, move) {
+				if (!pokemon.hasItem('metronome') || !pokemon.hasAbility('drumroll')) {
+					pokemon.removeVolatile('metronome');
+					return;
+				}
+				if (this.effectState.lastMove === move.id && pokemon.moveLastTurnResult) {
+					this.effectState.numConsecutive++;
+				} else if (pokemon.volatiles['twoturnmove']) {
+					if (this.effectState.lastMove !== move.id) {
+						this.effectState.numConsecutive = 1;
+					} else {
+						this.effectState.numConsecutive++;
+					}
+				} else {
+					this.effectState.numConsecutive = 0;
+				}
+				this.effectState.lastMove = move.id;
+			},
+			onModifyDamage(damage, source, target, move) {
+				let soundBoost = false;
+				if (move.flags['sound']) {
+					soundBoost = true;
+				}
+				const dmgMod = [4096, 4915, 5734, 6553, 7372, 8192];
+				const numConsecutive = this.effectState.numConsecutive > 5 ? 5 : this.effectState.numConsecutive;
+				if (soundBoost) {
+					this.debug(`Current Metronome boost: ${dmgMod[numConsecutive] * 1.2}/4096`);
+					return this.chainModify([dmgMod[numConsecutive] * 1.2, 4096]);
+				} else {
+					this.debug(`Current Metronome boost: ${dmgMod[numConsecutive]}/4096`);
+					return this.chainModify([dmgMod[numConsecutive], 4096]);
+				}
+			},
+		},
+		name: "Drum Roll",
+		rating: 3,
+		num: 6704,
+		isNonstandard: "Future",
+	},
+	explosive: {
+		onModifyDamage(damage, source, target, move) {
+			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct'].includes(move.id)) {
+				return this.chainModify([5324, 4096]);
+			}
+		},
+		name: "Explosive",
+		rating: 3,
+		num: 6705,
+		isNonstandard: "Future",
+	},
+	dreamcatcher: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Psychic') {
+				if (!this.boost({spa: 1})) {
+					this.add('-immune', target, '[from] ability: Dreamcatcher');
+				}
+				return null;
+			}
+		},
+		onAnyRedirectTarget(target, source, source2, move) {
+			if (move.type !== 'Psychic' || ['firepledge', 'grasspledge', 'waterpledge'].includes(move.id)) return;
+			const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
+			if (this.validTarget(this.effectState.target, source, redirectTarget)) {
+				if (move.smartTarget) move.smartTarget = false;
+				if (this.effectState.target !== target) {
+					this.add('-activate', this.effectState.target, 'ability: Dreamcatcher');
+				}
+				return this.effectState.target;
+			}
+		},
+		isBreakable: true,
+		name: "Dreamcatcher",
+		rating: 3,
+		num: 6706,
+		isNonstandard: "Future",
+	},
+	irradiated: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			for (const target of pokemon.foes()) {
+				if (target.status === 'psn' || target.status === 'tox') {
+					this.damage(target.baseMaxhp / 16, target, pokemon);
+				}
+			}
+		},
+		name: "Irradiated",
+		rating: 3,
+		num: 6707,
+		isNonstandard: "Future",
+	},
+	safeshield: {
+		onSwitchIn(pokemon) {
+			pokemon.side.addSideCondition('safeguard');
+		},
+		name: "Safe Shield",
+		rating: 3,
+		num: 6708,
+		isNonstandard: "Future",
+	},
+	choicepower: {
+		onStart(pokemon) {
+			pokemon.abilityState.choiceLock = "";
+		},
+		onBeforeMove(pokemon, target, move) {
+			if (move.isZOrMaxPowered || move.id === 'struggle') return;
+			if (pokemon.abilityState.choiceLock && pokemon.abilityState.choiceLock !== move.id) {
+				// Fails unless ability is being ignored (these events will not run), no PP lost.
+				this.addMove('move', pokemon, move.name);
+				this.attrLastMove('[still]');
+				this.debug("Disabled by Choice Power");
+				this.add('-fail', pokemon);
+				return false;
+			}
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.abilityState.choiceLock || move.isZOrMaxPowered || move.id === 'struggle') return;
+			pokemon.abilityState.choiceLock = move.id;
+		},
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.volatiles['dynamax']) return;
+			// PLACEHOLDER
+			this.debug('Choice Power Atk Boost');
+			return this.chainModify(1.5);
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.volatiles['dynamax']) return;
+			// PLACEHOLDER
+			this.debug('Choice Power SpA Boost');
+			return this.chainModify(1.5);
+		},
+		onDisableMove(pokemon) {
+			if (!pokemon.abilityState.choiceLock) return;
+			if (pokemon.volatiles['dynamax']) return;
+			for (const moveSlot of pokemon.moveSlots) {
+				if (moveSlot.id !== pokemon.abilityState.choiceLock) {
+					pokemon.disableMove(moveSlot.id, false, this.effectState.sourceEffect);
+				}
+			}
+		},
+		onEnd(pokemon) {
+			pokemon.abilityState.choiceLock = "";
+		},
+		name: "Choice Power",
+		rating: 3,
+		num: 6709,
+		isNonstandard: "Future",
+	},
+	cactus: {
+		onModifySpe(spe, pokemon) {
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(2);
+			}
+		},
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target, true)) {
+				this.damage(source.baseMaxhp / 8, source, target);
+			}
+		},
+		onWeather(target, source, effect) {
+			if (target.hasItem('utilityumbrella')) return;
+			if (effect.id === 'raindance' || effect.id === 'primordialsea') {
+				this.heal(target.baseMaxhp / 16);
+			}
+		},
+		name: "Cactus",
+		rating: 3,
+		num: 6710,
+		isNonstandard: "Future",
+	},
+	vastknowledge: {
+		onModifySpAPriority: 5,
+		onModifySpA(spa) {
+			return this.chainModify(2);
+		},
+		name: "Vast Knowledge",
+		rating: 5,
+		num: 6711,
+		isNonstandard: "Future",
+	},
+	neutral: {
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('Neutral neutralize');
+				return this.chainModify(0.75);
+			}
+		},
+		onModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod < 0) {
+				this.debug('Neutral boost');
+				return this.chainModify(2);
+			}
+		},
+		onAnyModifyDamage(damage, source, target, move) {
+			if (target !== this.effectState.target && target.isAlly(this.effectState.target)) {
+				this.debug('Neutral weaken');
+				return this.chainModify(0.75);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Electric') {
+				if (!this.boost({spa: 1})) {
+					this.add('-immune', target, '[from] ability: Neutral');
+				}
+				return null;
+			}
+		},
+		onAnyRedirectTarget(target, source, source2, move) {
+			if (move.type !== 'Electric' || ['firepledge', 'grasspledge', 'waterpledge'].includes(move.id)) return;
+			const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
+			if (this.validTarget(this.effectState.target, source, redirectTarget)) {
+				if (move.smartTarget) move.smartTarget = false;
+				if (this.effectState.target !== target) {
+					this.add('-activate', this.effectState.target, 'ability: Neutral');
+				}
+				return this.effectState.target;
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(spa, pokemon) {
+			for (const allyActive of pokemon.allies()) {
+				if (allyActive.hasAbility(['minus', 'plus', 'neutral'])) {
+					return this.chainModify(1.5);
+				}
+			}
+		},
+		isBreakable: true,
+		name: "Neutral",
+		rating: 3,
+		num: 6712,
+		isNonstandard: "Future",
+	},
+	rubberboost: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.activeTurns) {
+				this.boost({atk: 1, spa: 1, def: 1, spd: 1, spe: 1});
+			}
+		},
+		name: "Rubber Boost",
+		rating: 3,
+		num: 6713,
+		isNonstandard: "Future",
+	},
+	activecurrent: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			for (const target of pokemon.foes()) {
+				if (target.status === 'par') {
+					this.damage(target.baseMaxhp / 8, target, pokemon);
+				}
+			}
+		},
+		name: "Active Current",
+		rating: 3,
+		num: 6714,
+		isNonstandard: "Future",
+	},
+	triggered: {
+		onDamagingHit(damage, target, source, move) {
+			if (['Cyber', 'Virus', 'Dark'].includes(move.type)) {
+				this.boost({spa: 1, spe: 1});
+			}
+		},
+		name: "Triggered",
+		rating: 3,
+		num: 6715,
+		isNonstandard: "Future",
+	},
+	glitchboost: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			let stats: BoostID[] = [];
+			const boost: SparseBoostsTable = {};
+			let statPlus: BoostID;
+			for (statPlus in pokemon.boosts) {
+				if (pokemon.boosts[statPlus] < 6) {
+					stats.push(statPlus);
+				}
+			}
+			let randomStat: BoostID | undefined = stats.length ? this.sample(stats) : undefined;
+			if (randomStat) boost[randomStat] = 1;
+
+			stats = [];
+			let statMinus: BoostID;
+			for (statMinus in pokemon.boosts) {
+				if (pokemon.boosts[statMinus] > -6 && statMinus !== randomStat) {
+					stats.push(statMinus);
+				}
+			}
+			randomStat = stats.length ? this.sample(stats) : undefined;
+			if (randomStat) boost[randomStat] = -2;
+
+			this.boost(boost, pokemon, pokemon);
+		},
+		name: "Glitch Boost",
+		rating: 3,
+		num: 6716,
+		isNonstandard: "Future",
+	},
+	thunderstorm: {
+		onStart(source) {
+			for (const action of this.queue) {
+				if (action.choice === 'runPrimal' && action.pokemon === source && source.species.id === 'kyogre') return;
+				if (action.choice !== 'runSwitch' && action.choice !== 'runPrimal') break;
+			}
+			this.field.setWeather('raindance');
+		},
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Electric';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Electric') {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Thunderstorm');
+				}
+				return null;
+			}
+		},
+		name: "Thunderstorm",
+		rating: 3,
+		num: 6717,
+		isNonstandard: "Future",
+	},
+	flytrap: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Bug') {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Flytrap');
+				}
+				return null;
+			}
+		},
+		name: "Flytrap",
+		rating: 3,
+		num: 6718,
+		isNonstandard: "Future",
+	},
+	wishmaker: {
+		onResidualOrder: 5,
+		onResidualSubOrder: 4,
+		onResidual(pokemon) {
+			this.heal(pokemon.baseMaxhp / 6);
+		},
+		name: "Wish Maker",
+		rating: 3,
+		num: 6719,
+		isNonstandard: "Future",
+	},
+	burningdisease: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Wind') {
+				move.accuracy = true;
+				if (!target.addVolatile('burningdisease')) {
+					this.add('-immune', target, '[from] ability: Burning Disease');
+				}
+				return null;
+			}
+		},
+		onEnd(pokemon) {
+			pokemon.removeVolatile('burningdisease');
+		},
+		condition: {
+			noCopy: true, // doesn't get copied by Baton Pass
+			onStart(target) {
+				this.add('-start', target, 'ability: Burning Disease');
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, attacker, defender, move) {
+				if (move.type === 'Fire' && attacker.hasAbility('bellows')) {
+					this.debug('Burning Disease boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onModifySpAPriority: 5,
+			onModifySpA(atk, attacker, defender, move) {
+				if (move.type === 'Fire' && attacker.hasAbility('bellows')) {
+					this.debug('Burning Disease boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onEnd(target) {
+				this.add('-end', target, 'ability: Burning Disease', '[silent]');
+			},
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+				if (this.randomChance(3, 10)) {
+					source.trySetStatus('brn', target);
+				}
+			}
+		},
+		onModifyMove(move) {
+			if (!move?.flags['contact'] || move.target === 'self') return;
+			if (!move.secondaries) {
+				move.secondaries = [];
+			}
+			move.secondaries.push({
+				chance: 30,
+				status: 'psn',
+				ability: this.dex.abilities.get('burningdisease'),
+			});
+		},
+		name: "Burning Disease",
+		rating: 3,
+		num: 6720,
+		isNonstandard: "Future",
+	},
+	computerbug: {
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			let stats: BoostID[] = [];
+			const boost: SparseBoostsTable = {};
+			let statPlus: BoostID;
+			for (statPlus in pokemon.boosts) {
+				if (statPlus === 'accuracy' || statPlus === 'evasion') continue;
+				if (pokemon.boosts[statPlus] < 6) {
+					stats.push(statPlus);
+				}
+			}
+			let randomStat: BoostID | undefined = stats.length ? this.sample(stats) : undefined;
+			if (randomStat) boost[randomStat] = 2;
+
+			stats = [];
+			let statMinus: BoostID;
+			for (statMinus in pokemon.boosts) {
+				if (statMinus === 'accuracy' || statMinus === 'evasion') continue;
+				if (pokemon.boosts[statMinus] > -6 && statMinus !== randomStat) {
+					stats.push(statMinus);
+				}
+			}
+			randomStat = stats.length ? this.sample(stats) : undefined;
+			if (randomStat) boost[randomStat] = -1;
+
+			this.boost(boost, pokemon, pokemon);
+		},
+		onSourceModifyAccuracyPriority: -1,
+		onSourceModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			this.debug('computerbug - enhancing accuracy');
+			return this.chainModify([5325, 4096]);
+		},
+		name: "Computer Bug",
+		rating: 3,
+		num: 6721,
+		isNonstandard: "Future",
+	},
+	trashpile: {
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move?.flags['contact'] || move.target === 'self') return;
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.volatileStatus === 'flinch') return;
+				}
+				move.secondaries.push({
+					chance: 10,
+					volatileStatus: 'flinch',
+					ability: this.dex.abilities.get('trashpile'),
+				});
+			}
+		},
+		onHit(target, source) {
+			if (this.randomChance(3, 10)) {
+				target.trySetStatus('psn', target);
+			}
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+				if (this.randomChance(3, 10)) {
+					source.trySetStatus('psn', target);
+				}
+			}
+		},
+		onSourceTryHeal(damage, target, source, effect) {
+			this.debug("Heal is occurring: " + target + " <- " + source + " :: " + effect.id);
+			const canOoze = ['drain', 'leechseed', 'strengthsap'];
+			if (canOoze.includes(effect.id)) {
+				this.damage(damage);
+				return 0;
+			}
+		},
+		name: "Trash Pile",
+		rating: 3,
+		num: 6722,
+		isNonstandard: "Future",
+	},
+	godsendurance: {
+		onTryHit(pokemon, target, move) {
+			if (move.ohko) {
+				this.add('-immune', pokemon, '[from] ability: Gods Endurance');
+				return null;
+			}
+		},
+		onDamagePriority: -30,
+		onDamage(damage, target, source, effect) {
+			if (target.hp > 1 && damage >= target.hp && effect && effect.effectType === 'Move') {
+				this.add('-ability', target, 'Gods Endurance');
+				return target.hp - 1;
+			}
+		},
+		name: "Gods Endurance",
+		rating: 3,
+		num: 6723,
+		isNonstandard: "Future",
+	},
+	souleater: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Ghost') {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Soul Eater');
+				}
+				return null;
+			}
+		},
+		isBreakable: true,
+		name: "Soul Eater",
+		rating: 3,
+		num: 6724,
+		isNonstandard: "Future",
+	},
+	infected: {
+		onDamagingHit(damage, target, source, move) {
+			const sourceAbility = source.getAbility();
+			if (sourceAbility.isPermanent || sourceAbility.id === 'infected') {
+				return;
+			}
+			if (this.checkMoveMakesContact(move, source, target, !source.isAlly(target))) {
+				const oldAbility = source.setAbility('infected', target);
+				if (oldAbility) {
+					this.add('-activate', target, 'ability: Infected', this.dex.abilities.get(oldAbility).name, '[of] ' + source);
+				}
+			}
+		},
+		onResidualOrder: 27,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (!pokemon.hasType("Zombie") || !pokemon.hasType("Virus")) {
+				this.damage(pokemon.baseMaxhp / 8);
+			} else {
+				this.heal(pokemon.baseMaxhp / 16);
+			}
+		},
+		name: "Infected",
+		rating: 3,
+		num: 6725,
 		isNonstandard: "Future",
 	},
 };

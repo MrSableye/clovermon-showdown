@@ -891,4 +891,58 @@ export const Formats: FormatList = [
 		banlist: ["AG", "Uber", "OU", "UUBL", "UU", "RUBL", "RU", "NUBL", "NU", "PUBL", "PU", "NFE", "DUber", "DOU", "DBL", "DUU", "LC"],
 		unbanlist: ['Weedle', 'Kakuna', 'Caterpie', 'Metapod', 'Ditto', 'Magikarp', 'Magikarp + Dragon Rage'],
 	},
+
+	///////////////////////////////////////////////////////////////////
+	// Wack
+	///////////////////////////////////////////////////////////////////
+	{
+		section: 'Wack Core Tiers (HEAVY WIP)',
+		column: 4,
+	},
+	{
+		name: '[Gen 8 Wack Only] Anything Goes',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Obtainable',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+			'Team Preview',
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] OU',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: [
+			'Uber'
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] NFE',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Not Fully Evolved',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] LC',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Little Cup',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+	},
 ];
