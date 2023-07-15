@@ -906,17 +906,6 @@ export const Formats: FormatList = [
 		column: 4,
 	},
 	{
-		name: '[Gen 8 Wack Only] Anything Goes',
-		mod: 'wack',
-		ruleset: [
-			'Terastal Clause',
-			'Obtainable',
-			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
-			'Team Preview',
-		],
-	},
-	{
 		name: '[Gen 8 Wack Only] OU',
 		mod: 'wack',
 		ruleset: [
@@ -926,7 +915,22 @@ export const Formats: FormatList = [
 			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: [
-			'Uber'
+			'Uber', 'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute + Protect'
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] Ubers',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: [
+			'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute + Protect'
 		],
 	},
 	{
@@ -939,6 +943,10 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
+		banlist: [
+			'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute + Protect'
+		],
 	},
 	{
 		name: '[Gen 8 Wack Only] LC',
@@ -949,6 +957,21 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: [
+			'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute + Protect'
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] Anything Goes',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Obtainable',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+			'Team Preview',
 		],
 	},
 ];
