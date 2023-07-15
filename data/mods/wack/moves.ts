@@ -12880,7 +12880,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Heart",
-		isNonstandard: null,	/** TODO */
+		isNonstandard: null,
 	},
 	banhammer: {
 		inherit: true,

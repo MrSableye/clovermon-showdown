@@ -7647,7 +7647,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	woot: {
 		inherit: true,
-		tier: "OU",
+		tier: "LC",
 		isNonstandard: null,
 	},
 	woodie: {
