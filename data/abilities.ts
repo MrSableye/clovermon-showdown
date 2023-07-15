@@ -11269,8 +11269,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	pounce: {
-		onModifyPriority(priority, pokemon, target, move) {
-			if (!(pokemon.activeMoveActions > 1)) return priority + 1;
+		onModifyPriority(priority, source, target, move) {
+			if (source.activeMoveActions <= 1) {
+				return priority + 1;
+			}
 		},
 		name: "Pounce",
 		rating: 3,
@@ -11280,6 +11282,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	vespertine: {
 		onModifySpe(spe, pokemon) {
 			if (this.field.isWeather('midnight')) return this.chainModify(2);
+			if (this.field.isWeather(['sunnyday', 'desolateland'])) return this.chainModify(0.5);
 		},
 		name: "Vespertine",
 		rating: 3,
@@ -11736,9 +11739,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	graze: {
-		onDamagePriority: 1,
-		onDamage(damage, target, source, effect) {
-			this.heal(target.baseMaxhp / 16);
+		onResidualOrder: 4,
+		onResidualSubOrder: 3,
+		onResidual(pokemon) {
+			this.heal(pokemon.baseMaxhp / 16);
 		},
 		name: "Graze",
 		rating: 3,

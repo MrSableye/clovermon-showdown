@@ -675,7 +675,6 @@ export const Aliases: {[alias: string]: string} = {
 	aboma: "Abomasnow",
 	aegi: "Aegislash",
 	aegiblade: "Aegislash-Blade",
-	aegis: "Aegislash",
 	aero: "Aerodactyl",
 	amph: "Ampharos",
 	arc: "Arceus",
