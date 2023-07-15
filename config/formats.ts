@@ -902,7 +902,7 @@ export const Formats: FormatList = [
 	// Wack
 	///////////////////////////////////////////////////////////////////
 	{
-		section: 'Wack Core Tiers',
+		section: 'Wack Core Tiers (HEAVY WIP)',
 		column: 4,
 	},
 	{
@@ -911,6 +911,42 @@ export const Formats: FormatList = [
 		ruleset: [
 			'Terastal Clause',
 			'Obtainable',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+			'Team Preview',
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] OU',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: [
+			'Uber'
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] NFE',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Not Fully Evolved',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] LC',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Little Cup',
+			'Standard',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
