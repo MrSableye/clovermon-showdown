@@ -572,6 +572,7 @@ export const TypeChart: {[k: string]: TypeData} = {
 	},
 	electric: {
 		damageTaken: {
+			par: 3,
 			Blood: 0,
 			Bone: 1,
 			Bug: 0,
@@ -857,6 +858,7 @@ export const TypeChart: {[k: string]: TypeData} = {
 	},
 	fire: {
 		damageTaken: {
+			brn: 3,
 			Blood: 0,
 			Bone: 0,
 			Bug: 2,
@@ -1028,6 +1030,8 @@ export const TypeChart: {[k: string]: TypeData} = {
 	},
 	ghost: {
 		damageTaken: {
+			trapped: 3,
+			bladerain: 3,
 			Blood: 3,
 			Bone: 2,
 			Bug: 2,
@@ -1142,6 +1146,7 @@ export const TypeChart: {[k: string]: TypeData} = {
 	},
 	grass: {
 		damageTaken: {
+			powder: 3,
 			Blood: 2,
 			Bone: 0,
 			Bug: 1,
@@ -1370,6 +1375,9 @@ export const TypeChart: {[k: string]: TypeData} = {
 	},
 	ice: {
 		damageTaken: {
+			hail: 3,
+			hyperboreanarctic: 3,
+			frz: 3,
 			Blood: 0,
 			Bone: 0,
 			Bug: 0,
@@ -1712,6 +1720,7 @@ export const TypeChart: {[k: string]: TypeData} = {
 	},
 	nuclear: {
 		damageTaken: {
+			acidrain: 3,
 			Blood: 0,
 			Bone: 0,
 			Bug: 1,
@@ -1997,6 +2006,8 @@ export const TypeChart: {[k: string]: TypeData} = {
 	},
 	poison: {
 		damageTaken: {
+			psn: 3,
+			tox: 3,
 			acidrain: 3,
 			Blood: 1,
 			Bone: 2,
@@ -2169,6 +2180,7 @@ export const TypeChart: {[k: string]: TypeData} = {
 	},
 	rock: {
 		damageTaken: {
+			sandstorm: 3,
 			Blood: 0,
 			Bone: 2,
 			Bug: 0,
@@ -2454,7 +2466,11 @@ export const TypeChart: {[k: string]: TypeData} = {
 	},
 	steel: {
 		damageTaken: {
+			psn: 3,
+			tox: 3,
+			sandstorm: 3,
 			acidrain: 3,
+			bladerain: 3,
 			Blood: 2,
 			Bone: 2,
 			Bug: 2,

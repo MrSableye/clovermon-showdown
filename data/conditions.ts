@@ -751,7 +751,6 @@ export const Conditions: {[k: string]: ConditionData} = {
 			}
 		},
 		onWeatherModifyDamage(damage, attacker, defender, move) {
-			if (defender.hasItem('utilityumbrella')) return;
 			if (move.type === 'Ghost' || move.type === 'Fear' || move.type === 'Dark') {
 				this.debug('Midnight boost');
 				return this.chainModify(1.5);
@@ -789,7 +788,6 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return 5;
 		},
 		onWeatherModifyDamage(damage, attacker, defender, move) {
-			if (defender.hasItem('utilityumbrella')) return;
 			if (move.type === 'Poison') {
 				this.debug('Acid Rain poison boost');
 				return this.chainModify(1.5);
@@ -811,6 +809,36 @@ export const Conditions: {[k: string]: ConditionData} = {
 		onFieldResidual() {
 			this.add('-weather', 'Acid Rain', '[upkeep]');
 			if (this.field.isWeather('acidrain')) this.eachEvent('Weather');
+		},
+		onWeather(target) {
+			this.damage(target.baseMaxhp / 16);
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	bladerain: {
+		name: 'Blade Rain',
+		effectType: 'Weather',
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source?.hasItem('chromerock')) {
+				return 8;
+			}
+			return 5;
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'Blade Rain', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'Blade Rain');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Blade Rain', '[upkeep]');
+			if (this.field.isWeather('bladerain')) this.eachEvent('Weather');
 		},
 		onWeather(target) {
 			this.damage(target.baseMaxhp / 16);

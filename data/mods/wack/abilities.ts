@@ -1,4 +1,86 @@
 export const Abilities: {[k: string]: ModdedAbilityData} = {
+	/* Modified vanilla abilities */
+	toxicboost: {
+		inherit: true,
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (this.field.isWeather(['acidrain'])) {
+				return this.chainModify(1.5);
+			} else if (((attacker.status === 'psn' || attacker.status === 'tox') && move.category === 'Physical')) {
+				return this.chainModify(1.5);
+			}
+		},
+		desc: "While this Pokemon is poisoned, the power of its physical attacks is multiplied by 1.5.",
+		shortDesc: "1.5x atk/spa during Acid Rain, 1.5x atk if poisoned",
+		isNonstandard: null,
+	},
+	raindish: {
+		inherit: true,
+		onWeather(target, source, effect) {
+			if (effect.id === 'acidrain' && !target.hasType('Poison')) {
+				this.damage(target.baseMaxhp / 16, target, target);
+			}
+			if (target.hasItem('utilityumbrella')) return;
+			if (effect.id === 'raindance' || effect.id === 'primordialsea') {
+				this.heal(target.baseMaxhp / 16);
+			}
+		},
+		desc: "If Rain Dance is active, this Pokemon restores 1/16 of its maximum HP, rounded down. If Acid Rain is active and the Pokemon doesn't have the Poison type, it takes 1/16 of its maximum HP, rounded down, at the end of each turn. The Rain Dance effect is prevented if this Pokemon is holding a Utility Umbrella.",
+		shortDesc: "Rain Dance: heals 1/16, Acid Rain: takes 1/16.",
+		isNonstandard: null,
+	},
+	poisonheal: {
+		inherit: true,
+		onWeather(target, source, effect) {
+			if (effect.id === 'acidrain') this.heal(target.baseMaxhp / 14);
+		},
+		onImmunity(type, pokemon) {
+			if (type === 'acidrain') return false;
+		},
+		desc: "If this Pokemon is poisoned, it restores 1/8 of its maximum HP, rounded down, at the end of each turn instead of losing HP. Also heals 1/14 of its maximum HP on Acid Rain.",
+		shortDesc: "Heals 1/8 if psn and 1/14 if Acid Rain.",
+		isNonstandard: null,
+	},
+	immunity: {
+		inherit: true,
+		onImmunity(type, pokemon) {
+			if (type === 'acidrain') return false;
+		},
+		shortDesc: "Can't be psn and cures it. Immune to Acid Rain.",
+		isNonstandard: null,
+	},
+	overcoat: {
+		inherit: true,
+		onImmunity(type, pokemon) {
+			if (type === 'sandstorm' || type === 'hail' || type === 'acidrain' || type === 'bladerain' || type === 'hyperboreanarctic' || type === 'powder') return false;
+		},
+		desc: "This Pokemon is immune to powder moves, damage from Sandstorm, Hail, Acid Rain or Blade Rain, and the effects of Rage Powder and the Effect Spore Ability.",
+		shortDesc: "Immune to powder moves, Sandstorm, Hail, Acid Rain and Blade Rain damage, Effect Spore.",
+		isNonstandard: null,
+	},
+	chlorophyll: {
+		inherit: true,
+		onModifySpe(spe, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(2);
+			} else if (this.field.isWeather('midnight')) {
+				return this.chainModify(0.5);
+			}
+		},
+		desc: "If Sunny Day is active, this Pokemon's Speed is doubled, this effect is prevented if this Pokemon is holding a Utility Umbrella. If Midnight is active, this Pokemon's Speed is halved.",
+		shortDesc: "Sunny Day: spd doubled. Midnight: spd halved.",
+		isNonstandard: null,
+	},
+	heavymetal: {
+		inherit: true,
+		onImmunity(type, pokemon) {
+			if (type === 'bladerain') return false;
+		},
+		desc: "This Pokemon's weight is doubled. This effect is calculated after the effect of Autotomize, and before the effect of Float Stone. It's immune to Blade Rain.",
+		shortDesc: "Weight doubled. Immune to Blade Rain.",
+		isNonstandard: null,
+	},
+	/* Wack abilities */
 	darklife: {
 		inherit: true,
 		isNonstandard: null,
