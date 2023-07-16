@@ -3693,11 +3693,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobbosmitosis: {
-		tier: "Illegal",
-		isNonstandard: "Future",
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	blobbosmitosiscomplete: {
-		tier: "Illegal",
-		isNonstandard: "Future",
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
 	},
 };

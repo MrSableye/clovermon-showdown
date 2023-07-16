@@ -11691,7 +11691,6 @@ honrade: {
 			weirdflex: ["8L42"],
 			workup: ["8L30"],
 			zenheadbutt: ["8T"],
-			courtchange: ["8L1"],
 			tripleaxel: ["8L1"],
 			coaching: ["8L1"],
 		},
