@@ -99,7 +99,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 		desc: "If Hail is active, heal 1/16 of the Pokemon's HP. If Sunny Day or Rain Dance is active, boost speed by 2. If this Pokemon is a Castform, its type changes to the current weather condition's type, except Sandstorm. This effect is prevented if this Pokemon is holding a Utility Umbrella and the weather is Rain Dance or Sunny Day.",
-		shortDesc: "Castform's type changes to the current weather condition's type, except Sandstorm.",
+		shortDesc: "Hail, Heals 1/16 max HP. Sun, Rain, Doubles speed. Sandstorm, Evasion x1.2. Transforms Castform.",
 		isNonstandard: null,
 	},
 	/* Wack abilities */
