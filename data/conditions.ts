@@ -484,7 +484,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onFieldStart(field, source, effect) {
 			if (effect?.effectType === 'Ability') {
-				if (this.gen <= 5) this.effectState.duration = 0;
+				if (this.gen <= 5 || this.format.mod === 'wack') this.effectState.duration = 0;
 				this.add('-weather', 'RainDance', '[from] ability: ' + effect.name, '[of] ' + source);
 			} else {
 				this.add('-weather', 'RainDance');
@@ -554,7 +554,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onFieldStart(battle, source, effect) {
 			if (effect?.effectType === 'Ability') {
-				if (this.gen <= 5) this.effectState.duration = 0;
+				if (this.gen <= 5 || this.format.mod === 'wack') this.effectState.duration = 0;
 				this.add('-weather', 'SunnyDay', '[from] ability: ' + effect.name, '[of] ' + source);
 			} else {
 				this.add('-weather', 'SunnyDay');
@@ -629,7 +629,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onFieldStart(field, source, effect) {
 			if (effect?.effectType === 'Ability') {
-				if (this.gen <= 5) this.effectState.duration = 0;
+				if (this.gen <= 5 || this.format.mod === 'wack') this.effectState.duration = 0;
 				this.add('-weather', 'Sandstorm', '[from] ability: ' + effect.name, '[of] ' + source);
 			} else {
 				this.add('-weather', 'Sandstorm');
@@ -659,7 +659,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onFieldStart(field, source, effect) {
 			if (effect?.effectType === 'Ability') {
-				if (this.gen <= 5) this.effectState.duration = 0;
+				if (this.gen <= 5 || this.format.mod === 'wack') this.effectState.duration = 0;
 				this.add('-weather', 'Hail', '[from] ability: ' + effect.name, '[of] ' + source);
 			} else {
 				this.add('-weather', 'Hail');
@@ -695,7 +695,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onFieldStart(field, source, effect) {
 			if (effect?.effectType === 'Ability') {
-				if (this.gen <= 5) this.effectState.duration = 0;
+				if (this.gen <= 5 || this.format.mod === 'wack') this.effectState.duration = 0;
 				this.add('-weather', 'Snow', '[from] ability: ' + effect.name, '[of] ' + source);
 			} else {
 				this.add('-weather', 'Snow');
@@ -762,7 +762,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onFieldStart(field, source, effect) {
 			if (effect?.effectType === 'Ability') {
-				if (this.gen <= 5) this.effectState.duration = 0;
+				if (this.gen <= 5 || this.format.mod === 'wack') this.effectState.duration = 0;
 				this.add('-weather', 'Midnight', '[from] ability: ' + effect.name, '[of] ' + source);
 			} else {
 				this.add('-weather', 'Midnight');
@@ -799,15 +799,15 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onFieldStart(field, source, effect) {
 			if (effect?.effectType === 'Ability') {
-				if (this.gen <= 5) this.effectState.duration = 0;
-				this.add('-weather', 'Acid Rain', '[from] ability: ' + effect.name, '[of] ' + source);
+				if (this.gen <= 5 || this.format.mod === 'wack') this.effectState.duration = 0;
+				this.add('-weather', 'AcidRain', '[from] ability: ' + effect.name, '[of] ' + source);
 			} else {
-				this.add('-weather', 'Acid Rain');
+				this.add('-weather', 'AcidRain');
 			}
 		},
 		onFieldResidualOrder: 1,
 		onFieldResidual() {
-			this.add('-weather', 'Acid Rain', '[upkeep]');
+			this.add('-weather', 'AcidRain', '[upkeep]');
 			if (this.field.isWeather('acidrain')) this.eachEvent('Weather');
 		},
 		onWeather(target) {
@@ -829,15 +829,15 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onFieldStart(field, source, effect) {
 			if (effect?.effectType === 'Ability') {
-				if (this.gen <= 5) this.effectState.duration = 0;
-				this.add('-weather', 'Blade Rain', '[from] ability: ' + effect.name, '[of] ' + source);
+				if (this.gen <= 5 || this.format.mod === 'wack') this.effectState.duration = 0;
+				this.add('-weather', 'BladeRain', '[from] ability: ' + effect.name, '[of] ' + source);
 			} else {
-				this.add('-weather', 'Blade Rain');
+				this.add('-weather', 'BladeRain');
 			}
 		},
 		onFieldResidualOrder: 1,
 		onFieldResidual() {
-			this.add('-weather', 'Blade Rain', '[upkeep]');
+			this.add('-weather', 'BladeRain', '[upkeep]');
 			if (this.field.isWeather('bladerain')) this.eachEvent('Weather');
 		},
 		onWeather(target) {
