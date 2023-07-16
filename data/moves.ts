@@ -32913,6 +32913,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		boosts: {
 			spd: 2,
 		},
+		secondary: null,
 		target: "self",
 		type: "Plastic",
 		isNonstandard: "Future",
