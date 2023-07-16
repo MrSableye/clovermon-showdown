@@ -2409,6 +2409,7 @@ export const TypeChart: {[k: string]: TypeData} = {
 	},
 	steam: {
 		damageTaken: {
+			hail: 3,
 			Blood: 0,
 			Bone: 0,
 			Bug: 0,

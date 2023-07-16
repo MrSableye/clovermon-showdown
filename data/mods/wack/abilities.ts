@@ -61,10 +61,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	chlorophyll: {
 		inherit: true,
 		onModifySpe(spe, pokemon) {
+			if (this.field.isWeather('midnight')) {
+				return this.chainModify(0.5);
+			}
+			if (pokemon.hasItem('utilityumbrella')) return;
 			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
 				return this.chainModify(2);
-			} else if (this.field.isWeather('midnight')) {
-				return this.chainModify(0.5);
 			}
 		},
 		desc: "If Sunny Day is active, this Pokemon's Speed is doubled, this effect is prevented if this Pokemon is holding a Utility Umbrella. If Midnight is active, this Pokemon's Speed is halved.",
@@ -78,6 +80,29 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		desc: "This Pokemon's weight is doubled. This effect is calculated after the effect of Autotomize, and before the effect of Float Stone. It's immune to Blade Rain.",
 		shortDesc: "Weight doubled. Immune to Blade Rain.",
+		isNonstandard: null,
+	},
+	forecast: {
+		inherit: true,
+		onWeather(target, source, effect) {
+			if (effect.id === 'hail') {
+				this.heal(target.baseMaxhp / 16);
+			}
+		},
+		onModifySpe(spe, pokemon) {
+			if (pokemon.hasItem('utilityumbrella')) return;
+			if (this.field.isWeather(['sunnyday', 'desolateland', 'raindance', 'primordialsea'])) return this.chainModify(2);
+		},
+		onModifyAccuracyPriority: -1,
+		onModifyAccuracy(accuracy) {
+			if (this.field.isWeather('sandstorm')) {
+				if (typeof accuracy !== 'number') return;
+				this.debug('Forecast - decreasing accuracy');
+				return this.chainModify(1.2);
+			}
+		},
+		desc: "If Hail is active, heal 1/16 of the Pokemon's HP. If Sunny Day or Rain Dance is active, boost speed by 2. If this Pokemon is a Castform, its type changes to the current weather condition's type, except Sandstorm. This effect is prevented if this Pokemon is holding a Utility Umbrella and the weather is Rain Dance or Sunny Day.",
+		shortDesc: "Hail, Heals 1/16 max HP. Sun, Rain, Doubles speed. Sandstorm, Evasion x1.2. Transforms Castform.",
 		isNonstandard: null,
 	},
 	/* Wack abilities */

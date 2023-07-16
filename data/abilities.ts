@@ -12437,7 +12437,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	oasis: {
 		onWeather(target, source, effect) {
-			if (target.hasItem('utilityumbrella')) return;
 			if (this.field.isWeather('sandstorm')) this.heal(target.baseMaxhp / 14);
 		},
 		name: "Oasis",
@@ -12591,6 +12590,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onSourceBasePowerPriority: 17,
 		onSourceBasePower(basePower, attacker, defender, move) {
 			if (move.type === 'Ice') return this.chainModify(1.25);
+		},
+		onWeather(target, source, effect) {
+			if (effect.id === 'hail' || effect.id === 'snow') {
+				this.damage(target.baseMaxhp / 8, target, target)
+			}
+			if (target.hasItem('utilityumbrella')) return;
+			if (effect.id === 'sunnyday' || effect.id === 'desolateland') {
+				this.heal(target.baseMaxhp / 8);
+			}
 		},
 		name: "Cold Blooded",
 		rating: 3,
@@ -13070,6 +13078,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onWeather(target, source, effect) {
+			if (effect.id === 'sandstorm') {
+				this.heal(target.baseMaxhp / 16);
+			}
 			if (target.hasItem('utilityumbrella')) return;
 			if (effect.id === 'raindance' || effect.id === 'primordialsea') {
 				this.heal(target.baseMaxhp / 16);
