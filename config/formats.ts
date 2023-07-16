@@ -913,6 +913,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
+			'Overflow Stat Mod',
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
@@ -927,6 +928,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
+			'Overflow Stat Mod',
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
@@ -942,6 +944,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
+			'Overflow Stat Mod',
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
@@ -957,6 +960,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
+			'Overflow Stat Mod',
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
@@ -972,6 +976,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 			'Team Preview',
+			'Overflow Stat Mod',
 		],
 	},
 ];
