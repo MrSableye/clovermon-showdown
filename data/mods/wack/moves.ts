@@ -1,4 +1,108 @@
 export const Moves: {[k: string]: ModdedMoveData} = {
+	/* Modified vanilla moves */
+	gunkshot: {
+		inherit: true,
+		onModifyMove(move) {
+			if (this.field.isWeather(['acidrain'])) move.accuracy = true;
+		},
+		desc: "Has a 30% chance to poison the target. If the weather is Acid Rain, this move does not check accuracy.",
+		shortDesc: "30% chance to psn target. Can't miss in Acid Rain",
+		isNonstandard: null,
+	},
+	hurricane: {
+		inherit: true,
+		onModifyMove(move, pokemon, target) {
+			switch (target?.effectiveWeather()) {
+			case 'hail':
+			case 'snow':
+			case 'raindance':
+			case 'primordialsea':
+				move.accuracy = true;
+				break;
+			case 'sunnyday':
+			case 'desolateland':
+				move.accuracy = 50;
+				break;
+			}
+		},
+		desc: "Has a 30% chance to confuse the target. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Primordial Sea, Rain Dance, Hail or Snow, this move does not check accuracy. If the weather is Desolate Land or Sunny Day, this move's accuracy is 50%. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 70%.",
+		shortDesc: "30% chance to confuse target. Can't miss in rain or hail.",
+		isNonstandard: null,
+	},
+	weatherball: {
+		inherit: true,
+		onModifyType(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+				move.type = 'Fire';
+				break;
+			case 'raindance':
+			case 'primordialsea':
+				move.type = 'Water';
+				break;
+			case 'sandstorm':
+				move.type = 'Rock';
+				break;
+			case 'hail':
+			case 'snow':
+				move.type = 'Ice';
+				break;
+			case 'acidrain':
+				move.type = 'Poison';
+				break;
+			case 'midnight':
+				move.type = 'Ghost';
+				break;
+			case 'bladerain':
+				move.type = 'Steel';
+				break;
+			}
+		},
+		onModifyMove(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+				move.basePower *= 2;
+				break;
+			case 'raindance':
+			case 'primordialsea':
+				move.basePower *= 2;
+				break;
+			case 'sandstorm':
+				move.basePower *= 2;
+				break;
+			case 'hail':
+			case 'snow':
+				move.basePower *= 2;
+				break;
+			case 'acidrain':
+				move.basePower *= 2;
+				break;
+			case 'midnight':
+				move.basePower *= 2;
+				break;
+			case 'bladerain':
+				move.basePower *= 2;
+				break;
+			}
+			this.debug('BP: ' + move.basePower);
+		},
+		desc: "Power doubles if a weather condition other than Delta Stream is active, and this move's type changes to match. Poison type during Acid Rain, Ghost type during Midnight, Steel type during Blade Rain, Ice type during Snow, Water type during Primordial Sea or Rain Dance, Rock type during Sandstorm, and Fire type during Desolate Land or Sunny Day. If the user is holding Utility Umbrella and uses Weather Ball during Primordial Sea, Rain Dance, Desolate Land, or Sunny Day, this move remains Normal type and does not double in power.",
+		isNonstandard: null,
+	},
+	venomdrench: {
+		inherit: true,
+		onHit(target, source, move) {
+			if (target.status === 'psn' || target.status === 'tox' || this.field.isWeather('acidrain')) {
+				return !!this.boost({atk: -1, spa: -1, spe: -1}, target, source, move);
+			}
+			return false;
+		},
+		desc: "Lowers the target's Attack, Special Attack, and Speed by 1 stage if the target is poisoned or Acid Rain is on the field. Fails if the target is not poisoned or Acid Rain isn't on the field.",
+		shortDesc: "Lowers Atk/Sp. Atk/Speed of poisoned foes/during acid rain by 1.",
+		isNonstandard: null,
+	},
 	/* Wack moves */
 	hijumpkick: {
 		inherit: true,
