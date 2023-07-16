@@ -61,10 +61,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	chlorophyll: {
 		inherit: true,
 		onModifySpe(spe, pokemon) {
+			if (this.field.isWeather('midnight')) {
+				return this.chainModify(0.5);
+			}
+			if (pokemon.hasItem('utilityumbrella')) return;
 			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
 				return this.chainModify(2);
-			} else if (this.field.isWeather('midnight')) {
-				return this.chainModify(0.5);
 			}
 		},
 		desc: "If Sunny Day is active, this Pokemon's Speed is doubled, this effect is prevented if this Pokemon is holding a Utility Umbrella. If Midnight is active, this Pokemon's Speed is halved.",
@@ -88,6 +90,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 		onModifySpe(spe, pokemon) {
+			if (pokemon.hasItem('utilityumbrella')) return;
 			if (this.field.isWeather(['sunnyday', 'desolateland', 'raindance', 'primordialsea'])) return this.chainModify(2);
 		},
 		onModifyAccuracyPriority: -1,
