@@ -80,6 +80,28 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		shortDesc: "Weight doubled. Immune to Blade Rain.",
 		isNonstandard: null,
 	},
+	forecast: {
+		inherit: true,
+		onWeather(target, source, effect) {
+			if (effect.id === 'hail') {
+				this.heal(target.baseMaxhp / 16);
+			}
+		},
+		onModifySpe(spe, pokemon) {
+			if (this.field.isWeather(['sunnyday', 'desolateland', 'raindance', 'primordialsea'])) return this.chainModify(2);
+		},
+		onModifyAccuracyPriority: -1,
+		onModifyAccuracy(accuracy) {
+			if (this.field.isWeather('sandstorm')) {
+				if (typeof accuracy !== 'number') return;
+				this.debug('Forecast - decreasing accuracy');
+				return this.chainModify(1.2);
+			}
+		},
+		desc: "If Hail is active, heal 1/16 of the Pokemon's HP. If Sunny Day or Rain Dance is active, boost speed by 2. If this Pokemon is a Castform, its type changes to the current weather condition's type, except Sandstorm. This effect is prevented if this Pokemon is holding a Utility Umbrella and the weather is Rain Dance or Sunny Day.",
+		shortDesc: "Castform's type changes to the current weather condition's type, except Sandstorm.",
+		isNonstandard: null,
+	},
 	/* Wack abilities */
 	darklife: {
 		inherit: true,
