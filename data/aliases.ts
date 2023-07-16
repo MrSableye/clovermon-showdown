@@ -888,7 +888,6 @@ export const Aliases: {[alias: string]: string} = {
 	hpwater: "Hidden Power Water",
 	hjk: "High Jump Kick",
 	hjs: "High Jump Saw",
-	hijumpkick: "High Jump Kick",
 	miiwf: "Metronome If It Was Funny",
 	mterrain: "Misty Terrain",
 	np: "Nasty Plot",
