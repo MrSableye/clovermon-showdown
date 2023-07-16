@@ -17,7 +17,7 @@ const AVATARS_FILE = 'config/avatars.json';
  * - 'example.png' - side server custom avatars in config/avatars/ in your server
  */
 type AvatarID = string;
-const AVATAR_FORMATS_MESSAGE = Config.serverid === 'showdown' ?
+const AVATAR_FORMATS_MESSAGE = Config.serverid === 'clodown' ?
 	"Custom avatars start with '#', like '#splxraiders'." :
 	"Custom avatars look like 'example.png'. Custom avatars should be put in `config/avatars/`. Your server must be registered for custom avatars to work.";
 
@@ -752,7 +752,7 @@ export const OFFICIAL_CLODOWN_AVATARS = new Set([
 	'cap-sunny',
 	'cap-batherm',
 	'cap-batherf',
-	'cap-fucker'
+	'cap-fucker',
 ]);
 
 for (const avatar of OFFICIAL_AVATARS_BELIOT419) OFFICIAL_AVATARS.add(avatar);

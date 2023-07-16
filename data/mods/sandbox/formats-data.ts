@@ -10613,6 +10613,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	kattapillar: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	autumn: {
 		inherit: true,
 		tier: "OU",
@@ -11356,5 +11361,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+	},
+	blobbosmitosis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmitosiscomplete: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 };

@@ -1700,6 +1700,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	starhiro: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	doubtlaw: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	ranruu: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -3683,5 +3691,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+	},
+	blobbosmitosis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmitosiscomplete: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 };

@@ -2699,10 +2699,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Propeller Hat",
 		desc: "If held by a Blobbos-Keks, its Speed is 1.5x, but it can only select damaging moves.",
 	},
-	assaultjacket: {
-		name: "Assault Jacket",
-		desc: "Holder's Def is 1.5x, but it can only select Status moves.",
-	},
 	choiceshield: {
 		name: "Choice Shield",
 		desc: "Holder's Defense is 1.5x, but it can only select the first move it executes.",
@@ -2782,11 +2778,23 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Missinvoirite",
 		desc: "If held by a Missingvoir, this item allows it to Mega Evolve in battle.",
 	},
+	mesosack: {
+		name: "Meso Sack",
+		desc: "If the user would faint while using Star Force, it doesn't. Single use.",
+	},
 	kikeousorb: {
 		name: "Kikeous Orb",
 		desc: "If held by a Jewipede, its Normal- and Bug-type attacks have 1.2x power.",
 		gen4: {
 			desc: "Can only be held by Jewipede. Its Normal- & Bug-type attacks have 1.2x power.",
 		},
+	},
+	tumultuoustibia: {
+		name: "Tumultuous Tibia",
+		desc: "If held by Blobbos-Skeleton, its Attack is doubled.",
+	},
+	mascotsorb: {
+		name: "Mascot's Orb",
+		desc: "If held by Blobbos-Pika, its Attack and Special Attack are doubled.",
 	},
 };

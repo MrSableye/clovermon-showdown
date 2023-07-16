@@ -8004,6 +8004,38 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	starhiro: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	doubtlaw: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	theforest: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sanickel: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	skoxious: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	glucurs: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	onusalt: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ghastropod: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	ranruu: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -8817,6 +8849,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	tsuchinoko: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	kattapillar: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -9683,6 +9719,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	blobboslichmortal: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmitosis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmitosiscomplete: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

@@ -2513,7 +2513,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	rusepower: {
 		name: "Ruse Power",
-		desc: "This Pokemon's attacking stat is multiplied by 1.5 while using Poison- or Dark-type attacks.",
+		desc: "This Pokemon's attacking stat is multiplied by 1.2 while using Poison- or Dark-type attacks.",
 	},
 	shavedice: {
 		name: "Shaved Ice",
@@ -2585,7 +2585,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	tetanus: {
 		name: "Tetanus",
-		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be Toxic poisoned.",
+		shortDesc: "A Pokemon making contact with this Pokemon will be Toxic poisoned.",
 	},
 	wholesome100: {
 		name: "Wholesome 100",
@@ -2628,7 +2628,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	flipflops: {
 		name: "Flip Flops",
-		shortDesc: "1.5x Attack and Speed under Inverse Room.",
+		shortDesc: "Doubles Attack and Speed under Inverse Room.",
 	},
 	memepower: {
 		name: "Meme Power",
@@ -2955,6 +2955,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  [POKEMON] real!",
 	},
+	kattapillarssecretpower: {
+		name: "Kattapillar's Secret Power",
+		shortDesc: "Has a variety of effects depending on certain circumstances.",
+	},
 	overeagerest: {
 		name: "Overeagerest",
 		desc: "This Pokemon's damaging moves become multi-hit moves that hit 100 times. Subsequent hits deal 2^N more damage. Does not affect multi-hit moves or moves that have multiple targets.",
@@ -3216,7 +3220,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Opponent making contact: -1/4 max hp, 1/3 chance to brn/par/psn.",
 
 		damage: "#roughskin",
-  	},
+	},
 	musclemass: {
 		name: "Muscle Mass",
 		desc: "This Pokemon is immune to Fighting-type moves and raises its Defense by 1 stage when hit by a Fighting-type move. If this Pokemon is not the target of a single-target Water-type move used by another Pokemon, this Pokemon redirects that move to itself if it is within the range of that move. If multiple Pokemon could redirect with this Ability, it goes to the one with the highest Speed, or in the case of a tie to the one that has had this Ability active longer.",
@@ -3226,15 +3230,63 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	acapability: {
 		name: "A Cap Ability",
-		desc: "Beast Boost + Levitate."
+		desc: "Beast Boost + Levitate.",
 	},
 	acabability: {
 		name: "A Cab Ability",
 		desc: "https://pastebin.com/Nt7DxGis",
 	},
+	cellconstruct: {
+		name: "Cell Construct",
+		desc: "If Blobbos-Mitosis reaches under 50% of health, transforms into Blobbos-Mitosis-Complete.",
+	},
+	fireaffinity: {
+		name: "Fire Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fire-type attack. This Pokemon is healed 1/8 by Fire.",
+	},
+	electricityaffinity: {
+		name: "Electricity Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Electric-type attack. This Pokemon is healed 1/8 by Electricity. While this Pokemon is active, Explosion, Mind Blown, Misty Explosion, Self-Destruct, and the Aftermath Ability are prevented from having an effect.",
+	},
+	wateraffinity: {
+		name: "Water Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack. This Pokemon is healed 1/8 by Water. If Rain Dance is active, this Pokemon's Speed is doubled.",
+	},
+	strengthaffinity: {
+		name: "Strength Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fighting-type attack. This Pokemon is healed 1/8 by Fighting. Increases the power of Strength by 1.5x.",
+	},
+	poisonaffinity: {
+		name: "Poison Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Poison-type attack. This Pokemon is healed 1/8 by Poison. If this Pokemon has no item, it finds a gem matching the type of one of its moves at the end of this turn.",
+	},
+	rockaffinity: {
+		name: "Rock Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Rock-type attack. This Pokemon is healed 1/8 by Rock. If this Pokemon is at full HP, it survives one hit with at least 1 HP. Immune to OHKO.",
+	},
+	flightaffinity: {
+		name: "Flight Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Flying-type attack. This Pokemon is healed 1/8 by Flying. Immune to Ground.",
+	},
+	iceaffinity: {
+		name: "Ice Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Ice-type attack. This Pokemon is healed 1/8 by Ice. This Pokemon's Ice-type attacks are super-effective against Water-types.",
+	},
+	lightaffinity: {
+		name: "Light Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Fairy-type attack. This Pokemon is healed 1/8 by Fairy. This Pokemon's moves have their accuracy multiplied by 2.",
+	},
+	parasiteaffinity: {
+		name: "Parasite Affinity",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Dark-type attack. This Pokemon is healed 1/8 by Dark. All foes on the field lose 1/16 HP per turn and this Pokemon is healed by that much.",
+	},
 	noweaknesses: {
 		name: "NO WEAKNESSES",
-		shortDesc: "This Pokemon's typing and ability change when using Normal, Ghost, Bug, Steel, Dark, Poison, Water, or Ground moves",
+		shortDesc: "This Pokemon's typing and ability change when using Normal, Ghost, Bug, Steel, Dark, Poison, Water, or Ground moves.",
+	},
+	malevolentsoul: {
+		name: "Malevolent Soul",
+		shortDesc: "This Pokemon is immune to status and has doubled power on Fairy-Type moves. Takes 10% recoil for moves used and Ghost moves have x4 power against this Pokemon.",
 	},
 	darklife: {
 		name: "Dark Life",

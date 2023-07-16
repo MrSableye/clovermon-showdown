@@ -7877,7 +7877,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	backdraft: {
 		name: "Backdraft",
 		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities. Summons Tailwind for two turns after landing.",
-		shortDesc: "Switches user out, Swapped mon has 2x speed for a turn",
+		shortDesc: "User switches out. Swapped in mon has doubled speed for a turn.",
 		start: "  The Backdraft blew from behind [TEAM]!",
 		end: "  [TEAM]'s Backdraft petered out!",
 		switchOut: "#uturn",
@@ -7917,13 +7917,13 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	frostbite: {
 		name: "Frostbite",
-		desc: "Has a 100% chance to lower the target's Special Attack by 2 stage.",
-		shortDesc: "100% chance to lower foe(s) Sp. Atk by 1, 2 in Hail",
+		desc: "If hail is the active weather, this move has a 100% chance to lower the target's Special Attack by 2 stages. Otherwise, it has a 100% chance to lower the target's Special Attack by 1 stage.",
+		shortDesc: "100% chance to lower foe(s) Sp. Atk by 1, 2 in Hail.",
 	},
 	calibrate: {
 		name: "Calibrate",
 		desc: "Raises the user's Special Attack and accuracy by 1 stage.",
-		shortDesc: "Raises the user's Sp.Atk and accuracy by 1.",
+		shortDesc: "Raises the user's Sp. Atk and accuracy by 1.",
 	},
 	braindamage: {
 		name: "Brain Damage",
@@ -8157,7 +8157,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	thunderdrop: {
 		name: "Thunder Drop",
 		desc: "This attack takes the target into the air with the user on the first turn and executes on the second. Pokemon weighing 200 kg or more cannot be lifted. On the first turn, the user and the target avoid all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thousand Arrows, Thunder, and Twister. The user and the target cannot make a move between turns, but the target can select a move to use. This move cannot damage Flying-type Pokemon. Fails on the first turn if the target is an ally, if the target has a substitute, or if the target is using Bounce, Dig, Dive, Fly, Phantom Force, Shadow Force, or Sky Drop.",
-		shortDesc: "User and foe fly up turn 1. Damages on turn 2.",
+		shortDesc: "User and foe fly up turn 1. Damages on turn 2. 30% chance to Paralyze the target",
 
 		prepare: "[POKEMON] took [TARGET] into the sky!",
 		end: "  [POKEMON] was freed from the Thunder Drop!",
@@ -8295,6 +8295,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Does This Work",
 		shortDesc: "I dunno, does it?",
 	},
+	mitosistackle: {
+		name: "Mitosis Tackle",
+		shortDesc: "Hits twice.",
+	},
+	mitosismash: {
+		name: "Mitosis Mash",
+		shortDesc: "Hits 3 times. Each hit rises by 13 Power. Each hit can miss.",
+	},
 	telluriccurrent: {
 		name: "Telluric Current",
 		shortDesc: "Able to hit Ground types.",
@@ -8327,9 +8335,17 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Ninjutsu",
 		shortDesc: "Hits 4 times.",
 	},
+	tornadocab: {
+		name: "Tornado (CAB)",
+		shortDesc: "Summons Strong Winds after this move hits.",
+	},
 	groundbomb: {
 		name: "Ground Bomb",
-		shortDesc: "Explodes self, halves foe's defense.",
+		desc: "Deals damage three turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if this move or Ground Bomb is already in effect for the target's position.",
+		shortDesc: "Hits three turns after being used.",
+
+		start: "  [POKEMON] planted a bomb in the ground on the enemy's side!",
+		activate: "  [TARGET]'s movements activated the landmine!",
 	},
 	chernoboil: {
 		name: "Chernoboil",
@@ -8384,15 +8400,15 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	extremesneed: {
 		name: "Extreme Sneed",
-		shortDesc: "Usually goes first.",
+		shortDesc: "Usually goes first. Formerly Extremechuck",
 	},
 	feedandseed: {
 		name: "Feed and Seed",
-		shortDesc: "Uses Leech Seed, Worry Seed, and Grassy Terrain.",
+		shortDesc: "Uses Leech Seed, Worry Seed, and Grassy Terrain. Formerly Chuck and Fuck",
 	},
 	atombomb: {
 		name: "Atom Bomb",
-		shortDesc: "Hits adjacent Pokemon. The user faints.",
+		shortDesc: "Hits adjacent Pokemon. The user faints. Banned in Japan",
 	},
 	radiation: {
 		name: "Radiation",
@@ -8606,7 +8622,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	bigshot: {
 		name: "Big Shot",
-		shortDesc: "High critical hit ratio, 30% chance to paralyze.",
+		shortDesc: "High critical hit ratio, 30% chance to paralyze.Favorite move 1997",
 	},
 	foolsgambit: {
 		name: "Fool's Gambit",
@@ -8935,8 +8951,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Blazing Swipe",
 		shortDesc: "100% chance to lower the foe(s) Sp. Attack by 1. Hits all foes.",
 	},
-	bishido: {
-		name: "Bishido",
+	bushido: {
+		name: "Bushido",
 		shortDesc: "Hits 4 times.",
 	},
 	dustcannon: {
@@ -9196,6 +9212,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Genesis Boost",
 		desc: "Fails unless it is the user's first turn on the field. Raises the user's Attack and Defense by 2.",
 		shortDesc: "Usually goes first. First turn out only.Raises the user's Attack and Defense by 2.",
+	},
+	starforce: {
+		name: "Star Force",
+		desc: "Has a (9 - X) / 8 chance to boost X + 2 random stats where X is the user's current Star Force. On success, increases the user's Star Force. On failure, the user faints.",
+	},
+	bombrock: {
+		name: "Bomb Rock",
+		desc: "Special if user's Sp. Atk > Atk. User loses 50% max HP if the user moves after the target this turn.",
 	},
 	godotshammer: {
 		name: "Godot's Hammer",

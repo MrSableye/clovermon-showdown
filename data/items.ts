@@ -8238,7 +8238,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onTakeItem: false,
 		zMove: "Twin Tower Tumbling Terror",
 		zMoveFrom: "Freeze-Dry",
-		itemUser: ["Blobbos-Rembered","Sableven"],
+		itemUser: ["Blobbos-Rembered", "Sableven"],
 		gen: 8,
 		isNonstandard: "Future",
 	},
@@ -8718,25 +8718,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Blobbos-Keks"],
 		isNonstandard: "Future",
 	},
-	assaultjacket: {
-		name: "Assault Jacket",
-		spritenum: 581,
-		fling: {
-			basePower: 80,
-		},
-		onModifyDefPriority: 1,
-		onModifyDef(def) {
-			return this.chainModify(1.5);
-		},
-		onDisableMove(pokemon) {
-			for (const moveSlot of pokemon.moveSlots) {
-				if (this.dex.moves.get(moveSlot.move).category !== 'Status') {
-					pokemon.disableMove(moveSlot.id);
-				}
-			}
-		},
-		isNonstandard: "Future",
-	},
 	choiceshield: {
 		name: "Choice Shield",
 		spritenum: 699,
@@ -9008,7 +8989,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				if (random === 1) {
 					this.heal(pokemon.baseMaxhp / 2);
 				}
-				if (random === 1) {
+				if (random === 2) {
 					this.heal(pokemon.baseMaxhp);
 				}
 				if (drunken === 0) {
@@ -9031,7 +9012,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				}
 			} else {
 				if (random === 0) {
-					this.damage(pokemon.baseMaxhp);
+					this.damage(pokemon.baseMaxhp / 3);
 				}
 				if (random === 1) {
 					this.damage(pokemon.baseMaxhp / 2);
@@ -9073,6 +9054,10 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 	},
+	mesosack: {
+		name: "Meso Sack",
+		isNonstandard: "Future",
+	},
 	missingvoirite: {
 		name: "Missingvoirite",
 		spritenum: 587,
@@ -9083,6 +9068,41 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
 		},
+		isNonstandard: "Future",
+	},
+	tumultuoustibia: {
+		name: "Tumultuous Tibia",
+		spritenum: 379,
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Skeleton') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Blobbos-Skeleton"],
+		isNonstandard: "Future",
+	},
+	mascotsorb: {
+		name: "Mascot's Orb",
+		spritenum: 251,
+		fling: {
+			basePower: 50,
+			volatileStatus: 'curse',
+		},
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Pika') {
+				return this.chainModify(2);
+			}
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.species.name === 'Blobbos-Pika') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Blobbos-Pika"],
+		num: 236,
 		isNonstandard: "Future",
 	},
 	repel: {

@@ -304,7 +304,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware'],
 	},
 	{
 		name: '[Gen 8 Clover Only] Balanced Hackmons',
@@ -326,7 +326,7 @@ export const Formats: FormatList = [
 			'Multi Tier',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Wonder Guard', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',],
+		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Wonder Guard', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware'],
 	},
 	{
 		name: '[Gen 8 Clover Only] 350 Cup',
@@ -424,8 +424,8 @@ export const Formats: FormatList = [
 			'Inverse Mod',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Draconius', 'Bunnorgy', 
-			'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Draconius', 'Bunnorgy',
+			'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware'],
 		unbanlist: ['Condoom', 'Foryu', 'Narwhiz', 'Scytill'],
 	},
 	{
@@ -515,7 +515,7 @@ export const Formats: FormatList = [
 			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: [
-			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 
+			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
 			'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',
 		],
 	},
@@ -567,7 +567,7 @@ export const Formats: FormatList = [
 		ruleset: ['Terastal Clause', 'Standard', 'Overflow Stat Mod', 'Dynamax Clause', 'Sketch Post-Gen 7 Moves'],
 		banlist: [
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
-			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify', 'Blobbosite', 'Kalosite', 'Sexite Y', 'Reversite','Upbeddite'],
+			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify', 'Blobbosite', 'Kalosite', 'Sexite Y', 'Reversite', 'Upbeddite'],
 		unbanlist: [
 			'Abomasite', 'Absolite', 'Aerodactylite', 'Aggronite', 'Alakazite', 'Altarianite', 'Ampharosite', 'Audinite', 'Banettite', 'Blastoisinite', 'Blue Orb', 'Cameruptite', 'Charizardite X', 'Charizardite Y', 'Diancite', 'Galladite', 'Garchompite', 'Gardevoirite', 'Glalitite', 'Gyaradosite', 'Heracronite', 'Houndoominite', 'Latiasite', 'Latiosite', 'Lopunnite', 'Lucarionite', 'Manectite', 'Metagrossite', 'Mewtwonite X', 'Mewtwonite Y', 'Pinsirite', 'Red Orb', 'Sablenite', 'Salamencite', 'Sceptilite', 'Scizorite', 'Sharpedonite', 'Slowbronite', 'Steelixite', 'Swampertite', 'Tyranitarite', 'Venusaurite', 'Uber', 'Ooganite', 'Wifeminite', 'Bitekinite', 'Fonduppite', 'Ebolabite', 'Somboludite', 'Floriousite', 'Illumatrixite', 'Grimdakite', 'Hazmatite', 'Krokizonite', 'Spookzillite', 'Lizakbarite', 'Rectreemite', 'Unjoyite', 'Emplyinite', 'Smelloxite', 'Pigusonite', 'Hohohomite', 'Faptite', 'Jerklite', 'Dowsterite', 'Reptrillite', 'Kuklanite', 'Ricosuavite', 'Vandashite', 'Chasumite', 'Goryannusite', 'Spookscarite', 'Honradite'],
 		restricted: [
@@ -720,7 +720,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware'],
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] Anything Goes',
@@ -759,7 +759,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Evasion Moves Clause',
 		],
-		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs'],
+		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct'],
 	},
 	{
 		name: '[Gen 8 Clover Blobbos CAP Only] Ubers',
@@ -779,7 +779,7 @@ export const Formats: FormatList = [
 			'OHKO Clause',
 			'Evasion Moves Clause',
 		],
-		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Fling + License to Sell Hotdogs', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',],
+		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Fling + License to Sell Hotdogs', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Non-Clover
@@ -831,27 +831,21 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 		],
-		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs', 'Skull Cannon', 'Extinction Wave', 'Wonder Guard', 'Assault Jacket', 'Junkbane', 'Shed Tail'],
+		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs', 'Skull Cannon', 'Extinction Wave', 'Wonder Guard', 'Junkbane', 'Shed Tail'],
 	},
 	{
 		name: '[Gen 8 Sandbox Only] FFA Battle',
 		mod: 'sandbox',
 		gameType: 'freeforall',
 		ruleset: [
-			'Terastal Clause',
 			'Obtainable',
 			'Team Preview',
-			'Sleep Clause Mod',
-			'Nickname Clause',
 			'Endless Battle Clause',
 			'HP Percentage Mod',
 			'Cancel Mod',
 			'Sketch Post-Gen 7 Moves',
-			'OHKO Clause',
-			'Evasion Moves Clause',
-			'Species Clause',
 		],
-		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs', 'Basculegion + Last Respects', 'Houndstone + Last Respects'],
+		banlist: ['Nothing', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", 'Fling + License to Sell Hotdogs'],
 	},
 	{
 		name: '[Gen 8 Cope Only] Anything Goes',

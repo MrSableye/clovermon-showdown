@@ -1651,7 +1651,23 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	starforce: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	errpkmn: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	tornadocab: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mitosistackle: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mitosismash: {
 		inherit: true,
 		isNonstandard: null,
 	},

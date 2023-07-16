@@ -56,6 +56,21 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. Both hits individually have a 30% chance to lower the target's Defense by 1 stage.",
 		shortDesc: "Hits 2 times in one turn. 30% chance to lower Def.",
 	},
+	sharpen: {
+		inherit: true,
+		desc: "Raises the user's Attack by 1 stage.Increases Critical Hit odds by one stage",
+		shortDesc: "Raises the user's Attack by 1. Raises Critical Hit Odds",
+	},
+	mistball: {
+		name: "Mist Ball",
+		desc: "Has a 100% chance to lower the target's Special Attack by 1 stage.",
+		shortDesc: "100% chance to lower the target's Sp. Atk by 1.",
+	},
+	lusterpurge: {
+		name: "Luster Purge",
+		desc: "Has a 100% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "100% chance to lower the target's Sp. Def by 1.",
+	},
 	sleazyspores: {
 		inherit: true,
 		shortDesc: "Lowers Speed of foes by 1 on switch-in. Grass-type Pokemon remove it on switch-in.",
