@@ -9070,6 +9070,28 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		isNonstandard: "Future",
 	},
+	powerrush: {
+		name: "Power Rush",
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.species.id !== 'blobbospaper') return;
+			if (pokemon.hp <= pokemon.maxhp / 4) {
+				return this.chainModify(2);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.species.id !== 'blobbospaper') return;
+			if (pokemon.hp <= pokemon.maxhp / 4) {
+				return this.chainModify(2);
+			}
+		},
+		onTakeItem(item, source) {
+			return source.species.id !== 'blobbospaper';
+		},
+		isNonstandard: "Future",
+		itemUser: ["Blobbos-Paper"],
+	},
 	tumultuoustibia: {
 		name: "Tumultuous Tibia",
 		spritenum: 379,

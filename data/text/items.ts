@@ -2778,6 +2778,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Missinvoirite",
 		desc: "If held by a Missingvoir, this item allows it to Mega Evolve in battle.",
 	},
+	powerrush: {
+		name: "Power Rush",
+		desc: "If held by a Blobbos-Paper and it has 1/4 or less of its max HP, its Attack and Special Attack are doubled."
+	},
 	mesosack: {
 		name: "Meso Sack",
 		desc: "If the user would faint while using Star Force, it doesn't. Single use.",
