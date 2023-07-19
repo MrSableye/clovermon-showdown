@@ -202,8 +202,8 @@ export class LadderStore {
 		for (const format of Dex.formats.all()) {
 			if (format.searchShow) {
 				const store = new LadderStore(format.id);
-				const userIndex = store.indexOfUser(oldName, false);
 				const ladder = await store.getLadder();
+				const userIndex = store.indexOfUser(oldName, false);
 				ratings.push([...ladder[userIndex]]);
 				ladder[userIndex][0] = toID(newName);
 				ladder[userIndex][2] = newName;
