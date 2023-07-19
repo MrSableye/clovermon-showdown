@@ -795,6 +795,13 @@ export const Formats: FormatList = [
 		ruleset: ['Terastal Clause', 'Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
+		name: '[Gen 9] Random Showderp Meme Battle Doubles',
+		mod: 'gen9',
+		gameType: 'doubles',
+		team: 'randomMeme',
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
 		name: '[Gen 9] Free-For-All Random Showderp Meme Battle',
 		mod: 'gen9',
 		gameType: 'freeforall',
