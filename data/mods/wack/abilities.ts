@@ -105,6 +105,24 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		shortDesc: "Hail, Heals 1/16 max HP. Sun, Rain, Doubles speed. Sandstorm, Evasion x1.2. Transforms Castform.",
 		isNonstandard: null,
 	},
+	pixilate: {
+		inherit: true,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([5325, 4096]);
+		},
+	},
+	refrigerate: {
+		inherit: true,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([5325, 4096]);
+		},
+	},
+	aerilate: {
+		inherit: true,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([5325, 4096]);
+		},
+	},
 	/* Wack abilities */
 	darklife: {
 		inherit: true,
