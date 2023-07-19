@@ -3303,8 +3303,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Reduces the damage of incoming special moves.",
 		desc: "Reduces the damage of incoming special moves.",
 	},
-	acidrain: {
-		name: "Acid Rain",
+	aciddownpour: {
+		name: "Acid Downpour",
 		shortDesc: "The Pokemon makes it acid rain if it appears in battle.",
 		desc: "The Pokemon makes it acid rain if it appears in battle.",
 	},
