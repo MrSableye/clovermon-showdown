@@ -1,6 +1,7 @@
 import {FS} from "../../lib";
 import {Badges} from "./badges";
 import {LadderStore} from '../ladders-local';
+import { transferTourWins } from "./data-badges";
 
 interface UserTransfer {
 	sourceId: string;
@@ -77,6 +78,8 @@ export const commands: Chat.ChatCommands = {
 					}
 				}
 			}
+
+			transferTourWins(targetId, user.id, user);
 
 			transfers[targetId].isComplete = true;
 			saveTransfers();
