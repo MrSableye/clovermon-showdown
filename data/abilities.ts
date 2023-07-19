@@ -12256,11 +12256,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 6662,
 		isNonstandard: "Future",
 	},
-	aciddownpour: {
+	acidcloudburst: {
 		onStart(source) {
 			this.field.setWeather('acidrain');
 		},
-		name: "Acid Downpour",
+		name: "Acid Cloudburst",
 		rating: 3,
 		num: 6663,
 		isNonstandard: "Future",
