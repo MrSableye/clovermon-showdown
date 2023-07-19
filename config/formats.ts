@@ -19,10 +19,10 @@ The column value will be ignored for repeat sections.
 
 export const Formats: FormatList = [
 	///////////////////////////////////////////////////////////////////
-	// Clover Core Tiers
+	// Clover
 	///////////////////////////////////////////////////////////////////
 	{
-		section: 'Clover Core Tiers',
+		section: 'Clover',
 	},
 	{
 		name: '[Gen 8 Clover Only] OU',
@@ -66,12 +66,6 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		ruleset: ['Terastal Clause', '[Gen 8 Clover Only] RU'],
 		banlist: ['RU', 'NUBL'],
-	},
-	///////////////////////////////////////////////////////////////////
-	// Clover Singles
-	///////////////////////////////////////////////////////////////////
-	{
-		section: 'Clover Singles',
 	},
 	{
 		name: '[Gen 8 Clover Only] Random Battle',
@@ -118,6 +112,7 @@ export const Formats: FormatList = [
 		team: 'random',
 		gameType: 'freeforall',
 		rated: false,
+		searchShow: false,
 		ruleset: [
 			'Terastal Clause',
 			'Picked Team Size = 6',
@@ -203,12 +198,6 @@ export const Formats: FormatList = [
 			'Standard NatDex',
 		],
 	},
-	///////////////////////////////////////////////////////////////////
-	// Clover Doubles & Triples
-	///////////////////////////////////////////////////////////////////
-	{
-		section: 'Clover Doubles & Triples',
-	},
 	{
 		name: '[Gen 8 Clover Only] Doubles OU',
 		mod: 'clover',
@@ -292,7 +281,7 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Random SPOOKY Battle',
 		mod: 'clover',
 		team: 'randomSpooky',
-		searchShow: true,
+		searchShow: false,
 		rated: false,
 		onEffectiveness(typeMod, target, type, move) {
 			if (['Dark', 'Ghost'].includes(type) && ['Dark', 'Ghost'].includes(move.type)) {
@@ -716,7 +705,7 @@ export const Formats: FormatList = [
 	// Wack
 	///////////////////////////////////////////////////////////////////
 	{
-		section: 'Wack Core Tiers (HEAVY WIP)',
+		section: 'Wack (HEAVY WIP)',
 		column: 2,
 	},
 	{
@@ -906,10 +895,10 @@ export const Formats: FormatList = [
 		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard'],
 	},
 	///////////////////////////////////////////////////////////////////
-	// Clover Blobbos CAP
+	// Create-a-Blobbos (CAB)
 	///////////////////////////////////////////////////////////////////
 	{
-		section: 'Clover Blobbos CAP',
+		section: 'Create-a-Blobbos (CAB)',
 		column: 3,
 	},
 	{
