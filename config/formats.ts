@@ -783,6 +783,25 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: '[Gen 8 Wack Only] Monotype',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Same Type Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+			'Overflow Stat Mod',
+		],
+		banlist: [
+			'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
+			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+		],
+	},
+	{
 		name: '[Gen 8 Wack Only] Anything Goes',
 		mod: 'wack',
 		ruleset: [
@@ -796,6 +815,44 @@ export const Formats: FormatList = [
 		banlist: [
 			'Antiplebshield'
 		],
+	},
+	{
+		name: '[Gen 8 Wack Only] Doubles OU',
+		mod: 'wack',
+		gameType: 'doubles',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Swagger Clause',
+			'Sketch Post-Gen 7 Moves',
+			'Overflow Stat Mod',
+		],
+		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+		'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
+		'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf',
+		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'],
+	},
+	{
+		name: '[Gen 8 Wack Only] Triples OU',
+		mod: 'wack',
+		gameType: 'triples',
+		searchShow: false,
+		rated: false,
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Swagger Clause',
+			'Sketch Post-Gen 7 Moves',
+			'Overflow Stat Mod',
+		],
+		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+		'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
+		'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf',
+		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// CAP & Cope
