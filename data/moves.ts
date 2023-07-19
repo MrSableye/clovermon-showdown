@@ -61604,7 +61604,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		isNonstandard: "Future",
 	},
-	invertedroom: {
+	invertedroom: {	/* TODO **/
 		num: 668843,
 		accuracy: true,
 		basePower: 0,

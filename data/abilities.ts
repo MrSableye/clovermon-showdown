@@ -12256,15 +12256,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 6662,
 		isNonstandard: "Future",
 	},
-	acidrain: {
+	acidcloudburst: {
 		onStart(source) {
-			for (const action of this.queue) {
-				if (action.choice === 'runPrimal' && action.pokemon === source && source.species.id === 'kyogre') return;
-				if (action.choice !== 'runSwitch' && action.choice !== 'runPrimal') break;
-			}
 			this.field.setWeather('acidrain');
 		},
-		name: "Acid Rain",
+		name: "Acid Cloudburst",
 		rating: 3,
 		num: 6663,
 		isNonstandard: "Future",
@@ -12292,6 +12288,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.flags['sound']) {
 				this.debug('Mozart boost');
 				return this.chainModify([4915, 4096]);
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (['Fighting', 'Bug', 'Grass', 'Paper', 'Sound', 'Cosmic', 'Steel', 'Fire', 'Ice', 'Rubber', 'Food',
+			 'Paper', 'Flying', 'Electric', 'Wood', 'Tech', 'Nuclear', 'Water', 'Dragon', 'Plastic', 'Rock'].includes(move.type)) {
+				this.debug('Mozart weaken');
+				return this.chainModify(0.4);
 			}
 		},
 		name: "Mozart",
@@ -12634,18 +12637,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	firewall: {
-		onSourceModifyAtkPriority: 6,
-		onSourceModifyAtk(atk, attacker, defender, move) {
-			if (move.type === 'Cyber') {
-				this.debug('Firewall weaken');
-				return this.chainModify(0.8);
+		onStart(pokemon) {
+			let totalatk = 0;
+			let totalspa = 0;
+			for (const target of pokemon.foes()) {
+				totalatk += target.getStat('atk', false, true);
+				totalspa += target.getStat('spa', false, true);
 			}
-		},
-		onSourceModifySpAPriority: 5,
-		onSourceModifySpA(atk, attacker, defender, move) {
-			if (move.type === 'Cyber') {
-				this.debug('Firewall weaken');
-				return this.chainModify(0.8);
+			if (totalatk && totalspa >= totalspa) {
+				this.boost({def: 1});
+			} else if (totalspa) {
+				this.boost({spd: 1});
 			}
 		},
 		name: "Firewall",
@@ -13379,6 +13381,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (typeof accuracy !== 'number') return;
 			this.debug('computerbug - enhancing accuracy');
 			return this.chainModify([5325, 4096]);
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.type === 'Bug') return this.chainModify(1.3);
 		},
 		name: "Computer Bug",
 		rating: 3,

@@ -1573,9 +1573,11 @@ export class Pokemon {
 			}
 			return false;
 		}
-
+		
 		if (!ignoreImmunities && status.id &&
-				!(source?.hasAbility(['corrosion', 'cancer']) && ['tox', 'psn'].includes(status.id))) {
+				!((source?.hasAbility(['corrosion', 'cancer']) || source?.hasItem('plagueorb')) && ['tox', 'psn'].includes(status.id))
+				&& !((source?.hasItem('infernoorb')) && status.id === 'brn')
+				&& !((source?.hasItem('stormorb')) && status.id === 'par')) {
 			// the game currently never ignores immunities
 			if (!this.runStatusImmunity(status.id === 'tox' ? 'psn' : status.id)) {
 				this.battle.debug('immune to status');

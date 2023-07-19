@@ -910,8 +910,11 @@ export const Formats: FormatList = [
 			'Overflow Stat Mod',
 		],
 		banlist: [
-			'Uber', 'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute + Protect'
+			'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Downpour',
+			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
 		],
 	},
 	{
@@ -925,8 +928,11 @@ export const Formats: FormatList = [
 			'Overflow Stat Mod',
 		],
 		banlist: [
-			'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute + Protect'
+			'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Downpour',
+			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
 		],
 	},
 	{
@@ -941,8 +947,11 @@ export const Formats: FormatList = [
 			'Overflow Stat Mod',
 		],
 		banlist: [
-			'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute + Protect'
+			'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Downpour',
+			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
 		],
 	},
 	{
@@ -957,8 +966,11 @@ export const Formats: FormatList = [
 			'Overflow Stat Mod',
 		],
 		banlist: [
-			'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute + Protect'
+			'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Downpour',
+			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
 		],
 	},
 	{
@@ -971,6 +983,9 @@ export const Formats: FormatList = [
 			'Sketch Post-Gen 7 Moves',
 			'Team Preview',
 			'Overflow Stat Mod',
+		],
+		banlist: [
+			'Antiplebshield'
 		],
 	},
 ];

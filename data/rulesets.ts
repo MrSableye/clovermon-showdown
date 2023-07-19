@@ -752,7 +752,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 		effectType: 'ValidatorRule',
 		name: 'Evasion Items Clause',
 		desc: "Bans moves that lower the accuracy of moves used against the user",
-		banlist: ['Bright Powder', 'Lax Incense'],
+		banlist: ['Bright Powder', 'Lax Incense', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 'Ginsio Berry', 'Uranus Orb'],
 		onBegin() {
 			this.add('rule', 'Evasion Items Clause: Evasion items are banned');
 		},
@@ -812,7 +812,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 				if (!hasOrbeetle && species.name === "Orbeetle-Gmax") hasOrbeetle = true;
 				for (const moveid of set.moves) {
 					const move = this.dex.moves.get(moveid);
-					if (move.status && move.status === 'slp' && move.accuracy < 100) hasSleepMove = true;
+					const hasMissChanceOrNeverMisses = move.accuracy === true || move.accuracy < 100;
+
+					if (move.status && move.status === 'slp' && hasMissChanceOrNeverMisses) {
+						hasSleepMove = true;
+					}
 				}
 			}
 			if (hasOrbeetle && hasSleepMove) {

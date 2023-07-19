@@ -14437,7 +14437,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	alphanne: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	voidanne: {
@@ -14472,32 +14472,32 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	godluna: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	godsol: {
 		inherit: true,
-		tier: "LC",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	godmercury: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	godvenus: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	godmars: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	godjupiter: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	godsaturn: {
@@ -14507,17 +14507,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	godneptune: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	goduranus: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	godpluto: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	starmish: {
@@ -21982,7 +21982,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	mewby: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	thorita: {

@@ -118,7 +118,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	acidrain: {
+	acidcloudburst: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -432,7 +432,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	balance: {		/** Same as in data/abilities.ts */
 		inherit: true,
-		shortDesc: "This pokemon's not very effective moves are boosted and super effective moves against it are decreased.",
+		shortDesc: "NVE moves are boosted, SE moves against the Pokemon are weakened.",
 		desc: "This pokemon's not very effective moves are boosted and super effective moves against it are decreased.",
 		isNonstandard: null,
 	},
