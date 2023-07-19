@@ -2797,4 +2797,2581 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Mascot's Orb",
 		desc: "If held by Blobbos-Pika, its Attack and Special Attack are doubled.",
 	},
+	/* New Wack items **/
+	glalite: {
+		name: "Glalite",
+		desc: "One of the mysterious Mega Stones. Have Glalie hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	avalugite: {
+		name: "Avalugite",
+		desc: "One of the mysterious Mega Stones. Have Avalugg hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	butterfrite: {
+		name: "Butterfrite",
+		desc: "One of the mysterious Mega Stones. Have Butterfree hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	rubberflite: {
+		name: "Rubberflite",
+		desc: "One of the mysterious Mega Stones. Have Rubberfly hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	haicawite: {
+		name: "Haicawite",
+		desc: "One of the mysterious Mega Stones. Have Haicaw hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	shattaratite: {
+		name: "Shattaratite",
+		desc: "One of the mysterious Mega Stones. Have Shattarate hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	grasstaclite: {
+		name: "Grasstaclite",
+		desc: "One of the mysterious Mega Stones. Have Grasstacles hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	chillzite: {
+		name: "Chillzite",
+		desc: "One of the mysterious Mega Stones. Have Chillzie hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	lunightonite: {
+		name: "Lunightonite",
+		desc: "One of the mysterious Mega Stones. Have Lunighton hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	vanilluxite: {
+		name: "Vanilluxite",
+		desc: "One of the mysterious Mega Stones. Have Vanilluxe hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	blizzlamite: {
+		name: "Blizzlamite",
+		desc: "One of the mysterious Mega Stones. Have Blizzlam hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	synthitite: {
+		name: "Synthitite",
+		desc: "One of the mysterious Mega Stones. Have Synthite hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	chokolite: {
+		name: "Chokolite",
+		desc: "One of the mysterious Mega Stones. Have Chokolit hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	mouseeite: {
+		name: "Mouseeite",
+		desc: "One of the mysterious Mega Stones. Have Mousee hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	hoverite: {
+		name: "Hoverite",
+		desc: "One of the mysterious Mega Stones. Have Hoverot hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	naminite: {
+		name: "Naminite",
+		desc: "One of the mysterious Mega Stones. Have Namino hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	solaiossite: {
+		name: "Solaiossite",
+		desc: "One of the mysterious Mega Stones. Have Solaioss hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	goralite: {
+		name: "Goralite",
+		desc: "One of the mysterious Mega Stones. Have Gorale hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	neutralite: {
+		name: "Neutralite",
+		desc: "One of the mysterious Mega Stones. Have Plusle or Minun hold it, and this stone will enable them to Mega Evolve in battle.",
+	},
+	drumgite: {
+		name: "Drumgite",
+		desc: "One of the mysterious Mega Stones. Have Drumgheist hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	godzillusite: {
+		name: "Godzillusite",
+		desc: "One of the mysterious Mega Stones. Have Godzillus hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	muchoshotite: {
+		name: "Muchoshotite",
+		desc: "One of the mysterious Mega Stones. Have Muchoshot hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	miracactite: {
+		name: "Miracactite",
+		desc: "One of the mysterious Mega Stones. Have Miracact hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	hitmonite: {
+		name: "Hitmonite",
+		desc: "One of the mysterious Mega Stones. Have Hitmon -chan, -lee or -top hold it, and this stone will enable them to Mega Evolve in battle.",
+	},
+	snowfistnite: {
+		name: "Snowfistnite",
+		desc: "One of the mysterious Mega Stones. Have Snofistor hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	capsilite: {
+		name: "Capsilite",
+		desc: "Capsileau mega stone.",
+	},
+	torkoalite: {
+		name: "Torkoalite",
+		desc: "Torkoal mega stone.",
+	},
+	comistorite: {
+		name: "Comistorite",
+		desc: "Comistorin mega stone.",
+	},
+	heruptite: {
+		name: "Heruptite",
+		desc: "Heruptin mega stone.",
+	},
+	otyashite: {
+		name: "Otyashite",
+		desc: "Otyash mega stone.",
+	},
+	buglitchite: {
+		name: "Buglitchite",
+		desc: "Buglitch mega stone.",
+	},
+	bauminite: {
+		name: "Bauminite",
+		desc: "Baumine mega stone.",
+	},
+	log: {
+		name: "Log",
+		desc: "An item to be held by a Pokemon. It is a normal log that ups the power of Wood-type moves.",
+	},
+	steamer: {
+		name: "Steamer",
+		desc: "An item to be held by a Pokemon. It is an inexpensive looking steamer that ups the power of Steam-type moves.",
+	},
+	mysticmagma: {
+		name: "Mystic Magma",
+		desc: "An item to be held by a Pokemon. It is a vial of magma that ups the power of Magma-type moves.",
+	},
+	gear: {
+		name: "Gear",
+		desc: "An item to be held by a Pokemon. It is a gear that boosts Tech moves.",
+	},
+	ancientorb: {
+		name: "Ancient Orb",
+		desc: "An ancient orb that is said to have a legend tied to it. It's known to have a deep connection with certain pokemon.",
+	},
+	kite: {
+		name: "Kite",
+		desc: "An item to be held by a Pokemon. It is a fun kite that ups the power of Wind-type moves.",
+	},
+	magicwand: {
+		name: "Magic Wand",
+		desc: "An item to be held by a Pokemon. It is a magical wand that ups the power of Magic-type moves.",
+	},
+	prism: {
+		name: "Prism",
+		desc: "An item to be held by a Pokemon. It is a reflective prism that ups the power of Light-type moves.",
+	},
+	fluffycoat: {
+		name: "Fluffy Coat",
+		desc: "An item to be held by a Pokémon. A thick coat of fur that slightly reduces ice type damage."
+	},
+	ancienthelm: {
+		name: "Ancient Helm",
+		desc: "An ancient and rusting helmet. Despite its fragile appearance it is incredibly sturdy.",
+	},
+	seaweed: {
+		name: "Seaweed",
+		desc: "Seaweed that smells really salty and yummy. A certain pokemon loves it.",
+	},
+	drubberite: {
+		name: "Drubberite",
+		desc: "One of the mysterious Mega Stones. Have Drubber hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	neonazite: {
+		name: "Neonazite",
+		desc: "One of the mysterious Mega Stones. Have	Neonazi hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	chairite: {
+		name: "Chairite",
+		desc: "One of the mysterious Mega Stones. Have Chairy hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	pikachite: {
+		name: "Pikachite",
+		desc: "One of the mysterious Mega Stones. Have Pikachu hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	socialite: {
+		name: "Socialite",
+		desc: "One of the mysterious Mega Stones. Have Tweeter, Feborius or Myosmic hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	arbroodite: {
+		name: "Arbroodite",
+		desc: "One of the mysterious Mega Stones. Have Arbrood hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	steamboatite: {
+		name: "Steamboatite",
+		desc: "One of the mysterious Mega Stones. Have Steamboatle hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	lavagunite: {
+		name: "Lavagunite",
+		desc: "One of the mysterious Mega Stones. Have Lavagun hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	gachambite: {
+		name: "Gachambite",
+		desc: "One of the mysterious Mega Stones. Have Gachamber hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	gummite: {
+		name: "Gummite",
+		desc: "One of the mysterious Mega Stones. Have Gummi hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	houndoomite: {
+		name: "Houndoomite",
+		desc: "One of the mysterious Mega Stones. Have Houndoom hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	gigasvyrite: {
+		name: "Gigasvyrite",
+		desc: "One of the mysterious Mega Stones. Have Gygasvyre hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	corruptorb: {
+		name: "Corrupt Orb",
+		desc: "Boosts all stats on start. Single use.",
+	},
+	cummunculite: {
+		name: "Cummunculite",
+		desc: "Cummunclus mega.",
+	},
+	mladite: {
+		name: "Mladite",
+		desc: "Mladee mega.",
+	},
+	pinnistite: {
+		name: "Pinnistite",
+		desc: "Pinnister mega.",
+	},
+	rootspookite: {
+		name: "Rootspookite",
+		desc: "Rootspook mega.",
+	},
+	malwormite: {
+		name: "Malwormite",
+		desc: "Malworm mega.",
+	},
+	delite: {
+		name: "Delite",
+		desc: "Invokes the inner Deli in Delibird.",
+	},
+	panthannonite: {
+		name: "Panthannonite",
+		desc: "Panthannon mega.",
+	},
+	gourgeistite: {
+		name: "Gourgeistite",
+		desc: "Gourgeist mega.",
+	},
+	lavaplate: {
+		name: "Lava Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts the power of Magma-type moves.",
+	},
+	vaporplate: {
+		name: "Vapor Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts the power of Steam-type moves.",
+	},
+	lumberplate: {
+		name: "Lumber Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts the power of Wood-type moves.",
+	},
+	angelplate: {
+		name: "Angel Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts the power of Divine-type moves.",
+	},
+	demonicplate: {
+		name: "Demonic Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts the power of Chaos-type moves.",
+	},
+	paperplate: {
+		name: "Paper Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts the power of Paper-type moves.",
+	},
+	lusterplate: {
+		name: "Luster Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts the power of Light-type moves.",
+	},
+	tornadoplate: {
+		name: "Tornado Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts the power of Wind-type moves.",
+	},
+	arcaneplate: {
+		name: "Arcane Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts the power of Magic-type moves.",
+	},
+	machineplate: {
+		name: "Machine Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts the power of Tech-type moves.",
+	},
+	elasticplate: {
+		name: "Elastic Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts the power of Rubber-type moves.",
+	},
+	phobiaplate: {
+		name: "Phobia Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Fear-type moves.",
+	},
+	spaceplate: {
+		name: "Space Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Cosmic-type moves.",
+	},
+	sonarplate: {
+		name: "Sonarplate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Sound-type moves.",
+	},
+	gourmetplate: {
+		name: "Gourmetplate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Food-type moves.",
+	},
+	undeadplate: {
+		name: "Undead Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Zombie-type moves.",
+	},
+	radiationplate: {
+		name: "Radiation Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Nuclear-type moves.",
+	},
+	infectionplate: {
+		name: "Infection Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Virus-type moves.",
+	},
+	digitalplate: {
+		name: "Digital Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Cyber-type moves.",
+	},
+	glassplate: {
+		name: "Glass Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Glass-type moves.",
+	},
+	plasticplate: {
+		name: "Plastic Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Plastic-type moves.",
+	},
+	carpetplate: {
+		name: "Carpetplate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Fabric-type moves.",
+	},
+	agesplate: {
+		name: "Ages Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Time-type moves.",
+	},
+	artplate: {
+		name: "Art Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Paint-type moves.",
+	},
+	crystalplate: {
+		name: "Crystal Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Crystal-type moves.",
+	},
+	infoplate: {
+		name: "Info Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Meme-type moves.",
+	},
+	ichorplate: {
+		name: "Ichor Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Blood-type moves.",
+	},
+	fatplate: {
+		name: "Fat Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Greasy-type moves.",
+	},
+	emotionplate: {
+		name: "Emotion Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Heart-type moves.",
+	},
+	page: {
+		name: "Page",
+		desc: "An item to be held by a Pokemon. Boosts the power of Paper-type moves.",
+	},
+	rubberglove: {
+		name: "Rubber Glove",
+		desc: "An item to be held by a Pokemon. Boosts the power of Rubber-type moves.",
+	},
+	spookymask: {
+		name: "Spooky Mask",
+		desc: "An item to be held by a Pokemon. Boosts the power of Fear-type moves.",
+	},
+	telescope: {
+		name: "Telescope",
+		desc: "An item to be held by a Pokemon. Boosts the power of Cosmic-type moves.",
+	},
+	speaker: {
+		name: "Speaker",
+		desc: "An item to be held by a Pokemon. Boosts the power of Sound-type moves.",
+	},
+	sauce: {
+		name: "Sauce",
+		desc: "An item to be held by a Pokemon. Boosts the power of Food-type moves.",
+	},
+	brains: {
+		name: "Brains",
+		desc: "An item to be held by a Pokemon. Boosts the power of Zombie-type moves.",
+	},
+	uranium: {
+		name: "Uranium",
+		desc: "An item to be held by a Pokemon. Boosts the power of Nuclear-type moves.",
+	},
+	motherboard: {
+		name: "Motherboard",
+		desc: "An item to be held by a Pokemon. Boosts the power of Cyber-type moves.",
+	},
+	optimizerpro: {
+		name: "Optimizer Pro",
+		desc: "An item to be held by a Pokemon. Boosts the power of Virus-type moves.",
+	},
+	glasspiece: {
+		name: "Glass Piece",
+		desc: "An item to be held by a Pokemon. Boosts the power of Glass-type moves.",
+	},
+	plasticpiece: {
+		name: "Plastic Piece",
+		desc: "An item to be held by a Pokemon. Boosts the power of Plastic-type moves.",
+	},
+	carpet: {
+		name: "Carpet",
+		desc: "An item to be held by a Pokemon. Boosts the power of Fabric-type moves.",
+	},
+	holycross: {
+		name: "Holy Cross",
+		desc: "An item to be held by a Pokemon. Boosts the power of Divine-type moves.",
+	},
+	stopwatch: {
+		name: "Stopwatch",
+		desc: "An item to be held by a Pokemon. Boosts the power of Time-type moves.",
+	},
+	primeapite: {
+		name: "Primeapite",
+		desc: "One of the mysterious Mega Stones. Have Primeape hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	teskarite: {
+		name: "Teskarite",
+		desc: "One of the mysterious Mega Stones. Have Teskare hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	hypnite: {
+		name: "Hypnite",
+		desc: "One of the mysterious Mega Stones. Have Hypno hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	onionplate: {
+		name: "Onion Plate",
+		desc: "An item to be held by a Pokemon. It is a stone tablet that boosts Ogre-type moves.",
+	},
+	facarvite: {
+		name: "Facarvite",
+		desc: "Mega Facarveel.",
+	},
+	saplomite: {
+		name: "Saplomite",
+		desc: "One of the mysterious Mega Stones. Have Saplom hold it, and the stone will enable it to Mega Evolve in battle.",
+	},
+	absorspongite: {
+		name: "Absorspongite",
+		desc: "One of the mysterious Mega Stones. Have Absorsponge hold it, and the stone will enable it to Mega Evolve in battle.",
+	},
+	serperiorite: {
+		name: "Serperiorite",
+		desc: "Mega Serperior.",
+	},
+	emboarite: {
+		name: "Emboarite",
+		desc: "Mega Emboar.",
+	},
+	samurottite: {
+		name: "Samurottite",
+		desc: "Mega Samurott.",
+	},
+	empoleonite: {
+		name: "Empoleonite",
+		desc: "Mega Empoleon.",
+	},
+	infernapite: {
+		name: "Infernapite",
+		desc: "Mega Infernape.",
+	},
+	torterrite: {
+		name: "Torterrite",
+		desc: "Mega Torterra.",
+	},
+	dominatrixoutfit: {
+		name: "Dominatrix Outfit",
+		desc: "An outift that increases your crit rate against Attracted targets.",
+	},
+	frillydress: {
+		name: "Frilly Dress",
+		desc: "A held item that makes Kawaidesha auto-set Midnight and Full Moon.",
+	},
+	bouncectarmor: {
+		name: "Bouncect Armor",
+		desc: "A rubbery set of Armor that allows Bouncect to change forms.",
+	},
+	frankenspookite: {
+		name: "Frankenspookite",
+		desc: "Frankenspook mega.",
+	},
+	zangoosite: {
+		name: "Zangoosite",
+		desc: "Zangoose mega stone. Sponsored by Monster energy drink.",
+	},
+	virivite: {
+		name: "Virivite",
+		desc: "Mega Viriv.",
+	},
+	rubberite: {
+		name: "Rubberite",
+		desc: "Mega Rubbero.",
+	},
+	bottleodrakite: {
+		name: "Bottleodrakite",
+		desc: "Mega Bottle'o'Drake.",
+	},
+	dargouite: {
+		name: "Dargouite",
+		desc: "Mega Dargouille.",
+	},
+	sonotite: {
+		name: "Sonotite",
+		desc: "Mega Sonotech.",
+	},
+	arbokite: {
+		name: "Arbokite",
+		desc: "Mega Arbok.",
+	},
+	shedinjite: {
+		name: "Shedinjite",
+		desc: "Mega Shedinja.",
+	},
+	lynchite: {
+		name: "Lynchite",
+		desc: "Mega Lynchost.",
+	},
+	sevipite: {
+		name: "Sevipite",
+		desc: "Seviper mega stone. Has a Sprite sponsorship.",
+	},
+	volcaronite: {
+		name: "Volcaronite",
+		desc: "Mega Volcarona.",
+	},
+	feraligatrite: {
+		name: "Feraligatrite",
+		desc: "Mega Feraligatr.",
+	},
+	meganiumite: {
+		name: "Meganiumite",
+		desc: "Mega Meganium.",
+	},
+	typhlosionite: {
+		name: "Typhlosionite",
+		desc: "Mega Typhlosion.",
+	},
+	charizarditez: {
+		name: "Charizardite Z",
+		desc: "One of the mysterious Mega Stones. Have Charizard hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	johnspleenite: {
+		name: "Johnspleenite",
+		desc: "Mega Johnspleena.",
+	},
+	primalorb: {
+		name: "Primal Orb",
+		desc: "An orb capable of drawing out the primal power of legendaries.",
+	},
+	behemistite: {
+		name: "Behemistite",
+		desc: "Mega Behemist.",
+	},
+	luminite: {
+		name: "Luminite",
+		desc: "Mega Lumineon.",
+	},
+	bersergutsite: {
+		name: "Bersergutsite",
+		desc: "Mega Berserguts and Griffisen.",
+	},
+	wendigite: {
+		name: "Wendigite",
+		desc: "Mega Wendigore.",
+	},
+	flygonite: {
+		name: "Flygonite",
+		desc: "Mega Flygon.",
+	},
+	delphoxite: {
+		name: "Delphoxite",
+		desc: "Mega Delphox.",
+	},
+	greninjite: {
+		name: "Greninjite",
+		desc: "Mega Greninja.",
+	},
+	chesnaughtite: {
+		name: "Chesnaughtite",
+		desc: "Mega Chesnaught.",
+	},
+	chatotite: {
+		name: "Chatotite",
+		desc: "Mega Chatot.",
+	},
+	angelpowder: {
+		name: "Angel Powder",
+		desc: "At the end of every turn, holder restores 1/13 of its max HP.",
+	},
+	apexorb: {
+		name: "Apex Orb",
+		desc: "Leftovers + Bright Powder + Wide Lens. Higher crit ratio.",
+	},
+	sloggerothite: {
+		name: "Sloggerothite",
+		desc: "Mega Sloggeroth.",
+	},
+	archangite: {
+		name: "Archangite",
+		desc: "Mega Archango.",
+	},
+	ledevilainite: {
+		name: "Ledevilainite",
+		desc: "Mega Ledevillain.",
+	},
+	satelite: {
+		name: "Satelite",
+		desc: "Mega Sateli.",
+	},
+	sphinxiantite: {
+		name: "Sphinxiantite",
+		desc: "Mega Sphinxiant.",
+	},
+	clefablite: {
+		name: "Clefablite",
+		desc: "Mega Clefable.",
+	},
+	eeveeite: {
+		name: "Eeveeite",
+		desc: "Allows Eevee and its evolutions to Mega Evolve.",
+	},
+	fonightonite: {
+		name: "Fonightonite",
+		desc: "One of the mysterious Mega Stones. Have Fonighton hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	brickorite: {
+		name: "Brickorite",
+		desc: "One of the mysterious Mega Stones. Have Brickor hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	frostearite: {
+		name: "Frostearite",
+		desc: "One of the mysterious Mega Stones. Have Frostear hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	stantlerite: {
+		name: "Stantlerite",
+		desc: "One of the mysterious Mega Stones. Have Stantler hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	melonvilite: {
+		name: "Melonvilite",
+		desc: "One of the mysterious Mega Stones. Have Melonvile hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	delcattite: {
+		name: "Delcattite",
+		desc: "One of the mysterious Mega Stones. Have Delcatty hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	electrodite: {
+		name: "Electrodite",
+		desc: "One of the mysterious Mega Stones. Have Electrode hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	tantalberry: {
+		name: "Tantal Berry",
+		desc: "Weakens a supereffective Chaos-type attack against the holding Pokemon.",
+	},
+	holyward: {
+		name: "Holy Ward",
+		desc: "An item to be held by a Pokemon. A ward that reduces Chaos type damage.",
+	},
+	blessorb: {
+		name: "Bless Orb",
+		desc: "An item to be held by a Pokemon. It boosts Stats if hit with Chaos-type attack. It can only be used once.",
+	},
+	octillerite: {
+		name: "Octillerite",
+		desc: "One of the mysterious Mega Stones. Have Octillery hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	jetcraftite: {
+		name: "Jetcraftite",
+		desc: "One of the mysterious Mega Stones. Have Jetcraft hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	crobatite: {
+		name: "Crobatite",
+		desc: "One of the mysterious Mega Stones. Have Crobat hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	cradilite: {
+		name: "Cradilite",
+		desc: "One of the mysterious Mega Stones. Have Cradily hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	martianorb: {
+		name: "Martian Orb",
+		desc: "Raises the holders Attack when they reach half health.",
+	},
+	venusorb: {
+		name: "Venus Orb",
+		desc: "Raises the holders SpDef when they reach half health.",
+	},
+	mercuryorb: {
+		name: "Mercury Orb",
+		desc: "Raises the holders Speed when they reach half health.",
+	},
+	chipoloberry: {
+		name: "Chipolo Berry",
+		desc: "Weakens a supereffective Wood-type attack against the holding Pokemon.",
+	},
+	haridoberry: {
+		name: "Harido Berry",
+		desc: "Weakens a supereffective Magma-type attack against the holding Pokemon.",
+	},
+	bakyuuberry: {
+		name: "Bakyuu Berry",
+		desc: "Weakens a supereffective Steam-type attack against the holding Pokemon.",
+	},
+	darayberry: {
+		name: "Daray Berry",
+		desc: "Weakens a supereffective Wind-type attack against the holding Pokemon.",
+	},
+	loispberry: {
+		name: "Loisp Berry",
+		desc: "Weakens a supereffective Food-type attack against the holding Pokemon.",
+	},
+	orptekberry: {
+		name: "Orptek Berry",
+		desc: "Weakens a supereffective Virus-type attack against the holding Pokemon.",
+	},
+	oligalberry: {
+		name: "Oligal Berry",
+		desc: "Weakens a supereffective Magic-type attack against the holding Pokemon.",
+	},
+	ampireberry: {
+		name: "Ampire Berry",
+		desc: "Weakens a supereffective Blood-type attack against the holding Pokemon.",
+	},
+	goldstandarrow: {
+		name: "Gold Stand Arrow",
+		desc: "Give it to a Gold Experience Stando.",
+	},
+	goldenfiddle: {
+		name: "Golden Fiddle",
+		desc: "Reduces damage taken from Chaos and Divine type moves.",
+	},
+	novaisite: {
+		name: "Novaisite",
+		desc: "One of the mysterious Mega Stones. Have Novais hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	darkolite: {
+		name: "Darkolite",
+		desc: "One of the mysterious Mega Stones. Have Darkole hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	vivillonite: {
+		name: "Vivillonite",
+		desc: "One of the mysterious Mega Stones. Have Vivillon hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	jokercard: {
+		name: "Joker Card",
+		desc: "CHAOS CHAOS.",
+	},
+	ariadosite: {
+		name: "Ariadosite",
+		desc: "One of the mysterious Mega Stones. Have Ariados hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	gettertomahawk: {
+		name: "Getter Tomahawk",
+		desc: "CHANGE! GETTER ONE!",
+	},
+	getterdrill: {
+		name: "Getter Drill",
+		desc: "CHANGE! GETTER TWO!",
+	},
+	gettermissile: {
+		name: "Getter Missile",
+		desc: "CHANGE! GETTER THREE!",
+	},
+	mozartite: {
+		name: "Mozartite",
+		desc: "Could MOZART still be alive?",
+	},
+	icyseed: {
+		name: "Icy Seed",
+		desc: "Boosts SpDef in Icy Terrain.",
+	},
+	dongorillite: {
+		name: "DONGORILLITE",
+		desc: "Mega DONGORILLA.",
+	},
+	helioliskite: {
+		name: "Helioliskite",
+		desc: "Mega Heliolisk.",
+	},
+	narwharite: {
+		name: "Narwharite",
+		desc: "Mega Narwhar.",
+	},
+	suwiseglasses: {
+		name: "Suwise Glasses",
+		desc: "An item to be held by a Pokemon. It is a thick pair of glasses that slightly boosts the power of special moves.",
+	},
+	plasbulite: {
+		name: "Plasbulite",
+		desc: "One of the mysterious Mega Stones. Have Plasbul hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	lightulbite: {
+		name: "Lightulbite",
+		desc: "One of the mysterious Mega Stones. Have Lightulb hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	rodactylite: {
+		name: "Rodactylite",
+		desc: "One of the mysterious Mega Stones. Have Rodactyl hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	pressureorb: {
+		name: "Pressure Orb",
+		desc: "Boosts the power of moves, but use 2 PP per attack.",
+	},
+	earplugs: {
+		name: "Ear Plugs",
+		desc: "An item to be held by a Pokemon. Halves damage taken from Sound-type moves.",
+	},
+	reactioxite: {
+		name: "Reactioxite",
+		desc: "One of the mysterious Mega Stones. Have Reactiox hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	donphanite: {
+		name: "Donphanite",
+		desc: "One of the mysterious Mega Stones. Have Donphan hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	jynxite: {
+		name: "Jynxite",
+		desc: "One of the mysterious Mega Stones. Have Jynx hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	charizardites: {
+		name: "Charizardite S",
+		desc: "One of the mysterious Mega Stones. Have Charizard hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	farfetchditen: {
+		name: "Farfetchdite N",
+		desc: "One of the mysterious Mega Stones. Have Farfetchd hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	gigantamax: {
+		name: "Gigantamax",
+		desc: "Allows certain Pokemon from the Galar region to Mega Evolve.",
+	},
+	dragonitite: {
+		name: "Dragonitite",
+		desc: "One of the mysterious Mega Stones. Have Dragonite hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	carnivinite: {
+		name: "Carnivinite",
+		desc: "One of the mysterious Mega Stones. Have Carnivine hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	cultulzite: {
+		name: "Cultulzite",
+		desc: "One of the mysterious Mega Stones. Have Cultulzu hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	gorebyssite: {
+		name: "Gorebyssite",
+		desc: "One of the mysterious Mega Stones. Have Gorebyss hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	huntailite: {
+		name: "Huntailite",
+		desc: "One of the mysterious Mega Stones. Have Huntail hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	garbodorite: {
+		name: "Garbodorite",
+		desc: "One of the mysterious Mega Stones. Have Garbodor hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	kecleonite: {
+		name: "Kecleonite",
+		desc: "One of the mysterious Mega Stones. Have Kecleon hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	cocaiturdite: {
+		name: "Cocaiturdite",
+		desc: "One of the mysterious Mega Stones. Have Cocaiturd hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	albinguinite: {
+		name: "Albinguinite",
+		desc: "One of the mysterious Mega Stones. Have Albinguin hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	undlouisite: {
+		name: "Undlouisite",
+		desc: "Hundead, Zomboom or Smobill Megas.",
+	},
+	tropilightnite: {
+		name: "Tropilightnite",
+		desc: "Tropilightning Mega.",
+	},
+	nukreepite: {
+		name: "Nukreepite",
+		desc: "Mega Nukreep.",
+	},
+	tutterflite: {
+		name: "Tutterflite",
+		desc: "Mega Tutterfly.",
+	},
+	swoobatite: {
+		name: "Swoobatite",
+		desc: "Mega Swoobat.",
+	},
+	parasectite: {
+		name: "Parasectite",
+		desc: "Mega Parasect.",
+	},
+	smolstronite: {
+		name: "Smolstronite",
+		desc: "Mega Smolstron.",
+	},
+	antiplebshield: {
+		name: "Antiplebshield",
+		desc: "This is it.",
+	},
+	paintipite: {
+		name: "Paintipite",
+		desc: "Mega Paintip.",
+	},
+	silverkey: {
+		name: "Silver Key",
+		desc: "Give it to Yogsoth.",
+	},
+	horroruxite: {
+		name: "Horroruxite",
+		desc: "Mega Horrorux.",
+	},
+	pyramidite: {
+		name: "Pyramidite",
+		desc: "Mega Eyeluminid, Chaosemple, Orderymid.",
+	},
+	warshinite: {
+		name: "Warshinite",
+		desc: "Mega Warshin.",
+	},
+	omastarite: {
+		name: "Omastarite",
+		desc: "Mega Omastar.",
+	},
+	kabutopsite: {
+		name: "Kabutopsite",
+		desc: "Mega Kabutops.",
+	},
+	dolphottlite: {
+		name: "Dolphottlite",
+		desc: "Mega Dolphottle.",
+	},
+	corsolite: {
+		name: "Corsolite",
+		desc: "Mega Corsola.",
+	},
+	victreebelite: {
+		name: "Victreebelite",
+		desc: "Mega Victreebel.",
+	},
+	sunflorite: {
+		name: "Sunflorite",
+		desc: "Mega Sunflora.",
+	},
+	relicanthite: {
+		name: "Relicanthite",
+		desc: "Mega Relicanth.",
+	},
+	whiscashite: {
+		name: "Whiscashite",
+		desc: "Mega Whiscash.",
+	},
+	tangrowthitex: {
+		name: "Tangrowthite X",
+		desc: "Mega Tangrowth.",
+	},
+	tangrowthitey: {
+		name: "Tangrowthite Y",
+		desc: "Mega Tangrowth.",
+	},
+	tangrowthitez: {
+		name: "Tangrowthite Z",
+		desc: "Mega Tangrowth.",
+	},
+	luvdiscitex: {
+		name: "Luvdiscite X",
+		desc: "Mega Luvdisc.",
+	},
+	luvdiscitey: {
+		name: "Luvdiscite Y",
+		desc: "Mega Luvdisc.",
+	},
+	jumpluffitex: {
+		name: "Jumpluffite X",
+		desc: "Mega Jumpluff.",
+	},
+	jumpluffitey: {
+		name: "Jumpluffite Y",
+		desc: "Mega Jumpluff.",
+	},
+	magcargite: {
+		name: "Magcargite",
+		desc: "Mega Magcargo.",
+	},
+	poliwrathite: {
+		name: "Poliwrathite",
+		desc: "Mega Poliwrath.",
+	},
+	rapidashitey: {
+		name: "Rapidashite Y",
+		desc: "Mega Rapidash Y.",
+	},
+	rapidashitex: {
+		name: "Rapidashite X",
+		desc: "Mega Rapidash X.",
+	},
+	ninetalesite: {
+		name: "Ninetalesite",
+		desc: "Mega Ninetales.",
+	},
+	heatmorite: {
+		name: "Heatmorite",
+		desc: "Mega Heatmor.",
+	},
+	charizarditeg: {
+		name: "Charizardite G",
+		desc: "One of the mysterious Mega Stones. Have Charizard hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	charizarditer: {
+		name: "Charizardite R",
+		desc: "One of the mysterious Mega Stones. Have Charizard hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	arcaninite: {
+		name: "Arcaninite",
+		desc: "Mega Arcanine.",
+	},
+	magmortarite: {
+		name: "Magmortarite",
+		desc: "Mega Magmortar.",
+	},
+	snorlaxite: {
+		name: "Snorlaxite",
+		desc: "Mega Snorlax.",
+	},
+	spindite: {
+		name: "Spindite",
+		desc: "Mega Spinda.",
+	},
+	pyroarite: {
+		name: "Pyroarite",
+		desc: "Mega Pyroar.",
+	},
+	slakingite: {
+		name: "Slakingite",
+		desc: "Mega Slaking.",
+	},
+	steamistite: {
+		name: "Steamistite",
+		desc: "Mega Steamist.",
+	},
+	stweamsite: {
+		name: "Stweamsite",
+		desc: "Mega Stweams.",
+	},
+	steamnite: {
+		name: "Steamnite",
+		desc: "Mega Steamnie.",
+	},
+	thorncrown: {
+		name: "Thorn Crown",
+		desc: "An item to be held by a Pokemon. Turns Blood-type moves into Divine-type.",
+	},
+	pricklythorns: {
+		name: "Prickly Thorns",
+		desc: "If held by a Grass-type, reduces damage from Bug and Flying moves but lowers Speed of holder slightly.",
+	},
+	pressuredgem: {
+		name: "Pressured Gem",
+		desc: "If held by a Rock-type, reduces damage from Water and Grass moves but lowers Speed of holder slightly.",
+	},
+	pizzaurexitex: {
+		name: "Pizzaurexite X",
+		desc: "Mega Pizzaurex.",
+	},
+	tenablerusite: {
+		name: "Tenablerusite",
+		desc: "Mega Tenablerus.",
+	},
+	canyouite: {
+		name: "Canyouite",
+		desc: "Mega Canyou.",
+	},
+	charizarditei: {
+		name: "Charizardite I",
+		desc: "One of the mysterious Mega Stones. Have Charizard hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	magmocketite: {
+		name: "Magmocketite",
+		desc: "Mega Magmocket.",
+	},
+	charizarditew: {
+		name: "Charizardite W",
+		desc: "One of the mysterious Mega Stones. Have Charizard hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	charizarditef: {
+		name: "Charizardite F",
+		desc: "One of the mysterious Mega Stones. Have Charizard hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	ludicolite: {
+		name: "Ludicolite",
+		desc: "Mega Ludicolo.",
+	},
+	shiftryite: {
+		name: "Shiftryite",
+		desc: "Mega Shiftry.",
+	},
+	persianite: {
+		name: "Persianite",
+		desc: "Mega Persian.",
+	},
+	golemite: {
+		name: "Golemite",
+		desc: "Mega Golem.",
+	},
+	tsareenite: {
+		name: "Tsareenite",
+		desc: "Mega Tsareena.",
+	},
+	pizzaurexitey: {
+		name: "Pizzaurexite Y",
+		desc: "Mega Pizzaurex.",
+	},
+	pelipperite: {
+		name: "Pelipperite",
+		desc: "Mega Pelipper.",
+	},
+	sudowoodite: {
+		name: "Sudowoodite",
+		desc: "Mega Sudowoodo.",
+	},
+	armaldite: {
+		name: "Armaldite",
+		desc: "One of the mysterious Mega Stones. Have Armaldo hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	charizarditeb: {
+		name: "Charizardite B",
+		desc: "One of the mysterious Mega Stones. Have Charizard hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	mismagiusite: {
+		name: "Mismagiusite",
+		desc: "One of the mysterious Mega Stones. Have Mismagius hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	snatanite: {
+		name: "Snatanite",
+		desc: "One of the mysterious Mega Stones. Have Snatan hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	pagieite: {
+		name: "Pagieite",
+		desc: "Mega evolve Swanaper, Encyclodia, Pagolem.",
+	},
+	booklyite: {
+		name: "Booklyite",
+		desc: "Mega Bookly.",
+	},
+	lusfairite: {
+		name: "Lusfairite",
+		desc: "Mega Lusfairy evos.",
+	},
+	boxoite: {
+		name: "Boxoite",
+		desc: "Mega evolve Robox and Boxtress.",
+	},
+	poweredfan: {
+		name: "Powered Fan",
+		desc: "When held by Fanin or Turbind it starts a Tempest.",
+	},
+	thickscarf: {
+		name: "Thick Scarf",
+		desc: "Prevents damage from hail and take slightly less from Ice-type damage.",
+	},
+	wheelchair: {
+		name: "Wheelchair",
+		desc: "Doubles speed if paralyzed. If not it lowers speed.",
+	},
+	shockorb: {
+		name: "Shock Orb",
+		desc: "Paralyzes the holder.",
+	},
+	frostorb: {
+		name: "Frost Orb",
+		desc: "Freezes the holder.",
+	},
+	naporb: {
+		name: "Nap Orb",
+		desc: "Puts the holder to sleep.",
+	},
+	woodgem: {
+		name: "Wood Gem",
+		desc: "When held, it strengthens the power of a Wood-type move only once.",
+	},
+	magmagem: {
+		name: "Magma Gem",
+		desc: "When held, it strengthens the power of a Magma-type move only once.",
+	},
+	steamgem: {
+		name: "Steam Gem",
+		desc: "When held, it strengthens the power of a Steam-type move only once.",
+	},
+	windgem: {
+		name: "Wind Gem",
+		desc: "When held, it strengthens the power of a Wind-type move only once.",
+	},
+	papergem: {
+		name: "Paper Gem",
+		desc: "When held, it strengthens the power of a Paper-type move only once.",
+	},
+	techgem: {
+		name: "Tech Gem",
+		desc: "When held, it strengthens the power of a Tech-type move only once.",
+	},
+	magicgem: {
+		name: "Magicgem",
+		desc: "When held, it strengthens the power of a Magic-type move only once.",
+	},
+	rubbergem: {
+		name: "Rubber Gem",
+		desc: "When held, it strengthens the power of a Rubber-type move only once.",
+	},
+	feargem: {
+		name: "Fear Gem",
+		desc: "When held, it strengthens the power of a Fear-type move only once.",
+	},
+	lightgem: {
+		name: "Light Gem",
+		desc: "When held, it strengthens the power of a Light-type move only once.",
+	},
+	cosmicgem: {
+		name: "Cosmic Gem",
+		desc: "When held, it strengthens the power of a Cosmic-type move only once.",
+	},
+	soundgem: {
+		name: "Sound Gem",
+		desc: "When held, it strengthens the power of a Sound-type move only once.",
+	},
+	foodgem: {
+		name: "Food Gem",
+		desc: "When held, it strengthens the power of a Food-type move only once.",
+	},
+	zombiegem: {
+		name: "Zombie Gem",
+		desc: "When held, it strengthens the power of a Zombie-type move only once.",
+	},
+	nucleargem: {
+		name: "Nuclear Gem",
+		desc: "When held, it strengthens the power of a Nuclear-type move only once.",
+	},
+	virusgem: {
+		name: "Virus Gem",
+		desc: "When held, it strengthens the power of a Virus-type move only once.",
+	},
+	cybergem: {
+		name: "Cyber Gem",
+		desc: "When held, it strengthens the power of a Cyber-type move only once.",
+	},
+	fabricgem: {
+		name: "Fabric Gem",
+		desc: "When held, it strengthens the power of a Fabric-type move only once.",
+	},
+	chaosgem: {
+		name: "Chaos Gem",
+		desc: "When held, it strengthens the power of a Chaos-type move only once.",
+	},
+	divinegem: {
+		name: "Divine Gem",
+		desc: "When held, it strengthens the power of a Divine-type move only once.",
+	},
+	qmarksgem: {
+		name: "Qmarksgem",
+		desc: "When held, it strengthens the power of a ???-type move only once.",
+	},
+	timegem: {
+		name: "Time Gem",
+		desc: "When held, it strengthens the power of a Time-type move only once.",
+	},
+	paintgem: {
+		name: "Paint Gem",
+		desc: "When held, it strengthens the power of a Paint-type move only once.",
+	},
+	crystalgem: {
+		name: "Crystal Gem",
+		desc: "When held, it strengthens the power of a Crystal-type move only once.",
+	},
+	memegem: {
+		name: "Meme Gem",
+		desc: "When held, it strengthens the power of a Meme-type move only once.",
+	},
+	bloodgem: {
+		name: "Blood Gem",
+		desc: "When held, it strengthens the power of a Blood-type move only once.",
+	},
+	greasygem: {
+		name: "Greasy Gem",
+		desc: "When held, it strengthens the power of a Greasy-type move only once.",
+	},
+	heartgem: {
+		name: "Heart Gem",
+		desc: "When held, it strengthens the power of a Heart-type move only once.",
+	},
+	ogregem: {
+		name: "Ogre Gem",
+		desc: "When held, it strengthens the power of an Ogre-type move only once.",
+	},
+	shadowgem: {
+		name: "Shadow Gem",
+		desc: "When held, it strengthens the power of a Shadow-type move only once.",
+	},
+	acidrock: {
+		name: "Acid Rock",
+		desc: "Extends the duration of the move Acid Rain used by the holder.",
+	},
+	blackrock: {
+		name: "Black Rock",
+		desc: "Extends the duration of the move Midnight used by the holder.",
+	},
+	hulklearite: {
+		name: "Hulklearite",
+		desc: "Mega Hulklear.",
+	},
+	fearowite: {
+		name: "Fearowite",
+		desc: "Mega Fearow.",
+	},
+	skippingstone: {
+		name: "Skipping Stone",
+		desc: "An item to be held by a Pokemon that sharply raises Speed when hit by a Water-type move.",
+	},
+	arrowhead: {
+		name: "Arrowhead",
+		desc: "Item to be held. Increases Accuracy before using an Arrow move.",
+	},
+	bootsofblindingspeed: {
+		name: "Bootsofblindingspeed",
+		desc: "An item to be held by a Pokemon gives a MASSIVE Speed boost and drop to Accuracy.",
+	},
+	minigalaxy: {
+		name: "Mini Galaxy",
+		desc: "When held by Univax it starts Starfield.",
+	},
+	mienshaonite: {
+		name: "Mienshaonite",
+		desc: "One of the mysterious Mega Stones. Have Snatan hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	lipstick: {
+		name: "Lipstick",
+		desc: "Increases the power of kissing moves.",
+	},
+	gascan: {
+		name: "Gas Can",
+		desc: "Increases damage taken from Fire-type moves.",
+	},
+	spices: {
+		name: "Spices",
+		desc: "Increases damage taken from Food-type moves.",
+	},
+	kettle: {
+		name: "Kettle",
+		desc: "Increases the secondary effect chance of Steam moves.",
+	},
+	magmapowder: {
+		name: "Magma Powder",
+		desc: "Increases the secondary effect chance of Magma moves.",
+	},
+	sapling: {
+		name: "Sapling",
+		desc: "Increases the secondary effect chance of Wood moves.",
+	},
+	fertilizer: {
+		name: "Fertilizer",
+		desc: "Increases the secondary effect chance of Grass moves.",
+	},
+	sturdypebbles: {
+		name: "Sturdy Pebbles",
+		desc: "Increases the SpDef of pokemon that are Rock AND Ground type.",
+	},
+	sandycapsule: {
+		name: "Sandy Capsule",
+		desc: "When hit, breaks and starts Sandstorm for 4 turns.",
+	},
+	rainycapsule: {
+		name: "Rainy Capsule",
+		desc: "When hit, breaks and starts Rain for 4 turns.",
+	},
+	snowycapsule: {
+		name: "Snowy Capsule",
+		desc: "When hit, breaks and starts Hail for 4 turns.",
+	},
+	sunnycapsule: {
+		name: "Sunny Capsule",
+		desc: "When hit, breaks and starts Sun for 4 turns.",
+	},
+	lamwerberry: {
+		name: "Lamwer Berry",
+		desc: "Weakens a supereffective Cyber-type attack against the holding Pokemon.",
+	},
+	prigtinberry: {
+		name: "Prigtin Berry",
+		desc: "Weakens a supereffective Paper-type attack against the holding Pokemon.",
+	},
+	borcygberry: {
+		name: "Borcyg Berry",
+		desc: "Weakens a supereffective Tech-type attack against the holding Pokemon.",
+	},
+	lascetberry: {
+		name: "Lascet Berry",
+		desc: "Weakens a supereffective Rubber-type attack against the holding Pokemon.",
+	},
+	yboogberry: {
+		name: "Yboog Berry",
+		desc: "Weakens a supereffective Fear-type attack against the holding Pokemon.",
+	},
+	shieginberry: {
+		name: "Shiegin Berry",
+		desc: "Weakens a supereffective Light-type attack against the holding Pokemon.",
+	},
+	exretberry: {
+		name: "Exret Berry",
+		desc: "Weakens a supereffective Cosmic-type attack against the holding Pokemon.",
+	},
+	cousactiberry: {
+		name: "Cousacti Berry",
+		desc: "Weakens a supereffective Sound-type attack against the holding Pokemon.",
+	},
+	rottunberry: {
+		name: "Rottun Berry",
+		desc: "Weakens a supereffective Zombie-type attack against the holding Pokemon.",
+	},
+	niossifberry: {
+		name: "Niossif Berry",
+		desc: "Weakens a supereffective Nuclear-type attack against the holding Pokemon.",
+	},
+	tahrestberry: {
+		name: "Tahrest Berry",
+		desc: "Weakens a supereffective Glass-type attack against the holding Pokemon.",
+	},
+	ackegapberry: {
+		name: "Ackegap Berry",
+		desc: "Weakens a supereffective Plastic-type attack against the holding Pokemon.",
+	},
+	thiclonberry: {
+		name: "Thiclon Berry",
+		desc: "Weakens a supereffective Fabric-type attack against the holding Pokemon.",
+	},
+	naltereberry: {
+		name: "Naltere Berry",
+		desc: "Weakens a supereffective Time-type attack against the holding Pokemon.",
+	},
+	istartberry: {
+		name: "Istart Berry",
+		desc: "Weakens a supereffective Paint-type attack against the holding Pokemon.",
+	},
+	stomegenberry: {
+		name: "Stomegen Berry",
+		desc: "Weakens a supereffective Crystal-type attack against the holding Pokemon.",
+	},
+	fohazamberry: {
+		name: "Fohazam Berry",
+		desc: "Weakens a supereffective Meme-type attack against the holding Pokemon.",
+	},
+	lomeitberry: {
+		name: "Lomeit Berry",
+		desc: "Weakens a supereffective Heart-type attack against the holding Pokemon.",
+	},
+	symgrieberry: {
+		name: "Symgrie Berry",
+		desc: "Weakens a supereffective Greasy-type attack against the holding Pokemon.",
+	},
+	murkycapsule: {
+		name: "Murky Capsule",
+		desc: "When hit, breaks and starts Midnight for 4 turns.",
+	},
+	acidycapsule: {
+		name: "Acidy Capsule",
+		desc: "When hit, breaks and starts Acid Rain for 4 turns.",
+	},
+	blazingfeather: {
+		name: "Blazing Feather",
+		desc: "Decreases damage taken from Rock or Wind moves if the holder is Fire AND Flying type.",
+	},
+	riotshield: {
+		name: "Riot Shield",
+		desc: "This offensive vest raises Defense but prevents the use of status moves.",
+	},
+	falloutcapsule: {
+		name: "Fallout Capsule",
+		desc: "When hit, breaks and starts Fallout for 4 turns.",
+	},
+	grassycapsule: {
+		name: "Grassy Capsule",
+		desc: "When hit, breaks and starts Grassy Terrain for 4 turns.",
+	},
+	mistycapsule: {
+		name: "Misty Capsule",
+		desc: "When hit, breaks and starts Misty Terrain for 4 turns.",
+	},
+	electriccapsule: {
+		name: "Electric Capsule",
+		desc: "When hit, breaks and starts Electric Terrain for 4 turns.",
+	},
+	psychiccapsule: {
+		name: "Psychic Capsule",
+		desc: "When hit, breaks and starts Psychic Terrain for 4 turns.",
+	},
+	icycapsule: {
+		name: "Icy Capsule",
+		desc: "When hit, breaks and starts Icy Terrain for 4 turns.",
+	},
+	marshycapsule: {
+		name: "Marshy Capsule",
+		desc: "When hit, breaks and starts Marshy Terrain for 4 turns.",
+	},
+	wizardcapsule: {
+		name: "Wizard Capsule",
+		desc: "When hit, breaks and starts Wizard Field for 4 turns.",
+	},
+	volcaniccapsule: {
+		name: "Volcanic Capsule",
+		desc: "When hit, breaks and starts Volcanic Terrain for 4 turns.",
+	},
+	starfieldcapsule: {
+		name: "Starfield Capsule",
+		desc: "When hit, breaks and starts Starfield for 4 turns.",
+	},
+	librarycapsule: {
+		name: "Library Capsule",
+		desc: "When hit, breaks and starts Library for 4 turns.",
+	},
+	greencard: {
+		name: "Green Card",
+		desc: "A card with a mysterious power. The holder cannot be switched out.",
+	},
+	holyshield: {
+		name: "Holy Shield",
+		desc: "An item to be held by a Pokemon. Protects from Chaos moves until user attacks.",
+	},
+	lavarock: {
+		name: "Lava Rock",
+		desc: "A held item that gradually restores the HP of Fire or Magma-type Pokemon. It inflicts damage on all other types.",
+	},
+	arhelmet: {
+		name: "Ar Helmet",
+		desc: "A held item that makes the user immune to the effects of Rooms.",
+	},
+	vrheadset: {
+		name: "Vr Headset",
+		desc: "A held item that increases the duration of Rooms.",
+	},
+	boxinggloves: {
+		name: "Boxing Gloves",
+		desc: "A held item that increases the power of punching moves.",
+	},
+	spikedboots: {
+		name: "Spiked Boots",
+		desc: "A held item that increases the power of kicking moves.",
+	},
+	shoepolish: {
+		name: "Shoe Polish",
+		desc: "A held item that increases Speed if the holder uses a kick move.",
+	},
+	trainingglove: {
+		name: "Training Glove",
+		desc: "A held item that increases Attack if the holder uses a punch move.",
+	},
+	sandals: {
+		name: "Sandals",
+		desc: "A held item that increases Speed during a Sandstorm.",
+	},
+	skis: {
+		name: "Skis",
+		desc: "A held item that increases Speed during Hail.",
+	},
+	skates: {
+		name: "Skates",
+		desc: "A held item that increases Speed during Icy Terrain.",
+	},
+	librarycard: {
+		name: "Library Card",
+		desc: "Boosts Attack and SpAtk stats during Library.",
+	},
+	saunaheater: {
+		name: "Sauna Heater",
+		desc: "Increases power of Fire moves during Sauna.",
+	},
+	foggysteamer: {
+		name: "Foggy Steamer",
+		desc: "Increases evasion during Sauna.",
+	},
+	swimsuit: {
+		name: "Swim Suit",
+		desc: "A hold item that raises Speed during Rain.",
+	},
+	volcanicseed: {
+		name: "Volcanic Seed",
+		desc: "Boosts SpDef in Volcanic Terrain.",
+	},
+	marshyseed: {
+		name: "Marshy Seed",
+		desc: "Boosts SpDef in Marshy Terrain.",
+	},
+	tunlawberry: {
+		name: "Tunlaw Berry",
+		desc: "It may be used or held by a Pokemon to recover from infatuation.",
+	},
+	excisberry: {
+		name: "Excis Berry",
+		desc: "It may be used or held by a Pokemon to recover from curse.",
+	},
+	coagberry: {
+		name: "Coag Berry",
+		desc: "It may be used or held by a Pokemon to recover from bleeding.",
+	},
+	ambrosaberry: {
+		name: "Ambrosa Berry",
+		desc: "Weakens a supereffective Divine-type attack against the holding Pokemon.",
+	},
+	wingrenberry: {
+		name: "Wingren Berry",
+		desc: "It may be used or held by a Pokemon to recover from Encore.",
+	},
+	garsinberry: {
+		name: "Garsin Berry",
+		desc: "It may be used or held by a Pokemon to recover from Taunt.",
+	},
+	yllohberry: {
+		name: "Ylloh Berry",
+		desc: "It may be used or held by a Pokemon to recover from Disable.",
+	},
+	looffahberry: {
+		name: "Looffah Berry",
+		desc: "It may be used or held by a Pokemon to recover from Torment.",
+	},
+	bandaid: {
+		name: "Bandaid",
+		desc: "A hold item that prevents Bleeding.",
+	},
+	librarybinding: {
+		name: "Library Binding",
+		desc: "Increases Defense of a Paper type in Library.",
+	},
+	cyberspacecapsule: {
+		name: "Cyberspace Capsule",
+		desc: "When hit, breaks and starts Cyberspace for 4 turns.",
+	},
+	gallerycapsule: {
+		name: "Gallery Capsule",
+		desc: "When hit, breaks and starts Art Gallery for 4 turns.",
+	},
+	choicejacket: {
+		name: "Choice Jacket",
+		desc: "An item to be held by a Pokemon. This jacket ups Defense, but allows the use of only one of its moves.",
+	},
+	choicecloak: {
+		name: "Choice Cloak",
+		desc: "An item to be held by a Pokemon. This cloak ups SpDef, but allows the use of only one of its moves.",
+	},
+	mettleberry: {
+		name: "Mettle Berry",
+		desc: "It may be held by a Pokemon to prevent flinching.",
+	},
+	boisonberry: {
+		name: "Boison Berry",
+		desc: "It may be used or held by a Pokemon to heal a lot but it also poisons.",
+	},
+	perepberry: {
+		name: "Perep Berry",
+		desc: "It may be used or held by a Pokemon to heal a lot but it also burns.",
+	},
+	dollberry: {
+		name: "Doll Berry",
+		desc: "It may be used or held by a Pokemon to heal a lot but it also paralyzes.",
+	},
+	normaldust: {
+		name: "Normal Dust",
+		desc: "Dust with an ordinary essence. Turns the first move used by the user into Normal-type only once.",
+	},
+	waterdust: {
+		name: "Water Dust",
+		desc: "Dust with an aquatic essence. Turns the first move used by the user into Water-type only once.",
+	},
+	firedust: {
+		name: "Fire Dust",
+		desc: "Dust with a fiery essence. Turns the first move used by the user into Fire-type only once.",
+	},
+	grassdust: {
+		name: "Grass Dust",
+		desc: "Dust with a nature essence. Turns the first move used by the user into Grass-type only once.",
+	},
+	fightingdust: {
+		name: "Fighting Dust",
+		desc: "Dust with a fighting essence. Turns the first move used by the user into Fighting-type only once.",
+	},
+	flyingdust: {
+		name: "Flying Dust",
+		desc: "Turns the first move used by the user into Flying-type only once.",
+	},
+	poisondust: {
+		name: "Poison Dust",
+		desc: "Turns the first move used by the user into Poison-type only once.",
+	},
+	grounddust: {
+		name: "Ground Dust",
+		desc: "Turns the first move used by the user into Ground-type only once.",
+	},
+	rockdust: {
+		name: "Rock Dust",
+		desc: "Turns the first move used by the user into Rock-type only once.",
+	},
+	bugdust: {
+		name: "Bug Dust",
+		desc: "Turns the first move used by the user into Bug-type only once.",
+	},
+	ghostdust: {
+		name: "Ghost Dust",
+		desc: "Turns the first move used by the user into Ghost-type only once.",
+	},
+	electricdust: {
+		name: "Electric Dust",
+		desc: "Turns the first move used by the user into Electric-type only once.",
+	},
+	psychicdust: {
+		name: "Psychic Dust",
+		desc: "Turns the first move used by the user into Psychic-type only once.",
+	},
+	icedust: {
+		name: "Ice Dust",
+		desc: "Turns the first move used by the user into Ice-type only once.",
+	},
+	steeldust: {
+		name: "Steel Dust",
+		desc: "Turns the first move used by the user into Steel-type only once.",
+	},
+	darkdust: {
+		name: "Dark Dust",
+		desc: "Turns the first move used by the user into Dark-type only once.",
+	},
+	dragondust: {
+		name: "Dragon Dust",
+		desc: "Turns the first move used by the user into Dragon-type only once.",
+	},
+	fairydust: {
+		name: "Fairy Dust",
+		desc: "Turns the first move used by the user into Fairy-type only once.",
+	},
+	wooddust: {
+		name: "Wood Dust",
+		desc: "Turns the first move used by the user into Wood-type only once.",
+	},
+	magmadust: {
+		name: "Magma Dust",
+		desc: "Turns the first move used by the user into Magma-type only once.",
+	},
+	steamdust: {
+		name: "Steam Dust",
+		desc: "Turns the first move used by the user into Steam-type only once.",
+	},
+	winddust: {
+		name: "Wind Dust",
+		desc: "Turns the first move used by the user into Wind-type only once.",
+	},
+	paperdust: {
+		name: "Paper Dust",
+		desc: "Turns the first move used by the user into Paper-type only once.",
+	},
+	techdust: {
+		name: "Tech Dust",
+		desc: "Turns the first move used by the user into Tech-type only once.",
+	},
+	rubberdust: {
+		name: "Rubber Dust",
+		desc: "Turns the first move used by the user into Rubber-type only once.",
+	},
+	feardust: {
+		name: "Fear Dust",
+		desc: "Turns the first move used by the user into Fear-type only once.",
+	},
+	magicdust: {
+		name: "Magic Dust",
+		desc: "Turns the first move used by the user into Magic-type only once.",
+	},
+	lightdust: {
+		name: "Light Dust",
+		desc: "Turns the first move used by the user into Light-type only once.",
+	},
+	cosmicdust: {
+		name: "Cosmic Dust",
+		desc: "Turns the first move used by the user into Cosmic-type only once.",
+	},
+	sounddust: {
+		name: "Sound Dust",
+		desc: "Turns the first move used by the user into Sound-type only once.",
+	},
+	fooddust: {
+		name: "Food Dust",
+		desc: "Turns the first move used by the user into Food-type only once.",
+	},
+	zombiedust: {
+		name: "Zombie Dust",
+		desc: "Turns the first move used by the user into Zombie-type only once.",
+	},
+	nucleardust: {
+		name: "Nuclear Dust",
+		desc: "Turns the first move used by the user into Nuclear-type only once.",
+	},
+	virusdust: {
+		name: "Virus Dust",
+		desc: "Turns the first move used by the user into Virus-type only once.",
+	},
+	cyberdust: {
+		name: "Cyber Dust",
+		desc: "Turns the first move used by the user into Cyber-type only once.",
+	},
+	glassdust: {
+		name: "Glass Dust",
+		desc: "Turns the first move used by the user into Glass-type only once.",
+	},
+	plasticdust: {
+		name: "Plastic Dust",
+		desc: "Turns the first move used by the user into Plastic-type only once.",
+	},
+	fabricdust: {
+		name: "Fabric Dust",
+		desc: "Turns the first move used by the user into Fabric-type only once.",
+	},
+	chaosdust: {
+		name: "Chaos Dust",
+		desc: "Turns the first move used by the user into Chaos-type only once.",
+	},
+	divinedust: {
+		name: "Divine Dust",
+		desc: "Turns the first move used by the user into Divine-type only once.",
+	},
+	timedust: {
+		name: "Time Dust",
+		desc: "Turns the first move used by the user into Time-type only once.",
+	},
+	paintdust: {
+		name: "Paint Dust",
+		desc: "Turns the first move used by the user into Paint-type only once.",
+	},
+	crystaldust: {
+		name: "Crystal Dust",
+		desc: "Turns the first move used by the user into Crystal-type only once.",
+	},
+	memedust: {
+		name: "Meme Dust",
+		desc: "Turns the first move used by the user into Meme-type only once.",
+	},
+	blooddust: {
+		name: "Blood Dust",
+		desc: "Turns the first move used by the user into Blood-type only once.",
+	},
+	greasydust: {
+		name: "Greasy Dust",
+		desc: "Turns the first move used by the user into Greasy-type only once.",
+	},
+	heartdust: {
+		name: "Heart Dust",
+		desc: "Turns the first move used by the user into Heart-type only once.",
+	},
+	ogredust: {
+		name: "Ogre Dust",
+		desc: "Turns the first move used by the user into Ogre-type only once.",
+	},
+	qmarksdust: {
+		name: "Qmarksdust",
+		desc: "Turns the first move used by the user into ???-type only once.",
+	},
+	shadowdust: {
+		name: "Shadow Dust",
+		desc: "Turns the first move used by the user into Shadow-type only once.",
+	},
+	icepack: {
+		name: "Icepack",
+		desc: "An item to be held by a pokemon that turns its Water type moves into Ice type moves.",
+	},
+	novicebelt: {
+		name: "Novice Belt",
+		desc: "It is a brand new belt that slightly boosts the power of not very effective moves.",
+	},
+	gravitymodule: {
+		name: "Gravity Module",
+		desc: "Increases the duration of Gravity.",
+	},
+	rockcandy: {
+		name: "Rock Candy",
+		desc: "A very hard candy that gradually restores the HP of Rock-type Pokemon. It inflicts damage on all other types.",
+	},
+	gubiberry: {
+		name: "Gubi Berry",
+		desc: "It may be used or held by a Pokemon to recover from Embargo.",
+	},
+	siberrberry: {
+		name: "Siberr Berry",
+		desc: "It may be used or held by a Pokemon to recover from Heal Block.",
+	},
+	waterballoon: {
+		name: "Water Balloon",
+		desc: "When hit pops and starts Water Sport.",
+	},
+	mudballoon: {
+		name: "Mud Balloon",
+		desc: "When hit pops and starts Mud Sport.",
+	},
+	magmaballoon: {
+		name: "Magma Balloon",
+		desc: "When hit pops and starts Magma Sport.",
+	},
+	steamballoon: {
+		name: "Steam Balloon",
+		desc: "When hit pops and starts Steam Sport.",
+	},
+	supressionstone: {
+		name: "Supression Stone",
+		desc: "A held item that supresses the holder's ability.",
+	},
+	resistancepolicy: {
+		name: "Resistance Policy",
+		desc: "Defense and Sp. Def sharply increase if the holder is hit with a move it resists.",
+	},
+	chloroflower: {
+		name: "Chloro Flower",
+		desc: "Boosts speed during sunny day.",
+	},
+	coconaberry: {
+		name: "Cocona Berry",
+		desc: "It may be used or held by a Pokemon to recover from Mean Look or Block.",
+	},
+	gravityseed: {
+		name: "Gravity Seed",
+		desc: "Boosts SpDef in Gravity.",
+	},
+	sunglasses: {
+		name: "Sunglasses",
+		desc: "Decreases damage taken from Light. Increases Accuracy in Sunny weather.",
+	},
+	gravitycore: {
+		name: "Gravity Core",
+		desc: "Increases damage dealt by Cosmic type moves during Gravity.",
+	},
+	sandcastlekit: {
+		name: "Sandcastle Kit",
+		desc: "During a Sandstorm it increases the user's Defense.",
+	},
+	raincoat: {
+		name: "Raincoat",
+		desc: "During Rain it increases the user's Special Defense.",
+	},
+	ativumberry: {
+		name: "Ativum Berry",
+		desc: "It may be held by a Pokemon to hit a Ghost-type with any move once.",
+	},
+	igaradberry: {
+		name: "Igarad Berry",
+		desc: "It may be held by a Pokemon to hit a Steel-type with a Poison move once.",
+	},
+	inshuberry: {
+		name: "Inshu Berry",
+		desc: "It may be held by a Pokemon to hit a Ground-type with an Electric move once.",
+	},
+	drakfruberry: {
+		name: "Drakfru Berry",
+		desc: "It may be held by a Pokemon to hit a Fairy-type with a Dragon move once.",
+	},
+	pyscoberry: {
+		name: "Pysco Berry",
+		desc: "It may be held by a Pokemon to hit a Dark-type with a Psychic move once.",
+	},
+	ogravberry: {
+		name: "Ograv Berry",
+		desc: "It may be held by a Pokemon to hit a Flying-type with a Ground move once.",
+	},
+	poltraberry: {
+		name: "Poltra Berry",
+		desc: "It may be held by a Pokemon to hit a Normal-type with any move once.",
+	},
+	cowbell: {
+		name: "Cowbell",
+		desc: "Slightly increases Miltank's defenses and heals it every turn.",
+	},
+	iaraytberry: {
+		name: "Iarayt Berry",
+		desc: "It may be held by a Pokemon to hit a Bug-type with a Nuclear move once.",
+	},
+	zodziberry: {
+		name: "Zodzi Berry",
+		desc: "It may be held by a Pokemon to hit a Psychic-type with a Cosmic move once.",
+	},
+	arcakberry: {
+		name: "Arcak Berry",
+		desc: "It may be held by a Pokemon to hit a Dragon-type with a Magic move once.",
+	},
+	shurbberry: {
+		name: "Shurb Berry",
+		desc: "It may be held by a Pokemon to hit a Rubber-type with an Electric move once.",
+	},
+	vaccuberry: {
+		name: "Vaccu Berry",
+		desc: "It may be held by a Pokemon to hit a Cosmic-type with a Wind move once.",
+	},
+	gluttberry: {
+		name: "Glutt Berry",
+		desc: "It may be held by a Pokemon to hit a Food-type with a Chaos move once.",
+	},
+	tivomberry: {
+		name: "Tivom Berry",
+		desc: "It may be held by a Pokemon to hit a Zombie-type with a Fear move once.",
+	},
+	srapyberry: {
+		name: "Srapy Berry",
+		desc: "It may be held by a Pokemon to hit a Glass-type with a Water move once.",
+	},
+	invertedrune: {
+		name: "Inverted Rune",
+		desc: "Inverts type interactions for the holder.",
+	},
+	gouraberry: {
+		name: "Goura Berry",
+		desc: "It may be held by a Pokemon to protect from a critical hit once.",
+	},
+	gravitycapsule: {
+		name: "Gravity Capsule",
+		desc: "When hit, breaks and starts Gravity for 4 turns.",
+	},
+	chaosflute: {
+		name: "Chaos Flute",
+		desc: "When the user faints, the opposing pokemon is Confused.",
+	},
+	flyingballoon: {
+		name: "Flying Balloon",
+		desc: "When hit pops and starts Flying Sport.",
+	},
+	pandemiccapsule: {
+		name: "Pandemic Capsule",
+		desc: "When hit, breaks and starts Pandemic for 4 turns.",
+	},
+	aethercapsule: {
+		name: "Aether Capsule",
+		desc: "When hit, breaks and starts Aether Reign for 4 turns.",
+	},
+	steamyrock: {
+		name: "Steamy Rock",
+		desc: "Extends the duration of the move Sauna used by the holder.",
+	},
+	featherrock: {
+		name: "Feather Rock",
+		desc: "Extends the duration of the move Steady Wind and Tailwind used by the holder.",
+	},
+	erodedrock: {
+		name: "Eroded Rock",
+		desc: "Extends the duration of the move Tempest and Air Pressure used by the holder.",
+	},
+	scalyrock: {
+		name: "Scaly Rock",
+		desc: "Extends the duration of the move Dragon Ruins used by the holder.",
+	},
+	chargedrock: {
+		name: "Charged Rock",
+		desc: "Extends the duration of Electric field effects used by the holder.",
+	},
+	brightrock: {
+		name: "Bright Rock",
+		desc: "Extends the duration of Light field effects used by the holder.",
+	},
+	mossyrock: {
+		name: "Mossy Rock",
+		desc: "Extends the duration of certain Grass field effects used by the holder.",
+	},
+	weirdrock: {
+		name: "Weird Rock",
+		desc: "Extends the duration of certain Psychic field effects used by the holder.",
+	},
+	virtualrock: {
+		name: "Virtual Rock",
+		desc: "Extends the duration of certain Cyber field effects used by the holder.",
+	},
+	reflectiverock: {
+		name: "Reflective Rock",
+		desc: "Extends the duration of certain Glass field effects used by the holder.",
+	},
+	radioactiverock: {
+		name: "Radioactive Rock",
+		desc: "Extends the duration of certain Nuclear field effects used by the holder.",
+	},
+	paperrock: {
+		name: "Paper Rock",
+		desc: "Extends the duration of certain Paper field effects used by the holder.",
+	},
+	sweetrock: {
+		name: "Sweet Rock",
+		desc: "Extends the duration of certain Food field effects used by the holder.",
+	},
+	viralrock: {
+		name: "Viral Rock",
+		desc: "Extends the duration of certain Virus field effects used by the holder.",
+	},
+	woodenrock: {
+		name: "Woodenrock",
+		desc: "Extends the duration of certain Wood field effects used by the holder.",
+	},
+	echorock: {
+		name: "Echo Rock",
+		desc: "Extends the duration of certain Sound field effects used by the holder.",
+	},
+	clasticrock: {
+		name: "Clastic Rock",
+		desc: "Extends the duration of Power Arena used by the holder.",
+	},
+	swarmedrock: {
+		name: "Swarmed Rock",
+		desc: "Extends the duration of Swarm used by the holder.",
+	},
+	chromerock: {
+		name: "Chrome Rock",
+		desc: "Extends the duration of Iron Dust and Blade Rain used by the holder.",
+	},
+	plagueorb: {
+		name: "Plague Orb",
+		desc: "It is a bizarre orb that badly poisons the holder in battle no matter what.",
+	},
+	infernoorb: {
+		name: "Inferno Orb",
+		desc: "It is a bizarre orb that burns the holder in battle no matter what.",
+	},
+	stormorb: {
+		name: "Storm Orb",
+		desc: "It is a bizarre orb that paralyzes the holder in battle no matter what.",
+	},
+	glassarmor: {
+		name: "Glass Armor",
+		desc: "Halves damage taken from Special moves but doubles damage taken from Physical.",
+	},
+	confoundorb: {
+		name: "Confound Orb",
+		desc: "Confuses the holder.",
+	},
+	tormentorb: {
+		name: "Torment Orb",
+		desc: "Torments the holder.",
+	},
+	tauntorb: {
+		name: "Taunt Orb",
+		desc: "Taunts the holder.",
+	},
+	hotchocolate: {
+		name: "Hot Chocolate",
+		desc: "An item to be held by a Pokemon. Heals more than leftovers while Frozen.",
+	},
+	icecream: {
+		name: "Ice Cream",
+		desc: "An item to be held by a Pokemon. Heals more than leftovers while Burned.",
+	},
+	yogurt: {
+		name: "Yogurt",
+		desc: "An item to be held by a Pokemon. Heals more than leftovers while Paraylzed.",
+	},
+	mixedmushrooms: {
+		name: "Mixed Mushrooms",
+		desc: "An item to be held by a Pokemon. Heals more than leftovers while Poisoned.",
+	},
+	carritberry: {
+		name: "Carrit Berry",
+		desc: "If held by a Pokemon, it sharply raises its Accuracy stat in a pinch.",
+	},
+	ginsioberry: {
+		name: "Ginsio Berry",
+		desc: "If held by a Pokemon, it sharply raises its Evasion stat in a pinch.",
+	},
+	rottedrock: {
+		name: "Rotted Rock",
+		desc: "Extends the duration of Graveyard used by the holder.",
+	},
+	feastcapsule: {
+		name: "Feast Capsule",
+		desc: "When hit, breaks and starts Feast for 4 turns.",
+	},
+	mirrorcapsule: {
+		name: "Mirror Capsule",
+		desc: "When hit, breaks and starts Mirror Dimension for 4 turns.",
+	},
+	plainrock: {
+		name: "Plain Rock",
+		desc: "Extends the duration of Plain Terrain and Dead Silence used by the holder.",
+	},
+	graveyardcapsule: {
+		name: "Graveyard Capsule",
+		desc: "When hit, breaks and starts Graveyard for 4 turns.",
+	},
+	iceballoon: {
+		name: "Ice Balloon",
+		desc: "When hit pops and starts Ice Sport.",
+	},
+	arboreumcapsule: {
+		name: "Arboreum Capsule",
+		desc: "When hit, breaks and starts Arboreum for 4 turns.",
+	},
+	saunacapsule: {
+		name: "Sauna Capsule",
+		desc: "When hit, breaks and starts Sauna for 4 turns.",
+	},
+	sexyswimsuit: {
+		name: "Sexy Swimsuit",
+		desc: "A hold item that may cause infatuation during Rain.",
+	},
+	rainbarrel: {
+		name: "Rain Barrel",
+		desc: "Heals the holder during Rain.",
+	},
+	blaringspeaker: {
+		name: "Blaring Speaker",
+		desc: "Give it to Boomblix to auto-set Amplifier.",
+	},
+	factorycapsule: {
+		name: "Factory Capsule",
+		desc: "When hit, breaks and starts Factory for 4 turns.",
+	},
+	recyclecapsule: {
+		name: "Recycle Capsule",
+		desc: "When hit, breaks and starts Recycle Terrain for 4 turns.",
+	},
+	prankkit: {
+		name: "Prank Kit",
+		desc: "Gives a status move priority. Only works once.",
+	},
+	nightlight: {
+		name: "Nightlight",
+		desc: "Turns its Dark type moves into Light type moves.",
+	},
+	plasticrock: {
+		name: "Plastic Rock",
+		desc: "Extends the duration of Recycle Terrain used by the holder.",
+	},
+	bruxishite: {
+		name: "Bruxishite",
+		desc: "Mega Bruxish.",
+	},
+	drampite: {
+		name: "Drampite",
+		desc: "Mega Drampa.",
+	},
+	youthincense: {
+		name: "Youth Incense",
+		desc: "The nostalgic aroma of this incense increases power of Time type moves.",
+	},
+	marshyincense: {
+		name: "Marshy Incense",
+		desc: "The marshy aroma of this incense slightly boosts Ground and Water moves.",
+	},
+	teaincense: {
+		name: "Tea Incense",
+		desc: "The tea aroma of this incense prevents the user from being tormented.",
+	},
+	trojorsite: {
+		name: "Trojorsite",
+		desc: "Mega Trojorse.",
+	},
+	dusknoirite: {
+		name: "Dusknoirite",
+		desc: "Mega Dusknoir.",
+	},
+	manarock: {
+		name: "Mana Rock",
+		desc: "Extends the duration of Manaverse used by the holder.",
+	},
+	gueriestite: {
+		name: "Gueriestite",
+		desc: "Mega Gueriest.",
+	},
+	darkballoon: {
+		name: "Dark Balloon",
+		desc: "When hit pops and starts Dark Sport.",
+	},
+	c4: {
+		name: "C4",
+		desc: "When the user faints explodes and hurts what fainted it.",
+	},
+	soupbowl: {
+		name: "Soup Bowl",
+		desc: "Raises the defense of Food-types but lowers Speed.",
+	},
+	toiletpaper: {
+		name: "Toilet Paper",
+		desc: "Consumable. If hit by poison or ground move it sharply raises Defense.",
+	},
+	swarmcapsule: {
+		name: "Swarm Capsule",
+		desc: "When hit, breaks and starts Swarm for 4 turns.",
+	},
+	prismolisite: {
+		name: "Prismolisite",
+		desc: "Mega Prismolis.",
+	},
+	horrorizer: {
+		name: "Horrorizer",
+		desc: "A horrific stone. Should you really use it?",
+	},
+	steadywindcapsule: {
+		name: "Steadywind Capsule",
+		desc: "When hit, breaks and starts Steady Wind for 4 turns.",
+	},
+	tempestcapsule: {
+		name: "Tempest Capsule",
+		desc: "When hit, breaks and starts Tempest for 4 turns.",
+	},
+	invertedcapsule: {
+		name: "Inverted Capsule",
+		desc: "When hit, breaks and starts Inverted Room for 4 turns.",
+	},
+	bouncycapsule: {
+		name: "Bouncy Capsule",
+		desc: "When hit, breaks and starts Bouncy Capsule for 4 turns.",
+	},
+	manaversecapsule: {
+		name: "Manaverse Capsule",
+		desc: "When hit, breaks and starts Manaverse for 4 turns.",
+	},
+	ultracloak: {
+		name: "Ultra Cloak",
+		desc: "Yes.",
+	},
+	ultrascarf: {
+		name: "Ultra Scarf",
+		desc: "Yes.",
+	},
+	godsorb: {
+		name: "GODSORB",
+		desc: "Apex Orb but better.",
+	},
+	probopassite: {
+		name: "Probopassite",
+		desc: "One of the mysterious Mega Stones. Have Probopass hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	vampirefangs: {
+		name: "Vampire Fangs",
+		desc: "The holder's Fang moves heal it.",
+	},
+	eviolate: {
+		name: "Eviolate",
+		desc: "When held, it raises the Attack and Sp. Atk of a Pokemon that can still evolve.",
+	},
+	archersbow: {
+		name: "Archers Bow",
+		desc: "Boosts the power of Arrow moves.",
+	},
+	spiritbell: {
+		name: "Spirit Bell",
+		desc: "All attacks have a one percent chance to 1 hit KO.",
+	},
+	battlewhip: {
+		name: "Battle Whip",
+		desc: "Boosts the power of Whip moves.",
+	},
+	weakeningwhip: {
+		name: "Weakening Whip",
+		desc: "The holder's moves have a chance to lower the target's Attack.",
+	},
+	shatteringhammer: {
+		name: "Shattering Hammer",
+		desc: "The holder's moves have a chance to lower the target's Defense.",
+	},
+	distracttrumpet: {
+		name: "Distract Trumpet",
+		desc: "The holder's moves have a chance to lower the target's SpAtk.",
+	},
+	enfeeblescepter: {
+		name: "Enfeeble Scepter",
+		desc: "The holder's moves have a chance to lower the target's SpDef.",
+	},
+	gooeygloves: {
+		name: "Gooey Gloves",
+		desc: "The holder's moves have a chance to lower the target's Speed.",
+	},
+	blindingprism: {
+		name: "Blinding Prism",
+		desc: "The holder's moves have a chance to lower the target's Accuracy.",
+	},
+	alluringnectar: {
+		name: "Alluring Nectar",
+		desc: "The holder's moves have a chance to lower the target's Evasion.",
+	},
+	curseddoll: {
+		name: "Cursed Doll",
+		desc: "May disable opponent's move when they make contact.",
+	},
+	gigadrill: {
+		name: "Giga Drill",
+		desc: "Boosts the power of Drill moves.",
+	},
+	sheriffhat: {
+		name: "Sheriff Hat",
+		desc: "Gives priority to moves on the first turn.",
+	},
+	sheriffbadge: {
+		name: "Sheriff Badge",
+		desc: "Protects from Priority moves.",
+	},
+	wildwestcapsule: {
+		name: "Wildwest Capsule",
+		desc: "Starts Wild West.",
+	},
+	safetyhelmet: {
+		name: "Safety Helmet",
+		desc: "Prevents recoil damage.",
+	},
+	pengemperorite: {
+		name: "Pengemperorite",
+		desc: "One of the mysterious Mega Stones. Have Pengemperor hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	golurkite: {
+		name: "Golurkite",
+		desc: "One of the mysterious Mega Stones. Have Golurk hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	nidoqueenite: {
+		name: "Nidoqueenite",
+		desc: "One of the mysterious Mega Stones. Have Nidoqueen hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	dontstopmenow: {
+		name: "Dontstopmenow",
+		desc: "Heals the holder in a pinch. Is not consumed.",
+	},
+	sanshoodie: {
+		name: "Sans Hoodie",
+		desc: "Raises evasion a lot.",
+	},
+	eviocicle: {
+		name: "Eviocicle",
+		desc: "When held, it raises the Speed of a Pokemon that can still evolve.",
+	},
+	wackorb: {
+		name: "Wack Orb",
+		desc: "Allows your permanently mega evolved starter to WACK evolve.",
+	},
+	fancyapple: {
+		name: "Fancy Apple",
+		desc: "An item to be held by a Pokemon. Increases Defense but lowers SpDef.",
+	},
+	fruitbunch: {
+		name: "Fruit Bunch",
+		desc: "An item to be held by a Pokemon. Increases SpDef but lowers Defense.",
+	},
+	tinofbeans: {
+		name: "Tin Of Beans",
+		desc: "Heals the user in a pinch and poisons the opponent.",
+	},
+	friedfood: {
+		name: "Fried Food",
+		desc: "Heals the user in a pinch and makes them heavier.",
+	},
+	spicemix: {
+		name: "Spice Mix",
+		desc: "Heals the user in a pinch and burns the opponent.",
+	},
+	saladmix: {
+		name: "Salad Mix",
+		desc: "Heals the user in a pinch powers up the next Grass move.",
+	},
+	magnezonite: {
+		name: "Magnezonite",
+		desc: "One of the mysterious Mega Stones. Have Nidoqueen hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	saturnorb: {
+		name: "Saturn Orb",
+		desc: "Raises the holders Defense when they reach half health.",
+	},
+	jupiterorb: {
+		name: "Jupiter Orb",
+		desc: "Raises the holders SpAtk when they reach half health.",
+	},
+	neptuneorb: {
+		name: "Neptune Orb",
+		desc: "Raises the holders Accuracy when they reach half health.",
+	},
+	uranusorb: {
+		name: "Uranus Orb",
+		desc: "Raises the holders Evasion when they reach half health.",
+	},
+	borderwall: {
+		name: "Border Wall",
+		desc: "Puts up Screens when the holder enters battle.",
+	},
+	brittlebones: {
+		name: "Brittle Bones",
+		desc: "Brittle bones that lower your defense but raise your speed.",
+	},
+	sodapowder: {
+		name: "Soda Powder",
+		desc: "It boosts both defenses of Food types if hit by a Fire or Magma-type attack. It can only be used once.",
+	},
+	supermalevitality: {
+		name: "Super Male Vitality",
+		desc: "Raises Physical stats at low health.",
+	},
+	brainforce: {
+		name: "Brainforce",
+		desc: "Raises Special stats at low health.",
+	},
+	angerorb: {
+		name: "Anger Orb",
+		desc: "When hit by a critical hit it maximizes Attack.",
+	},
+	breakdownorb: {
+		name: "Breakdown Orb",
+		desc: "When hit by a critical hit it maximizes SpAtk.",
+	},
+	charizarditec: {
+		name: "Charizardite C",
+		desc: "One of the mysterious Mega Stones. Have Charizard hold it, and this stone will enable it to Mega Evolve in battle.",
+	},
+	pitchsludge: {
+		name: "Pitch Sludge",
+		desc: "A held item that gradually restores the HP of Poison-type Pokemon. It inflicts damage on all other types.",
+	},
+	craggyhelmet: {
+		name: "Craggy Helmet",
+		desc: "If the holder of this item takes damage, the attacker will also be damaged upon contact.",
+	},
+	fangclaw: {
+		name: "Fangclaw",
+		desc: "Greatly boosts crit chance and flinch chance.",
+	},
+	theberry: {
+		name: "The Berry",
+		desc: "It may be used or held by a Pokemon to heal the user's HP a little.",
+	},
+	banhammer: {
+		name: "Banhammer",
+		desc: "A held item that gives Cyber-type attacks a chance to disable moves.",
+	},
+	firewallarmor: {
+		name: "Firewall Armor",
+		desc: "A held item that slightly boosts the Defense of Cyber-types, at the cost of speed.",
+	},
+	virusbuster: {
+		name: "Virus Buster",
+		desc: "If the user is under the effects of Anti-Virus, their Cyber type moves do x1.5 damage.",
+	},
+	necronomicon: {
+		name: "Necronomicon",
+		desc: "When held by Groovy it starts a Graveyard.",
+	},
+	superpaper: {
+		name: "Super Paper",
+		desc: "If the holder is Pagie, doubles offensive power, defenses and speed. Boosts Paper moves.",
+	},
+	balletoutfit: {
+		name: "Ballet Outfit",
+		desc: "Increases the chance of secondary effects.",
+	},
+	kaleidoscope: {
+		name: "Kaleido Scope",
+		desc: "Greatly increases the chance of secondary effects but lowers accuracy.",
+	},
+	coldpack: {
+		name: "Cold Pack",
+		desc: "The holder's Attack will not be lowered by a Burn.",
+	},
+	skyrimse: {
+		name: "Skyrimse",
+		desc: "A game that keeps getting released endlessly.",
+	},
+	weddingdress: {
+		name: "Wedding Dress",
+		desc: "Increases power of Heart-type moves.",
+	},
+	bunnysuit: {
+		name: "Bunny Suit",
+		desc: "Bunny suit?",
+	},
+	catears: {
+		name: "Cat Ears",
+		desc: "Meow?",
+	},
 };
