@@ -197,6 +197,22 @@ export class LadderStore {
 		row[6] = '' + new Date();
 	}
 
+	static async changeName(oldName: string, newName: string): Promise<LadderRow[]> {
+		const ratings: LadderRow[] = [];
+		for (const format of Dex.formats.all()) {
+			if (format.searchShow) {
+				const store = new LadderStore(format.id);
+				const userIndex = store.indexOfUser(oldName, false);
+				const ladder = await store.getLadder();
+				ratings.push([...ladder[userIndex]]);
+				ladder[userIndex][0] = toID(newName);
+				ladder[userIndex][2] = newName;
+				await store.save();
+			}
+		}
+		return ratings;
+	}
+
 	/**
 	 * Update the Elo rating for two players after a battle, and display
 	 * the results in the passed room.
