@@ -204,7 +204,7 @@ export class LadderStore {
 				const store = new LadderStore(format.id);
 				const ladder = await store.getLadder();
 				const userIndex = store.indexOfUser(oldName, false);
-				ratings.push([...ladder[userIndex]]);
+				ratings.push(ladder[userIndex]);
 				ladder[userIndex][0] = toID(newName);
 				ladder[userIndex][2] = newName;
 				await store.save();
