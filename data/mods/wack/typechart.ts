@@ -1261,6 +1261,7 @@ export const TypeChart: {[k: string]: TypeData} = {
 	},
 	ground: {
 		damageTaken: {
+			sandstorm: 3,
 			Blood: 0,
 			Bone: 2,
 			Bug: 0,
