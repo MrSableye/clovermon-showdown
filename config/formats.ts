@@ -721,7 +721,7 @@ export const Formats: FormatList = [
 			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf',
-			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'antiplebshield',
 		],
 	},
 	{
@@ -739,7 +739,7 @@ export const Formats: FormatList = [
 			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf',
-			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'antiplebshield',
 		],
 	},
 	{
@@ -758,7 +758,7 @@ export const Formats: FormatList = [
 			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf',
-			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'antiplebshield',
 		],
 	},
 	{
@@ -777,7 +777,7 @@ export const Formats: FormatList = [
 			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf',
-			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'antiplebshield',
 		],
 	},
 	{
@@ -796,7 +796,7 @@ export const Formats: FormatList = [
 			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf',
-			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'antiplebshield',
 		],
 	},
 	{
@@ -811,7 +811,7 @@ export const Formats: FormatList = [
 			'Overflow Stat Mod',
 		],
 		banlist: [
-			'Antiplebshield'
+			'antiplebshield'
 		],
 	},
 	{
@@ -830,7 +830,7 @@ export const Formats: FormatList = [
 		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
 		'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 		'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf',
-		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'],
+		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'antiplebshield'],
 	},
 	{
 		name: '[Gen 8 Wack Only] Triples OU',
@@ -850,7 +850,7 @@ export const Formats: FormatList = [
 		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
 		'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 		'Corrupt Orb', 'Border Wall', 'Ultra Cloak', 'Ultra Scarf',
-		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'],
+		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'antiplebshield'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// CAP & Cope
