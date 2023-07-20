@@ -1,7 +1,60 @@
 import Axios from 'axios';
 import probe from 'probe-image-size';
+import parseColor from 'parse-color';
 import {FS, Net, Utils} from '../../lib';
 import {getTourWins} from './data-badges';
+
+/* Generic logic */
+const CUSTOM_CSS_PATH = 'config/custom.css';
+const CSS_HEADER = `.userlist li button:hover {
+	background: rgba(220,230,240,0.7);
+}`;
+
+const hasTourWins = (wins: number, user: User) => {
+	return getTourWins(user.id) >= wins;
+};
+
+const createUserCss = (
+	userId: string,
+	flair: Flair | undefined,
+	background: Background | undefined,
+) => {
+	const backgrounds: string[] = [];
+
+	if (flair) {
+		backgrounds.push(`url("${getFlairUrl(flair.pokemonId, flair.pokemonMod)}") no-repeat right -7px top ${flair.heightOffset}px`)
+	}
+
+	if (background) {
+		backgrounds.push(`rgba(${background.r},${background.g},${background.b}, 0.25`);
+	}
+
+	if (!backgrounds.length) return '';
+
+	return `[id$="-userlist-user-${userId}"]{background: ${backgrounds.join(',')};}`
+};
+
+const writeCss = (content: string) => FS(CUSTOM_CSS_PATH).writeSync(content);
+
+const updateCss = () => {
+	const userConfig: Record<string, { flair?: Flair, background?: Background }> = {};
+
+	Object.entries(flairs).forEach(([userId, flair]) => {
+		if (!userConfig[userId]) userConfig[userId] = {};
+		userConfig[userId].flair = flair;
+	});
+
+	Object.entries(backgrounds).forEach(([userId, background]) => {
+		if (!userConfig[userId]) userConfig[userId] = {};
+		userConfig[userId].background = background;
+	});
+
+	writeCss([
+		CSS_HEADER,
+		Object.entries(userConfig)
+			.map(([userId, userConfig]) => createUserCss(userId, userConfig.flair, userConfig.background)),
+	].join('\n'));
+};
 
 /* Avatar Logic */
 const AVATAR_MINIMUM_TOUR_WINS = 1;
@@ -16,9 +69,9 @@ interface AvatarStatus {
 	avatar?: string;
 }
 
-type Avatars = Record<string, AvatarStatus>;
+type AvatarConfig = Record<string, AvatarStatus>;
 
-export const avatars: Avatars = JSON.parse(
+export const avatars: AvatarConfig = JSON.parse(
 	FS('config/chat-plugins/custom-avatars.json').readIfExistsSync() || "{}"
 );
 
@@ -96,14 +149,15 @@ const TITLE_USER_INELIGIBLE = `You are not eligble for a custom title. You must 
 const TITLE_USER_UNSET = 'You do not have a custom title set.';
 const TITLE_INVALID = 'Your custom title must be between 1 and 18 characters long.';
 
-type TitleConfig = Record<string, { title: string }>;
+type Title = { title: string };
+type TitleConfig = Record<string, Title>;
 
-const customTitles: TitleConfig = JSON.parse(
+const titles: TitleConfig = JSON.parse(
 	FS('config/chat-plugins/custom-titles.json').readIfExistsSync() || "{}"
 );
 
-const saveCustomTitles = () => {
-	FS('config/chat-plugins/custom-titles.json').writeUpdate(() => JSON.stringify(customTitles));
+const saveTitles = () => {
+	FS('config/chat-plugins/custom-titles.json').writeUpdate(() => JSON.stringify(titles));
 };
 
 const formatTitle = (string: string) => string
@@ -124,43 +178,38 @@ const baseUrls: Record<string, string> = {
 	clover: 'https://raw.githubusercontent.com/MrSableye/clovermon-showdown-assets/master/clover/sprites/pokemon-icons',
 };
 
-const CSS_HEADER = `.userlist li button:hover {
-	background: rgba(220,230,240,0.7);
-}`;
-
 const getBaseUrl = (pokemonMod: string) => baseUrls[pokemonMod] || baseUrls.clover;
 
 const getFlairUrl = (pokemonId: string, pokemonMod: string) => `${getBaseUrl(pokemonMod)}/${pokemonId}.png`;
 
-const createUserCss = (
-	userId: string,
-	pokemonId: string,
-	pokemonMod: string,
-	heightOffset: number,
-) => `[id$="-userlist-user-${userId}"]{background: url("${getFlairUrl(pokemonId, pokemonMod)}") no-repeat right -7px top ${heightOffset}px;}`; // eslint-disable-line max-len
+type Flair = { pokemonId: string, pokemonMod: string, heightOffset: number };
+type FlairConfig = Record<string, Flair>;
 
-const createCss = (cssConfig: CssConfig): string => [
-	CSS_HEADER,
-	...Object.entries(cssConfig)
-		.map(([userId, {pokemonId, pokemonMod, heightOffset}]) => createUserCss(userId, pokemonId, pokemonMod, heightOffset)),
-].join('\n');
-
-const writeCss = (content: string) => FS('config/custom.css').writeSync(content);
-
-type CssConfig = Record<string, { pokemonId: string, pokemonMod: string, heightOffset: number }>;
-
-const cssConfig: CssConfig = JSON.parse(
+const flairs: FlairConfig = JSON.parse(
 	FS('config/chat-plugins/custom-flair.json').readIfExistsSync() || "{}"
 );
 
-const saveCssConfig = () => {
-	FS('config/chat-plugins/custom-flair.json').writeUpdate(() => JSON.stringify(cssConfig));
-	writeCss(createCss(cssConfig));
+const saveFlairs = () => {
+	FS('config/chat-plugins/custom-flair.json').writeUpdate(() => JSON.stringify(flairs));
+	updateCss();
 };
 
-/* Generic logic */
-const hasTourWins = (wins: number, user: User) => {
-	return getTourWins(user.id) >= wins;
+/* Background color logic */
+const BACKGROUND_MINIMUM_TOUR_WINS = 5;
+const BACKGROUND_USER_INELIGIBLE = `You are not eligble for a custom background. You must have at least ${BACKGROUND_MINIMUM_TOUR_WINS} tour wins.`;
+const BACKGROUND_USER_UNSET = 'You do not have a custom background set.';
+const BACKGROUND_INVALID = 'Your custom background must be a color. Try a hex value.';
+
+type Background = { r: number, g: number, b: number };
+type BackgroundConfig = Record<string, Background>;
+
+const backgrounds: BackgroundConfig = JSON.parse(
+	FS('config/chat-plugins/custom-background.json').readIfExistsSync() || "{}"
+);
+
+const saveBackgrounds = () => {
+	FS('config/chat-plugins/custom-background.json').writeUpdate(() => JSON.stringify(backgrounds));
+	updateCss();
 };
 
 export const commands: Chat.ChatCommands = {
@@ -332,16 +381,16 @@ export const commands: Chat.ChatCommands = {
 				const title = formatTitle(target);
 				if (title.length < 1 || title.length > 18) throw new Chat.ErrorMessage(TITLE_INVALID);
 	
-				customTitles[user.id] = {title};
-				saveCustomTitles();
+				titles[user.id] = {title};
+				saveTitles();
 	
 				this.sendReply(`|raw| Your title was successfully set. Log in again for it to appear. Title: ${title}`);
 			},
 			unset(target, room, user) {
-				if (!customTitles[user.id]) throw new Chat.ErrorMessage(TITLE_USER_UNSET);
+				if (!titles[user.id]) throw new Chat.ErrorMessage(TITLE_USER_UNSET);
 
-				delete customTitles[user.id];
-				saveCustomTitles();
+				delete titles[user.id];
+				saveTitles();
 
 				this.sendReply('|raw| Your title was successfully unset. Log in again for it to disappear.');
 			},
@@ -355,7 +404,7 @@ export const commands: Chat.ChatCommands = {
 		},
 		flair: {
 			async set(target, room, user) {	
-				const canHaveFlair = hasTourWins(FLAIR_MINIMUM_TOUR_WINS, user) || Config.customflair[user.id] !== undefined;
+				const canHaveFlair = hasTourWins(FLAIR_MINIMUM_TOUR_WINS, user) || Config.customflair?.[user.id] !== undefined;
 	
 				if (!canHaveFlair) {
 					throw new Chat.ErrorMessage(FLAIR_USER_INELIGIBLE);
@@ -380,16 +429,16 @@ export const commands: Chat.ChatCommands = {
 					return this.errorReply(getInvalidFlairErrorMessage(pokemonMod, pokemon));
 				}
 	
-				cssConfig[user.id] = {pokemonId: toID(pokemon), pokemonMod: toID(pokemonMod), heightOffset};
-				saveCssConfig();
+				flairs[user.id] = {pokemonId: toID(pokemon), pokemonMod: toID(pokemonMod), heightOffset};
+				saveFlairs();
 	
 				this.sendReply("|raw| Your flair was successfully set. It may take a while for it to show up. Flair:<br /><img src='" + flairUrl + "' width='40' height='30'>");
 			},
 			unset(target, room, user) {
-				if (!cssConfig[user.id]) throw new Chat.ErrorMessage(FLAIR_USER_UNSET);
+				if (!flairs[user.id]) throw new Chat.ErrorMessage(FLAIR_USER_UNSET);
 
-				delete cssConfig[user.id];
-				saveCssConfig();
+				delete flairs[user.id];
+				saveFlairs();
 
 				this.sendReply('|raw| Your flair was successfully unset. It may take a while for it to dissapear.');
 			},
@@ -401,25 +450,58 @@ export const commands: Chat.ChatCommands = {
 				);
 			},
 		},
+		bg: 'background',
+		backgrounds: 'background',
+		background: {
+			set(target, room, user) {	
+				const canHaveBackground = hasTourWins(BACKGROUND_MINIMUM_TOUR_WINS, user) || Config.custombackground?.[user.id] !== undefined;
+	
+				if (!canHaveBackground) {
+					throw new Chat.ErrorMessage(BACKGROUND_USER_INELIGIBLE);
+				}
+
+				const color = parseColor(target.trim());
+
+				if (!color.rgb) throw new Chat.ErrorMessage(BACKGROUND_INVALID);
+
+				backgrounds[user.id] = {
+					r: color.rgb[0],
+					g: color.rgb[1],
+					b: color.rgb[2],
+				};
+				saveBackgrounds();
+
+				this.sendReply("|raw| Your background was successfully set. It may take a while for it to show up.");
+			},
+			unset(target, room, user) {
+				if (!backgrounds[user.id]) throw new Chat.ErrorMessage(BACKGROUND_USER_UNSET);
+
+				delete backgrounds[user.id];
+				saveBackgrounds();
+
+				this.sendReply('|raw| Your background was successfully unset. It may take a while for it to dissapear.');
+			},
+		},
 		'': 'help',
 		help() {
 			this.sendReplyBox(
-				`<code>/custom avatar</code>: commands related to custom avatars. Try <code>/help custom avatar</code> for details.<br />` +
-				`<code>/custom flair</code>: commands related to custom flairs. Try <code>/help custom flair</code> for details.<br />` +
-				`<code>/custom title</code>: commands related to custom titles. Try <code>/help custom title</code> for details.`
+				`<code>/custom avatar</code>: commands related to custom avatars. Try <code>/help custom avatar</code> for details. ${AVATAR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
+				`<code>/custom title</code>: commands related to custom titles. Try <code>/help custom title</code> for details. ${TITLE_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
+				`<code>/custom flair</code>: commands related to custom flairs. Try <code>/help custom flair</code> for details. ${FLAIR_MINIMUM_TOUR_WINS} or more tour wins required to use.` +
+				`<code>/custom background</code>: commands related to custom background colors. Try <code>/help custom background</code> for details. ${BACKGROUND_MINIMUM_TOUR_WINS} or more tour wins required to use.`
 			);
 		},
 	},
 };
 
 export const loginfilter: Chat.LoginFilter = user => {
-	const customTitle = customTitles[user.id];
-	if (customTitle) {
-		user.customgroup = customTitle.title;
+	const title = titles[user.id];
+	if (title) {
+		user.customgroup = title.title;
 	}
 
-	const avatarStatus = avatars[user.id];
-	if (avatarStatus && avatarStatus.enabled && avatarStatus.avatar) {
-		user.avatar = avatarStatus.avatar;
+	const avatar = avatars[user.id];
+	if (avatar && avatar.enabled && avatar.avatar) {
+		user.avatar = avatar.avatar;
 	}
 };
