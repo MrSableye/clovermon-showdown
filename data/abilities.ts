@@ -8056,7 +8056,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	infection: {
 		onDamagePriority: -30,
 		onDamage(damage, target, source, effect) {
-			if (!['blobbosinfected', 'infected'].includes(target.species.id)) return;
+			if (!['blobbosinfected', 'contamination'].includes(target.species.id)) return;
 			if (damage >= target.hp) {
 				this.add('-damage', target, 0);
 				this.add('-ability', target, 'Infection');
@@ -12561,22 +12561,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 6683,
 		isNonstandard: "Future",
 	},
-	sceptic: {
+	skeptic: {
 		onSourceModifyAtkPriority: 6,
 		onSourceModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Fairy' || move.type === 'Divine' || move.type === 'Magic') {
-				this.debug('Sceptic weaken');
+				this.debug('Skeptic weaken');
 				return this.chainModify(0.5);
 			}
 		},
 		onSourceModifySpAPriority: 5,
 		onSourceModifySpA(atk, attacker, defender, move) {
 			if (move.type === 'Fairy' || move.type === 'Divine' || move.type === 'Magic') {
-				this.debug('Sceptic weaken');
+				this.debug('Skeptic weaken');
 				return this.chainModify(0.5);
 			}
 		},
-		name: "Sceptic",
+		name: "Skeptic",
 		rating: 3,
 		num: 6684,
 		isNonstandard: "Future",
@@ -13482,10 +13482,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onResidualOrder: 27,
 		onResidualSubOrder: 2,
 		onResidual(pokemon) {
-			if (!pokemon.hasType("Zombie") || !pokemon.hasType("Virus")) {
-				this.damage(pokemon.baseMaxhp / 8);
-			} else {
+			if (pokemon.hasType("Zombie") || pokemon.hasType("Virus")) {
 				this.heal(pokemon.baseMaxhp / 16);
+			} else {
+				this.damage(pokemon.baseMaxhp / 8);
 			}
 		},
 		name: "Infected",
