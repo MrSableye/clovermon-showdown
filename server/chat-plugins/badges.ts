@@ -123,6 +123,12 @@ export const Badges = new class {
 	getBadgeManagers(badgeID: string): Promise<UserManagedBadge[]> {
 		return Chat.Badges.getBadgeManagers(badgeID);
 	}
+	async canManageBadge(userID: string, badgeID: string) {
+		const badge = await Badges.getBadge(badgeID);
+		if (!badge) return false;
+		const badgeManagers = await Badges.getBadgeManagers(badgeID);
+		return [badge.owner_id, ...badgeManagers.map((badgeManager) => badgeManager.user_id)].includes(userID);
+	}
 	// Modification
 	createBadge(badgeID: string, badgeName: string, managerID: string, filePath: string, badgeNameTemplate?: string) {
 		return Chat.Badges.createBadge(badgeID, badgeName, managerID, filePath, badgeNameTemplate);
@@ -708,6 +714,13 @@ export const commands: Chat.ChatCommands = {
 		},
 		manage: 'manager',
 		manager: {
+			async list(target) {
+				Badges.checkCanUse(this);
+				const badgeID = getBadgeID(target);
+				const badgeManagers = await Badges.getBadgeManagers(badgeID);
+
+				return this.sendReply(`Managers: ${badgeManagers.map((badgeManager) => badgeManager.user_id).join(', ')}`);
+			},
 			grant: 'add',
 			async add(target, room, user) {
 				Badges.checkCanUse(this);

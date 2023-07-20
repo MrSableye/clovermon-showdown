@@ -36,20 +36,7 @@ const checkBadgesEnabled = () => {
 	}
 };
 
-const checkCanUpdateTours = async (user: User) => {
-	const badge = await Badges.getBadge(TOUR_BADGE_ID);
-	const managers = await Badges.getBadgeManagers(TOUR_BADGE_ID);
-
-	if (!badge) {
-		throw new Chat.ErrorMessage(`Tour badge ${TOUR_BADGE_ID} doesn't exist.`);
-	}
-
-	const canUpdate = [badge.owner_id, ...managers.map((manager) => manager.user_id)].includes(user.id);
-
-	if (!canUpdate) {
-		throw new Chat.ErrorMessage('You do not have permission to manage this.');
-	}
-};
+const checkCanUpdateTours = (user: User) => Badges.canManageBadge(user.id, TOUR_BADGE_ID);
 
 const getTourWins = (userID: string) => data.tours[userID] || 0;
 
