@@ -401,14 +401,14 @@ export const commands: Chat.ChatCommands = {
 				);
 			},
 		},
-	},
-	'': 'help',
-	help() {
-		this.sendReplyBox(
-			`<code>/custom avatar</code>: commands related to custom avatars. Try <code>/help custom avatar</code> for details.<br />` +
-			`<code>/custom flair</code>: commands related to custom flairs. Try <code>/help custom flair</code> for details.<br />` +
-			`<code>/custom title</code>: commands related to custom titles. Try <code>/help custom title</code> for details.`
-		);
+		'': 'help',
+		help() {
+			this.sendReplyBox(
+				`<code>/custom avatar</code>: commands related to custom avatars. Try <code>/help custom avatar</code> for details.<br />` +
+				`<code>/custom flair</code>: commands related to custom flairs. Try <code>/help custom flair</code> for details.<br />` +
+				`<code>/custom title</code>: commands related to custom titles. Try <code>/help custom title</code> for details.`
+			);
+		},
 	},
 };
 
