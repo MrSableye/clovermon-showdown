@@ -13815,6 +13815,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (pokemon.volatiles['dynamax']) return;
 			return this.chainModify(1.5);
 		},
+		isChoice: true,
 		num: 67216,
 		isNonstandard: "Future",
 	},
@@ -13838,6 +13839,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (pokemon.volatiles['dynamax']) return;
 			return this.chainModify(1.5);
 		},
+		isChoice: true,
 		num: 67217,
 		isNonstandard: "Future",
 	},
