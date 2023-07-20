@@ -4480,203 +4480,203 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	normaldust: {
 		name: "Normal Dust",
-		desc: "Dust with an ordinary essence. Turns the first move used by the user into Normal-type only once.",
+		desc: "Dust with an ordinary essence. Turns the first offensive move used by the user into Normal-type only once.",
 	},
 	waterdust: {
 		name: "Water Dust",
-		desc: "Dust with an aquatic essence. Turns the first move used by the user into Water-type only once.",
+		desc: "Dust with an aquatic essence. Turns the first offensive move used by the user into Water-type only once.",
 	},
 	firedust: {
 		name: "Fire Dust",
-		desc: "Dust with a fiery essence. Turns the first move used by the user into Fire-type only once.",
+		desc: "Dust with a fiery essence. Turns the first offensive move used by the user into Fire-type only once.",
 	},
 	grassdust: {
 		name: "Grass Dust",
-		desc: "Dust with a nature essence. Turns the first move used by the user into Grass-type only once.",
+		desc: "Dust with a nature essence. Turns the first offensive move used by the user into Grass-type only once.",
 	},
 	fightingdust: {
 		name: "Fighting Dust",
-		desc: "Dust with a fighting essence. Turns the first move used by the user into Fighting-type only once.",
+		desc: "Dust with a fighting essence. Turns the first offensive move used by the user into Fighting-type only once.",
 	},
 	flyingdust: {
 		name: "Flying Dust",
-		desc: "Turns the first move used by the user into Flying-type only once.",
+		desc: "Turns the first offensive move used by the user into Flying-type only once.",
 	},
 	poisondust: {
 		name: "Poison Dust",
-		desc: "Turns the first move used by the user into Poison-type only once.",
+		desc: "Turns the first offensive move used by the user into Poison-type only once.",
 	},
 	grounddust: {
 		name: "Ground Dust",
-		desc: "Turns the first move used by the user into Ground-type only once.",
+		desc: "Turns the first offensive move used by the user into Ground-type only once.",
 	},
 	rockdust: {
 		name: "Rock Dust",
-		desc: "Turns the first move used by the user into Rock-type only once.",
+		desc: "Turns the first offensive move used by the user into Rock-type only once.",
 	},
 	bugdust: {
 		name: "Bug Dust",
-		desc: "Turns the first move used by the user into Bug-type only once.",
+		desc: "Turns the first offensive move used by the user into Bug-type only once.",
 	},
 	ghostdust: {
 		name: "Ghost Dust",
-		desc: "Turns the first move used by the user into Ghost-type only once.",
+		desc: "Turns the first offensive move used by the user into Ghost-type only once.",
 	},
 	electricdust: {
 		name: "Electric Dust",
-		desc: "Turns the first move used by the user into Electric-type only once.",
+		desc: "Turns the first offensive move used by the user into Electric-type only once.",
 	},
 	psychicdust: {
 		name: "Psychic Dust",
-		desc: "Turns the first move used by the user into Psychic-type only once.",
+		desc: "Turns the first offensive move used by the user into Psychic-type only once.",
 	},
 	icedust: {
 		name: "Ice Dust",
-		desc: "Turns the first move used by the user into Ice-type only once.",
+		desc: "Turns the first offensive move used by the user into Ice-type only once.",
 	},
 	steeldust: {
 		name: "Steel Dust",
-		desc: "Turns the first move used by the user into Steel-type only once.",
+		desc: "Turns the first offensive move used by the user into Steel-type only once.",
 	},
 	darkdust: {
 		name: "Dark Dust",
-		desc: "Turns the first move used by the user into Dark-type only once.",
+		desc: "Turns the first offensive move used by the user into Dark-type only once.",
 	},
 	dragondust: {
 		name: "Dragon Dust",
-		desc: "Turns the first move used by the user into Dragon-type only once.",
+		desc: "Turns the first offensive move used by the user into Dragon-type only once.",
 	},
 	fairydust: {
 		name: "Fairy Dust",
-		desc: "Turns the first move used by the user into Fairy-type only once.",
+		desc: "Turns the first offensive move used by the user into Fairy-type only once.",
 	},
 	wooddust: {
 		name: "Wood Dust",
-		desc: "Turns the first move used by the user into Wood-type only once.",
+		desc: "Turns the first offensive move used by the user into Wood-type only once.",
 	},
 	magmadust: {
 		name: "Magma Dust",
-		desc: "Turns the first move used by the user into Magma-type only once.",
+		desc: "Turns the first offensive move used by the user into Magma-type only once.",
 	},
 	steamdust: {
 		name: "Steam Dust",
-		desc: "Turns the first move used by the user into Steam-type only once.",
+		desc: "Turns the first offensive move used by the user into Steam-type only once.",
 	},
 	winddust: {
 		name: "Wind Dust",
-		desc: "Turns the first move used by the user into Wind-type only once.",
+		desc: "Turns the first offensive move used by the user into Wind-type only once.",
 	},
 	paperdust: {
 		name: "Paper Dust",
-		desc: "Turns the first move used by the user into Paper-type only once.",
+		desc: "Turns the first offensive move used by the user into Paper-type only once.",
 	},
 	techdust: {
 		name: "Tech Dust",
-		desc: "Turns the first move used by the user into Tech-type only once.",
+		desc: "Turns the first offensive move used by the user into Tech-type only once.",
 	},
 	rubberdust: {
 		name: "Rubber Dust",
-		desc: "Turns the first move used by the user into Rubber-type only once.",
+		desc: "Turns the first offensive move used by the user into Rubber-type only once.",
 	},
 	feardust: {
 		name: "Fear Dust",
-		desc: "Turns the first move used by the user into Fear-type only once.",
+		desc: "Turns the first offensive move used by the user into Fear-type only once.",
 	},
 	magicdust: {
 		name: "Magic Dust",
-		desc: "Turns the first move used by the user into Magic-type only once.",
+		desc: "Turns the first offensive move used by the user into Magic-type only once.",
 	},
 	lightdust: {
 		name: "Light Dust",
-		desc: "Turns the first move used by the user into Light-type only once.",
+		desc: "Turns the first offensive move used by the user into Light-type only once.",
 	},
 	cosmicdust: {
 		name: "Cosmic Dust",
-		desc: "Turns the first move used by the user into Cosmic-type only once.",
+		desc: "Turns the first offensive move used by the user into Cosmic-type only once.",
 	},
 	sounddust: {
 		name: "Sound Dust",
-		desc: "Turns the first move used by the user into Sound-type only once.",
+		desc: "Turns the first offensive move used by the user into Sound-type only once.",
 	},
 	fooddust: {
 		name: "Food Dust",
-		desc: "Turns the first move used by the user into Food-type only once.",
+		desc: "Turns the first offensive move used by the user into Food-type only once.",
 	},
 	zombiedust: {
 		name: "Zombie Dust",
-		desc: "Turns the first move used by the user into Zombie-type only once.",
+		desc: "Turns the first offensive move used by the user into Zombie-type only once.",
 	},
 	nucleardust: {
 		name: "Nuclear Dust",
-		desc: "Turns the first move used by the user into Nuclear-type only once.",
+		desc: "Turns the first offensive move used by the user into Nuclear-type only once.",
 	},
 	virusdust: {
 		name: "Virus Dust",
-		desc: "Turns the first move used by the user into Virus-type only once.",
+		desc: "Turns the first offensive move used by the user into Virus-type only once.",
 	},
 	cyberdust: {
 		name: "Cyber Dust",
-		desc: "Turns the first move used by the user into Cyber-type only once.",
+		desc: "Turns the first offensive move used by the user into Cyber-type only once.",
 	},
 	glassdust: {
 		name: "Glass Dust",
-		desc: "Turns the first move used by the user into Glass-type only once.",
+		desc: "Turns the first offensive move used by the user into Glass-type only once.",
 	},
 	plasticdust: {
 		name: "Plastic Dust",
-		desc: "Turns the first move used by the user into Plastic-type only once.",
+		desc: "Turns the first offensive move used by the user into Plastic-type only once.",
 	},
 	fabricdust: {
 		name: "Fabric Dust",
-		desc: "Turns the first move used by the user into Fabric-type only once.",
+		desc: "Turns the first offensive move used by the user into Fabric-type only once.",
 	},
 	chaosdust: {
 		name: "Chaos Dust",
-		desc: "Turns the first move used by the user into Chaos-type only once.",
+		desc: "Turns the first offensive move used by the user into Chaos-type only once.",
 	},
 	divinedust: {
 		name: "Divine Dust",
-		desc: "Turns the first move used by the user into Divine-type only once.",
+		desc: "Turns the first offensive move used by the user into Divine-type only once.",
 	},
 	timedust: {
 		name: "Time Dust",
-		desc: "Turns the first move used by the user into Time-type only once.",
+		desc: "Turns the first offensive move used by the user into Time-type only once.",
 	},
 	paintdust: {
 		name: "Paint Dust",
-		desc: "Turns the first move used by the user into Paint-type only once.",
+		desc: "Turns the first offensive move used by the user into Paint-type only once.",
 	},
 	crystaldust: {
 		name: "Crystal Dust",
-		desc: "Turns the first move used by the user into Crystal-type only once.",
+		desc: "Turns the first offensive move used by the user into Crystal-type only once.",
 	},
 	memedust: {
 		name: "Meme Dust",
-		desc: "Turns the first move used by the user into Meme-type only once.",
+		desc: "Turns the first offensive move used by the user into Meme-type only once.",
 	},
 	blooddust: {
 		name: "Blood Dust",
-		desc: "Turns the first move used by the user into Blood-type only once.",
+		desc: "Turns the first offensive move used by the user into Blood-type only once.",
 	},
 	greasydust: {
 		name: "Greasy Dust",
-		desc: "Turns the first move used by the user into Greasy-type only once.",
+		desc: "Turns the first offensive move used by the user into Greasy-type only once.",
 	},
 	heartdust: {
 		name: "Heart Dust",
-		desc: "Turns the first move used by the user into Heart-type only once.",
+		desc: "Turns the first offensive move used by the user into Heart-type only once.",
 	},
 	ogredust: {
 		name: "Ogre Dust",
-		desc: "Turns the first move used by the user into Ogre-type only once.",
+		desc: "Turns the first offensive move used by the user into Ogre-type only once.",
 	},
 	qmarksdust: {
 		name: "Qmarksdust",
-		desc: "Turns the first move used by the user into ???-type only once.",
+		desc: "Turns the first offensive move used by the user into ???-type only once.",
 	},
 	shadowdust: {
 		name: "Shadow Dust",
-		desc: "Turns the first move used by the user into Shadow-type only once.",
+		desc: "Turns the first offensive move used by the user into Shadow-type only once.",
 	},
 	icepack: {
 		name: "Icepack",

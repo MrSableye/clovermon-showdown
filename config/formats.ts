@@ -859,6 +859,25 @@ export const Formats: FormatList = [
 		'Ginsio Berry', 'Uranus Orb',
 		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'],
 	},
+	{
+		name: '[Gen 8 Wack Only] Custom Game',
+		mod: 'wack',
+		searchShow: false,
+		rated: false,
+		debug: true,
+		battle: {trunc: Math.trunc},
+		ruleset: ['Terastal Clause', 'Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
+	},
+	{
+		name: '[Gen 8 Wack Only] Custom Game (Doubles)',
+		mod: 'wack',
+		gameType: 'doubles',
+		searchShow: false,
+		rated: false,
+		debug: true,
+		battle: {trunc: Math.trunc},
+		ruleset: ['Terastal Clause', 'Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
+	},
 	///////////////////////////////////////////////////////////////////
 	// CAP & Cope
 	///////////////////////////////////////////////////////////////////

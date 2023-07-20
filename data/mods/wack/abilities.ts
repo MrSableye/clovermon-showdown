@@ -471,12 +471,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		desc: "Explosion moves do not kill the user, just recoil.",
 		isNonstandard: null,
 	},
-	/**Infected somehow exists in 'data/text/abilities.ts' but nowhere else, doing this just to change the descs in Wack*/
 	infected: {
 		inherit: true,
-		name: "Infected",
 		shortDesc: "Contact spreads this Ability. Dmgs non-Zombie and Virus types.",
 		desc: "Contact spreads this Ability. Dmgs non-Zombie and Virus types.",
-		isNonstandard: "Future" /** TODO */
+		isNonstandard: null,
 	},
 };

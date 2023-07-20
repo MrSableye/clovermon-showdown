@@ -15544,7 +15544,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 67306,
 		isNonstandard: "Future",
 	},
-	invertedrune: {
+	invertedrune: {	/* TODO **/
 		name: "Inverted Rune",
 		spritenum: 0,
 		num: 67307,
@@ -15568,8 +15568,8 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Gravity Capsule",
 		spritenum: 0,
 		onDamagingHit(damage, target, source, move) {
-			target.useItem()
 			this.field.addPseudoWeather('gravity');
+			target.useItem()
 		},
 		num: 67309,
 		isNonstandard: "Future",
