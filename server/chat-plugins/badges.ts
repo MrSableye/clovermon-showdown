@@ -116,6 +116,10 @@ export const Badges = new class {
 	getUserManagedBadges(userID: string): Promise<UserManagedBadge[]> {
 		return Chat.Badges.getUserManagedBadges(userID);
 	}
+	async hasBadge(userID: string, badgeIDs: string[]) {
+		const badges = await Badges.getUserBadges(userID);
+		return badges.some((badge) => badgeIDs.includes(badge.badge_id));
+	}
 	getBadgeManagers(badgeID: string): Promise<UserManagedBadge[]> {
 		return Chat.Badges.getBadgeManagers(badgeID);
 	}

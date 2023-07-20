@@ -19,8 +19,7 @@ const customTitleBadges = [
 ];
 
 const canUserHaveCustomTitle = async (user: User): Promise<boolean> => {
-	const userBadges = await Badges.getUserBadges(user.id);
-	const isTournamentWinner = userBadges.some((userBadge) => customTitleBadges.includes(userBadge.badge_id));
+	const isTournamentWinner = await Badges.hasBadge(user.id, customTitleBadges);
 	const isWhitelisted = (Config.customtitle || {})[user.id] !== undefined;
 
 	return isTournamentWinner || isWhitelisted;
