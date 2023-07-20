@@ -308,6 +308,7 @@ export const commands: Chat.ChatCommands = {
 				}
 			},
 		},
+		'': 'avatarhelp',
 		avatarhelp() {
 			this.sendReplyBox(
 				`<code>/custom avatar request [image url]</code>: requests a custom avatar. Requires: custom avatar access<br />` +
@@ -345,6 +346,7 @@ export const commands: Chat.ChatCommands = {
 				this.sendReply('|raw| Your title was successfully unset. Log in again for it to disappear.');
 			}
 		},
+		'': 'titlehelp',
 		titlehelp() {
 			this.sendReplyBox(
 				`<code>/custom title set [title]</code>: sets your title to the desired text.<br />` +
@@ -392,6 +394,7 @@ export const commands: Chat.ChatCommands = {
 				this.sendReply('|raw| Your flair was successfully unset. It may take a while for it to dissapear.');
 			}
 		},
+		'': 'flairhelp',
 		flairhelp() {
 			this.sendReplyBox(
 				`<code>/custom flair set [pokemon], [mod], [heightOffset]</code>: sets your flair to the desired pokemon from the specified mod (pokemon or clover) with an optional height adjustment.<br />` +
