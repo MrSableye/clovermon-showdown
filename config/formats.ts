@@ -227,75 +227,10 @@ export const Formats: FormatList = [
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	///////////////////////////////////////////////////////////////////
-	// Seasonal Clover
-	///////////////////////////////////////////////////////////////////
-	{
-		section: 'Seasonal Clover',
-		column: 2,
-	},
-	{
-		name: '[Gen 8 Clover Only] Festive Random Battle',
-		mod: 'clover',
-		team: 'randomFestive',
-		searchShow: false,
-		rated: false,
-		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
-		onBattleStart() {
-			this.field.setWeather('hail', this.getAllPokemon()[0]);
-			this.hint('Fairy-types use "Wish" after fainting.');
-			this.hint('Grass-types seed all enemies and start Grassy Terrain after fainting.');
-			this.hint('Ice-types uses "Lunar Dance" after fainting if Hail is active, otherwise Hail activates.');
-			this.hint('Normal-types use "Spikes" after fainting.');
-			this.hint('Only one effect will occur and it prioritizes types in the order above.');
-		},
-		onFaint(target) {
-			if (target.types.includes('Fairy')) {
-				target.side.addSlotCondition(target, 'Wish', target);
-			} else if (target.types.includes('Grass')) {
-				target.foes(true).forEach((foe) => {
-					foe.addVolatile('leechseed');
-				});
-				this.field.setTerrain('grassyterrain');
-			} else if (target.types.includes('Ice')) {
-				if (this.field.weather === 'hail') {
-					target.side.addSlotCondition(target, 'lunardance', target);
-				} else {
-					this.field.setWeather('hail');
-				}
-			} else if (target.types.includes('Normal')) {
-				target.side.foeSidesWithConditions().forEach((side) => {
-					side.addSideCondition('spikes');
-				});
-			}
-		},
-	},
-	{
-		name: '[Gen 8 Clover Only] Random Irish Battle',
-		mod: 'clover',
-		team: 'randomIrish',
-		searchShow: false,
-		rated: false,
-		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
-	},
-	{
-		name: '[Gen 8 Clover Only] Random SPOOKY Battle',
-		mod: 'clover',
-		team: 'randomSpooky',
-		searchShow: false,
-		rated: false,
-		onEffectiveness(typeMod, target, type, move) {
-			if (['Dark', 'Ghost'].includes(type) && ['Dark', 'Ghost'].includes(move.type)) {
-				return 0;
-			}
-		},
-		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
-	},
-	///////////////////////////////////////////////////////////////////
 	// Clover OMs
 	///////////////////////////////////////////////////////////////////
 	{
 		section: 'Clover OMs',
-		column: 2,
 	},
 	{
 		name: '[Gen 8 Clover Only] OU (No Team Preview)',
@@ -700,6 +635,69 @@ export const Formats: FormatList = [
 		battle: {trunc: Math.trunc},
 		// no restrictions, for serious (other than team preview)
 		ruleset: ['Terastal Clause', 'Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
+	},
+	///////////////////////////////////////////////////////////////////
+	// Seasonal Clover
+	///////////////////////////////////////////////////////////////////
+	{
+		section: 'Seasonal Clover',
+	},
+	{
+		name: '[Gen 8 Clover Only] Festive Random Battle',
+		mod: 'clover',
+		team: 'randomFestive',
+		searchShow: false,
+		rated: false,
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+		onBattleStart() {
+			this.field.setWeather('hail', this.getAllPokemon()[0]);
+			this.hint('Fairy-types use "Wish" after fainting.');
+			this.hint('Grass-types seed all enemies and start Grassy Terrain after fainting.');
+			this.hint('Ice-types uses "Lunar Dance" after fainting if Hail is active, otherwise Hail activates.');
+			this.hint('Normal-types use "Spikes" after fainting.');
+			this.hint('Only one effect will occur and it prioritizes types in the order above.');
+		},
+		onFaint(target) {
+			if (target.types.includes('Fairy')) {
+				target.side.addSlotCondition(target, 'Wish', target);
+			} else if (target.types.includes('Grass')) {
+				target.foes(true).forEach((foe) => {
+					foe.addVolatile('leechseed');
+				});
+				this.field.setTerrain('grassyterrain');
+			} else if (target.types.includes('Ice')) {
+				if (this.field.weather === 'hail') {
+					target.side.addSlotCondition(target, 'lunardance', target);
+				} else {
+					this.field.setWeather('hail');
+				}
+			} else if (target.types.includes('Normal')) {
+				target.side.foeSidesWithConditions().forEach((side) => {
+					side.addSideCondition('spikes');
+				});
+			}
+		},
+	},
+	{
+		name: '[Gen 8 Clover Only] Random Irish Battle',
+		mod: 'clover',
+		team: 'randomIrish',
+		searchShow: false,
+		rated: false,
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
+		name: '[Gen 8 Clover Only] Random SPOOKY Battle',
+		mod: 'clover',
+		team: 'randomSpooky',
+		searchShow: false,
+		rated: false,
+		onEffectiveness(typeMod, target, type, move) {
+			if (['Dark', 'Ghost'].includes(type) && ['Dark', 'Ghost'].includes(move.type)) {
+				return 0;
+			}
+		},
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Wack
