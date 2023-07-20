@@ -50,8 +50,7 @@ const customFlairBadges = [
 ];
 
 const canUserHaveCustomFlair = async (user: User): Promise<boolean> => {
-	const userBadges = await Badges.getUserBadges(user.id);
-	const isTournamentWinner = userBadges.some((userBadge) => customFlairBadges.includes(userBadge.badge_id));
+	const isTournamentWinner = await Badges.hasBadge(user.id, customFlairBadges);
 	const isWhitelisted = Config.customflair[user.id] !== undefined;
 
 	return isTournamentWinner || isWhitelisted;

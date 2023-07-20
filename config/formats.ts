@@ -811,7 +811,7 @@ export const Formats: FormatList = [
 			'Overflow Stat Mod',
 		],
 		banlist: [
-			'Antiplebshield'
+			'antiplebshield'
 		],
 	},
 	{

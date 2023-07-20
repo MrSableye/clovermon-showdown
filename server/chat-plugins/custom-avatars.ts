@@ -95,8 +95,7 @@ const removeStaffNotficiation = (requesterId: string) => {
 };
 
 const canUserHaveCustomAvatar = async (user: User): Promise<boolean> => {
-	const userBadges = await Badges.getUserBadges(user.id);
-	const isTournamentWinner = userBadges.some((userBadge) => customAvatarBadges.includes(userBadge.badge_id));
+	const isTournamentWinner = await Badges.hasBadge(user.id, customAvatarBadges);
 	const isWhitelisted = Config.customavatars[user.id] !== undefined;
 
 	return isTournamentWinner || isWhitelisted;
