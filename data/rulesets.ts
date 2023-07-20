@@ -15,7 +15,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 		name: 'Standard',
 		desc: "The standard ruleset for all offical Smogon singles tiers (Ubers, OU, etc.)",
 		ruleset: [
-			'Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Evasion Items Clause', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod',
+			'Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod',
 			'Min Source Gen = 8',
 		],
 	},
@@ -752,7 +752,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 		effectType: 'ValidatorRule',
 		name: 'Evasion Items Clause',
 		desc: "Bans moves that lower the accuracy of moves used against the user",
-		banlist: ['Bright Powder', 'Lax Incense', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 'Ginsio Berry', 'Uranus Orb'],
+		banlist: ['Bright Powder', 'Lax Incense'],
 		onBegin() {
 			this.add('rule', 'Evasion Items Clause: Evasion items are banned');
 		},
