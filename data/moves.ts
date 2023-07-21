@@ -31736,16 +31736,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 					return this.chainModify(2);
 				}
 			},
-//			onMoveAborted(pokemon, target, move) {
-//				if (move.id !== 'fold') {
-//					pokemon.removeVolatile('fold');
-//				}
-//			},
-//			onAfterMove(pokemon, target, move) {
-//				if (move.id !== 'fold') {
-//					pokemon.removeVolatile('fold');
-//				}
-//			},
+			onMoveAborted(pokemon, target, move) {
+				if (move.id !== 'fold') {
+					pokemon.removeVolatile('fold');
+				}
+			},
+			onAfterMove(pokemon, target, move) {
+				if (move.id !== 'fold') {
+					pokemon.removeVolatile('fold');
+				}
+			},
 			onEnd(pokemon) {
 				this.add('-end', pokemon, 'Fold', '[silent]');
 			},
@@ -32149,7 +32149,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		recoil: [1, 3],
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Water') return 1;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Wood",
@@ -32507,7 +32509,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			chance: 25,
 			self: {
 				boosts: {
-					spe: 1,
+					atk: 1,
 				},
 			},
 		},
@@ -32635,7 +32637,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 1,
 		basePowerCallback(pokemon, target, move) {
 			const currentSpecies = move.allies!.shift()!.species;
-			const bp = 5 + Math.floor(currentSpecies.baseStats.atk / 10);
+			const bp = 5 + Math.floor(currentSpecies.baseStats.spa / 10);
 			this.debug('BP for ' + currentSpecies.name + ' hit: ' + bp);
 			return bp;
 		},
@@ -33372,7 +33374,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1, defrost: 1},
 		secondary: {
 			chance: 40,
-			volatileStatus: 'frz',
+			volatileStatus: 'brn',
 		},
 		target: "normal",
 		type: "Food",
@@ -33726,7 +33728,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Ground",
 		isNonstandard: "Future",
@@ -33740,7 +33747,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -33754,7 +33764,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -33768,7 +33783,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1, pulse: 1},
-		secondary: null,
+		secondary: {
+			chance: 45,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -33782,6 +33800,30 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		isFutureMove: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 3,
+				move: 'atomsplit',
+				source: source,
+				moveData: {
+					id: 'atomsplit',
+					name: "Atom Split",
+					accuracy: 100,
+					basePower: 100,
+					category: "Special",
+					priority: 0,
+					flags: {},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					isFutureMove: true,
+					type: 'Nuclear',
+				},
+			});
+			this.add('-start', source, 'move: Atom Split');
+			return this.NOT_FAIL;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Nuclear",
@@ -33796,6 +33838,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
 		secondary: null,
 		target: "normal",
 		type: "Nuclear",
@@ -33810,7 +33855,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'disable',
+		},
 		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -33832,12 +33880,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 	deathscream: {
 		num: 666745,
 		accuracy: 30,
-		basePower: 1,
+		basePower: 0,
 		category: "Special",
 		name: "Death Scream",
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
+		ohko: true,
 		secondary: null,
 		target: "normal",
 		type: "Sound",
