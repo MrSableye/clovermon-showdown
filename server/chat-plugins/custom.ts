@@ -358,17 +358,20 @@ export const commands: Chat.ChatCommands = {
 			},
 			'': 'help',
 			help() {
-				this.sendReplyBox(
-					`<code>/custom avatar request [image url]</code>: requests a custom avatar. Requires: custom avatar access<br />` +
-					`<code>/custom avatar showall</code>: shows all approved avatars. Requires: @ or above<br />` +
-					`<code>/custom avatar showrequests</code>: shows all un-approved avatars. Requires: @ or above<br />` +
-					`<code>/custom avatar approve [user]</code>: approves the user's avatar request. Requires: @ or above<br />` +
-					`<code>/custom avatar deny [user]</code>: denies the user's avatar request. Requires: @ or above<br />` +
-					`<code>/custom avatar on</code>: enables your own custom avatar.<br />` +
-					`<code>/custom avatar off</code>: disables your own custom avatar.<br />` +
-					`<code>/custom avatar blobbos</code>: enables the covetted Blobbos avatar.<br />`
-				);
+				return this.parse('/help custom avatar');
 			},
+		},
+		avatarhelp() {
+			this.sendReplyBox(
+				`<code>/custom avatar request [image url]</code>: requests a custom avatar. Requires: custom avatar access<br />` +
+				`<code>/custom avatar showall</code>: shows all approved avatars. Requires: @ or above<br />` +
+				`<code>/custom avatar showrequests</code>: shows all un-approved avatars. Requires: @ or above<br />` +
+				`<code>/custom avatar approve [user]</code>: approves the user's avatar request. Requires: @ or above<br />` +
+				`<code>/custom avatar deny [user]</code>: denies the user's avatar request. Requires: @ or above<br />` +
+				`<code>/custom avatar on</code>: enables your own custom avatar.<br />` +
+				`<code>/custom avatar off</code>: disables your own custom avatar.<br />` +
+				`<code>/custom avatar blobbos</code>: enables the covetted Blobbos avatar.<br />`
+			);
 		},
 		title: {
 			set(target, room, user) {
@@ -396,11 +399,14 @@ export const commands: Chat.ChatCommands = {
 			},
 			'': 'help',
 			help() {
-				this.sendReplyBox(
-					`<code>/custom title set [title]</code>: sets your title to the desired text.<br />` +
-					`<code>/custom title unset</code>: removes your title.`
-				);
+				return this.parse('/help custom title');
 			},
+		},
+		titlehelp() {
+			this.sendReplyBox(
+				`<code>/custom title set [title]</code>: sets your title to the desired text.<br />` +
+				`<code>/custom title unset</code>: removes your title.`
+			);
 		},
 		flair: {
 			async set(target, room, user) {	
@@ -444,11 +450,14 @@ export const commands: Chat.ChatCommands = {
 			},
 			'': 'help',
 			help() {
-				this.sendReplyBox(
-					`<code>/custom flair set [pokemon], [mod], [heightOffset]</code>: sets your flair to the desired pokemon from the specified mod (pokemon or clover) with an optional height adjustment.<br />` +
-					`<code>/custom flair unset</code>: removes your flair.`
-				);
+				return this.parse('/help custom flair');
 			},
+		},
+		flairhelp() {
+			this.sendReplyBox(
+				`<code>/custom flair set [pokemon], [mod], [heightOffset]</code>: sets your flair to the desired pokemon from the specified mod (pokemon or clover) with an optional height adjustment.<br />` +
+				`<code>/custom flair unset</code>: removes your flair.`
+			);
 		},
 		bg: 'background',
 		backgrounds: 'background',
@@ -483,21 +492,27 @@ export const commands: Chat.ChatCommands = {
 			},
 			'': 'help',
 			help() {
-				this.sendReplyBox(
-					`<code>/custom background set [hex color]</code>: sets your user background color the the specified color.<br />` +
-					`<code>/custom background unset</code>: removes your user background color.`
-				);
+				return this.parse('/help custom background');
 			},
+		},
+		backgroundhelp() {
+			this.sendReplyBox(
+				`<code>/custom background set [hex color]</code>: sets your user background color the the specified color.<br />` +
+				`<code>/custom background unset</code>: removes your user background color.`
+			);
 		},
 		'': 'help',
 		help() {
-			this.sendReplyBox(
-				`<code>/custom avatar</code>: commands related to custom avatars. Try <code>/help custom avatar</code> for details. ${AVATAR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
-				`<code>/custom title</code>: commands related to custom titles. Try <code>/help custom title</code> for details. ${TITLE_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
-				`<code>/custom flair</code>: commands related to custom flairs. Try <code>/help custom flair</code> for details. ${FLAIR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
-				`<code>/custom background</code>: commands related to custom background colors. Try <code>/help custom background</code> for details. ${BACKGROUND_MINIMUM_TOUR_WINS} or more tour wins required to use.`
-			);
+			return this.parse('/help custom');
 		},
+	},
+	customhelp() {
+		this.sendReplyBox(
+			`<code>/custom avatar</code>: commands related to custom avatars. Try <code>/help custom avatar</code> for details. ${AVATAR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
+			`<code>/custom title</code>: commands related to custom titles. Try <code>/help custom title</code> for details. ${TITLE_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
+			`<code>/custom flair</code>: commands related to custom flairs. Try <code>/help custom flair</code> for details. ${FLAIR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
+			`<code>/custom background</code>: commands related to custom background colors. Try <code>/help custom background</code> for details. ${BACKGROUND_MINIMUM_TOUR_WINS} or more tour wins required to use.`
+		);
 	},
 };
 
