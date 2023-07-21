@@ -9054,6 +9054,20 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 	},
+	autobuffskill: {
+		name: "Auto Buff Skill",
+		isNonstandard: "Future",
+		onAfterMoveSecondarySelf(source, target, move) {
+			const buffMoves = ['maplewarrior', 'combatorders', 'haste', 'sharpeyes'];
+			if (!buffMoves.includes(move.id)) return;
+			if (source.useItem()) {
+				const movesToUse = source.moveSlots.filter((moveSlot) => buffMoves.includes(moveSlot.id) && (moveSlot.id !== move.id));
+				movesToUse.forEach((moveToUse) => {
+					this.actions.useMove(moveToUse.id, source, target);
+				});
+			}
+		},
+	},
 	mesosack: {
 		name: "Meso Sack",
 		isNonstandard: "Future",

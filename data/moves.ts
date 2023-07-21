@@ -31584,6 +31584,109 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 		contestType: "Cool",
 	},
+	combatorders: {
+		isNonstandard: "Future",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Combat Orders",
+		pp: 25,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'combatorders',
+		condition: {
+			duration: 4,
+			onBoost(boost, target, source, effect) {
+				const anyPositiveBoost = Object.values(boost).some((boost) => boost > 0);
+				if (!anyPositiveBoost) return;
+
+				const stats: BoostID[] = [];
+				let stat: BoostID;
+				for (stat in target.boosts) {
+					if (target.boosts[stat] < 6) {
+						stats.push(stat);
+					}
+				}
+				if (stats.length) {
+					const randomStat = this.sample(stats);
+					const boost: SparseBoostsTable = {};
+					boost[randomStat] = 1;
+					this.boost(boost);
+				}
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 3,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'Combat Orders');
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Fighting",
+		zMove: {boost: {spe: 1}},
+		contestType: "Beautiful",
+	},
+	haste: {
+		isNonstandard: "Future",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Haste",
+		pp: 25,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'haste',
+		condition: {
+			duration: 4,
+			onFractionalPriorityPriority: -1,
+			onFractionalPriority(priority, pokemon, target, move) {
+				return 0.1;
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 3,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'Haste');
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Dark",
+		zMove: {boost: {spe: 1}},
+		contestType: "Beautiful",
+	},
+	sharpeyes: {
+		isNonstandard: "Future",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sharp Eyes",
+		pp: 25,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'sharpeyes',
+		condition: {
+			duration: 4,
+			onModifyDamage(damage, source, target, move) {
+				if (target.getMoveHitData(move).crit) {
+					this.debug('Sharp Eyes boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onModifyCritRatio(critRatio) {
+				return critRatio + 1;
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 3,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'Sharp Eyes');
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Normal",
+		zMove: {boost: {spe: 1}},
+		contestType: "Beautiful",
+	},
 	maplewarrior: {
 		isNonstandard: "Future",
 		accuracy: true,
