@@ -42485,7 +42485,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Black",
 		eggGroups: ["Undiscovered"],
 		requiredAbility: "Cell Construct",
-		battleOnly: ["Blobbos-Mitosis"],
+		battleOnly: "Blobbos-Mitosis",
 	},
 	infected: {
 		num: 42999,
