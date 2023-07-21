@@ -26,12 +26,12 @@ const createUserCss = (
 	}
 
 	if (background) {
-		backgrounds.push(`rgba(${background.r},${background.g},${background.b}, 0.25`);
+		backgrounds.push(`rgba(${background.r},${background.g},${background.b}, 0.25)`);
 	}
 
 	if (!backgrounds.length) return '';
 
-	return `[id$="-userlist-user-${userId}"]{background: ${backgrounds.join(',')};}`
+	return `[id$="-userlist-user-${userId}"]{background: ${backgrounds.join(', ')};}`
 };
 
 const writeCss = (content: string) => FS(CUSTOM_CSS_PATH).writeSync(content);
