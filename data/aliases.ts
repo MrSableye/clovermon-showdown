@@ -82,7 +82,7 @@ export const Aliases: {[alias: string]: string} = {
 	megacharizardx: "Charizard-Mega-X",
 	megacharizardy: "Charizard-Mega-Y",
 	megadoom: "Houndoom-Mega",
-	megadrill: "Beedrill-Mega",
+	megadril: "Beedrill-Mega",
 	megagard: "Gardevoir-Mega",
 	megacross: "Heracross-Mega",
 	megakhan: "Kangaskhan-Mega",
