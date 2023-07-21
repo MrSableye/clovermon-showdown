@@ -19,19 +19,19 @@ const createUserCss = (
 	flair: Flair | undefined,
 	background: Background | undefined,
 ) => {
-	const backgrounds: string[] = [];
+	const backgroundCss: string[] = [];
 
 	if (flair) {
-		backgrounds.push(`url("${getFlairUrl(flair.pokemonId, flair.pokemonMod)}") no-repeat right -7px top ${flair.heightOffset}px`)
+		backgroundCss.push(`url("${getFlairUrl(flair.pokemonId, flair.pokemonMod)}") no-repeat right -7px top ${flair.heightOffset}px`)
 	}
 
 	if (background) {
-		backgrounds.push(`rgba(${background.r},${background.g},${background.b}, 0.25)`);
+		backgroundCss.push(`rgba(${background.r},${background.g},${background.b}, 0.25)`);
 	}
 
-	if (!backgrounds.length) return '';
+	if (!backgroundCss.length) return '';
 
-	return `[id$="-userlist-user-${userId}"]{background: ${backgrounds.join(', ')};}`
+	return `[id$="-userlist-user-${userId}"]{background: ${backgroundCss.join(', ')};}`
 };
 
 const writeCss = (content: string) => FS(CUSTOM_CSS_PATH).writeSync(content);
