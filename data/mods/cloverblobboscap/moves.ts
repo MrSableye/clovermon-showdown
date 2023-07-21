@@ -1651,6 +1651,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	maplewarrior: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	starforce: {
 		inherit: true,
 		isNonstandard: null,

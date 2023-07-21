@@ -31584,6 +31584,45 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 		contestType: "Cool",
 	},
+	maplewarrior: {
+		isNonstandard: "Future",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Maple Warrior",
+		pp: 25,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'maplewarrior',
+		condition: {
+			duration: 4,
+			onModifyAtk() {
+				return this.chainModify(1.2);
+			},
+			onModifyDef() {
+				return this.chainModify(1.2);
+			},
+			onModifySpA() {
+				return this.chainModify(1.2);
+			},
+			onModifySpD() {
+				return this.chainModify(1.2);
+			},
+			onModifySpe() {
+				return this.chainModify(1.2);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 3,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'Maple Warrior');
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Grass",
+		zMove: {boost: {spe: 1}},
+		contestType: "Beautiful",
+	},
 	starforce: {
 		name: "Star Force",
 		category: "Status",

@@ -9213,6 +9213,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Fails unless it is the user's first turn on the field. Raises the user's Attack and Defense by 2.",
 		shortDesc: "Usually goes first. First turn out only.Raises the user's Attack and Defense by 2.",
 	},
+	maplewarrior: {
+		name: "Maple Warrior",
+		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",
+	},
 	starforce: {
 		name: "Star Force",
 		desc: "Has a (9 - X) / 8 chance to boost X + 2 random stats where X is the user's current Star Force. On success, increases the user's Star Force. On failure, the user faints.",
