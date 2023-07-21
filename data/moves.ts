@@ -31616,6 +31616,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onSideResidualOrder: 26,
 			onSideResidualSubOrder: 3,
+			onSideStart(side, source) {
+				this.add('-sidestart', side, 'Combat Orders');
+			},
 			onSideEnd(side) {
 				this.add('-sideend', side, 'Combat Orders');
 			},
@@ -31644,6 +31647,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onSideResidualOrder: 26,
 			onSideResidualSubOrder: 3,
+			onSideStart(side, source) {
+				this.add('-sidestart', side, 'Haste');
+			},
 			onSideEnd(side) {
 				this.add('-sideend', side, 'Haste');
 			},
@@ -31677,6 +31683,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onSideResidualOrder: 26,
 			onSideResidualSubOrder: 3,
+			onSideStart(side, source) {
+				this.add('-sidestart', side, 'Sharp Eyes');
+			},
 			onSideEnd(side) {
 				this.add('-sideend', side, 'Sharp Eyes');
 			},
@@ -31716,6 +31725,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onSideResidualOrder: 26,
 			onSideResidualSubOrder: 3,
+			onSideStart(side, source) {
+				this.add('-sidestart', side, 'Maple Warrior');
+			},
 			onSideEnd(side) {
 				this.add('-sideend', side, 'Maple Warrior');
 			},
