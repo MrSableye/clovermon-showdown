@@ -51,7 +51,7 @@ const updateCss = () => {
 
 	writeCss([
 		CSS_HEADER,
-		Object.entries(userConfig)
+		...Object.entries(userConfig)
 			.map(([userId, userConfig]) => createUserCss(userId, userConfig.flair, userConfig.background)),
 	].join('\n'));
 };
@@ -480,6 +480,13 @@ export const commands: Chat.ChatCommands = {
 				saveBackgrounds();
 
 				this.sendReply('|raw| Your background was successfully unset. It may take a while for it to dissapear.');
+			},
+			'': 'help',
+			help() {
+				this.sendReplyBox(
+					`<code>/custom background set [hex color]</code>: sets your user background color the the specified color.<br />` +
+					`<code>/custom background unset</code>: removes your user background color.`
+				);
 			},
 		},
 		'': 'help',
