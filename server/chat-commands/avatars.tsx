@@ -808,6 +808,7 @@ export const OFFICIAL_CLODOWN_AVATARS = new Set([
 	'wack-stella-resprite',
 	'wack-neil',
 	'wack-yawen',
+	'wack-yawen-resprite',
 	'wack-transformedm',
 	'wack-transformedf',
 	'wack-transformedm-resprite',
