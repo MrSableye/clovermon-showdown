@@ -404,6 +404,52 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		isNonstandard: null,
 	},
+	assist: {
+		inherit: true,
+		onHit(target) {
+			const noAssist = [
+				'assist', 'banefulbunker', 'beakblast', 'belch', 'bestow', 'blazingtorque', 'bounce', 'celebrate', 'chatter', 'circlethrow', 'combattorque', 'copycat', 'counter', 'covet', 'destinybond', 'detect', 'dig', 'dive', 'dragontail', 'endure', 'feint', 'fly', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'magicaltorque', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'noxioustorque', 'phantomforce', 'protect', 'ragepowder', 'roar', 'shadowforce', 'shelltrap', 'sketch', 'skydrop', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind', 'wickedtorque', 'nuswave', 'tsunami', 'blackhole', 'waveshot', 'stringout', 'helldrag', 'tractorbeam', 'vacuumstrike', 'baseballbat', 'homerunbat', 'airstamp', 'fujinwind', 'boo', 'booing', 'ghoulbreath', 'eject', 'magnetpulse', 'fishingrod', 'fairytail', 'agoraphobia', 'ancienttsunami', 'shiftingsands', 'aquariusflow', 'raremetalpoop', 'shepherdcrook', 'moonladder', 'poseidonmaelstrom', 'metalbat', 'violencegust', 'getoverhere', 'fusrodah', 'banhammer'
+			];
+
+			const moves = [];
+			for (const pokemon of target.side.pokemon) {
+				if (pokemon === target) continue;
+				for (const moveSlot of pokemon.moveSlots) {
+					const moveid = moveSlot.id;
+					if (noAssist.includes(moveid)) continue;
+					const move = this.dex.moves.get(moveid);
+					if (move.isZ || move.isMax) {
+						continue;
+					}
+					moves.push(moveid);
+				}
+			}
+			let randomMove = '';
+			if (moves.length) randomMove = this.sample(moves);
+			if (!randomMove) {
+				return false;
+			}
+			this.actions.useMove(randomMove, target);
+		},
+		isNonstandard: null,
+	},
+	copycat: {
+		inherit: true,
+		onHit(pokemon) {
+			const noCopycat = [
+				'assist', 'banefulbunker', 'beakblast', 'behemothbash', 'behemothblade', 'belch', 'bestow', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'dragontail', 'dynamaxcannon', 'endure', 'feint', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'protect', 'ragepowder', 'roar', 'shelltrap', 'sketch', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind','nuswave', 'tsunami', 'blackhole', 'waveshot', 'stringout', 'helldrag', 'tractorbeam', 'vacuumstrike', 'baseballbat', 'homerunbat', 'airstamp', 'fujinwind', 'boo', 'booing', 'ghoulbreath', 'eject', 'magnetpulse', 'fishingrod', 'fairytail', 'agoraphobia', 'ancienttsunami', 'shiftingsands', 'aquariusflow', 'raremetalpoop', 'shepherdcrook', 'moonladder', 'poseidonmaelstrom', 'metalbat', 'violencegust', 'getoverhere', 'fusrodah', 'banhammer'
+			];
+			let move: Move | ActiveMove | null = this.lastMove;
+			if (!move) return;
+
+			if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
+			if (noCopycat.includes(move.id) || move.isZ || move.isMax) {
+				return false;
+			}
+			this.actions.useMove(move.id, pokemon);
+		},
+		isNonstandard: null,
+	},
 	/* Wack moves */
 	hijumpkick: {
 		inherit: true,
