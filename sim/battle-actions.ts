@@ -1,3 +1,4 @@
+import { format } from 'path';
 import {Dex, toID} from './dex';
 
 const CHOOSABLE_TARGETS = new Set(['normal', 'any', 'adjacentAlly', 'adjacentAllyOrSelf', 'adjacentFoe']);
@@ -1750,6 +1751,16 @@ export class BattleActions {
 
 		// types
 		let typeMod = target.runEffectiveness(move);
+
+		// Wack has its own typeMod value for Chaos type
+		if (type === 'Chaos') {
+			if (pokemon.hasType('Chaos')) {
+				typeMod = 2;
+			} else {
+				this.battle.add('-message', 'Chaos AntiStab activated!')
+				typeMod = 1
+			}
+		}
 		typeMod = this.battle.clampIntRange(typeMod, -6, 6);
 		target.getMoveHitData(move).typeMod = typeMod;
 		if (typeMod > 0) {

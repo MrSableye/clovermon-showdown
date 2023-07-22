@@ -123,6 +123,19 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (move.typeChangerBoosted === this.effect) return this.chainModify([5325, 4096]);
 		},
 	},
+	protean: {
+		inherit: true,
+		onPrepareHit(source, target, move) {
+			if (move.hasBounced || move.isFutureMove || move.sourceEffect === 'snatch') return;
+			const type = move.type;
+			if (type && type !== '???' && source.getTypes().join() !== type) {
+				if (!source.setType(type)) return;
+				this.add('-start', source, 'typechange', type, '[from] ability: Protean');
+			}
+		},
+		onSwitchIn() {},
+		rating: 4.5,
+	},
 	/* Wack abilities */
 	darklife: {
 		inherit: true,
