@@ -2702,7 +2702,7 @@ export const TypeChart: {[k: string]: TypeData} = {
 	void: {
 		damageTaken: {
 			Blood: 3,
-			Bone: 3,
+			Bone: 0,
 			Bug: 3,
 			Chaos: 3,
 			Cosmic: 3,

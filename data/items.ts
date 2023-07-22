@@ -13479,7 +13479,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 67187,
 		isNonstandard: "Future",
 	},
-	vrheadset: {	/* TODO: Rooms for Ar Helmet to be later defined in data/mod/wack/moves.ts **/
+	vrheadset: {	/* TODO: Rooms for Vr Helmet to be later defined in data/mod/wack/moves.ts **/
 		name: "Vr Headset",
 		spritenum: 0,
 		fling: {
@@ -15057,9 +15057,30 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 67279,
 		isNonstandard: "Future",
 	},
-	magmaballoon: {	/* TODO when Magma Sport is introduced **/
+	magmaballoon: {
 		name: "Magma Balloon",
 		spritenum: 0,
+		onStart(target) {
+			if (!target.ignoringItem() && !this.field.getPseudoWeather('gravity')) {
+				this.add('-item', target, 'Magma Balloon');
+			}
+		},
+		// airborneness implemented in sim/pokemon.js:Pokemon#isGrounded
+		onDamagingHit(damage, target, source, move) {
+			this.add('-enditem', target, 'Magma Balloon');
+			target.item = '';
+			target.itemState = {id: '', target};
+			this.runEvent('AfterUseItem', target, null, null, this.dex.items.get('magmaballoon'));
+		},
+		onAfterSubDamage(damage, target, source, effect) {
+			this.debug('effect: ' + effect.id);
+			if (effect.effectType === 'Move') {
+				this.add('-enditem', target, 'Magma Balloon');
+				target.item = '';
+				target.itemState = {id: '', target};
+				this.runEvent('AfterUseItem', target, null, null, this.dex.items.get('magmaballoon'));
+			}
+		},
 		num: 67280,
 		isNonstandard: "Future",
 	},
@@ -15558,9 +15579,18 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 67306,
 		isNonstandard: "Future",
 	},
-	invertedrune: {	/* TODO **/
+	invertedrune: {
 		name: "Inverted Rune",
 		spritenum: 0,
+		onEffectivenessPriority: 1,
+		onEffectiveness(typeMod, target, type, move) {
+			// The effectiveness of Freeze Dry on Water isn't reverted
+			if (move && move.id === 'freezedry' && type === 'Water') return;
+			if (move && move.id === '1000folds' && type === 'Steel') return;
+			if (move && move.id === 'airshooter' && type === 'Flying') return;
+			if (move && !this.dex.getImmunity(move, type)) return 1;
+			return -typeMod;
+		},
 		num: 67307,
 		isNonstandard: "Future",
 	},
