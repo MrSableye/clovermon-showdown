@@ -208,6 +208,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	autobuffskill: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	tumultuoustibia: {
 		inherit: true,
 		isNonstandard: null,

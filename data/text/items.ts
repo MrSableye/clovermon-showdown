@@ -2793,6 +2793,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 			desc: "Can only be held by Jewipede. Its Normal- & Bug-type attacks have 1.2x power.",
 		},
 	},
+	autobuffskill: {
+		name: "Auto Buff Skill",
+		desc: "After using Combat Orders, Haste, Maple Warrior, or Sharp Eyes, use the other moves if the user knows them. Single use.",
+	},
 	tumultuoustibia: {
 		name: "Tumultuous Tibia",
 		desc: "If held by Blobbos-Skeleton, its Attack is doubled.",

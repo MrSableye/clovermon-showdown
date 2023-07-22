@@ -38,7 +38,7 @@ const checkBadgesEnabled = () => {
 
 const checkCanUpdateTours = (user: User) => Badges.canManageBadge(user.id, TOUR_BADGE_ID);
 
-const getTourWins = (userID: string) => data.tours[userID] || 0;
+export const getTourWins = (userID: string) => data.tours[userID] || 0;
 
 const changeTourWins = (userID: string, func: (previousWins: number) => number) => {
 	if (!data.tours[userID]) data.tours[userID] = 0;

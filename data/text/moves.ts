@@ -9213,6 +9213,22 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Fails unless it is the user's first turn on the field. Raises the user's Attack and Defense by 2.",
 		shortDesc: "Usually goes first. First turn out only.Raises the user's Attack and Defense by 2.",
 	},
+	combatorders: {
+		name: "Combat Orders",
+		shortDesc: "Allies receive a random boost anytime they boost for 4 turns.",
+	},
+	haste: {
+		name: "Haste",
+		shortDesc: "Allies move first in their priority bracket for 4 turns.",
+	},
+	sharpeyes: {
+		name: "Sharp Eyes",
+		shortDesc: "Critical hits of allies deal 1.5x damage and +1 Crit ratio for 4 turns.",
+	},
+	maplewarrior: {
+		name: "Maple Warrior",
+		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",
+	},
 	starforce: {
 		name: "Star Force",
 		desc: "Has a (9 - X) / 8 chance to boost X + 2 random stats where X is the user's current Star Force. On success, increases the user's Star Force. On failure, the user faints.",
