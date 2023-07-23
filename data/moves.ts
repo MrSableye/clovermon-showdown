@@ -31739,23 +31739,78 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {spe: 1}},
 		contestType: "Beautiful",
 	},
-	changechannel: {
+	illusionofchoice: {
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		name: "Change Channel",
-		pp: 20,
-		priority: -6,
-		flags: {},
-		onTry(source) {
-			return !!this.canSwitch(source.side);
+		name: "Illusion of Choice",
+		isNonstandard: "Future",
+		pp: 25,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'illusionofchoice',
+		condition: {
+			duration: 5,
+			onStart(pokemon) {
+				this.effectState[pokemon.fullname].choiceLock = "";
+			},
+			onBeforeMove(pokemon, target, move) {
+				if (move.isZOrMaxPowered || move.id === 'struggle') return;
+				const choiceLock = this.effectState[pokemon.fullname].choiceLock;
+				if (choiceLock && choiceLock !== move.id) {
+					// Fails unless ability is being ignored (these events will not run), no PP lost.
+					this.addMove('move', pokemon, move.name);
+					this.attrLastMove('[still]');
+					this.debug("Disabled by Illusion of Choice");
+					this.add('-fail', pokemon);
+					return false;
+				}
+			},
+			onModifyMove(move, pokemon) {
+				if (this.effectState[pokemon.fullname].choiceLock || move.isZOrMaxPowered || move.id === 'struggle') return;
+				this.effectState[pokemon.fullname].choiceLock = move.id;
+			},
+			onModifyAtkPriority: 1,
+			onModifyAtk(atk, pokemon) {
+				if (pokemon.volatiles['dynamax']) return;
+				// PLACEHOLDER
+				this.debug('Illusion of Choice Atk Boost');
+				return this.chainModify(1.5);
+			},
+			onModifySpAPriority: 1,
+			onModifySpA(atk, pokemon) {
+				if (pokemon.volatiles['dynamax']) return;
+				// PLACEHOLDER
+				this.debug('Illusion of Choice SpA Boost');
+				return this.chainModify(1.5);
+			},
+			onDisableMove(pokemon) {
+				const choiceLock = this.effectState[pokemon.fullname].choiceLock;
+				if (!choiceLock) return;
+				if (pokemon.volatiles['dynamax']) return;
+				for (const moveSlot of pokemon.moveSlots) {
+					if (moveSlot.id !== choiceLock) {
+						pokemon.disableMove(moveSlot.id, false, this.effectState.sourceEffect);
+					}
+				}
+			},
+			onEnd(pokemon) {
+				this.effectState[pokemon.fullname].choiceLock = "";
+			},
+			onSideStart(side, source) {
+				this.add('-sidestart', side, 'Illusion of Choice');
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 3,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'Illusion of Choice');
+			},
 		},
-		selfSwitch: true,
 		secondary: null,
-		target: "self",
-		type: "Normal",
-		zMove: {effect: 'heal'},
-		contestType: "Cool",
+		target: "allySide",
+		type: "Psychic",
+		zMove: {boost: {spe: 1}},
+		contestType: "Beautiful",
 	},
 	starforce: {
 		name: "Star Force",

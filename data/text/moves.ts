@@ -9229,6 +9229,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Maple Warrior",
 		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",
 	},
+	illusionofchoice: {
+		name: "Illusion of Choice",
+		desc: "For 5 turns, allies are under the effects of Choice Band and Choice Specs.",
+	},
 	starforce: {
 		name: "Star Force",
 		desc: "Has a (9 - X) / 8 chance to boost X + 2 random stats where X is the user's current Star Force. On success, increases the user's Star Force. On failure, the user faints.",
