@@ -2793,6 +2793,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 			desc: "Can only be held by Jewipede. Its Normal- & Bug-type attacks have 1.2x power.",
 		},
 	},
+	servicerendered: {
+		name: "Service Rendered",
+		desc: "After using Combat Orders, Haste, Maple Warrior, or Sharp Eyes, switch out at end of turn. Single use.",
+	},
 	autobuffskill: {
 		name: "Auto Buff Skill",
 		desc: "After using Combat Orders, Haste, Maple Warrior, or Sharp Eyes, use the other moves if the user knows them. Single use.",

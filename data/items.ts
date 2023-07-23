@@ -9054,6 +9054,18 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 	},
+	servicerendered: {
+		name: "Service Rendered",
+		isNonstandard: "Future",
+		onResidual(pokemon) {
+			if (pokemon.volatiles['commanding'] || pokemon.volatiles['commanded']) return;
+			if (!pokemon.moveThisTurn || !pokemon.moveThisTurnResult || typeof pokemon.moveThisTurn === 'boolean') return;
+			const buffMoves = ['maplewarrior', 'combatorders', 'haste', 'sharpeyes'];
+			if (buffMoves.includes(pokemon.moveThisTurn) && pokemon.useItem()) {
+				pokemon.switchFlag = true;
+			}
+		}
+	},
 	autobuffskill: {
 		name: "Auto Buff Skill",
 		isNonstandard: "Future",
