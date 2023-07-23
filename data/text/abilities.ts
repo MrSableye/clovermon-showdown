@@ -3250,7 +3250,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	wateraffinity: {
 		name: "Water Affinity",
-		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack. This Pokemon is healed 1/8 by Water. If Rain Dance is active, this Pokemon's Speed is doubled.",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack. This Pokemon is healed 1/8 by Water. If Rain Dance is active, this Pokemon's Speed is doubled and it heals 1/16 of its max HP each turn.",
 	},
 	strengthaffinity: {
 		name: "Strength Affinity",
