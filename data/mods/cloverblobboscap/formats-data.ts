@@ -3557,6 +3557,56 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbospikmin: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminyellow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminblue: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminpurple: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminwhite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminflying: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminrock: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminglow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminparasite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	blobboshomestuck: {
 		inherit: true,
 		isNonstandard: null,

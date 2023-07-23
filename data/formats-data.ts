@@ -10010,6 +10010,46 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbospikmin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminyellow: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminblue: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminpurple: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminwhite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminflying: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminrock: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminglow: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminparasite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosduelist: {
 		tier: "Illegal",
 		isNonstandard: "Future",
