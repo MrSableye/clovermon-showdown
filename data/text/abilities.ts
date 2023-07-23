@@ -3258,7 +3258,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	poisonaffinity: {
 		name: "Poison Affinity",
-		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Poison-type attack. This Pokemon is healed 1/8 by Poison. If this Pokemon has no item, it finds a gem matching the type of one of its moves at the end of this turn.",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Poison-type attack. This Pokemon is healed 1/8 by Poison. If this Pokemon has no item, it finds a gem matching the type of one of its moves at the end of this turn. If this Pokemon is KOed with a contact move, that move's user loses 1/4 its max HP.",
 	},
 	rockaffinity: {
 		name: "Rock Affinity",

@@ -41858,8 +41858,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			atk: 100,
 			def: 70,
 			spa: 100,
-			spd: 70,
-			spe: 105,
+			spd: 85,
+			spe: 125,
 		},
 		abilities: {
 			0: "Poison Affinity",
