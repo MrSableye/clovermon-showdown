@@ -9229,6 +9229,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Maple Warrior",
 		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",
 	},
+	investment: {
+		name: "Investment",
+		desc: "Sends the user's boosts 2 turns into the future.",
+	},
 	illusionofchoice: {
 		name: "Illusion of Choice",
 		desc: "For 5 turns, allies are under the effects of Choice Band and Choice Specs.",

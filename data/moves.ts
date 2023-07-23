@@ -31739,6 +31739,49 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {spe: 1}},
 		contestType: "Beautiful",
 	},
+	investment: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Investment",
+		isNonstandard: "Future",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		onHit(target) {
+			const stats: BoostID[] = [];
+			let stat: BoostID;
+			for (stat in target.boosts) {
+				if (target.boosts[stat] !== 0) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				const boostsToPass = { ...target.boosts };
+				if (!target.side.addSlotCondition(target, 'investment')) return false;
+				target.clearBoosts();
+				Object.assign(target.side.slotConditions[target.position]['investment'], {
+					duration: 3,
+					boosts: boostsToPass,
+				});
+			} else {
+				return false;
+			}
+		},
+		condition: {
+			duration: 3,
+			onEnd(target) {
+				if (!target) return;
+				const boosts = this.effectState.boosts;
+				if (!boosts) return;
+				this.boost(boosts, target);
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Dark",
+		contestType: "Clever",
+	},
 	illusionofchoice: {
 		accuracy: true,
 		basePower: 0,
