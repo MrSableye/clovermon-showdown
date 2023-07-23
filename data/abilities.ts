@@ -11771,6 +11771,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 		},
+		onImmunity(type, pokemon) {
+			if (type === 'brn') return false;
+		},
 	},
 	wateraffinity: {
 		name: "Water Affinity",
@@ -11839,6 +11842,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (effect && effect.name === 'Aftermath') {
 				return false;
 			}
+		},
+		onImmunity(type, pokemon) {
+			if (type === 'par') return false;
 		},
 	},
 	strengthaffinity: {
@@ -11928,6 +11934,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					this.add('-item', pokemon, item, '[from] ability: Poison Affinity');
 				}
 			}
+		},
+		onImmunity(type, pokemon) {
+			if (['psn', 'tox'].includes(type)) return false;
 		},
 	},
 	rockaffinity: {
@@ -12029,6 +12038,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.type === 'Ice' && ['Water'].includes(type)) {
 				return 1;
 			}
+		},
+		onImmunity(type, pokemon) {
+			if (type === 'frz') return false;
 		},
 	},
 	lightaffinity: {

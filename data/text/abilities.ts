@@ -3242,11 +3242,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	fireaffinity: {
 		name: "Fire Affinity",
-		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fire-type attack. This Pokemon is healed 1/8 by Fire.",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fire-type attack. This Pokemon is healed 1/8 by Fire. Immune to Burn.",
 	},
 	electricityaffinity: {
 		name: "Electricity Affinity",
-		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Electric-type attack. This Pokemon is healed 1/8 by Electricity. While this Pokemon is active, Explosion, Mind Blown, Misty Explosion, Self-Destruct, and the Aftermath Ability are prevented from having an effect.",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Electric-type attack. This Pokemon is healed 1/8 by Electricity. While this Pokemon is active, Explosion, Mind Blown, Misty Explosion, Self-Destruct, and the Aftermath Ability are prevented from having an effect. Immune to Paralysis.",
 	},
 	wateraffinity: {
 		name: "Water Affinity",
@@ -3258,7 +3258,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	poisonaffinity: {
 		name: "Poison Affinity",
-		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Poison-type attack. This Pokemon is healed 1/8 by Poison. If this Pokemon has no item, it finds a gem matching the type of one of its moves at the end of this turn. If this Pokemon is KOed with a contact move, that move's user loses 1/4 its max HP.",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Poison-type attack. This Pokemon is healed 1/8 by Poison. If this Pokemon has no item, it finds a gem matching the type of one of its moves at the end of this turn. If this Pokemon is KOed with a contact move, that move's user loses 1/4 its max HP. Immune to Poison.",
 	},
 	rockaffinity: {
 		name: "Rock Affinity",
@@ -3270,7 +3270,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	iceaffinity: {
 		name: "Ice Affinity",
-		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Ice-type attack. This Pokemon is healed 1/8 by Ice. This Pokemon's Ice-type attacks are super-effective against Water-types.",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Ice-type attack. This Pokemon is healed 1/8 by Ice. This Pokemon's Ice-type attacks are super-effective against Water-types. Immune to Freeze.",
 	},
 	lightaffinity: {
 		name: "Light Affinity",
