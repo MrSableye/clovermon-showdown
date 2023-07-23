@@ -9219,7 +9219,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	haste: {
 		name: "Haste",
-		shortDesc: "Allies move first in their priority bracket for 4 turns.",
+		shortDesc: "Allies attacking moves go first in their priority bracket for 4 turns.",
 	},
 	sharpeyes: {
 		name: "Sharp Eyes",

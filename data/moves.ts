@@ -31643,6 +31643,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			duration: 4,
 			onFractionalPriorityPriority: -1,
 			onFractionalPriority(priority, pokemon, target, move) {
+				if (move.category === 'Status') return;
 				return 0.1;
 			},
 			onSideResidualOrder: 26,
@@ -31737,6 +31738,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 		zMove: {boost: {spe: 1}},
 		contestType: "Beautiful",
+	},
+	changechannel: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Change Channel",
+		pp: 20,
+		priority: -6,
+		flags: {},
+		onTry(source) {
+			return !!this.canSwitch(source.side);
+		},
+		selfSwitch: true,
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {effect: 'heal'},
+		contestType: "Cool",
 	},
 	starforce: {
 		name: "Star Force",
