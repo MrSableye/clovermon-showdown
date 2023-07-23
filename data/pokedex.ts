@@ -41989,12 +41989,12 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Grass"],
 		gender: "N",
 		baseStats: {
-			hp: 70,
-			atk: 100,
-			def: 70,
-			spa: 100,
-			spd: 70,
-			spe: 105,
+			hp: 75,
+			atk: 105,
+			def: 75,
+			spa: 105,
+			spd: 75,
+			spe: 110,
 		},
 		abilities: {
 			0: "Parasite Affinity",
