@@ -571,6 +571,19 @@ export const commands: Chat.ChatCommands = {
 	
 				return this.sendReply(`Denied emoji request of ${targetId}`);
 			},
+			'': 'help',
+			help() {
+				return this.parse('/help custom avatar');
+			},
+		},
+		emojihelp() {
+			this.sendReplyBox(
+				`<code>/custom emoji request [image url]</code>: requests a custom emoji. Requires: custom emoji access<br />` +
+				`<code>/custom emoji showall</code>: shows all approved emojis. Requires: @ or above<br />` +
+				`<code>/custom emoji showrequests</code>: shows all un-approved emojis. Requires: @ or above<br />` +
+				`<code>/custom emoji approve [user]</code>: approves the user's emoji request. Requires: @ or above<br />` +
+				`<code>/custom emoji deny [user]</code>: denies the user's emoji request. Requires: @ or above<br />`
+			);
 		},
 		title: {
 			set(target, room, user) {
@@ -758,7 +771,8 @@ export const commands: Chat.ChatCommands = {
 			`<code>/custom title</code>: commands related to custom titles. Try <code>/help custom title</code> for details. ${TITLE_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom flair</code>: commands related to custom flairs. Try <code>/help custom flair</code> for details. ${FLAIR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom color</code>: commands related to custom user colors. Try <code>/help custom color</code> for details. ${NAME_COLOR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
-			`<code>/custom background</code>: commands related to custom background colors. Try <code>/help custom background</code> for details. ${BACKGROUND_MINIMUM_TOUR_WINS} or more tour wins required to use.`
+			`<code>/custom background</code>: commands related to custom background colors. Try <code>/help custom background</code> for details. ${BACKGROUND_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
+			`<code>/custom emoji</code>: commands related to custom emojis. Try <code>/help custom emoji</code> for details. ${EMOJI_MINIMUM_TOUR_WINS} or more tour wins required to use.`
 		);
 	},
 };
