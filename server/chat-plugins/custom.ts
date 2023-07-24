@@ -500,16 +500,16 @@ export const commands: Chat.ChatCommands = {
 
 				return this.sendReply('|raw| Your custon name color was successfully unset. It may take a while for it to dissapear.');
 			},
-			colorhelp() {
-				this.sendReplyBox(
-					`<code>/custom color set [username]</code>: sets your user color to match the specified user's color.<br />` +
-					`<code>/custom color unset</code>: removes your user color.`
-				);
-			},
 			'': 'help',
 			help() {
 				return this.parse('/help custom');
 			},
+		},
+		colorhelp() {
+			this.sendReplyBox(
+				`<code>/custom color set [username]</code>: sets your user color to match the specified user's color.<br />` +
+				`<code>/custom color unset</code>: removes your user color.`
+			);
 		},
 		bg: 'background',
 		backgrounds: 'background',
