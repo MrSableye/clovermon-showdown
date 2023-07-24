@@ -306,6 +306,7 @@ export const commands: Chat.ChatCommands = {
 						validTypes: ['png', 'gif'],
 						maxDimensions: { width: 80, height: 80 },
 						minDimensions: { width: 80, height: 80 },
+						fileSize: 200000,
 					});
 
 					if ('error' in imageResult) {
@@ -464,6 +465,7 @@ export const commands: Chat.ChatCommands = {
 						enforceSquare: true,
 						maxDimensions: { width: 64, height: 64 },
 						minDimensions: { width: 32, height: 32 },
+						fileSize: 200000,
 					});
 
 					if ('error' in imageResult) {

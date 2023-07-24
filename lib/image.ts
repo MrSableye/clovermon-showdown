@@ -11,13 +11,14 @@ interface VerificationParameters {
 	enforceSquare?: boolean;
 	minDimensions?: Dimensions;
 	maxDimensions?: Dimensions;
+	fileSize?: number;
 }
 
 type ImageResult = { error: string } | { image: Buffer, width: number, height: number, type: string };
 
 export const downloadImageWithVerification = async (
 	imageUrl: string,
-	{ validTypes, enforceSquare, minDimensions, maxDimensions }: VerificationParameters,
+	{ validTypes, enforceSquare, minDimensions, maxDimensions, fileSize }: VerificationParameters,
 ): Promise<ImageResult> => {
 	try {
 		const imageBuffer = (await Axios.get(imageUrl, {responseType: 'arraybuffer'})).data;
@@ -28,6 +29,10 @@ export const downloadImageWithVerification = async (
 		}
 	
 		const {width, height, type} = probeResult;
+
+		if (fileSize && imageBuffer.length > fileSize) {
+			return { error: `Invalid image size. Found image of size ${imageBuffer.length}B, must be less than ${fileSize}B` };
+		}
 	
 		if (!validTypes.includes(type)) {
 			return { error: `Invalid image type. Found image of type ${type}, must be one of ${validTypes.join(',')}` };
