@@ -170,7 +170,7 @@ const updateEmojiStatus = (id: string, statusUpdate: Partial<EmojiStatus>) => {
 		enabled: false,
 	};
 
-	avatars[id] = {
+	emojis[id] = {
 		...newStatus,
 		...emojiStatus,
 		...statusUpdate,
@@ -201,7 +201,7 @@ const notifyEmojiStaff = (requesterId: string, fileName: string) => {
 	const staffRoom = Rooms.get('staff');
 
 	if (staffRoom) {
-		staffRoom.sendMods(`|uhtml|emoji-request-${requesterId}|${createPendingAvatarRequestHtml(requesterId, fileName, true)}`);
+		staffRoom.sendMods(`|uhtml|emoji-request-${requesterId}|${createPendingEmojiRequestHtml(requesterId, fileName, true)}`);
 	}
 };
 
@@ -267,7 +267,7 @@ const saveFlairs = () => {
 };
 
 /* Name color logic */
-const NAME_COLOR_MINIMUM_TOUR_WINS = 4;
+const NAME_COLOR_MINIMUM_TOUR_WINS = 1;
 const NAME_COLOR_USER_INELIGIBLE = `You are not eligble for a custom name color. You must have at least ${NAME_COLOR_MINIMUM_TOUR_WINS} tour wins.`;
 const NAME_COLOR_INVALID = 'The username to use as your custom color must be at least 1 character and less than 19 characters long.';
 
