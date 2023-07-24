@@ -575,7 +575,7 @@ export const commands: Chat.ChatCommands = {
 			},
 			'': 'help',
 			help() {
-				return this.parse('/help custom avatar');
+				return this.parse('/help custom emoji');
 			},
 		},
 		emojihelp() {
