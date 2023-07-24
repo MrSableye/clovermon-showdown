@@ -194,6 +194,11 @@ const saveFlairs = () => {
 	updateCss();
 };
 
+/* Name color logic */
+const NAME_COLOR_MINIMUM_TOUR_WINS = 4;
+const NAME_COLOR_USER_INELIGIBLE = `You are not eligble for a custom name color. You must have at least ${NAME_COLOR_MINIMUM_TOUR_WINS} tour wins.`;
+const NAME_COLOR_INVALID = 'The username to use as your custom color must be at least 1 character and less than 19 characters long.';
+
 /* Background color logic */
 const BACKGROUND_MINIMUM_TOUR_WINS = 5;
 const BACKGROUND_USER_INELIGIBLE = `You are not eligble for a custom background. You must have at least ${BACKGROUND_MINIMUM_TOUR_WINS} tour wins.`;
@@ -459,6 +464,53 @@ export const commands: Chat.ChatCommands = {
 				`<code>/custom flair unset</code>: removes your flair.`
 			);
 		},
+		color: {
+			async set(target, room, user) {
+				const canHaveFlair = hasTourWins(NAME_COLOR_MINIMUM_TOUR_WINS, user) || Config.customnamecolor?.[user.id] !== undefined;
+
+				if (!canHaveFlair) throw new Chat.ErrorMessage(NAME_COLOR_USER_INELIGIBLE);
+
+				const targetId = toID(target);
+				if (!targetId || targetId.length > 18) {
+					return this.errorReply(NAME_COLOR_INVALID);
+				}
+
+				const [res, error] = await LoginServer.request('updatenamecolor', {
+					userid: user.id,
+					source: targetId,
+					by: user.id,
+				});
+
+				if (error || !res || res.actionerror) {
+					throw new Chat.ErrorMessage('Unknown error setting custom name color. Please contact an administrator if this persists.');
+				}
+
+				return this.sendReply(`|raw| <username>${user.id}</username> was set to match <username>${targetId}</username>. It may take a while for it to show up.`);
+			},
+			async unset(target, room, user) {
+				const [res, error] = await LoginServer.request('updatenamecolor', {
+					userid: user.id,
+					source: '',
+					by: user.id,
+				});
+
+				if (error || !res || res.actionerror) {
+					throw new Chat.ErrorMessage('Unknown error unsetting custom name color. Please contact an administrator if this persists.');
+				}
+
+				return this.sendReply('|raw| Your custon name color was successfully unset. It may take a while for it to dissapear.');
+			},
+			colorhelp() {
+				this.sendReplyBox(
+					`<code>/custom color set [username]</code>: sets your user color to match the specified user's color.<br />` +
+					`<code>/custom color unset</code>: removes your user color.`
+				);
+			},
+			'': 'help',
+			help() {
+				return this.parse('/help custom');
+			},
+		},
 		bg: 'background',
 		backgrounds: 'background',
 		background: {
@@ -497,7 +549,7 @@ export const commands: Chat.ChatCommands = {
 		},
 		backgroundhelp() {
 			this.sendReplyBox(
-				`<code>/custom background set [hex color]</code>: sets your user background color the the specified color.<br />` +
+				`<code>/custom background set [hex color]</code>: sets your user background color to the specified color.<br />` +
 				`<code>/custom background unset</code>: removes your user background color.`
 			);
 		},
@@ -511,6 +563,7 @@ export const commands: Chat.ChatCommands = {
 			`<code>/custom avatar</code>: commands related to custom avatars. Try <code>/help custom avatar</code> for details. ${AVATAR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom title</code>: commands related to custom titles. Try <code>/help custom title</code> for details. ${TITLE_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom flair</code>: commands related to custom flairs. Try <code>/help custom flair</code> for details. ${FLAIR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
+			`<code>/custom color</code>: commands related to custom user colors. Try <code>/help custom color</code> for details. ${NAME_COLOR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom background</code>: commands related to custom background colors. Try <code>/help custom background</code> for details. ${BACKGROUND_MINIMUM_TOUR_WINS} or more tour wins required to use.`
 		);
 	},
