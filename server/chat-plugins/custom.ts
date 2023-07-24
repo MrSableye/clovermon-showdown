@@ -791,11 +791,13 @@ export const loginfilter: Chat.LoginFilter = user => {
 	}
 };
 
+const customEmojiRegex = /\:\!\:/g;
+
 export const chatfilter: Chat.ChatFilter = (message, user) => {
 	const emojiStatus = emojis[user.id];
-	if (!Punishments.hasPunishType(user.id, 'EMOJIBAN') && emojiStatus && emojiStatus.emoji) {
+	if (!Punishments.hasPunishType(user.id, 'EMOJIBAN') && emojiStatus && emojiStatus.emoji && customEmojiRegex.test(message)) {
 		const prefix = message.startsWith('/html') ? '' : '/html ';
-		return prefix + message.replace(/\:\!\:/g, createEmojiHtml(`custom-${user.id}`, emojiStatus.emoji || ''))
+		return prefix + message.replace(customEmojiRegex, createEmojiHtml(`custom-${user.id}`, emojiStatus.emoji || ''))
 	}
 	return message;
 };
