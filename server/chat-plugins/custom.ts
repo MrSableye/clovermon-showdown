@@ -542,8 +542,8 @@ export const commands: Chat.ChatCommands = {
 					requestedEmoji: undefined,
 				});
 	
-				FS(`./config/emojis/requests/custom-${emojiStatus.requestedEmoji}`)
-					.renameSync(`./config/emojis/custom-${emojiStatus.requestedEmoji}`);
+				FS(`./config/emojis/requests/${emojiStatus.requestedEmoji}`)
+					.renameSync(`./config/emojis/${emojiStatus.requestedEmoji}`);
 	
 				sendPM(`/html <div class="infobox"><div>Emoji approved</div><div>${createRawEmojiHtml(targetId, emojiStatus.requestedEmoji)}</div></div>`, targetId);
 				removeEmojiStaffNotificiation(targetId);
