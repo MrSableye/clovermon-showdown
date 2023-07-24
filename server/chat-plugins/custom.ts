@@ -502,7 +502,7 @@ export const commands: Chat.ChatCommands = {
 			},
 			'': 'help',
 			help() {
-				return this.parse('/help custom');
+				return this.parse('/help custom color');
 			},
 		},
 		colorhelp() {
