@@ -2,6 +2,7 @@ import parseColor from 'parse-color';
 import {FS, Image, Net, Utils} from '../../lib';
 import {getTourWins} from './data-badges';
 import {createEmojiHtml} from './emojis';
+import { escapeHTML } from '../../lib/utils';
 
 /* Generic logic */
 const CUSTOM_CSS_PATH = 'config/custom.css';
@@ -797,7 +798,7 @@ export const chatfilter: Chat.ChatFilter = (message, user) => {
 	const emojiStatus = emojis[user.id];
 	if (!Punishments.hasPunishType(user.id, 'EMOJIBAN') && emojiStatus && emojiStatus.emoji && customEmojiRegex.test(message)) {
 		const prefix = message.startsWith('/html') ? '' : '/html ';
-		return prefix + message.replace(customEmojiRegex, createEmojiHtml(`custom-${user.id}`, emojiStatus.emoji || ''))
+		return prefix + escapeHTML(message).replace(customEmojiRegex, createEmojiHtml(`custom-${user.id}`, emojiStatus.emoji || ''))
 	}
 	return message;
 };
