@@ -1,8 +1,7 @@
-import Axios from 'axios';
-import probe from 'probe-image-size';
 import parseColor from 'parse-color';
-import {FS, Net, Utils} from '../../lib';
+import {FS, Image, Net, Utils} from '../../lib';
 import {getTourWins} from './data-badges';
+import {createEmojiHtml} from './emojis';
 
 /* Generic logic */
 const CUSTOM_CSS_PATH = 'config/custom.css';
@@ -59,7 +58,6 @@ const updateCss = () => {
 /* Avatar Logic */
 const AVATAR_MINIMUM_TOUR_WINS = 1;
 const AVATAR_USER_INELIGIBLE = 'You are not eligble for a custom avatar.';
-const AVATAR_INVALID_IMAGE = 'Invalid image. Please provide a URL linking to a 80x80 GIF or PNG.';
 const AVATAR_ERROR_WRITING_IMAGE = 'Unable to write image. Please try again or contact an administrator.';
 const AVATAR_UNKNOWN_ERROR = 'An unknown error occured. Please try again or contact an administrator.';
 
@@ -125,7 +123,7 @@ const sendPM = (message: string, userId: ID) => {
 	}
 };
 
-const notifyStaff = (requesterId: string, fileName: string) => {
+const notifyAvatarStaff = (requesterId: string, fileName: string) => {
 	const staffRoom = Rooms.get('staff');
 
 	if (staffRoom) {
@@ -133,12 +131,86 @@ const notifyStaff = (requesterId: string, fileName: string) => {
 	}
 };
 
-const removeStaffNotficiation = (requesterId: string) => {
+const removeAvatarStaffNotificiation = (requesterId: string) => {
 	const staffRoom = Rooms.get('staff');
 
 	if (staffRoom) {
 		staffRoom.sendMods(
 			Utils.html`|uhtml|avatar-request-${requesterId}|`,
+		);
+	}
+};
+
+/* Emoji Logic */
+const EMOJI_MINIMUM_TOUR_WINS = 3;
+const EMOJI_USER_INELIGIBLE = `You are not eligble for a custom emoji. You must have at least ${EMOJI_MINIMUM_TOUR_WINS} tour wins.`;
+const EMOJI_ERROR_WRITING_IMAGE = 'Unable to write image. Please try again or contact an administrator.';
+const EMOJI_UNKNOWN_ERROR = 'An unknown error occured. Please try again or contact an administrator.';
+
+interface EmojiStatus {
+	enabled: boolean;
+	requestedEmoji?: string;
+	emoji?: string;
+}
+
+type EmojiConfig = Record<string, EmojiStatus>;
+
+export const emojis: EmojiConfig = JSON.parse(
+	FS('config/chat-plugins/custom-emojis.json').readIfExistsSync() || "{}"
+);
+
+const saveEmojis = () => {
+	FS('config/chat-plugins/custom-emojis.json').writeUpdate(() => JSON.stringify(emojis));
+};
+
+const updateEmojiStatus = (id: string, statusUpdate: Partial<EmojiStatus>) => {
+	const emojiStatus = emojis[id];
+
+	const newStatus: EmojiStatus = {
+		enabled: false,
+	};
+
+	avatars[id] = {
+		...newStatus,
+		...emojiStatus,
+		...statusUpdate,
+	};
+
+	saveEmojis();
+};
+
+const createRawEmojiHtml = (
+	userId: string,
+	emojiFileName: string,
+	isRequest = false,
+) => createEmojiHtml(
+	`custom-${userId}`,
+	(isRequest ? 'requests/' : '') + emojiFileName);
+
+const createPendingEmojiRequestHtml = (userId: string, emojiFileName: string, isBroadcast = false) => {
+	const username = getUsername(userId);
+	let pendingEmojiRequestHtml = '<details>';
+	pendingEmojiRequestHtml += `<summary><b>${username}${isBroadcast ? ' Custom Emoji Request' : ''}</b></summary>`;
+	pendingEmojiRequestHtml += createRawEmojiHtml(userId, emojiFileName, true) + '<br />';
+	pendingEmojiRequestHtml += `<button class="button" name="send" value="/custom emoji approve ${userId}">Approve</button>`;
+	pendingEmojiRequestHtml += `<button class="button" name="send" value="/custom emoji deny ${userId}">Deny</button>`;
+	return pendingEmojiRequestHtml + '</details>';
+};
+
+const notifyEmojiStaff = (requesterId: string, fileName: string) => {
+	const staffRoom = Rooms.get('staff');
+
+	if (staffRoom) {
+		staffRoom.sendMods(`|uhtml|emoji-request-${requesterId}|${createPendingAvatarRequestHtml(requesterId, fileName, true)}`);
+	}
+};
+
+const removeEmojiStaffNotificiation = (requesterId: string) => {
+	const staffRoom = Rooms.get('staff');
+
+	if (staffRoom) {
+		staffRoom.sendMods(
+			Utils.html`|uhtml|emoji-request-${requesterId}|`,
 		);
 	}
 };
@@ -230,26 +302,25 @@ export const commands: Chat.ChatCommands = {
 					}
 	
 					const imageUrl = target.trim();
-					const imagebuffer = (await Axios.get(imageUrl, {responseType: 'arraybuffer'})).data;
-					const probeResult = probe.sync(imagebuffer);
-	
-					if (!probeResult) {
-						throw new Chat.ErrorMessage(AVATAR_INVALID_IMAGE);
+					const imageResult = await Image.downloadImageWithVerification(imageUrl, {
+						validTypes: ['png', 'gif'],
+						maxDimensions: { width: 80, height: 80 },
+						minDimensions: { width: 80, height: 80 },
+					});
+
+					if ('error' in imageResult) {
+						throw new Chat.ErrorMessage(imageResult.error);
 					}
-	
-					const {width, height, type} = probeResult;
-	
-					if (width !== 80 || height !== 80 || !['png', 'gif'].includes(toID(type))) {
-						throw new Chat.ErrorMessage(AVATAR_INVALID_IMAGE);
-					}
+
+					const {image, type} = imageResult;
 	
 					try {
 						const fileName = `${user.id}.${type}`;
-						await FS(`./config/avatars/requests/${fileName}`).write(imagebuffer);
+						await FS(`./config/avatars/requests/${fileName}`).write(image);
 	
 						updateAvatarStatus(user.id, {requestedAvatar: fileName});
 	
-						notifyStaff(user.id, fileName);
+						notifyAvatarStaff(user.id, fileName);
 	
 						return this.sendReplyBox(`Requested: ${createRawAvatarHtml(fileName, true)}`);
 					} catch (error) {
@@ -317,7 +388,7 @@ export const commands: Chat.ChatCommands = {
 					.renameSync(`./config/avatars/${avatarStatus.requestedAvatar}`);
 	
 				sendPM(`/html <div class="infobox"><div>Avatar approved</div><div>${createRawAvatarHtml(avatarStatus.requestedAvatar)}</div></div>`, targetId);
-				removeStaffNotficiation(targetId);
+				removeAvatarStaffNotificiation(targetId);
 	
 				return this.sendReplyBox(`<div><div>Approved avatar request of ${targetId}</div><div>${createRawAvatarHtml(avatarStatus.requestedAvatar)}</div></div>`);
 			},
@@ -338,7 +409,7 @@ export const commands: Chat.ChatCommands = {
 				FS(`./config/avatars/requests/${avatarStatus.requestedAvatar}`).unlinkIfExistsSync();
 	
 				sendPM('Your avatar request was denied.', targetId);
-				removeStaffNotficiation(targetId);
+				removeAvatarStaffNotificiation(targetId);
 	
 				return this.sendReply(`Denied avatar request of ${targetId}`);
 			},
@@ -377,6 +448,129 @@ export const commands: Chat.ChatCommands = {
 				`<code>/custom avatar off</code>: disables your own custom avatar.<br />` +
 				`<code>/custom avatar blobbos</code>: enables the covetted Blobbos avatar.<br />`
 			);
+		},
+		emoji: {
+			async request(target, room, user) {
+				try {
+					const canHaveEmoji = hasTourWins(EMOJI_MINIMUM_TOUR_WINS, user) || Config.customemoji?.[user.id] !== undefined;
+	
+					if (!canHaveEmoji) {
+						throw new Chat.ErrorMessage(EMOJI_USER_INELIGIBLE);
+					}
+	
+					const imageUrl = target.trim();
+					const imageResult = await Image.downloadImageWithVerification(imageUrl, {
+						validTypes: ['png', 'gif'],
+						enforceSquare: true,
+						maxDimensions: { width: 64, height: 64 },
+						minDimensions: { width: 32, height: 32 },
+					});
+
+					if ('error' in imageResult) {
+						throw new Chat.ErrorMessage(imageResult.error);
+					}
+
+					const {image, type} = imageResult;
+	
+					try {
+						const fileName = `custom-${user.id}.${type}`;
+						await FS(`./config/emojis/requests/${fileName}`).write(image);
+	
+						updateEmojiStatus(user.id, {requestedEmoji: fileName});
+	
+						notifyEmojiStaff(user.id, fileName);
+	
+						return this.sendReplyBox(`Requested: ${createRawEmojiHtml(user.id, fileName, true)}`);
+					} catch (error) {
+						throw new Chat.ErrorMessage(EMOJI_ERROR_WRITING_IMAGE);
+					}
+				} catch (error) {
+					throw new Chat.ErrorMessage(EMOJI_UNKNOWN_ERROR);
+				}
+			},
+			showall: 'showapproved',
+			showapproved() {
+				this.runBroadcast();
+				this.checkCan('avatar');
+	
+				const emojiList = Object.entries(emojis).filter(([userId, emojiStatus]) => emojiStatus.emoji !== undefined);
+	
+				if (!emojiList.length) {
+					return this.sendReplyBox('<b><u>Approved Emojis</u></b><br /><div>No approved emojis.</div>');
+				}
+	
+				/* eslint-disable max-len */
+				const emojiListHtml = emojiList.map(
+					([
+						userId,
+						emojiStatus,
+					]) => `<span style="display: inline-block;"><div>${getUsername(userId)}</div><div>${createRawEmojiHtml(userId, emojiStatus.emoji || '')}</div></span>`
+				).join(' ');
+				/* eslint-enable max-len */
+	
+				return this.sendReplyBox('<b><u>Approved Emojis</u></b><br />' + emojiListHtml);
+			},
+			showrequests: 'requests',
+			requests() {
+				this.checkCan('avatar');
+	
+				const emojiList = Object.entries(emojis)
+					.filter(([userId, emojiStatus]) => emojiStatus.requestedEmoji !== undefined);
+	
+				if (!emojiList.length) {
+					return this.sendReplyBox('<b><u>Emoji Requests</u></b><br />' + `<div>No requests available.</div>`);
+				}
+	
+				const requestListHtml = emojiList.map(
+					([userId, emojiStatus]) => createPendingEmojiRequestHtml(userId, emojiStatus.requestedEmoji || ''),
+				).join('<br />');
+	
+				return this.sendReplyBox('<b><u>Emoji Requests</u></b><br />' + requestListHtml);
+			},
+			approve(target) {
+				this.checkCan('avatar');
+	
+				const targetId = toID(target);
+				const emojiStatus = emojis[targetId];
+	
+				if (!emojiStatus || !emojiStatus.requestedEmoji) {
+					throw new Chat.ErrorMessage(`No emoji request for ${targetId}`);
+				}
+	
+				updateEmojiStatus(targetId, {
+					emoji: emojiStatus.requestedEmoji,
+					requestedEmoji: undefined,
+				});
+	
+				FS(`./config/emojis/requests/custom-${emojiStatus.requestedEmoji}`)
+					.renameSync(`./config/emojis/custom-${emojiStatus.requestedEmoji}`);
+	
+				sendPM(`/html <div class="infobox"><div>Emoji approved</div><div>${createRawEmojiHtml(targetId, emojiStatus.requestedEmoji)}</div></div>`, targetId);
+				removeEmojiStaffNotificiation(targetId);
+	
+				return this.sendReplyBox(`<div><div>Approved emoji request of ${targetId}</div><div>${createRawEmojiHtml(targetId, emojiStatus.requestedEmoji)}</div></div>`);
+			},
+			deny(target) {
+				this.checkCan('avatar');
+	
+				const targetId = toID(target);
+				const emojiStatus = emojis[targetId];
+	
+				if (!emojiStatus || !emojiStatus.requestedEmoji) {
+					throw new Chat.ErrorMessage(`No emoji request for ${targetId}`);
+				}
+	
+				updateEmojiStatus(targetId, {
+					requestedEmoji: undefined,
+				});
+	
+				FS(`./config/emojis/requests/${emojiStatus.requestedEmoji}`).unlinkIfExistsSync();
+	
+				sendPM('Your emoji request was denied.', targetId);
+				removeEmojiStaffNotificiation(targetId);
+	
+				return this.sendReply(`Denied emoji request of ${targetId}`);
+			},
 		},
 		title: {
 			set(target, room, user) {
@@ -579,4 +773,13 @@ export const loginfilter: Chat.LoginFilter = user => {
 	if (avatar && avatar.enabled && avatar.avatar) {
 		user.avatar = avatar.avatar;
 	}
+};
+
+export const chatfilter: Chat.ChatFilter = (message, user) => {
+	const emojiStatus = emojis[user.id];
+	if (!Punishments.hasPunishType(user.id, 'EMOJIBAN') && emojiStatus && emojiStatus.emoji) {
+		const prefix = message.startsWith('/html') ? '' : '/html ';
+		return prefix + message.replace(/\:\!\:/g, createEmojiHtml(`custom-${user.id}`, emojiStatus.emoji || ''))
+	}
+	return message;
 };

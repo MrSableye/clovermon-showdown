@@ -43,7 +43,7 @@ const deleteEmoji = (name: string) => {
 
 const toAlphaNumeric = (text: string) => ('' + text).replace(/[^A-Za-z0-9]+/g, '');
 
-const createEmojiHtml = (
+export const createEmojiHtml = (
 	name: string,
 	filename: string,
 ) => `<img src="https://clover.weedl.es:8443/emojis/${filename}" title=":${name}:" height="${EMOJI_SIZE}" width="${EMOJI_SIZE}">`;
