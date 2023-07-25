@@ -45488,7 +45488,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 35,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -56622,6 +56625,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, arrow: 1},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -66891,6 +66895,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 7,
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -70126,7 +70131,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			onHit(target, source, move) {
+				if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+			},
+		},
 		target: "normal",
 		type: "Ghost",
 		isNonstandard: "Future",
@@ -75604,6 +75614,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		multihit: 2,
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -76195,6 +76206,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTry(source) {
+			if (source.moveSlots.length < 2) return false; // Last Resort fails unless the user knows at least 2 moves
+			let hasLastResort = false; // User must actually have Last Resort for it to succeed
+			for (const moveSlot of source.moveSlots) {
+				if (moveSlot.id === 'lastresort') {
+					hasLastResort = true;
+					continue;
+				}
+				if (!moveSlot.used) return false;
+			}
+			return hasLastResort;
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -76511,7 +76534,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -1,
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
