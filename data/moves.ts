@@ -43147,7 +43147,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			this.actions.useMove(randomMove, target);
 		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Divine",
 		isNonstandard: "Future",
 	},
