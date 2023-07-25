@@ -39485,6 +39485,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Ritual",
 		pp: 5,
 		priority: -1,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		boosts: {
+			spa: 2,
+			atk: 2,
+			spe: 2,
+		},
 		flags: {pulse: 1},
 		secondary: null,
 		target: "self",
