@@ -64,7 +64,7 @@ export const Tags: {[id: string]: TagData} = {
 	},
 	blobbokind: {
 		name: "Blobbokind",
-		speciesFilter: species => species.tags.includes("Blobbokind"),
+		speciesFilter: species => species.tags.includes("Blobbokind") || species.num === 69132,
 	},
 	// Move tags
 	// ---------

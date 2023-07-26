@@ -3,6 +3,7 @@
 import {Utils} from "../lib";
 import {Pokemon} from "../sim/pokemon";
 import {Teams} from "../sim/teams";
+import { Tags } from "./tags";
 
 // The list of formats is stored in config/formats.js
 export const Rulesets: {[k: string]: FormatData} = {
@@ -606,7 +607,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 			const blobbosFormes = new Set<string>();
 			for (const set of team) {
 				const species = this.dex.species.get(set.species);
-				if (species.num === 69132 || species.tags.includes('Blobbokind')) {
+				if (Tags.blobbokind.speciesFilter!(species)) {
 					if (blobbosFormes.has(species.forme)) {
 						return [`You are limited to one of each Blobbos Forme by Species Clause but Special for Blobbos.`, `(You have more than one ${species.name})`];
 					}

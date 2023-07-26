@@ -1,3 +1,5 @@
+import { Tags } from "../../tags";
+
 export const Rulesets: {[k: string]: ModdedFormatData} = {
 	multitier: {
 		effectType: 'ValidatorRule',
@@ -53,7 +55,7 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 		desc: "Only Blobbos and its alternate formes can be used.",
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species || set.name);
-			if (species.num !== 69132 && !species.tags.includes('Blobbokind')) {
+			if (!Tags.blobbokind.speciesFilter!(species)) {
 				return [`${set.name || set.species} is not a forme of Blobbos.`];
 			}
 		},
