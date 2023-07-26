@@ -37649,7 +37649,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		otherFormes: ["Blobbos-Reverse-Mega"],
 		formeOrder: ["Blobbos-Reverse", "Blobbos-Reverse-Mega"],
 		gen: 8,
-		tags: ["Blobbokind"],
 	},
 	blobbosreversemega: {
 		num: 69132,
@@ -40922,6 +40921,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Float Stone",
 		eggGroups: ["Mineral", "Flying"],
 		gen: 8,
+		tags: ["Blobbokind"],
 	},
 	blobbosforbidden: {
 		num: 69132,
@@ -41335,9 +41335,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 0.5,
 		weightkg: 6.1,
 		color: "Blue",
-		tags: ["Paradox"],
+		tags: ["Paradox", "Blobbokind"],
 		eggGroups: ["Undiscovered"],
-		tags: ["Blobbokind"],
 	},
 	ironblob: {
 		num: 23198,
@@ -41349,9 +41348,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 0.5,
 		weightkg: 6.5,
 		color: "Purple",
-		tags: ["Paradox"],
+		tags: ["Paradox", "Blobbokind"],
 		eggGroups: ["Undiscovered"],
-		tags: ["Blobbokind"],
 	},
 	blobbospaldea: {
 		num: 69132,
