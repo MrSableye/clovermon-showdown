@@ -36941,6 +36941,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		tags: ["Blobbokind"],
 	},
 	blobbosmagic: {
 		num: 69132,
@@ -37648,6 +37649,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		otherFormes: ["Blobbos-Reverse-Mega"],
 		formeOrder: ["Blobbos-Reverse", "Blobbos-Reverse-Mega"],
 		gen: 8,
+		tags: ["Blobbokind"],
 	},
 	blobbosreversemega: {
 		num: 69132,
@@ -41335,6 +41337,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		tags: ["Paradox"],
 		eggGroups: ["Undiscovered"],
+		tags: ["Blobbokind"],
 	},
 	ironblob: {
 		num: 23198,
@@ -41348,6 +41351,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Purple",
 		tags: ["Paradox"],
 		eggGroups: ["Undiscovered"],
+		tags: ["Blobbokind"],
 	},
 	blobbospaldea: {
 		num: 69132,
@@ -42216,6 +42220,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 0.005,
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
+		tags: ["Blobbokind"],
 	},
 	blobboscherry: {
 		num: 69132,
@@ -42341,6 +42346,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 5.7,
 		color: "White",
 		eggGroups: ["Undiscovered"],
+		tags: ["Blobbokind"],
 	},
 	blobbosslug: {
 		num: 69132,

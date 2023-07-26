@@ -7,7 +7,7 @@ interface SpeciesAbility {
 	S?: string;
 }
 
-type SpeciesTag = "Mythical" | "Restricted Legendary" | "Sub-Legendary" | "Paradox" | "Inferior" | "Weedlekind" | "Krackokind";
+type SpeciesTag = "Mythical" | "Restricted Legendary" | "Sub-Legendary" | "Paradox" | "Inferior" | "Weedlekind" | "Krackokind" | "Blobbokind";
 
 export interface SpeciesData extends Partial<Species> {
 	name: string;
