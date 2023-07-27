@@ -1077,7 +1077,7 @@ export const Formats: FormatList = [
 			'Sketch Post-Gen 7 Moves',
 			'OHKO Clause',
 			'Evasion Moves Clause',
-			'Species Clause',
+			'Species Clause but Special for Blobbos',
 		],
 		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs', 'Skull Cannon', 'Extinction Wave', 'Wonder Guard', 'Junkbane', 'Shed Tail'],
 	},

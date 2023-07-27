@@ -62,7 +62,10 @@ export const Tags: {[id: string]: TagData} = {
 		name: "Krackokind",
 		speciesFilter: species => species.tags.includes("Krackokind"),
 	},
-
+	blobbokind: {
+		name: "Blobbokind",
+		speciesFilter: species => species.tags.includes("Blobbokind") || species.num === 69132,
+	},
 	// Move tags
 	// ---------
 	zmove: {
