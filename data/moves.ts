@@ -45844,7 +45844,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onTryMove(pokemon, target, move) {
-			if (pokemon.hasType('Fire')) return;
+			if (pokemon.hasType('Divine')) return;
 			this.add('-fail', pokemon, 'move: Perdition');
 			this.attrLastMove('[still]');
 			return null;
