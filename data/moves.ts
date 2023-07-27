@@ -47407,7 +47407,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -50031,6 +50036,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
 		secondary: null,
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'wonderguard' || target.ability === 'truant') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('wonderguard');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Wonder Guard', '[from] move: Divine Protection');
+				return;
+			}
+			return oldAbility as false | null;
+		},
 		target: "self",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -56161,9 +56179,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Special Order",
 		pp: 15,
 		priority: 0,
-		flags: {},
+		flags: {},onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Food' && move.id !== 'specialorder'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Food",
 		isNonstandard: "Future",
 	},
@@ -61450,8 +61483,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {},
+		onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Cosmic' && move.id !== 'astronomy'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Chaos",
 		isNonstandard: "Future",
 	},
@@ -61534,9 +61583,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Necrochannel",
 		pp: 15,
 		priority: 0,
-		flags: {},
+		flags: {},onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Zombie' && move.id !== 'necrochannel'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Zombie",
 		isNonstandard: "Future",
 	},
@@ -66747,7 +66811,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		basePowerCallback(pokemon, target, move) {
+			if (target.gender === 'M') {
+				this.debug('BP doubled on male target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		secondary: {
+			chance: 40,
+			boosts: {
+				atk: -1,
+			},
+		},
 		target: "normal",
 		type: "Heart",
 		isNonstandard: "Future",
@@ -72812,9 +72888,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Frequency",
 		pp: 15,
 		priority: 0,
-		flags: {},
+		flags: {},onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Sound' && move.id !== 'frequency'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Sound",
 		isNonstandard: "Future",
 	},
