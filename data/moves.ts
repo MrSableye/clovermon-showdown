@@ -43075,6 +43075,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "DirtyDeedsDoneDirtCheap",
 		pp: 10,
 		priority: 0,
+		selfSwitch: true,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -45842,6 +45843,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryMove(pokemon, target, move) {
+			if (pokemon.hasType('Divine')) return;
+			this.add('-fail', pokemon, 'move: Perdition');
+			this.attrLastMove('[still]');
+			return null;
+		},
+		self: {
+			onHit(pokemon) {
+				pokemon.setType(pokemon.getTypes(true).map(type => type === "Divine" ? "???" : type));
+				this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Perdition');
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -47394,7 +47407,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -48803,6 +48821,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
+		selfSwitch: true,
 		type: "Psychic",
 		isNonstandard: "Future",
 	},
@@ -50017,6 +50036,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
 		secondary: null,
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'wonderguard' || target.ability === 'truant') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('wonderguard');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Wonder Guard', '[from] move: Divine Protection');
+				return;
+			}
+			return oldAbility as false | null;
+		},
 		target: "self",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -53857,6 +53889,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -53941,6 +53974,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -54189,6 +54223,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
+		selfSwitch: true,
 		type: "Ghost",
 		isNonstandard: "Future",
 	},
@@ -56144,9 +56179,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Special Order",
 		pp: 15,
 		priority: 0,
-		flags: {},
+		flags: {},onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Food' && move.id !== 'specialorder'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Food",
 		isNonstandard: "Future",
 	},
@@ -59926,6 +59976,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -60801,6 +60852,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Switch Blade",
 		pp: 20,
 		priority: 0,
+		selfSwitch: true,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -60937,6 +60989,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Time",
 		isNonstandard: "Future",
@@ -61430,8 +61483,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {},
+		onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Cosmic' && move.id !== 'astronomy'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Chaos",
 		isNonstandard: "Future",
 	},
@@ -61514,9 +61583,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Necrochannel",
 		pp: 15,
 		priority: 0,
-		flags: {},
+		flags: {},onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Zombie' && move.id !== 'necrochannel'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Zombie",
 		isNonstandard: "Future",
 	},
@@ -61913,6 +61997,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
@@ -62317,8 +62402,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Physical",
 		name: "Bottle Dive",
 		pp: 15,
-		priority: 0,
+		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		selfSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Plastic",
@@ -66041,6 +66127,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Dine and Dash",
 		pp: 20,
 		priority: 0,
+		selfSwitch: true,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -66169,7 +66256,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		onHit(target, source, move) {
+			const success = this.boost({atk: -1, spa: -1}, target, source);
+			if (!success && !target.hasAbility('mirrorarmor')) {
+				delete move.selfSwitch;
+			}
+		},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Cyber",
 		isNonstandard: "Future",
@@ -66717,7 +66811,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		basePowerCallback(pokemon, target, move) {
+			if (target.gender === 'M') {
+				this.debug('BP doubled on male target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		secondary: {
+			chance: 40,
+			boosts: {
+				atk: -1,
+			},
+		},
 		target: "normal",
 		type: "Heart",
 		isNonstandard: "Future",
@@ -68102,7 +68208,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		onHit(target, source, move) {
+			const success = this.boost({spe: -3}, target, source);
+			if (!success && !target.hasAbility('mirrorarmor')) {
+				delete move.selfSwitch;
+			}
+		},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -68917,6 +69030,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		onHit(target) {
+			if (!this.canSwitch(target.side)) {
+				this.attrLastMove('[still]');
+				this.add('-fail', target);
+				return this.NOT_FAIL;
+			}
+		},
+		self: {
+			onHit(source) {
+				source.skipBeforeSwitchOutEventFlag = true;
+			},
+		},
+		boosts: {
+			atk: 1,
+		},
+		selfSwitch: 'copyvolatile',
 		target: "self",
 		type: "Fighting",
 		isNonstandard: "Future",
@@ -69115,6 +69244,30 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		volatileStatus: 'substitute',
+		onTryHit(source) {
+			if (!this.canSwitch(source.side)) {
+				this.add('-fail', source);
+				return this.NOT_FAIL;
+			}
+			if (source.volatiles['substitute']) {
+				this.add('-fail', source, 'move: Shed Tail');
+				return this.NOT_FAIL;
+			}
+			if (source.hp <= Math.ceil(source.maxhp / 2)) {
+				this.add('-fail', source, 'move: Shed Tail', '[weak]');
+				return this.NOT_FAIL;
+			}
+		},
+		onHit(target) {
+			this.directDamage(Math.ceil(target.maxhp / 2));
+		},
+		self: {
+			onHit(source) {
+				source.skipBeforeSwitchOutEventFlag = true;
+			},
+		},
+		selfSwitch: 'copyvolatile',
 		target: "self",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -70036,7 +70189,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Sleep Walk",
 		pp: 10,
 		priority: 0,
-		flags: {snatch: 1, bite: 1},
+		flags: {snatch: 1, bite: 1, heal: 1},
+		onTry(source) {
+			if (source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz')) return false;
+
+			if (source.hp === source.maxhp) {
+				this.add('-fail', source, 'heal');
+				return null;
+			}
+			if (source.hasAbility(['insomnia', 'vitalspirit'])) {
+				this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
+				return null;
+			}
+		},
+		onHit(target, source, move) {
+			const result = target.setStatus('slp', source, move);
+			if (!result) return result;
+			target.statusState.time = 3;
+			target.statusState.startTime = 3;
+			this.heal(target.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
+		},
+		selfSwitch: true,
 		secondary: null,
 		target: "self",
 		type: "Psychic",
@@ -70840,6 +71013,37 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {},
+		condition: {
+			duration: 1,
+			onStart(target, source, effect) {
+				this.add('-singleturn', target, 'move: Magic Coat');
+				if (effect?.effectType === 'Move') {
+					this.effectState.pranksterBoosted = effect.pranksterBoosted;
+				}
+			},
+			onTryHitPriority: 2,
+			onTryHit(target, source, move) {
+				if (target === source || move.hasBounced || !move.flags['reflectable']) {
+					return;
+				}
+				const newMove = this.dex.getActiveMove(move.id);
+				newMove.hasBounced = true;
+				newMove.pranksterBoosted = this.effectState.pranksterBoosted;
+				this.actions.useMove(newMove, target, source);
+				return null;
+			},
+			onAllyTryHitSide(target, source, move) {
+				if (target.isAlly(source) || move.hasBounced || !move.flags['reflectable']) {
+					return;
+				}
+				const newMove = this.dex.getActiveMove(move.id);
+				newMove.hasBounced = true;
+				newMove.pranksterBoosted = false;
+				this.actions.useMove(newMove, this.effectState.target, source);
+				return null;
+			},
+		},
+		selfSwitch: 'copyvolatile',
 		secondary: null,
 		target: "self",
 		type: "Magic",
@@ -72684,9 +72888,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Frequency",
 		pp: 15,
 		priority: 0,
-		flags: {},
+		flags: {},onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Sound' && move.id !== 'frequency'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Sound",
 		isNonstandard: "Future",
 	},
@@ -73920,6 +74139,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 1,
 		flags: {protect: 1, mirror: 1},
+		selfSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Cyber",
@@ -74161,6 +74381,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		selfSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -74631,6 +74852,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		drain: [1, 2],
+		selfSwitch: true,
 		target: "normal",
 		type: "Blood",
 		isNonstandard: "Future",
@@ -76011,6 +76234,30 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		volatileStatus: 'substitute',
+		onTryHit(source) {
+			if (!this.canSwitch(source.side)) {
+				this.add('-fail', source);
+				return this.NOT_FAIL;
+			}
+			if (source.volatiles['substitute']) {
+				this.add('-fail', source, 'move: Shed Tail');
+				return this.NOT_FAIL;
+			}
+			if (source.hp <= Math.ceil(source.maxhp / 2)) {
+				this.add('-fail', source, 'move: Shed Tail', '[weak]');
+				return this.NOT_FAIL;
+			}
+		},
+		onHit(target) {
+			this.directDamage(Math.ceil(target.maxhp / 2));
+		},
+		self: {
+			onHit(source) {
+				source.skipBeforeSwitchOutEventFlag = true;
+			},
+		},
+		selfSwitch: 'copyvolatile',
 		target: "self",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -76575,6 +76822,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Fighting",
 		isNonstandard: "Future",
