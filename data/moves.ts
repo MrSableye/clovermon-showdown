@@ -41867,6 +41867,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		multihit: 2,
 		target: "normal",
 		type: "Chaos",
 		isNonstandard: "Future",
