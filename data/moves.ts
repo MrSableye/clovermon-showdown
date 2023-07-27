@@ -33301,7 +33301,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Macabre Dance",
 		pp: 20,
 		priority: 0,
-		flags: {snatch: 1},
+		flags: {snatch: 1, dance: 1},
 		boosts: {
 			atk: 1,
 			spe: 1,
@@ -35813,7 +35813,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Mystic Dance",
 		pp: 20,
 		priority: 0,
-		flags: {snatch: 1},
+		flags: {snatch: 1, dance: 1},
 		boosts: {
 			spa: 1,
 			spd: 1,
@@ -44563,7 +44563,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Darkness Dance",
 		pp: 5,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
 		secondary: null,
 		target: "randomNormal",
 		type: "Dark",
@@ -46192,7 +46192,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Beam Dance",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, dance: 1},
 		secondary: null,
 		target: "randomNormal",
 		type: "Normal",
@@ -56387,7 +56387,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Blade Dance",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -56416,7 +56416,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "DoubleEdgeDance",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -58678,7 +58678,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "War Dance",
 		pp: 5,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
 		secondary: null,
 		target: "randomNormal",
 		type: "Fighting",
@@ -59519,7 +59519,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Fae Dance",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
 		secondary: null,
 		target: "randomNormal",
 		type: "Fairy",
@@ -64289,8 +64289,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.flags.distance === 1 && move.id !== 'miraclepunch'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Normal",
 		isNonstandard: "Future",
 	},
