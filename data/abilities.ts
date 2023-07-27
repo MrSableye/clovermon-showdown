@@ -11219,10 +11219,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.id !== 'dig') return;
 			delete move.flags.protect;
 			move.infiltrates = true;
-			if (!move.ignoreImmunity) move.ignoreImmunity = {};
-			if (move.ignoreImmunity !== true) {
-				move.ignoreImmunity['Flying'] = true;
-			}
+			move.ignoreImmunity = true;
 		},
 		onBasePower(basePower, pokemon, target, move) {
 			if (move.id !== 'dig') return;

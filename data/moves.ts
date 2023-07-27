@@ -31597,6 +31597,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 4,
 			onBoost(boost, target, source, effect) {
+				if (effect.id === 'combatorders') return;
 				const anyPositiveBoost = Object.values(boost).some((boost) => boost > 0);
 				if (!anyPositiveBoost) return;
 
