@@ -1,3 +1,5 @@
+import { Tags } from "../../tags";
+
 export const Rulesets: {[k: string]: ModdedFormatData} = {
 	multitier: {
 		effectType: 'ValidatorRule',
@@ -53,18 +55,7 @@ export const Rulesets: {[k: string]: ModdedFormatData} = {
 		desc: "Only Blobbos and its alternate formes can be used.",
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species || set.name);
-			let baseSpecies = this.dex.species.get(species.baseSpecies);
-			let maxDepth = 10;
-			while (baseSpecies.baseSpecies !== baseSpecies.name && maxDepth > 0) {
-				baseSpecies = this.dex.species.get(baseSpecies.baseSpecies);
-				maxDepth--;
-			}
-
-			if (maxDepth === 0) {
-				return ['Recursive species found. Please report this to an administrator'];
-			}
-
-			if (baseSpecies.name !== 'Blobbos' && baseSpecies.name !== 'Bootlos' && baseSpecies.name !== 'Sobbolb' && baseSpecies.name !== 'Iron Blob' && baseSpecies.name !== 'Cavern Snore' && baseSpecies.name !== 'Chibomon' && baseSpecies.name !== 'A Blobbos') {
+			if (!Tags.blobbokind.speciesFilter!(species)) {
 				return [`${set.name || set.species} is not a forme of Blobbos.`];
 			}
 		},

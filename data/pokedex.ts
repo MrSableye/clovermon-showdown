@@ -36941,6 +36941,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
 		gen: 8,
+		tags: ["Blobbokind"],
 	},
 	blobbosmagic: {
 		num: 69132,
@@ -40920,6 +40921,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Float Stone",
 		eggGroups: ["Mineral", "Flying"],
 		gen: 8,
+		tags: ["Blobbokind"],
 	},
 	blobbosforbidden: {
 		num: 69132,
@@ -41333,7 +41335,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 0.5,
 		weightkg: 6.1,
 		color: "Blue",
-		tags: ["Paradox"],
+		tags: ["Paradox", "Blobbokind"],
 		eggGroups: ["Undiscovered"],
 	},
 	ironblob: {
@@ -41346,7 +41348,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 0.5,
 		weightkg: 6.5,
 		color: "Purple",
-		tags: ["Paradox"],
+		tags: ["Paradox", "Blobbokind"],
 		eggGroups: ["Undiscovered"],
 	},
 	blobbospaldea: {
@@ -42216,6 +42218,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 0.005,
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
+		tags: ["Blobbokind"],
 	},
 	blobboscherry: {
 		num: 69132,
@@ -42341,6 +42344,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 5.7,
 		color: "White",
 		eggGroups: ["Undiscovered"],
+		tags: ["Blobbokind"],
 	},
 	blobbosslug: {
 		num: 69132,
