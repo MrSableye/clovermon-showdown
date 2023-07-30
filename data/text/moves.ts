@@ -24569,4 +24569,232 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "May 1 hit KO.",
 		shortDesc: "May 1 hit KO.",
 	},
+	hiddenpowerblood: {
+		name: "Hidden Power Blood",
+	},
+	hiddenpowerbone: {
+		name: "Hidden Power Bone",
+	},
+	hiddenpowercosmic: {
+		name: "Hidden Power Cosmic",
+	},
+	hiddenpowercrystal: {
+		name: "Hidden Power Crystal",
+	},
+	hiddenpowercyber: {
+		name: "Hidden Power Cyber",
+	},
+	hiddenpowerfabric: {
+		name: "Hidden Power Fabric",
+	},
+	hiddenpowerfairy: {
+		name: "Hidden Power Fairy",
+	},
+	hiddenpowerfear: {
+		name: "Hidden Power Fear",
+	},
+	hiddenpowerfood: {
+		name: "Hidden Power Food",
+	},
+	hiddenpowerglass: {
+		name: "Hidden Power Glass",
+	},
+	hiddenpowergreasy: {
+		name: "Hidden Power Greasy",
+	},
+	hiddenpowerheart: {
+		name: "Hidden Power Heart",
+	},
+	hiddenpowerlight: {
+		name: "Hidden Power Light",
+	},
+	hiddenpowermagic: {
+		name: "Hidden Power Magic",
+	},
+	hiddenpowermagma: {
+		name: "Hidden Power Magma",
+	},
+	hiddenpowermeme: {
+		name: "Hidden Power Meme",
+	},
+	hiddenpowernuclear: {
+		name: "Hidden Power Nuclear",
+	},
+	hiddenpowerogre: {
+		name: "Hidden Power Ogre",
+	},
+	hiddenpowerpaint: {
+		name: "Hidden Power Paint",
+	},
+	hiddenpowerpaper: {
+		name: "Hidden Power Paper",
+	},
+	hiddenpowerplastic: {
+		name: "Hidden Power Plastic",
+	},
+	hiddenpowerrubber: {
+		name: "Hidden Power Rubber",
+	},
+	hiddenpowersound: {
+		name: "Hidden Power Sound",
+	},
+	hiddenpowersteam: {
+		name: "Hidden Power Steam",
+	},
+	hiddenpowertech: {
+		name: "Hidden Power Tech",
+	},
+	hiddenpowertime: {
+		name: "Hidden Power Time",
+	},
+	hiddenpowervirus: {
+		name: "Hidden Power Virus",
+	},
+	hiddenpowerwind: {
+		name: "Hidden Power Wind",
+	},
+	hiddenpowerwood: {
+		name: "Hidden Power Wood",
+	},
+	hiddenpowerzombie: {
+		name: "Hidden Power Zombie",
+	},
+	hiddenforceblood: {
+		name: "Hidden Force Blood",
+	},
+	hiddenforcebone: {
+		name: "Hidden Force Bone",
+	},
+	hiddenforcebug: {
+		name: "Hidden Force Bug",
+	},
+	hiddenforcecosmic: {
+		name: "Hidden Force Cosmic",
+	},
+	hiddenforcecrystal: {
+		name: "Hidden Force Crystal",
+	},
+	hiddenforcecyber: {
+		name: "Hidden Force Cyber",
+	},
+	hiddenforcedark: {
+		name: "Hidden Force Dark",
+	},
+	hiddenforcedragon: {
+		name: "Hidden Force Dragon",
+	},
+	hiddenforceelectric: {
+		name: "Hidden Force Electric",
+	},
+	hiddenforcefabric: {
+		name: "Hidden Force Fabric",
+	},
+	hiddenforcefairy: {
+		name: "Hidden Force Fairy",
+	},
+	hiddenforcefear: {
+		name: "Hidden Force Fear",
+	},
+	hiddenforcefighting: {
+		name: "Hidden Force Fighting",
+	},
+	hiddenforcefire: {
+		name: "Hidden Force Fire",
+	},
+	hiddenforceflying: {
+		name: "Hidden Force Flying",
+	},
+	hiddenforcefood: {
+		name: "Hidden Force Food",
+	},
+	hiddenforceghost: {
+		name: "Hidden Force Ghost",
+	},
+	hiddenforceglass: {
+		name: "Hidden Force Glass",
+	},
+	hiddenforcegrass: {
+		name: "Hidden Force Grass",
+	},
+	hiddenforcegreasy: {
+		name: "Hidden Force Greasy",
+	},
+	hiddenforceground: {
+		name: "Hidden Force Ground",
+	},
+	hiddenforceheart: {
+		name: "Hidden Force Heart",
+	},
+	hiddenforceice: {
+		name: "Hidden Force Ice",
+	},
+	hiddenforcelight: {
+		name: "Hidden Force Light",
+	},
+	hiddenforcemagic: {
+		name: "Hidden Force Magic",
+	},
+	hiddenforcemagma: {
+		name: "Hidden Force Magma",
+	},
+	hiddenforcememe: {
+		name: "Hidden Force Meme",
+	},
+	hiddenforcenuclear: {
+		name: "Hidden Force Nuclear",
+	},
+	hiddenforceogre: {
+		name: "Hidden Force Ogre",
+	},
+	hiddenforcepaint: {
+		name: "Hidden Force Paint",
+	},
+	hiddenforcepaper: {
+		name: "Hidden Force Paper",
+	},
+	hiddenforceplastic: {
+		name: "Hidden Force Plastic",
+	},
+	hiddenforcepoison: {
+		name: "Hidden Force Poison",
+	},
+	hiddenforcepsychic: {
+		name: "Hidden Force Psychic",
+	},
+	hiddenforcerock: {
+		name: "Hidden Force Rock",
+	},
+	hiddenforcerubber: {
+		name: "Hidden Force Rubber",
+	},
+	hiddenforcesound: {
+		name: "Hidden Force Sound",
+	},
+	hiddenforcesteam: {
+		name: "Hidden Force Steam",
+	},
+	hiddenforcesteel: {
+		name: "Hidden Force Steel",
+	},
+	hiddenforcetech: {
+		name: "Hidden Force Tech",
+	},
+	hiddenforcetime: {
+		name: "Hidden Force Time",
+	},
+	hiddenforcevirus: {
+		name: "Hidden Force Virus",
+	},
+	hiddenforcewater: {
+		name: "Hidden Force Water",
+	},
+	hiddenforcewind: {
+		name: "Hidden Force Wind",
+	},
+	hiddenforcewood: {
+		name: "Hidden Force Wood",
+	},
+	hiddenforcezombie: {
+		name: "Hidden Force Zombie",
+	},	
 };

@@ -647,6 +647,9 @@ export class DexMoves {
 		if (id.startsWith('hiddenpower')) {
 			id = /([a-z]*)([0-9]*)/.exec(id)![1] as ID;
 		}
+		if (id.startsWith('hiddenforce')) {
+			id = /([a-z]*)([0-9]*)/.exec(id)![1] as ID;
+		}
 		if (id && this.dex.data.Moves.hasOwnProperty(id)) {
 			const moveData = this.dex.data.Moves[id] as any;
 			const moveTextData = this.dex.getDescs('Moves', id, moveData);

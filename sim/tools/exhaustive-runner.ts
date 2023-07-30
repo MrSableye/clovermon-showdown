@@ -454,6 +454,7 @@ class CoordinatedPlayerAI extends RandomPlayerAI {
 		if (id.startsWith('return')) return 'return';
 		if (id.startsWith('frustration')) return 'frustration';
 		if (id.startsWith('hiddenpower')) return 'hiddenpower';
+		if (id.startsWith('hiddenforce')) return 'hiddenforce';
 		return id;
 	}
 

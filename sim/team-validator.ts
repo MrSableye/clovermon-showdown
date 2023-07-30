@@ -873,6 +873,13 @@ export class TeamValidator {
 					problems.push(`${name}'s Hidden Power type ${set.hpType} is incompatible with Hidden Power ${move.type}`);
 				}
 			}
+			if (move.id === 'hiddenforce' && move.type !== 'Normal') {
+				if (!set.hpType) {
+					set.hpType = move.type;
+				} else if (set.hpType !== move.type && ruleTable.has('obtainablemisc')) {
+					problems.push(`${name}'s Hidden Force type ${set.hpType} is incompatible with Hidden Force ${move.type}`);
+				}
+			}
 		}
 		if (set.hpType && maxedIVs && ruleTable.has('obtainablemisc')) {
 			if (dex.gen <= 2) {
