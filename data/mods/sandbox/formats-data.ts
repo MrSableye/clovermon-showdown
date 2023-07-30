@@ -11371,4 +11371,9 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosclover: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
