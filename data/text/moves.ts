@@ -9211,7 +9211,15 @@ export const MovesText: {[k: string]: MoveText} = {
 	genesisboost: {
 		name: "Genesis Boost",
 		desc: "Fails unless it is the user's first turn on the field. Raises the user's Attack and Defense by 2.",
-		shortDesc: "Usually goes first. First turn out only.Raises the user's Attack and Defense by 2.",
+		shortDesc: "Usually goes first. First turn out only. Raises the user's Attack and Defense by 2.",
+	},
+	techslash: {
+		name: "Tech Slash",
+		shortDesc: "-1 Priority. Always paralyzes the target.",
+	},
+	rocketboost: {
+		name: "Rocket Boost",
+		shortDesc: "Raises Speed by 1 and sets up Aqua Ring on the user. Can only be used first turn out.",
 	},
 	combatorders: {
 		name: "Combat Orders",
@@ -9249,6 +9257,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Godot's Hammer",
 		shortDesc: "Torments and Taunts the foe. Lowers the user's Speed by 2. Has 1/3 recoil.",
 	},
+
+	// WACK MOVES
 	hijumpkick: {
 		name: "Hi Jump Kick",
 		desc: "The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.",

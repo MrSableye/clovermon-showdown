@@ -44735,7 +44735,7 @@ blobbosmechelectric: {
 		types: ["Grass", "Fighting"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 90, atk: 130, def: 80, spa: 70, spd: 70, spe: 80},
-		abilities: {0: "Hustle", 1: "Hustle", H: "Flash Fire", S: "Aftermath"},
+		abilities: {0: "Hustle", 1: "Aftermath", H: "Chlorophyll", S: "Flash Fire"},
 		heightm: 0.8,
 		weightkg: 66.66,
 		color: "Blue",
