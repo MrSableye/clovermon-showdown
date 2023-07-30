@@ -3712,6 +3712,61 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbosmech: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmechfire: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmechwater: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmechelectric: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgl17ch: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosnymph: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshollow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosclover: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobbosmechice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboskracko: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospartner: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	blobbosmermaid: {
 		inherit: true,
 		isNonstandard: null,

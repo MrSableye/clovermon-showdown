@@ -10158,6 +10158,50 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosgl17ch: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboshollow: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmech: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmechfire: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmechice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmechwater: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmechelectric: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosnymph: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboskracko: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosclover: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospartner: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	stunfiskmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",

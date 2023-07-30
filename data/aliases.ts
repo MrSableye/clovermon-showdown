@@ -1944,7 +1944,6 @@ export const Aliases: {[alias: string]: string} = {
 	galarcrowned: "Blobbos-Galar-Crowned",
 	gay: "Blobbos-Gay",
 	jean: "Blobbos-Gene",
-	kaboom: "Blobbos-Explosion",
 	kamina: "Blobbos-Drill",
 	gigantamaxbos: "Blobbos-Gigantamax",
 	neigh: "Blobbos-Horse",

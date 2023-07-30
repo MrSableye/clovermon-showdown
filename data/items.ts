@@ -8828,6 +8828,26 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Future",
 	},
+	partnerspendant: {
+		name: "Partner's Pendant",
+		spritenum: 300,
+		onResidualOrder: 28,
+		onResidualSubOrder: 3,
+		onSwitchIn(pokemon) {
+			if (pokemon.species.name === 'Blobbos-Partner') {}
+		},
+		boosts: {
+			atk: 1,
+			def: 1,
+			spa: 1,
+			spd: 1,
+			spe: 1,
+			evasion: 1,
+			accuracy: 1,
+		},
+		num: 2512,
+		isNonstandard: "Future",
+	},
 	ultrafuckiumz: {
 		name: "Ultrafuckium Z",
 		spritenum: 687,
@@ -9096,6 +9116,66 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		isNonstandard: "Future",
 	},
+	splashsword: {
+		name: "Splash Sword",
+		spritenum: 698,
+		onTakeItem(item, pokemon, source) {
+			if (pokemon.species.name === 'Blobbos-Mech') {
+				return false;
+			}
+			return true;
+		},
+		onDrive: 'Water',
+		forcedForme: "Blobbos-Mech-Water",
+		itemUser: ["Blobbos-Mech-Water"],
+		num: 116,
+		isNonstandard: "Future",
+	},
+	flamesword: {
+		name: "Flame Sword",
+		spritenum: 698,
+		onTakeItem(item, pokemon, source) {
+			if (pokemon.species.name === 'Blobbos-Mech') {
+				return false;
+			}
+			return true;
+		},
+		onDrive: 'Fire',
+		forcedForme: "Blobbos-Mech-Fire",
+		itemUser: ["Blobbos-Mech-Fire"],
+		num: 116,
+		isNonstandard: "Future",
+	},
+	frostsword: {
+		name: "Frost Sword",
+		spritenum: 698,
+		onTakeItem(item, pokemon, source) {
+			if (pokemon.species.name === 'Blobbos-Mech') {
+				return false;
+			}
+			return true;
+		},
+		onDrive: 'Ice',
+		forcedForme: "Blobbos-Mech-Ice",
+		itemUser: ["Blobbos-Mech-Ice"],
+		num: 116,
+		isNonstandard: "Future",
+	},
+	sparksword: {
+		name: "Spark Sword",
+		spritenum: 698,
+		onTakeItem(item, pokemon, source) {
+			if (pokemon.species.name === 'Blobbos-Mech') {
+				return false;
+			}
+			return true;
+		},
+		onDrive: 'Electric',
+		forcedForme: "Blobbos-Mech-Electric",
+		itemUser: ["Blobbos-Mech-Electric"],
+		num: 116,
+		isNonstandard: "Future",
+	},
 	powerrush: {
 		name: "Power Rush",
 		onModifyAtkPriority: 5,
@@ -9121,6 +9201,10 @@ export const Items: {[itemid: string]: ItemData} = {
 	tumultuoustibia: {
 		name: "Tumultuous Tibia",
 		spritenum: 379,
+		fling: {
+			basePower: 50,
+			volatileStatus: 'curse',
+		},
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
 			if (pokemon.species.name === 'Blobbos-Skeleton') {
@@ -9133,10 +9217,6 @@ export const Items: {[itemid: string]: ItemData} = {
 	mascotsorb: {
 		name: "Mascot's Orb",
 		spritenum: 251,
-		fling: {
-			basePower: 50,
-			volatileStatus: 'curse',
-		},
 		onModifyAtkPriority: 1,
 		onModifyAtk(atk, pokemon) {
 			if (pokemon.species.name === 'Blobbos-Pika') {

@@ -597,4 +597,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	sandspit: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mirrorarmor: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
