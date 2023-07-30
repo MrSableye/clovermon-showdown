@@ -8833,17 +8833,17 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 300,
 		onResidualOrder: 28,
 		onResidualSubOrder: 3,
-		onSwitchIn(pokemon) {
-			if (pokemon.species.name === 'Blobbos-Partner') {}
-		},
-		boosts: {
-			atk: 1,
-			def: 1,
-			spa: 1,
-			spd: 1,
-			spe: 1,
-			evasion: 1,
-			accuracy: 1,
+		onStart(pokemon) {
+			if (pokemon.species.name !== 'Blobbos-Partner') return;
+			this.boost({
+				atk: 1,
+				def: 1,
+				spa: 1,
+				spd: 1,
+				spe: 1,
+				evasion: 1,
+				accuracy: 1,
+			});
 		},
 		num: 2512,
 		isNonstandard: "Future",

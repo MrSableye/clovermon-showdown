@@ -2802,6 +2802,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Meso Sack",
 		desc: "If the user would faint while using Star Force, it doesn't. Single use.",
 	},
+	partnerspendant: {
+		name: "Partner's Pendant",
+		desc: "On switch-in, raise all of the user's stats by 1 (including acc/eva).",
+	},
 	kikeousorb: {
 		name: "Kikeous Orb",
 		desc: "If held by a Jewipede, its Normal- and Bug-type attacks have 1.2x power.",
