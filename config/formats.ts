@@ -1128,13 +1128,6 @@ export const Formats: FormatList = [
 		unbanlist: ['Weedle', 'Kakuna', 'Caterpie', 'Metapod', 'Ditto', 'Magikarp', 'Magikarp + Dragon Rage'],
 	},
 	{
-		name: "[Gen 1] 10u",
-		mod: "gen1",
-		ruleset: ['Standard'],
-		banlist: ["AG", "Uber", "OU", "UUBL", "UU", "RUBL", "RU", "NUBL", "NU", "PUBL", "PU", "NFE", "DUber", "DOU", "DBL", "DUU", "LC"],
-		unbanlist: ['Weedle', 'Kakuna', 'Caterpie', 'Metapod', 'Ditto', 'Magikarp', 'Magikarp + Dragon Rage'],
-	},
-	{
 		name: "[Gen 1] 10u (No Teambuilder)",
 		mod: "gen1",
 		ruleset: ['Standard'],
