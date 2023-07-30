@@ -3408,8 +3408,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Boosts the power of tail moves.",
 		desc: "Boosts the power of tail moves.",
 	},
-	sceptic: {
-		name: "Sceptic",
+	skeptic: {
+		name: "Skeptic",
 		shortDesc: "Ups resistance to Fairy, Divine and Magic-type moves.",
 		desc: "Ups resistance to Fairy, Divine and Magic-type moves.",
 	},

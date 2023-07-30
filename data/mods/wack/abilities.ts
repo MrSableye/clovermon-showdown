@@ -233,7 +233,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	sceptic: {
+	skeptic: {
 		inherit: true,
 		isNonstandard: null,
 	},
