@@ -1687,4 +1687,27 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	drainingkiss: {
+		num: 577,
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		name: "Draining Kiss",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
+		drain: [3, 4],
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		contestType: "Cute",
+	},
+	rocketboost: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	techslash: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

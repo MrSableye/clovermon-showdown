@@ -27103,6 +27103,56 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},
+	techslash: {
+		num: 550,
+		accuracy: 90,
+		basePower: 100,
+		category: "Physical",
+		name: "Tech Slash",
+		pp: 5,
+		priority: -1,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+		secondary: {
+			chance: 100,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	rocketboost: {
+		num: 392,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Rocket Boost",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1},
+		onTry(pokemon, target) {
+			if (pokemon.activeTurns > 1) {
+				this.attrLastMove('[still]');
+				this.add('-fail', pokemon);
+				this.hint("Rocket Boost only works on the first turn out.");
+				return null;
+			}
+		},
+		volatileStatus: 'aquaring',
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
+		target: "self",
+		type: "Steel",
+		zMove: {boost: {def: 1}},
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
 	hypersomnia: {
 		num: 738,
 		accuracy: 100,
