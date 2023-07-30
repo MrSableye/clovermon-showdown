@@ -2711,6 +2711,22 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "License to Sell Hotdogs",
 		desc: "If I ever get your stinky mug in my line of sight, I swear to Chekhov I'll cock your clock off.",
 	},
+	flamesword: {
+		name: "Flame Sword",
+		desc: "An Item to be held by Blobbos-Mech. Changes form to Fire.",
+	},
+	sparksword: {
+		name: "Spark Sword",
+		desc: "An Item to be held by Blobbos-Mech. Changes form to Electric.",
+	},
+	splashsword: {
+		name: "Splash Sword",
+		desc: "An Item to be held by Blobbos-Mech. Changes form to Water.",
+	},
+	frostsword: {
+		name: "Frost Sword",
+		desc: "An Item to be held by Blobbos-Mech. Changes form to Ice.",
+	},
 	ancientitem: {
 		name: "Ancient Item",
 		desc: "If holder's HP is full and it is Blobbos-Duelist, will survive an attack that would KO it with 1 HP and transform into Blobbos-Duelist-Dark. Single use.",

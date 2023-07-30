@@ -30642,6 +30642,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "allAdjacent",
 		type: "Electric",
+		noSketch: true, // how the fuck did this take SO LONG to get implemented???
 		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},

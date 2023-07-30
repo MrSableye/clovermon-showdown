@@ -2498,7 +2498,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	omniscience: {
 		name: "Omniscience",
-		desc: "This Pokemon can hit Dark types with Psychic-type moves. Psychic-type moves don't miss.",
+		desc: "This Pokemon can hit Dark types with Psychic-type moves. Psychic-type attacks don't miss.",
 	},
 	overeager: {
 		name: "Overeager",
