@@ -458,18 +458,22 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	absorb: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1},
+		isNonstandard: null,
 	},
 	acidarmor: {
 		inherit: true,
 		pp: 40,
+		isNonstandard: null,
 	},
 	aircutter: {
 		inherit: true,
 		basePower: 55,
+		isNonstandard: null,
 	},
 	airslash: {
 		inherit: true,
 		pp: 20,
+		isNonstandard: null,
 	},
 	aromatherapy: {
 		inherit: true,
@@ -480,14 +484,17 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				ally.cureStatus();
 			}
 		},
+		isNonstandard: null,
 	},
 	assurance: {
 		inherit: true,
 		basePower: 50,
+		isNonstandard: null,
 	},
 	aurasphere: {
 		inherit: true,
 		basePower: 90,
+		isNonstandard: null,
 	},
 	autotomize: {
 		inherit: true,
@@ -517,30 +524,37 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				}
 			},
 		},
+		isNonstandard: null,
 	},
 	barrier: {
 		inherit: true,
 		pp: 30,
+		isNonstandard: null,
 	},
 	bestow: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1},
+		isNonstandard: null,
 	},
 	blizzard: {
 		inherit: true,
 		basePower: 120,
+		isNonstandard: null,
 	},
 	block: {
 		inherit: true,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		isNonstandard: null,
 	},
 	bubble: {
 		inherit: true,
 		basePower: 20,
+		isNonstandard: null,
 	},
 	bugbuzz: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
 	},
 	camouflage: {
 		inherit: true,
@@ -548,10 +562,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			if (!target.setType('Ground')) return false;
 			this.add('-start', target, 'typechange', 'Ground');
 		},
+		isNonstandard: null,
 	},
 	charm: {
 		inherit: true,
 		type: "Normal",
+		isNonstandard: null,
 	},
 	chatter: {
 		inherit: true,
@@ -564,6 +580,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			volatileStatus: 'confusion',
 		},
 		flags: {protect: 1, sound: 1, distance: 1},
+		isNonstandard: null,
 	},
 	conversion: {
 		inherit: true,
@@ -583,19 +600,23 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			if (!target.setType(type)) return false;
 			this.add('-start', target, 'typechange', type);
 		},
+		isNonstandard: null,
 	},
 	cottonspore: {
 		inherit: true,
 		onTryHit() {},
 		target: "normal",
+		isNonstandard: null,
 	},
 	covet: {
 		inherit: true,
 		pp: 40,
+		isNonstandard: null,
 	},
 	crabhammer: {
 		inherit: true,
 		basePower: 90,
+		isNonstandard: null,
 	},
 	defog: {
 		inherit: true,
@@ -608,26 +629,32 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				}
 			}
 		},
+		isNonstandard: null,
 	},
 	dracometeor: {
 		inherit: true,
 		basePower: 140,
+		isNonstandard: null,
 	},
 	dragonpulse: {
 		inherit: true,
 		basePower: 90,
+		isNonstandard: null,
 	},
 	drainpunch: {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		isNonstandard: null,
 	},
 	dreameater: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1},
+		isNonstandard: null,
 	},
 	echoedvoice: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
 	},
 	electroball: {
 		inherit: true,
@@ -637,26 +664,32 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.debug('BP: ' + bp);
 			return bp;
 		},
+		isNonstandard: null,
 	},
 	energyball: {
 		inherit: true,
 		basePower: 80,
+		isNonstandard: null,
 	},
 	extrasensory: {
 		inherit: true,
 		pp: 30,
+		isNonstandard: null,
 	},
 	feint: {
 		inherit: true,
 		flags: {},
+		isNonstandard: null,
 	},
 	finalgambit: {
 		inherit: true,
 		flags: {contact: 1, protect: 1},
+		isNonstandard: null,
 	},
 	fireblast: {
 		inherit: true,
 		basePower: 120,
+		isNonstandard: null,
 	},
 	firepledge: {
 		inherit: true,
@@ -668,18 +701,22 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 			return 50;
 		},
+		isNonstandard: null,
 	},
 	flamethrower: {
 		inherit: true,
 		basePower: 95,
+		isNonstandard: null,
 	},
 	followme: {
 		inherit: true,
 		priority: 3,
+		isNonstandard: null,
 	},
 	frostbreath: {
 		inherit: true,
 		basePower: 40,
+		isNonstandard: null,
 	},
 	furycutter: {
 		inherit: true,
@@ -696,6 +733,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				this.effectState.duration = 2;
 			},
 		},
+		isNonstandard: null,
 	},
 	futuresight: {
 		inherit: true,
@@ -723,18 +761,22 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.add('-start', source, 'move: Future Sight');
 			return null;
 		},
+		isNonstandard: null,
 	},
 	gigadrain: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1},
+		isNonstandard: null,
 	},
 	glare: {
 		inherit: true,
 		accuracy: 90,
+		isNonstandard: null,
 	},
 	grasswhistle: {
 		inherit: true,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
 	},
 	grasspledge: {
 		inherit: true,
@@ -746,14 +788,17 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 			return 50;
 		},
+		isNonstandard: null,
 	},
 	growl: {
 		inherit: true,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
 	},
 	growth: {
 		inherit: true,
 		pp: 40,
+		isNonstandard: null,
 	},
 	gyroball: {
 		inherit: true,
@@ -763,6 +808,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.debug('BP: ' + power);
 			return power;
 		},
+		isNonstandard: null,
 	},
 	healbell: {
 		inherit: true,
@@ -774,19 +820,23 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				ally.cureStatus();
 			}
 		},
+		isNonstandard: null,
 	},
 	healpulse: {
 		inherit: true,
 		heal: [1, 2],
 		onHit() {},
+		isNonstandard: null,
 	},
 	heatwave: {
 		inherit: true,
 		basePower: 100,
+		isNonstandard: null,
 	},
 	hex: {
 		inherit: true,
 		basePower: 50,
+		isNonstandard: null,
 	},
 	hiddenpower: {
 		inherit: true,
@@ -796,86 +846,107 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.debug('BP: ' + bp);
 			return bp;
 		},
+		isNonstandard: null,
 	},
 	hiddenpowerbug: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hiddenpowerdark: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hiddenpowerdragon: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hiddenpowerelectric: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hiddenpowerfighting: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hiddenpowerfire: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hiddenpowerflying: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hiddenpowerghost: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hiddenpowergrass: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hiddenpowerground: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hiddenpowerice: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hiddenpowerpoison: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hiddenpowerpsychic: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hiddenpowerrock: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hiddenpowersteel: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hiddenpowerwater: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	hornleech: {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		isNonstandard: null,
 	},
 	hydropump: {
 		inherit: true,
 		basePower: 120,
+		isNonstandard: null,
 	},
 	hypervoice: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
 	},
 	icebeam: {
 		inherit: true,
 		basePower: 95,
+		isNonstandard: null,
 	},
 	incinerate: {
 		inherit: true,
@@ -886,23 +957,28 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				this.add('-enditem', pokemon, item.name, '[from] move: Incinerate');
 			}
 		},
+		isNonstandard: null,
 	},
 	knockoff: {
 		inherit: true,
 		basePower: 20,
 		onBasePower() {},
+		isNonstandard: null,
 	},
 	leafstorm: {
 		inherit: true,
 		basePower: 140,
+		isNonstandard: null,
 	},
 	leechlife: {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		isNonstandard: null,
 	},
 	lick: {
 		inherit: true,
 		basePower: 20,
+		isNonstandard: null,
 	},
 	lightscreen: {
 		inherit: true,
@@ -932,35 +1008,43 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				this.add('-sideend', side, 'move: Light Screen');
 			},
 		},
+		isNonstandard: null,
 	},
 	lowsweep: {
 		inherit: true,
 		basePower: 60,
+		isNonstandard: null,
 	},
 	magicroom: {
 		inherit: true,
 		priority: -7,
+		isNonstandard: null,
 	},
 	magmastorm: {
 		inherit: true,
 		basePower: 120,
+		isNonstandard: null,
 	},
 	meanlook: {
 		inherit: true,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		isNonstandard: null,
 	},
 	megadrain: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1},
+		isNonstandard: null,
 	},
 	metalsound: {
 		inherit: true,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
 	},
 	meteormash: {
 		inherit: true,
 		accuracy: 85,
 		basePower: 100,
+		isNonstandard: null,
 	},
 	minimize: {
 		inherit: true,
@@ -973,10 +1057,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				}
 			},
 		},
+		isNonstandard: null,
 	},
 	moonlight: {
 		inherit: true,
 		type: "Normal",
+		isNonstandard: null,
 	},
 	mudsport: {
 		num: 300,
@@ -1004,10 +1090,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: null,
 		target: "all",
 		type: "Ground",
+		isNonstandard: null,
 	},
 	muddywater: {
 		inherit: true,
 		basePower: 95,
+		isNonstandard: null,
 	},
 	naturepower: {
 		inherit: true,
@@ -1016,19 +1104,23 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.actions.useMove('earthquake', pokemon);
 		},
 		target: "self",
+		isNonstandard: null,
 	},
 	overheat: {
 		inherit: true,
 		basePower: 140,
+		isNonstandard: null,
 	},
 	perishsong: {
 		inherit: true,
 		flags: {sound: 1, distance: 1},
+		isNonstandard: null,
 	},
 	pinmissile: {
 		inherit: true,
 		accuracy: 85,
 		basePower: 14,
+		isNonstandard: null,
 	},
 	poisonfang: {
 		inherit: true,
@@ -1036,6 +1128,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 30,
 			status: 'tox',
 		},
+		isNonstandard: null,
 	},
 	poisongas: {
 		inherit: true,
@@ -1044,10 +1137,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	poisonpowder: {
 		inherit: true,
 		onTryHit() {},
+		isNonstandard: null,
 	},
 	powergem: {
 		inherit: true,
 		basePower: 70,
+		isNonstandard: null,
 	},
 	psychup: {
 		inherit: true,
@@ -1058,14 +1153,17 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 			this.add('-copyboost', source, target, '[from] move: Psych Up');
 		},
+		isNonstandard: null,
 	},
 	psychoshift: {
 		inherit: true,
 		accuracy: 90,
+		isNonstandard: null,
 	},
 	psywave: {
 		inherit: true,
 		accuracy: 80,
+		isNonstandard: null,
 	},
 	quickguard: {
 		inherit: true,
@@ -1099,11 +1197,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				return null;
 			},
 		},
+		isNonstandard: null,
 	},
 	ragepowder: {
 		inherit: true,
 		priority: 3,
 		flags: {},
+		isNonstandard: null,
 	},
 	reflect: {
 		inherit: true,
@@ -1133,37 +1233,45 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				this.add('-sideend', side, 'Reflect');
 			},
 		},
+		isNonstandard: null,
 	},
 	relicsong: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
 	},
 	roar: {
 		inherit: true,
 		accuracy: 100,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
+		isNonstandard: null,
 	},
 	rocktomb: {
 		inherit: true,
 		accuracy: 80,
 		basePower: 50,
 		pp: 10,
+		isNonstandard: null,
 	},
 	round: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
 	},
 	sacredsword: {
 		inherit: true,
 		pp: 20,
+		isNonstandard: null,
 	},
 	scald: {
 		inherit: true,
 		thawsTarget: false,
+		isNonstandard: null,
 	},
 	screech: {
 		inherit: true,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
 	},
 	secretpower: {
 		inherit: true,
@@ -1173,10 +1281,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				accuracy: -1,
 			},
 		},
+		isNonstandard: null,
 	},
 	sing: {
 		inherit: true,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
 	},
 	skillswap: {
 		inherit: true,
@@ -1190,11 +1300,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			source.setAbility(targetAbility);
 			target.setAbility(sourceAbility);
 		},
+		isNonstandard: null,
 	},
 	skullbash: {
 		inherit: true,
 		basePower: 100,
 		pp: 15,
+		isNonstandard: null,
 	},
 	skydrop: {
 		inherit: true,
@@ -1218,27 +1330,33 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				return null;
 			}
 		},
+		isNonstandard: null,
 	},
 	sleeppowder: {
 		inherit: true,
 		onTryHit() {},
+		isNonstandard: null,
 	},
 	smellingsalts: {
 		inherit: true,
 		basePower: 60,
+		isNonstandard: null,
 	},
 	smog: {
 		inherit: true,
 		basePower: 20,
+		isNonstandard: null,
 	},
 	snarl: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
 	},
 	snore: {
 		inherit: true,
 		basePower: 40,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
 	},
 	soak: {
 		inherit: true,
@@ -1251,28 +1369,34 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 			this.add('-start', target, 'typechange', 'Water');
 		},
+		isNonstandard: null,
 	},
 	spore: {
 		inherit: true,
 		onTryHit() {},
+		isNonstandard: null,
 	},
 	stormthrow: {
 		inherit: true,
 		basePower: 40,
+		isNonstandard: null,
 	},
 	stringshot: {
 		inherit: true,
 		boosts: {
 			spe: -1,
 		},
+		isNonstandard: null,
 	},
 	strugglebug: {
 		inherit: true,
 		basePower: 30,
+		isNonstandard: null,
 	},
 	stunspore: {
 		inherit: true,
 		onTryHit() {},
+		isNonstandard: null,
 	},
 	substitute: {
 		inherit: true,
@@ -1322,70 +1446,86 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				this.add('-end', target, 'Substitute');
 			},
 		},
+		isNonstandard: null,
 	},
 	submission: {
 		inherit: true,
 		pp: 25,
+		isNonstandard: null,
 	},
 	supersonic: {
 		inherit: true,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
 	},
 	surf: {
 		inherit: true,
 		basePower: 95,
+		isNonstandard: null,
 	},
 	sweetkiss: {
 		inherit: true,
 		type: "Normal",
+		isNonstandard: null,
 	},
 	sweetscent: {
 		inherit: true,
 		boosts: {
 			evasion: -1,
 		},
+		isNonstandard: null,
 	},
 	swordsdance: {
 		inherit: true,
 		pp: 30,
+		isNonstandard: null,
 	},
 	synchronoise: {
 		inherit: true,
 		basePower: 70,
 		pp: 15,
+		isNonstandard: null,
 	},
 	tailwind: {
 		inherit: true,
 		pp: 30,
+		isNonstandard: null,
 	},
 	technoblast: {
 		inherit: true,
 		basePower: 85,
+		isNonstandard: null,
 	},
 	thunder: {
 		inherit: true,
 		basePower: 120,
+		isNonstandard: null,
 	},
 	thunderbolt: {
 		inherit: true,
 		basePower: 95,
+		isNonstandard: null,
 	},
 	toxic: {
 		inherit: true,
 		onPrepareHit() {},
+		isNonstandard: null,
 	},
 	uproar: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
 	},
 	vinewhip: {
 		inherit: true,
 		basePower: 35,
 		pp: 15,
+		isNonstandard: null,
 	},
 	wakeupslap: {
 		inherit: true,
 		basePower: 60,
+		isNonstandard: null,
 	},
 	waterpledge: {
 		inherit: true,
@@ -1397,6 +1537,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 			return 50;
 		},
+		isNonstandard: null,
 	},
 	watersport: {
 		num: 346,
@@ -1424,11 +1565,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: null,
 		target: "all",
 		type: "Water",
+		isNonstandard: null,
 	},
 	whirlwind: {
 		inherit: true,
 		accuracy: 100,
 		flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
+		isNonstandard: null,
 	},
 	wideguard: {
 		inherit: true,
@@ -1439,14 +1582,17 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		onHitSide(side, source) {
 			source.addVolatile('stall');
 		},
+		isNonstandard: null,
 	},
 	willowisp: {
 		inherit: true,
 		accuracy: 75,
+		isNonstandard: null,
 	},
 	wonderroom: {
 		inherit: true,
 		priority: -7,
+		isNonstandard: null,
 	},
 	/* Wack moves */
 	hiddenforce: {
