@@ -8028,6 +8028,50 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	tartis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	terratarus: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	stowlet: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	strixnight: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	inkrow: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	liquill: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ravarnish: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	larvatrice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	brashalisk: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	kokaiju: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	levititan: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	onusalt: {
 		tier: "Illegal",
 		isNonstandard: "Future",
