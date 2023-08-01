@@ -13514,4 +13514,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 6725,
 		isNonstandard: "Future",
 	},
+	polite: {
+		onFractionalPriority: -0.1,
+		onModifyMove(move) {
+			move.stab = 2;
+		},
+		name: "Polite",
+		rating: 4,
+		num: 6726,
+		isNonstandard: "Future",
+	}
 };

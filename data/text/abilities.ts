@@ -3613,4 +3613,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Restores HP if hit by a Ghost-type move.",
 		desc: "Restores HP if hit by a Ghost-type move.",
 	},
+	polite: {
+		name: "Polite",
+		shortDesc: "Moves last. STAB increased to 2."
+	}
 };
