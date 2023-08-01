@@ -13555,7 +13555,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onResidual(pokemon) {
 			if (pokemon.hasType('Magma') || pokemon.hasType('Fire')) {
 				this.heal(pokemon.baseMaxhp / 16);
-			} else {
+			} else if (!pokemon.hasAbility('magmarmor')) {
 				this.damage(pokemon.baseMaxhp / 8);
 			}
 		},

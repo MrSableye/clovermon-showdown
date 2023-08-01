@@ -97,6 +97,11 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	rockyhelmet: {
 		inherit: true,
+		onDamagingHit(damage, target, source, move) {
+			if (move.flags['contact']) {
+				this.damage(source.baseMaxhp / 6, source, target, null, true);
+			}
+		},
 		isNonstandard: null,
 	},
 	ejectbutton: {
@@ -189,6 +194,11 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	lifeorb: {
 		inherit: true,
+		onAfterMoveSecondarySelf(source, target, move) {
+			if (source && source !== target && move && move.category !== 'Status' && !move.ohko) {
+				this.damage(source.baseMaxhp / 10, source, source, this.dex.items.get('lifeorb'));
+			}
+		},
 		isNonstandard: null,
 	},
 	expertbelt: {
@@ -549,6 +559,20 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	souldew: {
 		inherit: true,
+		onBasePower() {},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.baseSpecies.num === 380 || pokemon.baseSpecies.num === 381) {
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpDPriority: 2,
+		onModifySpD(spd, pokemon) {
+			if (pokemon.baseSpecies.num === 380 || pokemon.baseSpecies.num === 381) {
+				return this.chainModify(1.5);
+			}
+		},
+		desc: "If held by a Latias or a Latios, its Sp. Atk and Sp. Def are 1.5x.",
 		isNonstandard: null,
 	},
 	deepseatooth: {
