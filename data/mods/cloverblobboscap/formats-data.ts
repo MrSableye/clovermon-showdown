@@ -1700,14 +1700,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	starhiro: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	doubtlaw: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	ranruu: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -2577,6 +2569,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Future",
 	},
 	strixnight: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	flockarrion: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sepulture: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

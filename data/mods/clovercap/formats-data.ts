@@ -79,6 +79,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	sepulture: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	flockarrion: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
 	inkrow: {
 		inherit: true,
 		isNonstandard: null,
@@ -1224,11 +1234,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	floriousmega: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
 	illumatrixmega: {
 		inherit: true,
 		isNonstandard: null,
@@ -1319,10 +1324,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	ricosuavemega: {
-		isNonstandard: null,
-		tier: "OU",
-	},
-	vandashmega: {
 		isNonstandard: null,
 		tier: "OU",
 	},

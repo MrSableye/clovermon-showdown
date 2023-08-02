@@ -8072,6 +8072,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	flockarrion: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sepulture: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	onusalt: {
 		tier: "Illegal",
 		isNonstandard: "Future",
