@@ -2075,4 +2075,224 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Sound", "Psychic"],
 	},
+	chespin: {
+		inherit: true,
+		abilities: {0: "Overgrow", H: "Filter"},
+	},
+	quilladin: {
+		inherit: true,
+		types: ["Grass", "Fighting"],
+	},
+	chesnaught: {
+		inherit: true,
+		baseStats: {hp: 88, atk: 107, def: 132, spa: 54, spd: 85, spe: 64},
+		abilities: {0: "Overgrow", 1: "Bulletproof", H: "Filter"},
+	},
+	fennekin: {
+		inherit: true,
+		abilities: {0: "Blaze", 1: "Forewarn"},
+	},
+	braixen: {
+		inherit: true,
+		types: ["Fire", "Magic"],
+		baseStats: {hp: 59, atk: 59, def: 58, spa: 93, spd: 70, spe: 73},
+		abilities: {0: "Blaze", 1: "Forewarn"},
+	},
+	delphox: {
+		inherit: true,
+		types: ["Fire", "Magic"],
+		abilities: {0: "Blaze", 1: "Forewarn", H: "Magic Guard"},
+	},
+	froakie: {
+		inherit: true,
+		abilities: {0: "Protean", 1: "Torrent"},
+	},
+	frogadier: {
+		inherit: true,
+		types: ["Water", "Dark"],
+		abilities: {0: "Protean", 1: "Torrent"},
+	},
+	greninja: {
+		inherit: true,
+		abilities: {0: "Protean", 1: "Torrent"},
+	},
+	bunnelby: {
+		inherit: true,
+		abilities: {0: "Pickup", 1: "Huge Power"},
+	},
+	diggersby: {
+		inherit: true,
+		abilities: {0: "Pickup", 1: "Huge Power", H: "Sturdy"},
+	},
+	fletchinder: {
+		inherit: true,
+		abilities: {0: "Gale Wings"},
+	},
+	talonflame: {
+		inherit: true,
+		abilities: {0: "Gale Wings"},
+	},
+	vivillon: {
+		inherit: true,
+		types: ["Bug", "Fairy"],
+		baseStats: {hp: 83, atk: 52, def: 50, spa: 94, spd: 74, spe: 89},
+		abilities: {0: "Pixilate", 1: "Compound Eyes"},
+	},
+	litleo: {
+		inherit: true,
+		types: ["Fire", "Sound"],
+		abilities: {0: "Rivalry", 1: "Pride"},
+	},
+	pyroar: {
+		inherit: true,
+		types: ["Fire", "Sound"],
+		baseStats: {hp: 86, atk: 75, def: 75, spa: 112, spd: 70, spe: 106},
+		abilities: {0: "Rivalry", 1: "Pride"},
+	},
+	flabebe: {
+		inherit: true,
+		abilities: {0: "Flower Veil"},
+	},
+	floette: {
+		inherit: true,
+		abilities: {0: "Flower Veil"},
+	},
+	florges: {
+		inherit: true,
+		abilities: {0: "Flower Veil"},
+	},
+	skiddo: {
+		inherit: true,
+		abilities: {0: "Sap Sipper", H: "Rock Head"},
+	},
+	gogoat: {
+		inherit: true,
+		types: ["Grass", "Rock"],
+		baseStats: {hp: 123, atk: 100, def: 95, spa: 97, spd: 81, spe: 68},
+		abilities: {0: "Sap Sipper", H: "Fur Coat"},
+	},
+	pangoro: {
+		inherit: true,
+		baseStats: {hp: 95, atk: 124, def: 98, spa: 69, spd: 71, spe: 58},
+	},
+	espurr: {
+		inherit: true,
+		abilities: {0: "Breakdown", 1: "Infiltrator"},
+	},
+	meowstic: {
+		inherit: true,
+		baseStats: {hp: 74, atk: 48, def: 76, spa: 93, spd: 81, spe: 114},
+	},
+	aegislash: {
+		inherit: true,
+		baseStats: {hp: 60, atk: 50, def: 140, spa: 50, spd: 140, spe: 60},
+		abilities: {0: "Hyper Cutter"},
+	},
+	spritzee: {
+		inherit: true,
+		abilities: {0: "Healer", 1: "Aroma Veil", H: "Natural Cure"},
+	},
+	aromatisse: {
+		inherit: true,
+		types: ["Fairy", "Poison"],
+		abilities: {0: "Healer", 1: "Aroma Veil", H: "Natural Cure"},
+	},
+	swirlix: {
+		inherit: true,
+		types: ["Fairy", "Food"],
+		abilities: {0: "Sweet Veil", 1: "Unburden", H: "Oblivious"},
+	},
+	slurpuff: {
+		inherit: true,
+		types: ["Fairy", "Food"],
+		baseStats: {hp: 95, atk: 80, def: 86, spa: 85, spd: 75, spe: 72},
+		abilities: {0: "Sweet Veil", 1: "Unburden", H: "Oblivious"},
+	},
+	inkay: {
+		inherit: true,
+		abilities: {0: "Contrary", 1: "Prankster"},
+	},
+	malamar: {
+		inherit: true,
+		abilities: {0: "Contrary", 1: "Infiltrator"},
+	},
+	dragalge: {
+		inherit: true,
+		baseStats: {hp: 65, atk: 75, def: 90, spa: 97, spd: 123, spe: 75},
+		abilities: {0: "Adaptability"},
+	},
+	clawitzer: {
+		inherit: true,
+		types: ["Water", "Fire"],
+	},
+	helioptile: {
+		inherit: true,
+		abilities: {0: "Dry Skin", 1: "Solar Power"},
+	},
+	heliolisk: {
+		inherit: true,
+		baseStats: {hp: 62, atk: 75, def: 52, spa: 110, spd: 94, spe: 110},
+		abilities: {0: "Dry Skin", 1: "Solar Power", H: "Sand Veil"},
+	},
+	amaura: {
+		inherit: true,
+		abilities: {0: "Refrigerate", 1: "Ice Body", H: "Simple"},
+	},
+	aurorus: {
+		inherit: true,
+		abilities: {0: "Refrigerate", 1: "Snow Warning", H: "Simple"},
+	},
+	sylveon: {
+		inherit: true,
+		abilities: {0: "Cute Charm", 1: "Pixilate", H: "Adaptability"},
+	},
+	dedenne: {
+		inherit: true,
+		abilities: {0: "Plus", 1: "Pickup", H: "Minus"},
+	},
+	goomy: {
+		inherit: true,
+		abilities: {0: "Sap Sipper", 1: "Gooey", H: "Hydration"},
+	},
+	sliggoo: {
+		inherit: true,
+		types: ["Dragon", "Poison"],
+		abilities: {0: "Sap Sipper", 1: "Gooey", H: "Hydration"},
+	},
+	goodra: {
+		inherit: true,
+		types: ["Dragon", "Poison"],
+		abilities: {0: "Sap Sipper", 1: "Gooey", H: "Hydration"},
+	},
+	klefki: {
+		inherit: true,
+		abilities: {0: "Prankster"},
+	},
+	avalugg: {
+		inherit: true,
+		baseStats: {hp: 100, atk: 117, def: 184, spa: 44, spd: 46, spe: 28},
+		abilities: {0: "Sturdy", 1: "Ice Body", H: "Own Tempo"},
+	},
+	noibat: {
+		inherit: true,
+		types: ["Sound", "Dragon"],
+		abilities: {0: "Frisk", 1: "Infiltrator", H: "Soundproof"},
+	},
+	noivern: {
+		inherit: true,
+		types: ["Sound", "Dragon"],
+		abilities: {0: "Frisk", 1: "Infiltrator", H: "Soundproof"},
+	},
+	xerneas: {
+		inherit: true,
+		abilities: {0: "Adaptability"},
+	},
+	yveltal: {
+		inherit: true,
+		abilities: {0: "Shadow Call"},
+	},
+	hoopa: {
+		inherit: true,
+		abilities: {0: "Prankster"},
+	}
 }
