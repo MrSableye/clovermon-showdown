@@ -10425,7 +10425,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "The user strikes the target with a cheap blow. This attack always results in a critical hit.",
 	},
 	insultinjury: {
-		name: "Insult & Injury",
+		name: "Insult and Injury",
 		desc: "The target is taunted and beat, causing it to use only attack moves for three turns.",
 		shortDesc: "The target is taunted and beat, causing it to use only attack moves for three turns.",
 	},
@@ -10459,8 +10459,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The target punched with a knuckle encased with brass. It may make the target flinch.",
 		shortDesc: "The target punched with a knuckle encased with brass. It may make the target flinch.",
 	},
-	D: {
-		name: "o",
+	doom: {
+		name: "Doom",
 		desc: "The user brings an end to all of those around it. The user faints upon using this move.",
 		shortDesc: "The user brings an end to all of those around it. The user faints upon using this move.",
 	},

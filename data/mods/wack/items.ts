@@ -3847,6 +3847,26 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	instantnoodles: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sausages: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	packagedcurry: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	precookedburger: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	freshcream: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	/** Wack items that have their name taken by Clover */
 	glassgem: {
 		inherit: true,

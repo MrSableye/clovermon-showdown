@@ -36326,7 +36326,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 95,
 		basePower: 60,
 		category: "Physical",
-		name: "Insult & Injury",
+		name: "Insult and Injury",
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
