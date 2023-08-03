@@ -845,12 +845,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	hiddenpower: {
 		inherit: true,
-		basePower: 0,
-		basePowerCallback(pokemon) {
-			const bp = pokemon.hpPower || 70;
-			this.debug('BP: ' + bp);
-			return bp;
-		},
 		isNonstandard: null,
 	},
 	hiddenpowerbug: {
@@ -4347,12 +4341,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	/* Wack moves */
 	hiddenforce: {
 		inherit: true,
-		basePower: 0,
-		basePowerCallback(pokemon) {
-			const bp = pokemon.hpPower || 70;
-			this.debug('BP: ' + bp);
-			return bp;
-		},
 		isNonstandard: null,
 	},
 	hiddenpowerblood: {
