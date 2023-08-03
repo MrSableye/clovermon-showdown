@@ -10497,7 +10497,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	poryrus: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	poryrusz: {
@@ -12777,7 +12777,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bremoraid: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	boctillery: {
@@ -12897,7 +12897,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	apichu: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	acleffa: {
@@ -13202,7 +13202,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bpoliwag: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	nyosuka: {
@@ -13227,7 +13227,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	devull: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	bhoundoom: {
@@ -15327,7 +15327,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	golpsyduck: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	matriawak: {
@@ -15887,7 +15887,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	praticate: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	snowlax: {
@@ -18152,7 +18152,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	wchansey: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	wblissey: {
@@ -20782,7 +20782,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	primplup: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	primpendlup: {
@@ -21117,7 +21117,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	kaijuminccino: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	kaijucinccino: {
@@ -21387,12 +21387,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	sunsprout: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	bwooper: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	feiscue: {
@@ -21427,7 +21427,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bchinchou: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	blanturn: {
@@ -21452,7 +21452,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bcyndaquil: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	acyndaquil: {
@@ -21647,7 +21647,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bhoothoot: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	bsmantine: {
@@ -21662,12 +21662,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bslugma: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	bpichu: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	bblissey: {
@@ -21837,7 +21837,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bsentret: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	bfurret: {
@@ -21847,7 +21847,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	btotodile: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	bforretress: {
@@ -21902,7 +21902,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bsunkern: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	unfinkingdra: {
@@ -22117,7 +22117,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bellscrop: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	atlasbell: {
@@ -22127,7 +22127,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	hoppot: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	hoprake: {
@@ -22137,7 +22137,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	potish: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	trickish: {
@@ -22147,7 +22147,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	roseling: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	witherade: {
@@ -25417,7 +25417,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bgrotle: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	btorterra: {
@@ -25427,7 +25427,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bprinplup: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	bempoleon: {
@@ -25437,7 +25437,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bshinx: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	bachichi: {
@@ -25452,7 +25452,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bcranidos: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	brampardos: {
@@ -25462,7 +25462,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bcombee: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	bvespiquen: {
@@ -25477,7 +25477,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bgible: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	bgabite: {
@@ -25492,7 +25492,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bhippopotas: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	bhippowdon: {
@@ -25507,7 +25507,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bfinneon: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	blumineon: {
@@ -25517,7 +25517,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bsnover: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	babomasnow: {
@@ -26647,7 +26647,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	btorchic: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	latiaziken: {
@@ -26717,7 +26717,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	krampird: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	santajynx: {
@@ -27737,7 +27737,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fedorakirlia: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	excitebike: {
@@ -28737,7 +28737,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	hgrowlithe: {
 		inherit: true,
-		tier: "LC",
+		tier: "NFE",
 		isNonstandard: null,
 	},
 	harcanine: {
