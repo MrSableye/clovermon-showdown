@@ -9475,13 +9475,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	jermin: {
 		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+		isNonstandard: "Future",
+		tier: "Illegal",
 	},
 	jerminswarm: {
 		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+		isNonstandard: "Future",
+		tier: "Illegal",
 	},
 	smogars: {
 		inherit: true,
