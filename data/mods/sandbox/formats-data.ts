@@ -11077,6 +11077,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	genine: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	hofucyea: {
 		inherit: true,
 		isNonstandard: null,
