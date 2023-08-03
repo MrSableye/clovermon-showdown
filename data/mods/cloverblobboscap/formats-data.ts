@@ -1700,14 +1700,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	starhiro: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
-	doubtlaw: {
-		inherit: true,
-		isNonstandard: "Past",
-	},
 	ranruu: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -2527,6 +2519,95 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	bullepede: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+	},
+	theforest: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	onusalt: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	vergillion: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	devante: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ghastropod: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	starhiro: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	doubtlaw: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sanickel: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	skoxious: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tartis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	terratarus: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	stowlet: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	strixnight: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	flockarrion: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sepulture: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	inkrow: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	liquill: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ravarnish: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	larvatrice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	brashalisk: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	kokaiju: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	levititan: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+
 	},
 	/* CAP Megas */
 	oogabugamega: {

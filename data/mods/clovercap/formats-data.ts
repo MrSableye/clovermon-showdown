@@ -59,6 +59,71 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	tartis: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	terratarus: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	stowlet: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	strixnight: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	sepulture: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	flockarrion: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	inkrow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	liquill: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	ravarnish: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	larvatrice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	brashalisk: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "NFE",
+	},
+	kokaiju: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	levititan: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	doubtlaw: {
 		inherit: true,
 		isNonstandard: null,
@@ -1169,11 +1234,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	floriousmega: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
 	illumatrixmega: {
 		inherit: true,
 		isNonstandard: null,
@@ -1264,10 +1324,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	ricosuavemega: {
-		isNonstandard: null,
-		tier: "OU",
-	},
-	vandashmega: {
 		isNonstandard: null,
 		tier: "OU",
 	},
