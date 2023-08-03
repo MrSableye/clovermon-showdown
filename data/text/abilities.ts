@@ -3408,8 +3408,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Boosts the power of tail moves.",
 		desc: "Boosts the power of tail moves.",
 	},
-	sceptic: {
-		name: "Sceptic",
+	skeptic: {
+		name: "Skeptic",
 		shortDesc: "Ups resistance to Fairy, Divine and Magic-type moves.",
 		desc: "Ups resistance to Fairy, Divine and Magic-type moves.",
 	},
@@ -3613,4 +3613,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Restores HP if hit by a Ghost-type move.",
 		desc: "Restores HP if hit by a Ghost-type move.",
 	},
+	polite: {
+		name: "Polite",
+		shortDesc: "Moves last. STAB increased to 2."
+	}
 };

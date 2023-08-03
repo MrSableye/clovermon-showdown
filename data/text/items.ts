@@ -5406,4 +5406,24 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Cat Ears",
 		desc: "Meow?",
 	},
+	instantnoodles: {
+		name: "Instant Noodles",
+		desc: "Raises holder's Speed by 1 stage and heals 1/10 max HP when at 1/4 max HP or less. Single use.",
+	},
+	sausages: {
+		name: "Sausages",
+		desc: "Raises holder's Atk by 1 stage and heals 1/10 max HP when at 1/4 max HP or less. Single use.",
+	},
+	packagedcurry: {
+		name: "Packaged Curry",
+		desc: "Raises holder's Sp. Atk by 1 stage and heals 1/10 max HP when at 1/4 max HP or less. Single use.",
+	},
+	precookedburger: {
+		name: "Precooked Burger",
+		desc: "Raises holder's Def by 1 stage and heals 1/10 max HP when at 1/4 max HP or less. Single use.",
+	},
+	freshcream: {
+		name: "Fresh Cream",
+		desc: "Raises holder's Sp. Def by 1 stage and heals 1/10 max HP when at 1/4 max HP or less. Single use.",
+	},
 };

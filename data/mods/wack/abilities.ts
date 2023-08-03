@@ -1,3 +1,5 @@
+import { truncate } from "fs";
+
 export const Abilities: {[k: string]: ModdedAbilityData} = {
 	/* Modified vanilla abilities */
 	toxicboost: {
@@ -10,8 +12,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				return this.chainModify(1.5);
 			}
 		},
-		desc: "While this Pokemon is poisoned, the power of its physical attacks is multiplied by 1.5.",
-		shortDesc: "1.5x atk/spa during Acid Rain, 1.5x atk if poisoned",
+		desc: "During Acid rain, the power of its attacks is multiplied by 1.5. If this Pokemon is poisoned, the power of its physical attacks is multiplied by 1.5.",
+		shortDesc: "1.5x Atk and SpA during Acid Rain, else 1.5x Atk if poisoned",
 		isNonstandard: null,
 	},
 	raindish: {
@@ -54,8 +56,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onImmunity(type, pokemon) {
 			if (type === 'sandstorm' || type === 'hail' || type === 'acidrain' || type === 'bladerain' || type === 'hyperboreanarctic' || type === 'powder') return false;
 		},
-		desc: "This Pokemon is immune to powder moves, damage from Sandstorm, Hail, Acid Rain or Blade Rain, and the effects of Rage Powder and the Effect Spore Ability.",
-		shortDesc: "Immune to powder moves, Sandstorm, Hail, Acid Rain and Blade Rain damage, Effect Spore.",
+		onTryHit() {},
+		desc: "This Pokemon is immune to damage from Sandstorm, Hail, Acid Rain, Blade Rain and the Effect Spore Ability.",
+		shortDesc: "Immune to Sandstorm, Hail, Acid Rain and Blade Rain damage.",
 		isNonstandard: null,
 	},
 	chlorophyll: {
@@ -135,6 +138,228 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		onSwitchIn() {},
 		rating: 4.5,
+	},
+	illuminate: {
+		inherit: true,
+		onSourceModifyAccuracyPriority: -1,
+		onSourceModifyAccuracy(accuracy) {
+			if (typeof accuracy === 'number') {
+				return this.chainModify(1.1);
+			}
+		},
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Dark') {
+				this.debug('Illuminate weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Dark') {
+				this.debug('Illuminate weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		isBreakable: true,
+		shortDesc: "x1.1 accuracy. Dark-type moves against this Pokemon deal damage with a halved offensive stat.",
+		rating: 2.5,
+	},
+	magmaarmor: {
+		inherit: true,
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fire' || move.type === 'Magma') {
+				this.debug('Magma Armor boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fire' || move.type === 'Magma') {
+				this.debug('Magma Armor boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Ice') {
+				this.debug('Magma Armor weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Ice') {
+				this.debug('Magma Armor weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		shortDesc: "Immune to frz. Boosts Fire- and Magma-type moves. Ice-type moves against this Pokemon deal damage with a halved offensive stat.",
+	},
+	waterveil: {
+		inherit: true,
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Water') {
+				this.debug('Water Veil boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Water') {
+				this.debug('Water Veil boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Water Veil weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Water Veil weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		shortDesc: "Immune to brn. Boosts Water-type moves. Fire-type moves against this Pokemon deal damage with a halved offensive stat.",
+	},
+	keeneye: {
+		inherit: true,
+		onSourceModifyAccuracyPriority: -1,
+		onSourceModifyAccuracy(accuracy) {
+			if (typeof accuracy === 'number') {
+				return this.chainModify(1.05);
+			}
+		},
+		onModifyMove() {},
+		desc: "Prevents other Pokemon from lowering this Pokemon's accuracy stat stage. This Pokemon's accuracy is boosted by x1.05",
+		shortDesc: "This Pokemon's accuracy is boosted by x1.05 and can't be lowered by others.",
+	},
+	hypercutter: {
+		inherit: true,
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['sword']) {
+				this.debug('Hyper Cutter boost');
+				return this.chainModify(1.2);
+			}
+		},
+		shortDesc: "Prevents this Pokemon's Attack stat drop. Boosts sword-based attacks.",
+	},
+	hustle: {
+		inherit: true,
+		onModifySpAPriority: 5,
+		onModifySpA(spa) {
+			return this.modify(spa, 1.5);
+		},
+		onSourceModifyAccuracy(accuracy, target, source, move) {
+			if (move.category !== 'Status' && typeof accuracy === 'number') {
+				return this.chainModify([3277, 4096]);
+			}
+		},
+		desc: "This Pokemon's Attack and Special Attack stats is multiplied by 1.5 and the accuracy of its attacks is multiplied by 0.8.",
+		shortDesc: "This Pokemon's Atk and SpA is 1.5x and accuracy of its attacks is 0.8x.",
+	},
+	heatproof: {
+		inherit: true,
+		onSourceBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Fire' || move.type === 'Magma') {
+				return this.chainModify(0.5);
+			}
+		},
+		desc: "The power of Fire and Magma-type attacks against this Pokemon is halved. This Pokemon takes half of the usual burn damage, rounded down.",
+		shortDesc: "The power of Fire and Magma-type attacks against this Pokemon is halved; burn damage halved.",
+	},
+	scrappy: {
+		inherit: true,
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity = true;
+			}
+		},
+		onBoost(boost, target, source, effect) {},
+		desc: "This Pokemon can hit all types.",
+		shortDesc: "Damaging moves ignore immunities.",
+	},
+	bigpecks: {
+		inherit: true,
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['beak']) {
+				this.debug('Big Pecks boost');
+				return this.chainModify(1.5);
+			}
+		},
+		shortDesc: "Prevents Defense stat drop. Boosts beak-like attacks.",
+	},
+	// Gen5 vanilla abilities
+	anticipation: {
+		inherit: true,
+		onStart(pokemon) {
+			for (const target of pokemon.foes()) {
+				for (const moveSlot of target.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.move);
+					if (move.category !== 'Status' && (
+						this.dex.getImmunity(move.type, pokemon) && this.dex.getEffectiveness(move.type, pokemon) > 0 ||
+						move.ohko
+					)) {
+						this.add('-ability', pokemon, 'Anticipation');
+						return;
+					}
+				}
+			}
+		},
+	},
+	frisk: {
+		inherit: true,
+		onStart(pokemon) {
+			const target = pokemon.side.randomFoe();
+			if (target?.item) {
+				this.add('-item', target, target.getItem().name, '[from] ability: Frisk', '[of] ' + pokemon);
+			}
+		},
+	},
+	oblivious: {
+		inherit: true,
+		onUpdate(pokemon) {
+			if (pokemon.volatiles['attract']) {
+				pokemon.removeVolatile('attract');
+				this.add('-end', pokemon, 'move: Attract', '[from] ability: Oblivious');
+			}
+		},
+		onTryHit(pokemon, target, move) {
+			if (move.id === 'captivate') {
+				this.add('-immune', pokemon, '[from] Oblivious');
+				return null;
+			}
+		},
+		rating: 0.5,
+	},
+	sapsipper: {
+		inherit: true,
+		onAllyTryHitSide() {},
+	},
+	serenegrace: {
+		inherit: true,
+		onModifyMove(move) {
+			if (move.secondaries && move.id !== 'secretpower') {
+				this.debug('doubling secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance *= 2;
+				}
+			}
+		},
+	},
+	soundproof: {
+		inherit: true,
+		onAllyTryHitSide() {},
 	},
 	/* Wack abilities */
 	darklife: {
@@ -233,7 +458,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	sceptic: {
+	skeptic: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -394,6 +619,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	souleater: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	polite: {
 		inherit: true,
 		isNonstandard: null,
 	},

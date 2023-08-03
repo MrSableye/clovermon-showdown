@@ -13555,7 +13555,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onResidual(pokemon) {
 			if (pokemon.hasType('Magma') || pokemon.hasType('Fire')) {
 				this.heal(pokemon.baseMaxhp / 16);
-			} else {
+			} else if (!pokemon.hasAbility('magmarmor')) {
 				this.damage(pokemon.baseMaxhp / 8);
 			}
 		},
@@ -13611,7 +13611,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	shoepolish: {
 		name: "Shoe Polish",
 		spritenum: 0,
-		onAfterMoveSecondary(target, source, move) {
+		onAfterMoveSecondarySelf(target, source, move) {
 			if (move.flags['kick']) {
 				this.add("-activate", target, "item: Shoe Polish");
 				this.boost({spe: 1}, target, target);
@@ -13623,7 +13623,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	trainingglove: {
 		name: "Training Glove",
 		spritenum: 0,
-		onAfterMoveSecondary(target, source, move) {
+		onAfterMoveSecondarySelf(target, source, move) {
 			if (move.flags['punch']) {
 				this.add("-activate", target, "item: Training Glove");
 				this.boost({atk: 1}, target, target);
@@ -17238,6 +17238,101 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Cat Ears",
 		spritenum: 0,
 		num: 67479,
+		isNonstandard: "Future",
+	},
+	instantnoodles: {
+		name: "Instant Noodles",
+		spritenum: 0,
+		onUpdate(pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility(['gluttony', 'bountifulharvest']) && pokemon.abilityState.gluttony)) {
+				pokemon.eatItem();
+			}
+		},
+		onTryEatItem(item, pokemon) {
+			if (!this.runEvent('TryHeal', pokemon)) return false;
+		},
+		onEat(pokemon) {
+			this.boost({spe: 1});
+			this.heal(pokemon.baseMaxhp / 10);
+		},
+		num: 67480,
+		isNonstandard: "Future",
+	},
+	sausages: {
+		name: "Sausages",
+		spritenum: 0,
+		onUpdate(pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility(['gluttony', 'bountifulharvest']) && pokemon.abilityState.gluttony)) {
+				pokemon.eatItem();
+			}
+		},
+		onTryEatItem(item, pokemon) {
+			if (!this.runEvent('TryHeal', pokemon)) return false;
+		},
+		onEat(pokemon) {
+			this.boost({atk: 1});
+			this.heal(pokemon.baseMaxhp / 10);
+		},
+		num: 67480,
+		isNonstandard: "Future",
+	},
+	packagedcurry: {
+		name: "Packaged Curry",
+		spritenum: 0,
+		onUpdate(pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility(['gluttony', 'bountifulharvest']) && pokemon.abilityState.gluttony)) {
+				pokemon.eatItem();
+			}
+		},
+		onTryEatItem(item, pokemon) {
+			if (!this.runEvent('TryHeal', pokemon)) return false;
+		},
+		onEat(pokemon) {
+			this.boost({spa: 1});
+			this.heal(pokemon.baseMaxhp / 10);
+		},
+		num: 67480,
+		isNonstandard: "Future",
+	},
+	precookedburger: {
+		name: "Precooked Burger",
+		spritenum: 0,
+		onUpdate(pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility(['gluttony', 'bountifulharvest']) && pokemon.abilityState.gluttony)) {
+				pokemon.eatItem();
+			}
+		},
+		onTryEatItem(item, pokemon) {
+			if (!this.runEvent('TryHeal', pokemon)) return false;
+		},
+		onEat(pokemon) {
+			this.boost({def: 1});
+			this.heal(pokemon.baseMaxhp / 10);
+		},
+		num: 67480,
+		isNonstandard: "Future",
+	},
+	freshcream: {
+		name: "Fresh Cream",
+		spritenum: 0,
+		onUpdate(pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 4 || (pokemon.hp <= pokemon.maxhp / 2 &&
+					pokemon.hasAbility(['gluttony', 'bountifulharvest']) && pokemon.abilityState.gluttony)) {
+				pokemon.eatItem();
+			}
+		},
+		onTryEatItem(item, pokemon) {
+			if (!this.runEvent('TryHeal', pokemon)) return false;
+		},
+		onEat(pokemon) {
+			this.boost({spd: 1});
+			this.heal(pokemon.baseMaxhp / 10);
+		},
+		num: 67480,
 		isNonstandard: "Future",
 	},
 };
