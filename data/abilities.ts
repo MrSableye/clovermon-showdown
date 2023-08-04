@@ -11212,6 +11212,28 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 	},
+	compensate: {
+		name: "Compensate",
+		isNonstandard: "Future",
+		onModifyAtk(atk, attacker) {
+			const maxDefSpe = Math.max(attacker.getStat('spe', true, true), attacker.getStat('def', true, true));
+			return atk + Math.floor(0.25 * maxDefSpe);
+		},
+	},
+	dexterity: {
+		name: "Dexterity",
+		isNonstandard: "Future",
+		onModifyAtk(atk, attacker) {
+			return atk + Math.floor(0.25 * attacker.getStat('spe', true, true));
+		},
+	},
+	vindication: {
+		name: "Vindication",
+		isNonstandard: "Future",
+		onModifyAtk(atk, attacker) {
+			return atk + Math.floor(0.25 * attacker.getStat('def', true, true));
+		},
+	},
 	digger: {
 		name: "Digger",
 		isNonstandard: "Future",

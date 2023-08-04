@@ -3180,6 +3180,18 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  The power of [POKEMON]'s Status moves rose!",
 	},
+	compensate: {
+		name: "Compensate",
+		shortDesc: "This Pokemon's Attack is boosted by 25% of the higher of its's unboosted, unmodified Defense or Speed",
+	},
+	dexterity: {
+		name: "Dexterity",
+		shortDesc: "This Pokemon's Attack is boosted by 25% of its's unboosted, unmodified Speed",
+	},
+	vindication: {
+		name: "Vindication",
+		shortDesc: "This Pokemon's Attack is boosted by 25% of its's unboosted, unmodified Defense",
+	},
 	ascension: {
 		name: "Ascension",
 		shortDesc: "This Pokemon transforms into Blobbos-Homestuck-God-Tier and heals to full health if it deals lethal damage to itself.",

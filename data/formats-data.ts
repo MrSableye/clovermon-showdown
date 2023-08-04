@@ -10266,6 +10266,18 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	paritta: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	macaegis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	trobbound: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	stoppogriff: {
 		tier: "Illegal",
 		isNonstandard: "Future",

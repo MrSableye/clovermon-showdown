@@ -1891,6 +1891,18 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	compensate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dexterity: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	vindication: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	ascension: {
 		inherit: true,
 		isNonstandard: null,
