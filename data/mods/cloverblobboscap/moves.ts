@@ -55,6 +55,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	recoilshot: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	behemothblob: {
 		inherit: true,
 		isNonstandard: null,
