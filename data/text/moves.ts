@@ -8091,6 +8091,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage. Always hits and deals 100x against Vandash.",
 		shortDesc: "10% chance to lower the target's Sp. Def by 1. Always hits and deals 100x against Vandash.",
 	},
+	recoilshot: {
+		name: "Psycho Boost",
+		desc: "Lowers the user's Accuracy by 2 stages.",
+		shortDesc: "Lowers the user's Acc by 2.",
+	},
 	wrapd: {
 		name: "Wrap-D",
 		desc: "The user spends two to five turns using this move. Has a 3/8 chance to last two or three turns, and a 1/8 chance to last four or five turns. The damage calculated for the first turn is used for every other turn. The user cannot select a move and the target cannot execute a move during the effect, but both may switch out. If the user switches out, the target remains unable to execute a move during that turn. If the target switches out, the user uses this move again automatically, and if it had 0 PP at the time, it becomes 63. If the user or the target switch out, or the user is prevented from moving, the effect ends. This move can prevent the target from moving even if it has type immunity, but will not deal damage.",

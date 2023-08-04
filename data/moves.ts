@@ -24286,6 +24286,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
+	recoilshot: {
+		accuracy: 90,
+		basePower: 140,
+		category: "Special",
+		name: "Recoil Shot",
+		pp: 5,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				accuracy: -2,
+			},
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
 	lemons: {
 		accuracy: 95,
 		basePower: 4,
