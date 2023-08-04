@@ -9922,6 +9922,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	genine: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	hofucyea: {
 		tier: "Illegal",
 		isNonstandard: "Future",
