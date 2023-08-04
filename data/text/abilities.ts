@@ -3182,15 +3182,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	compensate: {
 		name: "Compensate",
-		shortDesc: "This Pokemon's Attack is boosted by 25% of the higher of its's unboosted, unmodified Defense or Speed",
+		shortDesc: "This Pokemon's Attack is boosted by 25% of the higher of its unboosted, unmodified Defense or Speed",
 	},
 	dexterity: {
 		name: "Dexterity",
-		shortDesc: "This Pokemon's Attack is boosted by 25% of its's unboosted, unmodified Speed",
+		shortDesc: "This Pokemon's Attack is boosted by 25% of its unboosted, unmodified Speed",
 	},
 	vindication: {
 		name: "Vindication",
-		shortDesc: "This Pokemon's Attack is boosted by 25% of its's unboosted, unmodified Defense",
+		shortDesc: "This Pokemon's Attack is boosted by 25% of its unboosted, unmodified Defense",
 	},
 	ascension: {
 		name: "Ascension",
