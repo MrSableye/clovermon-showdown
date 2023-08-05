@@ -28,7 +28,6 @@ import type {Punishment} from './punishments';
 import type {PartialModlogEntry} from './modlog';
 import {FriendsDatabase, PM} from './friends';
 import {BadgesDatabase} from './badges';
-import {DiscordClient} from './discord';
 import {SQL, Repl, FS, Utils} from '../lib';
 import * as Artemis from './artemis';
 import {Dex} from '../sim';
@@ -1523,7 +1522,6 @@ export const Chat = new class {
 	readonly MAX_TIMEOUT_DURATION = 2147483647;
 	readonly Friends = new FriendsDatabase();
 	readonly Badges = new BadgesDatabase();
-	readonly Discord = new DiscordClient();
 	readonly PM = PM;
 
 	readonly multiLinePattern = new PatternTester();
