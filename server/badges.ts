@@ -92,7 +92,7 @@ export class BadgesDatabase {
 		for (const k in ACTIONS) {
 			try {
 				statements[k] = database.prepare(ACTIONS[k as keyof typeof ACTIONS]);
-			} catch (e) {
+			} catch (e: any) {
 				throw new Error(`Badges DB statement crashed: ${ACTIONS[k as keyof typeof ACTIONS]} (${e.message})`);
 			}
 		}
@@ -492,7 +492,7 @@ export const PM = new ProcessManager.QueryProcessManager<DatabaseRequest, Databa
 			result.result = statements[statement].all(data);
 			break;
 		}
-	} catch (e) {
+	} catch (e: any) {
 		if (!e.name.endsWith('FailureMessage')) {
 			result.error = "Sorry! The database process crashed. We've been notified and will fix this.";
 			Monitor.crashlog(e, "A badges database process", query);

@@ -2711,7 +2711,7 @@ export const commands: Chat.ChatCommands = {
 		let rawResult;
 		try {
 			rawResult = await Net(`https://${Config.routes.root}/users/${target}.json`).get(); // TODO: Remove clover hack!!
-		} catch (e) {
+		} catch (e: any) {
 			if (e.message.includes('Not found')) throw new Chat.ErrorMessage(`User '${target}' is unregistered.`);
 			throw new Chat.ErrorMessage(e.message);
 		}
