@@ -36,6 +36,7 @@
     "start": "node pokemon-showdown start",
     "build": "node build",
     "tsc": "tsc",
+    "tsc-skip-lib-check": "tsc --SkipLibCheck",
     "fast-lint": "eslint . --config .eslintrc-no-types.json --cache --cache-location .eslintcache-no-types --ext .js,.ts,.tsx",
     "lint": "eslint . --cache --ext .js,.ts,.tsx --max-warnings 0",
     "fix": "eslint . --cache --ext .js,.ts,.tsx --fix",
