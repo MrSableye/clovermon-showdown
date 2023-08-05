@@ -16553,7 +16553,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Sheriff Hat",
 		spritenum: 0,
 		onModifyPriority(priority, source, target, move) {
-			if (source.activeMoveActions <= 1) {
+			if (source.activeMoveActions == 0) {
 				return priority + 1;
 			}
 		},
