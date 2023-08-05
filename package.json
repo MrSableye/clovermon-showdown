@@ -6,7 +6,7 @@
   "dependencies": {
     "@swc/core": "1.2.205",
     "axios": "^0.21.1",
-    "discord.js": "^14.9.0",
+    "discord.js": "^14.8.0",
     "esbuild": "^0.16.10",
     "parse-color": "^1.0.0",
     "preact": "^10.5.15",
