@@ -21,7 +21,6 @@
     "exclude": [
         "./.*-dist/**/*",
         "./server/chat-plugins/private/*/*.d.ts",
-        "./node_modules/**/*"
     ],
     "include": [
         "./config/*.ts",
