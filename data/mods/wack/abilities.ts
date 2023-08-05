@@ -39,8 +39,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onImmunity(type, pokemon) {
 			if (type === 'acidrain') return false;
 		},
-		desc: "If this Pokemon is poisoned, it restores 1/8 of its maximum HP, rounded down, at the end of each turn instead of losing HP. Also heals 1/14 of its maximum HP on Acid Rain.",
-		shortDesc: "Heals 1/8 if psn and 1/14 if Acid Rain.",
+		onDamage() {},
+		desc: "This Pokemon heals 1/14 of its maximum HP in Acid Rain.",
+		shortDesc: "Heals 1/14 in Acid Rain.",
 		isNonstandard: null,
 	},
 	immunity: {
@@ -101,7 +102,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (this.field.isWeather('sandstorm')) {
 				if (typeof accuracy !== 'number') return;
 				this.debug('Forecast - decreasing accuracy');
-				return this.chainModify(1.2);
+				return this.chainModify(0.8);
 			}
 		},
 		desc: "If Hail is active, heal 1/16 of the Pokemon's HP. If Sunny Day or Rain Dance is active, boost speed by 2. If this Pokemon is a Castform, its type changes to the current weather condition's type, except Sandstorm. This effect is prevented if this Pokemon is holding a Utility Umbrella and the weather is Rain Dance or Sunny Day.",
@@ -299,6 +300,259 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		shortDesc: "Prevents Defense stat drop. Boosts beak-like attacks.",
 	},
+	damp: {
+		inherit: true,
+		onAnyDamage(damage, target, source, effect) {
+			if (effect && (effect.name === 'Aftermath' || effect.name === 'C4')) {
+				return false;
+			}
+		},
+		desc: "While this Pokemon is active, Explosion, Mind Blown, Misty Explosion, Self-Destruct, the Aftermath Ability and the C4 item are prevented from having an effect.",
+		shortDesc: "Prevents Explosion/Mind Blown/Misty Explosion/Self-Destruct/Aftermath/C4 while active.",
+	},
+	gluttony: {
+		inherit: true,
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Food') {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Gluttony');
+				}
+				return null;
+			}
+		},
+		isBreakable: true,
+		desc: "This Pokemon is immune to Food-type and heals 1/4 max HP when hit by a Food-type move. When this Pokemon is holding a Berry that usually activates with 1/4 or less of its maximum HP, it is eaten at 1/2 or less of its maximum HP instead.",
+		shortDesc: "Immune and heals 1/4 max HP to Food-type moves. Eats Berries at 1/2 max HP or less instead of their usual 1/4 max HP.",
+	},
+	oblivious: {
+		inherit: true,
+		onUpdate(pokemon) {
+			if (pokemon.volatiles['attract']) {
+				pokemon.removeVolatile('attract');
+				this.add('-end', pokemon, 'move: Attract', '[from] ability: Oblivious');
+			}
+		},
+		onTryHit(pokemon, target, move) {
+			if (move.id === 'captivate') {
+				this.add('-immune', pokemon, '[from] Oblivious');
+				return null;
+			}
+		},
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Heart') {
+				this.debug('Oblivious weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Heart') {
+				this.debug('Oblivious weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onBoost() {},
+		desc: "If a Pokemon uses a Heart-type attack against this Pokemon, that Pokemon's offensive stat is halved when calculating the damage to this Pokemon. It cannot be infatuated or taunted. Gaining this Ability while infatuated or taunted cures it.",
+		shortDesc: "Heart-type moves deals halved damage. This Pokemon cannot be infatuated or taunted. Immune to Intimidate.",
+	},
+	overgrow: {
+		inherit: true,
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Grass' && attacker.hp <= attacker.maxhp / 2) {
+				this.debug('Overgrow boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Grass' && attacker.hp <= attacker.maxhp / 2) {
+				this.debug('Overgrow boost');
+				return this.chainModify(1.5);
+			}
+		},
+		desc: "When this Pokemon has 1/2 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.5 while using a Grass-type attack.",
+		shortDesc: "At 1/2 or less of its max HP, this Pokemon's offensive stat is 1.5x with Grass attacks.",
+	},
+	blaze: {
+		inherit: true,
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fire' && attacker.hp <= attacker.maxhp / 2) {
+				this.debug('Blaze boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fire' && attacker.hp <= attacker.maxhp / 2) {
+				this.debug('Blaze boost');
+				return this.chainModify(1.5);
+			}
+		},
+		desc: "When this Pokemon has 1/2 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.5 while using a Fire-type attack.",
+		shortDesc: "At 1/2 or less of its max HP, this Pokemon's offensive stat is 1.5x with Fire attacks.",
+	},
+	torrent: {
+		inherit: true,
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Water' && attacker.hp <= attacker.maxhp / 2) {
+				this.debug('Torrent boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Water' && attacker.hp <= attacker.maxhp / 2) {
+				this.debug('Torrent boost');
+				return this.chainModify(1.5);
+			}
+		},
+		desc: "When this Pokemon has 1/2 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.5 while using a Water-type attack.",
+		shortDesc: "At 1/2 or less of its max HP, this Pokemon's offensive stat is 1.5x with Water attacks.",
+	},
+	swarm: {
+		inherit: true,
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Bug' && attacker.hp <= attacker.maxhp / 2) {
+				this.debug('Swarm boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Bug' && attacker.hp <= attacker.maxhp / 2) {
+				this.debug('Swarm boost');
+				return this.chainModify(1.5);
+			}
+		},
+		desc: "When this Pokemon has 1/2 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.5 while using a Bug-type attack.",
+		shortDesc: "At 1/2 or less of its max HP, this Pokemon's offensive stat is 1.5x with Bug attacks.",
+	},
+	solarpower: {
+		inherit: true,
+		onWeather(target, source, effect) {
+			if (target.hasItem('utilityumbrella')) return;
+			if (effect.id === 'sunnyday' || effect.id === 'desolateland') {
+				this.damage(target.baseMaxhp / 14, target, target);
+			}
+		},
+		desc: "If Sunny Day is active, this Pokemon's Special Attack is multiplied by 1.5 and it loses 1/14 of its maximum HP, rounded down, at the end of each turn. These effects are prevented if the Pokemon is holding a Utility Umbrella.",
+		shortDesc: "If Sunny Day is active, this Pokemon's Sp. Atk is 1.5x; loses 1/14 max HP per turn.",
+	},
+	quickfeet: {
+		inherit: true,
+		onModifySpe(spe, pokemon) {
+			if (pokemon.status) {
+				return this.chainModify(2);
+			}
+		},
+		desc: "If this Pokemon has a non-volatile status condition, its Speed is multiplied by 2. This Pokemon ignores the paralysis effect of halving Speed.",
+		shortDesc: "If this Pokemon is statused, its Speed is doubled; ignores Speed drop from paralysis.",
+	},
+	slowstart: {
+		inherit: true,
+		condition: {
+			duration: 3,
+			onResidualOrder: 28,
+			onResidualSubOrder: 2,
+			onStart(target) {
+				this.add('-start', target, 'ability: Slow Start');
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, pokemon) {
+				return this.chainModify(0.5);
+			},
+			onModifySpe(spe, pokemon) {
+				return this.chainModify(0.5);
+			},
+			onEnd(target) {
+				this.add('-end', target, 'Slow Start');
+			},
+		},
+		shortDesc: "On switch-in, this Pokemon's Attack and Speed are halved for 3 turns.",
+	},
+	weakarmor: {
+		inherit: true,
+		onDamagingHit(damage, target, source, move) {
+			if (move.category === 'Physical') {
+				this.boost({def: -1, spe: 1}, target, target);
+			}
+		},
+		desc: "If a physical attack hits this Pokemon, its Defense is lowered by 1 stage and its Speed is raised by 1 stage.",
+		shortDesc: "If a physical attack hits this Pokemon, Defense is lowered by 1, Speed is raised by 1.",
+	},
+	wonderskin: {
+		inherit: true,
+		onModifyAccuracy(accuracy, target, source, move) {
+			if (move.category === 'Status' && typeof accuracy === 'number') {
+				this.debug('Wonder Skin - decreasing accuracy');
+				return this.chainModify(0.5);
+			}
+		},
+		desc: "Non-damaging moves that check accuracy have their accuracy changed to 50% of it when used against this Pokemon. This effect comes before other effects that modify accuracy.",
+		shortDesc: "Status moves with accuracy checks are halved when used on this Pokemon.",
+	},
+	justified: {
+		inherit: true,
+		onDamagingHit(damage, target, source, move) {
+			if (['Dark','Chaos'].includes(move.type)) {
+				this.boost({atk: 1});
+			}
+		},
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Chaos') {
+				this.debug('Justified weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Chaos') {
+				this.debug('Justified weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		shortDesc: "Halves Chaos damage. +1 Atk stage after it is damaged by a Dark- or Chaos-type move.",
+	},
+	rattled: {
+		inherit: true,
+		onDamagingHit(damage, target, source, move) {
+			if (['Dark', 'Bug', 'Ghost', 'Fear'].includes(move.type)) {
+				this.boost({spe: 1});
+			}
+		},
+		onAfterBoost() {},
+		desc: "This Pokemon's Speed is raised by 1 stage if hit by a Bug-, Dark-, Fear- or Ghost-type attack.",
+		shortDesc: "Speed is raised 1 stage if hit by a Bug-, Dark-, Fear- or Ghost-type attack.",
+	},
+	bulletproof: {
+		inherit: true,
+		onTryHit(pokemon, target, move) {
+			if (move.flags['bullet'] || move.flags['bomb']) {
+				this.add('-immune', pokemon, '[from] ability: Bulletproof');
+				return null;
+			}
+		},
+		shortDesc: "This Pokemon is immune to bullet and bomb moves.",
+	},
+	galewings: {
+		inherit: true,
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.type === 'Flying') return priority + 1;
+		},
+		shortDesc: "This Pokemon Flying-type moves have their priority increased by 1.",
+	},
+	parentalbond: {
+		inherit: true,
+		//Changes made in sim/battle-actions.ts
+		desc: "This Pokemon's damaging moves become multi-hit moves that hit twice. Does not affect multi-hit moves or moves that have multiple targets.",
+		shortDesc: "This Pokemon's damaging moves hit twice.",
+	},
 	// Gen5 vanilla abilities
 	anticipation: {
 		inherit: true,
@@ -325,22 +579,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				this.add('-item', target, target.getItem().name, '[from] ability: Frisk', '[of] ' + pokemon);
 			}
 		},
-	},
-	oblivious: {
-		inherit: true,
-		onUpdate(pokemon) {
-			if (pokemon.volatiles['attract']) {
-				pokemon.removeVolatile('attract');
-				this.add('-end', pokemon, 'move: Attract', '[from] ability: Oblivious');
-			}
-		},
-		onTryHit(pokemon, target, move) {
-			if (move.id === 'captivate') {
-				this.add('-immune', pokemon, '[from] Oblivious');
-				return null;
-			}
-		},
-		rating: 0.5,
 	},
 	sapsipper: {
 		inherit: true,

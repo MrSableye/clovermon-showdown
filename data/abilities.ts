@@ -12336,7 +12336,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	pounce: {
 		onModifyPriority(priority, source, target, move) {
-			if (source.activeMoveActions <= 1) {
+			if (source.activeMoveActions == 0) {
 				return priority + 1;
 			}
 		},
@@ -12711,6 +12711,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePowerPriority: 23,
 		onBasePower(basePower, pokemon, target, move) {
 			if (move.typeChangerBoosted === this.effect) return this.chainModify([5325, 4096]);
+		},
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'recoil') {
+				if (!this.activeMove) throw new Error("Battle.activeMove is null");
+				if (this.activeMove.id !== 'struggle') return null;
+			}
 		},
 		name: "Wacky",
 		rating: 3,

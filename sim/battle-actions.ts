@@ -1712,11 +1712,11 @@ export class BattleActions {
 			const spreadModifier = move.spreadModifier || (this.battle.gameType === 'freeforall' ? 0.5 : 0.75);
 			this.battle.debug('Spread modifier: ' + spreadModifier);
 			baseDamage = this.battle.modify(baseDamage, spreadModifier);
-		} else if (move.multihitType === 'parentalbond' && move.hit > 1) {
-			// Parental Bond modifier
-			const bondModifier = this.battle.gen > 6 ? 0.25 : 0.5;
-			this.battle.debug(`Parental Bond modifier: ${bondModifier}`);
-			baseDamage = this.battle.modify(baseDamage, bondModifier);
+		} else if (move.multihitType === 'parentalbond' && move.hit > 1 && this.battle.format.mod !== 'wack') {
+				// Parental Bond modifier
+				const bondModifier = this.battle.gen > 6 ? 0.25 : 0.5;
+				this.battle.debug(`Parental Bond modifier: ${bondModifier}`);
+				baseDamage = this.battle.modify(baseDamage, bondModifier);
 		}
 
 		// weather modifier
