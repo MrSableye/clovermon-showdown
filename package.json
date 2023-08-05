@@ -6,7 +6,7 @@
   "dependencies": {
     "@swc/core": "1.2.205",
     "axios": "^0.21.1",
-    "discord.js": "14.10.0",
+    "discord.js": "^14.11.0",
     "esbuild": "^0.16.10",
     "parse-color": "^1.0.0",
     "preact": "^10.5.15",
@@ -36,7 +36,6 @@
     "start": "node pokemon-showdown start",
     "build": "node build",
     "tsc": "tsc",
-    "tsc-ci": "tsc --strict false",
     "fast-lint": "eslint . --config .eslintrc-no-types.json --cache --cache-location .eslintcache-no-types --ext .js,.ts,.tsx",
     "lint": "eslint . --cache --ext .js,.ts,.tsx --max-warnings 0",
     "fix": "eslint . --cache --ext .js,.ts,.tsx --fix",

@@ -59,7 +59,7 @@ export class ReadStream {
 		} else {
 			options = optionsOrStreamLike;
 		}
-		if ('nodeStream' in options) {
+		if (options.nodeStream) {
 			const nodeStream: NodeJS.ReadableStream = options.nodeStream;
 			this.nodeReadableStream = nodeStream;
 			nodeStream.on('data', data => {
@@ -80,9 +80,9 @@ export class ReadStream {
 
 		if (options.read) this._read = options.read;
 		if (options.pause) this._pause = options.pause;
-		if ('destroy' in options) this._destroy = options.destroy;
-		if ('encoding' in options) this.encoding = options.encoding;
-		if ('buffer' in options && options.buffer !== undefined) {
+		if (options.destroy) this._destroy = options.destroy;
+		if (options.encoding) this.encoding = options.encoding;
+		if (options.buffer !== undefined) {
 			this.push(options.buffer);
 			this.pushEnd();
 		}
