@@ -35868,7 +35868,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {snatch: 1, dance: 1},
 		boosts: {
 			spa: 1,
-			spd: 1,
+			spe: 1,
 		},
 		secondary: null,
 		target: "self",
@@ -36177,10 +36177,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		boosts: {
-			atk: 1,
-			spa: 1,
-			def: -1,
-			spd: -1,
+			atk: -1,
+			spa: -1,
+			def: 2,
+			spd: 2,
 		},
 		secondary: null,
 		target: "self",
