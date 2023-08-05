@@ -456,6 +456,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	extremeevoboost: {
 		inherit: true,
+		pp: 5,
 		isZ: undefined,
 		isNonstandard: null,
 	},
