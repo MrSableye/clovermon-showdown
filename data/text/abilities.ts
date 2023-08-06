@@ -3467,8 +3467,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	sugarrush: {
 		name: "Sugar Rush",
-		shortDesc: "Raises Speed if hit by a Food-type move.",
-		desc: "Raises Speed if hit by a Food-type move.",
+		shortDesc: "Raises Speed if hit by a Fairy- or Food-type move.",
+		desc: "Raises Speed if hit by a Fairy- or Food-type move.",
 	},
 	vacuum: {
 		name: "Vacuum",

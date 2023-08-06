@@ -718,7 +718,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
@@ -737,7 +737,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
@@ -757,7 +757,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
@@ -777,7 +777,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
@@ -797,7 +797,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
@@ -832,7 +832,7 @@ export const Formats: FormatList = [
 			'Overflow Stat Mod',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 		'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 		'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 		'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
@@ -854,7 +854,7 @@ export const Formats: FormatList = [
 			'Overflow Stat Mod',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 		'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 		'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 		'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',

@@ -15,6 +15,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		// Mold Breaker protection implemented in Battle.suppressingAbility() within sim/battle.ts
 		num: 1881,
 		gen: 9,
+		rating: 1,
 	},
 	abomasite: {
 		name: "Abomasite",
@@ -29,6 +30,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 674,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	absolite: {
 		name: "Absolite",
@@ -43,6 +45,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 677,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	absorbbulb: {
 		name: "Absorb Bulb",
@@ -60,6 +63,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 545,
 		gen: 5,
+		rating: 1,
 	},
 	adamantcrystal: {
 		name: "Adamant Crystal",
@@ -81,6 +85,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1777,
 		gen: 8,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	adamantorb: {
 		name: "Adamant Orb",
@@ -98,6 +103,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 135,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	adrenalineorb: {
 		name: "Adrenaline Orb",
@@ -124,6 +130,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 846,
 		gen: 7,
+		rating: 1,
 	},
 	aerodactylite: {
 		name: "Aerodactylite",
@@ -138,6 +145,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 672,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	aggronite: {
 		name: "Aggronite",
@@ -152,6 +160,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 667,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	aguavberry: {
 		name: "Aguav Berry",
@@ -178,6 +187,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 162,
 		gen: 3,
+		rating: 3,
 	},
 	airballoon: {
 		name: "Air Balloon",
@@ -208,6 +218,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 541,
 		gen: 5,
+		rating: 1,
 	},
 	alakazite: {
 		name: "Alakazite",
@@ -222,6 +233,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 679,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	aloraichiumz: {
 		name: "Aloraichium Z",
@@ -233,6 +245,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 803,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	altarianite: {
 		name: "Altarianite",
@@ -247,6 +260,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 755,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	ampharosite: {
 		name: "Ampharosite",
@@ -261,6 +275,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 658,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	apicotberry: {
 		name: "Apicot Berry",
@@ -281,6 +296,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 205,
 		gen: 3,
+		rating: 1,
 	},
 	armorfossil: {
 		name: "Armor Fossil",
@@ -291,6 +307,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 104,
 		gen: 4,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	aspearberry: {
 		name: "Aspear Berry",
@@ -312,6 +329,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 153,
 		gen: 3,
+		rating: 0,
 	},
 	assaultvest: {
 		name: "Assault Vest",
@@ -332,6 +350,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 640,
 		gen: 6,
+		rating: 3,
 	},
 	audinite: {
 		name: "Audinite",
@@ -346,12 +365,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 757,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	auspiciousarmor: {
 		name: "Auspicious Armor",
 		spritenum: 0, // TODO
 		num: 2344,
 		gen: 9,
+		rating: 1,
 	},
 	babiriberry: {
 		name: "Babiri Berry",
@@ -376,6 +397,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 199,
 		gen: 4,
+		rating: 1,
 	},
 	banettite: {
 		name: "Banettite",
@@ -390,6 +412,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 668,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	beastball: {
 		name: "Beast Ball",
@@ -397,6 +420,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 851,
 		gen: 7,
 		isPokeball: true,
+		rating: -1,
 	},
 	beedrillite: {
 		name: "Beedrillite",
@@ -411,6 +435,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 770,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	belueberry: {
 		name: "Belue Berry",
@@ -424,6 +449,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 183,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	berryjuice: {
 		name: "Berry Juice",
@@ -441,6 +467,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 43,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	berrysweet: {
 		name: "Berry Sweet",
@@ -451,6 +478,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1111,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	bigroot: {
 		name: "Big Root",
@@ -467,6 +495,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 296,
 		gen: 4,
+		rating: 0,
 	},
 	bindingband: {
 		name: "Binding Band",
@@ -477,6 +506,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		// implemented in statuses
 		num: 544,
 		gen: 5,
+		rating: 0,
 	},
 	blackbelt: {
 		name: "Black Belt",
@@ -492,6 +522,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 241,
 		gen: 2,
+		rating: 1,
 	},
 	blackglasses: {
 		name: "Black Glasses",
@@ -507,6 +538,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 240,
 		gen: 2,
+		rating: 1,
 	},
 	blacksludge: {
 		name: "Black Sludge",
@@ -525,6 +557,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 281,
 		gen: 4,
+		rating: 1,
 	},
 	blastoisinite: {
 		name: "Blastoisinite",
@@ -539,6 +572,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 661,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	blazikenite: {
 		name: "Blazikenite",
@@ -553,6 +587,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 664,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	blueorb: {
 		name: "Blue Orb",
@@ -573,6 +608,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 535,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	blukberry: {
 		name: "Bluk Berry",
@@ -586,6 +622,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 165,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	blunderpolicy: {
 		name: "Blunder Policy",
@@ -596,6 +633,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		// Item activation located in scripts.js
 		num: 1121,
 		gen: 8,
+		rating: 1,
 	},
 	boosterenergy: {
 		name: "Booster Energy",
@@ -617,6 +655,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 1880,
 		gen: 9,
+		rating: 1,
 	},
 	bottlecap: {
 		name: "Bottle Cap",
@@ -626,6 +665,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 795,
 		gen: 7,
+		rating: -1,
 	},
 	brightpowder: {
 		name: "Bright Powder",
@@ -641,6 +681,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 213,
 		gen: 2,
+		rating: 1,
 	},
 	buggem: {
 		name: "Bug Gem",
@@ -655,6 +696,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 558,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	bugmemory: {
 		name: "Bug Memory",
@@ -671,6 +713,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 909,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	buginiumz: {
 		name: "Buginium Z",
@@ -683,6 +726,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 787,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	burndrive: {
 		name: "Burn Drive",
@@ -699,6 +743,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 118,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	cameruptite: {
 		name: "Cameruptite",
@@ -713,6 +758,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 767,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	cellbattery: {
 		name: "Cell Battery",
@@ -730,6 +776,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 546,
 		gen: 5,
+		rating: 1,
 	},
 	charcoal: {
 		name: "Charcoal",
@@ -745,6 +792,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 249,
 		gen: 2,
+		rating: 1,
 	},
 	charizarditex: {
 		name: "Charizardite X",
@@ -759,6 +807,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 660,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	charizarditey: {
 		name: "Charizardite Y",
@@ -773,6 +822,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 678,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	chartiberry: {
 		name: "Charti Berry",
@@ -797,6 +847,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 195,
 		gen: 4,
+		rating: 1,
 	},
 	cheriberry: {
 		name: "Cheri Berry",
@@ -818,6 +869,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 149,
 		gen: 3,
+		rating: 0,
 	},
 	cherishball: {
 		name: "Cherish Ball",
@@ -826,6 +878,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 4,
 		isPokeball: true,
 		isNonstandard: "Unobtainable",
+		rating: -1,
 	},
 	chestoberry: {
 		name: "Chesto Berry",
@@ -847,6 +900,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 150,
 		gen: 3,
+		rating: 1,
 	},
 	chilanberry: {
 		name: "Chilan Berry",
@@ -871,6 +925,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 200,
 		gen: 4,
+		rating: 1,
 	},
 	chilldrive: {
 		name: "Chill Drive",
@@ -887,6 +942,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 119,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	chippedpot: {
 		name: "Chipped Pot",
@@ -896,6 +952,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 1254,
 		gen: 8,
+		rating: -1,
 	},
 	choiceband: {
 		name: "Choice Band",
@@ -920,6 +977,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isChoice: true,
 		num: 220,
 		gen: 3,
+		rating: 3,
 	},
 	choicescarf: {
 		name: "Choice Scarf",
@@ -943,6 +1001,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isChoice: true,
 		num: 287,
 		gen: 4,
+		rating: 3,
 	},
 	choicespecs: {
 		name: "Choice Specs",
@@ -967,6 +1026,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isChoice: true,
 		num: 297,
 		gen: 4,
+		rating: 3,
 	},
 	chopleberry: {
 		name: "Chople Berry",
@@ -991,6 +1051,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 189,
 		gen: 4,
+		rating: 1,
 	},
 	clawfossil: {
 		name: "Claw Fossil",
@@ -1001,6 +1062,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 100,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	clearamulet: {
 		name: "Clear Amulet",
@@ -1021,6 +1083,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 1882,
 		gen: 9,
+		rating: 1,
 	},
 	cloversweet: {
 		name: "Clover Sweet",
@@ -1031,6 +1094,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1112,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	cobaberry: {
 		name: "Coba Berry",
@@ -1055,6 +1119,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 192,
 		gen: 4,
+		rating: 1,
 	},
 	colburberry: {
 		name: "Colbur Berry",
@@ -1079,6 +1144,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 198,
 		gen: 4,
+		rating: 1,
 	},
 	cornnberry: {
 		name: "Cornn Berry",
@@ -1092,6 +1158,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 175,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	coverfossil: {
 		name: "Cover Fossil",
@@ -1102,6 +1169,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 572,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	covertcloak: {
 		name: "Covert Cloak",
@@ -1115,6 +1183,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 1885,
 		gen: 9,
+		rating: 1,
 	},
 	crackedpot: {
 		name: "Cracked Pot",
@@ -1124,6 +1193,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 1253,
 		gen: 8,
+		rating: -1,
 	},
 	custapberry: {
 		name: "Custap Berry",
@@ -1150,6 +1220,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 210,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	damprock: {
 		name: "Damp Rock",
@@ -1159,6 +1230,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 285,
 		gen: 4,
+		rating: 1,
 	},
 	darkgem: {
 		name: "Dark Gem",
@@ -1173,6 +1245,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 562,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	darkmemory: {
 		name: "Dark Memory",
@@ -1189,6 +1262,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 919,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	darkiniumz: {
 		name: "Darkinium Z",
@@ -1201,6 +1275,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 791,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	dawnstone: {
 		name: "Dawn Stone",
@@ -1210,6 +1285,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 109,
 		gen: 4,
+		rating: -1,
 	},
 	decidiumz: {
 		name: "Decidium Z",
@@ -1221,6 +1297,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 798,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	deepseascale: {
 		name: "Deep Sea Scale",
@@ -1238,6 +1315,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 227,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	deepseatooth: {
 		name: "Deep Sea Tooth",
@@ -1255,6 +1333,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 226,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	destinyknot: {
 		name: "Destiny Knot",
@@ -1270,6 +1349,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 280,
 		gen: 4,
+		rating: 0,
 	},
 	diancite: {
 		name: "Diancite",
@@ -1284,6 +1364,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 764,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	diveball: {
 		name: "Dive Ball",
@@ -1291,6 +1372,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 7,
 		gen: 3,
 		isPokeball: true,
+		rating: -1,
 	},
 	domefossil: {
 		name: "Dome Fossil",
@@ -1301,6 +1383,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 102,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	dousedrive: {
 		name: "Douse Drive",
@@ -1317,6 +1400,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 116,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	dracoplate: {
 		name: "Draco Plate",
@@ -1338,6 +1422,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 311,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	dragonfang: {
 		name: "Dragon Fang",
@@ -1353,6 +1438,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 250,
 		gen: 2,
+		rating: 2,
 	},
 	dragongem: {
 		name: "Dragon Gem",
@@ -1367,6 +1453,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 561,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	dragonmemory: {
 		name: "Dragon Memory",
@@ -1383,6 +1470,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 918,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	dragonscale: {
 		name: "Dragon Scale",
@@ -1393,6 +1481,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 235,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	dragoniumz: {
 		name: "Dragonium Z",
@@ -1405,6 +1494,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 790,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	dreadplate: {
 		name: "Dread Plate",
@@ -1426,6 +1516,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 312,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	dreamball: {
 		name: "Dream Ball",
@@ -1433,6 +1524,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 576,
 		gen: 5,
 		isPokeball: true,
+		rating: -1,
 	},
 	dubiousdisc: {
 		name: "Dubious Disc",
@@ -1443,6 +1535,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 324,
 		gen: 4,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	durinberry: {
 		name: "Durin Berry",
@@ -1456,6 +1549,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 182,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	duskball: {
 		name: "Dusk Ball",
@@ -1463,6 +1557,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 13,
 		gen: 4,
 		isPokeball: true,
+		rating: -1,
 	},
 	duskstone: {
 		name: "Dusk Stone",
@@ -1472,6 +1567,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 108,
 		gen: 4,
+		rating: -1,
 	},
 	earthplate: {
 		name: "Earth Plate",
@@ -1493,6 +1589,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 305,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	eeviumz: {
 		name: "Eevium Z",
@@ -1504,6 +1601,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 805,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	ejectbutton: {
 		name: "Eject Button",
@@ -1529,6 +1627,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 547,
 		gen: 5,
+		rating: 1,
 	},
 	ejectpack: {
 		name: "Eject Pack",
@@ -1558,6 +1657,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 1119,
 		gen: 8,
+		rating: 1,
 	},
 	electirizer: {
 		name: "Electirizer",
@@ -1568,6 +1668,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 322,
 		gen: 4,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	electricgem: {
 		name: "Electric Gem",
@@ -1583,6 +1684,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 550,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	electricmemory: {
 		name: "Electric Memory",
@@ -1599,6 +1701,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 915,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	electricseed: {
 		name: "Electric Seed",
@@ -1621,6 +1724,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 881,
 		gen: 7,
+		rating: 1,
 	},
 	electriumz: {
 		name: "Electrium Z",
@@ -1633,6 +1737,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 779,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	enigmaberry: {
 		name: "Enigma Berry",
@@ -1656,6 +1761,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 208,
 		gen: 3,
 		isNonstandard: "Unobtainable",
+		rating: 0,
 	},
 	eviolite: {
 		name: "Eviolite",
@@ -1677,6 +1783,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 538,
 		gen: 5,
+		rating: 3,
 	},
 	expertbelt: {
 		name: "Expert Belt",
@@ -1691,6 +1798,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 268,
 		gen: 4,
+		rating: 3,
 	},
 	fairiumz: {
 		name: "Fairium Z",
@@ -1703,6 +1811,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 793,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	fairygem: {
 		name: "Fairy Gem",
@@ -1717,6 +1826,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 715,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	fairymemory: {
 		name: "Fairy Memory",
@@ -1733,6 +1843,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 920,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	fastball: {
 		name: "Fast Ball",
@@ -1740,6 +1851,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 492,
 		gen: 2,
 		isPokeball: true,
+		rating: -1,
 	},
 	fightinggem: {
 		name: "Fighting Gem",
@@ -1754,6 +1866,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 553,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	fightingmemory: {
 		name: "Fighting Memory",
@@ -1770,6 +1883,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 904,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	fightiniumz: {
 		name: "Fightinium Z",
@@ -1782,6 +1896,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 782,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	figyberry: {
 		name: "Figy Berry",
@@ -1808,6 +1923,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 159,
 		gen: 3,
+		rating: 3,
 	},
 	firegem: {
 		name: "Fire Gem",
@@ -1823,6 +1939,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 548,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	firememory: {
 		name: "Fire Memory",
@@ -1839,6 +1956,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 912,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	firestone: {
 		name: "Fire Stone",
@@ -1848,6 +1966,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 82,
 		gen: 1,
+		rating: -1,
 	},
 	firiumz: {
 		name: "Firium Z",
@@ -1860,6 +1979,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 777,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	fistplate: {
 		name: "Fist Plate",
@@ -1881,6 +2001,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 303,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	flameorb: {
 		name: "Flame Orb",
@@ -1896,6 +2017,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 273,
 		gen: 4,
+		rating: 1,
 	},
 	flameplate: {
 		name: "Flame Plate",
@@ -1917,6 +2039,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 298,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	floatstone: {
 		name: "Float Stone",
@@ -1929,6 +2052,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 539,
 		gen: 5,
+		rating: 0,
 	},
 	flowersweet: {
 		name: "Flower Sweet",
@@ -1939,6 +2063,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1113,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	flyinggem: {
 		name: "Flying Gem",
@@ -1953,6 +2078,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 556,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 3,
 	},
 	flyingmemory: {
 		name: "Flying Memory",
@@ -1969,6 +2095,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 905,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	flyiniumz: {
 		name: "Flyinium Z",
@@ -1981,6 +2108,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 785,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	focusband: {
 		name: "Focus Band",
@@ -1997,6 +2125,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 230,
 		gen: 2,
+		rating: 0,
 	},
 	focussash: {
 		name: "Focus Sash",
@@ -2014,6 +2143,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 275,
 		gen: 4,
+		rating: 3,
 	},
 	fossilizedbird: {
 		name: "Fossilized Bird",
@@ -2024,6 +2154,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1105,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	fossilizeddino: {
 		name: "Fossilized Dino",
@@ -2034,6 +2165,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1108,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	fossilizeddrake: {
 		name: "Fossilized Drake",
@@ -2044,6 +2176,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1107,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	fossilizedfish: {
 		name: "Fossilized Fish",
@@ -2054,6 +2187,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1106,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	friendball: {
 		name: "Friend Ball",
@@ -2061,6 +2195,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 497,
 		gen: 2,
 		isPokeball: true,
+		rating: -1,
 	},
 	fullincense: {
 		name: "Full Incense",
@@ -2072,6 +2207,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 316,
 		gen: 4,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	galaricacuff: {
 		name: "Galarica Cuff",
@@ -2082,6 +2218,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1582,
 		gen: 8,
 		isNonstandard: "Unobtainable",
+		rating: -1,
 	},
 	galaricawreath: {
 		name: "Galarica Wreath",
@@ -2092,6 +2229,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1592,
 		gen: 8,
 		isNonstandard: "Unobtainable",
+		rating: -1,
 	},
 	galladite: {
 		name: "Galladite",
@@ -2106,6 +2244,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 756,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	ganlonberry: {
 		name: "Ganlon Berry",
@@ -2126,6 +2265,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 202,
 		gen: 3,
+		rating: 1,
 	},
 	garchompite: {
 		name: "Garchompite",
@@ -2140,6 +2280,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 683,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	gardevoirite: {
 		name: "Gardevoirite",
@@ -2154,6 +2295,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 657,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	gengarite: {
 		name: "Gengarite",
@@ -2168,6 +2310,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 656,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	ghostgem: {
 		name: "Ghost Gem",
@@ -2182,6 +2325,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 560,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	ghostmemory: {
 		name: "Ghost Memory",
@@ -2198,6 +2342,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 910,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	ghostiumz: {
 		name: "Ghostium Z",
@@ -2210,6 +2355,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 789,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	glalitite: {
 		name: "Glalitite",
@@ -2224,6 +2370,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 763,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	goldbottlecap: {
 		name: "Gold Bottle Cap",
@@ -2233,6 +2380,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 796,
 		gen: 7,
+		rating: -1,
 	},
 	grassgem: {
 		name: "Grass Gem",
@@ -2248,6 +2396,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 551,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	grassmemory: {
 		name: "Grass Memory",
@@ -2264,6 +2413,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 914,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	grassiumz: {
 		name: "Grassium Z",
@@ -2276,6 +2426,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 780,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	grassyseed: {
 		name: "Grassy Seed",
@@ -2298,6 +2449,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 884,
 		gen: 7,
+		rating: 1,
 	},
 	greatball: {
 		name: "Great Ball",
@@ -2305,6 +2457,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 3,
 		gen: 1,
 		isPokeball: true,
+		rating: -1,
 	},
 	grepaberry: {
 		name: "Grepa Berry",
@@ -2317,6 +2470,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat: false,
 		num: 173,
 		gen: 3,
+		rating: 1,
 	},
 	gripclaw: {
 		name: "Grip Claw",
@@ -2327,6 +2481,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		// implemented in statuses
 		num: 286,
 		gen: 4,
+		rating: 1,
 	},
 	griseouscore: {
 		name: "Griseous Core",
@@ -2348,6 +2503,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1779,
 		gen: 8,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	griseousorb: {
 		name: "Griseous Orb",
@@ -2365,6 +2521,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 112,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	groundgem: {
 		name: "Ground Gem",
@@ -2379,6 +2536,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 555,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	groundmemory: {
 		name: "Ground Memory",
@@ -2395,6 +2553,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 907,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	groundiumz: {
 		name: "Groundium Z",
@@ -2407,6 +2566,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 784,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	gyaradosite: {
 		name: "Gyaradosite",
@@ -2421,6 +2581,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 676,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	habanberry: {
 		name: "Haban Berry",
@@ -2445,6 +2606,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 197,
 		gen: 4,
+		rating: 1,
 	},
 	hardstone: {
 		name: "Hard Stone",
@@ -2460,6 +2622,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 238,
 		gen: 2,
+		rating: 1,
 	},
 	healball: {
 		name: "Heal Ball",
@@ -2467,6 +2630,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 14,
 		gen: 4,
 		isPokeball: true,
+		rating: -1,
 	},
 	heatrock: {
 		name: "Heat Rock",
@@ -2476,6 +2640,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 284,
 		gen: 4,
+		rating: 1,
 	},
 	heavyball: {
 		name: "Heavy Ball",
@@ -2483,6 +2648,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 495,
 		gen: 2,
 		isPokeball: true,
+		rating: -1,
 	},
 	heavydutyboots: {
 		name: "Heavy-Duty Boots",
@@ -2493,6 +2659,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1120,
 		gen: 8,
 		// Hazard Immunity implemented in moves.ts
+		rating: 3,
 	},
 	helixfossil: {
 		name: "Helix Fossil",
@@ -2503,6 +2670,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 101,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	heracronite: {
 		name: "Heracronite",
@@ -2517,6 +2685,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 680,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	hondewberry: {
 		name: "Hondew Berry",
@@ -2529,6 +2698,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat: false,
 		num: 172,
 		gen: 3,
+		rating: -1,
 	},
 	houndoominite: {
 		name: "Houndoominite",
@@ -2543,6 +2713,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 666,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	iapapaberry: {
 		name: "Iapapa Berry",
@@ -2569,6 +2740,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 163,
 		gen: 3,
+		rating: 3,
 	},
 	icegem: {
 		name: "Ice Gem",
@@ -2583,6 +2755,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 552,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	icememory: {
 		name: "Ice Memory",
@@ -2599,6 +2772,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 917,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	icestone: {
 		name: "Ice Stone",
@@ -2608,6 +2782,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 849,
 		gen: 7,
+		rating: -1,
 	},
 	icicleplate: {
 		name: "Icicle Plate",
@@ -2629,6 +2804,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 302,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	iciumz: {
 		name: "Icium Z",
@@ -2641,6 +2817,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 781,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	icyrock: {
 		name: "Icy Rock",
@@ -2650,6 +2827,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 282,
 		gen: 4,
+		rating: 1,
 	},
 	inciniumz: {
 		name: "Incinium Z",
@@ -2661,6 +2839,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 799,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	insectplate: {
 		name: "Insect Plate",
@@ -2682,6 +2861,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 308,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	ironball: {
 		name: "Iron Ball",
@@ -2700,6 +2880,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 278,
 		gen: 4,
+		rating: 0,
 	},
 	ironplate: {
 		name: "Iron Plate",
@@ -2721,6 +2902,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 313,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	jabocaberry: {
 		name: "Jaboca Berry",
@@ -2741,6 +2923,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 211,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 0,
 	},
 	jawfossil: {
 		name: "Jaw Fossil",
@@ -2751,6 +2934,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 710,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	kasibberry: {
 		name: "Kasib Berry",
@@ -2775,6 +2959,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 196,
 		gen: 4,
+		rating: 1,
 	},
 	kebiaberry: {
 		name: "Kebia Berry",
@@ -2799,6 +2984,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 190,
 		gen: 4,
+		rating: 1,
 	},
 	keeberry: {
 		name: "Kee Berry",
@@ -2820,6 +3006,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 687,
 		gen: 6,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	kelpsyberry: {
 		name: "Kelpsy Berry",
@@ -2832,6 +3019,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat: false,
 		num: 170,
 		gen: 3,
+		rating: 1,
 	},
 	kangaskhanite: {
 		name: "Kangaskhanite",
@@ -2846,6 +3034,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 675,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	kingsrock: {
 		name: "King's Rock",
@@ -2869,6 +3058,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 221,
 		gen: 2,
+		rating: 1,
 	},
 	kommoniumz: {
 		name: "Kommonium Z",
@@ -2880,6 +3070,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 926,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	laggingtail: {
 		name: "Lagging Tail",
@@ -2890,6 +3081,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onFractionalPriority: -0.1,
 		num: 279,
 		gen: 4,
+		rating: 1,
 	},
 	lansatberry: {
 		name: "Lansat Berry",
@@ -2910,6 +3102,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 206,
 		gen: 3,
+		rating: 1,
 	},
 	latiasite: {
 		name: "Latiasite",
@@ -2924,6 +3117,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 684,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	latiosite: {
 		name: "Latiosite",
@@ -2938,6 +3132,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 685,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	laxincense: {
 		name: "Lax Incense",
@@ -2954,6 +3149,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 255,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	leafstone: {
 		name: "Leaf Stone",
@@ -2963,6 +3159,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 85,
 		gen: 1,
+		rating: -1,
 	},
 	leek: {
 		name: "Leek",
@@ -2979,6 +3176,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 259,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	leftovers: {
 		name: "Leftovers",
@@ -2993,6 +3191,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 234,
 		gen: 2,
+		rating: 3,
 	},
 	leppaberry: {
 		name: "Leppa Berry",
@@ -3018,6 +3217,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 154,
 		gen: 3,
+		rating: 1,
 	},
 	levelball: {
 		name: "Level Ball",
@@ -3025,6 +3225,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 493,
 		gen: 2,
 		isPokeball: true,
+		rating: -1,
 	},
 	liechiberry: {
 		name: "Liechi Berry",
@@ -3045,6 +3246,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 201,
 		gen: 3,
+		rating: 1,
 	},
 	lifeorb: {
 		name: "Life Orb",
@@ -3062,6 +3264,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 270,
 		gen: 4,
+		rating: 3,
 	},
 	lightball: {
 		name: "Light Ball",
@@ -3085,6 +3288,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Pikachu", "Pikachu-Cosplay", "Pikachu-Rock-Star", "Pikachu-Belle", "Pikachu-Pop-Star", "Pikachu-PhD", "Pikachu-Libre", "Pikachu-Original", "Pikachu-Hoenn", "Pikachu-Sinnoh", "Pikachu-Unova", "Pikachu-Kalos", "Pikachu-Alola", "Pikachu-Partner", "Pikachu-Starter", "Pikachu-World"],
 		num: 236,
 		gen: 2,
+		rating: 1,
 	},
 	lightclay: {
 		name: "Light Clay",
@@ -3095,6 +3299,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		// implemented in the corresponding thing
 		num: 269,
 		gen: 4,
+		rating: 1,
 	},
 	loadeddice: {
 		name: "Loaded Dice",
@@ -3107,6 +3312,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 1886,
 		gen: 9,
+		rating: 1,
 	},
 	lopunnite: {
 		name: "Lopunnite",
@@ -3121,6 +3327,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 768,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	loveball: {
 		name: "Love Ball",
@@ -3128,6 +3335,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 496,
 		gen: 2,
 		isPokeball: true,
+		rating: -1,
 	},
 	lovesweet: {
 		name: "Love Sweet",
@@ -3138,6 +3346,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1110,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	lucarionite: {
 		name: "Lucarionite",
@@ -3152,6 +3361,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 673,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	luckypunch: {
 		name: "Lucky Punch",
@@ -3168,6 +3378,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 256,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	lumberry: {
 		name: "Lum Berry",
@@ -3192,6 +3403,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 157,
 		gen: 3,
+		rating: 2,
 	},
 	luminousmoss: {
 		name: "Luminous Moss",
@@ -3209,6 +3421,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 648,
 		gen: 6,
+		rating: 1,
 	},
 	lunaliumz: {
 		name: "Lunalium Z",
@@ -3220,6 +3433,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 922,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	lureball: {
 		name: "Lure Ball",
@@ -3227,6 +3441,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 494,
 		gen: 2,
 		isPokeball: true,
+		rating: -1,
 	},
 	lustrousglobe: {
 		name: "Lustrous Globe",
@@ -3248,6 +3463,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1778,
 		gen: 8,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	lustrousorb: {
 		name: "Lustrous Orb",
@@ -3265,6 +3481,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 136,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	luxuryball: {
 		name: "Luxury Ball",
@@ -3272,6 +3489,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 11,
 		gen: 3,
 		isPokeball: true,
+		rating: -1,
 	},
 	lycaniumz: {
 		name: "Lycanium Z",
@@ -3283,6 +3501,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 925,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	machobrace: {
 		name: "Macho Brace",
@@ -3297,6 +3516,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 215,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: 0,
 	},
 	magmarizer: {
 		name: "Magmarizer",
@@ -3307,6 +3527,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 323,
 		gen: 4,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	magnet: {
 		name: "Magnet",
@@ -3322,6 +3543,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 242,
 		gen: 2,
+		rating: 1,
 	},
 	magoberry: {
 		name: "Mago Berry",
@@ -3348,6 +3570,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 161,
 		gen: 3,
+		rating: 3,
 	},
 	magostberry: {
 		name: "Magost Berry",
@@ -3361,6 +3584,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 176,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	mail: {
 		name: "Mail",
@@ -3372,12 +3596,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 137,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	maliciousarmor: {
 		name: "Malicious Armor",
 		spritenum: 0, // TODO
 		num: 1861,
 		gen: 9,
+		rating: 1,
 	},
 	manectite: {
 		name: "Manectite",
@@ -3392,6 +3618,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 682,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	marangaberry: {
 		name: "Maranga Berry",
@@ -3412,6 +3639,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 688,
 		gen: 6,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	marshadiumz: {
 		name: "Marshadium Z",
@@ -3423,6 +3651,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 802,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	masterball: {
 		name: "Master Ball",
@@ -3430,6 +3659,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1,
 		gen: 1,
 		isPokeball: true,
+		rating: -1,
 	},
 	mawilite: {
 		name: "Mawilite",
@@ -3444,6 +3674,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 681,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	meadowplate: {
 		name: "Meadow Plate",
@@ -3465,6 +3696,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 301,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	medichamite: {
 		name: "Medichamite",
@@ -3479,6 +3711,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 665,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	mentalherb: {
 		name: "Mental Herb",
@@ -3517,6 +3750,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 219,
 		gen: 3,
+		rating: 3,
 	},
 	metagrossite: {
 		name: "Metagrossite",
@@ -3531,6 +3765,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 758,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	metalcoat: {
 		name: "Metal Coat",
@@ -3546,6 +3781,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 233,
 		gen: 2,
+		rating: 1,
 	},
 	metalpowder: {
 		name: "Metal Powder",
@@ -3563,6 +3799,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 257,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	metronome: {
 		name: "Metronome",
@@ -3606,6 +3843,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 277,
 		gen: 4,
+		rating: 1,
 	},
 	mewniumz: {
 		name: "Mewnium Z",
@@ -3617,6 +3855,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 806,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	mewtwonitex: {
 		name: "Mewtwonite X",
@@ -3631,6 +3870,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 662,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	mewtwonitey: {
 		name: "Mewtwonite Y",
@@ -3645,6 +3885,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 663,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	micleberry: {
 		name: "Micle Berry",
@@ -3678,6 +3919,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 209,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	mimikiumz: {
 		name: "Mimikium Z",
@@ -3689,6 +3931,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 924,
 		isNonstandard: "Past",
 		gen: 7,
+		rating: 1,
 	},
 	mindplate: {
 		name: "Mind Plate",
@@ -3710,6 +3953,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 307,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	miracleseed: {
 		name: "Miracle Seed",
@@ -3725,6 +3969,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 239,
 		gen: 2,
+		rating: 1,
 	},
 	mirrorherb: {
 		name: "Mirror Herb",
@@ -3750,6 +3995,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 1883,
 		gen: 9,
+		rating: 1,
 	},
 	mistyseed: {
 		name: "Misty Seed",
@@ -3772,6 +4018,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 883,
 		gen: 7,
+		rating: 1,
 	},
 	moonball: {
 		name: "Moon Ball",
@@ -3779,6 +4026,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 498,
 		gen: 2,
 		isPokeball: true,
+		rating: -1,
 	},
 	moonstone: {
 		name: "Moon Stone",
@@ -3788,6 +4036,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 81,
 		gen: 1,
+		rating: -1,
 	},
 	muscleband: {
 		name: "Muscle Band",
@@ -3803,6 +4052,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 266,
 		gen: 4,
+		rating: 1,
 	},
 	mysticwater: {
 		name: "Mystic Water",
@@ -3818,6 +4068,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 243,
 		gen: 2,
+		rating: 1,
 	},
 	nanabberry: {
 		name: "Nanab Berry",
@@ -3831,6 +4082,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 166,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	nestball: {
 		name: "Nest Ball",
@@ -3838,6 +4090,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 8,
 		gen: 3,
 		isPokeball: true,
+		rating: -1,
 	},
 	netball: {
 		name: "Net Ball",
@@ -3845,6 +4098,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 6,
 		gen: 3,
 		isPokeball: true,
+		rating: -1,
 	},
 	nevermeltice: {
 		name: "Never-Melt Ice",
@@ -3860,6 +4114,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 246,
 		gen: 2,
+		rating: 1,
 	},
 	nomelberry: {
 		name: "Nomel Berry",
@@ -3873,6 +4128,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 178,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	normalgem: {
 		name: "Normal Gem",
@@ -3887,6 +4143,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 564,
 		gen: 5,
+		rating: 2,
 	},
 	normaliumz: {
 		name: "Normalium Z",
@@ -3897,6 +4154,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 776,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	occaberry: {
 		name: "Occa Berry",
@@ -3921,6 +4179,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 184,
 		gen: 4,
+		rating: 1,
 	},
 	oddincense: {
 		name: "Odd Incense",
@@ -3937,6 +4196,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 314,
 		gen: 4,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	oldamber: {
 		name: "Old Amber",
@@ -3947,6 +4207,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 103,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	oranberry: {
 		name: "Oran Berry",
@@ -3969,6 +4230,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 155,
 		gen: 3,
+		rating: 0,
 	},
 	ovalstone: {
 		name: "Oval Stone",
@@ -3978,6 +4240,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 110,
 		gen: 4,
+		rating: -1,
 	},
 	pamtreberry: {
 		name: "Pamtre Berry",
@@ -3991,6 +4254,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 180,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	parkball: {
 		name: "Park Ball",
@@ -3999,6 +4263,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 4,
 		isPokeball: true,
 		isNonstandard: "Unobtainable",
+		rating: -1,
 	},
 	passhoberry: {
 		name: "Passho Berry",
@@ -4023,6 +4288,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 185,
 		gen: 4,
+		rating: 1,
 	},
 	payapaberry: {
 		name: "Payapa Berry",
@@ -4047,6 +4313,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 193,
 		gen: 4,
+		rating: 1,
 	},
 	pechaberry: {
 		name: "Pecha Berry",
@@ -4068,6 +4335,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 151,
 		gen: 3,
+		rating: 0,
 	},
 	persimberry: {
 		name: "Persim Berry",
@@ -4087,6 +4355,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 156,
 		gen: 3,
+		rating: 0,
 	},
 	petayaberry: {
 		name: "Petaya Berry",
@@ -4107,6 +4376,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 204,
 		gen: 3,
+		rating: 1,
 	},
 	pidgeotite: {
 		name: "Pidgeotite",
@@ -4121,6 +4391,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 762,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	pikaniumz: {
 		name: "Pikanium Z",
@@ -4132,6 +4403,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 794,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	pikashuniumz: {
 		name: "Pikashunium Z",
@@ -4143,6 +4415,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 836,
 		isNonstandard: "Past",
 		gen: 7,
+		rating: 1,
 	},
 	pinapberry: {
 		name: "Pinap Berry",
@@ -4156,6 +4429,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 168,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	pinsirite: {
 		name: "Pinsirite",
@@ -4170,6 +4444,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 671,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	pixieplate: {
 		name: "Pixie Plate",
@@ -4191,6 +4466,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 644,
 		gen: 6,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	plumefossil: {
 		name: "Plume Fossil",
@@ -4201,6 +4477,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 573,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	poisonbarb: {
 		name: "Poison Barb",
@@ -4217,6 +4494,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 245,
 		gen: 2,
+		rating: 1,
 	},
 	poisongem: {
 		name: "Poison Gem",
@@ -4231,6 +4509,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 554,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	poisonmemory: {
 		name: "Poison Memory",
@@ -4247,6 +4526,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 906,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	poisoniumz: {
 		name: "Poisonium Z",
@@ -4259,6 +4539,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 783,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	pokeball: {
 		name: "Poke Ball",
@@ -4266,6 +4547,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 4,
 		gen: 1,
 		isPokeball: true,
+		rating: -1,
 	},
 	pomegberry: {
 		name: "Pomeg Berry",
@@ -4278,6 +4560,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat: false,
 		num: 169,
 		gen: 3,
+		rating: -1,
 	},
 	poweranklet: {
 		name: "Power Anklet",
@@ -4291,6 +4574,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 293,
 		gen: 4,
+		rating: 0,
 	},
 	powerband: {
 		name: "Power Band",
@@ -4304,6 +4588,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 292,
 		gen: 4,
+		rating: 0,
 	},
 	powerbelt: {
 		name: "Power Belt",
@@ -4317,6 +4602,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 290,
 		gen: 4,
+		rating: 0,
 	},
 	powerbracer: {
 		name: "Power Bracer",
@@ -4330,6 +4616,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 289,
 		gen: 4,
+		rating: 0,
 	},
 	powerherb: {
 		onChargeMove(pokemon, target, move) {
@@ -4347,6 +4634,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 271,
 		gen: 4,
+		rating: 3,
 	},
 	powerlens: {
 		name: "Power Lens",
@@ -4360,6 +4648,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 291,
 		gen: 4,
+		rating: 0,
 	},
 	powerweight: {
 		name: "Power Weight",
@@ -4373,6 +4662,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 294,
 		gen: 4,
+		rating: 0,
 	},
 	premierball: {
 		name: "Premier Ball",
@@ -4380,6 +4670,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 12,
 		gen: 3,
 		isPokeball: true,
+		rating: -1,
 	},
 	primariumz: {
 		name: "Primarium Z",
@@ -4391,6 +4682,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 800,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	prismscale: {
 		name: "Prism Scale",
@@ -4401,6 +4693,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 537,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	protectivepads: {
 		name: "Protective Pads",
@@ -4411,6 +4704,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		// protective effect handled in Battle#checkMoveMakesContact
 		num: 880,
 		gen: 7,
+		rating: 1,
 	},
 	protector: {
 		name: "Protector",
@@ -4421,6 +4715,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 321,
 		gen: 4,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	psychicgem: {
 		name: "Psychic Gem",
@@ -4435,6 +4730,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 557,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	psychicmemory: {
 		name: "Psychic Memory",
@@ -4451,6 +4747,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 916,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	psychicseed: {
 		name: "Psychic Seed",
@@ -4473,6 +4770,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 882,
 		gen: 7,
+		rating: 1,
 	},
 	psychiumz: {
 		name: "Psychium Z",
@@ -4485,6 +4783,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 786,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	punchingglove: {
 		name: "Punching Glove",
@@ -4502,6 +4801,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 1884,
 		gen: 9,
+		rating: 1,
 	},
 	qualotberry: {
 		name: "Qualot Berry",
@@ -4514,6 +4814,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat: false,
 		num: 171,
 		gen: 3,
+		rating: -1,
 	},
 	quickball: {
 		name: "Quick Ball",
@@ -4521,6 +4822,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 15,
 		gen: 4,
 		isPokeball: true,
+		rating: -1,
 	},
 	quickclaw: {
 		onFractionalPriorityPriority: -2,
@@ -4537,6 +4839,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 217,
 		gen: 2,
+		rating: 1,
 	},
 	quickpowder: {
 		name: "Quick Powder",
@@ -4553,6 +4856,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 274,
 		gen: 4,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	rabutaberry: {
 		name: "Rabuta Berry",
@@ -4566,6 +4870,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 177,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	rarebone: {
 		name: "Rare Bone",
@@ -4575,6 +4880,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 106,
 		gen: 4,
+		rating: -1,
 	},
 	rawstberry: {
 		name: "Rawst Berry",
@@ -4596,6 +4902,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 152,
 		gen: 3,
+		rating: 0,
 	},
 	razorclaw: {
 		name: "Razor Claw",
@@ -4608,6 +4915,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 326,
 		gen: 4,
+		rating: 1,
 	},
 	razorfang: {
 		name: "Razor Fang",
@@ -4632,6 +4940,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 327,
 		gen: 4,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	razzberry: {
 		name: "Razz Berry",
@@ -4645,6 +4954,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 164,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	reapercloth: {
 		name: "Reaper Cloth",
@@ -4655,6 +4965,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 325,
 		gen: 4,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	redcard: {
 		name: "Red Card",
@@ -4677,6 +4988,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 542,
 		gen: 5,
+		rating: 1,
 	},
 	redorb: {
 		name: "Red Orb",
@@ -4697,6 +5009,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 534,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	repeatball: {
 		name: "Repeat Ball",
@@ -4704,6 +5017,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 9,
 		gen: 3,
 		isPokeball: true,
+		rating: -1,
 	},
 	ribbonsweet: {
 		name: "Ribbon Sweet",
@@ -4714,6 +5028,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1115,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	rindoberry: {
 		name: "Rindo Berry",
@@ -4738,6 +5053,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 187,
 		gen: 4,
+		rating: 1,
 	},
 	ringtarget: {
 		name: "Ring Target",
@@ -4748,6 +5064,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onNegateImmunity: false,
 		num: 543,
 		gen: 5,
+		rating: 0,
 	},
 	rockgem: {
 		name: "Rock Gem",
@@ -4762,6 +5079,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 559,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	rockincense: {
 		name: "Rock Incense",
@@ -4778,6 +5096,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 315,
 		gen: 4,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	rockmemory: {
 		name: "Rock Memory",
@@ -4794,6 +5113,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 908,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	rockiumz: {
 		name: "Rockium Z",
@@ -4806,6 +5126,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 788,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	rockyhelmet: {
 		name: "Rocky Helmet",
@@ -4821,6 +5142,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 540,
 		gen: 5,
+		rating: 3,
 	},
 	roomservice: {
 		name: "Room Service",
@@ -4844,6 +5166,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 1122,
 		gen: 8,
+		rating: 1,
 	},
 	rootfossil: {
 		name: "Root Fossil",
@@ -4854,6 +5177,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 99,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	roseincense: {
 		name: "Rose Incense",
@@ -4870,6 +5194,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 318,
 		gen: 4,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	roseliberry: {
 		name: "Roseli Berry",
@@ -4894,6 +5219,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 686,
 		gen: 6,
+		rating: 1,
 	},
 	rowapberry: {
 		name: "Rowap Berry",
@@ -4914,6 +5240,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 212,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 0,
 	},
 	rustedshield: {
 		name: "Rusted Shield",
@@ -4928,6 +5255,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1104,
 		gen: 8,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	rustedsword: {
 		name: "Rusted Sword",
@@ -4942,6 +5270,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1103,
 		gen: 8,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	sablenite: {
 		name: "Sablenite",
@@ -4956,6 +5285,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 754,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	sachet: {
 		name: "Sachet",
@@ -4966,6 +5296,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 647,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	safariball: {
 		name: "Safari Ball",
@@ -4974,6 +5305,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 1,
 		isPokeball: true,
 		isNonstandard: "Unobtainable",
+		rating: -1,
 	},
 	safetygoggles: {
 		name: "Safety Goggles",
@@ -4992,6 +5324,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 650,
 		gen: 6,
+		rating: 1,
 	},
 	sailfossil: {
 		name: "Sail Fossil",
@@ -5002,6 +5335,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 711,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	salacberry: {
 		name: "Salac Berry",
@@ -5022,6 +5356,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 203,
 		gen: 3,
+		rating: 3,
 	},
 	salamencite: {
 		name: "Salamencite",
@@ -5036,6 +5371,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 769,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	sceptilite: {
 		name: "Sceptilite",
@@ -5050,6 +5386,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 753,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	scizorite: {
 		name: "Scizorite",
@@ -5064,6 +5401,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 670,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	scopelens: {
 		name: "Scope Lens",
@@ -5076,6 +5414,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 232,
 		gen: 2,
+		rating: 1,
 	},
 	seaincense: {
 		name: "Sea Incense",
@@ -5092,6 +5431,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 254,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	sharpbeak: {
 		name: "Sharp Beak",
@@ -5107,6 +5447,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 244,
 		gen: 2,
+		rating: 1,
 	},
 	sharpedonite: {
 		name: "Sharpedonite",
@@ -5121,6 +5462,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 759,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	shedshell: {
 		name: "Shed Shell",
@@ -5134,6 +5476,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 295,
 		gen: 4,
+		rating: 1,
 	},
 	shellbell: {
 		name: "Shell Bell",
@@ -5149,6 +5492,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 253,
 		gen: 3,
+		rating: 1,
 	},
 	shinystone: {
 		name: "Shiny Stone",
@@ -5158,6 +5502,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 107,
 		gen: 4,
+		rating: -1,
 	},
 	shockdrive: {
 		name: "Shock Drive",
@@ -5174,6 +5519,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 117,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	shucaberry: {
 		name: "Shuca Berry",
@@ -5198,6 +5544,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 191,
 		gen: 4,
+		rating: 1,
 	},
 	silkscarf: {
 		name: "Silk Scarf",
@@ -5213,6 +5560,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 251,
 		gen: 3,
+		rating: 1,
 	},
 	silverpowder: {
 		name: "Silver Powder",
@@ -5228,6 +5576,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 222,
 		gen: 2,
+		rating: 1,
 	},
 	sitrusberry: {
 		name: "Sitrus Berry",
@@ -5250,6 +5599,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 158,
 		gen: 3,
+		rating: 2,
 	},
 	skullfossil: {
 		name: "Skull Fossil",
@@ -5260,6 +5610,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 105,
 		gen: 4,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	skyplate: {
 		name: "Sky Plate",
@@ -5281,6 +5632,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 306,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	slowbronite: {
 		name: "Slowbronite",
@@ -5295,6 +5647,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 760,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	smoothrock: {
 		name: "Smooth Rock",
@@ -5304,6 +5657,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 283,
 		gen: 4,
+		rating: 1,
 	},
 	snorliumz: {
 		name: "Snorlium Z",
@@ -5315,6 +5669,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 804,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	snowball: {
 		name: "Snowball",
@@ -5332,6 +5687,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 649,
 		gen: 6,
+		rating: 1,
 	},
 	softsand: {
 		name: "Soft Sand",
@@ -5347,6 +5703,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 237,
 		gen: 2,
+		rating: 1,
 	},
 	solganiumz: {
 		name: "Solganium Z",
@@ -5358,6 +5715,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 921,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	souldew: {
 		name: "Soul Dew",
@@ -5378,6 +5736,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 225,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	spelltag: {
 		name: "Spell Tag",
@@ -5393,6 +5752,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 247,
 		gen: 2,
+		rating: 1,
 	},
 	spelonberry: {
 		name: "Spelon Berry",
@@ -5406,6 +5766,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 179,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	splashplate: {
 		name: "Splash Plate",
@@ -5427,6 +5788,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 299,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	spookyplate: {
 		name: "Spooky Plate",
@@ -5448,6 +5810,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 310,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	sportball: {
 		name: "Sport Ball",
@@ -5456,6 +5819,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 2,
 		isPokeball: true,
 		isNonstandard: "Unobtainable",
+		rating: -1,
 	},
 	starfberry: {
 		name: "Starf Berry",
@@ -5488,6 +5852,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 207,
 		gen: 3,
+		rating: 1,
 	},
 	starsweet: {
 		name: "Star Sweet",
@@ -5498,6 +5863,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1114,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	steelixite: {
 		name: "Steelixite",
@@ -5512,6 +5878,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 761,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	steelgem: {
 		name: "Steel Gem",
@@ -5526,6 +5893,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 563,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	steelmemory: {
 		name: "Steel Memory",
@@ -5542,6 +5910,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 911,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	steeliumz: {
 		name: "Steelium Z",
@@ -5554,6 +5923,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 792,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	stick: {
 		name: "Stick",
@@ -5570,6 +5940,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 259,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	stickybarb: {
 		name: "Sticky Barb",
@@ -5592,6 +5963,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 288,
 		gen: 4,
+		rating: 1,
 	},
 	stoneplate: {
 		name: "Stone Plate",
@@ -5613,6 +5985,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 309,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	strangeball: {
 		name: "Strange Ball",
@@ -5621,6 +5994,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isPokeball: true,
 		isNonstandard: "Unobtainable",
+		rating: -1,
 	},
 	strawberrysweet: {
 		name: "Strawberry Sweet",
@@ -5631,6 +6005,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1109,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	sunstone: {
 		name: "Sun Stone",
@@ -5640,6 +6015,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 80,
 		gen: 2,
+		rating: -1,
 	},
 	swampertite: {
 		name: "Swampertite",
@@ -5654,6 +6030,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 752,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	sweetapple: {
 		name: "Sweet Apple",
@@ -5663,6 +6040,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 1116,
 		gen: 8,
+		rating: -1,
 	},
 	tamatoberry: {
 		name: "Tamato Berry",
@@ -5675,6 +6053,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat: false,
 		num: 174,
 		gen: 3,
+		rating: -1,
 	},
 	tangaberry: {
 		name: "Tanga Berry",
@@ -5699,6 +6078,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 194,
 		gen: 4,
+		rating: 1,
 	},
 	tapuniumz: {
 		name: "Tapunium Z",
@@ -5710,6 +6090,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 801,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	tartapple: {
 		name: "Tart Apple",
@@ -5719,6 +6100,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 1117,
 		gen: 8,
+		rating: -1,
 	},
 	terrainextender: {
 		name: "Terrain Extender",
@@ -5728,6 +6110,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 879,
 		gen: 7,
+		rating: 1,
 	},
 	thickclub: {
 		name: "Thick Club",
@@ -5745,6 +6128,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 258,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	throatspray: {
 		name: "Throat Spray",
@@ -5762,6 +6146,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 1118,
 		gen: 8,
+		rating: 1,
 	},
 	thunderstone: {
 		name: "Thunder Stone",
@@ -5771,6 +6156,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 83,
 		gen: 1,
+		rating: -1,
 	},
 	timerball: {
 		name: "Timer Ball",
@@ -5778,6 +6164,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 10,
 		gen: 3,
 		isPokeball: true,
+		rating: -1,
 	},
 	toxicorb: {
 		name: "Toxic Orb",
@@ -5793,6 +6180,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 272,
 		gen: 4,
+		rating: 1,
 	},
 	toxicplate: {
 		name: "Toxic Plate",
@@ -5814,6 +6202,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 304,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	tr00: {
 		name: "TR00",
@@ -5824,6 +6213,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1130,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr01: {
 		name: "TR01",
@@ -5834,6 +6224,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1131,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr02: {
 		name: "TR02",
@@ -5844,6 +6235,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1132,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr03: {
 		name: "TR03",
@@ -5854,6 +6246,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1133,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr04: {
 		name: "TR04",
@@ -5864,6 +6257,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1134,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr05: {
 		name: "TR05",
@@ -5874,6 +6268,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1135,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr06: {
 		name: "TR06",
@@ -5884,6 +6279,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1136,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr07: {
 		name: "TR07",
@@ -5894,6 +6290,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1137,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr08: {
 		name: "TR08",
@@ -5904,6 +6301,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1138,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr09: {
 		name: "TR09",
@@ -5914,6 +6312,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1139,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr10: {
 		name: "TR10",
@@ -5924,6 +6323,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1140,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr11: {
 		name: "TR11",
@@ -5934,6 +6334,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1141,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr12: {
 		name: "TR12",
@@ -5944,6 +6345,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1142,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr13: {
 		name: "TR13",
@@ -5954,6 +6356,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1143,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr14: {
 		name: "TR14",
@@ -5964,6 +6367,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1144,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr15: {
 		name: "TR15",
@@ -5974,6 +6378,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1145,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr16: {
 		name: "TR16",
@@ -5984,6 +6389,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1146,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr17: {
 		name: "TR17",
@@ -5994,6 +6400,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1147,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr18: {
 		name: "TR18",
@@ -6004,6 +6411,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1148,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr19: {
 		name: "TR19",
@@ -6014,6 +6422,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1149,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr20: {
 		name: "TR20",
@@ -6024,6 +6433,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1150,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr21: {
 		name: "TR21",
@@ -6034,6 +6444,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1151,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr22: {
 		name: "TR22",
@@ -6044,6 +6455,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1152,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr23: {
 		name: "TR23",
@@ -6054,6 +6466,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1153,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr24: {
 		name: "TR24",
@@ -6064,6 +6477,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1154,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr25: {
 		name: "TR25",
@@ -6074,6 +6488,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1155,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr26: {
 		name: "TR26",
@@ -6084,6 +6499,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1156,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr27: {
 		name: "TR27",
@@ -6094,6 +6510,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1157,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr28: {
 		name: "TR28",
@@ -6104,6 +6521,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1158,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr29: {
 		name: "TR29",
@@ -6114,6 +6532,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1159,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr30: {
 		name: "TR30",
@@ -6124,6 +6543,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1160,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr31: {
 		name: "TR31",
@@ -6134,6 +6554,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1161,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr32: {
 		name: "TR32",
@@ -6144,6 +6565,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1162,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr33: {
 		name: "TR33",
@@ -6154,6 +6576,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1163,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr34: {
 		name: "TR34",
@@ -6164,6 +6587,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1164,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr35: {
 		name: "TR35",
@@ -6174,6 +6598,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1165,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr36: {
 		name: "TR36",
@@ -6184,6 +6609,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1166,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr37: {
 		name: "TR37",
@@ -6194,6 +6620,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1167,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr38: {
 		name: "TR38",
@@ -6204,6 +6631,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1168,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr39: {
 		name: "TR39",
@@ -6214,6 +6642,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1169,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr40: {
 		name: "TR40",
@@ -6224,6 +6653,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1170,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr41: {
 		name: "TR41",
@@ -6234,6 +6664,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1171,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr42: {
 		name: "TR42",
@@ -6244,6 +6675,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1172,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr43: {
 		name: "TR43",
@@ -6254,6 +6686,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1173,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr44: {
 		name: "TR44",
@@ -6264,6 +6697,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1174,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr45: {
 		name: "TR45",
@@ -6274,6 +6708,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1175,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr46: {
 		name: "TR46",
@@ -6284,6 +6719,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1176,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr47: {
 		name: "TR47",
@@ -6294,6 +6730,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1177,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr48: {
 		name: "TR48",
@@ -6304,6 +6741,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1178,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr49: {
 		name: "TR49",
@@ -6314,6 +6752,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1179,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr50: {
 		name: "TR50",
@@ -6324,6 +6763,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1180,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr51: {
 		name: "TR51",
@@ -6334,6 +6774,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1181,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr52: {
 		name: "TR52",
@@ -6344,6 +6785,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1182,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr53: {
 		name: "TR53",
@@ -6354,6 +6796,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1183,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr54: {
 		name: "TR54",
@@ -6364,6 +6807,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1184,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr55: {
 		name: "TR55",
@@ -6374,6 +6818,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1185,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr56: {
 		name: "TR56",
@@ -6384,6 +6829,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1186,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr57: {
 		name: "TR57",
@@ -6394,6 +6840,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1187,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr58: {
 		name: "TR58",
@@ -6404,6 +6851,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1188,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr59: {
 		name: "TR59",
@@ -6414,6 +6862,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1189,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr60: {
 		name: "TR60",
@@ -6424,6 +6873,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1190,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr61: {
 		name: "TR61",
@@ -6434,6 +6884,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1191,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr62: {
 		name: "TR62",
@@ -6444,6 +6895,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1192,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr63: {
 		name: "TR63",
@@ -6454,6 +6906,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1193,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr64: {
 		name: "TR64",
@@ -6464,6 +6917,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1194,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr65: {
 		name: "TR65",
@@ -6474,6 +6928,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1195,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr66: {
 		name: "TR66",
@@ -6484,6 +6939,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1196,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr67: {
 		name: "TR67",
@@ -6494,6 +6950,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1197,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr68: {
 		name: "TR68",
@@ -6504,6 +6961,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1198,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr69: {
 		name: "TR69",
@@ -6514,6 +6972,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1199,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr70: {
 		name: "TR70",
@@ -6524,6 +6983,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1200,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr71: {
 		name: "TR71",
@@ -6534,6 +6994,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1201,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr72: {
 		name: "TR72",
@@ -6544,6 +7005,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1202,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr73: {
 		name: "TR73",
@@ -6554,6 +7016,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1203,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr74: {
 		name: "TR74",
@@ -6564,6 +7027,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1204,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr75: {
 		name: "TR75",
@@ -6574,6 +7038,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1205,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr76: {
 		name: "TR76",
@@ -6584,6 +7049,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1206,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr77: {
 		name: "TR77",
@@ -6594,6 +7060,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1207,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr78: {
 		name: "TR78",
@@ -6604,6 +7071,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1208,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr79: {
 		name: "TR79",
@@ -6614,6 +7082,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1209,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr80: {
 		name: "TR80",
@@ -6624,6 +7093,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1210,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr81: {
 		name: "TR81",
@@ -6634,6 +7104,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1211,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr82: {
 		name: "TR82",
@@ -6644,6 +7115,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1212,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr83: {
 		name: "TR83",
@@ -6654,6 +7126,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1213,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr84: {
 		name: "TR84",
@@ -6664,6 +7137,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1214,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr85: {
 		name: "TR85",
@@ -6674,6 +7148,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1215,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr86: {
 		name: "TR86",
@@ -6684,6 +7159,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1216,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr87: {
 		name: "TR87",
@@ -6694,6 +7170,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1217,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr88: {
 		name: "TR88",
@@ -6704,6 +7181,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1218,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr89: {
 		name: "TR89",
@@ -6714,6 +7192,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1219,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr90: {
 		name: "TR90",
@@ -6724,6 +7203,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1220,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr91: {
 		name: "TR91",
@@ -6734,6 +7214,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1221,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr92: {
 		name: "TR92",
@@ -6744,6 +7225,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1222,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr93: {
 		name: "TR93",
@@ -6754,6 +7236,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1223,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr94: {
 		name: "TR94",
@@ -6764,6 +7247,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1224,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr95: {
 		name: "TR95",
@@ -6774,6 +7258,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1225,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr96: {
 		name: "TR96",
@@ -6784,6 +7269,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1226,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr97: {
 		name: "TR97",
@@ -6794,6 +7280,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1227,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr98: {
 		name: "TR98",
@@ -6804,6 +7291,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1228,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	tr99: {
 		name: "TR99",
@@ -6814,6 +7302,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1229,
 		gen: 8,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	twistedspoon: {
 		name: "Twisted Spoon",
@@ -6829,6 +7318,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 248,
 		gen: 2,
+		rating: 1,
 	},
 	tyranitarite: {
 		name: "Tyranitarite",
@@ -6843,6 +7333,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 669,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	ultraball: {
 		name: "Ultra Ball",
@@ -6850,6 +7341,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 2,
 		gen: 1,
 		isPokeball: true,
+		rating: -1,
 	},
 	ultranecroziumz: {
 		name: "Ultranecrozium Z",
@@ -6861,6 +7353,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 923,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	upgrade: {
 		name: "Up-Grade",
@@ -6871,6 +7364,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 252,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	utilityumbrella: {
 		name: "Utility Umbrella",
@@ -6900,6 +7394,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 1123,
 		gen: 8,
+		rating: 1,
 	},
 	venusaurite: {
 		name: "Venusaurite",
@@ -6914,6 +7409,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 659,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	wacanberry: {
 		name: "Wacan Berry",
@@ -6937,6 +7433,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 186,
 		gen: 4,
+		rating: 1,
 	},
 	watergem: {
 		name: "Water Gem",
@@ -6952,6 +7449,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 549,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 2,
 	},
 	watermemory: {
 		name: "Water Memory",
@@ -6968,6 +7466,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 913,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	waterstone: {
 		name: "Water Stone",
@@ -6977,6 +7476,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 84,
 		gen: 1,
+		rating: -1,
 	},
 	wateriumz: {
 		name: "Waterium Z",
@@ -6989,6 +7489,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 778,
 		gen: 7,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	watmelberry: {
 		name: "Watmel Berry",
@@ -7002,6 +7503,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 181,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	waveincense: {
 		name: "Wave Incense",
@@ -7018,6 +7520,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 317,
 		gen: 4,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	weaknesspolicy: {
 		name: "Weakness Policy",
@@ -7036,6 +7539,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 639,
 		gen: 6,
+		rating: 1,
 	},
 	wepearberry: {
 		name: "Wepear Berry",
@@ -7049,6 +7553,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 167,
 		gen: 3,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	whippeddream: {
 		name: "Whipped Dream",
@@ -7059,6 +7564,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 646,
 		gen: 6,
 		isNonstandard: "Past",
+		rating: -1,
 	},
 	whiteherb: {
 		name: "White Herb",
@@ -7098,6 +7604,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 214,
 		gen: 3,
+		rating: 1,
 	},
 	widelens: {
 		name: "Wide Lens",
@@ -7113,6 +7620,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 265,
 		gen: 4,
+		rating: 1,
 	},
 	wikiberry: {
 		name: "Wiki Berry",
@@ -7139,6 +7647,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 160,
 		gen: 3,
+		rating: 3,
 	},
 	wiseglasses: {
 		name: "Wise Glasses",
@@ -7154,6 +7663,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 267,
 		gen: 4,
+		rating: 1,
 	},
 	yacheberry: {
 		name: "Yache Berry",
@@ -7178,6 +7688,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 188,
 		gen: 4,
+		rating: 1,
 	},
 	zapplate: {
 		name: "Zap Plate",
@@ -7199,6 +7710,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 300,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+		rating: 1,
 	},
 	zoomlens: {
 		name: "Zoom Lens",
@@ -7215,6 +7727,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 276,
 		gen: 4,
+		rating: 1,
 	},
 
 	// Gen 2 items
@@ -7233,6 +7746,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 0,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	berry: {
 		name: "Berry",
@@ -7257,6 +7771,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 155,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 0,
 	},
 	bitterberry: {
 		name: "Bitter Berry",
@@ -7277,6 +7792,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 156,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 0,
 	},
 	burntberry: {
 		name: "Burnt Berry",
@@ -7299,6 +7815,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 153,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 0,
 	},
 	goldberry: {
 		name: "Gold Berry",
@@ -7323,6 +7840,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 158,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	iceberry: {
 		name: "Ice Berry",
@@ -7345,6 +7863,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 152,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 0,
 	},
 	mintberry: {
 		name: "Mint Berry",
@@ -7367,6 +7886,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 150,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	miracleberry: {
 		name: "Miracle Berry",
@@ -7388,6 +7908,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 157,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	mysteryberry: {
 		name: "Mystery Berry",
@@ -7427,6 +7948,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 154,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	pinkbow: {
 		name: "Pink Bow",
@@ -7439,6 +7961,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 251,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	polkadotbow: {
 		name: "Polkadot Bow",
@@ -7451,6 +7974,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 251,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	przcureberry: {
 		name: "PRZ Cure Berry",
@@ -7473,6 +7997,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 149,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 0,
 	},
 	psncureberry: {
 		name: "PSN Cure Berry",
@@ -7495,6 +8020,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 151,
 		gen: 2,
 		isNonstandard: "Past",
+		rating: 0,
 	},
 
 	// CAP items
@@ -7512,6 +8038,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 6,
 		isNonstandard: "CAP",
+		rating: 1,
 	},
 	vilevial: {
 		name: "Vile Vial",
@@ -7536,6 +8063,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -2,
 		gen: 8,
 		isNonstandard: "CAP",
+		rating: 1,
 	},
 	/* Clover Exclusive Items */
 	baconstrip: {
@@ -7549,6 +8077,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Urswine"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	bible: {
 		name: "Bible",
@@ -7560,6 +8089,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Caroline"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	bigfaggot: {
 		name: "Big Faggot",
@@ -7572,6 +8102,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Flameboyan"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	cutebow: {
 		name: "Cute Bow",
@@ -7583,6 +8114,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	katana: {
 		name: "Katana",
@@ -7594,6 +8126,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	manifesto: {
 		name: "Manifesto",
@@ -7606,6 +8139,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Walruskie"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	piratesjug: {
 		name: "Pirate's Jug",
@@ -7618,6 +8152,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Octai"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	suedeshoes: {
 		name: "Suede Shoes",
@@ -7629,6 +8164,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Pretzely"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	taco: {
 		name: "Taco",
@@ -7641,6 +8177,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	thiccbone: {
 		name: "Thicc Bone",
@@ -7653,6 +8190,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Masdawg", "Pasdawg", "Naughtycoot", "Blobbos-Skeleton", "Pasdawg-Gambino", "Pasdawg-Toadagi", "Pasdawg-Whiteout", "Pasdawg-Swoldier", "Pasdawg-Mr. Toad", "Pasdawg-Staypuft"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	/* Clover CAP Exclusive Items */
 	moluganion: {
@@ -7683,6 +8221,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Noxilium"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	skub: {
 		name: "Skub",
@@ -7716,6 +8255,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Skubmarine", "Skubmarine-Anti", "Skuba", "Skuba-Anti"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	rustedcrown: {
 		name: "Rusted Crown",
@@ -7730,6 +8270,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Blobbos-Galar-Crowned"],
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	nullgem: {
 		name: "Null Gem",
@@ -7744,6 +8285,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 562,
 		gen: 5,
 		isNonstandard: "Past",
+		rating: 1,
 	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
@@ -7759,6 +8301,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	wifeminite: {
 		name: "Wifeminite",
@@ -7773,6 +8316,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	bitekinite: {
 		name: "Bitekinite",
@@ -7787,6 +8331,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	fonduppite: {
 		name: "Fonduppite",
@@ -7801,6 +8346,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ebolabite: {
 		name: "Ebolabite",
@@ -7815,6 +8361,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	somboludite: {
 		name: "Somboludite",
@@ -7829,6 +8376,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	floriousite: {
 		name: "Floriousite",
@@ -7843,6 +8391,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	illumatrixite: {
 		name: "Illumatrixite",
@@ -7857,6 +8406,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	grimdakite: {
 		name: "Grimdakite",
@@ -7871,6 +8421,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	hazmatite: {
 		name: "Hazmatite",
@@ -7885,6 +8436,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	krokizonite: {
 		name: "Krokizonite",
@@ -7899,6 +8451,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	spookzillite: {
 		name: "Spookzillite",
@@ -7913,6 +8466,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	lizakbarite: {
 		name: "Lizakbarite",
@@ -7927,6 +8481,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	rectreemite: {
 		name: "Rectreemite",
@@ -7941,6 +8496,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	unjoyite: {
 		name: "Unjoyite",
@@ -7955,6 +8511,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	emplyinite: {
 		name: "Emplyinite",
@@ -7969,6 +8526,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	upbeddite: {
 		name: "Upbeddite",
@@ -7983,6 +8541,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	smelloxite: {
 		name: "Smelloxite",
@@ -7997,6 +8556,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pigusonite: {
 		name: "Pigusonite",
@@ -8011,6 +8571,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	condoomite: {
 		name: "Condoomite",
@@ -8025,6 +8586,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	hohohomite: {
 		name: "Hohohomite",
@@ -8039,6 +8601,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	faptite: {
 		name: "Faptite",
@@ -8053,6 +8616,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	jerklite: {
 		name: "Jerklite",
@@ -8067,6 +8631,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	dowsterite: {
 		name: "Dowsterite",
@@ -8081,6 +8646,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	reptrillite: {
 		name: "Reptrillite",
@@ -8095,6 +8661,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	kuklanite: {
 		name: "Kuklanite",
@@ -8109,6 +8676,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ricosuavite: {
 		name: "Ricosuavite",
@@ -8123,6 +8691,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	vandashite: {
 		name: "Vandashite",
@@ -8137,6 +8706,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	chasumite: {
 		name: "Chasumite",
@@ -8151,6 +8721,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	goryannusite: {
 		name: "Goryannusite",
@@ -8165,6 +8736,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	spookscarite: {
 		name: "Spookscarite",
@@ -8179,6 +8751,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	honradite: {
 		name: "Honradite",
@@ -8193,6 +8766,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	fusjite: {
 		name: "Fusjite",
@@ -8207,6 +8781,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ultrablobbosiumz: {
 		name: "Ultrablobbosium Z",
@@ -8217,6 +8792,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Blobbos-Ultra"],
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ointmiteite: {
 		name: "Ointmiteite",
@@ -8231,6 +8807,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sableviumz: {
 		name: "Sablevium Z",
@@ -8241,6 +8818,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Blobbos-Rembered", "Sableven"],
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	kalosite: {
 		name: "Kalosite",
@@ -8255,6 +8833,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	blobbosite: {
 		name: "Blobbosite",
@@ -8269,6 +8848,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	reversite: {
 		name: "Reversite",
@@ -8283,6 +8863,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sexitey: {
 		name: "Sexite Y",
@@ -8297,6 +8878,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sexitex: {
 		name: "Sexite X",
@@ -8311,6 +8893,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	negite: {
 		name: "Negite",
@@ -8325,6 +8908,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	dustite: {
 		name: "Dustite",
@@ -8339,6 +8923,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	blobbosmikiumz: {
 		name: "Blobbosmikium Z",
@@ -8349,6 +8934,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Blobbos-Mimikyu", "Blobbos-Mimikyu-Busted"],
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	wackite: {
 		name: "Wackite",
@@ -8363,6 +8949,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	zeroite: {
 		name: "Zeroite",
@@ -8377,6 +8964,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	plasticgem: {
 		name: "Plastic Gem",
@@ -8391,6 +8979,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 558,
 		gen: 5,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	glassgem: {
 		name: "Glass Gem",
@@ -8405,6 +8994,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 558,
 		gen: 5,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	piratesbooty: {
 		name: "Pirate's Booty",
@@ -8428,6 +9018,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		itemUser: ["Blobbos-Pirate"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	masamune: {
 		name: "Masamune",
@@ -8451,6 +9042,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		itemUser: ["Blobbos-Ninja"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	kerosenehose: {
 		name: "Kerosene Hose",
@@ -8468,6 +9060,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		itemUser: ["Blobbos-Firefighter"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	baitite: {
 		name: "Baitite",
@@ -8482,6 +9075,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	phylactery: {
 		name: "Phylactery",
@@ -8498,6 +9092,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				this.add('-activate', pokemon, 'item: Phylactery');
 			}
 		},
+		rating: 1,
 	},
 	toxanite: {
 		name: "Toxanite",
@@ -8512,6 +9107,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	fusjiniumz: {
 		name: "Fusjinium Z",
@@ -8522,6 +9118,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Fusjahl"],
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	charger: {
 		name: "Charger",
@@ -8532,6 +9129,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	blackmagiumz: {
 		name: "Blackmagium Z	",
@@ -8542,6 +9140,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Blobbos-Black Mage"],
 		num: 1836,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	terrainboard: {
 		name: "Terrain Board",
@@ -8554,6 +9153,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Blobbos-Surfer"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	curlykrill: {
 		name: "Curly Krill",
@@ -8564,6 +9164,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	droopykrill: {
 		name: "Droopy Krill",
@@ -8574,6 +9175,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	stretchykrill: {
 		name: "Stretchy Krill",
@@ -8584,6 +9186,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	earmuffs: {
 		name: "Earmuffs",
@@ -8595,6 +9198,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	paraorb: {
 		name: "Para Orb",
@@ -8610,6 +9214,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 2512,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	usbdrive: {
 		name: "USB Drive",
@@ -8630,6 +9235,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 2512,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	royalcrown: {
 		name: "Royal Crown",
@@ -8647,6 +9253,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		itemUser: ["Blobbos-King"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	starrod: {
 		name: "Star Rod",
@@ -8668,6 +9275,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Blobbos-Kirby"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	glock: {
 		name: "Glock",
@@ -8683,6 +9291,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Blobbos-Unova"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	loadeddisk: {
 		name: "Loaded Disk",
@@ -8695,6 +9304,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Blobbos-Spamton"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	propellerhat: {
 		name: "Propeller Hat",
@@ -8717,6 +9327,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Blobbos-Keks"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	choiceshield: {
 		name: "Choice Shield",
@@ -8739,6 +9350,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		isChoice: true,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	choicevest: {
 		name: "Choice Vest",
@@ -8761,6 +9373,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		isChoice: true,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	licensetosellhotdogs: {
 		name: "License to Sell Hotdogs",
@@ -8770,6 +9383,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Blobbos-Snek", "Blobbos-Angel"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ancientitem: {
 		name: "Ancient Item",
@@ -8785,6 +9399,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		itemUser: ['Blobbos-Duelist', 'Blobbos-Duelist-Dark'],
+		rating: 1,
 	},
 	pizzaite: {
 		name: "Pizzaite",
@@ -8799,6 +9414,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	marxite: {
 		name: "Marxite",
@@ -8813,6 +9429,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	beeite: {
 		name: "Beeite",
@@ -8827,6 +9444,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	partnerspendant: {
 		name: "Partner's Pendant",
@@ -8847,6 +9465,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 2512,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ultrafuckiumz: {
 		name: "Ultrafuckium Z",
@@ -8856,6 +9475,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		zMoveFrom: "Rocket Punch",
 		itemUser: ["Fucker-Ultra"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	stunfiskite: {
 		name: "Stunfiskite",
@@ -8870,6 +9490,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: -1,
 		gen: 8,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	focusspecs: {
 		name: "Focus Specs",
@@ -8896,6 +9517,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	krack: {
 		name: "Krack",
@@ -8911,6 +9533,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				spe: 1,
 			}, pokemon);
 		},
+		rating: 1,
 	},
 	mirrorclaw: {
 		name: "Mirror Claw",
@@ -8923,6 +9546,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				move.multihit = 2;
 			}
 		},
+		rating: 1,
 	},
 	rope: {
 		name: "Rope",
@@ -8938,6 +9562,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				pokemon.faint(pokemon, this.effect);
 			}
 		},
+		rating: 1,
 	},
 	midnightsnack: {
 		name: "Midnight Snack",
@@ -8947,6 +9572,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (pokemon.status !== 'slp') return;
 			this.heal(pokemon.baseMaxhp / 8);
 		},
+		rating: 1,
 	},
 	squirtgun: {
 		name: "Squirt Gun",
@@ -8958,6 +9584,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				this.actions.useMove('watergun', source, target);
 			}
 		},
+		rating: 1,
 	},
 	grimseeds: {
 		name: "Grim Seeds",
@@ -8968,6 +9595,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!target) return;
 			target.addVolatile('leechseeds');
 		},
+		rating: 1,
 	},
 	kikeousorb: {
 		name: "Kikeous Orb",
@@ -8984,6 +9612,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Jewipede"],
 		num: 69112,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	alcohol: {
 		name: "Alcohol",
@@ -9073,6 +9702,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				}
 			}
 		},
+		rating: 1,
 	},
 	servicerendered: {
 		name: "Service Rendered",
@@ -9084,7 +9714,8 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (buffMoves.includes(pokemon.moveThisTurn) && pokemon.useItem()) {
 				pokemon.switchFlag = true;
 			}
-		}
+		},
+		rating: 1,
 	},
 	autobuffskill: {
 		name: "Auto Buff Skill",
@@ -9099,10 +9730,12 @@ export const Items: {[itemid: string]: ItemData} = {
 				});
 			}
 		},
+		rating: 1,
 	},
 	mesosack: {
 		name: "Meso Sack",
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	missingvoirite: {
 		name: "Missingvoirite",
@@ -9115,6 +9748,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			return true;
 		},
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	splashsword: {
 		name: "Splash Sword",
@@ -9130,6 +9764,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Blobbos-Mech-Water"],
 		num: 116,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	flamesword: {
 		name: "Flame Sword",
@@ -9145,6 +9780,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Blobbos-Mech-Fire"],
 		num: 116,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	frostsword: {
 		name: "Frost Sword",
@@ -9160,6 +9796,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Blobbos-Mech-Ice"],
 		num: 116,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sparksword: {
 		name: "Spark Sword",
@@ -9175,6 +9812,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Blobbos-Mech-Electric"],
 		num: 116,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	powerrush: {
 		name: "Power Rush",
@@ -9197,6 +9835,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		isNonstandard: "Future",
 		itemUser: ["Blobbos-Paper"],
+		rating: 1,
 	},
 	tumultuoustibia: {
 		name: "Tumultuous Tibia",
@@ -9213,6 +9852,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		itemUser: ["Blobbos-Skeleton"],
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	mascotsorb: {
 		name: "Mascot's Orb",
@@ -9232,198 +9872,231 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Blobbos-Pika"],
 		num: 236,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	glalite: {
 		name: "Glalite",
 		spritenum: 0,
 		num: 66661,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	avalugite: {
 		name: "Avalugite",
 		spritenum: 0,
 		num: 66662,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	butterfrite: {
 		name: "Butterfrite",
 		spritenum: 0,
 		num: 66663,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	rubberflite: {
 		name: "Rubberflite",
 		spritenum: 0,
 		num: 66664,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	haicawite: {
 		name: "Haicawite",
 		spritenum: 0,
 		num: 66665,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	shattaratite: {
 		name: "Shattaratite",
 		spritenum: 0,
 		num: 66666,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	grasstaclite: {
 		name: "Grasstaclite",
 		spritenum: 0,
 		num: 66667,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	chillzite: {
 		name: "Chillzite",
 		spritenum: 0,
 		num: 66668,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	lunightonite: {
 		name: "Lunightonite",
 		spritenum: 0,
 		num: 66669,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	vanilluxite: {
 		name: "Vanilluxite",
 		spritenum: 0,
 		num: 66670,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	blizzlamite: {
 		name: "Blizzlamite",
 		spritenum: 0,
 		num: 66671,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	synthitite: {
 		name: "Synthitite",
 		spritenum: 0,
 		num: 66672,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	chokolite: {
 		name: "Chokolite",
 		spritenum: 0,
 		num: 66673,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	mouseeite: {
 		name: "Mouseeite",
 		spritenum: 0,
 		num: 66674,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	hoverite: {
 		name: "Hoverite",
 		spritenum: 0,
 		num: 66675,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	naminite: {
 		name: "Naminite",
 		spritenum: 0,
 		num: 66676,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	solaiossite: {
 		name: "Solaiossite",
 		spritenum: 0,
 		num: 66677,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	goralite: {
 		name: "Goralite",
 		spritenum: 0,
 		num: 66678,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	neutralite: {
 		name: "Neutralite",
 		spritenum: 0,
 		num: 66679,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	drumgite: {
 		name: "Drumgite",
 		spritenum: 0,
 		num: 66680,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	godzillusite: {
 		name: "Godzillusite",
 		spritenum: 0,
 		num: 66681,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	muchoshotite: {
 		name: "Muchoshotite",
 		spritenum: 0,
 		num: 66682,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	miracactite: {
 		name: "Miracactite",
 		spritenum: 0,
 		num: 66683,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	hitmonite: {
 		name: "Hitmonite",
 		spritenum: 0,
 		num: 66684,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	snowfistnite: {
 		name: "Snowfistnite",
 		spritenum: 0,
 		num: 66685,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	capsilite: {
 		name: "Capsilite",
 		spritenum: 0,
 		num: 66686,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	torkoalite: {
 		name: "Torkoalite",
 		spritenum: 0,
 		num: 66692,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	comistorite: {
 		name: "Comistorite",
 		spritenum: 0,
 		num: 66694,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	heruptite: {
 		name: "Heruptite",
 		spritenum: 0,
 		num: 66695,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	otyashite: {
 		name: "Otyashite",
 		spritenum: 0,
 		num: 66696,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	buglitchite: {
 		name: "Buglitchite",
 		spritenum: 0,
 		num: 66697,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	bauminite: {
 		name: "Bauminite",
 		spritenum: 0,
 		num: 66698,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	log: {
 		name: "Log",
@@ -9439,6 +10112,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66704,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	steamer: {
 		name: "Steamer",
@@ -9454,6 +10128,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66705,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	mysticmagma: {
 		name: "Mystic Magma",
@@ -9469,6 +10144,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66706,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gear: {
 		name: "Gear",
@@ -9484,12 +10160,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66707,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ancientorb: {
 		name: "Ancient Orb",
 		spritenum: 0,
 		num: 66708,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	kite: {
 		name: "Kite",
@@ -9505,6 +10183,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66709,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	magicwand: {
 		name: "Magic Wand",
@@ -9520,6 +10199,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66710,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	prism: {
 		name: "Prism",
@@ -9535,6 +10215,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66711,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	fluffycoat: {
 		name: "Fluffy Coat",
@@ -9547,6 +10228,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66712,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ancienthelm: {
 		name: "Ancient Helm",
@@ -9576,6 +10258,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Bushin", "Bushidon"],
 		num: 66713,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	seaweed: {
 		name: "Seaweed",
@@ -9607,78 +10290,91 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Sushish", "Sashumish", "Onigi", "Onigirice"],
 		num: 66714,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	drubberite: {
 		name: "Drubberite",
 		spritenum: 0,
 		num: 66715,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	neonazite: {
 		name: "Neonazite",
 		spritenum: 0,
 		num: 66716,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	chairite: {
 		name: "Chairite",
 		spritenum: 0,
 		num: 66717,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pikachite: {
 		name: "Pikachite",
 		spritenum: 0,
 		num: 66718,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	socialite: {
 		name: "Socialite",
 		spritenum: 0,
 		num: 66719,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	arbroodite: {
 		name: "Arbroodite",
 		spritenum: 0,
 		num: 66720,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	steamboatite: {
 		name: "Steamboatite",
 		spritenum: 0,
 		num: 66721,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	lavagunite: {
 		name: "Lavagunite",
 		spritenum: 0,
 		num: 66722,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gachambite: {
 		name: "Gachambite",
 		spritenum: 0,
 		num: 66723,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gummite: {
 		name: "Gummite",
 		spritenum: 0,
 		num: 66724,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	houndoomite: {
 		name: "Houndoomite",
 		spritenum: 0,
 		num: 66725,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gigasvyrite: {
 		name: "Gigasvyrite",
 		spritenum: 0,
 		num: 66726,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	corruptorb: {
 		name: "Corrupt Orb",
@@ -9700,54 +10396,63 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66727,
 		isNonstandard: "Future",
+		rating: 4,
 	},
 	cummunculite: {
 		name: "Cummunculite",
 		spritenum: 0,
 		num: 66728,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	mladite: {
 		name: "Mladite",
 		spritenum: 0,
 		num: 66741,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pinnistite: {
 		name: "Pinnistite",
 		spritenum: 0,
 		num: 66742,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	rootspookite: {
 		name: "Rootspookite",
 		spritenum: 0,
 		num: 66743,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	malwormite: {
 		name: "Malwormite",
 		spritenum: 0,
 		num: 66744,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	delite: {
 		name: "Delite",
 		spritenum: 0,
 		num: 66745,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	panthannonite: {
 		name: "Panthannonite",
 		spritenum: 0,
 		num: 66748,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gourgeistite: {
 		name: "Gourgeistite",
 		spritenum: 0,
 		num: 66768,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	lavaplate: {
 		name: "Lava Plate",
@@ -9768,6 +10473,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Magma",
 		num: 66773,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	vaporplate: {
 		name: "Vapor Plate",
@@ -9788,6 +10494,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Steam",
 		num: 66774,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	lumberplate: {
 		name: "Lumber Plate",
@@ -9808,6 +10515,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Wood",
 		num: 66775,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	angelplate: {
 		name: "Angel Plate",
@@ -9828,6 +10536,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Divine",
 		num: 66776,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	demonicplate: {
 		name: "Demonic Plate",
@@ -9848,6 +10557,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Chaos",
 		num: 66777,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	paperplate: {
 		name: "Paper Plate",
@@ -9868,6 +10578,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Paper",
 		num: 66778,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	lusterplate: {
 		name: "Luster Plate",
@@ -9888,6 +10599,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Light",
 		num: 66779,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tornadoplate: {
 		name: "Tornado Plate",
@@ -9908,6 +10620,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Wind",
 		num: 66780,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	arcaneplate: {
 		name: "Arcane Plate",
@@ -9928,6 +10641,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Magic",
 		num: 66781,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	machineplate: {
 		name: "Machine Plate",
@@ -9948,6 +10662,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Tech",
 		num: 66782,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	elasticplate: {
 		name: "Elastic Plate",
@@ -9968,6 +10683,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Rubber",
 		num: 66783,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	phobiaplate: {
 		name: "Phobia Plate",
@@ -9988,6 +10704,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Fear",
 		num: 66784,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	spaceplate: {
 		name: "Space Plate",
@@ -10008,6 +10725,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Cosmic",
 		num: 66785,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sonarplate: {
 		name: "Sonarplate",
@@ -10028,6 +10746,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Sound",
 		num: 66786,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gourmetplate: {
 		name: "Gourmetplate",
@@ -10048,6 +10767,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Food",
 		num: 66787,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	undeadplate: {
 		name: "Undead Plate",
@@ -10068,6 +10788,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Zombie",
 		num: 66788,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	radiationplate: {
 		name: "Radiation Plate",
@@ -10088,6 +10809,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Nuclear",
 		num: 66789,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	infectionplate: {
 		name: "Infection Plate",
@@ -10108,6 +10830,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Virus",
 		num: 66790,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	digitalplate: {
 		name: "Digital Plate",
@@ -10128,6 +10851,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Cyber",
 		num: 66791,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	glassplate: {
 		name: "Glass Plate",
@@ -10148,6 +10872,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Glass",
 		num: 66792,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	plasticplate: {
 		name: "Plastic Plate",
@@ -10168,6 +10893,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Plastic",
 		num: 66793,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	carpetplate: {
 		name: "Carpetplate",
@@ -10188,6 +10914,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Fabric",
 		num: 66794,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	agesplate: {
 		name: "Ages Plate",
@@ -10208,6 +10935,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Time",
 		num: 66795,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	artplate: {
 		name: "Art Plate",
@@ -10228,6 +10956,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Paint",
 		num: 66796,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	crystalplate: {
 		name: "Crystal Plate",
@@ -10248,6 +10977,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Crystal",
 		num: 66797,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	infoplate: {
 		name: "Info Plate",
@@ -10268,6 +10998,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Meme",
 		num: 66798,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ichorplate: {
 		name: "Ichor Plate",
@@ -10288,6 +11019,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Blood",
 		num: 66799,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	fatplate: {
 		name: "Fat Plate",
@@ -10308,6 +11040,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Greasy",
 		num: 66800,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	emotionplate: {
 		name: "Emotion Plate",
@@ -10328,6 +11061,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Heart",
 		num: 66801,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	page: {
 		name: "Page",
@@ -10343,6 +11077,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66806,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	rubberglove: {
 		name: "Rubber Glove",
@@ -10358,6 +11093,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66807,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	spookymask: {
 		name: "Spooky Mask",
@@ -10373,6 +11109,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66808,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	telescope: {
 		name: "Telescope",
@@ -10388,6 +11125,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66809,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	speaker: {
 		name: "Speaker",
@@ -10403,6 +11141,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66810,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sauce: {
 		name: "Sauce",
@@ -10418,6 +11157,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66811,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	brains: {
 		name: "Brains",
@@ -10433,6 +11173,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66812,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	uranium: {
 		name: "Uranium",
@@ -10448,6 +11189,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66813,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	motherboard: {
 		name: "Motherboard",
@@ -10463,6 +11205,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66814,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	optimizerpro: {
 		name: "Optimizer Pro",
@@ -10478,6 +11221,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66815,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	glasspiece: {
 		name: "Glass Piece",
@@ -10493,6 +11237,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66816,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	plasticpiece: {
 		name: "Plastic Piece",
@@ -10508,6 +11253,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66817,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	carpet: {
 		name: "Carpet",
@@ -10523,6 +11269,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66818,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	holycross: {
 		name: "Holy Cross",
@@ -10538,6 +11285,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66819,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	stopwatch: {
 		name: "Stopwatch",
@@ -10553,24 +11301,28 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66820,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	primeapite: {
 		name: "Primeapite",
 		spritenum: 0,
 		num: 66822,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	teskarite: {
 		name: "Teskarite",
 		spritenum: 0,
 		num: 66823,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	hypnite: {
 		name: "Hypnite",
 		spritenum: 0,
 		num: 66824,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	onionplate: {
 		name: "Onion Plate",
@@ -10591,60 +11343,70 @@ export const Items: {[itemid: string]: ItemData} = {
 		forcedForme: "Arceus-Ogre",
 		num: 66831,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	facarvite: {
 		name: "Facarvite",
 		spritenum: 0,
 		num: 66832,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	saplomite: {
 		name: "Saplomite",
 		spritenum: 0,
 		num: 66833,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	absorspongite: {
 		name: "Absorspongite",
 		spritenum: 0,
 		num: 66834,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	serperiorite: {
 		name: "Serperiorite",
 		spritenum: 0,
 		num: 66837,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	emboarite: {
 		name: "Emboarite",
 		spritenum: 0,
 		num: 66838,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	samurottite: {
 		name: "Samurottite",
 		spritenum: 0,
 		num: 66839,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	empoleonite: {
 		name: "Empoleonite",
 		spritenum: 0,
 		num: 66865,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	infernapite: {
 		name: "Infernapite",
 		spritenum: 0,
 		num: 66866,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	torterrite: {
 		name: "Torterrite",
 		spritenum: 0,
 		num: 66867,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	dominatrixoutfit: {
 		name: "Dominatrix Outfit",
@@ -10659,6 +11421,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66869,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	frillydress: {
 		name: "Frilly Dress",
@@ -10671,6 +11434,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ['Kawaidesha'],
 		num: 66870,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	bouncectarmor: {  /* TODO introduce Mega interaction **/
 		name: "Bouncect Armor",
@@ -10685,168 +11449,196 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66871,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	frankenspookite: {
 		name: "Frankenspookite",
 		spritenum: 0,
 		num: 66873,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	zangoosite: {
 		name: "Zangoosite",
 		spritenum: 0,
 		num: 66874,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	virivite: {
 		name: "Virivite",
 		spritenum: 0,
 		num: 66875,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	rubberite: {
 		name: "Rubberite",
 		spritenum: 0,
 		num: 66876,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	bottleodrakite: {
 		name: "Bottleodrakite",
 		spritenum: 0,
 		num: 66877,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	dargouite: {
 		name: "Dargouite",
 		spritenum: 0,
 		num: 66878,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sonotite: {
 		name: "Sonotite",
 		spritenum: 0,
 		num: 66879,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	arbokite: {
 		name: "Arbokite",
 		spritenum: 0,
 		num: 66880,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	shedinjite: {
 		name: "Shedinjite",
 		spritenum: 0,
 		num: 66889,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	lynchite: {
 		name: "Lynchite",
 		spritenum: 0,
 		num: 66892,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sevipite: {
 		name: "Sevipite",
 		spritenum: 0,
 		num: 66893,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	volcaronite: {
 		name: "Volcaronite",
 		spritenum: 0,
 		num: 66896,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	feraligatrite: {
 		name: "Feraligatrite",
 		spritenum: 0,
 		num: 66897,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	meganiumite: {
 		name: "Meganiumite",
 		spritenum: 0,
 		num: 66898,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	typhlosionite: {
 		name: "Typhlosionite",
 		spritenum: 0,
 		num: 66899,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	charizarditez: {
 		name: "Charizardite Z",
 		spritenum: 0,
 		num: 66900,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	johnspleenite: {
 		name: "Johnspleenite",
 		spritenum: 0,
 		num: 66901,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	primalorb: {
 		name: "Primal Orb",
 		spritenum: 0,
 		num: 66902,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	behemistite: {
 		name: "Behemistite",
 		spritenum: 0,
 		num: 66903,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	luminite: {
 		name: "Luminite",
 		spritenum: 0,
 		num: 66904,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	bersergutsite: {
 		name: "Bersergutsite",
 		spritenum: 0,
 		num: 66905,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	wendigite: {
 		name: "Wendigite",
 		spritenum: 0,
 		num: 66906,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	flygonite: {
 		name: "Flygonite",
 		spritenum: 0,
 		num: 66907,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	delphoxite: {
 		name: "Delphoxite",
 		spritenum: 0,
 		num: 66908,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	greninjite: {
 		name: "Greninjite",
 		spritenum: 0,
 		num: 66909,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	chesnaughtite: {
 		name: "Chesnaughtite",
 		spritenum: 0,
 		num: 66910,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	chatotite: {
 		name: "Chatotite",
 		spritenum: 0,
 		num: 66914,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	angelpowder: {
 		name: "Angel Powder",
@@ -10861,6 +11653,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66915,
 		isNonstandard: "Future",
+		rating: 3,
 	},
 	apexorb: {
 		name: "Apex Orb",
@@ -10888,90 +11681,105 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66916,
 		isNonstandard: "Future",
+		rating: 4,
 	},
 	sloggerothite: {
 		name: "Sloggerothite",
 		spritenum: 0,
 		num: 66917,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	archangite: {
 		name: "Archangite",
 		spritenum: 0,
 		num: 66919,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ledevilainite: {
 		name: "Ledevilainite",
 		spritenum: 0,
 		num: 66920,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	satelite: {
 		name: "Satelite",
 		spritenum: 0,
 		num: 66921,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sphinxiantite: {
 		name: "Sphinxiantite",
 		spritenum: 0,
 		num: 66922,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	clefablite: {
 		name: "Clefablite",
 		spritenum: 0,
 		num: 66924,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	eeveeite: {
 		name: "Eeveeite",
 		spritenum: 0,
 		num: 66925,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	fonightonite: {
 		name: "Fonightonite",
 		spritenum: 0,
 		num: 66926,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	brickorite: {
 		name: "Brickorite",
 		spritenum: 0,
 		num: 66932,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	frostearite: {
 		name: "Frostearite",
 		spritenum: 0,
 		num: 66933,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	stantlerite: {
 		name: "Stantlerite",
 		spritenum: 0,
 		num: 66934,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	melonvilite: {
 		name: "Melonvilite",
 		spritenum: 0,
 		num: 66935,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	delcattite: {
 		name: "Delcattite",
 		spritenum: 0,
 		num: 66936,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	electrodite: {
 		name: "Electrodite",
 		spritenum: 0,
 		num: 66942,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tantalberry: {
 		name: "Tantal Berry",
@@ -10996,6 +11804,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 66943,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	holyward: {
 		name: "Holy Ward",
@@ -11008,6 +11817,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66944,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	blessorb: {
 		name: "Bless Orb",
@@ -11031,30 +11841,35 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66945,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	octillerite: {
 		name: "Octillerite",
 		spritenum: 0,
 		num: 66946,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	jetcraftite: {
 		name: "Jetcraftite",
 		spritenum: 0,
 		num: 66947,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	crobatite: {
 		name: "Crobatite",
 		spritenum: 0,
 		num: 66948,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	cradilite: {
 		name: "Cradilite",
 		spritenum: 0,
 		num: 66949,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	martianorb: {
 		name: "Martian Orb",
@@ -11092,6 +11907,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66951,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	venusorb: {
 		name: "Venus Orb",
@@ -11129,6 +11945,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66952,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	mercuryorb: {
 		name: "Mercury Orb",
@@ -11166,6 +11983,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66953,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	chipoloberry: {
 		name: "Chipolo Berry",
@@ -11190,6 +12008,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 66955,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	haridoberry: {
 		name: "Harido Berry",
@@ -11214,6 +12033,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 66956,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	bakyuuberry: {
 		name: "Bakyuu Berry",
@@ -11238,6 +12058,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 66957,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	darayberry: {
 		name: "Daray Berry",
@@ -11262,6 +12083,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 66958,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	loispberry: {
 		name: "Loisp Berry",
@@ -11286,6 +12108,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 66959,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	orptekberry: {
 		name: "Orptek Berry",
@@ -11310,6 +12133,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 66960,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	oligalberry: {
 		name: "Oligal Berry",
@@ -11334,6 +12158,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 66961,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ampireberry: {
 		name: "Ampire Berry",
@@ -11358,12 +12183,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 66962,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	goldstandarrow: {
 		name: "Gold Stand Arrow",
 		spritenum: 0,
 		num: 66963,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	goldenfiddle: {
 		name: "Golden Fiddle",
@@ -11376,84 +12203,98 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66964,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	novaisite: {
 		name: "Novaisite",
 		spritenum: 0,
 		num: 66965,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	darkolite: {
 		name: "Darkolite",
 		spritenum: 0,
 		num: 66966,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	vivillonite: {
 		name: "Vivillonite",
 		spritenum: 0,
 		num: 66972,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	jokercard: {
 		name: "Joker Card",
 		spritenum: 0,
 		num: 66973,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ariadosite: {
 		name: "Ariadosite",
 		spritenum: 0,
 		num: 66974,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gettertomahawk: {
 		name: "Getter Tomahawk",
 		spritenum: 0,
 		num: 66975,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	getterdrill: {
 		name: "Getter Drill",
 		spritenum: 0,
 		num: 66976,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gettermissile: {
 		name: "Getter Missile",
 		spritenum: 0,
 		num: 66977,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	mozartite: {
 		name: "Mozartite",
 		spritenum: 0,
 		num: 66978,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	icyseed: {	/* TODO when icy terrain is introduced **/
 		name: "Icy Seed",
 		spritenum: 0,
 		num: 66979,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	dongorillite: {
 		name: "DONGORILLITE",
 		spritenum: 0,
 		num: 66980,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	helioliskite: {
 		name: "Helioliskite",
 		spritenum: 0,
 		num: 66981,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	narwharite: {
 		name: "Narwharite",
 		spritenum: 0,
 		num: 66982,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	suwiseglasses: {
 		name: "Suwise Glasses",
@@ -11469,24 +12310,28 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66983,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	plasbulite: {
 		name: "Plasbulite",
 		spritenum: 0,
 		num: 66984,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	lightulbite: {
 		name: "Lightulbite",
 		spritenum: 0,
 		num: 66985,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	rodactylite: {
 		name: "Rodactylite",
 		spritenum: 0,
 		num: 66986,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pressureorb: {
 		name: "Pressure Orb",
@@ -11504,6 +12349,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66987,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	earplugs: {
 		name: "Ear Plugs",
@@ -11516,138 +12362,161 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 66988,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	reactioxite: {
 		name: "Reactioxite",
 		spritenum: 0,
 		num: 66989,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	donphanite: {
 		name: "Donphanite",
 		spritenum: 0,
 		num: 66990,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	jynxite: {
 		name: "Jynxite",
 		spritenum: 0,
 		num: 66991,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	charizardites: {
 		name: "Charizardite S",
 		spritenum: 0,
 		num: 66992,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	farfetchditen: {
 		name: "Farfetchdite N",
 		spritenum: 0,
 		num: 66993,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gigantamax: {
 		name: "Gigantamax",
 		spritenum: 0,
 		num: 66994,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	dragonitite: {
 		name: "Dragonitite",
 		spritenum: 0,
 		num: 66995,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	carnivinite: {
 		name: "Carnivinite",
 		spritenum: 0,
 		num: 66996,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	cultulzite: {
 		name: "Cultulzite",
 		spritenum: 0,
 		num: 66997,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gorebyssite: {
 		name: "Gorebyssite",
 		spritenum: 0,
 		num: 66998,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	huntailite: {
 		name: "Huntailite",
 		spritenum: 0,
 		num: 66999,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	garbodorite: {
 		name: "Garbodorite",
 		spritenum: 0,
 		num: 67001,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	kecleonite: {
 		name: "Kecleonite",
 		spritenum: 0,
 		num: 67003,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	cocaiturdite: {
 		name: "Cocaiturdite",
 		spritenum: 0,
 		num: 67004,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	albinguinite: {
 		name: "Albinguinite",
 		spritenum: 0,
 		num: 67005,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	undlouisite: {
 		name: "Undlouisite",
 		spritenum: 0,
 		num: 67006,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tropilightnite: {
 		name: "Tropilightnite",
 		spritenum: 0,
 		num: 67007,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	nukreepite: {
 		name: "Nukreepite",
 		spritenum: 0,
 		num: 67008,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tutterflite: {
 		name: "Tutterflite",
 		spritenum: 0,
 		num: 67009,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	swoobatite: {
 		name: "Swoobatite",
 		spritenum: 0,
 		num: 67010,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	parasectite: {
 		name: "Parasectite",
 		spritenum: 0,
 		num: 67011,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	smolstronite: {
 		name: "Smolstronite",
 		spritenum: 0,
 		num: 67014,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	antiplebshield: {
 		name: "Antiplebshield",
@@ -11729,228 +12598,266 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67015,
 		isNonstandard: "Future",
+		rating: 4,
 	},
 	paintipite: {
 		name: "Paintipite",
 		spritenum: 0,
 		num: 67016,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	silverkey: {
 		name: "Silver Key",
 		spritenum: 0,
 		num: 67017,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	horroruxite: {
 		name: "Horroruxite",
 		spritenum: 0,
 		num: 67021,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pyramidite: {
 		name: "Pyramidite",
 		spritenum: 0,
 		num: 67022,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	warshinite: {
 		name: "Warshinite",
 		spritenum: 0,
 		num: 67023,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	omastarite: {
 		name: "Omastarite",
 		spritenum: 0,
 		num: 67024,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	kabutopsite: {
 		name: "Kabutopsite",
 		spritenum: 0,
 		num: 67025,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	dolphottlite: {
 		name: "Dolphottlite",
 		spritenum: 0,
 		num: 67026,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	corsolite: {
 		name: "Corsolite",
 		spritenum: 0,
 		num: 67027,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	victreebelite: {
 		name: "Victreebelite",
 		spritenum: 0,
 		num: 67028,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sunflorite: {
 		name: "Sunflorite",
 		spritenum: 0,
 		num: 67029,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	relicanthite: {
 		name: "Relicanthite",
 		spritenum: 0,
 		num: 67030,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	whiscashite: {
 		name: "Whiscashite",
 		spritenum: 0,
 		num: 67031,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tangrowthitex: {
 		name: "Tangrowthite X",
 		spritenum: 0,
 		num: 67032,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tangrowthitey: {
 		name: "Tangrowthite Y",
 		spritenum: 0,
 		num: 67033,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tangrowthitez: {
 		name: "Tangrowthite Z",
 		spritenum: 0,
 		num: 67034,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	luvdiscitex: {
 		name: "Luvdiscite X",
 		spritenum: 0,
 		num: 67035,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	luvdiscitey: {
 		name: "Luvdiscite Y",
 		spritenum: 0,
 		num: 67036,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	jumpluffitex: {
 		name: "Jumpluffite X",
 		spritenum: 0,
 		num: 67037,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	jumpluffitey: {
 		name: "Jumpluffite Y",
 		spritenum: 0,
 		num: 67038,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	magcargite: {
 		name: "Magcargite",
 		spritenum: 0,
 		num: 67039,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	poliwrathite: {
 		name: "Poliwrathite",
 		spritenum: 0,
 		num: 67040,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	rapidashitey: {
 		name: "Rapidashite Y",
 		spritenum: 0,
 		num: 67042,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	rapidashitex: {
 		name: "Rapidashite X",
 		spritenum: 0,
 		num: 67043,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ninetalesite: {
 		name: "Ninetalesite",
 		spritenum: 0,
 		num: 67044,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	heatmorite: {
 		name: "Heatmorite",
 		spritenum: 0,
 		num: 67045,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	charizarditeg: {
 		name: "Charizardite G",
 		spritenum: 0,
 		num: 67046,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	charizarditer: {
 		name: "Charizardite R",
 		spritenum: 0,
 		num: 67047,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	arcaninite: {
 		name: "Arcaninite",
 		spritenum: 0,
 		num: 67048,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	magmortarite: {
 		name: "Magmortarite",
 		spritenum: 0,
 		num: 67049,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	snorlaxite: {
 		name: "Snorlaxite",
 		spritenum: 0,
 		num: 67050,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	spindite: {
 		name: "Spindite",
 		spritenum: 0,
 		num: 67051,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pyroarite: {
 		name: "Pyroarite",
 		spritenum: 0,
 		num: 67052,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	slakingite: {
 		name: "Slakingite",
 		spritenum: 0,
 		num: 67053,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	steamistite: {
 		name: "Steamistite",
 		spritenum: 0,
 		num: 67054,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	stweamsite: {
 		name: "Stweamsite",
 		spritenum: 0,
 		num: 67055,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	steamnite: {
 		name: "Steamnite",
 		spritenum: 0,
 		num: 67056,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	thorncrown: {
 		name: "Thorn Crown",
@@ -11962,6 +12869,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67057,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pricklythorns: {
 		name: "Prickly Thorns",
@@ -11979,6 +12887,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67058,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pressuredgem: {
 		name: "Pressured Gem",
@@ -11996,150 +12905,175 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67059,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pizzaurexitex: {
 		name: "Pizzaurexite X",
 		spritenum: 0,
 		num: 67062,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tenablerusite: {
 		name: "Tenablerusite",
 		spritenum: 0,
 		num: 67063,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	canyouite: {
 		name: "Canyouite",
 		spritenum: 0,
 		num: 67068,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	charizarditei: {
 		name: "Charizardite I",
 		spritenum: 0,
 		num: 67069,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	magmocketite: {
 		name: "Magmocketite",
 		spritenum: 0,
 		num: 67070,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	charizarditew: {
 		name: "Charizardite W",
 		spritenum: 0,
 		num: 67071,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	charizarditef: {
 		name: "Charizardite F",
 		spritenum: 0,
 		num: 67072,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ludicolite: {
 		name: "Ludicolite",
 		spritenum: 0,
 		num: 67073,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	shiftryite: {
 		name: "Shiftryite",
 		spritenum: 0,
 		num: 67074,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	persianite: {
 		name: "Persianite",
 		spritenum: 0,
 		num: 67075,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	golemite: {
 		name: "Golemite",
 		spritenum: 0,
 		num: 67076,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tsareenite: {
 		name: "Tsareenite",
 		spritenum: 0,
 		num: 67077,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pizzaurexitey: {
 		name: "Pizzaurexite Y",
 		spritenum: 0,
 		num: 67078,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pelipperite: {
 		name: "Pelipperite",
 		spritenum: 0,
 		num: 67079,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sudowoodite: {
 		name: "Sudowoodite",
 		spritenum: 0,
 		num: 67080,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	armaldite: {
 		name: "Armaldite",
 		spritenum: 0,
 		num: 67081,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	charizarditeb: {
 		name: "Charizardite B",
 		spritenum: 0,
 		num: 67083,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	mismagiusite: {
 		name: "Mismagiusite",
 		spritenum: 0,
 		num: 67085,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	snatanite: {
 		name: "Snatanite",
 		spritenum: 0,
 		num: 67086,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pagieite: {
 		name: "Pagieite",
 		spritenum: 0,
 		num: 67087,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	booklyite: {
 		name: "Booklyite",
 		spritenum: 0,
 		num: 67088,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	lusfairite: {
 		name: "Lusfairite",
 		spritenum: 0,
 		num: 67089,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	boxoite: {
 		name: "Boxoite",
 		spritenum: 0,
 		num: 67090,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	poweredfan: {	/* TODO when Tempest is introduced **/
 		name: "Powered Fan",
 		spritenum: 0,
 		num: 67091,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	thickscarf: {
 		name: "Thick Scarf",
@@ -12155,6 +13089,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67092,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	wheelchair: {
 		name: "Wheelchair",
@@ -12172,6 +13107,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67093,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	shockorb: {
 		name: "Shock Orb",
@@ -12187,6 +13123,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67094,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	frostorb: {
 		name: "Frost Orb",
@@ -12202,6 +13139,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67095,
 		isNonstandard: "Future",
+		rating: 4,
 	},
 	naporb: {
 		name: "Nap Orb",
@@ -12217,6 +13155,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67096,
 		isNonstandard: "Future",
+		rating: 4,
 	},
 	woodgem: {
 		name: "Wood Gem",
@@ -12231,6 +13170,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67097,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	magmagem: {
 		name: "Magma Gem",
@@ -12245,6 +13185,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67098,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	steamgem: {
 		name: "Steam Gem",
@@ -12259,6 +13200,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67099,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	windgem: {
 		name: "Wind Gem",
@@ -12273,6 +13215,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67100,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	papergem: {
 		name: "Paper Gem",
@@ -12287,6 +13230,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67101,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	techgem: {
 		name: "Tech Gem",
@@ -12301,6 +13245,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67102,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	magicgem: {
 		name: "Magicgem",
@@ -12315,6 +13260,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67103,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	rubbergem: {
 		name: "Rubber Gem",
@@ -12329,6 +13275,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67104,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	feargem: {
 		name: "Fear Gem",
@@ -12343,6 +13290,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67105,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	lightgem: {
 		name: "Light Gem",
@@ -12357,6 +13305,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67106,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	cosmicgem: {
 		name: "Cosmic Gem",
@@ -12371,6 +13320,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67107,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	soundgem: {
 		name: "Sound Gem",
@@ -12385,6 +13335,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67108,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	foodgem: {
 		name: "Food Gem",
@@ -12399,6 +13350,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67109,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	zombiegem: {
 		name: "Zombie Gem",
@@ -12413,6 +13365,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67110,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	nucleargem: {
 		name: "Nuclear Gem",
@@ -12427,6 +13380,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67111,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	virusgem: {
 		name: "Virus Gem",
@@ -12441,6 +13395,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67112,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	cybergem: {
 		name: "Cyber Gem",
@@ -12455,6 +13410,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67113,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	fabricgem: {
 		name: "Fabric Gem",
@@ -12469,6 +13425,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67114,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	chaosgem: {
 		name: "Chaos Gem",
@@ -12483,6 +13440,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67115,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	divinegem: {
 		name: "Divine Gem",
@@ -12497,6 +13455,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67116,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	qmarksgem: {
 		name: "Qmarksgem",
@@ -12511,6 +13470,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67117,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	timegem: {
 		name: "Time Gem",
@@ -12525,6 +13485,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67118,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	paintgem: {
 		name: "Paint Gem",
@@ -12539,6 +13500,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67119,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	crystalgem: {
 		name: "Crystal Gem",
@@ -12553,6 +13515,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67120,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	memegem: {
 		name: "Meme Gem",
@@ -12567,6 +13530,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67121,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	bloodgem: {
 		name: "Blood Gem",
@@ -12581,6 +13545,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67122,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	greasygem: {
 		name: "Greasy Gem",
@@ -12595,6 +13560,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67123,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	heartgem: {
 		name: "Heart Gem",
@@ -12609,6 +13575,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67124,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	ogregem: {
 		name: "Ogre Gem",
@@ -12623,6 +13590,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67125,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	shadowgem: {
 		name: "Shadow Gem",
@@ -12637,6 +13605,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67126,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	acidrock: {
 		name: "Acid Rock",
@@ -12646,6 +13615,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67127,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	blackrock: {
 		name: "Black Rock",
@@ -12655,18 +13625,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67128,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	hulklearite: {
 		name: "Hulklearite",
 		spritenum: 0,
 		num: 67129,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	fearowite: {
 		name: "Fearowite",
 		spritenum: 0,
 		num: 67130,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	skippingstone: {
 		name: "Skipping Stone",
@@ -12681,6 +13654,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67131,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	arrowhead: {
 		name: "Arrowhead",
@@ -12694,6 +13668,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67132,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	bootsofblindingspeed: {
 		name: "Bootsofblindingspeed",
@@ -12710,18 +13685,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67133,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	minigalaxy: {	/* TODO when Starfield is introduced **/
 		name: "Mini Galaxy",
 		spritenum: 0,
 		num: 67134,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	mienshaonite: {
 		name: "Mienshaonite",
 		spritenum: 0,
 		num: 67135,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	lipstick: {
 		name: "Lipstick",
@@ -12733,6 +13711,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67136,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gascan: {
 		name: "Gas Can",
@@ -12747,6 +13726,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67137,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	spices: {
 		name: "Spices",
@@ -12761,6 +13741,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67138,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	kettle: {
 		name: "Kettle",
@@ -12780,6 +13761,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67139,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	magmapowder: {
 		name: "Magma Powder",
@@ -12799,6 +13781,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67140,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sapling: {
 		name: "Sapling",
@@ -12818,6 +13801,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67141,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	fertilizer: {
 		name: "Fertilizer",
@@ -12837,6 +13821,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67142,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sturdypebbles: {
 		name: "Sturdy Pebbles",
@@ -12848,6 +13833,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 0,
 		num: 67143,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sandycapsule: {
 		name: "Sandy Capsule",
@@ -12861,6 +13847,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67144,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	rainycapsule: {
 		name: "Rainy Capsule",
@@ -12874,6 +13861,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67145,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	snowycapsule: {
 		name: "Snowy Capsule",
@@ -12887,6 +13875,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67146,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sunnycapsule: {
 		name: "Sunny Capsule",
@@ -12900,6 +13889,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67147,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	lamwerberry: {
 		name: "Lamwer Berry",
@@ -12924,6 +13914,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67148,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	prigtinberry: {
 		name: "Prigtin Berry",
@@ -12948,6 +13939,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67149,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	borcygberry: {
 		name: "Borcyg Berry",
@@ -12972,6 +13964,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67150,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	lascetberry: {
 		name: "Lascet Berry",
@@ -12996,6 +13989,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67151,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	yboogberry: {
 		name: "Yboog Berry",
@@ -13020,6 +14014,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67152,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	shieginberry: {
 		name: "Shiegin Berry",
@@ -13044,6 +14039,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67153,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	exretberry: {
 		name: "Exret Berry",
@@ -13068,6 +14064,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67154,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	cousactiberry: {
 		name: "Cousacti Berry",
@@ -13092,6 +14089,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67155,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	rottunberry: {
 		name: "Rottun Berry",
@@ -13116,6 +14114,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67156,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	niossifberry: {
 		name: "Niossif Berry",
@@ -13140,6 +14139,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67157,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tahrestberry: {
 		name: "Tahrest Berry",
@@ -13164,6 +14164,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67158,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ackegapberry: {
 		name: "Ackegap Berry",
@@ -13188,6 +14189,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67159,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	thiclonberry: {
 		name: "Thiclon Berry",
@@ -13212,6 +14214,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67160,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	naltereberry: {
 		name: "Naltere Berry",
@@ -13236,6 +14239,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67161,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	istartberry: {
 		name: "Istart Berry",
@@ -13260,6 +14264,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67162,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	stomegenberry: {
 		name: "Stomegen Berry",
@@ -13284,6 +14289,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67163,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	fohazamberry: {
 		name: "Fohazam Berry",
@@ -13308,6 +14314,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67164,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	lomeitberry: {
 		name: "Lomeit Berry",
@@ -13332,6 +14339,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67165,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	symgrieberry: {
 		name: "Symgrie Berry",
@@ -13356,6 +14364,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67166,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	murkycapsule: {
 		name: "Murky Capsule",
@@ -13369,6 +14378,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67167,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	acidycapsule: {
 		name: "Acidy Capsule",
@@ -13382,6 +14392,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67168,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	blazingfeather: {
 		name: "Blazing Feather",
@@ -13398,6 +14409,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67169,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	riotshield: {
 		name: "Riot Shield",
@@ -13418,12 +14430,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67170,
 		isNonstandard: "Future",
+		rating: 3,
 	},
 	falloutcapsule: { /*TODO when Fallout is introduced **/
 		name: "Fallout Capsule",
 		spritenum: 0,
 		num: 67171,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	grassycapsule: {
 		name: "Grassy Capsule",
@@ -13434,6 +14448,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67172,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	mistycapsule: {
 		name: "Misty Capsule",
@@ -13444,6 +14459,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67173,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	electriccapsule: {
 		name: "Electric Capsule",
@@ -13454,6 +14470,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67174,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	psychiccapsule: {
 		name: "Psychic Capsule",
@@ -13464,48 +14481,56 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67175,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	icycapsule: { /* TODO when introduced **/
 		name: "Icy Capsule",
 		spritenum: 0,
 		num: 67176,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	marshycapsule: { /* TODO when introduced **/
 		name: "Marshy Capsule",
 		spritenum: 0,
 		num: 67177,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	wizardcapsule: { /* TODO when introduced **/
 		name: "Wizard Capsule",
 		spritenum: 0,
 		num: 67178,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	volcaniccapsule: { /* TODO when introduced **/
 		name: "Volcanic Capsule",
 		spritenum: 0,
 		num: 67179,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	starfieldcapsule: { /* TODO when introduced **/
 		name: "Starfield Capsule",
 		spritenum: 0,
 		num: 67180,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	librarycapsule: { /* TODO when introduced **/
 		name: "Library Capsule",
 		spritenum: 0,
 		num: 67181,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	comfypillow: {	/* Used in data/mod/wack/condition.ts **/
 		name: "Comfy Pillow",
 		spritenum: 0,
 		num: 67182,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	greencard: {
 		name: "Green Card",
@@ -13519,6 +14544,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67183,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	holyshield: {
 		name: "Holy Shield",
@@ -13543,6 +14569,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67184,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	lavarock: {
 		name: "Lava Rock",
@@ -13561,6 +14588,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67186,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	arhelmet: {
 		name: "Ar Helmet",	/* TODO: Rooms for Ar Helmet to be later defined in data/mod/wack/moves.ts **/
@@ -13570,6 +14598,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67187,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	vrheadset: {	/* TODO: Rooms for Vr Helmet to be later defined in data/mod/wack/moves.ts **/
 		name: "Vr Headset",
@@ -13579,6 +14608,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67188,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	boxinggloves: {
 		name: "Boxing Gloves",
@@ -13593,6 +14623,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67189,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	spikedboots: {
 		name: "Spiked Boots",
@@ -13607,6 +14638,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67190,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	shoepolish: {
 		name: "Shoe Polish",
@@ -13619,6 +14651,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67191,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	trainingglove: {
 		name: "Training Glove",
@@ -13631,6 +14664,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67192,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sandals: {
 		name: "Sandals",
@@ -13645,6 +14679,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67193,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	skis: {
 		name: "Skis",
@@ -13659,12 +14694,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67194,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	skates: {	/* TODO when Icy Terrain is introduced **/
 		name: "Skates",
 		spritenum: 0,
 		num: 67195,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	snowshoes: {	/* TODO Add Icy Terrain condition **/
 		name: "Snowshoes",
@@ -13682,30 +14719,35 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67196,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	hazmatsuit: {	/* TODO Add Fallout and other conditions **/
 		name: "Hazmat Suit",
 		spritenum: 0,
 		num: 67197,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	librarycard: { /* TODO when Library is introduced **/
 		name: "Library Card",
 		spritenum: 0,
 		num: 67198,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	saunaheater: { /* TODO when Sauna is introduced **/
 		name: "Sauna Heater",
 		spritenum: 0,
 		num: 67199,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	foggysteamer: { /* TODO when Sauna is introduced **/
 		name: "Foggy Steamer",
 		spritenum: 0,
 		num: 67200,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	swimsuit: {
 		name: "Swim Suit",
@@ -13720,18 +14762,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67201,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	volcanicseed: { /* TODO when Volcano Terrain is introduced **/
 		name: "Volcanic Seed",
 		spritenum: 0,
 		num: 67202,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	marshyseed: { /* TODO when Marshy Terrain is introduced **/
 		name: "Marshy Seed",
 		spritenum: 0,
 		num: 67203,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tunlawberry: {
 		name: "Tunlaw Berry",
@@ -13751,6 +14796,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67204,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	excisberry: {
 		name: "Excis Berry",
@@ -13770,12 +14816,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67205,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	coagberry: {	/* TODO when Bleeding is introduced */
 		name: "Coag Berry",
 		spritenum: 0,
 		num: 67206,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ambrosaberry: {
 		name: "Ambrosa Berry",
@@ -13800,6 +14848,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67207,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	wingrenberry: {
 		name: "Wingren Berry",
@@ -13819,6 +14868,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67208,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	garsinberry: {
 		name: "Garsin Berry",
@@ -13838,6 +14888,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67209,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	yllohberry: {
 		name: "Ylloh Berry",
@@ -13857,6 +14908,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67210,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	looffahberry: {
 		name: "Looffah Berry",
@@ -13876,30 +14928,35 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67211,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	bandaid: {	/* TODO when Bleeding is introduced **/
 		name: "Bandaid",
 		spritenum: 0,
 		num: 67212,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	librarybinding: {	/* TODO when Library is introduced **/
 		name: "Library Binding",
 		spritenum: 0,
 		num: 67213,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	cyberspacecapsule: {	/* TODO when Cyberspace is introduced **/
 		name: "Cyberspace Capsule",
 		spritenum: 0,
 		num: 67214,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gallerycapsule: { /* TODO when Art Gallery is introduced **/
 		name: "Gallery Capsule",
 		spritenum: 0,
 		num: 67215,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	choicejacket: {
 		name: "Choice Jacket",
@@ -13924,6 +14981,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isChoice: true,
 		num: 67216,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	choicecloak: {
 		name: "Choice Cloak",
@@ -13948,6 +15006,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isChoice: true,
 		num: 67217,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	mettleberry: {
 		name: "Mettle Berry",
@@ -13966,6 +15025,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67218,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	boisonberry: {
 		name: "Boison Berry",
@@ -13989,6 +15049,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67219,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	perepberry: {
 		name: "Perep Berry",
@@ -14012,6 +15073,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67220,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	dollberry: {
 		name: "Doll Berry",
@@ -14035,6 +15097,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67221,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	normaldust: {
 		name: "Normal Dust",
@@ -14055,6 +15118,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67222,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	waterdust: {
 		name: "Water Dust",
@@ -14075,6 +15139,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67223,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	firedust: {
 		name: "Fire Dust",
@@ -14095,6 +15160,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67224,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	grassdust: {
 		name: "Grass Dust",
@@ -14115,6 +15181,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67225,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	fightingdust: {
 		name: "Fighting Dust",
@@ -14135,6 +15202,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67226,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	flyingdust: {
 		name: "Flying Dust",
@@ -14155,6 +15223,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67227,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	poisondust: {
 		name: "Poison Dust",
@@ -14175,6 +15244,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67228,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	grounddust: {
 		name: "Ground Dust",
@@ -14195,6 +15265,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67229,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	rockdust: {
 		name: "Rock Dust",
@@ -14215,6 +15286,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67230,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	bugdust: {
 		name: "Bug Dust",
@@ -14235,6 +15307,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67231,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ghostdust: {
 		name: "Ghost Dust",
@@ -14255,6 +15328,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67232,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	electricdust: {
 		name: "Electric Dust",
@@ -14275,6 +15349,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67233,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	psychicdust: {
 		name: "Psychic Dust",
@@ -14295,6 +15370,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67234,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	icedust: {
 		name: "Ice Dust",
@@ -14315,6 +15391,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67235,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	steeldust: {
 		name: "Steel Dust",
@@ -14335,6 +15412,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67236,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	darkdust: {
 		name: "Dark Dust",
@@ -14355,6 +15433,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67237,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	dragondust: {
 		name: "Dragon Dust",
@@ -14375,6 +15454,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67238,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	fairydust: {
 		name: "Fairy Dust",
@@ -14395,6 +15475,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67239,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	wooddust: {
 		name: "Wood Dust",
@@ -14415,6 +15496,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67240,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	magmadust: {
 		name: "Magma Dust",
@@ -14435,6 +15517,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67241,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	steamdust: {
 		name: "Steam Dust",
@@ -14455,6 +15538,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67242,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	winddust: {
 		name: "Wind Dust",
@@ -14475,6 +15559,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67243,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	paperdust: {
 		name: "Paper Dust",
@@ -14495,6 +15580,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67244,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	techdust: {
 		name: "Tech Dust",
@@ -14515,6 +15601,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67245,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	rubberdust: {
 		name: "Rubber Dust",
@@ -14535,6 +15622,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67246,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	feardust: {
 		name: "Fear Dust",
@@ -14555,6 +15643,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67247,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	magicdust: {
 		name: "Magic Dust",
@@ -14575,6 +15664,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67248,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	lightdust: {
 		name: "Light Dust",
@@ -14595,6 +15685,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67249,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	cosmicdust: {
 		name: "Cosmic Dust",
@@ -14615,6 +15706,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67250,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sounddust: {
 		name: "Sound Dust",
@@ -14635,6 +15727,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67251,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	fooddust: {
 		name: "Food Dust",
@@ -14655,6 +15748,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67252,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	zombiedust: {
 		name: "Zombie Dust",
@@ -14675,6 +15769,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67253,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	nucleardust: {
 		name: "Nuclear Dust",
@@ -14695,6 +15790,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67254,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	virusdust: {
 		name: "Virus Dust",
@@ -14715,6 +15811,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67255,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	cyberdust: {
 		name: "Cyber Dust",
@@ -14735,6 +15832,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67256,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	glassdust: {
 		name: "Glass Dust",
@@ -14755,6 +15853,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67257,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	plasticdust: {
 		name: "Plastic Dust",
@@ -14775,6 +15874,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67258,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	fabricdust: {
 		name: "Fabric Dust",
@@ -14795,6 +15895,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67259,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	chaosdust: {
 		name: "Chaos Dust",
@@ -14815,6 +15916,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67260,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	divinedust: {
 		name: "Divine Dust",
@@ -14835,6 +15937,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67261,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	timedust: {
 		name: "Time Dust",
@@ -14855,6 +15958,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67262,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	paintdust: {
 		name: "Paint Dust",
@@ -14875,6 +15979,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67263,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	crystaldust: {
 		name: "Crystal Dust",
@@ -14895,6 +16000,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67264,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	memedust: {
 		name: "Meme Dust",
@@ -14915,6 +16021,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67265,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	blooddust: {
 		name: "Blood Dust",
@@ -14935,6 +16042,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67266,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	greasydust: {
 		name: "Greasy Dust",
@@ -14955,6 +16063,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67267,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	heartdust: {
 		name: "Heart Dust",
@@ -14975,6 +16084,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67268,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ogredust: {
 		name: "Ogre Dust",
@@ -14995,6 +16105,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67269,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	qmarksdust: {
 		name: "Qmarksdust",
@@ -15015,6 +16126,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67270,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	shadowdust: {
 		name: "Shadow Dust",
@@ -15035,6 +16147,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67271,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	icepack: {
 		name: "Icepack",
@@ -15054,6 +16167,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67272,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	novicebelt: {
 		name: "Novice Belt",
@@ -15069,12 +16183,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67273,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gravitymodule: {	/* Used in data/mod/wack/moves.ts **/
 		name: "Gravity Module",
 		spritenum: 0,
 		num: 67274,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	rockcandy: {
 		name: "Rock Candy",
@@ -15090,6 +16206,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67275,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gubiberry: {
 		name: "Gubi Berry",
@@ -15109,6 +16226,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67276,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	siberrberry: {
 		name: "Siberr Berry",
@@ -15128,6 +16246,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67277,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	waterballoon: {
 		name: "Water Balloon",
@@ -15138,6 +16257,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67278,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	mudballoon: {
 		name: "Mud Balloon",
@@ -15148,6 +16268,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67279,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	magmaballoon: {
 		name: "Magma Balloon",
@@ -15175,12 +16296,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67280,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	steamballoon: { /* TODO when Steam Sport is introduced **/
 		name: "Steam Balloon",
 		spritenum: 0,
 		num: 67281,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	supressionstone: {
 		name: "Supression Stone",
@@ -15190,6 +16313,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67282,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	resistancepolicy: {
 		name: "Resistance Policy",
@@ -15208,6 +16332,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67283,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	chloroflower: {
 		name: "Chloro Flower",
@@ -15219,6 +16344,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67284,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	coconaberry: {
 		name: "Cocona Berry",
@@ -15239,6 +16365,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67285,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gravityseed: {
 		name: "Gravity Seed",
@@ -15261,6 +16388,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67286,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sunglasses: {
 		name: "Sunglasses",
@@ -15283,6 +16411,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67287,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gravitycore: {
 		name: "Gravity Core",
@@ -15295,6 +16424,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67288,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sandcastlekit: {
 		name: "Sandcastle Kit",
@@ -15307,6 +16437,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67289,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	raincoat: {
 		name: "Raincoat",
@@ -15319,6 +16450,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67290,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ativumberry: {
 		name: "Ativum Berry",
@@ -15347,6 +16479,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat(pokemon) { },
 		num: 67291,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	igaradberry: {
 		name: "Igarad Berry",
@@ -15366,6 +16499,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67292,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	inshuberry: {
 		name: "Inshu Berry",
@@ -15385,6 +16519,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67293,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	drakfruberry: {
 		name: "Drakfru Berry",
@@ -15404,6 +16539,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67294,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pyscoberry: {
 		name: "Pysco Berry",
@@ -15423,6 +16559,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67295,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ogravberry: {
 		name: "Ograv Berry",
@@ -15442,6 +16579,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67296,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	poltraberry: {
 		name: "Poltra Berry",
@@ -15461,6 +16599,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67297,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	cowbell: {
 		name: "Cowbell",
@@ -15518,6 +16657,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ['Miltank'],
 		num: 67298,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	iaraytberry: {
 		name: "Iarayt Berry",
@@ -15537,6 +16677,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67299,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	zodziberry: {
 		name: "Zodzi Berry",
@@ -15556,6 +16697,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67300,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	arcakberry: {
 		name: "Arcak Berry",
@@ -15575,6 +16717,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67301,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	shurbberry: {
 		name: "Shurb Berry",
@@ -15594,6 +16737,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67302,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	vaccuberry: {
 		name: "Vaccu Berry",
@@ -15613,6 +16757,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67303,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gluttberry: {
 		name: "Glutt Berry",
@@ -15632,6 +16777,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67304,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tivomberry: {
 		name: "Tivom Berry",
@@ -15651,6 +16797,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67305,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	srapyberry: {
 		name: "Srapy Berry",
@@ -15670,6 +16817,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67306,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	invertedrune: {
 		name: "Inverted Rune",
@@ -15685,6 +16833,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67307,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gouraberry: {
 		name: "Goura Berry",
@@ -15699,6 +16848,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onEat() { },
 		num: 67308,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gravitycapsule: {
 		name: "Gravity Capsule",
@@ -15709,6 +16859,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67309,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	chaosflute: {
 		name: "Chaos Flute",
@@ -15718,138 +16869,161 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67310,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	flyingballoon: {	/* TODO when introduced **/
 		name: "Flying Balloon",
 		spritenum: 0,
 		num: 67311,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pandemiccapsule: {	/* TODO when introduced **/
 		name: "Pandemic Capsule",
 		spritenum: 0,
 		num: 67312,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	aethercapsule: {	/* TODO when introduced **/
 		name: "Aether Capsule",
 		spritenum: 0,
 		num: 67313,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	steamyrock: {	/* TODO when introduced **/
 		name: "Steamy Rock",
 		spritenum: 0,
 		num: 67314,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	featherrock: {	/* TODO when introduced **/
 		name: "Feather Rock",
 		spritenum: 0,
 		num: 67315,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	erodedrock: {	/* TODO when introduced **/
 		name: "Eroded Rock",
 		spritenum: 0,
 		num: 67316,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	scalyrock: {	/* TODO when introduced **/
 		name: "Scaly Rock",
 		spritenum: 0,
 		num: 67317,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	chargedrock: { /* Implemented in data/mod/wack/moves.ts **/
 		name: "Charged Rock",
 		spritenum: 0,
 		num: 67318,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	brightrock: { /* TODO when introduced **/
 		name: "Bright Rock",
 		spritenum: 0,
 		num: 67319,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	mossyrock: { /* Implemented in data/mod/wack/moves.ts **/
 		name: "Mossy Rock",
 		spritenum: 0,
 		num: 67320,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	weirdrock: { /* Implemented in data/mod/wack/moves.ts **/
 		name: "Weird Rock",
 		spritenum: 0,
 		num: 67321,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	virtualrock: { /* TODO when introduced **/
 		name: "Virtual Rock",
 		spritenum: 0,
 		num: 67322,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	reflectiverock: { /* TODO when introduced **/
 		name: "Reflective Rock",
 		spritenum: 0,
 		num: 67323,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	radioactiverock: { /* TODO when introduced **/
 		name: "Radioactive Rock",
 		spritenum: 0,
 		num: 67324,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	paperrock: { /* TODO when introduced **/
 		name: "Paper Rock",
 		spritenum: 0,
 		num: 67325,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sweetrock: { /* TODO when introduced **/
 		name: "Sweet Rock",
 		spritenum: 0,
 		num: 67326,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	viralrock: { /* TODO when introduced **/
 		name: "Viral Rock",
 		spritenum: 0,
 		num: 67327,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	woodenrock: { /* TODO when introduced **/
 		name: "Woodenrock",
 		spritenum: 0,
 		num: 67328,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	echorock: { /* TODO when introduced **/
 		name: "Echo Rock",
 		spritenum: 0,
 		num: 67329,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	clasticrock: { /* TODO when introduced **/
 		name: "Clastic Rock",
 		spritenum: 0,
 		num: 67330,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	swarmedrock: { /* TODO when introduced **/
 		name: "Swarmed Rock",
 		spritenum: 0,
 		num: 67331,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	chromerock: { /* TODO when introduced **/
 		name: "Chrome Rock",
 		spritenum: 0,
 		num: 67332,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	plagueorb: {
 		name: "Plague Orb",
@@ -15865,6 +17039,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67334,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	infernoorb: {
 		name: "Inferno Orb",
@@ -15880,6 +17055,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67335,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	stormorb: {
 		name: "Storm Orb",
@@ -15895,6 +17071,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67336,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	glassarmor: {
 		name: "Glass Armor",
@@ -15908,6 +17085,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67337,
 		isNonstandard: "Future",
+		rating: 3,
 	},
 	confoundorb: {
 		name: "Confound Orb",
@@ -15919,6 +17097,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67338,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tormentorb: {
 		name: "Torment Orb",
@@ -15930,6 +17109,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67339,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tauntorb: {
 		name: "Taunt Orb",
@@ -15941,6 +17121,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67340,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	hotchocolate: {
 		name: "Hot Chocolate",
@@ -15954,6 +17135,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67341,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	icecream: {
 		name: "Ice Cream",
@@ -15967,6 +17149,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67342,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	yogurt: {
 		name: "Yogurt",
@@ -15980,6 +17163,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67343,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	mixedmushrooms: {
 		name: "Mixed Mushrooms",
@@ -15993,6 +17177,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67344,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	carritberry: {
 		name: "Carrit Berry",
@@ -16013,6 +17198,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67345,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ginsioberry: {
 		name: "Ginsio Berry",
@@ -16033,54 +17219,63 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67346,
 		isNonstandard: "Future",
+		rating: 4,
 	},
 	rottedrock: {	/* TODO when introduced **/
 		name: "Rotted Rock",
 		spritenum: 0,
 		num: 67347,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	feastcapsule: {	/* TODO when introduced **/
 		name: "Feast Capsule",
 		spritenum: 0,
 		num: 67348,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	mirrorcapsule: {	/* TODO when introduced **/
 		name: "Mirror Capsule",
 		spritenum: 0,
 		num: 67349,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	plainrock: {	/* TODO when introduced **/
 		name: "Plain Rock",
 		spritenum: 0,
 		num: 67350,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	graveyardcapsule: {	/* TODO when introduced **/
 		name: "Graveyard Capsule",
 		spritenum: 0,
 		num: 67351,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	iceballoon: {	/* TODO when introduced **/
 		name: "Ice Balloon",
 		spritenum: 0,
 		num: 67352,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	arboreumcapsule: {	/* TODO when introduced **/
 		name: "Arboreum Capsule",
 		spritenum: 0,
 		num: 67353,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	saunacapsule: {	/* TODO when introduced **/
 		name: "Sauna Capsule",
 		spritenum: 0,
 		num: 67354,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sexyswimsuit: {
 		name: "Sexy Swimsuit",
@@ -16094,6 +17289,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67355,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	rainbarrel: {
 		name: "Rain Barrel",
@@ -16107,24 +17303,28 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67356,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	blaringspeaker: {	/* TODO when introduced **/
 		name: "Blaring Speaker",
 		spritenum: 0,
 		num: 67357,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	factorycapsule: {	/* TODO when introduced **/
 		name: "Factory Capsule",
 		spritenum: 0,
 		num: 67358,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	recyclecapsule: {	/* TODO when introduced **/
 		name: "Recycle Capsule",
 		spritenum: 0,
 		num: 67359,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	prankkit: {
 		name: "Prank Kit",
@@ -16137,6 +17337,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67360,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	nightlight: {
 		name: "Nightlight",
@@ -16153,24 +17354,28 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67361,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	plasticrock: {  /* TODO when introduced **/
 		name: "Plastic Rock",
 		spritenum: 0,
 		num: 67362,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	bruxishite: {
 		name: "Bruxishite",
 		spritenum: 0,
 		num: 67363,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	drampite: {
 		name: "Drampite",
 		spritenum: 0,
 		num: 67364,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	youthincense: {
 		name: "Youth Incense",
@@ -16186,6 +17391,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67365,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	marshyincense: {
 		name: "Marshy Incense",
@@ -16201,6 +17407,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67366,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	teaincense: {
 		name: "Tea Incense",
@@ -16212,36 +17419,42 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67367,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	trojorsite: {
 		name: "Trojorsite",
 		spritenum: 0,
 		num: 67368,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	dusknoirite: {
 		name: "Dusknoirite",
 		spritenum: 0,
 		num: 67369,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	manarock: {	/* TODO when Manaverse introduced **/
 		name: "Mana Rock",
 		spritenum: 0,
 		num: 67370,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gueriestite: {
 		name: "Gueriestite",
 		spritenum: 0,
 		num: 67371,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	darkballoon: {	/* TODO when Dark Spot introduced **/
 		name: "Dark Balloon",
 		spritenum: 0,
 		num: 67372,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	c4: {
 		name: "C4",
@@ -16255,6 +17468,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67373,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	soupbowl: {
 		name: "Soup Bowl",
@@ -16271,6 +17485,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67374,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	toiletpaper: {
 		name: "Toilet Paper",
@@ -16285,54 +17500,63 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67375,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	swarmcapsule: {	/* TODO When introduced **/
 		name: "Swarm Capsule",
 		spritenum: 0,
 		num: 67377,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	prismolisite: {
 		name: "Prismolisite",
 		spritenum: 0,
 		num: 67378,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	horrorizer: {
 		name: "Horrorizer",
 		spritenum: 0,
 		num: 67379,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	steadywindcapsule: {  /* TODO When introduced **/
 		name: "Steadywind Capsule",
 		spritenum: 0,
 		num: 67380,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tempestcapsule: {  /* TODO When introduced **/
 		name: "Tempest Capsule",
 		spritenum: 0,
 		num: 67381,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	invertedcapsule: {  /* TODO When introduced **/
 		name: "Inverted Capsule",
 		spritenum: 0,
 		num: 67382,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	bouncycapsule: {  /* TODO When introduced **/
 		name: "Bouncy Capsule",
 		spritenum: 0,
 		num: 67383,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	manaversecapsule: {  /* TODO When introduced **/
 		name: "Manaverse Capsule",
 		spritenum: 0,
 		num: 67384,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	ultracloak: {
 		name: "Ultra Cloak",
@@ -16347,6 +17571,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67385,
 		isNonstandard: "Future",
+		rating: 4,
 	},
 	ultrascarf: {
 		name: "Ultra Scarf",
@@ -16356,6 +17581,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67386,
 		isNonstandard: "Future",
+		rating: 4,
 	},
 	godsorb: {
 		name: "GODSORB",
@@ -16383,12 +17609,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67387,
 		isNonstandard: "Future",
+		rating: 4,
 	},
 	probopassite: {
 		name: "Probopassite",
 		spritenum: 0,
 		num: 67391,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	vampirefangs: {
 		name: "Vampire Fangs",
@@ -16403,6 +17631,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67392,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	eviolate: {
 		name: "Eviolate",
@@ -16424,6 +17653,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67393,
 		isNonstandard: "Future",
+		rating: 3,
 	},
 	archersbow: {
 		name: "Archers Bow",
@@ -16437,6 +17667,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67394,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	spiritbell: {
 		name: "Spirit Bell",
@@ -16448,12 +17679,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67395,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	battlewhip: {	/* Only exists in the PBS, not the game's code**/
 		name: "Battle Whip",
 		spritenum: 0,
 		num: 67396,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	weakeningwhip: {
 		name: "Weakening Whip",
@@ -16465,6 +17698,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67397,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	shatteringhammer: {
 		name: "Shattering Hammer",
@@ -16476,6 +17710,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67398,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	distracttrumpet: {
 		name: "Distract Trumpet",
@@ -16487,6 +17722,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67399,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	enfeeblescepter: {
 		name: "Enfeeble Scepter",
@@ -16498,6 +17734,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67400,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gooeygloves: {
 		name: "Gooey Gloves",
@@ -16509,6 +17746,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67401,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	blindingprism: {
 		name: "Blinding Prism",
@@ -16520,6 +17758,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67402,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	alluringnectar: {
 		name: "Alluring Nectar",
@@ -16531,6 +17770,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67403,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	curseddoll: {
 		name: "Cursed Doll",
@@ -16542,12 +17782,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67404,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	gigadrill: {  /* Only exists in the PBS, not the game's code**/
 		name: "Giga Drill",
 		spritenum: 0,
 		num: 67405,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sheriffhat: {
 		name: "Sheriff Hat",
@@ -16559,6 +17801,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67406,
 		isNonstandard: "Future",
+		rating: 3,
 	},
 	sheriffbadge: {
 		name: "Sheriff Badge",
@@ -16583,12 +17826,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67407,
 		isNonstandard: "Future",
+		rating: 3,
 	},
 	wildwestcapsule: {	/* TODO when Wild West is introduced **/
 		name: "Wildwest Capsule",
 		spritenum: 0,
 		num: 67408,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	safetyhelmet: {
 		name: "Safety Helmet",
@@ -16601,24 +17846,28 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 0,
 		num: 67409,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pengemperorite: {
 		name: "Pengemperorite",
 		spritenum: 0,
 		num: 67410,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	golurkite: {
 		name: "Golurkite",
 		spritenum: 0,
 		num: 67411,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	nidoqueenite: {
 		name: "Nidoqueenite",
 		spritenum: 0,
 		num: 67412,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	dontstopmenow: {
 		name: "Dontstopmenow",
@@ -16630,6 +17879,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67413,
 		isNonstandard: "Future",
+		rating: 3,
 	},
 	sanshoodie: {
 		name: "Sans Hoodie",
@@ -16642,6 +17892,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67415,
 		isNonstandard: "Future",
+		rating: 4,
 	},
 	eviocicle: {
 		name: "Eviocicle",
@@ -16653,12 +17904,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67422,
 		isNonstandard: "Future",
+		rating: 3,
 	},
 	wackorb: {
 		name: "Wack Orb",
 		spritenum: 0,
 		num: 67423,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	fancyapple: {
 		name: "Fancy Apple",
@@ -16673,6 +17926,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67424,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	fruitbunch: {
 		name: "Fruit Bunch",
@@ -16687,6 +17941,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67425,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	tinofbeans: {
 		name: "Tin Of Beans",
@@ -16700,6 +17955,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67426,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	friedfood: {
 		name: "Fried Food",
@@ -16713,6 +17969,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67427,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	spicemix: {
 		name: "Spice Mix",
@@ -16726,18 +17983,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67428,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	saladmix: {	/* TODO when Grass-type Charge move is introduced **/
 		name: "Salad Mix",
 		spritenum: 0,
 		num: 67429,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	magnezonite: {
 		name: "Magnezonite",
 		spritenum: 0,
 		num: 67430,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	saturnorb: {
 		name: "Saturn Orb",
@@ -16775,6 +18035,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67431,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	jupiterorb: {
 		name: "Jupiter Orb",
@@ -16812,6 +18073,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67432,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	neptuneorb: {
 		name: "Neptune Orb",
@@ -16849,6 +18111,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67433,
 		isNonstandard: "Future",
+		rating: 2,
 	},
 	uranusorb: {
 		name: "Uranus Orb",
@@ -16886,6 +18149,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67434,
 		isNonstandard: "Future",
+		rating: 4,
 	},
 	borderwall: {
 		name: "Border Wall",
@@ -16896,6 +18160,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67435,
 		isNonstandard: "Future",
+		rating: 4,
 	},
 	brittlebones: {
 		name: "Brittle Bones",
@@ -16908,6 +18173,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67436,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sodapowder: {
 		name: "Soda Powder",
@@ -16923,6 +18189,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67438,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	supermalevitality: {
 		name: "Super Male Vitality",
@@ -16938,6 +18205,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67440,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	brainforce: {
 		name: "Brainforce",
@@ -16953,6 +18221,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67441,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	angerorb: {
 		name: "Anger Orb",
@@ -16966,6 +18235,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67445,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	breakdownorb: {
 		name: "Breakdown Orb",
@@ -16979,12 +18249,14 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67446,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	charizarditec: {
 		name: "Charizardite C",
 		spritenum: 0,
 		num: 67461,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	pitchsludge: {
 		name: "Pitch Sludge",
@@ -17000,6 +18272,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67462,
 		isNonstandard: "Future",
+		rating: 4,
 	},
 	craggyhelmet: {
 		name: "Craggy Helmet",
@@ -17012,6 +18285,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67463,
 		isNonstandard: "Future",
+		rating: 3,
 	},
 	fangclaw: {
 		name: "Fangclaw",
@@ -17034,6 +18308,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67464,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	theberry: {
 		name: "The Berry",
@@ -17056,6 +18331,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67465,
 		isNonstandard: "Future",
+		rating: 3,
 	},
 	banhammer: {
 		name: "Banhammer",
@@ -17067,6 +18343,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67466,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	firewallarmor: {
 		name: "Firewall Armor",
@@ -17083,18 +18360,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67467,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	virusbuster: {	/* TODO when Anti-Virus is included **/
 		name: "Virus Buster",
 		spritenum: 0,
 		num: 67468,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	necronomicon: { /* TODO when Graveyard is included **/
 		name: "Necronomicon",
 		spritenum: 0,
 		num: 67469,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	superpaper: {
 		name: "Super Paper",
@@ -17125,6 +18405,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ['Pagie'],
 		num: 67470,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	balletoutfit: {
 		name: "Ballet Outfit",
@@ -17141,6 +18422,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67471,
 		isNonstandard: "Future",
+		rating: 4,
 	},
 	kaleidoscope: {
 		name: "Kaleido Scope",
@@ -17163,18 +18445,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67472,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	limbershoes: {	/* Used in data/mod/wack/condition.ts **/
 		name: "Limber Shoes",
 		spritenum: 0,
 		num: 67473,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	coldpack: {  /* Used in sim/battle-actions.ts **/
 		name: "Cold Pack",
 		spritenum: 0,
 		num: 67474,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	skyrimse: {
 		name: "Skyrimse",
@@ -17215,6 +18500,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67476,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	weddingdress: {
 		name: "Wedding Dress",
@@ -17227,18 +18513,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67477,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	bunnysuit: {  /* TODO when move effect is introduced **/
 		name: "Bunny Suit",
 		spritenum: 0,
 		num: 67478,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	catears: {	/* TODO when move effect is introduced **/
 		name: "Cat Ears",
 		spritenum: 0,
 		num: 67479,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	instantnoodles: {
 		name: "Instant Noodles",
@@ -17258,6 +18547,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67480,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	sausages: {
 		name: "Sausages",
@@ -17277,6 +18567,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67480,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	packagedcurry: {
 		name: "Packaged Curry",
@@ -17296,6 +18587,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67480,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	precookedburger: {
 		name: "Precooked Burger",
@@ -17315,6 +18607,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67480,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 	freshcream: {
 		name: "Fresh Cream",
@@ -17334,5 +18627,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 67480,
 		isNonstandard: "Future",
+		rating: 1,
 	},
 };
