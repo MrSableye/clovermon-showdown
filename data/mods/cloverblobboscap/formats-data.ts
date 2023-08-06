@@ -2579,6 +2579,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	sepulture: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+		},
+	ibask: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+		},
+	dirtybis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	inkrow: {
 		tier: "Illegal",
