@@ -230,4 +230,30 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	battlearmor: {
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'recoil') {
+				if (!this.activeMove) throw new Error("Battle.activeMove is null");
+				if (this.activeMove.id !== 'struggle') return null;
+			}
+		},
+		onCriticalHit: false,
+		isBreakable: true,
+		name: "Battle Armor",
+		rating: 1,
+		num: 4,
+	},
+	shellarmor: {
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'recoil') {
+				if (!this.activeMove) throw new Error("Battle.activeMove is null");
+				if (this.activeMove.id !== 'struggle') return null;
+			}
+		},
+		onCriticalHit: false,
+		isBreakable: true,
+		name: "Shell Armor",
+		rating: 1,
+		num: 75,
+	},
 };

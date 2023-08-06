@@ -3646,6 +3646,56 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbospikmin: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminyellow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminblue: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminpurple: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminwhite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminflying: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminrock: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminglow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospikminparasite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	blobboshomestuck: {
 		inherit: true,
 		isNonstandard: null,
@@ -3747,6 +3797,61 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobboshole: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmech: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmechfire: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmechwater: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosmechelectric: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosgl17ch: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosnymph: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboshollow: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbosclover: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	blobbosmechice: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobboskracko: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	blobbospartner: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

@@ -4,6 +4,7 @@ import Axios from 'axios';
 import probe from 'probe-image-size';
 import {FS} from '../../lib';
 import {Punishments} from '../punishments';
+import { escapeHTML } from '../../lib/utils';
 
 const EMOJI_BAN_DURATION = 7 * 24 * 60 * 60 * 1000; // 1 week
 const MAX_REASON_LENGTH = 300;
@@ -43,7 +44,7 @@ const deleteEmoji = (name: string) => {
 
 const toAlphaNumeric = (text: string) => ('' + text).replace(/[^A-Za-z0-9]+/g, '');
 
-const createEmojiHtml = (
+export const createEmojiHtml = (
 	name: string,
 	filename: string,
 ) => `<img src="https://clover.weedl.es:8443/emojis/${filename}" title=":${name}:" height="${EMOJI_SIZE}" width="${EMOJI_SIZE}">`;
@@ -165,7 +166,7 @@ export const commands: Chat.ChatCommands = {
 export const chatfilter: Chat.ChatFilter = (message, user) => {
 	if (!Punishments.hasPunishType(user.id, 'EMOJIBAN') && Object.keys(emojis).length > 0 && emojiRegex.test(message)) {
 		const prefix = message.startsWith('/html') ? '' : '/html ';
-		return prefix + message.replace(emojiRegex, (match) => {
+		return prefix + escapeHTML(message).replace(emojiRegex, (match) => {
 			const emojiName = match.slice(1, -1);
 			return createEmojiHtml(emojiName, emojis[emojiName]);
 		});

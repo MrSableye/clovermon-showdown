@@ -55,6 +55,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	recoilshot: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	behemothblob: {
 		inherit: true,
 		isNonstandard: null,
@@ -1651,6 +1655,22 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	combatorders: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	haste: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sharpeyes: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	maplewarrior: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	starforce: {
 		inherit: true,
 		isNonstandard: null,
@@ -1668,6 +1688,29 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	mitosismash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	drainingkiss: {
+		num: 577,
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		name: "Draining Kiss",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
+		drain: [3, 4],
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		contestType: "Cute",
+	},
+	rocketboost: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	techslash: {
 		inherit: true,
 		isNonstandard: null,
 	},

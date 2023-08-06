@@ -19,10 +19,10 @@ The column value will be ignored for repeat sections.
 
 export const Formats: FormatList = [
 	///////////////////////////////////////////////////////////////////
-	// Clover Core Tiers
+	// Clover
 	///////////////////////////////////////////////////////////////////
 	{
-		section: 'Clover Core Tiers',
+		section: 'Clover',
 	},
 	{
 		name: '[Gen 8 Clover Only] OU',
@@ -67,12 +67,6 @@ export const Formats: FormatList = [
 		ruleset: ['Terastal Clause', '[Gen 8 Clover Only] RU'],
 		banlist: ['RU', 'NUBL'],
 	},
-	///////////////////////////////////////////////////////////////////
-	// Clover Singles
-	///////////////////////////////////////////////////////////////////
-	{
-		section: 'Clover Singles',
-	},
 	{
 		name: '[Gen 8 Clover Only] Random Battle',
 		mod: 'clover',
@@ -109,6 +103,7 @@ export const Formats: FormatList = [
 		team: 'random',
 		gameType: 'freeforall',
 		tournamentShow: false,
+		rated: false,
 		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
@@ -116,6 +111,8 @@ export const Formats: FormatList = [
 		mod: 'clover',
 		team: 'random',
 		gameType: 'freeforall',
+		rated: false,
+		searchShow: false,
 		ruleset: [
 			'Terastal Clause',
 			'Picked Team Size = 6',
@@ -136,7 +133,24 @@ export const Formats: FormatList = [
 		team: 'random',
 		gameType: 'multi',
 		tournamentShow: false,
+		rated: false,
+		searchShow: false,
 		ruleset: ['Terastal Clause', 'Max Team Size = 3', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Dynamax Clause'],
+	},
+	{
+		name: '[Gen 8 Clover Only] NFE',
+		mod: 'clover',
+		ruleset: [
+			'Terastal Clause',
+			'Not Fully Evolved',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: [
+			'Chancer', 'Semrust', 'Hosajack',
+			'Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Wonder Guard',
+		],
 	},
 	{
 		name: '[Gen 8 Clover Only] LC',
@@ -176,11 +190,13 @@ export const Formats: FormatList = [
 			'Sketch Post-Gen 7 Moves',
 		],
 	},
-	///////////////////////////////////////////////////////////////////
-	// Clover Doubles & Triples
-	///////////////////////////////////////////////////////////////////
 	{
-		section: 'Clover Doubles & Triples',
+		name: '[Gen 8 Clover National Dex] AG',
+		mod: 'clover',
+		ruleset: [
+			'Terastal Clause',
+			'Standard NatDex',
+		],
 	},
 	{
 		name: '[Gen 8 Clover Only] Doubles OU',
@@ -199,6 +215,8 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Triples OU',
 		mod: 'clover',
 		gameType: 'triples',
+		searchShow: false,
+		rated: false,
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
@@ -209,86 +227,15 @@ export const Formats: FormatList = [
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
 	///////////////////////////////////////////////////////////////////
-	// Seasonal Clover
-	///////////////////////////////////////////////////////////////////
-	{
-		section: 'Seasonal Clover',
-		column: 2,
-	},
-	{
-		name: '[Gen 8 Clover Only] Festive Random Battle',
-		mod: 'clover',
-		team: 'randomFestive',
-		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
-		onBattleStart() {
-			this.field.setWeather('hail', this.getAllPokemon()[0]);
-			this.hint('Fairy-types use "Wish" after fainting.');
-			this.hint('Grass-types seed all enemies and start Grassy Terrain after fainting.');
-			this.hint('Ice-types uses "Lunar Dance" after fainting if Hail is active, otherwise Hail activates.');
-			this.hint('Normal-types use "Spikes" after fainting.');
-			this.hint('Only one effect will occur and it prioritizes types in the order above.');
-		},
-		onFaint(target) {
-			if (target.types.includes('Fairy')) {
-				target.side.addSlotCondition(target, 'Wish', target);
-			} else if (target.types.includes('Grass')) {
-				target.foes(true).forEach((foe) => {
-					foe.addVolatile('leechseed');
-				});
-				this.field.setTerrain('grassyterrain');
-			} else if (target.types.includes('Ice')) {
-				if (this.field.weather === 'hail') {
-					target.side.addSlotCondition(target, 'lunardance', target);
-				} else {
-					this.field.setWeather('hail');
-				}
-			} else if (target.types.includes('Normal')) {
-				target.side.foeSidesWithConditions().forEach((side) => {
-					side.addSideCondition('spikes');
-				});
-			}
-		},
-	},
-	{
-		name: '[Gen 8 Clover Only] Random Irish Battle',
-		mod: 'clover',
-		team: 'randomIrish',
-		searchShow: false,
-		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
-	},
-	///////////////////////////////////////////////////////////////////
 	// Clover OMs
 	///////////////////////////////////////////////////////////////////
 	{
 		section: 'Clover OMs',
-		column: 2,
-	},
-	{
-		name: '[Gen 8 Clover National Dex] AG',
-		mod: 'clover',
-		ruleset: [
-			'Terastal Clause',
-			'Standard NatDex',
-		],
-	},
-	{
-		name: '[Gen 8 Clover Only] NFE',
-		mod: 'clover',
-		ruleset: [
-			'Terastal Clause',
-			'Not Fully Evolved',
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
-		],
-		banlist: [
-			'Chancer', 'Semrust', 'Hosajack',
-			'Baton Pass', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Wonder Guard',
-		],
 	},
 	{
 		name: '[Gen 8 Clover Only] OU (No Team Preview)',
 		mod: 'clover',
+		searchShow: false,
 		rated: false,
 		ruleset: [
 			'Terastal Clause',
@@ -309,6 +256,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Only] Balanced Hackmons',
 		mod: 'clover',
+		searchShow: false,
+		rated: false,
 		ruleset: ['Terastal Clause', '-Nonexistent', 'OHKO Clause', 'Evasion Moves Clause', 'Forme Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
 		banlist: [
 			'Arena Trap', 'Contrary', 'Gorilla Tactics', 'Huge Power', 'Illusion', 'Innards Out', 'Libero', 'Magnet Pull', 'Moody',
@@ -319,6 +268,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Only] Multi-Tier',
 		mod: 'clover',
+		searchShow: false,
+		rated: false,
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
@@ -331,6 +282,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Only] 350 Cup',
 		mod: 'clover',
+		searchShow: false,
+		rated: false,
 		ruleset: [
 			'Terastal Clause',
 			'350 Cup Mod',
@@ -343,6 +296,8 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 8 Clover Only] Godly Gift",
 		mod: 'clover',
+		searchShow: false,
+		rated: false,
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
@@ -417,6 +372,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Only] Inverse',
 		mod: 'clover',
+		searchShow: false,
+		rated: false,
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
@@ -432,6 +389,8 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Almost Any Ability',
 		desc: `Pok&eacute;mon have access to almost any ability.`,
 		mod: 'clover',
+		searchShow: false,
+		rated: false,
 		ruleset: ['Terastal Clause', 'Sketch Post-Gen 7 Moves', 'Obtainable', '!Obtainable Abilities', 'Species Clause', 'Nickname Clause', 'Ability Clause = 2', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
 		banlist: [
 			'Uber', 'Niterpent',
@@ -445,6 +404,8 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] Flipped",
 		desc: `Pok&eacute;mon have their base stats flipped.`,
 		mod: 'clover',
+		searchShow: false,
+		rated: false,
 		ruleset: ['Terastal Clause', 'Standard', 'Flipped Mod', 'Dynamax Clause', 'Sketch Post-Gen 7 Moves'],
 		banlist: ['Draconius', 'Manatank', 'Pasdawg', 'Arena Trap', 'Moody', 'Power Construct', 'Psychic Surge', 'Shadow Tag', 'Baton Pass', 'Psychic Terrain', 'Shell Smash', 'Toke', 'Uber'],
 		unbanlist: ['Chromox', 'Condoom', 'Funnedong', 'Foryu'],
@@ -453,6 +414,8 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] STABmons',
 		desc: `Pok&eacute;mon can use any move of their typing, in addition to the moves they can normally learn.`,
 		mod: 'clover',
+		searchShow: false,
+		rated: false,
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
@@ -471,6 +434,8 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Alphabet Cup',
 		desc: `Allows Pok&eacute;mon to use any move that shares the same first letter as their name or a previous evolution's name.`,
 		mod: 'clover',
+		searchShow: false,
+		rated: false,
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
@@ -491,6 +456,8 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] Scalemons",
 		desc: `Every Pok&eacute;mon's stats, barring HP, are scaled to give them a BST as close to 600 as possible.`,
 		mod: 'clover',
+		searchShow: false,
+		rated: false,
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
@@ -507,6 +474,8 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] Camomons",
 		desc: `Pok&eacute;mon change type to match their first two moves.`,
 		mod: 'clover',
+		searchShow: false,
+		rated: false,
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
@@ -523,6 +492,8 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] Pokebilities",
 		desc: `Pok&eacute;mon have all of their released abilities simultaneously.`,
 		mod: 'cloverabilities',
+		searchShow: false,
+		rated: false,
 		ruleset: [
 			'Terastal Clause',
 			'Standard',
@@ -564,6 +535,8 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] Mix and Mega",
 		desc: `Mega evolve any Pok&eacute;mon with any mega stone and no limit. Boosts based on mega evolution from gen 7.`,
 		mod: 'clovermixandmega',
+		searchShow: false,
+		rated: false,
 		ruleset: ['Terastal Clause', 'Standard', 'Overflow Stat Mod', 'Dynamax Clause', 'Sketch Post-Gen 7 Moves'],
 		banlist: [
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
@@ -627,6 +600,8 @@ export const Formats: FormatList = [
 		name: "[Gen 8 Clover Only] 1v1",
 		desc: `Bring three Pok&eacute;mon to Team Preview and choose one to battle.`,
 		mod: 'clover',
+		searchShow: false,
+		rated: false,
 		ruleset: [
 			'Terastal Clause',
 			'Picked Team Size = 1', 'Max Team Size = 3',
@@ -643,6 +618,8 @@ export const Formats: FormatList = [
 	{
 		name: '[Gen 8 Clover Only] Custom Game',
 		mod: 'clover',
+		searchShow: false,
+		rated: false,
 		debug: true,
 		battle: {trunc: Math.trunc},
 		// no restrictions, for serious (other than team preview)
@@ -652,17 +629,263 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] Custom Game (Doubles)',
 		mod: 'clover',
 		gameType: 'doubles',
+		searchShow: false,
+		rated: false,
 		debug: true,
 		battle: {trunc: Math.trunc},
 		// no restrictions, for serious (other than team preview)
 		ruleset: ['Terastal Clause', 'Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
 	///////////////////////////////////////////////////////////////////
-	// Clover CAP
+	// Seasonal Clover
 	///////////////////////////////////////////////////////////////////
 	{
-		section: 'Clover CAP',
-		column: 3,
+		section: 'Seasonal Clover',
+	},
+	{
+		name: '[Gen 8 Clover Only] Festive Random Battle',
+		mod: 'clover',
+		team: 'randomFestive',
+		searchShow: false,
+		rated: false,
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+		onBattleStart() {
+			this.field.setWeather('hail', this.getAllPokemon()[0]);
+			this.hint('Fairy-types use "Wish" after fainting.');
+			this.hint('Grass-types seed all enemies and start Grassy Terrain after fainting.');
+			this.hint('Ice-types uses "Lunar Dance" after fainting if Hail is active, otherwise Hail activates.');
+			this.hint('Normal-types use "Spikes" after fainting.');
+			this.hint('Only one effect will occur and it prioritizes types in the order above.');
+		},
+		onFaint(target) {
+			if (target.types.includes('Fairy')) {
+				target.side.addSlotCondition(target, 'Wish', target);
+			} else if (target.types.includes('Grass')) {
+				target.foes(true).forEach((foe) => {
+					foe.addVolatile('leechseed');
+				});
+				this.field.setTerrain('grassyterrain');
+			} else if (target.types.includes('Ice')) {
+				if (this.field.weather === 'hail') {
+					target.side.addSlotCondition(target, 'lunardance', target);
+				} else {
+					this.field.setWeather('hail');
+				}
+			} else if (target.types.includes('Normal')) {
+				target.side.foeSidesWithConditions().forEach((side) => {
+					side.addSideCondition('spikes');
+				});
+			}
+		},
+	},
+	{
+		name: '[Gen 8 Clover Only] Random Irish Battle',
+		mod: 'clover',
+		team: 'randomIrish',
+		searchShow: false,
+		rated: false,
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
+		name: '[Gen 8 Clover Only] Random SPOOKY Battle',
+		mod: 'clover',
+		team: 'randomSpooky',
+		searchShow: false,
+		rated: false,
+		onEffectiveness(typeMod, target, type, move) {
+			if (['Dark', 'Ghost'].includes(type) && ['Dark', 'Ghost'].includes(move.type)) {
+				return 0;
+			}
+		},
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	///////////////////////////////////////////////////////////////////
+	// Wack
+	///////////////////////////////////////////////////////////////////
+	{
+		section: 'Wack (HEAVY WIP)',
+		column: 2,
+	},
+	{
+		name: '[Gen 8 Wack Only] OU',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+			'Overflow Stat Mod',
+		],
+		banlist: [
+			'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
+			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
+			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] Ubers',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+			'Overflow Stat Mod',
+		],
+		banlist: [
+			'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
+			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
+			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] NFE',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Not Fully Evolved',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+			'Overflow Stat Mod',
+		],
+		banlist: [
+			'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
+			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
+			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] LC',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Little Cup',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+			'Overflow Stat Mod',
+		],
+		banlist: [
+			'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
+			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
+			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] Monotype',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Same Type Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+			'Overflow Stat Mod',
+		],
+		banlist: [
+			'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
+			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
+			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] Anything Goes',
+		mod: 'wack',
+		ruleset: [
+			'Terastal Clause',
+			'Obtainable',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+			'Team Preview',
+			'Overflow Stat Mod',
+		],
+		banlist: [
+			'antiplebshield'
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] Doubles OU',
+		mod: 'wack',
+		gameType: 'doubles',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Swagger Clause',
+			'Sketch Post-Gen 7 Moves',
+			'Overflow Stat Mod',
+		],
+		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+		'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
+		'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
+		'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
+		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] Triples OU',
+		mod: 'wack',
+		gameType: 'triples',
+		searchShow: false,
+		rated: false,
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Swagger Clause',
+			'Sketch Post-Gen 7 Moves',
+			'Overflow Stat Mod',
+		],
+		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+		'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
+		'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
+		'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
+		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+		],
+	},
+	{
+		name: '[Gen 8 Wack Only] Custom Game',
+		mod: 'wack',
+		searchShow: false,
+		rated: false,
+		debug: true,
+		battle: {trunc: Math.trunc},
+		ruleset: ['Terastal Clause', 'Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
+	},
+	{
+		name: '[Gen 8 Wack Only] Custom Game (Doubles)',
+		mod: 'wack',
+		gameType: 'doubles',
+		searchShow: false,
+		rated: false,
+		debug: true,
+		battle: {trunc: Math.trunc},
+		ruleset: ['Terastal Clause', 'Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
+	},
+	///////////////////////////////////////////////////////////////////
+	// CAP & Cope
+	///////////////////////////////////////////////////////////////////
+	{
+		section: 'CAP & Cope',
+		column: 2,
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] Ubers',
@@ -734,11 +957,31 @@ export const Formats: FormatList = [
 		gameType: 'doubles',
 		ruleset: ['Terastal Clause', '[Gen 8 Clover CAP Only] OU'],
 	},
+	{
+		name: '[Gen 8 Cope Only] Anything Goes',
+		mod: 'cope',
+		ruleset: [
+			'Terastal Clause',
+			'Obtainable',
+			'Dynamax Clause',
+			'Team Preview',
+			'Sleep Clause Mod',
+			'Nickname Clause',
+			'Endless Battle Clause',
+			'HP Percentage Mod',
+			'Cancel Mod',
+			'Sketch Post-Gen 7 Moves',
+			'OHKO Clause',
+			'Evasion Moves Clause',
+			'Species Clause',
+		],
+		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard'],
+	},
 	///////////////////////////////////////////////////////////////////
-	// Clover Blobbos CAP
+	// Create-a-Blobbos (CAB)
 	///////////////////////////////////////////////////////////////////
 	{
-		section: 'Clover Blobbos CAP',
+		section: 'Create-a-Blobbos (CAB)',
 		column: 3,
 	},
 	{
@@ -782,16 +1025,25 @@ export const Formats: FormatList = [
 		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Fling + License to Sell Hotdogs', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware'],
 	},
 	///////////////////////////////////////////////////////////////////
-	// Non-Clover
+	// Showderp
 	///////////////////////////////////////////////////////////////////
 	{
-		section: 'Other Memes',
+		section: 'Showderp',
 		column: 3,
 	},
 	{
 		name: '[Gen 9] Random Showderp Meme Battle',
 		mod: 'gen9',
 		team: 'randomMeme',
+		rated: false,
+		ruleset: ['Terastal Clause', 'Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
+		name: '[Gen 9] Random Showderp Meme Battle Doubles',
+		mod: 'gen9',
+		gameType: 'doubles',
+		team: 'randomMeme',
+		rated: false,
 		ruleset: ['Terastal Clause', 'Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
@@ -800,19 +1052,15 @@ export const Formats: FormatList = [
 		gameType: 'freeforall',
 		tournamentShow: false,
 		team: 'randomMeme',
+		rated: false,
 		ruleset: ['Terastal Clause', 'Dynamax Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
+	///////////////////////////////////////////////////////////////////
+	// Other Nonsense
+	///////////////////////////////////////////////////////////////////
 	{
-		name: '[Gen 8 Clover Only] Random SPOOKY Battle',
-		mod: 'clover',
-		team: 'randomSpooky',
-		searchShow: true,
-		onEffectiveness(typeMod, target, type, move) {
-			if (['Dark', 'Ghost'].includes(type) && ['Dark', 'Ghost'].includes(move.type)) {
-				return 0;
-			}
-		},
-		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+		section: 'Other Nonsense',
+		column: 3,
 	},
 	{
 		name: '[Gen 8 Sandbox Only] OU',
@@ -829,7 +1077,7 @@ export const Formats: FormatList = [
 			'Sketch Post-Gen 7 Moves',
 			'OHKO Clause',
 			'Evasion Moves Clause',
-			'Species Clause',
+			'Species Clause but Special for Blobbos',
 		],
 		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs', 'Skull Cannon', 'Extinction Wave', 'Wonder Guard', 'Junkbane', 'Shed Tail'],
 	},
@@ -837,6 +1085,8 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Sandbox Only] FFA Battle',
 		mod: 'sandbox',
 		gameType: 'freeforall',
+		searchShow: false,
+		rated: false,
 		ruleset: [
 			'Obtainable',
 			'Team Preview',
@@ -848,39 +1098,25 @@ export const Formats: FormatList = [
 		banlist: ['Nothing', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", 'Fling + License to Sell Hotdogs'],
 	},
 	{
-		name: '[Gen 8 Cope Only] Anything Goes',
-		mod: 'cope',
-		ruleset: [
-			'Terastal Clause',
-			'Obtainable',
-			'Dynamax Clause',
-			'Team Preview',
-			'Sleep Clause Mod',
-			'Nickname Clause',
-			'Endless Battle Clause',
-			'HP Percentage Mod',
-			'Cancel Mod',
-			'Sketch Post-Gen 7 Moves',
-			'OHKO Clause',
-			'Evasion Moves Clause',
-			'Species Clause',
-		],
-		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard'],
-	},
-	{
 		name: "[Gen 1] Ubers",
 		mod: 'gen1',
+		searchShow: false,
+		rated: false,
 		ruleset: ['Terastal Clause', 'Standard'],
 	},
 	{
 		name: "[Gen 1] OU",
 		mod: 'gen1',
+		searchShow: false,
+		rated: false,
 		ruleset: ['Terastal Clause', 'Standard'],
 		banlist: ['Uber'],
 	},
 	{
 		name: "[Gen 1] UU",
 		mod: 'gen1',
+		searchShow: false,
+		rated: false,
 		ruleset: ['Terastal Clause', '[Gen 1] OU', 'APT Clause'],
 		banlist: ['OU', 'UUBL'],
 	},
@@ -891,86 +1127,10 @@ export const Formats: FormatList = [
 		banlist: ["AG", "Uber", "OU", "UUBL", "UU", "RUBL", "RU", "NUBL", "NU", "PUBL", "PU", "NFE", "DUber", "DOU", "DBL", "DUU", "LC"],
 		unbanlist: ['Weedle', 'Kakuna', 'Caterpie', 'Metapod', 'Ditto', 'Magikarp', 'Magikarp + Dragon Rage'],
 	},
-
-	///////////////////////////////////////////////////////////////////
-	// Wack
-	///////////////////////////////////////////////////////////////////
 	{
-		section: 'Wack Core Tiers (HEAVY WIP)',
-		column: 4,
-	},
-	{
-		name: '[Gen 8 Wack Only] OU',
-		mod: 'wack',
-		ruleset: [
-			'Terastal Clause',
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
-			'Overflow Stat Mod',
-		],
-		banlist: [
-			'Uber', 'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute + Protect'
-		],
-	},
-	{
-		name: '[Gen 8 Wack Only] Ubers',
-		mod: 'wack',
-		ruleset: [
-			'Terastal Clause',
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
-			'Overflow Stat Mod',
-		],
-		banlist: [
-			'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute + Protect'
-		],
-	},
-	{
-		name: '[Gen 8 Wack Only] NFE',
-		mod: 'wack',
-		ruleset: [
-			'Terastal Clause',
-			'Not Fully Evolved',
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
-			'Overflow Stat Mod',
-		],
-		banlist: [
-			'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute + Protect'
-		],
-	},
-	{
-		name: '[Gen 8 Wack Only] LC',
-		mod: 'wack',
-		ruleset: [
-			'Terastal Clause',
-			'Little Cup',
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
-			'Overflow Stat Mod',
-		],
-		banlist: [
-			'Arena Trap', 'Moody', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute + Protect'
-		],
-	},
-	{
-		name: '[Gen 8 Wack Only] Anything Goes',
-		mod: 'wack',
-		ruleset: [
-			'Terastal Clause',
-			'Obtainable',
-			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
-			'Team Preview',
-			'Overflow Stat Mod',
-		],
+		name: "[Gen 1] 10u (No Teambuilder)",
+		mod: "gen1",
+		ruleset: ['Standard'],
+		team: 'random10u',
 	},
 ];
