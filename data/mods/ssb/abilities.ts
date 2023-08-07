@@ -84,7 +84,7 @@ export function changeMoves(context: Battle, pokemon: Pokemon, newMoves: (string
 			id: move.id,
 			// eslint-disable-next-line max-len
 			pp: ((move.noPPBoosts || move.isZ) ? Math.floor(move.pp * carryOver[slot]) : Math.floor((move.pp * (8 / 5)) * carryOver[slot])),
-			maxpp: ((move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5),
+			maxpp: ((move.noPPBoosts || move.isZ) ? move.pp : Math.floor(move.pp * 8 / 5)),
 			target: move.target,
 			disabled: false,
 			disabledSource: '',
@@ -714,8 +714,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			const sketchedMove = {
 				move: move.name,
 				id: move.id,
-				pp: (move.pp * 8 / 5),
-				maxpp: (move.pp * 8 / 5),
+				pp: (Math.floor(move.pp * 8 / 5)),
+				maxpp: (Math.floor(move.pp * 8 / 5)),
 				target: move.target,
 				disabled: false,
 				used: false,
