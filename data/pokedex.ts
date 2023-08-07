@@ -43363,7 +43363,7 @@ blobbosmechelectric: {
 	macaegis: {
 		num: -42304,
 		name: "Macaegis",
-		baseStats: {hp: 105, atk: 100, def: 116, spa: 60, spd: 85, spe: 80},
+		baseStats: {hp: 105, atk: 100, def: 126, spa: 50, spd: 85, spe: 80},
 		types: ["Flying", "Fighting"],
 		abilities: {0: "Vindication", H: "Rock Head"},
 		heightm: 0.8,
@@ -43378,7 +43378,7 @@ blobbosmechelectric: {
 	trobbound: {
 		num: -42305,
 		name: "Trobbound",
-		baseStats: {hp: 87, atk: 100, def: 90, spa: 65, spd: 77, spe: 127},
+		baseStats: {hp: 91, atk: 100, def: 94, spa: 65, spd: 85, spe: 111},
 		types: ["Flying"],
 		abilities: {0: "Dexterity", H: "Unburden"},
 		heightm: 1,
