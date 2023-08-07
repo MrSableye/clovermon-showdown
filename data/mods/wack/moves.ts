@@ -460,6 +460,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isZ: undefined,
 		isNonstandard: null,
 	},
+	knockoff: {
+		inherit: true,
+		basePower: 65,
+		isNonstandard: null,
+	},
 	/* Vanilla moves in gen5 */
 	absorb: {
 		inherit: true,
@@ -957,12 +962,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				this.add('-enditem', pokemon, item.name, '[from] move: Incinerate');
 			}
 		},
-		isNonstandard: null,
-	},
-	knockoff: {
-		inherit: true,
-		basePower: 20,
-		onBasePower() {},
 		isNonstandard: null,
 	},
 	leafstorm: {
@@ -4369,6 +4368,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 70,
 		isNonstandard: null,
 	},
+	hiddenpowerdivine: {
+		inherit: true,
+		basePower: 70,
+		isNonstandard: null,
+	},
 	hiddenpowerfabric: {
 		inherit: true,
 		basePower: 70,
@@ -4520,6 +4524,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	hiddenforcecyber: {
+		inherit: true,
+		basePower: 70,
+		isNonstandard: null,
+	},
+	hiddenforcedivine: {
 		inherit: true,
 		basePower: 70,
 		isNonstandard: null,
@@ -16966,6 +16975,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	skullfist: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	doom: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	flashball: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	soporous: {
 		inherit: true,
 		isNonstandard: null,
 	},

@@ -24574,6 +24574,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "May 1 hit KO.",
 		shortDesc: "May 1 hit KO.",
 	},
+	flashball: {
+		name: "Flash Ball",
+		desc: "The user hurls a shinning blob at the target. It may also lower the target's Sp. Def stat."
+	},
+	soporous: {
+		name: "Soporous",
+		desc: "The user injects the target with a needle to send it into a deep sleep.",
+	},
 	hiddenpowerblood: {
 		name: "Hidden Power Blood",
 	},
@@ -24588,6 +24596,9 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hiddenpowercyber: {
 		name: "Hidden Power Cyber",
+	},
+	hiddenpowerdivine: {
+		name: "Hidden Power Divine",
 	},
 	hiddenpowerfabric: {
 		name: "Hidden Power Fabric",
@@ -24681,6 +24692,9 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hiddenforcecyber: {
 		name: "Hidden Force Cyber",
+	},
+	hiddenforcedivine: {
+		name: "Hidden Force Divine",
 	},
 	hiddenforcedark: {
 		name: "Hidden Force Dark",

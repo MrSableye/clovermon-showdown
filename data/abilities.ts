@@ -3004,8 +3004,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: 57,
 	},
-
-
 	poisonheal: {
 		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {
