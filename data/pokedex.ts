@@ -44756,7 +44756,7 @@ blobbosmechelectric: {
 		gen: 8,
 		creator: "Sylph",
 	},
-	Ibask: {
+	ibask: {
 		num: -8201,
 		name: "Ibask",
 		types: ["Ground", "Flying"],
