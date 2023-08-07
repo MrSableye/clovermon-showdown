@@ -713,7 +713,6 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
 			'Overflow Stat Mod',
 		],
 		banlist: [
@@ -732,7 +731,6 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
 			'Overflow Stat Mod',
 		],
 		banlist: [
@@ -752,7 +750,6 @@ export const Formats: FormatList = [
 			'Not Fully Evolved',
 			'Standard',
 			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
 			'Overflow Stat Mod',
 		],
 		banlist: [
@@ -772,7 +769,6 @@ export const Formats: FormatList = [
 			'Little Cup',
 			'Standard',
 			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
 			'Overflow Stat Mod',
 		],
 		banlist: [
@@ -792,7 +788,6 @@ export const Formats: FormatList = [
 			'Same Type Clause',
 			'Standard',
 			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
 			'Overflow Stat Mod',
 		],
 		banlist: [
@@ -828,7 +823,6 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Swagger Clause',
-			'Sketch Post-Gen 7 Moves',
 			'Overflow Stat Mod',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
@@ -850,7 +844,6 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Swagger Clause',
-			'Sketch Post-Gen 7 Moves',
 			'Overflow Stat Mod',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
