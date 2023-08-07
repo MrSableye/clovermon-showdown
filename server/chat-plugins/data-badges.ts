@@ -36,22 +36,9 @@ const checkBadgesEnabled = () => {
 	}
 };
 
-const checkCanUpdateTours = async (user: User) => {
-	const badge = await Badges.getBadge(TOUR_BADGE_ID);
-	const managers = await Badges.getBadgeManagers(TOUR_BADGE_ID);
+const checkCanUpdateTours = (user: User) => Badges.canManageBadge(user.id, TOUR_BADGE_ID);
 
-	if (!badge) {
-		throw new Chat.ErrorMessage(`Tour badge ${TOUR_BADGE_ID} doesn't exist.`);
-	}
-
-	const canUpdate = [badge.owner_id, ...managers.map((manager) => manager.user_id)].includes(user.id);
-
-	if (!canUpdate) {
-		throw new Chat.ErrorMessage('You do not have permission to manage this.');
-	}
-};
-
-const getTourWins = (userID: string) => data.tours[userID] || 0;
+export const getTourWins = (userID: string) => data.tours[userID] || 0;
 
 const changeTourWins = (userID: string, func: (previousWins: number) => number) => {
 	if (!data.tours[userID]) data.tours[userID] = 0;
@@ -98,6 +85,14 @@ const addDiscordBadge = async (user: User, username: string) => {
 	} catch (e) { return false; }
 
 	return true;
+};
+
+export const transferTourWins = (oldUser: string, newUser: string, user: User) => {
+	const oldTourWins = getTourWins(toID(oldUser));
+	changeTourWins(toID(newUser), () => oldTourWins);
+	changeTourWins(toID(oldUser), () => 0);
+	checkTourThreshold(toID(newUser), user);
+	checkTourThreshold(toID(oldUser), user);
 };
 
 export const commands: Chat.ChatCommands = {

@@ -655,8 +655,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	jerminswarm: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Future",
+		tier: "Illegal",
 	},
 	smogars: {
 		inherit: true,

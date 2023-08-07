@@ -10074,6 +10074,46 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbospikmin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminyellow: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminblue: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminpurple: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminwhite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminflying: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminrock: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminglow: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospikminparasite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosduelist: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -10182,11 +10222,67 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosgl17ch: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboshollow: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmech: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmechfire: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmechice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmechwater: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmechelectric: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosnymph: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboskracko: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosclover: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbospartner: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	stunfiskmega: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
 	yamigiri: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	paritta: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	macaegis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	trobbound: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

@@ -208,11 +208,39 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	autobuffskill: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	tumultuoustibia: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	mascotsorb: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	powerrush: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	splashsword: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sparksword: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	frostsword: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	flamesword: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	partnerspendant: {
 		inherit: true,
 		isNonstandard: null,
 	},

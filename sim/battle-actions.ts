@@ -1,3 +1,4 @@
+import { format } from 'path';
 import {Dex, toID} from './dex';
 
 const CHOOSABLE_TARGETS = new Set(['normal', 'any', 'adjacentAlly', 'adjacentAllyOrSelf', 'adjacentFoe']);
@@ -1711,11 +1712,11 @@ export class BattleActions {
 			const spreadModifier = move.spreadModifier || (this.battle.gameType === 'freeforall' ? 0.5 : 0.75);
 			this.battle.debug('Spread modifier: ' + spreadModifier);
 			baseDamage = this.battle.modify(baseDamage, spreadModifier);
-		} else if (move.multihitType === 'parentalbond' && move.hit > 1) {
-			// Parental Bond modifier
-			const bondModifier = this.battle.gen > 6 ? 0.25 : 0.5;
-			this.battle.debug(`Parental Bond modifier: ${bondModifier}`);
-			baseDamage = this.battle.modify(baseDamage, bondModifier);
+		} else if (move.multihitType === 'parentalbond' && move.hit > 1 && this.battle.format.mod !== 'wack') {
+				// Parental Bond modifier
+				const bondModifier = this.battle.gen > 6 ? 0.25 : 0.5;
+				this.battle.debug(`Parental Bond modifier: ${bondModifier}`);
+				baseDamage = this.battle.modify(baseDamage, bondModifier);
 		}
 
 		// weather modifier
@@ -1750,6 +1751,16 @@ export class BattleActions {
 
 		// types
 		let typeMod = target.runEffectiveness(move);
+
+		// Wack has its own typeMod value for Chaos type
+		if (type === 'Chaos') {
+			if (pokemon.hasType('Chaos')) {
+				typeMod = 2;
+			} else {
+				this.battle.add('-message', 'Chaos AntiStab activated!')
+				typeMod = 1
+			}
+		}
 		typeMod = this.battle.clampIntRange(typeMod, -6, 6);
 		target.getMoveHitData(move).typeMod = typeMod;
 		if (typeMod > 0) {
@@ -1769,7 +1780,7 @@ export class BattleActions {
 
 		if (isCrit && !suppressMessages) this.battle.add('-crit', target);
 
-		if (pokemon.status === 'brn' && move.category === 'Physical' && !pokemon.hasAbility('guts')) {
+		if (pokemon.status === 'brn' && move.category === 'Physical' && !pokemon.hasAbility('guts') && !pokemon.hasItem('coldpack')) {
 			if (this.battle.gen < 6 || move.id !== 'facade') {
 				baseDamage = this.battle.modify(baseDamage, 0.5);
 			}

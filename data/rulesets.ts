@@ -3,6 +3,7 @@
 import {Utils} from "../lib";
 import {Pokemon} from "../sim/pokemon";
 import {Teams} from "../sim/teams";
+import { Tags } from "./tags";
 
 // The list of formats is stored in config/formats.js
 export const Rulesets: {[k: string]: FormatData} = {
@@ -594,6 +595,30 @@ export const Rulesets: {[k: string]: FormatData} = {
 			}
 		},
 	},
+	speciesclausebutspecialforblobbos: {
+		effectType: 'ValidatorRule',
+		name: 'Species Clause but Special for Blobbos',
+		desc: "Prevents teams from having more than one Pok&eacute;mon from the same species",
+		onBegin() {
+			this.add('rule', 'Species Clause: Limit one of each Pokémon');
+		},
+		onValidateTeam(team, format) {
+			const speciesTable = new Set<number>();
+			const blobbosFormes = new Set<string>();
+			for (const set of team) {
+				const species = this.dex.species.get(set.species);
+				if (Tags.blobbokind.speciesFilter!(species)) {
+					if (blobbosFormes.has(species.forme)) {
+						return [`You are limited to one of each Blobbos Forme by Species Clause but Special for Blobbos.`, `(You have more than one ${species.name})`];
+					}
+					blobbosFormes.add(species.forme);
+				} else if (speciesTable.has(species.num)) {
+					return [`You are limited to one of each Pokémon by Species Clause.`, `(You have more than one ${species.baseSpecies})`];
+				}
+				speciesTable.add(species.num);
+			}
+		},
+	},
 	nicknameclause: {
 		effectType: 'ValidatorRule',
 		name: 'Nickname Clause',
@@ -812,7 +837,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 				if (!hasOrbeetle && species.name === "Orbeetle-Gmax") hasOrbeetle = true;
 				for (const moveid of set.moves) {
 					const move = this.dex.moves.get(moveid);
-					if (move.status && move.status === 'slp' && move.accuracy < 100) hasSleepMove = true;
+					const hasMissChanceOrNeverMisses = move.accuracy === true || move.accuracy < 100;
+
+					if (move.status && move.status === 'slp' && hasMissChanceOrNeverMisses) {
+						hasSleepMove = true;
+					}
 				}
 			}
 			if (hasOrbeetle && hasSleepMove) {

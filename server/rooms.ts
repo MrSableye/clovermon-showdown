@@ -1560,7 +1560,7 @@ export class GlobalRoomState {
 		} = {
 			chat: [],
 			sectionTitles: Object.values(RoomSections.sectionNames),
-			userCount: Users.onlineCount,
+			userCount: Users.users.size,
 			battleCount: this.battleCount,
 		};
 		for (const room of this.chatRooms) {

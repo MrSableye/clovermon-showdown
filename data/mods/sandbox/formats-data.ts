@@ -9475,13 +9475,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	jermin: {
 		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+		isNonstandard: "Future",
+		tier: "Illegal",
 	},
 	jerminswarm: {
 		inherit: true,
-		tier: "OU",
-		isNonstandard: null,
+		isNonstandard: "Future",
+		tier: "Illegal",
 	},
 	smogars: {
 		inherit: true,
@@ -11212,6 +11212,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	paritta: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	macaegis: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	trobbound: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	gunkirby: {
 	    inherit: true,
 	    isNonstandard: null,
@@ -11368,11 +11383,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobbosmitosis: {
-		tier: "Illegal",
-		isNonstandard: "Future",
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	blobbosmitosiscomplete: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+	},
+	blobbosclover: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 };

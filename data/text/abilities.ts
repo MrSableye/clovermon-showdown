@@ -2498,7 +2498,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	omniscience: {
 		name: "Omniscience",
-		desc: "This Pokemon can hit Dark types with Psychic-type moves. Psychic-type moves don't miss.",
+		desc: "This Pokemon can hit Dark types with Psychic-type moves. Psychic-type attacks don't miss.",
 	},
 	overeager: {
 		name: "Overeager",
@@ -3143,7 +3143,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	digger: {
 		name: "Digger",
-		shortDesc: "Dig has 1.5x power, ignores the target's protection, infiltrates, and hits Flying-types but is not very effective. Immune to Earthquake and Magnitude during Dig.",
+		shortDesc: "Dig has 1.5x power, ignores the target's protection, infiltrates, and immunities but is not very effective against Flying-types. Immune to Earthquake and Magnitude during Dig.",
 	},
 	windglider: {
 		name: "Windglider",
@@ -3179,6 +3179,18 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "This Pokemon's Status moves have priority raised by 1, going first within its priority. If hit by one Fairy move, this Pokemon's Status moves ignore type immunites and certain Abilities of other Pokemon. Fairy immunity.",
 
 		start: "  The power of [POKEMON]'s Status moves rose!",
+	},
+	compensate: {
+		name: "Compensate",
+		shortDesc: "This Pokemon's Attack is boosted by 25% of the higher of its unboosted, unmodified Defense or Speed",
+	},
+	dexterity: {
+		name: "Dexterity",
+		shortDesc: "This Pokemon's Attack is boosted by 25% of its unboosted, unmodified Speed",
+	},
+	vindication: {
+		name: "Vindication",
+		shortDesc: "This Pokemon's Attack is boosted by 25% of its unboosted, unmodified Defense",
 	},
 	ascension: {
 		name: "Ascension",
@@ -3242,15 +3254,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	fireaffinity: {
 		name: "Fire Affinity",
-		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fire-type attack. This Pokemon is healed 1/8 by Fire.",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fire-type attack. This Pokemon is healed 1/8 by Fire. Immune to Burn.",
 	},
 	electricityaffinity: {
 		name: "Electricity Affinity",
-		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Electric-type attack. This Pokemon is healed 1/8 by Electricity. While this Pokemon is active, Explosion, Mind Blown, Misty Explosion, Self-Destruct, and the Aftermath Ability are prevented from having an effect.",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Electric-type attack. This Pokemon is healed 1/8 by Electricity. While this Pokemon is active, Explosion, Mind Blown, Misty Explosion, Self-Destruct, and the Aftermath Ability are prevented from having an effect. Immune to Paralysis.",
 	},
 	wateraffinity: {
 		name: "Water Affinity",
-		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack. This Pokemon is healed 1/8 by Water. If Rain Dance is active, this Pokemon's Speed is doubled.",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Water-type attack. This Pokemon is healed 1/8 by Water. If Rain Dance is active, this Pokemon's Speed is doubled and it heals 1/16 of its max HP each turn.",
 	},
 	strengthaffinity: {
 		name: "Strength Affinity",
@@ -3258,7 +3270,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	poisonaffinity: {
 		name: "Poison Affinity",
-		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Poison-type attack. This Pokemon is healed 1/8 by Poison. If this Pokemon has no item, it finds a gem matching the type of one of its moves at the end of this turn.",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Poison-type attack. This Pokemon is healed 1/8 by Poison. If this Pokemon has no item, it finds a gem matching the type of one of its moves at the end of this turn. If this Pokemon is KOed with a contact move, that move's user loses 1/4 its max HP. Immune to Poison.",
 	},
 	rockaffinity: {
 		name: "Rock Affinity",
@@ -3270,7 +3282,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	iceaffinity: {
 		name: "Ice Affinity",
-		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Ice-type attack. This Pokemon is healed 1/8 by Ice. This Pokemon's Ice-type attacks are super-effective against Water-types.",
+		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using an Ice-type attack. This Pokemon is healed 1/8 by Ice. This Pokemon's Ice-type attacks are super-effective against Water-types. Immune to Freeze.",
 	},
 	lightaffinity: {
 		name: "Light Affinity",
@@ -3303,8 +3315,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Reduces the damage of incoming special moves.",
 		desc: "Reduces the damage of incoming special moves.",
 	},
-	acidrain: {
-		name: "Acid Rain",
+	acidcloudburst: {
+		name: "Acid Cloudburst",
 		shortDesc: "The Pokemon makes it acid rain if it appears in battle.",
 		desc: "The Pokemon makes it acid rain if it appears in battle.",
 	},
@@ -3408,8 +3420,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Boosts the power of tail moves.",
 		desc: "Boosts the power of tail moves.",
 	},
-	sceptic: {
-		name: "Sceptic",
+	skeptic: {
+		name: "Skeptic",
 		shortDesc: "Ups resistance to Fairy, Divine and Magic-type moves.",
 		desc: "Ups resistance to Fairy, Divine and Magic-type moves.",
 	},
@@ -3455,8 +3467,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	sugarrush: {
 		name: "Sugar Rush",
-		shortDesc: "Raises Speed if hit by a Food-type move.",
-		desc: "Raises Speed if hit by a Food-type move.",
+		shortDesc: "Raises Speed if hit by a Fairy- or Food-type move.",
+		desc: "Raises Speed if hit by a Fairy- or Food-type move.",
 	},
 	vacuum: {
 		name: "Vacuum",
@@ -3613,4 +3625,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Restores HP if hit by a Ghost-type move.",
 		desc: "Restores HP if hit by a Ghost-type move.",
 	},
+	polite: {
+		name: "Polite",
+		shortDesc: "Moves last. STAB increased to 2."
+	}
 };

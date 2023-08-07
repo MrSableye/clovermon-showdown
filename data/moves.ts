@@ -3650,7 +3650,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (type === 'sandstorm' || type === 'hail') return false;
 			},
 			onInvulnerability(target, source, move) {
-				if (['earthquake', 'magnitude'].includes(move.id) && !target.hasAbility('Digger')) {
+				if (['earthquake', 'magnitude', 'lavasplash', 'divinequake', 'meteorrain', 'terrakinesis', 'magmaquake', 'lavaquake'].includes(move.id) && !target.hasAbility('Digger')) {
 					return;
 				}
 				return false;
@@ -10928,8 +10928,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasAbility('persistent')) {
-					this.add('-activate', source, 'ability: Persistent', '[move] Magic Room');
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
 					return 7;
 				}
 				return 5;
@@ -20305,8 +20305,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasAbility('persistent')) {
-					this.add('-activate', source, 'ability: Persistent', '[move] Trick Room');
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
 					return 7;
 				}
 				return 5;
@@ -21340,8 +21340,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasAbility('persistent')) {
-					this.add('-activate', source, 'ability: Persistent', '[move] Wonder Room');
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
 					return 7;
 				}
 				return 5;
@@ -24286,6 +24286,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
+	recoilshot: {
+		accuracy: 90,
+		basePower: 140,
+		category: "Special",
+		name: "Recoil Shot",
+		pp: 5,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				accuracy: -2,
+			},
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
 	lemons: {
 		accuracy: 95,
 		basePower: 4,
@@ -27100,6 +27118,56 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		target: "normal",
 		type: "Steel",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	techslash: {
+		num: 550,
+		accuracy: 90,
+		basePower: 100,
+		category: "Physical",
+		name: "Tech Slash",
+		pp: 5,
+		priority: -1,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+		secondary: {
+			chance: 100,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	rocketboost: {
+		num: 392,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Rocket Boost",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1},
+		onTry(pokemon, target) {
+			if (pokemon.activeTurns > 1) {
+				this.attrLastMove('[still]');
+				this.add('-fail', pokemon);
+				this.hint("Rocket Boost only works on the first turn out.");
+				return null;
+			}
+		},
+		volatileStatus: 'aquaring',
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
+		target: "self",
+		type: "Steel",
+		zMove: {boost: {def: 1}},
 		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},
@@ -30592,6 +30660,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "allAdjacent",
 		type: "Electric",
+		noSketch: true, // how the fuck did this take SO LONG to get implemented???
 		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},
@@ -31584,6 +31653,278 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 		contestType: "Cool",
 	},
+	combatorders: {
+		isNonstandard: "Future",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Combat Orders",
+		pp: 25,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'combatorders',
+		condition: {
+			duration: 4,
+			onBoost(boost, target, source, effect) {
+				if (effect.id === 'combatorders') return;
+				const anyPositiveBoost = Object.values(boost).some((boost) => boost > 0);
+				if (!anyPositiveBoost) return;
+
+				const stats: BoostID[] = [];
+				let stat: BoostID;
+				for (stat in target.boosts) {
+					if (target.boosts[stat] < 6) {
+						stats.push(stat);
+					}
+				}
+				if (stats.length) {
+					const randomStat = this.sample(stats);
+					const boost: SparseBoostsTable = {};
+					boost[randomStat] = 1;
+					this.boost(boost);
+				}
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 3,
+			onSideStart(side, source) {
+				this.add('-sidestart', side, 'Combat Orders');
+			},
+			onSideEnd(side) {
+				this.add('-sideend', side, 'Combat Orders');
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Fighting",
+		zMove: {boost: {spe: 1}},
+		contestType: "Beautiful",
+	},
+	haste: {
+		isNonstandard: "Future",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Haste",
+		pp: 25,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'haste',
+		condition: {
+			duration: 4,
+			onFractionalPriorityPriority: -1,
+			onFractionalPriority(priority, pokemon, target, move) {
+				if (move.category === 'Status') return;
+				return 0.1;
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 3,
+			onSideStart(side, source) {
+				this.add('-sidestart', side, 'Haste');
+			},
+			onSideEnd(side) {
+				this.add('-sideend', side, 'Haste');
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Dark",
+		zMove: {boost: {spe: 1}},
+		contestType: "Beautiful",
+	},
+	sharpeyes: {
+		isNonstandard: "Future",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sharp Eyes",
+		pp: 25,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'sharpeyes',
+		condition: {
+			duration: 4,
+			onModifyDamage(damage, source, target, move) {
+				if (target.getMoveHitData(move).crit) {
+					this.debug('Sharp Eyes boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onModifyCritRatio(critRatio) {
+				return critRatio + 1;
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 3,
+			onSideStart(side, source) {
+				this.add('-sidestart', side, 'Sharp Eyes');
+			},
+			onSideEnd(side) {
+				this.add('-sideend', side, 'Sharp Eyes');
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Normal",
+		zMove: {boost: {spe: 1}},
+		contestType: "Beautiful",
+	},
+	maplewarrior: {
+		isNonstandard: "Future",
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Maple Warrior",
+		pp: 25,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'maplewarrior',
+		condition: {
+			duration: 4,
+			onModifyAtk() {
+				return this.chainModify(1.2);
+			},
+			onModifyDef() {
+				return this.chainModify(1.2);
+			},
+			onModifySpA() {
+				return this.chainModify(1.2);
+			},
+			onModifySpD() {
+				return this.chainModify(1.2);
+			},
+			onModifySpe() {
+				return this.chainModify(1.2);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 3,
+			onSideStart(side, source) {
+				this.add('-sidestart', side, 'Maple Warrior');
+			},
+			onSideEnd(side) {
+				this.add('-sideend', side, 'Maple Warrior');
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Grass",
+		zMove: {boost: {spe: 1}},
+		contestType: "Beautiful",
+	},
+	investment: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Investment",
+		isNonstandard: "Future",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		onHit(target) {
+			const stats: BoostID[] = [];
+			let stat: BoostID;
+			for (stat in target.boosts) {
+				if (target.boosts[stat] !== 0) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				const boostsToPass = { ...target.boosts };
+				if (!target.side.addSlotCondition(target, 'investment')) return false;
+				target.clearBoosts();
+				Object.assign(target.side.slotConditions[target.position]['investment'], {
+					duration: 3,
+					boosts: boostsToPass,
+				});
+			} else {
+				return false;
+			}
+		},
+		condition: {
+			duration: 3,
+			onEnd(target) {
+				if (!target) return;
+				const boosts = this.effectState.boosts;
+				if (!boosts) return;
+				this.boost(boosts, target);
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Dark",
+		contestType: "Clever",
+	},
+	illusionofchoice: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Illusion of Choice",
+		isNonstandard: "Future",
+		pp: 25,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'illusionofchoice',
+		condition: {
+			duration: 5,
+			onStart(pokemon) {
+				this.effectState[pokemon.fullname].choiceLock = "";
+			},
+			onBeforeMove(pokemon, target, move) {
+				if (move.isZOrMaxPowered || move.id === 'struggle') return;
+				const choiceLock = this.effectState[pokemon.fullname].choiceLock;
+				if (choiceLock && choiceLock !== move.id) {
+					// Fails unless ability is being ignored (these events will not run), no PP lost.
+					this.addMove('move', pokemon, move.name);
+					this.attrLastMove('[still]');
+					this.debug("Disabled by Illusion of Choice");
+					this.add('-fail', pokemon);
+					return false;
+				}
+			},
+			onModifyMove(move, pokemon) {
+				if (this.effectState[pokemon.fullname].choiceLock || move.isZOrMaxPowered || move.id === 'struggle') return;
+				this.effectState[pokemon.fullname].choiceLock = move.id;
+			},
+			onModifyAtkPriority: 1,
+			onModifyAtk(atk, pokemon) {
+				if (pokemon.volatiles['dynamax']) return;
+				// PLACEHOLDER
+				this.debug('Illusion of Choice Atk Boost');
+				return this.chainModify(1.5);
+			},
+			onModifySpAPriority: 1,
+			onModifySpA(atk, pokemon) {
+				if (pokemon.volatiles['dynamax']) return;
+				// PLACEHOLDER
+				this.debug('Illusion of Choice SpA Boost');
+				return this.chainModify(1.5);
+			},
+			onDisableMove(pokemon) {
+				const choiceLock = this.effectState[pokemon.fullname].choiceLock;
+				if (!choiceLock) return;
+				if (pokemon.volatiles['dynamax']) return;
+				for (const moveSlot of pokemon.moveSlots) {
+					if (moveSlot.id !== choiceLock) {
+						pokemon.disableMove(moveSlot.id, false, this.effectState.sourceEffect);
+					}
+				}
+			},
+			onEnd(pokemon) {
+				this.effectState[pokemon.fullname].choiceLock = "";
+			},
+			onSideStart(side, source) {
+				this.add('-sidestart', side, 'Illusion of Choice');
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 3,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'Illusion of Choice');
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Psychic",
+		zMove: {boost: {spe: 1}},
+		contestType: "Beautiful",
+	},
 	starforce: {
 		name: "Star Force",
 		category: "Status",
@@ -31901,16 +32242,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 					return this.chainModify(2);
 				}
 			},
-//			onMoveAborted(pokemon, target, move) {
-//				if (move.id !== 'fold') {
-//					pokemon.removeVolatile('fold');
-//				}
-//			},
-//			onAfterMove(pokemon, target, move) {
-//				if (move.id !== 'fold') {
-//					pokemon.removeVolatile('fold');
-//				}
-//			},
+			onMoveAborted(pokemon, target, move) {
+				if (move.id !== 'fold') {
+					pokemon.removeVolatile('fold');
+				}
+			},
+			onAfterMove(pokemon, target, move) {
+				if (move.id !== 'fold') {
+					pokemon.removeVolatile('fold');
+				}
+			},
 			onEnd(pokemon) {
 				this.add('-end', pokemon, 'Fold', '[silent]');
 			},
@@ -32314,7 +32655,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		recoil: [1, 3],
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Water') return 1;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Wood",
@@ -32672,7 +33015,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			chance: 25,
 			self: {
 				boosts: {
-					spe: 1,
+					atk: 1,
 				},
 			},
 		},
@@ -32772,6 +33115,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {},
+		onHit(target) {
+			const stats: BoostID[] = [];
+			let stat: BoostID;
+			for (stat in target.boosts) {
+				if (target.boosts[stat] < 6) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				const randomStat = this.sample(stats);
+				const boost: SparseBoostsTable = {};
+				boost[randomStat] = 2;
+				this.boost(boost);
+			} else {
+				return false;
+			}
+		},
 		secondary: null,
 		target: "self",
 		type: "Food",
@@ -32797,10 +33157,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	necromancy: {
 		num: 666669,
 		accuracy: 100,
-		basePower: 1,
+		basePower: 0,
 		basePowerCallback(pokemon, target, move) {
 			const currentSpecies = move.allies!.shift()!.species;
-			const bp = 5 + Math.floor(currentSpecies.baseStats.atk / 10);
+			const bp = 5 + Math.floor(currentSpecies.baseStats.spa / 10);
 			this.debug('BP for ' + currentSpecies.name + ' hit: ' + bp);
 			return bp;
 		},
@@ -33011,7 +33371,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Macabre Dance",
 		pp: 20,
 		priority: 0,
-		flags: {snatch: 1},
+		flags: {snatch: 1, dance: 1},
 		boosts: {
 			atk: 1,
 			spe: 1,
@@ -33226,6 +33586,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
@@ -33537,7 +33898,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1, defrost: 1},
 		secondary: {
 			chance: 40,
-			volatileStatus: 'frz',
+			volatileStatus: 'brn',
 		},
 		target: "normal",
 		type: "Food",
@@ -33891,7 +34252,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Ground",
 		isNonstandard: "Future",
@@ -33905,7 +34271,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -33919,7 +34288,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -33933,7 +34307,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1, pulse: 1},
-		secondary: null,
+		secondary: {
+			chance: 45,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -33947,6 +34324,30 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		isFutureMove: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 3,
+				move: 'atomsplit',
+				source: source,
+				moveData: {
+					id: 'atomsplit',
+					name: "Atom Split",
+					accuracy: 100,
+					basePower: 100,
+					category: "Special",
+					priority: 0,
+					flags: {},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					isFutureMove: true,
+					type: 'Nuclear',
+				},
+			});
+			this.add('-start', source, 'move: Atom Split');
+			return this.NOT_FAIL;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Nuclear",
@@ -33961,6 +34362,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
 		secondary: null,
 		target: "normal",
 		type: "Nuclear",
@@ -33975,7 +34379,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'disable',
+		},
 		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -33997,12 +34404,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 	deathscream: {
 		num: 666745,
 		accuracy: 30,
-		basePower: 1,
+		basePower: 0,
 		category: "Special",
 		name: "Death Scream",
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
+		ohko: true,
 		secondary: null,
 		target: "normal",
 		type: "Sound",
@@ -34017,7 +34425,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Fear",
 		isNonstandard: "Future",
@@ -34031,7 +34442,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Fear",
 		isNonstandard: "Future",
@@ -34045,7 +34459,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Nuclear",
 		isNonstandard: "Future",
@@ -34059,6 +34478,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1,4],
 		secondary: null,
 		target: "normal",
 		type: "Nuclear",
@@ -34073,7 +34493,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		boosts: {
+			spd: -2,
+		},
 		target: "normal",
 		type: "Nuclear",
 		isNonstandard: "Future",
@@ -34087,6 +34509,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onBasePower(basePower, source, target, move) {
+			const item = target.getItem();
+			if (!this.singleEvent('TakeItem', item, target.itemState, target, target, move, item)) return;
+			if (item.id) {
+				return this.chainModify(1.5);
+			}
+		},
+		onAfterHit(target, source) {
+			if (source.hp) {
+				const item = target.takeItem();
+				if (item) {
+					this.add('-enditem', target, item.name, '[from] move: Waste Cloud', '[of] ' + source);
+				}
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Nuclear",
@@ -34101,7 +34538,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Cyber",
 		isNonstandard: "Future",
@@ -34114,7 +34554,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Spicy Powder",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1, defrost: 1},
+		flags: {powder: 1, protect: 1, reflectable: 1, mirror: 1, defrost: 1},
+		status: 'brn',
 		secondary: null,
 		target: "normal",
 		type: "Grass",
@@ -34129,7 +34570,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -34143,7 +34591,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		recoil: [1,3],
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -34171,7 +34623,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -34185,7 +34640,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1},
-		secondary: null,
+		boosts: {
+			def: 2,
+		},
 		target: "self",
 		type: "Wood",
 		isNonstandard: "Future",
@@ -34214,7 +34671,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 33,
+			volatileStatus: 'confusion',	
+		},
 		target: "normal",
 		type: "Chaos",
 		isNonstandard: "Future",
@@ -34286,6 +34746,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
 		secondary: null,
 		target: "normal",
 		type: "Chaos",
@@ -34314,7 +34775,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 35,
+			volatileStatus: 'confusion',	
+		},
 		target: "normal",
 		type: "Chaos",
 		isNonstandard: "Future",
@@ -34329,6 +34793,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		secondary: null,
+		boosts: {
+			spa: 1,
+			spd: 1,
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -34343,6 +34811,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		boosts: {
+			spa: 1,
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -34356,7 +34827,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -34370,6 +34844,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onHitField() {
+			this.add('-clearallboost');
+			for (const pokemon of this.getAllActive()) {
+				pokemon.clearBoosts();
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -34414,6 +34894,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 2,
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -34429,12 +34910,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
 		secondary: null,
 		target: "randomNormal",
 		type: "Ghost",
 		isNonstandard: "Future",
 	},
-	paintsplatter: {
+	paintsplatter: {	// TODO: Decrease two stage on Art Gallery
 		num: 666776,
 		accuracy: 95,
 		basePower: 65,
@@ -34444,6 +34933,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		boosts: {
+			accuracy: -1,
+		},
 		target: "normal",
 		type: "Paint",
 		isNonstandard: "Future",
@@ -34457,6 +34949,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [1,3],
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -34499,6 +34992,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: -6,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		forceSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
@@ -34527,7 +35021,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			status: 'slp',
+		},
 		target: "allAdjacentFoes",
 		type: "Light",
 		isNonstandard: "Future",
@@ -34542,6 +35039,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		secondary: null,
+		boosts: {
+			def: 2,
+		},
 		target: "self",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -34555,7 +35055,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -34569,7 +35076,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -34583,6 +35095,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2,5],
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -34597,6 +35110,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		ohko: true,
 		secondary: null,
 		target: "normal",
 		type: "Shadow",
@@ -34625,7 +35139,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -34638,7 +35157,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Lux Buster",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {recharge: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
 		secondary: null,
 		target: "normal",
 		type: "Light",
@@ -34653,7 +35175,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Glass",
 		isNonstandard: "Future",
@@ -34667,6 +35194,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		forceSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -34681,6 +35209,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.status === 'psn' || target.status === 'tox') {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Zombie",
@@ -34695,6 +35228,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bomb: 1},
+		multihit: [2,5],
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -34724,6 +35258,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getAbility().isPermanent) return;
+			if (target.newlySwitched || this.queue.willMove(target)) return;
+			target.addVolatile('gastroacid');
+		},
+		onAfterSubDamage(damage, target) {
+			if (target.getAbility().isPermanent) return;
+			if (target.newlySwitched || this.queue.willMove(target)) return;
+			target.addVolatile('gastroacid');
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Wind",
@@ -34738,6 +35282,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Bug",
@@ -34752,7 +35297,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 65,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Fighting",
 		isNonstandard: "Future",
@@ -34766,6 +35318,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			this.boost({atk: 1}, attacker, attacker, move);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Bug",
@@ -34780,6 +35344,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		onHit(pokemon) {
+			let factor = 0.5;
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+				factor = 0.667;
+				break;
+			case 'raindance':
+			case 'primordialsea':
+			case 'sandstorm':
+			case 'hail':
+			case 'snow':
+			case 'acidrain':
+			case 'midnight':
+			case 'bladerain':
+				factor = 0.25;
+				break;
+			}
+			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+			if (!success) {
+				this.add('-fail', pokemon, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
+		onModifyMove(move, pokemon) {
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) move.boosts = {spe: 1};
+		},
 		secondary: null,
 		target: "self",
 		type: "Normal",
@@ -34794,6 +35386,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
+		volatileStatus: 'partiallytrapped',
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
@@ -34808,7 +35401,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'tox',
+		},
 		target: "normal",
 		type: "Nuclear",
 		isNonstandard: "Future",
@@ -34822,7 +35418,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 26,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -34836,6 +35435,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Sound",
@@ -34850,7 +35456,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			self: {
+				boosts: {
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				},
+			},
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Normal",
@@ -34865,6 +35482,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, bite: 1, above: 1},
+		drain: [1,2],
 		secondary: null,
 		target: "normal",
 		type: "Rock",
@@ -34874,6 +35492,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 666807,
 		accuracy: 100,
 		basePower: 150,
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower * pokemon.hp / pokemon.maxhp;
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		category: "Physical",
 		name: "Mountain Crash",
 		pp: 5,
@@ -34893,7 +35516,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			volatileStatus: 'flinch',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Rock",
@@ -34908,7 +35534,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			self: {
+				boosts: {
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Rock",
 		isNonstandard: "Future",
@@ -34923,6 +35560,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		secondary: null,
+		boosts: {
+			spa: 2,
+		},
 		target: "self",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -34936,7 +35576,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		onModifyMove(move, pokemon, target) {
+			switch (target?.effectiveWeather()) {
+			case 'midnight':
+				move.accuracy = true;
+				break;
+			}
+		},
+		secondary: {
+			chance: 20,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -34965,7 +35617,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					accuracy: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Glass",
 		isNonstandard: "Future",
@@ -34979,7 +35638,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 90,
+			self: {
+				boosts: {
+					accuracy: 2,
+				},
+			},
+		},
 		target: "normal",
 		type: "Glass",
 		isNonstandard: "Future",
@@ -34993,7 +35659,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -35008,6 +35677,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		secondary: null,
+		boosts: {
+			atk: 1,
+			spd: 1,
+		},
 		target: "self",
 		type: "Fighting",
 		isNonstandard: "Future",
@@ -35035,7 +35708,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1, sun: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -35049,6 +35725,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
@@ -35063,6 +35740,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 1,
 		flags: {protect: 1, mirror: 1},
+		recoil: [1,3],
 		secondary: null,
 		target: "normal",
 		type: "Glass",
@@ -35077,7 +35755,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bomb: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -35091,6 +35774,29 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (['sunnyday', 'desolateland'].includes(attacker.effectiveWeather())) {
+				this.attrLastMove('[still]');
+				this.addMove('-anim', attacker, move.name, defender);
+				return;
+			}
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		onBasePower(basePower, pokemon, target) {
+			const weakWeathers = ['raindance', 'primordialsea', 'sandstorm', 'hail', 'snow'];
+			if (weakWeathers.includes(pokemon.effectiveWeather())) {
+				this.debug('weakened by weather');
+				return this.chainModify(0.5);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Light",
@@ -35105,7 +35811,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, above: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
@@ -35116,10 +35825,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 180,
 		category: "Special",
 		name: "Power Surge",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
@@ -35130,10 +35842,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 160,
 		category: "Special",
 		name: "Meltdown",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Nuclear",
 		isNonstandard: "Future",
@@ -35144,9 +35859,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 130,
 		category: "Special",
 		name: "Retribution",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
 		secondary: null,
 		target: "randomNormal",
 		type: "Divine",
@@ -35160,7 +35883,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Mystic Dance",
 		pp: 20,
 		priority: 0,
-		flags: {snatch: 1},
+		flags: {snatch: 1, dance: 1},
+		boosts: {
+			spa: 1,
+			spe: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Fairy",
@@ -35187,9 +35914,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 85,
 		category: "Physical",
 		name: "Insanity",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
 		secondary: null,
 		target: "randomNormal",
 		type: "Chaos",
@@ -35203,7 +35938,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Data Absorb",
 		pp: 10,
 		priority: 0,
-		flags: {},
+		flags: {bypasssub: 1, allyanim: 1},
+		onHit(target, source) {
+			let i: BoostID;
+			for (i in target.boosts) {
+				source.boosts[i] = target.boosts[i];
+			}
+			const volatilesToCopy = ['focusenergy', 'gmaxchistrike', 'laserfocus'];
+			for (const volatile of volatilesToCopy) {
+				if (target.volatiles[volatile]) {
+					source.addVolatile(volatile);
+					if (volatile === 'gmaxchistrike') source.volatiles[volatile].layers = target.volatiles[volatile].layers;
+				} else {
+					source.removeVolatile(volatile);
+				}
+			}
+			this.add('-copyboost', source, target, '[from] move: Data Absorb');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Cyber",
@@ -35232,7 +35983,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
@@ -35246,7 +36000,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		target: "allAdjacent",
 		type: "Fire",
 		isNonstandard: "Future",
@@ -35274,6 +36031,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, source, move) {
+			if (source.item || source.volatiles['gem']) {
+				return;
+			}
+			const yourItem = target.takeItem(source);
+			if (!yourItem) {
+				return;
+			}
+			if (!this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem) ||
+				!source.setItem(yourItem)) {
+				target.item = yourItem.id; // bypass setItem so we don't break choicelock or anything
+				return;
+			}
+			this.add('-enditem', target, yourItem, '[silent]', '[from] move: Ransomware', '[of] ' + source);
+			this.add('-item', source, yourItem, '[from] move: Ransomware', '[of] ' + target);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Virus",
@@ -35288,6 +36061,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -35302,6 +36076,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onHitField() {
+			this.add('-clearallboost');
+			for (const pokemon of this.getAllActive()) {
+				pokemon.clearBoosts();
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Virus",
@@ -35316,6 +36096,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bite: 1},
+		drain: [1,2],
 		secondary: null,
 		target: "normal",
 		type: "Poison",
@@ -35330,7 +36111,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'slp',
+		},
 		target: "normal",
 		type: "Fighting",
 		isNonstandard: "Future",
@@ -35344,6 +36128,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			spa: 2,
+		},
 		secondary: null,
 		target: "self",
 		type: "Light",
@@ -35358,7 +36145,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -35372,6 +36164,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		selfSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Ice",
@@ -35401,6 +36194,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			atk: -1,
+			spa: -1,
+			def: 2,
+			spd: 2,
+		},
 		secondary: null,
 		target: "self",
 		type: "Normal",
@@ -35415,7 +36214,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, above: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Rock",
 		isNonstandard: "Future",
@@ -35429,7 +36231,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Ghost",
 		isNonstandard: "Future",
@@ -35443,7 +36250,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Ghost",
 		isNonstandard: "Future",
@@ -35452,11 +36262,63 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 666851,
 		accuracy: 100,
 		basePower: 40,
+		basePowerCallback(pokemon, target, move) {
+			// You can't get here unless the pursuit succeeds
+			if (target.beingCalledBack || target.switchFlag) {
+				this.debug('Chase Beam damage boost');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		category: "Special",
 		name: "Chase Beam",
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		beforeTurnCallback(pokemon) {
+			for (const side of this.sides) {
+				if (side.hasAlly(pokemon)) continue;
+				side.addSideCondition('pursuit', pokemon);
+				const data = side.getSideConditionData('pursuit');
+				if (!data.sources) {
+					data.sources = [];
+				}
+				data.sources.push(pokemon);
+			}
+		},
+		onModifyMove(move, source, target) {
+			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
+		},
+		onTryHit(target, pokemon) {
+			target.side.removeSideCondition('pursuit');
+		},
+		condition: {
+			duration: 1,
+			onBeforeSwitchOut(pokemon) {
+				this.debug('Pursuit start');
+				let alreadyAdded = false;
+				pokemon.removeVolatile('destinybond');
+				for (const source of this.effectState.sources) {
+					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
+					if (!alreadyAdded) {
+						this.add('-activate', pokemon, 'move: Pursuit');
+						alreadyAdded = true;
+					}
+					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
+					// If it is, then Mega Evolve before moving.
+					if (source.canMegaEvo || source.canUltraBurst) {
+						for (const [actionIndex, action] of this.queue.entries()) {
+							if (action.pokemon === source && action.choice === 'megaEvo') {
+								this.actions.runMegaEvo(source);
+								this.queue.list.splice(actionIndex, 1);
+								break;
+							}
+						}
+					}
+					this.actions.runMove('pursuit', source, source.getLocOf(pokemon));
+				}
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -35471,6 +36333,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, west: 1},
+		willCrit: true,
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -35481,10 +36344,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 95,
 		basePower: 60,
 		category: "Physical",
-		name: "Insult & Injury",
+		name: "Insult and Injury",
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('taunt');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -35499,6 +36367,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('taunt');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -35513,6 +36386,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1,2],
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -35527,6 +36401,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 3,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Cackle only works on your first turn out.");
+				return false;
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -35541,7 +36421,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, web: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -35555,6 +36440,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
+		heal: [1, 2],
 		secondary: null,
 		target: "self",
 		type: "Steel",
@@ -35569,7 +36455,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -35628,7 +36517,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -35642,7 +36534,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 70,
+			self: {
+				boosts: {
+					def: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -35656,6 +36555,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		status: 'frz',
 		secondary: null,
 		target: "normal",
 		type: "Ice",
@@ -35670,7 +36570,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -35684,6 +36587,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1,2],
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -35698,7 +36602,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		recoil: [1,3],
+		secondary: {
+			chance: 15,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -35712,7 +36620,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		recoil: [1,3],
+		secondary: {
+			chance: 15,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -35721,6 +36633,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 666871,
 		accuracy: 100,
 		basePower: 150,
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower * pokemon.hp / pokemon.maxhp;
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		category: "Special",
 		name: "Pod Burst",
 		pp: 5,
@@ -35740,6 +36657,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spa: -2,
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -35754,7 +36676,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Nuclear",
 		isNonstandard: "Future",
@@ -35768,6 +36693,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 2,
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
@@ -35782,6 +36708,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: [2,5],
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
@@ -35804,7 +36731,26 @@ export const Moves: {[moveid: string]: MoveData} = {
 	gravitonpress: {
 		num: 666877,
 		accuracy: 100,
-		basePower: 1,
+		basePower: 0,
+		basePowerCallback(pokemon, target) {
+			const targetWeight = target.getWeight();
+			let bp;
+			if (targetWeight >= 2000) {
+				bp = 120;
+			} else if (targetWeight >= 1000) {
+				bp = 100;
+			} else if (targetWeight >= 500) {
+				bp = 80;
+			} else if (targetWeight >= 250) {
+				bp = 60;
+			} else if (targetWeight >= 100) {
+				bp = 40;
+			} else {
+				bp = 20;
+			}
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		category: "Special",
 		name: "Graviton Press",
 		pp: 20,
@@ -35820,6 +36766,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 80,
 		category: "Special",
+		overrideDefensiveStat: 'def',
 		name: "Aura Jab",
 		pp: 10,
 		priority: 0,
@@ -35838,7 +36785,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			volatileStatus: 'confusion',
+		},
 		target: "allAdjacent",
 		type: "Ghost",
 		isNonstandard: "Future",
@@ -35852,6 +36802,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
+		multihit: [2,5],
 		secondary: null,
 		target: "normal",
 		type: "Sound",
@@ -35866,6 +36817,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		onTry(source, target) {
+			const action = this.queue.willMove(target);
+			const move = action?.choice === 'move' ? action.move : null;
+			if (!move || (move.category === 'Status' && move.id !== 'mefirst') || target.volatiles['mustrecharge']) {
+				return false;
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fairy",
@@ -35880,6 +36838,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, source, move) {
+			if (source.item || source.volatiles['gem']) {
+				return;
+			}
+			const yourItem = target.takeItem(source);
+			if (!yourItem) {
+				return;
+			}
+			if (!this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem) ||
+				!source.setItem(yourItem)) {
+				target.item = yourItem.id; // bypass setItem so we don't break choicelock or anything
+				return;
+			}
+			this.add('-enditem', target, yourItem, '[silent]', '[from] move: Raid', '[of] ' + source);
+			this.add('-item', source, yourItem, '[from] move: Raid', '[of] ' + target);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dragon",
@@ -35894,7 +36868,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			dustproof: true,
+			chance: 100,
+			volatileStatus: 'extinguish',
+		},
+		onBasePower(basePower, source, target) {
+			if (target.status === 'brn') {
+				return this.chainModify(2);
+			}
+		},
+		onAfterMove(source, target, move) {
+			for (const pokemon of this.getAllActive()) {
+				if (pokemon !== source && pokemon.removeVolatile('extinguish') && pokemon.status === 'brn' && !source.fainted) {
+					pokemon.cureStatus();
+				}
+			}
+		},
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -35903,6 +36893,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 666884,
 		accuracy: 100,
 		basePower: 60,
+		basePowerCallback(pokemon, target, move) {
+			const damagedByTarget = pokemon.attackedBy.some(
+				p => p.source === target && p.damage > 0 && p.thisTurn
+			);
+			if (damagedByTarget) {
+				this.debug('BP doubled for getting hit by ' + target);
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		category: "Physical",
 		name: "Sand Dune",
 		pp: 10,
@@ -35922,6 +36922,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: -6,
 		flags: {contact: 1, protect: 1, mirror: 1, web: 1},
+		forceSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Bug",
@@ -35936,6 +36937,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+			def: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Psychic",
@@ -35950,6 +36955,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		ignoreDefensive: true,
+		ignoreEvasion: true,
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -35965,7 +36972,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Fire",
 		isNonstandard: "Future",
@@ -35979,7 +36989,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -35993,7 +37006,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1, above: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -36007,7 +37023,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 80,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -36021,6 +37042,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Magic",
@@ -36035,7 +37071,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			self: {
+				sideCondition: 'tailwind',
+			}
+		},
 		target: "normal",
 		type: "Flying",
 		isNonstandard: "Future",
@@ -36049,6 +37090,31 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, above: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability(target, source, move) {
+				if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows'].includes(move.id)) {
+					return;
+				}
+				return false;
+			},
+			onSourceModifyDamage(damage, source, target, move) {
+				if (move.id === 'gust' || move.id === 'twister') {
+					return this.chainModify(2);
+				}
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Magic",
@@ -36093,7 +37159,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 35,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -36107,7 +37180,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -36121,6 +37197,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1,2],
 		secondary: null,
 		target: "normal",
 		type: "Magic",
@@ -36130,11 +37207,66 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 666900,
 		accuracy: 90,
 		basePower: 30,
+		basePowerCallback(pokemon, target, move) {
+			let bp = move.basePower;
+			const rolloutData = pokemon.volatiles['rollout'];
+			if (rolloutData?.hitCount) {
+				bp *= Math.pow(2, rolloutData.contactHitCount);
+			}
+			if (rolloutData && pokemon.status !== 'slp') {
+				rolloutData.hitCount++;
+				rolloutData.contactHitCount++;
+				if (rolloutData.hitCount < 5) {
+					rolloutData.duration = 2;
+				}
+			}
+			if (pokemon.volatiles['defensecurl']) {
+				bp *= 2;
+			}
+			this.debug("BP: " + bp);
+			return bp;
+		},
 		category: "Physical",
 		name: "Saw Trick",
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyMove(move, pokemon, target) {
+			if (pokemon.volatiles['rollout'] || pokemon.status === 'slp' || !target) return;
+			pokemon.addVolatile('rollout');
+			// @ts-ignore
+			// TS thinks pokemon.volatiles['rollout'] doesn't exist because of the condition on the return above
+			// but it does exist now because addVolatile created it
+			pokemon.volatiles['rollout'].targetSlot = move.sourceEffect ? pokemon.lastMoveTargetLoc : pokemon.getLocOf(target);
+		},
+		onAfterMove(source, target, move) {
+			const rolloutData = source.volatiles["rollout"];
+			if (
+				rolloutData &&
+				rolloutData.hitCount === 5 &&
+				rolloutData.contactHitCount < 5
+				// this conditions can only be met in gen7 and gen8dlc1
+				// see `disguise` and `iceface` abilities in the resp mod folders
+			) {
+				source.addVolatile("rolloutstorage");
+				source.volatiles["rolloutstorage"].contactHitCount =
+					rolloutData.contactHitCount;
+			}
+		},
+		condition: {
+			duration: 1,
+			onLockMove: 'rollout',
+			onStart() {
+				this.effectState.hitCount = 0;
+				this.effectState.contactHitCount = 0;
+			},
+			onResidual(target) {
+				if (target.lastMove && target.lastMove.id === 'struggle') {
+					// don't lock
+					delete target.volatiles['rollout'];
+				}
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Magic",
@@ -36149,7 +37281,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			dustproof: true,
+			chance: 100,
+			volatileStatus: 'balmscour',
+		},
+		onBasePower(basePower, source, target) {
+			if (target.status === 'psn' || target.status === 'tox') {
+				return this.chainModify(2);
+			}
+		},
+		onAfterMove(source, target, move) {
+			for (const pokemon of this.getAllActive()) {
+				if (pokemon !== source && pokemon.removeVolatile('balmscour') && (pokemon.status === 'psn' || pokemon.status === 'tox') && !source.fainted) {
+					pokemon.cureStatus();
+				}
+			}
+		},
 		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -36163,7 +37311,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 80,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -36177,6 +37330,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Light",
@@ -36191,6 +37351,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: [2,5],
 		secondary: null,
 		target: "normal",
 		type: "Wind",
@@ -36219,7 +37380,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Wind",
 		isNonstandard: "Future",
@@ -36233,6 +37397,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
 		secondary: null,
 		target: "randomNormal",
 		type: "Wind",
@@ -36247,6 +37419,39 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onTryImmunity(target) {
+			return !target.hasAbility('stickyhold');
+		},
+		onHit(target, source, move) {
+			const yourItem = target.takeItem(source);
+			const myItem = source.takeItem();
+			if (target.item || source.item || (!yourItem && !myItem)) {
+				if (yourItem) target.item = yourItem.id;
+				if (myItem) source.item = myItem.id;
+				return false;
+			}
+			if (
+				(myItem && !this.singleEvent('TakeItem', myItem, source.itemState, target, source, move, myItem)) ||
+				(yourItem && !this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem))
+			) {
+				if (yourItem) target.item = yourItem.id;
+				if (myItem) source.item = myItem.id;
+				return false;
+			}
+			this.add('-activate', source, 'move: Trade Wind', '[of] ' + target);
+			if (myItem) {
+				target.setItem(myItem);
+				this.add('-item', target, myItem, '[from] move: Trade Wind');
+			} else {
+				this.add('-enditem', target, yourItem, '[silent]', '[from] move: Trade Wind');
+			}
+			if (yourItem) {
+				source.setItem(yourItem);
+				this.add('-item', source, yourItem, '[from] move: Trade Wind');
+			} else {
+				this.add('-enditem', source, myItem, '[silent]', '[from] move: Trade Wind');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Wind",
@@ -36261,7 +37466,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		self: {
+			boosts: {
+				spa: -2,
+			},
+		},
 		target: "normal",
 		type: "Wind",
 		isNonstandard: "Future",
@@ -36275,7 +37484,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Wind",
 		isNonstandard: "Future",
@@ -36289,7 +37501,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'tox',
+		},
 		target: "normal",
 		type: "Zombie",
 		isNonstandard: "Future",
@@ -36303,6 +37518,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Zombie' || !target.setType('Zombie')) return false;
+			this.add('-start', target, 'typechange', 'Zombie');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Zombie",
@@ -36317,7 +37536,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -36331,7 +37553,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Fabric",
 		isNonstandard: "Future",
@@ -36345,7 +37570,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Fabric",
 		isNonstandard: "Future",
@@ -36359,7 +37587,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('brn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('frz', source);
+				}
+			},
+		},
 		target: "normal",
 		type: "Fabric",
 		isNonstandard: "Future",
@@ -36373,6 +37613,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
 		secondary: null,
 		target: "normal",
 		type: "Fabric",
@@ -36387,6 +37628,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -36396,11 +37638,66 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 666919,
 		accuracy: 90,
 		basePower: 30,
+		basePowerCallback(pokemon, target, move) {
+			let bp = move.basePower;
+			const rolloutData = pokemon.volatiles['rollout'];
+			if (rolloutData?.hitCount) {
+				bp *= Math.pow(2, rolloutData.contactHitCount);
+			}
+			if (rolloutData && pokemon.status !== 'slp') {
+				rolloutData.hitCount++;
+				rolloutData.contactHitCount++;
+				if (rolloutData.hitCount < 5) {
+					rolloutData.duration = 2;
+				}
+			}
+			if (pokemon.volatiles['defensecurl']) {
+				bp *= 2;
+			}
+			this.debug("BP: " + bp);
+			return bp;
+		},
 		category: "Special",
 		name: "Migraine",
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyMove(move, pokemon, target) {
+			if (pokemon.volatiles['rollout'] || pokemon.status === 'slp' || !target) return;
+			pokemon.addVolatile('rollout');
+			// @ts-ignore
+			// TS thinks pokemon.volatiles['rollout'] doesn't exist because of the condition on the return above
+			// but it does exist now because addVolatile created it
+			pokemon.volatiles['rollout'].targetSlot = move.sourceEffect ? pokemon.lastMoveTargetLoc : pokemon.getLocOf(target);
+		},
+		onAfterMove(source, target, move) {
+			const rolloutData = source.volatiles["rollout"];
+			if (
+				rolloutData &&
+				rolloutData.hitCount === 5 &&
+				rolloutData.contactHitCount < 5
+				// this conditions can only be met in gen7 and gen8dlc1
+				// see `disguise` and `iceface` abilities in the resp mod folders
+			) {
+				source.addVolatile("rolloutstorage");
+				source.volatiles["rolloutstorage"].contactHitCount =
+					rolloutData.contactHitCount;
+			}
+		},
+		condition: {
+			duration: 1,
+			onLockMove: 'rollout',
+			onStart() {
+				this.effectState.hitCount = 0;
+				this.effectState.contactHitCount = 0;
+			},
+			onResidual(target) {
+				if (target.lastMove && target.lastMove.id === 'struggle') {
+					// don't lock
+					delete target.volatiles['rollout'];
+				}
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
@@ -36415,6 +37712,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 30,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
 		secondary: null,
 		target: "normal",
 		type: "Flying",
@@ -36429,6 +37727,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.hp * 2 <= target.maxhp) {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -36443,6 +37746,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		willCrit: true,
 		secondary: null,
 		target: "normal",
 		type: "Electric",
@@ -36457,6 +37761,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
 		secondary: null,
 		target: "randomNormal",
 		type: "Fire",
@@ -36471,7 +37783,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		self: {
+			chance: 50,
+			boosts: {
+				def: 2,
+			},
+		},
+		secondary: {
+			// Sheer Force negates the self even though it is not secondary
+		},
 		target: "normal",
 		type: "Paper",
 		isNonstandard: "Future",
@@ -36485,7 +37805,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		recoil: [1,3],
+		secondary: {
+			chance: 5,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -36499,7 +37823,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Plastic",
 		isNonstandard: "Future",
@@ -36542,7 +37869,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Plastic",
@@ -36557,7 +37898,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Fairy",
 		isNonstandard: "Future",
@@ -36571,6 +37917,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		willCrit: true,
 		secondary: null,
 		target: "normal",
 		type: "Fairy",
@@ -36585,6 +37932,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		boosts: {
+			accuracy: 1,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -36599,6 +37949,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		critRatio: 2,
 		secondary: null,
 		target: "self",
 		type: "Ice",
@@ -36613,7 +37964,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			boosts: {
+				def: -1,
+			},
+		},
 		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -36627,6 +37983,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			this.boost({atk: 1}, attacker, attacker, move);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ground",
@@ -36655,7 +38023,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 98,
+			boosts: {
+				def: -1,
+				spd: -1,
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Nuclear",
 		isNonstandard: "Future",
@@ -36669,6 +38043,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		overrideOffensivePokemon: 'target',
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
@@ -36697,7 +38072,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bomb: 1, web: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Bug",
 		isNonstandard: "Future",
@@ -36711,6 +38091,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'truant') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('truant');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Truant', '[from] move: Lazy Day');
+				return;
+			}
+			return oldAbility as false | null;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -36739,6 +38132,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, arrow: 1, west: 1},
+		willCrit: true,
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -36753,7 +38147,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Normal",
 		isNonstandard: "Future",
@@ -36767,7 +38168,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, tail: 1},
-		secondary: null,
+		secondaries: [
+			{
+				chance: 10,
+				status: 'par',
+			}, {
+				chance: 10,
+				volatileStatus: 'flinch',
+			},
+		],
 		target: "normal",
 		type: "Normal",
 		isNonstandard: "Future",
@@ -36781,7 +38190,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, above: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Wood",
 		isNonstandard: "Future",
@@ -36795,6 +38207,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		hasCrashDamage: true,
+		onMoveFail(target, source, move) {
+			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
+		},
 		secondary: null,
 		target: "normal",
 		type: "Wood",
@@ -36809,6 +38225,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
+		onHit(pokemon) {
+			if (['', 'slp', 'frz'].includes(pokemon.status)) return false;
+			pokemon.cureStatus();
+		},
 		secondary: null,
 		target: "normal",
 		type: "Grass",
@@ -36823,6 +38243,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spe: -2,
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -36837,7 +38262,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'slp',
+		},
 		target: "allAdjacentFoes",
 		type: "Water",
 		isNonstandard: "Future",
@@ -36851,7 +38279,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'psn',
+		},
 		target: "allAdjacent",
 		type: "Water",
 		isNonstandard: "Future",
@@ -36865,7 +38296,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			boosts: {
+				def: -1,
+			},
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -36893,6 +38329,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Cyber",
@@ -36903,6 +38354,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 80,
 		category: "Special",
+		overrideDefensiveStat: 'def',
 		name: "Polylith",
 		pp: 10,
 		priority: 0,
@@ -36935,7 +38387,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -36963,7 +38418,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Rock",
 		isNonstandard: "Future",
@@ -36977,6 +38437,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2,5],
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -36991,6 +38452,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, source, move) {
+			if (source.item || source.volatiles['gem']) {
+				return;
+			}
+			const yourItem = target.takeItem(source);
+			if (!yourItem) {
+				return;
+			}
+			if (!this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem) ||
+				!source.setItem(yourItem)) {
+				target.item = yourItem.id; // bypass setItem so we don't break choicelock or anything
+				return;
+			}
+			this.add('-enditem', target, yourItem, '[silent]', '[from] move: Avarice', '[of] ' + source);
+			this.add('-item', source, yourItem, '[from] move: Avarice', '[of] ' + target);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -37014,7 +38491,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	happyglow: {
 		num: 666966,
 		accuracy: 100,
-		basePower: 1,
+		basePower: 0,
+		basePowerCallback(pokemon) {
+			return Math.floor((pokemon.happiness * 10) / 25) || 1;
+		},
 		category: "Special",
 		name: "Happy Glow",
 		pp: 20,
@@ -37034,6 +38514,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+			spd: 2,
+		},
 		secondary: null,
 		target: "self",
 		type: "Light",
@@ -37048,7 +38532,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('brn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('frz', source);
+				}
+			},
+		},
 		target: "normal",
 		type: "Paper",
 		isNonstandard: "Future",
@@ -37062,6 +38558,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [33, 100],
 		secondary: null,
 		target: "normal",
 		type: "Paper",
@@ -37076,7 +38573,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Nuclear",
 		isNonstandard: "Future",
@@ -37090,7 +38590,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, pulse: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			status: 'par',
+		},
 		target: "allAdjacent",
 		type: "Nuclear",
 		isNonstandard: "Future",
@@ -37104,6 +38607,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+			spd: 1,
+			accuracy: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Nuclear",
@@ -37118,13 +38626,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, tail: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'psn',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Nuclear",
 		isNonstandard: "Future",
 	},
-	beacon: {
+	beacon: {	//TODO: Stops Fog
 		num: 666975,
 		accuracy: 90,
 		basePower: 80,
@@ -37133,6 +38644,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		boosts: {
+			accuracy: 2,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Light",
@@ -37147,6 +38661,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'reaction',
+		},
+		condition: {
+			onStart(pokemon) {
+				this.add('-singlemove', pokemon, 'Reaction');
+			},
+			onHit(target, source, move) {
+				if (target !== source && move.category !== 'Status') {
+					this.boost({atk: 1});
+				}
+			},
+			onBeforeMovePriority: 100,
+			onBeforeMove(pokemon) {
+				this.debug('removing Reaction before attack');
+				pokemon.removeVolatile('reaction');
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Nuclear",
@@ -37161,7 +38693,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
@@ -37175,7 +38710,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -37203,6 +38741,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		ohko: true,
 		secondary: null,
 		target: "normal",
 		type: "Poison",
@@ -37217,6 +38756,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		selfSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Ground",
@@ -37231,6 +38771,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sun: 1},
+		weather: 'sunnyday',
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -37245,7 +38786,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'par',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Electric",
@@ -37259,6 +38803,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Wild Mushroom",
 		pp: 10,
 		priority: 1,
+		volatileStatus: 'substitute',
 		flags: {snatch: 1},
 		secondary: null,
 		target: "self",
@@ -37274,7 +38819,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			status: 'slp',
+		},
 		target: "allAdjacentFoes",
 		type: "Ground",
 		isNonstandard: "Future",
@@ -37288,7 +38836,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			status: 'psn',
+		},
 		target: "allAdjacent",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -37302,7 +38853,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -37316,7 +38870,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 3,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Psychout only works on your first turn out.");
+				return false;
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -37330,6 +38893,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
 		secondary: null,
 		target: "randomNormal",
 		type: "Psychic",
@@ -37344,6 +38915,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'lockedmove',
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.volatiles['lockedmove'] && pokemon.volatiles['lockedmove'].duration === 1) {
+				pokemon.removeVolatile('lockedmove');
+			}
+		},
 		secondary: null,
 		target: "randomNormal",
 		type: "Dark",
@@ -37358,7 +38937,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Rock",
 		isNonstandard: "Future",
@@ -37372,6 +38954,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		recoil: [33, 100],
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -37386,7 +38969,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -37400,7 +38988,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			self: {
+				boosts: {
+					def: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -37414,12 +39009,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {reflectable: 1},
+		condition: {
+			// this is a side condition
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Icicles');
+			},
+			onEntryHazard(pokemon) {
+				if (pokemon.hasItem('heavydutyboots')) return;
+				const typeMod = this.clampIntRange(pokemon.runEffectiveness(this.dex.getActiveMove('icicles')), -6, 6);
+				this.damage(pokemon.maxhp * Math.pow(2, typeMod) / 8);
+			},
+		},
 		secondary: null,
 		target: "foeSide",
 		type: "Ice",
 		isNonstandard: "Future",
 	},
-	magmasport: {
+	magmasport: { //TODO: Interactions with Volcanic Terrain, Heat Up and Floor is lava
 		num: 666997,
 		accuracy: true,
 		basePower: 0,
@@ -37428,6 +39034,28 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {defrost: 1},
+		boosts: {
+			spd: 1,
+		},
+		pseudoWeather: 'magmasport',
+		condition: {
+			duration: 5,
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Magma Sport', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Ice' && !attacker.hasItem('magmaballon')) {
+					this.debug('magma sport weaken');
+					return this.chainModify([1352, 4096]);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 3,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Magma Sport');
+			},
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Magma",
@@ -37442,6 +39070,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		weather: 'sandstorm',
 		secondary: null,
 		target: "normal",
 		type: "Rock",
@@ -37456,7 +39085,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		target: "allAdjacent",
 		type: "Rock",
 		isNonstandard: "Future",
@@ -37716,20 +39348,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		isNonstandard: "Future",
 	},
-	hiddenforce: {
-		num: 667018,
-		accuracy: 100,
-		basePower: 1,
-		category: "Physical",
-		name: "Hidden Force",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		target: "normal",
-		type: "Normal",
-		isNonstandard: "Future",
-	},
 	zawarudo: {
 		num: 667019,
 		accuracy: 95,
@@ -37807,7 +39425,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 65,
 		category: "Physical",
 		name: "Why",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
@@ -37923,6 +39541,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Ritual",
 		pp: 5,
 		priority: -1,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		boosts: {
+			spa: 2,
+			atk: 2,
+			spe: 2,
+		},
 		flags: {pulse: 1},
 		secondary: null,
 		target: "self",
@@ -38134,6 +39768,29 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Ambush",
 		pp: 20,
 		priority: -3,
+		priorityChargeCallback(pokemon) {
+			pokemon.addVolatile('ambush');
+		},
+		beforeMoveCallback(pokemon) {
+			if (pokemon.volatiles['ambush']?.lostFocus) {
+				this.add('cant', pokemon, 'Ambush', 'Ambush');
+				return true;
+			}
+		},
+		condition: {
+			duration: 1,
+			onStart(pokemon) {
+				this.add('-singleturn', pokemon, 'move: Ambush');
+			},
+			onHit(pokemon, source, move) {
+				if (move.category !== 'Status') {
+					this.effectState.lostFocus = true;
+				}
+			},
+			onTryAddVolatile(status, pokemon) {
+				if (status.id === 'flinch') return null;
+			},
+		},
 		flags: {contact: 1, protect: 1, punch: 1},
 		secondary: null,
 		target: "normal",
@@ -38248,6 +39905,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Fire",
 		isNonstandard: "Future",
@@ -38318,7 +39976,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		self: {
+			boosts: {
+				def: -1,
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -38447,6 +40110,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		ignoreEvasion: true,
+		ignoreDefensive: true,
 		target: "normal",
 		type: "Ghost",
 		isNonstandard: "Future",
@@ -38489,7 +40154,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -38517,7 +40189,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 80,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -38531,7 +40206,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -38545,8 +40223,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {},
+		onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Ghost' && move.id !== 'channel'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Ghost",
 		isNonstandard: "Future",
 	},
@@ -38558,9 +40252,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Magic Wand",
 		pp: 15,
 		priority: 0,
-		flags: {},
+		flags: {},onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Magic' && move.id !== 'magicwand'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Magic",
 		isNonstandard: "Future",
 	},
@@ -38573,8 +40282,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {},
+		onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Magic' && move.id !== 'magicwand'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Steel",
 		isNonstandard: "Future",
 	},
@@ -38587,8 +40312,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {},
+		onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Fairy' && move.id !== 'poof'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Fairy",
 		isNonstandard: "Future",
 	},
@@ -38686,6 +40427,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		forceSwitch: true,
 		target: "normal",
 		type: "Chaos",
 		isNonstandard: "Future",
@@ -38727,8 +40469,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {},
+		onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Cosmic' && move.id !== 'astronomy'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Cosmic",
 		isNonstandard: "Future",
 	},
@@ -38783,8 +40541,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {},
+		onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Paper' && move.id !== 'bibliomancy'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Paper",
 		isNonstandard: "Future",
 	},
@@ -38797,7 +40571,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
@@ -38826,7 +40603,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -38896,7 +40676,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1, above: 1},
-		secondary: null,
+		secondary: {
+			chance: 15,
+			status: 'brn',
+		},
+		recoil: [33, 100],
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -39022,7 +40806,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Re-Write",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {bypasssub: 1},
+		onHitField() {
+			this.add('-clearallboost');
+			for (const pokemon of this.getAllActive()) {
+				pokemon.clearBoosts();
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Paper",
@@ -39051,7 +40841,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 35,
+			self: {
+				boosts: {
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -39065,7 +40866,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			volatileStatus: 'disable',
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -39290,6 +41094,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
+		boosts: {
+			atk: -1,
+			def: -1,
+			spa: -1,
+			spd: -1,
+			spe: -1,
+		},
 		target: "normal",
 		type: "Normal",
 		isNonstandard: "Future",
@@ -39303,6 +41114,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Charge Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Charge Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Charge Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Charge Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -39429,6 +41268,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				this.field.setWeather('sunnyday');
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Light",
@@ -39555,6 +41399,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sun: 1},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'dryskin' || target.ability === 'truant') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('dryskin');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Dry Skin', '[from] move: Sun Burn');
+				return;
+			}
+			return oldAbility as false | null;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -39723,6 +41580,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Food",
@@ -40065,6 +41923,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		multihit: 2,
 		target: "normal",
 		type: "Chaos",
 		isNonstandard: "Future",
@@ -40079,6 +41938,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		multihit: 2,
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -40106,6 +41966,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -40148,6 +42009,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target) {
+			const ratio = Math.max(Math.floor(pokemon.hp * 48 / pokemon.maxhp), 1);
+			let bp;
+			if (ratio < 2) {
+				bp = 200;
+			} else if (ratio < 5) {
+				bp = 150;
+			} else if (ratio < 10) {
+				bp = 100;
+			} else if (ratio < 17) {
+				bp = 80;
+			} else if (ratio < 33) {
+				bp = 40;
+			} else {
+				bp = 20;
+			}
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -40262,6 +42142,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
+		selfSwitch: true,
 		type: "Dark",
 		isNonstandard: "Future",
 	},
@@ -40329,8 +42210,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Divine Shield",
 		pp: 10,
 		priority: 0,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -40439,7 +42327,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 1,
 		category: "Special",
 		name: "Desecrations",
-		pp: 5,
+		pp: 1,
 		priority: 1,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -40541,6 +42429,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		volatileStatus: 'partiallytrapped',
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
@@ -40681,6 +42570,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Ground",
 		isNonstandard: "Future",
@@ -41013,7 +42903,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 150,
 		category: "Special",
 		name: "Cremate",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -41228,6 +43118,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
+		selfSwitch: true,
 		type: "Magic",
 		isNonstandard: "Future",
 	},
@@ -41239,6 +43130,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "DirtyDeedsDoneDirtCheap",
 		pp: 10,
 		priority: 0,
+		selfSwitch: true,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -41253,6 +43145,31 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Enuma Elish",
 		pp: 5,
 		priority: 0,
+		onHit(target, source, move) {
+			let success = false;
+			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
+			const removeTarget = [
+				'reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+			];
+			const removeAll = [
+				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll',
+			];
+			for (const targetCondition of removeTarget) {
+				if (target.side.removeSideCondition(targetCondition)) {
+					if (!removeAll.includes(targetCondition)) continue;
+					this.add('-sideend', target.side, this.dex.conditions.get(targetCondition).name, '[from] move: Enuma Elish', '[of] ' + source);
+					success = true;
+				}
+			}
+			for (const sideCondition of removeAll) {
+				if (source.side.removeSideCondition(sideCondition)) {
+					this.add('-sideend', source.side, this.dex.conditions.get(sideCondition).name, '[from] move: Enuma Elish', '[of] ' + source);
+					success = true;
+				}
+			}
+			this.field.clearTerrain();
+			return success;
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -41425,7 +43342,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
-		secondary: null,
+		boosts: {
+			spe: 12,
+		},
 		target: "self",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -41439,8 +43358,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Divine' && move.id !== 'pray'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Divine",
 		isNonstandard: "Future",
 	},
@@ -41450,9 +43385,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 200,
 		category: "Special",
 		name: "God's Breath",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -41480,6 +43418,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Magic Circle",
 		pp: 15,
 		priority: 0,
+		volatileStatus: 'partiallytrapped',
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -41523,6 +43462,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -41591,7 +43531,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 150,
 		category: "Physical",
 		name: "Vasavi Shakti",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -41679,7 +43619,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -41693,7 +43640,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 60,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Divine",
@@ -41857,6 +43811,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 667348,
 		accuracy: 100,
 		basePower: 1,
+		basePowerCallback(pokemon, target) {
+			let power = 60 + 20 * target.positiveBoosts();
+			if (power > 200) power = 200;
+			this.debug('BP: ' + power);
+			return power;
+		},
 		category: "Physical",
 		name: "Miracle Reprisal",
 		pp: 10,
@@ -41962,6 +43922,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('healblock');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -41976,7 +43941,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('healblock');
+			}
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -42243,7 +44212,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -42270,8 +44242,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "First Folio",
 		pp: 5,
 		priority: 0,
+		secondary: {
+			chance: 50,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('brn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('frz', source);
+				}
+			},
+		},
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
 		target: "normal",
 		type: "Paper",
 		isNonstandard: "Future",
@@ -42636,7 +44620,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Darkness Dance",
 		pp: 5,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
 		secondary: null,
 		target: "randomNormal",
 		type: "Dark",
@@ -42693,6 +44677,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Blood",
@@ -43295,6 +45280,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Fairy' || type === 'Chaos'|| type === 'Ghost'|| type === 'Dragon'|| type === 'Zombie') return 1;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -43310,6 +45298,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		onHit(target) {
+			const stats: BoostID[] = [];
+			let stat: BoostID;
+			for (stat in target.boosts) {
+				if (target.boosts[stat] < 6) {
+					stats.push(stat);
+				}
+			}
+			if (stats.length) {
+				const randomStat = this.sample(stats);
+				const boost: SparseBoostsTable = {};
+				boost[randomStat] = 3;
+				this.boost(boost);
+			} else {
+				return false;
+			}
+		},
 		target: "adjacentAllyOrSelf",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -43435,7 +45440,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -43721,7 +45731,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 35,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -43777,7 +45790,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 60,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -43790,8 +45810,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Hachiman Strike",
 		pp: 10,
 		priority: 0,
+		secondary: {
+			chance: 96,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -43805,7 +45832,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 70,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -43847,6 +45881,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onDamage(damage, target, source, effect) {
+			if (damage >= target.hp) return target.hp - 1;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -43858,9 +45895,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 190,
 		category: "Special",
 		name: "Perdition",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryMove(pokemon, target, move) {
+			if (pokemon.hasType('Divine')) return;
+			this.add('-fail', pokemon, 'move: Perdition');
+			this.attrLastMove('[still]');
+			return null;
+		},
+		self: {
+			onHit(pokemon) {
+				pokemon.setType(pokemon.getTypes(true).map(type => type === "Divine" ? "???" : type));
+				this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Perdition');
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -44212,7 +46261,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Beam Dance",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, dance: 1},
 		secondary: null,
 		target: "randomNormal",
 		type: "Normal",
@@ -44989,6 +47038,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -45395,7 +47445,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 90,
 		category: "Special",
 		name: "Impulse Blast",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -45412,7 +47462,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -46172,6 +48227,29 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 1,
 		flags: {protect: 1},
+		onTryHit(target, pokemon) {
+			const action = this.queue.willMove(target);
+			if (!action) return false;
+
+			const noMeFirst = [
+				'beakblast', 'chatter', 'counter', 'covet', 'focuspunch', 'mefirst', 'metalburst', 'mirrorcoat', 'shelltrap', 'struggle', 'thief',
+			];
+			const move = this.dex.getActiveMove(action.move.id);
+			if (action.zmove || move.isZ || move.isMax) return false;
+			if (target.volatiles['mustrecharge']) return false;
+			if (move.category === 'Status' || noMeFirst.includes(move.id)) return false;
+
+			pokemon.addVolatile('mefirst');
+			this.actions.useMove(move, pokemon, target);
+			return null;
+		},
+		condition: {
+			duration: 1,
+			onBasePowerPriority: 12,
+			onBasePower(basePower) {
+				return this.chainModify(1.5);
+			},
+		},
 		secondary: null,
 		target: "adjacentFoe",
 		type: "Time",
@@ -46354,7 +48432,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 23,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -46438,7 +48519,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bomb: 1},
-		secondary: null,
+		secondary: {
+			chance: 35,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Fire",
 		isNonstandard: "Future",
@@ -46596,6 +48680,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {snatch: 1},
 		secondary: null,
 		target: "self",
+		onHit(target) {
+			if (target.hp <= target.maxhp / 2 || target.boosts.atk >= 6 || target.boosts.spa >= 6 ||  target.maxhp === 1) { // Shedinja clause
+				return false;
+			}
+			this.directDamage(target.maxhp / 2);
+			this.boost({atk: 12, spa: 12}, target);
+		},
 		type: "Chaos",
 		isNonstandard: "Future",
 	},
@@ -46607,6 +48698,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Shinigami Eyes",
 		pp: 10,
 		priority: 0,
+		onHit(target) {
+			if (target.hp <= target.maxhp / 2 || target.boosts.accuracy >= 6 || target.boosts.spa >= 6 || target.maxhp === 1) { // Shedinja clause
+				return false;
+			}
+			this.directDamage(target.maxhp / 2);
+			this.boost({accuracy: 12, spa: 12}, target);
+		},
 		flags: {snatch: 1},
 		secondary: null,
 		target: "self",
@@ -46778,6 +48876,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
+		selfSwitch: true,
 		type: "Psychic",
 		isNonstandard: "Future",
 	},
@@ -47183,6 +49282,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower + 20 * pokemon.positiveBoosts();
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Food",
@@ -47632,6 +49736,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target, source) {
+			let i: BoostID;
+			for (i in target.boosts) {
+				source.boosts[i] = target.boosts[i];
+			}
+			const volatilesToCopy = ['focusenergy', 'gmaxchistrike', 'laserfocus'];
+			for (const volatile of volatilesToCopy) {
+				if (target.volatiles[volatile]) {
+					source.addVolatile(volatile);
+					if (volatile === 'gmaxchistrike') source.volatiles[volatile].layers = target.volatiles[volatile].layers;
+				} else {
+					source.removeVolatile(volatile);
+				}
+			}
+			this.add('-copyboost', source, target, '[from] move: Toxic Copy');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Poison",
@@ -47854,7 +49974,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Shadow Down",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1},
 		secondary: null,
@@ -47868,7 +49988,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Shadow Half",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1},
 		secondary: null,
@@ -47882,7 +50002,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Shadow Hold",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1},
 		secondary: null,
@@ -47896,7 +50016,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Shadow Mist",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1},
 		secondary: null,
@@ -47910,7 +50030,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Shadow Panic",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, sound: 1},
 		secondary: null,
@@ -47924,7 +50044,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Shadow Shed",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1},
 		secondary: null,
@@ -47938,7 +50058,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Shadow Sky",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1},
 		secondary: null,
@@ -47971,6 +50091,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
 		secondary: null,
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'wonderguard' || target.ability === 'truant') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('wonderguard');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Wonder Guard', '[from] move: Divine Protection');
+				return;
+			}
+			return oldAbility as false | null;
+		},
 		target: "self",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -48249,7 +50382,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Mystery Beam",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1},
+		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Qmarks' || !target.setType('Qmarks')) {
+				// Soak should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add('-fail', target);
+				return null;
+			}
+			this.add('-start', target, 'typechange', 'Qmarks');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Qmarks",
@@ -48587,7 +50729,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -48769,6 +50914,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bomb: 1},
+		basePowerCallback(pokemon, target) {
+			const targetWeight = target.getWeight();
+			let bp;
+			if (targetWeight >= 2000) {
+				bp = 120;
+			} else if (targetWeight >= 1000) {
+				bp = 100;
+			} else if (targetWeight >= 500) {
+				bp = 80;
+			} else if (targetWeight >= 250) {
+				bp = 60;
+			} else if (targetWeight >= 100) {
+				bp = 40;
+			} else {
+				bp = 20;
+			}
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Heart",
@@ -48854,6 +51018,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		boosts: {
+			spd: -2,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -48893,7 +51060,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Communism",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {gravity: 1},
 		secondary: null,
@@ -48993,10 +51160,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Gods Grace",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {snatch: 1},
-		secondary: null,
+		onHit(target, source, move) {
+			source.side.addSideCondition('safeguard');
+			source.side.addSideCondition('mist');
+		},
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: 3,
+				spd: 3,
+			},
+		},
+		volatileStatus: 'ingrain',
 		target: "self",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -49455,13 +51633,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 	bluster: {
 		num: 667914,
 		accuracy: 90,
-		basePower: 1,
+		basePower: 0,
 		category: "Special",
 		name: "Bluster",
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Flying",
 		isNonstandard: "Future",
@@ -49517,7 +51698,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Heart",
 		isNonstandard: "Future",
@@ -49556,7 +51740,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 160,
 		category: "Special",
 		name: "Deathy Weathy",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -49643,6 +51827,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, pulse: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Water', type);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -49823,7 +52010,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 150,
 		category: "Special",
 		name: "Sunset",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sun: 1},
 		secondary: null,
@@ -49965,7 +52152,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 150,
 		category: "Physical",
 		name: "Eternal Meek",
-		pp: 5,
+		pp: 1,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
@@ -50061,11 +52248,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 	faithbeam: {
 		num: 667965,
 		accuracy: 100,
-		basePower: 1,
+		basePower: 0,
 		category: "Special",
 		name: "Faith Beam",
 		pp: 10,
 		priority: 0,
+		basePowerCallback(pokemon) {
+			return Math.floor((pokemon.happiness * 10) / 25) || 1;
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -50092,7 +52282,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 95,
 		category: "Special",
 		name: "First Trumpet",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
 		secondary: null,
@@ -50106,7 +52296,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 100,
 		category: "Special",
 		name: "Second Trumpet",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
 		secondary: null,
@@ -50204,7 +52394,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 100,
 		category: "Special",
 		name: "First Plague",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -50218,7 +52408,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 100,
 		category: "Special",
 		name: "Second Plague",
-		pp: 5,
+		pp: 1,
 		priority: 2,
 		flags: {},
 		secondary: null,
@@ -50512,7 +52702,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "EveryoneExplodeNow",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {},
 		secondary: null,
@@ -50711,8 +52901,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {},
+		onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Tech' && move.id !== 'gadget'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Tech",
 		isNonstandard: "Future",
 	},
@@ -50738,8 +52944,26 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Fatten Up",
 		pp: 10,
 		priority: 0,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -4,
+			},
+		},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'thickfat' || target.ability === 'truant') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('thickfat');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Thick Fat', '[from] move: Fatten Up');
+				return;
+			}
+			return oldAbility as false | null;
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -50837,7 +53061,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 35,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -50949,6 +53176,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		ignoreEvasion: true,
+		ignoreDefensive: true,
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -50991,7 +53220,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -51712,6 +53944,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -51796,6 +54029,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -51838,7 +54072,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 70,
+			self: {
+				boosts: {
+					evasion: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Bug",
 		isNonstandard: "Future",
@@ -52037,6 +54278,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
+		selfSwitch: true,
 		type: "Ghost",
 		isNonstandard: "Future",
 	},
@@ -52315,6 +54557,34 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Jailbreak', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Jailbreak', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Jailbreak', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Jailbreak', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -52329,6 +54599,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			evasion: 3,
+			spe: -3,
+		},
 		secondary: null,
 		target: "self",
 		type: "Normal",
@@ -52441,6 +54715,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Healing Circle",
 		pp: 5,
 		priority: 0,
+		slotCondition: 'Healing Circle',
+		condition: {
+			duration: 2,
+			onStart(pokemon, source) {
+				this.effectState.hp = source.maxhp / 2;
+			},
+			onResidualOrder: 4,
+			onEnd(target) {
+				if (target && !target.fainted) {
+					const damage = this.heal(this.effectState.hp, target, target);
+					if (damage) {
+						this.add('-heal', target, target.getHealth, '[from] move: Healing Circle', '[wisher] ' + this.effectState.source.name);
+					}
+				}
+			},
+		},
 		flags: {reflectable: 1},
 		secondary: null,
 		target: "allySide",
@@ -52764,6 +55054,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		selfSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Fear",
@@ -52957,7 +55248,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 120,
 		category: "Physical",
 		name: "Spiny Shell",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -53144,6 +55435,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		volatileStatus: 'smackdown',
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -53312,6 +55604,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		volatileStatus: 'pacify',
+		condition: {
+			duration: 4,
+			onStart(target) {
+				if (target.activeTurns && !this.queue.willMove(target)) {
+					this.effectState.duration++;
+				}
+				this.add('-start', target, 'move: Pacify');
+			},
+			onResidualOrder: 15,
+			onEnd(target) {
+				this.add('-end', target, 'move: Pacify');
+			},
+			onDisableMove(pokemon) {
+				for (const moveSlot of pokemon.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.id);
+					if (move.category !== 'Status' && move.id !== 'mefirst') {
+						pokemon.disableMove(moveSlot.id);
+					}
+				}
+			},
+			onBeforeMovePriority: 5,
+			onBeforeMove(attacker, defender, move) {
+				if (!move.isZ && !move.isMax && move.category !== 'Status' && move.id !== 'mefirst') {
+					this.add('cant', attacker, 'move: Pacify', move);
+					return false;
+				}
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -53913,9 +56234,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Special Order",
 		pp: 15,
 		priority: 0,
-		flags: {},
+		flags: {},onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Food' && move.id !== 'specialorder'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Food",
 		isNonstandard: "Future",
 	},
@@ -54037,7 +56373,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 200,
 		category: "Special",
 		name: "Last Judgement",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -54065,7 +56401,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 200,
 		category: "Special",
 		name: "Wave Leader Fan",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -54096,6 +56432,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			atk: 3,
+			spa: 3,
+		},
+		volatileStatus: 'confusion',
 		secondary: null,
 		target: "self",
 		type: "Chaos",
@@ -54152,7 +56493,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Blade Dance",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -54181,7 +56522,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "DoubleEdgeDance",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -54320,7 +56661,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 150,
 		category: "Special",
 		name: "Sunrise",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sun: 1},
 		secondary: null,
@@ -54450,6 +56791,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		overrideDefensiveStat: 'def',
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Fear",
@@ -54464,6 +56807,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: [2, 10],
 		secondary: null,
 		target: "normal",
 		type: "Electric",
@@ -54506,6 +56850,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, pulse: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Ice', type);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -54658,7 +57005,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 200,
 		category: "Special",
 		name: "La Pucelle",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -54731,6 +57078,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, arrow: 1},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -54884,6 +57232,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Kanshou Bakuya",
 		pp: 10,
 		priority: 0,
+		multihit: 2,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -55007,12 +57356,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 	troiastragoidia: {
 		num: 668327,
 		accuracy: 100,
-		basePower: 1,
+		basePower: 0,
 		category: "Physical",
 		name: "Troias Tragoidia",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target) {
+			let ratio = Math.floor(pokemon.getStat('spe') / target.getStat('spe'));
+			if (!isFinite(ratio)) ratio = 0;
+			const bp = [40, 60, 80, 120, 150][Math.min(ratio, 4)];
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -55509,7 +57865,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 70,
+			volatileStatus: 'attract',
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -55842,7 +58201,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Glitch Guard",
-		pp: 5,
+		pp: 1,
 		priority: 3,
 		flags: {snatch: 1},
 		secondary: null,
@@ -56380,7 +58739,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 80,
+			volatileStatus: 'disable',
+		},
+		status: 'psn',
 		target: "allAdjacentFoes",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -56421,7 +58784,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "War Dance",
 		pp: 5,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
 		secondary: null,
 		target: "randomNormal",
 		type: "Fighting",
@@ -56926,6 +59289,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Blitzkreig",
 		pp: 10,
 		priority: 1,
+		multihit: [2, 5],
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -57137,6 +59501,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Halo",
 		pp: 10,
 		priority: 0,
+		volatileStatus: 'halo',
+		condition: {
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Halo');
+			},
+			onResidualOrder: 6,
+			onResidual(pokemon) {
+				this.heal(pokemon.baseMaxhp / 14);
+			},
+		},
 		flags: {snatch: 1, bite: 1},
 		secondary: null,
 		target: "self",
@@ -57251,7 +59625,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Fae Dance",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, dance: 1},
 		secondary: null,
 		target: "randomNormal",
 		type: "Fairy",
@@ -57336,7 +59710,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bomb: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -57361,7 +59738,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Nanobot Barrier",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
 		secondary: null,
@@ -57392,6 +59769,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.status && pokemon.status !== 'slp') {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -57420,7 +59802,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			volatileStatus: 'confusion',
+		},
+		multihit: [2, 5],
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -57645,6 +60031,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -58442,7 +60829,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 1,
 		category: "Physical",
 		name: "Twinshit",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -58458,6 +60845,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Mind Control",
 		pp: 15,
 		priority: 0,
+		overrideOffensivePokemon: 'target',
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -58487,6 +60875,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spa: -2,
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Chaos",
@@ -58498,7 +60891,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Return to Zero",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {snatch: 1},
 		secondary: null,
@@ -58514,6 +60907,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Switch Blade",
 		pp: 20,
 		priority: 0,
+		selfSwitch: true,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -58529,6 +60923,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getAbility().isPermanent) return;
+			target.addVolatile('gastroacid');
+		},
+		onAfterSubDamage(damage, target) {
+			if (target.getAbility().isPermanent) return;
+			target.addVolatile('gastroacid');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -58642,6 +61044,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Time",
 		isNonstandard: "Future",
@@ -58845,11 +61248,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 	avasculate: {
 		num: 668620,
 		accuracy: 85,
-		basePower: 1,
+		basePower: 0,
 		category: "Special",
 		name: "Avasculate",
 		pp: 5,
 		priority: 0,
+		damageCallback(pokemon, target) {
+			return this.clampIntRange(Math.floor(target.getUndynamaxedHP() / 2), 1);
+		},
+		status: 'par',
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -59131,8 +61538,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {},
+		onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Cosmic' && move.id !== 'astronomy'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Chaos",
 		isNonstandard: "Future",
 	},
@@ -59215,9 +61638,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Necrochannel",
 		pp: 15,
 		priority: 0,
-		flags: {},
+		flags: {},onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Zombie' && move.id !== 'necrochannel'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Zombie",
 		isNonstandard: "Future",
 	},
@@ -59512,6 +61950,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, pulse: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Dark', type);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Light",
@@ -59611,6 +62052,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Steam",
 		isNonstandard: "Future",
@@ -59845,7 +62287,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 1,
 		category: "Special",
 		name: "Awakening",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -60015,8 +62457,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Physical",
 		name: "Bottle Dive",
 		pp: 15,
-		priority: 0,
+		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		selfSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Plastic",
@@ -60115,7 +62558,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spa: -1,
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -60651,6 +63099,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -61570,6 +64019,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
 		secondary: null,
 		target: "normal",
 		type: "Light",
@@ -61604,7 +64056,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fire",
 		isNonstandard: "Future",
 	},
-	invertedroom: {
+	invertedroom: {	/* TODO **/
 		num: 668843,
 		accuracy: true,
 		basePower: 0,
@@ -61821,7 +64273,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Adaptive Body",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {snatch: 1, bite: 1},
 		secondary: null,
@@ -61979,8 +64431,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.flags.distance === 1 && move.id !== 'miraclepunch'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Normal",
 		isNonstandard: "Future",
 	},
@@ -62793,7 +65261,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 150,
 		category: "Physical",
 		name: "Ultra Giga",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -63161,7 +65629,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Rubber",
 		isNonstandard: "Future",
@@ -63709,6 +66182,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Dine and Dash",
 		pp: 20,
 		priority: 0,
+		selfSwitch: true,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -63837,7 +66311,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		onHit(target, source, move) {
+			const success = this.boost({atk: -1, spa: -1}, target, source);
+			if (!success && !target.hasAbility('mirrorarmor')) {
+				delete move.selfSwitch;
+			}
+		},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Cyber",
 		isNonstandard: "Future",
@@ -64385,7 +66866,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		basePowerCallback(pokemon, target, move) {
+			if (target.gender === 'M') {
+				this.debug('BP doubled on male target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		secondary: {
+			chance: 40,
+			boosts: {
+				atk: -1,
+			},
+		},
 		target: "normal",
 		type: "Heart",
 		isNonstandard: "Future",
@@ -64779,6 +67272,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		secondary: null,
+		boosts: {
+			evasion: 2,
+		},
 		target: "self",
 		type: "Qmarks",
 		isNonstandard: "Future",
@@ -64789,9 +67285,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 71,
 		category: "Special",
 		name: "TM41",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		boosts: {
+			evasion: 2,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Qmarks",
@@ -64947,6 +67446,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 7,
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -65763,7 +68263,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		onHit(target, source, move) {
+			const success = this.boost({spe: -3}, target, source);
+			if (!success && !target.hasAbility('mirrorarmor')) {
+				delete move.selfSwitch;
+			}
+		},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Ice",
 		isNonstandard: "Future",
@@ -66252,7 +68759,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Learn Move",
-		pp: 5,
+		pp: 1,
 		priority: -1,
 		flags: {},
 		secondary: null,
@@ -66578,6 +69085,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		onHit(target) {
+			if (!this.canSwitch(target.side)) {
+				this.attrLastMove('[still]');
+				this.add('-fail', target);
+				return this.NOT_FAIL;
+			}
+		},
+		self: {
+			onHit(source) {
+				source.skipBeforeSwitchOutEventFlag = true;
+			},
+		},
+		boosts: {
+			atk: 1,
+		},
+		selfSwitch: 'copyvolatile',
 		target: "self",
 		type: "Fighting",
 		isNonstandard: "Future",
@@ -66776,6 +69299,30 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		volatileStatus: 'substitute',
+		onTryHit(source) {
+			if (!this.canSwitch(source.side)) {
+				this.add('-fail', source);
+				return this.NOT_FAIL;
+			}
+			if (source.volatiles['substitute']) {
+				this.add('-fail', source, 'move: Shed Tail');
+				return this.NOT_FAIL;
+			}
+			if (source.hp <= Math.ceil(source.maxhp / 2)) {
+				this.add('-fail', source, 'move: Shed Tail', '[weak]');
+				return this.NOT_FAIL;
+			}
+		},
+		onHit(target) {
+			this.directDamage(Math.ceil(target.maxhp / 2));
+		},
+		self: {
+			onHit(source) {
+				source.skipBeforeSwitchOutEventFlag = true;
+			},
+		},
+		selfSwitch: 'copyvolatile',
 		target: "self",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -66845,7 +69392,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel') return 1;
+		},
+		secondary: {
+			chance: 15,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -67027,6 +69580,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onHit(pokemon) {
+				if (pokemon.hasType('Ghost')){
+				pokemon.setType(pokemon.getTypes(true).map(type => type === "Ghost" ? "???" : type));
+				this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Exocise');
+				}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -67685,7 +70244,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Sleep Walk",
 		pp: 10,
 		priority: 0,
-		flags: {snatch: 1, bite: 1},
+		flags: {snatch: 1, bite: 1, heal: 1},
+		onTry(source) {
+			if (source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz')) return false;
+
+			if (source.hp === source.maxhp) {
+				this.add('-fail', source, 'heal');
+				return null;
+			}
+			if (source.hasAbility(['insomnia', 'vitalspirit'])) {
+				this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
+				return null;
+			}
+		},
+		onHit(target, source, move) {
+			const result = target.setStatus('slp', source, move);
+			if (!result) return result;
+			target.statusState.time = 3;
+			target.statusState.startTime = 3;
+			this.heal(target.maxhp); // Aesthetic only as the healing happens after you fall asleep in-game
+		},
+		selfSwitch: true,
 		secondary: null,
 		target: "self",
 		type: "Psychic",
@@ -68176,7 +70755,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			onHit(target, source, move) {
+				if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+			},
+		},
 		target: "normal",
 		type: "Ghost",
 		isNonstandard: "Future",
@@ -68484,6 +71068,37 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {},
+		condition: {
+			duration: 1,
+			onStart(target, source, effect) {
+				this.add('-singleturn', target, 'move: Magic Coat');
+				if (effect?.effectType === 'Move') {
+					this.effectState.pranksterBoosted = effect.pranksterBoosted;
+				}
+			},
+			onTryHitPriority: 2,
+			onTryHit(target, source, move) {
+				if (target === source || move.hasBounced || !move.flags['reflectable']) {
+					return;
+				}
+				const newMove = this.dex.getActiveMove(move.id);
+				newMove.hasBounced = true;
+				newMove.pranksterBoosted = this.effectState.pranksterBoosted;
+				this.actions.useMove(newMove, target, source);
+				return null;
+			},
+			onAllyTryHitSide(target, source, move) {
+				if (target.isAlly(source) || move.hasBounced || !move.flags['reflectable']) {
+					return;
+				}
+				const newMove = this.dex.getActiveMove(move.id);
+				newMove.hasBounced = true;
+				newMove.pranksterBoosted = false;
+				this.actions.useMove(newMove, this.effectState.target, source);
+				return null;
+			},
+		},
+		selfSwitch: 'copyvolatile',
 		secondary: null,
 		target: "self",
 		type: "Magic",
@@ -68764,6 +71379,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "allAdjacent",
 		type: "Cosmic",
@@ -68948,6 +71564,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 3,
 		flags: {protect: 1, mirror: 1, defrost: 1},
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("First Impression only works on your first turn out.");
+				return false;
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Magma",
@@ -69015,7 +71637,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Time Stall",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {gravity: 1},
 		secondary: null,
@@ -69060,6 +71682,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			evasion: 1,
+		},
+		condition: {
+			onStart(target, source, effect) {
+				if (effect?.id === 'zpower') {
+					this.add('-start', target, 'move: WildBeastsLogic', '[zeffect]');
+				} else if (effect && (['costar', 'imposter', 'psychup', 'transform'].includes(effect.id))) {
+					this.add('-start', target, 'move: WildBeastsLogic', '[silent]');
+				} else {
+					this.add('-start', target, 'move: WildBeastsLogic');
+				}
+			},
+			onModifyCritRatio(critRatio) {
+				return critRatio + 2;
+			},
+		},
 		secondary: null,
 		target: "self",
 		type: "Chaos",
@@ -69948,7 +72587,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 120,
 		category: "Physical",
 		name: "Atomic Blaster",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
@@ -69977,7 +72616,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 110,
 		category: "Physical",
 		name: "Lightning Joust",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {contact: 1, protect: 1, snatch: 1, mirror: 1},
 		secondary: null,
@@ -69991,7 +72630,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 100,
 		category: "Physical",
 		name: "Shield of Just",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {contact: 1, protect: 1, snatch: 1, mirror: 1},
 		secondary: null,
@@ -70148,7 +72787,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -70301,9 +72943,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Frequency",
 		pp: 15,
 		priority: 0,
-		flags: {},
+		flags: {},onHit(target, source, effect) {
+			const moves = this.dex.moves.all().filter(move => (
+				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
+				!move.realMove && !move.isZ && !move.isMax &&
+				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
+				move.type === 'Sound' && move.id !== 'frequency'
+			));
+			let randomMove = '';
+			if (moves.length) {
+				moves.sort((a, b) => a.num - b.num);
+				randomMove = this.sample(moves).id;
+			}
+			if (!randomMove) return false;
+			source.side.lastSelectedMove = this.toID(randomMove);
+			this.actions.useMove(randomMove, target);
+		},
 		secondary: null,
-		target: "scripted",
+		target: "self",
 		type: "Sound",
 		isNonstandard: "Future",
 	},
@@ -71537,6 +74194,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 1,
 		flags: {protect: 1, mirror: 1},
+		selfSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Cyber",
@@ -71778,6 +74436,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		selfSwitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -72126,7 +74785,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 70,
 		category: "Physical",
 		name: "Chaos Saber",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
@@ -72158,7 +74817,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -72243,6 +74907,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		drain: [1, 2],
+		selfSwitch: true,
 		target: "normal",
 		type: "Blood",
 		isNonstandard: "Future",
@@ -72435,7 +75101,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 1,
 		category: "Physical",
 		name: "Kill",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
@@ -72646,7 +75312,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 125,
 		category: "Physical",
 		name: "Insanity Mode",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
@@ -73013,7 +75679,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Absolute Ice",
-		pp: 5,
+		pp: 1,
 		priority: 0,
 		flags: {reflectable: 1},
 		secondary: null,
@@ -73623,6 +76289,30 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {},
 		secondary: null,
+		volatileStatus: 'substitute',
+		onTryHit(source) {
+			if (!this.canSwitch(source.side)) {
+				this.add('-fail', source);
+				return this.NOT_FAIL;
+			}
+			if (source.volatiles['substitute']) {
+				this.add('-fail', source, 'move: Shed Tail');
+				return this.NOT_FAIL;
+			}
+			if (source.hp <= Math.ceil(source.maxhp / 2)) {
+				this.add('-fail', source, 'move: Shed Tail', '[weak]');
+				return this.NOT_FAIL;
+			}
+		},
+		onHit(target) {
+			this.directDamage(Math.ceil(target.maxhp / 2));
+		},
+		self: {
+			onHit(source) {
+				source.skipBeforeSwitchOutEventFlag = true;
+			},
+		},
+		selfSwitch: 'copyvolatile',
 		target: "self",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -73651,6 +76341,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		multihit: 2,
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -74186,6 +76877,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Fighting",
 		isNonstandard: "Future",
@@ -74242,6 +76934,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTry(source) {
+			if (source.moveSlots.length < 2) return false; // Last Resort fails unless the user knows at least 2 moves
+			let hasLastResort = false; // User must actually have Last Resort for it to succeed
+			for (const moveSlot of source.moveSlots) {
+				if (moveSlot.id === 'finalheaven') {
+					hasLastResort = true;
+					continue;
+				}
+				if (!moveSlot.used) return false;
+			}
+			return hasLastResort;
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -74558,7 +77262,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -1,
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -74645,6 +77354,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Fairy' || type === 'Chaos'|| type === 'Ghost'|| type === 'Dragon'|| type === 'Zombie') return 1;
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Divine",
@@ -75156,6 +77868,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -75197,7 +77910,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Bone Lance",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {charge: 1, protect: 1, mirror: 1, contact: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			this.boost({atk: 1}, attacker, attacker, move);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Bone",
@@ -75286,5 +78011,1086 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Bone",
 		isNonstandard: "Future",
+	},
+	hiddenpowerblood: {
+		num: 669873,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Blood",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Blood",
+	},
+	hiddenpowerbone: {
+		num: 669874,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Bone",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Bone",
+	},
+	hiddenpowercosmic: {
+		num: 669875,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Cosmic",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Cosmic",
+	},
+	hiddenpowercrystal: {
+		num: 669876,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Crystal",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Crystal",
+	},
+	hiddenpowercyber: {
+		num: 669877,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Cyber",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Cyber",
+	},
+	hiddenpowerfabric: {
+		num: 669878,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Fabric",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fabric",
+	},
+	hiddenpowerfairy: {
+		num: 669879,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Fairy",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+	},
+	hiddenpowerfear: {
+		num: 669880,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Fear",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fear",
+	},
+	hiddenpowerfood: {
+		num: 669881,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Food",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Food",
+	},
+	hiddenpowerglass: {
+		num: 669882,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Glass",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Glass",
+	},
+	hiddenpowergreasy: {
+		num: 669883,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Greasy",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Greasy",
+	},
+	hiddenpowerheart: {
+		num: 669884,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Heart",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Heart",
+	},
+	hiddenpowerlight: {
+		num: 669885,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Light",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Light",
+	},
+	hiddenpowermagic: {
+		num: 669886,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Magic",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Magic",
+	},
+	hiddenpowermagma: {
+		num: 669887,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Magma",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Magma",
+	},
+	hiddenpowermeme: {
+		num: 669888,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Meme",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Meme",
+	},
+	hiddenpowernuclear: {
+		num: 669889,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Nuclear",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Nuclear",
+	},
+	hiddenpowerogre: {
+		num: 669890,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Ogre",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Ogre",
+	},
+	hiddenpowerpaint: {
+		num: 669891,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Paint",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Paint",
+	},
+	hiddenpowerpaper: {
+		num: 669892,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Paper",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Paper",
+	},
+	hiddenpowerplastic: {
+		num: 669893,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Plastic",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Plastic",
+	},
+	hiddenpowerrubber: {
+		num: 669894,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Rubber",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Rubber",
+	},
+	hiddenpowersound: {
+		num: 669895,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Sound",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Sound",
+	},
+	hiddenpowersteam: {
+		num: 669896,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Steam",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Steam",
+	},
+	hiddenpowertech: {
+		num: 669897,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Tech",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Tech",
+	},
+	hiddenpowertime: {
+		num: 669898,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Time",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Time",
+	},
+	hiddenpowervirus: {
+		num: 669899,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Virus",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Virus",
+	},
+	hiddenpowerwind: {
+		num: 669900,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Wind",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Wind",
+	},
+	hiddenpowerwood: {
+		num: 669901,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Wood",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Wood",
+	},
+	hiddenpowerzombie: {
+		num: 669902,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		isNonstandard: "Future",
+		name: "Hidden Power Zombie",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Zombie",
+	},
+	hiddenforce: {
+		num: 669903,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyType(move, pokemon) {
+			move.type = pokemon.hpType || 'Dark';
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+	},
+	hiddenforceblood: {
+		num: 669904,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Blood",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Blood",
+	},
+	hiddenforcebone: {
+		num: 669905,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Bone",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Bone",
+	},
+	hiddenforcebug: {
+		num: 669906,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Bug",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+	},
+	hiddenforcecosmic: {
+		num: 669907,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Cosmic",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Cosmic",
+	},
+	hiddenforcecrystal: {
+		num: 669908,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Crystal",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Crystal",
+	},
+	hiddenforcecyber: {
+		num: 669909,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Cyber",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Cyber",
+	},
+	hiddenforcedark: {
+		num: 669910,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Dark",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+	},
+	hiddenforcedragon: {
+		num: 669911,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Dragon",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+	},
+	hiddenforceelectric: {
+		num: 669912,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Electric",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+	},
+	hiddenforcefabric: {
+		num: 669913,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Fabric",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fabric",
+	},
+	hiddenforcefairy: {
+		num: 669914,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Fairy",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+	},
+	hiddenforcefear: {
+		num: 669915,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Fear",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fear",
+	},
+	hiddenforcefighting: {
+		num: 669916,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Fighting",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+	},
+	hiddenforcefire: {
+		num: 669917,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Fire",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+	},
+	hiddenforceflying: {
+		num: 669918,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Flying",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+	},
+	hiddenforcefood: {
+		num: 669919,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Food",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Food",
+	},
+	hiddenforceghost: {
+		num: 669920,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Ghost",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+	},
+	hiddenforceglass: {
+		num: 669921,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Glass",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Glass",
+	},
+	hiddenforcegrass: {
+		num: 669922,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Grass",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+	},
+	hiddenforcegreasy: {
+		num: 669923,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Greasy",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Greasy",
+	},
+	hiddenforceground: {
+		num: 669924,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Ground",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Ground",
+	},
+	hiddenforceheart: {
+		num: 669925,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Heart",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Heart",
+	},
+	hiddenforceice: {
+		num: 669926,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Ice",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+	},
+	hiddenforcelight: {
+		num: 669927,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Light",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Light",
+	},
+	hiddenforcemagic: {
+		num: 669928,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Magic",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Magic",
+	},
+	hiddenforcemagma: {
+		num: 669929,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Magma",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Magma",
+	},
+	hiddenforcememe: {
+		num: 669930,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Meme",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Meme",
+	},
+	hiddenforcenuclear: {
+		num: 669931,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Nuclear",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Nuclear",
+	},
+	hiddenforceogre: {
+		num: 669932,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Ogre",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Ogre",
+	},
+	hiddenforcepaint: {
+		num: 669933,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Paint",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Paint",
+	},
+	hiddenforcepaper: {
+		num: 669934,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Paper",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Paper",
+	},
+	hiddenforceplastic: {
+		num: 669935,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Plastic",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Plastic",
+	},
+	hiddenforcepoison: {
+		num: 669936,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Poison",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Poison",
+	},
+	hiddenforcepsychic: {
+		num: 669937,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Psychic",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+	},
+	hiddenforcerock: {
+		num: 669938,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Rock",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+	},
+	hiddenforcerubber: {
+		num: 669939,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Rubber",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Rubber",
+	},
+	hiddenforcesound: {
+		num: 669940,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Sound",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Sound",
+	},
+	hiddenforcesteam: {
+		num: 669941,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Steam",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Steam",
+	},
+	hiddenforcesteel: {
+		num: 669942,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Steel",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+	},
+	hiddenforcetech: {
+		num: 669943,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Tech",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Tech",
+	},
+	hiddenforcetime: {
+		num: 669944,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Time",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Time",
+	},
+	hiddenforcevirus: {
+		num: 669945,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Virus",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Virus",
+	},
+	hiddenforcewater: {
+		num: 669946,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Water",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+	},
+	hiddenforcewind: {
+		num: 669947,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Wind",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Wind",
+	},
+	hiddenforcewood: {
+		num: 669948,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Wood",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Wood",
+	},
+	hiddenforcezombie: {
+		num: 669949,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		isNonstandard: "Future",
+		name: "Hidden Force Zombie",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Zombie",
 	},
 };
