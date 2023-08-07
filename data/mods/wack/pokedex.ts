@@ -3016,4 +3016,146 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		baseStats: {hp: 85, atk: 125, def: 90, spa: 105, spd: 80, spe: 127},
 		abilities: {0: "Leaf Guard", H: "Sand Stream"},
 	},
+	solotl: {
+		inherit: true,
+		abilities: {0: "Regenerator", 1: "Insomnia", H: "Pickpocket"},
+	},
+	astrolotl: {
+		inherit: true,
+		baseStats: {hp: 68, atk: 48, def: 34, spa: 72, spd: 24, spe: 84},
+		abilities: {0: "Regenerator", 1: "Insomnia", H: "Pickpocket"},
+	},
+	argalis: {
+		inherit: true,
+		abilities: {0: "Shed Skin", 1: "Compound Eyes", H: "Magic Guard"},
+	},
+	aurumoth: {
+		inherit: true,
+		abilities: {0: "Shed Skin", 1: "Compound Eyes", H: "Magic Guard"},
+	},
+	electrelk: {
+		inherit: true,
+		abilities: {0: "Overgrow", H: "Lightning Rod"},
+	},
+	caribolt: {
+		inherit: true,
+		abilities: {0: "Overgrow", H: "Lightning Rod"},
+	},
+	colossoil: {
+		inherit: true,
+		abilities: {0: "Guts", 1: "Unnerve", H: "Magic Bounce"},
+	},
+	crucibelle: {
+		inherit: true,
+		types: ["Rock", "Fairy"],
+		abilities: {0: "Regenerator", H: "Mold Breaker"},
+	},
+	monohm: {
+		inherit: true,
+		types: ["Electric", "Dragon"],
+		baseStats: {hp: 48, atk: 50, def: 68, spa: 62, spd: 40, spe: 60},
+	},
+	duohm: {
+		inherit: true,
+		types: ["Electric", "Dragon"],
+		baseStats: {hp: 78, atk: 55, def: 88, spa: 82, spd: 55, spe: 60},
+	},
+	fidgit: {
+		inherit: true,
+		abilities: {0: "Unburden", 1: "Insomnia", H: "Frisk", S: "Builder"},
+	},
+	mumbao: {
+		inherit: true,
+		abilities: {0: "Solar Power", 1: "Trace", H: "Overcoat"},
+	},
+	jumbao: {
+		inherit: true,
+		abilities: {0: "Solar Power", 1: "Trace", H: "Overcoat"},
+	},
+	pluffle: {
+		inherit: true,
+		abilities: {0: "Natural Cure", H: "Friend Guard"},
+	},
+	kerfluffle: {
+		inherit: true,
+		abilities: {0: "Natural Cure", H: "Friend Guard"},
+	},
+	nohface: {
+		inherit: true,
+		abilities: {0: "Frisk", 1: "Limber", H: "Iron Fist"},
+	},
+	protowatt: {
+		inherit: true,
+		baseStats: {hp: 80, atk: 64, def: 53, spa: 63, spd: 54, spe: 85},
+	},
+	brattler: {
+		inherit: true,
+		abilities: {0: "Harvest", 1: "Infiltrator", H: "Drought"},
+	},
+	miasmaw: {
+		inherit: true,
+		abilities: {0: "Mold Breaker", 1: "Hyper Cutter", H: "Compound Eyes"},
+	},
+	naviathan: {
+		inherit: true,
+		abilities: {0: "Water Veil", 1: "Heatproof", H: "Hydration"},
+	},
+	necturine: {
+		inherit: true,
+		abilities: {0: "Anticipation"},
+	},
+	necturna: {
+		inherit: true,
+		baseStats: {hp: 64, atk: 120, def: 100, spa: 85, spd: 120, spe: 81},
+		abilities: {0: "Anticipation"},
+	},
+	pajantome: {
+		inherit: true,
+		abilities: {0: "Marvel Scale", H: "Early Bird"},
+	},
+	snugglow: {
+		inherit: true,
+		abilities: {0: "Storm Drain", 1: "Insomnia", H: "Clear Body"},
+	},
+	plasmanta: {
+		inherit: true,
+		abilities: {0: "Storm Drain", 1: "Insomnia", H: "Clear Body"},
+	},
+	embirch: {
+		inherit: true,
+		abilities: {0: "Reckless", 1: "Leaf Guard", H: "White Smoke"},
+	},
+	flarelm: {
+		inherit: true,
+		baseStats: {hp: 90, atk: 50, def: 95, spa: 75, spd: 70, spe: 70},
+	},
+	pyroak: {
+		inherit: true,
+		abilities: {0: "Reckless", 1: "Battle Armor", H: "White Smoke"},
+		baseStats: {hp: 120, atk: 70, def: 105, spa: 95, spd: 90, spe: 60},
+	},
+	revenankh: {
+		inherit: true,
+		abilities: {0: "Shed Skin", 1: "Cloud Nine", H: "Iron Fist"},
+	},
+	snaelstrom: {
+		inherit: true,
+		baseStats: {hp: 91, atk: 94, def: 110, spa: 80, spd: 63, spe: 63},
+	},
+	rebble: {
+		inherit: true,
+		abilities: {0: "Levitate", 1: "Filter", H: "Sniper"},
+	},
+	syclant: {
+		inherit: true,
+		abilities: {0: "Compound Eyes", 1: "Snow Cloak", H: "Ice Body"},
+	},
+	scratchet: {
+		inherit: true,
+		abilities: {0: "Scrappy", 1: "Prankster", H: "Insomnia"},
+	},
+	voodoom: {
+		inherit: true,
+		baseStats: {hp: 90, atk: 85, def: 80, spa: 105, spd: 80, spe: 110},
+	}
 }
