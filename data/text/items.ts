@@ -4812,7 +4812,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	cowbell: {
 		name: "Cowbell",
-		desc: "Slightly increases Miltank's defenses and heals it every turn.",
+		desc: "Slightly increases Miltank's defenses, heals it every turn and Atk and Def Berserk.",
 	},
 	iaraytberry: {
 		name: "Iarayt Berry",
