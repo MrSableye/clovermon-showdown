@@ -31767,6 +31767,29 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {spe: 1}},
 		contestType: "Beautiful",
 	},
+	shieldslam: {
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Shield Slam",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (pokemon.boosts.def > 0) {
+				this.boost({def: -1}, pokemon, pokemon, move);
+			}
+		},
+		basePowerCallback(pokemon, target, move) {
+			const boost = Math.max(pokemon.boosts.def || 0, 0);
+			return move.basePower + boost * 20;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
 	maplewarrior: {
 		isNonstandard: "Future",
 		accuracy: true,
