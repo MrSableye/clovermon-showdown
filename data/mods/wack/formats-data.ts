@@ -18067,7 +18067,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	waudino: {
 		inherit: true,
-		tier: "NFE",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	wmelodyno: {
