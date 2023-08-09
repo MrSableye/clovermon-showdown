@@ -953,8 +953,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	infected: {
 		inherit: true,
-		shortDesc: "Dealing contact damage spreads this Ability. Deals 1/8 dmg to non-Zombie and Virus types, otherwise heals 1/16 max hp.",
-		desc: "Contact spreads this Ability. Dmgs 1/8 non-Zombie and Virus types. Heals 1/16 otherwise.",
+		shortDesc: "Dealing contact damage to this Pokemon spreads this Ability. Deals 1/8 dmg to non-Zombie and Virus types, otherwise heals 1/16 max hp.",
+		desc: "Contact damage to this Pokemon spreads this Ability. Dmgs 1/8 non-Zombie and Virus types. Heals 1/16 otherwise.",
 		isNonstandard: null,
 	},
 };

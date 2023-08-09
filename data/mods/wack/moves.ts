@@ -465,6 +465,114 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 65,
 		isNonstandard: null,
 	},
+	trickroom: {
+		inherit: true,
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 7;
+				} 
+				else if (source?.hasItem('Vr Headset')) {
+					return 8;
+				}
+				return 5;
+			},
+			onFieldStart(target, source) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-fieldstart', 'move: Trick Room', '[of] ' + source, '[persistent]');
+				} else {
+					this.add('-fieldstart', 'move: Trick Room', '[of] ' + source);
+				}
+			},
+			onFieldRestart(target, source) {
+				this.field.removePseudoWeather('trickroom');
+			},
+			// Speed modification is changed in Pokemon.getActionSpeed() in sim/pokemon.js
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 1,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Trick Room');
+			},
+		},
+	},
+	magicroom: {
+		inherit: true,
+		priority: -7,
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 7;
+				} 
+				else if (source?.hasItem('Vr Headset')) {
+					return 8;
+				}
+				return 5;
+			},
+			onFieldStart(target, source) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-fieldstart', 'move: Magic Room', '[of] ' + source, '[persistent]');
+				} else {
+					this.add('-fieldstart', 'move: Magic Room', '[of] ' + source);
+				}
+				for (const mon of this.getAllActive()) {
+					this.singleEvent('End', mon.getItem(), mon.itemState, mon);
+				}
+			},
+			onFieldRestart(target, source) {
+				this.field.removePseudoWeather('magicroom');
+			},
+			// Item suppression implemented in Pokemon.ignoringItem() within sim/pokemon.js
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 6,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Magic Room', '[of] ' + this.effectState.source);
+			},
+		},
+	},
+	wonderroom: {
+		inherit: true,
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 7;
+				}
+				else if (source?.hasItem('Vr Headset')) {
+					return 8;
+				}
+				return 5;
+			},
+			onModifyMove(move, source, target) {
+				// This code is for moves that use defensive stats as the attacking stat; see below for most of the implementation
+				if (!move.overrideOffensiveStat || source.hasItem('Ar Helmet')) return;
+				const statAndBoosts = move.overrideOffensiveStat;
+				if (!['def', 'spd'].includes(statAndBoosts)) return;
+				move.overrideOffensiveStat = statAndBoosts === 'def' ? 'spd' : 'def';
+				this.hint(`${move.name} uses ${statAndBoosts === 'def' ? '' : 'Sp. '}Def boosts when Wonder Room is active.`);
+			},
+			onFieldStart(field, source) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-fieldstart', 'move: Wonder Room', '[of] ' + source, '[persistent]');
+				} else {
+					this.add('-fieldstart', 'move: Wonder Room', '[of] ' + source);
+				}
+			},
+			onFieldRestart(target, source) {
+				this.field.removePseudoWeather('wonderroom');
+			},
+			// Swapping defenses partially implemented in sim/pokemon.js:Pokemon#calculateStat and Pokemon#getStat
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 5,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Wonder Room');
+			},
+		},
+	},
 	/* Vanilla moves in gen5 */
 	absorb: {
 		inherit: true,
@@ -1012,11 +1120,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	lowsweep: {
 		inherit: true,
 		basePower: 60,
-		isNonstandard: null,
-	},
-	magicroom: {
-		inherit: true,
-		priority: -7,
 		isNonstandard: null,
 	},
 	magmastorm: {
@@ -1586,11 +1689,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	willowisp: {
 		inherit: true,
 		accuracy: 75,
-		isNonstandard: null,
-	},
-	wonderroom: {
-		inherit: true,
-		priority: -7,
 		isNonstandard: null,
 	},
 	// Vanilla moves added to avoid more "Not available in Gen9"
@@ -4155,10 +4253,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	trickortreat: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	trickroom: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -17479,10 +17573,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			volatileStatus: 'disable',
+		},
 		target: "normal",
 		type: "Glass",
-		isNonstandard: "Future",	/** TODO */
+		isNonstandard: null,
 	},
 	plasticblaze: {
 		inherit: true,
