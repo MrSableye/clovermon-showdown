@@ -70727,12 +70727,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Bug",
 		isNonstandard: "Future",
 	},
-	snowcloak: {
+	snowvest: {
 		num: 669333,
 		accuracy: 95,
 		basePower: 95,
 		category: "Special",
-		name: "Snow Cloak",
+		name: "Snow Vest",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, pulse: 1},
