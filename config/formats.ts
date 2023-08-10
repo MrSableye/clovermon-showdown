@@ -1125,8 +1125,8 @@ export const Formats: FormatList = [
 					'Spectrier','Xerneas','Yveltal','Zygarde','Zygarde-Complete','Deoxys','Deoxys-Attack','Deoxys-Defense','Deoxys-Speed','Gengarite','Groudon-Primal','Kangaskhanite','Kyogre-Primal',
 					'Lucarionite','Metagrossite','Necrozma-Ultra','Ultranecrozium Z','Salamencite','Sablenite','Regigas + Big Guy','Blobbos-Forbidden','Fatherfuck','Hofucyea','Blobbos-Cell + Regenerator',
 					'Blobbos-Clover','Oblivion','Infected-Zombie','Blobbos-Wack','Blobbos-Wack-Mega','Dussans','Ho-Oh','Jewipede-O','Fucker-Ultra','Regigigone +  Flame Body','Beegyosh','Dugwalker',
-					'Taterdoom','Lemonhorse','Neohorse','Piiviasuustro','Purple-Goat','Blobbos-Homestuck-God-Tier','Blobbos-Dark Matter','Blobbos-eedle','Blobbos-eedle-True','Blobbos-King',
-					'Blobbos-Zero','Oengas','Aurumoth','Galashitwatt','Sableven','Zangursed','Abdiking','Smellsumo','Autumn'
+					'Taterdoom','Lemonhorse','Neohorse','Piiviasuustro','Purplegoat','Blobbos-Homestuck-God-Tier','Blobbos-Dark Matter','Blobbos-eedle','Blobbos-eedle-True','Blobbos-King',
+					'Blobbos-Zero','Oengas','Aurumoth','Galashitwatt','Sableven','Zangursed','Abdiking','Smellsumo','Autumn','Shroomageddon','Junkgeist'
 					],
 	
 	},
