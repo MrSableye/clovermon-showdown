@@ -22034,8 +22034,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Not very effective moves do more damage for 8 turns.",
 		shortDesc: "Not very effective moves do more damage for 8 turns.",
 	},
-	snowcloak: {
-		name: "Snow Cloak",
+	snowvest: {
+		name: "Snow Vest",
 		desc: "May make it Hail. Also deals Bug-type damage.",
 		shortDesc: "May make it Hail. Also deals Bug-type damage.",
 	},
