@@ -17688,12 +17688,16 @@ export const Items: {[itemid: string]: ItemData} = {
 	weakeningwhip: {
 		name: "Weakening Whip",
 		spritenum: 0,
-		onAfterMoveSecondarySelfPriority: -1,
-		onAfterMoveSecondarySelf(target, source, move) {
-			if (move.totalDamage) {
-				if (this.randomChance(4,10)) {
-					this.boost({atk: -1}, source, target, this.effect)
-				}
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				move.secondaries.push({
+					chance: 40,
+					boosts: {
+						atk: -1
+					}
+				});
 			}
 		},
 		num: 67397,
@@ -17703,12 +17707,16 @@ export const Items: {[itemid: string]: ItemData} = {
 	shatteringhammer: {
 		name: "Shattering Hammer",
 		spritenum: 0,
-		onAfterMoveSecondarySelfPriority: -1,
-		onAfterMoveSecondarySelf(target, source, move) {
-			if (move.totalDamage) {
-				if (this.randomChance(4,10)) {
-					this.boost({def: -1}, source, target, this.effect)
-				}
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				move.secondaries.push({
+					chance: 40,
+					boosts: {
+						def: -1
+					}
+				});
 			}
 		},
 		num: 67398,
@@ -17718,12 +17726,16 @@ export const Items: {[itemid: string]: ItemData} = {
 	distracttrumpet: {
 		name: "Distract Trumpet",
 		spritenum: 0,
-		onAfterMoveSecondarySelfPriority: -1,
-		onAfterMoveSecondarySelf(target, source, move) {
-			if (move.totalDamage) {
-				if (this.randomChance(4,10)) {
-					this.boost({spa: -1}, source, target, this.effect)
-				}
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				move.secondaries.push({
+					chance: 40,
+					boosts: {
+						spa: -1
+					}
+				});
 			}
 		},
 		num: 67399,
@@ -17733,12 +17745,16 @@ export const Items: {[itemid: string]: ItemData} = {
 	enfeeblescepter: {
 		name: "Enfeeble Scepter",
 		spritenum: 0,
-		onAfterMoveSecondarySelfPriority: -1,
-		onAfterMoveSecondarySelf(target, source, move) {
-			if (move.totalDamage) {
-				if (this.randomChance(4,10)) {
-					this.boost({spd: -1}, source, target, this.effect)
-				}
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				move.secondaries.push({
+					chance: 40,
+					boosts: {
+						spd: -1
+					}
+				});
 			}
 		},
 		num: 67400,
@@ -17748,12 +17764,16 @@ export const Items: {[itemid: string]: ItemData} = {
 	gooeygloves: {
 		name: "Gooey Gloves",
 		spritenum: 0,
-		onAfterMoveSecondarySelfPriority: -1,
-		onAfterMoveSecondarySelf(target, source, move) {
-			if (move.totalDamage) {
-				if (this.randomChance(4,10)) {
-					this.boost({spe: -1}, source, target, this.effect)
-				}
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				move.secondaries.push({
+					chance: 40,
+					boosts: {
+						spe: -1
+					}
+				});
 			}
 		},
 		num: 67401,
@@ -17763,12 +17783,16 @@ export const Items: {[itemid: string]: ItemData} = {
 	blindingprism: {
 		name: "Blinding Prism",
 		spritenum: 0,
-		onAfterMoveSecondarySelfPriority: -1,
-		onAfterMoveSecondarySelf(target, source, move) {
-			if (move.totalDamage) {
-				if (this.randomChance(4,10)) {
-					this.boost({accuracy: -1}, source, target, this.effect)
-				}
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				move.secondaries.push({
+					chance: 40,
+					boosts: {
+						accuracy: -1
+					}
+				});
 			}
 		},
 		num: 67402,
@@ -17778,12 +17802,16 @@ export const Items: {[itemid: string]: ItemData} = {
 	alluringnectar: {
 		name: "Alluring Nectar",
 		spritenum: 0,
-		onAfterMoveSecondarySelfPriority: -1,
-		onAfterMoveSecondarySelf(target, source, move) {
-			if (move.totalDamage) {
-				if (this.randomChance(4,10)) {
-					this.boost({evasion: -1}, source, target, this.effect)
-				}
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				move.secondaries.push({
+					chance: 40,
+					boosts: {
+						evasion: -1
+					}
+				});
 			}
 		},
 		num: 67403,
