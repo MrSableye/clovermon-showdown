@@ -1126,7 +1126,7 @@ export const Formats: FormatList = [
 					'Lucarionite','Metagrossite','Necrozma-Ultra','Ultranecrozium Z','Salamencite','Sablenite','Regigigas + Big Guy','Blobbos-Forbidden','Fatherfuck','Hofucyea','Blobbos-Cell + Regenerator',
 					'Blobbos-Clover','Oblivion','Infected-Zombie','Blobbos-Wack','Blobbos-Wack-Mega','Dussans','Ho-Oh','Jewipede-O','Fucker-Ultra','Regigigone +  Flame Body','Beegyosh','Dugwalker',
 					'Taterdoom','Lemonhorse','Neohorse','Piiviasuustro','Purplegoat','Blobbos-Homestuck-God-Tier','Blobbos-Dark Matter','Blobbos-eedle','Blobbos-eedle-True','Blobbos-King',
-					'Blobbos-Zero','Oengas','Aurumoth','Galashitwatt','Sableven','Zangursed','Abdiking','Smellsumo','Autumn','Shroomageddon','Junkgeist'
+					'Blobbos-Zero','Oengas','Aurumoth','Galashitwatt','Sableven','Zangursed','Abdiking','Smellsumo','Autumn','Shroomageddon','Junkgeist', 'Sableedle'
 					],
 	
 	},
