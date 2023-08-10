@@ -15040,10 +15040,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	snowcloak: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	shuttlelaunch: {
 		inherit: true,
 		isNonstandard: null,
