@@ -1121,7 +1121,7 @@ export const Formats: FormatList = [
 					'Nyanonite','The Forest','Vergilion','Dragapult','Annihilape','Calyrex-Ice','Chien-Pao','Dialga','Espathra','Eternatus','Flutter Mane','Giratina','Giratina-Origin',
 					'Groundon','Iron Bundle','Landorus','Koraidon','Kyogre','Magearna','Mewtwo','Miraidon','Palafin','Palafin-Hero','Palkia','Palkia-Origin','Rayquaza','Regieleki','Spectrier',
 					'Urshifu','Urshifu-Rapid-Strike','Volcarona','Zacian','Zacian-Crowned','Zamazenta','Zamazenta-Crowned','Calyrex-Shadow','Cinderace','Damanitan-Galar','Darmanitan-Galar-Zen',
-					'Dracovish','Genesect','Kyurem','Kyurem-Black','Kyurem-White','Lugia','Lunala','Marshadow','Naganadel','Necrozma-Dusk Mane','Necrozma-Dawn Wing','Pheromosa','Solgaleo',
+					'Dracovish','Genesect','Kyurem','Kyurem-Black','Kyurem-White','Lugia','Lunala','Marshadow','Naganadel','Necrozma-Dusk Mane','Necrozma-Dawn Wings','Pheromosa','Solgaleo',
 					'Spectrier','Xerneas','Yveltal','Zygarde','Zygarde-Complete','Deoxys','Deoxys-Attack','Deoxys-Defense','Deoxys-Speed','Gengarite','Groudon-Primal','Kangaskhanite','Kyogre-Primal',
 					'Lucarionite','Metagrossite','Necrozma-Ultra','Ultranecrozium Z','Salamencite','Sablenite','Regigigas + Big Guy','Blobbos-Forbidden','Fatherfuck','Hofucyea','Blobbos-Cell + Regenerator',
 					'Blobbos-Clover','Oblivion','Infected-Zombie','Blobbos-Wack','Blobbos-Wack-Mega','Dussans','Ho-Oh','Jewipede-O','Fucker-Ultra','Regigigone +  Flame Body','Beegyosh','Dugwalker',
