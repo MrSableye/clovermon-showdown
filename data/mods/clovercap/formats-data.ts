@@ -89,6 +89,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "LC",
 	},
+    ibask: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+    dirtybis: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "LC",
+	},
 	inkrow: {
 		inherit: true,
 		isNonstandard: null,
@@ -204,6 +214,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 	},
 	hydroil: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	jermin: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
@@ -637,11 +652,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",
-	},
-	jermin: {
-		inherit: true,
-		isNonstandard: "Future",
-		tier: "Illegal",
 	},
 	jerminswarm: {
 		inherit: true,

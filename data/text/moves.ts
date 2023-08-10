@@ -9238,6 +9238,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Sharp Eyes",
 		shortDesc: "Critical hits of allies deal 1.5x damage and +1 Crit ratio for 4 turns.",
 	},
+	shieldslam: {
+		name: "Shield Slam",
+		shortDesc: "+20 BP per Def boost. -1 Def after hit but never below 0.",
+	},
 	maplewarrior: {
 		name: "Maple Warrior",
 		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",
