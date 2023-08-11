@@ -1117,7 +1117,7 @@ export const Formats: FormatList = [
 		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs', 'Skull Cannon', 'Extinction Wave', 'Wonder Guard', 'Junkbane', 'Shed Tail',
 					'Condoom + Unaware', 'Potarded + Unaware', 'Wheygle + Unburden',
 					'Adesign','Demiwaifu','Notridley','Endranther','Baddon','Scytill','Foryu','Clovenix','Jewipede','Chromox','Heliofug','Vivaiger',
-					'Fontaba-/z/','Arceus','Kuuroba','Funnedong','Narwhiz','Niterpent','Griffawork','Boarnograf','Tentaquil','Regishort','Regiside','Devante','Manatank',
+					'Fontaba-/z/','Arceus','Kuuroba','Funnedong','Narwhiz','Niterpent','Griffawork','Boarnograf','Tentaquil','Regishort','Regicide','Devante','Manatank',
 					'Nyanonite','The Forest','Vergilion','Dragapult','Annihilape','Calyrex-Ice','Chien-Pao','Dialga','Espathra','Eternatus','Flutter Mane','Giratina','Giratina-Origin',
 					'Groudon','Iron Bundle','Landorus','Koraidon','Kyogre','Magearna','Mewtwo','Miraidon','Palafin','Palafin-Hero','Palkia','Palkia-Origin','Rayquaza','Regieleki',
 					'Urshifu','Urshifu-Rapid-Strike','Volcarona','Zamazenta','Zamazenta-Crowned','Cinderace','Damanitan-Galar','Darmanitan-Galar-Zen',
