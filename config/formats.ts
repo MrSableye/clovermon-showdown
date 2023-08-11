@@ -1098,7 +1098,7 @@ export const Formats: FormatList = [
 		banlist: ['Nothing', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", 'Fling + License to Sell Hotdogs'],
 	},
 	{
-		name: '[Gen 8 Globaldex] OU',
+		name: '[Gen 8 Sandbox Only] Regulated OU',
 		mod: 'sandbox',
 		ruleset: [
 			'Terastal Clause',

@@ -39,9 +39,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onImmunity(type, pokemon) {
 			if (type === 'acidrain') return false;
 		},
-		onDamage() {},
-		desc: "This Pokemon heals 1/14 of its maximum HP in Acid Rain.",
-		shortDesc: "Heals 1/14 in Acid Rain.",
+		desc: "This Pokemon heals 1/14 of its maximum HP in Acid Rain and 1/8 if it is poisoned or badly poisoned.",
+		shortDesc: "Heals 1/14 in Acid Rain and 1/8 if psn/tox.",
 		isNonstandard: null,
 	},
 	immunity: {
