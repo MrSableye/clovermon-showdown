@@ -1519,10 +1519,6 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	asoneblobbostherian: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	asoneblobbosrembered: {
 		inherit: true,
 		isNonstandard: null,
@@ -1560,10 +1556,6 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		isNonstandard: null,
 	},
 	armorplate: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	asonehorse: {
 		inherit: true,
 		isNonstandard: null,
 	},

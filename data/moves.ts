@@ -23319,6 +23319,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Ghost",
 	},
+	clobber: {
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Tackle",
+		pp: 35,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
 	wingsofcorrection: {
 		accuracy: true,
 		basePower: 150,
@@ -36362,7 +36376,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		isNonstandard: "Future",
 	},
-	insultinjury: {
+	insultandinjury: {
 		num: 666853,
 		accuracy: 95,
 		basePower: 60,

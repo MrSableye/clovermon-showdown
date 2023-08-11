@@ -2816,10 +2816,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	hydrosteam: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	hyperbeam: {
 		inherit: true,
 		isNonstandard: null,
@@ -3465,10 +3461,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	psybeam: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	psyblade: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -5076,10 +5068,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	S: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	ebola: {
 		inherit: true,
 		isNonstandard: null,
@@ -5644,10 +5632,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	F: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	radiantray: {
 		inherit: true,
 		isNonstandard: null,
@@ -5760,7 +5744,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	insultinjury: {
+	insultandinjury: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -5785,10 +5769,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	brassknuckle: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	D: {
 		inherit: true,
 		isNonstandard: null,
 	},

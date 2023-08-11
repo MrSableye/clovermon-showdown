@@ -10433,7 +10433,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user strikes the target with a cheap blow. This attack always results in a critical hit.",
 		shortDesc: "The user strikes the target with a cheap blow. This attack always results in a critical hit.",
 	},
-	insultinjury: {
+	insultandinjury: {
 		name: "Insult and Injury",
 		desc: "The target is taunted and beat, causing it to use only attack moves for three turns.",
 		shortDesc: "The target is taunted and beat, causing it to use only attack moves for three turns.",

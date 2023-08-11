@@ -42,6 +42,8 @@
     "full-lint": "npm run lint",
     "pretest": "npm run lint",
     "test": "mocha",
+    "pretest-ci": "npm run build",
+    "test-ci": "mocha --config .mocharc-ci.json",
     "posttest": "npm run tsc",
     "full-test": "npm run lint && npm run tsc && mocha --timeout 8000 --forbid-only -g \".*\"",
     "postinstall": "npm run build"

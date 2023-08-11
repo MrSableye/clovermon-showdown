@@ -1,0 +1,7 @@
+{
+  "spec": ["test/ci.js"],
+  "grep": "^((?!\\(slow\\)).)*$",
+  "reporter": "dot",
+  "ui": "bdd",
+  "exit": true
+}
