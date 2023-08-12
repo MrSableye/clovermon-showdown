@@ -9313,6 +9313,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	suddendeath: {
 		name: "Sudden Death",
 		shortDesc: "Sets all active Pokemon's HP to 1.",
+
+		activate: "  [POKEMON]'s HP was set to 1!",
 	},
 	renovate: {
 		name: "Renovate",
