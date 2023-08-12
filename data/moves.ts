@@ -32230,11 +32230,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {bypasssub: 1},
-		onHitField() {
+		onHitField(target, source) {
 			for (const pokemon of this.getAllActive()) {
 				if (pokemon.fainted) continue;
 				pokemon.sethp(1);
-				this.add('-sethp', pokemon, pokemon.getHealth, '[from] move: Sudden Death');
+				this.add('-sethp', pokemon, pokemon.getHealth, '[from] move: Sudden Death', '[silent]');
 			}
 		},
 		secondary: null,
