@@ -31832,7 +31832,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onModifyMove(move) {
-			const types = this.dex.types.all().map((type) => type.id);
+			const types = this.dex.types.all().map((type) => type.name);
 			const newType = this.sample(types);
 			move.type = newType;
 		},
@@ -32234,6 +32234,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			for (const pokemon of this.getAllActive()) {
 				if (pokemon.fainted) continue;
 				pokemon.sethp(1);
+				this.add('-sethp', pokemon, pokemon.getHealth, '[from] move: Sudden Death');
 			}
 		},
 		secondary: null,
