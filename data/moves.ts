@@ -31877,10 +31877,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		multihit: 2,
-		onModifyMove(move, pokemon, target) {
+		basePowerCallback(pokemon, target, move) {
 			if (target && target.status === 'tox') {
 				move.willCrit = true;
 			}
+
+			return move.basePower;
 		},
 		secondary: {
 			chance: 100,
