@@ -11321,7 +11321,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Fetal Rupture",
 		onModifyMove(move, pokemon, target) {
 			if (!target) return;
-			if (move.type === 'Status') return;
+			if (move.category === 'Status') return;
 			if (target.species.nfe) move.ohko = true;
 		},
 		isNonstandard: "Future",
