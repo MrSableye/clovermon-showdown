@@ -32270,7 +32270,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 40,
 		category: "Special",
-		name: "Tackle",
+		name: "Sticky Web Shot",
 		pp: 35,
 		priority: 0,
 		onHit(target) {
