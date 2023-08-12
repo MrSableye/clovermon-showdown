@@ -10875,6 +10875,506 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
+	standotheworld: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohierophantgreen: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohermitpurple: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standomagicianred: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosilverchariot: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standothefool: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standocream: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standomoon: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standotower: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standodevil: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standotemperance: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standostrength: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standowheeloffortune: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohangedman: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoemperor: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoemperess: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standojustice: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standolovers: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standothesun: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standodeath: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standojudgment: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohighpriestess: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standogeb: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standokhnum: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standothoth: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoanubis: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standobastet: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosethan: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoosiris: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohorus: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoatum: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standotenoresax: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standocrazydiamond: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standothehand: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoechoesact1: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoechoesact2: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoechoesact3: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoheavensdoor: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standokillerqueen: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoaquanecklace: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standobadcompany: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoredhotchillipepper: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standothelock: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosurface: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standolovedeluxe: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standopearljam: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoratt: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoharvest: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standocinderella: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoboyiiman: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohighwaystar: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standostraycat: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosuperfly: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoenigma: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standocheaptrick: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoatomheartfather: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoacthungbaby: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoearthwindandfire: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standogoldexperience: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standostickyfingers: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standomoodyblues: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosexpistols: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoaerosmith: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standopurplehaze: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standospicegirl: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standokingcrimson: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoblacksabbath: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosoftmachine: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standokraftwork: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standolittlefeet: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standomaninthemirror: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standomrpresident: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standobeachboy: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standogratefuldead: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standobabyface: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standowhitealbum: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoclash: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standotalkinghead: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standonotoriousbig: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standometallica: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standogreenday: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standooasis: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standorollingstones: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standostonefree: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoweatherreport: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standowhitesnake: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoscarymonsters: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohighwaytohell: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosurvivor: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoskyhigh: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosoftandwet: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standocmoon: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standotusk: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoballbreaker: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standod4c: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoinasilentway: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoheyya: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosilverchariotrequiem: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standobluenight: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohighhighpriestess: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
 	monkid: {
 		inherit: true,
 		tier: "LC",
