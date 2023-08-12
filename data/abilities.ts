@@ -11183,11 +11183,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (source && target === source) return;
 			if (boost.atk && boost.atk > 0) {
 				boost.spa = boost.atk + (boost.spa || 0);
-				delete boost.accuracy;
+				delete boost.atk;
 			}
-		},
-		onModifyMove(move) {
-			move.ignoreEvasion = true;
 		},
 		isBreakable: true,
 		name: "Mind Over Matter",
@@ -11324,6 +11321,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Fetal Rupture",
 		onModifyMove(move, pokemon, target) {
 			if (!target) return;
+			if (move.type === 'Status') return;
 			if (target.species.nfe) move.ohko = true;
 		},
 		isNonstandard: "Future",
