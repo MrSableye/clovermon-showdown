@@ -31804,6 +31804,556 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
+	doubletap: {
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		name: "Double Tap",
+		pp: 35,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onDamage(damage, target, source, effect) {
+			if ((damage * 2) >= target.hp) {
+				return damage * 2;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	prismspray: {
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Prism Spray",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyMove(move) {
+			const types = this.dex.types.all().map((type) => type.id);
+			const newType = this.sample(types);
+			move.type = newType;
+		},
+		secondary: null,
+		target: "normal",
+		type: "???",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	internetargument: {
+		accuracy: 85,
+		basePower: 0,
+		category: "Status",
+		name: "Internet Argument",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+		volatileStatus: 'confusion',
+		boosts: {
+			atk: 2,
+			spa: 2,
+		},
+		self: {
+			boosts: {
+				atk: 2,
+				spa: 2,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	doubledose: {
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Double Dose",
+		pp: 30,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 2,
+		onModifyMove(move, pokemon, target) {
+			if (target && target.status === 'tox') {
+				move.willCrit = true;
+			}
+		},
+		secondary: {
+			chance: 100,
+			status: 'tox',
+		},
+		target: "normal",
+		type: "Poison",
+		maxMove: {basePower: 80},
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	vanish: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Vanish",
+		pp: 5,
+		priority: 4,
+		flags: {},
+		stallingMove: true,
+		volatileStatus: 'protect',
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile('stall');
+		},
+		boosts: {
+			evasion: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Ghost",
+		zMove: {boost: {evasion: 1}},
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	mri: {
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "MRI",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		onHit(target, source) {
+			if (target && target.hasType('Steel')) {
+				target.faint(source, this.effect);
+			}
+			if ((source.types.length === 1) && (source.types[0] === 'Steel')) {
+				source.faint(source, this.effect);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+		zMove: {effect: 'healreplacement'},
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	toiletpaper: {
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Toilet Paper",
+		pp: 5,
+		priority: 0,
+		flags: {},
+		onHit(target, source) {
+			if (target && ['bungaloon', 'cacademon'].includes(target.species.id)) {
+				target.faint(source, this.effect);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		zMove: {effect: 'healreplacement'},
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	drunkenfist: {
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Drunken Fist",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles && pokemon.volatiles['confusion']) {
+				return this.chainModify(2);
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'confusion',
+			self: {
+				volatileStatus: 'confusion',
+			},
+		},
+		target: "normal",
+		type: "Fighting",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	snowgrave: {
+		accuracy: 100,
+		basePower: 300,
+		category: "Special",
+		name: "Snowgrave",
+		pp: 1,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		noPPBoosts: true,
+		secondary: {
+			chance: 100,
+			status: 'frz',
+		},
+		target: "normal",
+		type: "Ice",
+		isNonstandard: "Future",
+	},
+	bigbang: {
+		accuracy: 100,
+		basePower: 250,
+		category: "Special",
+		name: "Big Bang",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		selfdestruct: "always",
+		secondary: null,
+		target: "allAdjacent",
+		type: "Psychic",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	retart: {
+		accuracy: 100,
+		basePower: 0,
+		basePowerCallback(pokemon, target) {
+			let power = Math.floor(25 * target.getStat('spa') / pokemon.getStat('spa')) + 1;
+			if (!isFinite(power)) power = 1;
+			if (power > 150) power = 150;
+			this.debug('BP: ' + power);
+			return power;
+		},
+		category: "Special",
+		name: "Retart",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+		zMove: {basePower: 160},
+		maxMove: {basePower: 130},
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	lowestkick: {
+		accuracy: 100,
+		basePower: 0,
+		basePowerCallback(pokemon, target) {
+			const targetWeight = target.getWeight();
+			const multiplier = Math.max(1, Math.floor(Math.log2(targetWeight / 100)));
+			const bp = multiplier * 30;
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		category: "Physical",
+		name: "Lowest Kick",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryHit(target, pokemon, move) {
+			if (target.volatiles['dynamax']) {
+				this.add('-fail', pokemon, 'Dynamax');
+				this.attrLastMove('[still]');
+				return null;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		zMove: {basePower: 160},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	spikesagain: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Spikes (Again)",
+		pp: 20,
+		priority: 0,
+		flags: {reflectable: 1, nonsky: 1},
+		sideCondition: 'spikesagain',
+		condition: {
+			// this is a side condition
+			onSideStart(side) {
+				this.add('-sidestart', side, 'Spikes (Again)');
+				this.effectState.layers = 1;
+			},
+			onSideRestart(side) {
+				if (this.effectState.layers >= 3) return false;
+				this.add('-sidestart', side, 'Spikes (Again)');
+				this.effectState.layers++;
+			},
+			onEntryHazard(pokemon) {
+				if (!pokemon.isGrounded() || pokemon.hasItem('heavydutyboots')) return;
+				const damageAmounts = [0, 3, 4, 6]; // 1/8, 1/6, 1/4
+				this.damage(damageAmounts[this.effectState.layers] * pokemon.maxhp / 24);
+			},
+		},
+		secondary: null,
+		target: "foeSide",
+		type: "Ground",
+		zMove: {boost: {def: 1}},
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
+	repurpose: {
+		num: 367,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Repurpose",
+		pp: 30,
+		priority: 0,
+		flags: {},
+		onHit(target) {
+			const stats: SparseBoostsTable = {};
+			let stat: BoostID;
+			let totalBoosts = 0;
+			for (stat in target.boosts) {
+				if (target.boosts[stat] > 0) {
+					stats[stat] = target.boosts[stat];
+					totalBoosts += stats[stat] || 0;
+				}
+			}
+			if (totalBoosts >= 2) {
+				const firstStat = this.sample(Object.keys(stats)) as BoostID;
+				stats[firstStat] = (stats[firstStat] || 1) - 1;
+				if ((stats[firstStat] || 0) <= 0) delete stats[firstStat];
+
+				const secondStat = this.sample(Object.keys(stats)) as BoostID;
+				stats[secondStat] = (stats[secondStat] || 1) - 1;
+				if ((stats[secondStat] || 0) <= 0) delete stats[secondStat];
+
+				let unmaxedStats: BoostID[] = [];
+				for (stat in stats) {
+					if (target.boosts[stat] < 6) {
+						unmaxedStats.push(stat);
+					}
+				}
+
+				if (firstStat === secondStat) {
+					this.boost({
+						[firstStat]: -2,
+						[this.sample(unmaxedStats)]: 3,
+					});
+				} else {
+					this.boost({
+						[firstStat]: -1,
+						[secondStat]: -1,
+						[this.sample(unmaxedStats)]: 3,
+					});
+				}
+			} else {
+				return false;
+			}
+		},
+		secondary: null,
+		target: "self",
+		type: "Steel",
+		zMove: {effect: 'crit2'},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	dragoonslash: {
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Dragoon Slash",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+		onHit(target, source) {
+			if (target && target.hasType('Dark')) {
+				target.faint(source, this.effect);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+		zMove: {effect: 'healreplacement'},
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	liposuction: {
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Liposuction",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (target && target.species.baseStats.hp > 100) {
+				return move.basePower * 2; 
+			}
+
+			return move.basePower;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		zMove: {effect: 'healreplacement'},
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	revelation: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Future",
+		name: "Revelation",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			def: 1,
+			spa: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Psychic",
+		zMove: {boost: {spd: 1}},
+		contestType: "Beautiful",
+	},
+	suddendeath: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sudden Death",
+		pp: 5,
+		priority: 0,
+		flags: {bypasssub: 1},
+		onHitField() {
+			for (const pokemon of this.getAllActive()) {
+				if (pokemon.fainted) continue;
+				pokemon.sethp(1);
+			}
+		},
+		secondary: null,
+		target: "all",
+		type: "Dark",
+		zMove: {effect: 'heal'},
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
+	renovate: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Renovate",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		slotCondition: 'Renovate',
+		condition: {
+			duration: 2,
+			onResidualOrder: 4,
+			onEnd(target) {
+				this.field.addPseudoWeather('trickroom');
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Psychic",
+		zMove: {boost: {spd: 1}},
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
+	stickywebshot: {
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Tackle",
+		pp: 35,
+		priority: 0,
+		onHit(target) {
+			if (!target) return;
+			target.side.addSideCondition('stickyweb');
+		},
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	frostyterrain: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Frosty Terrain",
+		pp: 10,
+		priority: 0,
+		flags: {nonsky: 1},
+		terrain: 'frostyterrain',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem('terrainextender')) {
+					return 8;
+				}
+				return 5;
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				const weakenedMoves = ['earthquake', 'bulldoze', 'magnitude'];
+				if (weakenedMoves.includes(move.id) && defender.isGrounded() && !defender.isSemiInvulnerable()) {
+					this.debug('move weakened by frosty terrain');
+					return this.chainModify(0.5);
+				}
+				if (move.type === 'Ice' && attacker.isGrounded()) {
+					this.debug('frosty terrain boost');
+					return this.chainModify([5325, 4096]);
+				}
+			},
+			onSetStatus(status, target, source, effect) {
+				if (!target.isGrounded() || target.isSemiInvulnerable()) return;
+				if (status.id === 'brn') return false;
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Frosty Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Frosty Terrain');
+				}
+			},
+			onBoost(boost, target, source, effect) {
+				if (!target.isGrounded() || target.isSemiInvulnerable()) return;
+				if (effect.effectType === 'Move' && effect.infiltrates && !target.isAlly(source)) return;
+				if (source && target !== source) {
+					let showMsg = false;
+					let i: BoostID;
+					for (i in boost) {
+						if (boost[i]! < 0) {
+							delete boost[i];
+							showMsg = true;
+						}
+					}
+					if (showMsg && !(effect as ActiveMove).secondaries) {
+						this.add('-activate', target, 'move: Frosty Terrain');
+					}
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Frosty Terrain');
+			},
+		},
+		secondary: null,
+		target: "all",
+		type: "Ice",
+		zMove: {boost: {def: 1}},
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
 	maplewarrior: {
 		isNonstandard: "Future",
 		accuracy: true,

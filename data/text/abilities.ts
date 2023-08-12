@@ -3129,6 +3129,66 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Cancer",
 		shortDesc: "At end of turn, try to toxic all foes, ignoring immunity. If the foe is already poisoned, they lose 1/16 of their max HP and heal for that amount.",
 	},
+	doomguard: {
+		name: "Doom Guard",
+		shortDesc: "This Pokemon can only be damaged by not very effective moves and indirect damage.",
+	},
+	mindovermatter: {
+		name: "Mind Over Matter",
+		shortDesc: "This Pokemon's Attack boosts are replaced with Sp. Attack boosts.",
+	},
+	healthybody: {
+		name: "Healthy Body",
+		shortDesc: "If this Pokemon has 3 or more boosts, its Attack is added to its Sp. Attack.",
+	},
+	holyboost: {
+		name: "Holy Boost",
+		shortDesc: "This Pokemon's lowest stat is raised by 1 if it attacks and KOes another Pokemon.",
+	},
+	"2mss": {
+		name: "2MSS",
+		shortDesc: "This Pokemon's third and fourth moves are disabled.",
+	},
+	evolutionaryadvantage: {
+		name: "Evolutionary Advantage",
+		shortDesc: "This Pokemon's base power is doubled against different colored Pokemon.",
+	},
+	closequarterscombat: {
+		name: "Close-Quarters Combat",
+		shortDesc: "On switch-in, attempt to remove a random foe's item.",
+	},
+	predator: {
+		name: "Predator",
+		shortDesc: "This Pokemon has +1 Crit for each stat drop its target has.",
+	},
+	hazey: {
+		name: "Hazey",
+		shortDesc: "On switch-in, this Pokemon clears all boosts of all Pokemon.",
+	},
+	crippleguard: {
+		name: "Cripple Guard",
+		shortDesc: "This Pokemon takes 25% less damage from statused Pokemon.",
+	},
+	boostboost: {
+		name: "Boost Boost",
+		shortDesc: "This Pokemon gains 10% base power for each boost it has.",
+	},
+	fetalrupture: {
+		name: "Fetal Rupture",
+		shortDesc: "This Pokemon's attacking moves OHKO not fully evolved Pokemon.",
+	},
+	sleeper: {
+		name: "Sleeper",
+		shortDesc: "This Pokemon can use moves and takes double damage while asleep. Tries to fall asleep every 2 turns.",
+	},
+	sequencer: {
+		name: "Sequencer",
+		shortDesc: "Each hit of a multihit move beyond the first has 10 more BP.",
+	},
+	frostysurge: {
+		name: "Frosty Surge",
+		shortDesc: "Sets Frosty Terrain on switch-in.",
+	},
 	brainwash: {
 		name: "Brainwash",
 		shortDesc: "On switch-in, this Pokemon lowers the Sp. Attack of opponents by 1 stage.",

@@ -11158,6 +11158,207 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			});
 		},
 	},
+	doomguard: {
+		onTryHit(target, source, move) {
+			if (target === source || move.category === 'Status' || move.type === '???' || move.id === 'struggle') return;
+			if (move.id === 'skydrop' && !source.volatiles['skydrop']) return;
+			this.debug('Doom Guard immunity: ' + move.id);
+			if (target.runEffectiveness(move) >= 0) {
+				if (move.smartTarget) {
+					move.smartTarget = false;
+				} else {
+					this.add('-immune', target, '[from] ability: Doom Guard');
+				}
+				return null;
+			}
+		},
+		isBreakable: true,
+		name: "Doom Guard",
+		rating: 5,
+		num: 25,
+		isNonstandard: "Future",
+	},
+	mindovermatter: {
+		onBoost(boost, target, source, effect) {
+			if (source && target === source) return;
+			if (boost.atk && boost.atk > 0) {
+				boost.spa = boost.atk + (boost.spa || 0);
+				delete boost.accuracy;
+			}
+		},
+		onModifyMove(move) {
+			move.ignoreEvasion = true;
+		},
+		isBreakable: true,
+		name: "Mind Over Matter",
+		rating: 0.5,
+		num: 51,
+		isNonstandard: "Future",
+	},
+	healthybody: {
+		onModifySpA(spa, source) {
+			let totalBoosts = 0;
+			let statPlus: BoostID;
+			for (statPlus in source.boosts) {
+				totalBoosts += source.boosts[statPlus];
+			}
+
+			if (totalBoosts >= 3) {
+				return spa + source.getStat('atk');
+			}
+		},
+		name: "Healthy Body",
+		isNonstandard: "Future",
+	},
+	holyboost: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				let statName: StatIDExceptHP = 'atk';
+				let worstStat = 0;
+				const stats: StatIDExceptHP[] = ['atk', 'def', 'spa', 'spd', 'spe'];
+				for (const i of stats) {
+					const statValue = source.getStat(i, true, true);
+					if (statValue < worstStat) {
+						statName = i;
+						worstStat = statValue;
+					}
+				}
+
+				this.boost({[statName]: 1}, source);
+		
+				return statName;
+			}
+		},
+		name: "Holy Boost",
+		isNonstandard: "Future",
+	},
+	"2mss": {
+		name: "2MSS",
+		onDisableMove(pokemon) {
+			if (!pokemon.abilityState.choiceLock) return;
+			if (pokemon.volatiles['dynamax']) return;
+			for (let i = 0; i < pokemon.moveSlots.length; i++) {
+				if (i > 1) {
+					const moveSlot = pokemon.moveSlots[i];
+					pokemon.disableMove(moveSlot.id, false);
+				}
+			}
+		},
+		isNonstandard: "Future",
+	},
+	evolutionaryadvantage: {
+		name: "Evolutionary Advantage",
+		onBasePower(basePower, pokemon, target, move) {
+			if (!target) return;
+			if (target.species.color !== pokemon.species.color) {
+				return this.chainModify(2);
+			}
+		},
+		isNonstandard: "Future",
+	},
+	closequarterscombat: {
+		name: "Close-Quarters Combat",
+		onStart(pokemon) {
+			const foe = this.sample(pokemon.adjacentFoes());
+			const item = foe.takeItem();
+			if (item) {
+				this.add('-enditem', foe, item.name, '[from] ability: close-Quarters Combat', '[of] ' + pokemon);
+			}
+		},
+		isNonstandard: "Future",
+	},
+	predator: {
+		name: "Predator",
+		onModifyCritRatio(critRatio, pokemon, target) {
+			if (!target) return;
+			let totalDrops = 0;
+			const stats: BoostID[] = [];
+			let stat: BoostID;
+			for (stat in target.boosts) {
+				if (target.boosts[stat] < 0) {
+					totalDrops += Math.abs(target.boosts[stat]);
+				}
+			}
+
+			return critRatio + totalDrops;
+		},
+		isNonstandard: "Future",
+	},
+	hazey: {
+		name: "Hazey",
+		onStart() {
+			this.add('-clearallboost');
+			for (const pokemon of this.getAllActive()) {
+				pokemon.clearBoosts();
+			}
+		},
+		isNonstandard: "Future",
+	},
+	crippleguard: {
+		name: "Cripple Guard",
+		onDamage(damage, target, source, effect) {
+			if (source && source.status) {
+				return Math.floor(damage * 0.75);
+			}
+		},
+		isNonstandard: "Future",
+	},
+	boostboost: {
+		name: "Boost Boost",
+		onBasePower(basePower, pokemon, target, move) {
+			let totalBoosts = 0;
+			let stat: BoostID;
+			for (stat in target.boosts) {
+				if (target.boosts[stat] > 0) {
+					totalBoosts += target.boosts[stat];
+				}
+			}
+
+			if (totalBoosts) {
+				return this.chainModify(1 + (totalBoosts * 0.1));
+			}
+		},
+		isNonstandard: "Future",
+	},
+	fetalrupture: {
+		name: "Fetal Rupture",
+		onModifyMove(move, pokemon, target) {
+			if (!target) return;
+			if (target.species.nfe) move.ohko = true;
+		},
+		isNonstandard: "Future",
+	},
+	sleeper: {
+		name: "Sleeper",
+		onModifyMove(move, pokemon) {
+			move.sleepUsable = true;
+		},
+		onDamage(damage, pokemon) {
+			if (pokemon.status === 'slp') {
+				return damage * 2;
+			}
+		},
+		onResidual(pokemon) {
+			if (pokemon.activeTurns % 2 === 0) {
+				pokemon.trySetStatus('slp');
+			}
+		},
+		isNonstandard: "Future",
+	},
+	sequencer: {
+		name: "Sequencer",
+		onBasePower(basePower, source, target, move) {
+			return basePower + Math.max(0, (move.hit - 1) * 10);
+		},
+		isNonstandard: "Future",
+	},
+	frostysurge: {
+		onStart(source) {
+			this.field.setTerrain('frostyterrain');
+		},
+		name: "Frosty Surge",
+		isNonstandard: "Future",
+	},
 	brainwash: {
 		onStart(pokemon) {
 			let activated = false;

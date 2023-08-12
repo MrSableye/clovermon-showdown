@@ -9242,6 +9242,90 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Shield Slam",
 		shortDesc: "+20 BP per Def boost. -1 Def after hit but never below 0.",
 	},
+	doubletap: {
+		name: "Double Tap",
+		shortDesc: "Deals double damage if double damage would KO the target.",
+	},
+	prismspray: {
+		name: "Prism Spray",
+		shortDesc: "This move's type becomes a random type when used.",
+	},
+	internetargument: {
+		name: "Internet Argument",
+		shortDesc: "Raises the user's and target's Attack and Sp. Attack by 2 stages and confuses the target.",
+	},
+	doubledose: {
+		name: "Double Dose",
+		shortDesc: "Hits twice. 100% chance to tox. Always crits againsted tox'd foes.",
+	},
+	vanish: {
+		name: "Vanish",
+		shortDesc: "Prevents moves from affecting the user this turn. +1 evasion.",
+	},
+	mri: {
+		name: "MRI",
+		shortDesc: "OHKOs the target if it is a Steel-type. OHKOs the user if it is a pure Steel-type.",
+	},
+	toiletpaper: {
+		name: "Toilet Paper",
+		shortDesc: "OHKOs the target if it is a Cacademon or Bungaloon.",
+	},
+	drunkenfist: {
+		name: "Drunken Fist",
+		shortDesc: "2x BP if the user is confused. Confuses both the user and target on hit.",
+	},
+	snowgrave: {
+		name: "Snowgrave",
+		shortDesc: "100% chance to freeze the target.",
+	},
+	bigbang: {
+		name: "Big Bang",
+		shortDesc: "Hits adjacent Pokemon. The user faints.",
+	},
+	retart: {
+		name: "Retart",
+		shortDesc: "More power the less Sp. Attack the user has than the target.",
+	},
+	lowestkick: {
+		name: "Lowest Kick",
+		shortDesc: "More power the heavier the target except it infinitely scales.",
+	},
+	spikesagain: {
+		name: "Spikes (Again)",
+		shortDesc: "Hurts grounded foes on switch-in. Max 3 layers.",
+	},
+	repurpose: {
+		name: "Repurpose",
+		shortDesc: "Turns 2 boosts into a +3 boost to a random stat.",
+	},
+	dragoonslash: {
+		name: "Dragoon Slash",
+		shortDesc: "OHKOs Dark-type Pokemon.",
+	},
+	liposuction: {
+		name: "Liposuction",
+		shortDesc: "Double base power against Pokemon with more than 100 base HP.",
+	},
+	revelation: {
+		name: "Revelation",
+		shortDesc: "Raises the user's Defense and Sp. Attack by 1.",
+	},
+	suddendeath: {
+		name: "Sudden Death",
+		shortDesc: "Sets all active Pokemon's HP to 1.",
+	},
+	renovate: {
+		name: "Renovate",
+		shortDesc: "Sets Trick Room in one turn.",
+	},
+	stickywebshot: {
+		name: "Sticky Web Shot",
+		shortDesc: "Sets Sticky Web on hit.",
+	},
+	frostyterrain: {
+		name: "Frosty Terrain",
+		shortDesc: "5 turns. Grounded: +Ice power, immune to burn, stat drops prevented.",
+	},
 	maplewarrior: {
 		name: "Maple Warrior",
 		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",
