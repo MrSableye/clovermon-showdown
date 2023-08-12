@@ -65724,6 +65724,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Wife Beater",
 		pp: 15,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			if (target.gender === 'F') {
+				this.debug('BP doubled on male target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -74042,8 +74049,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Phantom Maiden",
 		pp: 5,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			if (target.gender === 'F') {
+				this.debug('BP doubled on female target');
+				return move.basePower * 1.5;
+			}
+			return move.basePower;
+		},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					atk: 1,
+					spa: 1,
+				},
+			},
+		},
+		drain: [1, 2],
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
 		target: "normal",
 		type: "Zombie",
 		isNonstandard: "Future",
@@ -78789,6 +78812,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Boner",
 		pp: 15,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			if (target.gender === 'F') {
+				this.debug('BP doubled on male target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
