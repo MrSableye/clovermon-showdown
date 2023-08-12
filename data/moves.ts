@@ -40103,8 +40103,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Fist",
 		pp: 15,
 		priority: 0,
+		secondary: {
+			chance: 25,
+			status: 'tox',
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
 		critRatio: 2,
 		target: "normal",
 		type: "Zombie",
