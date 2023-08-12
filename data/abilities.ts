@@ -11211,7 +11211,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onSourceAfterFaint(length, target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
 				let statName: StatIDExceptHP = 'atk';
-				let worstStat = 0;
+				let worstStat = Infinity;
 				const stats: StatIDExceptHP[] = ['atk', 'def', 'spa', 'spd', 'spe'];
 				for (const i of stats) {
 					const statValue = source.getStat(i, true, true);
