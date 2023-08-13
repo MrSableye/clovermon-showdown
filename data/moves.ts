@@ -34099,6 +34099,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Star Gaze",
 		pp: 5,
 		priority: 0,
+		onHit(pokemon) {
+			let factor = 0.5;
+			if (this.field.getPseudoWeather('starfield')) {
+				factor = 0.667;
+				this.boost({
+					accuracy: 1,
+				});
+			}
+			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+			if (!success) {
+				this.add('-fail', pokemon, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
 		flags: {snatch: 1, bite: 1},
 		secondary: null,
 		target: "self",
@@ -40088,8 +40103,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Fist",
 		pp: 15,
 		priority: 0,
+		secondary: {
+			chance: 25,
+			status: 'tox',
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
 		critRatio: 2,
 		target: "normal",
 		type: "Zombie",
@@ -42497,6 +42515,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Satellite Ray",
 		pp: 10,
 		priority: 0,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			this.boost({spa: 2}, attacker, attacker, move);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -47642,7 +47672,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Coffee Drink",
 		pp: 10,
 		priority: 0,
-		flags: {snatch: 1, bite: 1},
+		flags: {snatch: 1, bite: 1, heal: 1},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('insomnia');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Insomnia', '[from] move: Coffee Drink');
+				return;
+			}
+			return oldAbility as false | null;
+		},
+		heal: [1, 2],
 		secondary: null,
 		target: "self",
 		type: "Food",
@@ -48746,7 +48785,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Cool Down",
 		pp: 5,
 		priority: 0,
-		flags: {snatch: 1, bite: 1},
+		flags: {snatch: 1, bite: 1, heal: 1},
+		onHit(pokemon) {
+			let factor = 0.5;
+			if (this.field.isWeather('hail')) {
+				factor = 0.667;
+			}
+			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+			if (!success) {
+				this.add('-fail', pokemon, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
 		secondary: null,
 		target: "self",
 		type: "Ice",
@@ -55349,6 +55400,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Speed Sap",
 		pp: 10,
 		priority: 0,
+		onHit(target, source) {
+			if (target.boosts.spe === -6) return false;
+			const spe = target.getStat('spe', false, true);
+			const success = this.boost({spe: -1}, target, source, null, false, true);
+			return !!(this.heal(spe, source, target) || success);
+		},
 		flags: {protect: 1, reflectable: 1},
 		secondary: null,
 		target: "normal",
@@ -56278,7 +56335,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Rock Gather",
 		pp: 10,
 		priority: 0,
-		flags: {snatch: 1, bite: 1},
+		flags: {snatch: 1, bite: 1, heal: 1},
+		heal: [1, 3],
+		boosts: {
+			def: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Rock",
@@ -59922,6 +59983,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Power Nap",
 		pp: 10,
 		priority: 0,
+		onTry(source) {
+			if (source.status === 'slp' || source.hasAbility('comatose') || source.hasAbility('boardpowerz')) return false;
+
+			if (source.hp === source.maxhp) {
+				this.add('-fail', source, 'heal');
+				return null;
+			}
+			if (source.hasAbility(['insomnia', 'vitalspirit'])) {
+				this.add('-fail', source, '[from] ability: ' + source.getAbility().name, '[of] ' + source);
+				return null;
+			}
+		},
+		onHit(target, source, move) {
+			const result = target.setStatus('slp', source, move);
+			if (!result) return result;
+			target.statusState.time = 2;
+			target.statusState.startTime = 2;
+			this.heal(target.baseMaxhp / 2); // Aesthetic only as the healing happens after you fall asleep in-game
+		},
 		flags: {snatch: 1, bite: 1},
 		secondary: null,
 		target: "self",
@@ -65026,7 +65106,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
 				!move.realMove && !move.isZ && !move.isMax &&
 				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
-				move.flags.distance === 1 && move.id !== 'miraclepunch'
+				move.flags.dance === 1 && move.id !== 'freestyle'
 			));
 			let randomMove = '';
 			if (moves.length) {
@@ -65629,7 +65709,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Sewing",
 		pp: 10,
 		priority: 0,
-		flags: {snatch: 1, bite: 1},
+		flags: {snatch: 1, bite: 1, heal: 1},
+		heal: [1, 3],
+		boosts: {
+			spd: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Fabric",
@@ -65643,6 +65727,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Wife Beater",
 		pp: 15,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			if (target.gender === 'F') {
+				this.debug('BP doubled on male target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -66251,7 +66342,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Nectar Tap",
 		pp: 10,
 		priority: 0,
-		flags: {snatch: 1, bite: 1},
+		flags: {snatch: 1, bite: 1, heal: 1},
+		heal: [1, 3],
+		boosts: {
+			spe: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Bug",
@@ -67525,6 +67620,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('taunt');
+			}
+		},
+		selfBoost: {
+			boosts: {
+				accuracy: 1,
+			},
+		},
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
@@ -67762,7 +67867,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Honey Drip",
 		pp: 10,
 		priority: 0,
-		flags: {snatch: 1, bite: 1},
+		flags: {snatch: 1, heal: 1},
+		heal: [1, 2],
 		secondary: null,
 		target: "self",
 		type: "Food",
@@ -68261,6 +68367,31 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		pseudoWeather: 'starfield',
+		condition: {
+			duration: 5,
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Starfield', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Cosmic') {
+					this.debug('star field increase');
+					return this.chainModify([1.5]);
+				}
+			},
+			onModifySpDPriority: 10,
+			onModifySpD(spd, pokemon) {
+			if (pokemon.hasType('Cosmic')) {
+				return this.chainModify([1.5]);
+			}			
+		},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Starfield');
+			},
+		},
 		secondary: null,
 		target: "all",
 		type: "Cosmic",
@@ -69183,7 +69314,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Acid Bath",
 		pp: 5,
 		priority: 0,
-		flags: {snatch: 1, bite: 1},
+		flags: {snatch: 1, heal: 1},
+		onHit(pokemon) {
+			let factor = 0.5;
+			if (this.field.isWeather('acidrain')) {
+				factor = 0.667;
+			}
+			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+			if (!success) {
+				this.add('-fail', pokemon, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
 		secondary: null,
 		target: "self",
 		type: "Poison",
@@ -69197,7 +69340,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Dark Gather",
 		pp: 5,
 		priority: 0,
-		flags: {snatch: 1, bite: 1},
+		flags: {snatch: 1, heal: 1},
+		onHit(pokemon) {
+			let factor = 0.5;
+			if (this.field.isWeather('midnight')) {
+				factor = 0.667;
+			}
+			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+			if (!success) {
+				this.add('-fail', pokemon, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
 		secondary: null,
 		target: "self",
 		type: "Dark",
@@ -70455,7 +70610,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Lazy Break",
 		pp: 10,
 		priority: 0,
-		flags: {snatch: 1, bite: 1},
+		flags: {snatch: 1, heal: 1},
+		heal: [2, 3],
+		boosts: {
+			spe: -1,
+			evasion: -1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Normal",
@@ -72387,7 +72547,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Uisce Beatha",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, bite: 1},
+		flags: {protect: 1, reflectable: 1, bite: 1, heal: 1},
+		onHit(pokemon) {
+			if (['', 'slp', 'frz'].includes(pokemon.status) && pokemon.hp >= pokemon.maxhp) return false;
+			pokemon.cureStatus();
+		},
+		heal: [1, 2],
 		secondary: null,
 		target: "allySide",
 		type: "Water",
@@ -72699,6 +72864,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Rock",
@@ -73886,8 +74052,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Phantom Maiden",
 		pp: 5,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			if (target.gender === 'F') {
+				this.debug('BP doubled on female target');
+				return move.basePower * 1.5;
+			}
+			return move.basePower;
+		},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					atk: 1,
+					spa: 1,
+				},
+			},
+		},
+		drain: [1, 2],
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
 		target: "normal",
 		type: "Zombie",
 		isNonstandard: "Future",
@@ -76821,7 +77003,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Heal",
 		pp: 10,
 		priority: 0,
-		flags: {snatch: 1, bite: 1},
+		flags: {snatch: 1, heal: 1},
+		heal: [1, 2],
 		secondary: null,
 		target: "self",
 		type: "Magic",
@@ -77409,6 +77592,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[0];
+			if (type === "Bird") type = "???";
+			move.type = type;
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -77870,8 +78058,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Hasso Tobi",
 		pp: 10,
 		priority: 0,
+		self: {
+			volatileStatus: 'focusenergy',
+		},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spe: 1,
+				},
+			},
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
 		target: "normal",
 		type: "Wind",
 		isNonstandard: "Future",
@@ -78032,7 +78230,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 80,
+			boosts: {
+				spa: -1,
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Water",
 		isNonstandard: "Future",
@@ -78102,6 +78305,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		boosts: {
+			atk: -1,
+			def: -1,
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Ghost",
@@ -78201,6 +78408,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Magic') return 1;
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Steel",
@@ -78301,6 +78511,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Unspeakable Formation",
 		pp: 20,
 		priority: 0,
+
+		
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
 		target: "allAdjacentFoes",
@@ -78331,6 +78543,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1},
+		onHit(target, source) {
+			const newspe = Math.floor((target.storedStats.def + source.storedStats.spe) / 2);
+			target.storedStats.spe = newspe;
+			source.storedStats.spe = newspe;
+			this.add('-activate', source, 'move: Speed Split', '[of] ' + target);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
@@ -78415,6 +78633,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onHit(pokemon) {
+			if (pokemon.hasType('Divine')){
+			pokemon.setType(pokemon.getTypes(true).map(type => type === "Divine" ? "???" : type));
+			this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Exocise');
+			}
+	},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -78555,6 +78779,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Bone' || !target.setType('Bone')) {
+				// Soak should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add('-fail', target);
+				return null;
+			}
+			this.add('-start', target, 'typechange', 'Bone');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Bone",
@@ -78582,6 +78815,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Boner",
 		pp: 15,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			if (target.gender === 'F') {
+				this.debug('BP doubled on male target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
