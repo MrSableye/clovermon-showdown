@@ -11229,6 +11229,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Holy Boost",
 		isNonstandard: "Future",
 	},
+	rot: {
+		name: "Rot",
+		onStart(source) {
+			for (const pokemon of this.getAllActive()) {
+				if (!pokemon.hasItem('Leftovers')) continue;
+				pokemon.setItem('Black Sludge');
+				this.add('-item', pokemon, 'Black Sludge', '[from] ability: Rot', '[of] ' + source);
+			}
+		},
+		isNonstandard: "Future",
+	},
 	"2mss": {
 		name: "2MSS",
 		onDisableMove(pokemon) {

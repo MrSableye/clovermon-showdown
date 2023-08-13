@@ -3145,6 +3145,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Holy Boost",
 		shortDesc: "This Pokemon's lowest stat is raised by 1 if it attacks and KOes another Pokemon.",
 	},
+	rot: {
+		name: "Rot",
+		shortDesc: "On-switch in, all active Pokemon's Leftovers are turned into Black Sludge.",
+	},
 	"2mss": {
 		name: "2MSS",
 		shortDesc: "This Pokemon's third and fourth moves are disabled.",
