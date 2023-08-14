@@ -39990,7 +39990,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, sun: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			volatileStatus: 'flinch',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Light",
@@ -40136,7 +40139,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			status: 'tox',
+		},
 		target: "normal",
 		type: "Nuclear",
 		isNonstandard: "Future",
@@ -40236,7 +40242,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 55,
+			onHit(target) {
+				if (!target.hp) return;
+				let move: Move | ActiveMove | null = target.lastMove;
+				if (!move || move.isZ) return;
+				if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
+
+				const ppDeducted = target.deductPP(move.id, 3);
+				if (!ppDeducted) return;
+				this.add('-activate', target, 'move: Eerie Spell', move.name, ppDeducted);
+			},
+		},
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -40733,7 +40751,17 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (target.status === 'par') {
+				this.debug('BP doubled on paralyzed target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		secondary: null,
+		onHit(target) {
+			if (target.status === 'par') target.cureStatus();
+		},
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -42388,8 +42416,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Crimson Court",
 		pp: 5,
 		priority: 2,
+		secondary: {
+			chance: 55,
+			volatileStatus: 'disable',
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
 		target: "normal",
 		type: "Chaos",
 		isNonstandard: "Future",
@@ -43357,6 +43388,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Fell Crystal",
 		pp: 10,
 		priority: 0,
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (!target || target.fainted || target.hp <= 0) this.boost({spa: 3}, pokemon, pokemon, move);
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "allAdjacent",
@@ -44110,6 +44144,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Fafnir Armor",
 		pp: 5,
 		priority: 0,
+		boosts: {
+			def: 2,
+			spd: 2,
+		},
 		flags: {snatch: 1},
 		secondary: null,
 		target: "self",
@@ -44153,6 +44191,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Vasavi Shakti",
 		pp: 1,
 		priority: 0,
+		status: 'brn',
+		self: {
+			boosts: {
+				def: -1,
+				spd: -1,
+			},
+		},
+		basePowerCallback(pokemon, target, move) {
+			if (target.hasType('Divine')) {
+				this.debug('BP trippled on Divine pokemon');
+				return move.basePower * 3;
+			}
+			return move.basePower;
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "allAdjacentFoes",
@@ -44455,6 +44507,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Invoke Dread",
 		pp: 10,
 		priority: 0,
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'defeatist' || target.ability === 'truant') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('defeatist');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Defeatist', '[from] move: Invoke Dread');
+				return;
+			}
+			return oldAbility as false | null;
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -44606,8 +44671,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Psalms",
 		pp: 5,
 		priority: 0,
+		secondary: {
+			chance: 90,
+			self: {
+				boosts: {
+					spa: 2,
+				},
+			},
+		},
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -44649,7 +44721,18 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			self: {
+				boosts: {
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				},
+			},
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Fairy",
@@ -44748,6 +44831,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel') return 1;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -45154,6 +45240,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Unfettered Soul",
 		pp: 15,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			if (!pokemon.item) {
+				this.debug("BP doubled for no item");
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -45340,6 +45433,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'embargo',
 		secondary: null,
 		target: "normal",
 		type: "Nuclear",
@@ -45353,6 +45447,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Smelly Cloud",
 		pp: 15,
 		priority: 0,
+		volatileStatus: 'embargo',
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -45367,6 +45462,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Stink Burst",
 		pp: 10,
 		priority: 0,
+		volatileStatus: 'embargo',
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -45423,6 +45519,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Decay Limbs",
 		pp: 15,
 		priority: 0,
+		volatileStatus: 'embargo',
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -45759,6 +45856,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Restrict Beam",
 		pp: 10,
 		priority: 0,
+		volatileStatus: 'embargo',
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -46713,6 +46811,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'embargo',
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -47137,6 +47236,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Bell Slash",
 		pp: 10,
 		priority: 0,
+		volatileStatus: 'embargo',
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		critRatio: 2,
@@ -47194,6 +47294,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Martian Flames",
 		pp: 10,
 		priority: 0,
+		volatileStatus: 'embargo',
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -60193,6 +60294,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 90,
 		category: "Special",
 		name: "Wickerman",
+		volatileStatus: 'partiallytrapped',
+		status: 'brn',
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
@@ -76228,6 +76331,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.volatiles[ 'perishsong']) {
+				return this.chainModify(1.5);
+			}
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
