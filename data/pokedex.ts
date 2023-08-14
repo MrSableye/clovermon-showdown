@@ -44464,7 +44464,7 @@ blobbosmechelectric: {
 		types: ["Bug", "???"],
 		gender: "N",
 		baseStats: {hp: 114, atk: 126, def: 83, spa: 13, spd: 73, spe: 142},
-		abilities: {0: "Speed Boost", H: "Puppeteer", S: "Bad Dreams"},
+		abilities: {0: "Horror", H: "Puppeteer", S: "Bad Dreams"},
 		heightm: 18.78,
 		weightkg: 864.3,
 		color: "Green",

@@ -2500,6 +2500,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Omniscience",
 		desc: "This Pokemon can hit Dark types with Psychic-type moves. Psychic-type attacks don't miss.",
 	},
+	horror: {
+		name: "Horror",
+		desc: "This Pokemon's Speed is raised 1 stage at the end of each full turn on the field. On switch-in, adds Grass to the all foe's type(s).",
+	},
 	overeager: {
 		name: "Overeager",
 		desc: "This Pokemon's damaging moves become multi-hit moves that hit thrice. Subsequent hits has its damage quartered. Does not affect multi-hit moves or moves that have multiple targets.",

@@ -6942,6 +6942,24 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Detonator",
 		isNonstandard: "Future",
 	},
+	horror: {
+		name: "Horror",
+		onStart(pokemon) {
+			for (const foe of pokemon.foes()) {
+				if (foe.hasType('Grass')) return false;
+				if (!foe.addType('Grass')) return false;
+				this.add('-start', foe, 'typeadd', 'Grass', '[from] ability: Horror');
+			}
+		},
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.activeTurns) {
+				this.boost({spe: 1});
+			}
+		},
+		isNonstandard: "Future",
+	},
 	overeager: {
 		onPrepareHit(source, target, move) {
 			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
