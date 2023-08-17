@@ -50197,6 +50197,7 @@ blobbosmechelectric: {
 	stando: {
 		num: 666306,
 		name: "Stando",
+		baseForme: "Stando",
 		types: ["Steel", "Fighting"],
 		baseStats: {hp: 50, atk: 118, def: 80, spa: 40, spd: 60, spe: 102},
 		abilities: {0: "Clear Body", 1: "Iron Fist", H: "Defiant"},
@@ -50205,8 +50206,8 @@ blobbosmechelectric: {
 		color: "Blue",
 		evos : ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
-		otherFormes: ["Stando-TheWorld", "Stando-HierophantGreen", "Stando-HermitPurple", "Stando-Magician\u2019sRed", "Stando-SilverChariot", "Stando-TheFool", "Stando-Cream", "Stando-DarkBlueMoon", "Stando-TowerOfGray", "Stando-EbonyDevil", "Stando-YellowTemperance", "Stando-Strength", "Stando-WheelofFortune", "Stando-HangedMan", "Stando-Emperor", "Stando-Emperess", "Stando-Justice", "Stando-Lovers", "Stando-TheSun", "Stando-DeathThirteen", "Stando-Judgment", "Stando-HighPriestess", "Stando-Geb", "Stando-Khnum", "Stando-Thoth", "Stando-Anubis", "Stando-Bastet", "Stando-Sethan", "Stando-Osiris", "Stando-Horus", "Stando-Atum", "Stando-TenoreSax", "Stando-CrazyDiamond", "Stando-TheHand", "Stando-EchoesAct1", "Stando-EchoesAct2", "Stando-EchoesAct3", "Stando-Heaven\u2019sDoor", "Stando-KillerQueen", "Stando-AquaNecklace", "Stando-BadCompany", "Stando-RedHotChilliPepper", "Stando-TheLock", "Stando-Surface", "Stando-LoveDeluxe", "Stando-PearlJam", "Stando-Ratt", "Stando-Harvest", "Stando-Cinderella", "Stando-BoyIIMan", "Stando-HighwayStar", "Stando-StrayCat", "Stando-SuperFly", "Stando-Enigma", "Stando-CheapTrick", "Stando-AtomHeartFather", "Stando-ActhungBaby", "Stando-EarthWindandFire", "Stando-GoldExperience", "Stando-StickyFingers", "Stando-MoodyBlues", "Stando-SexPistols", "Stando-Aerosmith", "Stando-PurpleHaze", "Stando-SpiceGirl", "Stando-KingCrimson", "Stando-BlackSabbath", "Stando-SoftMachine", "Stando-Kraftwork", "Stando-LittleFeet", "Stando-ManintheMirror", "Stando-MrPresident", "Stando-BeachBoy", "Stando-GratefulDead", "Stando-BabyFace", "Stando-WhiteAlbum", "Stando-Clash", "Stando-TalkingHead", "Stando-NotoriousB.I.G", "Stando-Metallica", "Stando-GreenDay", "Stando-Oasis", "Stando-RollingStones", "Stando-StoneFree", "Stando-WeatherReport", "Stando-Whitesnake", "Stando-ScaryMonsters", "Stando-HighwayToHell", "Stando-Survivor", "Stando-SkyHigh", "Stando-SoftandWet", "Stando-CMoon", "Stando-Tusk-Act1", "Stando-Ballbreaker", "Stando-D4C", "Stando-InASilentWay", "Stando-HeyYa!", "Stando-SilverChariotRequiem", "Stando-BlueNight", "Stando-HighHighPriestess"],
-		formeOrder: ["Stando", "Stando-TheWorld", "Stando-HierophantGreen", "Stando-HermitPurple", "Stando-Magician\u2019sRed", "Stando-SilverChariot", "Stando-TheFool", "Stando-Cream", "Stando-DarkBlueMoon", "Stando-TowerOfGray", "Stando-EbonyDevil", "Stando-YellowTemperance", "Stando-Strength", "Stando-WheelofFortune", "Stando-HangedMan", "Stando-Emperor", "Stando-Emperess", "Stando-Justice", "Stando-Lovers", "Stando-TheSun", "Stando-DeathThirteen", "Stando-Judgment", "Stando-HighPriestess", "Stando-Geb", "Stando-Khnum", "Stando-Thoth", "Stando-Anubis", "Stando-Bastet", "Stando-Sethan", "Stando-Osiris", "Stando-Horus", "Stando-Atum", "Stando-TenoreSax", "Stando-CrazyDiamond", "Stando-TheHand", "Stando-EchoesAct1", "Stando-EchoesAct2", "Stando-EchoesAct3", "Stando-Heaven\u2019sDoor", "Stando-KillerQueen", "Stando-AquaNecklace", "Stando-BadCompany", "Stando-RedHotChilliPepper", "Stando-TheLock", "Stando-Surface", "Stando-LoveDeluxe", "Stando-PearlJam", "Stando-Ratt", "Stando-Harvest", "Stando-Cinderella", "Stando-BoyIIMan", "Stando-HighwayStar", "Stando-StrayCat", "Stando-SuperFly", "Stando-Enigma", "Stando-CheapTrick", "Stando-AtomHeartFather", "Stando-ActhungBaby", "Stando-EarthWindandFire", "Stando-GoldExperience", "Stando-StickyFingers", "Stando-MoodyBlues", "Stando-SexPistols", "Stando-Aerosmith", "Stando-PurpleHaze", "Stando-SpiceGirl", "Stando-KingCrimson", "Stando-BlackSabbath", "Stando-SoftMachine", "Stando-Kraftwork", "Stando-LittleFeet", "Stando-ManintheMirror", "Stando-MrPresident", "Stando-BeachBoy", "Stando-GratefulDead", "Stando-BabyFace", "Stando-WhiteAlbum", "Stando-Clash", "Stando-TalkingHead", "Stando-NotoriousB.I.G", "Stando-Metallica", "Stando-GreenDay", "Stando-Oasis", "Stando-RollingStones", "Stando-StoneFree", "Stando-WeatherReport", "Stando-Whitesnake", "Stando-ScaryMonsters", "Stando-HighwayToHell", "Stando-Survivor", "Stando-SkyHigh", "Stando-SoftandWet", "Stando-CMoon", "Stando-Tusk-Act1", "Stando-Ballbreaker", "Stando-D4C", "Stando-InASilentWay", "Stando-HeyYa!", "Stando-SilverChariotRequiem", "Stando-BlueNight", "Stando-HighHighPriestess"],
+		otherFormes: ["Stando-TheWorld", "Stando-HierophantGreen", "Stando-HermitPurple", "Stando-MagiciansRed", "Stando-SilverChariot", "Stando-TheFool", "Stando-Cream", "Stando-DarkBlueMoon", "Stando-TowerOfGray", "Stando-EbonyDevil", "Stando-YellowTemperance", "Stando-Strength", "Stando-WheelofFortune", "Stando-HangedMan", "Stando-Emperor", "Stando-Emperess", "Stando-Justice", "Stando-Lovers", "Stando-TheSun", "Stando-DeathThirteen", "Stando-Judgment", "Stando-HighPriestess", "Stando-Geb", "Stando-Khnum", "Stando-Thoth", "Stando-Anubis", "Stando-Bastet", "Stando-Sethan", "Stando-Osiris", "Stando-Horus", "Stando-Atum", "Stando-TenoreSax", "Stando-CrazyDiamond", "Stando-TheHand", "Stando-EchoesAct1", "Stando-EchoesAct2", "Stando-EchoesAct3", "Stando-HeavensDoor", "Stando-KillerQueen", "Stando-AquaNecklace", "Stando-BadCompany", "Stando-RedHotChilliPepper", "Stando-TheLock", "Stando-Surface", "Stando-LoveDeluxe", "Stando-PearlJam", "Stando-Ratt", "Stando-Harvest", "Stando-Cinderella", "Stando-BoyIIMan", "Stando-HighwayStar", "Stando-StrayCat", "Stando-SuperFly", "Stando-Enigma", "Stando-CheapTrick", "Stando-AtomHeartFather", "Stando-ActhungBaby", "Stando-EarthWindandFire", "Stando-GoldExperience", "Stando-StickyFingers", "Stando-MoodyBlues", "Stando-SexPistols", "Stando-Aerosmith", "Stando-PurpleHaze", "Stando-SpiceGirl", "Stando-KingCrimson", "Stando-BlackSabbath", "Stando-SoftMachine", "Stando-Kraftwork", "Stando-LittleFeet", "Stando-ManintheMirror", "Stando-MrPresident", "Stando-BeachBoy", "Stando-GratefulDead", "Stando-BabyFace", "Stando-WhiteAlbum", "Stando-Clash", "Stando-TalkingHead", "Stando-NotoriousB.I.G", "Stando-Metallica", "Stando-GreenDay", "Stando-Oasis", "Stando-RollingStones", "Stando-StoneFree", "Stando-WeatherReport", "Stando-Whitesnake", "Stando-ScaryMonsters", "Stando-HighwayToHell", "Stando-Survivor", "Stando-SkyHigh", "Stando-SoftandWet", "Stando-CMoon", "Stando-TuskAct1", "Stando-Ballbreaker", "Stando-D4C", "Stando-InASilentWay", "Stando-HeyYa!", "Stando-SilverChariotRequiem", "Stando-BlueNight", "Stando-HighHighPriestess"],
+		formeOrder: ["Stando", "Stando-TheWorld", "Stando-HierophantGreen", "Stando-HermitPurple", "Stando-MagiciansRed", "Stando-SilverChariot", "Stando-TheFool", "Stando-Cream", "Stando-DarkBlueMoon", "Stando-TowerOfGray", "Stando-EbonyDevil", "Stando-YellowTemperance", "Stando-Strength", "Stando-WheelofFortune", "Stando-HangedMan", "Stando-Emperor", "Stando-Emperess", "Stando-Justice", "Stando-Lovers", "Stando-TheSun", "Stando-DeathThirteen", "Stando-Judgment", "Stando-HighPriestess", "Stando-Geb", "Stando-Khnum", "Stando-Thoth", "Stando-Anubis", "Stando-Bastet", "Stando-Sethan", "Stando-Osiris", "Stando-Horus", "Stando-Atum", "Stando-TenoreSax", "Stando-CrazyDiamond", "Stando-TheHand", "Stando-EchoesAct1", "Stando-EchoesAct2", "Stando-EchoesAct3", "Stando-HeavensDoor", "Stando-KillerQueen", "Stando-AquaNecklace", "Stando-BadCompany", "Stando-RedHotChilliPepper", "Stando-TheLock", "Stando-Surface", "Stando-LoveDeluxe", "Stando-PearlJam", "Stando-Ratt", "Stando-Harvest", "Stando-Cinderella", "Stando-BoyIIMan", "Stando-HighwayStar", "Stando-StrayCat", "Stando-SuperFly", "Stando-Enigma", "Stando-CheapTrick", "Stando-AtomHeartFather", "Stando-ActhungBaby", "Stando-EarthWindandFire", "Stando-GoldExperience", "Stando-StickyFingers", "Stando-MoodyBlues", "Stando-SexPistols", "Stando-Aerosmith", "Stando-PurpleHaze", "Stando-SpiceGirl", "Stando-KingCrimson", "Stando-BlackSabbath", "Stando-SoftMachine", "Stando-Kraftwork", "Stando-LittleFeet", "Stando-ManintheMirror", "Stando-MrPresident", "Stando-BeachBoy", "Stando-GratefulDead", "Stando-BabyFace", "Stando-WhiteAlbum", "Stando-Clash", "Stando-TalkingHead", "Stando-NotoriousB.I.G", "Stando-Metallica", "Stando-GreenDay", "Stando-Oasis", "Stando-RollingStones", "Stando-StoneFree", "Stando-WeatherReport", "Stando-Whitesnake", "Stando-ScaryMonsters", "Stando-HighwayToHell", "Stando-Survivor", "Stando-SkyHigh", "Stando-SoftandWet", "Stando-CMoon", "Stando-TuskAct1", "Stando-Ballbreaker", "Stando-D4C", "Stando-InASilentWay", "Stando-HeyYa!", "Stando-SilverChariotRequiem", "Stando-BlueNight", "Stando-HighHighPriestess"],
 	},
 	standotheworld: {
 		num: 666306,
@@ -50244,9 +50245,9 @@ blobbosmechelectric: {
 		evos : ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
-	standomagicianred: {
+	standomagiciansred: {
 		num: 666306,
-		name: "Stando-Magician\u2019sRed",
+		name: "Stando-MagiciansRed",
 		types: ["Magic", "Fire"],
 		baseStats: {hp: 60, atk: 104, def: 50, spa: 104, spd: 82, spe: 90},
 		abilities: {0: "Magic Bounce"},
@@ -50292,7 +50293,7 @@ blobbosmechelectric: {
 		evos : ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
-	standomoon: {
+	standodarkbluemoon: {
 		num: 666306,
 		name: "Stando-DarkBlueMoon",
 		types: ["Water", "Dark"],
@@ -50304,7 +50305,7 @@ blobbosmechelectric: {
 		evos : ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
-	standotower: {
+	standotowerofgray: {
 		num: 666306,
 		name: "Stando-TowerOfGray",
 		types: ["Bug", "Dark"],
@@ -50316,7 +50317,7 @@ blobbosmechelectric: {
 		evos : ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
-	standodevil: {
+	standoebonydevil: {
 		num: 666306,
 		name: "Stando-EbonyDevil",
 		types: ["Ghost", "Wood"],
@@ -50328,7 +50329,7 @@ blobbosmechelectric: {
 		evos : ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
-	standotemperance: {
+	standoyellowtemperance: {
 		num: 666306,
 		name: "Stando-YellowTemperance",
 		types: ["Normal", "Rubber"],
@@ -50436,7 +50437,7 @@ blobbosmechelectric: {
 		evos : ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
-	standodeath: {
+	standodeaththirteen: {
 		num: 666306,
 		name: "Stando-DeathThirteen",
 		types: ["Psychic", "Fear"],
@@ -50654,7 +50655,7 @@ blobbosmechelectric: {
 	},
 	standoheavensdoor: {
 		num: 666306,
-		name: "Stando-Heaven\u2019sDoor",
+		name: "Stando-HeavensDoor",
 		types: ["Paper", "Divine"],
 		baseStats: {hp: 70, atk: 60, def: 86, spa: 90, spd: 110, spe: 90},
 		abilities: {0: "Prankster"},
@@ -51312,9 +51313,9 @@ blobbosmechelectric: {
 		evos : ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
-	standotusk: {
+	standotuskact1: {
 		num: 666306,
-		name: "Stando-Tusk-Act1",
+		name: "Stando-TuskAct1",
 		types: ["Normal"],
 		baseStats: {hp: 35, atk: 40, def: 40, spa: 40, spd: 40, spe: 45},
 		abilities: {0: "Anticipation"},

@@ -10890,7 +10890,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
-	standomagicianred: {
+	standomagiciansred: {
 		inherit: true,
 		tier: "LC",
 		isNonstandard: null,
@@ -10910,22 +10910,22 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
-	standomoon: {
+	standodarkbluemoon: {
 		inherit: true,
 		tier: "LC",
 		isNonstandard: null,
 	},
-	standotower: {
+	standotowerofgray: {
 		inherit: true,
 		tier: "LC",
 		isNonstandard: null,
 	},
-	standodevil: {
+	standoebonydevil: {
 		inherit: true,
 		tier: "LC",
 		isNonstandard: null,
 	},
-	standotemperance: {
+	standoyellowtemperance: {
 		inherit: true,
 		tier: "LC",
 		isNonstandard: null,
@@ -10970,7 +10970,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
-	standodeath: {
+	standodeaththirteen: {
 		inherit: true,
 		tier: "LC",
 		isNonstandard: null,
@@ -11335,7 +11335,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "LC",
 		isNonstandard: null,
 	},
-	standotusk: {
+	standotuskact1: {
 		inherit: true,
 		tier: "LC",
 		isNonstandard: null,
