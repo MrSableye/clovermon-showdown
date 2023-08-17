@@ -50197,6 +50197,7 @@ blobbosmechelectric: {
 	stando: {
 		num: 666306,
 		name: "Stando",
+		baseForme: "Stando",
 		types: ["Steel", "Fighting"],
 		baseStats: {hp: 50, atk: 118, def: 80, spa: 40, spd: 60, spe: 102},
 		abilities: {0: "Clear Body", 1: "Iron Fist", H: "Defiant"},
