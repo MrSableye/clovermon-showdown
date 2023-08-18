@@ -11978,7 +11978,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onAnyFaint(target, source) {
 			const countVowels = (str: string) => {
-				const id = toID(str) || '';
+				const id = this.toID(str) || '';
 				return (id.match(/[aeiou]/gi) || []).length;
 			};
 			if (source.abilityState && source.abilityState.type === 'vowels') {
@@ -12253,7 +12253,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onImmunity(type, pokemon) {
-			if (toID(type) === 'ground') return false;
+			if (this.toID(type) === 'ground') return false;
 		},
 	},
 	iceaffinity: {
