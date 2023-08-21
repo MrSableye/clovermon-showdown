@@ -43081,8 +43081,17 @@ beforeTurnCallback(pokemon) {
 		name: "Fa223rke Ou543wfdt",
 		pp: 5,
 		priority: 3,
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Fa223rke Ou543wfdt only works on your first turn out.");
+				return false;
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -47384,7 +47393,10 @@ beforeTurnCallback(pokemon) {
 		pp: 25,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Meme",
 		isNonstandard: "Future",
@@ -47779,8 +47791,17 @@ beforeTurnCallback(pokemon) {
 		name: "Ancient Stare",
 		pp: 10,
 		priority: 3,
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Ancient Stare only works on your first turn out.");
+				return false;
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
 		target: "normal",
 		type: "Dragon",
 		isNonstandard: "Future",
@@ -49209,7 +49230,16 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 3,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Fortissimo only works on your first turn out.");
+				return false;
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -50115,7 +50145,14 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 45,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Meme",
 		isNonstandard: "Future",
@@ -57014,6 +57051,12 @@ beforeTurnCallback(pokemon) {
 		name: "Icebreaker",
 		pp: 10,
 		priority: 3,
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Ice Breaker only works on your first turn out.");
+				return false;
+			}
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -59547,8 +59590,17 @@ beforeTurnCallback(pokemon) {
 		name: "Ghastly Hand",
 		pp: 10,
 		priority: 3,
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Ghastly Hand only works on your first turn out.");
+				return false;
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
 		target: "normal",
 		type: "Ghost",
 		isNonstandard: "Future",
@@ -65097,6 +65149,12 @@ beforeTurnCallback(pokemon) {
 		name: "First Blood",
 		pp: 10,
 		priority: 3,
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("First Blood only works on your first turn out.");
+				return false;
+			}
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -67254,8 +67312,17 @@ beforeTurnCallback(pokemon) {
 		name: "First Kiss",
 		pp: 10,
 		priority: 3,
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("First Kiss only works on your first turn out.");
+				return false;
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
 		flags: {contact: 1, protect: 1, mirror: 1, kiss: 1},
-		secondary: null,
 		target: "normal",
 		type: "Heart",
 		isNonstandard: "Future",
@@ -67589,8 +67656,17 @@ beforeTurnCallback(pokemon) {
 		name: "Hidden Weapon",
 		pp: 10,
 		priority: 3,
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Hidden Weapon only works on your first turn out.");
+				return false;
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -73085,7 +73161,7 @@ beforeTurnCallback(pokemon) {
 		flags: {protect: 1, mirror: 1, defrost: 1},
 		onTry(source) {
 			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
-				this.hint("First Impression only works on your first turn out.");
+				this.hint("Abruption only works on your first turn out.");
 				return false;
 			}
 		},
@@ -74708,8 +74784,17 @@ beforeTurnCallback(pokemon) {
 		name: "Quick Draw",
 		pp: 10,
 		priority: 3,
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Quick Draw only works on your first turn out.");
+				return false;
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
 		flags: {protect: 1, mirror: 1, west: 1},
-		secondary: null,
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -76866,6 +76951,12 @@ beforeTurnCallback(pokemon) {
 		name: "Breakfast Breaker",
 		pp: 10,
 		priority: 3,
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Breakfast Breaker only works on your first turn out.");
+				return false;
+			}
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -78334,8 +78425,17 @@ beforeTurnCallback(pokemon) {
 		name: "Justice Crash",
 		pp: 10,
 		priority: 3,
+		onTry(source) {
+			if (!source.hasAbility('numerouno') && source.activeMoveActions > 1) {
+				this.hint("Justice Crash only works on your first turn out.");
+				return false;
+			}
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
 		target: "normal",
 		type: "Normal",
 		isNonstandard: "Future",
