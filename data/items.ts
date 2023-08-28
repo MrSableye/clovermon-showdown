@@ -12578,7 +12578,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		onTryHit(target, source, move) {
-			if (target !== source && ((move.flags['bomb'] || move.flags['above'] || move.flags['contact'])
+			if (target !== source && ((move.flags['bullet'] || move.flags['above'] || move.flags['contact'])
 			|| (move.type === 'Divine' || move.type === 'Virus' || move.type === 'Fighting' || move.type === 'Ghost' || 
 			move.type === 'Dark' || move.type === 'Poison' || move.type === 'Chaos' || move.type === 'Qmarks' || 
 			move.type === 'Light' || move.type === 'Normal'))) 
@@ -12588,7 +12588,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		onAllyTryHitSide(target, source, move) {
-			if ((move.flags['bomb'] || move.flags['above'] || move.flags['contact'])
+			if ((move.flags['bullet'] || move.flags['above'] || move.flags['contact'])
 			|| (move.type === 'Divine' || move.type === 'Virus' || move.type === 'Fighting' || move.type === 'Ghost' || 
 			move.type === 'Dark' || move.type === 'Poison' || move.type === 'Chaos' || move.type === 'Qmarks' || 
 			move.type === 'Light' || move.type === 'Normal')) 

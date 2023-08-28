@@ -107,8 +107,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	thief: {
 		inherit: true,
-		basePower: 40,
+		basePower: 50,
 		pp: 10,
+		flags: {contact: 1, protect: 1, mirror: 1, west: 1},
 		onAfterHit(target, source, move) {
 			if (source.item || source.volatiles['gem'] || target.hasItem('antiplebshield')) {
 				return;
@@ -328,6 +329,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	gravity: {
 		inherit: true,
+		type: "Cosmic",
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
@@ -441,13 +443,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		onHit(pokemon) {
 			const noCopycat = [
-				'assist', 'banefulbunker', 'beakblast', 'behemothbash', 'behemothblade', 'belch', 'bestow', 'celebrate', 'chatter', 'circlethrow', 'copycat', 'counter', 'covet', 'craftyshield', 'destinybond', 'detect', 'dragontail', 'dynamaxcannon', 'endure', 'feint', 'focuspunch', 'followme', 'helpinghand', 'holdhands', 'kingsshield', 'matblock', 'mefirst', 'metronome', 'mimic', 'mirrorcoat', 'mirrormove', 'naturepower', 'obstruct', 'protect', 'ragepowder', 'roar', 'shelltrap', 'sketch', 'sleeptalk', 'snatch', 'spikyshield', 'spotlight', 'struggle', 'switcheroo', 'thief', 'transform', 'trick', 'whirlwind','nuswave', 'tsunami', 'blackhole', 'waveshot', 'stringout', 'helldrag', 'tractorbeam', 'vacuumstrike', 'baseballbat', 'homerunbat', 'airstamp', 'fujinwind', 'boo', 'booing', 'ghoulbreath', 'eject', 'magnetpulse', 'fishingrod', 'fairytail', 'agoraphobia', 'ancienttsunami', 'shiftingsands', 'aquariusflow', 'raremetalpoop', 'shepherdcrook', 'moonladder', 'poseidonmaelstrom', 'metalbat', 'violencegust', 'getoverhere', 'fusrodah', 'banhammer'
+				'struggle', 'chatter', 'mimic', 'sketch', 'metronome'
 			];
 			let move: Move | ActiveMove | null = this.lastMove;
 			if (!move) return;
 
 			if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
-			if (noCopycat.includes(move.id) || move.isZ || move.isMax) {
+			if (noCopycat.includes(move.id) || move.isZ || move.isMax || move.type === "Shadow") {
 				return false;
 			}
 			this.actions.useMove(move.id, pokemon);
@@ -467,6 +469,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	trickroom: {
 		inherit: true,
+		type: "Time",
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
@@ -499,6 +502,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	magicroom: {
 		inherit: true,
+		type: "Magic",
 		priority: -7,
 		condition: {
 			duration: 5,
@@ -573,29 +577,54 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
-	/* Vanilla moves in gen5 */
 	absorb: {
 		inherit: true,
+		basePower: 40,
 		flags: {protect: 1, mirror: 1},
 		isNonstandard: null,
 	},
-	acidarmor: {
+	acid: {
 		inherit: true,
-		pp: 40,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 40,
+			boosts: {
+				spd: -1,
+			},
+		},
+		desc: "Has a 40% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "40% chance to lower the foe(s) Sp. Def by 1.",
 		isNonstandard: null,
 	},
 	aircutter: {
 		inherit: true,
-		basePower: 55,
+		basePower: 60,
 		isNonstandard: null,
 	},
-	airslash: {
+	allyswitch: {
 		inherit: true,
-		pp: 20,
+		priority: -1,
+		isNonstandard: null,
+	},
+	aquaring: {
+		inherit: true,
+		flags: {snatch: 1, heal: 1},
+		isNonstandard: null,
+	},
+	aquatail: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, tail: 1},
+		isNonstandard: null,
+	},
+	armthrust: {
+		inherit: true,
+		basePower: 20,
+		accuracy: 95,
 		isNonstandard: null,
 	},
 	aromatherapy: {
 		inherit: true,
+		flags: {snatch: 1, sound: 1},
 		onHit(target, source) {
 			this.add('-activate', source, 'move: Aromatherapy');
 			const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
@@ -607,7 +636,1465 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	assurance: {
 		inherit: true,
+		basePower: 55,
+		isNonstandard: null,
+	},
+	attract: {
+		inherit: true,
+		type: "Heart",
+		isNonstandard: null,
+	},
+	barrage: {
+		inherit: true,
+		type: "Grass",
+		category: "Special",
+		accuracy: 90,
+		isNonstandard: null,
+	},
+	bind: {
+		inherit: true,
+		basePower: 65,
+		accuracy: 90,
+		isNonstandard: null,
+	},
+	block: {
+		inherit: true,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		pp: 20,
+		isNonstandard: null,
+	},
+	boneclub: {
+		inherit: true,
+		type: "Bone",
+		flags: {protect: 1, mirror: 1, bone: 1},
+		secondary: {
+			chance: 20,
+			volatileStatus: 'flinch',
+		},
+		desc: "Has a 20% chance to make the target flinch.",
+		shortDesc: "20% chance to make the target flinch.",
+		isNonstandard: null,
+	},
+	bonemerang: {
+		inherit: true,
+		type: "Bone",
+		flags: {protect: 1, mirror: 1, bone: 1},
+		isNonstandard: null,
+	},
+	bonerush: {
+		inherit: true,
+		type: "Bone",
+		flags: {protect: 1, mirror: 1, bone: 1},
+		isNonstandard: null,
+	},
+	bounce: {
+		inherit: true,
+		accuracy: 90,
+		pp: 10,
+		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1, distance: 1, bounce: 1, above: 1},
+		isNonstandard: null,
+	},
+	bubble: {
+		inherit: true,
+		basePower: 20,
+		secondary: {
+			chance: 40,
+			boosts: {
+				spe: -1,
+			},
+		},
+		desc: "Has a 40% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "40% chance to lower the foe(s) Speed by 1.",
+		isNonstandard: null,
+	},
+	bubblebeam: {
+		inherit: true,
+		secondary: {
+			chance: 40,
+			boosts: {
+				spe: -1,
+			},
+		},
+		desc: "Has a 40% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "40% chance to lower the foe(s) Speed by 1.",
+		isNonstandard: null,
+	},
+	bulletseed: {
+		inherit: true,
+		flags: {bullet: 1, protect: 1, mirror: 1, west: 1},
+		isNonstandard: null,
+	},
+	captivate: {
+		inherit: true,
+		type: "Heart",
+		isNonstandard: null,
+	},
+	chargebeam: {
+		inherit: true,
+		basePower: 60,
+		isNonstandard: null,
+	},
+	clamp: {
+		inherit: true,
+		basePower: 55,
+		pp: 10,
+		isNonstandard: null,
+	},
+	cometpunch: {
+		inherit: true,
+		basePower: 25,
+		type: "Cosmic",
+		accuracy: 90,
+		isNonstandard: null,
+	},
+	constrict: {
+		inherit: true,
+		basePower: 40,
+		secondary: {
+			chance: 60,
+			boosts: {
+				spe: -1,
+			},
+		},
+		desc: "Has a 60% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "60% chance to lower the foe(s) Speed by 1.",
+		isNonstandard: null,
+	},
+	conversion: {
+		inherit: true,
+		pp: 5,
+		onHit(target) {
+			const possibleTypes = target.moveSlots.map(moveSlot => {
+				const move = this.dex.moves.get(moveSlot.id);
+				if (move.id !== 'conversion' && !target.hasType(move.type)) {
+					return move.type;
+				}
+				return '';
+			}).filter(type => type);
+			if (!possibleTypes.length) {
+				return false;
+			}
+			const type = this.sample(possibleTypes);
+
+			if (!target.setType(type)) return false;
+			this.add('-start', target, 'typechange', type);
+		},
+		isNonstandard: null,
+	},
+	conversion2: {
+		inherit: true,
+		pp: 5,
+		isNonstandard: null,
+	},
+	cosmicpower: {	//TODO: Add +1 speed boost during Starfield
+		inherit: true,
+		type: "Cosmic",
+		isNonstandard: null,
+	},
+	crabhammer: {
+		inherit: true,
+		basePower: 100,
+		isNonstandard: null,
+	},
+	crosspoison: {
+		inherit: true,
+		basePower: 80,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1, sword: 1},
+		isNonstandard: null,
+	},
+	cut: {
+		inherit: true,
+		basePower: 55,
+		accuracy: 100,
+		pp: 20,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1, sword: 1},
+		critRatio: 2,
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
+		isNonstandard: null,
+	},
+	defendorder: { //TODO: Add Swarm interaction
+		inherit: true,
+		isNonstandard: null,
+	},
+	destinybond: {
+		inherit: true,
+		pp: 1,
+		isNonstandard: null,
+	},
+	detect: {
+		inherit: true,
+		priority: 3,
+		isNonstandard: null,
+	},
+	dig: {
+		inherit: true,
+		basePower: 100,
+		isNonstandard: null,
+	},
+	dive: {
+		inherit: true,
+		basePower: 100,
+		isNonstandard: null,
+	},
+	dizzypunch: {
+		inherit: true,
+		secondary: {
+			chance: 35,
+			volatileStatus: 'confusion',
+		},
+		desc: "Has a 35% chance to confuse the target.",
+		shortDesc: "35% chance to confuse the target.",
+		isNonstandard: null,
+	},
+	doublehit: {
+		inherit: true,
+		basePower: 40,
+		isNonstandard: null,
+	},
+	doublekick: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		isNonstandard: null,
+	},
+	doubleslap: {
+		inherit: true,
+		basePower: 90,
+		isNonstandard: null,
+	},
+	dragontail: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, tail: 1},
+		isNonstandard: null,
+	},
+	drillpeck: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, distance: 1, beak: 1},
+		critRatio: 2,
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
+		isNonstandard: null,
+	},
+	echoedvoice: {
+		inherit: true,
+		flags: {protect: 1, mirror: 1, sound: 1},
+		type: "Sound",
+		isNonstandard: null,
+	},
+	eggbomb: {
+		inherit: true,
+		type: "Food",
+		accuracy: 100,
+		isNonstandard: null,
+	},
+	featherdance: { //TODO: Steady Wind interaction
+		inherit: true,
+		isNonstandard: null,
+	},
+	feint: {
+		inherit: true,
+		flags: {},
 		basePower: 50,
+		isNonstandard: null,
+	},
+	feintattack: {
+		inherit: true,
+		basePower: 0,
+		accuracy: 50,
+		pp: 5,
+		ohko: true,
+		desc: "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",
+		shortDesc: "OHKOs the target. Fails if user is a lower level.",
+		isNonstandard: null,
+	},
+	finalgambit: {
+		num: 515,
+		accuracy: 100,
+		basePower: 150,
+		category: "Special",
+		name: "Final Gambit",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1},
+		selfdestruct: "always",
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		desc: "The user faints after using this move, even if this move fails for having no target. This move is prevented from executing if any active Pokemon has the Damp Ability.",
+		shortDesc: "Hits a single Pokemon. The user faints.",
+		isNonstandard: null,
+	},
+	firepledge: { //TODO: Secondary: 100% chance to trigger Sea of Fire 
+		inherit: true,
+		basePower: 70,
+		basePowerCallback(pokemon, target, move) {
+			return move.basePower;
+		},
+		onPrepareHit() {},
+		onModifyMove() {},
+		condition: {},
+		desc: "Has a 100% chance to trigger Sea of Fire.",
+		shortDesc: "100% to trigger Sea of Fire.",
+		isNonstandard: null,
+	},
+	firespin: {
+		inherit: true,
+		basePower: 50,
+		accuracy: 90,
+		isNonstandard: null,
+	},
+	flamethrower: {
+		inherit: true,
+		basePower: 95,
+		secondary: {
+			chance: 20,
+			status: 'brn',
+		},
+		isNonstandard: null,
+	},
+	flash: {
+		inherit: true,
+		type: "Light",
+		isNonstandard: null,
+	},
+	flashcannon: {
+		inherit: true,
+		basePower: 90,
+		pp: 15,
+		secondary: {
+			chance: 15,
+			boosts: {
+				spd: -1,
+			},
+		},
+		desc: "Has a 15% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "15% chance to lower the target's Sp. Def by 1.",
+		isNonstandard: null,
+	},
+	fly: {
+		inherit: true,
+		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1, distance: 1, above: 1},
+		isNonstandard: null,
+	},
+	freezeshock: {
+		inherit: true,
+		accuracy: 95,
+		isNonstandard: null,
+	},
+	frostbreath: {
+		inherit: true,
+		basePower: 50,
+		isNonstandard: null,
+	},
+	furyattack: {
+		inherit: true,
+		type: "Bone",
+		accuracy: 90,
+		flags: {contact: 1, protect: 1, mirror: 1, beak: 1},
+		isNonstandard: null,
+	},
+	furycutter: {
+		inherit: true,
+		basePower: 40,
+		flags: {contact: 1, protect: 1, mirror: 1, sword: 1},
+		condition: {
+			duration: 2,
+			onStart() {
+				this.effectState.multiplier = 1;
+			},
+			onRestart() {
+				if (this.effectState.multiplier < 8) {
+					this.effectState.multiplier <<= 1;
+				}
+				this.effectState.duration = 2;
+			},
+		},
+		isNonstandard: null,
+	},
+	furyswipes: {
+		inherit: true,
+		accuracy: 85,
+		isNonstandard: null,
+	},
+	geargrind: {
+		inherit: true,
+		accuracy: 95,
+		isNonstandard: null,
+	},
+	gigadrain: {
+		inherit: true,
+		basePower: 80,
+		flags: {protect: 1, mirror: 1},
+		isNonstandard: null,
+	},
+	glaciate: {
+		inherit: true,
+		basePower: 100,
+		isNonstandard: null,
+	},
+	grasspledge: { //TODO: Secondary: 100% chance to trigger Swamp
+		inherit: true,
+		basePower: 80,
+		basePowerCallback(pokemon, target, move) {
+			return move.basePower;
+		},
+		onPrepareHit() {},
+		onModifyMove() {},
+		condition: {},
+		desc: "Has a 100% chance to trigger Swamp.",
+		shortDesc: "100% to trigger Swamp.",
+		isNonstandard: null,
+	},
+	grasswhistle: {
+		inherit: true,
+		accuracy: 70,
+		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
+	},
+	growl: { //TODO: Amplifier interaction
+		inherit: true,
+		type: "Sound",
+		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
+	},
+	healorder: { //TODO: Swarm interaction
+		inherit: true,
+		isNonstandard: null,
+	},
+	heartstamp: {
+		inherit: true,
+		type: "Heart",
+		isNonstandard: null,
+	},
+	heartswap: {
+		inherit: true,
+		type: "Heart",
+		isNonstandard: null,
+	},
+	hex: {
+		inherit: true,
+		basePower: 60,
+		isNonstandard: null,
+	},
+	highhorsepower: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1, west: 1},
+		isNonstandard: null,
+	},
+	hornattack: {
+		inherit: true,
+		type: "Bone",
+		isNonstandard: null,
+	},
+	horndrill: {
+		inherit: true,
+		type: "Bone",
+		isNonstandard: null,
+	},
+	icebeam: {
+		inherit: true,
+		basePower: 95,
+		secondary: {
+			chance: 18,
+			status: 'frz',
+		},
+		desc: "Has a 18% chance to freeze the target.",
+		shortDesc: "18% chance to freeze the target.",
+		isNonstandard: null,
+	},
+	iceburn: {
+		inherit: true,
+		accuracy: 95,
+		isNonstandard: null,
+	},
+	icepunch: {
+		inherit: true,
+		secondary: {
+			chance: 11,
+			status: 'frz',
+		},
+		desc: "Has a 11% chance to freeze the target.",
+		shortDesc: "11% chance to freeze the target.",
+		isNonstandard: null,
+	},
+	imprison: {
+		inherit: true,
+		target: "normal",
+		desc: "The user prevents a Pokemon from using any moves that the user also knows as long as the user remains active.",
+		shortDesc: "The target cannot use any move known by the user.",
+		isNonstandard: null,
+	},
+	incinerate: {
+		inherit: true,
+		basePower: 60,
+		onHit(pokemon, source) {
+			const item = pokemon.getItem();
+			if (item.isBerry && pokemon.takeItem(source)) {
+				this.add('-enditem', pokemon, item.name, '[from] move: Incinerate');
+			}
+		},
+		isNonstandard: null,
+	},
+	irontail: { //TODO: Add Iron Dust interaction
+		inherit: true,
+		accuracy: 80,
+		flags: {contact: 1, protect: 1, mirror: 1, tail: 1},
+		isNonstandard: null,
+	},
+	judgment: {
+		inherit: true,
+		basePower: 120,
+		isNonstandard: null,
+	},
+	jumpkick: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, kick: 1, bounce: 1, above: 1},
+		isNonstandard: null,
+	},
+	kinesis: {
+		inherit: true,
+		accuracy: 100,
+		isNonstandard: null,
+	},
+	lavaplume: {
+		inherit: true,
+		type: "Magma",
+		thawsTarget: true,
+		isNonstandard: null,
+	},
+	leechlife: {
+		inherit: true,
+		basePower: 75,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		isNonstandard: null,
+	},
+	lightscreen: {
+		inherit: true,
+		type: "Light",
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('lightclay')) {
+					return 8;
+				}
+				return 5;
+			},
+			onAnyModifyDamage(damage, source, target, move) {
+				if (target !== source && this.effectState.target.hasAlly(target) && this.getCategory(move) === 'Special') {
+					if (!target.getMoveHitData(move).crit && !move.infiltrates) {
+						this.debug('Light Screen weaken');
+						if (this.activePerHalf > 1) return this.chainModify([2703, 4096]);
+						return this.chainModify(0.5);
+					}
+				}
+			},
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Light Screen');
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 2,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'move: Light Screen');
+			},
+		},
+		isNonstandard: null,
+	},
+	lovelykiss: {
+		inherit: true,
+		accuracy: 90,
+		flags: {protect: 1, reflectable: 1, mirror: 1, kiss: 1},
+		isNonstandard: null,
+	},
+	lunardance: {
+		inherit: true,
+		type: "Cosmic",
+		flags: {snatch: 1, heal: 1, dance: 1, moon: 1},
+		isNonstandard: null,
+	},
+	lusterpurge: {
+		inherit: true,
+		basePower: 80,
+		pp: 10,
+		secondary: {
+			chance: 70,
+			boosts: {
+				spd: -1,
+			},
+		},
+		desc: "Has a 70% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "70% chance to lower the target's Sp. Def by 1.",
+		isNonstandard: null,
+	},
+	magiccoat: {
+		inherit: true,
+		type: "Magic",
+		isNonstandard: null,
+	},
+	magmastorm: {
+		inherit: true,
+		basePower: 120,
+		type: "Magma",
+		thawsTarget: true,
+		isNonstandard: null,
+	},
+	meanlook: { //TODO: Add Graveyard interaction
+		inherit: true,
+		type: "Fear",
+		pp: 15,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target, source, move) {
+			if (this.field.isWeather('midnight')) {
+				const success = this.boost({spe: -2}, target, source, null, false, true);
+				return !!(target.addVolatile('trapped', source, move, 'trapper') || success);
+			}
+			return target.addVolatile('trapped', source, move, 'trapper');
+		},
+		desc: "Prevents the target from switching out. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. If the target leaves the field using Baton Pass, the replacement will remain trapped. The effect ends if the user leaves the field. Lowers the target's Speed by 2 stages during Midnight.",
+		shortDesc: "Prevents switch out. In Midnight, lowers the foe(s) Speed by 2.",
+		isNonstandard: null,
+	},
+	meditate: {
+		inherit: true,
+		boosts: {
+			spa: 1,
+			def: 1,
+		},
+		desc: "Raises the user's Special Attack and Defense by 1 stage.",
+		shortDesc: "Raises the user's SpA and Def by 1.",
+		isNonstandard: null,
+	},
+	megadrain: {
+		inherit: true,
+		basePower: 60,
+		flags: {protect: 1, mirror: 1},
+		isNonstandard: null,
+	},
+	memento: {
+		inherit: true,
+		flags: {mirror: 1},
+		isNonstandard: null,
+	},
+	metronome: {
+		inherit: true,
+		pp: 20,
+		isNonstandard: null,
+	},
+	mirrorshot: { //TODO: Mirror Dimension interaction
+		inherit: true,
+		type: "Glass",
+		isNonstandard: null,
+	},
+	mistball: {
+		inherit: true,
+		basePower: 80,
+		pp: 10,
+		secondary: {
+			chance: 70,
+			boosts: {
+				spa: -1,
+			},
+		},
+		desc: "Has a 70% chance to lower the target's Special Attack by 1 stage.",
+		shortDesc: "70% chance to lower the target's Sp. Atk by 1.",
+		isNonstandard: null,
+	},
+	moonlight: { //TODO: Eclipse, Full Moon and Fog interaction
+		inherit: true,
+		flags: {snatch: 1, heal: 1, moon: 1},
+		isNonstandard: null,
+	},
+	morningsun: {
+		inherit: true,
+		type: "Light",
+		flags: {snatch: 1, heal: 1, sun: 1},
+		isNonstandard: null,
+	},
+	mudbomb: {
+		inherit: true,
+		accuracy: 90,
+		pp: 15,
+		secondary: {
+			chance: 50,
+			boosts: {
+				accuracy: -1,
+			},
+		},
+		desc: "Has a 50% chance to lower the target's accuracy by 1 stage.",
+		shortDesc: "50% chance to lower the target's accuracy by 1.",
+		isNonstandard: null,
+	},
+	mudshot: {
+		inherit: true,
+		basePower: 60,
+		isNonstandard: null,
+	},
+	mudsport: {
+		num: 300,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Mud Sport",
+		pp: 15,
+		priority: 0,
+		flags: {},
+		volatileStatus: 'mudsport',
+		onTryHitField(target, source) {
+			if (source.volatiles['mudsport']) return false;
+		},
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				this.add("-start", pokemon, 'Mud Sport');
+			},
+			onAnyBasePowerPriority: 1,
+			onAnyBasePower(basePower, user, target, move) {
+				if (move.type === 'Electric') return this.chainModify([1352, 4096]);
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Ground",
+		isNonstandard: null,
+	},
+	needlearm: {
+		inherit: true,
+		basePower: 80,
+		isNonstandard: null,
+	},
+	nightdaze: {
+		inherit: true,
+		secondary: {
+			chance: 50,
+			boosts: {
+				accuracy: -1,
+			},
+		},
+		desc: "Has a 50% chance to lower the target's accuracy by 1 stage.",
+		shortDesc: "50% chance to lower the target's accuracy by 1.",
+		isNonstandard: null,
+	},
+	octazooka: {
+		inherit: true,
+		basePower: 75,
+		accuracy: 95,
+		isNonstandard: null,
+	},
+	outrage: {
+		inherit: true,
+		pp: 15,
+		isNonstandard: null,
+	},
+	payday: {
+		inherit: true,
+		basePower: 60,
+		isNonstandard: null,
+	},
+	perishsong: {
+		inherit: true,
+		type: "Sound",
+		flags: {sound: 1, distance: 1},
+		isNonstandard: null,
+	},
+	pinmissile: {
+		inherit: true,
+		basePower: 20,
+		accuracy: 90,
+		isNonstandard: null,
+	},
+	poisonfang: {
+		inherit: true,
+		basePower: 65,
+		secondary: {
+			chance: 30,
+			status: 'tox',
+		},
+		desc: "Has a 30% chance to badly poison the target.",
+		shortDesc: "30% chance to badly poison the target.",
+		isNonstandard: null,
+	},
+	poisonsting: {
+		inherit: true,
+		basePower: 30,
+		isNonstandard: null,
+	},
+	poisontail: {
+		inherit: true,
+		basePower: 60,
+		flags: {contact: 1, protect: 1, mirror: 1, tail: 1},
+		isNonstandard: null,
+	},
+	pound: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, tail: 1},
+		isNonstandard: null,
+	},
+	powergem: {
+		inherit: true,
+		basePower: 80,
+		isNonstandard: null,
+	},
+	psychic: {
+		inherit: true,
+		secondary: {
+			chance: 20,
+			boosts: {
+				spd: -1,
+			},
+		},
+		desc: "Has a 20% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "20% chance to lower the target's Sp. Def by 1.",
+		isNonstandard: null,
+	},
+	psywave: {
+		inherit: true,
+		accuracy: 90,
+		isNonstandard: null,
+	},
+	rage: {
+		inherit: true,
+		basePower: 60,
+		isNonstandard: null,
+	},
+	ragepowder: {
+		inherit: true,
+		priority: 3,
+		flags: {gravity: 1},
+		isNonstandard: null,
+	},
+	rapidspin: {
+		inherit: true,
+		basePower: 35,
+		isNonstandard: null,
+	},
+	razorshell: {
+		inherit: true,
+		accuracy: 100,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1, sword: 1},
+		isNonstandard: null,
+	},
+	razorwind: {
+		inherit: true,
+		type: "Wind",
+		isNonstandard: null,
+	},
+	recycle: {
+		inherit: true,
+		pp: 40,
+		isNonstandard: null,
+	},
+	relicsong: {
+		inherit: true,
+		type: "Sound",
+		accuracy: 100,
+		secondary: {
+			chance: 30,
+			status: 'slp',
+		},
+		flags: {protect: 1, mirror: 1, sound: 1},
+		desc: "Has a 30% chance to cause the target to fall asleep. If this move is successful on at least one target and the user is a Meloetta, it changes to Pirouette Forme if it is currently in Aria Forme, or changes to Aria Forme if it is currently in Pirouette Forme. This forme change does not happen if the Meloetta has the Sheer Force Ability. The Pirouette Forme reverts to Aria Forme when Meloetta is not active.",
+		shortDesc: "30% chance to sleep foe(s). Meloetta transforms.",
+		isNonstandard: null,
+	},
+	retaliate: {
+		inherit: true,
+		basePower: 75,
+		isNonstandard: null,
+	},
+	roar: {
+		inherit: true,
+		type: "Sound",
+		accuracy: 100,
+		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
+		isNonstandard: null,
+	},
+	rockclimb: {
+		inherit: true,
+		basePower: 100,
+		isNonstandard: null,
+	},
+	rocksmash: {
+		inherit: true,
+		basePower: 50,
+		secondary: {
+			chance: 80,
+			boosts: {
+				def: -1,
+			},
+		},
+		desc: "Has a 80% chance to lower the target's Defense by 1 stage.",
+		shortDesc: "80% chance to lower the target's Defense by 1.",
+		isNonstandard: null,
+	},
+	rockthrow: {
+		inherit: true,
+		accuracy: 95,
+		flags: {protect: 1, mirror: 1, above: 1},
+		isNonstandard: null,
+	},
+	rocktomb: {
+		inherit: true,
+		basePower: 50,
+		accuracy: 90,
+		pp: 10,
+		flags: {protect: 1, mirror: 1, above: 1},
+		isNonstandard: null,
+	},
+	rollingkick: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		secondary: {
+			chance: 35,
+			volatileStatus: 'flinch',
+		},
+		desc: "Has a 35% chance to make the target flinch.",
+		shortDesc: "35% chance to make the target flinch.",
+		isNonstandard: null,
+	},
+	sandtomb: {
+		inherit: true,
+		basePower: 45,
+		accuracy: 90,
+		isNonstandard: null,
+	},
+	scaryface: {
+		inherit: true,
+		type: "Fear",
+		isNonstandard: null,
+	},
+	screech: { //TODO: Amplifier interaction
+		inherit: true,
+		type: "Sound",
+		accuracy: 90,
+		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
+	},
+	seedbomb: {
+		inherit: true,
+		flags: {bullet: 1, protect: 1, mirror: 1, above: 1},
+		isNonstandard: null,
+	},
+	shadowpunch: {
+		inherit: true,
+		basePower: 65,
+		breaksProtect: true,
+		desc: "This move does not check accuracy. If this move is successful, it breaks through the target's Baneful Bunker, Detect, King's Shield, Protect, or Spiky Shield for this turn, allowing other Pokemon to attack the target normally. If the target's side is protected by Crafty Shield, Mat Block, Quick Guard, or Wide Guard, that protection is also broken for this turn and other Pokemon may attack the target's side normally.",
+		shortDesc: "Does not check accuracy. Nullifies Detect, Protect, and Quick/Wide Guard.",
+		isNonstandard: null,
+	},
+	silverwind: {
+		inherit: true,
+		pp: 10,
+		secondary: {
+			chance: 15,
+			self: {
+				boosts: {
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				},
+			},
+		},
+		desc: "Has a 15% chance to raise the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
+		shortDesc: "15% chance to raise all stats by 1 (not acc/eva).",
+		isNonstandard: null,
+	},
+	sing: {
+		inherit: true,
+		type: "Sound",
+		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
+	},
+	sketch: {
+		inherit: true,
+		type: "Paint",
+		isNonstandard: null,
+	},
+	skullbash: {
+		inherit: true,
+		basePower: 130,
+		pp: 15,
+		type: "Bone",
+		isNonstandard: null,
+	},
+	skyattack: {
+		inherit: true,
+		basePower: 150,
+		secondary: {
+			chance: 35,
+			volatileStatus: 'flinch',
+		},
+		desc: "Has a 35% chance to make the target flinch and a higher chance for a critical hit. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
+		shortDesc: "Charges, then hits turn 2. 35% flinch. High crit.",
+		isNonstandard: null,
+	},
+	slam: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, nonsky: 1, tail: 1},
+		isNonstandard: null,
+	},
+	snarl: {
+		inherit: true,
+		basePower: 60,
+		flags: {protect: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
+	},
+	snore: {
+		inherit: true,
+		basePower: 60,
+		flags: {protect: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
+	},
+	soak: {
+		inherit: true,
+		accuracy: 0,
+		onHit(target) {
+			if (!target.setType('Water')) {
+				// Soak should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add('-fail', target);
+				return null;
+			}
+			this.add('-start', target, 'typechange', 'Water');
+		},
+		desc: "This move does not check accuracy. Causes the target to become a Water type. Fails if the target is an Arceus or a Silvally, if the target is already purely Water type, or if the target is Terastallized.",
+		shortDesc: "Does not check acc. Changes the target's type to Water.",
+		isNonstandard: null,
+	},
+	solarbeam: {
+		inherit: true,
+		basePower: 140,
+		flags: {charge: 1, protect: 1, mirror: 1, sun: 1},
+		isNonstandard: null,
+	},
+	spiderweb: { //TODO: Add Web Field interaction
+		inherit: true,
+		flags: {protect: 1, reflectable: 1, mirror: 1, web: 1},
+		isNonstandard: null,
+	},
+	spikecannon: {
+		inherit: true,
+		critRatio: 2,
+		desc: "Has a higher chance for a critical hit. This move has Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+		shortDesc: "Hi crit ratio. Hits 2-5 times in one turn.",
+		isNonstandard: null,
+	},
+	steelwing: {
+		inherit: true,
+		accuracy: 95,
+		secondary: {
+			chance: 25,
+			self: {
+				boosts: {
+					def: 1,
+				},
+			},
+		},
+		desc: "Has a 25% chance to raise the user's Defense by 1 stage.",
+		shortDesc: "25% chance to raise the user's Defense by 1.",
+		isNonstandard: null,
+	},
+	stomp: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1, above: 1},
+		isNonstandard: null,
+	},
+	stompingtantrum: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		isNonstandard: null,
+	},
+	stormthrow: {
+		inherit: true,
+		basePower: 50,
+		isNonstandard: null,
+	},
+	strength: {
+		inherit: true,
+		pp: 20,
+		isNonstandard: null,
+	},
+	stringshot: {
+		inherit: true,
+		flags: {protect: 1, reflectable: 1, mirror: 1, web: 1},
+		boosts: {
+			spe: -1,
+		},
+		desc: "Lowers the target's Speed by 1 stage.",
+		shortDesc: "Lowers the foe(s) Speed by 1.",
+		isNonstandard: null,
+	},
+	strugglebug: {
+		inherit: true,
+		basePower: 60,
+		isNonstandard: null,
+	},
+	submission: {
+		inherit: true,
+		basePower: 90,
+		accuracy: 100,
+		pp: 15,
+		isNonstandard: null,
+	},
+	suckerpunch: {
+		inherit: true,
+		accuracy: 95,
+		pp: 10,
+		isNonstandard: null,
+	},
+	supersonic: { //TODO: Add Amplifier interaction
+		inherit: true,
+		type: "Sound",
+		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
+		isNonstandard: null,
+	},
+	swallow: {
+		inherit: true,
+		type: "Food",
+		isNonstandard: null,
+	},
+	sweetkiss: {
+		inherit: true,
+		accuracy: 80,
+		type: "Normal",
+		flags: {protect: 1, reflectable: 1, mirror: 1, kiss: 1},
+		isNonstandard: null,
+	},
+	sweetscent: { //TODO: Add Feast interaction
+		inherit: true,
+		type: "Grass",
+		boosts: {
+			evasion: -1,
+		},
+		desc: "Lowers the target's evasiveness by 1 stage.",
+		shortDesc: "Lowers the foe(s) evasiveness by 1.",
+		isNonstandard: null,
+	},
+	synchronoise: {
+		inherit: true,
+		basePower: 120,
+		pp: 15,
+		isNonstandard: null,
+	},
+	tailslap: {
+		inherit: true,
+		accuracy: 95,
+		flags: {contact: 1, protect: 1, mirror: 1, tail: 1},
+		isNonstandard: null,
+	},
+	technoblast: {
+		inherit: true,
+		basePower: 120,
+		isNonstandard: null,
+	},
+	teleport: {
+		inherit: true,
+		priority: -1,
+		isNonstandard: null,
+	},
+	thunder: {
+		inherit: true,
+		basePower: 120,
+		flags: {protect: 1, mirror: 1, above: 1},
+		isNonstandard: null,
+	},
+	thunderbolt: {
+		inherit: true,
+		basePower: 95,
+		flags: {protect: 1, mirror: 1, above: 1},
+		isNonstandard: null,
+	},
+	thunderouskick: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		isNonstandard: null,
+	},
+	thunderpunch: {
+		inherit: true,
+		secondary: {
+			chance: 11,
+			status: 'par',
+		},
+		desc: "Has a 11% chance to paralyze the target.",
+		shortDesc: "11% chance to paralyze the target.",
+		isNonstandard: null,
+	},
+	triattack: {
+		inherit: true,
+		secondary: {
+			chance: 22,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('brn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('frz', source);
+				}
+			},
+		},
+		desc: "Has a 22% chance to either burn, freeze, or paralyze the target.",
+		shortDesc: "22% chance to paralyze or burn or freeze target.",
+		isNonstandard: null,
+	},
+	trick: {
+		inherit: true,
+		type: "Magic",
+		isNonstandard: null,
+	},
+	triplekick: {
+		inherit: true,
+		basePower: 30,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		isNonstandard: null,
+	},
+	tropkick: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		isNonstandard: null,
+	},
+	twineedle: {
+		inherit: true,
+		basePower: 40,
+		accuracy: 95,
+		secondary: {
+			chance: 30,
+			status: 'psn',
+		},
+		desc: "Hits twice, with each hit having a 30% chance to poison the target. If the first hit breaks the target's substitute, it will take damage for the second hit.",
+		shortDesc: "Hits 2 times. Each hit has 30% chance to poison.",
+		isNonstandard: null,
+	},
+	waterfall: {
+		inherit: true,
+		basePower: 85,
+		accuracy: 95,
+		isNonstandard: null,
+	},
+	waterpledge: { //TODO: Rainbow Interaction
+		inherit: true,
+		basePower: 80,
+		basePowerCallback(pokemon, target, move) {
+			return move.basePower;
+		},
+		onPrepareHit() {},
+		onModifyMove() {},
+		condition: {},
+		desc: "Has a 100% chance to trigger Rainbow.",
+		shortDesc: "100% to trigger Rainbow.",
+		isNonstandard: null,
+	},
+	waterspout: {
+		inherit: true,
+		flags: {protect: 1, mirror: 1, above: 1},
+		isNonstandard: null,
+	},
+	whirlpool: {
+		inherit: true,
+		basePower: 45,
+		accuracy: 95,
+		isNonstandard: null,
+	},
+	whirlwind: {
+		inherit: true,
+		type: "Wind",
+		accuracy: 100,
+		flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
+		isNonstandard: null,
+	},
+	wildcharge: {
+		inherit: true,
+		basePower: 100,
+		isNonstandard: null,
+	},
+	wrap: {
+		inherit: true,
+		basePower: 20,
+		isNonstandard: null,
+	},
+	zenheadbutt: {
+		inherit: true,
+		accuracy: 95,
+		isNonstandard: null,
+	},
+	lowkick: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		isNonstandard: null,
+	},
+	blazekick: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		isNonstandard: null,
+	},
+	megakick: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, kick: 1},
+		isNonstandard: null,
+	},
+	shadowbone: {
+		inherit: true,
+		flags: {protect: 1, mirror: 1, bone: 1},
+		isNonstandard: null,
+	},
+	electroweb: {
+		inherit: true,
+		flags: {protect: 1, mirror: 1, web: 1},
+		isNonstandard: null,
+	},
+	stickyweb: {
+		inherit: true,
+		flags: {reflectable: 1, web: 1},
+		isNonstandard: null,
+	},
+	toxicthread: {
+		inherit: true,
+		flags: {protect: 1, reflectable: 1, mirror: 1, web: 1},
+		isNonstandard: null,
+	},
+	xscissor: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+		isNonstandard: null,
+	},
+	nightslash: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+		isNonstandard: null,
+	},
+	sacredsword: {
+		inherit: true,
+		pp: 20,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1, sword: 1},
+		isNonstandard: null,
+	},
+	secretsword: {
+		inherit: true,
+		flags: {protect: 1, mirror: 1, sword: 1},
+		isNonstandard: null,
+	},
+	leafblade: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1, sword: 1},
+		isNonstandard: null,
+	},
+	falseswipe: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1, sword: 1},
+		isNonstandard: null,
+	},
+	slash: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1, sword: 1},
+		isNonstandard: null,
+	},
+	psychocut: {
+		inherit: true,
+		flags: {protect: 1, mirror: 1, slicing: 1, sword: 1},
+		isNonstandard: null,
+	},
+	peck: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, distance: 1, beak: 1},
+		isNonstandard: null,
+	},
+	beakblast: {
+		inherit: true,
+		flags: {bullet: 1, protect: 1},
+		isNonstandard: null,
+	},
+	boltbeak: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		isNonstandard: null,
+	},
+	bugbite: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
+		isNonstandard: null,
+	},
+	drainingkiss: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, heal: 1, kiss: 1},
+		isNonstandard: null,
+	},
+	moonblast: {
+		inherit: true,
+		flags: {protect: 1, mirror: 1, moon: 1},
+		isNonstandard: null,
+	},
+	sunnyday: {
+		inherit: true,
+		flags: {sun: 1},
+		isNonstandard: null,
+	},
+	solarblade: {
+		inherit: true,
+		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, slicing: 1, sun: 1},
+		isNonstandard: null,
+	},
+	sunsteelstrike: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, sun: 1},
+		isNonstandard: null,
+	},
+	rockslide: {
+		inherit: true,
+		flags: {protect: 1, mirror: 1, above: 1},
+		isNonstandard: null,
+	},
+	dracometeor: {
+		inherit: true,
+		basePower: 140,
+		flags: {protect: 1, mirror: 1, above: 1},
+		isNonstandard: null,
+	},
+	fusionflare: {
+		inherit: true,
+		flags: {protect: 1, mirror: 1, defrost: 1, above: 1},
+		isNonstandard: null,
+	},
+	smackdown: {
+		inherit: true,
+		flags: {protect: 1, mirror: 1, nonsky: 1, above: 1},
+		isNonstandard: null,
+	},
+	flyingpress: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, distance: 1, nonsky: 1, above: 1},
+		isNonstandard: null,
+	},
+	mountaingale: {
+		inherit: true,
+		flags: {protect: 1, mirror: 1, above: 1},
+		isNonstandard: null,
+	},
+	meteorcrash: {
+		inherit: true,
+		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1, above: 1},
+		isNonstandard: null,
+	},
+	magicpowder: {
+		inherit: true,
+		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+		isNonstandard: null,
+	},
+	powder: {
+		inherit: true,
+		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+		isNonstandard: null,
+	},
+	/* Vanilla moves in gen5 */
+	acidarmor: {
+		inherit: true,
+		pp: 40,
+		isNonstandard: null,
+	},
+	airslash: {
+		inherit: true,
+		pp: 20,
 		isNonstandard: null,
 	},
 	aurasphere: {
@@ -660,16 +2147,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 120,
 		isNonstandard: null,
 	},
-	block: {
-		inherit: true,
-		flags: {protect: 1, reflectable: 1, mirror: 1},
-		isNonstandard: null,
-	},
-	bubble: {
-		inherit: true,
-		basePower: 20,
-		isNonstandard: null,
-	},
 	bugbuzz: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, sound: 1},
@@ -681,11 +2158,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			if (!target.setType('Ground')) return false;
 			this.add('-start', target, 'typechange', 'Ground');
 		},
-		isNonstandard: null,
-	},
-	charm: {
-		inherit: true,
-		type: "Normal",
 		isNonstandard: null,
 	},
 	chatter: {
@@ -701,40 +2173,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: {protect: 1, sound: 1, distance: 1},
 		isNonstandard: null,
 	},
-	conversion: {
-		inherit: true,
-		onHit(target) {
-			const possibleTypes = target.moveSlots.map(moveSlot => {
-				const move = this.dex.moves.get(moveSlot.id);
-				if (move.id !== 'conversion' && !target.hasType(move.type)) {
-					return move.type;
-				}
-				return '';
-			}).filter(type => type);
-			if (!possibleTypes.length) {
-				return false;
-			}
-			const type = this.sample(possibleTypes);
-
-			if (!target.setType(type)) return false;
-			this.add('-start', target, 'typechange', type);
-		},
-		isNonstandard: null,
-	},
 	cottonspore: {
 		inherit: true,
-		onTryHit() {},
+		flags: {protect: 1, reflectable: 1, mirror: 1},
 		target: "normal",
 		isNonstandard: null,
 	},
 	covet: {
 		inherit: true,
 		pp: 40,
-		isNonstandard: null,
-	},
-	crabhammer: {
-		inherit: true,
-		basePower: 90,
 		isNonstandard: null,
 	},
 	defog: {
@@ -750,11 +2197,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		isNonstandard: null,
 	},
-	dracometeor: {
-		inherit: true,
-		basePower: 140,
-		isNonstandard: null,
-	},
 	dragonpulse: {
 		inherit: true,
 		basePower: 90,
@@ -768,11 +2210,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	dreameater: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1},
-		isNonstandard: null,
-	},
-	echoedvoice: {
-		inherit: true,
-		flags: {protect: 1, mirror: 1, sound: 1},
 		isNonstandard: null,
 	},
 	electroball: {
@@ -795,63 +2232,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 30,
 		isNonstandard: null,
 	},
-	feint: {
-		inherit: true,
-		flags: {},
-		isNonstandard: null,
-	},
-	finalgambit: {
-		inherit: true,
-		flags: {contact: 1, protect: 1},
-		isNonstandard: null,
-	},
 	fireblast: {
 		inherit: true,
 		basePower: 120,
 		isNonstandard: null,
 	},
-	firepledge: {
-		inherit: true,
-		basePower: 50,
-		basePowerCallback(target, source, move) {
-			if (['grasspledge', 'waterpledge'].includes(move.sourceEffect)) {
-				this.add('-combine');
-				return 150;
-			}
-			return 50;
-		},
-		isNonstandard: null,
-	},
-	flamethrower: {
-		inherit: true,
-		basePower: 95,
-		isNonstandard: null,
-	},
 	followme: {
 		inherit: true,
 		priority: 3,
-		isNonstandard: null,
-	},
-	frostbreath: {
-		inherit: true,
-		basePower: 40,
-		isNonstandard: null,
-	},
-	furycutter: {
-		inherit: true,
-		basePower: 20,
-		condition: {
-			duration: 2,
-			onStart() {
-				this.effectState.multiplier = 1;
-			},
-			onRestart() {
-				if (this.effectState.multiplier < 8) {
-					this.effectState.multiplier <<= 1;
-				}
-				this.effectState.duration = 2;
-			},
-		},
 		isNonstandard: null,
 	},
 	futuresight: {
@@ -882,36 +2270,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		isNonstandard: null,
 	},
-	gigadrain: {
-		inherit: true,
-		flags: {protect: 1, mirror: 1},
-		isNonstandard: null,
-	},
 	glare: {
 		inherit: true,
 		accuracy: 90,
-		isNonstandard: null,
-	},
-	grasswhistle: {
-		inherit: true,
-		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
-		isNonstandard: null,
-	},
-	grasspledge: {
-		inherit: true,
-		basePower: 50,
-		basePowerCallback(target, source, move) {
-			if (['waterpledge', 'firepledge'].includes(move.sourceEffect)) {
-				this.add('-combine');
-				return 150;
-			}
-			return 50;
-		},
-		isNonstandard: null,
-	},
-	growl: {
-		inherit: true,
-		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
 		isNonstandard: null,
 	},
 	growth: {
@@ -950,11 +2311,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	heatwave: {
 		inherit: true,
 		basePower: 100,
-		isNonstandard: null,
-	},
-	hex: {
-		inherit: true,
-		basePower: 50,
 		isNonstandard: null,
 	},
 	hiddenpower: {
@@ -1056,30 +2412,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: {protect: 1, mirror: 1, sound: 1},
 		isNonstandard: null,
 	},
-	icebeam: {
-		inherit: true,
-		basePower: 95,
-		isNonstandard: null,
-	},
-	incinerate: {
-		inherit: true,
-		basePower: 30,
-		onHit(pokemon, source) {
-			const item = pokemon.getItem();
-			if (item.isBerry && pokemon.takeItem(source)) {
-				this.add('-enditem', pokemon, item.name, '[from] move: Incinerate');
-			}
-		},
-		isNonstandard: null,
-	},
 	leafstorm: {
 		inherit: true,
 		basePower: 140,
-		isNonstandard: null,
-	},
-	leechlife: {
-		inherit: true,
-		flags: {contact: 1, protect: 1, mirror: 1},
 		isNonstandard: null,
 	},
 	lick: {
@@ -1087,54 +2422,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 20,
 		isNonstandard: null,
 	},
-	lightscreen: {
-		inherit: true,
-		condition: {
-			duration: 5,
-			durationCallback(target, source, effect) {
-				if (source?.hasItem('lightclay')) {
-					return 8;
-				}
-				return 5;
-			},
-			onAnyModifyDamage(damage, source, target, move) {
-				if (target !== source && this.effectState.target.hasAlly(target) && this.getCategory(move) === 'Special') {
-					if (!target.getMoveHitData(move).crit && !move.infiltrates) {
-						this.debug('Light Screen weaken');
-						if (this.activePerHalf > 1) return this.chainModify([2703, 4096]);
-						return this.chainModify(0.5);
-					}
-				}
-			},
-			onSideStart(side) {
-				this.add('-sidestart', side, 'move: Light Screen');
-			},
-			onSideResidualOrder: 26,
-			onSideResidualSubOrder: 2,
-			onSideEnd(side) {
-				this.add('-sideend', side, 'move: Light Screen');
-			},
-		},
-		isNonstandard: null,
-	},
 	lowsweep: {
 		inherit: true,
 		basePower: 60,
-		isNonstandard: null,
-	},
-	magmastorm: {
-		inherit: true,
-		basePower: 120,
-		isNonstandard: null,
-	},
-	meanlook: {
-		inherit: true,
-		flags: {protect: 1, reflectable: 1, mirror: 1},
-		isNonstandard: null,
-	},
-	megadrain: {
-		inherit: true,
-		flags: {protect: 1, mirror: 1},
 		isNonstandard: null,
 	},
 	metalsound: {
@@ -1161,39 +2451,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		isNonstandard: null,
 	},
-	moonlight: {
-		inherit: true,
-		type: "Normal",
-		isNonstandard: null,
-	},
-	mudsport: {
-		num: 300,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		name: "Mud Sport",
-		pp: 15,
-		priority: 0,
-		flags: {},
-		volatileStatus: 'mudsport',
-		onTryHitField(target, source) {
-			if (source.volatiles['mudsport']) return false;
-		},
-		condition: {
-			noCopy: true,
-			onStart(pokemon) {
-				this.add("-start", pokemon, 'Mud Sport');
-			},
-			onAnyBasePowerPriority: 1,
-			onAnyBasePower(basePower, user, target, move) {
-				if (move.type === 'Electric') return this.chainModify([1352, 4096]);
-			},
-		},
-		secondary: null,
-		target: "all",
-		type: "Ground",
-		isNonstandard: null,
-	},
 	muddywater: {
 		inherit: true,
 		basePower: 95,
@@ -1213,37 +2470,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 140,
 		isNonstandard: null,
 	},
-	perishsong: {
-		inherit: true,
-		flags: {sound: 1, distance: 1},
-		isNonstandard: null,
-	},
-	pinmissile: {
-		inherit: true,
-		accuracy: 85,
-		basePower: 14,
-		isNonstandard: null,
-	},
-	poisonfang: {
-		inherit: true,
-		secondary: {
-			chance: 30,
-			status: 'tox',
-		},
-		isNonstandard: null,
-	},
 	poisongas: {
 		inherit: true,
 		accuracy: 80,
 	},
 	poisonpowder: {
 		inherit: true,
-		onTryHit() {},
-		isNonstandard: null,
-	},
-	powergem: {
-		inherit: true,
-		basePower: 70,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
 		isNonstandard: null,
 	},
 	psychup: {
@@ -1260,11 +2493,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	psychoshift: {
 		inherit: true,
 		accuracy: 90,
-		isNonstandard: null,
-	},
-	psywave: {
-		inherit: true,
-		accuracy: 80,
 		isNonstandard: null,
 	},
 	quickguard: {
@@ -1301,12 +2529,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		isNonstandard: null,
 	},
-	ragepowder: {
-		inherit: true,
-		priority: 3,
-		flags: {},
-		isNonstandard: null,
-	},
 	reflect: {
 		inherit: true,
 		condition: {
@@ -1337,42 +2559,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		isNonstandard: null,
 	},
-	relicsong: {
-		inherit: true,
-		flags: {protect: 1, mirror: 1, sound: 1},
-		isNonstandard: null,
-	},
-	roar: {
-		inherit: true,
-		accuracy: 100,
-		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1},
-		isNonstandard: null,
-	},
-	rocktomb: {
-		inherit: true,
-		accuracy: 80,
-		basePower: 50,
-		pp: 10,
-		isNonstandard: null,
-	},
 	round: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, sound: 1},
 		isNonstandard: null,
 	},
-	sacredsword: {
-		inherit: true,
-		pp: 20,
-		isNonstandard: null,
-	},
 	scald: {
 		inherit: true,
 		thawsTarget: false,
-		isNonstandard: null,
-	},
-	screech: {
-		inherit: true,
-		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
 		isNonstandard: null,
 	},
 	secretpower: {
@@ -1383,11 +2577,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				accuracy: -1,
 			},
 		},
-		isNonstandard: null,
-	},
-	sing: {
-		inherit: true,
-		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
 		isNonstandard: null,
 	},
 	skillswap: {
@@ -1402,12 +2591,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			source.setAbility(targetAbility);
 			target.setAbility(sourceAbility);
 		},
-		isNonstandard: null,
-	},
-	skullbash: {
-		inherit: true,
-		basePower: 100,
-		pp: 15,
 		isNonstandard: null,
 	},
 	skydrop: {
@@ -1436,7 +2619,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	sleeppowder: {
 		inherit: true,
-		onTryHit() {},
+		flags: {protect: 1, reflectable: 1, mirror: 1},
 		isNonstandard: null,
 	},
 	smellingsalts: {
@@ -1449,55 +2632,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 20,
 		isNonstandard: null,
 	},
-	snarl: {
-		inherit: true,
-		flags: {protect: 1, mirror: 1, sound: 1},
-		isNonstandard: null,
-	},
-	snore: {
-		inherit: true,
-		basePower: 40,
-		flags: {protect: 1, mirror: 1, sound: 1},
-		isNonstandard: null,
-	},
-	soak: {
-		inherit: true,
-		onHit(target) {
-			if (!target.setType('Water')) {
-				// Soak should animate even when it fails.
-				// Returning false would suppress the animation.
-				this.add('-fail', target);
-				return null;
-			}
-			this.add('-start', target, 'typechange', 'Water');
-		},
-		isNonstandard: null,
-	},
 	spore: {
 		inherit: true,
-		onTryHit() {},
-		isNonstandard: null,
-	},
-	stormthrow: {
-		inherit: true,
-		basePower: 40,
-		isNonstandard: null,
-	},
-	stringshot: {
-		inherit: true,
-		boosts: {
-			spe: -1,
-		},
-		isNonstandard: null,
-	},
-	strugglebug: {
-		inherit: true,
-		basePower: 30,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
 		isNonstandard: null,
 	},
 	stunspore: {
 		inherit: true,
-		onTryHit() {},
+		flags: {protect: 1, reflectable: 1, mirror: 1},
 		isNonstandard: null,
 	},
 	substitute: {
@@ -1550,31 +2692,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		isNonstandard: null,
 	},
-	submission: {
-		inherit: true,
-		pp: 25,
-		isNonstandard: null,
-	},
-	supersonic: {
-		inherit: true,
-		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
-		isNonstandard: null,
-	},
 	surf: {
 		inherit: true,
 		basePower: 95,
-		isNonstandard: null,
-	},
-	sweetkiss: {
-		inherit: true,
-		type: "Normal",
-		isNonstandard: null,
-	},
-	sweetscent: {
-		inherit: true,
-		boosts: {
-			evasion: -1,
-		},
 		isNonstandard: null,
 	},
 	swordsdance: {
@@ -1582,30 +2702,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 30,
 		isNonstandard: null,
 	},
-	synchronoise: {
-		inherit: true,
-		basePower: 70,
-		pp: 15,
-		isNonstandard: null,
-	},
 	tailwind: {
 		inherit: true,
 		pp: 30,
-		isNonstandard: null,
-	},
-	technoblast: {
-		inherit: true,
-		basePower: 85,
-		isNonstandard: null,
-	},
-	thunder: {
-		inherit: true,
-		basePower: 120,
-		isNonstandard: null,
-	},
-	thunderbolt: {
-		inherit: true,
-		basePower: 95,
 		isNonstandard: null,
 	},
 	toxic: {
@@ -1627,18 +2726,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	wakeupslap: {
 		inherit: true,
 		basePower: 60,
-		isNonstandard: null,
-	},
-	waterpledge: {
-		inherit: true,
-		basePower: 50,
-		basePowerCallback(target, source, move) {
-			if (['firepledge', 'grasspledge'].includes(move.sourceEffect)) {
-				this.add('-combine');
-				return 150;
-			}
-			return 50;
-		},
 		isNonstandard: null,
 	},
 	watersport: {
@@ -1669,12 +2756,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Water",
 		isNonstandard: null,
 	},
-	whirlwind: {
-		inherit: true,
-		accuracy: 100,
-		flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
-		isNonstandard: null,
-	},
 	wideguard: {
 		inherit: true,
 		stallingMove: true,
@@ -1693,10 +2774,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	// Vanilla moves added to avoid more "Not available in Gen9"
 	accelerock: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	acid: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1728,10 +2805,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	allyswitch: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	amnesia: {
 		inherit: true,
 		isNonstandard: null,
@@ -1756,23 +2829,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	aquaring: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	aquastep: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	aquatail: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	armorcannon: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	armthrust: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1789,10 +2850,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	attackorder: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	attract: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1832,15 +2889,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	barrage: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	batonpass: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	beakblast: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1868,10 +2917,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	bind: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	bite: {
 		inherit: true,
 		isNonstandard: null,
@@ -1885,10 +2930,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	blastburn: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	blazekick: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1912,31 +2953,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	boltbeak: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	boltstrike: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	boneclub: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	bonemerang: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	bonerush: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	boomburst: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	bounce: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1968,14 +2989,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	bubblebeam: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	bugbite: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	bulkup: {
 		inherit: true,
 		isNonstandard: null,
@@ -1985,10 +2998,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	bulletpunch: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	bulletseed: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2008,10 +3017,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	captivate: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	ceaselessedge: {
 		inherit: true,
 		isNonstandard: null,
@@ -2021,10 +3026,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	charge: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	chargebeam: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2045,10 +3046,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	circlethrow: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	clamp: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2084,10 +3081,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	cometpunch: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	comeuppance: {
 		inherit: true,
 		isNonstandard: null,
@@ -2104,23 +3097,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	constrict: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	conversion2: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	coreenforcer: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	corrosivegas: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	cosmicpower: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2144,10 +3125,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	crosspoison: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	crunch: {
 		inherit: true,
 		isNonstandard: null,
@@ -2161,10 +3138,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	curse: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	cut: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2188,27 +3161,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	defendorder: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	defensecurl: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	destinybond: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	detect: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	diamondstorm: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	dig: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2228,14 +3185,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dive: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	dizzypunch: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	doodle: {
 		inherit: true,
 		isNonstandard: null,
@@ -2248,23 +3197,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	doublehit: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	doubleironbash: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	doublekick: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	doubleshock: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	doubleslap: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2308,18 +3245,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dragontail: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	drainingkiss: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	drillpeck: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	drillrun: {
 		inherit: true,
 		isNonstandard: null,
@@ -2360,19 +3285,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	eggbomb: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	electrify: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	electrodrift: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	electroweb: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2448,18 +3365,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	falseswipe: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	featherdance: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	feintattack: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	fellstinger: {
 		inherit: true,
 		isNonstandard: null,
@@ -2485,10 +3390,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	firepunch: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	firespin: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2524,14 +3425,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	flash: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	flashcannon: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	flatter: {
 		inherit: true,
 		isNonstandard: null,
@@ -2561,14 +3454,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	flowertrick: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	fly: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	flyingpress: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2604,10 +3489,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	freezeshock: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	freezingglare: {
 		inherit: true,
 		isNonstandard: null,
@@ -2624,27 +3505,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	furyattack: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	furyswipes: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	fusionbolt: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	fusionflare: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	gastroacid: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	geargrind: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2665,10 +3530,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	glaciallance: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	glaciate: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2756,18 +3617,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	healorder: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	heartstamp: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	heartswap: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	heatcrash: {
 		inherit: true,
 		isNonstandard: null,
@@ -2777,10 +3626,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	helpinghand: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	highhorsepower: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2797,14 +3642,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	honeclaws: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	hornattack: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	horndrill: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2844,19 +3681,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	iceburn: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	icefang: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	icehammer: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	icepunch: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2877,10 +3706,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	icywind: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	imprison: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2916,10 +3741,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	irontail: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	jawlock: {
 		inherit: true,
 		isNonstandard: null,
@@ -2928,23 +3749,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	judgment: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	jumpkick: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	junglehealing: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	karatechop: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	kinesis: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -2976,15 +3785,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	lavaplume: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	leafage: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	leafblade: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3016,14 +3817,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	lovelykiss: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	lowkick: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	luckychant: {
 		inherit: true,
 		isNonstandard: null,
@@ -3036,15 +3829,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	lunardance: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	lunge: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	lusterpurge: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3057,14 +3842,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	magicaltorque: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	magiccoat: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	magicpowder: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3092,10 +3869,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	meditate: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	mefirst: {
 		inherit: true,
 		isNonstandard: null,
@@ -3104,15 +3877,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	megakick: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	megapunch: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	memento: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3129,10 +3894,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	meteorbeam: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	metronome: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3164,15 +3925,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	mirrorshot: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	mist: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	mistball: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3180,31 +3933,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	moonblast: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	moongeistbeam: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	morningsun: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	mortalspin: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	mountaingale: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	mudbomb: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	mudshot: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3236,23 +3969,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	needlearm: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	nightdaze: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	nightmare: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	nightshade: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	nightslash: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3280,10 +4001,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	octazooka: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	octolock: {
 		inherit: true,
 		isNonstandard: null,
@@ -3301,10 +4018,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	originpulse: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	outrage: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3329,14 +4042,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	payback: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	payday: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	peck: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3380,14 +4085,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	poisonsting: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	poisontail: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	pollenpuff: {
 		inherit: true,
 		isNonstandard: null,
@@ -3401,14 +4098,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	pounce: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	pound: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	powder: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3464,19 +4153,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	psychic: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	psychicfangs: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	psychoboost: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	psychocut: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3520,10 +4201,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	rage: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	ragefist: {
 		inherit: true,
 		isNonstandard: null,
@@ -3540,27 +4217,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	rapidspin: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	razorleaf: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	razorshell: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	razorwind: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	recover: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	recycle: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3573,10 +4234,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	rest: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	retaliate: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3612,23 +4269,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	rockclimb: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	rockpolish: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	rockslide: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	rocksmash: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	rockthrow: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3637,10 +4278,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	roleplay: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	rollingkick: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3684,19 +4321,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	sandtomb: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	sappyseed: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	scaleshot: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	scaryface: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3712,14 +4341,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	secretsword: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	seedbomb: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	seedflare: {
 		inherit: true,
 		isNonstandard: null,
@@ -3732,19 +4353,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	shadowbone: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	shadowclaw: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	shadowforce: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	shadowpunch: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3804,10 +4417,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	silverwind: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	simplebeam: {
 		inherit: true,
 		isNonstandard: null,
@@ -3816,15 +4425,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	sketch: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	skittersmack: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	skyattack: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3833,14 +4434,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	slackoff: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	slam: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	slash: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3857,10 +4450,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	sludgewave: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	smackdown: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3889,14 +4478,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	softboiled: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	solarbeam: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	solarblade: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -3929,14 +4510,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	spicyextract: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	spiderweb: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	spikecannon: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4004,23 +4577,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	steelwing: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	stickyweb: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	stockpile: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	stomp: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	stompingtantrum: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4040,10 +4597,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	strength: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	strengthsap: {
 		inherit: true,
 		isNonstandard: null,
@@ -4053,18 +4606,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	stuffcheeks: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	suckerpunch: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	sunnyday: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	sunsteelstrike: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4081,10 +4622,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	swagger: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	swallow: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4105,10 +4642,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	tailglow: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	tailslap: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4148,10 +4681,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	teleport: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	terablast: {
 		inherit: true,
 		isNonstandard: null,
@@ -4181,14 +4710,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	thunderfang: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	thunderouskick: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	thunderpunch: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4224,23 +4745,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	toxicthread: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	trailblaze: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	transform: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	triattack: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	trick: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4260,23 +4769,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	triplekick: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	tropkick: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	trumpcard: {
 		inherit: true,
 		isNonstandard: null,
 	},
 	twinbeam: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	twineedle: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4324,10 +4821,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	waterfall: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	watergun: {
 		inherit: true,
 		isNonstandard: null,
@@ -4340,15 +4833,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	waterspout: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	wavecrash: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	whirlpool: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4361,10 +4846,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	wildboltstorm: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	wildcharge: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4392,15 +4873,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	wrap: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	wringout: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	xscissor: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4409,10 +4882,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	zapcannon: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	zenheadbutt: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4821,10 +5290,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	// Wack moves		
 	hijumpkick: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	smellingsalt: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -6701,10 +7166,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	palmscrape: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	meteorcrash: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -17071,7 +17532,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "Cherries-like bombs are thrown to strike two to five times in a row.",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, bomb: 1},
+		flags: {protect: 1, mirror: 1, bullet: 1},
 		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
@@ -17197,7 +17658,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "The user lets off an atomic bomb. It also damages the user by a fairly large amount, however.",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, bomb: 1},
+		flags: {protect: 1, mirror: 1, bullet: 1},
 		selfdestruct: false,
 		recoil: [1, 3],
 		secondary: null,
