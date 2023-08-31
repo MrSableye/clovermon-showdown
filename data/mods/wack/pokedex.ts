@@ -2421,7 +2421,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	toxapex: {
 		inherit: true,
 		types: ["Water", "Poison"],
-		abilities: {0: "Limber", 1: "Merciless"},
+		abilities: {0: "Limber", 1: "Merciless", H: "Regenerator"},
 	},
 	mudsdale: {
 		inherit: true,

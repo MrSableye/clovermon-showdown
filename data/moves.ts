@@ -39296,10 +39296,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		boosts: {
-			accuracy: 2,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					accuracy: 2,
+				}
+			}
 		},
-		secondary: null,
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -39456,6 +39460,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 1,
 		volatileStatus: 'substitute',
+		onTryHit(source) {
+			if (source.volatiles['substitute']) {
+				this.add('-fail', source, 'move: Substitute');
+				return this.NOT_FAIL;
+			}
+			if (source.hp <= source.maxhp / 4 || source.maxhp === 1) { // Shedinja clause
+				this.add('-fail', source, 'move: Substitute', '[weak]');
+				return this.NOT_FAIL;
+			}
+		},
+		onHit(target) {
+			this.directDamage(target.maxhp / 4);
+		},
 		flags: {snatch: 1},
 		secondary: null,
 		target: "self",
