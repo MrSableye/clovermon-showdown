@@ -4129,10 +4129,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	fellstinger: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	fierydance: {
 		inherit: true,
 		isNonstandard: null,
@@ -4566,10 +4562,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 	},
 	mimic: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	mindblown: {
 		inherit: true,
 		isNonstandard: null,
 	},
