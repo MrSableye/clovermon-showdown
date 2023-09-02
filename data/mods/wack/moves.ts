@@ -1786,7 +1786,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Food",
 		isNonstandard: null,
 	},
-	mindblow: {
+	mindblown: {
 		inherit: true,
 		pp: 15,
 		secondary: {
