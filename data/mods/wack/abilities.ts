@@ -529,16 +529,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		desc: "This Pokemon's Speed is raised by 1 stage if hit by a Bug-, Dark-, Fear- or Ghost-type attack.",
 		shortDesc: "Speed is raised 1 stage if hit by a Bug-, Dark-, Fear- or Ghost-type attack.",
 	},
-	bulletproof: {
-		inherit: true,
-		onTryHit(pokemon, target, move) {
-			if (move.flags['bullet'] || move.flags['bomb']) {
-				this.add('-immune', pokemon, '[from] ability: Bulletproof');
-				return null;
-			}
-		},
-		shortDesc: "This Pokemon is immune to bullet and bomb moves.",
-	},
 	galewings: {
 		inherit: true,
 		onModifyPriority(priority, pokemon, target, move) {
