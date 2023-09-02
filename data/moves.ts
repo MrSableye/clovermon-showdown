@@ -12794,6 +12794,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 				move = 'psychic';
 			} else if (this.field.isTerrain('plasticterrain')) {
 				move = 'recycleray';
+			} else if (this.field.isTerrain('volcanicterrain')) {
+				move = 'lavasplash';
 			}
 			const fullMove = this.dex.getActiveMove(move);
 			fullMove.flags = {...fullMove.flags, naturePower: 1};
@@ -47150,8 +47152,11 @@ beforeTurnCallback(pokemon) {
 		name: "Gash",
 		pp: 10,
 		priority: 0,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'bleed',
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
 		target: "normal",
 		type: "Blood",
 		isNonstandard: "Future",
@@ -50961,7 +50966,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'bleed',
+		},
 		target: "normal",
 		type: "Blood",
 		isNonstandard: "Future",
@@ -58057,8 +58065,11 @@ beforeTurnCallback(pokemon) {
 		name: "Rake",
 		pp: 15,
 		priority: 0,
+		secondary: {
+			chance: 15,
+			volatileStatus: 'bleed',
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
 		target: "normal",
 		type: "Blood",
 		isNonstandard: "Future",
@@ -58360,7 +58371,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'bleed',
+		},
 		target: "normal",
 		type: "Chaos",
 		isNonstandard: "Future",
@@ -61274,7 +61288,16 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('bleed');
+				target.addVolatile('curse');
+				target.addVolatile('block');
+				target.addVolatile('healblock');
+			}
+		},
 		secondary: null,
+		status: 'psn',
 		target: "normal",
 		type: "Qmarks",
 		isNonstandard: "Future",
@@ -62386,7 +62409,10 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'bleed',
+		},
 		target: "normal",
 		type: "Blood",
 		isNonstandard: "Future",
@@ -65349,6 +65375,7 @@ beforeTurnCallback(pokemon) {
 			let success = false;
 			const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
 			for (const ally of allies) {
+				if (ally !== source && ally.hasAbility(['soundproof', 'cacophony'])) continue;
 				if (ally.cureStatus()) success = true;
 			}
 			return success;
@@ -65550,7 +65577,10 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'bleed',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Blood",
@@ -68295,7 +68325,40 @@ beforeTurnCallback(pokemon) {
 		name: "Volcanic Terrain",
 		pp: 10,
 		priority: 0,
-		flags: {pulse: 1, defrost: 1},
+		flags: {nonsky: 1, defrost: 1},
+		terrain: 'volcanicterrain',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem('terrainextender')) {
+					return 8;
+				}
+				return 5;
+			},
+			onSetStatus(status, target, source, effect) {
+				if (!target.isGrounded() || target.isSemiInvulnerable()) return;
+				if (status.id === 'frz') return false;
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Magma' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
+					this.debug('magma terrain boost');
+					return this.chainModify([1.5]);
+				}
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Volcanic Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Volcanic Terrain');
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Volcanic Terrain');
+			},
+		},
 		secondary: null,
 		target: "scripted",
 		type: "Magma",
@@ -68534,7 +68597,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'bleed',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Chaos",
@@ -69041,7 +69107,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'bleed',
+		},
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -70013,7 +70082,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'bleed',
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Ghost",
@@ -70199,6 +70271,13 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
+		basePowerCallback(source, target, move) {
+			if (this.field.isTerrain('volcanicterrain') && target.isGrounded()) {
+				if (!source.isAlly(target)) this.hint(`${move.name}'s BP doubled on grounded target.`);
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Magma",
@@ -73496,7 +73575,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'bleed',
+		},
 		target: "normal",
 		type: "Meme",
 		isNonstandard: "Future",
@@ -75188,6 +75270,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		overrideOffensiveStat: 'def',
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -77708,6 +77791,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		overrideOffensiveStat: 'def',
 		target: "normal",
 		type: "Cyber",
 		isNonstandard: "Future",
