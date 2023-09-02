@@ -1150,7 +1150,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "OHKOs the target. Fails if user is a lower level.",
 		isNonstandard: null,
 	},
-	fellstringer: {
+	fellstinger: {
 		inherit: true,
 		basePower: 65,
 		pp: 15,
