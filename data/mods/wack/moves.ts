@@ -1022,7 +1022,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	doubleslap: {
 		inherit: true,
-		basePower: 90,
+		accuracy: 90,
 		isNonstandard: null,
 	},
 	dragondarts: {
