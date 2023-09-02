@@ -53891,15 +53891,12 @@ beforeTurnCallback(pokemon) {
 	faithcharge: {
 		num: 667989,
 		accuracy: 100,
-		basePower: 0,
+		basePower: 1,
 		category: "Physical",
 		name: "Faith Charge",
 		pp: 10,
-		basePowerCallback(pokemon, target) {
-			let power = 60 + 20 * target.positiveBoosts();
-			if (power > 200) power = 200;
-			this.debug('BP: ' + power);
-			return power;
+		basePowerCallback(pokemon) {
+			return Math.floor((pokemon.happiness * 10) / 25) || 1;
 		},
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
