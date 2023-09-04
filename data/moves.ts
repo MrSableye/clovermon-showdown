@@ -55667,7 +55667,7 @@ beforeTurnCallback(pokemon) {
 				} else if (pokemon.hasItem('heavydutyboots')) {
 					return;
 				} else {
-					pokemon.addVolatile('drowsy', pokemon.side.foe.active[0]);
+					pokemon.addVolatile('yawn', pokemon.side.foe.active[0]);
 				}
 			},
 		},
@@ -55698,7 +55698,7 @@ beforeTurnCallback(pokemon) {
 					pokemon.side.removeSideCondition('wiretrap');
 				} else if (pokemon.hasItem('heavydutyboots')) {
 					return;
-				} else if (this.effectState.layers >= 2) {
+				} else {
 					pokemon.trySetStatus('par', pokemon.side.foe.active[0]);
 				}
 			},
@@ -56872,12 +56872,12 @@ beforeTurnCallback(pokemon) {
 		condition: {
 			// this is a side condition
 			onSideStart(side) {
-				this.add('-sidestart', side, 'move: Pillow Pile');
+				this.add('-sidestart', side, 'move: Acid Trap');
 			},
 			onEntryHazard(pokemon) {
 				if (!pokemon.isGrounded()) return;
 				if (pokemon.hasType('Poison')) {
-					this.add('-sideend', pokemon.side, 'move: Pillow Pile', '[of] ' + pokemon);
+					this.add('-sideend', pokemon.side, 'move: Acid Trap', '[of] ' + pokemon);
 					pokemon.side.removeSideCondition('acidtrap');
 					
 				} else if (pokemon.hasItem('heavydutyboots')) {
@@ -56917,7 +56917,7 @@ beforeTurnCallback(pokemon) {
 					pokemon.side.removeSideCondition('hotcoals');
 				} else if (pokemon.hasItem('heavydutyboots')) {
 					return;
-				} else if (this.effectState.layers >= 2) {
+				} else {
 					pokemon.trySetStatus('brn', pokemon.side.foe.active[0]);
 				}
 			},
@@ -78090,7 +78090,7 @@ beforeTurnCallback(pokemon) {
 					pokemon.side.removeSideCondition('discombubbles');
 				} else if (pokemon.hasItem('heavydutyboots')) {
 					return;
-				} else if (this.effectState.layers >= 2) {
+				} else {
 					pokemon.addVolatile('confusion', pokemon.side.foe.active[0]);
 				}
 			},
