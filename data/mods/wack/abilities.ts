@@ -538,7 +538,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	parentalbond: {
 		inherit: true,
-		//Changes made in sim/battle-actions.ts
+		//Damage changes made in sim/battle-actions.ts
+		onPrepareHit(source, target, move) {
+			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
+			if (['dynamaxcannon', 'endeavor', 'fling', 'iceball', 'rollout'].includes(move.id)) return;
+			if (!move.flags['charge'] && !move.isZ && !move.isMax) {
+				move.multihit = 2;
+				move.multihitType = 'parentalbond';
+			}
+		},
 		desc: "This Pokemon's damaging moves become multi-hit moves that hit twice. Does not affect multi-hit moves or moves that have multiple targets.",
 		shortDesc: "This Pokemon's damaging moves hit twice.",
 	},
