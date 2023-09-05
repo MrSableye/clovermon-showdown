@@ -547,7 +547,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				move.multihitType = 'parentalbond';
 			}
 		},
-		desc: "This Pokemon's damaging moves become multi-hit moves that hit twice. Does not affect multi-hit moves or moves that have multiple targets.",
+		desc: "This Pokemon's damaging moves become multi-hit moves that hit twice. Does not affect multi-hit moves.",
 		shortDesc: "This Pokemon's damaging moves hit twice.",
 	},
 	// Gen5 vanilla abilities
