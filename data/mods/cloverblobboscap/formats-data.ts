@@ -2520,6 +2520,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	glucurs: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	qrakenmark: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+
 	theforest: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -2528,7 +2537,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	vergillion: {
+	vergilion: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
