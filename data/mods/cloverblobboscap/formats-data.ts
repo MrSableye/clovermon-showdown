@@ -2537,7 +2537,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	vergillion: {
+	vergilion: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
