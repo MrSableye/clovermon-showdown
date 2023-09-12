@@ -2528,6 +2528,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	glucurs: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	qrakenmark: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,
