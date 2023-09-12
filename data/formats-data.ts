@@ -8028,11 +8028,71 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	tartis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	terratarus: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	stowlet: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	strixnight: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	inkrow: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	liquill: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ravarnish: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	larvatrice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	brashalisk: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	kokaiju: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	levititan: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	flockarrion: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sepulture: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	onusalt: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
 	ghastropod: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	ibask: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	dirtybis: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -9870,6 +9930,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	genine: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	hofucyea: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -10207,6 +10271,18 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	yamigiri: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	paritta: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	macaegis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	trobbound: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -11595,6 +11671,406 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Future",
 	},
 	stando: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standotheworld: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standohierophantgreen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standohermitpurple: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standomagiciansred: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standosilverchariot: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standothefool: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standocream: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standodarkbluemoon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standotowerofgray: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoebonydevil: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoyellowtemperance: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standostrength: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standowheeloffortune: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standohangedman: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoemperor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoemperess: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standojustice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standolovers: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standothesun: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standodeaththirteen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standojudgment: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standohighpriestess: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standogeb: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standokhnum: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standothoth: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoanubis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standobastet: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standosethan: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoosiris: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standohorus: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoatum: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standotenoresax: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standocrazydiamond: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standothehand: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoechoesact1: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoechoesact2: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoechoesact3: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoheavensdoor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standokillerqueen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoaquanecklace: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standobadcompany: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoredhotchillipepper: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standothelock: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standosurface: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standolovedeluxe: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standopearljam: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoratt: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoharvest: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standocinderella: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoboyiiman: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standohighwaystar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standostraycat: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standosuperfly: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoenigma: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standocheaptrick: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoatomheartfather: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoacthungbaby: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoearthwindandfire: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standogoldexperience: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standostickyfingers: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standomoodyblues: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standosexpistols: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoaerosmith: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standopurplehaze: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standospicegirl: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standokingcrimson: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoblacksabbath: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standosoftmachine: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standokraftwork: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standolittlefeet: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standomaninthemirror: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standomrpresident: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standobeachboy: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standogratefuldead: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standobabyface: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standowhitealbum: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoclash: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standotalkinghead: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standonotoriousbig: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standometallica: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standogreenday: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standooasis: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standorollingstones: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standostonefree: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoweatherreport: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standowhitesnake: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoscarymonsters: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standohighwaytohell: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standosurvivor: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoskyhigh: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standosoftandwet: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standocmoon: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standotuskact1: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoballbreaker: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standod4c: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoinasilentway: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standoheyya: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standosilverchariotrequiem: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standobluenight: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	standohighhighpriestess: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

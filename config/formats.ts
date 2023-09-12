@@ -713,16 +713,16 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
 			'Overflow Stat Mod',
 		],
 		banlist: [
-			'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+			'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Angel Powder + Detect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
-			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
-			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
+			'Hell Drag', 'Pacify', 'Rift Strike'
 		],
 	},
 	{
@@ -732,16 +732,16 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Standard',
 			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
 			'Overflow Stat Mod',
 		],
 		banlist: [
-			'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+			'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Angel Powder + Detect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
-			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
-			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
+			'Hell Drag', 'Pacify', 'Rift Strike'
 		],
 	},
 	{
@@ -752,16 +752,16 @@ export const Formats: FormatList = [
 			'Not Fully Evolved',
 			'Standard',
 			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
 			'Overflow Stat Mod',
 		],
 		banlist: [
-			'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+			'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Angel Powder + Detect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
-			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
-			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
+			'Hell Drag', 'Pacify', 'Rift Strike'
 		],
 	},
 	{
@@ -772,16 +772,16 @@ export const Formats: FormatList = [
 			'Little Cup',
 			'Standard',
 			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
 			'Overflow Stat Mod',
 		],
 		banlist: [
-			'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+			'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Angel Powder + Detect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
-			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
-			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
+			'Hell Drag', 'Pacify', 'Rift Strike'
 		],
 	},
 	{
@@ -792,16 +792,16 @@ export const Formats: FormatList = [
 			'Same Type Clause',
 			'Standard',
 			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
 			'Overflow Stat Mod',
 		],
 		banlist: [
-			'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+			'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Angel Powder + Detect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
-			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
-			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
+			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
+			'Hell Drag', 'Pacify', 'Rift Strike'
 		],
 	},
 	{
@@ -816,7 +816,7 @@ export const Formats: FormatList = [
 			'Overflow Stat Mod',
 		],
 		banlist: [
-			'antiplebshield'
+			'Antiplebshield'
 		],
 	},
 	{
@@ -828,15 +828,15 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Swagger Clause',
-			'Sketch Post-Gen 7 Moves',
 			'Overflow Stat Mod',
 		],
-		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Angel Powder + Detect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 		'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 		'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
-		'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
-		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+		'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
+		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
+		'Hell Drag', 'Pacify', 'Rift Strike'
 		],
 	},
 	{
@@ -850,15 +850,15 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Swagger Clause',
-			'Sketch Post-Gen 7 Moves',
 			'Overflow Stat Mod',
 		],
-		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations',
+		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Angel Powder + Detect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 		'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 		'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
-		'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal',
-		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo'
+		'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
+		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
+		'Hell Drag', 'Pacify', 'Rift Strike'
 		],
 	},
 	{
@@ -1097,6 +1097,40 @@ export const Formats: FormatList = [
 		],
 		banlist: ['Nothing', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", 'Fling + License to Sell Hotdogs'],
 	},
+	{
+		name: '[Gen 8 Sandbox Only] Regulated OU',
+		mod: 'sandbox',
+		ruleset: [
+			'Terastal Clause',
+			'Obtainable',
+			'Team Preview',
+			'Sleep Clause Mod',
+			'Nickname Clause',
+			'Endless Battle Clause',
+			'HP Percentage Mod',
+			'Cancel Mod',
+			'Sketch Post-Gen 7 Moves',
+			'OHKO Clause',
+			'Evasion Moves Clause',
+			'Species Clause but Special for Blobbos',
+		],
+		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs', 'Skull Cannon', 'Extinction Wave', 'Wonder Guard', 'Junkbane', 'Shed Tail',
+					'Condoom + Unaware', 'Potarded + Unaware', 'Wheygle + Unburden',
+					'Adesign','Demiwaifu','Notridley','Endranther','Baddon','Scytill','Foryu','Clovenix','Jewipede','Chromox','Heliofug','Vivaiger',
+					'Fontaba-/z/','Arceus','Kuuroba','Funnedong','Narwhiz','Niterpent','Griffawork','Boarnograf','Tentaquil','Regishort','Regicide','Devante','Manatank',
+					'Nyanonite','The Forest','Vergilion','Dragapult','Annihilape','Calyrex-Ice','Chien-Pao','Dialga','Espathra','Eternatus','Flutter Mane','Giratina','Giratina-Origin',
+					'Groudon','Iron Bundle','Landorus','Koraidon','Kyogre','Magearna','Mewtwo','Miraidon','Palafin','Palafin-Hero','Palkia','Palkia-Origin','Rayquaza','Regieleki',
+					'Urshifu','Urshifu-Rapid-Strike','Volcarona','Zamazenta','Zamazenta-Crowned','Cinderace','Darmanitan-Galar','Darmanitan-Galar-Zen',
+					'Dracovish','Genesect','Kyurem','Kyurem-Black','Kyurem-White','Lugia','Lunala','Marshadow','Naganadel','Necrozma-Dusk Mane','Necrozma-Dawn Wings','Pheromosa','Solgaleo',
+					'Spectrier','Xerneas','Yveltal','Zygarde','Zygarde-Complete','Deoxys','Deoxys-Attack','Deoxys-Defense','Deoxys-Speed','Gengarite','Groudon-Primal','Kangaskhanite','Kyogre-Primal',
+					'Lucarionite','Metagrossite','Necrozma-Ultra','Ultranecrozium Z','Salamencite','Sablenite','Regigigas + Big Guy','Blobbos-Forbidden','Fatherfuck','Hofucyea','Blobbos-Cell + Regenerator',
+					'Blobbos-Clover','Oblivion','Infected-Zombie','Blobbos-Wack','Blobbos-Wack-Mega','Dussans','Ho-Oh','Jewipede-O','Fucker-Ultra','Regigigone +  Flame Body','Beegyosh','Dugwalker',
+					'Taterdoom','Lemonhorse','Neohorse','Piiviasuustro','Purplegoat','Blobbos-Homestuck-God-Tier','Blobbos-Dark Matter','Blobbos-eedle','Blobbos-eedle-True','Blobbos-King',
+					'Blobbos-Zero','Oengas','Aurumoth','Galashitwatt','Sableven','Zangursed','Abdiking','Smellsumo','Autumn','Shroomageddon','Junkgeist', 'Sableedle','Spireedle','Cell Construct'
+					],
+	
+	},
+
 	{
 		name: "[Gen 1] Ubers",
 		mod: 'gen1',

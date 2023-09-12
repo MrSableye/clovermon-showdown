@@ -2500,6 +2500,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Omniscience",
 		desc: "This Pokemon can hit Dark types with Psychic-type moves. Psychic-type attacks don't miss.",
 	},
+	horror: {
+		name: "Horror",
+		desc: "This Pokemon's Speed is raised 1 stage at the end of each full turn on the field. On switch-in, adds Grass to the all foe's type(s).",
+	},
 	overeager: {
 		name: "Overeager",
 		desc: "This Pokemon's damaging moves become multi-hit moves that hit thrice. Subsequent hits has its damage quartered. Does not affect multi-hit moves or moves that have multiple targets.",
@@ -3129,6 +3133,70 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Cancer",
 		shortDesc: "At end of turn, try to toxic all foes, ignoring immunity. If the foe is already poisoned, they lose 1/16 of their max HP and heal for that amount.",
 	},
+	doomguard: {
+		name: "Doom Guard",
+		shortDesc: "This Pokemon can only be damaged by not very effective moves and indirect damage.",
+	},
+	mindovermatter: {
+		name: "Mind Over Matter",
+		shortDesc: "This Pokemon's Attack boosts are replaced with Sp. Attack boosts.",
+	},
+	healthybody: {
+		name: "Healthy Body",
+		shortDesc: "If this Pokemon has 3 or more boosts, its Attack is added to its Sp. Attack.",
+	},
+	holyboost: {
+		name: "Holy Boost",
+		shortDesc: "This Pokemon's lowest stat is raised by 1 if it attacks and KOes another Pokemon.",
+	},
+	rot: {
+		name: "Rot",
+		shortDesc: "On-switch in, all active Pokemon's Leftovers are turned into Black Sludge.",
+	},
+	"2mss": {
+		name: "2MSS",
+		shortDesc: "This Pokemon's third and fourth moves are disabled.",
+	},
+	evolutionaryadvantage: {
+		name: "Evolutionary Advantage",
+		shortDesc: "This Pokemon's base power is doubled against different colored Pokemon.",
+	},
+	closequarterscombat: {
+		name: "Close-Quarters Combat",
+		shortDesc: "On switch-in, attempt to remove a random foe's item.",
+	},
+	predator: {
+		name: "Predator",
+		shortDesc: "This Pokemon has +1 Crit for each stat drop its target has.",
+	},
+	hazey: {
+		name: "Hazey",
+		shortDesc: "On switch-in, this Pokemon clears all boosts of all Pokemon.",
+	},
+	crippleguard: {
+		name: "Cripple Guard",
+		shortDesc: "This Pokemon takes 25% less damage from statused Pokemon.",
+	},
+	boostboost: {
+		name: "Boost Boost",
+		shortDesc: "This Pokemon gains 10% base power for each boost it has.",
+	},
+	fetalrupture: {
+		name: "Fetal Rupture",
+		shortDesc: "This Pokemon's attacking moves OHKO not fully evolved Pokemon.",
+	},
+	sleeper: {
+		name: "Sleeper",
+		shortDesc: "This Pokemon can use moves and takes double damage while asleep. Tries to fall asleep every 2 turns.",
+	},
+	sequencer: {
+		name: "Sequencer",
+		shortDesc: "Each hit of a multihit move beyond the first has 10 more BP.",
+	},
+	frostysurge: {
+		name: "Frosty Surge",
+		shortDesc: "Sets Frosty Terrain on switch-in.",
+	},
 	brainwash: {
 		name: "Brainwash",
 		shortDesc: "On switch-in, this Pokemon lowers the Sp. Attack of opponents by 1 stage.",
@@ -3179,6 +3247,18 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "This Pokemon's Status moves have priority raised by 1, going first within its priority. If hit by one Fairy move, this Pokemon's Status moves ignore type immunites and certain Abilities of other Pokemon. Fairy immunity.",
 
 		start: "  The power of [POKEMON]'s Status moves rose!",
+	},
+	compensate: {
+		name: "Compensate",
+		shortDesc: "This Pokemon's Attack is boosted by 25% of the higher of its unboosted, unmodified Defense or Speed",
+	},
+	dexterity: {
+		name: "Dexterity",
+		shortDesc: "This Pokemon's Attack is boosted by 25% of its unboosted, unmodified Speed",
+	},
+	vindication: {
+		name: "Vindication",
+		shortDesc: "This Pokemon's Attack is boosted by 25% of its unboosted, unmodified Defense",
 	},
 	ascension: {
 		name: "Ascension",
@@ -3408,8 +3488,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Boosts the power of tail moves.",
 		desc: "Boosts the power of tail moves.",
 	},
-	sceptic: {
-		name: "Sceptic",
+	skeptic: {
+		name: "Skeptic",
 		shortDesc: "Ups resistance to Fairy, Divine and Magic-type moves.",
 		desc: "Ups resistance to Fairy, Divine and Magic-type moves.",
 	},
@@ -3455,8 +3535,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	sugarrush: {
 		name: "Sugar Rush",
-		shortDesc: "Raises Speed if hit by a Food-type move.",
-		desc: "Raises Speed if hit by a Food-type move.",
+		shortDesc: "Raises Speed if hit by a Fairy- or Food-type move.",
+		desc: "Raises Speed if hit by a Fairy- or Food-type move.",
 	},
 	vacuum: {
 		name: "Vacuum",
@@ -3613,4 +3693,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Restores HP if hit by a Ghost-type move.",
 		desc: "Restores HP if hit by a Ghost-type move.",
 	},
+	polite: {
+		name: "Polite",
+		shortDesc: "Moves last. STAB increased to 2."
+	}
 };

@@ -323,7 +323,7 @@ export class Pokemon {
 				if (!set.hpType) set.hpType = move.type;
 				move = this.battle.dex.moves.get('hiddenpower');
 			}
-			let basepp = (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5;
+			let basepp = (move.noPPBoosts || move.isZ) ? move.pp : Math.floor(move.pp * 8 / 5);
 			if (this.battle.gen < 3) basepp = Math.min(61, basepp);
 			this.baseMoveSlots.push({
 				move: move.name,
@@ -800,13 +800,14 @@ export class Pokemon {
 		if (this.battle.gen >= 5 && !this.isActive) return true;
 		if (this.getAbility().isPermanent) return false;
 		if (this.volatiles['gastroacid']) return true;
+		if (this.hasItem('Supression Stone')) return true;
 
 		// Check if any active pokemon have the ability Neutralizing Gas
 		if (this.hasItem('Ability Shield') || this.ability === ('neutralizinggas' as ID)) return false;
 		for (const pokemon of this.battle.getAllActive()) {
 			// can't use hasAbility because it would lead to infinite recursion
-			if (pokemon.ability === ('neutralizinggas' as ID) && !pokemon.volatiles['gastroacid'] &&
-				!pokemon.transformed && !pokemon.abilityState.ending) {
+			if (pokemon.ability === ('neutralizinggas' as ID) && !pokemon.volatiles['gastroacid'] && 
+			!pokemon.hasItem('Supression Stone') && !pokemon.transformed && !pokemon.abilityState.ending) {
 				return true;
 			}
 		}

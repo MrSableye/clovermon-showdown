@@ -2218,8 +2218,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 						...pokemon.baseMoveSlots, {
 							id: move.id,
 							move: move.name,
-							pp: move.pp * 8 / 5,
-							maxpp: move.pp * 8 / 5,
+							pp: Math.floor(move.pp * 8 / 5),
+							maxpp: Math.floor(move.pp * 8 / 5),
 							target: move.target,
 							disabled: false,
 							disabledSource: '',

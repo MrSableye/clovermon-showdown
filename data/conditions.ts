@@ -847,6 +847,22 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'none');
 		},
 	},
+
+	/** Wack conditions */
+	bleed: {
+		name: 'bleed',
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'Bleed');
+		},
+		onResidualOrder: 13,
+		onResidual(pokemon) {
+			this.damage(pokemon.baseMaxhp / (this.field.isWeather('bloddrain') ? 10 : 14));
+			
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, 'Bleed');
+		},
+	},
 	dynamax: {
 		name: 'Dynamax',
 		noCopy: true,

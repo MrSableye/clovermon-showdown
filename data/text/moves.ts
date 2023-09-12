@@ -8091,6 +8091,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage. Always hits and deals 100x against Vandash.",
 		shortDesc: "10% chance to lower the target's Sp. Def by 1. Always hits and deals 100x against Vandash.",
 	},
+	recoilshot: {
+		name: "Psycho Boost",
+		desc: "Lowers the user's Accuracy by 2 stages.",
+		shortDesc: "Lowers the user's Acc by 2.",
+	},
 	wrapd: {
 		name: "Wrap-D",
 		desc: "The user spends two to five turns using this move. Has a 3/8 chance to last two or three turns, and a 1/8 chance to last four or five turns. The damage calculated for the first turn is used for every other turn. The user cannot select a move and the target cannot execute a move during the effect, but both may switch out. If the user switches out, the target remains unable to execute a move during that turn. If the target switches out, the user uses this move again automatically, and if it had 0 PP at the time, it becomes 63. If the user or the target switch out, or the user is prevented from moving, the effect ends. This move can prevent the target from moving even if it has type immunity, but will not deal damage.",
@@ -9232,6 +9237,94 @@ export const MovesText: {[k: string]: MoveText} = {
 	sharpeyes: {
 		name: "Sharp Eyes",
 		shortDesc: "Critical hits of allies deal 1.5x damage and +1 Crit ratio for 4 turns.",
+	},
+	shieldslam: {
+		name: "Shield Slam",
+		shortDesc: "+20 BP per Def boost. -1 Def after hit but never below 0.",
+	},
+	doubletap: {
+		name: "Double Tap",
+		shortDesc: "Deals double damage if double damage would KO the target.",
+	},
+	prismspray: {
+		name: "Prism Spray",
+		shortDesc: "This move's type becomes a random type when used.",
+	},
+	internetargument: {
+		name: "Internet Argument",
+		shortDesc: "Raises the user's and target's Attack and Sp. Attack by 2 stages and confuses the target.",
+	},
+	doubledose: {
+		name: "Double Dose",
+		shortDesc: "Hits twice. 100% chance to tox. Always crits againsted tox'd foes.",
+	},
+	vanish: {
+		name: "Vanish",
+		shortDesc: "Prevents moves from affecting the user this turn. +1 evasion.",
+	},
+	mri: {
+		name: "MRI",
+		shortDesc: "OHKOs the target if it is a Steel-type. OHKOs the user if it is a pure Steel-type.",
+	},
+	toiletpaper: {
+		name: "Toilet Paper",
+		shortDesc: "OHKOs the target if it is a Cacademon or Bungaloon.",
+	},
+	drunkenfist: {
+		name: "Drunken Fist",
+		shortDesc: "2x BP if the user is confused. Confuses both the user and target on hit.",
+	},
+	snowgrave: {
+		name: "Snowgrave",
+		shortDesc: "100% chance to freeze the target.",
+	},
+	bigbang: {
+		name: "Big Bang",
+		shortDesc: "Hits adjacent Pokemon. The user faints.",
+	},
+	retart: {
+		name: "Retart",
+		shortDesc: "More power the less Sp. Attack the user has than the target.",
+	},
+	lowestkick: {
+		name: "Lowest Kick",
+		shortDesc: "More power the heavier the target except it infinitely scales.",
+	},
+	spikesagain: {
+		name: "Spikes (Again)",
+		shortDesc: "Hurts grounded foes on switch-in. Max 3 layers.",
+	},
+	repurpose: {
+		name: "Repurpose",
+		shortDesc: "Turns 2 boosts into a +3 boost to a random stat.",
+	},
+	dragoonslash: {
+		name: "Dragoon Slash",
+		shortDesc: "OHKOs Dark-type Pokemon.",
+	},
+	liposuction: {
+		name: "Liposuction",
+		shortDesc: "Double base power against Pokemon with more than 100 base HP.",
+	},
+	revelation: {
+		name: "Revelation",
+		shortDesc: "Raises the user's Defense and Sp. Attack by 1.",
+	},
+	suddendeath: {
+		name: "Sudden Death",
+		shortDesc: "Sets all active Pokemon's HP to 1.",
+	},
+	renovate: {
+		name: "Renovate",
+		shortDesc: "Sets Trick Room in one turn.",
+	},
+	stickywebshot: {
+		name: "Sticky Web Shot",
+		shortDesc: "Sets Sticky Web on hit.",
+	},
+	frostyterrain: {
+		name: "Frosty Terrain",
+		shortDesc: "5 turns. Grounded: +Ice power, immune to burn, stat drops prevented.",
 	},
 	maplewarrior: {
 		name: "Maple Warrior",
@@ -10424,8 +10517,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user strikes the target with a cheap blow. This attack always results in a critical hit.",
 		shortDesc: "The user strikes the target with a cheap blow. This attack always results in a critical hit.",
 	},
-	insultinjury: {
-		name: "Insult & Injury",
+	insultandinjury: {
+		name: "Insult and Injury",
 		desc: "The target is taunted and beat, causing it to use only attack moves for three turns.",
 		shortDesc: "The target is taunted and beat, causing it to use only attack moves for three turns.",
 	},
@@ -10459,8 +10552,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The target punched with a knuckle encased with brass. It may make the target flinch.",
 		shortDesc: "The target punched with a knuckle encased with brass. It may make the target flinch.",
 	},
-	D: {
-		name: "o",
+	doom: {
+		name: "Doom",
 		desc: "The user brings an end to all of those around it. The user faints upon using this move.",
 		shortDesc: "The user brings an end to all of those around it. The user faints upon using this move.",
 	},
@@ -22029,8 +22122,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Not very effective moves do more damage for 8 turns.",
 		shortDesc: "Not very effective moves do more damage for 8 turns.",
 	},
-	snowcloak: {
-		name: "Snow Cloak",
+	snowvest: {
+		name: "Snow Vest",
 		desc: "May make it Hail. Also deals Bug-type damage.",
 		shortDesc: "May make it Hail. Also deals Bug-type damage.",
 	},
@@ -24569,4 +24662,246 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "May 1 hit KO.",
 		shortDesc: "May 1 hit KO.",
 	},
+	flashball: {
+		name: "Flash Ball",
+		desc: "The user hurls a shinning blob at the target. It may also lower the target's Sp. Def stat."
+	},
+	soporous: {
+		name: "Soporous",
+		desc: "The user injects the target with a needle to send it into a deep sleep.",
+	},
+	hiddenpowerblood: {
+		name: "Hidden Power Blood",
+	},
+	hiddenpowerbone: {
+		name: "Hidden Power Bone",
+	},
+	hiddenpowercosmic: {
+		name: "Hidden Power Cosmic",
+	},
+	hiddenpowercrystal: {
+		name: "Hidden Power Crystal",
+	},
+	hiddenpowercyber: {
+		name: "Hidden Power Cyber",
+	},
+	hiddenpowerdivine: {
+		name: "Hidden Power Divine",
+	},
+	hiddenpowerfabric: {
+		name: "Hidden Power Fabric",
+	},
+	hiddenpowerfairy: {
+		name: "Hidden Power Fairy",
+	},
+	hiddenpowerfear: {
+		name: "Hidden Power Fear",
+	},
+	hiddenpowerfood: {
+		name: "Hidden Power Food",
+	},
+	hiddenpowerglass: {
+		name: "Hidden Power Glass",
+	},
+	hiddenpowergreasy: {
+		name: "Hidden Power Greasy",
+	},
+	hiddenpowerheart: {
+		name: "Hidden Power Heart",
+	},
+	hiddenpowerlight: {
+		name: "Hidden Power Light",
+	},
+	hiddenpowermagic: {
+		name: "Hidden Power Magic",
+	},
+	hiddenpowermagma: {
+		name: "Hidden Power Magma",
+	},
+	hiddenpowermeme: {
+		name: "Hidden Power Meme",
+	},
+	hiddenpowernuclear: {
+		name: "Hidden Power Nuclear",
+	},
+	hiddenpowerogre: {
+		name: "Hidden Power Ogre",
+	},
+	hiddenpowerpaint: {
+		name: "Hidden Power Paint",
+	},
+	hiddenpowerpaper: {
+		name: "Hidden Power Paper",
+	},
+	hiddenpowerplastic: {
+		name: "Hidden Power Plastic",
+	},
+	hiddenpowerrubber: {
+		name: "Hidden Power Rubber",
+	},
+	hiddenpowersound: {
+		name: "Hidden Power Sound",
+	},
+	hiddenpowersteam: {
+		name: "Hidden Power Steam",
+	},
+	hiddenpowertech: {
+		name: "Hidden Power Tech",
+	},
+	hiddenpowertime: {
+		name: "Hidden Power Time",
+	},
+	hiddenpowervirus: {
+		name: "Hidden Power Virus",
+	},
+	hiddenpowerwind: {
+		name: "Hidden Power Wind",
+	},
+	hiddenpowerwood: {
+		name: "Hidden Power Wood",
+	},
+	hiddenpowerzombie: {
+		name: "Hidden Power Zombie",
+	},
+	hiddenforceblood: {
+		name: "Hidden Force Blood",
+	},
+	hiddenforcebone: {
+		name: "Hidden Force Bone",
+	},
+	hiddenforcebug: {
+		name: "Hidden Force Bug",
+	},
+	hiddenforcecosmic: {
+		name: "Hidden Force Cosmic",
+	},
+	hiddenforcecrystal: {
+		name: "Hidden Force Crystal",
+	},
+	hiddenforcecyber: {
+		name: "Hidden Force Cyber",
+	},
+	hiddenforcedivine: {
+		name: "Hidden Force Divine",
+	},
+	hiddenforcedark: {
+		name: "Hidden Force Dark",
+	},
+	hiddenforcedragon: {
+		name: "Hidden Force Dragon",
+	},
+	hiddenforceelectric: {
+		name: "Hidden Force Electric",
+	},
+	hiddenforcefabric: {
+		name: "Hidden Force Fabric",
+	},
+	hiddenforcefairy: {
+		name: "Hidden Force Fairy",
+	},
+	hiddenforcefear: {
+		name: "Hidden Force Fear",
+	},
+	hiddenforcefighting: {
+		name: "Hidden Force Fighting",
+	},
+	hiddenforcefire: {
+		name: "Hidden Force Fire",
+	},
+	hiddenforceflying: {
+		name: "Hidden Force Flying",
+	},
+	hiddenforcefood: {
+		name: "Hidden Force Food",
+	},
+	hiddenforceghost: {
+		name: "Hidden Force Ghost",
+	},
+	hiddenforceglass: {
+		name: "Hidden Force Glass",
+	},
+	hiddenforcegrass: {
+		name: "Hidden Force Grass",
+	},
+	hiddenforcegreasy: {
+		name: "Hidden Force Greasy",
+	},
+	hiddenforceground: {
+		name: "Hidden Force Ground",
+	},
+	hiddenforceheart: {
+		name: "Hidden Force Heart",
+	},
+	hiddenforceice: {
+		name: "Hidden Force Ice",
+	},
+	hiddenforcelight: {
+		name: "Hidden Force Light",
+	},
+	hiddenforcemagic: {
+		name: "Hidden Force Magic",
+	},
+	hiddenforcemagma: {
+		name: "Hidden Force Magma",
+	},
+	hiddenforcememe: {
+		name: "Hidden Force Meme",
+	},
+	hiddenforcenuclear: {
+		name: "Hidden Force Nuclear",
+	},
+	hiddenforceogre: {
+		name: "Hidden Force Ogre",
+	},
+	hiddenforcepaint: {
+		name: "Hidden Force Paint",
+	},
+	hiddenforcepaper: {
+		name: "Hidden Force Paper",
+	},
+	hiddenforceplastic: {
+		name: "Hidden Force Plastic",
+	},
+	hiddenforcepoison: {
+		name: "Hidden Force Poison",
+	},
+	hiddenforcepsychic: {
+		name: "Hidden Force Psychic",
+	},
+	hiddenforcerock: {
+		name: "Hidden Force Rock",
+	},
+	hiddenforcerubber: {
+		name: "Hidden Force Rubber",
+	},
+	hiddenforcesound: {
+		name: "Hidden Force Sound",
+	},
+	hiddenforcesteam: {
+		name: "Hidden Force Steam",
+	},
+	hiddenforcesteel: {
+		name: "Hidden Force Steel",
+	},
+	hiddenforcetech: {
+		name: "Hidden Force Tech",
+	},
+	hiddenforcetime: {
+		name: "Hidden Force Time",
+	},
+	hiddenforcevirus: {
+		name: "Hidden Force Virus",
+	},
+	hiddenforcewater: {
+		name: "Hidden Force Water",
+	},
+	hiddenforcewind: {
+		name: "Hidden Force Wind",
+	},
+	hiddenforcewood: {
+		name: "Hidden Force Wood",
+	},
+	hiddenforcezombie: {
+		name: "Hidden Force Zombie",
+	},	
 };

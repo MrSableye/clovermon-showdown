@@ -3911,10 +3911,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	faedozer: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	yiikout: {
 		inherit: true,
 		isNonstandard: null,
@@ -4311,7 +4307,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	susteelstrike: {
+	sussteelstrike: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -4519,10 +4515,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	sussteelstrike: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	alloutirony: {
 		inherit: true,
 		isNonstandard: null,
@@ -4624,6 +4616,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	godotshammer: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	shieldslam: {
 		inherit: true,
 		isNonstandard: null,
 	},
