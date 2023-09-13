@@ -1496,7 +1496,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			onPrepareHit(source, target, move) {
 				if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
 				if (['dynamaxcannon', 'endeavor', 'fling', 'iceball', 'rollout'].includes(move.id)) return;
-				if (!move.flags['charge'] && !move.spreadHit && !move.isZ && !move.isMax) {
+				if (!move.flags['charge'] && !move.isZ && !move.isMax) {
 					if (source.getVolatile('instruct')) {
 						this.add('-activate', source, "  [TARGET] followed [POKEMON]'s instructions!")
 						this.add('-end', source, 'Instruct');
