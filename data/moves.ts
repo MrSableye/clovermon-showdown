@@ -35632,9 +35632,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
-		boosts: {
-			accuracy: -1,
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				if (this.field.getPseudoWeather('artgallery')) {
+					this.boost({
+						accuracy: -2,
+					});
+				} else {
+					this.boost({
+						accuracy: -1,
+					});
+				}
+			},
 		},
 		target: "normal",
 		type: "Paint",
@@ -43951,7 +43961,10 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -47298,7 +47311,20 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			onHit(target) {
+				if (this.field.getPseudoWeather('artgallery')) {
+					this.boost({
+						accuracy: -2,
+					});
+				} else {
+					this.boost({
+						accuracy: -1,
+					});
+				}
+			},
+		},
 		target: "normal",
 		type: "Paint",
 		isNonstandard: "Future",
@@ -47312,7 +47338,12 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Paint",
 		isNonstandard: "Future",
@@ -47326,7 +47357,22 @@ beforeTurnCallback(pokemon) {
 		pp: 30,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, tail: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			volatileStatus: 'paint',
+			onHit(target) {
+				if (this.field.getPseudoWeather('artgallery')) {
+					this.boost({
+						def: -4,
+						spd: -4
+					});
+				} else {
+					this.boost({
+						
+					});
+				}
+		},
+	},
 		target: "normal",
 		type: "Paint",
 		isNonstandard: "Future",
@@ -47701,6 +47747,12 @@ beforeTurnCallback(pokemon) {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
+		onModifyMove(move, attacker) {
+			if (this.field.getPseudoWeather('fabricworld')) {
+				move.multihit = 5;
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Paint",
@@ -47715,6 +47767,18 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target) {
+			if (this.field.getPseudoWeather('artgallery')) {
+				this.boost({
+					def: -1,
+				});
+			} else {
+				this.boost({
+				
+				});
+			}
+		},
+		multihit: 2,
 		secondary: null,
 		target: "normal",
 		type: "Paint",
@@ -47729,7 +47793,21 @@ beforeTurnCallback(pokemon) {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 80,
+			volatileStatus: 'confusion',
+			onHit(target) {
+				if (this.field.getPseudoWeather('artgallery')) {
+					this.boost({
+						spa: -2,
+					});
+				} else {
+					this.boost({
+						
+					});
+				}
+			},
+		},
 		target: "normal",
 		type: "Paint",
 		isNonstandard: "Future",
@@ -50047,7 +50125,12 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			boosts: {
+				accuracy: -1,
+			},
+		},
 		target: "normal",
 		type: "Paint",
 		isNonstandard: "Future",
@@ -51302,6 +51385,7 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		stealsBoosts: true,
 		secondary: null,
 		target: "normal",
 		type: "Blood",
@@ -51400,6 +51484,13 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTry(source, target) {
+			const action = this.queue.willMove(target);
+			const move = action?.choice === 'move' ? action.move : null;
+			if (!move || (move.category === 'Status' && move.id !== 'mefirst') || target.volatiles['mustrecharge']) {
+				return false;
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Rock",
@@ -52684,6 +52775,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		stealsBoosts: true,
 		secondary: null,
 		target: "normal",
 		type: "Tech",
@@ -54601,6 +54693,19 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'colorchange' || target.ability === 'truant') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('colorchange');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Color Change', '[from] move: Thermo Chromia');
+				return;
+			}
+			return oldAbility as false | null;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Paint",
@@ -58545,6 +58650,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		stealsBoosts: true,
 		secondary: null,
 		target: "normal",
 		type: "Sound",
@@ -60582,8 +60688,44 @@ beforeTurnCallback(pokemon) {
 		name: "Paint",
 		pp: 10,
 		priority: 0,
+		volatileStatus: 'paint',
+		condition: {
+			duration: 6,
+			onStart(target) {
+				if (target.activeTurns && !this.queue.willMove(target)) {
+					this.effectState.duration++;
+				}
+				this.add('-start', target, 'Paint');
+			},
+			onEffectivenessPriority: -2,
+			onEffectiveness(typeMod, target, type, move) {
+				if (move.type !== 'Paint') return;
+				if (!target) return;
+				if (type !== target.getTypes()[0]) return;
+				return typeMod + 1;
+			},
+			onResidualOrder: 15,
+			onEnd(target) {
+				this.add('-end', target, 'move: Paint');
+			},
+		},
+		secondary: {
+			chance: 100,
+			
+			onHit(target) {
+				if (this.field.getPseudoWeather('artgallery')) {
+					this.boost({
+						def: -2,
+						spd: -2
+						
+					});
+					
+				} else {
+						
+					};
+				}
+			},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
 		target: "normal",
 		type: "Paint",
 		isNonstandard: "Future",
@@ -60597,7 +60739,22 @@ beforeTurnCallback(pokemon) {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'paint',
+			onHit(target) {
+				if (this.field.getPseudoWeather('artgallery')) {
+					this.boost({
+						def: -1,
+						
+					});
+					
+				} else {
+						
+					};
+				}
+			},
+		
 		target: "normal",
 		type: "Paint",
 		isNonstandard: "Future",
@@ -60611,7 +60768,21 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, bullet: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			volatileStatus: 'paint',
+			onHit(target) {
+				if (this.field.getPseudoWeather('artgallery')) {
+					this.boost({
+						spd: -1
+					});
+				} else {
+					this.boost({
+						
+					});
+				}
+		},
+		},
 		target: "allAdjacent",
 		type: "Paint",
 		isNonstandard: "Future",
@@ -60627,10 +60798,17 @@ beforeTurnCallback(pokemon) {
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
 			chance: 50,
-			self: {
-				boosts: {
-					atk: 1,
-				},
+			onHit(target) {
+				if (this.field.getPseudoWeather('artgallery')) {
+					this.boost({
+						atk: 1,
+						spe: 1,
+					});
+				} else {
+					this.boost({
+						atk: 1,
+					});
+				}
 			},
 		},
 		target: "normal",
@@ -62128,6 +62306,7 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		stealsBoosts: true,
 		secondary: null,
 		target: "normal",
 		type: "Paint",
@@ -64461,7 +64640,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 60,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Paint",
 		isNonstandard: "Future",
@@ -64475,6 +64657,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Paint",
@@ -64672,6 +64855,7 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		stealsBoosts: true,
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -64686,6 +64870,7 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		stealsBoosts: true,
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -65090,6 +65275,32 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {},
+		pseudoWeather: 'artgallery',
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('paintedrock') ) {
+					return 10;
+				}
+				return 5;
+			},
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Art Gallery', '[of] ' + source);
+			},
+			onBasePowerPriority: 1,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'paint') {
+					this.debug('art gallery increase');
+					return this.chainModify([1.5]);
+				}
+			},
+			
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 4,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Art Gallery');
+			},
+		},
 		secondary: null,
 		target: "allySide",
 		type: "Paint",
@@ -68023,6 +68234,13 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTry(source, target) {
+			const action = this.queue.willMove(target);
+			const move = action?.choice === 'move' ? action.move : null;
+			if (!move || (move.category === 'Status' && move.id !== 'mefirst') || target.volatiles['mustrecharge']) {
+				return false;
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
@@ -69565,6 +69783,7 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		stealsBoosts: true,
 		secondary: null,
 		target: "normal",
 		type: "Wind",
@@ -71125,7 +71344,10 @@ beforeTurnCallback(pokemon) {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			volatileStatus: 'paint',
+		},
 		target: "normal",
 		type: "Paint",
 		isNonstandard: "Future",
@@ -71802,6 +72024,13 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTry(source, target) {
+			const action = this.queue.willMove(target);
+			const move = action?.choice === 'move' ? action.move : null;
+			if (!move || (move.category === 'Status' && move.id !== 'mefirst') || target.volatiles['mustrecharge']) {
+				return false;
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Grass",
