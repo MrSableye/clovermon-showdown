@@ -32455,11 +32455,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 					target.faint(source, this.effect);
 					break;
 				case 12:
-					let randomStat: StatIDExceptHP = this.sample(['atk', 'def', 'spa', 'spd', 'spe']);
+					var randomStat: StatIDExceptHP = this.sample(['atk', 'def', 'spa', 'spd', 'spe']);
 					this.boost({ [randomStat]: 6 }, target, source, this.effect);
 					return;
 				case 13:
-					randomStat = this.sample(['atk', 'def', 'spa', 'spd', 'spe']);
+					var randomStat: StatIDExceptHP = this.sample(['atk', 'def', 'spa', 'spd', 'spe']);
 					this.boost({ [randomStat]: 6 }, source, source, this.effect);
 					return;
 				case 14:
