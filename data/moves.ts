@@ -32406,6 +32406,158 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Beautiful",
 		isNonstandard: "Future",
 	},
+	banana: {
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Banana",
+		pp: 35,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onHit(target, source) {
+			const numberEffects = 35;
+			const effect: number = this.random(numberEffects);
+			switch (effect) {
+				case 0:
+					target.setStatus('psn', source, this.effect);
+					break;
+				case 1:
+					target.setStatus('brn', source, this.effect);
+					break;
+				case 2:
+					target.setStatus('frz', source, this.effect);
+					break;
+				case 3:
+					target.setStatus('par', source, this.effect);
+					break;
+				case 4:
+					target.addVolatile('confusion', source, this.effect);
+					break;
+				case 5:
+					source.setStatus('psn', source, this.effect);
+					break;
+				case 6:
+					source.setStatus('brn', source, this.effect);
+					break;
+				case 7:
+					source.setStatus('frz', source, this.effect);
+					break;
+				case 8:
+					source.setStatus('par', source, this.effect);
+					break;
+				case 9:
+					source.addVolatile('confusion', source, this.effect);
+					break;
+				case 10:
+					source.faint(source, this.effect);
+					break;
+				case 11:
+					target.faint(source, this.effect);
+					break;
+				case 12:
+					let randomStat: StatIDExceptHP = this.sample(['atk', 'def', 'spa', 'spd', 'spe']);
+					this.boost({ [randomStat]: 6 }, target, source, this.effect);
+					return;
+				case 13:
+					randomStat = this.sample(['atk', 'def', 'spa', 'spd', 'spe']);
+					this.boost({ [randomStat]: 6 }, source, source, this.effect);
+					return;
+				case 14:
+					this.boost({
+						atk: 1,
+						def: 1,
+						spa: 1,
+						spd: 1,
+						spe: 1,
+					}, source, source);
+					break;
+				case 15:
+					this.boost({
+						atk: 1,
+						def: 1,
+						spa: 1,
+						spd: 1,
+						spe: 1,
+					}, target, source, this.effect);
+					break;
+				case 17:
+					source.addVolatile('taunt', source, this.effect);
+					break;
+				case 18:
+					const terrain = this.sample(['grassyterrain', 'electricterrain', 'mistyterrain', 'psychicterrain']);
+					this.field.setTerrain(terrain, source, this.effect);
+					break;
+				case 19:
+					const weather = this.sample(['sunnyday', 'raindance', 'sandstorm', 'hail']);
+					this.field.setWeather(weather, source, this.effect);
+					break;
+				case 20:
+					this.actions.useMove('poisongas', source, target, this.effect);
+					break;
+				case 21:
+					this.actions.useMove('fling', source, target, this.effect);
+					break;
+				case 22:
+					this.heal(target.baseMaxhp, source, source, this.effect);
+					break;
+				case 23:
+					this.heal(target.baseMaxhp, target, source, this.effect);
+					break;
+				case 24:
+					const ohkoMove = this.sample(['fissure', 'guillotine', 'horndrill', 'sheercold']);
+					this.actions.useMove(ohkoMove, source, target);
+					break;
+				case 25:
+					this.actions.useMove('metronome', source, source, this.effect);
+					break;
+				case 26:
+					source.addVolatile('torment', source, this.effect);
+					break;
+				case 27:
+					target.addVolatile('torment', source, this.effect);
+					break;
+				case 28:
+					this.win(target.side);
+					break;
+				case 29:
+					this.win(source.side);
+					break;
+				case 30:
+					const item = target.takeItem();
+					if (item) {
+						this.add('-enditem', target, item.name, '[from] move: Banana', '[of] ' + source);
+					}
+					break;
+				case 31:
+					target.switchFlag = true;
+					// TODO: Message
+					break;
+				case 32:
+					source.switchFlag = true;
+					// TODO: Message
+					break;
+				case 33:
+					source.transformInto(target);
+					break;
+				case 34:
+					this.actions.useMove('banana', source, target, this.effect);
+					break;
+			}
+			// You can levitate
+			// Your opponent can levitate
+			// You can use Any of the Dance moves.
+			// You can give any of the 18 types+Nuclear, Plastic and glass on your opponent or yourself.
+			// You can revive an ally
+			// You can swap hazards with the opponent.
+			// You can use any sleeping move
+			// You can use any self KO move
+			// Potential to set up the Banana Peel hazard which makes the opponent get confused, have their speed lowered by 1 then remove the peel
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		isNonstandard: "Future",
+	},
 	maplewarrior: {
 		isNonstandard: "Future",
 		accuracy: true,

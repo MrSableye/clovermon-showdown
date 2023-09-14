@@ -9326,6 +9326,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Frosty Terrain",
 		shortDesc: "5 turns. Grounded: +Ice power, immune to burn, stat drops prevented.",
 	},
+	banana: {
+		name: "Banana",
+		shortDesc: "Fuck you figure it out",
+	},
 	maplewarrior: {
 		name: "Maple Warrior",
 		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",
@@ -24903,5 +24907,5 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hiddenforcezombie: {
 		name: "Hidden Force Zombie",
-	},	
+	},
 };

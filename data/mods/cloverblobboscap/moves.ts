@@ -1714,4 +1714,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	banana: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
