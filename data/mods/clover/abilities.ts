@@ -713,4 +713,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	snowwarning: {
+		inherit: true,
+		onStart(source) {
+			this.field.setWeather('hail');
+		},
+	},
 };
