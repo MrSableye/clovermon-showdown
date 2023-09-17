@@ -26110,7 +26110,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: null,
 	},
 	shalelich: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	crudeogre: {
@@ -26126,7 +26126,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: null,
 	},
 	ramlusus: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	tinkerbull: {
@@ -26266,11 +26266,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: null,
 	},
 	lilcal: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	null: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	jacknoir: {
@@ -26294,23 +26294,23 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: null,
 	},
 	sweetbro: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	hellajeff: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	geromy: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	dad: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	nothin: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	roborufioh: {
@@ -26438,11 +26438,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: null,
 	},
 	condesce: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	gcat: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	tavris: {
@@ -26462,15 +26462,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: null,
 	},
 	ddroog: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	hboxcars: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	cdeuce: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	pm: {
@@ -26482,31 +26482,31 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: null,
 	},
 	wv: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	ar: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	salamander: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	turtle: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	crocodile: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	iguana: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	casey: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	cabunny: {
@@ -26522,15 +26522,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: null,
 	},
 	squiddle: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	squarewave: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	sawtooth: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	chalkimp: {
@@ -26550,15 +26550,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: null,
 	},
 	tarbasilis: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	uraniumimp: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	skelimp: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	psleuth: {
@@ -26598,15 +26598,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: null,
 	},
 	slot1: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	slot2: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	slot3: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	lilseb: {
@@ -26614,7 +26614,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: null,
 	},
 	ectoslime: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	grubmierfa: {
@@ -26638,15 +26638,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: null,
 	},
 	slot4: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	slot5: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	slot6: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	slot7: {
@@ -26666,15 +26666,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: null,
 	},
 	skelconsrt: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	mutini: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	hopeangel: {
-		tier: "LC",
+		tier: "OU",
 		isNonstandard: null,
 	},
 	horsaponi: {
