@@ -100486,7 +100486,6 @@ blobbosmechelectric: {
 		evos: [
 			"Utahraptor"
 		],
-		prevo: "T-Rex",
 		evoLevel: 16
 	},
 	utahraptor: {
@@ -100539,6 +100538,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 52,
 		color: "Red",
+		prevo: "Utahraptor",
 		eggGroups: [
 			"Fairy"
 		],
