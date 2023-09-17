@@ -93548,6 +93548,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		evos: [
 			"John",
 			"Poppop"
@@ -93578,6 +93579,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		evos: [
 			"GT John",
 			"TrkstrJohn"
@@ -93610,6 +93612,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		prevo: "John",
 		evoLevel: 36
 	},
@@ -93636,6 +93639,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		evos: [
 			"Dave",
 			"Dirk's Bro"
@@ -93665,6 +93669,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		evos: [
 			"GT Dave",
 			"Davesprite",
@@ -93697,6 +93702,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		prevo: "Dave",
 		evoLevel: 36
 	},
@@ -93724,6 +93730,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		evos: [
 			"Rose",
 			"Roxy's Mom"
@@ -93753,6 +93760,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		evos: [
 			"GT Rose",
 			"GrmdrkRose",
@@ -93785,6 +93793,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		prevo: "Rose",
 		evoLevel: 36
 	},
@@ -93813,6 +93822,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		evos: [
 			"Jane",
 			"Nanna"
@@ -93843,6 +93853,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		evos: [
 			"GT Jane",
 			"TrkstrJane"
@@ -93875,6 +93886,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		prevo: "Jane",
 		evoLevel: 36
 	},
@@ -93902,6 +93914,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		evos: [
 			"Dirk",
 			"Bro"
@@ -93932,6 +93945,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		evos: [
 			"GT Dirk",
 			"TrkstrDirk"
@@ -93964,6 +93978,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		prevo: "Dirk",
 		evoLevel: 36
 	},
@@ -93991,6 +94006,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		evos: [
 			"Roxy",
 			"Mom"
@@ -94021,6 +94037,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		evos: [
 			"GT Roxy",
 			"TrkstrRoxy"
@@ -94053,6 +94070,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		prevo: "Roxy",
 		evoLevel: 36
 	},
@@ -94080,6 +94098,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		evos: [
 			"Jake",
 			"Grandpa"
@@ -94110,6 +94129,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		evos: [
 			"GT Jake",
 			"TrkstrJake"
@@ -94142,6 +94162,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		prevo: "Jake",
 		evoLevel: 36
 	},
@@ -94169,6 +94190,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"Karkat"
 		]
@@ -94198,6 +94220,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"GT Karkat"
 		],
@@ -94229,6 +94252,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		prevo: "Karkat",
 		evoLevel: 36
 	},
@@ -94258,6 +94282,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"Aradia"
 		]
@@ -94288,6 +94313,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"GT Aradia",
 			"DeadAradia",
@@ -94322,6 +94348,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "Aradia",
 		evoLevel: 35
 	},
@@ -94349,6 +94376,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"Tavros"
 		]
@@ -94377,6 +94405,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"GT Tavros",
 			"Tavris",
@@ -94410,6 +94439,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		prevo: "Tavros",
 		evoLevel: 36
 	},
@@ -94438,6 +94468,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"Sollux"
 		]
@@ -94468,6 +94499,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"GT Sollux",
 			"Erisol"
@@ -94501,6 +94533,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		prevo: "Sollux",
 		evoLevel: 39
 	},
@@ -94529,6 +94562,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"Nepeta"
 		]
@@ -94558,6 +94592,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"GT Nepeta",
 			"Fefeta",
@@ -94591,6 +94626,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "Nepeta",
 		evoLevel: 36
 	},
@@ -94620,6 +94656,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"Kanaya"
 		]
@@ -94650,6 +94687,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"GT Kanaya"
 		],
@@ -94682,6 +94720,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "Kanaya",
 		evoLevel: 36
 	},
@@ -94710,6 +94749,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"Terezi"
 		]
@@ -94739,6 +94779,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"GT Terezi"
 		],
@@ -94770,6 +94811,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "Terezi",
 		evoLevel: 36
 	},
@@ -94799,6 +94841,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"Vriska"
 		]
@@ -94829,6 +94872,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"GT Vriska",
 			"Tavris"
@@ -94862,6 +94906,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"GT Horuss"
 		],
@@ -94893,6 +94938,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"Equius"
 		]
@@ -94922,6 +94968,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"GT Equius",
 			"ARquius"
@@ -94954,6 +95001,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		prevo: "Equius",
 		evoLevel: 36
 	},
@@ -94983,6 +95031,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"Gamzee"
 		]
@@ -95013,6 +95062,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"GT Gamzee"
 		],
@@ -95045,6 +95095,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		prevo: "Gamzee",
 		evoLevel: 32
 	},
@@ -95073,6 +95124,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Bug"
 		],
+		gender: "M",
 		evos: [
 			"Eridan"
 		]
@@ -95103,6 +95155,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Bug"
 		],
+		gender: "M",
 		evos: [
 			"GT Eridan",
 			"Erisol"
@@ -95136,6 +95189,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Bug"
 		],
+		gender: "M",
 		prevo: "Eridan",
 		evoLevel: 36
 	},
@@ -95164,6 +95218,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Bug"
 		],
+		gender: "F",
 		evos: [
 			"Feferi"
 		]
@@ -95193,6 +95248,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Bug"
 		],
+		gender: "F",
 		evos: [
 			"GT Feferi",
 			"Fefeta"
@@ -95225,6 +95281,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Bug"
 		],
+		gender: "F",
 		prevo: "Feferi",
 		evoLevel: 34
 	},
@@ -95252,6 +95309,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"Kankri",
 			"Signless"
@@ -95282,6 +95340,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"GT Kankri"
 		],
@@ -95313,6 +95372,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		prevo: "Kankri",
 		evoLevel: 36
 	},
@@ -95341,6 +95401,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"Damara",
 			"Handmaid"
@@ -95371,6 +95432,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"GT Damara"
 		],
@@ -95402,6 +95464,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "Damara",
 		evoLevel: 36
 	},
@@ -95430,6 +95493,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"Rufioh",
 			"Summoner"
@@ -95461,6 +95525,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"GT Rufioh",
 			"RoboRufioh"
@@ -95494,6 +95559,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		prevo: "Rufioh",
 		evoLevel: 36
 	},
@@ -95522,6 +95588,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"Mituna",
 			"Psiioniic"
@@ -95553,6 +95620,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"GT Mituna"
 		],
@@ -95585,6 +95653,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		prevo: "Mituna",
 		evoLevel: 36
 	},
@@ -95612,6 +95681,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"Meulin",
 			"Disciple"
@@ -95642,6 +95712,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"GT Meulin"
 		],
@@ -95673,6 +95744,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "Meulin",
 		evoLevel: 33
 	},
@@ -95701,6 +95773,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"Porrim",
 			"Dolorosa"
@@ -95731,6 +95804,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"GT Porrim"
 		],
@@ -95762,6 +95836,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "Porrim",
 		evoLevel: 36
 	},
@@ -95790,6 +95865,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"Latula",
 			"Redglare"
@@ -95821,6 +95897,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"GT Latula"
 		],
@@ -95853,6 +95930,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "Latula",
 		evoLevel: 36
 	},
@@ -95882,6 +95960,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"Aranea",
 			"Mindfang"
@@ -95913,6 +95992,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"GT Aranea"
 		],
@@ -95945,6 +96025,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "Aranea",
 		evoLevel: 36
 	},
@@ -95973,6 +96054,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"Horuss",
 			"Darkleer"
@@ -96004,6 +96086,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "Vriska",
 		evoLevel: 36
 	},
@@ -96033,6 +96116,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		prevo: "Horuss",
 		evoLevel: 36
 	},
@@ -96060,6 +96144,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"Kurloz",
 			"Highblood"
@@ -96090,6 +96175,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"GT Kurloz"
 		],
@@ -96121,6 +96207,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		prevo: "Kurloz",
 		evoLevel: 34
 	},
@@ -96149,6 +96236,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Bug"
 		],
+		gender: "M",
 		evos: [
 			"Cronus",
 			"Dualscar"
@@ -96179,6 +96267,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Bug"
 		],
+		gender: "M",
 		evos: [
 			"GT Cronus"
 		],
@@ -96210,6 +96299,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Bug"
 		],
+		gender: "M",
 		prevo: "Cronus",
 		evoLevel: 36
 	},
@@ -96238,6 +96328,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Bug"
 		],
+		gender: "F",
 		evos: [
 			"Meenah"
 		]
@@ -96268,6 +96359,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Bug"
 		],
+		gender: "F",
 		evos: [
 			"GT Meenah"
 		],
@@ -96300,6 +96392,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Bug"
 		],
+		gender: "F",
 		prevo: "Meenah",
 		evoLevel: 36
 	},
@@ -96328,7 +96421,8 @@ blobbosmechelectric: {
 		],
 		evos: [
 			"Caliborn",
-			"Calliope"
+			"Calliope",
+			"Caliborn"
 		]
 	},
 	calliope: {
@@ -96356,6 +96450,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Water 1"
 		],
+		gender: "F",
 		evos: [
 			"GTCalliope",
 		],
@@ -96388,6 +96483,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Water 1"
 		],
+		gender: "M",
 		evos: [
 			"GTCaliborn",
 		],
@@ -96445,7 +96541,11 @@ blobbosmechelectric: {
 		color: "Red",
 		eggGroups: [
 			"Mineral"
-		]
+		],
+		genderRatio: {
+			F: 0.49609375,
+			M: 0.50390625
+		}
 	},
 	crudeogre: {
 		num: 413098,
@@ -96498,6 +96598,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Fairy"
 		],
+		gender: "F",
 		evos: [
 			"Maplehoof"
 		]
@@ -96526,6 +96627,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Fairy"
 		],
+		gender: "F",
 		prevo: "Minihoof",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -96552,7 +96654,8 @@ blobbosmechelectric: {
 		color: "White",
 		eggGroups: [
 			"Water 1"
-		]
+		],
+		gender: "F"
 	},
 	tinkerbull: {
 		num: 413103,
@@ -96580,6 +96683,7 @@ blobbosmechelectric: {
 			"Water 1",
 			"Grass"
 		],
+		gender: "M",
 		evos: [
 			"Bullsprite"
 		]
@@ -96610,6 +96714,7 @@ blobbosmechelectric: {
 			"Water 1",
 			"Grass"
 		],
+		gender: "M",
 		prevo: "Tinkerbull",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -96639,6 +96744,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 1"
 		],
+		gender: "M",
 		evos: [
 			"Bisprite"
 		]
@@ -96668,6 +96774,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 1"
 		],
+		gender: "M",
 		prevo: "Bicyclops",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -96698,6 +96805,7 @@ blobbosmechelectric: {
 			"Water 1",
 			"Mineral"
 		],
+		gender: "M",
 		evos: [
 			"Crabsprite"
 		]
@@ -96728,6 +96836,7 @@ blobbosmechelectric: {
 			"Water 1",
 			"Mineral"
 		],
+		gender: "M",
 		prevo: "Crabdad",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -96756,6 +96865,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 1"
 		],
+		gender: "F",
 		evos: [
 			"Pounsprite"
 		]
@@ -96784,6 +96894,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 1"
 		],
+		gender: "F",
 		prevo: "Pounce",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -96813,6 +96924,7 @@ blobbosmechelectric: {
 			"Water 1",
 			"Grass"
 		],
+		gender: "F",
 		evos: [
 			"Mthrsprite"
 		]
@@ -96842,6 +96954,7 @@ blobbosmechelectric: {
 			"Water 1",
 			"Grass"
 		],
+		gender: "F",
 		prevo: "Mothergrub",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -96871,6 +96984,7 @@ blobbosmechelectric: {
 			"Water 1",
 			"Undiscovered"
 		],
+		gender: "F",
 		evos: [
 			"Drgnsprite"
 		]
@@ -96900,6 +97014,7 @@ blobbosmechelectric: {
 			"Water 1",
 			"Undiscovered"
 		],
+		gender: "F",
 		prevo: "Dragonmom",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -96930,6 +97045,7 @@ blobbosmechelectric: {
 			"Water 1",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"Spdrsprite"
 		]
@@ -96960,6 +97076,7 @@ blobbosmechelectric: {
 			"Water 1",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "Spidermom",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -96987,6 +97104,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 1"
 		],
+		gender: "M",
 		evos: [
 			"Aursprite"
 		]
@@ -97014,6 +97132,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 1"
 		],
+		gender: "M",
 		prevo: "Aurthour",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -97044,6 +97163,7 @@ blobbosmechelectric: {
 			"Water 1",
 			"Bug"
 		],
+		gender: "M",
 		evos: [
 			"Goatsprite"
 		]
@@ -97074,6 +97194,7 @@ blobbosmechelectric: {
 			"Water 1",
 			"Bug"
 		],
+		gender: "M",
 		prevo: "Goatdad",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -97103,6 +97224,7 @@ blobbosmechelectric: {
 			"Water 1",
 			"Bug"
 		],
+		gender: "M",
 		evos: [
 			"Shorsprite"
 		]
@@ -97132,6 +97254,7 @@ blobbosmechelectric: {
 			"Water 1",
 			"Bug"
 		],
+		gender: "M",
 		prevo: "Shorsedad",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -97221,6 +97344,7 @@ blobbosmechelectric: {
 			"Fairy",
 			"Undiscovered"
 		],
+		gender: "M",
 		evos: [
 			"Becquerel"
 		]
@@ -97250,6 +97374,7 @@ blobbosmechelectric: {
 			"Fairy",
 			"Undiscovered"
 		],
+		gender: "M",
 		evos: [
 			"Becsprite"
 		],
@@ -97281,6 +97406,7 @@ blobbosmechelectric: {
 			"Fairy",
 			"Undiscovered"
 		],
+		gender: "M",
 		prevo: "Becquerel",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -97308,6 +97434,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		evos: [
 			"Nanasprite"
 		],
@@ -97339,6 +97466,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		prevo: "Nanna",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -97368,6 +97496,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		prevo: "Baby Roxy",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -97397,6 +97526,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		prevo: "Baby Dirk",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -97425,6 +97555,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		prevo: "Baby John",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -97453,6 +97584,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Fairy"
 		],
+		gender: "M",
 		evos: [
 			"Jaspsprite"
 		]
@@ -97482,6 +97614,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Fairy"
 		],
+		gender: "M",
 		evos: [
 			"Jasprose"
 		],
@@ -97514,6 +97647,10 @@ blobbosmechelectric: {
 			"Fairy",
 			"Field"
 		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		},
 		evos: [
 			"Crowsprite"
 		]
@@ -97543,6 +97680,10 @@ blobbosmechelectric: {
 			"Fairy",
 			"Field"
 		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		},
 		prevo: "Crow",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -97597,7 +97738,11 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Bug",
 			"Mineral"
-		]
+		],
+		genderRatio: {
+			F: 0.12109375,
+			M: 0.87890625
+		}
 	},
 	jacknoir: {
 		num: 413139,
@@ -97623,6 +97768,7 @@ blobbosmechelectric: {
 			"Flying",
 			"Water 1"
 		],
+		gender: "M",
 		evos: [
 			"Jackspers",
 			"RoboJack",
@@ -97654,6 +97800,7 @@ blobbosmechelectric: {
 			"Flying",
 			"Water 1"
 		],
+		gender: "M",
 		evos: [
 			"Bec Noir"
 		],
@@ -97685,6 +97832,7 @@ blobbosmechelectric: {
 			"Flying",
 			"Water 1"
 		],
+		gender: "M",
 		prevo: "Jack Noir",
 		evoType: "useItem",
 		evoItem: "Horror Stone"
@@ -97714,6 +97862,7 @@ blobbosmechelectric: {
 			"Flying",
 			"Water 1"
 		],
+		gender: "M",
 		prevo: "Jack Noir",
 		evoType: "useItem",
 		evoItem: "Robo Stone "
@@ -97743,6 +97892,7 @@ blobbosmechelectric: {
 			"Flying",
 			"Water 1"
 		],
+		gender: "M",
 		prevo: "Jackspers",
 		evoLevel: 55
 	},
@@ -97769,7 +97919,8 @@ blobbosmechelectric: {
 		color: "Red",
 		eggGroups: [
 			"Undiscovered"
-		]
+		],
+		gender: "M"
 	},
 	hellajeff: {
 		num: 413145,
@@ -97794,7 +97945,8 @@ blobbosmechelectric: {
 		color: "Blue",
 		eggGroups: [
 			"Undiscovered"
-		]
+		],
+		gender: "M"
 	},
 	geromy: {
 		num: 413146,
@@ -97819,7 +97971,8 @@ blobbosmechelectric: {
 		color: "Yellow",
 		eggGroups: [
 			"Undiscovered"
-		]
+		],
+		gender: "M"
 	},
 	dad: {
 		num: 413147,
@@ -97844,7 +97997,8 @@ blobbosmechelectric: {
 		color: "White",
 		eggGroups: [
 			"Water 3"
-		]
+		],
+		gender: "M"
 	},
 	nothin: {
 		num: 413148,
@@ -97870,7 +98024,11 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Bug",
 			"Undiscovered"
-		]
+		],
+		genderRatio: {
+			F: 0.49609375,
+			M: 0.50390625
+		}
 	},
 	roborufioh: {
 		num: 413149,
@@ -97898,6 +98056,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Amorphous"
 		],
+		gender: "M",
 		prevo: "Rufioh",
 		evoType: "useItem",
 		evoItem: "Robo Stone "
@@ -97927,6 +98086,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Water 1"
 		],
+		gender: "M",
 		prevo: "Caliborn",
 		evoLevel: 40
 	},
@@ -97955,6 +98115,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Water 1"
 		],
+		gender: "F",
 		prevo: "Calliope",
 		evoLevel: 40
 	},
@@ -97983,6 +98144,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		evos: [
 			"Jade",
 			"Grandma"
@@ -98013,6 +98175,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		evos: [
 			"GT Jade",
 			"Jadesprite"
@@ -98045,6 +98208,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		prevo: "Jade",
 		evoLevel: 36
 	},
@@ -98074,6 +98238,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Fairy"
 		],
+		gender: "F",
 		prevo: "Jade",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -98102,6 +98267,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Fairy"
 		],
+		gender: "M",
 		prevo: "John",
 		evoType: "useItem",
 		evoItem: "Sucker Stone"
@@ -98130,6 +98296,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		prevo: "Rose",
 		evoType: "useItem",
 		evoItem: "Horror Stone"
@@ -98160,6 +98327,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Field"
 		],
+		gender: "M",
 		prevo: "Dave",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -98190,6 +98358,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Grass"
 		],
+		gender: "F",
 		prevo: "Jane",
 		evoType: "useItem",
 		evoItem: "Sucker Stone"
@@ -98220,6 +98389,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Grass"
 		],
+		gender: "F",
 		prevo: "Roxy",
 		evoType: "useItem",
 		evoItem: "Sucker Stone"
@@ -98250,6 +98420,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Grass"
 		],
+		gender: "M",
 		prevo: "Dirk",
 		evoType: "useItem",
 		evoItem: "Sucker Stone"
@@ -98280,6 +98451,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Grass"
 		],
+		gender: "M",
 		prevo: "Jake",
 		evoType: "useItem",
 		evoItem: "Sucker Stone"
@@ -98310,6 +98482,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "Aradia",
 		evoType: "useItem",
 		evoItem: "Horror Stone"
@@ -98340,6 +98513,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "Aradia",
 		evoType: "useItem",
 		evoItem: "Robo Stone "
@@ -98368,6 +98542,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		prevo: "Baby Jake",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -98396,6 +98571,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		prevo: "Baby Rose",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -98425,6 +98601,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "M",
 		prevo: "Baby Dave",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -98453,6 +98630,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		prevo: "Baby Jade",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -98482,6 +98660,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		prevo: "GrubKankri",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -98510,6 +98689,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3"
 		],
+		gender: "F",
 		prevo: "GrubDamara",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -98538,6 +98718,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Ditto"
 		],
+		gender: "M",
 		prevo: "GrubRufioh",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -98567,6 +98748,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Undiscovered"
 		],
+		gender: "M",
 		prevo: "GrubMituna",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -98596,6 +98778,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "GrubMeulin",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -98626,6 +98809,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "GrubPorrim",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -98656,6 +98840,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "GrubLatula",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -98686,6 +98871,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "GrubAranea",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -98716,6 +98902,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		prevo: "GrubHoruss",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -98744,6 +98931,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Field"
 		],
+		gender: "M",
 		prevo: "GrubKurloz",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -98774,6 +98962,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Bug"
 		],
+		gender: "M",
 		prevo: "GrubCronus",
 		evoType: "useItem",
 		evoItem: "ScratchStone"
@@ -98803,7 +98992,8 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 3",
 			"Bug"
-		]
+		],
+		gender: "F"
 	},
 	gcat: {
 		num: 413181,
@@ -98886,6 +99076,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		prevo: "Sollux",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -98916,6 +99107,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		prevo: "Nepeta",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -98946,6 +99138,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		prevo: "Equius",
 		evoType: "useItem",
 		evoItem: "Kernel Stone"
@@ -98974,7 +99167,8 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Flying",
 			"Water 1"
-		]
+		],
+		gender: "M"
 	},
 	hboxcars: {
 		num: 413187,
@@ -99001,7 +99195,8 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Flying",
 			"Water 1"
-		]
+		],
+		gender: "M"
 	},
 	cdeuce: {
 		num: 413188,
@@ -99027,7 +99222,8 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Flying",
 			"Water 1"
-		]
+		],
+		gender: "M"
 	},
 	pm: {
 		num: 413189,
@@ -99053,6 +99249,7 @@ blobbosmechelectric: {
 			"Flying",
 			"Water 1"
 		],
+		gender: "F",
 		evos: [
 			"BecBlanche"
 		]
@@ -99082,6 +99279,7 @@ blobbosmechelectric: {
 			"Flying",
 			"Field"
 		],
+		gender: "F",
 		prevo: "PM",
 		evoLevel: 40
 	},
@@ -99109,7 +99307,8 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Flying",
 			"Water 1"
-		]
+		],
+		gender: "M"
 	},
 	ar: {
 		num: 413192,
@@ -99134,7 +99333,8 @@ blobbosmechelectric: {
 		color: "Yellow",
 		eggGroups: [
 			"Water 2"
-		]
+		],
+		gender: "M"
 	},
 	salamander: {
 		num: 413193,
@@ -99160,7 +99360,11 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Fairy",
 			"Ditto"
-		]
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
 	},
 	turtle: {
 		num: 413194,
@@ -99185,7 +99389,11 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Fairy",
 			"Ditto"
-		]
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
 	},
 	crocodile: {
 		num: 413195,
@@ -99209,7 +99417,11 @@ blobbosmechelectric: {
 		color: "Red",
 		eggGroups: [
 			"Fairy"
-		]
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
 	},
 	iguana: {
 		num: 413196,
@@ -99235,7 +99447,11 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Fairy",
 			"Ditto"
-		]
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
 	},
 	casey: {
 		num: 413197,
@@ -99261,7 +99477,11 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Fairy",
 			"Ditto"
-		]
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
 	},
 	cabunny: {
 		num: 413198,
@@ -99345,6 +99565,7 @@ blobbosmechelectric: {
 			"Undiscovered",
 			"Fairy"
 		],
+		gender: "F",
 		prevo: "Knit Bunny",
 		evoType: "useItem",
 		evoItem: "Robo Stone "
@@ -99371,7 +99592,11 @@ blobbosmechelectric: {
 		color: "White",
 		eggGroups: [
 			"Ditto"
-		]
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
 	},
 	squarewave: {
 		num: 413202,
@@ -99632,6 +99857,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Ditto"
 		],
+		gender: "M",
 		evos: [
 			"CCV PS",
 			"Sep. PS"
@@ -99661,6 +99887,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Flying"
 		],
+		gender: "M",
 		prevo: "P. Sleuth",
 		evoType: "useItem",
 		evoItem: "Horror Stone"
@@ -99689,6 +99916,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Flying"
 		],
+		gender: "M",
 		prevo: "P. Sleuth",
 		evoLevel: 42
 	},
@@ -99715,6 +99943,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"GWZ AD",
 			"Fiesta AD"
@@ -99744,6 +99973,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Fairy"
 		],
+		gender: "M",
 		prevo: "A. Dick",
 		evoType: "useItem",
 		evoItem: "Horror Stone"
@@ -99773,6 +100003,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Fairy"
 		],
+		gender: "M",
 		prevo: "A. Dick",
 		evoLevel: 38
 	},
@@ -99800,6 +100031,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Fairy"
 		],
+		gender: "M",
 		evos: [
 			"GPI",
 			"TRF PI"
@@ -99830,6 +100062,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 2"
 		],
+		gender: "M",
 		prevo: "P.Inspctr",
 		evoType: "useItem",
 		evoItem: "Horror Stone"
@@ -99858,6 +100091,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 2"
 		],
+		gender: "M",
 		prevo: "P.Inspctr",
 		evoLevel: 40
 	},
@@ -99885,7 +100119,8 @@ blobbosmechelectric: {
 		color: "Green",
 		eggGroups: [
 			"Fairy"
-		]
+		],
+		gender: "M"
 	},
 	slot2: {
 		num: 413221,
@@ -99910,7 +100145,8 @@ blobbosmechelectric: {
 		color: "Brown",
 		eggGroups: [
 			"Fairy"
-		]
+		],
+		gender: "M"
 	},
 	slot3: {
 		num: 413222,
@@ -99937,7 +100173,8 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Bug",
 			"Mineral"
-		]
+		],
+		gender: "F"
 	},
 	lilseb: {
 		num: 413223,
@@ -99963,6 +100200,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Fairy"
 		],
+		gender: "M",
 		prevo: "C.A. Bunny",
 		evoType: "useItem",
 		evoItem: "Robo Stone "
@@ -100016,6 +100254,7 @@ blobbosmechelectric: {
 			"Bug",
 			"Fairy"
 		],
+		gender: "F",
 		evos: [
 			"Mierfa"
 		]
@@ -100044,6 +100283,10 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Bug"
 		],
+		genderRatio: {
+			F: 0.49609375,
+			M: 0.50390625
+		},
 		prevo: "GrubMierfa",
 		evoLevel: 16
 	},
@@ -100072,6 +100315,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		evos: [
 			"Nektan"
 		]
@@ -100101,6 +100345,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "M",
 		prevo: "GrubNektan",
 		evoLevel: 16
 	},
@@ -100129,6 +100374,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Fairy"
 		],
+		gender: "F",
 		prevo: "Rose",
 		evoType: "useItem",
 		evoItem: "KernelStone2"
@@ -100158,7 +100404,8 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Bug",
 			"Undiscovered"
-		]
+		],
+		gender: "M"
 	},
 	slot5: {
 		num: 413236,
@@ -100183,7 +100430,8 @@ blobbosmechelectric: {
 		color: "Blue",
 		eggGroups: [
 			"Fairy"
-		]
+		],
+		gender: "M"
 	},
 	slot6: {
 		num: 413232,
@@ -100208,7 +100456,8 @@ blobbosmechelectric: {
 		color: "Gray",
 		eggGroups: [
 			"Fairy"
-		]
+		],
+		gender: "F"
 	},
 	slot7: {
 		num: 413233,
@@ -100235,6 +100484,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Flying"
 		],
+		gender: "F",
 		evos: [
 			"Davepeta"
 		]
@@ -100263,6 +100513,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Water 2"
 		],
+		gender: "M",
 		evos: [
 			"GCaTavros"
 		]
@@ -100323,6 +100574,7 @@ blobbosmechelectric: {
 			"Water 3",
 			"Fairy"
 		],
+		gender: "M",
 		prevo: "Tavros",
 		evoType: "useItem",
 		evoItem: "KernelStone2"
@@ -100376,7 +100628,11 @@ blobbosmechelectric: {
 		color: "Pink",
 		eggGroups: [
 			"Fairy"
-		]
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
 	},
 	hopeangel: {
 		num: 413239,
@@ -100427,6 +100683,10 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 2"
 		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		},
 		evos: [
 			"Horsaroni"
 		]
@@ -100455,6 +100715,10 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Water 2"
 		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		},
 		prevo: "Horsaponi",
 		evoLevel: 36
 	},
@@ -100483,6 +100747,7 @@ blobbosmechelectric: {
 			"Water 1",
 			"Undiscovered"
 		],
+		gender: "M",
 		evos: [
 			"Utahraptor"
 		],
@@ -100511,6 +100776,7 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Fairy"
 		],
+		gender: "M",
 		evos: [
 			"Dromec."
 		],
@@ -100538,10 +100804,10 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 52,
 		color: "Red",
-		prevo: "Utahraptor",
 		eggGroups: [
 			"Fairy"
 		],
+		gender: "F",
 		evoLevel: 36
 	},
 };
