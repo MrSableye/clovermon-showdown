@@ -93523,4 +93523,7029 @@ blobbosmechelectric: {
 		color: "Green",
 		eggGroups: ["Monster", "Grass"],
 	},
+	/* Sburbmons */
+	babyjohn: {
+		num: 413001,
+		name: "Baby John",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 50,
+			def: 68,
+			spa: 60,
+			spd: 35,
+			spe: 55
+		},
+		abilities: {
+			0: "Cloud Nine",
+			1: "Cloud Nine"
+		},
+		heightm: 0.5,
+		weightkg: 3.7,
+		color: "Blue",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"John",
+			"Poppop"
+		]
+	},
+	john: {
+		num: 413002,
+		name: "John",
+		types: [
+			"Normal",
+			"Flying"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 70,
+			def: 85,
+			spa: 75,
+			spd: 50,
+			spe: 73
+		},
+		abilities: {
+			0: "Cloud Nine",
+			1: "Prankster"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Blue",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"GT John",
+			"TrkstrJohn"
+		],
+		prevo: "Baby John",
+		evoLevel: 16
+	},
+	gtjohn: {
+		num: 413003,
+		name: "GT John",
+		types: [
+			"Normal",
+			"Flying"
+		],
+		baseStats: {
+			hp: 73,
+			atk: 99,
+			def: 106,
+			spa: 84,
+			spd: 66,
+			spe: 100
+		},
+		abilities: {
+			0: "Air Lock",
+			1: "Prankster"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Blue",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "John",
+		evoLevel: 36
+	},
+	babydave: {
+		num: 413004,
+		name: "Baby Dave",
+		types: [
+			"Fire"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 66,
+			def: 35,
+			spa: 62,
+			spd: 56,
+			spe: 50
+		},
+		abilities: {
+			0: "Blaze"
+		},
+		heightm: 1.4,
+		weightkg: 63,
+		color: "Red",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"Dave",
+			"Dirk's Bro"
+		]
+	},
+	dave: {
+		num: 413005,
+		name: "Dave",
+		types: [
+			"Fire",
+			"Steel"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 86,
+			def: 50,
+			spa: 82,
+			spd: 75,
+			spe: 60
+		},
+		abilities: {
+			0: "Blaze"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Red",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"GT Dave",
+			"Davesprite",
+			"Davepeta"
+		],
+		prevo: "Baby Dave",
+		evoLevel: 16
+	},
+	gtdave: {
+		num: 413006,
+		name: "GT Dave",
+		types: [
+			"Fire",
+			"Steel"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 109,
+			def: 68,
+			spa: 101,
+			spd: 95,
+			spe: 80
+		},
+		abilities: {
+			0: "Flash Fire"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Red",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Dave",
+		evoLevel: 36
+	},
+	babyrose: {
+		num: 413007,
+		name: "Baby Rose",
+		types: [
+			"Psychic",
+			"Water"
+		],
+		baseStats: {
+			hp: 52,
+			atk: 45,
+			def: 48,
+			spa: 50,
+			spd: 66,
+			spe: 53
+		},
+		abilities: {
+			0: "Water Veil"
+		},
+		heightm: 0.5,
+		weightkg: 3.7,
+		color: "Purple",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"Rose",
+			"Roxy's Mom"
+		]
+	},
+	rose: {
+		num: 413008,
+		name: "Rose",
+		types: [
+			"Psychic",
+			"Water"
+		],
+		baseStats: {
+			hp: 62,
+			atk: 70,
+			def: 58,
+			spa: 70,
+			spd: 90,
+			spe: 63
+		},
+		abilities: {
+			0: "Water Veil"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Purple",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"GT Rose",
+			"GrmdrkRose",
+			"Jasprose"
+		],
+		prevo: "Baby Rose",
+		evoLevel: 16
+	},
+	gtrose: {
+		num: 413009,
+		name: "GT Rose",
+		types: [
+			"Psychic",
+			"Water"
+		],
+		baseStats: {
+			hp: 87,
+			atk: 75,
+			def: 83,
+			spa: 85,
+			spd: 100,
+			spe: 98
+		},
+		abilities: {
+			0: "Synchronize"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Purple",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Rose",
+		evoLevel: 36
+	},
+	babyjane: {
+		num: 413010,
+		name: "Baby Jane",
+		types: [
+			"Normal",
+			"Grass"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 52,
+			def: 53,
+			spa: 34,
+			spd: 51,
+			spe: 54
+		},
+		abilities: {
+			0: "Keen Eye",
+			1: "Keen Eye"
+		},
+		heightm: 0.5,
+		weightkg: 3.7,
+		color: "Blue",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"Jane",
+			"Nanna"
+		]
+	},
+	jane: {
+		num: 413011,
+		name: "Jane",
+		types: [
+			"Normal",
+			"Grass"
+		],
+		baseStats: {
+			hp: 88,
+			atk: 70,
+			def: 71,
+			spa: 43,
+			spd: 69,
+			spe: 72
+		},
+		abilities: {
+			0: "Keen Eye",
+			1: "Regenerator"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Blue",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"GT Jane",
+			"TrkstrJane"
+		],
+		prevo: "Baby Jane",
+		evoLevel: 16
+	},
+	gtjane: {
+		num: 413012,
+		name: "GT Jane",
+		types: [
+			"Normal",
+			"Grass"
+		],
+		baseStats: {
+			hp: 111,
+			atk: 88,
+			def: 89,
+			spa: 63,
+			spd: 87,
+			spe: 90
+		},
+		abilities: {
+			0: "Keen Eye",
+			1: "Regenerator"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Blue",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Jane",
+		evoLevel: 36
+	},
+	babydirk: {
+		num: 413013,
+		name: "Baby Dirk",
+		types: [
+			"Ice"
+		],
+		baseStats: {
+			hp: 38,
+			atk: 62,
+			def: 33,
+			spa: 72,
+			spd: 71,
+			spe: 38
+		},
+		abilities: {
+			0: "Technician",
+			1: "Synchronize"
+		},
+		heightm: 0.8,
+		weightkg: 3.7,
+		color: "Yellow",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"Dirk",
+			"Bro"
+		]
+	},
+	dirk: {
+		num: 413014,
+		name: "Dirk",
+		types: [
+			"Ice",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 82,
+			def: 47,
+			spa: 92,
+			spd: 92,
+			spe: 50
+		},
+		abilities: {
+			0: "Technician",
+			1: "Synchronize"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Yellow",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"GT Dirk",
+			"TrkstrDirk"
+		],
+		prevo: "Baby Dirk",
+		evoLevel: 16
+	},
+	gtdirk: {
+		num: 413015,
+		name: "GT Dirk",
+		types: [
+			"Ice",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 101,
+			def: 65,
+			spa: 111,
+			spd: 111,
+			spe: 70
+		},
+		abilities: {
+			0: "Technician",
+			1: "Synchronize"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Yellow",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Dirk",
+		evoLevel: 36
+	},
+	babyroxy: {
+		num: 413016,
+		name: "Baby Roxy",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 56,
+			def: 35,
+			spa: 55,
+			spd: 61,
+			spe: 67
+		},
+		abilities: {
+			0: "Download",
+			1: "Hustle"
+		},
+		heightm: 0.5,
+		weightkg: 3.7,
+		color: "Pink",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"Roxy",
+			"Mom"
+		]
+	},
+	roxy: {
+		num: 413017,
+		name: "Roxy",
+		types: [
+			"Water",
+			"Poison"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 71,
+			def: 50,
+			spa: 70,
+			spd: 81,
+			spe: 86
+		},
+		abilities: {
+			0: "Download",
+			1: "Hustle"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Pink",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"GT Roxy",
+			"TrkstrRoxy"
+		],
+		prevo: "Baby Roxy",
+		evoLevel: 16
+	},
+	gtroxy: {
+		num: 413018,
+		name: "GT Roxy",
+		types: [
+			"Water",
+			"Poison"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 91,
+			def: 65,
+			spa: 90,
+			spd: 101,
+			spe: 111
+		},
+		abilities: {
+			0: "Download",
+			1: "Own Tempo"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Pink",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Roxy",
+		evoLevel: 36
+	},
+	babyjake: {
+		num: 413019,
+		name: "Baby Jake",
+		types: [
+			"Bug"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 57,
+			def: 40,
+			spa: 72,
+			spd: 40,
+			spe: 50
+		},
+		abilities: {
+			0: "Oblivious",
+			1: "Cute Charm"
+		},
+		heightm: 0.5,
+		weightkg: 3.7,
+		color: "Green",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"Jake",
+			"Grandpa"
+		]
+	},
+	jake: {
+		num: 413020,
+		name: "Jake",
+		types: [
+			"Bug",
+			"Rock"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 77,
+			def: 55,
+			spa: 91,
+			spd: 50,
+			spe: 65
+		},
+		abilities: {
+			0: "Oblivious",
+			1: "Cute Charm"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Green",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"GT Jake",
+			"TrkstrJake"
+		],
+		prevo: "Baby Jake",
+		evoLevel: 16
+	},
+	gtjake: {
+		num: 413021,
+		name: "GT Jake",
+		types: [
+			"Bug",
+			"Rock"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 97,
+			def: 75,
+			spa: 111,
+			spd: 65,
+			spe: 85
+		},
+		abilities: {
+			0: "Oblivious",
+			1: "Cute Charm"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Green",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Jake",
+		evoLevel: 36
+	},
+	grubkarkat: {
+		num: 413022,
+		name: "GrubKarkat",
+		types: [
+			"Fire"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 69,
+			def: 60,
+			spa: 50,
+			spd: 45,
+			spe: 40
+		},
+		abilities: {
+			0: "Insomnia"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Karkat"
+		]
+	},
+	karkat: {
+		num: 413023,
+		name: "Karkat",
+		types: [
+			"Fire",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 69,
+			atk: 86,
+			def: 76,
+			spa: 69,
+			spd: 60,
+			spe: 53
+		},
+		abilities: {
+			0: "Insomnia"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Karkat"
+		],
+		prevo: "GrubKarkat",
+		evoLevel: 16
+	},
+	gtkarkat: {
+		num: 413024,
+		name: "GT Karkat",
+		types: [
+			"Fire",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 84,
+			atk: 121,
+			def: 96,
+			spa: 84,
+			spd: 80,
+			spe: 69
+		},
+		abilities: {
+			0: "Vital Spirit"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Karkat",
+		evoLevel: 36
+	},
+	grubaradia: {
+		num: 413025,
+		name: "GrubAradia",
+		types: [
+			"Normal",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 44,
+			atk: 55,
+			def: 40,
+			spa: 40,
+			spd: 70,
+			spe: 65
+		},
+		abilities: {
+			0: "Pickup",
+			1: "Keen Eye"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Aradia"
+		]
+	},
+	aradia: {
+		num: 413026,
+		name: "Aradia",
+		types: [
+			"Normal",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 66,
+			atk: 70,
+			def: 52,
+			spa: 60,
+			spd: 85,
+			spe: 80
+		},
+		abilities: {
+			0: "Pickup",
+			1: "Keen Eye"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Aradia",
+			"DeadAradia",
+			"Aradiabot"
+		],
+		prevo: "GrubAradia",
+		evoLevel: 18
+	},
+	gtaradia: {
+		num: 413027,
+		name: "GT Aradia",
+		types: [
+			"Fairy",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 88,
+			atk: 70,
+			def: 73,
+			spa: 85,
+			spd: 110,
+			spe: 108
+		},
+		abilities: {
+			0: "Trace",
+			1: "Levitate"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Aradia",
+		evoLevel: 35
+	},
+	grubtavros: {
+		num: 413028,
+		name: "GrubTavros",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 55,
+			def: 69,
+			spa: 35,
+			spd: 40,
+			spe: 50
+		},
+		abilities: {
+			0: "Oblivious"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Brown",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Tavros"
+		]
+	},
+	tavros: {
+		num: 413029,
+		name: "Tavros",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 75,
+			def: 88,
+			spa: 50,
+			spd: 55,
+			spe: 65
+		},
+		abilities: {
+			0: "Oblivious"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Brown",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Tavros",
+			"Tavris",
+			"GCaTavros"
+		],
+		prevo: "GrubTavros",
+		evoLevel: 16
+	},
+	gttavros: {
+		num: 413030,
+		name: "GT Tavros",
+		types: [
+			"Ground",
+			"Flying"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 95,
+			def: 114,
+			spa: 75,
+			spd: 70,
+			spe: 80
+		},
+		abilities: {
+			0: "Oblivious"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Brown",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Tavros",
+		evoLevel: 36
+	},
+	grubsollux: {
+		num: 413031,
+		name: "GrubSollux",
+		types: [
+			"Psychic"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 50,
+			def: 45,
+			spa: 64,
+			spd: 75,
+			spe: 35
+		},
+		abilities: {
+			0: "Lightningrod",
+			1: "Guts"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Yellow",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Sollux"
+		]
+	},
+	sollux: {
+		num: 413032,
+		name: "Sollux",
+		types: [
+			"Psychic",
+			"Electric"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 70,
+			def: 60,
+			spa: 78,
+			spd: 95,
+			spe: 45
+		},
+		abilities: {
+			0: "Lightningrod",
+			1: "Tinted Lens"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Yellow",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Sollux",
+			"Erisol"
+		],
+		prevo: "GrubSollux",
+		evoLevel: 18
+	},
+	gtsollux: {
+		num: 413033,
+		name: "GT Sollux",
+		types: [
+			"Psychic",
+			"Electric"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 90,
+			def: 80,
+			spa: 104,
+			spd: 120,
+			spe: 60
+		},
+		abilities: {
+			0: "Lightningrod",
+			1: "Tinted Lens"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Yellow",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Sollux",
+		evoLevel: 39
+	},
+	grubnepeta: {
+		num: 413034,
+		name: "GrubNepeta",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 60,
+			def: 45,
+			spa: 70,
+			spd: 40,
+			spe: 48
+		},
+		abilities: {
+			0: "Cute Charm",
+			1: "Scrappy"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Nepeta"
+		]
+	},
+	nepeta: {
+		num: 413035,
+		name: "Nepeta",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 80,
+			def: 55,
+			spa: 90,
+			spd: 60,
+			spe: 58
+		},
+		abilities: {
+			0: "Cute Charm",
+			1: "Scrappy"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Nepeta",
+			"Fefeta",
+			"Davepeta"
+		],
+		prevo: "GrubNepeta",
+		evoLevel: 16
+	},
+	gtnepeta: {
+		num: 413036,
+		name: "GT Nepeta",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 105,
+			def: 70,
+			spa: 120,
+			spd: 80,
+			spe: 74
+		},
+		abilities: {
+			0: "Cute Charm",
+			1: "Scrappy"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Nepeta",
+		evoLevel: 36
+	},
+	grubkanaya: {
+		num: 413037,
+		name: "GrubKanaya",
+		types: [
+			"Grass",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 42,
+			def: 60,
+			spa: 55,
+			spd: 52,
+			spe: 65
+		},
+		abilities: {
+			0: "Serene Grace",
+			1: "Early Bird"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Kanaya"
+		]
+	},
+	kanaya: {
+		num: 413038,
+		name: "Kanaya",
+		types: [
+			"Grass",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 62,
+			def: 74,
+			spa: 70,
+			spd: 72,
+			spe: 85
+		},
+		abilities: {
+			0: "Serene Grace",
+			1: "Early Bird"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Kanaya"
+		],
+		prevo: "GrubKanaya",
+		evoLevel: 16
+	},
+	gtkanaya: {
+		num: 413039,
+		name: "GT Kanaya",
+		types: [
+			"Grass",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 68,
+			atk: 83,
+			def: 95,
+			spa: 90,
+			spd: 93,
+			spe: 105
+		},
+		abilities: {
+			0: "Serene Grace",
+			1: "Early Bird"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Kanaya",
+		evoLevel: 36
+	},
+	grubterezi: {
+		num: 413040,
+		name: "GrubTerezi",
+		types: [
+			"Psychic"
+		],
+		baseStats: {
+			hp: 54,
+			atk: 60,
+			def: 45,
+			spa: 25,
+			spd: 60,
+			spe: 70
+		},
+		abilities: {
+			0: "Keen Eye",
+			1: "Analytic"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Terezi"
+		]
+	},
+	terezi: {
+		num: 413041,
+		name: "Terezi",
+		types: [
+			"Psychic"
+		],
+		baseStats: {
+			hp: 68,
+			atk: 80,
+			def: 60,
+			spa: 35,
+			spd: 80,
+			spe: 90
+		},
+		abilities: {
+			0: "Keen Eye",
+			1: "Analytic"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Terezi"
+		],
+		prevo: "GrubTerezi",
+		evoLevel: 16
+	},
+	gtterezi: {
+		num: 413042,
+		name: "GT Terezi",
+		types: [
+			"Psychic"
+		],
+		baseStats: {
+			hp: 88,
+			atk: 103,
+			def: 80,
+			spa: 50,
+			spd: 103,
+			spe: 110
+		},
+		abilities: {
+			0: "Keen Eye",
+			1: "Analytic"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Terezi",
+		evoLevel: 36
+	},
+	grubvriska: {
+		num: 413043,
+		name: "GrubVriska",
+		types: [
+			"Bug",
+			"Dark"
+		],
+		baseStats: {
+			hp: 39,
+			atk: 66,
+			def: 50,
+			spa: 73,
+			spd: 51,
+			spe: 35
+		},
+		abilities: {
+			0: "Compoundeyes",
+			1: "Super Luck"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Vriska"
+		]
+	},
+	vriska: {
+		num: 413044,
+		name: "Vriska",
+		types: [
+			"Bug",
+			"Dark"
+		],
+		baseStats: {
+			hp: 54,
+			atk: 85,
+			def: 65,
+			spa: 93,
+			spd: 66,
+			spe: 50
+		},
+		abilities: {
+			0: "Compoundeyes",
+			1: "Super Luck"
+		},
+		heightm: 1.6,
+		weightkg: 63.1,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Vriska",
+			"Tavris"
+		],
+		prevo: "GrubVriska",
+		evoLevel: 16
+	},
+	horuss: {
+		num: 413083,
+		name: "Horuss",
+		types: [
+			"Fighting",
+			"Steel"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 85,
+			def: 100,
+			spa: 42,
+			spd: 44,
+			spe: 62
+		},
+		abilities: {
+			0: "Technician",
+			1: "Battle Armor"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Horuss"
+		],
+		prevo: "GrubHoruss",
+		evoLevel: 16
+	},
+	grubequius: {
+		num: 413046,
+		name: "GrubEquius",
+		types: [
+			"Fighting"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 77,
+			def: 67,
+			spa: 37,
+			spd: 30,
+			spe: 38
+		},
+		abilities: {
+			0: "Iron Fist",
+			1: "Damp"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Equius"
+		]
+	},
+	equius: {
+		num: 413047,
+		name: "Equius",
+		types: [
+			"Fighting"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 102,
+			def: 82,
+			spa: 52,
+			spd: 45,
+			spe: 52
+		},
+		abilities: {
+			0: "Iron Fist",
+			1: "Damp"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Equius",
+			"ARquius"
+		],
+		prevo: "GrubEquius",
+		evoLevel: 16
+	},
+	gtequius: {
+		num: 413048,
+		name: "GT Equius",
+		types: [
+			"Fighting"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 143,
+			def: 97,
+			spa: 72,
+			spd: 55,
+			spe: 72
+		},
+		abilities: {
+			0: "Iron Fist",
+			1: "Damp"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Equius",
+		evoLevel: 36
+	},
+	grubgamzee: {
+		num: 413049,
+		name: "GrubGamzee",
+		types: [
+			"Poison",
+			"Grass"
+		],
+		baseStats: {
+			hp: 74,
+			atk: 66,
+			def: 53,
+			spa: 30,
+			spd: 40,
+			spe: 51
+		},
+		abilities: {
+			0: "Liquid Ooze",
+			1: "Hustle"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Purple",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Gamzee"
+		]
+	},
+	gamzee: {
+		num: 413050,
+		name: "Gamzee",
+		types: [
+			"Poison",
+			"Grass"
+		],
+		baseStats: {
+			hp: 92,
+			atk: 84,
+			def: 68,
+			spa: 60,
+			spd: 50,
+			spe: 66
+		},
+		abilities: {
+			0: "Liquid Ooze",
+			1: "Hustle"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Purple",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Gamzee"
+		],
+		prevo: "GrubGamzee",
+		evoLevel: 16
+	},
+	gtgamzee: {
+		num: 413051,
+		name: "GT Gamzee",
+		types: [
+			"Poison",
+			"Dark"
+		],
+		baseStats: {
+			hp: 112,
+			atk: 119,
+			def: 88,
+			spa: 70,
+			spd: 60,
+			spe: 85
+		},
+		abilities: {
+			0: "Intimidate",
+			1: "Own Tempo"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Purple",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Gamzee",
+		evoLevel: 32
+	},
+	gruberidan: {
+		num: 413052,
+		name: "GrubEridan",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 20,
+			atk: 64,
+			def: 40,
+			spa: 72,
+			spd: 64,
+			spe: 40
+		},
+		abilities: {
+			0: "Torrent",
+			1: "Oblivious"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Purple",
+		eggGroups: [
+			"Water 3",
+			"Bug"
+		],
+		evos: [
+			"Eridan"
+		]
+	},
+	eridan: {
+		num: 413053,
+		name: "Eridan",
+		types: [
+			"Water",
+			"Dark"
+		],
+		baseStats: {
+			hp: 35,
+			atk: 77,
+			def: 55,
+			spa: 81,
+			spd: 110,
+			spe: 55
+		},
+		abilities: {
+			0: "Torrent",
+			1: "Oblivious"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Purple",
+		eggGroups: [
+			"Water 3",
+			"Bug"
+		],
+		evos: [
+			"GT Eridan",
+			"Erisol"
+		],
+		prevo: "GrubEridan",
+		evoLevel: 16
+	},
+	gteridan: {
+		num: 413054,
+		name: "GT Eridan",
+		types: [
+			"Water",
+			"Dark"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 107,
+			def: 75,
+			spa: 102,
+			spd: 120,
+			spe: 75
+		},
+		abilities: {
+			0: "Torrent",
+			1: "Oblivious"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Purple",
+		eggGroups: [
+			"Water 3",
+			"Bug"
+		],
+		prevo: "Eridan",
+		evoLevel: 36
+	},
+	grubfeferi: {
+		num: 413055,
+		name: "GrubFeferi",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 54,
+			def: 35,
+			spa: 56,
+			spd: 54,
+			spe: 45
+		},
+		abilities: {
+			0: "Swift Swim",
+			1: "Natural Cure"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Pink",
+		eggGroups: [
+			"Water 3",
+			"Bug"
+		],
+		evos: [
+			"Feferi"
+		]
+	},
+	feferi: {
+		num: 413056,
+		name: "Feferi",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 70,
+			def: 50,
+			spa: 73,
+			spd: 70,
+			spe: 60
+		},
+		abilities: {
+			0: "Swift Swim",
+			1: "Natural Cure"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Pink",
+		eggGroups: [
+			"Water 3",
+			"Bug"
+		],
+		evos: [
+			"GT Feferi",
+			"Fefeta"
+		],
+		prevo: "GrubFeferi",
+		evoLevel: 16
+	},
+	gtfeferi: {
+		num: 413057,
+		name: "GT Feferi",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 120,
+			atk: 90,
+			def: 65,
+			spa: 94,
+			spd: 90,
+			spe: 75
+		},
+		abilities: {
+			0: "Swift Swim",
+			1: "Natural Cure"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Pink",
+		eggGroups: [
+			"Water 3",
+			"Bug"
+		],
+		prevo: "Feferi",
+		evoLevel: 34
+	},
+	grubkankri: {
+		num: 413058,
+		name: "GrubKankri",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 56,
+			atk: 56,
+			def: 69,
+			spa: 45,
+			spd: 49,
+			spe: 63
+		},
+		abilities: {
+			0: "Arena Trap"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Kankri",
+			"Signless"
+		]
+	},
+	kankri: {
+		num: 413059,
+		name: "Kankri",
+		types: [
+			"Ground",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 66,
+			atk: 66,
+			def: 96,
+			spa: 50,
+			spd: 59,
+			spe: 76
+		},
+		abilities: {
+			0: "Arena Trap"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Kankri"
+		],
+		prevo: "GrubKankri",
+		evoLevel: 16
+	},
+	gtkankri: {
+		num: 413060,
+		name: "GT Kankri",
+		types: [
+			"Ground",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 86,
+			atk: 86,
+			def: 126,
+			spa: 61,
+			spd: 79,
+			spe: 96
+		},
+		abilities: {
+			0: "Clear Body"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Kankri",
+		evoLevel: 36
+	},
+	grubdamara: {
+		num: 413061,
+		name: "GrubDamara",
+		types: [
+			"Ice",
+			"Poison"
+		],
+		baseStats: {
+			hp: 59,
+			atk: 46,
+			def: 30,
+			spa: 55,
+			spd: 74,
+			spe: 50
+		},
+		abilities: {
+			0: "Pressure"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Damara",
+			"Handmaid"
+		]
+	},
+	damara: {
+		num: 413062,
+		name: "Damara",
+		types: [
+			"Ice",
+			"Poison"
+		],
+		baseStats: {
+			hp: 79,
+			atk: 56,
+			def: 45,
+			spa: 70,
+			spd: 96,
+			spe: 67
+		},
+		abilities: {
+			0: "Pressure"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Damara"
+		],
+		prevo: "GrubDamara",
+		evoLevel: 16
+	},
+	gtdamara: {
+		num: 413063,
+		name: "GT Damara",
+		types: [
+			"Ice",
+			"Poison"
+		],
+		baseStats: {
+			hp: 99,
+			atk: 76,
+			def: 65,
+			spa: 90,
+			spd: 117,
+			spe: 87
+		},
+		abilities: {
+			0: "Pressure"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Damara",
+		evoLevel: 36
+	},
+	grubrufioh: {
+		num: 413064,
+		name: "GrubRufioh",
+		types: [
+			"Electric"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 62,
+			def: 35,
+			spa: 55,
+			spd: 47,
+			spe: 70
+		},
+		abilities: {
+			0: "Air Lock",
+			1: "Cute Charm"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Brown",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Rufioh",
+			"Summoner"
+		]
+	},
+	rufioh: {
+		num: 413065,
+		name: "Rufioh",
+		types: [
+			"Electric",
+			"Flying"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 81,
+			def: 50,
+			spa: 70,
+			spd: 62,
+			spe: 90
+		},
+		abilities: {
+			0: "Air Lock",
+			1: "Cute Charm"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Brown",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Rufioh",
+			"RoboRufioh"
+		],
+		prevo: "GrubRufioh",
+		evoLevel: 16
+	},
+	gtrufioh: {
+		num: 413066,
+		name: "GT Rufioh",
+		types: [
+			"Electric",
+			"Flying"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 101,
+			def: 70,
+			spa: 90,
+			spd: 83,
+			spe: 110
+		},
+		abilities: {
+			0: "Air Lock",
+			1: "Cute Charm"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Brown",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Rufioh",
+		evoLevel: 36
+	},
+	grubmituna: {
+		num: 413067,
+		name: "GrubMituna",
+		types: [
+			"Fire"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 45,
+			def: 55,
+			spa: 52,
+			spd: 62,
+			spe: 55
+		},
+		abilities: {
+			0: "Guts",
+			1: "Blaze"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Yellow",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Mituna",
+			"Psiioniic"
+		]
+	},
+	mituna: {
+		num: 413068,
+		name: "Mituna",
+		types: [
+			"Fire",
+			"Rock"
+		],
+		baseStats: {
+			hp: 66,
+			atk: 62,
+			def: 90,
+			spa: 66,
+			spd: 62,
+			spe: 67
+		},
+		abilities: {
+			0: "Rock Head",
+			1: "Reckless"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Yellow",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Mituna"
+		],
+		prevo: "GrubMituna",
+		evoLevel: 14
+	},
+	gtmituna: {
+		num: 413069,
+		name: "GT Mituna",
+		types: [
+			"Fire",
+			"Rock"
+		],
+		baseStats: {
+			hp: 83,
+			atk: 77,
+			def: 110,
+			spa: 100,
+			spd: 77,
+			spe: 87
+		},
+		abilities: {
+			0: "Rock Head",
+			1: "Reckless"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Yellow",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Mituna",
+		evoLevel: 36
+	},
+	grubmeulin: {
+		num: 413070,
+		name: "GrubMeulin",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 64,
+			atk: 40,
+			def: 50,
+			spa: 66,
+			spd: 40,
+			spe: 55
+		},
+		abilities: {
+			0: "Cute Charm"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Meulin",
+			"Disciple"
+		]
+	},
+	meulin: {
+		num: 413071,
+		name: "Meulin",
+		types: [
+			"Normal",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 55,
+			def: 63,
+			spa: 90,
+			spd: 55,
+			spe: 70
+		},
+		abilities: {
+			0: "Soundproof"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Meulin"
+		],
+		prevo: "GrubMeulin",
+		evoLevel: 14
+	},
+	gtmeulin: {
+		num: 413072,
+		name: "GT Meulin",
+		types: [
+			"Normal",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 75,
+			def: 84,
+			spa: 110,
+			spd: 75,
+			spe: 90
+		},
+		abilities: {
+			0: "Soundproof"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Meulin",
+		evoLevel: 33
+	},
+	grubporrim: {
+		num: 413073,
+		name: "GrubPorrim",
+		types: [
+			"Grass"
+		],
+		baseStats: {
+			hp: 59,
+			atk: 41,
+			def: 55,
+			spa: 40,
+			spd: 55,
+			spe: 64
+		},
+		abilities: {
+			0: "Chlorophyll",
+			1: "Early Bird"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Porrim",
+			"Dolorosa"
+		]
+	},
+	porrim: {
+		num: 413074,
+		name: "Porrim",
+		types: [
+			"Grass"
+		],
+		baseStats: {
+			hp: 79,
+			atk: 56,
+			def: 73,
+			spa: 50,
+			spd: 73,
+			spe: 82
+		},
+		abilities: {
+			0: "Chlorophyll",
+			1: "Early Bird"
+		},
+		heightm: 1.6,
+		weightkg: 63,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Porrim"
+		],
+		prevo: "GrubPorrim",
+		evoLevel: 16
+	},
+	gtporrim: {
+		num: 413075,
+		name: "GT Porrim",
+		types: [
+			"Grass"
+		],
+		baseStats: {
+			hp: 99,
+			atk: 76,
+			def: 93,
+			spa: 65,
+			spd: 93,
+			spe: 108
+		},
+		abilities: {
+			0: "Chlorophyll",
+			1: "Early Bird"
+		},
+		heightm: 1.7,
+		weightkg: 70,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Porrim",
+		evoLevel: 36
+	},
+	grublatula: {
+		num: 413076,
+		name: "GrubLatula",
+		types: [
+			"Electric"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 65,
+			def: 34,
+			spa: 68,
+			spd: 60,
+			spe: 47
+		},
+		abilities: {
+			0: "Guts",
+			1: "Keen Eye"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Latula",
+			"Redglare"
+		]
+	},
+	latula: {
+		num: 413077,
+		name: "Latula",
+		types: [
+			"Electric",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 85,
+			def: 49,
+			spa: 88,
+			spd: 75,
+			spe: 62
+		},
+		abilities: {
+			0: "Guts",
+			1: "Keen Eye"
+		},
+		heightm: 1,
+		weightkg: 30,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Latula"
+		],
+		prevo: "GrubLatula",
+		evoLevel: 16
+	},
+	gtlatula: {
+		num: 413078,
+		name: "GT Latula",
+		types: [
+			"Electric",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 105,
+			def: 64,
+			spa: 108,
+			spd: 100,
+			spe: 82
+		},
+		abilities: {
+			0: "Guts",
+			1: "Keen Eye"
+		},
+		heightm: 1.7,
+		weightkg: 95,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Latula",
+		evoLevel: 36
+	},
+	grubaranea: {
+		num: 413079,
+		name: "GrubAranea",
+		types: [
+			"Bug",
+			"Electric"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 42,
+			def: 40,
+			spa: 50,
+			spd: 62,
+			spe: 70
+		},
+		abilities: {
+			0: "Serene Grace",
+			1: "Healer"
+		},
+		heightm: 1.2,
+		weightkg: 36,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Aranea",
+			"Mindfang"
+		]
+	},
+	aranea: {
+		num: 413080,
+		name: "Aranea",
+		types: [
+			"Bug",
+			"Electric"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 57,
+			def: 55,
+			spa: 65,
+			spd: 81,
+			spe: 85
+		},
+		abilities: {
+			0: "Serene Grace",
+			1: "Healer"
+		},
+		heightm: 1.6,
+		weightkg: 78.5,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Aranea"
+		],
+		prevo: "GrubAranea",
+		evoLevel: 16
+	},
+	gtaranea: {
+		num: 413081,
+		name: "GT Aranea",
+		types: [
+			"Bug",
+			"Electric"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 72,
+			def: 70,
+			spa: 80,
+			spd: 107,
+			spe: 115
+		},
+		abilities: {
+			0: "Serene Grace",
+			1: "Healer"
+		},
+		heightm: 0.3,
+		weightkg: 6,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Aranea",
+		evoLevel: 36
+	},
+	grubhoruss: {
+		num: 413082,
+		name: "GrubHoruss",
+		types: [
+			"Fighting"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 75,
+			def: 70,
+			spa: 34,
+			spd: 25,
+			spe: 50
+		},
+		abilities: {
+			0: "Damp",
+			1: "Guts"
+		},
+		heightm: 1,
+		weightkg: 60,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Horuss",
+			"Darkleer"
+		]
+	},
+	gtvriska: {
+		num: 413045,
+		name: "GT Vriska",
+		types: [
+			"Bug",
+			"Dark"
+		],
+		baseStats: {
+			hp: 74,
+			atk: 106,
+			def: 85,
+			spa: 113,
+			spd: 86,
+			spe: 70
+		},
+		abilities: {
+			0: "Compoundeyes",
+			1: "Super Luck"
+		},
+		heightm: 1.2,
+		weightkg: 18.6,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Vriska",
+		evoLevel: 36
+	},
+	gthoruss: {
+		num: 413084,
+		name: "GT Horuss",
+		types: [
+			"Fighting",
+			"Steel"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 105,
+			def: 120,
+			spa: 62,
+			spd: 65,
+			spe: 82
+		},
+		abilities: {
+			0: "Technician",
+			1: "Battle Armor"
+		},
+		heightm: 1.4,
+		weightkg: 39.2,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Horuss",
+		evoLevel: 36
+	},
+	grubkurloz: {
+		num: 413085,
+		name: "GrubKurloz",
+		types: [
+			"Dark"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 90,
+			def: 27,
+			spa: 55,
+			spd: 75,
+			spe: 27
+		},
+		abilities: {
+			0: "Pressure"
+		},
+		heightm: 1.8,
+		weightkg: 85.2,
+		color: "Purple",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Kurloz",
+			"Highblood"
+		]
+	},
+	kurloz: {
+		num: 413086,
+		name: "Kurloz",
+		types: [
+			"Dark",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 105,
+			def: 39,
+			spa: 70,
+			spd: 100,
+			spe: 39
+		},
+		abilities: {
+			0: "Intimidate"
+		},
+		heightm: 1.1,
+		weightkg: 90,
+		color: "Purple",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"GT Kurloz"
+		],
+		prevo: "GrubKurloz",
+		evoLevel: 16
+	},
+	gtkurloz: {
+		num: 413087,
+		name: "GT Kurloz",
+		types: [
+			"Dark",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 130,
+			def: 54,
+			spa: 90,
+			spd: 126,
+			spe: 54
+		},
+		abilities: {
+			0: "Intimidate"
+		},
+		heightm: 1.7,
+		weightkg: 120,
+		color: "Purple",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Kurloz",
+		evoLevel: 34
+	},
+	grubcronus: {
+		num: 413088,
+		name: "GrubCronus",
+		types: [
+			"Water",
+			"Poison"
+		],
+		baseStats: {
+			hp: 20,
+			atk: 60,
+			def: 60,
+			spa: 50,
+			spd: 60,
+			spe: 50
+		},
+		abilities: {
+			0: "Oblivious"
+		},
+		heightm: 0.9,
+		weightkg: 30,
+		color: "Purple",
+		eggGroups: [
+			"Water 3",
+			"Bug"
+		],
+		evos: [
+			"Cronus",
+			"Dualscar"
+		]
+	},
+	cronus: {
+		num: 413089,
+		name: "Cronus",
+		types: [
+			"Water",
+			"Poison"
+		],
+		baseStats: {
+			hp: 39,
+			atk: 79,
+			def: 79,
+			spa: 69,
+			spd: 79,
+			spe: 69
+		},
+		abilities: {
+			0: "Oblivious"
+		},
+		heightm: 1.2,
+		weightkg: 30,
+		color: "Purple",
+		eggGroups: [
+			"Water 3",
+			"Bug"
+		],
+		evos: [
+			"GT Cronus"
+		],
+		prevo: "GrubCronus",
+		evoLevel: 16
+	},
+	gtcronus: {
+		num: 413090,
+		name: "GT Cronus",
+		types: [
+			"Water",
+			"Poison"
+		],
+		baseStats: {
+			hp: 54,
+			atk: 94,
+			def: 94,
+			spa: 79,
+			spd: 94,
+			spe: 89
+		},
+		abilities: {
+			0: "Oblivious"
+		},
+		heightm: 0.3,
+		weightkg: 4,
+		color: "Purple",
+		eggGroups: [
+			"Water 3",
+			"Bug"
+		],
+		prevo: "Cronus",
+		evoLevel: 36
+	},
+	grubmeenah: {
+		num: 413091,
+		name: "GrubMeenah",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 71,
+			def: 40,
+			spa: 57,
+			spd: 56,
+			spe: 40
+		},
+		abilities: {
+			0: "Swift Swim",
+			1: "Guts"
+		},
+		heightm: 1.5,
+		weightkg: 132.5,
+		color: "Pink",
+		eggGroups: [
+			"Water 3",
+			"Bug"
+		],
+		evos: [
+			"Meenah"
+		]
+	},
+	meenah: {
+		num: 413092,
+		name: "Meenah",
+		types: [
+			"Water",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 90,
+			def: 50,
+			spa: 77,
+			spd: 76,
+			spe: 50
+		},
+		abilities: {
+			0: "Swift Swim",
+			1: "Guts"
+		},
+		heightm: 1.3,
+		weightkg: 0.1,
+		color: "Pink",
+		eggGroups: [
+			"Water 3",
+			"Bug"
+		],
+		evos: [
+			"GT Meenah"
+		],
+		prevo: "GrubMeenah",
+		evoLevel: 16
+	},
+	gtmeenah: {
+		num: 413093,
+		name: "GT Meenah",
+		types: [
+			"Water",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 111,
+			def: 70,
+			spa: 97,
+			spd: 96,
+			spe: 70
+		},
+		abilities: {
+			0: "Swift Swim",
+			1: "Guts"
+		},
+		heightm: 1.6,
+		weightkg: 0.1,
+		color: "Pink",
+		eggGroups: [
+			"Water 3",
+			"Bug"
+		],
+		prevo: "Meenah",
+		evoLevel: 36
+	},
+	babycherub: {
+		num: 413094,
+		name: "BabyCherub",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 35,
+			def: 35,
+			spa: 50,
+			spd: 35,
+			spe: 35
+		},
+		abilities: {
+			0: "Shed Skin"
+		},
+		heightm: 1.5,
+		weightkg: 40.5,
+		color: "Green",
+		eggGroups: [
+			"Water 1"
+		],
+		evos: [
+			"Caliborn",
+			"Calliope",
+			"Caliborn"
+		]
+	},
+	calliope: {
+		num: 413095,
+		name: "Calliope",
+		types: [
+			"Ghost",
+			"Grass"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 50,
+			def: 88,
+			spa: 50,
+			spd: 80,
+			spe: 100
+		},
+		abilities: {
+			0: "Magic Guard"
+		},
+		heightm: 8.8,
+		weightkg: 210,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Water 1"
+		],
+		evos: [
+			"GTCalliope",
+			"Caliborn"
+		],
+		prevo: "BabyCherub",
+		evoLevel: 20,
+		evoCondition: "with an Atk stat < its Def stat"
+	},
+	caliborn: {
+		num: 413096,
+		name: "Caliborn",
+		types: [
+			"Dark",
+			"Fire"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 100,
+			def: 80,
+			spa: 80,
+			spd: 88,
+			spe: 50
+		},
+		abilities: {
+			0: "Reckless"
+		},
+		heightm: 1,
+		weightkg: 32.4,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Water 1"
+		],
+		evos: [
+			"GTCaliborn",
+			"Calliope"
+		],
+		prevo: "BabyCherub",
+		evoLevel: 20,
+		evoCondition: "with an Atk stat > its Def stat"
+	},
+	shaleimp: {
+		num: 413097,
+		name: "Shale Imp",
+		types: [
+			"Poison"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 65,
+			def: 65,
+			spa: 40,
+			spd: 45,
+			spe: 45
+		},
+		abilities: {
+			0: "Liquid Ooze"
+		},
+		heightm: 1.6,
+		weightkg: 75.6,
+		color: "Black",
+		eggGroups: [
+			"Water 1"
+		],
+		evos: [
+			"Crude Ogre"
+		]
+	},
+	shalelich: {
+		num: 413099,
+		name: "Shale Lich",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 30,
+			atk: 105,
+			def: 90,
+			spa: 50,
+			spd: 25,
+			spe: 25
+		},
+		abilities: {
+			0: "Hyper Cutter",
+			1: "Shell Armor"
+		},
+		heightm: 1.3,
+		weightkg: 60,
+		color: "Red",
+		eggGroups: [
+			"Mineral"
+		]
+	},
+	crudeogre: {
+		num: 413098,
+		name: "Crude Ogre",
+		types: [
+			"Rock",
+			"Poison"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 110,
+			def: 100,
+			spa: 50,
+			spd: 70,
+			spe: 70
+		},
+		abilities: {
+			0: "Intimidate"
+		},
+		heightm: 0.4,
+		weightkg: 6.5,
+		color: "Black",
+		eggGroups: [
+			"Water 1"
+		],
+		prevo: "Shale Imp",
+		evoLevel: 23
+	},
+	minihoof: {
+		num: 413100,
+		name: "Minihoof",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 55,
+			def: 40,
+			spa: 75,
+			spd: 15,
+			spe: 40
+		},
+		abilities: {
+			0: "Pickup",
+			1: "Cute Charm"
+		},
+		heightm: 0.5,
+		weightkg: 10.4,
+		color: "White",
+		eggGroups: [
+			"Fairy"
+		],
+		evos: [
+			"Maplehoof"
+		]
+	},
+	maplehoof: {
+		num: 413101,
+		name: "Maplehoof",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 80,
+			def: 65,
+			spa: 100,
+			spd: 40,
+			spe: 65
+		},
+		abilities: {
+			0: "Pickup",
+			1: "Cute Charm"
+		},
+		heightm: 1.2,
+		weightkg: 66.6,
+		color: "White",
+		eggGroups: [
+			"Fairy"
+		],
+		prevo: "Minihoof",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	ramlusus: {
+		num: 413102,
+		name: "Ram Lusus",
+		types: [
+			"Psychic"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 80,
+			def: 65,
+			spa: 90,
+			spd: 65,
+			spe: 90
+		},
+		abilities: {
+			0: "Synchronize"
+		},
+		heightm: 0.4,
+		weightkg: 2.5,
+		color: "White",
+		eggGroups: [
+			"Water 1"
+		]
+	},
+	tinkerbull: {
+		num: 413103,
+		name: "Tinkerbull",
+		types: [
+			"Fairy",
+			"Flying"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 55,
+			def: 30,
+			spa: 70,
+			spd: 30,
+			spe: 35
+		},
+		abilities: {
+			0: "Oblivious",
+			1: "Cute Charm"
+		},
+		heightm: 2,
+		weightkg: 120,
+		color: "White",
+		eggGroups: [
+			"Water 1",
+			"Grass"
+		],
+		evos: [
+			"Bullsprite"
+		]
+	},
+	bullsprite: {
+		num: 413104,
+		name: "Bullsprite",
+		types: [
+			"Fairy",
+			"Flying"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 85,
+			def: 50,
+			spa: 100,
+			spd: 50,
+			spe: 55
+		},
+		abilities: {
+			0: "Oblivious",
+			1: "Cute Charm"
+		},
+		heightm: 0.4,
+		weightkg: 6.5,
+		color: "Brown",
+		eggGroups: [
+			"Water 1",
+			"Grass"
+		],
+		prevo: "Tinkerbull",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	bicyclops: {
+		num: 413105,
+		name: "Bicyclops",
+		types: [
+			"Normal",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 83,
+			atk: 70,
+			def: 60,
+			spa: 20,
+			spd: 85,
+			spe: 77
+		},
+		abilities: {
+			0: "Lightningrod",
+			1: "Thick Fat"
+		},
+		heightm: 1,
+		weightkg: 45,
+		color: "White",
+		eggGroups: [
+			"Water 1"
+		],
+		evos: [
+			"Bisprite"
+		]
+	},
+	bisprite: {
+		num: 413106,
+		name: "Bisprite",
+		types: [
+			"Normal",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 98,
+			atk: 80,
+			def: 70,
+			spa: 50,
+			spd: 105,
+			spe: 92
+		},
+		abilities: {
+			0: "Lightningrod",
+			1: "Thick Fat"
+		},
+		heightm: 1.5,
+		weightkg: 49.8,
+		color: "Yellow",
+		eggGroups: [
+			"Water 1"
+		],
+		prevo: "Bicyclops",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	crabdad: {
+		num: 413107,
+		name: "Crabdad",
+		types: [
+			"Bug",
+			"Water"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 100,
+			def: 80,
+			spa: 55,
+			spd: 55,
+			spe: 45
+		},
+		abilities: {
+			0: "Insomnia",
+			1: "Shell Armor"
+		},
+		heightm: 1.4,
+		weightkg: 50.2,
+		color: "White",
+		eggGroups: [
+			"Water 1",
+			"Mineral"
+		],
+		evos: [
+			"Crabsprite"
+		]
+	},
+	crabsprite: {
+		num: 413108,
+		name: "Crabsprite",
+		types: [
+			"Bug",
+			"Water"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 120,
+			def: 100,
+			spa: 55,
+			spd: 75,
+			spe: 65
+		},
+		abilities: {
+			0: "Insomnia",
+			1: "Shell Armor"
+		},
+		heightm: 1.2,
+		weightkg: 65.5,
+		color: "Red",
+		eggGroups: [
+			"Water 1",
+			"Mineral"
+		],
+		prevo: "Crabdad",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	pounce: {
+		num: 413109,
+		name: "Pounce",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 75,
+			def: 55,
+			spa: 95,
+			spd: 50,
+			spe: 55
+		},
+		abilities: {
+			0: "Own Tempo",
+			1: "Limber"
+		},
+		heightm: 0.6,
+		weightkg: 1,
+		color: "White",
+		eggGroups: [
+			"Water 1"
+		],
+		evos: [
+			"Pounsprite"
+		]
+	},
+	pounsprite: {
+		num: 413110,
+		name: "Pounsprite",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 95,
+			def: 65,
+			spa: 125,
+			spd: 60,
+			spe: 65
+		},
+		abilities: {
+			0: "Own Tempo",
+			1: "Limber"
+		},
+		heightm: 1.2,
+		weightkg: 9.5,
+		color: "Green",
+		eggGroups: [
+			"Water 1"
+		],
+		prevo: "Pounce",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	mothergrub: {
+		num: 413111,
+		name: "Mothergrub",
+		types: [
+			"Bug",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 30,
+			def: 65,
+			spa: 65,
+			spd: 65,
+			spe: 90
+		},
+		abilities: {
+			0: "Serene Grace"
+		},
+		heightm: 1,
+		weightkg: 115,
+		color: "White",
+		eggGroups: [
+			"Water 1",
+			"Grass"
+		],
+		evos: [
+			"Mthrsprite"
+		]
+	},
+	mthrsprite: {
+		num: 413112,
+		name: "Mthrsprite",
+		types: [
+			"Bug",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 45,
+			def: 77,
+			spa: 78,
+			spd: 78,
+			spe: 112
+		},
+		abilities: {
+			0: "Serene Grace"
+		},
+		heightm: 1.9,
+		weightkg: 120,
+		color: "Green",
+		eggGroups: [
+			"Water 1",
+			"Grass"
+		],
+		prevo: "Mothergrub",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	dragonmom: {
+		num: 413113,
+		name: "Dragonmom",
+		types: [
+			"Dragon",
+			"Flying"
+		],
+		baseStats: {
+			hp: 58,
+			atk: 87,
+			def: 60,
+			spa: 84,
+			spd: 66,
+			spe: 60
+		},
+		abilities: {
+			0: "Keen Eye"
+		},
+		heightm: 1.1,
+		weightkg: 34.6,
+		color: "White",
+		eggGroups: [
+			"Water 1",
+			"Undiscovered"
+		],
+		evos: [
+			"Drgnsprite"
+		]
+	},
+	drgnsprite: {
+		num: 413114,
+		name: "Drgnsprite",
+		types: [
+			"Dragon",
+			"Flying"
+		],
+		baseStats: {
+			hp: 78,
+			atk: 102,
+			def: 70,
+			spa: 99,
+			spd: 91,
+			spe: 75
+		},
+		abilities: {
+			0: "Keen Eye"
+		},
+		heightm: 1,
+		weightkg: 35,
+		color: "Green",
+		eggGroups: [
+			"Water 1",
+			"Undiscovered"
+		],
+		prevo: "Dragonmom",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	spidermom: {
+		num: 413115,
+		name: "Spidermom",
+		types: [
+			"Bug",
+			"Poison"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 100,
+			def: 75,
+			spa: 60,
+			spd: 45,
+			spe: 55
+		},
+		abilities: {
+			0: "Compoundeyes",
+			1: "Intimidate"
+		},
+		heightm: 2.2,
+		weightkg: 80,
+		color: "White",
+		eggGroups: [
+			"Water 1",
+			"Flying"
+		],
+		evos: [
+			"Spdrsprite"
+		]
+	},
+	spdrsprite: {
+		num: 413116,
+		name: "Spdrsprite",
+		types: [
+			"Bug",
+			"Poison"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 125,
+			def: 85,
+			spa: 70,
+			spd: 65,
+			spe: 75
+		},
+		abilities: {
+			0: "Compoundeyes",
+			1: "Intimidate"
+		},
+		heightm: 0.4,
+		weightkg: 8,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Flying"
+		],
+		prevo: "Spidermom",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	aurthour: {
+		num: 413117,
+		name: "Aurthour",
+		types: [
+			"Fighting"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 85,
+			def: 80,
+			spa: 80,
+			spd: 40,
+			spe: 60
+		},
+		abilities: {
+			0: "Guts"
+		},
+		heightm: 1.2,
+		weightkg: 25,
+		color: "White",
+		eggGroups: [
+			"Water 1"
+		],
+		evos: [
+			"Aursprite"
+		]
+	},
+	aursprite: {
+		num: 413118,
+		name: "Aursprite",
+		types: [
+			"Fighting"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 105,
+			def: 100,
+			spa: 100,
+			spd: 60,
+			spe: 70
+		},
+		abilities: {
+			0: "Guts"
+		},
+		heightm: 0.6,
+		weightkg: 15,
+		color: "Blue",
+		eggGroups: [
+			"Water 1"
+		],
+		prevo: "Aurthour",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	goatdad: {
+		num: 413119,
+		name: "Goatdad",
+		types: [
+			"Normal",
+			"Water"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 78,
+			def: 62,
+			spa: 60,
+			spd: 70,
+			spe: 65
+		},
+		abilities: {
+			0: "Own Tempo",
+			1: "Hustle"
+		},
+		heightm: 1.3,
+		weightkg: 39,
+		color: "White",
+		eggGroups: [
+			"Water 1",
+			"Bug"
+		],
+		evos: [
+			"Goatsprite"
+		]
+	},
+	goatsprite: {
+		num: 413120,
+		name: "Goatsprite",
+		types: [
+			"Normal",
+			"Water"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 98,
+			def: 72,
+			spa: 80,
+			spd: 90,
+			spe: 85
+		},
+		abilities: {
+			0: "Own Tempo",
+			1: "Hustle"
+		},
+		heightm: 0.8,
+		weightkg: 34.5,
+		color: "Purple",
+		eggGroups: [
+			"Water 1",
+			"Bug"
+		],
+		prevo: "Goatdad",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	shorsedad: {
+		num: 413121,
+		name: "Shorsedad",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 65,
+			def: 65,
+			spa: 90,
+			spd: 95,
+			spe: 60
+		},
+		abilities: {
+			0: "Torrent",
+			1: "Levitate"
+		},
+		heightm: 1.1,
+		weightkg: 80,
+		color: "White",
+		eggGroups: [
+			"Water 1",
+			"Bug"
+		],
+		evos: [
+			"Shorsprite"
+		]
+	},
+	shorsprite: {
+		num: 413122,
+		name: "Shorsprite",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 85,
+			def: 85,
+			spa: 105,
+			spd: 110,
+			spe: 75
+		},
+		abilities: {
+			0: "Torrent",
+			1: "Levitate"
+		},
+		heightm: 1.3,
+		weightkg: 54.5,
+		color: "Purple",
+		eggGroups: [
+			"Water 1",
+			"Bug"
+		],
+		prevo: "Shorsedad",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	glbgolyb: {
+		num: 413123,
+		name: "Gl'bgolyb",
+		types: [
+			"Water",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 50,
+			def: 60,
+			spa: 54,
+			spd: 90,
+			spe: 90
+		},
+		abilities: {
+			0: "Natural Cure",
+			1: "Pressure"
+		},
+		heightm: 1.5,
+		weightkg: 56,
+		color: "White",
+		eggGroups: [
+			"Water 1",
+			"Mineral"
+		],
+		evos: [
+			"Gl'bsprite"
+		]
+	},
+	glbsprite: {
+		num: 413124,
+		name: "Gl'bsprite",
+		types: [
+			"Water",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 70,
+			def: 80,
+			spa: 54,
+			spd: 115,
+			spe: 155
+		},
+		abilities: {
+			0: "Natural Cure",
+			1: "Pressure"
+		},
+		heightm: 1.4,
+		weightkg: 40.6,
+		color: "Purple",
+		eggGroups: [
+			"Water 1",
+			"Mineral"
+		],
+		prevo: "Gl'bgolyb",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	babybec: {
+		num: 413125,
+		name: "Baby Bec",
+		types: [
+			"Dragon",
+			"Electric"
+		],
+		baseStats: {
+			hp: 58,
+			atk: 69,
+			def: 58,
+			spa: 90,
+			spd: 80,
+			spe: 58
+		},
+		abilities: {
+			0: "Pressure"
+		},
+		heightm: 1.1,
+		weightkg: 30,
+		color: "White",
+		eggGroups: [
+			"Fairy",
+			"Undiscovered"
+		],
+		evos: [
+			"Becquerel"
+		]
+	},
+	becquerel: {
+		num: 413126,
+		name: "Becquerel",
+		types: [
+			"Dragon",
+			"Electric"
+		],
+		baseStats: {
+			hp: 82,
+			atk: 93,
+			def: 82,
+			spa: 113,
+			spd: 103,
+			spe: 82
+		},
+		abilities: {
+			0: "Pressure"
+		},
+		heightm: 1.3,
+		weightkg: 44.5,
+		color: "White",
+		eggGroups: [
+			"Fairy",
+			"Undiscovered"
+		],
+		evos: [
+			"Becsprite"
+		],
+		prevo: "Baby Bec",
+		evoLevel: 35
+	},
+	becsprite: {
+		num: 413127,
+		name: "Becsprite",
+		types: [
+			"Dragon",
+			"Electric"
+		],
+		baseStats: {
+			hp: 92,
+			atk: 102,
+			def: 92,
+			spa: 122,
+			spd: 112,
+			spe: 92
+		},
+		abilities: {
+			0: "Pressure"
+		},
+		heightm: 1.5,
+		weightkg: 55,
+		color: "White",
+		eggGroups: [
+			"Fairy",
+			"Undiscovered"
+		],
+		prevo: "Becquerel",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	nanna: {
+		num: 413128,
+		name: "Nanna",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 65,
+			def: 80,
+			spa: 65,
+			spd: 65,
+			spe: 80
+		},
+		abilities: {
+			0: "Prankster"
+		},
+		heightm: 1.4,
+		weightkg: 88.4,
+		color: "Blue",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"Nanasprite"
+		],
+		prevo: "Baby Jane",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	nanasprite: {
+		num: 413129,
+		name: "Nanasprite",
+		types: [
+			"Normal",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 70,
+			def: 80,
+			spa: 70,
+			spd: 95,
+			spe: 95
+		},
+		abilities: {
+			0: "Prankster"
+		},
+		heightm: 0.9,
+		weightkg: 10,
+		color: "Blue",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Nanna",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	mom: {
+		num: 413130,
+		name: "Mom",
+		types: [
+			"Water",
+			"Poison"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 90,
+			def: 80,
+			spa: 83,
+			spd: 97,
+			spe: 70
+		},
+		abilities: {
+			0: "Hydration",
+			1: "Storm Drain"
+		},
+		heightm: 6.5,
+		weightkg: 235,
+		color: "Pink",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Baby Roxy",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	bro: {
+		num: 413131,
+		name: "Bro",
+		types: [
+			"Ice",
+			"Steel"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 105,
+			def: 60,
+			spa: 145,
+			spd: 75,
+			spe: 60
+		},
+		abilities: {
+			0: "Snow Warning",
+			1: "Snow Warning"
+		},
+		heightm: 2.5,
+		weightkg: 220,
+		color: "Black",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Baby Dirk",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	poppop: {
+		num: 413165,
+		name: "Poppop",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 80,
+			def: 90,
+			spa: 65,
+			spd: 65,
+			spe: 90
+		},
+		abilities: {
+			0: "Normalize",
+			1: "Adaptability"
+		},
+		heightm: 1,
+		weightkg: 10.8,
+		color: "Blue",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Baby John",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	jaspers: {
+		num: 413133,
+		name: "Jaspers",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 63,
+			def: 47,
+			spa: 85,
+			spd: 53,
+			spe: 47
+		},
+		abilities: {
+			0: "Limber",
+			1: "Own Tempo"
+		},
+		heightm: 0.3,
+		weightkg: 6.5,
+		color: "Black",
+		eggGroups: [
+			"Fairy"
+		],
+		evos: [
+			"Jaspsprite"
+		]
+	},
+	jaspsprite: {
+		num: 413134,
+		name: "Jaspsprite",
+		types: [
+			"Normal",
+			"Fairy"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 103,
+			def: 67,
+			spa: 95,
+			spd: 93,
+			spe: 67
+		},
+		abilities: {
+			0: "Limber",
+			1: "Own Tempo"
+		},
+		heightm: 1,
+		weightkg: 29,
+		color: "Pink",
+		eggGroups: [
+			"Fairy"
+		],
+		evos: [
+			"Jasprose"
+		],
+		prevo: "Jaspers",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	crow: {
+		num: 413135,
+		name: "Crow",
+		types: [
+			"Dark",
+			"Flying"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 63,
+			def: 47,
+			spa: 85,
+			spd: 63,
+			spe: 47
+		},
+		abilities: {
+			0: "Vital Spirit"
+		},
+		heightm: 0.8,
+		weightkg: 24.5,
+		color: "Black",
+		eggGroups: [
+			"Fairy",
+			"Field"
+		],
+		evos: [
+			"Crowsprite"
+		]
+	},
+	crowsprite: {
+		num: 413136,
+		name: "Crowsprite",
+		types: [
+			"Fire",
+			"Flying"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 93,
+			def: 67,
+			spa: 105,
+			spd: 93,
+			spe: 67
+		},
+		abilities: {
+			0: "Vital Spirit"
+		},
+		heightm: 0.9,
+		weightkg: 25,
+		color: "Yellow",
+		eggGroups: [
+			"Fairy",
+			"Field"
+		],
+		prevo: "Crow",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	lilcal: {
+		num: 413137,
+		name: "Lil Cal",
+		types: [
+			"Normal",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 75,
+			def: 75,
+			spa: 90,
+			spd: 75,
+			spe: 75
+		},
+		abilities: {
+			0: "Shadow Tag"
+		},
+		heightm: 0.8,
+		weightkg: 36.5,
+		color: "Red",
+		eggGroups: [
+			"Undiscovered"
+		]
+	},
+	null: {
+		num: 413138,
+		name: "null",
+		types: [
+			"Rock",
+			"Water"
+		],
+		baseStats: {
+			hp: 35,
+			atk: 40,
+			def: 100,
+			spa: 35,
+			spd: 90,
+			spe: 55
+		},
+		abilities: {
+			0: "Swift Swim",
+			1: "Shell Armor"
+		},
+		heightm: 0.4,
+		weightkg: 7.5,
+		color: "Blue",
+		eggGroups: [
+			"Bug",
+			"Mineral"
+		]
+	},
+	jacknoir: {
+		num: 413139,
+		name: "Jack Noir",
+		types: [
+			"Dark"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 100,
+			def: 65,
+			spa: 85,
+			spd: 95,
+			spe: 50
+		},
+		abilities: {
+			0: "Hyper Cutter"
+		},
+		heightm: 1,
+		weightkg: 35,
+		color: "Black",
+		eggGroups: [
+			"Flying",
+			"Water 1"
+		],
+		evos: [
+			"Jackspers",
+			"RoboJack",
+			"Union Jack"
+		]
+	},
+	jackspers: {
+		num: 413140,
+		name: "Jackspers",
+		types: [
+			"Dark",
+			"Flying"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 120,
+			def: 70,
+			spa: 100,
+			spd: 115,
+			spe: 55
+		},
+		abilities: {
+			0: "Hyper Cutter"
+		},
+		heightm: 0.5,
+		weightkg: 11.5,
+		color: "Black",
+		eggGroups: [
+			"Flying",
+			"Water 1"
+		],
+		evos: [
+			"Bec Noir"
+		],
+		prevo: "Jack Noir",
+		evoLevel: 33
+	},
+	unionjack: {
+		num: 413143,
+		name: "Union Jack",
+		types: [
+			"Dark",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 70,
+			def: 55,
+			spa: 100,
+			spd: 120,
+			spe: 115
+		},
+		abilities: {
+			0: "Filter"
+		},
+		heightm: 2.1,
+		weightkg: 460,
+		color: "Black",
+		eggGroups: [
+			"Flying",
+			"Water 1"
+		],
+		prevo: "Jack Noir",
+		evoType: "useItem",
+		evoItem: "Horror Stone"
+	},
+	robojack: {
+		num: 413142,
+		name: "RoboJack",
+		types: [
+			"Dark",
+			"Steel"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 120,
+			def: 115,
+			spa: 100,
+			spd: 70,
+			spe: 55
+		},
+		abilities: {
+			0: "Clear Body"
+		},
+		heightm: 1.8,
+		weightkg: 59,
+		color: "Black",
+		eggGroups: [
+			"Flying",
+			"Water 1"
+		],
+		prevo: "Jack Noir",
+		evoType: "useItem",
+		evoItem: "Robo Stone "
+	},
+	becnoir: {
+		num: 413141,
+		name: "Bec Noir",
+		types: [
+			"Dark",
+			"Dragon"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 140,
+			def: 75,
+			spa: 115,
+			spd: 135,
+			spe: 60
+		},
+		abilities: {
+			0: "Hyper Cutter"
+		},
+		heightm: 1.3,
+		weightkg: 40.5,
+		color: "Black",
+		eggGroups: [
+			"Flying",
+			"Water 1"
+		],
+		prevo: "Jackspers",
+		evoLevel: 55
+	},
+	sweetbro: {
+		num: 413144,
+		name: "Sweet Bro",
+		types: [
+			"Normal",
+			"Fire"
+		],
+		baseStats: {
+			hp: 93,
+			atk: 100,
+			def: 75,
+			spa: 122,
+			spd: 100,
+			spe: 90
+		},
+		abilities: {
+			0: "Serene Grace"
+		},
+		heightm: 1.7,
+		weightkg: 55.4,
+		color: "Red",
+		eggGroups: [
+			"Undiscovered"
+		]
+	},
+	hellajeff: {
+		num: 413145,
+		name: "Hella Jeff",
+		types: [
+			"Normal",
+			"Ice"
+		],
+		baseStats: {
+			hp: 78,
+			atk: 120,
+			def: 85,
+			spa: 92,
+			spd: 120,
+			spe: 85
+		},
+		abilities: {
+			0: "Serene Grace"
+		},
+		heightm: 1.6,
+		weightkg: 52.6,
+		color: "Blue",
+		eggGroups: [
+			"Undiscovered"
+		]
+	},
+	geromy: {
+		num: 413146,
+		name: "Geromy",
+		types: [
+			"Normal",
+			"Electric"
+		],
+		baseStats: {
+			hp: 113,
+			atk: 85,
+			def: 110,
+			spa: 77,
+			spd: 85,
+			spe: 110
+		},
+		abilities: {
+			0: "Serene Grace"
+		},
+		heightm: 2,
+		weightkg: 60,
+		color: "Yellow",
+		eggGroups: [
+			"Undiscovered"
+		]
+	},
+	dad: {
+		num: 413147,
+		name: "Dad",
+		types: [
+			"Normal",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 120,
+			def: 80,
+			spa: 65,
+			spd: 65,
+			spe: 65
+		},
+		abilities: {
+			0: "Limber"
+		},
+		heightm: 1.8,
+		weightkg: 3.3,
+		color: "White",
+		eggGroups: [
+			"Water 3"
+		]
+	},
+	nothin: {
+		num: 413148,
+		name: "nothin",
+		types: [
+			"Dragon"
+		],
+		baseStats: {
+			hp: 61,
+			atk: 84,
+			def: 65,
+			spa: 70,
+			spd: 70,
+			spe: 70
+		},
+		abilities: {
+			0: "Shed Skin",
+			1: "Marvel Scale"
+		},
+		heightm: 4,
+		weightkg: 16.5,
+		color: "Blue",
+		eggGroups: [
+			"Bug",
+			"Undiscovered"
+		]
+	},
+	roborufioh: {
+		num: 413149,
+		name: "RoboRufioh",
+		types: [
+			"Electric",
+			"Steel"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 101,
+			def: 100,
+			spa: 90,
+			spd: 83,
+			spe: 70
+		},
+		abilities: {
+			0: "Inner Focus",
+			1: "Inner Focus"
+		},
+		heightm: 2.2,
+		weightkg: 210,
+		color: "Gray",
+		eggGroups: [
+			"Water 3",
+			"Amorphous"
+		],
+		prevo: "Rufioh",
+		evoType: "useItem",
+		evoItem: "Robo Stone "
+	},
+	gtcaliborn: {
+		num: 413150,
+		name: "GTCaliborn",
+		types: [
+			"Dark",
+			"Fire"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 125,
+			def: 100,
+			spa: 99,
+			spd: 111,
+			spe: 70
+		},
+		abilities: {
+			0: "Reckless"
+		},
+		heightm: 2,
+		weightkg: 122,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Water 1"
+		],
+		prevo: "Caliborn",
+		evoLevel: 40
+	},
+	gtcalliope: {
+		num: 413151,
+		name: "GTCalliope",
+		types: [
+			"Grass",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 99,
+			atk: 70,
+			def: 111,
+			spa: 60,
+			spd: 100,
+			spe: 125
+		},
+		abilities: {
+			0: "Magic Guard"
+		},
+		heightm: 0.4,
+		weightkg: 4,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Water 1"
+		],
+		prevo: "Calliope",
+		evoLevel: 40
+	},
+	babyjade: {
+		num: 413152,
+		name: "Baby Jade",
+		types: [
+			"Grass",
+			"Ground"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 41,
+			def: 50,
+			spa: 42,
+			spd: 55,
+			spe: 65
+		},
+		abilities: {
+			0: "Own Tempo",
+			1: "Own Tempo"
+		},
+		heightm: 0.9,
+		weightkg: 6.4,
+		color: "Green",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"Jade",
+			"Grandma"
+		]
+	},
+	jade: {
+		num: 413153,
+		name: "Jade",
+		types: [
+			"Grass",
+			"Ground"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 51,
+			def: 70,
+			spa: 75,
+			spd: 85,
+			spe: 52
+		},
+		abilities: {
+			0: "Own Tempo",
+			1: "Own Tempo"
+		},
+		heightm: 1.2,
+		weightkg: 15.8,
+		color: "Green",
+		eggGroups: [
+			"Water 3"
+		],
+		evos: [
+			"GT Jade",
+			"Jadesprite"
+		],
+		prevo: "Baby Jade",
+		evoLevel: 16
+	},
+	gtjade: {
+		num: 413154,
+		name: "GT Jade",
+		types: [
+			"Grass",
+			"Ground"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 81,
+			def: 70,
+			spa: 97,
+			spd: 115,
+			spe: 85
+		},
+		abilities: {
+			0: "Natural Cure",
+			1: "Natural Cure"
+		},
+		heightm: 1.8,
+		weightkg: 100.5,
+		color: "Green",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Jade",
+		evoLevel: 36
+	},
+	jadesprite: {
+		num: 413155,
+		name: "Jadesprite",
+		types: [
+			"Grass",
+			"Dragon"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 91,
+			def: 65,
+			spa: 102,
+			spd: 105,
+			spe: 80
+		},
+		abilities: {
+			0: "Natural Cure",
+			1: "Levitate"
+		},
+		heightm: 0.5,
+		weightkg: 7.9,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Fairy"
+		],
+		prevo: "Jade",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	trkstrjohn: {
+		num: 413156,
+		name: "TrkstrJohn",
+		types: [
+			"Fairy",
+			"Flying"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 75,
+			def: 85,
+			spa: 104,
+			spd: 65,
+			spe: 104
+		},
+		abilities: {
+			0: "Prankster"
+		},
+		heightm: 0.9,
+		weightkg: 19,
+		color: "Blue",
+		eggGroups: [
+			"Fairy"
+		],
+		prevo: "John",
+		evoType: "useItem",
+		evoItem: "Sucker Stone"
+	},
+	grmdrkrose: {
+		num: 413157,
+		name: "GrmdrkRose",
+		types: [
+			"Psychic",
+			"Dark"
+		],
+		baseStats: {
+			hp: 67,
+			atk: 80,
+			def: 63,
+			spa: 100,
+			spd: 115,
+			spe: 73
+		},
+		abilities: {
+			0: "Dark Aura"
+		},
+		heightm: 1.7,
+		weightkg: 79.5,
+		color: "Black",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Rose",
+		evoType: "useItem",
+		evoItem: "Horror Stone"
+	},
+	davesprite: {
+		num: 413158,
+		name: "Davesprite",
+		types: [
+			"Fire",
+			"Flying"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 109,
+			def: 63,
+			spa: 110,
+			spd: 95,
+			spe: 63
+		},
+		abilities: {
+			0: "Magma Armor",
+			1: "Hyper Cutter"
+		},
+		heightm: 0.6,
+		weightkg: 9.5,
+		color: "Yellow",
+		eggGroups: [
+			"Water 3",
+			"Field"
+		],
+		prevo: "Dave",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	trkstrjane: {
+		num: 413159,
+		name: "TrkstrJane",
+		types: [
+			"Fairy",
+			"Grass"
+		],
+		baseStats: {
+			hp: 173,
+			atk: 40,
+			def: 80,
+			spa: 65,
+			spd: 75,
+			spe: 95
+		},
+		abilities: {
+			0: "Pixilate",
+			1: "Pixilate"
+		},
+		heightm: 1.1,
+		weightkg: 25,
+		color: "Yellow",
+		eggGroups: [
+			"Water 3",
+			"Grass"
+		],
+		prevo: "Jane",
+		evoType: "useItem",
+		evoItem: "Sucker Stone"
+	},
+	trkstrroxy: {
+		num: 413160,
+		name: "TrkstrRoxy",
+		types: [
+			"Fairy",
+			"Poison"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 131,
+			def: 122,
+			spa: 90,
+			spd: 70,
+			spe: 35
+		},
+		abilities: {
+			0: "Hydration",
+			1: "Hydration"
+		},
+		heightm: 2.3,
+		weightkg: 88.8,
+		color: "Pink",
+		eggGroups: [
+			"Water 3",
+			"Grass"
+		],
+		prevo: "Roxy",
+		evoType: "useItem",
+		evoItem: "Sucker Stone"
+	},
+	trkstrdirk: {
+		num: 413161,
+		name: "TrkstrDirk",
+		types: [
+			"Fairy",
+			"Ice"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 102,
+			def: 55,
+			spa: 112,
+			spd: 116,
+			spe: 73
+		},
+		abilities: {
+			0: "Synchronize",
+			1: "Technician"
+		},
+		heightm: 0.8,
+		weightkg: 6,
+		color: "Yellow",
+		eggGroups: [
+			"Water 3",
+			"Grass"
+		],
+		prevo: "Dirk",
+		evoType: "useItem",
+		evoItem: "Sucker Stone"
+	},
+	trkstrjake: {
+		num: 413162,
+		name: "TrkstrJake",
+		types: [
+			"Fairy",
+			"Rock"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 97,
+			def: 65,
+			spa: 171,
+			spd: 75,
+			spe: 65
+		},
+		abilities: {
+			0: "Fairy Aura",
+			1: "Fairy Aura"
+		},
+		heightm: 1.8,
+		weightkg: 32.5,
+		color: "Yellow",
+		eggGroups: [
+			"Water 3",
+			"Grass"
+		],
+		prevo: "Jake",
+		evoType: "useItem",
+		evoItem: "Sucker Stone"
+	},
+	deadaradia: {
+		num: 413163,
+		name: "DeadAradia",
+		types: [
+			"Ghost",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 105,
+			def: 60,
+			spa: 110,
+			spd: 120,
+			spe: 70
+		},
+		abilities: {
+			0: "Levitate",
+			1: "Clear Body"
+		},
+		heightm: 0.7,
+		weightkg: 21.2,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Aradia",
+		evoType: "useItem",
+		evoItem: "Horror Stone"
+	},
+	aradiabot: {
+		num: 413164,
+		name: "Aradiabot",
+		types: [
+			"Steel",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 77,
+			atk: 84,
+			def: 115,
+			spa: 50,
+			spd: 86,
+			spe: 108
+		},
+		abilities: {
+			0: "Levitate",
+			1: "Battle Armor"
+		},
+		heightm: 1.6,
+		weightkg: 40.8,
+		color: "Gray",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Aradia",
+		evoType: "useItem",
+		evoItem: "Robo Stone "
+	},
+	grandpa: {
+		num: 413132,
+		name: "Grandpa",
+		types: [
+			"Rock"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 90,
+			def: 80,
+			spa: 65,
+			spd: 65,
+			spe: 65
+		},
+		abilities: {
+			0: "Sniper",
+			1: "Sniper"
+		},
+		heightm: 0.3,
+		weightkg: 4,
+		color: "White",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Baby Jake",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	roxysmom: {
+		num: 413166,
+		name: "Roxy's Mom",
+		types: [
+			"Psychic"
+		],
+		baseStats: {
+			hp: 83,
+			atk: 97,
+			def: 70,
+			spa: 70,
+			spd: 90,
+			spe: 80
+		},
+		abilities: {
+			0: "Magic Guard",
+			1: "Magic Guard"
+		},
+		heightm: 1.4,
+		weightkg: 35.6,
+		color: "Purple",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Baby Rose",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	dirksbro: {
+		num: 413167,
+		name: "Dirk's Bro",
+		types: [
+			"Fire",
+			"Ice"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 105,
+			def: 70,
+			spa: 105,
+			spd: 95,
+			spe: 70
+		},
+		abilities: {
+			0: "Speed Boost",
+			1: "Speed Boost"
+		},
+		heightm: 0.5,
+		weightkg: 8.5,
+		color: "Red",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Baby Dave",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	grandma: {
+		num: 413168,
+		name: "Grandma",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 80,
+			def: 80,
+			spa: 65,
+			spd: 65,
+			spe: 65
+		},
+		abilities: {
+			0: "Sand Force",
+			1: "Sand Force"
+		},
+		heightm: 1.1,
+		weightkg: 33.5,
+		color: "Green",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "Baby Jade",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	signless: {
+		num: 413169,
+		name: "Signless",
+		types: [
+			"Fighting",
+			"Ground"
+		],
+		baseStats: {
+			hp: 96,
+			atk: 106,
+			def: 99,
+			spa: 69,
+			spd: 59,
+			spe: 89
+		},
+		abilities: {
+			0: "Sand Veil"
+		},
+		heightm: 1.8,
+		weightkg: 75,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "GrubKankri",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	handmaid: {
+		num: 413170,
+		name: "Handmaid",
+		types: [
+			"Ice",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 86,
+			def: 60,
+			spa: 99,
+			spd: 127,
+			spe: 73
+		},
+		abilities: {
+			0: "Cursed Body"
+		},
+		heightm: 0.5,
+		weightkg: 12,
+		color: "Red",
+		eggGroups: [
+			"Water 3"
+		],
+		prevo: "GrubDamara",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	summoner: {
+		num: 413171,
+		name: "Summoner",
+		types: [
+			"Electric",
+			"Ground"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 105,
+			def: 70,
+			spa: 80,
+			spd: 70,
+			spe: 90
+		},
+		abilities: {
+			0: "Levitate"
+		},
+		heightm: 1.2,
+		weightkg: 22.5,
+		color: "Brown",
+		eggGroups: [
+			"Ditto"
+		],
+		prevo: "GrubRufioh",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	psiioniic: {
+		num: 413172,
+		name: "Psiioniic",
+		types: [
+			"Fire",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 70,
+			def: 94,
+			spa: 84,
+			spd: 108,
+			spe: 84
+		},
+		abilities: {
+			0: "Guts",
+			1: "Blaze"
+		},
+		heightm: 0.3,
+		weightkg: 2,
+		color: "Yellow",
+		eggGroups: [
+			"Undiscovered"
+		],
+		prevo: "GrubMituna",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	disciple: {
+		num: 413173,
+		name: "Disciple",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 97,
+			atk: 97,
+			def: 78,
+			spa: 100,
+			spd: 60,
+			spe: 83
+		},
+		abilities: {
+			0: "Limber",
+			1: "Limber"
+		},
+		heightm: 0.3,
+		weightkg: 3,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "GrubMeulin",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	dolorosa: {
+		num: 413174,
+		name: "Dolorosa",
+		types: [
+			"Grass",
+			"Dark"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 95,
+			def: 75,
+			spa: 65,
+			spd: 95,
+			spe: 95
+		},
+		abilities: {
+			0: "Chlorophyll",
+			1: "Chlorophyll"
+		},
+		heightm: 0.3,
+		weightkg: 1,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "GrubPorrim",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	redglare: {
+		num: 413175,
+		name: "Redglare",
+		types: [
+			"Electric",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 72,
+			atk: 99,
+			def: 70,
+			spa: 85,
+			spd: 108,
+			spe: 81
+		},
+		abilities: {
+			0: "Arena Trap",
+			1: "Arena Trap"
+		},
+		heightm: 0.3,
+		weightkg: 1.5,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "GrubLatula",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	mindfang: {
+		num: 413176,
+		name: "Mindfang",
+		types: [
+			"Bug",
+			"Water"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 100,
+			def: 70,
+			spa: 80,
+			spd: 90,
+			spe: 95
+		},
+		abilities: {
+			0: "Aftermath",
+			1: "Aftermath"
+		},
+		heightm: 0.6,
+		weightkg: 3.2,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "GrubAranea",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	darkleer: {
+		num: 413177,
+		name: "Darkleer",
+		types: [
+			"Fighting",
+			"Dark"
+		],
+		baseStats: {
+			hp: 99,
+			atk: 119,
+			def: 105,
+			spa: 56,
+			spd: 66,
+			spe: 70
+		},
+		abilities: {
+			0: "Sheer Force",
+			1: "Sheer Force"
+		},
+		heightm: 0.2,
+		weightkg: 2,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "GrubHoruss",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	highblood: {
+		num: 413178,
+		name: "Highblood",
+		types: [
+			"Dark"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 140,
+			def: 74,
+			spa: 90,
+			spd: 72,
+			spe: 44
+		},
+		abilities: {
+			0: "Intimidate",
+			1: "Intimidate"
+		},
+		heightm: 1.5,
+		weightkg: 15,
+		color: "Purple",
+		eggGroups: [
+			"Field"
+		],
+		prevo: "GrubKurloz",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	dualscar: {
+		num: 413179,
+		name: "Dualscar",
+		types: [
+			"Dark",
+			"Water"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 100,
+			def: 95,
+			spa: 90,
+			spd: 100,
+			spe: 70
+		},
+		abilities: {
+			0: "Hydration",
+			1: "Hydration"
+		},
+		heightm: 0.6,
+		weightkg: 7.8,
+		color: "Purple",
+		eggGroups: [
+			"Water 3",
+			"Bug"
+		],
+		prevo: "GrubCronus",
+		evoType: "useItem",
+		evoItem: "ScratchStone"
+	},
+	condesce: {
+		num: 413180,
+		name: "Condesce",
+		types: [
+			"Water",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 130,
+			def: 80,
+			spa: 70,
+			spd: 130,
+			spe: 80
+		},
+		abilities: {
+			0: "Intimidate",
+			1: "Intimidate"
+		},
+		heightm: 0.8,
+		weightkg: 13.3,
+		color: "Pink",
+		eggGroups: [
+			"Water 3",
+			"Bug"
+		]
+	},
+	gcat: {
+		num: 413181,
+		name: "GCat",
+		types: [
+			"Dragon",
+			"Electric"
+		],
+		baseStats: {
+			hp: 82,
+			atk: 93,
+			def: 72,
+			spa: 123,
+			spd: 103,
+			spe: 82
+		},
+		abilities: {
+			0: "Pressure"
+		},
+		heightm: 1.4,
+		weightkg: 61.5,
+		color: "White",
+		eggGroups: [
+			"Fairy",
+			"Undiscovered"
+		]
+	},
+	tavris: {
+		num: 413182,
+		name: "Tavris",
+		types: [
+			"Ground",
+			"Bug"
+		],
+		baseStats: {
+			hp: 94,
+			atk: 105,
+			def: 98,
+			spa: 75,
+			spd: 73,
+			spe: 70
+		},
+		abilities: {
+			0: "Damp"
+		},
+		heightm: 0.4,
+		weightkg: 5.8,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Tavros",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	erisol: {
+		num: 413183,
+		name: "Erisol",
+		types: [
+			"Water",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 90,
+			def: 80,
+			spa: 100,
+			spd: 125,
+			spe: 60
+		},
+		abilities: {
+			0: "Torrent",
+			1: "Lightningrod"
+		},
+		heightm: 0.4,
+		weightkg: 8.5,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Sollux",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	fefeta: {
+		num: 413184,
+		name: "Fefeta",
+		types: [
+			"Normal",
+			"Water"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 90,
+			def: 60,
+			spa: 105,
+			spd: 90,
+			spe: 60
+		},
+		abilities: {
+			0: "Scrappy",
+			1: "Skill Link"
+		},
+		heightm: 0.8,
+		weightkg: 28.5,
+		color: "Pink",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Nepeta",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	arquius: {
+		num: 413185,
+		name: "ARquius",
+		types: [
+			"Ice",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 86,
+			atk: 125,
+			def: 100,
+			spa: 80,
+			spd: 62,
+			spe: 62
+		},
+		abilities: {
+			0: "Iron Fist",
+			1: "Technician"
+		},
+		heightm: 1.2,
+		weightkg: 38,
+		color: "Red",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Equius",
+		evoType: "useItem",
+		evoItem: "Kernel Stone"
+	},
+	ddroog: {
+		num: 413186,
+		name: "D. Droog",
+		types: [
+			"Dark",
+			"Ice"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 85,
+			def: 70,
+			spa: 75,
+			spd: 95,
+			spe: 75
+		},
+		abilities: {
+			0: "Snow Cloak"
+		},
+		heightm: 1.1,
+		weightkg: 33.9,
+		color: "Black",
+		eggGroups: [
+			"Flying",
+			"Water 1"
+		]
+	},
+	hboxcars: {
+		num: 413187,
+		name: "H. Boxcars",
+		types: [
+			"Dark",
+			"Rock"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 115,
+			def: 95,
+			spa: 65,
+			spd: 50,
+			spe: 65
+		},
+		abilities: {
+			0: "Solid Rock",
+			1: "Sand Stream"
+		},
+		heightm: 0.4,
+		weightkg: 0.5,
+		color: "Black",
+		eggGroups: [
+			"Flying",
+			"Water 1"
+		]
+	},
+	cdeuce: {
+		num: 413188,
+		name: "C. Deuce",
+		types: [
+			"Normal",
+			"Fire"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 65,
+			def: 80,
+			spa: 95,
+			spd: 95,
+			spe: 70
+		},
+		abilities: {
+			0: "Tangled Feet"
+		},
+		heightm: 0.6,
+		weightkg: 1,
+		color: "Black",
+		eggGroups: [
+			"Flying",
+			"Water 1"
+		]
+	},
+	pm: {
+		num: 413189,
+		name: "PM",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 85,
+			def: 80,
+			spa: 66,
+			spd: 35,
+			spe: 75
+		},
+		abilities: {
+			0: "Pickup"
+		},
+		heightm: 0.8,
+		weightkg: 3,
+		color: "White",
+		eggGroups: [
+			"Flying",
+			"Water 1"
+		],
+		evos: [
+			"BecBlanche"
+		]
+	},
+	becblanche: {
+		num: 413190,
+		name: "BecBlanche",
+		types: [
+			"Normal",
+			"Dragon"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 125,
+			def: 80,
+			spa: 116,
+			spd: 105,
+			spe: 85
+		},
+		abilities: {
+			0: "Victory Star"
+		},
+		heightm: 0.8,
+		weightkg: 11.5,
+		color: "White",
+		eggGroups: [
+			"Flying",
+			"Field"
+		],
+		prevo: "PM",
+		evoLevel: 40
+	},
+	wv: {
+		num: 413191,
+		name: "WV",
+		types: [
+			"Normal",
+			"Ground"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 80,
+			def: 75,
+			spa: 66,
+			spd: 35,
+			spe: 85
+		},
+		abilities: {
+			0: "Sturdy"
+		},
+		heightm: 0.3,
+		weightkg: 1.8,
+		color: "Brown",
+		eggGroups: [
+			"Flying",
+			"Water 1"
+		]
+	},
+	ar: {
+		num: 413192,
+		name: "AR",
+		types: [
+			"Normal",
+			"Rock"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 90,
+			def: 70,
+			spa: 66,
+			spd: 55,
+			spe: 65
+		},
+		abilities: {
+			0: "Hustle"
+		},
+		heightm: 0.8,
+		weightkg: 8.5,
+		color: "Yellow",
+		eggGroups: [
+			"Water 2"
+		]
+	},
+	salamander: {
+		num: 413193,
+		name: "Salamander",
+		types: [
+			"Normal",
+			"Water"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 70,
+			def: 75,
+			spa: 40,
+			spd: 70,
+			spe: 80
+		},
+		abilities: {
+			0: "Water Absorb"
+		},
+		heightm: 1.2,
+		weightkg: 38,
+		color: "Yellow",
+		eggGroups: [
+			"Fairy",
+			"Ditto"
+		]
+	},
+	turtle: {
+		num: 413194,
+		name: "Turtle",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 80,
+			def: 90,
+			spa: 40,
+			spd: 70,
+			spe: 75
+		},
+		abilities: {
+			0: "Shell Armor"
+		},
+		heightm: 0.4,
+		weightkg: 8.5,
+		color: "Pink",
+		eggGroups: [
+			"Fairy",
+			"Ditto"
+		]
+	},
+	crocodile: {
+		num: 413195,
+		name: "Crocodile",
+		types: [
+			"Fire"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 90,
+			def: 70,
+			spa: 40,
+			spd: 75,
+			spe: 70
+		},
+		abilities: {
+			0: "Strong Jaw"
+		},
+		heightm: 1.4,
+		weightkg: 75,
+		color: "Red",
+		eggGroups: [
+			"Fairy"
+		]
+	},
+	iguana: {
+		num: 413196,
+		name: "Iguana",
+		types: [
+			"Normal",
+			"Ice"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 75,
+			def: 70,
+			spa: 40,
+			spd: 80,
+			spe: 90
+		},
+		abilities: {
+			0: "Snow Cloak"
+		},
+		heightm: 0.9,
+		weightkg: 26.5,
+		color: "Blue",
+		eggGroups: [
+			"Fairy",
+			"Ditto"
+		]
+	},
+	casey: {
+		num: 413197,
+		name: "Casey",
+		types: [
+			"Dark",
+			"Water"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 80,
+			def: 65,
+			spa: 90,
+			spd: 90,
+			spe: 70
+		},
+		abilities: {
+			0: "Magic Bounce"
+		},
+		heightm: 1,
+		weightkg: 27,
+		color: "Yellow",
+		eggGroups: [
+			"Fairy",
+			"Ditto"
+		]
+	},
+	cabunny: {
+		num: 413198,
+		name: "C.A. Bunny",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 20,
+			def: 45,
+			spa: 20,
+			spd: 20,
+			spe: 45
+		},
+		abilities: {
+			0: "Run Away"
+		},
+		heightm: 0.5,
+		weightkg: 2.1,
+		color: "Brown",
+		eggGroups: [
+			"Undiscovered"
+		],
+		evos: [
+			"Knit Bunny",
+			"Lil Seb"
+		]
+	},
+	knitbunny: {
+		num: 413199,
+		name: "Knit Bunny",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 50,
+			def: 55,
+			spa: 50,
+			spd: 50,
+			spe: 55
+		},
+		abilities: {
+			0: "Run Away"
+		},
+		heightm: 2,
+		weightkg: 79.5,
+		color: "Purple",
+		eggGroups: [
+			"Undiscovered"
+		],
+		evos: [
+			"Liv Tyler"
+		],
+		prevo: "C.A. Bunny",
+		evoLevel: 22
+	},
+	livtyler: {
+		num: 413200,
+		name: "Liv Tyler",
+		types: [
+			"Normal",
+			"Steel"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 110,
+			def: 80,
+			spa: 70,
+			spd: 105,
+			spe: 65
+		},
+		abilities: {
+			0: "MegaLauncher"
+		},
+		heightm: 0.7,
+		weightkg: 1,
+		color: "Purple",
+		eggGroups: [
+			"Undiscovered",
+			"Fairy"
+		],
+		prevo: "Knit Bunny",
+		evoType: "useItem",
+		evoItem: "Robo Stone "
+	},
+	squiddle: {
+		num: 413201,
+		name: "Squiddle",
+		types: [
+			"Water"
+		],
+		baseStats: {
+			hp: 78,
+			atk: 77,
+			def: 69,
+			spa: 70,
+			spd: 77,
+			spe: 69
+		},
+		abilities: {
+			0: "Swift Swim"
+		},
+		heightm: 0.5,
+		weightkg: 5,
+		color: "White",
+		eggGroups: [
+			"Ditto"
+		]
+	},
+	squarewave: {
+		num: 413202,
+		name: "Squarewave",
+		types: [
+			"Steel"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 80,
+			def: 105,
+			spa: 75,
+			spd: 75,
+			spe: 95
+		},
+		abilities: {
+			0: "Bulletproof"
+		},
+		heightm: 1.3,
+		weightkg: 28.5,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous"
+		]
+	},
+	sawtooth: {
+		num: 413203,
+		name: "Sawtooth",
+		types: [
+			"Steel"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 110,
+			def: 85,
+			spa: 95,
+			spd: 85,
+			spe: 75
+		},
+		abilities: {
+			0: "Bulletproof"
+		},
+		heightm: 1.5,
+		weightkg: 41.5,
+		color: "Black",
+		eggGroups: [
+			"Amorphous"
+		]
+	},
+	chalkimp: {
+		num: 413204,
+		name: "Chalk Imp",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 65,
+			def: 65,
+			spa: 40,
+			spd: 45,
+			spe: 45
+		},
+		abilities: {
+			0: "Immunity"
+		},
+		heightm: 0.6,
+		weightkg: 7.2,
+		color: "White",
+		eggGroups: [
+			"Water 1",
+			"Amorphous"
+		],
+		evos: [
+			"Caulk Lich"
+		]
+	},
+	caulklich: {
+		num: 413205,
+		name: "Caulk Lich",
+		types: [
+			"Ground",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 105,
+			def: 65,
+			spa: 80,
+			spd: 105,
+			spe: 65
+		},
+		abilities: {
+			0: "Mummy"
+		},
+		heightm: 1.2,
+		weightkg: 125.8,
+		color: "White",
+		eggGroups: [
+			"Water 1",
+			"Amorphous"
+		],
+		prevo: "Chalk Imp",
+		evoLevel: 23
+	},
+	amberimp: {
+		num: 413206,
+		name: "Amber Imp",
+		types: [
+			"Rock"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 65,
+			def: 65,
+			spa: 40,
+			spd: 45,
+			spe: 45
+		},
+		abilities: {
+			0: "Rock Head"
+		},
+		heightm: 1.5,
+		weightkg: 14,
+		color: "Yellow",
+		eggGroups: [
+			"Water 1",
+			"Amorphous"
+		],
+		evos: [
+			"RubyGiclop"
+		]
+	},
+	rubygiclop: {
+		num: 413207,
+		name: "RubyGiclop",
+		types: [
+			"Rock",
+			"Fire"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 120,
+			def: 110,
+			spa: 40,
+			spd: 50,
+			spe: 70
+		},
+		abilities: {
+			0: "Magma Armor"
+		},
+		heightm: 1.1,
+		weightkg: 64.8,
+		color: "Red",
+		eggGroups: [
+			"Water 1",
+			"Amorphous"
+		],
+		prevo: "Amber Imp",
+		evoLevel: 23
+	},
+	tarbasilis: {
+		num: 413208,
+		name: "TarBasilis",
+		types: [
+			"Poison",
+			"Dark"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 94,
+			def: 67,
+			spa: 92,
+			spd: 90,
+			spe: 67
+		},
+		abilities: {
+			0: "Poison Point"
+		},
+		heightm: 9.2,
+		weightkg: 400,
+		color: "Black",
+		eggGroups: [
+			"Water 1",
+			"Amorphous"
+		]
+	},
+	uraniumimp: {
+		num: 413209,
+		name: "UraniumImp",
+		types: [
+			"Dragon"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 90,
+			def: 75,
+			spa: 110,
+			spd: 90,
+			spe: 65
+		},
+		abilities: {
+			0: "Inner Focus"
+		},
+		heightm: 0.6,
+		weightkg: 7.8,
+		color: "Green",
+		eggGroups: [
+			"Water 1",
+			"Amorphous"
+		]
+	},
+	skelimp: {
+		num: 413210,
+		name: "Skel. Imp",
+		types: [
+			"Ghost"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 65,
+			def: 150,
+			spa: 15,
+			spd: 65,
+			spe: 150
+		},
+		abilities: {
+			0: "Rough Skin"
+		},
+		heightm: 1.4,
+		weightkg: 48.7,
+		color: "Gray",
+		eggGroups: [
+			"Water 1",
+			"Amorphous"
+		]
+	},
+	psleuth: {
+		num: 413211,
+		name: "P. Sleuth",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 82,
+			atk: 95,
+			def: 75,
+			spa: 88,
+			spd: 70,
+			spe: 80
+		},
+		abilities: {
+			0: "Keen Eye"
+		},
+		heightm: 0.5,
+		weightkg: 3.9,
+		color: "White",
+		eggGroups: [
+			"Ditto"
+		],
+		evos: [
+			"CCV PS",
+			"Sep. PS"
+		]
+	},
+	ccvps: {
+		num: 413212,
+		name: "CCV PS",
+		types: [
+			"Normal",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 62,
+			atk: 100,
+			def: 65,
+			spa: 128,
+			spd: 75,
+			spe: 70
+		},
+		abilities: {
+			0: "Immunity"
+		},
+		heightm: 1.8,
+		weightkg: 118,
+		color: "Black",
+		eggGroups: [
+			"Flying"
+		],
+		prevo: "P. Sleuth",
+		evoType: "useItem",
+		evoItem: "Horror Stone"
+	},
+	sepps: {
+		num: 413213,
+		name: "Sep. PS",
+		types: [
+			"Normal",
+			"Flying"
+		],
+		baseStats: {
+			hp: 82,
+			atk: 125,
+			def: 75,
+			spa: 118,
+			spd: 100,
+			spe: 80
+		},
+		abilities: {
+			0: "Aerilate"
+		},
+		heightm: 0.6,
+		weightkg: 20.5,
+		color: "Green",
+		eggGroups: [
+			"Flying"
+		],
+		prevo: "P. Sleuth",
+		evoLevel: 42
+	},
+	adick: {
+		num: 413214,
+		name: "A. Dick",
+		types: [
+			"Fighting"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 110,
+			def: 85,
+			spa: 65,
+			spd: 55,
+			spe: 65
+		},
+		abilities: {
+			0: "Moxie"
+		},
+		heightm: 1.5,
+		weightkg: 54,
+		color: "White",
+		eggGroups: [
+			"Flying"
+		],
+		evos: [
+			"GWZ AD",
+			"Fiesta AD"
+		]
+	},
+	gwzad: {
+		num: 413215,
+		name: "GWZ AD",
+		types: [
+			"Fighting",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 150,
+			atk: 95,
+			def: 85,
+			spa: 65,
+			spd: 40,
+			spe: 65
+		},
+		abilities: {
+			0: "Gooey"
+		},
+		heightm: 0.9,
+		weightkg: 28,
+		color: "Gray",
+		eggGroups: [
+			"Fairy"
+		],
+		prevo: "A. Dick",
+		evoType: "useItem",
+		evoItem: "Horror Stone"
+	},
+	fiestaad: {
+		num: 413216,
+		name: "Fiesta AD",
+		types: [
+			"Fighting",
+			"Fire"
+		],
+		baseStats: {
+			hp: 120,
+			atk: 120,
+			def: 85,
+			spa: 45,
+			spd: 65,
+			spe: 65
+		},
+		abilities: {
+			0: "Pickup",
+			1: "Quick Feet"
+		},
+		heightm: 0.6,
+		weightkg: 8.8,
+		color: "Red",
+		eggGroups: [
+			"Fairy"
+		],
+		prevo: "A. Dick",
+		evoLevel: 38
+	},
+	pinspctr: {
+		num: 413217,
+		name: "P.Inspctr",
+		types: [
+			"Psychic"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 50,
+			def: 65,
+			spa: 78,
+			spd: 122,
+			spe: 110
+		},
+		abilities: {
+			0: "Own Tempo",
+			1: "Trace"
+		},
+		heightm: 1.8,
+		weightkg: 125.8,
+		color: "White",
+		eggGroups: [
+			"Fairy"
+		],
+		evos: [
+			"GPI",
+			"TRF PI"
+		]
+	},
+	trfpi: {
+		num: 413218,
+		name: "TRF PI",
+		types: [
+			"Psychic",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 130,
+			def: 95,
+			spa: 18,
+			spd: 82,
+			spe: 80
+		},
+		abilities: {
+			0: "Own Tempo",
+			1: "Hustle"
+		},
+		heightm: 0.7,
+		weightkg: 35,
+		color: "Green",
+		eggGroups: [
+			"Water 2"
+		],
+		prevo: "P.Inspctr",
+		evoType: "useItem",
+		evoItem: "Horror Stone"
+	},
+	gpi: {
+		num: 413219,
+		name: "GPI",
+		types: [
+			"Psychic",
+			"Grass"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 80,
+			def: 95,
+			spa: 108,
+			spd: 152,
+			spe: 140
+		},
+		abilities: {
+			0: "Truant"
+		},
+		heightm: 0.8,
+		weightkg: 55,
+		color: "White",
+		eggGroups: [
+			"Water 2"
+		],
+		prevo: "P.Inspctr",
+		evoLevel: 40
+	},
+	slot1: {
+		num: 413220,
+		name: "slot1",
+		types: [
+			"Grass",
+			"Rock"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 95,
+			def: 90,
+			spa: 40,
+			spd: 45,
+			spe: 50
+		},
+		abilities: {
+			0: "Strong Jaw",
+			1: "Strong Jaw"
+		},
+		heightm: 0.4,
+		weightkg: 6.5,
+		color: "Green",
+		eggGroups: [
+			"Fairy"
+		]
+	},
+	slot2: {
+		num: 413221,
+		name: "slot2",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 80,
+			def: 60,
+			spa: 75,
+			spd: 45,
+			spe: 65
+		},
+		abilities: {
+			0: "Tough Claws",
+			1: "Tough Claws"
+		},
+		heightm: 1.1,
+		weightkg: 55.8,
+		color: "Brown",
+		eggGroups: [
+			"Fairy"
+		]
+	},
+	slot3: {
+		num: 413222,
+		name: "slot3",
+		types: [
+			"Normal",
+			"Water"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 45,
+			def: 45,
+			spa: 85,
+			spd: 75,
+			spe: 95
+		},
+		abilities: {
+			0: "Natural Cure",
+			1: "Regenerator"
+		},
+		heightm: 0.6,
+		weightkg: 5,
+		color: "Yellow",
+		eggGroups: [
+			"Bug",
+			"Mineral"
+		]
+	},
+	lilseb: {
+		num: 413223,
+		name: "Lil Seb",
+		types: [
+			"Normal",
+			"Steel"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 110,
+			def: 85,
+			spa: 90,
+			spd: 85,
+			spe: 70
+		},
+		abilities: {
+			0: "Quick Feet"
+		},
+		heightm: 0.6,
+		weightkg: 12,
+		color: "Gray",
+		eggGroups: [
+			"Fairy"
+		],
+		prevo: "C.A. Bunny",
+		evoType: "useItem",
+		evoItem: "Robo Stone "
+	},
+	ectoslime: {
+		num: 413224,
+		name: "Ectoslime",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 48,
+			atk: 48,
+			def: 48,
+			spa: 88,
+			spd: 48,
+			spe: 48
+		},
+		abilities: {
+			0: "Liquid Ooze",
+			1: "Liquid Ooze"
+		},
+		heightm: 0.9,
+		weightkg: 28.5,
+		color: "Green",
+		eggGroups: [
+			"Dragon"
+		]
+	},
+	grubmierfa: {
+		num: 413225,
+		name: "GrubMierfa",
+		types: [
+			"Fighting"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 55,
+			def: 45,
+			spa: 75,
+			spd: 65,
+			spe: 45
+		},
+		abilities: {
+			0: "Reckless"
+		},
+		heightm: 0.9,
+		weightkg: 16,
+		color: "Red",
+		eggGroups: [
+			"Bug",
+			"Fairy"
+		],
+		evos: [
+			"Mierfa"
+		]
+	},
+	mierfa: {
+		num: 413226,
+		name: "Mierfa",
+		types: [
+			"Water",
+			"Flying"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 40,
+			def: 70,
+			spa: 70,
+			spd: 80,
+			spe: 140
+		},
+		abilities: {
+			0: "Reckless"
+		},
+		heightm: 2.1,
+		weightkg: 220,
+		color: "Purple",
+		eggGroups: [
+			"Bug"
+		],
+		prevo: "GrubMierfa",
+		evoLevel: 16
+	},
+	grubnektan: {
+		num: 413227,
+		name: "GrubNektan",
+		types: [
+			"Water",
+			"Steel"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 80,
+			def: 140,
+			spa: 70,
+			spd: 40,
+			spe: 70
+		},
+		abilities: {
+			0: "Water Veil"
+		},
+		heightm: 1.7,
+		weightkg: 50.5,
+		color: "Gray",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Nektan"
+		]
+	},
+	nektan: {
+		num: 413228,
+		name: "Nektan",
+		types: [
+			"Water",
+			"Steel"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 60,
+			def: 30,
+			spa: 65,
+			spd: 80,
+			spe: 50
+		},
+		abilities: {
+			0: "Water Veil"
+		},
+		heightm: 0.6,
+		weightkg: 10.8,
+		color: "Black",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "GrubNektan",
+		evoLevel: 16
+	},
+	jasprose: {
+		num: 413229,
+		name: "Jasprose",
+		types: [
+			"Fairy",
+			"Psychic"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 95,
+			def: 95,
+			spa: 95,
+			spd: 105,
+			spe: 105
+		},
+		abilities: {
+			0: "Magic Bounce"
+		},
+		heightm: 1.4,
+		weightkg: 35,
+		color: "Pink",
+		eggGroups: [
+			"Water 3",
+			"Fairy"
+		],
+		prevo: "Rose",
+		evoType: "useItem",
+		evoItem: "KernelStone2"
+	},
+	slot4: {
+		num: 413235,
+		name: "slot4",
+		types: [
+			"Grass",
+			"Rock"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 115,
+			def: 105,
+			spa: 55,
+			spd: 65,
+			spe: 70
+		},
+		abilities: {
+			0: "Strong Jaw",
+			1: "Strong Jaw"
+		},
+		heightm: 1.2,
+		weightkg: 58,
+		color: "Blue",
+		eggGroups: [
+			"Bug",
+			"Undiscovered"
+		]
+	},
+	slot5: {
+		num: 413236,
+		name: "slot5",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 100,
+			def: 80,
+			spa: 95,
+			spd: 55,
+			spe: 85
+		},
+		abilities: {
+			0: "Tough Claws",
+			1: "Tough Claws"
+		},
+		heightm: 0.7,
+		weightkg: 21,
+		color: "Blue",
+		eggGroups: [
+			"Fairy"
+		]
+	},
+	slot6: {
+		num: 413232,
+		name: "slot6",
+		types: [
+			"Normal",
+			"Water"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 60,
+			def: 60,
+			spa: 105,
+			spd: 95,
+			spe: 115
+		},
+		abilities: {
+			0: "Sturdy"
+		},
+		heightm: 1.1,
+		weightkg: 120,
+		color: "Gray",
+		eggGroups: [
+			"Fairy"
+		]
+	},
+	slot7: {
+		num: 413233,
+		name: "slot7",
+		types: [
+			"Normal"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 80,
+			def: 55,
+			spa: 90,
+			spd: 60,
+			spe: 58
+		},
+		abilities: {
+			0: "Cute Charm",
+			1: "Scrappy"
+		},
+		heightm: 0.6,
+		weightkg: 32.5,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		evos: [
+			"Davepeta"
+		]
+	},
+	slot8: {
+		num: 413234,
+		name: "slot8",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 75,
+			def: 88,
+			spa: 50,
+			spd: 55,
+			spe: 65
+		},
+		abilities: {
+			0: "Oblivious"
+		},
+		heightm: 1.4,
+		weightkg: 71.2,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Water 2"
+		],
+		evos: [
+			"GCaTavros"
+		]
+	},
+	davepeta: {
+		num: 413230,
+		name: "Davepeta",
+		types: [
+			"Normal",
+			"Fire"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 135,
+			def: 75,
+			spa: 125,
+			spd: 90,
+			spe: 75
+		},
+		abilities: {
+			0: "Hyper Cutter",
+			1: "Scrappy"
+		},
+		heightm: 1.8,
+		weightkg: 152,
+		color: "Green",
+		eggGroups: [
+			"Water 3",
+			"Flying"
+		],
+		prevo: "Dave",
+		evoType: "useItem",
+		evoItem: "KernelStone2"
+	},
+	gcatavros: {
+		num: 413231,
+		name: "GCaTavros",
+		types: [
+			"Ground",
+			"Dragon"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 80,
+			def: 135,
+			spa: 75,
+			spd: 80,
+			spe: 110
+		},
+		abilities: {
+			0: "Oblivious",
+			1: "Pressure"
+		},
+		heightm: 0.5,
+		weightkg: 33.5,
+		color: "Blue",
+		eggGroups: [
+			"Water 3",
+			"Fairy"
+		],
+		prevo: "Tavros",
+		evoType: "useItem",
+		evoItem: "KernelStone2"
+	},
+	skelconsrt: {
+		num: 413237,
+		name: "SkelConsrt",
+		types: [
+			"Ground",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 75,
+			def: 130,
+			spa: 15,
+			spd: 55,
+			spe: 120
+		},
+		abilities: {
+			0: "Battle Armor"
+		},
+		heightm: 1.4,
+		weightkg: 48,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous",
+			"Water 1"
+		]
+	},
+	mutini: {
+		num: 413238,
+		name: "Mutini",
+		types: [
+			"Fairy"
+		],
+		baseStats: {
+			hp: 35,
+			atk: 40,
+			def: 55,
+			spa: 100,
+			spd: 40,
+			spe: 55
+		},
+		abilities: {
+			0: "Pickup",
+			1: "Pickup"
+		},
+		heightm: 0.4,
+		weightkg: 6,
+		color: "Pink",
+		eggGroups: [
+			"Fairy"
+		]
+	},
+	hopeangel: {
+		num: 413239,
+		name: "Hope Angel",
+		types: [
+			"Electric",
+			"Ghost"
+		],
+		baseStats: {
+			hp: 120,
+			atk: 35,
+			def: 70,
+			spa: 90,
+			spd: 75,
+			spe: 70
+		},
+		abilities: {
+			0: "Aftermath"
+		},
+		heightm: 0.6,
+		weightkg: 23.5,
+		color: "White",
+		eggGroups: [
+			"Undiscovered"
+		]
+	},
+	horsaponi: {
+		num: 413240,
+		name: "Horsaponi",
+		types: [
+			"Poison",
+			"Bug"
+		],
+		baseStats: {
+			hp: 56,
+			atk: 60,
+			def: 51,
+			spa: 62,
+			spd: 30,
+			spe: 56
+		},
+		abilities: {
+			0: "Intimidate"
+		},
+		heightm: 0.7,
+		weightkg: 21.4,
+		color: "Purple",
+		eggGroups: [
+			"Water 2"
+		],
+		evos: [
+			"Horsaroni"
+		]
+	},
+	horsaroni: {
+		num: 413241,
+		name: "Horsaroni",
+		types: [
+			"Poison",
+			"Fighting"
+		],
+		baseStats: {
+			hp: 86,
+			atk: 90,
+			def: 71,
+			spa: 102,
+			spd: 50,
+			spe: 86
+		},
+		abilities: {
+			0: "Intimidate"
+		},
+		heightm: 1.2,
+		weightkg: 75.5,
+		color: "Purple",
+		eggGroups: [
+			"Water 2"
+		],
+		prevo: "Horsaponi",
+		evoLevel: 36
+	},
+	trex: {
+		num: 413253,
+		name: "T-Rex",
+		types: [
+			"Grass",
+			"Rock"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 115,
+			def: 105,
+			spa: 55,
+			spd: 65,
+			spe: 70
+		},
+		abilities: {
+			0: "Strong Jaw"
+		},
+		heightm: 0.9,
+		weightkg: 21.6,
+		color: "Green",
+		eggGroups: [
+			"Water 1",
+			"Undiscovered"
+		],
+		evos: [
+			"Utahraptor"
+		],
+		prevo: "T-Rex",
+		evoLevel: 16
+	},
+	utahraptor: {
+		num: 413255,
+		name: "Utahraptor",
+		types: [
+			"Ground"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 100,
+			def: 80,
+			spa: 95,
+			spd: 55,
+			spe: 85
+		},
+		abilities: {
+			0: "Tough Claws"
+		},
+		heightm: 0.4,
+		weightkg: 2.5,
+		color: "Red",
+		eggGroups: [
+			"Fairy"
+		],
+		evos: [
+			"Dromec."
+		],
+		prevo: "T-Rex",
+		evoLevel: 36
+	},
+	dromec: {
+		num: 413257,
+		name: "Dromec.",
+		types: [
+			"Normal",
+			"Water"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 60,
+			def: 60,
+			spa: 105,
+			spd: 95,
+			spe: 115
+		},
+		abilities: {
+			0: "Regenerator"
+		},
+		heightm: 1.9,
+		weightkg: 52,
+		color: "Red",
+		eggGroups: [
+			"Fairy"
+		],
+		prevo: "Dromec.",
+		evoLevel: 36
+	},
 };
