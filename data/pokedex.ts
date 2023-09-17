@@ -96328,8 +96328,7 @@ blobbosmechelectric: {
 		],
 		evos: [
 			"Caliborn",
-			"Calliope",
-			"Caliborn"
+			"Calliope"
 		]
 	},
 	calliope: {
@@ -96359,7 +96358,6 @@ blobbosmechelectric: {
 		],
 		evos: [
 			"GTCalliope",
-			"Caliborn"
 		],
 		prevo: "BabyCherub",
 		evoLevel: 20,
@@ -96392,7 +96390,6 @@ blobbosmechelectric: {
 		],
 		evos: [
 			"GTCaliborn",
-			"Calliope"
 		],
 		prevo: "BabyCherub",
 		evoLevel: 20,
@@ -100545,7 +100542,6 @@ blobbosmechelectric: {
 		eggGroups: [
 			"Fairy"
 		],
-		prevo: "Dromec.",
 		evoLevel: 36
 	},
 };
