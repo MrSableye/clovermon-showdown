@@ -5147,7 +5147,13 @@ export const Items: { [k: string]: ModdedItemData; } = {
 	},
 	stick: {
 		inherit: true,
-		isNonstandard: null
+		isNonstandard: null,
+		onModifyCritRatio(critRatio, user) {
+			if (this.toID(user.baseSpecies.baseSpecies) === 'gtvriska') {
+				return critRatio + 2;
+			}
+		},
+		itemUser: ["GT Vriska"],
 	},
 	choicespecs: {
 		inherit: true,
