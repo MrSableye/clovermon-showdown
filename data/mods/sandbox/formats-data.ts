@@ -10573,6 +10573,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	cellgar: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	izuriri: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	flubbster: {
 		inherit: true,
 		tier: "OU",

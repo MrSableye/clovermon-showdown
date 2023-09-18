@@ -8432,6 +8432,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	cellgar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	izuriri: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	strollge: {
 		tier: "Illegal",
 		isNonstandard: "Future",
