@@ -9352,7 +9352,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	honorablekick: {
 		name: "Honorable Kick",
-		shortDesc: "User is losses the game if it misses.",
+		shortDesc: "User losses the game if it misses.",
 	},
 	investment: {
 		name: "Investment",
