@@ -9342,6 +9342,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Psycho Crush",
 		shortDesc: "Physical if user's Atk > Sp. Atk. Uses user's Spe stat as Atk in damage calculation.",
 	},
+	speedforce: {
+		name: "Speed Force",
+		shortDesc: "Uses user's Spe stat as Sp. Atk in damage calculation. Damages target based on Spe, not Sp. Def.",
+	},
+	tooslow: {
+		name: "Too Slow",
+		shortDesc: "Usually goes first. Uses user's Spe stat as Sp. Atk in damage calculation.",
+	},
 	investment: {
 		name: "Investment",
 		desc: "Sends the user's boosts 2 turns into the future.",

@@ -4631,4 +4631,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	speedforce: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	tooslow: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
