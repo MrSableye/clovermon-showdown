@@ -9334,6 +9334,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Maple Warrior",
 		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",
 	},
+	psychocrush: {
+		name: "Psycho Crush",
+		shortDesc: "Uses user's Sp. Def stat as Sp. Atk in damage calculation.",
+	},
+	pacebreaker: {
+		name: "Psycho Crush",
+		shortDesc: "Physical if user's Atk > Sp. Atk. Uses user's Spe stat as Atk in damage calculation.",
+	},
 	investment: {
 		name: "Investment",
 		desc: "Sends the user's boosts 2 turns into the future.",

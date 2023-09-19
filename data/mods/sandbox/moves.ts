@@ -4623,4 +4623,12 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	psychocrush: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pacebreaker: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
