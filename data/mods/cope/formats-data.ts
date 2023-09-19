@@ -3082,4 +3082,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	izuriri: {
+		isNonstandard: null,
+		tier: "OU",
+	},
 };
