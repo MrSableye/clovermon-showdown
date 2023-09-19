@@ -32660,6 +32660,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 		isNonstandard: "Future",
 	},
+	honorablekick: {
+		accuracy: 90,
+		basePower: 200,
+		category: "Physical",
+		name: "Honorable Kick",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		hasCrashDamage: true,
+		onMoveFail(target, source, move) {
+			this.lose(source.side);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
 	investment: {
 		accuracy: true,
 		basePower: 0,

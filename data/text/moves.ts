@@ -9350,6 +9350,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Too Slow",
 		shortDesc: "Usually goes first. Uses user's Spe stat as Sp. Atk in damage calculation.",
 	},
+	honorablekick: {
+		name: "Honorable Kick",
+		shortDesc: "User is losses the game if it misses.",
+	},
 	investment: {
 		name: "Investment",
 		desc: "Sends the user's boosts 2 turns into the future.",
