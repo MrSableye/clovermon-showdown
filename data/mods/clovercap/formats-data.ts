@@ -1143,6 +1143,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	},
+	winkhulu: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	temawria: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	retwina: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	schiztarf: {
 		inherit: true,
 		isNonstandard: null,

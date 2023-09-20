@@ -8287,6 +8287,38 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Past",
 		rating: 1,
 	},
+	crimsonlens: {
+		name: "Crimson Lens",
+		spritenum: 93,
+		fling: {
+			basePower: 30,
+		},
+		onModifySpAPriority: 2,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.baseSpecies.name === 'Winkhulu') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Winkhulu"],
+		isNonstandard: "Past",
+		rating: 1,
+	},
+	cursedfang: {
+		name: "Cursed Fang",
+		spritenum: 94,
+		fling: {
+			basePower: 90,
+		},
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.name === 'Winkhulu') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Winkhulu"],
+		isNonstandard: "Past",
+		rating: 1,
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",

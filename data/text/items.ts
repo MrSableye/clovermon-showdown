@@ -2450,6 +2450,16 @@ export const ItemsText: {[k: string]: ItemText} = {
 			desc: "Holder's first successful ???-type attack will have 1.5x power. Single use.",
 		},
 	},
+	crimsonlens: {
+		name: "Crimson Lens",
+		desc: "If held by a Winkhulu, its Sp. Atk is doubled. Evolves Winkhulu into Retwina.",
+		shortDesc: "If held by a Winkhulu, its Sp. Atk is doubled.",
+	},
+	cursedfang: {
+		name: "Cursed Fang",
+		desc: "If held by a Winkhulu, its Atk is doubled. Evolves Winkhulu into Temawria.",
+		shortDesc: "If held by a Winkhulu, its Atk is doubled.",
+	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
 		name: "Ooganite",
