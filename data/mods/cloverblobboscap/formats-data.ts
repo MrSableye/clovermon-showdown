@@ -2624,7 +2624,18 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	levititan: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-
+	},
+	winkhulu: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	temawria: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	retwina: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	/* CAP Megas */
 	oogabugamega: {

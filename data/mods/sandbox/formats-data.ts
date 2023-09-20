@@ -10583,6 +10583,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	winkhulu: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	temawria: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	retwina: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	flubbster: {
 		inherit: true,
 		tier: "OU",

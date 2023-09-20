@@ -8880,6 +8880,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	winkhulu: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	temawria: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	retwina: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	seaman: {
 		tier: "Illegal",
 		isNonstandard: "Future",
