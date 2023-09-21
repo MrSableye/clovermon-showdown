@@ -46595,7 +46595,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 30.4,
 		color: "Green",
-		evos : ["Woodie"],
+		evos: ["Woodie"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	woodie: {
@@ -46607,8 +46607,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 13.0,
 		color: "Green",
-		prevo : "Woot",
-		evos : ["Arbrood"],
+		prevo: "Woot",
+		evos: ["Arbrood"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	arbrood: {
@@ -46620,8 +46620,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 13.0,
 		color: "Green",
-		prevo : "Woodie",
-		evos : ["Marbrood"],
+		prevo: "Woodie",
+		evos: ["Marbrood"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	maggie: {
@@ -46633,7 +46633,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		evos : ["Magman"],
+		evos: ["Magman"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	magman: {
@@ -46645,8 +46645,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		prevo : "Maggie",
-		evos : ["Lavagun"],
+		prevo: "Maggie",
+		evos: ["Lavagun"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	lavagun: {
@@ -46658,8 +46658,8 @@ blobbosmechelectric: {
 		heightm: 2.6,
 		weightkg: 118.5,
 		color: "Red",
-		prevo : "Magman",
-		evos : ["Mlavagun"],
+		prevo: "Magman",
+		evos: ["Mlavagun"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	steamin: {
@@ -46671,7 +46671,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.0,
 		color: "Blue",
-		evos : ["Steamer"],
+		evos: ["Steamer"],
 		eggGroups: ["Amorphous", "Water1"],
 	},
 	steamer: {
@@ -46683,8 +46683,8 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.0,
 		color: "Blue",
-		prevo : "Steamin",
-		evos : ["Steamboatle"],
+		prevo: "Steamin",
+		evos: ["Steamboatle"],
 		eggGroups: ["Amorphous", "Water1"],
 	},
 	steamboatle: {
@@ -46696,8 +46696,8 @@ blobbosmechelectric: {
 		heightm: 5.5,
 		weightkg: 1222.0,
 		color: "Blue",
-		prevo : "Steamer",
-		evos : ["Msteamboatle"],
+		prevo: "Steamer",
+		evos: ["Msteamboatle"],
 		eggGroups: ["Amorphous", "Water1"],
 	},
 	pagie: {
@@ -46709,7 +46709,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 0.1,
 		color: "White",
-		evos : ["C Encyclodia", "Pagolem", "Swanaper", "Encyclodia"],
+		evos: ["C Encyclodia", "Pagolem", "Swanaper", "Encyclodia"],
 		eggGroups: ["Field"],
 	},
 	swanaper: {
@@ -46721,7 +46721,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 1.5,
 		color: "White",
-		prevo : "Pagie",
+		prevo: "Pagie",
 		eggGroups: ["Field", "Flying"],
 	},
 	smoball: {
@@ -46733,7 +46733,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 8.5,
 		color: "White",
-		evos : ["Smoman"],
+		evos: ["Smoman"],
 		eggGroups: ["Mineral", "Field"],
 	},
 	smoman: {
@@ -46745,8 +46745,8 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 69.4,
 		color: "White",
-		prevo : "Smoball",
-		evos : ["Frostear", "Snofistor"],
+		prevo: "Smoball",
+		evos: ["Frostear", "Snofistor"],
 		eggGroups: ["Mineral", "Field"],
 	},
 	snofistor: {
@@ -46758,7 +46758,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 8.5,
 		color: "White",
-		prevo : "Smoman",
+		prevo: "Smoman",
 		eggGroups: ["Mineral", "Field"],
 	},
 	frostear: {
@@ -46770,7 +46770,7 @@ blobbosmechelectric: {
 		heightm: 4.5,
 		weightkg: 79.5,
 		color: "White",
-		prevo : "Smoman",
+		prevo: "Smoman",
 		eggGroups: ["Field"],
 	},
 	elastim: {
@@ -46782,7 +46782,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 8.9,
 		color: "Green",
-		evos : ["Bouncect"],
+		evos: ["Bouncect"],
 		eggGroups: ["Bug"],
 	},
 	bouncect: {
@@ -46794,8 +46794,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 24.5,
 		color: "Green",
-		prevo : "Elastim",
-		evos : ["Rubberfly"],
+		prevo: "Elastim",
+		evos: ["Rubberfly"],
 		eggGroups: ["Bug"],
 	},
 	rubberfly: {
@@ -46807,7 +46807,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 8.9,
 		color: "Green",
-		prevo : "Bouncect",
+		prevo: "Bouncect",
 		eggGroups: ["Bug"],
 	},
 	rubbero: {
@@ -46830,7 +46830,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 110.0,
 		color: "Yellow",
-		evos : ["Solrock", "Lunatone"],
+		evos: ["Solrock", "Lunatone"],
 		eggGroups: ["Mineral"],
 	},
 	solaioss: {
@@ -46842,7 +46842,7 @@ blobbosmechelectric: {
 		heightm: 12.1,
 		weightkg: 1000.0,
 		color: "Red",
-		prevo : "Solrock",
+		prevo: "Solrock",
 		eggGroups: ["Mineral"],
 	},
 	lunighton: {
@@ -46854,7 +46854,7 @@ blobbosmechelectric: {
 		heightm: 10.0,
 		weightkg: 468.0,
 		color: "Yellow",
-		prevo : "Lunatone",
+		prevo: "Lunatone",
 		eggGroups: ["Mineral"],
 	},
 	chipit: {
@@ -46866,7 +46866,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 50.4,
 		color: "Yellow",
-		evos : ["Chokolit"],
+		evos: ["Chokolit"],
 		eggGroups: ["Humanlike", "Mineral"],
 	},
 	chokolit: {
@@ -46878,7 +46878,7 @@ blobbosmechelectric: {
 		heightm: 4.8,
 		weightkg: 86.4,
 		color: "Yellow",
-		prevo : "Chipit",
+		prevo: "Chipit",
 		eggGroups: ["Humanlike", "Mineral"],
 	},
 	undlouis: {
@@ -46890,7 +46890,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.0,
 		color: "Purple",
-		evos : ["Hundead", "Zomboom", "Smobill", "Chillzie"],
+		evos: ["Hundead", "Zomboom", "Smobill", "Chillzie"],
 		eggGroups: ["Humanlike"],
 	},
 	hundead: {
@@ -46902,7 +46902,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.0,
 		color: "Purple",
-		prevo : "Undlouis",
+		prevo: "Undlouis",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	zomboom: {
@@ -46914,7 +46914,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 31.0,
 		color: "Purple",
-		prevo : "Undlouis",
+		prevo: "Undlouis",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	smobill: {
@@ -46926,7 +46926,7 @@ blobbosmechelectric: {
 		heightm: 6.7,
 		weightkg: 90.0,
 		color: "Purple",
-		prevo : "Undlouis",
+		prevo: "Undlouis",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	uncrow: {
@@ -46938,7 +46938,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.2,
 		color: "Brown",
-		evos : ["Haicaw"],
+		evos: ["Haicaw"],
 		eggGroups: ["Flying"],
 	},
 	haicaw: {
@@ -46950,7 +46950,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 21.2,
 		color: "Brown",
-		prevo : "Uncrow",
+		prevo: "Uncrow",
 		eggGroups: ["Flying"],
 	},
 	rubadubb: {
@@ -46962,7 +46962,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.2,
 		color: "Brown",
-		evos : ["Splissplash"],
+		evos: ["Splissplash"],
 		eggGroups: ["Flying"],
 	},
 	splissplash: {
@@ -46974,7 +46974,7 @@ blobbosmechelectric: {
 		heightm: 3.7,
 		weightkg: 26.2,
 		color: "Brown",
-		prevo : "Rubadubb",
+		prevo: "Rubadubb",
 		eggGroups: ["Flying"],
 	},
 	bottleo: {
@@ -46986,7 +46986,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 1.0,
 		color: "Green",
-		evos : ["Bottleodrake"],
+		evos: ["Bottleodrake"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	bottleodrake: {
@@ -46998,7 +46998,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 31.0,
 		color: "Green",
-		prevo : "Bottleo",
+		prevo: "Bottleo",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	chillzie: {
@@ -47010,7 +47010,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 21.0,
 		color: "Purple",
-		prevo : "Undlouis",
+		prevo: "Undlouis",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	spotni: {
@@ -47022,7 +47022,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 14.0,
 		color: "Black",
-		evos : ["Sateli"],
+		evos: ["Sateli"],
 		eggGroups: ["Flying", " Mineral"],
 	},
 	sateli: {
@@ -47034,7 +47034,7 @@ blobbosmechelectric: {
 		heightm: 10.4,
 		weightkg: 1456.0,
 		color: "Black",
-		prevo : "Spotni",
+		prevo: "Spotni",
 		eggGroups: ["Flying", " Mineral"],
 	},
 	shattarate: {
@@ -47057,7 +47057,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 1.5,
 		color: "White",
-		evos : ["Drubber"],
+		evos: ["Drubber"],
 		eggGroups: ["Water1", "Field"],
 	},
 	drubber: {
@@ -47069,7 +47069,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 23.5,
 		color: "White",
-		prevo : "Floatube",
+		prevo: "Floatube",
 		eggGroups: ["Water1", "Dragon"],
 	},
 	battie: {
@@ -47081,7 +47081,7 @@ blobbosmechelectric: {
 		heightm: 3.7,
 		weightkg: 29.7,
 		color: "Purple",
-		evos : ["Capsileau"],
+		evos: ["Capsileau"],
 		eggGroups: ["Amorphous"],
 	},
 	capsileau: {
@@ -47093,7 +47093,7 @@ blobbosmechelectric: {
 		heightm: 21.7,
 		weightkg: 1222.7,
 		color: "Purple",
-		prevo : "Battie",
+		prevo: "Battie",
 		eggGroups: ["Amorphous"],
 	},
 	tuterpill: {
@@ -47105,7 +47105,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 10.3,
 		color: "White",
-		evos : ["Caskoon"],
+		evos: ["Caskoon"],
 		eggGroups: ["Bug"],
 	},
 	caskoon: {
@@ -47117,8 +47117,8 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 70.3,
 		color: "White",
-		prevo : "Tuterpill",
-		evos : ["Tutterfly"],
+		prevo: "Tuterpill",
+		evos: ["Tutterfly"],
 		eggGroups: ["Bug"],
 	},
 	tutterfly: {
@@ -47130,7 +47130,7 @@ blobbosmechelectric: {
 		heightm: 5.1,
 		weightkg: 80.0,
 		color: "White",
-		prevo : "Caskoon",
+		prevo: "Caskoon",
 		eggGroups: ["Bug", "Amorphous"],
 	},
 	tiroar: {
@@ -47142,7 +47142,7 @@ blobbosmechelectric: {
 		heightm: 2.7,
 		weightkg: 30.3,
 		color: "Black",
-		evos : ["Wheelus"],
+		evos: ["Wheelus"],
 		eggGroups: ["Dragon"],
 	},
 	wheelus: {
@@ -47154,7 +47154,7 @@ blobbosmechelectric: {
 		heightm: 2.7,
 		weightkg: 30.3,
 		color: "Black",
-		prevo : "Tiroar",
+		prevo: "Tiroar",
 		eggGroups: ["Dragon"],
 	},
 	viriv: {
@@ -47188,7 +47188,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 55.0,
 		color: "Red",
-		evos : ["Heruptin"],
+		evos: ["Heruptin"],
 		eggGroups: ["Amorphous"],
 	},
 	heruptin: {
@@ -47200,7 +47200,7 @@ blobbosmechelectric: {
 		heightm: 16.1,
 		weightkg: 1965.7,
 		color: "Red",
-		prevo : "Volcime",
+		prevo: "Volcime",
 		eggGroups: ["Amorphous"],
 	},
 	bairy: {
@@ -47212,7 +47212,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 3.3,
 		color: "Pink",
-		evos : ["Chairy"],
+		evos: ["Chairy"],
 		eggGroups: ["Fairy", "Grass"],
 	},
 	chairy: {
@@ -47224,7 +47224,7 @@ blobbosmechelectric: {
 		heightm: 2.8,
 		weightkg: 23.3,
 		color: "Pink",
-		prevo : "Bairy",
+		prevo: "Bairy",
 		eggGroups: ["Fairy", "Grass"],
 	},
 	goom: {
@@ -47236,7 +47236,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 30.0,
 		color: "Pink",
-		evos : ["Chewim"],
+		evos: ["Chewim"],
 		eggGroups: ["Amorphous"],
 	},
 	chewim: {
@@ -47248,8 +47248,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 30.0,
 		color: "Pink",
-		prevo : "Goom",
-		evos : ["Gummi"],
+		prevo: "Goom",
+		evos: ["Gummi"],
 		eggGroups: ["Amorphous"],
 	},
 	gummi: {
@@ -47261,7 +47261,7 @@ blobbosmechelectric: {
 		heightm: 5.7,
 		weightkg: 182.4,
 		color: "Pink",
-		prevo : "Chewim",
+		prevo: "Chewim",
 		eggGroups: ["Amorphous"],
 	},
 	cuplet: {
@@ -47273,7 +47273,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
-		evos : ["Beaucake"],
+		evos: ["Beaucake"],
 		eggGroups: ["Fairy"],
 	},
 	beaucake: {
@@ -47285,8 +47285,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 17.8,
 		color: "Pink",
-		prevo : "Cuplet",
-		evos : ["Gatteri"],
+		prevo: "Cuplet",
+		evos: ["Gatteri"],
 		eggGroups: ["Fairy"],
 	},
 	gatteri: {
@@ -47298,7 +47298,7 @@ blobbosmechelectric: {
 		heightm: 4.8,
 		weightkg: 71.7,
 		color: "Pink",
-		prevo : "Beaucake",
+		prevo: "Beaucake",
 		eggGroups: ["Fairy"],
 	},
 	palmetric: {
@@ -47310,7 +47310,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 51.3,
 		color: "Green",
-		evos : ["Tropilightning"],
+		evos: ["Tropilightning"],
 		eggGroups: ["Grass", "Humanlike"],
 	},
 	tropilightning: {
@@ -47322,7 +47322,7 @@ blobbosmechelectric: {
 		heightm: 6.8,
 		weightkg: 234.3,
 		color: "Green",
-		prevo : "Palmetric",
+		prevo: "Palmetric",
 		eggGroups: ["Grass", "Humanlike"],
 	},
 	seatie: {
@@ -47334,7 +47334,7 @@ blobbosmechelectric: {
 		heightm: 3.9,
 		weightkg: 29.7,
 		color: "Purple",
-		evos : ["Tenablerus", "Elechair"],
+		evos: ["Tenablerus", "Elechair"],
 		eggGroups: ["Amorphous"],
 	},
 	tenablerus: {
@@ -47346,7 +47346,7 @@ blobbosmechelectric: {
 		heightm: 4.1,
 		weightkg: 54.5,
 		color: "Purple",
-		prevo : "Seatie",
+		prevo: "Seatie",
 		eggGroups: ["Amorphous"],
 	},
 	bargear: {
@@ -47369,7 +47369,7 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 28.8,
 		color: "White",
-		evos : ["Beetarp"],
+		evos: ["Beetarp"],
 		eggGroups: ["Bug"],
 	},
 	beetarp: {
@@ -47381,7 +47381,7 @@ blobbosmechelectric: {
 		heightm: 4.3,
 		weightkg: 45.8,
 		color: "White",
-		prevo : "Carpla",
+		prevo: "Carpla",
 		eggGroups: ["Bug"],
 	},
 	dusite: {
@@ -47393,7 +47393,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 92.4,
 		color: "Purple",
-		evos : ["Warchon"],
+		evos: ["Warchon"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	warchon: {
@@ -47405,7 +47405,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 355.4,
 		color: "Purple",
-		prevo : "Dusite",
+		prevo: "Dusite",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	teskare: {
@@ -47428,7 +47428,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 21.0,
 		color: "Purple",
-		evos : ["Tweeter", "Snapchost", "Steamercom", "Feborius", "Myosmic"],
+		evos: ["Tweeter", "Snapchost", "Steamercom", "Feborius", "Myosmic"],
 		eggGroups: ["Undiscovered"],
 	},
 	tweeter: {
@@ -47440,7 +47440,7 @@ blobbosmechelectric: {
 		heightm: 4.1,
 		weightkg: 71.3,
 		color: "Purple",
-		prevo : "Clavies",
+		prevo: "Clavies",
 		eggGroups: ["Flying", "Mineral"],
 	},
 	myosmic: {
@@ -47452,7 +47452,7 @@ blobbosmechelectric: {
 		heightm: 4.1,
 		weightkg: 71.3,
 		color: "Purple",
-		prevo : "Clavies",
+		prevo: "Clavies",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	feborius: {
@@ -47464,7 +47464,7 @@ blobbosmechelectric: {
 		heightm: 8.1,
 		weightkg: 589.9,
 		color: "Purple",
-		prevo : "Clavies",
+		prevo: "Clavies",
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	hompuff: {
@@ -47476,7 +47476,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 0.5,
 		color: "Pink",
-		evos : ["Cummunculus"],
+		evos: ["Cummunculus"],
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	cummunculus: {
@@ -47488,7 +47488,7 @@ blobbosmechelectric: {
 		heightm: 7.1,
 		weightkg: 15.8,
 		color: "Pink",
-		prevo : "Hompuff",
+		prevo: "Hompuff",
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	espionot: {
@@ -47500,7 +47500,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 8.5,
 		color: "Gray",
-		evos : ["Hoverot"],
+		evos: ["Hoverot"],
 		eggGroups: ["Mineral"],
 	},
 	hoverot: {
@@ -47512,7 +47512,7 @@ blobbosmechelectric: {
 		heightm: 2.9,
 		weightkg: 28.5,
 		color: "Gray",
-		prevo : "Espionot",
+		prevo: "Espionot",
 		eggGroups: ["Mineral"],
 	},
 	patima: {
@@ -47524,7 +47524,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 86.7,
 		color: "Green",
-		evos : ["Saplom"],
+		evos: ["Saplom"],
 		eggGroups: ["Grass", "Humanlike"],
 	},
 	saplom: {
@@ -47536,7 +47536,7 @@ blobbosmechelectric: {
 		heightm: 5.1,
 		weightkg: 134.7,
 		color: "Green",
-		prevo : "Patima",
+		prevo: "Patima",
 		eggGroups: ["Grass", "Humanlike"],
 	},
 	fanin: {
@@ -47548,7 +47548,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 9.5,
 		color: "Gray",
-		evos : ["Turbind"],
+		evos: ["Turbind"],
 		eggGroups: ["Mineral"],
 	},
 	turbind: {
@@ -47560,7 +47560,7 @@ blobbosmechelectric: {
 		heightm: 20.8,
 		weightkg: 1145.5,
 		color: "Gray",
-		prevo : "Fanin",
+		prevo: "Fanin",
 		eggGroups: ["Mineral"],
 	},
 	budsee: {
@@ -47572,7 +47572,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.5,
 		color: "Gray",
-		evos : ["Sonotech"],
+		evos: ["Sonotech"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	sonotech: {
@@ -47584,7 +47584,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 18.5,
 		color: "Gray",
-		prevo : "Budsee",
+		prevo: "Budsee",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	creemo: {
@@ -47596,7 +47596,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 13.6,
 		color: "Purple",
-		evos : ["Creeposs"],
+		evos: ["Creeposs"],
 		eggGroups: ["Amorphous"],
 	},
 	creeposs: {
@@ -47608,8 +47608,8 @@ blobbosmechelectric: {
 		heightm: 4.1,
 		weightkg: 73.6,
 		color: "Purple",
-		prevo : "Creemo",
-		evos : ["Nukreep"],
+		prevo: "Creemo",
+		evos: ["Nukreep"],
 		eggGroups: ["Amorphous"],
 	},
 	nukreep: {
@@ -47621,7 +47621,7 @@ blobbosmechelectric: {
 		heightm: 6.4,
 		weightkg: 104.7,
 		color: "Purple",
-		prevo : "Creeposs",
+		prevo: "Creeposs",
 		eggGroups: ["Amorphous"],
 	},
 	recyclat: {
@@ -47644,7 +47644,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 23.2,
 		color: "Purple",
-		evos : ["Drumgheist"],
+		evos: ["Drumgheist"],
 		eggGroups: ["Amorphous"],
 	},
 	drumgheist: {
@@ -47656,7 +47656,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 23.2,
 		color: "Purple",
-		prevo : "Drummin",
+		prevo: "Drummin",
 		eggGroups: ["Amorphous"],
 	},
 	grinix: {
@@ -47668,7 +47668,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 34.2,
 		color: "Purple",
-		evos : ["Horrorux"],
+		evos: ["Horrorux"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	horrorux: {
@@ -47680,7 +47680,7 @@ blobbosmechelectric: {
 		heightm: 7.5,
 		weightkg: 426.7,
 		color: "Purple",
-		prevo : "Grinix",
+		prevo: "Grinix",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	nixox: {
@@ -47692,7 +47692,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Brown",
-		evos : ["Namino"],
+		evos: ["Namino"],
 		eggGroups: ["Field"],
 	},
 	namino: {
@@ -47704,7 +47704,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 30.5,
 		color: "Brown",
-		prevo : "Nixox",
+		prevo: "Nixox",
 		eggGroups: ["Field"],
 	},
 	radien: {
@@ -47716,7 +47716,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 6.2,
 		color: "Purple",
-		evos : ["Fissiom"],
+		evos: ["Fissiom"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	fissiom: {
@@ -47728,7 +47728,7 @@ blobbosmechelectric: {
 		heightm: 6.8,
 		weightkg: 74.2,
 		color: "Purple",
-		prevo : "Radien",
+		prevo: "Radien",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	mousee: {
@@ -47751,7 +47751,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
-		evos : ["Hotpack"],
+		evos: ["Hotpack"],
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	hotpack: {
@@ -47763,8 +47763,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 52.5,
 		color: "Pink",
-		prevo : "Mopockit",
-		evos : ["Magmocket"],
+		prevo: "Mopockit",
+		evos: ["Magmocket"],
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	magmocket: {
@@ -47776,7 +47776,7 @@ blobbosmechelectric: {
 		heightm: 6.0,
 		weightkg: 135.7,
 		color: "Pink",
-		prevo : "Hotpack",
+		prevo: "Hotpack",
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	storactus: {
@@ -47788,7 +47788,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 51.3,
 		color: "Green",
-		evos : ["Miracact"],
+		evos: ["Miracact"],
 		eggGroups: ["Grass", "Mineral"],
 	},
 	miracact: {
@@ -47800,7 +47800,7 @@ blobbosmechelectric: {
 		heightm: 5.1,
 		weightkg: 234.3,
 		color: "Green",
-		prevo : "Storactus",
+		prevo: "Storactus",
 		eggGroups: ["Grass", "Mineral"],
 	},
 	boxy: {
@@ -47812,7 +47812,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 67.5,
 		color: "Green",
-		evos : ["Chestox"],
+		evos: ["Chestox"],
 		eggGroups: ["Mineral"],
 	},
 	chestox: {
@@ -47824,7 +47824,7 @@ blobbosmechelectric: {
 		heightm: 4.9,
 		weightkg: 324.5,
 		color: "Green",
-		prevo : "Boxy",
+		prevo: "Boxy",
 		eggGroups: ["Mineral"],
 	},
 	gargie: {
@@ -47836,7 +47836,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 30.5,
 		color: "Green",
-		evos : ["Dargouille"],
+		evos: ["Dargouille"],
 		eggGroups: ["Monster", "Mineral"],
 	},
 	dargouille: {
@@ -47848,7 +47848,7 @@ blobbosmechelectric: {
 		heightm: 6.1,
 		weightkg: 215.7,
 		color: "Green",
-		prevo : "Gargie",
+		prevo: "Gargie",
 		eggGroups: ["Monster", "Mineral"],
 	},
 	pareyemid: {
@@ -47860,7 +47860,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 104.5,
 		color: "Red",
-		evos : ["Chaosemple", "Eyeluminid", "Orderymid"],
+		evos: ["Chaosemple", "Eyeluminid", "Orderymid"],
 		eggGroups: ["Mineral"],
 	},
 	chaosemple: {
@@ -47872,7 +47872,7 @@ blobbosmechelectric: {
 		heightm: 10.2,
 		weightkg: 2560.7,
 		color: "Red",
-		prevo : "Pareyemid",
+		prevo: "Pareyemid",
 		eggGroups: ["Mineral"],
 	},
 	orderymid: {
@@ -47884,7 +47884,7 @@ blobbosmechelectric: {
 		heightm: 10.1,
 		weightkg: 2123.7,
 		color: "Red",
-		prevo : "Pareyemid",
+		prevo: "Pareyemid",
 		eggGroups: ["Mineral"],
 	},
 	kawaidesha: {
@@ -47907,7 +47907,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 10.0,
 		color: "Gray",
-		evos : ["Razorbash", "Buzzjaw"],
+		evos: ["Razorbash", "Buzzjaw"],
 		eggGroups: ["Mineral"],
 	},
 	buzzjaw: {
@@ -47919,7 +47919,7 @@ blobbosmechelectric: {
 		heightm: 3.5,
 		weightkg: 232.6,
 		color: "Gray",
-		prevo : "Machetit",
+		prevo: "Machetit",
 		eggGroups: ["Monster", "Fairy"],
 	},
 	razorbash: {
@@ -47931,7 +47931,7 @@ blobbosmechelectric: {
 		heightm: 4.1,
 		weightkg: 274.6,
 		color: "Gray",
-		prevo : "Machetit",
+		prevo: "Machetit",
 		eggGroups: ["Monster", "Humanlike"],
 	},
 	fabreel: {
@@ -47943,7 +47943,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 10.1,
 		color: "Red",
-		evos : ["Facarveel"],
+		evos: ["Facarveel"],
 		eggGroups: ["Water2", "Amorphous"],
 	},
 	facarveel: {
@@ -47955,7 +47955,7 @@ blobbosmechelectric: {
 		heightm: 3.9,
 		weightkg: 120.1,
 		color: "Red",
-		prevo : "Fabreel",
+		prevo: "Fabreel",
 		eggGroups: ["Water2", "Amorphous"],
 	},
 	amorphitto: {
@@ -47967,7 +47967,7 @@ blobbosmechelectric: {
 		heightm: 4.6,
 		weightkg: 50.4,
 		color: "Purple",
-		prevo : "Ditto",
+		prevo: "Ditto",
 		eggGroups: ["Ditto"],
 	},
 	orscine: {
@@ -47979,7 +47979,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 57.8,
 		color: "Red",
-		evos : ["Carolden"],
+		evos: ["Carolden"],
 		eggGroups: ["Water2"],
 	},
 	carolden: {
@@ -47991,7 +47991,7 @@ blobbosmechelectric: {
 		heightm: 4.1,
 		weightkg: 487.9,
 		color: "Red",
-		prevo : "Orscine",
+		prevo: "Orscine",
 		eggGroups: ["Water2", "Mineral"],
 	},
 	zomby: {
@@ -48003,7 +48003,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.0,
 		color: "Purple",
-		evos : ["Wiondeath", "Zombeast"],
+		evos: ["Wiondeath", "Zombeast"],
 		eggGroups: ["Undiscovered"],
 	},
 	zombeast: {
@@ -48015,7 +48015,7 @@ blobbosmechelectric: {
 		heightm: 8.3,
 		weightkg: 435.9,
 		color: "Purple",
-		prevo : "Zomby",
+		prevo: "Zomby",
 		eggGroups: ["Humanlike"],
 	},
 	wiondeath: {
@@ -48027,7 +48027,7 @@ blobbosmechelectric: {
 		heightm: 5.0,
 		weightkg: 78.9,
 		color: "Purple",
-		prevo : "Zomby",
+		prevo: "Zomby",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	artsy: {
@@ -48039,7 +48039,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 1.2,
 		color: "White",
-		evos : ["Canvast"],
+		evos: ["Canvast"],
 		eggGroups: ["Field"],
 	},
 	canvast: {
@@ -48051,7 +48051,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 15.2,
 		color: "White",
-		prevo : "Artsy",
+		prevo: "Artsy",
 		eggGroups: ["Field"],
 	},
 	eleoler: {
@@ -48063,7 +48063,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 33.5,
 		color: "Blue",
-		evos : ["Behemist", "Chernophoot"],
+		evos: ["Behemist", "Chernophoot"],
 		eggGroups: ["Field"],
 	},
 	behemist: {
@@ -48075,7 +48075,7 @@ blobbosmechelectric: {
 		heightm: 14.1,
 		weightkg: 1354.2,
 		color: "Blue",
-		prevo : "Eleoler",
+		prevo: "Eleoler",
 		eggGroups: ["Field"],
 	},
 	tideno: {
@@ -48087,7 +48087,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 19.6,
 		color: "Yellow",
-		evos : ["Flowjaw"],
+		evos: ["Flowjaw"],
 		eggGroups: ["Water1", "Monster"],
 	},
 	flowjaw: {
@@ -48099,8 +48099,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 19.6,
 		color: "Blue",
-		prevo : "Tideno",
-		evos : ["Warshin", "Cwarshin"],
+		prevo: "Tideno",
+		evos: ["Warshin", "Cwarshin"],
 		eggGroups: ["Water1", "Monster"],
 	},
 	warshin: {
@@ -48112,7 +48112,7 @@ blobbosmechelectric: {
 		heightm: 9.1,
 		weightkg: 1275.4,
 		color: "Blue",
-		prevo : "Flowjaw",
+		prevo: "Flowjaw",
 		eggGroups: ["Water1", "Monster"],
 	},
 	arod: {
@@ -48124,7 +48124,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 0.1,
 		color: "Gray",
-		evos : ["Atmosro"],
+		evos: ["Atmosro"],
 		eggGroups: ["Flying"],
 	},
 	atmosro: {
@@ -48136,7 +48136,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 0.1,
 		color: "Gray",
-		prevo : "Arod",
+		prevo: "Arod",
 		eggGroups: ["Flying"],
 	},
 	cosmix: {
@@ -48148,7 +48148,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 2.1,
 		color: "Black",
-		evos : ["Univax"],
+		evos: ["Univax"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	univax: {
@@ -48160,7 +48160,7 @@ blobbosmechelectric: {
 		heightm: 12.3,
 		weightkg: 0.8,
 		color: "Black",
-		prevo : "Cosmix",
+		prevo: "Cosmix",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	prisy: {
@@ -48172,7 +48172,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.1,
 		color: "White",
-		evos : ["Prismolis"],
+		evos: ["Prismolis"],
 		eggGroups: ["Mineral"],
 	},
 	prismolis: {
@@ -48184,7 +48184,7 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 2.1,
 		color: "White",
-		prevo : "Prisy",
+		prevo: "Prisy",
 		eggGroups: ["Mineral"],
 	},
 	anol: {
@@ -48196,7 +48196,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 0.5,
 		color: "Pink",
-		evos : ["Angeist"],
+		evos: ["Angeist"],
 		eggGroups: ["Fairy"],
 	},
 	angeist: {
@@ -48208,7 +48208,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 0.5,
 		color: "White",
-		prevo : "Anol",
+		prevo: "Anol",
 		eggGroups: ["Fairy"],
 	},
 	eyat: {
@@ -48220,7 +48220,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 0.5,
 		color: "Black",
-		evos : ["Coraut"],
+		evos: ["Coraut"],
 		eggGroups: ["Fairy", "Flying"],
 	},
 	coraut: {
@@ -48232,7 +48232,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 0.5,
 		color: "Black",
-		prevo : "Eyat",
+		prevo: "Eyat",
 		eggGroups: ["Fairy", "Flying"],
 	},
 	oregi: {
@@ -48244,7 +48244,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 0.5,
 		color: "White",
-		evos : ["Canyou"],
+		evos: ["Canyou"],
 		eggGroups: ["Mineral"],
 	},
 	canyou: {
@@ -48256,7 +48256,7 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 122.5,
 		color: "White",
-		prevo : "Oregi",
+		prevo: "Oregi",
 		eggGroups: ["Mineral", "Water1"],
 	},
 	gueriest: {
@@ -48279,7 +48279,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 108.0,
 		color: "White",
-		evos : ["Lamcoud"],
+		evos: ["Lamcoud"],
 		eggGroups: ["Amorphous", "Field"],
 	},
 	lamcoud: {
@@ -48291,8 +48291,8 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 108.0,
 		color: "White",
-		prevo : "Flufamb",
-		evos : ["Gorale"],
+		prevo: "Flufamb",
+		evos: ["Gorale"],
 		eggGroups: ["Amorphous", "Field"],
 	},
 	gorale: {
@@ -48304,7 +48304,7 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 108.0,
 		color: "White",
-		prevo : "Lamcoud",
+		prevo: "Lamcoud",
 		eggGroups: ["Amorphous", "Field"],
 	},
 	plastolphin: {
@@ -48316,7 +48316,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Blue",
-		evos : ["Dolphottle"],
+		evos: ["Dolphottle"],
 		eggGroups: ["Water2"],
 	},
 	dolphottle: {
@@ -48328,7 +48328,7 @@ blobbosmechelectric: {
 		heightm: 2.6,
 		weightkg: 62.0,
 		color: "Blue",
-		prevo : "Plastolphin",
+		prevo: "Plastolphin",
 		eggGroups: ["Water2", "Mineral"],
 	},
 	barab: {
@@ -48340,7 +48340,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		evos : ["Radicrab"],
+		evos: ["Radicrab"],
 		eggGroups: ["Bug", "Mineral"],
 	},
 	radicrab: {
@@ -48352,7 +48352,7 @@ blobbosmechelectric: {
 		heightm: 3.3,
 		weightkg: 445.4,
 		color: "Red",
-		prevo : "Barab",
+		prevo: "Barab",
 		eggGroups: ["Bug", "Mineral"],
 	},
 	baifre: {
@@ -48364,7 +48364,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		evos : ["Baumine"],
+		evos: ["Baumine"],
 		eggGroups: ["Amorphous"],
 	},
 	baumine: {
@@ -48376,7 +48376,7 @@ blobbosmechelectric: {
 		heightm: 2.8,
 		weightkg: 5.4,
 		color: "Red",
-		prevo : "Baifre",
+		prevo: "Baifre",
 		eggGroups: ["Amorphous"],
 	},
 	microette: {
@@ -48388,7 +48388,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 16.3,
 		color: "Pink",
-		evos : ["Speakerro"],
+		evos: ["Speakerro"],
 		eggGroups: ["Monster", "Field"],
 	},
 	speakerro: {
@@ -48400,8 +48400,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 16.3,
 		color: "Pink",
-		prevo : "Microette",
-		evos : ["Boomblix"],
+		prevo: "Microette",
+		evos: ["Boomblix"],
 		eggGroups: ["Monster", "Field"],
 	},
 	boomblix: {
@@ -48413,7 +48413,7 @@ blobbosmechelectric: {
 		heightm: 2.4,
 		weightkg: 16.3,
 		color: "Pink",
-		prevo : "Speakerro",
+		prevo: "Speakerro",
 		eggGroups: ["Monster", "Field"],
 	},
 	otyab: {
@@ -48425,7 +48425,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 30.0,
 		color: "Purple",
-		evos : ["Otyash"],
+		evos: ["Otyash"],
 		eggGroups: ["Monster"],
 	},
 	otyash: {
@@ -48437,7 +48437,7 @@ blobbosmechelectric: {
 		heightm: 4.4,
 		weightkg: 30.0,
 		color: "Purple",
-		prevo : "Otyab",
+		prevo: "Otyab",
 		eggGroups: ["Monster"],
 	},
 	ijusgetsbigger: {
@@ -48449,7 +48449,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 40.0,
 		color: "White",
-		evos : ["Ijusgotbigger", "Ijusgotsmal"],
+		evos: ["Ijusgotbigger", "Ijusgotsmal"],
 		eggGroups: ["Monster"],
 	},
 	ijusgotbigger: {
@@ -48461,7 +48461,7 @@ blobbosmechelectric: {
 		heightm: 15.5,
 		weightkg: 1222.8,
 		color: "White",
-		prevo : "Ijusgetsbigger",
+		prevo: "Ijusgetsbigger",
 		eggGroups: ["Monster"],
 	},
 	ijusgotsmal: {
@@ -48473,7 +48473,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.1,
 		color: "White",
-		prevo : "Ijusgetsbigger",
+		prevo: "Ijusgetsbigger",
 		eggGroups: ["Monster", "Mineral"],
 	},
 	sharpladon: {
@@ -48485,7 +48485,7 @@ blobbosmechelectric: {
 		heightm: 2.8,
 		weightkg: 100.8,
 		color: "Blue",
-		prevo : "Sharpedo",
+		prevo: "Sharpedo",
 		eggGroups: ["Water2"],
 	},
 	ancienkrab: {
@@ -48497,7 +48497,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 60.0,
 		color: "Red",
-		prevo : "Kingler",
+		prevo: "Kingler",
 		eggGroups: ["Water3"],
 	},
 	fedoraz: {
@@ -48509,7 +48509,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 8.2,
 		color: "Black",
-		evos : ["Euphoreye"],
+		evos: ["Euphoreye"],
 		eggGroups: ["Amorphous"],
 	},
 	euphoreye: {
@@ -48521,8 +48521,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 15.2,
 		color: "Black",
-		prevo : "Fedoraz",
-		evos : ["Mladee"],
+		prevo: "Fedoraz",
+		evos: ["Mladee"],
 		eggGroups: ["Amorphous"],
 	},
 	mladee: {
@@ -48534,7 +48534,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 45.2,
 		color: "Black",
-		prevo : "Euphoreye",
+		prevo: "Euphoreye",
 		eggGroups: ["Amorphous"],
 	},
 	grasses: {
@@ -48546,7 +48546,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Green",
-		evos : ["Grasstacles"],
+		evos: ["Grasstacles"],
 		eggGroups: ["Grass", "Mineral"],
 	},
 	grasstacles: {
@@ -48558,7 +48558,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 6.4,
 		color: "Green",
-		prevo : "Grasses",
+		prevo: "Grasses",
 		eggGroups: ["Grass", "Mineral"],
 	},
 	anguar: {
@@ -48570,7 +48570,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 28.0,
 		color: "White",
-		evos : ["Archango"],
+		evos: ["Archango"],
 		eggGroups: ["Amorphous"],
 	},
 	archango: {
@@ -48582,7 +48582,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 46.5,
 		color: "White",
-		prevo : "Anguar",
+		prevo: "Anguar",
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	devio: {
@@ -48594,7 +48594,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 28.0,
 		color: "Red",
-		evos : ["Ledevilain"],
+		evos: ["Ledevilain"],
 		eggGroups: ["Amorphous"],
 	},
 	ledevilain: {
@@ -48606,7 +48606,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 28.0,
 		color: "Red",
-		prevo : "Devio",
+		prevo: "Devio",
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	sola: {
@@ -48618,7 +48618,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 285.2,
 		color: "Red",
-		evos : ["Darkole", "Novais"],
+		evos: ["Darkole", "Novais"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	novais: {
@@ -48630,8 +48630,8 @@ blobbosmechelectric: {
 		heightm: 5.0,
 		weightkg: 1243.2,
 		color: "Red",
-		prevo : "Sola",
-		evos : ["Smolstron"],
+		prevo: "Sola",
+		evos: ["Smolstron"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	darkole: {
@@ -48643,7 +48643,7 @@ blobbosmechelectric: {
 		heightm: 5.0,
 		weightkg: 3843.2,
 		color: "Red",
-		prevo : "Sola",
+		prevo: "Sola",
 		eggGroups: ["Amorphous"],
 	},
 	bulbight: {
@@ -48655,7 +48655,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 5.0,
 		color: "White",
-		evos : ["Lightulb", "Plasbul"],
+		evos: ["Lightulb", "Plasbul"],
 		eggGroups: ["Amorphous"],
 	},
 	lightulb: {
@@ -48667,7 +48667,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.5,
 		color: "White",
-		prevo : "Bulbight",
+		prevo: "Bulbight",
 		eggGroups: ["Amorphous"],
 	},
 	plasbul: {
@@ -48679,7 +48679,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.5,
 		color: "White",
-		prevo : "Bulbight",
+		prevo: "Bulbight",
 		eggGroups: ["Amorphous"],
 	},
 	solareno: {
@@ -48724,7 +48724,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 10.3,
 		color: "Blue",
-		evos : ["Ryerpent"],
+		evos: ["Ryerpent"],
 		eggGroups: ["Water1", "Dragon"],
 	},
 	ryerpent: {
@@ -48736,8 +48736,8 @@ blobbosmechelectric: {
 		heightm: 2.8,
 		weightkg: 10.3,
 		color: "Blue",
-		prevo : "Lun",
-		evos : ["Ryulung"],
+		prevo: "Lun",
+		evos: ["Ryulung"],
 		eggGroups: ["Water1", "Dragon"],
 	},
 	ryulung: {
@@ -48749,7 +48749,7 @@ blobbosmechelectric: {
 		heightm: 4.8,
 		weightkg: 10.3,
 		color: "Blue",
-		prevo : "Ryerpent",
+		prevo: "Ryerpent",
 		eggGroups: ["Water1", "Dragon"],
 	},
 	winecho: {
@@ -48761,7 +48761,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 1.0,
 		color: "Blue",
-		prevo : "Chimecho",
+		prevo: "Chimecho",
 		eggGroups: ["Amorphous"],
 	},
 	datagon: {
@@ -48850,7 +48850,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 28.0,
 		color: "Blue",
-		evos : ["Blizzlam"],
+		evos: ["Blizzlam"],
 		eggGroups: ["Field", "Humanlike"],
 	},
 	blizzlam: {
@@ -48862,7 +48862,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 28.0,
 		color: "Blue",
-		prevo : "Iceis",
+		prevo: "Iceis",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	acies: {
@@ -48874,7 +48874,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 10.3,
 		color: "Blue",
-		evos : ["Eldrake"],
+		evos: ["Eldrake"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	eldrake: {
@@ -48886,8 +48886,8 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 10.3,
 		color: "Blue",
-		prevo : "Acies",
-		evos : ["Eldragon"],
+		prevo: "Acies",
+		evos: ["Eldragon"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	eldragon: {
@@ -48899,7 +48899,7 @@ blobbosmechelectric: {
 		heightm: 9.8,
 		weightkg: 910.3,
 		color: "Blue",
-		prevo : "Eldrake",
+		prevo: "Eldrake",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	cosmeak: {
@@ -48911,7 +48911,7 @@ blobbosmechelectric: {
 		heightm: 3.8,
 		weightkg: 100.0,
 		color: "Brown",
-		evos : ["Comistorin"],
+		evos: ["Comistorin"],
 		eggGroups: ["Mineral"],
 	},
 	comistorin: {
@@ -48923,7 +48923,7 @@ blobbosmechelectric: {
 		heightm: 5.8,
 		weightkg: 105.0,
 		color: "Brown",
-		prevo : "Cosmeak",
+		prevo: "Cosmeak",
 		eggGroups: ["Mineral"],
 	},
 	coolor: {
@@ -48935,7 +48935,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 28.0,
 		color: "Blue",
-		evos : ["Fridigor"],
+		evos: ["Fridigor"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	fridigor: {
@@ -48947,7 +48947,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 128.0,
 		color: "Blue",
-		prevo : "Coolor",
+		prevo: "Coolor",
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	spongee: {
@@ -48959,7 +48959,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 130.0,
 		color: "Yellow",
-		evos : ["Absorsponge"],
+		evos: ["Absorsponge"],
 		eggGroups: ["Field", "Water2"],
 	},
 	absorsponge: {
@@ -48971,7 +48971,7 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 1130.0,
 		color: "Yellow",
-		prevo : "Spongee",
+		prevo: "Spongee",
 		eggGroups: ["Field", "Water2"],
 	},
 	melonboy: {
@@ -48983,7 +48983,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 2.5,
 		color: "Red",
-		evos : ["Mellown"],
+		evos: ["Mellown"],
 		eggGroups: ["Grass"],
 	},
 	mellown: {
@@ -48995,8 +48995,8 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 2.5,
 		color: "Red",
-		prevo : "Melonboy",
-		evos : ["Melonvile"],
+		prevo: "Melonboy",
+		evos: ["Melonvile"],
 		eggGroups: ["Grass"],
 	},
 	melonvile: {
@@ -49008,7 +49008,7 @@ blobbosmechelectric: {
 		heightm: 3.4,
 		weightkg: 2.5,
 		color: "Red",
-		prevo : "Mellown",
+		prevo: "Mellown",
 		eggGroups: ["Grass"],
 	},
 	earring: {
@@ -49020,7 +49020,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 19.5,
 		color: "Gray",
-		evos : ["Toneout"],
+		evos: ["Toneout"],
 		eggGroups: ["Amorphous"],
 	},
 	toneout: {
@@ -49032,8 +49032,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 39.5,
 		color: "Gray",
-		prevo : "Earring",
-		evos : ["Xeraphox"],
+		prevo: "Earring",
+		evos: ["Xeraphox"],
 		eggGroups: ["Amorphous"],
 	},
 	xeraphox: {
@@ -49045,7 +49045,7 @@ blobbosmechelectric: {
 		heightm: 5.0,
 		weightkg: 1543.5,
 		color: "Gray",
-		prevo : "Toneout",
+		prevo: "Toneout",
 		eggGroups: ["Amorphous"],
 	},
 	bushin: {
@@ -49057,7 +49057,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 10.2,
 		color: "Black",
-		evos : ["Bushidon"],
+		evos: ["Bushidon"],
 		eggGroups: ["Humanlike"],
 	},
 	bushidon: {
@@ -49069,7 +49069,7 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 100.2,
 		color: "Black",
-		prevo : "Bushin",
+		prevo: "Bushin",
 		eggGroups: ["Humanlike"],
 	},
 	doit: {
@@ -49081,7 +49081,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 16.3,
 		color: "Pink",
-		evos : ["Juzt"],
+		evos: ["Juzt"],
 		eggGroups: ["Monster", "Field"],
 	},
 	juzt: {
@@ -49093,8 +49093,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 16.3,
 		color: "Blue",
-		prevo : "Doit",
-		evos : ["Doita"],
+		prevo: "Doit",
+		evos: ["Doita"],
 		eggGroups: ["Monster", "Field"],
 	},
 	doita: {
@@ -49106,7 +49106,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 16.3,
 		color: "Blue",
-		prevo : "Juzt",
+		prevo: "Juzt",
 		eggGroups: ["Monster", "Field"],
 	},
 	spooksheet: {
@@ -49118,7 +49118,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 2.3,
 		color: "White",
-		evos : ["Strangspook"],
+		evos: ["Strangspook"],
 		eggGroups: ["Amorphous"],
 	},
 	strangspook: {
@@ -49130,8 +49130,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 2.3,
 		color: "White",
-		prevo : "Spooksheet",
-		evos : ["Lynchost"],
+		prevo: "Spooksheet",
+		evos: ["Lynchost"],
 		eggGroups: ["Amorphous"],
 	},
 	lynchost: {
@@ -49143,7 +49143,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 2.3,
 		color: "White",
-		prevo : "Strangspook",
+		prevo: "Strangspook",
 		eggGroups: ["Amorphous"],
 	},
 	boxo: {
@@ -49155,7 +49155,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 33.5,
 		color: "Blue",
-		evos : ["Boxtress", "Robox"],
+		evos: ["Boxtress", "Robox"],
 		eggGroups: ["Field", "Mineral"],
 	},
 	robox: {
@@ -49167,7 +49167,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 120.5,
 		color: "Blue",
-		prevo : "Boxo",
+		prevo: "Boxo",
 		eggGroups: ["Field", "Mineral"],
 	},
 	boxtress: {
@@ -49179,7 +49179,7 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 585.8,
 		color: "Blue",
-		prevo : "Boxo",
+		prevo: "Boxo",
 		eggGroups: ["Field", "Mineral"],
 	},
 	eldrute: {
@@ -49191,7 +49191,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "Black",
-		evos : ["Eldriz"],
+		evos: ["Eldriz"],
 		eggGroups: ["Undiscovered"],
 	},
 	eldriz: {
@@ -49203,8 +49203,8 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 106.9,
 		color: "Black",
-		prevo : "Eldrute",
-		evos : ["Eldcraftian"],
+		prevo: "Eldrute",
+		evos: ["Eldcraftian"],
 		eggGroups: ["Amorphous"],
 	},
 	eldcraftian: {
@@ -49216,7 +49216,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 106.9,
 		color: "Black",
-		prevo : "Eldriz",
+		prevo: "Eldriz",
 		eggGroups: ["Amorphous"],
 	},
 	brigo: {
@@ -49228,7 +49228,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Yellow",
-		evos : ["Phantoy"],
+		evos: ["Phantoy"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	phantoy: {
@@ -49240,7 +49240,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Yellow",
-		prevo : "Brigo",
+		prevo: "Brigo",
 		eggGroups: ["Amorphous"],
 	},
 	synthite: {
@@ -49263,7 +49263,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.0,
 		color: "White",
-		evos : ["Holeecow", "Miltank", "Tauros"],
+		evos: ["Holeecow", "Miltank", "Tauros"],
 		eggGroups: ["Undiscovered"],
 	},
 	medijaa: {
@@ -49275,7 +49275,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 31.5,
 		color: "Blue",
-		prevo : "Medicham",
+		prevo: "Medicham",
 		eggGroups: ["Humanlike"],
 	},
 	audinette: {
@@ -49287,7 +49287,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 31.0,
 		color: "Pink",
-		prevo : "Audino",
+		prevo: "Audino",
 		eggGroups: ["Fairy"],
 	},
 	nanos: {
@@ -49299,7 +49299,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 18.5,
 		color: "Gray",
-		evos : ["Propad", "Propod"],
+		evos: ["Propad", "Propod"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	propod: {
@@ -49311,7 +49311,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 45.5,
 		color: "Gray",
-		prevo : "Nanos",
+		prevo: "Nanos",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	propad: {
@@ -49323,7 +49323,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 222.5,
 		color: "Gray",
-		prevo : "Nanos",
+		prevo: "Nanos",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	eyeluminid: {
@@ -49335,7 +49335,7 @@ blobbosmechelectric: {
 		heightm: 5.2,
 		weightkg: 704.5,
 		color: "Red",
-		prevo : "Pareyemid",
+		prevo: "Pareyemid",
 		eggGroups: ["Mineral"],
 	},
 	mexigust: {
@@ -49347,7 +49347,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 19.7,
 		color: "Green",
-		evos : ["Muchoshot"],
+		evos: ["Muchoshot"],
 		eggGroups: ["Grass", "Humanlike"],
 	},
 	muchoshot: {
@@ -49359,7 +49359,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 67.7,
 		color: "Green",
-		prevo : "Mexigust",
+		prevo: "Mexigust",
 		eggGroups: ["Grass", "Humanlike"],
 	},
 	poryrus: {
@@ -49371,8 +49371,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 32.5,
 		color: "Red",
-		prevo : "Porygon",
-		evos : ["Poryrusz"],
+		prevo: "Porygon",
+		evos: ["Poryrusz"],
 		eggGroups: ["Mineral"],
 	},
 	poryrusz: {
@@ -49384,7 +49384,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 32.5,
 		color: "Red",
-		prevo : "Poryrus",
+		prevo: "Poryrus",
 		eggGroups: ["Mineral"],
 	},
 	playne: {
@@ -49396,7 +49396,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 50.5,
 		color: "Gray",
-		evos : ["Jetcraft", "Spacird"],
+		evos: ["Jetcraft", "Spacird"],
 		eggGroups: ["Flying"],
 	},
 	jetcraft: {
@@ -49408,7 +49408,7 @@ blobbosmechelectric: {
 		heightm: 8.7,
 		weightkg: 1150.5,
 		color: "Gray",
-		prevo : "Playne",
+		prevo: "Playne",
 		eggGroups: ["Flying"],
 	},
 	eldsparce: {
@@ -49420,7 +49420,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 14.0,
 		color: "Yellow",
-		prevo : "Dunsparce",
+		prevo: "Dunsparce",
 		eggGroups: ["Field", "Dragon"],
 	},
 	dunesdrill: {
@@ -49432,7 +49432,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 14.0,
 		color: "Yellow",
-		prevo : "Dunsparce",
+		prevo: "Dunsparce",
 		eggGroups: ["Field"],
 	},
 	dunsparth: {
@@ -49444,7 +49444,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 14.0,
 		color: "Yellow",
-		prevo : "Dunsparce",
+		prevo: "Dunsparce",
 		eggGroups: ["Field"],
 	},
 	vespiguard: {
@@ -49456,7 +49456,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 38.5,
 		color: "Yellow",
-		prevo : "Combee",
+		prevo: "Combee",
 		eggGroups: ["Bug"],
 	},
 	lapsy: {
@@ -49468,7 +49468,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 120.0,
 		color: "Blue",
-		evos : ["Lapras"],
+		evos: ["Lapras"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	neonee: {
@@ -49480,7 +49480,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.2,
 		color: "Yellow",
-		evos : ["Neonite"],
+		evos: ["Neonite"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	neonite: {
@@ -49492,8 +49492,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 0.4,
 		color: "Yellow",
-		prevo : "Neonee",
-		evos : ["Neonazi"],
+		prevo: "Neonee",
+		evos: ["Neonazi"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	neonazi: {
@@ -49505,7 +49505,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 0.3,
 		color: "Red",
-		prevo : "Neonite",
+		prevo: "Neonite",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	encyclodia: {
@@ -49517,7 +49517,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 10.6,
 		color: "White",
-		prevo : "Pagie",
+		prevo: "Pagie",
 		eggGroups: ["Field"],
 	},
 	bookly: {
@@ -49540,7 +49540,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Yellow",
-		evos : ["Willost"],
+		evos: ["Willost"],
 		eggGroups: ["Amorphous"],
 	},
 	willost: {
@@ -49552,7 +49552,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Yellow",
-		prevo : "Willisp",
+		prevo: "Willisp",
 		eggGroups: ["Amorphous"],
 	},
 	zilly: {
@@ -49564,7 +49564,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 60.0,
 		color: "Gray",
-		evos : ["Godzillus"],
+		evos: ["Godzillus"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	godzillus: {
@@ -49576,7 +49576,7 @@ blobbosmechelectric: {
 		heightm: 18.0,
 		weightkg: 3345.1,
 		color: "Gray",
-		prevo : "Zilly",
+		prevo: "Zilly",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	raydiat: {
@@ -49588,7 +49588,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Green",
-		evos : ["Gammaray"],
+		evos: ["Gammaray"],
 		eggGroups: ["Water2"],
 	},
 	gammaray: {
@@ -49600,7 +49600,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 35.0,
 		color: "Green",
-		prevo : "Raydiat",
+		prevo: "Raydiat",
 		eggGroups: ["Water2"],
 	},
 	banor: {
@@ -49612,7 +49612,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 80.0,
 		color: "Brown",
-		evos : ["Hulklear"],
+		evos: ["Hulklear"],
 		eggGroups: ["Humanlike"],
 	},
 	hulklear: {
@@ -49624,7 +49624,7 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 1000.3,
 		color: "Brown",
-		prevo : "Banor",
+		prevo: "Banor",
 		eggGroups: ["Humanlike"],
 	},
 	arcaneon: {
@@ -49636,7 +49636,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 26.5,
 		color: "Purple",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	spaceon: {
@@ -49648,7 +49648,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 26.5,
 		color: "Purple",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	zyklas: {
@@ -49660,7 +49660,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 1.0,
 		color: "Purple",
-		evos : ["Gachamber"],
+		evos: ["Gachamber"],
 		eggGroups: ["Amorphous"],
 	},
 	gachamber: {
@@ -49672,7 +49672,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 1.0,
 		color: "Purple",
-		prevo : "Zyklas",
+		prevo: "Zyklas",
 		eggGroups: ["Amorphous"],
 	},
 	elding: {
@@ -49684,7 +49684,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 20.5,
 		color: "Gray",
-		evos : ["Eldone"],
+		evos: ["Eldone"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	eldone: {
@@ -49696,7 +49696,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 20.5,
 		color: "Gray",
-		prevo : "Elding",
+		prevo: "Elding",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	attot: {
@@ -49708,7 +49708,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 60.0,
 		color: "Yellow",
-		evos : ["Reactiox"],
+		evos: ["Reactiox"],
 		eggGroups: ["Mineral"],
 	},
 	reactiox: {
@@ -49720,7 +49720,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 75.0,
 		color: "Yellow",
-		prevo : "Attot",
+		prevo: "Attot",
 		eggGroups: ["Mineral"],
 	},
 	nukomb: {
@@ -49732,7 +49732,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 60.0,
 		color: "Yellow",
-		evos : ["Reqimissile"],
+		evos: ["Reqimissile"],
 		eggGroups: ["Mineral", "Water2"],
 	},
 	reqimissile: {
@@ -49744,7 +49744,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 60.0,
 		color: "Yellow",
-		prevo : "Nukomb",
+		prevo: "Nukomb",
 		eggGroups: ["Mineral", "Water2"],
 	},
 	goatkun: {
@@ -49756,7 +49756,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 79.0,
 		color: "White",
-		evos : ["Goatemon"],
+		evos: ["Goatemon"],
 		eggGroups: ["Humanlike", "Field"],
 	},
 	goatemon: {
@@ -49768,7 +49768,7 @@ blobbosmechelectric: {
 		heightm: 3.4,
 		weightkg: 225.2,
 		color: "Black",
-		prevo : "Goatkun",
+		prevo: "Goatkun",
 		eggGroups: ["Humanlike", "Field"],
 	},
 	sushish: {
@@ -49780,7 +49780,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Red",
-		evos : ["Sashumish"],
+		evos: ["Sashumish"],
 		eggGroups: ["Water2"],
 	},
 	sashumish: {
@@ -49792,7 +49792,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 52.1,
 		color: "Red",
-		prevo : "Sushish",
+		prevo: "Sushish",
 		eggGroups: ["Water2"],
 	},
 	solareon: {
@@ -49804,7 +49804,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 24.5,
 		color: "Yellow",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	snowdoge: {
@@ -49816,7 +49816,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 10.8,
 		color: "Black",
-		evos : ["Cocaiturd"],
+		evos: ["Cocaiturd"],
 		eggGroups: ["Field"],
 	},
 	cocaiturd: {
@@ -49828,7 +49828,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 10.8,
 		color: "Black",
-		prevo : "Snowdoge",
+		prevo: "Snowdoge",
 		eggGroups: ["Field", "Amorphous"],
 	},
 	bongorilla: {
@@ -49840,7 +49840,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 24.0,
 		color: "Brown",
-		evos : ["Dongorilla"],
+		evos: ["Dongorilla"],
 		eggGroups: ["Field"],
 	},
 	dongorilla: {
@@ -49852,7 +49852,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 24.0,
 		color: "Brown",
-		prevo : "Bongorilla",
+		prevo: "Bongorilla",
 		eggGroups: ["Field"],
 	},
 	altarule: {
@@ -49864,7 +49864,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 20.6,
 		color: "Blue",
-		prevo : "Altaria",
+		prevo: "Altaria",
 		eggGroups: ["Flying", "Dragon"],
 	},
 	camerano: {
@@ -49876,7 +49876,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 220.0,
 		color: "Red",
-		prevo : "Camerupt",
+		prevo: "Camerupt",
 		eggGroups: ["Field"],
 	},
 	sharpoat: {
@@ -49888,7 +49888,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 88.8,
 		color: "Blue",
-		prevo : "Sharpedo",
+		prevo: "Sharpedo",
 		eggGroups: ["Water2"],
 	},
 	houndhell: {
@@ -49900,7 +49900,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 35.0,
 		color: "Black",
-		prevo : "Houndoom",
+		prevo: "Houndoom",
 		eggGroups: ["Field"],
 	},
 	pinswing: {
@@ -49912,7 +49912,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 55.0,
 		color: "Brown",
-		prevo : "Pinsir",
+		prevo: "Pinsir",
 		eggGroups: ["Bug"],
 	},
 	aerodactold: {
@@ -49924,7 +49924,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 59.0,
 		color: "Purple",
-		prevo : "Aerodactyl",
+		prevo: "Aerodactyl",
 		eggGroups: ["Flying"],
 	},
 	herculecross: {
@@ -49936,7 +49936,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 54.0,
 		color: "Blue",
-		prevo : "Heracross",
+		prevo: "Heracross",
 		eggGroups: ["Bug"],
 	},
 	diebbuk: {
@@ -49948,7 +49948,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 65.0,
 		color: "Purple",
-		evos : ["Diebbyuk"],
+		evos: ["Diebbyuk"],
 		eggGroups: ["Amorphous"],
 	},
 	diebbyuk: {
@@ -49960,7 +49960,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 108.0,
 		color: "Purple",
-		prevo : "Diebbuk",
+		prevo: "Diebbuk",
 		eggGroups: ["Amorphous"],
 	},
 	pixall: {
@@ -49972,7 +49972,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 9.0,
 		color: "Blue",
-		evos : ["Pixension"],
+		evos: ["Pixension"],
 		eggGroups: ["Amorphous"],
 	},
 	pixension: {
@@ -49984,7 +49984,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 9.0,
 		color: "Blue",
-		prevo : "Pixall",
+		prevo: "Pixall",
 		eggGroups: ["Humanlike"],
 	},
 	combug: {
@@ -49996,7 +49996,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 28.8,
 		color: "White",
-		evos : ["Buglitch"],
+		evos: ["Buglitch"],
 		eggGroups: ["Bug", "Amorphous"],
 	},
 	buglitch: {
@@ -50008,7 +50008,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 28.8,
 		color: "White",
-		prevo : "Combug",
+		prevo: "Combug",
 		eggGroups: ["Bug", "Amorphous"],
 	},
 	smirtsnek: {
@@ -50020,7 +50020,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 9.0,
 		color: "Blue",
-		evos : ["Smirtrsnekek"],
+		evos: ["Smirtrsnekek"],
 		eggGroups: ["Field", "Mineral"],
 	},
 	smirtrsnekek: {
@@ -50032,7 +50032,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 128.3,
 		color: "Blue",
-		prevo : "Smirtsnek",
+		prevo: "Smirtsnek",
 		eggGroups: ["Field", "Mineral"],
 	},
 	narwhar: {
@@ -50044,7 +50044,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 165.7,
 		color: "White",
-		prevo : "Dewgong",
+		prevo: "Dewgong",
 		eggGroups: ["Water1", "Field"],
 	},
 	introll: {
@@ -50056,7 +50056,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 11.0,
 		color: "Purple",
-		evos : ["Trollternet"],
+		evos: ["Trollternet"],
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	trollternet: {
@@ -50068,7 +50068,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 11.0,
 		color: "Purple",
-		prevo : "Introll",
+		prevo: "Introll",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	brico: {
@@ -50080,7 +50080,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 50.4,
 		color: "Red",
-		evos : ["Bricken"],
+		evos: ["Bricken"],
 		eggGroups: ["Mineral"],
 	},
 	bricken: {
@@ -50092,8 +50092,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 123.4,
 		color: "Red",
-		prevo : "Brico",
-		evos : ["Brickor"],
+		prevo: "Brico",
+		evos: ["Brickor"],
 		eggGroups: ["Mineral"],
 	},
 	brickor: {
@@ -50105,7 +50105,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 655.2,
 		color: "Red",
-		prevo : "Bricken",
+		prevo: "Bricken",
 		eggGroups: ["Mineral"],
 	},
 	trojony: {
@@ -50117,7 +50117,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 80.0,
 		color: "Red",
-		evos : ["Trojorse"],
+		evos: ["Trojorse"],
 		eggGroups: ["Field", "Mineral"],
 	},
 	trojorse: {
@@ -50129,7 +50129,7 @@ blobbosmechelectric: {
 		heightm: 2.7,
 		weightkg: 180.0,
 		color: "Red",
-		prevo : "Trojony",
+		prevo: "Trojony",
 		eggGroups: ["Field", "Mineral"],
 	},
 	alliswell: {
@@ -50141,7 +50141,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 80.0,
 		color: "Red",
-		evos : ["There Is Only Hell"],
+		evos: ["There Is Only Hell"],
 		eggGroups: ["Field"],
 	},
 	thereisonlyhell: {
@@ -50153,8 +50153,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 80.0,
 		color: "Red",
-		prevo : "Alliswell",
-		evos : ["Helpme"],
+		prevo: "Alliswell",
+		evos: ["Helpme"],
 		eggGroups: ["Field"],
 	},
 	helpme: {
@@ -50166,7 +50166,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 80.0,
 		color: "Red",
-		prevo : "Thereisonlyhell",
+		prevo: "Thereisonlyhell",
 		eggGroups: ["Field"],
 	},
 	sixsnek: {
@@ -50178,7 +50178,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 79.0,
 		color: "White",
-		evos : ["Snatan"],
+		evos: ["Snatan"],
 		eggGroups: ["Dragon", "Monster"],
 	},
 	snatan: {
@@ -50190,7 +50190,7 @@ blobbosmechelectric: {
 		heightm: 6.66,
 		weightkg: 666.0,
 		color: "White",
-		prevo : "Sixsnek",
+		prevo: "Sixsnek",
 		eggGroups: ["Dragon", "Monster"],
 	},
 	humanoid: {
@@ -50235,7 +50235,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 10.0,
 		color: "Black",
-		prevo : "Unown",
+		prevo: "Unown",
 		eggGroups: ["Undiscovered"],
 	},
 	maghat: {
@@ -50247,7 +50247,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 1.1,
 		color: "Red",
-		evos : ["Wizcap", "Levelcap"],
+		evos: ["Wizcap", "Levelcap"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	wizcap: {
@@ -50259,7 +50259,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 4.1,
 		color: "Red",
-		prevo : "Maghat",
+		prevo: "Maghat",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	stando: {
@@ -50272,7 +50272,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 		otherFormes: ["Stando-TheWorld", "Stando-HierophantGreen", "Stando-HermitPurple", "Stando-MagiciansRed", "Stando-SilverChariot", "Stando-TheFool", "Stando-Cream", "Stando-DarkBlueMoon", "Stando-TowerOfGray", "Stando-EbonyDevil", "Stando-YellowTemperance", "Stando-Strength", "Stando-WheelofFortune", "Stando-HangedMan", "Stando-Emperor", "Stando-Emperess", "Stando-Justice", "Stando-Lovers", "Stando-TheSun", "Stando-DeathThirteen", "Stando-Judgment", "Stando-HighPriestess", "Stando-Geb", "Stando-Khnum", "Stando-Thoth", "Stando-Anubis", "Stando-Bastet", "Stando-Sethan", "Stando-Osiris", "Stando-Horus", "Stando-Atum", "Stando-TenoreSax", "Stando-CrazyDiamond", "Stando-TheHand", "Stando-EchoesAct1", "Stando-EchoesAct2", "Stando-EchoesAct3", "Stando-HeavensDoor", "Stando-KillerQueen", "Stando-AquaNecklace", "Stando-BadCompany", "Stando-RedHotChilliPepper", "Stando-TheLock", "Stando-Surface", "Stando-LoveDeluxe", "Stando-PearlJam", "Stando-Ratt", "Stando-Harvest", "Stando-Cinderella", "Stando-BoyIIMan", "Stando-HighwayStar", "Stando-StrayCat", "Stando-SuperFly", "Stando-Enigma", "Stando-CheapTrick", "Stando-AtomHeartFather", "Stando-ActhungBaby", "Stando-EarthWindandFire", "Stando-GoldExperience", "Stando-StickyFingers", "Stando-MoodyBlues", "Stando-SexPistols", "Stando-Aerosmith", "Stando-PurpleHaze", "Stando-SpiceGirl", "Stando-KingCrimson", "Stando-BlackSabbath", "Stando-SoftMachine", "Stando-Kraftwork", "Stando-LittleFeet", "Stando-ManintheMirror", "Stando-MrPresident", "Stando-BeachBoy", "Stando-GratefulDead", "Stando-BabyFace", "Stando-WhiteAlbum", "Stando-Clash", "Stando-TalkingHead", "Stando-NotoriousB.I.G", "Stando-Metallica", "Stando-GreenDay", "Stando-Oasis", "Stando-RollingStones", "Stando-StoneFree", "Stando-WeatherReport", "Stando-Whitesnake", "Stando-ScaryMonsters", "Stando-HighwayToHell", "Stando-Survivor", "Stando-SkyHigh", "Stando-SoftandWet", "Stando-CMoon", "Stando-TuskAct1", "Stando-Ballbreaker", "Stando-D4C", "Stando-InASilentWay", "Stando-HeyYa!", "Stando-SilverChariotRequiem", "Stando-BlueNight", "Stando-HighHighPriestess"],
 		formeOrder: ["Stando", "Stando-TheWorld", "Stando-HierophantGreen", "Stando-HermitPurple", "Stando-MagiciansRed", "Stando-SilverChariot", "Stando-TheFool", "Stando-Cream", "Stando-DarkBlueMoon", "Stando-TowerOfGray", "Stando-EbonyDevil", "Stando-YellowTemperance", "Stando-Strength", "Stando-WheelofFortune", "Stando-HangedMan", "Stando-Emperor", "Stando-Emperess", "Stando-Justice", "Stando-Lovers", "Stando-TheSun", "Stando-DeathThirteen", "Stando-Judgment", "Stando-HighPriestess", "Stando-Geb", "Stando-Khnum", "Stando-Thoth", "Stando-Anubis", "Stando-Bastet", "Stando-Sethan", "Stando-Osiris", "Stando-Horus", "Stando-Atum", "Stando-TenoreSax", "Stando-CrazyDiamond", "Stando-TheHand", "Stando-EchoesAct1", "Stando-EchoesAct2", "Stando-EchoesAct3", "Stando-HeavensDoor", "Stando-KillerQueen", "Stando-AquaNecklace", "Stando-BadCompany", "Stando-RedHotChilliPepper", "Stando-TheLock", "Stando-Surface", "Stando-LoveDeluxe", "Stando-PearlJam", "Stando-Ratt", "Stando-Harvest", "Stando-Cinderella", "Stando-BoyIIMan", "Stando-HighwayStar", "Stando-StrayCat", "Stando-SuperFly", "Stando-Enigma", "Stando-CheapTrick", "Stando-AtomHeartFather", "Stando-ActhungBaby", "Stando-EarthWindandFire", "Stando-GoldExperience", "Stando-StickyFingers", "Stando-MoodyBlues", "Stando-SexPistols", "Stando-Aerosmith", "Stando-PurpleHaze", "Stando-SpiceGirl", "Stando-KingCrimson", "Stando-BlackSabbath", "Stando-SoftMachine", "Stando-Kraftwork", "Stando-LittleFeet", "Stando-ManintheMirror", "Stando-MrPresident", "Stando-BeachBoy", "Stando-GratefulDead", "Stando-BabyFace", "Stando-WhiteAlbum", "Stando-Clash", "Stando-TalkingHead", "Stando-NotoriousB.I.G", "Stando-Metallica", "Stando-GreenDay", "Stando-Oasis", "Stando-RollingStones", "Stando-StoneFree", "Stando-WeatherReport", "Stando-Whitesnake", "Stando-ScaryMonsters", "Stando-HighwayToHell", "Stando-Survivor", "Stando-SkyHigh", "Stando-SoftandWet", "Stando-CMoon", "Stando-TuskAct1", "Stando-Ballbreaker", "Stando-D4C", "Stando-InASilentWay", "Stando-HeyYa!", "Stando-SilverChariotRequiem", "Stando-BlueNight", "Stando-HighHighPriestess"],
@@ -50286,7 +50286,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standohierophantgreen: {
@@ -50298,7 +50298,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standohermitpurple: {
@@ -50310,7 +50310,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standomagiciansred: {
@@ -50322,7 +50322,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standosilverchariot: {
@@ -50334,7 +50334,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standothefool: {
@@ -50346,7 +50346,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standocream: {
@@ -50358,7 +50358,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standodarkbluemoon: {
@@ -50370,7 +50370,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standotowerofgray: {
@@ -50382,7 +50382,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoebonydevil: {
@@ -50394,7 +50394,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoyellowtemperance: {
@@ -50406,7 +50406,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standostrength: {
@@ -50418,7 +50418,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standowheeloffortune: {
@@ -50430,7 +50430,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standohangedman: {
@@ -50442,7 +50442,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoemperor: {
@@ -50454,7 +50454,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoemperess: {
@@ -50466,7 +50466,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standojustice: {
@@ -50478,7 +50478,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standolovers: {
@@ -50490,7 +50490,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standothesun: {
@@ -50502,7 +50502,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standodeaththirteen: {
@@ -50514,7 +50514,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standojudgment: {
@@ -50526,7 +50526,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standohighpriestess: {
@@ -50538,7 +50538,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standogeb: {
@@ -50550,7 +50550,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standokhnum: {
@@ -50562,7 +50562,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standothoth: {
@@ -50574,7 +50574,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoanubis: {
@@ -50586,7 +50586,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standobastet: {
@@ -50598,7 +50598,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standosethan: {
@@ -50610,7 +50610,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoosiris: {
@@ -50622,7 +50622,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standohorus: {
@@ -50634,7 +50634,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoatum: {
@@ -50646,7 +50646,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standotenoresax: {
@@ -50658,7 +50658,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standocrazydiamond: {
@@ -50670,7 +50670,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standothehand: {
@@ -50682,7 +50682,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoechoesact1: {
@@ -50694,7 +50694,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoechoesact2: {
@@ -50706,7 +50706,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoechoesact3: {
@@ -50718,7 +50718,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoheavensdoor: {
@@ -50730,7 +50730,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standokillerqueen: {
@@ -50742,7 +50742,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoaquanecklace: {
@@ -50754,7 +50754,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standobadcompany: {
@@ -50766,7 +50766,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoredhotchillipepper: {
@@ -50778,7 +50778,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standothelock: {
@@ -50790,7 +50790,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standosurface: {
@@ -50802,7 +50802,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standolovedeluxe: {
@@ -50814,7 +50814,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standopearljam: {
@@ -50826,7 +50826,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoratt: {
@@ -50838,7 +50838,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoharvest: {
@@ -50850,7 +50850,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standocinderella: {
@@ -50862,7 +50862,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoboyiiman: {
@@ -50874,7 +50874,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standohighwaystar: {
@@ -50886,7 +50886,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standostraycat: {
@@ -50898,7 +50898,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standosuperfly: {
@@ -50910,7 +50910,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoenigma: {
@@ -50922,7 +50922,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standocheaptrick: {
@@ -50934,7 +50934,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoatomheartfather: {
@@ -50946,7 +50946,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoacthungbaby: {
@@ -50958,7 +50958,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoearthwindandfire: {
@@ -50970,7 +50970,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standogoldexperience: {
@@ -50982,7 +50982,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standostickyfingers: {
@@ -50994,7 +50994,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standomoodyblues: {
@@ -51006,7 +51006,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standosexpistols: {
@@ -51018,7 +51018,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoaerosmith: {
@@ -51030,7 +51030,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standopurplehaze: {
@@ -51042,7 +51042,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standospicegirl: {
@@ -51054,7 +51054,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standokingcrimson: {
@@ -51066,7 +51066,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoblacksabbath: {
@@ -51078,7 +51078,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standosoftmachine: {
@@ -51090,7 +51090,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standokraftwork: {
@@ -51102,7 +51102,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standolittlefeet: {
@@ -51114,7 +51114,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standomaninthemirror: {
@@ -51126,7 +51126,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standomrpresident: {
@@ -51138,7 +51138,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standobeachboy: {
@@ -51150,7 +51150,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standogratefuldead: {
@@ -51162,7 +51162,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standobabyface: {
@@ -51174,7 +51174,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standowhitealbum: {
@@ -51186,7 +51186,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoclash: {
@@ -51198,7 +51198,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standotalkinghead: {
@@ -51210,7 +51210,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standonotoriousbig: {
@@ -51222,7 +51222,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standometallica: {
@@ -51234,7 +51234,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standogreenday: {
@@ -51246,7 +51246,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standooasis: {
@@ -51258,7 +51258,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standorollingstones: {
@@ -51270,7 +51270,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standostonefree: {
@@ -51282,7 +51282,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoweatherreport: {
@@ -51294,7 +51294,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standowhitesnake: {
@@ -51306,7 +51306,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoscarymonsters: {
@@ -51318,7 +51318,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standohighwaytohell: {
@@ -51330,7 +51330,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standosurvivor: {
@@ -51342,7 +51342,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoskyhigh: {
@@ -51354,7 +51354,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standosoftandwet: {
@@ -51366,7 +51366,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standocmoon: {
@@ -51378,7 +51378,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standotuskact1: {
@@ -51390,7 +51390,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoballbreaker: {
@@ -51402,7 +51402,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standod4c: {
@@ -51414,7 +51414,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoinasilentway: {
@@ -51426,7 +51426,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoheyya: {
@@ -51438,7 +51438,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standosilverchariotrequiem: {
@@ -51450,7 +51450,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standobluenight: {
@@ -51462,7 +51462,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standohighhighpriestess: {
@@ -51474,7 +51474,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		evos : ["Tusk", "Standoge"],
+		evos: ["Tusk", "Standoge"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	monkid: {
@@ -51486,7 +51486,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
-		evos : ["Floweyr", "Skeleton", "Asgoat", "Toriegoat", "Undyrate", "Mettabot", "Characide", "Papyrousle"],
+		evos: ["Floweyr", "Skeleton", "Asgoat", "Toriegoat", "Undyrate", "Mettabot", "Characide", "Papyrousle"],
 		eggGroups: ["Monster"],
 	},
 	undyrate: {
@@ -51498,7 +51498,7 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 96.5,
 		color: "Brown",
-		prevo : "Monkid",
+		prevo: "Monkid",
 		eggGroups: ["Water1", "Monster"],
 	},
 	skeleton: {
@@ -51510,7 +51510,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 16.5,
 		color: "Brown",
-		prevo : "Monkidness",
+		prevo: "Monkidness",
 		eggGroups: ["Humanlike", "Monster"],
 	},
 	asgoat: {
@@ -51522,7 +51522,7 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 96.5,
 		color: "Brown",
-		prevo : "Monkid",
+		prevo: "Monkid",
 		eggGroups: ["Field", "Monster"],
 	},
 	mettabot: {
@@ -51534,7 +51534,7 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 96.5,
 		color: "Brown",
-		prevo : "Monkid",
+		prevo: "Monkid",
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	nitegant: {
@@ -51546,7 +51546,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 0.5,
 		color: "Black",
-		evos : ["Huntorror", "Byaklight"],
+		evos: ["Huntorror", "Byaklight"],
 		eggGroups: ["Fairy", "Monster"],
 	},
 	huntorror: {
@@ -51558,7 +51558,7 @@ blobbosmechelectric: {
 		heightm: 5.0,
 		weightkg: 100.5,
 		color: "Black",
-		prevo : "Nitegant",
+		prevo: "Nitegant",
 		eggGroups: ["Dragon", "Monster"],
 	},
 	cutehulhu: {
@@ -51570,7 +51570,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 3.0,
 		color: "White",
-		evos : ["Cthuspawn"],
+		evos: ["Cthuspawn"],
 		eggGroups: ["Amorphous", "Water3"],
 	},
 	cthuspawn: {
@@ -51582,8 +51582,8 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 33.0,
 		color: "Green",
-		prevo : "Cutehulhu",
-		evos : ["Cthylltulla", "Cultulzu"],
+		prevo: "Cutehulhu",
+		evos: ["Cthylltulla", "Cultulzu"],
 		eggGroups: ["Amorphous", "Water3"],
 	},
 	cultulzu: {
@@ -51595,7 +51595,7 @@ blobbosmechelectric: {
 		heightm: 4.2,
 		weightkg: 53.0,
 		color: "Green",
-		prevo : "Cthuspawn",
+		prevo: "Cthuspawn",
 		eggGroups: ["Amorphous", "Water3"],
 	},
 	steamos: {
@@ -51607,7 +51607,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.0,
 		color: "Blue",
-		evos : ["Steamist"],
+		evos: ["Steamist"],
 		eggGroups: ["Amorphous", "Water1"],
 	},
 	steamist: {
@@ -51619,7 +51619,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.0,
 		color: "Blue",
-		prevo : "Steamos",
+		prevo: "Steamos",
 		eggGroups: ["Amorphous", "Water1"],
 	},
 	blackdoor: {
@@ -51675,7 +51675,7 @@ blobbosmechelectric: {
 		heightm: 0.40,
 		weightkg: 21.0,
 		color: "Green",
-		evos : ["Jackorse"],
+		evos: ["Jackorse"],
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	jackorse: {
@@ -51687,7 +51687,7 @@ blobbosmechelectric: {
 		heightm: 2.40,
 		weightkg: 76.0,
 		color: "Green",
-		prevo : "Macat",
+		prevo: "Macat",
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	whitedoor: {
@@ -51732,7 +51732,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 48.0,
 		color: "Yellow",
-		evos : ["Hasterror"],
+		evos: ["Hasterror"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	hasterror: {
@@ -51744,7 +51744,7 @@ blobbosmechelectric: {
 		heightm: 10.95,
 		weightkg: 1000.0,
 		color: "Yellow",
-		prevo : "Kingellow",
+		prevo: "Kingellow",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	byaklight: {
@@ -51756,7 +51756,7 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 100.5,
 		color: "Yellow",
-		prevo : "Nitegant",
+		prevo: "Nitegant",
 		eggGroups: ["Dragon", "Monster"],
 	},
 	nyarly: {
@@ -51779,7 +51779,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 28.8,
 		color: "White",
-		evos : ["Malworm"],
+		evos: ["Malworm"],
 		eggGroups: ["Bug"],
 	},
 	malworm: {
@@ -51791,7 +51791,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 28.8,
 		color: "White",
-		prevo : "Virurm",
+		prevo: "Virurm",
 		eggGroups: ["Bug"],
 	},
 	majin: {
@@ -51858,7 +51858,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.0,
 		color: "Blue",
-		evos : ["Finpelio"],
+		evos: ["Finpelio"],
 		eggGroups: ["Water1", "Field"],
 	},
 	finpelio: {
@@ -51870,8 +51870,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 39.0,
 		color: "Blue",
-		prevo : "Finpip",
-		evos : ["Pinnister"],
+		prevo: "Finpip",
+		evos: ["Pinnister"],
 		eggGroups: ["Water1", "Field"],
 	},
 	pinnister: {
@@ -51883,7 +51883,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 99.9,
 		color: "Blue",
-		prevo : "Finpelio",
+		prevo: "Finpelio",
 		eggGroups: ["Water1", "Field"],
 	},
 	roothoot: {
@@ -51895,7 +51895,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 5.0,
 		color: "Green",
-		evos : ["Owlhood"],
+		evos: ["Owlhood"],
 		eggGroups: ["Flying"],
 	},
 	owlhood: {
@@ -51907,8 +51907,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.0,
 		color: "Green",
-		prevo : "Roothoot",
-		evos : ["Rootspook"],
+		prevo: "Roothoot",
+		evos: ["Rootspook"],
 		eggGroups: ["Flying"],
 	},
 	rootspook: {
@@ -51920,7 +51920,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 55.8,
 		color: "Green",
-		prevo : "Owlhood",
+		prevo: "Owlhood",
 		eggGroups: ["Flying"],
 	},
 	emcat: {
@@ -51932,7 +51932,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		evos : ["Purshot"],
+		evos: ["Purshot"],
 		eggGroups: ["Field"],
 	},
 	purshot: {
@@ -51944,8 +51944,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 28.5,
 		color: "Red",
-		prevo : "Emcat",
-		evos : ["Panthannon"],
+		prevo: "Emcat",
+		evos: ["Panthannon"],
 		eggGroups: ["Field"],
 	},
 	panthannon: {
@@ -51957,7 +51957,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 76.5,
 		color: "Red",
-		prevo : "Purshot",
+		prevo: "Purshot",
 		eggGroups: ["Field"],
 	},
 	guttsu: {
@@ -51969,7 +51969,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.2,
 		color: "Green",
-		evos : ["Gatsu"],
+		evos: ["Gatsu"],
 		eggGroups: ["Field"],
 	},
 	gatsu: {
@@ -51981,8 +51981,8 @@ blobbosmechelectric: {
 		heightm: 2.6,
 		weightkg: 15.2,
 		color: "Green",
-		prevo : "Guttsu",
-		evos : ["Berserguts"],
+		prevo: "Guttsu",
+		evos: ["Berserguts"],
 		eggGroups: ["Field"],
 	},
 	berserguts: {
@@ -51994,7 +51994,7 @@ blobbosmechelectric: {
 		heightm: 2.9,
 		weightkg: 75.2,
 		color: "Green",
-		prevo : "Gatsu",
+		prevo: "Gatsu",
 		eggGroups: ["Field"],
 	},
 	gublin: {
@@ -52006,7 +52006,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 10.2,
 		color: "Black",
-		evos : ["Goblord"],
+		evos: ["Goblord"],
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	goblord: {
@@ -52018,7 +52018,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 87.2,
 		color: "Black",
-		prevo : "Gublin",
+		prevo: "Gublin",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	gaghocean: {
@@ -52085,7 +52085,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 20.0,
 		color: "Brown",
-		evos : ["Weepangel"],
+		evos: ["Weepangel"],
 		eggGroups: ["Mineral"],
 	},
 	weepangel: {
@@ -52097,8 +52097,8 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 20.0,
 		color: "Brown",
-		prevo : "Wimpangel",
-		evos : ["Agonangel", "Seratime"],
+		prevo: "Wimpangel",
+		evos: ["Agonangel", "Seratime"],
 		eggGroups: ["Mineral"],
 	},
 	agonangel: {
@@ -52110,7 +52110,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 20.0,
 		color: "Brown",
-		prevo : "Weepangel",
+		prevo: "Weepangel",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	seratime: {
@@ -52122,7 +52122,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 20.0,
 		color: "Brown",
-		prevo : "Weepangel",
+		prevo: "Weepangel",
 		eggGroups: ["Mineral", "Humanlike"],
 	},
 	lunound: {
@@ -52134,7 +52134,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
-		evos : ["Lycanmars", "Lycanmoon"],
+		evos: ["Lycanmars", "Lycanmoon"],
 		eggGroups: ["Field"],
 	},
 	lycanmoon: {
@@ -52146,7 +52146,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
-		prevo : "Lunound",
+		prevo: "Lunound",
 		eggGroups: ["Field"],
 	},
 	acroagunk: {
@@ -52158,7 +52158,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 23.0,
 		color: "Blue",
-		evos : ["Atoxicroak"],
+		evos: ["Atoxicroak"],
 		eggGroups: ["Humanlike"],
 	},
 	atoxicroak: {
@@ -52170,7 +52170,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 44.4,
 		color: "Blue",
-		prevo : "Acroagunk",
+		prevo: "Acroagunk",
 		eggGroups: ["Humanlike", "Water1"],
 	},
 	aqwilfish: {
@@ -52182,7 +52182,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 3.9,
 		color: "Gray",
-		evos : ["Navabrine", "Nucleshark"],
+		evos: ["Navabrine", "Nucleshark"],
 		eggGroups: ["Water2"],
 	},
 	shelldor: {
@@ -52194,7 +52194,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 4.0,
 		color: "Purple",
-		prevo : "Shellder",
+		prevo: "Shellder",
 		eggGroups: ["Water3"],
 	},
 	dedfishe: {
@@ -52217,7 +52217,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 0.1,
 		color: "Brown",
-		evos : ["Syli"],
+		evos: ["Syli"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	syli: {
@@ -52229,7 +52229,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 0.1,
 		color: "Brown",
-		prevo : "Lightsy",
+		prevo: "Lightsy",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	mawcar: {
@@ -52241,7 +52241,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.1,
 		color: "Black",
-		evos : ["Acasmoc"],
+		evos: ["Acasmoc"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	acasmoc: {
@@ -52253,7 +52253,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.1,
 		color: "Black",
-		prevo : "Mawcar",
+		prevo: "Mawcar",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	snowpil: {
@@ -52265,7 +52265,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 28.8,
 		color: "White",
-		evos : ["Froskoon"],
+		evos: ["Froskoon"],
 		eggGroups: ["Bug", "Mineral"],
 	},
 	froskoon: {
@@ -52277,8 +52277,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 28.8,
 		color: "White",
-		prevo : "Snowpil",
-		evos : ["Rhemorice"],
+		prevo: "Snowpil",
+		evos: ["Rhemorice"],
 		eggGroups: ["Bug", "Mineral"],
 	},
 	rhemorice: {
@@ -52290,7 +52290,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 28.8,
 		color: "White",
-		prevo : "Froskoon",
+		prevo: "Froskoon",
 		eggGroups: ["Bug", "Mineral"],
 	},
 	twickotweet: {
@@ -52302,7 +52302,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 10.2,
 		color: "Black",
-		evos : ["Lagoonask", "Witchise", "Mummyask", "Vampask", "Skullask", "Zombmask", "Wolfmansk", "Jackask", "Clownask", "Invisimask", "Ayymask", "Demask", "Phantmask"],
+		evos: ["Lagoonask", "Witchise", "Mummyask", "Vampask", "Skullask", "Zombmask", "Wolfmansk", "Jackask", "Clownask", "Invisimask", "Ayymask", "Demask", "Phantmask"],
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	phantmask: {
@@ -52314,7 +52314,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 10.2,
 		color: "Black",
-		prevo : "Twickotweet",
+		prevo: "Twickotweet",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	vampask: {
@@ -52326,7 +52326,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 10.2,
 		color: "Black",
-		prevo : "Twickotweet",
+		prevo: "Twickotweet",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	witchise: {
@@ -52338,7 +52338,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 10.2,
 		color: "Black",
-		prevo : "Twickotweet",
+		prevo: "Twickotweet",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	demask: {
@@ -52350,7 +52350,7 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 10.2,
 		color: "Black",
-		prevo : "Twickotweet",
+		prevo: "Twickotweet",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	buriedalive: {
@@ -52373,7 +52373,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 120.0,
 		color: "White",
-		evos : ["Ningenice"],
+		evos: ["Ningenice"],
 		eggGroups: ["Water1", "Monster"],
 	},
 	ningenice: {
@@ -52385,7 +52385,7 @@ blobbosmechelectric: {
 		heightm: 5.2,
 		weightkg: 220.0,
 		color: "White",
-		prevo : "Ningice",
+		prevo: "Ningice",
 		eggGroups: ["Water1", "Monster"],
 	},
 	fireall: {
@@ -52408,7 +52408,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	seapi: {
@@ -52420,7 +52420,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.3,
 		color: "Purple",
-		evos : ["Seahog"],
+		evos: ["Seahog"],
 		eggGroups: ["Water1", "Amorphous"],
 	},
 	seahog: {
@@ -52432,7 +52432,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.3,
 		color: "Purple",
-		prevo : "Seapi",
+		prevo: "Seapi",
 		eggGroups: ["Water1", "Amorphous"],
 	},
 	eldri: {
@@ -52444,7 +52444,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 0.5,
 		color: "Black",
-		evos : ["Eldreye"],
+		evos: ["Eldreye"],
 		eggGroups: ["Amorphous", "Flying"],
 	},
 	eldreye: {
@@ -52456,7 +52456,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 0.5,
 		color: "Black",
-		prevo : "Eldri",
+		prevo: "Eldri",
 		eggGroups: ["Amorphous", "Flying"],
 	},
 	dlycanroc: {
@@ -52468,7 +52468,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 26.0,
 		color: "Brown",
-		prevo : "Rockruff",
+		prevo: "Rockruff",
 		eggGroups: ["Field"],
 	},
 	nlycanroc: {
@@ -52480,7 +52480,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 26.0,
 		color: "Brown",
-		prevo : "Rockruff",
+		prevo: "Rockruff",
 		eggGroups: ["Field"],
 	},
 	peacon: {
@@ -52492,7 +52492,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.0,
 		color: "Brown",
-		evos : ["Pearoyal"],
+		evos: ["Pearoyal"],
 		eggGroups: ["Flying"],
 	},
 	pearoyal: {
@@ -52504,7 +52504,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 23.0,
 		color: "Brown",
-		prevo : "Peacon",
+		prevo: "Peacon",
 		eggGroups: ["Flying"],
 	},
 	cragite: {
@@ -52516,7 +52516,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 33.0,
 		color: "Gray",
-		evos : ["Canyonite"],
+		evos: ["Canyonite"],
 		eggGroups: ["Bug"],
 	},
 	canyonite: {
@@ -52528,7 +52528,7 @@ blobbosmechelectric: {
 		heightm: 4.3,
 		weightkg: 333.0,
 		color: "Gray",
-		prevo : "Cragite",
+		prevo: "Cragite",
 		eggGroups: ["Bug"],
 	},
 	spirus: {
@@ -52540,7 +52540,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 28.8,
 		color: "White",
-		evos : ["Splague"],
+		evos: ["Splague"],
 		eggGroups: ["Bug"],
 	},
 	splague: {
@@ -52552,7 +52552,7 @@ blobbosmechelectric: {
 		heightm: 3.8,
 		weightkg: 128.8,
 		color: "White",
-		prevo : "Spirus",
+		prevo: "Spirus",
 		eggGroups: ["Bug", "Amorphous"],
 	},
 	lunafake: {
@@ -52564,7 +52564,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 168.0,
 		color: "Yellow",
-		evos : ["Fonighton"],
+		evos: ["Fonighton"],
 		eggGroups: ["Mineral"],
 	},
 	fonighton: {
@@ -52576,7 +52576,7 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 268.0,
 		color: "Yellow",
-		prevo : "Lunafake",
+		prevo: "Lunafake",
 		eggGroups: ["Mineral"],
 	},
 	moonse: {
@@ -52588,7 +52588,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 50.4,
 		color: "Yellow",
-		evos : ["Lunarat"],
+		evos: ["Lunarat"],
 		eggGroups: ["Humanlike", "Mineral"],
 	},
 	lunarat: {
@@ -52600,7 +52600,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 50.4,
 		color: "Yellow",
-		prevo : "Moonse",
+		prevo: "Moonse",
 		eggGroups: ["Humanlike", "Mineral"],
 	},
 	mooneast: {
@@ -52623,7 +52623,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 10.0,
 		color: "Red",
-		evos : ["Agyarados"],
+		evos: ["Agyarados"],
 		eggGroups: ["Water2", "Dragon"],
 	},
 	agyarados: {
@@ -52635,7 +52635,7 @@ blobbosmechelectric: {
 		heightm: 6.5,
 		weightkg: 235.0,
 		color: "Blue",
-		prevo : "Amagikarp",
+		prevo: "Amagikarp",
 		eggGroups: ["Water2", "Dragon"],
 	},
 	adratini: {
@@ -52647,7 +52647,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 3.3,
 		color: "Blue",
-		evos : ["Adragonair"],
+		evos: ["Adragonair"],
 		eggGroups: ["Water1", "Dragon"],
 	},
 	adragonair: {
@@ -52659,8 +52659,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Adratini",
-		evos : ["Adragonite"],
+		prevo: "Adratini",
+		evos: ["Adragonite"],
 		eggGroups: ["Water1", "Dragon"],
 	},
 	adragonite: {
@@ -52672,7 +52672,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 210.0,
 		color: "Brown",
-		prevo : "Adragonair",
+		prevo: "Adragonair",
 		eggGroups: ["Water1", "Dragon"],
 	},
 	poisapp: {
@@ -52684,7 +52684,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 35.0,
 		color: "Blue",
-		evos : ["Toxapple"],
+		evos: ["Toxapple"],
 		eggGroups: ["Grass"],
 	},
 	toxapple: {
@@ -52696,7 +52696,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 35.0,
 		color: "Blue",
-		prevo : "Poisapp",
+		prevo: "Poisapp",
 		eggGroups: ["Grass"],
 	},
 	burgite: {
@@ -52708,7 +52708,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 35.7,
 		color: "White",
-		evos : ["Icendless"],
+		evos: ["Icendless"],
 		eggGroups: ["Mineral"],
 	},
 	icendless: {
@@ -52720,7 +52720,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 35.7,
 		color: "White",
-		prevo : "Burgite",
+		prevo: "Burgite",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	asandshrew: {
@@ -52732,7 +52732,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 12.0,
 		color: "Yellow",
-		evos : ["Asandslash"],
+		evos: ["Asandslash"],
 		eggGroups: ["Field"],
 	},
 	asandslash: {
@@ -52744,7 +52744,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 29.5,
 		color: "Yellow",
-		prevo : "Asandshrew",
+		prevo: "Asandshrew",
 		eggGroups: ["Field"],
 	},
 	arattata: {
@@ -52756,7 +52756,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.5,
 		color: "Purple",
-		evos : ["Araticate"],
+		evos: ["Araticate"],
 		eggGroups: ["Field"],
 	},
 	araticate: {
@@ -52768,7 +52768,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 18.5,
 		color: "Brown",
-		prevo : "Arattata",
+		prevo: "Arattata",
 		eggGroups: ["Field"],
 	},
 	avulpix: {
@@ -52780,7 +52780,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 9.9,
 		color: "Brown",
-		evos : ["Aninetales"],
+		evos: ["Aninetales"],
 		eggGroups: ["Field"],
 	},
 	aninetales: {
@@ -52792,7 +52792,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 19.9,
 		color: "Yellow",
-		prevo : "Avulpix",
+		prevo: "Avulpix",
 		eggGroups: ["Field"],
 	},
 	ameowth: {
@@ -52804,7 +52804,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Yellow",
-		evos : ["Gameowth", "Aperrserker", "Apersian"],
+		evos: ["Gameowth", "Aperrserker", "Apersian"],
 		eggGroups: ["Field"],
 	},
 	apersian: {
@@ -52816,8 +52816,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 32.0,
 		color: "Yellow",
-		prevo : "Ameowth",
-		evos : ["Mapersian"],
+		prevo: "Ameowth",
+		evos: ["Mapersian"],
 		eggGroups: ["Field"],
 	},
 	aexeggutor: {
@@ -52829,7 +52829,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 120.0,
 		color: "Yellow",
-		prevo : "Exeggcute",
+		prevo: "Exeggcute",
 		eggGroups: ["Grass"],
 	},
 	agrimer: {
@@ -52841,7 +52841,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 30.0,
 		color: "Purple",
-		evos : ["Amuk"],
+		evos: ["Amuk"],
 		eggGroups: ["Amorphous"],
 	},
 	amuk: {
@@ -52853,7 +52853,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 30.0,
 		color: "Purple",
-		prevo : "Agrimer",
+		prevo: "Agrimer",
 		eggGroups: ["Amorphous"],
 	},
 	amarowak: {
@@ -52865,7 +52865,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 45.0,
 		color: "Brown",
-		prevo : "Cubone",
+		prevo: "Cubone",
 		eggGroups: ["Monster"],
 	},
 	aparas: {
@@ -52877,7 +52877,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		evos : ["Aparasect"],
+		evos: ["Aparasect"],
 		eggGroups: ["Bug", "Grass"],
 	},
 	aparasect: {
@@ -52889,7 +52889,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 29.5,
 		color: "Red",
-		prevo : "Aparas",
+		prevo: "Aparas",
 		eggGroups: ["Bug", "Grass"],
 	},
 	akoffing: {
@@ -52901,7 +52901,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 1.0,
 		color: "Purple",
-		evos : ["Aweezing"],
+		evos: ["Aweezing"],
 		eggGroups: ["Amorphous"],
 	},
 	aweezing: {
@@ -52913,7 +52913,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 9.5,
 		color: "Purple",
-		prevo : "Akoffing",
+		prevo: "Akoffing",
 		eggGroups: ["Amorphous"],
 	},
 	bmagikarp: {
@@ -52925,7 +52925,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 10.0,
 		color: "Red",
-		evos : ["Bgyarados"],
+		evos: ["Bgyarados"],
 		eggGroups: ["Water2", "Dragon"],
 	},
 	bgyarados: {
@@ -52937,7 +52937,7 @@ blobbosmechelectric: {
 		heightm: 6.5,
 		weightkg: 235.0,
 		color: "Blue",
-		prevo : "Bmagikarp",
+		prevo: "Bmagikarp",
 		eggGroups: ["Water2", "Dragon"],
 	},
 	adiglett: {
@@ -52949,7 +52949,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.8,
 		color: "Brown",
-		evos : ["Adugtrio"],
+		evos: ["Adugtrio"],
 		eggGroups: ["Field"],
 	},
 	adugtrio: {
@@ -52961,7 +52961,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 33.3,
 		color: "Brown",
-		prevo : "Adiglett",
+		prevo: "Adiglett",
 		eggGroups: ["Field"],
 	},
 	ageodude: {
@@ -52973,7 +52973,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 20.0,
 		color: "Brown",
-		evos : ["Agraveler"],
+		evos: ["Agraveler"],
 		eggGroups: ["Mineral"],
 	},
 	agraveler: {
@@ -52985,8 +52985,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 105.0,
 		color: "Brown",
-		prevo : "Ageodude",
-		evos : ["Agolem"],
+		prevo: "Ageodude",
+		evos: ["Agolem"],
 		eggGroups: ["Mineral"],
 	},
 	agolem: {
@@ -52998,7 +52998,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 300.0,
 		color: "Brown",
-		prevo : "Agraveler",
+		prevo: "Agraveler",
 		eggGroups: ["Mineral"],
 	},
 	araichu: {
@@ -53010,7 +53010,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 30.0,
 		color: "Yellow",
-		prevo : "Pikachu",
+		prevo: "Pikachu",
 		eggGroups: ["Field", "Fairy"],
 	},
 	apoochyena: {
@@ -53022,7 +53022,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 13.6,
 		color: "Gray",
-		evos : ["Amightyena"],
+		evos: ["Amightyena"],
 		eggGroups: ["Field"],
 	},
 	amightyena: {
@@ -53034,7 +53034,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 37.0,
 		color: "Gray",
-		prevo : "Apoochyena",
+		prevo: "Apoochyena",
 		eggGroups: ["Field"],
 	},
 	aelectrode: {
@@ -53057,7 +53057,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 10.5,
 		color: "Pink",
-		prevo : "Spritzee",
+		prevo: "Spritzee",
 		eggGroups: ["Fairy"],
 	},
 	wendigi: {
@@ -53069,7 +53069,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.0,
 		color: "Purple",
-		evos : ["Wendigore"],
+		evos: ["Wendigore"],
 		eggGroups: ["Field"],
 	},
 	wendigore: {
@@ -53081,7 +53081,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 121.0,
 		color: "Purple",
-		prevo : "Wendigi",
+		prevo: "Wendigi",
 		eggGroups: ["Field"],
 	},
 	transformed: {
@@ -53192,7 +53192,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Red",
-		evos : ["Onigirice"],
+		evos: ["Onigirice"],
 		eggGroups: ["Field", "Fairy"],
 	},
 	onigirice: {
@@ -53204,7 +53204,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Red",
-		prevo : "Onigi",
+		prevo: "Onigi",
 		eggGroups: ["Field", "Fairy"],
 	},
 	stoneon: {
@@ -53216,7 +53216,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	sloggoth: {
@@ -53228,7 +53228,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		evos : ["Husloggeroth", "Sloggeroth", "Elsloggeroth"],
+		evos: ["Husloggeroth", "Sloggeroth", "Elsloggeroth"],
 		eggGroups: ["Field"],
 	},
 	sloggeroth: {
@@ -53240,7 +53240,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 125.5,
 		color: "Green",
-		prevo : "Sloggoth",
+		prevo: "Sloggoth",
 		eggGroups: ["Field"],
 	},
 	baxbak: {
@@ -53274,7 +53274,7 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 220.0,
 		color: "Blue",
-		prevo : "Lapras",
+		prevo: "Lapras",
 		eggGroups: ["Monster", "Water1"],
 	},
 	pmagikarp: {
@@ -53286,7 +53286,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 10.0,
 		color: "Red",
-		evos : ["Pgyarados"],
+		evos: ["Pgyarados"],
 		eggGroups: ["Water2", "Dragon"],
 	},
 	pgyarados: {
@@ -53298,7 +53298,7 @@ blobbosmechelectric: {
 		heightm: 5.5,
 		weightkg: 215.0,
 		color: "Blue",
-		prevo : "Pmagikarp",
+		prevo: "Pmagikarp",
 		eggGroups: ["Water2", "Dragon"],
 	},
 	bartle: {
@@ -53310,7 +53310,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 12.4,
 		color: "Green",
-		evos : ["Torteel"],
+		evos: ["Torteel"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	torteel: {
@@ -53322,8 +53322,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 32.4,
 		color: "Green",
-		prevo : "Bartle",
-		evos : ["Knood"],
+		prevo: "Bartle",
+		evos: ["Knood"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	knood: {
@@ -53335,7 +53335,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 132.4,
 		color: "Green",
-		prevo : "Torteel",
+		prevo: "Torteel",
 		eggGroups: ["Monster", "Grass"],
 	},
 	mageno: {
@@ -53347,7 +53347,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 12.4,
 		color: "Red",
-		evos : ["Magamen"],
+		evos: ["Magamen"],
 		eggGroups: ["Mineral"],
 	},
 	magamen: {
@@ -53359,8 +53359,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 22.4,
 		color: "Red",
-		prevo : "Mageno",
-		evos : ["Mageyser"],
+		prevo: "Mageno",
+		evos: ["Mageyser"],
 		eggGroups: ["Mineral"],
 	},
 	mageyser: {
@@ -53372,7 +53372,7 @@ blobbosmechelectric: {
 		heightm: 2.6,
 		weightkg: 122.4,
 		color: "Red",
-		prevo : "Magamen",
+		prevo: "Magamen",
 		eggGroups: ["Mineral"],
 	},
 	mistice: {
@@ -53384,7 +53384,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.1,
 		color: "Blue",
-		evos : ["Phantice"],
+		evos: ["Phantice"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	phantice: {
@@ -53396,8 +53396,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 0.4,
 		color: "Blue",
-		prevo : "Mistice",
-		evos : ["Serpentice"],
+		prevo: "Mistice",
+		evos: ["Serpentice"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	serpentice: {
@@ -53409,7 +53409,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 0.7,
 		color: "Blue",
-		prevo : "Phantice",
+		prevo: "Phantice",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	slinka: {
@@ -53421,7 +53421,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 666.6,
 		color: "Purple",
-		evos : ["Slinpis", "Slinkala"],
+		evos: ["Slinpis", "Slinkala"],
 		eggGroups: ["Field", "Amorphous"],
 	},
 	slinpis: {
@@ -53433,7 +53433,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 3.0,
 		color: "Purple",
-		prevo : "Slinka",
+		prevo: "Slinka",
 		eggGroups: ["Field", "Amorphous"],
 	},
 	cornird: {
@@ -53445,7 +53445,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.3,
 		color: "Blue",
-		evos : ["Cornosera"],
+		evos: ["Cornosera"],
 		eggGroups: ["Flying"],
 	},
 	cornosera: {
@@ -53457,8 +53457,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.3,
 		color: "Blue",
-		prevo : "Cornird",
-		evos : ["Regacaw"],
+		prevo: "Cornird",
+		evos: ["Regacaw"],
 		eggGroups: ["Flying"],
 	},
 	regacaw: {
@@ -53470,7 +53470,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.3,
 		color: "Blue",
-		prevo : "Cornosera",
+		prevo: "Cornosera",
 		eggGroups: ["Flying"],
 	},
 	rockon: {
@@ -53482,7 +53482,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 18.0,
 		color: "Blue",
-		evos : ["Mossolem", "Frostolem"],
+		evos: ["Mossolem", "Frostolem"],
 		eggGroups: ["Mineral"],
 	},
 	mossolem: {
@@ -53494,7 +53494,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 178.0,
 		color: "Blue",
-		prevo : "Rockon",
+		prevo: "Rockon",
 		eggGroups: ["Mineral"],
 	},
 	frostolem: {
@@ -53506,7 +53506,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 178.0,
 		color: "Blue",
-		prevo : "Rockon",
+		prevo: "Rockon",
 		eggGroups: ["Mineral"],
 	},
 	paintip: {
@@ -53529,7 +53529,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 7.5,
 		color: "Purple",
-		evos : ["Blatsoup", "Batood"],
+		evos: ["Blatsoup", "Batood"],
 		eggGroups: ["Flying"],
 	},
 	batood: {
@@ -53541,7 +53541,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 7.5,
 		color: "Purple",
-		prevo : "Blat",
+		prevo: "Blat",
 		eggGroups: ["Flying"],
 	},
 	coneet: {
@@ -53553,7 +53553,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.9,
 		color: "Green",
-		evos : ["Concoona"],
+		evos: ["Concoona"],
 		eggGroups: ["Bug"],
 	},
 	concoona: {
@@ -53565,8 +53565,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 66.9,
 		color: "Green",
-		prevo : "Coneet",
-		evos : ["Stingcano"],
+		prevo: "Coneet",
+		evos: ["Stingcano"],
 		eggGroups: ["Bug"],
 	},
 	stingcano: {
@@ -53578,7 +53578,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 66.9,
 		color: "Green",
-		prevo : "Concoona",
+		prevo: "Concoona",
 		eggGroups: ["Bug"],
 	},
 	nothyp: {
@@ -53590,7 +53590,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 6.9,
 		color: "Purple",
-		evos : ["Serpentina"],
+		evos: ["Serpentina"],
 		eggGroups: ["Field", "Dragon"],
 	},
 	serpentina: {
@@ -53602,7 +53602,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 6.9,
 		color: "Purple",
-		prevo : "Nothyp",
+		prevo: "Nothyp",
 		eggGroups: ["Field", "Dragon"],
 	},
 	conix: {
@@ -53614,7 +53614,7 @@ blobbosmechelectric: {
 		heightm: 8.8,
 		weightkg: 210.0,
 		color: "Gray",
-		evos : ["Csteelix"],
+		evos: ["Csteelix"],
 		eggGroups: ["Mineral"],
 	},
 	csteelix: {
@@ -53626,8 +53626,8 @@ blobbosmechelectric: {
 		heightm: 9.2,
 		weightkg: 400.0,
 		color: "Gray",
-		prevo : "Conix",
-		evos : ["Mcsteelix"],
+		prevo: "Conix",
+		evos: ["Mcsteelix"],
 		eggGroups: ["Mineral"],
 	},
 	metaleon: {
@@ -53639,7 +53639,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 125.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	zephyreon: {
@@ -53651,7 +53651,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 10.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	champeon: {
@@ -53663,7 +53663,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 10.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	phanteon: {
@@ -53675,7 +53675,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 10.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	asableye: {
@@ -53709,7 +53709,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 3.0,
 		color: "Red",
-		evos : ["Fishor"],
+		evos: ["Fishor"],
 		eggGroups: ["Water2"],
 	},
 	fishor: {
@@ -53721,7 +53721,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 3.0,
 		color: "Red",
-		prevo : "Baitish",
+		prevo: "Baitish",
 		eggGroups: ["Water2"],
 	},
 	leftarm: {
@@ -53799,7 +53799,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.6,
 		color: "White",
-		evos : ["Sylphind", "Naiqua", "Dryasin", "Lampeath", "Aulpriland"],
+		evos: ["Sylphind", "Naiqua", "Dryasin", "Lampeath", "Aulpriland"],
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	dryasin: {
@@ -53811,7 +53811,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 26.6,
 		color: "White",
-		prevo : "Nymphad",
+		prevo: "Nymphad",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	naiqua: {
@@ -53823,7 +53823,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 16.6,
 		color: "White",
-		prevo : "Nymphad",
+		prevo: "Nymphad",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	aulpriland: {
@@ -53835,7 +53835,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 36.6,
 		color: "White",
-		prevo : "Nymphad",
+		prevo: "Nymphad",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	sylphind: {
@@ -53847,7 +53847,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 36.6,
 		color: "White",
-		prevo : "Nymphad",
+		prevo: "Nymphad",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	lampeath: {
@@ -53859,7 +53859,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 36.6,
 		color: "White",
-		prevo : "Nymphad",
+		prevo: "Nymphad",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	lunarguardian: {
@@ -53882,7 +53882,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 102.0,
 		color: "Blue",
-		evos : ["Stalagfright"],
+		evos: ["Stalagfright"],
 		eggGroups: ["Mineral"],
 	},
 	stalagfright: {
@@ -53894,7 +53894,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 122.0,
 		color: "Blue",
-		prevo : "Stalig",
+		prevo: "Stalig",
 		eggGroups: ["Mineral"],
 	},
 	drafly: {
@@ -53906,7 +53906,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.1,
 		color: "Red",
-		evos : ["Drakefly"],
+		evos: ["Drakefly"],
 		eggGroups: ["Bug"],
 	},
 	drakefly: {
@@ -53918,7 +53918,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.1,
 		color: "Red",
-		prevo : "Drafly",
+		prevo: "Drafly",
 		eggGroups: ["Bug"],
 	},
 	anguille: {
@@ -53930,7 +53930,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 12.0,
 		color: "Blue",
-		evos : ["Saphireau"],
+		evos: ["Saphireau"],
 		eggGroups: ["Water2"],
 	},
 	saphireau: {
@@ -53942,7 +53942,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 12.0,
 		color: "Blue",
-		prevo : "Anguille",
+		prevo: "Anguille",
 		eggGroups: ["Water2", "Dragon"],
 	},
 	foggot: {
@@ -53954,7 +53954,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 0.1,
 		color: "Purple",
-		evos : ["Foggeam"],
+		evos: ["Foggeam"],
 		eggGroups: ["Amorphous"],
 	},
 	foggeam: {
@@ -53966,7 +53966,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 0.1,
 		color: "Purple",
-		prevo : "Foggot",
+		prevo: "Foggot",
 		eggGroups: ["Amorphous"],
 	},
 	nout: {
@@ -53978,7 +53978,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 0.3,
 		color: "Pink",
-		evos : ["Donout"],
+		evos: ["Donout"],
 		eggGroups: ["Amorphous"],
 	},
 	donout: {
@@ -53990,8 +53990,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 3.3,
 		color: "Pink",
-		prevo : "Nout",
-		evos : ["Sonout", "Treblout", "Lonout"],
+		prevo: "Nout",
+		evos: ["Sonout", "Treblout", "Lonout"],
 		eggGroups: ["Amorphous"],
 	},
 	sonout: {
@@ -54003,7 +54003,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 3.3,
 		color: "Pink",
-		prevo : "Donout",
+		prevo: "Donout",
 		eggGroups: ["Amorphous"],
 	},
 	lonout: {
@@ -54015,7 +54015,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 13.3,
 		color: "Pink",
-		prevo : "Donout",
+		prevo: "Donout",
 		eggGroups: ["Amorphous"],
 	},
 	treblout: {
@@ -54027,7 +54027,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 13.3,
 		color: "Pink",
-		prevo : "Donout",
+		prevo: "Donout",
 		eggGroups: ["Amorphous"],
 	},
 	twirlano: {
@@ -54039,7 +54039,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.3,
 		color: "Pink",
-		evos : ["Seedin"],
+		evos: ["Seedin"],
 		eggGroups: ["Fairy", "Grass"],
 	},
 	seedin: {
@@ -54051,7 +54051,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 3.3,
 		color: "Pink",
-		prevo : "Twirlano",
+		prevo: "Twirlano",
 		eggGroups: ["Fairy", "Grass"],
 	},
 	diog: {
@@ -54063,7 +54063,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.8,
 		color: "Brown",
-		evos : ["Demonig"],
+		evos: ["Demonig"],
 		eggGroups: ["Field"],
 	},
 	demonig: {
@@ -54075,7 +54075,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 333.8,
 		color: "Brown",
-		prevo : "Diog",
+		prevo: "Diog",
 		eggGroups: ["Field"],
 	},
 	wigglearth: {
@@ -54087,7 +54087,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 5.5,
 		color: "Gray",
-		evos : ["Dooworm"],
+		evos: ["Dooworm"],
 		eggGroups: ["Bug"],
 	},
 	dooworm: {
@@ -54099,7 +54099,7 @@ blobbosmechelectric: {
 		heightm: 3.7,
 		weightkg: 75.5,
 		color: "Gray",
-		prevo : "Wigglearth",
+		prevo: "Wigglearth",
 		eggGroups: ["Bug"],
 	},
 	perfectzygarde: {
@@ -54111,7 +54111,7 @@ blobbosmechelectric: {
 		heightm: 5.0,
 		weightkg: 305.0,
 		color: "Green",
-		prevo : "Zygarde",
+		prevo: "Zygarde",
 		eggGroups: ["Undiscovered"],
 	},
 	dogzygarde: {
@@ -54123,8 +54123,8 @@ blobbosmechelectric: {
 		heightm: 5.0,
 		weightkg: 305.0,
 		color: "Green",
-		prevo : "Corezygarde",
-		evos : ["Zygarde"],
+		prevo: "Corezygarde",
+		evos: ["Zygarde"],
 		eggGroups: ["Undiscovered"],
 	},
 	cellzygarde: {
@@ -54136,7 +54136,7 @@ blobbosmechelectric: {
 		heightm: 5.0,
 		weightkg: 305.0,
 		color: "Green",
-		evos : ["Corezygarde"],
+		evos: ["Corezygarde"],
 		eggGroups: ["Undiscovered"],
 	},
 	corezygarde: {
@@ -54148,8 +54148,8 @@ blobbosmechelectric: {
 		heightm: 5.0,
 		weightkg: 305.0,
 		color: "Green",
-		prevo : "Cellzygarde",
-		evos : ["Dogzygarde"],
+		prevo: "Cellzygarde",
+		evos: ["Dogzygarde"],
 		eggGroups: ["Undiscovered"],
 	},
 	chypper: {
@@ -54161,7 +54161,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 9.0,
 		color: "Blue",
-		evos : ["Enchip"],
+		evos: ["Enchip"],
 		eggGroups: ["Amorphous"],
 	},
 	enchip: {
@@ -54173,8 +54173,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 9.0,
 		color: "Blue",
-		prevo : "Chypper",
-		evos : ["Systerus"],
+		prevo: "Chypper",
+		evos: ["Systerus"],
 		eggGroups: ["Amorphous"],
 	},
 	systerus: {
@@ -54186,7 +54186,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 9.0,
 		color: "Blue",
-		prevo : "Enchip",
+		prevo: "Enchip",
 		eggGroups: ["Amorphous"],
 	},
 	demoncake: {
@@ -54198,7 +54198,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 0.5,
 		color: "Black",
-		evos : ["Devilcak"],
+		evos: ["Devilcak"],
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	devilcak: {
@@ -54210,7 +54210,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 0.5,
 		color: "Black",
-		prevo : "Demoncake",
+		prevo: "Demoncake",
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	ambroel: {
@@ -54222,7 +54222,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 0.5,
 		color: "Black",
-		evos : ["Ambrosine"],
+		evos: ["Ambrosine"],
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	ambrosine: {
@@ -54234,7 +54234,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 0.5,
 		color: "Black",
-		prevo : "Ambroel",
+		prevo: "Ambroel",
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	pawno: {
@@ -54246,7 +54246,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
-		evos : ["Queeness", "Kingo", "Rookower", "Chevak", "Bishess"],
+		evos: ["Queeness", "Kingo", "Rookower", "Chevak", "Bishess"],
 		eggGroups: ["Field"],
 	},
 	rookower: {
@@ -54258,7 +54258,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 169.5,
 		color: "Brown",
-		prevo : "Pawno",
+		prevo: "Pawno",
 		eggGroups: ["Field"],
 	},
 	chevak: {
@@ -54270,7 +54270,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 59.5,
 		color: "Brown",
-		prevo : "Pawno",
+		prevo: "Pawno",
 		eggGroups: ["Field"],
 	},
 	bishess: {
@@ -54282,7 +54282,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 59.5,
 		color: "Brown",
-		prevo : "Pawno",
+		prevo: "Pawno",
 		eggGroups: ["Field"],
 	},
 	queeness: {
@@ -54294,7 +54294,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 59.5,
 		color: "Brown",
-		prevo : "Pawno",
+		prevo: "Pawno",
 		eggGroups: ["Field"],
 	},
 	kingo: {
@@ -54306,7 +54306,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Pawno",
+		prevo: "Pawno",
 		eggGroups: ["Field"],
 	},
 	bubblet: {
@@ -54318,7 +54318,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.1,
 		color: "Blue",
-		evos : ["Bubloform"],
+		evos: ["Bubloform"],
 		eggGroups: ["Water1"],
 	},
 	bubloform: {
@@ -54330,8 +54330,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 0.1,
 		color: "Blue",
-		prevo : "Bubblet",
-		evos : ["Drabon", "Elebubble", "Burble", "Cobrubble", "Turble", "Leobble"],
+		prevo: "Bubblet",
+		evos: ["Drabon", "Elebubble", "Burble", "Cobrubble", "Turble", "Leobble"],
 		eggGroups: ["Water1"],
 	},
 	cobrubble: {
@@ -54343,7 +54343,7 @@ blobbosmechelectric: {
 		heightm: 3.8,
 		weightkg: 0.1,
 		color: "Blue",
-		prevo : "Bubloform",
+		prevo: "Bubloform",
 		eggGroups: ["Water1"],
 	},
 	drabon: {
@@ -54355,7 +54355,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 0.1,
 		color: "Blue",
-		prevo : "Bubloform",
+		prevo: "Bubloform",
 		eggGroups: ["Water1"],
 	},
 	leobble: {
@@ -54367,7 +54367,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 0.1,
 		color: "Blue",
-		prevo : "Bubloform",
+		prevo: "Bubloform",
 		eggGroups: ["Water1"],
 	},
 	burble: {
@@ -54379,7 +54379,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 0.1,
 		color: "Blue",
-		prevo : "Bubloform",
+		prevo: "Bubloform",
 		eggGroups: ["Water1"],
 	},
 	turble: {
@@ -54391,7 +54391,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 0.1,
 		color: "Blue",
-		prevo : "Bubloform",
+		prevo: "Bubloform",
 		eggGroups: ["Water1"],
 	},
 	elebubble: {
@@ -54403,7 +54403,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 0.1,
 		color: "Blue",
-		prevo : "Bubloform",
+		prevo: "Bubloform",
 		eggGroups: ["Water1"],
 	},
 	wock: {
@@ -54415,7 +54415,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 20.0,
 		color: "Brown",
-		evos : ["Stowin"],
+		evos: ["Stowin"],
 		eggGroups: ["Mineral"],
 	},
 	stowin: {
@@ -54427,8 +54427,8 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 40.0,
 		color: "Brown",
-		prevo : "Wock",
-		evos : ["Winolith"],
+		prevo: "Wock",
+		evos: ["Winolith"],
 		eggGroups: ["Mineral"],
 	},
 	winolith: {
@@ -54440,7 +54440,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 40.0,
 		color: "Brown",
-		prevo : "Stowin",
+		prevo: "Stowin",
 		eggGroups: ["Mineral"],
 	},
 	tomatea: {
@@ -54452,7 +54452,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 5.4,
 		color: "Blue",
-		evos : ["Chillyip"],
+		evos: ["Chillyip"],
 		eggGroups: ["Grass"],
 	},
 	chillyip: {
@@ -54464,8 +54464,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.4,
 		color: "Blue",
-		prevo : "Tomatea",
-		evos : ["Bause", "Pepperella"],
+		prevo: "Tomatea",
+		evos: ["Bause", "Pepperella"],
 		eggGroups: ["Grass"],
 	},
 	pepperella: {
@@ -54477,7 +54477,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.4,
 		color: "Blue",
-		prevo : "Chillyip",
+		prevo: "Chillyip",
 		eggGroups: ["Grass"],
 	},
 	bause: {
@@ -54489,7 +54489,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.4,
 		color: "Blue",
-		prevo : "Chillyip",
+		prevo: "Chillyip",
 		eggGroups: ["Grass"],
 	},
 	cloudlet: {
@@ -54501,7 +54501,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.4,
 		color: "Purple",
-		evos : ["Frwind", "Sunnound", "Rainoud", "Clwister", "Clounight", "Acidoud", "Thundoud", "Clawnd"],
+		evos: ["Frwind", "Sunnound", "Rainoud", "Clwister", "Clounight", "Acidoud", "Thundoud", "Clawnd"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	rainoud: {
@@ -54513,7 +54513,7 @@ blobbosmechelectric: {
 		heightm: 33.1,
 		weightkg: 0.4,
 		color: "Purple",
-		prevo : "Cloudlet",
+		prevo: "Cloudlet",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	sunnound: {
@@ -54525,7 +54525,7 @@ blobbosmechelectric: {
 		heightm: 33.1,
 		weightkg: 0.4,
 		color: "Purple",
-		prevo : "Cloudlet",
+		prevo: "Cloudlet",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	frwind: {
@@ -54537,7 +54537,7 @@ blobbosmechelectric: {
 		heightm: 33.1,
 		weightkg: 0.4,
 		color: "Purple",
-		prevo : "Cloudlet",
+		prevo: "Cloudlet",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	clawnd: {
@@ -54549,7 +54549,7 @@ blobbosmechelectric: {
 		heightm: 33.1,
 		weightkg: 0.4,
 		color: "Purple",
-		prevo : "Cloudlet",
+		prevo: "Cloudlet",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	thundoud: {
@@ -54561,7 +54561,7 @@ blobbosmechelectric: {
 		heightm: 33.1,
 		weightkg: 0.4,
 		color: "Purple",
-		prevo : "Cloudlet",
+		prevo: "Cloudlet",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	clwister: {
@@ -54573,7 +54573,7 @@ blobbosmechelectric: {
 		heightm: 33.1,
 		weightkg: 0.4,
 		color: "Purple",
-		prevo : "Cloudlet",
+		prevo: "Cloudlet",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	tridler: {
@@ -54585,7 +54585,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 14.0,
 		color: "Black",
-		evos : ["Trirayd"],
+		evos: ["Trirayd"],
 		eggGroups: ["Amorphous", " Mineral"],
 	},
 	trirayd: {
@@ -54597,8 +54597,8 @@ blobbosmechelectric: {
 		heightm: 3.3,
 		weightkg: 33.0,
 		color: "Black",
-		prevo : "Tridler",
-		evos : ["Trinvasio"],
+		prevo: "Tridler",
+		evos: ["Trinvasio"],
 		eggGroups: ["Amorphous", " Mineral"],
 	},
 	trinvasio: {
@@ -54610,7 +54610,7 @@ blobbosmechelectric: {
 		heightm: 6.6,
 		weightkg: 333.0,
 		color: "Black",
-		prevo : "Trirayd",
+		prevo: "Trirayd",
 		eggGroups: ["Amorphous", " Mineral"],
 	},
 	lycanmars: {
@@ -54622,7 +54622,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 17.5,
 		color: "Pink",
-		prevo : "Lunound",
+		prevo: "Lunound",
 		eggGroups: ["Field"],
 	},
 	ayyliem: {
@@ -54634,7 +54634,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.0,
 		color: "Blue",
-		evos : ["Ayymao"],
+		evos: ["Ayymao"],
 		eggGroups: ["Humanlike"],
 	},
 	ayymao: {
@@ -54646,7 +54646,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 19.0,
 		color: "Blue",
-		prevo : "Ayyliem",
+		prevo: "Ayyliem",
 		eggGroups: ["Humanlike"],
 	},
 	cybirb: {
@@ -54658,7 +54658,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 38.0,
 		color: "Brown",
-		evos : ["Cypecker"],
+		evos: ["Cypecker"],
 		eggGroups: ["Flying"],
 	},
 	cypecker: {
@@ -54670,7 +54670,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 38.0,
 		color: "Brown",
-		prevo : "Cybirb",
+		prevo: "Cybirb",
 		eggGroups: ["Flying"],
 	},
 	ufowoah: {
@@ -54682,7 +54682,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 8.5,
 		color: "Gray",
-		evos : ["Ufoear", "Ufolien"],
+		evos: ["Ufoear", "Ufolien"],
 		eggGroups: ["Mineral"],
 	},
 	ufolien: {
@@ -54694,7 +54694,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 8.5,
 		color: "Gray",
-		prevo : "Ufowoah",
+		prevo: "Ufowoah",
 		eggGroups: ["Mineral"],
 	},
 	ufoear: {
@@ -54706,7 +54706,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 8.5,
 		color: "Gray",
-		prevo : "Ufowoah",
+		prevo: "Ufowoah",
 		eggGroups: ["Mineral"],
 	},
 	searice: {
@@ -54751,7 +54751,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 1.5,
 		color: "White",
-		prevo : "Pagie",
+		prevo: "Pagie",
 		eggGroups: ["Field"],
 	},
 	cristo: {
@@ -54763,7 +54763,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 1.4,
 		color: "Purple",
-		evos : ["Phanshard", "Storshard", "Prishard", "Flashard"],
+		evos: ["Phanshard", "Storshard", "Prishard", "Flashard"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	flashard: {
@@ -54775,7 +54775,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 31.4,
 		color: "Purple",
-		prevo : "Cristo",
+		prevo: "Cristo",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	prishard: {
@@ -54787,7 +54787,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 31.4,
 		color: "Purple",
-		prevo : "Cristo",
+		prevo: "Cristo",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	phanshard: {
@@ -54799,7 +54799,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 31.4,
 		color: "Purple",
-		prevo : "Cristo",
+		prevo: "Cristo",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	storshard: {
@@ -54811,7 +54811,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 31.4,
 		color: "Purple",
-		prevo : "Cristo",
+		prevo: "Cristo",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	baall: {
@@ -54845,7 +54845,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 12.4,
 		color: "Blue",
-		evos : ["Frogpal"],
+		evos: ["Frogpal"],
 		eggGroups: ["Water1"],
 	},
 	frogpal: {
@@ -54857,7 +54857,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 312.4,
 		color: "Blue",
-		prevo : "Tadpal",
+		prevo: "Tadpal",
 		eggGroups: ["Water1"],
 	},
 	marir: {
@@ -54869,7 +54869,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 10.5,
 		color: "Green",
-		evos : ["Castleet"],
+		evos: ["Castleet"],
 		eggGroups: ["Mineral"],
 	},
 	castleet: {
@@ -54881,7 +54881,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 60.5,
 		color: "Green",
-		prevo : "Marir",
+		prevo: "Marir",
 		eggGroups: ["Mineral"],
 	},
 	cornel: {
@@ -54893,7 +54893,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 2.5,
 		color: "Red",
-		evos : ["Grancorn"],
+		evos: ["Grancorn"],
 		eggGroups: ["Grass"],
 	},
 	grancorn: {
@@ -54905,7 +54905,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 22.5,
 		color: "Red",
-		prevo : "Cornel",
+		prevo: "Cornel",
 		eggGroups: ["Grass"],
 	},
 	shalight: {
@@ -54917,7 +54917,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 0.1,
 		color: "Purple",
-		evos : ["Lumix", "Shadrix", "Lidra", "Dardra"],
+		evos: ["Lumix", "Shadrix", "Lidra", "Dardra"],
 		eggGroups: ["Amorphous"],
 	},
 	lumix: {
@@ -54929,7 +54929,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 0.1,
 		color: "Purple",
-		prevo : "Shalight",
+		prevo: "Shalight",
 		eggGroups: ["Amorphous"],
 	},
 	shadrix: {
@@ -54941,7 +54941,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 0.1,
 		color: "Purple",
-		prevo : "Shalight",
+		prevo: "Shalight",
 		eggGroups: ["Amorphous"],
 	},
 	lettucee: {
@@ -54953,7 +54953,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 0.3,
 		color: "Blue",
-		evos : ["Saladman"],
+		evos: ["Saladman"],
 		eggGroups: ["Grass"],
 	},
 	saladman: {
@@ -54965,7 +54965,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 35.0,
 		color: "Blue",
-		prevo : "Lettucee",
+		prevo: "Lettucee",
 		eggGroups: ["Grass"],
 	},
 	sliwa: {
@@ -54977,7 +54977,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.0,
 		color: "Red",
-		evos : ["Cawice"],
+		evos: ["Cawice"],
 		eggGroups: ["Flying"],
 	},
 	cawice: {
@@ -54989,7 +54989,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.0,
 		color: "Red",
-		prevo : "Sliwa",
+		prevo: "Sliwa",
 		eggGroups: ["Flying"],
 	},
 	hassassin: {
@@ -55023,7 +55023,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 34.0,
 		color: "Black",
-		prevo : "Lilsaibah",
+		prevo: "Lilsaibah",
 		eggGroups: ["Undiscovered"],
 	},
 	rideusa: {
@@ -55090,7 +55090,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 1.2,
 		color: "Purple",
-		evos : ["Helift"],
+		evos: ["Helift"],
 		eggGroups: ["Amorphous"],
 	},
 	helift: {
@@ -55102,7 +55102,7 @@ blobbosmechelectric: {
 		heightm: 2.4,
 		weightkg: 1.2,
 		color: "Purple",
-		prevo : "Ballim",
+		prevo: "Ballim",
 		eggGroups: ["Amorphous"],
 	},
 	shrul: {
@@ -55114,7 +55114,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 1.0,
 		color: "Green",
-		evos : ["Smoov"],
+		evos: ["Smoov"],
 		eggGroups: ["Grass"],
 	},
 	smoov: {
@@ -55126,8 +55126,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 4.0,
 		color: "Green",
-		prevo : "Shrul",
-		evos : ["Sporeel"],
+		prevo: "Shrul",
+		evos: ["Sporeel"],
 		eggGroups: ["Grass"],
 	},
 	sporeel: {
@@ -55139,7 +55139,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 14.0,
 		color: "Green",
-		prevo : "Smoov",
+		prevo: "Smoov",
 		eggGroups: ["Grass"],
 	},
 	bonnacalf: {
@@ -55151,7 +55151,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 4.0,
 		color: "Green",
-		evos : ["Bonaflatuen"],
+		evos: ["Bonaflatuen"],
 		eggGroups: ["Field"],
 	},
 	bonaflatuen: {
@@ -55163,7 +55163,7 @@ blobbosmechelectric: {
 		heightm: 2.7,
 		weightkg: 74.0,
 		color: "Green",
-		prevo : "Bonnacalf",
+		prevo: "Bonnacalf",
 		eggGroups: ["Field"],
 	},
 	viria: {
@@ -55175,7 +55175,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.4,
 		color: "Purple",
-		evos : ["Verius", "Viroison", "Cuberus", "Shockerus", "Snoozerus", "Feaverus"],
+		evos: ["Verius", "Viroison", "Cuberus", "Shockerus", "Snoozerus", "Feaverus"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	verius: {
@@ -55187,7 +55187,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 0.4,
 		color: "Purple",
-		prevo : "Viria",
+		prevo: "Viria",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	viroison: {
@@ -55199,7 +55199,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.4,
 		color: "Purple",
-		prevo : "Viria",
+		prevo: "Viria",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	feaverus: {
@@ -55211,7 +55211,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 0.4,
 		color: "Purple",
-		prevo : "Viria",
+		prevo: "Viria",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	cuberus: {
@@ -55223,7 +55223,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 0.4,
 		color: "Purple",
-		prevo : "Viria",
+		prevo: "Viria",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	shockerus: {
@@ -55235,7 +55235,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 0.4,
 		color: "Purple",
-		prevo : "Viria",
+		prevo: "Viria",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	snoozerus: {
@@ -55247,7 +55247,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 0.4,
 		color: "Purple",
-		prevo : "Viria",
+		prevo: "Viria",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	bonfen: {
@@ -55259,7 +55259,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.7,
 		color: "Purple",
-		evos : ["Fitree"],
+		evos: ["Fitree"],
 		eggGroups: ["Amorphous"],
 	},
 	fitree: {
@@ -55271,8 +55271,8 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 29.7,
 		color: "Purple",
-		prevo : "Bonfen",
-		evos : ["Campyre"],
+		prevo: "Bonfen",
+		evos: ["Campyre"],
 		eggGroups: ["Amorphous"],
 	},
 	campyre: {
@@ -55284,7 +55284,7 @@ blobbosmechelectric: {
 		heightm: 3.9,
 		weightkg: 159.7,
 		color: "Purple",
-		prevo : "Fitree",
+		prevo: "Fitree",
 		eggGroups: ["Amorphous"],
 	},
 	cobret: {
@@ -55296,7 +55296,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 6.9,
 		color: "Purple",
-		evos : ["Serfric", "Comfstrictor"],
+		evos: ["Serfric", "Comfstrictor"],
 		eggGroups: ["Field", "Dragon"],
 	},
 	serfric: {
@@ -55308,7 +55308,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 26.9,
 		color: "Purple",
-		prevo : "Cobret",
+		prevo: "Cobret",
 		eggGroups: ["Field", "Dragon"],
 	},
 	spiortal: {
@@ -55320,7 +55320,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 8.5,
 		color: "Green",
-		evos : ["Spiortex"],
+		evos: ["Spiortex"],
 		eggGroups: ["Bug"],
 	},
 	spiortex: {
@@ -55332,7 +55332,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 8.5,
 		color: "Green",
-		prevo : "Spiortal",
+		prevo: "Spiortal",
 		eggGroups: ["Bug"],
 	},
 	grifawk: {
@@ -55344,7 +55344,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.0,
 		color: "Brown",
-		evos : ["Grifallen"],
+		evos: ["Grifallen"],
 		eggGroups: ["Flying"],
 	},
 	grifallen: {
@@ -55356,8 +55356,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.0,
 		color: "Brown",
-		prevo : "Grifawk",
-		evos : ["Griffisen"],
+		prevo: "Grifawk",
+		evos: ["Griffisen"],
 		eggGroups: ["Flying"],
 	},
 	griffisen: {
@@ -55369,7 +55369,7 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 32.0,
 		color: "Brown",
-		prevo : "Grifallen",
+		prevo: "Grifallen",
 		eggGroups: ["Flying"],
 	},
 	ulycanroc: {
@@ -55381,7 +55381,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 26.0,
 		color: "Brown",
-		prevo : "Rockruff",
+		prevo: "Rockruff",
 		eggGroups: ["Field"],
 	},
 	acaterpie: {
@@ -55393,7 +55393,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.9,
 		color: "Green",
-		evos : ["Ametapod"],
+		evos: ["Ametapod"],
 		eggGroups: ["Bug"],
 	},
 	ametapod: {
@@ -55405,8 +55405,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.9,
 		color: "Green",
-		prevo : "Acaterpie",
-		evos : ["Abutterfree"],
+		prevo: "Acaterpie",
+		evos: ["Abutterfree"],
 		eggGroups: ["Bug"],
 	},
 	abutterfree: {
@@ -55418,7 +55418,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 32.0,
 		color: "White",
-		prevo : "Ametapod",
+		prevo: "Ametapod",
 		eggGroups: ["Bug"],
 	},
 	amantyke: {
@@ -55430,7 +55430,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 20.0,
 		color: "Purple",
-		evos : ["Amantine"],
+		evos: ["Amantine"],
 		eggGroups: ["Water1"],
 	},
 	amantine: {
@@ -55442,7 +55442,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 220.0,
 		color: "Purple",
-		prevo : "Amantyke",
+		prevo: "Amantyke",
 		eggGroups: ["Water1"],
 	},
 	aoddish: {
@@ -55454,7 +55454,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 5.4,
 		color: "Blue",
-		evos : ["Agloom"],
+		evos: ["Agloom"],
 		eggGroups: ["Grass"],
 	},
 	agloom: {
@@ -55466,8 +55466,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 8.6,
 		color: "Blue",
-		prevo : "Aoddish",
-		evos : ["Avileplume"],
+		prevo: "Aoddish",
+		evos: ["Avileplume"],
 		eggGroups: ["Grass"],
 	},
 	avileplume: {
@@ -55479,7 +55479,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 18.6,
 		color: "Red",
-		prevo : "Agloom",
+		prevo: "Agloom",
 		eggGroups: ["Grass"],
 	},
 	agrowlithe: {
@@ -55491,7 +55491,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 19.0,
 		color: "Brown",
-		evos : ["Aarcanine"],
+		evos: ["Aarcanine"],
 		eggGroups: ["Field"],
 	},
 	aarcanine: {
@@ -55503,7 +55503,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 155.0,
 		color: "Brown",
-		prevo : "Agrowlithe",
+		prevo: "Agrowlithe",
 		eggGroups: ["Field"],
 	},
 	atorkoal: {
@@ -55526,7 +55526,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "White",
-		evos : ["Atogetic"],
+		evos: ["Atogetic"],
 		eggGroups: ["Undiscovered"],
 	},
 	atogetic: {
@@ -55538,8 +55538,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 3.2,
 		color: "White",
-		prevo : "Atogepi",
-		evos : ["Atogekiss"],
+		prevo: "Atogepi",
+		evos: ["Atogekiss"],
 		eggGroups: ["Flying", "Fairy"],
 	},
 	atogekiss: {
@@ -55551,7 +55551,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 38.0,
 		color: "White",
-		prevo : "Atogetic",
+		prevo: "Atogetic",
 		eggGroups: ["Flying", "Fairy"],
 	},
 	rathy: {
@@ -55563,7 +55563,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.5,
 		color: "Red",
-		evos : ["Rathor"],
+		evos: ["Rathor"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	rathor: {
@@ -55575,8 +55575,8 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 8.5,
 		color: "Red",
-		prevo : "Rathy",
-		evos : ["Rathlos", "Rathiana"],
+		prevo: "Rathy",
+		evos: ["Rathlos", "Rathiana"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	rathlos: {
@@ -55588,7 +55588,7 @@ blobbosmechelectric: {
 		heightm: 3.6,
 		weightkg: 128.5,
 		color: "Red",
-		prevo : "Rathor",
+		prevo: "Rathor",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	rathiana: {
@@ -55600,7 +55600,7 @@ blobbosmechelectric: {
 		heightm: 3.6,
 		weightkg: 38.5,
 		color: "Red",
-		prevo : "Rathor",
+		prevo: "Rathor",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	jhemoran: {
@@ -55645,7 +55645,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 22.0,
 		color: "White",
-		evos : ["Beachsakuya"],
+		evos: ["Beachsakuya"],
 		eggGroups: ["Undiscovered"],
 	},
 	youmurai: {
@@ -55668,7 +55668,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 9.0,
 		color: "White",
-		evos : ["Santa Cirno"],
+		evos: ["Santa Cirno"],
 		eggGroups: ["Fairy"],
 	},
 	godzillante: {
@@ -55757,7 +55757,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 22.0,
 		color: "White",
-		evos : ["Beach Patchi"],
+		evos: ["Beach Patchi"],
 		eggGroups: ["Fairy"],
 	},
 	stelloch: {
@@ -55857,8 +55857,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 0.1,
 		color: "Purple",
-		prevo : "Shalight",
-		evos : ["Shadight"],
+		prevo: "Shalight",
+		evos: ["Shadight"],
 		eggGroups: ["Amorphous"],
 	},
 	dardra: {
@@ -55870,8 +55870,8 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 0.1,
 		color: "Purple",
-		prevo : "Shalight",
-		evos : ["Shadight"],
+		prevo: "Shalight",
+		evos: ["Shadight"],
 		eggGroups: ["Amorphous"],
 	},
 	shadight: {
@@ -55883,7 +55883,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 0.1,
 		color: "Purple",
-		prevo : "Lidradardra",
+		prevo: "Lidradardra",
 		eggGroups: ["Amorphous"],
 	},
 	jaggu: {
@@ -55928,7 +55928,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.2,
 		color: "Brown",
-		evos : ["Kasanagi"],
+		evos: ["Kasanagi"],
 		eggGroups: ["Bug"],
 	},
 	kasanagi: {
@@ -55940,8 +55940,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.2,
 		color: "Brown",
-		prevo : "Kokana",
-		evos : ["Kasanova"],
+		prevo: "Kokana",
+		evos: ["Kasanova"],
 		eggGroups: ["Bug"],
 	},
 	kasanova: {
@@ -55953,7 +55953,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 3.2,
 		color: "Brown",
-		prevo : "Kasanagi",
+		prevo: "Kasanagi",
 		eggGroups: ["Bug"],
 	},
 	aslugma: {
@@ -55965,7 +55965,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 35.0,
 		color: "Red",
-		evos : ["Magcargo"],
+		evos: ["Magcargo"],
 		eggGroups: ["Amorphous"],
 	},
 	amagcargo: {
@@ -55999,8 +55999,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 12.0,
 		color: "Gray",
-		prevo : "Remoraid",
-		evos : ["Boctillery"],
+		prevo: "Remoraid",
+		evos: ["Boctillery"],
 		eggGroups: ["Water1", "Water2"],
 	},
 	boctillery: {
@@ -56012,7 +56012,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 28.5,
 		color: "Red",
-		prevo : "Bremoraid",
+		prevo: "Bremoraid",
 		eggGroups: ["Water1", "Water2"],
 	},
 	blossomole: {
@@ -56035,7 +56035,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 4.0,
 		color: "Purple",
-		prevo : "Ditto",
+		prevo: "Ditto",
 		eggGroups: ["Ditto"],
 	},
 	balistagon: {
@@ -56047,7 +56047,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Blue",
-		evos : ["Supercannon"],
+		evos: ["Supercannon"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	supercannon: {
@@ -56059,7 +56059,7 @@ blobbosmechelectric: {
 		heightm: 2.7,
 		weightkg: 20.5,
 		color: "Blue",
-		prevo : "Balistagon",
+		prevo: "Balistagon",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	memee: {
@@ -56071,7 +56071,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Blue",
-		evos : ["Memeo"],
+		evos: ["Memeo"],
 		eggGroups: ["Amorphous"],
 	},
 	memeo: {
@@ -56083,8 +56083,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Blue",
-		prevo : "Memee",
-		evos : ["Memaster"],
+		prevo: "Memee",
+		evos: ["Memaster"],
 		eggGroups: ["Amorphous"],
 	},
 	memaster: {
@@ -56096,7 +56096,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 30.5,
 		color: "Blue",
-		prevo : "Memeo",
+		prevo: "Memeo",
 		eggGroups: ["Amorphous"],
 	},
 	smilepup: {
@@ -56108,7 +56108,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Blue",
-		evos : ["Smilehound"],
+		evos: ["Smilehound"],
 		eggGroups: ["Amorphous", "Field"],
 	},
 	smilehound: {
@@ -56120,7 +56120,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Blue",
-		prevo : "Smilepup",
+		prevo: "Smilepup",
 		eggGroups: ["Amorphous", "Field"],
 	},
 	flambear: {
@@ -56132,7 +56132,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 7.9,
 		color: "Yellow",
-		evos : ["Volbear"],
+		evos: ["Volbear"],
 		eggGroups: ["Field"],
 	},
 	volbear: {
@@ -56144,8 +56144,8 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 7.9,
 		color: "Yellow",
-		prevo : "Flambear",
-		evos : ["Dynabear"],
+		prevo: "Flambear",
+		evos: ["Dynabear"],
 		eggGroups: ["Field"],
 	},
 	dynabear: {
@@ -56157,7 +56157,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 7.9,
 		color: "Yellow",
-		prevo : "Volbear",
+		prevo: "Volbear",
 		eggGroups: ["Field"],
 	},
 	cruz: {
@@ -56169,7 +56169,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 7.9,
 		color: "Yellow",
-		evos : ["Aqua"],
+		evos: ["Aqua"],
 		eggGroups: ["Field"],
 	},
 	aqua: {
@@ -56181,8 +56181,8 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 7.9,
 		color: "Yellow",
-		prevo : "Cruz",
-		evos : ["Aquaria"],
+		prevo: "Cruz",
+		evos: ["Aquaria"],
 		eggGroups: ["Field"],
 	},
 	aquaria: {
@@ -56194,7 +56194,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 7.9,
 		color: "Yellow",
-		prevo : "Aqua",
+		prevo: "Aqua",
 		eggGroups: ["Field"],
 	},
 	hoohoo: {
@@ -56206,7 +56206,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 40.8,
 		color: "Brown",
-		prevo : "Bhoothoot",
+		prevo: "Bhoothoot",
 		eggGroups: ["Flying"],
 	},
 	leafeo: {
@@ -56218,7 +56218,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Leafeon",
+		prevo: "Leafeon",
 		eggGroups: ["Field"],
 	},
 	trifox: {
@@ -56230,7 +56230,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 9.9,
 		color: "Brown",
-		evos : ["Vulpix"],
+		evos: ["Vulpix"],
 		eggGroups: ["Field"],
 	},
 	tangel: {
@@ -56242,7 +56242,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 35.0,
 		color: "Blue",
-		evos : ["Tangela"],
+		evos: ["Tangela"],
 		eggGroups: ["Grass"],
 	},
 	gelanla: {
@@ -56254,7 +56254,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 128.6,
 		color: "Blue",
-		prevo : "Tangela",
+		prevo: "Tangela",
 		eggGroups: ["Grass"],
 	},
 	rayleep: {
@@ -56277,7 +56277,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 3.9,
 		color: "Gray",
-		prevo : "Qwilfish",
+		prevo: "Qwilfish",
 		eggGroups: ["Water2"],
 	},
 	apichu: {
@@ -56289,8 +56289,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.0,
 		color: "Yellow",
-		prevo : "Pichu",
-		evos : ["Pikachu"],
+		prevo: "Pichu",
+		evos: ["Pikachu"],
 		eggGroups: ["Undiscovered"],
 	},
 	acleffa: {
@@ -56302,7 +56302,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.0,
 		color: "Pink",
-		evos : ["Clefairy"],
+		evos: ["Clefairy"],
 		eggGroups: ["Undiscovered"],
 	},
 	aigglybuff: {
@@ -56314,7 +56314,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.0,
 		color: "Pink",
-		evos : ["Jigglypuff"],
+		evos: ["Jigglypuff"],
 		eggGroups: ["Undiscovered"],
 	},
 	golppy: {
@@ -56326,7 +56326,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Red",
-		evos : ["Goldeen"],
+		evos: ["Goldeen"],
 		eggGroups: ["Water2"],
 	},
 	sunmola: {
@@ -56338,7 +56338,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Red",
-		evos : ["Grotess", "Molaee", "Anchorage"],
+		evos: ["Grotess", "Molaee", "Anchorage"],
 		eggGroups: ["Water2"],
 	},
 	anchorage: {
@@ -56350,7 +56350,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Red",
-		prevo : "Sunmola",
+		prevo: "Sunmola",
 		eggGroups: ["Water2"],
 	},
 	grotess: {
@@ -56362,7 +56362,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Red",
-		prevo : "Sunmola",
+		prevo: "Sunmola",
 		eggGroups: ["Water2"],
 	},
 	para: {
@@ -56374,7 +56374,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		evos : ["Paras"],
+		evos: ["Paras"],
 		eggGroups: ["Bug", "Grass"],
 	},
 	spidette: {
@@ -56386,7 +56386,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 8.5,
 		color: "Green",
-		evos : ["Tuhedd"],
+		evos: ["Tuhedd"],
 		eggGroups: ["Bug"],
 	},
 	tuhedd: {
@@ -56398,7 +56398,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 33.5,
 		color: "Red",
-		prevo : "Spidette",
+		prevo: "Spidette",
 		eggGroups: ["Bug"],
 	},
 	chiks: {
@@ -56410,7 +56410,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 39.2,
 		color: "Brown",
-		evos : ["Doduo"],
+		evos: ["Doduo"],
 		eggGroups: ["Flying"],
 	},
 	twinz: {
@@ -56444,7 +56444,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Yellow",
-		evos : ["Meowth"],
+		evos: ["Meowth"],
 		eggGroups: ["Field"],
 	},
 	rinring: {
@@ -56456,7 +56456,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Yellow",
-		evos : ["Bellboyant"],
+		evos: ["Bellboyant"],
 		eggGroups: ["Field"],
 	},
 	bellboyant: {
@@ -56468,7 +56468,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Yellow",
-		prevo : "Rinring",
+		prevo: "Rinring",
 		eggGroups: ["Field"],
 	},
 	wacktentaquil: {
@@ -56491,7 +56491,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 35.6,
 		color: "Red",
-		prevo : "Ledyba",
+		prevo: "Ledyba",
 		eggGroups: ["Bug"],
 	},
 	minicorn: {
@@ -56503,7 +56503,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 30.0,
 		color: "Yellow",
-		evos : ["Ponyta"],
+		evos: ["Ponyta"],
 		eggGroups: ["Field"],
 	},
 	aumbreon: {
@@ -56515,7 +56515,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 27.0,
 		color: "Black",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	turbann: {
@@ -56527,7 +56527,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 4.0,
 		color: "Purple",
-		prevo : "Shellder",
+		prevo: "Shellder",
 		eggGroups: ["Water3"],
 	},
 	grimey: {
@@ -56539,7 +56539,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 30.0,
 		color: "Purple",
-		evos : ["Grimer"],
+		evos: ["Grimer"],
 		eggGroups: ["Amorphous"],
 	},
 	gohng: {
@@ -56551,7 +56551,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.0,
 		color: "Purple",
-		evos : ["Topmonhit"],
+		evos: ["Topmonhit"],
 		eggGroups: ["Undiscovered"],
 	},
 	topmonhit: {
@@ -56563,7 +56563,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.0,
 		color: "Purple",
-		prevo : "Gohng",
+		prevo: "Gohng",
 		eggGroups: ["Undiscovered"],
 	},
 	puddi: {
@@ -56575,7 +56575,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 19.0,
 		color: "Brown",
-		evos : ["Growlithe"],
+		evos: ["Growlithe"],
 		eggGroups: ["Field"],
 	},
 	lefmew: {
@@ -56587,7 +56587,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 0.5,
 		color: "Pink",
-		evos : ["Dandemew"],
+		evos: ["Dandemew"],
 		eggGroups: ["Fairy", "Grass"],
 	},
 	dandemew: {
@@ -56599,8 +56599,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 1.0,
 		color: "Green",
-		prevo : "Lefmew",
-		evos : ["Cottomew"],
+		prevo: "Lefmew",
+		evos: ["Cottomew"],
 		eggGroups: ["Fairy", "Grass"],
 	},
 	cottomew: {
@@ -56612,7 +56612,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 3.0,
 		color: "Blue",
-		prevo : "Dandemew",
+		prevo: "Dandemew",
 		eggGroups: ["Fairy", "Grass"],
 	},
 	ballerine: {
@@ -56624,7 +56624,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 13.0,
 		color: "Pink",
-		evos : ["Mrmime"],
+		evos: ["Mrmime"],
 		eggGroups: ["Undiscovered"],
 	},
 	lipp: {
@@ -56636,7 +56636,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.0,
 		color: "Pink",
-		evos : ["Jynx"],
+		evos: ["Jynx"],
 		eggGroups: ["Undiscovered"],
 	},
 	elababee: {
@@ -56648,7 +56648,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 23.5,
 		color: "Yellow",
-		evos : ["Electabuzz"],
+		evos: ["Electabuzz"],
 		eggGroups: ["Undiscovered"],
 	},
 	bmagby: {
@@ -56660,7 +56660,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.4,
 		color: "Red",
-		evos : ["Magmar"],
+		evos: ["Magmar"],
 		eggGroups: ["Undiscovered"],
 	},
 	bbellossom: {
@@ -56672,7 +56672,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 5.8,
 		color: "Green",
-		prevo : "Gloom",
+		prevo: "Gloom",
 		eggGroups: ["Grass"],
 	},
 	belmitt: {
@@ -56684,7 +56684,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 15.5,
 		color: "Green",
-		prevo : "Weepinbell",
+		prevo: "Weepinbell",
 		eggGroups: ["Grass"],
 	},
 	bomseel: {
@@ -56696,7 +56696,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 120.0,
 		color: "White",
-		prevo : "Napseel",
+		prevo: "Napseel",
 		eggGroups: ["Water1", "Field"],
 	},
 	ghift: {
@@ -56708,7 +56708,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 16.0,
 		color: "Red",
-		prevo : "Delibird",
+		prevo: "Delibird",
 		eggGroups: ["Water1", "Field"],
 	},
 	tigrette: {
@@ -56720,7 +56720,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.0,
 		color: "Yellow",
-		evos : ["Electiger"],
+		evos: ["Electiger"],
 		eggGroups: ["Field", "Fairy"],
 	},
 	electiger: {
@@ -56732,8 +56732,8 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.0,
 		color: "Yellow",
-		prevo : "Tigrette",
-		evos : ["Gaotora"],
+		prevo: "Tigrette",
+		evos: ["Gaotora"],
 		eggGroups: ["Field", "Fairy"],
 	},
 	madame: {
@@ -56745,7 +56745,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 15.0,
 		color: "Brown",
-		prevo : "Farfetchd",
+		prevo: "Farfetchd",
 		eggGroups: ["Flying", "Field"],
 	},
 	kurstraw: {
@@ -56757,7 +56757,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 0.1,
 		color: "Purple",
-		evos : ["Pangshi"],
+		evos: ["Pangshi"],
 		eggGroups: ["Amorphous"],
 	},
 	pangshi: {
@@ -56769,7 +56769,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 0.1,
 		color: "Purple",
-		prevo : "Kurstraw",
+		prevo: "Kurstraw",
 		eggGroups: ["Amorphous"],
 	},
 	bmurkrow: {
@@ -56781,7 +56781,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 2.1,
 		color: "Black",
-		prevo : "Murkrow",
+		prevo: "Murkrow",
 		eggGroups: ["Flying"],
 	},
 	happi: {
@@ -56793,7 +56793,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 46.8,
 		color: "Pink",
-		prevo : "Chansey",
+		prevo: "Chansey",
 		eggGroups: ["Fairy"],
 	},
 	scizors: {
@@ -56805,7 +56805,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 118.0,
 		color: "Red",
-		prevo : "Scyther",
+		prevo: "Scyther",
 		eggGroups: ["Bug"],
 	},
 	plux: {
@@ -56817,7 +56817,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 55.0,
 		color: "Brown",
-		prevo : "Pinsir",
+		prevo: "Pinsir",
 		eggGroups: ["Bug"],
 	},
 	wolfman: {
@@ -56829,7 +56829,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.5,
 		color: "Brown",
-		evos : ["Warwolf"],
+		evos: ["Warwolf"],
 		eggGroups: ["Field"],
 	},
 	warwolf: {
@@ -56841,7 +56841,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Wolfman",
+		prevo: "Wolfman",
 		eggGroups: ["Field"],
 	},
 	borygon2: {
@@ -56853,7 +56853,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 32.5,
 		color: "Red",
-		prevo : "Porygon",
+		prevo: "Porygon",
 		eggGroups: ["Mineral"],
 	},
 	likk: {
@@ -56865,7 +56865,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 140.0,
 		color: "Pink",
-		prevo : "Lickitung",
+		prevo: "Lickitung",
 		eggGroups: ["Monster"],
 	},
 	bkingdra: {
@@ -56877,7 +56877,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 152.0,
 		color: "Blue",
-		prevo : "Seadra",
+		prevo: "Seadra",
 		eggGroups: ["Water1", "Dragon"],
 	},
 	rai: {
@@ -56922,7 +56922,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 28.0,
 		color: "Black",
-		prevo : "Sneasel",
+		prevo: "Sneasel",
 		eggGroups: ["Field"],
 	},
 	tael: {
@@ -56934,7 +56934,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 11.5,
 		color: "Purple",
-		prevo : "Aipom",
+		prevo: "Aipom",
 		eggGroups: ["Field"],
 	},
 	pikablu: {
@@ -56946,7 +56946,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 8.5,
 		color: "Blue",
-		prevo : "Marill",
+		prevo: "Marill",
 		eggGroups: ["Water1", "Fairy"],
 	},
 	bhooh: {
@@ -56980,7 +56980,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 75.0,
 		color: "Blue",
-		prevo : "Wooperbwooper",
+		prevo: "Wooperbwooper",
 		eggGroups: ["Water1", "Field"],
 	},
 	sunnee: {
@@ -56992,7 +56992,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 8.5,
 		color: "Yellow",
-		prevo : "Sunkernsunsproutbsunkern",
+		prevo: "Sunkernsunsproutbsunkern",
 		eggGroups: ["Grass"],
 	},
 	shrinae: {
@@ -57015,8 +57015,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 12.4,
 		color: "Blue",
-		prevo : "Poliwag",
-		evos : ["Nyosuka"],
+		prevo: "Poliwag",
+		evos: ["Nyosuka"],
 		eggGroups: ["Water1"],
 	},
 	nyosuka: {
@@ -57028,7 +57028,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 222.4,
 		color: "Blue",
-		prevo : "Bpoliwag",
+		prevo: "Bpoliwag",
 		eggGroups: ["Water1"],
 	},
 	bdragonair: {
@@ -57040,7 +57040,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Dratinidragonair",
+		prevo: "Dratinidragonair",
 		eggGroups: ["Water1", "Dragon"],
 	},
 	augumon: {
@@ -57052,8 +57052,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Koromon",
-		evos : ["Hitleragumon", "Toyagumon", "Tyrannomon", "Stoyagumon", "Greymon", "Snowagumon"],
+		prevo: "Koromon",
+		evos: ["Hitleragumon", "Toyagumon", "Tyrannomon", "Stoyagumon", "Greymon", "Snowagumon"],
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	greymon: {
@@ -57065,8 +57065,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Augumon",
-		evos : ["Skullgreymon", "Metalgreymonv", "Metalgreymon"],
+		prevo: "Augumon",
+		evos: ["Skullgreymon", "Metalgreymonv", "Metalgreymon"],
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	devull: {
@@ -57078,8 +57078,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 10.8,
 		color: "Black",
-		prevo : "Houndour",
-		evos : ["Bhoundoom"],
+		prevo: "Houndour",
+		evos: ["Bhoundoom"],
 		eggGroups: ["Field"],
 	},
 	bhoundoom: {
@@ -57091,7 +57091,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 35.0,
 		color: "Black",
-		prevo : "Devull",
+		prevo: "Devull",
 		eggGroups: ["Field"],
 	},
 	bespeon: {
@@ -57103,7 +57103,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 26.5,
 		color: "Purple",
-		prevo : "Espeon",
+		prevo: "Espeon",
 		eggGroups: ["Field"],
 	},
 	urchall: {
@@ -57115,7 +57115,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 1.0,
 		color: "Purple",
-		evos : ["Spurchin"],
+		evos: ["Spurchin"],
 		eggGroups: ["Amorphous"],
 	},
 	spurchin: {
@@ -57127,7 +57127,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 1.0,
 		color: "Purple",
-		prevo : "Urchall",
+		prevo: "Urchall",
 		eggGroups: ["Amorphous"],
 	},
 	luigi: {
@@ -57139,7 +57139,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 65.5,
 		color: "Pink",
-		prevo : "Lickitung",
+		prevo: "Lickitung",
 		eggGroups: ["Monster"],
 	},
 	yoshi: {
@@ -57151,7 +57151,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 65.5,
 		color: "Pink",
-		prevo : "Dratini",
+		prevo: "Dratini",
 		eggGroups: ["Monster"],
 	},
 	ahole: {
@@ -57163,7 +57163,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.8,
 		color: "Brown",
-		evos : ["Crachole"],
+		evos: ["Crachole"],
 		eggGroups: ["Field"],
 	},
 	crachole: {
@@ -57175,8 +57175,8 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.8,
 		color: "Brown",
-		prevo : "Ahole",
-		evos : ["Cracholiath"],
+		prevo: "Ahole",
+		evos: ["Cracholiath"],
 		eggGroups: ["Field"],
 	},
 	cracholiath: {
@@ -57188,7 +57188,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.8,
 		color: "Brown",
-		prevo : "Crachole",
+		prevo: "Crachole",
 		eggGroups: ["Field"],
 	},
 	staresh: {
@@ -57200,7 +57200,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.1,
 		color: "Black",
-		evos : ["Stargem"],
+		evos: ["Stargem"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	stargem: {
@@ -57212,7 +57212,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.1,
 		color: "Black",
-		prevo : "Staresh",
+		prevo: "Staresh",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	eggit: {
@@ -57224,7 +57224,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "White",
-		evos : ["Friedack", "Eggotto"],
+		evos: ["Friedack", "Eggotto"],
 		eggGroups: ["Undiscovered"],
 	},
 	eggotto: {
@@ -57236,7 +57236,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "White",
-		prevo : "Eggit",
+		prevo: "Eggit",
 		eggGroups: ["Undiscovered"],
 	},
 	friedack: {
@@ -57248,7 +57248,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "White",
-		prevo : "Eggit",
+		prevo: "Eggit",
 		eggGroups: ["Undiscovered"],
 	},
 	dustunny: {
@@ -57271,7 +57271,7 @@ blobbosmechelectric: {
 		heightm: 14.5,
 		weightkg: 750.0,
 		color: "Blue",
-		prevo : "Wailmer",
+		prevo: "Wailmer",
 		eggGroups: ["Field", "Water2"],
 	},
 	cbulbasaur: {
@@ -57283,7 +57283,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 6.9,
 		color: "Green",
-		evos : ["Civysaur"],
+		evos: ["Civysaur"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	civysaur: {
@@ -57295,8 +57295,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 13.0,
 		color: "Green",
-		prevo : "Cbulbasaur",
-		evos : ["Cvenusaur"],
+		prevo: "Cbulbasaur",
+		evos: ["Cvenusaur"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	cvenusaur: {
@@ -57308,7 +57308,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 100.0,
 		color: "Green",
-		prevo : "Civysaur",
+		prevo: "Civysaur",
 		eggGroups: ["Monster", "Grass"],
 	},
 	ccharmander: {
@@ -57320,7 +57320,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		evos : ["Ccharmeleon"],
+		evos: ["Ccharmeleon"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	ccharmeleon: {
@@ -57332,8 +57332,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 19.0,
 		color: "Red",
-		prevo : "Ccharmander",
-		evos : ["Ccharizard"],
+		prevo: "Ccharmander",
+		evos: ["Ccharizard"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	ccharizard: {
@@ -57345,7 +57345,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 92.5,
 		color: "Red",
-		prevo : "Ccharmeleon",
+		prevo: "Ccharmeleon",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	csquirtle: {
@@ -57357,7 +57357,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.0,
 		color: "Blue",
-		evos : ["Cwartortle"],
+		evos: ["Cwartortle"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	cwartortle: {
@@ -57369,8 +57369,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 22.5,
 		color: "Blue",
-		prevo : "Csquirtle",
-		evos : ["Cblastoise"],
+		prevo: "Csquirtle",
+		evos: ["Cblastoise"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	cblastoise: {
@@ -57382,7 +57382,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 99.5,
 		color: "Blue",
-		prevo : "Cwartortle",
+		prevo: "Cwartortle",
 		eggGroups: ["Monster", "Water1"],
 	},
 	asolosis: {
@@ -57394,7 +57394,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.0,
 		color: "Green",
-		evos : ["Aduosion"],
+		evos: ["Aduosion"],
 		eggGroups: ["Amorphous"],
 	},
 	aduosion: {
@@ -57406,8 +57406,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.0,
 		color: "Green",
-		prevo : "Asolosis",
-		evos : ["Areuniclus"],
+		prevo: "Asolosis",
+		evos: ["Areuniclus"],
 		eggGroups: ["Amorphous"],
 	},
 	areuniclus: {
@@ -57419,7 +57419,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 20.1,
 		color: "Green",
-		prevo : "Aduosion",
+		prevo: "Aduosion",
 		eggGroups: ["Amorphous"],
 	},
 	marsshade: {
@@ -57475,7 +57475,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 1.2,
 		color: "Purple",
-		evos : ["Adrifblim"],
+		evos: ["Adrifblim"],
 		eggGroups: ["Amorphous"],
 	},
 	adrifblim: {
@@ -57487,7 +57487,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 15.0,
 		color: "Purple",
-		prevo : "Adrifloon",
+		prevo: "Adrifloon",
 		eggGroups: ["Amorphous"],
 	},
 	adarumaka: {
@@ -57499,20 +57499,38 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 37.5,
 		color: "Red",
-		evos : ["Adarmanitan"],
+		evos: ["Adarmanitan"],
 		eggGroups: ["Field"],
 	},
 	adarmanitan: {
 		num: 666813,
 		name: "Adarmanitan",
+		baseForme: "Standard",
 		types: ["Ice", "Fighting"],
 		baseStats: {hp: 105, atk: 140, def: 55, spa: 30, spd: 55, spe: 95},
 		abilities: {0: "Zen Mode", 1: "Thick Fat", H: "Inner Focus"},
 		heightm: 1.3,
 		weightkg: 92.9,
 		color: "Red",
-		prevo : "Adarumaka",
+		prevo: "Adarumaka",
 		eggGroups: ["Field"],
+		otherFormes: ["Adarmanitan-Zen"],
+		formeOrder: ["Adarmanitan", "Adarmanitan-Zen"],
+	},
+	adarmanitanzen: {
+		num: 666813,
+		name: "Adarmanitan-Zen",
+		baseSpecies: "Adarmanitan",
+		forme: "Zen",
+		types: ["Ice", "Psychic"],
+		baseStats: {hp: 105, atk: 30, def: 105, spa: 140, spd: 105, spe: 55},
+		abilities: {0: "Zen Mode"},
+		heightm: 1.3,
+		weightkg: 92.9,
+		color: "Red",
+		eggGroups: ["Field"],
+		requiredAbility: "Zen Mode",
+		battleOnly: "Adarmanitan",
 	},
 	kogasella: {
 		num: 666814,
@@ -57622,7 +57640,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 0.1,
 		color: "White",
-		evos : ["Kleenot"],
+		evos: ["Kleenot"],
 		eggGroups: ["Field"],
 	},
 	kleenot: {
@@ -57634,7 +57652,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 0.1,
 		color: "White",
-		prevo : "Tissoe",
+		prevo: "Tissoe",
 		eggGroups: ["Field"],
 	},
 	breadamo: {
@@ -57646,7 +57664,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "White",
-		evos : ["Toasted"],
+		evos: ["Toasted"],
 		eggGroups: ["Undiscovered"],
 	},
 	toasted: {
@@ -57658,7 +57676,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "White",
-		prevo : "Breadamo",
+		prevo: "Breadamo",
 		eggGroups: ["Undiscovered"],
 	},
 	toater: {
@@ -57670,7 +57688,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 9.5,
 		color: "Gray",
-		evos : ["Toastaem"],
+		evos: ["Toastaem"],
 		eggGroups: ["Mineral"],
 	},
 	toastaem: {
@@ -57682,7 +57700,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 9.5,
 		color: "Gray",
-		prevo : "Toater",
+		prevo: "Toater",
 		eggGroups: ["Mineral"],
 	},
 	gyarth: {
@@ -57694,7 +57712,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 120.0,
 		color: "Gray",
-		prevo : "Rhydonhurhydon",
+		prevo: "Rhydonhurhydon",
 		eggGroups: ["Monster", "Field"],
 	},
 	bspearow: {
@@ -57706,7 +57724,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.0,
 		color: "Brown",
-		prevo : "Spearow",
+		prevo: "Spearow",
 		eggGroups: ["Flying"],
 	},
 	bclefairy: {
@@ -57718,7 +57736,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
-		prevo : "Clefairy",
+		prevo: "Clefairy",
 		eggGroups: ["Fairy"],
 	},
 	bvenusaur: {
@@ -57730,7 +57748,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 100.0,
 		color: "Green",
-		prevo : "Ivysaur",
+		prevo: "Ivysaur",
 		eggGroups: ["Monster", "Grass"],
 	},
 	bseel: {
@@ -57742,7 +57760,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 90.0,
 		color: "White",
-		prevo : "Seel",
+		prevo: "Seel",
 		eggGroups: ["Water1", "Field"],
 	},
 	arrowa: {
@@ -57798,7 +57816,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 0.1,
 		color: "Purple",
-		prevo : "Haunter",
+		prevo: "Haunter",
 		eggGroups: ["Amorphous"],
 	},
 	hellraiser: {
@@ -57810,7 +57828,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 0.1,
 		color: "Purple",
-		prevo : "Haunter",
+		prevo: "Haunter",
 		eggGroups: ["Amorphous"],
 	},
 	icepick: {
@@ -57822,7 +57840,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 56.0,
 		color: "Green",
-		prevo : "Scyther",
+		prevo: "Scyther",
 		eggGroups: ["Bug"],
 	},
 	flamefetchd: {
@@ -57834,7 +57852,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 15.0,
 		color: "Brown",
-		prevo : "Farfetchd",
+		prevo: "Farfetchd",
 		eggGroups: ["Flying", "Field"],
 	},
 	vshuckle: {
@@ -57857,7 +57875,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 61.5,
 		color: "Yellow",
-		prevo : "Flaaffy",
+		prevo: "Flaaffy",
 		eggGroups: ["Monster", "Field"],
 	},
 	slowloss: {
@@ -57869,7 +57887,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 36.0,
 		color: "Pink",
-		prevo : "Slowpoke",
+		prevo: "Slowpoke",
 		eggGroups: ["Monster", "Water1"],
 	},
 	fracture: {
@@ -57881,7 +57899,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 45.0,
 		color: "Brown",
-		prevo : "Marowak",
+		prevo: "Marowak",
 		eggGroups: ["Monster"],
 	},
 	pikared: {
@@ -57893,7 +57911,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.0,
 		color: "Yellow",
-		prevo : "Pikachu",
+		prevo: "Pikachu",
 		eggGroups: ["Field", "Fairy"],
 	},
 	feliflame: {
@@ -57905,7 +57923,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 32.0,
 		color: "Yellow",
-		prevo : "Meowth",
+		prevo: "Meowth",
 		eggGroups: ["Field"],
 	},
 	raticlaw: {
@@ -57917,7 +57935,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 18.5,
 		color: "Brown",
-		prevo : "Raticate",
+		prevo: "Raticate",
 		eggGroups: ["Field"],
 	},
 	clegnyana: {
@@ -57929,7 +57947,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 34.6,
 		color: "Pink",
-		prevo : "Chansey",
+		prevo: "Chansey",
 		eggGroups: ["Fairy"],
 	},
 	pikabud: {
@@ -57941,7 +57959,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.0,
 		color: "Yellow",
-		prevo : "Pikachu",
+		prevo: "Pikachu",
 		eggGroups: ["Field", "Fairy"],
 	},
 	alenkar: {
@@ -57953,7 +57971,7 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 0.1,
 		color: "Brown",
-		prevo : "Kadabra",
+		prevo: "Kadabra",
 		eggGroups: ["Humanlike"],
 	},
 	dreamaster: {
@@ -57965,7 +57983,7 @@ blobbosmechelectric: {
 		heightm: 2.6,
 		weightkg: 85.6,
 		color: "Yellow",
-		prevo : "Hypno",
+		prevo: "Hypno",
 		eggGroups: ["Humanlike"],
 	},
 	fletchice: {
@@ -57977,7 +57995,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 42.1,
 		color: "Blue",
-		evos : ["Cluckatrice"],
+		evos: ["Cluckatrice"],
 		eggGroups: ["Dragon", "Flying"],
 	},
 	cluckatrice: {
@@ -57989,8 +58007,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 42.1,
 		color: "Blue",
-		prevo : "Fletchice",
-		evos : ["Roosteratrice"],
+		prevo: "Fletchice",
+		evos: ["Roosteratrice"],
 		eggGroups: ["Dragon", "Flying"],
 	},
 	roosteratrice: {
@@ -58002,7 +58020,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 42.1,
 		color: "Blue",
-		prevo : "Cluckatrice",
+		prevo: "Cluckatrice",
 		eggGroups: ["Dragon", "Flying"],
 	},
 	birttle: {
@@ -58014,7 +58032,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.2,
 		color: "Brown",
-		evos : ["Amorvian"],
+		evos: ["Amorvian"],
 		eggGroups: ["Flying"],
 	},
 	amorvian: {
@@ -58026,7 +58044,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.2,
 		color: "Brown",
-		prevo : "Birttle",
+		prevo: "Birttle",
 		eggGroups: ["Flying"],
 	},
 	koap: {
@@ -58038,7 +58056,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 0.1,
 		color: "Purple",
-		evos : ["Hatos"],
+		evos: ["Hatos"],
 		eggGroups: ["Amorphous"],
 	},
 	hatos: {
@@ -58050,8 +58068,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 0.1,
 		color: "Purple",
-		prevo : "Koap",
-		evos : ["Unhichaos"],
+		prevo: "Koap",
+		evos: ["Unhichaos"],
 		eggGroups: ["Amorphous"],
 	},
 	unhichaos: {
@@ -58063,7 +58081,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 0.1,
 		color: "Purple",
-		prevo : "Hatos",
+		prevo: "Hatos",
 		eggGroups: ["Amorphous"],
 	},
 	suckert: {
@@ -58075,7 +58093,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
-		evos : ["Swirlia"],
+		evos: ["Swirlia"],
 		eggGroups: ["Fairy"],
 	},
 	swirlia: {
@@ -58087,8 +58105,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 7.5,
 		color: "Pink",
-		prevo : "Suckert",
-		evos : ["Lolichap"],
+		prevo: "Suckert",
+		evos: ["Lolichap"],
 		eggGroups: ["Fairy"],
 	},
 	lolichap: {
@@ -58100,7 +58118,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 7.5,
 		color: "Pink",
-		prevo : "Swirlia",
+		prevo: "Swirlia",
 		eggGroups: ["Fairy"],
 	},
 	flwood: {
@@ -58112,7 +58130,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 38.0,
 		color: "Brown",
-		evos : ["Woopeck"],
+		evos: ["Woopeck"],
 		eggGroups: ["Flying"],
 	},
 	woopeck: {
@@ -58124,7 +58142,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 38.0,
 		color: "Brown",
-		prevo : "Flwood",
+		prevo: "Flwood",
 		eggGroups: ["Flying"],
 	},
 	extinguil: {
@@ -58136,7 +58154,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 33.5,
 		color: "Blue",
-		evos : ["Putout"],
+		evos: ["Putout"],
 		eggGroups: ["Field"],
 	},
 	putout: {
@@ -58148,7 +58166,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 33.5,
 		color: "Blue",
-		prevo : "Extinguil",
+		prevo: "Extinguil",
 		eggGroups: ["Field"],
 	},
 	soobu: {
@@ -58160,7 +58178,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.0,
 		color: "Yellow",
-		evos : ["Sebushus"],
+		evos: ["Sebushus"],
 		eggGroups: ["Field", "Fairy"],
 	},
 	sebushus: {
@@ -58172,7 +58190,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 226.0,
 		color: "Yellow",
-		prevo : "Soobu",
+		prevo: "Soobu",
 		eggGroups: ["Field", "Fairy"],
 	},
 	magu: {
@@ -58184,7 +58202,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 37.5,
 		color: "Red",
-		evos : ["Magbru"],
+		evos: ["Magbru"],
 		eggGroups: ["Field"],
 	},
 	magbru: {
@@ -58196,7 +58214,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 37.5,
 		color: "Red",
-		prevo : "Magu",
+		prevo: "Magu",
 		eggGroups: ["Field"],
 	},
 	zombry: {
@@ -58208,7 +58226,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.0,
 		color: "Purple",
-		evos : ["Charund", "Jombey", "Spiombie"],
+		evos: ["Charund", "Jombey", "Spiombie"],
 		eggGroups: ["Humanlike"],
 	},
 	charund: {
@@ -58220,7 +58238,7 @@ blobbosmechelectric: {
 		heightm: 2.7,
 		weightkg: 321.0,
 		color: "Purple",
-		prevo : "Zombry",
+		prevo: "Zombry",
 		eggGroups: ["Humanlike"],
 	},
 	spiombie: {
@@ -58232,7 +58250,7 @@ blobbosmechelectric: {
 		heightm: 2.7,
 		weightkg: 321.0,
 		color: "Purple",
-		prevo : "Zombry",
+		prevo: "Zombry",
 		eggGroups: ["Humanlike"],
 	},
 	jombey: {
@@ -58244,7 +58262,7 @@ blobbosmechelectric: {
 		heightm: 2.7,
 		weightkg: 321.0,
 		color: "Purple",
-		prevo : "Zombry",
+		prevo: "Zombry",
 		eggGroups: ["Humanlike"],
 	},
 	sunisk: {
@@ -58256,7 +58274,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 15.0,
 		color: "Blue",
-		evos : ["Solfish"],
+		evos: ["Solfish"],
 		eggGroups: ["Water2"],
 	},
 	solfish: {
@@ -58268,7 +58286,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 15.0,
 		color: "Blue",
-		prevo : "Sunisk",
+		prevo: "Sunisk",
 		eggGroups: ["Water2"],
 	},
 	sewan: {
@@ -58280,7 +58298,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 9.5,
 		color: "Gray",
-		evos : ["Sewantor"],
+		evos: ["Sewantor"],
 		eggGroups: ["Mineral"],
 	},
 	sewantor: {
@@ -58292,7 +58310,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 79.5,
 		color: "Gray",
-		prevo : "Sewan",
+		prevo: "Sewan",
 		eggGroups: ["Mineral"],
 	},
 	pyrork: {
@@ -58304,7 +58322,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		evos : ["Artifire"],
+		evos: ["Artifire"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	artifire: {
@@ -58316,8 +58334,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		prevo : "Pyrork",
-		evos : ["Artiwyrk"],
+		prevo: "Pyrork",
+		evos: ["Artiwyrk"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	artiwyrk: {
@@ -58329,7 +58347,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		prevo : "Artifire",
+		prevo: "Artifire",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	hatakoro: {
@@ -58352,7 +58370,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 3.0,
 		color: "Purple",
-		prevo : "Slinka",
+		prevo: "Slinka",
 		eggGroups: ["Field", "Amorphous"],
 	},
 	mimaost: {
@@ -58397,7 +58415,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 20.0,
 		color: "Brown",
-		evos : ["Rogyst"],
+		evos: ["Rogyst"],
 		eggGroups: ["Mineral"],
 	},
 	rogyst: {
@@ -58409,7 +58427,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 20.0,
 		color: "Brown",
-		prevo : "Rogo",
+		prevo: "Rogo",
 		eggGroups: ["Mineral"],
 	},
 	spino: {
@@ -58421,7 +58439,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 1.0,
 		color: "Purple",
-		evos : ["Spinga"],
+		evos: ["Spinga"],
 		eggGroups: ["Amorphous"],
 	},
 	spinga: {
@@ -58433,7 +58451,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 1.0,
 		color: "Purple",
-		prevo : "Spino",
+		prevo: "Spino",
 		eggGroups: ["Amorphous"],
 	},
 	pikachutwo: {
@@ -58467,7 +58485,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 18.0,
 		color: "Green",
-		evos : ["Sonardrake"],
+		evos: ["Sonardrake"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	sonardrake: {
@@ -58479,7 +58497,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 18.0,
 		color: "Green",
-		prevo : "Soundagon",
+		prevo: "Soundagon",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	carplosion: {
@@ -58491,7 +58509,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 10.1,
 		color: "Red",
-		evos : ["Carpetbomb"],
+		evos: ["Carpetbomb"],
 		eggGroups: ["Amorphous"],
 	},
 	carpetbomb: {
@@ -58503,7 +58521,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 10.1,
 		color: "Red",
-		prevo : "Carplosion",
+		prevo: "Carplosion",
 		eggGroups: ["Amorphous"],
 	},
 	finish: {
@@ -58515,7 +58533,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 10.0,
 		color: "Red",
-		evos : ["Bludgreigon"],
+		evos: ["Bludgreigon"],
 		eggGroups: ["Water2", "Dragon"],
 	},
 	bludgreigon: {
@@ -58527,7 +58545,7 @@ blobbosmechelectric: {
 		heightm: 5.9,
 		weightkg: 310.0,
 		color: "Red",
-		prevo : "Finish",
+		prevo: "Finish",
 		eggGroups: ["Water2", "Dragon"],
 	},
 	salember: {
@@ -58539,7 +58557,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		evos : ["Axofire"],
+		evos: ["Axofire"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	axofire: {
@@ -58551,8 +58569,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		prevo : "Salember",
-		evos : ["Searamander"],
+		prevo: "Salember",
+		evos: ["Searamander"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	searamander: {
@@ -58564,7 +58582,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		prevo : "Axofire",
+		prevo: "Axofire",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	squinky: {
@@ -58576,7 +58594,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 45.5,
 		color: "Blue",
-		evos : ["Inkuid"],
+		evos: ["Inkuid"],
 		eggGroups: ["Water3"],
 	},
 	inkuid: {
@@ -58588,7 +58606,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 45.5,
 		color: "Blue",
-		prevo : "Squinky",
+		prevo: "Squinky",
 		eggGroups: ["Water3"],
 	},
 	lemmong: {
@@ -58600,7 +58618,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 2.2,
 		color: "Yellow",
-		evos : ["Lemmongade"],
+		evos: ["Lemmongade"],
 		eggGroups: ["Field", "Fairy"],
 	},
 	lemmongade: {
@@ -58612,7 +58630,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 2.2,
 		color: "Yellow",
-		prevo : "Lemmong",
+		prevo: "Lemmong",
 		eggGroups: ["Field", "Fairy"],
 	},
 	voodem: {
@@ -58624,7 +58642,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 15.1,
 		color: "Purple",
-		prevo : "Voodoll",
+		prevo: "Voodoll",
 		eggGroups: ["Amorphous"],
 	},
 	calculus: {
@@ -58636,7 +58654,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 8.5,
 		color: "Gray",
-		evos : ["Calculusus"],
+		evos: ["Calculusus"],
 		eggGroups: ["Mineral"],
 	},
 	calculusus: {
@@ -58648,7 +58666,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 8.5,
 		color: "Gray",
-		prevo : "Calculus",
+		prevo: "Calculus",
 		eggGroups: ["Mineral"],
 	},
 	maskett: {
@@ -58660,7 +58678,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 92.4,
 		color: "Purple",
-		evos : ["Visagelle"],
+		evos: ["Visagelle"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	visagelle: {
@@ -58672,7 +58690,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 92.4,
 		color: "Purple",
-		prevo : "Maskett",
+		prevo: "Maskett",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	tardida: {
@@ -58686,6 +58704,20 @@ blobbosmechelectric: {
 		color: "Pink",
 		eggGroups: ["Bug"],
 	},
+	tardidarain: {
+		num: 666912,
+		name: "Tardida-Rain",
+		baseSpecies: "Tardida",
+		forme: "Rain",
+		types: ["Bug"],
+		baseStats: {hp: 100, atk: 80, def: 140, spa: 80, spd: 140, spe: 100},
+		abilities: {0: "Filter", H: "Wonder Guard"},
+		heightm: 1.5,
+		weightkg: 9.3,
+		color: "Green",
+		eggGroups: ["Bug"],
+		battleOnly: "Tardida",
+	},
 	blimy: {
 		num: 666913,
 		name: "Blimy",
@@ -58695,7 +58727,7 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 102.4,
 		color: "Purple",
-		evos : ["Hidenblim"],
+		evos: ["Hidenblim"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	hidenblim: {
@@ -58707,7 +58739,7 @@ blobbosmechelectric: {
 		heightm: 13.0,
 		weightkg: 1102.4,
 		color: "Purple",
-		prevo : "Blimy",
+		prevo: "Blimy",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	eikishiki: {
@@ -58719,7 +58751,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 22.0,
 		color: "White",
-		evos : ["Beachshikieiki"],
+		evos: ["Beachshikieiki"],
 		eggGroups: ["Undiscovered"],
 	},
 	trarsile: {
@@ -58742,7 +58774,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 16.8,
 		color: "Gray",
-		evos : ["Marsarrior", "Merquick", "Venusess", "Apollolar", "Artania"],
+		evos: ["Marsarrior", "Merquick", "Venusess", "Apollolar", "Artania"],
 		eggGroups: ["Fairy", "Humanlike"],
 	},
 	marsarrior: {
@@ -58754,7 +58786,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 16.8,
 		color: "Gray",
-		prevo : "Rogodo",
+		prevo: "Rogodo",
 		eggGroups: ["Fairy", "Humanlike"],
 	},
 	venusess: {
@@ -58766,7 +58798,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 16.8,
 		color: "Gray",
-		prevo : "Rogodo",
+		prevo: "Rogodo",
 		eggGroups: ["Fairy", "Humanlike"],
 	},
 	gapkari: {
@@ -58789,7 +58821,7 @@ blobbosmechelectric: {
 		heightm: 6.5,
 		weightkg: 235.0,
 		color: "Blue",
-		prevo : "Magikarp",
+		prevo: "Magikarp",
 		eggGroups: ["Water2", "Dragon"],
 	},
 	babirys: {
@@ -58801,7 +58833,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		evos : ["Suriv"],
+		evos: ["Suriv"],
 		eggGroups: ["Amorphous"],
 	},
 	suriv: {
@@ -58813,7 +58845,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		prevo : "Babirys",
+		prevo: "Babirys",
 		eggGroups: ["Amorphous"],
 	},
 	shoison: {
@@ -58825,7 +58857,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		evos : ["Battacid"],
+		evos: ["Battacid"],
 		eggGroups: ["Amorphous"],
 	},
 	battacid: {
@@ -58837,7 +58869,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		prevo : "Shoison",
+		prevo: "Shoison",
 		eggGroups: ["Amorphous"],
 	},
 	aliceoll: {
@@ -58849,7 +58881,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 22.0,
 		color: "White",
-		evos : ["Beach Alice"],
+		evos: ["Beach Alice"],
 		eggGroups: ["Undiscovered"],
 	},
 	yuukawer: {
@@ -58894,7 +58926,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 12.0,
 		color: "Purple",
-		evos : ["Backscorpion"],
+		evos: ["Backscorpion"],
 		eggGroups: ["Bug", "Water3"],
 	},
 	backscorpion: {
@@ -58906,7 +58938,7 @@ blobbosmechelectric: {
 		heightm: 3.8,
 		weightkg: 212.0,
 		color: "Purple",
-		prevo : "Arachoe",
+		prevo: "Arachoe",
 		eggGroups: ["Bug", "Water3"],
 	},
 	blolocute: {
@@ -58918,7 +58950,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.0,
 		color: "Gray",
-		evos : ["Bloculo"],
+		evos: ["Bloculo"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	bloculo: {
@@ -58930,8 +58962,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 16.0,
 		color: "Gray",
-		prevo : "Blolocute",
-		evos : ["Blolossod"],
+		prevo: "Blolocute",
+		evos: ["Blolossod"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	blolossod: {
@@ -58943,7 +58975,7 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 76.0,
 		color: "Gray",
-		prevo : "Bloculo",
+		prevo: "Bloculo",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	jawetech: {
@@ -58966,7 +58998,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 7.5,
 		color: "Purple",
-		evos : ["Mothmowl"],
+		evos: ["Mothmowl"],
 		eggGroups: ["Flying"],
 	},
 	mothmowl: {
@@ -58978,7 +59010,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 7.5,
 		color: "Purple",
-		prevo : "Humowl",
+		prevo: "Humowl",
 		eggGroups: ["Flying"],
 	},
 	windoh: {
@@ -58990,7 +59022,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.1,
 		color: "White",
-		evos : ["Peekindow", "Winpane", "Winblow"],
+		evos: ["Peekindow", "Winpane", "Winblow"],
 		eggGroups: ["Mineral"],
 	},
 	winblow: {
@@ -59002,7 +59034,7 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 22.1,
 		color: "White",
-		prevo : "Windoh",
+		prevo: "Windoh",
 		eggGroups: ["Mineral"],
 	},
 	winpane: {
@@ -59014,7 +59046,7 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 20.1,
 		color: "White",
-		prevo : "Windoh",
+		prevo: "Windoh",
 		eggGroups: ["Mineral"],
 	},
 	peekindow: {
@@ -59026,7 +59058,7 @@ blobbosmechelectric: {
 		heightm: 12.3,
 		weightkg: 210.1,
 		color: "White",
-		prevo : "Windoh",
+		prevo: "Windoh",
 		eggGroups: ["Mineral"],
 	},
 	bunn: {
@@ -59038,7 +59070,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 0.2,
 		color: "Blue",
-		evos : ["Draguette"],
+		evos: ["Draguette"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	draguette: {
@@ -59050,8 +59082,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 20.5,
 		color: "Blue",
-		prevo : "Bunn",
-		evos : ["Subwaydon"],
+		prevo: "Bunn",
+		evos: ["Subwaydon"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	subwaydon: {
@@ -59063,7 +59095,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 33.7,
 		color: "Blue",
-		prevo : "Draguette",
+		prevo: "Draguette",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	predorb: {
@@ -59075,7 +59107,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.1,
 		color: "Black",
-		evos : ["Prophorb", "Seerorb"],
+		evos: ["Prophorb", "Seerorb"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	seerorb: {
@@ -59087,7 +59119,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 12.1,
 		color: "Black",
-		prevo : "Predorb",
+		prevo: "Predorb",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	prophorb: {
@@ -59099,7 +59131,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 12.1,
 		color: "Black",
-		prevo : "Predorb",
+		prevo: "Predorb",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	tapistle: {
@@ -59111,7 +59143,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 49.5,
 		color: "Brown",
-		evos : ["Blopire"],
+		evos: ["Blopire"],
 		eggGroups: ["Field"],
 	},
 	blopire: {
@@ -59123,7 +59155,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 149.5,
 		color: "Brown",
-		prevo : "Tapistle",
+		prevo: "Tapistle",
 		eggGroups: ["Field"],
 	},
 	larvick: {
@@ -59135,7 +59167,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.1,
 		color: "Purple",
-		evos : ["Tickood"],
+		evos: ["Tickood"],
 		eggGroups: ["Bug"],
 	},
 	tickood: {
@@ -59147,7 +59179,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 22.1,
 		color: "Purple",
-		prevo : "Larvick",
+		prevo: "Larvick",
 		eggGroups: ["Bug"],
 	},
 	eirinurse: {
@@ -59170,7 +59202,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 2.2,
 		color: "Yellow",
-		evos : ["Coocamodie"],
+		evos: ["Coocamodie"],
 		eggGroups: ["Mineral"],
 	},
 	coocamodie: {
@@ -59182,7 +59214,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 122.2,
 		color: "Yellow",
-		prevo : "Smoodie",
+		prevo: "Smoodie",
 		eggGroups: ["Mineral", "Humanlike"],
 	},
 	rockandy: {
@@ -59194,7 +59226,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 2.2,
 		color: "Yellow",
-		evos : ["Crystandy"],
+		evos: ["Crystandy"],
 		eggGroups: ["Mineral"],
 	},
 	crystandy: {
@@ -59206,8 +59238,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 52.2,
 		color: "Yellow",
-		prevo : "Rockandy",
-		evos : ["Cracandy"],
+		prevo: "Rockandy",
+		evos: ["Cracandy"],
 		eggGroups: ["Mineral"],
 	},
 	cracandy: {
@@ -59219,7 +59251,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 52.2,
 		color: "Yellow",
-		prevo : "Crystandy",
+		prevo: "Crystandy",
 		eggGroups: ["Mineral"],
 	},
 	seeare: {
@@ -59231,7 +59263,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 12.4,
 		color: "Purple",
-		evos : ["Feasume"],
+		evos: ["Feasume"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	feasume: {
@@ -59243,7 +59275,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 12.4,
 		color: "Purple",
-		prevo : "Seeare",
+		prevo: "Seeare",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	ranox: {
@@ -59277,7 +59309,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 10.1,
 		color: "Red",
-		evos : ["Flarpet"],
+		evos: ["Flarpet"],
 		eggGroups: ["Amorphous"],
 	},
 	flarpet: {
@@ -59289,7 +59321,7 @@ blobbosmechelectric: {
 		heightm: 2.9,
 		weightkg: 12.1,
 		color: "Red",
-		prevo : "Marpet",
+		prevo: "Marpet",
 		eggGroups: ["Amorphous"],
 	},
 	yuyukhost: {
@@ -59361,6 +59393,7 @@ blobbosmechelectric: {
 	maidcoresh: {
 		num: 666970,
 		name: "Maidcoresh",
+		baseForme: "Shield",
 		types: ["Tech", "Blood"],
 		baseStats: {hp: 55, atk: 50, def: 150, spa: 50, spd: 150, spe: 90},
 		abilities: {0: "Rough Skin"},
@@ -59368,6 +59401,21 @@ blobbosmechelectric: {
 		weightkg: 53.0,
 		color: "Brown",
 		eggGroups: ["Mineral"],
+		otherFormes: ["Maidcoresh-Blade"],
+		formeOrder: ["Maidcoresh", "Maidcoresh-Blade"],
+	},
+	maidcoreshblade: {
+		num: 666970,
+		name: "Maidcoresh-Blade",
+		baseSpecies: "Maidcoresh",
+		types: ["Tech", "Blood"],
+		baseStats: {hp: 55, atk: 150, def: 50, spa: 150, spd: 50, spe: 30},
+		abilities: {0: "Rough Skin"},
+		heightm: 1.7,
+		weightkg: 53.0,
+		color: "Brown",
+		eggGroups: ["Mineral"],
+		battleOnly: "Maidcoresh",
 	},
 	flandryre: {
 		num: 666971,
@@ -59383,6 +59431,7 @@ blobbosmechelectric: {
 	sarieangel: {
 		num: 666972,
 		name: "Sarieangel",
+		baseForme: "Standard",
 		types: ["Chaos", "Divine"],
 		baseStats: {hp: 107, atk: 80, def: 110, spa: 110, spd: 130, spe: 95},
 		abilities: {0: "Magic Bounce", 1: "Zen Mode", H: "Beast Boost"},
@@ -59390,6 +59439,23 @@ blobbosmechelectric: {
 		weightkg: 26.0,
 		color: "White",
 		eggGroups: ["Undiscovered"],
+		otherFormes: ["Sarieangel-Zen"],
+		formeOrder: ["Sarieangel", "Sarieangel-Zen"]
+	},
+	sarieangelzen: {
+		num: 666972,
+		name: "Sarieangel-Zen",
+		baseSpecies: "Sarieangel",
+		forme: "Zen",
+		types: ["Chaos", "Divine"],
+		baseStats: {hp: 107, atk: 110, def: 155, spa: 130, spd: 185, spe: 125},
+		abilities: {0: "Zen Mode"},
+		heightm: 1.1,
+		weightkg: 26.0,
+		color: "White",
+		eggGroups: ["Undiscovered"],
+		requiredAbility: "Zen Mode",
+		battleOnly: "Sarieangel",
 	},
 	starphire: {
 		num: 666973,
@@ -59411,7 +59477,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 16.8,
 		color: "Gray",
-		prevo : "Rogodo",
+		prevo: "Rogodo",
 		eggGroups: ["Fairy", "Humanlike"],
 	},
 	apollolar: {
@@ -59423,7 +59489,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 16.8,
 		color: "Gray",
-		prevo : "Rogodo",
+		prevo: "Rogodo",
 		eggGroups: ["Fairy", "Humanlike"],
 	},
 	marsortured: {
@@ -59501,7 +59567,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.0,
 		color: "Gray",
-		evos : ["Dnaelix"],
+		evos: ["Dnaelix"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	dnaelix: {
@@ -59513,8 +59579,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 16.0,
 		color: "Gray",
-		prevo : "Dnaby",
-		evos : ["Dnanium"],
+		prevo: "Dnaby",
+		evos: ["Dnanium"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	dnanium: {
@@ -59526,7 +59592,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 36.0,
 		color: "Gray",
-		prevo : "Dnaelix",
+		prevo: "Dnaelix",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	supaninteno: {
@@ -59538,7 +59604,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 8.5,
 		color: "Gray",
-		evos : ["Cubegamo"],
+		evos: ["Cubegamo"],
 		eggGroups: ["Mineral"],
 	},
 	cubegamo: {
@@ -59550,8 +59616,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 8.5,
 		color: "Gray",
-		prevo : "Supaninteno",
-		evos : ["Wiilly", "Threediesh"],
+		prevo: "Supaninteno",
+		evos: ["Wiilly", "Threediesh"],
 		eggGroups: ["Mineral"],
 	},
 	wiilly: {
@@ -59563,7 +59629,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 118.5,
 		color: "Gray",
-		prevo : "Cubegamo",
+		prevo: "Cubegamo",
 		eggGroups: ["Mineral"],
 	},
 	threediesh: {
@@ -59575,7 +59641,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 8.5,
 		color: "Gray",
-		prevo : "Cubegamo",
+		prevo: "Cubegamo",
 		eggGroups: ["Mineral"],
 	},
 	crawdrake: {
@@ -59598,7 +59664,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		evos : ["Flameup"],
+		evos: ["Flameup"],
 		eggGroups: ["Amorphous"],
 	},
 	flameup: {
@@ -59610,7 +59676,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		prevo : "Lightip",
+		prevo: "Lightip",
 		eggGroups: ["Amorphous"],
 	},
 	seijaverse: {
@@ -59699,7 +59765,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 16.8,
 		color: "Gray",
-		prevo : "Rogodo",
+		prevo: "Rogodo",
 		eggGroups: ["Fairy", "Humanlike"],
 	},
 	nerober: {
@@ -59711,7 +59777,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 34.0,
 		color: "Black",
-		evos : ["Nerobaltah"],
+		evos: ["Nerobaltah"],
 		eggGroups: ["Undiscovered"],
 	},
 	hundssassin: {
@@ -59767,7 +59833,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 33.5,
 		color: "Blue",
-		evos : ["Shinkantrain", "Strain", "Electrain"],
+		evos: ["Shinkantrain", "Strain", "Electrain"],
 		eggGroups: ["Field"],
 	},
 	strain: {
@@ -59779,7 +59845,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 233.5,
 		color: "Blue",
-		prevo : "Traino",
+		prevo: "Traino",
 		eggGroups: ["Field"],
 	},
 	electrain: {
@@ -59791,7 +59857,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 133.5,
 		color: "Blue",
-		prevo : "Traino",
+		prevo: "Traino",
 		eggGroups: ["Field"],
 	},
 	shinkantrain: {
@@ -59803,7 +59869,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 63.5,
 		color: "Blue",
-		prevo : "Traino",
+		prevo: "Traino",
 		eggGroups: ["Field"],
 	},
 	konngarrior: {
@@ -59826,7 +59892,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 69,
 		color: "Brown",
-		prevo : "Staryu",
+		prevo: "Staryu",
 		eggGroups: ["Water3"],
 	},
 	chiyailor: {
@@ -59849,7 +59915,7 @@ blobbosmechelectric: {
 		heightm: 4.2,
 		weightkg: 1135.5,
 		color: "White",
-		prevo : "Abomasnow",
+		prevo: "Abomasnow",
 		eggGroups: ["Monster", "Grass"],
 	},
 	mmawile: {
@@ -59861,7 +59927,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 21.5,
 		color: "Black",
-		prevo : "Mawile",
+		prevo: "Mawile",
 		eggGroups: ["Field", "Fairy"],
 	},
 	aabsol: {
@@ -59873,7 +59939,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 47.0,
 		color: "White",
-		prevo : "Absol",
+		prevo: "Absol",
 		eggGroups: ["Field"],
 	},
 	bbanette: {
@@ -59885,7 +59951,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 12.5,
 		color: "Black",
-		prevo : "Banette",
+		prevo: "Banette",
 		eggGroups: ["Amorphous"],
 	},
 	rumiarkness: {
@@ -59897,7 +59963,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 21.1,
 		color: "White",
-		evos : ["Santarumia"],
+		evos: ["Santarumia"],
 		eggGroups: ["Undiscovered"],
 	},
 	suwakrog: {
@@ -59997,7 +60063,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Red",
-		evos : ["Marlencin"],
+		evos: ["Marlencin"],
 		eggGroups: ["Water2"],
 	},
 	marlencin: {
@@ -60009,7 +60075,7 @@ blobbosmechelectric: {
 		heightm: 3.6,
 		weightkg: 115.0,
 		color: "Red",
-		prevo : "Sworesh",
+		prevo: "Sworesh",
 		eggGroups: ["Water2"],
 	},
 	grenir: {
@@ -60021,7 +60087,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 0.1,
 		color: "Purple",
-		evos : ["Marvelamp"],
+		evos: ["Marvelamp"],
 		eggGroups: ["Amorphous"],
 	},
 	marvelamp: {
@@ -60033,7 +60099,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 0.3,
 		color: "Purple",
-		prevo : "Grenir",
+		prevo: "Grenir",
 		eggGroups: ["Amorphous"],
 	},
 	tusk: {
@@ -60045,8 +60111,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 9.5,
 		color: "Blue",
-		prevo : "Stando",
-		evos : ["Tusk Act 3"],
+		prevo: "Stando",
+		evos: ["Tusk Act 3"],
 		eggGroups: ["Amorphous"],
 	},
 	tuskact3: {
@@ -60058,7 +60124,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 9.5,
 		color: "Blue",
-		prevo : "Tusk",
+		prevo: "Tusk",
 		eggGroups: ["Amorphous"],
 	},
 	mystiarrow: {
@@ -60070,7 +60136,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 21.0,
 		color: "White",
-		evos : ["Santamystia"],
+		evos: ["Santamystia"],
 		eggGroups: ["Undiscovered"],
 	},
 	bowser: {
@@ -60082,7 +60148,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		evos : ["Bowser Statue", "Paperbowser", "Fury Bowser", "Megadragonbowser", "Drbowser", "Bowsette", "Kart Bowser", "Bowletta", "Mechabowserstatue", "Dark Bowser", "Bowser Koobala", "Dry Bowser", "Amiibobowser", "Metal Bowser", "Retro Bowser", "Cakebowser", "Shrowser", "Meowser", "Skylanderbowser"],
+		evos: ["Bowser Statue", "Paperbowser", "Fury Bowser", "Megadragonbowser", "Drbowser", "Bowsette", "Kart Bowser", "Bowletta", "Mechabowserstatue", "Dark Bowser", "Bowser Koobala", "Dry Bowser", "Amiibobowser", "Metal Bowser", "Retro Bowser", "Cakebowser", "Shrowser", "Meowser", "Skylanderbowser"],
 		eggGroups: ["Monster"],
 	},
 	risatsuki: {
@@ -60149,7 +60215,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 36.5,
 		color: "Pink",
-		prevo : "Porygon",
+		prevo: "Porygon",
 		eggGroups: ["Mineral"],
 	},
 	tewiabbit: {
@@ -60216,7 +60282,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 29.4,
 		color: "Red",
-		evos : ["Hillipod"],
+		evos: ["Hillipod"],
 		eggGroups: ["Bug"],
 	},
 	hillipod: {
@@ -60228,8 +60294,8 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 22.4,
 		color: "Red",
-		prevo : "Pendrasp",
-		evos : ["Axelasp"],
+		prevo: "Pendrasp",
+		evos: ["Axelasp"],
 		eggGroups: ["Bug"],
 	},
 	axelasp: {
@@ -60241,7 +60307,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 0.4,
 		color: "Red",
-		prevo : "Hillipod",
+		prevo: "Hillipod",
 		eggGroups: ["Bug"],
 	},
 	medicholy: {
@@ -60264,7 +60330,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 17.0,
 		color: "White",
-		evos : ["Santawriggle"],
+		evos: ["Santawriggle"],
 		eggGroups: ["Undiscovered"],
 	},
 	kaguyainbow: {
@@ -60292,6 +60358,7 @@ blobbosmechelectric: {
 	keinistory: {
 		num: 667051,
 		name: "Keinistory",
+		baseForme: "Standard",
 		types: ["Steel", "Psychic"],
 		baseStats: {hp: 100, atk: 65, def: 125, spa: 120, spd: 90, spe: 45},
 		abilities: {0: "Inner Focus", 1: "Zen Mode", H: "Graze"},
@@ -60299,6 +60366,23 @@ blobbosmechelectric: {
 		weightkg: 26.0,
 		color: "White",
 		eggGroups: ["Undiscovered"],
+		otherFormes: ["Keinistory-Zen"],
+		formeOrder: ["Keinistory", "Keinistory-Zen"],
+	},
+	keinistoryzen: {
+		num: 667051,
+		name: "Keinistory-Zen",
+		baseSpecies: "Keinistory",
+		forme: "Zen",
+		types: ["Steel", "Fighting"],
+		baseStats: {hp: 100, atk: 140, def: 50, spa: 65, spd: 50, spe: 120},
+		abilities: {0: "Zen Mode"},
+		heightm: 1.7,
+		weightkg: 26.0,
+		color: "White",
+		eggGroups: ["Undiscovered"],
+		requiredAbility: "Zen Mode",
+		battleOnly: "Keinistory",
 	},
 	swastitan: {
 		num: 667052,
@@ -60474,7 +60558,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 23.5,
 		color: "Red",
-		evos : ["Velodrome"],
+		evos: ["Velodrome"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	velodrome: {
@@ -60486,7 +60570,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 23.5,
 		color: "Red",
-		prevo : "Veloprey",
+		prevo: "Veloprey",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	diablex: {
@@ -60520,7 +60604,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 112.0,
 		color: "White",
-		evos : ["Beachutsuho"],
+		evos: ["Beachutsuho"],
 		eggGroups: ["Undiscovered"],
 	},
 	communarve: {
@@ -60576,7 +60660,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 28.0,
 		color: "Red",
-		evos : ["Balremon"],
+		evos: ["Balremon"],
 		eggGroups: ["Amorphous", "Monster"],
 	},
 	balremon: {
@@ -60588,7 +60672,7 @@ blobbosmechelectric: {
 		heightm: 3.3,
 		weightkg: 228.0,
 		color: "Red",
-		prevo : "Dalo",
+		prevo: "Dalo",
 		eggGroups: ["Amorphous", "Monster"],
 	},
 	bewdragon: {
@@ -60622,7 +60706,7 @@ blobbosmechelectric: {
 		heightm: 18.7,
 		weightkg: 1150.5,
 		color: "Gray",
-		prevo : "Playne",
+		prevo: "Playne",
 		eggGroups: ["Flying", "Mineral"],
 	},
 	tosporygon: {
@@ -60645,7 +60729,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 200.6,
 		color: "Red",
-		prevo : "Electrodehuelectrode",
+		prevo: "Electrodehuelectrode",
 		eggGroups: ["Mineral"],
 	},
 	gamble: {
@@ -60657,7 +60741,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 34.6,
 		color: "Pink",
-		prevo : "Chansey",
+		prevo: "Chansey",
 		eggGroups: ["Fairy"],
 	},
 	pinsire: {
@@ -60669,7 +60753,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 55.0,
 		color: "Brown",
-		prevo : "Pinsir",
+		prevo: "Pinsir",
 		eggGroups: ["Bug"],
 	},
 	cliffracer: {
@@ -60736,7 +60820,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	lagannech: {
@@ -60748,7 +60832,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 180.0,
 		color: "Gray",
-		evos : ["Gurrenlagannech"],
+		evos: ["Gurrenlagannech"],
 		eggGroups: ["Mineral"],
 	},
 	gurrenlagannech: {
@@ -60760,7 +60844,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 180.0,
 		color: "Gray",
-		prevo : "Lagannech",
+		prevo: "Lagannech",
 		eggGroups: ["Mineral"],
 	},
 	drybowser: {
@@ -60772,7 +60856,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	darkbowser: {
@@ -60784,7 +60868,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	retrobowser: {
@@ -60796,7 +60880,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	megadragonbowser: {
@@ -60808,7 +60892,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	metalbowser: {
@@ -60820,7 +60904,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 1465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	meowser: {
@@ -60832,7 +60916,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	parsenvy: {
@@ -60844,7 +60928,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 12.0,
 		color: "White",
-		evos : ["Santaparsee"],
+		evos: ["Santaparsee"],
 		eggGroups: ["Undiscovered"],
 	},
 	kisumket: {
@@ -60856,7 +60940,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 12.0,
 		color: "White",
-		evos : ["Santa Kisume"],
+		evos: ["Santa Kisume"],
 		eggGroups: ["Undiscovered"],
 	},
 	fishember: {
@@ -60868,7 +60952,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 12.0,
 		color: "Blue",
-		evos : ["Searish"],
+		evos: ["Searish"],
 		eggGroups: ["Water2"],
 	},
 	searish: {
@@ -60880,7 +60964,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 12.0,
 		color: "Blue",
-		prevo : "Fishember",
+		prevo: "Fishember",
 		eggGroups: ["Water2"],
 	},
 	mamizouki: {
@@ -60914,7 +60998,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 28.0,
 		color: "Red",
-		evos : ["Descreech"],
+		evos: ["Descreech"],
 		eggGroups: ["Monster"],
 	},
 	descreech: {
@@ -60926,7 +61010,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 28.0,
 		color: "Red",
-		prevo : "Desound",
+		prevo: "Desound",
 		eggGroups: ["Monster"],
 	},
 	yamamease: {
@@ -60960,7 +61044,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 12.0,
 		color: "Blue",
-		evos : ["Frozark"],
+		evos: ["Frozark"],
 		eggGroups: ["Dragon", "Monster"],
 	},
 	frozark: {
@@ -60972,8 +61056,8 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 12.0,
 		color: "Blue",
-		prevo : "Chillizar",
-		evos : ["Frizard"],
+		prevo: "Chillizar",
+		evos: ["Frizard"],
 		eggGroups: ["Dragon", "Monster"],
 	},
 	frizard: {
@@ -60985,7 +61069,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 12.0,
 		color: "Blue",
-		prevo : "Frozark",
+		prevo: "Frozark",
 		eggGroups: ["Dragon", "Monster"],
 	},
 	jackask: {
@@ -60997,7 +61081,7 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 10.2,
 		color: "Black",
-		prevo : "Twickotweet",
+		prevo: "Twickotweet",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	catace: {
@@ -61009,7 +61093,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "Black",
-		evos : ["Catface"],
+		evos: ["Catface"],
 		eggGroups: ["Undiscovered"],
 	},
 	catface: {
@@ -61021,7 +61105,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "Black",
-		prevo : "Catace",
+		prevo: "Catace",
 		eggGroups: ["Amorphous", "Field"],
 	},
 	phobeon: {
@@ -61033,7 +61117,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 10.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	skullask: {
@@ -61045,7 +61129,7 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 10.2,
 		color: "Black",
-		prevo : "Twickotweet",
+		prevo: "Twickotweet",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	shizautumn: {
@@ -61090,7 +61174,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "Brown",
-		prevo : "Deltrune",
+		prevo: "Deltrune",
 		eggGroups: ["Monster", "Fairy"],
 	},
 	shincityo: {
@@ -61113,7 +61197,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 11.0,
 		color: "Purple",
-		prevo : "Sableye",
+		prevo: "Sableye",
 		eggGroups: ["Humanlike"],
 	},
 	msteelix: {
@@ -61125,7 +61209,7 @@ blobbosmechelectric: {
 		heightm: 9.2,
 		weightkg: 400.0,
 		color: "Gray",
-		prevo : "Steelix",
+		prevo: "Steelix",
 		eggGroups: ["Mineral"],
 	},
 	mcsteelix: {
@@ -61137,7 +61221,7 @@ blobbosmechelectric: {
 		heightm: 9.2,
 		weightkg: 400.0,
 		color: "Gray",
-		prevo : "Csteelix",
+		prevo: "Csteelix",
 		eggGroups: ["Mineral"],
 	},
 	amimejr: {
@@ -61149,7 +61233,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 13.0,
 		color: "Pink",
-		evos : ["Amrmime"],
+		evos: ["Amrmime"],
 		eggGroups: ["Undiscovered"],
 	},
 	amrmime: {
@@ -61161,7 +61245,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 54.5,
 		color: "Pink",
-		prevo : "Amimejr",
+		prevo: "Amimejr",
 		eggGroups: ["Humanlike"],
 	},
 	apurrloin: {
@@ -61173,7 +61257,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 10.1,
 		color: "Purple",
-		evos : ["Aliepard"],
+		evos: ["Aliepard"],
 		eggGroups: ["Field"],
 	},
 	aliepard: {
@@ -61185,7 +61269,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 37.5,
 		color: "Purple",
-		prevo : "Apurrloin",
+		prevo: "Apurrloin",
 		eggGroups: ["Field"],
 	},
 	acacnea: {
@@ -61197,7 +61281,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 51.3,
 		color: "Green",
-		evos : ["Acacturne"],
+		evos: ["Acacturne"],
 		eggGroups: ["Grass", "Humanlike"],
 	},
 	acacturne: {
@@ -61209,7 +61293,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 77.4,
 		color: "Green",
-		prevo : "Acacnea",
+		prevo: "Acacnea",
 		eggGroups: ["Grass", "Humanlike"],
 	},
 	snowtorb: {
@@ -61221,7 +61305,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 10.4,
 		color: "Red",
-		evos : ["Snowtrode"],
+		evos: ["Snowtrode"],
 		eggGroups: ["Mineral"],
 	},
 	snowtrode: {
@@ -61233,7 +61317,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 66.6,
 		color: "Red",
-		prevo : "Snowtorb",
+		prevo: "Snowtorb",
 		eggGroups: ["Mineral"],
 	},
 	atreecko: {
@@ -61245,7 +61329,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 5.0,
 		color: "Green",
-		evos : ["Agrovyle"],
+		evos: ["Agrovyle"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	agrovyle: {
@@ -61257,8 +61341,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 21.6,
 		color: "Green",
-		prevo : "Atreecko",
-		evos : ["Asceptile"],
+		prevo: "Atreecko",
+		evos: ["Asceptile"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	asceptile: {
@@ -61270,7 +61354,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 52.2,
 		color: "Green",
-		prevo : "Agrovyle",
+		prevo: "Agrovyle",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	atorchic: {
@@ -61282,7 +61366,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 2.5,
 		color: "Red",
-		evos : ["Acombusken"],
+		evos: ["Acombusken"],
 		eggGroups: ["Field"],
 	},
 	acombusken: {
@@ -61294,8 +61378,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 19.5,
 		color: "Red",
-		prevo : "Atorchic",
-		evos : ["Ablaziken"],
+		prevo: "Atorchic",
+		evos: ["Ablaziken"],
 		eggGroups: ["Field"],
 	},
 	ablaziken: {
@@ -61307,7 +61391,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 52.0,
 		color: "Red",
-		prevo : "Acombusken",
+		prevo: "Acombusken",
 		eggGroups: ["Field"],
 	},
 	amudkip: {
@@ -61319,7 +61403,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 7.6,
 		color: "Blue",
-		evos : ["Amarshtomp"],
+		evos: ["Amarshtomp"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	amarshtomp: {
@@ -61331,8 +61415,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 28.0,
 		color: "Blue",
-		prevo : "Amudkip",
-		evos : ["Aswampert"],
+		prevo: "Amudkip",
+		evos: ["Aswampert"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	aswampert: {
@@ -61344,7 +61428,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 81.9,
 		color: "Blue",
-		prevo : "Amarshtomp",
+		prevo: "Amarshtomp",
 		eggGroups: ["Monster", "Water1"],
 	},
 	aves: {
@@ -61356,7 +61440,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.0,
 		color: "Brown",
-		prevo : "Spearow",
+		prevo: "Spearow",
 		eggGroups: ["Flying"],
 	},
 	laprince: {
@@ -61368,7 +61452,7 @@ blobbosmechelectric: {
 		heightm: 12.5,
 		weightkg: 1220.0,
 		color: "Blue",
-		prevo : "Lapras",
+		prevo: "Lapras",
 		eggGroups: ["Monster", "Water1"],
 	},
 	firefree: {
@@ -61380,7 +61464,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 32.0,
 		color: "White",
-		prevo : "Butterfree",
+		prevo: "Butterfree",
 		eggGroups: ["Bug"],
 	},
 	pegazeus: {
@@ -61392,7 +61476,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 95.0,
 		color: "Yellow",
-		prevo : "Ponyta",
+		prevo: "Ponyta",
 		eggGroups: ["Field"],
 	},
 	shockra: {
@@ -61404,7 +61488,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 19.0,
 		color: "Brown",
-		evos : ["Barkanite"],
+		evos: ["Barkanite"],
 		eggGroups: ["Field"],
 	},
 	barkanite: {
@@ -61416,7 +61500,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 155.0,
 		color: "Brown",
-		prevo : "Shockra",
+		prevo: "Shockra",
 		eggGroups: ["Field"],
 	},
 	momiawoo: {
@@ -61472,7 +61556,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 5.5,
 		color: "Brown",
-		evos : ["Hlopunny"],
+		evos: ["Hlopunny"],
 		eggGroups: ["Field", "Humanlike"],
 	},
 	hlopunny: {
@@ -61484,8 +61568,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 33.3,
 		color: "Brown",
-		prevo : "Hbuneary",
-		evos : ["Mhlopunny"],
+		prevo: "Hbuneary",
+		evos: ["Mhlopunny"],
 		eggGroups: ["Field", "Humanlike"],
 	},
 	yuugihol: {
@@ -61530,7 +61614,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	holeecow: {
@@ -61542,7 +61626,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 0.1,
 		color: "Brown",
-		prevo : "Belcalf",
+		prevo: "Belcalf",
 		eggGroups: ["Field"],
 	},
 	acidoud: {
@@ -61554,7 +61638,7 @@ blobbosmechelectric: {
 		heightm: 33.1,
 		weightkg: 0.4,
 		color: "Purple",
-		prevo : "Cloudlet",
+		prevo: "Cloudlet",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	clounight: {
@@ -61566,7 +61650,7 @@ blobbosmechelectric: {
 		heightm: 33.1,
 		weightkg: 0.4,
 		color: "Purple",
-		prevo : "Cloudlet",
+		prevo: "Cloudlet",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	coyot: {
@@ -61578,7 +61662,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 13.6,
 		color: "Gray",
-		evos : ["Coyotears"],
+		evos: ["Coyotears"],
 		eggGroups: ["Field"],
 	},
 	coyotears: {
@@ -61590,7 +61674,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 13.6,
 		color: "Gray",
-		prevo : "Coyot",
+		prevo: "Coyot",
 		eggGroups: ["Field"],
 	},
 	levelcap: {
@@ -61602,7 +61686,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 10.1,
 		color: "Red",
-		prevo : "Maghat",
+		prevo: "Maghat",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	luckat: {
@@ -61636,7 +61720,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 65.5,
 		color: "Pink",
-		evos : ["Gold Mario", "Metal Mario"],
+		evos: ["Gold Mario", "Metal Mario"],
 		eggGroups: ["Monster"],
 	},
 	marthlord: {
@@ -61692,7 +61776,7 @@ blobbosmechelectric: {
 		heightm: 6.5,
 		weightkg: 235.0,
 		color: "Blue",
-		prevo : "Magikarp",
+		prevo: "Magikarp",
 		eggGroups: ["Water3", "Bug"],
 	},
 	corruptedsol: {
@@ -61704,7 +61788,7 @@ blobbosmechelectric: {
 		heightm: 9999.7,
 		weightkg: 9999.9,
 		color: "Green",
-		prevo : "Godsol",
+		prevo: "Godsol",
 		eggGroups: ["Humanlike"],
 	},
 	isthis: {
@@ -61727,7 +61811,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 12.5,
 		color: "Black",
-		prevo : "Shuppet",
+		prevo: "Shuppet",
 		eggGroups: ["Amorphous"],
 	},
 	indianelephant: {
@@ -61772,7 +61856,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 160.0,
 		color: "Red",
-		evos : ["Solcrab"],
+		evos: ["Solcrab"],
 		eggGroups: ["Water3"],
 	},
 	ohmega: {
@@ -61795,7 +61879,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 7.5,
 		color: "Purple",
-		evos : ["Zubat"],
+		evos: ["Zubat"],
 		eggGroups: ["Flying"],
 	},
 	gorochu: {
@@ -61807,7 +61891,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 30.0,
 		color: "Yellow",
-		prevo : "Pikachu",
+		prevo: "Pikachu",
 		eggGroups: ["Field", "Fairy"],
 	},
 	mordrayal: {
@@ -61863,7 +61947,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 6.9,
 		color: "Green",
-		evos : ["Chargradon"],
+		evos: ["Chargradon"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	chargradon: {
@@ -61875,8 +61959,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 6.9,
 		color: "Green",
-		prevo : "Chargra",
-		evos : ["Chargroar"],
+		prevo: "Chargra",
+		evos: ["Chargroar"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	chargroar: {
@@ -61888,7 +61972,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 6.9,
 		color: "Green",
-		prevo : "Chargradon",
+		prevo: "Chargradon",
 		eggGroups: ["Monster", "Grass"],
 	},
 	astolftrap: {
@@ -61988,8 +62072,8 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 76.6,
 		color: "Blue",
-		prevo : "Psyduck",
-		evos : ["Golduck"],
+		prevo: "Psyduck",
+		evos: ["Golduck"],
 		eggGroups: ["Water1", "Field"],
 	},
 	matriawak: {
@@ -62001,7 +62085,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 45.0,
 		color: "Brown",
-		prevo : "Marowak",
+		prevo: "Marowak",
 		eggGroups: ["Monster"],
 	},
 	buu: {
@@ -62024,7 +62108,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 72.0,
 		color: "Green",
-		evos : ["Gyaoon"],
+		evos: ["Gyaoon"],
 		eggGroups: ["Monster"],
 	},
 	gyaoon: {
@@ -62036,7 +62120,7 @@ blobbosmechelectric: {
 		heightm: 2.6,
 		weightkg: 172.0,
 		color: "Green",
-		prevo : "Gyao",
+		prevo: "Gyao",
 		eggGroups: ["Monster"],
 	},
 	eleko: {
@@ -62059,7 +62143,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 35.5,
 		color: "Blue",
-		evos : ["Squink", "Squidrill"],
+		evos: ["Squink", "Squidrill"],
 		eggGroups: ["Water3"],
 	},
 	squink: {
@@ -62071,7 +62155,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 45.5,
 		color: "Blue",
-		prevo : "Squi",
+		prevo: "Squi",
 		eggGroups: ["Water3"],
 	},
 	cheepa: {
@@ -62083,7 +62167,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Red",
-		evos : ["Beeta"],
+		evos: ["Beeta"],
 		eggGroups: ["Water2"],
 	},
 	beeta: {
@@ -62095,7 +62179,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 25.0,
 		color: "Red",
-		prevo : "Cheepa",
+		prevo: "Cheepa",
 		eggGroups: ["Water2"],
 	},
 	wartoise: {
@@ -62107,7 +62191,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 22.5,
 		color: "Blue",
-		prevo : "Wartortle",
+		prevo: "Wartortle",
 		eggGroups: ["Monster", "Water1"],
 	},
 	blastyke: {
@@ -62119,7 +62203,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 99.5,
 		color: "Blue",
-		prevo : "Squirtle",
+		prevo: "Squirtle",
 		eggGroups: ["Monster", "Water1"],
 	},
 	sumorog: {
@@ -62131,7 +62215,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 54.0,
 		color: "Blue",
-		evos : ["Kungfrog"],
+		evos: ["Kungfrog"],
 		eggGroups: ["Water1"],
 	},
 	kungfrog: {
@@ -62143,7 +62227,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 54.0,
 		color: "Blue",
-		prevo : "Sumorog",
+		prevo: "Sumorog",
 		eggGroups: ["Water1"],
 	},
 	wadgon: {
@@ -62155,7 +62239,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 4.9,
 		color: "Yellow",
-		evos : ["Waterake"],
+		evos: ["Waterake"],
 		eggGroups: ["Field"],
 	},
 	waterake: {
@@ -62167,8 +62251,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 11.9,
 		color: "Yellow",
-		prevo : "Wadgon",
-		evos : ["Wateragon"],
+		prevo: "Wadgon",
+		evos: ["Wateragon"],
 		eggGroups: ["Field", "Dragon"],
 	},
 	wateragon: {
@@ -62180,7 +62264,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 35.9,
 		color: "Blue",
-		prevo : "Waterake",
+		prevo: "Waterake",
 		eggGroups: ["Field", "Dragon"],
 	},
 	vladpire: {
@@ -62346,7 +62430,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 24.0,
 		color: "Black",
-		evos : ["Selizidol"],
+		evos: ["Selizidol"],
 		eggGroups: ["Undiscovered"],
 	},
 	bunyanserk: {
@@ -62512,7 +62596,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 26.9,
 		color: "Purple",
-		prevo : "Cobret",
+		prevo: "Cobret",
 		eggGroups: ["Field", "Dragon"],
 	},
 	lancartoria: {
@@ -62645,7 +62729,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 5.5,
 		color: "Blue",
-		evos : ["Gooseloose"],
+		evos: ["Gooseloose"],
 		eggGroups: ["Water1", "Flying"],
 	},
 	gooseloose: {
@@ -62657,7 +62741,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 56.5,
 		color: "Blue",
-		prevo : "Gooseling",
+		prevo: "Gooseling",
 		eggGroups: ["Water1", "Flying"],
 	},
 	gooseon: {
@@ -62669,7 +62753,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 10.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field", "Flying"],
 	},
 	brynhildcer: {
@@ -62714,7 +62798,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 27.0,
 		color: "Black",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	elechair: {
@@ -62726,7 +62810,7 @@ blobbosmechelectric: {
 		heightm: 3.9,
 		weightkg: 29.7,
 		color: "Purple",
-		prevo : "Seatie",
+		prevo: "Seatie",
 		eggGroups: ["Amorphous"],
 	},
 	gadgeteon: {
@@ -62738,7 +62822,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 27.0,
 		color: "Black",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	chaneller: {
@@ -62761,7 +62845,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 54.0,
 		color: "Blue",
-		prevo : "Lucario",
+		prevo: "Lucario",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	mmanectric: {
@@ -62773,7 +62857,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 40.2,
 		color: "Yellow",
-		prevo : "Manectric",
+		prevo: "Manectric",
 		eggGroups: ["Field"],
 	},
 	mslowbro: {
@@ -62785,7 +62869,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 78.5,
 		color: "Pink",
-		prevo : "Slowbro",
+		prevo: "Slowbro",
 		eggGroups: ["Monster", "Water1"],
 	},
 	mgyarados: {
@@ -62797,7 +62881,7 @@ blobbosmechelectric: {
 		heightm: 6.5,
 		weightkg: 235.0,
 		color: "Blue",
-		prevo : "Gyarados",
+		prevo: "Gyarados",
 		eggGroups: ["Water2", "Dragon"],
 	},
 	mscizor: {
@@ -62809,7 +62893,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 118.0,
 		color: "Red",
-		prevo : "Scizor",
+		prevo: "Scizor",
 		eggGroups: ["Bug"],
 	},
 	mglalie: {
@@ -62821,7 +62905,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 256.5,
 		color: "Gray",
-		prevo : "Glalie",
+		prevo: "Glalie",
 		eggGroups: ["Fairy", "Mineral"],
 	},
 	mlopunny: {
@@ -62833,7 +62917,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 33.3,
 		color: "Brown",
-		prevo : "Lopunny",
+		prevo: "Lopunny",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	snapchost: {
@@ -62845,7 +62929,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 0.3,
 		color: "Purple",
-		prevo : "Clavies",
+		prevo: "Clavies",
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	virtualeon: {
@@ -62857,7 +62941,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 27.0,
 		color: "Black",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	alteraber: {
@@ -62880,7 +62964,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 48.0,
 		color: "Red",
-		evos : ["Amariantoinette"],
+		evos: ["Amariantoinette"],
 		eggGroups: ["Undiscovered"],
 	},
 	mhlopunny: {
@@ -62892,7 +62976,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 33.3,
 		color: "Brown",
-		prevo : "Hlopunny",
+		prevo: "Hlopunny",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	rodac: {
@@ -62904,7 +62988,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 19.0,
 		color: "Purple",
-		evos : ["Rodactyl"],
+		evos: ["Rodactyl"],
 		eggGroups: ["Flying"],
 	},
 	rodactyl: {
@@ -62916,7 +63000,7 @@ blobbosmechelectric: {
 		heightm: 5.8,
 		weightkg: 159.0,
 		color: "Purple",
-		prevo : "Rodac",
+		prevo: "Rodac",
 		eggGroups: ["Flying"],
 	},
 	cutcut: {
@@ -63170,7 +63254,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 41.0,
 		color: "Red",
-		evos : ["Aeongel", "Archongel"],
+		evos: ["Aeongel", "Archongel"],
 		eggGroups: ["Humanlike", "Monster"],
 	},
 	cakeross: {
@@ -63193,7 +63277,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 96.3,
 		color: "Red",
-		evos : ["Crocwistul"],
+		evos: ["Crocwistul"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	crocwistul: {
@@ -63205,7 +63289,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 96.3,
 		color: "Red",
-		prevo : "Rockodile",
+		prevo: "Rockodile",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	orinrin: {
@@ -63261,8 +63345,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 18.5,
 		color: "Brown",
-		prevo : "Rattata",
-		evos : ["Praticlaw"],
+		prevo: "Rattata",
+		evos: ["Praticlaw"],
 		eggGroups: ["Field"],
 	},
 	snowlax: {
@@ -63274,7 +63358,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 460.0,
 		color: "Black",
-		prevo : "Munchlax",
+		prevo: "Munchlax",
 		eggGroups: ["Monster"],
 	},
 	cradisk: {
@@ -63308,7 +63392,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 34.6,
 		color: "Pink",
-		prevo : "Chansey",
+		prevo: "Chansey",
 		eggGroups: ["Fairy"],
 	},
 	cencyclodia: {
@@ -63320,7 +63404,7 @@ blobbosmechelectric: {
 		heightm: 11.9,
 		weightkg: 110.6,
 		color: "White",
-		prevo : "Pagie",
+		prevo: "Pagie",
 		eggGroups: ["Field"],
 	},
 	namelessdemon: {
@@ -63343,7 +63427,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 13.0,
 		color: "White",
-		evos : ["Darkyoun"],
+		evos: ["Darkyoun"],
 		eggGroups: ["Amorphous", "Grass"],
 	},
 	darkyoun: {
@@ -63355,8 +63439,8 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 113.0,
 		color: "White",
-		prevo : "Darkyo",
-		evos : ["Shubniggurother"],
+		prevo: "Darkyo",
+		evos: ["Shubniggurother"],
 		eggGroups: ["Amorphous", "Grass"],
 	},
 	shubniggurother: {
@@ -63368,7 +63452,7 @@ blobbosmechelectric: {
 		heightm: 12.5,
 		weightkg: 1113.0,
 		color: "White",
-		prevo : "Darkyoun",
+		prevo: "Darkyoun",
 		eggGroups: ["Amorphous", "Grass"],
 	},
 	ithaqwind: {
@@ -63424,7 +63508,7 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 2.1,
 		color: "White",
-		evos : ["Aquariuol", "Terraol"],
+		evos: ["Aquariuol", "Terraol"],
 		eggGroups: ["Mineral"],
 	},
 	aquariuol: {
@@ -63436,7 +63520,7 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 2.1,
 		color: "White",
-		prevo : "Glassbol",
+		prevo: "Glassbol",
 		eggGroups: ["Mineral"],
 	},
 	terraol: {
@@ -63448,7 +63532,7 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 2.1,
 		color: "White",
-		prevo : "Glassbol",
+		prevo: "Glassbol",
 		eggGroups: ["Mineral"],
 	},
 	voltbyor: {
@@ -63460,7 +63544,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 10.4,
 		color: "Red",
-		evos : ["Voltorb"],
+		evos: ["Voltorb"],
 		eggGroups: ["Mineral"],
 	},
 	smariados: {
@@ -63472,7 +63556,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 33.5,
 		color: "Red",
-		prevo : "Spinarak",
+		prevo: "Spinarak",
 		eggGroups: ["Bug"],
 	},
 	tuberm: {
@@ -63484,7 +63568,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 0.5,
 		color: "Gray",
-		evos : ["Swimmerm"],
+		evos: ["Swimmerm"],
 		eggGroups: ["Undiscovered"],
 	},
 	tuberf: {
@@ -63496,7 +63580,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 0.5,
 		color: "Gray",
-		evos : ["Swimmerf"],
+		evos: ["Swimmerf"],
 		eggGroups: ["Undiscovered"],
 	},
 	swimmerm: {
@@ -63508,7 +63592,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 12.5,
 		color: "Gray",
-		prevo : "Tuberm",
+		prevo: "Tuberm",
 		eggGroups: ["Humanlike"],
 	},
 	swimmerf: {
@@ -63520,7 +63604,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 12.5,
 		color: "Gray",
-		prevo : "Tuberf",
+		prevo: "Tuberf",
 		eggGroups: ["Humanlike"],
 	},
 	painter: {
@@ -63576,7 +63660,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Sloggoth",
+		prevo: "Sloggoth",
 		eggGroups: ["Field"],
 	},
 	husloggeroth: {
@@ -63588,7 +63672,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Sloggoth",
+		prevo: "Sloggoth",
 		eggGroups: ["Field"],
 	},
 	datatrainer: {
@@ -63688,7 +63772,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.9,
 		color: "Green",
-		evos : ["Endmeran", "Endershulk"],
+		evos: ["Endmeran", "Endershulk"],
 		eggGroups: ["Bug", "Amorphous"],
 	},
 	endmeran: {
@@ -63700,8 +63784,8 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 12.9,
 		color: "Green",
-		prevo : "Enderite",
-		evos : ["Endragon"],
+		prevo: "Enderite",
+		evos: ["Endragon"],
 		eggGroups: ["Amorphous"],
 	},
 	endragon: {
@@ -63713,7 +63797,7 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 12.9,
 		color: "Green",
-		prevo : "Endmeranendershulk",
+		prevo: "Endmeranendershulk",
 		eggGroups: ["Amorphous"],
 	},
 	endershulk: {
@@ -63725,8 +63809,8 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 12.9,
 		color: "Green",
-		prevo : "Enderite",
-		evos : ["Endragon"],
+		prevo: "Enderite",
+		evos: ["Endragon"],
 		eggGroups: ["Amorphous"],
 	},
 	maverock: {
@@ -63738,7 +63822,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 21.0,
 		color: "Purple",
-		evos : ["Blastrock", "Chillrock", "Overock"],
+		evos: ["Blastrock", "Chillrock", "Overock"],
 		eggGroups: ["Mineral"],
 	},
 	chillrock: {
@@ -63750,7 +63834,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 21.0,
 		color: "Purple",
-		prevo : "Maverock",
+		prevo: "Maverock",
 		eggGroups: ["Mineral", "Flying"],
 	},
 	overock: {
@@ -63762,7 +63846,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 21.0,
 		color: "Purple",
-		prevo : "Maverock",
+		prevo: "Maverock",
 		eggGroups: ["Mineral", "Flying"],
 	},
 	blastrock: {
@@ -63774,7 +63858,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 21.0,
 		color: "Purple",
-		prevo : "Maverock",
+		prevo: "Maverock",
 		eggGroups: ["Mineral", "Flying"],
 	},
 	pfpoof: {
@@ -63918,7 +64002,7 @@ blobbosmechelectric: {
 		heightm: 9999.7,
 		weightkg: 9999.9,
 		color: "Green",
-		evos : ["Corrupted Sol"],
+		evos: ["Corrupted Sol"],
 		eggGroups: ["Humanlike"],
 	},
 	godmercury: {
@@ -64018,7 +64102,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 80.0,
 		color: "Purple",
-		prevo : "Staryu",
+		prevo: "Staryu",
 		eggGroups: ["Water3"],
 	},
 	ghostly: {
@@ -64041,7 +64125,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 56.0,
 		color: "Green",
-		prevo : "Scyther",
+		prevo: "Scyther",
 		eggGroups: ["Bug"],
 	},
 	asmoochum: {
@@ -64053,7 +64137,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.0,
 		color: "Pink",
-		evos : ["Ajynx"],
+		evos: ["Ajynx"],
 		eggGroups: ["Undiscovered"],
 	},
 	ajynx: {
@@ -64065,8 +64149,8 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 40.6,
 		color: "Red",
-		prevo : "Asmoochum",
-		evos : ["Majynx"],
+		prevo: "Asmoochum",
+		evos: ["Majynx"],
 		eggGroups: ["Humanlike"],
 	},
 	ivictini: {
@@ -64100,7 +64184,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
-		evos : ["Nobotile", "Dreagamorph", "Unlion", "Heartlenine", "Royickish"],
+		evos: ["Nobotile", "Dreagamorph", "Unlion", "Heartlenine", "Royickish"],
 		eggGroups: ["Field"],
 	},
 	heartlenine: {
@@ -64112,7 +64196,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Hearhild",
+		prevo: "Hearhild",
 		eggGroups: ["Field"],
 	},
 	nobotile: {
@@ -64124,7 +64208,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Hearhild",
+		prevo: "Hearhild",
 		eggGroups: ["Field"],
 	},
 	unlion: {
@@ -64136,7 +64220,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Hearhild",
+		prevo: "Hearhild",
 		eggGroups: ["Field"],
 	},
 	dreagamorph: {
@@ -64148,7 +64232,7 @@ blobbosmechelectric: {
 		heightm: 3.3,
 		weightkg: 1116.5,
 		color: "Brown",
-		prevo : "Hearhild",
+		prevo: "Hearhild",
 		eggGroups: ["Field"],
 	},
 	royickish: {
@@ -64160,7 +64244,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 26.5,
 		color: "Brown",
-		prevo : "Hearhild",
+		prevo: "Hearhild",
 		eggGroups: ["Field"],
 	},
 	ezigzagoon: {
@@ -64172,7 +64256,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 17.5,
 		color: "Brown",
-		evos : ["Elinoone"],
+		evos: ["Elinoone"],
 		eggGroups: ["Field"],
 	},
 	elinoone: {
@@ -64184,8 +64268,8 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 32.5,
 		color: "White",
-		prevo : "Ezigzagoon",
-		evos : ["Eobstagoon"],
+		prevo: "Ezigzagoon",
+		evos: ["Eobstagoon"],
 		eggGroups: ["Field"],
 	},
 	pengui: {
@@ -64197,7 +64281,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.2,
 		color: "Red",
-		evos : ["Albinguin", "Pengemperor"],
+		evos: ["Albinguin", "Pengemperor"],
 		eggGroups: ["Water1", "Flying"],
 	},
 	pengemperor: {
@@ -64209,7 +64293,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 1.2,
 		color: "Red",
-		prevo : "Pengui",
+		prevo: "Pengui",
 		eggGroups: ["Water1", "Flying"],
 	},
 	albinguin: {
@@ -64221,7 +64305,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 1.2,
 		color: "Red",
-		prevo : "Pengui",
+		prevo: "Pengui",
 		eggGroups: ["Water1", "Flying"],
 	},
 	gzigzagoon: {
@@ -64233,7 +64317,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 17.5,
 		color: "Brown",
-		evos : ["Glinoone"],
+		evos: ["Glinoone"],
 		eggGroups: ["Field"],
 	},
 	glinoone: {
@@ -64245,8 +64329,8 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 32.5,
 		color: "White",
-		prevo : "Gzigzagoon",
-		evos : ["Obstagoon"],
+		prevo: "Gzigzagoon",
+		evos: ["Obstagoon"],
 		eggGroups: ["Field"],
 	},
 	gweezing: {
@@ -64258,7 +64342,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 9.5,
 		color: "Purple",
-		prevo : "Koffingwkoffing",
+		prevo: "Koffingwkoffing",
 		eggGroups: ["Amorphous"],
 	},
 	mistaibahx: {
@@ -64303,7 +64387,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 14.0,
 		color: "Black",
-		evos : ["Saibah"],
+		evos: ["Saibah"],
 		eggGroups: ["Undiscovered"],
 	},
 	summarthoria: {
@@ -64337,7 +64421,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 0.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	skylanderbowser: {
@@ -64349,8 +64433,8 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 0.5,
 		color: "Pink",
-		prevo : "Bowser",
-		evos : ["Darkskylanderbowser"],
+		prevo: "Bowser",
+		evos: ["Darkskylanderbowser"],
 		eggGroups: ["Monster"],
 	},
 	bowletta: {
@@ -64362,7 +64446,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	aseedot: {
@@ -64374,7 +64458,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 4.0,
 		color: "Brown",
-		evos : ["Anuzleaf"],
+		evos: ["Anuzleaf"],
 		eggGroups: ["Field", "Grass"],
 	},
 	anuzleaf: {
@@ -64386,8 +64470,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 28.0,
 		color: "Brown",
-		prevo : "Aseedot",
-		evos : ["Ashiftry"],
+		prevo: "Aseedot",
+		evos: ["Ashiftry"],
 		eggGroups: ["Field", "Grass"],
 	},
 	ashiftry: {
@@ -64399,7 +64483,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 59.6,
 		color: "Brown",
-		prevo : "Anuzleaf",
+		prevo: "Anuzleaf",
 		eggGroups: ["Field", "Grass"],
 	},
 	condenseon: {
@@ -64411,7 +64495,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 29.0,
 		color: "Blue",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	volcaneon: {
@@ -64423,7 +64507,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	timberreon: {
@@ -64435,7 +64519,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	sphealedge: {
@@ -64447,7 +64531,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 39.5,
 		color: "Black",
-		evos : ["Sealeoedge"],
+		evos: ["Sealeoedge"],
 		eggGroups: ["Field"],
 	},
 	sealeoedge: {
@@ -64459,8 +64543,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 87.6,
 		color: "Black",
-		prevo : "Sphealedge",
-		evos : ["Walreinedge"],
+		prevo: "Sphealedge",
+		evos: ["Walreinedge"],
 		eggGroups: ["Field"],
 	},
 	walreinedge: {
@@ -64472,7 +64556,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 150.6,
 		color: "Black",
-		prevo : "Sealeoedge",
+		prevo: "Sealeoedge",
 		eggGroups: ["Field"],
 	},
 	shanggai: {
@@ -64506,7 +64590,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		evos : ["Gcharmeleon"],
+		evos: ["Gcharmeleon"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	gcharmeleon: {
@@ -64518,8 +64602,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 19.0,
 		color: "Red",
-		prevo : "Gcharmander",
-		evos : ["Gcharizard"],
+		prevo: "Gcharmander",
+		evos: ["Gcharizard"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	gcharizard: {
@@ -64531,7 +64615,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 92.5,
 		color: "Red",
-		prevo : "Gcharmeleon",
+		prevo: "Gcharmeleon",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	xiclotlee: {
@@ -64554,7 +64638,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	unownking: {
@@ -64588,7 +64672,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 0.1,
 		color: "Gray",
-		evos : ["Flyongolyp"],
+		evos: ["Flyongolyp"],
 		eggGroups: ["Amorphous"],
 	},
 	flyongolyp: {
@@ -64600,7 +64684,7 @@ blobbosmechelectric: {
 		heightm: 3.3,
 		weightkg: 0.1,
 		color: "Gray",
-		prevo : "Flolyp",
+		prevo: "Flolyp",
 		eggGroups: ["Amorphous"],
 	},
 	lusfairy: {
@@ -64612,7 +64696,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 5.5,
 		color: "Brown",
-		evos : ["Elsnow", "Youkawaii", "Mylph", "Domineko", "Mammarina", "Torappu", "Gothot", "Lustubust", "Wyrmaiden"],
+		evos: ["Elsnow", "Youkawaii", "Mylph", "Domineko", "Mammarina", "Torappu", "Gothot", "Lustubust", "Wyrmaiden"],
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	mylph: {
@@ -64624,7 +64708,7 @@ blobbosmechelectric: {
 		heightm: 2.4,
 		weightkg: 15.5,
 		color: "Brown",
-		prevo : "Lusfairy",
+		prevo: "Lusfairy",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	migus: {
@@ -64636,7 +64720,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 0.1,
 		color: "Gray",
-		evos : ["Migoggoth", "Amigoggoth"],
+		evos: ["Migoggoth", "Amigoggoth"],
 		eggGroups: ["Amorphous"],
 	},
 	migoggoth: {
@@ -64648,7 +64732,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 28.1,
 		color: "Gray",
-		prevo : "Migus",
+		prevo: "Migus",
 		eggGroups: ["Amorphous"],
 	},
 	stillnut: {
@@ -64660,7 +64744,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 17.5,
 		color: "Pink",
-		evos : ["Mr Stillnut"],
+		evos: ["Mr Stillnut"],
 		eggGroups: ["Fairy"],
 	},
 	mrstillnut: {
@@ -64672,8 +64756,8 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 57.5,
 		color: "Pink",
-		prevo : "Stillnut",
-		evos : ["Lord Stillnut"],
+		prevo: "Stillnut",
+		evos: ["Lord Stillnut"],
 		eggGroups: ["Fairy"],
 	},
 	lordstillnut: {
@@ -64685,7 +64769,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 117.5,
 		color: "Pink",
-		prevo : "Mrstillnut",
+		prevo: "Mrstillnut",
 		eggGroups: ["Fairy"],
 	},
 	gentleman: {
@@ -64752,7 +64836,7 @@ blobbosmechelectric: {
 		heightm: 2.4,
 		weightkg: 115.5,
 		color: "Brown",
-		prevo : "Lusfairy",
+		prevo: "Lusfairy",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	toriegoat: {
@@ -64764,7 +64848,7 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 96.5,
 		color: "Brown",
-		prevo : "Monkid",
+		prevo: "Monkid",
 		eggGroups: ["Field", "Monster"],
 	},
 	sgeodude: {
@@ -64776,7 +64860,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 20.0,
 		color: "Brown",
-		evos : ["Sgraveler"],
+		evos: ["Sgraveler"],
 		eggGroups: ["Mineral"],
 	},
 	sgraveler: {
@@ -64788,8 +64872,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 105.0,
 		color: "Brown",
-		prevo : "Sgeodude",
-		evos : ["Sgolem"],
+		prevo: "Sgeodude",
+		evos: ["Sgolem"],
 		eggGroups: ["Mineral"],
 	},
 	sgolem: {
@@ -64801,7 +64885,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 300.0,
 		color: "Brown",
-		prevo : "Sgraveler",
+		prevo: "Sgraveler",
 		eggGroups: ["Mineral"],
 	},
 	steamea: {
@@ -64813,7 +64897,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.0,
 		color: "Blue",
-		evos : ["Stweams", "Steamnie"],
+		evos: ["Stweams", "Steamnie"],
 		eggGroups: ["Amorphous", "Water1"],
 	},
 	stweams: {
@@ -64825,7 +64909,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 19.0,
 		color: "Blue",
-		prevo : "Steamea",
+		prevo: "Steamea",
 		eggGroups: ["Amorphous", "Water1"],
 	},
 	yamcha: {
@@ -64859,7 +64943,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 3.3,
 		color: "Blue",
-		evos : ["Ndragonair"],
+		evos: ["Ndragonair"],
 		eggGroups: ["Water1", "Dragon"],
 	},
 	ndragonair: {
@@ -64871,8 +64955,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Ndratini",
-		evos : ["Ndragonite"],
+		prevo: "Ndratini",
+		evos: ["Ndragonite"],
 		eggGroups: ["Water1", "Dragon"],
 	},
 	ndragonite: {
@@ -64884,7 +64968,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 210.0,
 		color: "Brown",
-		prevo : "Ndragonair",
+		prevo: "Ndragonair",
 		eggGroups: ["Water1", "Dragon"],
 	},
 	windows98: {
@@ -64907,7 +64991,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	himster: {
@@ -64941,7 +65025,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 0.2,
 		color: "Red",
-		prevo : "Novais",
+		prevo: "Novais",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	cthylltulla: {
@@ -64953,7 +65037,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 33.0,
 		color: "Green",
-		prevo : "Cthuspawn",
+		prevo: "Cthuspawn",
 		eggGroups: ["Amorphous", "Water3"],
 	},
 	snakeny: {
@@ -64965,7 +65049,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 6.9,
 		color: "Purple",
-		evos : ["Serpeople"],
+		evos: ["Serpeople"],
 		eggGroups: ["Undiscovered"],
 	},
 	serpeople: {
@@ -64977,8 +65061,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 46.9,
 		color: "Purple",
-		prevo : "Snakeny",
-		evos : ["Yigsnake"],
+		prevo: "Snakeny",
+		evos: ["Yigsnake"],
 		eggGroups: ["Humanlike", "Dragon"],
 	},
 	yigsnake: {
@@ -64990,7 +65074,7 @@ blobbosmechelectric: {
 		heightm: 7.0,
 		weightkg: 146.9,
 		color: "Purple",
-		prevo : "Serpeople",
+		prevo: "Serpeople",
 		eggGroups: ["Humanlike", "Dragon"],
 	},
 	theguy: {
@@ -65013,7 +65097,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 16.9,
 		color: "Purple",
-		evos : ["Deepone"],
+		evos: ["Deepone"],
 		eggGroups: ["Humanlike", "Water1"],
 	},
 	deepone: {
@@ -65025,8 +65109,8 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 86.9,
 		color: "Purple",
-		prevo : "Hydeep",
-		evos : ["Dagonther", "Mothydra"],
+		prevo: "Hydeep",
+		evos: ["Dagonther", "Mothydra"],
 		eggGroups: ["Humanlike", "Water2"],
 	},
 	dagonther: {
@@ -65038,7 +65122,7 @@ blobbosmechelectric: {
 		heightm: 5.3,
 		weightkg: 186.9,
 		color: "Purple",
-		prevo : "Deepone",
+		prevo: "Deepone",
 		eggGroups: ["Humanlike", "Water2"],
 	},
 	mothydra: {
@@ -65050,7 +65134,7 @@ blobbosmechelectric: {
 		heightm: 5.1,
 		weightkg: 176.9,
 		color: "Purple",
-		prevo : "Deepone",
+		prevo: "Deepone",
 		eggGroups: ["Humanlike", "Water2"],
 	},
 	killnut: {
@@ -65062,7 +65146,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 17.5,
 		color: "Pink",
-		evos : ["Mr Killnut"],
+		evos: ["Mr Killnut"],
 		eggGroups: ["Fairy"],
 	},
 	mrkillnut: {
@@ -65074,8 +65158,8 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 57.5,
 		color: "Pink",
-		prevo : "Killnut",
-		evos : ["Lord Killnut"],
+		prevo: "Killnut",
+		evos: ["Lord Killnut"],
 		eggGroups: ["Fairy"],
 	},
 	lordkillnut: {
@@ -65087,7 +65171,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 117.5,
 		color: "Pink",
-		prevo : "Mrkillnut",
+		prevo: "Mrkillnut",
 		eggGroups: ["Fairy"],
 	},
 	geno: {
@@ -65110,7 +65194,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 16.5,
 		color: "Brown",
-		evos : ["Prinsiel", "Karmris", "Jestevil", "Susully"],
+		evos: ["Prinsiel", "Karmris", "Jestevil", "Susully"],
 		eggGroups: ["Monster"],
 	},
 	sweetergeist: {
@@ -65254,7 +65338,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 0.1,
 		color: "Black",
-		evos : ["Cthugyre"],
+		evos: ["Cthugyre"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	cthugyre: {
@@ -65266,7 +65350,7 @@ blobbosmechelectric: {
 		heightm: 6.0,
 		weightkg: 0.5,
 		color: "Black",
-		prevo : "Firepire",
+		prevo: "Firepire",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	colorspace: {
@@ -65288,7 +65372,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 12.0,
 		color: "White",
-		evos : ["Necrolili"],
+		evos: ["Necrolili"],
 		eggGroups: ["Undiscovered"],
 	},
 	necrolili: {
@@ -65300,8 +65384,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 22.0,
 		color: "White",
-		prevo : "Necroli",
-		evos : ["Necrolilith", "Swimnecrolilith"],
+		prevo: "Necroli",
+		evos: ["Necrolilith", "Swimnecrolilith"],
 		eggGroups: ["Amorphous"],
 	},
 	necrolilith: {
@@ -65313,7 +65397,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 32.0,
 		color: "White",
-		prevo : "Necrolili",
+		prevo: "Necrolili",
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	himw: {
@@ -65336,7 +65420,7 @@ blobbosmechelectric: {
 		heightm: 2.4,
 		weightkg: 115.5,
 		color: "Brown",
-		prevo : "Lusfairy",
+		prevo: "Lusfairy",
 		eggGroups: ["Humanlike"],
 	},
 	gooei: {
@@ -65348,7 +65432,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 12.0,
 		color: "White",
-		evos : ["Gooarm"],
+		evos: ["Gooarm"],
 		eggGroups: ["Amorphous"],
 	},
 	gooarm: {
@@ -65360,8 +65444,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 22.0,
 		color: "White",
-		prevo : "Gooei",
-		evos : ["Gooswole"],
+		prevo: "Gooei",
+		evos: ["Gooswole"],
 		eggGroups: ["Amorphous"],
 	},
 	gooswole: {
@@ -65373,7 +65457,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 82.0,
 		color: "White",
-		prevo : "Gooarm",
+		prevo: "Gooarm",
 		eggGroups: ["Amorphous"],
 	},
 	ubbosathlime: {
@@ -65407,7 +65491,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.5,
 		color: "White",
-		evos : ["Chanarang", "Chanoken"],
+		evos: ["Chanarang", "Chanoken"],
 		eggGroups: ["Undiscovered"],
 	},
 	chanarang: {
@@ -65419,7 +65503,7 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 21.5,
 		color: "White",
-		prevo : "Chanaroy",
+		prevo: "Chanaroy",
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	chanoken: {
@@ -65431,7 +65515,7 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 21.5,
 		color: "White",
-		prevo : "Chanaroy",
+		prevo: "Chanaroy",
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	dbounsweet: {
@@ -65443,7 +65527,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 1.2,
 		color: "Green",
-		evos : ["Dsteenee"],
+		evos: ["Dsteenee"],
 		eggGroups: ["Undiscovered"],
 	},
 	dsteenee: {
@@ -65455,8 +65539,8 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 1.2,
 		color: "Green",
-		prevo : "Dbounsweet",
-		evos : ["Dtsareena"],
+		prevo: "Dbounsweet",
+		evos: ["Dtsareena"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	dtsareena: {
@@ -65468,7 +65552,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 21.2,
 		color: "Green",
-		prevo : "Dsteenee",
+		prevo: "Dsteenee",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	earbuzz: {
@@ -65480,7 +65564,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 16.3,
 		color: "Pink",
-		evos : ["Phornet"],
+		evos: ["Phornet"],
 		eggGroups: ["Bug"],
 	},
 	phornet: {
@@ -65492,7 +65576,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 26.3,
 		color: "Pink",
-		prevo : "Earbuzz",
+		prevo: "Earbuzz",
 		eggGroups: ["Bug"],
 	},
 	madegg: {
@@ -65515,7 +65599,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 4.0,
 		color: "Green",
-		prevo : "Bellsprout",
+		prevo: "Bellsprout",
 		eggGroups: ["Grass"],
 	},
 	mpikachu: {
@@ -65527,7 +65611,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 30.0,
 		color: "Yellow",
-		prevo : "Pikachu",
+		prevo: "Pikachu",
 		eggGroups: ["Field", "Fairy"],
 	},
 	melectrode: {
@@ -65539,7 +65623,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 66.6,
 		color: "Red",
-		prevo : "Electrodehuelectrode",
+		prevo: "Electrodehuelectrode",
 		eggGroups: ["Mineral"],
 	},
 	mjynx: {
@@ -65551,7 +65635,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 40.6,
 		color: "Red",
-		prevo : "Jynxhujynx",
+		prevo: "Jynxhujynx",
 		eggGroups: ["Humanlike"],
 	},
 	majynx: {
@@ -65563,7 +65647,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 40.6,
 		color: "Red",
-		prevo : "Ajynx",
+		prevo: "Ajynx",
 		eggGroups: ["Humanlike"],
 	},
 	mariados: {
@@ -65575,7 +65659,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 33.5,
 		color: "Red",
-		prevo : "Ariados",
+		prevo: "Ariados",
 		eggGroups: ["Bug"],
 	},
 	mdelcatty: {
@@ -65587,7 +65671,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 32.6,
 		color: "Purple",
-		prevo : "Delcatty",
+		prevo: "Delcatty",
 		eggGroups: ["Field", "Fairy"],
 	},
 	msunflora: {
@@ -65599,7 +65683,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 8.5,
 		color: "Yellow",
-		prevo : "Sunflora",
+		prevo: "Sunflora",
 		eggGroups: ["Grass"],
 	},
 	mcorsola: {
@@ -65611,7 +65695,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 5.0,
 		color: "Pink",
-		prevo : "Corsola",
+		prevo: "Corsola",
 		eggGroups: ["Water1", "Water3"],
 	},
 	delidelibird: {
@@ -65623,7 +65707,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 16.0,
 		color: "Red",
-		prevo : "Delibird",
+		prevo: "Delibird",
 		eggGroups: ["Water1", "Field"],
 	},
 	moctillery: {
@@ -65635,7 +65719,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 28.5,
 		color: "Red",
-		prevo : "Octillery",
+		prevo: "Octillery",
 		eggGroups: ["Water1", "Water2"],
 	},
 	mdonphan: {
@@ -65647,7 +65731,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 120.0,
 		color: "Gray",
-		prevo : "Donphan",
+		prevo: "Donphan",
 		eggGroups: ["Field"],
 	},
 	mstantler: {
@@ -65659,7 +65743,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 71.2,
 		color: "Brown",
-		prevo : "Stantler",
+		prevo: "Stantler",
 		eggGroups: ["Field"],
 	},
 	mtorkoal: {
@@ -65671,7 +65755,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 80.4,
 		color: "Brown",
-		prevo : "Torkoal",
+		prevo: "Torkoal",
 		eggGroups: ["Field"],
 	},
 	mkecleon: {
@@ -65683,7 +65767,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 22.0,
 		color: "Green",
-		prevo : "Kecleon",
+		prevo: "Kecleon",
 		eggGroups: ["Field"],
 	},
 	mhuntail: {
@@ -65695,7 +65779,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 27.0,
 		color: "Blue",
-		prevo : "Huntail",
+		prevo: "Huntail",
 		eggGroups: ["Water1"],
 	},
 	mgorebyss: {
@@ -65707,7 +65791,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 22.6,
 		color: "Pink",
-		prevo : "Gorebyss",
+		prevo: "Gorebyss",
 		eggGroups: ["Water1"],
 	},
 	mchatot: {
@@ -65719,7 +65803,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 1.9,
 		color: "Black",
-		prevo : "Chatot",
+		prevo: "Chatot",
 		eggGroups: ["Flying"],
 	},
 	mcarnivine: {
@@ -65731,7 +65815,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 27.0,
 		color: "Green",
-		prevo : "Carnivine",
+		prevo: "Carnivine",
 		eggGroups: ["Grass"],
 	},
 	mlumineon: {
@@ -65743,7 +65827,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 24.0,
 		color: "Blue",
-		prevo : "Lumineon",
+		prevo: "Lumineon",
 		eggGroups: ["Water2"],
 	},
 	mswoobat: {
@@ -65755,7 +65839,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 10.5,
 		color: "Blue",
-		prevo : "Swoobat",
+		prevo: "Swoobat",
 		eggGroups: ["Flying", "Field"],
 	},
 	mheliolisk: {
@@ -65767,7 +65851,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 21.0,
 		color: "Yellow",
-		prevo : "Heliolisk",
+		prevo: "Heliolisk",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	nfarfetchd: {
@@ -65779,7 +65863,7 @@ blobbosmechelectric: {
 		heightm: 4.8,
 		weightkg: 115.0,
 		color: "Brown",
-		prevo : "Farfetchd",
+		prevo: "Farfetchd",
 		eggGroups: ["Flying", "Field"],
 	},
 	mplusle: {
@@ -65791,7 +65875,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Yellow",
-		prevo : "Plusle",
+		prevo: "Plusle",
 		eggGroups: ["Fairy"],
 	},
 	mminun: {
@@ -65803,7 +65887,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Yellow",
-		prevo : "Minun",
+		prevo: "Minun",
 		eggGroups: ["Fairy"],
 	},
 	voltcube: {
@@ -65815,7 +65899,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 10.4,
 		color: "Red",
-		prevo : "Voltorb",
+		prevo: "Voltorb",
 		eggGroups: ["Mineral"],
 	},
 	daolangle: {
@@ -65838,7 +65922,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 23.6,
 		color: "Blue",
-		prevo : "Whiscash",
+		prevo: "Whiscash",
 		eggGroups: ["Water2"],
 	},
 	mrelicanth: {
@@ -65850,7 +65934,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 23.4,
 		color: "Gray",
-		prevo : "Relicanth",
+		prevo: "Relicanth",
 		eggGroups: ["Water1", "Water2"],
 	},
 	momastar: {
@@ -65862,7 +65946,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 35.0,
 		color: "Blue",
-		prevo : "Omastarhuomastar",
+		prevo: "Omastarhuomastar",
 		eggGroups: ["Water1", "Water3"],
 	},
 	mkabutops: {
@@ -65874,7 +65958,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 40.5,
 		color: "Brown",
-		prevo : "Kabutops",
+		prevo: "Kabutops",
 		eggGroups: ["Water1", "Water3"],
 	},
 	mgarbodor: {
@@ -65886,7 +65970,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 107.3,
 		color: "Green",
-		prevo : "Garbodor",
+		prevo: "Garbodor",
 		eggGroups: ["Mineral"],
 	},
 	starpire: {
@@ -65909,7 +65993,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 14.0,
 		color: "Black",
-		evos : ["Proteknight"],
+		evos: ["Proteknight"],
 		eggGroups: ["Amorphous"],
 	},
 	proteknight: {
@@ -65921,7 +66005,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 14.0,
 		color: "Black",
-		prevo : "Protecdoll",
+		prevo: "Protecdoll",
 		eggGroups: ["Amorphous"],
 	},
 	skittiglock: {
@@ -65933,7 +66017,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 11.0,
 		color: "Pink",
-		evos : ["Skittigang"],
+		evos: ["Skittigang"],
 		eggGroups: ["Field", "Fairy"],
 	},
 	skittigang: {
@@ -65945,7 +66029,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 11.0,
 		color: "Pink",
-		prevo : "Skittiglock",
+		prevo: "Skittiglock",
 		eggGroups: ["Field", "Fairy"],
 	},
 	mluvdiscx: {
@@ -65957,7 +66041,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 18.7,
 		color: "Blue",
-		prevo : "Luvdisc",
+		prevo: "Luvdisc",
 		eggGroups: ["Water2"],
 	},
 	mluvdiscy: {
@@ -65969,7 +66053,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 18.7,
 		color: "Blue",
-		prevo : "Luvdisc",
+		prevo: "Luvdisc",
 		eggGroups: ["Water2"],
 	},
 	karmris: {
@@ -65981,7 +66065,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 26.5,
 		color: "Brown",
-		prevo : "Deltrune",
+		prevo: "Deltrune",
 		eggGroups: ["Monster"],
 	},
 	swimnecrolilith: {
@@ -65993,7 +66077,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 32.0,
 		color: "White",
-		prevo : "Necrolili",
+		prevo: "Necrolili",
 		eggGroups: ["Amorphous"],
 	},
 	gloob: {
@@ -66016,7 +66100,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 1.2,
 		color: "Green",
-		evos : ["Duodreamulus"],
+		evos: ["Duodreamulus"],
 		eggGroups: ["Undiscovered"],
 	},
 	duodreamulus: {
@@ -66028,8 +66112,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 11.2,
 		color: "Green",
-		prevo : "Dreamulus",
-		evos : ["Dreamungus", "Dreamare"],
+		prevo: "Dreamulus",
+		evos: ["Dreamungus", "Dreamare"],
 		eggGroups: ["Undiscovered"],
 	},
 	dreamungus: {
@@ -66041,7 +66125,7 @@ blobbosmechelectric: {
 		heightm: 4.2,
 		weightkg: 221.2,
 		color: "Green",
-		prevo : "Duodreamulus",
+		prevo: "Duodreamulus",
 		eggGroups: ["Amorphous"],
 	},
 	dreamare: {
@@ -66053,7 +66137,7 @@ blobbosmechelectric: {
 		heightm: 4.2,
 		weightkg: 221.2,
 		color: "Green",
-		prevo : "Duodreamulus",
+		prevo: "Duodreamulus",
 		eggGroups: ["Amorphous"],
 	},
 	drasleep: {
@@ -66076,7 +66160,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Blue",
-		evos : ["Biteragon"],
+		evos: ["Biteragon"],
 		eggGroups: ["Bug", "Dragon"],
 	},
 	biteragon: {
@@ -66088,8 +66172,8 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 50.5,
 		color: "Blue",
-		prevo : "Drabite",
-		evos : ["Herculeagon"],
+		prevo: "Drabite",
+		evos: ["Herculeagon"],
 		eggGroups: ["Bug", "Dragon"],
 	},
 	herculeagon: {
@@ -66101,7 +66185,7 @@ blobbosmechelectric: {
 		heightm: 3.7,
 		weightkg: 220.5,
 		color: "Blue",
-		prevo : "Biteragon",
+		prevo: "Biteragon",
 		eggGroups: ["Bug", "Dragon"],
 	},
 	mmagcargo: {
@@ -66113,7 +66197,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 155.0,
 		color: "Red",
-		prevo : "Magcargo",
+		prevo: "Magcargo",
 		eggGroups: ["Amorphous"],
 	},
 	drowsleep: {
@@ -66125,7 +66209,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 1.2,
 		color: "Green",
-		evos : ["Sleepevil"],
+		evos: ["Sleepevil"],
 		eggGroups: ["Amorphous"],
 	},
 	sleepevil: {
@@ -66137,8 +66221,8 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 1.2,
 		color: "Green",
-		prevo : "Drowsleep",
-		evos : ["Dreamarx"],
+		prevo: "Drowsleep",
+		evos: ["Dreamarx"],
 		eggGroups: ["Amorphous"],
 	},
 	dreamarx: {
@@ -66150,7 +66234,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 31.2,
 		color: "Green",
-		prevo : "Sleepevil",
+		prevo: "Sleepevil",
 		eggGroups: ["Amorphous"],
 	},
 	pizzaur: {
@@ -66162,7 +66246,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 17.5,
 		color: "Pink",
-		evos : ["Pizzaurex"],
+		evos: ["Pizzaurex"],
 		eggGroups: ["Dragon", "Monster"],
 	},
 	pizzaurex: {
@@ -66174,7 +66258,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 17.5,
 		color: "Pink",
-		prevo : "Pizzaur",
+		prevo: "Pizzaur",
 		eggGroups: ["Dragon", "Monster"],
 	},
 	drewi: {
@@ -66186,7 +66270,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 5.2,
 		color: "Green",
-		evos : ["Dreamwi"],
+		evos: ["Dreamwi"],
 		eggGroups: ["Amorphous", "Flying"],
 	},
 	dreamwi: {
@@ -66198,7 +66282,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 85.2,
 		color: "Green",
-		prevo : "Drewi",
+		prevo: "Drewi",
 		eggGroups: ["Amorphous", "Flying"],
 	},
 	psycasso: {
@@ -66232,7 +66316,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 21.9,
 		color: "Yellow",
-		prevo : "Ninetaleshuninetales",
+		prevo: "Ninetaleshuninetales",
 		eggGroups: ["Field"],
 	},
 	mrapidash: {
@@ -66244,7 +66328,7 @@ blobbosmechelectric: {
 		heightm: 2.7,
 		weightkg: 125.0,
 		color: "Yellow",
-		prevo : "Rapidash",
+		prevo: "Rapidash",
 		eggGroups: ["Field"],
 	},
 	formspawn: {
@@ -66267,7 +66351,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 58.0,
 		color: "Red",
-		prevo : "Heatmor",
+		prevo: "Heatmor",
 		eggGroups: ["Field"],
 	},
 	himf: {
@@ -66290,7 +66374,7 @@ blobbosmechelectric: {
 		heightm: 2.7,
 		weightkg: 195.0,
 		color: "Yellow",
-		prevo : "Rapidash",
+		prevo: "Rapidash",
 		eggGroups: ["Field"],
 	},
 	tsoadggua: {
@@ -66335,7 +66419,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 155.0,
 		color: "Brown",
-		prevo : "Arcanineionnine",
+		prevo: "Arcanineionnine",
 		eggGroups: ["Field"],
 	},
 	spooklypuff: {
@@ -66347,7 +66431,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 0.5,
 		color: "Pink",
-		prevo : "Jigglypuffbjigglypuff",
+		prevo: "Jigglypuffbjigglypuff",
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	stogenie: {
@@ -66370,7 +66454,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 24.4,
 		color: "Pink",
-		evos : ["Ebolass"],
+		evos: ["Ebolass"],
 		eggGroups: ["Undiscovered"],
 	},
 	ebolass: {
@@ -66382,8 +66466,8 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 24.4,
 		color: "Pink",
-		prevo : "Ebolette",
-		evos : ["Autisma", "Nursebola"],
+		prevo: "Ebolette",
+		evos: ["Autisma", "Nursebola"],
 		eggGroups: ["Amorphous", "Fairy"],
 	},
 	tortaco: {
@@ -66417,7 +66501,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.5,
 		color: "Green",
-		evos : ["Bitsy"],
+		evos: ["Bitsy"],
 		eggGroups: ["Bug"],
 	},
 	bitsy: {
@@ -66429,7 +66513,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 78.5,
 		color: "Green",
-		prevo : "Itsy",
+		prevo: "Itsy",
 		eggGroups: ["Bug", "Mineral"],
 	},
 	sleamy: {
@@ -66452,7 +66536,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 2.6,
 		color: "Green",
-		evos : ["Lombression"],
+		evos: ["Lombression"],
 		eggGroups: ["Water1", "Grass"],
 	},
 	lombression: {
@@ -66464,8 +66548,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 32.5,
 		color: "Green",
-		prevo : "Dementad",
-		evos : ["Lunaticolo"],
+		prevo: "Dementad",
+		evos: ["Lunaticolo"],
 		eggGroups: ["Water1", "Grass"],
 	},
 	lunaticolo: {
@@ -66477,7 +66561,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 55.0,
 		color: "Green",
-		prevo : "Lombression",
+		prevo: "Lombression",
 		eggGroups: ["Water1", "Grass"],
 	},
 	glaakine: {
@@ -66522,7 +66606,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 12.0,
 		color: "White",
-		evos : ["Tendream"],
+		evos: ["Tendream"],
 		eggGroups: ["Amorphous", "Fairy"],
 	},
 	tendream: {
@@ -66534,7 +66618,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 12.0,
 		color: "White",
-		prevo : "Pijammin",
+		prevo: "Pijammin",
 		eggGroups: ["Amorphous", "Fairy"],
 	},
 	amigoggoth: {
@@ -66546,7 +66630,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 39.1,
 		color: "Gray",
-		prevo : "Migus",
+		prevo: "Migus",
 		eggGroups: ["Amorphous"],
 	},
 	nebrownie: {
@@ -66558,7 +66642,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 50.4,
 		color: "Yellow",
-		evos : ["Galactcake"],
+		evos: ["Galactcake"],
 		eggGroups: ["Humanlike", "Mineral"],
 	},
 	galactcake: {
@@ -66570,7 +66654,7 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 150.4,
 		color: "Yellow",
-		prevo : "Nebrownie",
+		prevo: "Nebrownie",
 		eggGroups: ["Humanlike", "Mineral"],
 	},
 	ygolonacol: {
@@ -66593,7 +66677,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.5,
 		color: "Green",
-		evos : ["Eihortli"],
+		evos: ["Eihortli"],
 		eggGroups: ["Undiscovered"],
 	},
 	eihortli: {
@@ -66605,7 +66689,7 @@ blobbosmechelectric: {
 		heightm: 5.5,
 		weightkg: 130.5,
 		color: "Green",
-		prevo : "Broodhort",
+		prevo: "Broodhort",
 		eggGroups: ["Humanlike", "Field"],
 	},
 	cthoniurm: {
@@ -66617,7 +66701,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 108.8,
 		color: "Brown",
-		evos : ["Shuddermell"],
+		evos: ["Shuddermell"],
 		eggGroups: ["Monster", "Amorphous"],
 	},
 	shuddermell: {
@@ -66629,7 +66713,7 @@ blobbosmechelectric: {
 		heightm: 35.2,
 		weightkg: 2108.8,
 		color: "Brown",
-		prevo : "Cthoniurm",
+		prevo: "Cthoniurm",
 		eggGroups: ["Monster", "Amorphous"],
 	},
 	himstm: {
@@ -66663,7 +66747,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 0.3,
 		color: "Purple",
-		prevo : "Clavies",
+		prevo: "Clavies",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	steamnie: {
@@ -66675,7 +66759,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 19.0,
 		color: "Blue",
-		prevo : "Steamea",
+		prevo: "Steamea",
 		eggGroups: ["Amorphous", "Water1"],
 	},
 	starvipup: {
@@ -66687,7 +66771,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.1,
 		color: "Brown",
-		evos : ["Hungier"],
+		evos: ["Hungier"],
 		eggGroups: ["Field"],
 	},
 	hungier: {
@@ -66699,8 +66783,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 14.7,
 		color: "Gray",
-		prevo : "Starvipup",
-		evos : ["Loyaland", "Hollowland"],
+		prevo: "Starvipup",
+		evos: ["Loyaland", "Hollowland"],
 		eggGroups: ["Field"],
 	},
 	hollowland: {
@@ -66712,7 +66796,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 61.0,
 		color: "Gray",
-		prevo : "Hungier",
+		prevo: "Hungier",
 		eggGroups: ["Field"],
 	},
 	loyaland: {
@@ -66724,7 +66808,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 61.0,
 		color: "Gray",
-		prevo : "Hungier",
+		prevo: "Hungier",
 		eggGroups: ["Field"],
 	},
 	nugger: {
@@ -66758,7 +66842,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 39.0,
 		color: "Brown",
-		prevo : "Pumpkaboo",
+		prevo: "Pumpkaboo",
 		eggGroups: ["Amorphous"],
 	},
 	soulatte: {
@@ -66770,7 +66854,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 39.0,
 		color: "Brown",
-		prevo : "Pumpkaboo",
+		prevo: "Pumpkaboo",
 		eggGroups: ["Amorphous"],
 	},
 	emojicon: {
@@ -66782,7 +66866,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 20.5,
 		color: "Yellow",
-		evos : ["Cursedcon", "Xokcon", "Crycon", "Noocon"],
+		evos: ["Cursedcon", "Xokcon", "Crycon", "Noocon"],
 		eggGroups: ["Amorphous"],
 	},
 	cursedcon: {
@@ -66794,7 +66878,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Yellow",
-		prevo : "Emojicon",
+		prevo: "Emojicon",
 		eggGroups: ["Amorphous"],
 	},
 	crycon: {
@@ -66806,7 +66890,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.5,
 		color: "Yellow",
-		prevo : "Emojicon",
+		prevo: "Emojicon",
 		eggGroups: ["Amorphous", "Fairy"],
 	},
 	xokcon: {
@@ -66818,7 +66902,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 20.5,
 		color: "Yellow",
-		prevo : "Emojicon",
+		prevo: "Emojicon",
 		eggGroups: ["Amorphous"],
 	},
 	noocon: {
@@ -66830,7 +66914,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Yellow",
-		prevo : "Emojicon",
+		prevo: "Emojicon",
 		eggGroups: ["Amorphous"],
 	},
 	qwailmer: {
@@ -66842,7 +66926,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 130.0,
 		color: "Blue",
-		evos : ["Qwailord"],
+		evos: ["Qwailord"],
 		eggGroups: ["Field", "Water2"],
 	},
 	qwailord: {
@@ -66854,7 +66938,7 @@ blobbosmechelectric: {
 		heightm: 14.5,
 		weightkg: 750.0,
 		color: "Blue",
-		prevo : "Qwailmer",
+		prevo: "Qwailmer",
 		eggGroups: ["Field", "Water2"],
 	},
 	lagoonask: {
@@ -66866,7 +66950,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 10.2,
 		color: "Black",
-		prevo : "Twickotweet",
+		prevo: "Twickotweet",
 		eggGroups: ["Humanlike", "Water1"],
 	},
 	msteamboatle: {
@@ -66878,7 +66962,7 @@ blobbosmechelectric: {
 		heightm: 5.5,
 		weightkg: 1222.0,
 		color: "Blue",
-		prevo : "Steamboatle",
+		prevo: "Steamboatle",
 		eggGroups: ["Amorphous", "Water1"],
 	},
 	mlavagun: {
@@ -66890,7 +66974,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 28.5,
 		color: "Red",
-		prevo : "Lavagun",
+		prevo: "Lavagun",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	marbrood: {
@@ -66902,7 +66986,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 13.0,
 		color: "Green",
-		prevo : "Arbrood",
+		prevo: "Arbrood",
 		eggGroups: ["Monster", "Grass"],
 	},
 	opticus: {
@@ -66914,7 +66998,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 7.5,
 		color: "Red",
-		evos : ["Optulzu"],
+		evos: ["Optulzu"],
 		eggGroups: ["Amorphous"],
 	},
 	opticusowl: {
@@ -66926,7 +67010,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 7.5,
 		color: "Red",
-		evos : ["Optulzu"],
+		evos: ["Optulzu"],
 		eggGroups: ["Amorphous"],
 	},
 	opticusufo: {
@@ -66938,21 +67022,39 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 7.5,
 		color: "Red",
-		evos : ["Optulzu"],
+		evos: ["Optulzu"],
 		eggGroups: ["Amorphous"],
 	},
 	optulzu: {
 		num: 667623,
 		name: "Optulzu",
+		baseForme: "Standard",
 		types: ["Fear", "Blood"],
 		baseStats: {hp: 80, atk: 115, def: 60, spa: 115, spd: 60, spe: 100},
 		abilities: {0: "Intimidate", 1: "Shadow Call", H: "Zen Mode"},
 		heightm: 5.3,
 		weightkg: 117.5,
 		color: "Red",
-		prevo : "Opticusopticusowlopticusufo",
-		evos : ["Retulzu", "Spatulzu"],
+		prevo: "Opticus",
+		evos: ["Retulzu", "Spatulzu"],
 		eggGroups: ["Amorphous"],
+		otherFormes: ["Optulzuzen-Zen"],
+		formeOrder: ["Optulzu", "Optulzu-Zen"],
+	},
+	optulzuzen: {
+		num: 667623,
+		name: "Optulzu-Zen",
+		baseSpecies: "Optulzu",
+		forme: "Zen",
+		types: ["Fear", "Blood"],
+		baseStats: {hp: 80, atk: 140, def: 40, spa: 100, spd: 40, spe: 120},
+		abilities: {0: "Zen Mode"},
+		heightm: 5.3,
+		weightkg: 117.5,
+		color: "Red",
+		eggGroups: ["Amorphous"],
+		requiredAbility: "Zen Mode",
+		battleOnly: "Optulzu",
 	},
 	wololo: {
 		num: 667624,
@@ -66963,7 +67065,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 37.8,
 		color: "White",
-		prevo : "Wooloo",
+		prevo: "Wooloo",
 		eggGroups: ["Humanlike", "Field"],
 	},
 	gmeowth: {
@@ -66975,7 +67077,7 @@ blobbosmechelectric: {
 		heightm: 25.4,
 		weightkg: 914.2,
 		color: "Yellow",
-		prevo : "Meowth",
+		prevo: "Meowth",
 		eggGroups: ["Field"],
 	},
 	gameowth: {
@@ -66987,7 +67089,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Yellow",
-		prevo : "Ameowth",
+		prevo: "Ameowth",
 		eggGroups: ["Field"],
 	},
 	gpikachu: {
@@ -66999,7 +67101,7 @@ blobbosmechelectric: {
 		heightm: 15.4,
 		weightkg: 1116.0,
 		color: "Yellow",
-		prevo : "Pikachu",
+		prevo: "Pikachu",
 		eggGroups: ["Field", "Fairy"],
 	},
 	geevee: {
@@ -67011,7 +67113,7 @@ blobbosmechelectric: {
 		heightm: 12.3,
 		weightkg: 816.5,
 		color: "Brown",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	galcremie: {
@@ -67023,7 +67125,7 @@ blobbosmechelectric: {
 		heightm: 15.8,
 		weightkg: 1115.0,
 		color: "White",
-		prevo : "Alcremie",
+		prevo: "Alcremie",
 		eggGroups: ["Fairy"],
 	},
 	gdrednaw: {
@@ -67035,7 +67137,7 @@ blobbosmechelectric: {
 		heightm: 16.9,
 		weightkg: 2116.5,
 		color: "Blue",
-		prevo : "Drednaw",
+		prevo: "Drednaw",
 		eggGroups: ["Water1", "Water3"],
 	},
 	gcorviknight: {
@@ -67047,7 +67149,7 @@ blobbosmechelectric: {
 		heightm: 20.7,
 		weightkg: 1180.5,
 		color: "Gray",
-		prevo : "Corviknight",
+		prevo: "Corviknight",
 		eggGroups: ["Flying"],
 	},
 	mspinda: {
@@ -67059,7 +67161,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 5.0,
 		color: "Brown",
-		prevo : "Spinda",
+		prevo: "Spinda",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	mpyroar: {
@@ -67071,7 +67173,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 81.5,
 		color: "Brown",
-		prevo : "Pyroar",
+		prevo: "Pyroar",
 		eggGroups: ["Field"],
 	},
 	ayymask: {
@@ -67083,7 +67185,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 10.2,
 		color: "Black",
-		prevo : "Twickotweet",
+		prevo: "Twickotweet",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	wphantump: {
@@ -67095,7 +67197,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 7.0,
 		color: "Brown",
-		evos : ["Wtrevenant"],
+		evos: ["Wtrevenant"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	wtrevenant: {
@@ -67107,7 +67209,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 71.0,
 		color: "Brown",
-		prevo : "Wphantump",
+		prevo: "Wphantump",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	zombmask: {
@@ -67119,7 +67221,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 10.2,
 		color: "Black",
-		prevo : "Twickotweet",
+		prevo: "Twickotweet",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	battora: {
@@ -67153,7 +67255,7 @@ blobbosmechelectric: {
 		heightm: 10.5,
 		weightkg: 112.5,
 		color: "Purple",
-		prevo : "Venonat",
+		prevo: "Venonat",
 		eggGroups: ["Bug"],
 	},
 	beatoriche: {
@@ -67176,7 +67278,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 15.5,
 		color: "Red",
-		prevo : "Lusfairy",
+		prevo: "Lusfairy",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	fugury: {
@@ -67188,7 +67290,7 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 33.9,
 		color: "Gray",
-		prevo : "Qwilfish",
+		prevo: "Qwilfish",
 		eggGroups: ["Water2"],
 	},
 	navabrine: {
@@ -67200,8 +67302,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 33.9,
 		color: "Gray",
-		prevo : "Qwilfishaqwilfish",
-		evos : ["Koilrig"],
+		prevo: "Qwilfishaqwilfish",
+		evos: ["Koilrig"],
 		eggGroups: ["Water2", "Mineral"],
 	},
 	koilrig: {
@@ -67213,7 +67315,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 33.9,
 		color: "Gray",
-		prevo : "Navabrine",
+		prevo: "Navabrine",
 		eggGroups: ["Water2", "Mineral"],
 	},
 	wobbugeist: {
@@ -67225,7 +67327,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 28.5,
 		color: "Blue",
-		prevo : "Wobbuffet",
+		prevo: "Wobbuffet",
 		eggGroups: ["Amorphous"],
 	},
 	yeerby: {
@@ -67237,7 +67339,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 11.2,
 		color: "Brown",
-		evos : ["Suprago", "Psyelk", "Moosid", "Noseer", "Fabdeer", "Stormdler", "Stantler"],
+		evos: ["Suprago", "Psyelk", "Moosid", "Noseer", "Fabdeer", "Stormdler", "Stantler"],
 		eggGroups: ["Undiscovered"],
 	},
 	psyelk: {
@@ -67249,7 +67351,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 70.2,
 		color: "Brown",
-		prevo : "Yeerby",
+		prevo: "Yeerby",
 		eggGroups: ["Field"],
 	},
 	suprago: {
@@ -67261,7 +67363,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 105.2,
 		color: "Brown",
-		prevo : "Yeerby",
+		prevo: "Yeerby",
 		eggGroups: ["Field"],
 	},
 	moosid: {
@@ -67273,7 +67375,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 71.2,
 		color: "Brown",
-		prevo : "Yeerby",
+		prevo: "Yeerby",
 		eggGroups: ["Field"],
 	},
 	swirlpup: {
@@ -67285,8 +67387,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 15.0,
 		color: "White",
-		prevo : "Swirlix",
-		evos : ["Frostpup"],
+		prevo: "Swirlix",
+		evos: ["Frostpup"],
 		eggGroups: ["Fairy"],
 	},
 	frostpup: {
@@ -67298,7 +67400,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 15.0,
 		color: "White",
-		prevo : "Swirlpup",
+		prevo: "Swirlpup",
 		eggGroups: ["Fairy"],
 	},
 	giramare: {
@@ -67310,7 +67412,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 41.5,
 		color: "Yellow",
-		prevo : "Girafarig",
+		prevo: "Girafarig",
 		eggGroups: ["Field", "Amorphous"],
 	},
 	giradream: {
@@ -67322,7 +67424,7 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 51.5,
 		color: "Yellow",
-		prevo : "Girafarig",
+		prevo: "Girafarig",
 		eggGroups: ["Field"],
 	},
 	himmagma: {
@@ -67378,7 +67480,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 10.2,
 		color: "Black",
-		prevo : "Twickotweet",
+		prevo: "Twickotweet",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	autisma: {
@@ -67390,7 +67492,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 44.4,
 		color: "Pink",
-		prevo : "Ebolass",
+		prevo: "Ebolass",
 		eggGroups: ["Amorphous", "Fairy"],
 	},
 	nucleshark: {
@@ -67402,7 +67504,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 33.9,
 		color: "Gray",
-		prevo : "Qwilfishaqwilfish",
+		prevo: "Qwilfishaqwilfish",
 		eggGroups: ["Water2", "Mineral"],
 	},
 	mummyask: {
@@ -67414,7 +67516,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 10.2,
 		color: "Black",
-		prevo : "Twickotweet",
+		prevo: "Twickotweet",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	juggler: {
@@ -67431,14 +67533,32 @@ blobbosmechelectric: {
 	withrew: {
 		num: 667664,
 		name: "Withrew",
+		baseForme: "Standard",
 		types: ["Chaos", "Poison"],
 		baseStats: {hp: 70, atk: 20, def: 70, spa: 20, spd: 70, spe: 30},
 		abilities: {0: "Overcoat", 1: "Zen Mode", H: "Wonder Guard"},
 		heightm: 0.2,
 		weightkg: 1.2,
 		color: "Green",
-		evos : ["Malevia"],
+		evos: ["Malevia"],
 		eggGroups: ["Undiscovered"],
+		otherFormes: ["Withrew-Zen"],
+		formeOrder: ["Withrew", "Withrew-Zen"],
+	},
+	withrewzen: {
+		num: 667664,
+		name: "Withrew-Zen",
+		baseSpecies: "Withrew",
+		forme: "Zen",
+		types: ["Chaos", "Poison"],
+		baseStats: {hp: 70, atk: 100, def: 25, spa: 100, spd: 25, spe: 100},
+		abilities: {0: "Zen Mode"},
+		heightm: 0.2,
+		weightkg: 1.2,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+		requiredAbility: "Zen Mode",
+		battleOnly: "Withrew",
 	},
 	malevia: {
 		num: 667665,
@@ -67449,8 +67569,8 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 2.2,
 		color: "Green",
-		prevo : "Withrew",
-		evos : ["Rosemalum"],
+		prevo: "Withrew",
+		evos: ["Rosemalum"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	rosemalum: {
@@ -67462,7 +67582,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 2.2,
 		color: "Green",
-		prevo : "Malevia",
+		prevo: "Malevia",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	subroclock: {
@@ -67474,7 +67594,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.8,
 		color: "Brown",
-		prevo : "Diglettnimbett",
+		prevo: "Diglettnimbett",
 		eggGroups: ["Field"],
 	},
 	egguish: {
@@ -67486,7 +67606,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 7.5,
 		color: "Red",
-		evos : ["Friendfly", "Deleggme"],
+		evos: ["Friendfly", "Deleggme"],
 		eggGroups: ["Amorphous"],
 	},
 	friendfly: {
@@ -67498,7 +67618,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Red",
-		prevo : "Egguish",
+		prevo: "Egguish",
 		eggGroups: ["Amorphous"],
 	},
 	deleggme: {
@@ -67510,7 +67630,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 7.5,
 		color: "Red",
-		prevo : "Egguish",
+		prevo: "Egguish",
 		eggGroups: ["Amorphous"],
 	},
 	nymbiosego: {
@@ -67522,8 +67642,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 55.5,
 		color: "Blue",
-		prevo : "Nihilego",
-		evos : ["Mother Beast"],
+		prevo: "Nihilego",
+		evos: ["Mother Beast"],
 		eggGroups: ["Amorphous"],
 	},
 	motherbeast: {
@@ -67535,7 +67655,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 55.5,
 		color: "Blue",
-		prevo : "Nymbiosego",
+		prevo: "Nymbiosego",
 		eggGroups: ["Amorphous"],
 	},
 	slugia: {
@@ -67569,7 +67689,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 19.5,
 		color: "Brown",
-		evos : ["Kapierce"],
+		evos: ["Kapierce"],
 		eggGroups: ["Humanlike"],
 	},
 	kapierce: {
@@ -67581,8 +67701,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 56.5,
 		color: "Brown",
-		prevo : "Stabra",
-		evos : ["Alakatana"],
+		prevo: "Stabra",
+		evos: ["Alakatana"],
 		eggGroups: ["Humanlike"],
 	},
 	alakatana: {
@@ -67594,7 +67714,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 48.0,
 		color: "Brown",
-		prevo : "Kapierce",
+		prevo: "Kapierce",
 		eggGroups: ["Humanlike"],
 	},
 	servglaak: {
@@ -67617,7 +67737,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 6.5,
 		color: "Brown",
-		evos : ["Bubble Slime", "Seaslimee", "Kingslimee", "Metalslimee", "Darlime", "Heal Slimee"],
+		evos: ["Bubble Slime", "Seaslimee", "Kingslimee", "Metalslimee", "Darlime", "Heal Slimee"],
 		eggGroups: ["Amorphous"],
 	},
 	kingslimee: {
@@ -67629,7 +67749,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 1116.5,
 		color: "Brown",
-		prevo : "Slimee",
+		prevo: "Slimee",
 		eggGroups: ["Amorphous"],
 	},
 	darlime: {
@@ -67641,8 +67761,8 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Slimee",
-		evos : ["Kingdarlime"],
+		prevo: "Slimee",
+		evos: ["Kingdarlime"],
 		eggGroups: ["Amorphous"],
 	},
 	kingdarlime: {
@@ -67654,7 +67774,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 1116.5,
 		color: "Brown",
-		prevo : "Darlime",
+		prevo: "Darlime",
 		eggGroups: ["Amorphous"],
 	},
 	taurosteak: {
@@ -67688,7 +67808,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 30.0,
 		color: "Yellow",
-		evos : ["Grapidash"],
+		evos: ["Grapidash"],
 		eggGroups: ["Field"],
 	},
 	grapidash: {
@@ -67700,7 +67820,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 95.0,
 		color: "Yellow",
-		prevo : "Gponyta",
+		prevo: "Gponyta",
 		eggGroups: ["Field"],
 	},
 	gstunfisk: {
@@ -67712,8 +67832,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 11.0,
 		color: "Brown",
-		prevo : "Stunfish",
-		evos : ["Stuntrap"],
+		prevo: "Stunfish",
+		evos: ["Stuntrap"],
 		eggGroups: ["Water1", "Amorphous"],
 	},
 	rookiedie: {
@@ -67725,7 +67845,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 1.5,
 		color: "Gray",
-		evos : ["Corvisquire"],
+		evos: ["Corvisquire"],
 		eggGroups: ["Flying"],
 	},
 	nicket: {
@@ -67737,7 +67857,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 13.6,
 		color: "Gray",
-		evos : ["Thievul"],
+		evos: ["Thievul"],
 		eggGroups: ["Field"],
 	},
 	carkoal: {
@@ -67749,8 +67869,8 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 115.0,
 		color: "Brown",
-		prevo : "Rolycoly",
-		evos : ["Coalossal", "Locoalmotive"],
+		prevo: "Rolycoly",
+		evos: ["Coalossal", "Locoalmotive"],
 		eggGroups: ["Mineral"],
 	},
 	galmeowth: {
@@ -67762,7 +67882,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Yellow",
-		evos : ["Perrserker", "Galpersian"],
+		evos: ["Perrserker", "Galpersian"],
 		eggGroups: ["Field"],
 	},
 	gcorsola: {
@@ -67774,7 +67894,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 5.0,
 		color: "Pink",
-		evos : ["Cursola"],
+		evos: ["Cursola"],
 		eggGroups: ["Water1", "Water3"],
 	},
 	hattena: {
@@ -67786,7 +67906,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.6,
 		color: "White",
-		evos : ["Hattrem"],
+		evos: ["Hattrem"],
 		eggGroups: ["Amorphous"],
 	},
 	gyamask: {
@@ -67798,7 +67918,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 1.5,
 		color: "Black",
-		evos : ["Runerigus"],
+		evos: ["Runerigus"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	tbreloom: {
@@ -67810,7 +67930,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 39.2,
 		color: "Green",
-		prevo : "Shroomish",
+		prevo: "Shroomish",
 		eggGroups: ["Fairy", "Grass"],
 	},
 	astrobunny: {
@@ -67822,7 +67942,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 18.5,
 		color: "Red",
-		prevo : "Raboot",
+		prevo: "Raboot",
 		eggGroups: ["Field"],
 	},
 	wsnover: {
@@ -67834,7 +67954,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 50.5,
 		color: "White",
-		evos : ["Wabomasnow"],
+		evos: ["Wabomasnow"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	wabomasnow: {
@@ -67846,7 +67966,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 135.5,
 		color: "White",
-		prevo : "Wsnover",
+		prevo: "Wsnover",
 		eggGroups: ["Monster", "Grass"],
 	},
 	gmrmime: {
@@ -67858,8 +67978,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 54.5,
 		color: "Pink",
-		prevo : "Mimejrgmimejr",
-		evos : ["Mr Rime"],
+		prevo: "Mimejrgmimejr",
+		evos: ["Mr Rime"],
 		eggGroups: ["Humanlike"],
 	},
 	zazamenta: {
@@ -67904,7 +68024,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 115.0,
 		color: "Brown",
-		prevo : "Carkoal",
+		prevo: "Carkoal",
 		eggGroups: ["Mineral"],
 	},
 	rotomchu: {
@@ -67927,7 +68047,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 1.5,
 		color: "Black",
-		evos : ["Tdcofagrigus"],
+		evos: ["Tdcofagrigus"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	tdcofagrigus: {
@@ -67939,7 +68059,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 1.5,
 		color: "Black",
-		prevo : "Tdyamask",
+		prevo: "Tdyamask",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	tgyamask: {
@@ -67951,7 +68071,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 1.5,
 		color: "Black",
-		evos : ["Tgcofagrigus"],
+		evos: ["Tgcofagrigus"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	tgcofagrigus: {
@@ -67963,7 +68083,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 41.5,
 		color: "Black",
-		prevo : "Tgyamask",
+		prevo: "Tgyamask",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	tzyamask: {
@@ -67975,7 +68095,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 1.5,
 		color: "Black",
-		evos : ["Tzcofagrigus"],
+		evos: ["Tzcofagrigus"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	tzcofagrigus: {
@@ -67987,7 +68107,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 21.5,
 		color: "Black",
-		prevo : "Tzyamask",
+		prevo: "Tzyamask",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	tmlyamask: {
@@ -67999,7 +68119,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 1.5,
 		color: "Black",
-		evos : ["Tikcofagrigus"],
+		evos: ["Tikcofagrigus"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	tikcofagrigus: {
@@ -68011,7 +68131,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 21.5,
 		color: "Black",
-		prevo : "Tmlyamask",
+		prevo: "Tmlyamask",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	kasensage: {
@@ -68034,7 +68154,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 15.0,
 		color: "Black",
-		evos : ["Tdusclops"],
+		evos: ["Tdusclops"],
 		eggGroups: ["Amorphous"],
 	},
 	tdusclops: {
@@ -68046,8 +68166,8 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 30.6,
 		color: "Black",
-		prevo : "Tduskull",
-		evos : ["Duscelle"],
+		prevo: "Tduskull",
+		evos: ["Duscelle"],
 		eggGroups: ["Amorphous"],
 	},
 	duscelle: {
@@ -68059,7 +68179,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 106.6,
 		color: "Black",
-		prevo : "Tdusclops",
+		prevo: "Tdusclops",
 		eggGroups: ["Amorphous"],
 	},
 	tspoink: {
@@ -68071,7 +68191,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 30.6,
 		color: "Black",
-		evos : ["Tgrumpig"],
+		evos: ["Tgrumpig"],
 		eggGroups: ["Field"],
 	},
 	tgrumpig: {
@@ -68083,7 +68203,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 71.5,
 		color: "Purple",
-		prevo : "Tspoink",
+		prevo: "Tspoink",
 		eggGroups: ["Field"],
 	},
 	tbmspoink: {
@@ -68161,7 +68281,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		prevo : "Toxel",
+		prevo: "Toxel",
 		eggGroups: ["Dragon", "Monster"],
 	},
 	gfarfetchd: {
@@ -68173,7 +68293,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 15.0,
 		color: "Brown",
-		evos : ["Sirfetchd"],
+		evos: ["Sirfetchd"],
 		eggGroups: ["Flying", "Field"],
 	},
 	neapolitaneiscue: {
@@ -68196,7 +68316,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 26.5,
 		color: "Brown",
-		prevo : "Deltrune",
+		prevo: "Deltrune",
 		eggGroups: ["Monster"],
 	},
 	gdarumaka: {
@@ -68208,7 +68328,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 37.5,
 		color: "Red",
-		evos : ["Gdarmanitan"],
+		evos: ["Gdarmanitan"],
 		eggGroups: ["Field"],
 	},
 	gdarmanitan: {
@@ -68220,7 +68340,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 92.9,
 		color: "Red",
-		prevo : "Gdarumaka",
+		prevo: "Gdarumaka",
 		eggGroups: ["Field"],
 	},
 	scpee999: {
@@ -68243,7 +68363,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 66.6,
 		color: "Red",
-		prevo : "Voltorb",
+		prevo: "Voltorb",
 		eggGroups: ["Mineral"],
 	},
 	shadsquirtle: {
@@ -68277,7 +68397,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 28.0,
 		color: "Yellow",
-		prevo : "Pelipper",
+		prevo: "Pelipper",
 		eggGroups: ["Water1", "Flying"],
 	},
 	mpersian: {
@@ -68289,7 +68409,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 32.0,
 		color: "Yellow",
-		prevo : "Persian",
+		prevo: "Persian",
 		eggGroups: ["Field"],
 	},
 	mapersian: {
@@ -68301,7 +68421,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 32.0,
 		color: "Yellow",
-		prevo : "Apersian",
+		prevo: "Apersian",
 		eggGroups: ["Field"],
 	},
 	marbok: {
@@ -68313,7 +68433,7 @@ blobbosmechelectric: {
 		heightm: 3.5,
 		weightkg: 65.0,
 		color: "Purple",
-		prevo : "Arbokhuarbok",
+		prevo: "Arbokhuarbok",
 		eggGroups: ["Field", "Dragon"],
 	},
 	clowdpoke: {
@@ -68325,7 +68445,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 36.0,
 		color: "Pink",
-		prevo : "Slowpoke",
+		prevo: "Slowpoke",
 		eggGroups: ["Monster", "Water1"],
 	},
 	torcano: {
@@ -68337,7 +68457,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 310.0,
 		color: "Green",
-		prevo : "Turtwig",
+		prevo: "Turtwig",
 		eggGroups: ["Monster", "Grass"],
 	},
 	grumboar: {
@@ -68349,7 +68469,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 71.5,
 		color: "Purple",
-		prevo : "Spoinkcspoink",
+		prevo: "Spoinkcspoink",
 		eggGroups: ["Field"],
 	},
 	baidy: {
@@ -68361,7 +68481,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 2.0,
 		color: "Pink",
-		evos : ["Audino"],
+		evos: ["Audino"],
 		eggGroups: ["Fairy"],
 	},
 	melodyno: {
@@ -68373,7 +68493,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 31.0,
 		color: "Pink",
-		prevo : "Audino",
+		prevo: "Audino",
 		eggGroups: ["Fairy"],
 	},
 	wbaidy: {
@@ -68385,7 +68505,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 2.0,
 		color: "Pink",
-		evos : ["Waudino"],
+		evos: ["Waudino"],
 		eggGroups: ["Fairy"],
 	},
 	waudino: {
@@ -68397,8 +68517,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 31.0,
 		color: "Pink",
-		prevo : "Wbaidy",
-		evos : ["Wmelodyno"],
+		prevo: "Wbaidy",
+		evos: ["Wmelodyno"],
 		eggGroups: ["Fairy"],
 	},
 	wmelodyno: {
@@ -68410,20 +68530,38 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 33.0,
 		color: "Pink",
-		prevo : "Waudino",
+		prevo: "Waudino",
 		eggGroups: ["Fairy"],
 	},
 	wfurret: {
 		num: 667747,
 		name: "Wfurret",
+		baseForme: "Standard",
 		types: ["Rock", "Cosmic"],
 		baseStats: {hp: 80, atk: 35, def: 140, spa: 35, spd: 115, spe: 30},
 		abilities: {0: "Zen Mode", H: "Regenerator"},
 		heightm: 1.8,
 		weightkg: 32.5,
 		color: "Brown",
-		prevo : "Sentret",
+		prevo: "Sentret",
 		eggGroups: ["Field", "Mineral"],
+		otherFormes: ["Wfurret-Zen"],
+		formeOrder: ["Wfurret", "Wfurret-Zen"],
+	},
+	wfurretzen: {
+		num: 667747,
+		name: "Wfurret-Zen",
+		baseSpecies: "Wfurret",
+		forme: "Zen",
+		types: ["Fairy", "Cosmic"],
+		baseStats: {hp: 80, atk: 128, def: 35, spa: 130, spd: 35, spe: 120},
+		abilities: {0: "Zen Mode"},
+		heightm: 1.8,
+		weightkg: 32.5,
+		color: "Brown",
+		eggGroups: ["Field", "Mineral"],
+		requiredAbility: "Zen Mode",
+		battleOnly: "Wfurret",
 	},
 	taker: {
 		num: 667748,
@@ -68445,7 +68583,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	giradrake: {
@@ -68457,7 +68595,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 41.5,
 		color: "Yellow",
-		prevo : "Girafarig",
+		prevo: "Girafarig",
 		eggGroups: ["Field", "Dragon"],
 	},
 	seafarig: {
@@ -68469,7 +68607,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 41.5,
 		color: "Yellow",
-		prevo : "Girafarig",
+		prevo: "Girafarig",
 		eggGroups: ["Field"],
 	},
 	pyooraffe: {
@@ -68481,7 +68619,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 41.5,
 		color: "Yellow",
-		prevo : "Girafarig",
+		prevo: "Girafarig",
 		eggGroups: ["Field"],
 	},
 	darkmare: {
@@ -68493,7 +68631,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 41.5,
 		color: "Yellow",
-		prevo : "Girafarig",
+		prevo: "Girafarig",
 		eggGroups: ["Field", "Amorphous"],
 	},
 	stunfish: {
@@ -68505,7 +68643,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 11.0,
 		color: "Brown",
-		evos : ["Gstunfisk", "Stunfisk"],
+		evos: ["Gstunfisk", "Stunfisk"],
 		eggGroups: ["Water1", "Amorphous"],
 	},
 	shockeel: {
@@ -68517,7 +68655,7 @@ blobbosmechelectric: {
 		heightm: 3.7,
 		weightkg: 91.0,
 		color: "Brown",
-		prevo : "Stunfisk",
+		prevo: "Stunfisk",
 		eggGroups: ["Water1", "Amorphous"],
 	},
 	mantastorm: {
@@ -68529,7 +68667,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 11.0,
 		color: "Brown",
-		prevo : "Stunfisk",
+		prevo: "Stunfisk",
 		eggGroups: ["Water1", "Amorphous"],
 	},
 	stuntrap: {
@@ -68541,7 +68679,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 321.0,
 		color: "Brown",
-		prevo : "Gstunfisk",
+		prevo: "Gstunfisk",
 		eggGroups: ["Water1", "Amorphous"],
 	},
 	cgeodude: {
@@ -68553,7 +68691,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 20.0,
 		color: "Brown",
-		evos : ["Cgraveler"],
+		evos: ["Cgraveler"],
 		eggGroups: ["Mineral"],
 	},
 	cgraveler: {
@@ -68565,8 +68703,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 105.0,
 		color: "Brown",
-		prevo : "Cgeodude",
-		evos : ["Cgolem"],
+		prevo: "Cgeodude",
+		evos: ["Cgolem"],
 		eggGroups: ["Mineral"],
 	},
 	cgolem: {
@@ -68578,7 +68716,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 300.0,
 		color: "Brown",
-		prevo : "Cgraveler",
+		prevo: "Cgraveler",
 		eggGroups: ["Mineral"],
 	},
 	turkking: {
@@ -68601,8 +68739,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 34.6,
 		color: "Pink",
-		prevo : "Happiny",
-		evos : ["Wblissey"],
+		prevo: "Happiny",
+		evos: ["Wblissey"],
 		eggGroups: ["Fairy", "Mineral"],
 	},
 	wblissey: {
@@ -68614,7 +68752,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 46.8,
 		color: "Pink",
-		prevo : "Wchansey",
+		prevo: "Wchansey",
 		eggGroups: ["Fairy", "Mineral"],
 	},
 	hhgregg: {
@@ -68637,7 +68775,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 60.4,
 		color: "Green",
-		prevo : "Cradily",
+		prevo: "Cradily",
 		eggGroups: ["Water3"],
 	},
 	marmaldo: {
@@ -68649,7 +68787,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 68.2,
 		color: "Gray",
-		prevo : "Armaldo",
+		prevo: "Armaldo",
 		eggGroups: ["Water3"],
 	},
 	drbowser: {
@@ -68661,7 +68799,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	himrock: {
@@ -68695,8 +68833,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 7.0,
 		color: "Blue",
-		prevo : "Sobble",
-		evos : ["Suiceleon"],
+		prevo: "Sobble",
+		evos: ["Suiceleon"],
 		eggGroups: ["Water1"],
 	},
 	suiceleon: {
@@ -68708,7 +68846,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 7.0,
 		color: "Blue",
-		prevo : "Depremeleon",
+		prevo: "Depremeleon",
 		eggGroups: ["Water1"],
 	},
 	zimbaga: {
@@ -68720,8 +68858,8 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 9.0,
 		color: "Green",
-		prevo : "Grookey",
-		evos : ["Somalorilla"],
+		prevo: "Grookey",
+		evos: ["Somalorilla"],
 		eggGroups: ["Field", "Grass"],
 	},
 	somalorilla: {
@@ -68733,7 +68871,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 9.0,
 		color: "Green",
-		prevo : "Zimbaga",
+		prevo: "Zimbaga",
 		eggGroups: ["Field", "Grass"],
 	},
 	cindemiga: {
@@ -68745,8 +68883,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 8.5,
 		color: "Red",
-		prevo : "Scorbunny",
-		evos : ["Heakazuking"],
+		prevo: "Scorbunny",
+		evos: ["Heakazuking"],
 		eggGroups: ["Field"],
 	},
 	heakazuking: {
@@ -68758,7 +68896,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 48.5,
 		color: "Red",
-		prevo : "Cindemiga",
+		prevo: "Cindemiga",
 		eggGroups: ["Field"],
 	},
 	koromon: {
@@ -68770,7 +68908,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		evos : ["Blackagumon", "Snowagumon", "Augumon"],
+		evos: ["Blackagumon", "Snowagumon", "Augumon"],
 		eggGroups: ["Undiscovered"],
 	},
 	metalgreymon: {
@@ -68782,8 +68920,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Greymon",
-		evos : ["Wargreymon"],
+		prevo: "Greymon",
+		evos: ["Wargreymon"],
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	metalgreymonv: {
@@ -68795,8 +68933,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Greymonvgreymontyrannomon",
-		evos : ["Wargreymonv"],
+		prevo: "Greymonvgreymontyrannomon",
+		evos: ["Wargreymonv"],
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	pancosmic: {
@@ -68808,7 +68946,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 1.4,
 		color: "Yellow",
-		evos : ["Pancalamity", "Pancallous"],
+		evos: ["Pancalamity", "Pancallous"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	pancalamity: {
@@ -68820,7 +68958,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 50.4,
 		color: "Yellow",
-		prevo : "Pancosmic",
+		prevo: "Pancosmic",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	pancallous: {
@@ -68832,7 +68970,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 50.4,
 		color: "Yellow",
-		prevo : "Pancosmic",
+		prevo: "Pancosmic",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	aloby: {
@@ -68844,7 +68982,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 1.6,
 		color: "Pink",
-		evos : ["Alomomola"],
+		evos: ["Alomomola"],
 		eggGroups: ["Water1", "Water2"],
 	},
 	seraphmola: {
@@ -68856,7 +68994,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 31.6,
 		color: "Pink",
-		prevo : "Alomomola",
+		prevo: "Alomomola",
 		eggGroups: ["Water1", "Water2"],
 	},
 	molashade: {
@@ -68868,7 +69006,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 31.6,
 		color: "Pink",
-		prevo : "Alomomola",
+		prevo: "Alomomola",
 		eggGroups: ["Water1", "Water2"],
 	},
 	wbasculin: {
@@ -68880,7 +69018,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 13.0,
 		color: "Green",
-		evos : ["Anglereist"],
+		evos: ["Anglereist"],
 		eggGroups: ["Water2"],
 	},
 	anglereist: {
@@ -68892,7 +69030,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 18.0,
 		color: "Green",
-		prevo : "Wbasculin",
+		prevo: "Wbasculin",
 		eggGroups: ["Water2"],
 	},
 	fabdeer: {
@@ -68904,7 +69042,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 70.2,
 		color: "Brown",
-		prevo : "Yeerby",
+		prevo: "Yeerby",
 		eggGroups: ["Field"],
 	},
 	stormdler: {
@@ -68916,7 +69054,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 70.2,
 		color: "Brown",
-		prevo : "Yeerby",
+		prevo: "Yeerby",
 		eggGroups: ["Field"],
 	},
 	noseer: {
@@ -68928,7 +69066,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 70.2,
 		color: "Brown",
-		prevo : "Yeerby",
+		prevo: "Yeerby",
 		eggGroups: ["Field"],
 	},
 	smvoodoll: {
@@ -68940,12 +69078,13 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.1,
 		color: "Purple",
-		evos : ["Voodoom"],
+		evos: ["Voodoom"],
 		eggGroups: ["Humanlike", "Field"],
 	},
 	himpaper: {
 		num: 667791,
 		name: "Himpaper",
+		baseForme: "Close",
 		types: ["Paper"],
 		baseStats: {hp: 255, atk: 80, def: 255, spa: 80, spd: 255, spe: 50},
 		abilities: {0: "Competitive", H: "Magic Bounce"},
@@ -68953,6 +69092,22 @@ blobbosmechelectric: {
 		weightkg: 91.0,
 		color: "Blue",
 		eggGroups: ["Undiscovered"],
+		otherFormes: ["Himpaper-Open"],
+		formeOrder: ["Himpaper", "Himpaper-Open"],
+	},
+	himpaperopen: {
+		num: 667791,
+		name: "Himpaper-Open",
+		baseSpecies: "Himpaper",
+		forme: "Open",
+		types: ["Paper"],
+		baseStats: {hp: 255, atk: 185, def: 80, spa: 185, spd: 80, spe: 100},
+		abilities: {0: "Competitive", H: "Magic Bounce"},
+		heightm: 3.9,
+		weightkg: 91.0,
+		color: "Blue",
+		eggGroups: ["Undiscovered"],
+		battleOnly: "Himpaper",
 	},
 	wargreymon: {
 		num: 667792,
@@ -68963,8 +69118,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Metalgreymon",
-		evos : ["Victorygreymon"],
+		prevo: "Metalgreymon",
+		evos: ["Victorygreymon"],
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	wargreymonv: {
@@ -68976,7 +69131,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Metalgreymonv",
+		prevo: "Metalgreymonv",
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	victorygreymon: {
@@ -68988,7 +69143,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Wargreymon",
+		prevo: "Wargreymon",
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	skullgreymon: {
@@ -69000,7 +69155,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Greymontyrannomon",
+		prevo: "Greymontyrannomon",
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	phagus: {
@@ -69012,7 +69167,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		evos : ["Nexaphago"],
+		evos: ["Nexaphago"],
 		eggGroups: ["Amorphous"],
 	},
 	nexaphago: {
@@ -69024,7 +69179,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		prevo : "Phagus",
+		prevo: "Phagus",
 		eggGroups: ["Amorphous"],
 	},
 	himmagic: {
@@ -69047,8 +69202,8 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		prevo : "Stando",
-		evos : ["Standoger"],
+		prevo: "Stando",
+		evos: ["Standoger"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	standoger: {
@@ -69060,7 +69215,7 @@ blobbosmechelectric: {
 		heightm: 1.95,
 		weightkg: 202.5,
 		color: "Blue",
-		prevo : "Standoge",
+		prevo: "Standoge",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	h1e1: {
@@ -69072,7 +69227,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		evos : ["E Boli"],
+		evos: ["E Boli"],
 		eggGroups: ["Amorphous"],
 	},
 	eboli: {
@@ -69084,7 +69239,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		prevo : "H1E1",
+		prevo: "H1E1",
 		eggGroups: ["Amorphous"],
 	},
 	charzar: {
@@ -69107,7 +69262,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.4,
 		color: "Red",
-		evos : ["Devilmar"],
+		evos: ["Devilmar"],
 		eggGroups: ["Undiscovered"],
 	},
 	devilmar: {
@@ -69119,8 +69274,8 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 41.4,
 		color: "Red",
-		prevo : "Devilby",
-		evos : ["Hellmortar"],
+		prevo: "Devilby",
+		evos: ["Hellmortar"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	hellmortar: {
@@ -69132,7 +69287,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 41.4,
 		color: "Red",
-		prevo : "Devilmar",
+		prevo: "Devilmar",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	corneen: {
@@ -69144,7 +69299,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 2.5,
 		color: "Red",
-		evos : ["Maze"],
+		evos: ["Maze"],
 		eggGroups: ["Grass"],
 	},
 	maze: {
@@ -69156,7 +69311,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 2.5,
 		color: "Red",
-		prevo : "Corneen",
+		prevo: "Corneen",
 		eggGroups: ["Grass"],
 	},
 	ricardomilos: {
@@ -69179,7 +69334,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 548.0,
 		color: "Brown",
-		evos : ["Colossoil"],
+		evos: ["Colossoil"],
 		eggGroups: ["Field"],
 	},
 	cascavian: {
@@ -69224,7 +69379,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 4.4,
 		color: "Purple",
-		prevo : "Mismagius",
+		prevo: "Mismagius",
 		eggGroups: ["Amorphous"],
 	},
 	toyagumon: {
@@ -69236,7 +69391,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Augumon",
+		prevo: "Augumon",
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	stoyagumon: {
@@ -69248,7 +69403,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Augumon",
+		prevo: "Augumon",
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	hitleragumon: {
@@ -69260,7 +69415,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Augumon",
+		prevo: "Augumon",
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	biker: {
@@ -69415,7 +69570,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		evos : ["Birdramon"],
+		evos: ["Birdramon"],
 		eggGroups: ["Flying"],
 	},
 	birdramon: {
@@ -69427,8 +69582,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 116.5,
 		color: "Blue",
-		prevo : "Biyomon",
-		evos : ["Garudamon"],
+		prevo: "Biyomon",
+		evos: ["Garudamon"],
 		eggGroups: ["Flying"],
 	},
 	garudamon: {
@@ -69440,8 +69595,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 76.5,
 		color: "Blue",
-		prevo : "Birdramon",
-		evos : ["Hououmon"],
+		prevo: "Birdramon",
+		evos: ["Hououmon"],
 		eggGroups: ["Flying"],
 	},
 	hououmon: {
@@ -69453,8 +69608,8 @@ blobbosmechelectric: {
 		heightm: 14.0,
 		weightkg: 76.5,
 		color: "Blue",
-		prevo : "Garudamon",
-		evos : ["Varodurumon"],
+		prevo: "Garudamon",
+		evos: ["Varodurumon"],
 		eggGroups: ["Flying"],
 	},
 	varodurumon: {
@@ -69466,7 +69621,7 @@ blobbosmechelectric: {
 		heightm: 30.0,
 		weightkg: 576.5,
 		color: "Blue",
-		prevo : "Hououmon",
+		prevo: "Hououmon",
 		eggGroups: ["Flying"],
 	},
 	subaluga: {
@@ -69500,7 +69655,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 1.2,
 		color: "Red",
-		evos : ["Floller"],
+		evos: ["Floller"],
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	floller: {
@@ -69512,7 +69667,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 1.2,
 		color: "Red",
-		prevo : "Troch",
+		prevo: "Troch",
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	tsunomon: {
@@ -69524,7 +69679,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		evos : ["Gabumon", "Elecmon"],
+		evos: ["Gabumon", "Elecmon"],
 		eggGroups: ["Undiscovered"],
 	},
 	gabumon: {
@@ -69536,8 +69691,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Tsunomon",
-		evos : ["Garurumon"],
+		prevo: "Tsunomon",
+		evos: ["Garurumon"],
 		eggGroups: ["Field", "Dragon"],
 	},
 	garurumon: {
@@ -69549,8 +69704,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Gabumon",
-		evos : ["Weregarurumon"],
+		prevo: "Gabumon",
+		evos: ["Weregarurumon"],
 		eggGroups: ["Field", "Dragon"],
 	},
 	weregarurumon: {
@@ -69562,8 +69717,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Garurumon",
-		evos : ["Metalgarurumon"],
+		prevo: "Garurumon",
+		evos: ["Metalgarurumon"],
 		eggGroups: ["Field", "Humanlike"],
 	},
 	metalgarurumon: {
@@ -69575,8 +69730,8 @@ blobbosmechelectric: {
 		heightm: 7.0,
 		weightkg: 1116.5,
 		color: "Blue",
-		prevo : "Weregarurumon",
-		evos : ["Zeedgarurumon"],
+		prevo: "Weregarurumon",
+		evos: ["Zeedgarurumon"],
 		eggGroups: ["Field", "Humanlike"],
 	},
 	zeedgarurumon: {
@@ -69588,7 +69743,7 @@ blobbosmechelectric: {
 		heightm: 14.0,
 		weightkg: 9316.5,
 		color: "Blue",
-		prevo : "Metalgarurumon",
+		prevo: "Metalgarurumon",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	motimon: {
@@ -69600,7 +69755,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		evos : ["Tentomon"],
+		evos: ["Tentomon"],
 		eggGroups: ["Undiscovered"],
 	},
 	tentomon: {
@@ -69612,8 +69767,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Motimon",
-		evos : ["Kabuterimon"],
+		prevo: "Motimon",
+		evos: ["Kabuterimon"],
 		eggGroups: ["Bug"],
 	},
 	kabuterimon: {
@@ -69625,8 +69780,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Tentomon",
-		evos : ["Bmegakabuterimon", "Rmegakabuterimon"],
+		prevo: "Tentomon",
+		evos: ["Bmegakabuterimon", "Rmegakabuterimon"],
 		eggGroups: ["Bug"],
 	},
 	rmegakabuterimon: {
@@ -69638,8 +69793,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Kabuterimon",
-		evos : ["Herculeskabuterimon"],
+		prevo: "Kabuterimon",
+		evos: ["Herculeskabuterimon"],
 		eggGroups: ["Bug"],
 	},
 	herculeskabuterimon: {
@@ -69651,8 +69806,8 @@ blobbosmechelectric: {
 		heightm: 10.0,
 		weightkg: 516.5,
 		color: "Blue",
-		prevo : "Rmegakabuterimonbmegakabuterimon",
-		evos : ["Tyrantkabuterimon"],
+		prevo: "Rmegakabuterimonbmegakabuterimon",
+		evos: ["Tyrantkabuterimon"],
 		eggGroups: ["Bug"],
 	},
 	tyrantkabuterimon: {
@@ -69664,7 +69819,7 @@ blobbosmechelectric: {
 		heightm: 10.0,
 		weightkg: 516.5,
 		color: "Blue",
-		prevo : "Herculeskabuterimon",
+		prevo: "Herculeskabuterimon",
 		eggGroups: ["Bug"],
 	},
 	bmegakabuterimon: {
@@ -69676,8 +69831,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Kabuterimon",
-		evos : ["Herculeskabuterimon"],
+		prevo: "Kabuterimon",
+		evos: ["Herculeskabuterimon"],
 		eggGroups: ["Bug"],
 	},
 	napseel: {
@@ -69689,7 +69844,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 120.0,
 		color: "White",
-		evos : ["Frostiseel", "Gloseel", "Shockaseel", "Bomseel", "Necroseel"],
+		evos: ["Frostiseel", "Gloseel", "Shockaseel", "Bomseel", "Necroseel"],
 		eggGroups: ["Water1", "Field"],
 	},
 	frostiseel: {
@@ -69701,7 +69856,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 120.0,
 		color: "White",
-		prevo : "Napseel",
+		prevo: "Napseel",
 		eggGroups: ["Water1", "Field"],
 	},
 	shockaseel: {
@@ -69713,32 +69868,68 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 120.0,
 		color: "White",
-		prevo : "Napseel",
+		prevo: "Napseel",
 		eggGroups: ["Water1", "Field"],
 	},
 	retulzu: {
 		num: 667856,
 		name: "Retulzu",
+		baseForme: "Standard",
 		types: ["Fear", "Tech"],
 		baseStats: {hp: 90, atk: 100, def: 60, spa: 130, spd: 80, spe: 120},
 		abilities: {0: "Zen Mode"},
 		heightm: 15.3,
 		weightkg: 1117.5,
 		color: "Red",
-		prevo : "Optulzu",
+		prevo: "Optulzu",
 		eggGroups: ["Amorphous"],
+		otherFormes: ["Retulzu-Zen"],
+		formeOrder: ["Retulzu", "Retulzu-Zen"],
+	},
+	retulzuzen: {
+		num: 667856,
+		name: "Retulzu-Zen",
+		baseSpecies: "Retulzu-Zen",
+		forme: "Zen",
+		types: ["Fear", "Tech"],
+		baseStats: {hp: 90, atk: 60, def: 60, spa: 160, spd: 60, spe: 120},
+		abilities: {0: "Zen Mode"},
+		heightm: 15.3,
+		weightkg: 1117.5,
+		color: "Red",
+		eggGroups: ["Amorphous"],
+		requiredAbility: "Zen Mode",
+		battleOnly: "Retulzu",
 	},
 	spatulzu: {
 		num: 667857,
 		name: "Spatulzu",
+		baseForme: "Standard",
 		types: ["Fear", "Tech"],
 		baseStats: {hp: 90, atk: 130, def: 80, spa: 100, spd: 60, spe: 120},
 		abilities: {0: "Zen Mode"},
 		heightm: 15.3,
 		weightkg: 1117.5,
 		color: "Red",
-		prevo : "Optulzu",
+		prevo: "Optulzu",
 		eggGroups: ["Amorphous"],
+		otherFormes: ["Spatulzu-Zen"],
+		formeOrder: ["Spatulzu", "Spatulzu-Zen"],
+	},
+	spatulzuzen: {
+		num: 667857,
+		name: "Spatulzu-Zen",
+		baseSpecies: "Spatulzu",
+		forme: "Zen",
+		types: ["Fear", "Tech"],
+		baseStats: {hp: 90, atk: 160, def: 60, spa: 60, spd: 60, spe: 120},
+		abilities: {0: "Zen Mode"},
+		heightm: 15.3,
+		weightkg: 1117.5,
+		color: "Red",
+		eggGroups: ["Amorphous"],
+		requiredAbility: "Zen Mode",
+		battleOnly: "Spatulzu",
 	},
 	palmon: {
 		num: 667858,
@@ -69749,7 +69940,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 14.5,
 		color: "Green",
-		evos : ["Togemon"],
+		evos: ["Togemon"],
 		eggGroups: ["Fairy", "Grass"],
 	},
 	togemon: {
@@ -69761,8 +69952,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 14.5,
 		color: "Green",
-		prevo : "Palmon",
-		evos : ["Ponchomon", "Lilymon"],
+		prevo: "Palmon",
+		evos: ["Ponchomon", "Lilymon"],
 		eggGroups: ["Fairy", "Grass"],
 	},
 	lilymon: {
@@ -69774,8 +69965,8 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 14.5,
 		color: "Green",
-		prevo : "Togemon",
-		evos : ["Rosemon"],
+		prevo: "Togemon",
+		evos: ["Rosemon"],
 		eggGroups: ["Fairy", "Grass"],
 	},
 	rosemon: {
@@ -69787,8 +69978,8 @@ blobbosmechelectric: {
 		heightm: 2.9,
 		weightkg: 114.5,
 		color: "Green",
-		prevo : "Lilymon",
-		evos : ["Babamon"],
+		prevo: "Lilymon",
+		evos: ["Babamon"],
 		eggGroups: ["Fairy", "Grass"],
 	},
 	babamon: {
@@ -69800,7 +69991,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 14.5,
 		color: "Green",
-		prevo : "Rosemon",
+		prevo: "Rosemon",
 		eggGroups: ["Fairy", "Grass"],
 	},
 	ponchomon: {
@@ -69812,7 +70003,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 34.5,
 		color: "Green",
-		prevo : "Togemon",
+		prevo: "Togemon",
 		eggGroups: ["Fairy", "Grass"],
 	},
 	kongdom: {
@@ -69824,7 +70015,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 9.0,
 		color: "Green",
-		prevo : "Thwackey",
+		prevo: "Thwackey",
 		eggGroups: ["Field", "Grass"],
 	},
 	scorknight: {
@@ -69836,7 +70027,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 18.5,
 		color: "Red",
-		prevo : "Raboot",
+		prevo: "Raboot",
 		eggGroups: ["Field"],
 	},
 	drakobble: {
@@ -69848,7 +70039,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 7.0,
 		color: "Blue",
-		prevo : "Drizzile",
+		prevo: "Drizzile",
 		eggGroups: ["Water1"],
 	},
 	lurquad: {
@@ -69860,7 +70051,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 21.0,
 		color: "Purple",
-		evos : ["Sheridryoid", "Disfunbot", "Kizzeep", "Noofr"],
+		evos: ["Sheridryoid", "Disfunbot", "Kizzeep", "Noofr"],
 		eggGroups: ["Undiscovered"],
 	},
 	disfunbot: {
@@ -69872,7 +70063,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 21.0,
 		color: "Purple",
-		prevo : "Lurquad",
+		prevo: "Lurquad",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	sheridryoid: {
@@ -69884,7 +70075,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 21.0,
 		color: "Purple",
-		prevo : "Lurquad",
+		prevo: "Lurquad",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	kizzeep: {
@@ -69896,7 +70087,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 21.0,
 		color: "Purple",
-		prevo : "Lurquad",
+		prevo: "Lurquad",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	xiaconisect: {
@@ -69919,7 +70110,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.8,
 		color: "Brown",
-		evos : ["Gdugtrio"],
+		evos: ["Gdugtrio"],
 		eggGroups: ["Field"],
 	},
 	gdugtrio: {
@@ -69931,7 +70122,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 33.3,
 		color: "Brown",
-		prevo : "Gdiglett",
+		prevo: "Gdiglett",
 		eggGroups: ["Field"],
 	},
 	dkeldeo: {
@@ -69965,7 +70156,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 120.0,
 		color: "White",
-		prevo : "Napseel",
+		prevo: "Napseel",
 		eggGroups: ["Water1", "Field"],
 	},
 	gloseel: {
@@ -69977,7 +70168,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 120.0,
 		color: "White",
-		prevo : "Napseel",
+		prevo: "Napseel",
 		eggGroups: ["Water1", "Field"],
 	},
 	nursebola: {
@@ -69989,7 +70180,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 44.4,
 		color: "Pink",
-		prevo : "Ebolass",
+		prevo: "Ebolass",
 		eggGroups: ["Amorphous", "Fairy"],
 	},
 	marsech: {
@@ -70023,7 +70214,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 0.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	cnosepass: {
@@ -70035,7 +70226,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 97.0,
 		color: "Gray",
-		evos : ["Cprobopass"],
+		evos: ["Cprobopass"],
 		eggGroups: ["Mineral"],
 	},
 	cprobopass: {
@@ -70047,7 +70238,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 340.0,
 		color: "Gray",
-		prevo : "Cnosepass",
+		prevo: "Cnosepass",
 		eggGroups: ["Mineral"],
 	},
 	ccarbink: {
@@ -70070,7 +70261,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 3.9,
 		color: "Gray",
-		prevo : "Qwilfish",
+		prevo: "Qwilfish",
 		eggGroups: ["Water2"],
 	},
 	penguinmon: {
@@ -70082,7 +70273,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 5.2,
 		color: "Blue",
-		evos : ["Dolphmon"],
+		evos: ["Dolphmon"],
 		eggGroups: ["Water1", "Field"],
 	},
 	dolphmon: {
@@ -70094,8 +70285,8 @@ blobbosmechelectric: {
 		heightm: 2.4,
 		weightkg: 15.2,
 		color: "Blue",
-		prevo : "Penguinmon",
-		evos : ["Whamon"],
+		prevo: "Penguinmon",
+		evos: ["Whamon"],
 		eggGroups: ["Water1", "Field"],
 	},
 	whamon: {
@@ -70107,8 +70298,8 @@ blobbosmechelectric: {
 		heightm: 20.4,
 		weightkg: 1115.2,
 		color: "Blue",
-		prevo : "Dolphmon",
-		evos : ["Neptunemon", "Marineangemon"],
+		prevo: "Dolphmon",
+		evos: ["Neptunemon", "Marineangemon"],
 		eggGroups: ["Water1", "Field"],
 	},
 	neptunemon: {
@@ -70120,7 +70311,7 @@ blobbosmechelectric: {
 		heightm: 16.4,
 		weightkg: 915.2,
 		color: "Blue",
-		prevo : "Whamon",
+		prevo: "Whamon",
 		eggGroups: ["Water1", "Field"],
 	},
 	marineangemon: {
@@ -70132,7 +70323,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 0.2,
 		color: "Blue",
-		prevo : "Whamon",
+		prevo: "Whamon",
 		eggGroups: ["Water1", "Field"],
 	},
 	rprocker: {
@@ -70144,7 +70335,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.0,
 		color: "Purple",
-		evos : ["Rprockerz"],
+		evos: ["Rprockerz"],
 		eggGroups: ["Mineral"],
 	},
 	rprockerz: {
@@ -70156,7 +70347,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 21.0,
 		color: "Purple",
-		prevo : "Rprocker",
+		prevo: "Rprocker",
 		eggGroups: ["Mineral"],
 	},
 	rprazor: {
@@ -70168,7 +70359,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.0,
 		color: "Purple",
-		evos : ["Rprazorz"],
+		evos: ["Rprazorz"],
 		eggGroups: ["Mineral"],
 	},
 	rprazorz: {
@@ -70180,8 +70371,8 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 56.0,
 		color: "Purple",
-		prevo : "Rprazor",
-		evos : ["Rpboba"],
+		prevo: "Rprazor",
+		evos: ["Rpboba"],
 		eggGroups: ["Humanlike"],
 	},
 	rpboba: {
@@ -70193,7 +70384,7 @@ blobbosmechelectric: {
 		heightm: 3.9,
 		weightkg: 126.0,
 		color: "Purple",
-		prevo : "Rprazorz",
+		prevo: "Rprazorz",
 		eggGroups: ["Humanlike"],
 	},
 	rpmochi: {
@@ -70216,7 +70407,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.0,
 		color: "Purple",
-		evos : ["Rpsun02"],
+		evos: ["Rpsun02"],
 		eggGroups: ["Mineral"],
 	},
 	rpsun02: {
@@ -70228,8 +70419,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.0,
 		color: "Purple",
-		prevo : "Rpsunny",
-		evos : ["Rpsuncust"],
+		prevo: "Rpsunny",
+		evos: ["Rpsuncust"],
 		eggGroups: ["Mineral"],
 	},
 	rpsuncust: {
@@ -70241,7 +70432,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.0,
 		color: "Purple",
-		prevo : "Rpsun02",
+		prevo: "Rpsun02",
 		eggGroups: ["Mineral"],
 	},
 	rpmedbot: {
@@ -70253,7 +70444,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 24.4,
 		color: "Pink",
-		evos : ["Rpmeddy", "Rpdocbot"],
+		evos: ["Rpmeddy", "Rpdocbot"],
 		eggGroups: ["Undiscovered"],
 	},
 	rpmeddy: {
@@ -70265,8 +70456,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 24.4,
 		color: "Pink",
-		prevo : "Rpmedbot",
-		evos : ["Rpmeddyz"],
+		prevo: "Rpmedbot",
+		evos: ["Rpmeddyz"],
 		eggGroups: ["Humanlike", "Mineral"],
 	},
 	rpmeddyz: {
@@ -70278,7 +70469,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 44.4,
 		color: "Pink",
-		prevo : "Rpmeddy",
+		prevo: "Rpmeddy",
 		eggGroups: ["Humanlike", "Mineral"],
 	},
 	rpdocbot: {
@@ -70290,7 +70481,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 24.4,
 		color: "Pink",
-		prevo : "Rpmedbot",
+		prevo: "Rpmedbot",
 		eggGroups: ["Humanlike", "Mineral"],
 	},
 	wtrubbish: {
@@ -70302,7 +70493,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 31.0,
 		color: "Green",
-		evos : ["Wgarbodor"],
+		evos: ["Wgarbodor"],
 		eggGroups: ["Mineral"],
 	},
 	wgarbodor: {
@@ -70314,8 +70505,8 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 131.0,
 		color: "Green",
-		prevo : "Wtrubbish",
-		evos : ["Cottandy"],
+		prevo: "Wtrubbish",
+		evos: ["Cottandy"],
 		eggGroups: ["Mineral"],
 	},
 	cottandy: {
@@ -70327,7 +70518,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 131.0,
 		color: "Green",
-		prevo : "Wgarbodor",
+		prevo: "Wgarbodor",
 		eggGroups: ["Mineral"],
 	},
 	wgulpin: {
@@ -70339,7 +70530,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 10.3,
 		color: "Green",
-		evos : ["Wswalot"],
+		evos: ["Wswalot"],
 		eggGroups: ["Amorphous"],
 	},
 	wswalot: {
@@ -70351,8 +70542,8 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 110.3,
 		color: "Green",
-		prevo : "Wgulpin",
-		evos : ["Swallice"],
+		prevo: "Wgulpin",
+		evos: ["Swallice"],
 		eggGroups: ["Amorphous"],
 	},
 	swallice: {
@@ -70364,7 +70555,7 @@ blobbosmechelectric: {
 		heightm: 2.4,
 		weightkg: 210.3,
 		color: "Green",
-		prevo : "Wswalot",
+		prevo: "Wswalot",
 		eggGroups: ["Amorphous"],
 	},
 	wapplin: {
@@ -70376,7 +70567,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.8,
 		color: "Purple",
-		evos : ["Wappletun", "Wflapple"],
+		evos: ["Wappletun", "Wflapple"],
 		eggGroups: ["Dragon"],
 	},
 	wflapple: {
@@ -70388,7 +70579,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.8,
 		color: "Purple",
-		prevo : "Wapplin",
+		prevo: "Wapplin",
 		eggGroups: ["Dragon"],
 	},
 	wappletun: {
@@ -70400,7 +70591,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 122.8,
 		color: "Purple",
-		prevo : "Wapplin",
+		prevo: "Wapplin",
 		eggGroups: ["Dragon"],
 	},
 	charizardo: {
@@ -70412,7 +70603,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 92.5,
 		color: "Red",
-		prevo : "Charmeleon",
+		prevo: "Charmeleon",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	dinofur: {
@@ -70424,7 +70615,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Blue",
-		evos : ["Furrygon"],
+		evos: ["Furrygon"],
 		eggGroups: ["Humanlike"],
 	},
 	furrygon: {
@@ -70436,8 +70627,8 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 70.5,
 		color: "Blue",
-		prevo : "Dinofur",
-		evos : ["Furror"],
+		prevo: "Dinofur",
+		evos: ["Furror"],
 		eggGroups: ["Humanlike", "Dragon"],
 	},
 	furror: {
@@ -70449,7 +70640,7 @@ blobbosmechelectric: {
 		heightm: 2.7,
 		weightkg: 170.5,
 		color: "Blue",
-		prevo : "Furrygon",
+		prevo: "Furrygon",
 		eggGroups: ["Humanlike", "Dragon"],
 	},
 	dreadark: {
@@ -70483,7 +70674,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.6,
 		color: "White",
-		evos : ["Whattrem"],
+		evos: ["Whattrem"],
 		eggGroups: ["Amorphous"],
 	},
 	whattrem: {
@@ -70495,8 +70686,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.6,
 		color: "White",
-		prevo : "Whattena",
-		evos : ["Whatterene"],
+		prevo: "Whattena",
+		evos: ["Whatterene"],
 		eggGroups: ["Amorphous", "Fairy"],
 	},
 	whatterene: {
@@ -70508,7 +70699,7 @@ blobbosmechelectric: {
 		heightm: 5.4,
 		weightkg: 116.6,
 		color: "White",
-		prevo : "Whattrem",
+		prevo: "Whattrem",
 		eggGroups: ["Amorphous", "Fairy"],
 	},
 	wgothita: {
@@ -70520,7 +70711,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 5.8,
 		color: "Purple",
-		evos : ["Sailorita"],
+		evos: ["Sailorita"],
 		eggGroups: ["Humanlike"],
 	},
 	sailorita: {
@@ -70532,8 +70723,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 18.0,
 		color: "Purple",
-		prevo : "Wgothita",
-		evos : ["Admirelle"],
+		prevo: "Wgothita",
+		evos: ["Admirelle"],
 		eggGroups: ["Humanlike"],
 	},
 	admirelle: {
@@ -70545,7 +70736,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 44.0,
 		color: "Purple",
-		prevo : "Sailorita",
+		prevo: "Sailorita",
 		eggGroups: ["Humanlike"],
 	},
 	paintgon: {
@@ -70557,7 +70748,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 44.0,
 		color: "Purple",
-		evos : ["Acrylomodo"],
+		evos: ["Acrylomodo"],
 		eggGroups: ["Dragon", "Amorphous"],
 	},
 	acrylomodo: {
@@ -70569,7 +70760,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 44.0,
 		color: "Purple",
-		prevo : "Paintgon",
+		prevo: "Paintgon",
 		eggGroups: ["Dragon", "Amorphous"],
 	},
 	rattastic: {
@@ -70581,7 +70772,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.5,
 		color: "Pink",
-		evos : ["Edgucate"],
+		evos: ["Edgucate"],
 		eggGroups: ["Field"],
 	},
 	edgucate: {
@@ -70593,7 +70784,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 18.5,
 		color: "Pink",
-		prevo : "Rattastic",
+		prevo: "Rattastic",
 		eggGroups: ["Field"],
 	},
 	passta: {
@@ -70605,7 +70796,7 @@ blobbosmechelectric: {
 		heightm: 3.7,
 		weightkg: 1.5,
 		color: "Yellow",
-		evos : ["Sspaghetti"],
+		evos: ["Sspaghetti"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	sspaghetti: {
@@ -70617,7 +70808,7 @@ blobbosmechelectric: {
 		heightm: 8.9,
 		weightkg: 2.5,
 		color: "Yellow",
-		prevo : "Passta",
+		prevo: "Passta",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	barkbark: {
@@ -70629,7 +70820,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 1.0,
 		color: "Brown",
-		evos : ["Timbark"],
+		evos: ["Timbark"],
 		eggGroups: ["Monster", "Field"],
 	},
 	timbark: {
@@ -70641,7 +70832,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 1.0,
 		color: "Brown",
-		prevo : "Barkbark",
+		prevo: "Barkbark",
 		eggGroups: ["Monster", "Field"],
 	},
 	floatskull: {
@@ -70653,7 +70844,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 1.0,
 		color: "Red",
-		evos : ["Bloodetan"],
+		evos: ["Bloodetan"],
 		eggGroups: ["Amorphous"],
 	},
 	bloodetan: {
@@ -70665,8 +70856,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 1.0,
 		color: "Red",
-		prevo : "Floatskull",
-		evos : ["Bloodoom"],
+		prevo: "Floatskull",
+		evos: ["Bloodoom"],
 		eggGroups: ["Amorphous"],
 	},
 	bloodoom: {
@@ -70678,7 +70869,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 1.0,
 		color: "Red",
-		prevo : "Bloodetan",
+		prevo: "Bloodetan",
 		eggGroups: ["Amorphous"],
 	},
 	pistoff: {
@@ -70701,7 +70892,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 5.5,
 		color: "Pink",
-		evos : ["Bacopter"],
+		evos: ["Bacopter"],
 		eggGroups: ["Monster"],
 	},
 	bacopter: {
@@ -70713,7 +70904,7 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 50.5,
 		color: "Pink",
-		prevo : "Porkopter",
+		prevo: "Porkopter",
 		eggGroups: ["Monster"],
 	},
 	boombowl: {
@@ -70736,7 +70927,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 4.0,
 		color: "White",
-		evos : ["Eggception"],
+		evos: ["Eggception"],
 		eggGroups: ["Amorphous"],
 	},
 	eggception: {
@@ -70748,7 +70939,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 40.0,
 		color: "White",
-		prevo : "Eggy",
+		prevo: "Eggy",
 		eggGroups: ["Amorphous"],
 	},
 	panslash: {
@@ -70760,7 +70951,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 10.5,
 		color: "Black",
-		evos : ["Simislash"],
+		evos: ["Simislash"],
 		eggGroups: ["Field"],
 	},
 	simislash: {
@@ -70772,7 +70963,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 30.5,
 		color: "Black",
-		prevo : "Panslash",
+		prevo: "Panslash",
 		eggGroups: ["Field"],
 	},
 	loccoon: {
@@ -70784,7 +70975,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 10.0,
 		color: "Brown",
-		evos : ["Buzzerk"],
+		evos: ["Buzzerk"],
 		eggGroups: ["Bug"],
 	},
 	buzzerk: {
@@ -70796,7 +70987,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 31.6,
 		color: "Black",
-		prevo : "Loccoon",
+		prevo: "Loccoon",
 		eggGroups: ["Bug"],
 	},
 	pillost: {
@@ -70808,7 +70999,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 0.3,
 		color: "White",
-		evos : ["Shrieet"],
+		evos: ["Shrieet"],
 		eggGroups: ["Amorphous"],
 	},
 	shrieet: {
@@ -70820,8 +71011,8 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 0.6,
 		color: "White",
-		prevo : "Pillost",
-		evos : ["Duvetious"],
+		prevo: "Pillost",
+		evos: ["Duvetious"],
 		eggGroups: ["Amorphous"],
 	},
 	duvetious: {
@@ -70833,7 +71024,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 70.0,
 		color: "White",
-		prevo : "Shrieet",
+		prevo: "Shrieet",
 		eggGroups: ["Amorphous"],
 	},
 	bidoom: {
@@ -70889,7 +71080,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 11.3,
 		color: "Purple",
-		evos : ["Rpdigger"],
+		evos: ["Rpdigger"],
 		eggGroups: ["Mineral"],
 	},
 	rpdigger: {
@@ -70901,7 +71092,7 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 3211.3,
 		color: "Purple",
-		prevo : "Rpmolbot",
+		prevo: "Rpmolbot",
 		eggGroups: ["Mineral"],
 	},
 	rpcookey: {
@@ -70935,7 +71126,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 97.0,
 		color: "Gray",
-		evos : ["Wprobopass"],
+		evos: ["Wprobopass"],
 		eggGroups: ["Mineral"],
 	},
 	wprobopass: {
@@ -70947,7 +71138,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 340.0,
 		color: "Gray",
-		prevo : "Wnosepass",
+		prevo: "Wnosepass",
 		eggGroups: ["Mineral"],
 	},
 	wexeggcute: {
@@ -70959,7 +71150,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 2.5,
 		color: "Pink",
-		evos : ["Wexeggutor"],
+		evos: ["Wexeggutor"],
 		eggGroups: ["Grass"],
 	},
 	wexeggutor: {
@@ -70971,7 +71162,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 120.0,
 		color: "Yellow",
-		prevo : "Wexeggcute",
+		prevo: "Wexeggcute",
 		eggGroups: ["Grass"],
 	},
 	wkoffing: {
@@ -70983,7 +71174,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 1.0,
 		color: "Purple",
-		evos : ["Gweezing", "Wweezing"],
+		evos: ["Gweezing", "Wweezing"],
 		eggGroups: ["Amorphous"],
 	},
 	wweezing: {
@@ -70995,7 +71186,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 0.1,
 		color: "Purple",
-		prevo : "Wkoffing",
+		prevo: "Wkoffing",
 		eggGroups: ["Amorphous"],
 	},
 	rpboomer: {
@@ -71007,7 +71198,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 116.0,
 		color: "Purple",
-		evos : ["Rpairraid"],
+		evos: ["Rpairraid"],
 		eggGroups: ["Mineral"],
 	},
 	rpairraid: {
@@ -71019,8 +71210,8 @@ blobbosmechelectric: {
 		heightm: 3.5,
 		weightkg: 516.0,
 		color: "Purple",
-		prevo : "Rpboomer",
-		evos : ["Rpboomb1"],
+		prevo: "Rpboomer",
+		evos: ["Rpboomb1"],
 		eggGroups: ["Mineral"],
 	},
 	rpboomb1: {
@@ -71032,7 +71223,7 @@ blobbosmechelectric: {
 		heightm: 6.5,
 		weightkg: 2516.0,
 		color: "Purple",
-		prevo : "Rpairraid",
+		prevo: "Rpairraid",
 		eggGroups: ["Mineral"],
 	},
 	rpgidget: {
@@ -71044,7 +71235,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.0,
 		color: "Purple",
-		evos : ["Rpbetty"],
+		evos: ["Rpbetty"],
 		eggGroups: ["Undiscovered"],
 	},
 	rpbetty: {
@@ -71056,8 +71247,8 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 19.0,
 		color: "Purple",
-		prevo : "Rpgidget",
-		evos : ["Rpgranny", "Rpbettyz"],
+		prevo: "Rpgidget",
+		evos: ["Rpgranny", "Rpbettyz"],
 		eggGroups: ["Mineral", "Humanlike"],
 	},
 	rpbettyz: {
@@ -71069,7 +71260,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 119.0,
 		color: "Purple",
-		prevo : "Rpbetty",
+		prevo: "Rpbetty",
 		eggGroups: ["Mineral", "Humanlike"],
 	},
 	rpgranny: {
@@ -71081,7 +71272,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 19.0,
 		color: "Purple",
-		prevo : "Rpbetty",
+		prevo: "Rpbetty",
 		eggGroups: ["Mineral", "Humanlike"],
 	},
 	ssurshifu: {
@@ -71093,7 +71284,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 105.0,
 		color: "Blue",
-		prevo : "Kubfu",
+		prevo: "Kubfu",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	rsurshifu: {
@@ -71105,7 +71296,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 105.0,
 		color: "Blue",
-		prevo : "Kubfu",
+		prevo: "Kubfu",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	gslowpoke: {
@@ -71117,7 +71308,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 36.0,
 		color: "Pink",
-		evos : ["Gslowking", "Gslowbro"],
+		evos: ["Gslowking", "Gslowbro"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	himcyber: {
@@ -71195,7 +71386,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 15.0,
 		color: "Gray",
-		evos : ["Gilerth"],
+		evos: ["Gilerth"],
 		eggGroups: ["Monster", "Field"],
 	},
 	gilerth: {
@@ -71207,8 +71398,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 100.0,
 		color: "Gray",
-		prevo : "Tsunonasu",
-		evos : ["Gilgierth"],
+		prevo: "Tsunonasu",
+		evos: ["Gilgierth"],
 		eggGroups: ["Monster", "Field"],
 	},
 	gilgierth: {
@@ -71220,8 +71411,8 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 115.0,
 		color: "Gray",
-		prevo : "Gilerth",
-		evos : ["Gigagigerth"],
+		prevo: "Gilerth",
+		evos: ["Gigagigerth"],
 		eggGroups: ["Monster", "Field"],
 	},
 	gigagigerth: {
@@ -71233,7 +71424,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 215.0,
 		color: "Gray",
-		prevo : "Gilgierth",
+		prevo: "Gilgierth",
 		eggGroups: ["Monster", "Field"],
 	},
 	elsnow: {
@@ -71245,7 +71436,7 @@ blobbosmechelectric: {
 		heightm: 2.4,
 		weightkg: 15.5,
 		color: "Brown",
-		prevo : "Lusfairy",
+		prevo: "Lusfairy",
 		eggGroups: ["Humanlike"],
 	},
 	noofr: {
@@ -71257,7 +71448,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 21.0,
 		color: "Purple",
-		prevo : "Lurquad",
+		prevo: "Lurquad",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	zodiacunown: {
@@ -71357,7 +71548,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 1.2,
 		color: "Purple",
-		evos : ["Bdrifblim"],
+		evos: ["Bdrifblim"],
 		eggGroups: ["Amorphous"],
 	},
 	bdrifblim: {
@@ -71369,7 +71560,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 15.0,
 		color: "Purple",
-		prevo : "Bdrifloon",
+		prevo: "Bdrifloon",
 		eggGroups: ["Amorphous"],
 	},
 	ivenonat: {
@@ -71381,7 +71572,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 30.0,
 		color: "Purple",
-		evos : ["Ivenomoth"],
+		evos: ["Ivenomoth"],
 		eggGroups: ["Bug"],
 	},
 	ivenomoth: {
@@ -71393,7 +71584,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 12.5,
 		color: "Purple",
-		prevo : "Ivenonat",
+		prevo: "Ivenonat",
 		eggGroups: ["Bug"],
 	},
 	ozodiacunown: {
@@ -71416,7 +71607,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 32.4,
 		color: "Yellow",
-		evos : ["Ahypno"],
+		evos: ["Ahypno"],
 		eggGroups: ["Humanlike"],
 	},
 	ahypno: {
@@ -71428,7 +71619,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 75.6,
 		color: "Yellow",
-		prevo : "Adrowzee",
+		prevo: "Adrowzee",
 		eggGroups: ["Humanlike"],
 	},
 	maideedee: {
@@ -71440,7 +71631,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 31.0,
 		color: "Pink",
-		prevo : "Indeedee",
+		prevo: "Indeedee",
 		eggGroups: ["Fairy"],
 	},
 	bylethemble: {
@@ -71463,7 +71654,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.1,
 		color: "Blue",
-		evos : ["Rammcurry", "Beamcurry", "Burmcurry", "Slomcurry", "Pastamcurry", "Herbmcurry", "Eggmcurry", "Seamcurry", "Cheesemcurry", "Cocomcurry", "Juicymcurry", "Pacmcurry", "Bonmcurry", "Breadmcurry", "Potmcurry", "Salmcurry", "Samcurry", "Appmcurry", "Frymcurry", "Mcurry", "Tropmcurry", "Crmmcurry", "Mumcurry", "Leekmcurry", "Richmcurry"],
+		evos: ["Rammcurry", "Beamcurry", "Burmcurry", "Slomcurry", "Pastamcurry", "Herbmcurry", "Eggmcurry", "Seamcurry", "Cheesemcurry", "Cocomcurry", "Juicymcurry", "Pacmcurry", "Bonmcurry", "Breadmcurry", "Potmcurry", "Salmcurry", "Samcurry", "Appmcurry", "Frymcurry", "Mcurry", "Tropmcurry", "Crmmcurry", "Mumcurry", "Leekmcurry", "Richmcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	mcurry: {
@@ -71475,8 +71666,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Bcurry"],
+		prevo: "Curry",
+		evos: ["Bcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	bcurry: {
@@ -71488,7 +71679,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 13.1,
 		color: "Blue",
-		prevo : "Mcurry",
+		prevo: "Mcurry",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	barkhol: {
@@ -71500,7 +71691,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 1.2,
 		color: "Green",
-		evos : ["Octopine"],
+		evos: ["Octopine"],
 		eggGroups: ["Bug", "Grass"],
 	},
 	octopine: {
@@ -71512,7 +71703,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 51.2,
 		color: "Green",
-		prevo : "Barkhol",
+		prevo: "Barkhol",
 		eggGroups: ["Amorphous", "Grass"],
 	},
 	yummydew: {
@@ -71524,7 +71715,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 1.2,
 		color: "Green",
-		evos : ["Sucklaxis", "Honbrosia"],
+		evos: ["Sucklaxis", "Honbrosia"],
 		eggGroups: ["Dragon", "Grass"],
 	},
 	sucklaxis: {
@@ -71536,7 +71727,7 @@ blobbosmechelectric: {
 		heightm: 3.7,
 		weightkg: 870.2,
 		color: "Green",
-		prevo : "Yummydew",
+		prevo: "Yummydew",
 		eggGroups: ["Dragon", "Grass"],
 	},
 	honbrosia: {
@@ -71548,7 +71739,7 @@ blobbosmechelectric: {
 		heightm: 5.7,
 		weightkg: 220.2,
 		color: "Green",
-		prevo : "Yummydew",
+		prevo: "Yummydew",
 		eggGroups: ["Dragon", "Grass"],
 	},
 	pawnembra: {
@@ -71560,7 +71751,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 1.2,
 		color: "Green",
-		evos : ["Dusklaw"],
+		evos: ["Dusklaw"],
 		eggGroups: ["Amorphous", "Field"],
 	},
 	dusklaw: {
@@ -71572,7 +71763,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 11.2,
 		color: "Green",
-		prevo : "Pawnembra",
+		prevo: "Pawnembra",
 		eggGroups: ["Amorphous"],
 	},
 	femaledot: {
@@ -71595,7 +71786,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 12.4,
 		color: "Blue",
-		evos : ["Amphibifloat"],
+		evos: ["Amphibifloat"],
 		eggGroups: ["Water1"],
 	},
 	amphibifloat: {
@@ -71607,7 +71798,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 12.4,
 		color: "Blue",
-		prevo : "Froglide",
+		prevo: "Froglide",
 		eggGroups: ["Water1"],
 	},
 	mfearow: {
@@ -71619,7 +71810,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 38.0,
 		color: "Brown",
-		prevo : "Fearowfearolt",
+		prevo: "Fearowfearolt",
 		eggGroups: ["Flying"],
 	},
 	gomamon: {
@@ -71631,7 +71822,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		evos : ["Ikkakumon"],
+		evos: ["Ikkakumon"],
 		eggGroups: ["Field", "Water1"],
 	},
 	ikkakumon: {
@@ -71643,8 +71834,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 116.5,
 		color: "Blue",
-		prevo : "Gomamon",
-		evos : ["Zudomon"],
+		prevo: "Gomamon",
+		evos: ["Zudomon"],
 		eggGroups: ["Field", "Water1"],
 	},
 	zudomon: {
@@ -71656,8 +71847,8 @@ blobbosmechelectric: {
 		heightm: 10.0,
 		weightkg: 1116.5,
 		color: "Blue",
-		prevo : "Ikkakumon",
-		evos : ["Vikemon"],
+		prevo: "Ikkakumon",
+		evos: ["Vikemon"],
 		eggGroups: ["Field", "Water1"],
 	},
 	vikemon: {
@@ -71669,7 +71860,7 @@ blobbosmechelectric: {
 		heightm: 13.0,
 		weightkg: 2116.5,
 		color: "Blue",
-		prevo : "Zudomon",
+		prevo: "Zudomon",
 		eggGroups: ["Field", "Water1"],
 	},
 	himwind: {
@@ -71692,7 +71883,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 300.0,
 		color: "Brown",
-		prevo : "Graveler",
+		prevo: "Graveler",
 		eggGroups: ["Mineral"],
 	},
 	wbarboach: {
@@ -71704,7 +71895,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 1.9,
 		color: "Gray",
-		evos : ["Wwhiscash"],
+		evos: ["Wwhiscash"],
 		eggGroups: ["Water2"],
 	},
 	wwhiscash: {
@@ -71716,7 +71907,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 23.6,
 		color: "Blue",
-		prevo : "Wbarboach",
+		prevo: "Wbarboach",
 		eggGroups: ["Water2"],
 	},
 	tokomon: {
@@ -71728,7 +71919,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		evos : ["Patamon"],
+		evos: ["Patamon"],
 		eggGroups: ["Flying"],
 	},
 	patamon: {
@@ -71740,8 +71931,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Tokomon",
-		evos : ["Angemon"],
+		prevo: "Tokomon",
+		evos: ["Angemon"],
 		eggGroups: ["Flying"],
 	},
 	angemon: {
@@ -71753,8 +71944,8 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 46.5,
 		color: "Blue",
-		prevo : "Patamon",
-		evos : ["Magnaangemon"],
+		prevo: "Patamon",
+		evos: ["Magnaangemon"],
 		eggGroups: ["Flying", "Humanlike"],
 	},
 	magnaangemon: {
@@ -71766,8 +71957,8 @@ blobbosmechelectric: {
 		heightm: 2.8,
 		weightkg: 66.5,
 		color: "Blue",
-		prevo : "Angemon",
-		evos : ["Seraphimon"],
+		prevo: "Angemon",
+		evos: ["Seraphimon"],
 		eggGroups: ["Flying", "Humanlike"],
 	},
 	seraphimon: {
@@ -71779,7 +71970,7 @@ blobbosmechelectric: {
 		heightm: 3.8,
 		weightkg: 0.1,
 		color: "Blue",
-		prevo : "Magnaangemon",
+		prevo: "Magnaangemon",
 		eggGroups: ["Flying", "Humanlike"],
 	},
 	salamon: {
@@ -71791,7 +71982,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.5,
 		color: "Blue",
-		evos : ["Mikemon", "Tailmon"],
+		evos: ["Mikemon", "Tailmon"],
 		eggGroups: ["Fairy", "Field"],
 	},
 	tailmon: {
@@ -71803,8 +71994,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Salamon",
-		evos : ["Angewomon"],
+		prevo: "Salamon",
+		evos: ["Angewomon"],
 		eggGroups: ["Fairy", "Field"],
 	},
 	angewomon: {
@@ -71816,8 +72007,8 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 26.5,
 		color: "Blue",
-		prevo : "Tailmon",
-		evos : ["Ophanimon", "Holydramon"],
+		prevo: "Tailmon",
+		evos: ["Ophanimon", "Holydramon"],
 		eggGroups: ["Humanlike"],
 	},
 	holydramon: {
@@ -71829,7 +72020,7 @@ blobbosmechelectric: {
 		heightm: 12.0,
 		weightkg: 1126.5,
 		color: "Blue",
-		prevo : "Angewomon",
+		prevo: "Angewomon",
 		eggGroups: ["Dragon", "Fairy"],
 	},
 	ophanimon: {
@@ -71841,7 +72032,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 26.5,
 		color: "Blue",
-		prevo : "Angewomon",
+		prevo: "Angewomon",
 		eggGroups: ["Humanlike"],
 	},
 	ccleffa: {
@@ -71853,7 +72044,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.0,
 		color: "Pink",
-		evos : ["Cclefairy"],
+		evos: ["Cclefairy"],
 		eggGroups: ["Undiscovered"],
 	},
 	cclefairy: {
@@ -71865,8 +72056,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
-		prevo : "Ccleffa",
-		evos : ["Cclefable"],
+		prevo: "Ccleffa",
+		evos: ["Cclefable"],
 		eggGroups: ["Fairy"],
 	},
 	cclefable: {
@@ -71878,7 +72069,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
-		prevo : "Cclefairy",
+		prevo: "Cclefairy",
 		eggGroups: ["Fairy"],
 	},
 	elecmon: {
@@ -71890,8 +72081,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Tsunomon",
-		evos : ["Leomon"],
+		prevo: "Tsunomon",
+		evos: ["Leomon"],
 		eggGroups: ["Field", "Dragon"],
 	},
 	leomon: {
@@ -71903,8 +72094,8 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 70.5,
 		color: "Gray",
-		prevo : "Elecmon",
-		evos : ["Grapleomon"],
+		prevo: "Elecmon",
+		evos: ["Grapleomon"],
 		eggGroups: ["Humanlike"],
 	},
 	astaurios: {
@@ -71927,8 +72118,8 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 74.5,
 		color: "Gray",
-		prevo : "Leomon",
-		evos : ["Saberleomon"],
+		prevo: "Leomon",
+		evos: ["Saberleomon"],
 		eggGroups: ["Humanlike"],
 	},
 	saberleomon: {
@@ -71940,7 +72131,7 @@ blobbosmechelectric: {
 		heightm: 3.5,
 		weightkg: 174.5,
 		color: "Gray",
-		prevo : "Grapleomon",
+		prevo: "Grapleomon",
 		eggGroups: ["Field"],
 	},
 	doratgon: {
@@ -71952,7 +72143,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 17.3,
 		color: "Blue",
-		evos : ["Kingdorah"],
+		evos: ["Kingdorah"],
 		eggGroups: ["Dragon", "Fairy"],
 	},
 	kingdorah: {
@@ -71964,7 +72155,7 @@ blobbosmechelectric: {
 		heightm: 20.8,
 		weightkg: 1117.3,
 		color: "Blue",
-		prevo : "Doratgon",
+		prevo: "Doratgon",
 		eggGroups: ["Dragon", "Monster"],
 	},
 	candicegong: {
@@ -72053,7 +72244,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Blue",
-		evos : ["Goblimon", "Blackagumon", "Shamanmon", "Snowgoblimon"],
+		evos: ["Goblimon", "Blackagumon", "Shamanmon", "Snowgoblimon"],
 		eggGroups: ["Undiscovered"],
 	},
 	goblimon: {
@@ -72065,8 +72256,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Pagumon",
-		evos : ["Ogremon", "Hyogamon", "Fugamon"],
+		prevo: "Pagumon",
+		evos: ["Ogremon", "Hyogamon", "Fugamon"],
 		eggGroups: ["Fairy"],
 	},
 	ogremon: {
@@ -72078,8 +72269,8 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 116.5,
 		color: "Blue",
-		prevo : "Goblimon",
-		evos : ["Digitamamon"],
+		prevo: "Goblimon",
+		evos: ["Digitamamon"],
 		eggGroups: ["Fairy"],
 	},
 	fugamon: {
@@ -72091,7 +72282,7 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 116.5,
 		color: "Blue",
-		prevo : "Goblimon",
+		prevo: "Goblimon",
 		eggGroups: ["Fairy"],
 	},
 	hyogamon: {
@@ -72103,7 +72294,7 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 116.5,
 		color: "Blue",
-		prevo : "Goblimonsnowgoblimon",
+		prevo: "Goblimonsnowgoblimon",
 		eggGroups: ["Fairy"],
 	},
 	digitamamon: {
@@ -72115,8 +72306,8 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 116.5,
 		color: "Blue",
-		prevo : "Ogremon",
-		evos : ["Fdigitamamon", "Minervamon", "Devitamamon", "Titamon"],
+		prevo: "Ogremon",
+		evos: ["Fdigitamamon", "Minervamon", "Devitamamon", "Titamon"],
 		eggGroups: ["Amorphous"],
 	},
 	titamon: {
@@ -72128,7 +72319,7 @@ blobbosmechelectric: {
 		heightm: 13.0,
 		weightkg: 1116.5,
 		color: "Blue",
-		prevo : "Digitamamon",
+		prevo: "Digitamamon",
 		eggGroups: ["Humanlike", "Monster"],
 	},
 	fuggirl: {
@@ -72140,7 +72331,7 @@ blobbosmechelectric: {
 		heightm: 7.0,
 		weightkg: 206.5,
 		color: "Green",
-		prevo : "Hucaterpie",
+		prevo: "Hucaterpie",
 		eggGroups: ["Dragon", "Monster"],
 	},
 	devitamamon: {
@@ -72152,7 +72343,7 @@ blobbosmechelectric: {
 		heightm: 3.0,
 		weightkg: 116.5,
 		color: "Blue",
-		prevo : "Digitamamon",
+		prevo: "Digitamamon",
 		eggGroups: ["Amorphous"],
 	},
 	fdigitamamon: {
@@ -72164,7 +72355,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 34.0,
 		color: "Black",
-		prevo : "Digitamamon",
+		prevo: "Digitamamon",
 		eggGroups: ["Undiscovered"],
 	},
 	minervamon: {
@@ -72176,8 +72367,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 56.5,
 		color: "Blue",
-		prevo : "Digitamamon",
-		evos : ["Mervamon"],
+		prevo: "Digitamamon",
+		evos: ["Mervamon"],
 		eggGroups: ["Amorphous"],
 	},
 	relemon: {
@@ -72189,7 +72380,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 3.5,
 		color: "Blue",
-		evos : ["Viximon"],
+		evos: ["Viximon"],
 		eggGroups: ["Field"],
 	},
 	viximon: {
@@ -72201,8 +72392,8 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 3.5,
 		color: "Blue",
-		prevo : "Relemon",
-		evos : ["Renamon"],
+		prevo: "Relemon",
+		evos: ["Renamon"],
 		eggGroups: ["Field"],
 	},
 	renamon: {
@@ -72214,8 +72405,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 36.5,
 		color: "Blue",
-		prevo : "Viximon",
-		evos : ["Kyubimon"],
+		prevo: "Viximon",
+		evos: ["Kyubimon"],
 		eggGroups: ["Field", "Humanlike"],
 	},
 	kyubimon: {
@@ -72227,8 +72418,8 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 26.5,
 		color: "Blue",
-		prevo : "Renamon",
-		evos : ["Taomon"],
+		prevo: "Renamon",
+		evos: ["Taomon"],
 		eggGroups: ["Field", "Humanlike"],
 	},
 	taomon: {
@@ -72240,8 +72431,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 36.5,
 		color: "Blue",
-		prevo : "Kyubimon",
-		evos : ["Sakuyamon"],
+		prevo: "Kyubimon",
+		evos: ["Sakuyamon"],
 		eggGroups: ["Field", "Humanlike"],
 	},
 	sakuyamon: {
@@ -72253,7 +72444,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 36.5,
 		color: "Blue",
-		prevo : "Taomon",
+		prevo: "Taomon",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	pageon: {
@@ -72265,7 +72456,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	wpachirisu: {
@@ -72277,7 +72468,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 3.9,
 		color: "White",
-		evos : ["Mkachirisu", "Fkachirisu"],
+		evos: ["Mkachirisu", "Fkachirisu"],
 		eggGroups: ["Field", "Fairy"],
 	},
 	mkachirisu: {
@@ -72289,7 +72480,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 3.9,
 		color: "White",
-		prevo : "Wpachirisu",
+		prevo: "Wpachirisu",
 		eggGroups: ["Field", "Fairy"],
 	},
 	fkachirisu: {
@@ -72301,7 +72492,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 3.9,
 		color: "White",
-		prevo : "Wpachirisu",
+		prevo: "Wpachirisu",
 		eggGroups: ["Field", "Fairy"],
 	},
 	mmienshao: {
@@ -72313,7 +72504,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 35.5,
 		color: "Purple",
-		prevo : "Mienshao",
+		prevo: "Mienshao",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	himvirus: {
@@ -72336,8 +72527,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Sabcurry"],
+		prevo: "Curry",
+		evos: ["Sabcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	sabcurry: {
@@ -72349,7 +72540,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 13.1,
 		color: "Blue",
-		prevo : "Samcurry",
+		prevo: "Samcurry",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	gkingler: {
@@ -72361,7 +72552,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 60.0,
 		color: "Red",
-		prevo : "Kingler",
+		prevo: "Kingler",
 		eggGroups: ["Water3"],
 	},
 	dfpsyduck: {
@@ -72373,7 +72564,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 19.6,
 		color: "Yellow",
-		evos : ["Dfgolduck"],
+		evos: ["Dfgolduck"],
 		eggGroups: ["Water1", "Field"],
 	},
 	dfgolduck: {
@@ -72385,7 +72576,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 76.6,
 		color: "Blue",
-		prevo : "Dfpsyduck",
+		prevo: "Dfpsyduck",
 		eggGroups: ["Water1", "Field"],
 	},
 	solcrab: {
@@ -72397,7 +72588,7 @@ blobbosmechelectric: {
 		heightm: 3.9,
 		weightkg: 1160.0,
 		color: "Red",
-		prevo : "Suncrab",
+		prevo: "Suncrab",
 		eggGroups: ["Water3"],
 	},
 	gordrarm: {
@@ -72409,7 +72600,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 139.0,
 		color: "Red",
-		evos : ["Garagonarm"],
+		evos: ["Garagonarm"],
 		eggGroups: ["Field", "Dragon"],
 	},
 	garagonarm: {
@@ -72421,7 +72612,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 139.0,
 		color: "Red",
-		prevo : "Gordrarm",
+		prevo: "Gordrarm",
 		eggGroups: ["Field", "Dragon"],
 	},
 	acolittle: {
@@ -72433,7 +72624,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 12.9,
 		color: "Purple",
-		evos : ["Glaakultist", "Aculggua", "Aculyig", "Aculzoth", "Aculyellow", "Acultgoat", "Acthulist", "Aculthuga", "Aculthqua", "Acolthep", "Acultchotcho", "Acosoth"],
+		evos: ["Glaakultist", "Aculggua", "Aculyig", "Aculzoth", "Aculyellow", "Acultgoat", "Acthulist", "Aculthuga", "Aculthqua", "Acolthep", "Acultchotcho", "Acosoth"],
 		eggGroups: ["Humanlike"],
 	},
 	acthulist: {
@@ -72445,7 +72636,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 12.9,
 		color: "Purple",
-		prevo : "Acolittle",
+		prevo: "Acolittle",
 		eggGroups: ["Humanlike", "Water2"],
 	},
 	acolthep: {
@@ -72457,7 +72648,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 12.9,
 		color: "Purple",
-		prevo : "Acolittle",
+		prevo: "Acolittle",
 		eggGroups: ["Humanlike", "Flying"],
 	},
 	acosoth: {
@@ -72469,7 +72660,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 12.9,
 		color: "Purple",
-		prevo : "Acolittle",
+		prevo: "Acolittle",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	acultgoat: {
@@ -72481,7 +72672,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 12.9,
 		color: "Purple",
-		prevo : "Acolittle",
+		prevo: "Acolittle",
 		eggGroups: ["Humanlike", "Field"],
 	},
 	aculthqua: {
@@ -72493,7 +72684,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 12.9,
 		color: "Purple",
-		prevo : "Acolittle",
+		prevo: "Acolittle",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	aculggua: {
@@ -72505,7 +72696,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 12.9,
 		color: "Purple",
-		prevo : "Acolittle",
+		prevo: "Acolittle",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	aculyig: {
@@ -72517,7 +72708,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 12.9,
 		color: "Purple",
-		prevo : "Acolittle",
+		prevo: "Acolittle",
 		eggGroups: ["Humanlike", "Dragon"],
 	},
 	aculyellow: {
@@ -72529,7 +72720,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 12.9,
 		color: "Purple",
-		prevo : "Acolittle",
+		prevo: "Acolittle",
 		eggGroups: ["Humanlike"],
 	},
 	acultchotcho: {
@@ -72541,7 +72732,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 12.9,
 		color: "Purple",
-		prevo : "Acolittle",
+		prevo: "Acolittle",
 		eggGroups: ["Humanlike"],
 	},
 	aculzoth: {
@@ -72553,7 +72744,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 12.9,
 		color: "Purple",
-		prevo : "Acolittle",
+		prevo: "Acolittle",
 		eggGroups: ["Humanlike", "Flying"],
 	},
 	regicrawl: {
@@ -72576,7 +72767,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 12.9,
 		color: "Purple",
-		prevo : "Acolittle",
+		prevo: "Acolittle",
 		eggGroups: ["Humanlike", "Field"],
 	},
 	voormisan: {
@@ -72599,7 +72790,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.1,
 		color: "Purple",
-		evos : ["Sinistea"],
+		evos: ["Sinistea"],
 		eggGroups: ["Undiscovered"],
 	},
 	maglamp: {
@@ -72611,7 +72802,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 55.0,
 		color: "Red",
-		prevo : "Slugma",
+		prevo: "Slugma",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	shatterene: {
@@ -72623,7 +72814,7 @@ blobbosmechelectric: {
 		heightm: 4.4,
 		weightkg: 86.6,
 		color: "White",
-		prevo : "Hattrem",
+		prevo: "Hattrem",
 		eggGroups: ["Amorphous", "Fairy"],
 	},
 	whoredevoir: {
@@ -72635,7 +72826,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 48.4,
 		color: "White",
-		prevo : "Kirlia",
+		prevo: "Kirlia",
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	steamingo: {
@@ -72647,7 +72838,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.3,
 		color: "Blue",
-		prevo : "Steamling",
+		prevo: "Steamling",
 		eggGroups: ["Flying"],
 	},
 	wyrmaiden: {
@@ -72659,7 +72850,7 @@ blobbosmechelectric: {
 		heightm: 5.4,
 		weightkg: 65.5,
 		color: "Brown",
-		prevo : "Lusfairy",
+		prevo: "Lusfairy",
 		eggGroups: ["Humanlike", "Dragon"],
 	},
 	himtech: {
@@ -72682,7 +72873,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 20.0,
 		color: "Purple",
-		evos : ["Tfraygirth"],
+		evos: ["Tfraygirth"],
 		eggGroups: ["Water1"],
 	},
 	tfraygirth: {
@@ -72694,8 +72885,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 20.0,
 		color: "Purple",
-		prevo : "Tfkochia",
-		evos : ["Tfraygoten"],
+		prevo: "Tfkochia",
+		evos: ["Tfraygoten"],
 		eggGroups: ["Water1"],
 	},
 	tfraygoten: {
@@ -72707,7 +72898,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 20.0,
 		color: "Purple",
-		prevo : "Tfraygirth",
+		prevo: "Tfraygirth",
 		eggGroups: ["Water1"],
 	},
 	dratyke: {
@@ -72719,7 +72910,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 2.3,
 		color: "Blue",
-		evos : ["Drampa"],
+		evos: ["Drampa"],
 		eggGroups: ["Undiscovered"],
 	},
 	mdrampa: {
@@ -72731,7 +72922,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 212.0,
 		color: "Red",
-		prevo : "Drampa",
+		prevo: "Drampa",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	mbruxish: {
@@ -72798,7 +72989,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 48.0,
 		color: "Red",
-		prevo : "Mariantoinette",
+		prevo: "Mariantoinette",
 		eggGroups: ["Undiscovered"],
 	},
 	himghost: {
@@ -72821,7 +73012,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 24.0,
 		color: "Black",
-		prevo : "Elizidol",
+		prevo: "Elizidol",
 		eggGroups: ["Undiscovered"],
 	},
 	hinaspin: {
@@ -72844,7 +73035,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 16.8,
 		color: "Gray",
-		evos : ["Dglalie", "Dfroslass"],
+		evos: ["Dglalie", "Dfroslass"],
 		eggGroups: ["Fairy", "Mineral"],
 	},
 	dglalie: {
@@ -72856,7 +73047,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 256.5,
 		color: "Gray",
-		prevo : "Dsnorunt",
+		prevo: "Dsnorunt",
 		eggGroups: ["Fairy", "Mineral"],
 	},
 	dfroslass: {
@@ -72868,7 +73059,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 26.6,
 		color: "White",
-		prevo : "Dsnorunt",
+		prevo: "Dsnorunt",
 		eggGroups: ["Fairy", "Mineral"],
 	},
 	dpsyduck: {
@@ -72880,7 +73071,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 19.6,
 		color: "Yellow",
-		evos : ["Dgolduck"],
+		evos: ["Dgolduck"],
 		eggGroups: ["Water1", "Field"],
 	},
 	dgolduck: {
@@ -72892,7 +73083,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 76.6,
 		color: "Blue",
-		prevo : "Dpsyduck",
+		prevo: "Dpsyduck",
 		eggGroups: ["Water1", "Field"],
 	},
 	lobotite: {
@@ -72904,7 +73095,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Blue",
-		evos : ["Lobotitan"],
+		evos: ["Lobotitan"],
 		eggGroups: ["Amorphous"],
 	},
 	lobotitan: {
@@ -72916,8 +73107,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Blue",
-		prevo : "Lobotite",
-		evos : ["Lobautomous"],
+		prevo: "Lobotite",
+		evos: ["Lobautomous"],
 		eggGroups: ["Amorphous"],
 	},
 	lobautomous: {
@@ -72929,7 +73120,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Blue",
-		prevo : "Lobotitan",
+		prevo: "Lobotitan",
 		eggGroups: ["Amorphous", "Monster"],
 	},
 	steamling: {
@@ -72941,7 +73132,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.3,
 		color: "Blue",
-		evos : ["Steamingo"],
+		evos: ["Steamingo"],
 		eggGroups: ["Flying"],
 	},
 	burniel: {
@@ -72953,7 +73144,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 1.2,
 		color: "Red",
-		evos : ["Zophlare"],
+		evos: ["Zophlare"],
 		eggGroups: ["Amorphous"],
 	},
 	zophlare: {
@@ -72965,7 +73156,7 @@ blobbosmechelectric: {
 		heightm: 3.4,
 		weightkg: 1.2,
 		color: "Green",
-		prevo : "Burniel",
+		prevo: "Burniel",
 		eggGroups: ["Amorphous"],
 	},
 	ywwhisper: {
@@ -72988,7 +73179,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.0,
 		color: "Yellow",
-		prevo : "Pikachu",
+		prevo: "Pikachu",
 		eggGroups: ["Field", "Fairy"],
 	},
 	dralts: {
@@ -73000,7 +73191,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.6,
 		color: "White",
-		evos : ["Dkirlia"],
+		evos: ["Dkirlia"],
 		eggGroups: ["Amorphous"],
 	},
 	dkirlia: {
@@ -73012,8 +73203,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 20.2,
 		color: "White",
-		prevo : "Dralts",
-		evos : ["Dgallade", "Dgardevoir"],
+		prevo: "Dralts",
+		evos: ["Dgallade", "Dgardevoir"],
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	dgardevoir: {
@@ -73025,7 +73216,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 48.4,
 		color: "White",
-		prevo : "Dkirlia",
+		prevo: "Dkirlia",
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	dgallade: {
@@ -73037,7 +73228,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 52.0,
 		color: "White",
-		prevo : "Dkirlia",
+		prevo: "Dkirlia",
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	blatsoup: {
@@ -73049,8 +73240,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 7.5,
 		color: "Purple",
-		prevo : "Blat",
-		evos : ["Coronablat"],
+		prevo: "Blat",
+		evos: ["Coronablat"],
 		eggGroups: ["Flying", "Amorphous"],
 	},
 	coronablat: {
@@ -73062,7 +73253,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 17.5,
 		color: "Purple",
-		prevo : "Blatsoup",
+		prevo: "Blatsoup",
 		eggGroups: ["Flying", "Amorphous"],
 	},
 	muraship: {
@@ -73140,7 +73331,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 0.3,
 		color: "Purple",
-		evos : ["Wskiploom"],
+		evos: ["Wskiploom"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	wskiploom: {
@@ -73152,8 +73343,8 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 0.5,
 		color: "Purple",
-		prevo : "Whoppip",
-		evos : ["Wjumpluff"],
+		prevo: "Whoppip",
+		evos: ["Wjumpluff"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	wjumpluff: {
@@ -73165,7 +73356,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 2.5,
 		color: "Purple",
-		prevo : "Wskiploom",
+		prevo: "Wskiploom",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	himground: {
@@ -73276,7 +73467,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.3,
 		color: "White",
-		evos : ["Goliatholl"],
+		evos: ["Goliatholl"],
 		eggGroups: ["Undiscovered"],
 	},
 	houraioll: {
@@ -73288,7 +73479,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.3,
 		color: "White",
-		evos : ["Goliatholl"],
+		evos: ["Goliatholl"],
 		eggGroups: ["Undiscovered"],
 	},
 	goliatholl: {
@@ -73300,7 +73491,7 @@ blobbosmechelectric: {
 		heightm: 8.2,
 		weightkg: 111.3,
 		color: "White",
-		prevo : "Shanghaiollhouraioll",
+		prevo: "Shanghaiollhouraioll",
 		eggGroups: ["Undiscovered"],
 	},
 	tojiko: {
@@ -73433,7 +73624,7 @@ blobbosmechelectric: {
 		heightm: 14.1,
 		weightkg: 1354.2,
 		color: "Blue",
-		prevo : "Eleoler",
+		prevo: "Eleoler",
 		eggGroups: ["Field"],
 	},
 	meirablade: {
@@ -73456,7 +73647,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 8.3,
 		color: "White",
-		evos : ["Rikatank"],
+		evos: ["Rikatank"],
 		eggGroups: ["Undiscovered"],
 	},
 	rikatank: {
@@ -73468,7 +73659,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 8.3,
 		color: "White",
-		prevo : "Crikatank",
+		prevo: "Crikatank",
 		eggGroups: ["Undiscovered"],
 	},
 	himdragon: {
@@ -73667,7 +73858,7 @@ blobbosmechelectric: {
 		heightm: 11.8,
 		weightkg: 1126.0,
 		color: "White",
-		evos : ["Thmaribel"],
+		evos: ["Thmaribel"],
 		eggGroups: ["Undiscovered"],
 	},
 	thmaribel: {
@@ -73679,7 +73870,7 @@ blobbosmechelectric: {
 		heightm: 11.8,
 		weightkg: 1126.0,
 		color: "White",
-		prevo : "Cmaribel",
+		prevo: "Cmaribel",
 		eggGroups: ["Undiscovered"],
 	},
 	crenko: {
@@ -73691,7 +73882,7 @@ blobbosmechelectric: {
 		heightm: 11.8,
 		weightkg: 1126.0,
 		color: "White",
-		evos : ["Threnko"],
+		evos: ["Threnko"],
 		eggGroups: ["Undiscovered"],
 	},
 	threnko: {
@@ -73703,7 +73894,7 @@ blobbosmechelectric: {
 		heightm: 11.8,
 		weightkg: 1126.0,
 		color: "White",
-		prevo : "Crenko",
+		prevo: "Crenko",
 		eggGroups: ["Undiscovered"],
 	},
 	wakamaid: {
@@ -73759,7 +73950,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 34.0,
 		color: "Black",
-		prevo : "Nerober",
+		prevo: "Nerober",
 		eggGroups: ["Undiscovered"],
 	},
 	boudichariot: {
@@ -73804,7 +73995,7 @@ blobbosmechelectric: {
 		heightm: 11.1,
 		weightkg: 2275.4,
 		color: "Blue",
-		prevo : "Flowjaw",
+		prevo: "Flowjaw",
 		eggGroups: ["Water1", "Monster"],
 	},
 	orionartemis: {
@@ -73860,8 +74051,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Monkid",
-		evos : ["Floweyrst", "Asrielgot"],
+		prevo: "Monkid",
+		evos: ["Floweyrst", "Asrielgot"],
 		eggGroups: ["Monster"],
 	},
 	asrielgot: {
@@ -73873,7 +74064,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Floweyr",
+		prevo: "Floweyr",
 		eggGroups: ["Monster"],
 	},
 	chrislumbus: {
@@ -73896,8 +74087,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Floweyr",
-		evos : ["Asrieldrem"],
+		prevo: "Floweyr",
+		evos: ["Asrieldrem"],
 		eggGroups: ["Monster"],
 	},
 	dwelder: {
@@ -73909,7 +74100,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.3,
 		color: "Blue",
-		evos : ["Weldigger"],
+		evos: ["Weldigger"],
 		eggGroups: ["Field"],
 	},
 	weldigger: {
@@ -73921,7 +74112,7 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 112.3,
 		color: "Blue",
-		prevo : "Dwelder",
+		prevo: "Dwelder",
 		eggGroups: ["Field", "Monster"],
 	},
 	himchaos: {
@@ -73955,7 +74146,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 30.0,
 		color: "Purple",
-		evos : ["Nmuk"],
+		evos: ["Nmuk"],
 		eggGroups: ["Amorphous"],
 	},
 	nmuk: {
@@ -73967,7 +74158,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 30.0,
 		color: "Purple",
-		prevo : "Ngrimer",
+		prevo: "Ngrimer",
 		eggGroups: ["Amorphous"],
 	},
 	catnobanana: {
@@ -73990,7 +74181,7 @@ blobbosmechelectric: {
 		heightm: 2.4,
 		weightkg: 15.5,
 		color: "Brown",
-		prevo : "Lusfairy",
+		prevo: "Lusfairy",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	doomsay: {
@@ -74018,6 +74209,7 @@ blobbosmechelectric: {
 	milunatone: {
 		num: 668220,
 		name: "Milunatone",
+		baseForme: "Standard",
 		types: ["Rock", "Cosmic"],
 		baseStats: {hp: 70, atk: 35, def: 105, spa: 75, spd: 125, spe: 50},
 		abilities: {0: "Zen Mode", H: "Levitate"},
@@ -74025,10 +74217,28 @@ blobbosmechelectric: {
 		weightkg: 168.0,
 		color: "Yellow",
 		eggGroups: ["Mineral"],
+		otherFormes: ["Milunatone-Zen"],
+		formeOrder: ["Milunatone", "Milunatone-Zen"],
+	},
+	milunatonezen: {
+		num: 668220,
+		name: "Milunatone-Zen",
+		baseSpecies: "Milunatone",
+		forme: "Zen",
+		types: ["Light", "Cosmic"],
+		baseStats: {hp: 70, atk: 35, def: 50, spa: 125, spd: 75, spe: 105},
+		abilities: {0: "Zen Mode"},
+		heightm: 1.0,
+		weightkg: 168.0,
+		color: "Yellow",
+		eggGroups: ["Mineral"],
+		requiredAbility: "Zen Mode",
+		battleOnly: "Milunatone",
 	},
 	misolrock: {
 		num: 668221,
 		name: "Misolrock",
+		baseForme: "Standard",
 		types: ["Rock", "Cosmic"],
 		baseStats: {hp: 70, atk: 75, def: 125, spa: 35, spd: 105, spe: 50},
 		abilities: {0: "Zen Mode", H: "Levitate"},
@@ -74036,6 +74246,23 @@ blobbosmechelectric: {
 		weightkg: 154.0,
 		color: "Red",
 		eggGroups: ["Mineral"],
+		otherFormes: ["Misolrock-Zen"],
+		formeOrder: ["Misolrock", "Misolrock-Zen"],
+	},
+	misolrockzen: {
+		num: 668221,
+		name: "Misolrock-Zen",
+		baseSpecies: "Misolrock",
+		forme: "Zen",
+		types: ["Light", "Cosmic"],
+		baseStats: {hp: 70, atk: 125, def: 75, spa: 105, spd: 35, spe: 105},
+		abilities: {0: "Zen Mode"},
+		heightm: 1.2,
+		weightkg: 154.0,
+		color: "Red",
+		eggGroups: ["Mineral"],
+		requiredAbility: "Zen Mode",
+		battleOnly: "Misolrock",
 	},
 	weepinbarf: {
 		num: 668222,
@@ -74046,7 +74273,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 6.4,
 		color: "Green",
-		prevo : "Bellsprout",
+		prevo: "Bellsprout",
 		eggGroups: ["Grass"],
 	},
 	tmagnemite: {
@@ -74058,7 +74285,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.0,
 		color: "Gray",
-		evos : ["Tmagneton"],
+		evos: ["Tmagneton"],
 		eggGroups: ["Mineral"],
 	},
 	tmagneton: {
@@ -74070,8 +74297,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 60.0,
 		color: "Gray",
-		prevo : "Tmagnemite",
-		evos : ["Magnezone", "Kaiju Magnezone"],
+		prevo: "Tmagnemite",
+		evos: ["Magnezone", "Kaiju Magnezone"],
 		eggGroups: ["Mineral"],
 	},
 	bjigglypuff: {
@@ -74083,7 +74310,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 5.5,
 		color: "Pink",
-		evos : ["Spooklypuff", "Bwigglytuff"],
+		evos: ["Spooklypuff", "Bwigglytuff"],
 		eggGroups: ["Fairy"],
 	},
 	bwigglytuff: {
@@ -74095,7 +74322,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 12.0,
 		color: "Pink",
-		prevo : "Bjigglypuff",
+		prevo: "Bjigglypuff",
 		eggGroups: ["Fairy"],
 	},
 	truehim: {
@@ -74173,7 +74400,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 8.0,
 		color: "Blue",
-		evos : ["Fseadra"],
+		evos: ["Fseadra"],
 		eggGroups: ["Water1", "Dragon"],
 	},
 	fseadra: {
@@ -74185,8 +74412,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 25.0,
 		color: "Blue",
-		prevo : "Fhorsea",
-		evos : ["Fkingdra"],
+		prevo: "Fhorsea",
+		evos: ["Fkingdra"],
 		eggGroups: ["Water1", "Dragon"],
 	},
 	fkingdra: {
@@ -74198,7 +74425,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 152.0,
 		color: "Blue",
-		prevo : "Fseadra",
+		prevo: "Fseadra",
 		eggGroups: ["Water1", "Dragon"],
 	},
 	corviknighteen: {
@@ -74210,7 +74437,7 @@ blobbosmechelectric: {
 		heightm: 4.7,
 		weightkg: 80.5,
 		color: "Gray",
-		prevo : "Corvisquire",
+		prevo: "Corvisquire",
 		eggGroups: ["Flying"],
 	},
 	beholdie: {
@@ -74222,7 +74449,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 0.5,
 		color: "Pink",
-		evos : ["Beholdeye"],
+		evos: ["Beholdeye"],
 		eggGroups: ["Amorphous"],
 	},
 	beholdeye: {
@@ -74234,8 +74461,8 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 9.5,
 		color: "Pink",
-		prevo : "Beholdie",
-		evos : ["Teyerant"],
+		prevo: "Beholdie",
+		evos: ["Teyerant"],
 		eggGroups: ["Amorphous"],
 	},
 	teyerant: {
@@ -74247,7 +74474,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 9.5,
 		color: "Pink",
-		prevo : "Beholdeye",
+		prevo: "Beholdeye",
 		eggGroups: ["Amorphous"],
 	},
 	gassporeye: {
@@ -74281,8 +74508,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 29.0,
 		color: "Green",
-		prevo : "Chespin",
-		evos : ["Cheslios"],
+		prevo: "Chespin",
+		evos: ["Cheslios"],
 		eggGroups: ["Field"],
 	},
 	cheslios: {
@@ -74294,7 +74521,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 90.0,
 		color: "Green",
-		prevo : "Solahog",
+		prevo: "Solahog",
 		eggGroups: ["Field"],
 	},
 	neofen: {
@@ -74306,8 +74533,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 14.5,
 		color: "Red",
-		prevo : "Fennekin",
-		evos : ["Omephox"],
+		prevo: "Fennekin",
+		evos: ["Omephox"],
 		eggGroups: ["Field"],
 	},
 	omephox: {
@@ -74319,7 +74546,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 39.0,
 		color: "Red",
-		prevo : "Neofen",
+		prevo: "Neofen",
 		eggGroups: ["Field"],
 	},
 	simprog: {
@@ -74331,8 +74558,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 10.9,
 		color: "Blue",
-		prevo : "Froakie",
-		evos : ["Neoille"],
+		prevo: "Froakie",
+		evos: ["Neoille"],
 		eggGroups: ["Water1"],
 	},
 	neoille: {
@@ -74344,7 +74571,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 40.0,
 		color: "Blue",
-		prevo : "Simprog",
+		prevo: "Simprog",
 		eggGroups: ["Water1"],
 	},
 	pumpird: {
@@ -74356,7 +74583,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 9.5,
 		color: "Gray",
-		evos : ["Pumpjackird"],
+		evos: ["Pumpjackird"],
 		eggGroups: ["Mineral"],
 	},
 	pumpjackird: {
@@ -74368,7 +74595,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 9.5,
 		color: "Gray",
-		prevo : "Pumpird",
+		prevo: "Pumpird",
 		eggGroups: ["Mineral"],
 	},
 	gigimon: {
@@ -74380,7 +74607,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		evos : ["Guilmon"],
+		evos: ["Guilmon"],
 		eggGroups: ["Undiscovered"],
 	},
 	guilmon: {
@@ -74392,8 +74619,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 66.5,
 		color: "Blue",
-		prevo : "Gigimon",
-		evos : ["Growlmon"],
+		prevo: "Gigimon",
+		evos: ["Growlmon"],
 		eggGroups: ["Dragon"],
 	},
 	growlmon: {
@@ -74405,8 +74632,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 216.5,
 		color: "Blue",
-		prevo : "Guilmon",
-		evos : ["Wargrowlmon"],
+		prevo: "Guilmon",
+		evos: ["Wargrowlmon"],
 		eggGroups: ["Dragon"],
 	},
 	wargrowlmon: {
@@ -74418,8 +74645,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 1116.5,
 		color: "Blue",
-		prevo : "Growlmon",
-		evos : ["Gallantmon", "Megidramon"],
+		prevo: "Growlmon",
+		evos: ["Gallantmon", "Megidramon"],
 		eggGroups: ["Dragon"],
 	},
 	gallantmon: {
@@ -74431,7 +74658,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 116.5,
 		color: "Blue",
-		prevo : "Wargrowlmon",
+		prevo: "Wargrowlmon",
 		eggGroups: ["Dragon"],
 	},
 	megidramon: {
@@ -74443,7 +74670,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 1116.5,
 		color: "Blue",
-		prevo : "Wargrowlmon",
+		prevo: "Wargrowlmon",
 		eggGroups: ["Dragon"],
 	},
 	larvipede: {
@@ -74455,7 +74682,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 5.3,
 		color: "Red",
-		evos : ["Sandrawler"],
+		evos: ["Sandrawler"],
 		eggGroups: ["Bug"],
 	},
 	sandrawler: {
@@ -74467,7 +74694,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 5.3,
 		color: "Red",
-		prevo : "Larvipede",
+		prevo: "Larvipede",
 		eggGroups: ["Bug"],
 	},
 	gummymon: {
@@ -74479,7 +74706,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		evos : ["Terriermon"],
+		evos: ["Terriermon"],
 		eggGroups: ["Undiscovered"],
 	},
 	terriermon: {
@@ -74491,8 +74718,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Gummymon",
-		evos : ["Gargomon"],
+		prevo: "Gummymon",
+		evos: ["Gargomon"],
 		eggGroups: ["Field"],
 	},
 	gargomon: {
@@ -74504,8 +74731,8 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 116.5,
 		color: "Blue",
-		prevo : "Terriermon",
-		evos : ["Rapidmon"],
+		prevo: "Terriermon",
+		evos: ["Rapidmon"],
 		eggGroups: ["Field"],
 	},
 	rapidmon: {
@@ -74517,8 +74744,8 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 116.5,
 		color: "Blue",
-		prevo : "Gargomon",
-		evos : ["Megagargomon"],
+		prevo: "Gargomon",
+		evos: ["Megagargomon"],
 		eggGroups: ["Field"],
 	},
 	megagargomon: {
@@ -74530,7 +74757,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 116.5,
 		color: "Blue",
-		prevo : "Rapidmon",
+		prevo: "Rapidmon",
 		eggGroups: ["Field"],
 	},
 	numemon: {
@@ -74542,7 +74769,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		evos : ["Numemon X", "Karatsukinumemon", "Sukamon", "Monzaemon"],
+		evos: ["Numemon X", "Karatsukinumemon", "Sukamon", "Monzaemon"],
 		eggGroups: ["Amorphous"],
 	},
 	sukamon: {
@@ -74554,8 +74781,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Numemonchuumon",
-		evos : ["Platinumsukamon", "Etemon"],
+		prevo: "Numemonchuumon",
+		evos: ["Platinumsukamon", "Etemon"],
 		eggGroups: ["Amorphous"],
 	},
 	platinumsukamon: {
@@ -74567,7 +74794,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Sukamon",
+		prevo: "Sukamon",
 		eggGroups: ["Amorphous"],
 	},
 	karatsukinumemon: {
@@ -74579,7 +74806,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Numemon",
+		prevo: "Numemon",
 		eggGroups: ["Amorphous"],
 	},
 	monzaemon: {
@@ -74591,7 +74818,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Numemongeremon",
+		prevo: "Numemongeremon",
 		eggGroups: ["Amorphous"],
 	},
 	etemon: {
@@ -74603,8 +74830,8 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 76.5,
 		color: "Red",
-		prevo : "Sukamon",
-		evos : ["Metaletemon"],
+		prevo: "Sukamon",
+		evos: ["Metaletemon"],
 		eggGroups: ["Amorphous"],
 	},
 	metaletemon: {
@@ -74616,8 +74843,8 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 76.5,
 		color: "Red",
-		prevo : "Etemon",
-		evos : ["Kingetemon"],
+		prevo: "Etemon",
+		evos: ["Kingetemon"],
 		eggGroups: ["Amorphous"],
 	},
 	kingetemon: {
@@ -74629,7 +74856,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 76.5,
 		color: "Red",
-		prevo : "Metaletemon",
+		prevo: "Metaletemon",
 		eggGroups: ["Amorphous"],
 	},
 	chuumon: {
@@ -74641,7 +74868,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.5,
 		color: "Blue",
-		evos : ["Sukamon"],
+		evos: ["Sukamon"],
 		eggGroups: ["Amorphous"],
 	},
 	snowagumon: {
@@ -74653,7 +74880,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Augumonkoromon",
+		prevo: "Augumonkoromon",
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	blackagumon: {
@@ -74665,8 +74892,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Koromonpagumon",
-		evos : ["Vgreymon"],
+		prevo: "Koromonpagumon",
+		evos: ["Vgreymon"],
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	vgreymon: {
@@ -74678,8 +74905,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Blackagumon",
-		evos : ["Metalgreymonv"],
+		prevo: "Blackagumon",
+		evos: ["Metalgreymonv"],
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	snowgoblimon: {
@@ -74691,8 +74918,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Pagumon",
-		evos : ["Hyogamon"],
+		prevo: "Pagumon",
+		evos: ["Hyogamon"],
 		eggGroups: ["Fairy"],
 	},
 	shamanmon: {
@@ -74704,7 +74931,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Pagumon",
+		prevo: "Pagumon",
 		eggGroups: ["Fairy"],
 	},
 	dotaugumon: {
@@ -74727,8 +74954,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Otamamon",
-		evos : ["Monzaemon"],
+		prevo: "Otamamon",
+		evos: ["Monzaemon"],
 		eggGroups: ["Amorphous"],
 	},
 	otamamon: {
@@ -74740,7 +74967,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		evos : ["Gekomon", "Geremon"],
+		evos: ["Gekomon", "Geremon"],
 		eggGroups: ["Water1"],
 	},
 	gekomon: {
@@ -74752,8 +74979,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Otamamon",
-		evos : ["Shogungekomon"],
+		prevo: "Otamamon",
+		evos: ["Shogungekomon"],
 		eggGroups: ["Water1"],
 	},
 	shogungekomon: {
@@ -74765,8 +74992,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 816.5,
 		color: "Blue",
-		prevo : "Gekomon",
-		evos : ["Pukumon"],
+		prevo: "Gekomon",
+		evos: ["Pukumon"],
 		eggGroups: ["Water1"],
 	},
 	pukumon: {
@@ -74778,7 +75005,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 816.5,
 		color: "Blue",
-		prevo : "Shogungekomon",
+		prevo: "Shogungekomon",
 		eggGroups: ["Water1"],
 	},
 	nanimon: {
@@ -74790,7 +75017,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		evos : ["Bombernanimon"],
+		evos: ["Bombernanimon"],
 		eggGroups: ["Amorphous"],
 	},
 	bombernanimon: {
@@ -74802,7 +75029,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Nanimon",
+		prevo: "Nanimon",
 		eggGroups: ["Amorphous"],
 	},
 	snuggice: {
@@ -74814,7 +75041,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 12.0,
 		color: "Blue",
-		evos : ["Sweateryeti"],
+		evos: ["Sweateryeti"],
 		eggGroups: ["Field"],
 	},
 	sweateryeti: {
@@ -74826,7 +75053,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 12.0,
 		color: "Blue",
-		prevo : "Snuggice",
+		prevo: "Snuggice",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	frequenceon: {
@@ -74838,7 +75065,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	primplup: {
@@ -74850,8 +75077,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 23.0,
 		color: "Blue",
-		prevo : "Piplup",
-		evos : ["Primpendlup"],
+		prevo: "Piplup",
+		evos: ["Primpendlup"],
 		eggGroups: ["Water1", "Field"],
 	},
 	primpendlup: {
@@ -74863,7 +75090,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 23.0,
 		color: "Blue",
-		prevo : "Primplup",
+		prevo: "Primplup",
 		eggGroups: ["Water1", "Field"],
 	},
 	manaphake: {
@@ -74897,7 +75124,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 97.0,
 		color: "Green",
-		evos : ["Faketerra"],
+		evos: ["Faketerra"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	faketerra: {
@@ -74909,7 +75136,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 310.0,
 		color: "Green",
-		prevo : "Grotlefake",
+		prevo: "Grotlefake",
 		eggGroups: ["Monster", "Grass"],
 	},
 	riodog: {
@@ -74932,7 +75159,7 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 220.0,
 		color: "Blue",
-		prevo : "Lapras",
+		prevo: "Lapras",
 		eggGroups: ["Monster", "Water1"],
 	},
 	saunarilla: {
@@ -74944,7 +75171,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 119.0,
 		color: "Green",
-		prevo : "Thwackey",
+		prevo: "Thwackey",
 		eggGroups: ["Field", "Grass"],
 	},
 	helialope: {
@@ -74956,7 +75183,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 18.5,
 		color: "Red",
-		prevo : "Raboot",
+		prevo: "Raboot",
 		eggGroups: ["Field"],
 	},
 	societrex: {
@@ -74968,7 +75195,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 7.0,
 		color: "Blue",
-		prevo : "Drizzile",
+		prevo: "Drizzile",
 		eggGroups: ["Water1"],
 	},
 	noroiko: {
@@ -75035,7 +75262,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	ghostmaid: {
@@ -75058,7 +75285,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.2,
 		color: "Brown",
-		evos : ["Tnoctowl"],
+		evos: ["Tnoctowl"],
 		eggGroups: ["Flying"],
 	},
 	tnoctowl: {
@@ -75070,7 +75297,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 40.8,
 		color: "Brown",
-		prevo : "Thoothoot",
+		prevo: "Thoothoot",
 		eggGroups: ["Flying"],
 	},
 	mprobopass: {
@@ -75082,7 +75309,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 340.0,
 		color: "Gray",
-		prevo : "Probopass",
+		prevo: "Probopass",
 		eggGroups: ["Mineral"],
 	},
 	adventcirnai: {
@@ -75248,7 +75475,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 30.0,
 		color: "Purple",
-		evos : ["Merqetal"],
+		evos: ["Merqetal"],
 		eggGroups: ["Amorphous"],
 	},
 	merqetal: {
@@ -75260,7 +75487,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 30.0,
 		color: "Purple",
-		prevo : "Mercary",
+		prevo: "Mercary",
 		eggGroups: ["Amorphous"],
 	},
 	tunacury: {
@@ -75294,7 +75521,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.8,
 		color: "White",
-		prevo : "Wooloo",
+		prevo: "Wooloo",
 		eggGroups: ["Field"],
 	},
 	matzio: {
@@ -75306,7 +75533,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
-		evos : ["Matzahz"],
+		evos: ["Matzahz"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	matzahz: {
@@ -75318,7 +75545,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
-		prevo : "Matzio",
+		prevo: "Matzio",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	aeongel: {
@@ -75330,7 +75557,7 @@ blobbosmechelectric: {
 		heightm: 2.7,
 		weightkg: 1.0,
 		color: "Red",
-		prevo : "Tortuagel",
+		prevo: "Tortuagel",
 		eggGroups: ["Humanlike", "Monster"],
 	},
 	archongel: {
@@ -75342,7 +75569,7 @@ blobbosmechelectric: {
 		heightm: 2.7,
 		weightkg: 1.0,
 		color: "Red",
-		prevo : "Tortuagel",
+		prevo: "Tortuagel",
 		eggGroups: ["Humanlike", "Monster"],
 	},
 	sakiriff: {
@@ -75409,7 +75636,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 92.0,
 		color: "Green",
-		evos : ["Jgolurk"],
+		evos: ["Jgolurk"],
 		eggGroups: ["Mineral"],
 	},
 	jgolurk: {
@@ -75421,7 +75648,7 @@ blobbosmechelectric: {
 		heightm: 2.8,
 		weightkg: 330.0,
 		color: "Green",
-		prevo : "Jgolett",
+		prevo: "Jgolett",
 		eggGroups: ["Mineral"],
 	},
 	wrufflet: {
@@ -75433,7 +75660,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 10.5,
 		color: "White",
-		evos : ["Wbraviary"],
+		evos: ["Wbraviary"],
 		eggGroups: ["Flying"],
 	},
 	wbraviary: {
@@ -75445,7 +75672,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 41.0,
 		color: "Red",
-		prevo : "Wrufflet",
+		prevo: "Wrufflet",
 		eggGroups: ["Flying"],
 	},
 	hanukkora: {
@@ -75468,7 +75695,7 @@ blobbosmechelectric: {
 		heightm: 16.4,
 		weightkg: 516.6,
 		color: "White",
-		prevo : "Ralts",
+		prevo: "Ralts",
 		eggGroups: ["Amorphous", "Monster"],
 	},
 	kaijucacnea: {
@@ -75480,7 +75707,7 @@ blobbosmechelectric: {
 		heightm: 25.4,
 		weightkg: 2151.3,
 		color: "Green",
-		prevo : "Cacnea",
+		prevo: "Cacnea",
 		eggGroups: ["Grass", "Humanlike"],
 	},
 	kaijuseedot: {
@@ -75492,7 +75719,7 @@ blobbosmechelectric: {
 		heightm: 25.5,
 		weightkg: 3324.0,
 		color: "Brown",
-		prevo : "Seedot",
+		prevo: "Seedot",
 		eggGroups: ["Field", "Grass"],
 	},
 	kaijumachop: {
@@ -75504,7 +75731,7 @@ blobbosmechelectric: {
 		heightm: 15.8,
 		weightkg: 1119.5,
 		color: "Gray",
-		prevo : "Machop",
+		prevo: "Machop",
 		eggGroups: ["Humanlike"],
 	},
 	kaijuvenusaur: {
@@ -75516,7 +75743,7 @@ blobbosmechelectric: {
 		heightm: 22.0,
 		weightkg: 3100.0,
 		color: "Green",
-		prevo : "Ivysaur",
+		prevo: "Ivysaur",
 		eggGroups: ["Monster", "Grass"],
 	},
 	kaijucutiefly: {
@@ -75528,7 +75755,7 @@ blobbosmechelectric: {
 		heightm: 30.3,
 		weightkg: 222.9,
 		color: "Green",
-		prevo : "Cutiefly",
+		prevo: "Cutiefly",
 		eggGroups: ["Bug"],
 	},
 	kaijufearow: {
@@ -75540,7 +75767,7 @@ blobbosmechelectric: {
 		heightm: 24.2,
 		weightkg: 938.0,
 		color: "Brown",
-		prevo : "Fearowfearolt",
+		prevo: "Fearowfearolt",
 		eggGroups: ["Flying"],
 	},
 	kaijuprimarina: {
@@ -75552,7 +75779,7 @@ blobbosmechelectric: {
 		heightm: 25.5,
 		weightkg: 1119.0,
 		color: "Blue",
-		prevo : "Brionne",
+		prevo: "Brionne",
 		eggGroups: ["Water1", "Field"],
 	},
 	kaijulatias: {
@@ -75564,7 +75791,7 @@ blobbosmechelectric: {
 		heightm: 21.4,
 		weightkg: 1140.0,
 		color: "Red",
-		prevo : "Latias",
+		prevo: "Latias",
 		eggGroups: ["Dragon"],
 	},
 	kaijunatu: {
@@ -75576,7 +75803,7 @@ blobbosmechelectric: {
 		heightm: 20.2,
 		weightkg: 922.0,
 		color: "Green",
-		prevo : "Natu",
+		prevo: "Natu",
 		eggGroups: ["Flying", "Monster"],
 	},
 	kaijuflaaffy: {
@@ -75588,7 +75815,7 @@ blobbosmechelectric: {
 		heightm: 26.8,
 		weightkg: 1813.3,
 		color: "Pink",
-		prevo : "Flaaffy",
+		prevo: "Flaaffy",
 		eggGroups: ["Monster", "Field"],
 	},
 	kaijugirafarig: {
@@ -75600,7 +75827,7 @@ blobbosmechelectric: {
 		heightm: 27.5,
 		weightkg: 3241.5,
 		color: "Yellow",
-		prevo : "Girafarig",
+		prevo: "Girafarig",
 		eggGroups: ["Field", "Monster"],
 	},
 	kaijukrabby: {
@@ -75612,7 +75839,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.5,
 		color: "Red",
-		prevo : "Krabby",
+		prevo: "Krabby",
 		eggGroups: ["Water3", "Monster"],
 	},
 	kaijuminccino: {
@@ -75624,8 +75851,8 @@ blobbosmechelectric: {
 		heightm: 10.4,
 		weightkg: 715.8,
 		color: "Gray",
-		prevo : "Minccino",
-		evos : ["Kaiju Cinccino"],
+		prevo: "Minccino",
+		evos: ["Kaiju Cinccino"],
 		eggGroups: ["Field", "Monster"],
 	},
 	kaijucinccino: {
@@ -75637,7 +75864,7 @@ blobbosmechelectric: {
 		heightm: 20.5,
 		weightkg: 1117.5,
 		color: "Gray",
-		prevo : "Kaijuminccino",
+		prevo: "Kaijuminccino",
 		eggGroups: ["Field", "Monster"],
 	},
 	kaijuditto: {
@@ -75649,7 +75876,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 4.0,
 		color: "Purple",
-		prevo : "Ditto",
+		prevo: "Ditto",
 		eggGroups: ["Ditto"],
 	},
 	kaijustoutland: {
@@ -75661,7 +75888,7 @@ blobbosmechelectric: {
 		heightm: 21.2,
 		weightkg: 1161.0,
 		color: "Gray",
-		prevo : "Herdier",
+		prevo: "Herdier",
 		eggGroups: ["Field", "Monster"],
 	},
 	kaijuquilladin: {
@@ -75673,7 +75900,7 @@ blobbosmechelectric: {
 		heightm: 19.6,
 		weightkg: 2390.0,
 		color: "Green",
-		prevo : "Quilladin",
+		prevo: "Quilladin",
 		eggGroups: ["Field", "Monster"],
 	},
 	kaijucroagunk: {
@@ -75685,7 +75912,7 @@ blobbosmechelectric: {
 		heightm: 10.7,
 		weightkg: 523.0,
 		color: "Blue",
-		prevo : "Croagunk",
+		prevo: "Croagunk",
 		eggGroups: ["Humanlike", "Monster"],
 	},
 	kaijuumbreon: {
@@ -75697,7 +75924,7 @@ blobbosmechelectric: {
 		heightm: 25.0,
 		weightkg: 827.0,
 		color: "Black",
-		prevo : "Umbreon",
+		prevo: "Umbreon",
 		eggGroups: ["Field", "Monster"],
 	},
 	kaijublacephalon: {
@@ -75731,7 +75958,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 180.0,
 		color: "Gray",
-		prevo : "Tmagneton",
+		prevo: "Tmagneton",
 		eggGroups: ["Mineral"],
 	},
 	kaijuklinklang: {
@@ -75743,7 +75970,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 81.0,
 		color: "Gray",
-		prevo : "Klang",
+		prevo: "Klang",
 		eggGroups: ["Mineral"],
 	},
 	kaijulileep: {
@@ -75755,7 +75982,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 23.8,
 		color: "Purple",
-		prevo : "Lileep",
+		prevo: "Lileep",
 		eggGroups: ["Water3"],
 	},
 	corida: {
@@ -75767,7 +75994,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 11.2,
 		color: "Blue",
-		evos : ["Kungfloo"],
+		evos: ["Kungfloo"],
 		eggGroups: ["Humanlike"],
 	},
 	kungfloo: {
@@ -75779,8 +76006,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 11.2,
 		color: "Blue",
-		prevo : "Corida",
-		evos : ["Yanenvy"],
+		prevo: "Corida",
+		evos: ["Yanenvy"],
 		eggGroups: ["Humanlike"],
 	},
 	skirona: {
@@ -75792,7 +76019,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 11.0,
 		color: "Pink",
-		prevo : "Skitty",
+		prevo: "Skitty",
 		eggGroups: ["Field", "Fairy"],
 	},
 	woodman: {
@@ -75815,7 +76042,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
-		evos : ["Sufdonyut", "Doughnutter"],
+		evos: ["Sufdonyut", "Doughnutter"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	doughnutter: {
@@ -75827,7 +76054,7 @@ blobbosmechelectric: {
 		heightm: 10.6,
 		weightkg: 1117.5,
 		color: "Pink",
-		prevo : "Timbito",
+		prevo: "Timbito",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	mavalugg: {
@@ -75839,7 +76066,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 505.0,
 		color: "Blue",
-		prevo : "Avalugg",
+		prevo: "Avalugg",
 		eggGroups: ["Monster"],
 	},
 	himpoison: {
@@ -75862,7 +76089,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 56.5,
 		color: "Blue",
-		prevo : "Minervamon",
+		prevo: "Minervamon",
 		eggGroups: ["Amorphous"],
 	},
 	mikemon: {
@@ -75874,8 +76101,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Salamon",
-		evos : ["Bastemon"],
+		prevo: "Salamon",
+		evos: ["Bastemon"],
 		eggGroups: ["Fairy", "Field"],
 	},
 	bastemon: {
@@ -75887,8 +76114,8 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 26.5,
 		color: "Blue",
-		prevo : "Mikemon",
-		evos : ["Lilithmon"],
+		prevo: "Mikemon",
+		evos: ["Lilithmon"],
 		eggGroups: ["Humanlike", "Field"],
 	},
 	lilithmon: {
@@ -75900,7 +76127,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 26.5,
 		color: "Blue",
-		prevo : "Bastemon",
+		prevo: "Bastemon",
 		eggGroups: ["Humanlike"],
 	},
 	artificeon: {
@@ -75912,7 +76139,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	transpareon: {
@@ -75924,7 +76151,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	carmillapire: {
@@ -76002,8 +76229,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Mumbcurry"],
+		prevo: "Curry",
+		evos: ["Mumbcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	mumbcurry: {
@@ -76015,7 +76242,7 @@ blobbosmechelectric: {
 		heightm: 3.3,
 		weightkg: 1113.1,
 		color: "Blue",
-		prevo : "Mumcurry",
+		prevo: "Mumcurry",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	pacmcurry: {
@@ -76027,8 +76254,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Pacbcurry"],
+		prevo: "Curry",
+		evos: ["Pacbcurry"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	pacbcurry: {
@@ -76040,7 +76267,7 @@ blobbosmechelectric: {
 		heightm: 3.3,
 		weightkg: 1113.1,
 		color: "Blue",
-		prevo : "Pacmcurry",
+		prevo: "Pacmcurry",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	appmcurry: {
@@ -76052,8 +76279,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Appbcurry"],
+		prevo: "Curry",
+		evos: ["Appbcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	appbcurry: {
@@ -76065,7 +76292,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Appmcurry",
+		prevo: "Appmcurry",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	paracelcast: {
@@ -76121,7 +76348,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 36.5,
 		color: "Red",
-		evos : ["Firepuncher"],
+		evos: ["Firepuncher"],
 		eggGroups: ["Humanlike"],
 	},
 	firepuncher: {
@@ -76133,8 +76360,8 @@ blobbosmechelectric: {
 		heightm: 2.4,
 		weightkg: 136.5,
 		color: "Red",
-		prevo : "Livepunch",
-		evos : ["Kinopunch", "Pumpkinopunch"],
+		prevo: "Livepunch",
+		evos: ["Kinopunch", "Pumpkinopunch"],
 		eggGroups: ["Humanlike"],
 	},
 	kinopunch: {
@@ -76146,7 +76373,7 @@ blobbosmechelectric: {
 		heightm: 3.4,
 		weightkg: 1136.5,
 		color: "Red",
-		prevo : "Firepuncher",
+		prevo: "Firepuncher",
 		eggGroups: ["Humanlike"],
 	},
 	fukoujo: {
@@ -76169,7 +76396,7 @@ blobbosmechelectric: {
 		heightm: 4.4,
 		weightkg: 115.5,
 		color: "Brown",
-		prevo : "Lusfairy",
+		prevo: "Lusfairy",
 		eggGroups: ["Humanlike", "Water2"],
 	},
 	kokopelli: {
@@ -76192,7 +76419,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 3.0,
 		color: "Green",
-		evos : ["Snowbun"],
+		evos: ["Snowbun"],
 		eggGroups: ["Field", "Fairy"],
 	},
 	snowbun: {
@@ -76204,8 +76431,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 12.3,
 		color: "Green",
-		prevo : "Ballbu",
-		evos : ["Snoware", "Snowugg"],
+		prevo: "Ballbu",
+		evos: ["Snoware", "Snowugg"],
 		eggGroups: ["Field", "Fairy"],
 	},
 	snoware: {
@@ -76217,7 +76444,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 22.3,
 		color: "Green",
-		prevo : "Snowbun",
+		prevo: "Snowbun",
 		eggGroups: ["Field", "Fairy"],
 	},
 	snowugg: {
@@ -76229,7 +76456,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 32.3,
 		color: "Green",
-		prevo : "Snowbun",
+		prevo: "Snowbun",
 		eggGroups: ["Grass", "Humanlike"],
 	},
 	larv: {
@@ -76241,7 +76468,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 72.0,
 		color: "Green",
-		prevo : "Larvitar",
+		prevo: "Larvitar",
 		eggGroups: ["Monster", "Humanlike"],
 	},
 	zatu: {
@@ -76253,7 +76480,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 15.0,
 		color: "Green",
-		prevo : "Natu",
+		prevo: "Natu",
 		eggGroups: ["Flying"],
 	},
 	sunsprout: {
@@ -76265,8 +76492,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.8,
 		color: "Yellow",
-		prevo : "Sunkern",
-		evos : ["Sunnee"],
+		prevo: "Sunkern",
+		evos: ["Sunnee"],
 		eggGroups: ["Grass"],
 	},
 	bwooper: {
@@ -76278,8 +76505,8 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 8.5,
 		color: "Blue",
-		prevo : "Wooper",
-		evos : ["Lanceffish"],
+		prevo: "Wooper",
+		evos: ["Lanceffish"],
 		eggGroups: ["Water1", "Field"],
 	},
 	feiscue: {
@@ -76313,7 +76540,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 14.0,
 		color: "Yellow",
-		evos : ["Dunspit"],
+		evos: ["Dunspit"],
 		eggGroups: ["Field"],
 	},
 	dunspit: {
@@ -76325,8 +76552,8 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 24.0,
 		color: "Yellow",
-		prevo : "Dunspa",
-		evos : ["Dunsnek"],
+		prevo: "Dunspa",
+		evos: ["Dunsnek"],
 		eggGroups: ["Field"],
 	},
 	dunsnek: {
@@ -76338,7 +76565,7 @@ blobbosmechelectric: {
 		heightm: 3.5,
 		weightkg: 124.0,
 		color: "Yellow",
-		prevo : "Dunspit",
+		prevo: "Dunspit",
 		eggGroups: ["Field", "Dragon"],
 	},
 	azumarillegg: {
@@ -76350,7 +76577,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 28.5,
 		color: "Blue",
-		prevo : "Marill",
+		prevo: "Marill",
 		eggGroups: ["Water1", "Fairy"],
 	},
 	bchinchou: {
@@ -76362,8 +76589,8 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 12.0,
 		color: "Blue",
-		prevo : "Chinchou",
-		evos : ["Blanturn"],
+		prevo: "Chinchou",
+		evos: ["Blanturn"],
 		eggGroups: ["Water2"],
 	},
 	blanturn: {
@@ -76375,7 +76602,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 22.5,
 		color: "Blue",
-		prevo : "Bchinchou",
+		prevo: "Bchinchou",
 		eggGroups: ["Water2"],
 	},
 	clefmontop: {
@@ -76387,7 +76614,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 48.0,
 		color: "Brown",
-		prevo : "Clefairy",
+		prevo: "Clefairy",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	bshuckle: {
@@ -76410,7 +76637,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 125.8,
 		color: "Purple",
-		prevo : "Pineco",
+		prevo: "Pineco",
 		eggGroups: ["Bug"],
 	},
 	bcyndaquil: {
@@ -76422,8 +76649,8 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 7.9,
 		color: "Yellow",
-		prevo : "Cyndaquil",
-		evos : ["Quilava", "Acyndaquil"],
+		prevo: "Cyndaquil",
+		evos: ["Quilava", "Acyndaquil"],
 		eggGroups: ["Field"],
 	},
 	acyndaquil: {
@@ -76435,8 +76662,8 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 7.9,
 		color: "Yellow",
-		prevo : "Cyndaquilbcyndaquil",
-		evos : ["Quilava"],
+		prevo: "Cyndaquilbcyndaquil",
+		evos: ["Quilava"],
 		eggGroups: ["Field"],
 	},
 	floxo: {
@@ -76514,8 +76741,8 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 25.0,
 		color: "Red",
-		prevo : "Sunmola",
-		evos : ["Molaugg"],
+		prevo: "Sunmola",
+		evos: ["Molaugg"],
 		eggGroups: ["Water2"],
 	},
 	molaugg: {
@@ -76527,7 +76754,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 25.0,
 		color: "Red",
-		prevo : "Molaee",
+		prevo: "Molaee",
 		eggGroups: ["Water2"],
 	},
 	gostee: {
@@ -76638,7 +76865,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 35.5,
 		color: "Blue",
-		prevo : "Squi",
+		prevo: "Squi",
 		eggGroups: ["Water3"],
 	},
 	quailnote: {
@@ -76650,7 +76877,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 1.9,
 		color: "Black",
-		evos : ["Choruseph", "Dootbirb"],
+		evos: ["Choruseph", "Dootbirb"],
 		eggGroups: ["Flying"],
 	},
 	choruseph: {
@@ -76662,7 +76889,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 7.9,
 		color: "Black",
-		prevo : "Quailnote",
+		prevo: "Quailnote",
 		eggGroups: ["Flying"],
 	},
 	dootbirb: {
@@ -76674,7 +76901,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 7.9,
 		color: "Black",
-		prevo : "Quailnote",
+		prevo: "Quailnote",
 		eggGroups: ["Flying"],
 	},
 	okaabirb: {
@@ -76807,7 +77034,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.5,
 		color: "Black",
-		evos : ["Mothca"],
+		evos: ["Mothca"],
 		eggGroups: ["Bug"],
 	},
 	mothca: {
@@ -76819,7 +77046,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 12.5,
 		color: "Black",
-		prevo : "Cocoobag",
+		prevo: "Cocoobag",
 		eggGroups: ["Bug"],
 	},
 	misfly: {
@@ -76864,8 +77091,8 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 40.8,
 		color: "Brown",
-		prevo : "Hoothoot",
-		evos : ["Hoohoo"],
+		prevo: "Hoothoot",
+		evos: ["Hoohoo"],
 		eggGroups: ["Flying"],
 	},
 	bsmantine: {
@@ -76877,7 +77104,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 220.0,
 		color: "Purple",
-		prevo : "Mantyke",
+		prevo: "Mantyke",
 		eggGroups: ["Water1"],
 	},
 	bcmantine: {
@@ -76889,7 +77116,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 220.0,
 		color: "Purple",
-		prevo : "Mantyke",
+		prevo: "Mantyke",
 		eggGroups: ["Water1"],
 	},
 	bslugma: {
@@ -76901,8 +77128,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 35.0,
 		color: "Red",
-		prevo : "Slugma",
-		evos : ["Magcargo"],
+		prevo: "Slugma",
+		evos: ["Magcargo"],
 		eggGroups: ["Amorphous"],
 	},
 	bpichu: {
@@ -76914,8 +77141,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.0,
 		color: "Yellow",
-		prevo : "Pichu",
-		evos : ["Pikachu"],
+		prevo: "Pichu",
+		evos: ["Pikachu"],
 		eggGroups: ["Undiscovered"],
 	},
 	bblissey: {
@@ -76927,7 +77154,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 46.8,
 		color: "Pink",
-		prevo : "Chansey",
+		prevo: "Chansey",
 		eggGroups: ["Fairy"],
 	},
 	blarvitar: {
@@ -76939,7 +77166,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 72.0,
 		color: "Green",
-		evos : ["Btyranitar"],
+		evos: ["Btyranitar"],
 		eggGroups: ["Monster"],
 	},
 	btyranitar: {
@@ -76951,7 +77178,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 202.0,
 		color: "Green",
-		prevo : "Blarvitar",
+		prevo: "Blarvitar",
 		eggGroups: ["Monster"],
 	},
 	wobslime: {
@@ -76974,7 +77201,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 33.9,
 		color: "Green",
-		prevo : "Poliwhirl",
+		prevo: "Poliwhirl",
 		eggGroups: ["Water1"],
 	},
 	bgligar: {
@@ -76986,7 +77213,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 64.8,
 		color: "Purple",
-		prevo : "Gligar",
+		prevo: "Gligar",
 		eggGroups: ["Bug"],
 	},
 	caenislancer: {
@@ -77009,7 +77236,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 48.4,
 		color: "White",
-		prevo : "Kirlia",
+		prevo: "Kirlia",
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	kaijuscrafty: {
@@ -77021,7 +77248,7 @@ blobbosmechelectric: {
 		heightm: 11.1,
 		weightkg: 930.0,
 		color: "Red",
-		prevo : "Scraggy",
+		prevo: "Scraggy",
 		eggGroups: ["Field", "Dragon"],
 	},
 	kaijuporygon: {
@@ -77033,7 +77260,7 @@ blobbosmechelectric: {
 		heightm: 10.8,
 		weightkg: 336.5,
 		color: "Pink",
-		prevo : "Porygon",
+		prevo: "Porygon",
 		eggGroups: ["Mineral"],
 	},
 	kaijukabuto: {
@@ -77045,7 +77272,7 @@ blobbosmechelectric: {
 		heightm: 16.5,
 		weightkg: 811.5,
 		color: "Brown",
-		prevo : "Kabuto",
+		prevo: "Kabuto",
 		eggGroups: ["Water1", "Water3"],
 	},
 	kaijuhappiny: {
@@ -77057,7 +77284,7 @@ blobbosmechelectric: {
 		heightm: 10.6,
 		weightkg: 424.4,
 		color: "Pink",
-		prevo : "Happiny",
+		prevo: "Happiny",
 		eggGroups: ["Fairy", "Monster"],
 	},
 	kaijupyukumuku: {
@@ -77069,7 +77296,7 @@ blobbosmechelectric: {
 		heightm: 10.3,
 		weightkg: 381.2,
 		color: "Purple",
-		prevo : "Pyukumuku",
+		prevo: "Pyukumuku",
 		eggGroups: ["Water1", "Amorphous"],
 	},
 	kaijuhypno: {
@@ -77081,7 +77308,7 @@ blobbosmechelectric: {
 		heightm: 21.6,
 		weightkg: 375.6,
 		color: "Yellow",
-		prevo : "Hypno",
+		prevo: "Hypno",
 		eggGroups: ["Humanlike", "Monster"],
 	},
 	kaijugligar: {
@@ -77093,7 +77320,7 @@ blobbosmechelectric: {
 		heightm: 16.1,
 		weightkg: 464.8,
 		color: "Purple",
-		prevo : "Gligar",
+		prevo: "Gligar",
 		eggGroups: ["Bug", "Monster"],
 	},
 	kaijudunsparce: {
@@ -77105,7 +77332,7 @@ blobbosmechelectric: {
 		heightm: 21.5,
 		weightkg: 2114.0,
 		color: "Yellow",
-		prevo : "Dunsparce",
+		prevo: "Dunsparce",
 		eggGroups: ["Field", "Monster"],
 	},
 	kaijuursaring: {
@@ -77117,7 +77344,7 @@ blobbosmechelectric: {
 		heightm: 21.8,
 		weightkg: 1125.8,
 		color: "Brown",
-		prevo : "Teddiursa",
+		prevo: "Teddiursa",
 		eggGroups: ["Field"],
 	},
 	kaijueleko: {
@@ -77140,7 +77367,7 @@ blobbosmechelectric: {
 		heightm: 10.3,
 		weightkg: 882.8,
 		color: "Purple",
-		prevo : "Goomy",
+		prevo: "Goomy",
 		eggGroups: ["Dragon"],
 	},
 	kaijustufful: {
@@ -77152,7 +77379,7 @@ blobbosmechelectric: {
 		heightm: 10.6,
 		weightkg: 411.2,
 		color: "Blue",
-		prevo : "Stufful",
+		prevo: "Stufful",
 		eggGroups: ["Humanlike"],
 	},
 	kaijugumshoos: {
@@ -77164,7 +77391,7 @@ blobbosmechelectric: {
 		heightm: 24.2,
 		weightkg: 716.2,
 		color: "Brown",
-		prevo : "Yungoos",
+		prevo: "Yungoos",
 		eggGroups: ["Field"],
 	},
 	kaijutoucannon: {
@@ -77176,7 +77403,7 @@ blobbosmechelectric: {
 		heightm: 21.1,
 		weightkg: 926.8,
 		color: "Brown",
-		prevo : "Trumbeak",
+		prevo: "Trumbeak",
 		eggGroups: ["Flying"],
 	},
 	kaijukingler: {
@@ -77188,7 +77415,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 60.0,
 		color: "Red",
-		prevo : "Kingler",
+		prevo: "Kingler",
 		eggGroups: ["Water3"],
 	},
 	kaijumachoke: {
@@ -77200,7 +77427,7 @@ blobbosmechelectric: {
 		heightm: 18.5,
 		weightkg: 570.5,
 		color: "Gray",
-		prevo : "Machoke",
+		prevo: "Machoke",
 		eggGroups: ["Humanlike"],
 	},
 	kaijushelmet: {
@@ -77212,7 +77439,7 @@ blobbosmechelectric: {
 		heightm: 21.0,
 		weightkg: 1133.0,
 		color: "Gray",
-		prevo : "Shelmet",
+		prevo: "Shelmet",
 		eggGroups: ["Bug", "Monster"],
 	},
 	kaijuskarmory: {
@@ -77235,7 +77462,7 @@ blobbosmechelectric: {
 		heightm: 15.8,
 		weightkg: 414.3,
 		color: "Yellow",
-		prevo : "Joltik",
+		prevo: "Joltik",
 		eggGroups: ["Bug"],
 	},
 	kaijumaractus: {
@@ -77247,7 +77474,7 @@ blobbosmechelectric: {
 		heightm: 21.0,
 		weightkg: 428.0,
 		color: "Green",
-		prevo : "Maractus",
+		prevo: "Maractus",
 		eggGroups: ["Grass"],
 	},
 	kaijunosepass: {
@@ -77259,7 +77486,7 @@ blobbosmechelectric: {
 		heightm: 19.0,
 		weightkg: 6697.0,
 		color: "Gray",
-		prevo : "Nosepass",
+		prevo: "Nosepass",
 		eggGroups: ["Mineral"],
 	},
 	kaijuanorith: {
@@ -77282,7 +77509,7 @@ blobbosmechelectric: {
 		heightm: 13.0,
 		weightkg: 221.0,
 		color: "Yellow",
-		prevo : "Heliolisk",
+		prevo: "Heliolisk",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	kaijugastly: {
@@ -77294,7 +77521,7 @@ blobbosmechelectric: {
 		heightm: 21.3,
 		weightkg: 0.1,
 		color: "Purple",
-		prevo : "Gastlyhugastly",
+		prevo: "Gastlyhugastly",
 		eggGroups: ["Amorphous", "Monster"],
 	},
 	kaijushroomish: {
@@ -77306,7 +77533,7 @@ blobbosmechelectric: {
 		heightm: 14.4,
 		weightkg: 444.5,
 		color: "Brown",
-		prevo : "Shroomish",
+		prevo: "Shroomish",
 		eggGroups: ["Monster", "Grass"],
 	},
 	bsentret: {
@@ -77318,8 +77545,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 6.0,
 		color: "Brown",
-		prevo : "Sentret",
-		evos : ["Bfurret"],
+		prevo: "Sentret",
+		evos: ["Bfurret"],
 		eggGroups: ["Field"],
 	},
 	bfurret: {
@@ -77331,7 +77558,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 32.5,
 		color: "Brown",
-		prevo : "Bsentret",
+		prevo: "Bsentret",
 		eggGroups: ["Field"],
 	},
 	btotodile: {
@@ -77343,8 +77570,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 9.5,
 		color: "Blue",
-		prevo : "Totodile",
-		evos : ["Croconaw"],
+		prevo: "Totodile",
+		evos: ["Croconaw"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	bforretress: {
@@ -77356,7 +77583,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 125.8,
 		color: "Purple",
-		prevo : "Pineco",
+		prevo: "Pineco",
 		eggGroups: ["Bug"],
 	},
 	baipom: {
@@ -77368,7 +77595,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 11.5,
 		color: "Purple",
-		prevo : "Aipom",
+		prevo: "Aipom",
 		eggGroups: ["Field"],
 	},
 	qigglybuff: {
@@ -77380,7 +77607,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.0,
 		color: "Pink",
-		prevo : "Igglybuff",
+		prevo: "Igglybuff",
 		eggGroups: ["Undiscovered"],
 	},
 	bjumpluff: {
@@ -77392,7 +77619,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 3.0,
 		color: "Blue",
-		prevo : "Skiploom",
+		prevo: "Skiploom",
 		eggGroups: ["Fairy", "Grass"],
 	},
 	bkingdratwo: {
@@ -77404,7 +77631,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 152.0,
 		color: "Blue",
-		prevo : "Seadra",
+		prevo: "Seadra",
 		eggGroups: ["Water1", "Dragon"],
 	},
 	boctillerytwo: {
@@ -77416,7 +77643,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 28.5,
 		color: "Red",
-		prevo : "Octillery",
+		prevo: "Octillery",
 		eggGroups: ["Water1", "Water2"],
 	},
 	bteddiursa: {
@@ -77428,7 +77655,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.8,
 		color: "Brown",
-		prevo : "Teddiursa",
+		prevo: "Teddiursa",
 		eggGroups: ["Field"],
 	},
 	bsneaseltwo: {
@@ -77440,7 +77667,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 28.0,
 		color: "Black",
-		prevo : "Sneasel",
+		prevo: "Sneasel",
 		eggGroups: ["Field"],
 	},
 	bsneaselthree: {
@@ -77452,7 +77679,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 28.0,
 		color: "Black",
-		prevo : "Sneasel",
+		prevo: "Sneasel",
 		eggGroups: ["Field"],
 	},
 	bphanpy: {
@@ -77464,7 +77691,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 33.5,
 		color: "Blue",
-		prevo : "Phanpy",
+		prevo: "Phanpy",
 		eggGroups: ["Field"],
 	},
 	bsunkern: {
@@ -77476,8 +77703,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.8,
 		color: "Yellow",
-		prevo : "Sunkern",
-		evos : ["Sunnee"],
+		prevo: "Sunkern",
+		evos: ["Sunnee"],
 		eggGroups: ["Grass"],
 	},
 	unfinkingdra: {
@@ -77489,7 +77716,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 152.0,
 		color: "Blue",
-		prevo : "Seadra",
+		prevo: "Seadra",
 		eggGroups: ["Water1", "Dragon"],
 	},
 	bariados: {
@@ -77501,7 +77728,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 33.5,
 		color: "Red",
-		prevo : "Ariados",
+		prevo: "Ariados",
 		eggGroups: ["Bug"],
 	},
 	halfblissey: {
@@ -77546,8 +77773,8 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 17.8,
 		color: "Pink",
-		prevo : "Floatoy",
-		evos : ["Naviathan"],
+		prevo: "Floatoy",
+		evos: ["Naviathan"],
 		eggGroups: ["Water1", "Dragon"],
 	},
 	beamcurry: {
@@ -77559,8 +77786,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Beabcurry"],
+		prevo: "Curry",
+		evos: ["Beabcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	beabcurry: {
@@ -77572,7 +77799,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Beamcurry",
+		prevo: "Beamcurry",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	burmcurry: {
@@ -77584,8 +77811,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 113.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Burbcurry"],
+		prevo: "Curry",
+		evos: ["Burbcurry"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	burbcurry: {
@@ -77597,7 +77824,7 @@ blobbosmechelectric: {
 		heightm: 3.3,
 		weightkg: 1113.1,
 		color: "Blue",
-		prevo : "Burmcurry",
+		prevo: "Burmcurry",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	tropmcurry: {
@@ -77609,8 +77836,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 113.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Tropbcurry"],
+		prevo: "Curry",
+		evos: ["Tropbcurry"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	tropbcurry: {
@@ -77622,7 +77849,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 113.1,
 		color: "Blue",
-		prevo : "Tropmcurry",
+		prevo: "Tropmcurry",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	gaotora: {
@@ -77634,7 +77861,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.0,
 		color: "Yellow",
-		prevo : "Electiger",
+		prevo: "Electiger",
 		eggGroups: ["Field", "Fairy"],
 	},
 	arjunarcher: {
@@ -77668,7 +77895,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 48.4,
 		color: "White",
-		prevo : "Kirlia",
+		prevo: "Kirlia",
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	caesaber: {
@@ -77691,7 +77918,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 17.3,
 		color: "Blue",
-		evos : ["Wzweilous"],
+		evos: ["Wzweilous"],
 		eggGroups: ["Dragon"],
 	},
 	wzweilous: {
@@ -77703,8 +77930,8 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 50.0,
 		color: "Blue",
-		prevo : "Wdeino",
-		evos : ["Whydreigon"],
+		prevo: "Wdeino",
+		evos: ["Whydreigon"],
 		eggGroups: ["Dragon"],
 	},
 	whydreigon: {
@@ -77716,7 +77943,7 @@ blobbosmechelectric: {
 		heightm: 2.8,
 		weightkg: 360.0,
 		color: "Blue",
-		prevo : "Wzweilous",
+		prevo: "Wzweilous",
 		eggGroups: ["Dragon"],
 	},
 	ebisurock: {
@@ -77871,7 +78098,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 12.0,
 		color: "White",
-		evos : ["Santa Joon"],
+		evos: ["Santa Joon"],
 		eggGroups: ["Undiscovered"],
 	},
 	shionhobo: {
@@ -77883,7 +78110,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 12.0,
 		color: "White",
-		evos : ["Santa Shion"],
+		evos: ["Santa Shion"],
 		eggGroups: ["Undiscovered"],
 	},
 	sagumeverse: {
@@ -77939,7 +78166,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 18.5,
 		color: "Brown",
-		prevo : "Praticate",
+		prevo: "Praticate",
 		eggGroups: ["Field"],
 	},
 	numemonx: {
@@ -77951,7 +78178,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Numemon",
+		prevo: "Numemon",
 		eggGroups: ["Amorphous"],
 	},
 	skyregigigas: {
@@ -77974,8 +78201,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 6.4,
 		color: "Green",
-		prevo : "Bellsprout",
-		evos : ["Atlasbell"],
+		prevo: "Bellsprout",
+		evos: ["Atlasbell"],
 		eggGroups: ["Grass"],
 	},
 	atlasbell: {
@@ -77987,7 +78214,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 6.4,
 		color: "Green",
-		prevo : "Bellscrop",
+		prevo: "Bellscrop",
 		eggGroups: ["Grass"],
 	},
 	hoppot: {
@@ -77999,8 +78226,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 1.0,
 		color: "Green",
-		prevo : "Hoppip",
-		evos : ["Hoprake"],
+		prevo: "Hoppip",
+		evos: ["Hoprake"],
 		eggGroups: ["Fairy", "Grass"],
 	},
 	hoprake: {
@@ -78012,7 +78239,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 1.0,
 		color: "Green",
-		prevo : "Hoppot",
+		prevo: "Hoppot",
 		eggGroups: ["Fairy", "Grass"],
 	},
 	potish: {
@@ -78024,8 +78251,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 8.6,
 		color: "Blue",
-		prevo : "Oddish",
-		evos : ["Trickish"],
+		prevo: "Oddish",
+		evos: ["Trickish"],
 		eggGroups: ["Grass"],
 	},
 	trickish: {
@@ -78037,7 +78264,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 8.6,
 		color: "Blue",
-		prevo : "Potish",
+		prevo: "Potish",
 		eggGroups: ["Grass"],
 	},
 	roseling: {
@@ -78049,8 +78276,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.0,
 		color: "Green",
-		prevo : "Budew",
-		evos : ["Witherade"],
+		prevo: "Budew",
+		evos: ["Witherade"],
 		eggGroups: ["Fairy", "Grass"],
 	},
 	witherade: {
@@ -78062,7 +78289,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.0,
 		color: "Green",
-		prevo : "Roseling",
+		prevo: "Roseling",
 		eggGroups: ["Fairy", "Grass"],
 	},
 	dmareep: {
@@ -78074,7 +78301,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.8,
 		color: "White",
-		evos : ["Dflaaffy"],
+		evos: ["Dflaaffy"],
 		eggGroups: ["Monster", "Field"],
 	},
 	dflaaffy: {
@@ -78086,8 +78313,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 13.3,
 		color: "Pink",
-		prevo : "Dmareep",
-		evos : ["Dampharos"],
+		prevo: "Dmareep",
+		evos: ["Dampharos"],
 		eggGroups: ["Monster", "Field"],
 	},
 	dampharos: {
@@ -78099,7 +78326,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 61.5,
 		color: "Yellow",
-		prevo : "Dflaaffy",
+		prevo: "Dflaaffy",
 		eggGroups: ["Monster", "Field"],
 	},
 	gswablu: {
@@ -78111,7 +78338,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 1.2,
 		color: "Blue",
-		evos : ["Galtaria"],
+		evos: ["Galtaria"],
 		eggGroups: ["Flying", "Dragon"],
 	},
 	galtaria: {
@@ -78123,7 +78350,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 20.6,
 		color: "Blue",
-		prevo : "Gswablu",
+		prevo: "Gswablu",
 		eggGroups: ["Flying", "Dragon"],
 	},
 	brycenman: {
@@ -78212,7 +78439,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.0,
 		color: "Purple",
-		evos : ["Pharoammy", "Momummy"],
+		evos: ["Pharoammy", "Momummy"],
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	pharoammy: {
@@ -78224,7 +78451,7 @@ blobbosmechelectric: {
 		heightm: 2.7,
 		weightkg: 61.0,
 		color: "Purple",
-		prevo : "Mummeem",
+		prevo: "Mummeem",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	momummy: {
@@ -78236,7 +78463,7 @@ blobbosmechelectric: {
 		heightm: 2.7,
 		weightkg: 61.0,
 		color: "Purple",
-		prevo : "Mummeem",
+		prevo: "Mummeem",
 		eggGroups: ["Humanlike", "Amorphous"],
 	},
 	dootnoot: {
@@ -78259,8 +78486,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 113.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Frybcurry"],
+		prevo: "Curry",
+		evos: ["Frybcurry"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	frybcurry: {
@@ -78272,7 +78499,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 1113.1,
 		color: "Blue",
-		prevo : "Frymcurry",
+		prevo: "Frymcurry",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	crmmcurry: {
@@ -78284,8 +78511,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 113.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Crmbcurry"],
+		prevo: "Curry",
+		evos: ["Crmbcurry"],
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	crmbcurry: {
@@ -78297,7 +78524,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 113.1,
 		color: "Blue",
-		prevo : "Crmmcurry",
+		prevo: "Crmmcurry",
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	rammcurry: {
@@ -78309,8 +78536,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 113.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Rambcurry"],
+		prevo: "Curry",
+		evos: ["Rambcurry"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	rambcurry: {
@@ -78322,7 +78549,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 113.1,
 		color: "Blue",
-		prevo : "Rammcurry",
+		prevo: "Rammcurry",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	seamcurry: {
@@ -78334,8 +78561,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 113.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Seabcurry"],
+		prevo: "Curry",
+		evos: ["Seabcurry"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	seabcurry: {
@@ -78347,7 +78574,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 113.1,
 		color: "Blue",
-		prevo : "Seamcurry",
+		prevo: "Seamcurry",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	salmcurry: {
@@ -78359,8 +78586,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 113.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Salbcurry"],
+		prevo: "Curry",
+		evos: ["Salbcurry"],
 		eggGroups: ["Mineral", "Grass"],
 	},
 	salbcurry: {
@@ -78372,7 +78599,7 @@ blobbosmechelectric: {
 		heightm: 4.3,
 		weightkg: 1113.1,
 		color: "Blue",
-		prevo : "Salmcurry",
+		prevo: "Salmcurry",
 		eggGroups: ["Mineral", "Grass"],
 	},
 	slomcurry: {
@@ -78384,8 +78611,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 113.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Slobcurry"],
+		prevo: "Curry",
+		evos: ["Slobcurry"],
 		eggGroups: ["Mineral", "Water1"],
 	},
 	slobcurry: {
@@ -78397,7 +78624,7 @@ blobbosmechelectric: {
 		heightm: 3.3,
 		weightkg: 1113.1,
 		color: "Blue",
-		prevo : "Slomcurry",
+		prevo: "Slomcurry",
 		eggGroups: ["Mineral", "Water1"],
 	},
 	bonmcurry: {
@@ -78409,8 +78636,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 113.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Bonbcurry"],
+		prevo: "Curry",
+		evos: ["Bonbcurry"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	bonbcurry: {
@@ -78422,7 +78649,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 113.1,
 		color: "Blue",
-		prevo : "Bonmcurry",
+		prevo: "Bonmcurry",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	eggmcurry: {
@@ -78434,8 +78661,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Eggbcurry"],
+		prevo: "Curry",
+		evos: ["Eggbcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	eggbcurry: {
@@ -78447,7 +78674,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 13.1,
 		color: "Blue",
-		prevo : "Eggmcurry",
+		prevo: "Eggmcurry",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	potmcurry: {
@@ -78459,8 +78686,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Potbcurry"],
+		prevo: "Curry",
+		evos: ["Potbcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	potbcurry: {
@@ -78472,7 +78699,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 13.1,
 		color: "Blue",
-		prevo : "Potmcurry",
+		prevo: "Potmcurry",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	herbmcurry: {
@@ -78484,8 +78711,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Herbbcurry"],
+		prevo: "Curry",
+		evos: ["Herbbcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	herbbcurry: {
@@ -78497,7 +78724,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 13.1,
 		color: "Blue",
-		prevo : "Herbmcurryleekmcurry",
+		prevo: "Herbmcurryleekmcurry",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	leekmcurry: {
@@ -78509,8 +78736,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Herbbcurry"],
+		prevo: "Curry",
+		evos: ["Herbbcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	leekbcurry: {
@@ -78533,8 +78760,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Cocobcurry"],
+		prevo: "Curry",
+		evos: ["Cocobcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	cocobcurry: {
@@ -78546,7 +78773,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 13.1,
 		color: "Blue",
-		prevo : "Cocomcurry",
+		prevo: "Cocomcurry",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	breadmcurry: {
@@ -78558,8 +78785,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Breadbcurry"],
+		prevo: "Curry",
+		evos: ["Breadbcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	breadbcurry: {
@@ -78571,7 +78798,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 13.1,
 		color: "Blue",
-		prevo : "Breadmcurry",
+		prevo: "Breadmcurry",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	pastamcurry: {
@@ -78583,8 +78810,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Pastabcurry"],
+		prevo: "Curry",
+		evos: ["Pastabcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	pastabcurry: {
@@ -78596,7 +78823,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 13.1,
 		color: "Blue",
-		prevo : "Pastamcurry",
+		prevo: "Pastamcurry",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	cheesemcurry: {
@@ -78608,8 +78835,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Cheesebcurry"],
+		prevo: "Curry",
+		evos: ["Cheesebcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	cheesebcurry: {
@@ -78621,7 +78848,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 13.1,
 		color: "Blue",
-		prevo : "Cheesemcurry",
+		prevo: "Cheesemcurry",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	juicymcurry: {
@@ -78633,8 +78860,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Juicybcurry"],
+		prevo: "Curry",
+		evos: ["Juicybcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	juicybcurry: {
@@ -78646,7 +78873,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 13.1,
 		color: "Blue",
-		prevo : "Juicymcurry",
+		prevo: "Juicymcurry",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	richmcurry: {
@@ -78658,8 +78885,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.1,
 		color: "Blue",
-		prevo : "Curry",
-		evos : ["Richbcurry"],
+		prevo: "Curry",
+		evos: ["Richbcurry"],
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	richbcurry: {
@@ -78671,7 +78898,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 13.1,
 		color: "Blue",
-		prevo : "Richmcurry",
+		prevo: "Richmcurry",
 		eggGroups: ["Grass", "Amorphous"],
 	},
 	roven: {
@@ -78683,7 +78910,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 70.4,
 		color: "Brown",
-		evos : ["Infernace"],
+		evos: ["Infernace"],
 		eggGroups: ["Mineral"],
 	},
 	infernace: {
@@ -78695,7 +78922,7 @@ blobbosmechelectric: {
 		heightm: 3.5,
 		weightkg: 680.4,
 		color: "Brown",
-		prevo : "Roven",
+		prevo: "Roven",
 		eggGroups: ["Mineral"],
 	},
 	jekhyde: {
@@ -78773,7 +79000,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 42.1,
 		color: "Blue",
-		evos : ["Hshelgon"],
+		evos: ["Hshelgon"],
 		eggGroups: ["Dragon"],
 	},
 	hshelgon: {
@@ -78785,8 +79012,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 110.5,
 		color: "White",
-		prevo : "Hbagon",
-		evos : ["Hsalamence"],
+		prevo: "Hbagon",
+		evos: ["Hsalamence"],
 		eggGroups: ["Dragon"],
 	},
 	hsalamence: {
@@ -78798,7 +79025,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 102.6,
 		color: "Blue",
-		prevo : "Hshelgon",
+		prevo: "Hshelgon",
 		eggGroups: ["Dragon"],
 	},
 	pyukuluku: {
@@ -78810,7 +79037,7 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 11.2,
 		color: "Purple",
-		prevo : "Pyukumuku",
+		prevo: "Pyukumuku",
 		eggGroups: ["Water1", "Amorphous"],
 	},
 	sstonjourner: {
@@ -78833,7 +79060,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Yellow",
-		evos : ["Dpersian"],
+		evos: ["Dpersian"],
 		eggGroups: ["Field"],
 	},
 	dpersian: {
@@ -78845,7 +79072,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 32.0,
 		color: "Yellow",
-		prevo : "Dmeowth",
+		prevo: "Dmeowth",
 		eggGroups: ["Field"],
 	},
 	galpersian: {
@@ -78857,7 +79084,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 32.0,
 		color: "Yellow",
-		prevo : "Galmeowth",
+		prevo: "Galmeowth",
 		eggGroups: ["Field"],
 	},
 	kperrserker: {
@@ -78869,7 +79096,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 18.2,
 		color: "Yellow",
-		prevo : "Meowth",
+		prevo: "Meowth",
 		eggGroups: ["Field"],
 	},
 	aperrserker: {
@@ -78881,7 +79108,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 18.2,
 		color: "Yellow",
-		prevo : "Ameowth",
+		prevo: "Ameowth",
 		eggGroups: ["Field"],
 	},
 	sufdonyut: {
@@ -78893,7 +79120,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 17.5,
 		color: "Pink",
-		prevo : "Timbito",
+		prevo: "Timbito",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	huneehi: {
@@ -78905,7 +79132,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.2,
 		color: "Gray",
-		evos : ["Huneyler"],
+		evos: ["Huneyler"],
 		eggGroups: ["Bug"],
 	},
 	huneyler: {
@@ -78917,7 +79144,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.2,
 		color: "Gray",
-		prevo : "Huneehi",
+		prevo: "Huneehi",
 		eggGroups: ["Bug"],
 	},
 	jcursola: {
@@ -78929,7 +79156,7 @@ blobbosmechelectric: {
 		heightm: 3.6,
 		weightkg: 15.0,
 		color: "Pink",
-		prevo : "Corsola",
+		prevo: "Corsola",
 		eggGroups: ["Water1", "Water3"],
 	},
 	felekid: {
@@ -78941,7 +79168,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 23.5,
 		color: "Yellow",
-		evos : ["Felectabuzz"],
+		evos: ["Felectabuzz"],
 		eggGroups: ["Undiscovered"],
 	},
 	felectabuzz: {
@@ -78953,8 +79180,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 23.5,
 		color: "Yellow",
-		prevo : "Felekid",
-		evos : ["Felectivire"],
+		prevo: "Felekid",
+		evos: ["Felectivire"],
 		eggGroups: ["Humanlike"],
 	},
 	felectivire: {
@@ -78966,7 +79193,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 123.5,
 		color: "Yellow",
-		prevo : "Felectabuzz",
+		prevo: "Felectabuzz",
 		eggGroups: ["Humanlike"],
 	},
 	emagby: {
@@ -78978,7 +79205,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.4,
 		color: "Red",
-		evos : ["Emagmar"],
+		evos: ["Emagmar"],
 		eggGroups: ["Undiscovered"],
 	},
 	emagmar: {
@@ -78990,8 +79217,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.4,
 		color: "Red",
-		prevo : "Emagby",
-		evos : ["Emagmortar"],
+		prevo: "Emagby",
+		evos: ["Emagmortar"],
 		eggGroups: ["Humanlike"],
 	},
 	emagmortar: {
@@ -79003,7 +79230,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 121.4,
 		color: "Red",
-		prevo : "Emagmar",
+		prevo: "Emagmar",
 		eggGroups: ["Humanlike"],
 	},
 	ibouffalant: {
@@ -79026,7 +79253,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Blue",
-		evos : ["Boukka"],
+		evos: ["Boukka"],
 		eggGroups: ["Amorphous"],
 	},
 	boukka: {
@@ -79038,8 +79265,8 @@ blobbosmechelectric: {
 		heightm: 5.2,
 		weightkg: 30.3,
 		color: "Blue",
-		prevo : "Bou",
-		evos : ["Bouquetke"],
+		prevo: "Bou",
+		evos: ["Bouquetke"],
 		eggGroups: ["Amorphous"],
 	},
 	bouquetke: {
@@ -79051,7 +79278,7 @@ blobbosmechelectric: {
 		heightm: 20.9,
 		weightkg: 69.7,
 		color: "Blue",
-		prevo : "Boukka",
+		prevo: "Boukka",
 		eggGroups: ["Amorphous"],
 	},
 	clair: {
@@ -79085,7 +79312,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 102.6,
 		color: "Blue",
-		evos : ["Fingle"],
+		evos: ["Fingle"],
 		eggGroups: ["Mineral"],
 	},
 	fingle: {
@@ -79097,8 +79324,8 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 102.6,
 		color: "Blue",
-		prevo : "Midger",
-		evos : ["Faakyu"],
+		prevo: "Midger",
+		evos: ["Faakyu"],
 		eggGroups: ["Mineral"],
 	},
 	faakyu: {
@@ -79110,7 +79337,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 102.6,
 		color: "Blue",
-		prevo : "Fingle",
+		prevo: "Fingle",
 		eggGroups: ["Mineral", "Humanlike"],
 	},
 	blobby: {
@@ -79122,7 +79349,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 2.6,
 		color: "Blue",
-		evos : ["Blobuff"],
+		evos: ["Blobuff"],
 		eggGroups: ["Mineral"],
 	},
 	blobuff: {
@@ -79134,7 +79361,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 102.6,
 		color: "Blue",
-		prevo : "Blobby",
+		prevo: "Blobby",
 		eggGroups: ["Mineral"],
 	},
 	shaunaph: {
@@ -79179,7 +79406,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 41.2,
 		color: "Blue",
-		prevo : "Kungfloo",
+		prevo: "Kungfloo",
 		eggGroups: ["Humanlike"],
 	},
 	dshinx: {
@@ -79191,7 +79418,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.5,
 		color: "Blue",
-		evos : ["Luxio", "Liberinx"],
+		evos: ["Luxio", "Liberinx"],
 		eggGroups: ["Field"],
 	},
 	liberinx: {
@@ -79203,7 +79430,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 19.5,
 		color: "Blue",
-		prevo : "Dshinx",
+		prevo: "Dshinx",
 		eggGroups: ["Field"],
 	},
 	pslurpuff: {
@@ -79215,7 +79442,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 5.0,
 		color: "White",
-		prevo : "Swirlix",
+		prevo: "Swirlix",
 		eggGroups: ["Fairy"],
 	},
 	urunerigus: {
@@ -79227,7 +79454,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 76.5,
 		color: "Yellow",
-		prevo : "Yamask",
+		prevo: "Yamask",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	dmunna: {
@@ -79239,7 +79466,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 23.3,
 		color: "Pink",
-		evos : ["Dmusharna"],
+		evos: ["Dmusharna"],
 		eggGroups: ["Field"],
 	},
 	dmusharna: {
@@ -79251,8 +79478,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 60.5,
 		color: "Pink",
-		prevo : "Dmunna",
-		evos : ["Muspecta"],
+		prevo: "Dmunna",
+		evos: ["Muspecta"],
 		eggGroups: ["Field"],
 	},
 	muspecta: {
@@ -79264,7 +79491,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 1.5,
 		color: "Pink",
-		prevo : "Dmusharna",
+		prevo: "Dmusharna",
 		eggGroups: ["Field", "Amorphous"],
 	},
 	tdarumaka: {
@@ -79272,24 +79499,42 @@ blobbosmechelectric: {
 		name: "Tdarumaka",
 		types: ["Grass"],
 		baseStats: {hp: 70, atk: 90, def: 45, spa: 15, spd: 45, spe: 50},
-		abilities: {0: "Natural Cure", 1: "Zen Mode", H: "Solar Power"},
+		abilities: {0: "Natural Cure", 1: "Zen Mode", H: "Solar Power"}, // Doesn't have a Zen form
 		heightm: 0.6,
 		weightkg: 37.5,
 		color: "Red",
-		evos : ["Tdarmanitan"],
+		evos: ["Tdarmanitan"],
 		eggGroups: ["Field"],
 	},
 	tdarmanitan: {
 		num: 668664,
 		name: "Tdarmanitan",
+		baseForme: "Standard",
 		types: ["Grass"],
 		baseStats: {hp: 105, atk: 140, def: 55, spa: 30, spd: 55, spe: 95},
 		abilities: {0: "Sheer Force", 1: "Zen Mode", H: "Zen Mode"},
 		heightm: 1.3,
 		weightkg: 92.9,
 		color: "Red",
-		prevo : "Tdarumaka",
+		prevo: "Tdarumaka",
 		eggGroups: ["Field"],
+		otherFormes: ["Tdarmanitan-Zen"],
+		formeOrder: ["Tdarmanitan", "Tdarmanitan-Zen"]
+	},
+	tdarmanitanzen: {
+		num: 668664,
+		name: "Tdarmanitan-Zen",
+		baseSpecies: "Tdarmanitan",
+		forme: "Zen",
+		types: ["Grass", "Rock"],
+		baseStats: {hp: 105, atk: 30, def: 105, spa: 140, spd: 105, spe: 55},
+		abilities: {0: "Zen Mode"},
+		heightm: 1.3,
+		weightkg: 92.9,
+		color: "Red",
+		eggGroups: ["Field"],
+		requiredAbility: "Zen Mode",
+		battleOnly: "Tdarmanitan",
 	},
 	fagyamask: {
 		num: 668665,
@@ -79300,7 +79545,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 1.5,
 		color: "Black",
-		evos : ["Yangelic"],
+		evos: ["Yangelic"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	yangelic: {
@@ -79312,7 +79557,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 1.5,
 		color: "Black",
-		prevo : "Fagyamask",
+		prevo: "Fagyamask",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	pmrmime: {
@@ -79335,7 +79580,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 30.0,
 		color: "Purple",
-		evos : ["Manomoth", "Venomoth"],
+		evos: ["Manomoth", "Venomoth"],
 		eggGroups: ["Bug"],
 	},
 	manomoth: {
@@ -79347,7 +79592,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 30.0,
 		color: "Purple",
-		prevo : "Dvenonat",
+		prevo: "Dvenonat",
 		eggGroups: ["Bug"],
 	},
 	rsmeargle: {
@@ -79414,7 +79659,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.0,
 		color: "Pink",
-		evos : ["Fjynx"],
+		evos: ["Fjynx"],
 		eggGroups: ["Undiscovered"],
 	},
 	fjynx: {
@@ -79426,8 +79671,8 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 26.0,
 		color: "Pink",
-		prevo : "Fsmoochum",
-		evos : ["Jybaba"],
+		prevo: "Fsmoochum",
+		evos: ["Jybaba"],
 		eggGroups: ["Undiscovered"],
 	},
 	jybaba: {
@@ -79439,7 +79684,7 @@ blobbosmechelectric: {
 		heightm: 2.4,
 		weightkg: 126.0,
 		color: "Pink",
-		prevo : "Fjynx",
+		prevo: "Fjynx",
 		eggGroups: ["Undiscovered"],
 	},
 	hubulbasaur: {
@@ -79451,7 +79696,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 6.9,
 		color: "Green",
-		evos : ["Huivysaur"],
+		evos: ["Huivysaur"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	huivysaur: {
@@ -79463,8 +79708,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 13.0,
 		color: "Green",
-		prevo : "Hubulbasaur",
-		evos : ["Huvenusaur"],
+		prevo: "Hubulbasaur",
+		evos: ["Huvenusaur"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	huvenusaur: {
@@ -79476,7 +79721,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 100.0,
 		color: "Green",
-		prevo : "Huivysaur",
+		prevo: "Huivysaur",
 		eggGroups: ["Humanlike", "Grass"],
 	},
 	hucharmander: {
@@ -79488,7 +79733,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		evos : ["Hucharmeleon"],
+		evos: ["Hucharmeleon"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	hucharmeleon: {
@@ -79500,8 +79745,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 19.0,
 		color: "Red",
-		prevo : "Hucharmander",
-		evos : ["Hucharizard"],
+		prevo: "Hucharmander",
+		evos: ["Hucharizard"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	hucharizard: {
@@ -79513,7 +79758,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 92.5,
 		color: "Red",
-		prevo : "Hucharmeleon",
+		prevo: "Hucharmeleon",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	husquirtle: {
@@ -79525,7 +79770,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.0,
 		color: "Blue",
-		evos : ["Huwartortle"],
+		evos: ["Huwartortle"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	huwartortle: {
@@ -79537,8 +79782,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 22.5,
 		color: "Blue",
-		prevo : "Husquirtle",
-		evos : ["Hublastoise"],
+		prevo: "Husquirtle",
+		evos: ["Hublastoise"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	hublastoise: {
@@ -79550,7 +79795,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 99.5,
 		color: "Blue",
-		prevo : "Huwartortle",
+		prevo: "Huwartortle",
 		eggGroups: ["Monster", "Water1"],
 	},
 	hucaterpie: {
@@ -79562,7 +79807,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.9,
 		color: "Green",
-		evos : ["Humetapod", "Fuggirl"],
+		evos: ["Humetapod", "Fuggirl"],
 		eggGroups: ["Bug"],
 	},
 	humetapod: {
@@ -79574,8 +79819,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 9.9,
 		color: "Green",
-		prevo : "Hucaterpie",
-		evos : ["Hubutterfree"],
+		prevo: "Hucaterpie",
+		evos: ["Hubutterfree"],
 		eggGroups: ["Bug"],
 	},
 	hubutterfree: {
@@ -79587,7 +79832,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 32.0,
 		color: "White",
-		prevo : "Humetapod",
+		prevo: "Humetapod",
 		eggGroups: ["Bug"],
 	},
 	huweedle: {
@@ -79599,7 +79844,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.2,
 		color: "Brown",
-		evos : ["Hukakuna"],
+		evos: ["Hukakuna"],
 		eggGroups: ["Bug"],
 	},
 	hukakuna: {
@@ -79611,8 +79856,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 10.0,
 		color: "Yellow",
-		prevo : "Huweedle",
-		evos : ["Hubeedrill"],
+		prevo: "Huweedle",
+		evos: ["Hubeedrill"],
 		eggGroups: ["Bug"],
 	},
 	hubeedrill: {
@@ -79624,7 +79869,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 29.5,
 		color: "Yellow",
-		prevo : "Hukakuna",
+		prevo: "Hukakuna",
 		eggGroups: ["Bug"],
 	},
 	hupidgey: {
@@ -79636,7 +79881,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.8,
 		color: "Brown",
-		evos : ["Hupidgeotto"],
+		evos: ["Hupidgeotto"],
 		eggGroups: ["Flying"],
 	},
 	hupidgeotto: {
@@ -79648,8 +79893,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 30.0,
 		color: "Brown",
-		prevo : "Hupidgey",
-		evos : ["Hupidgeot"],
+		prevo: "Hupidgey",
+		evos: ["Hupidgeot"],
 		eggGroups: ["Flying"],
 	},
 	hupidgeot: {
@@ -79661,7 +79906,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 39.5,
 		color: "Brown",
-		prevo : "Hupidgeotto",
+		prevo: "Hupidgeotto",
 		eggGroups: ["Flying"],
 	},
 	hurattata: {
@@ -79673,7 +79918,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.5,
 		color: "Purple",
-		evos : ["Huraticate"],
+		evos: ["Huraticate"],
 		eggGroups: ["Field"],
 	},
 	huraticate: {
@@ -79685,7 +79930,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 18.5,
 		color: "Brown",
-		prevo : "Hurattata",
+		prevo: "Hurattata",
 		eggGroups: ["Field"],
 	},
 	huspearow: {
@@ -79697,7 +79942,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.0,
 		color: "Brown",
-		evos : ["Hufearow"],
+		evos: ["Hufearow"],
 		eggGroups: ["Flying"],
 	},
 	hufearow: {
@@ -79709,7 +79954,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 38.0,
 		color: "Brown",
-		prevo : "Huspearow",
+		prevo: "Huspearow",
 		eggGroups: ["Flying"],
 	},
 	huekans: {
@@ -79721,7 +79966,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 6.9,
 		color: "Purple",
-		evos : ["Huarbok"],
+		evos: ["Huarbok"],
 		eggGroups: ["Field", "Dragon"],
 	},
 	huarbok: {
@@ -79733,8 +79978,8 @@ blobbosmechelectric: {
 		heightm: 3.5,
 		weightkg: 65.0,
 		color: "Purple",
-		prevo : "Huekans",
-		evos : ["Marbok"],
+		prevo: "Huekans",
+		evos: ["Marbok"],
 		eggGroups: ["Field", "Dragon"],
 	},
 	hupikachu: {
@@ -79746,7 +79991,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.0,
 		color: "Yellow",
-		evos : ["Huraichu"],
+		evos: ["Huraichu"],
 		eggGroups: ["Field", "Fairy"],
 	},
 	huraichu: {
@@ -79758,7 +80003,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 30.0,
 		color: "Yellow",
-		prevo : "Hupikachu",
+		prevo: "Hupikachu",
 		eggGroups: ["Field", "Fairy"],
 	},
 	husandshrew: {
@@ -79770,7 +80015,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 12.0,
 		color: "Yellow",
-		evos : ["Husandslash"],
+		evos: ["Husandslash"],
 		eggGroups: ["Field"],
 	},
 	husandslash: {
@@ -79782,7 +80027,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 29.5,
 		color: "Yellow",
-		prevo : "Husandshrew",
+		prevo: "Husandshrew",
 		eggGroups: ["Field"],
 	},
 	hunidoranfe: {
@@ -79794,7 +80039,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 7.0,
 		color: "Blue",
-		evos : ["Hunidorina"],
+		evos: ["Hunidorina"],
 		eggGroups: ["Monster", "Field"],
 	},
 	hunidorina: {
@@ -79806,8 +80051,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 20.0,
 		color: "Blue",
-		prevo : "Hunidoranfe",
-		evos : ["Hunidoqueen"],
+		prevo: "Hunidoranfe",
+		evos: ["Hunidoqueen"],
 		eggGroups: ["Monster", "Field"],
 	},
 	hunidoqueen: {
@@ -79819,7 +80064,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 60.0,
 		color: "Blue",
-		prevo : "Hunidorina",
+		prevo: "Hunidorina",
 		eggGroups: ["Monster", "Field"],
 	},
 	hunidoranma: {
@@ -79831,7 +80076,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.0,
 		color: "Purple",
-		evos : ["Hunidorino"],
+		evos: ["Hunidorino"],
 		eggGroups: ["Monster", "Field"],
 	},
 	hunidorino: {
@@ -79843,8 +80088,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 19.5,
 		color: "Purple",
-		prevo : "Hunidoranma",
-		evos : ["Hunidoking"],
+		prevo: "Hunidoranma",
+		evos: ["Hunidoking"],
 		eggGroups: ["Monster", "Field"],
 	},
 	hunidoking: {
@@ -79856,7 +80101,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 62.0,
 		color: "Purple",
-		prevo : "Hunidorino",
+		prevo: "Hunidorino",
 		eggGroups: ["Monster", "Field"],
 	},
 	huclefairy: {
@@ -79868,7 +80113,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
-		evos : ["Huclefable"],
+		evos: ["Huclefable"],
 		eggGroups: ["Fairy"],
 	},
 	huclefable: {
@@ -79880,7 +80125,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 40.0,
 		color: "Pink",
-		prevo : "Huclefairy",
+		prevo: "Huclefairy",
 		eggGroups: ["Fairy"],
 	},
 	huvulpix: {
@@ -79892,7 +80137,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 9.9,
 		color: "Brown",
-		evos : ["Huninetales"],
+		evos: ["Huninetales"],
 		eggGroups: ["Field"],
 	},
 	huninetales: {
@@ -79904,8 +80149,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 19.9,
 		color: "Yellow",
-		prevo : "Huvulpix",
-		evos : ["Mninetales"],
+		prevo: "Huvulpix",
+		evos: ["Mninetales"],
 		eggGroups: ["Field", "Humanlike"],
 	},
 	hujigglypuff: {
@@ -79917,7 +80162,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 5.5,
 		color: "Pink",
-		evos : ["Huwigglytuff"],
+		evos: ["Huwigglytuff"],
 		eggGroups: ["Fairy"],
 	},
 	huwigglytuff: {
@@ -79929,7 +80174,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 12.0,
 		color: "Pink",
-		prevo : "Hujigglypuff",
+		prevo: "Hujigglypuff",
 		eggGroups: ["Fairy"],
 	},
 	huzubat: {
@@ -79941,7 +80186,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 7.5,
 		color: "Purple",
-		evos : ["Hugolbat"],
+		evos: ["Hugolbat"],
 		eggGroups: ["Flying"],
 	},
 	hugolbat: {
@@ -79953,7 +80198,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 55.0,
 		color: "Purple",
-		prevo : "Huzubat",
+		prevo: "Huzubat",
 		eggGroups: ["Flying"],
 	},
 	huoddish: {
@@ -79965,7 +80210,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 5.4,
 		color: "Blue",
-		evos : ["Hugloom"],
+		evos: ["Hugloom"],
 		eggGroups: ["Grass"],
 	},
 	hugloom: {
@@ -79977,8 +80222,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 8.6,
 		color: "Blue",
-		prevo : "Huoddish",
-		evos : ["Huvileplume"],
+		prevo: "Huoddish",
+		evos: ["Huvileplume"],
 		eggGroups: ["Grass"],
 	},
 	huvileplume: {
@@ -79990,7 +80235,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 18.6,
 		color: "Red",
-		prevo : "Hugloom",
+		prevo: "Hugloom",
 		eggGroups: ["Grass"],
 	},
 	huparas: {
@@ -80002,7 +80247,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		evos : ["Huparasect"],
+		evos: ["Huparasect"],
 		eggGroups: ["Bug", "Grass"],
 	},
 	huparasect: {
@@ -80014,7 +80259,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 29.5,
 		color: "Red",
-		prevo : "Huparas",
+		prevo: "Huparas",
 		eggGroups: ["Bug", "Grass"],
 	},
 	huvenonat: {
@@ -80026,7 +80271,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 30.0,
 		color: "Purple",
-		evos : ["Huvenomoth"],
+		evos: ["Huvenomoth"],
 		eggGroups: ["Bug"],
 	},
 	huvenomoth: {
@@ -80038,7 +80283,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 12.5,
 		color: "Purple",
-		prevo : "Huvenonat",
+		prevo: "Huvenonat",
 		eggGroups: ["Bug"],
 	},
 	hudiglett: {
@@ -80050,7 +80295,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.8,
 		color: "Brown",
-		evos : ["Hudugtrio"],
+		evos: ["Hudugtrio"],
 		eggGroups: ["Field"],
 	},
 	hudugtrio: {
@@ -80062,7 +80307,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 33.3,
 		color: "Brown",
-		prevo : "Hudiglett",
+		prevo: "Hudiglett",
 		eggGroups: ["Field"],
 	},
 	humeowth: {
@@ -80074,7 +80319,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Yellow",
-		evos : ["Hupersian"],
+		evos: ["Hupersian"],
 		eggGroups: ["Field"],
 	},
 	hupersian: {
@@ -80086,7 +80331,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 32.0,
 		color: "Yellow",
-		prevo : "Humeowth",
+		prevo: "Humeowth",
 		eggGroups: ["Field"],
 	},
 	hupsyduck: {
@@ -80098,7 +80343,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 19.6,
 		color: "Yellow",
-		evos : ["Hugolduck"],
+		evos: ["Hugolduck"],
 		eggGroups: ["Water1", "Field"],
 	},
 	hugolduck: {
@@ -80110,7 +80355,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 76.6,
 		color: "Blue",
-		prevo : "Hupsyduck",
+		prevo: "Hupsyduck",
 		eggGroups: ["Water1", "Field"],
 	},
 	humankey: {
@@ -80122,7 +80367,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 28.0,
 		color: "Brown",
-		evos : ["Huprimeape"],
+		evos: ["Huprimeape"],
 		eggGroups: ["Field"],
 	},
 	huprimeape: {
@@ -80134,7 +80379,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 32.0,
 		color: "Brown",
-		prevo : "Humankey",
+		prevo: "Humankey",
 		eggGroups: ["Field"],
 	},
 	hugrowlithe: {
@@ -80146,7 +80391,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 19.0,
 		color: "Brown",
-		evos : ["Huarcanine"],
+		evos: ["Huarcanine"],
 		eggGroups: ["Field"],
 	},
 	huarcanine: {
@@ -80158,7 +80403,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 155.0,
 		color: "Brown",
-		prevo : "Hugrowlithe",
+		prevo: "Hugrowlithe",
 		eggGroups: ["Field"],
 	},
 	hupoliwag: {
@@ -80170,7 +80415,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 12.4,
 		color: "Blue",
-		evos : ["Hupoliwhirl"],
+		evos: ["Hupoliwhirl"],
 		eggGroups: ["Water1"],
 	},
 	hupoliwhirl: {
@@ -80182,8 +80427,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 20.0,
 		color: "Blue",
-		prevo : "Hupoliwag",
-		evos : ["Hupoliwrath"],
+		prevo: "Hupoliwag",
+		evos: ["Hupoliwrath"],
 		eggGroups: ["Water1"],
 	},
 	hupoliwrath: {
@@ -80195,7 +80440,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 104.0,
 		color: "Blue",
-		prevo : "Hupoliwhirl",
+		prevo: "Hupoliwhirl",
 		eggGroups: ["Water1"],
 	},
 	huabra: {
@@ -80207,7 +80452,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 19.5,
 		color: "Brown",
-		evos : ["Hukadabra"],
+		evos: ["Hukadabra"],
 		eggGroups: ["Humanlike"],
 	},
 	hukadabra: {
@@ -80219,8 +80464,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 56.5,
 		color: "Brown",
-		prevo : "Huabra",
-		evos : ["Hualakazam"],
+		prevo: "Huabra",
+		evos: ["Hualakazam"],
 		eggGroups: ["Humanlike"],
 	},
 	hualakazam: {
@@ -80232,7 +80477,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 48.0,
 		color: "Brown",
-		prevo : "Hukadabra",
+		prevo: "Hukadabra",
 		eggGroups: ["Humanlike"],
 	},
 	humachop: {
@@ -80244,7 +80489,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 19.5,
 		color: "Gray",
-		evos : ["Machoke"],
+		evos: ["Machoke"],
 		eggGroups: ["Humanlike"],
 	},
 	humachoke: {
@@ -80256,7 +80501,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 70.5,
 		color: "Gray",
-		evos : ["Humachamp"],
+		evos: ["Humachamp"],
 		eggGroups: ["Humanlike"],
 	},
 	humachamp: {
@@ -80268,7 +80513,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 130.0,
 		color: "Gray",
-		prevo : "Humachoke",
+		prevo: "Humachoke",
 		eggGroups: ["Humanlike"],
 	},
 	hubellsprout: {
@@ -80280,7 +80525,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 4.0,
 		color: "Green",
-		evos : ["Huweepinbell"],
+		evos: ["Huweepinbell"],
 		eggGroups: ["Grass"],
 	},
 	huweepinbell: {
@@ -80292,8 +80537,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 6.4,
 		color: "Green",
-		prevo : "Hubellsprout",
-		evos : ["Huvictreebel"],
+		prevo: "Hubellsprout",
+		evos: ["Huvictreebel"],
 		eggGroups: ["Grass"],
 	},
 	huvictreebel: {
@@ -80305,7 +80550,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 15.5,
 		color: "Green",
-		prevo : "Huweepinbell",
+		prevo: "Huweepinbell",
 		eggGroups: ["Grass"],
 	},
 	hutentacool: {
@@ -80317,7 +80562,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 45.5,
 		color: "Blue",
-		evos : ["Hutentacruel"],
+		evos: ["Hutentacruel"],
 		eggGroups: ["Water3"],
 	},
 	hutentacruel: {
@@ -80329,7 +80574,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 55.0,
 		color: "Blue",
-		prevo : "Hutentacool",
+		prevo: "Hutentacool",
 		eggGroups: ["Water3"],
 	},
 	hugeodude: {
@@ -80341,7 +80586,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 20.0,
 		color: "Brown",
-		evos : ["Hugraveler"],
+		evos: ["Hugraveler"],
 		eggGroups: ["Mineral"],
 	},
 	hugraveler: {
@@ -80353,8 +80598,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 105.0,
 		color: "Brown",
-		prevo : "Hugeodude",
-		evos : ["Hugolem"],
+		prevo: "Hugeodude",
+		evos: ["Hugolem"],
 		eggGroups: ["Mineral"],
 	},
 	hugolem: {
@@ -80366,7 +80611,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 300.0,
 		color: "Brown",
-		prevo : "Hugraveler",
+		prevo: "Hugraveler",
 		eggGroups: ["Mineral"],
 	},
 	huponyta: {
@@ -80378,7 +80623,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 30.0,
 		color: "Yellow",
-		evos : ["Rapidash"],
+		evos: ["Rapidash"],
 		eggGroups: ["Field"],
 	},
 	hurapidash: {
@@ -80401,7 +80646,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 36.0,
 		color: "Pink",
-		evos : ["Huslowbro"],
+		evos: ["Huslowbro"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	huslowbro: {
@@ -80413,7 +80658,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 78.5,
 		color: "Pink",
-		prevo : "Huslowpoke",
+		prevo: "Huslowpoke",
 		eggGroups: ["Monster", "Water1"],
 	},
 	humagnemite: {
@@ -80425,7 +80670,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.0,
 		color: "Gray",
-		evos : ["Humagneton"],
+		evos: ["Humagneton"],
 		eggGroups: ["Mineral"],
 	},
 	humagneton: {
@@ -80437,7 +80682,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 60.0,
 		color: "Gray",
-		prevo : "Humagnemite",
+		prevo: "Humagnemite",
 		eggGroups: ["Mineral"],
 	},
 	hufarfetchd: {
@@ -80460,7 +80705,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 39.2,
 		color: "Brown",
-		evos : ["Hudodrio"],
+		evos: ["Hudodrio"],
 		eggGroups: ["Flying"],
 	},
 	hudodrio: {
@@ -80472,7 +80717,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 85.2,
 		color: "Brown",
-		prevo : "Hudoduo",
+		prevo: "Hudoduo",
 		eggGroups: ["Flying"],
 	},
 	huseel: {
@@ -80484,7 +80729,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 90.0,
 		color: "White",
-		evos : ["Hudewgong"],
+		evos: ["Hudewgong"],
 		eggGroups: ["Water1", "Field"],
 	},
 	hudewgong: {
@@ -80496,7 +80741,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 120.0,
 		color: "White",
-		prevo : "Huseel",
+		prevo: "Huseel",
 		eggGroups: ["Water1", "Field"],
 	},
 	hugrimer: {
@@ -80508,7 +80753,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 30.0,
 		color: "Purple",
-		evos : ["Humuk"],
+		evos: ["Humuk"],
 		eggGroups: ["Amorphous"],
 	},
 	humuk: {
@@ -80520,7 +80765,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 30.0,
 		color: "Purple",
-		prevo : "Hugrimer",
+		prevo: "Hugrimer",
 		eggGroups: ["Amorphous"],
 	},
 	hushellder: {
@@ -80532,7 +80777,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 4.0,
 		color: "Purple",
-		evos : ["Hucloyster"],
+		evos: ["Hucloyster"],
 		eggGroups: ["Water3"],
 	},
 	hucloyster: {
@@ -80544,7 +80789,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 132.5,
 		color: "Purple",
-		prevo : "Hushellder",
+		prevo: "Hushellder",
 		eggGroups: ["Water3"],
 	},
 	hugastly: {
@@ -80556,7 +80801,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 0.1,
 		color: "Purple",
-		evos : ["Kaiju Gastly", "Huhaunter"],
+		evos: ["Kaiju Gastly", "Huhaunter"],
 		eggGroups: ["Amorphous"],
 	},
 	huhaunter: {
@@ -80568,8 +80813,8 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 0.1,
 		color: "Purple",
-		prevo : "Hugastly",
-		evos : ["Hugengar"],
+		prevo: "Hugastly",
+		evos: ["Hugengar"],
 		eggGroups: ["Amorphous"],
 	},
 	hugengar: {
@@ -80581,7 +80826,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 40.5,
 		color: "Purple",
-		prevo : "Huhaunter",
+		prevo: "Huhaunter",
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	huonix: {
@@ -80604,7 +80849,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 32.4,
 		color: "Yellow",
-		evos : ["Huhypno"],
+		evos: ["Huhypno"],
 		eggGroups: ["Humanlike"],
 	},
 	huhypno: {
@@ -80616,7 +80861,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 75.6,
 		color: "Yellow",
-		prevo : "Hudrowzee",
+		prevo: "Hudrowzee",
 		eggGroups: ["Humanlike"],
 	},
 	hukrabby: {
@@ -80628,7 +80873,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.5,
 		color: "Red",
-		evos : ["Hukingler"],
+		evos: ["Hukingler"],
 		eggGroups: ["Water3"],
 	},
 	hukingler: {
@@ -80640,7 +80885,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 60.0,
 		color: "Red",
-		prevo : "Hukrabby",
+		prevo: "Hukrabby",
 		eggGroups: ["Water3"],
 	},
 	huvoltorb: {
@@ -80652,7 +80897,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 10.4,
 		color: "Red",
-		evos : ["Huelectrode"],
+		evos: ["Huelectrode"],
 		eggGroups: ["Mineral"],
 	},
 	huelectrode: {
@@ -80664,8 +80909,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 66.6,
 		color: "Red",
-		prevo : "Huvoltorb",
-		evos : ["Alactrode", "Melectrode"],
+		prevo: "Huvoltorb",
+		evos: ["Alactrode", "Melectrode"],
 		eggGroups: ["Mineral"],
 	},
 	huexeggcute: {
@@ -80677,7 +80922,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 2.5,
 		color: "Pink",
-		evos : ["Huexeggutor"],
+		evos: ["Huexeggutor"],
 		eggGroups: ["Grass"],
 	},
 	huexeggutor: {
@@ -80689,7 +80934,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 120.0,
 		color: "Yellow",
-		prevo : "Huexeggcute",
+		prevo: "Huexeggcute",
 		eggGroups: ["Grass"],
 	},
 	hucubone: {
@@ -80701,7 +80946,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.5,
 		color: "Brown",
-		evos : ["Humarowak"],
+		evos: ["Humarowak"],
 		eggGroups: ["Monster"],
 	},
 	humarowak: {
@@ -80713,7 +80958,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 45.0,
 		color: "Brown",
-		prevo : "Hucubone",
+		prevo: "Hucubone",
 		eggGroups: ["Monster"],
 	},
 	huhitmonlee: {
@@ -80747,7 +80992,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 65.5,
 		color: "Pink",
-		prevo : "Lickitung",
+		prevo: "Lickitung",
 		eggGroups: ["Monster", "Humanlike"],
 	},
 	hukoffing: {
@@ -80759,7 +81004,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 1.0,
 		color: "Purple",
-		evos : ["Huweezing"],
+		evos: ["Huweezing"],
 		eggGroups: ["Amorphous"],
 	},
 	huweezing: {
@@ -80771,7 +81016,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 9.5,
 		color: "Purple",
-		prevo : "Hukoffing",
+		prevo: "Hukoffing",
 		eggGroups: ["Amorphous"],
 	},
 	hurhyhorn: {
@@ -80783,7 +81028,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 115.0,
 		color: "Gray",
-		evos : ["Hurhydon"],
+		evos: ["Hurhydon"],
 		eggGroups: ["Monster", "Field"],
 	},
 	hurhydon: {
@@ -80795,8 +81040,8 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 120.0,
 		color: "Gray",
-		prevo : "Hurhyhorn",
-		evos : ["Gyarth", "Rhyperior"],
+		prevo: "Hurhyhorn",
+		evos: ["Gyarth", "Rhyperior"],
 		eggGroups: ["Monster", "Field"],
 	},
 	huchansey: {
@@ -80841,7 +81086,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 8.0,
 		color: "Blue",
-		evos : ["Huseadra"],
+		evos: ["Huseadra"],
 		eggGroups: ["Water1", "Dragon"],
 	},
 	huseadra: {
@@ -80853,7 +81098,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 25.0,
 		color: "Blue",
-		prevo : "Huhorsea",
+		prevo: "Huhorsea",
 		eggGroups: ["Water1", "Dragon"],
 	},
 	hugoldeen: {
@@ -80865,7 +81110,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Red",
-		evos : ["Huseaking"],
+		evos: ["Huseaking"],
 		eggGroups: ["Water2"],
 	},
 	huseaking: {
@@ -80877,7 +81122,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 39.0,
 		color: "Red",
-		prevo : "Hugoldeen",
+		prevo: "Hugoldeen",
 		eggGroups: ["Water2"],
 	},
 	hustaryu: {
@@ -80889,7 +81134,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 34.5,
 		color: "Brown",
-		evos : ["Hustarmie"],
+		evos: ["Hustarmie"],
 		eggGroups: ["Water3"],
 	},
 	hustarmie: {
@@ -80901,7 +81146,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 80.0,
 		color: "Purple",
-		prevo : "Hustaryu",
+		prevo: "Hustaryu",
 		eggGroups: ["Water3"],
 	},
 	humrmime: {
@@ -80935,7 +81180,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 40.6,
 		color: "Red",
-		evos : ["Mjynx"],
+		evos: ["Mjynx"],
 		eggGroups: ["Humanlike"],
 	},
 	huelectabuzz: {
@@ -80958,7 +81203,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 44.5,
 		color: "Red",
-		evos : ["Magmortar"],
+		evos: ["Magmortar"],
 		eggGroups: ["Humanlike"],
 	},
 	hupinsir: {
@@ -80992,7 +81237,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 10.0,
 		color: "Red",
-		evos : ["Hugyarados"],
+		evos: ["Hugyarados"],
 		eggGroups: ["Water2", "Dragon"],
 	},
 	hugyarados: {
@@ -81004,7 +81249,7 @@ blobbosmechelectric: {
 		heightm: 6.5,
 		weightkg: 235.0,
 		color: "Blue",
-		prevo : "Humagikarp",
+		prevo: "Humagikarp",
 		eggGroups: ["Water2", "Dragon"],
 	},
 	hulapras: {
@@ -81038,7 +81283,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
-		evos : ["Huvaporeon", "Hujolteon", "Huflareon"],
+		evos: ["Huvaporeon", "Hujolteon", "Huflareon"],
 		eggGroups: ["Field"],
 	},
 	huvaporeon: {
@@ -81050,7 +81295,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 29.0,
 		color: "Blue",
-		prevo : "Hueevee",
+		prevo: "Hueevee",
 		eggGroups: ["Field"],
 	},
 	hujolteon: {
@@ -81062,7 +81307,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 24.5,
 		color: "Yellow",
-		prevo : "Hueevee",
+		prevo: "Hueevee",
 		eggGroups: ["Field"],
 	},
 	huflareon: {
@@ -81074,7 +81319,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 25.0,
 		color: "Red",
-		prevo : "Hueevee",
+		prevo: "Hueevee",
 		eggGroups: ["Field"],
 	},
 	huporygon: {
@@ -81097,7 +81342,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 7.5,
 		color: "Blue",
-		evos : ["Huomastar"],
+		evos: ["Huomastar"],
 		eggGroups: ["Water1", "Water3"],
 	},
 	huomastar: {
@@ -81109,8 +81354,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 35.0,
 		color: "Blue",
-		prevo : "Huomanyte",
-		evos : ["Momastar"],
+		prevo: "Huomanyte",
+		evos: ["Momastar"],
 		eggGroups: ["Water1", "Water3"],
 	},
 	hukabuto: {
@@ -81122,7 +81367,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 11.5,
 		color: "Brown",
-		evos : ["Hukabutops"],
+		evos: ["Hukabutops"],
 		eggGroups: ["Water1", "Water3"],
 	},
 	hukabutops: {
@@ -81134,7 +81379,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 40.5,
 		color: "Brown",
-		prevo : "Hukabuto",
+		prevo: "Hukabuto",
 		eggGroups: ["Water1", "Water3"],
 	},
 	huaerodactyl: {
@@ -81201,7 +81446,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 3.3,
 		color: "Blue",
-		evos : ["Hudragonair"],
+		evos: ["Hudragonair"],
 		eggGroups: ["Water1", "Dragon"],
 	},
 	hudragonair: {
@@ -81213,8 +81458,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Hudratini",
-		evos : ["Hudragonite"],
+		prevo: "Hudratini",
+		evos: ["Hudragonite"],
 		eggGroups: ["Water1", "Dragon"],
 	},
 	hudragonite: {
@@ -81226,7 +81471,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 210.0,
 		color: "Brown",
-		prevo : "Hudragonair",
+		prevo: "Hudragonair",
 		eggGroups: ["Water1", "Dragon"],
 	},
 	humewtwo: {
@@ -81271,7 +81516,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 42.1,
 		color: "Blue",
-		evos : ["Zshelgon"],
+		evos: ["Zshelgon"],
 		eggGroups: ["Dragon"],
 	},
 	zshelgon: {
@@ -81283,8 +81528,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 110.5,
 		color: "White",
-		prevo : "Zbagon",
-		evos : ["Zsalamence"],
+		prevo: "Zbagon",
+		evos: ["Zsalamence"],
 		eggGroups: ["Dragon"],
 	},
 	zsalamence: {
@@ -81296,7 +81541,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 102.6,
 		color: "Blue",
-		prevo : "Zshelgon",
+		prevo: "Zshelgon",
 		eggGroups: ["Dragon"],
 	},
 	snkgrimreaper: {
@@ -81308,7 +81553,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 56.0,
 		color: "Gray",
-		evos : ["Ironreaper"],
+		evos: ["Ironreaper"],
 		eggGroups: ["Bug"],
 	},
 	ironreaper: {
@@ -81320,7 +81565,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 118.0,
 		color: "Red",
-		prevo : "Snkgrimreaper",
+		prevo: "Snkgrimreaper",
 		eggGroups: ["Bug"],
 	},
 	houndsour: {
@@ -81332,7 +81577,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 10.8,
 		color: "Black",
-		evos : ["Headdoom"],
+		evos: ["Headdoom"],
 		eggGroups: ["Field"],
 	},
 	headdoom: {
@@ -81344,7 +81589,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 35.0,
 		color: "Black",
-		prevo : "Houndsour",
+		prevo: "Houndsour",
 		eggGroups: ["Field"],
 	},
 	skinskin: {
@@ -81356,7 +81601,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.0,
 		color: "Red",
-		evos : ["Snkeyeeye"],
+		evos: ["Snkeyeeye"],
 		eggGroups: ["Undiscovered"],
 	},
 	snkeyeeye: {
@@ -81368,7 +81613,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 40.6,
 		color: "Red",
-		prevo : "Skinskin",
+		prevo: "Skinskin",
 		eggGroups: ["Humanlike"],
 	},
 	elecharge: {
@@ -81380,7 +81625,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 23.5,
 		color: "Gray",
-		evos : ["Electabugs"],
+		evos: ["Electabugs"],
 		eggGroups: ["Undiscovered"],
 	},
 	electabugs: {
@@ -81392,7 +81637,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 30.0,
 		color: "Gray",
-		prevo : "Elecharge",
+		prevo: "Elecharge",
 		eggGroups: ["Humanlike"],
 	},
 	miaby: {
@@ -81404,7 +81649,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 21.4,
 		color: "Blue",
-		evos : ["Miasmar"],
+		evos: ["Miasmar"],
 		eggGroups: ["Undiscovered"],
 	},
 	miasmar: {
@@ -81416,7 +81661,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 44.5,
 		color: "Blue",
-		prevo : "Miaby",
+		prevo: "Miaby",
 		eggGroups: ["Humanlike"],
 	},
 	irivatar: {
@@ -81428,7 +81673,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 72.0,
 		color: "Gray",
-		evos : ["Metalitar"],
+		evos: ["Metalitar"],
 		eggGroups: ["Monster"],
 	},
 	metalitar: {
@@ -81440,8 +81685,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 152.0,
 		color: "Gray",
-		prevo : "Irivatar",
-		evos : ["Zyranizila"],
+		prevo: "Irivatar",
+		evos: ["Zyranizila"],
 		eggGroups: ["Monster"],
 	},
 	zyranizila: {
@@ -81453,7 +81698,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 202.0,
 		color: "Black",
-		prevo : "Metalitar",
+		prevo: "Metalitar",
 		eggGroups: ["Monster"],
 	},
 	scarlugia: {
@@ -81487,7 +81732,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 130.5,
 		color: "Brown",
-		prevo : "Vigoroth",
+		prevo: "Vigoroth",
 		eggGroups: ["Field"],
 	},
 	snowkitty: {
@@ -81499,7 +81744,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 11.0,
 		color: "Blue",
-		evos : ["Frozcatty"],
+		evos: ["Frozcatty"],
 		eggGroups: ["Field", "Fairy"],
 	},
 	frozcatty: {
@@ -81511,7 +81756,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 32.6,
 		color: "Blue",
-		prevo : "Snowkitty",
+		prevo: "Snowkitty",
 		eggGroups: ["Field", "Fairy"],
 	},
 	zangol: {
@@ -81556,7 +81801,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 14.0,
 		color: "Gray",
-		evos : ["Wobdoomer"],
+		evos: ["Wobdoomer"],
 		eggGroups: ["Undiscovered"],
 	},
 	wobdoomer: {
@@ -81568,7 +81813,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 28.5,
 		color: "Black",
-		prevo : "Yeutdoom",
+		prevo: "Yeutdoom",
 		eggGroups: ["Amorphous"],
 	},
 	evidisc: {
@@ -81580,7 +81825,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.7,
 		color: "Black",
-		evos : ["Demohate"],
+		evos: ["Demohate"],
 		eggGroups: ["Water2"],
 	},
 	demohate: {
@@ -81592,7 +81837,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 79.5,
 		color: "Black",
-		prevo : "Evidisc",
+		prevo: "Evidisc",
 		eggGroups: ["Dragon", "Water2"],
 	},
 	rustum: {
@@ -81604,7 +81849,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 95.2,
 		color: "Brown",
-		evos : ["Rustang"],
+		evos: ["Rustang"],
 		eggGroups: ["Mineral"],
 	},
 	rustang: {
@@ -81616,8 +81861,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 202.5,
 		color: "Brown",
-		prevo : "Rustum",
-		evos : ["Rustegross"],
+		prevo: "Rustum",
+		evos: ["Rustegross"],
 		eggGroups: ["Mineral"],
 	},
 	rustegross: {
@@ -81629,7 +81874,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 550.0,
 		color: "Brown",
-		prevo : "Rustang",
+		prevo: "Rustang",
 		eggGroups: ["Mineral"],
 	},
 	stitcher: {
@@ -81663,7 +81908,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 11.5,
 		color: "Black",
-		evos : ["Darkutops"],
+		evos: ["Darkutops"],
 		eggGroups: ["Water1", "Water3"],
 	},
 	darkutops: {
@@ -81675,7 +81920,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 40.5,
 		color: "Black",
-		prevo : "Blackuto",
+		prevo: "Blackuto",
 		eggGroups: ["Water1", "Water3"],
 	},
 	gorelax: {
@@ -81687,7 +81932,7 @@ blobbosmechelectric: {
 		heightm: 2.1,
 		weightkg: 460.0,
 		color: "Black",
-		prevo : "Munchlax",
+		prevo: "Munchlax",
 		eggGroups: ["Monster"],
 	},
 	mutagon: {
@@ -81699,7 +81944,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 122.0,
 		color: "Black",
-		prevo : "Mewby",
+		prevo: "Mewby",
 		eggGroups: ["Undiscovered"],
 	},
 	mewby: {
@@ -81711,7 +81956,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.0,
 		color: "Blue",
-		evos : ["Mutagon"],
+		evos: ["Mutagon"],
 		eggGroups: ["Ditto"],
 	},
 	thorita: {
@@ -81723,7 +81968,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 6.4,
 		color: "Gray",
-		evos : ["Thornleef"],
+		evos: ["Thornleef"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	thornleef: {
@@ -81735,8 +81980,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 15.8,
 		color: "Gray",
-		prevo : "Thorita",
-		evos : ["Mawnium", "Thornium"],
+		prevo: "Thorita",
+		evos: ["Mawnium", "Thornium"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	thornium: {
@@ -81748,7 +81993,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 100.5,
 		color: "Gray",
-		prevo : "Thornleef",
+		prevo: "Thornleef",
 		eggGroups: ["Monster", "Grass"],
 	},
 	mawnium: {
@@ -81760,7 +82005,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 100.5,
 		color: "Black",
-		prevo : "Thornleef",
+		prevo: "Thornleef",
 		eggGroups: ["Monster", "Grass"],
 	},
 	cleffgar: {
@@ -81772,7 +82017,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.0,
 		color: "Gray",
-		evos : ["Clegoyle"],
+		evos: ["Clegoyle"],
 		eggGroups: ["Undiscovered"],
 	},
 	clegoyle: {
@@ -81784,8 +82029,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Gray",
-		prevo : "Cleffgar",
-		evos : ["Garfable"],
+		prevo: "Cleffgar",
+		evos: ["Garfable"],
 		eggGroups: ["Fairy"],
 	},
 	garfable: {
@@ -81797,7 +82042,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 40.0,
 		color: "Gray",
-		prevo : "Clegoyle",
+		prevo: "Clegoyle",
 		eggGroups: ["Fairy"],
 	},
 	snkzombified: {
@@ -81809,7 +82054,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 33.9,
 		color: "Green",
-		prevo : "Poliworm",
+		prevo: "Poliworm",
 		eggGroups: ["Water1"],
 	},
 	snktoxeon: {
@@ -81865,7 +82110,7 @@ blobbosmechelectric: {
 		heightm: 6.5,
 		weightkg: 253.0,
 		color: "Gray",
-		prevo : "Qwilfish",
+		prevo: "Qwilfish",
 		eggGroups: ["Water2"],
 	},
 	telson: {
@@ -81877,7 +82122,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 3.9,
 		color: "Gray",
-		evos : ["Telshark"],
+		evos: ["Telshark"],
 		eggGroups: ["Water2"],
 	},
 	telshark: {
@@ -81889,7 +82134,7 @@ blobbosmechelectric: {
 		heightm: 6.5,
 		weightkg: 253.0,
 		color: "Gray",
-		prevo : "Telson",
+		prevo: "Telson",
 		eggGroups: ["Water2"],
 	},
 	sevydra: {
@@ -81912,7 +82157,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 12.4,
 		color: "Gray",
-		evos : ["Poliworm"],
+		evos: ["Poliworm"],
 		eggGroups: ["Water1"],
 	},
 	poliworm: {
@@ -81924,8 +82169,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 20.0,
 		color: "Black",
-		prevo : "Polihag",
-		evos : ["Snkzombified", "Poliwraith"],
+		prevo: "Polihag",
+		evos: ["Snkzombified", "Poliwraith"],
 		eggGroups: ["Water1"],
 	},
 	poliwraith: {
@@ -81937,7 +82182,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 104.0,
 		color: "Black",
-		prevo : "Poliworm",
+		prevo: "Poliworm",
 		eggGroups: ["Water1"],
 	},
 	moulder: {
@@ -81949,7 +82194,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 30.0,
 		color: "Gray",
-		evos : ["Yuck"],
+		evos: ["Yuck"],
 		eggGroups: ["Amorphous"],
 	},
 	yuck: {
@@ -81961,7 +82206,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 30.0,
 		color: "Red",
-		prevo : "Moulder",
+		prevo: "Moulder",
 		eggGroups: ["Amorphous"],
 	},
 	roteen: {
@@ -81973,7 +82218,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Brown",
-		evos : ["Seatyrant"],
+		evos: ["Seatyrant"],
 		eggGroups: ["Water2"],
 	},
 	seatyrant: {
@@ -81985,7 +82230,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 39.0,
 		color: "Brown",
-		prevo : "Roteen",
+		prevo: "Roteen",
 		eggGroups: ["Water2"],
 	},
 	zombicater: {
@@ -81997,7 +82242,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.5,
 		color: "Green",
-		evos : ["Deaderant"],
+		evos: ["Deaderant"],
 		eggGroups: ["Field"],
 	},
 	deaderant: {
@@ -82009,7 +82254,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 18.5,
 		color: "Green",
-		prevo : "Zombicater",
+		prevo: "Zombicater",
 		eggGroups: ["Field"],
 	},
 	brimshrew: {
@@ -82021,7 +82266,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 12.0,
 		color: "Black",
-		evos : ["Toxislash"],
+		evos: ["Toxislash"],
 		eggGroups: ["Field"],
 	},
 	toxislash: {
@@ -82033,7 +82278,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 29.5,
 		color: "Gray",
-		prevo : "Brimshrew",
+		prevo: "Brimshrew",
 		eggGroups: ["Field"],
 	},
 	nidoblood: {
@@ -82045,7 +82290,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 7.0,
 		color: "Red",
-		evos : ["Rubirina"],
+		evos: ["Rubirina"],
 		eggGroups: ["Monster", "Field"],
 	},
 	rubirina: {
@@ -82057,8 +82302,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 20.0,
 		color: "Red",
-		prevo : "Nidoblood",
-		evos : ["Rosaqueen"],
+		prevo: "Nidoblood",
+		evos: ["Rosaqueen"],
 		eggGroups: ["Monster", "Field"],
 	},
 	rosaqueen: {
@@ -82070,7 +82315,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 60.0,
 		color: "Red",
-		prevo : "Rubirina",
+		prevo: "Rubirina",
 		eggGroups: ["Monster", "Field"],
 	},
 	metalran: {
@@ -82082,7 +82327,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.0,
 		color: "Gray",
-		evos : ["Cyborino"],
+		evos: ["Cyborino"],
 		eggGroups: ["Monster", "Field"],
 	},
 	cyborino: {
@@ -82094,8 +82339,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 19.5,
 		color: "Gray",
-		prevo : "Metalran",
-		evos : ["Mechaking"],
+		prevo: "Metalran",
+		evos: ["Mechaking"],
 		eggGroups: ["Monster", "Field"],
 	},
 	mechaking: {
@@ -82107,7 +82352,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 62.0,
 		color: "Gray",
-		prevo : "Cyborino",
+		prevo: "Cyborino",
 		eggGroups: ["Monster", "Field"],
 	},
 	gluemadio: {
@@ -82174,7 +82419,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 1.8,
 		color: "Red",
-		evos : ["Blastmadio"],
+		evos: ["Blastmadio"],
 		eggGroups: ["Amorphous", "Fairy"],
 	},
 	blastmadio: {
@@ -82186,7 +82431,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 8.5,
 		color: "Red",
-		prevo : "Burstmadio",
+		prevo: "Burstmadio",
 		eggGroups: ["Amorphous", "Fairy"],
 	},
 	treemadio: {
@@ -82242,7 +82487,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 45.0,
 		color: "Brown",
-		evos : ["Ramshaker"],
+		evos: ["Ramshaker"],
 		eggGroups: ["Undiscovered"],
 	},
 	ramshaker: {
@@ -82254,7 +82499,7 @@ blobbosmechelectric: {
 		heightm: 2.3,
 		weightkg: 1500.0,
 		color: "Brown",
-		prevo : "Calfby",
+		prevo: "Calfby",
 		eggGroups: ["Field"],
 	},
 	amonster: {
@@ -82299,7 +82544,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 15.0,
 		color: "Brown",
-		prevo : "Linoone",
+		prevo: "Linoone",
 		eggGroups: ["Flying", "Field"],
 	},
 	roclobster: {
@@ -82355,7 +82600,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 17.8,
 		color: "Red",
-		evos : ["Radiorange"],
+		evos: ["Radiorange"],
 		eggGroups: ["Field", "Flying"],
 	},
 	radiorange: {
@@ -82367,7 +82612,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 69.9,
 		color: "Yellow",
-		prevo : "Cinderco",
+		prevo: "Cinderco",
 		eggGroups: ["Grass", "Monster"],
 	},
 	chocwork: {
@@ -82390,7 +82635,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 16.0,
 		color: "Gray",
-		evos : ["Secretegg"],
+		evos: ["Secretegg"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	glitchlett: {
@@ -82402,7 +82647,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.8,
 		color: "Brown",
-		evos : ["Glitchtrio"],
+		evos: ["Glitchtrio"],
 		eggGroups: ["Field", "Amorphous"],
 	},
 	glitchtrio: {
@@ -82414,8 +82659,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 33.3,
 		color: "Brown",
-		prevo : "Glitchlett",
-		evos : ["Glitchtet"],
+		prevo: "Glitchlett",
+		evos: ["Glitchtet"],
 		eggGroups: ["Field", "Amorphous"],
 	},
 	glitchtet: {
@@ -82427,7 +82672,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 39.9,
 		color: "Brown",
-		prevo : "Glitchtrio",
+		prevo: "Glitchtrio",
 		eggGroups: ["Field", "Amorphous"],
 	},
 	secretegg: {
@@ -82439,8 +82684,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 12.0,
 		color: "Gray",
-		prevo : "Mysteryegg",
-		evos : ["Hyperegg"],
+		prevo: "Mysteryegg",
+		evos: ["Hyperegg"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	hyperegg: {
@@ -82452,7 +82697,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 5.5,
 		color: "Gray",
-		prevo : "Secretegg",
+		prevo: "Secretegg",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	kajilianth: {
@@ -82486,7 +82731,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 24.0,
 		color: "Brown",
-		evos : ["Hombeast"],
+		evos: ["Hombeast"],
 		eggGroups: ["Mineral", "Field"],
 	},
 	hombeast: {
@@ -82498,7 +82743,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 220.0,
 		color: "Brown",
-		prevo : "Hombone",
+		prevo: "Hombone",
 		eggGroups: ["Mineral", "Field"],
 	},
 	kenchira: {
@@ -82510,7 +82755,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 51.3,
 		color: "Gray",
-		evos : ["Kenchukuo"],
+		evos: ["Kenchukuo"],
 		eggGroups: ["Humanlike", "Field"],
 	},
 	kenchukuo: {
@@ -82522,7 +82767,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 77.4,
 		color: "Red",
-		prevo : "Kenchira",
+		prevo: "Kenchira",
 		eggGroups: ["Humanlike", "Field"],
 	},
 	x32763: {
@@ -82644,7 +82889,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 6.9,
 		color: "Green",
-		evos : ["Shrivlsaur"],
+		evos: ["Shrivlsaur"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	shrivlsaur: {
@@ -82656,8 +82901,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 6.9,
 		color: "Green",
-		prevo : "Boilbasaur",
-		evos : ["Vivosaur"],
+		prevo: "Boilbasaur",
+		evos: ["Vivosaur"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	vivosaur: {
@@ -82669,7 +82914,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 116.9,
 		color: "Green",
-		prevo : "Shrivlsaur",
+		prevo: "Shrivlsaur",
 		eggGroups: ["Monster", "Grass"],
 	},
 	rotmander: {
@@ -82681,7 +82926,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		evos : ["Charmeworm"],
+		evos: ["Charmeworm"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	charmeworm: {
@@ -82693,8 +82938,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 19.0,
 		color: "Red",
-		prevo : "Rotmander",
-		evos : ["Snkdragon", "Lichizard"],
+		prevo: "Rotmander",
+		evos: ["Snkdragon", "Lichizard"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	snkdragon: {
@@ -82706,7 +82951,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 92.5,
 		color: "Red",
-		prevo : "Charmeworm",
+		prevo: "Charmeworm",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	lichizard: {
@@ -82718,7 +82963,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 92.5,
 		color: "Red",
-		prevo : "Charmeworm",
+		prevo: "Charmeworm",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	oozle: {
@@ -82730,7 +82975,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.0,
 		color: "Blue",
-		evos : ["Entrailtle"],
+		evos: ["Entrailtle"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	entrailtle: {
@@ -82742,8 +82987,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 22.5,
 		color: "Blue",
-		prevo : "Oozle",
-		evos : ["Bleedtoise"],
+		prevo: "Oozle",
+		evos: ["Bleedtoise"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	bleedtoise: {
@@ -82755,7 +83000,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 99.5,
 		color: "Blue",
-		prevo : "Entrailtle",
+		prevo: "Entrailtle",
 		eggGroups: ["Monster", "Water1"],
 	},
 	decarill: {
@@ -82767,7 +83012,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 2.0,
 		color: "Blue",
-		evos : ["Graveill"],
+		evos: ["Graveill"],
 		eggGroups: ["Undiscovered"],
 	},
 	graveill: {
@@ -82779,8 +83024,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 12.0,
 		color: "Blue",
-		prevo : "Decarill",
-		evos : ["Azombarill"],
+		prevo: "Decarill",
+		evos: ["Azombarill"],
 		eggGroups: ["Undiscovered"],
 	},
 	azombarill: {
@@ -82792,7 +83037,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 22.0,
 		color: "Blue",
-		prevo : "Graveill",
+		prevo: "Graveill",
 		eggGroups: ["Undiscovered"],
 	},
 	psylet: {
@@ -82804,7 +83049,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 30.6,
 		color: "Black",
-		evos : ["Psypig"],
+		evos: ["Psypig"],
 		eggGroups: ["Field"],
 	},
 	psypig: {
@@ -82816,7 +83061,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 71.5,
 		color: "Purple",
-		prevo : "Psylet",
+		prevo: "Psylet",
 		eggGroups: ["Field"],
 	},
 	zurmex: {
@@ -82828,7 +83073,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 13.6,
 		color: "Red",
-		prevo : "Wurmple",
+		prevo: "Wurmple",
 		eggGroups: ["Bug"],
 	},
 	sxsalamence: {
@@ -82840,7 +83085,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 102.6,
 		color: "Blue",
-		prevo : "Shelgon",
+		prevo: "Shelgon",
 		eggGroups: ["Dragon"],
 	},
 	seimenkongou: {
@@ -82852,7 +83097,7 @@ blobbosmechelectric: {
 		heightm: 1.87,
 		weightkg: 45.9,
 		color: "Blue",
-		evos : ["Amon Ra"],
+		evos: ["Amon Ra"],
 		eggGroups: ["Humanlike"],
 	},
 	metalslimee: {
@@ -82864,8 +83109,8 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Slimee",
-		evos : ["Metalkingslimee"],
+		prevo: "Slimee",
+		evos: ["Metalkingslimee"],
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	metalkingslimee: {
@@ -82877,7 +83122,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Metalslimee",
+		prevo: "Metalslimee",
 		eggGroups: ["Amorphous", "Mineral"],
 	},
 	burnasaur: {
@@ -82889,7 +83134,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 6.9,
 		color: "Green",
-		evos : ["Embersaur"],
+		evos: ["Embersaur"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	embersaur: {
@@ -82901,8 +83146,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 6.9,
 		color: "Green",
-		prevo : "Burnasaur",
-		evos : ["Vulcasaur"],
+		prevo: "Burnasaur",
+		evos: ["Vulcasaur"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	vulcasaur: {
@@ -82914,7 +83159,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 216.9,
 		color: "Green",
-		prevo : "Embersaur",
+		prevo: "Embersaur",
 		eggGroups: ["Monster", "Grass"],
 	},
 	seamander: {
@@ -82926,7 +83171,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		evos : ["Seameleon"],
+		evos: ["Seameleon"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	seameleon: {
@@ -82938,8 +83183,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		prevo : "Seamander",
-		evos : ["Sealizard"],
+		prevo: "Seamander",
+		evos: ["Sealizard"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	sealizard: {
@@ -82951,7 +83196,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.5,
 		color: "Red",
-		prevo : "Seameleon",
+		prevo: "Seameleon",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	fertle: {
@@ -82963,7 +83208,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.0,
 		color: "Blue",
-		evos : ["Rootortle"],
+		evos: ["Rootortle"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	rootortle: {
@@ -82975,8 +83220,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 22.5,
 		color: "Blue",
-		prevo : "Fertle",
-		evos : ["Grasstoise"],
+		prevo: "Fertle",
+		evos: ["Grasstoise"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	grasstoise: {
@@ -82988,7 +83233,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 99.5,
 		color: "Blue",
-		prevo : "Rootortle",
+		prevo: "Rootortle",
 		eggGroups: ["Monster", "Water1"],
 	},
 	caterpebb: {
@@ -83000,7 +83245,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.9,
 		color: "Green",
-		evos : ["Minepod"],
+		evos: ["Minepod"],
 		eggGroups: ["Bug"],
 	},
 	minepod: {
@@ -83012,8 +83257,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 9.9,
 		color: "Green",
-		prevo : "Caterpebb",
-		evos : ["Boulderfree"],
+		prevo: "Caterpebb",
+		evos: ["Boulderfree"],
 		eggGroups: ["Bug"],
 	},
 	boulderfree: {
@@ -83025,7 +83270,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 32.0,
 		color: "White",
-		prevo : "Minepod",
+		prevo: "Minepod",
 		eggGroups: ["Bug", "Monster"],
 	},
 	geodle: {
@@ -83037,7 +83282,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.2,
 		color: "Brown",
-		evos : ["Prikuna"],
+		evos: ["Prikuna"],
 		eggGroups: ["Bug"],
 	},
 	prikuna: {
@@ -83049,8 +83294,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 10.0,
 		color: "Yellow",
-		prevo : "Geodle",
-		evos : ["Bristrill"],
+		prevo: "Geodle",
+		evos: ["Bristrill"],
 		eggGroups: ["Bug"],
 	},
 	bristrill: {
@@ -83062,7 +83307,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 29.5,
 		color: "Yellow",
-		prevo : "Prikuna",
+		prevo: "Prikuna",
 		eggGroups: ["Bug"],
 	},
 	fridgey: {
@@ -83074,7 +83319,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 1.8,
 		color: "Brown",
-		evos : ["Fridgeotto"],
+		evos: ["Fridgeotto"],
 		eggGroups: ["Flying"],
 	},
 	fridgeotto: {
@@ -83086,8 +83331,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 30.0,
 		color: "Brown",
-		prevo : "Fridgey",
-		evos : ["Fridgeot"],
+		prevo: "Fridgey",
+		evos: ["Fridgeot"],
 		eggGroups: ["Flying"],
 	},
 	fridgeot: {
@@ -83099,7 +83344,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 39.5,
 		color: "Brown",
-		prevo : "Fridgeotto",
+		prevo: "Fridgeotto",
 		eggGroups: ["Flying"],
 	},
 	rottata: {
@@ -83111,7 +83356,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.5,
 		color: "Purple",
-		evos : ["Roticate"],
+		evos: ["Roticate"],
 		eggGroups: ["Field"],
 	},
 	roticate: {
@@ -83123,7 +83368,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 18.5,
 		color: "Brown",
-		prevo : "Rottata",
+		prevo: "Rottata",
 		eggGroups: ["Field"],
 	},
 	ghastata: {
@@ -83135,7 +83380,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.5,
 		color: "Purple",
-		evos : ["Ghasticate"],
+		evos: ["Ghasticate"],
 		eggGroups: ["Field"],
 	},
 	ghasticate: {
@@ -83147,7 +83392,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 18.5,
 		color: "Brown",
-		prevo : "Ghastata",
+		prevo: "Ghastata",
 		eggGroups: ["Field"],
 	},
 	spearolt: {
@@ -83159,7 +83404,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.0,
 		color: "Brown",
-		evos : ["Fearolt"],
+		evos: ["Fearolt"],
 		eggGroups: ["Flying"],
 	},
 	fearolt: {
@@ -83171,8 +83416,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 38.0,
 		color: "Brown",
-		prevo : "Spearolt",
-		evos : ["Kaiju Fearow", "Mfearow"],
+		prevo: "Spearolt",
+		evos: ["Kaiju Fearow", "Mfearow"],
 		eggGroups: ["Flying"],
 	},
 	mechans: {
@@ -83184,7 +83429,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 6.9,
 		color: "Purple",
-		evos : ["Mecharbok"],
+		evos: ["Mecharbok"],
 		eggGroups: ["Field", "Dragon"],
 	},
 	mecharbok: {
@@ -83196,7 +83441,7 @@ blobbosmechelectric: {
 		heightm: 3.5,
 		weightkg: 65.0,
 		color: "Purple",
-		prevo : "Mechans",
+		prevo: "Mechans",
 		eggGroups: ["Field", "Dragon"],
 	},
 	pikacoal: {
@@ -83208,7 +83453,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.0,
 		color: "Yellow",
-		evos : ["Raicoal"],
+		evos: ["Raicoal"],
 		eggGroups: ["Field", "Fairy"],
 	},
 	raicoal: {
@@ -83220,7 +83465,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 30.0,
 		color: "Yellow",
-		prevo : "Pikacoal",
+		prevo: "Pikacoal",
 		eggGroups: ["Field", "Fairy"],
 	},
 	bushrew: {
@@ -83232,7 +83477,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 12.0,
 		color: "Yellow",
-		evos : ["Bushlash"],
+		evos: ["Bushlash"],
 		eggGroups: ["Field"],
 	},
 	bushlash: {
@@ -83244,7 +83489,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 29.5,
 		color: "Yellow",
-		prevo : "Bushrew",
+		prevo: "Bushrew",
 		eggGroups: ["Field"],
 	},
 	boxiranfe: {
@@ -83256,7 +83501,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 7.0,
 		color: "Blue",
-		evos : ["Boxirina"],
+		evos: ["Boxirina"],
 		eggGroups: ["Monster", "Field"],
 	},
 	boxirina: {
@@ -83268,8 +83513,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 20.0,
 		color: "Blue",
-		prevo : "Boxiranfe",
-		evos : ["Boxiqueen"],
+		prevo: "Boxiranfe",
+		evos: ["Boxiqueen"],
 		eggGroups: ["Monster", "Field"],
 	},
 	boxiqueen: {
@@ -83281,7 +83526,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 60.0,
 		color: "Blue",
-		prevo : "Boxirina",
+		prevo: "Boxirina",
 		eggGroups: ["Monster", "Field"],
 	},
 	boxiranma: {
@@ -83293,7 +83538,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.0,
 		color: "Purple",
-		evos : ["Boxirino"],
+		evos: ["Boxirino"],
 		eggGroups: ["Monster", "Field"],
 	},
 	boxirino: {
@@ -83305,8 +83550,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 19.5,
 		color: "Purple",
-		prevo : "Boxiranma",
-		evos : ["Boxiking"],
+		prevo: "Boxiranma",
+		evos: ["Boxiking"],
 		eggGroups: ["Monster", "Field"],
 	},
 	boxiking: {
@@ -83318,7 +83563,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 62.0,
 		color: "Purple",
-		prevo : "Boxirino",
+		prevo: "Boxirino",
 		eggGroups: ["Monster", "Field"],
 	},
 	clefair: {
@@ -83330,7 +83575,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
-		evos : ["Inflable"],
+		evos: ["Inflable"],
 		eggGroups: ["Fairy"],
 	},
 	inflable: {
@@ -83342,7 +83587,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 40.0,
 		color: "Pink",
-		prevo : "Clefair",
+		prevo: "Clefair",
 		eggGroups: ["Fairy"],
 	},
 	vulstyx: {
@@ -83354,7 +83599,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 9.9,
 		color: "Brown",
-		evos : ["Sinistales"],
+		evos: ["Sinistales"],
 		eggGroups: ["Field"],
 	},
 	sinistales: {
@@ -83366,7 +83611,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 19.9,
 		color: "Yellow",
-		prevo : "Vulstyx",
+		prevo: "Vulstyx",
 		eggGroups: ["Field"],
 	},
 	jigglisect: {
@@ -83378,7 +83623,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 5.5,
 		color: "Pink",
-		evos : ["Arachtuff"],
+		evos: ["Arachtuff"],
 		eggGroups: ["Fairy"],
 	},
 	arachtuff: {
@@ -83390,7 +83635,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 12.0,
 		color: "Pink",
-		prevo : "Jigglisect",
+		prevo: "Jigglisect",
 		eggGroups: ["Fairy"],
 	},
 	sinjbat: {
@@ -83402,7 +83647,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 7.5,
 		color: "Purple",
-		evos : ["Volbat"],
+		evos: ["Volbat"],
 		eggGroups: ["Flying"],
 	},
 	volbat: {
@@ -83414,8 +83659,8 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 55.0,
 		color: "Purple",
-		prevo : "Sinjbat",
-		evos : ["Explobat"],
+		prevo: "Sinjbat",
+		evos: ["Explobat"],
 		eggGroups: ["Flying"],
 	},
 	odprong: {
@@ -83427,7 +83672,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 5.4,
 		color: "Blue",
-		evos : ["Turboon"],
+		evos: ["Turboon"],
 		eggGroups: ["Grass"],
 	},
 	turboon: {
@@ -83439,8 +83684,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 8.6,
 		color: "Blue",
-		prevo : "Odprong",
-		evos : ["Panelplume"],
+		prevo: "Odprong",
+		evos: ["Panelplume"],
 		eggGroups: ["Grass"],
 	},
 	panelplume: {
@@ -83452,7 +83697,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 18.6,
 		color: "Red",
-		prevo : "Turboon",
+		prevo: "Turboon",
 		eggGroups: ["Grass"],
 	},
 	faaras: {
@@ -83464,7 +83709,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.4,
 		color: "Red",
-		evos : ["Omnisect"],
+		evos: ["Omnisect"],
 		eggGroups: ["Bug", "Grass"],
 	},
 	omnisect: {
@@ -83476,7 +83721,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 29.5,
 		color: "Red",
-		prevo : "Faaras",
+		prevo: "Faaras",
 		eggGroups: ["Bug", "Grass"],
 	},
 	fernonat: {
@@ -83488,7 +83733,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 30.0,
 		color: "Purple",
-		evos : ["Fernomoth"],
+		evos: ["Fernomoth"],
 		eggGroups: ["Bug"],
 	},
 	fernomoth: {
@@ -83500,7 +83745,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 12.5,
 		color: "Purple",
-		prevo : "Fernonat",
+		prevo: "Fernonat",
 		eggGroups: ["Bug"],
 	},
 	nimbett: {
@@ -83512,7 +83757,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.8,
 		color: "Brown",
-		evos : ["Subroclock", "Stratrio"],
+		evos: ["Subroclock", "Stratrio"],
 		eggGroups: ["Field"],
 	},
 	stratrio: {
@@ -83524,7 +83769,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 33.3,
 		color: "Brown",
-		prevo : "Nimbett",
+		prevo: "Nimbett",
 		eggGroups: ["Field"],
 	},
 	meowxie: {
@@ -83536,7 +83781,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.2,
 		color: "Yellow",
-		evos : ["Magisian"],
+		evos: ["Magisian"],
 		eggGroups: ["Field"],
 	},
 	magisian: {
@@ -83548,7 +83793,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 32.0,
 		color: "Yellow",
-		prevo : "Meowxie",
+		prevo: "Meowxie",
 		eggGroups: ["Field"],
 	},
 	sluduck: {
@@ -83560,7 +83805,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 19.6,
 		color: "Yellow",
-		evos : ["Taintduck"],
+		evos: ["Taintduck"],
 		eggGroups: ["Water1", "Field"],
 	},
 	taintduck: {
@@ -83572,7 +83817,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 76.6,
 		color: "Blue",
-		prevo : "Sluduck",
+		prevo: "Sluduck",
 		eggGroups: ["Water1", "Field"],
 	},
 	mankember: {
@@ -83584,7 +83829,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 28.0,
 		color: "Brown",
-		evos : ["Flameape"],
+		evos: ["Flameape"],
 		eggGroups: ["Field"],
 	},
 	flameape: {
@@ -83596,7 +83841,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 32.0,
 		color: "Brown",
-		prevo : "Mankember",
+		prevo: "Mankember",
 		eggGroups: ["Field"],
 	},
 	iolithe: {
@@ -83608,7 +83853,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 19.0,
 		color: "Brown",
-		evos : ["Ionnine"],
+		evos: ["Ionnine"],
 		eggGroups: ["Field"],
 	},
 	ionnine: {
@@ -83620,8 +83865,8 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 155.0,
 		color: "Brown",
-		prevo : "Iolithe",
-		evos : ["Marcanine"],
+		prevo: "Iolithe",
+		evos: ["Marcanine"],
 		eggGroups: ["Field"],
 	},
 	mandiwag: {
@@ -83633,7 +83878,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 12.4,
 		color: "Blue",
-		evos : ["Mandiwhirl"],
+		evos: ["Mandiwhirl"],
 		eggGroups: ["Water1"],
 	},
 	mandiwhirl: {
@@ -83645,8 +83890,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 20.0,
 		color: "Blue",
-		prevo : "Mandiwag",
-		evos : ["Mandirit", "Mandiwrath"],
+		prevo: "Mandiwag",
+		evos: ["Mandirit", "Mandiwrath"],
 		eggGroups: ["Water1"],
 	},
 	mandiwrath: {
@@ -83658,7 +83903,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 104.0,
 		color: "Blue",
-		prevo : "Mandiwhirl",
+		prevo: "Mandiwhirl",
 		eggGroups: ["Water1"],
 	},
 	abrark: {
@@ -83670,7 +83915,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 19.5,
 		color: "Brown",
-		evos : ["Cutabra"],
+		evos: ["Cutabra"],
 		eggGroups: ["Humanlike"],
 	},
 	cutabra: {
@@ -83682,8 +83927,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 56.5,
 		color: "Brown",
-		prevo : "Abrark",
-		evos : ["Shinigazam"],
+		prevo: "Abrark",
+		evos: ["Shinigazam"],
 		eggGroups: ["Humanlike"],
 	},
 	shinigazam: {
@@ -83695,7 +83940,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 48.0,
 		color: "Brown",
-		prevo : "Cutabra",
+		prevo: "Cutabra",
 		eggGroups: ["Humanlike"],
 	},
 	zenchop: {
@@ -83707,7 +83952,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 19.5,
 		color: "Gray",
-		evos : ["Zenchoke"],
+		evos: ["Zenchoke"],
 		eggGroups: ["Humanlike"],
 	},
 	zenchoke: {
@@ -83719,8 +83964,8 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 70.5,
 		color: "Gray",
-		prevo : "Zenchop",
-		evos : ["Zenchamp"],
+		prevo: "Zenchop",
+		evos: ["Zenchamp"],
 		eggGroups: ["Humanlike"],
 	},
 	zenchamp: {
@@ -83732,7 +83977,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 130.0,
 		color: "Gray",
-		prevo : "Zenchoke",
+		prevo: "Zenchoke",
 		eggGroups: ["Humanlike"],
 	},
 	bellpowder: {
@@ -83744,7 +83989,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 4.0,
 		color: "Green",
-		evos : ["Cannonbell"],
+		evos: ["Cannonbell"],
 		eggGroups: ["Grass"],
 	},
 	cannonbell: {
@@ -83756,8 +84001,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 6.4,
 		color: "Green",
-		prevo : "Bellpowder",
-		evos : ["Chernobell"],
+		prevo: "Bellpowder",
+		evos: ["Chernobell"],
 		eggGroups: ["Grass"],
 	},
 	chernobell: {
@@ -83769,7 +84014,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 15.5,
 		color: "Green",
-		prevo : "Cannonbell",
+		prevo: "Cannonbell",
 		eggGroups: ["Grass"],
 	},
 	tentapunch: {
@@ -83781,7 +84026,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 45.5,
 		color: "Blue",
-		evos : ["Tentabrawl"],
+		evos: ["Tentabrawl"],
 		eggGroups: ["Water3"],
 	},
 	tentabrawl: {
@@ -83793,7 +84038,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 55.0,
 		color: "Blue",
-		prevo : "Tentapunch",
+		prevo: "Tentapunch",
 		eggGroups: ["Water3"],
 	},
 	aquadude: {
@@ -83805,7 +84050,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 20.0,
 		color: "Brown",
-		evos : ["Coraller"],
+		evos: ["Coraller"],
 		eggGroups: ["Mineral"],
 	},
 	coraller: {
@@ -83817,8 +84062,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 105.0,
 		color: "Brown",
-		prevo : "Aquadude",
-		evos : ["Golacier"],
+		prevo: "Aquadude",
+		evos: ["Golacier"],
 		eggGroups: ["Mineral"],
 	},
 	golacier: {
@@ -83830,7 +84075,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 300.0,
 		color: "Brown",
-		prevo : "Coraller",
+		prevo: "Coraller",
 		eggGroups: ["Mineral"],
 	},
 	ponytamp: {
@@ -83842,7 +84087,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 30.0,
 		color: "Yellow",
-		evos : ["Rapidouse"],
+		evos: ["Rapidouse"],
 		eggGroups: ["Field"],
 	},
 	rapidouse: {
@@ -83854,7 +84099,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 95.0,
 		color: "Yellow",
-		prevo : "Ponytamp",
+		prevo: "Ponytamp",
 		eggGroups: ["Field"],
 	},
 	stalagnemite: {
@@ -83866,7 +84111,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.0,
 		color: "Gray",
-		evos : ["Stalagneton"],
+		evos: ["Stalagneton"],
 		eggGroups: ["Mineral"],
 	},
 	stalagneton: {
@@ -83878,8 +84123,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 60.0,
 		color: "Gray",
-		prevo : "Stalagnemite",
-		evos : ["Stalagcola"],
+		prevo: "Stalagnemite",
+		evos: ["Stalagcola"],
 		eggGroups: ["Mineral"],
 	},
 	farganc: {
@@ -83891,7 +84136,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 15.0,
 		color: "Brown",
-		evos : ["Sirganc"],
+		evos: ["Sirganc"],
 		eggGroups: ["Flying", "Field"],
 	},
 	slowslab: {
@@ -83903,7 +84148,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 36.0,
 		color: "Pink",
-		evos : ["Slowsidian", "Slowspike"],
+		evos: ["Slowsidian", "Slowspike"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	slowsidian: {
@@ -83915,7 +84160,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 78.5,
 		color: "Pink",
-		prevo : "Slowslab",
+		prevo: "Slowslab",
 		eggGroups: ["Monster", "Water1"],
 	},
 	drillduo: {
@@ -83927,7 +84172,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 39.2,
 		color: "Brown",
-		evos : ["Drilldrio"],
+		evos: ["Drilldrio"],
 		eggGroups: ["Flying"],
 	},
 	drilldrio: {
@@ -83939,7 +84184,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 85.2,
 		color: "Brown",
-		prevo : "Drillduo",
+		prevo: "Drillduo",
 		eggGroups: ["Flying"],
 	},
 	seewage: {
@@ -83951,7 +84196,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 90.0,
 		color: "White",
-		evos : ["Pollugong"],
+		evos: ["Pollugong"],
 		eggGroups: ["Water1", "Field"],
 	},
 	pollugong: {
@@ -83963,7 +84208,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 120.0,
 		color: "White",
-		prevo : "Seewage",
+		prevo: "Seewage",
 		eggGroups: ["Water1", "Field"],
 	},
 	grimag: {
@@ -83975,7 +84220,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 30.0,
 		color: "Purple",
-		evos : ["Mukma"],
+		evos: ["Mukma"],
 		eggGroups: ["Amorphous"],
 	},
 	mukma: {
@@ -83987,7 +84232,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 30.0,
 		color: "Purple",
-		prevo : "Grimag",
+		prevo: "Grimag",
 		eggGroups: ["Amorphous"],
 	},
 	celesder: {
@@ -83999,7 +84244,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 4.0,
 		color: "Purple",
-		evos : ["Cloystar"],
+		evos: ["Cloystar"],
 		eggGroups: ["Water3"],
 	},
 	cloystar: {
@@ -84011,7 +84256,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 132.5,
 		color: "Purple",
-		prevo : "Celesder",
+		prevo: "Celesder",
 		eggGroups: ["Water3"],
 	},
 	goomly: {
@@ -84023,7 +84268,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 0.1,
 		color: "Purple",
-		evos : ["Paragoomer"],
+		evos: ["Paragoomer"],
 		eggGroups: ["Amorphous"],
 	},
 	paragoomer: {
@@ -84035,8 +84280,8 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 0.1,
 		color: "Purple",
-		prevo : "Goomly",
-		evos : ["Goomgar"],
+		prevo: "Goomly",
+		evos: ["Goomgar"],
 		eggGroups: ["Amorphous"],
 	},
 	goomgar: {
@@ -84048,7 +84293,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 40.5,
 		color: "Purple",
-		prevo : "Paragoomer",
+		prevo: "Paragoomer",
 		eggGroups: ["Amorphous"],
 	},
 	eelix: {
@@ -84060,7 +84305,7 @@ blobbosmechelectric: {
 		heightm: 8.8,
 		weightkg: 210.0,
 		color: "Gray",
-		evos : ["Eelectrix"],
+		evos: ["Eelectrix"],
 		eggGroups: ["Mineral"],
 	},
 	ectozee: {
@@ -84072,7 +84317,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 32.4,
 		color: "Yellow",
-		evos : ["Hypnoplasm"],
+		evos: ["Hypnoplasm"],
 		eggGroups: ["Humanlike"],
 	},
 	hypnoplasm: {
@@ -84084,7 +84329,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 75.6,
 		color: "Yellow",
-		prevo : "Ectozee",
+		prevo: "Ectozee",
 		eggGroups: ["Humanlike"],
 	},
 	krabbune: {
@@ -84096,7 +84341,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.5,
 		color: "Red",
-		evos : ["Kraggler"],
+		evos: ["Kraggler"],
 		eggGroups: ["Water3"],
 	},
 	kraggler: {
@@ -84108,7 +84353,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 60.0,
 		color: "Red",
-		prevo : "Krabbune",
+		prevo: "Krabbune",
 		eggGroups: ["Water3"],
 	},
 	frientorb: {
@@ -84120,7 +84365,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 10.4,
 		color: "Red",
-		evos : ["Luxutrode"],
+		evos: ["Luxutrode"],
 		eggGroups: ["Mineral"],
 	},
 	luxutrode: {
@@ -84132,7 +84377,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 66.6,
 		color: "Red",
-		prevo : "Frientorb",
+		prevo: "Frientorb",
 		eggGroups: ["Mineral"],
 	},
 	swarmute: {
@@ -84144,7 +84389,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 2.5,
 		color: "Pink",
-		evos : ["Exeggunest"],
+		evos: ["Exeggunest"],
 		eggGroups: ["Grass", "Bug"],
 	},
 	exeggunest: {
@@ -84156,7 +84401,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 120.0,
 		color: "Yellow",
-		prevo : "Swarmute",
+		prevo: "Swarmute",
 		eggGroups: ["Grass", "Bug"],
 	},
 	cublade: {
@@ -84168,7 +84413,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.5,
 		color: "Brown",
-		evos : ["Marowarior"],
+		evos: ["Marowarior"],
 		eggGroups: ["Monster"],
 	},
 	marowarior: {
@@ -84180,7 +84425,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 45.0,
 		color: "Brown",
-		prevo : "Cublade",
+		prevo: "Cublade",
 		eggGroups: ["Monster"],
 	},
 	crustenga: {
@@ -84214,7 +84459,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 65.5,
 		color: "Pink",
-		evos : ["Reeficoral"],
+		evos: ["Reeficoral"],
 		eggGroups: ["Monster", "Field"],
 	},
 	sparkking: {
@@ -84226,7 +84471,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 1.0,
 		color: "Purple",
-		evos : ["Shockking"],
+		evos: ["Shockking"],
 		eggGroups: ["Amorphous"],
 	},
 	shockking: {
@@ -84238,7 +84483,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 9.5,
 		color: "Purple",
-		prevo : "Sparkking",
+		prevo: "Sparkking",
 		eggGroups: ["Amorphous"],
 	},
 	drachorn: {
@@ -84250,7 +84495,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 115.0,
 		color: "Gray",
-		evos : ["Dracdon"],
+		evos: ["Dracdon"],
 		eggGroups: ["Monster", "Field"],
 	},
 	dracdon: {
@@ -84262,8 +84507,8 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 120.0,
 		color: "Gray",
-		prevo : "Drachorn",
-		evos : ["Dracperior"],
+		prevo: "Drachorn",
+		evos: ["Dracperior"],
 		eggGroups: ["Monster", "Field"],
 	},
 	basiney: {
@@ -84275,7 +84520,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 34.6,
 		color: "Pink",
-		evos : ["Blissea"],
+		evos: ["Blissea"],
 		eggGroups: ["Fairy"],
 	},
 	lazzmela: {
@@ -84287,7 +84532,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 35.0,
 		color: "Blue",
-		evos : ["Lazzplug"],
+		evos: ["Lazzplug"],
 		eggGroups: ["Grass"],
 	},
 	kankaghan: {
@@ -84310,7 +84555,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 8.0,
 		color: "Blue",
-		evos : ["Steedra"],
+		evos: ["Steedra"],
 		eggGroups: ["Monster", "Field"],
 	},
 	steedra: {
@@ -84322,8 +84567,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 25.0,
 		color: "Blue",
-		prevo : "Horsteed",
-		evos : ["Kingsdale"],
+		prevo: "Horsteed",
+		evos: ["Kingsdale"],
 		eggGroups: ["Monster", "Field"],
 	},
 	golbee: {
@@ -84335,7 +84580,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Red",
-		evos : ["Beeking"],
+		evos: ["Beeking"],
 		eggGroups: ["Bug"],
 	},
 	beeking: {
@@ -84347,7 +84592,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 39.0,
 		color: "Red",
-		prevo : "Golbee",
+		prevo: "Golbee",
 		eggGroups: ["Bug"],
 	},
 	starite: {
@@ -84359,7 +84604,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 34.5,
 		color: "Brown",
-		evos : ["Starau"],
+		evos: ["Starau"],
 		eggGroups: ["Mineral"],
 	},
 	starau: {
@@ -84371,7 +84616,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 580.0,
 		color: "Purple",
-		prevo : "Starite",
+		prevo: "Starite",
 		eggGroups: ["Mineral"],
 	},
 	mrmelee: {
@@ -84394,7 +84639,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 56.0,
 		color: "Green",
-		evos : ["Scizorch"],
+		evos: ["Scizorch"],
 		eggGroups: ["Bug"],
 	},
 	sirynx: {
@@ -84417,7 +84662,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 30.0,
 		color: "Yellow",
-		evos : ["Necratomic"],
+		evos: ["Necratomic"],
 		eggGroups: ["Humanlike"],
 	},
 	plasgar: {
@@ -84429,7 +84674,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 44.5,
 		color: "Red",
-		evos : ["Plasmission"],
+		evos: ["Plasmission"],
 		eggGroups: ["Humanlike"],
 	},
 	mincir: {
@@ -84463,7 +84708,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 10.0,
 		color: "Red",
-		evos : ["Flarados"],
+		evos: ["Flarados"],
 		eggGroups: ["Water2", "Dragon"],
 	},
 	flarados: {
@@ -84475,7 +84720,7 @@ blobbosmechelectric: {
 		heightm: 6.5,
 		weightkg: 235.0,
 		color: "Blue",
-		prevo : "Chilikarp",
+		prevo: "Chilikarp",
 		eggGroups: ["Water2", "Dragon"],
 	},
 	gunkpras: {
@@ -84509,7 +84754,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
-		evos : ["Drilleon", "Senseion", "Barbeon", "Insecteon", "Caireon"],
+		evos: ["Drilleon", "Senseion", "Barbeon", "Insecteon", "Caireon"],
 		eggGroups: ["Field"],
 	},
 	drilleon: {
@@ -84521,7 +84766,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 29.0,
 		color: "Blue",
-		prevo : "Threevee",
+		prevo: "Threevee",
 		eggGroups: ["Field"],
 	},
 	insecteon: {
@@ -84533,7 +84778,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 24.5,
 		color: "Yellow",
-		prevo : "Threevee",
+		prevo: "Threevee",
 		eggGroups: ["Field"],
 	},
 	caireon: {
@@ -84545,7 +84790,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 25.0,
 		color: "Red",
-		prevo : "Threevee",
+		prevo: "Threevee",
 		eggGroups: ["Field"],
 	},
 	viragon: {
@@ -84568,7 +84813,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 7.5,
 		color: "Blue",
-		evos : ["Sandasnow"],
+		evos: ["Sandasnow"],
 		eggGroups: ["Water1", "Water3"],
 	},
 	sandasnow: {
@@ -84580,7 +84825,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 35.0,
 		color: "Blue",
-		prevo : "Sandanice",
+		prevo: "Sandanice",
 		eggGroups: ["Water1", "Water3"],
 	},
 	leviuto: {
@@ -84592,7 +84837,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 11.5,
 		color: "Brown",
-		evos : ["Leviatops"],
+		evos: ["Leviatops"],
 		eggGroups: ["Water1", "Water3"],
 	},
 	leviatops: {
@@ -84604,7 +84849,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 40.5,
 		color: "Brown",
-		prevo : "Leviuto",
+		prevo: "Leviuto",
 		eggGroups: ["Water1", "Water3"],
 	},
 	sykodactyl: {
@@ -84671,7 +84916,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 3.3,
 		color: "Blue",
-		evos : ["Pixinair"],
+		evos: ["Pixinair"],
 		eggGroups: ["Water1", "Dragon"],
 	},
 	pixinair: {
@@ -84683,8 +84928,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Pixini",
-		evos : ["Pixinite"],
+		prevo: "Pixini",
+		evos: ["Pixinite"],
 		eggGroups: ["Water1", "Dragon"],
 	},
 	pixinite: {
@@ -84696,7 +84941,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 210.0,
 		color: "Brown",
-		prevo : "Pixinair",
+		prevo: "Pixinair",
 		eggGroups: ["Water1", "Dragon"],
 	},
 	altermew: {
@@ -84730,7 +84975,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 78.5,
 		color: "Pink",
-		prevo : "Gslowpoke",
+		prevo: "Gslowpoke",
 		eggGroups: ["Monster", "Water1"],
 	},
 	sirganc: {
@@ -84742,7 +84987,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 15.0,
 		color: "Brown",
-		prevo : "Farganc",
+		prevo: "Farganc",
 		eggGroups: ["Flying", "Field"],
 	},
 	regishark: {
@@ -84787,7 +85032,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Floweyrst",
+		prevo: "Floweyrst",
 		eggGroups: ["Monster"],
 	},
 	explobat: {
@@ -84799,7 +85044,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 55.0,
 		color: "Purple",
-		prevo : "Volbat",
+		prevo: "Volbat",
 		eggGroups: ["Flying"],
 	},
 	amonra: {
@@ -84811,7 +85056,7 @@ blobbosmechelectric: {
 		heightm: 1.87,
 		weightkg: 45.9,
 		color: "Blue",
-		prevo : "Seimenkongou",
+		prevo: "Seimenkongou",
 		eggGroups: ["Humanlike"],
 	},
 	kaijusandrawler: {
@@ -84878,7 +85123,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 30.6,
 		color: "Black",
-		evos : ["Cgrumpig", "Grumboar"],
+		evos: ["Cgrumpig", "Grumboar"],
 		eggGroups: ["Field"],
 	},
 	cgrumpig: {
@@ -84890,7 +85135,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 71.5,
 		color: "Purple",
-		prevo : "Cspoink",
+		prevo: "Cspoink",
 		eggGroups: ["Field"],
 	},
 	mspain: {
@@ -84902,7 +85147,7 @@ blobbosmechelectric: {
 		heightm: 26.4,
 		weightkg: 543.6,
 		color: "Blue",
-		evos : ["Monster Pain"],
+		evos: ["Monster Pain"],
 		eggGroups: ["Mineral"],
 	},
 	monsterpain: {
@@ -84914,7 +85159,7 @@ blobbosmechelectric: {
 		heightm: 26.4,
 		weightkg: 543.6,
 		color: "Blue",
-		prevo : "Mspain",
+		prevo: "Mspain",
 		eggGroups: ["Mineral"],
 	},
 	diemic: {
@@ -84981,7 +85226,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 25.0,
 		color: "Blue",
-		prevo : "Steedra",
+		prevo: "Steedra",
 		eggGroups: ["Monster", "Field"],
 	},
 	eelectrix: {
@@ -84993,7 +85238,7 @@ blobbosmechelectric: {
 		heightm: 8.8,
 		weightkg: 210.0,
 		color: "Gray",
-		prevo : "Eelix",
+		prevo: "Eelix",
 		eggGroups: ["Mineral"],
 	},
 	blissea: {
@@ -85005,7 +85250,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 34.6,
 		color: "Pink",
-		prevo : "Basiney",
+		prevo: "Basiney",
 		eggGroups: ["Fairy"],
 	},
 	slowspike: {
@@ -85017,7 +85262,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 79.5,
 		color: "Pink",
-		prevo : "Slowslab",
+		prevo: "Slowslab",
 		eggGroups: ["Monster", "Water1"],
 	},
 	ujamer: {
@@ -85029,7 +85274,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.1,
 		color: "Blue",
-		evos : ["Ujadalord"],
+		evos: ["Ujadalord"],
 		eggGroups: ["Bug"],
 	},
 	ujadalord: {
@@ -85041,7 +85286,7 @@ blobbosmechelectric: {
 		heightm: 14.5,
 		weightkg: 750.0,
 		color: "Blue",
-		prevo : "Ujamer",
+		prevo: "Ujamer",
 		eggGroups: ["Bug"],
 	},
 	holloach: {
@@ -85053,7 +85298,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 1.9,
 		color: "Gray",
-		evos : ["Illexash"],
+		evos: ["Illexash"],
 		eggGroups: ["Water2"],
 	},
 	illexash: {
@@ -85065,7 +85310,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 33.6,
 		color: "Blue",
-		prevo : "Holloach",
+		prevo: "Holloach",
 		eggGroups: ["Water2"],
 	},
 	mandirit: {
@@ -85077,7 +85322,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 33.9,
 		color: "Green",
-		prevo : "Mandiwhirl",
+		prevo: "Mandiwhirl",
 		eggGroups: ["Water1"],
 	},
 	scizorch: {
@@ -85089,7 +85334,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 118.0,
 		color: "Red",
-		prevo : "Sickler",
+		prevo: "Sickler",
 		eggGroups: ["Bug"],
 	},
 	swooloo: {
@@ -85101,7 +85346,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.8,
 		color: "White",
-		evos : ["Sdubwool"],
+		evos: ["Sdubwool"],
 		eggGroups: ["Monster", "Field"],
 	},
 	sdubwool: {
@@ -85113,7 +85358,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.8,
 		color: "White",
-		prevo : "Swooloo",
+		prevo: "Swooloo",
 		eggGroups: ["Field"],
 	},
 	necratomic: {
@@ -85125,7 +85370,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 30.0,
 		color: "Yellow",
-		prevo : "Necrablast",
+		prevo: "Necrablast",
 		eggGroups: ["Humanlike"],
 	},
 	plasmission: {
@@ -85137,7 +85382,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 44.5,
 		color: "Red",
-		prevo : "Plasgar",
+		prevo: "Plasgar",
 		eggGroups: ["Humanlike"],
 	},
 	dracperior: {
@@ -85149,7 +85394,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 120.0,
 		color: "Gray",
-		prevo : "Dracdon",
+		prevo: "Dracdon",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	lazzplug: {
@@ -85161,7 +85406,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 35.0,
 		color: "Blue",
-		prevo : "Lazzmela",
+		prevo: "Lazzmela",
 		eggGroups: ["Grass"],
 	},
 	reeficoral: {
@@ -85173,7 +85418,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 65.5,
 		color: "Pink",
-		prevo : "Lickoral",
+		prevo: "Lickoral",
 		eggGroups: ["Monster", "Field"],
 	},
 	stalagcola: {
@@ -85185,7 +85430,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 60.0,
 		color: "Gray",
-		prevo : "Stalagneton",
+		prevo: "Stalagneton",
 		eggGroups: ["Mineral"],
 	},
 	trapunk: {
@@ -85197,7 +85442,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 15.0,
 		color: "Brown",
-		evos : ["Motorava"],
+		evos: ["Motorava"],
 		eggGroups: ["Bug"],
 	},
 	motorava: {
@@ -85209,8 +85454,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 15.3,
 		color: "Green",
-		prevo : "Trapunk",
-		evos : ["Gangon"],
+		prevo: "Trapunk",
+		evos: ["Gangon"],
 		eggGroups: ["Bug"],
 	},
 	gangon: {
@@ -85222,7 +85467,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 82.0,
 		color: "Green",
-		prevo : "Motorava",
+		prevo: "Motorava",
 		eggGroups: ["Bug"],
 	},
 	plusheon: {
@@ -85234,7 +85479,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	eobstagoon: {
@@ -85246,7 +85491,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 32.5,
 		color: "White",
-		prevo : "Elinoone",
+		prevo: "Elinoone",
 		eggGroups: ["Field"],
 	},
 	kamisama: {
@@ -85379,7 +85624,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 16.5,
 		color: "Brown",
-		prevo : "Deltrune",
+		prevo: "Deltrune",
 		eggGroups: ["Monster"],
 	},
 	scpee1128: {
@@ -85402,7 +85647,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 19.5,
 		color: "Gray",
-		evos : ["Ridteen"],
+		evos: ["Ridteen"],
 		eggGroups: ["Dragon"],
 	},
 	ridteen: {
@@ -85414,8 +85659,8 @@ blobbosmechelectric: {
 		heightm: 2.8,
 		weightkg: 119.5,
 		color: "Gray",
-		prevo : "Birbley",
-		evos : ["Ridleyuge"],
+		prevo: "Birbley",
+		evos: ["Ridleyuge"],
 		eggGroups: ["Dragon"],
 	},
 	ridleyuge: {
@@ -85427,7 +85672,7 @@ blobbosmechelectric: {
 		heightm: 12.8,
 		weightkg: 2119.5,
 		color: "Gray",
-		prevo : "Ridteen",
+		prevo: "Ridteen",
 		eggGroups: ["Dragon"],
 	},
 	mbboo: {
@@ -85439,7 +85684,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 1.0,
 		color: "Purple",
-		evos : ["King Boo"],
+		evos: ["King Boo"],
 		eggGroups: ["Amorphous"],
 	},
 	kingboo: {
@@ -85451,7 +85696,7 @@ blobbosmechelectric: {
 		heightm: 4.7,
 		weightkg: 1.0,
 		color: "Purple",
-		prevo : "Mbboo",
+		prevo: "Mbboo",
 		eggGroups: ["Amorphous"],
 	},
 	facefugger: {
@@ -85463,7 +85708,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 9.5,
 		color: "Gray",
-		evos : ["Chestburste"],
+		evos: ["Chestburste"],
 		eggGroups: ["Bug", "Humanlike"],
 	},
 	chestburste: {
@@ -85475,8 +85720,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 19.5,
 		color: "Gray",
-		prevo : "Facefugger",
-		evos : ["Xenoalien"],
+		prevo: "Facefugger",
+		evos: ["Xenoalien"],
 		eggGroups: ["Bug", "Humanlike"],
 	},
 	xenoalien: {
@@ -85488,7 +85733,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 19.5,
 		color: "Gray",
-		prevo : "Chestburste",
+		prevo: "Chestburste",
 		eggGroups: ["Bug", "Humanlike"],
 	},
 	predalien: {
@@ -85522,7 +85767,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
-		evos : ["Gorefielf", "Scpee3166"],
+		evos: ["Gorefielf", "Scpee3166"],
 		eggGroups: ["Field"],
 	},
 	gorefielf: {
@@ -85534,7 +85779,7 @@ blobbosmechelectric: {
 		heightm: 10.6,
 		weightkg: 447.5,
 		color: "Pink",
-		prevo : "Garfielf",
+		prevo: "Garfielf",
 		eggGroups: ["Field"],
 	},
 	scpee3166: {
@@ -85546,7 +85791,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Pink",
-		prevo : "Garfielf",
+		prevo: "Garfielf",
 		eggGroups: ["Amorphous"],
 	},
 	scpee939: {
@@ -85778,7 +86023,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 25.5,
 		color: "Green",
-		prevo : "Eevee",
+		prevo: "Eevee",
 		eggGroups: ["Field"],
 	},
 	scpee504: {
@@ -85801,7 +86046,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 12.9,
 		color: "Purple",
-		prevo : "Acolittle",
+		prevo: "Acolittle",
 		eggGroups: ["Humanlike", "Water2"],
 	},
 	jersevil: {
@@ -85824,8 +86069,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 97.0,
 		color: "Green",
-		prevo : "Turtwig",
-		evos : ["Btorterra"],
+		prevo: "Turtwig",
+		evos: ["Btorterra"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	btorterra: {
@@ -85837,7 +86082,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 310.0,
 		color: "Green",
-		prevo : "Bgrotle",
+		prevo: "Bgrotle",
 		eggGroups: ["Monster", "Grass"],
 	},
 	bprinplup: {
@@ -85849,8 +86094,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 23.0,
 		color: "Blue",
-		prevo : "Piplup",
-		evos : ["Bempoleon"],
+		prevo: "Piplup",
+		evos: ["Bempoleon"],
 		eggGroups: ["Water1", "Field"],
 	},
 	bempoleon: {
@@ -85862,7 +86107,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 84.5,
 		color: "Blue",
-		prevo : "Bprinplup",
+		prevo: "Bprinplup",
 		eggGroups: ["Water1", "Field"],
 	},
 	bshinx: {
@@ -85874,8 +86119,8 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.5,
 		color: "Blue",
-		prevo : "Shinx",
-		evos : ["Bachichi"],
+		prevo: "Shinx",
+		evos: ["Bachichi"],
 		eggGroups: ["Field"],
 	},
 	bachichi: {
@@ -85887,8 +86132,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 30.5,
 		color: "Blue",
-		prevo : "Bshinx",
-		evos : ["Bachibacchi"],
+		prevo: "Bshinx",
+		evos: ["Bachibacchi"],
 		eggGroups: ["Field"],
 	},
 	bachibacchi: {
@@ -85900,7 +86145,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 42.0,
 		color: "Blue",
-		prevo : "Bachichi",
+		prevo: "Bachichi",
 		eggGroups: ["Field"],
 	},
 	bcranidos: {
@@ -85912,8 +86157,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 31.5,
 		color: "Blue",
-		prevo : "Cranidos",
-		evos : ["Brampardos"],
+		prevo: "Cranidos",
+		evos: ["Brampardos"],
 		eggGroups: ["Monster"],
 	},
 	brampardos: {
@@ -85925,7 +86170,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 102.5,
 		color: "Blue",
-		prevo : "Bcranidos",
+		prevo: "Bcranidos",
 		eggGroups: ["Monster"],
 	},
 	bcombee: {
@@ -85937,8 +86182,8 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.5,
 		color: "Yellow",
-		prevo : "Combee",
-		evos : ["Bvespiquen"],
+		prevo: "Combee",
+		evos: ["Bvespiquen"],
 		eggGroups: ["Bug"],
 	},
 	bvespiquen: {
@@ -85950,7 +86195,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 38.5,
 		color: "Yellow",
-		prevo : "Bcombee",
+		prevo: "Bcombee",
 		eggGroups: ["Bug"],
 	},
 	bbronzong: {
@@ -85962,7 +86207,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 187.0,
 		color: "Green",
-		prevo : "Bronzor",
+		prevo: "Bronzor",
 		eggGroups: ["Mineral"],
 	},
 	bgible: {
@@ -85974,8 +86219,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 20.5,
 		color: "Blue",
-		prevo : "Gible",
-		evos : ["Bgabite"],
+		prevo: "Gible",
+		evos: ["Bgabite"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	bgabite: {
@@ -85987,8 +86232,8 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 56.0,
 		color: "Blue",
-		prevo : "Bgible",
-		evos : ["Bgarchomp"],
+		prevo: "Bgible",
+		evos: ["Bgarchomp"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	bgarchomp: {
@@ -86000,7 +86245,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 95.0,
 		color: "Blue",
-		prevo : "Bgabite",
+		prevo: "Bgabite",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	bhippopotas: {
@@ -86012,8 +86257,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 49.5,
 		color: "Brown",
-		prevo : "Hippopotas",
-		evos : ["Bhippowdon"],
+		prevo: "Hippopotas",
+		evos: ["Bhippowdon"],
 		eggGroups: ["Field"],
 	},
 	bhippowdon: {
@@ -86025,7 +86270,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 300.0,
 		color: "Brown",
-		prevo : "Bhippopotas",
+		prevo: "Bhippopotas",
 		eggGroups: ["Field"],
 	},
 	bcarnivine: {
@@ -86037,7 +86282,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 27.0,
 		color: "Green",
-		prevo : "Carnivine",
+		prevo: "Carnivine",
 		eggGroups: ["Grass"],
 	},
 	bfinneon: {
@@ -86049,8 +86294,8 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 7.0,
 		color: "Blue",
-		prevo : "Finneon",
-		evos : ["Blumineon"],
+		prevo: "Finneon",
+		evos: ["Blumineon"],
 		eggGroups: ["Water2"],
 	},
 	blumineon: {
@@ -86062,7 +86307,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 24.0,
 		color: "Blue",
-		prevo : "Bfinneon",
+		prevo: "Bfinneon",
 		eggGroups: ["Water2"],
 	},
 	bsnover: {
@@ -86074,8 +86319,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 50.5,
 		color: "White",
-		prevo : "Snover",
-		evos : ["Babomasnow"],
+		prevo: "Snover",
+		evos: ["Babomasnow"],
 		eggGroups: ["Monster", "Grass"],
 	},
 	babomasnow: {
@@ -86087,7 +86332,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 135.5,
 		color: "White",
-		prevo : "Bsnover",
+		prevo: "Bsnover",
 		eggGroups: ["Monster", "Grass"],
 	},
 	btogekiss: {
@@ -86099,7 +86344,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 38.0,
 		color: "White",
-		prevo : "Togetic",
+		prevo: "Togetic",
 		eggGroups: ["Flying", "Fairy"],
 	},
 	byanmega: {
@@ -86111,7 +86356,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 51.5,
 		color: "Green",
-		prevo : "Yanma",
+		prevo: "Yanma",
 		eggGroups: ["Bug"],
 	},
 	bprobopass: {
@@ -86123,7 +86368,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 340.0,
 		color: "Gray",
-		prevo : "Nosepass",
+		prevo: "Nosepass",
 		eggGroups: ["Mineral"],
 	},
 	bregigigas: {
@@ -86201,7 +86446,7 @@ blobbosmechelectric: {
 		heightm: 3.4,
 		weightkg: 1136.5,
 		color: "Red",
-		prevo : "Firepuncher",
+		prevo: "Firepuncher",
 		eggGroups: ["Humanlike", "Grass"],
 	},
 	wolfmansk: {
@@ -86213,7 +86458,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 20.2,
 		color: "Black",
-		prevo : "Twickotweet",
+		prevo: "Twickotweet",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	invisimask: {
@@ -86225,7 +86470,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 10.2,
 		color: "Black",
-		prevo : "Twickotweet",
+		prevo: "Twickotweet",
 		eggGroups: ["Humanlike", "Fairy"],
 	},
 	slendmeran: {
@@ -86270,7 +86515,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 32.4,
 		color: "Black",
-		evos : ["Elaboruse"],
+		evos: ["Elaboruse"],
 		eggGroups: ["Monster", "Humanlike"],
 	},
 	elaboruse: {
@@ -86282,7 +86527,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 75.6,
 		color: "Black",
-		prevo : "Trollel",
+		prevo: "Trollel",
 		eggGroups: ["Monster", "Humanlike"],
 	},
 	wetloon: {
@@ -86294,7 +86539,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.6,
 		color: "Blue",
-		evos : ["Aqualoon"],
+		evos: ["Aqualoon"],
 		eggGroups: ["Amorphous"],
 	},
 	aqualoon: {
@@ -86306,8 +86551,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 7.0,
 		color: "Blue",
-		prevo : "Wetloon",
-		evos : ["Jubiloon"],
+		prevo: "Wetloon",
+		evos: ["Jubiloon"],
 		eggGroups: ["Amorphous"],
 	},
 	jubiloon: {
@@ -86319,7 +86564,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 16.4,
 		color: "Blue",
-		prevo : "Aqualoon",
+		prevo: "Aqualoon",
 		eggGroups: ["Amorphous"],
 	},
 	loleye: {
@@ -86331,7 +86576,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 6.7,
 		color: "Purple",
-		evos : ["Oppeye"],
+		evos: ["Oppeye"],
 		eggGroups: ["Fairy", "Humanlike"],
 	},
 	oppeye: {
@@ -86343,8 +86588,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 20.4,
 		color: "Pink",
-		prevo : "Loleye",
-		evos : ["Thicclops"],
+		prevo: "Loleye",
+		evos: ["Thicclops"],
 		eggGroups: ["Fairy", "Humanlike"],
 	},
 	thicclops: {
@@ -86356,7 +86601,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 127.2,
 		color: "Red",
-		prevo : "Oppeye",
+		prevo: "Oppeye",
 		eggGroups: ["Fairy", "Humanlike"],
 	},
 	huranium: {
@@ -86379,7 +86624,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 42.0,
 		color: "Brown",
-		evos : ["Swineyard"],
+		evos: ["Swineyard"],
 		eggGroups: ["Field"],
 	},
 	swineyard: {
@@ -86391,7 +86636,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 112.5,
 		color: "Red",
-		prevo : "Alcohog",
+		prevo: "Alcohog",
 		eggGroups: ["Field"],
 	},
 	hillarge: {
@@ -86403,7 +86648,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 130.0,
 		color: "Brown",
-		evos : ["Bigliff"],
+		evos: ["Bigliff"],
 		eggGroups: ["Monster", "Mineral"],
 	},
 	bigliff: {
@@ -86415,8 +86660,8 @@ blobbosmechelectric: {
 		heightm: 10.5,
 		weightkg: 800.0,
 		color: "Brown",
-		prevo : "Hillarge",
-		evos : ["Gigantain"],
+		prevo: "Hillarge",
+		evos: ["Gigantain"],
 		eggGroups: ["Monster", "Mineral"],
 	},
 	gigantain: {
@@ -86428,7 +86673,7 @@ blobbosmechelectric: {
 		heightm: 22.0,
 		weightkg: 999.8,
 		color: "Blue",
-		prevo : "Bigliff",
+		prevo: "Bigliff",
 		eggGroups: ["Monster", "Mineral"],
 	},
 	blanda: {
@@ -86451,7 +86696,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 30.0,
 		color: "White",
-		evos : ["Froscorpio"],
+		evos: ["Froscorpio"],
 		eggGroups: ["Bug"],
 	},
 	froscorpio: {
@@ -86463,7 +86708,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 30.0,
 		color: "White",
-		prevo : "Frospidey",
+		prevo: "Frospidey",
 		eggGroups: ["Bug"],
 	},
 	moustab: {
@@ -86475,7 +86720,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 2.5,
 		color: "Gray",
-		evos : ["Daggerat"],
+		evos: ["Daggerat"],
 		eggGroups: ["Field"],
 	},
 	daggerat: {
@@ -86487,8 +86732,8 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 12.5,
 		color: "Black",
-		prevo : "Moustab",
-		evos : ["Sworodent"],
+		prevo: "Moustab",
+		evos: ["Sworodent"],
 		eggGroups: ["Field"],
 	},
 	sworodent: {
@@ -86500,7 +86745,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 36.2,
 		color: "Gray",
-		prevo : "Daggerat",
+		prevo: "Daggerat",
 		eggGroups: ["Field"],
 	},
 	spovum: {
@@ -86523,7 +86768,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.0,
 		color: "Yellow",
-		evos : ["Bowaii"],
+		evos: ["Bowaii"],
 		eggGroups: ["Fairy"],
 	},
 	bowaii: {
@@ -86535,8 +86780,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.5,
 		color: "Yellow",
-		prevo : "Boebii",
-		evos : ["Bowtesque"],
+		prevo: "Boebii",
+		evos: ["Bowtesque"],
 		eggGroups: ["Fairy"],
 	},
 	bowtesque: {
@@ -86548,7 +86793,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 63.5,
 		color: "Brown",
-		prevo : "Bowaii",
+		prevo: "Bowaii",
 		eggGroups: ["Fairy"],
 	},
 	ploop: {
@@ -86560,7 +86805,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 18.2,
 		color: "Brown",
-		evos : ["Dungus"],
+		evos: ["Dungus"],
 		eggGroups: ["Amorphous", "Monster"],
 	},
 	dungus: {
@@ -86572,8 +86817,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 52.5,
 		color: "Brown",
-		prevo : "Ploop",
-		evos : ["Poolossus"],
+		prevo: "Ploop",
+		evos: ["Poolossus"],
 		eggGroups: ["Amorphous", "Monster"],
 	},
 	poolossus: {
@@ -86585,7 +86830,7 @@ blobbosmechelectric: {
 		heightm: 2.6,
 		weightkg: 322.0,
 		color: "Brown",
-		prevo : "Dungus",
+		prevo: "Dungus",
 		eggGroups: ["Amorphous", "Monster"],
 	},
 	celesphere: {
@@ -86608,7 +86853,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.5,
 		color: "Green",
-		evos : ["Albatrash"],
+		evos: ["Albatrash"],
 		eggGroups: ["Flying", "Mineral"],
 	},
 	albatrash: {
@@ -86620,7 +86865,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 28.0,
 		color: "Green",
-		prevo : "Gullbage",
+		prevo: "Gullbage",
 		eggGroups: ["Flying", "Mineral"],
 	},
 	gruppy: {
@@ -86632,7 +86877,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.9,
 		color: "Green",
-		evos : ["Barkoon"],
+		evos: ["Barkoon"],
 		eggGroups: ["Field", "Bug"],
 	},
 	barkoon: {
@@ -86644,8 +86889,8 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 8.5,
 		color: "Green",
-		prevo : "Gruppy",
-		evos : ["Stingnarl"],
+		prevo: "Gruppy",
+		evos: ["Stingnarl"],
 		eggGroups: ["Field", "Bug"],
 	},
 	stingnarl: {
@@ -86657,7 +86902,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 32.0,
 		color: "Blue",
-		prevo : "Barkoon",
+		prevo: "Barkoon",
 		eggGroups: ["Field", "Bug"],
 	},
 	pinnint: {
@@ -86669,7 +86914,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 4.6,
 		color: "Yellow",
-		evos : ["Pinsochist", "Badmini"],
+		evos: ["Pinsochist", "Badmini"],
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	badmini: {
@@ -86681,7 +86926,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 12.5,
 		color: "Yellow",
-		prevo : "Pinnint",
+		prevo: "Pinnint",
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	pinsochist: {
@@ -86693,7 +86938,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 30.6,
 		color: "Gray",
-		prevo : "Pinnint",
+		prevo: "Pinnint",
 		eggGroups: ["Fairy", "Amorphous"],
 	},
 	aphrenus: {
@@ -86716,7 +86961,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 23.0,
 		color: "Yellow",
-		evos : ["Banguin"],
+		evos: ["Banguin"],
 		eggGroups: ["Flying", "Water1"],
 	},
 	banguin: {
@@ -86728,7 +86973,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 85.0,
 		color: "Red",
-		prevo : "Pengwarn",
+		prevo: "Pengwarn",
 		eggGroups: ["Flying", "Water1"],
 	},
 	pantom: {
@@ -86740,7 +86985,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 3.2,
 		color: "White",
-		evos : ["Lingereist", "Punchortz"],
+		evos: ["Lingereist", "Punchortz"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	punchortz: {
@@ -86752,7 +86997,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 17.6,
 		color: "Red",
-		prevo : "Pantom",
+		prevo: "Pantom",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	lingereist: {
@@ -86764,7 +87009,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 17.6,
 		color: "Pink",
-		prevo : "Pantom",
+		prevo: "Pantom",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	sparroof: {
@@ -86776,7 +87021,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.0,
 		color: "Brown",
-		evos : ["Spastle"],
+		evos: ["Spastle"],
 		eggGroups: ["Flying"],
 	},
 	spastle: {
@@ -86788,8 +87033,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.5,
 		color: "Brown",
-		prevo : "Sparroof",
-		evos : ["Spalcazar"],
+		prevo: "Sparroof",
+		evos: ["Spalcazar"],
 		eggGroups: ["Flying"],
 	},
 	spalcazar: {
@@ -86801,7 +87046,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 25.9,
 		color: "Brown",
-		prevo : "Spastle",
+		prevo: "Spastle",
 		eggGroups: ["Flying"],
 	},
 	slugar: {
@@ -86813,7 +87058,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 35.0,
 		color: "White",
-		evos : ["Escarbun"],
+		evos: ["Escarbun"],
 		eggGroups: ["Amorphous"],
 	},
 	escarbun: {
@@ -86825,7 +87070,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 40.0,
 		color: "White",
-		prevo : "Slugar",
+		prevo: "Slugar",
 		eggGroups: ["Amorphous"],
 	},
 	pizzauro: {
@@ -86837,7 +87082,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 10.5,
 		color: "Yellow",
-		evos : ["Mozzarex"],
+		evos: ["Mozzarex"],
 		eggGroups: ["Dragon", "Monster"],
 	},
 	mozzarex: {
@@ -86849,8 +87094,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 15.8,
 		color: "Yellow",
-		prevo : "Pizzauro",
-		evos : ["Pepperoari"],
+		prevo: "Pizzauro",
+		evos: ["Pepperoari"],
 		eggGroups: ["Dragon", "Monster"],
 	},
 	pepperoari: {
@@ -86862,7 +87107,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 105.5,
 		color: "Yellow",
-		prevo : "Mozzarex",
+		prevo: "Mozzarex",
 		eggGroups: ["Dragon", "Monster"],
 	},
 	nyuvel: {
@@ -86874,7 +87119,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 34.5,
 		color: "Gray",
-		evos : ["Nyuvel0", "Nyuvel2"],
+		evos: ["Nyuvel0", "Nyuvel2"],
 		eggGroups: ["Mineral"],
 	},
 	nyuvel2: {
@@ -86886,7 +87131,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 16.0,
 		color: "White",
-		prevo : "Nyuvel",
+		prevo: "Nyuvel",
 		eggGroups: ["Mineral"],
 	},
 	nyuvel0: {
@@ -86898,7 +87143,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 34.0,
 		color: "Green",
-		prevo : "Nyuvel",
+		prevo: "Nyuvel",
 		eggGroups: ["Mineral"],
 	},
 	swelteroid: {
@@ -86932,7 +87177,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 15.0,
 		color: "Yellow",
-		evos : ["Magiynth"],
+		evos: ["Magiynth"],
 		eggGroups: ["Water2"],
 	},
 	magiynth: {
@@ -86944,8 +87189,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 38.0,
 		color: "Yellow",
-		prevo : "Yellynth",
-		evos : ["Orchesynth"],
+		prevo: "Yellynth",
+		evos: ["Orchesynth"],
 		eggGroups: ["Water2"],
 	},
 	orchesynth: {
@@ -86957,7 +87202,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 140.2,
 		color: "Yellow",
-		prevo : "Magiynth",
+		prevo: "Magiynth",
 		eggGroups: ["Water2"],
 	},
 	twiggerd: {
@@ -86969,7 +87214,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 2.2,
 		color: "Brown",
-		evos : ["Trunkannon"],
+		evos: ["Trunkannon"],
 		eggGroups: ["Grass"],
 	},
 	trunkannon: {
@@ -86981,7 +87226,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 118.0,
 		color: "Brown",
-		prevo : "Twiggerd",
+		prevo: "Twiggerd",
 		eggGroups: ["Grass"],
 	},
 	pictoji: {
@@ -87004,7 +87249,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 10.5,
 		color: "White",
-		evos : ["Schnormous"],
+		evos: ["Schnormous"],
 		eggGroups: ["Field", "Dragon"],
 	},
 	schnormous: {
@@ -87016,7 +87261,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 66.6,
 		color: "White",
-		prevo : "Schnozard",
+		prevo: "Schnozard",
 		eggGroups: ["Field", "Dragon"],
 	},
 	squbble: {
@@ -87028,7 +87273,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 27.4,
 		color: "White",
-		evos : ["Kraclean"],
+		evos: ["Kraclean"],
 		eggGroups: ["Water3"],
 	},
 	kraclean: {
@@ -87040,7 +87285,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 27.4,
 		color: "White",
-		prevo : "Squbble",
+		prevo: "Squbble",
 		eggGroups: ["Water3"],
 	},
 	cartcap: {
@@ -87063,7 +87308,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 19.0,
 		color: "Pink",
-		evos : ["Molstache"],
+		evos: ["Molstache"],
 		eggGroups: ["Field"],
 	},
 	molstache: {
@@ -87075,8 +87320,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 22.5,
 		color: "Pink",
-		prevo : "Molstub",
-		evos : ["Molbeardo"],
+		prevo: "Molstub",
+		evos: ["Molbeardo"],
 		eggGroups: ["Field"],
 	},
 	molbeardo: {
@@ -87088,7 +87333,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 89.8,
 		color: "Pink",
-		prevo : "Molstache",
+		prevo: "Molstache",
 		eggGroups: ["Field"],
 	},
 	cyunicoji: {
@@ -87111,7 +87356,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 16.4,
 		color: "Green",
-		evos : ["Oniogre"],
+		evos: ["Oniogre"],
 		eggGroups: ["Grass", "Monster"],
 	},
 	oniogre: {
@@ -87123,7 +87368,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 60.4,
 		color: "Yellow",
-		prevo : "Beanoy",
+		prevo: "Beanoy",
 		eggGroups: ["Grass", "Monster"],
 	},
 	cuffy: {
@@ -87135,7 +87380,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 10.0,
 		color: "Gray",
-		evos : ["Whippain"],
+		evos: ["Whippain"],
 		eggGroups: ["Mineral"],
 	},
 	whippain: {
@@ -87147,8 +87392,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 60.0,
 		color: "Black",
-		prevo : "Cuffy",
-		evos : ["Collatrix"],
+		prevo: "Cuffy",
+		evos: ["Collatrix"],
 		eggGroups: ["Mineral"],
 	},
 	collatrix: {
@@ -87160,7 +87405,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 60.0,
 		color: "Black",
-		prevo : "Whippain",
+		prevo: "Whippain",
 		eggGroups: ["Mineral"],
 	},
 	hairjog: {
@@ -87172,7 +87417,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 3.8,
 		color: "Brown",
-		evos : ["Kerajog"],
+		evos: ["Kerajog"],
 		eggGroups: ["Field"],
 	},
 	kerajog: {
@@ -87184,7 +87429,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 18.5,
 		color: "Brown",
-		prevo : "Hairjog",
+		prevo: "Hairjog",
 		eggGroups: ["Field"],
 	},
 	senteddi: {
@@ -87196,7 +87441,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 8.8,
 		color: "Black",
-		evos : ["Urscort"],
+		evos: ["Urscort"],
 		eggGroups: ["Field"],
 	},
 	urscort: {
@@ -87208,7 +87453,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 125.8,
 		color: "Black",
-		prevo : "Senteddi",
+		prevo: "Senteddi",
 		eggGroups: ["Field"],
 	},
 	tardough: {
@@ -87220,7 +87465,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.3,
 		color: "Brown",
-		evos : ["Pastiot", "Cookiot", "Breadiot"],
+		evos: ["Pastiot", "Cookiot", "Breadiot"],
 		eggGroups: ["Amorphous"],
 	},
 	breadiot: {
@@ -87232,7 +87477,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 28.8,
 		color: "Brown",
-		prevo : "Tardough",
+		prevo: "Tardough",
 		eggGroups: ["Amorphous"],
 	},
 	pastiot: {
@@ -87244,7 +87489,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 30.0,
 		color: "Brown",
-		prevo : "Tardough",
+		prevo: "Tardough",
 		eggGroups: ["Amorphous"],
 	},
 	cookiot: {
@@ -87256,7 +87501,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 30.0,
 		color: "Brown",
-		prevo : "Tardough",
+		prevo: "Tardough",
 		eggGroups: ["Amorphous"],
 	},
 	oinxploda: {
@@ -87279,7 +87524,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 16.0,
 		color: "White",
-		evos : ["Sikrak"],
+		evos: ["Sikrak"],
 		eggGroups: ["Water2", "Water3"],
 	},
 	sikrak: {
@@ -87291,8 +87536,8 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 38.0,
 		color: "Red",
-		prevo : "Salsik",
-		evos : ["Sikteria"],
+		prevo: "Salsik",
+		evos: ["Sikteria"],
 		eggGroups: ["Water2", "Water3"],
 	},
 	sikteria: {
@@ -87304,7 +87549,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 84.0,
 		color: "Red",
-		prevo : "Sikrak",
+		prevo: "Sikrak",
 		eggGroups: ["Water2", "Water3"],
 	},
 	autistrain: {
@@ -87327,7 +87572,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 2.0,
 		color: "Brown",
-		evos : ["Teepod"],
+		evos: ["Teepod"],
 		eggGroups: ["Undiscovered"],
 	},
 	teepod: {
@@ -87339,8 +87584,8 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 8.5,
 		color: "Brown",
-		prevo : "Teevz",
-		evos : ["Cuppatee"],
+		prevo: "Teevz",
+		evos: ["Cuppatee"],
 		eggGroups: ["Grass", "Mineral"],
 	},
 	cuppatee: {
@@ -87352,7 +87597,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 28.5,
 		color: "Brown",
-		prevo : "Teepod",
+		prevo: "Teepod",
 		eggGroups: ["Grass", "Mineral"],
 	},
 	oymayt: {
@@ -87364,7 +87609,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 28.0,
 		color: "White",
-		evos : ["Yuwotmayt"],
+		evos: ["Yuwotmayt"],
 		eggGroups: ["Field", "Humanlike"],
 	},
 	yuwotmayt: {
@@ -87376,7 +87621,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 34.0,
 		color: "White",
-		prevo : "Oymayt",
+		prevo: "Oymayt",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	pinana: {
@@ -87388,7 +87633,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.0,
 		color: "Yellow",
-		evos : ["Peelngas"],
+		evos: ["Peelngas"],
 		eggGroups: ["Grass"],
 	},
 	peelngas: {
@@ -87400,7 +87645,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 6.0,
 		color: "Yellow",
-		prevo : "Pinana",
+		prevo: "Pinana",
 		eggGroups: ["Grass"],
 	},
 	splug: {
@@ -87412,7 +87657,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 18.0,
 		color: "Black",
-		evos : ["Adaplug"],
+		evos: ["Adaplug"],
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	adaplug: {
@@ -87424,8 +87669,8 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 48.0,
 		color: "Black",
-		prevo : "Splug",
-		evos : ["Cabilisk"],
+		prevo: "Splug",
+		evos: ["Cabilisk"],
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	cabilisk: {
@@ -87437,7 +87682,7 @@ blobbosmechelectric: {
 		heightm: 4.2,
 		weightkg: 162.0,
 		color: "Black",
-		prevo : "Adaplug",
+		prevo: "Adaplug",
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	flopple: {
@@ -87449,7 +87694,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 5.5,
 		color: "Green",
-		evos : ["Buktopple", "Corottle"],
+		evos: ["Buktopple", "Corottle"],
 		eggGroups: ["Grass", "Flying"],
 	},
 	buktopple: {
@@ -87461,7 +87706,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 16.0,
 		color: "Red",
-		prevo : "Flopple",
+		prevo: "Flopple",
 		eggGroups: ["Grass", "Flying"],
 	},
 	corottle: {
@@ -87473,7 +87718,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 5.2,
 		color: "Brown",
-		prevo : "Flopple",
+		prevo: "Flopple",
 		eggGroups: ["Grass", "Flying"],
 	},
 	fleap: {
@@ -87485,7 +87730,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 4.8,
 		color: "Black",
-		evos : ["Flitchi"],
+		evos: ["Flitchi"],
 		eggGroups: ["Bug", "Field"],
 	},
 	flitchi: {
@@ -87497,7 +87742,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 29.5,
 		color: "Black",
-		prevo : "Fleap",
+		prevo: "Fleap",
 		eggGroups: ["Bug", "Field"],
 	},
 	ostreoch: {
@@ -87520,7 +87765,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 24.2,
 		color: "White",
-		evos : ["Razario"],
+		evos: ["Razario"],
 		eggGroups: ["Amorphous", "Dragon"],
 	},
 	razario: {
@@ -87532,7 +87777,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 32.5,
 		color: "White",
-		prevo : "Shlario",
+		prevo: "Shlario",
 		eggGroups: ["Amorphous", "Dragon"],
 	},
 	snotto: {
@@ -87544,7 +87789,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 9.0,
 		color: "Green",
-		evos : ["Boglob"],
+		evos: ["Boglob"],
 		eggGroups: ["Amorphous"],
 	},
 	boglob: {
@@ -87556,8 +87801,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 14.2,
 		color: "Green",
-		prevo : "Snotto",
-		evos : ["Fluinter"],
+		prevo: "Snotto",
+		evos: ["Fluinter"],
 		eggGroups: ["Amorphous"],
 	},
 	fluinter: {
@@ -87569,7 +87814,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 31.0,
 		color: "Green",
-		prevo : "Boglob",
+		prevo: "Boglob",
 		eggGroups: ["Amorphous"],
 	},
 	ovilock: {
@@ -87581,7 +87826,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 60.0,
 		color: "Gray",
-		evos : ["Alkeydin"],
+		evos: ["Alkeydin"],
 		eggGroups: ["Mineral", "Flying"],
 	},
 	alkeydin: {
@@ -87593,7 +87838,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 6.4,
 		color: "Blue",
-		prevo : "Ovilock",
+		prevo: "Ovilock",
 		eggGroups: ["Mineral", "Flying"],
 	},
 	clownim: {
@@ -87605,7 +87850,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 39.2,
 		color: "Pink",
-		evos : ["Tentaclown"],
+		evos: ["Tentaclown"],
 		eggGroups: ["Monster"],
 	},
 	tentaclown: {
@@ -87617,7 +87862,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 56.6,
 		color: "Pink",
-		prevo : "Clownim",
+		prevo: "Clownim",
 		eggGroups: ["Monster"],
 	},
 	zizizii: {
@@ -87640,7 +87885,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 16.0,
 		color: "Gray",
-		evos : ["Skeletuna"],
+		evos: ["Skeletuna"],
 		eggGroups: ["Water2", "Mineral"],
 	},
 	skeletuna: {
@@ -87652,7 +87897,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 16.0,
 		color: "Gray",
-		prevo : "Tinna",
+		prevo: "Tinna",
 		eggGroups: ["Water2", "Mineral"],
 	},
 	capseal: {
@@ -87664,7 +87909,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 37.5,
 		color: "Blue",
-		evos : ["Nurseal"],
+		evos: ["Nurseal"],
 		eggGroups: ["Water1", "Field"],
 	},
 	nurseal: {
@@ -87676,8 +87921,8 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 63.3,
 		color: "Blue",
-		prevo : "Capseal",
-		evos : ["Manursee"],
+		prevo: "Capseal",
+		evos: ["Manursee"],
 		eggGroups: ["Water1", "Field"],
 	},
 	manursee: {
@@ -87689,7 +87934,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 152.6,
 		color: "White",
-		prevo : "Nurseal",
+		prevo: "Nurseal",
 		eggGroups: ["Water1", "Field"],
 	},
 	shizzlip: {
@@ -87712,7 +87957,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 6.6,
 		color: "Brown",
-		evos : ["Marmight"],
+		evos: ["Marmight"],
 		eggGroups: ["Bug"],
 	},
 	marmight: {
@@ -87724,7 +87969,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 48.5,
 		color: "Brown",
-		prevo : "Marmin",
+		prevo: "Marmin",
 		eggGroups: ["Bug"],
 	},
 	chairor: {
@@ -87736,7 +87981,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 22.0,
 		color: "Purple",
-		evos : ["Throgon"],
+		evos: ["Throgon"],
 		eggGroups: ["Monster", "Dragon"],
 	},
 	throgon: {
@@ -87748,7 +87993,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 152.0,
 		color: "Yellow",
-		prevo : "Chairor",
+		prevo: "Chairor",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	hologg: {
@@ -87760,7 +88005,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.8,
 		color: "Blue",
-		evos : ["Holectric"],
+		evos: ["Holectric"],
 		eggGroups: ["Mineral"],
 	},
 	holectric: {
@@ -87772,7 +88017,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.6,
 		color: "Yellow",
-		prevo : "Hologg",
+		prevo: "Hologg",
 		eggGroups: ["Mineral"],
 	},
 	zelenvus: {
@@ -87806,7 +88051,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 7.6,
 		color: "Red",
-		evos : ["Lavalve"],
+		evos: ["Lavalve"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	lavalve: {
@@ -87818,8 +88063,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 28.0,
 		color: "Red",
-		prevo : "Clagma",
-		evos : ["Volclamno"],
+		prevo: "Clagma",
+		evos: ["Volclamno"],
 		eggGroups: ["Monster", "Water1"],
 	},
 	volclamno: {
@@ -87831,7 +88076,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 121.5,
 		color: "Red",
-		prevo : "Lavalve",
+		prevo: "Lavalve",
 		eggGroups: ["Monster", "Water1"],
 	},
 	trichic: {
@@ -87843,7 +88088,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.0,
 		color: "Pink",
-		evos : ["Squaychic"],
+		evos: ["Squaychic"],
 		eggGroups: ["Amorphous"],
 	},
 	squaychic: {
@@ -87855,8 +88100,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 15.0,
 		color: "Yellow",
-		prevo : "Trichic",
-		evos : ["Pentragon"],
+		prevo: "Trichic",
+		evos: ["Pentragon"],
 		eggGroups: ["Amorphous"],
 	},
 	pentragon: {
@@ -87868,7 +88113,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 28.0,
 		color: "Blue",
-		prevo : "Squaychic",
+		prevo: "Squaychic",
 		eggGroups: ["Amorphous"],
 	},
 	sodrade: {
@@ -87891,7 +88136,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 3.9,
 		color: "Yellow",
-		evos : ["Tabbumble"],
+		evos: ["Tabbumble"],
 		eggGroups: ["Field", "Bug"],
 	},
 	tabbumble: {
@@ -87903,7 +88148,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 48.8,
 		color: "Brown",
-		prevo : "Tabbee",
+		prevo: "Tabbee",
 		eggGroups: ["Field", "Bug"],
 	},
 	eaglass: {
@@ -87915,7 +88160,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 2.0,
 		color: "Blue",
-		evos : ["Threaglass"],
+		evos: ["Threaglass"],
 		eggGroups: ["Flying"],
 	},
 	threaglass: {
@@ -87927,7 +88172,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 34.0,
 		color: "Blue",
-		prevo : "Eaglass",
+		prevo: "Eaglass",
 		eggGroups: ["Flying"],
 	},
 	gouwheel: {
@@ -87939,7 +88184,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 32.0,
 		color: "Green",
-		evos : ["Hauntaxi"],
+		evos: ["Hauntaxi"],
 		eggGroups: ["Mineral"],
 	},
 	hauntaxi: {
@@ -87951,8 +88196,8 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 622.0,
 		color: "Yellow",
-		prevo : "Gouwheel",
-		evos : ["Bussacre"],
+		prevo: "Gouwheel",
+		evos: ["Bussacre"],
 		eggGroups: ["Mineral"],
 	},
 	bussacre: {
@@ -87964,7 +88209,7 @@ blobbosmechelectric: {
 		heightm: 4.3,
 		weightkg: 999.9,
 		color: "Red",
-		prevo : "Hauntaxi",
+		prevo: "Hauntaxi",
 		eggGroups: ["Mineral"],
 	},
 	chubbirb: {
@@ -87976,7 +88221,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 180.5,
 		color: "Brown",
-		evos : ["Birbutter"],
+		evos: ["Birbutter"],
 		eggGroups: ["Field", "Flying"],
 	},
 	birbutter: {
@@ -87988,7 +88233,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 440.0,
 		color: "Brown",
-		prevo : "Chubbirb",
+		prevo: "Chubbirb",
 		eggGroups: ["Field", "Flying"],
 	},
 	goleg: {
@@ -88000,7 +88245,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 26.0,
 		color: "Brown",
-		evos : ["Figoleg"],
+		evos: ["Figoleg"],
 		eggGroups: ["Mineral", "Humanlike"],
 	},
 	figoleg: {
@@ -88012,7 +88257,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 105.0,
 		color: "Brown",
-		prevo : "Goleg",
+		prevo: "Goleg",
 		eggGroups: ["Mineral", "Humanlike"],
 	},
 	fagworm: {
@@ -88024,7 +88269,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 19.0,
 		color: "White",
-		evos : ["Cigraworm"],
+		evos: ["Cigraworm"],
 		eggGroups: ["Monster"],
 	},
 	cigraworm: {
@@ -88036,7 +88281,7 @@ blobbosmechelectric: {
 		heightm: 1.9,
 		weightkg: 144.0,
 		color: "Brown",
-		prevo : "Fagworm",
+		prevo: "Fagworm",
 		eggGroups: ["Monster"],
 	},
 	powdillar: {
@@ -88048,7 +88293,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.9,
 		color: "Yellow",
-		evos : ["Grencoon"],
+		evos: ["Grencoon"],
 		eggGroups: ["Bug"],
 	},
 	grencoon: {
@@ -88060,8 +88305,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 9.9,
 		color: "Green",
-		prevo : "Powdillar",
-		evos : ["Exploth"],
+		prevo: "Powdillar",
+		evos: ["Exploth"],
 		eggGroups: ["Bug"],
 	},
 	exploth: {
@@ -88073,7 +88318,7 @@ blobbosmechelectric: {
 		heightm: 1.1,
 		weightkg: 32.0,
 		color: "Red",
-		prevo : "Grencoon",
+		prevo: "Grencoon",
 		eggGroups: ["Bug"],
 	},
 	nimbud: {
@@ -88085,7 +88330,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 17.0,
 		color: "White",
-		evos : ["Bonskai"],
+		evos: ["Bonskai"],
 		eggGroups: ["Grass", "Monster"],
 	},
 	bonskai: {
@@ -88097,7 +88342,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 77.4,
 		color: "White",
-		prevo : "Nimbud",
+		prevo: "Nimbud",
 		eggGroups: ["Grass", "Monster"],
 	},
 	tyrannomon: {
@@ -88109,8 +88354,8 @@ blobbosmechelectric: {
 		heightm: 3.7,
 		weightkg: 14.5,
 		color: "Blue",
-		prevo : "Augumon",
-		evos : ["Mastertyrannomon", "Skullgreymon", "Metalgreymonv"],
+		prevo: "Augumon",
+		evos: ["Mastertyrannomon", "Skullgreymon", "Metalgreymonv"],
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	mastertyrannomon: {
@@ -88122,8 +88367,8 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Tyrannomon",
-		evos : ["Samudramon"],
+		prevo: "Tyrannomon",
+		evos: ["Samudramon"],
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	samudramon: {
@@ -88135,7 +88380,7 @@ blobbosmechelectric: {
 		heightm: 4.0,
 		weightkg: 16.5,
 		color: "Blue",
-		prevo : "Mastertyrannomon",
+		prevo: "Mastertyrannomon",
 		eggGroups: ["Mineral", "Dragon"],
 	},
 	gslowking: {
@@ -88147,7 +88392,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 78.5,
 		color: "Pink",
-		prevo : "Gslowpoke",
+		prevo: "Gslowpoke",
 		eggGroups: ["Monster", "Water1"],
 	},
 	rlimshaikworm: {
@@ -88192,7 +88437,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 2.9,
 		color: "Green",
-		evos : ["Metalblud"],
+		evos: ["Metalblud"],
 		eggGroups: ["Bug"],
 	},
 	metalblud: {
@@ -88204,8 +88449,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 9.9,
 		color: "Green",
-		prevo : "Slasherpie",
-		evos : ["Scorpiofree"],
+		prevo: "Slasherpie",
+		evos: ["Scorpiofree"],
 		eggGroups: ["Bug"],
 	},
 	scorpiofree: {
@@ -88217,7 +88462,7 @@ blobbosmechelectric: {
 		heightm: 1.8,
 		weightkg: 32.0,
 		color: "Green",
-		prevo : "Metalblud",
+		prevo: "Metalblud",
 		eggGroups: ["Bug"],
 	},
 	starruz: {
@@ -88229,7 +88474,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 90.5,
 		color: "Purple",
-		prevo : "Staryu",
+		prevo: "Staryu",
 		eggGroups: ["Water3"],
 	},
 	intestinela: {
@@ -88241,7 +88486,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 35.0,
 		color: "Red",
-		evos : ["Entrailgrowth"],
+		evos: ["Entrailgrowth"],
 		eggGroups: ["Amorphous"],
 	},
 	entrailgrowth: {
@@ -88253,7 +88498,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 128.6,
 		color: "Red",
-		prevo : "Intestinela",
+		prevo: "Intestinela",
 		eggGroups: ["Amorphous"],
 	},
 	kickkecleon: {
@@ -88353,7 +88598,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 5.0,
 		color: "White",
-		prevo : "Alcremie",
+		prevo: "Alcremie",
 		eggGroups: ["Fairy"],
 	},
 	characide: {
@@ -88365,7 +88610,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 46.8,
 		color: "Green",
-		prevo : "Monkid",
+		prevo: "Monkid",
 		eggGroups: ["Humanlike"],
 	},
 	bsgrava: {
@@ -88630,7 +88875,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 0.9,
 		color: "White",
-		prevo : "Floette",
+		prevo: "Floette",
 		eggGroups: ["Fairy"],
 	},
 	bsshell: {
@@ -88653,7 +88898,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	papyrousle: {
@@ -88665,7 +88910,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 24,
 		color: "White",
-		prevo : "Monkid",
+		prevo: "Monkid",
 		eggGroups: ["Monster"],
 	},
 	hammerygon: {
@@ -88677,7 +88922,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 36.5,
 		color: "Pink",
-		prevo : "Porygon",
+		prevo: "Porygon",
 		eggGroups: ["Mineral"],
 	},
 	swordygon: {
@@ -88689,7 +88934,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 36.5,
 		color: "Pink",
-		prevo : "Porygon",
+		prevo: "Porygon",
 		eggGroups: ["Mineral"],
 	},
 	shieldygon: {
@@ -88701,7 +88946,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 36.5,
 		color: "Pink",
-		prevo : "Porygon",
+		prevo: "Porygon",
 		eggGroups: ["Mineral"],
 	},
 	cosplaypikachu: {
@@ -88735,7 +88980,7 @@ blobbosmechelectric: {
 		heightm: 0.5,
 		weightkg: 5.0,
 		color: "Green",
-		prevo : "Treecko",
+		prevo: "Treecko",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	btorchic: {
@@ -88747,8 +88992,8 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 2.5,
 		color: "Red",
-		prevo : "Torchic",
-		evos : ["Latiaziken"],
+		prevo: "Torchic",
+		evos: ["Latiaziken"],
 		eggGroups: ["Field"],
 	},
 	latiaziken: {
@@ -88760,7 +89005,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 2.5,
 		color: "Red",
-		prevo : "Btorchic",
+		prevo: "Btorchic",
 		eggGroups: ["Field"],
 	},
 	bgastrodon: {
@@ -88772,7 +89017,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 29.9,
 		color: "Purple",
-		prevo : "Shellos",
+		prevo: "Shellos",
 		eggGroups: ["Water1", "Amorphous"],
 	},
 	hidelra: {
@@ -88784,7 +89029,7 @@ blobbosmechelectric: {
 		heightm: 5.4,
 		weightkg: 86.0,
 		color: "Red",
-		evos : ["Huldire"],
+		evos: ["Huldire"],
 		eggGroups: ["Fairy", "Humanlike"],
 	},
 	huldire: {
@@ -88796,7 +89041,7 @@ blobbosmechelectric: {
 		heightm: 5.4,
 		weightkg: 86.0,
 		color: "Red",
-		prevo : "Hidelra",
+		prevo: "Hidelra",
 		eggGroups: ["Fairy", "Humanlike"],
 	},
 	trolluhyd: {
@@ -88841,7 +89086,7 @@ blobbosmechelectric: {
 		heightm: 3.6,
 		weightkg: 125.7,
 		color: "White",
-		evos : ["Hunballun"],
+		evos: ["Hunballun"],
 		eggGroups: ["Amorphous", " Humanlike"],
 	},
 	hunballun: {
@@ -88853,7 +89098,7 @@ blobbosmechelectric: {
 		heightm: 4.10,
 		weightkg: 200.5,
 		color: "White",
-		prevo : "Ballough",
+		prevo: "Ballough",
 		eggGroups: ["Amorphous", " Humanlike"],
 	},
 	sneaviwrath: {
@@ -88865,7 +89110,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 51.0,
 		color: "Black",
-		prevo : "Sneasel",
+		prevo: "Sneasel",
 		eggGroups: ["Field"],
 	},
 	dmagikarp: {
@@ -88877,7 +89122,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 10.0,
 		color: "Red",
-		evos : ["Dgyarados"],
+		evos: ["Dgyarados"],
 		eggGroups: ["Water2", "Dragon"],
 	},
 	dgyarados: {
@@ -88889,7 +89134,7 @@ blobbosmechelectric: {
 		heightm: 6.5,
 		weightkg: 235.0,
 		color: "Blue",
-		prevo : "Dmagikarp",
+		prevo: "Dmagikarp",
 		eggGroups: ["Water2", "Dragon"],
 	},
 	gmimejr: {
@@ -88901,7 +89146,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 13.0,
 		color: "Pink",
-		evos : ["Gmrmime"],
+		evos: ["Gmrmime"],
 		eggGroups: ["Undiscovered"],
 	},
 	krampird: {
@@ -88913,8 +89158,8 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 16.0,
 		color: "Red",
-		prevo : "Delibird",
-		evos : ["Krampusird"],
+		prevo: "Delibird",
+		evos: ["Krampusird"],
 		eggGroups: ["Amorphous", "Field"],
 	},
 	santajynx: {
@@ -88926,7 +89171,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 40.6,
 		color: "Red",
-		prevo : "Smoochum",
+		prevo: "Smoochum",
 		eggGroups: ["Humanlike"],
 	},
 	hyonix: {
@@ -88938,7 +89183,7 @@ blobbosmechelectric: {
 		heightm: 8.8,
 		weightkg: 210.0,
 		color: "Gray",
-		evos : ["Steelix", "Malicix"],
+		evos: ["Steelix", "Malicix"],
 		eggGroups: ["Mineral"],
 	},
 	malicix: {
@@ -88950,7 +89195,7 @@ blobbosmechelectric: {
 		heightm: 9.8,
 		weightkg: 510.0,
 		color: "Gray",
-		prevo : "Hyonix",
+		prevo: "Hyonix",
 		eggGroups: ["Mineral"],
 	},
 	miasva: {
@@ -88962,7 +89207,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 11.8,
 		color: "Green",
-		evos : ["Miasmaw"],
+		evos: ["Miasmaw"],
 		eggGroups: ["Dragon", "Bug"],
 	},
 	fgroudon: {
@@ -88996,7 +89241,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 8.1,
 		color: "Green",
-		evos : ["Cmservine"],
+		evos: ["Cmservine"],
 		eggGroups: ["Field", "Grass"],
 	},
 	cmservine: {
@@ -89008,8 +89253,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 16.0,
 		color: "Green",
-		prevo : "Cmsnivy",
-		evos : ["Cmserperior"],
+		prevo: "Cmsnivy",
+		evos: ["Cmserperior"],
 		eggGroups: ["Field", "Grass"],
 	},
 	cmserperior: {
@@ -89021,7 +89266,7 @@ blobbosmechelectric: {
 		heightm: 3.3,
 		weightkg: 63.0,
 		color: "Green",
-		prevo : "Cmservine",
+		prevo: "Cmservine",
 		eggGroups: ["Field", "Grass"],
 	},
 	splusle: {
@@ -89055,7 +89300,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 71.2,
 		color: "Brown",
-		prevo : "Stantler",
+		prevo: "Stantler",
 		eggGroups: ["Field"],
 	},
 	armewtwo: {
@@ -89078,7 +89323,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 19.8,
 		color: "Blue",
-		prevo : "Taillow",
+		prevo: "Taillow",
 		eggGroups: ["Flying"],
 	},
 	kangaskhid: {
@@ -89112,7 +89357,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 48.4,
 		color: "White",
-		prevo : "Kirlia",
+		prevo: "Kirlia",
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	seqola: {
@@ -89124,7 +89369,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 5.0,
 		color: "Pink",
-		evos : ["Sequoisola"],
+		evos: ["Sequoisola"],
 		eggGroups: ["Grass", "Bug"],
 	},
 	sequoisola: {
@@ -89136,7 +89381,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 5.0,
 		color: "Pink",
-		prevo : "Seqola",
+		prevo: "Seqola",
 		eggGroups: ["Grass", "Bug"],
 	},
 	zotsune: {
@@ -89148,7 +89393,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 12.5,
 		color: "Gray",
-		evos : ["Zoroterasu"],
+		evos: ["Zoroterasu"],
 		eggGroups: ["Field"],
 	},
 	zoroterasu: {
@@ -89160,7 +89405,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 81.1,
 		color: "Gray",
-		prevo : "Zotsune",
+		prevo: "Zotsune",
 		eggGroups: ["Field"],
 	},
 	bristik: {
@@ -89172,7 +89417,7 @@ blobbosmechelectric: {
 		heightm: 0.1,
 		weightkg: 0.6,
 		color: "Yellow",
-		evos : ["Airantula"],
+		evos: ["Airantula"],
 		eggGroups: ["Bug"],
 	},
 	airantula: {
@@ -89184,7 +89429,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 14.3,
 		color: "Yellow",
-		prevo : "Bristik",
+		prevo: "Bristik",
 		eggGroups: ["Bug"],
 	},
 	hsnorunt: {
@@ -89196,7 +89441,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 16.8,
 		color: "Gray",
-		evos : ["Hfroslass", "Hglalie"],
+		evos: ["Hfroslass", "Hglalie"],
 		eggGroups: ["Fairy", "Mineral"],
 	},
 	hglalie: {
@@ -89208,7 +89453,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 256.5,
 		color: "Gray",
-		prevo : "Hsnorunt",
+		prevo: "Hsnorunt",
 		eggGroups: ["Fairy", "Mineral"],
 	},
 	hfroslass: {
@@ -89220,7 +89465,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 26.6,
 		color: "White",
-		prevo : "Hsnorunt",
+		prevo: "Hsnorunt",
 		eggGroups: ["Fairy", "Mineral"],
 	},
 	merchum: {
@@ -89265,7 +89510,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 28.0,
 		color: "Green",
-		prevo : "Maractus",
+		prevo: "Maractus",
 		eggGroups: ["Grass"],
 	},
 	princesspeach: {
@@ -89365,7 +89610,7 @@ blobbosmechelectric: {
 		heightm: 1.7,
 		weightkg: 28.0,
 		color: "Green",
-		evos : ["Skeleton"],
+		evos: ["Skeleton"],
 		eggGroups: ["Field"],
 	},
 	captainfalcon: {
@@ -89965,6 +90210,7 @@ blobbosmechelectric: {
 	personajoker: {
 		num: 669569,
 		name: "Personajoker",
+		baseForme: "Standard",
 		types: ["Dark", "Psychic"],
 		baseStats: {hp: 80, atk: 85, def: 80, spa: 80, spd: 75, spe: 100},
 		abilities: {0: "Zen Mode", H: "Pickpocket"},
@@ -89972,6 +90218,23 @@ blobbosmechelectric: {
 		weightkg: 128.0,
 		color: "Green",
 		eggGroups: ["Humanlike"],
+		otherFormes: ["Personajoker-Zen"],
+		formeOrder: ["Personajoker", "Personajoker-Zen"],
+	},
+	personajokerzen: {
+		num: 669569,
+		name: "Personajoker-Zen",
+		baseSpecies: "Personajoker",
+		forme: "Zen",
+		types: ["Dark", "Psychic"],
+		baseStats: {hp: 85, atk: 125, def: 90, spa: 105, spd: 115, spe: 105},
+		abilities: {0: "Zen Mode"},
+		heightm: 1.0,
+		weightkg: 128.0,
+		color: "Green",
+		eggGroups: ["Humanlike"],
+		requiredAbility: "Zen Mode",
+		battleOnly: "Personajoker",
 	},
 	snkterry: {
 		num: 669570,
@@ -90026,7 +90289,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 24.0,
 		color: "Blue",
-		evos : ["Safersephiroth"],
+		evos: ["Safersephiroth"],
 		eggGroups: ["Undiscovered"],
 	},
 	safersephiroth: {
@@ -90038,7 +90301,7 @@ blobbosmechelectric: {
 		heightm: 11.4,
 		weightkg: 424.0,
 		color: "Blue",
-		prevo : "Sephiroth",
+		prevo: "Sephiroth",
 		eggGroups: ["Undiscovered"],
 	},
 	herobrine: {
@@ -90116,7 +90379,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 16.0,
 		color: "Red",
-		prevo : "Krampird",
+		prevo: "Krampird",
 		eggGroups: ["Amorphous", "Field"],
 	},
 	santacirno: {
@@ -90128,7 +90391,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 9.0,
 		color: "White",
-		prevo : "Cirnai",
+		prevo: "Cirnai",
 		eggGroups: ["Fairy"],
 	},
 	santakisume: {
@@ -90140,7 +90403,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 12.0,
 		color: "White",
-		prevo : "Kisumket",
+		prevo: "Kisumket",
 		eggGroups: ["Undiscovered"],
 	},
 	santamystia: {
@@ -90152,7 +90415,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 21.0,
 		color: "White",
-		prevo : "Mystiarrow",
+		prevo: "Mystiarrow",
 		eggGroups: ["Undiscovered"],
 	},
 	santaparsee: {
@@ -90164,7 +90427,7 @@ blobbosmechelectric: {
 		heightm: 1.3,
 		weightkg: 12.0,
 		color: "White",
-		prevo : "Parsenvy",
+		prevo: "Parsenvy",
 		eggGroups: ["Undiscovered"],
 	},
 	santarumia: {
@@ -90176,7 +90439,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 21.1,
 		color: "White",
-		prevo : "Rumiarkness",
+		prevo: "Rumiarkness",
 		eggGroups: ["Undiscovered"],
 	},
 	santawriggle: {
@@ -90188,7 +90451,7 @@ blobbosmechelectric: {
 		heightm: 0.9,
 		weightkg: 17.0,
 		color: "White",
-		prevo : "Wrigglight",
+		prevo: "Wrigglight",
 		eggGroups: ["Undiscovered"],
 	},
 	beachalice: {
@@ -90200,7 +90463,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 22.0,
 		color: "White",
-		prevo : "Aliceoll",
+		prevo: "Aliceoll",
 		eggGroups: ["Undiscovered"],
 	},
 	isami: {
@@ -90223,7 +90486,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 92.5,
 		color: "Red",
-		prevo : "Charmeleon",
+		prevo: "Charmeleon",
 		eggGroups: ["Monster", "Dragon"],
 	},
 	lozmidna: {
@@ -90246,7 +90509,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 0.5,
 		color: "Pink",
-		evos : ["Skipop"],
+		evos: ["Skipop"],
 		eggGroups: ["Fairy", "Grass"],
 	},
 	skipop: {
@@ -90258,8 +90521,8 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 1.0,
 		color: "Green",
-		prevo : "Poppip",
-		evos : ["Yumsicle"],
+		prevo: "Poppip",
+		evos: ["Yumsicle"],
 		eggGroups: ["Fairy", "Grass"],
 	},
 	yumsicle: {
@@ -90271,7 +90534,7 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 3.0,
 		color: "Blue",
-		prevo : "Skipop",
+		prevo: "Skipop",
 		eggGroups: ["Fairy", "Mineral"],
 	},
 	yarrbull: {
@@ -90283,7 +90546,7 @@ blobbosmechelectric: {
 		heightm: 0.6,
 		weightkg: 7.8,
 		color: "Pink",
-		evos : ["Swashbull"],
+		evos: ["Swashbull"],
 		eggGroups: ["Field", "Fairy"],
 	},
 	swashbull: {
@@ -90295,7 +90558,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 48.7,
 		color: "Purple",
-		prevo : "Yarrbull",
+		prevo: "Yarrbull",
 		eggGroups: ["Field", "Fairy"],
 	},
 	goldeneye007: {
@@ -90318,7 +90581,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 12.0,
 		color: "White",
-		prevo : "Jooney",
+		prevo: "Jooney",
 		eggGroups: ["Undiscovered"],
 	},
 	santashion: {
@@ -90330,7 +90593,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 12.0,
 		color: "White",
-		prevo : "Shionhobo",
+		prevo: "Shionhobo",
 		eggGroups: ["Undiscovered"],
 	},
 	meduka: {
@@ -90386,7 +90649,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 22.0,
 		color: "White",
-		evos : ["Mmhomura"],
+		evos: ["Mmhomura"],
 		eggGroups: ["Undiscovered"],
 	},
 	mmhomura: {
@@ -90398,7 +90661,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 22.0,
 		color: "White",
-		prevo : "Moemura",
+		prevo: "Moemura",
 		eggGroups: ["Undiscovered"],
 	},
 	kagenomushi: {
@@ -90432,7 +90695,7 @@ blobbosmechelectric: {
 		heightm: 2.0,
 		weightkg: 112.0,
 		color: "White",
-		prevo : "Utsuclear",
+		prevo: "Utsuclear",
 		eggGroups: ["Undiscovered"],
 	},
 	beachshikieiki: {
@@ -90444,7 +90707,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 22.0,
 		color: "White",
-		prevo : "Eikishiki",
+		prevo: "Eikishiki",
 		eggGroups: ["Undiscovered"],
 	},
 	barbeon: {
@@ -90456,7 +90719,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 29.0,
 		color: "Blue",
-		prevo : "Threevee",
+		prevo: "Threevee",
 		eggGroups: ["Field"],
 	},
 	senseion: {
@@ -90468,7 +90731,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 29.0,
 		color: "Blue",
-		prevo : "Threevee",
+		prevo: "Threevee",
 		eggGroups: ["Field"],
 	},
 	doomimp: {
@@ -90502,7 +90765,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 7.5,
 		color: "Pink",
-		evos : ["Betalostsoul"],
+		evos: ["Betalostsoul"],
 		eggGroups: ["Amorphous"],
 	},
 	betalostsoul: {
@@ -90514,7 +90777,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 7.5,
 		color: "Pink",
-		prevo : "Dlostsoul",
+		prevo: "Dlostsoul",
 		eggGroups: ["Amorphous"],
 	},
 	mancubus: {
@@ -90548,7 +90811,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 127.5,
 		color: "Pink",
-		evos : ["Baron Of Hell"],
+		evos: ["Baron Of Hell"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	baronofhell: {
@@ -90560,7 +90823,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 127.5,
 		color: "Pink",
-		prevo : "Doomhellknight",
+		prevo: "Doomhellknight",
 		eggGroups: ["Mineral", "Amorphous"],
 	},
 	darchvile: {
@@ -90605,7 +90868,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 127.5,
 		color: "Pink",
-		evos : ["Dspiderdemon"],
+		evos: ["Dspiderdemon"],
 		eggGroups: ["Bug", "Amorphous"],
 	},
 	dspiderdemon: {
@@ -90617,7 +90880,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 227.5,
 		color: "Pink",
-		prevo : "Arachnotron",
+		prevo: "Arachnotron",
 		eggGroups: ["Bug", "Amorphous"],
 	},
 	sfkrystal: {
@@ -90640,7 +90903,7 @@ blobbosmechelectric: {
 		heightm: 3.5,
 		weightkg: 110.0,
 		color: "Brown",
-		evos : ["Dracelium", "Sitragon"],
+		evos: ["Dracelium", "Sitragon"],
 		eggGroups: ["Monster"],
 	},
 	sitragon: {
@@ -90652,7 +90915,7 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 450.0,
 		color: "Brown",
-		prevo : "Sitryvern",
+		prevo: "Sitryvern",
 		eggGroups: ["Monster"],
 	},
 	dracelium: {
@@ -90664,7 +90927,7 @@ blobbosmechelectric: {
 		heightm: 3.5,
 		weightkg: 110.0,
 		color: "Brown",
-		prevo : "Sitryvern",
+		prevo: "Sitryvern",
 		eggGroups: ["Monster"],
 	},
 	mtoad: {
@@ -90698,7 +90961,7 @@ blobbosmechelectric: {
 		heightm: 2.2,
 		weightkg: 310.0,
 		color: "Green",
-		prevo : "Grotle",
+		prevo: "Grotle",
 		eggGroups: ["Monster", "Grass"],
 	},
 	tailsprower: {
@@ -90886,8 +91149,8 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 9.4,
 		color: "Red",
-		prevo : "Fennekin",
-		evos : ["Hubraixen"],
+		prevo: "Fennekin",
+		evos: ["Hubraixen"],
 		eggGroups: ["Field"],
 	},
 	hubraixen: {
@@ -90899,8 +91162,8 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 14.5,
 		color: "Red",
-		prevo : "Hufennekin",
-		evos : ["Hudelphox"],
+		prevo: "Hufennekin",
+		evos: ["Hudelphox"],
 		eggGroups: ["Field"],
 	},
 	hudelphox: {
@@ -90912,7 +91175,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 39.0,
 		color: "Red",
-		prevo : "Hubraixen",
+		prevo: "Hubraixen",
 		eggGroups: ["Field"],
 	},
 	bigthecat: {
@@ -90929,6 +91192,7 @@ blobbosmechelectric: {
 	borosu: {
 		num: 669653,
 		name: "Borosu",
+		baseForme: "Standard",
 		types: ["Cosmic"],
 		baseStats: {hp: 100, atk: 100, def: 96, spa: 90, spd: 96, spe: 93},
 		abilities: {0: "Gods Endurance"},
@@ -90936,6 +91200,21 @@ blobbosmechelectric: {
 		weightkg: 93.5,
 		color: "Blue",
 		eggGroups: ["Monster"],
+		otherFormes: ["Borosu-Zen"],
+	},
+	borosuzen: {
+		num: 669653,
+		name: "Borosu-Zen",
+		baseSpecies: "Borosu",
+		forme: "Zen",
+		types: ["Cosmic"],
+		baseStats: {hp: 125, atk: 135, def: 115, spa: 110, spd: 110, spe: 110},
+		abilities: {0: "Sheer Force"},
+		heightm: 2.3,
+		weightkg: 93.5,
+		color: "Blue",
+		eggGroups: ["Monster"],
+		battleOnly: "Borosu",
 	},
 	dawnpoke: {
 		num: 669654,
@@ -90957,7 +91236,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 18.5,
 		color: "Brown",
-		prevo : "Raticate",
+		prevo: "Raticate",
 		eggGroups: ["Field"],
 	},
 	mumenrider: {
@@ -91079,7 +91358,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.5,
 		color: "Pink",
-		evos : ["Shyguyghost", "Shy Gal", "Shy Fly Guy"],
+		evos: ["Shyguyghost", "Shy Gal", "Shy Fly Guy"],
 		eggGroups: ["Monster"],
 	},
 	shyflyguy: {
@@ -91091,7 +91370,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.5,
 		color: "Pink",
-		prevo : "Shyguy",
+		prevo: "Shyguy",
 		eggGroups: ["Monster"],
 	},
 	shyguyghost: {
@@ -91103,7 +91382,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.5,
 		color: "Pink",
-		prevo : "Shyguy",
+		prevo: "Shyguy",
 		eggGroups: ["Monster"],
 	},
 	shygal: {
@@ -91115,7 +91394,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.5,
 		color: "Pink",
-		prevo : "Shyguy",
+		prevo: "Shyguy",
 		eggGroups: ["Humanlike"],
 	},
 	koopatroopa: {
@@ -91127,7 +91406,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.5,
 		color: "Pink",
-		evos : ["Koopa Paratroopa", "Dry Bones"],
+		evos: ["Koopa Paratroopa", "Dry Bones"],
 		eggGroups: ["Monster"],
 	},
 	koopaparatroopa: {
@@ -91139,7 +91418,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.5,
 		color: "Pink",
-		prevo : "Koopatroopa",
+		prevo: "Koopatroopa",
 		eggGroups: ["Monster"],
 	},
 	bobomb: {
@@ -91151,7 +91430,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.5,
 		color: "Pink",
-		evos : ["King Bobomb"],
+		evos: ["King Bobomb"],
 		eggGroups: ["Monster"],
 	},
 	mawvenus: {
@@ -91174,7 +91453,7 @@ blobbosmechelectric: {
 		heightm: 0.3,
 		weightkg: 5.5,
 		color: "Pink",
-		prevo : "Koopatroopa",
+		prevo: "Koopatroopa",
 		eggGroups: ["Monster"],
 	},
 	opmmetalknight: {
@@ -91219,7 +91498,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 40.5,
 		color: "Purple",
-		prevo : "Haunter",
+		prevo: "Haunter",
 		eggGroups: ["Amorphous"],
 	},
 	fedorakirlia: {
@@ -91231,8 +91510,8 @@ blobbosmechelectric: {
 		heightm: 0.8,
 		weightkg: 20.2,
 		color: "White",
-		prevo : "Ralts",
-		evos : ["Gardevoir"],
+		prevo: "Ralts",
+		evos: ["Gardevoir"],
 		eggGroups: ["Amorphous", "Humanlike"],
 	},
 	excitebike: {
@@ -91812,7 +92091,7 @@ blobbosmechelectric: {
 		name: "Cvdracula",
 		types: ["Blood", "Zombie"],
 		baseStats: {hp: 80, atk: 130, def: 73, spa: 115, spd: 96, spe: 90},
-		abilities: {0: "Sadist", H: "Intimidate", S: "Zen Mode"},
+		abilities: {0: "Sadist", H: "Intimidate", S: "Zen Mode"}, // Doesn't have a Zen form coded in game
 		heightm: 1.4,
 		weightkg: 24.0,
 		color: "Blue",
@@ -91992,7 +92271,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 79.5,
 		color: "Black",
-		prevo : "Blitzle",
+		prevo: "Blitzle",
 		eggGroups: ["Field"],
 	},
 	maytias: {
@@ -92004,7 +92283,7 @@ blobbosmechelectric: {
 		heightm: 1.4,
 		weightkg: 40.0,
 		color: "Red",
-		prevo : "Latias",
+		prevo: "Latias",
 		eggGroups: ["Dragon"],
 	},
 	hildaroark: {
@@ -92016,7 +92295,7 @@ blobbosmechelectric: {
 		heightm: 1.6,
 		weightkg: 81.1,
 		color: "Gray",
-		prevo : "Zorua",
+		prevo: "Zorua",
 		eggGroups: ["Field"],
 	},
 	beachpatchi: {
@@ -92028,7 +92307,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 22.0,
 		color: "White",
-		prevo : "Patchician",
+		prevo: "Patchician",
 		eggGroups: ["Fairy"],
 	},
 	beachsakuya: {
@@ -92040,7 +92319,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 22.0,
 		color: "White",
-		prevo : "Sakuyaid",
+		prevo: "Sakuyaid",
 		eggGroups: ["Undiscovered"],
 	},
 	beachreimu: {
@@ -92206,7 +92485,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	bowserstatue: {
@@ -92218,7 +92497,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	mechabowserstatue: {
@@ -92230,7 +92509,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	bowserkoobala: {
@@ -92242,7 +92521,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 465.5,
 		color: "Pink",
-		prevo : "Bowser",
+		prevo: "Bowser",
 		eggGroups: ["Monster"],
 	},
 	umishannon: {
@@ -92298,7 +92577,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 365.5,
 		color: "Pink",
-		prevo : "Mario",
+		prevo: "Mario",
 		eggGroups: ["Monster"],
 	},
 	gooigi: {
@@ -92321,7 +92600,7 @@ blobbosmechelectric: {
 		heightm: 3.2,
 		weightkg: 0.5,
 		color: "Pink",
-		prevo : "Skylanderbowser",
+		prevo: "Skylanderbowser",
 		eggGroups: ["Monster"],
 	},
 	akirayuki: {
@@ -92443,7 +92722,7 @@ blobbosmechelectric: {
 		heightm: 6.3,
 		weightkg: 545.5,
 		color: "Pink",
-		prevo : "Bobomb",
+		prevo: "Bobomb",
 		eggGroups: ["Monster"],
 	},
 	goldmario: {
@@ -92455,7 +92734,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 365.5,
 		color: "Pink",
-		prevo : "Mario",
+		prevo: "Mario",
 		eggGroups: ["Mineral"],
 	},
 	icemario: {
@@ -92752,7 +93031,7 @@ blobbosmechelectric: {
 		heightm: 2.5,
 		weightkg: 80.0,
 		color: "Pink",
-		evos : ["Coommate"],
+		evos: ["Coommate"],
 		eggGroups: ["Monster", "Fairy"],
 	},
 	coommate: {
@@ -92764,7 +93043,7 @@ blobbosmechelectric: {
 		heightm: 5.5,
 		weightkg: 120.0,
 		color: "Pink",
-		prevo : "Crwutemate",
+		prevo: "Crwutemate",
 		eggGroups: ["Monster", "Fairy"],
 	},
 	penguira: {
@@ -92831,8 +93110,8 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Slimee",
-		evos : ["Liquidmetalslime"],
+		prevo: "Slimee",
+		evos: ["Liquidmetalslime"],
 		eggGroups: ["Amorphous"],
 	},
 	healslimee: {
@@ -92844,8 +93123,8 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Slimee",
-		evos : ["Cure Slimee"],
+		prevo: "Slimee",
+		evos: ["Cure Slimee"],
 		eggGroups: ["Amorphous"],
 	},
 	liquidmetalslime: {
@@ -92857,7 +93136,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Bubbleslime",
+		prevo: "Bubbleslime",
 		eggGroups: ["Amorphous"],
 	},
 	cureslimee: {
@@ -92869,7 +93148,7 @@ blobbosmechelectric: {
 		heightm: 0.2,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Healslimee",
+		prevo: "Healslimee",
 		eggGroups: ["Amorphous"],
 	},
 	seaslimee: {
@@ -92881,7 +93160,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 6.5,
 		color: "Brown",
-		prevo : "Slimee",
+		prevo: "Slimee",
 		eggGroups: ["Amorphous"],
 	},
 	wackqualitydoge: {
@@ -92893,7 +93172,7 @@ blobbosmechelectric: {
 		heightm: 0.4,
 		weightkg: 4.1,
 		color: "Brown",
-		evos : ["Wackmuscleman", "Wackvirgin", "Sprite007", "Wackchad"],
+		evos: ["Wackmuscleman", "Wackvirgin", "Sprite007", "Wackchad"],
 		eggGroups: ["Field"],
 	},
 	wackmuscleman: {
@@ -92905,7 +93184,7 @@ blobbosmechelectric: {
 		heightm: 2.4,
 		weightkg: 54.1,
 		color: "Brown",
-		prevo : "Wackqualitydoge",
+		prevo: "Wackqualitydoge",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	wackchad: {
@@ -92917,7 +93196,7 @@ blobbosmechelectric: {
 		heightm: 2.4,
 		weightkg: 54.1,
 		color: "Brown",
-		prevo : "Wackqualitydoge",
+		prevo: "Wackqualitydoge",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	wackvirgin: {
@@ -92929,7 +93208,7 @@ blobbosmechelectric: {
 		heightm: 2.4,
 		weightkg: 54.1,
 		color: "Brown",
-		prevo : "Wackqualitydoge",
+		prevo: "Wackqualitydoge",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	sprite007: {
@@ -92941,7 +93220,7 @@ blobbosmechelectric: {
 		heightm: 2.4,
 		weightkg: 54.1,
 		color: "Brown",
-		prevo : "Wackqualitydoge",
+		prevo: "Wackqualitydoge",
 		eggGroups: ["Field", "Humanlike"],
 	},
 	youkawaii: {
@@ -92953,7 +93232,7 @@ blobbosmechelectric: {
 		heightm: 9.9,
 		weightkg: 95.0,
 		color: "Pink",
-		prevo : "Lusfairy",
+		prevo: "Lusfairy",
 		eggGroups: ["Monster", "Fairy"],
 	},
 	xbpyra: {
@@ -93438,7 +93717,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 30.0,
 		color: "Yellow",
-		evos : ["Spowps"],
+		evos: ["Spowps"],
 		eggGroups: ["Dragon", "Field"],
 	},
 	spowps: {
@@ -93450,7 +93729,7 @@ blobbosmechelectric: {
 		heightm: 1.0,
 		weightkg: 30.0,
 		color: "Yellow",
-		prevo : "Mlpspike",
+		prevo: "Mlpspike",
 		eggGroups: ["Dragon", "Field"],
 	},
 	hgrowlithe: {
@@ -93462,8 +93741,8 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 19.0,
 		color: "Brown",
-		prevo : "Growlithe",
-		evos : ["Harcanine"],
+		prevo: "Growlithe",
+		evos: ["Harcanine"],
 		eggGroups: ["Field"],
 	},
 	harcanine: {
@@ -93475,7 +93754,7 @@ blobbosmechelectric: {
 		heightm: 0.7,
 		weightkg: 19.0,
 		color: "Brown",
-		prevo : "Hgrowlithe",
+		prevo: "Hgrowlithe",
 		eggGroups: ["Field"],
 	},
 	hbraviary: {
@@ -93487,7 +93766,7 @@ blobbosmechelectric: {
 		heightm: 1.5,
 		weightkg: 41.0,
 		color: "Red",
-		prevo : "Rufflet",
+		prevo: "Rufflet",
 		eggGroups: ["Flying"],
 	},
 	btakua: {
@@ -93499,7 +93778,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 180.0,
 		color: "Gray",
-		evos : ["Takanuva"],
+		evos: ["Takanuva"],
 		eggGroups: ["Mineral"],
 	},
 	takanuva: {
@@ -93511,7 +93790,7 @@ blobbosmechelectric: {
 		heightm: 1.2,
 		weightkg: 180.0,
 		color: "Gray",
-		prevo : "Btakua",
+		prevo: "Btakua",
 		eggGroups: ["Mineral"],
 	},
 	onua: {

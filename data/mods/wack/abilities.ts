@@ -550,6 +550,54 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		desc: "This Pokemon's damaging moves become multi-hit moves that hit twice. Does not affect multi-hit moves.",
 		shortDesc: "This Pokemon's damaging moves hit twice.",
 	},
+	zenmode: {
+		inherit: true,
+		onResidual(pokemon) {
+			if (pokemon.baseSpecies.baseForme !== "Standard" || pokemon.transformed) return;
+			if (pokemon.baseSpecies.baseSpecies === "Sarieangel" && 
+			pokemon.hp <= pokemon.maxhp / 3 && !['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
+				pokemon.addVolatile('zenmode');
+			}
+			else if (pokemon.hp <= pokemon.maxhp / 2 && !['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
+				pokemon.addVolatile('zenmode');
+			}
+			else if (pokemon.baseSpecies.baseSpecies === "Sarieangel" && pokemon.hp > pokemon.maxhp / 3
+			&& ['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
+				pokemon.addVolatile('zenmode'); // in case of Sarieangel Zen form
+				pokemon.removeVolatile('zenmode');
+			}
+			else if (pokemon.hp > pokemon.maxhp / 2 && ['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
+				pokemon.addVolatile('zenmode'); // in case of Zen forms mons
+				pokemon.removeVolatile('zenmode');
+			}
+		},
+		onEnd(pokemon) {
+			if (!pokemon.volatiles['zenmode'] || !pokemon.hp) return;
+			pokemon.transformed = false;
+			delete pokemon.volatiles['zenmode'];
+			if (pokemon.species.battleOnly) {
+				pokemon.formeChange(pokemon.species.battleOnly as string, this.effect, false, '[silent]');
+			}
+		},
+		condition: {
+			onStart(pokemon) {
+				if (!pokemon.species.name.includes('Galar')) {
+					if (pokemon.species.forme !== 'Zen') {
+						pokemon.formeChange(pokemon.species.name+ '-Zen');
+					}
+				} else {
+					if (pokemon.species.id !== 'darmanitangalarzen') pokemon.formeChange('Darmanitan-Galar-Zen');
+				}
+			},
+			onEnd(pokemon) {
+				if (['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
+					pokemon.formeChange(pokemon.species.battleOnly as string);
+				}
+			},
+		},
+		desc: "If this Pokemon originally has this ability, it changes to Zen Mode if it has 1/2 or less of its maximum HP at the end of a turn, 1/3 for Sarieangel. If the pokemon's HP is above 1/2 of its maximum HP at the end of a turn or 1/3 for Sarieangel, it changes back to Standard Mode.",
+		shortDesc: "At end of turn, changes Mode to Standard if at 1/2 max HP, else Zen.",
+	},
 	// Gen5 vanilla abilities
 	anticipation: {
 		inherit: true,
