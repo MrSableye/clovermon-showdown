@@ -9149,7 +9149,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	titaneedle: {
+	titaneetle: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
