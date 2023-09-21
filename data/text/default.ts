@@ -406,7 +406,7 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		damage: "  [POKEMON] is buffeted by the hail!",
 	},
 	runeofluck0: {
-		start: "  [TEAM] has no more remaining Rune of Luck charges!",
+		start: "  [TEAM] has no remaining Rune of Luck charges!",
 	},
 	runeofluck1: {
 		start: "  [TEAM] has 1 remaining Rune of Luck charges!",
@@ -416,5 +416,17 @@ export const DefaultText: {[k: string]: DefaultText} = {
 	},
 	runeofluck3: {
 		start: "  [TEAM] has 3 remaining Rune of Luck charges!",
+	},
+	runeofprotection0: {
+		start: "  [TEAM] has no remaining Rune of Protection charges!",
+	},
+	runeofprotection1: {
+		start: "  [TEAM] has 1 remaining Rune of Protection charges!",
+	},
+	runeofprotection2: {
+		start: "  [TEAM] has 2 remaining Rune of Protection charges!",
+	},
+	runeofprotection3: {
+		start: "  [TEAM] has 3 remaining Rune of Protection charges!",
 	},
 };

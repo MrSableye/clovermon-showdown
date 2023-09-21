@@ -32617,6 +32617,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onCriticalHit(target, type, move) {
 				if (!target) return;
+				this.add('-activate', target, 'move: Rune of Luck');
 				this.effectState.charges--;
 				this.add('-sidestart', target.side, 'runeofluck' + this.effectState.charges);
 				if (this.effectState.charges <= 0) {
@@ -32624,8 +32625,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 				return false;
 			},
-			onSideResidualOrder: 26,
-			onSideResidualSubOrder: 6,
 			onSideEnd(side) {
 				this.add('-sideend', side, 'runeofluck' + this.effectState.charges);
 			},
@@ -32636,6 +32635,44 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {evasion: 1}},
 		contestType: "Cute",
 	},
+	runeofprotection: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Past",
+		name: "Rune of Protection",
+		pp: 30,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'runeofprotection',
+		condition: {
+			onSideStart(side) {
+				this.effectState.charges = 3;
+				this.add('-sidestart', side, 'runeofprotection' + this.effectState.charges);
+			},
+			onSourceModifyDamage(damage, source, target, move) {
+				if (target.getMoveHitData(move).typeMod > 0) {
+					this.add('-activate', target, 'move: Rune of Protection');
+					this.effectState.charges--;
+					this.add('-activate', )
+					this.add('-sidestart', target.side, 'runeofprotection' + this.effectState.charges);
+					if (this.effectState.charges <= 0) {
+						target.side.removeSideCondition('runeofprotection');
+					}
+					return this.chainModify(0.75);
+				}
+			},
+			onSideEnd(side) {
+				this.add('-sideend', side, 'runeofprotection' + this.effectState.charges);
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Normal",
+		zMove: {boost: {evasion: 1}},
+		contestType: "Cute",
+	},
+
 	psychocrush: {
 		accuracy: 100,
 		basePower: 80,

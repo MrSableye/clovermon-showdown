@@ -9337,6 +9337,14 @@ export const MovesText: {[k: string]: MoveText} = {
 	runeofluck: {
 		name: "Rune of Luck",
 		shortDesc: "Shields user's party from the next 3 critical hits.",
+
+		activate: "[POKEMON] was shielded by the Rune of Luck!",
+	},
+	runeofprotection: {
+		name: "Rune of Protection",
+		shortDesc: "User's party receives 75% damage from the next 3 supereffective hits.",
+
+		activate: "[POKEMON] was shielded by the Rune of Protection!",
 	},
 	psychocrush: {
 		name: "Psycho Crush",
