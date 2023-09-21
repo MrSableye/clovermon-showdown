@@ -1613,7 +1613,7 @@ export const commands: Chat.ChatCommands = {
 			case 'bersecules':
 				return this.sendReplyBox(`<u>Bersecules</u>: Its first move deals halved damage.`);
 			case 'crabblante':
-				return this.sendReplyBox(`<u>Crabblante</u>: Receives 0.8x damage from critical hits.`);
+				return this.sendReplyBox(`<u>Crabblante</u>: Receives 0.8x damage unless it's a critical hit.`);
 			case 'watchdoggoman':
 				return this.sendReplyBox(`<u>Watch Doggo Man</u>: Receives 0.7x damage from non Normal-type moves and deals 1.3x damage if the target isn't Normal-type.`);
 			default:
