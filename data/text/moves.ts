@@ -9334,6 +9334,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Maple Warrior",
 		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",
 	},
+	runeofluck: {
+		name: "Rune of Luck",
+		shortDesc: "Shields user's party from the next 3 critical hits.",
+	},
 	psychocrush: {
 		name: "Psycho Crush",
 		shortDesc: "Uses user's Sp. Def stat as Sp. Atk in damage calculation.",

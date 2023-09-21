@@ -32600,6 +32600,43 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {spe: 1}},
 		contestType: "Beautiful",
 	},
+	runeofluck: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Past",
+		name: "Rune of Luck",
+		pp: 30,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'luckychant',
+		condition: {
+			onSideStart(side) {
+				this.effectState.charges = 3;
+				this.add('-sidestart', side, 'runeofluck' + this.effectState.charges);
+			},
+			onCriticalHit(target, type, move) {
+				if (!target) return;
+				this.effectState.charges--;
+				if (this.effectState.charges <= 0) {
+					target.side.removeSideCondition('runeofluck');
+				} else {
+					this.add('-sidestart', target.side, 'runeofluck' + this.effectState.charges);
+				}
+				return false;
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 6,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'runeofluck' + this.effectState.charges);
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Normal",
+		zMove: {boost: {evasion: 1}},
+		contestType: "Cute",
+	},
 	psychocrush: {
 		accuracy: 100,
 		basePower: 80,
