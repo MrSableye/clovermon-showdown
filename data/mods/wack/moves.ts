@@ -104,7 +104,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: {protect: 1, reflectable: 1},
 		target: "normal",
 		desc: "Lowers the target's Attack, Special Attack, and Speed by 1 stage if the target is poisoned or Acid Rain is on the field. Fails if the target is not poisoned or Acid Rain isn't on the field.",
-		shortDesc: "Lowers Atk/Sp. Atk/Speed of poisoned foes/during acid rain by 1.",
+		shortDesc: "Lowers Atk/Sp. Atk/Speed of poisoned foes/during Acid Rain by 1.",
 		isNonstandard: null,
 	},
 	thief: {
@@ -168,6 +168,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				} else if (effect?.effectType === 'Item') {
 					this.effectState.duration = 4;
 					this.add('-fieldstart', 'move: Electric Terrain', '[from] item: ' + effect.name, '[of] ' + source);
+				} else if (effect?.effectType === 'Pokemon') {
+					this.add('-fieldstart', 'move: Electric Terrain', '[from] pokemon: ' + effect.name, '[of] ' + source);
 				} else {
 					this.add('-fieldstart', 'move: Electric Terrain');
 				}
@@ -185,6 +187,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
+				if (source.baseSpecies.baseSpecies === 'Himg') {
+					if (source?.hasItem('terrainextender') || source?.hasItem('grassyrock')) {
+						return 30;
+					}
+					return 15;
+				}
 				if (source?.hasItem('terrainextender') || source?.hasItem('grassyrock')) {
 					return 10;
 				}
@@ -208,6 +216,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				} else if (effect?.effectType === 'Item') {
 					this.effectState.duration = 4;
 					this.add('-fieldstart', 'move: Grassy Terrain', '[from] item: ' + effect.name, '[of] ' + source);
+				} else if (effect?.effectType === 'Pokemon') {
+					this.add('-fieldstart', 'move: Grassy Terrain', '[from] pokemon: ' + effect.name, '[of] ' + source);
 				} else {
 					this.add('-fieldstart', 'move: Grassy Terrain');
 				}
@@ -266,6 +276,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				} else if (effect?.effectType === 'Item') {
 					this.effectState.duration = 4;
 					this.add('-fieldstart', 'move: Misty Terrain', '[from] item: ' + effect.name, '[of] ' + source);
+				} else if (effect?.effectType === 'Pokemon') {
+					this.add('-fieldstart', 'move: Misty Terrain', '[from] pokemon: ' + effect.name, '[of] ' + source);
 				} else {
 					this.add('-fieldstart', 'move: Misty Terrain');
 				}
@@ -317,6 +329,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				} else if (effect?.effectType === 'Item') {
 					this.effectState.duration = 4;
 					this.add('-fieldstart', 'move: Psychic Terrain', '[from] item: ' + effect.name, '[of] ' + source);
+				} else if (effect?.effectType === 'Pokemon') {
+					this.add('-fieldstart', 'move: Psychic Terrain', '[from] pokemon: ' + effect.name, '[of] ' + source);
 				} else {
 					this.add('-fieldstart', 'move: Psychic Terrain');
 				}
@@ -954,6 +968,32 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	destinybond: {
 		inherit: true,
 		pp: 1,
+		condition: {
+			onStart(pokemon) {
+				this.add('-singlemove', pokemon, 'Destiny Bond');
+			},
+			onFaint(target, source, effect) {
+				const immune = ["Himg", "Himf", "Himw", "Himnuclear", "Himwind", "Himagma", "Himvirus", "Himcyber", "Lunar Guardian"];
+				if (!source || !effect || target.isAlly(source) || immune.includes(source.baseSpecies.baseSpecies)) return;
+				if (effect.effectType === 'Move' && !effect.isFutureMove) {
+					if (source.volatiles['dynamax']) {
+						this.add('-hint', "Dynamaxed Pokémon are immune to Destiny Bond.");
+						return;
+					}
+					this.add('-activate', target, 'move: Destiny Bond');
+					source.faint();
+				}
+			},
+			onBeforeMovePriority: -1,
+			onBeforeMove(pokemon, target, move) {
+				if (move.id === 'destinybond') return;
+				this.debug('removing Destiny Bond before attack');
+				pokemon.removeVolatile('destinybond');
+			},
+			onMoveAborted(pokemon, target, move) {
+				pokemon.removeVolatile('destinybond');
+			},
+		},
 		isNonstandard: null,
 	},
 	detect: {
@@ -2060,6 +2100,30 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		type: "Sound",
 		flags: {sound: 1, distance: 1},
+		onHitField(target, source, move) {
+			let result = false;
+			let message = false;
+			const immune = ["Truehim", "Himless", "Himwall", "Gowen", "Mecha Zaydolf", "Alphanne", "Himvoid", "God"];
+			for (const pokemon of this.getAllActive()) {
+				if (immune.includes(pokemon.baseSpecies.baseSpecies)) {
+					this.add('-immune', pokemon);
+					result = true;
+				}
+				else if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
+					this.add('-miss', source, pokemon);
+					result = true;
+				} else if (this.runEvent('TryHit', pokemon, source, move) === null) {
+					result = true;
+				} else if (!pokemon.volatiles['perishsong']) {
+					pokemon.addVolatile('perishsong');
+					this.add('-start', pokemon, 'perish3', '[silent]');
+					result = true;
+					message = true;
+				}
+			}
+			if (!result) return false;
+			if (message) this.add('-fieldactivate', 'move: Perish Song');
+		},
 		isNonstandard: null,
 	},
 	petalblizzard: {

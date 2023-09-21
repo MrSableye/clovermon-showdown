@@ -14122,6 +14122,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	adarmanitanzen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kogasella: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -14518,6 +14522,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	tardidarain: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blimy: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -14750,11 +14758,19 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	maidcoreshblade: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	flandryre: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
 	sarieangel: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sarieangelzen: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -15071,6 +15087,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	keinistory: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	keinistoryzen: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -17362,6 +17382,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	optulzuzen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	wololo: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -17523,6 +17547,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	withrew: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	withrewzen: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -17858,6 +17886,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	wfurretzen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	taker: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -18031,6 +18063,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	himpaper: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	himpaperopen: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -18294,7 +18330,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	retulzuzen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	spatulzu: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	spatulzuzen: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -19750,7 +19794,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	milunatonezen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	misolrock: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	misolrockzen: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -21523,6 +21575,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	tdarmanitan: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tdarmanitanzen: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -25146,6 +25202,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	personajokerzen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	snkterry: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -25479,6 +25539,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	borosu: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	borosuzen: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

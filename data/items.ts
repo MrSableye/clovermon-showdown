@@ -11455,7 +11455,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	frillydress: {
+	frillydress: { // TODO: Add Full Moon interaction
 		name: "Frilly Dress",
 		spritenum: 0,
 		onStart(source) {
