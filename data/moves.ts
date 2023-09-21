@@ -32609,7 +32609,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 30,
 		priority: 0,
 		flags: {snatch: 1},
-		sideCondition: 'luckychant',
+		sideCondition: 'runeofluck',
 		condition: {
 			onSideStart(side) {
 				this.effectState.charges = 3;
