@@ -1595,7 +1595,7 @@ export const commands: Chat.ChatCommands = {
 			case 'manvaccine':
 				return this.sendReplyBox(`<u>Manvaccine</u>: Upon dealing damage, gets 1 Stockpile.`);
 			case 'borosu':
-				return this.sendReplyBox(`<u>Borosu</u>: Turns into Zen at 1/3 of its max HP. otherwise turns into Standard at full health.`)
+				return this.sendReplyBox(`<u>Borosu</u>: On each turns, heals 1/3 of its max HP. Turns into Zen at 1/3 of its max HP. otherwise turns into Standard at full health.`)
 			case 'apocalybirb':
 				return this.sendReplyBox(`<u>Apocalybirb</u>: On each turns, heals 1/3 of its max HP.`);
 			case 'aegislash':
