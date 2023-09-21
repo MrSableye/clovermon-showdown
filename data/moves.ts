@@ -48016,7 +48016,7 @@ beforeTurnCallback(pokemon) {
 		flags: {protect: 1, mirror: 1},
 		multihit: [2, 5],
 		onModifyMove(move, attacker) {
-			if (this.field.getPseudoWeather('artgallery')) {
+			if (this.field.getPseudoWeather('fabricworld')) {
 				move.multihit = 5;
 			}
 		},

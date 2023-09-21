@@ -10743,7 +10743,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
-	titaneetle: {
+	titaneedle: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,
