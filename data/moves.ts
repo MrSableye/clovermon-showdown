@@ -32618,10 +32618,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onCriticalHit(target, type, move) {
 				if (!target) return;
 				this.effectState.charges--;
+				this.add('-sidestart', target.side, 'runeofluck' + this.effectState.charges);
 				if (this.effectState.charges <= 0) {
 					target.side.removeSideCondition('runeofluck');
-				} else {
-					this.add('-sidestart', target.side, 'runeofluck' + this.effectState.charges);
 				}
 				return false;
 			},

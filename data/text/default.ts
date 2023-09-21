@@ -405,4 +405,16 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		upkeep: "  (The hail is crashing down.)",
 		damage: "  [POKEMON] is buffeted by the hail!",
 	},
+	runeofluck0: {
+		start: "  [TEAM] has no more remaining Rune of Luck charges!",
+	},
+	runeofluck1: {
+		start: "  [TEAM] has 1 remaining Rune of Luck charges!",
+	},
+	runeofluck2: {
+		start: "  [TEAM] has 2 remaining Rune of Luck charges!",
+	},
+	runeofluck3: {
+		start: "  [TEAM] has 3 remaining Rune of Luck charges!",
+	},
 };
