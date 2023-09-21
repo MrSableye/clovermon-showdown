@@ -32654,7 +32654,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 				if (target.getMoveHitData(move).typeMod > 0) {
 					this.add('-activate', target, 'move: Rune of Protection');
 					this.effectState.charges--;
-					this.add('-activate', )
 					this.add('-sidestart', target.side, 'runeofprotection' + this.effectState.charges);
 					if (this.effectState.charges <= 0) {
 						target.side.removeSideCondition('runeofprotection');
@@ -32672,7 +32671,43 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {evasion: 1}},
 		contestType: "Cute",
 	},
-
+	runeofmending: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Past",
+		name: "Rune of Mending",
+		pp: 30,
+		priority: 0,
+		flags: {snatch: 1},
+		sideCondition: 'runeofmending',
+		condition: {
+			onSideStart(side) {
+				this.effectState.charges = 3;
+				this.add('-sidestart', side, 'runeofmending' + this.effectState.charges);
+			},
+			onSetStatus(status, target, source, effect) {
+				if (source && !source.isAlly(target)) {
+					return;
+				}
+				this.add('-activate', target, 'move: Rune of Mending');
+				this.effectState.charges--;
+				this.add('-sidestart', target.side, 'runeofmending' + this.effectState.charges);
+				if (this.effectState.charges <= 0) {
+					target.side.removeSideCondition('runeofmending');
+				}
+				return false;
+			},
+			onSideEnd(side) {
+				this.add('-sideend', side, 'runeofmending' + this.effectState.charges);
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Normal",
+		zMove: {boost: {evasion: 1}},
+		contestType: "Cute",
+	},
 	psychocrush: {
 		accuracy: 100,
 		basePower: 80,

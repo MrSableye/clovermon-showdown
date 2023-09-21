@@ -9346,6 +9346,12 @@ export const MovesText: {[k: string]: MoveText} = {
 
 		activate: "[POKEMON] was shielded by the Rune of Protection!",
 	},
+	runeofmending: {
+		name: "Rune of Mending",
+		shortDesc: "User's party's next 3 enemy-inflected statuses are cured.",
+
+		activate: "[POKEMON] was cured by the Rune of Mending!",
+	},
 	psychocrush: {
 		name: "Psycho Crush",
 		shortDesc: "Uses user's Sp. Def stat as Sp. Atk in damage calculation.",

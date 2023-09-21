@@ -429,4 +429,16 @@ export const DefaultText: {[k: string]: DefaultText} = {
 	runeofprotection3: {
 		start: "  [TEAM] has 3 remaining Rune of Protection charges!",
 	},
+	runeofmendingk0: {
+		start: "  [TEAM] has no remaining Rune of Mending charges!",
+	},
+	runeofmending1: {
+		start: "  [TEAM] has 1 remaining Rune of Mending charges!",
+	},
+	runeofmending2: {
+		start: "  [TEAM] has 2 remaining Rune of Mending charges!",
+	},
+	runeofmending3: {
+		start: "  [TEAM] has 3 remaining Rune of Mending charges!",
+	},
 };
