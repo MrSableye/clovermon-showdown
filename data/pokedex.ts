@@ -43630,9 +43630,9 @@ blobbosmechelectric: {
 		eggGroups: ["Bug", "Monster"],
 		creator: "hell if i know",
 	},
-	titaneedle: {
+	titaneetle: {
 		num: -42215,
-		name: "Titaneedle",
+		name: "titaneetle",
 		types: ["Bug"],
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 85, atk: 165, def: 85, spa: 25, spd: 85, spe: 105},
