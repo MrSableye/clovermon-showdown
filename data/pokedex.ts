@@ -43846,7 +43846,7 @@ blobbosmechelectric: {
 	},
 
 	finteki: {
-		num: 69367,
+		num: -69367,
 		name: "Finteki",
 		types: [
 			"Ice",
