@@ -1836,6 +1836,10 @@ export const Abilities: { [k: string]: ModdedAbilityData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	sapiophile: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	runngun: {
 		inherit: true,
 		isNonstandard: "Past",

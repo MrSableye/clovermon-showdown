@@ -43844,6 +43844,39 @@ blobbosmechelectric: {
 		gen: 9,
 		tags: ["Inferior"],
 	},
+
+	finteki: {
+		num: 69367,
+		name: "Finteki",
+		types: [
+			"Ice",
+			"Water",
+		],
+		gender: "N",
+		baseStats: {
+			hp: 70,
+			atk: 30,
+			def: 50,
+			spa: 125,
+			spd: 125,
+			spe: 95,
+		},
+		abilities: {
+			0: "Soundproof",
+			1: "Filter",
+			H: "Gradient",
+			S: "Water Veil",
+		},
+		heightm: 1.3,
+		weightkg: 25.2,
+		color: "Pink",
+		eggGroups: [
+			"Mineral",
+			"Amorphous",
+		],
+		gen: 8,
+	},
+
 	buge: {
 		num: -42106,
 		name: "Buge",
