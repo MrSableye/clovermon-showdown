@@ -43862,7 +43862,7 @@ blobbosmechelectric: {
 			spe: 95,
 		},
 		abilities: {
-			0: "cacophony",
+			0: "Cacophony",
 			1: "Filter",
 			H: "Gradient",
 			S: "Sapiophile",
