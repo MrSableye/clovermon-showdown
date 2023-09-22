@@ -600,6 +600,13 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		desc: "If this Pokemon originally has this ability, it changes to Zen Mode if it has 1/2 or less of its maximum HP at the end of a turn, 1/3 for Sarieangel. If the pokemon's HP is above 1/2 of its maximum HP at the end of a turn or 1/3 for Sarieangel, it changes back to Standard Mode.",
 		shortDesc: "At end of turn, changes Mode to Standard if at 1/2 max HP, else Zen.",
 	},
+	snowwarning: {
+		inherit: true,
+		onStart(source) {
+			this.field.setWeather('hail');
+		},
+		shortDesc: "On switch-in, this Pokemon summons Hail.",
+	},
 	// Gen5 vanilla abilities
 	anticipation: {
 		inherit: true,
