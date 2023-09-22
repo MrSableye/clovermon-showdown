@@ -72223,7 +72223,7 @@ blobbosmechelectric: {
 		weightkg: 7.5,
 		color: "Pink",
 		eggGroups: ["Fairy"],
-		battleOnly: "Cclefable"
+		battleOnly: "Cclefable",
 	},
 	elecmon: {
 		num: 668037,
