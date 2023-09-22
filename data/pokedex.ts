@@ -43865,7 +43865,7 @@ blobbosmechelectric: {
 			0: "Soundproof",
 			1: "Filter",
 			H: "Gradient",
-			S: "Water Veil",
+			S: "Sapiophile",
 		},
 		heightm: 1.3,
 		weightkg: 25.2,
