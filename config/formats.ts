@@ -717,12 +717,12 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Angel Powder + Detect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+			'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Xerneas', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
+			'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
 		],
 	},
 	{
@@ -736,12 +736,12 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Angel Powder + Detect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+			'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Xerneas', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
+			'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
 		],
 	},
 	{
@@ -756,12 +756,12 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Angel Powder + Detect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+			'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Xerneas', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
+			'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
 		],
 	},
 	{
@@ -776,12 +776,12 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Angel Powder + Detect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+			'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Xerneas', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
+			'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
 		],
 	},
 	{
@@ -796,12 +796,12 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-			'Angel Powder + Substitute', 'Angel Powder + Protect', 'Angel Powder + Detect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+			'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 			'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Xerneas', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
+			'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
 		],
 	},
 	{
@@ -831,12 +831,12 @@ export const Formats: FormatList = [
 			'Overflow Stat Mod',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Angel Powder + Detect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+		'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 		'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 		'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 		'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-		'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Xerneas', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
+		'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
 		],
 	},
 	{
@@ -853,12 +853,12 @@ export const Formats: FormatList = [
 			'Overflow Stat Mod',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
-		'Angel Powder + Substitute', 'Angel Powder + Protect', 'Angel Powder + Detect', 'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+		'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
 		'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
 		'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 		'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-		'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Xerneas', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
+		'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
 		],
 	},
 	{
