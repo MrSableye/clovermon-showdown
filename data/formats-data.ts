@@ -4506,6 +4506,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 	wishiwashischool: {
 		isNonstandard: "Past",
 	},
+	wishiwashisolo: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	mareanie: {
 		tier: "LC",
 	},
@@ -12150,6 +12154,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	f00zen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	whitehand: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -14878,6 +14886,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	angrymanjewzen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	merquick: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -16026,7 +16038,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	mestwizen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kawainnocent: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	kawainnocentzen: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -16335,6 +16355,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	emptyanne: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	emptyannezen: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -17806,6 +17830,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	neapolitaneiscuenoice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	susully: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -19054,7 +19082,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	cclefairyzen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	cclefable: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	cclefablezen: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -20566,6 +20602,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	feiscuenoice: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	wobbo: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -21379,6 +21419,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	jekhyde: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	jekhydezen: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
@@ -23762,6 +23806,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	scpee096zen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	scpee049: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -25226,6 +25274,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	sephirothzen: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	safersephiroth: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -26211,6 +26263,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	dqdragonlord: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	dqdragonlordzen: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

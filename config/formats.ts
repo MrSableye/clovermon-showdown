@@ -722,7 +722,7 @@ export const Formats: FormatList = [
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike'
+			'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Xerneas', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
 		],
 	},
 	{
@@ -741,7 +741,7 @@ export const Formats: FormatList = [
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike'
+			'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Xerneas', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
 		],
 	},
 	{
@@ -761,7 +761,7 @@ export const Formats: FormatList = [
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike'
+			'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Xerneas', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
 		],
 	},
 	{
@@ -781,7 +781,7 @@ export const Formats: FormatList = [
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike'
+			'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Xerneas', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
 		],
 	},
 	{
@@ -801,7 +801,7 @@ export const Formats: FormatList = [
 			'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 			'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 			'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-			'Hell Drag', 'Pacify', 'Rift Strike'
+			'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Xerneas', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
 		],
 	},
 	{
@@ -836,7 +836,7 @@ export const Formats: FormatList = [
 		'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 		'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-		'Hell Drag', 'Pacify', 'Rift Strike'
+		'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Xerneas', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
 		],
 	},
 	{
@@ -858,7 +858,7 @@ export const Formats: FormatList = [
 		'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
 		'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
 		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
-		'Hell Drag', 'Pacify', 'Rift Strike'
+		'Hell Drag', 'Pacify', 'Rift Strike', 'Firefree', 'Xerneas', 'Furi Z', 'Nameless Demon', 'Perfect Freeze', 'Time Stasis'
 		],
 	},
 	{

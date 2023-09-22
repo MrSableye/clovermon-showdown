@@ -1511,15 +1511,15 @@ export const commands: Chat.ChatCommands = {
 		if (!this.runBroadcast()) return;
 		if (!target) return this.parse("/help innate");
 
-		target = target.toLowerCase().replace(/\s/g, "")
+		target = target.toLowerCase().replace(/\s/g, "");
 
 		switch(target) {
 			case 'list':
 				return this.sendReplyBox(`List of Wack Pok&eacute;mons with a coded innate ability:<br /> Achillesder, Aegislash, Alphanne, `+
-				`Apocalybirb, Audinette, Audino, Azathoth, Bersecules, Borosu, Crabblante, Dragurve, God, Gowen, HIM Chaos, HIM Cyber, HIM Divine, ` +
-				`HIM F, HIM G, HIMless, HIM Magma, HIM Nuclear, HIM Paper, HIM Void, HIM W, HIM Wall, HIM Wind, Indeedee, Lunar Guardian, Maidcoresh, ` +
-				`ManVaccine, Mecha Zaydolf, Meta Knight, Mlavagun, Msteamboatle, Pincurchin, Rillaboom, Sandaconda, Skeleton, Tank Top Mastah, Tapu Bulu, ` +
-				`Tapu Fini, Tapu Koko, Tapu Lele, Tardida, Tikcofragrigus, Torterra, True HIM, Watch Doggo Man`);
+				`Angry Man Jew, Audinette, Audino, Azathoth, Bersecules, Borosu, Castform, Cclefable, Cclefairy, Crabblante, DQ Dragon Lord, Dragurve, Eiscue, Empty Anne, ` +
+				`F-00, Feiscue, God, Gowen, HIM Chaos, HIM Cyber, HIM Divine, HIM F, HIM G, HIMless, HIM Magma, HIM Nuclear, HIM Paper, HIM Void, HIM W, HIM Wall, HIM Wind, ` +
+				`Indeedee, Jekhyde, Kawainnocent, Lunar Guardian, Maidcoresh, ManVaccine, Mecha Zaydolf, Mestwi, Meta Knight, Mlavagun, Msteamboatle, Neapolitaneiscue, ` +
+				`Pincurchin, Rillaboom, Sandaconda, SCPee 096, Skeleton, Tank Top Mastah, Tapu Bulu, Tapu Fini, Tapu Koko, Tapu Lele, Tardida, Tikcofagrigus, Torterra, True HIM, Watch Doggo Man, Wishiwashi`);
 			case 'tapukoko':
 				return this.sendReplyBox(`<u>Tapu Koko</u>: On switch-in, summons Electric Terrain.`);
 			case 'pincurchin':
@@ -1566,6 +1566,8 @@ export const commands: Chat.ChatCommands = {
 				return this.sendReplyBox(`<u>HIM Wall/u>: Immune to OHKO moves and Perish Song.`);
 			case 'himdivine':
 				return this.sendReplyBox(`<u>HIM Divine/u>: Immune to OHKO moves.`);
+			case 'himchaos':
+				return this.sendReplyBox(`<u>HIM Chaos/u>: Immune to OHKO moves.`);
 			case 'gowen':
 				return this.sendReplyBox(`<u>Gowen/u>: Immune to Perish Song and Perish Song.`);
 			case 'mechazaydolf':
@@ -1585,7 +1587,7 @@ export const commands: Chat.ChatCommands = {
 			case 'tanktopmastah':
 				return this.sendReplyBox(`<u>Tank Top Mastah</u>: On switch-in, summons Safeguard.`)
 			case 'metaknight':
-				return this.sendReplyBox(`<u>Meta Knight</u>: On each damaging hit, deals 1/16 of its target max HP as damage.`)
+				return this.sendReplyBox(`<u>Meta Knight</u>: On each damaging hit, deals 1/16 of its target max HP as damage.`);
 			case 'achillesder':
 				return this.sendReplyBox(`<u>Achillesder/u>: If it has the "Wonder Guard" ability and is hit, minimize its Speed.`);
 			case 'sandaconda':
@@ -1595,9 +1597,37 @@ export const commands: Chat.ChatCommands = {
 			case 'manvaccine':
 				return this.sendReplyBox(`<u>Manvaccine</u>: Upon dealing damage, gets 1 Stockpile.`);
 			case 'borosu':
-				return this.sendReplyBox(`<u>Borosu</u>: On each turns, heals 1/3 of its max HP. Turns into Zen at 1/3 of its max HP. otherwise turns into Standard at full health.`)
-			case 'apocalybirb':
-				return this.sendReplyBox(`<u>Apocalybirb</u>: On each turns, heals 1/3 of its max HP.`);
+				return this.sendReplyBox(`<u>Borosu</u>: On each turns, heals 1/3 of its max HP. Turns into Zen under 1/2 of its max HP. otherwise turns into Standard at full health.`);
+			case 'eiscue':
+				return this.sendReplyBox(`<u>Eiscue</u>: Turns into Noice under 1/2 of its max HP. otherwise turns into Standard.`);
+			case 'feiscue':
+				return this.sendReplyBox(`<u>Feiscue</u>: Turns into Noice under 1/2 of its max HP. otherwise turns into Standard.`);
+			case 'neapolitaneiscue':
+				return this.sendReplyBox(`<u>Neapolitaneiscue</u>: Turns into Noice under 1/2 of its max HP. otherwise turns into Standard.`);
+			case 'jekhyde':
+				return this.sendReplyBox(`<u>Jekhyde</u>: Turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);
+			case 'dqdragonlord':
+				return this.sendReplyBox(`<u>DQ Dragon Lord</u>: Turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);
+			case 'sephiroth':
+				return this.sendReplyBox(`<u>Sephiroth</u>: Turns into Zen under 1/3 of its max HP. otherwise turns into Standard.`);
+			case 'scpee096':
+				return this.sendReplyBox(`<u>SCPee 096</u>: If it has "Anger Point", turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);
+			case 'angrymanjew':
+				return this.sendReplyBox(`<u>Angry Man Jew</u>: If it has "Rough Skin", turns into Zen under 1/3 of its max HP. otherwise turns into Standard.`);	
+			case 'f00':
+				return this.sendReplyBox(`<u>F-00</u>: If it has "Volt Absorb", turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);	
+			case 'emptyanne':
+				return this.sendReplyBox(`<u>Empty Anne</u>: If it has "Clear Body", turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);	
+			case 'kawainnocent':
+				return this.sendReplyBox(`<u>Kawainnocent</u>: If it has "Cute Charm", turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);	
+			case 'mestwi':
+				return this.sendReplyBox(`<uMestwi</u>: If it has "Filter", turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);	
+			case 'cclefairy':
+				return this.sendReplyBox(`<u>Cclefairy</u>: Turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);	
+			case 'cclefable':
+				return this.sendReplyBox(`<u>F-00</u>: Turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);	
+			case 'wishiwashi':
+				return this.sendReplyBox(`<u>Wishiwashi</u>: If it has "Water Veil", turns into Solo under 1/4 of its max HP. otherwise turns into School.`);	
 			case 'aegislash':
 				return this.sendReplyBox(`<u>Aegislash</u>: If it has the "Hyper Cutter" ability, gets "Stance Change" effect. Reverts using "King's Shield".`);
 			case 'himpaper':

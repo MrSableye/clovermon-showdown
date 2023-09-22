@@ -553,12 +553,12 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	zenmode: {
 		inherit: true,
 		onResidual(pokemon) {
-			if (pokemon.baseSpecies.baseForme !== "Standard" || pokemon.transformed) return;
+			if (!["Standard", "School"].includes(pokemon.baseSpecies.baseForme) || pokemon.transformed) return;
 			if (pokemon.baseSpecies.baseSpecies === "Sarieangel" && 
 			pokemon.hp <= pokemon.maxhp / 3 && !['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
 				pokemon.addVolatile('zenmode');
 			}
-			else if (pokemon.hp <= pokemon.maxhp / 2 && !['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
+			else if (pokemon.hp <= pokemon.maxhp / 2 && !['Zen', 'Galar-Zen', 'Solo'].includes(pokemon.species.forme)) {
 				pokemon.addVolatile('zenmode');
 			}
 			else if (pokemon.baseSpecies.baseSpecies === "Sarieangel" && pokemon.hp > pokemon.maxhp / 3
@@ -566,7 +566,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				pokemon.addVolatile('zenmode'); // in case of Sarieangel Zen form
 				pokemon.removeVolatile('zenmode');
 			}
-			else if (pokemon.hp > pokemon.maxhp / 2 && ['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
+			else if (pokemon.hp > pokemon.maxhp / 2 && ['Zen', 'Galar-Zen', 'Solo'].includes(pokemon.species.forme)) {
 				pokemon.addVolatile('zenmode'); // in case of Zen forms mons
 				pokemon.removeVolatile('zenmode');
 			}
@@ -581,16 +581,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		condition: {
 			onStart(pokemon) {
+				if (pokemon.species.id.includes('eiscue')) pokemon.formeChange(pokemon.species.name + '-Noice');
+				if (pokemon.species.id === "wishiwashi") pokemon.formeChange(pokemon.species.name + '-Solo');
 				if (!pokemon.species.name.includes('Galar')) {
 					if (pokemon.species.forme !== 'Zen') {
-						pokemon.formeChange(pokemon.species.name+ '-Zen');
+						pokemon.formeChange(pokemon.species.name + '-Zen');
 					}
 				} else {
 					if (pokemon.species.id !== 'darmanitangalarzen') pokemon.formeChange('Darmanitan-Galar-Zen');
 				}
 			},
 			onEnd(pokemon) {
-				if (['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
+				if (['Zen', 'Galar-Zen', 'Noice', 'Solo'].includes(pokemon.species.forme)) {
 					pokemon.formeChange(pokemon.species.battleOnly as string);
 				}
 			},
