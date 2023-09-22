@@ -9212,6 +9212,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	finteki: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	taterdoom: {
 		inherit: true,
 		isNonstandard: "Past",

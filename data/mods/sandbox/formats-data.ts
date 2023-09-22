@@ -10818,6 +10818,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	finteki: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	pasdawggambino: {
 		inherit: true,
 		tier: "OU",
