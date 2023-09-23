@@ -9838,6 +9838,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	yangfin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	goblyin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	yanture: {
 		tier: "Illegal",
 		isNonstandard: "Future",

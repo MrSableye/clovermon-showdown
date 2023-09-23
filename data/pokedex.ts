@@ -32988,7 +32988,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 95,
 		},
 		abilities: {
-			0: "Soundproof",
+			0: "Cacophony",
 			1: "Filter",
 			H: "Gradient",
 			S: "Snow Cloak",
@@ -43876,7 +43876,72 @@ blobbosmechelectric: {
 		],
 		gen: 8,
 	},
-
+	yangfin: {
+		num: -69043,
+		name: "Yangfin",
+		types: [
+			"Water",
+			"Psychic",
+		],
+		genderRatio: {
+			M: 0.5,
+			F: 0.5,
+		},
+		baseStats: {
+			hp: 115,
+			atk: 69,
+			def: 85,
+			spa: 105,
+			spd: 83,
+			spe: 70,
+		},
+		abilities: {
+			0: "Swift Swim",
+			H: "Multiscale",
+			S: "Hydrophile",
+		},
+		heightm: 2.3,
+		weightkg: 93.7,
+		color: "Pink",
+		eggGroups: [
+			"Monster",
+			"Water 2",
+		],
+		gen: 8,
+	},
+	goblyin: {
+		num: -69234,
+		name: "Goblyin",
+		types: [
+			"Water",
+			"Dark",
+		],
+		genderRatio: {
+			M: 0.5,
+			F: 0.5,
+		},
+		baseStats: {
+			hp: 85,
+			atk: 105,
+			def: 70,
+			spa: 69,
+			spd: 83,
+			spe: 115,
+		},
+		abilities: {
+			0: "Swift Swim",
+			H: "Strong Jaw",
+			S: "Long Reach",
+		},
+		eggGroups: [
+			"Monster",
+			"Water 2",
+		],
+		heightm: 2,
+		weightkg: 80.5,
+		color: "Pink",
+		gen: 8,
+	},
 	buge: {
 		num: -42106,
 		name: "Buge",
