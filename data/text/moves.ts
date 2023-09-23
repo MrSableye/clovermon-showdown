@@ -8256,6 +8256,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Toxic Beam",
 		shortDesc: "20% chance to badly poison the foe.",
 	},
+	aquafangs: {
+		name: "Aqua Fangs",
+		desc: "Has a 20% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "20% chance to lower the target's Speed by 1.",
+	},
 	windwhip: {
 		name: "Wind Whip",
 		shortDesc: "100% chance to lower the foe's Special Defense.",

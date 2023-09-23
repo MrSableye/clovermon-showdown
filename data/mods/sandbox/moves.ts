@@ -4643,4 +4643,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	aquafangs: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
