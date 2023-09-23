@@ -10823,6 +10823,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	yangfin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	goblyin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	pasdawggambino: {
 		inherit: true,
 		tier: "OU",

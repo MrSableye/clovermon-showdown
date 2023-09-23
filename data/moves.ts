@@ -29537,6 +29537,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		forceSwitch: true,
 		isNonstandard: "Future",
 	},
+	aquafangs: {
+		num: 242,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Aqua Fangs",
+		pp: 15,
+		priority: 0,
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			boosts: {
+				spe: -1,
+			},
+		},
+		target: "normal",
+		type: "Water",
+		contestType: "Tough",
+	},
 	gentworrible: {
 		num: 217,
 		accuracy: 90,

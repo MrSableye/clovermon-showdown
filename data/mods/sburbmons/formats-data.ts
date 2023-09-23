@@ -9216,6 +9216,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	yangfin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	goblyin: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	taterdoom: {
 		inherit: true,
 		isNonstandard: "Past",
