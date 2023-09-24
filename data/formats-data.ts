@@ -27111,10 +27111,6 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	null: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
 	jacknoir: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -27436,18 +27432,6 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	gpi: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	slot1: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	slot2: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	slot3: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

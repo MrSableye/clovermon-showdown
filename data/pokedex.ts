@@ -98398,37 +98398,6 @@ blobbosmechelectric: {
 			"Undiscovered"
 		]
 	},
-	null: {
-		num: 413138,
-		name: "null",
-		types: [
-			"Rock",
-			"Water"
-		],
-		baseStats: {
-			hp: 35,
-			atk: 40,
-			def: 100,
-			spa: 35,
-			spd: 90,
-			spe: 55
-		},
-		abilities: {
-			0: "Swift Swim",
-			1: "Shell Armor"
-		},
-		heightm: 0.4,
-		weightkg: 7.5,
-		color: "Blue",
-		eggGroups: [
-			"Bug",
-			"Mineral"
-		],
-		genderRatio: {
-			F: 0.12109375,
-			M: 0.87890625
-		}
-	},
 	jacknoir: {
 		num: 413139,
 		name: "Jack Noir",
@@ -100779,87 +100748,6 @@ blobbosmechelectric: {
 		gender: "M",
 		prevo: "P.Inspctr",
 		evoLevel: 40
-	},
-	slot1: {
-		num: 413220,
-		name: "slot1",
-		types: [
-			"Grass",
-			"Rock"
-		],
-		baseStats: {
-			hp: 80,
-			atk: 95,
-			def: 90,
-			spa: 40,
-			spd: 45,
-			spe: 50
-		},
-		abilities: {
-			0: "Strong Jaw",
-			1: "Strong Jaw"
-		},
-		heightm: 0.4,
-		weightkg: 6.5,
-		color: "Green",
-		eggGroups: [
-			"Fairy"
-		],
-		gender: "M"
-	},
-	slot2: {
-		num: 413221,
-		name: "slot2",
-		types: [
-			"Ground"
-		],
-		baseStats: {
-			hp: 75,
-			atk: 80,
-			def: 60,
-			spa: 75,
-			spd: 45,
-			spe: 65
-		},
-		abilities: {
-			0: "Tough Claws",
-			1: "Tough Claws"
-		},
-		heightm: 1.1,
-		weightkg: 55.8,
-		color: "Brown",
-		eggGroups: [
-			"Fairy"
-		],
-		gender: "M"
-	},
-	slot3: {
-		num: 413222,
-		name: "slot3",
-		types: [
-			"Normal",
-			"Water"
-		],
-		baseStats: {
-			hp: 55,
-			atk: 45,
-			def: 45,
-			spa: 85,
-			spd: 75,
-			spe: 95
-		},
-		abilities: {
-			0: "Natural Cure",
-			1: "Regenerator"
-		},
-		heightm: 0.6,
-		weightkg: 5,
-		color: "Yellow",
-		eggGroups: [
-			"Bug",
-			"Mineral"
-		],
-		gender: "F"
 	},
 	lilseb: {
 		num: 413223,

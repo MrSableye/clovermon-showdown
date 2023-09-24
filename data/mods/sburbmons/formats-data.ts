@@ -26281,10 +26281,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
-	null: {
-		tier: "OU",
-		isNonstandard: null,
-	},
 	jacknoir: {
 		tier: "LC",
 		isNonstandard: null,
@@ -26606,18 +26602,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: null,
 	},
 	gpi: {
-		tier: "OU",
-		isNonstandard: null,
-	},
-	slot1: {
-		tier: "OU",
-		isNonstandard: null,
-	},
-	slot2: {
-		tier: "OU",
-		isNonstandard: null,
-	},
-	slot3: {
 		tier: "OU",
 		isNonstandard: null,
 	},
