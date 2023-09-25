@@ -861,6 +861,58 @@ export const Formats: FormatList = [
 		'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis'
 		],
 	},
+	///////////////////////////////////////////////////////////////////
+	// Wack OMs
+	///////////////////////////////////////////////////////////////////
+	{
+		section: 'Wack OMs',
+		column: 2,
+	},
+	{
+		name: '[Gen 8 Wack Only] FFA Battle',
+		mod: 'wack',
+		gameType: 'freeforall',
+		searchShow: false,
+		rated: false,
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Swagger Clause',
+			'Overflow Stat Mod',
+		],
+		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+		'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+		'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
+		'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
+		'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
+		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
+		'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis'
+		],
+	},
+	{
+		name: "[Gen 8 Wack Only] Multi Battle",
+
+		mod: 'wack',
+		gameType: 'multi',
+		searchShow: false,
+		rated: false,
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Swagger Clause',
+			'Overflow Stat Mod',
+		],
+		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
+		'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
+		'Cryaa', 'aaryC', 'Drizzle', 'Drought', 'Snow Warning', 'Sand Stream', 'Shadow Call', 'Acid Cloudburst', 'Thunderstorm',
+		'Corrupt Orb','Border Wall', 'Ultra Cloak', 'Ultra Scarf', 'Pitch Sludge', 'Apex Orb', 'Antiplebshield', 'GODSORB', 'Sans Hoodie', 
+		'Ginsio Berry', 'Uranus Orb', 'Ballet Outfit', 'Frost Orb', 'Nap Orb', 'Ethereal', 'Glass Armor', 'Fangclaw', 'Craggy Helmet',
+		'Bootsofblindingspeed + Bestow', 'Bootsofblindingspeed + Trick', 'Bootsofblindingspeed + Switcheroo', 'Inverted Rune', 'Sheriff Hat',
+		'Hell Drag', 'Pacify', 'Rift Strike', 'Perfect Freeze', 'Time Stasis'
+		],
+	},
 	{
 		name: '[Gen 8 Wack Only] Custom Game',
 		mod: 'wack',
@@ -868,7 +920,7 @@ export const Formats: FormatList = [
 		rated: false,
 		debug: true,
 		battle: {trunc: Math.trunc},
-		ruleset: ['Terastal Clause', 'Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
+		ruleset: ['Terastal Clause', 'Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100', 'Overflow Stat Mod'],
 	},
 	{
 		name: '[Gen 8 Wack Only] Custom Game (Doubles)',
@@ -878,7 +930,7 @@ export const Formats: FormatList = [
 		rated: false,
 		debug: true,
 		battle: {trunc: Math.trunc},
-		ruleset: ['Terastal Clause', 'Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
+		ruleset: ['Terastal Clause', 'Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100', 'Overflow Stat Mod'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// CAP & Cope
