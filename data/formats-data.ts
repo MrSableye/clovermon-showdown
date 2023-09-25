@@ -27463,26 +27463,6 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	slot4: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	slot5: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	slot6: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	slot7: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
-	slot8: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
 	davepeta: {
 		tier: "Illegal",
 		isNonstandard: "Future",

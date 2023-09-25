@@ -26633,26 +26633,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
-	slot4: {
-		tier: "OU",
-		isNonstandard: null,
-	},
-	slot5: {
-		tier: "OU",
-		isNonstandard: null,
-	},
-	slot6: {
-		tier: "OU",
-		isNonstandard: null,
-	},
-	slot7: {
-		tier: "LC",
-		isNonstandard: null,
-	},
-	slot8: {
-		tier: "LC",
-		isNonstandard: null,
-	},
 	davepeta: {
 		tier: "OU",
 		isNonstandard: null,
