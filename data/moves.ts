@@ -32623,6 +32623,77 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {spe: 1}},
 		contestType: "Beautiful",
 	},
+	skillroom: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Skill Room",
+		pp: 10,
+		priority: 0,
+		flags: {mirror: 1},
+		pseudoWeather: 'skillroom',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasAbility(['persistent', 'moreroom'])) {
+					this.add('-activate', source, `ability: ${source.ability}`, effect);
+					return 7;
+				}
+				return 5;
+			},
+			onFieldStart(target, source) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-fieldstart', 'move: Skill Room', '[of] ' + source, '[persistent]');
+				} else {
+					this.add('-fieldstart', 'move: Skill Room', '[of] ' + source);
+				}
+			},
+			onCriticalHit: false,
+			onFieldRestart(target, source) {
+				this.field.removePseudoWeather('skillroom');
+			},
+			onModifyMove(move, pokemon) {
+				let previousAccuracy = 100;
+				if (typeof move.accuracy === 'number') {
+					previousAccuracy = move.accuracy;
+					move.accuracy = true;
+				}
+
+				if (previousAccuracy > 0 && previousAccuracy < 100) {
+					move.basePower *= previousAccuracy / 100;
+				}
+
+				if (move.secondaries) {
+					this.debug('doubling secondary chance');
+					for (const secondary of move.secondaries) {
+						if (!secondary.chance) return;
+						secondary.chance = secondary.chance >= 50
+							? 100
+							: 0;
+					}
+				}
+
+				if (move.self?.chance) {
+					if (move.self.chance >= 50) {
+						move.self.chance = 100;
+					} else {
+						move.self.chance = 0;
+					}
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 6,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Skill Room', '[of] ' + this.effectState.source);
+			},
+		},
+		secondary: null,
+		target: "all",
+		type: "Psychic",
+		zMove: {boost: {spd: 1}},
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
 	runeofluck: {
 		accuracy: true,
 		basePower: 0,
