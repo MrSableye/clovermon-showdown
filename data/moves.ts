@@ -32434,7 +32434,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		onHit(target, source) {
-			const numberEffects = 35;
+			const numberEffects = 37;
 			const effect: number = this.random(numberEffects);
 			switch (effect) {
 				case 0:
@@ -32561,9 +32561,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 				case 34:
 					this.actions.useMove('banana', source, target, this.effect);
 					break;
+				case 35:
+					target.addVolatile('telekinesis');
+					break;
+				case 36:
+					source.addVolatile('telekinesis');
+					break;
 			}
-			// You can levitate
-			// Your opponent can levitate
 			// You can use Any of the Dance moves.
 			// You can give any of the 18 types+Nuclear, Plastic and glass on your opponent or yourself.
 			// You can revive an ally
