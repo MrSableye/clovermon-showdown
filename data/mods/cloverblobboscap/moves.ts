@@ -1718,4 +1718,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	bombrock: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
