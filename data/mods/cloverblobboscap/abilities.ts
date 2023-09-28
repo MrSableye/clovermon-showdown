@@ -610,14 +610,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	plus: {
-		onModifySpAPriority: 5,
-		onModifySpA(spa, pokemon) {
-			for (const allyActive of pokemon.allies()) {
-				if (allyActive.hasAbility(['minus', 'plus'])) {
-					return this.chainModify(1.5);
-				}
-			}
-		},
+		inherit: true,
+		isNonstandard: null,
 		onAfterHit(target, source, move) {
 			if (move.type !== 'Electric') return;
 			if (this.randomChance(1, 4)) {
@@ -637,19 +631,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				}
 			}
 		},
-		name: "Plus",
-		rating: 0,
-		num: 57,
 	},
 	minus: {
-		onModifySpAPriority: 5,
-		onModifySpA(spa, pokemon) {
-			for (const allyActive of pokemon.allies()) {
-				if (allyActive.hasAbility(['minus', 'plus'])) {
-					return this.chainModify(1.5);
-				}
-			}
-		},
+		inherit: true,
+		isNonstandard: null,
 		onBoost(boost, target, source, effect) {
 			let showMsg = false;
 			let i: BoostID;
@@ -663,8 +648,5 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				this.add("-fail", target, "unboost", "[from] ability: Minus", "[of] " + target);
 			}
 		},
-		name: "Minus",
-		rating: 0,
-		num: 58,
 	},
 };
