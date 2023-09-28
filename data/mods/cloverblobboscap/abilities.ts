@@ -612,7 +612,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	plus: {
 		inherit: true,
 		isNonstandard: null,
-		onAfterHit(target, source, move) {
+		onAfterMove(target, source, move) {
 			if (move.type !== 'Electric') return;
 			if (this.randomChance(1, 4)) {
 				const stats: BoostID[] = [];
