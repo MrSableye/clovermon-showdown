@@ -605,4 +605,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	thermalfumes: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

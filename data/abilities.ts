@@ -10779,6 +10779,32 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Immortality",
 		isNonstandard: "Future",
 	},
+	thermalfumes: {
+		name: "Thermal Fumes",
+		isNonstandard: "Future",
+		onModifyMove(move) {
+			if (move.category === 'Status') return;
+			if (move.type === 'Fire') {
+				if (!move.secondaries) {
+					move.secondaries = [];
+				}
+				move.secondaries.push({
+					chance: 20,
+					status: 'psn',
+					ability: this.dex.abilities.get('thermalfumes'),
+				});
+			} else if (move.type === 'Poison') {
+				if (!move.secondaries) {
+					move.secondaries = [];
+				}
+				move.secondaries.push({
+					chance: 20,
+					status: 'brn',
+					ability: this.dex.abilities.get('thermalfumes'),
+				});
+			}
+		},
+	},
 	joycon: {
 		onModifyMovePriority: -11,
 		onModifyMove(move, attacker, defender) {

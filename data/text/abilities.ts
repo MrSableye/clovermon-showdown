@@ -3062,6 +3062,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		transform: "[POKEMON] has regained its immortality!",
 	},
+	thermalfumes: {
+		name: "Thermal Fumes",
+		shortDesc: "Fire-type attacking moves have 20% chance to poison. Poison-type attacking moves have a 20% chance to burn.",
+	},
 	joycon: {
 		name: "Joycon",
 		desc: "If this Pokemon is an Blobbos-Switch, it changes to Blue Forme before using a special move, Red forme before using a physical move, and its base forme Shield Forme before using a status move.",
