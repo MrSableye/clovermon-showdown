@@ -10779,6 +10779,65 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Immortality",
 		isNonstandard: "Future",
 	},
+	assimilation: {
+		name: "Assimilation",
+		isNonstandard: "Future",
+		onTryHit(target, source, move) {
+			if (!this.effectState.immuneTypes) return;
+			if (target === source) return;
+			if (this.effectState.immuneTypes.includes(move.type)) {
+				this.add('-immune', target, '[from] ability: Assimilation');
+				return null;
+			}
+		},
+		onSetStatus(status, target, source, effect) {
+			let newType: string | null = null;
+			if (['psn', 'tox'].includes(status.id)) {
+				newType = 'Poison';
+				this.heal(target.baseMaxhp / 4);
+			} else if (status.id === 'brn') {
+				newType = 'Fire';
+				this.boost({
+					atk: 2,
+					spa: 2,
+				}, target, target, this.effect);
+			} else if (status.id === 'par') {
+				newType = 'Electric';
+				this.boost({
+					spe: 2,
+				}, target, target, this.effect);
+			} else if (status.id === 'frz') {
+				newType = 'Ice';
+				this.boost({
+					def: 2,
+					spd: 2,
+				}, target, target, this.effect);
+			} else if (status.id === 'slp') {
+				newType = 'Normal';
+				this.boost({
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				}, target, target, this.effect);
+			}
+
+			if (newType && !target.hasType(newType) && target.addType(newType)) {
+				this.add('-start', target, 'typechange', target.types.join('/'), '[from] ability: Assimilation');
+			}
+
+			if (!this.effectState.immuneTypes) {
+				this.effectState.immuneTypes = [];
+			}
+
+			if (!this.effectState.immuneTypes.includes(newType)) {
+				this.effectState.immuneTypes.push(newType);
+			}
+
+			return false;
+		},
+	},
 	thermalfumes: {
 		name: "Thermal Fumes",
 		isNonstandard: "Future",

@@ -3062,6 +3062,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		transform: "[POKEMON] has regained its immortality!",
 	},
+	assimilation: {
+		name: "Assimilation",
+		shortDesc: "Immune to status. Upon being statused, gains a type associated with the status, becomes immune to it, and receive a bonus effect based on the type. Poison/Tox (Poison) = 1/4 Heal, Burn (Fire) = +2 Atk & +2 Spa, Paralyze (Electric) = +2 Spe, Freeze (Ice) = +2 Def & +2 SpD, Sleep (Normal) = +1 to all.",
+	},
 	thermalfumes: {
 		name: "Thermal Fumes",
 		shortDesc: "Fire-type attacking moves have 20% chance to poison. Poison-type attacking moves have a 20% chance to burn.",
