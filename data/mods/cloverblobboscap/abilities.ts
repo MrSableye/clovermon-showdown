@@ -649,4 +649,44 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
+	fireaffinity: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	wateraffinity: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	electricityaffinity: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	strengthaffinity: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	poisonaffinity: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	rockaffinity: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	flightaffinity: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	iceaffinity: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	lightaffinity: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	parasiteaffinity: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 };
