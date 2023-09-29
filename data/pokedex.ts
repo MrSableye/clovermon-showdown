@@ -32982,10 +32982,10 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseStats: {
 			hp: 70,
 			atk: 30,
-			def: 50,
+			def: 60,
 			spa: 125,
 			spd: 125,
-			spe: 95,
+			spe: 100,
 		},
 		abilities: {
 			0: "Cacophony",

@@ -22078,7 +22078,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	boltbeam: {
 		num: 69048,
 		accuracy: 100,
-		basePower: 65,
+		basePower: 55,
 		category: "Special",
 		name: "Boltbeam",
 		pp: 10,

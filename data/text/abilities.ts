@@ -2169,8 +2169,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	gradient: {
 		name: "Gradient",
-		shortDesc: "Gains an extra type in battle based on the foe's color.",
-		desc: "Gains an extra type in battle based on the foe's color. Red = Fire, Blue = Water, Yellow = Electric, Green = Grass, Black = Dark, Brown = Ground, Purple = Poison, Gray = Steel, White = Flying, Pink = Fairy.",
+		shortDesc: "Changes type in battle based on the foe's color.",
+		desc: "Changes type in battle based on the foe's color. Red = Fire, Blue = Water, Yellow = Electric, Green = Grass, Black = Dark, Brown = Ground, Purple = Poison, Gray = Steel, White = Flying, Pink = Fairy.",
 	},
 	anyability: {
 		name: "Any Ability",
