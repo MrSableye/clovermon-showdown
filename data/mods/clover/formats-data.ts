@@ -5442,7 +5442,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	flameboyan: {
 		inherit: true,
-		tier: "NU",
+		tier: "NUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"moonblast",
@@ -5941,7 +5941,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	premantom: {
 		inherit: true,
-		tier: "NU",
+		tier: "NUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"hex",
@@ -7304,7 +7304,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	tarditank: {
 		inherit: true,
-		tier: "NU",
+		tier: "NUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"rest",
