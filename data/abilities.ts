@@ -5490,6 +5490,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			}
 		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.species.id !== 'biteki') return;
+			if (['Ice', 'Psychic'].includes(move.type)) {
+				move.forceSTAB = true;
+			}
+		},
 		rating: 2,
 		isNonstandard: "Future",
 	},
