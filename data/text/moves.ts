@@ -9237,7 +9237,9 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	haste: {
 		name: "Haste",
-		shortDesc: "Allies attacking moves go first in their priority bracket for 4 turns.",
+		shortDesc: "Allies attacking moves go first in their priority bracket for 4 turns with a diminishing chance to occur.",
+
+		activate: "  [POKEMON] can act faster than normal, thanks to its Haste!",
 	},
 	sharpeyes: {
 		name: "Sharp Eyes",

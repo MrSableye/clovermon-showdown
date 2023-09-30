@@ -31793,10 +31793,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		sideCondition: 'haste',
 		condition: {
 			duration: 4,
+			onStart() {
+				this.effectState.counter = 1;
+			},
 			onFractionalPriorityPriority: -1,
 			onFractionalPriority(priority, pokemon, target, move) {
 				if (move.category === 'Status') return;
-				return 0.1;
+				const denominator = Math.pow(2, (this.effectState.counter || 1));
+				if (this.randomChance(1, denominator)) {
+					this.add('-activate', pokemon, 'Haste');
+					this.effectState.counter++;
+					return 0.1;
+				}
+
+				this.effectState.counter = 1;
 			},
 			onSideResidualOrder: 26,
 			onSideResidualSubOrder: 3,
