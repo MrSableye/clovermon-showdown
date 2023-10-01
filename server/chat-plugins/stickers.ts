@@ -36,7 +36,7 @@ const checkCooldown = (userID: ID) => {
 	const now = Date.now();
 	const activeCooldown = cooldowns[userID];
 
-	if (activeCooldown && ((activeCooldown - now) < COOLDOWN)) {
+	if (activeCooldown && ((now - activeCooldown) < COOLDOWN)) {
 		return false;
 	}
 
