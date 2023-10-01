@@ -8,6 +8,7 @@ const MAX_STICKER_SIZE = 320;
 const STICKER_SIZE = 160;
 const ERROR_NO_STICKER_NAME = 'Specify an sticker name.';
 const ERROR_NO_STICKER_URL = 'Specify an sticker URL.';
+const COOLDOWN = 10 * 1000;
 
 type Stickers = Record<string, string>;
 
@@ -27,6 +28,20 @@ const addOrUpdateSticker = (name: string, filename: string) => {
 const deleteSticker = (name: string) => {
 	delete stickers[name];
 	saveStickers();
+};
+
+const cooldowns: Record<string, number> = {};
+
+const checkCooldown = (userID: ID) => {
+	const now = Date.now();
+	const activeCooldown = cooldowns[userID];
+
+	if (activeCooldown && ((activeCooldown - now) < COOLDOWN)) {
+		return false;
+	}
+
+	cooldowns[userID] = now;
+	return true;
 };
 
 const toAlphaNumeric = (text: string) => ('' + text).replace(/[^A-Za-z0-9]+/g, '');
@@ -63,6 +78,10 @@ export const commands: Chat.ChatCommands = {
 		}
 
 		this.checkChat();
+
+		if (!checkCooldown(user.id)) {
+			throw new Chat.ErrorMessage('You are using stickers too quickly.');
+		}
 
 		const stickerName = target.trim();
 		const sticker = stickers[stickerName];
