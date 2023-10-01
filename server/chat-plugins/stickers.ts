@@ -62,6 +62,8 @@ export const commands: Chat.ChatCommands = {
 			throw new Chat.ErrorMessage('You are banned from using stickers.');
 		}
 
+		this.checkChat();
+
 		const stickerName = target.trim();
 		const sticker = stickers[stickerName];
 
