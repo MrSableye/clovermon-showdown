@@ -395,12 +395,11 @@ export const commands: Chat.ChatCommands = {
 			throw new Chat.ErrorMessage('You are using stickers too quickly.');
 		}
 
-		const stickerName = `custom-${user.id}`;
-		const sticker = stickers[`custom-${user.id}`];
+		const sticker = stickers[user.id];
 
 		if (!sticker || !sticker.sticker) throw new Chat.ErrorMessage(`You have no custom sticker.`);
 
-		return `/html ${createStickerHtml(stickerName, sticker.sticker)}`;
+		return `/html ${createStickerHtml(`custom-${user.id}`, sticker.sticker)}`;
 	},
 	custom: {
 		avatars: 'avatar',
