@@ -1076,6 +1076,27 @@ export const Formats: FormatList = [
 		],
 		banlist: ['Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Fling + License to Sell Hotdogs', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware'],
 	},
+	{
+		name: '[Gen 8 Clover Blobbos CAP Only] Doubles OU',
+		gameType: 'doubles',
+		mod: 'cloverblobboscap',
+		ruleset: [
+			'Terastal Clause',
+			'Obtainable',
+			'Team Preview',
+			'Sleep Clause Mod',
+			'Blobbos Only',
+			'Nickname Clause',
+			'Endless Battle Clause',
+			'HP Percentage Mod',
+			'Cancel Mod',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+			'OHKO Clause',
+			'Evasion Moves Clause',
+		],
+		banlist: ['Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Blobbos-Plok + Jet Punch', 'Fling + License to Sell Hotdogs', 'Mitosis Mash', 'Cell Construct'],
+	},
 	///////////////////////////////////////////////////////////////////
 	// Showderp
 	///////////////////////////////////////////////////////////////////
