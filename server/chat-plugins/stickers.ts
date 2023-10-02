@@ -46,7 +46,7 @@ const checkCooldown = (userID: ID) => {
 
 const toAlphaNumeric = (text: string) => ('' + text).replace(/[^A-Za-z0-9]+/g, '');
 
-export const createrStickerHtml = (
+export const createStickerHtml = (
 	name: string,
 	filename: string,
 ) => `<img src="https://clover.weedl.es:8443/stickers/${filename}" title="/gif ${name}" height="${STICKER_SIZE}" width="${STICKER_SIZE}">`;
@@ -88,13 +88,13 @@ export const commands: Chat.ChatCommands = {
 
 		if (!sticker) throw new Chat.ErrorMessage(`No such sticker ${stickerName} exists.`);
 
-		return `/html ${createrStickerHtml(stickerName, sticker)}`;
+		return `/html ${createStickerHtml(stickerName, sticker)}`;
 	},
 	managegif: 'managesticker',
 	managesticker: {
 		list() {
 			this.runBroadcast();
-			return this.sendReplyBox(`<b><u>Stickers</u> <i>(hover for name, try <code>/gif STICKERNAME</code>)</i></b><br />${Object.entries(stickers).map(([stickerName, stickerUrl]) => createrStickerHtml(stickerName, stickerUrl)).join(' ')}`);
+			return this.sendReplyBox(`<b><u>Stickers</u> <i>(hover for name, try <code>/gif STICKERNAME</code>)</i></b><br />${Object.entries(stickers).map(([stickerName, stickerUrl]) => createStickerHtml(stickerName, stickerUrl)).join(' ')}`);
 		},
 		update: 'add',
 		async add(target, room, user) {
@@ -115,7 +115,7 @@ export const commands: Chat.ChatCommands = {
 			addOrUpdateSticker(stickerName, filename);
 
 			this.addGlobalModAction(`${user.name} added sticker ${stickerName}`);
-			return this.sendReplyBox(`Added: ${createrStickerHtml(stickerName, filename)}`);
+			return this.sendReplyBox(`Added: ${createStickerHtml(stickerName, filename)}`);
 		},
 		remove(target, room, user) {
 			this.checkCan('emoji');

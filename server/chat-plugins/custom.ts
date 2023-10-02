@@ -2,7 +2,8 @@ import parseColor from 'parse-color';
 import {FS, Image, Net, Utils} from '../../lib';
 import {getTourWins} from './data-badges';
 import {createEmojiHtml} from './emojis';
-import { escapeHTML } from '../../lib/utils';
+import {createStickerHtml} from './stickers';
+import {escapeHTML} from '../../lib/utils';
 
 /* Generic logic */
 const CUSTOM_CSS_PATH = 'config/custom.css';
@@ -216,6 +217,95 @@ const removeEmojiStaffNotificiation = (requesterId: string) => {
 	}
 };
 
+/* Sticker Logic */
+const STICKER_MINIMUM_TOUR_WINS = 4;
+const STICKER_USER_INELIGIBLE = `You are not eligble for a custom sticker. You must have at least ${STICKER_MINIMUM_TOUR_WINS} tour wins.`;
+const STICKER_ERROR_WRITING_IMAGE = 'Unable to write image. Please try again or contact an administrator.';
+const STICKER_UNKNOWN_ERROR = 'An unknown error occured. Please try again or contact an administrator.';
+const COOLDOWN = 10 * 1000;
+
+interface StickerStatus {
+	enabled: boolean;
+	requestedSticker?: string;
+	sticker?: string;
+}
+
+type StickerConfig = Record<string, StickerStatus>;
+
+export const stickers: StickerConfig = JSON.parse(
+	FS('config/chat-plugins/custom-stickers.json').readIfExistsSync() || "{}"
+);
+
+const saveStickers = () => {
+	FS('config/chat-plugins/custom-stickers.json').writeUpdate(() => JSON.stringify(stickers));
+};
+
+const updateStickerStatus = (id: string, statusUpdate: Partial<StickerStatus>) => {
+	const stickerStatus = stickers[id];
+
+	const newStatus: StickerStatus = {
+		enabled: false,
+	};
+
+	stickers[id] = {
+		...newStatus,
+		...stickerStatus,
+		...statusUpdate,
+	};
+
+	saveStickers();
+};
+
+const createRawStickerHtml = (
+	userId: string,
+	stickerFileName: string,
+	isRequest = false,
+) => createStickerHtml(
+	`custom-${userId}`,
+	(isRequest ? 'requests/' : '') + stickerFileName);
+
+const createPendingStickerRequestHtml = (userId: string, stickerFileName: string, isBroadcast = false) => {
+	const username = getUsername(userId);
+	let pendingStickerRequestHtml = '<details>';
+	pendingStickerRequestHtml += `<summary><b>${username}${isBroadcast ? ' Custom Sticker Request' : ''}</b></summary>`;
+	pendingStickerRequestHtml += createRawStickerHtml(userId, stickerFileName, true) + '<br />';
+	pendingStickerRequestHtml += `<button class="button" name="send" value="/custom sticker approve ${userId}">Approve</button>`;
+	pendingStickerRequestHtml += `<button class="button" name="send" value="/custom sticker deny ${userId}">Deny</button>`;
+	return pendingStickerRequestHtml + '</details>';
+};
+
+const notifyStickerStaff = (requesterId: string, fileName: string) => {
+	const staffRoom = Rooms.get('staff');
+
+	if (staffRoom) {
+		staffRoom.sendMods(`|uhtml|sticker-request-${requesterId}|${createPendingStickerRequestHtml(requesterId, fileName, true)}`);
+	}
+};
+
+const removeStickerStaffNotificiation = (requesterId: string) => {
+	const staffRoom = Rooms.get('staff');
+
+	if (staffRoom) {
+		staffRoom.sendMods(
+			Utils.html`|uhtml|sticker-request-${requesterId}|`,
+		);
+	}
+};
+
+const cooldowns: Record<string, number> = {};
+
+const checkCooldown = (userID: ID) => {
+	const now = Date.now();
+	const activeCooldown = cooldowns[userID];
+
+	if (activeCooldown && ((now - activeCooldown) < COOLDOWN)) {
+		return false;
+	}
+
+	cooldowns[userID] = now;
+	return true;
+};
+
 /* Title Logic */
 const TITLE_MINIMUM_TOUR_WINS = 2;
 const TITLE_USER_INELIGIBLE = `You are not eligble for a custom title. You must have at least ${TITLE_MINIMUM_TOUR_WINS} tour wins.`;
@@ -291,6 +381,27 @@ const saveBackgrounds = () => {
 };
 
 export const commands: Chat.ChatCommands = {
+	cgif: 'mysticker',
+	csticker: 'mysticker',
+	mygif: 'mysticker',
+	mysticker(target, room, user) {
+		if (Punishments.hasPunishType(user.id, 'EMOJIBAN')) {
+			throw new Chat.ErrorMessage('You are banned from using stickers.');
+		}
+
+		this.checkChat();
+
+		if (!checkCooldown(user.id)) {
+			throw new Chat.ErrorMessage('You are using stickers too quickly.');
+		}
+
+		const stickerName = target.trim();
+		const sticker = stickers[stickerName];
+
+		if (!sticker || !sticker.sticker) throw new Chat.ErrorMessage(`You have no custom sticker.`);
+
+		return `/html ${createStickerHtml(stickerName, sticker.sticker)}`;
+	},
 	custom: {
 		avatars: 'avatar',
 		avatar: {
@@ -588,6 +699,144 @@ export const commands: Chat.ChatCommands = {
 				`<code>/custom emoji deny [user]</code>: denies the user's emoji request. Requires: @ or above<br />`
 			);
 		},
+		sticker: {
+			async request(target, room, user) {
+				try {
+					const canHaveSticker = hasTourWins(STICKER_MINIMUM_TOUR_WINS, user) || Config.customsticker?.[user.id] !== undefined;
+
+					if (!canHaveSticker) {
+						throw new Chat.ErrorMessage(STICKER_USER_INELIGIBLE);
+					}
+
+					const imageUrl = target.trim();
+					const imageResult = await Image.downloadImageWithVerification(imageUrl, {
+						validTypes: ['png', 'gif'],
+						enforceSquare: true,
+						maxDimensions: { width: 64, height: 64 },
+						minDimensions: { width: 32, height: 32 },
+						fileSize: 200000,
+					});
+
+					if ('error' in imageResult) {
+						throw new Chat.ErrorMessage(imageResult.error);
+					}
+
+					const { image, type } = imageResult;
+
+					try {
+						const fileName = `custom-${user.id}.${type}`;
+						await FS(`./config/stickers/requests/${fileName}`).write(image);
+
+						updateStickerStatus(user.id, { requestedSticker: fileName });
+
+						notifyStickerStaff(user.id, fileName);
+
+						return this.sendReplyBox(`Requested: ${createRawStickerHtml(user.id, fileName, true)}`);
+					} catch (error) {
+						throw new Chat.ErrorMessage(STICKER_ERROR_WRITING_IMAGE);
+					}
+				} catch (error) {
+					throw new Chat.ErrorMessage(STICKER_UNKNOWN_ERROR);
+				}
+			},
+			showall: 'showapproved',
+			showapproved() {
+				this.runBroadcast();
+				this.checkCan('avatar');
+
+				const stickerList = Object.entries(stickers).filter(([userId, stickerStatus]) => stickerStatus.sticker !== undefined);
+
+				if (!stickerList.length) {
+					return this.sendReplyBox('<b><u>Approved Stickers</u></b><br /><div>No approved stickers.</div>');
+				}
+
+				/* eslint-disable max-len */
+				const stickerListHtml = stickerList.map(
+					([
+						userId,
+						stickerSTattus,
+					]) => `<span style="display: inline-block;"><div>${getUsername(userId)}</div><div>${createRawStickerHtml(userId, stickerSTattus.sticker || '')}</div></span>`
+				).join(' ');
+				/* eslint-enable max-len */
+
+				return this.sendReplyBox('<b><u>Approved Stickers</u></b><br />' + stickerListHtml);
+			},
+			showrequests: 'requests',
+			requests() {
+				this.checkCan('avatar');
+
+				const stickerList = Object.entries(stickers)
+					.filter(([userId, stickerStatus]) => stickerStatus.requestedSticker !== undefined);
+
+				if (!stickerList.length) {
+					return this.sendReplyBox('<b><u>Sticker Requests</u></b><br />' + `<div>No requests available.</div>`);
+				}
+
+				const requestListHtml = stickerList.map(
+					([userId, stickerStatus]) => createPendingStickerRequestHtml(userId, stickerStatus.requestedSticker || ''),
+				).join('<br />');
+
+				return this.sendReplyBox('<b><u>Sticker Requests</u></b><br />' + requestListHtml);
+			},
+			approve(target) {
+				this.checkCan('avatar');
+
+				const targetId = toID(target);
+				const stickerStatus = stickers[targetId];
+
+				if (!stickerStatus || !stickerStatus.requestedSticker) {
+					throw new Chat.ErrorMessage(`No sticker request for ${targetId}`);
+				}
+
+				updateStickerStatus(targetId, {
+					sticker: stickerStatus.requestedSticker,
+					requestedSticker: undefined,
+				});
+
+				FS(`./config/stickers/requests/${stickerStatus.requestedSticker}`)
+					.renameSync(`./config/stickers/${stickerStatus.requestedSticker}`);
+
+				sendPM(`/html <div class="infobox"><div>Sticker approved</div><div>${createRawStickerHtml(targetId, stickerStatus.requestedSticker)}</div></div>`, targetId);
+				removeStickerStaffNotificiation(targetId);
+
+				return this.sendReplyBox(`<div><div>Approved sticker request of ${targetId}</div><div>${createRawStickerHtml(targetId, stickerStatus.requestedSticker)}</div></div>`);
+			},
+			deny(target) {
+				this.checkCan('avatar');
+
+				const targetId = toID(target);
+				const stickerStatus = stickers[targetId];
+
+				if (!stickerStatus || !stickerStatus.requestedSticker) {
+					throw new Chat.ErrorMessage(`No sticker request for ${targetId}`);
+				}
+
+				updateStickerStatus(targetId, {
+					requestedSticker: undefined,
+				});
+
+				FS(`./config/stickers/requests/${stickerStatus.requestedSticker}`).unlinkIfExistsSync();
+
+				sendPM('Your sticker request was denied.', targetId);
+				removeStickerStaffNotificiation(targetId);
+
+				return this.sendReply(`Denied sticker request of ${targetId}`);
+			},
+			'': 'help',
+			help() {
+				return this.parse('/help custom sticker');
+			},
+		},
+		stickerhelp() {
+			this.sendReplyBox(
+				`<code>/custom sticker request [image url]</code>: requests a custom sticker. Requires: custom sticker access<br />` +
+				`<code>/custom sticker showall</code>: shows all approved stickers. Requires: @ or above<br />` +
+				`<code>/custom sticker showrequests</code>: shows all un-approved stickers. Requires: @ or above<br />` +
+				`<code>/custom sticker approve [user]</code>: approves the user's sticker request. Requires: @ or above<br />` +
+				`<code>/custom sticker deny [user]</code>: denies the user's sticker request. Requires: @ or above<br />` +
+				`<code>/cgif [user]</code>: Use your sticker if you have one. Requires: custom sticker access`
+			);
+		},
 		title: {
 			set(target, room, user) {
 				const canHaveTitle = hasTourWins(TITLE_MINIMUM_TOUR_WINS, user) || Config.customtitle?.[user.id] !== undefined;
@@ -775,7 +1024,8 @@ export const commands: Chat.ChatCommands = {
 			`<code>/custom flair</code>: commands related to custom flairs. Try <code>/help custom flair</code> for details. ${FLAIR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom color</code>: commands related to custom user colors. Try <code>/help custom color</code> for details. ${NAME_COLOR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom background</code>: commands related to custom background colors. Try <code>/help custom background</code> for details. ${BACKGROUND_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
-			`<code>/custom emoji</code>: commands related to custom emojis. Try <code>/help custom emoji</code> for details. ${EMOJI_MINIMUM_TOUR_WINS} or more tour wins required to use.`
+			`<code>/custom emoji</code>: commands related to custom emojis. Try <code>/help custom emoji</code> for details. ${EMOJI_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
+			`<code>/custom sticker</code>: commands related to custom stickers. Try <code>/help custom sticker</code> for details. ${STICKER_MINIMUM_TOUR_WINS} or more tour wins required to use.`
 		);
 	},
 };
