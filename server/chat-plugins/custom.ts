@@ -712,8 +712,8 @@ export const commands: Chat.ChatCommands = {
 					const imageResult = await Image.downloadImageWithVerification(imageUrl, {
 						validTypes: ['png', 'gif'],
 						enforceSquare: true,
-						maxDimensions: { width: 64, height: 64 },
-						minDimensions: { width: 32, height: 32 },
+						maxDimensions: { width: 320, height: 320 },
+						minDimensions: { width: 160, height: 160 },
 						fileSize: 200000,
 					});
 
@@ -834,7 +834,7 @@ export const commands: Chat.ChatCommands = {
 				`<code>/custom sticker showrequests</code>: shows all un-approved stickers. Requires: @ or above<br />` +
 				`<code>/custom sticker approve [user]</code>: approves the user's sticker request. Requires: @ or above<br />` +
 				`<code>/custom sticker deny [user]</code>: denies the user's sticker request. Requires: @ or above<br />` +
-				`<code>/cgif [user]</code>: Use your sticker if you have one. Requires: custom sticker access`
+				`<code>/cgif</code>: Use your sticker if you have one. Requires: custom sticker access`
 			);
 		},
 		title: {
