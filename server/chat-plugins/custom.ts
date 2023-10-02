@@ -396,7 +396,7 @@ export const commands: Chat.ChatCommands = {
 		}
 
 		const stickerName = target.trim();
-		const sticker = stickers[stickerName];
+		const sticker = stickers[`custom-${stickerName}`];
 
 		if (!sticker || !sticker.sticker) throw new Chat.ErrorMessage(`You have no custom sticker.`);
 
