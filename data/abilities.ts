@@ -7862,7 +7862,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	finale: {
 		onPrepareHit(source, target, move) {
-			if (move.hasBounced || move.isFutureMove || move.sourceEffect === 'snatch') return;
+			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
 			const type = move.type;
 			if (type && type !== '???' && source.getTypes().join() !== type) {
 				if (!source.setType(type)) return;
@@ -8503,7 +8503,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	artist: {
 		onAfterMove(source, target, move) {
-			if (move.hasBounced || move.isFutureMove || move.sourceEffect === 'snatch') return;
+			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
 			const type = move.type;
 			if (type && type !== '???' && target.getTypes().join() !== type) {
 				if (!target.setType(type)) return;
