@@ -16104,6 +16104,26 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	psyblade: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	hydrosteam: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	syrupbomb: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	matchgotcha: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ivycudgel: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	/* Enabled moves */
 	pound: {
 		inherit: true,

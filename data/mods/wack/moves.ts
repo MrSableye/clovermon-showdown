@@ -1,4 +1,24 @@
 export const Moves: {[k: string]: ModdedMoveData} = {
+	psyblade: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	hydrosteam: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	syrupbomb: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	matchgotcha: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ivycudgel: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	/* Modified vanilla moves */
 	gunkshot: {
 		inherit: true,
