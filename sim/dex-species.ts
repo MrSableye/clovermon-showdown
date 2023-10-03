@@ -26,10 +26,18 @@ export interface SpeciesData extends Partial<Species> {
 export type ModdedSpeciesData = SpeciesData | Partial<Omit<SpeciesData, 'name'>> & {inherit: true};
 
 export interface SpeciesFormatsData {
+	comboMoves?: readonly string[];
 	doublesTier?: TierTypes.Doubles | TierTypes.Other;
+	essentialMove?: string;
+	exclusiveMoves?: readonly string[];
 	gmaxUnreleased?: boolean;
 	isNonstandard?: Nonstandard | null;
 	natDexTier?: TierTypes.Singles | TierTypes.Other;
+	randomBattleMoves?: readonly string[];
+	randomBattleLevel?: number;
+	randomDoubleBattleMoves?: readonly string[];
+	randomDoubleBattleLevel?: number;
+	randomBattleNoDynamaxMoves?: readonly string[];
 	tier?: TierTypes.Singles | TierTypes.Other;
 }
 
