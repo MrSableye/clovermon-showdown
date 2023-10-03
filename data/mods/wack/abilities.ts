@@ -1,6 +1,30 @@
 import { truncate } from "fs";
 
 export const Abilities: {[k: string]: ModdedAbilityData} = {
+	toxicchain: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	mindseye: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	supersweetsyrup: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	embodyaspectteal: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	embodyaspecthearthflame: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	embodyaspectwellspring: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	/* Modified vanilla abilities */
 	toxicboost: {
 		inherit: true,
