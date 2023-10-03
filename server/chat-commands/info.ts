@@ -628,6 +628,9 @@ export const commands: Chat.ChatCommands = {
 						Gen: String(pokemon.gen) || 'CAP',
 						Height: `${pokemon.heightm} m`,
 					};
+					if (pokemon.creator) {
+						details["Creator"] = pokemon.creator;
+					}
 					details["Weight"] = `${pokemon.weighthg / 10} kg <em>(${weighthit} BP)</em>`;
 					const gmaxMove = pokemon.canGigantamax || dex.species.get(pokemon.changesFrom).canGigantamax;
 					if (gmaxMove && dex.gen >= 8) details["G-Max Move"] = gmaxMove;
@@ -730,8 +733,11 @@ export const commands: Chat.ChatCommands = {
 					if (move.flags['recharge']) details["&#10003; Has recharge turn"] = "";
 					if (move.flags['gravity'] && dex.gen >= 4) details["&#10007; Suppressed by Gravity"] = "";
 					if (move.flags['dance'] && dex.gen >= 7) details["&#10003; Dance move"] = "";
-					if (move.flags['slicing'] && dex.gen >= 9) details["&#10003; Slicing move"] = "";
+					if (move.flags['slicing'] && dex.gen >= 8) details["&#10003; Slicing move"] = "";
 					if (move.flags['wind'] && dex.gen >= 9) details["&#10003; Wind move"] = "";
+					if (move.flags['kick'] && dex.gen >= 8) details["&#10003; Kick move"] = "";
+					if (move.flags['bone'] && dex.gen >= 8) details["&#10003; Bone move"] = "";
+					if (move.flags['hammer'] && dex.gen >= 8) details["&#10003; Hammer move"] = "";
 
 					if (dex.gen >= 7) {
 						if (move.gen >= 8 && move.isMax) {
@@ -1138,12 +1144,9 @@ export const commands: Chat.ChatCommands = {
 				case 1:
 					neutral.push(type);
 					break;
-				case 2:
-				case 4:
+				default:
 					superEff.push(type);
 					break;
-				default:
-					throw new Error(`/coverage effectiveness of ${bestCoverage[type]} from parameters: ${target}`);
 				}
 			}
 			buffer.push(`Coverage for ${sources.join(' + ')}:`);
@@ -1215,12 +1218,9 @@ export const commands: Chat.ChatCommands = {
 					case 1:
 						cell += `bgcolor=#6688AA title="${typing}"><font color=#000066>${bestEff}</font>`;
 						break;
-					case 2:
-					case 4:
+					default:
 						cell += `bgcolor=#559955 title="${typing}"><font color=#003300>${bestEff}</font>`;
 						break;
-					default:
-						throw new Error(`/coverage effectiveness of ${bestEff} from parameters: ${target}`);
 					}
 					cell += '</th>';
 					buffer += cell;
@@ -1506,6 +1506,156 @@ export const commands: Chat.ChatCommands = {
 		`!statcalc [level] [base stat] [IVs] [nature] [EVs] [modifier] (only base stat is required) - Shows this information to everyone.`,
 		`Inputing 'hp' as an argument makes it use the formula for HP. Instead of giving nature, '+' and '-' can be appended to the EV amount (e.g. 252+ev) to signify a boosting or inhibiting nature.`,
 		`An actual stat can be given in place of a base stat or EVs. In this case, the minumum base stat or EVs necessary to have that real stat with the given parameters will be determined. For example, '/statcalc 502real 252+ +1' calculates the minimum base speed necessary for a positive natured fully invested scarfer to outspeed`,
+	],
+
+	innate(target) {
+		if (!this.runBroadcast()) return;
+		if (!target) return this.parse("/help innate");
+
+		target = target.toLowerCase().replace(/\s/g, "");
+
+		switch(target) {
+			case 'list':
+				return this.sendReplyBox(`List of Wack Pok&eacute;mons with a coded innate ability:<br /> Achillesder, Aegislash, Alphanne, `+
+				`Angry Man Jew, Audinette, Audino, Azathoth, Bersecules, Borosu, Castform, Cclefable, Cclefairy, Crabblante, DQ Dragon Lord, Dragurve, Eiscue, Empty Anne, ` +
+				`F-00, Feiscue, God, Gowen, HIM Chaos, HIM Cyber, HIM Divine, HIM F, HIM G, HIMless, HIM Magma, HIM Nuclear, HIM Paper, HIM Void, HIM W, HIM Wall, HIM Wind, ` +
+				`Indeedee, Jekhyde, Kawainnocent, Lunar Guardian, Maidcoresh, ManVaccine, Mecha Zaydolf, Mestwi, Meta Knight, Mlavagun, Msteamboatle, Neapolitaneiscue, ` +
+				`Pincurchin, Rillaboom, Sandaconda, SCPee 096, Skeleton, Tank Top Mastah, Tapu Bulu, Tapu Fini, Tapu Koko, Tapu Lele, Tardida, Tikcofagrigus, Torterra, True HIM, Watch Doggo Man, Wishiwashi`);
+			case 'tapukoko':
+				return this.sendReplyBox(`<u>Tapu Koko</u>: On switch-in, summons Electric Terrain.`);
+			case 'pincurchin':
+				return this.sendReplyBox(`<u>Pincurchin</u>: On switch-in, summons Electric Terrain.`);
+			case 'tapulele':
+				return this.sendReplyBox(`<u>Tapu Lele</u>: On switch-in, summons Psychic Terrain.`);
+			case 'indeedee':
+				return this.sendReplyBox(`<u>Indeedee</u>: On switch-in, summons Psychic Terrain.`);
+			case 'audino':
+				return this.sendReplyBox(`<u>Audino</u>: If it has the "Healer" ability, summons Misty Terrain on switch-in.`);
+			case 'audinette':
+				return this.sendReplyBox(`<u>Audinette</u>: If it has the "Healer" ability, summons Misty Terrain on switch-in.`);
+			case 'torterra':
+				return this.sendReplyBox(`<u>Torterra</u>: If it has the "Filter" ability, summons Gravity on switch-in.`);
+			case 'himcyber':
+				return this.sendReplyBox(`<u>HIM Cyber</u>: Immune to Destiny Bond.`);
+			case 'himg':
+				return this.sendReplyBox(`<u>HIM G</u>: Immune to Destiny Bond. On switch-in, summons Grassy Terrain for 15 turns. 30 with Terrain Extender.`);
+			case 'himf':
+				return this.sendReplyBox(`<u>HIM F</u>: Immune to Destiny Bond.`);
+			case 'himw':
+				return this.sendReplyBox(`<u>HIM W</u>: Immune to Destiny Bond.`);
+			case 'himwind':
+				return this.sendReplyBox(`<u>HIM Wind</u>: Immune to Destiny Bond.`);
+			case 'himmagma':
+				return this.sendReplyBox(`<u>HIM Magma</u>: Immune to Destiny Bond.`);
+			case 'himnuclear':
+				return this.sendReplyBox(`<u>HIM Nuclear</u>: Immune to Destiny Bond.`);
+			case 'himvirus':
+				return this.sendReplyBox(`<u>HIM Virus</u>: Immune to Destiny Bond.`);
+			case 'lunarguardian':
+				return this.sendReplyBox(`<u>Lunar Guardian</u>: Immune to Destiny Bond.`);
+			case 'tapubulu':
+				return this.sendReplyBox(`<u>Tapu Bulu</u>: On switch-in, summons Grassy Terrain.`);
+			case 'rillaboom':
+				return this.sendReplyBox(`<u>Rillaboom</u>: If it has the "Mold Breaker" ability, summons Grassy Terrain on switch-in.`);
+			case 'tapufini':
+				return this.sendReplyBox(`<u>Tapu Fini/u>: If it has the "Rain Dish" ability, summons Misty Terrain on switch-in.`);
+			case 'truehim':
+				return this.sendReplyBox(`<u>True HIM/u>: Immune to OHKO moves and Perish Song.`);
+			case 'himless':
+				return this.sendReplyBox(`<u>HIMless/u>: Immune to OHKO moves and Perish Song.`);
+			case 'himwall':
+				return this.sendReplyBox(`<u>HIM Wall/u>: Immune to OHKO moves and Perish Song.`);
+			case 'himdivine':
+				return this.sendReplyBox(`<u>HIM Divine/u>: Immune to OHKO moves.`);
+			case 'himchaos':
+				return this.sendReplyBox(`<u>HIM Chaos/u>: Immune to OHKO moves.`);
+			case 'gowen':
+				return this.sendReplyBox(`<u>Gowen/u>: Immune to Perish Song and Perish Song.`);
+			case 'mechazaydolf':
+				return this.sendReplyBox(`<u>Mecha Zaydolf/u>: Immune to Perish Song.`);
+			case 'alphanne':
+				return this.sendReplyBox(`<u>Alphanne/u>: Immune to Perish Song.`);
+			case 'himvoid':
+				return this.sendReplyBox(`<u>HIM Void/u>: Immune to Perish Song.`);
+			case 'god':
+				return this.sendReplyBox(`<u>God/u>: Immune to Perish Song.`);
+			case 'msteamboatle':
+				return this.sendReplyBox(`<u>Msteamboatle</u>: If it has the "Wacky" ability, gets "Speed Boost" effect.`);
+			case 'azathoth':
+				return this.sendReplyBox(`<u>Azathoth</u>: On each turns, tries setting itself to sleep.`);
+			case 'tardida':
+				return this.sendReplyBox(`<u>Tardida</u>: In rain, turns into Tardida-Rain and boosts Tardida and its allies Atk and SpA by 1.5x.`);
+			case 'tanktopmastah':
+				return this.sendReplyBox(`<u>Tank Top Mastah</u>: On switch-in, summons Safeguard.`)
+			case 'metaknight':
+				return this.sendReplyBox(`<u>Meta Knight</u>: On each damaging hit, deals 1/16 of its target max HP as damage.`);
+			case 'achillesder':
+				return this.sendReplyBox(`<u>Achillesder/u>: If it has the "Wonder Guard" ability and is hit, minimize its Speed.`);
+			case 'sandaconda':
+				return this.sendReplyBox(`<u>Sandaconda</u>: Upon dealing damage, summons Sandstorm.`);
+			case 'tikcofagrigus':
+				return this.sendReplyBox(`<u>Tikcofagrigus</u>: Upon dealing damage, summons Inverted Room.`);
+			case 'manvaccine':
+				return this.sendReplyBox(`<u>Manvaccine</u>: Upon dealing damage, gets 1 Stockpile.`);
+			case 'borosu':
+				return this.sendReplyBox(`<u>Borosu</u>: On each turns, heals 1/3 of its max HP. Turns into Zen under 1/2 of its max HP. otherwise turns into Standard at full health.`);
+			case 'eiscue':
+				return this.sendReplyBox(`<u>Eiscue</u>: Turns into Noice under 1/2 of its max HP. otherwise turns into Standard.`);
+			case 'feiscue':
+				return this.sendReplyBox(`<u>Feiscue</u>: Turns into Noice under 1/2 of its max HP. otherwise turns into Standard.`);
+			case 'neapolitaneiscue':
+				return this.sendReplyBox(`<u>Neapolitaneiscue</u>: Turns into Noice under 1/2 of its max HP. otherwise turns into Standard.`);
+			case 'jekhyde':
+				return this.sendReplyBox(`<u>Jekhyde</u>: Turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);
+			case 'dqdragonlord':
+				return this.sendReplyBox(`<u>DQ Dragon Lord</u>: Turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);
+			case 'sephiroth':
+				return this.sendReplyBox(`<u>Sephiroth</u>: Turns into Zen under 1/3 of its max HP. otherwise turns into Standard.`);
+			case 'scpee096':
+				return this.sendReplyBox(`<u>SCPee 096</u>: If it has "Anger Point", turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);
+			case 'angrymanjew':
+				return this.sendReplyBox(`<u>Angry Man Jew</u>: If it has "Rough Skin", turns into Zen under 1/3 of its max HP. otherwise turns into Standard.`);	
+			case 'f00':
+				return this.sendReplyBox(`<u>F-00</u>: If it has "Volt Absorb", turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);	
+			case 'emptyanne':
+				return this.sendReplyBox(`<u>Empty Anne</u>: If it has "Clear Body", turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);	
+			case 'kawainnocent':
+				return this.sendReplyBox(`<u>Kawainnocent</u>: If it has "Cute Charm", turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);	
+			case 'mestwi':
+				return this.sendReplyBox(`<uMestwi</u>: If it has "Filter", turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);	
+			case 'cclefairy':
+				return this.sendReplyBox(`<u>Cclefairy</u>: Turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);	
+			case 'cclefable':
+				return this.sendReplyBox(`<u>F-00</u>: Turns into Zen under 1/2 of its max HP. otherwise turns into Standard.`);	
+			case 'wishiwashi':
+				return this.sendReplyBox(`<u>Wishiwashi</u>: If it has "Water Veil", turns into Solo under 1/4 of its max HP. otherwise turns into School.`);	
+			case 'aegislash':
+				return this.sendReplyBox(`<u>Aegislash</u>: If it has the "Hyper Cutter" ability, gets "Stance Change" effect. Reverts using "King's Shield".`);
+			case 'himpaper':
+				return this.sendReplyBox(`<u>HIM Paper</u>: If it has the "Competitive" ability, gets "Stance Change" effect. Reverts using "Close Book".`);
+			case 'maidcoresh':
+				return this.sendReplyBox(`<u>Maidcoresh</u>: If it has the "Rough Skin" ability, gets "Stance Change" effect. Reverts using "Protect".`);
+			case 'skeleton':
+				return this.sendReplyBox(`<u>Skeleton</u>: Raises its evasion by 1.6x.`);
+			case 'dragurve':
+				return this.sendReplyBox(`<u>Dragurve</u>: Its Dragon-type attacks have 1.5x power.`);
+			case 'mlavagun':
+				return this.sendReplyBox(`<u>Mlavagun</u>: If it has the "Wacky" ability, gets "Sheer Force" effect.`);
+			case 'bersecules':
+				return this.sendReplyBox(`<u>Bersecules</u>: Its first move deals halved damage.`);
+			case 'crabblante':
+				return this.sendReplyBox(`<u>Crabblante</u>: Receives 0.8x damage unless it's a critical hit.`);
+			case 'watchdoggoman':
+				return this.sendReplyBox(`<u>Watch Doggo Man</u>: Receives 0.7x damage from non Normal-type moves and deals 1.3x damage if the target isn't Normal-type.`);
+			default:
+				return this.parse("/innate list");
+		}
+	},
+	innatehelp: [
+		`/innate list - Display all Pok&eacute;amons with an innate ability.`,
+		`/innate [pokemon] - Display the innate ability of a Pok&eacute;amon, if it has one.`,
+		`!innate list - Shows this information to everyone. Requires: + % @ # &`,
+		`!innate [pokemon] - Shows this information to everyone. Requires: + % @ # &`,
 	],
 
 	/*********************************************************
@@ -2712,8 +2862,8 @@ export const commands: Chat.ChatCommands = {
 		if (!target) target = user.id;
 		let rawResult;
 		try {
-			rawResult = await Net(`https://${Config.routes.root}/users/${target}.json`).get();
-		} catch (e: any) {
+			rawResult = await Net(`https://${Config.routes.root}/users/${target}.json`).get(); // TODO: Remove clover hack!!
+		} catch (e) {
 			if (e.message.includes('Not found')) throw new Chat.ErrorMessage(`User '${target}' is unregistered.`);
 			throw new Chat.ErrorMessage(e.message);
 		}

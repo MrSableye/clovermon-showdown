@@ -51,6 +51,7 @@ const DATA_TYPES: (DataType | 'Aliases')[] = [
 	'Abilities', 'Rulesets', 'FormatsData', 'Items', 'Learnsets', 'Moves',
 	'Natures', 'Pokedex', 'Scripts', 'Conditions', 'TypeChart', 'PokemonGoData',
 ];
+const TEXT_DATA_TYPES: (keyof TextTableData)[] = ['Abilities', 'Default', 'Items', 'Moves', 'Pokedex'];
 
 const DATA_FILES = {
 	Abilities: 'abilities',
@@ -440,7 +441,12 @@ export class ModdedDex {
 	loadTextFile(
 		name: string, exportName: string
 	): DexTable<MoveText | ItemText | AbilityText | PokedexText | DefaultText> {
-		return require(`${DATA_DIR}/text/${name}`)[exportName];
+		try {
+			return require(`${this.dataDir}/text/${name}`)[exportName];
+		} catch (e) {
+			if (this.isBase) throw e;
+			return {};
+		}
 	}
 
 	includeMods(): this {
@@ -467,16 +473,64 @@ export class ModdedDex {
 		return this;
 	}
 
-	loadTextData() {
-		if (dexes['base'].textCache) return dexes['base'].textCache;
-		dexes['base'].textCache = {
+	loadTextDataFiles(): TextTableData {
+		return {
 			Pokedex: this.loadTextFile('pokedex', 'PokedexText') as DexTable<PokedexText>,
 			Moves: this.loadTextFile('moves', 'MovesText') as DexTable<MoveText>,
 			Abilities: this.loadTextFile('abilities', 'AbilitiesText') as DexTable<AbilityText>,
 			Items: this.loadTextFile('items', 'ItemsText') as DexTable<ItemText>,
 			Default: this.loadTextFile('default', 'DefaultText') as DexTable<DefaultText>,
 		};
-		return dexes['base'].textCache;
+	}
+
+	loadTextData() {
+		if (this.textCache) return this.textCache;
+
+		const textCache = this.loadTextDataFiles();
+
+		const basePath = this.dataDir + '/';
+
+		const Scripts = this.loadDataFile(basePath, 'Scripts');
+		this.parentMod = this.isBase ? '' : (Scripts.inherit || 'base');
+
+		let parentDex;
+		if (this.parentMod) {
+			parentDex = dexes[this.parentMod];
+			if (!parentDex || parentDex === this) {
+				throw new Error(
+					`Unable to load ${this.currentMod}. 'inherit' in scripts.ts should specify a parent mod from which to inherit data, or must be not specified.`
+				);
+			}
+		}
+
+		if (parentDex) {
+			const parentTextTable = parentDex.loadTextData();
+			for (const dataType of TEXT_DATA_TYPES) {
+				const parentText: DexTable<any> = parentTextTable[dataType];
+				const childText: DexTable<any> = textCache[dataType] || (textCache[dataType] = {});
+				for (const entryId in parentText) {
+					if (childText[entryId] === null) {
+						// null means don't inherit
+						delete childText[entryId];
+					} else if (!(entryId in childText)) {
+						childText[entryId] = this.deepClone(parentText[entryId]);
+					} else if (childText[entryId] && parentText[entryId].inherit) {
+						// {inherit: true} can be used to modify only parts of the parent data,
+						// instead of overwriting entirely
+						delete childText[entryId].inherit;
+
+						// Merge parent into children entry, preserving existing childs' properties.
+						for (const key in parentText[entryId]) {
+							if (key in childText[entryId]) continue;
+							childText[entryId][key] = parentText[entryId][key];
+						}
+					}
+				}
+			}
+		}
+
+		this.textCache = textCache;
+		return textCache;
 	}
 
 	loadData(): DexTableData {

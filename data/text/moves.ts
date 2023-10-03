@@ -2373,7 +2373,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	gearup: {
 		name: "Gear Up",
-		desc: "Raises the Attack and Special Attack of Pokemon on the user's side with the Plus or Minus Abilities by 1 stage.",
+		desc: "Raises the Attack and Special Attack ofhttps://phasmophobia.fandom.com/wiki/6_Tanglewood_Drive#Cursed_Possession_locations Pokemon on the user's side with the Plus or Minus Abilities by 1 stage.",
 		shortDesc: "Raises Atk, Sp. Atk of allies with Plus/Minus by 1.",
 	},
 	genesissupernova: {
@@ -7458,10 +7458,17567 @@ export const MovesText: {[k: string]: MoveText} = {
 	zippyzap: {
 		name: "Zippy Zap",
 		desc: "Has a 100% chance to raise the user's evasion by 1 stage.",
-		shortDesc: "Goes first. Raises user's evasion by 1.",
+		shortDesc: "Goes first. Always crits.",
 		gen7: {
 			desc: "Will always result in a critical hit.",
 			shortDesc: "Nearly always goes first. Always crits.",
 		},
+	},
+	/* Clovermons */
+	sleazyspores: {
+		name: "Sleazy Spores",
+		shortDesc: "Lowers Speed of foes by 1 on switch-in.",
+		desc: "Sets up a hazard on the opposing side of the field, lowering the Speed by 1 stage of each opposing Pokemon that switches in, unless it is immune to powder moves. Fails if the effect is already active on the opposing side. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin or Defog successfully, is hit by Defog",
+		start: "  Sleazy spores float in the air around [TEAM]!",
+		end: "  The sleazy spores disappeared from around [TEAM]!",
+		activate: "  Sleazy spores sedated [POKEMON]!",
+	},
+	slimegulp: {
+		name: "Slime Gulp",
+		desc: "The target's Ability is rendered ineffective as long as it remains active.",
+		shortDesc: "Nullifies the foe(s) Ability if the foe(s) move first.",
+	},
+	inverseroom: {
+		name: "Inverse Room",
+		shortDesc: "Creates a bizarre area where type matchups are swapped for five turns.",
+	},
+	fruitpunch: {
+		name: "Fruit Punch",
+		shortDesc: "20% chance to lower the target's Def by 1.",
+		desc: "Has a 20% chance to lower the target's Defense by 1 stage.",
+	},
+	dragonfist: {
+		name: "Dragon Fist",
+		shortDesc: "10% chance to paralyze the target.",
+		desc: "Has a 10% chance to paralyze the target.",
+	},
+	lickclean: {
+		name: "Lick Clean",
+		shortDesc: "Resets all of the target's positive stat stages to 0. Heals for each boost removed.",
+	},
+	speedweed: {
+		name: "Speed Weed",
+		shortDesc: "Usually goes first.",
+		desc: "No additional effect.",
+	},
+	overbite: {
+		name: "Overbite",
+		shortDesc: "User loses 50% max HP on hit. Hits adjacent Pokemon.",
+		desc: "If this move is successful, the user loses 1/2 of its maximum HP, rounded up, unless the user has the Magic Guard Ability.",
+		damage: "  ([POKEMON] cut its own HP to power up its move!)",
+	},
+	"1000folds": {
+		name: "1000 Folds",
+		shortDesc: "Not resisted by Steel. Ignore substitutes. Destroys screens. Hits through protection.",
+	},
+	warhead: {
+		name: "Warhead",
+		desc: "Has a 10% chance to burn the target.",
+		shortDesc: "10% chance to burn the target.",
+	},
+	weirdflex: {
+		name: "Weird Flex",
+		shortDesc: "Uses Bulk Up, Scary Face, Endure, and Follow Me targeted all at itself.",
+	},
+	scorchedearth: {
+		name: "Scorched Earth",
+		shortDesc: "Has a 100% to burn grounded adjacent Pokemon and itself if grounded.",
+	},
+	hulkup: {
+		name: "Hulk Up",
+		shortDesc: "Raises Atk and Def by 1. Raises by 2 if this has 1/2 of less of its max HP.",
+		desc: "Raises the user's Attack and Defense by 1 stage. If this Pokemon has 1/2 or less of its maximum HP, it boosts Attack and Defense an additional stage.",
+	},
+	focusmunch: {
+		name: "Focus Munch",
+		shortDesc: "Heals the user by 50% of its max HP and raises Acc by 1. Fails if the user takes damage before it hits.",
+		desc: "The user restores 1/2 of its maximum HP, rounded half up. The user loses its focus and does nothing if it is hit by a damaging attack this turn before it can execute the move.",
+	},
+	mop: {
+		name: "Mop",
+		shortDesc: "Free user from hazards; +1 Acc if any hazards were removed.",
+		desc: "If this move is successful and the user has not fainted, all hazards are removed from the user's side of the field. Has a 100% chance to raise the user's Accuracy by 1 stage if any hazards were removed.",
+	},
+	quicksand: {
+		name: "Quick Sand",
+		shortDesc: "Usually goes first.",
+		desc: "No additional effect.",
+	},
+	thinkfast: {
+		name: "Think Fast",
+		shortDesc: "Usually goes first.",
+		desc: "No additional effect.",
+	},
+	boltbeam: {
+		name: "Boltbeam",
+		shortDesc: "Hits 2 times in one turn. First hit is Electric-type and second is Ice-type.",
+	},
+	checkem: {
+		name: "Check 'Em",
+		shortDesc: "Hits 2-5 times in one turn. Physical if user's Atk > Sp. Atk.",
+		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times. This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes.",
+	},
+	pixiepummel: {
+		name: "Pixie Pummel",
+		shortDesc: "No additional effect.",
+	},
+	gayagenda: {
+		name: "Gay Agenda",
+		shortDesc: "A target of the same gender gets infatuated.",
+		desc: "Causes the target to become infatuated, making it unable to attack 50% of the time. Fails if both the user and the target are not the same gender, if either is genderless, or if the target is already infatuated. The effect ends when either the user or the target is no longer active. Pokemon with the Oblivious Ability or protected by the Aroma Veil Ability are immune.",
+	},
+	spooperpower: {
+		name: "Spooperpower",
+		shortDesc: "Physical if user's Atk > Sp. Atk.",
+		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes.",
+	},
+	greatrage: {
+		name: "Great Rage",
+		shortDesc: "No additional effect.",
+	},
+	wowwiener: {
+		name: "Wow Wiener",
+		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+		shortDesc: "Hits 2-5 times in one turn.",
+	},
+	plunder: {
+		name: "Plunder",
+		desc: "If this attack was successful and the user has not fainted, it steals the target's held item if the user is not holding one. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
+		shortDesc: "If the user has no item, it steals the target's.",
+	},
+	blobbybop: {
+		name: "Blobby Bop",
+		shortDesc: "This move does not check accuracy.",
+	},
+	banhammer: {
+		name: "Ban Hammer",
+		shortDesc: "Torments and Taunts the foe.",
+	},
+	homerunbat: {
+		name: "Homerun Bat",
+		shortDesc: "Forces the target to switch to a random ally.",
+		desc: "If both the user and the target have not fainted, the target is forced to switch out and be replaced with a random unfainted ally. This effect fails if the target used Ingrain previously, has the Suction Cups Ability, or this move hit a substitute.",
+	},
+	elbowdrop: {
+		name: "Elbow Drop",
+		shortDesc: "No additional effect.",
+	},
+	anattack: {
+		name: "An Attack",
+		shortDesc: "No additional effect.",
+	},
+	chaosdunk: {
+		name: "Chaos Dunk",
+		shortDesc: "No additional effect.",
+	},
+	comengo: {
+		name: "Come n' Go",
+		shortDesc: "Hits 2-5 times in one turn.",
+		desc: "Hits two to five times. Has a 1/3 chance to hit two or three times, and a 1/6 chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+	},
+	dailydose: {
+		name: "Daily Dose",
+		shortDesc: "25% chance to poison or badly poison or put the target to sleep.",
+		desc: "Has a 25% chance to either poison, badly poison, or inflict sleep on the target.",
+	},
+	decaydrain: {
+		name: "Decay Drain",
+		shortDesc: "User recovers 50% of the damage dealt.",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+	},
+	dildocannon: {
+		name: "Dildo Cannon",
+		shortDesc: "Hits 2-5 times in one turn.",
+		desc: "Hits two to five times. Has a 1/3 chance to hit two or three times, and a 1/6 chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+	},
+	enema: {
+		name: "Enema",
+		shortDesc: "User recovers 50% of the damage dealt.",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+	},
+	erosionwave: {
+		name: "Erosion Wave",
+		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
+	},
+	falconpunch: {
+		name: "Falcon Punch",
+		shortDesc: "10% chance to burn the target.",
+		desc: "Has a 10% chance to burn the target.",
+	},
+	firebomb: {
+		name: "Fire Bomb",
+		shortDesc: "No additional effect.",
+	},
+	fizzbitch: {
+		name: "Fizzbitch",
+		shortDesc: "10% chance to paralyze the target.",
+		desc: "Has a 10% chance to paralyze the target.",
+	},
+	foryou: {
+		name: "For You",
+		desc: "Has a 100% chance to lower the target's Defense by 1 stage.",
+		shortDesc: "100% chance to lower the target's Defense by 1.",
+	},
+	futababreak: {
+		name: "Futaba Break",
+		shortDesc: "Destroys screens, unless the target is immune.",
+		desc: "If this attack does not miss, the effects of Reflect, Light Screen, and Aurora Veil end for the target's side of the field before damage is calculated.",
+	},
+	holyduty: {
+		name: "Holy Duty",
+		shortDesc: "Hits adjacent Pokemon. The user faints.",
+		desc: "The user faints after using this move, even if this move fails for having no target. This move is prevented from executing if any active Pokemon has the Damp Ability.",
+	},
+	lactoseshot: {
+		name: "Lactose Shot",
+		shortDesc: "Lowers the user's Sp. Atk by 2.",
+		desc: "Lowers the user's Special Attack by 2 stages.",
+	},
+	meme: {
+		name: "Meme",
+		shortDesc: "10% chance to raise all stats by 1 (not acc/eva).",
+		desc: "Has a 10% chance to raise the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
+	},
+	overenergize: {
+		name: "Overenergize",
+		shortDesc: "Lowers the user's Sp. Atk by 2.",
+		desc: "Lowers the user's Special Attack by 2 stages.",
+	},
+	owtheedge: {
+		name: "Ow The Edge",
+		shortDesc: "Has 25% recoil.",
+		desc: "If the target lost HP, the user takes recoil damage equal to 25% the HP lost by the target, rounded half up, but not less than 1 HP.",
+	},
+	pukeblood: {
+		name: "Puke Blood",
+		shortDesc: "Has 25% recoil.",
+		desc: "If the target lost HP, the user takes recoil damage equal to 25% the HP lost by the target, rounded half up, but not less than 1 HP.",
+	},
+	punchout: {
+		name: "Punch Out",
+		shortDesc: "User switches out after damaging the target.",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+	},
+	regenerate: {
+		name: "Regenerate",
+		shortDesc: "Heals the user by 50% of its max HP. User cures its burn, poison, or paralysis.",
+		desc: "The user restores 1/2 of its maximum HP, rounded half up, and cures its burn, poison, or paralysis.",
+	},
+	riotshield: {
+		name: "Riot Shield",
+		shortDesc: "Summons Safeguard.",
+		desc: "This move summons Safeguard for 5 turns upon use.",
+	},
+	shitpost: {
+		name: "Shitpost",
+		shortDesc: "Lasts 2-3 turns. Confuses the user afterwards.",
+		desc: "The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pokemon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
+	},
+	spookout: {
+		name: "Spook Out",
+		desc: "Has a 100% chance to flinch the target. Fails unless it is the user's first turn on the field.",
+		shortDesc: "Hits first. First turn out only. 100% flinch chance.",
+	},
+	stratoblade: {
+		name: "Strato Blade",
+		shortDesc: "High critical hit ratio.",
+		desc: "Has a higher chance for a critical hit.",
+	},
+	supersnore: {
+		name: "Super Snore",
+		shortDesc: "User must be asleep.",
+		desc: "Fails if the user is not asleep.",
+	},
+	swindle: {
+		name: "Swindle",
+		shortDesc: "If the user has no item, it steals the target's.",
+		desc: "If this attack was successful and the user has not fainted, it steals the target's held item if the user is not holding one. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
+	},
+	toke: {
+		name: "Toke",
+		shortDesc: "Lowers Def, SpD by 1; raises Atk, SpA, Spe by 2.",
+		desc: "Lowers the user's Defense and Special Defense by 1 stage. Raises the user's Attack, Special Attack, and Speed by 2 stages.",
+	},
+	toxiravage: {
+		name: "Toxiravage",
+		shortDesc: "Usually goes first.",
+		desc: "No additional effect.",
+	},
+	trigger: {
+		name: "Trigger",
+		shortDesc: "Power doubles with each hit, up to 160.",
+		desc: "Power doubles with each successful hit, up to a maximum of 160 power. The power is reset if this move misses or another move is used.",
+	},
+	sudoku: {
+		name: "Sudoku",
+		shortDesc: "User faints.",
+		desc: "The user faints.",
+	},
+	slipturn: {
+		name: "Slip Turn",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+		shortDesc: "User switches out after damaging the target.",
+		gen6: {
+			desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button.",
+		},
+		gen4: {
+			desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members.",
+		},
+
+		switchOut: "[POKEMON] went back to [TRAINER]!",
+	},
+	/* Clover CAP */
+	crusadercrash: {
+		name: "Crusader Crash",
+		desc: "This move is always a critical hit unless the target is under the effect of Lucky Chant or has an ability that prevents critical hits.",
+		shortDesc: "Always results in a critical hit.",
+	},
+	moregun: {
+		name: "More Gun",
+		desc: "Hits six times.",
+		shortDesc: "Hits 6 times.",
+	},
+	trickstab: {
+		name: "Trick Stab",
+		desc: "This move always crits under Illusion unless the target is under the effect of Lucky Chant or has an ability that prevents critical hits, and removes Illusion on a successful hit.",
+		shortDesc: "Guaranteed crit under Illusion; removes it on hit.",
+	},
+	psychofists: {
+		name: "Psycho Fists",
+		desc: "If this move is successful, the terrain becomes Psychic Terrain.",
+		shortDesc: "Summons Psychic Terrain.",
+	},
+	dragonburst: {
+		name: "Dragon Burst",
+		desc: "The power of this move is 60 if X is 33 to 48, 80 if X is 17 to 32, 100 if X is 10 to 16, 120 if X is 5 to 9, 150 if X is 2 to 4, and 200 if X is 0 or 1, where X is equal to (user's current HP * 48 / user's maximum HP), rounded down.",
+		shortDesc: "More power the less HP the user has left.",
+	},
+	faradaycage: {
+		name: "Faraday Cage",
+		desc: "The user has 1/8 of its maximum HP restored at the end of each turn, but it is prevented from switching out and other Pokemon cannot force the user to switch out. The user can still switch out if it uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. If the user leaves the field using Baton Pass, the replacement will remain trapped and still receive the healing effect. During the effect, the user can be hit normally by Ground-type attacks and be affected by Spikes, Toxic Spikes, and Sticky Web, even if the user is a Flying type or has the Levitate Ability.",
+		shortDesc: "Traps/grounds user; heals 1/8 max HP per turn.",
+	},
+	rockclock: {
+		name: "Rock Clock",
+		desc: "Has a 20% chance to make the target confused.",
+		shortDesc: "20% chance to make the target confused.",
+	},
+	awaken: {
+		name: "Awaken",
+		desc: "Raises the user's Attack, Defense, and Speed by 2 stages. This attack charges on the first turn and executes on the second. If the user is holding a Power Herb, the move completes in one turn.",
+		shortDesc: "Charges, then raises Atk, Def, Spe by 2 turn 2.",
+
+		prepare: "[POKEMON] is channeling energy!",
+	},
+	voltaiccyclone: {
+		name: "Voltaic Cyclone",
+		desc: "If this move is successful and the user has not fainted, the effects of Leech Seed and binding moves end for the user, and all hazards are removed from the user's side of the field.",
+		shortDesc: "Free user from hazards/bind/Leech Seed.",
+	},
+	boilover: {
+		name: "Boil Over",
+		desc: "Power doubles if Rain Dance or Sunny Day is active, and this move's type changes to match the other. Fire type during Primordial Sea or Rain Dance and Water type during Desolate Land or Sunny Day.",
+		shortDesc: "Power doubles and type varies in rain or sun.",
+		move: "Breakneck Blitz turned into [MOVE] due to the weather!",
+	},
+	soulcrusher: {
+		name: "Soul Crusher",
+		desc: "Power is multiplied by 999 times if the target has less than or equal to half of its maximum HP remaining. Heals for 100% of the damage the move has dealt.",
+		shortDesc: "999x power if target HP < 50%, heals for damage dealt.",
+	},
+	tombstoner: {
+		name: "Tombstoner",
+		desc: "Power is equal to (user's current HP * 300 / user's maximum HP), rounded down, but not less than 100. The user faints after using this move, Damage is calculated using the user's Defense stat as its Attack. This move is prevented from executing if any active Pokemon has the Damp Ability. ",
+		shortDesc: "Power = HP%. The user faints, uses user's Def stat as Atk.",
+	},
+	fruitjuice: {
+		name: "Fruit Juice",
+		desc: "Power is equal to 120 times the user's Stockpile count. Whether or not this move is successful, the user's Defense and Special Defense decrease by as many stages as Stockpile had increased them, and the user's Stockpile count resets to 0. Lowers the target's Sp.Def by two stages.",
+		shortDesc: "Gets stronger with Stockpile, -2 Sp. Def to the target.",
+	},
+	phantomfang: {
+		name: "Phantom Fang",
+		desc: "Has a 20% chance to Curse the target.",
+		shortDesc: "20% to Curse, Lowers the user's Speed by 1.",
+	},
+	phasethrough: {
+		name: "Phase Through",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+		shortDesc: "User switches out after damaging the target.",
+		switchOut: "[POKEMON] went back to [TRAINER]!",
+	},
+	coldcutter: {
+		name: "Cold Cutter",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
+	},
+	shadowscales: {
+		name: "Shadow Scales",
+		desc: "Lowers the user's Defense by 1 stage.",
+		shortDesc: "Lowers the user's Defense by 1.",
+	},
+	wingsofcorrection: {
+		name: "Wings Of Correction",
+		desc: "If this move is successful the effects of Reflect, Light Screen, Aurora Veil, Safeguard, Mist, Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the target's side, and the effects of Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the user's side. If there is a terrain active and this move is successful, the terrain will be cleared. Has -6 priority and switches the opponent out to a random member.",
+		shortDesc: "Clears terrain and hazards, switches out opponent.",
+	},
+	brutalpunishment: {
+		name: "Brutal Punishment",
+		desc: "Has a 100% chance to raise the user's Attack and Special Attack by 1 stage. If the user is a Disbeary in Nice Mode, this move is Fairy type. If the user is a Disbeary in Ebil Mode, this move is Dark type. This move cannot be used successfully unless the user's current form, while considering Transform, is Nice or Ebil Mode Disbeary.",
+		shortDesc: "Disbeary: Fairy; Ebil: Dark; 100% +1 Atk and Sp. Atk.",
+	},
+	shinestrike: {
+		name: "Shine Strike",
+		shortDesc: "Not resisted by Steel, Hits 2-5 times in one turn.",
+	},
+	petrify: {
+		name: "Petrify",
+		desc: "The user is protected from most attacks made by other Pokemon during this turn. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
+		shortDesc: "Protects user this turn, +1 Defense.",
+	},
+	gazerbeam: {
+		name: "Gazer Beam",
+		desc: "Has a 30% chance to burn the target. This move's type effectiveness against Steel is changed to be super effective no matter what this move's type is.",
+		shortDesc: "30% chance to burn. Super effective on Steel.",
+	},
+	cloudbreaker: {
+		name: "Cloud Breaker",
+		shortDesc: "Clears the currently active weather.",
+	},
+	starseedblast: {
+		name: "Starseed Blast",
+		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+		shortDesc: "Hits 2-5 times, Special if Sp. Atk > Atk.",
+	},
+	brandingblade: {
+		name: "Flare Blitz",
+		shortDesc: "Has 33% recoil. Nullifies the foe's Ability.",
+	},
+	mudmaelstrom: {
+		name: "Mud Maelstrom",
+		desc: "Has a 30% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "30% chance to lower the target(s) Spe by 1.",
+	},
+	finalhour: {
+		name: "Final Hour",
+		desc: "Deals damage three turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if this move or Future Sight is already in effect for the target's position.",
+		shortDesc: "Hits three turns after being used.",
+
+		start: "  [POKEMON] ticks down to your Final Hour!",
+		activate: "  [TARGET]'s Final Hour is at hand!",
+	},
+	turnabout: {
+		name: "Turnabout",
+		desc: "The user swaps all its stat stage changes with the target and switches the Mist, Light Screen, Reflect, Spikes, Safeguard, Tailwind, Toxic Spikes, Stealth Rock, Water Pledge, Fire Pledge, Grass Pledge, Sticky Web, Aurora Veil, G-Max Steelsurge, G-Max Cannonade, G-Max Vine Lash, and G-Max Wildfire effects from the user's side to the opposing side and vice versa.",
+		shortDesc: "Swaps all stat changes and hazards with opponent.",
+	},
+	memejr: {
+		name: "Meme Jr.",
+		desc: "Has a 100% chance to raise the user's lowest boosted stat by 1. If all stat boosts are equal it will raise a random stat by 1.",
+		shortDesc: "100% chance to evenly raise a random stat by 1.",
+	},
+	meddymeds: {
+		name: "Meddy Meds",
+		desc: "This move summons Light Screen for 5 turns upon use. If the target is an ally and not immune, this move restores 3/4 of its maximum HP, rounded down, instead of dealing damage.",
+		shortDesc: "Heals 75% if targeting an ally, Summons Light Screen.",
+	},
+	villify: {
+		name: "Villify",
+		desc: "Causes the target to become a Dark type. Fails if the target is an Arceus or a Silvally, or if the target is already purely Dark type.",
+		shortDesc: "Changes adjacent Pokemon's types to Dark, +1 Prio.",
+	},
+	nuclearwinter: {
+		name: "Nuclear Winter",
+		desc: "Has a 10% chance to freeze the target. This move's type effectiveness against Poison is changed to be super effective no matter what this move's type is. If the weather is Hail, this move does not check accuracy.",
+		shortDesc: "10% chance to freeze. Super effective on Poison.",
+	},
+	badeggs: {
+		name: "Bad Eggs",
+		desc: "Hits three times. Power increases to 40 for the second hit and 60 for the third. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit three times. Each hit has a 10% chance to poison the target.",
+		shortDesc: "Hits 3 times, hits can miss, gets stronger, 10% psn.",
+	},
+	backdraft: {
+		name: "Backdraft",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities. Summons Tailwind for two turns after landing.",
+		shortDesc: "User switches out. Swapped in mon has doubled speed for a turn.",
+		start: "  The Backdraft blew from behind [TEAM]!",
+		end: "  [TEAM]'s Backdraft petered out!",
+		switchOut: "#uturn",
+	},
+	cherrybomb: {
+		name: "Cherry Bomb",
+		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. Each hit has a 10% chance to burn.",
+		shortDesc: "Hits twice. 10% chance to burn.",
+	},
+	crashhopper: {
+		name: "Crash Hopper",
+		shortDesc: "30% chance to paralyze. Paralyze self on miss.",
+	},
+	fractus: {
+		name: "Fractus",
+		desc: "If this attack does not miss, the effects of Reflect, Light Screen, and Aurora Veil end for the target's side of the field before damage is calculated.",
+		shortDesc: "Destroys screens, unless the target is immune.",
+		activate: "  [POKEMON] shattered [TEAM]'s protections!",
+	},
+	purge: {
+		name: "Purge",
+		desc: "Power triples if the target has a non-volatile status condition.",
+		shortDesc: "Power is tripled if target is statused. Cures the target.",
+	},
+	uproot: {
+		name: "Uproot",
+		shortDesc: "User's Grass type becomes typeless; must be Grass, +1 Spe.",
+
+		typeChange: "  [POKEMON] uprooted themselves!",
+	},
+	mirageveil: {
+		name: "Mirage Veil",
+		shortDesc: "For 5 turns, damage done by allies is 1.5x. Sand only.",
+
+		start: "  Mirage Veil made [TEAM] physical and special moves stronger!",
+		end: "  [TEAM]'s Mirage Veil wore off!",
+	},
+	frostbite: {
+		name: "Frostbite",
+		desc: "If hail is the active weather, this move has a 100% chance to lower the target's Special Attack by 2 stages. Otherwise, it has a 100% chance to lower the target's Special Attack by 1 stage.",
+		shortDesc: "100% chance to lower foe(s) Sp. Atk by 1, 2 in Hail.",
+	},
+	calibrate: {
+		name: "Calibrate",
+		desc: "Raises the user's Special Attack and accuracy by 1 stage.",
+		shortDesc: "Raises the user's Sp. Atk and accuracy by 1.",
+	},
+	braindamage: {
+		name: "Brain Damage",
+		desc: "If the target lost HP, the user takes recoil damage equal to 1/2 the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 1/2 recoil.",
+	},
+	flintfang: {
+		name: "Flint Fang",
+		shortDesc: "10% chance to flinch; Burns Steel type foes.",
+	},
+	krackocean: {
+		name: "Krackocean",
+		shortDesc: "Sets Rain Dance and Electric Terrain after damage.",
+	},
+	closeblobmat: {
+		name: "Close Blobmat",
+		shortDesc: "Lowers the user's Defense, Sp. Def, and Speed by 1.",
+	},
+	terradozer: {
+		name: "Terra Dozer",
+		shortDesc: "Summons a random terrain when this attack hits.",
+	},
+	roidflex: {
+		name: "Roid Flex",
+		shortDesc: "Protects self, poisons self, and raises accuracy.",
+	},
+	inverserush: {
+		name: "Inverse Rush",
+		shortDesc: "Doubles damage under Inverse Room.",
+	},
+	hypersnore: {
+		name: "Hyper Snore",
+		shortDesc: "User must be asleep.",
+		desc: "Fails if the user is not asleep.",
+	},
+	sleppthatblobsthesky: {
+		name: "Slepp That Blobs the Sky",
+		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes. This move and its effects ignore the Abilities of other Pokemon.",
+		shortDesc: "Physical if user's Atk > Sp. Atk. Ignores Abilities.",
+	},
+	yiikout: {
+		name: "Yiik Out",
+		shortDesc: "Hits first. First turn out only. The target's Ability changes to match the user's.",
+	},
+	metalblade: {
+		name: "Metal Blade",
+		shortDesc: "Breaks Protect and screens.",
+	},
+	airshooter: {
+		name: "Air Shooter",
+		shortDesc: "Effective vs. flying types, 2x power vs. Levitate.",
+	},
+	bubblelead: {
+		name: "Bubble Lead",
+		shortDesc: "Sets Steelspikes on the opponent side.",
+	},
+	quickboomerang: {
+		name: "Quick Boomerang",
+		shortDesc: "Usually goes first, Hits twice.",
+	},
+	crashbomber: {
+		name: "Future Sight",
+		desc: "Deals damage two turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if another future move is already in effect for the target's position.",
+		shortDesc: "Hits again at 140 power two turns after being used.",
+
+		start: "  [POKEMON] set a crash bomb!",
+		activate: "  The crash bomb exploded on [TARGET]!",
+	},
+	timestopper: {
+		name: "Time Stopper",
+		shortDesc: "Freezes all adjacent Pokemon.",
+	},
+	atomicfire: {
+		name: "Atomic Fire",
+		desc: "This attack charges on the first turn and executes on the second. If a terrain is active, the move completes in one turn.",
+		shortDesc: "Charges turn 1. Hits turn 2. No charge in terrain.",
+
+		prepare: "  [POKEMON] is charging power!",
+	},
+	leafshield: {
+		name: "Leaf Shield",
+		desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon making contact with the user lose 1/8 of their maximum HP, rounded down. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
+		shortDesc: "Protects from moves. Contact: loses 1/8 HP. Sets Grassy Terrain.",
+
+		damage: "  [POKEMON] was hurt by the sharp leaves!",
+	},
+	lemons: {
+		name: "Lemons",
+		shortDesc: "Hits 100 times. Each hit can miss. Always goes last.",
+	},
+	twintowertumblingterror: {
+		name: "Twin Tower Tumbling Terror",
+		desc: "Type varies based on the user's primary type. Burns everyone.",
+	},
+	frigidend: {
+		name: "Frigid End",
+		desc: "This move combines Ice in its type effectiveness against the target. Damage doubles and no accuracy check is done if the target has used Minimize while active.",
+		shortDesc: "Combines Ice in its type effectiveness, Breaks protection.",
+	},
+	/* :^) */
+	skullcannon: {
+		name: "Skull Cannon",
+		shortDesc: "I AM THE TRUE HERO OF THIS STORY.",
+	},
+	itsover: {
+		name: "It's Over",
+		shortDesc: "No competitive use.",
+
+		activate: "  It's over!",
+	},
+	strum: {
+		name: "Strum",
+		desc: "Hits four times. Power quadruples on the fourth hit. The fourth hit becomes Physical. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit four times.",
+		shortDesc: "Hits 4 times. Each hit can miss, but power rises on the 4th hit. Last hit is Physical.",
+	},
+	flybackfrenzy: {
+		name: "Flyback Frenzy",
+		desc: "Power is equal to 100 times the user's Stockpile count. Fails if the user's Stockpile count is 0. Whether or not this move is successful, the user's Defense and Special Defense decrease by as many stages as Stockpile had increased them, and the user's Stockpile count resets to 0. 20% chance per use of Stockpile to paralyze.",
+		shortDesc: "More power with more uses of Stockpile. 15% par chance per Stockpile.",
+	},
+	cope: {
+		name: "Cope",
+		shortDesc: "Hits 69 times.",
+	},
+	eternalwalk: {
+		name: "Eternal Walk",
+		desc: "Hits 255 times. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Magic Guard Ability are unaffected by crash damage.",
+		shortDesc: "Hits 255 times. Each hit can miss, crash on miss.",
+	},
+	sussteelstrike: {
+		name: "Sussteel Strike",
+		desc: "Raises the user's Attack by 2 stages if this move knocks out the target.",
+		shortDesc: "Raises user's Attack by 2 if this KOes the target.",
+	},
+	penetrate: {
+		name: "Penetrate",
+		shortDesc: "Uses the foe's offense, Creates a horror.",
+
+		activate: "  A horror was birthed!",
+	},
+	destructionstinger: {
+		name: "Destruction Stinger",
+		shortDesc: "Always badly poisons the foe.",
+	},
+	extinctionwave: {
+		name: "Extinction Wave",
+		shortDesc: "Power nonuples if the target is poisoned.",
+	},
+	poisonbullet: {
+		name: "Poison Bullet",
+		shortDesc: "Turn 1: Poisons the foe. Turn 2: 2x damage vs poisoned.",
+
+		prepare: "[POKEMON] is bursting with malice!",
+	},
+	matingpress: {
+		name: "Mating Press",
+		desc: "20% chance to have a child with the opposing mon with no item and only Metronome. Can only occur once for a user.",
+		shortDesc: "Produces a child. Uses Defense.",
+
+		activate: "  [SOURCE] had a child with [POKEMON]!",
+		fail: "[POKEMON] had a miscarriage...",
+	},
+	gunshot: {
+		name: "Gun Shot",
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage. Always hits and deals 100x against Vandash.",
+		shortDesc: "10% chance to lower the target's Sp. Def by 1. Always hits and deals 100x against Vandash.",
+	},
+	recoilshot: {
+		name: "Psycho Boost",
+		desc: "Lowers the user's Accuracy by 2 stages.",
+		shortDesc: "Lowers the user's Acc by 2.",
+	},
+	wrapd: {
+		name: "Wrap-D",
+		desc: "The user spends two to five turns using this move. Has a 3/8 chance to last two or three turns, and a 1/8 chance to last four or five turns. The damage calculated for the first turn is used for every other turn. The user cannot select a move and the target cannot execute a move during the effect, but both may switch out. If the user switches out, the target remains unable to execute a move during that turn. If the target switches out, the user uses this move again automatically, and if it had 0 PP at the time, it becomes 63. If the user or the target switch out, or the user is prevented from moving, the effect ends. This move can prevent the target from moving even if it has type immunity, but will not deal damage.",
+		shortDesc: "Prevents the target from moving for 2-5 turns.",
+
+		start: "  [POKEMON] was squeezed by [SOURCE]!",
+		move: "#wrap", // gen 1 only
+	},
+	blizzardd: {
+		name: "Blizzard-D",
+		desc: "Has a 30% chance to freeze the target.",
+		shortDesc: "30% chance to freeze the target.",
+	},
+	amnesiad: {
+		name: "Amnesia-D",
+		desc: "Raises the user's Special by 2 stages.",
+		shortDesc: "Raises the user's Special by 2.",
+	},
+	hyperbeamd: {
+		name: "Hyper Beam-D",
+		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move, unless the target or its substitute was knocked out by this move.",
+		shortDesc: "Can't move next turn if target or sub is not KOed.",
+	},
+	darkening: {
+		name: "Darkening",
+		desc: "The user recovers 100% the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 100% of the damage dealt.",
+	},
+	shroomsnuggle: {
+		name: "Shroom Snuggle",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 50% of the damage dealt.",
+	},
+	coinflip: {
+		name: "Coin Flip",
+		shortDesc: "lol, lmao",
+	},
+	bilebite: {
+		name: "Bile Bite",
+		shortDesc: "We prey at night, we stalk at night, we're the rats.",
+	},
+	blackbomb: {
+		name: "Black Bomb",
+		desc: "If the user is a Flying type or a Pokemon with the Levitate Ability, it loses its immunity to Ground-type attacks and the Arena Trap Ability the turn it is used as well as the turn afterwards. During the effect, Magnet Rise fails for the user.",
+		shortDesc: "Grounds and traps the user for a turn when used.",
+
+		start: "  [POKEMON] became buried!",
+	},
+	beamblade: {
+		name: "Beam Blade",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
+	},
+	bearhug: {
+		name: "Bear Hug",
+		shortDesc: "Activates contact effects of the user, traps for a turn.",
+		start: "  [POKEMON] was squeezed by [SOURCE]!",
+	},
+	chilipowder: {
+		name: "Chili Powder",
+		desc: "Burns the target.",
+		shortDesc: "Burns the target.",
+	},
+	thunderdrop: {
+		name: "Thunder Drop",
+		desc: "This attack takes the target into the air with the user on the first turn and executes on the second. Pokemon weighing 200 kg or more cannot be lifted. On the first turn, the user and the target avoid all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thousand Arrows, Thunder, and Twister. The user and the target cannot make a move between turns, but the target can select a move to use. This move cannot damage Flying-type Pokemon. Fails on the first turn if the target is an ally, if the target has a substitute, or if the target is using Bounce, Dig, Dive, Fly, Phantom Force, Shadow Force, or Sky Drop.",
+		shortDesc: "User and foe fly up turn 1. Damages on turn 2. 30% chance to Paralyze the target",
+
+		prepare: "[POKEMON] took [TARGET] into the sky!",
+		end: "  [POKEMON] was freed from the Thunder Drop!",
+		failSelect: "Thunder Drop won't let [POKEMON] go!",
+		failTooHeavy: "  [POKEMON] is too heavy to be lifted!",
+	},
+	faeblade: {
+		name: "Faeblade",
+		desc: "Deals damage to the target based on its Special Defense instead of Defense.",
+		shortDesc: "Damages target based on Sp. Def, not Defense.",
+	},
+	stickytongue: {
+		name: "Sticky Tongue",
+		desc: "If the target is holding an item that can be removed from it, ignoring the Sticky Hold Ability, this move's power is multiplied by 1.5. If the user has not fainted, the target loses its held item. This move cannot cause Pokemon with the Sticky Hold Ability to lose their held item or cause a Kyogre, a Groudon, a Giratina, an Arceus, a Genesect, a Silvally, a Zacian, or a Zamazenta to lose their Blue Orb, Red Orb, Griseous Orb, Plate, Drive, Memory, Rusted Sword, or Rusted Shield respectively. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
+		shortDesc: "1.5x damage if foe holds an item. Eats item.",
+
+		removeItem: "  [SOURCE] ate [POKEMON]'s [ITEM]!",
+	},
+	rocketpunch: {
+		name: "Rocket Punch",
+		desc: "Fails unless it is the user's first turn on the field. This move is always a critical hit unless the target is under the effect of Lucky Chant or has the Battle Armor or Shell Armor Abilities.",
+		shortDesc: "Hits first. First turn out only. Always crits.",
+	},
+	powerwasher: {
+		name: "Power Washer",
+		shortDesc: "50% chance to lower the target's Sp. Def. Goes last.",
+	},
+	behemothblob: {
+		name: "Behemoth Blob",
+		shortDesc: "Damage doubles if the target is Dynamaxed.",
+	},
+	genwunroom: {
+		name: "Genwun Room",
+		shortDesc: "For 5 turns, most abilities are disabled.",
+	},
+	flakcannon: {
+		name: "Flak Cannon",
+		shortDesc: "Removes user's held item, always crits.",
+
+		removeItem: "  [POKEMON] shot the fragments of [ITEM]!",
+	},
+	neosporin: {
+		name: "Neosporin",
+		shortDesc: "Heals the target by 50%, Puts them to sleep.",
+	},
+	backroom: {
+		name: "Backroom",
+		shortDesc: "The user switches out and summons Trick Room for one turn.",
+	},
+	charmerssong: {
+		name: "Charmer's Song",
+		shortDesc: "The foe is switched out, and the replacement is taunted.",
+	},
+	psychospell: {
+		name: "Psycho Spell",
+		shortDesc: "Summons Psychic Terrain after hit.",
+	},
+	wonderwand: {
+		name: "Wonder Wand",
+		shortDesc: "Summons Wonder Room after hit.",
+	},
+	implosion: {
+		name: "Implosion",
+		shortDesc: "Summons Inverse Room after hit.",
+	},
+	portalgun: {
+		name: "Portal Gun",
+		shortDesc: "Switches foe out first, then the user.",
+	},
+	sportsball: {
+		name: "Sportsball",
+		shortDesc: "Hits twice. Summons Mud Sport and Water Sport after hit.",
+	},
+	rainbowbeam: {
+		name: "Rainbow Beam",
+		shortDesc: "Adds all types into one attack. Taste the rainbow, motherfucker!",
+	},
+	freikugel: {
+		name: "Freikugel",
+		shortDesc: "Has 50% recoil. Always hits in Magic Room.",
+	},
+	confettigun: {
+		name: "Confetti Gun",
+		shortDesc: "Surprise, motherfucker!",
+	},
+	butterflykick: {
+		name: "Butterfly Kick",
+		shortDesc: "Combines Fighting in its type effectiveness.",
+	},
+	toxicbeam: {
+		name: "Toxic Beam",
+		shortDesc: "20% chance to badly poison the foe.",
+	},
+	aquafangs: {
+		name: "Aqua Fangs",
+		desc: "Has a 20% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "20% chance to lower the target's Speed by 1.",
+	},
+	windwhip: {
+		name: "Wind Whip",
+		shortDesc: "100% chance to lower the foe's Special Defense.",
+	},
+	firewall: {
+		name: "Firewall",
+		shortDesc: "Protects, burns foes on contact.",
+	},
+	maximize: {
+		name: "Maximize",
+		shortDesc: "Lowers user's evasion by 1.",
+	},
+	seaquake: {
+		name: "Seaquake",
+		shortDesc: "Combines Ground in its type effectiveness.",
+	},
+	edgequake: {
+		name: "Edgequake",
+		shortDesc: "Combines Ground in its type effectiveness.",
+	},
+	sugarrush: {
+		name: "Sugar Rush",
+		shortDesc: "User loses 50% max HP. Maximizes Sp. Atk.",
+	},
+	sleepingsands: {
+		name: "Sleeping Sands",
+		shortDesc: "10% chance to make the foe fall asleep.",
+	},
+	fuckyou: {
+		name: "Fuck You",
+		shortDesc: "Kill yourself. Cope. Seethe. Mald.",
+	},
+	poisonivy: {
+		name: "Poison Ivy",
+		shortDesc: "Chance to poison or badly poison the foe.",
+	},
+	absolutezero: {
+		name: "Absolute Zero",
+		shortDesc: "100% freeze is fair and balanced.",
+	},
+	doesthiswork: {
+		name: "Does This Work",
+		shortDesc: "I dunno, does it?",
+	},
+	mitosistackle: {
+		name: "Mitosis Tackle",
+		shortDesc: "Hits twice.",
+	},
+	mitosismash: {
+		name: "Mitosis Mash",
+		shortDesc: "Hits 3 times. Each hit rises by 13 Power. Each hit can miss.",
+	},
+	telluriccurrent: {
+		name: "Telluric Current",
+		shortDesc: "Able to hit Ground types.",
+	},
+	rockout: {
+		name: "Rock Out",
+		shortDesc: "User switches out after damaging the opponent.",
+	},
+	toppingtoss: {
+		name: "Topping Toss",
+		shortDesc: "3-hit move; 1st hit Fire, 2nd Grass, 3rd Ground.",
+	},
+	heavensblessing: {
+		name: "Heaven's Blessing",
+		shortDesc: "Heals user by 25% of max HP, activates Wish effect. Heals user's status condition.",
+	},
+	heavenpierce: {
+		name: "Heaven Pierce",
+		shortDesc: "Always crits, breaks screens, ignores everything.",
+	},
+	sandysnore: {
+		name: "Sandy Snore",
+		shortDesc: "Can only be used when asleep. Gives the user Sand Rush and summons Sandstorm.",
+	},
+	amogus: {
+		name: "Amogus",
+		shortDesc: "Disguises as 6th teammate's attack, how sus.",
+	},
+	ninjutsu: {
+		name: "Ninjutsu",
+		shortDesc: "Hits 4 times.",
+	},
+	tornadocab: {
+		name: "Tornado (CAB)",
+		shortDesc: "Summons Strong Winds after this move hits.",
+	},
+	groundbomb: {
+		name: "Ground Bomb",
+		desc: "Deals damage three turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if this move or Ground Bomb is already in effect for the target's position.",
+		shortDesc: "Hits three turns after being used.",
+
+		start: "  [POKEMON] planted a bomb in the ground on the enemy's side!",
+		activate: "  [TARGET]'s movements activated the landmine!",
+	},
+	chernoboil: {
+		name: "Chernoboil",
+		shortDesc: "10% chance to burn foe.",
+	},
+	halflife: {
+		name: "Half-Life",
+		shortDesc: "Cuts foe's HP in half.",
+	},
+	nuclearmeltdown: {
+		name: "Nuclear Meltdown",
+		shortDesc: "Lowers user's Attack, Sp. Atk, and Speed by 1.",
+	},
+	obsidianhorn: {
+		name: "Obsidian Horn",
+		shortDesc: "10% chance to raise Defense and Sp. Def by 1.",
+	},
+	feudefee: {
+		name: "Feu de Fe\u0301e",
+		shortDesc: "Physical if Attack is higher than Sp. Atk.",
+	},
+	skulltoss: {
+		name: "Skull Toss",
+		shortDesc: "Raises Speed by 1, but only once.",
+	},
+	blobblast: {
+		name: "Blobblast",
+		shortDesc: "Has 1/4 recoil.",
+	},
+	floofandpoof: {
+		name: "Floof and Poof",
+		shortDesc: "Uses Def as Atk. Summons Lucky Chant, Safeguard, and Mist.",
+	},
+	sunburst: {
+		name: "Sunburst",
+		shortDesc: "Summons Sun. 10% chance to Burn.",
+	},
+	deepfry: {
+		name: "Deep Fry",
+		shortDesc: "Cooks the opponent's item, with varying effects.",
+	},
+	flashbang: {
+		name: "Flashbang",
+		shortDesc: "User switches out. Sets up Dazzling for a turn.",
+		start: "  A dazzling display surrounds [TEAM]!",
+		end: "  [TEAM]'s the dazzling display has dissipated!",
+		switchOut: "#uturn",
+	},
+	bouncyball: {
+		name: "Bouncy Ball",
+		shortDesc: "No additional effect.",
+	},
+	extremesneed: {
+		name: "Extreme Sneed",
+		shortDesc: "Usually goes first. Formerly Extremechuck",
+	},
+	feedandseed: {
+		name: "Feed and Seed",
+		shortDesc: "Uses Leech Seed, Worry Seed, and Grassy Terrain. Formerly Chuck and Fuck",
+	},
+	atombomb: {
+		name: "Atom Bomb",
+		shortDesc: "Hits adjacent Pokemon. The user faints. Banned in Japan",
+	},
+	radiation: {
+		name: "Radiation",
+		shortDesc: "Makes the opponent Nuclear type.",
+	},
+	battlecry: {
+		name: "Battle Cry",
+		shortDesc: "10% chance to raise the user's Special Attack by 1.",
+	},
+	sereneshockwave: {
+		name: "Serene Shockwave",
+		shortDesc: "Cures teammates of their status effects.",
+	},
+	hypersomnia: {
+		name: "Hypersomnia",
+		shortDesc: "Makes user ability Bad Dreams, opponent Lethargic and gives Nightmare.",
+	},
+	xenobeam: {
+		name: "Xenobeam",
+		shortDesc: "Makes the opponent ??? type.",
+	},
+	abduction: {
+		name: "Abduction",
+		shortDesc: "The user and opponent both switch out.",
+	},
+	electromagnetism: {
+		name: "Electromagnetism",
+		shortDesc: "Deals damage. Magnet Rises the user.",
+	},
+	titaniumclap: {
+		name: "Titanium Clap",
+		shortDesc: "30% chance to paralyze the foe.",
+	},
+	paranormalactivity: {
+		name: "Paranormal Activity",
+		shortDesc: "Able to hit Normal-type Pokemon.",
+	},
+	infectiouswheeze: {
+		name: "Infectious Wheeze",
+		shortDesc: "If Blobbos-Infected, becomes Poison type, if Blobbos-Zombie, becomes Ghost type.",
+	},
+	nosedive: {
+		name: "Nosedive",
+		shortDesc: "Lowers the user's Defense by 2 stages.",
+	},
+	siphon: {
+		name: "Siphon",
+		desc: "The user recovers 3/4 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 75% of the damage dealt.",
+	},
+	shadowban: {
+		name: "Shadowban",
+		shortDesc: "Taunts the foe; user gets +1 Speed.",
+	},
+	bloodletting: {
+		name: "Bloodletting",
+		shortDesc: "+1 Sp. Atk and +1 Speed for the cost of health.",
+	},
+	flashfreeze: {
+		name: "Flash Freeze",
+		shortDesc: "Usually goes first.",
+	},
+	letssleppforever: {
+		name: "Let's Slepp Forever",
+		shortDesc: "100% chance to make the foe fall asleep.",
+	},
+	energyburst: {
+		name: "Energy Burst",
+		shortDesc: "No additional effect.",
+	},
+	plasticterrain: {
+		name: "Plastic Terrain",
+		desc: "For 5 turns, the terrain becomes Plastic Terrain. During the effect, the power of Plastic-type attacks used by grounded Pokemon is multiplied by 1.3, and items get recycled.",
+		shortDesc: "5 turns. Grounded: +Plastic power, Recycles items.",
+	},
+	highjumpsaw: {
+		name: "High Jump Saw",
+		shortDesc: "The user jumps up high, spinning its fists and feet like a buzzsaw. Dual Type Steel.",
+	},
+	stingingrage: {
+		name: "Stinging Rage",
+		shortDesc: "The user faints. Badly poisons the opponent.",
+	},
+	malicepowder: {
+		name: "Malice Powder",
+		shortDesc: "Confuses everyone. Causes infestation.",
+	},
+	spectresabre: {
+		name: "Spectre Sabre",
+		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit.",
+		shortDesc: "Hits 2 times in one turn.",
+	},
+	recycleray: {
+		name: "Recycle Ray",
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+	},
+	fadereflection: {
+		name: "Fade Reflection",
+		desc: "Has a 25% chance to disable the target's move.",
+		shortDesc: "25% chance to disable.",
+	},
+	plasticblaze: {
+		name: "Plastic Blaze",
+		desc: "Has a 25% chance to burn the target.",
+		shortDesc: "25% chance to burn the target.",
+	},
+	meltedplastic: {
+		name: "Melted Plastic",
+		desc: "Has a 30% chance to burn the target. The target thaws out if it is frozen.",
+		shortDesc: "30% chance to burn the target. Thaws target.",
+	},
+	glassing: {
+		name: "Glassing",
+		shortDesc: "Makes the opponent Glass type.",
+	},
+	bloodshot: {
+		name: "Blood Shot",
+		desc: "Has a 20% chance to either poison, confuse, or paralyze the target.",
+		shortDesc: "20% chance to poison, confuse, or paralyze target.",
+	},
+	overdose: {
+		name: "Overdose",
+		desc: "If the target lost HP, the user takes recoil damage equal to 1/2 the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 1/2 recoil.",
+	},
+	skummray: {
+		name: "Skumm Ray",
+		desc: "Has a 100% chance to either sleep, freeze, flinch, or paralyze the target.",
+		shortDesc: "100% chance to sleep, freeze, flinch, or paralyze target.",
+	},
+	hyperzone: {
+		name: "Hyper Zone",
+		shortDesc: "For 5 turns, Dark types are protected from status, priority, and screens.",
+	},
+	freeballoonday: {
+		name: "Free Balloon Day",
+		shortDesc: "Doubles in power if holding a balloon. Recycles balloon if you don't have an item.",
+	},
+	helldive: {
+		name: "Hell Dive",
+		shortDesc: "Can't be used twice in a row. Physical if user's Atk > Sp. Atk.",
+	},
+	mushroomshot: {
+		name: "Mushroom Shot",
+		shortDesc: "Power doubles if opponent partially trapped. During Gravity: 1.5x power. Hits 4 times.",
+	},
+	qualityrip: {
+		name: "Quality Rip",
+		desc: "The power of this move varies; 5% chances for 10 and 150 power, 10% chances for 30 and 110 power, 20% chances for 50 and 90 power, and 30% chance for 70 power. Damage doubles if the target is using Thunder Drop.",
+		shortDesc: "Hits adjacent Pokemon. Power varies; 2x on Thunder Drop.",
+		gen4: {
+			desc: "The power of this move varies. 5% chances for 10 and 150 power, 10% chances for 30 and 110 power, 20% chances for 50 and 90 power, and 30% chance for 70 power. Power doubles if the target is using Thunder Drop.",
+		},
+
+		activate: "  Rip Quality: [NUMBER]!",
+	},
+	concussion: {
+		name: "Concussion",
+		desc: "The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pokemon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
+		shortDesc: "Lasts 2-3 turns. Confuses the user afterwards.",
+	},
+	shootingstar: {
+		name: "Shooting Star",
+		shortDesc: "20% recoil, user switches out.",
+		switchOut: "#uturn",
+	},
+	dousingflame: {
+		name: "Dousing Flame",
+		shortDesc: "Super effective on Fire.",
+	},
+	cursedblade: {
+		name: "Cursed Blade",
+		shortDesc: "30% chance to inflict Curse.",
+	},
+	riptide: {
+		name: "Riptide",
+		shortDesc: "Traps and damages the target for 4-5 turns.",
+	},
+	secretstrength: {
+		name: "Secret Strength",
+		shortDesc: "Type varies based on the user's secondary type.",
+	},
+	hornithrust: {
+		name: "Horni Thrust",
+		shortDesc: "1/3 chance to cause attract. Ignores genders.",
+	},
+	mouthmelter: {
+		name: "Mouth Melter",
+		desc: "For 5 turns, the target cannot use sound or bite-based moves.",
+		shortDesc: "Hits twice. Prevents target from using sound & bite moves.",
+		cant: "The effects of Mouth Melter prevent [POKEMON] from using certain moves!",
+	},
+	swamp: {
+		name: "Swamp",
+		shortDesc: "For 4 turns, foes' Speed is reduced by 20%.",
+		start: "  A swamp enveloped [TEAM]!",
+		end: "  The swamp around [TEAM] disappeared!",
+	},
+	devilsbarrage: {
+		name: "Devil's Barrage",
+		shortDesc: "Charges, then hits 3 times.",
+
+		prepare: "[POKEMON] is splitting apart!",
+	},
+	rebuild: {
+		name: "Rebuild",
+		shortDesc: "Charges, then restores 2/3 of its maximum HP, and cures its burn, poison, or paralysis.",
+
+		prepare: "[POKEMON] is reforming itself!",
+	},
+	bigshot: {
+		name: "Big Shot",
+		shortDesc: "High critical hit ratio, 30% chance to paralyze.Favorite move 1997",
+	},
+	foolsgambit: {
+		name: "Fool's Gambit",
+		shortDesc: "Damages target based on Sp. Def. Neutral on Fairy.",
+	},
+	trapcard: {
+		name: "Trap Card",
+		shortDesc: "Does double damage and attracts the foe if hit by a physical attack.",
+
+		start: "  [POKEMON] set a trap card!",
+		prepare: "  [POKEMON] set a trap card!",
+		cant: "[POKEMON]'s trap card didn't work!",
+	},
+	heroicstrike: {
+		name: "Heroic Strike",
+		desc: "Ignores immunities. Uses Fighting-type effectiveness if it would be SE. Cannot miss. Special if user's Sp. Atk > Atk. Ignores the target's stat stage changes.",
+		shortDesc: "Ignores immunities. Fighting if it would be SE. Special if user's Sp. Atk > Atk. Ignores target's stat changes.",
+	},
+	heroiconslaught: {
+		name: "Heroic Onslaught",
+		shortDesc: "Hits twice. Ignores immunities. Cannot miss. Special if user's Sp. Atk > Atk. Ignores target's stat changes.",
+	},
+	drinkpotion: {
+		name: "Drink Potion",
+		shortDesc: "Heals 20% of max HP per dose. Tries to minimize doses used. Each dose uses 1 PP.",
+
+		activate: "  [POKEMON] drank [NUMBER] doses of its potion!",
+	},
+	winterwhiteout: {
+		name: "Winter Whiteout",
+		desc: "No additional effect.",
+		shortDesc: "No additional effect. Hits adjacent foes.",
+	},
+	gmaxblobbomb: {
+		name: "G-Max Blob Bomb",
+		shortDesc: "Upon hit, summons Mist and Safeguard.",
+	},
+	icestorm: {
+		name: "Ice Storm",
+		shortDesc: "Summons Hail. 10% chance to freeze.",
+	},
+	downpour: {
+		name: "Downpour",
+		shortDesc: "Summons Rain.",
+	},
+	slysquall: {
+		name: "Sly Squall",
+		desc: "This move always crits under Illusion unless the target is under the effect of Lucky Chant or has an ability that prevents critical hits, and removes Illusion on a successful hit.",
+		shortDesc: "Guaranteed crit under Illusion; removes it on hit.",
+	},
+	rawvenom: {
+		name: "Raw Venom",
+		shortDesc: "30% chance to disable the foe.",
+	},
+	flurryfist: {
+		name: "Flurry Fist",
+		shortDesc: "Usually goes first.",
+	},
+	tripunch: {
+		name: "Tri-Punch",
+		shortDesc: "Hits 3 times in one turn. First hit is Ice-type and can freeze (15%); second hit is Electric-type and can paralyze (15%); third hit is Fire-type and can burn (15%).",
+	},
+	gigasubfernostrike: {
+		name: "Gigasubferno Strike",
+		shortDesc: "Hits 3 times in one turn. First hit is Ice-type and can freeze (50%); second hit is Electric-type and can paralyze (50%); third hit is Fire-type and can burn (50%).",
+	},
+	backwardslongjump: {
+		name: "Backwards Long Jump",
+		shortDesc: "User is hurt by 50% of its max HP if it misses. Boosts speed and damage (+10 BP, up to 160) with each successive hit.",
+	},
+	deepfreeze: {
+		name: "Deep Freeze",
+		shortDesc: "Freezes the target and user. Fails if user already has a status condition.",
+	},
+	sap: {
+		name: "Sap",
+		shortDesc: "Deals 1/8 max HP each turn; 1/4 on Steel. 3/4 reduced Atk, SpA, Spe on Steel.",
+	},
+	vwlstrk: {
+		name: "Vwl Strk",
+		shortDesc: "+20 BP for every vowel in the target's species.",
+	},
+	itemclaws: {
+		name: "Item Claws",
+		shortDesc: "-15 BP for each unique item on the enemy's team.",
+	},
+	fastpokebeam: {
+		name: "Fastpoke Beam",
+		shortDesc: "Transforms the target into Slowpoke-Galar.",
+	},
+	pokemoncenter: {
+		name: "Pokemon Center",
+		shortDesc: "Adds a Heal Pulse-only Eviolite Chansey with 4 HP / 252 Def / 252 SpD EVs to the enemy team.",
+	},
+	regularattack: {
+		name: "Regular Attack",
+		shortDesc: "Just a regular attack.",
+	},
+	laserbeam: {
+		name: "Laser Beam",
+		shortDesc: "15% chance to lower foe's accuracy.",
+	},
+	ballkick: {
+		name: "Ball Kick",
+		shortDesc: "You do NOT want to be on the receiving end of this.",
+	},
+	highkick: {
+		name: "High Kick",
+		desc: "This move's power is 20 if the target is shorter than 0.25m, 40 if less than 0.5m, 60 if less than 1m, 80 if less than 2m, 100 if less than 3m, and 120 if greater than or equal to 3m.",
+		shortDesc: "More power the taller the target.",
+	},
+	landmind: {
+		name: "Land Mind",
+		desc: "Sets up a hazard on the opposing side of the field, damaging the next opposing Pokemon that switches in. Fails if the effect is already active on the opposing side. Foes lose 1/32, 1/16, 1/8, 1/4, or 1/2 of their maximum HP, rounded down, based on their weakness to the Psychic type; 0.25x, 0.5x, neutral, 2x, or 4x, respectively. Removed on first activation.",
+		shortDesc: "Hurts foes on switch-in. Factors Psychic weakness. Removed on first activation.",
+
+		start: "  A psychic trap was set around [TEAM]!",
+		end: "  The psychic trap was removed from around [TEAM]!",
+		damage: "  [POKEMON] into a psychic trap!",
+	},
+	calmfist: {
+		name: "Calm Fist",
+		desc: "Power is equal to 160-(X*20), where X is the total number of times the user has been hit by a damaging attack during the battle, even if the user did not lose HP from the attack. X cannot be greater than 6 and does not reset upon switching out or fainting. Each hit of a multi-hit attack is counted, but confusion damage is not counted.",
+		shortDesc: "-20 power for each time user was hit. Max 6 hits.",
+	},
+	firstrespects: {
+		name: "First Respects",
+		desc: "Power is equal to 140-(X*20), where X is the total number of times any Pokemon has fainted on the user's side, and X cannot be lower than 1.",
+		shortDesc: "-20 power for each time a party member fainted.",
+	},
+	unshedtail: {
+		name: "Unshed Tail",
+		desc: "Removes the user's substitute and switches into another. Heals the new mon for the removed substitute's health.",
+
+		heal: "  [POKEMON] restored its tail!",
+	},
+	eructlas: {
+		name: "Eruc Tlas",
+		desc: "Heals the target equal to 1/4 of its maximum HP (1/8 if the target is Steel or Water type), rounded down, at the end of each turn during effect. This effect ends when the target is no longer active.",
+		shortDesc: "Heals the target 1/4 max HP each turn; 1/8 on Steel, Water.",
+
+		start: "  !deruc tlas gnieb si [POKEMON]",
+		damage: "  !eruC tlaS yb truh si [POKEMON]",
+	},
+	depopulationbomb: {
+		name: "De-Population Bomb",
+		shortDesc: "No additional effect.",
+	},
+	glaiverest: {
+		name: "Glaive Rest",
+		shortDesc: "User sleeps 2 turns and restores HP and status. User takes sure-hit 2x damage until its next turn.",
+	},
+	pobybbolb: {
+		name: "Pob Ybbolb",
+		shortDesc: "Raises accuracy when this move lands.",
+	},
+	eronsrepus: {
+		name: "Erons Repus",
+		shortDesc: "The user falls asleep after using this attack.",
+	},
+	garudaimpact: {
+		name: "Garuda Impact",
+		shortDesc: "Goes last. 100% chance to flinch the opponent.",
+	},
+	potemkinbuster: {
+		name: "Potemkin Buster",
+		desc: "This attack takes the target into the air with the user on the first turn and executes on the second. Pokemon weighing 500 kg or more cannot be lifted. On the first turn, the user and the target avoid all attacks other than Gust, Hurricane, Sky Uppercut, Smack Down, Thousand Arrows, Thunder, and Twister. The user and the target cannot make a move between turns, but the target can select a move to use. This move cannot damage Flying-type Pokemon. Fails on the first turn if the target is an ally, if the target has a substitute, or if the target is using Bounce, Dig, Dive, Fly, Phantom Force, Shadow Force, or Sky Drop. The user loses its focus and does nothing if it is hit by a damaging attack this turn before it can execute the move.",
+		shortDesc: "Goes last. User and foe jump up turn 1. Damages on turn 2. Fails if the user takes damage before it hits.",
+
+		start: "  [POKEMON] is tightening its focus!",
+		cant: "[POKEMON] lost its focus and couldn't move!",
+		prepare: "[POKEMON] took [TARGET] into the sky!",
+		end: "  [POKEMON] was freed from Potemkin Buster!",
+		failSelect: "Potemkin Buster won't let [POKEMON] go!",
+		failTooHeavy: "  [POKEMON] is too heavy to be lifted!",
+	},
+	pantherkkick: {
+		name: "Pantherk Kick",
+		shortDesc: "30% flinch chance. Pantherk.",
+	},
+	testomajesto: {
+		name: "Testo Majesto",
+		shortDesc: "'Ah, don't bother, it's just a coffee machine. Sometimes it shows ads on the screen.'",
+	},
+	shuttleloop: {
+		name: "Shuttle Loop",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
+		shortDesc: "User switches out after damaging the target.",
+
+		switchOut: "#uturn",
+	},
+	saltsprinkle: {
+		name: "Salt Sprinkle",
+		desc: "Power doubles if the target has a non-volatile status condition.",
+		shortDesc: "x2 BP if target has a non-volatile status. SE on Water and Steel.",
+	},
+	holdit: {
+		name: "Hold It!",
+		desc: "The user restores 14/5 of its maximum HP, rounded half up. Taunts user.",
+		shortDesc: "Heals the user by 80% of its max HP. Taunts User.",
+	},
+	objection: {
+		name: "Objection!",
+		desc: "Has a 20% chance to make the target flinch.",
+		shortDesc: "20% chance to make the target flinch.",
+	},
+	takethat: {
+		name: "Take That!",
+		desc: "Confuses and prevents the target from switching out. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. If the target leaves the field using Baton Pass, the replacement will remain trapped. The effect ends if the user leaves the field.",
+		shortDesc: "Confuses and prevents the target from switching out.",
+	},
+	plushrush: {
+		name: "Plush Rush",
+		desc: "If the target lost HP, the user takes recoil damage equal to 1/4 the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 1/4 recoil.",
+	},
+	seaoffire: {
+		name: "Sea of Fire",
+		shortDesc: "For 4 turns, non-Fire type foes lose 1/8 max HP.",
+		start: "  A sea of fire enveloped [TEAM]!",
+		end: "  The sea of fire around [TEAM] disappeared!",
+	},
+	tridentcharge: {
+		name: "Trident Charge",
+		shortDesc: "1.5x damage under Sea of Fire; torments foe.",
+	},
+	blackfire: {
+		name: "Blackfire",
+		shortDesc: "Foes: -1/6 HP, 4 turns.",
+
+		start: "  [PARTY] were surrounded by fire!",
+		damage: "  [POKEMON] is burning up within Blackfire’s flames!",
+	},
+	justmonikat: {
+		name: "Just Monikat",
+		desc: "Transforms the target into a Monikat. Prevents the target from switching out. Drops the target's speed one stage.",
+	},
+	doubleiceblob: {
+		name: "Double Ice Blob",
+		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. Has a 30% chance to make the target flinch.",
+		shortDesc: "Hits twice. 30% chance to make the target flinch.",
+	},
+	bugout: {
+		name: "Bug Out",
+		shortDesc: "Forces the foe to switch out.",
+	},
+	gentworrible: {
+		name: "Gentworrible",
+		shortDesc: "Grass + Ice, charges for 2 turns, and has a chance to heal the foe.",
+	},
+	hardcrash: {
+		name: "Hardcrash",
+		shortDesc: "Special if Sp.Atk > Atk. Paralyzes the foe, but freezes self.",
+	},
+	driftgear: {
+		name: "Drift Gear",
+		shortDesc: "+1 Atk, +2 Speed, but lowers accuracy by 1.",
+	},
+	coldreception: {
+		name: "Cold Reception",
+		desc: "For 5 turns, the weather becomes Hail. The user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members.",
+		shortDesc: "Starts Hail. User switches out.",
+
+		// TODO needs to be implemented
+		activate: "  [POKEMON] is preparing to tell a chillingly bad joke!",
+	},
+	tombstonerd: {
+		name: "Tombstoner-D",
+		desc: "Has a 50% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "50% chance to lower the target's Speed by 1.",
+	},
+	strifedicekind: {
+		name: "Strife: Dicekind",
+		desc: "Physical if user's Atk > Sp. Atk. Hits 8 times. Each hit can miss. 4% to permanently improve's the user's side's luck by 5% up to 3 times. +1 crit at 3 stacks.",
+	},
+	lavadapt: {
+		name: "Lavadapt",
+		desc: "User adapts its type to resist the opponent's last move.",
+	},
+	shiternet: {
+		name: "Shiternet",
+		desc: "User lags out the battle, paralyzing both Pokemon on the field.",
+	},
+	banfulbunker: {
+		name: "Banful Bunker",
+		desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon making contact with the user become taunted and tormented. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Max Guard, Obstruct, Protect, Quick Guard, Silk Trap, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
+		shortDesc: "User misspells Baneful, protecting them and taunting + tormenting Pokemon who make contact.",
+	},
+	meteor: {
+		name: "Meteor",
+		shortDesc: "Hits twice. Ignores defensive boosts.",
+	},
+	ultima: {
+		name: "Ultima",
+		shortDesc: "Hits all adjacent foes.",
+	},
+	metronomeifitwasfunny: {
+		name: "Metronome If It Was Funny",
+		shortDesc: "You know all those moves Metronome can't pull? That's old news.",
+	},
+	meatballmash: {
+		name: "Meatball Mash",
+		shortDesc: "1/4 chance to raise both of the user's defenses by 1 stage on hit.",
+	},
+	blandybland: {
+		name: "Blandy Bland",
+		shortDesc: "Changes the opponent's ability to Simple.",
+	},
+	thunderblitz: {
+		name: "Thunder Blitz",
+		shortDesc: "Hits twice. Always lands a critical hit.",
+	},
+	scarystory: {
+		name: "Scary Story",
+		shortDesc: "Switches out the target. Raises Atk, Sp. Atk, and Speed by 1 stage. Always goes last.",
+	},
+	moonstrike: {
+		name: "Moonstrike",
+		shortDesc: "30% chance to lower the target's Atk by 1.",
+	},
+	invigorate: {
+		name: "Invigorate",
+		shortDesc: "Heals 25% of user's max HP. Raises Atk by 1. Raises by 2 if this has 1/2 of less of its max HP.",
+	},
+	blazingswipe: {
+		name: "Blazing Swipe",
+		shortDesc: "100% chance to lower the foe(s) Sp. Attack by 1. Hits all foes.",
+	},
+	bushido: {
+		name: "Bushido",
+		shortDesc: "Hits 4 times.",
+	},
+	dustcannon: {
+		name: "Dust Cannon",
+		shortDesc: "First turn only. Raises users' stats by 1, lowers enemy's stats by 1. False Swipe and Photon Geyser effect.",
+	},
+	hivemind: {
+		name: "Hivemind",
+		shortDesc: "Hits twice. Hits twice.",
+	},
+	miraclepunch: {
+		name: "Miracle Punch",
+		desc: "A random punch move is selected for use.",
+	},
+	anyattack: {
+		name: "Any Attack",
+		desc: "A random attack with base power > 80 is selected for use.",
+	},
+	anyheal: {
+		name: "Any Heal",
+		desc: "A random healing move is selected for use.",
+	},
+	anystatus: {
+		name: "Any Status",
+		desc: "A random status condition move is selected for use.",
+	},
+	anystatup: {
+		name: "Any Statup",
+		desc: "A random statup move is selected for use.",
+	},
+	piercingstrike: {
+		name: "Piercing Strike",
+		desc: "Any damage dealt over a Pokemon's remaining health is dealt to the next.",
+	},
+	artwall: {
+		name: "Art Wall",
+		shortDesc: "Protects the user and randomizes their typing. Contact: randomizes typing of the Pokemon making contact.",
+	},
+	badenergy: {
+		name: "Bad Energy",
+		shortDesc: "10% chance to inflict Curse.",
+	},
+	cerebralparasite: {
+		name: "Cerebral Parasite",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 50% of the damage dealt.",
+	},
+	bellyflop: {
+		name: "Bellyflop",
+		desc: "If this attack is not successful, the user loses half of its maximum HP, rounded down, as crash damage. Pokemon with the Magic Guard Ability are unaffected by crash damage.",
+		shortDesc: "User is hurt by 50% of its max HP if it misses.",
+
+		damage: "#crash",
+	},
+	sinkhole: {
+		name: "Sinkhole",
+		desc: "If an opposing Pokemon switches out this turn, this move hits that Pokemon before it leaves the field, even if it was not the original target. If the user moves after an opponent using Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch, but not Baton Pass, it will hit that opponent before it leaves the field. Power doubles and no accuracy check is done if the user hits an opponent switching out, and the user's turn is over; if an opponent faints from this, the replacement Pokemon does not become active until the end of the turn.",
+		shortDesc: "If a foe is switching out, hits it at 2x power.",
+
+		activate: "  ([TARGET] is being withdrawn...)",
+	},
+	dustbowl: {
+		name: "Dustbowl",
+		shortDesc: "Summons Sandstorm.",
+	},
+	squash: {
+		name: "Body Slam",
+		shortDesc: "30% chance to paralyze the target.",
+	},
+	cherrynobyl: {
+		name: "Cherrynobyl",
+		shortDesc: "Hits twice. Sets up Grassy Terrain.",
+	},
+	shadowbox: {
+		name: "Mindbreak",
+		shortDesc: "Supereffective on Ghost.",
+	},
+	mindbreak: {
+		name: "Mindbreak",
+		shortDesc: "Neutral effectiveness on Dark.",
+	},
+	extinction: {
+		name: "Extinction",
+		desc: "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",
+		shortDesc: "OHKOs the target. Fails if user is a lower level.",
+	},
+	finalfreeze: {
+		name: "Final Freeze",
+		desc: "Freezes the target. Can only be used once.",
+	},
+	berserkersoul: {
+		name: "Berserker Soul",
+		desc: "Hits once for each unfainted ally. Special if user's Sp. Atk > Atk.",
+	},
+	heartofthecards: {
+		name: "Heart of the Cards",
+		desc: "Raises the user's Attack and Special Attack by 1 stage. Applies Focus Energy.",
+		shortDesc: "Raises the user's Attack and Sp. Atk by 1. Applies Focus Energy.",
+	},
+	thebigone: {
+		name: "THE BIG ONE",
+		desc: "I USED TO BE NOTHING BUT THE E_MAIL GUY, NOW I'M THE [[It Burns! Ow! Stop! Help Me! It Burns!]] GUY! [[Amazed at thi5 amazing transformation? You too can]] HAVE A [[Communion]] WITH [[Unintelligble Laughter]] SOON I'LL EVEN SURPASS THAT DAMNED [[Clown Around Town!]] BUT UNLIKE HIM I'M GONNA [[Shoot For the Sky!]] AND  GET ON THE PATH TO ... [[The Big One]] I'LL GET SO. I'LL GET SO. I'LL GET SO. I'LL GET SO. I'LL GET SO. I'LL GET SO. [[Hyperlink blocked.]]",
+		shortDesc: "TOO MANY EXCESS VACATION DAYS?? TAKE A GOD DAMN VACATION STRAIGHT TO HELL",
+	},
+	mirrorball: {
+		name: "Mirror Ball",
+		desc: "Deals damage, then creates Magic Coat.",
+	},
+	trashtalk: {
+		name: "Trash Talk",
+		desc: "Makes the foe have Rage effect. Raises the user's crit rate by 2.",
+	},
+	torchshriek: {
+		name: "Torch Shriek",
+		desc: "Lowers the user's Sp. Atk by 1.",
+	},
+	this: {
+		name: "This",
+		desc: "Harnesses the power of perfection to obliterate your target where they stand.",
+	},
+	dartoftoxin: {
+		name: "Dart of Toxin",
+		desc: "Not very effective on Steel. Goes first. 20% to set Toxic Spikes.",
+	},
+	focusmiss: {
+		name: "Focus Miss",
+		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
+		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+	},
+	movethatfucksyourself: {
+		name: "Move That Fucks Yourself",
+		desc: "This move combines Electric in its type effectiveness against the target and its effects ignore the Abilities of other Pokemon.",
+		shortDesc: "Combines Electric in its type effectiveness. Ignores Abilities.",
+	},
+	flounderpunch: {
+		name: "Flounder Punch",
+		shortDesc: "Usually goes first. OHKOs the target Stunfisk. Fails if target is not a Stunfisk. Japanese Name: Flop Attack (失敗作うち). Not boosted by Iron Fisht.",
+	},
+	fairnessblast: {
+		name: "Fairness Blast",
+		shortDesc: "20x base power if user is &.",
+	},
+	alloutirony: {
+		name: "All-Out Irony",
+		shortDesc: "If a foe is switching out, hits it at 2x power. 100x power against Krackokind or Weedlekind Pokemon.",
+	},
+	eatrocks: {
+		name: "Eat Rocks",
+		shortDesc: "Removes Spikes, Toxic Spikes, and Stealth Rock from the user's side. If it removes a hazard this way, it heals 60%. Otherwise, 40%.",
+	},
+	heroineslight: {
+		name: "Heroine's Light",
+		desc: "The target's stat stages greater than 0 are stolen from it and applied to the user before dealing damage.",
+		shortDesc: "Steals target's boosts before dealing damage.",
+
+		clearBoost: "  [SOURCE] stole the target's boosted stats!",
+	},
+	acridblaze: {
+		name: "Acrid Blaze",
+		shortDesc: "100% chance to badly poison the target. Has 75% recoil.",
+	},
+	shellup: {
+		name: "Shell Up",
+		shortDesc: "Recovers 80% of user's maximum HP. Lowers Defense and Special Defense by 1.",
+	},
+	shatteringstrike: {
+		name: "Shattering Strike",
+		shortDesc: "Breaks the target's protection and lowers their Defense by 1.",
+	},
+	sandblast: {
+		name: "Sandblast",
+		shortDesc: "30% chance to lower the target's accuracy.",
+	},
+	scavenge: {
+		name: "Scavenge",
+		shortDesc: "hp recovery  and user item recovery.",
+	},
+	sharpwit: {
+		name: "Sharp Wit",
+		desc: "Raises the user's Attack by 1. Until the end of the next turn, the user's attacks will use the opponent's defense stat.",
+		shortDesc: "Raises the user's Attack by 1. Until the end of the next turn, the user's attacks will use the opponent's defense stat.",
+		start: "  [POKEMON] is thingken!",
+	},
+	funnyfun: {
+		name: "Funny Fun",
+		shortDesc: "Goes first. Always crits. Power based on happiness. Summons Reflect + Light Screen. Seeds target. 100% para/brn. 30% flinch. Cures user's party of status. Resets all boosts.",
+	},
+	nightynight: {
+		name: "Nighty Night",
+		shortDesc: "Has a 30% chance to put the target to sleep.",
+	},
+	glacialgroove: {
+		name: "Glacial Groove",
+		shortDesc: "Taunts the target.",
+	},
+	crystalslash: {
+		name: "Crystal Slash",
+		shortDesc: "10% chance to lower the target's accuracy.",
+	},
+	carcrash: {
+		name: "Car Crash",
+		shortDesc: "Has a 10% chance to paralyze the target and a 10% chance to confuse it. 33% recoil.",
+	},
+	newcannon: {
+		name: "New Cannon",
+		shortDesc: "Damage is thirded if the target is Water or Flying type.",
+	},
+	devilsharvest: {
+		name: "Devil's Harvest",
+		shortDesc: "Raise 5 random stats, lower 2 random stats.",
+	},
+	sadpoem: {
+		name: "Sad Poem",
+		shortDesc: "Placeholder. 40% chance to lower Defense. Special if user's Sp. Atk > Atk.",
+	},
+	annoy: {
+		name: "Annoy",
+		shortDesc: "Placeholder. 20% chance to burn. Special if user's Sp. Atk > Atk.",
+	},
+	peptalk: {
+		name: "Pep Talk",
+		shortDesc: "Placeholder. 30% chance to raise user's accuracy. Special if user's Sp. Atk > Atk.",
+	},
+	errpkmn: {
+		name: "ERR.PKMN",
+		shortDesc: "Damages target based on Defense, not Sp. Def. Crits if user moves before the target.",
+	},
+	metromash: {
+		name: "Metro Mash",
+		desc: "If this move is successful, the user is locked into this move and cannot make another move until it misses, 5 turns have passed, or the attack cannot be used. Power doubles with each successful hit of this move and doubles again if Shift Gear was used previously by the user. If this move is called by Sleep Talk, the move is used for one turn.",
+		shortDesc: "Power doubles with each hit or Shift Gear. Repeats for 5 turns.",
+	},
+	aboostingmove: {
+		name: "A Boosting Move",
+		desc: "If Atk > SpA, +1 Atk, +Spe. Otherwise, +1 SpA, +1 Spe.",
+	},
+	ahealingmove: {
+		name: "A Healing Move",
+		shortDesc: "Heals the user by 50% of its max HP. User cures its burn, poison, or paralysis.",
+		desc: "The user restores 1/2 of its maximum HP, rounded half up, and cures its burn, poison, or paralysis.",
+	},
+	apivotingmove: {
+		name: "A Pivoting Move",
+		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities. Physical if user's Atk > Sp. Atk.",
+		shortDesc: "User switches out after damaging the target. Physical if user's Atk > Sp. Atk.",
+	},
+	adamagingmove: {
+		name: "A Damaging Move",
+		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack. +1 priority and flinches if used on the first turn out.",
+		shortDesc: "Physical if user's Atk > Sp. Atk. +1 priority and flinches on first turn out.",
+	},
+	violentvines: {
+		name: "Violent Vines",
+		shortDesc: "Removes all hazards from user's side. Raises user's Sp. Atk by 1.",
+	},
+	genesisboost: {
+		name: "Genesis Boost",
+		desc: "Fails unless it is the user's first turn on the field. Raises the user's Attack and Defense by 2.",
+		shortDesc: "Usually goes first. First turn out only. Raises the user's Attack and Defense by 2.",
+	},
+	techslash: {
+		name: "Tech Slash",
+		shortDesc: "-1 Priority. Always paralyzes the target.",
+	},
+	rocketboost: {
+		name: "Rocket Boost",
+		shortDesc: "Raises Speed by 1 and sets up Aqua Ring on the user. Can only be used first turn out.",
+	},
+	combatorders: {
+		name: "Combat Orders",
+		shortDesc: "Allies receive a random boost anytime they boost for 4 turns.",
+	},
+	haste: {
+		name: "Haste",
+		shortDesc: "Allies attacking moves go first in their priority bracket for 4 turns with a diminishing chance to occur.",
+
+		activate: "  [POKEMON] can act faster than normal, thanks to its Haste!",
+	},
+	sharpeyes: {
+		name: "Sharp Eyes",
+		shortDesc: "Critical hits of allies deal 1.5x damage and +1 Crit ratio for 4 turns.",
+	},
+	shieldslam: {
+		name: "Shield Slam",
+		shortDesc: "+20 BP per Def boost. -1 Def after hit but never below 0.",
+	},
+	doubletap: {
+		name: "Double Tap",
+		shortDesc: "Deals double damage if double damage would KO the target.",
+	},
+	prismspray: {
+		name: "Prism Spray",
+		shortDesc: "This move's type becomes a random type when used.",
+	},
+	internetargument: {
+		name: "Internet Argument",
+		shortDesc: "Raises the user's and target's Attack and Sp. Attack by 2 stages and confuses the target.",
+	},
+	doubledose: {
+		name: "Double Dose",
+		shortDesc: "Hits twice. 100% chance to tox. Always crits againsted tox'd foes.",
+	},
+	vanish: {
+		name: "Vanish",
+		shortDesc: "Prevents moves from affecting the user this turn. +1 evasion.",
+	},
+	mri: {
+		name: "MRI",
+		shortDesc: "OHKOs the target if it is a Steel-type. OHKOs the user if it is a pure Steel-type.",
+	},
+	toiletpaper: {
+		name: "Toilet Paper",
+		shortDesc: "OHKOs the target if it is a Cacademon or Bungaloon.",
+	},
+	drunkenfist: {
+		name: "Drunken Fist",
+		shortDesc: "2x BP if the user is confused. Confuses both the user and target on hit.",
+	},
+	snowgrave: {
+		name: "Snowgrave",
+		shortDesc: "100% chance to freeze the target.",
+	},
+	bigbang: {
+		name: "Big Bang",
+		shortDesc: "Hits adjacent Pokemon. The user faints.",
+	},
+	retart: {
+		name: "Retart",
+		shortDesc: "More power the less Sp. Attack the user has than the target.",
+	},
+	lowestkick: {
+		name: "Lowest Kick",
+		shortDesc: "More power the heavier the target except it infinitely scales.",
+	},
+	spikesagain: {
+		name: "Spikes (Again)",
+		shortDesc: "Hurts grounded foes on switch-in. Max 3 layers.",
+	},
+	repurpose: {
+		name: "Repurpose",
+		shortDesc: "Turns 2 boosts into a +3 boost to a random stat.",
+	},
+	dragoonslash: {
+		name: "Dragoon Slash",
+		shortDesc: "OHKOs Dark-type Pokemon.",
+	},
+	liposuction: {
+		name: "Liposuction",
+		shortDesc: "Double base power against Pokemon with more than 100 base HP.",
+	},
+	revelation: {
+		name: "Revelation",
+		shortDesc: "Raises the user's Defense and Sp. Attack by 1.",
+	},
+	suddendeath: {
+		name: "Sudden Death",
+		shortDesc: "Sets all active Pokemon's HP to 1.",
+	},
+	renovate: {
+		name: "Renovate",
+		shortDesc: "Sets Trick Room in one turn.",
+	},
+	stickywebshot: {
+		name: "Sticky Web Shot",
+		shortDesc: "Sets Sticky Web on hit.",
+	},
+	frostyterrain: {
+		name: "Frosty Terrain",
+		shortDesc: "5 turns. Grounded: +Ice power, immune to burn, stat drops prevented.",
+	},
+	banana: {
+		name: "Banana",
+		shortDesc: "Fuck you figure it out",
+	},
+	maplewarrior: {
+		name: "Maple Warrior",
+		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",
+	},
+	skillroom: {
+		name: "Skill Room",
+		desc: "For 5 turns, all moves always hit but have their base power multiplied by their accuracy, Pokemon cannot be hit by critical hits, secondary effects with a 50% or greater chance of occuring always occur, and secondary effects with less than 50% chance never occur.",
+	},
+	runeofluck: {
+		name: "Rune of Luck",
+		shortDesc: "Shields user's party from the next 3 critical hits.",
+
+		activate: "[POKEMON] was shielded by the Rune of Luck!",
+	},
+	runeofprotection: {
+		name: "Rune of Protection",
+		shortDesc: "User's party receives 75% damage from the next 3 supereffective hits.",
+
+		activate: "[POKEMON] was shielded by the Rune of Protection!",
+	},
+	runeofmending: {
+		name: "Rune of Mending",
+		shortDesc: "User's party's next 3 enemy-inflected statuses are cured.",
+
+		activate: "[POKEMON] was cured by the Rune of Mending!",
+	},
+	psychocrush: {
+		name: "Psycho Crush",
+		shortDesc: "Uses user's Sp. Def stat as Sp. Atk in damage calculation.",
+	},
+	pacebreaker: {
+		name: "Psycho Crush",
+		shortDesc: "Physical if user's Atk > Sp. Atk. Uses user's Spe stat as Atk in damage calculation.",
+	},
+	speedforce: {
+		name: "Speed Force",
+		shortDesc: "Uses user's Spe stat as Sp. Atk in damage calculation. Damages target based on Spe, not Sp. Def.",
+	},
+	tooslow: {
+		name: "Too Slow",
+		shortDesc: "Usually goes first. Uses user's Spe stat as Sp. Atk in damage calculation.",
+	},
+	honorablekick: {
+		name: "Honorable Kick",
+		shortDesc: "User losses the game if it misses.",
+	},
+	investment: {
+		name: "Investment",
+		desc: "Sends the user's boosts 2 turns into the future.",
+	},
+	illusionofchoice: {
+		name: "Illusion of Choice",
+		desc: "For 5 turns, allies are under the effects of Choice Band and Choice Specs.",
+	},
+	starforce: {
+		name: "Star Force",
+		desc: "Has a (9 - X) / 8 chance to boost X + 2 random stats where X is the user's current Star Force. On success, increases the user's Star Force. On failure, the user faints.",
+	},
+	bombrock: {
+		name: "Bomb Rock",
+		desc: "Special if user's Sp. Atk > Atk. User loses 50% max HP if the user moves after the target this turn.",
+	},
+	godotshammer: {
+		name: "Godot's Hammer",
+		shortDesc: "Torments and Taunts the foe. Lowers the user's Speed by 2. Has 1/3 recoil.",
+	},
+
+	// WACK MOVES
+	hijumpkick: {
+		name: "Hi Jump Kick",
+		desc: "The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.",
+		shortDesc: "The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.",
+	},
+	smellingsalt: {
+		name: "SmellingSalt",
+		desc: "This attack inflicts double damage on a paralyzed foe. It also cures the target's paralysis, however.",
+		shortDesc: "This attack inflicts double damage on a paralyzed foe. It also cures the target's paralysis, however.",
+	},
+	vicegrip: {
+		name: "ViceGrip",
+		desc: "The target is gripped and squeezed from both sides to inflict damage.",
+		shortDesc: "The target is gripped and squeezed from both sides to inflict damage.",
+	},
+	gogcelebrate: {
+		name: "GOGCelebrate",
+		desc: "The Pokemon congratulates you on your special day!",
+		shortDesc: "The Pokemon congratulates you on your special day!",
+	},
+	woodhit: {
+		name: "Wood Hit",
+		desc: "The user hits the foe with wood. Yeah.",
+		shortDesc: "The user hits the foe with wood. Yeah.",
+	},
+	papertoss: {
+		name: "Paper Toss",
+		desc: "The user tosses a piece of paper.",
+		shortDesc: "The user tosses a piece of paper.",
+	},
+	papergun: {
+		name: "Paper Gun",
+		desc: "The target is shot with pieces of paper over and over.",
+		shortDesc: "The target is shot with pieces of paper over and over.",
+	},
+	fold: {
+		name: "Fold",
+		desc: "The user folds itself to raise its Defense and Sp. Def stats and increase power of next paper move.",
+		shortDesc: "The user folds itself to raise its Defense and Sp. Def stats and increase power of next paper move.",
+	},
+	papercut: {
+		name: "Paper Cut",
+		desc: "The target is attacked with a slash of paper. Critical hits land more easily.",
+		shortDesc: "The target is attacked with a slash of paper. Critical hits land more easily.",
+	},
+	paperball: {
+		name: "Paper Ball",
+		desc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+		shortDesc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+	},
+	lavaspit: {
+		name: "Lava Spit",
+		desc: "The target is attacked with small spit of lava. It may also leave the target with a burn.",
+		shortDesc: "The target is attacked with small spit of lava. It may also leave the target with a burn.",
+	},
+	magmaburst: {
+		name: "Magma Burst",
+		desc: "The target is attacked with a burst of magma. Critical hits land more easily.",
+		shortDesc: "The target is attacked with a burst of magma. Critical hits land more easily.",
+	},
+	volcaniceruption: {
+		name: "Volcanic Eruption",
+		desc: "The target is blasted by a huge volume of magma launched under great pressure.",
+		shortDesc: "The target is blasted by a huge volume of magma launched under great pressure.",
+	},
+	lavabomb: {
+		name: "Lava Bomb",
+		desc: "The target is blasted by a bomb of lava. It may also make the target flinch or leave it burned.",
+		shortDesc: "The target is blasted by a bomb of lava. It may also make the target flinch or leave it burned.",
+	},
+	kindle: {
+		name: "Kindle",
+		desc: "The user stokes the flames within to raise its Sp. Atk and Sp. Def stats.",
+		shortDesc: "The user stokes the flames within to raise its Sp. Atk and Sp. Def stats.",
+	},
+	megamissile: {
+		name: "Mega Missile",
+		desc: "Raises user's Atk first turn, attacks on the second turn.",
+		shortDesc: "Raises user's Atk first turn, attacks on the second turn.",
+	},
+	micromissiles: {
+		name: "Micro Missiles",
+		desc: "The user fires mini missiles at the target. Two to five missiles are launched in quick succession.",
+		shortDesc: "The user fires mini missiles at the target. Two to five missiles are launched in quick succession.",
+	},
+	oilup: {
+		name: "Oil Up",
+		desc: "The user oils up its joints. It drastically boosts the Speed stat but makes user take x2 from Fire for 3 turns.",
+		shortDesc: "The user oils up its joints. It drastically boosts the Speed stat but makes user take x2 from Fire for 3 turns.",
+	},
+	techsavvy: {
+		name: "Tech Savvy",
+		desc: "The user shows its apptitude with technology to raise its Sp. Atk and Sp. Def stats.",
+		shortDesc: "The user shows its apptitude with technology to raise its Sp. Atk and Sp. Def stats.",
+	},
+	hydraulickick: {
+		name: "Hydraulic Kick",
+		desc: "The user kicks with a hydraulic motion. Critical hits land more easily.",
+		shortDesc: "The user kicks with a hydraulic motion. Critical hits land more easily.",
+	},
+	pistonpunch: {
+		name: "Piston Punch",
+		desc: "The target is punched with an pistoned fist. It may also leave the target with paralysis.",
+		shortDesc: "The target is punched with an pistoned fist. It may also leave the target with paralysis.",
+	},
+	dacoball: {
+		name: "DACO BALL",
+		desc: "The target is blasted with raw technology.",
+		shortDesc: "The target is blasted with raw technology.",
+	},
+	wirelash: {
+		name: "Wire Lash",
+		desc: "The user lashes with wires. It may also make the target flinch or leave it with paralysis.",
+		shortDesc: "The user lashes with wires. It may also make the target flinch or leave it with paralysis.",
+	},
+	energyshield: {
+		name: "Energy Shield",
+		desc: "The user puts up an energy shield. Raises user's Defense stat and sharply raises user's Sp. Def stat.",
+		shortDesc: "The user puts up an energy shield. Raises user's Defense stat and sharply raises user's Sp. Def stat.",
+	},
+	steamyspray: {
+		name: "Steamy Spray",
+		desc: "The target is attacked with small spray of steam. It may also leave the target with a burn.",
+		shortDesc: "The target is attacked with small spray of steam. It may also leave the target with a burn.",
+	},
+	steamer: {
+		name: "Steamer",
+		desc: "The user tosses a steamer at the target. Yeah, that would freaking hurt",
+		shortDesc: "The user tosses a steamer at the target. Yeah, that would freaking hurt",
+	},
+	steamball: {
+		name: "Steam Ball",
+		desc: "The user hurls a steamy blob at the target. It may also lower the target's Sp. Def stat.",
+		shortDesc: "The user hurls a steamy blob at the target. It may also lower the target's Sp. Def stat.",
+	},
+	boatbash: {
+		name: "Boat Bash",
+		desc: "The user bashes the opponent witgh a boat. This move is super effective on Water types.",
+		shortDesc: "The user bashes the opponent witgh a boat. This move is super effective on Water types.",
+	},
+	steamcharge: {
+		name: "Steam-Charge",
+		desc: "A reckless, life-risking tackle with steam. It also damages the user by a fairly large amount, however.",
+		shortDesc: "A reckless, life-risking tackle with steam. It also damages the user by a fairly large amount, however.",
+	},
+	frigofear: {
+		name: "Frigo-fear",
+		desc: "The target is struck with the phobia of the cold. It may also freeze the target solid.",
+		shortDesc: "The target is struck with the phobia of the cold. It may also freeze the target solid.",
+	},
+	fearpulse: {
+		name: "Fear Pulse",
+		desc: "The user shoots out a pulse of raw fear. Critical hits land more easily.",
+		shortDesc: "The user shoots out a pulse of raw fear. Critical hits land more easily.",
+	},
+	purefear: {
+		name: "Pure Fear",
+		desc: "The target is blasted with pure and utter terror.",
+		shortDesc: "The target is blasted with pure and utter terror.",
+	},
+	claustrogrip: {
+		name: "Claustrogrip",
+		desc: "The user invokes claustrophobia on the target.",
+		shortDesc: "The user invokes claustrophobia on the target.",
+	},
+	rubberrub: {
+		name: "Rubber Rub",
+		desc: "The target is rubbed by rubber. It may make the target flinch.",
+		shortDesc: "The target is rubbed by rubber. It may make the target flinch.",
+	},
+	rubbershot: {
+		name: "Rubber Shot",
+		desc: "The user shoots rubber. The attack lands without fail.",
+		shortDesc: "The user shoots rubber. The attack lands without fail.",
+	},
+	rubberpowder: {
+		name: "Rubber Powder",
+		desc: "The user spreads rubbery excrements.",
+		shortDesc: "The user spreads rubbery excrements.",
+	},
+	rubberball: {
+		name: "Rubber Ball",
+		desc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+		shortDesc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+	},
+	rubberray: {
+		name: "Rubber Ray",
+		desc: "The target is blasted with a ray of rubbery rubber.",
+		shortDesc: "The target is blasted with a ray of rubbery rubber.",
+	},
+	tirecrash: {
+		name: "Tire Crash",
+		desc: "The user speeds into the target two to five times in a row. This move always goes first.",
+		shortDesc: "The user speeds into the target two to five times in a row. This move always goes first.",
+	},
+	latexlash: {
+		name: "Latex Lash",
+		desc: "The target is lashed with latex. It may also leave the target with paralysis.",
+		shortDesc: "The target is lashed with latex. It may also leave the target with paralysis.",
+	},
+	cyclonepunch: {
+		name: "Cyclone Punch",
+		desc: "The target is punched with a fist cloaked in wind. It may also leave the target with paralysis.",
+		shortDesc: "The target is punched with a fist cloaked in wind. It may also leave the target with paralysis.",
+	},
+	stingpunch: {
+		name: "Sting Punch",
+		desc: "The target is punched with an pistoned fist. It may also leave the target with paralysis.",
+		shortDesc: "The target is punched with an pistoned fist. It may also leave the target with paralysis.",
+	},
+	swarmattack: {
+		name: "Swarm Attack",
+		desc: "The user calls on a swarm to hit the foe 2-5 times.",
+		shortDesc: "The user calls on a swarm to hit the foe 2-5 times.",
+	},
+	celestialray: {
+		name: "Celestial Ray",
+		desc: "The target is attacked with an odd cosmic wave. The attack varies in intensity.",
+		shortDesc: "The target is attacked with an odd cosmic wave. The attack varies in intensity.",
+	},
+	solarcrash: {
+		name: "SolarCrash",
+		desc: "A two-turn attack. The user gathers light, then charges on the second turn.",
+		shortDesc: "A two-turn attack. The user gathers light, then charges on the second turn.",
+	},
+	cometcrash: {
+		name: "Comet Crash",
+		desc: "The target is hit by a speeding comet. It may also raise the user's Attack.",
+		shortDesc: "The target is hit by a speeding comet. It may also raise the user's Attack.",
+	},
+	sunsflames: {
+		name: "Sun's Flames",
+		desc: "The user harnesses the power of the sun itself. It may also leave the target with a burn.",
+		shortDesc: "The user harnesses the power of the sun itself. It may also leave the target with a burn.",
+	},
+	lunarwave: {
+		name: "Lunar Wave",
+		desc: "The user harnesses the power of the moon itself. It may also induce sleep.",
+		shortDesc: "The user harnesses the power of the moon itself. It may also induce sleep.",
+	},
+	sprinkle: {
+		name: "Sprinkle",
+		desc: "The user sprinkles sprinkles that both deal damage and lower stats",
+		shortDesc: "The user sprinkles sprinkles that both deal damage and lower stats",
+	},
+	cookiecutter: {
+		name: "Cookie Cutter",
+		desc: "The target is COOKIE CUTTED. Critical hits land more easily.",
+		shortDesc: "The target is COOKIE CUTTED. Critical hits land more easily.",
+	},
+	cookieslam: {
+		name: "Cookie Slam",
+		desc: "The user SLAMS into the foe as if a cookie. It also cuts the user's Defense and Sp. Def.",
+		shortDesc: "The user SLAMS into the foe as if a cookie. It also cuts the user's Defense and Sp. Def.",
+	},
+	cakewalk: {
+		name: "Cake Walk",
+		desc: "The user does a cake walk, sharply boosting one of its stats.",
+		shortDesc: "The user does a cake walk, sharply boosting one of its stats.",
+	},
+	icecreambeam: {
+		name: "Icecream Beam",
+		desc: "The target is struck with an icy-cold beam of ice cream. It may also freeze the target solid.",
+		shortDesc: "The target is struck with an icy-cold beam of ice cream. It may also freeze the target solid.",
+	},
+	necromancy: {
+		name: "Necromancy",
+		desc: "The user gets all the party Pokemon to attack the foe. The more party Pokemon, the more damage.",
+		shortDesc: "The user gets all the party Pokemon to attack the foe. The more party Pokemon, the more damage.",
+	},
+	zombiehorde: {
+		name: "Zombie Horde",
+		desc: "The user summons a ravenous horde of zombies. Two to five zombies attack in quick succession.",
+		shortDesc: "The user summons a ravenous horde of zombies. Two to five zombies attack in quick succession.",
+	},
+	zombiebite: {
+		name: "Zombie Bite",
+		desc: "The target becomes Zombie-type.",
+		shortDesc: "The target becomes Zombie-type.",
+	},
+	rottedclaw: {
+		name: "Rotted Claw",
+		desc: "The user rakes the foe with an infected, rotting claw. Chance to badly poison and Hi Crit Ratio.",
+		shortDesc: "The user rakes the foe with an infected, rotting claw. Chance to badly poison and Hi Crit Ratio.",
+	},
+	zombiebile: {
+		name: "Zombie Bile",
+		desc: "Hits both targets, may make them take more damage from Zombie moves for 4 turns.",
+		shortDesc: "Hits both targets, may make them take more damage from Zombie moves for 4 turns.",
+	},
+	zombiepounce: {
+		name: "Zombie Pounce",
+		desc: "Goes first. The user bounces up high raising Acc, then drops on the foe on the second turn. It may also paralyze the foe.",
+		shortDesc: "Goes first. The user bounces up high raising Acc, then drops on the foe on the second turn. It may also paralyze the foe.",
+	},
+	nuclearexplosion: {
+		name: "NuclearExplosion",
+		desc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+		shortDesc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+	},
+	malaria: {
+		name: "Malaria",
+		desc: "The user inflicts the target with Malaria, causing erratic side effects.",
+		shortDesc: "The user inflicts the target with Malaria, causing erratic side effects.",
+	},
+	sneeze: {
+		name: "Sneeze",
+		desc: "The user sneezes at the speed of sound. This move always goes first.",
+		shortDesc: "The user sneezes at the speed of sound. This move always goes first.",
+	},
+	S: {
+		name: "o",
+		desc: "The user injects the target with a needle to send it into a deep sleep.",
+		shortDesc: "The user injects the target with a needle to send it into a deep sleep.",
+	},
+	ebola: {
+		name: "Ebola",
+		desc: "Hits everything around the user. It may also poison and make them bleed.",
+		shortDesc: "Hits everything around the user. It may also poison and make them bleed.",
+	},
+	rottedwings: {
+		name: "Rotted Wings",
+		desc: "The user quickly attacks with rotting wings. Building up more power, it raises the user's Speed stat.",
+		shortDesc: "The user quickly attacks with rotting wings. Building up more power, it raises the user's Speed stat.",
+	},
+	shamble: {
+		name: "Shamble",
+		desc: "The user shambles forward, +2 Atk, +1 Def and -1 Speed.",
+		shortDesc: "The user shambles forward, +2 Atk, +1 Def and -1 Speed.",
+	},
+	macabredance: {
+		name: "Macabre Dance",
+		desc: "The user vigorously performs a mystic, macabre dance that boosts its Attack and Speed stats.",
+		shortDesc: "The user vigorously performs a mystic, macabre dance that boosts its Attack and Speed stats.",
+	},
+	ring: {
+		name: "Ring",
+		desc: "The user makes an annoying ringing noise to lower the target's accuaracy.",
+		shortDesc: "The user makes an annoying ringing noise to lower the target's accuaracy.",
+	},
+	tidalpunch: {
+		name: "Tidal Punch",
+		desc: "The target is punched with a tidal fist. It may also leave the target confused.",
+		shortDesc: "The target is punched with a tidal fist. It may also leave the target confused.",
+	},
+	bottletoss: {
+		name: "Bottle Toss",
+		desc: "The user tosses a bottle.",
+		shortDesc: "The user tosses a bottle.",
+	},
+	plasticdefense: {
+		name: "Plastic Defense",
+		desc: "The user temporarily becomes 100% plastic. It sharply raises the user's Sp. Def stat.",
+		shortDesc: "The user temporarily becomes 100% plastic. It sharply raises the user's Sp. Def stat.",
+	},
+	plasticjab: {
+		name: "Plastic Jab",
+		desc: "The user confounds the foe with speed, then jabs them with plastic. The attack lands without fail.",
+		shortDesc: "The user confounds the foe with speed, then jabs them with plastic. The attack lands without fail.",
+	},
+	bottleblast: {
+		name: "Bottle Blast",
+		desc: "The repeatedly blasts the target with bottles. Two to five bottles attack in quick succession.",
+		shortDesc: "The repeatedly blasts the target with bottles. Two to five bottles attack in quick succession.",
+	},
+	bottleslam: {
+		name: "Bottle Slam",
+		desc: "A reckless, life-risking tackle with a bottle in hand. It also damages the user by a fairly large amount, however.",
+		shortDesc: "A reckless, life-risking tackle with a bottle in hand. It also damages the user by a fairly large amount, however.",
+	},
+	plasticbeam: {
+		name: "Plastic Beam",
+		desc: "The target is blasted by a huge volume of plastic launched under great pressure.",
+		shortDesc: "The target is blasted by a huge volume of plastic launched under great pressure.",
+	},
+	stargaze: {
+		name: "Star Gaze",
+		desc: "Heals user. Heals more and raises Accuracy during Starfield.",
+		shortDesc: "Heals user. Heals more and raises Accuracy during Starfield.",
+	},
+	virus: {
+		name: "Virus",
+		desc: "Random status condition.",
+		shortDesc: "Random status condition.",
+	},
+	comet: {
+		name: "Comet",
+		desc: "The target is attacked with a small comet. It may also leave the target with a burn.",
+		shortDesc: "The target is attacked with a small comet. It may also leave the target with a burn.",
+	},
+	galacticforce: {
+		name: "Galactic Force",
+		desc: "Comets are summoned down from the sky. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+		shortDesc: "Comets are summoned down from the sky. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+	},
+	asteroidbelt: {
+		name: "Asteroid Belt",
+		desc: "The user summons an asteroid belt to strike two to five times in a row.",
+		shortDesc: "The user summons an asteroid belt to strike two to five times in a row.",
+	},
+	meteorshower: {
+		name: "Meteor Shower",
+		desc: "The user creates a meteor shower to strike two to five times in a row.",
+		shortDesc: "The user creates a meteor shower to strike two to five times in a row.",
+	},
+	techerror: {
+		name: "Tech.Error",
+		desc: "The user creates a fatal error on the target, may disable a move. Always goes first.",
+		shortDesc: "The user creates a fatal error on the target, may disable a move. Always goes first.",
+	},
+	shatterbody: {
+		name: "Shatter Body",
+		desc: "The user breaks itself, lowering its defenses but sharply raising attacking and Speed stats.",
+		shortDesc: "The user breaks itself, lowering its defenses but sharply raising attacking and Speed stats.",
+	},
+	glassscrape: {
+		name: "Glass Scrape",
+		desc: "The user scrapes pieces of glass together to make an annoying noise. It may confuse the target.",
+		shortDesc: "The user scrapes pieces of glass together to make an annoying noise. It may confuse the target.",
+	},
+	glassblade: {
+		name: "Glass Blade",
+		desc: "The target is attacked with a glass blade. Critical hits land more easily.",
+		shortDesc: "The target is attacked with a glass blade. Critical hits land more easily.",
+	},
+	shattercharge: {
+		name: "Shatter Charge",
+		desc: "The user charges into the foe hard enough to shatter part of their body, dealing damage to themselves aswell.",
+		shortDesc: "The user charges into the foe hard enough to shatter part of their body, dealing damage to themselves aswell.",
+	},
+	sawdust: {
+		name: "Sawdust",
+		desc: "Sawdust is hurled in the target's face, reducing its accuracy.",
+		shortDesc: "Sawdust is hurled in the target's face, reducing its accuracy.",
+	},
+	capsize: {
+		name: "Capsize",
+		desc: "The user crashes into the target like a wave from the ocean. It may also confuse the target.",
+		shortDesc: "The user crashes into the target like a wave from the ocean. It may also confuse the target.",
+	},
+	murmur: {
+		name: "Murmur",
+		desc: "The user murmurs incomprehensibly, causing a random side effect.",
+		shortDesc: "The user murmurs incomprehensibly, causing a random side effect.",
+	},
+	phantomtendril: {
+		name: "Phantom Tendril",
+		desc: "The user summons intangible tentacles to squeeze the foe for four to five turns.",
+		shortDesc: "The user summons intangible tentacles to squeeze the foe for four to five turns.",
+	},
+	pulpblast: {
+		name: "Pulp Blast",
+		desc: "The target is blasted by a huge volume of pulp extracted from wood.",
+		shortDesc: "The target is blasted by a huge volume of pulp extracted from wood.",
+	},
+	binaryflux: {
+		name: "Binary Flux",
+		desc: "The user assaults the target with mind boggling numbers and code. It may also leave the target confused.",
+		shortDesc: "The user assaults the target with mind boggling numbers and code. It may also leave the target confused.",
+	},
+	configure: {
+		name: "Configure",
+		desc: "The target becomes trapped within a walls of code for four to five turns.",
+		shortDesc: "The target becomes trapped within a walls of code for four to five turns.",
+	},
+	encrypt: {
+		name: "Encrypt",
+		desc: "The user codes an encryption to keep it safe from attacks. Its chance of failing rises if it is used in succession.",
+		shortDesc: "The user codes an encryption to keep it safe from attacks. Its chance of failing rises if it is used in succession.",
+	},
+	memorywipe: {
+		name: "Memory Wipe",
+		desc: "The user wipes the target's recent memory. All status changes are returned to normal.",
+		shortDesc: "The user wipes the target's recent memory. All status changes are returned to normal.",
+	},
+	gumbubble: {
+		name: "Gum Bubble",
+		desc: "The user bursts a gum bubble, causing damage. It may also leave the target with paralysis.",
+		shortDesc: "The user bursts a gum bubble, causing damage. It may also leave the target with paralysis.",
+	},
+	mintburst: {
+		name: "Mint Burst",
+		desc: "The target is struck with a burst of fresh minty flavor. It may also freeze the target solid.",
+		shortDesc: "The target is struck with a burst of fresh minty flavor. It may also freeze the target solid.",
+	},
+	foodray: {
+		name: "Food Ray",
+		desc: "The target is blasted by a a mystical ray infused with nutrition.",
+		shortDesc: "The target is blasted by a a mystical ray infused with nutrition.",
+	},
+	spicyburst: {
+		name: "Spicy Burst",
+		desc: "The target is scorched with a burst of spicy flavor. It may also leave the target with a burn.",
+		shortDesc: "The target is scorched with a burst of spicy flavor. It may also leave the target with a burn.",
+	},
+	frurfburst: {
+		name: "FruRF Burst",
+		desc: "The target is blasted by a fruity flavor. May restore the user's health.",
+		shortDesc: "The target is blasted by a fruity flavor. May restore the user's health.",
+	},
+	cakeslice: {
+		name: "Cake Slice",
+		desc: "The target is cut like cake. It may also lower the target's Defense stat.",
+		shortDesc: "The target is cut like cake. It may also lower the target's Defense stat.",
+	},
+	fairyclaw: {
+		name: "Fairy Claw",
+		desc: "The user slashes with a sharp claw made from fairies. Critical hits land more easily.",
+		shortDesc: "The user slashes with a sharp claw made from fairies. Critical hits land more easily.",
+	},
+	mahoganyslam: {
+		name: "Mahogany Slam",
+		desc: "MAHOGAAAAAAAANNNNNNNNYYYYY.",
+		shortDesc: "MAHOGAAAAAAAANNNNNNNNYYYYY.",
+	},
+	essencedrain: {
+		name: "Essence Drain",
+		desc: "The user steals the target's essence. The user's HP is restored by over half of the damage taken by the target.",
+		shortDesc: "The user steals the target's essence. The user's HP is restored by over half of the damage taken by the target.",
+	},
+	fabricblast: {
+		name: "Fabric Blast",
+		desc: "The target is blasted by a huge volume of fabric launched under great pressure.",
+		shortDesc: "The target is blasted by a huge volume of fabric launched under great pressure.",
+	},
+	carpetrub: {
+		name: "Carpet Rub",
+		desc: "The user rubs fabric up against the target. It may also leave the target with paralysis.",
+		shortDesc: "The user rubs fabric up against the target. It may also leave the target with paralysis.",
+	},
+	carpetburn: {
+		name: "Carpet Burn",
+		desc: "The target is rubbed with fabric a fast velocity. It may also leave the target with a burn.",
+		shortDesc: "The target is rubbed with fabric a fast velocity. It may also leave the target with a burn.",
+	},
+	breeze: {
+		name: "Breeze",
+		desc: "A cool breeze is whipped up.",
+		shortDesc: "A cool breeze is whipped up.",
+	},
+	gale: {
+		name: "Gale",
+		desc: "A strong gale strikes the foe. May cause the foe to be switched out.",
+		shortDesc: "A strong gale strikes the foe. May cause the foe to be switched out.",
+	},
+	tornadocrash: {
+		name: "TORNADOCRASH",
+		desc: "The target is struck by a crash like a tornado. It may also leave the target confused.",
+		shortDesc: "The target is struck by a crash like a tornado. It may also leave the target confused.",
+	},
+	cyclone: {
+		name: "Cyclone",
+		desc: "The target is struck by a violent cyclone. It may make the target flinch.",
+		shortDesc: "The target is struck by a violent cyclone. It may make the target flinch.",
+	},
+	glitch: {
+		name: "Glitch",
+		desc: "Causes a glitch in its system, sharply boosting a random one of its stats.",
+		shortDesc: "Causes a glitch in its system, sharply boosting a random one of its stats.",
+	},
+	quickspell: {
+		name: "Quick Spell",
+		desc: "The user quickly launches a spell at the target. This move always goes first.",
+		shortDesc: "The user quickly launches a spell at the target. This move always goes first.",
+	},
+	magicarrows: {
+		name: "Magic Arrows",
+		desc: "The target is jabbed repeatedly with magic arrows two to five times in a row.",
+		shortDesc: "The target is jabbed repeatedly with magic arrows two to five times in a row.",
+	},
+	airpressure: {
+		name: "Air Pressure",
+		desc: "Lower's the opposing side's Speed for 5 turns.",
+		shortDesc: "Lower's the opposing side's Speed for 5 turns.",
+	},
+	sonicwind: {
+		name: "Sonic Wind",
+		desc: "The user quickly whips up a sonic wind to shoot at the target. This move always goes first.",
+		shortDesc: "The user quickly whips up a sonic wind to shoot at the target. This move always goes first.",
+	},
+	arcaneenergy: {
+		name: "Arcane Energy",
+		desc: "The user attacks with an arcane power. It may also raise all the user's stats at once.",
+		shortDesc: "The user attacks with an arcane power. It may also raise all the user's stats at once.",
+	},
+	arcanebolt: {
+		name: "Arcane Bolt",
+		desc: "The target is blasted with a bolt of arcane energy.",
+		shortDesc: "The target is blasted with a bolt of arcane energy.",
+	},
+	laser: {
+		name: "Laser",
+		desc: "A laser is shot out.",
+		shortDesc: "A laser is shot out.",
+	},
+	sandjet: {
+		name: "Sand Jet",
+		desc: "The user quickly charges at the foe with sand. This move always goes first.",
+		shortDesc: "The user quickly charges at the foe with sand. This move always goes first.",
+	},
+	sandcannon: {
+		name: "Sand Cannon",
+		desc: "Sand is shot out at a rapid pace at the targets pace, reducing its accuracy.",
+		shortDesc: "Sand is shot out at a rapid pace at the targets pace, reducing its accuracy.",
+	},
+	squeak: {
+		name: "Squeak",
+		desc: "The target's ears are assaulted by an annoying squeak. It may make the target flinch.",
+		shortDesc: "The target's ears are assaulted by an annoying squeak. It may make the target flinch.",
+	},
+	bassdrop: {
+		name: "Bass Drop",
+		desc: "The user DROPS IT HARD. It may also lower the target's Sp. Def stat.",
+		shortDesc: "The user DROPS IT HARD. It may also lower the target's Sp. Def stat.",
+	},
+	sonicpulse: {
+		name: "Sonic Pulse",
+		desc: "The target is hit by a pulse of sonic force. High chance to leave the target confused.",
+		shortDesc: "The target is hit by a pulse of sonic force. High chance to leave the target confused.",
+	},
+	atomsplit: {
+		name: "Atom Split",
+		desc: "The user splits an Atom. Hits two turns after this move is used. Does Nuclear damage.",
+		shortDesc: "The user splits an Atom. Hits two turns after this move is used. Does Nuclear damage.",
+	},
+	gammaray: {
+		name: "Gamma Ray",
+		desc: "The foe is attacked with a powerful gamma ray. The user must rest on the next turn to regain its energy.",
+		shortDesc: "The foe is attacked with a powerful gamma ray. The user must rest on the next turn to regain its energy.",
+	},
+	hexclaw: {
+		name: "Hex Claw",
+		desc: "The user casts a hex on its claws, then attacks the target. May disable the last move used by the target",
+		shortDesc: "The user casts a hex on its claws, then attacks the target. May disable the last move used by the target",
+	},
+	sonicwave: {
+		name: "Sonic Wave",
+		desc: "The user sends out a wave of sound wave, then slashes. The attack lands without fail.",
+		shortDesc: "The user sends out a wave of sound wave, then slashes. The attack lands without fail.",
+	},
+	deathscream: {
+		name: "Death Scream",
+		desc: "The user screams violently, loud enough to kill. The target will faint instantly if this attack hits.",
+		shortDesc: "The user screams violently, loud enough to kill. The target will faint instantly if this attack hits.",
+	},
+	terrorscreech: {
+		name: "Terror Screech",
+		desc: "The user screeches to frighten the target. It may also leave the target confused.",
+		shortDesc: "The user screeches to frighten the target. It may also leave the target confused.",
+	},
+	insanitybolt: {
+		name: "Insanity Bolt",
+		desc: "The user sends out a bolt that invokes madness on the target. It may also confuse the foe.",
+		shortDesc: "The user sends out a bolt that invokes madness on the target. It may also confuse the foe.",
+	},
+	wastespray: {
+		name: "Waste Spray",
+		desc: "The user sprays nuclear waste at the target. It may also lower the target's Sp. Def stat.",
+		shortDesc: "The user sprays nuclear waste at the target. It may also lower the target's Sp. Def stat.",
+	},
+	atomicrush: {
+		name: "Atomic Rush",
+		desc: "The user uses lots of nuclear energy to charge. It also damages the user a little.",
+		shortDesc: "The user uses lots of nuclear energy to charge. It also damages the user a little.",
+	},
+	corrode: {
+		name: "Corrode",
+		desc: "Sharply lowers the opp SpDef.",
+		shortDesc: "Sharply lowers the opp SpDef.",
+	},
+	wastecloud: {
+		name: "Waste Cloud",
+		desc: "The user slaps down the target's held item, preventing that item from being used in the battle.",
+		shortDesc: "The user slaps down the target's held item, preventing that item from being used in the battle.",
+	},
+	megabyte: {
+		name: "Mega Byte",
+		desc: "Get it? Hahaha. Mega Byte. Byte. Bite. It may make the target flinch.",
+		shortDesc: "Get it? Hahaha. Mega Byte. Byte. Bite. It may make the target flinch.",
+	},
+	spicypowder: {
+		name: "Spicy Powder",
+		desc: "The user sprays spicy powder at the target to inflict a burn.",
+		shortDesc: "The user sprays spicy powder at the target to inflict a burn.",
+	},
+	meatmash: {
+		name: "Meat Mash",
+		desc: "The target is hit with a meaty mash. It may also raise the user's Attack.",
+		shortDesc: "The target is hit with a meaty mash. It may also raise the user's Attack.",
+	},
+	hotpocketcrash: {
+		name: "Hot Pocket Crash",
+		desc: "The user calls on the power of the hot pocket and charges at the foe. The user also takes damage and may burn the target.",
+		shortDesc: "The user calls on the power of the hot pocket and charges at the foe. The user also takes damage and may burn the target.",
+	},
+	lavasplash: {
+		name: "Lava Splash",
+		desc: "The user splashes lava that strikes every Pokemon around it.",
+		shortDesc: "The user splashes lava that strikes every Pokemon around it.",
+	},
+	volcanopunch: {
+		name: "Volcano Punch",
+		desc: "The target is punched with a volcanic fist. It may leave the target with a burn.",
+		shortDesc: "The target is punched with a volcanic fist. It may leave the target with a burn.",
+	},
+	woodendefense: {
+		name: "Wooden Defense",
+		desc: "The user hardens its body's surface like wood, sharply raising its Defense stat.",
+		shortDesc: "The user hardens its body's surface like wood, sharply raising its Defense stat.",
+	},
+	spellslash: {
+		name: "Spell Slash",
+		desc: "The user slashes the target using a spell infused hand. Critical hits land more easily.",
+		shortDesc: "The user slashes the target using a spell infused hand. Critical hits land more easily.",
+	},
+	chaosrift: {
+		name: "Chaos Rift",
+		desc: "The target is hit by a confounding rift of madness. It may also leave the target confused.",
+		shortDesc: "The target is hit by a confounding rift of madness. It may also leave the target confused.",
+	},
+	etherealclaws: {
+		name: "Ethereal Claws",
+		desc: "The user slashes the target with claws made of light. Critical hits land more easily.",
+		shortDesc: "The user slashes the target with claws made of light. Critical hits land more easily.",
+	},
+	riftstrike: {
+		name: "Rift Strike",
+		desc: "This move always goes first. Damages the user a little.",
+		shortDesc: "This move always goes first. Damages the user a little.",
+	},
+	demonicclaws: {
+		name: "Demonic Claws",
+		desc: "The user slashes the target with claws infused with demonic energy. Critical hits land more easily.",
+		shortDesc: "The user slashes the target with claws infused with demonic energy. Critical hits land more easily.",
+	},
+	serqetssting: {
+		name: "Serqet's Sting",
+		desc: "The user calls on the power of an ancient god to sting the target. It may also poison the target.",
+		shortDesc: "The user calls on the power of an ancient god to sting the target. It may also poison the target.",
+	},
+	realityrift: {
+		name: "Reality Rift",
+		desc: "The user causes a rift in reality, trapping the target for four to five turns.",
+		shortDesc: "The user causes a rift in reality, trapping the target for four to five turns.",
+	},
+	nuswave: {
+		name: "Nu's Wave",
+		desc: "The user summons a torrent of water using the power of an ancient god, drags out another Pokemon in its party. In the wild, the battle ends.",
+		shortDesc: "The user summons a torrent of water using the power of an ancient god, drags out another Pokemon in its party. In the wild, the battle ends.",
+	},
+	setsshadows: {
+		name: "Set's Shadows",
+		desc: "The user calls on the power of an ancient god to frighten the foe. It may also leave the target confused.",
+		shortDesc: "The user calls on the power of an ancient god to frighten the foe. It may also leave the target confused.",
+	},
+	thothswisdom: {
+		name: "Thoth's Wisdom",
+		desc: "The user calls on the wisdom of an ancient god to raise its Sp. Atk and Sp. Def stats.",
+		shortDesc: "The user calls on the wisdom of an ancient god to raise its Sp. Atk and Sp. Def stats.",
+	},
+	isismagic: {
+		name: "Isis' Magic",
+		desc: "The user summons the magic of an ancient god. It may also raise the user's Sp. Atk stat.",
+		shortDesc: "The user summons the magic of an ancient god. It may also raise the user's Sp. Atk stat.",
+	},
+	osirisflail: {
+		name: "Osiris' Flail",
+		desc: "The target whipped with the flail of an ancient god. It may make the target flinch.",
+		shortDesc: "The target whipped with the flail of an ancient god. It may make the target flinch.",
+	},
+	balance: {
+		name: "Balance",
+		desc: "The user inflicts absolute balance on the target. All status changes are returned to normal.",
+		shortDesc: "The user inflicts absolute balance on the target. All status changes are returned to normal.",
+	},
+	swordsedge: {
+		name: "Sword's Edge",
+		desc: "The user slashes the target with a sword. Critical hits land more easily.",
+		shortDesc: "The user slashes the target with a sword. Critical hits land more easily.",
+	},
+	woodsword: {
+		name: "Wood Sword",
+		desc: "The user slashes the target with a wooden sword. Critical hits land more easily.",
+		shortDesc: "The user slashes the target with a wooden sword. Critical hits land more easily.",
+	},
+	chainsawrun: {
+		name: "Chainsaw Run",
+		desc: "Hi crit rate. The target is hit twice in a row.",
+		shortDesc: "Hi crit rate. The target is hit twice in a row.",
+	},
+	haunt: {
+		name: "Haunt",
+		desc: "The user haunts the foe for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user haunts the foe for two to three turns. It then becomes confused, however.",
+	},
+	paintsplatter: {
+		name: "Paint Splatter",
+		desc: "The user attacks by spraying paint in the foe's face or eyes. It may also lower the target's accuracy.",
+		shortDesc: "The user attacks by spraying paint in the foe's face or eyes. It may also lower the target's accuracy.",
+	},
+	irontusks: {
+		name: "Iron Tusks",
+		desc: "A reckless, charge using tusks cloaked in iron. It also damages the user by a fairly large amount, however.",
+		shortDesc: "A reckless, charge using tusks cloaked in iron. It also damages the user by a fairly large amount, however.",
+	},
+	tsunami: {
+		name: "Tsunami",
+		desc: "A huge tsunami crashes into all pokemon on the field, switching them out.",
+		shortDesc: "A huge tsunami crashes into all pokemon on the field, switching them out.",
+	},
+	galecharge: {
+		name: "Gale Charge",
+		desc: "The user charges at the target quick like the gale. It is sure to strike first.",
+		shortDesc: "The user charges at the target quick like the gale. It is sure to strike first.",
+	},
+	blackhole: {
+		name: "Black Hole",
+		desc: "The user creates a black hole that drags out another Pokemon in the foes party. In the wild, the battle ends.",
+		shortDesc: "The user creates a black hole that drags out another Pokemon in the foes party. In the wild, the battle ends.",
+	},
+	divinespark: {
+		name: "Divine Spark",
+		desc: "The user attacks the target with a small spark of divine power.",
+		shortDesc: "The user attacks the target with a small spark of divine power.",
+	},
+	auroraflash: {
+		name: "Aurora Flash",
+		desc: "The user flashses a calm, sleepy light. It may also induce sleep.",
+		shortDesc: "The user flashses a calm, sleepy light. It may also induce sleep.",
+	},
+	aegis: {
+		name: "Aegis",
+		desc: "The user puts up a divine shield. It drastically raises the user's Sp. Def stat.",
+		shortDesc: "The user puts up a divine shield. It drastically raises the user's Sp. Def stat.",
+	},
+	hermescharge: {
+		name: "Hermes Charge",
+		desc: "The user charges at the target, calling on the speed of an ancient god. It raises the user's Speed stat.",
+		shortDesc: "The user charges at the target, calling on the speed of an ancient god. It raises the user's Speed stat.",
+	},
+	etherealray: {
+		name: "Ethereal Ray",
+		desc: "The user sends an ethereal ray of light at the target, lowering its SpDef stats.",
+		shortDesc: "The user sends an ethereal ray of light at the target, lowering its SpDef stats.",
+	},
+	zeusthunder: {
+		name: "Zeus Thunder",
+		desc: "Divine lightning strikes the foe two to five times in a row.",
+		shortDesc: "Divine lightning strikes the foe two to five times in a row.",
+	},
+	shadowgaze: {
+		name: "Shadow Gaze",
+		desc: "Ow the edge. The target will faint instantly if this attack hits.",
+		shortDesc: "Ow the edge. The target will faint instantly if this attack hits.",
+	},
+	beam: {
+		name: "Beam",
+		desc: "A thin beam of light is shot at the target.",
+		shortDesc: "A thin beam of light is shot at the target.",
+	},
+	brilliantray: {
+		name: "Brilliant Ray",
+		desc: "The user shoots out a blinding ray of light, may lower the foes accuracy.",
+		shortDesc: "The user shoots out a blinding ray of light, may lower the foes accuracy.",
+	},
+	luxbuster: {
+		name: "Lux Buster",
+		desc: "The foe is attacked with a powerful ray of luxorious light. The user must rest on the next turn to regain its energy.",
+		shortDesc: "The foe is attacked with a powerful ray of luxorious light. The user must rest on the next turn to regain its energy.",
+	},
+	prismray: {
+		name: "Prism Ray",
+		desc: "The user creates a ray of light in the shape of a prism, may lower the foes accuracy.",
+		shortDesc: "The user creates a ray of light in the shape of a prism, may lower the foes accuracy.",
+	},
+	waveshot: {
+		name: "Wave Shot",
+		desc: "The user shoots out a wave that may drag out another Pokemon in the foes party. In the wild, the battle ends.",
+		shortDesc: "The user shoots out a wave that may drag out another Pokemon in the foes party. In the wild, the battle ends.",
+	},
+	fester: {
+		name: "Fester",
+		desc: "The user festers the foe's wounds. Its power doubles if the target is poisoned.",
+		shortDesc: "The user festers the foe's wounds. Its power doubles if the target is poisoned.",
+	},
+	hydrobombard: {
+		name: "Hydro Bombard",
+		desc: "Hi crit rate. The user bombards the target with blasts of water two to five times in a row.",
+		shortDesc: "Hi crit rate. The user bombards the target with blasts of water two to five times in a row.",
+	},
+	divebomb: {
+		name: "Divebomb",
+		desc: "The user performs a speedy divebomb on the target by dropping from the air.",
+		shortDesc: "The user performs a speedy divebomb on the target by dropping from the air.",
+	},
+	ancientwind: {
+		name: "Ancient Wind",
+		desc: "The user summons an ancient and stagnate wind that negates the effect of both targets Abilities in a double battle.",
+		shortDesc: "The user summons an ancient and stagnate wind that negates the effect of both targets Abilities in a double battle.",
+	},
+	gigaleech: {
+		name: "Giga Leech",
+		desc: "A life-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A life-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	joust: {
+		name: "Joust",
+		desc: "The user charges forward rapidly as if jousting. It has a chance to raise the user's Speed stat.",
+		shortDesc: "The user charges forward rapidly as if jousting. It has a chance to raise the user's Speed stat.",
+	},
+	stingerlance: {
+		name: "Stinger Lance",
+		desc: "The user tucks its stinger to raise its Attack in the first turn, then rams the foe on the next turn.",
+		shortDesc: "The user tucks its stinger to raise its Attack in the first turn, then rams the foe on the next turn.",
+	},
+	bask: {
+		name: "Bask",
+		desc: "The user basks in the sun to restore its own HP. If Sunny, Speed raises 1 stage.",
+		shortDesc: "The user basks in the sun to restore its own HP. If Sunny, Speed raises 1 stage.",
+	},
+	maw: {
+		name: "Maw",
+		desc: "The user opens its gaping maw to swallow the foe for four to five turns.",
+		shortDesc: "The user opens its gaping maw to swallow the foe for four to five turns.",
+	},
+	irradiatedfangs: {
+		name: "Irradiated Fangs",
+		desc: "The user bites the target with irradiated fangs. It may also leave the target badly poisoned.",
+		shortDesc: "The user bites the target with irradiated fangs. It may also leave the target badly poisoned.",
+	},
+	fever: {
+		name: "Fever",
+		desc: "The target inflicted with a pain similar to a fever. It may also leave the target with a burn.",
+		shortDesc: "The target inflicted with a pain similar to a fever. It may also leave the target with a burn.",
+	},
+	snas: {
+		name: "snas",
+		desc: "The user screams loud enough to shatter glass. It can also break any barrier such as Light Screen and Reflect.",
+		shortDesc: "The user screams loud enough to shatter glass. It can also break any barrier such as Light Screen and Reflect.",
+	},
+	bluetruth: {
+		name: "Blue Truth",
+		desc: "The Blue Truth. May raise the user's stats. High crit rate.",
+		shortDesc: "The Blue Truth. May raise the user's stats. High crit rate.",
+	},
+	stalagbite: {
+		name: "Stalag-bite",
+		desc: "An energy-draining fang. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "An energy-draining fang. The user's HP is restored by half the damage taken by the target.",
+	},
+	mountaincrash: {
+		name: "Mountain Crash",
+		desc: "The user attacks with a crash like a mountain. The lower the user's HP, the less powerful this attack becomes.",
+		shortDesc: "The user attacks with a crash like a mountain. The lower the user's HP, the less powerful this attack becomes.",
+	},
+	carbonpulse: {
+		name: "Carbon Pulse",
+		desc: "The target is blasted with a pulse of carbon. High critical hit ratio and also may make the target flinch.",
+		shortDesc: "The target is blasted with a pulse of carbon. High critical hit ratio and also may make the target flinch.",
+	},
+	fossilcrash: {
+		name: "Fossil Crash",
+		desc: "The user attacks with a prehistoric power. It may also raise all the user's stats at once.",
+		shortDesc: "The user attacks with a prehistoric power. It may also raise all the user's stats at once.",
+	},
+	enlighten: {
+		name: "Enlighten",
+		desc: "The user sharpens their mind by thinking intelligently. It sharply raises the user's Sp. Atk.",
+		shortDesc: "The user sharpens their mind by thinking intelligently. It sharply raises the user's Sp. Atk.",
+	},
+	edgeray: {
+		name: "Edge Ray",
+		desc: "The user concentrates all of its edge at the target. It may also lower the target's Sp. Def stat. Doesn't miss in Midnight.",
+		shortDesc: "The user concentrates all of its edge at the target. It may also lower the target's Sp. Def stat. Doesn't miss in Midnight.",
+	},
+	razorlead: {
+		name: "Razor Lead",
+		desc: "Sharp-edged lead is launched to slash at the opposing team. Critical hits land more easily.",
+		shortDesc: "Sharp-edged lead is launched to slash at the opposing team. Critical hits land more easily.",
+	},
+	lensflash: {
+		name: "Lens Flash",
+		desc: "The user flashes its lenses at the target, increasing the user's accuracy",
+		shortDesc: "The user flashes its lenses at the target, increasing the user's accuracy",
+	},
+	glassesbeam: {
+		name: "Glasses Beam",
+		desc: "The user shoots out a beam of glasses, sharply increasing the user's accuracy",
+		shortDesc: "The user shoots out a beam of glasses, sharply increasing the user's accuracy",
+	},
+	thorshammer: {
+		name: "Thor's Hammer",
+		desc: "A a divine hammer charged with lightning smites the foe. It may also cause paralysis.",
+		shortDesc: "A a divine hammer charged with lightning smites the foe. It may also cause paralysis.",
+	},
+	bodyboost: {
+		name: "Body Boost",
+		desc: "The user quietly focuses its body and spirit to raise its Attack and Sp. Def stats.",
+		shortDesc: "The user quietly focuses its body and spirit to raise its Attack and Sp. Def stats.",
+	},
+	chaoticspark: {
+		name: "Chaotic Spark",
+		desc: "The user attacks the target with a small spark of chaotic power.",
+		shortDesc: "The user attacks the target with a small spark of chaotic power.",
+	},
+	uvray: {
+		name: "UV Ray",
+		desc: "The foe is attacked with an intense ray of light from the sun. It may also leave the target with a burn.",
+		shortDesc: "The foe is attacked with an intense ray of light from the sun. It may also leave the target with a burn.",
+	},
+	voidsmaw: {
+		name: "Void's Maw",
+		desc: "The target becomes trapped within the void's maw.",
+		shortDesc: "The target becomes trapped within the void's maw.",
+	},
+	glasscannon: {
+		name: "Glass Cannon",
+		desc: "Goes first. Recoil.",
+		shortDesc: "Goes first. Recoil.",
+	},
+	F: {
+		name: "l",
+		desc: "The user hurls a shinning blob at the target. It may also lower the target's Sp. Def stat.",
+		shortDesc: "The user hurls a shinning blob at the target. It may also lower the target's Sp. Def stat.",
+	},
+	radiantray: {
+		name: "Radiant Ray",
+		desc: "A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.",
+		shortDesc: "A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.",
+	},
+	lightning: {
+		name: "Lightning",
+		desc: "The user calls down a wicked bolt of lightning. It may also make the target flinch.",
+		shortDesc: "The user calls down a wicked bolt of lightning. It may also make the target flinch.",
+	},
+	powersurge: {
+		name: "Power Surge",
+		desc: "The user expels all of its electrical power at once. Causes paralysis.",
+		shortDesc: "The user expels all of its electrical power at once. Causes paralysis.",
+	},
+	meltdown: {
+		name: "Meltdown",
+		desc: "The user expels all of its nuclear power at once. Poisons the target.",
+		shortDesc: "The user expels all of its nuclear power at once. Poisons the target.",
+	},
+	retribution: {
+		name: "Retribution",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	mysticdance: {
+		name: "Mystic Dance",
+		desc: "The user vigorously performs a mystic, powerful dance that boosts its Special Attack and Speed stats.",
+		shortDesc: "The user vigorously performs a mystic, powerful dance that boosts its Special Attack and Speed stats.",
+	},
+	fortuneray: {
+		name: "Fortune Ray",
+		desc: "The user calls on their luck. Critical hits land more easily.",
+		shortDesc: "The user calls on their luck. Critical hits land more easily.",
+	},
+	insanity: {
+		name: "Insanity",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	dataabsorb: {
+		name: "Data Absorb",
+		desc: "The user absorbs data from the target, copying any stat change made by the target.",
+		shortDesc: "The user absorbs data from the target, copying any stat change made by the target.",
+	},
+	digitaloverdrive: {
+		name: "Digital Overdrive",
+		desc: "dIGITAL BEAM DIGIMON DIGITAL MONSEESRS",
+		shortDesc: "dIGITAL BEAM DIGIMON DIGITAL MONSEESRS",
+	},
+	blazingshock: {
+		name: "Blazing Shock",
+		desc: "The foe is attacked with an shock of blazing lightning. It may also leave the target with a burn.",
+		shortDesc: "The foe is attacked with an shock of blazing lightning. It may also leave the target with a burn.",
+	},
+	shockingblaze: {
+		name: "Shocking Blaze",
+		desc: "A flare of electrified fire is loosed to strike the foe. It may also cause paralysis.",
+		shortDesc: "A flare of electrified fire is loosed to strike the foe. It may also cause paralysis.",
+	},
+	viraloverdrive: {
+		name: "Viral Overdrive",
+		desc: "The user hacks on overdrive.",
+		shortDesc: "The user hacks on overdrive.",
+	},
+	ransomware: {
+		name: "Ransomware",
+		desc: "The user infects the target with ransomware, then steals the target's held item.",
+		shortDesc: "The user infects the target with ransomware, then steals the target's held item.",
+	},
+	sappingwhirlpool: {
+		name: "Sapping Whirlpool",
+		desc: "A nutrient-draining whirlpool. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A nutrient-draining whirlpool. The user's HP is restored by half the damage taken by the target.",
+	},
+	datapurge: {
+		name: "Data Purge",
+		desc: "The user wipes the target's recent memory. All status changes are returned to normal.",
+		shortDesc: "The user wipes the target's recent memory. All status changes are returned to normal.",
+	},
+	leechfang: {
+		name: "Leech Fang",
+		desc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	chokehold: {
+		name: "Choke Hold",
+		desc: "The user employs a profesional technique that may put the target to sleep.",
+		shortDesc: "The user employs a profesional technique that may put the target to sleep.",
+	},
+	brightidea: {
+		name: "Bright Idea",
+		desc: "The user stimulates its brain by thinking bright thoughts. It sharply raises the user's Sp. Atk.",
+		shortDesc: "The user stimulates its brain by thinking bright thoughts. It sharply raises the user's Sp. Atk.",
+	},
+	snowbank: {
+		name: "Snow Bank",
+		desc: "The user attacks by crashing the foe with a snow bank. This attack reduces the targets' Speed stat.",
+		shortDesc: "The user attacks by crashing the foe with a snow bank. This attack reduces the targets' Speed stat.",
+	},
+	slipaway: {
+		name: "Slip Away",
+		desc: "After making its attack, the user slips away to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user slips away to switch places with a party Pokemon in waiting.",
+	},
+	frozenblade: {
+		name: "Frozen Blade",
+		desc: "The user slashes the target the with a freezing blade. Critical hits land more easily.",
+		shortDesc: "The user slashes the target the with a freezing blade. Critical hits land more easily.",
+	},
+	brace: {
+		name: "Brace",
+		desc: "The user braces itself, lowering its offenses but sharply raising defensive stats.",
+		shortDesc: "The user braces itself, lowering its offenses but sharply raising defensive stats.",
+	},
+	diamondhoof: {
+		name: "Diamond Hoof",
+		desc: "The target is stomped with a hoof as hard as diamond. It may also make the target flinch.",
+		shortDesc: "The target is stomped with a hoof as hard as diamond. It may also make the target flinch.",
+	},
+	periltomb: {
+		name: "Peril Tomb",
+		desc: "The target is thrown into a tomb. It also lowers the target's Speed by preventing its movement.",
+		shortDesc: "The target is thrown into a tomb. It also lowers the target's Speed by preventing its movement.",
+	},
+	giantshadow: {
+		name: "Giant Shadow",
+		desc: "The user transfers its body mass to its shadow to inflict damage and cause paralysis.",
+		shortDesc: "The user transfers its body mass to its shadow to inflict damage and cause paralysis.",
+	},
+	chasebeam: {
+		name: "Chase Beam",
+		desc: "A special beam that inflicts double damage if used on a target that is switching out of battle.",
+		shortDesc: "A special beam that inflicts double damage if used on a target that is switching out of battle.",
+	},
+	cheapshot: {
+		name: "Cheap Shot",
+		desc: "The user strikes the target with a cheap blow. This attack always results in a critical hit.",
+		shortDesc: "The user strikes the target with a cheap blow. This attack always results in a critical hit.",
+	},
+	insultandinjury: {
+		name: "Insult and Injury",
+		desc: "The target is taunted and beat, causing it to use only attack moves for three turns.",
+		shortDesc: "The target is taunted and beat, causing it to use only attack moves for three turns.",
+	},
+	attitudeadjustment: {
+		name: "Attitude Adjustment",
+		desc: "The target has their attitude adjusted, causing it to use only attack moves for three turns.",
+		shortDesc: "The target has their attitude adjusted, causing it to use only attack moves for three turns.",
+	},
+	maliceeater: {
+		name: "Malice Eater",
+		desc: "A malice-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A malice-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	cackle: {
+		name: "Cackle",
+		desc: "The user lets out a malicious cackle that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+		shortDesc: "The user lets out a malicious cackle that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+	},
+	blackweb: {
+		name: "Black Web",
+		desc: "A dark web is spun around the target. It also lowers the target's Speed by preventing its movement.",
+		shortDesc: "A dark web is spun around the target. It also lowers the target's Speed by preventing its movement.",
+	},
+	mend: {
+		name: "Mend",
+		desc: "The user mends itself, restoring its own HP by up to half of its maximum HP.",
+		shortDesc: "The user mends itself, restoring its own HP by up to half of its maximum HP.",
+	},
+	brassknuckle: {
+		name: "Brass Knuckle",
+		desc: "The target punched with a knuckle encased with brass. It may make the target flinch.",
+		shortDesc: "The target punched with a knuckle encased with brass. It may make the target flinch.",
+	},
+	doom: {
+		name: "Doom",
+		desc: "The user brings an end to all of those around it. The user faints upon using this move.",
+		shortDesc: "The user brings an end to all of those around it. The user faints upon using this move.",
+	},
+	chillyboom: {
+		name: "Chilly Boom",
+		desc: "The user creates a freezing explosion to all those around it. The user faints upon using this move.",
+		shortDesc: "The user creates a freezing explosion to all those around it. The user faints upon using this move.",
+	},
+	holysacrifice: {
+		name: "Holy Sacrifice",
+		desc: "The user performs a heroic sacrifice to damage those around it. The user faints upon using this move.",
+		shortDesc: "The user performs a heroic sacrifice to damage those around it. The user faints upon using this move.",
+	},
+	screwdriver: {
+		name: "Screw Driver",
+		desc: "The target is repeatedly hit with a screwing motion that may also leave it confused.",
+		shortDesc: "The target is repeatedly hit with a screwing motion that may also leave it confused.",
+	},
+	bunkercrash: {
+		name: "Bunker Crash",
+		desc: "The user slams its tough body onto the target, 70% to raise user's Defense stat.",
+		shortDesc: "The user slams its tough body onto the target, 70% to raise user's Defense stat.",
+	},
+	coldsnap: {
+		name: "Cold Snap",
+		desc: "The target is struck with an intense cold that freezes it solid.",
+		shortDesc: "The target is struck with an intense cold that freezes it solid.",
+	},
+	fridgeslam: {
+		name: "Fridge Slam",
+		desc: "The target is struck with an icy-cold fridge. It may also freeze the target solid.",
+		shortDesc: "The target is struck with an icy-cold fridge. It may also freeze the target solid.",
+	},
+	osmosis: {
+		name: "Osmosis",
+		desc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	sludgehammer: {
+		name: "Sludge Hammer",
+		desc: "The user slams its poisoned body into the target to attack. The user also sustains serious damage and the target may be poisoned.",
+		shortDesc: "The user slams its poisoned body into the target to attack. The user also sustains serious damage and the target may be poisoned.",
+	},
+	arcticcrash: {
+		name: "Arctic Crash",
+		desc: "The user slams its freezing body into the target to attack. The user also sustains serious damage and the target may be frozen.",
+		shortDesc: "The user slams its freezing body into the target to attack. The user also sustains serious damage and the target may be frozen.",
+	},
+	podburst: {
+		name: "Pod Burst",
+		desc: "The user attacks by letting out a burst of pods. The lower the user's HP, the less powerful this attack becomes.",
+		shortDesc: "The user attacks by letting out a burst of pods. The lower the user's HP, the less powerful this attack becomes.",
+	},
+	aurastorm: {
+		name: "Aura Storm",
+		desc: "A storm of aura is fired at the opponent. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+		shortDesc: "A storm of aura is fired at the opponent. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+	},
+	chemicalburn: {
+		name: "Chemical Burn",
+		desc: "The target is given a chemical burn. It may also leave the target with a burn.",
+		shortDesc: "The target is given a chemical burn. It may also leave the target with a burn.",
+	},
+	tonguelash: {
+		name: "Tongue Lash",
+		desc: "The user attacks its target by flicking its long tongue. The target is hit twice in a row.",
+		shortDesc: "The user attacks its target by flicking its long tongue. The target is hit twice in a row.",
+	},
+	tongueflick: {
+		name: "Tongue Flick",
+		desc: "The target is flicked by the user's tongue for two to five times in quick succession.",
+		shortDesc: "The target is flicked by the user's tongue for two to five times in quick succession.",
+	},
+	unihorn: {
+		name: "Unihorn",
+		desc: "The user concentrates mythical power into its horn and attacks the opponent.",
+		shortDesc: "The user concentrates mythical power into its horn and attacks the opponent.",
+	},
+	gravitonpress: {
+		name: "Graviton Press",
+		desc: "The user increases the gravity around the target. The heavier the target, the greater the damage.",
+		shortDesc: "The user increases the gravity around the target. The heavier the target, the greater the damage.",
+	},
+	aurajab: {
+		name: "Aura Jab",
+		desc: "The user jabs the targets body with their soul in their soul with the body in the soul. This attack does physical damage.",
+		shortDesc: "The user jabs the targets body with their soul in their soul with the body in the soul. This attack does physical damage.",
+	},
+	eeriewail: {
+		name: "Eerie Wail",
+		desc: "Hits all around it with terrifying wail. May confuse.",
+		shortDesc: "Hits all around it with terrifying wail. May confuse.",
+	},
+	drumroll: {
+		name: "Drum Roll",
+		desc: "The target is assaulted by a loud drum roll for two to five times in quick succession.",
+		shortDesc: "The target is assaulted by a loud drum roll for two to five times in quick succession.",
+	},
+	goblinpunch: {
+		name: "Goblin Punch",
+		desc: "The user attacks with a tricky underhanded blow, this move always goes first but fails if the target is not readying an attack however.",
+		shortDesc: "The user attacks with a tricky underhanded blow, this move always goes first but fails if the target is not readying an attack however.",
+	},
+	raid: {
+		name: "Raid",
+		desc: "The user raids the target to steal its held item.",
+		shortDesc: "The user raids the target to steal its held item.",
+	},
+	extinguish: {
+		name: "Extinguish",
+		desc: "This attack inflicts big damage on a burnt target. It also cures the target's burn, however.",
+		shortDesc: "This attack inflicts big damage on a burnt target. It also cures the target's burn, however.",
+	},
+	sanddune: {
+		name: "Sand Dune",
+		desc: "An attack move that inflicts double the damage if the user has been hurt by the foe in the same turn.",
+		shortDesc: "An attack move that inflicts double the damage if the user has been hurt by the foe in the same turn.",
+	},
+	stringout: {
+		name: "String-out",
+		desc: "The user launches strings at the target and drags out another Pokemon in its party. In the wild, the battle ends.",
+		shortDesc: "The user launches strings at the target and drags out another Pokemon in its party. In the wild, the battle ends.",
+	},
+	mindboost: {
+		name: "Mind Boost",
+		desc: "The user quietly focuses its body and spirit to raise its Sp. Atk and Defense stats.",
+		shortDesc: "The user quietly focuses its body and spirit to raise its Sp. Atk and Defense stats.",
+	},
+	cryptblade: {
+		name: "Crypt Blade",
+		desc: "The user attacks by slicing with an ancient blade. The target's stat changes don't affect the damage. High critical hit ratio.",
+		shortDesc: "The user attacks by slicing with an ancient blade. The target's stat changes don't affect the damage. High critical hit ratio.",
+	},
+	crimsondaze: {
+		name: "Crimson Daze",
+		desc: "The target is hit by a dazzling display of crimson flames. It may also leave the target confused.",
+		shortDesc: "The target is hit by a dazzling display of crimson flames. It may also leave the target confused.",
+	},
+	magicflames: {
+		name: "Magic Flames",
+		desc: "The target is scorched with flames composed of magic. It may also leave the target with a burn.",
+		shortDesc: "The target is scorched with flames composed of magic. It may also leave the target with a burn.",
+	},
+	ashrain: {
+		name: "Ash Rain",
+		desc: "A rain of volcanic ash descends on the target. It may also poison the target.",
+		shortDesc: "A rain of volcanic ash descends on the target. It may also poison the target.",
+	},
+	ashspray: {
+		name: "Ash Spray",
+		desc: "The user hurls ash in the target's face to inflict damage and lower its accuracy.",
+		shortDesc: "The user hurls ash in the target's face to inflict damage and lower its accuracy.",
+	},
+	apport: {
+		name: "Apport",
+		desc: "User disappears on first turn, then reappears and attacks on second turn. This move hits even if the target protects itself.",
+		shortDesc: "User disappears on first turn, then reappears and attacks on second turn. This move hits even if the target protects itself.",
+	},
+	zephyrwing: {
+		name: "Zephyr Wing",
+		desc: "May also start a Tailwind.",
+		shortDesc: "May also start a Tailwind.",
+	},
+	broomdive: {
+		name: "Broom Dive",
+		desc: "The user rides a broom for an aerial attack on the first turn, then strikes on the second turn.",
+		shortDesc: "The user rides a broom for an aerial attack on the first turn, then strikes on the second turn.",
+	},
+	cardtoss: {
+		name: "Card Toss",
+		desc: "The user draws a card and lauches it at the foe, testing their luck. Critical hits land more easily.",
+		shortDesc: "The user draws a card and lauches it at the foe, testing their luck. Critical hits land more easily.",
+	},
+	mysticblade: {
+		name: "Mystic Blade",
+		desc: "The user conjures a blade of pure mystic force. Critical hits land more easily.",
+		shortDesc: "The user conjures a blade of pure mystic force. Critical hits land more easily.",
+	},
+	mount: {
+		name: "Mount",
+		desc: "The user summons a magical steed and charges at the target. Chance to raise the user's speed.",
+		shortDesc: "The user summons a magical steed and charges at the target. Chance to raise the user's speed.",
+	},
+	powerhex: {
+		name: "Power Hex",
+		desc: "A basic yet powerful spell is fired at the foe. It may make the target flinch.",
+		shortDesc: "A basic yet powerful spell is fired at the foe. It may make the target flinch.",
+	},
+	sappingspell: {
+		name: "Sapping Spell",
+		desc: "A magical spell drains the opponents energy. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A magical spell drains the opponents energy. The user's HP is restored by half the damage taken by the target.",
+	},
+	sawtrick: {
+		name: "Saw Trick",
+		desc: "The user continually saws at the target over five turns. It becomes stronger each time it hits.",
+		shortDesc: "The user continually saws at the target over five turns. It becomes stronger each time it hits.",
+	},
+	balmscour: {
+		name: "Balm Scour",
+		desc: "The user harshly rubs healing balm on the target, doing doubled damage if they are poisoned. It also cures the target's POISON, however.",
+		shortDesc: "The user harshly rubs healing balm on the target, doing doubled damage if they are poisoned. It also cures the target's POISON, however.",
+	},
+	lusterflash: {
+		name: "Luster Flash",
+		desc: "The user flashes blinding lights in the target's face to inflict damage and lower its accuracy.",
+		shortDesc: "The user flashes blinding lights in the target's face to inflict damage and lower its accuracy.",
+	},
+	shinesabre: {
+		name: "Shine Sabre",
+		desc: "The user attacks with a sabre of light. It can also break any barrier such as Light Screen and Reflect.",
+		shortDesc: "The user attacks with a sabre of light. It can also break any barrier such as Light Screen and Reflect.",
+	},
+	hydrogengun: {
+		name: "Hydrogen Gun",
+		desc: "The target is shot repeatedly by a gust of air two to five times in a row.",
+		shortDesc: "The target is shot repeatedly by a gust of air two to five times in a row.",
+	},
+	jetstream: {
+		name: "Jetstream",
+		desc: "The user rides the jet stream to charge into the foe. This move always goes first",
+		shortDesc: "The user rides the jet stream to charge into the foe. This move always goes first",
+	},
+	thermal: {
+		name: "Thermal",
+		desc: "The target is blasted with a gust of hot wind. It may also leave the target with a burn.",
+		shortDesc: "The target is blasted with a gust of hot wind. It may also leave the target with a burn.",
+	},
+	tornado: {
+		name: "Tornado",
+		desc: "The user rampages with the force of a tornado for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages with the force of a tornado for two to three turns. It then becomes confused, however.",
+	},
+	tradewind: {
+		name: "Trade Wind",
+		desc: "A sudden gust of wind trades held items with the target faster than the eye can follow.",
+		shortDesc: "A sudden gust of wind trades held items with the target faster than the eye can follow.",
+	},
+	typhoon: {
+		name: "Typhoon",
+		desc: "The user blasts the target with tropical air at full power. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+		shortDesc: "The user blasts the target with tropical air at full power. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+	},
+	whirldive: {
+		name: "Whirldive",
+		desc: "The user rapidly whirls and slams into the target. It may also leave the target confused.",
+		shortDesc: "The user rapidly whirls and slams into the target. It may also leave the target confused.",
+	},
+	rotfangs: {
+		name: "Rot Fangs",
+		desc: "The user bites the target with infected fangs. It may also leave the target badly poisoned.",
+		shortDesc: "The user bites the target with infected fangs. It may also leave the target badly poisoned.",
+	},
+	infect: {
+		name: "Infect",
+		desc: "The user infects the target with a zombie virus and changes the target's type to Zombie.",
+		shortDesc: "The user infects the target with a zombie virus and changes the target's type to Zombie.",
+	},
+	roaringmagma: {
+		name: "Roaring Magma",
+		desc: "The user creates an eruption that resonates across the land. It may also leave the target confused.",
+		shortDesc: "The user creates an eruption that resonates across the land. It may also leave the target confused.",
+	},
+	staticfabric: {
+		name: "Static Fabric",
+		desc: "The user rubs fabric up against the target. It may also leave the target with paralysis.",
+		shortDesc: "The user rubs fabric up against the target. It may also leave the target with paralysis.",
+	},
+	patchworkdeluge: {
+		name: "Patchwork Deluge",
+		desc: "The user displays a mind boggling pattern to the target that extends into their very soul. It may also leave the target confused.",
+		shortDesc: "The user displays a mind boggling pattern to the target that extends into their very soul. It may also leave the target confused.",
+	},
+	mosaicray: {
+		name: "Mosaic Ray",
+		desc: "The user summons a ray of multiple colors and patterns to fire off at the target. May also paralyze, burn, or freeze the target.",
+		shortDesc: "The user summons a ray of multiple colors and patterns to fire off at the target. May also paralyze, burn, or freeze the target.",
+	},
+	noose: {
+		name: "Noose",
+		desc: "The user ties a tight noose around the target's neck, which chokes the life out of it for four to five turns.",
+		shortDesc: "The user ties a tight noose around the target's neck, which chokes the life out of it for four to five turns.",
+	},
+	strangle: {
+		name: "Strangle",
+		desc: "The user The user wraps its arms around the target to forcefully strangle it, which chokes the life out of it for four to five turns.",
+		shortDesc: "The user The user wraps its arms around the target to forcefully strangle it, which chokes the life out of it for four to five turns.",
+	},
+	migraine: {
+		name: "Migraine",
+		desc: "The user has a splitting headache that goes on for five turns. It becomes stronger each time it hits.",
+		shortDesc: "The user has a splitting headache that goes on for five turns. It becomes stronger each time it hits.",
+	},
+	clutch: {
+		name: "Clutch",
+		desc: "The user clutches onto the target with its talons to prevent escape.",
+		shortDesc: "The user clutches onto the target with its talons to prevent escape.",
+	},
+	rend: {
+		name: "Rend",
+		desc: "If the target's HP is down to about half, this attack will hit with double the power.",
+		shortDesc: "If the target's HP is down to about half, this attack will hit with double the power.",
+	},
+	thunderjavelin: {
+		name: "Thunder Javelin",
+		desc: "The user throws a bolt of lightning at the target. This attack always results in a critical hit.",
+		shortDesc: "The user throws a bolt of lightning at the target. This attack always results in a critical hit.",
+	},
+	wildfire: {
+		name: "Wildfire",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	boxcrash: {
+		name: "Box Crash",
+		desc: "The user slams its box shaped body onto the target to raise its Defense stat.",
+		shortDesc: "The user slams its box shaped body onto the target to raise its Defense stat.",
+	},
+	technorush: {
+		name: "Techno Rush",
+		desc: "The user overheats and charges at the foe. The user also takes damage and may burn the target.",
+		shortDesc: "The user overheats and charges at the foe. The user also takes damage and may burn the target.",
+	},
+	artificiaslam: {
+		name: "Artificiaslam",
+		desc: "The target is slammed with the user's artificial body. It may make the target flinch.",
+		shortDesc: "The target is slammed with the user's artificial body. It may make the target flinch.",
+	},
+	plasticclaw: {
+		name: "Plastic Claw",
+		desc: "The user slashes with a sharp claw made from plastic. Critical hits land more easily.",
+		shortDesc: "The user slashes with a sharp claw made from plastic. Critical hits land more easily.",
+	},
+	plasticlaunch: {
+		name: "Plastic Launch",
+		desc: "The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.",
+		shortDesc: "The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.",
+	},
+	garbagethrash: {
+		name: "Garbage Thrash",
+		desc: "A second-turn attack move where critical hits land more easily. It may also make the target flinch.",
+		shortDesc: "A second-turn attack move where critical hits land more easily. It may also make the target flinch.",
+	},
+	spectrumfist: {
+		name: "Spectrum Fist",
+		desc: "The user punches the target with a rainbow hued fist. May lower the target's accuracy.",
+		shortDesc: "The user punches the target with a rainbow hued fist. May lower the target's accuracy.",
+	},
+	whimsicalwhip: {
+		name: "Whimsical Whip",
+		desc: "The user strikes the target with a sparkling whip. This attack always results in a critical hit.",
+		shortDesc: "The user strikes the target with a sparkling whip. This attack always results in a critical hit.",
+	},
+	tuningfork: {
+		name: "Tuning Fork",
+		desc: "The user rings a tuning fork to raise its accuracy stat.",
+		shortDesc: "The user rings a tuning fork to raise its accuracy stat.",
+	},
+	iciclecleave: {
+		name: "Icicle Cleave",
+		desc: "The user strikes swiftly with a blade made of ice, increasing the chance of critical hits landing.",
+		shortDesc: "The user strikes swiftly with a blade made of ice, increasing the chance of critical hits landing.",
+	},
+	constructcrash: {
+		name: "Construct Crash",
+		desc: "The target is slammed with a construct made of magic energy. It may also lower the target's Defense stat.",
+		shortDesc: "The target is slammed with a construct made of magic energy. It may also lower the target's Defense stat.",
+	},
+	ram: {
+		name: "Ram",
+		desc: "The user tucks in its head to raise its Attack in the first turn, then rams the foe on the next turn.",
+		shortDesc: "The user tucks in its head to raise its Attack in the first turn, then rams the foe on the next turn.",
+	},
+	finslap: {
+		name: "Fin Slap",
+		desc: "A physical attack in which the user slaps the target with a fin.",
+		shortDesc: "A physical attack in which the user slaps the target with a fin.",
+	},
+	causticbreath: {
+		name: "Caustic Breath",
+		desc: "The foe is attacked with a spray of strong chemicals. It may also lower the target's Defense and Sp. Def stats.",
+		shortDesc: "The foe is attacked with a spray of strong chemicals. It may also lower the target's Defense and Sp. Def stats.",
+	},
+	possesion: {
+		name: "Possesion",
+		desc: "The user turns the foe's power against it. It does more damage the higher the target's Attack stat.",
+		shortDesc: "The user turns the foe's power against it. It does more damage the higher the target's Attack stat.",
+	},
+	psybolt: {
+		name: "Psybolt",
+		desc: "A flash of psychic power strikes the target in the blink of an eye. It is sure to strike first.",
+		shortDesc: "A flash of psychic power strikes the target in the blink of an eye. It is sure to strike first.",
+	},
+	webball: {
+		name: "Web Ball",
+		desc: "A sticky blob of web is flung at the target, restricting its movement and lowering speed.",
+		shortDesc: "A sticky blob of web is flung at the target, restricting its movement and lowering speed.",
+	},
+	lazyday: {
+		name: "Lazy Day",
+		desc: "The user's invokes lazy thoughts on the target to change the target's Ability to Truant.",
+		shortDesc: "The user's invokes lazy thoughts on the target to change the target's Ability to Truant.",
+	},
+	aimedshot: {
+		name: "Aimed Shot",
+		desc: "A carefully aimed shot that hits NO MATTER WHAT.",
+		shortDesc: "A carefully aimed shot that hits NO MATTER WHAT.",
+	},
+	bullseye: {
+		name: "Bullseye",
+		desc: "The user strikes the target in a vital area. This attack always results in a critical hit.",
+		shortDesc: "The user strikes the target in a vital area. This attack always results in a critical hit.",
+	},
+	dynamicrush: {
+		name: "Dynamic Rush",
+		desc: "The user charges at the target with increasing speed. Has a high chance to raise the user's Speed stat.",
+		shortDesc: "The user charges at the target with increasing speed. Has a high chance to raise the user's Speed stat.",
+	},
+	powertail: {
+		name: "Power Tail",
+		desc: "The user wacks with a powerful tail. It may also make the target flinch or leave it with paralysis.",
+		shortDesc: "The user wacks with a powerful tail. It may also make the target flinch or leave it with paralysis.",
+	},
+	treesmash: {
+		name: "Tree Smash",
+		desc: "The user knocks a large tree down on the target to inflict damage and cause paralysis.",
+		shortDesc: "The user knocks a large tree down on the target to inflict damage and cause paralysis.",
+	},
+	rootcrush: {
+		name: "Root Crush",
+		desc: "The target is attacked with a crush from a root. If it misses, the user is hurt instead.",
+		shortDesc: "The target is attacked with a crush from a root. If it misses, the user is hurt instead.",
+	},
+	shedleaves: {
+		name: "Shed Leaves",
+		desc: "The user shoots off its leaves to cure itself of a poisoning, burn, or paralysis and deal damage to the target.",
+		shortDesc: "The user shoots off its leaves to cure itself of a poisoning, burn, or paralysis and deal damage to the target.",
+	},
+	shellblast: {
+		name: "Shell Blast",
+		desc: "The user attacks by launching its shell at the target, it harshly lowers the users speed however.",
+		shortDesc: "The user attacks by launching its shell at the target, it harshly lowers the users speed however.",
+	},
+	whalesong: {
+		name: "Whale Song",
+		desc: "The user sings a low pitched, melancholic song. It may also induce sleep.",
+		shortDesc: "The user sings a low pitched, melancholic song. It may also induce sleep.",
+	},
+	taintedwater: {
+		name: "Tainted Water",
+		desc: "The user splashes polluted water at the targets. It may also poison those hit.",
+		shortDesc: "The user splashes polluted water at the targets. It may also poison those hit.",
+	},
+	chocolatecrunch: {
+		name: "Chocolate Crunch",
+		desc: "The user crunches up the target with chocolate. It may also lower the target's Defense stat.",
+		shortDesc: "The user crunches up the target with chocolate. It may also lower the target's Defense stat.",
+	},
+	steadyhand: {
+		name: "Steady Hand",
+		desc: "The user attacks last. In return, this move is guaranteed not to miss.",
+		shortDesc: "The user attacks last. In return, this move is guaranteed not to miss.",
+	},
+	netsurf: {
+		name: "Net Surf",
+		desc: "The user travels to the cyber realm, then strikes the target on the next turn. This move hits even if the target protects itself.",
+		shortDesc: "The user travels to the cyber realm, then strikes the target on the next turn. This move hits even if the target protects itself.",
+	},
+	polylith: {
+		name: "Polylith",
+		desc: "Using ancient energy, the user summons a plethora of jagged rocks that extend from beneath the foe indefinetly. This attack does physical damage.",
+		shortDesc: "Using ancient energy, the user summons a plethora of jagged rocks that extend from beneath the foe indefinetly. This attack does physical damage.",
+	},
+	enginecharge: {
+		name: "Engine Charge",
+		desc: "The user crashes into the target by powering up its engine. This move always goes first",
+		shortDesc: "The user crashes into the target by powering up its engine. This move always goes first",
+	},
+	jetfuelcharge: {
+		name: "Jet Fuel Charge",
+		desc: "The target is crashed into by a plane, jet fuel seeps out of the user. It may also leave the target with a burn.",
+		shortDesc: "The target is crashed into by a plane, jet fuel seeps out of the user. It may also leave the target with a burn.",
+	},
+	geodeblast: {
+		name: "Geode Blast",
+		desc: "The pokemon gathers geographical energy and fires it off a storm of rocks.",
+		shortDesc: "The pokemon gathers geographical energy and fires it off a storm of rocks.",
+	},
+	quartzbeam: {
+		name: "Quartz Beam",
+		desc: "The target is blasted by a beam of light reflected off of a rocky surface. It may also reduce the target's Sp. Def stat.",
+		shortDesc: "The target is blasted by a beam of light reflected off of a rocky surface. It may also reduce the target's Sp. Def stat.",
+	},
+	fireworks: {
+		name: "Fireworks",
+		desc: "The user launches fireworks at the target two to five times in a row.",
+		shortDesc: "The user launches fireworks at the target two to five times in a row.",
+	},
+	avarice: {
+		name: "Avarice",
+		desc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+		shortDesc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+	},
+	kiblast: {
+		name: "Ki Blast",
+		desc: "The user gathers spiritual energy and launches it at the foe. Critical hits land more easily.",
+		shortDesc: "The user gathers spiritual energy and launches it at the foe. Critical hits land more easily.",
+	},
+	happyglow: {
+		name: "Happy Glow",
+		desc: "A glow of light that grows more powerful the more the user likes its Trainer.",
+		shortDesc: "A glow of light that grows more powerful the more the user likes its Trainer.",
+	},
+	neon: {
+		name: "Neon",
+		desc: "The user emenates a neon glow. It raises the user's SpAtk stat and sharply raises the user's Sp. Def stat.",
+		shortDesc: "The user emenates a neon glow. It raises the user's SpAtk stat and sharply raises the user's Sp. Def stat.",
+	},
+	encycloray: {
+		name: "Encycloray",
+		desc: "The user creates a bolt of raw encyclopedic knowledge. May also paralyze, burn, or freeze the target.",
+		shortDesc: "The user creates a bolt of raw encyclopedic knowledge. May also paralyze, burn, or freeze the target.",
+	},
+	papercharge: {
+		name: "Paper Charge",
+		desc: "The user charges real quick with paper in hand. It causes considerable damage to the user as well.",
+		shortDesc: "The user charges real quick with paper in hand. It causes considerable damage to the user as well.",
+	},
+	atomicbreath: {
+		name: "ATOMICBREATH",
+		desc: "The user breathes atomic breath onto the target. It may also leave the target with a burn.",
+		shortDesc: "The user breathes atomic breath onto the target. It may also leave the target with a burn.",
+	},
+	nuclearpulse: {
+		name: "Nuclear Pulse",
+		desc: "The user emits a pulse of nuclear energy around them. It may also cause paralysis.",
+		shortDesc: "The user emits a pulse of nuclear energy around them. It may also cause paralysis.",
+	},
+	reactor: {
+		name: "Reactor",
+		desc: "The user generates nuclear energy. This raises its SpAtk and SpDef stats as well as its accuracy.",
+		shortDesc: "The user generates nuclear energy. This raises its SpAtk and SpDef stats as well as its accuracy.",
+	},
+	nucleartail: {
+		name: "Nuclear Tail",
+		desc: "The user hits the target with its tail. It may also poison the target. Critical hits land more easily.",
+		shortDesc: "The user hits the target with its tail. It may also poison the target. Critical hits land more easily.",
+	},
+	beacon: {
+		name: "Beacon",
+		desc: "The user shines a beacon of light to raise its accuracy stat.",
+		shortDesc: "The user shines a beacon of light to raise its accuracy stat.",
+	},
+	reaction: {
+		name: "Reaction",
+		desc: "As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+		shortDesc: "As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+	},
+	steamerroller: {
+		name: "Steamerroller",
+		desc: "The user crushes its foes by rolling over them. This attack may make the target flinch.",
+		shortDesc: "The user crushes its foes by rolling over them. This attack may make the target flinch.",
+	},
+	nervegas: {
+		name: "Nerve Gas",
+		desc: "The target is attacked with a discharge of filthy gases. High chance to poison the target.",
+		shortDesc: "The target is attacked with a discharge of filthy gases. High chance to poison the target.",
+	},
+	normalray: {
+		name: "Normal Ray",
+		desc: "The user sends out a ray of concentrated normalness.",
+		shortDesc: "The user sends out a ray of concentrated normalness.",
+	},
+	gaschamber: {
+		name: "Gas Chamber",
+		desc: "The user traps the target in a chamber of deadly gas. The target will faint instantly if this attack hits.",
+		shortDesc: "The user traps the target in a chamber of deadly gas. The target will faint instantly if this attack hits.",
+	},
+	gravityshift: {
+		name: "Gravity Shift",
+		desc: "After making its attack, the user shifts gravity to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user shifts gravity to switch places with a party Pokemon in waiting.",
+	},
+	solarray: {
+		name: "Solar Ray",
+		desc: "The user sends out a ray of scorching hot heat which causes the sunlight to turn harsh.",
+		shortDesc: "The user sends out a ray of scorching hot heat which causes the sunlight to turn harsh.",
+	},
+	voltkick: {
+		name: "Volt Kick",
+		desc: "The user launches a kick with a high critical-hit ratio. It may also leave the target with paralysis.",
+		shortDesc: "The user launches a kick with a high critical-hit ratio. It may also leave the target with paralysis.",
+	},
+	wildmushroom: {
+		name: "Wild Mushroom",
+		desc: "Priority Substitute.",
+		shortDesc: "Priority Substitute.",
+	},
+	magicsand: {
+		name: "Magic Sand",
+		desc: "A magical sand that invokes fatigue is scattered across the target. It may also induce sleep.",
+		shortDesc: "A magical sand that invokes fatigue is scattered across the target. It may also induce sleep.",
+	},
+	mercurywave: {
+		name: "Mercury Wave",
+		desc: "The user sends out a wave of mercury. It may also poison those hit.",
+		shortDesc: "The user sends out a wave of mercury. It may also poison those hit.",
+	},
+	sonicpunch: {
+		name: "Sonic Punch",
+		desc: "The target punched with a fist imbued with sonic vibrations. It may make the target flinch.",
+		shortDesc: "The target punched with a fist imbued with sonic vibrations. It may make the target flinch.",
+	},
+	psychout: {
+		name: "Psych Out",
+		desc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+		shortDesc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+	},
+	mania: {
+		name: "Mania",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	rampage: {
+		name: "Rampage",
+		desc: "May confuse target. Attacks for 2-3 turns. User then becomes confused, however.",
+		shortDesc: "May confuse target. Attacks for 2-3 turns. User then becomes confused, however.",
+	},
+	fossilfuel: {
+		name: "Fossil Fuel",
+		desc: "The user shoots burning fossil fuel at its target. It may also leave the target with a burn.",
+		shortDesc: "The user shoots burning fossil fuel at its target. It may also leave the target with a burn.",
+	},
+	metalcrash: {
+		name: "Metal Crash",
+		desc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+		shortDesc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+	},
+	soysplash: {
+		name: "Soy Splash",
+		desc: "The user sprays soy sauce at the target. It also reduces the target's Speed.",
+		shortDesc: "The user sprays soy sauce at the target. It also reduces the target's Speed.",
+	},
+	sushibeam: {
+		name: "Sushi Beam",
+		desc: "The user blasts the target with sushi. This may also raise the user's Defense stat.",
+		shortDesc: "The user blasts the target with sushi. This may also raise the user's Defense stat.",
+	},
+	icicles: {
+		name: "Icicles",
+		desc: "The user lays a trap of hanging icicles around the foe. The trap hurts foes that switch into battle.",
+		shortDesc: "The user lays a trap of hanging icicles around the foe. The trap hurts foes that switch into battle.",
+	},
+	magmasport: {
+		name: "Magma Sport",
+		desc: "Raises SpDef. It weakens Ice-type moves while the user is in the battle. Raises other stats in Volcanic Terrain, Heatup and Floor is lava.",
+		shortDesc: "Raises SpDef. It weakens Ice-type moves while the user is in the battle. Raises other stats in Volcanic Terrain, Heatup and Floor is lava.",
+	},
+	dustdevil: {
+		name: "Dustdevil",
+		desc: "The user whips up a powerful gust of sand which brews a sandstorm.",
+		shortDesc: "The user whips up a powerful gust of sand which brews a sandstorm.",
+	},
+	rocknroll: {
+		name: "Rock N Roll",
+		desc: "A guitar riff loosed to strike the area around the user. It may also cause paralysis.",
+		shortDesc: "A guitar riff loosed to strike the area around the user. It may also cause paralysis.",
+	},
+	dragonkick: {
+		name: "Dragon Kick",
+		desc: "The target is hit with a legendary kick move. It has a hi crit ratio and may also raise the user's Attack.",
+		shortDesc: "The target is hit with a legendary kick move. It has a hi crit ratio and may also raise the user's Attack.",
+	},
+	deliverance: {
+		name: "Deliverance",
+		desc: "The user delivers an intense ray of psychic energy. It also damages the user by a fairly large amount, however.",
+		shortDesc: "The user delivers an intense ray of psychic energy. It also damages the user by a fairly large amount, however.",
+	},
+	bedbite: {
+		name: "Bed Bite",
+		desc: "The user bites the target with a sleepy bite. May put the target to sleep.",
+		shortDesc: "The user bites the target with a sleepy bite. May put the target to sleep.",
+	},
+	junglesong: {
+		name: "Jungle Song",
+		desc: "The target is attacked by a song of the jungle. It may also cause confusion.",
+		shortDesc: "The target is attacked by a song of the jungle. It may also cause confusion.",
+	},
+	softstep: {
+		name: "Soft Step",
+		desc: "The user takes soft steps on the target. It may also cause confusion.",
+		shortDesc: "The user takes soft steps on the target. It may also cause confusion.",
+	},
+	villainpower: {
+		name: "Villain Power",
+		desc: "The user attacks the target with great power. However, it also lowers the user's Attack and Defense.",
+		shortDesc: "The user attacks the target with great power. However, it also lowers the user's Attack and Defense.",
+	},
+	spiritdrain: {
+		name: "Spirit Drain",
+		desc: "A spirit-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A spirit-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	brickcrash: {
+		name: "Brick Crash",
+		desc: "The user builds an offensive wall to raise its Defense stat.",
+		shortDesc: "The user builds an offensive wall to raise its Defense stat.",
+	},
+	glomp: {
+		name: "Glomp",
+		desc: "The user hugs the target :3. It reduces hit Pokemon's Speed.",
+		shortDesc: "The user hugs the target :3. It reduces hit Pokemon's Speed.",
+	},
+	heil: {
+		name: "Heil",
+		desc: "HEIL TO THE GREAT RACE.",
+		shortDesc: "HEIL TO THE GREAT RACE.",
+	},
+	omegapower: {
+		name: "Omega Power",
+		desc: "A unique attack that varies in type.",
+		shortDesc: "A unique attack that varies in type.",
+	},
+	steamingsteam: {
+		name: "Steaming Steam",
+		desc: "The target is hit with a steamy blast. The user must rest on the next turn, however.",
+		shortDesc: "The target is hit with a steamy blast. The user must rest on the next turn, however.",
+	},
+	magmamelt: {
+		name: "Magma Melt",
+		desc: "The target is hit with a magmy blast. The user must rest on the next turn, however.",
+		shortDesc: "The target is hit with a magmy blast. The user must rest on the next turn, however.",
+	},
+	solidwood: {
+		name: "Solid Wood",
+		desc: "The target is hit with a woody blast. The user must rest on the next turn, however.",
+		shortDesc: "The target is hit with a woody blast. The user must rest on the next turn, however.",
+	},
+	cavein: {
+		name: "Cave-in",
+		desc: "The user traps the target inside a cave for four to five turns.",
+		shortDesc: "The user traps the target inside a cave for four to five turns.",
+	},
+	locussword: {
+		name: "Locus Sword",
+		desc: "Sword of chaotic energy. Critical hits land more easily.",
+		shortDesc: "Sword of chaotic energy. Critical hits land more easily.",
+	},
+	saltbeam: {
+		name: "Salt Beam",
+		desc: "If the target's HP is down to about half, this attack will hit with double the power.",
+		shortDesc: "If the target's HP is down to about half, this attack will hit with double the power.",
+	},
+	starfinger: {
+		name: "Star Finger",
+		desc: "The user extends their finger precisely. Critical hits land more easily.",
+		shortDesc: "The user extends their finger precisely. Critical hits land more easily.",
+	},
+	hiddenforce: {
+		name: "Hidden Force",
+		desc: "A unique attack that varies in type and intensity depending on the Pokemon using it.",
+		shortDesc: "A unique attack that varies in type and intensity depending on the Pokemon using it.",
+	},
+	zawarudo: {
+		name: "Za Warudo",
+		desc: "May stop the opponent in time for 1 round.",
+		shortDesc: "May stop the opponent in time for 1 round.",
+	},
+	nightmarch: {
+		name: "Night March",
+		desc: "The user haunts the foe for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user haunts the foe for two to three turns. It then becomes confused, however.",
+	},
+	sunlightoverdrive: {
+		name: "Sunlight Overdrive",
+		desc: "High crit. It may make the target flinch.",
+		shortDesc: "High crit. It may make the target flinch.",
+	},
+	vampirebite: {
+		name: "Vampire Bite",
+		desc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+	},
+	overrun: {
+		name: "Over-run",
+		desc: "The user overruns the opponent. It does more damage the faster the user is.",
+		shortDesc: "The user overruns the opponent. It does more damage the faster the user is.",
+	},
+	why: {
+		name: "Why",
+		desc: "The user crushes its foes by rolling over them. This attack may make the target flinch.",
+		shortDesc: "The user crushes its foes by rolling over them. This attack may make the target flinch.",
+	},
+	technoray: {
+		name: "Techno Ray",
+		desc: "The target is blasted by a huge volume of water launched under great pressure.",
+		shortDesc: "The target is blasted by a huge volume of water launched under great pressure.",
+	},
+	aichmoclaws: {
+		name: "Aichmoclaws",
+		desc: "The user slashes with a sharp claw, bringing out fear in the target. Critical hits land more easily.",
+		shortDesc: "The user slashes with a sharp claw, bringing out fear in the target. Critical hits land more easily.",
+	},
+	jumpscare: {
+		name: "Jump Scare",
+		desc: "The user lunges at the target, scaring them. It is sure to strike first.",
+		shortDesc: "The user lunges at the target, scaring them. It is sure to strike first.",
+	},
+	odynocharge: {
+		name: "Odynocharge",
+		desc: "Charges at target, bringing them fear. This attack may make the target flinch.",
+		shortDesc: "Charges at target, bringing them fear. This attack may make the target flinch.",
+	},
+	fist: {
+		name: "Fist",
+		desc: "The user rakes the foe with an infected, rotting claw. Chance to badly poison and Hi Crit Ratio.",
+		shortDesc: "The user rakes the foe with an infected, rotting claw. Chance to badly poison and Hi Crit Ratio.",
+	},
+	brutal: {
+		name: "Brutal",
+		desc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+		shortDesc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+	},
+	geigerstrike: {
+		name: "Geiger Strike",
+		desc: "The user strikes with an irradiated appendage. Has chance of Badly Poisoning.",
+		shortDesc: "The user strikes with an irradiated appendage. Has chance of Badly Poisoning.",
+	},
+	ritual: {
+		name: "Ritual",
+		desc: "The user absorbs energy and sharply raises its Sp. Atk, Atk, and Speed stats on the next turn.",
+		shortDesc: "The user absorbs energy and sharply raises its Sp. Atk, Atk, and Speed stats on the next turn.",
+	},
+	acrophobia: {
+		name: "Acrophobia",
+		desc: "The user throws a stone or projectile to attack. A flying Pokemon will fall to the ground when hit.",
+		shortDesc: "The user throws a stone or projectile to attack. A flying Pokemon will fall to the ground when hit.",
+	},
+	glassbreaker: {
+		name: "Glassbreaker",
+		desc: "The user screams loud enough to shatter glass. It can also break any barrier such as Light Screen and Reflect.",
+		shortDesc: "The user screams loud enough to shatter glass. It can also break any barrier such as Light Screen and Reflect.",
+	},
+	ransomwareslam: {
+		name: "Ransomware Slam",
+		desc: "The user infects the target with ransomware, then steals the target's held item.",
+		shortDesc: "The user infects the target with ransomware, then steals the target's held item.",
+	},
+	worm: {
+		name: "Worm",
+		desc: "The user vanishes somewhere, then strikes the target on the next turn. Hits thru Prtct.",
+		shortDesc: "The user vanishes somewhere, then strikes the target on the next turn. Hits thru Prtct.",
+	},
+	hack: {
+		name: "Hack",
+		desc: "Hacks the system. High chance to reduce 4PP from target.",
+		shortDesc: "Hacks the system. High chance to reduce 4PP from target.",
+	},
+	bubblejuggle: {
+		name: "Bubble Juggle",
+		desc: "Bubbles are hurled at the target to strike two to five times in a row.",
+		shortDesc: "Bubbles are hurled at the target to strike two to five times in a row.",
+	},
+	balljuggle: {
+		name: "Ball Juggle",
+		desc: "Bubbles are hurled at the target to strike two to five times in a row.",
+		shortDesc: "Bubbles are hurled at the target to strike two to five times in a row.",
+	},
+	madness: {
+		name: "Madness",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	jetdive: {
+		name: "Jet Dive",
+		desc: "The user rides the jet stream to charge into the foe. This move always goes first",
+		shortDesc: "The user rides the jet stream to charge into the foe. This move always goes first",
+	},
+	splinter: {
+		name: "Splinter",
+		desc: "As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+		shortDesc: "As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+	},
+	speedway: {
+		name: "Speedway",
+		desc: "Charges with rubber wheels. Raises speed.",
+		shortDesc: "Charges with rubber wheels. Raises speed.",
+	},
+	mysticsword: {
+		name: "Mystic Sword",
+		desc: "The user attacks by slicing with a mystic sword.",
+		shortDesc: "The user attacks by slicing with a mystic sword.",
+	},
+	bladerain: {
+		name: "Blade Rain",
+		desc: "The user summons a rain of blades lasting five turns. Dmgs all except Steel type.",
+		shortDesc: "The user summons a rain of blades lasting five turns. Dmgs all except Steel type.",
+	},
+	sneakyskitter: {
+		name: "Sneaky Skitter",
+		desc: "Sneakily strike with insect-like movements. +1 Priority.",
+		shortDesc: "Sneakily strike with insect-like movements. +1 Priority.",
+	},
+	ambush: {
+		name: "Ambush",
+		desc: "The user focuses its mind before lunging. It will fail if the user is hit before it is used.",
+		shortDesc: "The user focuses its mind before lunging. It will fail if the user is hit before it is used.",
+	},
+	pumpkinbomb: {
+		name: "Pumpkin Bomb",
+		desc: "It may also cause confusion.",
+		shortDesc: "It may also cause confusion.",
+	},
+	midnight: {
+		name: "Midnight",
+		desc: "Weather. x1.5 Ghost, Fear and Dark. x0.5 Light. Increases speed of Zombie types.",
+		shortDesc: "Weather. x1.5 Ghost, Fear and Dark. x0.5 Light. Increases speed of Zombie types.",
+	},
+	sauna: {
+		name: "Sauna",
+		desc: "x1.5 Steam and Water type moves for 5 turns.",
+		shortDesc: "x1.5 Steam and Water type moves for 5 turns.",
+	},
+	humidburst: {
+		name: "Humid Burst",
+		desc: "Starts the Sauna weather condition.",
+		shortDesc: "Starts the Sauna weather condition.",
+	},
+	angelburst: {
+		name: "Angel Burst",
+		desc: "User unleashes a cross-shaped burst. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+		shortDesc: "User unleashes a cross-shaped burst. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+	},
+	angelrush: {
+		name: "Angel Rush",
+		desc: "The user rushes with divine energy. The user also sustains serious damage.",
+		shortDesc: "The user rushes with divine energy. The user also sustains serious damage.",
+	},
+	flock: {
+		name: "Flock",
+		desc: "The user calls on a flock to hit the foe 2-5 times.",
+		shortDesc: "The user calls on a flock to hit the foe 2-5 times.",
+	},
+	torchpass: {
+		name: "Torch Pass",
+		desc: "After making its attack, switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, switch places with a party Pokemon in waiting.",
+	},
+	crystalray: {
+		name: "Crystal Ray",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	preynet: {
+		name: "Prey Net",
+		desc: "The target is left with at least 1 HP.",
+		shortDesc: "The target is left with at least 1 HP.",
+	},
+	solidify: {
+		name: "Solidify",
+		desc: "Maxes out Def. Min Speed. User must recharge.",
+		shortDesc: "Maxes out Def. Min Speed. User must recharge.",
+	},
+	boldcounter: {
+		name: "Bold Counter",
+		desc: "If the user moves after the target, this attack's power will be doubled.",
+		shortDesc: "If the user moves after the target, this attack's power will be doubled.",
+	},
+	heroiccharge: {
+		name: "Heroic Charge",
+		desc: "Priority. It also cuts the user's Defense and Sp. Def.",
+		shortDesc: "Priority. It also cuts the user's Defense and Sp. Def.",
+	},
+	pursuittackle: {
+		name: "Pursuit Tackle",
+		desc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
+		shortDesc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
+	},
+	fury: {
+		name: "Fury",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	shimmerstrike: {
+		name: "Shimmer Strike",
+		desc: "Sky Attack clone. Goes first.",
+		shortDesc: "Sky Attack clone. Goes first.",
+	},
+	eldritchgoop: {
+		name: "Eldritch Goop",
+		desc: "Unsanitary sludge is hurled at the target. It may also poison the target.",
+		shortDesc: "Unsanitary sludge is hurled at the target. It may also poison the target.",
+	},
+	matteroftime: {
+		name: "Matter of Time",
+		desc: "In a matter of time, it will strike. Sky Attack clone. Goes first.",
+		shortDesc: "In a matter of time, it will strike. Sky Attack clone. Goes first.",
+	},
+	slowingfist: {
+		name: "Slowing Fist",
+		desc: "Fist slows down. Lowers the targets' Speed stat.",
+		shortDesc: "Fist slows down. Lowers the targets' Speed stat.",
+	},
+	nightmareeater: {
+		name: "Nightmare Eater",
+		desc: "The user eats the dreams of a sleeping foe. It absorbs half the damage caused to heal the user's HP.",
+		shortDesc: "The user eats the dreams of a sleeping foe. It absorbs half the damage caused to heal the user's HP.",
+	},
+	couragerush: {
+		name: "Courage Rush",
+		desc: "Rush of courageous punches. It may also make the target flinch.",
+		shortDesc: "Rush of courageous punches. It may also make the target flinch.",
+	},
+	phantomsword: {
+		name: "Phantom Sword",
+		desc: "sPOOKY sword. The target's stat changes don't affect the damage.",
+		shortDesc: "sPOOKY sword. The target's stat changes don't affect the damage.",
+	},
+	magnetdraw: {
+		name: "Magnet Draw",
+		desc: "This attack inflicts double damage on a paralyzed foe. It also cures the target's paralysis, however.",
+		shortDesc: "This attack inflicts double damage on a paralyzed foe. It also cures the target's paralysis, however.",
+	},
+	aquaslash: {
+		name: "Aqua Slash",
+		desc: "The target is attacked with a slash of claws or blades. Critical hits land more easily.",
+		shortDesc: "The target is attacked with a slash of claws or blades. Critical hits land more easily.",
+	},
+	powerballad: {
+		name: "Power Ballad",
+		desc: "Raises the user's Atk stat.",
+		shortDesc: "Raises the user's Atk stat.",
+	},
+	deage: {
+		name: "De-Age",
+		desc: "Lower's the target's stats.",
+		shortDesc: "Lower's the target's stats.",
+	},
+	forecast: {
+		name: "Forecast",
+		desc: "User predicts the opp moves. Goes first, 80% flinch chance.",
+		shortDesc: "User predicts the opp moves. Goes first, 80% flinch chance.",
+	},
+	prophecy: {
+		name: "Prophecy",
+		desc: "Vaguely predict future. Goes first, 100% flinch chance.",
+		shortDesc: "Vaguely predict future. Goes first, 100% flinch chance.",
+	},
+	channel: {
+		name: "Channel",
+		desc: "Uses a random Ghost-type move.",
+		shortDesc: "Uses a random Ghost-type move.",
+	},
+	magicwand: {
+		name: "Magic Wand",
+		desc: "Uses a random Magic-type move.",
+		shortDesc: "Uses a random Magic-type move.",
+	},
+	steelcasting: {
+		name: "Steel Casting",
+		desc: "Uses a random Steel-type move.",
+		shortDesc: "Uses a random Steel-type move.",
+	},
+	poof: {
+		name: "Poof!",
+		desc: "Uses a random Fairy-type move.",
+		shortDesc: "Uses a random Fairy-type move.",
+	},
+	spiritshell: {
+		name: "Spirit Shell",
+		desc: "Substitute, lowers Attack.",
+		shortDesc: "Substitute, lowers Attack.",
+	},
+	soulconsume: {
+		name: "Soul Consume",
+		desc: "The target will faint instantly if this attack hits.",
+		shortDesc: "The target will faint instantly if this attack hits.",
+	},
+	elfshot: {
+		name: "Elf Shot",
+		desc: "Chance to paralyze.",
+		shortDesc: "Chance to paralyze.",
+	},
+	wcreate: {
+		name: "W-create",
+		desc: "Poison W forehead. It lowers the user's Defense, Sp. Def, and Speed.",
+		shortDesc: "Poison W forehead. It lowers the user's Defense, Sp. Def, and Speed.",
+	},
+	envelop: {
+		name: "Envelop",
+		desc: "Traps for four to five turns.",
+		shortDesc: "Traps for four to five turns.",
+	},
+	envelope: {
+		name: "Envelope",
+		desc: "Traps for four to five turns.",
+		shortDesc: "Traps for four to five turns.",
+	},
+	helldrag: {
+		name: "Hell Drag",
+		desc: "Drags out another Pokemon. +1 Priority",
+		shortDesc: "Drags out another Pokemon. +1 Priority",
+	},
+	tractorbeam: {
+		name: "Tractor Beam",
+		desc: "Drags out another Pokemon in the target's party. In the wild, the battle ends.",
+		shortDesc: "Drags out another Pokemon in the target's party. In the wild, the battle ends.",
+	},
+	sapspray: {
+		name: "Sap Spray",
+		desc: "Lowers the targets' Speed stat.",
+		shortDesc: "Lowers the targets' Speed stat.",
+	},
+	astronomy: {
+		name: "Astronomy",
+		desc: "Uses a random Cosmic-type move.",
+		shortDesc: "Uses a random Cosmic-type move.",
+	},
+	velocitydive: {
+		name: "Velocity Dive",
+		desc: "The user tries to outspeed the opponent. It does more damage the faster the user is.",
+		shortDesc: "The user tries to outspeed the opponent. It does more damage the faster the user is.",
+	},
+	tictoc: {
+		name: "Tic Toc",
+		desc: "Hits twice.",
+		shortDesc: "Hits twice.",
+	},
+	boostbeam: {
+		name: "Boost Beam",
+		desc: "It may also raise the user's Sp. Atk stat.",
+		shortDesc: "It may also raise the user's Sp. Atk stat.",
+	},
+	bibliomancy: {
+		name: "Bibliomancy",
+		desc: "Uses a random Paper-type move.",
+		shortDesc: "Uses a random Paper-type move.",
+	},
+	steamscald: {
+		name: "Steam Scald",
+		desc: "The user shoots boiling hot water at its target. It may also leave the target with a burn.",
+		shortDesc: "The user shoots boiling hot water at its target. It may also leave the target with a burn.",
+	},
+	steamslash: {
+		name: "Steam Slash",
+		desc: "Chance to burn, hi crit rate.",
+		shortDesc: "Chance to burn, hi crit rate.",
+	},
+	techerupt: {
+		name: "Tech Erupt",
+		desc: "May leave the target with a burn.",
+		shortDesc: "May leave the target with a burn.",
+	},
+	quicksteamer: {
+		name: "Quick Steamer",
+		desc: "VERY FAST STEAMER RUNING AT INCRDIBLE HIHGH SPEED",
+		shortDesc: "VERY FAST STEAMER RUNING AT INCRDIBLE HIHGH SPEED",
+	},
+	woodrush: {
+		name: "Wood Rush",
+		desc: "It also damages the user by a fairly large amount, however.",
+		shortDesc: "It also damages the user by a fairly large amount, however.",
+	},
+	cometrush: {
+		name: "Comet Rush",
+		desc: "Priority. It may also leave the target with a burn.",
+		shortDesc: "Priority. It may also leave the target with a burn.",
+	},
+	palmscrape: {
+		name: "Palm Scrape",
+		desc: "It may also leave the target with paralysis.",
+		shortDesc: "It may also leave the target with paralysis.",
+	},
+	meteorcrash: {
+		name: "Meteor Crash",
+		desc: "The user also takes damage and may burn the target.",
+		shortDesc: "The user also takes damage and may burn the target.",
+	},
+	thehand: {
+		name: "The Hand",
+		desc: "Lowers the foe's Defense stat.",
+		shortDesc: "Lowers the foe's Defense stat.",
+	},
+	triassault: {
+		name: "Tri Assault",
+		desc: "The user strikes with a simultaneous three-beam attack. May also paralyze, burn, or freeze the target.",
+		shortDesc: "The user strikes with a simultaneous three-beam attack. May also paralyze, burn, or freeze the target.",
+	},
+	vacuumstrike: {
+		name: "Vacuum Strike",
+		desc: "Drags out another Pokemon in its party. In the wild, the battle ends.",
+		shortDesc: "Drags out another Pokemon in its party. In the wild, the battle ends.",
+	},
+	epidemic: {
+		name: "Epidemic",
+		desc: "Hits 1-3 times, each hit does more damage.",
+		shortDesc: "Hits 1-3 times, each hit does more damage.",
+	},
+	plague: {
+		name: "Plague",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	gigadrillbreak: {
+		name: "Giga Drill Break",
+		desc: "The user charges at the target using every bit of its power. The user must rest on the next turn.",
+		shortDesc: "The user charges at the target using every bit of its power. The user must rest on the next turn.",
+	},
+	"3freeze": {
+		name: "3-Freeze",
+		desc: "Makes the target heavy. Harshly lower's the opponent's speed.",
+		shortDesc: "Makes the target heavy. Harshly lower's the opponent's speed.",
+	},
+	talksmack: {
+		name: "Talk Smack",
+		desc: "The target is taunted and beat, causing it to use only attack moves for three turns.",
+		shortDesc: "The target is taunted and beat, causing it to use only attack moves for three turns.",
+	},
+	rewrite: {
+		name: "Re-Write",
+		desc: "All status changes are returned to normal.",
+		shortDesc: "All status changes are returned to normal.",
+	},
+	heavensdoor: {
+		name: "Heaven's Door",
+		desc: "may disable a move.",
+		shortDesc: "may disable a move.",
+	},
+	heavenpower: {
+		name: "Heaven Power",
+		desc: "It may also raise all the user's stats at once.",
+		shortDesc: "It may also raise all the user's stats at once.",
+	},
+	divineseal: {
+		name: "Divine Seal",
+		desc: "Chance to disable the target's last used move.",
+		shortDesc: "Chance to disable the target's last used move.",
+	},
+	paperseal: {
+		name: "Paper Seal",
+		desc: "Chance to disable the target's last used move.",
+		shortDesc: "Chance to disable the target's last used move.",
+	},
+	bitesthedust: {
+		name: "Bites the Dust",
+		desc: "The user turns back time in an explosion. All status changes are returned to normal.",
+		shortDesc: "The user turns back time in an explosion. All status changes are returned to normal.",
+	},
+	airbomb: {
+		name: "Air Bomb",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	shinepunch: {
+		name: "Shine Punch",
+		desc: "A punch of blinding light. It may make the target flinch.",
+		shortDesc: "A punch of blinding light. It may make the target flinch.",
+	},
+	dazzlefist: {
+		name: "Dazzle Fist",
+		desc: "It may also leave the target with paralysis.",
+		shortDesc: "It may also leave the target with paralysis.",
+	},
+	deathwithoutend: {
+		name: "Death Without End",
+		desc: "The target faints next turn.",
+		shortDesc: "The target faints next turn.",
+	},
+	reptize: {
+		name: "Reptize",
+		desc: "Changes the target's type to Dragon.",
+		shortDesc: "Changes the target's type to Dragon.",
+	},
+	venom: {
+		name: "Venom",
+		desc: "Poison's the target.",
+		shortDesc: "Poison's the target.",
+	},
+	ironchomp: {
+		name: "Iron Chomp",
+		desc: "An energy-draining fang. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "An energy-draining fang. The user's HP is restored by half the damage taken by the target.",
+	},
+	happyeverafter: {
+		name: "Happy Ever After",
+		desc: "If the target's HP is down to about half, this attack will hit with double the power.",
+		shortDesc: "If the target's HP is down to about half, this attack will hit with double the power.",
+	},
+	sleightofhand: {
+		name: "Sleight of Hand",
+		desc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+		shortDesc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+	},
+	cannibalize: {
+		name: "Cannibalize",
+		desc: "The user damages any Pokemon of the same type as the user.",
+		shortDesc: "The user damages any Pokemon of the same type as the user.",
+	},
+	tailbite: {
+		name: "Tail Bite",
+		desc: "Chance to lower target's Atk. +1 Priority.",
+		shortDesc: "Chance to lower target's Atk. +1 Priority.",
+	},
+	electroleech: {
+		name: "Electro Leech",
+		desc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	duststorm: {
+		name: "Dust Storm",
+		desc: "70% lower target's Accuracy",
+		shortDesc: "70% lower target's Accuracy",
+	},
+	achillesheel: {
+		name: "Achilles Heel",
+		desc: "Lower's all the target's stats.",
+		shortDesc: "Lower's all the target's stats.",
+	},
+	chargespin: {
+		name: "Charge Spin",
+		desc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+		shortDesc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+	},
+	smokelunge: {
+		name: "Smoke Lunge",
+		desc: "The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.",
+		shortDesc: "The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.",
+	},
+	tirelunge: {
+		name: "Tire Lunge",
+		desc: "The user hurls tire. It does more damage the faster the user is.",
+		shortDesc: "The user hurls tire. It does more damage the faster the user is.",
+	},
+	ironroot: {
+		name: "Iron Root",
+		desc: "High chance to raise user's Defense stat.",
+		shortDesc: "High chance to raise user's Defense stat.",
+	},
+	soulchill: {
+		name: "Soul Chill",
+		desc: "The target is left with at least 1 HP.",
+		shortDesc: "The target is left with at least 1 HP.",
+	},
+	coldsteam: {
+		name: "Cold Steam",
+		desc: "Chance to freeze.",
+		shortDesc: "Chance to freeze.",
+	},
+	subzerosteam: {
+		name: "Sub Zero Steam",
+		desc: "Chance to freeze.",
+		shortDesc: "Chance to freeze.",
+	},
+	firebrush: {
+		name: "Fire Brush",
+		desc: "User brushes its bushy tail against target. Causes burn.",
+		shortDesc: "User brushes its bushy tail against target. Causes burn.",
+	},
+	lightwhip: {
+		name: "Light Whip",
+		desc: "Whips with light. Chance to paralyze.",
+		shortDesc: "Whips with light. Chance to paralyze.",
+	},
+	uvburst: {
+		name: "UV Burst",
+		desc: "The user sends out a ray of scorching hot heat which causes the sunlight to turn harsh.",
+		shortDesc: "The user sends out a ray of scorching hot heat which causes the sunlight to turn harsh.",
+	},
+	electricburst: {
+		name: "Electric Burst",
+		desc: "The user fires a concentrated bundle of electricity. It may also raise the user's Sp. Atk stat.",
+		shortDesc: "The user fires a concentrated bundle of electricity. It may also raise the user's Sp. Atk stat.",
+	},
+	stringwrap: {
+		name: "String Wrap",
+		desc: "The user ties string around the target, traps for 4 to 5 turns.",
+		shortDesc: "The user ties string around the target, traps for 4 to 5 turns.",
+	},
+	stringrush: {
+		name: "String Rush",
+		desc: "Attack rush while tightening strings around target. Traps 4 to 5 turns.",
+		shortDesc: "Attack rush while tightening strings around target. Traps 4 to 5 turns.",
+	},
+	fabricpunch: {
+		name: "Fabric Punch",
+		desc: "Fabric punch XD. It may also leave the target with paralysis.",
+		shortDesc: "Fabric punch XD. It may also leave the target with paralysis.",
+	},
+	snowstorm: {
+		name: "Snow Storm",
+		desc: "Snowstorm makes it hail for five turns.",
+		shortDesc: "Snowstorm makes it hail for five turns.",
+	},
+	combust: {
+		name: "Combust",
+		desc: "Goes first. It may also leave the target with a burn.",
+		shortDesc: "Goes first. It may also leave the target with a burn.",
+	},
+	demonicswipes: {
+		name: "Demonic Swipes",
+		desc: "The target is hit with a flurry of swipes that strike two to five times in a row.",
+		shortDesc: "The target is hit with a flurry of swipes that strike two to five times in a row.",
+	},
+	mossyfist: {
+		name: "Mossy Fist",
+		desc: "The target is punched with a mossy fist. It may also make sleeep.",
+		shortDesc: "The target is punched with a mossy fist. It may also make sleeep.",
+	},
+	sunburn: {
+		name: "Sun Burn",
+		desc: "Target's ability becomes Dry Skin.",
+		shortDesc: "Target's ability becomes Dry Skin.",
+	},
+	perfumesting: {
+		name: "Perfume Sting",
+		desc: "Confuses the target.",
+		shortDesc: "Confuses the target.",
+	},
+	shattercrash: {
+		name: "Shatter Crash",
+		desc: "Lower's the user's defense, raises its attack.",
+		shortDesc: "Lower's the user's defense, raises its attack.",
+	},
+	shieldsmash: {
+		name: "Shield Smash",
+		desc: "The user slams its tough body onto the target to raise its Defense stat.",
+		shortDesc: "The user slams its tough body onto the target to raise its Defense stat.",
+	},
+	sonar: {
+		name: "Sonar",
+		desc: "Increases the user's accuracy",
+		shortDesc: "Increases the user's accuracy",
+	},
+	ectoblast: {
+		name: "Ecto Blast",
+		desc: "May disable the last move used by the target.",
+		shortDesc: "May disable the last move used by the target.",
+	},
+	cannibilize: {
+		name: "Cannibilize",
+		desc: "The user damages any Pokemon of the same type as the user.",
+		shortDesc: "The user damages any Pokemon of the same type as the user.",
+	},
+	consume: {
+		name: "CONSUME",
+		desc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+	},
+	iceshatter: {
+		name: "Ice Shatter",
+		desc: "This attack inflicts big damage on a frozen target. It also wakes the target up, however.",
+		shortDesc: "This attack inflicts big damage on a frozen target. It also wakes the target up, however.",
+	},
+	mudamuda: {
+		name: "Muda Muda",
+		desc: "MUDA MUDA, MAY FREEZE",
+		shortDesc: "MUDA MUDA, MAY FREEZE",
+	},
+	veryhijumpkick: {
+		name: "Very Hi Jump Kick",
+		desc: "The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.",
+		shortDesc: "The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.",
+	},
+	ultraplunder: {
+		name: "Ultra Plunder",
+		desc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+		shortDesc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+	},
+	nutrientdrain: {
+		name: "Nutrient Drain",
+		desc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	eighteenfourteen: {
+		name: "Eighteen Fourteen",
+		desc: "The user burns down the White House. It may also leave the target with a burn.",
+		shortDesc: "The user burns down the White House. It may also leave the target with a burn.",
+	},
+	mcmurry: {
+		name: "McMurry",
+		desc: "This attack inflicts big damage on a burnt target. It also cures the target's burn, however.",
+		shortDesc: "This attack inflicts big damage on a burnt target. It also cures the target's burn, however.",
+	},
+	bloodsuck: {
+		name: "Blood Suck",
+		desc: "Drains the target's HP. Drains more if the target is Bleeding.",
+		shortDesc: "Drains the target's HP. Drains more if the target is Bleeding.",
+	},
+	bloodblade: {
+		name: "Blood Blade",
+		desc: "The user slashes the target the instant an opportunity arises. Critical hits land more easily.",
+		shortDesc: "The user slashes the target the instant an opportunity arises. Critical hits land more easily.",
+	},
+	batbite: {
+		name: "Bat Bite",
+		desc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+	},
+	lavaweb: {
+		name: "Lava Web",
+		desc: "The target becomes trapped IN A LAVA WEB that rages for four to five turns.",
+		shortDesc: "The target becomes trapped IN A LAVA WEB that rages for four to five turns.",
+	},
+	magmaknife: {
+		name: "Magma Knife",
+		desc: "1000 DEGREE KNIFE. CHANCE TO BURN AND HI CRIT RATE.",
+		shortDesc: "1000 DEGREE KNIFE. CHANCE TO BURN AND HI CRIT RATE.",
+	},
+	crystalthrow: {
+		name: "Crystal Throw",
+		desc: "The user picks up and throws a small CRYSTAL at the target to attack.",
+		shortDesc: "The user picks up and throws a small CRYSTAL at the target to attack.",
+	},
+	crystaltomb: {
+		name: "Crystal Tomb",
+		desc: "CRYSTALs are hurled at the target. It also lowers the target's Speed by preventing its movement.",
+		shortDesc: "CRYSTALs are hurled at the target. It also lowers the target's Speed by preventing its movement.",
+	},
+	crystalslide: {
+		name: "Crystal Slide",
+		desc: "Large CRYSTALs are hurled at the foes to inflict damage. It may also make the targets flinch.",
+		shortDesc: "Large CRYSTALs are hurled at the foes to inflict damage. It may also make the targets flinch.",
+	},
+	crystaledge: {
+		name: "Crystal Edge",
+		desc: "The user stabs the foe with sharpened CRYSTALs from below. It has a high critical-hit ratio.",
+		shortDesc: "The user stabs the foe with sharpened CRYSTALs from below. It has a high critical-hit ratio.",
+	},
+	cosmicslash: {
+		name: "Cosmic Slash",
+		desc: "The target is attacked with a slash of claws or blades. Critical hits land more easily.",
+		shortDesc: "The target is attacked with a slash of claws or blades. Critical hits land more easily.",
+	},
+	epitaph: {
+		name: "Epitaph",
+		desc: "User predicts the opp moves. Goes first, 80% flinch chance.",
+		shortDesc: "User predicts the opp moves. Goes first, 80% flinch chance.",
+	},
+	crimsoncourt: {
+		name: "Crimson Court",
+		desc: "The user skips time to surprise attack. Goes first, may disable the last move used by the opponent.",
+		shortDesc: "The user skips time to surprise attack. Goes first, may disable the last move used by the opponent.",
+	},
+	schizoidman: {
+		name: "Schizoid Man",
+		desc: "Goes first. The user rampages 2-3 turns, then becomes confused.",
+		shortDesc: "Goes first. The user rampages 2-3 turns, then becomes confused.",
+	},
+	lunacy: {
+		name: "Lunacy",
+		desc: "As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+		shortDesc: "As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+	},
+	crumbs: {
+		name: "Crumbs",
+		desc: "The fewer PP this move has, the greater its attack power.",
+		shortDesc: "The fewer PP this move has, the greater its attack power.",
+	},
+	goudagun: {
+		name: "Gouda Gun",
+		desc: "The user shoots out gouda two to five times in a row.",
+		shortDesc: "The user shoots out gouda two to five times in a row.",
+	},
+	cheesymelt: {
+		name: "Cheesy Melt",
+		desc: "The user shoots melting cheese at its target. It may also leave the target with a burn.",
+		shortDesc: "The user shoots melting cheese at its target. It may also leave the target with a burn.",
+	},
+	overriperoquefort: {
+		name: "Overripe Roquefort",
+		desc: "It may also poison the target. Critical hits land more easily.",
+		shortDesc: "It may also poison the target. Critical hits land more easily.",
+	},
+	cheddarcrash: {
+		name: "Cheddar Crash",
+		desc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+		shortDesc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+	},
+	freezingwave: {
+		name: "Freezing Wave",
+		desc: "The target is struck with an icy-cold wave. It may also freeze the target solid.",
+		shortDesc: "The target is struck with an icy-cold wave. It may also freeze the target solid.",
+	},
+	satelliteray: {
+		name: "Satellite Ray",
+		desc: "Calls out coordinants to raise its SpAtk sharply in the first turn, then fires at the foe the next turn.",
+		shortDesc: "Calls out coordinants to raise its SpAtk sharply in the first turn, then fires at the foe the next turn.",
+	},
+	dualchaos: {
+		name: "Dual Chaos",
+		desc: "The target is hit twice in a row.",
+		shortDesc: "The target is hit twice in a row.",
+	},
+	dualdivinity: {
+		name: "Dual Divinity",
+		desc: "The target is hit twice in a row.",
+		shortDesc: "The target is hit twice in a row.",
+	},
+	moonstoneray: {
+		name: "Moonstone Ray",
+		desc: "It may also induce sleep.",
+		shortDesc: "It may also induce sleep.",
+	},
+	godsmaw: {
+		name: "God's Maw",
+		desc: "The target becomes trapped for four to five turns.",
+		shortDesc: "The target becomes trapped for four to five turns.",
+	},
+	plaguefrenzy: {
+		name: "Plague Frenzy",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	metalwhip: {
+		name: "Metal Whip",
+		desc: "May raise the user's attack stat.",
+		shortDesc: "May raise the user's attack stat.",
+	},
+	neardeath: {
+		name: "Near Death",
+		desc: "Near death experience. It becomes more powerful the less HP the user has.",
+		shortDesc: "Near death experience. It becomes more powerful the less HP the user has.",
+	},
+	raillaunch: {
+		name: "Rail Launch",
+		desc: "May also paralyze, burn, or freeze the target.",
+		shortDesc: "May also paralyze, burn, or freeze the target.",
+	},
+	crashlanding: {
+		name: "Crash Landing",
+		desc: "The heavier the user, the greater the damage.",
+		shortDesc: "The heavier the user, the greater the damage.",
+	},
+	hypothermia: {
+		name: "Hypothermia",
+		desc: "Chance to cause Sleep.",
+		shortDesc: "Chance to cause Sleep.",
+	},
+	quicksilver: {
+		name: "Quick Silver",
+		desc: "+2 Priority.",
+		shortDesc: "+2 Priority.",
+	},
+	lenience: {
+		name: "Lenience",
+		desc: "A restrained attack that prevents the target from fainting. The target is left with at least 1 HP.",
+		shortDesc: "A restrained attack that prevents the target from fainting. The target is left with at least 1 HP.",
+	},
+	dawnchorus: {
+		name: "Dawn Chorus",
+		desc: "Raises the user's Sp. Atk stat.",
+		shortDesc: "Raises the user's Sp. Atk stat.",
+	},
+	frighteningwail: {
+		name: "Frightening Wail",
+		desc: "The user emits creepy wail. It may also make the target flinch.",
+		shortDesc: "The user emits creepy wail. It may also make the target flinch.",
+	},
+	driveby: {
+		name: "Drive-By",
+		desc: "Get deez niqqaz, the user rushes back to switch places with a party Pokemon in waiting.",
+		shortDesc: "Get deez niqqaz, the user rushes back to switch places with a party Pokemon in waiting.",
+	},
+	aerialrace: {
+		name: "Aerial Race",
+		desc: "Aerial Ace, more like Aryan Race. The attack lands without fail.",
+		shortDesc: "Aerial Ace, more like Aryan Race. The attack lands without fail.",
+	},
+	bloodsiphon: {
+		name: "Blood Siphon",
+		desc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+	},
+	hexpunch: {
+		name: "Hex Punch",
+		desc: "This relentless attack does massive damage to a target affected by status problems.",
+		shortDesc: "This relentless attack does massive damage to a target affected by status problems.",
+	},
+	discpunch: {
+		name: "Disc Punch",
+		desc: "May disable the last move used by the target",
+		shortDesc: "May disable the last move used by the target",
+	},
+	divineshield: {
+		name: "Divine Shield",
+		desc: "The user slams its tough body onto the target to raise its Defense stat.",
+		shortDesc: "The user slams its tough body onto the target to raise its Defense stat.",
+	},
+	ultraweaken: {
+		name: "Ultra Weaken",
+		desc: "Lower's all the target's stats.",
+		shortDesc: "Lower's all the target's stats.",
+	},
+	starsaligned: {
+		name: "Stars Aligned",
+		desc: "The more the user's stats are raised, the greater the damage.",
+		shortDesc: "The more the user's stats are raised, the greater the damage.",
+	},
+	zipperhole: {
+		name: "Zipper Hole",
+		desc: "The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.",
+		shortDesc: "The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.",
+	},
+	zipperstrike: {
+		name: "Zipper Strike",
+		desc: "The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.",
+		shortDesc: "The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.",
+	},
+	stickyfingers: {
+		name: "Sticky Fingers",
+		desc: "The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.",
+		shortDesc: "The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.",
+	},
+	fa223rkeou543wfdt: {
+		name: "Fa223rke Ou543wfdt",
+		desc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+		shortDesc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+	},
+	abyssalhelldrag: {
+		name: "Abyssal Hell Drag",
+		desc: "Drags out another Pokemon. +1 Priority",
+		shortDesc: "Drags out another Pokemon. +1 Priority",
+	},
+	desecrations: {
+		name: "Desecrations",
+		desc: "The user launches fireworks at the target two to five times in a row.",
+		shortDesc: "The user launches fireworks at the target two to five times in a row.",
+	},
+	solarelectricity: {
+		name: "Solar Electricity",
+		desc: "A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.",
+		shortDesc: "A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn.",
+	},
+	thanatophobia: {
+		name: "Thanatophobia",
+		desc: "Instills the fear of death. Target left with at least 1 HP.",
+		shortDesc: "Instills the fear of death. Target left with at least 1 HP.",
+	},
+	claustrocrush: {
+		name: "Claustrocrush",
+		desc: "Traps target 3-5 turns.",
+		shortDesc: "Traps target 3-5 turns.",
+	},
+	pester: {
+		name: "Pester",
+		desc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
+		shortDesc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
+	},
+	dragonflycharge: {
+		name: "Dragonfly Charge",
+		desc: "Goes first. May raise the user's Speed stat.",
+		shortDesc: "Goes first. May raise the user's Speed stat.",
+	},
+	voltfang: {
+		name: "Volt Fang",
+		desc: "The user bites with electrified fangs. It may also make the target flinch or leave it with paralysis.",
+		shortDesc: "The user bites with electrified fangs. It may also make the target flinch or leave it with paralysis.",
+	},
+	voltbind: {
+		name: "Volt Bind",
+		desc: "Binds and squeezes the foe for four to five turns.",
+		shortDesc: "Binds and squeezes the foe for four to five turns.",
+	},
+	toxicsteamtackle: {
+		name: "Toxic Steam Tackle",
+		desc: "It may also leave the target badly poisoned.",
+		shortDesc: "It may also leave the target badly poisoned.",
+	},
+	doublenote: {
+		name: "Double Note",
+		desc: "The target is hit twice in a row.",
+		shortDesc: "The target is hit twice in a row.",
+	},
+	wintersong: {
+		name: "Winter Song",
+		desc: "May freeze.",
+		shortDesc: "May freeze.",
+	},
+	triplenote: {
+		name: "Triple Note",
+		desc: "Three-note attack that becomes more powerful with each successive hit.",
+		shortDesc: "Three-note attack that becomes more powerful with each successive hit.",
+	},
+	lownote: {
+		name: "Low Note",
+		desc: "Sound based. It may also make the target flinch.",
+		shortDesc: "Sound based. It may also make the target flinch.",
+	},
+	treblebeam: {
+		name: "Treble Beam",
+		desc: "It may also lower the target's Sp. Atk.",
+		shortDesc: "It may also lower the target's Sp. Atk.",
+	},
+	highnote: {
+		name: "High Note",
+		desc: "Sound based. This may also lower the target's Attack stat.",
+		shortDesc: "Sound based. This may also lower the target's Attack stat.",
+	},
+	earthchomp: {
+		name: "Earth Chomp",
+		desc: "60% chance to lower the target's Defense stat.",
+		shortDesc: "60% chance to lower the target's Defense stat.",
+	},
+	wormattack: {
+		name: "Worm Attack",
+		desc: "The user burrows, then attacks on the second turn. It can also be used to exit dungeons.",
+		shortDesc: "The user burrows, then attacks on the second turn. It can also be used to exit dungeons.",
+	},
+	tunnelaway: {
+		name: "Tunnel Away",
+		desc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+	},
+	encryptray: {
+		name: "Encrypt Ray",
+		desc: "Raises users Defense stat.",
+		shortDesc: "Raises users Defense stat.",
+	},
+	cyberboost: {
+		name: "Cyber Boost",
+		desc: "It may also raise the user's Sp. Atk stat.",
+		shortDesc: "It may also raise the user's Sp. Atk stat.",
+	},
+	demolisher: {
+		name: "Demolisher",
+		desc: "This attack's power increases the more the target has powered up with stat changes.",
+		shortDesc: "This attack's power increases the more the target has powered up with stat changes.",
+	},
+	duel: {
+		name: "Duel",
+		desc: "The user continually duels the target over five turns. It becomes stronger each time it hits.",
+		shortDesc: "The user continually duels the target over five turns. It becomes stronger each time it hits.",
+	},
+	lightdrain: {
+		name: "Light Drain",
+		desc: "A light-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A light-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	chargespell: {
+		name: "Charge Spell",
+		desc: "It may also raise the user's Sp. Atk stat.",
+		shortDesc: "It may also raise the user's Sp. Atk stat.",
+	},
+	chargecrystal: {
+		name: "Charge Crystal",
+		desc: "It may also raise the user's Sp. Atk stat.",
+		shortDesc: "It may also raise the user's Sp. Atk stat.",
+	},
+	caloriebeam: {
+		name: "Calorie Beam",
+		desc: "May also raise the user's Sp. Atk stat.",
+		shortDesc: "May also raise the user's Sp. Atk stat.",
+	},
+	humidray: {
+		name: "Humid Ray",
+		desc: "Starts the Sauna weather condition.",
+		shortDesc: "Starts the Sauna weather condition.",
+	},
+	crystalwave: {
+		name: "Crystal Wave",
+		desc: "This attack does physical damage.",
+		shortDesc: "This attack does physical damage.",
+	},
+	crystalpower: {
+		name: "Crystal Power",
+		desc: "The user attacks with a prehistoric power. It may also raise all the user's stats at once.",
+		shortDesc: "The user attacks with a prehistoric power. It may also raise all the user's stats at once.",
+	},
+	fellcrystal: {
+		name: "Fell Crystal",
+		desc: "When the user knocks out a target with this move, the user's SpAttack stat rises sharply.",
+		shortDesc: "When the user knocks out a target with this move, the user's SpAttack stat rises sharply.",
+	},
+	bubblepop: {
+		name: "Bubble Pop",
+		desc: "It also damages the user a fairly large amount.",
+		shortDesc: "It also damages the user a fairly large amount.",
+	},
+	checkmate: {
+		name: "Checkmate",
+		desc: "When the user knocks out a target with this move, the user's Attack stat rises sharply.",
+		shortDesc: "When the user knocks out a target with this move, the user's Attack stat rises sharply.",
+	},
+	zephyrgust: {
+		name: "Zephyr Gust",
+		desc: "Building up more power, it raises the user's Speed stat.",
+		shortDesc: "Building up more power, it raises the user's Speed stat.",
+	},
+	bunkerbeam: {
+		name: "Bunker Beam",
+		desc: "Chance to raise the user's Defense stat.",
+		shortDesc: "Chance to raise the user's Defense stat.",
+	},
+	deathspell: {
+		name: "Death Spell",
+		desc: "The user casts a spell of death. The target will faint instantly if this attack hits.",
+		shortDesc: "The user casts a spell of death. The target will faint instantly if this attack hits.",
+	},
+	iratetrance: {
+		name: "Irate Trance",
+		desc: "If the user moves after the target, this attack's power will be doubled.",
+		shortDesc: "If the user moves after the target, this attack's power will be doubled.",
+	},
+	miseryshot: {
+		name: "Misery Shot",
+		desc: "A full-power attack that grows more powerful the less the user likes its Trainer.",
+		shortDesc: "A full-power attack that grows more powerful the less the user likes its Trainer.",
+	},
+	hyperspell: {
+		name: "Hyper Spell",
+		desc: "The foe is attacked with a powerful beam. The user must rest on the next turn to regain its energy.",
+		shortDesc: "The foe is attacked with a powerful beam. The user must rest on the next turn to regain its energy.",
+	},
+	bowlspin: {
+		name: "Bowl Spin",
+		desc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+		shortDesc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+	},
+	saucesplash: {
+		name: "Sauce Splash",
+		desc: "Very high chance to reduce the target's Sp. Def stat.",
+		shortDesc: "Very high chance to reduce the target's Sp. Def stat.",
+	},
+	searingsauce: {
+		name: "Searing Sauce",
+		desc: "The target is scorched with spicy SAUCE. It may also leave the target with a burn.",
+		shortDesc: "The target is scorched with spicy SAUCE. It may also leave the target with a burn.",
+	},
+	cremate: {
+		name: "Cremate",
+		desc: "The foe is attacked with an intense blast of all-consuming fire. It may also leave the target with a burn.",
+		shortDesc: "The foe is attacked with an intense blast of all-consuming fire. It may also leave the target with a burn.",
+	},
+	spicyleaves: {
+		name: "Spicy Leaves",
+		desc: "20% chance to leave the target with a burn.",
+		shortDesc: "20% chance to leave the target with a burn.",
+	},
+	superspicysauce: {
+		name: "Super Spicy Sauce",
+		desc: "30% chance to burn.",
+		shortDesc: "30% chance to burn.",
+	},
+	cloudgust: {
+		name: "Cloud Gust",
+		desc: "It also lowers the targets' Speed stat.",
+		shortDesc: "It also lowers the targets' Speed stat.",
+	},
+	ultradownpour: {
+		name: "Ultra Downpour",
+		desc: "The user drops a torrential downpour down on the target which causes it to rain.",
+		shortDesc: "The user drops a torrential downpour down on the target which causes it to rain.",
+	},
+	ultrasolarray: {
+		name: "Ultra Solar Ray",
+		desc: "The user sends out a ray of scorching hot heat which causes the sunlight to turn harsh.",
+		shortDesc: "The user sends out a ray of scorching hot heat which causes the sunlight to turn harsh.",
+	},
+	coldwind: {
+		name: "Cold Wind",
+		desc: "It may also freeze the target solid.",
+		shortDesc: "It may also freeze the target solid.",
+	},
+	ultrasnowstorm: {
+		name: "Ultra Snow Storm",
+		desc: "Snowstorm makes it hail for five turns.",
+		shortDesc: "Snowstorm makes it hail for five turns.",
+	},
+	ultradustdevil: {
+		name: "Ultra Dustdevil",
+		desc: "The user whips up a powerful gust of sand which brews a sandstorm.",
+		shortDesc: "The user whips up a powerful gust of sand which brews a sandstorm.",
+	},
+	stormthunder: {
+		name: "Storm Thunder",
+		desc: "The user drops a torrential downpour down on the target which causes it to rain.",
+		shortDesc: "The user drops a torrential downpour down on the target which causes it to rain.",
+	},
+	heatray: {
+		name: "Heat Ray",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	superheatray: {
+		name: "Super Heat Ray",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	cosmicboost: {
+		name: "Cosmic Boost",
+		desc: "50% to raise SpAtk.",
+		shortDesc: "50% to raise SpAtk.",
+	},
+	dojyan: {
+		name: "Dojyan",
+		desc: "User disappears on first turn, then reappears and attacks on second turn. This move hits even if the target protects itself.",
+		shortDesc: "User disappears on first turn, then reappears and attacks on second turn. This move hits even if the target protects itself.",
+	},
+	pooftackle: {
+		name: "Poof Tackle",
+		desc: "User disappears on first turn, then reappears and attacks on second turn. This move hits even if the target protects itself.",
+		shortDesc: "User disappears on first turn, then reappears and attacks on second turn. This move hits even if the target protects itself.",
+	},
+	disappear: {
+		name: "Disappear",
+		desc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+	},
+	dirtydeedsdonedirtcheap: {
+		name: "DirtyDeedsDoneDirtCheap",
+		desc: "After making its attack, the user switches places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user switches places with a party Pokemon in waiting.",
+	},
+	enumaelish: {
+		name: "Enuma Elish",
+		desc: "Removes all hazards and screens.",
+		shortDesc: "Removes all hazards and screens.",
+	},
+	gandr: {
+		name: "Gandr",
+		desc: "Sharply lowers the target's SpDef.",
+		shortDesc: "Sharply lowers the target's SpDef.",
+	},
+	kilobyte: {
+		name: "Kilo Byte",
+		desc: "Get it? Hahaha. Kilo Byte. Byte. Bite. It may make the target flinch.",
+		shortDesc: "Get it? Hahaha. Kilo Byte. Byte. Bite. It may make the target flinch.",
+	},
+	gigabyte: {
+		name: "Giga Byte",
+		desc: "Get it? Hahaha. Giga Byte. Byte. Bite. It may make the target flinch.",
+		shortDesc: "Get it? Hahaha. Giga Byte. Byte. Bite. It may make the target flinch.",
+	},
+	datadrill: {
+		name: "Data Drill",
+		desc: "Hi crit rate. May lower Defense.",
+		shortDesc: "Hi crit rate. May lower Defense.",
+	},
+	divinescales: {
+		name: "Divine Scales",
+		desc: "Raises Defense, hi crit rate.",
+		shortDesc: "Raises Defense, hi crit rate.",
+	},
+	abduct: {
+		name: "Abduct",
+		desc: "The user takes the foe into the sky, then drops it on the next turn. The foe cannot attack while airborne.",
+		shortDesc: "The user takes the foe into the sky, then drops it on the next turn. The foe cannot attack while airborne.",
+	},
+	miasmaslash: {
+		name: "Miasma Slash",
+		desc: "Hi crit rate. The attack is more powerful the more HP the target has left.",
+		shortDesc: "Hi crit rate. The attack is more powerful the more HP the target has left.",
+	},
+	cripple: {
+		name: "Cripple",
+		desc: "A restrained attack that prevents the target from fainting. The target is left with at least 1 HP.",
+		shortDesc: "A restrained attack that prevents the target from fainting. The target is left with at least 1 HP.",
+	},
+	samuraipapercut: {
+		name: "Samurai Paper Cut",
+		desc: "VERY HONOR! Critical hits land more easily. May raise Atk.",
+		shortDesc: "VERY HONOR! Critical hits land more easily. May raise Atk.",
+	},
+	baseballstrike: {
+		name: "Baseball Strike",
+		desc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+		shortDesc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+	},
+	baseballbat: {
+		name: "Baseball Bat",
+		desc: "The user knocks away the target and drags out another Pokemon in its party. In the wild, the battle ends.",
+		shortDesc: "The user knocks away the target and drags out another Pokemon in its party. In the wild, the battle ends.",
+	},
+	godspeed: {
+		name: "Godspeed",
+		desc: "Maxes the user's Speed stat.",
+		shortDesc: "Maxes the user's Speed stat.",
+	},
+	pray: {
+		name: "Pray",
+		desc: "Uses a random Divine-type move.",
+		shortDesc: "Uses a random Divine-type move.",
+	},
+	godsbreath: {
+		name: "God's Breath",
+		desc: "The foe is attacked with a powerful beam. The user must rest on the next turn to regain its energy.",
+		shortDesc: "The foe is attacked with a powerful beam. The user must rest on the next turn to regain its energy.",
+	},
+	absolutestrike: {
+		name: "Absolute Strike",
+		desc: "An absolute strike that never misses and hits through Protection moves.",
+		shortDesc: "An absolute strike that never misses and hits through Protection moves.",
+	},
+	magiccircle: {
+		name: "Magic Circle",
+		desc: "Traps the target for four to five turns.",
+		shortDesc: "Traps the target for four to five turns.",
+	},
+	ceremony: {
+		name: "Ceremony",
+		desc: "The user boosts the power of the Magic move it uses next. It also raises the user's Sp. Def stat.",
+		shortDesc: "The user boosts the power of the Magic move it uses next. It also raises the user's Sp. Def stat.",
+	},
+	holywater: {
+		name: "Holy Water",
+		desc: "Increases power of Divine moves, decreases power of Chaos, Zombie and Ghost moves.",
+		shortDesc: "Increases power of Divine moves, decreases power of Chaos, Zombie and Ghost moves.",
+	},
+	armsofgod: {
+		name: "Arms of God",
+		desc: "The target is hit with a flurry of punches that strike two to five times in a row.",
+		shortDesc: "The target is hit with a flurry of punches that strike two to five times in a row.",
+	},
+	rapture: {
+		name: "Rapture",
+		desc: "A new heaven and a new earth. The target faints instantly.",
+		shortDesc: "A new heaven and a new earth. The target faints instantly.",
+	},
+	fafnirarmor: {
+		name: "Fafnir Armor",
+		desc: "Using the blood of the ancient dragon Fafnir, raises Def and SpDef 2 points.",
+		shortDesc: "Using the blood of the ancient dragon Fafnir, raises Def and SpDef 2 points.",
+	},
+	balmung: {
+		name: "Balmung",
+		desc: "A dragon slaying sword that hits both targets. Critical hits land more easily.",
+		shortDesc: "A dragon slaying sword that hits both targets. Critical hits land more easily.",
+	},
+	brahmastrakundala: {
+		name: "Brahmastra Kundala",
+		desc: "Hits both targets and guaranteed to Burn.",
+		shortDesc: "Hits both targets and guaranteed to Burn.",
+	},
+	vasavishakti: {
+		name: "Vasavi Shakti",
+		desc: "Hits both targets. Burns. Deals huge dmg to Divine types. Lowers user's Def and SpDef.",
+		shortDesc: "Hits both targets. Burns. Deals huge dmg to Divine types. Lowers user's Def and SpDef.",
+	},
+	cryingwarmonger: {
+		name: "Crying Warmonger",
+		desc: "The user retaliates with much greater power against the target that last inflicted damage on it.",
+		shortDesc: "The user retaliates with much greater power against the target that last inflicted damage on it.",
+	},
+	blastedtree: {
+		name: "Blasted Tree",
+		desc: "Has high recoil.",
+		shortDesc: "Has high recoil.",
+	},
+	sikerausum: {
+		name: "Sikera Usum",
+		desc: "The first poisoning. Badly poisons the target.",
+		shortDesc: "The first poisoning. Badly poisons the target.",
+	},
+	sagittarius: {
+		name: "Sagittarius",
+		desc: "A shot from the constellation Sagittarius, it cannot miss.",
+		shortDesc: "A shot from the constellation Sagittarius, it cannot miss.",
+	},
+	kaziklibey: {
+		name: "Kazikli Bey",
+		desc: "Hi crit rate. Impales the target for four to five turns.",
+		shortDesc: "Hi crit rate. Impales the target for four to five turns.",
+	},
+	dromeuskometes: {
+		name: "Dromeus Kometes",
+		desc: "Goes first, raises speed by 1.",
+		shortDesc: "Goes first, raises speed by 1.",
+	},
+	marssword: {
+		name: "Mars Sword",
+		desc: "Hi crit rate. 60% to raise Atk.",
+		shortDesc: "Hi crit rate. 60% to raise Atk.",
+	},
+	gaedearg: {
+		name: "Gae Dearg",
+		desc: "The target's stat changes don't affect the damage.",
+		shortDesc: "The target's stat changes don't affect the damage.",
+	},
+	gaebuidhe: {
+		name: "Gae Buidhe",
+		desc: "The opponent cannot heal for 5 turns after being hit by this move.",
+		shortDesc: "The opponent cannot heal for 5 turns after being hit by this move.",
+	},
+	elementalattack: {
+		name: "Elemental Attack",
+		desc: "Uses either Fire Blast, Solar Beam, Hurricane or Hydro Pump.",
+		shortDesc: "Uses either Fire Blast, Solar Beam, Hurricane or Hydro Pump.",
+	},
+	deathmatch: {
+		name: "Death Match",
+		desc: "It becomes more powerful the less HP the user has.",
+		shortDesc: "It becomes more powerful the less HP the user has.",
+	},
+	reversesplash: {
+		name: "Reverse Splash",
+		desc: "If the user moves after the target, this attack's power will be doubled.",
+		shortDesc: "If the user moves after the target, this attack's power will be doubled.",
+	},
+	iceage: {
+		name: "Ice Age",
+		desc: "Freezes the foe.",
+		shortDesc: "Freezes the foe.",
+	},
+	geyser: {
+		name: "Geyser",
+		desc: "This attack always results in a critical hit.",
+		shortDesc: "This attack always results in a critical hit.",
+	},
+	luminousflux: {
+		name: "Luminous Flux",
+		desc: "The user also sustains serious damage.",
+		shortDesc: "The user also sustains serious damage.",
+	},
+	atomicenergy: {
+		name: "Atomic Energy",
+		desc: "The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user's HP is restored by half the damage taken by the target.",
+	},
+	lightjavelin: {
+		name: "Light Javelin",
+		desc: "It may also cause confusion.",
+		shortDesc: "It may also cause confusion.",
+	},
+	arclight: {
+		name: "Arc Light",
+		desc: "The attack's recoil harshly reduces the user's Sp. Atk stat.",
+		shortDesc: "The attack's recoil harshly reduces the user's Sp. Atk stat.",
+	},
+	miraclereprisal: {
+		name: "Miracle Reprisal",
+		desc: "This attack's power increases the more the target has powered up with stat changes.",
+		shortDesc: "This attack's power increases the more the target has powered up with stat changes.",
+	},
+	invokedread: {
+		name: "Invoke Dread",
+		desc: "Target's ability becomes Defeatist.",
+		shortDesc: "Target's ability becomes Defeatist.",
+	},
+	delusionalheartbeat: {
+		name: "Delusional Heartbeat",
+		desc: "Rips out the target's heart. Chance to 1 hit KO.",
+		shortDesc: "Rips out the target's heart. Chance to 1 hit KO.",
+	},
+	throwingknives: {
+		name: "Throwing Knives",
+		desc: "High critical hit ratio. Hits two to five times.",
+		shortDesc: "High critical hit ratio. Hits two to five times.",
+	},
+	spookypresence: {
+		name: "Spooky Presence",
+		desc: "The user sneaks onto the target to raise its accuracy stat.",
+		shortDesc: "The user sneaks onto the target to raise its accuracy stat.",
+	},
+	dreamfist: {
+		name: "Dream Fist",
+		desc: "20% to put target to Sleep.",
+		shortDesc: "20% to put target to Sleep.",
+	},
+	rustyblade: {
+		name: "Rusty Blade",
+		desc: "20% to badly poison, hi crit rate.",
+		shortDesc: "20% to badly poison, hi crit rate.",
+	},
+	stigmatastrike: {
+		name: "Stigmata Strike",
+		desc: "The opponent cannot heal for 5 turns.",
+		shortDesc: "The opponent cannot heal for 5 turns.",
+	},
+	stigmaticgleam: {
+		name: "Stigmatic Gleam",
+		desc: "The opponent cannot heal for 5 turns.",
+		shortDesc: "The opponent cannot heal for 5 turns.",
+	},
+	deathsdoor: {
+		name: "Death's Door",
+		desc: "The target is left with at least 1 HP.",
+		shortDesc: "The target is left with at least 1 HP.",
+	},
+	babylongoblet: {
+		name: "Babylon Goblet",
+		desc: "90% to confuse the target.",
+		shortDesc: "90% to confuse the target.",
+	},
+	psalms: {
+		name: "Psalms",
+		desc: "Almost guaranteed chance to sharply raises the user's Sp. Atk stat.",
+		shortDesc: "Almost guaranteed chance to sharply raises the user's Sp. Atk stat.",
+	},
+	luminositeeternelle: {
+		name: "Luminosite Eternelle",
+		desc: "Protects and puts up Reflect, Light Screen, Safeguard and Mist. Heals party for 2 turns. Cures user of status conditions.",
+		shortDesc: "Protects and puts up Reflect, Light Screen, Safeguard and Mist. Heals party for 2 turns. Cures user of status conditions.",
+	},
+	crazytackle: {
+		name: "Crazy Tackle",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	arondight: {
+		name: "Arondight",
+		desc: "Hi crit rate. Chance to raise the user's stats.",
+		shortDesc: "Hi crit rate. Chance to raise the user's stats.",
+	},
+	direstate: {
+		name: "Dire State",
+		desc: "It becomes more powerful the less HP the user has.",
+		shortDesc: "It becomes more powerful the less HP the user has.",
+	},
+	detonationburst: {
+		name: "Detonation Burst",
+		desc: "The user attacks the target with great power. However, it also lowers the user's Attack and Defense.",
+		shortDesc: "The user attacks the target with great power. However, it also lowers the user's Attack and Defense.",
+	},
+	sorrowfultune: {
+		name: "Sorrowful Tune",
+		desc: "The targets' Sp. Atk stat is reduced.",
+		shortDesc: "The targets' Sp. Atk stat is reduced.",
+	},
+	occultflash: {
+		name: "Occult Flash",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	naughtwave: {
+		name: "Naught Wave",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	divinejudgement: {
+		name: "Divine Judgement",
+		desc: "Small chance to 1 hit KO.",
+		shortDesc: "Small chance to 1 hit KO.",
+	},
+	rust: {
+		name: "Rust",
+		desc: "This move is super effective against Steel types.",
+		shortDesc: "This move is super effective against Steel types.",
+	},
+	boil: {
+		name: "Boil",
+		desc: "This move is super effective against Water types.",
+		shortDesc: "This move is super effective against Water types.",
+	},
+	mirrorreflect: {
+		name: "Mirror Reflect",
+		desc: "The user retaliates with much greater power against the target that last inflicted damage on it.",
+		shortDesc: "The user retaliates with much greater power against the target that last inflicted damage on it.",
+	},
+	mirrorworld: {
+		name: "Mirror World",
+		desc: "A world of mirrors. It may also confuse the target.",
+		shortDesc: "A world of mirrors. It may also confuse the target.",
+	},
+	disenchant: {
+		name: "Disenchant",
+		desc: "All status changes are returned to normal.",
+		shortDesc: "All status changes are returned to normal.",
+	},
+	mysteriousmagic: {
+		name: "Mysterious Magic",
+		desc: "Does physical damage.",
+		shortDesc: "Does physical damage.",
+	},
+	gorgoneye: {
+		name: "Gorgon Eye",
+		desc: "Causes paralysis.",
+		shortDesc: "Causes paralysis.",
+	},
+	timefreeze: {
+		name: "Time Freeze",
+		desc: "Freezes the target.",
+		shortDesc: "Freezes the target.",
+	},
+	firstfolio: {
+		name: "First Folio",
+		desc: "May also paralyze, burn, or freeze the target.",
+		shortDesc: "May also paralyze, burn, or freeze the target.",
+	},
+	bulletcorn: {
+		name: "Bullet Corn",
+		desc: "The user forcefully shoots seeds at the target. Two to five seeds are shot in rapid succession.",
+		shortDesc: "The user forcefully shoots seeds at the target. Two to five seeds are shot in rapid succession.",
+	},
+	veggiebeam: {
+		name: "Veggie Beam",
+		desc: "Raises the user's Defense stat.",
+		shortDesc: "Raises the user's Defense stat.",
+	},
+	lightarrow: {
+		name: "Light Arrow",
+		desc: "It may make the target flinch.",
+		shortDesc: "It may make the target flinch.",
+	},
+	lightup: {
+		name: "Light Up",
+		desc: "The user lights up to raise its accuracy stat.",
+		shortDesc: "The user lights up to raise its accuracy stat.",
+	},
+	impulse: {
+		name: "Impulse",
+		desc: "It may also lower the target's Sp. Def stat.",
+		shortDesc: "It may also lower the target's Sp. Def stat.",
+	},
+	secondblast: {
+		name: "Second Blast",
+		desc: "A thin beam of time is shot at the target.",
+		shortDesc: "A thin beam of time is shot at the target.",
+	},
+	minuteblast: {
+		name: "Minute Blast",
+		desc: "May lower the target's SpDef.",
+		shortDesc: "May lower the target's SpDef.",
+	},
+	hourblast: {
+		name: "Hour Blast",
+		desc: "May lower the target's SpDef.",
+		shortDesc: "May lower the target's SpDef.",
+	},
+	timewarp: {
+		name: "Time Warp",
+		desc: "The user disappears, then strikes the foe on the second turn. It hits even if the foe protects itself.",
+		shortDesc: "The user disappears, then strikes the foe on the second turn. It hits even if the foe protects itself.",
+	},
+	focustime: {
+		name: "Focus Time",
+		desc: "It will fail if the user is hit before it is used.",
+		shortDesc: "It will fail if the user is hit before it is used.",
+	},
+	windspear: {
+		name: "Wind Spear",
+		desc: "It may make the target flinch.",
+		shortDesc: "It may make the target flinch.",
+	},
+	thievingwind: {
+		name: "Thieving Wind",
+		desc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+		shortDesc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+	},
+	airstamp: {
+		name: "Air Stamp",
+		desc: "A strong gale strikes the foe. May cause the foe to be switched out.",
+		shortDesc: "A strong gale strikes the foe. May cause the foe to be switched out.",
+	},
+	macroburst: {
+		name: "Macroburst",
+		desc: "It may also confuse the foe.",
+		shortDesc: "It may also confuse the foe.",
+	},
+	airraid: {
+		name: "Air-Raid",
+		desc: "This also hits a target using Protect or Detect.",
+		shortDesc: "This also hits a target using Protect or Detect.",
+	},
+	windspin: {
+		name: "Wind Spin",
+		desc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+		shortDesc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+	},
+	westerlies: {
+		name: "Westerlies",
+		desc: "It raises the user's Speed stat.",
+		shortDesc: "It raises the user's Speed stat.",
+	},
+	divinethunder: {
+		name: "Divine Thunder",
+		desc: "90% may also leave the target paralyzed.",
+		shortDesc: "90% may also leave the target paralyzed.",
+	},
+	blackout: {
+		name: "Blackout",
+		desc: "It may also lower the target's accuracy.",
+		shortDesc: "It may also lower the target's accuracy.",
+	},
+	unfetteredsoul: {
+		name: "Unfettered Soul",
+		desc: "This attack does more damage if the user is not holding an item.",
+		shortDesc: "This attack does more damage if the user is not holding an item.",
+	},
+	balloonpop: {
+		name: "Balloon Pop",
+		desc: "It also damages the user by a fairly large amount, however.",
+		shortDesc: "It also damages the user by a fairly large amount, however.",
+	},
+	rubberbeam: {
+		name: "Rubber Beam",
+		desc: "It may also lower the target's Sp. Def stat.",
+		shortDesc: "It may also lower the target's Sp. Def stat.",
+	},
+	excalibur: {
+		name: "Excalibur",
+		desc: "Hi crit rate. User must recharge unless it KOs the target.",
+		shortDesc: "Hi crit rate. User must recharge unless it KOs the target.",
+	},
+	strikeair: {
+		name: "Strike Air",
+		desc: "Goes first, raises the user's speed, Hi crit rate.",
+		shortDesc: "Goes first, raises the user's speed, Hi crit rate.",
+	},
+	invisibleair: {
+		name: "Invisible Air",
+		desc: "Raises Attack 1 and Speed 2.",
+		shortDesc: "Raises Attack 1 and Speed 2.",
+	},
+	darknessdance: {
+		name: "Darkness Dance",
+		desc: "The user attack the foe for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user attack the foe for two to three turns. It then becomes confused, however.",
+	},
+	infinitybeam: {
+		name: "Infinity Beam",
+		desc: "Hits two to ???? times in a row.",
+		shortDesc: "Hits two to ???? times in a row.",
+	},
+	thousandarmstrike: {
+		name: "Thousand-Arm Strike",
+		desc: "Hits two to ???? times in a row.",
+		shortDesc: "Hits two to ???? times in a row.",
+	},
+	bellerophon: {
+		name: "Bellerophon",
+		desc: "The user summons a magical steed and charges at the target. Raises Speed.",
+		shortDesc: "The user summons a magical steed and charges at the target. Raises Speed.",
+	},
+	bloodandromeda: {
+		name: "Blood Andromeda",
+		desc: "The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user's HP is restored by half the damage taken by the target.",
+	},
+	pandemonium: {
+		name: "Pandemonium",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	lanceoflonginus: {
+		name: "Lance of Longinus",
+		desc: "Small chance to 1 hit KO.",
+		shortDesc: "Small chance to 1 hit KO.",
+	},
+	radiatedmist: {
+		name: "Radiated Mist",
+		desc: "The target cannot use items for 5 turns.",
+		shortDesc: "The target cannot use items for 5 turns.",
+	},
+	smellycloud: {
+		name: "Smelly Cloud",
+		desc: "The target cannot use items for 5 turns.",
+		shortDesc: "The target cannot use items for 5 turns.",
+	},
+	stinkburst: {
+		name: "Stink Burst",
+		desc: "The target cannot use items for 5 turns.",
+		shortDesc: "The target cannot use items for 5 turns.",
+	},
+	toxicwind: {
+		name: "Toxic Wind",
+		desc: "Has chance of Badly Poisoning.",
+		shortDesc: "Has chance of Badly Poisoning.",
+	},
+	quarantinevirus: {
+		name: "Quarantine Virus",
+		desc: "Traps everything around the user for 4 to 5 turns.",
+		shortDesc: "Traps everything around the user for 4 to 5 turns.",
+	},
+	cancervirus: {
+		name: "Cancer Virus",
+		desc: "The opponent cannot heal for 5 turns.",
+		shortDesc: "The opponent cannot heal for 5 turns.",
+	},
+	decaylimbs: {
+		name: "Decay Limbs",
+		desc: "The target cannot use items for 5 turns.",
+		shortDesc: "The target cannot use items for 5 turns.",
+	},
+	meltvirus: {
+		name: "Melt Virus",
+		desc: "This harshly reduces the target's Sp. Def stat.",
+		shortDesc: "This harshly reduces the target's Sp. Def stat.",
+	},
+	newvirus: {
+		name: "New Virus",
+		desc: "May also paralyze, burn, or freeze the target.",
+		shortDesc: "May also paralyze, burn, or freeze the target.",
+	},
+	poisonvirus: {
+		name: "Poison Virus",
+		desc: "Badly poisons the target.",
+		shortDesc: "Badly poisons the target.",
+	},
+	gigatoxin: {
+		name: "Giga Toxin",
+		desc: "Badly poisons the target.",
+		shortDesc: "Badly poisons the target.",
+	},
+	superfever: {
+		name: "Super Fever",
+		desc: "The target inflicted with a pain similar to a fever. It may also leave the target with a burn.",
+		shortDesc: "The target inflicted with a pain similar to a fever. It may also leave the target with a burn.",
+	},
+	extinguishflame: {
+		name: "Extinguish Flame",
+		desc: "This attack inflicts big damage on a burnt target. It also cures the target's burn, however.",
+		shortDesc: "This attack inflicts big damage on a burnt target. It also cures the target's burn, however.",
+	},
+	hexvirus: {
+		name: "Hex Virus",
+		desc: "Hits everything around the user, dealing massive damage to target affected by status problems.",
+		shortDesc: "Hits everything around the user, dealing massive damage to target affected by status problems.",
+	},
+	icethaw: {
+		name: "Ice Thaw",
+		desc: "This attack inflicts big damage on a frozen target. It also THAWS the target up, however.",
+		shortDesc: "This attack inflicts big damage on a frozen target. It also THAWS the target up, however.",
+	},
+	commoncold: {
+		name: "Common Cold",
+		desc: "The target is hit with a very common virus.",
+		shortDesc: "The target is hit with a very common virus.",
+	},
+	severecold: {
+		name: "Severe Cold",
+		desc: "Very high chance to freeze.",
+		shortDesc: "Very high chance to freeze.",
+	},
+	leprosy: {
+		name: "Leprosy",
+		desc: "26% to paralyze.",
+		shortDesc: "26% to paralyze.",
+	},
+	acceleprosy: {
+		name: "Acceleprosy",
+		desc: "45% to paralyze.",
+		shortDesc: "45% to paralyze.",
+	},
+	drowsyray: {
+		name: "Drowsy Ray",
+		desc: "30% chance to cause Sleep.",
+		shortDesc: "30% chance to cause Sleep.",
+	},
+	drowsyvirus: {
+		name: "Drowsy Virus",
+		desc: "20% chance to cause Sleep.",
+		shortDesc: "20% chance to cause Sleep.",
+	},
+	dreamconsume: {
+		name: "Dream Consume",
+		desc: "The user eats the dreams of a sleeping foe. It absorbs half the damage caused to heal the user's HP.",
+		shortDesc: "The user eats the dreams of a sleeping foe. It absorbs half the damage caused to heal the user's HP.",
+	},
+	sleepvirus: {
+		name: "Sleep Virus",
+		desc: "33% chance to cause Sleep.",
+		shortDesc: "33% chance to cause Sleep.",
+	},
+	risingflame: {
+		name: "Rising Flame",
+		desc: "Hitting a target raises the Attack stat.",
+		shortDesc: "Hitting a target raises the Attack stat.",
+	},
+	burningbranch: {
+		name: "Burning Branch",
+		desc: "30% to Burn.",
+		shortDesc: "30% to Burn.",
+	},
+	carpetscrape: {
+		name: "Carpet Scrape",
+		desc: "The user rubs fabric up against the target. It may also leave the target with paralysis.",
+		shortDesc: "The user rubs fabric up against the target. It may also leave the target with paralysis.",
+	},
+	carpetshock: {
+		name: "Carpet Shock",
+		desc: "The user rubs fabric up against the target. It may also leave the target with paralysis.",
+		shortDesc: "The user rubs fabric up against the target. It may also leave the target with paralysis.",
+	},
+	portalburst: {
+		name: "Portal Burst",
+		desc: "User disappears on first turn, then reappears and attacks on second turn. This move hits even if the target protects itself.",
+		shortDesc: "User disappears on first turn, then reappears and attacks on second turn. This move hits even if the target protects itself.",
+	},
+	dimensionweb: {
+		name: "Dimension Web",
+		desc: "Traps target for four to five turns.",
+		shortDesc: "Traps target for four to five turns.",
+	},
+	dangeroussting: {
+		name: "Dangerous Sting",
+		desc: "Small chance to 1 hit KO.",
+		shortDesc: "Small chance to 1 hit KO.",
+	},
+	restrictbeam: {
+		name: "Restrict Beam",
+		desc: "The target cannot use items for 5 turns.",
+		shortDesc: "The target cannot use items for 5 turns.",
+	},
+	shinehit: {
+		name: "Shine Hit",
+		desc: "Shiny tackle.",
+		shortDesc: "Shiny tackle.",
+	},
+	godhand: {
+		name: "God Hand",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	masterspark: {
+		name: "Master Spark",
+		desc: "Raise its SpAtk in the first turn, then fires at the foe the next turn.",
+		shortDesc: "Raise its SpAtk in the first turn, then fires at the foe the next turn.",
+	},
+	sanddive: {
+		name: "Sand Dive",
+		desc: "Diving on the first turn, the user rises and hits on the next turn. It can be used to dive in the ocean.",
+		shortDesc: "Diving on the first turn, the user rises and hits on the next turn. It can be used to dive in the ocean.",
+	},
+	elderroar: {
+		name: "Elder Roar",
+		desc: "May raises SpAtk and SpDef",
+		shortDesc: "May raises SpAtk and SpDef",
+	},
+	metalneedle: {
+		name: "Metal Needle",
+		desc: "It may also raise the user's Sp. Atk stat.",
+		shortDesc: "It may also raise the user's Sp. Atk stat.",
+	},
+	guidedshot: {
+		name: "Guided Shot",
+		desc: "It may make the target flinch.",
+		shortDesc: "It may make the target flinch.",
+	},
+	revolvingillusion: {
+		name: "RevolvingIllusion",
+		desc: "The user turns the foe's power against it. It does more damage the higher the target's Attack stat.",
+		shortDesc: "The user turns the foe's power against it. It does more damage the higher the target's Attack stat.",
+	},
+	densebarrage: {
+		name: "Dense Barrage",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	fantasyseal: {
+		name: "Fantasy Seal",
+		desc: "x2 damage against Fairy, Chaos, Ghost, Dragon, Zombie",
+		shortDesc: "x2 damage against Fairy, Chaos, Ghost, Dragon, Zombie",
+	},
+	invokedeity: {
+		name: "Invoke Deity",
+		desc: "Raises a random stat 3.",
+		shortDesc: "Raises a random stat 3.",
+	},
+	fakejewel: {
+		name: "Fake Jewel",
+		desc: "Steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+		shortDesc: "Steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+	},
+	badmoon: {
+		name: "Bad Moon",
+		desc: "The user lets loose a pitch-black shock wave at its target. It may also lower the target's accuracy.",
+		shortDesc: "The user lets loose a pitch-black shock wave at its target. It may also lower the target's accuracy.",
+	},
+	disarmspell: {
+		name: "Disarm Spell",
+		desc: "The user slaps down the target's held item, preventing that item from being used in the battle.",
+		shortDesc: "The user slaps down the target's held item, preventing that item from being used in the battle.",
+	},
+	overray: {
+		name: "Over Ray",
+		desc: "It is sure to strike first.",
+		shortDesc: "It is sure to strike first.",
+	},
+	stardustreverie: {
+		name: "Stardust Reverie",
+		desc: "50% lower target's Accuracy",
+		shortDesc: "50% lower target's Accuracy",
+	},
+	broomcharge: {
+		name: "Broom Charge",
+		desc: "Building up more power, it raises the user's Speed stat.",
+		shortDesc: "Building up more power, it raises the user's Speed stat.",
+	},
+	gateofbabylon: {
+		name: "Gate of Babylon",
+		desc: "The target is hit 2-??? times.",
+		shortDesc: "The target is hit 2-??? times.",
+	},
+	rulebreaker: {
+		name: "Rule Breaker",
+		desc: "Completely lower's the target's SpAtk and SpDef stats.",
+		shortDesc: "Completely lower's the target's SpAtk and SpDef stats.",
+	},
+	rainoflight: {
+		name: "Rain of Light",
+		desc: "Lowers the target's Sp. Def stat.",
+		shortDesc: "Lowers the target's Sp. Def stat.",
+	},
+	gaebolg: {
+		name: "Gae Bolg",
+		desc: "Hi crit rate. This also hits a target using Protect or Detect.",
+		shortDesc: "Hi crit rate. This also hits a target using Protect or Detect.",
+	},
+	theripper: {
+		name: "The Ripper",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	rapidthrow: {
+		name: "Rapid Throw",
+		desc: "Goes first. Hits two to five times in a row.",
+		shortDesc: "Goes first. Hits two to five times in a row.",
+	},
+	hallucination: {
+		name: "Hallucination",
+		desc: "May confuse the target.",
+		shortDesc: "May confuse the target.",
+	},
+	timecut: {
+		name: "Time Cut",
+		desc: "May lower the target's speed. Critical hits land more easily.",
+		shortDesc: "May lower the target's speed. Critical hits land more easily.",
+	},
+	samuraiedge: {
+		name: "Samurai Edge",
+		desc: "Hi crit rate. It may also raise the user's Attack.",
+		shortDesc: "Hi crit rate. It may also raise the user's Attack.",
+	},
+	lastslash: {
+		name: "Last Slash",
+		desc: "Decreases the user's Evasion 2 stages.",
+		shortDesc: "Decreases the user's Evasion 2 stages.",
+	},
+	reversalsword: {
+		name: "Reversal Sword",
+		desc: "Hi crit rate. This attack will not miss.",
+		shortDesc: "Hi crit rate. This attack will not miss.",
+	},
+	soulhound: {
+		name: "Soul Hound",
+		desc: "Deals double damage to a switching out target.",
+		shortDesc: "Deals double damage to a switching out target.",
+	},
+	focussword: {
+		name: "Focus Sword",
+		desc: "It will fail if the user is hit before it is used.",
+		shortDesc: "It will fail if the user is hit before it is used.",
+	},
+	innerpower: {
+		name: "Inner Power",
+		desc: "The user maximizes its Attack stat in exchange for HP equal to half its max HP.",
+		shortDesc: "The user maximizes its Attack stat in exchange for HP equal to half its max HP.",
+	},
+	specterwaltz: {
+		name: "Specter Waltz",
+		desc: "May confuse the target.",
+		shortDesc: "May confuse the target.",
+	},
+	armorburst: {
+		name: "Armor Burst",
+		desc: "The user breaks off its armor, losing its Steel-type. Cannot be used if not Steel.",
+		shortDesc: "The user breaks off its armor, losing its Steel-type. Cannot be used if not Steel.",
+	},
+	hiv: {
+		name: "HIV",
+		desc: "Does double damage if target is Infatuated.",
+		shortDesc: "Does double damage if target is Infatuated.",
+	},
+	heartbreak: {
+		name: "Heartbreak",
+		desc: "Does double damage if target is Infatuated.",
+		shortDesc: "Does double damage if target is Infatuated.",
+	},
+	horoscope: {
+		name: "Horoscope",
+		desc: "Uses a random move based on a Zodiac sign.",
+		shortDesc: "Uses a random move based on a Zodiac sign.",
+	},
+	goodluck: {
+		name: "Good Luck",
+		desc: "Increases a random stat.",
+		shortDesc: "Increases a random stat.",
+	},
+	icegatling: {
+		name: "Ice Gatling",
+		desc: "Goes first. It strikes two to five times in a row.",
+		shortDesc: "Goes first. It strikes two to five times in a row.",
+	},
+	lazymist: {
+		name: "Lazy Mist",
+		desc: "May lower the target's Attack.",
+		shortDesc: "May lower the target's Attack.",
+	},
+	honoikazuchi: {
+		name: "Honoikazuchi",
+		desc: "A wicked thunderbolt is dropped on the foe to inflict damage. It may also leave the target paralyzed.",
+		shortDesc: "A wicked thunderbolt is dropped on the foe to inflict damage. It may also leave the target paralyzed.",
+	},
+	yatanokagami: {
+		name: "Yata No Kagami",
+		desc: "If the user moves after the target, this attack's power will be doubled.",
+		shortDesc: "If the user moves after the target, this attack's power will be doubled.",
+	},
+	amaterasu: {
+		name: "Amaterasu",
+		desc: "The user sends out a ray of scorching hot heat which causes the sunlight to turn harsh.",
+		shortDesc: "The user sends out a ray of scorching hot heat which causes the sunlight to turn harsh.",
+	},
+	fujinwind: {
+		name: "Fujin Wind",
+		desc: "A strong gale strikes the foe. May cause the foe to be switched out.",
+		shortDesc: "A strong gale strikes the foe. May cause the foe to be switched out.",
+	},
+	aresstrike: {
+		name: "Ares Strike",
+		desc: "It may also raise the user's Attack.",
+		shortDesc: "It may also raise the user's Attack.",
+	},
+	hachimanstrike: {
+		name: "Hachiman Strike",
+		desc: "It may also raise the user's Attack.",
+		shortDesc: "It may also raise the user's Attack.",
+	},
+	omoikane: {
+		name: "Omoikane",
+		desc: "The user fires a concentrated bundle of electricity. It may also raise the user's Sp. Atk stat.",
+		shortDesc: "The user fires a concentrated bundle of electricity. It may also raise the user's Sp. Atk stat.",
+	},
+	raidenstrike: {
+		name: "Raiden Strike",
+		desc: "A wicked thunderbolt is dropped on the foe to inflict damage. It may also leave the target paralyzed.",
+		shortDesc: "A wicked thunderbolt is dropped on the foe to inflict damage. It may also leave the target paralyzed.",
+	},
+	daruma: {
+		name: "Daruma",
+		desc: "Raises Attack and Speed.",
+		shortDesc: "Raises Attack and Speed.",
+	},
+	divinemercy: {
+		name: "Divine Mercy",
+		desc: "The target is left with at least 1 HP.",
+		shortDesc: "The target is left with at least 1 HP.",
+	},
+	perdition: {
+		name: "Perdition",
+		desc: "The user loses its Divine-type. Cannot be used if not Divine-type.",
+		shortDesc: "The user loses its Divine-type. Cannot be used if not Divine-type.",
+	},
+	deathroll: {
+		name: "Deathroll",
+		desc: "User traps target for four to five turns.",
+		shortDesc: "User traps target for four to five turns.",
+	},
+	inkshot: {
+		name: "Ink Shot",
+		desc: "The user attacks by spraying ink in the foe's face or eyes. It may also lower the target's accuracy.",
+		shortDesc: "The user attacks by spraying ink in the foe's face or eyes. It may also lower the target's accuracy.",
+	},
+	inkshit: {
+		name: "Ink Shit",
+		desc: "The user attacks by spraying ink in the foe's face or eyes. It may also lower the target's accuracy.",
+		shortDesc: "The user attacks by spraying ink in the foe's face or eyes. It may also lower the target's accuracy.",
+	},
+	brushstroke: {
+		name: "Brush Stroke",
+		desc: "The user streaks the foe using it's tail like a brush. May Paint the target.",
+		shortDesc: "The user streaks the foe using it's tail like a brush. May Paint the target.",
+	},
+	masamuneburado: {
+		name: "Masamune Burado",
+		desc: "Regendary brade forded over thousand timeseru. Hi crit ratio.",
+		shortDesc: "Regendary brade forded over thousand timeseru. Hi crit ratio.",
+	},
+	gemscatter: {
+		name: "Gem Scatter",
+		desc: "Money is earned after battle.",
+		shortDesc: "Money is earned after battle.",
+	},
+	fellblood: {
+		name: "Fell Blood",
+		desc: "When the user knocks out a target with this move, the user's Attack stat rises sharply. Raises Speed if user is Bleeding.",
+		shortDesc: "When the user knocks out a target with this move, the user's Attack stat rises sharply. Raises Speed if user is Bleeding.",
+	},
+	gash: {
+		name: "Gash",
+		desc: "Makes the target bleed.",
+		shortDesc: "Makes the target bleed.",
+	},
+	seasonalflowers: {
+		name: "Seasonal Flowers",
+		desc: "may also lower the target's Sp. Atk stat.",
+		shortDesc: "may also lower the target's Sp. Atk stat.",
+	},
+	flashvolley: {
+		name: "Flash Volley",
+		desc: "The user shoots the target two to five times in a row.",
+		shortDesc: "The user shoots the target two to five times in a row.",
+	},
+	iflamethrower: {
+		name: "iFlamethrower",
+		desc: "The target is scorched with an intense blast of fire. It may also leave the target with a burn.",
+		shortDesc: "The target is scorched with an intense blast of fire. It may also leave the target with a burn.",
+	},
+	ichargeblast: {
+		name: "iCharge Blast",
+		desc: "May raises SpAtk and SpDef",
+		shortDesc: "May raises SpAtk and SpDef",
+	},
+	stopit: {
+		name: "Stop It",
+		desc: "The target cannot use items for 5 turns.",
+		shortDesc: "The target cannot use items for 5 turns.",
+	},
+	tricyber: {
+		name: "Tri Cyber",
+		desc: "The user strikes with a simultaneous three-beam attack. May also paralyze, burn, or freeze the target.",
+		shortDesc: "The user strikes with a simultaneous three-beam attack. May also paralyze, burn, or freeze the target.",
+	},
+	randomint: {
+		name: "Random Int",
+		desc: "The target is hit 2-5 times.",
+		shortDesc: "The target is hit 2-5 times.",
+	},
+	heartstop: {
+		name: "Heart Stop",
+		desc: "Rips out the target's heart. Chance to 1 hit KO.",
+		shortDesc: "Rips out the target's heart. Chance to 1 hit KO.",
+	},
+	heartthrob: {
+		name: "Heart Throb",
+		desc: "It may also make the target flinch.",
+		shortDesc: "It may also make the target flinch.",
+	},
+	greaseshot: {
+		name: "Grease Shot",
+		desc: "It also reduces the target's Speed.",
+		shortDesc: "It also reduces the target's Speed.",
+	},
+	greasepump: {
+		name: "Grease Pump",
+		desc: "The target is blasted by a huge volume of grease launched under great pressure.",
+		shortDesc: "The target is blasted by a huge volume of grease launched under great pressure.",
+	},
+	bloodseal: {
+		name: "Blood Seal",
+		desc: "Traps foes in a violent swirling whirlpool for four to five turns.",
+		shortDesc: "Traps foes in a violent swirling whirlpool for four to five turns.",
+	},
+	bloodoath: {
+		name: "Blood Oath",
+		desc: "Gets revenge for a fainted ally. If an ally fainted in the last turn, this attack's damage increases.",
+		shortDesc: "Gets revenge for a fainted ally. If an ally fainted in the last turn, this attack's damage increases.",
+	},
+	adampunch: {
+		name: "Adam Punch",
+		desc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+	},
+	elementconjure: {
+		name: "Element Conjure",
+		desc: "Uses a random move pertaining to the five eastern elements.",
+		shortDesc: "Uses a random move pertaining to the five eastern elements.",
+	},
+	scatterbeam: {
+		name: "Scatter Beam",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	beamdance: {
+		name: "Beam Dance",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	paranoia: {
+		name: "Paranoia",
+		desc: "High chance to confuse.",
+		shortDesc: "High chance to confuse.",
+	},
+	aquaspear: {
+		name: "Aqua Spear",
+		desc: "May lower the target's speed.",
+		shortDesc: "May lower the target's speed.",
+	},
+	dragonslayer: {
+		name: "Dragon Slayer",
+		desc: "Double damage against Dragon types. Critical hits land more easily.",
+		shortDesc: "Double damage against Dragon types. Critical hits land more easily.",
+	},
+	pillowfight: {
+		name: "Pillow Fight",
+		desc: "It may also make sleeep.",
+		shortDesc: "It may also make sleeep.",
+	},
+	paintsplats: {
+		name: "Paint Splats",
+		desc: "Paint is hurled at the target to strike two to five times in a row.",
+		shortDesc: "Paint is hurled at the target to strike two to five times in a row.",
+	},
+	crosscoat: {
+		name: "Crosscoat",
+		desc: "The target is hit twice in a row.",
+		shortDesc: "The target is hit twice in a row.",
+	},
+	cubism: {
+		name: "Cubism",
+		desc: "High chance to confuse.",
+		shortDesc: "High chance to confuse.",
+	},
+	foodpoison: {
+		name: "Food Poison",
+		desc: "High chance to poison.",
+		shortDesc: "High chance to poison.",
+	},
+	coinhurl: {
+		name: "Coin Hurl",
+		desc: "Hi crit rate. Money is earned after battle.",
+		shortDesc: "Hi crit rate. Money is earned after battle.",
+	},
+	megaphone: {
+		name: "Megaphone",
+		desc: "70% to raise SpAtk.",
+		shortDesc: "70% to raise SpAtk.",
+	},
+	crosscutter: {
+		name: "Cross Cutter",
+		desc: "The user delivers a double chop with its forearms crossed. Critical hits land more easily.",
+		shortDesc: "The user delivers a double chop with its forearms crossed. Critical hits land more easily.",
+	},
+	windride: {
+		name: "Wind Ride",
+		desc: "High crit rate.",
+		shortDesc: "High crit rate.",
+	},
+	strongarm: {
+		name: "Strong Arm",
+		desc: "Chance to raise attack.",
+		shortDesc: "Chance to raise attack.",
+	},
+	brightmoss: {
+		name: "Bright Moss",
+		desc: "Sharply raise its accuracy stat.",
+		shortDesc: "Sharply raise its accuracy stat.",
+	},
+	memesion: {
+		name: "Memesion",
+		desc: "The target is hit by a weak telekinetic force. It may also leave the target confused.",
+		shortDesc: "The target is hit by a weak telekinetic force. It may also leave the target confused.",
+	},
+	mkultra: {
+		name: "MKULTRA",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	feedfrenzy: {
+		name: "Feed Frenzy",
+		desc: "The user maximizes its Attack stat in exchange for HP equal to half its max HP.",
+		shortDesc: "The user maximizes its Attack stat in exchange for HP equal to half its max HP.",
+	},
+	bellslash: {
+		name: "Bell Slash",
+		desc: "Hi crit rate. The target cannot use items for 5 turns.",
+		shortDesc: "Hi crit rate. The target cannot use items for 5 turns.",
+	},
+	generalwinter: {
+		name: "General Winter",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	purplehaze: {
+		name: "Purple Haze",
+		desc: "Badly poisons the target.",
+		shortDesc: "Badly poisons the target.",
+	},
+	viruscrush: {
+		name: "Virus Crush",
+		desc: "This relentless attack does massive damage to a target affected by status problems.",
+		shortDesc: "This relentless attack does massive damage to a target affected by status problems.",
+	},
+	martianflames: {
+		name: "Martian Flames",
+		desc: "The target cannot use items for 5 turns.",
+		shortDesc: "The target cannot use items for 5 turns.",
+	},
+	eyegouge: {
+		name: "Eye Gouge",
+		desc: "Completely lower's the target's Accuracy.",
+		shortDesc: "Completely lower's the target's Accuracy.",
+	},
+	pressurepoint: {
+		name: "Pressure Point",
+		desc: "Very high chance for the target to faint next turn.",
+		shortDesc: "Very high chance for the target to faint next turn.",
+	},
+	vacuumrupture: {
+		name: "Vacuum Rupture",
+		desc: "Goes first. The user must rest on the next turn to regain its energy.",
+		shortDesc: "Goes first. The user must rest on the next turn to regain its energy.",
+	},
+	earthenfeast: {
+		name: "Earthen Feast",
+		desc: "The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user's HP is restored by half the damage taken by the target.",
+	},
+	spiralstrike: {
+		name: "Spiral Strike",
+		desc: "May also raise the user's Sp. Atk stat.",
+		shortDesc: "May also raise the user's Sp. Atk stat.",
+	},
+	shootingarts: {
+		name: "Shooting Arts",
+		desc: "Hits two to five times in a row.",
+		shortDesc: "Hits two to five times in a row.",
+	},
+	recklessdive: {
+		name: "Reckless Dive",
+		desc: "If it misses, the user is hurt instead.",
+		shortDesc: "If it misses, the user is hurt instead.",
+	},
+	boo: {
+		name: "Boo!",
+		desc: "Causes the foe to be switched out.",
+		shortDesc: "Causes the foe to be switched out.",
+	},
+	deadsilence: {
+		name: "Dead Silence",
+		desc: "The power of Sound-type moves is greatly decreased for 5 turns. Sound types take damage.",
+		shortDesc: "The power of Sound-type moves is greatly decreased for 5 turns. Sound types take damage.",
+	},
+	amplifier: {
+		name: "Amplifier",
+		desc: "The power of Sound-type moves is increased for 5 turns.",
+		shortDesc: "The power of Sound-type moves is increased for 5 turns.",
+	},
+	heatup: {
+		name: "Heat Up",
+		desc: "Heals Fire and Magma types every turn. Damages Ice types.",
+		shortDesc: "Heals Fire and Magma types every turn. Damages Ice types.",
+	},
+	stonedrills: {
+		name: "Stone Drills",
+		desc: "This attack always results in a critical hit.",
+		shortDesc: "This attack always results in a critical hit.",
+	},
+	miraclemallet: {
+		name: "Miracle Mallet",
+		desc: "Hi crit rate. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "Hi crit rate. The user's HP is restored by half the damage taken by the target.",
+	},
+	feast: {
+		name: "Feast",
+		desc: "Heals all Pokemon every turn. Heals Food-types more. Power of Food moves increased.",
+		shortDesc: "Heals all Pokemon every turn. Heals Food-types more. Power of Food moves increased.",
+	},
+	dragonruins: {
+		name: "Dragon Ruins",
+		desc: "Increases power of Dragon-type moves, lowers power of Fairy moves for 5 turns.",
+		shortDesc: "Increases power of Dragon-type moves, lowers power of Fairy moves for 5 turns.",
+	},
+	tempest: {
+		name: "Tempest",
+		desc: "Increases power of Wind-type moves, damages Flying-types.",
+		shortDesc: "Increases power of Wind-type moves, damages Flying-types.",
+	},
+	steadywind: {
+		name: "Steady Wind",
+		desc: "Increases power of Flying-type moves, lowers power of Fire and Wind type moves for 5 turns.",
+		shortDesc: "Increases power of Flying-type moves, lowers power of Fire and Wind type moves for 5 turns.",
+	},
+	airbubble: {
+		name: "Air Bubble",
+		desc: "A spray of bubbles is forcefully ejected at the target. It may also lower its Speed stat.",
+		shortDesc: "A spray of bubbles is forcefully ejected at the target. It may also lower its Speed stat.",
+	},
+	amberwave: {
+		name: "Amber Wave",
+		desc: "Traps foes in a violent swirling whirlpool for four to five turns.",
+		shortDesc: "Traps foes in a violent swirling whirlpool for four to five turns.",
+	},
+	amorouspulse: {
+		name: "Amorous Pulse",
+		desc: "Does double damage if target is Infatuated.",
+		shortDesc: "Does double damage if target is Infatuated.",
+	},
+	ancientstare: {
+		name: "Ancient Stare",
+		desc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+		shortDesc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+	},
+	anticoagulant: {
+		name: "Anticoagulant",
+		desc: "Drastically lower's the target's SpDef. Stops Bleeding.",
+		shortDesc: "Drastically lower's the target's SpDef. Stops Bleeding.",
+	},
+	aquaslap: {
+		name: "Aqua Slap",
+		desc: "It may make the target flinch.",
+		shortDesc: "It may make the target flinch.",
+	},
+	atomicpunch: {
+		name: "Atomic Punch",
+		desc: "It may also leave the target with paralysis.",
+		shortDesc: "It may also leave the target with paralysis.",
+	},
+	bambooshoot: {
+		name: "Bamboo Shoot",
+		desc: "It is sure to strike first.",
+		shortDesc: "It is sure to strike first.",
+	},
+	bananarang: {
+		name: "Bananarang",
+		desc: "The user throws the banana it holds. The banana loops to hit the target twice, coming and going.",
+		shortDesc: "The user throws the banana it holds. The banana loops to hit the target twice, coming and going.",
+	},
+	blackhex: {
+		name: "Black Hex",
+		desc: "The user also takes terrible damage.",
+		shortDesc: "The user also takes terrible damage.",
+	},
+	boltin: {
+		name: "Bolt In",
+		desc: "Building up more power, it raises the user's Speed stat.",
+		shortDesc: "Building up more power, it raises the user's Speed stat.",
+	},
+	breakdown: {
+		name: "Breakdown",
+		desc: "It also cuts the user's Defense and Sp. Def.",
+		shortDesc: "It also cuts the user's Defense and Sp. Def.",
+	},
+	chirp: {
+		name: "Chirp",
+		desc: "Lowers the target's Sp. Atk.",
+		shortDesc: "Lowers the target's Sp. Atk.",
+	},
+	cloneattack: {
+		name: "Clone Attack",
+		desc: "Hits two to five times.",
+		shortDesc: "Hits two to five times.",
+	},
+	cloudcrash: {
+		name: "Cloud Crash",
+		desc: "The user crashes with cloud power into target.",
+		shortDesc: "The user crashes with cloud power into target.",
+	},
+	coalthrow: {
+		name: "Coal Throw",
+		desc: "Hits 2-5 times. Goes first.",
+		shortDesc: "Hits 2-5 times. Goes first.",
+	},
+	coffeedrink: {
+		name: "Coffee Drink",
+		desc: "Restores health and gains the ability Insomnia.",
+		shortDesc: "Restores health and gains the ability Insomnia.",
+	},
+	snowfort: {
+		name: "Snow Fort",
+		desc: "Raises the user's Defense and Sp. Def stats. More in Hail.",
+		shortDesc: "Raises the user's Defense and Sp. Def stats. More in Hail.",
+	},
+	cuddle: {
+		name: "Cuddle",
+		desc: "Lowers the target's attack.",
+		shortDesc: "Lowers the target's attack.",
+	},
+	cutebump: {
+		name: "Cute Bump",
+		desc: "It may make the target flinch.",
+		shortDesc: "It may make the target flinch.",
+	},
+	depthcharge: {
+		name: "Depth Charge",
+		desc: "The user disappears, then strikes the foe on the second turn. It hits even if the foe protects itself.",
+		shortDesc: "The user disappears, then strikes the foe on the second turn. It hits even if the foe protects itself.",
+	},
+	duskslayer: {
+		name: "Dusk Slayer",
+		desc: "When the user knocks out a target with this move, the user's Attack stat rises sharply.",
+		shortDesc: "When the user knocks out a target with this move, the user's Attack stat rises sharply.",
+	},
+	dustblizzard: {
+		name: "Dust Blizzard",
+		desc: "The attack's recoil harshly reduces the user's Sp. Atk stat.",
+		shortDesc: "The attack's recoil harshly reduces the user's Sp. Atk stat.",
+	},
+	electroncrush: {
+		name: "Electron Crush",
+		desc: "The user attacks the target with great power. However, it also lowers the user's Attack and Defense.",
+		shortDesc: "The user attacks the target with great power. However, it also lowers the user's Attack and Defense.",
+	},
+	electrocute: {
+		name: "Electrocute",
+		desc: "A flare of electricity is loosed to strike. It may also cause paralysis.",
+		shortDesc: "A flare of electricity is loosed to strike. It may also cause paralysis.",
+	},
+	epilogue: {
+		name: "Epilogue",
+		desc: "If the target's HP is down to about half, this attack will hit with double the power.",
+		shortDesc: "If the target's HP is down to about half, this attack will hit with double the power.",
+	},
+	expunge: {
+		name: "Expunge",
+		desc: "Double damage against Nuclear types.",
+		shortDesc: "Double damage against Nuclear types.",
+	},
+	fallout: {
+		name: "Fallout",
+		desc: "Damages pokemon that aren't Steel or Nuclear type for 5 turns.",
+		shortDesc: "Damages pokemon that aren't Steel or Nuclear type for 5 turns.",
+	},
+	featherrush: {
+		name: "Feather Rush",
+		desc: "The user attacks the target with great power. However, it also lowers the user's Attack and Defense.",
+		shortDesc: "The user attacks the target with great power. However, it also lowers the user's Attack and Defense.",
+	},
+	featherslash: {
+		name: "Feather Slash",
+		desc: "Hi crit rate.",
+		shortDesc: "Hi crit rate.",
+	},
+	festiveshot: {
+		name: "Festive Shot",
+		desc: "High chance to lower target's accuracy.",
+		shortDesc: "High chance to lower target's accuracy.",
+	},
+	finalswipe: {
+		name: "Final Swipe",
+		desc: "Hi crit rate. If the target's HP is down to about half, this attack will hit with double the power.",
+		shortDesc: "Hi crit rate. If the target's HP is down to about half, this attack will hit with double the power.",
+	},
+	glassstorm: {
+		name: "Glass Storm",
+		desc: "Using ancient energy, the user summons a plethora of jagged rocks that extend from beneath the foe indefinetly. This attack does physical damage.",
+		shortDesc: "Using ancient energy, the user summons a plethora of jagged rocks that extend from beneath the foe indefinetly. This attack does physical damage.",
+	},
+	glowsignal: {
+		name: "Glow Signal",
+		desc: "It may also induce sleep.",
+		shortDesc: "It may also induce sleep.",
+	},
+	harpoonshot: {
+		name: "Harpoon Shot",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	heartfeltpulse: {
+		name: "Heartfelt Pulse",
+		desc: "A full-power attack that grows more powerful the more the user likes its Trainer.",
+		shortDesc: "A full-power attack that grows more powerful the more the user likes its Trainer.",
+	},
+	heatsiphon: {
+		name: "Heat Siphon",
+		desc: "A heat-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A heat-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	hookdown: {
+		name: "Hook Down",
+		desc: "A flying Pokemon will fall to the ground when hit.",
+		shortDesc: "A flying Pokemon will fall to the ground when hit.",
+	},
+	infernalblade: {
+		name: "Infernal Blade",
+		desc: "Double damage against Fairy types.",
+		shortDesc: "Double damage against Fairy types.",
+	},
+	gatheredstars: {
+		name: "Gathered Stars",
+		desc: "Chance to raise the user's attack.",
+		shortDesc: "Chance to raise the user's attack.",
+	},
+	diffusionlaser: {
+		name: "Diffusion Laser",
+		desc: "The user attacks with an odd, unseeable power. It may also make the target flinch.",
+		shortDesc: "The user attacks with an odd, unseeable power. It may also make the target flinch.",
+	},
+	invisibleheart: {
+		name: "Invisible Heart",
+		desc: "The attack lands without fail.",
+		shortDesc: "The attack lands without fail.",
+	},
+	fairyhex: {
+		name: "Fairy Hex",
+		desc: "This relentless attack does massive damage to a target affected by status problems.",
+		shortDesc: "This relentless attack does massive damage to a target affected by status problems.",
+	},
+	purgatoryflicker: {
+		name: "Purgatory Flicker",
+		desc: "The user also takes damage and may burn the target.",
+		shortDesc: "The user also takes damage and may burn the target.",
+	},
+	impulseblast: {
+		name: "Impulse Blast",
+		desc: "The target is hit by a strong telekinetic force. It may also reduce the target's Sp. Def stat.",
+		shortDesc: "The target is hit by a strong telekinetic force. It may also reduce the target's Sp. Def stat.",
+	},
+	angelladder: {
+		name: "Angel Ladder",
+		desc: "May lower target's accuracy.",
+		shortDesc: "May lower target's accuracy.",
+	},
+	racingearth: {
+		name: "Racing Earth",
+		desc: "The user cloaks itself with flame and attacks. Building up more power, it raises the user's Speed stat.",
+		shortDesc: "The user cloaks itself with flame and attacks. Building up more power, it raises the user's Speed stat.",
+	},
+	divinequake: {
+		name: "Divine Quake",
+		desc: "The user sets off an earthquake that strikes every Pokemon around it.",
+		shortDesc: "The user sets off an earthquake that strikes every Pokemon around it.",
+	},
+	wizardfield: {
+		name: "Wizard Field",
+		desc: "Merlin's signature move.",
+		shortDesc: "Merlin's signature move.",
+	},
+	tropicalwave: {
+		name: "Tropical Wave",
+		desc: "Does double damage in the sun.",
+		shortDesc: "Does double damage in the sun.",
+	},
+	memeticfang: {
+		name: "Memetic Fang",
+		desc: "The user crunches up the target with sharp fangs. It may also lower the target's Defense stat.",
+		shortDesc: "The user crunches up the target with sharp fangs. It may also lower the target's Defense stat.",
+	},
+	kleenexray: {
+		name: "Kleenex Ray",
+		desc: "High chance to poison.",
+		shortDesc: "High chance to poison.",
+	},
+	kleenexbeam: {
+		name: "Kleenex Beam",
+		desc: "High chance to badly poison the target.",
+		shortDesc: "High chance to badly poison the target.",
+	},
+	finalsolution: {
+		name: "Final Solution",
+		desc: "Very high chance the target faints next turn.",
+		shortDesc: "Very high chance the target faints next turn.",
+	},
+	superglitch: {
+		name: "Super Glitch",
+		desc: "A super glitch.",
+		shortDesc: "A super glitch.",
+	},
+	frozeninferno: {
+		name: "Frozen Inferno",
+		desc: "Freezes the target.",
+		shortDesc: "Freezes the target.",
+	},
+	soulburner: {
+		name: "Soul Burner",
+		desc: "The target is scorched with an intense blast of fire. It may also leave the target with a burn.",
+		shortDesc: "The target is scorched with an intense blast of fire. It may also leave the target with a burn.",
+	},
+	freezingslash: {
+		name: "Freezing Slash",
+		desc: "High crit rate. High freeze rate.",
+		shortDesc: "High crit rate. High freeze rate.",
+	},
+	pitchblackray: {
+		name: "Pitch Black Ray",
+		desc: "Lower's the target's accuracy.",
+		shortDesc: "Lower's the target's accuracy.",
+	},
+	fieryswipes: {
+		name: "Fiery Swipes",
+		desc: "The target is raked with sharp claws or scythes for two to five times in quick succession.",
+		shortDesc: "The target is raked with sharp claws or scythes for two to five times in quick succession.",
+	},
+	bonesmash: {
+		name: "Bone Smash",
+		desc: "Hits two to five times in quick succession.",
+		shortDesc: "Hits two to five times in quick succession.",
+	},
+	shatterbeam: {
+		name: "Shatter Beam",
+		desc: "Damages the user.",
+		shortDesc: "Damages the user.",
+	},
+	speedyglass: {
+		name: "Speedy Glass",
+		desc: "The user whirls its fists to send a wave of pure vacuum at the target. This move always goes first.",
+		shortDesc: "The user whirls its fists to send a wave of pure vacuum at the target. This move always goes first.",
+	},
+	suckercharge: {
+		name: "Sucker Charge",
+		desc: "Goes first, it raises the user's Speed stat.",
+		shortDesc: "Goes first, it raises the user's Speed stat.",
+	},
+	suckerjab: {
+		name: "Sucker Jab",
+		desc: "Goes first, may raise the user's Speed stat.",
+		shortDesc: "Goes first, may raise the user's Speed stat.",
+	},
+	wooddrill: {
+		name: "Wood Drill",
+		desc: "Hi crit rate. It can also break any barrier such as Light Screen and Reflect.",
+		shortDesc: "Hi crit rate. It can also break any barrier such as Light Screen and Reflect.",
+	},
+	extinguishsteam: {
+		name: "Extinguish Steam",
+		desc: "This attack inflicts big damage on a burnt target. It also cures the target's burn, however.",
+		shortDesc: "This attack inflicts big damage on a burnt target. It also cures the target's burn, however.",
+	},
+	extinguisher: {
+		name: "Extinguisher",
+		desc: "This attack inflicts big damage on a burnt target. It also cures the target's burn, however.",
+		shortDesc: "This attack inflicts big damage on a burnt target. It also cures the target's burn, however.",
+	},
+	electrodrill: {
+		name: "Electro Drill",
+		desc: "The user crashes into its target while rotating its body like a drill. Critical hits land more easily.",
+		shortDesc: "The user crashes into its target while rotating its body like a drill. Critical hits land more easily.",
+	},
+	magmatackle: {
+		name: "Magma Tackle",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	lavablitz: {
+		name: "Lava Blitz",
+		desc: "The user cloaks itself in LAVA and charges at the foe. The user also takes damage and may burn the target.",
+		shortDesc: "The user cloaks itself in LAVA and charges at the foe. The user also takes damage and may burn the target.",
+	},
+	zombiecharge: {
+		name: "Zombie Charge",
+		desc: "Building up more power, it raises the user's Speed stat.",
+		shortDesc: "Building up more power, it raises the user's Speed stat.",
+	},
+	zombieram: {
+		name: "Zombie Ram",
+		desc: "Goes first. It also damages the user a little.",
+		shortDesc: "Goes first. It also damages the user a little.",
+	},
+	zombieacid: {
+		name: "Zombie Acid",
+		desc: "The user spits fluid that works to melt the target. This harshly reduces the target's Sp. Def stat.",
+		shortDesc: "The user spits fluid that works to melt the target. This harshly reduces the target's Sp. Def stat.",
+	},
+	zombiespit: {
+		name: "Zombie Spit",
+		desc: "It may also leave the target badly poisoned.",
+		shortDesc: "It may also leave the target badly poisoned.",
+	},
+	undeadspit: {
+		name: "Undead Spit",
+		desc: "It may also leave the target badly poisoned.",
+		shortDesc: "It may also leave the target badly poisoned.",
+	},
+	zombiebind: {
+		name: "Zombie Bind",
+		desc: "Things such as long bodies or tentacles are used to bind and squeeze the foe for four to five turns.",
+		shortDesc: "Things such as long bodies or tentacles are used to bind and squeeze the foe for four to five turns.",
+	},
+	zombind: {
+		name: "Zombind",
+		desc: "Things such as long bodies or tentacles are used to bind and squeeze the foe for four to five turns.",
+		shortDesc: "Things such as long bodies or tentacles are used to bind and squeeze the foe for four to five turns.",
+	},
+	brutalhold: {
+		name: "Brutal Hold",
+		desc: "Things such as long bodies or tentacles are used to bind and squeeze the foe for four to five turns.",
+		shortDesc: "Things such as long bodies or tentacles are used to bind and squeeze the foe for four to five turns.",
+	},
+	abyssdive: {
+		name: "Abyss Dive",
+		desc: "The user takes the foe underwater, then frees them the next turn. The foe cannot attack while underwater.",
+		shortDesc: "The user takes the foe underwater, then frees them the next turn. The foe cannot attack while underwater.",
+	},
+	blinding: {
+		name: "Blinding",
+		desc: "Completely lower's the target's Accuracy.",
+		shortDesc: "Completely lower's the target's Accuracy.",
+	},
+	dancinglight: {
+		name: "Dancing Light",
+		desc: "Reduces the target's Accuracy and Confuses them.",
+		shortDesc: "Reduces the target's Accuracy and Confuses them.",
+	},
+	diamondglow: {
+		name: "Diamond Glow",
+		desc: "Lowers the target's Defense and SpDef.",
+		shortDesc: "Lowers the target's Defense and SpDef.",
+	},
+	eyebeam: {
+		name: "Eye Beam",
+		desc: "It may also lower the target's Sp. Def stat.",
+		shortDesc: "It may also lower the target's Sp. Def stat.",
+	},
+	flare: {
+		name: "Flare",
+		desc: "Lower's target's evasion by 2 and causes burn.",
+		shortDesc: "Lower's target's evasion by 2 and causes burn.",
+	},
+	sunshine: {
+		name: "Sun Shine",
+		desc: "The user sends out a ray of scorching hot heat which causes the sunlight to turn harsh.",
+		shortDesc: "The user sends out a ray of scorching hot heat which causes the sunlight to turn harsh.",
+	},
+	sewingsting: {
+		name: "Sewing Sting",
+		desc: "Hitting a target raises the Attack stat.",
+		shortDesc: "Hitting a target raises the Attack stat.",
+	},
+	sewingjab: {
+		name: "Sewing Jab",
+		desc: "High crit rate. Hitting a target raises the Attack stat.",
+		shortDesc: "High crit rate. Hitting a target raises the Attack stat.",
+	},
+	fabricstab: {
+		name: "Fabric Stab",
+		desc: "It may also lower the target's Defense stat.",
+		shortDesc: "It may also lower the target's Defense stat.",
+	},
+	dazzlingflames: {
+		name: "Dazzling Flames",
+		desc: "The target is hit by a dazzling display of crimson flames. It may also leave the target confused.",
+		shortDesc: "The target is hit by a dazzling display of crimson flames. It may also leave the target confused.",
+	},
+	crossbowassault: {
+		name: "Crossbow Assault",
+		desc: "It may leave the target with paralysis.",
+		shortDesc: "It may leave the target with paralysis.",
+	},
+	starflare: {
+		name: "Star Flare",
+		desc: "May lower target's accuracy.",
+		shortDesc: "May lower target's accuracy.",
+	},
+	battlewaltz: {
+		name: "Battle Waltz",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	infinitescales: {
+		name: "Infinite Scales",
+		desc: "The more the user's stats are raised, the greater the damage.",
+		shortDesc: "The more the user's stats are raised, the greater the damage.",
+	},
+	cooldown: {
+		name: "Cool Down",
+		desc: "The user restores its own HP. The amount of HP regained varies with the weather.",
+		shortDesc: "The user restores its own HP. The amount of HP regained varies with the weather.",
+	},
+	phantomensemble: {
+		name: "Phantom Ensemble",
+		desc: "It may also raise all the user's stats at once.",
+		shortDesc: "It may also raise all the user's stats at once.",
+	},
+	boombox: {
+		name: "Boom Box",
+		desc: "The target punched with a fist imbued with sonic vibrations. It may make the target flinch.",
+		shortDesc: "The target punched with a fist imbued with sonic vibrations. It may make the target flinch.",
+	},
+	secondtackle: {
+		name: "Second Tackle",
+		desc: "A tackle that happens in a second.",
+		shortDesc: "A tackle that happens in a second.",
+	},
+	prerecord: {
+		name: "Pre Record",
+		desc: "The user copies the move last used by the foe. The move can be used until the user is switched out.",
+		shortDesc: "The user copies the move last used by the foe. The move can be used until the user is switched out.",
+	},
+	futurepassed: {
+		name: "Future Passed",
+		desc: "Goes first. Steals and uses the foe's intended move with greater power.",
+		shortDesc: "Goes first. Steals and uses the foe's intended move with greater power.",
+	},
+	steamboatrush: {
+		name: "Steamboat Rush",
+		desc: "The user tries to outspeed the opponent. It does more damage the faster the user is.",
+		shortDesc: "The user tries to outspeed the opponent. It does more damage the faster the user is.",
+	},
+	fortissimo: {
+		name: "Fortissimo",
+		desc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+		shortDesc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+	},
+	sexpistols: {
+		name: "Sex Pistols",
+		desc: "The user shoots the target two to six times in a row.",
+		shortDesc: "The user shoots the target two to six times in a row.",
+	},
+	rubberburst: {
+		name: "Rubber Burst",
+		desc: "The user retaliates with much greater power against the target that last inflicted damage on it.",
+		shortDesc: "The user retaliates with much greater power against the target that last inflicted damage on it.",
+	},
+	bounceback: {
+		name: "Bounce Back",
+		desc: "An attack move that inflicts double the damage if the user has been hurt by the foe in the same turn.",
+		shortDesc: "An attack move that inflicts double the damage if the user has been hurt by the foe in the same turn.",
+	},
+	reactivebounce: {
+		name: "Reactive Bounce",
+		desc: "This attack's power increases the more the target has powered up with stat changes.",
+		shortDesc: "This attack's power increases the more the target has powered up with stat changes.",
+	},
+	heavyweather: {
+		name: "Heavy Weather",
+		desc: "It may also confuse the foe.",
+		shortDesc: "It may also confuse the foe.",
+	},
+	superfly: {
+		name: "Super Fly",
+		desc: "The user turns the foe's power against it. It does more damage the higher the target's Attack stat.",
+		shortDesc: "The user turns the foe's power against it. It does more damage the higher the target's Attack stat.",
+	},
+	dangerouslick: {
+		name: "Dangerous Lick",
+		desc: "High chance to leave the target with paralysis.",
+		shortDesc: "High chance to leave the target with paralysis.",
+	},
+	volttail: {
+		name: "Volt Tail",
+		desc: "The target is slammed with a electric tail. It may also lower the target's Defense stat.",
+		shortDesc: "The target is slammed with a electric tail. It may also lower the target's Defense stat.",
+	},
+	scrunch: {
+		name: "Scrunch",
+		desc: "Goes first, high chance to flinch.",
+		shortDesc: "Goes first, high chance to flinch.",
+	},
+	foulgas: {
+		name: "Foul Gas",
+		desc: "May Poison or Confuse the target.",
+		shortDesc: "May Poison or Confuse the target.",
+	},
+	starfreeze: {
+		name: "Star Freeze",
+		desc: "It may also leave the target with paralysis.",
+		shortDesc: "It may also leave the target with paralysis.",
+	},
+	ghostwave: {
+		name: "Ghost Wave",
+		desc: "Higher chance to confuse.",
+		shortDesc: "Higher chance to confuse.",
+	},
+	traceon: {
+		name: "Trace On",
+		desc: "Goes first to steal and use the foe's intended move with greater power.",
+		shortDesc: "Goes first to steal and use the foe's intended move with greater power.",
+	},
+	tsubamegaeshi: {
+		name: "Tsubame Gaeshi",
+		desc: "Hits 3 times, power is multiplied by the hit number. Chance to 1 hit KO",
+		shortDesc: "Hits 3 times, power is multiplied by the hit number. Chance to 1 hit KO",
+	},
+	spintop: {
+		name: "Spin Top",
+		desc: "Building up more power, it raises the user's Speed stat.",
+		shortDesc: "Building up more power, it raises the user's Speed stat.",
+	},
+	superspintop: {
+		name: "Super Spin Top",
+		desc: "Building up more power, it raises the user's Speed stat.",
+		shortDesc: "Building up more power, it raises the user's Speed stat.",
+	},
+	fireball: {
+		name: "Fire Ball",
+		desc: "High chance to burn.",
+		shortDesc: "High chance to burn.",
+	},
+	twilightray: {
+		name: "Twilight Ray",
+		desc: "Gathers darkness then attacks on the second turn.",
+		shortDesc: "Gathers darkness then attacks on the second turn.",
+	},
+	irongrip: {
+		name: "Iron Grip",
+		desc: "The target is crushed with great force. The attack is more powerful the more HP the target has left.",
+		shortDesc: "The target is crushed with great force. The attack is more powerful the more HP the target has left.",
+	},
+	lullaby: {
+		name: "Lullaby",
+		desc: "It may also induce sleep.",
+		shortDesc: "It may also induce sleep.",
+	},
+	foulodor: {
+		name: "Foul Odor",
+		desc: "Very high chance to also leave the target confused.",
+		shortDesc: "Very high chance to also leave the target confused.",
+	},
+	carpetbomb: {
+		name: "Carpet Bomb",
+		desc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+		shortDesc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+	},
+	bonecrusher: {
+		name: "Bone Crusher",
+		desc: "It can also break any barrier such as Light Screen and Reflect.",
+		shortDesc: "It can also break any barrier such as Light Screen and Reflect.",
+	},
+	inkblast: {
+		name: "Ink Blast",
+		desc: "The user attacks by spraying ink in the foe's face or eyes. It may also lower the target's accuracy.",
+		shortDesc: "The user attacks by spraying ink in the foe's face or eyes. It may also lower the target's accuracy.",
+	},
+	sourbeam: {
+		name: "Sour Beam",
+		desc: "A strong sour blast is loosed at the target. It may also leave the target with paralysis.",
+		shortDesc: "A strong sour blast is loosed at the target. It may also leave the target with paralysis.",
+	},
+	pincushion: {
+		name: "PinCushion",
+		desc: "The user also takes terrible damage.",
+		shortDesc: "The user also takes terrible damage.",
+	},
+	sacrifice: {
+		name: "Sacrifice",
+		desc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+		shortDesc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+	},
+	devildeal: {
+		name: "Devil Deal",
+		desc: "The user maximizes its Attack and SpAtk stat in exchange for HP equal to half its max HP.",
+		shortDesc: "The user maximizes its Attack and SpAtk stat in exchange for HP equal to half its max HP.",
+	},
+	shinigamieyes: {
+		name: "Shinigami Eyes",
+		desc: "The user maximizes its Spatk and Accuracy stat in exchange for HP equal to half its max HP.",
+		shortDesc: "The user maximizes its Spatk and Accuracy stat in exchange for HP equal to half its max HP.",
+	},
+	divide: {
+		name: "Divide",
+		desc: "It cuts the target's HP to half.",
+		shortDesc: "It cuts the target's HP to half.",
+	},
+	addition: {
+		name: "Addition",
+		desc: "90% also raise the user's Sp. Atk stat.",
+		shortDesc: "90% also raise the user's Sp. Atk stat.",
+	},
+	subtract: {
+		name: "Subtract",
+		desc: "90% to also reduce the target's Sp. Def stat.",
+		shortDesc: "90% to also reduce the target's Sp. Def stat.",
+	},
+	multiply: {
+		name: "Multiply",
+		desc: "A consecutive beam attack that becomes more powerful with each successive hit.",
+		shortDesc: "A consecutive beam attack that becomes more powerful with each successive hit.",
+	},
+	calculator: {
+		name: "Calculator",
+		desc: "Uses a random Math move.",
+		shortDesc: "Uses a random Math move.",
+	},
+	terriblevisage: {
+		name: "Terrible Visage",
+		desc: "45% chance to cause paralysis.",
+		shortDesc: "45% chance to cause paralysis.",
+	},
+	magnetshards: {
+		name: "Magnet Shards",
+		desc: "This attack does physical damage.",
+		shortDesc: "This attack does physical damage.",
+	},
+	headchop: {
+		name: "Head Chop",
+		desc: "The user delivers a chop to the target's skull. May confuse.",
+		shortDesc: "The user delivers a chop to the target's skull. May confuse.",
+	},
+	antidotepoint: {
+		name: "Antidote Point",
+		desc: "Hits a pressure point on the target, doing doubled damage if they are poisoned. It also cures the target's POISON, however.",
+		shortDesc: "Hits a pressure point on the target, doing doubled damage if they are poisoned. It also cures the target's POISON, however.",
+	},
+	disarm: {
+		name: "Disarm",
+		desc: "The user slaps down the target's held item, preventing that item from being used in the battle.",
+		shortDesc: "The user slaps down the target's held item, preventing that item from being used in the battle.",
+	},
+	traincrash: {
+		name: "Train Crash",
+		desc: "A GOD DAMNED TRAIN!!! This attack never misses.",
+		shortDesc: "A GOD DAMNED TRAIN!!! This attack never misses.",
+	},
+	teleportaway: {
+		name: "Teleport Away",
+		desc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+	},
+	unstablehorizon: {
+		name: "Unstable Horizon",
+		desc: "May lower targets accuracy.",
+		shortDesc: "May lower targets accuracy.",
+	},
+	breakup: {
+		name: "Break Up",
+		desc: "Does double damage if target is Infatuated.",
+		shortDesc: "Does double damage if target is Infatuated.",
+	},
+	loveburst: {
+		name: "Love Burst",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	venusburst: {
+		name: "Venus Burst",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	acidburst: {
+		name: "Acid Burst",
+		desc: "The user spits fluid that works to melt the target. This harshly reduces the target's Sp. Def stat.",
+		shortDesc: "The user spits fluid that works to melt the target. This harshly reduces the target's Sp. Def stat.",
+	},
+	chromeray: {
+		name: "Chrome Ray",
+		desc: "It may also raise the user's Sp. Atk stat.",
+		shortDesc: "It may also raise the user's Sp. Atk stat.",
+	},
+	techsting: {
+		name: "Tech Sting",
+		desc: "Higher chance to poison the target. Critical hits land more easily.",
+		shortDesc: "Higher chance to poison the target. Critical hits land more easily.",
+	},
+	blooddrain: {
+		name: "Blood Drain",
+		desc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+	},
+	bloodpump: {
+		name: "Blood Pump",
+		desc: "The user takes recoil damage.",
+		shortDesc: "The user takes recoil damage.",
+	},
+	replicate: {
+		name: "Replicate",
+		desc: "Transforms the target into the user.",
+		shortDesc: "Transforms the target into the user.",
+	},
+	glassyterrain: {
+		name: "Glassy Terrain",
+		desc: "The ground becomes weird. Boost psychic moves and stops priority moves.",
+		shortDesc: "The ground becomes weird. Boost psychic moves and stops priority moves.",
+	},
+	whirlglass: {
+		name: "Whirlglass",
+		desc: "Traps foes in a violent swirling whirlpool for four to five turns.",
+		shortDesc: "Traps foes in a violent swirling whirlpool for four to five turns.",
+	},
+	breadrollout: {
+		name: "Bread Rollout",
+		desc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+		shortDesc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+	},
+	fruityburst: {
+		name: "Fruity Burst",
+		desc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	sandwichrush: {
+		name: "Sandwich Rush",
+		desc: "May also paralyze, burn, or freeze the target.",
+		shortDesc: "May also paralyze, burn, or freeze the target.",
+	},
+	predictspell: {
+		name: "Predict Spell",
+		desc: "User predicts the opp moves. Goes first, 85% flinch chance.",
+		shortDesc: "User predicts the opp moves. Goes first, 85% flinch chance.",
+	},
+	magicprophecy: {
+		name: "Magic Prophecy",
+		desc: "User predicts the opp moves. Goes first, flinches the opp.",
+		shortDesc: "User predicts the opp moves. Goes first, flinches the opp.",
+	},
+	bedtime: {
+		name: "Bed Time",
+		desc: "It may also induce sleep.",
+		shortDesc: "It may also induce sleep.",
+	},
+	incompray: {
+		name: "Incomp Ray",
+		desc: "An incomprehensible ray is fired off. Very high chance to confuse.",
+		shortDesc: "An incomprehensible ray is fired off. Very high chance to confuse.",
+	},
+	toxicinfo: {
+		name: "Toxic Info",
+		desc: "Toxic information is shared with the taget. Hi chance to poison the target.",
+		shortDesc: "Toxic information is shared with the taget. Hi chance to poison the target.",
+	},
+	gaininginfo: {
+		name: "Gaining Info",
+		desc: "It may also raise the user's Sp. Atk stat. Raises more the less PP the move has.",
+		shortDesc: "It may also raise the user's Sp. Atk stat. Raises more the less PP the move has.",
+	},
+	risinginfo: {
+		name: "Rising Info",
+		desc: "It may also raise the user's Sp. Atk stat.",
+		shortDesc: "It may also raise the user's Sp. Atk stat.",
+	},
+	quickplastic: {
+		name: "Quick Plastic",
+		desc: "The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.",
+		shortDesc: "The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.",
+	},
+	plasticray: {
+		name: "Plastic Ray",
+		desc: "It may also reduce the target's Sp. Def stat.",
+		shortDesc: "It may also reduce the target's Sp. Def stat.",
+	},
+	itchybite: {
+		name: "Itchy Bite",
+		desc: "It may also make the target flinch or leave it with paralysis.",
+		shortDesc: "It may also make the target flinch or leave it with paralysis.",
+	},
+	bloodbite: {
+		name: "Blood Bite",
+		desc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+	},
+	bloodhound: {
+		name: "Blood Hound",
+		desc: "An attack move that inflicts double damage if used on a target that is switching out of battle. Raises Acc if target Bleeding.",
+		shortDesc: "An attack move that inflicts double damage if used on a target that is switching out of battle. Raises Acc if target Bleeding.",
+	},
+	hardcandybeam: {
+		name: "Hard Candy Beam",
+		desc: "Raises the user's Defense stat.",
+		shortDesc: "Raises the user's Defense stat.",
+	},
+	storedcalories: {
+		name: "Stored Calories",
+		desc: "The user attacks with stored power. The more the user's stats are raised, the greater the damage.",
+		shortDesc: "The user attacks with stored power. The more the user's stats are raised, the greater the damage.",
+	},
+	woodstalk: {
+		name: "Woodstalk",
+		desc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
+		shortDesc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
+	},
+	felltree: {
+		name: "Fell Tree",
+		desc: "When the user knocks out a target with this move, the user's Attack stat rises sharply.",
+		shortDesc: "When the user knocks out a target with this move, the user's Attack stat rises sharply.",
+	},
+	flavoredice: {
+		name: "Flavored Ice",
+		desc: "May also paralyze, burn, or freeze the target.",
+		shortDesc: "May also paralyze, burn, or freeze the target.",
+	},
+	illusionbullets: {
+		name: "Illusion Bullets",
+		desc: "Strikes two to five times in a row.",
+		shortDesc: "Strikes two to five times in a row.",
+	},
+	windwave: {
+		name: "Wind Wave",
+		desc: "It may make the target flinch.",
+		shortDesc: "It may make the target flinch.",
+	},
+	smogshot: {
+		name: "Smog Shot",
+		desc: "It may also poison the target.",
+		shortDesc: "It may also poison the target.",
+	},
+	randomshots: {
+		name: "Random Shots",
+		desc: "High crit rate. Hits two to five times in a row.",
+		shortDesc: "High crit rate. Hits two to five times in a row.",
+	},
+	moonbow: {
+		name: "Moonbow",
+		desc: "It may also confuse the foe.",
+		shortDesc: "It may also confuse the foe.",
+	},
+	carpetcharge: {
+		name: "Carpet Charge",
+		desc: "Building up more power, it raises the user's Speed stat.",
+		shortDesc: "Building up more power, it raises the user's Speed stat.",
+	},
+	flycarpet: {
+		name: "Fly Carpet",
+		desc: "The user soars, then strikes on the second turn.",
+		shortDesc: "The user soars, then strikes on the second turn.",
+	},
+	blazespear: {
+		name: "Blaze Spear",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	bloodgungnir: {
+		name: "Blood Gungnir",
+		desc: "This attack never misses.",
+		shortDesc: "This attack never misses.",
+	},
+	scarletmist: {
+		name: "Scarlet Mist",
+		desc: "Starts Midnight weather.",
+		shortDesc: "Starts Midnight weather.",
+	},
+	netherray: {
+		name: "Nether Ray",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	thunderclap: {
+		name: "Thunderclap",
+		desc: "Makes the target flinch.",
+		shortDesc: "Makes the target flinch.",
+	},
+	futureattack: {
+		name: "Future Attack",
+		desc: "Two turns after this move is used, a hunk of psychic energy attacks the target.",
+		shortDesc: "Two turns after this move is used, a hunk of psychic energy attacks the target.",
+	},
+	thunderveil: {
+		name: "Thunder Veil",
+		desc: "Paralyzes and Confuses the target.",
+		shortDesc: "Paralyzes and Confuses the target.",
+	},
+	thunderdrill: {
+		name: "Thunder Drill",
+		desc: "This attack always results in a critical hit.",
+		shortDesc: "This attack always results in a critical hit.",
+	},
+	magneticrocks: {
+		name: "Magnetic Rocks",
+		desc: "The attack lands without fail.",
+		shortDesc: "The attack lands without fail.",
+	},
+	gravityblast: {
+		name: "Gravity Blast",
+		desc: "The more HP the foe has, the greater this attack's power.",
+		shortDesc: "The more HP the foe has, the greater this attack's power.",
+	},
+	infohazardrush: {
+		name: "InfoHazard Rush",
+		desc: "It may also poison the target.",
+		shortDesc: "It may also poison the target.",
+	},
+	bloodystorm: {
+		name: "Bloody Storm",
+		desc: "It may make the target flinch. Does more damage if the user is Bleeding.",
+		shortDesc: "It may make the target flinch. Does more damage if the user is Bleeding.",
+	},
+	darksweets: {
+		name: "Dark Sweets",
+		desc: "It may also lower the target's accuracy.",
+		shortDesc: "It may also lower the target's accuracy.",
+	},
+	laevateinn: {
+		name: "Laevateinn",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	andthentherewerenone: {
+		name: "And Then There Were None",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	distortionbomb: {
+		name: "Distortion Bomb",
+		desc: "40% to lower the target's Defense stat.",
+		shortDesc: "40% to lower the target's Defense stat.",
+	},
+	torturedspike: {
+		name: "Tortured Spike",
+		desc: "Makes the target bleed.",
+		shortDesc: "Makes the target bleed.",
+	},
+	ebbtide: {
+		name: "Ebb Tide",
+		desc: "Garshly reduces both target's Speed stat.",
+		shortDesc: "Garshly reduces both target's Speed stat.",
+	},
+	lovesick: {
+		name: "Love Sick",
+		desc: "It may also poison the target.",
+		shortDesc: "It may also poison the target.",
+	},
+	dnabeam: {
+		name: "DNA Beam",
+		desc: "Steals the target's stat boosts, then attacks.",
+		shortDesc: "Steals the target's stat boosts, then attacks.",
+	},
+	booing: {
+		name: "Booing",
+		desc: "Causes the foe to be switched out.",
+		shortDesc: "Causes the foe to be switched out.",
+	},
+	toxiccopy: {
+		name: "Toxic Copy",
+		desc: "Copies the target's stat boosts, then attacks.",
+		shortDesc: "Copies the target's stat boosts, then attacks.",
+	},
+	sludgedown: {
+		name: "Sludge Down",
+		desc: "It lowers the user's Speed, however.",
+		shortDesc: "It lowers the user's Speed, however.",
+	},
+	magictrap: {
+		name: "Magic Trap",
+		desc: "The user lays a a magical trap around the foe. The trap hurts foes that switch into battle.",
+		shortDesc: "The user lays a a magical trap around the foe. The trap hurts foes that switch into battle.",
+	},
+	gargoylepunch: {
+		name: "Gargoyle Punch",
+		desc: "It fails if the target is not readying an attack, however.",
+		shortDesc: "It fails if the target is not readying an attack, however.",
+	},
+	packedice: {
+		name: "Packed Ice",
+		desc: "Only works in Hail. Sharply raises the user's Defense and Sp. Def stats.",
+		shortDesc: "Only works in Hail. Sharply raises the user's Defense and Sp. Def stats.",
+	},
+	shadowend: {
+		name: "Shadow End",
+		desc: "A shadowy aura ram attack that also rebounds on the user.",
+		shortDesc: "A shadowy aura ram attack that also rebounds on the user.",
+	},
+	shadowstorm: {
+		name: "Shadow Storm",
+		desc: "A shadowy aura is used to whip up a vicious tornado.",
+		shortDesc: "A shadowy aura is used to whip up a vicious tornado.",
+	},
+	shadowblast: {
+		name: "Shadow Blast",
+		desc: "A wicked blade of air is formed using a shadowy aura.",
+		shortDesc: "A wicked blade of air is formed using a shadowy aura.",
+	},
+	shadowbolt: {
+		name: "Shadow Bolt",
+		desc: "A shadowy thunder attack that may paralyze.",
+		shortDesc: "A shadowy thunder attack that may paralyze.",
+	},
+	shadowbreak: {
+		name: "Shadow Break",
+		desc: "A shattering ram attack with a shadowy aura.",
+		shortDesc: "A shattering ram attack with a shadowy aura.",
+	},
+	shadowchill: {
+		name: "Shadow Chill",
+		desc: "A shadowy ice attack that may freeze.",
+		shortDesc: "A shadowy ice attack that may freeze.",
+	},
+	shadowfire: {
+		name: "Shadow Fire",
+		desc: "A shadowy fireball attack that may inflict a burn.",
+		shortDesc: "A shadowy fireball attack that may inflict a burn.",
+	},
+	shadowrave: {
+		name: "Shadow Rave",
+		desc: "A shadowy aura in the ground is used to launch spikes.",
+		shortDesc: "A shadowy aura in the ground is used to launch spikes.",
+	},
+	shadowrush: {
+		name: "Shadow Rush",
+		desc: "A reckless move that also hurts the user.",
+		shortDesc: "A reckless move that also hurts the user.",
+	},
+	shadowwave: {
+		name: "Shadow Wave",
+		desc: "Shadowy aura waves are loosed to inflict damage.",
+		shortDesc: "Shadowy aura waves are loosed to inflict damage.",
+	},
+	shadowblitz: {
+		name: "Shadow Blitz",
+		desc: "A Pokemon throws this tackle while casting a shadowy aura.",
+		shortDesc: "A Pokemon throws this tackle while casting a shadowy aura.",
+	},
+	shadowdown: {
+		name: "Shadow Down",
+		desc: "A shadowy aura sharply cuts the foe's Defense.",
+		shortDesc: "A shadowy aura sharply cuts the foe's Defense.",
+	},
+	shadowhalf: {
+		name: "Shadow Half",
+		desc: "A shadowy aura's energy cuts everyone's HP by half.",
+		shortDesc: "A shadowy aura's energy cuts everyone's HP by half.",
+	},
+	shadowhold: {
+		name: "Shadow Hold",
+		desc: "The opponent Pokemon cannot escape.",
+		shortDesc: "The opponent Pokemon cannot escape.",
+	},
+	shadowmist: {
+		name: "Shadow Mist",
+		desc: "A shadowy aura sharply cuts the foe's evasiveness.",
+		shortDesc: "A shadowy aura sharply cuts the foe's evasiveness.",
+	},
+	shadowpanic: {
+		name: "Shadow Panic",
+		desc: "A shadowy aura emanates to confuse the foe.",
+		shortDesc: "A shadowy aura emanates to confuse the foe.",
+	},
+	shadowshed: {
+		name: "Shadow Shed",
+		desc: "A shadowy aura eliminates Reflect and similar moves.",
+		shortDesc: "A shadowy aura eliminates Reflect and similar moves.",
+	},
+	shadowsky: {
+		name: "Shadow Sky",
+		desc: "Darkness hurts all but Shadow Pokemon for 5 turns.",
+		shortDesc: "Darkness hurts all but Shadow Pokemon for 5 turns.",
+	},
+	excaliburmorgan: {
+		name: "Excalibur Morgan",
+		desc: "Hi crit rate. The user must recharge.",
+		shortDesc: "Hi crit rate. The user must recharge.",
+	},
+	divineprotection: {
+		name: "Divine Protection",
+		desc: "User's ability becomes Wonder Guard.",
+		shortDesc: "User's ability becomes Wonder Guard.",
+	},
+	ionioihetairoi: {
+		name: "Ionioi Hetairoi",
+		desc: "Damages other pokemon, raises user's Speed each turn.",
+		shortDesc: "Damages other pokemon, raises user's Speed each turn.",
+	},
+	coldspell: {
+		name: "Cold Spell",
+		desc: "The target is struck with an icy-cold beam of energy. It may also freeze the target solid.",
+		shortDesc: "The target is struck with an icy-cold beam of energy. It may also freeze the target solid.",
+	},
+	blackripple: {
+		name: "Black Ripple",
+		desc: "It may also cause paralysis.",
+		shortDesc: "It may also cause paralysis.",
+	},
+	decisivestrike: {
+		name: "Decisive Strike",
+		desc: "The user attacks last. In return, this throw move is guaranteed not to miss.",
+		shortDesc: "The user attacks last. In return, this throw move is guaranteed not to miss.",
+	},
+	mercurycharge: {
+		name: "Mercury Charge",
+		desc: "The user charges at the target, calling on the speed of an ancient god. It raises the user's Speed stat.",
+		shortDesc: "The user charges at the target, calling on the speed of an ancient god. It raises the user's Speed stat.",
+	},
+	aestusdomusaurea: {
+		name: "Aestus Domus Aurea",
+		desc: "Ignore's the target's stat boosts, the opponent becomes weaker each turn.",
+		shortDesc: "Ignore's the target's stat boosts, the opponent becomes weaker each turn.",
+	},
+	laussaintclaudius: {
+		name: "Laus Saint Claudius",
+		desc: "High chance to burn.",
+		shortDesc: "High chance to burn.",
+	},
+	understep: {
+		name: "Understep",
+		desc: "The user attacks the target's legs swiftly, reducing the target's Speed stat.",
+		shortDesc: "The user attacks the target's legs swiftly, reducing the target's Speed stat.",
+	},
+	scrapmetal: {
+		name: "Scrap Metal",
+		desc: "The user lays a trap of scrap metal on the ground. The trap hurts foes that switch into battle.",
+		shortDesc: "The user lays a trap of scrap metal on the ground. The trap hurts foes that switch into battle.",
+	},
+	firespiral: {
+		name: "Fire Spiral",
+		desc: "The target becomes trapped within a fierce vortex of fire that rages for four to five turns.",
+		shortDesc: "The target becomes trapped within a fierce vortex of fire that rages for four to five turns.",
+	},
+	fullsteamahead: {
+		name: "Full Steam Ahead",
+		desc: "High chance to also raise the user's Attack.",
+		shortDesc: "High chance to also raise the user's Attack.",
+	},
+	electrorush: {
+		name: "Electro Rush",
+		desc: "High chance to also raise the user's Speed.",
+		shortDesc: "High chance to also raise the user's Speed.",
+	},
+	supertrainrush: {
+		name: "Super Train Rush",
+		desc: "Goes first. High chance to also raise the user's Attack.",
+		shortDesc: "Goes first. High chance to also raise the user's Attack.",
+	},
+	swordofdawn: {
+		name: "Sword of Dawn",
+		desc: "The user must rest on the next turn if this move doesn't defeat the target.",
+		shortDesc: "The user must rest on the next turn if this move doesn't defeat the target.",
+	},
+	finalmoove: {
+		name: "Final Moove",
+		desc: "If the target's HP is down to about half, this attack will hit with double the power.",
+		shortDesc: "If the target's HP is down to about half, this attack will hit with double the power.",
+	},
+	rainbowdash: {
+		name: "Rainbow Dash",
+		desc: "The user tries to outspeed the opponent. It does more damage the faster the user is.",
+		shortDesc: "The user tries to outspeed the opponent. It does more damage the faster the user is.",
+	},
+	closeshave: {
+		name: "Close Shave",
+		desc: "A restrained attack that prevents the target from fainting. The target is left with at least 1 HP.",
+		shortDesc: "A restrained attack that prevents the target from fainting. The target is left with at least 1 HP.",
+	},
+	lovespark: {
+		name: "Love Spark",
+		desc: "Does double damage if target is Infatuated.",
+		shortDesc: "Does double damage if target is Infatuated.",
+	},
+	illuminatipower: {
+		name: "Illuminati Power",
+		desc: "The user fires a beam of triangles. This attack may make the target flinch.",
+		shortDesc: "The user fires a beam of triangles. This attack may make the target flinch.",
+	},
+	mysterybeam: {
+		name: "Mystery Beam",
+		desc: "Changes the target's type to ???",
+		shortDesc: "Changes the target's type to ???",
+	},
+	dayblast: {
+		name: "Day Blast",
+		desc: "May lower the target's SpDef.",
+		shortDesc: "May lower the target's SpDef.",
+	},
+	yearblast: {
+		name: "Year Blast",
+		desc: "May lower the target's SpDef.",
+		shortDesc: "May lower the target's SpDef.",
+	},
+	urbanburst: {
+		name: "Urban Burst",
+		desc: "High chance to poison the target.",
+		shortDesc: "High chance to poison the target.",
+	},
+	fishbite: {
+		name: "Fish Bite",
+		desc: "The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.",
+		shortDesc: "The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.",
+	},
+	anglestab: {
+		name: "Angle Stab",
+		desc: "The user strikes the target with an angled stab. Always critical hit.",
+		shortDesc: "The user strikes the target with an angled stab. Always critical hit.",
+	},
+	megapeck: {
+		name: "Mega Peck",
+		desc: "The user pecks with all of its force.",
+		shortDesc: "The user pecks with all of its force.",
+	},
+	triplepeck: {
+		name: "Triple Peck",
+		desc: "A consecutive three-peck attack that becomes more powerful with each successive hit.",
+		shortDesc: "A consecutive three-peck attack that becomes more powerful with each successive hit.",
+	},
+	rocketjumpkick: {
+		name: "Rocket Jump Kick",
+		desc: "The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.",
+		shortDesc: "The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.",
+	},
+	focussplash: {
+		name: "Focus Splash",
+		desc: "The user focuses its mind before splashing. It will fail if the user is hit before it is used.",
+		shortDesc: "The user focuses its mind before splashing. It will fail if the user is hit before it is used.",
+	},
+	lightningflash: {
+		name: "Lightning Flash",
+		desc: "Reduces the target's Accuracy and Paralyzes them.",
+		shortDesc: "Reduces the target's Accuracy and Paralyzes them.",
+	},
+	emergencythunder: {
+		name: "Emergency Thunder",
+		desc: "Goes first. Doesn't miss in Rain.",
+		shortDesc: "Goes first. Doesn't miss in Rain.",
+	},
+	flaredash: {
+		name: "Flare Dash",
+		desc: "Goes first. The user also takes damage.",
+		shortDesc: "Goes first. The user also takes damage.",
+	},
+	pastalavista: {
+		name: "Pasta La Vista",
+		desc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+		shortDesc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+	},
+	tuning: {
+		name: "Tuning",
+		desc: "Raises the power of the next Sound-type move the user uses. Increases SpAtk by 1.",
+		shortDesc: "Raises the power of the next Sound-type move the user uses. Increases SpAtk by 1.",
+	},
+	ballbreaker: {
+		name: "Ball Breaker",
+		desc: "Breaks screens and lowers the opponent's Defense stat.",
+		shortDesc: "Breaks screens and lowers the opponent's Defense stat.",
+	},
+	tusk: {
+		name: "Tusk",
+		desc: "Breaks screens and traps the opponent for 3 to 5 turns.",
+		shortDesc: "Breaks screens and traps the opponent for 3 to 5 turns.",
+	},
+	twilightspark: {
+		name: "Twilight Spark",
+		desc: "Raise its SpAtk in the first turn, then fires at the foe the next turn.",
+		shortDesc: "Raise its SpAtk in the first turn, then fires at the foe the next turn.",
+	},
+	bindingsword: {
+		name: "Binding Sword",
+		desc: "Target cannot use Status moves, heal or use items for five turns.",
+		shortDesc: "Target cannot use Status moves, heal or use items for five turns.",
+	},
+	nightwind: {
+		name: "Night Wind",
+		desc: "This attack also deals Dark-type damage.",
+		shortDesc: "This attack also deals Dark-type damage.",
+	},
+	lunardial: {
+		name: "Lunar Dial",
+		desc: "High chance to freeze.",
+		shortDesc: "High chance to freeze.",
+	},
+	miraclewind: {
+		name: "Miracle Wind",
+		desc: "It may also raise all the user's stats at once.",
+		shortDesc: "It may also raise all the user's stats at once.",
+	},
+	sunsinferno: {
+		name: "Sun's Inferno",
+		desc: "The user harnesses the power of the sun itself. Hi chance to burn.",
+		shortDesc: "The user harnesses the power of the sun itself. Hi chance to burn.",
+	},
+	lunartides: {
+		name: "Lunar Tides",
+		desc: "The user harnesses the power of the moon itself. Hi chance to sleep.",
+		shortDesc: "The user harnesses the power of the moon itself. Hi chance to sleep.",
+	},
+	perfectfreeze: {
+		name: "Perfect Freeze",
+		desc: "Freezes the foe.",
+		shortDesc: "Freezes the foe.",
+	},
+	lunaticeyes: {
+		name: "Lunatic Eyes",
+		desc: "High chance to confuse.",
+		shortDesc: "High chance to confuse.",
+	},
+	timescrew: {
+		name: "Time Screw",
+		desc: "The attack lands without fail.",
+		shortDesc: "The attack lands without fail.",
+	},
+	fieldbreak: {
+		name: "Field Break",
+		desc: "It can also break any barrier such as Light Screen and Reflect.",
+		shortDesc: "It can also break any barrier such as Light Screen and Reflect.",
+	},
+	bugkick: {
+		name: "Bug Kick",
+		desc: "The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.",
+		shortDesc: "The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.",
+	},
+	rainbow: {
+		name: "Rainbow",
+		desc: "Creates a Rainbow on your side that increases the chance of secondary effects happening for 10 turns.",
+		shortDesc: "Creates a Rainbow on your side that increases the chance of secondary effects happening for 10 turns.",
+	},
+	imperishablenight: {
+		name: "Imperishable Night",
+		desc: "It becomes more powerful the less HP the user has.",
+		shortDesc: "It becomes more powerful the less HP the user has.",
+	},
+	rainbowwave: {
+		name: "Rainbow Wave",
+		desc: "Creates a Rainbow that increases the chance of second effects happening.",
+		shortDesc: "Creates a Rainbow that increases the chance of second effects happening.",
+	},
+	apollo13: {
+		name: "Apollo 13",
+		desc: "High chance to badly poison.",
+		shortDesc: "High chance to badly poison.",
+	},
+	spitout: {
+		name: "Spit Out",
+		desc: "Stockpile, more damage. Decreases Stockpile by 1.",
+		shortDesc: "Stockpile, more damage. Decreases Stockpile by 1.",
+	},
+	undyingflame: {
+		name: "Undying Flame",
+		desc: "It may also raise all the user's stats at once.",
+		shortDesc: "It may also raise all the user's stats at once.",
+	},
+	nightsparrowsong: {
+		name: "Night Sparrow Song",
+		desc: "Sound based. Lowers target's accuracy.",
+		shortDesc: "Sound based. Lowers target's accuracy.",
+	},
+	wanting: {
+		name: "Wanting",
+		desc: "Steals the target's held item.",
+		shortDesc: "Steals the target's held item.",
+	},
+	heartbomb: {
+		name: "Heart Bomb",
+		desc: "The heavier the target, the greater the damage.",
+		shortDesc: "The heavier the target, the greater the damage.",
+	},
+	performance: {
+		name: "Performance",
+		desc: "The user attacks in an uproar for three turns. Over that time, no one can fall asleep.",
+		shortDesc: "The user attacks in an uproar for three turns. Over that time, no one can fall asleep.",
+	},
+	weatherblade: {
+		name: "Weather Blade",
+		desc: "Hi crit rate. Varies in type depending on the weather.",
+		shortDesc: "Hi crit rate. Varies in type depending on the weather.",
+	},
+	hisousword: {
+		name: "Hisou Sword",
+		desc: "Unless the target faints, the user must rest on the next turn.",
+		shortDesc: "Unless the target faints, the user must rest on the next turn.",
+	},
+	blackwind: {
+		name: "Black Wind",
+		desc: "It may also raise all the user's stats at once.",
+		shortDesc: "It may also raise all the user's stats at once.",
+	},
+	draculacradle: {
+		name: "Dracula Cradle",
+		desc: "The user also takes terrible damage.",
+		shortDesc: "The user also takes terrible damage.",
+	},
+	preach: {
+		name: "Preach",
+		desc: "This harshly reduces the target's Sp. Def stat.",
+		shortDesc: "This harshly reduces the target's Sp. Def stat.",
+	},
+	opticcamo: {
+		name: "Optic Camo",
+		desc: "Goes first and raises Evaision.",
+		shortDesc: "Goes first and raises Evaision.",
+	},
+	adaptray: {
+		name: "Adapt Ray",
+		desc: "Steals the target's stat boosts, then attacks.",
+		shortDesc: "Steals the target's stat boosts, then attacks.",
+	},
+	communism: {
+		name: "Communism",
+		desc: "The user uses the power of Communism.",
+		shortDesc: "The user uses the power of Communism.",
+	},
+	windblade: {
+		name: "Wind Blade",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	foehnwinds: {
+		name: "Foehn Winds",
+		desc: "It also damages the user by a fairly large amount, however.",
+		shortDesc: "It also damages the user by a fairly large amount, however.",
+	},
+	bandattack: {
+		name: "Band Attack",
+		desc: "The user gets all the party Pokemon to attack the foe. The more party Pokemon, the more damage.",
+		shortDesc: "The user gets all the party Pokemon to attack the foe. The more party Pokemon, the more damage.",
+	},
+	occamsrazor: {
+		name: "Occams Razor",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	burststream: {
+		name: "Burst Stream",
+		desc: "The foe is attacked with a powerful beam. The user must rest on the next turn to regain its energy.",
+		shortDesc: "The foe is attacked with a powerful beam. The user must rest on the next turn to regain its energy.",
+	},
+	hipcheck: {
+		name: "Hip Check",
+		desc: "A hip check that has much more range than it looks. Never misses.",
+		shortDesc: "A hip check that has much more range than it looks. Never misses.",
+	},
+	godsgrace: {
+		name: "Gods Grace",
+		desc: "Drastically raises both defenses. Ingrain, Mist and Safeguard.",
+		shortDesc: "Drastically raises both defenses. Ingrain, Mist and Safeguard.",
+	},
+	infinitybigbangstorm: {
+		name: "InfinityBigBangStorm",
+		desc: "User must recharge unless the target faints.",
+		shortDesc: "User must recharge unless the target faints.",
+	},
+	vergavesta: {
+		name: "Verg Avesta",
+		desc: "Double the damage if the user has been hurt in the same turn. Heals the user.",
+		shortDesc: "Double the damage if the user has been hurt in the same turn. Heals the user.",
+	},
+	orbitalcrash: {
+		name: "Orbital Crash",
+		desc: "The user soars, then strikes on the second turn.",
+		shortDesc: "The user soars, then strikes on the second turn.",
+	},
+	superinazumakick: {
+		name: "Super Inazuma Kick",
+		desc: "The user launches a kick with a high critical-hit ratio. It may also leave the target with paralysis.",
+		shortDesc: "The user launches a kick with a high critical-hit ratio. It may also leave the target with paralysis.",
+	},
+	fowlplay: {
+		name: "Fowl Play",
+		desc: "The user turns the foe's power against it. It does more damage the higher the target's Attack stat.",
+		shortDesc: "The user turns the foe's power against it. It does more damage the higher the target's Attack stat.",
+	},
+	piercinghorn: {
+		name: "Piercing Horn",
+		desc: "Does double damage on Rock-type pokemon.",
+		shortDesc: "Does double damage on Rock-type pokemon.",
+	},
+	torpedo: {
+		name: "Torpedo",
+		desc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+		shortDesc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+	},
+	moltenmetal: {
+		name: "Molten Metal",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	puffup: {
+		name: "Puff Up",
+		desc: "The user puffs up. It drastically raises the user's Sp. Def stat.",
+		shortDesc: "The user puffs up. It drastically raises the user's Sp. Def stat.",
+	},
+	cosmicblade: {
+		name: "Cosmic Blade",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	shout: {
+		name: "SHOUT",
+		desc: "THE USER SHOUTS VERY LOUDLY!!!!!",
+		shortDesc: "THE USER SHOUTS VERY LOUDLY!!!!!",
+	},
+	resonate: {
+		name: "Resonate",
+		desc: "This relentless attack does massive damage to a target affected by status problems.",
+		shortDesc: "This relentless attack does massive damage to a target affected by status problems.",
+	},
+	diffusion: {
+		name: "Diffusion",
+		desc: "Using an odd shock wave, the user damages any Pokemon of the same type as the user.",
+		shortDesc: "Using an odd shock wave, the user damages any Pokemon of the same type as the user.",
+	},
+	wildgrowth: {
+		name: "Wild Growth",
+		desc: "It may also raise all the user's stats.",
+		shortDesc: "It may also raise all the user's stats.",
+	},
+	coinburst: {
+		name: "Coin Burst",
+		desc: "Numerous coins are hurled at the target to inflict damage. Money is earned after battle.",
+		shortDesc: "Numerous coins are hurled at the target to inflict damage. Money is earned after battle.",
+	},
+	leechpods: {
+		name: "Leech Pods",
+		desc: "It may also Leech Seed the target.",
+		shortDesc: "It may also Leech Seed the target.",
+	},
+	pollinate: {
+		name: "Pollinate",
+		desc: "It may also Leech Seed the target.",
+		shortDesc: "It may also Leech Seed the target.",
+	},
+	silkscreen: {
+		name: "Silk Screen",
+		desc: "Raises its Defense and Sp. Def stats.",
+		shortDesc: "Raises its Defense and Sp. Def stats.",
+	},
+	vendetta: {
+		name: "Vendetta",
+		desc: "As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+		shortDesc: "As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+	},
+	shortcircuit: {
+		name: "Short Circuit",
+		desc: "The user loses its Electric-type. Cannot be used if not Electric-type.",
+		shortDesc: "The user loses its Electric-type. Cannot be used if not Electric-type.",
+	},
+	stungun: {
+		name: "Stun Gun",
+		desc: "May disable the last move used by the target",
+		shortDesc: "May disable the last move used by the target",
+	},
+	glitzblitz: {
+		name: "Glitz Blitz",
+		desc: "It also cuts the user's Defense and Sp. Def.",
+		shortDesc: "It also cuts the user's Defense and Sp. Def.",
+	},
+	hiphiphooray: {
+		name: "HipHipHooray",
+		desc: "A consecutive three hit attack that becomes more powerful with each successive hit.",
+		shortDesc: "A consecutive three hit attack that becomes more powerful with each successive hit.",
+	},
+	peekaboo: {
+		name: "Peekaboo",
+		desc: "It is sure to strike first.",
+		shortDesc: "It is sure to strike first.",
+	},
+	pixiewave: {
+		name: "Pixie Wave",
+		desc: "This attack always inflicts 40 HP damage.",
+		shortDesc: "This attack always inflicts 40 HP damage.",
+	},
+	ghoulbreath: {
+		name: "Ghoul Breath",
+		desc: "EW THAT STINKS! Drags out another Pokemon in its party. In the wild, the battle ends.",
+		shortDesc: "EW THAT STINKS! Drags out another Pokemon in its party. In the wild, the battle ends.",
+	},
+	logroll: {
+		name: "Log Roll",
+		desc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+		shortDesc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+	},
+	brainstorm: {
+		name: "Brainstorm",
+		desc: "Hits both targets. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+		shortDesc: "Hits both targets. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+	},
+	pinpoint: {
+		name: "Pinpoint",
+		desc: "Raises its accuracy stat.",
+		shortDesc: "Raises its accuracy stat.",
+	},
+	alarmclock: {
+		name: "Alarm Clock",
+		desc: "This attack inflicts big damage on a sleeping target. It also wakes the target up, however.",
+		shortDesc: "This attack inflicts big damage on a sleeping target. It also wakes the target up, however.",
+	},
+	insomniaray: {
+		name: "Insomnia Ray",
+		desc: "This attack inflicts big damage on a sleeping target. It also wakes the target up, however.",
+		shortDesc: "This attack inflicts big damage on a sleeping target. It also wakes the target up, however.",
+	},
+	nightterror: {
+		name: "Night Terror",
+		desc: "This attack inflicts big damage on a sleeping target. It also wakes the target up, however.",
+		shortDesc: "This attack inflicts big damage on a sleeping target. It also wakes the target up, however.",
+	},
+	bluster: {
+		name: "Bluster",
+		desc: "Makes the target flinch.",
+		shortDesc: "Makes the target flinch.",
+	},
+	heartseye: {
+		name: "Hearts Eye",
+		desc: "This harshly reduces the target's Sp. Def stat.",
+		shortDesc: "This harshly reduces the target's Sp. Def stat.",
+	},
+	enviousburst: {
+		name: "Envious Burst",
+		desc: "All status changes are returned to normal.",
+		shortDesc: "All status changes are returned to normal.",
+	},
+	burningdesire: {
+		name: "Burning Desire",
+		desc: "High chance to burn.",
+		shortDesc: "High chance to burn.",
+	},
+	burningpassion: {
+		name: "Burning Passion",
+		desc: "Chance to burn.",
+		shortDesc: "Chance to burn.",
+	},
+	heartshock: {
+		name: "Heart Shock",
+		desc: "User tells a shocking secret. It may also cause paralysis.",
+		shortDesc: "User tells a shocking secret. It may also cause paralysis.",
+	},
+	spiralhearts: {
+		name: "Spiral Hearts",
+		desc: "The user spins around rapidly, sending a flurry of heart shaped projectiles at the opposing team. This move hits all Pokemon on the opposing team.",
+		shortDesc: "The user spins around rapidly, sending a flurry of heart shaped projectiles at the opposing team. This move hits all Pokemon on the opposing team.",
+	},
+	deathyweathy: {
+		name: "Deathy Weathy",
+		desc: "It may also cause paralysis.",
+		shortDesc: "It may also cause paralysis.",
+	},
+	burningwave: {
+		name: "Burning Wave",
+		desc: "This attack also deals Fire-type damage.",
+		shortDesc: "This attack also deals Fire-type damage.",
+	},
+	fossilize: {
+		name: "Fossilize",
+		desc: "Changes the target's type to Rock.",
+		shortDesc: "Changes the target's type to Rock.",
+	},
+	enviousheart: {
+		name: "Envious Heart",
+		desc: "All status changes are returned to normal.",
+		shortDesc: "All status changes are returned to normal.",
+	},
+	superego: {
+		name: "Super Ego",
+		desc: "May disable last move used by target.",
+		shortDesc: "May disable last move used by target.",
+	},
+	chaoticnoise: {
+		name: "Chaotic Noise",
+		desc: "The user lets loose a horribly echoing shout with the power to inflict damage.",
+		shortDesc: "The user lets loose a horribly echoing shout with the power to inflict damage.",
+	},
+	poseidonwave: {
+		name: "Poseidon Wave",
+		desc: "This attack also deals Water-type damage.",
+		shortDesc: "This attack also deals Water-type damage.",
+	},
+	hightide: {
+		name: "High Tide",
+		desc: "This sharply raises the Speed stat of Water-type Pokemon.",
+		shortDesc: "This sharply raises the Speed stat of Water-type Pokemon.",
+	},
+	embalm: {
+		name: "Embalm",
+		desc: "Gives the target the ability Mummy.",
+		shortDesc: "Gives the target the ability Mummy.",
+	},
+	sunflowerburst: {
+		name: "Sunflower Burst",
+		desc: "The user sends out a ray of scorching hot heat which causes the sunlight to turn harsh.",
+		shortDesc: "The user sends out a ray of scorching hot heat which causes the sunlight to turn harsh.",
+	},
+	slingshot: {
+		name: "Slingshot",
+		desc: "This attack always goes before any other move.",
+		shortDesc: "This attack always goes before any other move.",
+	},
+	sandslash: {
+		name: "Sand Slash",
+		desc: "A slash of sand, a Sandslash if you will. Critical hits land more easily.",
+		shortDesc: "A slash of sand, a Sandslash if you will. Critical hits land more easily.",
+	},
+	autumnwind: {
+		name: "Autumn Wind",
+		desc: "The target becomes trapped within a fierce vortex of fire that rages for four to five turns.",
+		shortDesc: "The target becomes trapped within a fierce vortex of fire that rages for four to five turns.",
+	},
+	darkfire: {
+		name: "Dark Fire",
+		desc: "This attack also deals Dark-type damage.",
+		shortDesc: "This attack also deals Dark-type damage.",
+	},
+	mothmunch: {
+		name: "Moth Munch",
+		desc: "Double damage against Fabric, Paper and Light types.",
+		shortDesc: "Double damage against Fabric, Paper and Light types.",
+	},
+	plantcloak: {
+		name: "Plant Cloak",
+		desc: "Drains health. Also deals Bug-type damage.",
+		shortDesc: "Drains health. Also deals Bug-type damage.",
+	},
+	sandcloak: {
+		name: "Sand Cloak",
+		desc: "May protect the user. Also deals Bug-type damage.",
+		shortDesc: "May protect the user. Also deals Bug-type damage.",
+	},
+	trashcloak: {
+		name: "Trash Cloak",
+		desc: "May sharply raise Defense. Also deals Bug-type damage.",
+		shortDesc: "May sharply raise Defense. Also deals Bug-type damage.",
+	},
+	burningice: {
+		name: "Burning Ice",
+		desc: "This attack also deals Fire-type damage.",
+		shortDesc: "This attack also deals Fire-type damage.",
+	},
+	sunset: {
+		name: "Sunset",
+		desc: "Only usable in Sunny weather. Removes Sunny weather, burns and confuses the target.",
+		shortDesc: "Only usable in Sunny weather. Removes Sunny weather, burns and confuses the target.",
+	},
+	metallica: {
+		name: "Metallica",
+		desc: "The user turns the foe's power against it. It does more damage the higher the target's Attack stat.",
+		shortDesc: "The user turns the foe's power against it. It does more damage the higher the target's Attack stat.",
+	},
+	emeraldsplash: {
+		name: "Emerald Splash",
+		desc: "EMERALDO SPLASHO! Hits both opponents.",
+		shortDesc: "EMERALDO SPLASHO! Hits both opponents.",
+	},
+	secretingredient: {
+		name: "Secret Ingredient",
+		desc: "Secondary effect depends on user's type.",
+		shortDesc: "Secondary effect depends on user's type.",
+	},
+	gettertomahawk: {
+		name: "Getter Tomahawk",
+		desc: "Changes Gettarobo into Getter 1. Chance to 1 hit KO.",
+		shortDesc: "Changes Gettarobo into Getter 1. Chance to 1 hit KO.",
+	},
+	drillattack: {
+		name: "Drill Attack",
+		desc: "Changes Gettarobo into Getter 2. Critical hits land more easily.",
+		shortDesc: "Changes Gettarobo into Getter 2. Critical hits land more easily.",
+	},
+	gettermissile: {
+		name: "Getter Missile",
+		desc: "Changes Gettarobo into Getter 3. Hits both opponents, and may also make them flinch.",
+		shortDesc: "Changes Gettarobo into Getter 3. Hits both opponents, and may also make them flinch.",
+	},
+	getterbeam: {
+		name: "Getter Beam",
+		desc: "This move can be used only after the user has used all the other moves it knows in the battle.",
+		shortDesc: "This move can be used only after the user has used all the other moves it knows in the battle.",
+	},
+	tomahawkboomerang: {
+		name: "TomahawkBoomerang",
+		desc: "Changes Gettarobo into Getter 1. Loops to hit the target twice, coming and going.",
+		shortDesc: "Changes Gettarobo into Getter 1. Loops to hit the target twice, coming and going.",
+	},
+	heatseekmissile: {
+		name: "HeatSeek Missile",
+		desc: "This attack never misses.",
+		shortDesc: "This attack never misses.",
+	},
+	eternalmeek: {
+		name: "Eternal Meek",
+		desc: "Goes first.",
+		shortDesc: "Goes first.",
+	},
+	finale: {
+		name: "Finale",
+		desc: "This move can be used only after the user has used all the other moves it knows in the battle.",
+		shortDesc: "This move can be used only after the user has used all the other moves it knows in the battle.",
+	},
+	chairsmack: {
+		name: "Chair Smack",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	harvesting: {
+		name: "Harvesting",
+		desc: "If the target is holding a Berry, the user eats it and gains its effect.",
+		shortDesc: "If the target is holding a Berry, the user eats it and gains its effect.",
+	},
+	salamanderball: {
+		name: "Salamander Ball",
+		desc: "High chance to burn.",
+		shortDesc: "High chance to burn.",
+	},
+	devilsknife: {
+		name: "Devilsknife",
+		desc: "Strikes two to five times in a row.",
+		shortDesc: "Strikes two to five times in a row.",
+	},
+	chaosbomb: {
+		name: "Chaos Bomb",
+		desc: "The user can't move on the next turn.",
+		shortDesc: "The user can't move on the next turn.",
+	},
+	faithbeam: {
+		name: "Faith Beam",
+		desc: "A full-power attack that grows more powerful the more the user likes its Trainer.",
+		shortDesc: "A full-power attack that grows more powerful the more the user likes its Trainer.",
+	},
+	seventrumpets: {
+		name: "Seven Trumpets",
+		desc: "Call on the power of one of seven divine trumpets.",
+		shortDesc: "Call on the power of one of seven divine trumpets.",
+	},
+	firsttrumpet: {
+		name: "First Trumpet",
+		desc: "A divine trumpet that makes it Hail and burns the target.",
+		shortDesc: "A divine trumpet that makes it Hail and burns the target.",
+	},
+	secondtrumpet: {
+		name: "Second Trumpet",
+		desc: "A divine trumpet that deals massive damage to Water types and causes Burn.",
+		shortDesc: "A divine trumpet that deals massive damage to Water types and causes Burn.",
+	},
+	thirdtrumpet: {
+		name: "Third Trumpet",
+		desc: "A divine trumpet that calls on the power of a star. Badly poisons the target.",
+		shortDesc: "A divine trumpet that calls on the power of a star. Badly poisons the target.",
+	},
+	fourthtrumpet: {
+		name: "Fourth Trumpet",
+		desc: "A divine trumpet that causes complete darkness. Completely lowers the target's Acc and starts Midnight.",
+		shortDesc: "A divine trumpet that causes complete darkness. Completely lowers the target's Acc and starts Midnight.",
+	},
+	fifthtrumpet: {
+		name: "Fifth Trumpet",
+		desc: "A divine trumpet that calls on a swarm of locusts. Leaves the target with at least one health.",
+		shortDesc: "A divine trumpet that calls on a swarm of locusts. Leaves the target with at least one health.",
+	},
+	sixthtrumpet: {
+		name: "Sixth Trumpet",
+		desc: "A divine trumpet unleashes four angels commanding 200 million troops. Hits 1 to ??? times.",
+		shortDesc: "A divine trumpet unleashes four angels commanding 200 million troops. Hits 1 to ??? times.",
+	},
+	seventhtrumpet: {
+		name: "Seventh Trumpet",
+		desc: "The final trumpet. 1 hit KO.",
+		shortDesc: "The final trumpet. 1 hit KO.",
+	},
+	tenplagues: {
+		name: "Ten Plagues",
+		desc: "Call on the power of one of ten ancient divine plagues.",
+		shortDesc: "Call on the power of one of ten ancient divine plagues.",
+	},
+	firstplague: {
+		name: "First Plague",
+		desc: "A divine plague that does massive damage to water types and lowers the power of water type moves.",
+		shortDesc: "A divine plague that does massive damage to water types and lowers the power of water type moves.",
+	},
+	secondplague: {
+		name: "Second Plague",
+		desc: "Summons a plague of frogs that hits through protecting moves and never misses.",
+		shortDesc: "Summons a plague of frogs that hits through protecting moves and never misses.",
+	},
+	thirdplague: {
+		name: "Third Plague",
+		desc: "Summons a plague of gnats. Badly poisons the target.",
+		shortDesc: "Summons a plague of gnats. Badly poisons the target.",
+	},
+	fourthplague: {
+		name: "Fourth Plague",
+		desc: "Summons a plague of flies. Hits 1 to ??? times.",
+		shortDesc: "Summons a plague of flies. Hits 1 to ??? times.",
+	},
+	fifthplague: {
+		name: "Fifth Plague",
+		desc: "Summons a plague that kills animals. Changes targets ability to Infected.",
+		shortDesc: "Summons a plague that kills animals. Changes targets ability to Infected.",
+	},
+	sixthplague: {
+		name: "Sixth Plague",
+		desc: "Summons a plague of boils. Burns the target.",
+		shortDesc: "Summons a plague of boils. Burns the target.",
+	},
+	seventhplague: {
+		name: "Seventh Plague",
+		desc: "Summons a plague that makes it Hail and burns the target.",
+		shortDesc: "Summons a plague that makes it Hail and burns the target.",
+	},
+	eigthplague: {
+		name: "Eigth Plague",
+		desc: "Summons a plague that removes the target's item, prevents the use of items and healing.",
+		shortDesc: "Summons a plague that removes the target's item, prevents the use of items and healing.",
+	},
+	ninthplague: {
+		name: "Ninth Plague",
+		desc: "Summons a plague of complete darkness. Completely lowers the target's Acc and starts Midnight.",
+		shortDesc: "Summons a plague of complete darkness. Completely lowers the target's Acc and starts Midnight.",
+	},
+	tenthplague: {
+		name: "Tenth Plague",
+		desc: "The final plague. 1 hit KO.",
+		shortDesc: "The final plague. 1 hit KO.",
+	},
+	frigophobia: {
+		name: "Frigophobia",
+		desc: "The target is struck with the phobia of the cold. 30% chance to freeze.",
+		shortDesc: "The target is struck with the phobia of the cold. 30% chance to freeze.",
+	},
+	dragonmist: {
+		name: "Dragon Mist",
+		desc: "High chance to confuse the target.",
+		shortDesc: "High chance to confuse the target.",
+	},
+	breathblast: {
+		name: "Breath Blast",
+		desc: "The user exhales a mighty gust that inflicts damage. It may also leave the target with paralysis.",
+		shortDesc: "The user exhales a mighty gust that inflicts damage. It may also leave the target with paralysis.",
+	},
+	fieryblast: {
+		name: "Fiery Blast",
+		desc: "Hits the target two to five times in a row.",
+		shortDesc: "Hits the target two to five times in a row.",
+	},
+	faithcharge: {
+		name: "Faith Charge",
+		desc: "A full-power attack that grows more powerful the more the user likes its Trainer.",
+		shortDesc: "A full-power attack that grows more powerful the more the user likes its Trainer.",
+	},
+	honorbind: {
+		name: "Honor Bind",
+		desc: "The target can only use attack moves for three turns.",
+		shortDesc: "The target can only use attack moves for three turns.",
+	},
+	batteryacid: {
+		name: "Battery Acid",
+		desc: "Chance to poison the target.",
+		shortDesc: "Chance to poison the target.",
+	},
+	optimization: {
+		name: "Optimization",
+		desc: "The user optimizes themselves on the first turn, then raises all of their stats on the second turn.",
+		shortDesc: "The user optimizes themselves on the first turn, then raises all of their stats on the second turn.",
+	},
+	lunatictime: {
+		name: "Lunatic Time",
+		desc: "All moves become Chaos-type for 6 turns.",
+		shortDesc: "All moves become Chaos-type for 6 turns.",
+	},
+	madepiphany: {
+		name: "Mad Epiphany",
+		desc: "Raises the user's Attack and SpAtk 3 stages, but confuses the user.",
+		shortDesc: "Raises the user's Attack and SpAtk 3 stages, but confuses the user.",
+	},
+	equalize: {
+		name: "Equalize",
+		desc: "All moves become typeless for 7 turns.",
+		shortDesc: "All moves become typeless for 7 turns.",
+	},
+	catatonia: {
+		name: "Catatonia",
+		desc: "Pulls its thoughts together and becomes sane, removing its Chaos-type. Fails if not Chaos-type.",
+		shortDesc: "Pulls its thoughts together and becomes sane, removing its Chaos-type. Fails if not Chaos-type.",
+	},
+	everyoneexplodenow: {
+		name: "EveryoneExplodeNow",
+		desc: "Everybody on the field uses Explosion.",
+		shortDesc: "Everybody on the field uses Explosion.",
+	},
+	schizoboost: {
+		name: "Schizo Boost",
+		desc: "Maxes a random stat, Minimizes a random stat.",
+		shortDesc: "Maxes a random stat, Minimizes a random stat.",
+	},
+	decay: {
+		name: "Decay",
+		desc: "The target's HP stat is reduced.",
+		shortDesc: "The target's HP stat is reduced.",
+	},
+	decayray: {
+		name: "Decay Ray",
+		desc: "Lower's the target's HP stat.",
+		shortDesc: "Lower's the target's HP stat.",
+	},
+	mayhem: {
+		name: "Mayhem",
+		desc: "The user looses mayhem all around it. Its power varies.",
+		shortDesc: "The user looses mayhem all around it. Its power varies.",
+	},
+	slapstick: {
+		name: "Slapstick",
+		desc: "The user slaps down the target's held item, preventing that item from being used in the battle.",
+		shortDesc: "The user slaps down the target's held item, preventing that item from being used in the battle.",
+	},
+	madprophecy: {
+		name: "Mad Prophecy",
+		desc: "A mad prophecy. Hits two turns after this move is used. Does Chaos damage.",
+		shortDesc: "A mad prophecy. Hits two turns after this move is used. Does Chaos damage.",
+	},
+	defragment: {
+		name: "Defragment",
+		desc: "Increases the user's Speed by 2 and increases the power of the next Cyber-type move.",
+		shortDesc: "Increases the user's Speed by 2 and increases the power of the next Cyber-type move.",
+	},
+	upgradeoptics: {
+		name: "Upgrade Optics",
+		desc: "Increases the power of the next Cyber-type move. Critical hits land more easily.",
+		shortDesc: "Increases the power of the next Cyber-type move. Critical hits land more easily.",
+	},
+	antivirus: {
+		name: "Anti-Virus",
+		desc: "It weakens Virus-type moves. Also boosts SpDef.",
+		shortDesc: "It weakens Virus-type moves. Also boosts SpDef.",
+	},
+	spamattack: {
+		name: "Spam Attack",
+		desc: "Hits two to five times.",
+		shortDesc: "Hits two to five times.",
+	},
+	cloudstorage: {
+		name: "Cloud Storage",
+		desc: "The user hurriedly and randomly uses a move among those known by other Pokemon in the party.",
+		shortDesc: "The user hurriedly and randomly uses a move among those known by other Pokemon in the party.",
+	},
+	magicmissiles: {
+		name: "Magic Missiles",
+		desc: "Magic missiles hit the foe two to five times in a row.",
+		shortDesc: "Magic missiles hit the foe two to five times in a row.",
+	},
+	manapunch: {
+		name: "Mana Punch",
+		desc: "It may make the target flinch.",
+		shortDesc: "It may make the target flinch.",
+	},
+	gadget: {
+		name: "Gadget",
+		desc: "Uses a random Tech-type move.",
+		shortDesc: "Uses a random Tech-type move.",
+	},
+	thermochromia: {
+		name: "Thermo Chromia",
+		desc: "Target's ability becomes Color Change.",
+		shortDesc: "Target's ability becomes Color Change.",
+	},
+	fattenup: {
+		name: "Fatten Up",
+		desc: "Lowers the target's Speed by 4 and changes their ability to Thick Fat.",
+		shortDesc: "Lowers the target's Speed by 4 and changes their ability to Thick Fat.",
+	},
+	eject: {
+		name: "Eject",
+		desc: "The user knocks away the target and drags out another Pokemon in its party. In the wild, the battle ends.",
+		shortDesc: "The user knocks away the target and drags out another Pokemon in its party. In the wild, the battle ends.",
+	},
+	extrachromosome: {
+		name: "Extra Chromosome",
+		desc: "Gives the target the Klutz ability.",
+		shortDesc: "Gives the target the Klutz ability.",
+	},
+	deviationdown: {
+		name: "Deviation Down",
+		desc: "Gives the target the Klutz ability.",
+		shortDesc: "Gives the target the Klutz ability.",
+	},
+	electrophobia: {
+		name: "Electrophobia",
+		desc: "It may also leave the target with paralysis.",
+		shortDesc: "It may also leave the target with paralysis.",
+	},
+	antiairmissile: {
+		name: "Anti-Air Missile",
+		desc: "A flying Pokemon will fall to the ground when hit.",
+		shortDesc: "A flying Pokemon will fall to the ground when hit.",
+	},
+	malfunction: {
+		name: "Malfunction",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	plasmacannon: {
+		name: "Plasma Cannon",
+		desc: "The user fires off a ball of energy that has a high chance to paralyze.",
+		shortDesc: "The user fires off a ball of energy that has a high chance to paralyze.",
+	},
+	overload: {
+		name: "Overload",
+		desc: "The user overloads its systems, attacking everything on the field. Harshly lower's SpAtk.",
+		shortDesc: "The user overloads its systems, attacking everything on the field. Harshly lower's SpAtk.",
+	},
+	construction: {
+		name: "Construction",
+		desc: "Undergo construction on first turn, then raises all of their stats on the second turn.",
+		shortDesc: "Undergo construction on first turn, then raises all of their stats on the second turn.",
+	},
+	cannonball: {
+		name: "Cannonball",
+		desc: "If it misses, the user is hurt instead.",
+		shortDesc: "If it misses, the user is hurt instead.",
+	},
+	liquidmetal: {
+		name: "Liquid Metal",
+		desc: "Guaranteed to Paralyze.",
+		shortDesc: "Guaranteed to Paralyze.",
+	},
+	bindingvoice: {
+		name: "Binding Voice",
+		desc: "Traps the target for four to five turns.",
+		shortDesc: "Traps the target for four to five turns.",
+	},
+	primalnoise: {
+		name: "Primal Noise",
+		desc: "50% chance to reduce the target's Sp. Def stat.",
+		shortDesc: "50% chance to reduce the target's Sp. Def stat.",
+	},
+	firmheart: {
+		name: "Firm Heart",
+		desc: "Raise its Defense in the first turn, then rams the foe on the next turn.",
+		shortDesc: "Raise its Defense in the first turn, then rams the foe on the next turn.",
+	},
+	piercingstab: {
+		name: "Piercing Stab",
+		desc: "Seeking an opening, the user strikes continually. The foe's stat changes don't affect the damage.",
+		shortDesc: "Seeking an opening, the user strikes continually. The foe's stat changes don't affect the damage.",
+	},
+	grimreaper: {
+		name: "Grim Reaper",
+		desc: "When the user knocks out a target with this move, the user's Attack stat rises sharply.",
+		shortDesc: "When the user knocks out a target with this move, the user's Attack stat rises sharply.",
+	},
+	featherstorm: {
+		name: "Feather Storm",
+		desc: "The user expels its feathers in a gust of wind, the user also takes serious damage.",
+		shortDesc: "The user expels its feathers in a gust of wind, the user also takes serious damage.",
+	},
+	vilesmell: {
+		name: "Vile Smell",
+		desc: "Makes the target flinch.",
+		shortDesc: "Makes the target flinch.",
+	},
+	stickyhands: {
+		name: "Sticky Hands",
+		desc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+		shortDesc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+	},
+	diamondtail: {
+		name: "Diamond Tail",
+		desc: "Raises the user's SpDef stat.",
+		shortDesc: "Raises the user's SpDef stat.",
+	},
+	chromobeam: {
+		name: "Chromo Beam",
+		desc: "Randomly generated light. Its power varies.",
+		shortDesc: "Randomly generated light. Its power varies.",
+	},
+	randomgenerate: {
+		name: "Random Generate",
+		desc: "Randomly generated DATA. Its power varies.",
+		shortDesc: "Randomly generated DATA. Its power varies.",
+	},
+	flashdarts: {
+		name: "Flash Darts",
+		desc: "Hits two to five times in a row.",
+		shortDesc: "Hits two to five times in a row.",
+	},
+	pointlazer: {
+		name: "Point Lazer",
+		desc: "Raises SpAtk on the first turn, then attacks on the second. High crit rate.",
+		shortDesc: "Raises SpAtk on the first turn, then attacks on the second. High crit rate.",
+	},
+	supernova: {
+		name: "Super Nova",
+		desc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+		shortDesc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+	},
+	rawpower: {
+		name: "Raw Power",
+		desc: "The user attacks the target at full power. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+		shortDesc: "The user attacks the target at full power. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+	},
+	galeforce: {
+		name: "Gale Force",
+		desc: "Its power varies.",
+		shortDesc: "Its power varies.",
+	},
+	fearfactor: {
+		name: "Fear Factor",
+		desc: "Its power varies.",
+		shortDesc: "Its power varies.",
+	},
+	requiem: {
+		name: "Requiem",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	thornwhip: {
+		name: "Thorn Whip",
+		desc: "The user strikes the target with a thorny whip. This attack always results in a critical hit.",
+		shortDesc: "The user strikes the target with a thorny whip. This attack always results in a critical hit.",
+	},
+	mandiblecrush: {
+		name: "Mandible Crush",
+		desc: "The target is bitten with viciously sharp mandibles. May make target flinch.",
+		shortDesc: "The target is bitten with viciously sharp mandibles. May make target flinch.",
+	},
+	terminate: {
+		name: "Terminate",
+		desc: "When the user knocks out a target with this move, the user's Attack stat rises sharply.",
+		shortDesc: "When the user knocks out a target with this move, the user's Attack stat rises sharply.",
+	},
+	steamblast: {
+		name: "Steam Blast",
+		desc: "The user immerses the target in superheated steam. May also leave the target with a burn.",
+		shortDesc: "The user immerses the target in superheated steam. May also leave the target with a burn.",
+	},
+	afterburn: {
+		name: "Afterburn",
+		desc: "The user attacks last. In return, this move is guaranteed not to miss.",
+		shortDesc: "The user attacks last. In return, this move is guaranteed not to miss.",
+	},
+	aquacrunch: {
+		name: "Aqua Crunch",
+		desc: "The user crunches up the target with sharp fangs. It may also lower the target's Defense stat.",
+		shortDesc: "The user crunches up the target with sharp fangs. It may also lower the target's Defense stat.",
+	},
+	bloom: {
+		name: "Bloom",
+		desc: "It may also raise the user's Sp. Atk stat.",
+		shortDesc: "It may also raise the user's Sp. Atk stat.",
+	},
+	earthbomb: {
+		name: "Earth Bomb",
+		desc: "Attacks everything around it, but also receives terrible damage.",
+		shortDesc: "Attacks everything around it, but also receives terrible damage.",
+	},
+	acidspit: {
+		name: "Acid Spit",
+		desc: "Spit acid in target's face to 90% lower its accuracy.",
+		shortDesc: "Spit acid in target's face to 90% lower its accuracy.",
+	},
+	sludgepunch: {
+		name: "Sludge Punch",
+		desc: "A poison punch. It may also poison the target.",
+		shortDesc: "A poison punch. It may also poison the target.",
+	},
+	shotgunblast: {
+		name: "Shotgun Blast",
+		desc: "It also damages Pokemon next to the target.",
+		shortDesc: "It also damages Pokemon next to the target.",
+	},
+	clobberclub: {
+		name: "Clobber Club",
+		desc: "The user attacks the target with a club. It may also confuse the target.",
+		shortDesc: "The user attacks the target with a club. It may also confuse the target.",
+	},
+	talons: {
+		name: "Talons",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	blackmagic: {
+		name: "Black Magic",
+		desc: "This attack also deals Dark-type damage.",
+		shortDesc: "This attack also deals Dark-type damage.",
+	},
+	snipershot: {
+		name: "Sniper Shot",
+		desc: "Take aim on the first turn and fire on the second. Critical hits land more easily.",
+		shortDesc: "Take aim on the first turn and fire on the second. Critical hits land more easily.",
+	},
+	acidburn: {
+		name: "Acid Burn",
+		desc: "HIGH CHANCE TO BURN.",
+		shortDesc: "HIGH CHANCE TO BURN.",
+	},
+	arcticspear: {
+		name: "Arctic Spear",
+		desc: "High critical hit ratio.",
+		shortDesc: "High critical hit ratio.",
+	},
+	stellarrush: {
+		name: "Stellar Rush",
+		desc: "Raises the user's Attack.",
+		shortDesc: "Raises the user's Attack.",
+	},
+	iceberg: {
+		name: "Iceberg",
+		desc: "The lower the user's HP, the less powerful this attack becomes.",
+		shortDesc: "The lower the user's HP, the less powerful this attack becomes.",
+	},
+	meteorrain: {
+		name: "Meteor Rain",
+		desc: "Hits everything around the user.",
+		shortDesc: "Hits everything around the user.",
+	},
+	lightningball: {
+		name: "Lightning Ball",
+		desc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+		shortDesc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+	},
+	fairyring: {
+		name: "Fairy Ring",
+		desc: "The targe lured into a mysterious circle and vanishes. 1 hit KO.",
+		shortDesc: "The targe lured into a mysterious circle and vanishes. 1 hit KO.",
+	},
+	freezepoint: {
+		name: "Freeze Point",
+		desc: "All Water moves become Ice-type for 10 turns.",
+		shortDesc: "All Water moves become Ice-type for 10 turns.",
+	},
+	vinehold: {
+		name: "Vine Hold",
+		desc: "Things such as long bodies or tentacles are used to bind and squeeze the foe for four to five turns.",
+		shortDesc: "Things such as long bodies or tentacles are used to bind and squeeze the foe for four to five turns.",
+	},
+	scorchingsand: {
+		name: "Scorching Sand",
+		desc: "Shoots scorching sand at the target. It may also leave the target with a burn.",
+		shortDesc: "Shoots scorching sand at the target. It may also leave the target with a burn.",
+	},
+	dazzlingpetals: {
+		name: "Dazzling Petals",
+		desc: "Dazzling Petals that may also leave the target confused.",
+		shortDesc: "Dazzling Petals that may also leave the target confused.",
+	},
+	icecage: {
+		name: "Ice Cage",
+		desc: "Traps the foe in a cage of ice for four to five turns.",
+		shortDesc: "Traps the foe in a cage of ice for four to five turns.",
+	},
+	magmatail: {
+		name: "Magma Tail",
+		desc: "Small chance to cause a burn.",
+		shortDesc: "Small chance to cause a burn.",
+	},
+	thawing: {
+		name: "Thawing",
+		desc: "All Ice moves become Water-type for 10 turns.",
+		shortDesc: "All Ice moves become Water-type for 10 turns.",
+	},
+	spikedarmor: {
+		name: "Spiked Armor",
+		desc: "The user gains spikes all over it, causing pokemon to take damage if they make contact.",
+		shortDesc: "The user gains spikes all over it, causing pokemon to take damage if they make contact.",
+	},
+	greenthumb: {
+		name: "Green Thumb",
+		desc: "The user boosts the power of the Grass move it uses next. It also raises the user's Accuracy stat.",
+		shortDesc: "The user boosts the power of the Grass move it uses next. It also raises the user's Accuracy stat.",
+	},
+	heartpunch: {
+		name: "Heart Punch",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	sexytackle: {
+		name: "Sexy Tackle",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	sandpaper: {
+		name: "Sandpaper",
+		desc: "Lowers the foe's Defense stat.",
+		shortDesc: "Lowers the foe's Defense stat.",
+	},
+	sonicblade: {
+		name: "Sonic Blade",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	deathnote: {
+		name: "Death Note",
+		desc: "1 hit KO.",
+		shortDesc: "1 hit KO.",
+	},
+	pullwool: {
+		name: "Pull Wool",
+		desc: "Pull wool over the target's eyes, lowering its accuracy by 2 stages.",
+		shortDesc: "Pull wool over the target's eyes, lowering its accuracy by 2 stages.",
+	},
+	laughgas: {
+		name: "Laugh Gas",
+		desc: "Very high chance to Confuse the target.",
+		shortDesc: "Very high chance to Confuse the target.",
+	},
+	roundhousekick: {
+		name: "Roundhouse Kick",
+		desc: "A powerful spinning kick that hits everything around the user.",
+		shortDesc: "A powerful spinning kick that hits everything around the user.",
+	},
+	wormhole: {
+		name: "Wormhole",
+		desc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+	},
+	moltenrock: {
+		name: "Molten Rock",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	stampede: {
+		name: "Stampede",
+		desc: "The user attacks the foe with a hazardous, full-power charge. The user also takes terrible damage.",
+		shortDesc: "The user attacks the foe with a hazardous, full-power charge. The user also takes terrible damage.",
+	},
+	sledrush: {
+		name: "Sled Rush",
+		desc: "Building up more power, it raises the user's Speed stat.",
+		shortDesc: "Building up more power, it raises the user's Speed stat.",
+	},
+	antennatracker: {
+		name: "Antenna Tracker",
+		desc: "Raises the Accuracy stat of all Bug-types by 2.",
+		shortDesc: "Raises the Accuracy stat of all Bug-types by 2.",
+	},
+	terrakinesis: {
+		name: "Terrakinesis",
+		desc: "Psychic powers set off an earthquake that strikes every Pokemon around it.",
+		shortDesc: "Psychic powers set off an earthquake that strikes every Pokemon around it.",
+	},
+	backstroke: {
+		name: "Backstroke",
+		desc: "After making its attack, the user flips away to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user flips away to switch places with a party Pokemon in waiting.",
+	},
+	smokeout: {
+		name: "Smoke Out",
+		desc: "Lowers the target's Evasion.",
+		shortDesc: "Lowers the target's Evasion.",
+	},
+	staticslash: {
+		name: "Static Slash",
+		desc: "High critical hit ratio. May paralyze the target.",
+		shortDesc: "High critical hit ratio. May paralyze the target.",
+	},
+	squirm: {
+		name: "Squirm",
+		desc: "Very high chance to raise the user's Evasion.",
+		shortDesc: "Very high chance to raise the user's Evasion.",
+	},
+	poisoncoat: {
+		name: "Poison Coat",
+		desc: "Raises SpDef and makes it so contact moves will have a high chance to Poison.",
+		shortDesc: "Raises SpDef and makes it so contact moves will have a high chance to Poison.",
+	},
+	leadcoat: {
+		name: "Lead Coat",
+		desc: "Raises Defense and makes it so contact moves will have a high chance to Poison.",
+		shortDesc: "Raises Defense and makes it so contact moves will have a high chance to Poison.",
+	},
+	daydream: {
+		name: "Daydream",
+		desc: "Boosts the user's Sp. Atk, Sp. Def, and Speed stats. Lowers the user's Accuracy.",
+		shortDesc: "Boosts the user's Sp. Atk, Sp. Def, and Speed stats. Lowers the user's Accuracy.",
+	},
+	rottingburst: {
+		name: "Rotting Burst",
+		desc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+		shortDesc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+	},
+	zombietongue: {
+		name: "Zombie Tongue",
+		desc: "Paralyzes, traps and squeezes the target for 3-5 turns.",
+		shortDesc: "Paralyzes, traps and squeezes the target for 3-5 turns.",
+	},
+	staticcling: {
+		name: "Static Cling",
+		desc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+		shortDesc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+	},
+	cloudguard: {
+		name: "Cloud Guard",
+		desc: "It drastically raises the user's Sp. Def stat.",
+		shortDesc: "It drastically raises the user's Sp. Def stat.",
+	},
+	futurepower: {
+		name: "FuturePower",
+		desc: "The user attacks with a futuristic power. It may also raise all the user's stats at once.",
+		shortDesc: "The user attacks with a futuristic power. It may also raise all the user's stats at once.",
+	},
+	leafcanopy: {
+		name: "Leaf Canopy",
+		desc: "Leaf Canopy above your team's head to protect from above and from weather.",
+		shortDesc: "Leaf Canopy above your team's head to protect from above and from weather.",
+	},
+	serenade: {
+		name: "Serenade",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	pillowpile: {
+		name: "Pillow Pile",
+		desc: "The user lays COMFY PILLOWS at the foe's feet. They make foes drowsy that switch into battle.",
+		shortDesc: "The user lays COMFY PILLOWS at the foe's feet. They make foes drowsy that switch into battle.",
+	},
+	wiretrap: {
+		name: "Wire Trap",
+		desc: "The user lays WIRES at the foe's feet. They make foes paralyzed that switch into battle.",
+		shortDesc: "The user lays WIRES at the foe's feet. They make foes paralyzed that switch into battle.",
+	},
+	graverob: {
+		name: "Grave Rob",
+		desc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+		shortDesc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+	},
+	fadeaway: {
+		name: "Fade Away",
+		desc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+	},
+	dirge: {
+		name: "Dirge",
+		desc: "This attack also deals Dark-type damage.",
+		shortDesc: "This attack also deals Dark-type damage.",
+	},
+	shakedown: {
+		name: "Shakedown",
+		desc: "Shake the target senseless. It may also cause confusion.",
+		shortDesc: "Shake the target senseless. It may also cause confusion.",
+	},
+	maul: {
+		name: "Maul",
+		desc: "The user crunches up the target with sharp fangs. High chance to lower the target's Defense stat.",
+		shortDesc: "The user crunches up the target with sharp fangs. High chance to lower the target's Defense stat.",
+	},
+	magnetpulse: {
+		name: "Magnet Pulse",
+		desc: "Drags out another Pokemon in the target's party. In the wild, the battle ends.",
+		shortDesc: "Drags out another Pokemon in the target's party. In the wild, the battle ends.",
+	},
+	auroraglow: {
+		name: "Aurora Glow",
+		desc: "Heals Light and Cosmic types for 10 turns.",
+		shortDesc: "Heals Light and Cosmic types for 10 turns.",
+	},
+	skylight: {
+		name: "Skylight",
+		desc: "Chance to start an Aurora Glow.",
+		shortDesc: "Chance to start an Aurora Glow.",
+	},
+	dubiousdream: {
+		name: "Dubious Dream",
+		desc: "Can only be used when the user is asleep. Small chance to flinch.",
+		shortDesc: "Can only be used when the user is asleep. Small chance to flinch.",
+	},
+	nightmareproject: {
+		name: "Nightmare Project",
+		desc: "The user projects its nightmares. Can only be used while asleep. May flinch.",
+		shortDesc: "The user projects its nightmares. Can only be used while asleep. May flinch.",
+	},
+	cementblast: {
+		name: "Cement Blast",
+		desc: "May reduce the targets' Speed stat.",
+		shortDesc: "May reduce the targets' Speed stat.",
+	},
+	snowblind: {
+		name: "Snow Blind",
+		desc: "The user lets loose a flow of brightly shining snow, blinding the target and lowering its accuracy.",
+		shortDesc: "The user lets loose a flow of brightly shining snow, blinding the target and lowering its accuracy.",
+	},
+	silentsteps: {
+		name: "Silent Steps",
+		desc: "Raises Evasion by 4. Cannot use Sound based moves.",
+		shortDesc: "Raises Evasion by 4. Cannot use Sound based moves.",
+	},
+	enchant: {
+		name: "Enchant",
+		desc: "The target becomes Magic type.",
+		shortDesc: "The target becomes Magic type.",
+	},
+	mistletoe: {
+		name: "Mistletoe",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	claypulse: {
+		name: "Clay Pulse",
+		desc: "May reduce the targets' Speed stat.",
+		shortDesc: "May reduce the targets' Speed stat.",
+	},
+	warmupflex: {
+		name: "Warmup Flex",
+		desc: "Raises Attack, Defense and Speed. Only works on the first turn.",
+		shortDesc: "Raises Attack, Defense and Speed. Only works on the first turn.",
+	},
+	antstrength: {
+		name: "Ant Strength",
+		desc: "The user attacks the target with great power. However, it also lowers the user's Attack and Defense.",
+		shortDesc: "The user attacks the target with great power. However, it also lowers the user's Attack and Defense.",
+	},
+	freezerburn: {
+		name: "Freezer Burn",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	percussiveslap: {
+		name: "Percussive Slap",
+		desc: "The target is slapped repeatedly, back and forth, two to five times in a row.",
+		shortDesc: "The target is slapped repeatedly, back and forth, two to five times in a row.",
+	},
+	capoeira: {
+		name: "Capoeira",
+		desc: " The user strikes everything around it with a frenzied dance of spins and kicks.",
+		shortDesc: " The user strikes everything around it with a frenzied dance of spins and kicks.",
+	},
+	jailbreak: {
+		name: "Jailbreak",
+		desc: "Eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+		shortDesc: "Eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+	},
+	tiptoe: {
+		name: "Tiptoe",
+		desc: "Drastically raises Evasion, drastically lowers Speed.",
+		shortDesc: "Drastically raises Evasion, drastically lowers Speed.",
+	},
+	woodenfang: {
+		name: "Wooden Fang",
+		desc: "High chance to lower Defense.",
+		shortDesc: "High chance to lower Defense.",
+	},
+	shipwreck: {
+		name: "Shipwreck",
+		desc: "The user also takes terrible damage.",
+		shortDesc: "The user also takes terrible damage.",
+	},
+	weld: {
+		name: "Weld",
+		desc: "Raises the Defense and SpDef of all Steel-types on the field.",
+		shortDesc: "Raises the Defense and SpDef of all Steel-types on the field.",
+	},
+	finalsting: {
+		name: "Final Sting",
+		desc: "Last ditch effort, the user delivers a devastating full-force sting. The user faints after using this move.",
+		shortDesc: "Last ditch effort, the user delivers a devastating full-force sting. The user faints after using this move.",
+	},
+	sharkbite: {
+		name: "Shark Bite",
+		desc: "The foe's stat changes don't affect the damage.",
+		shortDesc: "The foe's stat changes don't affect the damage.",
+	},
+	chainrattle: {
+		name: "Chain Rattle",
+		desc: "Makes unnerving sound by clanging its chains, possibly lowering the special defense.",
+		shortDesc: "Makes unnerving sound by clanging its chains, possibly lowering the special defense.",
+	},
+	paddedroom: {
+		name: "Padded Room",
+		desc: "Creates a padded room, preventing contact moves from being used for 5 turns.",
+		shortDesc: "Creates a padded room, preventing contact moves from being used for 5 turns.",
+	},
+	healingcircle: {
+		name: "Healing Circle",
+		desc: "The user makes a Healing Circle that heals incoming pokemon on your side.",
+		shortDesc: "The user makes a Healing Circle that heals incoming pokemon on your side.",
+	},
+	mowdown: {
+		name: "Mow Down",
+		desc: "Only usable in Grassy Terrain. Removes Grassy Terrain.",
+		shortDesc: "Only usable in Grassy Terrain. Removes Grassy Terrain.",
+	},
+	speedsap: {
+		name: "Speed Sap",
+		desc: "The user restores its HP by the same amount as the target's Speed stat and lowers it.",
+		shortDesc: "The user restores its HP by the same amount as the target's Speed stat and lowers it.",
+	},
+	skitter: {
+		name: "Skitter",
+		desc: "It raises the user's Speed stat.",
+		shortDesc: "It raises the user's Speed stat.",
+	},
+	elegy: {
+		name: "Elegy",
+		desc: "If an ally fainted in the last turn, this attack's damage increases.",
+		shortDesc: "If an ally fainted in the last turn, this attack's damage increases.",
+	},
+	grapple: {
+		name: "Grapple",
+		desc: "Decreases the user's Evasion 2 stages.",
+		shortDesc: "Decreases the user's Evasion 2 stages.",
+	},
+	rustspray: {
+		name: "Rust Spray",
+		desc: "If the target's HP is down to about half, this attack will hit with double the power.",
+		shortDesc: "If the target's HP is down to about half, this attack will hit with double the power.",
+	},
+	heatsap: {
+		name: "Heat Sap",
+		desc: "A heat-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A heat-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	hardeningtackle: {
+		name: "Hardening Tackle",
+		desc: "The user slams its tough body onto the target to raise its Defense stat.",
+		shortDesc: "The user slams its tough body onto the target to raise its Defense stat.",
+	},
+	heartless: {
+		name: "Heartless",
+		desc: "A full-power attack that grows more powerful the less the user likes its Trainer.",
+		shortDesc: "A full-power attack that grows more powerful the less the user likes its Trainer.",
+	},
+	jackpot: {
+		name: "Jackpot",
+		desc: "Numerous coins are hurled at the target to inflict damage. Money is earned after battle.",
+		shortDesc: "Numerous coins are hurled at the target to inflict damage. Money is earned after battle.",
+	},
+	steam: {
+		name: "Steam",
+		desc: "The user STEAM the target to inflict a burn.",
+		shortDesc: "The user STEAM the target to inflict a burn.",
+	},
+	ignite: {
+		name: "Ignite",
+		desc: "Ignite the target to inflict a burn.",
+		shortDesc: "Ignite the target to inflict a burn.",
+	},
+	icyterrain: {
+		name: "Icy Terrain",
+		desc: "The user turns the ground under everyone's feet to ice for five turns. Slows down everyone but Speeds up Ice-types.",
+		shortDesc: "The user turns the ground under everyone's feet to ice for five turns. Slows down everyone but Speeds up Ice-types.",
+	},
+	figureeight: {
+		name: "Figure Eight",
+		desc: "Does double damage during Icy Terrain.",
+		shortDesc: "Does double damage during Icy Terrain.",
+	},
+	passion: {
+		name: "Passion",
+		desc: "A full-power attack that grows more powerful the more the user likes its Trainer.",
+		shortDesc: "A full-power attack that grows more powerful the more the user likes its Trainer.",
+	},
+	soakhorn: {
+		name: "Soak Horn",
+		desc: "May lower the target's Speed stat.",
+		shortDesc: "May lower the target's Speed stat.",
+	},
+	scarletrhapsody: {
+		name: "Scarlet Rhapsody",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	dragonjewels: {
+		name: "Dragon Jewels",
+		desc: "The user launches fireworks at the target two to five times in a row.",
+		shortDesc: "The user launches fireworks at the target two to five times in a row.",
+	},
+	buddhasbowl: {
+		name: "Buddha's Bowl",
+		desc: "The user slams its tough body onto the target to raise its Defense stat.",
+		shortDesc: "The user slams its tough body onto the target to raise its Defense stat.",
+	},
+	fireratrobe: {
+		name: "Fire Rat Robe",
+		desc: "Raises the user's SpDef stat.",
+		shortDesc: "Raises the user's SpDef stat.",
+	},
+	cowrieshell: {
+		name: "Cowrie Shell",
+		desc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	sakedrink: {
+		name: "Sake Drink",
+		desc: "Raises the user's Attack 3 stages, but confuses the user.",
+		shortDesc: "Raises the user's Attack 3 stages, but confuses the user.",
+	},
+	cryptid: {
+		name: "Cryptid",
+		desc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+	},
+	itembox: {
+		name: "Item Box",
+		desc: "Uses a random item from the Item Box.",
+		shortDesc: "Uses a random item from the Item Box.",
+	},
+	greenshell: {
+		name: "Green Shell",
+		desc: "Throws a Green Shell. It is sure to strike first.",
+		shortDesc: "Throws a Green Shell. It is sure to strike first.",
+	},
+	"3greenshells": {
+		name: "3 Green Shells",
+		desc: "Throws three Green Shells. Goes first.",
+		shortDesc: "Throws three Green Shells. Goes first.",
+	},
+	redshell: {
+		name: "Red Shell",
+		desc: "It hits without fail.",
+		shortDesc: "It hits without fail.",
+	},
+	"3redshells": {
+		name: "3 Red Shells",
+		desc: "Hits 1 to 3 times. It hits without fail.",
+		shortDesc: "Hits 1 to 3 times. It hits without fail.",
+	},
+	bananapeel: {
+		name: "Banana Peel",
+		desc: "High chance to flinch.",
+		shortDesc: "High chance to flinch.",
+	},
+	triplebananas: {
+		name: "Triple Bananas",
+		desc: "Hits 1 to 3 times. High chance to flinch.",
+		shortDesc: "Hits 1 to 3 times. High chance to flinch.",
+	},
+	mushroomboost: {
+		name: "Mushroom Boost",
+		desc: "It raises the user's Speed stat.",
+		shortDesc: "It raises the user's Speed stat.",
+	},
+	triplemushroom: {
+		name: "Triple Mushroom",
+		desc: "Hits 1 to 3 times. It raises the user's Speed stat.",
+		shortDesc: "Hits 1 to 3 times. It raises the user's Speed stat.",
+	},
+	goldenmushroom: {
+		name: "Golden Mushroom",
+		desc: "Goes first. It raises the user's Speed stat.",
+		shortDesc: "Goes first. It raises the user's Speed stat.",
+	},
+	fireflower: {
+		name: "Fire Flower",
+		desc: "High chance to burn.",
+		shortDesc: "High chance to burn.",
+	},
+	starman: {
+		name: "Starman",
+		desc: "Protects the user.",
+		shortDesc: "Protects the user.",
+	},
+	blooper: {
+		name: "Blooper",
+		desc: "Lowers target's accuracy.",
+		shortDesc: "Lowers target's accuracy.",
+	},
+	spinyshell: {
+		name: "Spiny Shell",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	bobomb: {
+		name: "Bob-Omb",
+		desc: "Goes last.",
+		shortDesc: "Goes last.",
+	},
+	bulletbill: {
+		name: "Bullet Bill",
+		desc: "Goes first.",
+		shortDesc: "Goes first.",
+	},
+	boomerangflower: {
+		name: "Boomerang Flower",
+		desc: "The user slams the target with a long tail, vines, or tentacle. The target is hit twice in a row.",
+		shortDesc: "The user slams the target with a long tail, vines, or tentacle. The target is hit twice in a row.",
+	},
+	superhorn: {
+		name: "Super Horn",
+		desc: "The user attacks everything around it with the destructive power of a terrible, explosive sound.",
+		shortDesc: "The user attacks everything around it with the destructive power of a terrible, explosive sound.",
+	},
+	ghost: {
+		name: "Ghost",
+		desc: "Very high chance to raise the user's Evasion.",
+		shortDesc: "Very high chance to raise the user's Evasion.",
+	},
+	fakeitembox: {
+		name: "Fake Item Box",
+		desc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+		shortDesc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+	},
+	submerge: {
+		name: "Submerge",
+		desc: "The user takes the foe underwater, then frees them the next turn. The foe cannot attack while underwater.",
+		shortDesc: "The user takes the foe underwater, then frees them the next turn. The foe cannot attack while underwater.",
+	},
+	springcleaning: {
+		name: "Spring Cleaning",
+		desc: "Removes all barriers, hazards and terrains from the field.",
+		shortDesc: "Removes all barriers, hazards and terrains from the field.",
+	},
+	acidtrap: {
+		name: "Acid Trap",
+		desc: "Spit out a trap of stomach acid to supress the ability of pokemon switching in. Damages Food-types.",
+		shortDesc: "Spit out a trap of stomach acid to supress the ability of pokemon switching in. Damages Food-types.",
+	},
+	hotcoals: {
+		name: "Hot Coals",
+		desc: "Lay out a trap of hot coals to burn incoming pokemon.",
+		shortDesc: "Lay out a trap of hot coals to burn incoming pokemon.",
+	},
+	aciddrip: {
+		name: "Acid Drip",
+		desc: "Lower's the opposing side's SpDef for 5 turns.",
+		shortDesc: "Lower's the opposing side's SpDef for 5 turns.",
+	},
+	acidrain: {
+		name: "Acid Rain",
+		desc: "Acid rain falls for five turns, powering up Poison-type moves and damaging non-Poison and Steel types.",
+		shortDesc: "Acid rain falls for five turns, powering up Poison-type moves and damaging non-Poison and Steel types.",
+	},
+	aerialvirus: {
+		name: "Aerial Virus",
+		desc: "A flying Pokemon will fall to the ground when hit.",
+		shortDesc: "A flying Pokemon will fall to the ground when hit.",
+	},
+	smokestack: {
+		name: "Smoke Stack",
+		desc: "Starts acid rain.",
+		shortDesc: "Starts acid rain.",
+	},
+	nightcall: {
+		name: "Night Call",
+		desc: "Starts Midnight weather.",
+		shortDesc: "Starts Midnight weather.",
+	},
+	bury: {
+		name: "Bury",
+		desc: "Traps for 3 to 5 turns. Double damage to Ghost and Zombie types.",
+		shortDesc: "Traps for 3 to 5 turns. Double damage to Ghost and Zombie types.",
+	},
+	greenhousegas: {
+		name: "Greenhouse Gas",
+		desc: "Greenhouse gasses boost power of Poison+Fire. Lower power of Water+Ice. Lasts 6 turns.",
+		shortDesc: "Greenhouse gasses boost power of Poison+Fire. Lower power of Water+Ice. Lasts 6 turns.",
+	},
+	marshyterrain: {
+		name: "Marshy Terrain",
+		desc: "Lower's speed of pokemon that aren't Water, Grass or Ground type for 5 turns.",
+		shortDesc: "Lower's speed of pokemon that aren't Water, Grass or Ground type for 5 turns.",
+	},
+	muffa: {
+		name: "Muffa",
+		desc: "Restores HP. Restores more HP in Marshy Terrain, also raising SpDef.",
+		shortDesc: "Restores HP. Restores more HP in Marshy Terrain, also raising SpDef.",
+	},
+	bonewand: {
+		name: "Bone Wand",
+		desc: "May confuse the target.",
+		shortDesc: "May confuse the target.",
+	},
+	bonesword: {
+		name: "Bone Sword",
+		desc: "High crit rate. Sword of bone that may also sharply lower the target's Defense stat.",
+		shortDesc: "High crit rate. Sword of bone that may also sharply lower the target's Defense stat.",
+	},
+	mudslide: {
+		name: "Mudslide",
+		desc: "Hits both foes in a double battle. May lower accuracy.",
+		shortDesc: "Hits both foes in a double battle. May lower accuracy.",
+	},
+	gasoline: {
+		name: "Gasoline",
+		desc: "The target takes more damage from Fire moves for 4 turns.",
+		shortDesc: "The target takes more damage from Fire moves for 4 turns.",
+	},
+	oildrench: {
+		name: "Oil Drench",
+		desc: "The target takes more damage from Fire moves for 2 turns.",
+		shortDesc: "The target takes more damage from Fire moves for 2 turns.",
+	},
+	pacify: {
+		name: "Pacify",
+		desc: "The target cannot use damaging moves for 4 turns.",
+		shortDesc: "The target cannot use damaging moves for 4 turns.",
+	},
+	bonfire: {
+		name: "Bonfire",
+		desc: "The user starts a bonfire that heals incoming pokemon on your side.",
+		shortDesc: "The user starts a bonfire that heals incoming pokemon on your side.",
+	},
+	magnetize: {
+		name: "Magnetize",
+		desc: "The target takes more damage from Steel moves for 4 turns.",
+		shortDesc: "The target takes more damage from Steel moves for 4 turns.",
+	},
+	metallurgy: {
+		name: "Metallurgy",
+		desc: "Changes the target's type to Steel.",
+		shortDesc: "Changes the target's type to Steel.",
+	},
+	rockgather: {
+		name: "Rock Gather",
+		desc: "Restores HP and boosts Defense.",
+		shortDesc: "Restores HP and boosts Defense.",
+	},
+	whet: {
+		name: "Whet",
+		desc: "Drastically raises the user's Attack stat.",
+		shortDesc: "Drastically raises the user's Attack stat.",
+	},
+	illusionarydominance: {
+		name: "IllusionaryDominance",
+		desc: "The user tries to outspeed the opponent. It does more damage the faster the user is.",
+		shortDesc: "The user tries to outspeed the opponent. It does more damage the faster the user is.",
+	},
+	spelunk: {
+		name: "Spelunk",
+		desc: "The user burrows, then attacks on the second turn. It can also be used to exit dungeons.",
+		shortDesc: "The user burrows, then attacks on the second turn. It can also be used to exit dungeons.",
+	},
+	batteringram: {
+		name: "Battering Ram",
+		desc: "It can also break any barrier such as Light Screen and Reflect.",
+		shortDesc: "It can also break any barrier such as Light Screen and Reflect.",
+	},
+	tailclub: {
+		name: "Tail Club",
+		desc: "High chance to make the target flinch.",
+		shortDesc: "High chance to make the target flinch.",
+	},
+	fantasynature: {
+		name: "Fantasy Nature",
+		desc: "Protects the user.",
+		shortDesc: "Protects the user.",
+	},
+	coinflipheads: {
+		name: "Coin Flip Heads",
+		desc: "Bet on Heads and flip a coin. Heads or tails, what will it be?",
+		shortDesc: "Bet on Heads and flip a coin. Heads or tails, what will it be?",
+	},
+	coinfliptails: {
+		name: "Coin Flip Tails",
+		desc: "Bet on Tails and flip a coin. Heads or tails, what will it be?",
+		shortDesc: "Bet on Tails and flip a coin. Heads or tails, what will it be?",
+	},
+	tails: {
+		name: "Tails",
+		desc: "Oh no, looks like you didn't win the bet!",
+		shortDesc: "Oh no, looks like you didn't win the bet!",
+	},
+	heads: {
+		name: "Heads",
+		desc: "Oh no, looks like you didn't win the bet!",
+		shortDesc: "Oh no, looks like you didn't win the bet!",
+	},
+	sealbreak: {
+		name: "Seal Break",
+		desc: "The user breaks its seal. -2 defenses. +2 Atk, SpAtk, Speed. +1 Evasion.",
+		shortDesc: "The user breaks its seal. -2 defenses. +2 Atk, SpAtk, Speed. +1 Evasion.",
+	},
+	umbrella: {
+		name: "Umbrella",
+		desc: "Puts an Umbrella above your team's head to protect from above and weather.",
+		shortDesc: "Puts an Umbrella above your team's head to protect from above and weather.",
+	},
+	dragonjet: {
+		name: "Dragon Jet",
+		desc: "The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.",
+		shortDesc: "The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.",
+	},
+	telepathy: {
+		name: "Telepathy",
+		desc: "Others can join in the Round and make the attack do greater damage.",
+		shortDesc: "Others can join in the Round and make the attack do greater damage.",
+	},
+	christmasspirit: {
+		name: "Christmas Spirit",
+		desc: "Starts Grassy Terrain, Icy Terrain, Lucky Chant and Hail.",
+		shortDesc: "Starts Grassy Terrain, Icy Terrain, Lucky Chant and Hail.",
+	},
+	rubbercoat: {
+		name: "Rubber Coat",
+		desc: "Changes the target's type to Rubber.",
+		shortDesc: "Changes the target's type to Rubber.",
+	},
+	rubberpower: {
+		name: "Rubber Power",
+		desc: "It may also raise all the user's stats at once.",
+		shortDesc: "It may also raise all the user's stats at once.",
+	},
+	steampunch: {
+		name: "Steam Punch",
+		desc: "The target is punched with a steamy fist. It may leave the target with a burn.",
+		shortDesc: "The target is punched with a steamy fist. It may leave the target with a burn.",
+	},
+	terrahammer: {
+		name: "Terra Hammer",
+		desc: "The user slams its rugged body into the target to attack. The user also sustains serious damage.",
+		shortDesc: "The user slams its rugged body into the target to attack. The user also sustains serious damage.",
+	},
+	icebreaker: {
+		name: "Icebreaker",
+		desc: "Goes first, but it only works the first turn the user is in battle.",
+		shortDesc: "Goes first, but it only works the first turn the user is in battle.",
+	},
+	rosecannon: {
+		name: "Rose Cannon",
+		desc: "The user also sustains serious damage and the target may be poisoned.",
+		shortDesc: "The user also sustains serious damage and the target may be poisoned.",
+	},
+	timeloop: {
+		name: "Time Loop",
+		desc: "The target can only use the last move it used for 3 turns.",
+		shortDesc: "The target can only use the last move it used for 3 turns.",
+	},
+	eraser: {
+		name: "Eraser",
+		desc: "May disable the last move used by the target",
+		shortDesc: "May disable the last move used by the target",
+	},
+	rubberbullets: {
+		name: "Rubber Bullets",
+		desc: "Two to five rubber bullets are shot in rapid succession.",
+		shortDesc: "Two to five rubber bullets are shot in rapid succession.",
+	},
+	rubout: {
+		name: "Rub Out",
+		desc: "High chance to make the target flinch.",
+		shortDesc: "High chance to make the target flinch.",
+	},
+	elasticbind: {
+		name: "Elastic Bind",
+		desc: "Used to bind and squeeze the foe for four to five turns.",
+		shortDesc: "Used to bind and squeeze the foe for four to five turns.",
+	},
+	bandshot: {
+		name: "Band Shot",
+		desc: "Rubber band. It is sure to strike first.",
+		shortDesc: "Rubber band. It is sure to strike first.",
+	},
+	rubberwhip: {
+		name: "Rubber Whip",
+		desc: "It may also lower the target's Defense stat.",
+		shortDesc: "It may also lower the target's Defense stat.",
+	},
+	rubbermallet: {
+		name: "Rubber Mallet",
+		desc: "The user must rest on the next turn.",
+		shortDesc: "The user must rest on the next turn.",
+	},
+	rubberbeams: {
+		name: "Rubber Beams",
+		desc: "Two to five rubber beams are shot in rapid succession.",
+		shortDesc: "Two to five rubber beams are shot in rapid succession.",
+	},
+	seasoning: {
+		name: "Seasoning",
+		desc: "The target takes more damage from Food moves for 8 turns.",
+		shortDesc: "The target takes more damage from Food moves for 8 turns.",
+	},
+	flourtoss: {
+		name: "Flour Toss",
+		desc: "Lowers target's accuracy.",
+		shortDesc: "Lowers target's accuracy.",
+	},
+	poundcake: {
+		name: "Pound Cake",
+		desc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+		shortDesc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+	},
+	snackbait: {
+		name: "Snack Bait",
+		desc: "The target is baited with food for 3 turns, healing it but making it unable to attack.",
+		shortDesc: "The target is baited with food for 3 turns, healing it but making it unable to attack.",
+	},
+	foodfight: {
+		name: "Food Fight",
+		desc: "May make the target eat.",
+		shortDesc: "May make the target eat.",
+	},
+	creamwhip: {
+		name: "Cream Whip",
+		desc: "May make the target eat.",
+		shortDesc: "May make the target eat.",
+	},
+	skyfang: {
+		name: "Sky Fang",
+		desc: "The target is bitten with viciously sharp fangs. It may make the target flinch.",
+		shortDesc: "The target is bitten with viciously sharp fangs. It may make the target flinch.",
+	},
+	sharpeningfang: {
+		name: "Sharpening Fang",
+		desc: "Very high chance to raise the user's attack.",
+		shortDesc: "Very high chance to raise the user's attack.",
+	},
+	specialorder: {
+		name: "Special Order",
+		desc: "Uses a random Food-type move.",
+		shortDesc: "Uses a random Food-type move.",
+	},
+	mortalcoil: {
+		name: "Mortal Coil",
+		desc: "The user summons intangible tentacles to squeeze the foe for four to five turns.",
+		shortDesc: "The user summons intangible tentacles to squeeze the foe for four to five turns.",
+	},
+	fellswoop: {
+		name: "Fell Swoop",
+		desc: "If the target's HP is down to about half, this attack will hit with double the power.",
+		shortDesc: "If the target's HP is down to about half, this attack will hit with double the power.",
+	},
+	overflow: {
+		name: "Overflow",
+		desc: "The user attacks the target at full power. The attack's recoil sharply reduces the user's Sp. Atk stat.",
+		shortDesc: "The user attacks the target at full power. The attack's recoil sharply reduces the user's Sp. Atk stat.",
+	},
+	flintstrike: {
+		name: "Flint Strike",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	brambles: {
+		name: "Brambles",
+		desc: "The user lays brambles around the foe. The trap hurts foes that switch into battle.",
+		shortDesc: "The user lays brambles around the foe. The trap hurts foes that switch into battle.",
+	},
+	terrify: {
+		name: "Terrify",
+		desc: "Harshly lowers the target's Def and SpDef by 2, but raises its Speed by 2.",
+		shortDesc: "Harshly lowers the target's Def and SpDef by 2, but raises its Speed by 2.",
+	},
+	lightspeed: {
+		name: "Light Speed",
+		desc: "The user charges the target at blinding speed. This attack always goes before any other move.",
+		shortDesc: "The user charges the target at blinding speed. This attack always goes before any other move.",
+	},
+	pollenseason: {
+		name: "Pollen Season",
+		desc: "Lower's the opposing side's Evasion for 5 turns.",
+		shortDesc: "Lower's the opposing side's Evasion for 5 turns.",
+	},
+	lastjudgement: {
+		name: "Last Judgement",
+		desc: "High chance to 1 hit KO.",
+		shortDesc: "High chance to 1 hit KO.",
+	},
+	abyssnova: {
+		name: "Abyss Nova",
+		desc: "This attack also deals Fire-type damage.",
+		shortDesc: "This attack also deals Fire-type damage.",
+	},
+	waveleaderfan: {
+		name: "Wave Leader Fan",
+		desc: "High chance to 1 hit KO.",
+		shortDesc: "High chance to 1 hit KO.",
+	},
+	phoebuscatastrophe: {
+		name: "Phoebus Catastrophe",
+		desc: "Hits all pokemon on the opposing side.",
+		shortDesc: "Hits all pokemon on the opposing side.",
+	},
+	agriusmetamorphosis: {
+		name: "AgriusMetamorphosis",
+		desc: "Raises the user's Attack and SpAtk 3 stages, but confuses the user.",
+		shortDesc: "Raises the user's Attack and SpAtk 3 stages, but confuses the user.",
+	},
+	stonersunshine: {
+		name: "STONER SUNSHINE",
+		desc: "The user must rest on the next turn to regain its energy.",
+		shortDesc: "The user must rest on the next turn to regain its energy.",
+	},
+	swordcounter: {
+		name: "Sword Counter",
+		desc: "An attack move that inflicts double the damage if the user has been hurt by the foe in the same turn.",
+		shortDesc: "An attack move that inflicts double the damage if the user has been hurt by the foe in the same turn.",
+	},
+	forwardsmash: {
+		name: "Forward Smash",
+		desc: "Spammed endlessly. High crit chance.",
+		shortDesc: "Spammed endlessly. High crit chance.",
+	},
+	bladedance: {
+		name: "Blade Dance",
+		desc: "A consecutive three-slash attack that becomes more powerful with each successive hit.",
+		shortDesc: "A consecutive three-slash attack that becomes more powerful with each successive hit.",
+	},
+	shieldbreaker: {
+		name: "Shieldbreaker",
+		desc: "Hits a target using Protect. Also lifts the effects of those moves.",
+		shortDesc: "Hits a target using Protect. Also lifts the effects of those moves.",
+	},
+	doubleedgedance: {
+		name: "DoubleEdgeDance",
+		desc: "A consecutive three-slash attack that becomes more powerful with each successive hit.",
+		shortDesc: "A consecutive three-slash attack that becomes more powerful with each successive hit.",
+	},
+	flareblade: {
+		name: "Flare Blade",
+		desc: "High crit chance. The user also takes damage and may burn the target.",
+		shortDesc: "High crit chance. The user also takes damage and may burn the target.",
+	},
+	bedrockpress: {
+		name: "Bedrock Press",
+		desc: "Raises the user's Defense stat.",
+		shortDesc: "Raises the user's Defense stat.",
+	},
+	barrierattack: {
+		name: "Barrier Attack",
+		desc: "Protects the user.",
+		shortDesc: "Protects the user.",
+	},
+	soniccharge: {
+		name: "Sonic Charge",
+		desc: "May paralyze the target.",
+		shortDesc: "May paralyze the target.",
+	},
+	foulnote: {
+		name: "Foul Note",
+		desc: "A sickening note that may also poison the target.",
+		shortDesc: "A sickening note that may also poison the target.",
+	},
+	sirensong: {
+		name: "Siren Song",
+		desc: "Traps foes for four to five turns.",
+		shortDesc: "Traps foes for four to five turns.",
+	},
+	vibrato: {
+		name: "Vibrato",
+		desc: "High pitched sound that harshly reduces the target's Sp. Def stat.",
+		shortDesc: "High pitched sound that harshly reduces the target's Sp. Def stat.",
+	},
+	beatmatch: {
+		name: "Beatmatch",
+		desc: "Copies the target's stat boosts, then attacks.",
+		shortDesc: "Copies the target's stat boosts, then attacks.",
+	},
+	risingsun: {
+		name: "Rising Sun",
+		desc: "Fly up, then drops on the foe on the second turn. It may also burn the foe.",
+		shortDesc: "Fly up, then drops on the foe on the second turn. It may also burn the foe.",
+	},
+	sunrise: {
+		name: "Sunrise",
+		desc: "Only usable in Midnight. Removes Midnight, burns and confuses the target.",
+		shortDesc: "Only usable in Midnight. Removes Midnight, burns and confuses the target.",
+	},
+	magmaclamp: {
+		name: "Magma Clamp",
+		desc: "The target is clamped and squeezed by the user's very thick and sturdy shell for four to five turns.",
+		shortDesc: "The target is clamped and squeezed by the user's very thick and sturdy shell for four to five turns.",
+	},
+	rake: {
+		name: "Rake",
+		desc: "May make the target bleed.",
+		shortDesc: "May make the target bleed.",
+	},
+	hotblooded: {
+		name: "Hot Blooded",
+		desc: "Sharply raises Attack and Speed but harshly lowers Defense. Raises Speed two more stages if Bleeding.",
+		shortDesc: "Sharply raises Attack and Speed but harshly lowers Defense. Raises Speed two more stages if Bleeding.",
+	},
+	bloodyrage: {
+		name: "Bloody Rage",
+		desc: "Rage clone. Further increases Attack if the user is Bleeding.",
+		shortDesc: "Rage clone. Further increases Attack if the user is Bleeding.",
+	},
+	bloodbath: {
+		name: "Bloodbath",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	clarentbloodarthur: {
+		name: "ClarentBloodArthur",
+		desc: "Hi crit rate. The user must rest on the next turn to regain its energy.",
+		shortDesc: "Hi crit rate. The user must rest on the next turn to regain its energy.",
+	},
+	bridalchest: {
+		name: "Bridal Chest",
+		desc: "The user drains the target's health. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's health. The user's HP is restored by half the damage taken by the target.",
+	},
+	summonminions: {
+		name: "Summon Minions",
+		desc: "Summon minions to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon minions to attack 2-5 times in a row. Deals physical damage.",
+	},
+	summonhorrors: {
+		name: "Summon Horrors",
+		desc: "Summon horrors to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon horrors to attack 2-5 times in a row. Deals physical damage.",
+	},
+	viaexpugnatio: {
+		name: "Via Expugnatio",
+		desc: "Goes first. Hits 2-10 times in a row.",
+		shortDesc: "Goes first. Hits 2-10 times in a row.",
+	},
+	fieryheaven: {
+		name: "Fiery Heaven",
+		desc: "Also deals Fire-type damage. 30% chance to Burn.",
+		shortDesc: "Also deals Fire-type damage. 30% chance to Burn.",
+	},
+	chaosheaven: {
+		name: "Chaos Heaven",
+		desc: "Also deals Wind-type damage. Ignores opponent's Stat Boosts.",
+		shortDesc: "Also deals Wind-type damage. Ignores opponent's Stat Boosts.",
+	},
+	frigidheaven: {
+		name: "Frigid Heaven",
+		desc: "Also deals Ice-type damage. Chance to Freeze.",
+		shortDesc: "Also deals Ice-type damage. Chance to Freeze.",
+	},
+	amaterasublessing: {
+		name: "AmaterasuBlessing",
+		desc: "Ups the SpAtk and SpDef of all party Pokemon for 4 turns.",
+		shortDesc: "Ups the SpAtk and SpDef of all party Pokemon for 4 turns.",
+	},
+	unlimitedbladeworks: {
+		name: "UnlimitedBladeWorks",
+		desc: "Ups Attack each turn, damages opponents.",
+		shortDesc: "Ups Attack each turn, damages opponents.",
+	},
+	lablackluna: {
+		name: "La Black Luna",
+		desc: "Hits both opponents. High chance to leave the target confused.",
+		shortDesc: "Hits both opponents. High chance to leave the target confused.",
+	},
+	trapofargalia: {
+		name: "TrapOfArgalia",
+		desc: "High chance to leave the target with paralysis.",
+		shortDesc: "High chance to leave the target with paralysis.",
+	},
+	hippogriff: {
+		name: "Hippogriff",
+		desc: "Chance to protect the user.",
+		shortDesc: "Chance to protect the user.",
+	},
+	casseurdelogistelle: {
+		name: "CasseurDeLogistelle",
+		desc: "Prevents damage from Special moves for 5 turns.",
+		shortDesc: "Prevents damage from Special moves for 5 turns.",
+	},
+	crossfirehurricane: {
+		name: "CrossfireHurricane",
+		desc: "The target becomes trapped within a fierce vortex of fire that rages for four to five turns.",
+		shortDesc: "The target becomes trapped within a fierce vortex of fire that rages for four to five turns.",
+	},
+	oraora: {
+		name: "Ora Ora",
+		desc: "The target is hit with a flurry of punches that strike two to five times in a row. Hi crit rate.",
+		shortDesc: "The target is hit with a flurry of punches that strike two to five times in a row. Hi crit rate.",
+	},
+	aargh: {
+		name: "AARGH",
+		desc: "The user slams its tough body onto the target to raise its Defense stat.",
+		shortDesc: "The user slams its tough body onto the target to raise its Defense stat.",
+	},
+	cruciatu: {
+		name: "Cruciatu",
+		desc: "Makes the target bleed.",
+		shortDesc: "Makes the target bleed.",
+	},
+	lapucelle: {
+		name: "La Pucelle",
+		desc: "Inflicts a 1 hit KO on the target. User will faint on the next turn.",
+		shortDesc: "Inflicts a 1 hit KO on the target. User will faint on the next turn.",
+	},
+	grondementduhaine: {
+		name: "GrondementDuHaine",
+		desc: "The user attacks by engulfing the target in an intense fire. It leaves the target with a burn and curse.",
+		shortDesc: "The user attacks by engulfing the target in an intense fire. It leaves the target with a burn and curse.",
+	},
+	legendofdracula: {
+		name: "Legend of Dracula",
+		desc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+	},
+	ninelives: {
+		name: "Nine Lives",
+		desc: "Hits 9 times. Each hit has a chance to lower the target's Defense.",
+		shortDesc: "Hits 9 times. Each hit has a chance to lower the target's Defense.",
+	},
+	rangingshot: {
+		name: "Ranging Shot",
+		desc: "The user shoots a ranging shot to raise its accuracy stat.",
+		shortDesc: "The user shoots a ranging shot to raise its accuracy stat.",
+	},
+	divinearrows: {
+		name: "Divine Arrows",
+		desc: "The target is jabbed repeatedly with divine arrows two to five times in a row.",
+		shortDesc: "The target is jabbed repeatedly with divine arrows two to five times in a row.",
+	},
+	scouting: {
+		name: "Scouting",
+		desc: "The user boosts its Attack stat and accuracy.",
+		shortDesc: "The user boosts its Attack stat and accuracy.",
+	},
+	antaressnipe: {
+		name: "Antares Snipe",
+		desc: "Cannot miss, ignores stat boosts and removes the target's ability.",
+		shortDesc: "Cannot miss, ignores stat boosts and removes the target's ability.",
+	},
+	warshout: {
+		name: "War Shout",
+		desc: "Sound move. Hits both targets, may Confuse.",
+		shortDesc: "Sound move. Hits both targets, may Confuse.",
+	},
+	pindown: {
+		name: "Pin Down",
+		desc: "Pins down target with arrows or projectiles. Lowers target's Evasion, may paralyze.",
+		shortDesc: "Pins down target with arrows or projectiles. Lowers target's Evasion, may paralyze.",
+	},
+	headshot: {
+		name: "Headshot",
+		desc: "Shoots with an arrow or other projectile. May 1 hit KO.",
+		shortDesc: "Shoots with an arrow or other projectile. May 1 hit KO.",
+	},
+	marktarget: {
+		name: "Mark Target",
+		desc: "Marks the target for 6 turns, making them take more damage from Arrow moves.",
+		shortDesc: "Marks the target for 6 turns, making them take more damage from Arrow moves.",
+	},
+	steadyshot: {
+		name: "Steady Shot",
+		desc: "May Mark the target, increasing the power of Arrow moves used against them.",
+		shortDesc: "May Mark the target, increasing the power of Arrow moves used against them.",
+	},
+	shootdown: {
+		name: "Shoot Down",
+		desc: "A flying Pokemon will fall to the ground when hit.",
+		shortDesc: "A flying Pokemon will fall to the ground when hit.",
+	},
+	arrowvolley: {
+		name: "Arrow Volley",
+		desc: "Fire a volley of arrows at both targets. It may also make the targets flinch.",
+		shortDesc: "Fire a volley of arrows at both targets. It may also make the targets flinch.",
+	},
+	summongolems: {
+		name: "Summon Golems",
+		desc: "Summon golems to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon golems to attack 2-5 times in a row. Deals physical damage.",
+	},
+	kanshoubakuya: {
+		name: "Kanshou Bakuya",
+		desc: "Attacks with two swords, Kanshou and Bakuya.",
+		shortDesc: "Attacks with two swords, Kanshou and Bakuya.",
+	},
+	enkidu: {
+		name: "Enkidu",
+		desc: "Divine chains are used to bind and squeeze the foe for four to five turns.",
+		shortDesc: "Divine chains are used to bind and squeeze the foe for four to five turns.",
+	},
+	vimana: {
+		name: "Vimana",
+		desc: "The user soars, then strikes on the second turn.",
+		shortDesc: "The user soars, then strikes on the second turn.",
+	},
+	electricchair: {
+		name: "Electric Chair",
+		desc: "The target will faint instantly if this attack hits.",
+		shortDesc: "The target will faint instantly if this attack hits.",
+	},
+	hangmannoose: {
+		name: "Hangman Noose",
+		desc: "The target will faint instantly if this attack hits.",
+		shortDesc: "The target will faint instantly if this attack hits.",
+	},
+	lethalinjection: {
+		name: "Lethal Injection",
+		desc: "The target will faint instantly if this attack hits.",
+		shortDesc: "The target will faint instantly if this attack hits.",
+	},
+	thuanthien: {
+		name: "Thuan Thien",
+		desc: "Hi crit rate. User must recharge on the next turn unless it KOs the target.",
+		shortDesc: "Hi crit rate. User must recharge on the next turn unless it KOs the target.",
+	},
+	mariatheripper: {
+		name: "Maria the Ripper",
+		desc: "High crit rate. 50% chance to inflict Curse. Chance to 1 hit KO.",
+		shortDesc: "High crit rate. 50% chance to inflict Curse. Chance to 1 hit KO.",
+	},
+	ketermalkuth: {
+		name: "Keter Malkuth",
+		desc: "Starts Grassy Terrain.",
+		shortDesc: "Starts Grassy Terrain.",
+	},
+	troiastragoidia: {
+		name: "Troias Tragoidia",
+		desc: "The user tries to outspeed the opponent. It does more damage the faster the user is.",
+		shortDesc: "The user tries to outspeed the opponent. It does more damage the faster the user is.",
+	},
+	akhilleuskosmos: {
+		name: "Akhilleus Kosmos",
+		desc: "Protects the user.",
+		shortDesc: "Protects the user.",
+	},
+	pumpup: {
+		name: "Pump Up",
+		desc: "The user raises the Attack stat of the target by 2.",
+		shortDesc: "The user raises the Attack stat of the target by 2.",
+	},
+	charisma: {
+		name: "Charisma",
+		desc: "Raises ally's Attack and SpAtk.",
+		shortDesc: "Raises ally's Attack and SpAtk.",
+	},
+	hanginggardenbabylon: {
+		name: "HangingGardenBabylon",
+		desc: "Puts up Light Screen and Reflect.",
+		shortDesc: "Puts up Light Screen and Reflect.",
+	},
+	basmu: {
+		name: "Basmu",
+		desc: "Deals Physical damage. May badly poison.",
+		shortDesc: "Deals Physical damage. May badly poison.",
+	},
+	dovescouts: {
+		name: "Dove Scouts",
+		desc: "Raises user's accuracy stat.",
+		shortDesc: "Raises user's accuracy stat.",
+	},
+	gigantomachia: {
+		name: "Gigantomachia",
+		desc: "The user must rest on the next turn to regain its energy.",
+		shortDesc: "The user must rest on the next turn to regain its energy.",
+	},
+	vortigern: {
+		name: "Vortigern",
+		desc: "High crit rate. It may make the target flinch.",
+		shortDesc: "High crit rate. It may make the target flinch.",
+	},
+	hrunting: {
+		name: "Hrunting",
+		desc: "High crit rate. This attack never misses.",
+		shortDesc: "High crit rate. This attack never misses.",
+	},
+	caladbolgii: {
+		name: "Caladbolg II",
+		desc: "An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.",
+		shortDesc: "An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.",
+	},
+	zarich: {
+		name: "Zarich",
+		desc: "May disable the last move used by the target.",
+		shortDesc: "May disable the last move used by the target.",
+	},
+	tawrich: {
+		name: "Tawrich",
+		desc: "This may also lower the target's Attack stat.",
+		shortDesc: "This may also lower the target's Attack stat.",
+	},
+	blackkey: {
+		name: "Black Key",
+		desc: "The foe's stat changes don't affect the damage.",
+		shortDesc: "The foe's stat changes don't affect the damage.",
+	},
+	twinarmbigcrunch: {
+		name: "TwinArm BigCrunch",
+		desc: "Hits both enemies. Doesn't miss. All status changes are returned to normal.",
+		shortDesc: "Hits both enemies. Doesn't miss. All status changes are returned to normal.",
+	},
+	leftarmxanadumatrix: {
+		name: "LeftArmXanaduMatrix",
+		desc: "90% chance to raise the user's Defense stat.",
+		shortDesc: "90% chance to raise the user's Defense stat.",
+	},
+	rightarmevileater: {
+		name: "RightArmEvilEater",
+		desc: "An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.",
+		shortDesc: "An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.",
+	},
+	saintwarorder: {
+		name: "Saint War Order",
+		desc: "For 5 turns, user does 2x dmg, speed 2x and crit rate is increased. Ability becomes Moxie. Lowers Defense.",
+		shortDesc: "For 5 turns, user does 2x dmg, speed 2x and crit rate is increased. Ability becomes Moxie. Lowers Defense.",
+	},
+	stella: {
+		name: "Stella",
+		desc: "Hi crit rate. Hits both targets in a double battle. The user then faints.",
+		shortDesc: "Hi crit rate. Hits both targets in a double battle. The user then faints.",
+	},
+	abyssusdraconis: {
+		name: "Abyssus Draconis",
+		desc: "Changes the target's type to Dragon.",
+		shortDesc: "Changes the target's type to Dragon.",
+	},
+	bayard: {
+		name: "Bayard",
+		desc: "Goes first. Chance to protect the user.",
+		shortDesc: "Goes first. Chance to protect the user.",
+	},
+	ascalon: {
+		name: "Ascalon",
+		desc: "Increases user's Defense. Ignores the target's stat changes. Critical hits land more easily.",
+		shortDesc: "Increases user's Defense. Ignores the target's stat changes. Critical hits land more easily.",
+	},
+	interfectumdracones: {
+		name: "Interfectum Dracones",
+		desc: "Double damage against Dragon types. Critical hits land more easily.",
+		shortDesc: "Double damage against Dragon types. Critical hits land more easily.",
+	},
+	dragonaxe: {
+		name: "Dragon Axe",
+		desc: "It may also lower the target's Defense stat.",
+		shortDesc: "It may also lower the target's Defense stat.",
+	},
+	uprising: {
+		name: "Uprising",
+		desc: "The more the user's stats are lowered, the greater the damage.",
+		shortDesc: "The more the user's stats are lowered, the greater the damage.",
+	},
+	laststand: {
+		name: "Last Stand",
+		desc: "Sharply raises all of the user's stats. The user cannot switch and will faint in 3 turns.",
+		shortDesc: "Sharply raises all of the user's stats. The user cannot switch and will faint in 3 turns.",
+	},
+	bathoryerzsebet: {
+		name: "Bathory Erzsebet",
+		desc: "Seeking an opening, the user strikes continually. The foe's stat changes don't affect the damage.",
+		shortDesc: "Seeking an opening, the user strikes continually. The foe's stat changes don't affect the damage.",
+	},
+	tyrantroar: {
+		name: "Tyrant Roar",
+		desc: "May raise the user's SpAtk.",
+		shortDesc: "May raise the user's SpAtk.",
+	},
+	marvelousexploits: {
+		name: "Marvelous Exploits",
+		desc: "Hits both targets and lowers Defense.",
+		shortDesc: "Hits both targets and lowers Defense.",
+	},
+	wisconsindeathtrip: {
+		name: "WisconsinDeathTrip",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	beansouplake: {
+		name: "Bean Soup Lake",
+		desc: "Lake of Bean Soup that heals the user and ally in double battle.",
+		shortDesc: "Lake of Bean Soup that heals the user and ally in double battle.",
+	},
+	popcornstorm: {
+		name: "Popcorn Storm",
+		desc: "Harshly lowers both target's Defense stat.",
+		shortDesc: "Harshly lowers both target's Defense stat.",
+	},
+	lifesurge: {
+		name: "Life Surge",
+		desc: "A surge of life that heals the user and their ally in a double battle.",
+		shortDesc: "A surge of life that heals the user and their ally in a double battle.",
+	},
+	eyeofeuryale: {
+		name: "Eye of Euryale",
+		desc: "Deals more damage to a Male target. Infatuates and lowers Attack.",
+		shortDesc: "Deals more damage to a Male target. Infatuates and lowers Attack.",
+	},
+	smileofstheno: {
+		name: "Smile of Stheno",
+		desc: "Chance to 1 hit KO a Male target. Infatuates and lowers Defense.",
+		shortDesc: "Chance to 1 hit KO a Male target. Infatuates and lowers Defense.",
+	},
+	divinebeauty: {
+		name: "Divine Beauty",
+		desc: "High chance to infatuate the target.",
+		shortDesc: "High chance to infatuate the target.",
+	},
+	cupidarrow: {
+		name: "Cupid Arrow",
+		desc: "High chance to infatuate the target.",
+		shortDesc: "High chance to infatuate the target.",
+	},
+	brokenheart: {
+		name: "Broken Heart",
+		desc: "Does double damage if target is Infatuated.",
+		shortDesc: "Does double damage if target is Infatuated.",
+	},
+	goldwildhunt: {
+		name: "Gold Wild Hunt",
+		desc: "Increases the user's Crit Rate.",
+		shortDesc: "Increases the user's Crit Rate.",
+	},
+	piratecharge: {
+		name: "Pirate Charge",
+		desc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+		shortDesc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+	},
+	opulencecatnap: {
+		name: "Opulence Catnap",
+		desc: "The user falls asleep and becomes fully healed after using this move.",
+		shortDesc: "The user falls asleep and becomes fully healed after using this move.",
+	},
+	collapse: {
+		name: "Collapse",
+		desc: "The user falls asleep and becomes fully healed after using this move.",
+		shortDesc: "The user falls asleep and becomes fully healed after using this move.",
+	},
+	ageofbabylon: {
+		name: "Age of Babylon",
+		desc: "The target is hit 2-??? times.",
+		shortDesc: "The target is hit 2-??? times.",
+	},
+	attackup: {
+		name: "Attack Up",
+		desc: "Raises Attack and SpAtk of your side for 4 turns.",
+		shortDesc: "Raises Attack and SpAtk of your side for 4 turns.",
+	},
+	dualscreens: {
+		name: "Dual Screens",
+		desc: "Puts up Light Screen and Reflect for 4 turns.",
+		shortDesc: "Puts up Light Screen and Reflect for 4 turns.",
+	},
+	critup: {
+		name: "Crit Up",
+		desc: "Raises Crit Rate of your side for 4 turns.",
+		shortDesc: "Raises Crit Rate of your side for 4 turns.",
+	},
+	healparty: {
+		name: "Heal Party",
+		desc: "Heals your side for 4 turns.",
+		shortDesc: "Heals your side for 4 turns.",
+	},
+	marchenmeineslebens: {
+		name: "MarchenMeinesLebens",
+		desc: "Applies 2 random effects to the party.",
+		shortDesc: "Applies 2 random effects to the party.",
+	},
+	yewbow: {
+		name: "Yew Bow",
+		desc: "Its power doubles if the target is poisoned.",
+		shortDesc: "Its power doubles if the target is poisoned.",
+	},
+	poisonarrow: {
+		name: "Poison Arrow",
+		desc: "High chance to poison.",
+		shortDesc: "High chance to poison.",
+	},
+	explosivearrow: {
+		name: "Explosive Arrow",
+		desc: "It also damages Pokemon next to the target.",
+		shortDesc: "It also damages Pokemon next to the target.",
+	},
+	mayking: {
+		name: "May King",
+		desc: "Raises the user's Accuracy and Evasion.",
+		shortDesc: "Raises the user's Accuracy and Evasion.",
+	},
+	sabotage: {
+		name: "Sabotage",
+		desc: "Reduces the target's Attack and Poison's them.",
+		shortDesc: "Reduces the target's Attack and Poison's them.",
+	},
+	poisondart: {
+		name: "Poison Dart",
+		desc: "Badly poison's the target.",
+		shortDesc: "Badly poison's the target.",
+	},
+	cryaa: {
+		name: "Cryaa",
+		desc: "Bleed, Poison, Curse, Block, Heal Block.",
+		shortDesc: "Bleed, Poison, Curse, Block, Heal Block.",
+	},
+	bloodsoldiers: {
+		name: "Blood Soldiers",
+		desc: "Summon Blood Soldiers to attack 2-5 times in a row. Deals Physical damage.",
+		shortDesc: "Summon Blood Soldiers to attack 2-5 times in a row. Deals Physical damage.",
+	},
+	myredmead: {
+		name: "My Red Mead",
+		desc: "If target is opposite gender, inflicts Attract and lowers defensive stats.",
+		shortDesc: "If target is opposite gender, inflicts Attract and lowers defensive stats.",
+	},
+	chariotmylove: {
+		name: "Chariot My Love",
+		desc: "x2 damage to Males, inflicts Attract.",
+		shortDesc: "x2 damage to Males, inflicts Attract.",
+	},
+	aaryc: {
+		name: "aaryC",
+		desc: "Bleed, Poison, Curse, Block, Heal Block.",
+		shortDesc: "Bleed, Poison, Curse, Block, Heal Block.",
+	},
+	glitchguard: {
+		name: "Glitch Guard",
+		desc: "Makes the user invincible.",
+		shortDesc: "Makes the user invincible.",
+	},
+	delusionalpoisonbody: {
+		name: "DelusionalPoisonBody",
+		desc: "Badly Poison. Chance to 1 hit KO.",
+		shortDesc: "Badly Poison. Chance to 1 hit KO.",
+	},
+	poisonexplosion: {
+		name: "Poison Explosion",
+		desc: "The user blows up to inflict damage on all Pokemon in battle. The user faints upon using this move.",
+		shortDesc: "The user blows up to inflict damage on all Pokemon in battle. The user faints upon using this move.",
+	},
+	poisondagger: {
+		name: "Poison Dagger",
+		desc: "High chance to badly poison, high crit rate.",
+		shortDesc: "High chance to badly poison, high crit rate.",
+	},
+	nurseryrhyme: {
+		name: "Nursery Rhyme",
+		desc: "Lowers the target's SpDef and lowers the PP of the last move they used.",
+		shortDesc: "Lowers the target's SpDef and lowers the PP of the last move they used.",
+	},
+	junglefever: {
+		name: "Jungle Fever",
+		desc: "Hits both targets, high chance to confuse.",
+		shortDesc: "Hits both targets, high chance to confuse.",
+	},
+	comfycoil: {
+		name: "Comfy Coil",
+		desc: "The user falls asleep and becomes fully healed after using this move.",
+		shortDesc: "The user falls asleep and becomes fully healed after using this move.",
+	},
+	queensglassgame: {
+		name: "Queens Glass Game",
+		desc: "Hits all other pokemon on the field and inflicts Encore.",
+		shortDesc: "Hits all other pokemon on the field and inflicts Encore.",
+	},
+	dragonslash: {
+		name: "Dragon Slash",
+		desc: "High crit rate.",
+		shortDesc: "High crit rate.",
+	},
+	rhongomyniad: {
+		name: "Rhongomyniad",
+		desc: "An attack that hits a target using Protect. It also lifts the effects of those moves.",
+		shortDesc: "An attack that hits a target using Protect. It also lifts the effects of those moves.",
+	},
+	asteroid: {
+		name: "Asteroid",
+		desc: "User must rest on the next turn.",
+		shortDesc: "User must rest on the next turn.",
+	},
+	warpdrive: {
+		name: "Warp Drive",
+		desc: "The user maximizes its Speed stat in exchange for HP equal to half its max HP.",
+		shortDesc: "The user maximizes its Speed stat in exchange for HP equal to half its max HP.",
+	},
+	solarflare: {
+		name: "Solar Flare",
+		desc: "Does more damage in Sunny weather.",
+		shortDesc: "Does more damage in Sunny weather.",
+	},
+	deepimpact: {
+		name: "Deep Impact",
+		desc: "The user also takes terrible damage.",
+		shortDesc: "The user also takes terrible damage.",
+	},
+	icecomet: {
+		name: "Ice Comet",
+		desc: "It may also freeze the target solid.",
+		shortDesc: "It may also freeze the target solid.",
+	},
+	moonjump: {
+		name: "Moon Jump",
+		desc: "User jumps like on the moon, and slams down. If it misses, the user hurts itself.",
+		shortDesc: "User jumps like on the moon, and slams down. If it misses, the user hurts itself.",
+	},
+	closeencounter: {
+		name: "Close Encounter",
+		desc: "The user takes the foe into space, then frees them the next turn. The foe cannot attack while in space.",
+		shortDesc: "The user takes the foe into space, then frees them the next turn. The foe cannot attack while in space.",
+	},
+	jabberwock: {
+		name: "Jabberwock",
+		desc: "This attack does physical damage.",
+		shortDesc: "This attack does physical damage.",
+	},
+	godforce: {
+		name: "God Force",
+		desc: "May paralyze. The foe's stat changes don't affect the damage.",
+		shortDesc: "May paralyze. The foe's stat changes don't affect the damage.",
+	},
+	doublepeck: {
+		name: "Double Peck",
+		desc: "The target is hit twice in a row.",
+		shortDesc: "The target is hit twice in a row.",
+	},
+	witherbreath: {
+		name: "Wither Breath",
+		desc: "This harshly reduces the target's Sp. Def stat.",
+		shortDesc: "This harshly reduces the target's Sp. Def stat.",
+	},
+	ghastlyhand: {
+		name: "Ghastly Hand",
+		desc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+		shortDesc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+	},
+	deadweight: {
+		name: "Dead Weight",
+		desc: "The heavier the user, the greater the damage.",
+		shortDesc: "The heavier the user, the greater the damage.",
+	},
+	heavenshole: {
+		name: "Heaven's Hole",
+		desc: "The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user's HP is restored by half the damage taken by the target.",
+	},
+	angramainyuccc: {
+		name: "AngraMainyu CCC",
+		desc: "Hits everything on the field. Deals double damage to the opposite gender.",
+		shortDesc: "Hits everything on the field. Deals double damage to the opposite gender.",
+	},
+	sinpulse: {
+		name: "Sin Pulse",
+		desc: "Horrible aura imbued with sinful thoughts. May make the target flinch.",
+		shortDesc: "Horrible aura imbued with sinful thoughts. May make the target flinch.",
+	},
+	failnaught: {
+		name: "Failnaught",
+		desc: "Does not miss.",
+		shortDesc: "Does not miss.",
+	},
+	harpofhealing: {
+		name: "Harp of Healing",
+		desc: "Heals the user and ally in double battle. Cures status conditions.",
+		shortDesc: "Heals the user and ally in double battle. Cures status conditions.",
+	},
+	paintball: {
+		name: "Paintball",
+		desc: "Also damages Pokemon next to the target.",
+		shortDesc: "Also damages Pokemon next to the target.",
+	},
+	paint: {
+		name: "Paint",
+		desc: "The target takes x2 damage from Paint moves for 6 turns.",
+		shortDesc: "The target takes x2 damage from Paint moves for 6 turns.",
+	},
+	heavyhue: {
+		name: "Heavy Hue",
+		desc: "The target takes more damage from Paint moves for 4 turns.",
+		shortDesc: "The target takes more damage from Paint moves for 4 turns.",
+	},
+	bucketbomb: {
+		name: "Bucket Bomb",
+		desc: "Hits every pokemon on the field, has a high chance to Paint the targets.",
+		shortDesc: "Hits every pokemon on the field, has a high chance to Paint the targets.",
+	},
+	paintroller: {
+		name: "Paint Roller",
+		desc: "High chance to raise the user's Attack stat.",
+		shortDesc: "High chance to raise the user's Attack stat.",
+	},
+	dragonlance: {
+		name: "Dragon Lance",
+		desc: "It has a chance to raise the user's Speed stat.",
+		shortDesc: "It has a chance to raise the user's Speed stat.",
+	},
+	shadowjavelin: {
+		name: "Shadow Javelin",
+		desc: "It may also cause confusion.",
+		shortDesc: "It may also cause confusion.",
+	},
+	gardenofavalon: {
+		name: "Garden of Avalon",
+		desc: "Heals your side. Heals your side every turn and increases their crit rate for 5 turns.",
+		shortDesc: "Heals your side. Heals your side every turn and increases their crit rate for 5 turns.",
+	},
+	mesektet: {
+		name: "Mesektet",
+		desc: "35% chance to Burn the target.",
+		shortDesc: "35% chance to Burn the target.",
+	},
+	summonsphinx: {
+		name: "Summon Sphinx",
+		desc: "Summon minions to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon minions to attack 2-5 times in a row. Deals physical damage.",
+	},
+	ramesseumtentyris: {
+		name: "Ramesseum Tentyris",
+		desc: "High chance to disable the last move used by the target. Poisons.",
+		shortDesc: "High chance to disable the last move used by the target. Poisons.",
+	},
+	nosecondstrike: {
+		name: "No Second Strike",
+		desc: "Ignores the target's changes to Defense. Chance to 1 hit KO.",
+		shortDesc: "Ignores the target's changes to Defense. Chance to 1 hit KO.",
+	},
+	sphereboundary: {
+		name: "Sphere Boundary",
+		desc: "Increases Evasion and Crit Rate.",
+		shortDesc: "Increases Evasion and Crit Rate.",
+	},
+	wardance: {
+		name: "War Dance",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	grendelbuster: {
+		name: "Grendel Buster",
+		desc: "This move can be used only after the user has used all the other moves it knows in the battle.",
+		shortDesc: "This move can be used only after the user has used all the other moves it knows in the battle.",
+	},
+	naegling: {
+		name: "Naegling",
+		desc: "It may also make the target flinch.",
+		shortDesc: "It may also make the target flinch.",
+	},
+	excaliburgalatine: {
+		name: "Excalibur Galatine",
+		desc: "Hits everything on the field. It may leave the target with a burn.",
+		shortDesc: "Hits everything on the field. It may leave the target with a burn.",
+	},
+	shinecharge: {
+		name: "Shine Charge",
+		desc: "Building up more power, it raises the user's Speed stat.",
+		shortDesc: "Building up more power, it raises the user's Speed stat.",
+	},
+	tectonicslam: {
+		name: "Tectonic Slam",
+		desc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+		shortDesc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+	},
+	loosegoose: {
+		name: "Loose Goose",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	greasesplat: {
+		name: "Grease Splat",
+		desc: "It also reduces the target's Speed.",
+		shortDesc: "It also reduces the target's Speed.",
+	},
+	brynhildrromantia: {
+		name: "BrynhildrRomantia",
+		desc: "Increases party's crit rate for 3 turns. increased damage if user is inflicted with Attract.",
+		shortDesc: "Increases party's crit rate for 3 turns. increased damage if user is inflicted with Attract.",
+	},
+	freyjavenus: {
+		name: "Freyja Venus",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	brynhildrkomedia: {
+		name: "BrynhildrKomedia",
+		desc: "Hits everything around the user. May Burn.",
+		shortDesc: "Hits everything around the user. May Burn.",
+	},
+	agecurse: {
+		name: "Age Curse",
+		desc: "High chance to inflict Curse.",
+		shortDesc: "High chance to inflict Curse.",
+	},
+	decaytouch: {
+		name: "Decay Touch",
+		desc: "High chance to inflict Curse.",
+		shortDesc: "High chance to inflict Curse.",
+	},
+	dusttodust: {
+		name: "Dust to Dust",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	darkerpulse: {
+		name: "Darker Pulse",
+		desc: "The user releases a horrible aura imbued with dark thoughts. It may also make the target flinch.",
+		shortDesc: "The user releases a horrible aura imbued with dark thoughts. It may also make the target flinch.",
+	},
+	azrael: {
+		name: "Azrael",
+		desc: "High chance to 1 hit KO.",
+		shortDesc: "High chance to 1 hit KO.",
+	},
+	ghostcamera: {
+		name: "Ghost Camera",
+		desc: "May Disable the last move used by the target",
+		shortDesc: "May Disable the last move used by the target",
+	},
+	computercrash: {
+		name: "Computer Crash",
+		desc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+		shortDesc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+	},
+	dialup: {
+		name: "Dial Up",
+		desc: "A loud obnoxious noise that lowers the opponents Sp. Def stat.",
+		shortDesc: "A loud obnoxious noise that lowers the opponents Sp. Def stat.",
+	},
+	pentagramstamp: {
+		name: "Pentagram Stamp",
+		desc: "May disable the last move used by the target",
+		shortDesc: "May disable the last move used by the target",
+	},
+	heavenlight: {
+		name: "Heaven Light",
+		desc: "The target is blasted by a huge volume of HEAVENLYLIGHT launched under great pressure.",
+		shortDesc: "The target is blasted by a huge volume of HEAVENLYLIGHT launched under great pressure.",
+	},
+	degreeburn: {
+		name: "Degree Burn",
+		desc: "Its power varies.",
+		shortDesc: "Its power varies.",
+	},
+	vomit: {
+		name: "Vomit",
+		desc: "High chance to badly poison.",
+		shortDesc: "High chance to badly poison.",
+	},
+	spiritsquash: {
+		name: "Spirit Squash",
+		desc: "This attack's power increases the more the target has powered up with stat changes.",
+		shortDesc: "This attack's power increases the more the target has powered up with stat changes.",
+	},
+	sledgehammer: {
+		name: "Sledge Hammer",
+		desc: "It also damages the user by a fairly large amount, however.",
+		shortDesc: "It also damages the user by a fairly large amount, however.",
+	},
+	slowdown: {
+		name: "Slowdown",
+		desc: "Drastically reduces the target's Speed stat.",
+		shortDesc: "Drastically reduces the target's Speed stat.",
+	},
+	megadrill: {
+		name: "Megadrill",
+		desc: "Using its tough and impressive drill, the user rams into the target with no letup.",
+		shortDesc: "Using its tough and impressive drill, the user rams into the target with no letup.",
+	},
+	volttrap: {
+		name: "Volt Trap",
+		desc: "The target becomes trapped within AND DAMAGES for four to five turns.",
+		shortDesc: "The target becomes trapped within AND DAMAGES for four to five turns.",
+	},
+	psypunch: {
+		name: "Psypunch",
+		desc: "This may also lower the target's Attack stat.",
+		shortDesc: "This may also lower the target's Attack stat.",
+	},
+	contaminate: {
+		name: "Contaminate",
+		desc: "Poisons both Pokemon on the opposing side.",
+		shortDesc: "Poisons both Pokemon on the opposing side.",
+	},
+	vinechain: {
+		name: "Vine Chain",
+		desc: "The user attacks last. In return, this Move is guaranteed not to miss.",
+		shortDesc: "The user attacks last. In return, this Move is guaranteed not to miss.",
+	},
+	extract: {
+		name: "Extract",
+		desc: "The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user's HP is restored by half the damage taken by the target.",
+	},
+	pixelcannon: {
+		name: "Pixel Cannon",
+		desc: "A consecutive three strike attack that becomes more powerful with each successive hit.",
+		shortDesc: "A consecutive three strike attack that becomes more powerful with each successive hit.",
+	},
+	datastorm: {
+		name: "Data Storm",
+		desc: "May leave the target confused.",
+		shortDesc: "May leave the target confused.",
+	},
+	greedincarnate: {
+		name: "Greed Incarnate",
+		desc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+		shortDesc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+	},
+	freezethem: {
+		name: "Freeze Them",
+		desc: "The target is struck with an intense cold that freezes it solid.",
+		shortDesc: "The target is struck with an intense cold that freezes it solid.",
+	},
+	blitzkreig: {
+		name: "Blitzkreig",
+		desc: "Goes first. The user shoots the target two to five times in a row.",
+		shortDesc: "Goes first. The user shoots the target two to five times in a row.",
+	},
+	curveball: {
+		name: "Curve Ball",
+		desc: "High chance to also lower the target's Sp. Def stat.",
+		shortDesc: "High chance to also lower the target's Sp. Def stat.",
+	},
+	lasso: {
+		name: "Lasso",
+		desc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
+		shortDesc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
+	},
+	powernap: {
+		name: "Power Nap",
+		desc: "The user goes to sleep for one turn. Restores half the user's HP and heals any status problem.",
+		shortDesc: "The user goes to sleep for one turn. Restores half the user's HP and heals any status problem.",
+	},
+	icarussoar: {
+		name: "Icarus Soar",
+		desc: "User loses its Flying-type. Cannot be used if not Flying-type.",
+		shortDesc: "User loses its Flying-type. Cannot be used if not Flying-type.",
+	},
+	library: {
+		name: "Library",
+		desc: "Increases power of Paper-type moves for 5 turns.",
+		shortDesc: "Increases power of Paper-type moves for 5 turns.",
+	},
+	dizzyray: {
+		name: "Dizzy Ray",
+		desc: "The target is hit with rhythmically launched ray may also confuse.",
+		shortDesc: "The target is hit with rhythmically launched ray may also confuse.",
+	},
+	teardropphotonray: {
+		name: "TeardropPhotonRay",
+		desc: "Hits both opponents and lowers their Defense.",
+		shortDesc: "Hits both opponents and lowers their Defense.",
+	},
+	guillotinebreaker: {
+		name: "Guillotine Breaker",
+		desc: "Heals health and status conditions from your side.",
+		shortDesc: "Heals health and status conditions from your side.",
+	},
+	crystalpalace: {
+		name: "Crystal Palace",
+		desc: "Puts up Light Screen and Reflect for 4 turns.",
+		shortDesc: "Puts up Light Screen and Reflect for 4 turns.",
+	},
+	princessloveliness: {
+		name: "Princess Loveliness",
+		desc: "It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.",
+		shortDesc: "It enables the user to evade all attacks. Its chance of failing rises if it is used in succession.",
+	},
+	lightsaber: {
+		name: "Light Saber",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	boyiiman: {
+		name: "Boy II Man",
+		desc: "Becomes the last move used by the target and disables the last move used by the target.",
+		shortDesc: "Becomes the last move used by the target and disables the last move used by the target.",
+	},
+	uraniumheatbeam: {
+		name: "Uranium Heat Beam",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	drown: {
+		name: "Drown",
+		desc: "The target will faint instantly if this attack hits.",
+		shortDesc: "The target will faint instantly if this attack hits.",
+	},
+	halo: {
+		name: "Halo",
+		desc: "The user regains 1/14th of their max HP each turn.",
+		shortDesc: "The user regains 1/14th of their max HP each turn.",
+	},
+	wickerman: {
+		name: "Wickerman",
+		desc: "Traps both targets for four to five turns and burns them.",
+		shortDesc: "Traps both targets for four to five turns and burns them.",
+	},
+	ochddeugodin: {
+		name: "Ochd Deug Odin",
+		desc: "Can only be used after every other move. Resets stats, reduces all stats and disables last move.",
+		shortDesc: "Can only be used after every other move. Resets stats, reduces all stats and disables last move.",
+	},
+	thecut: {
+		name: "The Cut",
+		desc: "High crit rate. It can also be used to cut down thin trees.",
+		shortDesc: "High crit rate. It can also be used to cut down thin trees.",
+	},
+	rootdrain: {
+		name: "Root Drain",
+		desc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	corpsecart: {
+		name: "Corpse Cart",
+		desc: "Building up more power, it raises the user's Speed stat.",
+		shortDesc: "Building up more power, it raises the user's Speed stat.",
+	},
+	soulsword: {
+		name: "Soul Sword",
+		desc: "Hi crit rate. When the user knocks out a target with this move, the user's Attack stat rises sharply.",
+		shortDesc: "Hi crit rate. When the user knocks out a target with this move, the user's Attack stat rises sharply.",
+	},
+	crystalize: {
+		name: "Crystalize",
+		desc: "Drastically raises the user's Sp. Def stat.",
+		shortDesc: "Drastically raises the user's Sp. Def stat.",
+	},
+	faedance: {
+		name: "Fae Dance",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	powerdrain: {
+		name: "Power Drain",
+		desc: "The user unleashes its grudge on the move last used by the target by cutting 10 PP from it.",
+		shortDesc: "The user unleashes its grudge on the move last used by the target by cutting 10 PP from it.",
+	},
+	hibernation: {
+		name: "Hibernation",
+		desc: "Freezes user. It fully restores the user's HP and heals any status problem. Heals while frozen.",
+		shortDesc: "Freezes user. It fully restores the user's HP and heals any status problem. Heals while frozen.",
+	},
+	eldritchpower: {
+		name: "EldritchPower",
+		desc: "The user attacks with an eldritch power. It may also raise all the user's stats at once.",
+		shortDesc: "The user attacks with an eldritch power. It may also raise all the user's stats at once.",
+	},
+	steamvortex: {
+		name: "Steam Vortex",
+		desc: "The target becomes trapped within a fierce vortex of fire that rages for four to five turns.",
+		shortDesc: "The target becomes trapped within a fierce vortex of fire that rages for four to five turns.",
+	},
+	cutebetrayal: {
+		name: "Cute Betrayal",
+		desc: "Does double damage to an infatuated target.",
+		shortDesc: "Does double damage to an infatuated target.",
+	},
+	filthbomb: {
+		name: "Filth Bomb",
+		desc: "Unsanitary sludge is hurled at the target. Poisons the target.",
+		shortDesc: "Unsanitary sludge is hurled at the target. Poisons the target.",
+	},
+	insectdecay: {
+		name: "Insect Decay",
+		desc: "This relentless attack does massive damage to a target affected by status problems.",
+		shortDesc: "This relentless attack does massive damage to a target affected by status problems.",
+	},
+	nanobotbarrier: {
+		name: "Nanobot Barrier",
+		desc: "User's ability becomes Wonder Guard.",
+		shortDesc: "User's ability becomes Wonder Guard.",
+	},
+	ragingchaos: {
+		name: "Raging Chaos",
+		desc: "As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+		shortDesc: "As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+	},
+	divinefacade: {
+		name: "Divine Facade",
+		desc: "An attack move that doubles its power if the user is poisoned, burned, or has paralysis.",
+		shortDesc: "An attack move that doubles its power if the user is poisoned, burned, or has paralysis.",
+	},
+	demonsdeath: {
+		name: "Demons Death",
+		desc: "Bleed, Poison, Curse, Block, Heal Block.",
+		shortDesc: "Bleed, Poison, Curse, Block, Heal Block.",
+	},
+	creammissiles: {
+		name: "Cream Missiles",
+		desc: "Strikes two to five times in a row. May confuse.",
+		shortDesc: "Strikes two to five times in a row. May confuse.",
+	},
+	creamfinale: {
+		name: "CREAMFINALE",
+		desc: "Heals health and status conditions on your side.",
+		shortDesc: "Heals health and status conditions on your side.",
+	},
+	windrage: {
+		name: "WINDRAGE",
+		desc: "Eliminates such moves as Bind, Wrap, Leech Seed, and Spikes.",
+		shortDesc: "Eliminates such moves as Bind, Wrap, Leech Seed, and Spikes.",
+	},
+	stonesurge: {
+		name: "STONESURGE",
+		desc: "Puts Stealth Rocks on the opposing side.",
+		shortDesc: "Puts Stealth Rocks on the opposing side.",
+	},
+	parasitevirus: {
+		name: "Parasite Virus",
+		desc: "The user turns the foe's power against it. It does more damage the higher the target's Attack stat.",
+		shortDesc: "The user turns the foe's power against it. It does more damage the higher the target's Attack stat.",
+	},
+	thousandyoung: {
+		name: "Thousand Young",
+		desc: "Attacks 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Attacks 2-5 times in a row. Deals physical damage.",
+	},
+	rerorero: {
+		name: "Rero Rero",
+		desc: "The target is licked repeatedly two to five times in a row.",
+		shortDesc: "The target is licked repeatedly two to five times in a row.",
+	},
+	nuclearsting: {
+		name: "Nuclear Sting",
+		desc: "The user stabs the target with a poisonous stinger. This may also poison the target.",
+		shortDesc: "The user stabs the target with a poisonous stinger. This may also poison the target.",
+	},
+	arcticwind: {
+		name: "Arctic Wind",
+		desc: "It may also freeze the target solid.",
+		shortDesc: "It may also freeze the target solid.",
+	},
+	glassball: {
+		name: "Glass Ball",
+		desc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+		shortDesc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+	},
+	glassdefense: {
+		name: "Glass Defense",
+		desc: "It sharply raises the user's Sp. Def stat.",
+		shortDesc: "It sharply raises the user's Sp. Def stat.",
+	},
+	glasssparkle: {
+		name: "Glass Sparkle",
+		desc: "It may also confuse the target.",
+		shortDesc: "It may also confuse the target.",
+	},
+	tubebind: {
+		name: "Tube Bind",
+		desc: "Squeeze the foe for four to five turns.",
+		shortDesc: "Squeeze the foe for four to five turns.",
+	},
+	breaststroke: {
+		name: "Breast Stroke",
+		desc: "Building up more power, it raises the user's Speed stat.",
+		shortDesc: "Building up more power, it raises the user's Speed stat.",
+	},
+	colorwheel: {
+		name: "Color Wheel",
+		desc: "Secondary effect depends on user's type.",
+		shortDesc: "Secondary effect depends on user's type.",
+	},
+	paintprint: {
+		name: "Paint Print",
+		desc: "Copies the target's stat boosts, then attacks.",
+		shortDesc: "Copies the target's stat boosts, then attacks.",
+	},
+	warpaway: {
+		name: "Warp Away",
+		desc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+	},
+	gentlyweeps: {
+		name: "Gently Weeps",
+		desc: "25% chance to also freeze the target solid.",
+		shortDesc: "25% chance to also freeze the target solid.",
+	},
+	fishingrod: {
+		name: "Fishing Rod",
+		desc: "Causes the foe to be switched out.",
+		shortDesc: "Causes the foe to be switched out.",
+	},
+	beachboy: {
+		name: "Beach Boy",
+		desc: "Hits through Protect, damages and traps the target for 4-5 turns.",
+		shortDesc: "Hits through Protect, damages and traps the target for 4-5 turns.",
+	},
+	mirrordimension: {
+		name: "Mirror Dimension",
+		desc: "Increases power of Glass-type moves for 8 turns.",
+		shortDesc: "Increases power of Glass-type moves for 8 turns.",
+	},
+	deflate: {
+		name: "Deflate",
+		desc: "Lowers target's Speed, may paralyze.",
+		shortDesc: "Lowers target's Speed, may paralyze.",
+	},
+	decayspray: {
+		name: "Decay Spray",
+		desc: "High chance to inflict Curse.",
+		shortDesc: "High chance to inflict Curse.",
+	},
+	agingcurse: {
+		name: "Aging Curse",
+		desc: "May inflict Curse.",
+		shortDesc: "May inflict Curse.",
+	},
+	oldfist: {
+		name: "Old Fist",
+		desc: "Lowers the targets' Speed stat.",
+		shortDesc: "Lowers the targets' Speed stat.",
+	},
+	agingburst: {
+		name: "Aging Burst",
+		desc: "Hits all targets. High chance to lower Attack and Defense.",
+		shortDesc: "Hits all targets. High chance to lower Attack and Defense.",
+	},
+	aging: {
+		name: "Aging",
+		desc: "Lower's the target's stats.",
+		shortDesc: "Lower's the target's stats.",
+	},
+	bugnet: {
+		name: "Bug Net",
+		desc: "Bind and squeeze the foe for four to five turns.",
+		shortDesc: "Bind and squeeze the foe for four to five turns.",
+	},
+	handcuffs: {
+		name: "Handcuffs",
+		desc: "Handcuffs the foe for four to five turns.",
+		shortDesc: "Handcuffs the foe for four to five turns.",
+	},
+	shrink: {
+		name: "Shrink",
+		desc: "Decreases the target's Defense+Speed and Minimizes them.",
+		shortDesc: "Decreases the target's Defense+Speed and Minimizes them.",
+	},
+	stompcrush: {
+		name: "Stomp Crush",
+		desc: "The target is stomped with a big foot. It may also make the target flinch.",
+		shortDesc: "The target is stomped with a big foot. It may also make the target flinch.",
+	},
+	standarrow: {
+		name: "Stand Arrow",
+		desc: "Bet on Heads and flip a coin. Heads or tails, what will it be?",
+		shortDesc: "Bet on Heads and flip a coin. Heads or tails, what will it be?",
+	},
+	notchosen: {
+		name: "Not Chosen",
+		desc: "The target faints next turn.",
+		shortDesc: "The target faints next turn.",
+	},
+	getstand: {
+		name: "Get Stand",
+		desc: "Gives the target a Stand.",
+		shortDesc: "Gives the target a Stand.",
+	},
+	rollingstones: {
+		name: "Rolling Stones",
+		desc: "Gives the target mercy by ending their life before they meet their tragic fate.",
+		shortDesc: "Gives the target mercy by ending their life before they meet their tragic fate.",
+	},
+	achtungbaby: {
+		name: "Achtung Baby",
+		desc: "Protects the user.",
+		shortDesc: "Protects the user.",
+	},
+	moldburst: {
+		name: "Mold Burst",
+		desc: "High chance to poison.",
+		shortDesc: "High chance to poison.",
+	},
+	thermalburn: {
+		name: "Thermal Burn",
+		desc: "Inflicts the target with a Burn.",
+		shortDesc: "Inflicts the target with a Burn.",
+	},
+	anneaaa: {
+		name: "AnneAAA",
+		desc: "90% to raise user's Defense stat.",
+		shortDesc: "90% to raise user's Defense stat.",
+	},
+	annes: {
+		name: "Annes",
+		desc: "The user fires a concentrated bundle of electricity. It may also raise the user's Sp. Atk stat.",
+		shortDesc: "The user fires a concentrated bundle of electricity. It may also raise the user's Sp. Atk stat.",
+	},
+	crystaltail: {
+		name: "Crystal Tail",
+		desc: "The target is slammed with a steel-hard tail. It may also lower the target's Defense stat.",
+		shortDesc: "The target is slammed with a steel-hard tail. It may also lower the target's Defense stat.",
+	},
+	cosmichorror: {
+		name: "Cosmic Horror",
+		desc: "High chance to confuse.",
+		shortDesc: "High chance to confuse.",
+	},
+	flavortown: {
+		name: "Flavor Town",
+		desc: "The foe is attacked with a powerful beam. The user must rest on the next turn to regain its energy.",
+		shortDesc: "The foe is attacked with a powerful beam. The user must rest on the next turn to regain its energy.",
+	},
+	dusttornado: {
+		name: "Dust Tornado",
+		desc: "High chance to lower target's accuracy.",
+		shortDesc: "High chance to lower target's accuracy.",
+	},
+	cosmicgas: {
+		name: "Cosmic Gas",
+		desc: "Hits everything on the field, chance to badly poison.",
+		shortDesc: "Hits everything on the field, chance to badly poison.",
+	},
+	endtime: {
+		name: "End Time",
+		desc: "When the user knocks out a target with this move, the user's Attack stat rises sharply.",
+		shortDesc: "When the user knocks out a target with this move, the user's Attack stat rises sharply.",
+	},
+	saturnrings: {
+		name: "Saturn Rings",
+		desc: "Things such as long bodies or tentacles are used to bind and squeeze the foe for four to five turns.",
+		shortDesc: "Things such as long bodies or tentacles are used to bind and squeeze the foe for four to five turns.",
+	},
+	aquabolt: {
+		name: "Aquabolt",
+		desc: "Chance to paralyze the target.",
+		shortDesc: "Chance to paralyze the target.",
+	},
+	corner: {
+		name: "Corner",
+		desc: "Guaranteed to hit and the target cannot switch.",
+		shortDesc: "Guaranteed to hit and the target cannot switch.",
+	},
+	dazzlepowder: {
+		name: "Dazzle Powder",
+		desc: "Confuses the target.",
+		shortDesc: "Confuses the target.",
+	},
+	metalblast: {
+		name: "Metal Blast",
+		desc: "The target is blasted by a huge volume of METAL launched under great pressure.",
+		shortDesc: "The target is blasted by a huge volume of METAL launched under great pressure.",
+	},
+	cosmicgrasp: {
+		name: "Cosmic Grasp",
+		desc: "The user summons intangible tentacles to squeeze the foe for four to five turns.",
+		shortDesc: "The user summons intangible tentacles to squeeze the foe for four to five turns.",
+	},
+	sanityleech: {
+		name: "Sanity Leech",
+		desc: "A sanity-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A sanity-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	brandingkiss: {
+		name: "Branding Kiss",
+		desc: "A burning kiss. Guaranteed to Burn.",
+		shortDesc: "A burning kiss. Guaranteed to Burn.",
+	},
+	scendscale: {
+		name: "Scendscale",
+		desc: "Double damage against Dragon types. Critical hits land more easily.",
+		shortDesc: "Double damage against Dragon types. Critical hits land more easily.",
+	},
+	eighthoctave: {
+		name: "Eighth Octave",
+		desc: "Deafening sound. Target gains ability Soundproof.",
+		shortDesc: "Deafening sound. Target gains ability Soundproof.",
+	},
+	bugzap: {
+		name: "Bug Zap",
+		desc: "Double damage against Bug types.",
+		shortDesc: "Double damage against Bug types.",
+	},
+	angaltakigalshe: {
+		name: "AnGalTaKigalShe",
+		desc: "Shoots the PLANET VENUS at the target. May raise SpAtk.",
+		shortDesc: "Shoots the PLANET VENUS at the target. May raise SpAtk.",
+	},
+	gugalannastrike: {
+		name: "GugalannaStrike",
+		desc: "Hits everything on the field. May lower all the target's stats.",
+		shortDesc: "Hits everything on the field. May lower all the target's stats.",
+	},
+	secretcalibur: {
+		name: "Secret Calibur",
+		desc: "Hi crit rate. Deals extra damage to Saberface targets.",
+		shortDesc: "Hi crit rate. Deals extra damage to Saberface targets.",
+	},
+	caliburn: {
+		name: "Caliburn",
+		desc: "Hits both enemies, draining their health.",
+		shortDesc: "Hits both enemies, draining their health.",
+	},
+	dimensionofsteam: {
+		name: "DimensionOfSteam",
+		desc: "70% chance to lower the target's SpDef. Hits both targets.",
+		shortDesc: "70% chance to lower the target's SpDef. Hits both targets.",
+	},
+	summonrobots: {
+		name: "Summon Robots",
+		desc: "Summon robots to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon robots to attack 2-5 times in a row. Deals physical damage.",
+	},
+	plastichammer: {
+		name: "Plastic Hammer",
+		desc: "It may leave the target with paralysis.",
+		shortDesc: "It may leave the target with paralysis.",
+	},
+	magmahammer: {
+		name: "Magma Hammer",
+		desc: "The user swings and hits with its strong and heavy fist. It lowers the user's Speed, however.",
+		shortDesc: "The user swings and hits with its strong and heavy fist. It lowers the user's Speed, however.",
+	},
+	excaliburvivian: {
+		name: "ExcaliburVivian",
+		desc: "It may also raise the user's Sp. Atk stat.",
+		shortDesc: "It may also raise the user's Sp. Atk stat.",
+	},
+	fairytail: {
+		name: "Fairy Tail",
+		desc: "The user knocks away the target and drags out another Pokemon in its party. In the wild, the battle ends.",
+		shortDesc: "The user knocks away the target and drags out another Pokemon in its party. In the wild, the battle ends.",
+	},
+	heartblade: {
+		name: "Heart Blade",
+		desc: "The target is attacked with a slash of claws or blades. Critical hits land more easily.",
+		shortDesc: "The target is attacked with a slash of claws or blades. Critical hits land more easily.",
+	},
+	woodtornado: {
+		name: "Wood Tornado",
+		desc: "This attack may also Confuse the target.",
+		shortDesc: "This attack may also Confuse the target.",
+	},
+	necksnap: {
+		name: "Neck Snap",
+		desc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
+		shortDesc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
+	},
+	vaporguard: {
+		name: "Vapor Guard",
+		desc: "Drastically raises its Defense stat.",
+		shortDesc: "Drastically raises its Defense stat.",
+	},
+	venipuncture: {
+		name: "Venipuncture",
+		desc: "Inserting new blood in its veins, restores HP. Heals more if the target is Bleeding.",
+		shortDesc: "Inserting new blood in its veins, restores HP. Heals more if the target is Bleeding.",
+	},
+	sanguinefang: {
+		name: "Sanguine Fang",
+		desc: "Makes the target Bleed.",
+		shortDesc: "Makes the target Bleed.",
+	},
+	twinshit: {
+		name: "Twinshit",
+		desc: "Shit",
+		shortDesc: "Shit",
+	},
+	mindcontrol: {
+		name: "Mind Control",
+		desc: "The user turns the foe's power against it. It does more damage the higher the target's Special Attack stat.",
+		shortDesc: "The user turns the foe's power against it. It does more damage the higher the target's Special Attack stat.",
+	},
+	hallucisting: {
+		name: "Hallucisting",
+		desc: "Very high chance to confuse the target.",
+		shortDesc: "Very high chance to confuse the target.",
+	},
+	pleasejusthelpme: {
+		name: "PleaseJustHelpMe",
+		desc: "Please just help me. Harshly reduces the user's Sp. Atk stat.",
+		shortDesc: "Please just help me. Harshly reduces the user's Sp. Atk stat.",
+	},
+	returntozero: {
+		name: "Return to Zero",
+		desc: "Makes the user invincible.",
+		shortDesc: "Makes the user invincible.",
+	},
+	switchblade: {
+		name: "Switch Blade",
+		desc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+	},
+	kingshammer: {
+		name: "King's Hammer",
+		desc: "Nullifies the foe's ability.",
+		shortDesc: "Nullifies the foe's ability.",
+	},
+	weakeningswipe: {
+		name: "Weakening Swipe",
+		desc: "Lowers the Attack of all other pokemon on the field.",
+		shortDesc: "Lowers the Attack of all other pokemon on the field.",
+	},
+	calmingpulse: {
+		name: "Calming Pulse",
+		desc: "Lowers the Attack of all other pokemon on the field.",
+		shortDesc: "Lowers the Attack of all other pokemon on the field.",
+	},
+	nibble: {
+		name: "Nibble",
+		desc: "Eats the target, making it faint instantly.",
+		shortDesc: "Eats the target, making it faint instantly.",
+	},
+	agoraphobia: {
+		name: "Agoraphobia",
+		desc: "Causes the foe to be switched out.",
+		shortDesc: "Causes the foe to be switched out.",
+	},
+	hysteria: {
+		name: "Hysteria",
+		desc: "Hits everything on the field. High chance to confuse.",
+		shortDesc: "Hits everything on the field. High chance to confuse.",
+	},
+	peanutbutter: {
+		name: "Peanut Butter",
+		desc: "Lowers the targets' Speed stat.",
+		shortDesc: "Lowers the targets' Speed stat.",
+	},
+	peanutcrash: {
+		name: "Peanut Crash",
+		desc: "The user slams its tough body onto the target, 70% to raise user's Defense stat.",
+		shortDesc: "The user slams its tough body onto the target, 70% to raise user's Defense stat.",
+	},
+	backtothefuture: {
+		name: "BackToTheFuture",
+		desc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+	},
+	timeswap: {
+		name: "Time Swap",
+		desc: "The user swaps stat changes with the target.",
+		shortDesc: "The user swaps stat changes with the target.",
+	},
+	paperplane: {
+		name: "Paper Plane",
+		desc: "The user soars, raises Attack and Speed, then strikes on the second turn.",
+		shortDesc: "The user soars, raises Attack and Speed, then strikes on the second turn.",
+	},
+	cleavage: {
+		name: "Cleavage",
+		desc: "The user suffocates the target in its cleavage for 4 to 5 turns.",
+		shortDesc: "The user suffocates the target in its cleavage for 4 to 5 turns.",
+	},
+	undyingspear: {
+		name: "Undying Spear",
+		desc: "Gets revenge for a fainted ally. If an ally fainted in the last turn, this attack's damage increases.",
+		shortDesc: "Gets revenge for a fainted ally. If an ally fainted in the last turn, this attack's damage increases.",
+	},
+	gasterblaster: {
+		name: "Gaster Blaster",
+		desc: "Makes the target bleed.",
+		shortDesc: "Makes the target bleed.",
+	},
+	twinsteam: {
+		name: "Twin Steam",
+		desc: "The target is hit twice in a row.",
+		shortDesc: "The target is hit twice in a row.",
+	},
+	steamspout: {
+		name: "Steam Spout",
+		desc: "The user spouts STEAM to damage the foe. The lower the user's HP, the less powerful it becomes.",
+		shortDesc: "The user spouts STEAM to damage the foe. The lower the user's HP, the less powerful it becomes.",
+	},
+	rogafufuken: {
+		name: "Roga Fufuken",
+		desc: "As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+		shortDesc: "As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+	},
+	kick: {
+		name: "Kick",
+		desc: "A kick.",
+		shortDesc: "A kick.",
+	},
+	sokidan: {
+		name: "Sokidan",
+		desc: "A fireball or soemthing idk really.",
+		shortDesc: "A fireball or soemthing idk really.",
+	},
+	jetkick: {
+		name: "Jet Kick",
+		desc: "A kick.",
+		shortDesc: "A kick.",
+	},
+	haunterdark: {
+		name: "Haunter Dark",
+		desc: "Starts Midnight weather.",
+		shortDesc: "Starts Midnight weather.",
+	},
+	killingbite: {
+		name: "Killing Bite",
+		desc: "This attack always results in a critical hit.",
+		shortDesc: "This attack always results in a critical hit.",
+	},
+	steamguns: {
+		name: "Steam Guns",
+		desc: "Two to five steams are launched in quick succession.",
+		shortDesc: "Two to five steams are launched in quick succession.",
+	},
+	avasculate: {
+		name: "Avasculate",
+		desc: "Cuts a third from the target's HP and paralyzes.",
+		shortDesc: "Cuts a third from the target's HP and paralyzes.",
+	},
+	arcaneeye: {
+		name: "Arcane Eye",
+		desc: "Sharply raise accuracy stat.",
+		shortDesc: "Sharply raise accuracy stat.",
+	},
+	antimagicfield: {
+		name: "Antimagic Field",
+		desc: "Raises SpDef and makes user immune to Magic-type moves.",
+		shortDesc: "Raises SpDef and makes user immune to Magic-type moves.",
+	},
+	barkskin: {
+		name: "Barkskin",
+		desc: "Sharply increases Defense and powers up the next Wood-type move.",
+		shortDesc: "Sharply increases Defense and powers up the next Wood-type move.",
+	},
+	steamup: {
+		name: "Steamup",
+		desc: "Sharply increases SpDef and powers up the next Steam-type move.",
+		shortDesc: "Sharply increases SpDef and powers up the next Steam-type move.",
+	},
+	chaosbolt: {
+		name: "Chaos Bolt",
+		desc: "It may also leave the target with paralysis.",
+		shortDesc: "It may also leave the target with paralysis.",
+	},
+	coneofcold: {
+		name: "Cone of Cold",
+		desc: "It may also freeze the target solid.",
+		shortDesc: "It may also freeze the target solid.",
+	},
+	summonfey: {
+		name: "Summon Fey",
+		desc: "Summon fairies to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon fairies to attack 2-5 times in a row. Deals physical damage.",
+	},
+	summondragons: {
+		name: "Summon Dragons",
+		desc: "Summon dragons to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon dragons to attack 2-5 times in a row. Deals physical damage.",
+	},
+	summoninsects: {
+		name: "Summon Insects",
+		desc: "Summon insects to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon insects to attack 2-5 times in a row. Deals physical damage.",
+	},
+	summon: {
+		name: "Summon",
+		desc: "Summons something to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summons something to attack 2-5 times in a row. Deals physical damage.",
+	},
+	earthbind: {
+		name: "Earth Bind",
+		desc: "Traps the target for four to five turns.",
+		shortDesc: "Traps the target for four to five turns.",
+	},
+	inflictwounds: {
+		name: "Inflict Wounds",
+		desc: "This attack always inflicts 80 HP damage.",
+		shortDesc: "This attack always inflicts 80 HP damage.",
+	},
+	farenheit451: {
+		name: "Farenheit 451",
+		desc: "High chance to Burn.",
+		shortDesc: "High chance to Burn.",
+	},
+	agitatewound: {
+		name: "Agitate Wound",
+		desc: "If the target has already taken some damage in the same turn, this attack's power is doubled.",
+		shortDesc: "If the target has already taken some damage in the same turn, this attack's power is doubled.",
+	},
+	undeadagony: {
+		name: "Undead Agony",
+		desc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+		shortDesc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+	},
+	summonundead: {
+		name: "Summon Undead",
+		desc: "Summon zombies to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon zombies to attack 2-5 times in a row. Deals physical damage.",
+	},
+	enfeebleray: {
+		name: "Enfeeble Ray",
+		desc: "This may also lower the target's Attack stat.",
+		shortDesc: "This may also lower the target's Attack stat.",
+	},
+	avadakedavra: {
+		name: "Avada Kedavra",
+		desc: "The target will faint instantly if this attack hits.",
+		shortDesc: "The target will faint instantly if this attack hits.",
+	},
+	sandwichstack: {
+		name: "Sandwich Stack",
+		desc: "The opponent is crushed under the weight of bread, lettuce, meat, cheese, and more bread.",
+		shortDesc: "The opponent is crushed under the weight of bread, lettuce, meat, cheese, and more bread.",
+	},
+	invocation: {
+		name: "Invocation",
+		desc: "Uses a random Chaos-type move.",
+		shortDesc: "Uses a random Chaos-type move.",
+	},
+	bloodboil: {
+		name: "Blood Boil",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	bloodorb: {
+		name: "Blood Orb",
+		desc: "It may also lower the target's Sp. Def stat. Does more damage if the user is bleeding.",
+		shortDesc: "It may also lower the target's Sp. Def stat. Does more damage if the user is bleeding.",
+	},
+	paperorb: {
+		name: "Paper Orb",
+		desc: "It may also lower the target's Sp. Def stat.",
+		shortDesc: "It may also lower the target's Sp. Def stat.",
+	},
+	bloodspikes: {
+		name: "Blood Spikes",
+		desc: "Stabs foe with blood spikes from below. High critical-hit ratio.",
+		shortDesc: "Stabs foe with blood spikes from below. High critical-hit ratio.",
+	},
+	brainrot: {
+		name: "Brainrot",
+		desc: "50% chance to lower the target's Sp. Atk stat.",
+		shortDesc: "50% chance to lower the target's Sp. Atk stat.",
+	},
+	necrochannel: {
+		name: "Necrochannel",
+		desc: "Uses a random Zombie-type move.",
+		shortDesc: "Uses a random Zombie-type move.",
+	},
+	dawnofthedead: {
+		name: "DawnOfTheDead",
+		desc: "Causes the sunlight to turn harsh.",
+		shortDesc: "Causes the sunlight to turn harsh.",
+	},
+	legotrap: {
+		name: "Lego Trap",
+		desc: "User lays lego around foe's feet. The trap hurts foes that switch into battle.",
+		shortDesc: "User lays lego around foe's feet. The trap hurts foes that switch into battle.",
+	},
+	rigormortis: {
+		name: "Rigor Mortis",
+		desc: "It may leave the target with paralysis.",
+		shortDesc: "It may leave the target with paralysis.",
+	},
+	coldcorpse: {
+		name: "Cold Corpse",
+		desc: "It may also freeze the target solid.",
+		shortDesc: "It may also freeze the target solid.",
+	},
+	summonspirits: {
+		name: "Summon Spirits",
+		desc: "Summon insects to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon insects to attack 2-5 times in a row. Deals physical damage.",
+	},
+	zombieapocalypse: {
+		name: "Zombie Apocalypse",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	zombiehammer: {
+		name: "Zombie Hammer",
+		desc: "It lowers the user's Speed, however.",
+		shortDesc: "It lowers the user's Speed, however.",
+	},
+	"5impossiblerequests": {
+		name: "5ImpossibleRequests",
+		desc: "Uses one of Five impossible requests.",
+		shortDesc: "Uses one of Five impossible requests.",
+	},
+	houraibranch: {
+		name: "Hourai Branch",
+		desc: "Rumors say that there's a mountain called Hourai in the eastern ocean.",
+		shortDesc: "Rumors say that there's a mountain called Hourai in the eastern ocean.",
+	},
+	mysterium: {
+		name: "Mysterium",
+		desc: "50% chance to lower the target's Sp. Atk stat by 3.",
+		shortDesc: "50% chance to lower the target's Sp. Atk stat by 3.",
+	},
+	kinkakujiceiling: {
+		name: "Kinkakuji Ceiling",
+		desc: "Doesn't miss, hits both targets in a double battle.",
+		shortDesc: "Doesn't miss, hits both targets in a double battle.",
+	},
+	lunarilmenite: {
+		name: "Lunar Ilmenite",
+		desc: "Confuses the target.",
+		shortDesc: "Confuses the target.",
+	},
+	redstoneaja: {
+		name: "Red Stone Aja",
+		desc: "Burns the target.",
+		shortDesc: "Burns the target.",
+	},
+	spiritaway: {
+		name: "Spirit Away",
+		desc: "The target will faint instantly if this attack hits.",
+		shortDesc: "The target will faint instantly if this attack hits.",
+	},
+	dollarmy: {
+		name: "Doll Army",
+		desc: "Summon minions to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon minions to attack 2-5 times in a row. Deals physical damage.",
+	},
+	fourofakind: {
+		name: "Four of a Kind",
+		desc: "A four hit attack that becomes more powerful with each successive hit.",
+		shortDesc: "A four hit attack that becomes more powerful with each successive hit.",
+	},
+	fourbirthssword: {
+		name: "FourBirthsSword",
+		desc: "+2 priority. May 1 hit KO.",
+		shortDesc: "+2 priority. May 1 hit KO.",
+	},
+	hesitationdeparture: {
+		name: "Hesitation Departure",
+		desc: "May 1 hit KO.",
+		shortDesc: "May 1 hit KO.",
+	},
+	matsuyoireflectslash: {
+		name: "MatsuyoiReflectSlash",
+		desc: "Hits both targets. Hi crit rate.",
+		shortDesc: "Hits both targets. Hi crit rate.",
+	},
+	borderoflifeanddeath: {
+		name: "BorderOfLifeAndDeath",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	borderoflightanddark: {
+		name: "BorderOfLightAndDark",
+		desc: "This attack also deals Dark-type damage.",
+		shortDesc: "This attack also deals Dark-type damage.",
+	},
+	twindeath: {
+		name: "Twindeath",
+		desc: "Death.",
+		shortDesc: "Death.",
+	},
+	eventhorizon: {
+		name: "Event Horizon",
+		desc: "If the target's HP is down to about half, this attack will hit with double the power.",
+		shortDesc: "If the target's HP is down to about half, this attack will hit with double the power.",
+	},
+	curseofyig: {
+		name: "Curse of Yig",
+		desc: "High chance to inflict Curse.",
+		shortDesc: "High chance to inflict Curse.",
+	},
+	yellowsign: {
+		name: "Yellow Sign",
+		desc: "Very high chance to confuse.",
+		shortDesc: "Very high chance to confuse.",
+	},
+	archbtyrophbia: {
+		name: "Archbtyrophbia",
+		desc: "The target takes more damage from Food moves for 4 turns.",
+		shortDesc: "The target takes more damage from Food moves for 4 turns.",
+	},
+	antiquitypunch: {
+		name: "Antiquity Punch",
+		desc: "Unless the target faints, the user must rest on the next turn.",
+		shortDesc: "Unless the target faints, the user must rest on the next turn.",
+	},
+	expulsion: {
+		name: "Expulsion",
+		desc: "After making its attack, the user flips away to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user flips away to switch places with a party Pokemon in waiting.",
+	},
+	sarnathsdoom: {
+		name: "Sarnaths Doom",
+		desc: "Gets revenge for a fainted ally. If an ally fainted in the last turn, this attack's damage increases.",
+		shortDesc: "Gets revenge for a fainted ally. If an ally fainted in the last turn, this attack's damage increases.",
+	},
+	thalassowave: {
+		name: "Thalassowave",
+		desc: "This attack also deals Water-type damage.",
+		shortDesc: "This attack also deals Water-type damage.",
+	},
+	thalassosurge: {
+		name: "Thalassosurge",
+		desc: "This attack also deals Water-type damage.",
+		shortDesc: "This attack also deals Water-type damage.",
+	},
+	woodball: {
+		name: "Wood Ball",
+		desc: "The user draws power from nature and fires it at the target. It may also lower the target's Sp. Def.",
+		shortDesc: "The user draws power from nature and fires it at the target. It may also lower the target's Sp. Def.",
+	},
+	dimensionwarp: {
+		name: "Dimension Warp",
+		desc: "User disappears on first turn, then reappears and attacks on second turn. This move hits even if the target protects itself.",
+		shortDesc: "User disappears on first turn, then reappears and attacks on second turn. This move hits even if the target protects itself.",
+	},
+	dimensionshamble: {
+		name: "DimensionShamble",
+		desc: "User disappears on first turn, then reappears and attacks on second turn. This move hits even if the target protects itself.",
+		shortDesc: "User disappears on first turn, then reappears and attacks on second turn. This move hits even if the target protects itself.",
+	},
+	timeleech: {
+		name: "Time Leech",
+		desc: "The user drains the target's time. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's time. The user's HP is restored by half the damage taken by the target.",
+	},
+	chronophage: {
+		name: "Chronophage",
+		desc: "The user drains the target's time. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's time. The user's HP is restored by half the damage taken by the target.",
+	},
+	timehound: {
+		name: "Time Hound",
+		desc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
+		shortDesc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
+	},
+	fanblast: {
+		name: "Fan Blast",
+		desc: "Also deals Wind-type damage. Ignores opponent's Stat Boosts.",
+		shortDesc: "Also deals Wind-type damage. Ignores opponent's Stat Boosts.",
+	},
+	bloodytongue: {
+		name: "Bloody Tongue",
+		desc: "Chance to leave the target with paralysis.",
+		shortDesc: "Chance to leave the target with paralysis.",
+	},
+	unknowncolor: {
+		name: "Unknown Color",
+		desc: "High chance to confuse.",
+		shortDesc: "High chance to confuse.",
+	},
+	colordrain: {
+		name: "Color Drain",
+		desc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	necrosplat: {
+		name: "NecroSplat",
+		desc: "Unsanitary sludge is hurled at the target. It may also poison the target.",
+		shortDesc: "Unsanitary sludge is hurled at the target. It may also poison the target.",
+	},
+	lifesap: {
+		name: "Life Sap",
+		desc: "The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user's HP is restored by half the damage taken by the target.",
+	},
+	ghatanovisage: {
+		name: "Ghatanovisage",
+		desc: "High chance to freeze.",
+		shortDesc: "High chance to freeze.",
+	},
+	awakening: {
+		name: "Awakening",
+		desc: "Makes everything on the field faint instantly.",
+		shortDesc: "Makes everything on the field faint instantly.",
+	},
+	woodenhoof: {
+		name: "Wooden Hoof",
+		desc: "The target is stomped with a hoof as hard as diamond. It may also make the target flinch.",
+		shortDesc: "The target is stomped with a hoof as hard as diamond. It may also make the target flinch.",
+	},
+	ancienttsunami: {
+		name: "Ancient Tsunami",
+		desc: "A huge tsunami crashes on the foe, there is a chance that it drags out another Pokemon in its party. In the wild, the battle ends.",
+		shortDesc: "A huge tsunami crashes on the foe, there is a chance that it drags out another Pokemon in its party. In the wild, the battle ends.",
+	},
+	rubbertongue: {
+		name: "Rubber Tongue",
+		desc: "Chance to leave the target with paralysis.",
+		shortDesc: "Chance to leave the target with paralysis.",
+	},
+	rubberpunch: {
+		name: "Rubber Punch",
+		desc: "It may also leave the target with paralysis.",
+		shortDesc: "It may also leave the target with paralysis.",
+	},
+	stinkymove: {
+		name: "Stinky Move",
+		desc: "The user brings an end to all of those around it. The user faints upon using this move.",
+		shortDesc: "The user brings an end to all of those around it. The user faints upon using this move.",
+	},
+	levitation: {
+		name: "Levitation",
+		desc: "The user levitates using psychic powers for five turns.",
+		shortDesc: "The user levitates using psychic powers for five turns.",
+	},
+	mistywave: {
+		name: "Misty Wave",
+		desc: "Chance to start Misty Terrain.",
+		shortDesc: "Chance to start Misty Terrain.",
+	},
+	antlerleech: {
+		name: "Antler Leech",
+		desc: "The user drains the foe's energy with its horns. The user's HP is restored by half the damage inflicted.",
+		shortDesc: "The user drains the foe's energy with its horns. The user's HP is restored by half the damage inflicted.",
+	},
+	everexpanding: {
+		name: "Ever Expanding",
+		desc: "The user continually expands over five turns. It becomes stronger each time it hits.",
+		shortDesc: "The user continually expands over five turns. It becomes stronger each time it hits.",
+	},
+	identitytheft: {
+		name: "Identity Theft",
+		desc: "Steals the target's stat boosts, then attacks.",
+		shortDesc: "Steals the target's stat boosts, then attacks.",
+	},
+	illusionarystrike: {
+		name: "Illusionary Strike",
+		desc: "Steals the target's stat boosts, then attacks.",
+		shortDesc: "Steals the target's stat boosts, then attacks.",
+	},
+	bottledive: {
+		name: "Bottle Dive",
+		desc: "Goes first, then switches out.",
+		shortDesc: "Goes first, then switches out.",
+	},
+	rowyourboat: {
+		name: "RowYourBoat",
+		desc: "Raises Attack and sharply raises Speed.",
+		shortDesc: "Raises Attack and sharply raises Speed.",
+	},
+	flytrap: {
+		name: "Fly Trap",
+		desc: "Double damage against Bug types.",
+		shortDesc: "Double damage against Bug types.",
+	},
+	tripleshot: {
+		name: "Triple Shot",
+		desc: "A consecutive three-shot attack that becomes more powerful with each successive hit.",
+		shortDesc: "A consecutive three-shot attack that becomes more powerful with each successive hit.",
+	},
+	determination: {
+		name: "Determination",
+		desc: "High chance to protect the user.",
+		shortDesc: "High chance to protect the user.",
+	},
+	seduction: {
+		name: "Seduction",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	edenfruit: {
+		name: "Eden Fruit",
+		desc: "Leech Seed, Ingrain.",
+		shortDesc: "Leech Seed, Ingrain.",
+	},
+	temptations: {
+		name: "Temptations",
+		desc: "lower the target's Sp. Atk stat.",
+		shortDesc: "lower the target's Sp. Atk stat.",
+	},
+	clearingwind: {
+		name: "Clearing Wind",
+		desc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+		shortDesc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+	},
+	typebeam: {
+		name: "Type Beam",
+		desc: "Same type as the user's primary type.",
+		shortDesc: "Same type as the user's primary type.",
+	},
+	bedtimestory: {
+		name: "Bedtime Story",
+		desc: "Chance to cause Sleep.",
+		shortDesc: "Chance to cause Sleep.",
+	},
+	dreamswallow: {
+		name: "Dream Swallow",
+		desc: "The user eats the dreams of a sleeping foe. It absorbs half the damage caused to heal the user's HP.",
+		shortDesc: "The user eats the dreams of a sleeping foe. It absorbs half the damage caused to heal the user's HP.",
+	},
+	tossandturn: {
+		name: "TossandTurn",
+		desc: "An attack that can be used only if the user is asleep. May also make target flinch.",
+		shortDesc: "An attack that can be used only if the user is asleep. May also make target flinch.",
+	},
+	dragondream: {
+		name: "Dragon Dream",
+		desc: "An attack that can be used only if the user is asleep. May also make target flinch.",
+		shortDesc: "An attack that can be used only if the user is asleep. May also make target flinch.",
+	},
+	firehorn: {
+		name: "Fire Horn",
+		desc: "It may leave the target with a burn.",
+		shortDesc: "It may leave the target with a burn.",
+	},
+	meltinghorn: {
+		name: "Melting Horn",
+		desc: "It may leave the target with a burn.",
+		shortDesc: "It may leave the target with a burn.",
+	},
+	dragonhorn: {
+		name: "Dragon Horn",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	pizzatime: {
+		name: "Pizza Time",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	pizzabite: {
+		name: "Pizza-bite",
+		desc: "An energy-draining fang. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "An energy-draining fang. The user's HP is restored by half the damage taken by the target.",
+	},
+	delivery: {
+		name: "Delivery",
+		desc: "Two turns after this move is used, the delivery will arrive.",
+		shortDesc: "Two turns after this move is used, the delivery will arrive.",
+	},
+	gaebolgalt: {
+		name: "Gae Bolg Alt",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	gateofskye: {
+		name: "Gate of Skye",
+		desc: "The target will faint instantly if this attack hits.",
+		shortDesc: "The target will faint instantly if this attack hits.",
+	},
+	godslayer: {
+		name: "God Slayer",
+		desc: "Double damage against Divine types. Critical hits land more easily.",
+		shortDesc: "Double damage against Divine types. Critical hits land more easily.",
+	},
+	whirlpaint: {
+		name: "Whirlpaint",
+		desc: "Traps foes in a violent swirling whirlpool for four to five turns.",
+		shortDesc: "Traps foes in a violent swirling whirlpool for four to five turns.",
+	},
+	paintingworld: {
+		name: "Painting World",
+		desc: "Traps foes in a violent swirling whirlpool for four to five turns.",
+		shortDesc: "Traps foes in a violent swirling whirlpool for four to five turns.",
+	},
+	artgallery: {
+		name: "Art Gallery",
+		desc: "Increases power of Paint-type moves for 8 turns.",
+		shortDesc: "Increases power of Paint-type moves for 8 turns.",
+	},
+	cosmicweb: {
+		name: "Cosmic Web",
+		desc: "Traps target for four to five turns.",
+		shortDesc: "Traps target for four to five turns.",
+	},
+	greasygrasp: {
+		name: "Greasy Grasp",
+		desc: "Squeezes the foe for four to five turns.",
+		shortDesc: "Squeezes the foe for four to five turns.",
+	},
+	feardrain: {
+		name: "Fear Drain",
+		desc: "A fear-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A fear-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	bonebreaker: {
+		name: "BONE BREAKER",
+		desc: "It also damages the user by a fairly large amount, however.",
+		shortDesc: "It also damages the user by a fairly large amount, however.",
+	},
+	sniffing: {
+		name: "Sniffing",
+		desc: "Sharply raise its accuracy stat.",
+		shortDesc: "Sharply raise its accuracy stat.",
+	},
+	featherblade: {
+		name: "Featherblade",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	counterwing: {
+		name: "Counter Wing",
+		desc: "An attack move that inflicts double the damage if the user has been hurt by the foe in the same turn.",
+		shortDesc: "An attack move that inflicts double the damage if the user has been hurt by the foe in the same turn.",
+	},
+	drilldive: {
+		name: "Drill Dive",
+		desc: "Hi crit. User descends on foe, spinning like drill wth sharp beak bearing down on it.",
+		shortDesc: "Hi crit. User descends on foe, spinning like drill wth sharp beak bearing down on it.",
+	},
+	hurricanepunch: {
+		name: "Hurricane Punch",
+		desc: "It may also confuse the foe.",
+		shortDesc: "It may also confuse the foe.",
+	},
+	trojanhorse: {
+		name: "Trojan Horse",
+		desc: "Two turns after this move is used, the opponent will be attacked.",
+		shortDesc: "Two turns after this move is used, the opponent will be attacked.",
+	},
+	flavorburst: {
+		name: "Flavor Burst",
+		desc: "May also paralyze, burn, or freeze the target.",
+		shortDesc: "May also paralyze, burn, or freeze the target.",
+	},
+	branchblow: {
+		name: "Branch Blow",
+		desc: "The user swings its body around violently to inflict damage on everything in its vicinity.",
+		shortDesc: "The user swings its body around violently to inflict damage on everything in its vicinity.",
+	},
+	faerieorb: {
+		name: "Faerie Orb",
+		desc: "It may also lower the target's Sp. Def stat.",
+		shortDesc: "It may also lower the target's Sp. Def stat.",
+	},
+	tacoroll: {
+		name: "Taco Roll",
+		desc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+		shortDesc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+	},
+	pillowdrain: {
+		name: "Pillow Drain",
+		desc: "The user eats the dreams of a sleeping foe. It absorbs half the damage caused to heal the user's HP.",
+		shortDesc: "The user eats the dreams of a sleeping foe. It absorbs half the damage caused to heal the user's HP.",
+	},
+	meteorhammer: {
+		name: "Meteor Hammer",
+		desc: "It lowers the user's Speed, however.",
+		shortDesc: "It lowers the user's Speed, however.",
+	},
+	wakingchant: {
+		name: "Waking Chant",
+		desc: "The user attacks in an uproar for three turns. Over that time, no one can fall asleep.",
+		shortDesc: "The user attacks in an uproar for three turns. Over that time, no one can fall asleep.",
+	},
+	steamsale: {
+		name: "Steam Sale",
+		desc: "The user slaps down the target's held item, preventing that item from being used in the battle.",
+		shortDesc: "The user slaps down the target's held item, preventing that item from being used in the battle.",
+	},
+	magiccharge: {
+		name: "Magic Charge",
+		desc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+		shortDesc: "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however.",
+	},
+	babilu: {
+		name: "Bab ilu",
+		desc: "Hits two to five times.",
+		shortDesc: "Hits two to five times.",
+	},
+	enki: {
+		name: "Enki",
+		desc: "A second-turn attack move where critical hits land more easily. It may also make the target flinch.",
+		shortDesc: "A second-turn attack move where critical hits land more easily. It may also make the target flinch.",
+	},
+	karmarush: {
+		name: "Karma Rush",
+		desc: "Goes first, becomes more powerful the less HP the user has.",
+		shortDesc: "Goes first, becomes more powerful the less HP the user has.",
+	},
+	goldrush: {
+		name: "Goldrush",
+		desc: "High chance to confuse. Money is earned after battle.",
+		shortDesc: "High chance to confuse. Money is earned after battle.",
+	},
+	maxvoltcrash: {
+		name: "Max Volt Crash",
+		desc: "Hits both targets and leaves them with paralysis.",
+		shortDesc: "Hits both targets and leaves them with paralysis.",
+	},
+	maxcuddle: {
+		name: "Max Cuddle",
+		desc: "Infatuates the target if it is the opposite gender.",
+		shortDesc: "Infatuates the target if it is the opposite gender.",
+	},
+	emojibeam: {
+		name: "Emoji Beam",
+		desc: "The user strikes with a simultaneous three-beam attack. May also paralyze, burn, or freeze the target.",
+		shortDesc: "The user strikes with a simultaneous three-beam attack. May also paralyze, burn, or freeze the target.",
+	},
+	pisces: {
+		name: "Pisces",
+		desc: "The target is hit twice in a row.",
+		shortDesc: "The target is hit twice in a row.",
+	},
+	hollowburst: {
+		name: "Hollow Burst",
+		desc: "No feeling. The user also takes terrible damage.",
+		shortDesc: "No feeling. The user also takes terrible damage.",
+	},
+	fleetingstar: {
+		name: "Fleeting Star",
+		desc: "Goes first. The lower the user's HP, the less powerful this attack becomes.",
+		shortDesc: "Goes first. The lower the user's HP, the less powerful this attack becomes.",
+	},
+	starbeam: {
+		name: "Star Beam",
+		desc: "It may also reduce the target's Sp. Def stat.",
+		shortDesc: "It may also reduce the target's Sp. Def stat.",
+	},
+	cosmicray: {
+		name: "Cosmic Ray",
+		desc: "It may also lower the target's Sp. Atk.",
+		shortDesc: "It may also lower the target's Sp. Atk.",
+	},
+	swansong: {
+		name: "Swan Song",
+		desc: "The user faints upon using this move.",
+		shortDesc: "The user faints upon using this move.",
+	},
+	blacktruth: {
+		name: "Black Truth",
+		desc: "The BLACK Truth. May raise Attack. High crit rate.",
+		shortDesc: "The BLACK Truth. May raise Attack. High crit rate.",
+	},
+	massacre: {
+		name: "Massacre",
+		desc: "Hits all other mons on the field. May 1 hit KO.",
+		shortDesc: "Hits all other mons on the field. May 1 hit KO.",
+	},
+	machinegun: {
+		name: "Machine Gun",
+		desc: "The user fires machine gun at the target. Hits two to five times.",
+		shortDesc: "The user fires machine gun at the target. Hits two to five times.",
+	},
+	redtruth: {
+		name: "Red Truth",
+		desc: "The Red Truth. May raise the user's stats. High crit rate.",
+		shortDesc: "The Red Truth. May raise the user's stats. High crit rate.",
+	},
+	spellorb: {
+		name: "Spell Orb",
+		desc: "High chance to also lower the target's Sp. Def stat.",
+		shortDesc: "High chance to also lower the target's Sp. Def stat.",
+	},
+	goldtruth: {
+		name: "Gold Truth",
+		desc: "THE GOLDEN TRUTH. May raise the user's stats. High crit rate.",
+		shortDesc: "THE GOLDEN TRUTH. May raise the user's stats. High crit rate.",
+	},
+	memoryerase: {
+		name: "Memory Erase",
+		desc: "All status changes are returned to normal.",
+		shortDesc: "All status changes are returned to normal.",
+	},
+	bonddestiny: {
+		name: "Bond Destiny",
+		desc: "When this move is used, if the user faints, the foe that landed the knockout hit also faints.",
+		shortDesc: "When this move is used, if the user faints, the foe that landed the knockout hit also faints.",
+	},
+	sabbath: {
+		name: "Sabbath",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	magmaraze: {
+		name: "Magma Raze",
+		desc: "Burns the target.",
+		shortDesc: "Burns the target.",
+	},
+	hiberslam: {
+		name: "Hiberslam",
+		desc: "The user falls asleep and becomes fully healed after using this move.",
+		shortDesc: "The user falls asleep and becomes fully healed after using this move.",
+	},
+	winterburst: {
+		name: "Winter Burst",
+		desc: "The user can't move on the next turn.",
+		shortDesc: "The user can't move on the next turn.",
+	},
+	boomerang: {
+		name: "Boomerang",
+		desc: "The user throws a boomerang that loops to hit both targets twice, coming and going.",
+		shortDesc: "The user throws a boomerang that loops to hit both targets twice, coming and going.",
+	},
+	coldfront: {
+		name: "Cold Front",
+		desc: "Hits everything around the user. It may also freeze the target solid.",
+		shortDesc: "Hits everything around the user. It may also freeze the target solid.",
+	},
+	deluge: {
+		name: "Deluge",
+		desc: "Hits everything around the user. All status changes are returned to normal.",
+		shortDesc: "Hits everything around the user. All status changes are returned to normal.",
+	},
+	demonsurge: {
+		name: "Demon Surge",
+		desc: "May inflict Curse.",
+		shortDesc: "May inflict Curse.",
+	},
+	elvenarrow: {
+		name: "Elven Arrow",
+		desc: "The foe's stat changes don't affect the damage.",
+		shortDesc: "The foe's stat changes don't affect the damage.",
+	},
+	foghorn: {
+		name: "Foghorn",
+		desc: "The attack's recoil harshly reduces the user's Sp. Atk stat.",
+		shortDesc: "The attack's recoil harshly reduces the user's Sp. Atk stat.",
+	},
+	gaiapulse: {
+		name: "Gaia Pulse",
+		desc: "It may also raise the user's Sp. Atk stat.",
+		shortDesc: "It may also raise the user's Sp. Atk stat.",
+	},
+	jealousy: {
+		name: "Jealousy",
+		desc: "This attack's power increases the more the target has powered up with stat changes.",
+		shortDesc: "This attack's power increases the more the target has powered up with stat changes.",
+	},
+	heatmirage: {
+		name: "Heat Mirage",
+		desc: "Confuses both foes. Always hits in the Sun.",
+		shortDesc: "Confuses both foes. Always hits in the Sun.",
+	},
+	mischief: {
+		name: "Mischief",
+		desc: "The target is taunted, causing it to use only attack moves for three turns.",
+		shortDesc: "The target is taunted, causing it to use only attack moves for three turns.",
+	},
+	pincercrush: {
+		name: "Pincer Crush",
+		desc: "Lowers the targets Defense.",
+		shortDesc: "Lowers the targets Defense.",
+	},
+	pirouette: {
+		name: "Pirouette",
+		desc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+		shortDesc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+	},
+	bloodcurdling: {
+		name: "Bloodcurdling",
+		desc: "A bloodcurdling scream. It also damages the user a little.",
+		shortDesc: "A bloodcurdling scream. It also damages the user a little.",
+	},
+	razorfin: {
+		name: "Razor Fin",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	steamclean: {
+		name: "Steam Clean",
+		desc: "Heals the status problems of all the party Pokemon.",
+		shortDesc: "Heals the status problems of all the party Pokemon.",
+	},
+	roothold: {
+		name: "Root Hold",
+		desc: "Binds and squeezes the foe for four to five turns.",
+		shortDesc: "Binds and squeezes the foe for four to five turns.",
+	},
+	terraform: {
+		name: "Terraform",
+		desc: "Eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+		shortDesc: "Eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+	},
+	titanfang: {
+		name: "Titan Fang",
+		desc: "It harshly lowers the users speed however.",
+		shortDesc: "It harshly lowers the users speed however.",
+	},
+	valentine: {
+		name: "Valentine",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	treeoflife: {
+		name: "Tree of Life",
+		desc: "raise its Defense stat.",
+		shortDesc: "raise its Defense stat.",
+	},
+	mummywrap: {
+		name: "Mummy Wrap",
+		desc: "mUMMY bind and squeeze the foe for four to five turns.",
+		shortDesc: "mUMMY bind and squeeze the foe for four to five turns.",
+	},
+	papercounter: {
+		name: "Paper Counter",
+		desc: "The user retaliates with much greater power against the target that last inflicted damage on it.",
+		shortDesc: "The user retaliates with much greater power against the target that last inflicted damage on it.",
+	},
+	carpetslam: {
+		name: "Carpet Slam",
+		desc: "The user rubs fabric up against the target. It may also leave the target with paralysis.",
+		shortDesc: "The user rubs fabric up against the target. It may also leave the target with paralysis.",
+	},
+	rrrray: {
+		name: "RRR Ray",
+		desc: "The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user's HP is restored by half the damage taken by the target.",
+	},
+	galeofdarkness: {
+		name: "Gale of Darkness",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	shadownova: {
+		name: "Shadow Nova",
+		desc: "It also damages the user by a fairly large amount, however.",
+		shortDesc: "It also damages the user by a fairly large amount, however.",
+	},
+	bloodwhip: {
+		name: "Blood Whip",
+		desc: "May make the target bleed. Hi crit rate.",
+		shortDesc: "May make the target bleed. Hi crit rate.",
+	},
+	fishpunch: {
+		name: "Fish Punch",
+		desc: "It may reduce hit Pokemon's Speed.",
+		shortDesc: "It may reduce hit Pokemon's Speed.",
+	},
+	firstblood: {
+		name: "First Blood",
+		desc: "This move has great power, but it only works the first turn the user is in battle.",
+		shortDesc: "This move has great power, but it only works the first turn the user is in battle.",
+	},
+	delete: {
+		name: "Delete",
+		desc: "Delet this. The target will faint instantly if this attack hits.",
+		shortDesc: "Delet this. The target will faint instantly if this attack hits.",
+	},
+	mutualdestruction: {
+		name: "Mutual Destruction",
+		desc: "The user faints upon using this move.",
+		shortDesc: "The user faints upon using this move.",
+	},
+	burrowerbeneath: {
+		name: "Burrower Beneath",
+		desc: "The user burrows, then attacks on the second turn. It can also be used to exit dungeons.",
+		shortDesc: "The user burrows, then attacks on the second turn. It can also be used to exit dungeons.",
+	},
+	noisepollution: {
+		name: "Noise Pollution",
+		desc: "Sound based. It may also poison the target.",
+		shortDesc: "Sound based. It may also poison the target.",
+	},
+	cursedground: {
+		name: "Cursed Ground",
+		desc: "Causes confusion.",
+		shortDesc: "Causes confusion.",
+	},
+	dracomissiles: {
+		name: "Draco Missiles",
+		desc: "The user fires mini missiles at the target. Two to five missiles are launched in quick succession.",
+		shortDesc: "The user fires mini missiles at the target. Two to five missiles are launched in quick succession.",
+	},
+	giantslaying: {
+		name: "Giant Slaying",
+		desc: "The heavier the target, the greater the damage. High critical hit ratio.",
+		shortDesc: "The heavier the target, the greater the damage. High critical hit ratio.",
+	},
+	chokegas: {
+		name: "Choke Gas",
+		desc: "It may also make the target flinch.",
+		shortDesc: "It may also make the target flinch.",
+	},
+	jetpack: {
+		name: "Jet Pack",
+		desc: "The user soars, then strikes on the second turn.",
+		shortDesc: "The user soars, then strikes on the second turn.",
+	},
+	spitsand: {
+		name: "Spit Sand",
+		desc: "More Stockpile, more damage. Decreases Stockpile by 1.",
+		shortDesc: "More Stockpile, more damage. Decreases Stockpile by 1.",
+	},
+	psypowder: {
+		name: "Psy Powder",
+		desc: "The target becomes Psychic type.",
+		shortDesc: "The target becomes Psychic type.",
+	},
+	everlastinglight: {
+		name: "Everlasting Light",
+		desc: "The foe is attacked with a powerful ray of luxorious light. The user must rest on the next turn to regain its energy.",
+		shortDesc: "The foe is attacked with a powerful ray of luxorious light. The user must rest on the next turn to regain its energy.",
+	},
+	throwup: {
+		name: "Throw Up",
+		desc: "More Stockpile, more damage. Decreases Stockpile by 1.",
+		shortDesc: "More Stockpile, more damage. Decreases Stockpile by 1.",
+	},
+	fieryexplosion: {
+		name: "FieryExplosion",
+		desc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+		shortDesc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+	},
+	invertedroom: {
+		name: "Inverted Room",
+		desc: "The user creates a bizarre area in which type effectivenesses are reversed for five turns.",
+		shortDesc: "The user creates a bizarre area in which type effectivenesses are reversed for five turns.",
+	},
+	streamline: {
+		name: "Streamline",
+		desc: "Boosts the user's Defense and Speed stats.",
+		shortDesc: "Boosts the user's Defense and Speed stats.",
+	},
+	vaporform: {
+		name: "Vaporform",
+		desc: "Boosts the user's SpDef and Speed stats.",
+		shortDesc: "Boosts the user's SpDef and Speed stats.",
+	},
+	frozenwall: {
+		name: "Frozen Wall",
+		desc: "Protects user and harshly lowers the target's Speed. Chance of failing rises if used in succession.",
+		shortDesc: "Protects user and harshly lowers the target's Speed. Chance of failing rises if used in succession.",
+	},
+	fishingdive: {
+		name: "Fishing Dive",
+		desc: "This move is super effective on Water types.",
+		shortDesc: "This move is super effective on Water types.",
+	},
+	stonehammer: {
+		name: "Stone Hammer",
+		desc: "The user swings and hits with its strong and heavy fist. It lowers the user's Speed, however.",
+		shortDesc: "The user swings and hits with its strong and heavy fist. It lowers the user's Speed, however.",
+	},
+	boulderbash: {
+		name: "Boulder Bash",
+		desc: "The target is bashed with a boulder.",
+		shortDesc: "The target is bashed with a boulder.",
+	},
+	magmacannon: {
+		name: "Magma Cannon",
+		desc: "The target is blasted by a huge volume of magma launched under great pressure.",
+		shortDesc: "The target is blasted by a huge volume of magma launched under great pressure.",
+	},
+	nettleknife: {
+		name: "Nettle Knife",
+		desc: "High crit rate. It may also leave the target with a burn.",
+		shortDesc: "High crit rate. It may also leave the target with a burn.",
+	},
+	slushcrush: {
+		name: "Slush Crush",
+		desc: "Crushes the opp with partially melted snow, lowering the opp's Speed.",
+		shortDesc: "Crushes the opp with partially melted snow, lowering the opp's Speed.",
+	},
+	pixiedust: {
+		name: "Pixie Dust",
+		desc: "The target becomes Fairy type.",
+		shortDesc: "The target becomes Fairy type.",
+	},
+	mudcover: {
+		name: "Mud Cover",
+		desc: "The target becomes Ground type.",
+		shortDesc: "The target becomes Ground type.",
+	},
+	windcover: {
+		name: "Wind Cover",
+		desc: "The target becomes Wind type.",
+		shortDesc: "The target becomes Wind type.",
+	},
+	rudebuster: {
+		name: "Rude Buster",
+		desc: "It may make the target flinch.",
+		shortDesc: "It may make the target flinch.",
+	},
+	redbuster: {
+		name: "Red Buster",
+		desc: "It may make the target flinch.",
+		shortDesc: "It may make the target flinch.",
+	},
+	adaptivebody: {
+		name: "Adaptive Body",
+		desc: "User's ability becomes Wonder Guard.",
+		shortDesc: "User's ability becomes Wonder Guard.",
+	},
+	befuddlepowder: {
+		name: "Befuddle Powder",
+		desc: "Inflicts Sleep, Poison or Paralysis.",
+		shortDesc: "Inflicts Sleep, Poison or Paralysis.",
+	},
+	infernowind: {
+		name: "Inferno Wind",
+		desc: "Also deals Fire-type damage. Chance to Burn.",
+		shortDesc: "Also deals Fire-type damage. Chance to Burn.",
+	},
+	steambomb: {
+		name: "Steam Bomb",
+		desc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+		shortDesc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+	},
+	overdrivesong: {
+		name: "Overdrive Song",
+		desc: "Hits both targets. Sound based.",
+		shortDesc: "Hits both targets. Sound based.",
+	},
+	strangesmoke: {
+		name: "Strange Smoke",
+		desc: "It may also leave the target confused.",
+		shortDesc: "It may also leave the target confused.",
+	},
+	foamburst: {
+		name: "Foam Burst",
+		desc: "Harshly lower's the opponent's speed.",
+		shortDesc: "Harshly lower's the opponent's speed.",
+	},
+	idolatry: {
+		name: "Idolatry",
+		desc: "The user attacks with a prehistoric power. It may also raise all the user's stats at once.",
+		shortDesc: "The user attacks with a prehistoric power. It may also raise all the user's stats at once.",
+	},
+	takeflight: {
+		name: "Take Flight",
+		desc: "Sharply raises Speed and the user floats in the air for 5 turns.",
+		shortDesc: "Sharply raises Speed and the user floats in the air for 5 turns.",
+	},
+	shouldsleep: {
+		name: "Should Sleep",
+		desc: "It may also induce sleep.",
+		shortDesc: "It may also induce sleep.",
+	},
+	compost: {
+		name: "Compost",
+		desc: "User recovers half HP. Recovers full HP if an ally fainted last turn.",
+		shortDesc: "User recovers half HP. Recovers full HP if an ally fainted last turn.",
+	},
+	freestyle: {
+		name: "Freestyle",
+		desc: "Uses a random Dance move.",
+		shortDesc: "Uses a random Dance move.",
+	},
+	egoinflate: {
+		name: "Ego Inflate",
+		desc: "User recovers a bit of HP. Target is Taunted and has their attacking stats boosted by 1 each.",
+		shortDesc: "User recovers a bit of HP. Target is Taunted and has their attacking stats boosted by 1 each.",
+	},
+	pepperbreath: {
+		name: "Pepper Breath",
+		desc: "The target is attacked with small flames. It may also leave the target with a burn.",
+		shortDesc: "The target is attacked with small flames. It may also leave the target with a burn.",
+	},
+	novablast: {
+		name: "Nova Blast",
+		desc: "Spews ultra-high-temperature flames or a flame shot from its mouth to reduce everything to ashes.",
+		shortDesc: "Spews ultra-high-temperature flames or a flame shot from its mouth to reduce everything to ashes.",
+	},
+	megaclaw: {
+		name: "Mega Claw",
+		desc: "High crit rate.",
+		shortDesc: "High crit rate.",
+	},
+	gigadestroyer: {
+		name: "Giga Destroyer",
+		desc: "The user fires two organic missiles form the hatch on part of its chest.",
+		shortDesc: "The user fires two organic missiles form the hatch on part of its chest.",
+	},
+	terradestroyer: {
+		name: "Terra Destroyer",
+		desc: "The user fires two organic missiles form the hatch on part of its chest.",
+		shortDesc: "The user fires two organic missiles form the hatch on part of its chest.",
+	},
+	overflame: {
+		name: "Overflame",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	revengeflame: {
+		name: "Revenge Flame",
+		desc: "x2 dmg if user hurt by the foe in the same turn. Hi crit rate.",
+		shortDesc: "x2 dmg if user hurt by the foe in the same turn. Hi crit rate.",
+	},
+	megatonpunch: {
+		name: "Megaton Punch",
+		desc: "The target is slugged by a punch thrown with muscle-packed power.",
+		shortDesc: "The target is slugged by a punch thrown with muscle-packed power.",
+	},
+	hailball: {
+		name: "Hail Ball",
+		desc: "Makes it hail for five turns.",
+		shortDesc: "Makes it hail for five turns.",
+	},
+	fieryslash: {
+		name: "Fiery Slash",
+		desc: "The user slashes with a sharp claw made from fire. Critical hits land more easily.",
+		shortDesc: "The user slashes with a sharp claw made from fire. Critical hits land more easily.",
+	},
+	gaiaforce: {
+		name: "Gaia Force",
+		desc: "Gathers all the energy in the atmosphere and launches a high temperature energy shot.",
+		shortDesc: "Gathers all the energy in the atmosphere and launches a high temperature energy shot.",
+	},
+	greattornado: {
+		name: "Great Tornado",
+		desc: "Goes first, high crit rate.",
+		shortDesc: "Goes first, high crit rate.",
+	},
+	groundzero: {
+		name: "Ground Zero",
+		desc: "The user fires two organic missiles from its spinal cord.",
+		shortDesc: "The user fires two organic missiles from its spinal cord.",
+	},
+	buffalobreathe: {
+		name: "Buffalo Breathe",
+		desc: "Very high chance to paralyze the target.",
+		shortDesc: "Very high chance to paralyze the target.",
+	},
+	thiefstar: {
+		name: "Thief Star",
+		desc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+		shortDesc: "The user attacks and steals the foe's held item simultaneously. It can't steal if the user holds an item.",
+	},
+	thunderhorn: {
+		name: "Thunderhorn",
+		desc: "Using its tough and impressive horn, the user rams into the target with no letup.",
+		shortDesc: "Using its tough and impressive horn, the user rams into the target with no letup.",
+	},
+	samael: {
+		name: "Samael",
+		desc: "Badly poisons the target.",
+		shortDesc: "Badly poisons the target.",
+	},
+	maxsnooze: {
+		name: "MAXSNOOZE",
+		desc: "50% chance to make the target Drowsy.",
+		shortDesc: "50% chance to make the target Drowsy.",
+	},
+	chistrike: {
+		name: "Chi Strike",
+		desc: "Increases the user's Critical hit ratio.",
+		shortDesc: "Increases the user's Critical hit ratio.",
+	},
+	steelsurge: {
+		name: "Steel Surge",
+		desc: "Puts Scrap Metal on the opposing side.",
+		shortDesc: "Puts Scrap Metal on the opposing side.",
+	},
+	superimpact: {
+		name: "Super Impact",
+		desc: "After attacking, the user becomes confused.",
+		shortDesc: "After attacking, the user becomes confused.",
+	},
+	derangedburst: {
+		name: "Deranged Burst",
+		desc: "After attacking, the user becomes confused.",
+		shortDesc: "After attacking, the user becomes confused.",
+	},
+	darkresolve: {
+		name: "Dark Resolve",
+		desc: "After attacking, the user is poisoned.",
+		shortDesc: "After attacking, the user is poisoned.",
+	},
+	regrettrident: {
+		name: "Regret Trident",
+		desc: "The target isn't given the option of mercy, only able to use attack moves for three turns.",
+		shortDesc: "The target isn't given the option of mercy, only able to use attack moves for three turns.",
+	},
+	closebook: {
+		name: "Close Book",
+		desc: "The user slams its tough body onto the target, 70% to raise user's Defense stat.",
+		shortDesc: "The user slams its tough body onto the target, 70% to raise user's Defense stat.",
+	},
+	bloodgun: {
+		name: "Blood Gun",
+		desc: "The target is blasted with a forceful shot of blood. Does more damage if the user is bleeding.",
+		shortDesc: "The target is blasted with a forceful shot of blood. Does more damage if the user is bleeding.",
+	},
+	toyflame: {
+		name: "Toy Flame",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	slowattack: {
+		name: "Slow Attack",
+		desc: "User lunges at a crawling pace. It is sure to strike last.",
+		shortDesc: "User lunges at a crawling pace. It is sure to strike last.",
+	},
+	powerdownkick: {
+		name: "PowerDownKick",
+		desc: "Lowers the target's Attack stat.",
+		shortDesc: "Lowers the target's Attack stat.",
+	},
+	blasphemousice: {
+		name: "Blasphemous Ice",
+		desc: "The target is razed with a eldritch ice of great intensity. It may freeze.",
+		shortDesc: "The target is razed with a eldritch ice of great intensity. It may freeze.",
+	},
+	conveyorbelt: {
+		name: "Conveyor Belt",
+		desc: "The target's place is swapped with its ally in a double battle.",
+		shortDesc: "The target's place is swapped with its ally in a double battle.",
+	},
+	pyrophobia: {
+		name: "Pyrophobia",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	universation: {
+		name: "Universation",
+		desc: "Heals the universe of our own, chance to heal health and status on your side.",
+		shortDesc: "Heals the universe of our own, chance to heal health and status on your side.",
+	},
+	beartrap: {
+		name: "Bear Trap",
+		desc: "Deals extra damage to Bear Pokemon.",
+		shortDesc: "Deals extra damage to Bear Pokemon.",
+	},
+	vibecheck: {
+		name: "Vibe Check",
+		desc: "If the user attacks before the target, the power of this move is doubled.",
+		shortDesc: "If the user attacks before the target, the power of this move is doubled.",
+	},
+	starlightexplosion: {
+		name: "Starlight Explosion",
+		desc: "High chance to burn the targets.",
+		shortDesc: "High chance to burn the targets.",
+	},
+	purgeshine: {
+		name: "Purge Shine",
+		desc: "High chance to heal health and status on your side.",
+		shortDesc: "High chance to heal health and status on your side.",
+	},
+	howlingblaster: {
+		name: "Howling Blaster",
+		desc: "Also deals Fire-type damage. Chance to Burn.",
+		shortDesc: "Also deals Fire-type damage. Chance to Burn.",
+	},
+	gracecrossfreezer: {
+		name: "GraceCrossFreezer",
+		desc: "The user launches sharp icicles at the target. It strikes two to five times in a row.",
+		shortDesc: "The user launches sharp icicles at the target. It strikes two to five times in a row.",
+	},
+	zeedcannon: {
+		name: "Zeed Cannon",
+		desc: "The target is blasted by a huge volume of ZEED launched under great pressure.",
+		shortDesc: "The target is blasted by a huge volume of ZEED launched under great pressure.",
+	},
+	sewing: {
+		name: "Sewing",
+		desc: "Restores HP and boosts Special Defense.",
+		shortDesc: "Restores HP and boosts Special Defense.",
+	},
+	wifebeater: {
+		name: "Wife Beater",
+		desc: "x2 to female targets. Forms a cloth and drenches it with a fluid to make it hard, and whips it",
+		shortDesc: "x2 to female targets. Forms a cloth and drenches it with a fluid to make it hard, and whips it",
+	},
+	lightninggun: {
+		name: "Lightning Gun",
+		desc: "Hits two to five times in a row.",
+		shortDesc: "Hits two to five times in a row.",
+	},
+	coconutpunch: {
+		name: "Coconut Punch",
+		desc: "The target is hit with a flurry of punches that strike two to five times in a row.",
+		shortDesc: "The target is hit with a flurry of punches that strike two to five times in a row.",
+	},
+	kissofbreath: {
+		name: "Kiss Of Breath",
+		desc: "This may also lower the target's Sp. Atk stat.",
+		shortDesc: "This may also lower the target's Sp. Atk stat.",
+	},
+	lovewhip: {
+		name: "Love Whip",
+		desc: "The user whips the target lovelingly.",
+		shortDesc: "The user whips the target lovelingly.",
+	},
+	tequilapunch: {
+		name: "Tequila Punch",
+		desc: "The target is hit with rhythmically launched punches that may also leave it confused.",
+		shortDesc: "The target is hit with rhythmically launched punches that may also leave it confused.",
+	},
+	sunyaslash: {
+		name: "Sunya Slash",
+		desc: "The user cuts with its long horn. The odd power contained in it does physical damage to the foe.",
+		shortDesc: "The user cuts with its long horn. The odd power contained in it does physical damage to the foe.",
+	},
+	doublespin: {
+		name: "Double Spin",
+		desc: "Hits twice. May raise the user's Attack.",
+		shortDesc: "Hits twice. May raise the user's Attack.",
+	},
+	megashock: {
+		name: "Megashock",
+		desc: "May also harshly lower the target's Defense stat.",
+		shortDesc: "May also harshly lower the target's Defense stat.",
+	},
+	devastate: {
+		name: "Devastate",
+		desc: "The user rampages furiously. May lower defense.",
+		shortDesc: "The user rampages furiously. May lower defense.",
+	},
+	magnetforce: {
+		name: "Magnet Force",
+		desc: "May lower the target's Attack and SpAtk stats.",
+		shortDesc: "May lower the target's Attack and SpAtk stats.",
+	},
+	geoimpact: {
+		name: "Geo Impact",
+		desc: "May sharply raise the target's SpAtk stat.",
+		shortDesc: "May sharply raise the target's SpAtk stat.",
+	},
+	magmaring: {
+		name: "Magma Ring",
+		desc: "The user moves last. Guaranteed to hit and the target cannot switch.",
+		shortDesc: "The user moves last. Guaranteed to hit and the target cannot switch.",
+	},
+	kaleidostorm: {
+		name: "Kaleidostorm",
+		desc: "Guaranteed to confuse the target if it hits.",
+		shortDesc: "Guaranteed to confuse the target if it hits.",
+	},
+	glide: {
+		name: "Glide",
+		desc: "The user flies with wings spread wide. May raise the user's accuracy.",
+		shortDesc: "The user flies with wings spread wide. May raise the user's accuracy.",
+	},
+	ultragiga: {
+		name: "Ultra Giga",
+		desc: "The user attacks with a prehistoric power. It may also raise all the user's stats at once.",
+		shortDesc: "The user attacks with a prehistoric power. It may also raise all the user's stats at once.",
+	},
+	fart: {
+		name: "Fart",
+		desc: "lol XD dude what if fart was move lmao XDDDDDD",
+		shortDesc: "lol XD dude what if fart was move lmao XDDDDDD",
+	},
+	holocaust: {
+		name: "Holocaust",
+		desc: "High chance to burn the targets.",
+		shortDesc: "High chance to burn the targets.",
+	},
+	fabricsoftener: {
+		name: "Fabric Softener",
+		desc: "Raises the user's SpDef and sharply raises Defense but lowers speed.",
+		shortDesc: "Raises the user's SpDef and sharply raises Defense but lowers speed.",
+	},
+	kawaiilook: {
+		name: "Kawaii Look",
+		desc: "High chance to lower the target's Attack and SpAtk stats.",
+		shortDesc: "High chance to lower the target's Attack and SpAtk stats.",
+	},
+	oceanlove: {
+		name: "Ocean Love",
+		desc: "Everything hit cannot use attacking moves for 3 turns.",
+		shortDesc: "Everything hit cannot use attacking moves for 3 turns.",
+	},
+	mochihammer: {
+		name: "Mochi Hammer",
+		desc: "May paralyze. This move is super effective on Food types.",
+		shortDesc: "May paralyze. This move is super effective on Food types.",
+	},
+	foodtackle: {
+		name: "Food Tackle",
+		desc: "A physical attack in which the user charges and slams into the target with its whole body.",
+		shortDesc: "A physical attack in which the user charges and slams into the target with its whole body.",
+	},
+	draineedle: {
+		name: "Draineedle",
+		desc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+	},
+	megalocrunch: {
+		name: "Megalo Crunch",
+		desc: "The user crunches up the target with sharp fangs. It may also lower the target's Defense stat.",
+		shortDesc: "The user crunches up the target with sharp fangs. It may also lower the target's Defense stat.",
+	},
+	baconrush: {
+		name: "Bacon Rush",
+		desc: "Also lowers the target's Defense stat.",
+		shortDesc: "Also lowers the target's Defense stat.",
+	},
+	fastfood: {
+		name: "Fast Food",
+		desc: "The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.",
+		shortDesc: "The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.",
+	},
+	eggacid: {
+		name: "Egg Acid",
+		desc: "Lowers the target's Sp. Def stat.",
+		shortDesc: "Lowers the target's Sp. Def stat.",
+	},
+	pizzaspin: {
+		name: "Pizza Spin",
+		desc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+		shortDesc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+	},
+	sushimissile: {
+		name: "Sushi Missile",
+		desc: "Raises user's Atk first turn, attacks on the second turn.",
+		shortDesc: "Raises user's Atk first turn, attacks on the second turn.",
+	},
+	foodpoisoning: {
+		name: "Food Poisoning",
+		desc: "Baits the target with food and poisons.",
+		shortDesc: "Baits the target with food and poisons.",
+	},
+	noodlewhip: {
+		name: "Noodle Whip",
+		desc: "High critical hit ratio.",
+		shortDesc: "High critical hit ratio.",
+	},
+	prediction: {
+		name: "Prediction",
+		desc: "It fails if the target is not readying an attack, however.",
+		shortDesc: "It fails if the target is not readying an attack, however.",
+	},
+	spoil: {
+		name: "Spoil",
+		desc: "If the target is holding a Berry, it becomes spoiled and unusable.",
+		shortDesc: "If the target is holding a Berry, it becomes spoiled and unusable.",
+	},
+	topsytackle: {
+		name: "Topsy Tackle",
+		desc: "Reverses the target's stat changes.",
+		shortDesc: "Reverses the target's stat changes.",
+	},
+	barking: {
+		name: "Barking",
+		desc: "The user barks two to five times in a row. May make the target flinch.",
+		shortDesc: "The user barks two to five times in a row. May make the target flinch.",
+	},
+	stonehead: {
+		name: "Stone Head",
+		desc: "The user sticks out its head and attacks by charging into the foe. It may also make the target flinch.",
+		shortDesc: "The user sticks out its head and attacks by charging into the foe. It may also make the target flinch.",
+	},
+	endvoiddream: {
+		name: "End Void Dream",
+		desc: "This move always goes first. Damages the user a little.",
+		shortDesc: "This move always goes first. Damages the user a little.",
+	},
+	searingquills: {
+		name: "Searing Quills",
+		desc: "Puts Hot Coals on the opposing side.",
+		shortDesc: "Puts Hot Coals on the opposing side.",
+	},
+	desertstorm: {
+		name: "Desert Storm",
+		desc: "Always hits during a Sandstorm. May lower the target's Accuracy.",
+		shortDesc: "Always hits during a Sandstorm. May lower the target's Accuracy.",
+	},
+	sadistwhip: {
+		name: "Sadist Whip",
+		desc: "It may also make the target flinch or leave it with paralysis.",
+		shortDesc: "It may also make the target flinch or leave it with paralysis.",
+	},
+	whiplash: {
+		name: "Whip Lash",
+		desc: "Lowers the target's Sp. Def stat.",
+		shortDesc: "Lowers the target's Sp. Def stat.",
+	},
+	flutter: {
+		name: "Flutter",
+		desc: "Goes first. This attack never misses. May also raise Speed.",
+		shortDesc: "Goes first. This attack never misses. May also raise Speed.",
+	},
+	nectartap: {
+		name: "Nectar Tap",
+		desc: "Restores HP and boosts Speed.",
+		shortDesc: "Restores HP and boosts Speed.",
+	},
+	hocuspinkus: {
+		name: "Hocus Pinkus",
+		desc: "High chance to disable the last move used by the target.",
+		shortDesc: "High chance to disable the last move used by the target.",
+	},
+	exorcism: {
+		name: "Exorcism",
+		desc: "User loses Ghost-type. Cannot be used if not Ghost.",
+		shortDesc: "User loses Ghost-type. Cannot be used if not Ghost.",
+	},
+	valaura: {
+		name: "Valaura",
+		desc: "It may also poison the target.",
+		shortDesc: "It may also poison the target.",
+	},
+	nosferatu: {
+		name: "Nosferatu",
+		desc: "The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user's HP is restored by half the damage taken by the target.",
+	},
+	finishingmove: {
+		name: "Finishing Move",
+		desc: "Unless the target faints, the user must rest on the next turn.",
+		shortDesc: "Unless the target faints, the user must rest on the next turn.",
+	},
+	grandslam: {
+		name: "Grand Slam",
+		desc: "This move can be used only after the user has used all the other moves it knows in the battle.",
+		shortDesc: "This move can be used only after the user has used all the other moves it knows in the battle.",
+	},
+	freezingkiss: {
+		name: "Freezing Kiss",
+		desc: "The user gives a cold kiss to the target that freezes it solid.",
+		shortDesc: "The user gives a cold kiss to the target that freezes it solid.",
+	},
+	gaussgun: {
+		name: "Gauss Gun",
+		desc: "The user attacks last. In return, this move is guaranteed not to miss.",
+		shortDesc: "The user attacks last. In return, this move is guaranteed not to miss.",
+	},
+	gnashteeth: {
+		name: "Gnash Teeth",
+		desc: "Raises the user's Attack and lowers the target's Defense. Doubled if user has Strong Jaw.",
+		shortDesc: "Raises the user's Attack and lowers the target's Defense. Doubled if user has Strong Jaw.",
+	},
+	tremble: {
+		name: "Tremble",
+		desc: "It becomes more powerful the less HP the user has.",
+		shortDesc: "It becomes more powerful the less HP the user has.",
+	},
+	feverishsmooch: {
+		name: "Feverish Smooch",
+		desc: "The target becomes confused.",
+		shortDesc: "The target becomes confused.",
+	},
+	drainslap: {
+		name: "Drain Slap",
+		desc: "The user's HP is restored by half of the damage taken by the target.",
+		shortDesc: "The user's HP is restored by half of the damage taken by the target.",
+	},
+	wakeupbeam: {
+		name: "Wake-Up Beam",
+		desc: "This attack inflicts big damage on a sleeping target. It also wakes the target up, however.",
+		shortDesc: "This attack inflicts big damage on a sleeping target. It also wakes the target up, however.",
+	},
+	milkcannon: {
+		name: "Milk Cannon",
+		desc: "A powerful squirt of milk is shot at the target.",
+		shortDesc: "A powerful squirt of milk is shot at the target.",
+	},
+	stormwatch: {
+		name: "Storm Watch",
+		desc: "The user predicts an incoming storm. In two turns, the target takes damage.",
+		shortDesc: "The user predicts an incoming storm. In two turns, the target takes damage.",
+	},
+	rocket: {
+		name: "Rocket",
+		desc: "The user soars, then strikes on the second turn.",
+		shortDesc: "The user soars, then strikes on the second turn.",
+	},
+	cooldownmode: {
+		name: "Cooldown Mode",
+		desc: "Freezes user. It fully restores the user's HP and heals any status problem.",
+		shortDesc: "Freezes user. It fully restores the user's HP and heals any status problem.",
+	},
+	darkcutter: {
+		name: "Dark Cutter",
+		desc: "The user launches razor-like wind to slash the opposing team. Critical hits land more easily.",
+		shortDesc: "The user launches razor-like wind to slash the opposing team. Critical hits land more easily.",
+	},
+	armageddon: {
+		name: "Armageddon",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	concentrate: {
+		name: "Concentrate",
+		desc: "The user concentrates to sharply raise its accuracy stat.",
+		shortDesc: "The user concentrates to sharply raise its accuracy stat.",
+	},
+	neurotoxin: {
+		name: "Neurotoxin",
+		desc: "A poison that target nerves. It may also cause paralysis.",
+		shortDesc: "A poison that target nerves. It may also cause paralysis.",
+	},
+	numbingbite: {
+		name: "Numbing Bite",
+		desc: "High chance it may also cause paralysis.",
+		shortDesc: "High chance it may also cause paralysis.",
+	},
+	firstkiss: {
+		name: "First Kiss",
+		desc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+		shortDesc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+	},
+	boostermode: {
+		name: "Booster Mode",
+		desc: "Booster Mode turned on. Speed stat is passively boosted.",
+		shortDesc: "Booster Mode turned on. Speed stat is passively boosted.",
+	},
+	scannermode: {
+		name: "Scanner Mode",
+		desc: "Scanner Mode turned on. Accuracy is passively boosted.",
+		shortDesc: "Scanner Mode turned on. Accuracy is passively boosted.",
+	},
+	shieldmode: {
+		name: "Shield Mode",
+		desc: "Scanner Mode turned on. Defenses are passively boosted.",
+		shortDesc: "Scanner Mode turned on. Defenses are passively boosted.",
+	},
+	hypermode: {
+		name: "Hyper Mode",
+		desc: "Scanner Mode turned on. Offenses are passively boosted.",
+		shortDesc: "Scanner Mode turned on. Offenses are passively boosted.",
+	},
+	licorwhip: {
+		name: "LicorWhip",
+		desc: "The target is struck with slender, whiplike licorice to inflict damage.",
+		shortDesc: "The target is struck with slender, whiplike licorice to inflict damage.",
+	},
+	appleturnover: {
+		name: "Apple Turnover",
+		desc: "An all-out attack that becomes more powerful the less HP the user has.",
+		shortDesc: "An all-out attack that becomes more powerful the less HP the user has.",
+	},
+	sugarbeam: {
+		name: "Sugar Beam",
+		desc: "It may also confuse the target.",
+		shortDesc: "It may also confuse the target.",
+	},
+	karatechoc: {
+		name: "Karate Choc",
+		desc: "Chocolate chop. Critical hits land more easily. More damage in Feast.",
+		shortDesc: "Chocolate chop. Critical hits land more easily. More damage in Feast.",
+	},
+	riceball: {
+		name: "Rice Ball",
+		desc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+		shortDesc: "The user continually rolls into the target over five turns. It becomes stronger each time it hits.",
+	},
+	randommode: {
+		name: "Random Mode",
+		desc: "User changes into a random mode.",
+		shortDesc: "User changes into a random mode.",
+	},
+	powerdrill: {
+		name: "Power Drill",
+		desc: "The user crashes into its target while rotating its body like a drill. Critical hits land more easily.",
+		shortDesc: "The user crashes into its target while rotating its body like a drill. Critical hits land more easily.",
+	},
+	fryingpan: {
+		name: "Frying Pan",
+		desc: "The target is slammed with a frying pan. OUCH!",
+		shortDesc: "The target is slammed with a frying pan. OUCH!",
+	},
+	grill: {
+		name: "Grill",
+		desc: "High chance to burn.",
+		shortDesc: "High chance to burn.",
+	},
+	dineanddash: {
+		name: "Dine and Dash",
+		desc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+	},
+	pastarush: {
+		name: "Pasta Rush",
+		desc: "Noodles! It may also make the target flinch.",
+		shortDesc: "Noodles! It may also make the target flinch.",
+	},
+	spoiledmilk: {
+		name: "Spoiled Milk",
+		desc: "The user forces the opponent to drink sour milk, may cause poison.",
+		shortDesc: "The user forces the opponent to drink sour milk, may cause poison.",
+	},
+	spagettiwrap: {
+		name: "Spagetti Wrap",
+		desc: "Spagetti squeezes the target for four to five turns.",
+		shortDesc: "Spagetti squeezes the target for four to five turns.",
+	},
+	idiotsandwich: {
+		name: "Idiot Sandwich",
+		desc: "The opponent is put between two slices of bread and discouraged, lowers all stats.",
+		shortDesc: "The opponent is put between two slices of bread and discouraged, lowers all stats.",
+	},
+	cyberchase: {
+		name: "Cyberchase",
+		desc: "Double damage if used on a target that is switching out of battle.",
+		shortDesc: "Double damage if used on a target that is switching out of battle.",
+	},
+	hiddenweapon: {
+		name: "Hidden Weapon",
+		desc: "Reveals a hidden weapon compartment. Goes first and flinches. Only usable first turn of battle.",
+		shortDesc: "Reveals a hidden weapon compartment. Goes first and flinches. Only usable first turn of battle.",
+	},
+	gunsblazing: {
+		name: "Guns Blazing",
+		desc: "User fires guns wildly at the enemy team. Critical hits land more easily.",
+		shortDesc: "User fires guns wildly at the enemy team. Critical hits land more easily.",
+	},
+	homingbeam: {
+		name: "Homing Beam",
+		desc: "This attack never misses.",
+		shortDesc: "This attack never misses.",
+	},
+	dedotatedwam: {
+		name: "Dedotated Wam",
+		desc: "The user lowers the target's Attack and Sp. Atk stats. Then it switches with a party Pokemon.",
+		shortDesc: "The user lowers the target's Attack and Sp. Atk stats. Then it switches with a party Pokemon.",
+	},
+	papermissiles: {
+		name: "Paper Missiles",
+		desc: "The target is shot with pieces of paper two to five times.",
+		shortDesc: "The target is shot with pieces of paper two to five times.",
+	},
+	magmaguard: {
+		name: "Magma Guard",
+		desc: "User protects itself with rapidly cooling magma, drastically raising Defense stat.",
+		shortDesc: "User protects itself with rapidly cooling magma, drastically raising Defense stat.",
+	},
+	floorislava: {
+		name: "Floor is Lava",
+		desc: "For 5 turns, non-Magma types on the ground take damage and are burnt.",
+		shortDesc: "For 5 turns, non-Magma types on the ground take damage and are burnt.",
+	},
+	volcanicterrain: {
+		name: "Volcanic Terrain",
+		desc: "The user turns the ground under everyone's feet to volcano for five turns. Powers up Magma moves and can't be frozen.",
+		shortDesc: "The user turns the ground under everyone's feet to volcano for five turns. Powers up Magma moves and can't be frozen.",
+	},
+	forcefeed: {
+		name: "Force Feed",
+		desc: "Shoves food down the target's throat. Confuses them.",
+		shortDesc: "Shoves food down the target's throat. Confuses them.",
+	},
+	injector: {
+		name: "Injector",
+		desc: "The user pins down the foe, and forcefully injects a harmful fluid into their body by piercing a stinger, spike, thorn, or tentacle into them.",
+		shortDesc: "The user pins down the foe, and forcefully injects a harmful fluid into their body by piercing a stinger, spike, thorn, or tentacle into them.",
+	},
+	indestructible: {
+		name: "Indestructible",
+		desc: "For 4 turns, the user becomes immune to super effective moves.",
+		shortDesc: "For 4 turns, the user becomes immune to super effective moves.",
+	},
+	rubbershield: {
+		name: "Rubber Shield",
+		desc: "For 4 turns, the user becomes immune to super effective moves and critical hits.",
+		shortDesc: "For 4 turns, the user becomes immune to super effective moves and critical hits.",
+	},
+	shiftingsands: {
+		name: "Shifting Sands",
+		desc: "The user knocks away the target and drags out another Pokemon in its party. In the wild, the battle ends.",
+		shortDesc: "The user knocks away the target and drags out another Pokemon in its party. In the wild, the battle ends.",
+	},
+	firewhip: {
+		name: "Fire Whip",
+		desc: "Lowers the target's Defense stat.",
+		shortDesc: "Lowers the target's Defense stat.",
+	},
+	glacialrend: {
+		name: "Glacial Rend",
+		desc: "Does double damage during Hail.",
+		shortDesc: "Does double damage during Hail.",
+	},
+	woodpecker: {
+		name: "Wood Pecker",
+		desc: "Double damage against Wood types.",
+		shortDesc: "Double damage against Wood types.",
+	},
+	crippleimpact: {
+		name: "Cripple Impact",
+		desc: "Paralyzes the user and the target.",
+		shortDesc: "Paralyzes the user and the target.",
+	},
+	zombiespread: {
+		name: "Zombie Spread",
+		desc: "Turns everything on the field into a Zombie-type.",
+		shortDesc: "Turns everything on the field into a Zombie-type.",
+	},
+	knockoutpunch: {
+		name: "Knockout Punch",
+		desc: "An incredibly powerful punch. The target will faint instantly if this attack hits.",
+		shortDesc: "An incredibly powerful punch. The target will faint instantly if this attack hits.",
+	},
+	flowingstrikes: {
+		name: "Flowing Strikes",
+		desc: "The user looses a flurry of open-palmed arm thrusts that hit two to five times in a row.",
+		shortDesc: "The user looses a flurry of open-palmed arm thrusts that hit two to five times in a row.",
+	},
+	pheromones: {
+		name: "Pheromones",
+		desc: "High chance to infatuate the target.",
+		shortDesc: "High chance to infatuate the target.",
+	},
+	gravitas: {
+		name: "Gravitas",
+		desc: "Starts Gravity for 5 turns.",
+		shortDesc: "Starts Gravity for 5 turns.",
+	},
+	elastickick: {
+		name: "Elastic Kick",
+		desc: "The target is attacked by a kick launched with muscle-packed power.",
+		shortDesc: "The target is attacked by a kick launched with muscle-packed power.",
+	},
+	fightingurge: {
+		name: "Fighting Urge",
+		desc: "Boss only. Lowers SpAtk by 3 and confuses.",
+		shortDesc: "Boss only. Lowers SpAtk by 3 and confuses.",
+	},
+	bladeofend: {
+		name: "Blade of End",
+		desc: "Hi crit rate. Makes the target Bleed.",
+		shortDesc: "Hi crit rate. Makes the target Bleed.",
+	},
+	coldheart: {
+		name: "Cold Heart",
+		desc: "May freeze the target.",
+		shortDesc: "May freeze the target.",
+	},
+	subzerowail: {
+		name: "Subzero Wail",
+		desc: "Does double damage during Hail.",
+		shortDesc: "Does double damage during Hail.",
+	},
+	flamewar: {
+		name: "Flame War",
+		desc: "All moves become Fire-type for 6 turns.",
+		shortDesc: "All moves become Fire-type for 6 turns.",
+	},
+	infectingslash: {
+		name: "Infecting Slash",
+		desc: "May turn the target into a Zombie-type. High crit rate.",
+		shortDesc: "May turn the target into a Zombie-type. High crit rate.",
+	},
+	divinetemple: {
+		name: "Divine Temple",
+		desc: "Each turn ups SpDef of all party Pokemon on the field for 6 turns.",
+		shortDesc: "Each turn ups SpDef of all party Pokemon on the field for 6 turns.",
+	},
+	chaotictemple: {
+		name: "Chaotic Temple",
+		desc: "Each turn ups Attack of all party Pokemon on the field for 6 turns.",
+		shortDesc: "Each turn ups Attack of all party Pokemon on the field for 6 turns.",
+	},
+	psychictemple: {
+		name: "Psychic Temple",
+		desc: "Each turn ups SpAtk of all party Pokemon on the field for 6 turns.",
+		shortDesc: "Each turn ups SpAtk of all party Pokemon on the field for 6 turns.",
+	},
+	ariessmash: {
+		name: "Aries Smash",
+		desc: "The user attacks the foe with a hazardous, full-power headbutt. The user also takes terrible damage.",
+		shortDesc: "The user attacks the foe with a hazardous, full-power headbutt. The user also takes terrible damage.",
+	},
+	corpsewave: {
+		name: "Corpse Wave",
+		desc: "Hits everything on the field. May turn them into Zombie-types.",
+		shortDesc: "Hits everything on the field. May turn them into Zombie-types.",
+	},
+	eyewall: {
+		name: "Eyewall",
+		desc: "Everything around the user is blown away, to be replaced by another Pokemon in its party. In the wild, the battle ends.",
+		shortDesc: "Everything around the user is blown away, to be replaced by another Pokemon in its party. In the wild, the battle ends.",
+	},
+	magmaquake: {
+		name: "Magmaquake",
+		desc: "The user sets off an earthquake that strikes every Pokemon around it.",
+		shortDesc: "The user sets off an earthquake that strikes every Pokemon around it.",
+	},
+	vaporwall: {
+		name: "Vapor Wall",
+		desc: "Makes Fire-type moves ineffective for 5 turns.",
+		shortDesc: "Makes Fire-type moves ineffective for 5 turns.",
+	},
+	leostrike: {
+		name: "Leo Strike",
+		desc: "A flare of electricity is loosed to strike. It may also cause paralysis.",
+		shortDesc: "A flare of electricity is loosed to strike. It may also cause paralysis.",
+	},
+	taurushorns: {
+		name: "Taurus Horns",
+		desc: "Using its tough and impressive horn, the user rams into the target with no letup.",
+		shortDesc: "Using its tough and impressive horn, the user rams into the target with no letup.",
+	},
+	virgoheart: {
+		name: "Virgo Heart",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	capricornhorn: {
+		name: "Capricorn Horn",
+		desc: "More money is earned after battle.",
+		shortDesc: "More money is earned after battle.",
+	},
+	geministars: {
+		name: "Gemini Stars",
+		desc: "The target is hit twice in a row. May raise the user's SpDef.",
+		shortDesc: "The target is hit twice in a row. May raise the user's SpDef.",
+	},
+	cbt: {
+		name: "CBT",
+		desc: "Deals double damage to Males. May lower Attack.",
+		shortDesc: "Deals double damage to Males. May lower Attack.",
+	},
+	reversewounds: {
+		name: "Reverse Wounds",
+		desc: "Turning back time, the user restores HP by the amount just lost.",
+		shortDesc: "Turning back time, the user restores HP by the amount just lost.",
+	},
+	librabeam: {
+		name: "Libra Beam",
+		desc: "Copies the target's stat boosts, then attacks.",
+		shortDesc: "Copies the target's stat boosts, then attacks.",
+	},
+	shiver: {
+		name: "Shiver",
+		desc: "Take less damage from Fire and Ice moves. Increases Speed in Hail or Sun.",
+		shortDesc: "Take less damage from Fire and Ice moves. Increases Speed in Hail or Sun.",
+	},
+	bidibidibidi: {
+		name: "BiDiBiDiBiDi",
+		desc: "Increases the user's Accuracy and Taunts the opponent.",
+		shortDesc: "Increases the user's Accuracy and Taunts the opponent.",
+	},
+	ornithophobia: {
+		name: "Ornithophobia",
+		desc: "A corkscrewing attack with the sharp beak acting as a drill. Hi crit rate.",
+		shortDesc: "A corkscrewing attack with the sharp beak acting as a drill. Hi crit rate.",
+	},
+	hornyattack: {
+		name: "Horny Attack",
+		desc: "The target is jabbed with a sharply pointed horn to inflict damage.",
+		shortDesc: "The target is jabbed with a sharply pointed horn to inflict damage.",
+	},
+	permafrost: {
+		name: "Permafrost",
+		desc: "Prevents Hazards from being set for 8 turns.",
+		shortDesc: "Prevents Hazards from being set for 8 turns.",
+	},
+	bodybreak: {
+		name: "Body Break",
+		desc: "Paralyzes the user and the target.",
+		shortDesc: "Paralyzes the user and the target.",
+	},
+	pitfall: {
+		name: "Pitfall",
+		desc: "Lays an entry hazard that traps pokemon that switch in.",
+		shortDesc: "Lays an entry hazard that traps pokemon that switch in.",
+	},
+	mines: {
+		name: "Mines",
+		desc: "The user lays mines around the foe. The trap hurts foes that switch into battle.",
+		shortDesc: "The user lays mines around the foe. The trap hurts foes that switch into battle.",
+	},
+	fastforward: {
+		name: "Fast Forward",
+		desc: "The user doesn't need to charge moves for 5 turns.",
+		shortDesc: "The user doesn't need to charge moves for 5 turns.",
+	},
+	aquariusflow: {
+		name: "Aquarius Flow",
+		desc: "Hits everything around the user, causing those hit to be switched out.",
+		shortDesc: "Hits everything around the user, causing those hit to be switched out.",
+	},
+	viruspropogate: {
+		name: "Virus Propogate",
+		desc: "The target becomes Virus-type.",
+		shortDesc: "The target becomes Virus-type.",
+	},
+	zombievirus: {
+		name: "Zombie Virus",
+		desc: "Very high chance to turn the target into a Zombie-type.",
+		shortDesc: "Very high chance to turn the target into a Zombie-type.",
+	},
+	cancerclaws: {
+		name: "Cancer Claws",
+		desc: "May make the target bleed.",
+		shortDesc: "May make the target bleed.",
+	},
+	scorpiosting: {
+		name: "Scorpio Sting",
+		desc: "High chance to also poison the target.",
+		shortDesc: "High chance to also poison the target.",
+	},
+	piscesstars: {
+		name: "Pisces Stars",
+		desc: "The target is hit twice in a row. May raise the user's SpAtk.",
+		shortDesc: "The target is hit twice in a row. May raise the user's SpAtk.",
+	},
+	ophiuchusbind: {
+		name: "Ophiuchus Bind",
+		desc: "Bind and squeezes the foe for four to five turns.",
+		shortDesc: "Bind and squeezes the foe for four to five turns.",
+	},
+	bubblebomb: {
+		name: "Bubble Bomb",
+		desc: "It may also make the target flinch.",
+		shortDesc: "It may also make the target flinch.",
+	},
+	frothguard: {
+		name: "Froth Guard",
+		desc: "User's SpDef +1. Covers itself in froth, if target makes contact its Speed is harshly lowered.",
+		shortDesc: "User's SpDef +1. Covers itself in froth, if target makes contact its Speed is harshly lowered.",
+	},
+	honeydrip: {
+		name: "Honey Drip",
+		desc: "The user restores its own HP by up to half of its maximum HP by drinking honey.",
+		shortDesc: "The user restores its own HP by up to half of its maximum HP by drinking honey.",
+	},
+	honeybeam: {
+		name: "Honey Beam",
+		desc: "A strong sour blast is loosed at the target. It may also leave the target with paralysis.",
+		shortDesc: "A strong sour blast is loosed at the target. It may also leave the target with paralysis.",
+	},
+	honeydoom: {
+		name: "Honey Doom",
+		desc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+		shortDesc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+	},
+	raspberrytongue: {
+		name: "RaspberryTongue",
+		desc: "The user slashes their opponent with their long tongue at lightspeed.",
+		shortDesc: "The user slashes their opponent with their long tongue at lightspeed.",
+	},
+	honeydewblast: {
+		name: "Honeydew Blast",
+		desc: "May leave the target with paralysis.",
+		shortDesc: "May leave the target with paralysis.",
+	},
+	raspberrywhistle: {
+		name: "Raspberry Whistle",
+		desc: "A strange whistle, lowers Attack and Sp. Atk stats.",
+		shortDesc: "A strange whistle, lowers Attack and Sp. Atk stats.",
+	},
+	tm50: {
+		name: "TM50",
+		desc: "Attacks two to five times in a row.",
+		shortDesc: "Attacks two to five times in a row.",
+	},
+	tm05: {
+		name: "TM05",
+		desc: "Raises the user's Evasion 2 stages.",
+		shortDesc: "Raises the user's Evasion 2 stages.",
+	},
+	tm41: {
+		name: "TM41",
+		desc: "Raises the user's Evasion by two stages.",
+		shortDesc: "Raises the user's Evasion by two stages.",
+	},
+	tm54: {
+		name: "TM54",
+		desc: "The user eats the dreams of a sleeping foe. It absorbs half the damage caused to heal the user's HP.",
+		shortDesc: "The user eats the dreams of a sleeping foe. It absorbs half the damage caused to heal the user's HP.",
+	},
+	tm18: {
+		name: "TM18",
+		desc: "The user must recharge the next turn.",
+		shortDesc: "The user must recharge the next turn.",
+	},
+	vulcanhammer: {
+		name: "Vulcan Hammer",
+		desc: "The user swings and hits with its strong and heavy hammer. It lowers the user's Speed, however.",
+		shortDesc: "The user swings and hits with its strong and heavy hammer. It lowers the user's Speed, however.",
+	},
+	birdflu: {
+		name: "Bird Flu",
+		desc: "Double damage against Flying types and damages flying-types at the end of each turn.",
+		shortDesc: "Double damage against Flying types and damages flying-types at the end of each turn.",
+	},
+	steamsport: {
+		name: "Steam Sport",
+		desc: "Raises SpDef. It weakens Magma-type moves while the user is in the battle. Raises Defense in Sauna.",
+		shortDesc: "Raises SpDef. It weakens Magma-type moves while the user is in the battle. Raises Defense in Sauna.",
+	},
+	steamtail: {
+		name: "Steam Tail",
+		desc: "The user attacks by swinging its tail as if it were a vicious STEAM in a raging storm.",
+		shortDesc: "The user attacks by swinging its tail as if it were a vicious STEAM in a raging storm.",
+	},
+	sensingsteam: {
+		name: "Sensing Steam",
+		desc: "Raises the user's accuracy stat.",
+		shortDesc: "Raises the user's accuracy stat.",
+	},
+	virginsgrace: {
+		name: "Virgins Grace",
+		desc: "If user is hit a certain cosmic figure protects them, raising Acc, Speed and Evasion.",
+		shortDesc: "If user is hit a certain cosmic figure protects them, raising Acc, Speed and Evasion.",
+	},
+	handoffate: {
+		name: "Hand of Fate",
+		desc: "It may also raise the user's Attack.",
+		shortDesc: "It may also raise the user's Attack.",
+	},
+	testament: {
+		name: "Testament",
+		desc: "Uses the deepest mystery to convert its mortal life into a Big Bang. The user faints upon using this move.",
+		shortDesc: "Uses the deepest mystery to convert its mortal life into a Big Bang. The user faints upon using this move.",
+	},
+	sevenstarstrike: {
+		name: "SevenStarStrike",
+		desc: "The target is hit seven times.",
+		shortDesc: "The target is hit seven times.",
+	},
+	hallowedknuckle: {
+		name: "Hallowed Knuckle",
+		desc: "High chance to cure the target's status condition.",
+		shortDesc: "High chance to cure the target's status condition.",
+	},
+	catlaser: {
+		name: "Cat Laser",
+		desc: "It may also leave the target confused.",
+		shortDesc: "It may also leave the target confused.",
+	},
+	onetwonekopunch: {
+		name: "OneTwoNekoPunch",
+		desc: "CAT PUNCH TWICE.",
+		shortDesc: "CAT PUNCH TWICE.",
+	},
+	nekorush: {
+		name: "Neko Rush",
+		desc: "Goes first. It also damages the user by a fairly large amount, however.",
+		shortDesc: "Goes first. It also damages the user by a fairly large amount, however.",
+	},
+	nekofinish: {
+		name: "Neko Finish",
+		desc: "If the target's HP is down to about half, this attack will hit with double the power.",
+		shortDesc: "If the target's HP is down to about half, this attack will hit with double the power.",
+	},
+	sweeping: {
+		name: "Sweeping",
+		desc: "It hits two to five times in a row and clears hazards on your side.",
+		shortDesc: "It hits two to five times in a row and clears hazards on your side.",
+	},
+	angelwings: {
+		name: "Angel Wings",
+		desc: "The first turn user soars and heals status conditions of user and ally, then strikes on the second turn.",
+		shortDesc: "The first turn user soars and heals status conditions of user and ally, then strikes on the second turn.",
+	},
+	holykick: {
+		name: "Holy Kick",
+		desc: "The target is attacked by a kick launched with muscle-packed power.",
+		shortDesc: "The target is attacked by a kick launched with muscle-packed power.",
+	},
+	dragonfire: {
+		name: "Dragon Fire",
+		desc: "The target is scorched with an intense blast of fire. It may also leave the target with a burn.",
+		shortDesc: "The target is scorched with an intense blast of fire. It may also leave the target with a burn.",
+	},
+	edenspear: {
+		name: "Eden Spear",
+		desc: "Starts Grassy Terrain.",
+		shortDesc: "Starts Grassy Terrain.",
+	},
+	sefirotcrystal: {
+		name: "Sefirot Crystal",
+		desc: "The target is hit ten times.",
+		shortDesc: "The target is hit ten times.",
+	},
+	dragonwings: {
+		name: "Dragon Wings",
+		desc: "It may also raise the user's Speed stat.",
+		shortDesc: "It may also raise the user's Speed stat.",
+	},
+	funeralpyre: {
+		name: "Funeral Pyre",
+		desc: "Gets revenge for a fainted ally. If an ally fainted in the last turn, this attack's damage increases.",
+		shortDesc: "Gets revenge for a fainted ally. If an ally fainted in the last turn, this attack's damage increases.",
+	},
+	chaoslabyrintho: {
+		name: "Chaos Labyrintho",
+		desc: "Lower's the opposing side's Attack and Defense for 6 turns.",
+		shortDesc: "Lower's the opposing side's Attack and Defense for 6 turns.",
+	},
+	electricfence: {
+		name: "Electric Fence",
+		desc: "For 8 turns, all non-Electric or Ground types attempting to switch out are paralyzed.",
+		shortDesc: "For 8 turns, all non-Electric or Ground types attempting to switch out are paralyzed.",
+	},
+	starfield: {
+		name: "Starfield",
+		desc: "Raises the power of Cosmic-type moves for 5 turns.",
+		shortDesc: "Raises the power of Cosmic-type moves for 5 turns.",
+	},
+	mudbath: {
+		name: "Mudbath",
+		desc: "Heals HP, heals more HP in Marshy Terrain and raises SpDef.",
+		shortDesc: "Heals HP, heals more HP in Marshy Terrain and raises SpDef.",
+	},
+	beastkingfist: {
+		name: "Beast King Fist",
+		desc: "This attack does special damage.",
+		shortDesc: "This attack does special damage.",
+	},
+	oxygendestroyer: {
+		name: "Oxygen Destroyer",
+		desc: "Hits everything on the field. Chance to 1 hit KO.",
+		shortDesc: "Hits everything on the field. Chance to 1 hit KO.",
+	},
+	triplelightning: {
+		name: "Triple Lightning",
+		desc: "A consecutive three-bolt attack that becomes more powerful with each successive hit.",
+		shortDesc: "A consecutive three-bolt attack that becomes more powerful with each successive hit.",
+	},
+	gravitybeams: {
+		name: "Gravity Beams",
+		desc: "For 3 turns, the target floats in the air making it easier to hit.",
+		shortDesc: "For 3 turns, the target floats in the air making it easier to hit.",
+	},
+	thekingoffist: {
+		name: "TheKingOfFist",
+		desc: "This attack does special damage.",
+		shortDesc: "This attack does special damage.",
+	},
+	infinityarrow: {
+		name: "Infinity Arrow",
+		desc: "Very high chance to paralyze.",
+		shortDesc: "Very high chance to paralyze.",
+	},
+	wetkiss: {
+		name: "Wet Kiss",
+		desc: "An overly wet kiss that may make the target flinch.",
+		shortDesc: "An overly wet kiss that may make the target flinch.",
+	},
+	toxickiss: {
+		name: "Toxic Kiss",
+		desc: "It may also leave the target badly poisoned.",
+		shortDesc: "It may also leave the target badly poisoned.",
+	},
+	noisykiss: {
+		name: "Noisy Kiss",
+		desc: "An overly loud kiss that may make the target flinch.",
+		shortDesc: "An overly loud kiss that may make the target flinch.",
+	},
+	powderveil: {
+		name: "Powder Veil",
+		desc: "For ten turns your team is protected from secondary effects.",
+		shortDesc: "For ten turns your team is protected from secondary effects.",
+	},
+	healingchime: {
+		name: "Healing Chime",
+		desc: "For 15 turns your team is healed. Heals more during Tailwind.",
+		shortDesc: "For 15 turns your team is healed. Heals more during Tailwind.",
+	},
+	dawnlights: {
+		name: "Dawn Lights",
+		desc: "It releases the lights of the dawn on the foe, dealing lots of damage.",
+		shortDesc: "It releases the lights of the dawn on the foe, dealing lots of damage.",
+	},
+	breakingonslaught: {
+		name: "Breaking Onslaught",
+		desc: "An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.",
+		shortDesc: "An attack that hits a target using Protect or Detect. It also lifts the effects of those moves.",
+	},
+	goblinbomb: {
+		name: "Goblin Bomb",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	goblinstrike: {
+		name: "Goblin Strike",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	pummelwack: {
+		name: "Pummel Wack",
+		desc: "This attack does special damage.",
+		shortDesc: "This attack does special damage.",
+	},
+	evilhurricane: {
+		name: "Evil Hurricane",
+		desc: "This attack does special damage.",
+		shortDesc: "This attack does special damage.",
+	},
+	invasion: {
+		name: "Invasion",
+		desc: "It can also break any barrier such as Light Screen and Reflect.",
+		shortDesc: "It can also break any barrier such as Light Screen and Reflect.",
+	},
+	anaphylacticshock: {
+		name: "Anaphylactic Shock",
+		desc: "Turn's the foe's immune system against it. More dmg the higher the target's Def stat.",
+		shortDesc: "Turn's the foe's immune system against it. More dmg the higher the target's Def stat.",
+	},
+	anxiety: {
+		name: "Anxiety",
+		desc: "Uses the target's SpDef to attack.",
+		shortDesc: "Uses the target's SpDef to attack.",
+	},
+	nightmaresyndrome: {
+		name: "Nightmare Syndrome",
+		desc: "It may also induce sleep.",
+		shortDesc: "It may also induce sleep.",
+	},
+	gigo: {
+		name: "GIGO",
+		desc: "Garbage In, Garbage Out. x2 dmg if the user has been hurt by the foe in the same turn.",
+		shortDesc: "Garbage In, Garbage Out. x2 dmg if the user has been hurt by the foe in the same turn.",
+	},
+	blackdeathcloud: {
+		name: "Black Death Cloud",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	kooumeijin: {
+		name: "Koou Meijin",
+		desc: "Summons shades based on the skulls on both of its arms, which overrun the enemy's forces as an undead legion.",
+		shortDesc: "Summons shades based on the skulls on both of its arms, which overrun the enemy's forces as an undead legion.",
+	},
+	genbamukon: {
+		name: "Genba Mukon",
+		desc: "High crit rate. Makes the target bleed.",
+		shortDesc: "High crit rate. Makes the target bleed.",
+	},
+	soulcoreattack: {
+		name: "Soul Core Attack",
+		desc: "High crit rate. Chance to 1 hit KO.",
+		shortDesc: "High crit rate. Chance to 1 hit KO.",
+	},
+	flowerward: {
+		name: "Flower Ward",
+		desc: "The user switches out and lays a flower ward that heals the incoming pokemon.",
+		shortDesc: "The user switches out and lays a flower ward that heals the incoming pokemon.",
+	},
+	madnessmerrygoround: {
+		name: "MadnessMerrygoround",
+		desc: "Hits everything around it. Critical hits land more easily.",
+		shortDesc: "Hits everything around it. Critical hits land more easily.",
+	},
+	olympiaslash: {
+		name: "Olympia Slash",
+		desc: "The user slashes the target with a sword. Critical hits land more easily.",
+		shortDesc: "The user slashes the target with a sword. Critical hits land more easily.",
+	},
+	shrinkwrap: {
+		name: "Shrink Wrap",
+		desc: "Raises the user's SpDef and Evasion.",
+		shortDesc: "Raises the user's SpDef and Evasion.",
+	},
+	spacevirus: {
+		name: "Space Virus",
+		desc: "chance to badly poison.",
+		shortDesc: "chance to badly poison.",
+	},
+	blowkiss: {
+		name: "Blow Kiss",
+		desc: "The user blows a kiss at the target. High chance to confuse.",
+		shortDesc: "The user blows a kiss at the target. High chance to confuse.",
+	},
+	applylipstick: {
+		name: "Apply Lipstick",
+		desc: "The user applies lipstick, increasing the power of kissing moves and giving them a chance to attract.",
+		shortDesc: "The user applies lipstick, increasing the power of kissing moves and giving them a chance to attract.",
+	},
+	speakerblast: {
+		name: "Speaker Blast",
+		desc: "Sound based, hits both targets, chance to raise SpAtk.",
+		shortDesc: "Sound based, hits both targets, chance to raise SpAtk.",
+	},
+	guardianleaf: {
+		name: "Guardian Leaf",
+		desc: "May raise the user's Defense stat.",
+		shortDesc: "May raise the user's Defense stat.",
+	},
+	rapidgrowth: {
+		name: "Rapid Growth",
+		desc: "It may also raise the user's Sp. Atk stat.",
+		shortDesc: "It may also raise the user's Sp. Atk stat.",
+	},
+	sharpshoot: {
+		name: "Sharpshoot",
+		desc: "A critical hit will do even more damage than usual.",
+		shortDesc: "A critical hit will do even more damage than usual.",
+	},
+	volcanoburst: {
+		name: "Volcano Burst",
+		desc: "Does double damage during Volcanic Terrain.",
+		shortDesc: "Does double damage during Volcanic Terrain.",
+	},
+	plasticwrap: {
+		name: "Plastic Wrap",
+		desc: "Bind and squeeze the foe for four to five turns.",
+		shortDesc: "Bind and squeeze the foe for four to five turns.",
+	},
+	quarry: {
+		name: "Quarry",
+		desc: "The user and the target cannot escape.",
+		shortDesc: "The user and the target cannot escape.",
+	},
+	coldshoulder: {
+		name: "Cold Shoulder",
+		desc: "Drastically lowers the target's Speed. Then it switches with a party Pokemon.",
+		shortDesc: "Drastically lowers the target's Speed. Then it switches with a party Pokemon.",
+	},
+	arboreum: {
+		name: "Arboreum",
+		desc: "Increases the power of Wood-type moves and defense of wood types for 5 turns.",
+		shortDesc: "Increases the power of Wood-type moves and defense of wood types for 5 turns.",
+	},
+	tohachigame: {
+		name: "Tohachi Game",
+		desc: "The target is attacked by a kick launched with muscle-packed power.",
+		shortDesc: "The target is attacked by a kick launched with muscle-packed power.",
+	},
+	sealingtalisman: {
+		name: "Sealing Talisman",
+		desc: "May disable the last move used by the target.",
+		shortDesc: "May disable the last move used by the target.",
+	},
+	bonhitsusen: {
+		name: "Bonhitsusen",
+		desc: "A huge explosion of light.",
+		shortDesc: "A huge explosion of light.",
+	},
+	brushstrike: {
+		name: "Brush Strike",
+		desc: "The user streaks the foe using a brush. May Paint the target.",
+		shortDesc: "The user streaks the foe using a brush. May Paint the target.",
+	},
+	kongoushakujou: {
+		name: "Kongou Shakujou",
+		desc: "May also paralyze, burn, or freeze the target.",
+		shortDesc: "May also paralyze, burn, or freeze the target.",
+	},
+	deserttree: {
+		name: "Desert Tree",
+		desc: "Does double damage during a Sandstorm.",
+		shortDesc: "Does double damage during a Sandstorm.",
+	},
+	snowman: {
+		name: "Snowman",
+		desc: "Goes last. In Hail, creates a substitute for no cost of health.",
+		shortDesc: "Goes last. In Hail, creates a substitute for no cost of health.",
+	},
+	shatter: {
+		name: "Shatter",
+		desc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+		shortDesc: "The user explodes to inflict damage on those around it. The user faints upon using this move.",
+	},
+	gumburst: {
+		name: "Gum Burst",
+		desc: "The user bursts a gum bubble, hitting both targets. It may also leave the target with paralysis.",
+		shortDesc: "The user bursts a gum bubble, hitting both targets. It may also leave the target with paralysis.",
+	},
+	treasurechest: {
+		name: "Treasure Chest",
+		desc: "Money is earned after battle.",
+		shortDesc: "Money is earned after battle.",
+	},
+	gamble: {
+		name: "Gamble",
+		desc: "High critical hit ratio. If it misses, the user is hurt instead.",
+		shortDesc: "High critical hit ratio. If it misses, the user is hurt instead.",
+	},
+	nuclearrain: {
+		name: "Nuclear Rain",
+		desc: "Starts a Nuclear Fallout.",
+		shortDesc: "Starts a Nuclear Fallout.",
+	},
+	tipfedora: {
+		name: "Tip Fedora",
+		desc: "Increases the user's SpAtk and SpDef and Taunts the opponent.",
+		shortDesc: "Increases the user's SpAtk and SpDef and Taunts the opponent.",
+	},
+	pulledpunch: {
+		name: "Pulled Punch",
+		desc: "The more HP the foe has, the greater this attack's power.",
+		shortDesc: "The more HP the foe has, the greater this attack's power.",
+	},
+	trolling: {
+		name: "Trolling",
+		desc: "The target is taunted, causing it to use only attack moves for three turns.",
+		shortDesc: "The target is taunted, causing it to use only attack moves for three turns.",
+	},
+	reload: {
+		name: "Reload",
+		desc: "Restores the PP of the last move used by the user by 4.",
+		shortDesc: "Restores the PP of the last move used by the user by 4.",
+	},
+	hallucinogen: {
+		name: "Hallucinogen",
+		desc: "Inflicts Poison and Confusion the target.",
+		shortDesc: "Inflicts Poison and Confusion the target.",
+	},
+	clearskies: {
+		name: "Clear Skies",
+		desc: "Weather effects disappear.",
+		shortDesc: "Weather effects disappear.",
+	},
+	vitalcrush: {
+		name: "Vital Crush",
+		desc: "Does double damage on Fighting-types.",
+		shortDesc: "Does double damage on Fighting-types.",
+	},
+	fivestarstrike: {
+		name: "Five Star Strike",
+		desc: "The target is hit with a flurry of punches that strike two to five times in a row.",
+		shortDesc: "The target is hit with a flurry of punches that strike two to five times in a row.",
+	},
+	annoyance: {
+		name: "Annoyance",
+		desc: "The user annoys the target. Small chance to Taunt.",
+		shortDesc: "The user annoys the target. Small chance to Taunt.",
+	},
+	acidbath: {
+		name: "Acid Bath",
+		desc: "The user restores its own HP. Heals more in Acid Rain.",
+		shortDesc: "The user restores its own HP. Heals more in Acid Rain.",
+	},
+	darkgather: {
+		name: "Dark Gather",
+		desc: "The user restores its own HP. Heals more during Midnight.",
+		shortDesc: "The user restores its own HP. Heals more during Midnight.",
+	},
+	undeadrespite: {
+		name: "Undead Respite",
+		desc: "The user restores its own HP. Heals more during Midnight.",
+		shortDesc: "The user restores its own HP. Heals more during Midnight.",
+	},
+	studynotes: {
+		name: "Study Notes",
+		desc: "It sharply raises the user's Sp. Atk. Also raises SpDef during Library.",
+		shortDesc: "It sharply raises the user's Sp. Atk. Also raises SpDef during Library.",
+	},
+	papersharpening: {
+		name: "Paper Sharpening",
+		desc: "It sharply raises the user's Attack. Also raises Defense during Library.",
+		shortDesc: "It sharply raises the user's Attack. Also raises Defense during Library.",
+	},
+	moltentears: {
+		name: "Molten Tears",
+		desc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+	},
+	curryburst: {
+		name: "Curry Burst",
+		desc: "The target is scorched with a burst of spicy flavor. It may also leave the target with a burn.",
+		shortDesc: "The target is scorched with a burst of spicy flavor. It may also leave the target with a burn.",
+	},
+	dildohorn: {
+		name: "Dildo Horn",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	hyperrubber: {
+		name: "Hyper Rubber",
+		desc: "Lowers the user's stats. User's ability becomes Rubber Boost.",
+		shortDesc: "Lowers the user's stats. User's ability becomes Rubber Boost.",
+	},
+	movecatalog: {
+		name: "Move Catalog",
+		desc: "Randomly uses a move among those known by other Pokemon in the party. More damage in Library.",
+		shortDesc: "Randomly uses a move among those known by other Pokemon in the party. More damage in Library.",
+	},
+	duedate: {
+		name: "Due Date",
+		desc: "Hits two turns after this move is used. Does Paper damage.",
+		shortDesc: "Hits two turns after this move is used. Does Paper damage.",
+	},
+	bookstack: {
+		name: "Book Stack",
+		desc: "Sharply raises the user's Defense. Also sharply raises SpDef during Library.",
+		shortDesc: "Sharply raises the user's Defense. Also sharply raises SpDef during Library.",
+	},
+	learnmove: {
+		name: "Learn Move",
+		desc: "It enables the user to permanently learn the move last used by the foe. Once used, Sketch disappears.",
+		shortDesc: "It enables the user to permanently learn the move last used by the foe. Once used, Sketch disappears.",
+	},
+	lavaburst: {
+		name: "Lava Burst",
+		desc: "Starts Volcanic Terrain.",
+		shortDesc: "Starts Volcanic Terrain.",
+	},
+	alchemy: {
+		name: "Alchemy",
+		desc: "Heals the user a little. If the user is holding an item, fully heals and consumes the item.",
+		shortDesc: "Heals the user a little. If the user is holding an item, fully heals and consumes the item.",
+	},
+	pulpstream: {
+		name: "Pulp Stream",
+		desc: "It may also lower the target's Sp. Def.",
+		shortDesc: "It may also lower the target's Sp. Def.",
+	},
+	trainingroom: {
+		name: "Training Room",
+		desc: "The user creates a room in which exp gain is increased for 5 turns.",
+		shortDesc: "The user creates a room in which exp gain is increased for 5 turns.",
+	},
+	nitpick: {
+		name: "Nitpick",
+		desc: "The target can only use moves of its own type for 4 turns.",
+		shortDesc: "The target can only use moves of its own type for 4 turns.",
+	},
+	aqueduct: {
+		name: "Aqueduct",
+		desc: "Raises the Defense and Sp. Def stats of all Grass-type Pokemon on field.",
+		shortDesc: "Raises the Defense and Sp. Def stats of all Grass-type Pokemon on field.",
+	},
+	restinpeace: {
+		name: "Rest in Peace",
+		desc: "The user sleeps healing its HP and status problems. Then the user faints.",
+		shortDesc: "The user sleeps healing its HP and status problems. Then the user faints.",
+	},
+	speedbump: {
+		name: "Speed Bump",
+		desc: "Puts a speed bump that harshly lowers the opponent's Attack and Speed if they outspeed and make contact.",
+		shortDesc: "Puts a speed bump that harshly lowers the opponent's Attack and Speed if they outspeed and make contact.",
+	},
+	berrygrowth: {
+		name: "Berry Growth",
+		desc: "The user gets a random berry.",
+		shortDesc: "The user gets a random berry.",
+	},
+	cyberspace: {
+		name: "Cyberspace",
+		desc: "Increases power of Cyber-type moves for 5 turns.",
+		shortDesc: "Increases power of Cyber-type moves for 5 turns.",
+	},
+	maxreplenish: {
+		name: "Max Replenish",
+		desc: "Restores a used item.",
+		shortDesc: "Restores a used item.",
+	},
+	recyclebeam: {
+		name: "Recycle Beam",
+		desc: "High chance to restore a used item.",
+		shortDesc: "High chance to restore a used item.",
+	},
+	guro: {
+		name: "Guro",
+		desc: "The more HP the foe has, the greater this attack's power. If the opp is Bleeding, also lowers Defense.",
+		shortDesc: "The more HP the foe has, the greater this attack's power. If the opp is Bleeding, also lowers Defense.",
+	},
+	predationplant: {
+		name: "Predation Plant",
+		desc: "It fails if the target is not readying an attack, however.",
+		shortDesc: "It fails if the target is not readying an attack, however.",
+	},
+	schorchingsting: {
+		name: "Schorching Sting",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	tiedup: {
+		name: "Tiedup",
+		desc: "Ties the opponent up, preventing them from escaping.",
+		shortDesc: "Ties the opponent up, preventing them from escaping.",
+	},
+	gemmine: {
+		name: "Gem Mine",
+		desc: "The user mines on the first turn, then gets a random type boosting Gem.",
+		shortDesc: "The user mines on the first turn, then gets a random type boosting Gem.",
+	},
+	choiceknit: {
+		name: "Choice Knit",
+		desc: "The user gets a random choice item if they are holding a choice item.",
+		shortDesc: "The user gets a random choice item if they are holding a choice item.",
+	},
+	gemcreate: {
+		name: "Gem Create",
+		desc: "The user gets a random type boosting Gem.",
+		shortDesc: "The user gets a random type boosting Gem.",
+	},
+	balloonparty: {
+		name: "Balloon Party",
+		desc: "Creates two balloons that make the user float. Can stack.",
+		shortDesc: "Creates two balloons that make the user float. Can stack.",
+	},
+	ultimatum: {
+		name: "Ultimatum",
+		desc: "Maximizes all of the user's stats. The user faints next turn.",
+		shortDesc: "Maximizes all of the user's stats. The user faints next turn.",
+	},
+	initiate: {
+		name: "Initiate",
+		desc: "The target undergoes a harsh initiation that changes the target's type to Dark.",
+		shortDesc: "The target undergoes a harsh initiation that changes the target's type to Dark.",
+	},
+	tapout: {
+		name: "Tap out",
+		desc: "Raises Attack then switches out, passing along any stat changes.",
+		shortDesc: "Raises Attack then switches out, passing along any stat changes.",
+	},
+	pitstop: {
+		name: "Pit Stop",
+		desc: "Heals the user a little. If the user goes first, heals more and raises Attack.",
+		shortDesc: "Heals the user a little. If the user goes first, heals more and raises Attack.",
+	},
+	lightpulse: {
+		name: "Light Pulse",
+		desc: "The user releases a shining aura imbued with light thoughts. It may also make the target flinch.",
+		shortDesc: "The user releases a shining aura imbued with light thoughts. It may also make the target flinch.",
+	},
+	medievalwind: {
+		name: "Medieval Wind",
+		desc: "The user blasts the target with a gust of medieval wind. It may also raise all the user's stats at once.",
+		shortDesc: "The user blasts the target with a gust of medieval wind. It may also raise all the user's stats at once.",
+	},
+	dragonwish: {
+		name: "Dragon Wish",
+		desc: "One turn after this move is used, the target's Attack and Speed stats are raised.",
+		shortDesc: "One turn after this move is used, the target's Attack and Speed stats are raised.",
+	},
+	spellbind: {
+		name: "Spellbind",
+		desc: "Traps the target for four to five turns.",
+		shortDesc: "Traps the target for four to five turns.",
+	},
+	snowballfight: {
+		name: "Snowball Fight",
+		desc: "Hits two to five times. If used in Hail or Icy Terrain it will hit 5 times.",
+		shortDesc: "Hits two to five times. If used in Hail or Icy Terrain it will hit 5 times.",
+	},
+	berrydrink: {
+		name: "Berry Drink",
+		desc: "Drinks the juice from its berry, healing and having an additional effect depending on the berry used.",
+		shortDesc: "Drinks the juice from its berry, healing and having an additional effect depending on the berry used.",
+	},
+	seismickick: {
+		name: "Seismic Kick",
+		desc: "Very high chance to lower the target's Defense and the user's Evasion.",
+		shortDesc: "Very high chance to lower the target's Defense and the user's Evasion.",
+	},
+	frostkick: {
+		name: "Frost Kick",
+		desc: "The user launches a kick with a high critical-hit ratio. It may also leave the target frozen solid.",
+		shortDesc: "The user launches a kick with a high critical-hit ratio. It may also leave the target frozen solid.",
+	},
+	dustkick: {
+		name: "Dust Kick",
+		desc: "Kicks up dust, may lower target's accuracy. High crit rate.",
+		shortDesc: "Kicks up dust, may lower target's accuracy. High crit rate.",
+	},
+	snowballpunch: {
+		name: "Snowball Punch",
+		desc: "Hits two to five times. If used in Hail or Icy Terrain it will hit 5 times.",
+		shortDesc: "Hits two to five times. If used in Hail or Icy Terrain it will hit 5 times.",
+	},
+	eatingchomp: {
+		name: "Eating Chomp",
+		desc: "An energy-draining fang. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "An energy-draining fang. The user's HP is restored by half the damage taken by the target.",
+	},
+	woodcannon: {
+		name: "Wood Cannon",
+		desc: "Large chunks of wood are shot two to five times in a row.",
+		shortDesc: "Large chunks of wood are shot two to five times in a row.",
+	},
+	afterimage: {
+		name: "After Image",
+		desc: "Creates a substitute then switches out, passing along any stat changes.",
+		shortDesc: "Creates a substitute then switches out, passing along any stat changes.",
+	},
+	blight: {
+		name: "Blight",
+		desc: "Hits both targets, lowering their Defense and SpDef.",
+		shortDesc: "Hits both targets, lowering their Defense and SpDef.",
+	},
+	mysticchime: {
+		name: "Mystic Chime",
+		desc: "The user hypnotizes everything around it into copying its stat changes.",
+		shortDesc: "The user hypnotizes everything around it into copying its stat changes.",
+	},
+	dropguard: {
+		name: "Drop Guard",
+		desc: "User's ability becomes No Guard.",
+		shortDesc: "User's ability becomes No Guard.",
+	},
+	barkpress: {
+		name: "Bark Press",
+		desc: "Uses the user's Defense stat in damage calculation rather than Attack stat.",
+		shortDesc: "Uses the user's Defense stat in damage calculation rather than Attack stat.",
+	},
+	corrosivespray: {
+		name: "Corrosive Spray",
+		desc: "Hits and does double damage against Steel-types. May burn.",
+		shortDesc: "Hits and does double damage against Steel-types. May burn.",
+	},
+	numbinginjection: {
+		name: "Numbing Injection",
+		desc: "It may also cause paralysis.",
+		shortDesc: "It may also cause paralysis.",
+	},
+	skidout: {
+		name: "Skid Out",
+		desc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
+		shortDesc: "An attack move that inflicts double damage if used on a target that is switching out of battle.",
+	},
+	glitter: {
+		name: "Glitter",
+		desc: "The target takes more damage from Fairy moves for 8 turns.",
+		shortDesc: "The target takes more damage from Fairy moves for 8 turns.",
+	},
+	glitterbomb: {
+		name: "Glitter Bomb",
+		desc: "The target takes more damage from Fairy moves for 3 turns.",
+		shortDesc: "The target takes more damage from Fairy moves for 3 turns.",
+	},
+	pixiefangs: {
+		name: "Pixie Fangs",
+		desc: "May make the target take more damage from Fairy moves for 3 turns.",
+		shortDesc: "May make the target take more damage from Fairy moves for 3 turns.",
+	},
+	tag: {
+		name: "Tag",
+		desc: "Passes on all stat changes to the target.",
+		shortDesc: "Passes on all stat changes to the target.",
+	},
+	imprint: {
+		name: "Imprint",
+		desc: "If the foe knows any move also known by the user, the foe is prevented from using it.",
+		shortDesc: "If the foe knows any move also known by the user, the foe is prevented from using it.",
+	},
+	photocopy: {
+		name: "Photocopy",
+		desc: "Goes first. The user copies the move last used by the foe. The move can be used until the user is switched out.",
+		shortDesc: "Goes first. The user copies the move last used by the foe. The move can be used until the user is switched out.",
+	},
+	cryptomine: {
+		name: "Cryptomine",
+		desc: "Money is earned after battle.",
+		shortDesc: "Money is earned after battle.",
+	},
+	woodpike: {
+		name: "Wood Pike",
+		desc: "This attack always results in a critical hit.",
+		shortDesc: "This attack always results in a critical hit.",
+	},
+	poisonspit: {
+		name: "Poison Spit",
+		desc: "A quick spit of poison. This move always goes first.",
+		shortDesc: "A quick spit of poison. This move always goes first.",
+	},
+	lifeline: {
+		name: "Lifeline",
+		desc: "The target endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.",
+		shortDesc: "The target endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession.",
+	},
+	exorcise: {
+		name: "Exorcise",
+		desc: "If the target is Ghost-type, it loses its Ghost typing.",
+		shortDesc: "If the target is Ghost-type, it loses its Ghost typing.",
+	},
+	antivenom: {
+		name: "Antivenom",
+		desc: "If the target is Poison-type, it loses its Poison typing.",
+		shortDesc: "If the target is Poison-type, it loses its Poison typing.",
+	},
+	aimforthehorn: {
+		name: "Aim for the Horn",
+		desc: "Hits and does double damage against Ground-types. May paralyze.",
+		shortDesc: "Hits and does double damage against Ground-types. May paralyze.",
+	},
+	wyverncry: {
+		name: "Wyvern Cry",
+		desc: "The user lets loose a horribly echoing shout with the power to inflict damage.",
+		shortDesc: "The user lets loose a horribly echoing shout with the power to inflict damage.",
+	},
+	dogfight: {
+		name: "Dogfight",
+		desc: "Raises Attack if the target is Flying-type.",
+		shortDesc: "Raises Attack if the target is Flying-type.",
+	},
+	dragonvenom: {
+		name: "Dragon Venom",
+		desc: "Hits and does double damage against Fairy-types. May poison.",
+		shortDesc: "Hits and does double damage against Fairy-types. May poison.",
+	},
+	viralflames: {
+		name: "Viral Flames",
+		desc: "It may also poison the target.",
+		shortDesc: "It may also poison the target.",
+	},
+	flyingsport: {
+		name: "Flying Sport",
+		desc: "Raises Speed. Weakens Ground-type moves while the user is in the battle. Raises Atk in Steady Wind.",
+		shortDesc: "Raises Speed. Weakens Ground-type moves while the user is in the battle. Raises Atk in Steady Wind.",
+	},
+	pandemic: {
+		name: "Pandemic",
+		desc: "The user starts a Pandemic, damaging all except Virus types and boosting Virus moves. Switching out inflicts a status.",
+		shortDesc: "The user starts a Pandemic, damaging all except Virus types and boosting Virus moves. Switching out inflicts a status.",
+	},
+	icesport: {
+		name: "Ice Sport",
+		desc: "Raises SpDef. Weakens Flying-type moves while the user is in the battle. Raises Atk and SpAtk in Hail.",
+		shortDesc: "Raises SpDef. Weakens Flying-type moves while the user is in the battle. Raises Atk and SpAtk in Hail.",
+	},
+	fearitself: {
+		name: "Fear Itself",
+		desc: "Hits and does increased damage against Ghost and Zombie-types. May make target flinch.",
+		shortDesc: "Hits and does increased damage against Ghost and Zombie-types. May make target flinch.",
+	},
+	antiectpunch: {
+		name: "Antiect Punch",
+		desc: "A punch that can hit Ghost-types and does double damage to them.",
+		shortDesc: "A punch that can hit Ghost-types and does double damage to them.",
+	},
+	dryspell: {
+		name: "Dry Spell",
+		desc: "Raises SpDef. The move weakens Water-type moves if user is in battle. If Sun, burns opponent.",
+		shortDesc: "Raises SpDef. The move weakens Water-type moves if user is in battle. If Sun, burns opponent.",
+	},
+	chargedgrease: {
+		name: "Charged Grease",
+		desc: "Electrified grease is shot at foe, may paralyze.",
+		shortDesc: "Electrified grease is shot at foe, may paralyze.",
+	},
+	oilsmack: {
+		name: "Oil Smack",
+		desc: "A flying Pokemon will fall to the ground when hit.",
+		shortDesc: "A flying Pokemon will fall to the ground when hit.",
+	},
+	gorillaarm: {
+		name: "Gorilla Arm",
+		desc: "It harshly lowers the users speed however.",
+		shortDesc: "It harshly lowers the users speed however.",
+	},
+	minihammer: {
+		name: "Mini Hammer",
+		desc: "The user swings and hits with its strong and heavy fist. It lowers the user's Speed, however.",
+		shortDesc: "The user swings and hits with its strong and heavy fist. It lowers the user's Speed, however.",
+	},
+	slitwrists: {
+		name: "Slit Wrists",
+		desc: "The user cuts themselves. This move always results in a critical hit.",
+		shortDesc: "The user cuts themselves. This move always results in a critical hit.",
+	},
+	lumber: {
+		name: "Lumber",
+		desc: "Decreases the user's Evasion 2 stages.",
+		shortDesc: "Decreases the user's Evasion 2 stages.",
+	},
+	clumsyswing: {
+		name: "Clumsy Swing",
+		desc: "Hits both targets in a double battle. Decreases the user's Evasion 2 stages.",
+		shortDesc: "Hits both targets in a double battle. Decreases the user's Evasion 2 stages.",
+	},
+	lazybreak: {
+		name: "Lazy Break",
+		desc: "Restores a lot of HP but lowers Evasion and Speed.",
+		shortDesc: "Restores a lot of HP but lowers Evasion and Speed.",
+	},
+	openstrike: {
+		name: "Open Strike",
+		desc: "The user attacks wildly, leaving itself open. Harshly lower's the user's Defense.",
+		shortDesc: "The user attacks wildly, leaving itself open. Harshly lower's the user's Defense.",
+	},
+	powerarena: {
+		name: "Power Arena",
+		desc: "An arena where fighting moves are boosted for 5 turns.",
+		shortDesc: "An arena where fighting moves are boosted for 5 turns.",
+	},
+	swarm: {
+		name: "Swarm",
+		desc: "Does Bug damage to all except Bug-types for 5 turns. Powers up Bug moves.",
+		shortDesc: "Does Bug damage to all except Bug-types for 5 turns. Powers up Bug moves.",
+	},
+	irondust: {
+		name: "Iron Dust",
+		desc: "Powers up Steel-type moves for 5 turns.",
+		shortDesc: "Powers up Steel-type moves for 5 turns.",
+	},
+	greasegun: {
+		name: "Grease Gun",
+		desc: "The target is blasted with a forceful shot of grease.",
+		shortDesc: "The target is blasted with a forceful shot of grease.",
+	},
+	glasseater: {
+		name: "Glass Eater",
+		desc: "If the target is holding a Berry, it becomes destroyed.",
+		shortDesc: "If the target is holding a Berry, it becomes destroyed.",
+	},
+	magmaslash: {
+		name: "Magma Slash",
+		desc: "High critical hit ratio. May burn the target.",
+		shortDesc: "High critical hit ratio. May burn the target.",
+	},
+	greaseflake: {
+		name: "Grease Flake",
+		desc: "Flings lightweight chunks of pure grease at the target, moving first. May Burn.",
+		shortDesc: "Flings lightweight chunks of pure grease at the target, moving first. May Burn.",
+	},
+	selffatten: {
+		name: "Self Fatten",
+		desc: "+2 Defense and -2 Speed. Makes user heavier. Changes ability to Thick Fat.",
+		shortDesc: "+2 Defense and -2 Speed. Makes user heavier. Changes ability to Thick Fat.",
+	},
+	greasebubble: {
+		name: "Grease Bubble",
+		desc: "Forms bubbles of fat and launches at the target. May make flinch.",
+		shortDesc: "Forms bubbles of fat and launches at the target. May make flinch.",
+	},
+	deceptivefan: {
+		name: "Deceptive Fan",
+		desc: "Increases SpDef. Target's SpAtk and SpDef are lowered and inflicted with Embargo.",
+		shortDesc: "Increases SpDef. Target's SpAtk and SpDef are lowered and inflicted with Embargo.",
+	},
+	fatslam: {
+		name: "Fat Slam",
+		desc: "The heavier the user, the greater the damage.",
+		shortDesc: "The heavier the user, the greater the damage.",
+	},
+	corrupt: {
+		name: "Corrupt",
+		desc: "The target is corrupted, becoming Chaos-type.",
+		shortDesc: "The target is corrupted, becoming Chaos-type.",
+	},
+	maniachowl: {
+		name: "Maniac Howl",
+		desc: "Lowers the target's Attack and SpAtk by a random amount.",
+		shortDesc: "Lowers the target's Attack and SpAtk by a random amount.",
+	},
+	unhingedhowl: {
+		name: "Unhinged Howl",
+		desc: "Raises the user's Attack and SpAtk by a random amount, but also confuses.",
+		shortDesc: "Raises the user's Attack and SpAtk by a random amount, but also confuses.",
+	},
+	heatseekcrawl: {
+		name: "HeatSeek Crawl",
+		desc: "Goes first, never misses.",
+		shortDesc: "Goes first, never misses.",
+	},
+	greasepunch: {
+		name: "Grease Punch",
+		desc: "A punch full of grease. May lower the target's Speed stat.",
+		shortDesc: "A punch full of grease. May lower the target's Speed stat.",
+	},
+	frigerate: {
+		name: "Frigerate",
+		desc: "The target is frigerated, becoming Ice-type.",
+		shortDesc: "The target is frigerated, becoming Ice-type.",
+	},
+	toxify: {
+		name: "Toxify",
+		desc: "The target is toxified, becoming Poison-type.",
+		shortDesc: "The target is toxified, becoming Poison-type.",
+	},
+	simplify: {
+		name: "Simplify",
+		desc: "The target is simplified, becoming Normal-type.",
+		shortDesc: "The target is simplified, becoming Normal-type.",
+	},
+	cursedflare: {
+		name: "Cursed Flare",
+		desc: "The target is ignited, becoming Fire-type.",
+		shortDesc: "The target is ignited, becoming Fire-type.",
+	},
+	autophobia: {
+		name: "Autophobia",
+		desc: "The target is scared of itself, becoming Fear-type.",
+		shortDesc: "The target is scared of itself, becoming Fear-type.",
+	},
+	terrainball: {
+		name: "Terrain Ball",
+		desc: "An attack move that varies in power and type depending on the terrain.",
+		shortDesc: "An attack move that varies in power and type depending on the terrain.",
+	},
+	soulbarrier: {
+		name: "Soul Barrier",
+		desc: "Sets up Reflect and Light Screen, then the user faints.",
+		shortDesc: "Sets up Reflect and Light Screen, then the user faints.",
+	},
+	echolocation: {
+		name: "Echolocation",
+		desc: "Raises the user's Accuracy and Speed.",
+		shortDesc: "Raises the user's Accuracy and Speed.",
+	},
+	barrierburst: {
+		name: "Barrier Burst",
+		desc: "Destroys your side's Reflect or Light Screen. Fails if one of the two isn't up.",
+		shortDesc: "Destroys your side's Reflect or Light Screen. Fails if one of the two isn't up.",
+	},
+	sleepwalk: {
+		name: "Sleep Walk",
+		desc: "The user goes to sleep, restoring its HP and status. Then the user switches out.",
+		shortDesc: "The user goes to sleep, restoring its HP and status. Then the user switches out.",
+	},
+	glassceiling: {
+		name: "Glass Ceiling",
+		desc: "Prevents the opposing side from raising their stats for 6 turns.",
+		shortDesc: "Prevents the opposing side from raising their stats for 6 turns.",
+	},
+	wallbreaker: {
+		name: "Wall Breaker",
+		desc: "Destroys your side's Reflect or Light Screen. Fails if one of the two isn't up.",
+		shortDesc: "Destroys your side's Reflect or Light Screen. Fails if one of the two isn't up.",
+	},
+	pressuretime: {
+		name: "Pressure Time",
+		desc: "The opposing side uses double PP for 6 turns.",
+		shortDesc: "The opposing side uses double PP for 6 turns.",
+	},
+	graveyard: {
+		name: "Graveyard",
+		desc: "Powers up Zombie-type moves and bone moves for 5 turns.",
+		shortDesc: "Powers up Zombie-type moves and bone moves for 5 turns.",
+	},
+	sweetcannon: {
+		name: "Sweet Cannon",
+		desc: "On the first turn, charges and raises SpDef. Attacks on second turn.",
+		shortDesc: "On the first turn, charges and raises SpDef. Attacks on second turn.",
+	},
+	plainterrain: {
+		name: "Plain Terrain",
+		desc: "The ground becomes plain for five turns. Boosts normal moves, prevents other Terrains.",
+		shortDesc: "The ground becomes plain for five turns. Boosts normal moves, prevents other Terrains.",
+	},
+	matingseason: {
+		name: "Mating Season",
+		desc: "For five turns all mons on the field do double damage to the opposite gender and may be attracted.",
+		shortDesc: "For five turns all mons on the field do double damage to the opposite gender and may be attracted.",
+	},
+	factory: {
+		name: "Factory",
+		desc: "Heals Tech-types and powers up Tech type moves for 5 turns.",
+		shortDesc: "Heals Tech-types and powers up Tech type moves for 5 turns.",
+	},
+	luckyroom: {
+		name: "Lucky Room",
+		desc: "The user creates a room in which critical hits land more easily for 5 turns.",
+		shortDesc: "The user creates a room in which critical hits land more easily for 5 turns.",
+	},
+	homersimpson: {
+		name: "HOMER SIMPSON",
+		desc: "HOMER SIMPSON!",
+		shortDesc: "HOMER SIMPSON!",
+	},
+	birdflock: {
+		name: "Bird Flock",
+		desc: "For five turns damages everything except Flying-types.",
+		shortDesc: "For five turns damages everything except Flying-types.",
+	},
+	leechingfangs: {
+		name: "Leeching Fangs",
+		desc: "Raises Attack. The user's Fang moves drain health.",
+		shortDesc: "Raises Attack. The user's Fang moves drain health.",
+	},
+	recycleterrain: {
+		name: "Recycle Terrain",
+		desc: "For 5 turns everything on the ground has a chance to recycle their item. Boosts plastic moves.",
+		shortDesc: "For 5 turns everything on the ground has a chance to recycle their item. Boosts plastic moves.",
+	},
+	thickfog: {
+		name: "Thick Fog",
+		desc: "Lowers the accuracy of everything on the field for 5 turns.",
+		shortDesc: "Lowers the accuracy of everything on the field for 5 turns.",
+	},
+	invisibility: {
+		name: "Invisibility",
+		desc: "The user becomes invisible, making it very hard to hit for 3 turns.",
+		shortDesc: "The user becomes invisible, making it very hard to hit for 3 turns.",
+	},
+	bloodrain: {
+		name: "Blood Rain",
+		desc: "Increases power of Blood-type moves for 5 turns.",
+		shortDesc: "Increases power of Blood-type moves for 5 turns.",
+	},
+	bloodbathe: {
+		name: "Blood Bathe",
+		desc: "Heals the user, heals more during Blood Rain and raises Attack.",
+		shortDesc: "Heals the user, heals more during Blood Rain and raises Attack.",
+	},
+	bloodshower: {
+		name: "Blood Shower",
+		desc: "Heals the user, heals more during Blood Rain and raises Special Attack.",
+		shortDesc: "Heals the user, heals more during Blood Rain and raises Special Attack.",
+	},
+	poisonlovepill: {
+		name: "PoisonLovePill",
+		desc: "May poison and infatuate.",
+		shortDesc: "May poison and infatuate.",
+	},
+	telekrunch: {
+		name: "Telekrunch",
+		desc: "High chance to also cause confusion.",
+		shortDesc: "High chance to also cause confusion.",
+	},
+	vibrantcharge: {
+		name: "Vibrant Charge",
+		desc: "Almost guaranteed to confuse. If ability is Dazzling, also lowers Accuracy.",
+		shortDesc: "Almost guaranteed to confuse. If ability is Dazzling, also lowers Accuracy.",
+	},
+	lavadrip: {
+		name: "Lava Drip",
+		desc: "Guaranteed to burn the target.",
+		shortDesc: "Guaranteed to burn the target.",
+	},
+	frostfang: {
+		name: "Frost Fang",
+		desc: "The user bites with cold-infused fangs. It may also make the target flinch or leave it frozen.",
+		shortDesc: "The user bites with cold-infused fangs. It may also make the target flinch or leave it frozen.",
+	},
+	eeriebubbles: {
+		name: "Eerie Bubbles",
+		desc: "It may also leave the target with paralysis.",
+		shortDesc: "It may also leave the target with paralysis.",
+	},
+	adhesivewave: {
+		name: "Adhesive Wave",
+		desc: "Hits both targets in a double battle, may paralyze.",
+		shortDesc: "Hits both targets in a double battle, may paralyze.",
+	},
+	woundbite: {
+		name: "Wound Bite",
+		desc: "If target already took dmg this turn, x2 pwr. If target is bleeding, x2 power.",
+		shortDesc: "If target already took dmg this turn, x2 pwr. If target is bleeding, x2 power.",
+	},
+	violentrage: {
+		name: "Violent Rage",
+		desc: "User's attack rises each time it is hit. More powerful the less HP the user has.",
+		shortDesc: "User's attack rises each time it is hit. More powerful the less HP the user has.",
+	},
+	hypnopendulum: {
+		name: "Hypno Pendulum",
+		desc: "The target is confused and put to sleep.",
+		shortDesc: "The target is confused and put to sleep.",
+	},
+	oceanhearts: {
+		name: "Ocean Hearts",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	ragingscales: {
+		name: "Raging Scales",
+		desc: "An attack move that inflicts double the damage if the user has been hurt by the foe in the same turn.",
+		shortDesc: "An attack move that inflicts double the damage if the user has been hurt by the foe in the same turn.",
+	},
+	disturbancescales: {
+		name: "DisturbanceScales",
+		desc: "Not very effective moves do more damage for 8 turns.",
+		shortDesc: "Not very effective moves do more damage for 8 turns.",
+	},
+	snowvest: {
+		name: "Snow Vest",
+		desc: "May make it Hail. Also deals Bug-type damage.",
+		shortDesc: "May make it Hail. Also deals Bug-type damage.",
+	},
+	shuttlelaunch: {
+		name: "Shuttle Launch",
+		desc: "The user soars raising Speed and burning the opponent, then strikes on the second turn.",
+		shortDesc: "The user soars raising Speed and burning the opponent, then strikes on the second turn.",
+	},
+	maxwildfire: {
+		name: "MAXWILDFIRE",
+		desc: "Creates a sea of fire on the opposing side.",
+		shortDesc: "Creates a sea of fire on the opposing side.",
+	},
+	maxterror: {
+		name: "MAXTERROR",
+		desc: "Preventing the target from escaping.",
+		shortDesc: "Preventing the target from escaping.",
+	},
+	auroraresonance: {
+		name: "Aurora Resonance",
+		desc: "May set up Aurora Veil.",
+		shortDesc: "May set up Aurora Veil.",
+	},
+	maxmalodor: {
+		name: "MAX Malodor",
+		desc: "Poison's the target.",
+		shortDesc: "Poison's the target.",
+	},
+	stunshock: {
+		name: "Stun Shock",
+		desc: "High chance to either poison or paralyze the target.",
+		shortDesc: "High chance to either poison or paralyze the target.",
+	},
+	dracodepletion: {
+		name: "Draco Depletion",
+		desc: "Reduces PP from the last move used by the target.",
+		shortDesc: "Reduces PP from the last move used by the target.",
+	},
+	centiferno: {
+		name: "Centiferno",
+		desc: "The target becomes trapped within a fierce vortex of fire that rages for four to five turns.",
+		shortDesc: "The target becomes trapped within a fierce vortex of fire that rages for four to five turns.",
+	},
+	imageofthebeast: {
+		name: "Image of the Beast",
+		desc: "The opponent cannot heal, is tormented, taunted.",
+		shortDesc: "The opponent cannot heal, is tormented, taunted.",
+	},
+	coiloftheworld: {
+		name: "Coil of the World",
+		desc: "The target becomes trapped within a fierce vortex of fire that rages for four to five turns.",
+		shortDesc: "The target becomes trapped within a fierce vortex of fire that rages for four to five turns.",
+	},
+	cyberspacerise: {
+		name: "Cyberspace Rise",
+		desc: "Starts Cyberspace.",
+		shortDesc: "Starts Cyberspace.",
+	},
+	blackplague: {
+		name: "BLACK PLAGUE",
+		desc: "The opponent cannot heal, is tormented, taunted.",
+		shortDesc: "The opponent cannot heal, is tormented, taunted.",
+	},
+	darkagehex: {
+		name: "Dark Age Hex",
+		desc: "This relentless attack does massive damage to a target affected by status problems.",
+		shortDesc: "This relentless attack does massive damage to a target affected by status problems.",
+	},
+	technologyscoil: {
+		name: "Technologys Coil",
+		desc: "The target becomes trapped within a fierce vortex of fire that rages for four to five turns.",
+		shortDesc: "The target becomes trapped within a fierce vortex of fire that rages for four to five turns.",
+	},
+	webfield: {
+		name: "Web Field",
+		desc: "Puts webs around the field, powering up web moves for 5 turns.",
+		shortDesc: "Puts webs around the field, powering up web moves for 5 turns.",
+	},
+	aquaweb: {
+		name: "Aquaweb",
+		desc: "The user captures and attacks foes by using an aquatic net, which lowers their Speed stat.",
+		shortDesc: "The user captures and attacks foes by using an aquatic net, which lowers their Speed stat.",
+	},
+	brokenguillotine: {
+		name: "Broken Guillotine",
+		desc: "Heals health and status conditions from your side.",
+		shortDesc: "Heals health and status conditions from your side.",
+	},
+	letthemeatcake: {
+		name: "LetThemEatCake",
+		desc: "The opposing side does less damage with Physical and Special moves for 5 turns.",
+		shortDesc: "The opposing side does less damage with Physical and Special moves for 5 turns.",
+	},
+	falsedelys: {
+		name: "False de Lys",
+		desc: "Puts up Safeguard and makes the opponent take recoil. User's Defense is lowered.",
+		shortDesc: "Puts up Safeguard and makes the opponent take recoil. User's Defense is lowered.",
+	},
+	knightofowner: {
+		name: "KnightOfOwner",
+		desc: "Copies the last move used by the opponent and disables it. Makes it Chaos type for one turn.",
+		shortDesc: "Copies the last move used by the opponent and disables it. Makes it Chaos type for one turn.",
+	},
+	trojanrush: {
+		name: "Trojan Rush",
+		desc: "Deals damage, then, two turns after this move is used deals damage again.",
+		shortDesc: "Deals damage, then, two turns after this move is used deals damage again.",
+	},
+	tricktackle: {
+		name: "Trick Tackle",
+		desc: "Switches the user and the target's item.",
+		shortDesc: "Switches the user and the target's item.",
+	},
+	manaverse: {
+		name: "Manaverse",
+		desc: "Powers up Magic-type moves for 5 turns.",
+		shortDesc: "Powers up Magic-type moves for 5 turns.",
+	},
+	defensecharm: {
+		name: "Defensecharm",
+		desc: "Casts a defensive charm to sharply raise its Defense stat.",
+		shortDesc: "Casts a defensive charm to sharply raise its Defense stat.",
+	},
+	magiccape: {
+		name: "Magic Cape",
+		desc: "Switches out, passing along any stat changes. Bounces back status moves if hit by one.",
+		shortDesc: "Switches out, passing along any stat changes. Bounces back status moves if hit by one.",
+	},
+	bindingcircle: {
+		name: "Binding Circle",
+		desc: "Prevents the target from escaping as long as the user is in battle, and from using items for 4 turns.",
+		shortDesc: "Prevents the target from escaping as long as the user is in battle, and from using items for 4 turns.",
+	},
+	mysticlock: {
+		name: "Mystic Lock",
+		desc: "The foe is prevented from using moves known by the user.",
+		shortDesc: "The foe is prevented from using moves known by the user.",
+	},
+	copyright: {
+		name: "Copyright",
+		desc: "The foe is prevented from using moves known by the user and its item.",
+		shortDesc: "The foe is prevented from using moves known by the user and its item.",
+	},
+	stagehelper: {
+		name: "Stage Helper",
+		desc: "Assists an ally by boosting the power of its attack. If manaverse, boosts its next Magic attack.",
+		shortDesc: "Assists an ally by boosting the power of its attack. If manaverse, boosts its next Magic attack.",
+	},
+	darksport: {
+		name: "Dark Sport",
+		desc: "Raises SpDef. Weakens Psychic-type moves while the user is in the battle. Raises Atk and SpAtk in Midnight.",
+		shortDesc: "Raises SpDef. Weakens Psychic-type moves while the user is in the battle. Raises Atk and SpAtk in Midnight.",
+	},
+	darkscreen: {
+		name: "Dark Screen",
+		desc: "A murky wall of darkness is put up on the opp side to supress their special attacks for 5 turns.",
+		shortDesc: "A murky wall of darkness is put up on the opp side to supress their special attacks for 5 turns.",
+	},
+	claustrowall: {
+		name: "ClaustroWall",
+		desc: "A claustrophobic screen is put up on the opp side to supress their physical attacks for 5 turns.",
+		shortDesc: "A claustrophobic screen is put up on the opp side to supress their physical attacks for 5 turns.",
+	},
+	bouncycastle: {
+		name: "Bouncy Castle",
+		desc: "Pokemon using a physical move bounce into the air and Rubber moves are boosted for 5 turns.",
+		shortDesc: "Pokemon using a physical move bounce into the air and Rubber moves are boosted for 5 turns.",
+	},
+	spiritstorm: {
+		name: "Spiritstorm",
+		desc: "Deals Ghost-type damage to everything except Ghost-types for 5 turns.",
+		shortDesc: "Deals Ghost-type damage to everything except Ghost-types for 5 turns.",
+	},
+	fallenbattlefield: {
+		name: "Fallen Battlefield",
+		desc: "Starts Spiritstorm and boosts Attack and Defense when a target faints for 5 turns.",
+		shortDesc: "Starts Spiritstorm and boosts Attack and Defense when a target faints for 5 turns.",
+	},
+	death: {
+		name: "DEATH",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	apexmutation: {
+		name: "Apex Mutation",
+		desc: "The user mutates to sharply raise its highest stat.",
+		shortDesc: "The user mutates to sharply raise its highest stat.",
+	},
+	nadirmutation: {
+		name: "Nadir Mutation",
+		desc: "The user mutates to drastically raise its lowest stat.",
+		shortDesc: "The user mutates to drastically raise its lowest stat.",
+	},
+	selfirradiate: {
+		name: "Self Irradiate",
+		desc: "Raises SpDef and makes it so contact moves will have a high chance to Poison.",
+		shortDesc: "Raises SpDef and makes it so contact moves will have a high chance to Poison.",
+	},
+	radiotherapy: {
+		name: "Radiotherapy",
+		desc: "Heals the target by a third of its HP and prevents it from being statused for 4 turns.",
+		shortDesc: "Heals the target by a third of its HP and prevents it from being statused for 4 turns.",
+	},
+	chemotherapy: {
+		name: "Chemotherapy",
+		desc: "Restores half the user's HP and cures status conditions. May inflict heal block.",
+		shortDesc: "Restores half the user's HP and cures status conditions. May inflict heal block.",
+	},
+	slugsmooch: {
+		name: "Slug Smooch",
+		desc: "A slimy kiss that lowers the target's Speed stat.",
+		shortDesc: "A slimy kiss that lowers the target's Speed stat.",
+	},
+	hostslicer: {
+		name: "Host Slicer",
+		desc: "May make the target bleed.",
+		shortDesc: "May make the target bleed.",
+	},
+	infooverload: {
+		name: "Info Overload",
+		desc: "Drastically raises the target's SpAtk. But confuses, taunts and torments.",
+		shortDesc: "Drastically raises the target's SpAtk. But confuses, taunts and torments.",
+	},
+	selfishdrain: {
+		name: "Selfish Drain",
+		desc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	spiritcutter: {
+		name: "Spirit Cutter",
+		desc: "An attack that hits a target using Protect or Detect.",
+		shortDesc: "An attack that hits a target using Protect or Detect.",
+	},
+	fullmoon: {
+		name: "Full Moon",
+		desc: "Boosts Fairy and moon-based moves for 5 turns.",
+		shortDesc: "Boosts Fairy and moon-based moves for 5 turns.",
+	},
+	eclipse: {
+		name: "Eclipse",
+		desc: "Prevents sun and moon based moves for 5 turns.",
+		shortDesc: "Prevents sun and moon based moves for 5 turns.",
+	},
+	armorcrash: {
+		name: "Armor Crash",
+		desc: "Uses the user's Defense stat to attack. May raise Defense.",
+		shortDesc: "Uses the user's Defense stat to attack. May raise Defense.",
+	},
+	chlorobeam: {
+		name: "Chlorobeam",
+		desc: "Does more damage in Sunny weather.",
+		shortDesc: "Does more damage in Sunny weather.",
+	},
+	omegaeclipse: {
+		name: "Omega Eclipse",
+		desc: "Only works during Eclipse.",
+		shortDesc: "Only works during Eclipse.",
+	},
+	frozeniceberg: {
+		name: "Frozen Iceberg",
+		desc: "Uses Defense stat to attack. Can only be used when the user is frozen.",
+		shortDesc: "Uses Defense stat to attack. Can only be used when the user is frozen.",
+	},
+	glassshot: {
+		name: "Glass Shot",
+		desc: "The attack lands without fail.",
+		shortDesc: "The attack lands without fail.",
+	},
+	anytime: {
+		name: "Anytime",
+		desc: "This move either goes first or goes last.",
+		shortDesc: "This move either goes first or goes last.",
+	},
+	throwvoice: {
+		name: "Throw Voice",
+		desc: "The next move used by the target has a very high chance to miss.",
+		shortDesc: "The next move used by the target has a very high chance to miss.",
+	},
+	glasschop: {
+		name: "Glass Chop",
+		desc: "The target is attacked with a sharp chop. Critical hits land more easily.",
+		shortDesc: "The target is attacked with a sharp chop. Critical hits land more easily.",
+	},
+	midnightblade: {
+		name: "Midnight Blade",
+		desc: "Hi crit. A two-turn attack. The user gathers darkness, then slashes on the second turn.",
+		shortDesc: "Hi crit. A two-turn attack. The user gathers darkness, then slashes on the second turn.",
+	},
+	abruption: {
+		name: "Abruption",
+		desc: "An abrupt eruption, but it only works the first turn the user is in battle.",
+		shortDesc: "An abrupt eruption, but it only works the first turn the user is in battle.",
+	},
+	cough: {
+		name: "Cough",
+		desc: "KOFF KOFF. It may also make the target flinch.",
+		shortDesc: "KOFF KOFF. It may also make the target flinch.",
+	},
+	soupsplash: {
+		name: "Soup Splash",
+		desc: "It swamps the area around the user with soup.",
+		shortDesc: "It swamps the area around the user with soup.",
+	},
+	coronavirus: {
+		name: "Corona Virus",
+		desc: "Has a chance to start a Pandemic.",
+		shortDesc: "Has a chance to start a Pandemic.",
+	},
+	apocalypsepunch: {
+		name: "Apocalypse Punch",
+		desc: "Striking opponents over and over makes the user's fists harder. Hitting a target raises the Attack stat.",
+		shortDesc: "Striking opponents over and over makes the user's fists harder. Hitting a target raises the Attack stat.",
+	},
+	timestall: {
+		name: "Time Stall",
+		desc: "The user stalls for time.",
+		shortDesc: "The user stalls for time.",
+	},
+	acidsport: {
+		name: "Acid Sport",
+		desc: "Raises SpDef. Weakens Steel-type moves while the user is in the battle.",
+		shortDesc: "Raises SpDef. Weakens Steel-type moves while the user is in the battle.",
+	},
+	tauroskiathermokrasia: {
+		name: "TauroSkiaThermokrasia",
+		desc: "Deals Special damage. May Curse the target.",
+		shortDesc: "Deals Special damage. May Curse the target.",
+	},
+	wildbeastslogic: {
+		name: "WildBeastsLogic",
+		desc: "Raises the user's Evasion and critical hit ratio.",
+		shortDesc: "Raises the user's Evasion and critical hit ratio.",
+	},
+	nurseofsteel: {
+		name: "Nurse of Steel",
+		desc: "Heals the target by a third of its HP and protects from status or stats lowered for 4 turns.",
+		shortDesc: "Heals the target by a third of its HP and protects from status or stats lowered for 4 turns.",
+	},
+	nightingalepledge: {
+		name: "Nightingale Pledge",
+		desc: "Lowers the opponent's Atk+SpAtk. Heals user and ally's HP and status in a double battle.",
+		shortDesc: "Lowers the opponent's Atk+SpAtk. Heals user and ally's HP and status in a double battle.",
+	},
+	lamortespoir: {
+		name: "LaMortEspoir",
+		desc: "High crit rate. May 1 hit KO.",
+		shortDesc: "High crit rate. May 1 hit KO.",
+	},
+	aciddrench: {
+		name: "Acid Drench",
+		desc: "Lowers the target's SpDef and allows it to be hit by Poison moves.",
+		shortDesc: "Lowers the target's SpDef and allows it to be hit by Poison moves.",
+	},
+	headrush: {
+		name: "Head Rush",
+		desc: "Hits two to five times.",
+		shortDesc: "Hits two to five times.",
+	},
+	fintanfinegas: {
+		name: "Fintan Finegas",
+		desc: "Sharply raises SpAtk, raises SpDef.",
+		shortDesc: "Sharply raises SpAtk, raises SpDef.",
+	},
+	uiscebeatha: {
+		name: "Uisce Beatha",
+		desc: "Heals user and ally's HP and status.",
+		shortDesc: "Heals user and ally's HP and status.",
+	},
+	macanluin: {
+		name: "Mac an Luin",
+		desc: "Lowers the target's Attack and grants the user immunity to Taunt for 5 turns.",
+		shortDesc: "Lowers the target's Attack and grants the user immunity to Taunt for 5 turns.",
+	},
+	meretrixmaterconflag: {
+		name: "MeretrixMaterConflag",
+		desc: "Burns down the city... hits everything, high chance to burn.",
+		shortDesc: "Burns down the city... hits everything, high chance to burn.",
+	},
+	mumyousandanzuki: {
+		name: "MumyouSandanZuki",
+		desc: "High crit rate. Ignores defense buffs on the target. May lower their defense.",
+		shortDesc: "High crit rate. Ignores defense buffs on the target. May lower their defense.",
+	},
+	flagofsincerity: {
+		name: "Flag of Sincerity",
+		desc: "Hi crit rate. Summons squad members of shinsengumi, hits 2-5 times.",
+		shortDesc: "Hi crit rate. Summons squad members of shinsengumi, hits 2-5 times.",
+	},
+	queenofvictory: {
+		name: "Queen of Victory",
+		desc: "Raises damage by your teams critical hits and attacks against Roman enemies for 8 turns.",
+		shortDesc: "Raises damage by your teams critical hits and attacks against Roman enemies for 8 turns.",
+	},
+	swordofboudica: {
+		name: "Sword of Boudica",
+		desc: "Hi crit rate. Deals extra damage to Roman targets.",
+		shortDesc: "Hi crit rate. Deals extra damage to Roman targets.",
+	},
+	chariotofboudica: {
+		name: "Chariot of Boudica",
+		desc: "Boosts your side's Defense, sets up Reflect and boosts your team's attacking stats for 3 turns.",
+		shortDesc: "Boosts your side's Defense, sets up Reflect and boosts your team's attacking stats for 3 turns.",
+	},
+	lentumdomusillustrius: {
+		name: "LentumDomusIllustrius",
+		desc: "Sound based. Hits both targets, hitting through Protect.",
+		shortDesc: "Sound based. Hits both targets, hitting through Protect.",
+	},
+	masshysteria: {
+		name: "Mass Hysteria",
+		desc: "Confuses and sharply raises the Attack of everybody on the field.",
+		shortDesc: "Confuses and sharply raises the Attack of everybody on the field.",
+	},
+	flucticulusdiana: {
+		name: "FlucticulusDiana",
+		desc: "Confuses, taunts and sharply raises the Attack of everybody on the field.",
+		shortDesc: "Confuses, taunts and sharply raises the Attack of everybody on the field.",
+	},
+	shadowarrow: {
+		name: "Shadow Arrow",
+		desc: "It may make the target flinch.",
+		shortDesc: "It may make the target flinch.",
+	},
+	lovearrow: {
+		name: "Love Arrow",
+		desc: "High chance to infatuate the target.",
+		shortDesc: "High chance to infatuate the target.",
+	},
+	mikotto: {
+		name: "Mikotto",
+		desc: "Deals double damage to Males. May lower Attack.",
+		shortDesc: "Deals double damage to Males. May lower Attack.",
+	},
+	tristaramoremio: {
+		name: "TristarAmoreMio",
+		desc: "Confuses the target and lowers their crit chance.",
+		shortDesc: "Confuses the target and lowers their crit chance.",
+	},
+	behemoth: {
+		name: "Behemoth",
+		desc: "Burning lash. High chance to lwr target's Attack stat.",
+		shortDesc: "Burning lash. High chance to lwr target's Attack stat.",
+	},
+	gorillapower: {
+		name: "Gorilla Power",
+		desc: "GORILLA! It may make the target flinch.",
+		shortDesc: "GORILLA! It may make the target flinch.",
+	},
+	undeathlife: {
+		name: "UNDEATH LIFE",
+		desc: "The target becomes Zombie-type.",
+		shortDesc: "The target becomes Zombie-type.",
+	},
+	soulleecher: {
+		name: "Soul Leecher",
+		desc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+	},
+	consumerism: {
+		name: "CONSUMERISM",
+		desc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+	},
+	thedevourer: {
+		name: "THEDEVOURER",
+		desc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	replenigger: {
+		name: "REPLENIGGER",
+		desc: "The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user's HP is restored by half the damage taken by the target.",
+	},
+	jewrocks: {
+		name: "Jew Rocks",
+		desc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	salmonleap: {
+		name: "Salmon Leap",
+		desc: "The user bounces up high, then drops on the foe on the second turn. It may also paralyze the foe.",
+		shortDesc: "The user bounces up high, then drops on the foe on the second turn. It may also paralyze the foe.",
+	},
+	mirrorize: {
+		name: "Mirrorize",
+		desc: "Changes the target's ability to Magic Bounce.",
+		shortDesc: "Changes the target's ability to Magic Bounce.",
+	},
+	drumpalm: {
+		name: "Drum Palm",
+		desc: "Repeatedly slams its palms on the target as if it were a drum. May also raise the user's Attack.",
+		shortDesc: "Repeatedly slams its palms on the target as if it were a drum. May also raise the user's Attack.",
+	},
+	jianhop: {
+		name: "Jian Hop",
+		desc: "The user bounces up high, then drops on the foe on the second turn. It may also paralyze the foe.",
+		shortDesc: "The user bounces up high, then drops on the foe on the second turn. It may also paralyze the foe.",
+	},
+	multidirectionblade: {
+		name: "MultiDirectionBlade",
+		desc: "The user attacks with floating blades that seek out the opponent.",
+		shortDesc: "The user attacks with floating blades that seek out the opponent.",
+	},
+	witchrage: {
+		name: "Witch Rage",
+		desc: "Hi crit rate. As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+		shortDesc: "Hi crit rate. As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+	},
+	leapoffaith: {
+		name: "Leap of Faith",
+		desc: "The user bounces up high raising SpDef, then drops on the foe on the second turn. It may also paralyze the foe.",
+		shortDesc: "The user bounces up high raising SpDef, then drops on the foe on the second turn. It may also paralyze the foe.",
+	},
+	lavaquake: {
+		name: "Lavaquake",
+		desc: "The user sets off an volcanic earthquake that strikes every Pokemon around it.",
+		shortDesc: "The user sets off an volcanic earthquake that strikes every Pokemon around it.",
+	},
+	featherarrow: {
+		name: "Feather Arrow",
+		desc: "This may also lower the target's Attack stat.",
+		shortDesc: "This may also lower the target's Attack stat.",
+	},
+	gangalf: {
+		name: "GANGALF",
+		desc: "Bleed, Poison, Curse, Block, Heal Block.",
+		shortDesc: "Bleed, Poison, Curse, Block, Heal Block.",
+	},
+	hotmonkeydicc: {
+		name: "HOTMONKEYDICC",
+		desc: "User brushes its bushy tail against target. Causes burn.",
+		shortDesc: "User brushes its bushy tail against target. Causes burn.",
+	},
+	veryhazard: {
+		name: "VERY HAZARD",
+		desc: "VERY HAZARDOUS",
+		shortDesc: "VERY HAZARDOUS",
+	},
+	gangbang: {
+		name: "Gangbang",
+		desc: "The user gets all the party Pokemon to attack the foe. The more party Pokemon, the more damage.",
+		shortDesc: "The user gets all the party Pokemon to attack the foe. The more party Pokemon, the more damage.",
+	},
+	santamariaanchor: {
+		name: "SantaMaria Anchor",
+		desc: "Lowers the target's crit chance.",
+		shortDesc: "Lowers the target's crit chance.",
+	},
+	fabricworld: {
+		name: "Fabric World",
+		desc: "Powers up Fabric-type moves for 5 turns.",
+		shortDesc: "Powers up Fabric-type moves for 5 turns.",
+	},
+	vformation: {
+		name: "V Formation",
+		desc: "Raises the Attack and Speed stat of all Flying-types on the field.",
+		shortDesc: "Raises the Attack and Speed stat of all Flying-types on the field.",
+	},
+	coralreef: {
+		name: "Coral Reef",
+		desc: "Damages all grounded pokemon except Water or Rock types for 5 turns.",
+		shortDesc: "Damages all grounded pokemon except Water or Rock types for 5 turns.",
+	},
+	coralgraze: {
+		name: "Coral Graze",
+		desc: "Restores the user's HP. Heals more during Coral Reef.",
+		shortDesc: "Restores the user's HP. Heals more during Coral Reef.",
+	},
+	coralcannon: {
+		name: "Coral Cannon",
+		desc: "High crit rate. Hits two to five times in a row.",
+		shortDesc: "High crit rate. Hits two to five times in a row.",
+	},
+	coralblade: {
+		name: "Coral Blade",
+		desc: "The target is slash with sharp coral. Critical hits land more easily.",
+		shortDesc: "The target is slash with sharp coral. Critical hits land more easily.",
+	},
+	lubricate: {
+		name: "Lubricate",
+		desc: "Decreases the accuracy and power of physical moves used against the user for 6 turns.",
+		shortDesc: "Decreases the accuracy and power of physical moves used against the user for 6 turns.",
+	},
+	oilskin: {
+		name: "Oil Skin",
+		desc: "Raises SpDef and makes the user immune to Water type moves.",
+		shortDesc: "Raises SpDef and makes the user immune to Water type moves.",
+	},
+	greasebomb: {
+		name: "Grease Bomb",
+		desc: "Double damage in Oily Terrain. It may also lower the target's accuracy.",
+		shortDesc: "Double damage in Oily Terrain. It may also lower the target's accuracy.",
+	},
+	greasyslap: {
+		name: "Greasy Slap",
+		desc: "The user slaps down the target's held item, preventing that item from being used in the battle.",
+		shortDesc: "The user slaps down the target's held item, preventing that item from being used in the battle.",
+	},
+	evileye: {
+		name: "Evil Eye",
+		desc: "Lowers the target's crit rate, makes them more suscetible to critical hits.",
+		shortDesc: "Lowers the target's crit rate, makes them more suscetible to critical hits.",
+	},
+	shadowyeyes: {
+		name: "Shadowy Eyes",
+		desc: "A shadowy gaze. It may also make the target flinch.",
+		shortDesc: "A shadowy gaze. It may also make the target flinch.",
+	},
+	sporeexplosion: {
+		name: "Spore Explosion",
+		desc: "The user blows up to inflict damage on all Pokemon in battle. The user faints upon using this move.",
+		shortDesc: "The user blows up to inflict damage on all Pokemon in battle. The user faints upon using this move.",
+	},
+	greasypeck: {
+		name: "Greasy Peck",
+		desc: "The target is jabbed with a sharply pointed beak or horn.",
+		shortDesc: "The target is jabbed with a sharply pointed beak or horn.",
+	},
+	oildrill: {
+		name: "Oil Drill",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	pumpjack: {
+		name: "Pumpjack",
+		desc: "Starts Oily Terrain.",
+		shortDesc: "Starts Oily Terrain.",
+	},
+	stoke: {
+		name: "Stoke",
+		desc: "Raises the power of the next Fire-type move the user uses. Increases Attack and SpAtk by 1.",
+		shortDesc: "Raises the power of the next Fire-type move the user uses. Increases Attack and SpAtk by 1.",
+	},
+	rockbreaker: {
+		name: "Rock Breaker",
+		desc: "The user attacks with a SLASh that can shatter a rock. Lowers the foe's Defense stat.",
+		shortDesc: "The user attacks with a SLASh that can shatter a rock. Lowers the foe's Defense stat.",
+	},
+	exhaustflame: {
+		name: "Exhaust Flame",
+		desc: "Lowers the foe's Defense stat.",
+		shortDesc: "Lowers the foe's Defense stat.",
+	},
+	atomicblaster: {
+		name: "Atomic Blaster",
+		desc: "Lowers the foe's Defense stat.",
+		shortDesc: "Lowers the foe's Defense stat.",
+	},
+	radiationblade: {
+		name: "Radiation Blade",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	lightningjoust: {
+		name: "Lightning Joust",
+		desc: "Raises the user's Attack and SpAttack.",
+		shortDesc: "Raises the user's Attack and SpAttack.",
+	},
+	shieldofjust: {
+		name: "Shield of Just",
+		desc: "Raises the user's Defense and SpDef.",
+		shortDesc: "Raises the user's Defense and SpDef.",
+	},
+	terriertornado: {
+		name: "Terrier Tornado",
+		desc: "Raises the user's Sp. Atk stat.",
+		shortDesc: "Raises the user's Sp. Atk stat.",
+	},
+	dumdumuppercut: {
+		name: "Dumdum Uppercut",
+		desc: "Raises the Attack stat.",
+		shortDesc: "Raises the Attack stat.",
+	},
+	goldentriangle: {
+		name: "Golden Triangle",
+		desc: "It may also lower all the target's stats at once.",
+		shortDesc: "It may also lower all the target's stats at once.",
+	},
+	burstshot: {
+		name: "Burst Shot",
+		desc: "Hits twice. Hits both targets in a double battle.",
+		shortDesc: "Hits twice. Hits both targets in a double battle.",
+	},
+	numesludge: {
+		name: "Numesludge",
+		desc: "High chance to lower the target's Attack.",
+		shortDesc: "High chance to lower the target's Attack.",
+	},
+	pooptoss: {
+		name: "Poop Toss",
+		desc: "May harshly lower the opponent's speed.",
+		shortDesc: "May harshly lower the opponent's speed.",
+	},
+	guerillapoop: {
+		name: "Guerilla Poop",
+		desc: "The target is hit twice in a row.",
+		shortDesc: "The target is hit twice in a row.",
+	},
+	raremetalpoop: {
+		name: "RareMetalPoop",
+		desc: "The user knocks away the target and drags out another Pokemon in its party. In the wild, the battle ends.",
+		shortDesc: "The user knocks away the target and drags out another Pokemon in its party. In the wild, the battle ends.",
+	},
+	lovelyattack: {
+		name: "Lovely Attack",
+		desc: "Causes confusion.",
+		shortDesc: "Causes confusion.",
+	},
+	loveserenade: {
+		name: "Love Serenade",
+		desc: "Hits both foes in a double battle. It may also cause paralysis.",
+		shortDesc: "Hits both foes in a double battle. It may also cause paralysis.",
+	},
+	darkrecital: {
+		name: "Dark Recital",
+		desc: "Sound based. Makes the target flinch.",
+		shortDesc: "Sound based. Makes the target flinch.",
+	},
+	monkeyplay: {
+		name: "Monkey Play",
+		desc: "Sound based. May lower the target's Attack and SpAtk stats.",
+		shortDesc: "Sound based. May lower the target's Attack and SpAtk stats.",
+	},
+	lullabybubble: {
+		name: "Lullaby Bubble",
+		desc: "Chance to cause Sleep.",
+		shortDesc: "Chance to cause Sleep.",
+	},
+	symphonycrusher: {
+		name: "Symphony Crusher",
+		desc: "It may also induce sleep.",
+		shortDesc: "It may also induce sleep.",
+	},
+	kobushitone: {
+		name: "Kobushi Tone",
+		desc: "Sound based. May lower the target's Attack, SpAtk and SpDef stats.",
+		shortDesc: "Sound based. May lower the target's Attack, SpAtk and SpDef stats.",
+	},
+	needlesquall: {
+		name: "Needle Squall",
+		desc: "Shoots needles everywhere. It also damages the user by a fairly large amount, however.",
+		shortDesc: "Shoots needles everywhere. It also damages the user by a fairly large amount, however.",
+	},
+	poopdunk: {
+		name: "Poop Dunk",
+		desc: "Harshly lowers the target's Defense stat.",
+		shortDesc: "Harshly lowers the target's Defense stat.",
+	},
+	antigravity: {
+		name: "Anti Gravity",
+		desc: "Gravity decreases for five turns, making all pokemon float.",
+		shortDesc: "Gravity decreases for five turns, making all pokemon float.",
+	},
+	cowerbehind: {
+		name: "Cower Behind",
+		desc: "Redirects all attacks to its ally. Raises its ally's Attack.",
+		shortDesc: "Redirects all attacks to its ally. Raises its ally's Attack.",
+	},
+	misdirection: {
+		name: "Misdirection",
+		desc: "Redirects all attacks to its ally. Raises its ally's SpDef.",
+		shortDesc: "Redirects all attacks to its ally. Raises its ally's SpDef.",
+	},
+	proxy: {
+		name: "Proxy",
+		desc: "Redirects all attacks to its ally. Raises its ally's SpAtk.",
+		shortDesc: "Redirects all attacks to its ally. Raises its ally's SpAtk.",
+	},
+	frequency: {
+		name: "Frequency",
+		desc: "Uses a random Sound-type move.",
+		shortDesc: "Uses a random Sound-type move.",
+	},
+	fortifyally: {
+		name: "Fortify Ally",
+		desc: "Redirects all attacks to its ally. Raises its ally's Defense.",
+		shortDesc: "Redirects all attacks to its ally. Raises its ally's Defense.",
+	},
+	timeexchange: {
+		name: "Time Exchange",
+		desc: "Redirects all attacks to its ally. Raises its ally's Speed.",
+		shortDesc: "Redirects all attacks to its ally. Raises its ally's Speed.",
+	},
+	shieldpress: {
+		name: "Shield Press",
+		desc: "Uses the user's Defense stat in damage calculation rather than Attack stat.",
+		shortDesc: "Uses the user's Defense stat in damage calculation rather than Attack stat.",
+	},
+	voltmotor: {
+		name: "Volt Motor",
+		desc: "Instead of taking damage from electric moves, raises user's Speed.",
+		shortDesc: "Instead of taking damage from electric moves, raises user's Speed.",
+	},
+	pixel: {
+		name: "Pixel",
+		desc: "Shoots a pixel at the target.",
+		shortDesc: "Shoots a pixel at the target.",
+	},
+	mittenpound: {
+		name: "Mitten Pound",
+		desc: "Pounds with a mitten. May also lower the target's Attack.",
+		shortDesc: "Pounds with a mitten. May also lower the target's Attack.",
+	},
+	scarfwrap: {
+		name: "Scarf Wrap",
+		desc: "Scarf squeezes the foe for four to five turns.",
+		shortDesc: "Scarf squeezes the foe for four to five turns.",
+	},
+	sweaterslam: {
+		name: "Sweater Slam",
+		desc: "High chance to raise user's Defense stat.",
+		shortDesc: "High chance to raise user's Defense stat.",
+	},
+	blurryblast: {
+		name: "BLURRY BLAST",
+		desc: "May lower its accuracy.",
+		shortDesc: "May lower its accuracy.",
+	},
+	braver: {
+		name: "Braver",
+		desc: "May lower defense.",
+		shortDesc: "May lower defense.",
+	},
+	arcticemperor: {
+		name: "Arctic Emperor",
+		desc: "Goes first. Does double damage if the opponent is using a damaging move.",
+		shortDesc: "Goes first. Does double damage if the opponent is using a damaging move.",
+	},
+	blowdrygun: {
+		name: "BlowDryGun",
+		desc: "Very high chance to burn.",
+		shortDesc: "Very high chance to burn.",
+	},
+	justicebullet: {
+		name: "Justice Bullet",
+		desc: "Does more damage against Dark types.",
+		shortDesc: "Does more damage against Dark types.",
+	},
+	thunderer: {
+		name: "Thunderer",
+		desc: "This move is certain to hit and has a high critical hit ratio.",
+		shortDesc: "This move is certain to hit and has a high critical hit ratio.",
+	},
+	bigiron: {
+		name: "Big Iron",
+		desc: "May raise Attack.",
+		shortDesc: "May raise Attack.",
+	},
+	quickdraw: {
+		name: "Quick Draw",
+		desc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+		shortDesc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+	},
+	revolver: {
+		name: "Revolver",
+		desc: "High crit rate. Hits two to five times in a row.",
+		shortDesc: "High crit rate. Hits two to five times in a row.",
+	},
+	pilpul: {
+		name: "Pilpul",
+		desc: "Cuts 2 PP from the target and sharply raises the user's SpDef.",
+		shortDesc: "Cuts 2 PP from the target and sharply raises the user's SpDef.",
+	},
+	shepherdcrook: {
+		name: "Shepherd Crook",
+		desc: "The user knocks drags out another Pokemon in the target's party. In the wild, the battle ends.",
+		shortDesc: "The user knocks drags out another Pokemon in the target's party. In the wild, the battle ends.",
+	},
+	sheepwool: {
+		name: "Sheep Wool",
+		desc: "It may also make sleeep.",
+		shortDesc: "It may also make sleeep.",
+	},
+	matzoball: {
+		name: "Matzo Ball",
+		desc: "Continually attacks, becoming stronger. May raise SpDef.",
+		shortDesc: "Continually attacks, becoming stronger. May raise SpDef.",
+	},
+	eatdango: {
+		name: "Eat Dango",
+		desc: "Restores HP and boosts Speed.",
+		shortDesc: "Restores HP and boosts Speed.",
+	},
+	dangoball: {
+		name: "Dango Ball",
+		desc: "High chance to also lower the target's Sp. Def. Two stages in Feast.",
+		shortDesc: "High chance to also lower the target's Sp. Def. Two stages in Feast.",
+	},
+	phantommaiden: {
+		name: "Phantom Maiden",
+		desc: "Drains the target's health and raises the user's Atk and SpAtk. More damage to female targets.",
+		shortDesc: "Drains the target's health and raises the user's Atk and SpAtk. More damage to female targets.",
+	},
+	woodspin: {
+		name: "Wood Spin",
+		desc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+		shortDesc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+	},
+	dreidelspin: {
+		name: "Dreidel Spin",
+		desc: "Either Take All, Do Nothing, Take Half or Put One In.",
+		shortDesc: "Either Take All, Do Nothing, Take Half or Put One In.",
+	},
+	hey: {
+		name: "Hey",
+		desc: "It cuts the target's HP to half.",
+		shortDesc: "It cuts the target's HP to half.",
+	},
+	gimmel: {
+		name: "Gimmel",
+		desc: "The target will faint instantly if this attack hits.",
+		shortDesc: "The target will faint instantly if this attack hits.",
+	},
+	nun: {
+		name: "Nun",
+		desc: "The user just flops and splashes around to no effect at all...",
+		shortDesc: "The user just flops and splashes around to no effect at all...",
+	},
+	shin: {
+		name: "Shin",
+		desc: "Striking opponents over and over makes the user's fists harder. Hitting a target raises the Attack stat.",
+		shortDesc: "Striking opponents over and over makes the user's fists harder. Hitting a target raises the Attack stat.",
+	},
+	lordchaldeas: {
+		name: "Lord Chaldeas",
+		desc: "Affects party: Decreases damage taken from attacks and increases Defense for 3 turns.",
+		shortDesc: "Affects party: Decreases damage taken from attacks and increases Defense for 3 turns.",
+	},
+	lordcamelot: {
+		name: "Lord Camelot",
+		desc: "Affects party: Further decreases damage taken from attacks and increases Defense for 3 turns. Boosts attack except for Mashielder.",
+		shortDesc: "Affects party: Further decreases damage taken from attacks and increases Defense for 3 turns. Boosts attack except for Mashielder.",
+	},
+	rousingresolution: {
+		name: "Rousing Resolution",
+		desc: "Draws attention to the user and raises the user's Defense.",
+		shortDesc: "Draws attention to the user and raises the user's Defense.",
+	},
+	sgaedearg: {
+		name: "S Gae Dearg",
+		desc: "The target's stat changes don't affect the damage.",
+		shortDesc: "The target's stat changes don't affect the damage.",
+	},
+	sgaebuidhe: {
+		name: "S Gae Buidhe",
+		desc: "The opponent cannot heal for 5 turns after being hit by this move.",
+		shortDesc: "The opponent cannot heal for 5 turns after being hit by this move.",
+	},
+	cyberpunch: {
+		name: "Cyber Punch",
+		desc: "It may also leave the target with paralysis.",
+		shortDesc: "It may also leave the target with paralysis.",
+	},
+	hannukahcandles: {
+		name: "Hannukah Candles",
+		desc: "The target is hit nine times.",
+		shortDesc: "The target is hit nine times.",
+	},
+	powermorph: {
+		name: "Power Morph",
+		desc: "Copies everything about the opponent except Species and Ability.",
+		shortDesc: "Copies everything about the opponent except Species and Ability.",
+	},
+	timbit: {
+		name: "Timbit",
+		desc: "Continually attacks, becoming stronger. May make the target eat.",
+		shortDesc: "Continually attacks, becoming stronger. May make the target eat.",
+	},
+	icingspray: {
+		name: "Icing Spray",
+		desc: "The target takes more damage from Food moves for 2 turns.",
+		shortDesc: "The target takes more damage from Food moves for 2 turns.",
+	},
+	icingcannon: {
+		name: "Icing Cannon",
+		desc: "The target may take more damage from Food moves for 2 turns.",
+		shortDesc: "The target may take more damage from Food moves for 2 turns.",
+	},
+	donutring: {
+		name: "Donut Ring",
+		desc: "Squeeze the foe in da donut for four to five turns.",
+		shortDesc: "Squeeze the foe in da donut for four to five turns.",
+	},
+	trashthrash: {
+		name: "Trash Thrash",
+		desc: "The user shoots filthy garbage at the target to attack. It may also poison the target.",
+		shortDesc: "The user shoots filthy garbage at the target to attack. It may also poison the target.",
+	},
+	sensualtouch: {
+		name: "Sensual Touch",
+		desc: "Paralyzes and Infatuates the target if they are the opposite gender.",
+		shortDesc: "Paralyzes and Infatuates the target if they are the opposite gender.",
+	},
+	mindfogger: {
+		name: "Mind Fogger",
+		desc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user drains the target's blood. The user's HP is restored by half the damage taken by the target.",
+	},
+	helterskelter: {
+		name: "Helter Skelter",
+		desc: "Confuses and infatuates the target.",
+		shortDesc: "Confuses and infatuates the target.",
+	},
+	moonladder: {
+		name: "Moon Ladder",
+		desc: "The user creates a black hole that drags out another Pokemon in the foes party. In the wild, the battle ends.",
+		shortDesc: "The user creates a black hole that drags out another Pokemon in the foes party. In the wild, the battle ends.",
+	},
+	darknesslove: {
+		name: "Darkness Love",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	phantompain: {
+		name: "Phantom Pain",
+		desc: "High chance to inflict Curse.",
+		shortDesc: "High chance to inflict Curse.",
+	},
+	paperbind: {
+		name: "Paper Bind",
+		desc: "Traps for four to five turns.",
+		shortDesc: "Traps for four to five turns.",
+	},
+	requiemfordeath: {
+		name: "RequiemforDeath",
+		desc: "Sharply reduces both target's Attack, Defense and inflicts Curse.",
+		shortDesc: "Sharply reduces both target's Attack, Defense and inflicts Curse.",
+	},
+	symphony: {
+		name: "Symphony",
+		desc: "A symphony that attacks both targets.",
+		shortDesc: "A symphony that attacks both targets.",
+	},
+	fleurdelys: {
+		name: "Fleur De Lys",
+		desc: "Sharply reduces both target's Attack, Defense and Infatuates them.",
+		shortDesc: "Sharply reduces both target's Attack, Defense and Infatuates them.",
+	},
+	unyieldstance: {
+		name: "Unyield Stance",
+		desc: "Draws attention to the user and raises the user's Defense.",
+		shortDesc: "Draws attention to the user and raises the user's Defense.",
+	},
+	rakanfudarakutokai: {
+		name: "RakanFudarakutokai",
+		desc: "90% may also leave the target paralyzed.",
+		shortDesc: "90% may also leave the target paralyzed.",
+	},
+	tenshinkashouzanmai: {
+		name: "TenshinKashouZanmai",
+		desc: "Traps the target and burns them.",
+		shortDesc: "Traps the target and burns them.",
+	},
+	stalkinggaze: {
+		name: "Stalking Gaze",
+		desc: "Decreases the target's Defense 4 stages but increases their Attack 2 stages.",
+		shortDesc: "Decreases the target's Defense 4 stages but increases their Attack 2 stages.",
+	},
+	shapeshiftdragon: {
+		name: "ShapeshiftDragon",
+		desc: "Sharply raises the user's Defense, makes the opponent take more damage from Burns.",
+		shortDesc: "Sharply raises the user's Defense, makes the opponent take more damage from Burns.",
+	},
+	ovenslam: {
+		name: "Oven Slam",
+		desc: "Double damage against Food types.",
+		shortDesc: "Double damage against Food types.",
+	},
+	deadheartbeatmelody: {
+		name: "DeadHeartbeatMelody",
+		desc: "Traps the target for 3-5 turns. May 1 hit KO.",
+		shortDesc: "Traps the target for 3-5 turns. May 1 hit KO.",
+	},
+	phantasmalpedigree: {
+		name: "Phantasmal Pedigree",
+		desc: "Uses a random Zabaniya.",
+		shortDesc: "Uses a random Zabaniya.",
+	},
+	cyberphantasy: {
+		name: "Cyber Phantasy",
+		desc: "Turns the target's brain into gunpowder, and explodes it. High chance to 1 hit KO.",
+		shortDesc: "Turns the target's brain into gunpowder, and explodes it. High chance to 1 hit KO.",
+	},
+	febrileinspiration: {
+		name: "Febrile Inspiration",
+		desc: "Makes the user immune to Physical moves for 5 turns.",
+		shortDesc: "Makes the user immune to Physical moves for 5 turns.",
+	},
+	ichorofreverie: {
+		name: "Ichor of Reverie",
+		desc: "Hits both opponents. Confuses.",
+		shortDesc: "Hits both opponents. Confuses.",
+	},
+	meditativesensitivity: {
+		name: "MeditativeSensitivity",
+		desc: "Hones the senses. Raises Accuracy, Evasion and Speed.",
+		shortDesc: "Hones the senses. Raises Accuracy, Evasion and Speed.",
+	},
+	raveshadowflash: {
+		name: "RaveShadowFlash",
+		desc: "High crit rate, traps for 4 to 5 turns.",
+		shortDesc: "High crit rate, traps for 4 to 5 turns.",
+	},
+	unfeelpatrolspirits: {
+		name: "UnfeelPatrolSpirits",
+		desc: "Summon zombies to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon zombies to attack 2-5 times in a row. Deals physical damage.",
+	},
+	summonelementals: {
+		name: "Summon Elementals",
+		desc: "Summons one of the four elementals to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summons one of the four elementals to attack 2-5 times in a row. Deals physical damage.",
+	},
+	elementalgem: {
+		name: "Elemental Gem",
+		desc: "The user gets a Ground, Wind, Fire or Water type boosting Gem.",
+		shortDesc: "The user gets a Ground, Wind, Fire or Water type boosting Gem.",
+	},
+	swordofparacelsus: {
+		name: "Sword of Paracelsus",
+		desc: "Its type varies with the kind of Gem the user is holding.",
+		shortDesc: "Its type varies with the kind of Gem the user is holding.",
+	},
+	fireelementals: {
+		name: "Fire Elementals",
+		desc: "Summon elementals to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon elementals to attack 2-5 times in a row. Deals physical damage.",
+	},
+	waterelementals: {
+		name: "Water Elementals",
+		desc: "Summon elementals to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon elementals to attack 2-5 times in a row. Deals physical damage.",
+	},
+	earthelementals: {
+		name: "Earth Elementals",
+		desc: "Summon elementals to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon elementals to attack 2-5 times in a row. Deals physical damage.",
+	},
+	windelementals: {
+		name: "Wind Elementals",
+		desc: "Summon elementals to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Summon elementals to attack 2-5 times in a row. Deals physical damage.",
+	},
+	pashupata: {
+		name: "Pashupata",
+		desc: "Hits both targets, may 1 hit KO. Additional damage against Divine-types.",
+		shortDesc: "Hits both targets, may 1 hit KO. Additional damage against Divine-types.",
+	},
+	agnigandiva: {
+		name: "Agni Gandiva",
+		desc: "This attack never misses.",
+		shortDesc: "This attack never misses.",
+	},
+	tarasqueshield: {
+		name: "Tarasque Shield",
+		desc: "Sharply increases Defense and becomes immune to Physical moves for this turn.",
+		shortDesc: "Sharply increases Defense and becomes immune to Physical moves for this turn.",
+	},
+	tarasque: {
+		name: "Tarasque",
+		desc: "Hits both opponents. Increases the user's Attack, lowers the opponent's Defense.",
+		shortDesc: "Hits both opponents. Increases the user's Attack, lowers the opponent's Defense.",
+	},
+	christinechristine: {
+		name: "Christine Christine",
+		desc: "Sound based. Hits everything on the field, ignoring stat changes.",
+		shortDesc: "Sound based. Hits everything on the field, ignoring stat changes.",
+	},
+	kinopunch: {
+		name: "Kino Punch",
+		desc: "HOLY MOTHER OF KINO!",
+		shortDesc: "HOLY MOTHER OF KINO!",
+	},
+	skinalive: {
+		name: "Skin Alive",
+		desc: "Lowers the foe's Defense stat.",
+		shortDesc: "Lowers the foe's Defense stat.",
+	},
+	innardspunch: {
+		name: "Innards Punch",
+		desc: "It becomes more powerful the less HP the user has. The user takes some damage if it has more than one HP.",
+		shortDesc: "It becomes more powerful the less HP the user has. The user takes some damage if it has more than one HP.",
+	},
+	lapithaicaeneus: {
+		name: "Lapithai Caeneus",
+		desc: "Increases the user's Critical Hit damage for 3 turns.",
+		shortDesc: "Increases the user's Critical Hit damage for 3 turns.",
+	},
+	poseidonmaelstrom: {
+		name: "Poseidon Maelstrom",
+		desc: "May cause the foe to be switched out.",
+		shortDesc: "May cause the foe to be switched out.",
+	},
+	"3dattack": {
+		name: "3D Attack",
+		desc: "A three dimensional attack that becomes more powerful with each successive hit.",
+		shortDesc: "A three dimensional attack that becomes more powerful with each successive hit.",
+	},
+	digicharge: {
+		name: "Digi Charge",
+		desc: "It also damages the user a little.",
+		shortDesc: "It also damages the user a little.",
+	},
+	install: {
+		name: "Install",
+		desc: "Different effect depending on the disc held.",
+		shortDesc: "Different effect depending on the disc held.",
+	},
+	shortcut: {
+		name: "Shortcut",
+		desc: "Goes first. After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+		shortDesc: "Goes first. After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+	},
+	highbreaching: {
+		name: "High Breaching",
+		desc: "The user falls asleep and becomes fully healed after using this move.",
+		shortDesc: "The user falls asleep and becomes fully healed after using this move.",
+	},
+	croceamors: {
+		name: "Crocea Mors",
+		desc: "High critical hit ratio. The target is hit seven times.",
+		shortDesc: "High critical hit ratio. The target is hit seven times.",
+	},
+	throatheal: {
+		name: "Throat Heal",
+		desc: "Heals all status problems affecting the user's party and Throat Chop.",
+		shortDesc: "Heals all status problems affecting the user's party and Throat Chop.",
+	},
+	bendwill: {
+		name: "Bend Will",
+		desc: "The user turns the foe's power against it. It does more damage the higher the target's Special Attack stat.",
+		shortDesc: "The user turns the foe's power against it. It does more damage the higher the target's Special Attack stat.",
+	},
+	bakingpowderveil: {
+		name: "BakingPowderVeil",
+		desc: "Fire or Magma moves raise your Food type's Defense instead of dealing damage.",
+		shortDesc: "Fire or Magma moves raise your Food type's Defense instead of dealing damage.",
+	},
+	minddrain: {
+		name: "Mind Drain",
+		desc: "A MIND-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A MIND-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	fourseasons: {
+		name: "Four Seasons",
+		desc: "May also paralyze, burn, or freeze the target.",
+		shortDesc: "May also paralyze, burn, or freeze the target.",
+	},
+	julianaboomerang: {
+		name: "Juliana Boomerang",
+		desc: "The user throws a fan that loops to hit the target twice, coming and going.",
+		shortDesc: "The user throws a fan that loops to hit the target twice, coming and going.",
+	},
+	goldentornado: {
+		name: "Golden Tornado",
+		desc: "The user attacks its foe by encircling it in MONEY. This attack may also lower the foe's accuracy.",
+		shortDesc: "The user attacks its foe by encircling it in MONEY. This attack may also lower the foe's accuracy.",
+	},
+	extortionpummel: {
+		name: "Extortion Pummel",
+		desc: "Numerous coins are hurled at the target to inflict damage. Money is earned after battle.",
+		shortDesc: "Numerous coins are hurled at the target to inflict damage. Money is earned after battle.",
+	},
+	destitutiondrain: {
+		name: "Destitution Drain",
+		desc: "A spirit-draining attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A spirit-draining attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	unchirush: {
+		name: "Unchi Rush",
+		desc: "High crit rate. Hits two to five times in a row.",
+		shortDesc: "High crit rate. Hits two to five times in a row.",
+	},
+	voltexplosion: {
+		name: "Volt Explosion",
+		desc: "The user blows up to inflict damage on all Pokemon in battle. The user faints upon using this move.",
+		shortDesc: "The user blows up to inflict damage on all Pokemon in battle. The user faints upon using this move.",
+	},
+	leylines: {
+		name: "Leylines",
+		desc: "Sharply raises the SpAtk stat of all pokemon on the ground.",
+		shortDesc: "Sharply raises the SpAtk stat of all pokemon on the ground.",
+	},
+	diamonddust: {
+		name: "Diamond Dust",
+		desc: "Lowers the target's accuracy.",
+		shortDesc: "Lowers the target's accuracy.",
+	},
+	hatspin: {
+		name: "Hat Spin",
+		desc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+		shortDesc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+	},
+	eaurevoir: {
+		name: "Eau Revoir",
+		desc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+	},
+	prowl: {
+		name: "Prowl",
+		desc: "High crit rate. May make the target Flinch. Doesn't miss in Grassy Terrain.",
+		shortDesc: "High crit rate. May make the target Flinch. Doesn't miss in Grassy Terrain.",
+	},
+	dangerousgame: {
+		name: "Dangerous Game",
+		desc: "Heals the user. Raises the user's Attack.",
+		shortDesc: "Heals the user. Raises the user's Attack.",
+	},
+	duriaantiquior: {
+		name: "Duria Antiquior",
+		desc: "Summons horseshoecrab, ammonite, dimorphodon and ichthyosaurus.",
+		shortDesc: "Summons horseshoecrab, ammonite, dimorphodon and ichthyosaurus.",
+	},
+	horseshoecrab: {
+		name: "Horseshoe Crab",
+		desc: "May raise SpDefense.",
+		shortDesc: "May raise SpDefense.",
+	},
+	ammonite: {
+		name: "Ammonite",
+		desc: "May raise Defense.",
+		shortDesc: "May raise Defense.",
+	},
+	dimorphodon: {
+		name: "Dimorphodon",
+		desc: "May raise the user's Speed stat.",
+		shortDesc: "May raise the user's Speed stat.",
+	},
+	ichthyosaurus: {
+		name: "Ichthyosaurus",
+		desc: "May raises the Attack stat.",
+		shortDesc: "May raises the Attack stat.",
+	},
+	astrapsteargo: {
+		name: "Astrapste Argo",
+		desc: "Summons the argonauts!",
+		shortDesc: "Summons the argonauts!",
+	},
+	argonautica: {
+		name: "Argonautica",
+		desc: "Increases your party's damage. Further increases the damage, crit damage and crit rate of Argo allies.",
+		shortDesc: "Increases your party's damage. Further increases the damage, crit damage and crit rate of Argo allies.",
+	},
+	enviousrage: {
+		name: "Envious Rage",
+		desc: "x2 to female targets.",
+		shortDesc: "x2 to female targets.",
+	},
+	sexysquirt: {
+		name: "Sexy Squirt",
+		desc: "This attack also deals Water-type damage.",
+		shortDesc: "This attack also deals Water-type damage.",
+	},
+	embrace: {
+		name: "Embrace",
+		desc: "Traps the target for 4 to 5 turns.",
+		shortDesc: "Traps the target for 4 to 5 turns.",
+	},
+	lovebite: {
+		name: "Love Bite",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	sadomaso: {
+		name: "Sadomaso",
+		desc: "As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+		shortDesc: "As long as this move is in use, the user's Attack rises each time the user is hit in battle.",
+	},
+	domesticabuse: {
+		name: "Domestic Abuse",
+		desc: "Does more damage to an infatuated target and lowers their Defense.",
+		shortDesc: "Does more damage to an infatuated target and lowers their Defense.",
+	},
+	lovehypnosis: {
+		name: "Love Hypnosis",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	emotionalabuse: {
+		name: "Emotional Abuse",
+		desc: "Does more damage to an infatuated target and lowers their SpDef.",
+		shortDesc: "Does more damage to an infatuated target and lowers their SpDef.",
+	},
+	vore: {
+		name: "Vore",
+		desc: "The user swallows the foe, then spits them out the next turn. The foe cannot attack while swallowed.",
+		shortDesc: "The user swallows the foe, then spits them out the next turn. The foe cannot attack while swallowed.",
+	},
+	toughlove: {
+		name: "Tough Love",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	wetdreams: {
+		name: "Wet Dreams",
+		desc: "The user eats the dreams of a sleeping foe. It absorbs half the damage caused to heal the user's HP.",
+		shortDesc: "The user eats the dreams of a sleeping foe. It absorbs half the damage caused to heal the user's HP.",
+	},
+	xxxsite: {
+		name: "XXX Site",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	sexysleep: {
+		name: "Sexy Sleep",
+		desc: "The user falls asleep and becomes fully healed after using this move.",
+		shortDesc: "The user falls asleep and becomes fully healed after using this move.",
+	},
+	snowdogechallenge: {
+		name: "SNOWDOGECHALLENGE",
+		desc: "Takes advantage of the target's addiction, x2 dmg if target is poisoned.",
+		shortDesc: "Takes advantage of the target's addiction, x2 dmg if target is poisoned.",
+	},
+	yourbestnightmare: {
+		name: "YOURBESTNIGHTMARE",
+		desc: "High chance to 1 hit KO.",
+		shortDesc: "High chance to 1 hit KO.",
+	},
+	chaossaber: {
+		name: "Chaos Saber",
+		desc: "The user slashes the target with a sword. Critical hits land more easily.",
+		shortDesc: "The user slashes the target with a sword. Critical hits land more easily.",
+	},
+	caldera: {
+		name: "Caldera",
+		desc: "A caldera forms after an eruption. Hits two turns after this move is used. Does Magma damage.",
+		shortDesc: "A caldera forms after an eruption. Hits two turns after this move is used. Does Magma damage.",
+	},
+	hieroglyphein: {
+		name: "Hieroglyphein",
+		desc: "It may also reduce the target's Sp. Def stat.",
+		shortDesc: "It may also reduce the target's Sp. Def stat.",
+	},
+	eromangasaurus: {
+		name: "EROMANGASAURUS",
+		desc: "The target is splashed with a mysterious, prehistoric liquid. The user also takes damage",
+		shortDesc: "The target is splashed with a mysterious, prehistoric liquid. The user also takes damage",
+	},
+	stuffedtackle: {
+		name: "Stuffed Tackle",
+		desc: "May also raise the user's Defense stat.",
+		shortDesc: "May also raise the user's Defense stat.",
+	},
+	nuclearlance: {
+		name: "Nuclear Lance",
+		desc: "The user tucks its stinger to raise its Attack in the first turn, then rams the foe on the next turn.",
+		shortDesc: "The user tucks its stinger to raise its Attack in the first turn, then rams the foe on the next turn.",
+	},
+	aquatichorror: {
+		name: "Aquatic Horror",
+		desc: "Does double damage in the rain.",
+		shortDesc: "Does double damage in the rain.",
+	},
+	vocaloid: {
+		name: "Vocaloid",
+		desc: "A sound based attack of cybernetically created sound.",
+		shortDesc: "A sound based attack of cybernetically created sound.",
+	},
+	chupacabra: {
+		name: "Chupacabra",
+		desc: "Drains health, then the user rushes back to switch places with a party Pokemon in waiting.",
+		shortDesc: "Drains health, then the user rushes back to switch places with a party Pokemon in waiting.",
+	},
+	timestop: {
+		name: "Timestop",
+		desc: "The target cannot do anything next turn.",
+		shortDesc: "The target cannot do anything next turn.",
+	},
+	privatesquare: {
+		name: "Private Square",
+		desc: "Time is stopped for everyone except the user.",
+		shortDesc: "Time is stopped for everyone except the user.",
+	},
+	timestasis: {
+		name: "Time Stasis",
+		desc: "Freezes everyone on the field, including the user.",
+		shortDesc: "Freezes everyone on the field, including the user.",
+	},
+	infiniteserpent: {
+		name: "Infinite Serpent",
+		desc: "If this move is used every turn, it does greater damage.",
+		shortDesc: "If this move is used every turn, it does greater damage.",
+	},
+	metalbat: {
+		name: "Metal Bat",
+		desc: "The user knocks away the target and drags out another Pokemon in its party. In the wild, the battle ends.",
+		shortDesc: "The user knocks away the target and drags out another Pokemon in its party. In the wild, the battle ends.",
+	},
+	tomitakeflash: {
+		name: "Tomitake Flash",
+		desc: "May Disable the last move used by the target",
+		shortDesc: "May Disable the last move used by the target",
+	},
+	selfharm: {
+		name: "Self Harm",
+		desc: "The user hits itself 2-5 times in a row.",
+		shortDesc: "The user hits itself 2-5 times in a row.",
+	},
+	lasagnaattack: {
+		name: "Lasagna Attack",
+		desc: "The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user's HP is restored by half the damage taken by the target.",
+	},
+	darkpuncture: {
+		name: "Dark Puncture",
+		desc: "High chance to inflict Poison or Paralysis.",
+		shortDesc: "High chance to inflict Poison or Paralysis.",
+	},
+	pocketdimension: {
+		name: "Pocket Dimension",
+		desc: "Only works if target is PSN or PAR. They cannot escape and all stats are lowered every turn.",
+		shortDesc: "Only works if target is PSN or PAR. They cannot escape and all stats are lowered every turn.",
+	},
+	thecure: {
+		name: "The Cure",
+		desc: "Heals the target, changes their type to Zombie, raises Atk and Spd lowers SpAtk and SpDef. Target faints in 3 turns.",
+		shortDesc: "Heals the target, changes their type to Zombie, raises Atk and Spd lowers SpAtk and SpDef. Target faints in 3 turns.",
+	},
+	whosonnext: {
+		name: "Whos On Next",
+		desc: "Goes first. The less power the opponent's move does, the more power this move has.",
+		shortDesc: "Goes first. The less power the opponent's move does, the more power this move has.",
+	},
+	spaceacid: {
+		name: "Space Acid",
+		desc: "An alien acid that has a higher chance to poison.",
+		shortDesc: "An alien acid that has a higher chance to poison.",
+	},
+	kill: {
+		name: "Kill",
+		desc: "The user kills the target.",
+		shortDesc: "The user kills the target.",
+	},
+	focuslaser: {
+		name: "Focus Laser",
+		desc: "Focuses mind before firign laser. It will fail if the user is hit before it is used.",
+		shortDesc: "Focuses mind before firign laser. It will fail if the user is hit before it is used.",
+	},
+	coldsting: {
+		name: "Cold Sting",
+		desc: "It may also leave the target frozen.",
+		shortDesc: "It may also leave the target frozen.",
+	},
+	lingerieattack: {
+		name: "Lingerie Attack",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	justdesserts: {
+		name: "Just Desserts",
+		desc: "If the target's HP is down to about half, this attack will hit with double the power.",
+		shortDesc: "If the target's HP is down to about half, this attack will hit with double the power.",
+	},
+	butterslap: {
+		name: "Butter Slap",
+		desc: "If the target has already taken some damage in the same turn, this attack's power is doubled.",
+		shortDesc: "If the target has already taken some damage in the same turn, this attack's power is doubled.",
+	},
+	absolutevenom: {
+		name: "ABSOLUTE VENOM",
+		desc: "Badly poisons the target.",
+		shortDesc: "Badly poisons the target.",
+	},
+	apophismaw: {
+		name: "Apophis Maw",
+		desc: "Its power doubles if the target is poisoned.",
+		shortDesc: "Its power doubles if the target is poisoned.",
+	},
+	serpentscure: {
+		name: "Serpents Cure",
+		desc: "Its power doubles if the target is poisoned.",
+		shortDesc: "Its power doubles if the target is poisoned.",
+	},
+	hotcocoa: {
+		name: "Hot Cocoa",
+		desc: "May burn the target. Does more damage during Hail.",
+		shortDesc: "May burn the target. Does more damage during Hail.",
+	},
+	sip: {
+		name: "Sip",
+		desc: "A nutrient-SIPping attack. The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "A nutrient-SIPping attack. The user's HP is restored by half the damage taken by the target.",
+	},
+	thiccslam: {
+		name: "THICC Slam",
+		desc: "The user slams into the foe with its heavy body. The heavier the user, the greater the damage.",
+		shortDesc: "The user slams into the foe with its heavy body. The heavier the user, the greater the damage.",
+	},
+	erase: {
+		name: "ERASE",
+		desc: "ERASEs the target.",
+		shortDesc: "ERASEs the target.",
+	},
+	popcornblast: {
+		name: "Popcorn Blast",
+		desc: "A second-turn attack move where critical hits land more easily. It may also make the target flinch.",
+		shortDesc: "A second-turn attack move where critical hits land more easily. It may also make the target flinch.",
+	},
+	breakfastbreaker: {
+		name: "Breakfast Breaker",
+		desc: "This move has great power, but it only works the first turn the user is in battle.",
+		shortDesc: "This move has great power, but it only works the first turn the user is in battle.",
+	},
+	insanitymode: {
+		name: "Insanity Mode",
+		desc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+		shortDesc: "The user rampages and attacks for two to three turns. It then becomes confused, however.",
+	},
+	yourebluenow: {
+		name: "YoureBlueNow",
+		desc: "The target becomes blue and is now able to be hit by Ground-type moves if they were floating.",
+		shortDesc: "The target becomes blue and is now able to be hit by Ground-type moves if they were floating.",
+	},
+	vacuumcut: {
+		name: "Vacuum Cut",
+		desc: "Deals 35 damage to both opponents.",
+		shortDesc: "Deals 35 damage to both opponents.",
+	},
+	kidnap: {
+		name: "Kidnap",
+		desc: "The user takes the foe, then drops it on the next turn. The foe cannot attack while airborne.",
+		shortDesc: "The user takes the foe, then drops it on the next turn. The foe cannot attack while airborne.",
+	},
+	storagepower: {
+		name: "Storage Power",
+		desc: "The user attacks with stored power. The more the user's stats are raised, the greater the damage.",
+		shortDesc: "The user attacks with stored power. The more the user's stats are raised, the greater the damage.",
+	},
+	firewallpress: {
+		name: "Firewall Press",
+		desc: "Uses the user's Defense stat in damage calculation rather than Attack stat.",
+		shortDesc: "Uses the user's Defense stat in damage calculation rather than Attack stat.",
+	},
+	cosmiclaw: {
+		name: "Cosmic Law",
+		desc: "The law of all.",
+		shortDesc: "The law of all.",
+	},
+	stored: {
+		name: "STORED",
+		desc: "The more the user's stats are raised, the greater the damage.",
+		shortDesc: "The more the user's stats are raised, the greater the damage.",
+	},
+	snacktrap: {
+		name: "Snack Trap",
+		desc: "Goes last. The user lays a trap of snacks. Pokemon switching in will be distracted by the food.",
+		shortDesc: "Goes last. The user lays a trap of snacks. Pokemon switching in will be distracted by the food.",
+	},
+	discombubbles: {
+		name: "Discombubbles",
+		desc: "Bubbles of Psychic energy surround the enemy team, Confusing them when they switch in.",
+		shortDesc: "Bubbles of Psychic energy surround the enemy team, Confusing them when they switch in.",
+	},
+	disasterblade: {
+		name: "Disaster Blade",
+		desc: "Does more damage if the user is under the effects of Perish Song. Hi crit rate.",
+		shortDesc: "Does more damage if the user is under the effects of Perish Song. Hi crit rate.",
+	},
+	marshmellowfluff: {
+		name: "Marshmellow Fluff",
+		desc: "The user MARSHMELLOWs, raising its Attack sharply but lowering Speed.",
+		shortDesc: "The user MARSHMELLOWs, raising its Attack sharply but lowering Speed.",
+	},
+	hauntedhouse: {
+		name: "Haunted House",
+		desc: "Starts Spiritstorm and Arboreum for 5 turns.",
+		shortDesc: "Starts Spiritstorm and Arboreum for 5 turns.",
+	},
+	floodlight: {
+		name: "Floodlight",
+		desc: "Creates a floodlight on enemy's side, which lowers their Evasion stat upon switching into battle.",
+		shortDesc: "Creates a floodlight on enemy's side, which lowers their Evasion stat upon switching into battle.",
+	},
+	guidinglight: {
+		name: "Guiding Light",
+		desc: "Each turn ups Accuracy of all party Pokemon on the field for 6 turns.",
+		shortDesc: "Each turn ups Accuracy of all party Pokemon on the field for 6 turns.",
+	},
+	coralbomb: {
+		name: "Coral Bomb",
+		desc: "Very high chance to flinch. The user is also damaged however.",
+		shortDesc: "Very high chance to flinch. The user is also damaged however.",
+	},
+	theadversary: {
+		name: "The Adversary",
+		desc: "THE ADVERSARY.",
+		shortDesc: "THE ADVERSARY.",
+	},
+	morningstar: {
+		name: "MORNINGSTAR",
+		desc: "The user attacks with a prehistoric power. It may also raise all the user's stats at once.",
+		shortDesc: "The user attacks with a prehistoric power. It may also raise all the user's stats at once.",
+	},
+	divinelaws: {
+		name: "Divine Laws",
+		desc: "The target cannot use items for 5 turns.",
+		shortDesc: "The target cannot use items for 5 turns.",
+	},
+	shadow: {
+		name: "SHADOW",
+		desc: "Causes Confusion.",
+		shortDesc: "Causes Confusion.",
+	},
+	him: {
+		name: "HIM",
+		desc: "The user attacks with an eldritch power. It may also raise all the user's stats at once.",
+		shortDesc: "The user attacks with an eldritch power. It may also raise all the user's stats at once.",
+	},
+	foundryslash: {
+		name: "Foundry Slash",
+		desc: "Double damage against Steel-types.",
+		shortDesc: "Double damage against Steel-types.",
+	},
+	greasepuke: {
+		name: "Grease Puke",
+		desc: "Stockpile, more damage. Decreases Stockpile by 1.",
+		shortDesc: "Stockpile, more damage. Decreases Stockpile by 1.",
+	},
+	oilyterrain: {
+		name: "Oily Terrain",
+		desc: "Damages all grounded pokemon except Water or Rock types for 5 turns.",
+		shortDesc: "Damages all grounded pokemon except Water or Rock types for 5 turns.",
+	},
+	storedchaos: {
+		name: "Stored CHAOS",
+		desc: "The user attacks with stored power. The more the user's stats are raised, the greater the damage.",
+		shortDesc: "The user attacks with stored power. The more the user's stats are raised, the greater the damage.",
+	},
+	violencegust: {
+		name: "VIOLENCE GUST",
+		desc: "Drags out another Pokemon. +1 Priority",
+		shortDesc: "Drags out another Pokemon. +1 Priority",
+	},
+	absoluteice: {
+		name: "Absolute Ice",
+		desc: "The user lays a trap of hanging icicles around the foe. The trap hurts foes that switch into battle.",
+		shortDesc: "The user lays a trap of hanging icicles around the foe. The trap hurts foes that switch into battle.",
+	},
+	loveseed: {
+		name: "Love Seed",
+		desc: "A seed that plants the target, attracting it and steals some HP from the target every turn.",
+		shortDesc: "A seed that plants the target, attracting it and steals some HP from the target every turn.",
+	},
+	bondage: {
+		name: "Bondage",
+		desc: "Traps the target for 4 to 5 turns and deals more damage to an Attracted target.",
+		shortDesc: "Traps the target for 4 to 5 turns and deals more damage to an Attracted target.",
+	},
+	watersports: {
+		name: "Water Sports",
+		desc: "Raises SpDef. The move weakens Fire-type moves while the user is in the battle. Attracts the target. If Rain, Speed raised as well.",
+		shortDesc: "Raises SpDef. The move weakens Fire-type moves while the user is in the battle. Attracts the target. If Rain, Speed raised as well.",
+	},
+	squirtcannon: {
+		name: "Squirt Cannon",
+		desc: "May Attract. This attack also deals Water-type damage.",
+		shortDesc: "May Attract. This attack also deals Water-type damage.",
+	},
+	lovestruckpowder: {
+		name: "Lovestruck Powder",
+		desc: "Attracts the target. Inflicts Sleep, Poison or Paralysis.",
+		shortDesc: "Attracts the target. Inflicts Sleep, Poison or Paralysis.",
+	},
+	matingcall: {
+		name: "Mating Call",
+		desc: "Sound based. Chance to infatuate the target.",
+		shortDesc: "Sound based. Chance to infatuate the target.",
+	},
+	edging: {
+		name: "Edging",
+		desc: "The target is left with at least 1 HP.",
+		shortDesc: "The target is left with at least 1 HP.",
+	},
+	pixiehearts: {
+		name: "Pixie Hearts",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	pixiewink: {
+		name: "Pixie Wink",
+		desc: "Confuses the target. Infatuates if they are the opposite gender.",
+		shortDesc: "Confuses the target. Infatuates if they are the opposite gender.",
+	},
+	fireplay: {
+		name: "Fire Play",
+		desc: "May burn the target. Does more damage to an infatuated foe.",
+		shortDesc: "May burn the target. Does more damage to an infatuated foe.",
+	},
+	footjob: {
+		name: "Footjob",
+		desc: "The target is stomped with a big foot. More damage to an attracted target. It may also make the target flinch.",
+		shortDesc: "The target is stomped with a big foot. More damage to an attracted target. It may also make the target flinch.",
+	},
+	buttslam: {
+		name: "Butt Slam",
+		desc: "The user drops onto the target with its full body weight. It may leave the target with paralysis.",
+		shortDesc: "The user drops onto the target with its full body weight. It may leave the target with paralysis.",
+	},
+	peachblossom: {
+		name: "Peach Blossom",
+		desc: "Restore's the user's HP and puts the opponent to Sleep.",
+		shortDesc: "Restore's the user's HP and puts the opponent to Sleep.",
+	},
+	sugarkiss: {
+		name: "Sugar Kiss",
+		desc: "May raise the user's Speed stat.",
+		shortDesc: "May raise the user's Speed stat.",
+	},
+	butterflykiss: {
+		name: "Butterfly Kiss",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	peckkiss: {
+		name: "Peck Kiss",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	lizardkiss: {
+		name: "Lizard Kiss",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	vacuumkiss: {
+		name: "Vacuum Kiss",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	gumkiss: {
+		name: "Gum Kiss",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	flowerkiss: {
+		name: "Flower Kiss",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	screwattack: {
+		name: "Screw Attack",
+		desc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+		shortDesc: "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+	},
+	judge: {
+		name: "Judge",
+		desc: "Its power varies.",
+		shortDesc: "Its power varies.",
+	},
+	poisondarts: {
+		name: "Poison Darts",
+		desc: "Hits two to five times.",
+		shortDesc: "Hits two to five times.",
+	},
+	axeswing: {
+		name: "Axe Swing",
+		desc: "It may also lower the target's Defense stat.",
+		shortDesc: "It may also lower the target's Defense stat.",
+	},
+	printingpress: {
+		name: "Printing Press",
+		desc: "Uses the user's Defense stat in damage calculation rather than Attack stat.",
+		shortDesc: "Uses the user's Defense stat in damage calculation rather than Attack stat.",
+	},
+	magicmenu: {
+		name: "Magic Menu",
+		desc: "Uses a random set move.",
+		shortDesc: "Uses a random set move.",
+	},
+	sizz: {
+		name: "Sizz",
+		desc: "The user attacks the foe with a bursting flame. It also damages Pokemon next to the target.",
+		shortDesc: "The user attacks the foe with a bursting flame. It also damages Pokemon next to the target.",
+	},
+	sizzle: {
+		name: "Sizzle",
+		desc: "The user attacks the foe with a bursting flame. It also damages Pokemon next to the target.",
+		shortDesc: "The user attacks the foe with a bursting flame. It also damages Pokemon next to the target.",
+	},
+	bang: {
+		name: "Bang",
+		desc: "The user throws a boomerang that loops to hit both targets twice, coming and going.",
+		shortDesc: "The user throws a boomerang that loops to hit both targets twice, coming and going.",
+	},
+	kaboom: {
+		name: "Kaboom",
+		desc: "The user throws a boomerang that loops to hit both targets twice, coming and going.",
+		shortDesc: "The user throws a boomerang that loops to hit both targets twice, coming and going.",
+	},
+	snooze: {
+		name: "Snooze",
+		desc: "PUTS ALL TO SLEP",
+		shortDesc: "PUTS ALL TO SLEP",
+	},
+	flameslash: {
+		name: "Flame Slash",
+		desc: "The user slashes the target the instant an opportunity arises. Critical hits land more easily.",
+		shortDesc: "The user slashes the target the instant an opportunity arises. Critical hits land more easily.",
+	},
+	karackleslash: {
+		name: "Karackle Slash",
+		desc: "The user slashes the target the instant an opportunity arises. Critical hits land more easily.",
+		shortDesc: "The user slashes the target the instant an opportunity arises. Critical hits land more easily.",
+	},
+	metalslash: {
+		name: "Metal Slash",
+		desc: "Massive damage to steel-types.",
+		shortDesc: "Massive damage to steel-types.",
+	},
+	hatcherman: {
+		name: "Hatcher Man",
+		desc: "The user focuses its mind before launching a punch. It will fail if the user is hit before it is used.",
+		shortDesc: "The user focuses its mind before launching a punch. It will fail if the user is hit before it is used.",
+	},
+	whack: {
+		name: "Whack",
+		desc: "Shoots with an arrow or other projectile. May 1 hit KO.",
+		shortDesc: "Shoots with an arrow or other projectile. May 1 hit KO.",
+	},
+	magicburst: {
+		name: "Magic Burst",
+		desc: "The user attacks the target at full power. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+		shortDesc: "The user attacks the target at full power. The attack's recoil harshly reduces the user's Sp. Atk stat.",
+	},
+	kamikaze: {
+		name: "Kamikaze",
+		desc: "The user performs a heroic sacrifice to damage those around it. The user faints upon using this move.",
+		shortDesc: "The user performs a heroic sacrifice to damage those around it. The user faints upon using this move.",
+	},
+	heal: {
+		name: "Heal",
+		desc: "Restoring its own cells, the user restores its own HP by half of its max HP.",
+		shortDesc: "Restoring its own cells, the user restores its own HP by half of its max HP.",
+	},
+	spellbounce: {
+		name: "Spell Bounce",
+		desc: "Prevents damage from Special moves for 5 turns.",
+		shortDesc: "Prevents damage from Special moves for 5 turns.",
+	},
+	accelerate: {
+		name: "Accelerate",
+		desc: "Drastically raises Speed.",
+		shortDesc: "Drastically raises Speed.",
+	},
+	kaclang: {
+		name: "Kaclang",
+		desc: "Freezes user. It fully restores the user's HP and heals any status problem. Heals while frozen.",
+		shortDesc: "Freezes user. It fully restores the user's HP and heals any status problem. Heals while frozen.",
+	},
+	zoom: {
+		name: "Zoom",
+		desc: "Creates a substitute then switches out, passing along any stat changes.",
+		shortDesc: "Creates a substitute then switches out, passing along any stat changes.",
+	},
+	oomph: {
+		name: "Oomph",
+		desc: "A frenetic dance to uplift the fighting spirit. It sharply raises the user's Attack stat.",
+		shortDesc: "A frenetic dance to uplift the fighting spirit. It sharply raises the user's Attack stat.",
+	},
+	crossboomerang: {
+		name: "Cross Boomerang",
+		desc: "Hits twice.",
+		shortDesc: "Hits twice.",
+	},
+	diamondpickaxe: {
+		name: "Diamond Pickaxe",
+		desc: "May lower defense.",
+		shortDesc: "May lower defense.",
+	},
+	ironsword: {
+		name: "Iron Sword",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	minecart: {
+		name: "Minecart",
+		desc: "Building up more power, it raises the user's Speed stat.",
+		shortDesc: "Building up more power, it raises the user's Speed stat.",
+	},
+	tragicend: {
+		name: "Tragic End",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	bloodritual: {
+		name: "Blood Ritual",
+		desc: "Turn 1, damages user and makes them Bleed. Turn 2, drastically raises attacking stats.",
+		shortDesc: "Turn 1, damages user and makes them Bleed. Turn 2, drastically raises attacking stats.",
+	},
+	arterystrike: {
+		name: "Artery Strike",
+		desc: "The user attacks with its own arteries. Makes the user Bleed.",
+		shortDesc: "The user attacks with its own arteries. Makes the user Bleed.",
+	},
+	bleedingburst: {
+		name: "Bleeding Burst",
+		desc: "The user attacks with its own blood. Makes the user Bleed.",
+		shortDesc: "The user attacks with its own blood. Makes the user Bleed.",
+	},
+	bloodsplatter: {
+		name: "Blood Splatter",
+		desc: "Hits everything around the user. Does more damage if the user is Bleeding.",
+		shortDesc: "Hits everything around the user. Does more damage if the user is Bleeding.",
+	},
+	bloodport: {
+		name: "Bloodport",
+		desc: "The user turns into blood, then strikes the target on the next turn. This move hits even if the target protects itself.",
+		shortDesc: "The user turns into blood, then strikes the target on the next turn. This move hits even if the target protects itself.",
+	},
+	fatality: {
+		name: "Fatality",
+		desc: "FINISH THEM! 1 hit KOs.",
+		shortDesc: "FINISH THEM! 1 hit KOs.",
+	},
+	maneater: {
+		name: "Man Eater",
+		desc: "Deals double damage to Males. May 1 hit KO.",
+		shortDesc: "Deals double damage to Males. May 1 hit KO.",
+	},
+	getoverhere: {
+		name: "GET OVER HERE",
+		desc: "Drags another pokemon out.",
+		shortDesc: "Drags another pokemon out.",
+	},
+	hellfire: {
+		name: "Hellfire",
+		desc: "It may also leave the target with a burn.",
+		shortDesc: "It may also leave the target with a burn.",
+	},
+	boomstick: {
+		name: "Boomstick",
+		desc: "Taste the Boomstick! Very effective on Zombie,Dark & Fear types",
+		shortDesc: "Taste the Boomstick! Very effective on Zombie,Dark & Fear types",
+	},
+	fusrodah: {
+		name: "Fus Ro Dah!",
+		desc: "Causes the foe to be switched out.",
+		shortDesc: "Causes the foe to be switched out.",
+	},
+	hairgrab: {
+		name: "Hair Grab",
+		desc: "Traps for 4 to 5 turns.",
+		shortDesc: "Traps for 4 to 5 turns.",
+	},
+	ventclimb: {
+		name: "Vent Climb",
+		desc: "The user hides in vents, then attacks on the second turn. It can also be used to exit dungeons.",
+		shortDesc: "The user hides in vents, then attacks on the second turn. It can also be used to exit dungeons.",
+	},
+	goldengun: {
+		name: "Golden Gun",
+		desc: "If the target's HP is down to about half, this attack will hit with double the power.",
+		shortDesc: "If the target's HP is down to about half, this attack will hit with double the power.",
+	},
+	tirofinale: {
+		name: "Tiro Finale",
+		desc: "The attack's recoil harshly reduces the user's Defense stat.",
+		shortDesc: "The attack's recoil harshly reduces the user's Defense stat.",
+	},
+	demonhorns: {
+		name: "Demon Horns",
+		desc: "A reckless, full-body charge attack for slamming into the foe. It also damages the user a little.",
+		shortDesc: "A reckless, full-body charge attack for slamming into the foe. It also damages the user a little.",
+	},
+	chaosmissile: {
+		name: "Chaos Missile",
+		desc: "Charges up on the first turn, attacks on the second turn.",
+		shortDesc: "Charges up on the first turn, attacks on the second turn.",
+	},
+	plasmaball: {
+		name: "Plasma Ball",
+		desc: "The user fires off a ball of energy that has a high chance to paralyze.",
+		shortDesc: "The user fires off a ball of energy that has a high chance to paralyze.",
+	},
+	meteoricburst: {
+		name: "Meteoric Burst",
+		desc: "The user goes all-out at the cost of terrible damage. Can burn the target",
+		shortDesc: "The user goes all-out at the cost of terrible damage. Can burn the target",
+	},
+	dragonpummelin: {
+		name: "Dragon Pummelin'",
+		desc: "A barrage of smacks with the bat. Each hit can raise atk.",
+		shortDesc: "A barrage of smacks with the bat. Each hit can raise atk.",
+	},
+	vaccinerehab: {
+		name: "VaccineRehab",
+		desc: "The user absorbs the energy spheres cumulated to heal themselves. The heal varies according to the spheres used",
+		shortDesc: "The user absorbs the energy spheres cumulated to heal themselves. The heal varies according to the spheres used",
+	},
+	retaliatespell: {
+		name: "Retaliate Spell",
+		desc: "Gets revenge for a fainted ally. If an ally fainted in the last turn, this attack's damage increases.",
+		shortDesc: "Gets revenge for a fainted ally. If an ally fainted in the last turn, this attack's damage increases.",
+	},
+	bfg: {
+		name: "BFG",
+		desc: "Hits both opponents. The user must rest on the next turn to regain its energy.",
+		shortDesc: "Hits both opponents. The user must rest on the next turn to regain its energy.",
+	},
+	junglespear: {
+		name: "Jungle Spear",
+		desc: "High critical hit ratio.",
+		shortDesc: "High critical hit ratio.",
+	},
+	bombard: {
+		name: "Bombard",
+		desc: "After a turn of chargeup strikes with 8 spheres, each with a high crit chance.",
+		shortDesc: "After a turn of chargeup strikes with 8 spheres, each with a high crit chance.",
+	},
+	justicecrash: {
+		name: "Justice Crash",
+		desc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+		shortDesc: "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+	},
+	energyballs: {
+		name: "Energy Balls",
+		desc: "Releases the energy cumulated in fight, dealing 50xthe number of spheres gathered",
+		shortDesc: "Releases the energy cumulated in fight, dealing 50xthe number of spheres gathered",
+	},
+	machgunblow: {
+		name: "MachGunBlow",
+		desc: "A flurry of punches thrown like a machinegun at the target. Hits two to five times.",
+		shortDesc: "A flurry of punches thrown like a machinegun at the target. Hits two to five times.",
+	},
+	ninjastrike: {
+		name: "Ninja Strike",
+		desc: "Uses ninjutsu to strike the foe before they see. More damage if the user is faster than the foe",
+		shortDesc: "Uses ninjutsu to strike the foe before they see. More damage if the user is faster than the foe",
+	},
+	edgecut: {
+		name: "Edge Cut",
+		desc: "Same type as the user's primary type.",
+		shortDesc: "Same type as the user's primary type.",
+	},
+	excitebike: {
+		name: "Excite Bike",
+		desc: "Building up more power, it raises the user's Speed stat.",
+		shortDesc: "Building up more power, it raises the user's Speed stat.",
+	},
+	liquidflare: {
+		name: "Liquid Flare",
+		desc: "Does double damage in the rain.",
+		shortDesc: "Does double damage in the rain.",
+	},
+	staffsmash: {
+		name: "Staff Smash",
+		desc: "The user hits the target on the head with its staff. May make target flinch.",
+		shortDesc: "The user hits the target on the head with its staff. May make target flinch.",
+	},
+	stuntdouble: {
+		name: "Stunt Double",
+		desc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+		shortDesc: "After making its attack, the user rushes back to switch places with a party Pokemon in waiting.",
+	},
+	comboattack: {
+		name: "Combo Attack",
+		desc: "Its power increases if it hits in succession.",
+		shortDesc: "Its power increases if it hits in succession.",
+	},
+	bansheescream: {
+		name: "Banshee Scream",
+		desc: "May make the target faint next turn.",
+		shortDesc: "May make the target faint next turn.",
+	},
+	waterkick: {
+		name: "Water Kick",
+		desc: "Hi crit rate. It may also leave the target confused.",
+		shortDesc: "Hi crit rate. It may also leave the target confused.",
+	},
+	finalheaven: {
+		name: "Final Heaven",
+		desc: "Hi crit rate. This move can be used only after the user has used all the other moves it knows in the battle.",
+		shortDesc: "Hi crit rate. This move can be used only after the user has used all the other moves it knows in the battle.",
+	},
+	dolphinblow: {
+		name: "Dolphin Blow",
+		desc: "Hi crit rate.",
+		shortDesc: "Hi crit rate.",
+	},
+	catastrophe: {
+		name: "Catastrophe",
+		desc: "This move can be used only after the user has used all the other moves it knows in the battle.",
+		shortDesc: "This move can be used only after the user has used all the other moves it knows in the battle.",
+	},
+	fraggrenade: {
+		name: "Frag Grenade",
+		desc: "Hits everything around the user. It also damages Pokemon next to the target.",
+		shortDesc: "Hits everything around the user. It also damages Pokemon next to the target.",
+	},
+	virusdrain: {
+		name: "Virus Drain",
+		desc: "The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user's HP is restored by half the damage taken by the target.",
+	},
+	spacedrain: {
+		name: "Space Drain",
+		desc: "The user's HP is restored by half the damage taken by the target.",
+		shortDesc: "The user's HP is restored by half the damage taken by the target.",
+	},
+	holysword: {
+		name: "Holy Sword",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	mandragora: {
+		name: "Mandragora",
+		desc: "Sound based. Hits everything around the user.",
+		shortDesc: "Sound based. Hits everything around the user.",
+	},
+	luminaire: {
+		name: "Luminaire",
+		desc: "The user attacks everything around it.",
+		shortDesc: "The user attacks everything around it.",
+	},
+	serpentwhip: {
+		name: "Serpent Whip",
+		desc: "The user violently whirls its vines or tentacles to harshly lash the target.",
+		shortDesc: "The user violently whirls its vines or tentacles to harshly lash the target.",
+	},
+	energysword: {
+		name: "Energy Sword",
+		desc: "High crit rate. May 1 hit KO.",
+		shortDesc: "High crit rate. May 1 hit KO.",
+	},
+	sexybeam: {
+		name: "Sexy Beam",
+		desc: "Chance to infatuate the target.",
+		shortDesc: "Chance to infatuate the target.",
+	},
+	boltslash: {
+		name: "Bolt Slash",
+		desc: "Critical hits land more easily.",
+		shortDesc: "Critical hits land more easily.",
+	},
+	swordofdusk: {
+		name: "Sword of Dusk",
+		desc: "The user must rest on the next turn if this move doesn't defeat the target.",
+		shortDesc: "The user must rest on the next turn if this move doesn't defeat the target.",
+	},
+	simcity: {
+		name: "Sim City",
+		desc: "Does more damage depending on the amount of Screens and Rooms.",
+		shortDesc: "Does more damage depending on the amount of Screens and Rooms.",
+	},
+	burialground: {
+		name: "Burial Ground",
+		desc: "Raises a burial ground on the opposing side, causing incoming mons to turn into Zombie types.",
+		shortDesc: "Raises a burial ground on the opposing side, causing incoming mons to turn into Zombie types.",
+	},
+	threelineformation: {
+		name: "ThreeLineFormation",
+		desc: "Double damage against Divine types. Critical hits land more easily.",
+		shortDesc: "Double damage against Divine types. Critical hits land more easily.",
+	},
+	demonkingsixthheaven: {
+		name: "DemonKingSixthHeaven",
+		desc: "Damages and Burns Divine Fairy Magic types. Powers up Chaos moves.",
+		shortDesc: "Damages and Burns Divine Fairy Magic types. Powers up Chaos moves.",
+	},
+	jyuohanketsu: {
+		name: "Jyu O Hanketsu",
+		desc: "Does more damage against Dark types.",
+		shortDesc: "Does more damage against Dark types.",
+	},
+	suzumegaeshi: {
+		name: "Suzume Gaeshi",
+		desc: "Hi crit rate. May disable the last move used by the target.",
+		shortDesc: "Hi crit rate. May disable the last move used by the target.",
+	},
+	durindana: {
+		name: "Durindana",
+		desc: "Doesn't miss. This also hits a target using Protect or Detect.",
+		shortDesc: "Doesn't miss. This also hits a target using Protect or Detect.",
+	},
+	seishinkatadoru: {
+		name: "Seishin Katadoru",
+		desc: "Increases party's crit rate and Attack for 3 turns.",
+		shortDesc: "Increases party's crit rate and Attack for 3 turns.",
+	},
+	himikopunch: {
+		name: "Himiko Punch",
+		desc: "Lowers the target's Defense stat.",
+		shortDesc: "Lowers the target's Defense stat.",
+	},
+	hassotobi: {
+		name: "Hasso Tobi",
+		desc: "Raises the user's crit rate and Speed.",
+		shortDesc: "Raises the user's crit rate and Speed.",
+	},
+	usumidori: {
+		name: "Usumidori",
+		desc: "Hi crit rate. This attack will not miss.",
+		shortDesc: "Hi crit rate. This attack will not miss.",
+	},
+	hoemaru: {
+		name: "Hoemaru",
+		desc: "Hits both opponents. Does more damage against Dark types.",
+		shortDesc: "Hits both opponents. Does more damage against Dark types.",
+	},
+	kikenjo: {
+		name: "Kikenjo",
+		desc: "Hi crit rate. A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+		shortDesc: "Hi crit rate. A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+	},
+	alflaylawalayla: {
+		name: "Alf Layla wa Layla",
+		desc: "May also paralyze, burn, or freeze the target.",
+		shortDesc: "May also paralyze, burn, or freeze the target.",
+	},
+	mysteryslayer: {
+		name: "Mystery Slayer",
+		desc: "Hi crit rate. x2 damage against Fairy, Chaos, Ghost, Dragon, Zombie",
+		shortDesc: "Hi crit rate. x2 damage against Fairy, Chaos, Ghost, Dragon, Zombie",
+	},
+	gooushourai: {
+		name: "Goou Shourai",
+		desc: "High critical hit ratio. The target is hit seven times.",
+		shortDesc: "High critical hit ratio. The target is hit seven times.",
+	},
+	hameshavanim: {
+		name: "Hamesh Avanim",
+		desc: "Disables the last move used by the target",
+		shortDesc: "Disables the last move used by the target",
+	},
+	hansainokaen: {
+		name: "Hansai no Kaen",
+		desc: "Hits both targets. This attack also deals Fire-type damage.",
+		shortDesc: "Hits both targets. This attack also deals Fire-type damage.",
+	},
+	arkofthecovenant: {
+		name: "Ark of the Covenant",
+		desc: "Almost guaranteed to 1 hit KO.",
+		shortDesc: "Almost guaranteed to 1 hit KO.",
+	},
+	doujoujikane: {
+		name: "Doujouji Kane",
+		desc: "Traps the target and burns them.",
+		shortDesc: "Traps the target and burns them.",
+	},
+	prydwentuberiding: {
+		name: "PrydwenTubeRiding",
+		desc: "Hits both opponents. High chance to also lower the target's Sp. Atk stat.",
+		shortDesc: "Hits both opponents. High chance to also lower the target's Sp. Atk stat.",
+	},
+	sanatkumara: {
+		name: "Sanat Kumara",
+		desc: "Hits both opponents. Lowers the target's crit chance.",
+		shortDesc: "Hits both opponents. Lowers the target's crit chance.",
+	},
+	senshibankou: {
+		name: "Senshibankou",
+		desc: "Decreases all of the opponent's stats, reduces their crit rate, disables the last move and toxic poisons them.",
+		shortDesc: "Decreases all of the opponent's stats, reduces their crit rate, disables the last move and toxic poisons them.",
+	},
+	sakesplash: {
+		name: "Sake Splash",
+		desc: "It may also leave the target confused.",
+		shortDesc: "It may also leave the target confused.",
+	},
+	bonecollector: {
+		name: "Bone Collector",
+		desc: "Tears out the target's bones. The target will faint instantly if this attack hits.",
+		shortDesc: "Tears out the target's bones. The target will faint instantly if this attack hits.",
+	},
+	athanaton10thousand: {
+		name: "Athanaton10Thousand",
+		desc: "Hits both targets, lowering their Attack and Defense stats.",
+		shortDesc: "Hits both targets, lowering their Attack and Defense stats.",
+	},
+	pandemoniumcetus: {
+		name: "Pandemonium Cetus",
+		desc: "High chance to inflict Curse.",
+		shortDesc: "High chance to inflict Curse.",
+	},
+	dominacoronam: {
+		name: "Domina Coronam",
+		desc: "User's ability becomes Wonder Guard.",
+		shortDesc: "User's ability becomes Wonder Guard.",
+	},
+	cursedcuttingcrater: {
+		name: "CursedCuttingCrater",
+		desc: "Hits both opponents. Chance to 1 hit KO.",
+		shortDesc: "Hits both opponents. Chance to 1 hit KO.",
+	},
+	wootpike: {
+		name: "Woot Pike",
+		desc: "This attack always results in a critical hit.",
+		shortDesc: "This attack always results in a critical hit.",
+	},
+	thenword: {
+		name: "The N Word",
+		desc: "The target can only use attacking moves.",
+		shortDesc: "The target can only use attacking moves.",
+	},
+	songofgrail: {
+		name: "Song of Grail",
+		desc: "Heals the user and their ally and gives them Endure. Activates Wish.",
+		shortDesc: "Heals the user and their ally and gives them Endure. Activates Wish.",
+	},
+	phantasmpunishment: {
+		name: "Phantasm Punishment",
+		desc: "Double damage against Magic types. Critical hits land more easily.",
+		shortDesc: "Double damage against Magic types. Critical hits land more easily.",
+	},
+	chronosrose: {
+		name: "Chronos Rose",
+		desc: "Hi crit rate. Seeking an opening, the user strikes continually. The foe's stat changes don't affect the damage.",
+		shortDesc: "Hi crit rate. Seeking an opening, the user strikes continually. The foe's stat changes don't affect the damage.",
+	},
+	originbullet: {
+		name: "Origin Bullet",
+		desc: "Uses the target's SpDef to attack.",
+		shortDesc: "Uses the target's SpDef to attack.",
+	},
+	tsumukarimuramasa: {
+		name: "TsumukariMuramasa",
+		desc: "High crit rate. All status changes are returned to normal.",
+		shortDesc: "High crit rate. All status changes are returned to normal.",
+	},
+	greatclawofdeath: {
+		name: "GreatClawOfDeath",
+		desc: "High crit rate. This attack never misses.",
+		shortDesc: "High crit rate. This attack never misses.",
+	},
+	unlimitedlostworks: {
+		name: "UnlimitedLostWorks",
+		desc: "Chance to 1 hit KO.",
+		shortDesc: "Chance to 1 hit KO.",
+	},
+	shadowbullets: {
+		name: "Shadow Bullets",
+		desc: "Two to five shots are shot in rapid succession.",
+		shortDesc: "Two to five shots are shot in rapid succession.",
+	},
+	unspeakableformation: {
+		name: "Unspeakable Formation",
+		desc: "Hit both opp. Lwrs crit rate, defense, spdef. Your party deals more damage with not very effective moves for 5 turns.",
+		shortDesc: "Hit both opp. Lwrs crit rate, defense, spdef. Your party deals more damage with not very effective moves for 5 turns.",
+	},
+	meatcalibur: {
+		name: "Meatcalibur",
+		desc: "Hi crit rate. User must recharge unless it KOs the target.",
+		shortDesc: "Hi crit rate. User must recharge unless it KOs the target.",
+	},
+	speedsplit: {
+		name: "Speed Split",
+		desc: "Averages the user's Speed with the target.",
+		shortDesc: "Averages the user's Speed with the target.",
+	},
+	custosmorum: {
+		name: "Custos Morum",
+		desc: "Hits both opponents. Does more damage against Dark types.",
+		shortDesc: "Hits both opponents. Does more damage against Dark types.",
+	},
+	iamreditetvirgo: {
+		name: "Iam Redit et Virgo",
+		desc: "Can only be used after every other move. Resets stats, reduces all stats and disables last move.",
+		shortDesc: "Fails unless each known move has been used. Resets then reduces all stats, disables last move.",
+	},
+	elementsofharmony: {
+		name: "ElementsOfHarmony",
+		desc: "The user gets all the party Pokemon to attack the foe. The more party Pokemon, the more damage.",
+		shortDesc: "All healthy allies aid in damaging the target.",
+	},
+	summonanimals: {
+		name: "Summon Animals",
+		desc: "Summon minions to attack 2-5 times in a row. Deals physical damage.",
+		shortDesc: "Hits 2-5 times in a row. Deals physical damage.",
+	},
+	stymphalianbirds: {
+		name: "Stymphalian Birds",
+		desc: "The target is jabbed repeatedly with birds arrows two to five times in a row.",
+		shortDesc: "Hits 2-5 times in a row.",
+	},
+	harpe: {
+		name: "Harpe",
+		desc: " Hi crit. If the target is Divine-type, it loses its Divine typing.",
+		shortDesc: " High crit rate. User Loses its Divine typing.",
+	},
+	caressofmedusa: {
+		name: "Caress of Medusa",
+		desc: "Causes paralysis.",
+		shortDesc: "100% chance to cause paralysis.",
+	},
+	wingedsandals: {
+		name: "Winged Sandals",
+		desc: "The user charges at the target, calling on the speed of an ancient god. It raises the user's Speed stat.",
+		shortDesc: "100% chance to raise user's Speed.",
+	},
+	governmentmen: {
+		name: "Government Men",
+		desc: "Hits two to five times.",
+		shortDesc: "Hits 2-5 times.",
+	},
+	momijigari: {
+		name: "Momijigari",
+		desc: "The user cloaks itself in fire and charges at the foe. The user also takes damage and may burn the target.",
+		shortDesc: "The user also takes damage and may burn the target.",
+	},
+	bonegnaw: {
+		name: "Bone Gnaw",
+		desc: "The user crunches up the target with sharp fangs. Hi chance to lower the target's Defense stat.",
+		shortDesc: "High chance to lower the target's Defense stat.",
+	},
+	bonelance: {
+		name: "Bone Lance",
+		desc: "Raises its Attack in the first turn, then rams the foe on the next turn.",
+		shortDesc: "2-turn attack. Raises Attack on first turn."
+	},
+	bonetired: {
+		name: "Bone Tired",
+		desc: "30% chance to put the target to sleep.",
+		shortDesc: "30% chance to put target to sleep.",
+	},
+	ribcage: {
+		name: "Ribcage",
+		desc: "Traps the foe for four to five turns in a cage of ribs.",
+		shortDesc: "Traps foe for 4-5 turns.",
+	},
+	boneify: {
+		name: "Boneify",
+		desc: "Changes the target's type to Bone.",
+		shortDesc: "Changes target's type to Bone.",
+	},
+	boneitis: {
+		name: "Boneitis",
+		desc: "May badly poison the target.",
+		shortDesc: "May badly poison the target.",
+	},
+	boner: {
+		name: "Boner",
+		desc: "x2 to female targets.",
+		shortDesc: "x2 to female targets.",
+	},
+	skullfist: {
+		name: "Skull Fist",
+		desc: "May 1 hit KO.",
+		shortDesc: "May 1 hit KO.",
+	},
+	flashball: {
+		name: "Flash Ball",
+		desc: "The user hurls a shinning blob at the target. It may also lower the target's Sp. Def stat."
+	},
+	soporous: {
+		name: "Soporous",
+		desc: "The user injects the target with a needle to send it into a deep sleep.",
+	},
+	hiddenpowerblood: {
+		name: "Hidden Power Blood",
+	},
+	hiddenpowerbone: {
+		name: "Hidden Power Bone",
+	},
+	hiddenpowercosmic: {
+		name: "Hidden Power Cosmic",
+	},
+	hiddenpowercrystal: {
+		name: "Hidden Power Crystal",
+	},
+	hiddenpowercyber: {
+		name: "Hidden Power Cyber",
+	},
+	hiddenpowerdivine: {
+		name: "Hidden Power Divine",
+	},
+	hiddenpowerfabric: {
+		name: "Hidden Power Fabric",
+	},
+	hiddenpowerfairy: {
+		name: "Hidden Power Fairy",
+	},
+	hiddenpowerfear: {
+		name: "Hidden Power Fear",
+	},
+	hiddenpowerfood: {
+		name: "Hidden Power Food",
+	},
+	hiddenpowerglass: {
+		name: "Hidden Power Glass",
+	},
+	hiddenpowergreasy: {
+		name: "Hidden Power Greasy",
+	},
+	hiddenpowerheart: {
+		name: "Hidden Power Heart",
+	},
+	hiddenpowerlight: {
+		name: "Hidden Power Light",
+	},
+	hiddenpowermagic: {
+		name: "Hidden Power Magic",
+	},
+	hiddenpowermagma: {
+		name: "Hidden Power Magma",
+	},
+	hiddenpowermeme: {
+		name: "Hidden Power Meme",
+	},
+	hiddenpowernuclear: {
+		name: "Hidden Power Nuclear",
+	},
+	hiddenpowerogre: {
+		name: "Hidden Power Ogre",
+	},
+	hiddenpowerpaint: {
+		name: "Hidden Power Paint",
+	},
+	hiddenpowerpaper: {
+		name: "Hidden Power Paper",
+	},
+	hiddenpowerplastic: {
+		name: "Hidden Power Plastic",
+	},
+	hiddenpowerrubber: {
+		name: "Hidden Power Rubber",
+	},
+	hiddenpowersound: {
+		name: "Hidden Power Sound",
+	},
+	hiddenpowersteam: {
+		name: "Hidden Power Steam",
+	},
+	hiddenpowertech: {
+		name: "Hidden Power Tech",
+	},
+	hiddenpowertime: {
+		name: "Hidden Power Time",
+	},
+	hiddenpowervirus: {
+		name: "Hidden Power Virus",
+	},
+	hiddenpowerwind: {
+		name: "Hidden Power Wind",
+	},
+	hiddenpowerwood: {
+		name: "Hidden Power Wood",
+	},
+	hiddenpowerzombie: {
+		name: "Hidden Power Zombie",
+	},
+	hiddenforceblood: {
+		name: "Hidden Force Blood",
+	},
+	hiddenforcebone: {
+		name: "Hidden Force Bone",
+	},
+	hiddenforcebug: {
+		name: "Hidden Force Bug",
+	},
+	hiddenforcecosmic: {
+		name: "Hidden Force Cosmic",
+	},
+	hiddenforcecrystal: {
+		name: "Hidden Force Crystal",
+	},
+	hiddenforcecyber: {
+		name: "Hidden Force Cyber",
+	},
+	hiddenforcedivine: {
+		name: "Hidden Force Divine",
+	},
+	hiddenforcedark: {
+		name: "Hidden Force Dark",
+	},
+	hiddenforcedragon: {
+		name: "Hidden Force Dragon",
+	},
+	hiddenforceelectric: {
+		name: "Hidden Force Electric",
+	},
+	hiddenforcefabric: {
+		name: "Hidden Force Fabric",
+	},
+	hiddenforcefairy: {
+		name: "Hidden Force Fairy",
+	},
+	hiddenforcefear: {
+		name: "Hidden Force Fear",
+	},
+	hiddenforcefighting: {
+		name: "Hidden Force Fighting",
+	},
+	hiddenforcefire: {
+		name: "Hidden Force Fire",
+	},
+	hiddenforceflying: {
+		name: "Hidden Force Flying",
+	},
+	hiddenforcefood: {
+		name: "Hidden Force Food",
+	},
+	hiddenforceghost: {
+		name: "Hidden Force Ghost",
+	},
+	hiddenforceglass: {
+		name: "Hidden Force Glass",
+	},
+	hiddenforcegrass: {
+		name: "Hidden Force Grass",
+	},
+	hiddenforcegreasy: {
+		name: "Hidden Force Greasy",
+	},
+	hiddenforceground: {
+		name: "Hidden Force Ground",
+	},
+	hiddenforceheart: {
+		name: "Hidden Force Heart",
+	},
+	hiddenforceice: {
+		name: "Hidden Force Ice",
+	},
+	hiddenforcelight: {
+		name: "Hidden Force Light",
+	},
+	hiddenforcemagic: {
+		name: "Hidden Force Magic",
+	},
+	hiddenforcemagma: {
+		name: "Hidden Force Magma",
+	},
+	hiddenforcememe: {
+		name: "Hidden Force Meme",
+	},
+	hiddenforcenuclear: {
+		name: "Hidden Force Nuclear",
+	},
+	hiddenforceogre: {
+		name: "Hidden Force Ogre",
+	},
+	hiddenforcepaint: {
+		name: "Hidden Force Paint",
+	},
+	hiddenforcepaper: {
+		name: "Hidden Force Paper",
+	},
+	hiddenforceplastic: {
+		name: "Hidden Force Plastic",
+	},
+	hiddenforcepoison: {
+		name: "Hidden Force Poison",
+	},
+	hiddenforcepsychic: {
+		name: "Hidden Force Psychic",
+	},
+	hiddenforcerock: {
+		name: "Hidden Force Rock",
+	},
+	hiddenforcerubber: {
+		name: "Hidden Force Rubber",
+	},
+	hiddenforcesound: {
+		name: "Hidden Force Sound",
+	},
+	hiddenforcesteam: {
+		name: "Hidden Force Steam",
+	},
+	hiddenforcesteel: {
+		name: "Hidden Force Steel",
+	},
+	hiddenforcetech: {
+		name: "Hidden Force Tech",
+	},
+	hiddenforcetime: {
+		name: "Hidden Force Time",
+	},
+	hiddenforcevirus: {
+		name: "Hidden Force Virus",
+	},
+	hiddenforcewater: {
+		name: "Hidden Force Water",
+	},
+	hiddenforcewind: {
+		name: "Hidden Force Wind",
+	},
+	hiddenforcewood: {
+		name: "Hidden Force Wood",
+	},
+	hiddenforcezombie: {
+		name: "Hidden Force Zombie",
 	},
 };

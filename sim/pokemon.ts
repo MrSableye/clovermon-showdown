@@ -334,7 +334,7 @@ export class Pokemon {
 				if (!set.hpType) set.hpType = move.type;
 				move = this.battle.dex.moves.get('hiddenpower');
 			}
-			let basepp = (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5;
+			let basepp = (move.noPPBoosts || move.isZ) ? move.pp : Math.floor(move.pp * 8 / 5);
 			if (this.battle.gen < 3) basepp = Math.min(61, basepp);
 			this.baseMoveSlots.push({
 				move: move.name,
@@ -818,6 +818,7 @@ export class Pokemon {
 		if (this.battle.gen >= 5 && !this.isActive) return true;
 		if (this.getAbility().isPermanent) return false;
 		if (this.volatiles['gastroacid']) return true;
+		if (this.hasItem('Supression Stone')) return true;
 
 		// Check if any active pokemon have the ability Neutralizing Gas
 		if (this.hasItem('Ability Shield') || this.ability === ('neutralizinggas' as ID)) return false;
@@ -836,7 +837,7 @@ export class Pokemon {
 		return !!(
 			this.itemState.knockedOff || // Gen 3-4
 			(this.battle.gen >= 5 && !this.isActive) ||
-			(!this.getItem().ignoreKlutz && this.hasAbility('klutz')) ||
+			(!this.getItem().ignoreKlutz && this.hasAbility(['klutz', 'originalsin'])) ||
 			this.volatiles['embargo'] || this.battle.field.pseudoWeather['magicroom']
 		);
 	}
@@ -1609,9 +1610,11 @@ export class Pokemon {
 			}
 			return false;
 		}
-
+		
 		if (!ignoreImmunities && status.id &&
-				!(source?.hasAbility('corrosion') && ['tox', 'psn'].includes(status.id))) {
+				!((source?.hasAbility(['corrosion', 'cancer']) || source?.hasItem('plagueorb')) && ['tox', 'psn'].includes(status.id))
+				&& !((source?.hasItem('infernoorb')) && status.id === 'brn')
+				&& !((source?.hasItem('stormorb')) && status.id === 'par')) {
 			// the game currently never ignores immunities
 			if (!this.runStatusImmunity(status.id === 'tox' ? 'psn' : status.id)) {
 				this.battle.debug('immune to status');
@@ -1991,10 +1994,13 @@ export class Pokemon {
 		}
 
 		if (!newType) throw new Error("Must pass type to setType");
+		const oldTypes = this.types;
 		this.types = (typeof newType === 'string' ? [newType] : newType);
 		this.addedType = '';
 		this.knownType = true;
 		this.apparentType = this.types.join('/');
+
+		this.battle.runEvent('AfterTypeChange', this, null, null, [oldTypes, this.types]);
 
 		return true;
 	}
@@ -2003,6 +2009,9 @@ export class Pokemon {
 	addType(newType: string) {
 		if (this.terastallized) return false;
 		this.addedType = newType;
+
+		this.battle.runEvent('AfterTypeChange', this, null, null, [this.types, [...this.types, this.addedType]]);
+
 		return true;
 	}
 
@@ -2022,7 +2031,7 @@ export class Pokemon {
 		if (item === 'ironball') return true;
 		// If a Fire/Flying type uses Burn Up and Roost, it becomes ???/Flying-type, but it's still grounded.
 		if (!negateImmunity && this.hasType('Flying') && !(this.hasType('???') && 'roost' in this.volatiles)) return false;
-		if (this.hasAbility('levitate') && !this.battle.suppressingAbility(this)) return null;
+		if (this.hasAbility(['levitate', 'metagaming', 'noweaknesses']) && !this.battle.suppressingAbility(this)) return null;
 		if ('magnetrise' in this.volatiles) return false;
 		if ('telekinesis' in this.volatiles) return false;
 		return item !== 'airballoon';

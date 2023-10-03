@@ -30,7 +30,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 		onModifySpe(spe, pokemon) {
 			// Paralysis occurs after all other Speed modifiers, so evaluate all modifiers up to this point first
 			spe = this.finalModify(spe);
-			if (!pokemon.hasAbility('quickfeet')) {
+			if (!pokemon.hasAbility(['quickfeet', 'paralysisheal'])) {
 				spe = Math.floor(spe * 50 / 100);
 			}
 			return spe;
@@ -38,8 +38,10 @@ export const Conditions: {[k: string]: ConditionData} = {
 		onBeforeMovePriority: 1,
 		onBeforeMove(pokemon) {
 			if (this.randomChance(1, 4)) {
-				this.add('cant', pokemon, 'par');
-				return false;
+				if (!pokemon.hasAbility('paralysisheal')) {
+					this.add('cant', pokemon, 'par');
+					return false;
+				} else { return; }
 			}
 		},
 	},
@@ -735,7 +737,136 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'none');
 		},
 	},
+	/** Wack weathers */
+	midnight: {
+		name: 'Midnight',
+		effectType: 'Weather',
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source?.hasItem('blackrock')) {
+				return 8;
+			}
+			return 5;
+		},
+		onModifySpePriority: 10,
+		onModifySpe(spe, pokemon) {
+			if (pokemon.hasType('Zombie') && this.field.isWeather('midnight')) {
+				return this.modify(spe, 2);
+			}
+		},
+		onWeatherModifyDamage(damage, attacker, defender, move) {
+			if (move.type === 'Ghost' || move.type === 'Fear' || move.type === 'Dark') {
+				this.debug('Midnight boost');
+				return this.chainModify(1.5);
+			}
+			if (move.type === 'Light') {
+				this.debug('Midnight light suppress');
+				return this.chainModify(0.5);
+			}
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'Midnight', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'Midnight');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Midnight', '[upkeep]');
+			if (this.field.isWeather('midnight')) this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	acidrain: {
+		name: 'Acid Rain',
+		effectType: 'Weather',
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source?.hasItem('acidrock')) {
+				return 8;
+			}
+			return 5;
+		},
+		onWeatherModifyDamage(damage, attacker, defender, move) {
+			if (move.type === 'Poison') {
+				this.debug('Acid Rain poison boost');
+				return this.chainModify(1.5);
+			}
+			if (move.type === 'Fairy') {
+				this.debug('Acid Rain fairy suppress');
+				return this.chainModify(0.5);
+			}
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'AcidRain', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'AcidRain');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'AcidRain', '[upkeep]');
+			if (this.field.isWeather('acidrain')) this.eachEvent('Weather');
+		},
+		onWeather(target) {
+			this.damage(target.baseMaxhp / 16);
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	bladerain: {
+		name: 'Blade Rain',
+		effectType: 'Weather',
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source?.hasItem('chromerock')) {
+				return 8;
+			}
+			return 5;
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'BladeRain', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'BladeRain');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'BladeRain', '[upkeep]');
+			if (this.field.isWeather('bladerain')) this.eachEvent('Weather');
+		},
+		onWeather(target) {
+			this.damage(target.baseMaxhp / 16);
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
 
+	/** Wack conditions */
+	bleed: {
+		name: 'bleed',
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'Bleed');
+		},
+		onResidualOrder: 13,
+		onResidual(pokemon) {
+			this.damage(pokemon.baseMaxhp / (this.field.isWeather('bloddrain') ? 10 : 14));
+			
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, 'Bleed');
+		},
+	},
 	dynamax: {
 		name: 'Dynamax',
 		noCopy: true,
@@ -878,6 +1009,285 @@ export const Conditions: {[k: string]: ConditionData} = {
 			}
 			source.removeVolatile('rolloutstorage');
 			return bp;
+		},
+	},
+	/* Clover conditions */
+	stinkbomb: {
+		duration: 1,
+		onModifyType(move) {
+			move.type = 'Poison';
+		},
+	},
+	retro: {
+		// Ability suppression implemented in Pokemon.ignoringAbility() within sim/pokemon.js
+		onStart(pokemon) {
+			this.add('-endability', pokemon);
+			this.singleEvent('End', pokemon.getAbility(), pokemon.abilityState, pokemon, pokemon, 'retro');
+		},
+		onCopy(pokemon) {
+			if (pokemon.getAbility().isPermanent) pokemon.removeVolatile('retro');
+		},
+	},
+	/* Clover CAP conditions */
+	backdraft: {
+		duration: 2,
+		onSideStart(side) {
+			this.add('-sidestart', side, 'Backdraft');
+		},
+		onModifySpe(spe, pokemon) {
+			return this.chainModify(2);
+		},
+		onSideResidualOrder: 26,
+		onSideResidualSubOrder: 5,
+		onSideEnd(side) {
+			this.add('-sideend', side, 'Backdraft');
+		},
+	},
+	densefog: {
+		name: 'DenseFog',
+		effectType: 'Weather',
+		duration: 5,
+		durationCallback(source, effect) {
+			return 5;
+		},
+		onDisableMove(pokemon) {
+			if (pokemon.hasItem('utilityumbrella')) return;
+			for (const moveSlot of pokemon.moveSlots) {
+				if (this.dex.moves.get(moveSlot.move).category === 'Status') {
+					pokemon.disableMove(moveSlot.id);
+				}
+			}
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'DenseFog', '[from] ability: ' + effect, '[of] ' + source);
+			} else {
+				this.add('-weather', 'DenseFog');
+			}
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	bound: {
+		name: 'bound',
+		duration: 2,
+		onBeforeMovePriority: 4,
+		onBeforeMove(pokemon) {
+			this.add('cant', pokemon, 'bound');
+			return false;
+		},
+	},
+	buried: {
+		name: 'buried',
+		duration: 2,
+		onStart(pokemon, source) {
+			this.add('-activate', pokemon, 'move: ' + this.effectState.sourceEffect, '[of] ' + source);
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, this.effectState.sourceEffect, '[buried]');
+		},
+		onTrapPokemon(pokemon) {
+			if (this.effectState.source?.isActive) pokemon.tryTrap();
+		},
+	},
+	temptrapped: {
+		name: 'temptrapped',
+		duration: 2,
+		onStart(pokemon, source) {
+			this.add('-activate', pokemon, 'move: ' + this.effectState.sourceEffect, '[of] ' + source);
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, this.effectState.sourceEffect, '[temptrapped]');
+		},
+		onTrapPokemon(pokemon) {
+			if (this.effectState.source?.isActive) pokemon.tryTrap();
+		},
+	},
+	/* Clover Blobbos CAP conditions */
+	lootable: {
+		name: 'Lootable',
+		onSwap(target) {
+			target.addVolatile('focusenergy');
+			const oldAbility = target.setAbility('serenegrace');
+			if (oldAbility) {
+				this.add('-activate', target, 'ability: Serene Grace', this.dex.abilities.get(oldAbility).name);
+			}
+			target.side.removeSlotCondition(target, 'lootable');
+		},
+	},
+
+	hyperboreanarctic: {
+		name: 'Hyperborean Arctic',
+		effectType: 'Weather',
+		duration: 0,
+		onTryMovePriority: 1,
+		onTryMove(attacker, defender, move) {
+			if (move.type === 'Fighting' && move.category !== 'Status') {
+				this.debug('Hyperborean Arctic fighting suppress');
+				this.add('-fail', attacker, move, '[from] Hyperborean Arctic');
+				this.attrLastMove('[still]');
+				return null;
+			}
+		},
+		onWeatherModifyDamage(damage, attacker, defender, move) {
+			if (defender.hasItem('utilityumbrella')) return;
+			if (move.type === 'Ice') {
+				this.debug('Ice storm boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onFieldStart(field, source, effect) {
+			this.add('-weather', 'Hyperborean Arctic', '[from] ability: ' + effect.name, '[of] ' + source);
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Hyperborean Arctic', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onWeather(target) {
+			if (!target.hasType('Ice')) this.damage(target.baseMaxhp / 8);
+		},
+		onModifyDef(def, pokemon) {
+			if (pokemon.hasType('Ice')) {
+				return this.modify(def, 1.5);
+			}
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+
+
+	flashbang: {
+		duration: 2,
+		onSideStart(side) {
+			this.add('-sidestart', side, 'Flashbang');
+		},
+		onFoeTryMove(target, source, effect) {
+			if (effect && (effect.priority <= 0.1 || effect.target === 'self')) {
+				return;
+			}
+
+			return null;
+		},
+
+
+		onSideResidualOrder: 26,
+		onSideResidualSubOrder: 5,
+		onSideEnd(side) {
+			this.add('-sideend', side, 'Flashbang');
+		},
+	},
+	timefall: {
+		name: 'Timefall',
+		effectType: 'Weather',
+		duration: 5,
+		onWeather(target) {
+			if (target.hasItem('utilityumbrella')) {
+				if (this.randomChance(1, 100)) {
+					this.add('-message', `${target.name} is Fragile... but not that fragile.`);
+				}
+
+				return;
+			}
+			let statName = 'atk';
+			let bestStat = 0;
+			let s: StatIDExceptHP;
+			for (s in target.storedStats) {
+				if (target.storedStats[s] > bestStat) {
+					statName = s;
+					bestStat = target.storedStats[s];
+				}
+			}
+			this.boost({[statName]: 1}, target);
+			this.damage(target.baseMaxhp / 8);
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Timefall', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldStart() {
+			this.add('-weather', 'Timefall');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	bridge: {
+		name: 'Bridge',
+		onStart(pokemon) {
+			this.add('-start', pokemon, 'bridge');
+		},
+		onSwitchIn(pokemon) {
+			if (this.effectState.boosts) {
+				if (pokemon.hasAbility('chiralnetwork')) {
+					this.add('-end', pokemon, 'bridge');
+					this.boost(this.effectState.boosts);
+				} else {
+					this.add('-fail', pokemon, 'bridge');
+				}
+
+				pokemon.side.removeSlotCondition(pokemon, 'bridge');
+			} else if (!pokemon.hasAbility('chiralnetwork')) {
+				this.add('-start', pokemon, 'bridge');
+			}
+		},
+		onSwitchOut(pokemon) {
+			if (!pokemon.hasAbility('chiralnetwork')) {
+				const boosts: SparseBoostsTable = {};
+
+				let i: BoostID;
+				for (i in pokemon.boosts) {
+					if (pokemon.boosts[i] > 0) {
+						boosts[i] = pokemon.boosts[i];
+					}
+				}
+
+				this.effectState.boosts = boosts;
+			}
+		},
+	},
+	luckyroll: {
+		name: 'Lucky Roll',
+		onSideStart(side) {
+			this.add('-sidestart', side, 'Lucky Roll');
+			this.effectState.layers = 1;
+		},
+		onSideRestart(side) {
+			if (this.effectState.layers >= 3) return false;
+			this.add('-sidestart', side, 'Lucky Roll');
+			this.effectState.layers++;
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.hasItem('heavydutyboots')) return;
+			const chanceMod = Math.pow(1.05, this.effectState.layers || 0);
+			if (move.secondaries) {
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance *= chanceMod;
+				}
+			}
+			if (move.self?.chance) move.self.chance *= chanceMod;
+		},
+		onModifyCritRatio(critRatio, pokemon) {
+			if (pokemon.hasItem('heavydutyboots')) return;
+			if (this.effectState.layers >= 3) return critRatio + 1;
+		},
+	},
+	overkill: {
+		name: "Overkill",
+		onUpdate(pokemon) {
+			const data = this.effectState;
+			if (!data.overkillDamage) {
+				pokemon.side.removeSlotCondition(pokemon, 'overkill');
+			} else {
+				if (!pokemon.fainted) {
+					pokemon.damage(data.overkillDamage);
+					pokemon.side.removeSlotCondition(pokemon, 'overkill');
+				}
+			}
 		},
 	},
 };

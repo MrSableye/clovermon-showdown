@@ -49,6 +49,7 @@ import {FS, Utils, ProcessManager} from '../lib';
 import {
 	Auth, GlobalAuth, SECTIONLEADER_SYMBOL, PLAYER_SYMBOL, HOST_SYMBOL, RoomPermission, GlobalPermission,
 } from './user-groups';
+import {UserBadge} from './badges';
 
 const MINUTES = 60 * 1000;
 const IDLE_TIMER = 60 * MINUTES;
@@ -198,9 +199,9 @@ function isTrusted(userid: ID) {
 }
 
 function isPublicBot(userid: ID) {
-	if (globalAuth.get(userid) === '*') return true;
+	if (['*', 'ƒ'].includes(globalAuth.get(userid))) return true;
 	for (const room of Rooms.global.chatRooms) {
-		if (room.persist && !room.settings.isPrivate && room.auth.get(userid) === '*') {
+		if (room.persist && !room.settings.isPrivate && ['*', 'ƒ'].includes(room.auth.get(userid))) {
 			return true;
 		}
 	}
@@ -380,6 +381,8 @@ export class User extends Chat.MessageContext {
 	lastConnected: number;
 	foodfight?: {generatedTeam: string[], dish: string, ingredients: string[], timestamp: number};
 	friends?: Set<string>;
+	badges?: UserBadge[];
+	customgroup?: string;
 
 	chatQueue: ChatQueueEntry[] | null;
 	chatQueueTimeout: NodeJS.Timeout | null;
@@ -1102,7 +1105,7 @@ export class User extends Chat.MessageContext {
 		this.isStaff = !!(groupInfo && (groupInfo.lock || groupInfo.root));
 		if (!this.isStaff) {
 			const rank = Rooms.get('staff')?.auth.getDirect(this.id);
-			this.isStaff = !!(rank && rank !== '*' && rank !== Users.Auth.defaultSymbol());
+			this.isStaff = !!(rank && !['*', 'ƒ'].includes(rank) && rank !== Users.Auth.defaultSymbol());
 		}
 		if (this.trusted) {
 			if (this.locked && this.permalocked) {
@@ -1134,7 +1137,7 @@ export class User extends Chat.MessageContext {
 		this.isStaff = !!(groupInfo && (groupInfo.lock || groupInfo.root));
 		if (!this.isStaff) {
 			const rank = Rooms.get('staff')?.auth.getDirect(this.id);
-			this.isStaff = !!(rank && rank !== '*' && rank !== Users.Auth.defaultSymbol());
+			this.isStaff = !!(rank && !['*', 'ƒ'].includes(rank) && rank !== Users.Auth.defaultSymbol());
 		}
 		Rooms.global.checkAutojoin(this);
 		if (this.registered) {

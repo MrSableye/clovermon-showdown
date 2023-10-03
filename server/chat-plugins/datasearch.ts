@@ -11,6 +11,7 @@
 import {ProcessManager, Utils} from '../../lib';
 import {TeamValidator} from '../../sim/team-validator';
 import {Chat} from '../chat';
+import {Tags} from '../../data/tags';
 
 interface DexOrGroup {
 	abilities: {[k: string]: boolean};
@@ -26,6 +27,7 @@ interface DexOrGroup {
 	weak: {[k: string]: boolean};
 	stats: {[k: string]: {[k in Direction]: number}};
 	skip: boolean;
+	tags: {[k: string]: boolean};
 }
 
 interface MoveOrGroup {
@@ -664,6 +666,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 		attack: 'atk', defense: 'def', specialattack: 'spa', spc: 'spa', special: 'spa', spatk: 'spa',
 		specialdefense: 'spd', spdef: 'spd', speed: 'spe', wt: 'weight', ht: 'height', generation: 'gen',
 	};
+	const allSpeciesTags = ['blobbokind', 'krackokind', 'weedlekind', 'inferior', 'mythical', 'restrictedlegendary', 'sublegendary'];
 	let showAll = false;
 	let sort = null;
 	let megaSearch = null;
@@ -700,7 +703,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 	for (const andGroup of splitTarget) {
 		const orGroup: DexOrGroup = {
 			abilities: {}, tiers: {}, doublesTiers: {}, colors: {}, 'egg groups': {}, formes: {},
-			gens: {}, moves: {}, types: {}, resists: {}, weak: {}, stats: {}, skip: false,
+			gens: {}, moves: {}, types: {}, resists: {}, weak: {}, stats: {}, skip: false, tags: {},
 		};
 		const parameters = andGroup.split("|");
 		if (parameters.length > 3) return {error: "No more than 3 alternatives for each parameter may be used."};
@@ -861,6 +864,12 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 			if (allFormes.includes(toID(target))) {
 				target = toID(target);
 				orGroup.formes[target] = !isNotSearch;
+				continue;
+			}
+
+			if (allSpeciesTags.includes(toID(target))) {
+				target = toID(target);
+				orGroup.tags[target] = !isNotSearch;
 				continue;
 			}
 
@@ -1083,6 +1092,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 				) ||
 				((species.tier !== 'Unreleased' || unreleasedSearch) && species.tier !== 'Illegal')
 			) &&
+			(nationalSearch || species.isNonstandard !== 'Past') &&
 			(!species.tier.startsWith("CAP") || capSearch) &&
 			megaSearchResult &&
 			gmaxSearchResult &&
@@ -1223,6 +1233,17 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 				if (toID(dex[mon].forme).includes(forme) === alts.formes[forme]) {
 					matched = true;
 					break;
+				}
+			}
+			if (matched) continue;
+
+			for (const tagSearch in alts.tags) {
+				const tag = Tags[toID(tagSearch)];
+				if (tag && tag.speciesFilter) {
+					if (tag.speciesFilter(dex[mon])) {
+						matched = true;
+						break;
+					}
 				}
 			}
 			if (matched) continue;
@@ -1376,7 +1397,7 @@ function runMovesearch(target: string, cmd: string, canAll: boolean, message: st
 	const allFlags = [
 		'allyanim', 'bypasssub', 'bite', 'bullet', 'cantusetwice', 'charge', 'contact', 'dance', 'defrost', 'distance', 'failcopycat', 'failencore',
 		'failinstruct', 'failmefirst', 'failmimic', 'futuremove', 'gravity', 'heal', 'mirror', 'mustpressure', 'noassist', 'nonsky', 'noparentalbond',
-		'nosleeptalk', 'pledgecombo', 'powder', 'protect', 'pulse', 'punch', 'recharge', 'reflectable', 'slicing', 'snatch', 'sound', 'wind',
+		'nosleeptalk', 'pledgecombo', 'powder', 'protect', 'pulse', 'punch', 'recharge', 'reflectable', 'slicing', 'snatch', 'sound', 'wind', 'kick', 'bone',
 
 		// Not flags directly from move data, but still useful to sort by
 		'highcrit', 'multihit', 'ohko', 'protection', 'secondary',

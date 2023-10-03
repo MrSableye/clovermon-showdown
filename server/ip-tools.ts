@@ -583,13 +583,13 @@ export const IPTools = new class {
 		}
 		if (this.singleIPOpenProxies.has(ip) || this.torProxyIps.has(ip)) {
 			// single-IP open proxies
-			return 'proxy';
+			// return 'proxy';
 		}
 
 		if (/^he\.net(\?|)\/proxy$/.test(host)) {
 			// Known to only be VPN services
 			if (['74.82.60.', '72.52.87.', '65.49.126.'].some(range => ip.startsWith(range))) {
-				return 'proxy';
+				// return 'proxy';
 			}
 			// Hurricane Electric has an annoying habit of having residential
 			// internet and datacenters on the same IP ranges - we get a lot of
@@ -604,7 +604,7 @@ export const IPTools = new class {
 		// servihosting but I assume for a similar reason. This isn't actually
 		// tenable; any service that can host bots can and does also host proxies.
 		if (this.proxyHosts.has(host) || host.endsWith('/proxy')) {
-			return 'proxy';
+			// return 'proxy';
 		}
 		if (this.residentialHosts.has(host) || host.endsWith('/res')) {
 			return 'res';
@@ -614,7 +614,7 @@ export const IPTools = new class {
 		}
 		if (/^ip-[0-9]+-[0-9]+-[0-9]+\.net$/.test(host) || /^ip-[0-9]+-[0-9]+-[0-9]+\.eu$/.test(host)) {
 			// OVH
-			return 'proxy';
+			// return 'proxy';
 		}
 
 		if (host.endsWith('/unknown')) {

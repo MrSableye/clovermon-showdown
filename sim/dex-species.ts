@@ -7,7 +7,7 @@ interface SpeciesAbility {
 	S?: string;
 }
 
-type SpeciesTag = "Mythical" | "Restricted Legendary" | "Sub-Legendary" | "Paradox";
+type SpeciesTag = "Mythical" | "Restricted Legendary" | "Sub-Legendary" | "Paradox" | "Inferior" | "Weedlekind" | "Krackokind" | "Blobbokind";
 
 export interface SpeciesData extends Partial<Species> {
 	name: string;
@@ -19,6 +19,8 @@ export interface SpeciesData extends Partial<Species> {
 	baseStats: StatsTable;
 	eggGroups: string[];
 	weightkg: number;
+	creator?: string;
+	metadata?: Record<string, string | number>;
 }
 
 export type ModdedSpeciesData = SpeciesData | Partial<Omit<SpeciesData, 'name'>> & {inherit: true};
@@ -231,6 +233,16 @@ export class Species extends BasicEffect implements Readonly<BasicEffect & Speci
 	 * National Dex Tier. The Pokemon's location in the Smogon National Dex tier system.
 	 */
 	readonly natDexTier: TierTypes.Singles | TierTypes.Other;
+	declare readonly randomBattleMoves?: readonly ID[];
+	declare readonly randomBattleLevel?: number;
+	declare readonly randomDoubleBattleMoves?: readonly ID[];
+	declare readonly randomDoubleBattleLevel?: number;
+	declare readonly randomBattleNoDynamaxMoves?: readonly ID[];
+	declare readonly exclusiveMoves?: readonly ID[];
+	declare readonly comboMoves?: readonly ID[];
+	declare readonly essentialMove?: ID;
+	declare readonly creator?: string;
+	declare readonly metadata?: Record<string, string | number>;
 
 	constructor(data: AnyObject) {
 		super(data);

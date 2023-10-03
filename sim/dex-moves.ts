@@ -60,6 +60,22 @@ interface MoveFlags {
 	snatch?: 1; // Can be stolen from the original user and instead used by another Pokemon using Snatch.
 	sound?: 1; // Has no effect on Pokemon with the Ability Soundproof.
 	wind?: 1; // Activates the Wind Power and Wind Rider Abilities.
+	kick?: 1; // Kick-based moves (for Striker)
+	bone?: 1; // Bone-based moves (for Bone Zone)
+	hammer?: 1; // Hammer-based moves (for Admin Abuse)
+	naturePower?: 1;
+	tail?: 1; // Tail-based moves
+	coral?: 1; // Coral-based moves
+	bounce?: 1; // Bounce-based moves
+	web?: 1; // Web-based moves
+	sword?: 1; // Sword-based moves
+	beak?: 1; // Beak-based moves
+	arrow?: 1; // Arrow-based moves
+	kiss?: 1; // Kiss-based moves
+	west?: 1; // Yeehaw moves
+	moon?: 1; // Moon-based moves
+	sun?: 1; // Sun-based moves
+	above?: 1; // Moves from above (ex: Thunder)
 }
 
 export interface HitEffect {
@@ -221,6 +237,7 @@ export interface MoveData extends EffectData, MoveEventMethods, HitEffect {
 	basePowerModifier?: number;
 	critModifier?: number;
 	critRatio?: number;
+	canContinue?: boolean;
 	/**
 	 * Pokemon for the attack stat. Ability and Item damage modifiers still come from the real attacker.
 	 */

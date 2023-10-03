@@ -1571,7 +1571,7 @@ export class GlobalRoomState {
 		} = {
 			chat: [],
 			sectionTitles: Object.values(RoomSections.sectionNames),
-			userCount: Users.onlineCount,
+			userCount: Users.users.size,
 			battleCount: this.battleCount,
 		};
 		for (const room of this.chatRooms) {
@@ -1710,7 +1710,7 @@ export class GlobalRoomState {
 			user.joinRoom(roomName, connection);
 			if (roomName === 'lobby') includesLobby = true;
 		}
-		if (!includesLobby && Config.serverid !== 'showdown') user.send(`>lobby\n|deinit`);
+		if (!includesLobby && Config.serverid !== 'clodown') user.send(`>lobby\n|deinit`);
 	}
 	checkAutojoin(user: User, connection?: Connection) {
 		if (!user.named) return;

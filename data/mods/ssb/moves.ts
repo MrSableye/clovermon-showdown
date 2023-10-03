@@ -977,7 +977,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 						move: moveData.name,
 						id: moveData.id,
 						pp: Math.floor(moveData.pp * (moveSlot.pp / moveSlot.maxpp)),
-						maxpp: ((moveData.noPPBoosts || moveData.isZ) ? moveData.pp : moveData.pp * 8 / 5),
+						maxpp: ((moveData.noPPBoosts || moveData.isZ) ? moveData.pp : Math.floor(moveData.pp * 8 / 5)),
 						target: moveData.target,
 						disabled: false,
 						disabledSource: '',
@@ -2565,8 +2565,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 						const newSlot = {
 							id: newMove.id,
 							move: newMove.name,
-							pp: newMove.pp * 8 / 5,
-							maxpp: newMove.pp * 8 / 5,
+							pp: Math.floor(newMove.pp * 8 / 5),
+							maxpp: Math.floor(newMove.pp * 8 / 5),
 							disabled: slot.disabled,
 							used: false,
 						};
@@ -2591,8 +2591,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 						const newSlot = {
 							id: newMove.id,
 							move: newMove.name,
-							pp: newMove.pp * 8 / 5,
-							maxpp: newMove.pp * 8 / 5,
+							pp: Math.floor(newMove.pp * 8 / 5),
+							maxpp: Math.floor(newMove.pp * 8 / 5),
 							disabled: slot.disabled,
 							used: false,
 						};

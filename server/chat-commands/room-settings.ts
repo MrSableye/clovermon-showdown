@@ -218,15 +218,16 @@ export const commands: Chat.ChatCommands = {
 	inviteonlynext(target, room, user) {
 		const groupConfig = Config.groups[Users.PLAYER_SYMBOL];
 		if (!groupConfig?.editprivacy) return this.errorReply(`/ionext - Access denied.`);
-		if (this.meansNo(target)) {
-			user.battleSettings.inviteOnly = false;
-			user.update();
-			this.sendReply("Your next battle will be publicly visible.");
-		} else {
-			user.battleSettings.inviteOnly = true;
-			user.update();
-			this.sendReply(`Your next battle will be invite-only${Rooms.RoomBattle.battleForcedSetting(user, 'privacy') ? `, unless it is rated` : ``}.`);
-		}
+		return this.sendReply('Stop making your battles private, cringelord');
+		// if (this.meansNo(target)) {
+		// 	user.battleSettings.inviteOnly = false;
+		// 	user.update();
+		// 	this.sendReply("Your next battle will be publicly visible.");
+		// } else {
+		// 	user.battleSettings.inviteOnly = true;
+		// 	user.update();
+		// 	this.sendReply(`Your next battle will be invite-only${Rooms.RoomBattle.battleForcedSetting(user, 'privacy') ? `, unless it is rated` : ``}.`);
+		// }
 	},
 	inviteonlynexthelp: [
 		`/inviteonlynext - Sets your next battle to be invite-only.`,
@@ -256,16 +257,17 @@ export const commands: Chat.ChatCommands = {
 			return this.sendReply(`Modjoin is currently set to: ${modjoinSetting}`);
 		}
 		if (room.battle) {
-			this.checkCan('editprivacy', null, room);
-			if (room.battle.forcedSettings.privacy) {
-				return this.errorReply(
-					`This battle is required to be public due to a player having a name prefixed by '${room.battle.forcedSettings.privacy}'.`
-				);
-			}
-			if (room.battle.inviteOnlySetter && !user.can('mute', null, room) && room.battle.inviteOnlySetter !== user.id) {
-				return this.errorReply(`Only the person who set this battle to be invite-only can turn it off.`);
-			}
-			room.battle.inviteOnlySetter = user.id;
+			return this.sendReply('Stop making your battles private, cringelord');
+			// this.checkCan('editprivacy', null, room);
+			// if (room.battle.forcedSettings.privacy) {
+			// 	return this.errorReply(
+			// 		`This battle is required to be public due to a player having a name prefixed by '${room.battle.forcedSettings.privacy}'.`
+			// 	);
+			// }
+			// if (room.battle.inviteOnlySetter && !user.can('mute', null, room) && room.battle.inviteOnlySetter !== user.id) {
+			// 	return this.errorReply(`Only the person who set this battle to be invite-only can turn it off.`);
+			// }
+			// room.battle.inviteOnlySetter = user.id;
 		} else if (room.settings.isPersonal) {
 			this.checkCan('editroom', null, room);
 		} else {
@@ -1187,15 +1189,16 @@ export const commands: Chat.ChatCommands = {
 	hidenext(target, room, user) {
 		const groupConfig = Config.groups[Users.PLAYER_SYMBOL];
 		if (!groupConfig?.editprivacy) return this.errorReply(`/hidenext - Access denied.`);
-		if (this.meansNo(target)) {
-			user.battleSettings.hidden = false;
-			user.update();
-			this.sendReply("Your next battle will be publicly visible.");
-		} else {
-			user.battleSettings.hidden = true;
-			user.update();
-			this.sendReply(`Your next battle will be hidden${Rooms.RoomBattle.battleForcedSetting(user, 'privacy') ? `, unless it is rated` : ``}.`);
-		}
+		return this.sendReply('Stop making your battles private, cringelord');
+		// if (this.meansNo(target)) {
+		// 	user.battleSettings.hidden = false;
+		// 	user.update();
+		// 	this.sendReply("Your next battle will be publicly visible.");
+		// } else {
+		// 	user.battleSettings.hidden = true;
+		// 	user.update();
+		// 	this.sendReply(`Your next battle will be hidden${Rooms.RoomBattle.battleForcedSetting(user, 'privacy') ? `, unless it is rated` : ``}.`);
+		// }
 	},
 	hidenexthelp: [
 		`/hidenext - Sets your next battle to be hidden.`,

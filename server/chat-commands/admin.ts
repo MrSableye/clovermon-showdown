@@ -14,6 +14,8 @@ import * as path from 'path';
 import * as child_process from 'child_process';
 import {FS, Utils, ProcessManager, SQL} from '../../lib';
 
+const BOT_GROUPS = ['*', 'ƒ'];
+
 interface ProcessData {
 	cmd: string;
 	cpu?: string;
@@ -174,7 +176,7 @@ export const commands: Chat.ChatCommands = {
 		this.checkHTML(target);
 		this.checkCan('addhtml', null, room);
 		target = Chat.collapseLineBreaksHTML(target);
-		if (user.tempGroup !== '*') {
+		if (!BOT_GROUPS.includes(user.tempGroup)) {
 			target += Utils.html`<div style="float:right;color:#888;font-size:8pt">[${user.name}]</div><div style="clear:both"></div>`;
 		}
 
@@ -192,7 +194,7 @@ export const commands: Chat.ChatCommands = {
 		html = this.checkHTML(html);
 		this.checkCan('addhtml', null, room);
 		html = Chat.collapseLineBreaksHTML(html);
-		if (user.tempGroup !== '*') {
+		if (!BOT_GROUPS.includes(user.tempGroup)) {
 			html += Utils.html`<div style="float:right;color:#888;font-size:8pt">[${user.name}]</div><div style="clear:both"></div>`;
 		}
 
@@ -212,7 +214,7 @@ export const commands: Chat.ChatCommands = {
 		html = this.checkHTML(html);
 		this.checkCan('addhtml', null, room);
 		html = Chat.collapseLineBreaksHTML(html);
-		if (user.tempGroup !== '*') {
+		if (!BOT_GROUPS.includes(user.tempGroup)) {
 			html += Utils.html`<div style="float:right;color:#888;font-size:8pt">[${user.name}]</div><div style="clear:both"></div>`;
 		}
 
@@ -241,7 +243,7 @@ export const commands: Chat.ChatCommands = {
 		html = this.checkHTML(html);
 		this.checkCan('addhtml', null, room);
 		html = Chat.collapseLineBreaksHTML(html);
-		if (user.tempGroup !== '*') {
+		if (!BOT_GROUPS.includes(user.tempGroup)) {
 			html += Utils.html`<div style="float:right;color:#888;font-size:8pt">[${user.name}]</div><div style="clear:both"></div>`;
 		}
 
@@ -522,7 +524,7 @@ export const commands: Chat.ChatCommands = {
 		let {targetUser, rest: message} = this.requireUser(target);
 
 		const auth = this.room ? this.room.auth : Users.globalAuth;
-		if (!['*', '#'].includes(auth.get(targetUser))) {
+		if (![...BOT_GROUPS, '#'].includes(auth.get(targetUser))) {
 			return this.popupReply(`The user "${targetUser.name}" is not a bot in this room.`);
 		}
 		this.room = null; // shouldn't be in a room
@@ -576,7 +578,9 @@ export const commands: Chat.ChatCommands = {
 			'processmanager', 'roomsp', 'usersp',
 		];
 
-		target = toID(target);
+		const [hotpatchTarget, options] = target.split(',').map(toID);
+
+		target = hotpatchTarget;
 		try {
 			Utils.clearRequireCache({exclude: ['/lib/process-manager']});
 			if (target === 'all') {
@@ -813,6 +817,9 @@ export const commands: Chat.ChatCommands = {
 			['development', 'staff'] as RoomID[],
 			`|c|${user.getIdentity()}|/log ${user.name} used /hotpatch ${target}`
 		);
+		if (this.room && (options || [] as string[]).includes('notify')) {
+			this.room.add(`|raw|<p>${user.name} hotpatched ${target}</p>`);
+		}
 	},
 	hotpatchhelp: [
 		`Hot-patching the game engine allows you to update parts of Showdown without interrupting currently-running battles. Requires: console access`,
@@ -1714,10 +1721,10 @@ export const pages: Chat.PageTable = {
 		if (!bot) {
 			return `<div class="pad"><h2>The bot "${bot}" is not available.</h2></div>`;
 		}
-		let canSend = Users.globalAuth.get(bot) === '*';
+		let canSend = BOT_GROUPS.includes(Users.globalAuth.get(bot));
 		let room;
 		for (const curRoom of Rooms.global.chatRooms) {
-			if (['*', '#'].includes(curRoom.auth.getDirect(bot.id))) {
+			if ([...BOT_GROUPS, '#'].includes(curRoom.auth.getDirect(bot.id))) {
 				canSend = true;
 				room = curRoom;
 			}

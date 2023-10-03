@@ -68,6 +68,7 @@ export class LadderStore {
 				const line = dataLine.trim();
 				if (!line) continue;
 				const row = line.split('\t');
+				if (isNaN(Number(row[2]))) continue;
 				ladder.push([toID(row[1]), Number(row[0]), row[1], Number(row[2]), Number(row[3]), Number(row[4]), row[5]]);
 			}
 			// console.log('Ladders(' + this.formatid + ') loaded tsv: ' + JSON.stringify(this.ladder));
@@ -144,6 +145,18 @@ export class LadderStore {
 		return [formatid, buf];
 	}
 
+	async getTopData(prefix?: string) {
+		const ladder = await this.getLadder();
+		const data = [];
+
+		for (const [, row] of ladder.entries()) {
+			if (prefix && !row[0].startsWith(prefix)) continue;
+			data.push(row);
+		}
+
+		return data;
+	}
+
 	/**
 	 * Returns a Promise for the Elo rating of a user
 	 */
@@ -182,6 +195,23 @@ export class LadderStore {
 			row[5]++; // tie
 		}
 		row[6] = '' + new Date();
+	}
+
+	static async changeName(oldName: string, newName: string): Promise<LadderRow[]> {
+		const ratings: LadderRow[] = [];
+		for (const format of Dex.formats.all()) {
+			if (format.searchShow) {
+				const store = new LadderStore(format.id);
+				const ladder = await store.getLadder();
+				const userIndex = store.indexOfUser(oldName, false);
+				if (userIndex < 0) continue;
+				ratings.push(ladder[userIndex]);
+				ladder[userIndex][0] = toID(newName);
+				ladder[userIndex][2] = newName;
+				await store.save();
+			}
+		}
+		return ratings;
 	}
 
 	/**

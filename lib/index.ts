@@ -8,3 +8,4 @@ export {crashlogger} from './crashlogger';
 export * as ProcessManager from './process-manager';
 export {SQL} from './sql';
 export {PostgresDatabase} from './postgres';
+export * as Image from './image';

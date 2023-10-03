@@ -3,6 +3,7 @@
 import {Utils} from "../lib";
 import {Pokemon} from "../sim/pokemon";
 import {Teams} from "../sim/teams";
+import { Tags } from "./tags";
 
 // The list of formats is stored in config/formats.js
 export const Rulesets: {[k: string]: FormatData} = {
@@ -15,8 +16,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 		name: 'Standard',
 		desc: "The standard ruleset for all offical Smogon singles tiers (Ubers, OU, etc.)",
 		ruleset: [
-			'Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Items Clause', 'Evasion Moves Clause', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod',
-			'Min Source Gen = 9',
+			'Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod',
+			'Min Source Gen = 8',
 		],
 	},
 	standardnext: {
@@ -71,7 +72,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 		desc: "The standard ruleset for all official Smogon doubles tiers",
 		ruleset: [
 			'Obtainable', 'Team Preview', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Gravity Sleep Clause', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod',
-			'Min Source Gen = 9',
+			'Min Source Gen = 8',
 		],
 	},
 	standardoms: {
@@ -656,6 +657,30 @@ export const Rulesets: {[k: string]: FormatData} = {
 			for (const set of team) {
 				const species = this.dex.species.get(set.species);
 				if (speciesTable.has(species.num)) {
+					return [`You are limited to one of each Pokémon by Species Clause.`, `(You have more than one ${species.baseSpecies})`];
+				}
+				speciesTable.add(species.num);
+			}
+		},
+	},
+	speciesclausebutspecialforblobbos: {
+		effectType: 'ValidatorRule',
+		name: 'Species Clause but Special for Blobbos',
+		desc: "Prevents teams from having more than one Pok&eacute;mon from the same species",
+		onBegin() {
+			this.add('rule', 'Species Clause: Limit one of each Pokémon');
+		},
+		onValidateTeam(team, format) {
+			const speciesTable = new Set<number>();
+			const blobbosFormes = new Set<string>();
+			for (const set of team) {
+				const species = this.dex.species.get(set.species);
+				if (Tags.blobbokind.speciesFilter!(species)) {
+					if (blobbosFormes.has(species.forme)) {
+						return [`You are limited to one of each Blobbos Forme by Species Clause but Special for Blobbos.`, `(You have more than one ${species.name})`];
+					}
+					blobbosFormes.add(species.forme);
+				} else if (speciesTable.has(species.num)) {
 					return [`You are limited to one of each Pokémon by Species Clause.`, `(You have more than one ${species.baseSpecies})`];
 				}
 				speciesTable.add(species.num);
@@ -1404,15 +1429,15 @@ export const Rulesets: {[k: string]: FormatData} = {
 		desc: "Allows Pok&eacute;mon to use any move that they or a previous evolution/out-of-battle forme share a type with",
 		ruleset: ['OM Unobtainable Moves'],
 		checkCanLearn(move, species, setSources, set) {
-			const nonstandard = move.isNonstandard === 'Past' && !this.ruleTable.has('standardnatdex');
-			if (!nonstandard && !move.isZ && !move.isMax && !this.ruleTable.isRestricted(`move:${move.id}`)) {
+			const standard = move.isNonstandard === null || (move.isNonstandard === 'Past' && this.ruleTable.has('standardnatdex'));
+			if (standard && !move.isZ && !move.isMax && !this.ruleTable.isRestricted(`move:${move.id}`)) {
 				const speciesTypes: string[] = [];
 				const moveTypes: string[] = [];
 				// BDSP can't import Pokemon from Home, so it shouldn't grant moves from archaic species types
 				const minObtainableSpeciesGen = this.dex.currentMod === 'gen8bdsp' || this.dex.gen === 9 ?
 					this.dex.gen : species.gen;
 				for (let i = this.dex.gen; i >= minObtainableSpeciesGen && i >= move.gen; i--) {
-					const dex = this.dex.forGen(i);
+					const dex = this.dex;
 					moveTypes.push(dex.moves.get(move.name).type);
 
 					const pokemon = dex.species.get(species.name);
@@ -1454,7 +1479,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 		desc: "Allows Pok&eacute;mon to use any move that shares the same first letter as their name or a previous evolution's name.",
 		ruleset: ['OM Unobtainable Moves'],
 		checkCanLearn(move, species, setSources, set) {
-			const nonstandard = move.isNonstandard === 'Past' && !this.ruleTable.has('standardnatdex');
+			const nonstandard = move.isNonstandard !== null;
 			if (!nonstandard && !move.isZ && !move.isMax && !this.ruleTable.isRestricted(`move:${move.id}`)) {
 				const letters = [species.id.charAt(0)];
 				let prevo = species.prevo;
@@ -2277,8 +2302,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 						...pokemon.baseMoveSlots, {
 							id: move.id,
 							move: move.name,
-							pp: move.pp * 8 / 5,
-							maxpp: move.pp * 8 / 5,
+							pp: Math.floor(move.pp * 8 / 5),
+							maxpp: Math.floor(move.pp * 8 / 5),
 							target: move.target,
 							disabled: false,
 							disabledSource: '',

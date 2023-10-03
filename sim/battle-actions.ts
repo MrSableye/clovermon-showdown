@@ -1,3 +1,4 @@
+import { format } from 'path';
 import {Dex, toID} from './dex';
 
 const CHOOSABLE_TARGETS = new Set(['normal', 'any', 'adjacentAlly', 'adjacentAllyOrSelf', 'adjacentFoe']);
@@ -643,7 +644,7 @@ export class BattleActions {
 		const hitResults = [];
 		for (const i of targets.keys()) {
 			hitResults[i] = (move.ignoreImmunity && (move.ignoreImmunity === true || move.ignoreImmunity[move.type])) ||
-				targets[i].runImmunity(move.type, !move.smartTarget);
+				targets[i].runImmunity(move.type, !move.smartTarget && !move.canContinue) || move.canContinue || false;
 			if (move.smartTarget && !hitResults[i]) move.smartTarget = false;
 		}
 
@@ -655,16 +656,16 @@ export class BattleActions {
 			if (this.battle.gen >= 6 && move.flags['powder'] && target !== pokemon && !this.dex.getImmunity('powder', target)) {
 				this.battle.debug('natural powder immunity');
 				this.battle.add('-immune', target);
-				hitResults[i] = false;
+				hitResults[i] = move.canContinue || false;
 			} else if (!this.battle.singleEvent('TryImmunity', move, {}, target, pokemon, move)) {
 				this.battle.add('-immune', target);
-				hitResults[i] = false;
+				hitResults[i] = move.canContinue || false;
 			} else if (this.battle.gen >= 7 && move.pranksterBoosted && pokemon.hasAbility('prankster') &&
 				!targets[i].isAlly(pokemon) && !this.dex.getImmunity('prankster', target)) {
 				this.battle.debug('natural prankster immunity');
 				if (!target.illusion) this.battle.hint("Since gen 7, Dark is immune to Prankster moves.");
 				this.battle.add('-immune', target);
-				hitResults[i] = false;
+				hitResults[i] = move.canContinue || false;
 			} else {
 				hitResults[i] = true;
 			}
@@ -912,7 +913,14 @@ export class BattleActions {
 				accuracy = this.battle.runEvent('ModifyAccuracy', target, pokemon, move, accuracy);
 				if (!move.alwaysHit) {
 					accuracy = this.battle.runEvent('Accuracy', target, pokemon, move, accuracy);
-					if (accuracy !== true && !this.battle.randomChance(accuracy, 100)) break;
+					if (!move.alwaysHit) {
+						accuracy = this.battle.runEvent('Accuracy', target, pokemon, move, accuracy);
+						if (move.canContinue) {
+							if (accuracy !== true && !this.battle.randomChance(accuracy, 100)) continue;
+						} else {
+							if (accuracy !== true && !this.battle.randomChance(accuracy, 100)) break;
+						}
+					}
 				}
 			}
 
@@ -1576,6 +1584,10 @@ export class BattleActions {
 
 		if (!move.ignoreImmunity || (move.ignoreImmunity !== true && !move.ignoreImmunity[move.type])) {
 			if (!target.runImmunity(move.type, !suppressMessages)) {
+				if (move.canContinue) {
+					return undefined;
+				}
+
 				return false;
 			}
 		}
@@ -1710,11 +1722,11 @@ export class BattleActions {
 			const spreadModifier = move.spreadModifier || (this.battle.gameType === 'freeforall' ? 0.5 : 0.75);
 			this.battle.debug('Spread modifier: ' + spreadModifier);
 			baseDamage = this.battle.modify(baseDamage, spreadModifier);
-		} else if (move.multihitType === 'parentalbond' && move.hit > 1) {
-			// Parental Bond modifier
-			const bondModifier = this.battle.gen > 6 ? 0.25 : 0.5;
-			this.battle.debug(`Parental Bond modifier: ${bondModifier}`);
-			baseDamage = this.battle.modify(baseDamage, bondModifier);
+		} else if (move.multihitType === 'parentalbond' && move.hit > 1 && this.battle.format.mod !== 'wack') {
+				// Parental Bond modifier
+				const bondModifier = this.battle.gen > 6 ? 0.25 : 0.5;
+				this.battle.debug(`Parental Bond modifier: ${bondModifier}`);
+				baseDamage = this.battle.modify(baseDamage, bondModifier);
 		}
 
 		// weather modifier
@@ -1749,6 +1761,16 @@ export class BattleActions {
 
 		// types
 		let typeMod = target.runEffectiveness(move);
+
+		// Wack has its own typeMod value for Chaos type
+		if (type === 'Chaos') {
+			if (pokemon.hasType('Chaos')) {
+				typeMod = 2;
+			} else {
+				this.battle.add('-message', 'Chaos AntiStab activated!')
+				typeMod = 1
+			}
+		}
 		typeMod = this.battle.clampIntRange(typeMod, -6, 6);
 		target.getMoveHitData(move).typeMod = typeMod;
 		if (typeMod > 0) {
@@ -1768,7 +1790,7 @@ export class BattleActions {
 
 		if (isCrit && !suppressMessages) this.battle.add('-crit', target);
 
-		if (pokemon.status === 'brn' && move.category === 'Physical' && !pokemon.hasAbility('guts')) {
+		if (pokemon.status === 'brn' && move.category === 'Physical' && !pokemon.hasAbility('guts') && !pokemon.hasItem('coldpack')) {
 			if (this.battle.gen < 6 || move.id !== 'facade') {
 				baseDamage = this.battle.modify(baseDamage, 0.5);
 			}

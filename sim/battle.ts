@@ -353,6 +353,29 @@ export class Battle {
 		return this.prng.sample(items);
 	}
 
+	fastPop<T>(list: T[], index: number) {
+		// If an array doesn't need to be in order, replacing the
+		// element at the given index with the removed element
+		// is much, much faster than using list.splice(index, 1).
+		const length = list.length;
+		if (index < 0 || index >= list.length) {
+			// sanity check
+			throw new Error(`Index ${index} out of bounds for given array`);
+		}
+
+		const element = list[index];
+		list[index] = list[length - 1];
+		list.pop();
+		return element;
+	}
+
+	sampleNoReplace<T>(list: T[]) {
+		const length = list.length;
+		if (length === 0) return null;
+		const index = this.random(length);
+		return this.fastPop(list, index);
+	}
+
 	/** Note that passing `undefined` resets to the starting seed, but `null` will roll a new seed */
 	resetRNG(seed: PRNGSeed | null = this.prng.startingSeed) {
 		this.prng = new PRNG(seed);
@@ -2511,8 +2534,8 @@ export class Battle {
 					pokemon.baseMoveSlots[ironHead] = {
 						move: move.name,
 						id: move.id,
-						pp: (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5,
-						maxpp: (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5,
+						pp: (move.noPPBoosts || move.isZ) ? move.pp : Math.floor(move.pp * 8 / 5),
+						maxpp: (move.noPPBoosts || move.isZ) ? move.pp : Math.floor(move.pp * 8 / 5),
 						target: move.target,
 						disabled: false,
 						disabledSource: '',
@@ -3023,7 +3046,7 @@ export class Battle {
 		}
 		if (!didSomething) return;
 		this.inputLog.push(`>player ${slot} ` + JSON.stringify(options));
-		this.add('player', side.id, side.name, side.avatar, options.rating || '');
+		this.add('player', side.id, side.name, side.avatar, options.rating || '', JSON.stringify(options.misc || {}));
 
 		// Start the battle if it's ready to start
 		if (this.sides.every(playerSide => !!playerSide) && !this.started) this.start();

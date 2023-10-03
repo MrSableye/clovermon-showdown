@@ -296,6 +296,12 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		end: "  The snow stopped.",
 		upkeep: "  (The snow is falling down.)",
 	},
+	densefog: {
+		weatherName: "Fog",
+		start: "  A thick fog rolled in!",
+		end: "  The dense fog faded.",
+		upkeep: "  (The fog is deep.)",
+	},
 	desolateland: {
 		weatherName: "Intense Sun",
 		start: "  The sunlight turned extremely harsh!",
@@ -371,5 +377,68 @@ export const DefaultText: {[k: string]: DefaultText} = {
 	// misc
 	crash: {
 		damage: "  [POKEMON] kept going and crashed!",
+	},
+
+	timefall: {
+		weatherName: "Timefall",
+		start: "  Chiralium precipitation started to fall!",
+		end: "  The timefall stopped.",
+		upkeep: "  (Timefall continues.)",
+	},
+	bridge: {
+		start: "  [POKEMON] is working on an addition to the Chiral Network!",
+		fail: "  The new addition to the Chiral Network has been abandoned.",
+		end: "  [POKEMON] finished the addition to the Chiral Network!",
+	},
+	agile: {
+		start: "  [POKEMON] switched to its Agile style!",
+	},
+	strong: {
+		start: "  [POKEMON] switched to its Strong style!",
+	},
+	hyperboreanarctic: {
+		weatherName: "Hyperborean Arctic",
+		start: "  A blistering cold is brewing!",
+		end: "  The cold was halted!",
+		block: "  The icy winds are too cold!",
+		blockMove: "  The freezing winds prevent [POKEMON] from fighting!",
+		upkeep: "  (The hail is crashing down.)",
+		damage: "  [POKEMON] is buffeted by the hail!",
+	},
+	runeofluck0: {
+		start: "  [TEAM] has no remaining Rune of Luck charges!",
+	},
+	runeofluck1: {
+		start: "  [TEAM] has 1 remaining Rune of Luck charges!",
+	},
+	runeofluck2: {
+		start: "  [TEAM] has 2 remaining Rune of Luck charges!",
+	},
+	runeofluck3: {
+		start: "  [TEAM] has 3 remaining Rune of Luck charges!",
+	},
+	runeofprotection0: {
+		start: "  [TEAM] has no remaining Rune of Protection charges!",
+	},
+	runeofprotection1: {
+		start: "  [TEAM] has 1 remaining Rune of Protection charges!",
+	},
+	runeofprotection2: {
+		start: "  [TEAM] has 2 remaining Rune of Protection charges!",
+	},
+	runeofprotection3: {
+		start: "  [TEAM] has 3 remaining Rune of Protection charges!",
+	},
+	runeofmendingk0: {
+		start: "  [TEAM] has no remaining Rune of Mending charges!",
+	},
+	runeofmending1: {
+		start: "  [TEAM] has 1 remaining Rune of Mending charges!",
+	},
+	runeofmending2: {
+		start: "  [TEAM] has 2 remaining Rune of Mending charges!",
+	},
+	runeofmending3: {
+		start: "  [TEAM] has 3 remaining Rune of Mending charges!",
 	},
 };
