@@ -4912,6 +4912,22 @@ export const Items: { [k: string]: ModdedItemData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	syrupyapple: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	wellspringmask: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	hearthflamemask: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	cornerstonemask: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	/* Enabled items */
 	berryjuice: {
 		inherit: true,

@@ -1,4 +1,20 @@
 export const Items: {[k: string]: ModdedItemData} = {
+	syrupyapple: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	wellspringmask: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	hearthflamemask: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	cornerstonemask: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	firestone: {
 		inherit: true,
 		isNonstandard: null,
