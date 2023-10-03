@@ -975,7 +975,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			onFaint(target, source, effect) {
 				const immune = ["Himg", "Himf", "Himw", "Himnuclear", "Himwind", "Himagma", "Himvirus", "Himcyber", "Lunar Guardian"];
 				if (!source || !effect || target.isAlly(source) || immune.includes(source.baseSpecies.baseSpecies)) return;
-				if (effect.effectType === 'Move' && !effect.isFutureMove) {
+				if (effect.effectType === 'Move' && !effect.flags['futuremove']) {
 					if (source.volatiles['dynamax']) {
 						this.add('-hint', "Dynamaxed Pokémon are immune to Destiny Bond.");
 						return;
@@ -3618,7 +3618,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 					this.add('-activate', target, 'Substitute', '[damage]');
 				}
 				if (move.recoil && damage) {
-					this.damage(this.actions.calcRecoilDamage(damage, move), source, target, 'recoil');
+					this.damage(this.actions.calcRecoilDamage(damage, move, source), source, target, 'recoil');
 				}
 				if (move.drain) {
 					this.heal(Math.ceil(damage * move.drain[0] / move.drain[1]), source, target, 'drain');
