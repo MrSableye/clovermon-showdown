@@ -5191,6 +5191,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	gimmighoulroaming: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	glimmet: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -5492,6 +5496,50 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	wugtrio: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	walkingwake: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ironleaves: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	poltchageist: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	sinistcha: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	okidogi: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	munkidori: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fezandipiti: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerpon: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponwellspring: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponhearthflame: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponcornerstone: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
