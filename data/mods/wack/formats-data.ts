@@ -5543,6 +5543,14 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	ursaluna: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ursalunabloodmoon: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	/* Clovermons */
 	grasshole: {
 		inherit: true,

@@ -4728,6 +4728,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	ursalunabloodmoon: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	basculegion: {
 		inherit: true,
 		isNonstandard: "Past",
