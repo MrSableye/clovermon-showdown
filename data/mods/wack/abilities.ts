@@ -25,6 +25,14 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	embodyaspectcornerstone: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	hospitality: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	/* Modified vanilla abilities */
 	toxicboost: {
 		inherit: true,
