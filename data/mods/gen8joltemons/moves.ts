@@ -19,50 +19,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		zMove: {boost: {spe: 1}},
 		contestType: "Tough",
 	},
-	meltingpoint: {
-		accuracy: 100,
-		basePower: 80,
-		category: "Special",
-		shortDesc: "Replaces the user's Ice-type with Water. 1.5x power when used by Ice-types. Soaks foe.",
-		name: "Melting Point",
-		pp: 10,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, defrost: 1},
-		onPrepareHit(target, source, move) {
-			this.attrLastMove('[still]');
-			this.add('-anim', source, "Scald", target);
-			this.add('-anim', source, "Acid Armor", target);
-		},
-		onBasePower(basePower, pokemon, target) {
-			if (pokemon.hasType('Ice')) {
-				return this.chainModify(1.5);
-			}
-		},
-		onHit(target) {
-			if (target.getTypes().join() === 'Water' || !target.setType('Water')) {
-				// Soak should animate even when it fails.
-				// Returning false would suppress the animation.
-				this.add('-fail', target);
-				return null;
-			}
-			this.add('-start', target, 'typechange', 'Water');
-		},
-		self: {
-			onHit(pokemon) {
-				if (pokemon.hasType('Water')) {
-					pokemon.setType(pokemon.getTypes(true).map(type => type === "Ice" ? "???" : type));
-					this.add('-start', pokemon, 'typechange', pokemon.types.join('/'), '[from] move: Melting Point');
-				} else {
-					pokemon.setType(pokemon.getTypes(true).map(type => type === "Ice" ? "Water" : type));
-					this.add('-start', pokemon, 'typechange', pokemon.types.join('/'), '[from] move: Melting Point');
-				}
-			},
-		},
-		secondary: null,
-		target: "normal",
-		type: "Water",
-		contestType: "Clever",
-	},
 	/*
 	reconstruct: {
 		accuracy: true,
