@@ -967,7 +967,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	matchgotcha: {
+	matchagotcha: {
 		inherit: true,
 		isNonstandard: "Past",
 	},

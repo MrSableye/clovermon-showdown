@@ -109,4 +109,28 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 75,
 		},
 	},
+	bluduck: {
+		inherit: true,
+		abilities: {0: "Swift Swim", 1: "Analytic"},
+		baseStats: {
+			hp: 82,
+			atk: 80,
+			def: 80,
+			spa: 188,
+			spd: 92,
+			spe: 78,
+		},
+	},
+	platylics: {
+		inherit: true,
+		abilities: {0: "Oblivious", 1: "Healer"},
+		baseStats: {
+			hp: 188,
+			atk: 67,
+			def: 79,
+			spa: 101,
+			spd: 69,
+			spe: 96,
+		},
+	},
 };

@@ -3744,11 +3744,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	taurospaldeafire: {
+	taurospaldeablaze: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	taurospaldeawater: {
+	taurospaldeaaqua: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -3816,7 +3816,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	poltchageistartisan: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	sinistcha: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	sinistchamasterpiece: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
