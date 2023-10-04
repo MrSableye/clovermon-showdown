@@ -5760,7 +5760,17 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		doublesTier: "DUU",
 		natDexTier: "UU",
 	},
+	ogerpontealtera: {
+		tier: "UU",
+		doublesTier: "DUU",
+		natDexTier: "UU",
+	},
 	ogerponwellspring: {
+		tier: "OU",
+		doublesTier: "DOU",
+		natDexTier: "UU",
+	},
+	ogerponwellspringtera: {
 		tier: "OU",
 		doublesTier: "DOU",
 		natDexTier: "UU",
@@ -5770,7 +5780,17 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		doublesTier: "DOU",
 		natDexTier: "Uber",
 	},
+	ogerponhearthflametera: {
+		tier: "Uber",
+		doublesTier: "DOU",
+		natDexTier: "Uber",
+	},
 	ogerponcornerstone: {
+		tier: "OU",
+		doublesTier: "DUU",
+		natDexTier: "UU",
+	},
+	ogerponcornerstonetera: {
 		tier: "OU",
 		doublesTier: "DUU",
 		natDexTier: "UU",

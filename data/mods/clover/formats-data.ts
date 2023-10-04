@@ -3744,11 +3744,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	taurospaldeafire: {
+	taurospaldeablaze: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	taurospaldeawater: {
+	taurospaldeaaqua: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
