@@ -5735,7 +5735,15 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 	poltchageist: {
 		tier: "LC",
 	},
+	poltchageistartisan: {
+		tier: "LC",
+	},
 	sinistcha: {
+		tier: "UU",
+		doublesTier: "DOU",
+		natDexTier: "OU",
+	},
+	sinistchamasterpiece: {
 		tier: "UU",
 		doublesTier: "DOU",
 		natDexTier: "OU",
