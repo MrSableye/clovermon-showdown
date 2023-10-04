@@ -5264,6 +5264,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	dipplin: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	missingno: {
 		inherit: true,
 		isNonstandard: "Past",

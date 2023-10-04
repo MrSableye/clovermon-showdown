@@ -3880,6 +3880,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	dipplin: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	/* Clovermons */
 	grasshole: {
 		inherit: true,
