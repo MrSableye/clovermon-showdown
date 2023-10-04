@@ -5212,6 +5212,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	poltchageistartisan: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	sinistcha: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -5232,7 +5236,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	ogerpontealtera: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	ogerponwellspring: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponwellspringtera: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -5240,7 +5252,15 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	ogerponhearthflametera: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	ogerponcornerstone: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponcornerstonetera: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
