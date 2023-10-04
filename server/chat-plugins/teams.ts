@@ -333,7 +333,6 @@ export const TeamsHandler = new class {
 			err("You cannot currently use the teams database.");
 		}
 		if (user.locked || user.semilocked) err("You cannot use the teams database while locked.");
-		if (!user.autoconfirmed) err("You must be autoconfirmed to use the teams database.");
 	}
 	async count(user: string | User) {
 		const id = toID(user);
