@@ -144,7 +144,7 @@ export const commands: Chat.ChatCommands = {
 
 			const success = Punishments.unpunish(targetUser?.id || toID(targetUsername), 'EMOJIBAN');
 			if (success) {
-				this.addGlobalModAction(`${(targetUser ? targetUser.name : toID(targetUsername))}'s emoji banned was lifted by ${user.name}.`);
+				this.addGlobalModAction(`${(targetUser ? targetUser.name : toID(targetUsername))}'s emoji ban was lifted by ${user.name}.`);
 				this.modlog('UNEMOJIBAN', (targetUser || toID(targetUsername)), null, {noip: 1, noalts: 1});
 			} else {
 				this.errorReply(`${(targetUser ? targetUser.name : targetUsername)} is not emoji banned.`);
