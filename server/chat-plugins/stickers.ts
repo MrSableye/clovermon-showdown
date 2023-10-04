@@ -57,7 +57,7 @@ const downloadSticker = async (stickerName: string, imageUrl: string) => {
 		enforceSquare: true,
 		minDimensions: { width: STICKER_SIZE, height: STICKER_SIZE },
 		maxDimensions: { width: MAX_STICKER_SIZE, height: MAX_STICKER_SIZE },
-		fileSize: 200000,
+		fileSize: 1000000,
 	});
 
 	if ('error' in result) {
