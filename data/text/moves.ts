@@ -9413,6 +9413,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Maple Warrior",
 		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",
 	},
+	glomp3: {
+		name: "Glomp :3",
+		desc: "User recovers 50% of the damage dealt. Combines Dragon in its type effectiveness. If it KOes another Pokemon, it receives a boost of the KOed Pokemon's highest stat.",
+	},
 	skillroom: {
 		name: "Skill Room",
 		desc: "For 5 turns, all moves always hit but have their base power multiplied by their accuracy, Pokemon cannot be hit by critical hits, secondary effects with a 50% or greater chance of occuring always occur, and secondary effects with less than 50% chance never occur.",

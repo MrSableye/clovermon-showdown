@@ -3666,6 +3666,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	blobbosporing: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	blobbospikmin: {
 		inherit: true,
 		isNonstandard: null,

@@ -32761,6 +32761,30 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {spe: 1}},
 		contestType: "Beautiful",
 	},
+	glomp3: {
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Glomp :3",
+		pp: 25,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Dragon', type);
+		},
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (target && (target.fainted || target.hp <= 0)) {
+				const bestStat = target.getBestStat(true, true);
+				this.boost({[bestStat]: length}, pokemon, pokemon, this.effect);
+			}
+		},
+		drain: [1, 2],
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
 	skillroom: {
 		accuracy: true,
 		basePower: 0,

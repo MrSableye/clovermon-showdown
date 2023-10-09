@@ -10007,6 +10007,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbosporing: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbospikmin: {
 		tier: "Illegal",
 		isNonstandard: "Future",
