@@ -9415,7 +9415,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	glomp3: {
 		name: "Glomp :3",
-		desc: "User recovers 50% of the damage dealt. Combines Dragon in its type effectiveness. If it KOes another Pokemon, it receives a boost of the KOed Pokemon's highest stat.",
+		desc: "User recovers 50% of the damage dealt. Uses best of Dragon or Grass in type effectiveness. If it KOes another Pokemon, it receives a boost of the KOed Pokemon's highest stat.",
 	},
 	skillroom: {
 		name: "Skill Room",

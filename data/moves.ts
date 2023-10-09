@@ -32770,7 +32770,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type, move) {
-			return typeMod + this.dex.getEffectiveness('Dragon', type);
+			const mod = Math.max(
+				this.dex.getEffectiveness('Dragon', type),
+				this.dex.getEffectiveness('Grass', type),
+			);
+			return typeMod + mod;
 		},
 		onAfterMoveSecondarySelf(pokemon, target, move) {
 			if (target && (target.fainted || target.hp <= 0)) {
