@@ -9289,11 +9289,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		isNonstandard: "Past",
 	},
 	yangfin: {
-		tier: "Illegal",
+		inherit: true,
 		isNonstandard: "Future",
 	},
 	goblyin: {
-		tier: "Illegal",
+		inherit: true,
 		isNonstandard: "Future",
 	},
 	taterdoom: {
