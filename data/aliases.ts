@@ -83,6 +83,7 @@ export const Aliases: {[alias: string]: string} = {
 	rmayhem: "[Gen 9] Random Battle Mayhem",
 	omotm: "[Gen 9] VoltTurn Mayhem",
 	lcotm: "[Gen 9] Partners in Crime",
+	copetier: "[Gen 8 Cope Only] OU",
 
 	// mega evos
 	fabio: "Ampharos-Mega",

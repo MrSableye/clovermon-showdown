@@ -45704,10 +45704,10 @@ blobbosmechelectric: {
 	},
 	gem: {
 		num: -42511,
-		name: "Gem",
+		name: "Gem", // monkey won
 		types: ["Rock", "Dark"],
 		gender: "N",
-		baseStats: {hp: 86, atk: 71, def: 58, spa: 85, spd: 144, spe: 99},
+		baseStats: {hp: 86, atk: 71, def: 58, spa: 112, spd: 174, spe: 99},
 		abilities: {0: "Levitate", 1: "Solid Rock", H: "Jewelry"},
 		heightm: 0.1,
 		weightkg: 63177,
