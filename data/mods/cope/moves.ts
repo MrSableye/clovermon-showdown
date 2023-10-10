@@ -1509,6 +1509,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	hyperdrill: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	hyperfang: {
 		inherit: true,
 		isNonstandard: null,
