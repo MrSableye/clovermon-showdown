@@ -2953,6 +2953,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	tsuchinokoinsular: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+    },
+	slub: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+    },
+	sludge: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "PU",
+	},
 	/* CAP Megas */
 	oogabugamega: {
 		inherit: true,
