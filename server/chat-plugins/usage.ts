@@ -239,5 +239,28 @@ export const commands: Chat.ChatCommands = {
 				`${[...OFFICIAL_CLODOWN_AVATARS].map((avatar) => createAvatarHtml(avatar)).join(' ')}`
 			);
 		},
+		sprite(target) {
+			this.runBroadcast();
+			const targetMon = Dex.species.get(toID(target));
+			if (!targetMon || !targetMon.exists) {
+				throw new Chat.ErrorMessage(`No such mon: ${target}`);
+			}
+
+			let slug = toID(targetMon.baseSpecies);
+
+			if (targetMon.forme) {
+				slug += `-${toID(targetMon.forme)}`;
+			}
+
+			const sprites = [
+				`https://clover.weedl.es/sprites/gen5/${slug}.png`,
+				`https://clover.weedl.es/sprites/gen5-back/${slug}.png`,
+				`https://clover.weedl.es/sprites/gen5-shiny/${slug}.png`,
+				`https://clover.weedl.es/sprites/gen5-back-shiny/${slug}.png`,
+			];
+
+			this.sendReplyBox(`<b><u>${targetMon.name} Sprites</u></b><br />` +
+				sprites.map((sprite) => `<img src="${sprite}" width="96" height="96">`).join(' '));
+		}
 	},
 };

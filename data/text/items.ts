@@ -2855,6 +2855,11 @@ export const ItemsText: {[k: string]: ItemText} = {
 			desc: "Can only be held by Jewipede. Its Normal- & Bug-type attacks have 1.2x power.",
 		},
 	},
+	queensrock: {
+		name: "Queen's Rock",
+		desc: "Holder's attacks without a chance to make the target attract gain a 10% chance to make the target attract.",
+		shortDesc: "Holder's attacks without a chance to attract gain a 10% chance to attract.",
+	},
 	servicerendered: {
 		name: "Service Rendered",
 		desc: "After using Combat Orders, Haste, Maple Warrior, or Sharp Eyes, switch out at end of turn. Single use.",
