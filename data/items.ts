@@ -9775,6 +9775,31 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	queensrock: {
+		name: "Queen's Rock",
+		spritenum: 236,
+		fling: {
+			basePower: 30,
+			volatileStatus: 'attract',
+		},
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.volatileStatus === 'attract') return;
+				}
+				move.secondaries.push({
+					chance: 10,
+					volatileStatus: 'attract',
+				});
+			}
+		},
+		num: -69420221,
+		isNonstandard: "Future",
+		gen: 8,
+		rating: 1,
+	},
 	alcohol: {
 		name: "Alcohol",
 		spritenum: 22,

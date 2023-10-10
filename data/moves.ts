@@ -43227,7 +43227,12 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Crystal",
 		isNonstandard: "Future",
@@ -43241,7 +43246,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
 		target: "allAdjacentFoes",
 		type: "Crystal",
 		isNonstandard: "Future",
@@ -62460,6 +62468,9 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {snatch: 1},
 		secondary: null,
+		boosts: {
+			spd: 3,
+		},
 		target: "self",
 		type: "Crystal",
 		isNonstandard: "Future",
@@ -63256,7 +63267,12 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, tail: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			boosts: {
+				def: -1,
+			},
+		},
 		target: "normal",
 		type: "Crystal",
 		isNonstandard: "Future",
