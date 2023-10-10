@@ -36768,7 +36768,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 sludge: {
 	num: -8203,
-	name: "Yokite",
+	name: "sludge",
 	types: ["Poison"],
 	genderRatio: {M: 0.5, F: 0.5},
 	baseStats: {hp: 1, atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
