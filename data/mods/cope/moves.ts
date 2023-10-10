@@ -266,6 +266,23 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	boil: {
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "BOIL",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, defrost: 1},
+		thawsTarget: true,
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Water",
+		isNonstandard: null,
+	},
 	boltbeak: {
 		inherit: true,
 		isNonstandard: null,
