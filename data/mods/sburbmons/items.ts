@@ -2252,6 +2252,10 @@ export const Items: { [k: string]: ModdedItemData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	queensrock: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	alcohol: {
 		inherit: true,
 		isNonstandard: "Past",
