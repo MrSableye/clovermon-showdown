@@ -240,8 +240,9 @@ export const commands: Chat.ChatCommands = {
 			);
 		},
 		sprite(target) {
+			this.runBroadcast();
 			const targetMon = Dex.species.get(toID(target));
-			if (!targetMon) {
+			if (!targetMon || !targetMon.exists) {
 				throw new Chat.ErrorMessage(`No such mon: ${target}`);
 			}
 
