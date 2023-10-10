@@ -8833,6 +8833,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	tsuchinokoinsular: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	slub: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sludge: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kattapillar: {
 		tier: "Illegal",
 		isNonstandard: "Future",
