@@ -430,6 +430,12 @@ export abstract class BasicRoom {
 		this.pokeExpireTimer();
 	}
 
+	getUserCount() {
+		return Object.values(this.users)
+			.filter((user) => user.named && user.connected)
+			.length;
+	}
+
 	getUserList() {
 		let buffer = '';
 		let counter = 0;
@@ -1562,6 +1568,11 @@ export class GlobalRoomState {
 		}
 		return roomTable;
 	}
+	getTotalUserCount() {
+		return Array.from(Users.users.values())
+			.filter((user) => user.named && user.connected)
+			.length;
+	}
 	getRooms(user: User) {
 		const roomsData: {
 			chat: ChatRoomTable[],
@@ -1571,7 +1582,7 @@ export class GlobalRoomState {
 		} = {
 			chat: [],
 			sectionTitles: Object.values(RoomSections.sectionNames),
-			userCount: Users.users.size,
+			userCount: this.getTotalUserCount(),
 			battleCount: this.battleCount,
 		};
 		for (const room of this.chatRooms) {
@@ -1585,7 +1596,7 @@ export class GlobalRoomState {
 			const roomData: ChatRoomTable = {
 				title: room.title,
 				desc: room.settings.desc || '',
-				userCount: room.userCount,
+				userCount: room.getUserCount(),
 				section: room.settings.section ?
 					(RoomSections.sectionNames[room.settings.section] || room.settings.section) : undefined,
 				privacy: !room.settings.isPrivate ? undefined : room.settings.isPrivate,
