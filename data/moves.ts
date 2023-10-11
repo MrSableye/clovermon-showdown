@@ -32778,7 +32778,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onAfterMoveSecondarySelf(pokemon, target, move) {
 			if (target && (target.fainted || target.hp <= 0)) {
 				const bestStat = target.getBestStat(true, true);
-				this.boost({[bestStat]: length}, pokemon, pokemon, this.effect);
+				this.boost({[bestStat]: 1}, pokemon, pokemon, this.effect);
 			}
 		},
 		drain: [1, 2],
