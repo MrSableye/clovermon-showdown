@@ -43884,7 +43884,7 @@ blobbosmechelectric: {
 		name: "Spireedle",
 		types: ["Poison", "Ghost"],
 		gender: "M",
-		baseStats: {hp: 152, atk: 152, def: 30, spa: 20, spd: 20, spe: 152},
+		baseStats: {hp: 10, atk: 152, def: 152, spa: 20, spd: 152, spe: 152},
 		abilities: {0: "Swarm", 1: "Shield Dust", H: "Shed Skin", S: "Poison Point"},
 		heightm: 0.4,
 		weightkg: 0.1,
