@@ -391,13 +391,13 @@ export const commands: Chat.ChatCommands = {
 
 		this.checkChat();
 
-		if (!checkCooldown(user.id)) {
-			throw new Chat.ErrorMessage('You are using stickers too quickly.');
-		}
-
 		const sticker = stickers[user.id];
 
 		if (!sticker || !sticker.sticker) throw new Chat.ErrorMessage(`You have no custom sticker.`);
+
+		if (!checkCooldown(user.id)) {
+			throw new Chat.ErrorMessage('You are using stickers too quickly.');
+		}
 
 		return `/html ${createStickerHtml(`custom-${user.id}`, sticker.sticker)}`;
 	},

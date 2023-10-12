@@ -79,14 +79,14 @@ export const commands: Chat.ChatCommands = {
 
 		this.checkChat();
 
-		if (!checkCooldown(user.id)) {
-			throw new Chat.ErrorMessage('You are using stickers too quickly.');
-		}
-
 		const stickerName = target.trim();
 		const sticker = stickers[stickerName];
 
 		if (!sticker) throw new Chat.ErrorMessage(`No such sticker ${stickerName} exists.`);
+
+		if (!checkCooldown(user.id)) {
+			throw new Chat.ErrorMessage('You are using stickers too quickly.');
+		}
 
 		return `/html ${createStickerHtml(stickerName, sticker)}`;
 	},
