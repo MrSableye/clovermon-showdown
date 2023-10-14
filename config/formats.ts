@@ -191,10 +191,9 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: '[Gen 8 Clover National Dex] AG',
+		name: '[Gen 9 Clover National Dex] AG',
 		mod: 'clover',
 		ruleset: [
-			'Terastal Clause',
 			'Standard NatDex',
 		],
 	},
