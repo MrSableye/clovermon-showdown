@@ -406,7 +406,7 @@ export const commands: Chat.ChatCommands = {
 		avatar: {
 			async request(target, room, user) {
 				try {
-					const canHaveAvatar = hasTourWins(AVATAR_MINIMUM_TOUR_WINS, user) || Config.customavatar?.[user.id] !== undefined;
+					const canHaveAvatar = hasTourWins(AVATAR_MINIMUM_TOUR_WINS, user) || Config.customavatars?.[user.id] !== undefined;
 	
 					if (!canHaveAvatar) {
 						return this.errorReply(AVATAR_USER_INELIGIBLE);
