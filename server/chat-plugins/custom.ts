@@ -61,7 +61,7 @@ const updateCss = () => {
 const AVATAR_MINIMUM_TOUR_WINS = 1;
 const AVATAR_USER_INELIGIBLE = 'You are not eligble for a custom avatar.';
 const AVATAR_ERROR_WRITING_IMAGE = 'Unable to write image. Please try again or contact an administrator.';
-const AVATAR_UNKNOWN_ERROR = 'An unknown error occured. Please try again or contact an administrator.';
+const AVATAR_UNKNOWN_ERROR = 'An unknown error occurred. Please try again or contact an administrator.';
 
 interface AvatarStatus {
 	enabled: boolean;
@@ -147,7 +147,7 @@ const removeAvatarStaffNotificiation = (requesterId: string) => {
 const EMOJI_MINIMUM_TOUR_WINS = 3;
 const EMOJI_USER_INELIGIBLE = `You are not eligble for a custom emoji. You must have at least ${EMOJI_MINIMUM_TOUR_WINS} tour wins.`;
 const EMOJI_ERROR_WRITING_IMAGE = 'Unable to write image. Please try again or contact an administrator.';
-const EMOJI_UNKNOWN_ERROR = 'An unknown error occured. Please try again or contact an administrator.';
+const EMOJI_UNKNOWN_ERROR = 'An unknown error occurred. Please try again or contact an administrator.';
 
 interface EmojiStatus {
 	enabled: boolean;
@@ -221,7 +221,7 @@ const removeEmojiStaffNotificiation = (requesterId: string) => {
 const STICKER_MINIMUM_TOUR_WINS = 4;
 const STICKER_USER_INELIGIBLE = `You are not eligble for a custom sticker. You must have at least ${STICKER_MINIMUM_TOUR_WINS} tour wins.`;
 const STICKER_ERROR_WRITING_IMAGE = 'Unable to write image. Please try again or contact an administrator.';
-const STICKER_UNKNOWN_ERROR = 'An unknown error occured. Please try again or contact an administrator.';
+const STICKER_UNKNOWN_ERROR = 'An unknown error occurred. Please try again or contact an administrator.';
 const COOLDOWN = 10 * 1000;
 
 interface StickerStatus {
@@ -525,6 +525,27 @@ export const commands: Chat.ChatCommands = {
 	
 				return this.sendReply(`Denied avatar request of ${targetId}`);
 			},
+			delete(target, room, user) {
+				this.checkCan('avatar');
+	
+				const targetId = toID(target);
+				const avatarStatus = avatars[targetId];
+	
+				if (!avatarStatus || !avatarStatus.avatar) {
+					throw new Chat.ErrorMessage(`No avatar for ${targetId}`);
+				}
+	
+				updateAvatarStatus(targetId, {
+					avatar: undefined,
+				});
+	
+				FS(`./config/avatars/${avatarStatus.avatar}`).unlinkIfExistsSync();
+	
+				sendPM('Your avatar was deleted.', targetId);
+				this.addGlobalModAction(`${user.name} deleted avatar of ${targetId}`);
+	
+				return this.sendReply(`Deleted avatar of ${targetId}`);
+			},
 			on(target, room, user) {
 				updateAvatarStatus(user.id, {enabled: true});
 	
@@ -684,6 +705,27 @@ export const commands: Chat.ChatCommands = {
 	
 				return this.sendReply(`Denied emoji request of ${targetId}`);
 			},
+			delete(target, room, user) {
+				this.checkCan('avatar');
+	
+				const targetId = toID(target);
+				const emojiStatus = emojis[targetId];
+	
+				if (!emojiStatus || !emojiStatus.emoji) {
+					throw new Chat.ErrorMessage(`No emoji for ${targetId}`);
+				}
+	
+				updateEmojiStatus(targetId, {
+					emoji: undefined,
+				});
+	
+				FS(`./config/emojis/${emojiStatus.emoji}`).unlinkIfExistsSync();
+	
+				sendPM('Your emoji was deleted.', targetId);
+				this.addGlobalModAction(`${user.name} deleted emoji of ${targetId}`);
+	
+				return this.sendReply(`Deleted emoji of ${targetId}`);
+			},
 			'': 'help',
 			help() {
 				return this.parse('/help custom emoji');
@@ -820,6 +862,27 @@ export const commands: Chat.ChatCommands = {
 				removeStickerStaffNotificiation(targetId);
 
 				return this.sendReply(`Denied sticker request of ${targetId}`);
+			},
+			delete(target, room, user) {
+				this.checkCan('avatar');
+
+				const targetId = toID(target);
+				const stickerStatus = stickers[targetId];
+
+				if (!stickerStatus || !stickerStatus.sticker) {
+					throw new Chat.ErrorMessage(`No sticker for ${targetId}`);
+				}
+
+				updateStickerStatus(targetId, {
+					sticker: undefined,
+				});
+
+				FS(`./config/stickers/${stickerStatus.sticker}`).unlinkIfExistsSync();
+
+				sendPM('Your sticker was deleted.', targetId);
+				this.addGlobalModAction(`${user.name} deleted sticker of ${targetId}`);
+
+				return this.sendReply(`Deleted sticker of ${targetId}`);
 			},
 			'': 'help',
 			help() {

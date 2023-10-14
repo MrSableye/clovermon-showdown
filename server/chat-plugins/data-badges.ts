@@ -175,7 +175,7 @@ export const commands: Chat.ChatCommands = {
 					discordUser.username : `${discordUser.username}#${discordUser.discriminator}`;
 
 				const success = await addDiscordBadge(user, username);
-				if (!success) throw new Chat.ErrorMessage('An error has occured.');
+				if (!success) throw new Chat.ErrorMessage('An error has occurred.');
 
 				return this.sendReplyBox('Your Discord badge has been activated and updated.');
 			},
