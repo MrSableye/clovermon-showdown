@@ -21888,7 +21888,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 
 			if (positiveBoosts > 0) {
-				const factor = 12.5 * Math.pow(2, Math.max(4, positiveBoosts));
+				const factor = Math.min(1, 0.125 * Math.pow(2, positiveBoosts - 1));
 				const amount = this.modify(source.maxhp, factor);
 				target.setBoost(adjustedBoosts);
 				source.heal(amount);
