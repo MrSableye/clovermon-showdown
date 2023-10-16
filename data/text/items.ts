@@ -2868,6 +2868,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Auto Buff Skill",
 		desc: "After using Combat Orders, Haste, Maple Warrior, or Sharp Eyes, use the other moves if the user knows them. Single use.",
 	},
+	choicechoice: {
+		name: "Choice Choice",
+		desc: "Holder's Atk or Sp. Atk is 1.5x based on the first attacking moves it executes, but it can only select the first move it executes.",
+	},
 	tumultuoustibia: {
 		name: "Tumultuous Tibia",
 		desc: "If held by Blobbos-Skeleton, its Attack is doubled.",

@@ -9918,6 +9918,38 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		rating: 1,
 	},
+	choicechoice: {
+		name: "Choice Choice",
+		spritenum: 69,
+		fling: {
+			basePower: 10,
+		},
+		onStart(pokemon) {
+			if (pokemon.volatiles['choicelock']) {
+				this.debug('removing choicelock: ' + pokemon.volatiles['choicelock']);
+			}
+			pokemon.removeVolatile('choicelock');
+		},
+		onModifyMove(move, pokemon) {
+			pokemon.addVolatile('choicelock');
+		},
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (this.effectState.mode !== 'atk') return;
+			if (pokemon.volatiles['dynamax']) return;
+			this.effectState.mode = 'atk';
+			return this.chainModify(1.5);
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (this.effectState.mode !== 'spa') return;
+			if (pokemon.volatiles['dynamax']) return;
+			this.effectState.mode = 'spa';
+			return this.chainModify(1.5);
+		},
+		isChoice: true,
+		isNonstandard: "Future",
+	},
 	mesosack: {
 		name: "Meso Sack",
 		isNonstandard: "Future",
