@@ -8845,6 +8845,18 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	ponderselo: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	walkietalkie: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	impostree: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kattapillar: {
 		tier: "Illegal",
 		isNonstandard: "Future",
