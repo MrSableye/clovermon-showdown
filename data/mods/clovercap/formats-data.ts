@@ -27,7 +27,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	regishort: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	regicide: {
 		inherit: true,

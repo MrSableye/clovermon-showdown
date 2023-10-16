@@ -2781,7 +2781,27 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    tsuchinoko: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "AG",
+		tier: "OU",
+	},
+	ponderselo: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	    walkietalkie: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
+	},
+	    impostree: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	    hemogoblin: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	    purplegoat: {
 		inherit: true,
