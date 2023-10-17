@@ -2953,6 +2953,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	azumarite: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	suxako: {
 		inherit: true,
 		isNonstandard: null,
@@ -2969,6 +2974,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	pantherk: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	crolord: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
