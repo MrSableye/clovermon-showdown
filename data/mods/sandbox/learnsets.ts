@@ -663,6 +663,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			psychic: ["8M"],
 			raindance: ["8M"],
 			rainbowbeam: ["8M"],
+			rainbowblast: ["8M"],
 			rest: ["8M"],
 			return: ["8M"],
 			roost: ["8T"],
