@@ -2860,6 +2860,10 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	rainbowblast: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	hyperzone: {
 		inherit: true,
 		isNonstandard: "Past",

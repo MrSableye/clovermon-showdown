@@ -27819,6 +27819,62 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
+
+	rainbowblast: {
+		accuracy: 100,
+		basePower: 5,
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		onTryHit(target, source, move) {
+			if (move.hit === 2) {
+				move.type = 'Normal';
+			} else if (move.hit === 3) {
+				move.type = 'Fire';
+			} else if (move.hit === 4) {
+				move.type = 'Fighting';
+			} else if (move.hit === 5) {
+				move.type = 'Water';
+			} else if (move.hit === 6) {
+				move.type = 'Flying';
+			} else if (move.hit === 7) {
+				move.type = 'Grass';
+			} else if (move.hit === 8) {
+				move.type = 'Poison';
+			} else if (move.hit === 9) {
+				move.type = 'Electric';
+			} else if (move.hit === 10) {
+				move.type = 'Ground';
+			} else if (move.hit === 11) {
+				move.type = 'Psychic';
+			} else if (move.hit === 12) {
+				move.type = 'Rock';
+			} else if (move.hit === 13) {
+				move.type = 'Ice';
+			} else if (move.hit === 14) {
+				move.type = 'Bug';
+			} else if (move.hit === 15) {
+				move.type = 'Dragon';
+			} else if (move.hit === 16) {
+				move.type = 'Ghost';
+			} else if (move.hit === 17) {
+				move.type = 'Dark';
+			} else if (move.hit === 18) {
+				move.type = 'Steel';
+			}
+		},
+		category: "Special",
+		name: "Rainbow Blast",
+		isNonstandard: "Future",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: 18,
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		contestType: "Cool",
+	},
 	hyperzone: {
 		num: 1001,
 		accuracy: true,
