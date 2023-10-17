@@ -3403,6 +3403,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Cell Construct",
 		desc: "If Blobbos-Mitosis reaches under 50% of health, transforms into Blobbos-Mitosis-Complete.",
 	},
+	crowheaded: {
+		name: "Crowheaded",
+		desc: "Peck, Drill Peck, Pluck, and Bolt Beak deal 1.5x damage.",
+	},
 	fireaffinity: {
 		name: "Fire Affinity",
 		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fire-type attack. This Pokemon is healed 1/8 by Fire. Immune to Burn.",

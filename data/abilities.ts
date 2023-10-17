@@ -12245,6 +12245,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 	},
+	crowheaded: {
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			const peckMoves = [
+				'peck',
+				'drillpeck',
+				'pluck',
+				'boltbeak',
+			];
+			if (peckMoves.includes(move.id)) {
+				this.debug('Peck your beak');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Crowheaded",
+		isNonstandard: "Future",
+	},
 	fireaffinity: {
 		name: "Fire Affinity",
 		isNonstandard: "Future",

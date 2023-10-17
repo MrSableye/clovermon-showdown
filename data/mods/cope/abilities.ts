@@ -139,6 +139,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	crowheaded: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	curiousmedicine: {
 		inherit: true,
 		isNonstandard: null,

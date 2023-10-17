@@ -8857,6 +8857,14 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	azumarite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	crolord: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kattapillar: {
 		tier: "Illegal",
 		isNonstandard: "Future",
