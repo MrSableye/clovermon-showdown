@@ -7842,6 +7842,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 20% chance to Curse the target.",
 		shortDesc: "20% to Curse, Lowers the user's Speed by 1.",
 	},
+	thetalker: {
+		name: "The Talker",
+		desc: "This move's Base Power is multiplied by 1.5x if Sunny Day, Desolate Land, or Dense Fog is active.",
+		shortDesc: "1.5x Power if used in Sun, Desolate Land, or Dense Fog.",
+	},
 	phasethrough: {
 		name: "Phase Through",
 		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
