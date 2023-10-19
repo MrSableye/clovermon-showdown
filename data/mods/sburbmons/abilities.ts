@@ -1472,6 +1472,14 @@ export const Abilities: { [k: string]: ModdedAbilityData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	acupower: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	rollan: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	terraform: {
 		inherit: true,
 		isNonstandard: "Past",

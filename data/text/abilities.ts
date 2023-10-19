@@ -2906,6 +2906,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Present Power",
 		shortDesc: "Adds a Present to every attack.",
 	},
+	acupower: {
+		name: "Acu Power",
+		shortDesc: "Adds an Acupressure to every attack.",
+	},
 	supermentum: {
 		name: "Supermentum",
 		shortDesc: "Switches out after using a move.",
@@ -2913,6 +2917,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	muhmentum: {
 		name: "Muhmentum",
 		shortDesc: "Switches out after using an offensive move.",
+	},
+	rollan: {
+		name: "Rollan",
+		shortDesc: "Gives random boosts on switch-in",
 	},
 	terraform: {
 		name: "Terraform",

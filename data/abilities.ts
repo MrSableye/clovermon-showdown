@@ -8803,7 +8803,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		isNonstandard: "Future",
 	},
+	acupower: {
+		onAfterMove(source, target, move) {
+			const targetSlot = target.getSlot();
+			if (!move || !target) return;
+			if (source.ability !== 'acupower') return;
+			if (move.category === 'Status') return;
+			if (source.abilityState.hasMemed?.[targetSlot]) return;
 
+			if (!source.abilityState?.hasMemed) source.abilityState.hasMemed = {};
+			source.abilityState.hasMemed[targetSlot] = true;
+
+			this.actions.useMove('acupressure', source, target);
+		},
+		onResidual(pokemon) {
+			pokemon.abilityState.hasMemed = undefined;
+		},
+		name: "Acu Power",
+		rating: 4.5,
+		isNonstandard: "Future",
+	},
 	terraform: {
 		name: "Terraform",
 		onBeforeMove(source, target, move) {
@@ -11378,6 +11397,43 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		name: "Hyperspeen",
 		isNonstandard: "Future",
+	},
+	rollan: {
+		onStart(pokemon) {
+			let stats: BoostID[] = [];
+			const boost: SparseBoostsTable = {};
+			let statA: BoostID;
+			for (statA in pokemon.boosts) {
+				if (statA === 'accuracy' || statA === 'evasion') continue;
+				if (pokemon.boosts[statA] < 6) {
+					stats.push(statA);
+				}
+			}
+			let randomStat1: BoostID | undefined = stats.length ? this.sample(stats) : undefined;
+			if (randomStat1) boost[randomStat1] = 1;
+
+			stats = [];
+			let statB: BoostID;
+			for (statB in pokemon.boosts) {
+				if (statB === 'accuracy' || statB === 'evasion') continue;
+				if (pokemon.boosts[statB] < 6){
+					stats.push(statB);
+				}
+			}
+			let randomStat2 = stats.length ? this.sample(stats) : undefined;
+			if (randomStat2) boost[randomStat2] = 1;
+			
+			if (randomStat2 === randomStat1){
+				if (randomStat2) boost[randomStat2] = 2;
+				pokemon.addVolatile('focusenergy');
+				this.add('-message', `${pokemon.name} got dubs. Check em!`);
+				
+			}	
+			this.boost(boost, pokemon, pokemon);
+		},
+		name: "Rollan",
+		rating: 3.5,
+		num: 88,
 	},
 	cancer: {
 		name: "Cancer",
