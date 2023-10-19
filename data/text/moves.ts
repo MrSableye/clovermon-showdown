@@ -9166,6 +9166,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
 		shortDesc: "Hits 2-5 times in one turn.",
 	},
+	acidicrainfall: {
+		name: "Acidic Rainfall",
+		desc: "Summons Acidic Rainfall. At the end of each turn except the last, all active Pokemon lose 1/16 of their maximum HP five times, rounded down. Fails if the current weather is Acidic Rainfall.",
+		shortDesc: "For 5 turns, horrible rain falls. Deals 1/16th residual damage five times in one turn.",
+	},
 	movethatfucksyourself: {
 		name: "Move That Fucks Yourself",
 		desc: "This move combines Electric in its type effectiveness against the target and its effects ignore the Abilities of other Pokemon.",
