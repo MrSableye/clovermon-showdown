@@ -29426,6 +29426,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
+	acidicrainfall: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Acidic Rainfall",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		weather: 'acidicrainfall',
+		secondary: null,
+		target: "all",
+		type: "Poison",
+		isNonstandard: "Future",
+	},
 	testomajesto: {
 		accuracy: true,
 		basePower: 1,
@@ -83402,4 +83416,27 @@ beforeTurnCallback(pokemon) {
 		target: "normal",
 		type: "Zombie",
 	},
+	thetalker: {
+        num: 42009,
+        accuracy: 100,
+        basePower: 80,
+        category: "Special",
+        isNonstandard: "Future",
+        name: "The Talker", // placeholder name please dear god give it a better name//no lmao
+        pp: 15,
+        priority: 0,
+        flags: {protect: 1, mirror: 1},
+        onModifyMove(move, pokemon) {
+            switch (pokemon.effectiveWeather()) {
+            case 'sunnyday':
+            case 'desolateland':
+            case 'densefog':
+                move.basePower *= 1.5;
+                break;
+            }
+        },
+        secondary: null,
+        target: "normal",
+        type: "Grass",
+    },
 };

@@ -563,6 +563,8 @@ export const Aliases: {[alias: string]: string} = {
 	pheal: "Poison Heal",
 	regen: "Regenerator",
 	stag: "Shadow Tag",
+	stride: "AIN'T NOTHIN' GONNA BREAK MY STRIDE",
+	angbms: "AIN'T NOTHIN' GONNA BREAK MY STRIDE",
 
 	// items
 	assvest: "Assault Vest",

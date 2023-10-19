@@ -296,6 +296,13 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		end: "  The snow stopped.",
 		upkeep: "  (The snow is falling down.)",
 	},
+	acidicrainfall: {
+		weatherName: "Acidic Rainfall",
+		start: "  A horrible rain rolls in!",
+		end: "  The horrible rain ceased.",
+		upkeep: "  (The weather is horrible!)",
+		damage: "  [POKEMON] is melting!",
+	},
 	densefog: {
 		weatherName: "Fog",
 		start: "  A thick fog rolled in!",

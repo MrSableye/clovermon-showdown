@@ -8865,6 +8865,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	realwalker: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	kattapillar: {
 		tier: "Illegal",
 		isNonstandard: "Future",

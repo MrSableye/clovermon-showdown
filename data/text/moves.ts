@@ -7842,6 +7842,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 20% chance to Curse the target.",
 		shortDesc: "20% to Curse, Lowers the user's Speed by 1.",
 	},
+	thetalker: {
+		name: "The Talker",
+		desc: "This move's Base Power is multiplied by 1.5x if Sunny Day, Desolate Land, or Dense Fog is active.",
+		shortDesc: "1.5x Power if used in Sun, Desolate Land, or Dense Fog.",
+	},
 	phasethrough: {
 		name: "Phase Through",
 		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
@@ -9165,6 +9170,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Brutal Mauling",
 		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
 		shortDesc: "Hits 2-5 times in one turn.",
+	},
+	acidicrainfall: {
+		name: "Acidic Rainfall",
+		desc: "Summons Acidic Rainfall. At the end of each turn except the last, all active Pokemon lose 1/16 of their maximum HP five times, rounded down. Fails if the current weather is Acidic Rainfall.",
+		shortDesc: "For 5 turns, horrible rain falls. Deals 1/16th residual damage five times in one turn.",
 	},
 	movethatfucksyourself: {
 		name: "Move That Fucks Yourself",

@@ -4567,6 +4567,22 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	makeitrain: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bitterblade: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	thetalker: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	trailblaze: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	thebigone: {
 		inherit: true,
 		isNonstandard: null,

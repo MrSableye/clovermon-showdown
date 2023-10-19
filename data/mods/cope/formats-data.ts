@@ -2716,7 +2716,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    dugwalker: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	    },
 	    phantacade: {
 		inherit: true,
@@ -2886,7 +2886,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    oengas: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	    stingulor: {
 		inherit: true,
@@ -2896,7 +2896,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    titaneetle: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	    horse: {
 		inherit: true,
@@ -2982,6 +2982,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+	},
+	realwalker: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
 	},
 	tsuchinokoinsular: {
 	inherit: true,

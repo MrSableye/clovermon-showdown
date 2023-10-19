@@ -1467,6 +1467,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	aintnothingonnabreakmystride: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	lootable: {
 		inherit: true,
 		isNonstandard: null,
