@@ -11252,6 +11252,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	realwalker: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	fungore: {
 		inherit: true,
 		isNonstandard: null,
