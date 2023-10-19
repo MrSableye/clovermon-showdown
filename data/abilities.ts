@@ -12262,6 +12262,30 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Crowheaded",
 		isNonstandard: "Future",
 	},
+	aintnothingonnabreakmystride: {
+		onModifyMove(move) {
+			move.stab = 2;
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (source && target === source) return;
+			let showMsg = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost[i]! < 0) {
+					delete boost[i];
+					showMsg = true;
+				}
+			}
+			if (showMsg && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
+				this.add("-fail", target, "unboost", "[from] ability: AIN'T NOTHIN' GONNA BREAK MY STRIDE", "[of] " + target);
+				this.add('-message', `(The Realwalker's stride cannot be broken!)`);
+			}
+		},
+		isBreakable: false, // YOU EXPLICITLY CANNOT BREAK THEIR STRIDE
+		name: "AIN'T NOTHIN' GONNA BREAK MY STRIDE",
+		isNonstandard: "Future",
+		rating: 99,
+	},
 	fireaffinity: {
 		name: "Fire Affinity",
 		isNonstandard: "Future",
