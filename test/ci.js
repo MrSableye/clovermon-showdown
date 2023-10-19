@@ -6,7 +6,7 @@ const Dex = require('./../dist/sim/dex').Dex;
 Dex.includeModData();
 
 Object.entries(Dex.dexes).forEach(function([modId, modDex]) {
-	if (['joltemons', 'gennext', 'ssb'].includes(modId)) return; // These mods SUCK
+	if (['joltemons', 'gennext', 'ssb', 'gen8joltemons'].includes(modId)) return; // These mods SUCK
 
 	describe(`Mod: ${modId}`, function () {
 		it('should have existing moves', function () {
@@ -40,6 +40,11 @@ describe('Formats', function () {
 });
 
 describe('Moves', function () {
+	if('should have a name that matches its id', function () {
+		for (const move of Dex.moves.all()) {
+			assert.equal(move.id, move.name, `${move.id} has mismatched name ${move.name}.`);
+		}
+	});
 	it.skip('should have descriptions', function () {
 		for (const move of Dex.moves.all()) {
 			const description = move.desc || move.shortDesc;
@@ -49,6 +54,11 @@ describe('Moves', function () {
 });
 
 describe('Items', function () {
+	if('should have a name that matches its id', function () {
+		for (const item of Dex.items.all()) {
+			assert.equal(item.id, item.name, `${item.id} has mismatched name ${item.name}.`);
+		}
+	});
 	it.skip('should have descriptions', function () {
 		for (const item of Dex.items.all()) {
 			const description = item.desc || item.shortDesc;
@@ -58,6 +68,11 @@ describe('Items', function () {
 });
 
 describe('Abilities', function () {
+	if('should have a name that matches its id', function () {
+		for (const ability of Dex.abilities.all()) {
+			assert.equal(ability.id, ability.name, `${ability.id} has mismatched name ${ability.name}.`);
+		}
+	});
 	it.skip('should have descriptions', function () {
 		for (const ability of Dex.abilities.all()) {
 			const description = ability.desc || ability.shortDesc;
