@@ -10638,6 +10638,36 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	walkietalkie: {
+		inherit: true,
+		tier: "Uber",
+		isNonstandard: null,
+	},
+	tsuchinokoinsular: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	ponderselo: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	azumarite: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	impostree: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
+	crolord: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	kattapillar: {
 		inherit: true,
 		tier: "OU",
@@ -11218,6 +11248,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	pantherk: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	realwalker: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

@@ -3415,6 +3415,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Crowheaded",
 		desc: "Peck, Drill Peck, Pluck, and Bolt Beak deal 1.5x damage.",
 	},
+	aintnothingonnabreakmystride: {
+		name: "AIN'T NOTHIN' GONNA BREAK MY STRIDE",
+		desc: "Realwalker's unbreakable stride boosts its STAB to 2x, and makes its stats impossible to lower.",
+	},
 	fireaffinity: {
 		name: "Fire Affinity",
 		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fire-type attack. This Pokemon is healed 1/8 by Fire. Immune to Burn.",

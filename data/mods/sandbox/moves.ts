@@ -23,6 +23,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	acidicrainfall: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	acidspray: {
 		inherit: true,
 		isNonstandard: null,
