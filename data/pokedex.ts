@@ -44363,6 +44363,38 @@ blobbosmechelectric: {
 		],
 		gen: 8,
 	},
+	rerollan: {
+		num: -69112,
+		name: "Rerollan",
+		types: [
+			"Steel",
+			"Electric",
+		],
+		gender: "N",
+		baseStats: {
+			hp: 101,
+			atk: 121,
+			def: 89,
+			spa: 78,
+			spd: 78,
+			spe: 89,
+		},
+		abilities: {
+			0: "Defiant",
+			1: "Light Metal",
+			H: "Emergency Exit",
+			S: "Rollan",
+		},
+		heightm: 1.5,
+		weightkg: 223,
+		color: "Red",
+		prevo: "Dubus",
+		evoItem: "Metal Coat",
+		eggGroups: [
+			"Amorphous",
+		],
+		gen: 8,
+	},
 	yangfin: {
 		num: -69043,
 		name: "Yangfin",

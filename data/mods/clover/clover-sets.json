@@ -64,7 +64,7 @@
 				"Breedject",
 				"Ackbar",
 				"Muhammad",
-				"Lizakbar",
+				"La Bomba",
 				"Lizakbar",
 				"Lizakbar",
 				"Lizakbar",
@@ -3049,7 +3049,8 @@
 				},
 				{
 					 "abilities":[
-							"noguard"
+							"noguard",
+							"stinkbomb"
 					 ],
 					 "items":[
 							"choicescarf"
@@ -3079,7 +3080,7 @@
 		 "sets":[
 				{
 					 "abilities":[
-							"defiant"
+							"fuku"
 					 ],
 					 "items":[
 							"leftovers"
@@ -3089,7 +3090,9 @@
 							"slackoff",
 							"substitute",
 							"earthquake",
-							"knockoff"
+							"knockoff",
+							"uturn",
+							"rapidspin"
 					 ],
 					 "level":84
 				}
@@ -9048,7 +9051,8 @@
 	"biteki":{
 		 "nicknames":[
 				"Shiteki",
-				"Biteki"
+				"Biteki",
+				"Finteki"
 		 ],
 		 "sets":[
 				{
@@ -9065,7 +9069,8 @@
 							"icebeam",
 							"erosionwave",
 							"dazzlinggleam",
-							"heatwave"
+							"heatwave",
+							"slipturn"
 					 ],
 					 "level":84
 				},
@@ -9086,6 +9091,20 @@
 							"earthpower",
 							"thunderbolt"
 					 ],
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"gradient"
+					 ],
+					 "items":[
+							"choicescarf"
+					 ],
+					 "moves":[
+							"slipturn",
+							"surf",
+							"psychoboost",
+							"revelationdance"					 ],
 					 "level":84
 				}
 		 ]
