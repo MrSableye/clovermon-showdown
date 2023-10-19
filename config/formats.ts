@@ -35,7 +35,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
-			'Condoom + Unaware', 'Potarded + Unaware', 'Wheygle + Unburden',
+			'Condoom + Unaware', 'Potarded + Unaware', 
 		],
 	},
 	{
@@ -177,7 +177,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Wheygle + Unburden'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 		unbanlist: ['Adesign'], // fucking lmao
 	},
 	{
@@ -251,7 +251,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Wheygle + Belly Drum', 'Condoom + Unaware', 'Potarded + Unaware'],
 	},
 	{
 		name: '[Gen 8 Clover Only] Balanced Hackmons',
@@ -277,7 +277,7 @@ export const Formats: FormatList = [
 			'Multi Tier',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Wonder Guard', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware'],
+		banlist: ['Baton Pass', 'Shadow Tag', 'Arena Trap', 'Wonder Guard', 'Wheygle + Belly drum', 'Condoom + Unaware', 'Potarded + Unaware'],
 	},
 	{
 		name: '[Gen 8 Clover Only] 350 Cup',
@@ -308,7 +308,7 @@ export const Formats: FormatList = [
 			'Unjoy', 'Chancer', 'Tarditank', 'Flameboyan', 'Eviolite', 'Seamapan',
 			'Pikotton', 'Pretzely', 'Urswine', 'Masdawg', 'Pasdawg', 'Uber > 1', 'AG ++ Uber > 1', 'Arena Trap', 'Huge Power',
 			'Moody', 'Pure Power', 'Shadow Tag', 'Swift Swim',
-			'Baton Pass', 'Wonder Guard', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',
+			'Baton Pass', 'Wonder Guard', 'Wheygle + Belly Drum', 'Condoom + Unaware', 'Potarded + Unaware',
 		],
 		onValidateTeam(team) {
 			const gods = new Set<string>();
@@ -382,7 +382,7 @@ export const Formats: FormatList = [
 			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Draconius', 'Bunnorgy',
-			'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware'],
+			'Wheygle + Belly Drum', 'Condoom + Unaware', 'Potarded + Unaware'],
 		unbanlist: ['Condoom', 'Foryu', 'Narwhiz', 'Scytill'],
 	},
 	{
@@ -427,7 +427,7 @@ export const Formats: FormatList = [
 		restricted: [
 			'Acupressure', 'Astral Barrage', 'Belly Drum', 'Bolt Beak', 'Clangorous Soul', 'Double Iron Bash', 'Electrify', 'Extreme Speed', 'Fishious Rend',
 			'Geomancy', 'Glacial Lance', 'Lovely Kiss', 'Precipice Blades', 'Shell Smash', 'Shift Gear', 'Spore', 'Thousand Arrows', 'V-create', 'Wicked Blow',
-			'Toke', 'Dark Void', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',
+			'Toke', 'Dark Void', 'Wheygle + Belly Drum', 'Condoom + Unaware', 'Potarded + Unaware',
 		],
 	},
 	{
@@ -449,7 +449,7 @@ export const Formats: FormatList = [
 		restricted: [
 			'Astral Barrage', 'Belly Drum', 'Bolt Beak', 'Double Iron Bash', 'Electrify', 'Geomancy', 'Glacial Lance',
 			'Lovely Kiss', 'Shell Smash', 'Shift Gear', 'Sleep Powder', 'Spore', 'Surging Strikes', 'Thousand Arrows',
-			'Toke', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',
+			'Toke', 'Wheygle + Belly Drum', 'Condoom + Unaware', 'Potarded + Unaware',
 		],
 	},
 	{
@@ -485,7 +485,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
-			'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',
+			 'Condoom + Unaware', 'Potarded + Unaware',
 		],
 	},
 	{
@@ -546,7 +546,7 @@ export const Formats: FormatList = [
 		restricted: [
 			'Adesign', 'Baddon', 'Boarnograf', 'Chromox', 'Clovenix', 'Demiwaifu', 'Endranther', 'Foryu', 'Funnedong',
 			'Griffawork', 'Heliofug', 'Jewipede', 'Narwhiz', 'Scytill', 'Semdemen', 'Tentaquil',
-			'Vivaiger', 'Niterpent', 'Notridley', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware',
+			'Vivaiger', 'Niterpent', 'Notridley', 'Condoom + Unaware', 'Potarded + Unaware',
 		],
 		onValidateTeam(team) {
 			const itemTable = new Set<ID>();
@@ -942,7 +942,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Condoom + Unaware', 'Potarded + Unaware', 'Wheygle + Unburden'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Condoom + Unaware', 'Potarded + Unaware'],
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] NFE',
@@ -978,7 +978,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Wheygle + Unburden', 'Condoom + Unaware', 'Potarded + Unaware'],
+		banlist: ['Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard', 'Condoom + Unaware', 'Potarded + Unaware'],
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] Anything Goes',
@@ -1211,7 +1211,7 @@ export const Formats: FormatList = [
 			'Species Clause but Special for Blobbos',
 		],
 		banlist: ['Baton Pass', 'Nothing', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Fusjite', 'Eternatus-Eternamax', 'Fuck You', 'Eternal Walk', 'Cope', 'Francine', "It's Over", "F Bomb", "Pokestar-Spirit", "Kingmadio", "Zacian", "Zacian-Crowned", "Calyrex-Shadow", 'Fling + License to Sell Hotdogs', 'Skull Cannon', 'Extinction Wave', 'Wonder Guard', 'Junkbane', 'Shed Tail',
-					'Condoom + Unaware', 'Potarded + Unaware', 'Wheygle + Unburden',
+					'Condoom + Unaware', 'Potarded + Unaware',
 					'Adesign','Demiwaifu','Notridley','Endranther','Baddon','Scytill','Foryu','Clovenix','Jewipede','Chromox','Heliofug','Vivaiger',
 					'Fontaba-/z/','Arceus','Kuuroba','Funnedong','Narwhiz','Niterpent','Griffawork','Boarnograf','Tentaquil','Regishort','Regicide','Devante','Manatank',
 					'Nyanonite','The Forest','Vergilion','Dragapult','Annihilape','Calyrex-Ice','Chien-Pao','Dialga','Espathra','Eternatus','Flutter Mane','Giratina','Giratina-Origin',

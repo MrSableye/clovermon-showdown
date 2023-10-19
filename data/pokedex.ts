@@ -36826,7 +36826,7 @@ azumarite: {
    types: ["Rock", "Dark"],
    genderRatio: {M: 0.5, F: 0.5},
    baseStats: {hp: 120, atk: 65, def: 120, spa: 115, spd: 105, spe: 75},
-   abilities: {0: "Huge Power", 1: "Solid Rock", H: "Sand Rush"},
+   abilities: {0: "Huge Power", 1: "Solid Rock", H: "Sand Force"},
    heightm: 2.2,
    weightkg: 100.1,
    color: "Black",
