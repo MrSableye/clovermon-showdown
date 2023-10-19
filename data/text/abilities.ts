@@ -2907,7 +2907,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Adds a Present to every attack.",
 	},
 	acupower: {
-		name: "Present Power",
+		name: "Acu Power",
 		shortDesc: "Adds an Acupressure to every attack.",
 	},
 	supermentum: {
