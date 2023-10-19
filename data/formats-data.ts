@@ -9771,6 +9771,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	rerollan: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	yangfin: {
 		tier: "Illegal",
 		isNonstandard: "Future",

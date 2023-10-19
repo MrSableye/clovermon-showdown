@@ -10853,6 +10853,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	rerollan: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	yangfin: {
 		inherit: true,
 		tier: "OU",

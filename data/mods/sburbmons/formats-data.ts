@@ -9288,6 +9288,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	rerollan: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	yangfin: {
 		inherit: true,
 		isNonstandard: "Future",
