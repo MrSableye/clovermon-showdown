@@ -1274,10 +1274,4 @@ export const Formats: FormatList = [
 		ruleset: ['Standard'],
 		team: 'random10u',
 	},
-	{
-	name: '[Gen 8 Clover Blobbos CAP Only] Random Battle',
-		mod: 'cloverblobboscap',
-		team: 'random',
-		ruleset: ['Terastal Clause', 'Dynamax Clause', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Sketch Post-Gen 7 Moves'],
-	},
 ];
