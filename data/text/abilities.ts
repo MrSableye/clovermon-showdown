@@ -2921,6 +2921,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	rollan: {
 		name: "Rollan",
 		shortDesc: "Gives 2 random boosts on switch-in. If they are the same boosts, also give +2 crit",
+
+		activate: "  [POKEMON] got dubs! Check 'em!",
 	},
 	terraform: {
 		name: "Terraform",

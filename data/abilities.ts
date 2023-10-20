@@ -11400,36 +11400,28 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	rollan: {
 		onStart(pokemon) {
-			let stats: BoostID[] = [];
-			const boost: SparseBoostsTable = {};
-			let statA: BoostID;
-			for (statA in pokemon.boosts) {
-				if (statA === 'accuracy' || statA === 'evasion') continue;
-				if (pokemon.boosts[statA] < 6) {
-					stats.push(statA);
-				}
-			}
-			let randomStat1: BoostID | undefined = stats.length ? this.sample(stats) : undefined;
-			if (randomStat1) boost[randomStat1] = 1;
+			const stats: BoostID[] = [];
 
-			stats = [];
-			let statB: BoostID;
-			for (statB in pokemon.boosts) {
-				if (statB === 'accuracy' || statB === 'evasion') continue;
-				if (pokemon.boosts[statB] < 6){
-					stats.push(statB);
-				}
+			let stat: BoostID;
+			for (stat in pokemon.boosts) {
+				if (stat === 'accuracy' || stat === 'evasion') continue;
+				if (pokemon.boosts[stat] < 6) stats.push(stat);
 			}
-			let randomStat2 = stats.length ? this.sample(stats) : undefined;
-			if (randomStat2) boost[randomStat2] = 1;
+
+			if (!stats.length) return;
+
+			const statA = this.sample(stats);
+			const statB = this.sample(stats);
 			
-			if (randomStat2 === randomStat1){
-				if (randomStat2) boost[randomStat2] = 2;
+			if (statA === statB){
 				pokemon.addVolatile('focusenergy');
-				this.add('-message', `${pokemon.name} got dubs. Check em!`);
-				
-			}	
-			this.boost(boost, pokemon, pokemon);
+				this.add('-activate', pokemon, 'ability: Rollan');
+			}
+
+			const boosts: SparseBoostsTable = {};
+			boosts[statA] = 1;
+			boosts[statB] = (boosts[statB] || 0) + 1;
+			this.boost(boosts, pokemon);
 		},
 		name: "Rollan",
 		rating: 3.5,
