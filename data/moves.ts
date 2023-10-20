@@ -32878,9 +32878,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Reroll",
-		pp: 30,
+		pp: 22,
 		priority: 0,
 		flags: {},
+		noPPBoosts: true,
 		onHit(target) {
 			let totalBoosts = 3;
 			let totalDeboosts = 0;
