@@ -32873,6 +32873,93 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 		isNonstandard: "Future",
 	},
+	reroll: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Reroll",
+		pp: 30,
+		priority: 0,
+		flags: {},
+		onHit(target) {
+			let totalBoosts = 3;
+			let totalDeboosts = 0;
+			let stat: BoostID;
+			const stats: BoostID[] = [];
+			const accEvaBoosts: SparseBoostsTable = {};
+			for (stat in target.boosts) {
+				if (stat === 'accuracy' || stat === 'evasion') {
+					accEvaBoosts[stat] = target.boosts[stat];
+					continue;
+				}
+				stats.push(stat);
+				if (target.boosts[stat] > 0) {
+					totalBoosts += target.boosts[stat];
+				} else {
+					totalDeboosts -= target.boosts[stat];
+				}
+			}
+
+			target.clearBoosts();
+			this.add('-clearboost', target);
+
+			if (totalBoosts - totalDeboosts >= (5 * 6)) { // If we would get +6 in all, just do it.
+				this.boost({
+					...accEvaBoosts,
+					atk: 6,
+					def: 6,
+					spa: 6,
+					spd: 6,
+					spe: 6,
+				});
+				return;
+			} else if (totalBoosts - totalDeboosts <= -(5 * 6)) { // If we would just get -6 in all, just do it.
+				this.boost({
+					...accEvaBoosts,
+					atk: -6,
+					def: -6,
+					spa: -6,
+					spd: -6,
+					spe: -6,
+				});
+				return;
+			}
+
+			const boosts: SparseBoostsTable = {};
+			for (let i = 0; i < totalDeboosts; i++) {
+				const randomStat = this.sample(stats);
+
+				if (boosts[randomStat] === -6) {
+					i--;
+					continue;
+				}
+
+				boosts[randomStat] = (boosts[randomStat] || 0) - 1;
+			}
+
+			for (let i = 0; i < totalBoosts; i++) {
+				const randomStat = this.sample(stats);
+
+				if (boosts[randomStat] === 6) {
+					i--;
+					continue;
+				}
+
+				boosts[randomStat] = (boosts[randomStat] || 0) + 1;
+			}
+
+			this.boost({
+				...accEvaBoosts,
+				...boosts,
+			}, target);
+		},
+		secondary: null,
+		target: "adjacentAllyOrSelf",
+		type: "Normal",
+		zMove: {effect: 'crit2'},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
 	skillroom: {
 		accuracy: true,
 		basePower: 0,

@@ -4655,4 +4655,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	reroll: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
