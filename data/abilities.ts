@@ -8814,11 +8814,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (!source.abilityState?.hasMemed) source.abilityState.hasMemed = {};
 			source.abilityState.hasMemed[targetSlot] = true;
 
-			this.actions.useMove('acupressure', source, target);
+			this.actions.useMove('acupressure', source, source);
 		},
 		onResidual(pokemon) {
 			pokemon.abilityState.hasMemed = undefined;
 		},
+		onCriticalHit: false,
 		name: "Acu Power",
 		rating: 4.5,
 		isNonstandard: "Future",

@@ -33364,6 +33364,39 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		isNonstandard: "Future",
 	},
+	bamboozle: {
+		num: 389,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Bamboozle",
+		pp: 10,
+		priority: 1,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyMove (move, pokemon, target) {
+			if (!target) return;
+			const action = this.queue.willMove(target);
+			if (!action) return false;
+			const targetMove = this.dex.getActiveMove(action.move.id);
+			if ((!move ||targetMove.category === 'Status') ) {
+				move.overrideDefensiveStat = 'spe';
+			}
+			if ((targetMove.category === 'Special') ) {
+				move.overrideDefensiveStat = 'def';
+			}
+			if ((targetMove.category === 'Physical') ) {
+				move.overrideDefensiveStat = 'spd';
+			}
+			else {
+				move.overrideDefensiveStat = 'spe';
+			}
+
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		contestType: "Clever",
+	},
 	tornadocab: {
 		num: 173,
 		accuracy: 100,

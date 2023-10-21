@@ -9301,6 +9301,32 @@
 				}
 		 ]
 	},
+	"narwhiz":{
+		"nicknames":[
+			   "Narwhiz",
+			   "Narwhiz",
+			   "Narwhiz",
+			   "Narwhiz"
+		],
+		"sets":[
+			   {
+					"abilities":[
+						   "magician"
+					],
+					"items":[
+						   "watergem"
+					],
+					"moves":[
+						   "aquatail",
+						   "coil",
+						   "pixiepummel",
+						   "megahorn"
+						  
+					],
+					"level":72
+			   }
+		]
+   },
 	"spookscare":{
 		 "nicknames":[
 				"Sandertale",
@@ -9387,7 +9413,7 @@
 		 "nicknames":[
 				"Sandertale",
 				"Varg",
-				"Goryannus",
+				">Gory Anus",
 				"Goryannus",
 				"Goryannus",
 				"Goryannus",
