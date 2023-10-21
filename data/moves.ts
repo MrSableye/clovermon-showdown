@@ -33371,7 +33371,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Special",
 		name: "Bamboozle",
 		pp: 10,
-		priority: 1,
+		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onModifyMove (move, pokemon, target) {
 			if (!target) return;

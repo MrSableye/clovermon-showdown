@@ -9501,7 +9501,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	bamboozle: {
 		name: "Bamboozle",
-		shortDesc: "Damages target based on their Spe if it uses a status move, Def if it uses a special attack, Spd if they use a physical attack.",
+		shortDesc: "WIP] Damages target based on their Spe if it uses a status move, Def if it uses a special attack, Spd if they use a physical attack.",
 	},
 
 	// WACK MOVES
