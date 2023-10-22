@@ -187,6 +187,7 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Obtainable',
 			'Dynamax Clause',
+			'Cancel Mod',
 			'Sketch Post-Gen 7 Moves',
 		],
 	},
