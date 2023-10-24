@@ -142,13 +142,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	semdrop: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "LC",
+		isNonstandard: "Past",
 	},
 	semrust: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "NFE",
+		isNonstandard: "Past",
 	},
 	furnazi: {
 		inherit: true,
@@ -1011,8 +1009,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	wifemin: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Past",
 	},
 	uwotto: {
 		inherit: true,
@@ -1028,8 +1025,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	semdemen: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Past",
 	},
 	dragking: {
 		inherit: true,
@@ -1575,8 +1571,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	sesquatch: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Past",
 	},
 	fireshi: {
 		inherit: true,
@@ -1702,7 +1697,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	regishort: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	regicide: {
 		inherit: true,
@@ -1726,13 +1721,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	semmush: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Past",
 	},
 	husbin: {
 		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
+		isNonstandard: "Past",
 	},
 	ranruu: {
 		inherit: true,
@@ -2746,7 +2739,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    yanture: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber", // sorry yan, hes just too strong
 	},
 	    seaman: {
 		inherit: true,
@@ -2783,10 +2776,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	ponderselo: {
-	inherit: true,
-	isNonstandard: null,
-	tier: "OU",
+		ponderselo: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	    walkietalkie: {
 		inherit: true,
