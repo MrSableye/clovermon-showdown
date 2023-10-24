@@ -133,4 +133,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 96,
 		},
 	},
+	tarquail: {
+		inherit: true,
+		abilities: {0: "Arena Trap", 1: "Gooey", H: "Sticky Hold", S: "Earth Eater"},
+	},
 };
