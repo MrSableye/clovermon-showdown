@@ -8857,8 +8857,6 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-<<<<<<< Updated upstream
-=======
 	azumarite: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -8911,7 +8909,6 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
->>>>>>> Stashed changes
 	kattapillar: {
 		tier: "Illegal",
 		isNonstandard: "Future",

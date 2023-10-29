@@ -36833,8 +36833,6 @@ azumarite: {
    eggGroups: ["Mineral"],
    gen: 8,
 },
-<<<<<<< Updated upstream
-=======
 crolord: {
 	num: -8208,
 	name: "Cro'lord",
@@ -37012,7 +37010,6 @@ clobber: {
    eggGroups: ["Monster", "Field"],
    gen: 8,
 },
->>>>>>> Stashed changes
 	 kattapillar: {
 		num: -42704,
 		name: "Kattapillar",
