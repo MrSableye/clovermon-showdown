@@ -2982,6 +2982,66 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	inherit: true,
 	isNonstandard: null,
 	tier: "OU",
+	},
+	pyroshiiva: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	lober: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "LC",
+	},
+	clobber: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	tiamat: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "Uber",
+	},
+	albergrab: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "LC",
+	},
+	alberchamp: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	alberfly: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	alberaph: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "Uber",
+	},
+	albermax: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	alberfectcell: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "Uber",
+	},
+	genine: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	gharroste: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
     },
 	sludge: {
 	inherit: true,

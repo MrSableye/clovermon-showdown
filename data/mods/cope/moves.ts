@@ -4550,6 +4550,22 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	luminacrash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	jetpunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	crustaceancombat: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	alberspin: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	trailblaze: {
 		inherit: true,
 		isNonstandard: null,

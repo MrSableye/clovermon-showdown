@@ -8857,6 +8857,61 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+<<<<<<< Updated upstream
+=======
+	azumarite: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	crolord: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	realwalker: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	pyroshiiva: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	lober: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	clobber: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	albergrab: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	alberchamp: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	albermax: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	alberfly: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	alberaph: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	gharroste: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	tiamat: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+>>>>>>> Stashed changes
 	kattapillar: {
 		tier: "Illegal",
 		isNonstandard: "Future",
