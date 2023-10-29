@@ -36926,7 +36926,7 @@ alberfectcell: {
 alberfly: {
    num: -8214,
    name: "Alberchamp",
-   types: ["Dragon","Fly"],
+   types: ["Dragon","Flying"],
    genderRatio: {M: 0.75, F: 0.25},
    baseStats: {hp: 45, atk: 100, def: 65, spa: 60, spd: 50, spe: 170},
    abilities: {0: "Shield Dust", H: "Infiltrator", S: "Unburden"},
