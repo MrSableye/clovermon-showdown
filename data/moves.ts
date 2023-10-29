@@ -29594,7 +29594,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 90,
 		category: "Special",
 		name: "Just Monikat",
-		pp: 8,
+		pp: 5,
 		noPPBoosts: true,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
@@ -83332,6 +83332,7 @@ beforeTurnCallback(pokemon) {
 		type: "Zombie",
 	},
 		alberspin: {
+			num: 42011,
 			accuracy: 100,
 			basePower: 50,
 			category: "Physical",
