@@ -1883,14 +1883,6 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	protosynthesis: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	eartheater: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	doomed: {
 		inherit: true,
 		isNonstandard: null,
