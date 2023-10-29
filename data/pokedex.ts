@@ -36943,7 +36943,7 @@ alberfly: {
 alberaph: {
    num: -8215,
    name: "Albermax",
-   types: ["Fly"],
+   types: ["Flying"],
    genderRatio: {M: 0.75, F: 0.25},
    baseStats: {hp: 94, atk: 142, def: 74, spa: 68, spd: 73, spe: 119},
    abilities: {0: "Levitate", H: "Infiltrator", S: "Aerilate"},
