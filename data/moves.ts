@@ -29680,7 +29680,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Special",
 		name: "Just Monikat",
 		pp: 5,
-		noPPBoosts: true,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onHit(target, pokemon, move) {
@@ -31632,6 +31631,68 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Steel",
+	},
+	alberspin: {
+        accuracy: 100,
+        basePower: 50,
+        category: "Physical",
+        name: "Alber Spin",
+        pp: 40,
+        priority: 0,
+        flags: {contact: 1, protect: 1, mirror: 1},
+        onAfterHit(target, pokemon, move) {
+            if (!move.hasSheerForce) {
+                if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+                    this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+                }
+                const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
+                for (const condition of sideConditions) {
+                    if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+                        this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+                    }
+                }
+                if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+                    pokemon.removeVolatile('partiallytrapped');
+                }
+            }
+        },
+        onAfterSubDamage(damage, target, pokemon, move) {
+            if (!move.hasSheerForce) {
+                if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+                    this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+                }
+                const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
+                for (const condition of sideConditions) {
+                    if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+                        this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+                    }
+                }
+                if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+                    pokemon.removeVolatile('partiallytrapped');
+                }
+            }
+        },
+        secondary: null,
+        target: "normal",
+        type: "Dragon",
+        isNonstandard: "Future",
+    },
+	crustaceancombat: {
+		num: 42012,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Crustacean Combat",
+		pp: 10,
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, distance: 1, nonsky: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Fighting', type);
+		},
+		priority: 0,
+		secondary: null,
+		target: "any",
+		type: "Water",
+		isNonstandard: "Future",
 	},
 	aboostingmove: {
 		accuracy: true,
