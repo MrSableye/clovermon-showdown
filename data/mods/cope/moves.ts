@@ -59,6 +59,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	alberspin: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	alloutpummeling: {
 		inherit: true,
 		isNonstandard: null,
@@ -552,6 +556,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	crosspoison: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	crustaceancombat: {
 		inherit: true,
 		isNonstandard: null,
 	},
