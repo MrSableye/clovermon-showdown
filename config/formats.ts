@@ -1236,6 +1236,19 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: '[Gen 8 Sweet Only] OU',
+		mod: 'sweet',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: [
+			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass',
+		],
+	},
+	{
 		name: "[Gen 1] Ubers",
 		mod: 'gen1',
 		searchShow: false,

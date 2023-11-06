@@ -101941,4 +101941,10983 @@ blobbosmechelectric: {
 		gender: "F",
 		evoLevel: 36
 	},
+	/* Sweet mons */
+	brownisaur: {
+		num: 999001,
+		name: "Brownisaur",
+		types: [
+			"Cherry",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 50,
+			def: 50,
+			spa: 65,
+			spd: 65,
+			spe: 50
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	chocosaur: {
+		num: 999002,
+		name: "Chocosaur",
+		types: [
+			"Cherry",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 65,
+			def: 65,
+			spa: 85,
+			spd: 85,
+			spe: 65
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	fudgasaur: {
+		num: 999003,
+		name: "Fudgasaur",
+		types: [
+			"Cherry",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 85,
+			def: 80,
+			spa: 100,
+			spd: 100,
+			spe: 80
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	strawander: {
+		num: 999004,
+		name: "Strawander",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 55,
+			def: 45,
+			spa: 65,
+			spd: 55,
+			spe: 65
+		},
+		abilities: [
+			"Heatproof"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	straweleon: {
+		num: 999005,
+		name: "Straweleon",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 65,
+			def: 60,
+			spa: 85,
+			spd: 65,
+			spe: 85
+		},
+		abilities: [
+			"Heatproof"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.125,
+			M: 0.875
+		}
+	},
+	strawizard: {
+		num: 999006,
+		name: "Strawizard",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 85,
+			def: 70,
+			spa: 110,
+			spd: 85,
+			spe: 100
+		},
+		abilities: [
+			"Heatproof"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	squirpie: {
+		num: 999007,
+		name: "Squirpie",
+		types: [
+			"Apple"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 55,
+			def: 65,
+			spa: 50,
+			spd: 65,
+			spe: 45
+		},
+		abilities: [
+			"Shell Armor"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster",
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	tartortle: {
+		num: 999008,
+		name: "Tartortle",
+		types: [
+			"Apple"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 65,
+			def: 85,
+			spa: 65,
+			spd: 85,
+			spe: 65
+		},
+		abilities: [
+			"Shell Armor"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Monster",
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	piestoise: {
+		num: 999009,
+		name: "Piestoise",
+		types: [
+			"Apple"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 80,
+			def: 100,
+			spa: 85,
+			spd: 105,
+			spe: 75
+		},
+		abilities: [
+			"Shell Armor"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Monster",
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	panzeal: {
+		num: 999010,
+		name: "Panzeal",
+		types: [
+			"Lime",
+			"Cherry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 50,
+			def: 65,
+			spa: 50,
+			spd: 50,
+			spe: 65
+		},
+		abilities: [
+			"Overgrow"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	simizeal: {
+		num: 999011,
+		name: "Simizeal",
+		types: [
+			"Lime",
+			"Lemon"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 70,
+			def: 70,
+			spa: 75,
+			spd: 75,
+			spe: 80
+		},
+		abilities: [
+			"Overgrow"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	panspritz: {
+		num: 999012,
+		name: "Panspritz",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 45,
+			def: 50,
+			spa: 60,
+			spd: 65,
+			spe: 70
+		},
+		abilities: [
+			"Torrent"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	simispritz: {
+		num: 999013,
+		name: "Simispritz",
+		types: [
+			"Blueberry",
+			"Banana"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 75,
+			def: 75,
+			spa: 70,
+			spd: 70,
+			spe: 80
+		},
+		abilities: [
+			"Torrent"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	pancott: {
+		num: 999014,
+		name: "Pancott",
+		types: [
+			"Orange",
+			"Cherry"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 85,
+			def: 50,
+			spa: 55,
+			spd: 50,
+			spe: 35
+		},
+		abilities: [
+			"Blaze"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	simicott: {
+		num: 999015,
+		name: "Simicott",
+		types: [
+			"Orange",
+			"Lime"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 110,
+			def: 60,
+			spa: 60,
+			spd: 80,
+			spe: 75
+		},
+		abilities: [
+			"Blaze"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	starberry: {
+		num: 999016,
+		name: "Starberry",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 65,
+			def: 50,
+			spa: 45,
+			spd: 45,
+			spe: 60
+		},
+		abilities: [
+			"Sheer Force"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	berravia: {
+		num: 999017,
+		name: "Berravia",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 80,
+			def: 65,
+			spa: 60,
+			spd: 60,
+			spe: 75
+		},
+		abilities: [
+			"Sheer Force"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	berraptor: {
+		num: 999018,
+		name: "Berraptor",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 95,
+			def: 75,
+			spa: 80,
+			spd: 80,
+			spe: 95
+		},
+		abilities: [
+			"Sheer Force"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	rattatart: {
+		num: 999019,
+		name: "Rattatart",
+		types: [
+			"Strawberry",
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 70,
+			def: 45,
+			spa: 45,
+			spd: 45,
+			spe: 75
+		},
+		abilities: [
+			"Guts"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	raticake: {
+		num: 999020,
+		name: "Raticake",
+		types: [
+			"Strawberry",
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 80,
+			def: 60,
+			spa: 60,
+			spd: 80,
+			spe: 100
+		},
+		abilities: [
+			"Guts"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	spearnana: {
+		num: 999021,
+		name: "Spearnana",
+		types: [
+			"Vanilla",
+			"Banana"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 70,
+			def: 50,
+			spa: 40,
+			spd: 40,
+			spe: 80
+		},
+		abilities: [
+			"Regenerator"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	fearnana: {
+		num: 999022,
+		name: "Fearnana",
+		types: [
+			"Vanilla",
+			"Banana"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 90,
+			def: 65,
+			spa: 65,
+			spd: 65,
+			spe: 100
+		},
+		abilities: [
+			"Regenerator"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	migum: {
+		num: 999023,
+		name: "Migum",
+		types: [
+			"Lime",
+			"Orange"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 60,
+			def: 55,
+			spa: 50,
+			spd: 65,
+			spe: 65
+		},
+		abilities: [
+			"Intimidate"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Field",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	goman: {
+		num: 999024,
+		name: "Goman",
+		types: [
+			"Orange",
+			"Lime"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 85,
+			def: 70,
+			spa: 70,
+			spd: 85,
+			spe: 80
+		},
+		abilities: [
+			"Intimidate"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Field",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	popsichu: {
+		num: 999025,
+		name: "Popsichu",
+		types: [
+			"Orange"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 55,
+			def: 50,
+			spa: 50,
+			spd: 50,
+			spe: 90
+		},
+		abilities: [
+			"Static"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	raicicle: {
+		num: 999026,
+		name: "Raicicle",
+		types: [
+			"Orange"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 80,
+			def: 50,
+			spa: 80,
+			spd: 80,
+			spe: 100
+		},
+		abilities: [
+			"Static"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	shrewberry: {
+		num: 999027,
+		name: "Shrewberry",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 85,
+			def: 85,
+			spa: 40,
+			spd: 40,
+			spe: 40
+		},
+		abilities: [
+			"Analytic"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	slashberry: {
+		num: 999028,
+		name: "Slashberry",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 100,
+			def: 110,
+			spa: 45,
+			spd: 55,
+			spe: 65
+		},
+		abilities: [
+			"Analytic"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	angeirian: {
+		num: 999029,
+		name: "Angeirian",
+		types: [
+			"Vanilla",
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 65,
+			def: 55,
+			spa: 45,
+			spd: 40,
+			spe: 55
+		},
+		abilities: [
+			"Poison Point"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	angeino: {
+		num: 999030,
+		name: "Angeino",
+		types: [
+			"Vanilla",
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 75,
+			def: 75,
+			spa: 55,
+			spd: 55,
+			spe: 75
+		},
+		abilities: [
+			"Poison Point"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	angequeen: {
+		num: 999031,
+		name: "Angequeen",
+		types: [
+			"Vanilla",
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 85,
+			def: 85,
+			spa: 85,
+			spd: 85,
+			spe: 85
+		},
+		abilities: [
+			"Poison Point"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	devirian: {
+		num: 999032,
+		name: "Devirian",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 60,
+			def: 50,
+			spa: 50,
+			spd: 50,
+			spe: 55
+		},
+		abilities: [
+			"Poison Point"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Monster",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	devino: {
+		num: 999033,
+		name: "Devino",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 85,
+			def: 85,
+			spa: 55,
+			spd: 55,
+			spe: 65
+		},
+		abilities: [
+			"Poison Point"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Monster",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	deviking: {
+		num: 999034,
+		name: "Deviking",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 90,
+			def: 90,
+			spa: 85,
+			spd: 75,
+			spe: 85
+		},
+		abilities: [
+			"Poison Point"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Monster",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cupfairy: {
+		num: 999035,
+		name: "Cupfairy",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 55,
+			def: 50,
+			spa: 60,
+			spd: 65,
+			spe: 50
+		},
+		abilities: [
+			"Bulletproof"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cupfable: {
+		num: 999036,
+		name: "Cupfable",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 70,
+			def: 70,
+			spa: 80,
+			spd: 90,
+			spe: 60
+		},
+		abilities: [
+			"Bulletproof"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	vulpie: {
+		num: 999037,
+		name: "Vulpie",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 55,
+			def: 45,
+			spa: 60,
+			spd: 65,
+			spe: 65
+		},
+		abilities: [
+			"Drought"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	pietails: {
+		num: 999038,
+		name: "Pietails",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 60,
+			def: 60,
+			spa: 70,
+			spd: 100,
+			spe: 100
+		},
+		abilities: [
+			"Drought"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	creampuff: {
+		num: 999039,
+		name: "Creampuff",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 125,
+			atk: 50,
+			def: 40,
+			spa: 50,
+			spd: 40,
+			spe: 45
+		},
+		abilities: [
+			"Cute Charm"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	creamtuff: {
+		num: 999040,
+		name: "Creamtuff",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 140,
+			atk: 70,
+			def: 60,
+			spa: 75,
+			spd: 60,
+			spe: 45
+		},
+		abilities: [
+			"Cute Charm"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.7490196078431373,
+			M: 0.25098039215686274
+		}
+	},
+	sherbat: {
+		num: 999041,
+		name: "Sherbat",
+		types: [
+			"Vanilla",
+			"Grape"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 65,
+			def: 65,
+			spa: 50,
+			spd: 50,
+			spe: 55
+		},
+		abilities: [
+			"Download"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	shervern: {
+		num: 999042,
+		name: "Shervern",
+		types: [
+			"Vanilla",
+			"Grape"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 80,
+			def: 70,
+			spa: 60,
+			spd: 75,
+			spe: 90
+		},
+		abilities: [
+			"Download"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	offin: {
+		num: 999043,
+		name: "Offin",
+		types: [
+			"Chocolate",
+			"Cherry"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 50,
+			def: 55,
+			spa: 75,
+			spd: 65,
+			spe: 30
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	muffoom: {
+		num: 999044,
+		name: "Muffoom",
+		types: [
+			"Chocolate",
+			"Cherry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 75,
+			def: 70,
+			spa: 95,
+			spd: 75,
+			spe: 40
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	vilefinn: {
+		num: 999045,
+		name: "Vilefinn",
+		types: [
+			"Chocolate",
+			"Cherry"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 95,
+			def: 95,
+			spa: 100,
+			spd: 90,
+			spe: 50
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cupras: {
+		num: 999046,
+		name: "Cupras",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 70,
+			def: 65,
+			spa: 60,
+			spd: 55,
+			spe: 35
+		},
+		abilities: [
+			"Effect Spore"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Bug",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	paracake: {
+		num: 999047,
+		name: "Paracake",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 110,
+			def: 80,
+			spa: 60,
+			spd: 80,
+			spe: 40
+		},
+		abilities: [
+			"Effect Spore"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Bug",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cottonat: {
+		num: 999048,
+		name: "Cottonat",
+		types: [
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 60,
+			def: 50,
+			spa: 60,
+			spd: 55,
+			spe: 55
+		},
+		abilities: [
+			"Compound Eyes"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cottomoth: {
+		num: 999049,
+		name: "Cottomoth",
+		types: [
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 65,
+			def: 60,
+			spa: 90,
+			spd: 75,
+			spe: 90
+		},
+		abilities: [
+			"Compound Eyes"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	diggum: {
+		num: 999050,
+		name: "Diggum",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 30,
+			atk: 75,
+			def: 40,
+			spa: 55,
+			spd: 55,
+			spe: 95
+		},
+		abilities: [
+			"Solar Power"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	dugdrop: {
+		num: 999051,
+		name: "Dugdrop",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 80,
+			def: 60,
+			spa: 60,
+			spd: 80,
+			spe: 120
+		},
+		abilities: [
+			"Solar Power"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	meowffin: {
+		num: 999052,
+		name: "Meowffin",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 60,
+			def: 45,
+			spa: 40,
+			spd: 40,
+			spe: 90
+		},
+		abilities: [
+			"Pickup"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cupcat: {
+		num: 999053,
+		name: "Cupcat",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 70,
+			def: 60,
+			spa: 65,
+			spd: 65,
+			spe: 115
+		},
+		abilities: [
+			"Pickup"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	pieduck: {
+		num: 999054,
+		name: "Pieduck",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 60,
+			def: 60,
+			spa: 65,
+			spd: 60,
+			spe: 55
+		},
+		abilities: [
+			"Damp"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	golpie: {
+		num: 999055,
+		name: "Golpie",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 80,
+			def: 60,
+			spa: 80,
+			spd: 80,
+			spe: 80
+		},
+		abilities: [
+			"Damp"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cottgrape: {
+		num: 999056,
+		name: "Cottgrape",
+		types: [
+			"Chocolate",
+			"Grape"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 80,
+			def: 50,
+			spa: 55,
+			spd: 45,
+			spe: 70
+		},
+		abilities: [
+			"Adaptability"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	whimsgrape: {
+		num: 999057,
+		name: "Whimsgrape",
+		types: [
+			"Chocolate",
+			"Grape"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 105,
+			def: 60,
+			spa: 60,
+			spd: 70,
+			spe: 95
+		},
+		abilities: [
+			"Adaptability"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	petitcake: {
+		num: 999058,
+		name: "Petitcake",
+		types: [
+			"Strawberry",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 70,
+			def: 45,
+			spa: 70,
+			spd: 50,
+			spe: 60
+		},
+		abilities: [
+			"Own Tempo"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.24705882352941178,
+			M: 0.7529411764705882
+		}
+	},
+	lillicake: {
+		num: 999059,
+		name: "Lillicake",
+		types: [
+			"Strawberry",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 90,
+			def: 70,
+			spa: 70,
+			spd: 70,
+			spe: 70
+		},
+		abilities: [
+			"Own Tempo"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.24705882352941178,
+			M: 0.7529411764705882
+		}
+	},
+	cinnawag: {
+		num: 999060,
+		name: "Cinnawag",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 50,
+			def: 40,
+			spa: 40,
+			spd: 40,
+			spe: 90
+		},
+		abilities: [
+			"Drizzle"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cinnawhirl: {
+		num: 999061,
+		name: "Cinnawhirl",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 85,
+			def: 65,
+			spa: 50,
+			spd: 50,
+			spe: 90
+		},
+		abilities: [
+			"Drizzle"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cinnawrath: {
+		num: 999062,
+		name: "Cinnawrath",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 85,
+			def: 95,
+			spa: 80,
+			spd: 90,
+			spe: 85
+		},
+		abilities: [
+			"Drizzle"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	chabra: {
+		num: 999063,
+		name: "Chabra",
+		types: [
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 35,
+			atk: 25,
+			def: 15,
+			spa: 105,
+			spd: 55,
+			spe: 90
+		},
+		abilities: [
+			"Inner Focus"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	chadabra: {
+		num: 999064,
+		name: "Chadabra",
+		types: [
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 45,
+			def: 30,
+			spa: 120,
+			spd: 70,
+			spe: 105
+		},
+		abilities: [
+			"Inner Focus"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	alakabake: {
+		num: 999065,
+		name: "Alakabake",
+		types: [
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 65,
+			def: 45,
+			spa: 135,
+			spd: 85,
+			spe: 120
+		},
+		abilities: [
+			"Inner Focus"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.24705882352941178,
+			M: 0.7529411764705882
+		}
+	},
+	chefchop: {
+		num: 999066,
+		name: "Chefchop",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 80,
+			def: 50,
+			spa: 35,
+			spd: 35,
+			spe: 35
+		},
+		abilities: [
+			"Guts"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.24705882352941178,
+			M: 0.7529411764705882
+		}
+	},
+	chefchoke: {
+		num: 999067,
+		name: "Chefchoke",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 100,
+			def: 70,
+			spa: 70,
+			spd: 60,
+			spe: 45
+		},
+		abilities: [
+			"Guts"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.24705882352941178,
+			M: 0.7529411764705882
+		}
+	},
+	chefchamp: {
+		num: 999068,
+		name: "Chefchamp",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 130,
+			def: 80,
+			spa: 85,
+			spd: 85,
+			spe: 55
+		},
+		abilities: [
+			"Guts"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.24705882352941178,
+			M: 0.7529411764705882
+		}
+	},
+	bellnut: {
+		num: 999069,
+		name: "Bellnut",
+		types: [
+			"Lime"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 75,
+			def: 35,
+			spa: 70,
+			spd: 40,
+			spe: 40
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	weepeanut: {
+		num: 999070,
+		name: "Weepeanut",
+		types: [
+			"Lime"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 90,
+			def: 50,
+			spa: 85,
+			spd: 60,
+			spe: 55
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	victrenut: {
+		num: 999071,
+		name: "Victrenut",
+		types: [
+			"Lime"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 105,
+			def: 75,
+			spa: 100,
+			spd: 80,
+			spe: 70
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	icefish: {
+		num: 999072,
+		name: "Icefish",
+		types: [
+			"Vanilla",
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 40,
+			def: 50,
+			spa: 50,
+			spd: 100,
+			spe: 70
+		},
+		abilities: [
+			"Gooey"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cweamicent: {
+		num: 999073,
+		name: "Cweamicent",
+		types: [
+			"Vanilla",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 60,
+			def: 50,
+			spa: 60,
+			spd: 120,
+			spe: 90
+		},
+		abilities: [
+			"Gooey"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	berrydude: {
+		num: 999074,
+		name: "Berrydude",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 80,
+			def: 100,
+			spa: 30,
+			spd: 30,
+			spe: 20
+		},
+		abilities: [
+			"Rock Head"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	berryler: {
+		num: 999075,
+		name: "Berryler",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 95,
+			def: 115,
+			spa: 55,
+			spd: 55,
+			spe: 35
+		},
+		abilities: [
+			"Rock Head"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	berrem: {
+		num: 999076,
+		name: "Berrem",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 130,
+			def: 130,
+			spa: 65,
+			spd: 65,
+			spe: 45
+		},
+		abilities: [
+			"Rock Head"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	pawnsour: {
+		num: 999077,
+		name: "Pawnsour",
+		types: [
+			"Lime"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 85,
+			def: 55,
+			spa: 45,
+			spd: 45,
+			spe: 70
+		},
+		abilities: [
+			"Hyper Cutter"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	bisour: {
+		num: 999078,
+		name: "Bisour",
+		types: [
+			"Lime"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 80,
+			def: 60,
+			spa: 60,
+			spd: 80,
+			spe: 105
+		},
+		abilities: [
+			"Hyper Cutter"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	canesal: {
+		num: 999079,
+		name: "Canesal",
+		types: [
+			"Cherry",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 65,
+			def: 65,
+			spa: 40,
+			spd: 40,
+			spe: 50
+		},
+		abilities: [
+			"Own Tempo"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Monster",
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	weacane: {
+		num: 999080,
+		name: "Weacane",
+		types: [
+			"Cherry",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 75,
+			def: 90,
+			spa: 100,
+			spd: 80,
+			spe: 30
+		},
+		abilities: [
+			"Own Tempo"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Monster",
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	strawink: {
+		num: 999081,
+		name: "Strawink",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 25,
+			atk: 35,
+			def: 70,
+			spa: 95,
+			spd: 55,
+			spe: 45
+		},
+		abilities: [
+			"No Guard"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	strawxio: {
+		num: 999082,
+		name: "Strawxio",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 60,
+			def: 95,
+			spa: 100,
+			spd: 60,
+			spe: 60
+		},
+		abilities: [
+			"No Guard"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	luxberry: {
+		num: 999083,
+		name: "Luxberry",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 100,
+			def: 90,
+			spa: 110,
+			spd: 80,
+			spe: 70
+		},
+		abilities: [
+			"No Guard"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Flying",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	puffduo: {
+		num: 999084,
+		name: "Puffduo",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 85,
+			def: 55,
+			spa: 45,
+			spd: 45,
+			spe: 75
+		},
+		abilities: [
+			"Early Bird"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	puffdrio: {
+		num: 999085,
+		name: "Puffdrio",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 100,
+			def: 70,
+			spa: 60,
+			spd: 60,
+			spe: 100
+		},
+		abilities: [
+			"Early Bird"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	phangum: {
+		num: 999086,
+		name: "Phangum",
+		types: [
+			"Lime"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 45,
+			def: 55,
+			spa: 45,
+			spd: 70,
+			spe: 45
+		},
+		abilities: [
+			"Thick Fat"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Water 1",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gumminant: {
+		num: 999087,
+		name: "Gumminant",
+		types: [
+			"Lime"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 60,
+			def: 75,
+			spa: 70,
+			spd: 95,
+			spe: 70
+		},
+		abilities: [
+			"Thick Fat"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Water 1",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	puddmer: {
+		num: 999088,
+		name: "Puddmer",
+		types: [
+			"Chocolate",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 85,
+			def: 55,
+			spa: 45,
+			spd: 55,
+			spe: 25
+		},
+		abilities: [
+			"Sticky Hold"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	ginddup: {
+		num: 999089,
+		name: "Ginddup",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 85,
+			def: 75,
+			spa: 65,
+			spd: 90,
+			spe: 50
+		},
+		abilities: [
+			"Sticky Hold"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	mintay: {
+		num: 999090,
+		name: "Mintay",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 65,
+			def: 100,
+			spa: 45,
+			spd: 40,
+			spe: 40
+		},
+		abilities: [
+			"Shell Armor"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	malamint: {
+		num: 999091,
+		name: "Malamint",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 75,
+			def: 150,
+			spa: 60,
+			spd: 45,
+			spe: 70
+		},
+		abilities: [
+			"Shell Armor"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gascream: {
+		num: 999092,
+		name: "Gascream",
+		types: [
+			"Grape",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 35,
+			def: 30,
+			spa: 100,
+			spd: 35,
+			spe: 80
+		},
+		abilities: [
+			"Adaptability"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	hauntice: {
+		num: 999093,
+		name: "Hauntice",
+		types: [
+			"Grape",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 50,
+			def: 45,
+			spa: 115,
+			spd: 55,
+			spe: 95
+		},
+		abilities: [
+			"Adaptability"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	creamgar: {
+		num: 999094,
+		name: "Creamgar",
+		types: [
+			"Grape",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 65,
+			def: 60,
+			spa: 130,
+			spd: 75,
+			spe: 110
+		},
+		abilities: [
+			"Adaptability"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	emolpie: {
+		num: 999095,
+		name: "Emolpie",
+		types: [
+			"Banana"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 45,
+			def: 160,
+			spa: 30,
+			spd: 45,
+			spe: 70
+		},
+		abilities: [
+			"Vital Spirit"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	flanzee: {
+		num: 999096,
+		name: "Flanzee",
+		types: [
+			"Orange",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 60,
+			def: 45,
+			spa: 60,
+			spd: 90,
+			spe: 35
+		},
+		abilities: [
+			"Insomnia"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	hypflan: {
+		num: 999097,
+		name: "Hypflan",
+		types: [
+			"Orange",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 70,
+			def: 70,
+			spa: 70,
+			spd: 100,
+			spe: 60
+		},
+		abilities: [
+			"Insomnia"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	lolliby: {
+		num: 999098,
+		name: "Lolliby",
+		types: [
+			"Lemon",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 30,
+			atk: 105,
+			def: 90,
+			spa: 40,
+			spd: 35,
+			spe: 50
+		},
+		abilities: [
+			"Shell Armor"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	suckler: {
+		num: 999099,
+		name: "Suckler",
+		types: [
+			"Lemon",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 115,
+			def: 105,
+			spa: 50,
+			spd: 50,
+			spe: 75
+		},
+		abilities: [
+			"Shell Armor"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	caratorb: {
+		num: 999100,
+		name: "Caratorb",
+		types: [
+			"Apple"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 30,
+			def: 60,
+			spa: 60,
+			spd: 60,
+			spe: 100
+		},
+		abilities: [
+			"Soundproof"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Mineral"
+		],
+		gender: "N"
+	},
+	caratrode: {
+		num: 999101,
+		name: "Caratrode",
+		types: [
+			"Apple"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 50,
+			def: 60,
+			spa: 70,
+			spd: 70,
+			spe: 140
+		},
+		abilities: [
+			"Soundproof"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Mineral"
+		],
+		gender: "N"
+	},
+	exemel: {
+		num: 999102,
+		name: "Exemel",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 45,
+			def: 85,
+			spa: 65,
+			spd: 45,
+			spe: 45
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	exeramel: {
+		num: 999103,
+		name: "Exeramel",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 80,
+			def: 80,
+			spa: 100,
+			spd: 60,
+			spe: 50
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cupop: {
+		num: 999104,
+		name: "Cupop",
+		types: [
+			"Grape"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 60,
+			def: 95,
+			spa: 50,
+			spd: 50,
+			spe: 35
+		},
+		abilities: [
+			"Rock Head"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Monster"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	lolliwak: {
+		num: 999105,
+		name: "Lolliwak",
+		types: [
+			"Grape"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 80,
+			def: 110,
+			spa: 50,
+			spd: 80,
+			spe: 60
+		},
+		abilities: [
+			"Rock Head"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Monster"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	panpuff: {
+		num: 999106,
+		name: "Panpuff",
+		types: [
+			"Chocolate",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 70,
+			def: 50,
+			spa: 30,
+			spd: 70,
+			spe: 80
+		},
+		abilities: [
+			"Limber"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cangoro: {
+		num: 999107,
+		name: "Cangoro",
+		types: [
+			"Chocolate",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 105,
+			def: 80,
+			spa: 35,
+			spd: 110,
+			spe: 70
+		},
+		abilities: [
+			"Limber"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	panfisk: {
+		num: 999108,
+		name: "Panfisk",
+		types: [
+			"Grape"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 70,
+			def: 75,
+			spa: 60,
+			spd: 75,
+			spe: 30
+		},
+		abilities: [
+			"Own Tempo"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Monster"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cherring: {
+		num: 999109,
+		name: "Cherring",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 65,
+			def: 95,
+			spa: 60,
+			spd: 45,
+			spe: 35
+		},
+		abilities: [
+			"Sniper"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cherrzing: {
+		num: 999110,
+		name: "Cherrzing",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 90,
+			def: 100,
+			spa: 65,
+			spd: 70,
+			spe: 60
+		},
+		abilities: [
+			"Sniper"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	creamhorn: {
+		num: 999111,
+		name: "Creamhorn",
+		types: [
+			"Vanilla",
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 85,
+			def: 95,
+			spa: 30,
+			spd: 30,
+			spe: 25
+		},
+		abilities: [
+			"Rock Head"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Monster",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	creamdon: {
+		num: 999112,
+		name: "Creamdon",
+		types: [
+			"Strawberry",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 120,
+			def: 120,
+			spa: 35,
+			spd: 35,
+			spe: 40
+		},
+		abilities: [
+			"Rock Head"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Monster",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	vinegla: {
+		num: 999113,
+		name: "Vinegla",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 55,
+			def: 55,
+			spa: 35,
+			spd: 75,
+			spe: 50
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	licogrowth: {
+		num: 999114,
+		name: "Licogrowth",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 55,
+			def: 115,
+			spa: 100,
+			spd: 40,
+			spe: 60
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	kangascake: {
+		num: 999115,
+		name: "Kangascake",
+		types: [
+			"Chocolate",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 70,
+			def: 70,
+			spa: 40,
+			spd: 70,
+			spe: 70
+		},
+		abilities: [
+			"Early Bird"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Monster"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	trubbint: {
+		num: 999116,
+		name: "Trubbint",
+		types: [
+			"Cherry",
+			"Lime"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 50,
+			def: 70,
+			spa: 70,
+			spd: 50,
+			spe: 60
+		},
+		abilities: [
+			"Regenerator"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	mintodor: {
+		num: 999117,
+		name: "Mintodor",
+		types: [
+			"Cherry",
+			"Lime"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 65,
+			def: 95,
+			spa: 95,
+			spd: 45,
+			spe: 85
+		},
+		abilities: [
+			"Regenerator"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Water 1",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cookeen: {
+		num: 999118,
+		name: "Cookeen",
+		types: [
+			"Strawberry",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 80,
+			def: 60,
+			spa: 35,
+			spd: 50,
+			spe: 80
+		},
+		abilities: [
+			"Swift Swim"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Water 2"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	seakie: {
+		num: 999119,
+		name: "Seakie",
+		types: [
+			"Strawberry",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 90,
+			def: 65,
+			spa: 65,
+			spd: 80,
+			spe: 70
+		},
+		abilities: [
+			"Swift Swim"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Water 2"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	carobyu: {
+		num: 999120,
+		name: "Carobyu",
+		types: [
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 45,
+			def: 55,
+			spa: 70,
+			spd: 55,
+			spe: 85
+		},
+		abilities: [
+			"Illuminate"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Water 3"
+		],
+		gender: "N"
+	},
+	carobmie: {
+		num: 999121,
+		name: "Carobmie",
+		types: [
+			"Blueberry",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 65,
+			def: 75,
+			spa: 90,
+			spd: 75,
+			spe: 95
+		},
+		abilities: [
+			"Illuminate"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Water 3"
+		],
+		gender: "N"
+	},
+	berrier: {
+		num: 999122,
+		name: "Berrier",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 45,
+			def: 45,
+			spa: 90,
+			spd: 110,
+			spe: 70
+		},
+		abilities: [
+			"Soundproof"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	lipsynx: {
+		num: 999123,
+		name: "Lipsynx",
+		types: [
+			"Raspberry",
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 80,
+			def: 70,
+			spa: 55,
+			spd: 70,
+			spe: 75
+		},
+		abilities: [
+			"Trace"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	rootic: {
+		num: 999124,
+		name: "Rootic",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 40,
+			def: 35,
+			spa: 75,
+			spd: 75,
+			spe: 75
+		},
+		abilities: [
+			"Oblivious"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	rootantula: {
+		num: 999125,
+		name: "Rootantula",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 80,
+			def: 50,
+			spa: 85,
+			spd: 85,
+			spe: 85
+		},
+		abilities: [
+			"Oblivious"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	pudino: {
+		num: 999126,
+		name: "Pudino",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 55,
+			def: 30,
+			spa: 50,
+			spd: 65,
+			spe: 70
+		},
+		abilities: [
+			"Flame Body"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	zweilert: {
+		num: 999127,
+		name: "Zweilert",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 85,
+			def: 80,
+			spa: 55,
+			spd: 70,
+			spe: 70
+		},
+		abilities: [
+			"Flame Body"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	hygateau: {
+		num: 999128,
+		name: "Hygateau",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 100,
+			def: 95,
+			spa: 50,
+			spd: 80,
+			spe: 110
+		},
+		abilities: [
+			"Flame Body"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gumble: {
+		num: 999129,
+		name: "Gumble",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 50,
+			def: 55,
+			spa: 55,
+			spd: 50,
+			spe: 80
+		},
+		abilities: [
+			"Guts"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Water 2",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gumballer: {
+		num: 999130,
+		name: "Gumballer",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 115,
+			def: 70,
+			spa: 60,
+			spd: 60,
+			spe: 60
+		},
+		abilities: [
+			"Guts"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Water 2",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	lempras: {
+		num: 999131,
+		name: "Lempras",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 60,
+			def: 60,
+			spa: 60,
+			spd: 60,
+			spe: 70
+		},
+		abilities: [
+			"Shell Armor"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Monster",
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	pudditto: {
+		num: 999132,
+		name: "Pudditto",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 60,
+			def: 60,
+			spa: 60,
+			spd: 60,
+			spe: 60
+		},
+		abilities: [
+			"Limber"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Ditto"
+		],
+		gender: "N"
+	},
+	bananaby: {
+		num: 999133,
+		name: "Bananaby",
+		types: [
+			"Banana",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 65,
+			def: 50,
+			spa: 45,
+			spd: 65,
+			spe: 55
+		},
+		abilities: [
+			"Magic Bounce"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	bananabuzz: {
+		num: 999134,
+		name: "Bananabuzz",
+		types: [
+			"Banana",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 50,
+			def: 60,
+			spa: 90,
+			spd: 95,
+			spe: 65
+		},
+		abilities: [
+			"Magic Bounce"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	lemospin: {
+		num: 999135,
+		name: "Lemospin",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 45,
+			def: 40,
+			spa: 60,
+			spd: 75,
+			spe: 60
+		},
+		abilities: [
+			"Sap Sipper"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	quillemon: {
+		num: 999136,
+		name: "Quillemon",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 70,
+			def: 60,
+			spa: 85,
+			spd: 80,
+			spe: 65
+		},
+		abilities: [
+			"Sap Sipper"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	lemaught: {
+		num: 999137,
+		name: "Lemaught",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 90,
+			def: 70,
+			spa: 95,
+			spd: 95,
+			spe: 110
+		},
+		abilities: [
+			"Sap Sipper"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	mintanyte: {
+		num: 999138,
+		name: "Mintanyte",
+		types: [
+			"Cherry",
+			"Lime"
+		],
+		baseStats: {
+			hp: 35,
+			atk: 40,
+			def: 100,
+			spa: 90,
+			spd: 50,
+			spe: 35
+		},
+		abilities: [
+			"Shell Armor"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Black",
+		eggGroups: [
+			"Water 1",
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	mintastar: {
+		num: 999139,
+		name: "Mintastar",
+		types: [
+			"Cherry",
+			"Lime"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 60,
+			def: 100,
+			spa: 95,
+			spd: 70,
+			spe: 55
+		},
+		abilities: [
+			"Shell Armor"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Water 1",
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	lemeod: {
+		num: 999140,
+		name: "Lemeod",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 30,
+			atk: 80,
+			def: 90,
+			spa: 50,
+			spd: 45,
+			spe: 55
+		},
+		abilities: [
+			"Battle Armor"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Water 1",
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	odmelon: {
+		num: 999141,
+		name: "Odmelon",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 105,
+			def: 105,
+			spa: 50,
+			spd: 50,
+			spe: 80
+		},
+		abilities: [
+			"Battle Armor"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Water 1",
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	marshlax: {
+		num: 999142,
+		name: "Marshlax",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 80,
+			def: 65,
+			spa: 60,
+			spd: 75,
+			spe: 90
+		},
+		abilities: [
+			"Thick Fat"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	smorelax: {
+		num: 999143,
+		name: "Smorelax",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 90,
+			def: 65,
+			spa: 65,
+			spd: 90,
+			spe: 30
+		},
+		abilities: [
+			"Thick Fat"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Black",
+		eggGroups: [
+			"Monster"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	icebox: {
+		num: 999144,
+		name: "Icebox",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 85,
+			def: 100,
+			spa: 95,
+			spd: 125,
+			spe: 85
+		},
+		abilities: [
+			"Pressure"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	manalime: {
+		num: 999145,
+		name: "Manalime",
+		types: [
+			"Lime"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 90,
+			def: 85,
+			spa: 125,
+			spd: 90,
+			spe: 100
+		},
+		abilities: [
+			"Pressure"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	cryorange: {
+		num: 999146,
+		name: "Cryorange",
+		types: [
+			"Orange"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 100,
+			def: 90,
+			spa: 125,
+			spd: 85,
+			spe: 90
+		},
+		abilities: [
+			"Pressure"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	creamtini: {
+		num: 999147,
+		name: "Creamtini",
+		types: [
+			"Vanilla",
+			"Orange"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 65,
+			def: 45,
+			spa: 55,
+			spd: 55,
+			spe: 55
+		},
+		abilities: [
+			"Shed Skin"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	whippinair: {
+		num: 999148,
+		name: "Whippinair",
+		types: [
+			"Vanilla",
+			"Orange"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 85,
+			def: 65,
+			spa: 70,
+			spd: 70,
+			spe: 70
+		},
+		abilities: [
+			"Shed Skin"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Water 1",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	creamonite: {
+		num: 999149,
+		name: "Creamonite",
+		types: [
+			"Vanilla",
+			"Orange"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 110,
+			def: 95,
+			spa: 80,
+			spd: 80,
+			spe: 80
+		},
+		abilities: [
+			"Shed Skin"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Water 1",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	twoberry: {
+		num: 999150,
+		name: "Twoberry",
+		types: [
+			"Grape"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 100,
+			def: 100,
+			spa: 140,
+			spd: 100,
+			spe: 110
+		},
+		abilities: [
+			"Pressure"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	mewberry: {
+		num: 999151,
+		name: "Mewberry",
+		types: [
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 110,
+			def: 110,
+			spa: 110,
+			spd: 110,
+			spe: 100
+		},
+		abilities: [
+			"Synchronize"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	licorita: {
+		num: 999152,
+		name: "Licorita",
+		types: [
+			"Lime",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 50,
+			def: 65,
+			spa: 50,
+			spd: 65,
+			spe: 50
+		},
+		abilities: [
+			"Scrappy"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Monster",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	leaforice: {
+		num: 999153,
+		name: "Leaforice",
+		types: [
+			"Lime",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 65,
+			def: 85,
+			spa: 65,
+			spd: 85,
+			spe: 65
+		},
+		abilities: [
+			"Scrappy"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Monster",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	liganium: {
+		num: 999154,
+		name: "Liganium",
+		types: [
+			"Lime",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 80,
+			def: 100,
+			spa: 85,
+			spd: 100,
+			spe: 80
+		},
+		abilities: [
+			"Scrappy"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Monster",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cyndacake: {
+		num: 999155,
+		name: "Cyndacake",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 55,
+			def: 45,
+			spa: 65,
+			spd: 55,
+			spe: 65
+		},
+		abilities: [
+			"Flash Fire"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	quinaval: {
+		num: 999156,
+		name: "Quinaval",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 65,
+			def: 65,
+			spa: 85,
+			spd: 65,
+			spe: 80
+		},
+		abilities: [
+			"Flash Fire"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	typhunnel: {
+		num: 999157,
+		name: "Typhunnel",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 85,
+			def: 75,
+			spa: 105,
+			spd: 85,
+			spe: 105
+		},
+		abilities: [
+			"Flash Fire"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	nanadile: {
+		num: 999158,
+		name: "Nanadile",
+		types: [
+			"Banana"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 65,
+			def: 70,
+			spa: 45,
+			spd: 45,
+			spe: 45
+		},
+		abilities: [
+			"Iron Fist"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Monster",
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	croconana: {
+		num: 999159,
+		name: "Croconana",
+		types: [
+			"Banana"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 85,
+			def: 80,
+			spa: 65,
+			spd: 65,
+			spe: 65
+		},
+		abilities: [
+			"Iron Fist"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Monster",
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	nanagatr: {
+		num: 999160,
+		name: "Nanagatr",
+		types: [
+			"Banana"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 105,
+			def: 100,
+			spa: 80,
+			spd: 80,
+			spe: 75
+		},
+		abilities: [
+			"Iron Fist"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Monster",
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.125,
+			M: 0.875
+		}
+	},
+	mintret: {
+		num: 999161,
+		name: "Mintret",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 60,
+			def: 50,
+			spa: 70,
+			spd: 45,
+			spe: 50
+		},
+		abilities: [
+			"Run Away"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	furmint: {
+		num: 999162,
+		name: "Furmint",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 80,
+			def: 80,
+			spa: 60,
+			spd: 55,
+			spe: 90
+		},
+		abilities: [
+			"Run Away"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	sherzel: {
+		num: 999163,
+		name: "Sherzel",
+		types: [
+			"Vanilla",
+			"Orange"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 50,
+			def: 50,
+			spa: 60,
+			spd: 60,
+			spe: 50
+		},
+		abilities: [
+			"Insomnia"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	bertzel: {
+		num: 999164,
+		name: "Bertzel",
+		types: [
+			"Vanilla",
+			"Orange"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 50,
+			def: 50,
+			spa: 80,
+			spd: 100,
+			spe: 70
+		},
+		abilities: [
+			"Insomnia"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cookietot: {
+		num: 999165,
+		name: "Cookietot",
+		types: [
+			"Chocolate",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 40,
+			def: 45,
+			spa: 50,
+			spd: 80,
+			spe: 55
+		},
+		abilities: [
+			"Early Bird"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cookietune: {
+		num: 999166,
+		name: "Cookietune",
+		types: [
+			"Chocolate",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 55,
+			def: 60,
+			spa: 65,
+			spd: 110,
+			spe: 95
+		},
+		abilities: [
+			"Early Bird"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	spinacake: {
+		num: 999167,
+		name: "Spinacake",
+		types: [
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 60,
+			def: 60,
+			spa: 70,
+			spd: 60,
+			spe: 30
+		},
+		abilities: [
+			"Insomnia"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	ariacake: {
+		num: 999168,
+		name: "Ariacake",
+		types: [
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 100,
+			def: 70,
+			spa: 70,
+			spd: 60,
+			spe: 60
+		},
+		abilities: [
+			"Insomnia"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	tortewig: {
+		num: 999169,
+		name: "Tortewig",
+		types: [
+			"Vanilla",
+			"Lemon"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 45,
+			def: 45,
+			spa: 60,
+			spd: 50,
+			spe: 60
+		},
+		abilities: [
+			"Inner Focus"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	meringle: {
+		num: 999170,
+		name: "Meringle",
+		types: [
+			"Vanilla",
+			"Lemon"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 70,
+			def: 70,
+			spa: 70,
+			spd: 60,
+			spe: 80
+		},
+		abilities: [
+			"Inner Focus"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Water 2"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	torteringe: {
+		num: 999171,
+		name: "Torteringe",
+		types: [
+			"Vanilla",
+			"Lemon"
+		],
+		baseStats: {
+			hp: 125,
+			atk: 80,
+			def: 80,
+			spa: 80,
+			spd: 80,
+			spe: 80
+		},
+		abilities: [
+			"Inner Focus"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Water 2"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	banvy: {
+		num: 999172,
+		name: "Banvy",
+		types: [
+			"Banana"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 60,
+			def: 65,
+			spa: 45,
+			spd: 35,
+			spe: 60
+		},
+		abilities: [
+			"Static"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	banvine: {
+		num: 999173,
+		name: "Banvine",
+		types: [
+			"Banana"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 80,
+			def: 80,
+			spa: 55,
+			spd: 50,
+			spe: 80
+		},
+		abilities: [
+			"Static"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	banperior: {
+		num: 999174,
+		name: "Banperior",
+		types: [
+			"Banana"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 100,
+			def: 95,
+			spa: 70,
+			spd: 70,
+			spe: 90
+		},
+		abilities: [
+			"Static"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	airloon: {
+		num: 999175,
+		name: "Airloon",
+		types: [
+			"Cherry",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 60,
+			def: 60,
+			spa: 60,
+			spd: 75,
+			spe: 20
+		},
+		abilities: [
+			"Hustle"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	airblim: {
+		num: 999176,
+		name: "Airblim",
+		types: [
+			"Cherry",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 65,
+			def: 85,
+			spa: 80,
+			spd: 105,
+			spe: 40
+		},
+		abilities: [
+			"Hustle"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Flying",
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	snotree: {
+		num: 999177,
+		name: "Snotree",
+		types: [
+			"Cherry",
+			"Lime"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 50,
+			def: 55,
+			spa: 70,
+			spd: 55,
+			spe: 70
+		},
+		abilities: [
+			"Synchronize"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cantree: {
+		num: 999178,
+		name: "Cantree",
+		types: [
+			"Cherry",
+			"Lime"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 65,
+			def: 70,
+			spa: 95,
+			spd: 70,
+			spe: 95
+		},
+		abilities: [
+			"Synchronize"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	chocowool: {
+		num: 999179,
+		name: "Chocowool",
+		types: [
+			"Cherry",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 50,
+			def: 50,
+			spa: 65,
+			spd: 50,
+			spe: 35
+		},
+		abilities: [
+			"Static"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	chocofluff: {
+		num: 999180,
+		name: "Chocofluff",
+		types: [
+			"Cherry",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 75,
+			def: 75,
+			spa: 80,
+			spd: 60,
+			spe: 45
+		},
+		abilities: [
+			"Static"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	candaros: {
+		num: 999181,
+		name: "Candaros",
+		types: [
+			"Cherry",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 85,
+			def: 85,
+			spa: 115,
+			spd: 95,
+			spe: 55
+		},
+		abilities: [
+			"Static"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cottibebe: {
+		num: 999182,
+		name: "Cottibebe",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 50,
+			def: 65,
+			spa: 60,
+			spd: 70,
+			spe: 40
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cottiette: {
+		num: 999183,
+		name: "Cottiette",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 60,
+			def: 70,
+			spa: 80,
+			spd: 85,
+			spe: 60
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cottiges: {
+		num: 999184,
+		name: "Cottiges",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 70,
+			def: 80,
+			spa: 100,
+			spd: 80,
+			spe: 90
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	boncherry: {
+		num: 999185,
+		name: "Boncherry",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 80,
+			def: 80,
+			spa: 30,
+			spd: 60,
+			spe: 30
+		},
+		abilities: [
+			"Sturdy"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	sudocherry: {
+		num: 999186,
+		name: "Sudocherry",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 100,
+			def: 100,
+			spa: 60,
+			spd: 60,
+			spe: 70
+		},
+		abilities: [
+			"Sturdy"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	grapig: {
+		num: 999187,
+		name: "Grapig",
+		types: [
+			"Grape"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 55,
+			def: 55,
+			spa: 55,
+			spd: 55,
+			spe: 50
+		},
+		abilities: [
+			"Pure Power"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Fairy",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	igrape: {
+		num: 999188,
+		name: "Igrape",
+		types: [
+			"Grape"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 75,
+			def: 75,
+			spa: 45,
+			spd: 75,
+			spe: 80
+		},
+		abilities: [
+			"Pure Power"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Fairy",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	wineboar: {
+		num: 999189,
+		name: "Wineboar",
+		types: [
+			"Grape"
+		],
+		baseStats: {
+			hp: 125,
+			atk: 75,
+			def: 75,
+			spa: 55,
+			spd: 85,
+			spe: 110
+		},
+		abilities: [
+			"Pure Power"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Fairy",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	pinacha: {
+		num: 999190,
+		name: "Pinacha",
+		types: [
+			"Banana",
+			"Lemon"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 70,
+			def: 65,
+			spa: 60,
+			spd: 55,
+			spe: 85
+		},
+		abilities: [
+			"Magic Bounce"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	strawkern: {
+		num: 999191,
+		name: "Strawkern",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 65,
+			def: 65,
+			spa: 65,
+			spd: 55,
+			spe: 35
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	strawflora: {
+		num: 999192,
+		name: "Strawflora",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 85,
+			def: 60,
+			spa: 105,
+			spd: 85,
+			spe: 30
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	dedemolt: {
+		num: 999193,
+		name: "Dedemolt",
+		types: [
+			"Vanilla",
+			"Orange"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 65,
+			def: 45,
+			spa: 75,
+			spd: 45,
+			spe: 95
+		},
+		abilities: [
+			"Speed Boost"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	woocrepe: {
+		num: 999194,
+		name: "Woocrepe",
+		types: [
+			"Banana",
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 65,
+			def: 65,
+			spa: 55,
+			spd: 55,
+			spe: 30
+		},
+		abilities: [
+			"Damp"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Water 1",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	crepesire: {
+		num: 999195,
+		name: "Crepesire",
+		types: [
+			"Banana",
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 95,
+			def: 95,
+			spa: 65,
+			spd: 65,
+			spe: 35
+		},
+		abilities: [
+			"Damp"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Water 1",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	skittink: {
+		num: 999196,
+		name: "Skittink",
+		types: [
+			"Vanilla",
+			"Orange"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 45,
+			def: 80,
+			spa: 50,
+			spd: 55,
+			spe: 50
+		},
+		abilities: [
+			"Magnet Pull"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	candlang: {
+		num: 999197,
+		name: "Candlang",
+		types: [
+			"Vanilla",
+			"Orange"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 65,
+			def: 60,
+			spa: 80,
+			spd: 60,
+			spe: 65
+		},
+		abilities: [
+			"Magnet Pull"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Black",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	klinkandy: {
+		num: 999198,
+		name: "Klinkandy",
+		types: [
+			"Vanilla",
+			"Orange"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 85,
+			def: 90,
+			spa: 85,
+			spd: 90,
+			spe: 95
+		},
+		abilities: [
+			"Magnet Pull"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Black",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gligrape: {
+		num: 999199,
+		name: "Gligrape",
+		types: [
+			"Grape"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 55,
+			def: 50,
+			spa: 70,
+			spd: 70,
+			spe: 30
+		},
+		abilities: [
+			"Own Tempo"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Monster",
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	glisgrape: {
+		num: 999200,
+		name: "Glisgrape",
+		types: [
+			"Grape"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 60,
+			def: 60,
+			spa: 100,
+			spd: 85,
+			spe: 85
+		},
+		abilities: [
+			"Own Tempo"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cookown: {
+		num: 999201,
+		name: "Cookown",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 80,
+			def: 60,
+			spa: 80,
+			spd: 60,
+			spe: 60
+		},
+		abilities: [
+			"Pickup"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	poppuffet: {
+		num: 999202,
+		name: "Poppuffet",
+		types: [
+			"Chocolate",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 190,
+			atk: 35,
+			def: 55,
+			spa: 35,
+			spd: 55,
+			spe: 30
+		},
+		abilities: [
+			"Shadow Tag"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	tartafarig: {
+		num: 999203,
+		name: "Tartafarig",
+		types: [
+			"Blueberry",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 70,
+			def: 50,
+			spa: 90,
+			spd: 50,
+			spe: 70
+		},
+		abilities: [
+			"Inner Focus"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	ferrolemon: {
+		num: 999204,
+		name: "Ferrolemon",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 65,
+			def: 90,
+			spa: 65,
+			spd: 45,
+			spe: 15
+		},
+		abilities: [
+			"Sturdy"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	ferrorange: {
+		num: 999205,
+		name: "Ferrorange",
+		types: [
+			"Lemon",
+			"Orange"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 90,
+			def: 125,
+			spa: 60,
+			spd: 60,
+			spe: 40
+		},
+		abilities: [
+			"Sturdy"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	candigon: {
+		num: 999206,
+		name: "Candigon",
+		types: [
+			"Strawberry",
+			"Cherry"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 70,
+			def: 70,
+			spa: 50,
+			spd: 65,
+			spe: 45
+		},
+		abilities: [
+			"Rough Skin"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	candix: {
+		num: 999207,
+		name: "Candix",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 65,
+			def: 85,
+			spa: 35,
+			spd: 55,
+			spe: 45
+		},
+		abilities: [
+			"Rock Head"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	candilix: {
+		num: 999208,
+		name: "Candilix",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 65,
+			def: 160,
+			spa: 55,
+			spd: 65,
+			spe: 30
+		},
+		abilities: [
+			"Rock Head"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	lickichef: {
+		num: 999209,
+		name: "Lickichef",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 90,
+			def: 50,
+			spa: 50,
+			spd: 50,
+			spe: 30
+		},
+		abilities: [
+			"Intimidate"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	berochef: {
+		num: 999210,
+		name: "Berochef",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 120,
+			def: 75,
+			spa: 60,
+			spd: 60,
+			spe: 45
+		},
+		abilities: [
+			"Intimidate"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.7490196078431373,
+			M: 0.25098039215686274
+		}
+	},
+	qwilapple: {
+		num: 999211,
+		name: "Qwilapple",
+		types: [
+			"Apple"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 85,
+			def: 75,
+			spa: 45,
+			spd: 45,
+			spe: 85
+		},
+		abilities: [
+			"Swift Swim"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Water 2"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	candino: {
+		num: 999212,
+		name: "Candino",
+		types: [
+			"Vanilla",
+			"Apple"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 80,
+			def: 80,
+			spa: 55,
+			spd: 60,
+			spe: 65
+		},
+		abilities: [
+			"Snow Cloak"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	pinekle: {
+		num: 999213,
+		name: "Pinekle",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 20,
+			atk: 10,
+			def: 180,
+			spa: 5,
+			spd: 180,
+			spe: 5
+		},
+		abilities: [
+			"Sturdy"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	teana: {
+		num: 999214,
+		name: "Teana",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 55,
+			def: 55,
+			spa: 40,
+			spd: 65,
+			spe: 65
+		},
+		abilities: [
+			"Reckless"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	teacakes: {
+		num: 999215,
+		name: "Teacakes",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 95,
+			def: 55,
+			spa: 35,
+			spd: 75,
+			spe: 115
+		},
+		abilities: [
+			"Reckless"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gummiursa: {
+		num: 999216,
+		name: "Gummiursa",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 80,
+			def: 50,
+			spa: 50,
+			spd: 50,
+			spe: 40
+		},
+		abilities: [
+			"Sap Sipper"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gummaring: {
+		num: 999217,
+		name: "Gummaring",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 110,
+			def: 75,
+			spa: 65,
+			spd: 55,
+			spe: 55
+		},
+		abilities: [
+			"Sap Sipper"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	doslug: {
+		num: 999218,
+		name: "Doslug",
+		types: [
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 60,
+			def: 60,
+			spa: 70,
+			spd: 60,
+			spe: 30
+		},
+		abilities: [
+			"Flame Body"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	slugnut: {
+		num: 999219,
+		name: "Slugnut",
+		types: [
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 70,
+			def: 120,
+			spa: 80,
+			spd: 80,
+			spe: 30
+		},
+		abilities: [
+			"Flame Body"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	macaloon: {
+		num: 999220,
+		name: "Macaloon",
+		types: [
+			"Lemon",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 60,
+			def: 60,
+			spa: 60,
+			spd: 60,
+			spe: 50
+		},
+		abilities: [
+			"Tangled Feet"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	meringue: {
+		num: 999221,
+		name: "Meringue",
+		types: [
+			"Lemon",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 100,
+			def: 80,
+			spa: 60,
+			spd: 60,
+			spe: 50
+		},
+		abilities: [
+			"Tangled Feet"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	candila: {
+		num: 999222,
+		name: "Candila",
+		types: [
+			"Blueberry",
+			"Grape"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 65,
+			def: 85,
+			spa: 65,
+			spd: 85,
+			spe: 35
+		},
+		abilities: [
+			"Natural Cure"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Water 1",
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gumchoo: {
+		num: 999223,
+		name: "Gumchoo",
+		types: [
+			"Lime"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 65,
+			def: 45,
+			spa: 65,
+			spd: 45,
+			spe: 65
+		},
+		abilities: [
+			"Hustle"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Water 1",
+			"Water 2"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gumtic: {
+		num: 999224,
+		name: "Gumtic",
+		types: [
+			"Lime"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 105,
+			def: 65,
+			spa: 105,
+			spd: 65,
+			spe: 45
+		},
+		abilities: [
+			"Hustle"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Water 1",
+			"Water 2"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	jellybird: {
+		num: 999225,
+		name: "Jellybird",
+		types: [
+			"Orange",
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 70,
+			def: 60,
+			spa: 65,
+			spd: 60,
+			spe: 75
+		},
+		abilities: [
+			"Vital Spirit"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Water 1",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	pantine: {
+		num: 999226,
+		name: "Pantine",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 40,
+			def: 60,
+			spa: 80,
+			spd: 100,
+			spe: 60
+		},
+		abilities: [
+			"Swift Swim"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	parfit: {
+		num: 999227,
+		name: "Parfit",
+		types: [
+			"Apple",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 40,
+			def: 60,
+			spa: 40,
+			spd: 50,
+			spe: 70
+		},
+		abilities: [
+			"Keen Eye"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	parfure: {
+		num: 999228,
+		name: "Parfure",
+		types: [
+			"Apple",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 60,
+			def: 45,
+			spa: 80,
+			spd: 80,
+			spe: 75
+		},
+		abilities: [
+			"Keen Eye"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Black",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	parfelure: {
+		num: 999229,
+		name: "Parfelure",
+		types: [
+			"Apple",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 90,
+			def: 60,
+			spa: 115,
+			spd: 90,
+			spe: 95
+		},
+		abilities: [
+			"Keen Eye"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Black",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	furfruit: {
+		num: 999230,
+		name: "Furfruit",
+		types: [
+			"Apple"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 65,
+			def: 65,
+			spa: 65,
+			spd: 65,
+			spe: 65
+		},
+		abilities: [
+			"Mega Launcher"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Water 1",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	phancake: {
+		num: 999231,
+		name: "Phancake",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 60,
+			def: 60,
+			spa: 50,
+			spd: 50,
+			spe: 40
+		},
+		abilities: [
+			"Pickup"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	doncake: {
+		num: 999232,
+		name: "Doncake",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 110,
+			def: 110,
+			spa: 60,
+			spd: 60,
+			spe: 40
+		},
+		abilities: [
+			"Pickup"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	duncanion: {
+		num: 999233,
+		name: "Duncanion",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 50,
+			def: 70,
+			spa: 80,
+			spd: 85,
+			spe: 40
+		},
+		abilities: [
+			"Trace"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Mineral"
+		],
+		gender: "N"
+	},
+	mousse: {
+		num: 999234,
+		name: "Mousse",
+		types: [
+			"Cherry",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 80,
+			def: 50,
+			spa: 70,
+			spd: 50,
+			spe: 70
+		},
+		abilities: [
+			"Intimidate"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	smicing: {
+		num: 999235,
+		name: "Smicing",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 40,
+			def: 70,
+			spa: 40,
+			spd: 70,
+			spe: 90
+		},
+		abilities: [
+			"Scrappy"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	chimana: {
+		num: 999236,
+		name: "Chimana",
+		types: [
+			"Banana"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 65,
+			def: 65,
+			spa: 60,
+			spd: 35,
+			spe: 35
+		},
+		abilities: [
+			"Guts"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	monana: {
+		num: 999237,
+		name: "Monana",
+		types: [
+			"Banana"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 95,
+			def: 95,
+			spa: 35,
+			spd: 80,
+			spe: 70
+		},
+		abilities: [
+			"Guts"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	infernana: {
+		num: 999238,
+		name: "Infernana",
+		types: [
+			"Banana"
+		],
+		baseStats: {
+			hp: 125,
+			atk: 90,
+			def: 90,
+			spa: 85,
+			spd: 70,
+			spe: 65
+		},
+		abilities: [
+			"Guts"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	eggby: {
+		num: 999239,
+		name: "Eggby",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 60,
+			def: 30,
+			spa: 65,
+			spd: 55,
+			spe: 95
+		},
+		abilities: [
+			"Natural Cure"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	egglove: {
+		num: 999240,
+		name: "Egglove",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 60,
+			def: 70,
+			spa: 70,
+			spd: 100,
+			spe: 50
+		},
+		abilities: [
+			"Natural Cure"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	chocotank: {
+		num: 999241,
+		name: "Chocotank",
+		types: [
+			"Chocolate",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 80,
+			def: 80,
+			spa: 20,
+			spd: 60,
+			spe: 80
+		},
+		abilities: [
+			"Thick Fat"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	candink: {
+		num: 999242,
+		name: "Candink",
+		types: [
+			"Lime"
+		],
+		baseStats: {
+			hp: 125,
+			atk: 10,
+			def: 10,
+			spa: 75,
+			spd: 125,
+			spe: 55
+		},
+		abilities: [
+			"Clear Body"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Fairy"
+		],
+		gender: "F"
+	},
+	rocanrola: {
+		num: 999243,
+		name: "Rocanrola",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 65,
+			def: 65,
+			spa: 40,
+			spd: 40,
+			spe: 45
+		},
+		abilities: [
+			"Pressure"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	candore: {
+		num: 999244,
+		name: "Candore",
+		types: [
+			"Vanilla",
+			"Orange"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 85,
+			def: 85,
+			spa: 90,
+			spd: 50,
+			spe: 50
+		},
+		abilities: [
+			"Pressure"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gigalick: {
+		num: 999245,
+		name: "Gigalick",
+		types: [
+			"Vanilla",
+			"Orange"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 75,
+			def: 95,
+			spa: 90,
+			spd: 80,
+			spe: 85
+		},
+		abilities: [
+			"Pressure"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	oshacone: {
+		num: 999246,
+		name: "Oshacone",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 80,
+			def: 50,
+			spa: 45,
+			spd: 50,
+			spe: 50
+		},
+		abilities: [
+			"Shed Skin"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Monster"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	dewice: {
+		num: 999247,
+		name: "Dewice",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 85,
+			def: 75,
+			spa: 65,
+			spd: 70,
+			spe: 55
+		},
+		abilities: [
+			"Shed Skin"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Monster"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	samurcone: {
+		num: 999248,
+		name: "Samurcone",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 100,
+			def: 90,
+			spa: 95,
+			spd: 90,
+			spe: 60
+		},
+		abilities: [
+			"Shed Skin"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Monster"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	lemokie: {
+		num: 999249,
+		name: "Lemokie",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 45,
+			def: 40,
+			spa: 60,
+			spd: 60,
+			spe: 60
+		},
+		abilities: [
+			"Pressure"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	lemodier: {
+		num: 999250,
+		name: "Lemodier",
+		types: [
+			"Orange",
+			"Banana"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 60,
+			def: 60,
+			spa: 65,
+			spd: 70,
+			spe: 90
+		},
+		abilities: [
+			"Pressure"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	leminja: {
+		num: 999251,
+		name: "Leminja",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 50,
+			def: 100,
+			spa: 75,
+			spd: 100,
+			spe: 100
+		},
+		abilities: [
+			"Pressure"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	minecko: {
+		num: 999252,
+		name: "Minecko",
+		types: [
+			"Lime",
+			"Cherry"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 45,
+			def: 35,
+			spa: 65,
+			spd: 55,
+			spe: 70
+		},
+		abilities: [
+			"Technician"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	leafbit: {
+		num: 999253,
+		name: "Leafbit",
+		types: [
+			"Lime",
+			"Cherry"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 65,
+			def: 45,
+			spa: 85,
+			spd: 65,
+			spe: 95
+		},
+		abilities: [
+			"Technician"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	mintosaur: {
+		num: 999254,
+		name: "Mintosaur",
+		types: [
+			"Lime",
+			"Cherry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 85,
+			def: 65,
+			spa: 100,
+			spd: 85,
+			spe: 120
+		},
+		abilities: [
+			"Technician"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Monster",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	torchoc: {
+		num: 999255,
+		name: "Torchoc",
+		types: [
+			"Chocolate",
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 60,
+			def: 40,
+			spa: 70,
+			spd: 50,
+			spe: 45
+		},
+		abilities: [
+			"Early Bird"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	chocoberry: {
+		num: 999256,
+		name: "Chocoberry",
+		types: [
+			"Strawberry",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 85,
+			def: 60,
+			spa: 85,
+			spd: 60,
+			spe: 55
+		},
+		abilities: [
+			"Early Bird"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	blazeberry: {
+		num: 999257,
+		name: "Blazeberry",
+		types: [
+			"Strawberry",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 120,
+			def: 70,
+			spa: 15,
+			spd: 70,
+			spe: 80
+		},
+		abilities: [
+			"Early Bird"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	mudpie: {
+		num: 999258,
+		name: "Mudpie",
+		types: [
+			"Banana",
+			"Apple"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 70,
+			def: 50,
+			spa: 50,
+			spd: 50,
+			spe: 40
+		},
+		abilities: [
+			"Sniper"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster",
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	customp: {
+		num: 999259,
+		name: "Customp",
+		types: [
+			"Apple",
+			"Banana"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 85,
+			def: 80,
+			spa: 60,
+			spd: 70,
+			spe: 50
+		},
+		abilities: [
+			"Sniper"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster",
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	swamptart: {
+		num: 999260,
+		name: "Swamptart",
+		types: [
+			"Banana",
+			"Apple"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 100,
+			def: 90,
+			spa: 85,
+			spd: 90,
+			spe: 60
+		},
+		abilities: [
+			"Sniper"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster",
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	grapom: {
+		num: 999261,
+		name: "Grapom",
+		types: [
+			"Grape"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 75,
+			def: 65,
+			spa: 50,
+			spd: 50,
+			spe: 45
+		},
+		abilities: [
+			"Sap Sipper"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	grapipom: {
+		num: 999262,
+		name: "Grapipom",
+		types: [
+			"Grape"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 90,
+			def: 70,
+			spa: 70,
+			spd: 70,
+			spe: 80
+		},
+		abilities: [
+			"Sap Sipper"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cookiegoon: {
+		num: 999263,
+		name: "Cookiegoon",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 60,
+			def: 60,
+			spa: 60,
+			spd: 50,
+			spe: 60
+		},
+		abilities: [
+			"Pickup"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cookinoone: {
+		num: 999264,
+		name: "Cookinoone",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 70,
+			def: 70,
+			spa: 60,
+			spd: 70,
+			spe: 100
+		},
+		abilities: [
+			"Pickup"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cupvee: {
+		num: 999265,
+		name: "Cupvee",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 75,
+			def: 70,
+			spa: 30,
+			spd: 30,
+			spe: 80
+		},
+		abilities: [
+			"Run Away"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cherreon: {
+		num: 999266,
+		name: "Cherreon",
+		types: [
+			"Cherry",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 95,
+			def: 55,
+			spa: 60,
+			spd: 60,
+			spe: 90
+		},
+		abilities: [
+			"Shed Skin"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	lemeon: {
+		num: 999267,
+		name: "Lemeon",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 70,
+			def: 50,
+			spa: 90,
+			spd: 50,
+			spe: 110
+		},
+		abilities: [
+			"Sand Force"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	vapeareon: {
+		num: 999268,
+		name: "Vapeareon",
+		types: [
+			"Lime"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 65,
+			def: 80,
+			spa: 65,
+			spd: 65,
+			spe: 65
+		},
+		abilities: [
+			"Liquid Ooze"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	beigeon: {
+		num: 999269,
+		name: "Beigeon",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 50,
+			def: 80,
+			spa: 50,
+			spd: 90,
+			spe: 90
+		},
+		abilities: [
+			"Shield Dust"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	plumbreon: {
+		num: 999270,
+		name: "Plumbreon",
+		types: [
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 70,
+			def: 70,
+			spa: 80,
+			spd: 90,
+			spe: 50
+		},
+		abilities: [
+			"Swift Swim"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Water 1",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	grapeon: {
+		num: 999271,
+		name: "Grapeon",
+		types: [
+			"Grape"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 70,
+			def: 70,
+			spa: 80,
+			spd: 80,
+			spe: 70
+		},
+		abilities: [
+			"Swift Swim"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Water 1",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	chocoleon: {
+		num: 999272,
+		name: "Chocoleon",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 70,
+			def: 70,
+			spa: 80,
+			spd: 80,
+			spe: 80
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Field",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	vanilleon: {
+		num: 999273,
+		name: "Vanilleon",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 90,
+			def: 50,
+			spa: 60,
+			spd: 50,
+			spe: 90
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Field",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	juicemor: {
+		num: 999275,
+		name: "Juicemor",
+		types: [
+			"Orange",
+			"Lemon"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 70,
+			def: 60,
+			spa: 50,
+			spd: 60,
+			spe: 70
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Field",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	frubat: {
+		num: 999290,
+		name: "Frubat",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 65,
+			def: 90,
+			spa: 40,
+			spd: 30,
+			spe: 40
+		},
+		abilities: [
+			"Speed Boost"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	golberry: {
+		num: 999291,
+		name: "Golberry",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 90,
+			def: 45,
+			spa: 70,
+			spd: 60,
+			spe: 100
+		},
+		abilities: [
+			"Speed Boost"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	croberry: {
+		num: 999292,
+		name: "Croberry",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 90,
+			def: 45,
+			spa: 80,
+			spd: 75,
+			spe: 140
+		},
+		abilities: [
+			"Speed Boost"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	peepow: {
+		num: 999276,
+		name: "Peepow",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 65,
+			def: 40,
+			spa: 50,
+			spd: 50,
+			spe: 85
+		},
+		abilities: [
+			"Guts"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	swellpeep: {
+		num: 999277,
+		name: "Swellpeep",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 85,
+			def: 70,
+			spa: 50,
+			spd: 50,
+			spe: 125
+		},
+		abilities: [
+			"Guts"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	marmish: {
+		num: 999285,
+		name: "Marmish",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 50,
+			def: 60,
+			spa: 50,
+			spd: 60,
+			spe: 50
+		},
+		abilities: [
+			"Effect Spore"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Fairy",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	smorloom: {
+		num: 999286,
+		name: "Smorloom",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 120,
+			def: 80,
+			spa: 60,
+			spd: 60,
+			spe: 70
+		},
+		abilities: [
+			"Effect Spore"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Fairy",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cookbun: {
+		num: 999327,
+		name: "Cookbun",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 70,
+			def: 70,
+			spa: 60,
+			spd: 60,
+			spe: 70
+		},
+		abilities: [
+			"Own Tempo"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Field",
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	candipass: {
+		num: 999278,
+		name: "Candipass",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 50,
+			def: 50,
+			spa: 55,
+			spd: 40,
+			spe: 85
+		},
+		abilities: [
+			"Keen Eye"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Water 1",
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	probicandy: {
+		num: 999279,
+		name: "Probicandy",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 50,
+			def: 100,
+			spa: 85,
+			spd: 70,
+			spe: 65
+		},
+		abilities: [
+			"Keen Eye"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Water 1",
+			"Flying"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	chocodos: {
+		num: 999283,
+		name: "Chocodos",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 55,
+			def: 60,
+			spa: 50,
+			spd: 60,
+			spe: 65
+		},
+		abilities: [
+			"Rock Head"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Water 1",
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	chocardos: {
+		num: 999284,
+		name: "Chocardos",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 60,
+			def: 75,
+			spa: 80,
+			spd: 75,
+			spe: 80
+		},
+		abilities: [
+			"Rock Head"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Water 1",
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	crodrupe: {
+		num: 999320,
+		name: "Crodrupe",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 60,
+			def: 35,
+			spa: 60,
+			spd: 35,
+			spe: 60
+		},
+		abilities: [
+			"Water Veil"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Field",
+			"Water 2"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	sourdrupe: {
+		num: 999321,
+		name: "Sourdrupe",
+		types: [
+			"Blueberry",
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 140,
+			atk: 80,
+			def: 45,
+			spa: 80,
+			spd: 45,
+			spe: 60
+		},
+		abilities: [
+			"Water Veil"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Field",
+			"Water 2"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	skittart: {
+		num: 999300,
+		name: "Skittart",
+		types: [
+			"Strawberry",
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 65,
+			def: 65,
+			spa: 45,
+			spd: 45,
+			spe: 60
+		},
+		abilities: [
+			"Cute Charm"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	delcandy: {
+		num: 999301,
+		name: "Delcandy",
+		types: [
+			"Strawberry",
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 75,
+			def: 75,
+			spa: 65,
+			spd: 75,
+			spe: 80
+		},
+		abilities: [
+			"Cute Charm"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	jelloetta: {
+		num: 999352,
+		name: "Jelloetta",
+		types: [
+			"Lime"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 80,
+			def: 60,
+			spa: 50,
+			spd: 120,
+			spe: 40
+		},
+		abilities: [
+			"Color Change"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	chocomite: {
+		num: 999343,
+		name: "Chocomite",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 60,
+			def: 65,
+			spa: 40,
+			spd: 70,
+			spe: 55
+		},
+		abilities: [
+			"Clear Body"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	chocolugg: {
+		num: 999344,
+		name: "Chocolugg",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 60,
+			def: 95,
+			spa: 70,
+			spd: 100,
+			spe: 75
+		},
+		abilities: [
+			"Clear Body"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	diggeaster: {
+		num: 999299,
+		name: "Diggeaster",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 65,
+			def: 60,
+			spa: 95,
+			spd: 90,
+			spe: 60
+		},
+		abilities: [
+			"Huge Power"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	tortoal: {
+		num: 999324,
+		name: "Tortoal",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 75,
+			def: 110,
+			spa: 65,
+			spd: 60,
+			spe: 20
+		},
+		abilities: [
+			"White Smoke"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	candeye: {
+		num: 999302,
+		name: "Candeye",
+		types: [
+			"Raspberry",
+			"Grape"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 85,
+			def: 85,
+			spa: 65,
+			spd: 65,
+			spe: 50
+		},
+		abilities: [
+			"Keen Eye"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	slugnana: {
+		num: 999339,
+		name: "Slugnana",
+		types: [
+			"Chocolate",
+			"Banana"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 60,
+			def: 60,
+			spa: 60,
+			spd: 60,
+			spe: 60
+		},
+		abilities: [
+			"Healer"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Water 2"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	bananos: {
+		num: 999340,
+		name: "Bananos",
+		types: [
+			"Chocolate",
+			"Banana"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 60,
+			def: 80,
+			spa: 70,
+			spd: 70,
+			spe: 60
+		},
+		abilities: [
+			"Healer"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Water 2"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	heartgrape: {
+		num: 999370,
+		name: "Heartgrape",
+		types: [
+			"Vanilla",
+			"Grape"
+		],
+		baseStats: {
+			hp: 90,
+			atk: 80,
+			def: 55,
+			spa: 50,
+			spd: 65,
+			spe: 110
+		},
+		abilities: [
+			"Swift Swim"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Water 2"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	lolliphish: {
+		num: 999341,
+		name: "Lolliphish",
+		types: [
+			"Vanilla",
+			"Cherry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 80,
+			def: 65,
+			spa: 60,
+			spd: 50,
+			spe: 35
+		},
+		abilities: [
+			"Hyper Cutter"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Water 1",
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	crawpop: {
+		num: 999342,
+		name: "Crawpop",
+		types: [
+			"Vanilla",
+			"Cherry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 120,
+			def: 70,
+			spa: 90,
+			spd: 55,
+			spe: 55
+		},
+		abilities: [
+			"Hyper Cutter"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Water 1",
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	feetart: {
+		num: 999349,
+		name: "Feetart",
+		types: [
+			"Raspberry",
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 45,
+			def: 40,
+			spa: 60,
+			spd: 65,
+			spe: 80
+		},
+		abilities: [
+			"Swift Swim"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Water 1",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	alluretic: {
+		num: 999350,
+		name: "Alluretic",
+		types: [
+			"Raspberry",
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 50,
+			def: 50,
+			spa: 80,
+			spd: 110,
+			spe: 80
+		},
+		abilities: [
+			"Marvel Scale"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Pink",
+		eggGroups: [
+			"Water 1",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	skitto: {
+		num: 999318,
+		name: "Skitto",
+		types: [
+			"Grape"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 90,
+			def: 40,
+			spa: 65,
+			spd: 20,
+			spe: 65
+		},
+		abilities: [
+			"Rough Skin"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Water 2"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gogoart: {
+		num: 999319,
+		name: "Gogoart",
+		types: [
+			"Grape"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 120,
+			def: 40,
+			spa: 95,
+			spd: 40,
+			spe: 95
+		},
+		abilities: [
+			"Rough Skin"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Water 2"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	trapple: {
+		num: 999328,
+		name: "Trapple",
+		types: [
+			"Apple"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 100,
+			def: 50,
+			spa: 55,
+			spd: 55,
+			spe: 10
+		},
+		abilities: [
+			"Arena Trap"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	slicava: {
+		num: 999329,
+		name: "Slicava",
+		types: [
+			"Apple"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 90,
+			def: 60,
+			spa: 60,
+			spd: 60,
+			spe: 90
+		},
+		abilities: [
+			"Arena Trap"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	orchidon: {
+		num: 999330,
+		name: "Orchidon",
+		types: [
+			"Apple"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 100,
+			def: 80,
+			spa: 80,
+			spd: 80,
+			spe: 100
+		},
+		abilities: [
+			"Arena Trap"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Bug"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gingett: {
+		num: 999296,
+		name: "Gingett",
+		types: [
+			"Chocolate",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 65,
+			def: 50,
+			spa: 50,
+			spd: 50,
+			spe: 55
+		},
+		abilities: [
+			"Guts"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	golingurk: {
+		num: 999297,
+		name: "Golingurk",
+		types: [
+			"Chocolate",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 120,
+			atk: 120,
+			def: 60,
+			spa: 40,
+			spd: 60,
+			spe: 50
+		},
+		abilities: [
+			"Guts"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.24705882352941178,
+			M: 0.7529411764705882
+		}
+	},
+	polyorange: {
+		num: 999309,
+		name: "Polyorange",
+		types: [
+			"Blueberry",
+			"Orange"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 50,
+			def: 50,
+			spa: 75,
+			spd: 60,
+			spe: 65
+		},
+		abilities: [
+			"Static"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	polyblue: {
+		num: 999310,
+		name: "Polyblue",
+		types: [
+			"Orange",
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 75,
+			def: 60,
+			spa: 95,
+			spd: 60,
+			spe: 90
+		},
+		abilities: [
+			"Static"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	skornana: {
+		num: 999322,
+		name: "Skornana",
+		types: [
+			"Banana",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 70,
+			def: 40,
+			spa: 80,
+			spd: 45,
+			spe: 35
+		},
+		abilities: [
+			"Filter"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	banapion: {
+		num: 999323,
+		name: "Banapion",
+		types: [
+			"Banana",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 100,
+			def: 70,
+			spa: 100,
+			spd: 70,
+			spe: 40
+		},
+		abilities: [
+			"Filter"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	puddeal: {
+		num: 999363,
+		name: "Puddeal",
+		types: [
+			"Strawberry",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 40,
+			def: 65,
+			spa: 65,
+			spd: 60,
+			spe: 25
+		},
+		abilities: [
+			"Thick Fat"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	puddleo: {
+		num: 999364,
+		name: "Puddleo",
+		types: [
+			"Strawberry",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 60,
+			def: 70,
+			spa: 75,
+			spd: 70,
+			spe: 45
+		},
+		abilities: [
+			"Thick Fat"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	flamberein: {
+		num: 999365,
+		name: "Flamberein",
+		types: [
+			"Strawberry",
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 80,
+			def: 90,
+			spa: 95,
+			spd: 90,
+			spe: 60
+		},
+		abilities: [
+			"Thick Fat"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Water 1",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	woocherry: {
+		num: 999331,
+		name: "Woocherry",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 85,
+			def: 40,
+			spa: 85,
+			spd: 40,
+			spe: 35
+		},
+		abilities: [
+			"Sand Veil"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Grass",
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cherrybat: {
+		num: 999332,
+		name: "Cherrybat",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 90,
+			def: 60,
+			spa: 115,
+			spd: 60,
+			spe: 55
+		},
+		abilities: [
+			"Sand Veil"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Grass",
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	snocone: {
+		num: 999361,
+		name: "Snocone",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 50,
+			def: 50,
+			spa: 70,
+			spd: 50,
+			spe: 60
+		},
+		abilities: [
+			"Moody"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Fairy",
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	glacream: {
+		num: 999362,
+		name: "Glacream",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 70,
+			def: 70,
+			spa: 80,
+			spd: 80,
+			spe: 70
+		},
+		abilities: [
+			"Moody"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Fairy",
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cherrp: {
+		num: 999337,
+		name: "Cherrp",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 50,
+			def: 50,
+			spa: 60,
+			spd: 60,
+			spe: 70
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cherrysun: {
+		num: 999338,
+		name: "Cherrysun",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 95,
+			def: 85,
+			spa: 65,
+			spd: 65,
+			spe: 70
+		},
+		abilities: [
+			"Chlorophyll"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Mineral"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	bunolite: {
+		num: 999298,
+		name: "Bunolite",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 70,
+			def: 60,
+			spa: 50,
+			spd: 50,
+			spe: 40
+		},
+		abilities: [
+			"Huge Power"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	espoffin: {
+		num: 999325,
+		name: "Espoffin",
+		types: [
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 45,
+			def: 35,
+			spa: 70,
+			spd: 80,
+			spe: 60
+		},
+		abilities: [
+			"Own Tempo"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Black",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	poffstic: {
+		num: 999326,
+		name: "Poffstic",
+		types: [
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 45,
+			def: 65,
+			spa: 90,
+			spd: 110,
+			spe: 70
+		},
+		abilities: [
+			"Own Tempo"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	razle: {
+		num: 999311,
+		name: "Razle",
+		types: [
+			"Raspberry",
+			"Lemon"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 50,
+			def: 40,
+			spa: 85,
+			spd: 75,
+			spe: 90
+		},
+		abilities: [
+			"Scrappy"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	limun: {
+		num: 999312,
+		name: "Limun",
+		types: [
+			"Lime",
+			"Lemon"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 40,
+			def: 50,
+			spa: 75,
+			spd: 85,
+			spe: 90
+		},
+		abilities: [
+			"Scrappy"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	mawnana: {
+		num: 999303,
+		name: "Mawnana",
+		types: [
+			"Lemon"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 85,
+			def: 85,
+			spa: 55,
+			spd: 55,
+			spe: 60
+		},
+		abilities: [
+			"Hyper Cutter"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field",
+			"Fairy"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	mediblue: {
+		num: 999307,
+		name: "Mediblue",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 50,
+			def: 65,
+			spa: 60,
+			spd: 65,
+			spe: 60
+		},
+		abilities: [
+			"Pure Power"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	mediberry: {
+		num: 999308,
+		name: "Mediberry",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 70,
+			def: 75,
+			spa: 80,
+			spd: 75,
+			spe: 80
+		},
+		abilities: [
+			"Pure Power"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cottonblu: {
+		num: 999333,
+		name: "Cottonblu",
+		types: [
+			"Blueberry",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 50,
+			def: 60,
+			spa: 60,
+			spd: 75,
+			spe: 50
+		},
+		abilities: [
+			"Cloud Nine"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Flying",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	alcanria: {
+		num: 999334,
+		name: "Alcanria",
+		types: [
+			"Blueberry",
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 60,
+			def: 90,
+			spa: 60,
+			spd: 105,
+			spe: 60
+		},
+		abilities: [
+			"Cloud Nine"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Flying",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	velvefox: {
+		num: 999360,
+		name: "Velvefox",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 95,
+			atk: 80,
+			def: 80,
+			spa: 110,
+			spd: 80,
+			spe: 80
+		},
+		abilities: [
+			"Synchronize"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Undiscovered"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	riolish: {
+		num: 999355,
+		name: "Riolish",
+		types: [
+			"Cherry",
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 50,
+			def: 90,
+			spa: 50,
+			spd: 90,
+			spe: 25
+		},
+		abilities: [
+			"Serene Grace"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	licario: {
+		num: 999356,
+		name: "Licario",
+		types: [
+			"Cherry",
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 70,
+			def: 130,
+			spa: 60,
+			spd: 130,
+			spe: 20
+		},
+		abilities: [
+			"Serene Grace"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	chocorade: {
+		num: 999315,
+		name: "Chocorade",
+		types: [
+			"Apple",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 80,
+			def: 90,
+			spa: 100,
+			spd: 80,
+			spe: 95
+		},
+		abilities: [
+			"Oblivious"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Fairy",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	peepling: {
+		num: 999287,
+		name: "Peepling",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 70,
+			def: 70,
+			spa: 50,
+			spd: 35,
+			spe: 30
+		},
+		abilities: [
+			"Early Bird"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	peepinder: {
+		num: 999288,
+		name: "Peepinder",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 80,
+			def: 65,
+			spa: 55,
+			spd: 55,
+			spe: 90
+		},
+		abilities: [
+			"Early Bird"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	talonpeep: {
+		num: 999289,
+		name: "Talonpeep",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 120,
+			def: 80,
+			spa: 80,
+			spd: 65,
+			spe: 100
+		},
+		abilities: [
+			"Early Bird"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gulple: {
+		num: 999316,
+		name: "Gulple",
+		types: [
+			"Apple"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 55,
+			def: 65,
+			spa: 55,
+			spd: 65,
+			spe: 40
+		},
+		abilities: [
+			"Sticky Hold"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	swalapple: {
+		num: 999317,
+		name: "Swalapple",
+		types: [
+			"Apple"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 70,
+			def: 80,
+			spa: 70,
+			spd: 80,
+			spe: 50
+		},
+		abilities: [
+			"Sticky Hold"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	tropanana: {
+		num: 999357,
+		name: "Tropanana",
+		types: [
+			"Banana"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 50,
+			def: 70,
+			spa: 65,
+			spd: 85,
+			spe: 50
+		},
+		abilities: [
+			"Heatproof"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Monster",
+			"Grass"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	slownana: {
+		num: 999293,
+		name: "Slownana",
+		types: [
+			"Banana",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 75,
+			atk: 60,
+			def: 50,
+			spa: 55,
+			spd: 50,
+			spe: 60
+		},
+		abilities: [
+			"Soundproof"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Monster",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	slowbagel: {
+		num: 999294,
+		name: "Slowbagel",
+		types: [
+			"Banana",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 80,
+			def: 60,
+			spa: 80,
+			spd: 60,
+			spe: 70
+		},
+		abilities: [
+			"Soundproof"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Monster",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	donaught: {
+		num: 999295,
+		name: "Donaught",
+		types: [
+			"Banana",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 90,
+			def: 50,
+			spa: 80,
+			spd: 50,
+			spe: 70
+		},
+		abilities: [
+			"Soundproof"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Monster",
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	clamberry: {
+		num: 999366,
+		name: "Clamberry",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 40,
+			atk: 70,
+			def: 70,
+			spa: 70,
+			spd: 50,
+			spe: 50
+		},
+		abilities: [
+			"Shell Armor"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	hunsour: {
+		num: 999367,
+		name: "Hunsour",
+		types: [
+			"Lime",
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 100,
+			def: 100,
+			spa: 80,
+			spd: 65,
+			spe: 50
+		},
+		abilities: [
+			"Swift Swim"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	nanabyss: {
+		num: 999368,
+		name: "Nanabyss",
+		types: [
+			"Banana"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 70,
+			def: 100,
+			spa: 100,
+			spd: 75,
+			spe: 50
+		},
+		abilities: [
+			"Swift Swim"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Yellow",
+		eggGroups: [
+			"Water 1"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	velvexien: {
+		num: 999359,
+		name: "Velvexien",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 90,
+			def: 60,
+			spa: 75,
+			spd: 60,
+			spe: 75
+		},
+		abilities: [
+			"Synchronize"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	cornet: {
+		num: 999353,
+		name: "Cornet",
+		types: [
+			"Orange"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 75,
+			def: 55,
+			spa: 65,
+			spd: 55,
+			spe: 45
+		},
+		abilities: [
+			"Insomnia"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Black",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	pumpkinete: {
+		num: 999354,
+		name: "Pumpkinete",
+		types: [
+			"Orange"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 115,
+			def: 65,
+			spa: 80,
+			spd: 60,
+			spe: 65
+		},
+		abilities: [
+			"Insomnia"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Black",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	sevipop: {
+		num: 999336,
+		name: "Sevipop",
+		types: [
+			"Grape"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 90,
+			def: 50,
+			spa: 90,
+			spd: 50,
+			spe: 50
+		},
+		abilities: [
+			"Shed Skin"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Field",
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	flangoose: {
+		num: 999335,
+		name: "Flangoose",
+		types: [
+			"Orange",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 90,
+			def: 60,
+			spa: 50,
+			spd: 50,
+			spe: 80
+		},
+		abilities: [
+			"Immunity"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Field"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	heartisk: {
+		num: 999369,
+		name: "Heartisk",
+		types: [
+			"Vanilla",
+			"Grape"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 70,
+			def: 70,
+			spa: 45,
+			spd: 40,
+			spe: 45
+		},
+		abilities: [
+			"Swift Swim",
+			"Stench"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Water 1",
+			"Water 2"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	lolliplup: {
+		num: 999304,
+		name: "Lolliplup",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 70,
+			def: 95,
+			spa: 40,
+			spd: 40,
+			spe: 30
+		},
+		abilities: [
+			"Sturdy"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	prinprince: {
+		num: 999305,
+		name: "Prinprince",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 90,
+			def: 135,
+			spa: 50,
+			spd: 50,
+			spe: 40
+		},
+		abilities: [
+			"Sturdy"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	emposh: {
+		num: 999306,
+		name: "Emposh",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 110,
+			def: 175,
+			spa: 60,
+			spd: 60,
+			spe: 50
+		},
+		abilities: [
+			"Sturdy"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Monster"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	candform: {
+		num: 999351,
+		name: "Candform",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 70,
+			def: 70,
+			spa: 70,
+			spd: 70,
+			spe: 60
+		},
+		abilities: [
+			"Forecast"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Fairy",
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	rosebud: {
+		num: 999313,
+		name: "Rosebud",
+		types: [
+			"Apple",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 60,
+			def: 55,
+			spa: 30,
+			spd: 30,
+			spe: 85
+		},
+		abilities: [
+			"Oblivious"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Gray",
+		eggGroups: [
+			"Bug",
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	appelia: {
+		num: 999314,
+		name: "Appelia",
+		types: [
+			"Apple",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 70,
+			def: 55,
+			spa: 75,
+			spd: 75,
+			spe: 85
+		},
+		abilities: [
+			"Oblivious"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Bug",
+			"Human-Like"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	iceleep: {
+		num: 999345,
+		name: "Iceleep",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 40,
+			def: 75,
+			spa: 60,
+			spd: 85,
+			spe: 25
+		},
+		abilities: [
+			"Suction Cups"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.125,
+			M: 0.875
+		}
+	},
+	creamdily: {
+		num: 999346,
+		name: "Creamdily",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 70,
+			def: 90,
+			spa: 80,
+			spd: 100,
+			spe: 40
+		},
+		abilities: [
+			"Suction Cups"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.125,
+			M: 0.875
+		}
+	},
+	limeshroom: {
+		num: 999347,
+		name: "Limeshroom",
+		types: [
+			"Lime"
+		],
+		baseStats: {
+			hp: 45,
+			atk: 95,
+			def: 50,
+			spa: 40,
+			spd: 50,
+			spe: 70
+		},
+		abilities: [
+			"Battle Armor"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	shroompie: {
+		num: 999348,
+		name: "Shroompie",
+		types: [
+			"Lime"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 100,
+			def: 100,
+			spa: 60,
+			spd: 80,
+			spe: 45
+		},
+		abilities: [
+			"Battle Armor"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Water 3"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	malts: {
+		num: 999280,
+		name: "Malts",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 50,
+			def: 50,
+			spa: 55,
+			spd: 60,
+			spe: 60
+		},
+		abilities: [
+			"Synchronize"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	kirlicakes: {
+		num: 999281,
+		name: "Kirlicakes",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 60,
+			atk: 60,
+			def: 60,
+			spa: 85,
+			spd: 80,
+			spe: 80
+		},
+		abilities: [
+			"Synchronize"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	velvevoir: {
+		num: 999282,
+		name: "Velvevoir",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 65,
+			def: 65,
+			spa: 125,
+			spd: 115,
+			spe: 85
+		},
+		abilities: [
+			"Synchronize"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gelly: {
+		num: 999371,
+		name: "Gelly",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 75,
+			def: 60,
+			spa: 40,
+			spd: 30,
+			spe: 50
+		},
+		abilities: [
+			"Rock Head"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gellroo: {
+		num: 999372,
+		name: "Gellroo",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 95,
+			def: 100,
+			spa: 60,
+			spd: 50,
+			spe: 50
+		},
+		abilities: [
+			"Rock Head"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	gelldra: {
+		num: 999373,
+		name: "Gelldra",
+		types: [
+			"Blueberry"
+		],
+		baseStats: {
+			hp: 85,
+			atk: 100,
+			def: 80,
+			spa: 90,
+			spd: 80,
+			spe: 90
+		},
+		abilities: [
+			"Rock Head"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Dragon"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	},
+	chocolite: {
+		num: 999374,
+		name: "Chocolite",
+		types: [
+			"Chocolate",
+			"Cherry"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 55,
+			def: 80,
+			spa: 35,
+			spd: 60,
+			spe: 30
+		},
+		abilities: [
+			"Clear Body"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Mineral"
+		],
+		gender: "N"
+	},
+	chocolish: {
+		num: 999375,
+		name: "Chocolish",
+		types: [
+			"Chocolate",
+			"Cherry"
+		],
+		baseStats: {
+			hp: 65,
+			atk: 75,
+			def: 100,
+			spa: 55,
+			spd: 80,
+			spe: 50
+		},
+		abilities: [
+			"Clear Body"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Mineral"
+		],
+		gender: "N"
+	},
+	chocoluxe: {
+		num: 999376,
+		name: "Chocoluxe",
+		types: [
+			"Chocolate",
+			"Cherry"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 115,
+			def: 110,
+			spa: 60,
+			spd: 90,
+			spe: 70
+		},
+		abilities: [
+			"Clear Body"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Mineral"
+		],
+		gender: "N"
+	},
+	regicandy: {
+		num: 999377,
+		name: "Regicandy",
+		types: [
+			"Cherry"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 100,
+			def: 200,
+			spa: 70,
+			spd: 100,
+			spe: 50
+		},
+		abilities: [
+			"Clear Body"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Purple",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	reginger: {
+		num: 999378,
+		name: "Reginger",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 70,
+			def: 100,
+			spa: 100,
+			spd: 200,
+			spe: 50
+		},
+		abilities: [
+			"Clear Body"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Brown",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	regiapple: {
+		num: 999379,
+		name: "Regiapple",
+		types: [
+			"Apple"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 85,
+			def: 150,
+			spa: 85,
+			spd: 150,
+			spe: 50
+		},
+		abilities: [
+			"Clear Body"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	kyotan: {
+		num: 999382,
+		name: "Kyotan",
+		types: [
+			"Vanilla",
+			"Orange"
+		],
+		baseStats: {
+			hp: 110,
+			atk: 100,
+			def: 90,
+			spa: 130,
+			spd: 130,
+			spe: 90
+		},
+		abilities: [
+			"Drizzle"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	groungerdo: {
+		num: 999383,
+		name: "Groungerdo",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 140,
+			def: 140,
+			spa: 100,
+			spd: 80,
+			spe: 90
+		},
+		abilities: [
+			"Drought"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	liquaza: {
+		num: 999384,
+		name: "Liquaza",
+		types: [
+			"Strawberry"
+		],
+		baseStats: {
+			hp: 105,
+			atk: 140,
+			def: 90,
+			spa: 140,
+			spd: 80,
+			spe: 95
+		},
+		abilities: [
+			"None"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Green",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	cottonbun: {
+		num: 999380,
+		name: "Cottonbun",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 70,
+			atk: 70,
+			def: 70,
+			spa: 90,
+			spd: 90,
+			spe: 110
+		},
+		abilities: [
+			"Mega Launcher"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Red",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	chocobun: {
+		num: 999381,
+		name: "Chocobun",
+		types: [
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 80,
+			atk: 90,
+			def: 80,
+			spa: 130,
+			spd: 110,
+			spe: 110
+		},
+		abilities: [
+			"Mega Launcher"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "Blue",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	diancake: {
+		num: 999385,
+		name: "Diancake",
+		types: [
+			"Vanilla"
+		],
+		baseStats: {
+			hp: 100,
+			atk: 100,
+			def: 100,
+			spa: 100,
+			spd: 100,
+			spe: 100
+		},
+		abilities: [
+			"Serene Grace"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	douna: {
+		num: 999386,
+		name: "Douna",
+		types: [
+			"Raspberry"
+		],
+		baseStats: {
+			hp: 50,
+			atk: 150,
+			def: 50,
+			spa: 150,
+			spd: 50,
+			spe: 150
+		},
+		abilities: [
+			"Pressure"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Undiscovered"
+		],
+		gender: "N"
+	},
+	velvekin: {
+		num: 999358,
+		name: "Velvekin",
+		types: [
+			"Vanilla",
+			"Chocolate"
+		],
+		baseStats: {
+			hp: 55,
+			atk: 50,
+			def: 50,
+			spa: 75,
+			spd: 50,
+			spe: 45
+		},
+		abilities: [
+			"Synchronize"
+		],
+		heightm: 1,
+		weightkg: 20,
+		color: "White",
+		eggGroups: [
+			"Amorphous"
+		],
+		genderRatio: {
+			F: 0.5,
+			M: 0.5
+		}
+	}
 };
