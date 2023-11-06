@@ -1,6 +1,6 @@
 export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen4',
-	gen: 3,
+	gen: 9,
 	pokemon: {
 		inherit: true,
 		getActionSpeed() {
