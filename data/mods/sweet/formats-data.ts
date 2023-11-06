@@ -26990,1927 +26990,1542 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
   },
   /* Enabled mons */
   brownisaur: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chocosaur: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   fudgasaur: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   strawander: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   straweleon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   strawizard: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   squirpie: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   tartortle: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   piestoise: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   panzeal: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   simizeal: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   panspritz: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   simispritz: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   pancott: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   simicott: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   starberry: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   berravia: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   berraptor: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   rattatart: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   raticake: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   spearnana: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   fearnana: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   migum: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   goman: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   popsichu: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   raicicle: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   shrewberry: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   slashberry: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   angeirian: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   angeino: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   angequeen: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   devirian: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   devino: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   deviking: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cupfairy: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cupfable: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   vulpie: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   pietails: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   creampuff: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   creamtuff: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   sherbat: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   shervern: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   offin: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   muffoom: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   vilefinn: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cupras: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   paracake: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cottonat: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cottomoth: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   diggum: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   dugdrop: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   meowffin: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cupcat: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   pieduck: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   golpie: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cottgrape: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   whimsgrape: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   petitcake: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   lillicake: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cinnawag: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cinnawhirl: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cinnawrath: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chabra: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chadabra: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   alakabake: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chefchop: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chefchoke: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chefchamp: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   bellnut: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   weepeanut: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   victrenut: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   icefish: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cweamicent: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   berrydude: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   berryler: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   berrem: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   pawnsour: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   bisour: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   canesal: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   weacane: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   strawink: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   strawxio: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   luxberry: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   puffduo: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   puffdrio: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   phangum: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gumminant: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   puddmer: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   ginddup: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   mintay: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   malamint: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gascream: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   hauntice: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   creamgar: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   emolpie: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   flanzee: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   hypflan: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   lolliby: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   suckler: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   caratorb: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   caratrode: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   exemel: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   exeramel: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cupop: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   lolliwak: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   panpuff: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cangoro: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   panfisk: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cherring: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cherrzing: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   creamhorn: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   creamdon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   vinegla: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   licogrowth: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   kangascake: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   trubbint: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   mintodor: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cookeen: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   seakie: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   carobyu: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   carobmie: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   berrier: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   lipsynx: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   rootic: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   rootantula: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   pudino: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   zweilert: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   hygateau: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gumble: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gumballer: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   lempras: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   pudditto: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   bananaby: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   bananabuzz: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   lemospin: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   quillemon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   lemaught: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   mintanyte: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   mintastar: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   lemeod: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   odmelon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   marshlax: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   smorelax: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   icebox: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   manalime: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cryorange: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   creamtini: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   whippinair: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   creamonite: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   twoberry: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   mewberry: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   licorita: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   leaforice: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   liganium: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cyndacake: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   quinaval: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   typhunnel: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   nanadile: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   croconana: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   nanagatr: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   mintret: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   furmint: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   sherzel: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   bertzel: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cookietot: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cookietune: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   spinacake: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   ariacake: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   tortewig: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   meringle: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   torteringe: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   banvy: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   banvine: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   banperior: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   airloon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   airblim: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   snotree: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cantree: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chocowool: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chocofluff: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   candaros: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cottibebe: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cottiette: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cottiges: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   boncherry: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   sudocherry: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   grapig: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   igrape: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   wineboar: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   pinacha: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   strawkern: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   strawflora: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   dedemolt: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   woocrepe: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   crepesire: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   skittink: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   candlang: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   klinkandy: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gligrape: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   glisgrape: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cookown: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   poppuffet: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   tartafarig: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   ferrolemon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   ferrorange: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   candigon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   candix: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   candilix: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   lickichef: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   berochef: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   qwilapple: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   candino: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   pinekle: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   teana: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   teacakes: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gummiursa: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gummaring: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   doslug: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   slugnut: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   macaloon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   meringue: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   candila: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gumchoo: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gumtic: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   jellybird: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   pantine: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   parfit: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   parfure: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   parfelure: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   furfruit: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   phancake: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   doncake: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   duncanion: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   mousse: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   smicing: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chimana: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   monana: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   infernana: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   eggby: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   egglove: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chocotank: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   candink: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   rocanrola: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   candore: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gigalick: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   oshacone: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   dewice: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   samurcone: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   lemokie: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   lemodier: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   leminja: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   minecko: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   leafbit: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   mintosaur: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   torchoc: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chocoberry: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   blazeberry: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   mudpie: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   customp: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   swamptart: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   grapom: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   grapipom: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cookiegoon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cookinoone: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cupvee: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cherreon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   lemeon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   vapeareon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   beigeon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   plumbreon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   grapeon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chocoleon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   vanilleon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   juicemor: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   frubat: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   golberry: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   croberry: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   peepow: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   swellpeep: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   marmish: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   smorloom: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cookbun: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   candipass: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   probicandy: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chocodos: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chocardos: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   crodrupe: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   sourdrupe: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   skittart: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   delcandy: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   jelloetta: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chocomite: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chocolugg: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   diggeaster: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   tortoal: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   candeye: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   slugnana: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   bananos: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   heartgrape: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   lolliphish: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   crawpop: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   feetart: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   alluretic: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   skitto: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gogoart: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   trapple: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   slicava: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   orchidon: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gingett: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   golingurk: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   polyorange: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   polyblue: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   skornana: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   banapion: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   puddeal: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   puddleo: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   flamberein: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   woocherry: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cherrybat: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   snocone: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   glacream: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cherrp: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cherrysun: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   bunolite: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   espoffin: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   poffstic: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   razle: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   limun: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   mawnana: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   mediblue: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   mediberry: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cottonblu: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   alcanria: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   velvefox: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   riolish: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   licario: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chocorade: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   peepling: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   peepinder: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   talonpeep: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gulple: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   swalapple: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   tropanana: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   slownana: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   slowbagel: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   donaught: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   clamberry: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   hunsour: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   nanabyss: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   velvexien: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cornet: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   pumpkinete: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   sevipop: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   flangoose: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   heartisk: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   lolliplup: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   prinprince: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   emposh: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   candform: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   rosebud: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   appelia: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   iceleep: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   creamdily: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   limeshroom: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   shroompie: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   malts: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   kirlicakes: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   velvevoir: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gelly: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gellroo: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   gelldra: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chocolite: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chocolish: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chocoluxe: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   regicandy: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   reginger: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   regiapple: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   kyotan: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   groungerdo: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   liquaza: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   cottonbun: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   chocobun: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   diancake: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   douna: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   },
   velvekin: {
-    inherit: true,
     tier: "OU",
     isNonstandard: null
   }
