@@ -76,10 +76,6 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
     inherit: true,
     isNonstandard: "Past"
   },
-  babydolleyes: {
-    inherit: true,
-    isNonstandard: "Past"
-  },
   baddybad: {
     inherit: true,
     isNonstandard: "Past"
@@ -292,10 +288,6 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
     inherit: true,
     isNonstandard: "Past"
   },
-  dazzlinggleam: {
-    inherit: true,
-    isNonstandard: "Past"
-  },
   decorate: {
     inherit: true,
     isNonstandard: "Past"
@@ -313,10 +305,6 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
     isNonstandard: "Past"
   },
   diamondstorm: {
-    inherit: true,
-    isNonstandard: "Past"
-  },
-  disarmingvoice: {
     inherit: true,
     isNonstandard: "Past"
   },
@@ -353,10 +341,6 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
     isNonstandard: "Past"
   },
   dragonrush: {
-    inherit: true,
-    isNonstandard: "Past"
-  },
-  drainingkiss: {
     inherit: true,
     isNonstandard: "Past"
   },
@@ -485,10 +469,6 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
     isNonstandard: "Past"
   },
   floralhealing: {
-    inherit: true,
-    isNonstandard: "Past"
-  },
-  flowershield: {
     inherit: true,
     isNonstandard: "Past"
   },
@@ -18451,7 +18431,7 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
     type: "Vanilla",
     isNonstandard: null
   },
-  roundeyes: {
+  babydolleyes: {
     inherit: true,
     type: "Vanilla",
     isNonstandard: null
@@ -18466,17 +18446,17 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
     type: "Vanilla",
     isNonstandard: null
   },
-  drainkiss: {
+  drainingkiss: {
     inherit: true,
     type: "Vanilla",
     isNonstandard: null
   },
-  dazzle: {
+  dazzlinggleam: {
     inherit: true,
     type: "Vanilla",
     isNonstandard: null
   },
-  charmingcry: {
+  disarmingvoice: {
     inherit: true,
     type: "Vanilla",
     isNonstandard: null
@@ -18556,7 +18536,7 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
     type: "Vanilla",
     isNonstandard: null
   },
-  flowerguard: {
+  flowershield: {
     inherit: true,
     type: "Vanilla",
     isNonstandard: null
