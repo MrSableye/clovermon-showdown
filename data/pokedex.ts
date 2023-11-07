@@ -111992,9 +111992,9 @@ blobbosmechelectric: {
 			M: 0.5
 		}
 	},
-	pumpkinete: {
+	pumpkinette: {
 		num: 999354,
-		name: "Pumpkinete",
+		name: "Pumpkinette",
 		types: [
 			"Orange"
 		],
@@ -112741,9 +112741,9 @@ blobbosmechelectric: {
 		],
 		gender: "N"
 	},
-	groungerdo: {
+	groungerdon: {
 		num: 999383,
-		name: "Groungerdo",
+		name: "Groungerdon",
 		types: [
 			"Chocolate"
 		],

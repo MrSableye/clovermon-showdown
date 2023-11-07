@@ -28393,7 +28393,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: null
   },
-  pumpkinete: {
+  pumpkinette: {
     tier: "OU",
     isNonstandard: null
   },
@@ -28501,7 +28501,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
     tier: "OU",
     isNonstandard: null
   },
-  groungerdo: {
+  groungerdon: {
     tier: "OU",
     isNonstandard: null
   },

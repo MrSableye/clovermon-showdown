@@ -28889,7 +28889,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future"
 	},
-	pumpkinete: {
+	pumpkinette: {
 		tier: "Illegal",
 		isNonstandard: "Future"
 	},
@@ -28997,7 +28997,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future"
 	},
-	groungerdo: {
+	groungerdon: {
 		tier: "Illegal",
 		isNonstandard: "Future"
 	},
