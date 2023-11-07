@@ -17646,7 +17646,7 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
     type: "Orange",
     isNonstandard: null
   },
-  mudsport: {
+  mudsport: { // TODO: Type
     inherit: true,
     type: "Chocolate",
     isNonstandard: null
