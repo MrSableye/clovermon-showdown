@@ -28,7 +28,9 @@ export const TypeChart: { [k: string]: TypeData; } = {
       Blueberry: 0,
       Grape: 2,
       Raspberry: 1,
-      Chocolate: 0
+      Chocolate: 0,
+      powder: 3,
+      sandstorm: 3,
     }
   },
   strawberry: {
@@ -44,7 +46,8 @@ export const TypeChart: { [k: string]: TypeData; } = {
       Blueberry: 2,
       Grape: 0,
       Raspberry: 1,
-      Chocolate: 0
+      Chocolate: 0,
+      sandstorm: 3,
     }
   },
   apple: {
@@ -60,7 +63,8 @@ export const TypeChart: { [k: string]: TypeData; } = {
       Blueberry: 0,
       Grape: 0,
       Raspberry: 1,
-      Chocolate: 0
+      Chocolate: 0,
+      sandstorm: 3,
     }
   },
   orange: {
@@ -156,7 +160,8 @@ export const TypeChart: { [k: string]: TypeData; } = {
       Blueberry: 1,
       Grape: 2,
       Raspberry: 2,
-      Chocolate: 0
+      Chocolate: 0,
+      hail: 3,
     }
   },
   raspberry: {

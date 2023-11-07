@@ -1272,10 +1272,6 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
     inherit: true,
     isNonstandard: "Past"
   },
-  powergem: {
-    inherit: true,
-    isNonstandard: "Past"
-  },
   powershift: {
     inherit: true,
     isNonstandard: "Past"
@@ -16508,7 +16504,10 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
   leechseed: {
     inherit: true,
     type: "Cherry",
-    isNonstandard: null
+    isNonstandard: null,
+    onTryImmunity(target) {
+			return !target.hasType('Cherry');
+		},
   },
   growth: {
     inherit: true,
@@ -17148,7 +17147,9 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
   sandstorm: {
     inherit: true,
     type: "Cherry",
-    isNonstandard: null
+    isNonstandard: null,
+    desc: "For 5 turns, the weather becomes Sandstorm. At the end of each turn except the last, all active Pokemon lose 1/16 of their maximum HP, rounded down, unless they are a Cherry, Strawberry, or Apple type, or have the Sand Veil Ability. Fails if the current weather is Sandstorm.",
+    shortDesc: "For 5 turns, a sandstorm rages.",
   },
   gigadrain: {
     inherit: true,
@@ -17343,12 +17344,16 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
   raindance: {
     inherit: true,
     type: "Chocolate",
-    isNonstandard: null
+    isNonstandard: null,
+    desc: "For 5 turns, the weather becomes Rain Dance. The damage of Chocolate-type attacks is multiplied by 1.5 and the damage of Vanilla-type attacks is multiplied by 0.5 during the effect. Lasts for 8 turns if the user is holding Damp Rock. Fails if the current weather is Rain Dance.",
+		shortDesc: "For 5 turns, heavy rain powers Chocolate moves.",
   },
   sunnyday: {
     inherit: true,
     type: "Vanilla",
-    isNonstandard: null
+    isNonstandard: null,
+    desc: "For 5 turns, the weather becomes Sunny Day. The damage of Vanilla-type attacks is multiplied by 1.5 and the damage of Chocolate-type attacks is multiplied by 0.5 during the effect. Lasts for 8 turns if the user is holding Heat Rock. Fails if the current weather is Sunny Day.",
+		shortDesc: "For 5 turns, intense sunlight powers Vanilla moves.",
   },
   crunch: {
     inherit: true,
@@ -17433,7 +17438,8 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
   hail: {
     inherit: true,
     type: "Grape",
-    isNonstandard: null
+    isNonstandard: null,
+    desc: "For 5 turns, the weather becomes Hail. At the end of each turn except the last, all active Pokemon lose 1/16 of their maximum HP, rounded down, unless they are an Grape type or have the Ice Body, Magic Guard, Overcoat, or Snow Cloak Abilities. Lasts for 8 turns if the user is holding Icy Rock. Fails if the current weather is Hail.",
   },
   torment: {
     inherit: true,
@@ -17870,7 +17876,7 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
     type: "Lime",
     isNonstandard: null
   },
-  watersport: {
+  watersport: { // TODO: Type
     inherit: true,
     type: "Blueberry",
     isNonstandard: null
@@ -18080,7 +18086,7 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
     type: "Grape",
     isNonstandard: null
   },
-  powerstone: {
+  powergem: {
     inherit: true,
     type: "Cherry",
     isNonstandard: null
@@ -18483,7 +18489,32 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
   toxicspikes: {
     inherit: true,
     type: "Lemon",
-    isNonstandard: null
+    isNonstandard: null,
+		condition: {
+			// this is a side condition
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Toxic Spikes');
+				this.effectState.layers = 1;
+			},
+			onSideRestart(side) {
+				if (this.effectState.layers >= 2) return false;
+				this.add('-sidestart', side, 'move: Toxic Spikes');
+				this.effectState.layers++;
+			},
+			onEntryHazard(pokemon) {
+				if (!pokemon.isGrounded()) return;
+				if (pokemon.hasType('Lemon')) {
+					this.add('-sideend', pokemon.side, 'move: Toxic Spikes', '[of] ' + pokemon);
+					pokemon.side.removeSideCondition('toxicspikes');
+				} else if (pokemon.volatiles['substitute']) {
+					return;
+				} else if (this.effectState.layers >= 2) {
+					pokemon.trySetStatus('tox', pokemon.side.foe.active[0]);
+				} else {
+					pokemon.trySetStatus('psn', pokemon.side.foe.active[0]);
+				}
+			},
+		},
   },
   healingwish: {
     inherit: true,
