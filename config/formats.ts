@@ -999,7 +999,6 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Obtainable',
 			'Dynamax Clause',
-			'Team Preview',
 			'Sleep Clause Mod',
 			'Endless Battle Clause',
 			'HP Percentage Mod',
@@ -1018,7 +1017,6 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Obtainable',
 			'Dynamax Clause',
-			'Team Preview',
 			'Sleep Clause Mod',
 			'Endless Battle Clause',
 			'HP Percentage Mod',
@@ -1037,7 +1035,6 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Obtainable',
 			'Dynamax Clause',
-			'Team Preview',
 			'Sleep Clause Mod',
 			'Endless Battle Clause',
 			'HP Percentage Mod',
@@ -1047,7 +1044,7 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 		],
-		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard', 'Wicked Blow', 'Drizzle', 'Drought'],
+		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard', 'Wicked Blow', 'Drizzle', 'Drought', 'Krackocean'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Create-a-Blobbos (CAB)
