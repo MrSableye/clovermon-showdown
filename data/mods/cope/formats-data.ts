@@ -2864,7 +2864,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    shroomko: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	    junkbane: {
 		inherit: true,
