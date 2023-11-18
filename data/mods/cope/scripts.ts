@@ -121,6 +121,7 @@ export const Scripts: ModdedBattleScriptsData = {
 
 			this.battle.setActiveMove(move, pokemon, target);
 
+			this.battle.singleEvent('ModifyType', move, null, pokemon, target, move, move);
 			this.battle.singleEvent('ModifyMove', move, null, pokemon, target, move, move);
 			if (baseTarget !== move.target) {
 				// Target changed in ModifyMove, so we must adjust it here
@@ -128,6 +129,7 @@ export const Scripts: ModdedBattleScriptsData = {
 				// event
 				target = this.battle.getRandomTarget(pokemon, move);
 			}
+			move = this.battle.runEvent('ModifyType', pokemon, target, move, move);
 			move = this.battle.runEvent('ModifyMove', pokemon, target, move, move);
 			if (baseTarget !== move.target) {
 				// Adjust again
