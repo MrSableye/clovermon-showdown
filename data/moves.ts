@@ -33022,6 +33022,82 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
+	genesiswhirl: {
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Genesis Whirl",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon, target) {
+			if (!target) return;
+			if (target.level < pokemon.level) {
+				move.ohko = true;
+			}
+		},
+		target: "normal",
+		type: "Fighting",
+		zMove: {basePower: 180},
+		maxMove: {basePower: 130},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	genesisbeam: {
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Genesis Beam",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		type: "Fairy",
+		onAfterHit(target, source) {
+			this.boost({ atk: 1, spa: 1 });
+		},
+		flags: {protect: 1, mirror: 1},
+		isNonstandard: "Future",
+	},
+	genesisflash: {
+		accuracy: 90,
+		basePower: 100,
+		category: "Special",
+		name: "Genesis Flash",
+		pp: 5,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Fire', type);
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		priority: 0,
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Fighting",
+		zMove: {basePower: 170},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	genesisblast: {
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Genesis Blast",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			boosts: {
+				accuracy: -1,
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+		contestType: "Cute",
+		isNonstandard: "Future",
+	},
 	skillroom: {
 		accuracy: true,
 		basePower: 0,

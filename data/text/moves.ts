@@ -9453,6 +9453,22 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Skill Room",
 		desc: "For 5 turns, all moves always hit but have their base power multiplied by their accuracy, Pokemon cannot be hit by critical hits, secondary effects with a 50% or greater chance of occuring always occur, and secondary effects with less than 50% chance never occur.",
 	},
+	genesiswhirl: {
+		name: "Genesis Whirl",
+		desc: "OHKOs the target if its level is lower.",
+	},
+	genesisbeam: {
+		name: "Genesis Beam",
+		desc: "On-hit: +1 Atk, +1 SpA",
+	},
+	genesisflash: {
+		name: "Genesis Flash",
+		desc: "Combines Fire in its type effectiveness. Physical if user's Atk > Sp. Atk.",
+	},
+	genesisblast: {
+		name: "Genesis Blast",
+		desc: "30% chance to lower the target's accuracy by 1.",
+	},
 	runeofluck: {
 		name: "Rune of Luck",
 		shortDesc: "Shields user's party from the next 3 critical hits.",
