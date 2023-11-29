@@ -2159,4 +2159,6 @@ export const Aliases: {[alias: string]: string} = {
 	bpvr: "Board Power (/vr/)",
 	bpx: "Board Power (/x/)",
 	bpz: "Board Power (/z/)",
+	peakcloverdesign: "Levitate",
+	"4xgroundweak": "Levitate",
 };

@@ -9171,6 +9171,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
 		shortDesc: "Hits 2-5 times in one turn.",
 	},
+	crustaceancombat: {
+		name: "Crustacean Combat",
+		shortDesc: "Combines Water and Fighting in its effectiveness.",
+	},
+	alberspin: {
+		name: "Alber Spin",
+		shortDesc: "Frees the user from hazards/bind/Leech Seed.",
+	},
 	acidicrainfall: {
 		name: "Acidic Rainfall",
 		desc: "Summons Acidic Rainfall. At the end of each turn except the last, all active Pokemon lose 1/16 of their maximum HP five times, rounded down. Fails if the current weather is Acidic Rainfall.",
@@ -9437,9 +9445,29 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Glomp :3",
 		desc: "User recovers 50% of the damage dealt. Uses best of Dragon or Grass in type effectiveness. If it KOes another Pokemon, it receives a boost of the KOed Pokemon's highest stat.",
 	},
+	reroll: {
+		name: "Reroll",
+		desc: "Randomly reroll all boosts and deboosts (not acc/eva), always adding 3 total boosts."
+	},
 	skillroom: {
 		name: "Skill Room",
 		desc: "For 5 turns, all moves always hit but have their base power multiplied by their accuracy, Pokemon cannot be hit by critical hits, secondary effects with a 50% or greater chance of occuring always occur, and secondary effects with less than 50% chance never occur.",
+	},
+	genesiswhirl: {
+		name: "Genesis Whirl",
+		desc: "OHKOs the target if its level is lower.",
+	},
+	genesisbeam: {
+		name: "Genesis Beam",
+		desc: "On-hit: +1 Atk, +1 SpA",
+	},
+	genesisflash: {
+		name: "Genesis Flash",
+		desc: "Combines Fire in its type effectiveness. Physical if user's Atk > Sp. Atk.",
+	},
+	genesisblast: {
+		name: "Genesis Blast",
+		desc: "30% chance to lower the target's accuracy by 1.",
 	},
 	runeofluck: {
 		name: "Rune of Luck",

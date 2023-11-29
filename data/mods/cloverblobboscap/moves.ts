@@ -1726,4 +1726,20 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	genesiswhirl: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	genesisbeam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	genesisflash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	genesisblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

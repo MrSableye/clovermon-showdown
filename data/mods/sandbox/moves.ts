@@ -4655,7 +4655,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	bamboozle: {
+	reroll: {
 		inherit: true,
 		isNonstandard: null,
 	},

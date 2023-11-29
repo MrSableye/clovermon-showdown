@@ -7048,6 +7048,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				'steelbeam',
 				'prismaticlaser',
 				'beamblade',
+				'genesisbeam',
 			];
 			if (beamMoves.includes(move.id)) {
 				this.debug('Beam Boost boost');

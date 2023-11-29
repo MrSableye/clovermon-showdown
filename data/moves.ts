@@ -29680,7 +29680,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		category: "Special",
 		name: "Just Monikat",
 		pp: 5,
-		noPPBoosts: true,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onHit(target, pokemon, move) {
@@ -31633,6 +31632,68 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Steel",
 	},
+	alberspin: {
+        accuracy: 100,
+        basePower: 50,
+        category: "Physical",
+        name: "Alber Spin",
+        pp: 40,
+        priority: 0,
+        flags: {contact: 1, protect: 1, mirror: 1},
+        onAfterHit(target, pokemon, move) {
+            if (!move.hasSheerForce) {
+                if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+                    this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+                }
+                const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
+                for (const condition of sideConditions) {
+                    if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+                        this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+                    }
+                }
+                if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+                    pokemon.removeVolatile('partiallytrapped');
+                }
+            }
+        },
+        onAfterSubDamage(damage, target, pokemon, move) {
+            if (!move.hasSheerForce) {
+                if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+                    this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+                }
+                const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'luckyroll'];
+                for (const condition of sideConditions) {
+                    if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+                        this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+                    }
+                }
+                if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+                    pokemon.removeVolatile('partiallytrapped');
+                }
+            }
+        },
+        secondary: null,
+        target: "normal",
+        type: "Dragon",
+        isNonstandard: "Future",
+    },
+	crustaceancombat: {
+		num: 42012,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Crustacean Combat",
+		pp: 10,
+		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1, distance: 1, nonsky: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Fighting', type);
+		},
+		priority: 0,
+		secondary: null,
+		target: "any",
+		type: "Water",
+		isNonstandard: "Future",
+	},
 	aboostingmove: {
 		accuracy: true,
 		basePower: 0,
@@ -32871,6 +32932,170 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Grass",
 		contestType: "Cool",
+		isNonstandard: "Future",
+	},
+	reroll: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Reroll",
+		pp: 22,
+		priority: 0,
+		flags: {},
+		noPPBoosts: true,
+		onHit(target) {
+			let totalBoosts = 3;
+			let totalDeboosts = 0;
+			let stat: BoostID;
+			const stats: BoostID[] = [];
+			const accEvaBoosts: SparseBoostsTable = {};
+			for (stat in target.boosts) {
+				if (stat === 'accuracy' || stat === 'evasion') {
+					accEvaBoosts[stat] = target.boosts[stat];
+					continue;
+				}
+				stats.push(stat);
+				if (target.boosts[stat] > 0) {
+					totalBoosts += target.boosts[stat];
+				} else {
+					totalDeboosts -= target.boosts[stat];
+				}
+			}
+
+			target.clearBoosts();
+			this.add('-clearboost', target);
+
+			if (totalBoosts - totalDeboosts >= (5 * 6)) { // If we would get +6 in all, just do it.
+				this.boost({
+					...accEvaBoosts,
+					atk: 6,
+					def: 6,
+					spa: 6,
+					spd: 6,
+					spe: 6,
+				});
+				return;
+			} else if (totalBoosts - totalDeboosts <= -(5 * 6)) { // If we would just get -6 in all, just do it.
+				this.boost({
+					...accEvaBoosts,
+					atk: -6,
+					def: -6,
+					spa: -6,
+					spd: -6,
+					spe: -6,
+				});
+				return;
+			}
+
+			const boosts: SparseBoostsTable = {};
+			for (let i = 0; i < totalDeboosts; i++) {
+				const randomStat = this.sample(stats);
+
+				if (boosts[randomStat] === -6) {
+					i--;
+					continue;
+				}
+
+				boosts[randomStat] = (boosts[randomStat] || 0) - 1;
+			}
+
+			for (let i = 0; i < totalBoosts; i++) {
+				const randomStat = this.sample(stats);
+
+				if (boosts[randomStat] === 6) {
+					i--;
+					continue;
+				}
+
+				boosts[randomStat] = (boosts[randomStat] || 0) + 1;
+			}
+
+			this.boost({
+				...accEvaBoosts,
+				...boosts,
+			}, target);
+		},
+		secondary: null,
+		target: "adjacentAllyOrSelf",
+		type: "Normal",
+		zMove: {effect: 'crit2'},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	genesiswhirl: {
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Genesis Whirl",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onModifyMove(move, pokemon, target) {
+			if (!target) return;
+			if (target.level < pokemon.level) {
+				move.ohko = true;
+			}
+		},
+		target: "normal",
+		type: "Fighting",
+		zMove: {basePower: 180},
+		maxMove: {basePower: 130},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	genesisbeam: {
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Genesis Beam",
+		pp: 10,
+		priority: 0,
+		target: "normal",
+		type: "Fairy",
+		onAfterHit(target, source) {
+			this.boost({ atk: 1, spa: 1 });
+		},
+		flags: {protect: 1, mirror: 1},
+		isNonstandard: "Future",
+	},
+	genesisflash: {
+		accuracy: 90,
+		basePower: 100,
+		category: "Special",
+		name: "Genesis Flash",
+		pp: 5,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Fire', type);
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		priority: 0,
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Fighting",
+		zMove: {basePower: 170},
+		contestType: "Tough",
+		isNonstandard: "Future",
+	},
+	genesisblast: {
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Genesis Blast",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			boosts: {
+				accuracy: -1,
+			},
+		},
+		target: "normal",
+		type: "Fairy",
+		contestType: "Cute",
 		isNonstandard: "Future",
 	},
 	skillroom: {
