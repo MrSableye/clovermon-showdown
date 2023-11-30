@@ -112093,10 +112093,10 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 45
 		},
-		abilities: [
-			"Swift Swim",
-			"Stench"
-		],
+		abilities: {
+			0: "Swift Swim",
+			1: "Stench"
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
