@@ -101957,9 +101957,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 50
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -101987,9 +101987,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 65
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -102017,9 +102017,9 @@ blobbosmechelectric: {
 			spd: 100,
 			spe: 80
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -102046,9 +102046,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 65
 		},
-		abilities: [
-			"Heatproof"
-		],
+		abilities: {
+			0: "Heatproof",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -102075,9 +102075,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 85
 		},
-		abilities: [
-			"Heatproof"
-		],
+		abilities: {
+			0: "Heatproof",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -102104,9 +102104,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 100
 		},
-		abilities: [
-			"Heatproof"
-		],
+		abilities: {
+			0: "Heatproof",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -102133,9 +102133,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 45
 		},
-		abilities: [
-			"Shell Armor"
-		],
+		abilities: {
+			0: "Shell Armor",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -102162,9 +102162,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 65
 		},
-		abilities: [
-			"Shell Armor"
-		],
+		abilities: {
+			0: "Shell Armor",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -102191,9 +102191,9 @@ blobbosmechelectric: {
 			spd: 105,
 			spe: 75
 		},
-		abilities: [
-			"Shell Armor"
-		],
+		abilities: {
+			0: "Shell Armor",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -102221,9 +102221,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 65
 		},
-		abilities: [
-			"Overgrow"
-		],
+		abilities: {
+			0: "Overgrow",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -102250,9 +102250,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 80
 		},
-		abilities: [
-			"Overgrow"
-		],
+		abilities: {
+			0: "Overgrow",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -102278,9 +102278,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 70
 		},
-		abilities: [
-			"Torrent"
-		],
+		abilities: {
+			0: "Torrent",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -102307,9 +102307,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 80
 		},
-		abilities: [
-			"Torrent"
-		],
+		abilities: {
+			0: "Torrent",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -102336,9 +102336,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 35
 		},
-		abilities: [
-			"Blaze"
-		],
+		abilities: {
+			0: "Blaze",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -102365,9 +102365,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 75
 		},
-		abilities: [
-			"Blaze"
-		],
+		abilities: {
+			0: "Blaze",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -102393,9 +102393,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 60
 		},
-		abilities: [
-			"Sheer Force"
-		],
+		abilities: {
+			0: "Sheer Force",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -102421,9 +102421,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 75
 		},
-		abilities: [
-			"Sheer Force"
-		],
+		abilities: {
+			0: "Sheer Force",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -102449,9 +102449,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 95
 		},
-		abilities: [
-			"Sheer Force"
-		],
+		abilities: {
+			0: "Sheer Force",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -102478,9 +102478,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 75
 		},
-		abilities: [
-			"Guts"
-		],
+		abilities: {
+			0: "Guts",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -102507,9 +102507,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 100
 		},
-		abilities: [
-			"Guts"
-		],
+		abilities: {
+			0: "Guts",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -102536,9 +102536,9 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 80
 		},
-		abilities: [
-			"Regenerator"
-		],
+		abilities: {
+			0: "Regenerator",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -102565,9 +102565,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 100
 		},
-		abilities: [
-			"Regenerator"
-		],
+		abilities: {
+			0: "Regenerator",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -102594,9 +102594,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 65
 		},
-		abilities: [
-			"Intimidate"
-		],
+		abilities: {
+			0: "Intimidate",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -102624,9 +102624,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 80
 		},
-		abilities: [
-			"Intimidate"
-		],
+		abilities: {
+			0: "Intimidate",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -102653,9 +102653,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 90
 		},
-		abilities: [
-			"Static"
-		],
+		abilities: {
+			0: "Static",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -102682,9 +102682,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 100
 		},
-		abilities: [
-			"Static"
-		],
+		abilities: {
+			0: "Static",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -102711,9 +102711,9 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 40
 		},
-		abilities: [
-			"Analytic"
-		],
+		abilities: {
+			0: "Analytic",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -102739,9 +102739,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 65
 		},
-		abilities: [
-			"Analytic"
-		],
+		abilities: {
+			0: "Analytic",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -102768,9 +102768,9 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 55
 		},
-		abilities: [
-			"Poison Point"
-		],
+		abilities: {
+			0: "Poison Point",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -102798,9 +102798,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 75
 		},
-		abilities: [
-			"Poison Point"
-		],
+		abilities: {
+			0: "Poison Point",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -102827,9 +102827,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 85
 		},
-		abilities: [
-			"Poison Point"
-		],
+		abilities: {
+			0: "Poison Point",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -102855,9 +102855,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 55
 		},
-		abilities: [
-			"Poison Point"
-		],
+		abilities: {
+			0: "Poison Point",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -102884,9 +102884,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 65
 		},
-		abilities: [
-			"Poison Point"
-		],
+		abilities: {
+			0: "Poison Point",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -102913,9 +102913,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 85
 		},
-		abilities: [
-			"Poison Point"
-		],
+		abilities: {
+			0: "Poison Point",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -102942,9 +102942,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 50
 		},
-		abilities: [
-			"Bulletproof"
-		],
+		abilities: {
+			0: "Bulletproof",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -102970,9 +102970,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 60
 		},
-		abilities: [
-			"Bulletproof"
-		],
+		abilities: {
+			0: "Bulletproof",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -102998,9 +102998,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 65
 		},
-		abilities: [
-			"Drought"
-		],
+		abilities: {
+			0: "Drought",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -103026,9 +103026,9 @@ blobbosmechelectric: {
 			spd: 100,
 			spe: 100
 		},
-		abilities: [
-			"Drought"
-		],
+		abilities: {
+			0: "Drought",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -103054,9 +103054,9 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 45
 		},
-		abilities: [
-			"Cute Charm"
-		],
+		abilities: {
+			0: "Cute Charm",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -103082,9 +103082,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 45
 		},
-		abilities: [
-			"Cute Charm"
-		],
+		abilities: {
+			0: "Cute Charm",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -103111,9 +103111,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 55
 		},
-		abilities: [
-			"Download"
-		],
+		abilities: {
+			0: "Download",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -103140,9 +103140,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 90
 		},
-		abilities: [
-			"Download"
-		],
+		abilities: {
+			0: "Download",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -103169,9 +103169,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 30
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -103198,9 +103198,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 40
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -103227,9 +103227,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 50
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -103256,9 +103256,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 35
 		},
-		abilities: [
-			"Effect Spore"
-		],
+		abilities: {
+			0: "Effect Spore",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -103286,9 +103286,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 40
 		},
-		abilities: [
-			"Effect Spore"
-		],
+		abilities: {
+			0: "Effect Spore",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -103315,9 +103315,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 55
 		},
-		abilities: [
-			"Compound Eyes"
-		],
+		abilities: {
+			0: "Compound Eyes",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -103343,9 +103343,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 90
 		},
-		abilities: [
-			"Compound Eyes"
-		],
+		abilities: {
+			0: "Compound Eyes",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -103371,9 +103371,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 95
 		},
-		abilities: [
-			"Solar Power"
-		],
+		abilities: {
+			0: "Solar Power",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -103399,9 +103399,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 120
 		},
-		abilities: [
-			"Solar Power"
-		],
+		abilities: {
+			0: "Solar Power",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -103427,9 +103427,9 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 90
 		},
-		abilities: [
-			"Pickup"
-		],
+		abilities: {
+			0: "Pickup",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -103455,9 +103455,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 115
 		},
-		abilities: [
-			"Pickup"
-		],
+		abilities: {
+			0: "Pickup",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -103483,9 +103483,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 55
 		},
-		abilities: [
-			"Damp"
-		],
+		abilities: {
+			0: "Damp",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -103512,9 +103512,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 80
 		},
-		abilities: [
-			"Damp"
-		],
+		abilities: {
+			0: "Damp",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -103542,9 +103542,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 70
 		},
-		abilities: [
-			"Adaptability"
-		],
+		abilities: {
+			0: "Adaptability",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -103571,9 +103571,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 95
 		},
-		abilities: [
-			"Adaptability"
-		],
+		abilities: {
+			0: "Adaptability",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -103600,9 +103600,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 60
 		},
-		abilities: [
-			"Own Tempo"
-		],
+		abilities: {
+			0: "Own Tempo",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -103629,9 +103629,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 70
 		},
-		abilities: [
-			"Own Tempo"
-		],
+		abilities: {
+			0: "Own Tempo",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -103657,9 +103657,9 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 90
 		},
-		abilities: [
-			"Drizzle"
-		],
+		abilities: {
+			0: "Drizzle",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -103685,9 +103685,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 90
 		},
-		abilities: [
-			"Drizzle"
-		],
+		abilities: {
+			0: "Drizzle",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -103713,9 +103713,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 85
 		},
-		abilities: [
-			"Drizzle"
-		],
+		abilities: {
+			0: "Drizzle",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -103741,9 +103741,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 90
 		},
-		abilities: [
-			"Inner Focus"
-		],
+		abilities: {
+			0: "Inner Focus",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -103769,9 +103769,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 105
 		},
-		abilities: [
-			"Inner Focus"
-		],
+		abilities: {
+			0: "Inner Focus",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -103797,9 +103797,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 120
 		},
-		abilities: [
-			"Inner Focus"
-		],
+		abilities: {
+			0: "Inner Focus",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -103825,9 +103825,9 @@ blobbosmechelectric: {
 			spd: 35,
 			spe: 35
 		},
-		abilities: [
-			"Guts"
-		],
+		abilities: {
+			0: "Guts",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -103853,9 +103853,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 45
 		},
-		abilities: [
-			"Guts"
-		],
+		abilities: {
+			0: "Guts",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -103881,9 +103881,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 55
 		},
-		abilities: [
-			"Guts"
-		],
+		abilities: {
+			0: "Guts",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -103909,9 +103909,9 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 40
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -103937,9 +103937,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 55
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -103965,9 +103965,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 70
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -103994,9 +103994,9 @@ blobbosmechelectric: {
 			spd: 100,
 			spe: 70
 		},
-		abilities: [
-			"Gooey"
-		],
+		abilities: {
+			0: "Gooey",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -104023,9 +104023,9 @@ blobbosmechelectric: {
 			spd: 120,
 			spe: 90
 		},
-		abilities: [
-			"Gooey"
-		],
+		abilities: {
+			0: "Gooey",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -104051,9 +104051,9 @@ blobbosmechelectric: {
 			spd: 30,
 			spe: 20
 		},
-		abilities: [
-			"Rock Head"
-		],
+		abilities: {
+			0: "Rock Head",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -104079,9 +104079,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 35
 		},
-		abilities: [
-			"Rock Head"
-		],
+		abilities: {
+			0: "Rock Head",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -104107,9 +104107,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 45
 		},
-		abilities: [
-			"Rock Head"
-		],
+		abilities: {
+			0: "Rock Head",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -104135,9 +104135,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 70
 		},
-		abilities: [
-			"Hyper Cutter"
-		],
+		abilities: {
+			0: "Hyper Cutter",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -104163,9 +104163,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 105
 		},
-		abilities: [
-			"Hyper Cutter"
-		],
+		abilities: {
+			0: "Hyper Cutter",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -104192,9 +104192,9 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 50
 		},
-		abilities: [
-			"Own Tempo"
-		],
+		abilities: {
+			0: "Own Tempo",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -104222,9 +104222,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 30
 		},
-		abilities: [
-			"Own Tempo"
-		],
+		abilities: {
+			0: "Own Tempo",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -104251,9 +104251,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 45
 		},
-		abilities: [
-			"No Guard"
-		],
+		abilities: {
+			0: "No Guard",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -104279,9 +104279,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 60
 		},
-		abilities: [
-			"No Guard"
-		],
+		abilities: {
+			0: "No Guard",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -104307,9 +104307,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 70
 		},
-		abilities: [
-			"No Guard"
-		],
+		abilities: {
+			0: "No Guard",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -104337,9 +104337,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 75
 		},
-		abilities: [
-			"Early Bird"
-		],
+		abilities: {
+			0: "Early Bird",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -104366,9 +104366,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 100
 		},
-		abilities: [
-			"Early Bird"
-		],
+		abilities: {
+			0: "Early Bird",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -104394,9 +104394,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 45
 		},
-		abilities: [
-			"Thick Fat"
-		],
+		abilities: {
+			0: "Thick Fat",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -104423,9 +104423,9 @@ blobbosmechelectric: {
 			spd: 95,
 			spe: 70
 		},
-		abilities: [
-			"Thick Fat"
-		],
+		abilities: {
+			0: "Thick Fat",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -104453,9 +104453,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 25
 		},
-		abilities: [
-			"Sticky Hold"
-		],
+		abilities: {
+			0: "Sticky Hold",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -104482,9 +104482,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 50
 		},
-		abilities: [
-			"Sticky Hold"
-		],
+		abilities: {
+			0: "Sticky Hold",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -104510,9 +104510,9 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 40
 		},
-		abilities: [
-			"Shell Armor"
-		],
+		abilities: {
+			0: "Shell Armor",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -104538,9 +104538,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 70
 		},
-		abilities: [
-			"Shell Armor"
-		],
+		abilities: {
+			0: "Shell Armor",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -104567,9 +104567,9 @@ blobbosmechelectric: {
 			spd: 35,
 			spe: 80
 		},
-		abilities: [
-			"Adaptability"
-		],
+		abilities: {
+			0: "Adaptability",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -104596,9 +104596,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 95
 		},
-		abilities: [
-			"Adaptability"
-		],
+		abilities: {
+			0: "Adaptability",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -104625,9 +104625,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 110
 		},
-		abilities: [
-			"Adaptability"
-		],
+		abilities: {
+			0: "Adaptability",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -104653,9 +104653,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 70
 		},
-		abilities: [
-			"Vital Spirit"
-		],
+		abilities: {
+			0: "Vital Spirit",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -104682,9 +104682,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 35
 		},
-		abilities: [
-			"Insomnia"
-		],
+		abilities: {
+			0: "Insomnia",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -104711,9 +104711,9 @@ blobbosmechelectric: {
 			spd: 100,
 			spe: 60
 		},
-		abilities: [
-			"Insomnia"
-		],
+		abilities: {
+			0: "Insomnia",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -104740,9 +104740,9 @@ blobbosmechelectric: {
 			spd: 35,
 			spe: 50
 		},
-		abilities: [
-			"Shell Armor"
-		],
+		abilities: {
+			0: "Shell Armor",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -104769,9 +104769,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 75
 		},
-		abilities: [
-			"Shell Armor"
-		],
+		abilities: {
+			0: "Shell Armor",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -104797,9 +104797,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 100
 		},
-		abilities: [
-			"Soundproof"
-		],
+		abilities: {
+			0: "Soundproof",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -104822,9 +104822,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 140
 		},
-		abilities: [
-			"Soundproof"
-		],
+		abilities: {
+			0: "Soundproof",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -104847,9 +104847,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 45
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -104875,9 +104875,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 50
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -104903,9 +104903,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 35
 		},
-		abilities: [
-			"Rock Head"
-		],
+		abilities: {
+			0: "Rock Head",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -104931,9 +104931,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 60
 		},
-		abilities: [
-			"Rock Head"
-		],
+		abilities: {
+			0: "Rock Head",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -104960,9 +104960,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 80
 		},
-		abilities: [
-			"Limber"
-		],
+		abilities: {
+			0: "Limber",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -104989,9 +104989,9 @@ blobbosmechelectric: {
 			spd: 110,
 			spe: 70
 		},
-		abilities: [
-			"Limber"
-		],
+		abilities: {
+			0: "Limber",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -105017,9 +105017,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 30
 		},
-		abilities: [
-			"Own Tempo"
-		],
+		abilities: {
+			0: "Own Tempo",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -105045,9 +105045,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 35
 		},
-		abilities: [
-			"Sniper"
-		],
+		abilities: {
+			0: "Sniper",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -105073,9 +105073,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 60
 		},
-		abilities: [
-			"Sniper"
-		],
+		abilities: {
+			0: "Sniper",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -105102,9 +105102,9 @@ blobbosmechelectric: {
 			spd: 30,
 			spe: 25
 		},
-		abilities: [
-			"Rock Head"
-		],
+		abilities: {
+			0: "Rock Head",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -105132,9 +105132,9 @@ blobbosmechelectric: {
 			spd: 35,
 			spe: 40
 		},
-		abilities: [
-			"Rock Head"
-		],
+		abilities: {
+			0: "Rock Head",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -105161,9 +105161,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 50
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -105189,9 +105189,9 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 60
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -105218,9 +105218,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 70
 		},
-		abilities: [
-			"Early Bird"
-		],
+		abilities: {
+			0: "Early Bird",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -105247,9 +105247,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 60
 		},
-		abilities: [
-			"Regenerator"
-		],
+		abilities: {
+			0: "Regenerator",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -105277,9 +105277,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 85
 		},
-		abilities: [
-			"Regenerator"
-		],
+		abilities: {
+			0: "Regenerator",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -105307,9 +105307,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 80
 		},
-		abilities: [
-			"Swift Swim"
-		],
+		abilities: {
+			0: "Swift Swim",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -105336,9 +105336,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 70
 		},
-		abilities: [
-			"Swift Swim"
-		],
+		abilities: {
+			0: "Swift Swim",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -105364,9 +105364,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 85
 		},
-		abilities: [
-			"Illuminate"
-		],
+		abilities: {
+			0: "Illuminate",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -105390,9 +105390,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 95
 		},
-		abilities: [
-			"Illuminate"
-		],
+		abilities: {
+			0: "Illuminate",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -105415,9 +105415,9 @@ blobbosmechelectric: {
 			spd: 110,
 			spe: 70
 		},
-		abilities: [
-			"Soundproof"
-		],
+		abilities: {
+			0: "Soundproof",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -105444,9 +105444,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 75
 		},
-		abilities: [
-			"Trace"
-		],
+		abilities: {
+			0: "Trace",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -105472,9 +105472,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 75
 		},
-		abilities: [
-			"Oblivious"
-		],
+		abilities: {
+			0: "Oblivious",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -105500,9 +105500,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 85
 		},
-		abilities: [
-			"Oblivious"
-		],
+		abilities: {
+			0: "Oblivious",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -105528,9 +105528,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 70
 		},
-		abilities: [
-			"Flame Body"
-		],
+		abilities: {
+			0: "Flame Body",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -105556,9 +105556,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 70
 		},
-		abilities: [
-			"Flame Body"
-		],
+		abilities: {
+			0: "Flame Body",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -105584,9 +105584,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 110
 		},
-		abilities: [
-			"Flame Body"
-		],
+		abilities: {
+			0: "Flame Body",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -105612,9 +105612,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 80
 		},
-		abilities: [
-			"Guts"
-		],
+		abilities: {
+			0: "Guts",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -105641,9 +105641,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 60
 		},
-		abilities: [
-			"Guts"
-		],
+		abilities: {
+			0: "Guts",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -105670,9 +105670,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 70
 		},
-		abilities: [
-			"Shell Armor"
-		],
+		abilities: {
+			0: "Shell Armor",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -105699,9 +105699,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 60
 		},
-		abilities: [
-			"Limber"
-		],
+		abilities: {
+			0: "Limber",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -105725,9 +105725,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 55
 		},
-		abilities: [
-			"Magic Bounce"
-		],
+		abilities: {
+			0: "Magic Bounce",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -105754,9 +105754,9 @@ blobbosmechelectric: {
 			spd: 95,
 			spe: 65
 		},
-		abilities: [
-			"Magic Bounce"
-		],
+		abilities: {
+			0: "Magic Bounce",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -105782,9 +105782,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 60
 		},
-		abilities: [
-			"Sap Sipper"
-		],
+		abilities: {
+			0: "Sap Sipper",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -105810,9 +105810,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 65
 		},
-		abilities: [
-			"Sap Sipper"
-		],
+		abilities: {
+			0: "Sap Sipper",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -105838,9 +105838,9 @@ blobbosmechelectric: {
 			spd: 95,
 			spe: 110
 		},
-		abilities: [
-			"Sap Sipper"
-		],
+		abilities: {
+			0: "Sap Sipper",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -105867,9 +105867,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 35
 		},
-		abilities: [
-			"Shell Armor"
-		],
+		abilities: {
+			0: "Shell Armor",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Black",
@@ -105897,9 +105897,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 55
 		},
-		abilities: [
-			"Shell Armor"
-		],
+		abilities: {
+			0: "Shell Armor",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -105926,9 +105926,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 55
 		},
-		abilities: [
-			"Battle Armor"
-		],
+		abilities: {
+			0: "Battle Armor",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -105955,9 +105955,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 80
 		},
-		abilities: [
-			"Battle Armor"
-		],
+		abilities: {
+			0: "Battle Armor",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -105985,9 +105985,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 90
 		},
-		abilities: [
-			"Thick Fat"
-		],
+		abilities: {
+			0: "Thick Fat",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -106014,9 +106014,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 30
 		},
-		abilities: [
-			"Thick Fat"
-		],
+		abilities: {
+			0: "Thick Fat",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Black",
@@ -106042,9 +106042,9 @@ blobbosmechelectric: {
 			spd: 125,
 			spe: 85
 		},
-		abilities: [
-			"Pressure"
-		],
+		abilities: {
+			0: "Pressure",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -106067,9 +106067,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 100
 		},
-		abilities: [
-			"Pressure"
-		],
+		abilities: {
+			0: "Pressure",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -106092,9 +106092,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 90
 		},
-		abilities: [
-			"Pressure"
-		],
+		abilities: {
+			0: "Pressure",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -106118,9 +106118,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 55
 		},
-		abilities: [
-			"Shed Skin"
-		],
+		abilities: {
+			0: "Shed Skin",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -106148,9 +106148,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 70
 		},
-		abilities: [
-			"Shed Skin"
-		],
+		abilities: {
+			0: "Shed Skin",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -106178,9 +106178,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 80
 		},
-		abilities: [
-			"Shed Skin"
-		],
+		abilities: {
+			0: "Shed Skin",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -106207,9 +106207,9 @@ blobbosmechelectric: {
 			spd: 100,
 			spe: 110
 		},
-		abilities: [
-			"Pressure"
-		],
+		abilities: {
+			0: "Pressure",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -106232,9 +106232,9 @@ blobbosmechelectric: {
 			spd: 110,
 			spe: 100
 		},
-		abilities: [
-			"Synchronize"
-		],
+		abilities: {
+			0: "Synchronize",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -106258,9 +106258,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 50
 		},
-		abilities: [
-			"Scrappy"
-		],
+		abilities: {
+			0: "Scrappy",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -106288,9 +106288,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 65
 		},
-		abilities: [
-			"Scrappy"
-		],
+		abilities: {
+			0: "Scrappy",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -106318,9 +106318,9 @@ blobbosmechelectric: {
 			spd: 100,
 			spe: 80
 		},
-		abilities: [
-			"Scrappy"
-		],
+		abilities: {
+			0: "Scrappy",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -106347,9 +106347,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 65
 		},
-		abilities: [
-			"Flash Fire"
-		],
+		abilities: {
+			0: "Flash Fire",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -106375,9 +106375,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 80
 		},
-		abilities: [
-			"Flash Fire"
-		],
+		abilities: {
+			0: "Flash Fire",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -106403,9 +106403,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 105
 		},
-		abilities: [
-			"Flash Fire"
-		],
+		abilities: {
+			0: "Flash Fire",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -106431,9 +106431,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 45
 		},
-		abilities: [
-			"Iron Fist"
-		],
+		abilities: {
+			0: "Iron Fist",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -106460,9 +106460,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 65
 		},
-		abilities: [
-			"Iron Fist"
-		],
+		abilities: {
+			0: "Iron Fist",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -106489,9 +106489,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 75
 		},
-		abilities: [
-			"Iron Fist"
-		],
+		abilities: {
+			0: "Iron Fist",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -106518,9 +106518,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 50
 		},
-		abilities: [
-			"Run Away"
-		],
+		abilities: {
+			0: "Run Away",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -106546,9 +106546,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 90
 		},
-		abilities: [
-			"Run Away"
-		],
+		abilities: {
+			0: "Run Away",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -106575,9 +106575,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 50
 		},
-		abilities: [
-			"Insomnia"
-		],
+		abilities: {
+			0: "Insomnia",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -106604,9 +106604,9 @@ blobbosmechelectric: {
 			spd: 100,
 			spe: 70
 		},
-		abilities: [
-			"Insomnia"
-		],
+		abilities: {
+			0: "Insomnia",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -106633,9 +106633,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 55
 		},
-		abilities: [
-			"Early Bird"
-		],
+		abilities: {
+			0: "Early Bird",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -106662,9 +106662,9 @@ blobbosmechelectric: {
 			spd: 110,
 			spe: 95
 		},
-		abilities: [
-			"Early Bird"
-		],
+		abilities: {
+			0: "Early Bird",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -106690,9 +106690,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 30
 		},
-		abilities: [
-			"Insomnia"
-		],
+		abilities: {
+			0: "Insomnia",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -106718,9 +106718,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 60
 		},
-		abilities: [
-			"Insomnia"
-		],
+		abilities: {
+			0: "Insomnia",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -106747,9 +106747,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 60
 		},
-		abilities: [
-			"Inner Focus"
-		],
+		abilities: {
+			0: "Inner Focus",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -106776,9 +106776,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 80
 		},
-		abilities: [
-			"Inner Focus"
-		],
+		abilities: {
+			0: "Inner Focus",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -106805,9 +106805,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 80
 		},
-		abilities: [
-			"Inner Focus"
-		],
+		abilities: {
+			0: "Inner Focus",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -106833,9 +106833,9 @@ blobbosmechelectric: {
 			spd: 35,
 			spe: 60
 		},
-		abilities: [
-			"Static"
-		],
+		abilities: {
+			0: "Static",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -106861,9 +106861,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 80
 		},
-		abilities: [
-			"Static"
-		],
+		abilities: {
+			0: "Static",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -106889,9 +106889,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 90
 		},
-		abilities: [
-			"Static"
-		],
+		abilities: {
+			0: "Static",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -106918,9 +106918,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 20
 		},
-		abilities: [
-			"Hustle"
-		],
+		abilities: {
+			0: "Hustle",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -106947,9 +106947,9 @@ blobbosmechelectric: {
 			spd: 105,
 			spe: 40
 		},
-		abilities: [
-			"Hustle"
-		],
+		abilities: {
+			0: "Hustle",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -106977,9 +106977,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 70
 		},
-		abilities: [
-			"Synchronize"
-		],
+		abilities: {
+			0: "Synchronize",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -107006,9 +107006,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 95
 		},
-		abilities: [
-			"Synchronize"
-		],
+		abilities: {
+			0: "Synchronize",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -107035,9 +107035,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 35
 		},
-		abilities: [
-			"Static"
-		],
+		abilities: {
+			0: "Static",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -107065,9 +107065,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 45
 		},
-		abilities: [
-			"Static"
-		],
+		abilities: {
+			0: "Static",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -107095,9 +107095,9 @@ blobbosmechelectric: {
 			spd: 95,
 			spe: 55
 		},
-		abilities: [
-			"Static"
-		],
+		abilities: {
+			0: "Static",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -107124,9 +107124,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 40
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -107152,9 +107152,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 60
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -107181,9 +107181,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 90
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -107210,9 +107210,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 30
 		},
-		abilities: [
-			"Sturdy"
-		],
+		abilities: {
+			0: "Sturdy",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -107238,9 +107238,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 70
 		},
-		abilities: [
-			"Sturdy"
-		],
+		abilities: {
+			0: "Sturdy",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -107266,9 +107266,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 50
 		},
-		abilities: [
-			"Pure Power"
-		],
+		abilities: {
+			0: "Pure Power",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -107295,9 +107295,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 80
 		},
-		abilities: [
-			"Pure Power"
-		],
+		abilities: {
+			0: "Pure Power",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -107324,9 +107324,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 110
 		},
-		abilities: [
-			"Pure Power"
-		],
+		abilities: {
+			0: "Pure Power",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -107354,9 +107354,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 85
 		},
-		abilities: [
-			"Magic Bounce"
-		],
+		abilities: {
+			0: "Magic Bounce",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -107382,9 +107382,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 35
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -107410,9 +107410,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 30
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -107439,9 +107439,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 95
 		},
-		abilities: [
-			"Speed Boost"
-		],
+		abilities: {
+			0: "Speed Boost",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -107468,9 +107468,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 30
 		},
-		abilities: [
-			"Damp"
-		],
+		abilities: {
+			0: "Damp",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -107498,9 +107498,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 35
 		},
-		abilities: [
-			"Damp"
-		],
+		abilities: {
+			0: "Damp",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -107528,9 +107528,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 50
 		},
-		abilities: [
-			"Magnet Pull"
-		],
+		abilities: {
+			0: "Magnet Pull",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -107557,9 +107557,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 65
 		},
-		abilities: [
-			"Magnet Pull"
-		],
+		abilities: {
+			0: "Magnet Pull",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Black",
@@ -107586,9 +107586,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 95
 		},
-		abilities: [
-			"Magnet Pull"
-		],
+		abilities: {
+			0: "Magnet Pull",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Black",
@@ -107614,9 +107614,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 30
 		},
-		abilities: [
-			"Own Tempo"
-		],
+		abilities: {
+			0: "Own Tempo",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -107643,9 +107643,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 85
 		},
-		abilities: [
-			"Own Tempo"
-		],
+		abilities: {
+			0: "Own Tempo",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -107671,9 +107671,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 60
 		},
-		abilities: [
-			"Pickup"
-		],
+		abilities: {
+			0: "Pickup",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -107697,9 +107697,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 30
 		},
-		abilities: [
-			"Shadow Tag"
-		],
+		abilities: {
+			0: "Shadow Tag",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -107726,9 +107726,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 70
 		},
-		abilities: [
-			"Inner Focus"
-		],
+		abilities: {
+			0: "Inner Focus",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -107754,9 +107754,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 15
 		},
-		abilities: [
-			"Sturdy"
-		],
+		abilities: {
+			0: "Sturdy",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -107783,9 +107783,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 40
 		},
-		abilities: [
-			"Sturdy"
-		],
+		abilities: {
+			0: "Sturdy",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -107812,9 +107812,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 45
 		},
-		abilities: [
-			"Rough Skin"
-		],
+		abilities: {
+			0: "Rough Skin",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -107840,9 +107840,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 45
 		},
-		abilities: [
-			"Rock Head"
-		],
+		abilities: {
+			0: "Rock Head",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -107868,9 +107868,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 30
 		},
-		abilities: [
-			"Rock Head"
-		],
+		abilities: {
+			0: "Rock Head",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -107896,9 +107896,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 30
 		},
-		abilities: [
-			"Intimidate"
-		],
+		abilities: {
+			0: "Intimidate",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -107925,9 +107925,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 45
 		},
-		abilities: [
-			"Intimidate"
-		],
+		abilities: {
+			0: "Intimidate",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -107954,9 +107954,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 85
 		},
-		abilities: [
-			"Swift Swim"
-		],
+		abilities: {
+			0: "Swift Swim",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -107983,9 +107983,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 65
 		},
-		abilities: [
-			"Snow Cloak"
-		],
+		abilities: {
+			0: "Snow Cloak",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -108011,9 +108011,9 @@ blobbosmechelectric: {
 			spd: 180,
 			spe: 5
 		},
-		abilities: [
-			"Sturdy"
-		],
+		abilities: {
+			0: "Sturdy",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -108039,9 +108039,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 65
 		},
-		abilities: [
-			"Reckless"
-		],
+		abilities: {
+			0: "Reckless",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -108067,9 +108067,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 115
 		},
-		abilities: [
-			"Reckless"
-		],
+		abilities: {
+			0: "Reckless",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -108095,9 +108095,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 40
 		},
-		abilities: [
-			"Sap Sipper"
-		],
+		abilities: {
+			0: "Sap Sipper",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -108123,9 +108123,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 55
 		},
-		abilities: [
-			"Sap Sipper"
-		],
+		abilities: {
+			0: "Sap Sipper",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -108151,9 +108151,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 30
 		},
-		abilities: [
-			"Flame Body"
-		],
+		abilities: {
+			0: "Flame Body",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -108179,9 +108179,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 30
 		},
-		abilities: [
-			"Flame Body"
-		],
+		abilities: {
+			0: "Flame Body",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -108208,9 +108208,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 50
 		},
-		abilities: [
-			"Tangled Feet"
-		],
+		abilities: {
+			0: "Tangled Feet",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -108237,9 +108237,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 50
 		},
-		abilities: [
-			"Tangled Feet"
-		],
+		abilities: {
+			0: "Tangled Feet",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -108266,9 +108266,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 35
 		},
-		abilities: [
-			"Natural Cure"
-		],
+		abilities: {
+			0: "Natural Cure",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -108295,9 +108295,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 65
 		},
-		abilities: [
-			"Hustle"
-		],
+		abilities: {
+			0: "Hustle",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -108324,9 +108324,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 45
 		},
-		abilities: [
-			"Hustle"
-		],
+		abilities: {
+			0: "Hustle",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -108354,9 +108354,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 75
 		},
-		abilities: [
-			"Vital Spirit"
-		],
+		abilities: {
+			0: "Vital Spirit",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -108383,9 +108383,9 @@ blobbosmechelectric: {
 			spd: 100,
 			spe: 60
 		},
-		abilities: [
-			"Swift Swim"
-		],
+		abilities: {
+			0: "Swift Swim",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -108412,9 +108412,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 70
 		},
-		abilities: [
-			"Keen Eye"
-		],
+		abilities: {
+			0: "Keen Eye",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -108441,9 +108441,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 75
 		},
-		abilities: [
-			"Keen Eye"
-		],
+		abilities: {
+			0: "Keen Eye",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Black",
@@ -108470,9 +108470,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 95
 		},
-		abilities: [
-			"Keen Eye"
-		],
+		abilities: {
+			0: "Keen Eye",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Black",
@@ -108498,9 +108498,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 65
 		},
-		abilities: [
-			"Mega Launcher"
-		],
+		abilities: {
+			0: "Mega Launcher",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -108527,9 +108527,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 40
 		},
-		abilities: [
-			"Pickup"
-		],
+		abilities: {
+			0: "Pickup",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -108555,9 +108555,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 40
 		},
-		abilities: [
-			"Pickup"
-		],
+		abilities: {
+			0: "Pickup",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -108584,9 +108584,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 40
 		},
-		abilities: [
-			"Trace"
-		],
+		abilities: {
+			0: "Trace",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -108610,9 +108610,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 70
 		},
-		abilities: [
-			"Intimidate"
-		],
+		abilities: {
+			0: "Intimidate",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -108638,9 +108638,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 90
 		},
-		abilities: [
-			"Scrappy"
-		],
+		abilities: {
+			0: "Scrappy",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -108666,9 +108666,9 @@ blobbosmechelectric: {
 			spd: 35,
 			spe: 35
 		},
-		abilities: [
-			"Guts"
-		],
+		abilities: {
+			0: "Guts",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -108694,9 +108694,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 70
 		},
-		abilities: [
-			"Guts"
-		],
+		abilities: {
+			0: "Guts",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -108722,9 +108722,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 65
 		},
-		abilities: [
-			"Guts"
-		],
+		abilities: {
+			0: "Guts",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -108750,9 +108750,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 95
 		},
-		abilities: [
-			"Natural Cure"
-		],
+		abilities: {
+			0: "Natural Cure",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -108778,9 +108778,9 @@ blobbosmechelectric: {
 			spd: 100,
 			spe: 50
 		},
-		abilities: [
-			"Natural Cure"
-		],
+		abilities: {
+			0: "Natural Cure",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -108807,9 +108807,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 80
 		},
-		abilities: [
-			"Thick Fat"
-		],
+		abilities: {
+			0: "Thick Fat",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -108835,9 +108835,9 @@ blobbosmechelectric: {
 			spd: 125,
 			spe: 55
 		},
-		abilities: [
-			"Clear Body"
-		],
+		abilities: {
+			0: "Clear Body",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -108860,9 +108860,9 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 45
 		},
-		abilities: [
-			"Pressure"
-		],
+		abilities: {
+			0: "Pressure",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -108889,9 +108889,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 50
 		},
-		abilities: [
-			"Pressure"
-		],
+		abilities: {
+			0: "Pressure",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -108918,9 +108918,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 85
 		},
-		abilities: [
-			"Pressure"
-		],
+		abilities: {
+			0: "Pressure",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -108946,9 +108946,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 50
 		},
-		abilities: [
-			"Shed Skin"
-		],
+		abilities: {
+			0: "Shed Skin",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -108974,9 +108974,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 55
 		},
-		abilities: [
-			"Shed Skin"
-		],
+		abilities: {
+			0: "Shed Skin",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -109002,9 +109002,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 60
 		},
-		abilities: [
-			"Shed Skin"
-		],
+		abilities: {
+			0: "Shed Skin",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -109030,9 +109030,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 60
 		},
-		abilities: [
-			"Pressure"
-		],
+		abilities: {
+			0: "Pressure",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -109059,9 +109059,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 90
 		},
-		abilities: [
-			"Pressure"
-		],
+		abilities: {
+			0: "Pressure",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -109087,9 +109087,9 @@ blobbosmechelectric: {
 			spd: 100,
 			spe: 100
 		},
-		abilities: [
-			"Pressure"
-		],
+		abilities: {
+			0: "Pressure",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -109116,9 +109116,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 70
 		},
-		abilities: [
-			"Technician"
-		],
+		abilities: {
+			0: "Technician",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -109146,9 +109146,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 95
 		},
-		abilities: [
-			"Technician"
-		],
+		abilities: {
+			0: "Technician",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -109176,9 +109176,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 120
 		},
-		abilities: [
-			"Technician"
-		],
+		abilities: {
+			0: "Technician",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -109206,9 +109206,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 45
 		},
-		abilities: [
-			"Early Bird"
-		],
+		abilities: {
+			0: "Early Bird",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -109235,9 +109235,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 55
 		},
-		abilities: [
-			"Early Bird"
-		],
+		abilities: {
+			0: "Early Bird",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -109264,9 +109264,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 80
 		},
-		abilities: [
-			"Early Bird"
-		],
+		abilities: {
+			0: "Early Bird",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -109293,9 +109293,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 40
 		},
-		abilities: [
-			"Sniper"
-		],
+		abilities: {
+			0: "Sniper",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -109323,9 +109323,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 50
 		},
-		abilities: [
-			"Sniper"
-		],
+		abilities: {
+			0: "Sniper",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -109353,9 +109353,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 60
 		},
-		abilities: [
-			"Sniper"
-		],
+		abilities: {
+			0: "Sniper",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -109382,9 +109382,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 45
 		},
-		abilities: [
-			"Sap Sipper"
-		],
+		abilities: {
+			0: "Sap Sipper",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -109410,9 +109410,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 80
 		},
-		abilities: [
-			"Sap Sipper"
-		],
+		abilities: {
+			0: "Sap Sipper",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -109439,9 +109439,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 60
 		},
-		abilities: [
-			"Pickup"
-		],
+		abilities: {
+			0: "Pickup",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -109468,9 +109468,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 100
 		},
-		abilities: [
-			"Pickup"
-		],
+		abilities: {
+			0: "Pickup",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -109496,9 +109496,9 @@ blobbosmechelectric: {
 			spd: 30,
 			spe: 80
 		},
-		abilities: [
-			"Run Away"
-		],
+		abilities: {
+			0: "Run Away",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -109525,9 +109525,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 90
 		},
-		abilities: [
-			"Shed Skin"
-		],
+		abilities: {
+			0: "Shed Skin",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -109553,9 +109553,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 110
 		},
-		abilities: [
-			"Sand Force"
-		],
+		abilities: {
+			0: "Sand Force",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -109581,9 +109581,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 65
 		},
-		abilities: [
-			"Liquid Ooze"
-		],
+		abilities: {
+			0: "Liquid Ooze",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -109610,9 +109610,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 90
 		},
-		abilities: [
-			"Shield Dust"
-		],
+		abilities: {
+			0: "Shield Dust",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -109638,9 +109638,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 50
 		},
-		abilities: [
-			"Swift Swim"
-		],
+		abilities: {
+			0: "Swift Swim",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -109667,9 +109667,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 70
 		},
-		abilities: [
-			"Swift Swim"
-		],
+		abilities: {
+			0: "Swift Swim",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -109696,9 +109696,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 80
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -109725,9 +109725,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 90
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -109755,9 +109755,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 70
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -109784,9 +109784,9 @@ blobbosmechelectric: {
 			spd: 30,
 			spe: 40
 		},
-		abilities: [
-			"Speed Boost"
-		],
+		abilities: {
+			0: "Speed Boost",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -109812,9 +109812,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 100
 		},
-		abilities: [
-			"Speed Boost"
-		],
+		abilities: {
+			0: "Speed Boost",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -109840,9 +109840,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 140
 		},
-		abilities: [
-			"Speed Boost"
-		],
+		abilities: {
+			0: "Speed Boost",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -109868,9 +109868,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 85
 		},
-		abilities: [
-			"Guts"
-		],
+		abilities: {
+			0: "Guts",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -109896,9 +109896,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 125
 		},
-		abilities: [
-			"Guts"
-		],
+		abilities: {
+			0: "Guts",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -109924,9 +109924,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 50
 		},
-		abilities: [
-			"Effect Spore"
-		],
+		abilities: {
+			0: "Effect Spore",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -109954,9 +109954,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 70
 		},
-		abilities: [
-			"Effect Spore"
-		],
+		abilities: {
+			0: "Effect Spore",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -109983,9 +109983,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 70
 		},
-		abilities: [
-			"Own Tempo"
-		],
+		abilities: {
+			0: "Own Tempo",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -110012,9 +110012,9 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 85
 		},
-		abilities: [
-			"Keen Eye"
-		],
+		abilities: {
+			0: "Keen Eye",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -110041,9 +110041,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 65
 		},
-		abilities: [
-			"Keen Eye"
-		],
+		abilities: {
+			0: "Keen Eye",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -110070,9 +110070,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 65
 		},
-		abilities: [
-			"Rock Head"
-		],
+		abilities: {
+			0: "Rock Head",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -110099,9 +110099,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 80
 		},
-		abilities: [
-			"Rock Head"
-		],
+		abilities: {
+			0: "Rock Head",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -110128,9 +110128,9 @@ blobbosmechelectric: {
 			spd: 35,
 			spe: 60
 		},
-		abilities: [
-			"Water Veil"
-		],
+		abilities: {
+			0: "Water Veil",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -110158,9 +110158,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 60
 		},
-		abilities: [
-			"Water Veil"
-		],
+		abilities: {
+			0: "Water Veil",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -110188,9 +110188,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 60
 		},
-		abilities: [
-			"Cute Charm"
-		],
+		abilities: {
+			0: "Cute Charm",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -110218,9 +110218,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 80
 		},
-		abilities: [
-			"Cute Charm"
-		],
+		abilities: {
+			0: "Cute Charm",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -110247,9 +110247,9 @@ blobbosmechelectric: {
 			spd: 120,
 			spe: 40
 		},
-		abilities: [
-			"Color Change"
-		],
+		abilities: {
+			0: "Color Change",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -110275,9 +110275,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 55
 		},
-		abilities: [
-			"Clear Body"
-		],
+		abilities: {
+			0: "Clear Body",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -110303,9 +110303,9 @@ blobbosmechelectric: {
 			spd: 100,
 			spe: 75
 		},
-		abilities: [
-			"Clear Body"
-		],
+		abilities: {
+			0: "Clear Body",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -110331,9 +110331,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 60
 		},
-		abilities: [
-			"Huge Power"
-		],
+		abilities: {
+			0: "Huge Power",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -110359,9 +110359,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 20
 		},
-		abilities: [
-			"White Smoke"
-		],
+		abilities: {
+			0: "White Smoke",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -110388,9 +110388,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 50
 		},
-		abilities: [
-			"Keen Eye"
-		],
+		abilities: {
+			0: "Keen Eye",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -110417,9 +110417,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 60
 		},
-		abilities: [
-			"Healer"
-		],
+		abilities: {
+			0: "Healer",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -110446,9 +110446,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 60
 		},
-		abilities: [
-			"Healer"
-		],
+		abilities: {
+			0: "Healer",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -110475,9 +110475,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 110
 		},
-		abilities: [
-			"Swift Swim"
-		],
+		abilities: {
+			0: "Swift Swim",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -110504,9 +110504,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 35
 		},
-		abilities: [
-			"Hyper Cutter"
-		],
+		abilities: {
+			0: "Hyper Cutter",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -110534,9 +110534,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 55
 		},
-		abilities: [
-			"Hyper Cutter"
-		],
+		abilities: {
+			0: "Hyper Cutter",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -110564,9 +110564,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 80
 		},
-		abilities: [
-			"Swift Swim"
-		],
+		abilities: {
+			0: "Swift Swim",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -110594,9 +110594,9 @@ blobbosmechelectric: {
 			spd: 110,
 			spe: 80
 		},
-		abilities: [
-			"Marvel Scale"
-		],
+		abilities: {
+			0: "Marvel Scale",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Pink",
@@ -110623,9 +110623,9 @@ blobbosmechelectric: {
 			spd: 20,
 			spe: 65
 		},
-		abilities: [
-			"Rough Skin"
-		],
+		abilities: {
+			0: "Rough Skin",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -110651,9 +110651,9 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 95
 		},
-		abilities: [
-			"Rough Skin"
-		],
+		abilities: {
+			0: "Rough Skin",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -110679,9 +110679,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 10
 		},
-		abilities: [
-			"Arena Trap"
-		],
+		abilities: {
+			0: "Arena Trap",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -110707,9 +110707,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 90
 		},
-		abilities: [
-			"Arena Trap"
-		],
+		abilities: {
+			0: "Arena Trap",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -110735,9 +110735,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 100
 		},
-		abilities: [
-			"Arena Trap"
-		],
+		abilities: {
+			0: "Arena Trap",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -110764,9 +110764,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 55
 		},
-		abilities: [
-			"Guts"
-		],
+		abilities: {
+			0: "Guts",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -110793,9 +110793,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 50
 		},
-		abilities: [
-			"Guts"
-		],
+		abilities: {
+			0: "Guts",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -110822,9 +110822,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 65
 		},
-		abilities: [
-			"Static"
-		],
+		abilities: {
+			0: "Static",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -110851,9 +110851,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 90
 		},
-		abilities: [
-			"Static"
-		],
+		abilities: {
+			0: "Static",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -110880,9 +110880,9 @@ blobbosmechelectric: {
 			spd: 45,
 			spe: 35
 		},
-		abilities: [
-			"Filter"
-		],
+		abilities: {
+			0: "Filter",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -110909,9 +110909,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 40
 		},
-		abilities: [
-			"Filter"
-		],
+		abilities: {
+			0: "Filter",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -110938,9 +110938,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 25
 		},
-		abilities: [
-			"Thick Fat"
-		],
+		abilities: {
+			0: "Thick Fat",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -110968,9 +110968,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 45
 		},
-		abilities: [
-			"Thick Fat"
-		],
+		abilities: {
+			0: "Thick Fat",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -110998,9 +110998,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 60
 		},
-		abilities: [
-			"Thick Fat"
-		],
+		abilities: {
+			0: "Thick Fat",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -111027,9 +111027,9 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 35
 		},
-		abilities: [
-			"Sand Veil"
-		],
+		abilities: {
+			0: "Sand Veil",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -111056,9 +111056,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 55
 		},
-		abilities: [
-			"Sand Veil"
-		],
+		abilities: {
+			0: "Sand Veil",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -111086,9 +111086,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 60
 		},
-		abilities: [
-			"Moody"
-		],
+		abilities: {
+			0: "Moody",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -111116,9 +111116,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 70
 		},
-		abilities: [
-			"Moody"
-		],
+		abilities: {
+			0: "Moody",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -111145,9 +111145,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 70
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -111173,9 +111173,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 70
 		},
-		abilities: [
-			"Chlorophyll"
-		],
+		abilities: {
+			0: "Chlorophyll",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -111201,9 +111201,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 40
 		},
-		abilities: [
-			"Huge Power"
-		],
+		abilities: {
+			0: "Huge Power",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -111229,9 +111229,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 60
 		},
-		abilities: [
-			"Own Tempo"
-		],
+		abilities: {
+			0: "Own Tempo",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Black",
@@ -111257,9 +111257,9 @@ blobbosmechelectric: {
 			spd: 110,
 			spe: 70
 		},
-		abilities: [
-			"Own Tempo"
-		],
+		abilities: {
+			0: "Own Tempo",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -111286,9 +111286,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 90
 		},
-		abilities: [
-			"Scrappy"
-		],
+		abilities: {
+			0: "Scrappy",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -111315,9 +111315,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 90
 		},
-		abilities: [
-			"Scrappy"
-		],
+		abilities: {
+			0: "Scrappy",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -111343,9 +111343,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 60
 		},
-		abilities: [
-			"Hyper Cutter"
-		],
+		abilities: {
+			0: "Hyper Cutter",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -111372,9 +111372,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 60
 		},
-		abilities: [
-			"Pure Power"
-		],
+		abilities: {
+			0: "Pure Power",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -111400,9 +111400,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 80
 		},
-		abilities: [
-			"Pure Power"
-		],
+		abilities: {
+			0: "Pure Power",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -111429,9 +111429,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 50
 		},
-		abilities: [
-			"Cloud Nine"
-		],
+		abilities: {
+			0: "Cloud Nine",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -111459,9 +111459,9 @@ blobbosmechelectric: {
 			spd: 105,
 			spe: 60
 		},
-		abilities: [
-			"Cloud Nine"
-		],
+		abilities: {
+			0: "Cloud Nine",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -111489,9 +111489,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 80
 		},
-		abilities: [
-			"Synchronize"
-		],
+		abilities: {
+			0: "Synchronize",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -111518,9 +111518,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 25
 		},
-		abilities: [
-			"Serene Grace"
-		],
+		abilities: {
+			0: "Serene Grace",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -111547,9 +111547,9 @@ blobbosmechelectric: {
 			spd: 130,
 			spe: 20
 		},
-		abilities: [
-			"Serene Grace"
-		],
+		abilities: {
+			0: "Serene Grace",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -111576,9 +111576,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 95
 		},
-		abilities: [
-			"Oblivious"
-		],
+		abilities: {
+			0: "Oblivious",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -111605,9 +111605,9 @@ blobbosmechelectric: {
 			spd: 35,
 			spe: 30
 		},
-		abilities: [
-			"Early Bird"
-		],
+		abilities: {
+			0: "Early Bird",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -111633,9 +111633,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 90
 		},
-		abilities: [
-			"Early Bird"
-		],
+		abilities: {
+			0: "Early Bird",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -111661,9 +111661,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 100
 		},
-		abilities: [
-			"Early Bird"
-		],
+		abilities: {
+			0: "Early Bird",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -111689,9 +111689,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 40
 		},
-		abilities: [
-			"Sticky Hold"
-		],
+		abilities: {
+			0: "Sticky Hold",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -111717,9 +111717,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 50
 		},
-		abilities: [
-			"Sticky Hold"
-		],
+		abilities: {
+			0: "Sticky Hold",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -111745,9 +111745,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 50
 		},
-		abilities: [
-			"Heatproof"
-		],
+		abilities: {
+			0: "Heatproof",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -111775,9 +111775,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 60
 		},
-		abilities: [
-			"Soundproof"
-		],
+		abilities: {
+			0: "Soundproof",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -111805,9 +111805,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 70
 		},
-		abilities: [
-			"Soundproof"
-		],
+		abilities: {
+			0: "Soundproof",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -111835,9 +111835,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 70
 		},
-		abilities: [
-			"Soundproof"
-		],
+		abilities: {
+			0: "Soundproof",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -111864,9 +111864,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 50
 		},
-		abilities: [
-			"Shell Armor"
-		],
+		abilities: {
+			0: "Shell Armor",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -111893,9 +111893,9 @@ blobbosmechelectric: {
 			spd: 65,
 			spe: 50
 		},
-		abilities: [
-			"Swift Swim"
-		],
+		abilities: {
+			0: "Swift Swim",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -111921,9 +111921,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 50
 		},
-		abilities: [
-			"Swift Swim"
-		],
+		abilities: {
+			0: "Swift Swim",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Yellow",
@@ -111950,9 +111950,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 75
 		},
-		abilities: [
-			"Synchronize"
-		],
+		abilities: {
+			0: "Synchronize",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -111978,9 +111978,9 @@ blobbosmechelectric: {
 			spd: 55,
 			spe: 45
 		},
-		abilities: [
-			"Insomnia"
-		],
+		abilities: {
+			0: "Insomnia",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Black",
@@ -112006,9 +112006,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 65
 		},
-		abilities: [
-			"Insomnia"
-		],
+		abilities: {
+			0: "Insomnia",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Black",
@@ -112034,9 +112034,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 50
 		},
-		abilities: [
-			"Shed Skin"
-		],
+		abilities: {
+			0: "Shed Skin",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -112064,9 +112064,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 80
 		},
-		abilities: [
-			"Immunity"
-		],
+		abilities: {
+			0: "Immunity",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -112123,9 +112123,9 @@ blobbosmechelectric: {
 			spd: 40,
 			spe: 30
 		},
-		abilities: [
-			"Sturdy"
-		],
+		abilities: {
+			0: "Sturdy",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -112151,9 +112151,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 40
 		},
-		abilities: [
-			"Sturdy"
-		],
+		abilities: {
+			0: "Sturdy",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -112179,9 +112179,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 50
 		},
-		abilities: [
-			"Sturdy"
-		],
+		abilities: {
+			0: "Sturdy",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -112207,9 +112207,9 @@ blobbosmechelectric: {
 			spd: 70,
 			spe: 60
 		},
-		abilities: [
-			"Forecast"
-		],
+		abilities: {
+			0: "Forecast",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -112237,9 +112237,9 @@ blobbosmechelectric: {
 			spd: 30,
 			spe: 85
 		},
-		abilities: [
-			"Oblivious"
-		],
+		abilities: {
+			0: "Oblivious",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Gray",
@@ -112267,9 +112267,9 @@ blobbosmechelectric: {
 			spd: 75,
 			spe: 85
 		},
-		abilities: [
-			"Oblivious"
-		],
+		abilities: {
+			0: "Oblivious",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -112296,9 +112296,9 @@ blobbosmechelectric: {
 			spd: 85,
 			spe: 25
 		},
-		abilities: [
-			"Suction Cups"
-		],
+		abilities: {
+			0: "Suction Cups",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -112324,9 +112324,9 @@ blobbosmechelectric: {
 			spd: 100,
 			spe: 40
 		},
-		abilities: [
-			"Suction Cups"
-		],
+		abilities: {
+			0: "Suction Cups",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -112352,9 +112352,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 70
 		},
-		abilities: [
-			"Battle Armor"
-		],
+		abilities: {
+			0: "Battle Armor",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -112380,9 +112380,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 45
 		},
-		abilities: [
-			"Battle Armor"
-		],
+		abilities: {
+			0: "Battle Armor",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -112408,9 +112408,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 60
 		},
-		abilities: [
-			"Synchronize"
-		],
+		abilities: {
+			0: "Synchronize",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -112436,9 +112436,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 80
 		},
-		abilities: [
-			"Synchronize"
-		],
+		abilities: {
+			0: "Synchronize",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -112464,9 +112464,9 @@ blobbosmechelectric: {
 			spd: 115,
 			spe: 85
 		},
-		abilities: [
-			"Synchronize"
-		],
+		abilities: {
+			0: "Synchronize",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -112492,9 +112492,9 @@ blobbosmechelectric: {
 			spd: 30,
 			spe: 50
 		},
-		abilities: [
-			"Rock Head"
-		],
+		abilities: {
+			0: "Rock Head",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -112520,9 +112520,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 50
 		},
-		abilities: [
-			"Rock Head"
-		],
+		abilities: {
+			0: "Rock Head",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -112548,9 +112548,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 90
 		},
-		abilities: [
-			"Rock Head"
-		],
+		abilities: {
+			0: "Rock Head",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -112577,9 +112577,9 @@ blobbosmechelectric: {
 			spd: 60,
 			spe: 30
 		},
-		abilities: [
-			"Clear Body"
-		],
+		abilities: {
+			0: "Clear Body",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -112603,9 +112603,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 50
 		},
-		abilities: [
-			"Clear Body"
-		],
+		abilities: {
+			0: "Clear Body",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -112629,9 +112629,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 70
 		},
-		abilities: [
-			"Clear Body"
-		],
+		abilities: {
+			0: "Clear Body",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -112654,9 +112654,9 @@ blobbosmechelectric: {
 			spd: 100,
 			spe: 50
 		},
-		abilities: [
-			"Clear Body"
-		],
+		abilities: {
+			0: "Clear Body",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Purple",
@@ -112679,9 +112679,9 @@ blobbosmechelectric: {
 			spd: 200,
 			spe: 50
 		},
-		abilities: [
-			"Clear Body"
-		],
+		abilities: {
+			0: "Clear Body",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Brown",
@@ -112704,9 +112704,9 @@ blobbosmechelectric: {
 			spd: 150,
 			spe: 50
 		},
-		abilities: [
-			"Clear Body"
-		],
+		abilities: {
+			0: "Clear Body",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -112730,9 +112730,9 @@ blobbosmechelectric: {
 			spd: 130,
 			spe: 90
 		},
-		abilities: [
-			"Drizzle"
-		],
+		abilities: {
+			0: "Drizzle",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -112755,9 +112755,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 90
 		},
-		abilities: [
-			"Drought"
-		],
+		abilities: {
+			0: "Drought",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -112780,9 +112780,9 @@ blobbosmechelectric: {
 			spd: 80,
 			spe: 95
 		},
-		abilities: [
-			"None"
-		],
+		abilities: {
+			0: "None",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Green",
@@ -112805,9 +112805,9 @@ blobbosmechelectric: {
 			spd: 90,
 			spe: 110
 		},
-		abilities: [
-			"Mega Launcher"
-		],
+		abilities: {
+			0: "Mega Launcher",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Red",
@@ -112830,9 +112830,9 @@ blobbosmechelectric: {
 			spd: 110,
 			spe: 110
 		},
-		abilities: [
-			"Mega Launcher"
-		],
+		abilities: {
+			0: "Mega Launcher",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "Blue",
@@ -112855,9 +112855,9 @@ blobbosmechelectric: {
 			spd: 100,
 			spe: 100
 		},
-		abilities: [
-			"Serene Grace"
-		],
+		abilities: {
+			0: "Serene Grace",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -112880,9 +112880,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 150
 		},
-		abilities: [
-			"Pressure"
-		],
+		abilities: {
+			0: "Pressure",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
@@ -112906,9 +112906,9 @@ blobbosmechelectric: {
 			spd: 50,
 			spe: 45
 		},
-		abilities: [
-			"Synchronize"
-		],
+		abilities: {
+			0: "Synchronize",
+		},
 		heightm: 1,
 		weightkg: 20,
 		color: "White",
