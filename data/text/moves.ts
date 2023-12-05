@@ -9527,6 +9527,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Godot's Hammer",
 		shortDesc: "Torments and Taunts the foe. Lowers the user's Speed by 2. Has 1/3 recoil.",
 	},
+	bamboozle: {
+		name: "Bamboozle",
+		shortDesc: "WIP] Damages target based on their Spe if it uses a status move, Def if it uses a special attack, Spd if they use a physical attack.",
+	},
+	meowsa: {
+		name: "Meowsa",
+		desc: "Uses Assist after the move hits.",
+	},
 
 	// WACK MOVES
 	hijumpkick: {

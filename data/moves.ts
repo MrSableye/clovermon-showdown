@@ -31972,6 +31972,25 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fairy",
 		contestType: "Cool",
 	},
+
+	meowsa: {
+		num: 274,
+		accuracy: true,
+		basePower: 90,
+		category: "Physical",
+		isNonstandard: "Past",
+		name: "Meowsa",
+		pp: 20,
+		priority: 0,
+		flags: {failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, failmimic: 1},
+		onAfterHit(target, source) {
+			this.actions.useMove('assist', source, source);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		contestType: "Cute",
+	},
 	combatorders: {
 		isNonstandard: "Future",
 		accuracy: true,
@@ -33588,6 +33607,49 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 		},
 		isNonstandard: "Future",
+	},
+	bamboozle: {
+		num: 389,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Bamboozle",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyMove (move, pokemon, target) {
+			if (!target) return;
+			const action = this.queue.willMove(target);
+			if (!action) return false;
+			const targetMove = this.dex.getActiveMove(action.move.id);
+				if (target.newlySwitched) {
+				move.overrideDefensiveStat = 'spe';
+			}
+			if (targetMove.category === 'Status'||move.category === 'Status') {
+				move.overrideDefensiveStat = 'spe';
+			}
+			
+			if (targetMove.category === 'Special'||move.category === 'Special') {
+				move.overrideDefensiveStat = 'def';
+			}
+			if (targetMove.category === 'Physical'||move.category === 'Physical') {
+				move.overrideDefensiveStat = 'spd';
+			}
+			const priormove = target.lastMove;
+				if (priormove?.category === 'Special' ) {
+					move.overrideDefensiveStat = 'def';
+				}
+				if (priormove?.category === 'Status' ) {
+					move.overrideDefensiveStat = 'spe';
+				}
+				if (priormove?.category === 'Physical' ) {
+					move.overrideDefensiveStat = 'spd';
+				}			
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		contestType: "Clever",
 	},
 	tornadocab: {
 		num: 173,
@@ -40644,6 +40706,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {reflectable: 1},
+		sideCondition: 'icicles',
 		condition: {
 			// this is a side condition
 			onSideStart(side) {

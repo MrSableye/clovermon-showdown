@@ -1703,6 +1703,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	assistpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	rollan: {
 		inherit: true,
 		isNonstandard: null,
