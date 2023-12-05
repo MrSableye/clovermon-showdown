@@ -2910,6 +2910,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Acu Power",
 		shortDesc: "Adds an Acupressure to every attack. Immune to critical hits.",
 	},
+	assistpower: {
+		name: "Assist Power",
+		shortDesc: "Adds an Assist to every attack.",
+	},
 	supermentum: {
 		name: "Supermentum",
 		shortDesc: "Switches out after using a move.",

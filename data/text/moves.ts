@@ -9531,6 +9531,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Bamboozle",
 		shortDesc: "WIP] Damages target based on their Spe if it uses a status move, Def if it uses a special attack, Spd if they use a physical attack.",
 	},
+	meowsa: {
+		name: "Meowsa",
+		desc: "Uses Assist after the move hits.",
+	},
 
 	// WACK MOVES
 	hijumpkick: {

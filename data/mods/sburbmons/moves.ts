@@ -3552,6 +3552,10 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	meowsa: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	tornadocab: {
 		inherit: true,
 		isNonstandard: "Past",

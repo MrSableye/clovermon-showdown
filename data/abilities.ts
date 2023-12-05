@@ -8825,6 +8825,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4.5,
 		isNonstandard: "Future",
 	},
+	assistpower: {
+		onAfterMove(source, target, move) {
+			const targetSlot = target.getSlot();
+			if (!move || !target) return;
+			if (source.ability !== 'assistpower') return;
+			if (move.category === 'Status') return;
+			if (source.abilityState.hasMemed?.[targetSlot]) return;
+
+			if (!source.abilityState?.hasMemed) source.abilityState.hasMemed = {};
+			source.abilityState.hasMemed[targetSlot] = true;
+
+			this.actions.useMove('assist', source, source);
+		},
+		onResidual(pokemon) {
+			pokemon.abilityState.hasMemed = undefined;
+		},
+		onCriticalHit: false,
+		name: "Assist Power",
+		rating: 4.5,
+		isNonstandard: "Future",
+	},
 	terraform: {
 		name: "Terraform",
 		onBeforeMove(source, target, move) {
