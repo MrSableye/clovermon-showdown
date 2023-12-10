@@ -1878,11 +1878,11 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 	real: {
 		inherit: true,
 		isNonstandard: null,
-		},
+	},
 	goodasgold: {
 		inherit: true,
 		isNonstandard: null,
-		},
+	},
 	eartheater: {
 		inherit: true,
 		isNonstandard: null,
