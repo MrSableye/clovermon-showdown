@@ -228,7 +228,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		volatileStatus: 'flinch',
 		},
 		target: "normal",
-		type: "Steel",
+		type: "Normal",
 		contestType: "Tough",
 	},
 	bite: {
