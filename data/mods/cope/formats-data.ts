@@ -2464,7 +2464,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	platylics: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	impfection: {
 		inherit: true,
