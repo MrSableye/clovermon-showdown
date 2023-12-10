@@ -226,6 +226,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		secondary: {
 		chance: 100,
 		volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Steel",
 		contestType: "Tough",
