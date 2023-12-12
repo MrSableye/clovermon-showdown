@@ -31265,6 +31265,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
+	radishpunch: {
+		accuracy: true,
+		basePower: 85,
+		category: "Physical",
+		name: "Radish Punch",
+		pp: 15,
+		priority: 0,
+		flags: {punch: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			status: 'radish',
+		},
+		target: "normal",
+		type: "Grass",
+		isNonstandard: "Future",
+	},
 	sharpwit: {
 		num: 673,
 		accuracy: true,

@@ -7474,6 +7474,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		isNonstandard: "Future",
 	},
+	radishbody: {
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+				if (this.randomChance(3, 10)) {
+					source.trySetStatus('radish', target);
+				}
+			}
+		},
+		name: "Radish Body",
+		isNonstandard: "Future",
+	},
 	lootable: {
 		name: "Lootable",
 		onFaint(target) {
