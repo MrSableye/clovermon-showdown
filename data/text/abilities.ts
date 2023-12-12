@@ -3398,6 +3398,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		damage: "#roughskin",
 	},
+	radishbody: {
+		name: "Radish Body",
+		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be radished.",
+	},
 	musclemass: {
 		name: "Muscle Mass",
 		desc: "This Pokemon is immune to Fighting-type moves and raises its Defense by 1 stage when hit by a Fighting-type move. If this Pokemon is not the target of a single-target Water-type move used by another Pokemon, this Pokemon redirects that move to itself if it is within the range of that move. If multiple Pokemon could redirect with this Ability, it goes to the one with the highest Speed, or in the case of a tie to the one that has had this Ability active longer.",
