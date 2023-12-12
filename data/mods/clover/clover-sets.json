@@ -6879,6 +6879,62 @@
 				}
 		 ]
 	},
+	"heliofug":{
+		"nicknames":[
+			   "rainfug",
+			   "imhelping",
+			   "hellfug",
+			   "heliofug"
+		],
+		"sets":[
+			   {
+					"abilities":[
+						   "drizzle"
+					],
+					"items":[
+						   "assaultvest"
+					],
+					"moves":[
+						   "dracometeor",
+						   "weatherball",
+						   "hurricane",
+						   "thunder"
+						   
+					],
+					"level":72
+			   },
+			   {
+					"abilities":[
+						   "drought"
+					],
+					"items":[
+						   "leftovers"
+					],
+					"moves":[
+						   "willowisp",
+						   "roost",
+						   "defog",
+						   "dragontail"
+					],
+					"level":72
+			   },
+			   {
+					"abilities":[
+						   "drought"
+					],
+					"items":[
+						   "leftovers"
+					],
+					"moves":[
+						   "lavaplume",
+						   "torment",
+						   "substitute",
+						   "protect"
+					],
+					"level":72
+			   }
+		]
+   },
 	"ruselamp":{
 		 "nicknames":[
 				":v)",
@@ -6983,6 +7039,7 @@
 	"hohohoming":{
 		 "nicknames":[
 				"CruzCtrl",
+				"MissleHoe",
 				"Hohohoming",
 				"Hohohoming",
 				"Hohohoming"
@@ -7024,6 +7081,22 @@
 					 ],
 					 "level":80
 				},
+				{
+					"abilities":[
+						   "slushrush"
+					],
+					"items":[
+						   "lifeorb"
+					],
+					"moves":[
+						   "blizzard",
+						   "hail",
+						   "earthpower",
+						   "focusblast"
+					
+					],
+					"level":80
+			   },
 				{
 					 "abilities":[
 							"technician"
@@ -8462,19 +8535,48 @@
 		 "sets":[
 				{
 					 "abilities":[
-							"forecast"
+							"presage"
 					 ],
 					 "items":[
 							"choicescarf"
 					 ],
 					 "moves":[
-							"voltswitch",
-							"shadowball",
-							"focusblast",
+							"blizzard",
+							"solarbeam",
+							"thunder",
 							"fireblast"
 					 ],
-					 "lockedMoves":[
-							"boomburst"
+					 "level":80
+				},
+				{
+					 "abilities":[
+							"presage"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"slipturn",
+							"voltswitch",
+							"tailwind",
+							"triattack"
+					 ],
+					 
+					 "level":84
+				},
+				{
+					 "abilities":[
+							"presage"
+					 ],
+					 "items":[
+							"leftovers"
+					 ],
+					 "moves":[
+							"defog",
+							"morningsun",
+							"heatwave",
+							"toxic",
+							"clearsmog"
 					 ],
 					 "level":84
 				},
@@ -8483,54 +8585,13 @@
 							"forecast"
 					 ],
 					 "items":[
-							"damprock"
+							"assaultvest"
 					 ],
 					 "moves":[
-							"hurricane",
 							"thunder",
-							"weatherball",
-							"boomburst"
-					 ],
-					 "lockedMoves":[
-							"raindance"
-					 ],
-					 "level":84
-				},
-				{
-					 "abilities":[
-							"forecast"
-					 ],
-					 "items":[
-							"heatrock"
-					 ],
-					 "moves":[
+							"earthpower",
 							"solarbeam",
-							"weatherball",
-							"icebeam",
-							"thunderbolt",
-							"boomburst"
-					 ],
-					 "lockedMoves":[
-							"sunnyday"
-					 ],
-					 "level":84
-				},
-				{
-					 "abilities":[
-							"forecast"
-					 ],
-					 "items":[
-							"icyrock"
-					 ],
-					 "moves":[
-							"thunderbolt",
-							"fireblast",
-							"boomburst",
-							"focusblast"
-					 ],
-					 "lockedMoves":[
-							"hail",
-							"blizzard"
+							"slipturn"
 					 ],
 					 "level":84
 				}
@@ -9324,7 +9385,23 @@
 						  
 					],
 					"level":72
-			   }
+			   },
+			   {
+				"abilities":[
+					   "magician"
+				],
+				"items":[
+					   "watergem"
+				],
+				"moves":[
+					   "sparklingaria",
+					   "lunardance",
+					   "trick",
+					   "icebeam"
+					  
+				],
+				"level":72
+		   }
 		]
    },
 	"spookscare":{
