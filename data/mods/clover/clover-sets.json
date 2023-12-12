@@ -8466,7 +8466,7 @@
 				"BANNED",
 				"SHADOWBANNED",
 				"ProtoMagic",
-				"Banageddon",
+				"SupaJannie",
 				"Banageddon",
 				"Banageddon",
 				"Banageddon",
@@ -8522,7 +8522,23 @@
 							"icehammer"
 					 ],
 					 "level":80
-				}
+				},
+				{
+					"abilities":[
+						   "moldbreaker"
+					],
+					"items":[
+						   "leftovers"
+					],
+					"moves":[
+						   "banhammer",
+						   "knockoff",
+						   "slackoff",
+						   "mop",
+						   "teleport"
+					],
+					"level":80
+			   }
 		 ]
 	},
 	"acufront":{
@@ -9364,7 +9380,7 @@
 	},
 	"narwhiz":{
 		"nicknames":[
-			   "Narwhiz",
+			   "DaWiz",
 			   "Narwhiz",
 			   "Narwhiz",
 			   "Narwhiz"
@@ -9657,6 +9673,78 @@
 				}
 		 ]
 	},
+
+	"admoot":{
+		"nicknames":[
+				"Admoot",
+			   "Admoot",
+			   "Admoot",
+			   "Admoot"
+		],
+		"sets":[
+			   {
+					
+					"items":[
+						   "lifeorb",
+						   "leftovers"
+					],
+					"moves":[
+						"milkdrink",
+						"moonblast",
+						"flamethrower",
+						"earthpower",
+						"nastyplot"
+					],
+					"level":76
+			   },
+			   {
+					"abilities":[
+						   "adminabuse"
+					],
+					"items":[
+						   "choiceband",
+						   "lifeorb"
+					],
+					"moves":[
+						   "banhammer",
+						   "uturn",
+						   "woodhammer",
+						   "dragonhammer",
+						   "icehammer",
+						   "hammerarm"
+					],
+					"level":76
+			   },
+			   {
+					"abilities":[
+						   "berserk"
+					],
+					"items":[
+						   "leftovers"
+					],
+					"moves":[
+						   "moonblast",
+						   "earthpower",
+						   "fireblast",
+						   "milkdrink"
+					],
+					"level":76
+			   },
+			   {
+				
+				"items":[
+					   "leftovers"
+				],
+				"moves":[
+					   "uturn",
+					   "mop",
+					   "knockoff",
+					   "milkdrink"
+				],
+				"level":76
+		   }
+		]
+   },
 	"deisnutz":{
 		 "nicknames":[
 				"NUT DELUXE",
