@@ -131,6 +131,12 @@ export const Conditions: {[k: string]: ConditionData} = {
 			}
 			return 5;
 		},
+		onModifyDefPriority: 10,
+		onModifyDef(def, pokemon) {
+			if (pokemon.hasType('Ice') && this.field.isWeather('hail')) {
+				return this.modify(def, 1.5);
+			}
+		},
 		onFieldStart(field, source, effect) {
 			if (effect?.effectType === 'Ability') {
 				this.effectState.duration = 0;
