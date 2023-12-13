@@ -137,4 +137,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		abilities: {0: "Arena Trap", 1: "Gooey", H: "Sticky Hold", S: "Earth Eater"},
 	},
+	glaciun: {
+		inherit: true,
+		abilities: {0: "Pressure", H: "Technician", S: "Ice Scales"},
+	},
+	mammount: {
+		inherit: true,
+		abilities: {0: "Thick Fat", 1: "Ice Body", H: "Shaved Ice", S: "Rough Skin"},
+	},
 };
