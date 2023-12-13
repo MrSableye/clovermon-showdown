@@ -4245,7 +4245,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fairileon: {
 		inherit: true,
-		tier: "OU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"quiverdance",
@@ -6296,7 +6296,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	regirode: {
 		inherit: true,
-		tier: "OU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"earthpower",
@@ -6890,7 +6890,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	dedwheat: {
 		inherit: true,
-		tier: "OU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"skillswap",
