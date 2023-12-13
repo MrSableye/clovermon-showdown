@@ -7615,7 +7615,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		randomBattleMoves: [
 			"foulplay",
-			"oveheat",
+			"overheat",
 			"haze",
 			"gunkshot",
 		],
