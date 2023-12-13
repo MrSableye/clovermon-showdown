@@ -49,11 +49,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "LC",
 	},
-	semmush: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
 	starhiro: {
 		inherit: true,
 		isNonstandard: null,
