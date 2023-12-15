@@ -1044,7 +1044,7 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 		],
-		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard', 'Wicked Blow', 'Drizzle', 'Drought', 'Krackocean','Illusion','Weathervein'],
+		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard', 'Wicked Blow', 'Drizzle', 'Drought', 'Krackocean','Illusion','Weathervein','Aurora Veil'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Create-a-Blobbos (CAB)
