@@ -36980,6 +36980,7 @@ tiamat: {
    color: "Purple",
    eggGroups: ["Undiscovered"],
    gen: 8,
+   creator: "VIB",
 },
 lober: {
    num: -8217,
@@ -36994,6 +36995,7 @@ lober: {
    evos: ["Clobber"],
    eggGroups: ["Water 2", "Water 1"],
    gen: 8,
+   creator: "Zac",
 },
 clobber: {
    num: -8218,
@@ -37009,6 +37011,7 @@ clobber: {
    evoLevel: 50,
    eggGroups: ["Monster", "Field"],
    gen: 8,
+   creator: "Zac",
   },
 meower: {
    num: -8219,
@@ -37023,6 +37026,7 @@ meower: {
    evos: ["Catation"],
    eggGroups: ["Monster", "Water"],
    gen: 8,
+   creator: "Zac",
   },
 catation: {
    num: -8220,
@@ -37039,6 +37043,7 @@ catation: {
    evoItem: "Moon Stone",
    eggGroups: ["Monster", "Water"],
    gen: 8,
+   creator: "Zac",
 },
 kiwi: {
    num: -8221,
@@ -37055,6 +37060,7 @@ kiwi: {
    evoLevel: 1,
    eggGroups: ["Field", "Water"],
    gen: 8,
+   creator: "Karma",
   },
 iwik: {
    num: -8222,
@@ -37067,11 +37073,28 @@ iwik: {
    weightkg: 4.44,
    color: "Green",
    prevo: "Kiwi",
-   evos: ["Kiwi"],
-   evoLevel: 1,
+   evos: ["Kiwl"],
+   evoLevel: 2,
    eggGroups: ["Field", "Water"],
    gen: 8,
+   creator: "Karma",
 },
+kiwl: {
+   num: -8223,
+   name: "Kiwl",
+   types: ["Grass", "Flying"],
+   genderRatio: {M: 0.5, F: 0.5},
+   baseStats: {hp: 1, atk: 1, def:1, spa: 1, spd: 1, spe: 1},
+   abilities: {0: "Death", 1: "Destruction", H: "Kiwi"},
+   heightm: 0.22,
+   weightkg: 4.44,
+   color: "Green",
+   prevo: "Iwik",
+   evoLevel: 500,
+   eggGroups: ["Field", "Water"],
+   gen: 8,
+   creator: "Something Far more Sinister",
+  },
 	 kattapillar: {
 		num: -42704,
 		name: "Kattapillar",
