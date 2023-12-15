@@ -37056,7 +37056,6 @@ kiwi: {
    eggGroups: ["Field", "Water"],
    gen: 8,
   },
-  },
 iwik: {
    num: -8221,
    name: "Iwik",
@@ -37072,7 +37071,6 @@ iwik: {
    evoLevel: 1,
    eggGroups: ["Field", "Water"],
    gen: 8,
-  },
 },
 	 kattapillar: {
 		num: -42704,
