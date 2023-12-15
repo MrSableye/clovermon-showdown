@@ -214,6 +214,13 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		endFromItem: "  [POKEMON]'s [ITEM] woke it up!",
 		cant: "[POKEMON] is fast asleep.",
 	},
+	radish: {
+		start: "  [POKEMON] was radished!",
+		alreadyStarted: "  [POKEMON] is already radished!",
+		end: "  [POKEMON]'s radishing was healed!",
+		endFromItem: "  [POKEMON]'s [ITEM] healed its radishing!",
+		damage: "  [POKEMON] was hurt by its radishing!",
+	},
 
 	// misc effects
 	confusion: {
