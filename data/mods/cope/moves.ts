@@ -4602,6 +4602,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	trailblaze: {
 		inherit: true,
 		isNonstandard: null,
+		},
+	flowertrick: {
+		inherit: true,
+		isNonstandard: null,
 	},
 	jetpunch: {
 		inherit: true,

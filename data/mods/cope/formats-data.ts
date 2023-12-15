@@ -3051,6 +3051,26 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	isNonstandard: null,
 	tier: "OU",
 	},
+	kiwi: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	iwik: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
+	meower: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "LC",
+	},
+	catation: {
+	inherit: true,
+	isNonstandard: null,
+	tier: "OU",
+	},
 	sludge: {
 	inherit: true,
 	isNonstandard: null,

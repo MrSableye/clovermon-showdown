@@ -8905,6 +8905,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	kiwi: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	iwik: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	catation: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	meower: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	tiamat: {
 		tier: "Illegal",
 		isNonstandard: "Future",
