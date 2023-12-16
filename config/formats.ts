@@ -230,7 +230,8 @@ export const Formats: FormatList = [
 		name: '[Gen 8 Clover Only] VGC',
 		mod: 'clover',
 		gameType: 'doubles',
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'VGC Timer', 'Force Open Team Sheets', 'Terastal Clause', 'Dynamax Clause'],
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'VGC Timer', 'Force Open Team Sheets', 'Terastal Clause', 'Dynamax Clause', 'Limit One Restricted'],
+		restricted: ['Restricted Legendary'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Clover OMs
