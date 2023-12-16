@@ -36833,6 +36833,19 @@ azumarite: {
    eggGroups: ["Mineral"],
    gen: 8,
 },
+meteoriik: {
+	num: -8224,
+	name: "Meteoriik",
+	types: ["Rock", "Fairy"],
+	gender: 'M',
+	baseStats: {hp: 72, atk: 99, def: 84, spa: 104, spd: 54, spe: 125},
+	abilities: {0: "Flame Body", H: "Long Reach", S: "Big Guy"},
+	heightm: 2000,
+	weightkg: 9999999999,
+	color: "Purple",
+	eggGroups: ["Mineral", "Fairy"],
+	gen: 8,
+ },
 crolord: {
 	num: -8208,
 	name: "Cro'lord",
@@ -36847,7 +36860,7 @@ crolord: {
 	gen: 8,
  },
 pyroshiiva: {
-	num: -8208,
+	num: -8223,
 	name: "Pyroshiiva",
 	types: ["Fire"],
 	gender: "F",

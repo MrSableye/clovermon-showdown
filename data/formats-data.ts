@@ -8861,6 +8861,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	meteoriik: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	crolord: {
 		tier: "Illegal",
 		isNonstandard: "Future",
