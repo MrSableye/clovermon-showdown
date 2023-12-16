@@ -226,6 +226,12 @@ export const Formats: FormatList = [
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard'],
 	},
+	{
+		name: '[Gen 8 Clover Only] VGC',
+		mod: 'clover',
+		gameType: 'doubles',
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Force Open Team Sheets'],
+	},
 	///////////////////////////////////////////////////////////////////
 	// Clover OMs
 	///////////////////////////////////////////////////////////////////

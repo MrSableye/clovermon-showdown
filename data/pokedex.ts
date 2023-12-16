@@ -24692,6 +24692,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Sub-Legendary"],
 	},
 	foryu: {
 		num: 69145,
@@ -24721,6 +24722,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Sub-Legendary"],
 	},
 	scytill: {
 		num: 69146,
@@ -24750,6 +24752,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Sub-Legendary"],
 	},
 	baddon: {
 		num: 69147,
@@ -24779,6 +24782,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Restricted Legendary"],
 	},
 	endranther: {
 		num: 69148,
@@ -24807,6 +24811,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Restricted Legendary"],
 	},
 	notridley: {
 		num: 69149,
@@ -24836,6 +24841,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Restricted Legendary"],
 	},
 	demiwaifu: {
 		num: 69150,
@@ -24864,6 +24870,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Restricted Legendary"],
 	},
 	clovenix: {
 		num: 69151,
@@ -24893,6 +24900,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Restricted Legendary"],
 	},
 	reptyke: {
 		num: 69152,
@@ -29005,6 +29013,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Sub-Legendary"],
 	},
 	regimelt: {
 		num: 69246,
@@ -29034,6 +29043,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Sub-Legendary"],
 	},
 	regirust: {
 		num: 69247,
@@ -29063,6 +29073,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Sub-Legendary"],
 	},
 	jewipede: {
 		num: 69248,
@@ -29092,7 +29103,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
-		tags: ["Inferior"],
+		tags: ["Inferior", "Restricted Legendary"],
 	},
 	vivaiger: {
 		num: 69249,
@@ -29121,6 +29132,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Restricted Legendary"],
 	},
 	heliofug: {
 		num: 69250,
@@ -29150,6 +29162,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Restricted Legendary"],
 	},
 	adesign: {
 		num: 69251,
@@ -29177,6 +29190,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Restricted Legendary"],
 	},
 	sadrog: {
 		num: 69252,
@@ -33833,6 +33847,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Restricted Legendary"],
 	},
 	niterpent: {
 		num: 69382,
@@ -33862,6 +33877,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Restricted Legendary"],
 	},
 	griffawork: {
 		num: 69383,
@@ -33891,6 +33907,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Restricted Legendary"],
 	},
 	boarnograf: {
 		num: 69384,
@@ -33920,7 +33937,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
-		tags: ["Inferior"],
+		tags: ["Inferior", "Restricted Legendary"],
 	},
 	admoot: {
 		num: 69385,
@@ -33949,6 +33966,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Mythical"],
 	},
 	tentaquil: {
 		num: 69386,
@@ -33976,6 +33994,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			"Undiscovered",
 		],
 		gen: 8,
+		tags: ["Mythical"],
 	},
 	megablobbos: {
 		num: 69387,
