@@ -2951,6 +2951,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	meteoriik: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	suxako: {
 		inherit: true,
 		isNonstandard: null,
