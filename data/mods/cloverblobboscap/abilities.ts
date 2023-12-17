@@ -694,3 +694,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 };
+brainwash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+};
