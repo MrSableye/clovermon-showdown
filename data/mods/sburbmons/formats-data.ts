@@ -9092,6 +9092,46 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	blobbosparasite: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	blobbosflask: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	blobbosyarn: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	blobbosblackmage: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	blobbosminion: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	blobbosplasma: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	blobbosgeno: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	blobboshotpot: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	blobboscreampuff: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	blobbostapu: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	infected: {
 		inherit: true,
 		isNonstandard: "Past",

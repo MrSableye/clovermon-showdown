@@ -51,6 +51,10 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	blackmagiumz: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	thiccbone: {
 		name: "Thicc Bone",
 		spritenum: 379,
