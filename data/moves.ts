@@ -24857,6 +24857,82 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Ghost",
 		isNonstandard: "Future",
 	},
+	prisonroots: {
+        accuracy: 85,
+        basePower: 75,
+        category: "Physical",
+        name: "Prison Roots",
+        pp: 5,
+        priority: 0,
+        flags: {protect: 1, mustpressure: 1},
+        volatileStatus: 'imprison',
+        condition: {
+            noCopy: true,
+            onStart(target) {
+                this.add('-start', target, 'move: Prison Roots');
+            },
+            onFoeDisableMove(pokemon) {
+                for (const moveSlot of this.effectState.source.moveSlots) {
+                    if (moveSlot.id === 'struggle') continue;
+                    pokemon.disableMove(moveSlot.id, 'hidden');
+                }
+                pokemon.maybeDisabled = true;
+            },
+            onFoeBeforeMovePriority: 4,
+            onFoeBeforeMove(attacker, defender, move) {
+                if (move.id !== 'struggle' && this.effectState.source.hasMove(move.id) && !move.isZ && !move.isMax) {
+                    this.add('cant', attacker, 'move: Prison Roots', move);
+                    return false;
+                }
+            },
+        },
+        onHit(target, source, move) {
+            return target.addVolatile('trapped', source, move, 'trapper');
+        },
+        secondary: null,
+        target: "self",
+        type: "Grass",
+        contestType: "Clever",
+        isNonstandard: "Future",
+    },
+	blazingwheel: {
+        accuracy: 100,
+        basePower: 80,
+        category: "Physical",
+        name: "Blazing Wheel",
+        pp: 10,
+        priority: 0,
+        flags: {protect: 1, mirror: 1, defrost: 1},
+        secondary: {
+            chance: 100,
+            self: {
+                boosts: {
+                    spe: 1,
+                },
+            },
+        },
+        target: "normal",
+        type: "Fire",
+        contestType: "Tough",
+        isNonstandard: "Future",
+    },
+oceanhorn: {
+        accuracy: 85,
+        basePower: 100,
+        category: "Physical",
+        name: "Ocean Horn",
+        pp: 10,
+        priority: 0,
+        flags: {protect: 1, mirror: 1, contact: 1},
+        secondary: {
+            chance: 50,
+            volatileStatus: 'flinch',
+        },
+        target: "any",
+        type: "Water",
+        contestType: "Cool",
+        isNonstandard: "Future",
+    },
 	blackbomb: {
 		accuracy: 100,
 		basePower: 110,
