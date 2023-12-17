@@ -3049,7 +3049,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	blobbossexymegay: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	blobbossexymegax: {
 		inherit: true,
