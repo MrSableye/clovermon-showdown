@@ -8892,6 +8892,18 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Pantherk Kick",
 		shortDesc: "30% flinch chance. Pantherk.",
 	},
+	oceanhorn: {
+		name: "Ocean Horn",
+		shortDesc: "50% chance to flinch the opponent.",
+	},
+	blazingwheel: {
+		name: "Blazing Wheel",
+		shortDesc: "Raises the user's Speed by 1 stage. Thaws user.",
+	},
+	prisonroots: {
+		name: "Prison Roots",
+		shortDesc: "Traps and Imprisons the target.",
+	},
 	testomajesto: {
 		name: "Testo Majesto",
 		shortDesc: "'Ah, don't bother, it's just a coffee machine. Sometimes it shows ads on the screen.'",
