@@ -3362,6 +3362,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's moves have their secondary effect chance doubled. Foes's moves have their secondary effect chance removed. Immune to Ground. Light of Ruin becomes Heroine's Light.",
 		shortDesc: "Doubles user's secondary effect chances, removes foe's secondary effect chance. Immune to Ground. Light of Ruin becomes Heroine's Light.",
 	},
+	medusascurse: {
+		name: "Medusa's Curse",
+		shortDesc: "Sets all other Pokemon to Rock-type on switch-in.",
+	},
+	sweetdreams: {
+		name: "Sweet Dreams",
+		desc: "At the end of every turn, this Pokemon restores 1/16 of its max HP if it or its opposing Pokemon is asleep. If both are asleep, it heals 2/16.",
+	},
 	barkback: {
 		name: "Bark Back",
 		shortDesc: "Immune to sound-based moves. Opponent loses 1/4 of its max HP if it uses a sound-based move.",

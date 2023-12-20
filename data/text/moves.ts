@@ -9454,6 +9454,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  [POKEMON] started planning a surprise attack!",
 		activate: "  [TARGET] took was taken by surprise!",
 	},
+	scryingwish: {
+		name: "Scrying Wish",
+		shortDesc: "Hits two turns after being used.",
+	},
 	maplewarrior: {
 		name: "Maple Warrior",
 		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",

@@ -698,4 +698,12 @@ brainwash: {
 		inherit: true,
 		isNonstandard: null,
 	},
+	medusascurse: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	sweetdreams: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

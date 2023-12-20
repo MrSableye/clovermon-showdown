@@ -12022,7 +12022,36 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (type === 'ground') return false;
 		},
 	},
-
+	medusascurse: {
+		name: "Medusa's Curse",
+		onStart(source) {
+			for (const pokemon of this.getAllActive()) {
+				if (pokemon === source) continue;
+				this.add('-start', pokemon, 'typechange', 'Rock', "[from] ability: Medusa's Curse", '[of] ' + source);
+				pokemon.setType('Rock');
+			}
+		},
+		isNonstandard: "Future",
+	},
+	sweetdreams: {
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onResidual(pokemon) {
+			let factor = 0;
+			if (pokemon.status === 'slp') {
+				factor++;
+			}
+			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+			if (target && target.status === 'slp') {
+				factor++;
+			}
+			if (factor) {
+				this.heal(factor * (pokemon.baseMaxhp / 16));
+			}
+		},
+		name: "Sweet Dreams",
+		isNonstandard: "Future",
+	},
 	barkback: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.flags['sound']) {

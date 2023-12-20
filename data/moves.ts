@@ -32976,6 +32976,43 @@ oceanhorn: {
 		contestType: "Clever",
 		isNonstandard: "Future",
 	},
+	scryingwish: {
+		accuracy: 100,
+		basePower: 140,
+		category: "Special",
+		name: "Scrying Wish",
+		pp: 10,
+		priority: 0,
+		flags: {allyanim: 1, futuremove: 1},
+		ignoreImmunity: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 3,
+				move: 'scryingwish',
+				source: source,
+				moveData: {
+					id: 'scryingwish',
+					name: "Scrying Wish",
+					accuracy: 100,
+					basePower: 140,
+					category: "Special",
+					priority: 0,
+					flags: {allyanim: 1, futuremove: 1},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					type: 'Water',
+				},
+			});
+			this.add('-start', source, 'move: Scrying Wish');
+			return this.NOT_FAIL;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		contestType: "Clever",
+		isNonstandard: "Future",
+	},
 	maplewarrior: {
 		isNonstandard: "Future",
 		accuracy: true,
