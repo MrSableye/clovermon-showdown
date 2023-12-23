@@ -34013,7 +34013,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 			spe: 111,
 		},
 		abilities: {
-			0: "Snowcloak",
+			0: "Snow Cloak",
 			H: "Snow Warning",
 			S: "Hyperborean Arctic",
 		},
