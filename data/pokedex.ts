@@ -34015,7 +34015,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {
 			0: "Snowcloak",
 			H: "Snow Warning",
-			1: "Hyperborean Arctic",
+			S: "Hyperborean Arctic",
 		},
 		heightm: 0.7,
 		weightkg: 51.9,
