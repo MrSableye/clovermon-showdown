@@ -9009,6 +9009,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
+	hailsanta: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	megablobbos: {
 		inherit: true,
 		isNonstandard: "Future",

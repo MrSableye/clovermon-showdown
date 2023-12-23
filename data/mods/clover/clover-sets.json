@@ -753,7 +753,33 @@
 							"knockoff"
 					 ],
 					 "level":84
-				}
+				},
+				{
+					"abilities":[
+						   "protean"
+					],
+					"items":[
+						   "flyinggem"
+					],
+					"moves":[
+						   "acrobatics",
+						   "earthquake",
+						   "rapidspin",
+						   "uturn",
+						   "machpunch",
+						   "closecombat",
+						   "firepunch",
+						   "thunderpunch",
+						   "icepunch",
+						   "knockoff",
+						   "bulletpunch",
+						   "poisonjab"
+					],
+					"lockedMoves":[
+						"acrobatics"
+				 ],
+					"level":84
+			   }
 		 ]
 	},
 	"finasoven":{
@@ -9745,6 +9771,84 @@
 		   }
 		]
    },
+   "haiisanta":{
+	"nicknames":[
+			"Seig Hail",
+		   "KrisKringel",
+		   "Hailsanta",
+		   "Hailsanta"
+	],
+	"sets":[
+		   {
+			"abilities":[
+				"snowcloak"
+		 ],
+				"items":[
+					   "lifeorb",
+					   "leftovers"
+				],
+				"moves":[
+					"milkdrink",
+					"earthpower",
+					"slipturn",
+					"icebeam",
+					"closecombat",
+					"honeclaws",
+					"blizzard",
+					"knockoff",
+					"iciclecrash"
+				],
+				"level":80
+		   },
+		   {
+				"abilities":[
+					   "hail"
+				],
+				"items":[
+					   "lightclay",
+					   "lifeorb"
+				],
+				"moves":[
+					   "blizzard",
+					   "earthpower",
+					   "sliipturn",
+					   "auroraveil",
+					   "focusblast"
+				],
+				"level":76
+		   },
+		   {
+				"abilities":[
+					   "snowcloak"
+				],
+				"items":[
+					   "choicescarf"
+				],
+				"moves":[
+					   "slipturn",
+					   "earthpower",
+					   "focusblast",
+					   "icebeam"
+				],
+				"level":80
+		   },
+		   {
+			"abilities":[
+				"snowcloak"
+		 ],
+			"items":[
+				   "leftovers"
+			],
+			"moves":[
+				   "honeclaws",
+				   "iciclecrash",
+				   "knockoff",
+				   "stoneedge"
+			],
+			"level":80
+	   }
+	]
+},
 	"deisnutz":{
 		 "nicknames":[
 				"NUT DELUXE",

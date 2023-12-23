@@ -7647,6 +7647,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		],
 		randomBattleLevel: 72,
 	},
+	hailsanta: {
+		inherit: true,
+		tier: "OU",
+		isNonstandard: null,
+	},
 	blobbos: {
 		inherit: true,
 		tier: "LC",

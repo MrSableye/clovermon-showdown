@@ -33996,6 +33996,35 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		gen: 8,
 		tags: ["Mythical"],
 	},
+	hailsanta: {
+		num: 69666,
+		name: "Hailsanta",
+		types: [
+			"Ice",
+			"Dark",
+		],
+		gender: "N",
+		baseStats: {
+			hp: 111,
+			atk: 111,
+			def: 111,
+			spa: 111,
+			spd: 111,
+			spe: 111,
+		},
+		abilities: {
+			0: "Snowcloak",
+			H: "Hail",
+			1: "Hyperborean Arctic",
+		},
+		heightm: 0.7,
+		weightkg: 51.9,
+		color: "Red",
+		eggGroups: [
+			"Undiscovered",
+		],
+		gen: 8,
+	},
 	megablobbos: {
 		num: 69387,
 		name: "Mega Blobbos",
