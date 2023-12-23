@@ -35,7 +35,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
-			'Condoom + Unaware', 'Potarded + Unaware', 
+			'Condoom + Unaware', 'Potarded + Unaware', 'Hailsanta + Snow Warning', 
 		],
 	},
 	{
