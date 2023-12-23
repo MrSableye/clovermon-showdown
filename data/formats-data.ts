@@ -7816,6 +7816,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	hailsanta: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbos: {
 		tier: "Illegal",
 		isNonstandard: "Future",
