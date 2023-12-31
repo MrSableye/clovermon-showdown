@@ -521,6 +521,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	triattack: {
+		inherit: true,
+		desc: "Has a 20% chance to either burn, freeze, or paralyze the target. Physical if user's Atk > Sp. Atk.",
+		shortDesc: "20% chance to paralyze or burn or freeze target. Physical if user's Atk > Sp. Atk.",
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+	},
 	terrainpulse: {
 		inherit: true,
 		onModifyType(move, pokemon) {
