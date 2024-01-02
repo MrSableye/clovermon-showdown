@@ -27844,6 +27844,7 @@ oceanhorn: {
 				spd: -1,
 			},
 		},
+		drain: [1, 2],
 		target: "normal",
 		type: "Plastic",
 		contestType: "Clever",
@@ -41022,6 +41023,7 @@ oceanhorn: {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		drain: [1, 2],
 		target: "normal",
 		type: "Ghost",
 		isNonstandard: "Future",
@@ -41119,6 +41121,9 @@ oceanhorn: {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
 		secondary: null,
 		target: "normal",
 		type: "Wood",
@@ -41239,6 +41244,7 @@ oceanhorn: {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
 		secondary: null,
+		drain: [1, 2],
 		target: "normal",
 		type: "Zombie",
 		isNonstandard: "Future",
@@ -42970,6 +42976,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, bite: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -43057,6 +43064,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		drain: [1, 2],
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
@@ -43513,6 +43521,7 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Zombie",
@@ -44773,6 +44782,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		drain: [1, 2],
 		target: "normal",
 		type: "Light",
 		isNonstandard: "Future",
@@ -45992,6 +46002,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Nuclear",
@@ -47622,6 +47633,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		overrideOffensivePokemon: 'target',
 		target: "normal",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -48735,6 +48747,7 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -49187,6 +49200,7 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Ground",
@@ -49313,6 +49327,7 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -49916,6 +49931,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -50972,6 +50988,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		overrideOffensivePokemon: 'target',
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -51647,6 +51664,11 @@ beforeTurnCallback(pokemon) {
 		name: "Replicate",
 		pp: 5,
 		priority: 0,
+		onHit(target, pokemon) {
+			if (!target.transformInto(pokemon)) {
+				return false;
+			}
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -51705,6 +51727,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Food",
@@ -53263,6 +53286,17 @@ beforeTurnCallback(pokemon) {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
+		onHit(target, source) {
+			const item = target.getItem();
+			if (source.hp && item.isBerry && target.takeItem(source)) {
+				this.add('-enditem', target, item.name, '[from] stealeat', '[move] Fish Bite', '[of] ' + source);
+				if (this.singleEvent('Eat', item, null, source, null, null)) {
+					this.runEvent('EatItem', source, null, null, item);
+					if (item.id === 'leppaberry') target.staleness = 'external';
+				}
+				if (item.onEat) source.ateBerry = true;
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -54080,6 +54114,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		overrideOffensivePokemon: 'target',
 		target: "normal",
 		type: "Flying",
 		isNonstandard: "Future",
@@ -54872,6 +54907,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		overrideOffensivePokemon: 'target',
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -55041,6 +55077,17 @@ beforeTurnCallback(pokemon) {
 		name: "Harvesting",
 		pp: 20,
 		priority: 0,
+		onHit(target, source) {
+			const item = target.getItem();
+			if (source.hp && item.isBerry && target.takeItem(source)) {
+				this.add('-enditem', target, item.name, '[from] stealeat', '[move] Harvesting', '[of] ' + source);
+				if (this.singleEvent('Eat', item, null, source, null, null)) {
+					this.runEvent('EatItem', source, null, null, item);
+					if (item.id === 'leppaberry') target.staleness = 'external';
+				}
+				if (item.onEat) source.ateBerry = true;
+			}
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -57854,6 +57901,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -58050,6 +58098,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -59009,6 +59058,15 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Rubber' || !target.setType('Rubber')) {
+				// Soak should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add('-fail', target);
+				return null;
+			}
+			this.add('-start', target, 'typechange', 'Rubber');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Rubber",
@@ -59128,6 +59186,7 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
 		type: "Rubber",
@@ -59212,6 +59271,7 @@ beforeTurnCallback(pokemon) {
 		name: "Rubber Beams",
 		pp: 15,
 		priority: 0,
+		multihit: [2, 5],
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -59452,6 +59512,11 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		boosts: {
+			def: -2,
+			spd: -2,
+			spe: 2,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fear",
@@ -59887,6 +59952,7 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Electric",
@@ -60164,6 +60230,7 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Zombie",
@@ -62483,6 +62550,7 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Cyber",
@@ -62926,6 +62994,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Wood",
@@ -63260,6 +63329,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		overrideOffensivePokemon: 'target',
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -63948,6 +64018,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Fear",
@@ -64062,6 +64133,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Light",
@@ -64921,6 +64993,13 @@ beforeTurnCallback(pokemon) {
 		name: "Agitate Wound",
 		pp: 10,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			if (target.hurtThisTurn) {
+				this.debug('BP doubled on damaged target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -65631,6 +65710,7 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Time",
@@ -65645,6 +65725,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Time",
@@ -65799,6 +65880,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Zombie",
@@ -65940,6 +66022,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Grass",
@@ -66287,6 +66370,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, bite: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Food",
@@ -66458,6 +66542,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Fear",
@@ -68686,7 +68771,10 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Fear",
 		isNonstandard: "Future",
@@ -69183,6 +69271,7 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Tech",
@@ -69579,6 +69668,7 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Zombie",
@@ -72819,6 +72909,7 @@ beforeTurnCallback(pokemon) {
 		pp: 25,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Magma",
@@ -73467,6 +73558,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, bite: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Food",
@@ -76365,6 +76457,7 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
@@ -76379,6 +76472,7 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Food",
@@ -76394,6 +76488,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		drain: [1, 2],
 		target: "normal",
 		type: "Ghost",
 		isNonstandard: "Future",
@@ -78031,6 +78126,7 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Blood",
@@ -78710,6 +78806,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		overrideOffensivePokemon: 'target',
 		target: "normal",
 		type: "Dragon",
 		isNonstandard: "Future",
@@ -78737,6 +78834,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
@@ -78807,6 +78905,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
@@ -79522,6 +79621,7 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Food",
@@ -79678,6 +79778,13 @@ beforeTurnCallback(pokemon) {
 		name: "Butter Slap",
 		pp: 10,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			if (target.hurtThisTurn) {
+				this.debug('BP doubled on damaged target');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -79750,6 +79857,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		drain: [1, 2],
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -81512,6 +81620,26 @@ beforeTurnCallback(pokemon) {
 		name: "Combo Attack",
 		pp: 15,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			if (!pokemon.volatiles['furycutter'] || move.hit === 1) {
+				pokemon.addVolatile('furycutter');
+			}
+			const bp = this.clampIntRange(move.basePower * pokemon.volatiles['furycutter'].multiplier, 1, 160);
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		condition: {
+			duration: 2,
+			onStart() {
+				this.effectState.multiplier = 1;
+			},
+			onRestart() {
+				if (this.effectState.multiplier < 4) {
+					this.effectState.multiplier <<= 1;
+				}
+				this.effectState.duration = 2;
+			},
+		},
 		flags: {protect: 1, mirror: 1, sound: 1},
 		secondary: null,
 		target: "normal",
@@ -81627,6 +81755,7 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Virus",
@@ -81641,6 +81770,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		drain: [1, 2],
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
