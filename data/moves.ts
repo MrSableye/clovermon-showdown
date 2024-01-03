@@ -35024,7 +35024,19 @@ oceanhorn: {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 22,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('brn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('frz', source);
+				}
+			},
+		},
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -41440,6 +41452,13 @@ oceanhorn: {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Sound",
@@ -41831,6 +41850,10 @@ oceanhorn: {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		onHit(target) {
+			this.boost({spe: -12}, target);
+			this.boost({def: 12}, target);
+		},
 		secondary: null,
 		target: "self",
 		type: "Rock",
@@ -42773,6 +42796,11 @@ beforeTurnCallback(pokemon) {
 		name: "Talk Smack",
 		pp: 20,
 		priority: 0,
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('taunt');
+			}
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1, sound: 1},
 		secondary: null,
 		target: "normal",
@@ -44264,6 +44292,13 @@ beforeTurnCallback(pokemon) {
 		category: "Physical",
 		name: "Hex Punch",
 		pp: 10,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status || target.hasAbility('comatose')) {
+				this.debug('BP doubled from status condition');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -45062,7 +45097,12 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 70,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -45121,7 +45161,10 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -45135,7 +45178,12 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Wind",
 		isNonstandard: "Future",
@@ -45150,6 +45198,11 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, above: 1},
 		secondary: null,
+		self: {
+			onHit(source) {
+				this.field.setWeather('raindance');
+			},
+		},
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -46974,6 +47027,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			atk: 1,
+			spe: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Wind",
@@ -47274,6 +47331,13 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (target.status || target.hasAbility('comatose')) {
+				this.debug('BP doubled from status condition');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Virus",
@@ -48096,6 +48160,18 @@ beforeTurnCallback(pokemon) {
 		name: "Armor Burst",
 		pp: 5,
 		priority: 0,
+		onTryMove(pokemon, target, move) {
+			if (pokemon.hasType('Steel')) return;
+			this.add('-fail', pokemon, 'move: Armor Burst');
+			this.attrLastMove('[still]');
+			return null;
+		},
+		self: {
+			onHit(pokemon) {
+				pokemon.setType(pokemon.getTypes(true).map(type => type === "Steel" ? "???" : type));
+				this.add('-start', pokemon, 'typechange', pokemon.getTypes().join('/'), '[from] move: Armor Burst');
+			},
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -49128,6 +49204,13 @@ beforeTurnCallback(pokemon) {
 		name: "Virus Crush",
 		pp: 10,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status || target.hasAbility('comatose')) {
+				this.debug('BP doubled from status condition');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -50015,6 +50098,13 @@ beforeTurnCallback(pokemon) {
 		name: "Fairy Hex",
 		pp: 10,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status || target.hasAbility('comatose')) {
+				this.debug('BP doubled from status condition');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -50344,6 +50434,13 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -50800,8 +50897,11 @@ beforeTurnCallback(pokemon) {
 		name: "Boom Box",
 		pp: 15,
 		priority: 0,
+		secondary: {
+			chance: 25,
+			volatileStatus: 'flinch',
+		},
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1, sound: 1},
-		secondary: null,
 		target: "normal",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -51233,6 +51333,13 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bone: 1},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Zombie",
@@ -53623,6 +53730,13 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Chaos",
@@ -54213,6 +54327,13 @@ beforeTurnCallback(pokemon) {
 		name: "Resonate",
 		pp: 10,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status || target.hasAbility('comatose')) {
+				this.debug('BP doubled from status condition');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -55176,7 +55297,15 @@ beforeTurnCallback(pokemon) {
 		pp: 1,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
+		self: {
+			onHit(source) {
+				this.field.setWeather('hail');
+			},
+		},
 		target: "normal",
 		type: "Blood",
 		isNonstandard: "Future",
@@ -55204,7 +55333,33 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'tox',
+		},
+		priorityChargeCallback(pokemon) {
+			pokemon.addVolatile('focuspunch');
+		},
+		beforeMoveCallback(pokemon) {
+			if (pokemon.volatiles['focuspunch']?.lostFocus) {
+				this.add('cant', pokemon, 'Focus Punch', 'Focus Punch');
+				return true;
+			}
+		},
+		condition: {
+			duration: 1,
+			onStart(pokemon) {
+				this.add('-singleturn', pokemon, 'move: Focus Punch');
+			},
+			onHit(pokemon, source, move) {
+				if (move.category !== 'Status') {
+					this.effectState.lostFocus = true;
+				}
+			},
+			onTryAddVolatile(status, pokemon) {
+				if (status.id === 'flinch') return null;
+			},
+		},
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -55217,8 +55372,18 @@ beforeTurnCallback(pokemon) {
 		name: "Fourth Trumpet",
 		pp: 5,
 		priority: 0,
+		secondary: {
+			chance: 100,
+			boosts: {
+				accuracy: -12,
+			},
+		},
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		self: {
+			onHit(source) {
+				this.field.setWeather('midnight');
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -55232,6 +55397,10 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		onDamagePriority: -20,
+		onDamage(damage, target, source, effect) {
+			if (damage >= target.hp) return target.hp - 1;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Bug",
@@ -55562,6 +55731,11 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			atk: 3,
+			spa: 3,
+		},
+		volatileStatus: 'confusion',
 		secondary: null,
 		target: "self",
 		type: "Chaos",
@@ -55617,6 +55791,32 @@ beforeTurnCallback(pokemon) {
 		name: "Schizo Boost",
 		pp: 5,
 		priority: 0,
+		onHit (pokemon) {
+			let stats: BoostID[] = [];
+			const boost: SparseBoostsTable = {};
+			let statPlus: BoostID;
+			for (statPlus in pokemon.boosts) {
+				if (statPlus === 'accuracy' || statPlus === 'evasion') continue;
+				if (pokemon.boosts[statPlus] < 6) {
+					stats.push(statPlus);
+				}
+			}
+			let randomStat: BoostID | undefined = stats.length ? this.sample(stats) : undefined;
+			if (randomStat) boost[randomStat] = 12;
+
+			stats = [];
+			let statMinus: BoostID;
+			for (statMinus in pokemon.boosts) {
+				if (statMinus === 'accuracy' || statMinus === 'evasion') continue;
+				if (pokemon.boosts[statMinus] > -6 && statMinus !== randomStat) {
+					stats.push(statMinus);
+				}
+			}
+			randomStat = stats.length ? this.sample(stats) : undefined;
+			if (randomStat) boost[randomStat] = -12;
+
+			this.boost(boost, pokemon, pokemon);
+		},
 		flags: {},
 		secondary: null,
 		target: "adjacentAllyOrSelf",
@@ -58590,6 +58790,11 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		self: {
+			onHit(source) {
+				this.field.setWeather('AcidRain');
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Poison",
@@ -58890,6 +59095,13 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Rock",
@@ -59157,6 +59369,11 @@ beforeTurnCallback(pokemon) {
 		name: "Time Loop",
 		pp: 15,
 		priority: 0,
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('taunt');
+			}
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -60287,6 +60504,10 @@ beforeTurnCallback(pokemon) {
 		name: "Scouting",
 		pp: 15,
 		priority: 0,
+		boosts: {
+			atk: 1,
+			accuracy: 1,
+		},
 		flags: {snatch: 1},
 		secondary: null,
 		target: "self",
@@ -63156,6 +63377,13 @@ beforeTurnCallback(pokemon) {
 		name: "Insect Decay",
 		pp: 10,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			if (target.status || target.hasAbility('comatose')) {
+				this.debug('BP doubled from status condition');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -66385,6 +66613,29 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {},
+		ignoreImmunity: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 3,
+				move: 'delivery',
+				source: source,
+				moveData: {
+					id: 'delivery',
+					name: "Delivery",
+					accuracy: 100,
+					basePower: 110,
+					category: "Special",
+					priority: 0,
+					flags: {allyanim: 1, futuremove: 1},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					type: 'Food',
+				},
+			});
+			this.add('-start', source, 'move: Future Sight');
+			return this.NOT_FAIL;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Food",
@@ -66658,7 +66909,19 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 22,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('brn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('frz', source);
+				}
+			},
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -67293,6 +67556,11 @@ beforeTurnCallback(pokemon) {
 		name: "Mischief",
 		pp: 15,
 		priority: 0,
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('taunt');
+			}
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -68658,6 +68926,11 @@ beforeTurnCallback(pokemon) {
 		name: "Regret Trident",
 		pp: 5,
 		priority: 0,
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('taunt');
+			}
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -72102,6 +72375,13 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+			pokemon.side.removeSideCondition('mirageveil');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
@@ -72333,7 +72613,14 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -72716,6 +73003,11 @@ beforeTurnCallback(pokemon) {
 		name: "Trolling",
 		pp: 10,
 		priority: 0,
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('taunt');
+			}
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -72800,6 +73092,11 @@ beforeTurnCallback(pokemon) {
 		name: "Annoyance",
 		pp: 30,
 		priority: 0,
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('taunt');
+			}
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -75280,6 +75577,13 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			if (target.status || target.hasAbility('comatose')) {
+				this.debug('BP doubled from status condition');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ghost",
@@ -75820,7 +76124,15 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		overrideOffensiveStat: 'def',
+		secondary: {
+			chance: 10,
+			self: {
+				boosts: {
+					def: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Steel",
 		isNonstandard: "Future",
@@ -76559,7 +76871,14 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, sound: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Sound",
 		isNonstandard: "Future",
@@ -82389,6 +82708,11 @@ beforeTurnCallback(pokemon) {
 		name: "The N Word",
 		pp: 20,
 		priority: 0,
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('taunt');
+			}
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
