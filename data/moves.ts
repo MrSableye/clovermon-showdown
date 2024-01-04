@@ -35080,8 +35080,12 @@ oceanhorn: {
 		name: "Ebola",
 		pp: 5,
 		priority: 0,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'bleed',
+			status: 'psn',
+		},
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
 		target: "allAdjacent",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -41180,6 +41184,11 @@ oceanhorn: {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.hp * 2 <= target.maxhp) {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Food",
@@ -41854,6 +41863,9 @@ oceanhorn: {
 			this.boost({spe: -12}, target);
 			this.boost({def: 12}, target);
 		},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
 		secondary: null,
 		target: "self",
 		type: "Rock",
@@ -42284,7 +42296,7 @@ beforeTurnCallback(pokemon) {
 				(![2, 4].includes(this.gen) || !source.moves.includes(move.id)) &&
 				!move.realMove && !move.isZ && !move.isMax &&
 				(!move.isNonstandard || move.isNonstandard === 'Unobtainable') &&
-				move.type === 'Magic' && move.id !== 'magicwand'
+				move.type === 'Steel' && move.id !== 'steelcasting'
 			));
 			let randomMove = '';
 			if (moves.length) {
@@ -43019,6 +43031,11 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.hp * 2 <= target.maxhp) {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fairy",
@@ -44859,7 +44876,14 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					spa: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -47261,7 +47285,19 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('brn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('frz', source);
+				}
+			},
+		},
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -49857,6 +49893,11 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.hp * 2 <= target.maxhp) {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Paper",
@@ -49942,6 +49983,11 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.hp * 2 <= target.maxhp) {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		critRatio: 2,
 		target: "normal",
@@ -50223,7 +50269,12 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			boosts: {
+				def: -1,
+			},
+		},
 		target: "normal",
 		type: "Meme",
 		isNonstandard: "Future",
@@ -51919,7 +51970,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 60,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Meme",
 		isNonstandard: "Future",
@@ -53258,6 +53312,11 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.hp * 2 <= target.maxhp) {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -56118,6 +56177,19 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onTryHit(target) {
+			if (target.getAbility().isPermanent || target.ability === 'klutz' || target.ability === 'truant') {
+				return false;
+			}
+		},
+		onHit(pokemon) {
+			const oldAbility = pokemon.setAbility('klutz');
+			if (oldAbility) {
+				this.add('-ability', pokemon, 'Klutz', '[from] move: Extra Chromosome');
+				return;
+			}
+			return oldAbility as false | null;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Virus",
@@ -58086,6 +58158,11 @@ beforeTurnCallback(pokemon) {
 		name: "Rust Spray",
 		pp: 10,
 		priority: 0,
+		onBasePower(basePower, pokemon, target) {
+			if (target.hp * 2 <= target.maxhp) {
+				return this.chainModify(2);
+			}
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -59661,6 +59738,11 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.hp * 2 <= target.maxhp) {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Flying",
@@ -61766,7 +61848,8 @@ beforeTurnCallback(pokemon) {
 		name: "Rhongomyniad",
 		pp: 5,
 		priority: 2,
-		flags: {},
+		flags: {mirror: 1, bypasssub: 1},
+		breaksProtect: true,
 		secondary: null,
 		target: "normal",
 		type: "Divine",
@@ -65769,6 +65852,11 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.hp * 2 <= target.maxhp) {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
@@ -67153,7 +67241,19 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 22,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('brn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('frz', source);
+				}
+			},
+		},
 		target: "normal",
 		type: "Meme",
 		isNonstandard: "Future",
@@ -69088,6 +69188,14 @@ beforeTurnCallback(pokemon) {
 		name: "Vibe Check",
 		pp: 10,
 		priority: 0,
+		basePowerCallback(pokemon, target, move) {
+			if (target.newlySwitched || this.queue.willMove(target)) {
+				this.debug('Fishious Rend damage boost');
+				return move.basePower * 2;
+			}
+			this.debug('Fishious Rend NOT boosted');
+			return move.basePower;
+		},
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -70316,7 +70424,10 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -71456,8 +71567,16 @@ beforeTurnCallback(pokemon) {
 		name: "Virus Propogate",
 		pp: 10,
 		priority: 0,
+		onHit(target) {
+			if (target.getTypes().join() === 'Virus' || !target.setType('Virus')) {
+				// Soak should animate even when it fails.
+				// Returning false would suppress the animation.
+				this.add('-fail', target);
+				return null;
+			}
+			this.add('-start', target, 'typechange', 'Virus');
+		},
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
 		target: "normal",
 		type: "Virus",
 		isNonstandard: "Future",
@@ -71930,6 +72049,11 @@ beforeTurnCallback(pokemon) {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.hp * 2 <= target.maxhp) {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -73511,6 +73635,17 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			const hp = target.hp;
+			const maxHP = target.maxhp;
+			const bp = Math.floor(Math.floor((120 * (100 * Math.floor(hp * 4096 / maxHP)) + 2048 - 1) / 4096) / 100) || 1;
+			this.debug('BP for ' + hp + '/' + maxHP + " HP: " + bp);
+			return bp;
+		},
+		onHit(target) {
+			if (target?.volatiles['bleed']) this.boost({def: -1}, target);
+		},
+		
 		secondary: null,
 		target: "normal",
 		type: "Blood",
@@ -74378,6 +74513,10 @@ beforeTurnCallback(pokemon) {
 		name: "Antiect Punch",
 		pp: 20,
 		priority: 0,
+		ignoreImmunity: {'Normal': true},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Ghost') return 1;
+		},
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		secondary: null,
 		target: "normal",
@@ -75009,6 +75148,18 @@ beforeTurnCallback(pokemon) {
 		name: "Sweet Cannon",
 		pp: 10,
 		priority: 0,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			this.boost({spd: 1}, attacker, attacker, move);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -80084,6 +80235,11 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.hp * 2 <= target.maxhp) {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Food",
@@ -81624,6 +81780,11 @@ beforeTurnCallback(pokemon) {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon, target) {
+			if (target.hp * 2 <= target.maxhp) {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
