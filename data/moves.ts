@@ -37762,22 +37762,7 @@ oceanhorn: {
 		pp: 10,
 		priority: 0,
 		flags: {bypasssub: 1, allyanim: 1},
-		onHit(target, source) {
-			let i: BoostID;
-			for (i in target.boosts) {
-				source.boosts[i] = target.boosts[i];
-			}
-			const volatilesToCopy = ['focusenergy', 'gmaxchistrike', 'laserfocus'];
-			for (const volatile of volatilesToCopy) {
-				if (target.volatiles[volatile]) {
-					source.addVolatile(volatile);
-					if (volatile === 'gmaxchistrike') source.volatiles[volatile].layers = target.volatiles[volatile].layers;
-				} else {
-					source.removeVolatile(volatile);
-				}
-			}
-			this.add('-copyboost', source, target, '[from] move: Data Absorb');
-		},
+		stealsBoosts: true,
 		secondary: null,
 		target: "normal",
 		type: "Cyber",
@@ -44269,6 +44254,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		stealsBoosts: true,
 		target: "normal",
 		selfSwitch: true,
 		type: "Dark",
@@ -50564,7 +50550,11 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		recoil: [33, 100],
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Magma",
 		isNonstandard: "Future",
@@ -52703,22 +52693,7 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		onHit(target, source) {
-			let i: BoostID;
-			for (i in target.boosts) {
-				source.boosts[i] = target.boosts[i];
-			}
-			const volatilesToCopy = ['focusenergy', 'gmaxchistrike', 'laserfocus'];
-			for (const volatile of volatilesToCopy) {
-				if (target.volatiles[volatile]) {
-					source.addVolatile(volatile);
-					if (volatile === 'gmaxchistrike') source.volatiles[volatile].layers = target.volatiles[volatile].layers;
-				} else {
-					source.removeVolatile(volatile);
-				}
-			}
-			this.add('-copyboost', source, target, '[from] move: Toxic Copy');
-		},
+		stealsBoosts: true,
 		secondary: null,
 		target: "normal",
 		type: "Poison",
@@ -53438,7 +53413,10 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -55030,7 +55008,15 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, pulse: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			self: {
+				volatileStatus: 'protect',
+			},
+		},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Bug', type);
+		},
 		target: "normal",
 		type: "Ground",
 		isNonstandard: "Future",
@@ -59581,6 +59567,23 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		condition: {
+			duration: 3,
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Seasoning');
+			},
+			onEffectivenessPriority: -2,
+			onEffectiveness(typeMod, target, type, move) {
+				if (move.type !== 'Food') return;
+				if (!target) return;
+				if (type !== target.getTypes()[0]) return;
+				return typeMod + 1;
+			},
+			onResidualOrder: 15,
+			onEnd(target) {
+				this.add('-end', target, 'move: Seasoning');
+			},
+		},
 		secondary: null,
 		target: "normal",
 		type: "Food",
@@ -60924,6 +60927,14 @@ beforeTurnCallback(pokemon) {
 		name: "HangingGardenBabylon",
 		pp: 10,
 		priority: 0,
+		self: {
+			onHit(source) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('reflect');
+					side.addSideCondition('lightscreen');
+				}
+			},
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "allAdjacentFoes",
@@ -63840,6 +63851,7 @@ beforeTurnCallback(pokemon) {
 		priority: -1,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		forceSwitch: true,
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -65956,6 +65968,9 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, pulse: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Water', type);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fear",
@@ -65970,6 +65985,9 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, pulse: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Water', type);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fear",
@@ -67037,7 +67055,12 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "normal",
 		type: "Fairy",
 		isNonstandard: "Future",
@@ -67352,7 +67375,14 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Shadow",
@@ -68002,7 +68032,12 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -69385,7 +69420,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
-		secondary: null,
+		secondary: {
+			chance: 35,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Fighting",
 		isNonstandard: "Future",
@@ -69553,7 +69591,10 @@ beforeTurnCallback(pokemon) {
 		pp: 25,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
 		target: "allAdjacentFoes",
 		type: "Nuclear",
 		isNonstandard: "Future",
@@ -76204,6 +76245,16 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (!target.volatiles['dynamax']) {
+				target.addVolatile('torment');
+				target.addVolatile('taunt');
+				target.addVolatile('confusion');
+			}
+		},
+		boosts: {
+			spa: 3,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Meme",
@@ -79648,6 +79699,9 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, pulse: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Water', type);
+		},
 		secondary: null,
 		target: "normal",
 		type: "Heart",
