@@ -7650,6 +7650,13 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	hailsanta: {
 		inherit: true,
 		tier: "OU",
+		randomBattleMoves: [
+			"slipturn",
+			"icebeam",
+			"earthpower",
+			"knockoff",
+			"milkdrink",
+		],
 		isNonstandard: null,
 	},
 	blobbos: {

@@ -36601,10 +36601,14 @@ oceanhorn: {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1},
-		secondary: null,
-		boosts: {
-			spa: 1,
-			spd: 1,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spa: 1,
+					spd: 1,
+				},
+			},
 		},
 		target: "normal",
 		type: "Divine",
@@ -51946,7 +51950,10 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 90,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Meme",
 		isNonstandard: "Future",
@@ -52535,7 +52542,10 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Meme",
 		isNonstandard: "Future",
@@ -60928,8 +60938,8 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		self: {
-			onHit(source) {
-				for (const side of source.side.foeSidesWithConditions()) {
+			onHit(target) {
+				for (const side of target.side.foeSidesWithConditions()) {
 					side.addSideCondition('reflect');
 					side.addSideCondition('lightscreen');
 				}
@@ -67454,7 +67464,18 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			self: {
+				boosts: {
+					atk: 1,
+					def: 1,
+					spa: 1,
+					spd: 1,
+					spe: 1,
+				},
+			},
+		},
 		critRatio: 2,
 		target: "normal",
 		type: "Divine",
