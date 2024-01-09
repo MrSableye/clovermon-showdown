@@ -2401,7 +2401,7 @@ export class RandomTeams {
 		for (const id in this.dex.data.FormatsData) {
 			let species = this.dex.species.get(id);
 			if (species.gen > this.gen || exclude.includes(species.id)) continue;
-			if (isCloveronly && (species.num <= 69000 || species.num > 69386 || species.num !== 69666)) continue;
+			if (isCloveronly && (species.num <= 69000 || species.num > 69386 && species.num !== 69666)) continue;
 			if (isMonotype) {
 				if (!species.types.includes(type)) continue;
 				if (typeof species.battleOnly === 'string') {
