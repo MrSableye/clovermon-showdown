@@ -33014,6 +33014,26 @@ oceanhorn: {
 		contestType: "Clever",
 		isNonstandard: "Future",
 	},
+	perfectcalculation: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Perfect Calculation",
+		pp: 1,
+		noPPBoosts: true,
+		priority: 0,
+		flags: {},
+		secondary: null,
+		onHit(pokemon) {
+			const turn = this.prngSeed.reduce((value, total) => value + total, 0) % 40;
+			if (this.turn === turn + 5) {
+				this.win(pokemon.side);
+			}
+		},
+		target: "self",
+		type: "Psychic",
+		isNonstandard: "Future",
+	},
 	maplewarrior: {
 		isNonstandard: "Future",
 		accuracy: true,

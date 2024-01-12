@@ -9458,6 +9458,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Scrying Wish",
 		shortDesc: "Hits two turns after being used.",
 	},
+	perfectcalculation: {
+		name: "Perfect Calculation",
+		desc: "If the sum of this battle's RNG seed mod 40 plus 5 is the same as the current turn, the user's team wins.",
+	},
 	maplewarrior: {
 		name: "Maple Warrior",
 		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",
