@@ -31894,6 +31894,17 @@ oceanhorn: {
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
 		},
+		onHit(target, pokemon, move) {
+			if (pokemon.baseSpecies.id !== 'blobbosomori' && pokemon.species.id !== 'blobbosomori') {
+				move.willChangeForme = true;
+			}
+		},
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (pokemon.species.id === 'blobbosomorisad') return;
+			if (move.willChangeForme) {
+				pokemon.formeChange('Blobbos-Omori-Sad', this.effect, false);
+			}
+		},
 		secondary: {
 			chance: 40,
 			boosts: {
@@ -31916,6 +31927,17 @@ oceanhorn: {
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
 		},
+		onHit(target, pokemon, move) {
+			if (pokemon.baseSpecies.id !== 'blobbosomori' && pokemon.species.id !== 'blobbosomori') {
+				move.willChangeForme = true;
+			}
+		},
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (pokemon.species.id === 'blobbosomoriangry') return;
+			if (move.willChangeForme) {
+				pokemon.formeChange('Blobbos-Omori-Angry', this.effect, false);
+			}
+		},
 		secondary: {
 			chance: 20,
 			status: 'brn',
@@ -31936,15 +31958,15 @@ oceanhorn: {
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
 		},
-		
 		onHit(target, pokemon, move) {
-			if (pokemon.baseSpecies.baseSpecies === 'Blobbos-Omori' && !pokemon.transformed) {
+			if (pokemon.baseSpecies.id !== 'blobbosomori' && pokemon.species.id !== 'blobbosomori') {
 				move.willChangeForme = true;
 			}
 		},
 		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (pokemon.species.id === 'blobbosomorihappy') return;
 			if (move.willChangeForme) {
-				pokemon.formeChange('Blobbos-Omori-Happy');
+				pokemon.formeChange('Blobbos-Omori-Happy', this.effect, false);
 			}
 		},
 		secondary: {

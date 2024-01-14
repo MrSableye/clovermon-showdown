@@ -9285,15 +9285,15 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sadpoem: {
 		name: "Sad Poem",
-		shortDesc: "Placeholder. 40% chance to lower Defense. Special if user's Sp. Atk > Atk.",
+		shortDesc: "Transform Blobbos-Omori into Blobbos-Omori-Sad. 40% chance to lower Defense. Special if user's Sp. Atk > Atk.",
 	},
 	annoy: {
 		name: "Annoy",
-		shortDesc: "Placeholder. 20% chance to burn. Special if user's Sp. Atk > Atk.",
+		shortDesc: "Transform Blobbos-Omori into Blobbos-Omori-Angry. 20% chance to burn. Special if user's Sp. Atk > Atk.",
 	},
 	peptalk: {
 		name: "Pep Talk",
-		shortDesc: "Placeholder. 30% chance to raise user's accuracy. Special if user's Sp. Atk > Atk.",
+		shortDesc: "Transforms Blobbos-Omori into Blobbos-Omori-Happy. 30% chance to raise user's accuracy. Special if user's Sp. Atk > Atk.",
 	},
 	errpkmn: {
 		name: "ERR.PKMN",
