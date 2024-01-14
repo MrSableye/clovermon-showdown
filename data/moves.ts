@@ -31944,7 +31944,7 @@ oceanhorn: {
 		},
 		onAfterMoveSecondarySelf(pokemon, target, move) {
 			if (move.willChangeForme) {
-				pokemon.formeChange('Blobbos-Omori-Happy', this.effect, true);
+				pokemon.formeChange('Blobbos-Omori-Happy');
 			}
 		},
 		secondary: {
