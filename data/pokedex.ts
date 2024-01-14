@@ -39429,6 +39429,7 @@ iwik: {
 			"Ditto",
 		],
 		gen: 8,
+		battleOnly: "Blobbos-Omori",
 	},
 	blobbosomorisad: {
 		num: 69132,

@@ -31938,7 +31938,8 @@ oceanhorn: {
 		},
 		onHit(target, pokemon, move) {
 			if (pokemon.baseSpecies.baseSpecies === 'Blobbos-Omori' && !pokemon.transformed) {
-				pokemon.formeChange('Blobbos-Omori-Happy', this.effect, true);
+				pokemon.formeChange('Blobbos-Omori-Happy');
+				
 			}
 		},
 		secondary: {
