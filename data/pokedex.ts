@@ -43654,6 +43654,7 @@ blobbosmechelectric: {
 			"Monster",
 		],
 		gen: 8,
+		battleOnly: "Blobbos-Dragon Maid",
 	},
 	acapdesign: {
 		num: -42075,
