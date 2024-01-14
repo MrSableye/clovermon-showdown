@@ -39410,7 +39410,7 @@ iwik: {
 		num: 69132,
 		name: "Blobbos-Omori-Happy",
 		baseSpecies: "Blobbos",
-		forme: "Omori-Happy",
+		forme: "Happy",
 		types: ["Ghost", "Dark"],
 		gender: "M",
 		baseStats: {
