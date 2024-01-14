@@ -39379,6 +39379,7 @@ iwik: {
 		num: 69132,
 		name: "Blobbos-Omori",
 		baseSpecies: "Blobbos",
+		baseForme: "Regular",
 		forme: "Omori",
 		types: ["Ghost", "Dark"],
 		gender: "M",
@@ -39406,10 +39407,11 @@ iwik: {
 		formeOrder: ["Blobbos-Omori", "Blobbos-Omori-Happy"],
 		gen: 8,
 	},
+	
 	blobbosomorihappy: {
 		num: 69132,
 		name: "Blobbos-Omori-Happy",
-		baseSpecies: "Blobbos",
+		baseSpecies: "Blobbos-Omori",
 		forme: "Happy",
 		types: ["Ghost", "Dark"],
 		gender: "M",
