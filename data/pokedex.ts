@@ -39402,6 +39402,8 @@ iwik: {
 		eggGroups: [
 			"Ditto",
 		],
+		otherFormes: ["Blobbos-Omori-Happy"],
+		formeOrder: ["Blobbos-Omori", "Blobbos-Omori-Happy"],
 		gen: 8,
 	},
 	blobbosomorihappy: {
