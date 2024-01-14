@@ -31936,6 +31936,16 @@ oceanhorn: {
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
 		},
+		onHit(target, pokemon, move) {
+			if (pokemon.baseSpecies.baseSpecies === 'Blobbos-Omori' && !pokemon.transformed) {
+				move.willChangeForme = true;
+			}
+		},
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (move.willChangeForme) {
+				pokemon.formeChange('Blobbos-Omori-Happy', this.effect, true, '[msg]');
+			}
+		},
 		secondary: {
 			chance: 30,
 			self: {
