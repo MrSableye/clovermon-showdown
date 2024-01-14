@@ -7649,7 +7649,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	hailsanta: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		randomBattleMoves: [
 			"slipturn",
 			"icebeam",

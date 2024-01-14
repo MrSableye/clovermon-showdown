@@ -35,7 +35,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
-			'Condoom + Unaware', 'Potarded + Unaware', 'Hailsanta + Snow Warning', 
+			'Condoom + Unaware', 'Potarded + Unaware', 
 		],
 	},
 	{
@@ -47,7 +47,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Baton Pass', 'Shadow Tag'],
+		banlist: ['Baton Pass', 'Shadow Tag','Hailsanta',],
 	},
 	{
 		name: '[Gen 8 Clover Only] UU',

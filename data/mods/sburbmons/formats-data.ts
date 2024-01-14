@@ -9052,6 +9052,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData; } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	blobbosdragonmaid: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	acapdesign: {
 		inherit: true,
 		isNonstandard: "Past",
