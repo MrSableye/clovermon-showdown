@@ -31895,7 +31895,7 @@ oceanhorn: {
 			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
 		},
 		onHit(target, pokemon, move) {
-			if (pokemon.baseSpecies.id !== 'blobbosomori' && pokemon.species.id !== 'blobbosomori') {
+			if (pokemon.baseSpecies.id === 'blobbosomori' || pokemon.species.id === 'blobbosomori') {
 				move.willChangeForme = true;
 			}
 		},
@@ -31928,7 +31928,7 @@ oceanhorn: {
 			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
 		},
 		onHit(target, pokemon, move) {
-			if (pokemon.baseSpecies.id !== 'blobbosomori' && pokemon.species.id !== 'blobbosomori') {
+			if (pokemon.baseSpecies.id === 'blobbosomori' || pokemon.species.id === 'blobbosomori') {
 				move.willChangeForme = true;
 			}
 		},
@@ -31959,7 +31959,7 @@ oceanhorn: {
 			if (pokemon.getStat('spa', false, true) > pokemon.getStat('atk', false, true)) move.category = 'Special';
 		},
 		onHit(target, pokemon, move) {
-			if (pokemon.baseSpecies.id !== 'blobbosomori' && pokemon.species.id !== 'blobbosomori') {
+			if (pokemon.baseSpecies.id === 'blobbosomori' || pokemon.species.id === 'blobbosomori') {
 				move.willChangeForme = true;
 			}
 		},
