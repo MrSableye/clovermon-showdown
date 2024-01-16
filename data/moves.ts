@@ -84587,7 +84587,7 @@ beforeTurnCallback(pokemon) {
 		flags: {protect: 1, mirror: 1},
 		recoil: [33, 100],
 		secondary: null,
-		target: "allAdjacent"
+		target: "allAdjacent",
 		type: "Ground",
 		contestType: "Tough",
 	},
