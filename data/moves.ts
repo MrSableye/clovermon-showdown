@@ -7790,7 +7790,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 			onBasePowerPriority: 6,
 			onBasePower(basePower, attacker, defender, move) {
-				const weakenedMoves = ['earthquake', 'bulldoze', 'magnitude'];
+				const weakenedMoves = ['earthquake', 'bulldoze', 'magnitude', 'earthshatter'];
 				if (weakenedMoves.includes(move.id) && defender.isGrounded() && !defender.isSemiInvulnerable()) {
 					this.debug('move weakened by grassy terrain');
 					return this.chainModify(0.5);
@@ -84575,6 +84575,22 @@ beforeTurnCallback(pokemon) {
 		secondary: null,
 		target: "normal",
 		type: "Zombie",
+	},
+	earthshatter: {
+		num: 42010,
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Earth Shatter",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		recoil: [33, 100],
+		secondary: null,
+		target: "allAdjacent"
+		type: "Ground",
+		contestType: "Tough",
+	},
 	},
 	thetalker: {
         num: 42009,

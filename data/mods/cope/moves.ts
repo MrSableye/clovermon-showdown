@@ -4594,6 +4594,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	bitterblade: {
 		inherit: true,
 		isNonstandard: null,
+		},
+	spinout: {
+		inherit: true,
+		isNonstandard: null,
 	},
 	thetalker: {
 		inherit: true,
