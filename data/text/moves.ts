@@ -7842,6 +7842,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 20% chance to Curse the target.",
 		shortDesc: "20% to Curse, Lowers the user's Speed by 1.",
 	},
+	earthshatter: {
+		name: "Earth Shatter",
+		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 33% recoil.",
+	},
 	thetalker: {
 		name: "The Talker",
 		desc: "This move's Base Power is multiplied by 1.5x if Sunny Day, Desolate Land, or Dense Fog is active.",

@@ -84591,7 +84591,6 @@ beforeTurnCallback(pokemon) {
 		type: "Ground",
 		contestType: "Tough",
 	},
-	},
 	thetalker: {
         num: 42009,
         accuracy: 100,
