@@ -4598,6 +4598,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	spinout: {
 		inherit: true,
 		isNonstandard: null,
+		},
+	glaiverush: {
+		inherit: true,
+		isNonstandard: null,
 	},
 	thetalker: {
 		inherit: true,
