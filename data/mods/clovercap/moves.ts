@@ -769,6 +769,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	earthshatter: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	moregun: {
 		inherit: true,
 		isNonstandard: null,

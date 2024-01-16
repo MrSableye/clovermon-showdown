@@ -1886,6 +1886,14 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 	goodasgold: {
 		inherit: true,
 		isNonstandard: null,
+		},
+	wellbakedbody: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	thermalexchange: {
+		inherit: true,
+		isNonstandard: null,
 	},
 	eartheater: {
 		inherit: true,

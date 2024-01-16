@@ -2955,6 +2955,16 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
+		},
+	parmiausan: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+		},
+	gojifiend: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	suxako: {
 		inherit: true,
