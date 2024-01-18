@@ -759,6 +759,7 @@ export const Aliases: {[alias: string]: string} = {
 	karp: "Magikarp",
 	kart: "Kartana",
 	keld: "Keldeo",
+	kingpin: "Costrike",
 	klef: "Klefki",
 	koko: "Tapu Koko",
 	kou: "Raikou",

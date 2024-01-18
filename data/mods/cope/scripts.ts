@@ -374,23 +374,32 @@ export const Scripts: ModdedBattleScriptsData = {
 			move.totalDamage = 0;
 			let damage: number | undefined | false = 0;
 			pokemon.lastDamage = 0;
+			let targetHits = move.multihit || 1;
 			if (move.multihit) {
 				let hits = move.multihit;
-				if (Array.isArray(hits)) {
+				if (Array.isArray(targetHits)) {
 					// yes, it's hardcoded... meh
-					if (hits[0] === 2 && hits[1] === 5) {
-						hits = this.battle.sample([2, 2, 2, 3, 3, 3, 4, 5]);
+					if (targetHits[0] === 2 && targetHits[1] === 5) {
+						if (this.battle.gen >= 5) {
+							// 35-35-15-15 out of 100 for 2-3-4-5 hits
+							targetHits = this.battle.sample([2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 5, 5, 5]);
+							if (targetHits < 4 && pokemon.hasItem('loadeddice')) {
+								targetHits = 5 - this.battle.random(2);
+							}
+						} else {
+							targetHits = this.battle.sample([2, 2, 2, 3, 3, 3, 4, 5]);
+						}
 					} else {
-						hits = this.battle.random(hits[0], hits[1] + 1);
+						targetHits = this.battle.random(targetHits[0], targetHits[1] + 1);
 					}
 				}
-				hits = Math.floor(hits);
+				targetHits = Math.floor(targetHits);
 				let nullDamage = true;
 				let moveDamage: number | undefined | false;
 				// There is no need to recursively check the ´sleepUsable´ flag as Sleep Talk can only be used while asleep.
 				const isSleepUsable = move.sleepUsable || this.dex.moves.get(move.sourceEffect).sleepUsable;
 				let i: number;
-				for (i = 0; i < hits && target.hp && pokemon.hp; i++) {
+				for (i = 0; i < targetHits && target.hp && pokemon.hp; i++) {
 					if (pokemon.status === 'slp' && !isSleepUsable) break;
 					move.hit = i + 1;
 

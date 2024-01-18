@@ -1367,4 +1367,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "AG",
 	},
+	hailsanta: {
+		isNonstandard: "Future",
+	},
 };
