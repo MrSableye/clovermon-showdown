@@ -4675,4 +4675,8 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	radishpunch: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

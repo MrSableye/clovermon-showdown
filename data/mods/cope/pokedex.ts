@@ -111,7 +111,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	bluduck: {
 		inherit: true,
-		abilities: {0: "Swift Swim", 1: "Analytic"},
+		abilities: {0: "Swift Swim", H: "Analytic", S: "Synchronize"},
 		baseStats: {
 			hp: 82,
 			atk: 80,
@@ -123,7 +123,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	platylics: {
 		inherit: true,
-		abilities: {0: "Oblivious", 1: "Healer"},
+		abilities: {0: "Oblivious", H: "Healer", S: "Synchronize"},
 		baseStats: {
 			hp: 188,
 			atk: 67,
@@ -144,5 +144,13 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	mammount: {
 		inherit: true,
 		abilities: {0: "Thick Fat", 1: "Ice Body", H: "Shaved Ice", S: "Rough Skin"},
+	},
+	disbeary: {
+		inherit: true,
+		abilities: {0: "Temperamental", H: "Super Luck", S: "Fairy Aura"},
+	},
+	disbearyebil: { // surely this wont be broken with brutal punishment :clueless:
+		inherit: true, //surely giving the disbearies their respective auras wont be broken :clueless:
+		abilities: {0: "Temperamental", H: "Tough Claws", S: "Dark Aura"}, // surely :clueless:
 	},
 };
