@@ -36968,7 +36968,7 @@ costrike: { // that one guy who reflects physical
 	name: "Costrike",
 	types: ["Rock", "Ghost"],
 	gender: 'M',
-	baseStats: {hp: 91, atk: 60, def: 168, spa: 62, spd: 115, spe: 41},
+	baseStats: {hp: 91, atk: 60, def: 168, spa: 115, spd: 41, spe: 62},
 	abilities: {0: "Clear Body", 1: "Striker", H: "Baller", S: "Mold Breaker"},
 	heightm: 2.4,
 	weightkg: 710,
