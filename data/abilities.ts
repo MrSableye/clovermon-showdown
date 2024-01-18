@@ -12397,6 +12397,32 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 		rating: 99,
 	},
+	baller: { // i put the new forgis on the jeep
+		onBasePowerPriority: 8,
+		onBasePower(basePower, attacker, defender, move) {
+			const ballMoves = [
+				'aurasphere',
+				'electroball',
+				'energyball',
+				'focusblast',
+				'gyroball',
+				'iceball',
+				'mistball',
+				'pollenpuff',
+				'pyroball',
+				'rollout',
+				'shadowball',
+				'sludgebomb',
+				'weatherball',
+			];
+			if (ballMoves.includes(move.id)) {
+				this.debug('Baller boost');
+				return this.chainModify(1.2);
+			}
+		},
+		name: "Baller",
+		isNonstandard: "Future",
+	},
 	fireaffinity: {
 		name: "Fire Affinity",
 		isNonstandard: "Future",

@@ -3437,6 +3437,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "AIN'T NOTHIN' GONNA BREAK MY STRIDE",
 		desc: "Realwalker's unbreakable stride boosts its STAB to 2x, and makes its stats impossible to lower.",
 	},
+	baller: {
+		name: "Baller",
+		desc: "Boosts the damage of Ball moves by 1.5x.",
+	},
 	fireaffinity: {
 		name: "Fire Affinity",
 		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fire-type attack. This Pokemon is healed 1/8 by Fire. Immune to Burn.",
