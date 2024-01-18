@@ -2964,7 +2964,17 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	gojifiend: {
 		inherit: true,
 		isNonstandard: null,
+		tier: "Uber",
+	},
+	snurl: {
+		inherit: true,
+		isNonstandard: null,
 		tier: "OU",
+	},
+	snuroyal: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "Uber",
 	},
 	suxako: {
 		inherit: true,

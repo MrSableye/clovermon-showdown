@@ -8868,12 +8868,20 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 	meteoriik: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-		},
+	},
 	parmiausan: {
 		tier: "Illegal",
 		isNonstandard: "Future",
-		},
+	},
 	gojifiend: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	snurl: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	snuroyal: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
