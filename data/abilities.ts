@@ -12417,10 +12417,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			];
 			if (ballMoves.includes(move.id)) {
 				this.debug('Baller boost');
-				return this.chainModify(1.2);
+				return this.chainModify(1.5);
 			}
 		},
 		name: "Baller",
+		isNonstandard: "Future",
+	},
+	madeofglass: {
+		onAfterMoveSecondarySelf(source, target, move) {
+			if (source && source !== target && move && move.category !== 'Status' && !source.forceSwitchFlag) {
+				this.damage(source.baseMaxhp, source, source, this.dex.items.get('lifeorb'));
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.category === 'Special') {
+				return this.chainModify(0.25);
+			}
+			if (move.category === 'Physical') {
+				return this.chainModify(0.25);
+			}
+		},
+		name: "Made of Glass",
 		isNonstandard: "Future",
 	},
 	fireaffinity: {

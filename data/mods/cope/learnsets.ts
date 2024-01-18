@@ -214,6 +214,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			meteormash: ["8L39"],
 			closecombat: ["8L47"],
 			playrough: ["8L52"],
+			highjumpkick: ["8L63"],
 			swordsdance: ["8L70", "8T"],
 			perishsong: ["8L85"],
 			megapunch: ["8T"],

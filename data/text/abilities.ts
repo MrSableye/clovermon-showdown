@@ -3441,6 +3441,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Baller",
 		desc: "Boosts the damage of Ball moves by 1.5x.",
 	},
+	madeofglass: {
+		name: "Made of Glass",
+		desc: "Dies after landing any damaging move. Takes quartered damage from all damaging moves.",
+	},
 	fireaffinity: {
 		name: "Fire Affinity",
 		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fire-type attack. This Pokemon is healed 1/8 by Fire. Immune to Burn.",

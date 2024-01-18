@@ -2964,7 +2964,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	gojifiend: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "Uber",
+		tier: "OU",
 	},
 	snurl: {
 		inherit: true,
@@ -2975,6 +2975,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "Uber",
+	},
+	sphare: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	costrike: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	rasstord: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
 	},
 	suxako: {
 		inherit: true,
