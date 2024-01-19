@@ -973,7 +973,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
 		],
-		banlist: ['Moody', 'Baton Pass', 'Dragon Rage', 'Sonic Boom', 'Ribbizap', 'Cursed Fang', 'Crimson Lens'],
+		banlist: ['Moody', 'Baton Pass', 'Dragon Rage', 'Sonic Boom', 'Ribbizap', 'Cursed Fang', 'Crimson Lens', 'Dinomight'],
 	},
 	{
 		name: '[Gen 8 Clover CAP Only] Monotype',
