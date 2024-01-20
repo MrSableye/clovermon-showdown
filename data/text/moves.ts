@@ -8897,6 +8897,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Pantherk Kick",
 		shortDesc: "30% flinch chance. Pantherk.",
 	},
+	despiteallmyrage: {
+		name: "DESPITE ALL MY RAGE",
+		shortDesc: "100% chance to lower the target's Speed by 5 stages.",
+	},
 	oceanhorn: {
 		name: "Ocean Horn",
 		shortDesc: "50% chance to flinch the opponent.",

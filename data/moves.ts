@@ -32098,7 +32098,24 @@ oceanhorn: {
 		type: "Fairy",
 		contestType: "Cool",
 	},
-
+	despiteallmyrage: {
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "DESPITE ALL MY RAGE",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -5,
+			},
+		},
+		target: "normal",
+		type: "???",
+		isNonstandard: "Future",
+	},
 	meowsa: {
 		num: 274,
 		accuracy: true,
