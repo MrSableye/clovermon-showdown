@@ -124,6 +124,7 @@ export const commands: Chat.ChatCommands = {
 				const newTourWins = changeTourWins(userID, () => value);
 				const receivedBadge = await checkTourThreshold(userID, user);
 
+				this.addGlobalModAction(`${user.name} added set ${userID} to ${newTourWins} tour wins.`);
 				return this.sendReplyBox(`User ${userID} has ${newTourWins} wins.${receivedBadge ? ` They have been granted the ${TOUR_BADGE_ID} badge.` : ''}`);
 			},
 			add: 'increment',
@@ -136,6 +137,7 @@ export const commands: Chat.ChatCommands = {
 				const newTourWins = changeTourWins(userID, (previousValue) => previousValue + 1);
 				const receivedBadge = await checkTourThreshold(userID, user);
 
+				this.addGlobalModAction(`${user.name} has added 1 tour win to ${userID} (${newTourWins} total wins)`);
 				return this.sendReplyBox(`User ${userID} has ${newTourWins} wins.${receivedBadge ? ` They have been granted the ${TOUR_BADGE_ID} badge.` : ''}`);
 			},
 			remove: 'decrement',
@@ -148,6 +150,7 @@ export const commands: Chat.ChatCommands = {
 				const newTourWins = changeTourWins(userID, (previousValue) => previousValue - 1);
 				const receivedBadge = await checkTourThreshold(userID, user);
 
+				this.addGlobalModAction(`${user.name} has removed 1 tour win from ${userID} (${newTourWins} total wins)`);
 				return this.sendReplyBox(`User ${userID} has ${newTourWins} wins.${receivedBadge ? ` They have been granted the ${TOUR_BADGE_ID} badge.` : ''}`);
 			},
 		},
