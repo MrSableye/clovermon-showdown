@@ -8969,6 +8969,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	glasscat: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	doomsday: {
 		tier: "Illegal",
 		isNonstandard: "Future",
