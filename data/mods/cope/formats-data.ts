@@ -3006,16 +3006,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	costrike: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-	rasstord: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
 	suxako: {
 		inherit: true,
 		isNonstandard: null,
