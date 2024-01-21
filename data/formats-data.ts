@@ -8897,6 +8897,26 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	hookling: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	fractyvern: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	sleepsy: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	psycheyend: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	rasstord: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	crolord: {
 		tier: "Illegal",
 		isNonstandard: "Future",
