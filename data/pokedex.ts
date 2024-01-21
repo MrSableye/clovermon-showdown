@@ -36980,7 +36980,7 @@ costrike: { // that one guy who reflects physical
 	gen: 8,
 	},
 hookling: {
-		num: -8231,
+		num: -8232,
 		name: "Hookling",
 		types: ["Dragon"],
 		gender: "F",
@@ -36994,7 +36994,7 @@ hookling: {
 		gen: 8,
 	},
 	fractyvern: {
-		num: -8232,
+		num: -8233,
 		name: "Fractyvern",
 		types: ["Psychic","Electric"],
 		gender: "N",
@@ -37010,7 +37010,7 @@ hookling: {
 		gen: 8,
 	},
         sleepsy: {
-		num: -8233,
+		num: -8234,
 		name: "Sleepsy",
 		types: ["Psychic","Dark"],
 		genderRatio: {M: 0.5, F: 0.5},
@@ -37024,7 +37024,7 @@ hookling: {
 		gen: 8,
 	},
 	    psycheyend: {
-		num: -8234,
+		num: -8235,
 		name: "Psycheyend",
 		types: ["Psychic","Dark"],
 		genderRatio: {M: 0.5, F: 0.5},
