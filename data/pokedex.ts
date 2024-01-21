@@ -37030,7 +37030,7 @@ hookling: {
 		genderRatio: {M: 0.5, F: 0.5},
 		baseStats: {hp: 75, atk: 70, def: 50, spa: 134, spd: 103, spe: 93},
 		abilities: {0: "Keen Eye", 1: "Levitate", H: "Omniscience", S: "Mind's Eye"},
-		heightm: 9.1,
+		heightm: 10.1,
 		weightkg: 837.6,
 		color: "White",
         prevo: "Sleepsy",
