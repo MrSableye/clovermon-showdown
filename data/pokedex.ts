@@ -36983,7 +36983,7 @@ hookling: {
 		num: -8231,
 		name: "Hookling",
 		types: ["Dragon"],
-		genderRatio: "F",
+		gender: "F",
 		baseStats: {hp: 45, atk: 55, def: 50, spa: 55, spd: 50, spe: 75},
 		abilities: {0: "Quick Feet", 1: "Sap Sipper", H: "Stench", S: "Queenly Majesty"},
 		heightm: 0.5,
@@ -36992,13 +36992,12 @@ hookling: {
         evos: ["Fractyvern"],
 		eggGroups: ["Dragon","Monster"],
 		gen: 8,
-        creator "C3ll",
 	},
 	fractyvern: {
 		num: -8232,
 		name: "Fractyvern",
 		types: ["Psychic","Electric"],
-		genderRatio: "N",
+		gender: "N",
 		baseStats: {hp: 84, atk: 56, def: 65, spa: 126, spd: 78, spe: 107},
 		abilities: {0: "Unnerve", 1: "Static", H: "Levitate", S: "Madman"},
 		heightm: 9.1,
@@ -37009,7 +37008,6 @@ hookling: {
 		evoItem: "Thunder Stone",
 		eggGroups: ["Dragon","Monster"],
 		gen: 8,
-        creator "C3ll/Karma",
 	},
         sleepsy: {
 		num: -8233,
@@ -37024,7 +37022,6 @@ hookling: {
         evos: ["Psycheyend"],
 		eggGroups: ["Dragon","Monster"],
 		gen: 8,
-        creator "Reverse Luckster",
 	},
 	    psycheyend: {
 		num: -8234,
@@ -37040,7 +37037,6 @@ hookling: {
         evoLevel: 44,
 		eggGroups: ["Dragon","Monster"],
 		gen: 8,
-        creator "Reverse Luckster",
 },
 rasstord: {
 	num: -8231,
