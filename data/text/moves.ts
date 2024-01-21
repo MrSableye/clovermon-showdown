@@ -7848,7 +7848,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "Has 33% recoil.",
 	},
 	solarhunger: {
-		name: "The Talker",
+		name: "Solar Hunger",
 		desc: "This move's Base Power is multiplied by 1.5x if Sunny Day, Desolate Land, or Dense Fog is active.",
 		shortDesc: "1.5x Power if used in Sun, Desolate Land, or Dense Fog.",
 	},
