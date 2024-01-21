@@ -36991,7 +36991,7 @@ hookling: {
 		color: "Red",
         evos: ["Fractyvern"],
 		eggGroups: ["Dragon","Monster"],
-		gen: 0,
+		gen: 8,
         creator "C3ll",
 	},
 	fractyvern: {
@@ -37008,9 +37008,9 @@ hookling: {
         evoType: "useItem",
 		evoItem: "Thunder Stone",
 		eggGroups: ["Dragon","Monster"],
-		gen: 0,
+		gen: 8,
         creator "C3ll/Karma",
-		},
+	},
         sleepsy: {
 		num: -8233,
 		name: "Sleepsy",
@@ -37023,10 +37023,10 @@ hookling: {
 		color: "White",
         evos: ["Psycheyend"],
 		eggGroups: ["Dragon","Monster"],
-		gen: 0,
+		gen: 8,
         creator "Reverse Luckster",
-		},
-	psycheyend: {
+	},
+	    psycheyend: {
 		num: -8234,
 		name: "Psycheyend",
 		types: ["Psychic","Dark"],
@@ -37039,7 +37039,7 @@ hookling: {
         prevo: "Sleepsy",
         evoLevel: 44,
 		eggGroups: ["Dragon","Monster"],
-		gen: 0,
+		gen: 8,
         creator "Reverse Luckster",
 },
 rasstord: {
