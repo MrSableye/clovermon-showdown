@@ -2986,7 +2986,22 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	rasstord: {
+	hooktail: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	fractyvern: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	sleepsy: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	psycheyend: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
