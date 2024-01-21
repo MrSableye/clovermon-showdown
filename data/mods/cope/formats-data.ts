@@ -2986,7 +2986,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	hooktail: {
+	rasstord: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	hookling: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",
