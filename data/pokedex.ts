@@ -37022,7 +37022,7 @@ hookling: {
         evos: ["Psycheyend"],
 		eggGroups: ["Dragon","Monster"],
 		gen: 8,
-	},
+	} ,
 	    psycheyend: {
 		num: -8234,
 		name: "Psycheyend",
