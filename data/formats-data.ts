@@ -8913,10 +8913,6 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	rasstord: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
 	crolord: {
 		tier: "Illegal",
 		isNonstandard: "Future",
