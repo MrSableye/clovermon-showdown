@@ -2931,6 +2931,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "AG",
 	},
+	glasscat: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "AG",
+	},
 	stoppogriff: {
 		inherit: true,
 		isNonstandard: null,

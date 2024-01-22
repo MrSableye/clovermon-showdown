@@ -23562,15 +23562,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Steel",
 		contestType: "Cool",
 	},
-	memejr: {
+	memepunch: {
 		accuracy: 100,
 		basePower: 60,
 		category: "Physical",
 		isNonstandard: "Future",
-		name: "Meme Jr.",
+		name: "Meme Punch",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		secondary: {
 			chance: 100,
 			onHit(target, source) {
@@ -32100,16 +32100,16 @@ oceanhorn: {
 	},
 	despiteallmyrage: {
 		accuracy: 100,
-		basePower: 90,
+		basePower: 135,
 		category: "Physical",
 		name: "DESPITE ALL MY RAGE",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {},
 		secondary: {
 			chance: 100,
 			boosts: {
-				spe: -5,
+				spe: -4,
 			},
 		},
 		target: "normal",

@@ -249,4 +249,32 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			rocksmash: ["8M"],
 		},
 	},
+	weedle: {
+		learnset: {
+			poisonsting: ["8L1"],
+			stringshot: ["8L1"],
+			bugbite: ["8L15"],
+			struggle: ["8L33"],
+			cope: ["8L66"],
+		},
+	},
+	waterweedle: { // didnt bother to adjust levels on this one. do it later prob :)
+		learnset: {
+			watergun: ["8L1"],
+			watersport: ["8L1"],
+			waterfall: ["8L1"],
+			recover: ["8L1"],
+			overheat: ["8L1"],
+			conversion: ["8L1"],
+			conversion2: ["8L1"],
+			muddywater: ["8L1"],
+			scald: ["8L1"],
+			dive: ["8L1"],
+			waterspout: ["8L1"],
+			wavecrash: ["8L1"],
+			jetpunch: ["8L1"],
+			cope: ["8L1"],
+			waterpulse: ["8L1"],
+		},
+	},
 };

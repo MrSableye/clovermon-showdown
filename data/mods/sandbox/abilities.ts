@@ -1459,6 +1459,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	madeofglass: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	capacitance: {
 		inherit: true,
 		isNonstandard: null,

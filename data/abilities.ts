@@ -9739,6 +9739,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0, // LMAO YOU ACTUALLY THOUGHT THIS SHIT HAD REAL EFFECTS LMAOOOOOOOO
 		isNonstandard: "Future", // YOU EVEN CHECKED THE CODE HAHAHAHAHAHAHA
 	},
+	fake: {
+		onSwitchIn(pokemon) {
+			this.add('-ability', pokemon, 'Fake');
+		},
+		name: "Fake",
+		rating: 0,
+		isNonstandard: "Future",
+	},
 	bejeweled: {
 		onStart(source) {
 			this.field.setTerrain('psychicterrain');
@@ -12426,19 +12434,38 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	madeofglass: {
 		onAfterMoveSecondarySelf(source, target, move) {
 			if (source && source !== target && move && move.category !== 'Status' && !source.forceSwitchFlag) {
-				this.damage(source.baseMaxhp, source, source, this.dex.items.get('lifeorb'));
+				this.damage(source.baseMaxhp, source, source, this.dex.abilities.get('madeofglass'));
 			}
 		},
 		onSourceModifyDamage(damage, source, target, move) {
 			if (move.category === 'Special') {
-				return this.chainModify(0.25);
+				return this.chainModify(0.0000000001);
 			}
 			if (move.category === 'Physical') {
-				return this.chainModify(0.25);
+				return this.chainModify(0.0000000001);
 			}
 		},
 		name: "Made of Glass",
 		isNonstandard: "Future",
+	},
+	mindzap: {
+		onSwitchIn(pokemon) {
+			let activated = false;
+			for (const sideCondition of ['reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'luckyroll']) {
+				for (const side of [pokemon.side, ...pokemon.side.foeSidesWithConditions()]) {
+					if (side.getSideCondition(sideCondition)) {
+						if (!activated) {
+							this.add('-activate', pokemon, 'ability: Mind Zap');
+							activated = true;
+						}
+						side.removeSideCondition(sideCondition);
+					}
+				}
+			}
+			this.field.clearWeather();
+		},
+		name: "Mind Zap",
+		rating: 5,
 	},
 	fireaffinity: {
 		name: "Fire Affinity",

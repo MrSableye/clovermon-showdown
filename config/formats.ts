@@ -1033,7 +1033,7 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 		],
-		banlist: ['AG', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard'],
+		banlist: ['AG', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard', 'DESPITE ALL MY RAGE'],
 	},
 	{
 		name: '[Gen 8 Cope Only] OU',
@@ -1051,7 +1051,8 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 		],
-		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard', 'Wicked Blow', 'Drizzle', 'Drought', 'Krackocean','Illusion','Weathervein','Aurora Veil'],
+		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard', 'Wicked Blow', 'Drizzle', 'Drought', 'Krackocean','Illusion','Weathervein','Aurora Veil', 'DESPITE ALL MY RAGE'],
+		unbanlist: ['Disbeary-Ebil + Tough Claws', 'Disbeary-Ebil + Dark Aura'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Create-a-Blobbos (CAB)
