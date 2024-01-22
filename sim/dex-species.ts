@@ -310,7 +310,9 @@ export class Species extends BasicEffect implements Readonly<BasicEffect & Speci
 		if (Array.isArray(data.changesFrom)) this.changesFrom = data.changesFrom[0];
 
 		if (!this.gen && this.num >= 1) {
-			if (this.num >= 413001 && this.num <= 413999) {
+			if (this.num >= 999000 && this.num <= 999999) {
+				this.gen = 8;
+			} else if (this.num >= 413001 && this.num <= 413999) {
 				this.gen = 8;
 			} else if (this.num >= 906 || this.forme.includes('Paldea')) {
 				this.gen = 9;

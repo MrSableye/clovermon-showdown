@@ -4599,11 +4599,19 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 		},
+	bloodmoon: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	mindbreak: {
+		inherit: true,
+		isNonstandard: null,
+		},
 	glaiverush: {
 		inherit: true,
 		isNonstandard: null,
 	},
-	thetalker: {
+	solarhunger: {
 		inherit: true,
 		isNonstandard: null,
 	},

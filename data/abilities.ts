@@ -5704,9 +5704,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	madman: {
 		name: "Madman",
-		onDamagingHit(damage, target, source, move) {
-			if (move.flags['contact']) {
-				source.addVolatile('confusion');
+		onSourceDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, target, source)) {
+				target.addVolatile('confusion', source);
 			}
 		},
 		rating: 3,

@@ -16116,7 +16116,7 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
     inherit: true,
     isNonstandard: "Past"
   },
-  thetalker: {
+  solarhunger: {
     inherit: true,
     isNonstandard: "Past"
   },

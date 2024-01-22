@@ -84608,13 +84608,13 @@ beforeTurnCallback(pokemon) {
 		type: "Ground",
 		contestType: "Tough",
 	},
-	thetalker: {
+	solarhunger: {
         num: 42009,
         accuracy: 100,
         basePower: 80,
         category: "Special",
         isNonstandard: "Future",
-        name: "The Talker", // placeholder name please dear god give it a better name//no lmao
+        name: "Solar Hunger", // DIE
         pp: 15,
         priority: 0,
         flags: {protect: 1, mirror: 1},
