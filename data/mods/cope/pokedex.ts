@@ -94,10 +94,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 69,
 		},
 	},
-	sableye: {
-		inherit: true,
-		abilities: {0: "Keen Eye", 1: "Prankster"},
-	},
 	pantherk: {
 		inherit: true,
 		baseStats: {
@@ -153,5 +149,33 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true, //surely giving the disbearies their respective auras wont be broken :clueless:
 		requiredAbility: undefined,
 		abilities: {0: "Temperamental", H: "Tough Claws", S: "Dark Aura"}, // surely :clueless:
+	},
+	yanorm: {
+		inherit: true,
+		abilities: {0: "Shed Skin", H: "Jihad", S: "Pickpocket"},
+	},
+	yancoon: {
+		inherit: true,
+		abilities: {0: "Simple", H: "Flash Fire", S: "Pickpocket"},
+	},
+	yanture: {
+		inherit: true,
+		abilities: {0: "Tinted Lens", H: "Numero Uno", S: "Pickpocket"},
+	},
+	purplegoat: {
+		inherit: true,
+		abilities: {0: "Fluffy", 1: "Shadow Tag", H: "Levitate", S: "Sharpness"},
+	},
+	sableye: {
+		inherit: true,
+		abilities: {0: "Prankster", H: "Stall", S: "Keen Eye"},
+	},
+	weedle: {
+		inherit: true,
+		abilities: {0: "Shield Dust", 1: "Shed Skin", H: "Run Away", S: "Mind Zap"},
+	},
+	waterweedle: {
+		inherit: true,
+		abilities: {0: "Water Absorb", 1: "Water Veil", H: "Shield Dust", S: "Run Away"},
 	},
 };

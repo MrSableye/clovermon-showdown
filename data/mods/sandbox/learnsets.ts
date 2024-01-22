@@ -42,7 +42,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			lowsweep: ["8L1"],
 			lunge: ["8L1"],
 			meme: ["8L1"],
-			memejr: ["8L1"],
+			memepunch: ["8L1"],
 			metronome: ["8L1"],
 			mimic: ["8L1"],
 			mudbomb: ["8L1"],

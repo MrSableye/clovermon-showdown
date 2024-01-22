@@ -2152,7 +2152,7 @@ export const Moves: { [k: string]: ModdedMoveData; } = {
     inherit: true,
     isNonstandard: "Past"
   },
-  memejr: {
+  memepunch: {
     inherit: true,
     isNonstandard: "Past"
   },

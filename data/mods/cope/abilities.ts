@@ -1939,4 +1939,12 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	fake: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mindzap: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

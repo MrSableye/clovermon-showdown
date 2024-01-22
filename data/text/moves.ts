@@ -7928,8 +7928,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user swaps all its stat stage changes with the target and switches the Mist, Light Screen, Reflect, Spikes, Safeguard, Tailwind, Toxic Spikes, Stealth Rock, Water Pledge, Fire Pledge, Grass Pledge, Sticky Web, Aurora Veil, G-Max Steelsurge, G-Max Cannonade, G-Max Vine Lash, and G-Max Wildfire effects from the user's side to the opposing side and vice versa.",
 		shortDesc: "Swaps all stat changes and hazards with opponent.",
 	},
-	memejr: {
-		name: "Meme Jr.",
+	memepunch: {
+		name: "Meme Punch",
 		desc: "Has a 100% chance to raise the user's lowest boosted stat by 1. If all stat boosts are equal it will raise a random stat by 1.",
 		shortDesc: "100% chance to evenly raise a random stat by 1.",
 	},

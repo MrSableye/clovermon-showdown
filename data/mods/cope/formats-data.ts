@@ -2931,6 +2931,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "AG",
 	},
+	glasscat: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "AG",
+	},
 	stoppogriff: {
 		inherit: true,
 		isNonstandard: null,
@@ -2987,26 +2992,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	rasstord: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-	hookling: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "LC",
-	},
-	fractyvern: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-	sleepsy: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "LC",
-	},
-	psycheyend: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",

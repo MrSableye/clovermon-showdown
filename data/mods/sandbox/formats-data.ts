@@ -11242,6 +11242,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	glasscat: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	gem: {
 		inherit: true,
 		isNonstandard: null,

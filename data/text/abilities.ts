@@ -3048,6 +3048,16 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Kattapillar's Secret Power",
 		shortDesc: "Has a variety of effects depending on certain circumstances.",
 	},
+	fake: {
+		name: "Fake",
+		shortDesc: "This Pokemon is not real.",
+
+		start: "The snake hisses at you menacingly...",
+	},
+	mindzap: {
+		name: "Mind Zap",
+		shortDesc: "Clears all disruptions from the field (screens, hazards, weather).",
+	},
 	overeagerest: {
 		name: "Overeagerest",
 		desc: "This Pokemon's damaging moves become multi-hit moves that hit 100 times. Subsequent hits deal 2^N more damage. Does not affect multi-hit moves or moves that have multiple targets.",
@@ -3443,7 +3453,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	madeofglass: {
 		name: "Made of Glass",
-		desc: "Dies after landing any damaging move. Takes quartered damage from all damaging moves.",
+		desc: "Dies after landing any damaging move. Takes absurdly reduced damage from all damaging moves.",
+
+		damage: "  [POKEMON] shattered into millions of glass shards!",
 	},
 	fireaffinity: {
 		name: "Fire Affinity",

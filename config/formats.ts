@@ -1052,6 +1052,7 @@ export const Formats: FormatList = [
 			'Species Clause',
 		],
 		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard', 'Wicked Blow', 'Drizzle', 'Drought', 'Krackocean','Illusion','Weathervein','Aurora Veil'],
+		unbanlist: ['Disbeary-Ebil + Tough Claws', 'Disbeary-Ebil + Dark Aura'],
 	},
 	///////////////////////////////////////////////////////////////////
 	// Create-a-Blobbos (CAB)
