@@ -9026,7 +9026,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "Changes the user's type to Grass. Sets Grassy Terrain. Heals 1/3 of the user's HP.",
 	},
 	eminenceofkinkakuji: {
-		name: "Eminence of Kinkakuji",
+		name: "Eminence of Kinkaku-ji",
 		shortDesc: "Changes the user's type to Steel. Sets Lucky Chant. Clears the user's negative boosts.",
 	},
 	lavadapt: {
