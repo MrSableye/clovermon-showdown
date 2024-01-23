@@ -9008,6 +9008,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Strife: Dicekind",
 		desc: "Physical if user's Atk > Sp. Atk. Hits 8 times. Each hit can miss. 4% to permanently improve's the user's side's luck by 5% up to 3 times. +1 crit at 3 stacks.",
 	},
+	abeblast: {
+		name: "Abe Blast",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
+	},
 	lavadapt: {
 		name: "Lavadapt",
 		desc: "User adapts its type to resist the opponent's last move.",
