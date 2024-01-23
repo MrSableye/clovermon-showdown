@@ -9029,6 +9029,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Eminence of Kinkaku-ji",
 		shortDesc: "Changes the user's type to Steel. Sets Lucky Chant. Clears the user's negative boosts.",
 	},
+	cumblast: {
+		name: "Cum Blast",
+		desc: "Has a 100% chance to lower the target's Speed by 2 stages.",
+		shortDesc: "100% chance to lower the foe(s) Speed by 2.",
+	},
 	lavadapt: {
 		name: "Lavadapt",
 		desc: "User adapts its type to resist the opponent's last move.",

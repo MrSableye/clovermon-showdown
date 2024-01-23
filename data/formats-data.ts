@@ -10203,6 +10203,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobboscum: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbosporing: {
 		tier: "Illegal",
 		isNonstandard: "Future",

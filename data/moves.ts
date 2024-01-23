@@ -30051,6 +30051,25 @@ oceanhorn: {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
+	cumblast: {
+		accuracy: 100,
+		basePower: 95,
+		category: "Special",
+		name: "Electroweb",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -2,
+			},
+		},
+		target: "allAdjacentFoes",
+		type: "Water",
+		contestType: "Beautiful",
+		isNonstandard: "Future",
+	},
 	eminenceofkinkakuji: {
 		accuracy: true,
 		basePower: 0,

@@ -1307,6 +1307,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	cumblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	metronomeifitwasfunny: {
 		inherit: true,
 		isNonstandard: null,
