@@ -1291,6 +1291,22 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	harajukushuffle: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hokkaidosnowstorm: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	blessingofyakushima: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	eminenceofkinkakuji: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	metronomeifitwasfunny: {
 		inherit: true,
 		isNonstandard: null,

@@ -9013,6 +9013,22 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio.",
 	},
+	harajukushuffle: {
+		name: "Harajuku Shuffle",
+		shortDesc: "Changes the user's type to Fairy. Raises the user's Attack, Sp. Atk, and Speed by 1.",
+	},
+	hokkaidosnowstorm: {
+		name: "Hokkaido Snowstorm",
+		shortDesc: "Changes the user's type to Ice. Sets Hail. 10% chance to Freeze."
+	},
+	blessingofyakushima: {
+		name: "Blessing of Yakushima",
+		shortDesc: "Changes the user's type to Grass. Sets Grassy Terrain. Heals 1/3 of the user's HP.",
+	},
+	eminenceofkinkakuji: {
+		name: "Eminence of Kinkakuji",
+		shortDesc: "Changes the user's type to Steel. Sets Lucky Chant. Clears the user's negative boosts.",
+	},
 	lavadapt: {
 		name: "Lavadapt",
 		desc: "User adapts its type to resist the opponent's last move.",
