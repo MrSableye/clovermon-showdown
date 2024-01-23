@@ -12030,6 +12030,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (type === 'ground') return false;
 		},
 	},
+	homogeneity: {
+		name: "Homogeneity",
+		onBasePowerPriority: 7,
+		onBasePower(basePower, attacker, defender, move) {
+			let homogenousAllies = 0;
+			for (const pokemon of attacker.side.pokemon) {
+				if (attacker === pokemon) continue;
+				if (pokemon.fainted) continue;
+				if (pokemon.types.some((type) => attacker.types.includes(type))) {
+					homogenousAllies++;
+				}
+			}
+			return this.chainModify(1 + homogenousAllies * 0.1);
+		},
+		isNonstandard: "Future",
+	},
 	medusascurse: {
 		name: "Medusa's Curse",
 		onStart(source) {

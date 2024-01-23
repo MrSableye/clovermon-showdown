@@ -3372,6 +3372,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's moves have their secondary effect chance doubled. Foes's moves have their secondary effect chance removed. Immune to Ground. Light of Ruin becomes Heroine's Light.",
 		shortDesc: "Doubles user's secondary effect chances, removes foe's secondary effect chance. Immune to Ground. Light of Ruin becomes Heroine's Light.",
 	},
+	homogeneity: {
+		name: "Homogeneity",
+		desc: "This Pokemon's moves have 10% increased power for every unfainted party member that shares a type with it.",
+	},
 	medusascurse: {
 		name: "Medusa's Curse",
 		shortDesc: "Sets all other Pokemon to Rock-type on switch-in.",

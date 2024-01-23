@@ -42719,6 +42719,32 @@ iwik: {
 		gen: 8,
 		creator: "Mr. Sableye",
 	},
+	blobbosnihonjin: {
+		num: 69132,
+		name: "Blobbos-Nihonjin",
+		forme: "Nihonjin",
+		types: ["Electric", "Normal"],
+		gender: "N",
+		baseStats: {
+			hp: 80,
+			atk: 60,
+			def: 90,
+			spa: 150,
+			spd: 60,
+			spe: 50,
+		},
+		abilities: {
+			0: "Homogeneity",
+		},
+		heightm: 0.4,
+		weightkg: 5.7,
+		color: "Blue",
+		eggGroups: [
+			"Ditto",
+		],
+		gen: 8,
+		creator: "Mr. Sableye",
+	},
 	blobbosporing: {
 		num: 69132,
 		name: "Blobbos-Poring",
