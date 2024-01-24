@@ -37028,7 +37028,7 @@ hookling: {
 		name: "Psycheyend",
 		types: ["Psychic", "Dark"],
 		genderRatio: {M: 0.5, F: 0.5},
-		baseStats: {hp: 85, atk: 82, def: 77, spa: 114, spd: 98, spe: 53},
+		baseStats: {hp: 81, atk: 85, def: 51, spa: 107, spd: 113, spe: 82}, 
 		abilities: {0: "Keen Eye", 1: "Levitate", H: "Omniscience", S: "Mind's Eye"},
 		heightm: 10.1,
 		weightkg: 837.6,
