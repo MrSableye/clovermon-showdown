@@ -30103,6 +30103,25 @@ oceanhorn: {
 		contestType: "Cute",
 		isNonstandard: "Future",
 	},
+	kamiswrath: {
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Kami's Wrath",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyType(move, pokemon) {
+			const types = pokemon.getTypes();
+			const lastType = types[types.length - 1];
+			if (lastType !== move.type) move.type = lastType;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Cool",
+		isNonstandard: "Future",
+	},
 	lavadapt: {
 		accuracy: 100,
 		basePower: 85,

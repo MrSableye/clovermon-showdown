@@ -3374,7 +3374,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	homogeneity: {
 		name: "Homogeneity",
-		desc: "This Pokemon's moves have 10% increased power for every unfainted party member that shares a type with it.",
+		desc: "This Pokemon's moves have 20% increased power for every unfainted party member that shares a type with it.",
 	},
 	medusascurse: {
 		name: "Medusa's Curse",

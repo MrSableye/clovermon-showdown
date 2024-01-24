@@ -12042,7 +12042,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					homogenousAllies++;
 				}
 			}
-			return this.chainModify(1 + homogenousAllies * 0.1);
+			return this.chainModify(1 + homogenousAllies * 0.2);
 		},
 		isNonstandard: "Future",
 	},

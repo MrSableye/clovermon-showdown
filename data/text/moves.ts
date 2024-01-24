@@ -9029,6 +9029,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Eminence of Kinkaku-ji",
 		shortDesc: "Adds Steel to the user's type(s). Sets Lucky Chant. Clears the user's negative boosts.",
 	},
+	kamiswrath: {
+		name: "Kami's Wrath",
+		shortDesc: "Type varies based on the user's last type.",
+	},
 	cumblast: {
 		name: "Cum Blast",
 		desc: "Has a 100% chance to lower the target's Speed by 2 stages.",
