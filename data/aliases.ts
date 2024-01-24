@@ -712,6 +712,7 @@ export const Aliases: {[alias: string]: string} = {
 	cathy: "Trevenant",
 	chandy: "Chandelure",
 	chomp: "Garchomp",
+	chups: "Lapras",
 	clanger: "Kommo-o",
 	clef: "Clefable",
 	coba: "Cobalion",

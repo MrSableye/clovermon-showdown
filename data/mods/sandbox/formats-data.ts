@@ -11237,6 +11237,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
+	antiblob: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	stoppogriff: {
 		inherit: true,
 		isNonstandard: null,

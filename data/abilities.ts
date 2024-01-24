@@ -12391,7 +12391,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			];
 			if (peckMoves.includes(move.id)) {
 				this.debug('Peck your beak');
-				return this.chainModify(1.5);
+				return this.chainModify(2);
 			}
 		},
 		name: "Crowheaded",
@@ -12465,7 +12465,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		isNonstandard: "Future",
 	},
 	mindzap: {
-		onSwitchIn(pokemon) {
+		onStart(pokemon) {
 			let activated = false;
 			for (const sideCondition of ['reflect', 'lightscreen', 'auroraveil', 'mirageveil', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge', 'sleazyspores', 'shattershard', 'luckyroll']) {
 				for (const side of [pokemon.side, ...pokemon.side.foeSidesWithConditions()]) {

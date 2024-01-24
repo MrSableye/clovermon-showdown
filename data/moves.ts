@@ -32274,6 +32274,7 @@ oceanhorn: {
 			},
 		},
 		target: "normal",
+		noSketch: true,
 		type: "???",
 		isNonstandard: "Future",
 	},
