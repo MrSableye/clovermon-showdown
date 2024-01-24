@@ -3445,7 +3445,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	crowheaded: {
 		name: "Crowheaded",
-		desc: "Peck, Drill Peck, Pluck, and Bolt Beak deal 1.5x damage.",
+		desc: "Peck, Drill Peck, Pluck, and Bolt Beak deal 2x damage.",
 	},
 	aintnothingonnabreakmystride: {
 		name: "AIN'T NOTHIN' GONNA BREAK MY STRIDE",
