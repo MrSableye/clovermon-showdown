@@ -29987,10 +29987,9 @@ oceanhorn: {
 		priority: 0,
 		flags: {snatch: 1, dance: 1},
 		beforeMoveCallback(pokemon) {
-			if (pokemon.getTypes().join() === 'Fairy') {
-				pokemon.setType('Fairy')
-				this.add('-start', pokemon, 'typechange', 'Fairy');
-			}
+			if (pokemon.hasType('Fairy')) return false;
+			if (!pokemon.addType('Fairy')) return false;
+			this.add('-start', pokemon, 'typeadd', 'Fairy', '[from] move: Harajuku Shuffle');
 		},
 		boosts: {
 			atk: 1,
@@ -30013,10 +30012,9 @@ oceanhorn: {
 		priority: 0,
 		flags: {protect: 1, mirror: 1, wind: 1},
 		beforeMoveCallback(pokemon) {
-			if (pokemon.getTypes().join() === 'Ice') {
-				pokemon.setType('Ice');
-				this.add('-start', pokemon, 'typechange', 'Ice');
-			}
+			if (pokemon.hasType('Ice')) return false;
+			if (!pokemon.addType('Ice')) return false;
+			this.add('-start', pokemon, 'typeadd', 'Ice', '[from] move: Hokkaido Snowstorm');
 		},
 		secondary: {
 			chance: 10,
@@ -30037,10 +30035,9 @@ oceanhorn: {
 		priority: 0,
 		flags: {},
 		beforeMoveCallback(pokemon) {
-			if (pokemon.getTypes().join() === 'Grass') {
-				pokemon.setType('Grass');
-				this.add('-start', pokemon, 'typechange', 'Grass');
-			}
+			if (pokemon.hasType('Grass')) return false;
+			if (!pokemon.addType('Grass')) return false;
+			this.add('-start', pokemon, 'typeadd', 'Grass', '[from] move: Blessing of Yakushima');
 		},
 		heal: [1, 3],
 		terrain: 'grassyterrain',
@@ -30081,10 +30078,9 @@ oceanhorn: {
 		sideCondition: 'luckychant',
 		secondary: null,
 		beforeMoveCallback(pokemon) {
-			if (pokemon.getTypes().join() === 'Steel') {
-				pokemon.setType('Steel');
-				this.add('-start', pokemon, 'typechange', 'Steel');
-			}
+			if (pokemon.hasType('Steel')) return false;
+			if (!pokemon.addType('Steel')) return false;
+			this.add('-start', pokemon, 'typeadd', 'Steel', '[from] move: Eminence of Kinkaku-ji');
 		},
 		onAfterMoveSecondarySelf(pokemon) {
 			let activate = false;

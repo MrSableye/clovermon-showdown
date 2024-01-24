@@ -9015,19 +9015,19 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	harajukushuffle: {
 		name: "Harajuku Shuffle",
-		shortDesc: "Changes the user's type to Fairy. Raises the user's Attack, Sp. Atk, and Speed by 1.",
+		shortDesc: "Adds Fairy to the user's type(s). Raises the user's Attack, Sp. Atk, and Speed by 1.",
 	},
 	hokkaidosnowstorm: {
 		name: "Hokkaido Snowstorm",
-		shortDesc: "Changes the user's type to Ice. Sets Hail. 10% chance to Freeze."
+		shortDesc: "Adds Ice to the user's type(s). Sets Hail. 10% chance to Freeze."
 	},
 	blessingofyakushima: {
 		name: "Blessing of Yakushima",
-		shortDesc: "Changes the user's type to Grass. Sets Grassy Terrain. Heals 1/3 of the user's HP.",
+		shortDesc: "Adds Grass to the user's type(s). Sets Grassy Terrain. Heals 1/3 of the user's HP.",
 	},
 	eminenceofkinkakuji: {
 		name: "Eminence of Kinkaku-ji",
-		shortDesc: "Changes the user's type to Steel. Sets Lucky Chant. Clears the user's negative boosts.",
+		shortDesc: "Adds Steel to the user's type(s). Sets Lucky Chant. Clears the user's negative boosts.",
 	},
 	cumblast: {
 		name: "Cum Blast",
