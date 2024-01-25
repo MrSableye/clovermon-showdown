@@ -24,4 +24,9 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		desc: "100% chance to make the target flinch.",
 		shortDesc: "100% chance to make the target flinch.",
 	},
+	rockwrecker: {
+		name: "Rock Wrecker",
+		desc: "Lowers the user's Attack and Defense by 1 stage.",
+		shortDesc: "Lowers the user's Attack and Defense by 1.",
+	},
 }
