@@ -606,22 +606,6 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: '[Gen 8 Clover Only] 5MSS',
-		mod: 'clover',
-		ruleset: [
-			'Terastal Clause',
-			'Standard',
-			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
-			'Five Moveslot Syndrome Mod',
-			'Max Move Count = 5',
-		],
-		banlist: [
-			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
-			'Condoom + Unaware', 'Potarded + Unaware', 
-		],
-	},
-	{
 		name: '[Gen 8 Clover Only] Custom Game',
 		mod: 'clover',
 		searchShow: false,

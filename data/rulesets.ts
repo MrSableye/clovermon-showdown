@@ -1689,14 +1689,6 @@ export const Rulesets: {[k: string]: FormatData} = {
 			return newSpecies;
 		},
 	},
-	fivemoveslotsyndromemod: { // all this actually does is announce that it's happening. the 5 moves is allowed via config\formats.ts
-		effectType: 'Rule',
-		name: 'Five Moveslot Syndrome Mod',
-		desc: "Every Pok&eacute;mon's stats, barring HP, are scaled to give them a BST as close to 600 as possible",
-		onBegin() {
-			this.add('rule', '5MSS: Every Pokemon can bring up to five moves, accessible by adding a fifth move via the "Import/Export" button in the Teambuilder');
-		},
-	},
 	teamtypepreview: {
 		effectType: 'Rule',
 		name: 'Team Type Preview',
