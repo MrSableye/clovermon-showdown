@@ -2519,6 +2519,23 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	rockwrecker: {
 		inherit: true,
+		accuracy: 100,
+		basePower: 150,
+		category: "Physical",
+		name: "Rock Wrecker",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				atk: -1,
+				def: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+		contestType: "Tough",
 		isNonstandard: null,
 	},
 	roleplay: {
