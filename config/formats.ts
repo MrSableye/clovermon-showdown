@@ -613,7 +613,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Sketch Post-Gen 7 Moves',
-			'5MSS Mod',
+			'Five Moveslot Syndrome Mod',
 			'Max Move Count = 5',
 		],
 		banlist: [
