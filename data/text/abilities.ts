@@ -3195,6 +3195,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's moves have their secondary effect chance doubled. Foes's moves have their secondary effect chance halved.",
 		shortDesc: "Doubles user's secondary effect chances, halves foe's secondary effect chance.",
 	},
+	gogetter: {
+		name: "Go-Getter",
+		desc: "This Pokemon's recharge moves don't need to recharge.",
+		shortDesc: "This Pokemon's recharge moves don't need to recharge.",
+	},
 	masshopping: {
 		name: "Mass Hopping",
 		desc: "Hopping moves used by this Pokemon have 1.3x power.",
