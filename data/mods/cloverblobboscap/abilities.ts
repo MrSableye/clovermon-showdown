@@ -529,6 +529,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	gogetter: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	homogeneity: {
 		inherit: true,
 		isNonstandard: null,

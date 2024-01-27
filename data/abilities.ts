@@ -11933,6 +11933,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 	},
+	gogetter: {
+		name: 'Go-Getter',
+		isNonstandard: "Future",
+		isNonstandard: "Future",
+		onAfterHit(source, target, move) {
+			if (source.volatiles['mustrecharge']) {
+				source.removeVolatile('mustrecharge');
+			}
+		},
+	},
+
+
 	trickster: {
 		name: "Trickster",
 		isNonstandard: "Future",

@@ -1584,6 +1584,10 @@ export const Abilities: { [k: string]: ModdedAbilityData; } = {
     inherit: true,
     isNonstandard: "Past"
   },
+  gogetter: {
+    inherit: true,
+    isNonstandard: "Past"
+  },
   kantonaut: {
     inherit: true,
     isNonstandard: "Past"

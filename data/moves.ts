@@ -41242,8 +41242,8 @@ oceanhorn: {
 		secondary: null,
 		self: {
 			boosts: {
+				atk: -1,
 				def: -1,
-				spd: -1,
 			},
 		},
 		target: "normal",
@@ -44157,7 +44157,10 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -46271,6 +46274,7 @@ beforeTurnCallback(pokemon) {
 		name: "Geyser",
 		pp: 10,
 		priority: 0,
+		willCrit: true,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -49653,6 +49657,7 @@ beforeTurnCallback(pokemon) {
 		name: "Stone Drills",
 		pp: 10,
 		priority: 0,
+		willCrit: true,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
@@ -52528,7 +52533,10 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 40,
+			status: 'psn',
+		},
 		target: "normal",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -52733,6 +52741,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		willCrit: true,
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
@@ -52951,6 +52960,11 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		secondary: null,
+		self: {
+			boosts: {
+				spe: -1,
+			},
+		},
 		target: "normal",
 		type: "Poison",
 		isNonstandard: "Future",
@@ -53698,6 +53712,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		willCrit: true,
 		target: "normal",
 		type: "Bug",
 		isNonstandard: "Future",
@@ -56839,6 +56854,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		willCrit: true,
 		target: "normal",
 		type: "Grass",
 		isNonstandard: "Future",
@@ -57093,6 +57109,11 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower * pokemon.hp / pokemon.maxhp;
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Ice",
@@ -65247,6 +65268,11 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower * pokemon.hp / pokemon.maxhp;
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Steam",
@@ -65331,6 +65357,7 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
+		willCrit: true,
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -67559,6 +67586,11 @@ beforeTurnCallback(pokemon) {
 		name: "Fleeting Star",
 		pp: 5,
 		priority: 1,
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower * pokemon.hp / pokemon.maxhp;
+			this.debug('BP: ' + bp);
+			return bp;
+		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "allAdjacentFoes",
@@ -69975,7 +70007,12 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -1,
+			},
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -72012,7 +72049,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -72054,7 +72094,10 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			status: 'par',
+		},
 		target: "normal",
 		type: "Food",
 		isNonstandard: "Future",
@@ -74607,6 +74650,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		willCrit: true,
 		target: "normal",
 		type: "Wood",
 		isNonstandard: "Future",
@@ -74897,6 +74941,7 @@ beforeTurnCallback(pokemon) {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: null,
+		willCrit: true,
 		target: "adjacentAllyOrSelf",
 		type: "Blood",
 		isNonstandard: "Future",
