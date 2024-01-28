@@ -36918,11 +36918,9 @@ oceanhorn: {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onHitField() {
-			this.add('-clearallboost');
-			for (const pokemon of this.getAllActive()) {
-				pokemon.clearBoosts();
-			}
+		onHit(target) {
+			target.clearBoosts();
+			this.add('-clearboost', target);
 		},
 		secondary: null,
 		target: "normal",
@@ -38145,11 +38143,9 @@ oceanhorn: {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		onHitField() {
-			this.add('-clearallboost');
-			for (const pokemon of this.getAllActive()) {
-				pokemon.clearBoosts();
-			}
+		onHit(target) {
+			target.clearBoosts();
+			this.add('-clearboost', target);
 		},
 		secondary: null,
 		target: "normal",
@@ -43074,11 +43070,9 @@ beforeTurnCallback(pokemon) {
 		pp: 15,
 		priority: 0,
 		flags: {bypasssub: 1},
-		onHitField() {
-			this.add('-clearallboost');
-			for (const pokemon of this.getAllActive()) {
-				pokemon.clearBoosts();
-			}
+		onHit(target) {
+			target.clearBoosts();
+			this.add('-clearboost', target);
 		},
 		secondary: null,
 		target: "normal",
@@ -45560,7 +45554,10 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
 		target: "normal",
 		type: "Tech",
 		isNonstandard: "Future",
@@ -64762,7 +64759,12 @@ beforeTurnCallback(pokemon) {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 70,
+			boosts: {
+				spd: -1,
+			},
+		},
 		target: "allAdjacentFoes",
 		type: "Steam",
 		isNonstandard: "Future",
