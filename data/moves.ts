@@ -52723,7 +52723,10 @@ beforeTurnCallback(pokemon) {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, above: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Electric",
 		isNonstandard: "Future",
