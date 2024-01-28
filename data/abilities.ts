@@ -11936,12 +11936,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	gogetter: {
 		name: 'Go-Getter',
 		isNonstandard: "Future",
-		isNonstandard: "Future",
-		onAfterHit(source, target, move) {
-			if (source.volatiles['mustrecharge']) {
-				source.removeVolatile('mustrecharge');
+		onUpdate(pokemon) {
+			if (pokemon.volatiles['mustrecharge']) {
+				this.add('-activate', pokemon, 'ability: Go-Getter');
+				pokemon.removeVolatile('mustrecharge');
 			}
 		},
+		onTryAddVolatile(status, pokemon) {
+			if (status.id === 'mustrecharge') return null;
+		}, 
 	},
 
 

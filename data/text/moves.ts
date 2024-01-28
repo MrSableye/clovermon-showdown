@@ -8629,6 +8629,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 100% chance to either sleep, freeze, flinch, or paralyze the target.",
 		shortDesc: "100% chance to sleep, freeze, flinch, or paralyze target.",
 	},
+	fullhouse: {
+		name: "Full House",
+		shortDesc: "Summons Inverse Room, Trick Room, Magic Room, and Wonder Room after hit.",
+	},
 	rainbowblast: {
 		name: "Rainbow Blast",
 		desc: "Physical if user's Atk > Sp. Atk. Hits 18 times. Each hit is a different type",
