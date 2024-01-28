@@ -11942,6 +11942,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				source.removeVolatile('mustrecharge');
 			}
 		},
+		onTryAddVolatile(status, pokemon) {
+			if (status.id === 'mustrecharge') return null;
+		}, 
 	},
 
 

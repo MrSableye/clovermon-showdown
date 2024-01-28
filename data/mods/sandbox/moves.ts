@@ -3947,6 +3947,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	fullhouse: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	portalgun: {
 		inherit: true,
 		isNonstandard: null,

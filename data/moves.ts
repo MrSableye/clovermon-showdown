@@ -30238,6 +30238,31 @@ oceanhorn: {
 		contestType: "Tough",
 		isNonstandard: "Future",
 	},
+
+	fullhouse: {
+		num: 42993,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Full House",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				onHit() {
+					this.field.addPseudoWeather('inverseroom');
+					this.field.addPseudoWeather('wonderroom');
+					this.field.addPseudoWeather('trickroom');
+					this.field.addPseudoWeather('magicroom');
+				},
+			},
+		},
+		target: "allAdjacent",
+		type: "Psychic",
+		isNonstandard: "Future",
+	},
 	meteor: {
 		num: 1124,
 		accuracy: 100,
