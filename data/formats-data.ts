@@ -8993,6 +8993,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	velvetshrimp: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	doomsday: {
 		tier: "Illegal",
 		isNonstandard: "Future",
