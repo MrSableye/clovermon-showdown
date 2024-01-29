@@ -240,6 +240,20 @@ export const Formats: FormatList = [
 		section: 'Clover OMs',
 	},
 	{
+		name: '[Gen 8 Clover Test Only] OU',
+		mod: 'clovertest',
+		ruleset: [
+			'Terastal Clause',
+			'Standard',
+			'Dynamax Clause',
+			'Sketch Post-Gen 7 Moves',
+		],
+		banlist: [
+			'Uber', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Wonder Guard',
+			'Condoom + Unaware', 'Potarded + Unaware', 
+		],
+	},
+	{
 		name: '[Gen 8 Clover Only] OU (No Team Preview)',
 		mod: 'clover',
 		searchShow: false,
