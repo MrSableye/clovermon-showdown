@@ -844,7 +844,6 @@ export const Aliases: {[alias: string]: string} = {
 	tran: "Heatran",
 	trips: "Tripsius",
 	ttar: "Tyranitar",
-	uu: "Chasumo",
 	venu: "Venusaur",
 	vire: "Galavire",
 	viriz: "Virizion",
