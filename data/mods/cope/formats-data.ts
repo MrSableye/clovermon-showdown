@@ -2724,7 +2724,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	    krakenwalker: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber", // no way around it. eterrain surge surfer is not balanced.
 	},
 	    yanorm: {
 		inherit: true,
@@ -2992,6 +2992,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	rasstord: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	smawl: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
