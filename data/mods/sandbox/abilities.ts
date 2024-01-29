@@ -1463,6 +1463,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	atlonglast: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	capacitance: {
 		inherit: true,
 		isNonstandard: null,

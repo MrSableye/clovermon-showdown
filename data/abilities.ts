@@ -12498,6 +12498,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Mind Zap",
 		rating: 5,
 	},
+	atlonglast: {
+		onDamagePriority: -30,
+		onDamage(damage, target, source, effect) {
+			if (target.hp >= target.maxhp * 0.7 && damage >= target.hp && effect && effect.effectType === 'Move') {
+				this.add('-ability', target, 'At Long Last');
+				return target.hp - 1;
+			}
+		},
+		isBreakable: true,
+		name: "At Long Last",
+	},
 	fireaffinity: {
 		name: "Fire Affinity",
 		isNonstandard: "Future",

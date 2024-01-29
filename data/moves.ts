@@ -32303,6 +32303,58 @@ oceanhorn: {
 		type: "???",
 		isNonstandard: "Future",
 	},
+	frytoacrisp: {
+		accuracy: true,
+		basePower: 50,
+		category: "Special",
+		name: "Fry to a Crisp",
+		pp: 40,
+		priority: 0,
+		flags: {},
+		target: "normal",
+		noSketch: true,
+		type: "Fire",
+		isNonstandard: "Future",
+	},
+	enhancedfireorbs: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Enhanced Fire Orbs",
+		pp: 40,
+		priority: 0,
+		flags: {snatch: 1},
+		volatileStatus: 'enhancedfireorbs',
+		condition: {
+			onBasePowerPriority: 9,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Fire') {
+					this.debug('Enhanced Fire Orbs boost');
+					return this.chainModify(2);
+				}
+			},
+			onMoveAborted(pokemon, target, move) {
+				if (move.type === 'Fire' && move.id !== 'enhancedfireorbs') {
+					pokemon.removeVolatile('enhancedfireorbs');
+				}
+			},
+			onAfterMove(pokemon, target, move) {
+				if (move.type === 'Fire' && move.id !== 'enhancedfireorbs') {
+					pokemon.removeVolatile('enhancedfireorbs');
+				}
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Enhanced Fire Orbs', '[silent]');
+			},
+		},
+		boosts: {
+			spa: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Fire",
+		isNonstandard: "Future",
+	},
 	meowsa: {
 		num: 274,
 		accuracy: true,
