@@ -2999,7 +2999,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	smawl: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	hookling: {
 		inherit: true,
