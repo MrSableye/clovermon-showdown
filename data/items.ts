@@ -8321,6 +8321,23 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	berserkmeme: {
+		name: "Berserk Meme",
+		spritenum: 388,
+		onTakeItem: false,
+		onStart(pokemon) {
+			pokemon.setType('???');
+			this.add('-start', pokemon, 'typechange', '???');
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.species.name !== 'Memenace') return;
+			if (move.id === 'meme') {
+				move.basePower = 90;
+			}
+		},
+		itemUser: ["Memenace"],
+		isNonstandard: "Future",
+	},
 	/* Clover CAP Exclusive Items */
 	moluganion: {
 		name: "Moluganion",
