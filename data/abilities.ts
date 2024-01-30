@@ -5931,6 +5931,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart(source) {
 			for (const pokemon of this.getAllActive()) {
 				if (pokemon === source) continue;
+				if (pokemon.isSemiInvulnerable()) continue;
+				if (pokemon.volatiles['substitute']) continue;
 				this.add('-start', pokemon, 'typechange', 'Normal', '[from] ability: Fuk U', '[of] ' + source);
 				pokemon.setType('Normal');
 			}
