@@ -2462,6 +2462,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Pirate's Jug",
 		desc: "If held by an Octai, it doubles the power of Lactose Shot.",
 	},
+	berserkmeme: {
+		name: "Berserk Meme",
+		desc: "If held by a Memenace, sets its type to ??? and increases base power of Meme to 90.",
+	},
 	/* Clover CAP */
 	moluganion: {
 		name: "Moluganion",
