@@ -8903,7 +8903,19 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	despiteallmyrage: {
 		name: "DESPITE ALL MY RAGE",
-		shortDesc: "100% chance to lower the target's Speed by 5 stages.",
+		shortDesc: "100% chance to lower the target's Speed by 4 stages.",
+	},
+	enhancedfireorbs: {
+		name: "Enhanced Fire Orbs",
+		desc: "Raises the user's Special Attack by 1 stage. The user's next Fire-type attack will have its power doubled; the effect ends when the user is no longer active, or after the user attempts to use any Fire-type move besides Enhanced Fire Orbs, even if it is not successful.",
+		shortDesc: "+1 SpA, user's next Fire move 2x power.",
+
+		start: "  [POKEMON] enhanced their fire moves!",
+	},
+	frytoacrisp: {
+		name: "Fry to a Crisp",
+		desc: "Hits four times.",
+		shortDesc: "Hits 4 times.",
 	},
 	oceanhorn: {
 		name: "Ocean Horn",

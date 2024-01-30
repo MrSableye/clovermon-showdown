@@ -3466,6 +3466,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		damage: "  [POKEMON] shattered into millions of glass shards!",
 	},
+	atlonglast: {
+		name: "At Long Last",
+		desc: "If this Pokemon is at 70% HP or more, it survives one hit with at least 1 HP.",
+		shortDesc: "If this Pokemon is at 70% HP or more, it survives one hit with at least 1 HP.",
+
+		activate: "  [POKEMON]'s resolve!",
+	},
 	fireaffinity: {
 		name: "Fire Affinity",
 		shortDesc: "This Pokemon's attacking stat is multiplied by 1.5 while using a Fire-type attack. This Pokemon is healed 1/8 by Fire. Immune to Burn.",
