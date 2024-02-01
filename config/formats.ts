@@ -1068,6 +1068,27 @@ export const Formats: FormatList = [
 		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard', 'Wicked Blow', 'Drizzle', 'Drought', 'Krackocean','Illusion', 'Weathervein', 'Aurora Veil'],
 		unbanlist: ['Disbeary-Ebil + Tough Claws', 'Disbeary-Ebil + Dark Aura'],
 	},
+	{
+	name: '[Gen 8 Cope Only] Flipped',
+	mod: 'cope',
+	rated: false,
+	ruleset: [
+		'Terastal Clause',
+		'Obtainable',
+		'Dynamax Clause',
+		'Sleep Clause Mod',
+		'Endless Battle Clause',
+		'HP Percentage Mod',
+		'Cancel Mod',
+		'Sketch Post-Gen 7 Moves',
+		'OHKO Clause',
+		'Evasion Moves Clause',
+		'Species Clause',
+		'Flipped Mod',
+	],
+	banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard', 'Wicked Blow', 'Drizzle', 'Drought', 'Krackocean','Illusion', 'Weathervein', 'Aurora Veil'],
+	unbanlist: ['Disbeary-Ebil + Tough Claws', 'Disbeary-Ebil + Dark Aura'],
+},
 	///////////////////////////////////////////////////////////////////
 	// Create-a-Blobbos (CAB)
 	///////////////////////////////////////////////////////////////////
