@@ -8338,6 +8338,44 @@ export const Items: {[itemid: string]: ItemData} = {
 		itemUser: ["Memenace"],
 		isNonstandard: "Future",
 	},
+	anitem: {
+		name: "An Item",
+		spritenum: 750,
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === '???') {
+				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	aberry: {
+		name: "A Berry",
+		spritenum: 124,
+		isBerry: true,
+		naturalGift: {
+			basePower: 80,
+			type: "Normal",
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (
+				move.type === '???' &&
+				(!target.volatiles['substitute'] || move.flags['bypasssub'] || (move.infiltrates && this.gen >= 6))
+			) {
+				if (target.eatItem()) {
+					this.debug('-50% reduction');
+					this.add('-enditem', target, this.effect, '[weaken]');
+					return this.chainModify(0.5);
+				}
+			}
+		},
+		onEat() { },
+		num: 200,
+		gen: 4,
+		rating: 1,
+		isNonstandard: "Future",
+	},
 	/* Clover CAP Exclusive Items */
 	moluganion: {
 		name: "Moluganion",

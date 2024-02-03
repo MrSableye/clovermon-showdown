@@ -2466,6 +2466,14 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Berserk Meme",
 		desc: "If held by a Memenace, sets its type to ??? and increases base power of Meme to 90.",
 	},
+	anitem: {
+		name: "An Item",
+		desc: "Holder's ???-type attacks have 1.2x power.",
+	},
+	aberry: {
+		name: "A Berry",
+		desc: "Halves damage taken from a ???-type attack. Single use.",
+	},
 	/* Clover CAP */
 	moluganion: {
 		name: "Moluganion",
