@@ -10,4 +10,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 92,
 		},
 	},
+	marionettl: {
+		inherit: true,
+		baseStats: {
+			hp: 80,
+			atk: 115,
+			def: 70,
+			spa: 100,
+			spd: 70,
+			spe: 110,
+		},
+	},
 };
