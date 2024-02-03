@@ -19,4 +19,20 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	grassyseed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mistyseed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	psychicseed: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	electricseed: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
