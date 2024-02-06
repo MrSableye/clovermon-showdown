@@ -39,4 +39,8 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	firering: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

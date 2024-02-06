@@ -2474,6 +2474,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "A Berry",
 		desc: "Halves damage taken from a ???-type attack. Single use.",
 	},
+	firering: {
+		name: "Fire Ring",
+		desc: "Holder cannot be burned. If knocked off, the attacker is burned.",
+	},
 	/* Clover CAP */
 	moluganion: {
 		name: "Moluganion",

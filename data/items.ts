@@ -8376,6 +8376,17 @@ export const Items: {[itemid: string]: ItemData} = {
 		rating: 1,
 		isNonstandard: "Future",
 	},
+	firering: {
+		name: "Fire Ring",
+		spritenum: 410,
+		onSetStatus(status, target, source, effect) {
+			if (status.id === 'brn') {
+				this.add('-immune', target, '[from] ability: Comatose');
+			}
+			return false;
+		},
+		isNonstandard: "Future",
+	},
 	/* Clover CAP Exclusive Items */
 	moluganion: {
 		name: "Moluganion",
