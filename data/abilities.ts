@@ -10832,22 +10832,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	supremeunderlord: {
 		onStart(pokemon) {
-			if (pokemon.side.totalFainted) {
-				this.add('-activate', pokemon, 'ability: Supreme Underlord');
-				const fallen = Math.min(pokemon.side.totalFainted, 5);
-				this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
-				this.effectState.fallen = fallen;
-			}
+			this.add('-activate', pokemon, 'ability: Supreme Underlord');
+			const risen = Math.max(5 - pokemon.side.totalFainted, 0);
+			this.add('-start', pokemon, `risen${risen}`, '[silent]');
+			this.effectState.risen = risen;
 		},
 		onEnd(pokemon) {
-			this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+			this.add('-end', pokemon, `risen${this.effectState.risen}`, '[silent]');
 		},
 		onBasePowerPriority: 21,
 		onBasePower(basePower, attacker, defender, move) {
-			if (this.effectState.fallen) {
+			if (this.effectState.risen) {
 				const powMod = [6144, 5734, 5325, 4915, 4506, 4096];
-				this.debug(`Supreme Underlord boost: ${powMod[this.effectState.fallen]}/4096`);
-				return this.chainModify([powMod[this.effectState.fallen], 4096]);
+				this.debug(`Supreme Underlord boost: ${powMod[this.effectState.risen]}/4096`);
+				return this.chainModify([powMod[this.effectState.risen], 4096]);
 			}
 		},
 		name: "Supreme Underlord",
