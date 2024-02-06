@@ -32,4 +32,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 160,
 		},
 	},
+	anonymouse: {
+		inherit: true,
+		baseStats: {
+			hp: 66,
+			atk: 86,
+			def: 66,
+			spa: 86,
+			spd: 66,
+			spe: 116,
+		},
+	},
 };
