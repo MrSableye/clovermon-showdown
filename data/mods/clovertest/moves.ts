@@ -1,4 +1,4 @@
-export const Items: {[k: string]: ModdedItemData} = {
+export const Moves: { [k: string]: ModdedMoveData } = {
 	knockoff: {
 		inherit: true,
 		onAfterHit(target, source) {

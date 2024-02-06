@@ -2478,6 +2478,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Fire Ring",
 		desc: "Holder cannot be burned. If knocked off, the attacker is burned.",
 	},
+	skillguard: {
+		name: "Skill Guard",
+		desc: "Holder's type and abilities cannot be changed.",
+	},
 	/* Clover CAP */
 	moluganion: {
 		name: "Moluganion",

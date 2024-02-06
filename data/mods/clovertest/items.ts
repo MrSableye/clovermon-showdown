@@ -43,4 +43,8 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	skillguard: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

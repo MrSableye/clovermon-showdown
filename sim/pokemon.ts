@@ -1982,7 +1982,7 @@ export class Pokemon {
 	/**
 	 * Sets a type (except on Arceus, who resists type changes)
 	 */
-	setType(newType: string | string[], enforce = false) {
+	setType(newType: string | string[], enforce = false, source: Pokemon | null = null, sourceEffect: Effect | null = null) {
 		if (!enforce) {
 			// First type of Arceus, Silvally cannot be normally changed
 			if ((this.battle.gen >= 5 && (this.species.num === 493 || this.species.num === 773)) ||
@@ -1994,23 +1994,37 @@ export class Pokemon {
 		}
 
 		if (!newType) throw new Error("Must pass type to setType");
+
 		const oldTypes = this.types;
-		this.types = (typeof newType === 'string' ? [newType] : newType);
+		const newTypes = (typeof newType === 'string' ? [newType] : newType);
+		const result: boolean = this.battle.runEvent('TypeChange', this, source, sourceEffect, [oldTypes, newTypes]);
+		if (!result) {
+			return false;
+		}
+
+		this.types = newTypes;
 		this.addedType = '';
 		this.knownType = true;
 		this.apparentType = this.types.join('/');
 
-		this.battle.runEvent('AfterTypeChange', this, null, null, [oldTypes, this.types]);
+		this.battle.runEvent('AfterTypeChange', this, source, sourceEffect, [oldTypes, newTypes]);
 
 		return true;
 	}
 
 	/** Removes any types added previously and adds another one. */
-	addType(newType: string) {
+	addType(newType: string, source: Pokemon | null = null, sourceEffect: Effect | null = null) {
 		if (this.terastallized) return false;
-		this.addedType = newType;
 
-		this.battle.runEvent('AfterTypeChange', this, null, null, [this.types, [...this.types, this.addedType]]);
+		const oldTypes = this.types;
+		const newTypes = [...this.types, this.addedType];
+		const result: boolean = this.battle.runEvent('TypeChange', this, source, sourceEffect, [oldTypes, newTypes]);
+		if (!result) {
+			return false;
+		}
+
+		this.addedType = newType;
+		this.battle.runEvent('AfterTypeChange', this, source, sourceEffect, [this.types, [...this.types, this.addedType]]);
 
 		return true;
 	}

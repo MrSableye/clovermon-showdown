@@ -8387,6 +8387,22 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		isNonstandard: "Future",
 	},
+	skillguard: {
+		name: "Skill Guard",
+		spritenum: 746,
+		ignoreKlutz: true,
+		onSetAbility(ability, target, source, effect) {
+			if (target === source) return;
+			this.add('-block', target, 'item: Skill Guard');
+			return null;
+		},
+		onTypeChange(typeChange, target, source, effect) {
+			if (target === source) return;
+			this.add('-block', target, 'item: Skill Guard');
+			return false;
+		},
+		isNonstandard: "Future",
+	},
 	/* Clover CAP Exclusive Items */
 	moluganion: {
 		name: "Moluganion",
