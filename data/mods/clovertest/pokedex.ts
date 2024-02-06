@@ -21,4 +21,15 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 110,
 		},
 	},
+	chromox: {
+		inherit: true,
+		baseStats: {
+			hp: 85,
+			atk: 80,
+			def: 60,
+			spa: 80,
+			spd: 60,
+			spe: 160,
+		},
+	},
 };
