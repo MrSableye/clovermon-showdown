@@ -35,4 +35,8 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	heavydutyboots: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
