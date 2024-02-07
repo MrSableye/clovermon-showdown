@@ -8380,9 +8380,8 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Fire Ring",
 		spritenum: 410,
 		onSetStatus(status, target, source, effect) {
-			if (status.id === 'brn') {
-				this.add('-immune', target, '[from] ability: Comatose');
-			}
+			if (status.id !== 'brn') return;
+			this.add('-immune', target, '[from] ability: Comatose');
 			return false;
 		},
 		isNonstandard: "Future",
