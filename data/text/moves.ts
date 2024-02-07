@@ -203,8 +203,14 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	assist: {
 		name: "Assist",
-		desc: "A random move among those known by the user's party members is selected for use. Does not select Assist, Baneful Bunker, Beak Blast, Belch, Bestow, Bounce, Celebrate, Chatter, Circle Throw, Copycat, Counter, Covet, Destiny Bond, Detect, Dig, Dive, Dragon Tail, Endure, Feint, Fly, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Mat Block, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Phantom Force, Protect, Rage Powder, Roar, Shadow Force, Shell Trap, Sketch, Sky Drop, Sleep Talk, Snatch, Spiky Shield, Spotlight, Struggle, Switcheroo, Thief, Transform, Trick, Whirlwind, or any Z-Move.",
+		desc: "A random move among those known by the user's party members is selected for use. Does not select Assist, Baneful Bunker, Beak Blast, Belch, Bestow, Blazing Torque, Bounce, Celebrate, Chatter, Circle Throw, Combat Torque, Copycat, Counter, Covet, Destiny Bond, Detect, Dig, Dive, Dragon Tail, Endure, Feint, Fly, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Magical Torque, Mat Block, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Noxious Torque, Phantom Force, Protect, Rage Powder, Roar, Shadow Force, Shell Trap, Sketch, Sky Drop, Sleep Talk, Snatch, Spiky Shield, Spotlight, Struggle, Switcheroo, Thief, Transform, Trick, Whirlwind, or Wicked Torque.",
 		shortDesc: "Uses a random move known by a team member.",
+		gen8: {
+			desc: "A random move among those known by the user's party members is selected for use. Does not select Assist, Baneful Bunker, Beak Blast, Belch, Bestow, Bounce, Celebrate, Chatter, Circle Throw, Copycat, Counter, Covet, Destiny Bond, Detect, Dig, Dive, Dragon Tail, Endure, Feint, Fly, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Mat Block, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Phantom Force, Protect, Rage Powder, Roar, Shadow Force, Shell Trap, Sketch, Sky Drop, Sleep Talk, Snatch, Spiky Shield, Spotlight, Struggle, Switcheroo, Thief, Transform, Trick, or Whirlwind.",
+		},
+		gen7: {
+			desc: "A random move among those known by the user's party members is selected for use. Does not select Assist, Baneful Bunker, Beak Blast, Belch, Bestow, Bounce, Celebrate, Chatter, Circle Throw, Copycat, Counter, Covet, Destiny Bond, Detect, Dig, Dive, Dragon Tail, Endure, Feint, Fly, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Mat Block, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Phantom Force, Protect, Rage Powder, Roar, Shadow Force, Shell Trap, Sketch, Sky Drop, Sleep Talk, Snatch, Spiky Shield, Spotlight, Struggle, Switcheroo, Thief, Transform, Trick, Whirlwind, or any Z-Move.",
+		},
 		gen6: {
 			desc: "A random move among those known by the user's party members is selected for use. Does not select Assist, Belch, Bestow, Bounce, Celebrate, Chatter, Circle Throw, Copycat, Counter, Covet, Destiny Bond, Detect, Dig, Dive, Dragon Tail, Endure, Feint, Fly, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Mat Block, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Phantom Force, Protect, Rage Powder, Roar, Shadow Force, Sketch, Sky Drop, Sleep Talk, Snatch, Spiky Shield, Struggle, Switcheroo, Thief, Transform, Trick, or Whirlwind.",
 		},
@@ -516,8 +522,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	bleakwindstorm: {
 		name: "Bleakwind Storm",
-		desc: "Has a 30% chance to lower the target's Speed by 1 stage.",
-		shortDesc: "30% chance to lower the foe(s) Speed by 1.",
+		desc: "Has a 30% chance to lower the target's Speed by 1 stage. If the weather is Primordial Sea or Rain Dance, this move does not check accuracy. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 80%.",
+		shortDesc: "30% to lower foe(s) Speed by 1. Rain: can't miss.",
 	},
 	blizzard: {
 		name: "Blizzard",
@@ -551,6 +557,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		gen3: {
 			desc: "Prevents the target from switching out. The target can still switch out if it uses Baton Pass. If the target leaves the field using Baton Pass, the replacement will remain trapped. The effect ends if the user leaves the field, unless it uses Baton Pass, in which case the target will remain trapped.",
 		},
+	},
+	bloodmoon: {
+		name: "Blood Moon",
+		shortDesc: "Cannot be used twice in a row.",
 	},
 	bloomdoom: {
 		name: "Bloom Doom",
@@ -1042,13 +1052,16 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	copycat: {
 		name: "Copycat",
-		desc: "The user uses the last move used by any Pokemon, including itself. The base move of Max and G-Max Moves is considered for this purpose. Fails if no move has been used, or if the last move used was Assist, Baneful Bunker, Beak Blast, Behemoth Bash, Behemoth Blade, Belch, Bestow, Celebrate, Chatter, Circle Throw, Copycat, Counter, Covet, Crafty Shield, Destiny Bond, Detect, Dragon Tail, Dynamax Cannon, Endure, Feint, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Mat Block, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Obstruct, Protect, Rage Powder, Roar, Shell Trap, Sketch, Sleep Talk, Snatch, Spiky Shield, Spotlight, Struggle, Switcheroo, Thief, Transform, Trick, or Whirlwind.",
+		desc: "The user uses the last move used by any Pokemon, including itself. Fails if no move has been used, or if the last move used was Assist, Baneful Bunker, Beak Blast, Behemoth Bash, Behemoth Blade, Belch, Bestow, Blazing Torque, Celebrate, Chatter, Circle Throw, Combat Torque, Copycat, Counter, Covet, Destiny Bond, Detect, Dragon Tail, Dynamax Cannon, Endure, Feint, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Magical Torque, Mat Block, Me First, Metronome, Mimic, Mirror Move, Nature Power, Noxious Torque, Protect, Rage Powder, Roar, Shell Trap, Sketch, Sleep Talk, Snatch, Spiky Shield, Spotlight, Struggle, Switcheroo, Thief, Transform, Trick, Whirlwind, or Wicked Torque.",
 		shortDesc: "Uses the last move used in the battle.",
+		gen8: {
+			desc: "The user uses the last move used by any Pokemon, including itself. The base move of Max and G-Max Moves is considered for this purpose. Fails if no move has been used, or if the last move used was Assist, Baneful Bunker, Beak Blast, Behemoth Bash, Behemoth Blade, Belch, Bestow, Celebrate, Chatter, Circle Throw, Copycat, Counter, Covet, Destiny Bond, Detect, Dragon Tail, Dynamax Cannon, Endure, Feint, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Mat Block, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Protect, Rage Powder, Roar, Shell Trap, Sketch, Sleep Talk, Snatch, Spiky Shield, Spotlight, Struggle, Switcheroo, Thief, Transform, Trick, or Whirlwind.",
+		},
 		gen7: {
-			desc: "The user uses the last move used by any Pokemon, including itself. Fails if no move has been used, or if the last move used was Assist, Baneful Bunker, Beak Blast, Belch, Bestow, Celebrate, Chatter, Circle Throw, Copycat, Counter, Covet, Crafty Shield, Destiny Bond, Detect, Dragon Tail, Endure, Feint, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Mat Block, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Protect, Rage Powder, Roar, Shell Trap, Sketch, Sleep Talk, Snatch, Spiky Shield, Spotlight, Struggle, Switcheroo, Thief, Transform, Trick, Whirlwind, or any Z-Move.",
+			desc: "The user uses the last move used by any Pokemon, including itself. Fails if no move has been used, or if the last move used was Assist, Baneful Bunker, Beak Blast, Belch, Bestow, Celebrate, Chatter, Circle Throw, Copycat, Counter, Covet, Destiny Bond, Detect, Dragon Tail, Endure, Feint, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Mat Block, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Protect, Rage Powder, Roar, Shell Trap, Sketch, Sleep Talk, Snatch, Spiky Shield, Spotlight, Struggle, Switcheroo, Thief, Transform, Trick, Whirlwind, or any Z-Move.",
 		},
 		gen6: {
-			desc: "The user uses the last move used by any Pokemon, including itself. Fails if no move has been used, or if the last move used was Assist, Baneful Bunker, Belch, Bestow, Celebrate, Chatter, Circle Throw, Copycat, Counter, Covet, Destiny Bond, Detect, Dragon Tail, Endure, Feint, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Mat Block, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Protect, Rage Powder, Roar, Sketch, Sleep Talk, Snatch, Spiky Shield, Struggle, Switcheroo, Thief, Transform, Trick, or Whirlwind.",
+			desc: "The user uses the last move used by any Pokemon, including itself. Fails if no move has been used, or if the last move used was Assist, Belch, Bestow, Celebrate, Chatter, Circle Throw, Copycat, Counter, Covet, Destiny Bond, Detect, Dragon Tail, Endure, Feint, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Mat Block, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Protect, Rage Powder, Roar, Sketch, Sleep Talk, Snatch, Spiky Shield, Struggle, Switcheroo, Thief, Transform, Trick, or Whirlwind.",
 		},
 		gen5: {
 			desc: "The user uses the last move used by any Pokemon, including itself. Fails if no move has been used, or if the last move used was Assist, Bestow, Chatter, Circle Throw, Copycat, Counter, Covet, Destiny Bond, Detect, Dragon Tail, Endure, Feint, Focus Punch, Follow Me, Helping Hand, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Protect, Rage Powder, Sketch, Sleep Talk, Snatch, Struggle, Switcheroo, Thief, Transform, or Trick.",
@@ -1706,8 +1719,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	encore: {
 		name: "Encore",
-		desc: "For its next 3 turns, the target is forced to repeat its last move used. If the affected move runs out of PP, the effect ends. Fails if the target is already under this effect, if it has not made a move, if the move has 0 PP, if the move is Assist, Copycat, Dynamax Cannon, Encore, Me First, Metronome, Mimic, Mirror Move, Nature Power, Sketch, Sleep Talk, Struggle, or Transform, or if the target is Dynamaxed.",
+		desc: "For its next 3 turns, the target is forced to repeat its last move used. If the affected move runs out of PP, the effect ends. Fails if the target is already under this effect, if it has not made a move, if the move has 0 PP, or if the move is Assist, Blazing Torque, Combat Torque, Copycat, Dynamax Cannon, Encore, Magical Torque, Me First, Metronome, Mimic, Mirror Move, Nature Power, Noxious Torque, Sketch, Sleep Talk, Struggle, Transform, or Wicked Torque.",
 		shortDesc: "Target repeats its last move for its next 3 turns.",
+		gen8: {
+			desc: "For its next 3 turns, the target is forced to repeat its last move used. If the affected move runs out of PP, the effect ends. Fails if the target is already under this effect, if it has not made a move, if the move has 0 PP, if the target is Dynamaxed, or if the move is Assist, Copycat, Dynamax Cannon, Encore, Me First, Metronome, Mimic, Mirror Move, Nature Power, Sketch, Sleep Talk, Struggle, or Transform.",
+		},
 		gen7: {
 			desc: "For its next 3 turns, the target is forced to repeat its last move used. If the affected move runs out of PP, the effect ends. Fails if the target is already under this effect, if it has not made a move, if the move has 0 PP, or if the move is Assist, Copycat, Encore, Me First, Metronome, Mimic, Mirror Move, Nature Power, Sketch, Sleep Talk, Struggle, Transform, or any Z-Move. Z-Powered moves can still be selected and executed during this effect.",
 		},
@@ -3081,6 +3097,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Hydro Pump",
 		shortDesc: "No additional effect.",
 	},
+	hydrosteam: {
+		name: "Hydro Steam",
+		desc: "If the current weather is Sunny Day and the user is not holding Utility Umbrella, this move's damage is multiplied by 1.5 instead of halved for being Water type.",
+		shortDesc: "During Sunny Day: 1.5x damage instead of half.",
+	},
 	hydrovortex: {
 		name: "Hydro Vortex",
 		shortDesc: "Power is equal to the base move's Z-Power.",
@@ -3284,10 +3305,13 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	instruct: {
 		name: "Instruct",
-		desc: "The target immediately uses its last used move. Fails if the target has not made a move, if the move has 0 PP, if the target is Dynamaxed, if the target is preparing to use Beak Blast, Focus Punch, or Shell Trap, or if the move is Assist, Beak Blast, Belch, Bide, Celebrate, Copycat, Dynamax Cannon, Focus Punch, Ice Ball, Instruct, King's Shield, Me First, Metronome, Mimic, Mirror Move, Nature Power, Obstruct, Outrage, Petal Dance, Rollout, Shell Trap, Sketch, Sleep Talk, Struggle, Thrash, Transform, Uproar, any two-turn move, any recharge move, any Z-Move, or any Max or G-Max Move.",
+		desc: "The target immediately uses its last used move. Fails if the target has not made a move, if the move has 0 PP, if the target is preparing to use Beak Blast, Focus Punch, or Shell Trap, or if the move is Assist, Beak Blast, Belch, Bide, Blazing Torque, Celebrate, Chatter, Combat Torque, Copycat, Dynamax Cannon, Focus Punch, Hold Hands, Ice Ball, Instruct, King's Shield, Magical Torque, Me First, Metronome, Mimic, Mirror Move, Nature Power, Noxious Torque, Obstruct, Outrage, Petal Dance, Rollout, Shell Trap, Sketch, Sleep Talk, Struggle, Thrash, Transform, Uproar, Wicked Torque, any two-turn move, or any recharge move.",
 		shortDesc: "The target immediately uses its last used move.",
+		gen8: {
+			desc: "The target immediately uses its last used move. Fails if the target has not made a move, if the move has 0 PP, if the target is Dynamaxed, if the target is preparing to use Beak Blast, Focus Punch, or Shell Trap, or if the move is Assist, Beak Blast, Belch, Bide, Celebrate, Chatter, Copycat, Dynamax Cannon, Focus Punch, Hold Hands, Ice Ball, Instruct, King's Shield, Me First, Metronome, Mimic, Mirror Move, Nature Power, Obstruct, Outrage, Petal Dance, Rollout, Shell Trap, Sketch, Sleep Talk, Struggle, Thrash, Transform, Uproar, any two-turn move, any recharge move, or any Max or G-Max Move.",
+		},
 		gen7: {
-			desc: "The target immediately uses its last used move. Fails if the target has not made a move, if the move has 0 PP, if the target is preparing to use Beak Blast, Focus Punch, or Shell Trap, or if the move is Assist, Beak Blast, Belch, Bide, Celebrate, Copycat, Focus Punch, Ice Ball, Instruct, King's Shield, Me First, Metronome, Mimic, Mirror Move, Nature Power, Outrage, Petal Dance, Rollout, Shell Trap, Sketch, Sleep Talk, Struggle, Thrash, Transform, Uproar, any two-turn move, any recharge move, or any Z-Move.",
+			desc: "The target immediately uses its last used move. Fails if the target has not made a move, if the move has 0 PP, if the target is preparing to use Beak Blast, Focus Punch, or Shell Trap, or if the move is Assist, Beak Blast, Belch, Bide, Celebrate, Chatter, Copycat, Focus Punch, Hold Hands, Ice Ball, Instruct, King's Shield, Me First, Metronome, Mimic, Mirror Move, Nature Power, Outrage, Petal Dance, Rollout, Shell Trap, Sketch, Sleep Talk, Struggle, Thrash, Transform, Uproar, any two-turn move, any recharge move, or any Z-Move.",
 		},
 
 		activate: "  [TARGET] followed [POKEMON]'s instructions!",
@@ -3313,6 +3337,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Iron Tail",
 		desc: "Has a 30% chance to lower the target's Defense by 1 stage.",
 		shortDesc: "30% chance to lower the target's Defense by 1.",
+	},
+	ivycudgel: {
+		name: "Ivy Cudgel",
+		desc: "Has a higher chance for a critical hit. If the user is an Ogerpon holding a mask, this move's type changes to match. Water type for Wellspring Mask, Fire type for Hearthflame Mask, and Rock type for Cornerstone Mask.",
+		shortDesc: "High critical hit ratio. Type depends on user's form.",
 	},
 	jawlock: {
 		name: "Jaw Lock",
@@ -3744,6 +3773,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  [POKEMON] intends to flip up a mat and block incoming attacks!",
 		block: "  [MOVE] was blocked by the kicked-up mat!",
 	},
+	matchagotcha: {
+		name: "Matcha Gotcha",
+		desc: "Has a 20% chance to burn the target. The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down. The target thaws out if it is frozen.",
+		shortDesc: "20% burn. Recovers 50% dmg dealt. Thaws foe(s).",
+	},
 	maxairstream: {
 		name: "Max Airstream",
 		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Speed of each Pokemon on the user's side is raised by 1 stage, even if they have a substitute. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
@@ -3865,13 +3899,22 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mefirst: {
 		name: "Me First",
-		desc: "The user uses the move the target chose for use this turn against it, if possible, with its power multiplied by 1.5. The move must be a damaging move other than Beak Blast, Chatter, Counter, Covet, Focus Punch, Me First, Metal Burst, Mirror Coat, Shell Trap, Struggle, Thief, or any Z-Move. Fails if the target moves before the user. Ignores the target's substitute for the purpose of copying the move.",
+		desc: "The user uses the move the target chose for use this turn against it, if possible, with its power multiplied by 1.5. The move must be a damaging move other than Beak Blast, Belch, Blazing Torque, Combat Torque, Comeuppance, Counter, Covet, Focus Punch, Magical Torque, Me First, Metal Burst, Mirror Coat, Noxious Torque, Shell Trap, Struggle, Thief, or Wicked Torque. Fails if the target moves before the user. Ignores the target's substitute for the purpose of copying the move.",
 		shortDesc: "Copies a foe at 1.5x power. User must be faster.",
+		gen8: {
+			desc: "The user uses the move the target chose for use this turn against it, if possible, with its power multiplied by 1.5. The move must be a damaging move other than Beak Blast, Belch, Chatter, Counter, Covet, Focus Punch, Me First, Metal Burst, Mirror Coat, Shell Trap, Struggle, or Thief. Fails if the target moves before the user. Ignores the target's substitute for the purpose of copying the move.",
+		},
+		gen7: {
+			desc: "The user uses the move the target chose for use this turn against it, if possible, with its power multiplied by 1.5. The move must be a damaging move other than Beak Blast, Belch, Chatter, Counter, Covet, Focus Punch, Me First, Metal Burst, Mirror Coat, Shell Trap, Struggle, Thief, or any Z-Move. Fails if the target moves before the user. Ignores the target's substitute for the purpose of copying the move.",
+		},
 		gen6: {
+			desc: "The user uses the move the target chose for use this turn against it, if possible, with its power multiplied by 1.5. The move must be a damaging move other than Belch, Chatter, Counter, Covet, Focus Punch, Me First, Metal Burst, Mirror Coat, Struggle, or Thief. Fails if the target moves before the user. Ignores the target's substitute for the purpose of copying the move.",
+		},
+		gen5: {
 			desc: "The user uses the move the target chose for use this turn against it, if possible, with its power multiplied by 1.5. The move must be a damaging move other than Chatter, Counter, Covet, Focus Punch, Me First, Metal Burst, Mirror Coat, Struggle, or Thief. Fails if the target moves before the user. Ignores the target's substitute for the purpose of copying the move.",
 		},
 		gen4: {
-			desc: "The user uses the move the target chose for use this turn against it, if possible, with its power multiplied by 1.5. The move must be a damaging move other than Chatter, Counter, Covet, Focus Punch, Mirror Coat, or Thief. Fails if the target moves before the user. Ignores the target's substitute for the purpose of copying the move.",
+			desc: "The user uses the move the target chose for use this turn against it, if possible, with its power multiplied by 1.5. The move must be a damaging move other than Chatter, Counter, Covet, Focus Punch, Me First, Mirror Coat, Struggle, or Thief. Fails if the target moves before the user. Ignores the target's substitute for the purpose of copying the move.",
 		},
 	},
 	megadrain: {
@@ -3994,8 +4037,14 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mimic: {
 		name: "Mimic",
-		desc: "While the user remains active, this move is replaced by the last move used by the target. The copied move has the maximum PP for that move. Fails if the target has not made a move, if the user has Transformed, if the user already knows the move, or if the move is Behemoth Bash, Behemoth Blade, Chatter, Dynamax Cannon, Mimic, Sketch, Struggle, Transform, or any Z-Move.",
+		desc: "While the user remains active, this move is replaced by the last move used by the target. The copied move has the maximum PP for that move. Fails if the target has not made a move, if the user has Transformed, if the user already knows the move, or if the move is Assist, Behemoth Bash, Behemoth Blade, Belch, Blazing Torque, Celebrate, Chatter, Combat Torque, Copycat, Dynamax Cannon, Hold Hands, Magical Torque, Me First, Metronome, Mimic, Mirror Move, Nature Power, Noxious Torque, Sketch, Sleep Talk, Struggle, Transform, or Wicked Torque.",
 		shortDesc: "The last move the target used replaces this one.",
+		gen8: {
+			desc: "While the user remains active, this move is replaced by the last move used by the target. The copied move has the maximum PP for that move. Fails if the target has not made a move, if the user has Transformed, if the user already knows the move, or if the move is Behemoth Bash, Behemoth Blade, Chatter, Dynamax Cannon, Mimic, Sketch, Struggle, Transform, or any Max or G-Max Move.",
+		},
+		gen7: {
+			desc: "While the user remains active, this move is replaced by the last move used by the target. The copied move has the maximum PP for that move. Fails if the target has not made a move, if the user has Transformed, if the user already knows the move, or if the move is Chatter, Mimic, Sketch, Struggle, Transform, or any Z-Move.",
+		},
 		gen6: {
 			desc: "While the user remains active, this move is replaced by the last move used by the target. The copied move has the maximum PP for that move. Fails if the target has not made a move, if the user has Transformed, if the user already knows the move, or if the move is Chatter, Mimic, Sketch, Struggle, or Transform.",
 		},
@@ -4765,6 +4814,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 10% chance to confuse the target.",
 		shortDesc: "10% chance to confuse the target.",
 	},
+	psyblade: {
+		name: "Psyblade",
+		desc: "If the current terrain is Electric Terrain, this move's power is multiplied by 1.5.",
+		shortDesc: "During Electric Terrain: 1.5x power.",
+	},
 	psychup: {
 		name: "Psych Up",
 		desc: "The user copies all of the target's current stat stage changes.",
@@ -5340,8 +5394,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sandsearstorm: {
 		name: "Sandsear Storm",
-		desc: "Has a 20% chance to burn the target.",
-		shortDesc: "20% chance to burn foe(s).",
+		desc: "Has a 20% chance to burn the target. If the weather is Primordial Sea or Rain Dance, this move does not check accuracy. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 80%.",
+		shortDesc: "20% chance to burn foe(s). Can't miss in rain.",
 	},
 	sandstorm: {
 		name: "Sandstorm",
@@ -5760,8 +5814,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sleeptalk: {
 		name: "Sleep Talk",
-		desc: "One of the user's known moves, besides this move, is selected for use at random. Fails if the user is not asleep. The selected move does not have PP deducted from it, and can currently have 0 PP. This move cannot select Assist, Beak Blast, Belch, Bide, Celebrate, Chatter, Copycat, Dynamax Cannon, Focus Punch, Hold Hands, Me First, Metronome, Mimic, Mirror Move, Nature Power, Shell Trap, Sketch, Sleep Talk, Struggle, Uproar, any two-turn move, or any Max Move.",
+		desc: "One of the user's known moves, besides this move, is selected for use at random. Fails if the user is not asleep. The selected move does not have PP deducted from it, and can currently have 0 PP. This move cannot select Assist, Beak Blast, Belch, Bide, Blazing Torque, Celebrate, Chatter, Combat Torque, Copycat, Dynamax Cannon, Focus Punch, Hold Hands, Magical Torque, Me First, Metronome, Mimic, Mirror Move, Nature Power, Noxious Torque, Shell Trap, Sketch, Sleep Talk, Struggle, Uproar, Wicked Torque, or any two-turn move.",
 		shortDesc: "User must be asleep. Uses another known move.",
+		gen8: {
+			desc: "One of the user's known moves, besides this move, is selected for use at random. Fails if the user is not asleep. The selected move does not have PP deducted from it, and can currently have 0 PP. This move cannot select Assist, Beak Blast, Belch, Bide, Celebrate, Chatter, Copycat, Dynamax Cannon, Focus Punch, Hold Hands, Me First, Metronome, Mimic, Mirror Move, Nature Power, Shell Trap, Sketch, Sleep Talk, Struggle, Uproar, any two-turn move, or any Max Move.",
+		},
 		gen7: {
 			desc: "One of the user's known moves, besides this move, is selected for use at random. Fails if the user is not asleep. The selected move does not have PP deducted from it, and can currently have 0 PP. This move cannot select Assist, Beak Blast, Belch, Bide, Celebrate, Chatter, Copycat, Focus Punch, Hold Hands, Me First, Metronome, Mimic, Mirror Move, Nature Power, Shell Trap, Sketch, Sleep Talk, Struggle, Uproar, any two-turn move, or any Z-Move.",
 		},
@@ -6521,6 +6578,13 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "The user restores 1/2 of its maximum HP if no weather conditions are in effect, all of its HP if the weather is Sunny Day, and 1/4 of its maximum HP if the weather is Rain Dance or Sandstorm, all rounded down.",
 		},
 	},
+	syrupbomb: {
+		name: "Syrup Bomb",
+		desc: "If this move is successful, it causes the target's Speed to be lowered by 1 stage at the end of each turn for 3 turns.",
+		shortDesc: "Target's Speed is lowered by 1 stage for 3 turns.",
+
+		start: "  [POKEMON] got covered in sticky candy syrup!",
+	},
 	tackle: {
 		name: "Tackle",
 		shortDesc: "No additional effect.",
@@ -7257,8 +7321,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	wildboltstorm: {
 		name: "Wildbolt Storm",
-		desc: "Has a 20% chance to paralyze the target.",
-		shortDesc: "20% chance to paralyze foe(s).",
+		desc: "Has a 20% chance to paralyze the target. If the weather is Primordial Sea or Rain Dance, this move does not check accuracy. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 80%.",
+		shortDesc: "20% chance to paralyze foe(s). Rain: can't miss.",
 	},
 	wildcharge: {
 		name: "Wild Charge",
@@ -7778,6 +7842,21 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 20% chance to Curse the target.",
 		shortDesc: "20% to Curse, Lowers the user's Speed by 1.",
 	},
+	earthshatter: {
+		name: "Earth Shatter",
+		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 33% recoil.",
+	},
+	solarhunger: {
+		name: "Solar Hunger",
+		desc: "This move's Base Power is multiplied by 1.5x if Sunny Day, Desolate Land, or Dense Fog is active.",
+		shortDesc: "1.5x Power if used in Sun, Desolate Land, or Dense Fog.",
+	},
+	clobber: {
+		name: "Clobber",
+		desc: "No additional effect",
+		shortDesc: "No additional effect",
+	},
 	phasethrough: {
 		name: "Phase Through",
 		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",
@@ -7849,8 +7928,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user swaps all its stat stage changes with the target and switches the Mist, Light Screen, Reflect, Spikes, Safeguard, Tailwind, Toxic Spikes, Stealth Rock, Water Pledge, Fire Pledge, Grass Pledge, Sticky Web, Aurora Veil, G-Max Steelsurge, G-Max Cannonade, G-Max Vine Lash, and G-Max Wildfire effects from the user's side to the opposing side and vice versa.",
 		shortDesc: "Swaps all stat changes and hazards with opponent.",
 	},
-	memejr: {
-		name: "Meme Jr.",
+	memepunch: {
+		name: "Meme Punch",
 		desc: "Has a 100% chance to raise the user's lowest boosted stat by 1. If all stat boosts are equal it will raise a random stat by 1.",
 		shortDesc: "100% chance to evenly raise a random stat by 1.",
 	},
@@ -8256,6 +8335,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Toxic Beam",
 		shortDesc: "20% chance to badly poison the foe.",
 	},
+	aquafangs: {
+		name: "Aqua Fangs",
+		desc: "Has a 20% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "20% chance to lower the target's Speed by 1.",
+	},
 	windwhip: {
 		name: "Wind Whip",
 		shortDesc: "100% chance to lower the foe's Special Defense.",
@@ -8545,6 +8629,15 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 100% chance to either sleep, freeze, flinch, or paralyze the target.",
 		shortDesc: "100% chance to sleep, freeze, flinch, or paralyze target.",
 	},
+	fullhouse: {
+		name: "Full House",
+		shortDesc: "Summons Inverse Room, Trick Room, Magic Room, and Wonder Room after hit.",
+	},
+	rainbowblast: {
+		name: "Rainbow Blast",
+		desc: "Physical if user's Atk > Sp. Atk. Hits 18 times. Each hit is a different type",
+		shortDesc: "Physical if user's Atk > Sp. Atk. Hits 18 times. Each hit is a different type",
+	},
 	hyperzone: {
 		name: "Hyper Zone",
 		shortDesc: "For 5 turns, Dark types are protected from status, priority, and screens.",
@@ -8808,6 +8901,34 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Pantherk Kick",
 		shortDesc: "30% flinch chance. Pantherk.",
 	},
+	despiteallmyrage: {
+		name: "DESPITE ALL MY RAGE",
+		shortDesc: "100% chance to lower the target's Speed by 4 stages.",
+	},
+	enhancedfireorbs: {
+		name: "Enhanced Fire Orbs",
+		desc: "Raises the user's Special Attack by 1 stage. The user's next Fire-type attack will have its power doubled; the effect ends when the user is no longer active, or after the user attempts to use any Fire-type move besides Enhanced Fire Orbs, even if it is not successful.",
+		shortDesc: "+1 SpA, user's next Fire move 2x power.",
+
+		start: "  [POKEMON] enhanced their fire moves!",
+	},
+	frytoacrisp: {
+		name: "Fry to a Crisp",
+		desc: "Hits four times.",
+		shortDesc: "Hits 4 times.",
+	},
+	oceanhorn: {
+		name: "Ocean Horn",
+		shortDesc: "50% chance to flinch the opponent.",
+	},
+	blazingwheel: {
+		name: "Blazing Wheel",
+		shortDesc: "Raises the user's Speed by 1 stage. Thaws user.",
+	},
+	prisonroots: {
+		name: "Prison Roots",
+		shortDesc: "Traps and Imprisons the target.",
+	},
 	testomajesto: {
 		name: "Testo Majesto",
 		shortDesc: "'Ah, don't bother, it's just a coffee machine. Sometimes it shows ads on the screen.'",
@@ -8902,6 +9023,36 @@ export const MovesText: {[k: string]: MoveText} = {
 	strifedicekind: {
 		name: "Strife: Dicekind",
 		desc: "Physical if user's Atk > Sp. Atk. Hits 8 times. Each hit can miss. 4% to permanently improve's the user's side's luck by 5% up to 3 times. +1 crit at 3 stacks.",
+	},
+	abeblast: {
+		name: "Abe Blast",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
+	},
+	harajukushuffle: {
+		name: "Harajuku Shuffle",
+		shortDesc: "Adds Fairy to the user's type(s). Raises the user's Attack, Sp. Atk, and Speed by 1.",
+	},
+	hokkaidosnowstorm: {
+		name: "Hokkaido Snowstorm",
+		shortDesc: "Adds Ice to the user's type(s). Sets Hail. 10% chance to Freeze."
+	},
+	blessingofyakushima: {
+		name: "Blessing of Yakushima",
+		shortDesc: "Adds Grass to the user's type(s). Sets Grassy Terrain. Heals 1/3 of the user's HP.",
+	},
+	eminenceofkinkakuji: {
+		name: "Eminence of Kinkaku-ji",
+		shortDesc: "Adds Steel to the user's type(s). Sets Lucky Chant. Clears the user's negative boosts.",
+	},
+	kamiswrath: {
+		name: "Kami's Wrath",
+		shortDesc: "Type varies based on the user's last type.",
+	},
+	cumblast: {
+		name: "Cum Blast",
+		desc: "Has a 100% chance to lower the target's Speed by 2 stages.",
+		shortDesc: "100% chance to lower the foe(s) Speed by 2.",
 	},
 	lavadapt: {
 		name: "Lavadapt",
@@ -9087,6 +9238,24 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
 		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
 	},
+	brutalmauling: {
+		name: "Brutal Mauling",
+		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
+		shortDesc: "Hits 2-5 times in one turn.",
+	},
+	crustaceancombat: {
+		name: "Crustacean Combat",
+		shortDesc: "Combines Water and Fighting in its effectiveness.",
+	},
+	alberspin: {
+		name: "Alber Spin",
+		shortDesc: "Frees the user from hazards/bind/Leech Seed.",
+	},
+	acidicrainfall: {
+		name: "Acidic Rainfall",
+		desc: "Summons Acidic Rainfall. At the end of each turn except the last, all active Pokemon lose 1/16 of their maximum HP five times, rounded down. Fails if the current weather is Acidic Rainfall.",
+		shortDesc: "For 5 turns, horrible rain falls. Deals 1/16th residual damage five times in one turn.",
+	},
 	movethatfucksyourself: {
 		name: "Move That Fucks Yourself",
 		desc: "This move combines Electric in its type effectiveness against the target and its effects ignore the Abilities of other Pokemon.",
@@ -9171,15 +9340,15 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sadpoem: {
 		name: "Sad Poem",
-		shortDesc: "Placeholder. 40% chance to lower Defense. Special if user's Sp. Atk > Atk.",
+		shortDesc: "Transform Blobbos-Omori into Blobbos-Omori-Sad. 40% chance to lower Defense. Special if user's Sp. Atk > Atk.",
 	},
 	annoy: {
 		name: "Annoy",
-		shortDesc: "Placeholder. 20% chance to burn. Special if user's Sp. Atk > Atk.",
+		shortDesc: "Transform Blobbos-Omori into Blobbos-Omori-Angry. 20% chance to burn. Special if user's Sp. Atk > Atk.",
 	},
 	peptalk: {
 		name: "Pep Talk",
-		shortDesc: "Placeholder. 30% chance to raise user's accuracy. Special if user's Sp. Atk > Atk.",
+		shortDesc: "Transforms Blobbos-Omori into Blobbos-Omori-Happy. 30% chance to raise user's accuracy. Special if user's Sp. Atk > Atk.",
 	},
 	errpkmn: {
 		name: "ERR.PKMN",
@@ -9232,15 +9401,195 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	haste: {
 		name: "Haste",
-		shortDesc: "Allies attacking moves go first in their priority bracket for 4 turns.",
+		shortDesc: "Allies attacking moves go first in their priority bracket for 4 turns with a diminishing chance to occur.",
+
+		activate: "  [POKEMON] can act faster than normal, thanks to its Haste!",
 	},
 	sharpeyes: {
 		name: "Sharp Eyes",
 		shortDesc: "Critical hits of allies deal 1.5x damage and +1 Crit ratio for 4 turns.",
 	},
+	shieldslam: {
+		name: "Shield Slam",
+		shortDesc: "+20 BP per Def boost. -1 Def after hit but never below 0.",
+	},
+	doubletap: {
+		name: "Double Tap",
+		shortDesc: "Deals double damage if double damage would KO the target.",
+	},
+	prismspray: {
+		name: "Prism Spray",
+		shortDesc: "This move's type becomes a random type when used.",
+	},
+	internetargument: {
+		name: "Internet Argument",
+		shortDesc: "Raises the user's and target's Attack and Sp. Attack by 2 stages and confuses the target.",
+	},
+	doubledose: {
+		name: "Double Dose",
+		shortDesc: "Hits twice. 100% chance to tox. Always crits againsted tox'd foes.",
+	},
+	vanish: {
+		name: "Vanish",
+		shortDesc: "Prevents moves from affecting the user this turn. +1 evasion.",
+	},
+	mri: {
+		name: "MRI",
+		shortDesc: "OHKOs the target if it is a Steel-type. OHKOs the user if it is a pure Steel-type.",
+	},
+	toiletpaper: {
+		name: "Toilet Paper",
+		shortDesc: "OHKOs the target if it is a Cacademon or Bungaloon.",
+	},
+	drunkenfist: {
+		name: "Drunken Fist",
+		shortDesc: "2x BP if the user is confused. Confuses both the user and target on hit.",
+	},
+	snowgrave: {
+		name: "Snowgrave",
+		shortDesc: "100% chance to freeze the target.",
+	},
+	bigbang: {
+		name: "Big Bang",
+		shortDesc: "Hits adjacent Pokemon. The user faints.",
+	},
+	retart: {
+		name: "Retart",
+		shortDesc: "More power the less Sp. Attack the user has than the target.",
+	},
+	lowestkick: {
+		name: "Lowest Kick",
+		shortDesc: "More power the heavier the target except it infinitely scales.",
+	},
+	spikesagain: {
+		name: "Spikes (Again)",
+		shortDesc: "Hurts grounded foes on switch-in. Max 3 layers.",
+	},
+	repurpose: {
+		name: "Repurpose",
+		shortDesc: "Turns 2 boosts into a +3 boost to a random stat.",
+	},
+	dragoonslash: {
+		name: "Dragoon Slash",
+		shortDesc: "OHKOs Dark-type Pokemon.",
+	},
+	liposuction: {
+		name: "Liposuction",
+		shortDesc: "Double base power against Pokemon with more than 100 base HP.",
+	},
+	revelation: {
+		name: "Revelation",
+		shortDesc: "Raises the user's Defense and Sp. Attack by 1.",
+	},
+	suddendeath: {
+		name: "Sudden Death",
+		shortDesc: "Sets all active Pokemon's HP to 1.",
+	},
+	renovate: {
+		name: "Renovate",
+		shortDesc: "Sets Trick Room in one turn.",
+	},
+	stickywebshot: {
+		name: "Sticky Web Shot",
+		shortDesc: "Sets Sticky Web on hit.",
+	},
+	frostyterrain: {
+		name: "Frosty Terrain",
+		shortDesc: "5 turns. Grounded: +Ice power, immune to burn, stat drops prevented.",
+	},
+	banana: {
+		name: "Banana",
+		shortDesc: "Fuck you figure it out",
+	},
+	surpriseattack: {
+		name: "Surprise",
+		desc: "Deals damage two-to-five turns after this move is used. At the end of that turn, the damage is calculated at that time and dealt to the Pokemon at the position the target had when the move was used. If the user is no longer active at the time, damage is calculated based on the user's natural Special Attack stat, types, and level, with no boosts from its held item or Ability. Fails if this move or Doom Desire is already in effect for the target's position.",
+		shortDesc: "Hits 2-5 turns after being used.",
+
+		start: "  [POKEMON] started planning a surprise attack!",
+		activate: "  [TARGET] took was taken by surprise!",
+	},
+	scryingwish: {
+		name: "Scrying Wish",
+		shortDesc: "Hits two turns after being used.",
+	},
+	perfectcalculation: {
+		name: "Perfect Calculation",
+		desc: "If the sum of this battle's RNG seed mod 40 plus 5 is the same as the current turn, the user's team wins.",
+	},
 	maplewarrior: {
 		name: "Maple Warrior",
 		desc: "Atk, Def, Sp. Atk, Sp. Def, and Spe of allies is 1.2x for 4 turns.",
+	},
+	glomp3: {
+		name: "Glomp :3",
+		desc: "User recovers 50% of the damage dealt. Uses best of Dragon or Grass in type effectiveness. If it KOes another Pokemon, it receives a boost of the KOed Pokemon's highest stat.",
+	},
+	reroll: {
+		name: "Reroll",
+		desc: "Randomly reroll all boosts and deboosts (not acc/eva), always adding 3 total boosts."
+	},
+	skillroom: {
+		name: "Skill Room",
+		desc: "For 5 turns, all moves always hit but have their base power multiplied by their accuracy, Pokemon cannot be hit by critical hits, secondary effects with a 50% or greater chance of occuring always occur, and secondary effects with less than 50% chance never occur.",
+	},
+	genesiswhirl: {
+		name: "Genesis Whirl",
+		desc: "OHKOs the target if its level is lower.",
+	},
+	genesisbeam: {
+		name: "Genesis Beam",
+		desc: "On-hit: +1 Atk, +1 SpA",
+	},
+	genesisflash: {
+		name: "Genesis Flash",
+		desc: "Combines Fire in its type effectiveness. Physical if user's Atk > Sp. Atk.",
+	},
+	genesisblast: {
+		name: "Genesis Blast",
+		desc: "30% chance to lower the target's accuracy by 1.",
+	},
+	runeofluck: {
+		name: "Rune of Luck",
+		shortDesc: "Shields user's party from the next 3 critical hits.",
+
+		activate: "[POKEMON] was shielded by the Rune of Luck!",
+	},
+	runeofprotection: {
+		name: "Rune of Protection",
+		shortDesc: "User's party receives 75% damage from the next 3 supereffective hits.",
+
+		activate: "[POKEMON] was shielded by the Rune of Protection!",
+	},
+	runeofmending: {
+		name: "Rune of Mending",
+		shortDesc: "User's party's next 3 enemy-inflected statuses are cured.",
+
+		activate: "[POKEMON] was cured by the Rune of Mending!",
+	},
+	psychocrush: {
+		name: "Psycho Crush",
+		shortDesc: "Uses user's Sp. Def stat as Sp. Atk in damage calculation.",
+	},
+	pacebreaker: {
+		name: "Psycho Crush",
+		shortDesc: "Physical if user's Atk > Sp. Atk. Uses user's Spe stat as Atk in damage calculation.",
+	},
+	speedforce: {
+		name: "Speed Force",
+		shortDesc: "Uses user's Spe stat as Sp. Atk in damage calculation. Damages target based on Spe, not Sp. Def.",
+	},
+	tooslow: {
+		name: "Too Slow",
+		shortDesc: "Usually goes first. Uses user's Spe stat as Sp. Atk in damage calculation.",
+	},
+	honorablekick: {
+		name: "Honorable Kick",
+		shortDesc: "User loses the game if it misses.",
+	},
+	radishpunch: {
+		name: "Radish Punch",
+		shortDesc: "100% chance to radish the opponent. Does not check accuracy.",
 	},
 	investment: {
 		name: "Investment",
@@ -9261,6 +9610,14 @@ export const MovesText: {[k: string]: MoveText} = {
 	godotshammer: {
 		name: "Godot's Hammer",
 		shortDesc: "Torments and Taunts the foe. Lowers the user's Speed by 2. Has 1/3 recoil.",
+	},
+	bamboozle: {
+		name: "Bamboozle",
+		shortDesc: "WIP] Damages target based on their Spe if it uses a status move, Def if it uses a special attack, Spd if they use a physical attack.",
+	},
+	meowsa: {
+		name: "Meowsa",
+		desc: "Uses Assist after the move hits.",
 	},
 
 	// WACK MOVES
@@ -10429,7 +10786,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user strikes the target with a cheap blow. This attack always results in a critical hit.",
 		shortDesc: "The user strikes the target with a cheap blow. This attack always results in a critical hit.",
 	},
-	insultinjury: {
+	insultandinjury: {
 		name: "Insult and Injury",
 		desc: "The target is taunted and beat, causing it to use only attack moves for three turns.",
 		shortDesc: "The target is taunted and beat, causing it to use only attack moves for three turns.",
@@ -22034,8 +22391,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Not very effective moves do more damage for 8 turns.",
 		shortDesc: "Not very effective moves do more damage for 8 turns.",
 	},
-	snowcloak: {
-		name: "Snow Cloak",
+	snowvest: {
+		name: "Snow Vest",
 		desc: "May make it Hail. Also deals Bug-type damage.",
 		shortDesc: "May make it Hail. Also deals Bug-type damage.",
 	},
@@ -24574,6 +24931,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "May 1 hit KO.",
 		shortDesc: "May 1 hit KO.",
 	},
+	flashball: {
+		name: "Flash Ball",
+		desc: "The user hurls a shinning blob at the target. It may also lower the target's Sp. Def stat."
+	},
+	soporous: {
+		name: "Soporous",
+		desc: "The user injects the target with a needle to send it into a deep sleep.",
+	},
 	hiddenpowerblood: {
 		name: "Hidden Power Blood",
 	},
@@ -24588,6 +24953,9 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hiddenpowercyber: {
 		name: "Hidden Power Cyber",
+	},
+	hiddenpowerdivine: {
+		name: "Hidden Power Divine",
 	},
 	hiddenpowerfabric: {
 		name: "Hidden Power Fabric",
@@ -24681,6 +25049,9 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hiddenforcecyber: {
 		name: "Hidden Force Cyber",
+	},
+	hiddenforcedivine: {
+		name: "Hidden Force Divine",
 	},
 	hiddenforcedark: {
 		name: "Hidden Force Dark",
@@ -24801,5 +25172,5 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	hiddenforcezombie: {
 		name: "Hidden Force Zombie",
-	},	
+	},
 };

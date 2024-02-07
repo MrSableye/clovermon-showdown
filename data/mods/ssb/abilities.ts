@@ -84,7 +84,7 @@ export function changeMoves(context: Battle, pokemon: Pokemon, newMoves: (string
 			id: move.id,
 			// eslint-disable-next-line max-len
 			pp: ((move.noPPBoosts || move.isZ) ? Math.floor(move.pp * carryOver[slot]) : Math.floor((move.pp * (8 / 5)) * carryOver[slot])),
-			maxpp: ((move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5),
+			maxpp: ((move.noPPBoosts || move.isZ) ? move.pp : Math.floor(move.pp * 8 / 5)),
 			target: move.target,
 			disabled: false,
 			disabledSource: '',
@@ -714,8 +714,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			const sketchedMove = {
 				move: move.name,
 				id: move.id,
-				pp: (move.pp * 8 / 5),
-				maxpp: (move.pp * 8 / 5),
+				pp: (Math.floor(move.pp * 8 / 5)),
+				maxpp: (Math.floor(move.pp * 8 / 5)),
 				target: move.target,
 				disabled: false,
 				used: false,
@@ -874,7 +874,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onSwitchOut(pokemon) {
 			pokemon.heal(pokemon.baseMaxhp / 3);
 		},
-		onBoost(boost, target, source, effect) {
+		onTryBoost(boost, target, source, effect) {
 			if (source && target === source) return;
 			let showMsg = false;
 			let i: BoostID;
@@ -927,8 +927,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 		onAnyRedirectTarget(target, source, source2, move) {
-			if (!['Water', 'Electric'].includes(move.type) ||
-				['firepledge', 'grasspledge', 'waterpledge'].includes(move.id)) return;
+			if (!['Water', 'Electric'].includes(move.type) || move.flags['pledgecombo']) return;
 			const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
 			if (this.validTarget(this.effectState.target, source, redirectTarget)) {
 				if (move.smartTarget) move.smartTarget = false;
@@ -1364,7 +1363,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		gen: 8,
 	},
 
-	// Nol
+	// Theia
 	burningsoul: {
 		desc: "On switch-in, this Pokemon summons Sunny Day. If this Pokemon is at full HP, it survives one hit with at least 1 HP. OHKO moves fail when used against this Pokemon.",
 		shortDesc: "Drought + Sturdy.",
@@ -1931,7 +1930,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		onDamagingHit(damage, target, source, move) {
 			if (source.volatiles['leechseed']) return;
-			if (!move.isFutureMove) {
+			if (!move.flags['futuremove']) {
 				source.addVolatile('leechseed', this.effectState.target);
 			}
 		},

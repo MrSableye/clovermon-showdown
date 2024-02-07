@@ -239,5 +239,37 @@ export const commands: Chat.ChatCommands = {
 				`${[...OFFICIAL_CLODOWN_AVATARS].map((avatar) => createAvatarHtml(avatar)).join(' ')}`
 			);
 		},
+		sprite(target) {
+			this.runBroadcast();
+			const targetMon = Dex.species.get(toID(target));
+			if (!targetMon || !targetMon.exists) {
+				throw new Chat.ErrorMessage(`No such mon: ${target}`);
+			}
+
+			let slug = toID(targetMon.baseSpecies);
+
+			if (targetMon.forme) {
+				slug += `-${toID(targetMon.forme)}`;
+			}
+
+			const sprites = [
+				`https://clover.weedl.es/sprites/gen5/${slug}.png`,
+				`https://clover.weedl.es/sprites/gen5-back/${slug}.png`,
+				`https://clover.weedl.es/sprites/gen5-shiny/${slug}.png`,
+				`https://clover.weedl.es/sprites/gen5-back-shiny/${slug}.png`,
+			];
+
+			const afdSprites = [
+				`https://clover.weedl.es/sprites/afd/${slug}.png`,
+				`https://clover.weedl.es/sprites/afd-back/${slug}.png`,
+				`https://clover.weedl.es/sprites/afd-shiny/${slug}.png`,
+				`https://clover.weedl.es/sprites/afd-back-shiny/${slug}.png`,
+			];
+
+			const afd = `<details><summary><b>AFD Sprites</b></summary>${afdSprites.map((sprite) => `<img src="${sprite}" width="96" height="96">`).join(' ')}</details>`;
+
+			this.sendReplyBox(`<b><u>${targetMon.name} Sprites</u></b><br />` +
+				sprites.map((sprite) => `<img src="${sprite}" width="96" height="96">`).join(' ') + afd);
+		}
 	},
 };

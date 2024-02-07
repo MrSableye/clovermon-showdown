@@ -521,6 +521,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	triattack: {
+		inherit: true,
+		desc: "Has a 20% chance to either burn, freeze, or paralyze the target. Physical if user's Atk > Sp. Atk.",
+		shortDesc: "20% chance to paralyze or burn or freeze target. Physical if user's Atk > Sp. Atk.",
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+	},
 	terrainpulse: {
 		inherit: true,
 		onModifyType(move, pokemon) {
@@ -1279,6 +1287,34 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	abeblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	harajukushuffle: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hokkaidosnowstorm: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	blessingofyakushima: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	eminenceofkinkakuji: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	kamiswrath: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cumblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	metronomeifitwasfunny: {
 		inherit: true,
 		isNonstandard: null,
@@ -1711,6 +1747,38 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	techslash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	banana: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	glomp3: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	bombrock: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	genesiswhirl: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	genesisbeam: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	genesisflash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	genesisblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	scryingwish: {
 		inherit: true,
 		isNonstandard: null,
 	},

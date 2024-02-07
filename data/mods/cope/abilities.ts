@@ -139,6 +139,14 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	crowheaded: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	musclemass: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	curiousmedicine: {
 		inherit: true,
 		isNonstandard: null,
@@ -1463,6 +1471,10 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	aintnothingonnabreakmystride: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	lootable: {
 		inherit: true,
 		isNonstandard: null,
@@ -1519,10 +1531,6 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	asoneblobbostherian: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	asoneblobbosrembered: {
 		inherit: true,
 		isNonstandard: null,
@@ -1560,10 +1568,6 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		isNonstandard: null,
 	},
 	armorplate: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	asonehorse: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1700,6 +1704,14 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		isNonstandard: null,
 	},
 	supermentum: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	acupower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	rollan: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -1871,6 +1883,26 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	goodasgold: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	mindseye: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	wellbakedbody: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	thermalexchange: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	eartheater: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	fuckforce: {
 		inherit: true,
 		isNonstandard: null,
@@ -1896,6 +1928,22 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		isNonstandard: null,
 	},
 	finale: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	baller: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	madeofglass: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	fake: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	mindzap: {
 		inherit: true,
 		isNonstandard: null,
 	},

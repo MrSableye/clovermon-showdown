@@ -9,4 +9,9 @@ export const AbilitiesText: {[k: string]: ModdedAbilityText} = {
 		desc: "This Pokemon cannot be struck by a critical hit and does not take recoil damage besides Struggle/Life Orb/crash damage.",
 		shortDesc: "This Pokemon cannot be struck by a critical hit and does not take recoil damage.",
 	},
+	unnerve: {
+		inherit: true,
+		desc: "Foes cannot use Berries, Berry Juice, Leftovers, Milk Drink, Focus Munch, Softboiled or Fruit Juice.",
+		shortDesc: "Foes cannot use Berries, Berry Juice, Leftovers, Milk Drink, Focus Munch, Softboiled or Fruit Juice.",
+	},
 };

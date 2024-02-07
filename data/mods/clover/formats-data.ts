@@ -3496,6 +3496,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	gimmighoulroaming: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	glimmet: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -3740,11 +3744,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	taurospaldeafire: {
+	taurospaldeablaze: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
-	taurospaldeawater: {
+	taurospaldeaaqua: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -3797,6 +3801,86 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	wugtrio: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	walkingwake: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ironleaves: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	poltchageist: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	poltchageistartisan: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	sinistcha: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	sinistchamasterpiece: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	okidogi: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	munkidori: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fezandipiti: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerpon: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerpontealtera: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponwellspring: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponwellspringtera: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponhearthflame: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponhearthflametera: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponcornerstone: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponcornerstonetera: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ursaluna: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ursalunabloodmoon: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	dipplin: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -4161,7 +4245,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	fairileon: {
 		inherit: true,
-		tier: "OU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"quiverdance",
@@ -5442,7 +5526,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	flameboyan: {
 		inherit: true,
-		tier: "NU",
+		tier: "NUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"moonblast",
@@ -5941,7 +6025,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	premantom: {
 		inherit: true,
-		tier: "NU",
+		tier: "NUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"hex",
@@ -6212,7 +6296,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	regirode: {
 		inherit: true,
-		tier: "OU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"earthpower",
@@ -6806,7 +6890,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	dedwheat: {
 		inherit: true,
-		tier: "OU",
+		tier: "RU",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"skillswap",
@@ -7304,7 +7388,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	tarditank: {
 		inherit: true,
-		tier: "NU",
+		tier: "NUBL",
 		isNonstandard: null,
 		randomBattleMoves: [
 			"rest",
@@ -7530,10 +7614,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "Uber",
 		isNonstandard: null,
 		randomBattleMoves: [
-			"swordsdance",
-			"precipiceblades",
-			"knockoff",
-			"suckerpunch",
+			"foulplay",
+			"overheat",
+			"haze",
+			"gunkshot",
 		],
 		randomBattleLevel: 72,
 	},
@@ -7562,6 +7646,18 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 			"vcreate",
 		],
 		randomBattleLevel: 72,
+	},
+	hailsanta: {
+		inherit: true,
+		tier: "Uber",
+		randomBattleMoves: [
+			"slipturn",
+			"icebeam",
+			"earthpower",
+			"knockoff",
+			"milkdrink",
+		],
+		isNonstandard: null,
 	},
 	blobbos: {
 		inherit: true,

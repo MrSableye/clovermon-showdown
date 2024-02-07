@@ -122,6 +122,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Berry Sweet",
 		desc: "Evolves Milcery into Alcremie when held and spun around.",
 	},
+	bignugget: {
+		name: "Big Nugget",
+		desc: "A big nugget of pure gold that gives off a lustrous gleam.",
+	},
 	bigroot: {
 		name: "Big Root",
 		desc: "Holder gains 1.3x HP from draining/Aqua Ring/Ingrain/Leech Seed/Strength Sap.",
@@ -295,6 +299,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 	colburberry: {
 		name: "Colbur Berry",
 		desc: "Halves damage taken from a supereffective Dark-type attack. Single use.",
+	},
+	cornerstonemask: {
+		name: "Cornerstone Mask",
+		desc: "Ogerpon-Cornerstone: 1.2x power attacks; Terastallize to gain Embody Aspect.",
 	},
 	cornnberry: {
 		name: "Cornn Berry",
@@ -501,6 +509,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 	fairiumz: {
 		name: "Fairium Z",
 		desc: "If holder has a Fairy move, this item allows it to use a Fairy Z-Move.",
+	},
+	fairyfeather: {
+		name: "Fairy Feather",
+		desc: "Holder's Fairy-type attacks have 1.2x power.",
 	},
 	fairygem: {
 		name: "Fairy Gem",
@@ -762,6 +774,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 	healball: {
 		name: "Heal Ball",
 		desc: "A remedial Poke Ball that restores the caught Pokemon's HP and status problem.",
+	},
+	hearthflamemask: {
+		name: "Hearthflame Mask",
+		desc: "Ogerpon-Hearthflame: 1.2x power attacks; Terastallize to gain Embody Aspect.",
 	},
 	heatrock: {
 		name: "Heat Rock",
@@ -1077,6 +1093,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 	masterball: {
 		name: "Master Ball",
 		desc: "The best Ball with the ultimate performance. It will catch any wild Pokemon.",
+	},
+	masterpieceteacup: {
+		name: "Masterpiece Teacup",
+		desc: "Evolves Poltchageist-Artisan into Sinistcha-Masterpiece when used.",
 	},
 	mawilite: {
 		name: "Mawilite",
@@ -1758,6 +1778,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Sweet Apple",
 		desc: "Evolves Applin into Appletun when used.",
 	},
+	syrupyapple: {
+		name: "Syrupy Apple",
+		desc: "Evolves Applin into Dipplin when used.",
+	},
 	tamatoberry: {
 		name: "Tamato Berry",
 		desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
@@ -2228,6 +2252,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		transform: "  Bright light is about to burst out of [POKEMON]!",
 		activate: "[POKEMON] regained its true power through Ultra Burst!",
 	},
+	unremarkableteacup: {
+		name: "Unremarkable Teacup",
+		desc: "Evolves Poltchageist into Sinistcha when used.",
+	},
 	upgrade: {
 		name: "Up-Grade",
 		desc: "Evolves Porygon into Porygon2 when traded.",
@@ -2276,6 +2304,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 	weaknesspolicy: {
 		name: "Weakness Policy",
 		desc: "If holder is hit super effectively, raises Attack, Sp. Atk by 2 stages. Single use.",
+	},
+	wellspringmask: {
+		name: "Wellspring Mask",
+		desc: "Ogerpon-Wellspring: 1.2x power attacks; Terastallize to gain Embody Aspect.",
 	},
 	wepearberry: {
 		name: "Wepear Berry",
@@ -2430,6 +2462,26 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Pirate's Jug",
 		desc: "If held by an Octai, it doubles the power of Lactose Shot.",
 	},
+	berserkmeme: {
+		name: "Berserk Meme",
+		desc: "If held by a Memenace, sets its type to ??? and increases base power of Meme to 90.",
+	},
+	anitem: {
+		name: "An Item",
+		desc: "Holder's ???-type attacks have 1.2x power.",
+	},
+	aberry: {
+		name: "A Berry",
+		desc: "Halves damage taken from a ???-type attack. Single use.",
+	},
+	firering: {
+		name: "Fire Ring",
+		desc: "Holder cannot be burned. If knocked off, the attacker is burned.",
+	},
+	skillguard: {
+		name: "Skill Guard",
+		desc: "Holder's type and abilities cannot be changed.",
+	},
 	/* Clover CAP */
 	moluganion: {
 		name: "Moluganion",
@@ -2449,6 +2501,16 @@ export const ItemsText: {[k: string]: ItemText} = {
 		gen5: {
 			desc: "Holder's first successful ???-type attack will have 1.5x power. Single use.",
 		},
+	},
+	crimsonlens: {
+		name: "Crimson Lens",
+		desc: "If held by a Winkhulu, its Sp. Atk is doubled. Evolves Winkhulu into Retwina.",
+		shortDesc: "If held by a Winkhulu, its Sp. Atk is doubled.",
+	},
+	cursedfang: {
+		name: "Cursed Fang",
+		desc: "If held by a Winkhulu, its Atk is doubled. Evolves Winkhulu into Temawria.",
+		shortDesc: "If held by a Winkhulu, its Atk is doubled.",
 	},
 	/* Clover CAP Mega Stones */
 	ooganite: {
@@ -2813,6 +2875,11 @@ export const ItemsText: {[k: string]: ItemText} = {
 			desc: "Can only be held by Jewipede. Its Normal- & Bug-type attacks have 1.2x power.",
 		},
 	},
+	queensrock: {
+		name: "Queen's Rock",
+		desc: "Holder's attacks without a chance to make the target attract gain a 10% chance to make the target attract.",
+		shortDesc: "Holder's attacks without a chance to attract gain a 10% chance to attract.",
+	},
 	servicerendered: {
 		name: "Service Rendered",
 		desc: "After using Combat Orders, Haste, Maple Warrior, or Sharp Eyes, switch out at end of turn. Single use.",
@@ -2820,6 +2887,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 	autobuffskill: {
 		name: "Auto Buff Skill",
 		desc: "After using Combat Orders, Haste, Maple Warrior, or Sharp Eyes, use the other moves if the user knows them. Single use.",
+	},
+	choicechoice: {
+		name: "Choice Choice",
+		desc: "Holder's Atk or Sp. Atk is 1.5x based on the first attacking moves it executes, but it can only select the first move it executes.",
 	},
 	tumultuoustibia: {
 		name: "Tumultuous Tibia",
@@ -4812,7 +4883,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	cowbell: {
 		name: "Cowbell",
-		desc: "Slightly increases Miltank's defenses and heals it every turn.",
+		desc: "Slightly increases Miltank's defenses, heals it every turn and Atk and Def Berserk.",
 	},
 	iaraytberry: {
 		name: "Iarayt Berry",

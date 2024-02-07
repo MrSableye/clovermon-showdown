@@ -1805,6 +1805,7 @@ honrade: {
 			zenheadbutt: ["8T"],
 			bearhug: ["8L1"],
 			coaching: ["8L1"],
+			earthshatter: ["8L1"],
 		},
 	},
 	bunnorgy: {
@@ -2304,6 +2305,7 @@ honrade: {
 			xscissor: ["8L47"],
 			zenheadbutt: ["8T"],
 			bearhug: ["8L1"],
+			earthshatter: ["8L1"],
 		},
 		},
 	memenace: {
@@ -5664,6 +5666,7 @@ honrade: {
 			zenheadbutt: ["8T"],
 			breakingswipe: ["8L1"],
 			stuffcheeks: ["8L1"],
+			earthshatter: ["8L1"],
 		},
 	},
 	shiggydig: {
@@ -5934,6 +5937,7 @@ honrade: {
 			steelbeam: ["8L1"],
 			flintfang: ["8L1"],
 			calibrate: ["8L1"],
+			earthshatter: ["8L1"],
 		},
 	},
 	clovenix: {
@@ -7674,6 +7678,7 @@ honrade: {
 			burningjealousy: ["8L1"],
 			grassyglide: ["8L1"],
 			purge: ["8L1"],
+			earthshatter: ["8L1"],
 		},
 	},
 	reagain: {
@@ -7756,6 +7761,7 @@ honrade: {
 			lashout: ["8L1"],
 			scorchingsands: ["8L1"],
 			mirageveil: ["8L1"],
+			earthshatter: ["8L1"],
 		},
 	},
 	cacademon: {
@@ -7851,6 +7857,7 @@ honrade: {
 			corrosivegas: ["8L1"],
 			powerwasher: ["8L1"],
 			stickytongue: ["8L1"],
+			earthshatter: ["8L1"],
 		},
 	},
 	flameboyan: {
@@ -8238,6 +8245,7 @@ honrade: {
 			burningjealousy: ["8L1"],
 			lashout: ["8L1"],
 			noretreat: ["8L1"],
+			earthshatter: ["8L1"],
 		},
 	},
 	mennopaws: {
@@ -8603,6 +8611,7 @@ honrade: {
 			steelroller: ["8L1"],
 			mirageveil: ["8L1"],
 			steelbeam: ["8L1"],
+			earthshatter: ["8L1"],
 		},
 	},
 	gutsifly: {
@@ -9874,6 +9883,7 @@ honrade: {
 			cherrybomb: ["8L1"],
 			purge: ["8L1"],
 			dualwingbeat: ["8L1"],
+			earthshatter: ["8L1"],
 		},
 	},
 	hyletrack: {
@@ -10340,6 +10350,7 @@ honrade: {
 			vitalthrow: ["8L30"],
 			wideguard: ["8L1"],
 			coaching: ["8L1"],
+			earthshatter: ["8L1"],
 		},
 			},
 	davyjaws: {
@@ -11115,6 +11126,7 @@ honrade: {
 			zenheadbutt: ["8T"],
 			expandingforce: ["8L1"],
 			terrainpulse: ["8L1"],
+			earthshatter: ["8L1"],
 		},
 	},
 	anonymouse: {
@@ -11966,6 +11978,7 @@ honrade: {
 			zapcannon: ["8L56"],
 			poltergeist: ["8L1"],
 			purge: ["8L1"],
+			earthshatter: ["8L1"],
 		},
 	},
 	kuuroba: {

@@ -1,6 +1,38 @@
 import { truncate } from "fs";
 
 export const Abilities: {[k: string]: ModdedAbilityData} = {
+	toxicchain: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	mindseye: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	supersweetsyrup: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	embodyaspectteal: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	embodyaspecthearthflame: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	embodyaspectwellspring: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	embodyaspectcornerstone: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	hospitality: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	/* Modified vanilla abilities */
 	toxicboost: {
 		inherit: true,
@@ -39,9 +71,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onImmunity(type, pokemon) {
 			if (type === 'acidrain') return false;
 		},
-		onDamage() {},
-		desc: "This Pokemon heals 1/14 of its maximum HP in Acid Rain.",
-		shortDesc: "Heals 1/14 in Acid Rain.",
+		desc: "This Pokemon heals 1/14 of its maximum HP in Acid Rain and 1/8 if it is poisoned or badly poisoned.",
+		shortDesc: "Heals 1/14 in Acid Rain and 1/8 if psn/tox.",
 		isNonstandard: null,
 	},
 	immunity: {
@@ -130,7 +161,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	protean: {
 		inherit: true,
 		onPrepareHit(source, target, move) {
-			if (move.hasBounced || move.isFutureMove || move.sourceEffect === 'snatch') return;
+			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
 			const type = move.type;
 			if (type && type !== '???' && source.getTypes().join() !== type) {
 				if (!source.setType(type)) return;
@@ -285,7 +316,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				move.ignoreImmunity = true;
 			}
 		},
-		onBoost(boost, target, source, effect) {},
+		onTryBoost(boost, target, source, effect) {},
 		desc: "This Pokemon can hit all types.",
 		shortDesc: "Damaging moves ignore immunities.",
 	},
@@ -352,7 +383,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				return this.chainModify(0.5);
 			}
 		},
-		onBoost() {},
+		onTryBoost() {},
 		desc: "If a Pokemon uses a Heart-type attack against this Pokemon, that Pokemon's offensive stat is halved when calculating the damage to this Pokemon. It cannot be infatuated or taunted. Gaining this Ability while infatuated or taunted cures it.",
 		shortDesc: "Heart-type moves deals halved damage. This Pokemon cannot be infatuated or taunted. Immune to Intimidate.",
 	},
@@ -530,16 +561,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		desc: "This Pokemon's Speed is raised by 1 stage if hit by a Bug-, Dark-, Fear- or Ghost-type attack.",
 		shortDesc: "Speed is raised 1 stage if hit by a Bug-, Dark-, Fear- or Ghost-type attack.",
 	},
-	bulletproof: {
-		inherit: true,
-		onTryHit(pokemon, target, move) {
-			if (move.flags['bullet'] || move.flags['bomb']) {
-				this.add('-immune', pokemon, '[from] ability: Bulletproof');
-				return null;
-			}
-		},
-		shortDesc: "This Pokemon is immune to bullet and bomb moves.",
-	},
 	galewings: {
 		inherit: true,
 		onModifyPriority(priority, pokemon, target, move) {
@@ -549,9 +570,74 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	parentalbond: {
 		inherit: true,
-		//Changes made in sim/battle-actions.ts
-		desc: "This Pokemon's damaging moves become multi-hit moves that hit twice. Does not affect multi-hit moves or moves that have multiple targets.",
+		//Damage changes made in sim/battle-actions.ts
+		onPrepareHit(source, target, move) {
+			if (move.category === 'Status' || move.selfdestruct || move.multihit) return;
+			if (['dynamaxcannon', 'endeavor', 'fling', 'iceball', 'rollout'].includes(move.id)) return;
+			if (!move.flags['charge'] && !move.isZ && !move.isMax) {
+				move.multihit = 2;
+				move.multihitType = 'parentalbond';
+			}
+		},
+		desc: "This Pokemon's damaging moves become multi-hit moves that hit twice. Does not affect multi-hit moves.",
 		shortDesc: "This Pokemon's damaging moves hit twice.",
+	},
+	zenmode: {
+		inherit: true,
+		onResidual(pokemon) {
+			if (!["Standard", "School"].includes(pokemon.baseSpecies.baseForme) || pokemon.transformed) return;
+			if (pokemon.baseSpecies.baseSpecies === "Sarieangel" && 
+			pokemon.hp <= pokemon.maxhp / 3 && !['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
+				pokemon.addVolatile('zenmode');
+			}
+			else if (pokemon.hp <= pokemon.maxhp / 2 && !['Zen', 'Galar-Zen', 'Solo'].includes(pokemon.species.forme)) {
+				pokemon.addVolatile('zenmode');
+			}
+			else if (pokemon.baseSpecies.baseSpecies === "Sarieangel" && pokemon.hp > pokemon.maxhp / 3
+			&& ['Zen', 'Galar-Zen'].includes(pokemon.species.forme)) {
+				pokemon.addVolatile('zenmode'); // in case of Sarieangel Zen form
+				pokemon.removeVolatile('zenmode');
+			}
+			else if (pokemon.hp > pokemon.maxhp / 2 && ['Zen', 'Galar-Zen', 'Solo'].includes(pokemon.species.forme)) {
+				pokemon.addVolatile('zenmode'); // in case of Zen forms mons
+				pokemon.removeVolatile('zenmode');
+			}
+		},
+		onEnd(pokemon) {
+			if (!pokemon.volatiles['zenmode'] || !pokemon.hp) return;
+			pokemon.transformed = false;
+			delete pokemon.volatiles['zenmode'];
+			if (pokemon.species.battleOnly) {
+				pokemon.formeChange(pokemon.species.battleOnly as string, this.effect, false, '[silent]');
+			}
+		},
+		condition: {
+			onStart(pokemon) {
+				if (pokemon.species.id.includes('eiscue')) pokemon.formeChange(pokemon.species.name + '-Noice');
+				if (pokemon.species.id === "wishiwashi") pokemon.formeChange(pokemon.species.name + '-Solo');
+				if (!pokemon.species.name.includes('Galar')) {
+					if (pokemon.species.forme !== 'Zen') {
+						pokemon.formeChange(pokemon.species.name + '-Zen');
+					}
+				} else {
+					if (pokemon.species.id !== 'darmanitangalarzen') pokemon.formeChange('Darmanitan-Galar-Zen');
+				}
+			},
+			onEnd(pokemon) {
+				if (['Zen', 'Galar-Zen', 'Noice', 'Solo'].includes(pokemon.species.forme)) {
+					pokemon.formeChange(pokemon.species.battleOnly as string);
+				}
+			},
+		},
+		desc: "If this Pokemon originally has this ability, it changes to Zen Mode if it has 1/2 or less of its maximum HP at the end of a turn, 1/3 for Sarieangel. If the pokemon's HP is above 1/2 of its maximum HP at the end of a turn or 1/3 for Sarieangel, it changes back to Standard Mode.",
+		shortDesc: "At end of turn, changes Mode to Standard if at 1/2 max HP, else Zen.",
+	},
+	snowwarning: {
+		inherit: true,
+		onStart(source) {
+			this.field.setWeather('hail');
+		},
+		shortDesc: "On switch-in, this Pokemon summons Hail.",
 	},
 	// Gen5 vanilla abilities
 	anticipation: {
@@ -953,8 +1039,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	infected: {
 		inherit: true,
-		shortDesc: "Contact spreads this Ability. Dmgs non-Zombie and Virus types.",
-		desc: "Contact spreads this Ability. Dmgs non-Zombie and Virus types.",
+		shortDesc: "Dealing contact damage to this Pokemon spreads this Ability. Deals 1/8 dmg to non-Zombie and Virus types, otherwise heals 1/16 max hp.",
+		desc: "Contact damage to this Pokemon spreads this Ability. Dmgs 1/8 non-Zombie and Virus types. Heals 1/16 otherwise.",
 		isNonstandard: null,
 	},
 };

@@ -46,10 +46,10 @@ const dexes: {[mod: string]: ModdedDex} = Object.create(null);
 
 type DataType =
 	'Abilities' | 'Rulesets' | 'FormatsData' | 'Items' | 'Learnsets' | 'Moves' |
-	'Natures' | 'Pokedex' | 'Scripts' | 'Conditions' | 'TypeChart';
+	'Natures' | 'Pokedex' | 'Scripts' | 'Conditions' | 'TypeChart' | 'PokemonGoData';
 const DATA_TYPES: (DataType | 'Aliases')[] = [
 	'Abilities', 'Rulesets', 'FormatsData', 'Items', 'Learnsets', 'Moves',
-	'Natures', 'Pokedex', 'Scripts', 'Conditions', 'TypeChart',
+	'Natures', 'Pokedex', 'Scripts', 'Conditions', 'TypeChart', 'PokemonGoData',
 ];
 const TEXT_DATA_TYPES: (keyof TextTableData)[] = ['Abilities', 'Default', 'Items', 'Moves', 'Pokedex'];
 
@@ -63,6 +63,7 @@ const DATA_FILES = {
 	Moves: 'moves',
 	Natures: 'natures',
 	Pokedex: 'pokedex',
+	PokemonGoData: 'pokemongo',
 	Scripts: 'scripts',
 	Conditions: 'conditions',
 	TypeChart: 'typechart',
@@ -82,6 +83,7 @@ interface DexTableData {
 	Moves: DexTable<MoveData>;
 	Natures: DexTable<NatureData>;
 	Pokedex: DexTable<SpeciesData>;
+	PokemonGoData: DexTable<PokemonGoData>;
 	Scripts: DexTable<AnyObject>;
 	Conditions: DexTable<EffectData>;
 	TypeChart: DexTable<TypeData>;

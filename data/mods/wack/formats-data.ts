@@ -5191,6 +5191,10 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: "Past",
 	},
+	gimmighoulroaming: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
 	glimmet: {
 		inherit: true,
 		isNonstandard: "Past",
@@ -5492,6 +5496,82 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: "Past",
 	},
 	wugtrio: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	walkingwake: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ironleaves: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	poltchageist: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	poltchageistartisan: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	sinistcha: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	okidogi: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	munkidori: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	fezandipiti: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerpon: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerpontealtera: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponwellspring: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponwellspringtera: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponhearthflame: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponhearthflametera: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponcornerstone: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ogerponcornerstonetera: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ursaluna: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	ursalunabloodmoon: {
+		inherit: true,
+		isNonstandard: "Past",
+	},
+	dipplin: {
 		inherit: true,
 		isNonstandard: "Past",
 	},
@@ -10562,7 +10642,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	bookly: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	willisp: {
@@ -10871,6 +10951,506 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 	},
 	stando: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standotheworld: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohierophantgreen: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohermitpurple: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standomagiciansred: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosilverchariot: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standothefool: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standocream: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standodarkbluemoon: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standotowerofgray: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoebonydevil: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoyellowtemperance: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standostrength: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standowheeloffortune: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohangedman: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoemperor: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoemperess: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standojustice: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standolovers: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standothesun: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standodeaththirteen: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standojudgment: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohighpriestess: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standogeb: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standokhnum: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standothoth: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoanubis: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standobastet: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosethan: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoosiris: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohorus: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoatum: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standotenoresax: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standocrazydiamond: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standothehand: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoechoesact1: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoechoesact2: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoechoesact3: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoheavensdoor: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standokillerqueen: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoaquanecklace: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standobadcompany: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoredhotchillipepper: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standothelock: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosurface: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standolovedeluxe: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standopearljam: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoratt: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoharvest: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standocinderella: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoboyiiman: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohighwaystar: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standostraycat: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosuperfly: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoenigma: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standocheaptrick: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoatomheartfather: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoacthungbaby: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoearthwindandfire: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standogoldexperience: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standostickyfingers: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standomoodyblues: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosexpistols: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoaerosmith: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standopurplehaze: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standospicegirl: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standokingcrimson: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoblacksabbath: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosoftmachine: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standokraftwork: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standolittlefeet: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standomaninthemirror: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standomrpresident: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standobeachboy: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standogratefuldead: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standobabyface: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standowhitealbum: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoclash: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standotalkinghead: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standonotoriousbig: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standometallica: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standogreenday: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standooasis: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standorollingstones: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standostonefree: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoweatherreport: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standowhitesnake: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoscarymonsters: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohighwaytohell: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosurvivor: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoskyhigh: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosoftandwet: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standocmoon: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standotuskact1: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoballbreaker: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standod4c: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoinasilentway: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standoheyya: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standosilverchariotrequiem: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standobluenight: {
+		inherit: true,
+		tier: "LC",
+		isNonstandard: null,
+	},
+	standohighhighpriestess: {
 		inherit: true,
 		tier: "LC",
 		isNonstandard: null,
@@ -12372,7 +12952,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	girgamesh: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	castedea: {
@@ -13512,7 +14092,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	arrowa: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	ac0: {
@@ -15062,7 +15642,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	firefree: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	pegazeus: {
@@ -15907,7 +16487,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	chanseychanse: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	cencyclodia: {
@@ -15917,7 +16497,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	namelessdemon: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	darkyo: {
@@ -16417,7 +16997,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	xadazoth: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	gcharmander: {
@@ -17262,7 +17842,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	glaakine: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	kelpight: {
@@ -17432,7 +18012,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	mlavagun: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	marbrood: {
@@ -17497,7 +18077,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	gcorviknight: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	mspinda: {
@@ -18067,12 +18647,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	waudino: {
 		inherit: true,
-		tier: "NFE",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	wmelodyno: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	wfurret: {
@@ -21732,7 +22312,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	kaijupyukumuku: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	kaijuhypno: {
@@ -23647,7 +24227,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	stitcher: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	slimex: {
@@ -24037,7 +24617,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	furiz: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	furiq: {

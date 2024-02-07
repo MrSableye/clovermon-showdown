@@ -2,7 +2,8 @@ import parseColor from 'parse-color';
 import {FS, Image, Net, Utils} from '../../lib';
 import {getTourWins} from './data-badges';
 import {createEmojiHtml} from './emojis';
-import { escapeHTML } from '../../lib/utils';
+import {createStickerHtml} from './stickers';
+import {escapeHTML} from '../../lib/utils';
 
 /* Generic logic */
 const CUSTOM_CSS_PATH = 'config/custom.css';
@@ -58,9 +59,9 @@ const updateCss = () => {
 
 /* Avatar Logic */
 const AVATAR_MINIMUM_TOUR_WINS = 1;
-const AVATAR_USER_INELIGIBLE = 'You are not eligble for a custom avatar.';
+const AVATAR_USER_INELIGIBLE = 'You are not eligible for a custom avatar.';
 const AVATAR_ERROR_WRITING_IMAGE = 'Unable to write image. Please try again or contact an administrator.';
-const AVATAR_UNKNOWN_ERROR = 'An unknown error occured. Please try again or contact an administrator.';
+const AVATAR_UNKNOWN_ERROR = 'An unknown error occurred. Please try again or contact an administrator.';
 
 interface AvatarStatus {
 	enabled: boolean;
@@ -111,8 +112,8 @@ const createPendingAvatarRequestHtml = (userId: string, avatarFileName: string, 
 	let pendingAvatarRequestHtml = '<details>';
 	pendingAvatarRequestHtml += `<summary><b>${username}${isBroadcast ? ' Custom Avatar Request' : ''}</b></summary>`;
 	pendingAvatarRequestHtml += createRawAvatarHtml(avatarFileName, true) + '<br />';
-	pendingAvatarRequestHtml += `<button class="button" name="send" value="/customavatar approve ${userId}">Approve</button>`;
-	pendingAvatarRequestHtml += `<button class="button" name="send" value="/customavatar deny ${userId}">Deny</button>`;
+	pendingAvatarRequestHtml += `<button class="button" name="send" value="/custom avatar approve ${userId}">Approve</button>`;
+	pendingAvatarRequestHtml += `<button class="button" name="send" value="/custom avatar deny ${userId}">Deny</button>`;
 	return pendingAvatarRequestHtml + '</details>';
 };
 
@@ -144,9 +145,9 @@ const removeAvatarStaffNotificiation = (requesterId: string) => {
 
 /* Emoji Logic */
 const EMOJI_MINIMUM_TOUR_WINS = 3;
-const EMOJI_USER_INELIGIBLE = `You are not eligble for a custom emoji. You must have at least ${EMOJI_MINIMUM_TOUR_WINS} tour wins.`;
+const EMOJI_USER_INELIGIBLE = `You are not eligible for a custom emoji. You must have at least ${EMOJI_MINIMUM_TOUR_WINS} tour wins.`;
 const EMOJI_ERROR_WRITING_IMAGE = 'Unable to write image. Please try again or contact an administrator.';
-const EMOJI_UNKNOWN_ERROR = 'An unknown error occured. Please try again or contact an administrator.';
+const EMOJI_UNKNOWN_ERROR = 'An unknown error occurred. Please try again or contact an administrator.';
 
 interface EmojiStatus {
 	enabled: boolean;
@@ -216,9 +217,98 @@ const removeEmojiStaffNotificiation = (requesterId: string) => {
 	}
 };
 
+/* Sticker Logic */
+const STICKER_MINIMUM_TOUR_WINS = 4;
+const STICKER_USER_INELIGIBLE = `You are not eligible for a custom sticker. You must have at least ${STICKER_MINIMUM_TOUR_WINS} tour wins.`;
+const STICKER_ERROR_WRITING_IMAGE = 'Unable to write image. Please try again or contact an administrator.';
+const STICKER_UNKNOWN_ERROR = 'An unknown error occurred. Please try again or contact an administrator.';
+const COOLDOWN = 10 * 1000;
+
+interface StickerStatus {
+	enabled: boolean;
+	requestedSticker?: string;
+	sticker?: string;
+}
+
+type StickerConfig = Record<string, StickerStatus>;
+
+export const stickers: StickerConfig = JSON.parse(
+	FS('config/chat-plugins/custom-stickers.json').readIfExistsSync() || "{}"
+);
+
+const saveStickers = () => {
+	FS('config/chat-plugins/custom-stickers.json').writeUpdate(() => JSON.stringify(stickers));
+};
+
+const updateStickerStatus = (id: string, statusUpdate: Partial<StickerStatus>) => {
+	const stickerStatus = stickers[id];
+
+	const newStatus: StickerStatus = {
+		enabled: false,
+	};
+
+	stickers[id] = {
+		...newStatus,
+		...stickerStatus,
+		...statusUpdate,
+	};
+
+	saveStickers();
+};
+
+const createRawStickerHtml = (
+	userId: string,
+	stickerFileName: string,
+	isRequest = false,
+) => createStickerHtml(
+	`custom-${userId}`,
+	(isRequest ? 'requests/' : '') + stickerFileName);
+
+const createPendingStickerRequestHtml = (userId: string, stickerFileName: string, isBroadcast = false) => {
+	const username = getUsername(userId);
+	let pendingStickerRequestHtml = '<details>';
+	pendingStickerRequestHtml += `<summary><b>${username}${isBroadcast ? ' Custom Sticker Request' : ''}</b></summary>`;
+	pendingStickerRequestHtml += createRawStickerHtml(userId, stickerFileName, true) + '<br />';
+	pendingStickerRequestHtml += `<button class="button" name="send" value="/custom sticker approve ${userId}">Approve</button>`;
+	pendingStickerRequestHtml += `<button class="button" name="send" value="/custom sticker deny ${userId}">Deny</button>`;
+	return pendingStickerRequestHtml + '</details>';
+};
+
+const notifyStickerStaff = (requesterId: string, fileName: string) => {
+	const staffRoom = Rooms.get('staff');
+
+	if (staffRoom) {
+		staffRoom.sendMods(`|uhtml|sticker-request-${requesterId}|${createPendingStickerRequestHtml(requesterId, fileName, true)}`);
+	}
+};
+
+const removeStickerStaffNotificiation = (requesterId: string) => {
+	const staffRoom = Rooms.get('staff');
+
+	if (staffRoom) {
+		staffRoom.sendMods(
+			Utils.html`|uhtml|sticker-request-${requesterId}|`,
+		);
+	}
+};
+
+const cooldowns: Record<string, number> = {};
+
+const checkCooldown = (userID: ID) => {
+	const now = Date.now();
+	const activeCooldown = cooldowns[userID];
+
+	if (activeCooldown && ((now - activeCooldown) < COOLDOWN)) {
+		return false;
+	}
+
+	cooldowns[userID] = now;
+	return true;
+};
+
 /* Title Logic */
 const TITLE_MINIMUM_TOUR_WINS = 2;
-const TITLE_USER_INELIGIBLE = `You are not eligble for a custom title. You must have at least ${TITLE_MINIMUM_TOUR_WINS} tour wins.`;
+const TITLE_USER_INELIGIBLE = `You are not eligible for a custom title. You must have at least ${TITLE_MINIMUM_TOUR_WINS} tour wins.`;
 const TITLE_USER_UNSET = 'You do not have a custom title set.';
 const TITLE_INVALID = 'Your custom title must be between 1 and 18 characters long.';
 
@@ -239,7 +329,7 @@ const formatTitle = (string: string) => string
 
 /* Flair Logic */
 const FLAIR_MINIMUM_TOUR_WINS = 3;
-const FLAIR_USER_INELIGIBLE = `You are not eligble for a custom flair. You must have at least ${FLAIR_MINIMUM_TOUR_WINS} tour wins.`;
+const FLAIR_USER_INELIGIBLE = `You are not eligible for a custom flair. You must have at least ${FLAIR_MINIMUM_TOUR_WINS} tour wins.`;
 const FLAIR_USER_UNSET = 'You do not have a custom flair set.';
 const getInvalidFlairErrorMessage = (mod: string, name: string) => `Invalid flair ${mod}/${name} selected.`;
 
@@ -269,12 +359,12 @@ const saveFlairs = () => {
 
 /* Name color logic */
 const NAME_COLOR_MINIMUM_TOUR_WINS = 1;
-const NAME_COLOR_USER_INELIGIBLE = `You are not eligble for a custom name color. You must have at least ${NAME_COLOR_MINIMUM_TOUR_WINS} tour wins.`;
+const NAME_COLOR_USER_INELIGIBLE = `You are not eligible for a custom name color. You must have at least ${NAME_COLOR_MINIMUM_TOUR_WINS} tour wins.`;
 const NAME_COLOR_INVALID = 'The username to use as your custom color must be at least 1 character and less than 19 characters long.';
 
 /* Background color logic */
 const BACKGROUND_MINIMUM_TOUR_WINS = 5;
-const BACKGROUND_USER_INELIGIBLE = `You are not eligble for a custom background. You must have at least ${BACKGROUND_MINIMUM_TOUR_WINS} tour wins.`;
+const BACKGROUND_USER_INELIGIBLE = `You are not eligible for a custom background. You must have at least ${BACKGROUND_MINIMUM_TOUR_WINS} tour wins.`;
 const BACKGROUND_USER_UNSET = 'You do not have a custom background set.';
 const BACKGROUND_INVALID = 'Your custom background must be a color. Try a hex value.';
 
@@ -291,15 +381,35 @@ const saveBackgrounds = () => {
 };
 
 export const commands: Chat.ChatCommands = {
+	cgif: 'mysticker',
+	csticker: 'mysticker',
+	mygif: 'mysticker',
+	mysticker(target, room, user) {
+		if (Punishments.hasPunishType(user.id, 'EMOJIBAN')) {
+			return this.errorReply('You are banned from using stickers.');
+		}
+
+		this.checkChat();
+
+		const sticker = stickers[user.id];
+
+		if (!sticker || !sticker.sticker) return this.errorReply(`You have no custom sticker.`);
+
+		if (!checkCooldown(user.id)) {
+			return this.errorReply('You are using stickers too quickly.');
+		}
+
+		return `/html ${createStickerHtml(`custom-${user.id}`, sticker.sticker)}`;
+	},
 	custom: {
 		avatars: 'avatar',
 		avatar: {
 			async request(target, room, user) {
 				try {
-					const canHaveAvatar = hasTourWins(AVATAR_MINIMUM_TOUR_WINS, user) || Config.customavatar?.[user.id] !== undefined;
+					const canHaveAvatar = hasTourWins(AVATAR_MINIMUM_TOUR_WINS, user) || Config.customavatars?.[user.id] !== undefined;
 	
 					if (!canHaveAvatar) {
-						throw new Chat.ErrorMessage(AVATAR_USER_INELIGIBLE);
+						return this.errorReply(AVATAR_USER_INELIGIBLE);
 					}
 	
 					const imageUrl = target.trim();
@@ -311,7 +421,7 @@ export const commands: Chat.ChatCommands = {
 					});
 
 					if ('error' in imageResult) {
-						throw new Chat.ErrorMessage(imageResult.error);
+						return this.errorReply(imageResult.error);
 					}
 
 					const {image, type} = imageResult;
@@ -326,10 +436,10 @@ export const commands: Chat.ChatCommands = {
 	
 						return this.sendReplyBox(`Requested: ${createRawAvatarHtml(fileName, true)}`);
 					} catch (error) {
-						throw new Chat.ErrorMessage(AVATAR_ERROR_WRITING_IMAGE);
+						return this.errorReply(AVATAR_ERROR_WRITING_IMAGE);
 					}
 				} catch (error) {
-					throw new Chat.ErrorMessage(AVATAR_UNKNOWN_ERROR);
+					return this.errorReply(AVATAR_UNKNOWN_ERROR);
 				}
 			},
 			showall: 'showapproved',
@@ -378,7 +488,7 @@ export const commands: Chat.ChatCommands = {
 				const avatarStatus = avatars[targetId];
 	
 				if (!avatarStatus || !avatarStatus.requestedAvatar) {
-					throw new Chat.ErrorMessage(`No avatar request for ${targetId}`);
+					return this.errorReply(`No avatar request for ${targetId}`);
 				}
 	
 				updateAvatarStatus(targetId, {
@@ -401,7 +511,7 @@ export const commands: Chat.ChatCommands = {
 				const avatarStatus = avatars[targetId];
 	
 				if (!avatarStatus || !avatarStatus.requestedAvatar) {
-					throw new Chat.ErrorMessage(`No avatar request for ${targetId}`);
+					return this.errorReply(`No avatar request for ${targetId}`);
 				}
 	
 				updateAvatarStatus(targetId, {
@@ -414,6 +524,27 @@ export const commands: Chat.ChatCommands = {
 				removeAvatarStaffNotificiation(targetId);
 	
 				return this.sendReply(`Denied avatar request of ${targetId}`);
+			},
+			delete(target, room, user) {
+				this.checkCan('avatar');
+	
+				const targetId = toID(target);
+				const avatarStatus = avatars[targetId];
+	
+				if (!avatarStatus || !avatarStatus.avatar) {
+					return this.errorReply(`No avatar for ${targetId}`);
+				}
+	
+				updateAvatarStatus(targetId, {
+					avatar: undefined,
+				});
+	
+				FS(`./config/avatars/${avatarStatus.avatar}`).unlinkIfExistsSync();
+	
+				sendPM('Your avatar was deleted.', targetId);
+				this.addGlobalModAction(`${user.name} deleted avatar of ${targetId}`);
+	
+				return this.sendReply(`Deleted avatar of ${targetId}`);
 			},
 			on(target, room, user) {
 				updateAvatarStatus(user.id, {enabled: true});
@@ -457,7 +588,7 @@ export const commands: Chat.ChatCommands = {
 					const canHaveEmoji = hasTourWins(EMOJI_MINIMUM_TOUR_WINS, user) || Config.customemoji?.[user.id] !== undefined;
 	
 					if (!canHaveEmoji) {
-						throw new Chat.ErrorMessage(EMOJI_USER_INELIGIBLE);
+						return this.errorReply(EMOJI_USER_INELIGIBLE);
 					}
 	
 					const imageUrl = target.trim();
@@ -470,7 +601,7 @@ export const commands: Chat.ChatCommands = {
 					});
 
 					if ('error' in imageResult) {
-						throw new Chat.ErrorMessage(imageResult.error);
+						return this.errorReply(imageResult.error);
 					}
 
 					const {image, type} = imageResult;
@@ -485,10 +616,10 @@ export const commands: Chat.ChatCommands = {
 	
 						return this.sendReplyBox(`Requested: ${createRawEmojiHtml(user.id, fileName, true)}`);
 					} catch (error) {
-						throw new Chat.ErrorMessage(EMOJI_ERROR_WRITING_IMAGE);
+						return this.errorReply(EMOJI_ERROR_WRITING_IMAGE);
 					}
 				} catch (error) {
-					throw new Chat.ErrorMessage(EMOJI_UNKNOWN_ERROR);
+					return this.errorReply(EMOJI_UNKNOWN_ERROR);
 				}
 			},
 			showall: 'showapproved',
@@ -537,7 +668,7 @@ export const commands: Chat.ChatCommands = {
 				const emojiStatus = emojis[targetId];
 	
 				if (!emojiStatus || !emojiStatus.requestedEmoji) {
-					throw new Chat.ErrorMessage(`No emoji request for ${targetId}`);
+					return this.errorReply(`No emoji request for ${targetId}`);
 				}
 	
 				updateEmojiStatus(targetId, {
@@ -560,7 +691,7 @@ export const commands: Chat.ChatCommands = {
 				const emojiStatus = emojis[targetId];
 	
 				if (!emojiStatus || !emojiStatus.requestedEmoji) {
-					throw new Chat.ErrorMessage(`No emoji request for ${targetId}`);
+					return this.errorReply(`No emoji request for ${targetId}`);
 				}
 	
 				updateEmojiStatus(targetId, {
@@ -573,6 +704,27 @@ export const commands: Chat.ChatCommands = {
 				removeEmojiStaffNotificiation(targetId);
 	
 				return this.sendReply(`Denied emoji request of ${targetId}`);
+			},
+			delete(target, room, user) {
+				this.checkCan('avatar');
+	
+				const targetId = toID(target);
+				const emojiStatus = emojis[targetId];
+	
+				if (!emojiStatus || !emojiStatus.emoji) {
+					return this.errorReply(`No emoji for ${targetId}`);
+				}
+	
+				updateEmojiStatus(targetId, {
+					emoji: undefined,
+				});
+	
+				FS(`./config/emojis/${emojiStatus.emoji}`).unlinkIfExistsSync();
+	
+				sendPM('Your emoji was deleted.', targetId);
+				this.addGlobalModAction(`${user.name} deleted emoji of ${targetId}`);
+	
+				return this.sendReply(`Deleted emoji of ${targetId}`);
 			},
 			'': 'help',
 			help() {
@@ -588,16 +740,175 @@ export const commands: Chat.ChatCommands = {
 				`<code>/custom emoji deny [user]</code>: denies the user's emoji request. Requires: @ or above<br />`
 			);
 		},
+		sticker: {
+			async request(target, room, user) {
+				try {
+					const canHaveSticker = hasTourWins(STICKER_MINIMUM_TOUR_WINS, user) || Config.customsticker?.[user.id] !== undefined;
+
+					if (!canHaveSticker) {
+						return this.errorReply(STICKER_USER_INELIGIBLE);
+					}
+
+					const imageUrl = target.trim();
+					const imageResult = await Image.downloadImageWithVerification(imageUrl, {
+						validTypes: ['png', 'gif'],
+						enforceSquare: true,
+						maxDimensions: { width: 320, height: 320 },
+						minDimensions: { width: 160, height: 160 },
+						fileSize: 200000,
+					});
+
+					if ('error' in imageResult) {
+						return this.errorReply(imageResult.error);
+					}
+
+					const { image, type } = imageResult;
+
+					try {
+						const fileName = `custom-${user.id}.${type}`;
+						await FS(`./config/stickers/requests/${fileName}`).write(image);
+
+						updateStickerStatus(user.id, { requestedSticker: fileName });
+
+						notifyStickerStaff(user.id, fileName);
+
+						return this.sendReplyBox(`Requested: ${createRawStickerHtml(user.id, fileName, true)}`);
+					} catch (error) {
+						return this.errorReply(STICKER_ERROR_WRITING_IMAGE);
+					}
+				} catch (error) {
+					return this.errorReply(STICKER_UNKNOWN_ERROR);
+				}
+			},
+			showall: 'showapproved',
+			showapproved() {
+				this.runBroadcast();
+				this.checkCan('avatar');
+
+				const stickerList = Object.entries(stickers).filter(([userId, stickerStatus]) => stickerStatus.sticker !== undefined);
+
+				if (!stickerList.length) {
+					return this.sendReplyBox('<b><u>Approved Stickers</u></b><br /><div>No approved stickers.</div>');
+				}
+
+				/* eslint-disable max-len */
+				const stickerListHtml = stickerList.map(
+					([
+						userId,
+						stickerSTattus,
+					]) => `<span style="display: inline-block;"><div>${getUsername(userId)}</div><div>${createRawStickerHtml(userId, stickerSTattus.sticker || '')}</div></span>`
+				).join(' ');
+				/* eslint-enable max-len */
+
+				return this.sendReplyBox('<b><u>Approved Stickers</u></b><br />' + stickerListHtml);
+			},
+			showrequests: 'requests',
+			requests() {
+				this.checkCan('avatar');
+
+				const stickerList = Object.entries(stickers)
+					.filter(([userId, stickerStatus]) => stickerStatus.requestedSticker !== undefined);
+
+				if (!stickerList.length) {
+					return this.sendReplyBox('<b><u>Sticker Requests</u></b><br />' + `<div>No requests available.</div>`);
+				}
+
+				const requestListHtml = stickerList.map(
+					([userId, stickerStatus]) => createPendingStickerRequestHtml(userId, stickerStatus.requestedSticker || ''),
+				).join('<br />');
+
+				return this.sendReplyBox('<b><u>Sticker Requests</u></b><br />' + requestListHtml);
+			},
+			approve(target) {
+				this.checkCan('avatar');
+
+				const targetId = toID(target);
+				const stickerStatus = stickers[targetId];
+
+				if (!stickerStatus || !stickerStatus.requestedSticker) {
+					return this.errorReply(`No sticker request for ${targetId}`);
+				}
+
+				updateStickerStatus(targetId, {
+					sticker: stickerStatus.requestedSticker,
+					requestedSticker: undefined,
+				});
+
+				FS(`./config/stickers/requests/${stickerStatus.requestedSticker}`)
+					.renameSync(`./config/stickers/${stickerStatus.requestedSticker}`);
+
+				sendPM(`/html <div class="infobox"><div>Sticker approved</div><div>${createRawStickerHtml(targetId, stickerStatus.requestedSticker)}</div></div>`, targetId);
+				removeStickerStaffNotificiation(targetId);
+
+				return this.sendReplyBox(`<div><div>Approved sticker request of ${targetId}</div><div>${createRawStickerHtml(targetId, stickerStatus.requestedSticker)}</div></div>`);
+			},
+			deny(target) {
+				this.checkCan('avatar');
+
+				const targetId = toID(target);
+				const stickerStatus = stickers[targetId];
+
+				if (!stickerStatus || !stickerStatus.requestedSticker) {
+					return this.errorReply(`No sticker request for ${targetId}`);
+				}
+
+				updateStickerStatus(targetId, {
+					requestedSticker: undefined,
+				});
+
+				FS(`./config/stickers/requests/${stickerStatus.requestedSticker}`).unlinkIfExistsSync();
+
+				sendPM('Your sticker request was denied.', targetId);
+				removeStickerStaffNotificiation(targetId);
+
+				return this.sendReply(`Denied sticker request of ${targetId}`);
+			},
+			delete(target, room, user) {
+				this.checkCan('avatar');
+
+				const targetId = toID(target);
+				const stickerStatus = stickers[targetId];
+
+				if (!stickerStatus || !stickerStatus.sticker) {
+					return this.errorReply(`No sticker for ${targetId}`);
+				}
+
+				updateStickerStatus(targetId, {
+					sticker: undefined,
+				});
+
+				FS(`./config/stickers/${stickerStatus.sticker}`).unlinkIfExistsSync();
+
+				sendPM('Your sticker was deleted.', targetId);
+				this.addGlobalModAction(`${user.name} deleted sticker of ${targetId}`);
+
+				return this.sendReply(`Deleted sticker of ${targetId}`);
+			},
+			'': 'help',
+			help() {
+				return this.parse('/help custom sticker');
+			},
+		},
+		stickerhelp() {
+			this.sendReplyBox(
+				`<code>/custom sticker request [image url]</code>: requests a custom sticker. Requires: custom sticker access<br />` +
+				`<code>/custom sticker showall</code>: shows all approved stickers. Requires: @ or above<br />` +
+				`<code>/custom sticker showrequests</code>: shows all un-approved stickers. Requires: @ or above<br />` +
+				`<code>/custom sticker approve [user]</code>: approves the user's sticker request. Requires: @ or above<br />` +
+				`<code>/custom sticker deny [user]</code>: denies the user's sticker request. Requires: @ or above<br />` +
+				`<code>/cgif</code>: Use your sticker if you have one. Requires: custom sticker access`
+			);
+		},
 		title: {
 			set(target, room, user) {
 				const canHaveTitle = hasTourWins(TITLE_MINIMUM_TOUR_WINS, user) || Config.customtitle?.[user.id] !== undefined;
 	
 				if (!canHaveTitle) {
-					throw new Chat.ErrorMessage(TITLE_USER_INELIGIBLE);
+					return this.errorReply(TITLE_USER_INELIGIBLE);
 				}
 	
 				const title = formatTitle(target);
-				if (title.length < 1 || title.length > 18) throw new Chat.ErrorMessage(TITLE_INVALID);
+				if (title.length < 1 || title.length > 18) return this.errorReply(TITLE_INVALID);
 	
 				titles[user.id] = {title};
 				saveTitles();
@@ -605,7 +916,7 @@ export const commands: Chat.ChatCommands = {
 				this.sendReply(`|raw| Your title was successfully set. Log in again for it to appear. Title: ${title}`);
 			},
 			unset(target, room, user) {
-				if (!titles[user.id]) throw new Chat.ErrorMessage(TITLE_USER_UNSET);
+				if (!titles[user.id]) return this.errorReply(TITLE_USER_UNSET);
 
 				delete titles[user.id];
 				saveTitles();
@@ -628,7 +939,7 @@ export const commands: Chat.ChatCommands = {
 				const canHaveFlair = hasTourWins(FLAIR_MINIMUM_TOUR_WINS, user) || Config.customflair?.[user.id] !== undefined;
 	
 				if (!canHaveFlair) {
-					throw new Chat.ErrorMessage(FLAIR_USER_INELIGIBLE);
+					return this.errorReply(FLAIR_USER_INELIGIBLE);
 				}
 	
 				const [pokemon, pokemonMod, heightInput] = target.split(',');
@@ -656,7 +967,7 @@ export const commands: Chat.ChatCommands = {
 				this.sendReply("|raw| Your flair was successfully set. It may take a while for it to show up. Flair:<br /><img src='" + flairUrl + "' width='40' height='30'>");
 			},
 			unset(target, room, user) {
-				if (!flairs[user.id]) throw new Chat.ErrorMessage(FLAIR_USER_UNSET);
+				if (!flairs[user.id]) return this.errorReply(FLAIR_USER_UNSET);
 
 				delete flairs[user.id];
 				saveFlairs();
@@ -678,7 +989,7 @@ export const commands: Chat.ChatCommands = {
 			async set(target, room, user) {
 				const canHaveFlair = hasTourWins(NAME_COLOR_MINIMUM_TOUR_WINS, user) || Config.customnamecolor?.[user.id] !== undefined;
 
-				if (!canHaveFlair) throw new Chat.ErrorMessage(NAME_COLOR_USER_INELIGIBLE);
+				if (!canHaveFlair) return this.errorReply(NAME_COLOR_USER_INELIGIBLE);
 
 				const targetId = toID(target);
 				if (!targetId || targetId.length > 18) {
@@ -692,7 +1003,7 @@ export const commands: Chat.ChatCommands = {
 				});
 
 				if (error || !res || res.actionerror) {
-					throw new Chat.ErrorMessage('Unknown error setting custom name color. Please contact an administrator if this persists.');
+					return this.errorReply('Unknown error setting custom name color. Please contact an administrator if this persists.');
 				}
 
 				return this.sendReply(`|raw| <username>${user.id}</username> was set to match <username>${targetId}</username>. It may take a while for it to show up.`);
@@ -705,7 +1016,7 @@ export const commands: Chat.ChatCommands = {
 				});
 
 				if (error || !res || res.actionerror) {
-					throw new Chat.ErrorMessage('Unknown error unsetting custom name color. Please contact an administrator if this persists.');
+					return this.errorReply('Unknown error unsetting custom name color. Please contact an administrator if this persists.');
 				}
 
 				return this.sendReply('|raw| Your custon name color was successfully unset. It may take a while for it to dissapear.');
@@ -728,12 +1039,12 @@ export const commands: Chat.ChatCommands = {
 				const canHaveBackground = hasTourWins(BACKGROUND_MINIMUM_TOUR_WINS, user) || Config.custombackground?.[user.id] !== undefined;
 	
 				if (!canHaveBackground) {
-					throw new Chat.ErrorMessage(BACKGROUND_USER_INELIGIBLE);
+					return this.errorReply(BACKGROUND_USER_INELIGIBLE);
 				}
 
 				const color = parseColor(target.trim());
 
-				if (!color.rgb) throw new Chat.ErrorMessage(BACKGROUND_INVALID);
+				if (!color.rgb) return this.errorReply(BACKGROUND_INVALID);
 
 				backgrounds[user.id] = {
 					r: color.rgb[0],
@@ -745,7 +1056,7 @@ export const commands: Chat.ChatCommands = {
 				this.sendReply("|raw| Your background was successfully set. It may take a while for it to show up.");
 			},
 			unset(target, room, user) {
-				if (!backgrounds[user.id]) throw new Chat.ErrorMessage(BACKGROUND_USER_UNSET);
+				if (!backgrounds[user.id]) return this.errorReply(BACKGROUND_USER_UNSET);
 
 				delete backgrounds[user.id];
 				saveBackgrounds();
@@ -775,7 +1086,8 @@ export const commands: Chat.ChatCommands = {
 			`<code>/custom flair</code>: commands related to custom flairs. Try <code>/help custom flair</code> for details. ${FLAIR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom color</code>: commands related to custom user colors. Try <code>/help custom color</code> for details. ${NAME_COLOR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom background</code>: commands related to custom background colors. Try <code>/help custom background</code> for details. ${BACKGROUND_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
-			`<code>/custom emoji</code>: commands related to custom emojis. Try <code>/help custom emoji</code> for details. ${EMOJI_MINIMUM_TOUR_WINS} or more tour wins required to use.`
+			`<code>/custom emoji</code>: commands related to custom emojis. Try <code>/help custom emoji</code> for details. ${EMOJI_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
+			`<code>/custom sticker</code>: commands related to custom stickers. Try <code>/help custom sticker</code> for details. ${STICKER_MINIMUM_TOUR_WINS} or more tour wins required to use.`
 		);
 	},
 };

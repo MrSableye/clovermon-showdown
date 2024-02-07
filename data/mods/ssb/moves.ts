@@ -375,54 +375,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Ice",
 	},
 
-	// Andrew
-	whammerjammer: {
-		accuracy: 100,
-		basePower: 60,
-		category: "Special",
-		desc: "If this move is successful, the user switches out and all field conditions (entry hazards, terrains, weathers, screens, etc.) are removed from both sides.",
-		shortDesc: "Removes field conditions, switches out.",
-		name: "Whammer Jammer",
-		pp: 15,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		onTryMove() {
-			this.attrLastMove('[still]');
-		},
-		onPrepareHit(target, source) {
-			this.add('-anim', source, 'Shadow Ball', target);
-		},
-		onHit(target, source, move) {
-			const removeAll = [
-				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes',
-				'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
-			];
-			const silentRemove = ['reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist'];
-			for (const sideCondition of removeAll) {
-				if (target.side.removeSideCondition(sideCondition)) {
-					if (!silentRemove.includes(sideCondition)) {
-						this.add('-sideend', target.side, this.dex.conditions.get(sideCondition).name, '[from] move: Whammer Jammer', '[of] ' + source);
-					}
-				}
-				if (source.side.removeSideCondition(sideCondition)) {
-					if (!silentRemove.includes(sideCondition)) {
-						this.add('-sideend', source.side, this.dex.conditions.get(sideCondition).name, '[from] move: Whammer Jammer', '[of] ' + source);
-					}
-				}
-			}
-			this.field.clearWeather();
-			this.field.clearTerrain();
-			for (const clear in this.field.pseudoWeather) {
-				if (clear.endsWith('mod') || clear.endsWith('clause')) continue;
-				this.field.removePseudoWeather(clear);
-			}
-		},
-		selfSwitch: true,
-		secondary: null,
-		target: "normal",
-		type: "Ghost",
-	},
-
 	// Annika
 	datacorruption: {
 		accuracy: true,
@@ -1025,7 +977,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 						move: moveData.name,
 						id: moveData.id,
 						pp: Math.floor(moveData.pp * (moveSlot.pp / moveSlot.maxpp)),
-						maxpp: ((moveData.noPPBoosts || moveData.isZ) ? moveData.pp : moveData.pp * 8 / 5),
+						maxpp: ((moveData.noPPBoosts || moveData.isZ) ? moveData.pp : Math.floor(moveData.pp * 8 / 5)),
 						target: moveData.target,
 						disabled: false,
 						disabledSource: '',
@@ -2613,8 +2565,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 						const newSlot = {
 							id: newMove.id,
 							move: newMove.name,
-							pp: newMove.pp * 8 / 5,
-							maxpp: newMove.pp * 8 / 5,
+							pp: Math.floor(newMove.pp * 8 / 5),
+							maxpp: Math.floor(newMove.pp * 8 / 5),
 							disabled: slot.disabled,
 							used: false,
 						};
@@ -2639,8 +2591,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 						const newSlot = {
 							id: newMove.id,
 							move: newMove.name,
-							pp: newMove.pp * 8 / 5,
-							maxpp: newMove.pp * 8 / 5,
+							pp: Math.floor(newMove.pp * 8 / 5),
+							maxpp: Math.floor(newMove.pp * 8 / 5),
 							disabled: slot.disabled,
 							used: false,
 						};
@@ -2822,9 +2774,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		gen: 8,
 		pp: 15,
 		priority: 0,
-		flags: {},
+		flags: {futuremove: 1},
 		ignoreImmunity: true,
-		isFutureMove: true,
 		onTry(source, target) {
 			this.attrLastMove('[still]');
 			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
@@ -2841,10 +2792,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 					basePower: 110,
 					category: "Special",
 					priority: 0,
-					flags: {},
+					flags: {futuremove: 1},
 					ignoreImmunity: false,
 					effectType: 'Move',
-					isFutureMove: true,
 					type: 'Psychic',
 				},
 			});
@@ -3089,7 +3039,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Fairy",
 	},
 
-	// Nol
+	// Theia
 	madhacks: {
 		accuracy: true,
 		basePower: 0,

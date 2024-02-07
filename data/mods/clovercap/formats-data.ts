@@ -27,7 +27,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	regishort: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "Uber",
 	},
 	regicide: {
 		inherit: true,
@@ -48,11 +48,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "LC",
-	},
-	semmush: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
 	},
 	starhiro: {
 		inherit: true,
@@ -1143,6 +1138,21 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	},
+	winkhulu: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
+	temawria: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	retwina: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	schiztarf: {
 		inherit: true,
 		isNonstandard: null,
@@ -1356,5 +1366,8 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	doomsday: {
 		isNonstandard: null,
 		tier: "AG",
+	},
+	hailsanta: {
+		isNonstandard: "Future",
 	},
 };

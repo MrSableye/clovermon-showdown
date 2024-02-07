@@ -214,6 +214,13 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		endFromItem: "  [POKEMON]'s [ITEM] woke it up!",
 		cant: "[POKEMON] is fast asleep.",
 	},
+	radish: {
+		start: "  [POKEMON] was radished!",
+		alreadyStarted: "  [POKEMON] is already radished!",
+		end: "  [POKEMON]'s radishing was healed!",
+		endFromItem: "  [POKEMON]'s [ITEM] healed its radishing!",
+		damage: "  [POKEMON] was hurt by its radishing!",
+	},
 
 	// misc effects
 	confusion: {
@@ -295,6 +302,13 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		start: "  It started to snow!",
 		end: "  The snow stopped.",
 		upkeep: "  (The snow is falling down.)",
+	},
+	acidicrainfall: {
+		weatherName: "Acidic Rainfall",
+		start: "  A horrible rain rolls in!",
+		end: "  The horrible rain ceased.",
+		upkeep: "  (The weather is horrible!)",
+		damage: "  [POKEMON] is melting!",
 	},
 	densefog: {
 		weatherName: "Fog",
@@ -404,5 +418,41 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		blockMove: "  The freezing winds prevent [POKEMON] from fighting!",
 		upkeep: "  (The hail is crashing down.)",
 		damage: "  [POKEMON] is buffeted by the hail!",
+	},
+	runeofluck0: {
+		start: "  [TEAM] has no remaining Rune of Luck charges!",
+	},
+	runeofluck1: {
+		start: "  [TEAM] has 1 remaining Rune of Luck charges!",
+	},
+	runeofluck2: {
+		start: "  [TEAM] has 2 remaining Rune of Luck charges!",
+	},
+	runeofluck3: {
+		start: "  [TEAM] has 3 remaining Rune of Luck charges!",
+	},
+	runeofprotection0: {
+		start: "  [TEAM] has no remaining Rune of Protection charges!",
+	},
+	runeofprotection1: {
+		start: "  [TEAM] has 1 remaining Rune of Protection charges!",
+	},
+	runeofprotection2: {
+		start: "  [TEAM] has 2 remaining Rune of Protection charges!",
+	},
+	runeofprotection3: {
+		start: "  [TEAM] has 3 remaining Rune of Protection charges!",
+	},
+	runeofmendingk0: {
+		start: "  [TEAM] has no remaining Rune of Mending charges!",
+	},
+	runeofmending1: {
+		start: "  [TEAM] has 1 remaining Rune of Mending charges!",
+	},
+	runeofmending2: {
+		start: "  [TEAM] has 2 remaining Rune of Mending charges!",
+	},
+	runeofmending3: {
+		start: "  [TEAM] has 3 remaining Rune of Mending charges!",
 	},
 };

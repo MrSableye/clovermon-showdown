@@ -513,8 +513,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 				let applies = false;
 				if (
 					pokemon.hasType('Flying') ||
-					pokemon.hasAbility('levitate') ||
-					pokemon.hasAbility('asoneblobbostherian')) {
+					pokemon.hasAbility('levitate')) {
 					applies = true;
 				}
 				if (pokemon.hasItem('ironball') || pokemon.volatiles['ingrain'] ||
@@ -762,7 +761,15 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	/* CAP Exclusive Moves */
+	clobber: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	crusadercrash: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	earthshatter: {
 		inherit: true,
 		isNonstandard: null,
 	},
@@ -846,7 +853,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	memejr: {
+	memepunch: {
 		inherit: true,
 		isNonstandard: null,
 	},

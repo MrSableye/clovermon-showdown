@@ -1,7 +1,10 @@
 export const Items: {[itemid: string]: ItemData} = {
 	abilityshield: {
 		name: "Ability Shield",
-		spritenum: 0, // TODO
+		spritenum: 746,
+		fling: {
+			basePower: 30,
+		},
 		ignoreKlutz: true,
 		// Neutralizing Gas protection implemented in Pokemon.ignoringAbility() within sim/pokemon.ts
 		// and in Neutralizing Gas itself within data/abilities.ts
@@ -67,7 +70,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	adamantcrystal: {
 		name: "Adamant Crystal",
-		spritenum: 4, // TODO
+		spritenum: 741,
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (user.baseSpecies.num === 483 && (move.type === 'Steel' || move.type === 'Dragon')) {
@@ -111,14 +114,12 @@ export const Items: {[itemid: string]: ItemData} = {
 		fling: {
 			basePower: 30,
 		},
-		onBoostPriority: 1,
-		onBoost(boost, target) {
-			target.itemState.lastAtk = target.boosts['atk'];
-		},
 		onAfterBoost(boost, target, source, effect) {
-			const noAtkChange = boost.atk! < 0 && target.boosts['atk'] === -6 && target.itemState.lastAtk === -6;
-			const noContraryAtkChange = boost.atk! > 0 && target.boosts['atk'] === 6 && target.itemState.lastAtk === 6;
-			if (target.boosts['spe'] === 6 || noAtkChange || noContraryAtkChange) {
+			// Adrenaline Orb activates if Intimidate is blocked by an ability like Hyper Cutter,
+			// which deletes boost.atk,
+			// but not if the holder's attack is already at -6 (or +6 if it has Contrary),
+			// which sets boost.atk to 0
+			if (target.boosts['spe'] === 6 || boost.atk === 0) {
 				return;
 			}
 			if (effect.name === 'Intimidate') {
@@ -369,7 +370,10 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	auspiciousarmor: {
 		name: "Auspicious Armor",
-		spritenum: 0, // TODO
+		spritenum: 753,
+		fling: {
+			basePower: 30,
+		},
 		num: 2344,
 		gen: 9,
 		rating: 1,
@@ -479,6 +483,15 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "Past",
 		rating: -1,
+	},
+	bignugget: {
+		name: "Big Nugget",
+		spritenum: 27,
+		fling: {
+			basePower: 130,
+		},
+		num: 581,
+		gen: 5,
 	},
 	bigroot: {
 		name: "Big Root",
@@ -637,7 +650,10 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	boosterenergy: {
 		name: "Booster Energy",
-		spritenum: 0, // TODO
+		spritenum: 745,
+		fling: {
+			basePower: 30,
+		},
 		onUpdate(pokemon) {
 			if (pokemon.transformed) return;
 			if (this.queue.peek(true)?.choice === 'runSwitch') return;
@@ -1066,8 +1082,11 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	clearamulet: {
 		name: "Clear Amulet",
-		spritenum: 0, // TODO
-		onBoost(boost, target, source, effect) {
+		spritenum: 747,
+		fling: {
+			basePower: 30,
+		},
+		onTryBoost(boost, target, source, effect) {
 			if (source && target === source) return;
 			let showMsg = false;
 			let i: BoostID;
@@ -1146,6 +1165,27 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 4,
 		rating: 1,
 	},
+	cornerstonemask: {
+		name: "Cornerstone Mask",
+		spritenum: 758,
+		fling: {
+			basePower: 60,
+		},
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (user.baseSpecies.name.startsWith('Ogerpon-Cornerstone')) {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		onTakeItem(item, source) {
+			if (source.baseSpecies.baseSpecies === 'Ogerpon') return false;
+			return true;
+		},
+		forcedForme: "Ogerpon-Cornerstone",
+		itemUser: ["Ogerpon-Cornerstone"],
+		num: 2406,
+		gen: 9,
+	},
 	cornnberry: {
 		name: "Cornn Berry",
 		spritenum: 81,
@@ -1173,10 +1213,10 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	covertcloak: {
 		name: "Covert Cloak",
+		spritenum: 750,
 		fling: {
-			basePower: 10,
+			basePower: 30,
 		},
-		spritenum: 0, // TODO
 		onModifySecondaries(secondaries) {
 			this.debug('Covert Cloak prevent secondary');
 			return secondaries.filter(effect => !!(effect.self || effect.dustproof));
@@ -1611,7 +1651,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		onAfterMoveSecondaryPriority: 2,
 		onAfterMoveSecondary(target, source, move) {
-			if (source && source !== target && target.hp && move && move.category !== 'Status' && !move.isFutureMove) {
+			if (source && source !== target && target.hp && move && move.category !== 'Status' && !move.flags['futuremove']) {
 				if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.beingCalledBack || target.isSkyDropped()) return;
 				if (target.volatiles['commanding'] || target.volatiles['commanded']) return;
 				for (const pokemon of this.getAllActive()) {
@@ -1675,8 +1715,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 120,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			const pledges = ['firepledge', 'grasspledge', 'waterpledge'];
-			if (target === source || move.category === 'Status' || pledges.includes(move.id)) return;
+			if (target === source || move.category === 'Status' || move.flags['pledgecombo']) return;
 			if (move.type === 'Electric' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -1771,13 +1810,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		onModifyDefPriority: 2,
 		onModifyDef(def, pokemon) {
-			if (pokemon.baseSpecies.nfe) {
+			if (pokemon.baseSpecies.nfe || pokemon.baseSpecies.id === 'dipplin') {
 				return this.chainModify(1.5);
 			}
 		},
 		onModifySpDPriority: 2,
 		onModifySpD(spd, pokemon) {
-			if (pokemon.baseSpecies.nfe) {
+			if (pokemon.baseSpecies.nfe || pokemon.baseSpecies.id === 'dipplin') {
 				return this.chainModify(1.5);
 			}
 		},
@@ -1812,6 +1851,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 7,
 		isNonstandard: "Past",
 		rating: 1,
+	},
+	fairyfeather: {
+		name: "Fairy Feather",
+		spritenum: 754,
+		fling: {
+			basePower: 10,
+		},
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move && move.type === 'Fairy') {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		num: 2401,
+		gen: 9,
 	},
 	fairygem: {
 		name: "Fairy Gem",
@@ -1930,8 +1984,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 141,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			const pledges = ['firepledge', 'grasspledge', 'waterpledge'];
-			if (target === source || move.category === 'Status' || pledges.includes(move.id)) return;
+			if (target === source || move.category === 'Status' || move.flags['pledgecombo']) return;
 			if (move.type === 'Fire' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -2387,8 +2440,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 172,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			const pledges = ['firepledge', 'grasspledge', 'waterpledge'];
-			if (target === source || move.category === 'Status' || pledges.includes(move.id)) return;
+			if (target === source || move.category === 'Status' || move.flags['pledgecombo']) return;
 			if (move.type === 'Grass' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -2485,7 +2537,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	griseouscore: {
 		name: "Griseous Core",
-		spritenum: 180, // TODO
+		spritenum: 743,
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (user.baseSpecies.num === 487 && (move.type === 'Ghost' || move.type === 'Dragon')) {
@@ -2631,6 +2683,27 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 4,
 		isPokeball: true,
 		rating: -1,
+	},
+	hearthflamemask: {
+		name: "Hearthflame Mask",
+		spritenum: 760,
+		fling: {
+			basePower: 60,
+		},
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (user.baseSpecies.name.startsWith('Ogerpon-Hearthflame')) {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		onTakeItem(item, source) {
+			if (source.baseSpecies.baseSpecies === 'Ogerpon') return false;
+			return true;
+		},
+		forcedForme: "Ogerpon-Hearthflame",
+		itemUser: ["Ogerpon-Hearthflame"],
+		num: 2408,
+		gen: 9,
 	},
 	heatrock: {
 		name: "Heat Rock",
@@ -3303,7 +3376,10 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	loadeddice: {
 		name: "Loaded Dice",
-		spritenum: 0, // TODO
+		spritenum: 751,
+		fling: {
+			basePower: 30,
+		},
 		// partially implemented in sim/battle-actions.ts:BattleActions#hitStepMoveHitLoop
 		onModifyMove(move) {
 			if (move.multiaccuracy) {
@@ -3445,7 +3521,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	lustrousglobe: {
 		name: "Lustrous Globe",
-		spritenum: 265, // TODO
+		spritenum: 742,
 		onBasePowerPriority: 15,
 		onBasePower(basePower, user, target, move) {
 			if (user.baseSpecies.num === 484 && (move.type === 'Water' || move.type === 'Dragon')) {
@@ -3600,7 +3676,10 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	maliciousarmor: {
 		name: "Malicious Armor",
-		spritenum: 0, // TODO
+		spritenum: 744,
+		fling: {
+			basePower: 30,
+		},
 		num: 1861,
 		gen: 9,
 		rating: 1,
@@ -3660,6 +3739,15 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 1,
 		isPokeball: true,
 		rating: -1,
+	},
+	masterpieceteacup: {
+		name: "Masterpiece Teacup",
+		spritenum: 757,
+		fling: {
+			basePower: 80,
+		},
+		num: 2404,
+		gen: 9,
 	},
 	mawilite: {
 		name: "Mawilite",
@@ -3973,10 +4061,10 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	mirrorherb: {
 		name: "Mirror Herb",
+		spritenum: 748,
 		fling: {
-			basePower: 10,
+			basePower: 30,
 		},
-		spritenum: 0, // TODO
 		onFoeAfterBoost(boost, target, source, effect) {
 			if (effect?.name === 'Opportunist' || effect?.name === 'Mirror Herb') return;
 			const boostPlus: SparseBoostsTable = {};
@@ -4135,8 +4223,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 307,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			const pledges = ['firepledge', 'grasspledge', 'waterpledge'];
-			if (target === source || move.category === 'Status' || pledges.includes(move.id)) return;
+			if (target === source || move.category === 'Status' || move.flags['pledgecombo']) return;
 			if (move.type === 'Normal' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -4787,7 +4874,10 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	punchingglove: {
 		name: "Punching Glove",
-		spritenum: 0, // TODO
+		spritenum: 749,
+		fling: {
+			basePower: 30,
+		},
 		onBasePowerPriority: 23,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['punch']) {
@@ -4826,7 +4916,8 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	quickclaw: {
 		onFractionalPriorityPriority: -2,
-		onFractionalPriority(priority, pokemon) {
+		onFractionalPriority(priority, pokemon, target, move) {
+			if (move.category === "Status" && pokemon.hasAbility("myceliummight")) return;
 			if (priority <= 0 && this.randomChance(1, 5)) {
 				this.add('-activate', pokemon, 'item: Quick Claw');
 				return 0.1;
@@ -5989,7 +6080,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	},
 	strangeball: {
 		name: "Strange Ball",
-		spritenum: 303, // TODO
+		spritenum: 308,
 		num: 1785,
 		gen: 8,
 		isPokeball: true,
@@ -6041,6 +6132,15 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 1116,
 		gen: 8,
 		rating: -1,
+	},
+	syrupyapple: {
+		name: "Syrupy Apple",
+		spritenum: 755,
+		fling: {
+			basePower: 30,
+		},
+		num: 2402,
+		gen: 9,
 	},
 	tamatoberry: {
 		name: "Tamato Berry",
@@ -7355,6 +7455,15 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Past",
 		rating: 1,
 	},
+	unremarkableteacup: {
+		name: "Unremarkable Teacup",
+		spritenum: 756,
+		fling: {
+			basePower: 80,
+		},
+		num: 2403,
+		gen: 9,
+	},
 	upgrade: {
 		name: "Up-Grade",
 		spritenum: 523,
@@ -7440,8 +7549,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 528,
 		isGem: true,
 		onSourceTryPrimaryHit(target, source, move) {
-			const pledges = ['firepledge', 'grasspledge', 'waterpledge'];
-			if (target === source || move.category === 'Status' || pledges.includes(move.id)) return;
+			if (target === source || move.category === 'Status' || move.flags['pledgecombo']) return;
 			if (move.type === 'Water' && source.useItem()) {
 				source.addVolatile('gem');
 			}
@@ -7540,6 +7648,27 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 639,
 		gen: 6,
 		rating: 1,
+	},
+	wellspringmask: {
+		name: "Wellspring Mask",
+		spritenum: 759,
+		fling: {
+			basePower: 60,
+		},
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (user.baseSpecies.name.startsWith('Ogerpon-Wellspring')) {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		onTakeItem(item, source) {
+			if (source.baseSpecies.baseSpecies === 'Ogerpon') return false;
+			return true;
+		},
+		forcedForme: "Ogerpon-Wellspring",
+		itemUser: ["Ogerpon-Wellspring"],
+		num: 2407,
+		gen: 9,
 	},
 	wepearberry: {
 		name: "Wepear Berry",
@@ -8192,6 +8321,87 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	berserkmeme: {
+		name: "Berserk Meme",
+		spritenum: 388,
+		onTakeItem: false,
+		onStart(pokemon) {
+			pokemon.setType('???');
+			this.add('-start', pokemon, 'typechange', '???');
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.species.name !== 'Memenace') return;
+			if (move.id === 'meme') {
+				move.basePower = 90;
+			}
+		},
+		itemUser: ["Memenace"],
+		isNonstandard: "Future",
+	},
+	anitem: {
+		name: "An Item",
+		spritenum: 750,
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === '???') {
+				return this.chainModify([0x1333, 0x1000]);
+			}
+		},
+		isNonstandard: "Future",
+		rating: 1,
+	},
+	aberry: {
+		name: "A Berry",
+		spritenum: 124,
+		isBerry: true,
+		naturalGift: {
+			basePower: 80,
+			type: "Normal",
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (
+				move.type === '???' &&
+				(!target.volatiles['substitute'] || move.flags['bypasssub'] || (move.infiltrates && this.gen >= 6))
+			) {
+				if (target.eatItem()) {
+					this.debug('-50% reduction');
+					this.add('-enditem', target, this.effect, '[weaken]');
+					return this.chainModify(0.5);
+				}
+			}
+		},
+		onEat() { },
+		num: 200,
+		gen: 4,
+		rating: 1,
+		isNonstandard: "Future",
+	},
+	firering: {
+		name: "Fire Ring",
+		spritenum: 410,
+		onSetStatus(status, target, source, effect) {
+			if (status.id !== 'brn') return;
+			this.add('-immune', target, '[from] ability: Comatose');
+			return false;
+		},
+		isNonstandard: "Future",
+	},
+	skillguard: {
+		name: "Skill Guard",
+		spritenum: 746,
+		ignoreKlutz: true,
+		onSetAbility(ability, target, source, effect) {
+			if (target === source) return;
+			this.add('-block', target, 'item: Skill Guard');
+			return null;
+		},
+		onTypeChange(typeChange, target, source, effect) {
+			if (target === source) return;
+			this.add('-block', target, 'item: Skill Guard');
+			return false;
+		},
+		isNonstandard: "Future",
+	},
 	/* Clover CAP Exclusive Items */
 	moluganion: {
 		name: "Moluganion",
@@ -8284,6 +8494,38 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 562,
 		gen: 5,
+		isNonstandard: "Past",
+		rating: 1,
+	},
+	crimsonlens: {
+		name: "Crimson Lens",
+		spritenum: 93,
+		fling: {
+			basePower: 30,
+		},
+		onModifySpAPriority: 2,
+		onModifySpA(spa, pokemon) {
+			if (pokemon.baseSpecies.name === 'Winkhulu') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Winkhulu"],
+		isNonstandard: "Past",
+		rating: 1,
+	},
+	cursedfang: {
+		name: "Cursed Fang",
+		spritenum: 94,
+		fling: {
+			basePower: 90,
+		},
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.name === 'Winkhulu') {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Winkhulu"],
 		isNonstandard: "Past",
 		rating: 1,
 	},
@@ -9614,6 +9856,31 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	queensrock: {
+		name: "Queen's Rock",
+		spritenum: 236,
+		fling: {
+			basePower: 30,
+			volatileStatus: 'attract',
+		},
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.volatileStatus === 'attract') return;
+				}
+				move.secondaries.push({
+					chance: 10,
+					volatileStatus: 'attract',
+				});
+			}
+		},
+		num: -69420221,
+		isNonstandard: "Future",
+		gen: 8,
+		rating: 1,
+	},
 	alcohol: {
 		name: "Alcohol",
 		spritenum: 22,
@@ -9731,6 +9998,38 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		rating: 1,
+	},
+	choicechoice: {
+		name: "Choice Choice",
+		spritenum: 69,
+		fling: {
+			basePower: 10,
+		},
+		onStart(pokemon) {
+			if (pokemon.volatiles['choicelock']) {
+				this.debug('removing choicelock: ' + pokemon.volatiles['choicelock']);
+			}
+			pokemon.removeVolatile('choicelock');
+		},
+		onModifyMove(move, pokemon) {
+			pokemon.addVolatile('choicelock');
+		},
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (this.effectState.mode !== 'atk') return;
+			if (pokemon.volatiles['dynamax']) return;
+			this.effectState.mode = 'atk';
+			return this.chainModify(1.5);
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(spa, pokemon) {
+			if (this.effectState.mode !== 'spa') return;
+			if (pokemon.volatiles['dynamax']) return;
+			this.effectState.mode = 'spa';
+			return this.chainModify(1.5);
+		},
+		isChoice: true,
+		isNonstandard: "Future",
 	},
 	mesosack: {
 		name: "Meso Sack",
@@ -11423,7 +11722,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	frillydress: {
+	frillydress: { // TODO: Add Full Moon interaction
 		name: "Frilly Dress",
 		spritenum: 0,
 		onStart(source) {
@@ -12578,7 +12877,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		onTryHit(target, source, move) {
-			if (target !== source && ((move.flags['bomb'] || move.flags['above'] || move.flags['contact'])
+			if (target !== source && ((move.flags['bullet'] || move.flags['above'] || move.flags['contact'])
 			|| (move.type === 'Divine' || move.type === 'Virus' || move.type === 'Fighting' || move.type === 'Ghost' || 
 			move.type === 'Dark' || move.type === 'Poison' || move.type === 'Chaos' || move.type === 'Qmarks' || 
 			move.type === 'Light' || move.type === 'Normal'))) 
@@ -12588,7 +12887,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			}
 		},
 		onAllyTryHitSide(target, source, move) {
-			if ((move.flags['bomb'] || move.flags['above'] || move.flags['contact'])
+			if ((move.flags['bullet'] || move.flags['above'] || move.flags['contact'])
 			|| (move.type === 'Divine' || move.type === 'Virus' || move.type === 'Fighting' || move.type === 'Ghost' || 
 			move.type === 'Dark' || move.type === 'Poison' || move.type === 'Chaos' || move.type === 'Qmarks' || 
 			move.type === 'Light' || move.type === 'Normal')) 
@@ -14706,7 +15005,7 @@ export const Items: {[itemid: string]: ItemData} = {
 	snowshoes: {	/* TODO Add Icy Terrain condition **/
 		name: "Snowshoes",
 		spritenum: 0,
-		onBoost(boost, target, source, effect) {
+		onTryBoost(boost, target, source, effect) {
 			if (source && target === source) return;
 			if (!this.field.isWeather('hail')) return;
 			if (boost.spe && boost.spe < 0) {
@@ -16305,12 +16604,9 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
-	supressionstone: {
+	supressionstone: { // Implemented in sim/pokemon.ts
 		name: "Supression Stone",
 		spritenum: 0,
-		onStart(target) {
-			target.addVolatile('gastroacid');
-		},
 		num: 67282,
 		isNonstandard: "Future",
 		rating: 1,
@@ -17691,9 +17987,16 @@ export const Items: {[itemid: string]: ItemData} = {
 	weakeningwhip: {
 		name: "Weakening Whip",
 		spritenum: 0,
-		onAfterMoveSecondary(target, source, move) {
-			if (this.randomChance(4,10)) {
-				this.boost({atk: -1}, target, source, this.effect)
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				move.secondaries.push({
+					chance: 40,
+					boosts: {
+						atk: -1
+					}
+				});
 			}
 		},
 		num: 67397,
@@ -17703,9 +18006,16 @@ export const Items: {[itemid: string]: ItemData} = {
 	shatteringhammer: {
 		name: "Shattering Hammer",
 		spritenum: 0,
-		onAfterMoveSecondary(target, source, move) {
-			if (this.randomChance(4,10)) {
-				this.boost({atk: -1}, target, source, this.effect)
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				move.secondaries.push({
+					chance: 40,
+					boosts: {
+						def: -1
+					}
+				});
 			}
 		},
 		num: 67398,
@@ -17715,9 +18025,16 @@ export const Items: {[itemid: string]: ItemData} = {
 	distracttrumpet: {
 		name: "Distract Trumpet",
 		spritenum: 0,
-		onAfterMoveSecondary(target, source, move) {
-			if (this.randomChance(4,10)) {
-				this.boost({def: -1}, target, source, this.effect)
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				move.secondaries.push({
+					chance: 40,
+					boosts: {
+						spa: -1
+					}
+				});
 			}
 		},
 		num: 67399,
@@ -17727,9 +18044,16 @@ export const Items: {[itemid: string]: ItemData} = {
 	enfeeblescepter: {
 		name: "Enfeeble Scepter",
 		spritenum: 0,
-		onAfterMoveSecondary(target, source, move) {
-			if (this.randomChance(4,10)) {
-				this.boost({spa: -1}, target, source, this.effect)
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				move.secondaries.push({
+					chance: 40,
+					boosts: {
+						spd: -1
+					}
+				});
 			}
 		},
 		num: 67400,
@@ -17739,9 +18063,16 @@ export const Items: {[itemid: string]: ItemData} = {
 	gooeygloves: {
 		name: "Gooey Gloves",
 		spritenum: 0,
-		onAfterMoveSecondary(target, source, move) {
-			if (this.randomChance(4,10)) {
-				this.boost({spd: -1}, target, source, this.effect)
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				move.secondaries.push({
+					chance: 40,
+					boosts: {
+						spe: -1
+					}
+				});
 			}
 		},
 		num: 67401,
@@ -17751,9 +18082,16 @@ export const Items: {[itemid: string]: ItemData} = {
 	blindingprism: {
 		name: "Blinding Prism",
 		spritenum: 0,
-		onAfterMoveSecondary(target, source, move) {
-			if (this.randomChance(4,10)) {
-				this.boost({spe: -1}, target, source, this.effect)
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				move.secondaries.push({
+					chance: 40,
+					boosts: {
+						accuracy: -1
+					}
+				});
 			}
 		},
 		num: 67402,
@@ -17763,9 +18101,16 @@ export const Items: {[itemid: string]: ItemData} = {
 	alluringnectar: {
 		name: "Alluring Nectar",
 		spritenum: 0,
-		onAfterMoveSecondary(target, source, move) {
-			if (this.randomChance(4,10)) {
-				this.boost({accuracy: -1}, target, source, this.effect)
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status") {
+				if (!move.secondaries) move.secondaries = [];
+				move.secondaries.push({
+					chance: 40,
+					boosts: {
+						evasion: -1
+					}
+				});
 			}
 		},
 		num: 67403,
@@ -17775,9 +18120,12 @@ export const Items: {[itemid: string]: ItemData} = {
 	curseddoll: {
 		name: "Cursed Doll",
 		spritenum: 0,
-		onAfterMoveSecondary(target, source, move) {
-			if (this.randomChance(4,10)) {
-				this.boost({evasion: -1}, target, source, this.effect)
+		onDamagingHit(damage, target, source, move) {
+			if (source.volatiles['disable']) return;
+			if (!move.isMax && !move.flags['futuremove'] && move.id !== 'struggle') {
+				if (this.randomChance(3, 10)) {
+					source.addVolatile('disable', this.effectState.target);
+				}
 			}
 		},
 		num: 67404,
