@@ -2586,6 +2586,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		activate: "#lightningrod",
 	},
+	frozenbunker: {
+		name: "Frozen Bunker",
+		desc: "Upon taking super-effective daamge, this Pokémon changes into its freed form for the rest of the battle.",
+	},
 	rusepower: {
 		name: "Ruse Power",
 		desc: "This Pokemon's attacking stat is multiplied by 1.2 while using Poison- or Dark-type attacks.",
