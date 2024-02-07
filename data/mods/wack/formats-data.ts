@@ -21010,7 +21010,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 	},
-	doomsay: {
+	doomsayw: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,

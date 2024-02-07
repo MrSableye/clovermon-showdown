@@ -8901,6 +8901,22 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	arctiglobe: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	arctiglobefreed: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	doomsay: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	epilate: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	hookling: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -19947,7 +19963,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	doomsay: {
+	doomsayw: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

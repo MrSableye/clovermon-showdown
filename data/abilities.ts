@@ -7536,6 +7536,19 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 	},
+	frozenbunker: {
+        onDamagingHit(damage, target, source, move) {
+            if (!move.damage && !move.damageCallback && target.getMoveHitData(move).typeMod > 0) {
+                if (target.baseSpecies.baseSpecies !== 'Arctiglobe' || target.transformed) return;
+                const arctiglobeform = target.species.id === 'arctiglobefreed' ? '' : '-Freed';
+                target.formeChange('Arctiglobe' + arctiglobeform, this.effect, false, '[msg]');
+            }
+        },
+        isPermanent: true,
+        name: "Frozen Bunker",
+        rating: 4,
+        num: 176,
+    },
 	niceface: {
 		onStart(pokemon) {
 			if (this.field.isTerrain('grassyterrain') && pokemon.species.id === 'blobbosnoice' && !pokemon.transformed) {
