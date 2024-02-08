@@ -3001,6 +3001,36 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "Uber",
 	},
+	epilate: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	arctiglobe: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	arctiglobefreed: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	doomsay: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	bige: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
+	buge: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "LC",
+	},
 	hookling: {
 		inherit: true,
 		isNonstandard: null,

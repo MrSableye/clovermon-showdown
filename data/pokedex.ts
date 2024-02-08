@@ -75957,7 +75957,7 @@ blobbosgeno: {
 	},
 	doomsayw: {
 		num: 668218,
-		name: "DoomsayWack",
+		name: "Doomsayw",
 		types: ["Ghost", "Zombie"],
 		baseStats: {hp: 85, atk: 125, def: 90, spa: 70, spd: 80, spe: 115},
 		abilities: {0: "Forewarn", H: "Anticipation"},
