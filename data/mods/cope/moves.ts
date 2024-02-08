@@ -4615,6 +4615,14 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	bloodmoon: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	icespinner: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	silktrap: {
+		inherit: true,
+		isNonstandard: null,
 		},
 	mindbreak: {
 		inherit: true,
