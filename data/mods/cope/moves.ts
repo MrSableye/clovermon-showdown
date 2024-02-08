@@ -4596,10 +4596,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	finalfreeze: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	makeitrain: {
 		inherit: true,
 		isNonstandard: null,
@@ -4617,6 +4613,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	icespinner: {
+		inherit: true,
+		isNonstandard: null,
+		},
+	brainfreeze: {
 		inherit: true,
 		isNonstandard: null,
 	},

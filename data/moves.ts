@@ -84907,7 +84907,6 @@ beforeTurnCallback(pokemon) {
 		accuracy: 100,
 		basePower: 120,
 		category: "Physical",
-		isNonstandard: "Future",
 		name: "Brain Freeze",
 		pp: 15,
 		priority: 0,
