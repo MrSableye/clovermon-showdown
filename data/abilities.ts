@@ -7541,13 +7541,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
             if (!move.damage && !move.damageCallback && target.getMoveHitData(move).typeMod > 0) {
                 if (target.baseSpecies.baseSpecies !== 'Arctiglobe' || target.transformed) return;
                 const arctiglobeform = target.species.id === 'arctiglobefreed' ? '' : '-Freed';
-                target.formeChange('Arctiglobe' + arctiglobeform, this.effect, false, '[msg]');
+                target.formeChange('Arctiglobe' + arctiglobeform, this.effect, true, '[msg]');
+                this.effectState.busted = true;
+            }
+        },
+        onUpdate(pokemon) {
+            if (['arctiglobe'].includes(pokemon.species.id) && this.effectState.busted) {
+                pokemon.formeChange('Arctiglobe-Freed', this.effect, true);
             }
         },
         isPermanent: true,
         name: "Frozen Bunker",
         rating: 4,
-        num: 176,
     },
 	niceface: {
 		onStart(pokemon) {

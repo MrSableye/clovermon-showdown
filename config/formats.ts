@@ -1065,7 +1065,7 @@ export const Formats: FormatList = [
 			'Evasion Moves Clause',
 			'Species Clause',
 		],
-		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk', 'Cope', 'Fuck You', 'Wonder Guard', 'Wicked Blow', 'Drizzle', 'Drought', 'Krackocean','Illusion', 'Weathervein', 'Aurora Veil'],
+		banlist: ['AG', 'Uber', 'Baton Pass', 'Moody', 'Arena Trap', 'Shadow Tag', 'Doomsday', 'Doomsday-Revenant', 'Worldle', 'Eternal Walk','Fuck You', 'Wonder Guard', 'Wicked Blow', 'Drizzle', 'Drought', 'Krackocean','Illusion', 'Weathervein', 'Aurora Veil', 'Maximize'],
 		unbanlist: ['Disbeary-Ebil + Tough Claws', 'Disbeary-Ebil + Dark Aura'],
 	},
 	{
