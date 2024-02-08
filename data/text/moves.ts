@@ -7846,6 +7846,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Earth Shatter",
 		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
 		shortDesc: "Has 33% recoil.",
+		},
+	brainfreeze: {
+		name: "Brain Freeze",
+		desc: "Has 33% recoil. Nullifies the foe's Ability.",
+		shortDesc: "Has 33% recoil.",
 	},
 	solarhunger: {
 		name: "Solar Hunger",

@@ -8916,6 +8916,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 	epilate: {
 		tier: "Illegal",
 		isNonstandard: "Future",
+		},
+	frostbelum: {
+		tier: "Illegal",
+		isNonstandard: "Future",
 	},
 	hookling: {
 		tier: "Illegal",
