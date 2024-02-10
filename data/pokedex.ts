@@ -42838,7 +42838,7 @@ iwik: {
 			atk: 60,
 			def: 90,
 			spa: 105,
-			spd: 60,
+			spd: 70,
 			spe: 50,
 		},
 		abilities: {
