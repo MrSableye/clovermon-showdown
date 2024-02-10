@@ -35,10 +35,25 @@ const createUserCss = (
 	return `[id$="-userlist-user-${userId}"]{background: ${backgroundCss.join(', ')};}`
 };
 
+const createUserChatCss = (
+	userId: string,
+	chatBackground: Background | undefined,
+) => {
+	const backgroundCss: string[] = [];
+
+	if (chatBackground) {
+		backgroundCss.push(`rgba(${chatBackground.r},${chatBackground.g},${chatBackground.b}, 0.25)`);
+	}
+
+	if (!backgroundCss.length) return '';
+
+	return `.chat.${userId}{background: ${backgroundCss.join(', ')};}`
+};
+
 const writeCss = (content: string) => FS(CUSTOM_CSS_PATH).writeSync(content);
 
 const updateCss = () => {
-	const userConfig: Record<string, { flair?: Flair, background?: Background }> = {};
+	const userConfig: Record<string, { flair?: Flair, background?: Background, chatBackground?: Background }> = {};
 
 	Object.entries(flairs).forEach(([userId, flair]) => {
 		if (!userConfig[userId]) userConfig[userId] = {};
@@ -50,10 +65,17 @@ const updateCss = () => {
 		userConfig[userId].background = background;
 	});
 
+	Object.entries(chatBackgrounds).forEach(([userId, background]) => {
+		if (!userConfig[userId]) userConfig[userId] = {};
+		userConfig[userId].chatBackground = background;
+	});
+
 	writeCss([
 		CSS_HEADER,
 		...Object.entries(userConfig)
 			.map(([userId, userConfig]) => createUserCss(userId, userConfig.flair, userConfig.background)),
+		...Object.entries(userConfig)
+			.map(([userId, userConfig]) => createUserChatCss(userId, userConfig.chatBackground)),
 	].join('\n'));
 };
 
@@ -377,6 +399,21 @@ const backgrounds: BackgroundConfig = JSON.parse(
 
 const saveBackgrounds = () => {
 	FS('config/chat-plugins/custom-background.json').writeUpdate(() => JSON.stringify(backgrounds));
+	updateCss();
+};
+
+/* Chat background color logic */
+const CHAT_BACKGROUND_MINIMUM_TOUR_WINS = 6;
+const CHAT_BACKGROUND_USER_INELIGIBLE = `You are not eligible for a custom chat background. You must have at least ${CHAT_BACKGROUND_MINIMUM_TOUR_WINS} tour wins.`;
+const CHAT_BACKGROUND_USER_UNSET = 'You do not have a custom chat background set.';
+const CHAT_BACKGROUND_INVALID = 'Your custom chat background must be a color. Try a hex value.';
+
+const chatBackgrounds: BackgroundConfig = JSON.parse(
+	FS('config/chat-plugins/custom-chat-background.json').readIfExistsSync() || "{}"
+);
+
+const saveChatBackgrounds = () => {
+	FS('config/chat-plugins/custom-chat-background.json').writeUpdate(() => JSON.stringify(chatBackgrounds));
 	updateCss();
 };
 
@@ -1077,6 +1114,48 @@ export const commands: Chat.ChatCommands = {
 		'': 'help',
 		help() {
 			return this.parse('/help custom');
+		},
+		chatbg: 'background',
+		chatbackgrounds: 'chatbackground',
+		chatbackground: {
+			set(target, room, user) {
+				const canHaveBackground = hasTourWins(CHAT_BACKGROUND_MINIMUM_TOUR_WINS, user) || Config.custombackground?.[user.id] !== undefined;
+
+				if (!canHaveBackground) {
+					return this.errorReply(CHAT_BACKGROUND_USER_INELIGIBLE);
+				}
+
+				const color = parseColor(target.trim());
+
+				if (!color.rgb) return this.errorReply(CHAT_BACKGROUND_INVALID);
+
+				chatBackgrounds[user.id] = {
+					r: color.rgb[0],
+					g: color.rgb[1],
+					b: color.rgb[2],
+				};
+				saveChatBackgrounds();
+
+				this.sendReply("|raw| Your chat background was successfully set. It may take a while for it to show up.");
+			},
+			unset(target, room, user) {
+				if (!chatBackgrounds[user.id]) return this.errorReply(CHAT_BACKGROUND_USER_UNSET);
+
+				delete chatBackgrounds[user.id];
+				saveChatBackgrounds();
+
+				this.sendReply('|raw| Your chat background was successfully unset. It may take a while for it to dissapear.');
+			},
+			'': 'help',
+			help() {
+				return this.parse('/help custom chatbackground');
+			},
+		},
+		chatbackgroundhelp() {
+			this.sendReplyBox(
+				`<code>/custom chatbackground set [hex color]</code>: sets your user chat background color to the specified color.<br />` +
+				`<code>/custom chatbackground unset</code>: removes your user chat background color.`
+			);
 		},
 	},
 	customhelp() {
