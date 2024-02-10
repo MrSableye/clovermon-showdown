@@ -47,7 +47,7 @@ const createUserChatCss = (
 
 	if (!backgroundCss.length) return '';
 
-	return `.chat.${userId}{background: ${backgroundCss.join(', ')};}`
+	return `.chatmessage-${userId}{background: ${backgroundCss.join(', ')};}`
 };
 
 const writeCss = (content: string) => FS(CUSTOM_CSS_PATH).writeSync(content);
@@ -1163,8 +1163,9 @@ export const commands: Chat.ChatCommands = {
 			`<code>/custom avatar</code>: commands related to custom avatars. Try <code>/help custom avatar</code> for details. ${AVATAR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom title</code>: commands related to custom titles. Try <code>/help custom title</code> for details. ${TITLE_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom flair</code>: commands related to custom flairs. Try <code>/help custom flair</code> for details. ${FLAIR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
-			`<code>/custom color</code>: commands related to custom user colors. Try <code>/help custom color</code> for details. ${NAME_COLOR_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
+			`<code>/custom color</code>: commands related to custom user colors. Try <code>/help custom color</code> for details. ${NAME_COLOR_MINIMUM_TOUR_WINS}C or more tour wins required to use.<br />` +
 			`<code>/custom background</code>: commands related to custom background colors. Try <code>/help custom background</code> for details. ${BACKGROUND_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
+			`<code>/custom chatbackground</code>: commands related to custom chat background colors. Try <code>/help custom chatbackground</code> for details. ${CHAT_BACKGROUND_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom emoji</code>: commands related to custom emojis. Try <code>/help custom emoji</code> for details. ${EMOJI_MINIMUM_TOUR_WINS} or more tour wins required to use.<br />` +
 			`<code>/custom sticker</code>: commands related to custom stickers. Try <code>/help custom sticker</code> for details. ${STICKER_MINIMUM_TOUR_WINS} or more tour wins required to use.`
 		);
