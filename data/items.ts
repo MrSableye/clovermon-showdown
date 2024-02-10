@@ -10036,6 +10036,21 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	radishorb: {
+		name: "Radish Orb",
+		spritenum: 530,
+		fling: {
+			basePower: 30,
+			status: 'radish',
+		},
+		onResidualOrder: 28,
+		onResidualSubOrder: 3,
+		onResidual(pokemon) {
+			pokemon.trySetStatus('radish', pokemon);
+		},
+		isNonstandard: "Future",
+		rating: 1,
+	},
 	missingvoirite: {
 		name: "Missingvoirite",
 		spritenum: 587,
