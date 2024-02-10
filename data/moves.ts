@@ -2133,7 +2133,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {snatch: 1},
-		onHit(target) {
+		onHit(target, source) {
 			let newType = 'Normal';
 			if (this.field.isTerrain('electricterrain')) {
 				newType = 'Electric';
@@ -2145,7 +2145,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				newType = 'Psychic';
 			}
 
-			if (target.getTypes().join() === newType || !target.setType(newType)) return false;
+			if (target.getTypes().join() === newType || !target.setType(newType, false, source, this.effect)) return false;
 			this.add('-start', target, 'typechange', newType);
 		},
 		secondary: null,
@@ -2786,9 +2786,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 30,
 		priority: 0,
 		flags: {snatch: 1},
-		onHit(target) {
+		onHit(target, source) {
 			const type = this.dex.moves.get(target.moveSlots[0].id).type;
-			if (target.hasType(type) || !target.setType(type)) return false;
+			if (target.hasType(type) || !target.setType(type, false, source, this.effect)) return false;
 			this.add('-start', target, 'typechange', type);
 		},
 		secondary: null,
@@ -2825,7 +2825,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			}
 			const randomType = this.sample(possibleTypes);
 
-			if (!source.setType(randomType)) return false;
+			if (!source.setType(randomType, false, source, this.effect)) return false;
 			this.add('-start', source, 'typechange', randomType);
 		},
 		secondary: null,
@@ -6158,9 +6158,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
-		onHit(target) {
+		onHit(target, source) {
 			if (target.hasType('Grass')) return false;
-			if (!target.addType('Grass')) return false;
+			if (!target.addType('Grass', source, this.effect)) return false;
 			this.add('-start', target, 'typeadd', 'Grass', '[from] move: Forest\'s Curse');
 		},
 		secondary: null,
@@ -15211,7 +15211,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			}
 			this.add('-start', source, 'typechange', '[from] move: Reflect Type', '[of] ' + target);
-			source.setType(newBaseTypes);
+			source.setType(newBaseTypes, false, source, this.effect);
 			source.addedType = target.addedType;
 			source.knownType = target.isAlly(source) && target.knownType;
 			if (!source.knownType) source.apparentType = oldApparentType;
@@ -17648,8 +17648,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
-		onHit(target) {
-			if (target.getTypes().join() === 'Water' || !target.setType('Water')) {
+		onHit(target, source) {
+			if (target.getTypes().join() === 'Water' || !target.setType('Water', false, source, this.effect)) {
 				// Soak should animate even when it fails.
 				// Returning false would suppress the animation.
 				this.add('-fail', target);
@@ -20376,9 +20376,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
-		onHit(target) {
+		onHit(target, source) {
 			if (target.hasType('Ghost')) return false;
-			if (!target.addType('Ghost')) return false;
+			if (!target.addType('Ghost', source, this.effect)) return false;
 			this.add('-start', target, 'typeadd', 'Ghost', '[from] move: Trick-or-Treat');
 
 			if (target.side.active.length === 2 && target.position === 1) {

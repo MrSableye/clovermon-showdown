@@ -538,7 +538,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				target.isActive && move.effectType === 'Move' && move.category !== 'Status' &&
 				type !== '???' && !target.hasType(type)
 			) {
-				if (!target.setType(type)) return false;
+				if (!target.setType(type, false, target, this.effect)) return false;
 				this.add('-start', target, 'typechange', type, '[from] ability: Color Change');
 
 				if (target.side.active.length === 2 && target.position === 1) {
@@ -2419,7 +2419,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				types = pokemon.baseSpecies.types;
 			}
 			const oldTypes = pokemon.getTypes();
-			if (oldTypes.join() === types.join() || !pokemon.setType(types)) return;
+			if (oldTypes.join() === types.join() || !pokemon.setType(types, false, pokemon, this.effect)) return;
 			if (this.field.terrain || pokemon.transformed) {
 				this.add('-start', pokemon, 'typechange', types.join('/'), '[from] ability: Mimicry');
 				if (!this.field.terrain) this.hint("Transform Mimicry changes you to your original un-transformed types.");
@@ -3251,7 +3251,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
 			const type = move.type;
 			if (type && type !== '???' && source.getTypes().join() !== type) {
-				if (!source.setType(type)) return;
+				if (!source.setType(type, false, source, this.effect)) return;
 				this.effectState.protean = true;
 				this.add('-start', source, 'typechange', type, '[from] ability: Protean');
 			}
@@ -5617,7 +5617,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					pink: 'Fairy',
 				};
 				const type = colorType[this.toID(color)];
-				if (type && pokemon.setType(type)) {
+				if (type && pokemon.setType(type, false, pokemon, this.effect)) {
 					this.add('-start', pokemon, 'typechange', type, '[from] ability: Gradient');
 				}
 			}
@@ -5934,7 +5934,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (pokemon.isSemiInvulnerable()) continue;
 				if (pokemon.volatiles['substitute']) continue;
 				this.add('-start', pokemon, 'typechange', 'Normal', '[from] ability: Fuk U', '[of] ' + source);
-				pokemon.setType('Normal');
+				pokemon.setType('Normal', false, source, this.effect);
 			}
 		},
 		isNonstandard: "Future",
@@ -5944,7 +5944,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart(source) {
 			for (const pokemon of this.getAllActive()) {
 				this.add('-ability', pokemon, 'Stench', '[from] ability: Stink Bomb', '[of] ' + source);
-				pokemon.setAbility('stench');
+				pokemon.setAbility('stench', source);
 				pokemon.addVolatile('stinkbomb');
 			}
 		},
@@ -6076,7 +6076,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/c/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Fairy')) {
+			if (pokemon.addType('Fairy', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Fairy', '[from] ability: Board Power (/c/)');
 			}
 			pokemon.abilityState.irresistable = true;
@@ -6132,7 +6132,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/d/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Dark')) {
+			if (pokemon.addType('Dark', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Dark', '[from] ability: Board Power (/d/)');
 			}
 			this.actions.useMove('Stockpile', pokemon);
@@ -6241,7 +6241,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			// Copy Types
 			const newBaseTypes = target.getTypes(true);
 			this.add('-start', pokemon, 'typechange', newBaseTypes.join('/'), '[from] ability: Board Power (/fa/)', '[of] ' + target);
-			pokemon.setType(newBaseTypes);
+			pokemon.setType(newBaseTypes, false, pokemon, this.effect);
 
 			// Copy Boosts
 			let i: BoostID;
@@ -6257,7 +6257,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/fit/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Fighting')) {
+			if (pokemon.addType('Fighting', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Fighting', '[from] ability: Board Power (/fit/)');
 			}
 			this.actions.useMove('Hulk Up', pokemon);
@@ -6269,7 +6269,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/g/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Electric')) {
+			if (pokemon.addType('Electric', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Electric', '[from] ability: Board Power (/g/)');
 			}
 			this.field.setTerrain('electricterrain');
@@ -6282,7 +6282,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/h/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Fire')) {
+			if (pokemon.addType('Fire', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Fire', '[from] ability: Board Power (/h/)');
 			}
 			pokemon.abilityState.irresistable = true;
@@ -6328,7 +6328,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/jp/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Fairy')) {
+			if (pokemon.addType('Fairy', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Fairy', '[from] ability: Board Power (/jp/)');
 			}
 			this.field.setTerrain('mistyterrain');
@@ -6351,7 +6351,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/k/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Steel')) {
+			if (pokemon.addType('Steel', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Steel', '[from] ability: Board Power (/k/)');
 			}
 			this.boost({def: 1, spd: 1}, pokemon);
@@ -6581,7 +6581,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/tv/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Ground')) {
+			if (pokemon.addType('Ground', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Ground', '[from] ability: Board Power (/tv/)');
 			}
 			this.field.addPseudoWeather('gravity');
@@ -6652,7 +6652,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/vg/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Dragon')) {
+			if (pokemon.addType('Dragon', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Dragon', '[from] ability: Board Power (/vg/)');
 			}
 		},
@@ -6737,7 +6737,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Board Power (/x/)",
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
-			if (pokemon.addType('Ghost')) {
+			if (pokemon.addType('Ghost', pokemon, this.effect)) {
 				this.add('-start', pokemon, 'typeadd', 'Ghost', '[from] ability: Board Power (/x/)');
 			}
 			for (const activePokemon of this.getAllActive()) {
@@ -6745,7 +6745,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (activePokemon.isSemiInvulnerable()) continue;
 				if (activePokemon.volatiles['substitute']) continue;
 				this.add('-start', activePokemon, 'typechange', 'Ghost', '[from] ability: Board Power (/x/)');
-				activePokemon.setType('Ghost');
+				activePokemon.setType('Ghost', false, pokemon, this.effect);
 			}
 		},
 		isPermanent: true,
@@ -6756,7 +6756,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Fontaba') return;
 			this.add('-start', pokemon, 'typechange', '???', '[from] ability: Board Power (/z/)');
-			pokemon.setType('???');
+			pokemon.setType('???', false, pokemon, this.effect);
 		},
 		onModifySecondaries(secondaries, target, source) {
 			if (source.baseSpecies.baseSpecies !== 'Fontaba') return;

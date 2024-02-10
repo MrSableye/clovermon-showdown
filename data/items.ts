@@ -8326,7 +8326,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 388,
 		onTakeItem: false,
 		onStart(pokemon) {
-			pokemon.setType('???');
+			pokemon.setType('???', false, pokemon, this.effect);
 			this.add('-start', pokemon, 'typechange', '???');
 		},
 		onModifyMove(move, pokemon) {
