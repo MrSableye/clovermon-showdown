@@ -10235,10 +10235,6 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
-	blobbosnihonjin: {
-		tier: "Illegal",
-		isNonstandard: "Future",
-	},
 	blobboscum: {
 		tier: "Illegal",
 		isNonstandard: "Future",
