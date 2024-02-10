@@ -2936,6 +2936,11 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "AG",
 	},
+	ttos: {
+		inherit: true,
+		isNonstandard: null,
+		tier: "OU",
+	},
 	stoppogriff: {
 		inherit: true,
 		isNonstandard: null,
@@ -2960,12 +2965,12 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
-		},
+	},
 	parmiausan: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
-		},
+	},
 	gojifiend: {
 		inherit: true,
 		isNonstandard: null,

@@ -2852,6 +2852,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Alcohol",
 		desc: "Has adverse effects to Pokemon without extreme alcohol tolerance.",
 	},
+	radishorb: {
+		name: "Radish Orb",
+		desc: "At the end of every turn, this item attempts to radish the holder.",
+	},
 	missingvoirite: {
 		name: "Missinvoirite",
 		desc: "If held by a Missingvoir, this item allows it to Mega Evolve in battle.",

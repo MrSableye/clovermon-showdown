@@ -8921,6 +8921,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	ttos: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	hookling: {
 		tier: "Illegal",
 		isNonstandard: "Future",

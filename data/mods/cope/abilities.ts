@@ -1947,4 +1947,8 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	falsedark: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

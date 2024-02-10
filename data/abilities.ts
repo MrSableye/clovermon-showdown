@@ -11964,8 +11964,34 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (status.id === 'mustrecharge') return null;
 		}, 
 	},
-
-
+	falsedark: {
+		name: "False Dark",
+		rating: 0,
+		isNonstandard: "Future",
+		isPermanent: true,
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Grass') {
+				this.debug('SEED BOMBED');
+				return this.chainModify(4);
+			}
+			if (move.type === 'Fighting') {
+				this.debug('MACH PUNCHED');
+				return this.chainModify(4);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Grass') {
+				this.debug('GIGA DRAINED');
+				return this.chainModify(4);
+			}
+			if (move.type === 'Fighting') {
+				this.debug('FOCUS BLASTED');
+				return this.chainModify(4);
+			}
+		},
+	},
 	trickster: {
 		name: "Trickster",
 		isNonstandard: "Future",
