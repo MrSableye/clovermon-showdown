@@ -42,7 +42,7 @@ const createUserChatCss = (
 	const backgroundCss: string[] = [];
 
 	if (chatBackground) {
-		backgroundCss.push(`rgba(${chatBackground.r},${chatBackground.g},${chatBackground.b}, 0.25)`);
+		backgroundCss.push(`rgba(${chatBackground.r},${chatBackground.g},${chatBackground.b}, 0.05)`);
 	}
 
 	if (!backgroundCss.length) return '';
