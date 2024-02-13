@@ -1084,7 +1084,7 @@ export const Abilities: { [k: string]: ModdedAbilityData; } = {
     inherit: true,
     isNonstandard: "Past"
   },
-  bigbrain: {
+  brainpower: {
     inherit: true,
     isNonstandard: "Past"
   },
