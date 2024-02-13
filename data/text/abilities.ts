@@ -2495,6 +2495,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 			shortDesc: "This Pokemon is immune to sound-based moves, including Heal Bell.",
 		},
 	},
+	artificial: {
+		name: "Artificial",
+		shortDesc: "Immune to a lot of things. Don't fuck with this thing.",
+	},
 	/* Clover CAP Abilities */
 	amplify: {
 		name: "Amplify",

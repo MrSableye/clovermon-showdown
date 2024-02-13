@@ -6877,6 +6877,133 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 43,
 		isNonstandard: "Future",
 	},
+	artificial: {
+		name: "Artificial",
+		onStart(pokemon) {
+			this.addSplit(pokemon.side.id, ['-ability', pokemon, 'Pressure', '[silent]']);
+			this.boost({def: 1, spd: 1})
+		},
+		onModifyMove(move) {
+			delete move.flags['contact'];
+			move.ignoreEvasion = true;
+		},
+		onModifySecondaries(secondaries) {
+			this.debug('Artificial prevent secondary');
+			return secondaries.filter(effect => !!(effect.self || effect.dustproof));
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod > 0) {
+				this.debug('Artificial neutralize');
+				return this.chainModify(0.75);
+			}
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (source && target === source) return;
+			if (boost.accuracy && boost.accuracy < 0) {
+				delete boost.accuracy;
+				if (!(effect as ActiveMove).secondaries) {
+					this.add("-fail", target, "unboost", "accuracy", "[from] ability: Artificial", "[of] " + target);
+				}
+			}
+		},
+		onSetStatus(status, target, source, effect) {
+			if ((effect as Move)?.status) {
+				this.add('-immune', target, '[from] ability: Artificial');
+			}
+			return false;
+		},
+		onCriticalHit: false,
+		onTryAddVolatile(status, pokemon) {
+			const immuneStatuses = ['flinch', 'disable', 'torment', 'encore'];
+			if (immuneStatuses.includes(status.id)) { this.add('-immune', pokemon, '[from] ability: Artificial'); }
+			return null;
+		},
+		onTryHit(pokemon, target, move) {
+			if (move.ohko) {
+				this.add('-immune', pokemon, '[from] ability: Artificial');
+				return null;
+			}
+		},
+		onTryPrimaryHit(target, source, move) {
+			const blocked = [
+				'leechseed',
+				'painsplit',
+				'psychoshift',
+				'spite',
+				'perishsong',
+				'endeavor',
+				'destinybond',
+				'grudge',
+				'trick',
+				'heartswap',
+				'guardsplit',
+				'powerswap',
+				'speedswap',
+				'powersplit',
+				'superfang',
+			];
+
+			if (blocked.includes(move.id)) {
+				this.add('-activate', target, 'Artificial', '[block] ' + move.name);
+				return null;
+			}
+		},
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'partiallytrapped') return false;
+			if (
+				effect.effectType === "Move" &&
+				!effect.multihit &&
+				(!effect.negateSecondary && !(effect.hasSheerForce && source.hasAbility('sheerforce')))
+			) {
+				this.effectState.checkedArtificial = false;
+			} else {
+				this.effectState.checkedArtificial = true;
+			}
+		},
+		onDeductPP(target, source) {
+			if (target === source) return -1;
+		},
+		onTryEatItem(item) {
+			const healingItems = [
+				'aguavberry', 'enigmaberry', 'figyberry', 'iapapaberry', 'magoberry', 'sitrusberry', 'wikiberry', 'oranberry', 'berryjuice',
+			];
+			if (healingItems.includes(item.id)) {
+				return this.effectState.checkedArtificial;
+			}
+			return true;
+		},
+		onAfterMoveSecondary(target, source, move) {
+			this.effectState.checkedArtificial = true;
+			if (!source || source === target || !target.hp || !move.totalDamage) return;
+			const lastAttackedBy = target.getLastAttackedBy();
+			if (!lastAttackedBy) return;
+			const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
+			if (target.hp <= target.maxhp / 3 && target.hp + damage > target.maxhp / 3) {
+				this.boost({spe: 3}, target, target);
+			}
+		},
+		onResidual(pokemon) {
+			const lastMoveSlotIndex = pokemon.baseMoveSlots.length - 1;
+			const heroicStrike = pokemon.baseMoves.indexOf('heroicstrike');
+			if (heroicStrike >= 0) {
+				const move = this.dex.moves.get('heroiconslaught');
+				pokemon.baseMoveSlots[heroicStrike] = {
+					move: move.name,
+					id: move.id,
+					pp: (move.noPPBoosts || move.isZ) ? move.pp : Math.floor(move.pp * 8 / 5),
+					maxpp: (move.noPPBoosts || move.isZ) ? move.pp : Math.floor(move.pp * 8 / 5),
+					target: move.target,
+					disabled: false,
+					disabledSource: '',
+					used: false,
+				};
+				pokemon.moveSlots = pokemon.baseMoveSlots.slice();
+			}
+		},
+		// At the end of each turn, the 4th move changes depending on the opposing mon
+		isPermanent: true,
+		isNonstandard: "Future",
+	},
 	/* Clover CAP Abilities */
 	cakeveil: {
 		onResidualOrder: 26,
