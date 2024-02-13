@@ -2497,7 +2497,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	artificial: {
 		name: "Artificial",
-		shortDesc: "Immune to a lot of things. Don't fuck with this thing.",
+		shortDesc: "Long Reach + Shield Dust + Filter + Keen Eye. Immune to status. Can't be crit or flinched. Infinite PP. Ability cannot be altered or suppressed. Immune to Disable, Encore, Taunt, Torment, OHKO moves, Leech Seed, Pain Split, Psycho Shift, Spite, Perish Song, Endeavor, Destiny Bond, Grudge, Trick, Heart Swap, Guard Split, Power Swap, Speed Swap, Power Split, Super Fang, and damage from trapping moves. Cannot be transformed into. +3 Spe when under 1/3 HP.",
 	},
 	/* Clover CAP Abilities */
 	amplify: {
