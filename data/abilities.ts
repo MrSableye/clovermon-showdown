@@ -7409,12 +7409,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4.5,
 		isNonstandard: "Future",
 	},
-	bigbrain: {
+	brainpower: {
 		onModifySpAPriority: 5,
 		onModifySpA(spa) {
 			return this.chainModify(2);
 		},
-		name: "Big Brain",
+		name: "Brain Power",
 		rating: 5,
 		num: 37,
 		isNonstandard: "Future",

@@ -2516,8 +2516,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's Beam-based attacks have their power multiplied by 1.5.",
 		shortDesc: "This Pokemon's beam attacks have 1.5x power.",
 	},
-	bigbrain: {
-		name: "Big Brain",
+	brainpower: {
+		name: "Brain Power",
 		shortDesc: "This Pokemon's Special Attack is doubled.",
 	},
 	blueblood: {
