@@ -43,4 +43,20 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 			spe: 116,
 		},
 	},
+	acufront: {
+		inherit: true,
+		otherFormes: [
+			"Acufront-F",
+			"Acufront-W",
+			"Acufront-I",
+			"Acufront-S",
+		],
+		formeOrder: [
+			"Acufront",
+			"Acufront-F",
+			"Acufront-W",
+			"Acufront-I",
+			"Acufront-S",
+		],
+	},
 };

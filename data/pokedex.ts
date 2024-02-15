@@ -32806,6 +32806,36 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		battleOnly: "Acufront",
 		gen: 8,
 	},
+	acufronts: {
+		num: 69351,
+		name: "Acufront-S",
+		baseSpecies: "Acufront",
+		forme: "S",
+		types: [
+			"Rock",
+		],
+		baseStats: {
+			hp: 100,
+			atk: 50,
+			def: 85,
+			spa: 110,
+			spd: 95,
+			spe: 70,
+		},
+		abilities: {
+			0: "Presage",
+		},
+		heightm: 0.6,
+		weightkg: 1.6,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous",
+			"Fairy",
+		],
+		requiredAbility: "Presage",
+		battleOnly: "Acufront",
+		gen: 8,
+	},
 	militant: {
 		num: 69352,
 		name: "Militant",
