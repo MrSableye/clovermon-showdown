@@ -1331,6 +1331,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			willowisp: ["8T"],
 			wonderroom: ["8T"],
 			powergem: ["8M"],
+			shoreup: ["8M"],
 		},
 	},
 };
