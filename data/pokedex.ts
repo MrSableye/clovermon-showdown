@@ -34055,6 +34055,30 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
+	mech: {
+		num: 69420,
+		name: "Mech",
+		types: ["Steel", "???"],
+		gender: "N",
+		baseStats: {
+			hp: 245,
+			atk: 235,
+			def: 255,
+			spa: 205,
+			spd: 230,
+			spe: 80,
+		},
+		abilities: {
+			0: "Artificial"
+		},
+		heightm: 21,
+		weightkg: 1000,
+		color: "Gray",
+		eggGroups: [
+			"Undiscovered",
+		],
+		gen: 8,
+	},
 	megablobbos: {
 		num: 69387,
 		name: "Mega Blobbos",

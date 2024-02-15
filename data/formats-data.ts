@@ -7824,6 +7824,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	mech: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	blobbos: {
 		tier: "Illegal",
 		isNonstandard: "Future",
