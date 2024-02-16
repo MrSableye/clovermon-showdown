@@ -61,6 +61,15 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 				}
 			}
 		},
+		onModifyMovePriority: -6969,
+		onModifyMove(move, source) {
+			if (move.id !== 'weatherball') return;
+			if (!this.field.effectiveWeather().length) return;
+			move.basePower = 150;
+		},
+		onAfterMoveSecondarySelf(source, target, move) {
+			this.field.clearWeather();
+		},
 		onUpdate(pokemon) {
 			if (pokemon.transformed) return;
 			if (pokemon.baseSpecies.baseSpecies === 'Acufront') {
