@@ -1,8 +1,11 @@
 export const Abilities: { [k: string]: ModdedAbilityData } = {
 	puppeteer: {
 		inherit: true,
-		onImmunity(type, pokemon) {
-			if (type === 'Bug') return false;
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Bug') {
+				this.add('-immune', target, '[from] ability: Puppeteer');
+				return null;
+			}
 		},
 	},
 	presage: {
