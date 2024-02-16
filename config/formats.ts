@@ -820,7 +820,6 @@ export const Formats: FormatList = [
 			'Terastal Clause',
 			'Obtainable',
 			'Dynamax Clause',
-			'Sketch Post-Gen 7 Moves',
 			'Team Preview',
 			'Overflow Stat Mod',
 			'Sketch Post-Gen 7 Moves',
