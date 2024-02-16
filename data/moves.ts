@@ -84815,6 +84815,7 @@ beforeTurnCallback(pokemon) {
 		target: "allAdjacent",
 		type: "Ground",
 		contestType: "Tough",
+		isNonstandard: "Future",
 	},
 	brainfreeze: {
 		num: 42011,
@@ -84833,6 +84834,7 @@ beforeTurnCallback(pokemon) {
 		target: "normal",
 		type: "Ice",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	solarhunger: {
         num: 42009,
