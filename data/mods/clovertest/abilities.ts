@@ -68,6 +68,8 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 			move.basePower = 150;
 		},
 		onAfterMoveSecondarySelf(source, target, move) {
+			if (move.id !== 'weatherball') return;
+			if (!this.field.effectiveWeather().length) return;
 			this.field.clearWeather();
 		},
 		onUpdate(pokemon) {
