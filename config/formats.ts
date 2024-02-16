@@ -718,6 +718,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
+			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
@@ -737,6 +738,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
+			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
@@ -757,6 +759,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
+			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
@@ -777,6 +780,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
+			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: [
 			'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
@@ -797,6 +801,7 @@ export const Formats: FormatList = [
 			'Standard',
 			'Dynamax Clause',
 			'Overflow Stat Mod',
+			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: [
 			'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
@@ -818,6 +823,7 @@ export const Formats: FormatList = [
 			'Sketch Post-Gen 7 Moves',
 			'Team Preview',
 			'Overflow Stat Mod',
+			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: [
 			'Antiplebshield'
@@ -833,6 +839,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Overflow Stat Mod',
+			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
 		'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
@@ -855,6 +862,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Overflow Stat Mod',
+			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
 		'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
@@ -884,6 +892,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Overflow Stat Mod',
+			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
 		'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
@@ -907,6 +916,7 @@ export const Formats: FormatList = [
 			'Dynamax Clause',
 			'Swagger Clause',
 			'Overflow Stat Mod',
+			'Sketch Post-Gen 7 Moves',
 		],
 		banlist: ['DUber', 'Uber', 'Arena Trap', 'Moody', 'Sand Veil', 'Snow Cloak', 'Computer Bug', 'Baton Pass', 'Gods Endurance', 'Shadow Tag', 'Wonder Guard', 'Wacky',
 		'Abyssal Hell Drag', 'Twindeath', 'Desecrations', 'Extreme Evoboost',
