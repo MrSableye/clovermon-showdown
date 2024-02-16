@@ -30191,6 +30191,7 @@ oceanhorn: {
 		target: "normal",
 		type: "Rock",
 		contestType: "Cool",
+		isNonstandard: "Future",
 	},
 	ultima: {
 		num: 1125,

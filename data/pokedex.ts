@@ -32806,6 +32806,36 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		battleOnly: "Acufront",
 		gen: 8,
 	},
+	acufronts: {
+		num: 69351,
+		name: "Acufront-S",
+		baseSpecies: "Acufront",
+		forme: "S",
+		types: [
+			"Rock",
+		],
+		baseStats: {
+			hp: 100,
+			atk: 50,
+			def: 85,
+			spa: 110,
+			spd: 95,
+			spe: 70,
+		},
+		abilities: {
+			0: "Presage",
+		},
+		heightm: 0.6,
+		weightkg: 1.6,
+		color: "Gray",
+		eggGroups: [
+			"Amorphous",
+			"Fairy",
+		],
+		requiredAbility: "Presage",
+		battleOnly: "Acufront",
+		gen: 8,
+	},
 	militant: {
 		num: 69352,
 		name: "Militant",
@@ -34020,6 +34050,30 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 0.7,
 		weightkg: 51.9,
 		color: "Red",
+		eggGroups: [
+			"Undiscovered",
+		],
+		gen: 8,
+	},
+	mech: {
+		num: 69420,
+		name: "Mech",
+		types: ["Steel", "???"],
+		gender: "N",
+		baseStats: {
+			hp: 245,
+			atk: 235,
+			def: 255,
+			spa: 205,
+			spd: 230,
+			spe: 80,
+		},
+		abilities: {
+			0: "Artificial"
+		},
+		heightm: 21,
+		weightkg: 1000,
+		color: "Gray",
 		eggGroups: [
 			"Undiscovered",
 		],

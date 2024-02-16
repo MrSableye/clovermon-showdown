@@ -7676,6 +7676,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	acufronts: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	militant: {
 		tier: "Illegal",
 		isNonstandard: "Future",
@@ -7817,6 +7821,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		isNonstandard: "Future",
 	},
 	hailsanta: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	mech: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
