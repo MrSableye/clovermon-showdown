@@ -6792,7 +6792,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Presage",
 		onBeforeMove(source, target, move) {
 			if (move.category === 'Status') return;
-			const sunMoves = ['solarbeam', 'solarblaade'];
+			const sunMoves = ['solarbeam', 'solarblade'];
 			const rainMoves = ['thunder', 'hurricane'];
 			const isInRain = ['raindance', 'primordialsea'].includes(target.effectiveWeather());
 			const isInSun = ['sunnyday', 'desolateland'].includes(target.effectiveWeather());

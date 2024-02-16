@@ -11,9 +11,12 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 	presage: {
 		name: "Presage",
 		onBeforeMove(source, target, move) {
-			if (move.category === 'Status') return;
-			const sunMoves = ['solarbeam', 'solarblaade'];
+			const allowedStatusMoves = ['shoreup', 'auroraveil', 'morningsun', 'synthesis', 'moonlight'];
+			if (move.category === 'Status' && !allowedStatusMoves.includes(move.id)) return;
+			const sunMoves = ['solarbeam', 'solarblaade', 'morningsun', 'synthesis', 'moonlight'];
 			const rainMoves = ['thunder', 'hurricane'];
+			const hailMoves = ['auroraveil'];
+			const sandMoves = ['shoreup'];
 			const isInRain = ['raindance', 'primordialsea'].includes(target.effectiveWeather());
 			const isInSun = ['sunnyday', 'desolateland'].includes(target.effectiveWeather());
 			const isInHail = ['hail'].includes(target.effectiveWeather());
@@ -23,9 +26,9 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 				this.field.setWeather('sunnyday');
 			} else if (!isInRain && (rainMoves.includes(move.id) || move.type === 'Water')) {
 				this.field.setWeather('raindance');
-			} else if (!isInHail && move.type === 'Ice') {
+			} else if (!isInHail && (hailMoves.includes(move.id) || move.type === 'Ice')) {
 				this.field.setWeather('hail');
-			} else if (!isInSandstorm && move.type === 'Rock') {
+			} else if (!isInSandstorm && (sandMoves.includes(move.id) || move.type === 'Rock')) {
 				this.field.setWeather('sandstorm');
 			} else if (move.type === 'Normal' && move.id !== 'weatherball') {
 				this.field.clearWeather();
