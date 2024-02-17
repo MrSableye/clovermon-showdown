@@ -714,4 +714,16 @@ brainwash: {
 		inherit: true,
 		isNonstandard: null,
 	},
+	stringpower: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	colonization: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	codename: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

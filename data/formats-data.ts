@@ -9939,6 +9939,50 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobbospuddle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosscrying: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosdragonfly: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmedusa: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosmoogle: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosminesweeper: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosraiju: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscaterpillar: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobbosladybug: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscolony: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
+	blobboscolonycolonized: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",

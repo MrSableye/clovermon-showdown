@@ -8878,6 +8878,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4.5,
 		isNonstandard: "Future",
 	},
+	codename: {
+		onModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).crit) {
+				this.debug('Sniper boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyCritRatio(critRatio) {
+			return critRatio + 1;
+		},
+		name: "Codename",
+		rating: 2,
+		num: 97,
+	},
 	madlad: {
 		name: "Madlad",
 		onDamagingHit(damage, target, source, move) {
@@ -13145,6 +13159,44 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		name: "Malevolent Soul",
+		rating: 3,
+		num: 208,
+		isNonstandard: "Future",
+	},
+	colonization: {
+		onStart(pokemon) {
+			if (pokemon.species.name !== 'Blobbos-Colony' || pokemon.level < 20 || pokemon.transformed) return;
+			if (pokemon.hp > pokemon.maxhp / 4) {
+				if (pokemon.species.id === 'blobboscolony') {
+					pokemon.formeChange('Blobbos-Colony-Colonized');
+				}
+			} else {
+				if (pokemon.species.id === 'blobboscolonycolonized') {
+					pokemon.formeChange('Blobbos-Colony');
+				}
+			}
+		},
+		onResidualOrder: 27,
+		onResidual(pokemon) {
+			if (
+				pokemon.species.name !== 'Blobbos-Colony' || pokemon.level < 20 ||
+				pokemon.transformed || !pokemon.hp
+			) return;
+			if (pokemon.hp > pokemon.maxhp / 4) {
+				if (pokemon.species.id === 'blobboscolony') {
+					pokemon.formeChange('Blobbos-Colony-Colonized');
+				}
+			} else {
+				if (pokemon.species.id === 'blobboscolonycolonized') {
+					pokemon.formeChange('Blobbos-Colony');
+				}
+			}
+		},
+		isPermanent: true,
+		name: "Colonization",
+		rating: 3,
+		num: 208,
+		isNonstandard: "Future",
 	},
 	/** Wack abilities */
 	darklife: {

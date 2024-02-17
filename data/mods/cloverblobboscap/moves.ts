@@ -47,6 +47,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	dustcannon: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	matingpress: {
 		inherit: true,
 		isNonstandard: null,
@@ -1759,6 +1763,10 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	meteor: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	unload: {
 		inherit: true,
 		isNonstandard: null,
 	},

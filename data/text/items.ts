@@ -2755,7 +2755,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	loadeddisk: {
 		name: "Loaded Disk",
-		desc: "DIDN'T YOU KNOW [Blobbos-Spamton] IS FAMOUS FOR ITS [Doubled] DEFENSE [while holding]!?",
+		desc: "DIDN'T YOU KNOW [Blobbos-Spamton] IS FAMOUS FOR ITS [1.5x] DEFENSE [while holding]!?",
 	},
 	propellerhat: {
 		name: "Propeller Hat",
