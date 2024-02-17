@@ -34055,6 +34055,30 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		],
 		gen: 8,
 	},
+	mech: {
+		num: 69420,
+		name: "Mech",
+		types: ["Steel", "???"],
+		gender: "N",
+		baseStats: {
+			hp: 245,
+			atk: 235,
+			def: 255,
+			spa: 205,
+			spd: 230,
+			spe: 80,
+		},
+		abilities: {
+			0: "Artificial"
+		},
+		heightm: 21,
+		weightkg: 1000,
+		color: "Gray",
+		eggGroups: [
+			"Undiscovered",
+		],
+		gen: 8,
+	},
 	megablobbos: {
 		num: 69387,
 		name: "Mega Blobbos",
@@ -35493,7 +35517,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Lunabbit",
 		types: ["Fairy", "Psychic"],
 		genderRatio: {M: 0.875, F: 0.125},
-		baseStats: {hp: 100, atk: 65, def: 65, spa: 95, spd: 115, spe: 85},
+		baseStats: {hp: 100, atk: 65, def: 65, spa: 100, spd: 115, spe: 85},
 		abilities: {0: "Immunity", H: "Huge Power", S: "Comatose"},
 		heightm: 1,
 		weightkg: 36.6,
