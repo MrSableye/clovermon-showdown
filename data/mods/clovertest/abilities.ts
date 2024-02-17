@@ -13,7 +13,7 @@ export const Abilities: { [k: string]: ModdedAbilityData } = {
 		onBeforeMove(source, target, move) {
 			const allowedStatusMoves = ['shoreup', 'auroraveil', 'morningsun', 'synthesis', 'moonlight'];
 			if (move.category === 'Status' && !allowedStatusMoves.includes(move.id)) return;
-			const sunMoves = ['solarbeam', 'solarblaade', 'morningsun', 'synthesis', 'moonlight'];
+			const sunMoves = ['solarbeam', 'solarblade', 'morningsun', 'synthesis', 'moonlight'];
 			const rainMoves = ['thunder', 'hurricane'];
 			const hailMoves = ['auroraveil'];
 			const sandMoves = ['shoreup'];
