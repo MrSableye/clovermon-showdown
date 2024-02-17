@@ -9905,6 +9905,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-ability', pokemon, 'Fake');
 		},
 		name: "Fake",
+		isPermanent: true,
 		rating: 0,
 		isNonstandard: "Future",
 	},

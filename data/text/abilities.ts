@@ -2845,6 +2845,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		transform: "You feel an evil presence watching you!",
 		transformEnd: "Blobbos-Eye-Mouth has calmed down!",
 	},
+	codename: {
+		name: "Codename",
+		shortDesc: "+1 crit ratio; critical hit damage is boosted by 1.5x.",
+	},
 	reconstruct: {
 		name: "Reconstruct",
 		shortDesc: "Rebuilds item on switchout. Does not rebuild knocked off items.",

@@ -37168,7 +37168,7 @@ ttos: {
 	name: "Ttos",
 	types: ["Rock", "Dark"], // oh boy oh boy!! another rock dark!!
 	gender: 'M',
-	baseStats: {hp: 100, atk: 112, def: 95, spa: 75, spd: 88, spe: 71},
+	baseStats: {hp: 100, atk: 112, def: 109, spa: 69, spd: 88, spe: 71},
 	abilities: {0: "Sand Stream", H: "Shed Skin", S: "False Dark"},
 	heightm: 0.8,
 	weightkg: 13,
