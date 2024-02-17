@@ -44809,7 +44809,7 @@ blobboscaterpillar: {
 		name: "Blobbos-Ladybug",
 		baseSpecies: "Blobbos",
 		forme: "Ladybug",
-		types: ["Fightng", "Bug"],
+		types: ["Fighting", "Bug"],
 		gender: "N",
 		baseStats: {
 			hp: 70,
