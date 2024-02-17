@@ -477,30 +477,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	glassing: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	meltedplastic: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	recycleray: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	plasticterrain: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	fadereflection: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	plasticblaze: {
-		inherit: true,
-		isNonstandard: null,
-	},
 	coldcutter: {
 		inherit: true,
 		isNonstandard: null,
@@ -1452,10 +1428,6 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 		isNonstandard: null,
 	},
 	battlecry: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	scavenge: {
 		inherit: true,
 		isNonstandard: null,
 	},
