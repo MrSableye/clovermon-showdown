@@ -10195,7 +10195,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			const typeTotals: Record<string, number> = {};
 			for (const ally of pokemon.side.pokemon) {
 				if (pokemon === ally) continue;
-				for (const type of pokemon.getTypes()) {
+				for (const type of ally.getTypes()) {
 					if (!typeTotals[type]) typeTotals[type] = 0;
 					typeTotals[type]++;
 				}
