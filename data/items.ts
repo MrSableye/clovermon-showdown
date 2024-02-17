@@ -10233,6 +10233,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!pokemon.setType(types)) return;
 			this.add('-start', pokemon, 'typechange', types.join('/'), '[from] item: Eye Dropper');
 		},
+		onTakeItem: false,
 		isNonstandard: "Future",
 		itemUser: ["Blobbos-Chroma"],
 	},
