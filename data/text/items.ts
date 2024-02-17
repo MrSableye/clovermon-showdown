@@ -2904,6 +2904,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Mascot's Orb",
 		desc: "If held by Blobbos-Pika, its Attack and Special Attack are doubled.",
 	},
+	eyedropper: {
+		name: "Eye Dropper",
+		desc: "If held by a Blobbos-Chroma, sets it primary type to your team's most common type and its secondary type to a type that resists the most amount of enemy STABs.",
+	},
 	/* New Wack items **/
 	glalite: {
 		name: "Glalite",

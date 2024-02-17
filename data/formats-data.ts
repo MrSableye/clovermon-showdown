@@ -9983,6 +9983,10 @@ export const FormatsData: { [k: string]: SpeciesFormatsData; } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},
+	blobboschroma: {
+		tier: "Illegal",
+		isNonstandard: "Future",
+	},
 	antiblob: {
 		tier: "Illegal",
 		isNonstandard: "Future",

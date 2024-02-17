@@ -10188,6 +10188,54 @@ export const Items: {[itemid: string]: ItemData} = {
 		isNonstandard: "Future",
 		rating: 1,
 	},
+	eyedropper: {
+		name: "Eye Dropper",
+		onStart(pokemon) {
+			if (pokemon.species.name !== 'Blobbos-Chroma') return;
+			const typeTotals: Record<string, number> = {};
+			for (const ally of pokemon.side.pokemon) {
+				if (pokemon === ally) continue;
+				for (const type of pokemon.getTypes()) {
+					if (!typeTotals[type]) typeTotals[type] = 0;
+					typeTotals[type]++;
+				}
+			}
+			const primaryType = Object.entries(typeTotals).sort((a, b) => b[1] - a[1])[0];
+			if (!primaryType) return;
+			const enemyTypes: Record<string, number> = {};
+			for (const foe of pokemon.foes()) {
+				for (const type of foe.getTypes()) {
+					enemyTypes[type] = 0;
+				}
+			}
+			let maxResists = -1;
+			let maxResistedType = '';
+			for (const type of this.dex.types.all()) {
+				if (type.name === primaryType[0]) continue; // Always get a secondary type
+				let totalResists = 0;
+				for (const [enemyType] of Object.entries(enemyTypes)) {
+					if (!this.dex.getImmunity(enemyType, [primaryType[0], type.name])) {
+						totalResists += 1.5;
+					} else if (this.dex.getEffectiveness(enemyType, [primaryType[0], type.name]) < 0) {
+						totalResists++;
+					}
+				}
+				if (totalResists > maxResists) {
+					maxResists = totalResists;
+					maxResistedType = type.name;
+				}
+			}
+			let types = [primaryType[0]];
+			if (maxResistedType.length) {
+				types.push(maxResistedType);
+			}
+
+			if (!pokemon.setType(types)) return;
+			this.add('-start', pokemon, 'typechange', types.join('/'), '[from] item: Eye Dropper');
+		},
+		isNonstandard: "Future",
+		itemUser: ["Blobbos-Chroma"],
+	},
 	glalite: {
 		name: "Glalite",
 		spritenum: 0,
