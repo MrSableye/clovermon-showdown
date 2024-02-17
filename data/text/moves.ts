@@ -8336,6 +8336,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Butterfly Kick",
 		shortDesc: "Combines Fighting in its type effectiveness.",
 	},
+	unload: {
+		name: "Unload",
+		shortDesc: "Hits 2-5 times. Applies Focus Energy to the user after the first hit.",
+	},
 	toxicbeam: {
 		name: "Toxic Beam",
 		shortDesc: "20% chance to badly poison the foe.",

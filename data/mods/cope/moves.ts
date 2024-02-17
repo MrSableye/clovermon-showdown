@@ -4004,6 +4004,7 @@ export const Moves: { [k: string]: ModdedMoveData } = {
 	},
 	yiikout: {
 		inherit: true,
+		basePower: 60,
 		isNonstandard: null,
 	},
 	roidflex: {

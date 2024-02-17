@@ -3300,16 +3300,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	blobboswack: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "Uber",
-	},
-	blobboswackmega: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "Uber",
-	},
 	blobboscup: {
 		inherit: true,
 		isNonstandard: null,
@@ -3666,11 +3656,6 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 	},
 	blobbosbeetle: {
-		inherit: true,
-		isNonstandard: null,
-		tier: "OU",
-	},
-	blobboskorea: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
