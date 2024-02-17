@@ -2862,7 +2862,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	powerrush: {
 		name: "Power Rush",
-		desc: "If held by a Blobbos-Paper and it has 1/4 or less of its max HP, its Attack and Special Attack are doubled."
+		desc: "If held by a Blobbos-Paper and it has 1/4 or less of its max HP, its Attack and Special Attack are doubled.",
 	},
 	mesosack: {
 		name: "Meso Sack",
@@ -3071,7 +3071,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	fluffycoat: {
 		name: "Fluffy Coat",
-		desc: "An item to be held by a Pokémon. A thick coat of fur that slightly reduces ice type damage."
+		desc: "An item to be held by a Pokémon. A thick coat of fur that slightly reduces ice type damage.",
 	},
 	ancienthelm: {
 		name: "Ancient Helm",

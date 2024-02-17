@@ -458,7 +458,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return this.chainModify([5325, 4096]);
 		},
 	},
-    radish: {  // exclusively caused by Radish Punch and Radish Body
+	radish: { // exclusively caused by Radish Punch and Radish Body
 		name: 'radish',
 		effectType: 'Status',
 		onStart(target, source, sourceEffect) {
@@ -904,7 +904,6 @@ export const Conditions: {[k: string]: ConditionData} = {
 		onResidualOrder: 13,
 		onResidual(pokemon) {
 			this.damage(pokemon.baseMaxhp / (this.field.isWeather('bloddrain') ? 10 : 14));
-			
 		},
 		onEnd(pokemon) {
 			this.add('-end', pokemon, 'Bleed');

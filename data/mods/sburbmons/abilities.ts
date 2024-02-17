@@ -1,4 +1,4 @@
-export const Abilities: { [k: string]: ModdedAbilityData; } = {
+export const Abilities: { [k: string]: ModdedAbilityData } = {
 	/* Disabled abilities */
 	noability: {
 		inherit: true,

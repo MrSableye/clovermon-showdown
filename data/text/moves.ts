@@ -7846,7 +7846,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Earth Shatter",
 		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
 		shortDesc: "Has 33% recoil.",
-		},
+	},
 	brainfreeze: {
 		name: "Brain Freeze",
 		desc: "Has 33% recoil. Nullifies the foe's Ability.",
@@ -9511,7 +9511,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	reroll: {
 		name: "Reroll",
-		desc: "Randomly reroll all boosts and deboosts (not acc/eva), always adding 3 total boosts."
+		desc: "Randomly reroll all boosts and deboosts (not acc/eva), always adding 3 total boosts.",
 	},
 	skillroom: {
 		name: "Skill Room",
@@ -24883,7 +24883,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	bonelance: {
 		name: "Bone Lance",
 		desc: "Raises its Attack in the first turn, then rams the foe on the next turn.",
-		shortDesc: "2-turn attack. Raises Attack on first turn."
+		shortDesc: "2-turn attack. Raises Attack on first turn.",
 	},
 	bonetired: {
 		name: "Bone Tired",
@@ -24917,7 +24917,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	flashball: {
 		name: "Flash Ball",
-		desc: "The user hurls a shinning blob at the target. It may also lower the target's Sp. Def stat."
+		desc: "The user hurls a shinning blob at the target. It may also lower the target's Sp. Def stat.",
 	},
 	soporous: {
 		name: "Soporous",

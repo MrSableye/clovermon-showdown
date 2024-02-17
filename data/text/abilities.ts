@@ -2307,7 +2307,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	madman: {
 		name: "Madman",
-		desc: "This Pokemon's contact moves have a 100% chance of confusing."
+		desc: "This Pokemon's contact moves have a 100% chance of confusing.",
 	},
 	moreroom: {
 		name: "More Room",
@@ -3868,6 +3868,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	polite: {
 		name: "Polite",
-		shortDesc: "Moves last. STAB increased to 2."
-	}
+		shortDesc: "Moves last. STAB increased to 2.",
+	},
 };

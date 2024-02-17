@@ -376,7 +376,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			pokemon.lastDamage = 0;
 			let targetHits = move.multihit || 1;
 			if (move.multihit) {
-				let hits = move.multihit;
+				const hits = move.multihit;
 				if (Array.isArray(targetHits)) {
 					// yes, it's hardcoded... meh
 					if (targetHits[0] === 2 && targetHits[1] === 5) {

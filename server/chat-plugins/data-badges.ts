@@ -87,12 +87,12 @@ const addDiscordBadge = async (user: User, username: string) => {
 	return true;
 };
 
-export const transferTourWins = (oldUser: string, newUser: string, user: User) => {
+export const transferTourWins = async (oldUser: string, newUser: string, user: User) => {
 	const oldTourWins = getTourWins(toID(oldUser));
 	changeTourWins(toID(newUser), () => oldTourWins);
 	changeTourWins(toID(oldUser), () => 0);
-	checkTourThreshold(toID(newUser), user);
-	checkTourThreshold(toID(oldUser), user);
+	await checkTourThreshold(toID(newUser), user);
+	await checkTourThreshold(toID(oldUser), user);
 };
 
 export const commands: Chat.ChatCommands = {

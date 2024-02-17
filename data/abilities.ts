@@ -6881,7 +6881,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Artificial",
 		onStart(pokemon) {
 			this.addSplit(pokemon.side.id, ['-ability', pokemon, 'Pressure', '[silent]']);
-			this.boost({def: 1, spd: 1})
+			this.boost({def: 1, spd: 1});
 		},
 		onModifyMove(move) {
 			delete move.flags['contact'];
@@ -6983,7 +6983,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 		},
 		onResidual(pokemon) {
-			const lastMoveSlotIndex = pokemon.baseMoveSlots.length - 1;
 			const heroicStrike = pokemon.baseMoves.indexOf('heroicstrike');
 			if (heroicStrike >= 0) {
 				const move = this.dex.moves.get('heroiconslaught');
@@ -7664,23 +7663,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 	},
 	frozenbunker: {
-        onDamagingHit(damage, target, source, move) {
-            if (!move.damage && !move.damageCallback && target.getMoveHitData(move).typeMod > 0) {
-                if (target.baseSpecies.baseSpecies !== 'Arctiglobe' || target.transformed) return;
-                const arctiglobeform = target.species.id === 'arctiglobefreed' ? '' : '-Freed';
-                target.formeChange('Arctiglobe' + arctiglobeform, this.effect, true, '[msg]');
-                this.effectState.busted = true;
-            }
-        },
-        onUpdate(pokemon) {
-            if (['arctiglobe'].includes(pokemon.species.id) && this.effectState.busted) {
-                pokemon.formeChange('Arctiglobe-Freed', this.effect, true);
-            }
-        },
-        isPermanent: true,
-        name: "Frozen Bunker",
-        rating: 4,
-    },
+		onDamagingHit(damage, target, source, move) {
+			if (!move.damage && !move.damageCallback && target.getMoveHitData(move).typeMod > 0) {
+				if (target.baseSpecies.baseSpecies !== 'Arctiglobe' || target.transformed) return;
+				const arctiglobeform = target.species.id === 'arctiglobefreed' ? '' : '-Freed';
+				target.formeChange('Arctiglobe' + arctiglobeform, this.effect, true, '[msg]');
+				this.effectState.busted = true;
+			}
+		},
+		onUpdate(pokemon) {
+			if (['arctiglobe'].includes(pokemon.species.id) && this.effectState.busted) {
+				pokemon.formeChange('Arctiglobe-Freed', this.effect, true);
+			}
+		},
+		isPermanent: true,
+		name: "Frozen Bunker",
+		rating: 4,
+	},
 	niceface: {
 		onStart(pokemon) {
 			if (this.field.isTerrain('grassyterrain') && pokemon.species.id === 'blobbosnoice' && !pokemon.transformed) {
@@ -11614,8 +11613,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
 			const statA = this.sample(stats);
 			const statB = this.sample(stats);
-			
-			if (statA === statB){
+
+			if (statA === statB) {
 				pokemon.addVolatile('focusenergy');
 				this.add('-activate', pokemon, 'ability: Rollan');
 			}
@@ -11711,7 +11710,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 
 				this.boost({[statName]: 1}, source);
-		
+
 				return statName;
 			}
 		},
@@ -11769,7 +11768,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyCritRatio(critRatio, pokemon, target) {
 			if (!target) return;
 			let totalDrops = 0;
-			const stats: BoostID[] = [];
 			let stat: BoostID;
 			for (stat in target.boosts) {
 				if (target.boosts[stat] < 0) {
@@ -12104,7 +12102,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onTryAddVolatile(status, pokemon) {
 			if (status.id === 'mustrecharge') return null;
-		}, 
+		},
 	},
 	falsedark: {
 		name: "False Dark",
@@ -13228,27 +13226,27 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyAtk(atk, source, target, move) {
 			if (!source.hasType('Meme')) {
 				return this.chainModify(0.75);
-			}; 
+			}
 		},
 		onModifySpA(spa, source, target, move) {
 			if (!source.hasType('Meme')) {
 				return this.chainModify(0.75);
-			};
+			}
 		},
 		onModifyDef(def, target, source, move) {
 			if (!source.hasType('Meme')) {
 				return this.chainModify(0.75);
-			};
+			}
 		},
 		onModifySpD(spd, target, source, move) {
 			if (!source.hasType('Meme')) {
 				return this.chainModify(0.75);
-			};
+			}
 		},
 		onModifySpe(spe, pokemon) {
 			if (!pokemon.hasType('Meme')) {
 				return this.chainModify(0.75);
-			};
+			}
 		},
 		name: "Memetic",
 		rating: 4,
@@ -13326,7 +13324,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	pounce: {
 		onModifyPriority(priority, source, target, move) {
-			if (source.activeMoveActions == 0) {
+			if (source.activeMoveActions === 0) {
 				return priority + 1;
 			}
 		},
@@ -13607,7 +13605,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		onWeather(target, source, effect) {
 			if (effect.id === 'hail' || effect.id === 'snow') {
-				this.damage(target.baseMaxhp / 8, target, target)
+				this.damage(target.baseMaxhp / 8, target, target);
 			}
 			if (target.hasItem('utilityumbrella')) return;
 			if (effect.id === 'sunnyday' || effect.id === 'desolateland') {
@@ -13895,7 +13893,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	sadist: {
 		onAfterMoveSecondarySelf(source, target, move) {
 			if (source && source !== target && move && move.category !== 'Status' && !source.forceSwitchFlag) {
-				this.heal(source.baseMaxhp / 16, source, source)
+				this.heal(source.baseMaxhp / 16, source, source);
 			}
 		},
 		name: "Sadist",
@@ -14519,5 +14517,5 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 6726,
 		isNonstandard: "Future",
-	}
+	},
 };

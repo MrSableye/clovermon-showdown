@@ -29,4 +29,4 @@ export const MovesText: {[k: string]: ModdedMoveText} = {
 		desc: "Lowers the user's Attack and Defense by 1 stage.",
 		shortDesc: "Lowers the user's Attack and Defense by 1.",
 	},
-}
+};

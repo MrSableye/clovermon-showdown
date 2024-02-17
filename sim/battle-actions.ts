@@ -1,4 +1,4 @@
-import { format } from 'path';
+import {format} from 'path';
 import {Dex, toID} from './dex';
 
 const CHOOSABLE_TARGETS = new Set(['normal', 'any', 'adjacentAlly', 'adjacentAllyOrSelf', 'adjacentFoe']);
@@ -1723,10 +1723,10 @@ export class BattleActions {
 			this.battle.debug('Spread modifier: ' + spreadModifier);
 			baseDamage = this.battle.modify(baseDamage, spreadModifier);
 		} else if (move.multihitType === 'parentalbond' && move.hit > 1 && this.battle.format.mod !== 'wack') {
-				// Parental Bond modifier
-				const bondModifier = this.battle.gen > 6 ? 0.25 : 0.5;
-				this.battle.debug(`Parental Bond modifier: ${bondModifier}`);
-				baseDamage = this.battle.modify(baseDamage, bondModifier);
+			// Parental Bond modifier
+			const bondModifier = this.battle.gen > 6 ? 0.25 : 0.5;
+			this.battle.debug(`Parental Bond modifier: ${bondModifier}`);
+			baseDamage = this.battle.modify(baseDamage, bondModifier);
 		}
 
 		// weather modifier
@@ -1767,8 +1767,8 @@ export class BattleActions {
 			if (pokemon.hasType('Chaos')) {
 				typeMod = 2;
 			} else {
-				this.battle.add('-message', 'Chaos AntiStab activated!')
-				typeMod = 1
+				this.battle.add('-message', 'Chaos AntiStab activated!');
+				typeMod = 1;
 			}
 		}
 		typeMod = this.battle.clampIntRange(typeMod, -6, 6);

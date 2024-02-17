@@ -5,7 +5,7 @@ const Dex = require('./../dist/sim/dex').Dex;
 
 Dex.includeModData();
 
-Object.entries(Dex.dexes).forEach(function([modId, modDex]) {
+Object.entries(Dex.dexes).forEach(function ([modId, modDex]) {
 	if (['joltemons', 'gennext', 'ssb', 'gen8joltemons'].includes(modId)) return; // These mods SUCK
 
 	describe(`Mod: ${modId}`, function () {
@@ -14,14 +14,14 @@ Object.entries(Dex.dexes).forEach(function([modId, modDex]) {
 				assert.equal(Dex.moves.get(move.id).exists, true, `Mod: ${modId} has non-existent move: ${move.id}`);
 			}
 		});
-	
+
 		it('should have existing items', function () {
 			for (const item of modDex.items.all()) {
 				assert.equal(item.exists, true, `Mod: ${modId} has non-existent item: ${item.id}`);
 			}
 		});
-	
-	
+
+
 		it('should have existing abilities', function () {
 			for (const ability of modDex.abilities.all()) {
 				assert.equal(ability.exists, true, `Mod: ${modId} has non-existent ability: ${ability.id}`);
@@ -40,7 +40,7 @@ describe('Formats', function () {
 });
 
 describe('Moves', function () {
-	if('should have a name that matches its id', function () {
+	it('should have a name that matches its id', function () {
 		for (const move of Dex.moves.all()) {
 			assert.equal(move.id, move.name, `${move.id} has mismatched name ${move.name}.`);
 		}
@@ -54,7 +54,7 @@ describe('Moves', function () {
 });
 
 describe('Items', function () {
-	if('should have a name that matches its id', function () {
+	it('should have a name that matches its id', function () {
 		for (const item of Dex.items.all()) {
 			assert.equal(item.id, item.name, `${item.id} has mismatched name ${item.name}.`);
 		}
@@ -68,7 +68,7 @@ describe('Items', function () {
 });
 
 describe('Abilities', function () {
-	if('should have a name that matches its id', function () {
+	it('should have a name that matches its id', function () {
 		for (const ability of Dex.abilities.all()) {
 			assert.equal(ability.id, ability.name, `${ability.id} has mismatched name ${ability.name}.`);
 		}
@@ -82,7 +82,7 @@ describe('Abilities', function () {
 });
 
 describe('Learnsets', function () {
-	it('should have valid moves in learnset', function () { 
+	it('should have valid moves in learnset', function () {
 		for (const species of Dex.species.all()) {
 			const learnset = Dex.species.getLearnset(species.id);
 			if (learnset === undefined) {

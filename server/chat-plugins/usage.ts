@@ -270,6 +270,6 @@ export const commands: Chat.ChatCommands = {
 
 			this.sendReplyBox(`<b><u>${targetMon.name} Sprites</u></b><br />` +
 				sprites.map((sprite) => `<img src="${sprite}" width="96" height="96">`).join(' ') + afd);
-		}
+		},
 	},
 };

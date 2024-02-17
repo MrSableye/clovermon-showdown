@@ -1,7 +1,7 @@
 import {FS} from "../../lib";
 import {Badges} from "./badges";
 import {LadderStore} from '../ladders-local';
-import { transferTourWins } from "./data-badges";
+import {transferTourWins} from "./data-badges";
 
 interface UserTransfer {
 	sourceId: string;
@@ -54,7 +54,7 @@ export const commands: Chat.ChatCommands = {
 			if (!transfers[user.id]) throw new Chat.ErrorMessage('You have not started a transfer.');
 			delete transfers[user.id];
 			saveTransfers();
-			
+
 			return this.sendReplyBox('Transfer successfully canceled.');
 		},
 		async accept(target, room, user) {
@@ -79,12 +79,12 @@ export const commands: Chat.ChatCommands = {
 				}
 			}
 
-			transferTourWins(targetId, user.id, user);
+			await transferTourWins(targetId, user.id, user);
 
 			transfers[targetId].isComplete = true;
 			saveTransfers();
 
-			return this.sendReplyBox(`Successfuly transfered ladder data and badges. Raw data: ${JSON.stringify({ rating: updatedRows, badges: allBadges })}`);
+			return this.sendReplyBox(`Successfuly transfered ladder data and badges. Raw data: ${JSON.stringify({rating: updatedRows, badges: allBadges})}`);
 		},
 	},
 };
