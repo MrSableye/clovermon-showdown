@@ -2729,6 +2729,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Artillery",
 		shortDesc: "Boosts bomb and bullet moves by 1.5x.",
 	},
+	colonization: {
+		name: "Colonization",
+		shortDesc: "If user is Blobbos-Colony (Level 20 or Above), changes to Colonized form if it has > 1/4 max HP, else Solo Form.",
+	},
 	genwunning: {
 		name: "Genwunning",
 		shortDesc: "Summons Genwun Room upon switch-in, how nostalgic!",
