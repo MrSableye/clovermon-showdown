@@ -9541,7 +9541,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onModifyDefPriority: 2,
 		onModifyDef(def, pokemon) {
 			if (pokemon.species.name === 'Blobbos-Spamton') {
-				return this.chainModify(2);
+				return this.chainModify(1.5);
 			}
 		},
 		itemUser: ["Blobbos-Spamton"],
