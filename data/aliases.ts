@@ -2097,6 +2097,7 @@ export const Aliases: {[alias: string]: string} = {
 	blobbossusred: "Blobbos-Sus",
 	blobbossuswhite: "Blobbos-Sus",
 	blobbossusyellow: "Blobbos-Sus",
+	blobbosyou: "Blobbos-Gay",
 	bswitch: "Blobbos-Switch",
 	bswitchred: "Blobbos-Switch-Red",
 	bswitchr: "Blobbos-Switch-Red",
