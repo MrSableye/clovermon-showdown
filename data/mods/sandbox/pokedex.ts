@@ -266,6 +266,13 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		baseStats: {hp: 70, atk: 98, def: 65, spa: 105, spd: 62, spe: 125},
 		abilities: {0: "Overgrow", H: "Magic Guard", S: "Flower Gift"},
 	},
-
-
+	golisopod: {
+		inherit: true,
+		abilities: {0: "Emergency Exit", H: "Tough Claws", S: "Intimidate"},
+	},
+	dusknoir: {
+		inherit: true,
+		baseStats: {hp: 80, atk: 120, def: 135, spa: 55, spd: 135, spe: 25},
+		abilities: {0: "Pressure", 1: "Iron Fist", H: "Frisk", S: "Leech"},
+	},
 };
