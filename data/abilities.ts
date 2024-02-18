@@ -13164,7 +13164,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	colonization: {
 		onStart(pokemon) {
-			if (pokemon.species.name !== 'Blobbos-Colony' || pokemon.level < 20 || pokemon.transformed) return;
+			if (pokemon.level < 20 || pokemon.transformed) return;
 			if (pokemon.hp > pokemon.maxhp / 4) {
 				if (pokemon.species.id === 'blobboscolony') {
 					pokemon.formeChange('Blobbos-Colony-Colonized');
@@ -13178,7 +13178,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onResidualOrder: 27,
 		onResidual(pokemon) {
 			if (
-				pokemon.species.name !== 'Blobbos-Colony' || pokemon.level < 20 ||
+				pokemon.level < 20 ||
 				pokemon.transformed || !pokemon.hp
 			) return;
 			if (pokemon.hp > pokemon.maxhp / 4) {
