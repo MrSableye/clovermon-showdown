@@ -70108,7 +70108,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'pacify',
+		},
 		target: "allAdjacent",
 		type: "Water",
 		isNonstandard: "Future",
