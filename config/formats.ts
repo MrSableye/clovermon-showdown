@@ -199,6 +199,14 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: '[Gen 9 Clover National Dex] Monotype',
+		mod: 'clover',
+		ruleset: [
+			'Standard NatDex',
+			'Same Type Clause',
+		],
+	},
+	{
 		name: '[Gen 8 Clover Only] Doubles OU',
 		mod: 'clover',
 		gameType: 'doubles',
