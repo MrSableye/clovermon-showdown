@@ -44211,7 +44211,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 20,
+			status: 'frz',
+		},
 		target: "normal",
 		type: "Water",
 		isNonstandard: "Future",
@@ -64551,7 +64554,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			onHit(target, source, move) {
+				if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
+			},
+		},
 		target: "normal",
 		type: "Dark",
 		isNonstandard: "Future",
@@ -73103,7 +73111,14 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 25,
+			self: {
+				boosts: {
+					def: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Grass",
 		isNonstandard: "Future",
