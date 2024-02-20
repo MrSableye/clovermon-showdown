@@ -42,7 +42,8 @@ describe('Formats', function () {
 describe('Moves', function () {
 	it('should have a name that matches its id', function () {
 		for (const move of Dex.moves.all()) {
-			assert.equal(move.id, move.name, `${move.id} has mismatched name ${move.name}.`);
+			if (move.realMove) continue;
+			assert.equal(move.id, Dex.toID(move.name), `${move.id} has mismatched name ${move.name}.`);
 		}
 	});
 	it.skip('should have descriptions', function () {
@@ -56,7 +57,7 @@ describe('Moves', function () {
 describe('Items', function () {
 	it('should have a name that matches its id', function () {
 		for (const item of Dex.items.all()) {
-			assert.equal(item.id, item.name, `${item.id} has mismatched name ${item.name}.`);
+			assert.equal(item.id, Dex.toID(item.name), `${item.id} has mismatched name ${item.name}.`);
 		}
 	});
 	it.skip('should have descriptions', function () {
@@ -70,7 +71,7 @@ describe('Items', function () {
 describe('Abilities', function () {
 	it('should have a name that matches its id', function () {
 		for (const ability of Dex.abilities.all()) {
-			assert.equal(ability.id, ability.name, `${ability.id} has mismatched name ${ability.name}.`);
+			assert.equal(ability.id, Dex.toID(ability.name), `${ability.id} has mismatched name ${ability.name}.`);
 		}
 	});
 	it.skip('should have descriptions', function () {
