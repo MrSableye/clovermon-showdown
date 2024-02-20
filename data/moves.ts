@@ -74297,7 +74297,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
-		volatileStatus: 'trapped','perishsong' 
+		volatileStatus: 'trapped','perishsong',
 		onHitField(target, source, move) {
 			let result = false;
 			let message = false;
