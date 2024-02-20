@@ -76347,7 +76347,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "KnightOfOwner",
 		pp: 10,
 		priority: -1,
-		flags: {protect: 1},
+			flags: {
+			protect: 1, bypasssub: 1, allyanim: 1,
+			failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, failmimic: 1,
+		},
+		onHit(target, source) {
+			const move = target.lastMove;
+			if (source.transformed || !move || move.flags['failmimic'] || source.moves.includes(move.id)) {
+				return false;
+			}
+			if (move.isZ || move.isMax) return false;
+			const mimicIndex = source.moves.indexOf('mimic');
+			if (mimicIndex < 0) return false;
+
+			source.moveSlots[mimicIndex] = {
+				move: move.name,
+				id: move.id,
+				pp: move.pp,
+				maxpp: move.pp,
+				target: move.target,
+				disabled: false,
+				used: false,
+				virtual: true,
+			};
+			this.add('-start', source, 'Mimic', move.name);
+		},
+		self: {
+			volatileStatus: 'focusenergy',
+		},
+		volatileStatus: 'disable',
 		secondary: null,
 		target: "normal",
 		type: "Chaos",
