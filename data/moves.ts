@@ -36066,7 +36066,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1, defrost: 1},
 		secondary: {
 			chance: 20,
-			volatileStatus: 'brn',
+			status: 'brn',
 		},
 		target: "normal",
 		type: "Fabric",
@@ -39095,6 +39095,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, mirror: 1},
+		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -41741,7 +41742,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Worm",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Virus",
@@ -42003,6 +42020,11 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
+		self: {
+			boosts: {
+				spa: -2,
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -43434,7 +43456,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Smoke Lunge",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Magic",
@@ -44626,7 +44664,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Zipper Hole",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -44656,7 +44694,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Zipper Strike",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -44702,7 +44740,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			duration: 2,
 			onInvulnerability: false,
 		},
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Fabric",
@@ -45588,6 +45626,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, mirror: 1},
 		secondary: null,
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		target: "normal",
 		type: "Magic",
 		isNonstandard: "Future",
@@ -45602,6 +45656,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, mirror: 1},
 		secondary: null,
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		target: "normal",
 		type: "Fairy",
 		isNonstandard: "Future",
@@ -46967,7 +47037,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Time Warp",
 		pp: 5,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -47811,7 +47881,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Portal Burst",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Psychic",
@@ -48704,7 +48790,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					atk: 1,
+					spe: 1,
+				},
+			},
+		},
 		target: "normal",
 		type: "Divine",
 		isNonstandard: "Future",
@@ -50055,6 +50149,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, mirror: 1},
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -65954,7 +66064,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 50,
+			boosts: {
+				spa: -1,
+			},
+		},
 		target: "normal",
 		type: "Psychic",
 		isNonstandard: "Future",
@@ -65982,7 +66097,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, moon: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'confusion',
+		},
 		target: "normal",
 		type: "Cosmic",
 		isNonstandard: "Future",
@@ -66293,6 +66411,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, mirror: 1},
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
@@ -66306,7 +66440,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "DimensionShamble",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
@@ -69299,6 +69449,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onAfterHit(target, source, move) {
+			if (!move.hasSheerForce && source.hp) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('scrapmetal');
+				}
+			}
+		},
+		onAfterSubDamage(damage, target, source, move) {
+			if (!move.hasSheerForce && source.hp) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition('scrapmetal');
+				}
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -69944,7 +70108,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			volatileStatus: 'pacify',
+		},
 		target: "allAdjacent",
 		type: "Water",
 		isNonstandard: "Future",
@@ -76180,7 +76347,35 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "KnightOfOwner",
 		pp: 10,
 		priority: -1,
-		flags: {protect: 1},
+			flags: {
+			protect: 1, bypasssub: 1, allyanim: 1,
+			failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failinstruct: 1, failmimic: 1,
+		},
+		onHit(target, source) {
+			const move = target.lastMove;
+			if (source.transformed || !move || move.flags['failmimic'] || source.moves.includes(move.id)) {
+				return false;
+			}
+			if (move.isZ || move.isMax) return false;
+			const mimicIndex = source.moves.indexOf('mimic');
+			if (mimicIndex < 0) return false;
+
+			source.moveSlots[mimicIndex] = {
+				move: move.name,
+				id: move.id,
+				pp: move.pp,
+				maxpp: move.pp,
+				target: move.target,
+				disabled: false,
+				used: false,
+				virtual: true,
+			};
+			this.add('-start', source, 'Mimic', move.name);
+		},
+		self: {
+			volatileStatus: 'focusenergy',
+		},
+		volatileStatus: 'disable',
 		secondary: null,
 		target: "normal",
 		type: "Chaos",
@@ -82007,7 +82202,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Bloodport",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
+		breaksProtect: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
 		secondary: null,
 		target: "normal",
 		type: "Blood",
