@@ -41742,7 +41742,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Worm",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -43456,7 +43456,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Smoke Lunge",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -44664,7 +44664,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Zipper Hole",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -44694,7 +44694,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Zipper Strike",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -44740,7 +44740,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			duration: 2,
 			onInvulnerability: false,
 		},
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Fabric",
@@ -47037,7 +47037,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Time Warp",
 		pp: 5,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -47881,7 +47881,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Portal Burst",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
@@ -66448,7 +66448,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			duration: 2,
 			onInvulnerability: false,
 		},
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
@@ -82149,7 +82149,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Bloodport",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, mirror: 1},
+		flags: {contact: 1, charge: 1, mirror: 1},
 		breaksProtect: true,
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
