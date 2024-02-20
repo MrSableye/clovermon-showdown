@@ -87,4 +87,11 @@ export const commands: Chat.ChatCommands = {
 			return this.sendReplyBox(`Successfuly transfered ladder data and badges. Raw data: ${JSON.stringify({rating: updatedRows, badges: allBadges})}`);
 		},
 	},
+	transferhelp() {
+		this.sendReplyBox(
+			`<code>/transfer start [new user]</code>: Begins a transfer of user data from your current user to a desired target user. Use this command on your old user.<br />` +
+			`<code>/transfer cancel</code>: Cancels an in-progress transfer started from your current user.<br />` +
+			`<code>/transfer accept [old user]</code>: Accepts a transfer from another user to your current user. Use this command on your new user.`
+		);
+	},
 };
