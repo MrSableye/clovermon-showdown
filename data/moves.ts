@@ -74298,6 +74298,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1},
 		volatileStatus: 'trapped','perishsong' 
+		onHitField(target, source, move) {
+			let result = false;
+			let message = false;
 		for (const pokemon of this.getAllActive()) {
 				if (this.runEvent('Invulnerability', pokemon, source, move) === false) {
 					this.add('-miss', source, pokemon);
