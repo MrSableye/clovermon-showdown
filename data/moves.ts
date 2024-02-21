@@ -70605,6 +70605,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Freezing Kiss",
 		pp: 5,
 		priority: 0,
+		status: 'frz',
 		flags: {contact: 1, protect: 1, mirror: 1, kiss: 1},
 		secondary: null,
 		target: "normal",

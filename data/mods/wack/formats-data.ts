@@ -10537,7 +10537,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	medijaa: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	audinette: {
@@ -16482,7 +16482,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	yogsoth: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	chanseychanse: {
@@ -18882,7 +18882,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	wargreymon: {
 		inherit: true,
-		tier: "NFE",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	wargreymonv: {
@@ -27362,7 +27362,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 	},
 	armewtwo: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 		isNonstandard: null,
 	},
 	taswellow: {
