@@ -75432,6 +75432,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Chaos' || !target.setType('Chaos')) return false;
+			this.add('-start', target, 'typechange', 'Chaos');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Chaos",
@@ -75502,6 +75506,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Ice' || !target.setType('Ice')) return false;
+			this.add('-start', target, 'typechange', 'Ice');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Ice",
@@ -75516,6 +75524,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Poison' || !target.setType('Poison')) return false;
+			this.add('-start', target, 'typechange', 'Poison');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Poison",
@@ -75530,6 +75542,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Normal' || !target.setType('Normal')) return false;
+			this.add('-start', target, 'typechange', 'Normal');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -75544,6 +75560,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Fire' || !target.setType('Fire')) return false;
+			this.add('-start', target, 'typechange', 'Fire');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fire",
@@ -75558,6 +75578,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		onHit(target) {
+			if (target.getTypes().join() === 'Fear' || !target.setType('Fear')) return false;
+			this.add('-start', target, 'typechange', 'Fear');
+		},
 		secondary: null,
 		target: "normal",
 		type: "Fear",
@@ -75600,6 +75624,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+			accuracy: 1,
+		},
 		secondary: null,
 		target: "self",
 		type: "Sound",
@@ -75968,6 +75996,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 25,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
 		secondary: null,
 		target: "normal",
 		type: "Magma",
@@ -75982,6 +76014,15 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, bite: 1},
+		secondaries: [
+			{
+				chance: 10,
+				status: 'frz',
+			}, {
+				chance: 10,
+				volatileStatus: 'flinch',
+			},
+		],
 		secondary: null,
 		target: "normal",
 		type: "Ice",
@@ -75996,6 +76037,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 30,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -76010,6 +76055,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 25,
+			status: 'par',
+		},
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Rubber",
@@ -76066,6 +76115,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			volatileStatus: 'attract',
+		},
 		secondary: null,
 		target: "normal",
 		type: "Water",
@@ -76075,6 +76128,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 		num: 669331,
 		accuracy: 100,
 		basePower: 60,
+		basePowerCallback(pokemon, target, move) {
+			const damagedByTarget = pokemon.attackedBy.some(
+				p => p.source === target && p.damage > 0 && p.thisTurn
+			);
+			if (damagedByTarget) {
+				this.debug('BP doubled for getting hit by ' + target);
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
 		category: "Special",
 		name: "Raging Scales",
 		pp: 10,
@@ -76169,6 +76232,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		
 		secondary: null,
 		target: "normal",
 		type: "Ice",
