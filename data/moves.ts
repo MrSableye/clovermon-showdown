@@ -74298,6 +74298,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
+		volatileStatus: 'perishsong', 
 		onHitField(target, source, move) {
 			let result = false;
 			let message = false;
@@ -74309,7 +74310,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					result = true;
 				} else if (!pokemon.volatiles['perishsong']) {
 					pokemon.addVolatile('perishsong');
-					this.add('-start', pokemon, 'perish1', '[silent]');
+					this.add('-start', pokemon, 'perish3', '[silent]');
 					result = true;
 					message = true;
 				}
