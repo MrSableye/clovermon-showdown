@@ -74298,7 +74298,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1},
-		volatileStatus: 'trapped', 
 		onHitField(target, source, move) {
 			let result = false;
 			let message = false;
@@ -74310,7 +74309,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					result = true;
 				} else if (!pokemon.volatiles['perishsong']) {
 					pokemon.addVolatile('perishsong');
-					this.add('-start', pokemon, 'perish3', '[silent]');
+					this.add('-start', pokemon, 'perish1', '[silent]');
 					result = true;
 					message = true;
 				}
@@ -74328,14 +74327,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onResidual(pokemon) {
 				const duration = pokemon.volatiles['perishsong'].duration;
 				this.add('-start', pokemon, 'perish' + duration);
+				
+			},
+			onTrapPokemon(pokemon) {
+				pokemon.tryTrap();
 			},
 		},
+		
 		boosts: {
-			atk: 6,
-			def: 6,
-			spa: 6,
-			spd: 6,
-			spe: 6,
+			atk: 12,
+			def: 12,
+			spa: 12,
+			spd: 12,
+			spe: 12,
 		},
 		target: "self",
 		type: "Divine",
