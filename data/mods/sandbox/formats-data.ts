@@ -10583,7 +10583,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		tier: "OU",
 		isNonstandard: null,
 		},
-	ephiperor: {
+	epipheror: {
 		inherit: true,
 		tier: "OU",
 		isNonstandard: null,

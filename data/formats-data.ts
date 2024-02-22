@@ -8921,7 +8921,7 @@ export const FormatsData: { [k: string]: SpeciesFormatsData } = {
 		tier: "Illegal",
 		isNonstandard: "Future",
 		},
-	epipheperor: {
+	epipheror: {
 		tier: "Illegal",
 		isNonstandard: "Future",
 	},

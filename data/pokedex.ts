@@ -37187,7 +37187,7 @@ frostbelum: {
 	eggGroups: ["Monster", "Flying"],
 	gen: 8,
 },
-epipheperor: {
+epipheror: {
 	num: -8241,
 	name: "Epipheror",
 	types: ["Psychic", "???"],

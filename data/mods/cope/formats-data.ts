@@ -3031,7 +3031,7 @@ export const FormatsData: { [k: string]: ModdedSpeciesFormatsData } = {
 		isNonstandard: null,
 		tier: "OU",
 	},
-	epipheperor: {
+	epipheror: {
 		inherit: true,
 		isNonstandard: null,
 		tier: "OU",
